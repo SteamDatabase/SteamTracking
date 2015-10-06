@@ -38,8 +38,8 @@ TenfootFooterPanel.WebFooter
 }
 
 
-.Show.Anim_LT_btn #LT_btn, .Show.Anim_LT_txt #LT_txt,
-.Show.Anim_RT_btn #RT_btn, .Show.Anim_RT_txt #RT_txt,
+.Show.Anim_LT_btn #LB_btn, .Show.Anim_LT_txt #LB_txt,
+.Show.Anim_RT_btn #RB_btn, .Show.Anim_RT_txt #RB_txt,
 .Show.Anim_MID #A_btn, .Show.Anim_MID #A_txt,
 .Show.Anim_MID #B_btn, .Show.Anim_MID #B_txt,
 .Show.Anim_MID #X_btn, .Show.Anim_MID #X_txt,
@@ -48,8 +48,8 @@ TenfootFooterPanel.WebFooter
 .Show.Anim_MID #B_btn_s, .Show.Anim_MID #B_txt_s,
 .Show.Anim_MID #X_btn_s, .Show.Anim_MID #X_txt_s,
 .Show.Anim_MID #Y_btn_s, .Show.Anim_MID #Y_txt_s,
-.Show.Anim_MID #RB_btn, .Show.Anim_MID #RB_txt,
-.Show.Anim_MID #LB_btn, .Show.Anim_MID #LB_txt,
+.Show.Anim_MID #RT_btn, .Show.Anim_MID #RT_txt,
+.Show.Anim_MID #LT_btn, .Show.Anim_MID #LT_txt,
 .Show.Anim_MID #START_btn, .Show.Anim_MID #START_txt,
 .Show.Anim_MID #BACK_btn, .Show.Anim_MID #BACK_txt,
 .Show.Anim_RT_txt #RightLegend .FriendsNotifications,
@@ -136,8 +136,8 @@ TenfootFooterPanel.WebFooter
 	pre-transform-scale2d: 1.0, 0.03;
 }
 
-.Hide.Anim_LT_btn #LT_btn, .Hide.Anim_LT_txt #LT_txt,
-.Hide.Anim_RT_btn #RT_btn, .Hide.Anim_RT_txt #RT_txt,
+.Hide.Anim_LT_btn #LB_btn, .Hide.Anim_LT_txt #LB_txt,
+.Hide.Anim_RT_btn #RB_btn, .Hide.Anim_RT_txt #RB_txt,
 .Hide.Anim_MID #A_btn, .Hide.Anim_MID #A_txt,
 .Hide.Anim_MID #B_btn, .Hide.Anim_MID #B_txt,
 .Hide.Anim_MID #X_btn, .Hide.Anim_MID #X_txt,
@@ -146,8 +146,8 @@ TenfootFooterPanel.WebFooter
 .Hide.Anim_MID #B_btn_s, .Hide.Anim_MID #B_txt_s,
 .Hide.Anim_MID #X_btn_s, .Hide.Anim_MID #X_txt_s,
 .Hide.Anim_MID #Y_btn_s, .Hide.Anim_MID #Y_txt_s,
-.Hide.Anim_MID #RB_btn, .Hide.Anim_MID #RB_txt,
-.Hide.Anim_MID #LB_btn, .Hide.Anim_MID #LB_txt,
+.Hide.Anim_MID #RT_btn, .Hide.Anim_MID #RT_txt,
+.Hide.Anim_MID #LT_btn, .Hide.Anim_MID #LT_txt,
 .Hide.Anim_MID #START_btn, .Hide.Anim_MID #START_txt,
 .Hide.Anim_MID #BACK_btn, .Hide.Anim_MID #BACK_txt,
 .Hide.Anim_RT_txt #RightLegend .FriendsNotifications,
@@ -251,12 +251,7 @@ TenfootFooterPanel.WebFooter
 	margin-right: 8px;
 	margin-top: 1px;
 	margin-bottom: 3px;
-
-	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
-	background-color: legendbuttongrey;
-
-	box-shadow: #00000022 -3px -3px 4px 6px;
-
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
 }
 
 

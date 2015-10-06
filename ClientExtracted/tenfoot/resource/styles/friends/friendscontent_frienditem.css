@@ -4,7 +4,7 @@ FriendsContent_FriendItem
 	width: 300px;
 	height: 110px;
 	flow-children: none;
-  background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
 	opacity: 1.0;
 }
@@ -44,8 +44,6 @@ FriendsContent_FriendItem.Offline
 
 .GroupContent
 {	
-	flow-children: right;
-	//overflow: clip;
 }
 
 AvatarImage
@@ -96,16 +94,18 @@ FriendsContent_FriendItem:focus AvatarImage
 	//color: ui_primary_color;
 	transform: translatey( -3px ) translatex( -3px );
 }
+
 .FriendItemLabelContainer
 {
 	flow-children: down;
+	margin-left: 110px;
 }
 
 .FriendName
 {
-  height: 30px;
-  width: 176px;
-  margin-left: 4px;
+	height: 30px;
+	width: 176px;
+	margin-left: 4px;
 	margin-top: 14px;
 	color: white;
 	font-size: 24px;
@@ -169,4 +169,58 @@ FriendsContent_FriendItem:focus AvatarImage
 .HasLobbyInvite .FriendHasLobbyInvite
 {
 	visibility: visible;
+}
+
+@keyframes 'voice_chat_icon_pulse'
+{
+	0%
+	{
+		opacity: 0.3;
+	}
+
+	50%
+	{
+		opacity: 1.0;
+	}
+
+	100%
+	{
+		opacity: 0.3;
+	}
+}
+
+.VoiceChatIcon
+{
+	visibility: collapse;
+	margin-top: 6px;
+	margin-left: 4px;
+	width: 32px;
+	height: 32px;
+	//wash-color: #d0fc34ff;
+	
+	background-image: url( "file://{images}/voice_mic.png" );
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.VoiceChatActive .VoiceChatIcon
+{
+	visibility: visible;
+}
+
+.VoiceChatOnHold .VoiceChatIcon
+{
+	background-image: url( "file://{images}/pause.png" );
+}
+
+.VoiceChatActive.VoiceChatRinging .VoiceChatIcon,
+.VoiceChatActive.VoiceChatDialing .VoiceChatIcon
+{
+	animation-name: voice_chat_icon_pulse;
+	animation-duration: 1.5s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }

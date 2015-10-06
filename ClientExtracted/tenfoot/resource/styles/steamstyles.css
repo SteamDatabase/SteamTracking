@@ -119,7 +119,7 @@
 //system wide
 @define messagecolorwash: #14c6fcff;
 @define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #1c93b8ff ), color-stop( 0.90, #1c84b8ff ), to( #1c84b800 ) );
-@define horizontal_default: gradient( linear, 0% 0%, 100% 100%, from( #2f6682 ), to( #144066 ) );
+@define horizontal_default: gradient( linear, 0% 0%, 100% 100%, from( #2a617b ), to( #144066 ) );
 @define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
 //@define horizontal_focus: gradient( linear, -10% 0%, 110% 0%, from( #398999cc ), to( #395280ff ) );
@@ -495,7 +495,7 @@ RadioButton
 .WizardButton,
 .CheckBox {
 	padding: 10px 20px 0px 10px;
-	margin: 2px 0px 2px 0px;
+	margin: 0px 0px 4px 0px;
 
 	color: detailsdatalabel;
 	font-size: deffontsize;
@@ -1180,27 +1180,6 @@ h2
 	border-color: none;
 	border-style: solid;
 	border-width: 5px;
-}
-
-FriendsChatDialog .VoiceBarContainer
-{
-	background-color: #44444420;
-	height: 90px;
-	width: 208px;
-	border-radius: 8px;
-	flow-children: right;
-	border: 5px solid #1c333dff;
-	padding-left: 6px;
-	padding-right: 4px;
-	padding-bottom: 5px;
-	padding-top: 5px;
-	margin: 4px;
-	transition-property: transform, pre-transform-scale2d;
-	transition-duration: 0.20s;
-	border-color: none;
-	border-style: solid;
-	border-width: 5px;
-
 }
 
 .VoiceBar

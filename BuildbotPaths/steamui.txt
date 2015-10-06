@@ -270,10 +270,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/eventbackground.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotaccountnamewizard.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotpasswordwizardchild.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendaddmsgbox.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends_new.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendschatdialog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendscontroller.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendsinvitetolobbydialog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendsprofiledetails.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamerecordsession.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamaudioencoder.o
@@ -1518,7 +1520,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/../gamestream/gamestreammanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/../joingamecontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/librarydetails.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/tenfootconfirmpassworddialog.cpp
@@ -1555,6 +1556,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communityfriendsstrip.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communitymainpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communitymainpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendaddmsgbox.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendaddmsgbox.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends_new.cpp
@@ -1563,6 +1566,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendschatdialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsinvitetolobbydialog.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsinvitetolobbydialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsprofiledetails.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsprofiledetails.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/groupscontroller.cpp
@@ -1775,7 +1780,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_achievements.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_community_guides.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_workshop.h

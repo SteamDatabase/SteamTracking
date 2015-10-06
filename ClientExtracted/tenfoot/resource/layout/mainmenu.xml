@@ -25,7 +25,7 @@
 					<ParentalButton id="Inbox" class="Button TopRowButton" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();"  >
 								 
 						<Panel id="InboxImageWrapper">
-							<Image id="InboxImage" class="InboxImage" src="file://{images}/inbox.png" />
+							<Image id="InboxImage" class="InboxImage" src="file://{images}/systemmenu/icon_alerts.png" />
 							<Panel id="BatteryImages" class="InboxImage" >
 								<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
 								<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
@@ -43,16 +43,16 @@
 					</ParentalButton>
 					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" tabindex="1" selectionpos="2.5,0"
 						onactivate="ToggleMusicControlPanel( true );">
-						<Image id="MusicGuideImage" src="file://{images}/music/musicguide_icon.png"/>
+						<Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
 					</Button>
 					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >
-						<Image src="file://{images}/downloads.png" />
+						<Image src="file://{images}/systemmenu/icon_downloads.png" />
 					</Button>
 					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettingsMenu();" >
-						<Image src="file://{images}/settings.png" />
+						<Image src="file://{images}/systemmenu/icon_settings.png" />
 					</ParentalButton>
 					<Button id="Exit" class="Button TopRowButton" tabindex="5" selectionpos="4,0" onactivate="ShowQuitDialog();">
-						<Image src="file://{images}/exit.png" />
+						<Image src="file://{images}/systemmenu/icon_power.png" />
 					</Button>
 					<Button id="BetaButton" class="Button TopRowButton" tabindex="6" selectionpos="5,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
 						<Image src="file://{images}/betabutton4.tga" />
@@ -69,7 +69,7 @@
 				<Panel id="MenuRowLeftButton"  selectionpos="-10,0">
 					<ParentalButton id="WebButton" class="Button EdgeButton EdgeButtonLeft" tabindex="0" selectionpos="1,20" onactivate="ShowWebBrowser();"> 
 						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_web.png" />
-						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_LeftTrigger_Short" />
+						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_LeftBumper_Short" />
 						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
 					</ParentalButton>
 				</Panel>
@@ -95,7 +95,7 @@
 				<Panel id="MenuRowRightButton" selectionpos="10,0">
 					<ParentalButton id="FriendsButton" class="Button EdgeButton EdgeButtonRight" tabindex="4" selectionpos="5,20" onactivate="ShowFriends();"> 
 						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_friends.png" />
-						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_RightTrigger_Short" />
+						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_RightBumper_Short" />
 			      <Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
 					</ParentalButton>
 				</Panel>

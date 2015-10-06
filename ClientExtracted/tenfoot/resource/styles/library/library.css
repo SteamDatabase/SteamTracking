@@ -85,7 +85,7 @@
 
 	//pre-transform-scale2d: 1.0;
 }
-	
+
 
 
 .RecentApp:descendantfocus .AppImage
@@ -110,17 +110,17 @@
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel .RecentApp
 {
-	pre-transform-scale2d: 0.95;	
+	pre-transform-scale2d: 0.95;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp
 {
-	pre-transform-scale2d: 1.0;	
+	pre-transform-scale2d: 1.0;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover
 {
-	pre-transform-scale2d: 1.04;	
+	pre-transform-scale2d: 1.04;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp.RightOfFocus1 Image
@@ -141,7 +141,7 @@
 
 .LibraryInvisible
 {
-	transition-property: transform, position, opacity !immediate; 
+	transition-property: transform, position, opacity !immediate;
 	transition-duration: mediumduration;
 	transition-timing-function: linear;
 	transition-delay: 0s;
@@ -151,7 +151,7 @@
 
 #MostRecentBackgroundWrapper
 {
-	transition-property: transform, position, opacity, background-color; 
+	transition-property: transform, position, opacity, background-color;
 	transition-duration: 0.35s;
 	transition-timing-function: ease-in;
 	transition-delay: 0s;
@@ -285,14 +285,14 @@ LibraryAppDetails
 		transform: translate3D( -15px, -10px, 40px );
 		animation-timing-function: bigpicture-ease-in-out;
 	}
-	
+
 	96%
 	{
 		opacity: 0.4;
 		transform: translate3D( -60px, 0px, 80px );
 		animation-timing-function: ease-in;
 	}
-	
+
 	to
 	{
 		opacity: 0.0;
@@ -529,7 +529,7 @@ LibraryAppDetails.ContentHover #CommonControls:descendantfocus
 	visibility: visible;
 }
 
-#PlayStatsArea #YouWatchedHeader, 
+#PlayStatsArea #YouWatchedHeader,
 #PlayStatsArea #LastWatchedHEader
 {
 	visibility: collapse;
@@ -626,7 +626,7 @@ LibraryAppDetails.ContentHover .LibraryDetailsSectionsContainer
 
 LibraryAppDetails .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer,
-LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus 
+LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus
 {
 	width: 1600px;
 	height: 100%;
@@ -1002,7 +1002,7 @@ ParentalButton.Locked
 {
 	opacity: 1.0;
 	wash-color: none;
-	
+
 	transition-property: wash-color;
 	transition-duration: 0.08s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -1024,12 +1024,12 @@ ParentalButton.Locked
 .LinksAndMoreButton:focus
 {
 	color: #161718f5;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-	
-	animation-name: nx-button-focus; 
+
+	animation-name: nx-button-focus;
 	animation-duration: longduration;
 	animation-delay: mediumduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -1066,7 +1066,7 @@ ParentalButton.Locked
 	width: 100%;
 	pre-transform-scale2d: 0.95;
 	visibility: collapse;
-	vertical-align: bottom;	
+	vertical-align: bottom;
 }
 #MoreWaysToPlayBtn Label
 {
@@ -1142,7 +1142,7 @@ LibraryAchievements .AchievementsBody
 
 	margin-top: 6px;
 
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
+	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -1293,7 +1293,7 @@ LibraryGuides .GuideLabels
 	white-space: normal;
 	color: guidesdesc;
 }
-ViewGuidesDialog .GuideLabels 
+ViewGuidesDialog .GuideLabels
 {
 	flow-children: down;
 	height: 100%;
@@ -1412,7 +1412,7 @@ LibraryController .ControllerBody
 
 	margin-top: 6px;
 
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
+	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -1473,7 +1473,7 @@ LibraryController .TurnOffControllerDetailImage
 	background-image: url( "file://{images}/library/turnoff_controller_icon.png" );
 }
 
-LibraryController .ControllerLabels 
+LibraryController .ControllerLabels
 {
 	flow-children: down;
 	height: 100%;
@@ -1648,7 +1648,7 @@ LibraryFriendsWhoPlay .FriendsWhoPlaySmallBody
 
 LibraryFriendsWhoPlay #HeaderLabel_FriendsPlayingNow
 {
-	visibility: collapse;	
+	visibility: collapse;
 }
 LibraryFriendsWhoPlay.FriendsPlayingNow #HeaderLabel_FriendsWhoPlay
 {
@@ -2341,12 +2341,12 @@ LibraryRecentNews .LargeNewsByline
 	transition-duration: mediumduration !immediate;
 
 	color: #161718f5;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-	
-	animation-name: links-and-more-button-focus; 
+
+	animation-name: links-and-more-button-focus;
 	animation-duration: longduration;
 	animation-delay: mediumduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -2409,7 +2409,7 @@ LibraryRecentNews .LargeNewsByline
 	height: 100%;
 }
 
-.VR .PlayActionFullWrapper:active 
+.VR .PlayActionFullWrapper:active
 {
 		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 }
@@ -2528,7 +2528,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .PlayAction .ButtonEdge:hover
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( dark_box_shadow_color ), to( applabelsolid ) );
-	box-shadow: button_box_shadow_on_color -9px -9px 12px 18px; 
+	box-shadow: button_box_shadow_on_color -9px -9px 12px 18px;
 
 }
 
@@ -2563,8 +2563,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	height: 50px;
 	opacity: 0.54;
 	opacity-mask: url( "file://{images}/library/library_a_button_inner_mask.tga" );
-	
-	transition-property: opacity;	
+
+	transition-property: opacity;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2572,7 +2572,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .PlayAction:descendantfocus .ButtonGlow
 {
-	animation-name: play-button-initialize, play-button-glow; 
+	animation-name: play-button-initialize, play-button-glow;
 	animation-duration: 8.0s, 8.0s;
 	animation-delay: 0.0s, 8.0s;
 	animation-timing-function: linear, bigpicture-ease-in-out;
@@ -2607,12 +2607,12 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 41% 35%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
 	}
-	
+
 	50%
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 55% 48%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
 	}
-	
+
 	to
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 41% 35%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
@@ -2625,12 +2625,12 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 41% 35%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
 	}
-	
+
 	50%
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 55% 48%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
 	}
-	
+
 	to
 	{
 		background-color: gradient( radial, 60% 30%, 0px 0px, 41% 35%, from( dark_box_shadow_color ), color-stop( 0.75, box_shadow_on_color ), to( box_shadow_off_color ) );
@@ -2643,8 +2643,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	opacity: 0.9
 	;
-	
-	transition-property: opacity;	
+
+	transition-property: opacity;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2660,8 +2660,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 	vertical-align: center;
 	horizontal-align: center;
-	
-	transition-property: opacity;	
+
+	transition-property: opacity;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2746,7 +2746,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	border-color: #00000000;
 	background-color: #00000000;
 	pre-transform-scale2d: 1.0;
-} 
+}
 
 
 
@@ -2797,7 +2797,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-}	
+}
 
 .LibraryMostRecent:descendantfocus .LibraryMenuRow
 {
@@ -2931,7 +2931,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 
 /* Transitions when grid is in focus */
-.ContentAreaFocus .GamesGrid, .ContentHover .GamesGrid, 
+.ContentAreaFocus .GamesGrid, .ContentHover .GamesGrid,
 .ContentAreaFocus .GamesDownloads, .ContentHover .GamesDownloads,
 .ContentAreaFocus .GamesSuggestion, .ContentHover .GamesSuggestion,
 {
@@ -2949,7 +2949,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 	width: 1500px;
 	height: 1120px;
-	
+
 	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
@@ -2961,7 +2961,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-property: transform, width;
 }
 
-.MenuHover .GamesGrid, 
+.MenuHover .GamesGrid,
 .MenuHover .GamesSuggestion,
 .MenuHover .GamesDownloads
 {
@@ -2971,7 +2971,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .EmptyLabel
 {
 	position: 0px -100px 0px;
-		
+
 	visibility: visible;
 
 	font-size: 34px;
@@ -2991,10 +2991,11 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	opacity: 1.0;
 
-	position: 500px 60px 0px;
+	position: 486px 32px 0px;
 	background-color: #00000044;
 	height: 800px;
 	width: 1350px;
+	z-index: -10;
 }
 
 .search.EmptyGrid #EmptySearchArea,
@@ -3002,15 +3003,16 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	opacity: 1.0;
 
-	position: 490px 25px 0px;
+	position: 486px 32px 0px;
 	background-color: #00000044;
 	height: 800px;
 	width: 1350px;
 
 	transition-property: transform;
 	transition-delay: 0s;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
+	z-index: -10;
 }
 #DownloadsNone {
 	position: 0px 0px 0px;
@@ -3054,12 +3056,12 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 	height: 720px;
 	width: 100%;
-	
+
 	z-index: 100;
 
 	color: #f2f2f2ff;
 	opacity: 0.0;
-	
+
 	text-transform: uppercase;
 
 	transition-property: opacity;
@@ -3078,7 +3080,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 	color: #f2f2f2ff;
 	opacity: 0.0;
-	
+
 	transition-property: opacity;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -3118,7 +3120,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	opacity: 1;
 	pre-transform-scale2d: 0.94;
-	
+
 }
 
 .AppGridItem .AppImage
@@ -3378,12 +3380,12 @@ DropDown
 
 #GamesFilterDropDownMenu #FilterPlatform.ShowPlatform
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 DropDown #FilterPlatform
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 #GamesFilterDropDownMenu #FilterController
@@ -3393,12 +3395,12 @@ DropDown #FilterPlatform
 
 #GamesFilterDropDownMenu #FilterController.ShowController
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 DropDown #FilterController
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 #GamesFilterDropDownMenu #FilterGamesICanPlay
@@ -3408,7 +3410,7 @@ DropDown #FilterController
 
 #GamesFilterDropDownMenu #FilterGamesICanPlay.ShowGamesICanPlay
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 DropDown #FilterGamesICanPlay
@@ -3599,7 +3601,7 @@ LibraryAppDetails #RightMouseScrollRegion
 	position: 0px 95px 0px;
 	opacity: 0.0;
 	background-color: mouse_off_bg_bottom;
-	
+
 	transition-property: opacity;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.23s;
@@ -3618,7 +3620,7 @@ LibraryAppDetails:descendantfocus:hover #RightMouseScrollRegion
 	background-color: mouse_hover_bg_bottom;
 }
 
-LibraryAppDetails:descendantfocus:hover #LeftMouseScrollRegion, 
+LibraryAppDetails:descendantfocus:hover #LeftMouseScrollRegion,
 {
 	opacity: 1.0;
 	background-color: mouse_hover_bg_up;
@@ -3851,7 +3853,7 @@ KeyboardShortcut Image
 }
 
 .PlayActionModal #ButtonImage
-{	
+{
 	opacity: 0.0;
 }
 
@@ -3861,7 +3863,7 @@ KeyboardShortcut Image
 }
 
 .Validating #ButtonImage
-{	
+{
 	opacity: 0.0;
 }
 
@@ -3897,7 +3899,7 @@ KeyboardShortcut Image
 
 }
 
-.PlayAction.Streaming .StreamAnimator2 
+.PlayAction.Streaming .StreamAnimator2
 {
 	opacity: 0.7;
 	width: 1868px;
@@ -3939,7 +3941,7 @@ KeyboardShortcut Image
 	{
 		position: -934px 0px 0px;
 	}
-	
+
 	100%
 	{
 		position: 0px 0px 0px;
@@ -3952,7 +3954,7 @@ KeyboardShortcut Image
 	{
 		position: 0px 0px 0px;
 	}
-	
+
 	100%
 	{
 		position: -934px 0px 0px;
@@ -4070,7 +4072,7 @@ KeyboardShortcut Image
 {
 	font-size: 26px;
 	margin-top: 5px;
-	padding-left: 0px;	
+	padding-left: 0px;
 	margin-left: 0px;
 	margin-top: 2px;
 	font-family: platformfont;
@@ -4111,13 +4113,13 @@ KeyboardShortcut Image
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform;
 }
-	
+
 .OptionsDropDown:hover Label
 {
 	transform: translateX( 7px );
 }
 
-#BackgroundUpdatesDropDown 
+#BackgroundUpdatesDropDown
 {
 	margin-bottom: 80px;
 }
@@ -4184,7 +4186,7 @@ KeyboardShortcut Image
 
 	width: 475px;
 	height: 48px;
-	
+
 	margin-left: -16px;
 	margin-top: 0px;
 	margin-bottom: 8px;
@@ -4193,7 +4195,7 @@ KeyboardShortcut Image
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
 
 	pre-transform-scale2d: 1.0;
-	
+
 	transition-property: color, transform, pre-transform-scale2d;
 	transition-timing-function: ease-out;
 
@@ -4205,8 +4207,8 @@ KeyboardShortcut Image
 
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
-	
-	animation-name: nx-filter-button-focus; 
+
+	animation-name: nx-filter-button-focus;
 	animation-duration: longduration;
 	animation-delay: shortduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -4378,7 +4380,7 @@ LibraryDLCItem Label
 	font-size: 38px;
 	font-weight: bold;
 	color: detailsdatalabelfocus;
-	
+
 	transition-property: color;
 	transition-duration: shortduration;
 }
@@ -4407,7 +4409,7 @@ LibraryDLCItem:descendantfocus .Button #DLCTitle
 	font-size: 20px;
 	font-weight: normal;
 	margin-top: 4px;
-	
+
 	transition-property: color, transform;
 	transition-duration: shortduration;
 }
@@ -4729,7 +4731,7 @@ LibraryFilterGames VerticalScrollBar
 
 .ContentAreaFocus LibraryFilterGames VerticalScrollBar
 {
-	opacity: 1.0;	
+	opacity: 1.0;
 }
 
 
@@ -4739,13 +4741,13 @@ LibraryFilterGames Label, .GridButtonRow Label
 	font-family: platformfont;
 	font-weight: normal;
 	vertical-align: center;
-	
-	font-size: 24px;	
+
+	font-size: 24px;
 	color: #2F89BDff;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	
-	
+
+
 }
 
 LibraryFilterGames .CloseButton
@@ -4771,7 +4773,7 @@ LibraryFilterGames #VR
 
 Label.Header
 {
-	font-size: 18px;	
+	font-size: 18px;
 	color: #2F89BDff;
 	margin-bottom: 5px;
 	margin-left: 10px;
@@ -4964,17 +4966,32 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 {
 	width: 100%;
 	flow-children: right;
+		transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
 }
 
-Label.ButtonCountCapsule
+.NxLeftNavButton:focus .ButtonFlowRight
 {
+  transform: translateX( 4px );
+}
+
+.NxLeftNavButton:focus .FilterHelp
+{
+	wash-color: #09334dEE;
+}
+
+.ButtonCountCapsule
+{
+	flow-children: right;
 	horizontal-align: right;
 	margin-right: 16px;
-	margin-top: 1px;
+	margin-top: -1px;
 	padding-left: 8px;
 	padding-right: 8px;
+	padding-top: 1px;
 	border-radius: 8px;
-	height: 28px;
+	height: 32px;
 	font-size: 24px;
 //	font-weight: bold;
 
@@ -4983,18 +5000,11 @@ Label.ButtonCountCapsule
 	opacity: 1.0;
 }
 
+
 .NxLeftNavButton:focus .ButtonCountCapsule
 {
-	margin-left: 8px;
-	margin-top: 1px;
-	padding-left: 8px;
-	padding-right: 8px;
-	border-radius: 8px;
-	height: 28px;
-	font-size: 24px;
-//	font-weight: bold;
 
-  background-color: #072e4733;
+  background-color: #072e4755;
   color: #072e47;
 	opacity: 1.0;
 }
@@ -5004,7 +5014,8 @@ Label.ButtonCountCapsule
 .NxLeftNavButtonAction:focus Label
 {
 	color: #072e47;
-	transform: translateX( 7px );
+
+	//transform: translateX( 7px );
 
 }
 	.NxLeftNavButton:focus Label .NumberElement,
@@ -5049,15 +5060,15 @@ Label.ButtonCountCapsule
 .NxLeftNavButton:focus Image,
 .NxLeftNavButtonAction:focus Image
 {
-	wash-color: #ffffffff;
-	transform: translateX( 4px );
+	wash-color: #09334dFF;
+	//transform: translateX( 4px );
 }
 
 .NxLeftNavButton.Locked Image
 {
 	opacity: 1.0;
 	wash-color: none;
-	
+
 	transition-property: wash-color;
 	transition-duration: 0.08s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -5262,6 +5273,7 @@ Label.ButtonCountCapsule
 .GamesSuggestion,
 .GamesDownloads
 {
+	width: 1700px;
 	padding-top: 32px;
 	padding-left: 0px;
 	padding-right: 40px;
@@ -5297,9 +5309,9 @@ Label.ButtonCountCapsule
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
-.ContentAreaFocus #PopularRow .SuggestedRow #Game1, 
+.ContentAreaFocus #PopularRow .SuggestedRow #Game1,
 .ContentHover #PopularRow .SuggestedRow #Game1,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1, 
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1,
 .ContentHover #UnPlayedRow .SuggestedRow #Game1 {
 	transform: translatex(20px);
 }
@@ -5316,9 +5328,9 @@ Label.ButtonCountCapsule
 	transform: translatex(60px);
 }
 
-.MenuHover #PopularRow .SuggestedRow #Game1, 
+.MenuHover #PopularRow .SuggestedRow #Game1,
 .MenuHover #UnPlayedRow .SuggestedRow #Game1,
-.MenuHover #PopularRow .SuggestedRow #Game2, 
+.MenuHover #PopularRow .SuggestedRow #Game2,
 .MenuHover #UnPlayedRow .SuggestedRow #Game2,
 .MenuHover #PopularRow .SuggestedRow #Game3,
 .MenuHover #UnPlayedRow .SuggestedRow #Game3
@@ -5396,28 +5408,28 @@ Label.ButtonCountCapsule
 
 #GamesSuggestion
 {
-	visibility: collapse;	
+	visibility: collapse;
 	padding-bottom: 20px;
 }
 
 .suggested #GamesSuggestion
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 #GamesDownloads
 {
-	visibility: collapse;	
+	visibility: collapse;
 }
 
 .downloads #GamesDownloads
 {
-	visibility: visible;	
+	visibility: visible;
 }
 
 .suggested #GamesGrid, .music #GamesGrid, .downloads #GamesGrid
 {
-	visibility: collapse;	
+	visibility: collapse;
 }
 
 
@@ -5723,24 +5735,30 @@ Button.NoContent
 .AllGamesFilterLabel
 {
 	margin-top: -10px;
-	position: 490px 10px 0px;
+	position: 500px 10px 0px;
 
 	text-align: left;
-	width: 600px;
 	font-family: platformfont;
 	font-size: 24px;
 	font-weight: normal;
-	color: #67C1F5ff;
+	color: #67C1F5;
+	background-color: #2d637f;
+	box-shadow: module_shadow;
+	padding: 6px 8px;
 
-	width: 1500px;
 	height: 40px;
-	
-	opacity: 0.0;
-	
-	transition-property: opacity;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-duration: shortmedduration;
+	z-index: 100;
 
+	opacity: 0.0;
+
+	transition-property: opacity, transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: supershortduration;
+
+}
+.ContentAreaFocus .AllGamesFilterLabel
+{
+	transform: translateX( -200px );
 }
 
 .search .AllGamesFilterLabel
@@ -5753,15 +5771,14 @@ Button.NoContent
 	opacity: 0.0;
 }
 
-
-.AllGamesFilterResults
+.search .AllGamesFilterLabel .AllGamesFilterResults
 {
-		color: #808184;
+	color: #c6d4df;
 }
 
 .FriendsPlaying
 {
-		color: #A4D007;
+	color: #A4D007;
 }
 
 /* Filter Button */
@@ -5869,7 +5886,7 @@ LibrarySuggestionsRow.Active
 {
 	opacity: 1.0;
 	wash-color: none;
-	
+
 	transition-property: wash-color;
 	transition-duration: 0.08s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -5893,7 +5910,7 @@ LibrarySuggestionsRow.Active
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
-	
+
 	animation-name: nx-filter-button-focus;
 	animation-duration: longduration;
 	animation-delay: shortduration;
@@ -5906,7 +5923,7 @@ LibrarySuggestionsRow.Active
 .NxTagHeader
 {
 	height: 32px;
-	font-size: 24px;	
+	font-size: 24px;
 	color: #66c0f4ff;
 
 	margin-bottom: 10px;
@@ -5925,7 +5942,7 @@ LibrarySuggestionsRow.Active
 #GameLabel
 {
 	vertical-align: center;
-	height: 32px;	
+	height: 32px;
 }
 #GameLabel Image.InlineImage,
 #GameLabel_Expanded Image.InlineImage
@@ -6015,10 +6032,13 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 .LibraryContentDescriptionBlock
 {
 	width: 100%;
-	margin-left: 10px;
+	margin-left: -2px;
 	margin-bottom: 20px;
 	height: fit-children;
 	padding: 15px;
+	border-radius: 3px;
+
+	box-shadow: module_shadow;
 }
 
 #UnavailableOnPlatformHowToStreamInfo
@@ -6041,11 +6061,12 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 {
 	pre-transform-scale2d: 0.98;
 
-	transition-duration: shortduration !immediate;
+	transition-duration: supershortduration !immediate;
 	transition-property: pre-transform-scale2d;
 }
 
-.LibraryContentDescriptionBlock:focus
+.LibraryContentDescriptionBlock:focus,
+.LibraryContentDescriptionBlock:hover
 {
 	background-color: #5f821c;
 
@@ -6156,26 +6177,39 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 	flow-children: right;
 }
 
-.NxLeftNavButton .FilterHelp
+.NxLeftNavButton Image.FilterHelp 
 {
-	height: 100%;
+	width: 24px;
+	height: 24px;
 	opacity: 0.0;
-	horizontal-align: right;
+	visibility: collapse;
+	//horizontal-align: left;
 	//vertical-align: top;
-	text-align: right;
+
+	//text-align: right;
 	color: ui_primary_color;
-	margin-right: 10px;
-	margin-top: 4px;
+	padding-top: 0px;
+	margin: 0px;
+	margin-left: 0px;
+	margin-right: 4px;
+	margin-top: -1px;
 	font-size: 20px;
+	wash-color: blue;
 	transition-property: opacity;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+.NxLeftNavButton:descendantfocus Image.FilterHelp
+{
+	
+	//transform: translatex( 8px );
+}
 
 .FilterActive.NxLeftNavButton .FilterHelp
 {
-	opacity: 0.5;
+	opacity: 1.0;
+	visibility: visible;
 }
 
 ParentalButton #ParentalLockImageLocked

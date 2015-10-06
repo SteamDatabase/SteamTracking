@@ -8,7 +8,10 @@
 <ParentalUnlockPopup class="TenfootMsgBox" tabindex="auto" selectionpos="auto" defaultfocus="Password">
 
 	<Panel class="ParentalUnlockPopupBody" tabindex="auto">
-		<Label class="StdTitle" text="#Parent_Mode" />
+        <Panel class="FamilyHeader_ctn">
+            <Image src="file://{images}/locked_acct_lg.png" />
+            <Label class="StdTitle" text="#Parent_Mode" />
+        </Panel>
 		<Label id="MsgBoxDescriptionArea" text="#Parental_EnterPIN" />
 		<TextEntry class="ParentalPINEntry" id="Password"
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"

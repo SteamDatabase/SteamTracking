@@ -9,8 +9,8 @@
 		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
-			<ControllerBindingButton id="TriggerAnalogThresholdBinding" acceptsfocus="false" />
 			<ControllerBindingButton id="TriggerClick" acceptsfocus="false" />
+			<ControllerBindingButton id="TriggerAnalogThresholdBinding" acceptsfocus="false" />
     </Panel>
 	</ControllerSourceModeTrigger>
 </root>

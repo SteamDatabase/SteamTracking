@@ -25,9 +25,6 @@ ParentalUnlockPopup
 
 	opacity: 1.0;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	color: #000000ff;
@@ -209,14 +206,34 @@ ParentalReplacementPanel Button:focus
 
 
 
-#ParentalGridItemContents, #ParentalRecentAppContents, #GridParentalRecentAppContents
+#ParentalGridItemContents,
+#ParentalRecentAppContents,
+#GridParentalRecentAppContents
 {
 	flow-children: down;
 	opacity: 1.0;
 	desaturation: 0.0;
 	background-color: action_module;
 	box-shadow: inset #00000044 0px 0px 4px 0px;
+	margin-top: -46px;
 
+	transition-property: background-color;
+	transition-duration: shortduration !immediate;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+.AppGridItem:focus #ParentalGridItemContents
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin: 5px;
+	margin-top: -45px;
+	z-index: 100;
 }
 
 #ParentalRecentAppContents
@@ -286,11 +303,22 @@ ParentalReplacementPanel Button:focus
 	opacity: 1.0;
 }
 
+.FamilyHeader_ctn
+{
+	flow-children: right;
+}
+.FamilyHeader_ctn Image
+{
+	width: 80px;
+	height: 73px;
+	margin-right: 20px;
+}
+
 .StdTitle
 {
 	font-size: 54px;
 	padding-top: 6px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	font-family: platformfont;
 	color: white;
 }
@@ -305,8 +333,9 @@ ParentalReplacementPanel Button:focus
 .GridAppImageParentalLibraryItem
 {
 	margin: 4px;
-	width: 450px;
-	height: 210px;
+	width: 460px;
+	height: 215px;
+	border-radius: 3px;
 }
 
 

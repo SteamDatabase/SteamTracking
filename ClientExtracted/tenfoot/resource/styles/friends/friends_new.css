@@ -352,7 +352,6 @@ Label.Header
 	flow-children: none;
 }
 
-
 .ContentList
 {
 
@@ -392,6 +391,11 @@ Friends.groups #GroupsContent
 }
 
 Friends.invites #InvitesContent
+{
+	opacity: 1.0;
+}
+
+Friends.addfriend #AddFriendContent
 {
 	opacity: 1.0;
 }
@@ -448,4 +452,23 @@ FriendsChatDialog.ClanChatDisabledX
 FriendsInvitePage
 {
 	flow-children: down;
+}
+
+#AddFriendContent
+{
+	padding: 16px;
+	flow-children: down;
+}
+
+#AddFriendContent Label
+{
+	color: white;
+	font-size: 30px;
+}
+
+#AddFriendInputTextArea
+{
+	width: 400px;
+	height: 60px;
+	margin-top: 20px;
 }

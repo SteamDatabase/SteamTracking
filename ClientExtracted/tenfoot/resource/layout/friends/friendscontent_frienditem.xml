@@ -7,7 +7,8 @@
 
 	<FriendsContent_FriendItem  selectionpos="auto" oncontextmenu="FriendsMainViewMore();" >
 		<Panel class="GroupContent">
-			<AvatarImage id="Avatar"/>		
+			<AvatarImage id="Avatar"/>	
+			<Image class="VoiceChatIcon"/>
 			<Panel class="FriendItemLabelContainer">
 				<Label text="#friend_item_friendname" class="FriendName" />
 				<Label text="#friend_item_persona_state" class="FriendPersonaStatus"/>

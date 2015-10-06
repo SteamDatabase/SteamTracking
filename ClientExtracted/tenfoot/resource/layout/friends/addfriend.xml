@@ -2,22 +2,23 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/friends/addfriend.css" />
 	</styles>
 
 	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto">
 		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
 			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Friends_AddFriendTitle" />
+				<Label id="MsgBoxTitle_Group" class="MsgBoxTitle" text="#Friends_AddGroupTitle" />
 			</Panel>
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
 					<Label id="MsgBoxContents" class="MsgBoxContents" text="#Friends_AddFriendDesc" />
-
+					<Label id="MsgBoxContents_Group" class="MsgBoxContents" text="#Friends_AddGroupDesc" />
 					<TextEntry id="AddFriendTextEntry" 
 						textinputid="FriendsInputTextEntry"
 						textinputdoneactionstring="#Friends_AddFriend_OK"
-						textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+						textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat"
 					/>
 				</Panel>
 				

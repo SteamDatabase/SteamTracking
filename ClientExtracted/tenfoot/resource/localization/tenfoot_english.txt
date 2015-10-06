@@ -231,6 +231,7 @@
 	"MainMenu_NewSupportMessages"	"1 message from Steam Support"
 	"MainMenu_NewClientUpdate"	"New Steam update available"
 	"MainMenu_ControllerBattery" "View Controller Status"
+	"MainMenu_NoPendingAlerts" "You have no pending alerts"
 
 	"MainMenu_RestartForClientUpdate_Title"	"New Steam update available"
 	"MainMenu_RestartForClientUpdate"	"A new Steam update is available. Do you want to restart Steam to install it?"
@@ -1590,6 +1591,7 @@
 
 	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
+	"Library_GameAction_None"						"None"
 
 	"Library_Details_Binding_Custom_Description"		"Custom Description..."
 	
@@ -2352,7 +2354,9 @@
 	"Friends_ProfileDetails_Action_InviteToWatch" "Invite to Watch"
 	"Friends_AddFriend"			"ADD FRIEND"
 	"Friends_AddFriendTitle"		"Add a Friend"
-	"Friends_AddFriendDesc"			"Enter the player name, account name, real name, email address or profile URL name of the person you're looking for."
+	"Friends_AddGroupTitle"			"Add a Group"
+	"Friends_AddFriendDesc"			"Enter the player name, account name, real name, email address or profile URL name of the person you're looking for."	
+	"Friends_AddGroupDesc"			"Enter the group name or profile URL name of the group you're looking for."
 	"Friends_AddFriend_OK"			"OK"
 	"Friends_AddFriend_Cancel"		"CANCEL"
 	"Friends_RemoveFriend_Title"		"Remove Friend"
@@ -3365,6 +3369,7 @@
 	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, unplug the USB cable to continue."
 	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
 	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Your controller requires a one-time wired update.\n\nConnect the controller with the USB cable, and the update will start automatically.\n"
+	"SteamUI_UpdateControllerFirmware_NotFromLink"	"A firmware upgrade is available for your Steam Controller.\n\nPlease connect the controller directly to your computer with the USB cable to begin the update process.\n"
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
 	"SteamUI_UpdateControllerFirmware_HardFailure" "Warning: One of your Steam controllers has been disabled and will not be reconfigured or programmed for games because its firmware is out of date and Steam was unable to fetch updated firmware information."
 	"SteamUI_UpdateDongleFirmware_OutofDate"	"ERROR: You're using a Controller Dongle that is too old. Come get a new one from the Controller Team."

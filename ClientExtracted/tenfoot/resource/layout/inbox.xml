@@ -9,6 +9,9 @@
 			<Panel id="InboxItems" childfocusonhover="true">
 				<Label class="InboxLabelTitle StdTitle AlertsMainTitle" text="#MainMenu_AlertsTitle" />
 				<Label class="InboxLabelTitle StdTitle AlertsEmpty" text="#MainMenu_AlertsEmpty" />
+				<Button id="NoAlertsButton" class="Button" onactivate="CloseInboxMenu();" >
+					<Label id="NoAlertsLabel" class="LongDescSm" text="#MainMenu_NoPendingAlerts" />
+				</Button>
 				<Button id="ControllerBatteryButton" class="Button" onactivate="ShowSettings( GameController ); CloseInboxMenu();" >
 					<Panel id="BatteryImages" >
 						<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />

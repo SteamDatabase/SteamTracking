@@ -34,10 +34,10 @@
 					<Button id="SearchFriendsButton" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="MoveRight(0);">
 						<Label text="#Friends_Menu_Search_Friend" html="true"/>
 					</Button>
-					<Button id="AddFriendButton" onfocus="GamesViewType(addfriend);" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="MoveRight(0);">
+					<Button id="AddFriendButton" onfocus="" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="AddFriend();">
 						<Label text="#Friends_Menu_Add_Friend" html="true"/>
 					</Button>
-					<Button id="SearchGroupButton" onfocus="GamesViewType(addgroup);" onactivate="MoveRight(0);" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto">
+					<Button id="SearchGroupButton" onfocus="" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="AddGroup();">
 						<Label text="#Friends_Menu_Search_Group" html="true"/>
 					</Button>
 				</Panel>

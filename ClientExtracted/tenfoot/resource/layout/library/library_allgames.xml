@@ -56,64 +56,89 @@
 					<Button id="RecentFilter" onfocus="GamesViewType(recent);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_RecentlyPlayedFilter"/>
-							<Label class="ButtonCountCapsule" text="#Library_RecentlyPlayedFilter_Detail"/>
+							<Panel class="ButtonCountCapsule" >
+								<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+							  <Label  text="#Library_RecentlyPlayedFilter_Detail"/>
+							</Panel>
 						</Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
 					</Button>	
+					
 				  <Button id="InstalledFilter" onfocus="GamesViewType(installed);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 							<Panel class="ButtonFlowRight" >
 									<Label text="#Library_Installed"/>
-									<Label class="ButtonCountCapsule" text="#Library_Installed_Detail"/>
+										<Panel class="ButtonCountCapsule" >
+											<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+											<Label  text="#Library_Installed_Detail"/>
+						 			</Panel>
 						  </Panel>
-							<Label text="#Library_FilterActive" class="FilterHelp" />			
 					</Button>
+					
 					<Button id="FavoritesFilter" onfocus="GamesViewType(favorites);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_Favorites" html="true"/>
-							<Label class="ButtonCountCapsule" text="#Library_Favorites_Detail"/>
-													  </Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
+								<Panel class="ButtonCountCapsule" >									
+									<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+									<Label text="#Library_Favorites_Detail"/>
+								</Panel>
+						</Panel>
 					</Button>
+					
 					<Panel class="GamesHorizRule" />
 					<Label text="#Library_AllGamesBrowse" class="Header" />
+			   	
 			   	<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Panel class="ButtonFlowRight" >
 							<Label id="AllGamesLabel" text="#Library_AllGames"/>
-							<Label class="ButtonCountCapsule" text="#Library_AllGames_Detail"/>
-						</Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
+								<Panel class="ButtonCountCapsule" >
+									<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+									<Label  text="#Library_AllGames_Detail"/>
+								</Panel>
+						</Panel>		
 					</Button>
+					
 					<Button id="VideosFilter" onfocus="GamesViewType(videos);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_StreamingVideos"/>
-							<Label class="ButtonCountCapsule" text="#Library_StreamingVideos_Detail" />
+								<Panel class="ButtonCountCapsule" >
+									<Image id="FilterHelpIcon" class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+									<Label text="#Library_StreamingVideos_Detail" />
+								</Panel>
 						</Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
 					</Button>
+					
 					<Button id="MusicFilter" onfocus="GamesViewType(music);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_LocalMusicTitle" />
-							<Label class="ButtonCountCapsule" text="#Library_MusicTitle_Detail"/>
-						</Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
+									<Panel class="ButtonCountCapsule" >
+										<Image id="FilterHelpIcon" class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+										<Label text="#Library_MusicTitle_Detail"/>
+									</Panel>	
+						</Panel>					
 					</Button>
+					
 					<Button id="UnblockedFilter" onfocus="GamesViewType(unblocked);" class="NxLeftNavButton HideIfParental" selectionpos="auto">
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_AllGamesUnblocked" />
-							<Label class="ButtonCountCapsule" text="#Library_AllGamesUnblocked_Detail"/>
-						</Panel>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
+									<Panel class="ButtonCountCapsule" >
+										<Image id="FilterHelpIcon" class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+										<Label class="ButtonCountCapsule" text="#Library_AllGamesUnblocked_Detail"/>
+									</Panel>
+								</Panel>	
 					</Button>
+					
 					<Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton HideIfParental" selectionpos="auto">
 						<Panel class="ButtonFlowRight" >
 							<Label text="#Library_DownloadsTitle" html="true" />
-							<Label class="ButtonCountCapsule" text="#Library_DownloadsTitle_Detail" />
+									<Panel class="ButtonCountCapsule" >
+										<Image id="FilterHelpIcon" class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+										<Label text="#Library_DownloadsTitle_Detail" />
+									</Panel>
 						</Panel>
 					</Button>
+					
 					<Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton HideIfParental FlowRight" selectionpos="auto">
 						<Image src="file://{images}/library/icon_search.png" />
 						<Label text="#Library_SearchGames"/>
-						<Label text="#Library_FilterActive" class="FilterHelp" />
 					</Button>
 
 					<Panel class="GamesHorizRule" />
@@ -122,15 +147,19 @@
 						<Image src="file://{images}/library/icon_activate.png" />
 						<Label text="#Library_AddContent_Activate"/>
 					</Button>
+					
 					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
 						<Label id="Label" text="#WizardButton_Next" />
 					</Button>
+					
 					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()" selectionpos="0,103">
 						<Label id="Label" text="#WizardButton_Back" />
 					</Button>			
+					
 					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()" selectionpos="0,104">
 						<Label id="Label" text="#WizardButton_Cancel" />
 					</Button>
+					
 				</Panel>
 				<Panel class="NxGridButtonWell" onactivate="NavigateTenfootBack();"></Panel>
 			</Panel>

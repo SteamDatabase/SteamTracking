@@ -12,29 +12,83 @@
 				<AvatarImage id="FriendPanelImage2" class="ChatItemAvatar" />
 			</Panel>
 			<Label id="ChatWithXLabel" text="#Friends_ChatWith_X" class="FriendsMainBodyRightHeaderText ChatWithXLabel" />
+
+			<Panel id="FriendsMainBodyVoiceHeader_NotConnected" class="TopBottomFlow VoiceHeader">
+				<Button class="LeftRightFlow VoiceHeaderButton" onactivate="VoiceChatInitiate()">
+					<Label class="VoiceHeaderButtonHintImage Button_X" text="X" />
+					<Label id="FriendsGameInviteHint" text="#Friends_Chat_StartVoiceChat" />
+				</Button>
+			</Panel>
+
+				<Button id="FriendsMainBodyPendingVoiceCallButton" onactivate="VoiceChatHangUp()" class="LeftRightFlow">
+				<Panel class="LeftRightFlow">
+					<Label class="VoiceHeaderButtonHintImage Button_X" text="X" />
+					<Label id="FriendsGameInviteHint" text="#friends_chat_cancel_voice_call" />
+				</Panel>
+				<Panel class="LeftRightFlow">
+					<Image class="VoiceChatIcon"/>
+					<Label id="FriendsGameInviteDetails" text="#friends_chat_voice_call_calling" />
+				</Panel>
+			</Button>
+
+			<Panel id="FriendsMainBodyVoiceHeader_Connected" class="TopBottomFlow VoiceHeader">
+				<Button class="LeftRightFlow VoiceHeaderButton" onactivate="VoiceChatHangUp()">
+					<Label class="VoiceHeaderButtonHintImage Button_X" text="X" />
+					<Label id="FriendsGameInviteHint" text="#friends_chat_end_voice_chat" />
+				</Button>
+				<Button id="VoiceChatPutOnHoldButton" class="LeftRightFlow VoiceHeaderButton" onactivate="VoiceChatToggleHold()">
+					<Label class="VoiceHeaderButtonHintImage Button_Start" text="" />
+					<Label id="FriendsGameInviteHint" text="#friends_chat_hold_voice_chat" />
+				</Button>
+				<Button id="VoiceChatResumeButton" class="LeftRightFlow VoiceHeaderButton" onactivate="VoiceChatToggleHold()">
+					<Label class="VoiceHeaderButtonHintImage Button_Start" text="" />
+					<Label id="FriendsGameInviteHint" text="#friends_chat_resume_voice_chat" />
+				</Button>
+			</Panel>
+
+
+			<!--
 			<Panel id="FriendsMainBodyStatusGroup">
 				<Label id="FriendsMainBodyStatusGroupLeft" text="#Friends_Chat_X_IsTyping" />
 				<Label id="FriendsMainBodyStatusGroupRight" text="#Friends_Chat_LastMessage" />
 			</Panel>
+			-->
+
 		</Panel>
 		<Panel id="FriendsMainBodyChatContainer">
+			<Panel id="FriendsVoiceChatControls">
+				<Panel class="LeftRightFlow">
+					<Image class="VoiceBarIcon" src="file://{images}/friends/friends_voicechat_voicelevels.tga" />
+					<VUMeter id="VoiceChatLevels0" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+					<Image class="VoiceBarIcon" src="file://{images}/friends/friends_voicechat_audiolevels.tga" />
+					<VUMeter id="VoiceChatLevels1" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				</Panel>
+				<Label id="OthersVoice" text="{s:voice_status}" />
+			</Panel>
+
 			<Button id="FriendsMainBodyGameInviteButton" onactivate="AcceptLobbyInvite()">
 				<Panel class="LeftRightFlow">
-					<Label id="FriendsGameInviteButtonHintImage" text="Y" />
+					<Label class="Button_Y" text="Y" />
 					<Label id="FriendsGameInviteHint" text="#friends_chat_accept_game_invite" />
 				</Panel>
-				<Label id="FriendsGameInviteDetails" text="#friend_chat_game_invite_details" />
+				<Label id="FriendsGameInviteDetails" text="#friends_chat_game_invite_details" />
 			</Button>
+
+			<Button id="FriendsMainBodyAcceptVoiceChatButton" onactivate="VoiceChatAccept()">
+				<Panel class="LeftRightFlow">
+					<Image class="VoiceChatIcon"/>
+					<Label class=" VoiceHeaderButtonHintImage Button_X" text="X" />
+					<Label id="FriendsAcceptVoiceChatHint" text="#friends_chat_voice_chat_invite" />
+				</Panel>		
+				<Label id="FriendsGameInviteDetails" text="#friends_chat_voice_chat_details" />
+			</Button>
+
+			
+
 			<Panel id="FriendsMainBodyChatMessages" keepscrolltobottom="true" >
 				<Label id="FriendsChatBody" text="#Friends_DontGiveOutPassword" html="true" />
 			</Panel>
-			<Panel id="FriendsVoiceChatControls">
-				<Image src="file://{images}/friends/friends_voicechat_voicelevels.tga" />
-				<VUMeter id="VoiceChatLevels0" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-				<Image src="file://{images}/friends/friends_voicechat_audiolevels.tga" />
-				<VUMeter id="VoiceChatLevels1" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-				<Label id="OthersVoice" text="#Friends_UsersInVoiceChat_NoOthers" />
-			</Panel>
+			
 		</Panel>
 		<Panel id="FriendsMainBodyInputGroup">
 			<TextEntry id="FriendsMainBodyInputTextArea"

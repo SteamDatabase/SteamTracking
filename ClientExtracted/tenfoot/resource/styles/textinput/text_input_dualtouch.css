@@ -606,11 +606,6 @@ TextInputDualTouch
 	min-width: 100px;
 }
 
-.FriendsChat #Backdrop
-{
-	background-color: white;
-}
-
 .FriendsChat #HeaderText, .FriendsChat #Legends, .FriendsChat #TextPreviewBackground
 {
 	visibility: collapse;
@@ -618,6 +613,7 @@ TextInputDualTouch
 
 .FriendsChat #BackDrop 
 {
+	background-color: white;
 	box-shadow: none;
 	border-radius: 0px;
 	background-color: none;
@@ -625,10 +621,11 @@ TextInputDualTouch
 	margin-bottom: 0px;
 }
 
- TextInputDualTouch.FriendsChat
+TextInputDualTouch.FriendsChat
 {
 	background-color: #00000000;
-	margin-top: 51%;
+	vertical-align: bottom;
+	height: 49%;
 }
 
 .FriendsChat #BodyContainer
@@ -679,4 +676,19 @@ TextInputDualTouch
 .FriendsChat #TouchKey_EnterNoClose
 {
 	visibility: visible;
+}
+
+#TouchKey_Submit
+{
+	visibility: collapse;
+}
+
+.ShowSubmit #TouchKey_Submit
+{
+	visibility: visible;
+}
+
+.ShowSubmit #TouchKey_Close
+{
+	visibility: collapse;
 }

@@ -55,8 +55,12 @@
  B AddFriendBySteamID::symbol
  B AddFriendBySteamIDX::symbol
  B AddFriendCancel::symbol
+ B AddFriendCancelX::symbol
  B AddFriendOK::symbol
+ B AddFriendOKX::symbol
+ B AddFriendX::symbol
  B AddFundsAndCheckout::symbol
+ B AddGroup::symbol
  B AddLibrary::symbol
  B AddLibraryShortcut::symbol
  B AddNewPlaylist::symbol
@@ -1055,6 +1059,7 @@
  B CloseGameHubOverlay::symbol
  B CloseInboxMenu::symbol
  B CloseInviteDialog::symbol
+ B CloseInviteDialogX::symbol
  B CloseLibrary::symbol
  B CloseMusicControl::symbol
  B CloseMusicInOverlay::symbol
@@ -1203,6 +1208,8 @@
  B FriendRemoved::symbol
  B FriendRequiresReSort::symbol
  B FriendRichInvite::symbol
+ B FriendVoiceChatEnded::symbol
+ B FriendVoiceChatStarted::symbol
  B FriendsActions::symbol
  B FriendsContentChanged::symbol
  B FriendsFilterChanged::symbol
@@ -1266,6 +1273,7 @@
  B IntroMovieDone::symbol
  B InviteFriendToGameBySteamID::symbol
  B InviteFriendToTargetLobby::symbol
+ B InviteFriendToTargetLobbyX::symbol
  B InviteListItemActivated::symbol
  B InvitesRequiresUpdate::symbol
  B ItemPickerClosed::symbol
@@ -1557,6 +1565,7 @@
  B ShowHowToStreamDialog::symbol
  B ShowInventoryForSteamID::symbol
  B ShowInviteFriendsDialog::symbol
+ B ShowInviteFriendsDialogX::symbol
  B ShowJoinPanel::symbol
  B ShowLegalInformation::symbol
  B ShowLibrary::symbol
@@ -1797,6 +1806,10 @@
  B ViewManageDLCDialog::symbol
  B ViewSupportedLanguages::symbol
  B ViewSystemRequirements::symbol
+ B VoiceChatAccept::symbol
+ B VoiceChatHangUp::symbol
+ B VoiceChatInitiate::symbol
+ B VoiceChatToggleHold::symbol
  B VoiceSinkAdded::symbol
  B VoiceSinkRemoved::symbol
  B WebFavoritesAddTab::symbol
@@ -3543,8 +3556,12 @@
  D AddFriendBySteamID::pchEvent
  D AddFriendBySteamIDX::pchEvent
  D AddFriendCancel::pchEvent
+ D AddFriendCancelX::pchEvent
  D AddFriendOK::pchEvent
+ D AddFriendOKX::pchEvent
+ D AddFriendX::pchEvent
  D AddFundsAndCheckout::pchEvent
+ D AddGroup::pchEvent
  D AddLibrary::pchEvent
  D AddLibraryShortcut::pchEvent
  D AddNewPlaylist::pchEvent
@@ -5351,6 +5368,7 @@
  D CloseGameHubOverlay::pchEvent
  D CloseInboxMenu::pchEvent
  D CloseInviteDialog::pchEvent
+ D CloseInviteDialogX::pchEvent
  D CloseLibrary::pchEvent
  D CloseMusicControl::pchEvent
  D CloseMusicInOverlay::pchEvent
@@ -5516,6 +5534,8 @@
  D FriendRemoved::pchEvent
  D FriendRequiresReSort::pchEvent
  D FriendRichInvite::pchEvent
+ D FriendVoiceChatEnded::pchEvent
+ D FriendVoiceChatStarted::pchEvent
  D FriendsActions::pchEvent
  D FriendsContentChanged::pchEvent
  D FriendsFilterChanged::pchEvent
@@ -5583,6 +5603,7 @@
  D IntroMovieDone::pchEvent
  D InviteFriendToGameBySteamID::pchEvent
  D InviteFriendToTargetLobby::pchEvent
+ D InviteFriendToTargetLobbyX::pchEvent
  D InviteListItemActivated::pchEvent
  D InvitesRequiresUpdate::pchEvent
  D ItemPickerClosed::pchEvent
@@ -5895,6 +5916,7 @@
  D ShowHowToStreamDialog::pchEvent
  D ShowInventoryForSteamID::pchEvent
  D ShowInviteFriendsDialog::pchEvent
+ D ShowInviteFriendsDialogX::pchEvent
  D ShowJoinPanel::pchEvent
  D ShowLegalInformation::pchEvent
  D ShowLibrary::pchEvent
@@ -6523,6 +6545,10 @@
  D ViewManageDLCDialog::pchEvent
  D ViewSupportedLanguages::pchEvent
  D ViewSystemRequirements::pchEvent
+ D VoiceChatAccept::pchEvent
+ D VoiceChatHangUp::pchEvent
+ D VoiceChatInitiate::pchEvent
+ D VoiceChatToggleHold::pchEvent
  D VoiceSinkAdded::pchEvent
  D VoiceSinkRemoved::pchEvent
  D WebFavoritesAddTab::pchEvent
@@ -8768,8 +8794,11 @@
  D typeinfo for CCallback<CFriendsController, FriendChatMsg_t, false>
  D typeinfo for CCallback<CFriendsController, FriendMessageHistoryChatLog_t, false>
  D typeinfo for CCallback<CFriendsController, LobbyInvite_t, false>
+ D typeinfo for CCallback<CFriendsController, NotifyHangup_t, false>
+ D typeinfo for CCallback<CFriendsController, NotifyIncomingCall_t, false>
  D typeinfo for CCallback<CFriendsController, PersonaStateChange_t, false>
  D typeinfo for CCallback<CFriendsController, RichInviteReceived_t, false>
+ D typeinfo for CCallback<CFriendsController, VoiceCallInitiated_t, false>
  D typeinfo for CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>
  D typeinfo for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  D typeinfo for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
@@ -9382,9 +9411,11 @@
  D typeinfo for CFrameStatAccumulatedValue
  D typeinfo for CFrameStats
  D typeinfo for CFrameStatsListMsg
+ D typeinfo for CFriendAddMsgBox
  D typeinfo for CFriendAvatarClickPanel
  D typeinfo for CFriendAvatarPanel
  D typeinfo for CFriendIndicators
+ D typeinfo for CFriendInvitePanel
  D typeinfo for CFriendListItem
  D typeinfo for CFriendListItem::CCallback_OnNotifyHangup
  D typeinfo for CFriendListItem::CCallback_OnNotifyIncomingCall
@@ -9401,14 +9432,18 @@
  D typeinfo for CFriendsController::CCallback_OnFriendChatMsg
  D typeinfo for CFriendsController::CCallback_OnFriendMessageHistoryReceived
  D typeinfo for CFriendsController::CCallback_OnLobbyInvite
+ D typeinfo for CFriendsController::CCallback_OnNotifyHangup
+ D typeinfo for CFriendsController::CCallback_OnNotifyIncomingCall
  D typeinfo for CFriendsController::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsController::CCallback_OnRichInviteReceived
+ D typeinfo for CFriendsController::CCallback_OnVoiceCallInitiated
  D typeinfo for CFriendsFeedItemMenuActionButton
  D typeinfo for CFriendsFeedItemMenuDetails
  D typeinfo for CFriendsFeedListItemCommunity
  D typeinfo for CFriendsFriendListItemCommunity
  D typeinfo for CFriendsImageManager
  D typeinfo for CFriendsInvitePage
+ D typeinfo for CFriendsInviteToLobbyDialog
  D typeinfo for CFriendsListHeader
  D typeinfo for CFriendsMoreLabelPanel
  D typeinfo for CFriendsNew
@@ -11065,6 +11100,7 @@
  D typeinfo for panorama::CUIEvent1<unsigned int>
  D typeinfo for panorama::CUIEvent1<unsigned long long>
  D typeinfo for panorama::CUIEvent2<CSteamID, bool>
+ D typeinfo for panorama::CUIEvent2<CSteamID, int>
  D typeinfo for panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>
  D typeinfo for panorama::CUIEvent2<ControllerBindingInfo_t const*, bool>
  D typeinfo for panorama::CUIEvent2<EFundWalletRelationship, unsigned long long>
@@ -12135,8 +12171,11 @@
  D vtable for CCallback<CFriendsController, FriendChatMsg_t, false>
  D vtable for CCallback<CFriendsController, FriendMessageHistoryChatLog_t, false>
  D vtable for CCallback<CFriendsController, LobbyInvite_t, false>
+ D vtable for CCallback<CFriendsController, NotifyHangup_t, false>
+ D vtable for CCallback<CFriendsController, NotifyIncomingCall_t, false>
  D vtable for CCallback<CFriendsController, PersonaStateChange_t, false>
  D vtable for CCallback<CFriendsController, RichInviteReceived_t, false>
+ D vtable for CCallback<CFriendsController, VoiceCallInitiated_t, false>
  D vtable for CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>
  D vtable for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  D vtable for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
@@ -12747,9 +12786,11 @@
  D vtable for CFrameStatAccumulatedValue
  D vtable for CFrameStats
  D vtable for CFrameStatsListMsg
+ D vtable for CFriendAddMsgBox
  D vtable for CFriendAvatarClickPanel
  D vtable for CFriendAvatarPanel
  D vtable for CFriendIndicators
+ D vtable for CFriendInvitePanel
  D vtable for CFriendListItem
  D vtable for CFriendListItem::CCallback_OnNotifyHangup
  D vtable for CFriendListItem::CCallback_OnNotifyIncomingCall
@@ -12765,14 +12806,18 @@
  D vtable for CFriendsController::CCallback_OnFriendChatMsg
  D vtable for CFriendsController::CCallback_OnFriendMessageHistoryReceived
  D vtable for CFriendsController::CCallback_OnLobbyInvite
+ D vtable for CFriendsController::CCallback_OnNotifyHangup
+ D vtable for CFriendsController::CCallback_OnNotifyIncomingCall
  D vtable for CFriendsController::CCallback_OnPersonaStateChange
  D vtable for CFriendsController::CCallback_OnRichInviteReceived
+ D vtable for CFriendsController::CCallback_OnVoiceCallInitiated
  D vtable for CFriendsFeedItemMenuActionButton
  D vtable for CFriendsFeedItemMenuDetails
  D vtable for CFriendsFeedListItemCommunity
  D vtable for CFriendsFriendListItemCommunity
  D vtable for CFriendsImageManager
  D vtable for CFriendsInvitePage
+ D vtable for CFriendsInviteToLobbyDialog
  D vtable for CFriendsListHeader
  D vtable for CFriendsMoreLabelPanel
  D vtable for CFriendsNew
@@ -14326,6 +14371,7 @@
  D vtable for panorama::CUIEvent1<unsigned int>
  D vtable for panorama::CUIEvent1<unsigned long long>
  D vtable for panorama::CUIEvent2<CSteamID, bool>
+ D vtable for panorama::CUIEvent2<CSteamID, int>
  D vtable for panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>
  D vtable for panorama::CUIEvent2<ControllerBindingInfo_t const*, bool>
  D vtable for panorama::CUIEvent2<EFundWalletRelationship, unsigned long long>
@@ -14900,8 +14946,11 @@
  R typeinfo name for CCallback<CFriendsController, FriendChatMsg_t, false>
  R typeinfo name for CCallback<CFriendsController, FriendMessageHistoryChatLog_t, false>
  R typeinfo name for CCallback<CFriendsController, LobbyInvite_t, false>
+ R typeinfo name for CCallback<CFriendsController, NotifyHangup_t, false>
+ R typeinfo name for CCallback<CFriendsController, NotifyIncomingCall_t, false>
  R typeinfo name for CCallback<CFriendsController, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CFriendsController, RichInviteReceived_t, false>
+ R typeinfo name for CCallback<CFriendsController, VoiceCallInitiated_t, false>
  R typeinfo name for CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>
  R typeinfo name for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  R typeinfo name for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
@@ -15517,9 +15566,11 @@
  R typeinfo name for CFrameStatAccumulatedValue
  R typeinfo name for CFrameStats
  R typeinfo name for CFrameStatsListMsg
+ R typeinfo name for CFriendAddMsgBox
  R typeinfo name for CFriendAvatarClickPanel
  R typeinfo name for CFriendAvatarPanel
  R typeinfo name for CFriendIndicators
+ R typeinfo name for CFriendInvitePanel
  R typeinfo name for CFriendListItem
  R typeinfo name for CFriendListItem::CCallback_OnNotifyHangup
  R typeinfo name for CFriendListItem::CCallback_OnNotifyIncomingCall
@@ -15536,14 +15587,18 @@
  R typeinfo name for CFriendsController::CCallback_OnFriendChatMsg
  R typeinfo name for CFriendsController::CCallback_OnFriendMessageHistoryReceived
  R typeinfo name for CFriendsController::CCallback_OnLobbyInvite
+ R typeinfo name for CFriendsController::CCallback_OnNotifyHangup
+ R typeinfo name for CFriendsController::CCallback_OnNotifyIncomingCall
  R typeinfo name for CFriendsController::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsController::CCallback_OnRichInviteReceived
+ R typeinfo name for CFriendsController::CCallback_OnVoiceCallInitiated
  R typeinfo name for CFriendsFeedItemMenuActionButton
  R typeinfo name for CFriendsFeedItemMenuDetails
  R typeinfo name for CFriendsFeedListItemCommunity
  R typeinfo name for CFriendsFriendListItemCommunity
  R typeinfo name for CFriendsImageManager
  R typeinfo name for CFriendsInvitePage
+ R typeinfo name for CFriendsInviteToLobbyDialog
  R typeinfo name for CFriendsListHeader
  R typeinfo name for CFriendsMoreLabelPanel
  R typeinfo name for CFriendsNew
@@ -17517,6 +17572,7 @@
  R typeinfo name for panorama::CUIEvent1<unsigned int>
  R typeinfo name for panorama::CUIEvent1<unsigned long long>
  R typeinfo name for panorama::CUIEvent2<CSteamID, bool>
+ R typeinfo name for panorama::CUIEvent2<CSteamID, int>
  R typeinfo name for panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>
  R typeinfo name for panorama::CUIEvent2<ControllerBindingInfo_t const*, bool>
  R typeinfo name for panorama::CUIEvent2<EFundWalletRelationship, unsigned long long>
@@ -17998,19 +18054,30 @@
  T AddFreeLicenseOK::MakeEvent(panorama::IUIPanelClient const*)
  T AddFriend::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddFriend::GetEventType()
- T AddFriend::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T AddFriend::MakeEvent(panorama::IUIPanelClient const*)
  T AddFriendBySteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddFriendBySteamID::GetEventType()
  T AddFriendBySteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T AddFriendBySteamIDX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddFriendBySteamIDX::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T AddFriendCancel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddFriendCancel::GetEventType()
  T AddFriendCancel::MakeEvent(panorama::IUIPanelClient const*)
+ T AddFriendCancelX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddFriendCancelX::MakeEvent(panorama::IUIPanelClient const*)
  T AddFriendOK::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddFriendOK::GetEventType()
  T AddFriendOK::MakeEvent(panorama::IUIPanelClient const*)
+ T AddFriendOKX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddFriendOKX::MakeEvent(panorama::IUIPanelClient const*)
+ T AddFriendX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddFriendX::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
  T AddFundsAndCheckout::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddFundsAndCheckout::GetEventType()
  T AddFundsAndCheckout::MakeEvent(panorama::IUIPanelClient const*, CAmount_t<int>)
+ T AddGroup::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddGroup::GetEventType()
+ T AddGroup::MakeEvent(panorama::IUIPanelClient const*)
  T AddLibrary::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddLibrary::GetEventType()
  T AddLibrary::MakeEvent(panorama::IUIPanelClient const*)
@@ -19668,12 +19735,21 @@
  T CCallback<CFriendsController, LobbyInvite_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(LobbyInvite_t*))
  T CCallback<CFriendsController, LobbyInvite_t, false>::Register(CFriendsController*, void (CFriendsController::*)(LobbyInvite_t*))
  T CCallback<CFriendsController, LobbyInvite_t, false>::Run(void*)
+ T CCallback<CFriendsController, NotifyHangup_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(NotifyHangup_t*))
+ T CCallback<CFriendsController, NotifyHangup_t, false>::Register(CFriendsController*, void (CFriendsController::*)(NotifyHangup_t*))
+ T CCallback<CFriendsController, NotifyHangup_t, false>::Run(void*)
+ T CCallback<CFriendsController, NotifyIncomingCall_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(NotifyIncomingCall_t*))
+ T CCallback<CFriendsController, NotifyIncomingCall_t, false>::Register(CFriendsController*, void (CFriendsController::*)(NotifyIncomingCall_t*))
+ T CCallback<CFriendsController, NotifyIncomingCall_t, false>::Run(void*)
  T CCallback<CFriendsController, PersonaStateChange_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(PersonaStateChange_t*))
  T CCallback<CFriendsController, PersonaStateChange_t, false>::Register(CFriendsController*, void (CFriendsController::*)(PersonaStateChange_t*))
  T CCallback<CFriendsController, PersonaStateChange_t, false>::Run(void*)
  T CCallback<CFriendsController, RichInviteReceived_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(RichInviteReceived_t*))
  T CCallback<CFriendsController, RichInviteReceived_t, false>::Register(CFriendsController*, void (CFriendsController::*)(RichInviteReceived_t*))
  T CCallback<CFriendsController, RichInviteReceived_t, false>::Run(void*)
+ T CCallback<CFriendsController, VoiceCallInitiated_t, false>::CCallback(CFriendsController*, void (CFriendsController::*)(VoiceCallInitiated_t*))
+ T CCallback<CFriendsController, VoiceCallInitiated_t, false>::Register(CFriendsController*, void (CFriendsController::*)(VoiceCallInitiated_t*))
+ T CCallback<CFriendsController, VoiceCallInitiated_t, false>::Run(void*)
  T CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>::CCallback(CFullScreenshotPanel*, void (CFullScreenshotPanel::*)(ScreenshotUploadProgress_t*))
  T CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>::Register(CFullScreenshotPanel*, void (CFullScreenshotPanel::*)(ScreenshotUploadProgress_t*))
  T CCallback<CFullScreenshotPanel, ScreenshotUploadProgress_t, false>::Run(void*)
@@ -22932,6 +23008,13 @@
  T CFrameStatsListMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CFrameStatsListMsg::SetCachedSize(int) const
  T CFrameStatsListMsg::~CFrameStatsListMsg()
+ T CFriendAddMsgBox::CFriendAddMsgBox(panorama::IUIWindow*, char const*, bool)
+ T CFriendAddMsgBox::GetPanelType() const
+ T CFriendAddMsgBox::HandleAddFriendCancel()
+ T CFriendAddMsgBox::HandleAddFriendOK()
+ T CFriendAddMsgBox::HandleTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
+ T CFriendAddMsgBox::HandleTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
+ T CFriendAddMsgBox::~CFriendAddMsgBox()
  T CFriendAvatarClickPanel::CFriendAvatarClickPanel(vgui::Panel*, char const*)
  T CFriendAvatarClickPanel::ChainToAnimationMap()
  T CFriendAvatarClickPanel::ChainToMap()
@@ -22969,6 +23052,10 @@
  T CFriendIndicators::SetIndicator(CFriendIndicators::EIndicator_t, bool, int)
  T CFriendIndicators::SetIndicatorValue(char const*, int)
  T CFriendIndicators::~CFriendIndicators()
+ T CFriendInvitePanel::CFriendInvitePanel(panorama::CPanel2D*, char const*, CSteamID, char const*, CSteamID)
+ T CFriendInvitePanel::GetPanelType() const
+ T CFriendInvitePanel::OnInviteFriendToTargetLobby()
+ T CFriendInvitePanel::~CFriendInvitePanel()
  T CFriendListItem::CCallback_OnNotifyHangup::Run(void*)
  T CFriendListItem::CCallback_OnNotifyIncomingCall::Run(void*)
  T CFriendListItem::CCallback_OnVoiceCallInitiated::Run(void*)
@@ -23003,17 +23090,23 @@
  T CFriendsChatDialog::BCanSendMessageToDestination(bool)
  T CFriendsChatDialog::CFriendsChatDialog(panorama::CPanel2D*, char const*)
  T CFriendsChatDialog::EventAcceptLobbyInvite()
- T CFriendsChatDialog::EventContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CFriendsChatDialog::EventFriendChatMessage(FriendChatMsg_t*)
  T CFriendsChatDialog::EventFriendLobbyInvite(CSteamID, unsigned int, char const*)
  T CFriendsChatDialog::EventFriendLobbyInviteRemoved(CSteamID)
  T CFriendsChatDialog::EventFriendMessageHistoryReceived(CSteamID, int, int)
+ T CFriendsChatDialog::EventFriendPersonaStateChanged(CSteamID)
  T CFriendsChatDialog::EventFriendRichInvite(CSteamID, unsigned int, char const*)
+ T CFriendsChatDialog::EventFriendVoiceChatEnded(CSteamID, int)
+ T CFriendsChatDialog::EventFriendVoiceChatStarted(CSteamID, int)
  T CFriendsChatDialog::EventTextEntryCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CFriendsChatDialog::EventTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CFriendsChatDialog::EventTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CFriendsChatDialog::EventTextInputUnhandledButtonPress(panorama::GamePadData_t)
  T CFriendsChatDialog::EventUpdateFriendsCheckClearTypingNotification()
+ T CFriendsChatDialog::EventVoiceChatAccept()
+ T CFriendsChatDialog::EventVoiceChatHangUp()
+ T CFriendsChatDialog::EventVoiceChatInitiate()
+ T CFriendsChatDialog::EventVoiceChatToggleHold()
  T CFriendsChatDialog::GetPanelType() const
  T CFriendsChatDialog::OnAvatarImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsChatDialog::OnGameInviteReceived(CSteamID, unsigned int, char const*)
@@ -23025,6 +23118,8 @@
  T CFriendsChatDialog::SetChatOnline()
  T CFriendsChatDialog::SetFriendItem(CSteamID)
  T CFriendsChatDialog::SetLastMessageNow()
+ T CFriendsChatDialog::UpdateVoiceChatConnectionState()
+ T CFriendsChatDialog::UpdateVoiceChatPeakLevels()
  T CFriendsChatDialog::~CFriendsChatDialog()
  T CFriendsContent_FriendItem::AddChatsIndicator()
  T CFriendsContent_FriendItem::AddPendingLobbyInvite(unsigned int, char const*)
@@ -23041,6 +23136,9 @@
  T CFriendsContent_FriendItem::GetPanelType() const
  T CFriendsContent_FriendItem::MarkChatIndicatorRead()
  T CFriendsContent_FriendItem::NoteLastChatReceivedTime()
+ T CFriendsContent_FriendItem::OnFriendVoiceChatEnded(int)
+ T CFriendsContent_FriendItem::OnFriendVoiceChatStarted(int)
+ T CFriendsContent_FriendItem::ScheduledUpdateVoiceChatConnectionState()
  T CFriendsContent_FriendItem::SetSteamID(CSteamID)
  T CFriendsContent_FriendItem::~CFriendsContent_FriendItem()
  T CFriendsContent_Friends::ActivateItemBySteamID(CSteamID)
@@ -23054,6 +23152,8 @@
  T CFriendsContent_Friends::EventFriendPersonaStateChanged(CSteamID)
  T CFriendsContent_Friends::EventFriendRequiresReSort(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsContent_Friends::EventFriendRichInvite(CSteamID, unsigned int, char const*)
+ T CFriendsContent_Friends::EventFriendVoiceChatEnded(CSteamID, int)
+ T CFriendsContent_Friends::EventFriendVoiceChatStarted(CSteamID, int)
  T CFriendsContent_Friends::GetPanelType() const
  T CFriendsContent_Friends::OnFriendChatMessage(CSteamID, bool)
  T CFriendsContent_Friends::~CFriendsContent_Friends()
@@ -23101,8 +23201,11 @@
  T CFriendsController::CCallback_OnFriendChatMsg::Run(void*)
  T CFriendsController::CCallback_OnFriendMessageHistoryReceived::Run(void*)
  T CFriendsController::CCallback_OnLobbyInvite::Run(void*)
+ T CFriendsController::CCallback_OnNotifyHangup::Run(void*)
+ T CFriendsController::CCallback_OnNotifyIncomingCall::Run(void*)
  T CFriendsController::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendsController::CCallback_OnRichInviteReceived::Run(void*)
+ T CFriendsController::CCallback_OnVoiceCallInitiated::Run(void*)
  T CFriendsController::CFriendsController()
  T CFriendsController::GetFriendGameInfo(CSteamID, unsigned int&, CUtlString&)
  T CFriendsController::GetGameInviteInfo(CSteamID, CUtlString&, CUtlString&, bool)
@@ -23111,11 +23214,15 @@
  T CFriendsController::OnFriendChatMsg(FriendChatMsg_t*)
  T CFriendsController::OnFriendMessageHistoryReceived(FriendMessageHistoryChatLog_t*)
  T CFriendsController::OnLobbyInvite(LobbyInvite_t*)
+ T CFriendsController::OnNotifyHangup(NotifyHangup_t*)
+ T CFriendsController::OnNotifyIncomingCall(NotifyIncomingCall_t*)
  T CFriendsController::OnPersonaStateChange(PersonaStateChange_t*)
  T CFriendsController::OnRichInviteReceived(RichInviteReceived_t*)
+ T CFriendsController::OnVoiceCallInitiated(VoiceCallInitiated_t*)
  T CFriendsController::RegisterListener(panorama::CPanel2D*)
  T CFriendsController::SendFriendsStateToListener(panorama::CPanel2D*)
  T CFriendsController::UnregisterListener(panorama::CPanel2D*)
+ T CFriendsController::~CFriendsController()
  T CFriendsFeedItemMenuActionButton::CFriendsFeedItemMenuActionButton(panorama::CPanel2D*, char const*, char const*, bool (CFriendsFeedItemMenuDetails::*)())
  T CFriendsFeedItemMenuActionButton::GetPanelType() const
  T CFriendsFeedItemMenuActionButton::~CFriendsFeedItemMenuActionButton()
@@ -23155,6 +23262,12 @@
  T CFriendsInvitePage::GetPanelType() const
  T CFriendsInvitePage::HandleMoveUp(int)
  T CFriendsInvitePage::~CFriendsInvitePage()
+ T CFriendsInviteToLobbyDialog::CFriendsInviteToLobbyDialog(panorama::IUIWindow*, char const*, CSteamID)
+ T CFriendsInviteToLobbyDialog::GetPanelType() const
+ T CFriendsInviteToLobbyDialog::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CFriendsInviteToLobbyDialog::Initialize(CSteamID)
+ T CFriendsInviteToLobbyDialog::OnCloseInviteDialog()
+ T CFriendsInviteToLobbyDialog::~CFriendsInviteToLobbyDialog()
  T CFriendsListHeader::BSetProperty(panorama::CPanoramaSymbol, char const*)
  T CFriendsListHeader::GetPanelType() const
  T CFriendsListHeader::~CFriendsListHeader()
@@ -23171,7 +23284,9 @@
  T CFriendsMoreLabelPanel::OnMousePressed(vgui::MouseCode)
  T CFriendsMoreLabelPanel::~CFriendsMoreLabelPanel()
  T CFriendsNew::CFriendsNew(panorama::CPanel2D*, char const*)
+ T CFriendsNew::EventAddFriend()
  T CFriendsNew::EventAddFriendBySteamID(unsigned long long)
+ T CFriendsNew::EventAddGroup()
  T CFriendsNew::EventBlockFriendSteamID(unsigned long long)
  T CFriendsNew::EventFocusContent()
  T CFriendsNew::EventFocusMenuRow()
@@ -23189,10 +23304,12 @@
  T CFriendsNew::EventShowFriend(unsigned long long, panorama::EPanelEventSource_t)
  T CFriendsNew::EventShowFromController()
  T CFriendsNew::EventShowGroups()
+ T CFriendsNew::EventShowInviteFriendsDialog(CSteamID)
  T CFriendsNew::EventStartChatWithSteamID(CSteamID, panorama::EPanelEventSource_t)
  T CFriendsNew::EventUpdateInviteCount()
  T CFriendsNew::GetActiveSteamID()
  T CFriendsNew::GetPanelType() const
+ T CFriendsNew::ShowAddFriendOrGroupMsgBox(bool)
  T CFriendsNew::~CFriendsNew()
  T CFriendsProfileDetails::Action_AcceptFriendship(panorama::EPanelEventSource_t)
  T CFriendsProfileDetails::Action_BlockAllCommunication(panorama::EPanelEventSource_t)
@@ -23353,7 +23470,6 @@
  T CGameActions::OnShowCannotInstallInOfflineMode()
  T CGameActions::OnShowCantDeleteBecauseDependantApps(char const*, char const*)
  T CGameActions::OnShowCantDeleteBecauseRunning(char const*)
- T CGameActions::OnShowClientUpdateDialog()
  T CGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T CGameActions::OnShowExternalURL(char const*)
  T CGameActions::OnShowGameInstallInProgress()
@@ -23691,7 +23807,7 @@
  T CGameStreamSession::GetCaptureType()
  T CGameStreamSession::GetGameName()
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool)
+ T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int)
  T CGameStreamSession::OnControllerDetached(unsigned int)
  T CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
@@ -34187,7 +34303,6 @@
  T CStreamingServerGameActions::OnShowCannotInstallInOfflineMode()
  T CStreamingServerGameActions::OnShowCantDeleteBecauseDependantApps(char const*, char const*)
  T CStreamingServerGameActions::OnShowCantDeleteBecauseRunning(char const*)
- T CStreamingServerGameActions::OnShowClientUpdateDialog()
  T CStreamingServerGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T CStreamingServerGameActions::OnShowDeniedLegacyKey(unsigned int)
  T CStreamingServerGameActions::OnShowDiskChangeDialog(int)
@@ -35461,7 +35576,6 @@
  T CTenfootGameActions::OnShowCannotInstallInOfflineMode()
  T CTenfootGameActions::OnShowCantDeleteBecauseDependantApps(char const*, char const*)
  T CTenfootGameActions::OnShowCantDeleteBecauseRunning(char const*)
- T CTenfootGameActions::OnShowClientUpdateDialog()
  T CTenfootGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T CTenfootGameActions::OnShowDeniedLegacyKey(unsigned int)
  T CTenfootGameActions::OnShowDiskChangeDialog(int)
@@ -37236,6 +37350,12 @@
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CFriendsController::ActiveVoiceCall_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, CProcessAudioRecorder::AudioStreamData_t, int, CDefLess<int> >::Node_t const&, bool)
@@ -38471,6 +38591,12 @@
  T CUtlVector<InstallerManifestItem_t, CUtlMemory<InstallerManifestItem_t> >::InsertMultipleBefore(int, int, InstallerManifestItem_t const*)
  T CUtlVector<InstallerManifestItem_t, CUtlMemory<InstallerManifestItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<InstallerManifestItem_t, CUtlMemory<InstallerManifestItem_t> >::~CUtlVector()
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::GrowVector(int)
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::RemoveAll()
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::SortedFindLessOrEqual(InviteFriendDialogEntry_t const&, bool (*)(InviteFriendDialogEntry_t const&, InviteFriendDialogEntry_t const&), int, int) const
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::SortedInsert(InviteFriendDialogEntry_t const&, bool (*)(InviteFriendDialogEntry_t const&, InviteFriendDialogEntry_t const&))
+ T CUtlVector<InviteFriendDialogEntry_t, CUtlMemory<InviteFriendDialogEntry_t> >::~CUtlVector()
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::GrowVector(int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::InsertBefore(int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::ShiftElementsLeft(int, int)
@@ -39337,6 +39463,7 @@
  T CValveControllerManager::SetOverrideMode(EWindowType, unsigned int, char const*, unsigned int)
  T CValveControllerManager::SetSavedBindingSelection(unsigned int, char const*)
  T CValveControllerManager::ShowUpdateFirmwareDialogNow(char const*, char const*, unsigned int, bool)
+ T CValveControllerManager::StreamingControllerConnected(unsigned int, unsigned int, unsigned int)
  T CValveControllerManager::UpdateAllControllerConfigs()
  T CValveControllerManager::UpdateControllerConfig(unsigned int)
  T CValveControllerManager::Validate(CValidator&, char const*)
@@ -39978,7 +40105,10 @@
  T CloseInboxMenu::GetEventType()
  T CloseInboxMenu::MakeEvent(panorama::IUIPanelClient const*)
  T CloseInviteDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T CloseInviteDialog::GetEventType()
  T CloseInviteDialog::MakeEvent(panorama::IUIPanelClient const*)
+ T CloseInviteDialogX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T CloseInviteDialogX::MakeEvent(panorama::IUIPanelClient const*)
  T CloseLibrary::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T CloseLibrary::MakeEvent(panorama::IUIPanelClient const*)
  T CloseMusicControl::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -40854,6 +40984,12 @@
  T FriendRichInvite::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendRichInvite::GetEventType()
  T FriendRichInvite::MakeEvent(panorama::IUIPanelClient const*, CSteamID, unsigned int, char const*)
+ T FriendVoiceChatEnded::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendVoiceChatEnded::GetEventType()
+ T FriendVoiceChatEnded::MakeEvent(panorama::IUIPanelClient const*, CSteamID, int)
+ T FriendVoiceChatStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendVoiceChatStarted::GetEventType()
+ T FriendVoiceChatStarted::MakeEvent(panorama::IUIPanelClient const*, CSteamID, int)
  T FriendWhoPlaysCompare(unsigned long long const*, unsigned long long const*)
  T FriendWhoPlaysTenfootCompare(unsigned long long const*, unsigned long long const*)
  T FriendsActions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -41223,11 +41359,15 @@
  T IntroMovieDone::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T IntroMovieDone::GetEventType()
  T IntroMovieDone::MakeEvent(panorama::IUIPanelClient const*)
+ T InviteFriendEntrySortFn(InviteFriendDialogEntry_t const&, InviteFriendDialogEntry_t const&)
  T InviteFriendToGameBySteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T InviteFriendToGameBySteamID::GetEventType()
  T InviteFriendToGameBySteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T InviteFriendToTargetLobby::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T InviteFriendToTargetLobby::GetEventType()
  T InviteFriendToTargetLobby::MakeEvent(panorama::IUIPanelClient const*)
+ T InviteFriendToTargetLobbyX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T InviteFriendToTargetLobbyX::MakeEvent(panorama::IUIPanelClient const*)
  T InviteListItemActivated::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T InviteListItemActivated::MakeEvent(panorama::IUIPanelClient const*)
  T InvitesRequiresUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -42450,7 +42590,9 @@
  T ShowInventoryForSteamID::GetEventType()
  T ShowInventoryForSteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, bool)
  T ShowInviteFriendsDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowInviteFriendsDialog::GetEventType()
  T ShowInviteFriendsDialog::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
+ T ShowInviteFriendsDialogX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowJoinPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowJoinPanel::GetEventType()
  T ShowJoinPanel::MakeEvent(panorama::IUIPanelClient const*)
@@ -43367,6 +43509,18 @@
  T ViewSystemRequirements::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ViewSystemRequirements::GetEventType()
  T ViewSystemRequirements::MakeEvent(panorama::IUIPanelClient const*)
+ T VoiceChatAccept::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VoiceChatAccept::GetEventType()
+ T VoiceChatAccept::MakeEvent(panorama::IUIPanelClient const*)
+ T VoiceChatHangUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VoiceChatHangUp::GetEventType()
+ T VoiceChatHangUp::MakeEvent(panorama::IUIPanelClient const*)
+ T VoiceChatInitiate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VoiceChatInitiate::GetEventType()
+ T VoiceChatInitiate::MakeEvent(panorama::IUIPanelClient const*)
+ T VoiceChatToggleHold::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VoiceChatToggleHold::GetEventType()
+ T VoiceChatToggleHold::MakeEvent(panorama::IUIPanelClient const*)
  T VoiceSinkAdded::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T VoiceSinkAdded::GetEventType()
  T VoiceSinkAdded::MakeEvent(panorama::IUIPanelClient const*, int)
@@ -43575,6 +43729,8 @@
  T bool panorama::DispatchEvent<FriendRemoved, CSteamID>(FriendRemoved, panorama::IUIPanelClient const*, CSteamID)
  T bool panorama::DispatchEvent<FriendRequiresReSort>(FriendRequiresReSort, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<FriendRichInvite, CSteamID, unsigned int, char const*>(FriendRichInvite, panorama::IUIPanelClient const*, CSteamID, unsigned int, char const*)
+ T bool panorama::DispatchEvent<FriendVoiceChatEnded, CSteamID, int>(FriendVoiceChatEnded, panorama::IUIPanelClient const*, CSteamID, int)
+ T bool panorama::DispatchEvent<FriendVoiceChatStarted, CSteamID, int>(FriendVoiceChatStarted, panorama::IUIPanelClient const*, CSteamID, int)
  T bool panorama::DispatchEvent<FriendsFilterChanged, char const*>(FriendsFilterChanged, panorama::IUIPanelClient const*, char const*)
  T bool panorama::DispatchEvent<FriendsSetCurrentlyActiveListTabIndex, int, int>(FriendsSetCurrentlyActiveListTabIndex, panorama::IUIPanelClient const*, int, int)
  T bool panorama::DispatchEvent<GameFiltersChanged, GameFilterOptions_t>(GameFiltersChanged, panorama::IUIPanelClient const*, GameFilterOptions_t)
@@ -44096,7 +44252,6 @@
  T non-virtual thunk to CGameActions::OnShowCannotInstallInOfflineMode()
  T non-virtual thunk to CGameActions::OnShowCantDeleteBecauseDependantApps(char const*, char const*)
  T non-virtual thunk to CGameActions::OnShowCantDeleteBecauseRunning(char const*)
- T non-virtual thunk to CGameActions::OnShowClientUpdateDialog()
  T non-virtual thunk to CGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T non-virtual thunk to CGameActions::OnShowExternalURL(char const*)
  T non-virtual thunk to CGameActions::OnShowGameInstallInProgress()
@@ -44166,7 +44321,7 @@
  T non-virtual thunk to CGameStreamSession::GetCaptureSliceCount()
  T non-virtual thunk to CGameStreamSession::GetCaptureType()
  T non-virtual thunk to CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int, bool, bool)
+ T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerDetached(unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
@@ -45339,6 +45494,7 @@
  T panorama::CHTML::PauseFlashVideoIfVisible()
  T panorama::CHTML::PchGetText() const
  T panorama::CHTML::PostURL(char const*, char const*)
+ T panorama::CHTML::PressButton(panorama::KeyCode, wchar_t)
  T panorama::CHTML::ProcessAnalogScroll(float, float, double, float)
  T panorama::CHTML::ProcessAnalogScrollAxis(float, float, double, void (panorama::CHTML::*)(float, bool))
  T panorama::CHTML::ProcessAnalogZoom(float, float, double, float)
@@ -47242,6 +47398,11 @@
  T panorama::CUIEvent2<CSteamID, bool>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent2<CSteamID, bool>::Validate(CValidator&, char const*)
  T panorama::CUIEvent2<CSteamID, bool>::~CUIEvent2()
+ T panorama::CUIEvent2<CSteamID, int>::Copy() const
+ T panorama::CUIEvent2<CSteamID, int>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent2<CSteamID, int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent2<CSteamID, int>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent2<CSteamID, int>::~CUIEvent2()
  T panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>::Copy() const
  T panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<CSteamID, panorama::EPanelEventSource_t>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -48150,11 +48311,15 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAppToUnblockedGames, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddArtistToPlaylist>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFreeLicenseOK>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriend, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriend>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendBySteamID, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendBySteamIDX, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendCancel>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendCancelX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendOK>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendOKX>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddFriendX, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddGroup>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddLibrary>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddLibraryShortcut>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddNewPlaylist, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
@@ -48287,6 +48452,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseGameHubOverlay>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseInboxMenu>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseInviteDialog>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseInviteDialogX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseLibrary>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseMusicControl>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseMusicInOverlay>(panorama::IUIPanel*, char const*, char const**)
@@ -48465,6 +48631,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IntroMovieDone>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InviteFriendToGameBySteamID, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InviteFriendToTargetLobby>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InviteFriendToTargetLobbyX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InviteListItemActivated>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InvitesRequiresUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ItemPickerClosed>(panorama::IUIPanel*, char const*, char const**)
@@ -48955,6 +49122,10 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewManageDLCDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewSupportedLanguages>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewSystemRequirements>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceChatAccept>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceChatHangUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceChatInitiate>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceChatToggleHold>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceSinkAdded, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VoiceSinkRemoved, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<WebFavoritesAddTab>(panorama::IUIPanel*, char const*, char const**)
@@ -53870,6 +54041,7 @@
  T void Destruct<CTenfootPathname::PathnamePart>(CTenfootPathname::PathnamePart*)
  T void Destruct<CUtlRadixTrieNode>(CUtlRadixTrieNode*)
  T void Destruct<CUtlString>(CUtlString*)
+ T void Destruct<InviteFriendDialogEntry_t>(InviteFriendDialogEntry_t*)
  T void Destruct<LoginUser_t>(LoginUser_t*)
  T void Destruct<MarketingItem_t>(MarketingItem_t*)
  T void Destruct<ReviewPaymentInfo_t::MethodAmount_t>(ReviewPaymentInfo_t::MethodAmount_t*)

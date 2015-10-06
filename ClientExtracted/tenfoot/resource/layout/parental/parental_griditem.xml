@@ -7,9 +7,10 @@
 	
 	<ParentalGridItem class="AppGridItem Ready" onactivate="ToggleParentalLock();" >
 		<Panel id="ParentalGridItemContents" class="GridAppImageParentalLibraryItem" >
-			<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_lg.png" />
+			<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct_lg.png" />
 			<Label id="ParentalText2" class="BottomLine" text="#Parental_MoreGames" />
 		</Panel>
+        <Panel class="GridItemBackground" />
 		<Panel class="RecentNameRow">
 			<Label id="AppName" text="#Parental_SelectToAccess"/>
 		</Panel>

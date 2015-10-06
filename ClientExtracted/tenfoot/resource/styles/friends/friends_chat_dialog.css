@@ -150,7 +150,6 @@ FriendsChatDialog AvatarImage
 	margin-bottom: 8px;
 	margin-top: 12px;
 	width: 92%;
-	flow-children: right;
 }
 
 .FriendsMainBodyRightHeaderText
@@ -164,6 +163,72 @@ FriendsChatDialog AvatarImage
 	margin-top: 12px;
 	color: #d8d8d8ff;
 	text-overflow: ellipsis;
+}
+
+.VoiceHeader
+{
+	width: fit-children;
+	height: 48px;
+	padding-right: 8px;
+	horizontal-align: right;
+	margin-right: -70px;
+	background-color: #124a6a;
+	//border-style: none;
+	visibility: collapse;
+}
+
+.VoiceHeaderButton
+{
+	visibility: collapse;
+
+}
+
+.ChatFocus .VoiceHeaderButton
+{
+	visibility: visible;
+	padding: 3px;
+}
+
+.CursorVisible .VoiceHeaderButton
+{
+	//border: 1px solid white;
+}
+
+.ChatFocus .VoiceHeaderButton:hover
+{
+	border: 2px solid white;
+}
+
+
+.CursorVisible .VoiceHeaderButtonHintImage
+{
+	visibility: collapse;
+}
+
+#FriendsMainBodyVoiceHeader_NotConnected
+{
+	visibility: visible;
+}
+
+// hide the button to start voice chat if the user is offline
+.Offline #FriendsMainBodyVoiceHeader_NotConnected
+{
+	visibility: collapse;
+}
+
+.VoiceChatActive #FriendsMainBodyVoiceHeader_NotConnected
+{
+	visibility: collapse;
+}
+
+#FriendsMainBodyVoiceHeader_Connected
+{
+	visibility: collapse;
+}
+
+.VoiceChatConnected #FriendsMainBodyVoiceHeader_Connected
+{
+	visibility: visible;
 }
 
 #StartVoiceChatBtn
@@ -214,8 +279,9 @@ FriendsChatDialog AvatarImage
 
 #ChatWithXLabel
 {
-	
-	width: 100%;
+	margin-left: 120px;
+	width: 50%;
+	background-color: none;
 }
 
 AvatarImage
@@ -235,16 +301,44 @@ AvatarImage.AvatarVisible
 
 #FriendsVoiceChatControls
 {
-	height: 78px;
+	height: fit-children;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
-	flow-children: right;
+	flow-children: down;
 	visibility: collapse;
+	horizontal-align: right;
 }
 
-.VoiceChatActive #FriendsVoiceChatControls
+.VoiceBarIcon
+{
+	height: 40px;
+	width: 40px;
+}
+
+.VoiceBarContainer
+{
+	background-color: #44444420;
+	height: 70px;
+	width: 208px;
+	border-radius: 8px;
+	flow-children: right;
+	border: 5px solid #1c333dff;
+	padding-left: 6px;
+	padding-right: 4px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 4px;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.20s;
+	border-color: none;
+	border-style: solid;
+	border-width: 5px;
+
+}
+
+.VoiceChatActive.VoiceChatConnected #FriendsVoiceChatControls
 {
 	visibility: visible;
 }
@@ -252,6 +346,12 @@ AvatarImage.AvatarVisible
 #FriendsVoiceChatControls Image
 {
 	vertical-align: center;
+}
+
+#FriendsVoiceChatControls Label
+{
+	color: white;
+	width: 100%;
 }
 
 #FriendsMainBodyChatMessages
@@ -345,18 +445,18 @@ FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 	vertical-align: center;
 }
 
+.CursorVisible #FriendsGameInviteHint
+{
+	margin-top: 7px;
+}
+
 #FriendsGameInviteHint, #FriendsGameInviteDetails
 {
 	font-size: 24px;
 	color: white;	
 }
 
-.LeftRightFlow
-{
-	flow-children: right;
-}
-
-#FriendsGameInviteButtonHintImage
+.Button_Y
 {
 	//color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
 	color: black;
@@ -375,6 +475,26 @@ FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 	margin-bottom: 4px;
 }
 
+.Button_Start
+{
+	border-radius: 44%;
+	border: 2px solid #00000000;
+	width: 50px;
+	height: 32px;
+	text-align: center;
+	wash-color: #878c8eff;
+	margin: 6px;
+	margin-left: 16px;
+	margin-right: 2px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 0px;
+	background-position: 16px 50%;
+	background-image: url( "file://{images}/footer/start.png" );
+}
+
 #FriendsGameInviteButtonHintImage Label
 {
 	color: black;
@@ -384,3 +504,175 @@ FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 {
 	visibility: collapse;
 }
+
+@keyframes 'voice_chat_icon_pulse'
+{
+	0%
+	{
+		opacity: 0.3;
+	}
+
+	50%
+	{
+		opacity: 1.0;
+	}
+
+	100%
+	{
+		opacity: 0.3;
+	}
+}
+
+.VoiceChatIcon
+{
+	visibility: collapse;
+	margin-top: 6px;
+	margin-left: 4px;
+	width: 32px;
+	height: 32px;
+	//wash-color: #d0fc34ff;
+	
+	background-image: url( "file://{images}/voice_mic.png" );
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.VoiceChatActive .VoiceChatIcon
+{
+	visibility: visible;
+}
+
+.VoiceChatOnHold .VoiceChatIcon
+{
+	background-image: url( "file://{images}/pause.png" );
+}
+
+.VoiceChatActive.VoiceChatRinging .VoiceChatIcon,
+.VoiceChatActive.VoiceChatDialing .VoiceChatIcon
+{
+	animation-name: voice_chat_icon_pulse;
+	animation-duration: 1.5s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#FriendsMainBodyAcceptVoiceChatButton
+{
+	flow-children: down;
+	width: 100%;
+	height: fit-children;
+	background-color: #124b6b;
+
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+
+	visibility: collapse;
+}
+
+#FriendsMainBodyAcceptVoiceChatButton:hover
+{
+	background-color: #196e9e;
+	border: 2px solid white;
+}
+
+.VoiceChatRinging #FriendsMainBodyAcceptVoiceChatButton
+{
+	visibility: visible;
+}
+
+.Button_X
+{
+	//color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	color: black;
+	font-size: 28px;
+	background-color: legendbuttonblue;
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	margin: 0px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 3px;
+	box-shadow: #00000022 -3px -3px 4px 6px;
+	margin-bottom: 4px;
+}
+
+#FriendsAcceptVoiceChatButtonHintImage Label
+{
+	color: black;
+}
+
+.CursorVisible #FriendsAcceptVoiceChatButtonHintImage
+{
+	visibility: collapse;
+}
+
+#FriendsAcceptVoiceChatHint
+{
+	vertical-align: center;
+}
+
+#FriendsAcceptVoiceChatHint, #FriendsAcceptVoiceChatDetails
+{
+	font-size: 24px;
+	color: white;	
+}
+
+#FriendsMainBodyPendingVoiceCallButton
+{
+	visibility: collapse;
+	width: 100%;
+	height: fit-children;
+	background-color: #124b6b;
+	flow-children: down;
+
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+
+	visibility: collapse;
+}
+
+#FriendsMainBodyPendingVoiceCallButton Label,
+#FriendsMainBodyPendingVoiceCallButton Panel
+{
+	vertical-align: center;
+	margin-left: 8px;
+}
+
+.VoiceChatDialing #FriendsMainBodyPendingVoiceCallButton
+{
+	visibility: visible;
+}
+
+#VoiceChatPutOnHoldButton
+{
+	visibility: collapse;
+}
+
+.VoiceChatConnected #VoiceChatPutOnHoldButton
+{
+	visibility: visible;
+}
+
+.VoiceChatConnected.VoiceChatOnHold #VoiceChatPutOnHoldButton
+{
+	visibility: collapse;
+}
+
+#VoiceChatResumeButton
+{
+	visibility: collapse;
+}
+
+.VoiceChatConnected.VoiceChatOnHoldByLocalPlayer #VoiceChatResumeButton
+{
+	visibility: visible;
+}
+

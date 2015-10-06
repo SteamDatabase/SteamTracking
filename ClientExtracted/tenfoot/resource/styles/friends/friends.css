@@ -1530,7 +1530,7 @@ DropDownMenu
 	padding-top: 8px;
 	padding-left: 4px;
 	border-width: 0px;
-	height: 106px;
+	height: 110px;
 }
 
 .InviteFriendsDialog FriendInvitePanel #Avatar
@@ -1607,6 +1607,12 @@ FriendInvitePanel #InviteSent
 	font-size: 28px;
 }
 
+FriendInvitePanel #InviteButton
+{
+	padding-top: 4px;
+	height: fit-children;
+}
+
 FriendInvitePanel.Disabled #InviteSent
 {
 	opacity: 1.0;
@@ -1615,6 +1621,8 @@ FriendInvitePanel.Disabled #InviteSent
 FriendInvitePanel #FriendPanelLabels Button #InviteLabel
 {
 	color: applabelsolid;
+	font-size: 20px;
+	vertical-align: center;
 }
 
 FriendInvitePanel #FriendPanelLabels #InviteSent

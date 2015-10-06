@@ -268,7 +268,7 @@ MainMenu.StackDepth3 .HomeGlow
 
 #TopRow
 {
-  margin-top: 96px;
+  margin-top: 64px;
 	vertical-align: top;
 	opacity:0.7;
 	width: 1920px;
@@ -327,7 +327,7 @@ MainMenu.StackDepth3 .HomeGlow
 	width: 1900px;
 	height: 2px;
 	horizontal-align: center;
-	margin-top: 236px;
+	margin-top: 200px;
 	opacity: 1.0;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #1c486900 ), color-stop( 0.5, #1c4869ff ), to( #1c486900 ) );
 	z-index: MainMenuZIndex;
@@ -657,7 +657,7 @@ MainMenu.StackDepth3 .HomeGlow
 {
 	horizontal-align: center;
 	//vertical-align: center;
-	margin-top: 300px;
+	margin-top: 276px;
 	margin-left: -64px;
 	font-size: 33;
 	background-color: #00000000;
@@ -941,8 +941,8 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	flow-children: down;
 	width: 96px;
 	height: 96px;
-	margin-left: 16px;
-	margin-right: 16px;
+	margin-left: 8px;
+	margin-right: 8px;
 	vertical-align: center;
 	padding: 0px;
 }
@@ -1350,36 +1350,74 @@ InboxMenu #Wrapper .Button
 	margin-top: 0px;
 	horizontal-align: center;
 	flow-children: right;
+	border-style: none;
+	border-width: 0px;
+
+	background-color: simplebuttonsolid_vertical;
+
+	box-shadow: module_shadow;
+}
+InboxMenu #Wrapper .Button:focus
+{
+	height: 80px;
+	margin-top: 0px;
+	horizontal-align: center;
+	flow-children: right;
+	border-style: none;
+	border-width: 0px;
+
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
+	animation-name: button-focus;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 InboxMenu #Wrapper .Button Label
 {
 	font-size: 30px;
-	margin-left: 6px;
+	margin-left: 10px;
 	margin-right: 6px;
 	vertical-align: center;
+
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: supershortduration;
+
+	transform: translateX( 0px ) translateY( -4px );
 }
 
 InboxMenu #Wrapper .Button:focus Label
 {
-	transform: translatex(0px) translatey(0px);
-	color: #ffffff;
+	transform: translateX( 7px ) translateY( -4px );
+	color: #161718f5;
 	
-}
-
-InboxMenu #Wrapper .Button:focus Image
-{
-	transform: translatex(0px) translatey(0px);
-	color: #ffffff;
-	wash-color: #ffffff;	
 }
 
 InboxMenu #Wrapper .Button Image
 {
-	transform: translatex(3px) translatey(4px);
+	width: 46px;
+	height: 46px;
+	transform: translateX( 0px ) translateY( 8px );
 	color: #ffffff;
-	wash-color: #8bcdf2;	
+	wash-color: #8bcdf2;
+
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: supershortduration;
 }
+
+InboxMenu #Wrapper .Button:focus Image
+{
+	transform: translateX( 3px ) translateY( 8px );
+	color: #ffffff;
+	wash-color: #ffffff;	
+}
+
+
 
 InboxMenu #Wrapper .Button #ParentalLockImageUnlocked
 {
@@ -1397,7 +1435,7 @@ InboxMenu #FamilyModeItems,
 	horizontal-align: center;
 	vertical-align: center;
 	width: 100%;
-	background-color: gradient( linear, 0% -100%, 90% 100%, from( #00000000 ), color-stop( 0.5, #00000055), to( #00000000 ) );
+
 	margin-bottom: 16px;
 	
 	visibility: collapse;
@@ -1434,6 +1472,8 @@ InboxMenu #Wrapper
 	width: 600px;
 	min-height: 260px;
 	overflow: clip scroll;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 }
 
 InboxMenu Label
@@ -1455,8 +1495,8 @@ InboxMenu .Button
 {
 	horizontal-align: left;
 	vertical-align: bottom;
-	color: #15a4d5;
-	font-size: 38;
+	color: #fefefe;
+	font-size: 38px;
 	font-weight: light;
 	height: 50px;
 	text-align: center;
@@ -1591,11 +1631,23 @@ Label.LocationStarter
 	//visibility: collapse;
 }
 
+#InboxItems #NoAlertsButton
+{
+	margin-top: 10px;
+	visibility: collapse;
+}
+
+.InboxEmpty #InboxItems #NoAlertsButton
+{
+	visibility: visible;
+}
+
+
 .IncomingInboxItems #StatusInbox,
 .DownloadsActive #StatusDownloads,
 .FamilyModeEnabled #StatusFamilyMode,
 .MusicPlaying #StatusMusic,
-.BatteryVisible #StatusBattery
+.BatteryVisible #StatusBattery,
 {
 	visibility: visible;
 }
