@@ -1160,7 +1160,7 @@
 	right: 65px;
 	padding: 0 5px;
 	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
-	font-size: 22px;
+	font-size: 24px;
 	color: #FFFFFF;
 	background-color: #1284a9;
 }
@@ -1181,7 +1181,7 @@
 .tenfoot_dash_overlay .left_time {
 	color: #FFFFFF;
 	font-family: 'Motiva Sans', Arial, sans-serif;
-	font-size: 22px;
+	font-size: 24px;
 	top: 27px;
 	position: absolute;
 	left: 15px;
@@ -1191,7 +1191,7 @@
 .tenfoot_dash_overlay .right_time {
 	color: #FFFFFF;
 	font-family: 'Motiva Sans', Arial, sans-serif;
-	font-size: 22px;
+	font-size: 24px;
 	top: 27px;
 	position: absolute;
 	right: 15px;

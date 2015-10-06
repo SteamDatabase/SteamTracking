@@ -805,31 +805,34 @@
 	}
 }
 
-/* Modal */
-.NxModalBackground
+.NxLoadingModal
 {
-	width: 100%;
-	height: 100%;
-	z-index: 10000;
+	width: 500px;
+	height: 300px;
+	flow-children: down;
 }
 
-.NxModalFrame,
-.NxModalBackground.Destructing:descendantfocus .NxModalFrame
+.NxLoadingModal Label
 {
-	background-color: message_box_bg;
-	box-shadow: fill #00000044 -4px -4px 8px 8px;
-	padding: 10px;
-
-	transform: translateY( 1200px );
-	align: center center;
-
-	transition-property: transform;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
+	margin-top: 70px;
+	margin-bottom: 6px;
+	horizontal-align: center;
 }
 
-.NxModalBackground:descendantfocus .NxModalFrame
+.NxLoadingModal LoadingThrobber
 {
-	transform: none;
+	horizontal-align: center;
 }
 
+.NxLoadingError
+{
+	width: 700px;
+	height: fit-children;
+	padding: 40px 40px;
+}
+
+.NxLoadingError Label
+{
+	text-align: center;
+	margin-top: 0px;
+}
