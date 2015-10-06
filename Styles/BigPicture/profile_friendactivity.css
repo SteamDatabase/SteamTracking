@@ -1174,3 +1174,7 @@ LoadingThrobber.HorizontallyCenteredThrobber {
 	margin-top: 30px;
 	opacity: 0;
 }
+#CommunityContentFriendActivity {
+	padding-left: 48px;
+	padding-top: 8px;
+}

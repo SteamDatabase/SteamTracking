@@ -605,6 +605,23 @@ a.nohover, a.nohover:hover
 	margin-top: 7px;
 }
 
+@media screen and (max-width: 1080px)
+{
+	.blotter_day_header_date
+	{
+		position: static;
+		float: left;
+		width: auto;
+		margin-right: 8px;
+	}
+
+	.blotter_day_header_divider {
+		float: none;
+		overflow: hidden;
+		width: auto;
+	}
+}
+
 .blotter_block {
 	margin-bottom: 25px;
 	word-wrap: break-word;

@@ -3518,6 +3518,11 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform;
 }
+#RightColumn.Friends
+{
+	margin-left: -20px;
+	padding-left: 6px;
+}
 
 #ShowcaseGrid
 {
@@ -4076,9 +4081,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	padding-top: 75px;
 }
 
-#AchievementsContainer.AchievementsContainer,
-.AchievementsContainer .StatsContainer {
-
+#AchievementsContainer.AchievementsContainer {
+	padding-bottom: 130px;
 }
 .ContentGrid {
 	margin-top: 40px;
@@ -4502,7 +4506,17 @@ Panel.AvatarOptionGame {
 
 /* Friends list */
 
-.FriendsGrid
+#friends_list,
+#friends_blocked,
+#friends_following
+{
+	width: 1700px;
+	padding-right: 150px;
+}
+
+.FriendsGrid,
+#friends_blocked .ContentGrid,
+#friends_following .ContentGrid
 {
 	height: 1100px;
 	padding: 70px 40px 40px 0px;

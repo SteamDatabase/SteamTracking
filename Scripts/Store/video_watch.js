@@ -173,6 +173,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	document.title = this.m_strVideoTitle + ' :: Steam';
 
 	// options that need setting on playback start
+	this.SetVideoTrack();
 	this.SetAudioTrack();
 	this.SetClosedCaptionLanguage();
 	this.m_playerUI.SetPlayerPlaybackRate();
@@ -314,6 +315,7 @@ CVideoWatch.prototype.LoadVideoMPD = function( url )
 	this.m_DASHPlayerStats.Reset();
 	this.SetResumeTimeForAppID();
 	var bUseMpdRelativePathForSegments = false;
+	this.m_player.SetVideoAdaptationIndex ( CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_nAppId ) );
 	this.m_player.SetAudioAdaptationIndex ( CDASHPlayerUI.GetSavedAudioTrackSelected( this.m_nAppId ) );
 
 
@@ -395,6 +397,31 @@ CVideoWatch.prototype.SetAudioTrack = function()
 		this.m_playerUI.SwitchAudioTrackSelectedInPlayer( strAudioTrackID );
 		this.m_playerUI.SaveAudioTrackSelected();
 		this.m_bEnabledAudioDubTrack = true;
+	}
+}
+
+CVideoWatch.prototype.SetVideoTrack = function()
+{
+	var strVideoTrackID = CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_nAppId );
+
+	if ( !strVideoTrackID )
+	{
+		// determine the best main or dub audio track for the user
+		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		{
+			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+			{
+				strVideoTrackID = this.m_player.GetVideoTrackIDForLanguage( strCode );
+				break;
+			}
+		}
+	}
+
+	if ( strVideoTrackID && strVideoTrackID != -1 )
+	{
+		this.m_playerUI.SetVideoTrackSelectedInUI( strVideoTrackID );
+		this.m_playerUI.SwitchVideoTrackSelectedInPlayer( strVideoTrackID );
+		this.m_playerUI.SaveVideoTrackSelected();
 	}
 }
 

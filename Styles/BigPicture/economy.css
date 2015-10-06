@@ -166,6 +166,8 @@
 {
 	flow-children: down;
 	width: 100%;
+	max-height: 400px;
+	overflow: clip scroll;
 }
 
 .EconomyTagFilters DropDown

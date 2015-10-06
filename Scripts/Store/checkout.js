@@ -666,8 +666,8 @@ function InitializeTransaction()
 				'GifteeEmail' : giftee_email,
 				'GifteeName' : giftee_name,
 				'GiftMessage' : gift_message,
-				'GiftSentiment' : gift_sentiment,
-				'GiftSignature' : gift_signature, 
+				'Sentiment' : gift_sentiment,
+				'Signature' : gift_signature,
 				
 				'BankAccount' : $('bank_account').value,
 				'BankCode' : $('bank_code').value,

@@ -1495,10 +1495,6 @@ a.guide_row {
 		float: left;
 		margin-right: 8px;
 	}
-
-	html.responsive .help_game_refund_box {
-		margin-bottom: 20px;
-	}
 }
 
 @media screen and (max-width: 500px)
@@ -1522,6 +1518,7 @@ a.guide_row {
 	padding: 14px;
 	color: #8c96a0;
 	line-height: 17px;
+	margin-bottom: 20px;
 }
 
 .help_game_request_refund_button {
@@ -2374,6 +2371,11 @@ img.category_icon {
 	{
 		padding-top: 10px;
 	}
+}
+
+.lock_button_row
+{
+	margin-top: 10px;
 }
 
 .lock_button_row .lock_button

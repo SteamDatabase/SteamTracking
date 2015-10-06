@@ -155,6 +155,7 @@
 	line-height: 20px;
 	margin-right: 5px;
 	float: right;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 .dash_overlay .live_button {
@@ -182,14 +183,15 @@
 
 .modal_panel_wrapper .representation_select
 {
-	margin-right: 10px;
 	font-size: 12px;
 	background-color: #2c2b28;
 	color: #CCC;
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
-	width: 200px;
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	width: 100%;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
+	margin-left: 10px;
+	height: 25px;
 }
 
 .dash_overlay .settings_icon
@@ -232,7 +234,7 @@
 
 .settings_panel
 {
-	min-width: 230px;
+	min-width: 300px;
 	min-height: 100px;
 
 	position: absolute;
@@ -243,19 +245,20 @@
 	-webkit-transform: translateX(-50%) translateY(-50%);
 
 	padding: 20px;
-	background: rgba(44,43,40,0.95);
+	background: rgba(44,43,40,1);
+	box-shadow: 2px 2px 5px #111111;
 
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	text-align: left;
 }
 
 .settings_label
 {
 	color: #9d9d9d;
-	font-size: 13px;
-	text-align: right;
-	display: inline-block;
-	margin-right: 10px;
+	font-size: 14px;
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 4px;
 }
 
 .playback_notification
@@ -304,12 +307,24 @@
 .modal_panel_wrapper .representation_audio,
 .modal_panel_wrapper .representation_playbackRate,
 .modal_panel_wrapper .representation_captions,
-.modal_panel_wrapper .representation_audio_track
+.modal_panel_wrapper .representation_audio_track,
+.modal_panel_wrapper .representation_video_track
 {
 	clear: both;
-	padding-bottom: 10px;
-	text-align: right;
+	margin-bottom: 14px;
+	text-align: left;
 	display: none;
+	margin-right: 20px;
+}
+
+.modal_panel_wrapper #representation_select_playbackRate
+{
+	width: 75px;
+}
+
+.modal_panel_wrapper .representation_playbackRate
+{
+	margin-bottom: 0px;
 }
 
 .dash_overlay .customize_captions
@@ -332,7 +347,7 @@
 
 .dash_closed_captions_customization
 {
-	min-width: 310px;
+	min-width: 300px;
 	min-height: 100px;
 
 	position: absolute;
@@ -343,53 +358,61 @@
 	-webkit-transform: translateX(-50%) translateY(-50%);
 
 	padding: 20px;
-	background: rgba(44,43,40,0.95);
+	background: rgba(44,43,40,1);
+	box-shadow: 2px 2px 5px #111111;
 
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	text-align: left;
 }
 
 .dash_closed_captions_customization .panel_title
 {
-	font-size: 14px;
+	font-size: 24px;
 	color: #CCC;
-	padding-bottom: 10px;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
+	padding-bottom: 20px;
+	text-align: center;
 }
 
 .settings_panel .panel_title
 {
-	font-size: 14px;
+	font-size: 24px;
 	color: #CCC;
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	padding-bottom: 20px;
+	text-align: center;
 }
 
 .dash_closed_captions_customization span
 {
-	font-size: 13px;
+	font-size: 14px;
 	color: #9d9d9d;
 	text-align: right;
-	display: inline-block;
-	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 4px;
+	display: block;
+	text-align: left;
 }
 
 .dash_closed_captions_customization select
 {
-	margin-right: 10px;
 	font-size: 12px;
 	background-color: #2c2b28;
 	color: #CCC;
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
-	width: 200px;
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	width: 100%;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
+	margin-left: 10px;
+	height: 25px;
 }
 
 .dash_closed_captions_customization .cc_select_wrapper
 {
 	clear: both;
 	padding-bottom: 10px;
-	text-align: right;
+	text-align: left;
+	margin-right: 20px;
 }
 
 .dash_closed_captions_customization .panel_done,
@@ -397,12 +420,13 @@
 {
 	float: right;
 	color: #9d9d9d;
-	font-size: 13px;
+	font-size: 14px;
 	margin-top: 6px;
 	padding: 2px;
 	text-decoration: underline;
 	cursor: pointer;
 	text-align: right;
+	margin-right: 10px;
 }
 
 #settings_panel_wrapper .settings_done 
@@ -413,13 +437,15 @@
 	cursor: pointer;
 	text-align: right;
 	margin-top: 10px;
-	font-size: 13px;
+	margin-right: 10px;
+	font-size: 14px;
 }
 
 .dash_closed_captions_customization .panel_cancel
 {
 	float: left;
 	text-align: left;
+	margin-left: 10px;
 }
 
 .dash_closed_captions_customization .cc_style_instructions
@@ -436,6 +462,56 @@
 .dash_closed_captions_customization .panel_cancel:hover
 {
 	color: #CCCCCC;
+}
+
+.dash_closed_captions_customization .cc_select_wrapper.cc_font_sub
+{
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: -5px;
+}
+
+.dash_closed_captions_customization .cc_font_sub span
+{
+	display: inline;
+	text-align: right;
+}
+
+.dash_closed_captions_customization .cc_font_sub select
+{
+	width: 135px;
+}
+
+.dash_closed_captions_customization .cc_select_wrapper.cc_display_sub
+{
+	float: left;
+	clear: none;
+}
+
+.dash_closed_captions_customization .cc_display_sub select
+{
+	width: 100%;
+	min-width: 75px;
+}
+
+.settings_panel .rep_quality div
+{
+	display: inline;
+	text-align: right;
+}
+
+.settings_panel .rep_quality select
+{
+	width: 180px;
+}
+
+.settings_panel .representation_video.rep_quality,
+.settings_panel .representation_audio.rep_quality
+{
+	text-align: right;
+	margin-right: 10px;
+	margin-top: -9px;
+	margin-bottom: 25px;
 }
 
 .dash_overlay .video_quality_label
@@ -797,7 +873,6 @@
 	display: block;
 	color: #9d9d9d;
 	font-size: 12px;
-	font-family: Arial, Helvetica, Verdana, sans-serif;
 	line-height: 20px;
 }
 
@@ -826,7 +901,7 @@
 
 	opacity: 0.0;
 	transition-property: opacity;
-	transition-duration: 0.2s;
+	transition-duration: 0.1s;
 
 	bottom: 5%;
 	left: 50%;
@@ -835,15 +910,12 @@
 	-webkit-transform: translateX(-50%) translateY(0%);
 
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
-
-	display: none;
 }
 
 
 .dash_show_player_ui .tenfoot_dash_overlay
 {
 	opacity: 1.0;
-	display: block;
 }
 
 .tenfoot_dash_overlay #dash_video_title_banner
@@ -851,7 +923,7 @@
 	position: relative;
 	font-size: 36px;
 	color: #FFF;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	cursor: default;
 	top: 15px;
 	left: 17px;
@@ -1159,7 +1231,7 @@
 	left: 65px;
 	right: 65px;
 	padding: 0 5px;
-	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	color: #FFFFFF;
 	background-color: #1284a9;
@@ -1180,7 +1252,7 @@
 
 .tenfoot_dash_overlay .left_time {
 	color: #FFFFFF;
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	top: 27px;
 	position: absolute;
@@ -1190,7 +1262,7 @@
 
 .tenfoot_dash_overlay .right_time {
 	color: #FFFFFF;
-	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	top: 27px;
 	position: absolute;
@@ -1293,7 +1365,7 @@
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 	z-index: 100;
 
-	max-height: 430px;
+	max-height: 425px;
 	margin: 13px;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -1302,14 +1374,14 @@
 .tenfoot_settings_panel .panel_title
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 44px;
 }
 
 .tenfoot_settings_panel .settings_label
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 36px;
 	color: #16B9E5;
 	text-align: center;
@@ -1321,7 +1393,8 @@
 .tenfoot_settings_panel #representation_audio,
 .tenfoot_settings_panel #representation_playbackRate,
 .tenfoot_settings_panel #representation_captions,
-.tenfoot_settings_panel #representation_audio_track
+.tenfoot_settings_panel #representation_audio_track,
+.tenfoot_settings_panel #representation_video_track
 {
 	display: none;
 	clear: both;
@@ -1373,7 +1446,7 @@
 	float: left;
 	width: 600px;
 	overflow: hidden;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 36px;
 	color: #FFF;
 	text-align: center;
@@ -1426,14 +1499,14 @@
 .tenfoot_dash_closed_captions_customization .panel_title
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 44px;
 }
 
 .tenfoot_dash_closed_captions_customization .settings_label
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	font-size: 36px;
 	color: #16B9E5;
 	text-align: center;

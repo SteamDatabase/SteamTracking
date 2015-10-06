@@ -24,6 +24,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nVideoRepresentationIndex = -1;
 	this.m_nAudioRepresentationIndex = 0;
 	this.m_strAudioAdaptationID = null;
+	this.m_strVideoAdaptationID = null;
 	this.m_nPlayerHeight = 0;
 	this.m_nCurrentDownloadBitRate = 0;
 	this.m_nSavedPlaybackRate = 1.0;
@@ -491,9 +492,14 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 	var bNeedVideo = true;
 	var bNeedAudio = true;
 
+	// validate saved video track
+	var adaptationVideo = this.GetAdaptationByTrackID( this.m_strVideoAdaptationID );
+	if ( !adaptationVideo || !adaptationVideo.containsVideo )
+		this.m_strVideoAdaptationID = null;
+
 	// validate saved audio track
-	var adaptation = this.GetAdaptationByTrackID( this.m_strAudioAdaptationID );
-	if ( !adaptation || !adaptation.containsAudio )
+	var adaptationAudio = this.GetAdaptationByTrackID( this.m_strAudioAdaptationID );
+	if ( !adaptationAudio || !adaptationAudio.containsAudio )
 		this.m_strAudioAdaptationID = null;
 
 	for ( var i = 0; i < period.adaptationSets.length; i++ )
@@ -504,11 +510,21 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 		var keep = null;
 		if ( bNeedVideo && adaptation.containsVideo )
 		{
-			// if there are roles, find the first main video track
-			if ( adaptation.roles.length == 0 || ( adaptation.roles.length > 0 && adaptation.roles[0] == 'main' ) )
+			// restore video adaptation if appropriate
+			if ( this.m_strVideoAdaptationID != null )
 			{
+				if ( this.m_strVideoAdaptationID == adaptation.id )
+				{
+					keep = adaptation;
+					bNeedVideo = false;
+				}
+			}
+			else if ( adaptation.roles.length == 0 || ( adaptation.roles.length > 0 && adaptation.roles[0] == 'main' ) )
+			{
+				// if there are roles, find the first main video track
 				keep = adaptation;
 				bNeedVideo = false;
+				this.m_strVideoAdaptationID = adaptation.id;
 			}
 		}
 
@@ -842,7 +858,7 @@ CDASHPlayer.prototype.OnTimeUpdate = function()
 CDASHPlayer.prototype.OnSegmentDownloaded = function()
 {
 	this.UpdateStats();
-	this.UpdateVideoRepresentation( this.m_nVideoRepresentationIndex );
+	this.UpdateVideoRepresentation( this.m_nVideoRepresentationIndex, false );
 	$J( this.m_elVideoPlayer ).trigger( 'bufferedupdate' );
 	this.OnVideoBufferProgress();
 }
@@ -1056,6 +1072,23 @@ CDASHPlayer.prototype.GetAllAudioAdaptations = function()
 	return rgAudioAdaptations;
 }
 
+CDASHPlayer.prototype.GetAllVideoAdaptations = function()
+{
+	var period = this.m_mpd.periods[0];
+	var rgVideoAdaptations = [];
+
+	for ( var i = 0; i < period.adaptationSets.length; i++ )
+	{
+		var adaptation = period.adaptationSets[i];
+		if ( adaptation.containsVideo )
+		{
+			rgVideoAdaptations.push( adaptation );
+		}
+	}
+
+	return rgVideoAdaptations;
+}
+
 CDASHPlayer.prototype.GetRepresentationsArray = function ( bVideo )
 {
 	var rgRespresentations = [];
@@ -1183,6 +1216,29 @@ CDASHPlayer.prototype.UpdateAudioRepresentation = function( nRepresentationIndex
 		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
 }
 
+CDASHPlayer.prototype.SetVideoAdaptationIndex = function ( strAdaptationID )
+{
+	if ( typeof this.m_mpd !== 'undefined' && this.GetAdaptationByTrackID( strAdaptationID ) != null )
+		this.m_strVideoAdaptationID = strAdaptationID;
+	else if ( strAdaptationID != null )
+		this.m_strVideoAdaptationID = strAdaptationID;
+}
+
+CDASHPlayer.prototype.UpdateVideoAdaptationSet = function ( strAdaptationID )
+{
+	if ( strAdaptationID == this.m_strVideoAdaptationID )
+		return;
+
+	// find the adaptation based on the track id passed in
+	var adaptation = this.GetAdaptationByTrackID( strAdaptationID );
+	if ( adaptation && adaptation.containsVideo )
+	{
+		this.m_strVideoAdaptationID = strAdaptationID;
+		this.GetVideoLoader().ChangeAdaptationSet( adaptation );
+		this.UpdateVideoRepresentation( this.m_nVideoRepresentationIndex, true );
+	}
+}
+
 CDASHPlayer.prototype.GetLiveDesiredBitrate = function( nHeight )
 {
 	if ( nHeight < 360 )
@@ -1195,10 +1251,10 @@ CDASHPlayer.prototype.GetLiveDesiredBitrate = function( nHeight )
 	return 12000 * 1000;
 }
 
-CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex )
+CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex, forceUpdate )
 {
 	// skip if user selected representation and hasn't changed
-	if ( nRepresentationIndex >= 0 && this.m_nVideoRepresentationIndex == nRepresentationIndex )
+	if ( nRepresentationIndex >= 0 && this.m_nVideoRepresentationIndex == nRepresentationIndex && !forceUpdate )
 		return;
 
 	var loader = this.GetVideoLoader();
@@ -1271,6 +1327,14 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 	// set
 	this.m_nVideoRepresentationIndex = -1;
 	loader.ChangeRepresentationByIndex( iNewRepresentation );
+
+	// for alternate video tracks, switch immediately
+	if ( forceUpdate && !this.BIsLiveContent() )
+	{
+		loader.SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
+		this.m_nRepChangeTargetHeight = loader.m_adaptation.representations[ iNewRepresentation ].height;
+		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+	}
 }
 
 CDASHPlayer.prototype.BIsRepresentationChanging = function()
@@ -1330,6 +1394,22 @@ CDASHPlayer.prototype.GetAudioTrackIDForLanguage = function( strCode )
 			if ( rgAudioAdaptations[ i ].language == strCode )
 			{
 				return rgAudioAdaptations[ i ].id;
+			}
+	}
+
+	return -1;
+}
+
+CDASHPlayer.prototype.GetVideoTrackIDForLanguage = function( strCode )
+{
+	// find a main or dub video track for language code passed in
+	var rgVideoAdaptations = this.GetAllVideoAdaptations();
+	for ( var i = 0; i < rgVideoAdaptations.length; i++ )
+	{
+		if ( rgVideoAdaptations[ i ].roles[ 0 ] == 'main' || rgVideoAdaptations[ i ].roles[ 0 ] == 'dub' )
+			if ( rgVideoAdaptations[ i ].language == strCode )
+			{
+				return rgVideoAdaptations[ i ].id;
 			}
 	}
 
@@ -3172,6 +3252,8 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_schPrecacheTimeout = null;
 	this.m_nThumbnailHeight = 0;
 	this.m_nThumbnailOffset = 0;
+
+	this.m_fPlaybackRate = 1.0;
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
@@ -3183,6 +3265,7 @@ CDASHPlayerUI.SKIP_LONG_TIME_SECS = 300;
 CDASHPlayerUI.SKIP_LEFT_PAD_SECS = 60;
 CDASHPlayerUI.VOLUME_STEP_SIZE = 0.025;
 CDASHPlayerUI.TENFOOT_KEYDOWN_DELAY = 200;
+CDASHPlayerUI.TENFOOT_UI_FADE_MS = 100;
 
 CDASHPlayerUI.eUIModeDesktop = 0;
 CDASHPlayerUI.eUIModeTenFoot = 1;
@@ -3228,9 +3311,7 @@ CDASHPlayerUI.CLOSED_CAPTION_INDEX = 21;
 CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 22;
 CDASHPlayerUI.SETTINGS_INDEX = 23;
 CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX = 31;
-CDASHPlayerUI.SETTINGS_AUDIO_TRACK = 32;
-CDASHPlayerUI.SETTINGS_AUDIO_QUALITY = 33;
-CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX = 34;
+CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX = 35;
 CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX = 41;
 CDASHPlayerUI.CAPTIONS_PANEL_LAST_INDEX = 49;
 
@@ -3297,6 +3378,7 @@ CDASHPlayerUI.prototype.Init = function()
 		$J( window ).on( 'keydown', function ( e ) { _ui.OnKeyDown( e ); } );
 	}
 
+	this.m_fPlaybackRate = this.m_player.GetPlaybackRate();
 }
 
 CDASHPlayerUI.prototype.BInTenFoot = function()
@@ -3359,7 +3441,7 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 	}
 
 	this.m_ThumbnailInfo = this.m_player.GetThumbnailInfoForVideo();
-	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template )
+	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template && $J( '#thumbnailcache' ).length == 0 )
 	{
 		// update display
 		$J( '.progress_time_info' ).addClass( 'thumbnails' );
@@ -3394,6 +3476,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 	var _ui = this;
 
+	// res selector for live
 	if ( this.m_player.BIsLiveContent() )
 	{
 		$J( '#settings_icon' ).on( 'click', function ()
@@ -3426,7 +3509,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		$J( 'span', this.m_elLiveResSelectorPanel ).on( 'click', function ()
 		{
 			_ui.m_elLiveResSelectorPanel.fadeOut();
-			_ui.m_player.UpdateVideoRepresentation( $J( this ).attr( 'data-value' ) );
+			_ui.m_player.UpdateVideoRepresentation( $J( this ).attr( 'data-value' ), false );
 		} );
 
 		$J( window ).resize(function() {
@@ -3436,6 +3519,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 	}
 	else
 	{
+		// settings panel for VOD
 		$J( '#settings_icon' ).on( 'click', function ()
 		{
 			if ( !_ui.m_elClosedCaptionsPanel.is( ':hidden' ) )
@@ -3444,6 +3528,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 			}
 
 			_ui.LoadAudioTrackSelected();
+			_ui.LoadVideoTrackSelected();
 			_ui.m_elSettingsPanel.toggle();
 			if ( !_ui.m_elSettingsPanel.is( ':hidden' ) )
 				_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
@@ -3455,46 +3540,68 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		{
 			_ui.m_elSettingsPanel.hide();
 			_ui.SaveAudioTrackSelected();
+			_ui.SaveVideoTrackSelected();
 			_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 		} );
 
-
-		// Video Representations
-		var rgRepresentation = this.m_player.GetRepresentationsArray( true );
-
-		$J( '.representation_video' ).show();
-
-		// show "auto" only if there is more than one representation
-		if ( rgRepresentation.length > 1 )
-			$J( '#representation_select_video' ).append( '<option selected value="-1">Auto</option>' );
-
-		for ( var r = 0; r < rgRepresentation.length; r++ )
-		{
-			if ( rgRepresentation[ r ].height.toString().length > 1 )
-			{
-				var strResolution = rgRepresentation[ r ].height + 'p';
-				var strBandwidth = ( rgRepresentation[ r ].bandwidth / 1000000 ).toFixed( 1 ) + 'Mbps';
-				var strFPS = '';
-
-				if ( this.m_player.BIsLiveContent() && rgRepresentation[ r ].frameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
-					strFPS = rgRepresentation[ r ].frameRate; // advertise high FPS
-
-				$J( '#representation_select_video' ).append( '<option value="' + r + '">' + strResolution + strFPS + ' (' + strBandwidth + ') </option>' );
-			}
-		}
-
 		$J( '#representation_select_video' ).on( 'change', function ()
 		{
-			_ui.m_player.UpdateVideoRepresentation( this.value );
+			_ui.m_player.UpdateVideoRepresentation( this.value, false );
 			this.blur();
 		} );
 
+		// Video Tracks (dub, alternate, etc.)
+		var rgVideoAdaptations = this.m_player.GetAllVideoAdaptations();
+		rgVideoAdaptations = rgVideoAdaptations.sort( CDASHPlayerUI.SortAdaptationsByDescription ).sort( CDASHPlayerUI.SortAdaptationsByRole ); // first by group, then by name
+
+		// show selector if only more than one video track
+		if ( rgVideoAdaptations.length > 0 )
+		{
+			for ( var r = 0; r < rgVideoAdaptations.length; r++ )
+			{
+				var val = rgVideoAdaptations[ r ].id;
+				var display = '';
+				switch ( rgVideoAdaptations[ r ].roles[ 0 ].toLowerCase() )
+				{
+					case 'main':
+					case 'dub':
+						display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName );
+						break;
+
+					case 'alternate':
+						if ( rgVideoAdaptations[ r ].description == rgVideoAdaptations[ r ].language )
+							display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName ) );
+						else
+							display = rgVideoAdaptations[ r ].description;
+						break;
+
+					case 'supplementary': // aspect ratio
+						display = '{0} Aspect Ratio'.format( rgVideoAdaptations[r].description );
+						break;
+
+					default:
+						break;
+				}
+
+				$J( '#representation_select_video_track' ).append( '<option value="' + val + '">' + display + '</option>' );
+			}
+
+			$J( '.representation_video_track' ).show();
+
+			$J( '#representation_select_video_track' ).on( 'change', function ()
+			{
+				// adjust which adaptation set it being played
+				_ui.SwitchVideoTrackSelectedInPlayer( this.value );
+				_ui.SetupVideoRepresentationsInUI();
+			} );
+		}
+
 		// Audio Tracks (dub, commentary, etc.)
 		var rgAudioAdaptations = this.m_player.GetAllAudioAdaptations();
-		rgAudioAdaptations = rgAudioAdaptations.sort( CDASHPlayerUI.SortAudioAdaptationsByDescription ).sort( CDASHPlayerUI.SortAudioAdaptationsByRole ); // first by group, then by name
+		rgAudioAdaptations = rgAudioAdaptations.sort( CDASHPlayerUI.SortAdaptationsByDescription ).sort( CDASHPlayerUI.SortAdaptationsByRole ); // first by group, then by name
 
 		// show selector if only more than one audio track
-		if ( rgAudioAdaptations.length > 1 )
+		if ( rgAudioAdaptations.length > 0 )
 		{
 			for ( var r = 0; r < rgAudioAdaptations.length; r++ )
 			{
@@ -3526,6 +3633,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 						break;
 
 					default:
+						display = rgVideoAdaptations[r].description;
 						break;
 				}
 
@@ -3539,10 +3647,10 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				// adjust which adaptation set it being played
 				_ui.m_player.UpdateAudioAdaptationSet( this.value );
 				_ui.SetupAudioRepresentationsInUI();
-				this.blur();
 			} );
 		}
 
+		this.SetupVideoRepresentationsInUI();
 		this.SetupAudioRepresentationsInUI();
 
 		// Video Playback Rate
@@ -3581,31 +3689,61 @@ CDASHPlayerUI.prototype.SetupAudioRepresentationsInUI = function()
 	// Audio Representations
 	var rgRepresentation = this.m_player.GetRepresentationsArray( false );
 
-	// show selector if only more than one audio representation
-	if ( rgRepresentation.length > 1 )
+	$J('.representation_audio option').remove();
+	for (var r = 0; r < rgRepresentation.length; r++)
 	{
-		$J('.representation_audio option').remove();
-		$J('.representation_audio').show();
-		for (var r = 0; r < rgRepresentation.length; r++)
-		{
-			var strChannelInfo;
-			if ( rgRepresentation[r].audioChannels == 2 )
-				strChannelInfo = 'Stereo';
-			else if ( rgRepresentation[r].audioChannels == 6 )
-				strChannelInfo = '5.1 Surround';
-			else
-				strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
+		var strChannelInfo;
+		if ( rgRepresentation[r].audioChannels == 2 )
+			strChannelInfo = 'Stereo';
+		else if ( rgRepresentation[r].audioChannels == 6 )
+			strChannelInfo = '5.1 Surround';
+		else
+			strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
 
-			$J('#representation_select_audio').append('<option value="' + ( r ) + '">' + strChannelInfo + ' (' + Math.ceil( rgRepresentation[r].bandwidth / 1000 ) + 'Kbps)</option>');
-		}
-
-		$J( '#representation_select_audio').off('change');
-		$J( '#representation_select_audio').on('change', function()
-		{
-			_ui.m_player.UpdateAudioRepresentation( this.value, false );
-			this.blur();
-		} );
+		$J('#representation_select_audio').append('<option value="' + ( r ) + '">' + strChannelInfo + ' (' + Math.ceil( rgRepresentation[r].bandwidth / 1000 ) + 'Kbps)</option>');
 	}
+
+	$J('#representation_select_audio' ).val( this.m_player.m_nAudioRepresentationIndex );
+
+	$J( '#representation_select_audio').off('change');
+	$J( '#representation_select_audio').on('change', function()
+	{
+		_ui.m_player.UpdateAudioRepresentation( this.value, false );
+		this.blur();
+	} );
+
+	$J('.representation_audio').show();
+}
+
+CDASHPlayerUI.prototype.SetupVideoRepresentationsInUI = function()
+{
+	// Video Representations
+	var rgRepresentation = this.m_player.GetRepresentationsArray( true );
+
+	$J('.representation_video option').remove();
+
+	// show "auto" only if there is more than one representation
+	if ( rgRepresentation.length > 1 )
+		$J( '#representation_select_video' ).append( '<option selected value="-1">Auto</option>' );
+
+	for ( var r = 0; r < rgRepresentation.length; r++ )
+	{
+		if ( rgRepresentation[ r ].height.toString().length > 1 )
+		{
+			var strResolution = rgRepresentation[ r ].height + 'p';
+			var strBandwidth = ( rgRepresentation[ r ].bandwidth / 1000000 ).toFixed( 1 ) + 'Mbps';
+			var strFPS = '';
+
+			if ( this.m_player.BIsLiveContent() && rgRepresentation[ r ].frameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
+				strFPS = rgRepresentation[ r ].frameRate; // advertise high FPS
+
+			$J( '#representation_select_video' ).append( '<option value="' + r + '">' + strResolution + strFPS + ' (' + strBandwidth + ') </option>' );
+		}
+	}
+
+	$J('#representation_select_video' ).val( this.m_player.m_nVideoRepresentationIndex );
+
+	$J( '.representation_video' ).show();
 }
 
 CDASHPlayerUI.prototype.UpdateLiveResolutionSelector = function()
@@ -3636,51 +3774,70 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 	$J( '#settings_icon' ).on( 'click', function()
 	{
 		_ui.Hide(0);
-		_ui.LoadAudioTrackSelected();
-		_ui.m_elSettingsPanel.show();
-		_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+		_ui.ShowSettingsPanelTenFoot();
 		_ui.SwitchElementFocus( CDASHPlayerUI.NO_ELEMENT_INDEX );
 	} );
 
-	// Video Representations
-	var rgRepresentation = this.m_player.GetRepresentationsArray( true );
-	if ( rgRepresentation.length > 0 )
+	// Video Tracks (dub, alternate, etc.)
+	var rgVideoAdaptations = this.m_player.GetAllVideoAdaptations();
+	rgVideoAdaptations = rgVideoAdaptations.sort( CDASHPlayerUI.SortAdaptationsByDescription ).sort( CDASHPlayerUI.SortAdaptationsByRole ); // first by group, then by name
+
+	// show selector if there is more than one video track
+	if ( rgVideoAdaptations.length > 1 )
 	{
-		for (var r = 0; r < rgRepresentation.length; r++)
+		for (var r = 0; r < rgVideoAdaptations.length; r++)
 		{
-			if ( rgRepresentation[r].height.toString().length > 1 )
+			var val = rgVideoAdaptations[r].id;
+			var display = '';
+			switch( rgVideoAdaptations[r].roles[0].toLowerCase() )
 			{
-				var strResolution = rgRepresentation[r].height + 'p';
-				$J( '#representation_video #representation_select' ).append('<div data-value="' + r + '" class="notselected">' + strResolution + ' (' + ( rgRepresentation[r].bandwidth / 1000000 ).toFixed(1) + 'Mbps)</div>');
+				case 'main':
+				case 'dub':
+					display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName );
+					break;
+
+				case 'alternate':
+					if ( rgVideoAdaptations[r].description == rgVideoAdaptations[r].language )
+						display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName ) );
+					else
+						display = rgVideoAdaptations[r].description;
+					break;
+
+				case 'supplementary': // aspect ratio
+					display = '{0} Aspect Ratio'.format( rgVideoAdaptations[r].description );
+					break;
+
+				default:
+					display = rgVideoAdaptations[r].description;
+					break;
 			}
+
+			if ( r == 0 )
+				$J( '#representation_video_track #representation_select' ).append('<div data-value="' + val + '" class="selected">' + display + '</div>');
+			else
+				$J( '#representation_video_track #representation_select' ).append('<div data-value="' + val + '" class="notselected">' + display + '</div>');
 		}
 
-		$J( '#representation_video .panel_select .left_arrow' ).on( 'click', function() {
-			var elSelect = $J( '#representation_video #representation_select' );
+		$J( '#representation_video_track .panel_select .left_arrow' ).on( 'click', function() {
+			var elSelect = $J( '#representation_video_track #representation_select' );
 			_ui.PanelSelectShift( elSelect, false );
 		} );
 
-		$J( '#representation_video .panel_select .right_arrow' ).on( 'click', function() {
-			var elSelect = $J( '#representation_video #representation_select' );
+		$J( '#representation_video_track .panel_select .right_arrow' ).on( 'click', function() {
+			var elSelect = $J( '#representation_video_track #representation_select' );
 			_ui.PanelSelectShift( elSelect, true );
 		} );
 
-		$J( '#representation_video' ).show();
+		$J( '#representation_video_track' ).show();
 	}
 
 	// Audio Tracks (dub, commentary, etc.)
 	var rgAudioAdaptations = this.m_player.GetAllAudioAdaptations();
-	rgAudioAdaptations = rgAudioAdaptations.sort( CDASHPlayerUI.SortAudioAdaptationsByDescription ).sort( CDASHPlayerUI.SortAudioAdaptationsByRole ); // first by group, then by name
+	rgAudioAdaptations = rgAudioAdaptations.sort( CDASHPlayerUI.SortAdaptationsByDescription ).sort( CDASHPlayerUI.SortAdaptationsByRole ); // first by group, then by name
 
-	// show selector if only more than one audio track
+	// show selector if there is more than one audio tracks
 	if ( rgAudioAdaptations.length > 1 )
 	{
-		if ( rgAudioAdaptations.length == 1 )
-		{
-			$J( '#representation_audio_track .left_arrow' ).css( 'visibility', 'hidden' );
-			$J( '#representation_audio_track .right_arrow' ).css( 'visibility', 'hidden' );
-		}
-
 		for (var r = 0; r < rgAudioAdaptations.length; r++)
 		{
 			var val = rgAudioAdaptations[r].id;
@@ -3733,7 +3890,8 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 		$J( '#representation_audio_track' ).show();
 	}
 
-	// set up audio representations
+	// set up representations
+	this.SetupVideoRepresentationsInUITenFoot();
 	this.SetupAudioRepresentationsInUITenFoot();
 
 	// Video Playback Rate
@@ -3754,7 +3912,8 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 		$J('#representation_playbackRate').show();
 	}
 
-	$J( '#buttonA', this.m_elSettingsPanel ).on( 'click', function ( e ) { _ui.CloseSettingsPanelTenFoot( false ); } );
+	$J( '#buttonA', this.m_elSettingsPanel ).on( 'click', function ( e ) { _ui.CloseSettingsPanelTenFoot( false, true ); } );
+	$J( '#buttonB', this.m_elSettingsPanel ).on( 'click', function ( e ) { _ui.CloseSettingsPanelTenFoot( false, false ); } );
 
 	this.m_bSettingsPanelInit = true;
 }
@@ -3762,15 +3921,11 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 CDASHPlayerUI.prototype.SetupAudioRepresentationsInUITenFoot = function()
 {
 	// Audio Representations
+	var _ui = this;
 	var rgRepresentation = this.m_player.GetRepresentationsArray( false );
 	if ( rgRepresentation.length > 1 )
 	{
 		$J('#representation_audio #representation_select div').remove();
-		if ( rgRepresentation.length == 1 )
-		{
-			$J( '#representation_audio .left_arrow' ).css( 'visibility', 'hidden' );
-			$J( '#representation_audio .right_arrow' ).css( 'visibility', 'hidden' );
-		}
 
 		for (var r = 0; r < rgRepresentation.length; r++)
 		{
@@ -3788,18 +3943,60 @@ CDASHPlayerUI.prototype.SetupAudioRepresentationsInUITenFoot = function()
 				$J( '#representation_audio #representation_select' ).append('<div data-value="' + ( r ) + '" class="notselected">' + strChannelInfo + ' (' + Math.ceil( rgRepresentation[r].bandwidth / 1000 ) + 'Kbps)</div>');
 		}
 
+		this.PanelSelectByValue( $J( '#representation_audio #representation_select' ), this.m_player.m_nAudioRepresentationIndex );
+
+		$J( '#representation_audio .panel_select .left_arrow' ).off( 'click' );
 		$J( '#representation_audio .panel_select .left_arrow' ).on( 'click', function() {
 			var elSelect = $J( '#representation_audio #representation_select' );
 			_ui.PanelSelectShift( elSelect, false );
 
 		} );
 
+		$J( '#representation_audio .panel_select .right_arrow' ).off( 'click' );
 		$J( '#representation_audio .panel_select .right_arrow' ).on( 'click', function() {
 			var elSelect = $J( '#representation_audio #representation_select' );
 			_ui.PanelSelectShift( elSelect, true );
 		} );
 
 		$J( '#representation_audio' ).show();
+	}
+}
+
+CDASHPlayerUI.prototype.SetupVideoRepresentationsInUITenFoot = function()
+{
+	// Video Representations
+	var _ui = this;
+	var rgRepresentation = this.m_player.GetRepresentationsArray( true );
+	if ( rgRepresentation.length > 1 )
+	{
+		$J( '#representation_video #representation_select div' ).remove();
+
+		$J( '#representation_video #representation_select' ).append('<div data-value="-1" class="selected">Automatic</div>');
+
+		for (var r = 0; r < rgRepresentation.length; r++)
+		{
+			if ( rgRepresentation[r].height.toString().length > 1 )
+			{
+				var strResolution = rgRepresentation[r].height + 'p';
+				$J( '#representation_video #representation_select' ).append('<div data-value="' + r + '" class="notselected">' + strResolution + ' (' + ( rgRepresentation[r].bandwidth / 1000000 ).toFixed(1) + 'Mbps)</div>');
+			}
+		}
+
+		this.PanelSelectByValue( $J( '#representation_video #representation_select' ), this.m_player.m_nVideoRepresentationIndex );
+
+		$J( '#representation_video .panel_select .left_arrow' ).off( 'click' );
+		$J( '#representation_video .panel_select .left_arrow' ).on( 'click', function() {
+			var elSelect = $J( '#representation_video #representation_select' );
+			_ui.PanelSelectShift( elSelect, false );
+		} );
+
+		$J( '#representation_video .panel_select .right_arrow' ).off( 'click' );
+		$J( '#representation_video .panel_select .right_arrow' ).on( 'click', function() {
+			var elSelect = $J( '#representation_video #representation_select' );
+			_ui.PanelSelectShift( elSelect, true );
+		} );
+
+		$J( '#representation_video' ).show();
 	}
 }
 
@@ -3811,6 +4008,17 @@ CDASHPlayerUI.prototype.SetUniqueSettingsID = function( uniqueSettingsID )
 CDASHPlayerUI.prototype.SetPlayerPlaybackRate = function()
 {
 	this.m_player.SetPlaybackRate( $J( '#representation_select_playbackRate' ).val() );
+}
+
+CDASHPlayerUI.prototype.SavePlaybackRateTenFoot = function( value )
+{
+	this.m_fPlaybackRate = value;
+}
+
+CDASHPlayerUI.prototype.LoadPlaybackRateTenFoot = function()
+{
+	this.PanelSelectByValue( $J( '#representation_playbackRate', this.m_elSettingsPanel ), this.m_fPlaybackRate );
+	this.m_player.SetPlaybackRate( this.m_fPlaybackRate );
 }
 
 CDASHPlayerUI.prototype.Show = function()
@@ -3903,14 +4111,28 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 	// buffering should show/hide no matter if the UI is on screen
 	this.UpdateBufferingProgress();
 
-	if ( this.m_bHidden )
-		return;
-
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
 	var rgData = this.GetTimelineData();
 
 	var nProgressPct = (( elVideoPlayer.currentTime - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
 	var nLoadedPct = (( rgData.nBufferedEnd - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
+
+	// check for end of VOD playback and show UI if within the last second
+	if ( !this.m_player.BIsLiveContent() )
+	{
+		if ( elVideoPlayer.currentTime >= ( rgData.nTimeEnd - rgData.nTimeStart ) - 1 )
+		{
+			if ( !this.BInTenFoot() || this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelMain )
+			{
+				this.m_bHidden = false;
+				clearTimeout( this.m_timeoutHide );
+				$J( this.m_elContainer ).addClass( 'dash_show_player_ui' );
+			}
+		}
+	}
+
+	if ( this.m_bHidden )
+		return;
 
 	//PlayerLog( 'bstart: ' + nBufferedStart + ', bend: ' + nBufferedEnd + ', tstart: ' + nTimeStart + ', tend: ' + nTimeEnd + ', progpct: ' + nProgressPct + ', loadpct: ' + nLoadedPct );
 
@@ -4080,7 +4302,7 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 	if( elVideoPlayer.paused )
 	{
 		elVideoPlayer.play();
-		elVideoPlayer.playbackRate = this.m_player.m_nSavedPlaybackRate;
+		elVideoPlayer.playbackRate = this.m_player.GetPlaybackRate();
 		$J( '.play_button', this.m_elOverlay ).addClass( 'pause' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'play' );
 		this.ShowBigPlayPauseIndicator( true );
@@ -4302,8 +4524,11 @@ CDASHPlayerUI.prototype.PanelSelectByValue = function ( elSelect, value )
 {
 	var elSelectedValue = elSelect.find( '.selected' );
 	var newSelectedValue = elSelect.find( "div[data-value='" + value + "']" );
-	elSelectedValue.removeClass( 'selected' ).addClass( 'notselected' );
-	newSelectedValue.removeClass( 'notselected' ).addClass( 'selected' );
+	if ( elSelectedValue.length != 0 && newSelectedValue.length != 0 )
+	{
+		elSelectedValue.removeClass( 'selected' ).addClass( 'notselected' );
+		newSelectedValue.removeClass( 'notselected' ).addClass( 'selected' );
+	}
 }
 
 CDASHPlayerUI.prototype.PanelSelectGetValue = function ( elSelect )
@@ -4500,9 +4725,7 @@ CDASHPlayerUI.prototype.OnPressButtonA = function ()
 
 			case CDASHPlayerUI.SETTINGS_INDEX:
 				this.Hide(0);
-				this.LoadAudioTrackSelected();
-				this.m_elSettingsPanel.show();
-				this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+				this.ShowSettingsPanelTenFoot();
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 				break;
 
@@ -4513,7 +4736,7 @@ CDASHPlayerUI.prototype.OnPressButtonA = function ()
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
 	{
-		this.CloseSettingsPanelTenFoot( true );
+		this.CloseSettingsPanelTenFoot( true, true );
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelCaptions )
 	{
@@ -4528,11 +4751,18 @@ CDASHPlayerUI.prototype.OnPressButtonB = function ()
 
 	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelMain )
 	{
-		this.Hide(0);
+		if ( this.BIsTenFootMainUIHidden() )
+		{
+			this.ShowMainPanelUI();
+		}
+		else
+		{
+			this.Hide(0);
+		}
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
 	{
-		this.CloseSettingsPanelTenFoot( true );
+		this.CloseSettingsPanelTenFoot( true, false );
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelCaptions )
 	{
@@ -4540,9 +4770,23 @@ CDASHPlayerUI.prototype.OnPressButtonB = function ()
 	}
 }
 
-CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFocus )
+CDASHPlayerUI.prototype.BIsTenFootMainUIHidden = function()
 {
-	this.m_elSettingsPanel.hide();
+	return ( $J( '.tenfoot_dash_overlay' ).css( 'opacity') == 0 )
+}
+
+CDASHPlayerUI.prototype.ShowSettingsPanelTenFoot = function()
+{
+	this.LoadAudioTrackSelected();
+	this.LoadVideoTrackSelected();
+	this.LoadPlaybackRateTenFoot();
+	this.m_elSettingsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
+	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+}
+
+CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFocus, bSaveChanges )
+{
+	this.m_elSettingsPanel.fadeOut(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
 	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 
 	if ( bRestoreElementFocus )
@@ -4550,25 +4794,47 @@ CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFoc
 
 	this.ShowMainPanelUI();
 
-	// now commit the changes on close
-	var value = this.PanelSelectGetValue( $J( '#representation_video #representation_select' ) );
-	if ( value )
+	if ( bSaveChanges )
 	{
-		this.m_player.UpdateVideoRepresentation( value );
-	}
+		// now commit the changes on close
+		value = this.PanelSelectGetValue( $J( '#representation_video_track #representation_select' ) );
+		if ( value )
+		{
+			this.SwitchVideoTrackSelectedInPlayer( value )
+			this.SaveVideoTrackSelected();
+		}
 
-	value = this.PanelSelectGetValue( $J( '#representation_audio_track #representation_select' ) );
-	if ( value )
-	{
-		this.m_player.UpdateAudioAdaptationSet( value );
-		this.SetupAudioRepresentationsInUITenFoot();
-		this.SaveAudioTrackSelected();
-	}
+		var value = this.PanelSelectGetValue( $J( '#representation_video #representation_select' ) );
+		if ( value )
+		{
+			this.m_player.UpdateVideoRepresentation( value, false );
+		}
 
-	value = this.PanelSelectGetValue( $J( '#representation_audio #representation_select' ) );
-	if ( value )
+		value = this.PanelSelectGetValue( $J( '#representation_audio_track #representation_select' ) );
+		if ( value )
+		{
+			this.m_player.UpdateAudioAdaptationSet( value );
+			this.SaveAudioTrackSelected();
+		}
+
+		value = this.PanelSelectGetValue( $J( '#representation_audio #representation_select' ) );
+		if ( value )
+		{
+			this.m_player.UpdateAudioRepresentation( value, false );
+		}
+
+		value = this.PanelSelectGetValue( $J( '#representation_playbackRate #representation_select' ) );
+		if ( value )
+		{
+			this.SavePlaybackRateTenFoot( value );
+		}
+	}
+	else
 	{
-		this.m_player.UpdateAudioRepresentation( value, false );
+		// cancel settings
+		this.LoadAudioTrackSelected();
+		this.LoadVideoTrackSelected();
+		this.LoadPlaybackRateTenFoot();
 	}
 }
 
@@ -4585,7 +4851,7 @@ CDASHPlayerUI.prototype.CloseCaptionsPanelTenFoot = function( bRestoreElementFoc
 		this.LoadClosedCaptionOptions();
 	}
 
-	this.m_elClosedCaptionsPanel.hide();
+	this.m_elClosedCaptionsPanel.fadeOut(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
 	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 
 	if ( bRestoreElementFocus )
@@ -4610,7 +4876,7 @@ CDASHPlayerUI.prototype.ShowMainPanelUI = function()
 	if ( !this.BInTenFoot() )
 		return;
 
-	if ( $J( '.tenfoot_dash_overlay' ).is( ':hidden' ) )
+	if ( this.BIsTenFootMainUIHidden() )
 	{
 		this.Show();
 		this.Hide();
@@ -4718,26 +4984,39 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_UP:
-				this.m_nFocusedUIElementIndex = Math.min( Math.max( --this.m_nFocusedUIElementIndex, CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX ), CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX );
-				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_QUALITY && !$J( "#representation_audio" ).is(":visible") )
-					this.m_nFocusedUIElementIndex--;
-				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_TRACK && !$J( "#representation_audio_track" ).is(":visible") )
-					this.m_nFocusedUIElementIndex--;
-
+				for ( var i = this.m_nFocusedUIElementIndex - 1; i >= CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX; i-- )
+				{
+					if ( $J( 'div[data-index="' + i + '"]' ).parent().is(':visible') )
+					{
+						this.m_nFocusedUIElementIndex = i;
+						break;
+					}
+				}
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_DOWN:
-				this.m_nFocusedUIElementIndex = Math.min( Math.max( ++this.m_nFocusedUIElementIndex, CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX ), CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX );
-				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_TRACK && !$J( "#representation_audio_track" ).is(":visible") )
-					this.m_nFocusedUIElementIndex++;
-				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_QUALITY && !$J( "#representation_audio" ).is(":visible") )
-					this.m_nFocusedUIElementIndex++;
-
+				for ( var i = this.m_nFocusedUIElementIndex + 1; i <= CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX; i++ )
+				{
+					if ( $J( 'div[data-index="' + i + '"]' ).parent().is(':visible') )
+					{
+						this.m_nFocusedUIElementIndex = i;
+						break;
+					}
+				}
 				break;
 
 			case CDASHPlayerUI.NAVIGATE_INIT:
-				if ( this.m_nFocusedUIElementIndex < CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX )
-					this.m_nFocusedUIElementIndex = CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX;
+				if ( this.m_nFocusedUIElementIndex <= CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX )
+				{
+					for ( var i = CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX; i <= CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX; i++ )
+					{
+						if ( $J( 'div[data-index="' + i + '"]' ).parent().is(':visible') )
+						{
+							this.m_nFocusedUIElementIndex = i;
+							break;
+						}
+					}
+				}
 				break;
 
 			default:
@@ -4748,7 +5027,7 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 		selElement = $J( "div[data-index='" + this.m_nFocusedUIElementIndex + "']" );
 		selElement.addClass( 'tenfoot_focus' );
 
-		this.ScrollToPanelSelectItem( nKeyDirection, $J( '.tenfoot_settings_panel' ), CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX, selElement.parent().height() );
+		this.ScrollToPanelSelectItem( nKeyDirection, $J( '.tenfoot_settings_panel' ), CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX, selElement.parent().height() + parseInt( selElement.prev().css('margin-top') ) );
 
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelCaptions )
@@ -4788,7 +5067,7 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 		selElement = $J( "div[data-index='" + this.m_nFocusedUIElementIndex + "']" );
 		selElement.addClass( 'tenfoot_focus' );
 
-		this.ScrollToPanelSelectItem( nKeyDirection, $J( '.tenfoot_dash_closed_captions_customization' ), CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX, selElement.parent().height() );
+		this.ScrollToPanelSelectItem( nKeyDirection, $J( '.tenfoot_dash_closed_captions_customization' ), CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX, selElement.parent().height() + parseInt( selElement.prev().css('margin-top') ) );
 	}
 }
 
@@ -5330,7 +5609,10 @@ CDASHPlayerUI.prototype.ShowClosedCaptionsPanel = function()
 		this.LoadClosedCaptionLanguage();
 		this.LoadClosedCaptionOptions();
 		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelCaptions;
-		this.m_elClosedCaptionsPanel.show();
+		if ( this.BInTenFoot() )
+			this.m_elClosedCaptionsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
+		else
+			this.m_elClosedCaptionsPanel.show();
 		this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 	}
 	else
@@ -5452,12 +5734,16 @@ CDASHPlayerUI.prototype.SetAudioTrackSelectedInUI = function( strCode )
 	if ( this.BInTenFoot() )
 	{
 		this.PanelSelectByValue( $J( '#representation_audio_track', this.m_elSettingsPanel ), strCode );
+		this.SetupAudioRepresentationsInUITenFoot();
 	}
 	else
 	{
 		var uiAudioTrack = $J( '#representation_select_audio_track' );
 		if ( uiAudioTrack.length )
+		{
 			uiAudioTrack.val( strCode );
+			this.SetupAudioRepresentationsInUI();
+		}
 	}
 }
 
@@ -5497,6 +5783,68 @@ CDASHPlayerUI.prototype.SaveAudioTrackSelected = function()
 	WebStorage.SetLocal( "audio_track_" + this.m_strUniqueSettingsID, strAudioTrackSelected );
 
 	$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Audio Track', strAudioTrackSelected ] );
+}
+
+
+CDASHPlayerUI.prototype.SetVideoTrackSelectedInUI = function( strCode )
+{
+	if ( this.BInTenFoot() )
+	{
+		this.PanelSelectByValue( $J( '#representation_video_track', this.m_elSettingsPanel ), strCode );
+		this.SetupVideoRepresentationsInUITenFoot();
+	}
+	else
+	{
+		var uiVideoTrack = $J( '#representation_select_video_track' );
+		if ( uiVideoTrack.length )
+		{
+			uiVideoTrack.val( strCode );
+			this.SetupVideoRepresentationsInUI();
+		}
+	}
+}
+
+CDASHPlayerUI.GetSavedVideoTrackSelected = function( strUniqueSettingsID )
+{
+	var value = WebStorage.GetLocal( 'video_track_' + strUniqueSettingsID.toString() );
+	if ( typeof value !== 'undefined' )
+		return value;
+	else
+		return null;
+}
+
+CDASHPlayerUI.prototype.SwitchVideoTrackSelectedInPlayer = function( strVideoAdaptationID )
+{
+	this.m_player.UpdateVideoAdaptationSet( strVideoAdaptationID );
+
+	// reset thumbnail info
+	this.m_ThumbnailInfo = this.m_player.GetThumbnailInfoForVideo();
+	this.m_nThumbnailHeight = 0;
+	this.m_nThumbnailOffset = 0;
+}
+
+CDASHPlayerUI.prototype.LoadVideoTrackSelected = function()
+{
+	var strCode = CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_strUniqueSettingsID );
+	if ( strCode )
+	{
+		this.SetVideoTrackSelectedInUI( strCode );
+		this.SwitchVideoTrackSelectedInPlayer( strCode );
+	}
+}
+
+CDASHPlayerUI.prototype.SaveVideoTrackSelected = function()
+{
+	var strVideoTrackSelected = '';
+
+	if ( this.BInTenFoot() )
+		strVideoTrackSelected = $J( '#representation_video_track #representation_select .selected' ).attr( 'data-value' );
+	else
+		strVideoTrackSelected = $J( '#representation_select_video_track' ).find( ":selected" ).val();
+
+	WebStorage.SetLocal( "video_track_" + this.m_strUniqueSettingsID, strVideoTrackSelected );
+
+	$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Video Track', strVideoTrackSelected ] );
 }
 
 CDASHPlayerUI.prototype.DisplayNotification = function( strNotification, nDisplayTimeMS )
@@ -5545,7 +5893,7 @@ CDASHPlayerUI.prototype.CloseNotification = function()
 	elNotification.addClass( 'close_notification' );
 }
 
-CDASHPlayerUI.SortAudioAdaptationsByDescription = function(a,b)
+CDASHPlayerUI.SortAdaptationsByDescription = function(a,b)
 {
 	// sort by description / language
 	var aDescription, bDescription;
@@ -5567,7 +5915,7 @@ CDASHPlayerUI.SortAudioAdaptationsByDescription = function(a,b)
 	return 0;
 }
 
-CDASHPlayerUI.SortAudioAdaptationsByRole = function(a,b)
+CDASHPlayerUI.SortAdaptationsByRole = function(a,b)
 {
 	// Sort in this order, Main, Dub, Alternate, Supplementary, Commentary
 	var aRoleValue, bRoleValue;

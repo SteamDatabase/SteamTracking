@@ -24,16 +24,23 @@
 	flow-children: down;
 	width: 100%;
 	height: 100%;
+	overflow: clip;
 
-    background-image: url( "file://{images}/profile/activity_bg_wash.png" );
-    background-size: 100% 100%;
-    box-shadow: #000000aa -2px -2px 4px 4px;
 }
 
 .NX #InventoryBody
 {
-	padding-top: 40px;
 	flow-children: right;
+}
+.NX #InventoryBody VerticalScrollBar
+{
+	margin-top: 30px;
+	margin-bottom: 120px;
+}
+.NX #InventoryBody .NxGridButtonRow
+{
+	padding-bottom: 120px;
+	width: 580px;
 }
 
 #InventoryHeading
@@ -324,8 +331,9 @@ DropDownMenu .FilterOption Label:focus
 	padding-top: 40px;
 	padding-left: 110px;
 	padding-right: 110px;
-	width: 100%;
+	width: 1600px;
 	height: 100%;
+	overflow: clip;
 }
 
 #ItemGrid
@@ -334,12 +342,12 @@ DropDownMenu .FilterOption Label:focus
 	margin-bottom: 100px;
 	margin-left: -110px;
 
-	width: 1810px;
+	width: 1610px;
 	height: 100%;
 
 	overflow: noclip squish;
 
-	padding: 80px 370px 30px 104px;
+	padding: 130px 370px 30px 104px;
 }
 
 .FastMotion #ItemGrid
@@ -405,7 +413,7 @@ DropDownMenu .FilterOption Label:focus
 	padding: 20px 8px 8px 8px;
 	width: 441px;
 	height: 470px;
-	pre-transform-scale2d: 0.60;
+	pre-transform-scale2d: 0.90;
 	z-index: 0;
 
 
@@ -415,10 +423,9 @@ DropDownMenu .FilterOption Label:focus
 
 
 	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
-	transition-duration: shortduration;
+	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 
-	transform: translatex(-28px); 
 
 	flow-children: down;
 }
@@ -433,13 +440,6 @@ DropDownMenu .FilterOption Label:focus
 	z-index: 1;
 }
 
-.InventoryItem:hover
-{
-	pre-transform-scale2d: 0.85;
-	transform: translatey( 15px ) translatex(-9px);
-	z-index: 1;
-}
-
 .InventoryItem:focus,
 .InventoryItem:hover:focus
 {
@@ -450,12 +450,12 @@ DropDownMenu .FilterOption Label:focus
 	wash-color: #00000000;
 	desaturation: 0.0;
 
-	transform: translatey( 26px ) translatex(4px);
+	transform: translatey( 8px ) translatex(8px);
 }
 
 .InventoryItem Image
 {
-	background-color: #222222ff;
+	background-color: nontransparent_module;
 	vertical-align: center;
 	horizontal-align: left;
 	margin-left: 12px;
