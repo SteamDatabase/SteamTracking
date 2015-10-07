@@ -109695,7 +109695,8 @@
 		"30665"
 		{
 			"name"		"Shooting Star"
-			"prefab"		"weapon_machina no_craft marketable"
+			"prefab"		"no_craft weapon_machina marketable"
+			"craft_class"	""
 			"item_type_name"		"#TF_Weapon_SniperRifle"
 			"item_name"		"#TF_invasion_sniperrifle"
 			"item_description"		"#TF_invasion_sniperrifle_Desc"
@@ -109731,7 +109732,8 @@
 		"30666"
 		{
 			"name"		"The C.A.P.P.E.R"
-			"prefab"		"weapon_pistol no_craft marketable"
+			"prefab"		"no_craft weapon_pistol marketable"
+			"craft_class"	""
 			"item_name"		"#TF_invasion_pistol"
 			"item_description"		"#TF_invasion_pistol_Desc"
 			"item_logname"		"the_capper"
@@ -109779,7 +109781,8 @@
 		"30667"
 		{
 			"name"		"Batsaber"
-			"prefab"		"weapon_bat no_craft marketable"
+			"prefab"		"no_craft weapon_bat marketable"
+			"craft_class"	""
 			"item_name"		"#TF_invasion_bat"
 			"item_description"		"#TF_invasion_bat_Desc"
 			"item_logname"		"batsaber"
@@ -109813,7 +109816,8 @@
 		"30668"
 		{
 			"name"		"The Giger Counter"
-			"prefab"		"weapon_wrangler no_craft marketable"
+			"prefab"		"no_craft weapon_wrangler marketable"
+			"craft_class"	""
 			"item_name"		"#TF_invasion_wrangler"
 			"item_description"		"#TF_invasion_wrangler_Desc"
 			"item_logname"		"giger_counter"
