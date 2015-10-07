@@ -1988,6 +1988,7 @@
 	"Library_StreamingSource_Installed"		"(Installed)"
 	"Library_StreamingSource_ThisMachine"	"This machine"
 	"Library_StreamSources"					"Local & Streaming Sources"
+	"Library_StreamSources_Desc"			"Select a machine below to set as the source that you wish to play or stream from."
 
 	"Library_Settings_Organize"				"Organize"
 	"Library_Settings_Preferences"			"Preferences"
@@ -4531,6 +4532,7 @@
 	"friends_chat_hold_voice_chat"		"Hold"
 	"friends_chat_resume_voice_chat"	"Resume"
 
+	"Friends_Menu_Profile"		"Your Profile"
 	"friends_menu_chat"		"Chat"
 	"friends_menu_manage"	"Manage"
 	
@@ -4541,6 +4543,12 @@
 
 	"friends_groups_recent_container_title"	"Recent Group Chats"
 	"friends_groups_container_title"		"Groups"
+
+	"friends_show_profile_options"		"Local Profile Options"
+	"friends_show_profile_options_unavailable"	"Editing profile options is temporarily unavailable inside the Friends menu."
+
+	"friends_search"				"Friends Search"
+	"friends_search_unavailable"	"Friends Search is temporarily unavailable."
 	
 	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
 	"SignalLossHelper_Description" "In order to ensure the best possible latency and a glitch-free experience, please connect the controller's wireless receiver to its included extender. Make sure there is an unobstructed line-of-sight between the controller and the receiver, and move it away from your system to isolate it from any possible interference." 

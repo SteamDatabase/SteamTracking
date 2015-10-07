@@ -1495,6 +1495,7 @@
  B ScreenshotReady::symbol
  B ScrollToActiveFriend::symbol
  B SearchCommunityGroups::symbol
+ B SearchFriends::symbol
  B SecurityPromptMessageBoxClosing::symbol
  B SeekBarChanged::symbol
  B SelectAppBeta::symbol
@@ -1609,6 +1610,7 @@
  B ShowPasswordToggled::symbol
  B ShowPreviewForDefault::symbol
  B ShowProfileForSteamID::symbol
+ B ShowProfileOptions::symbol
  B ShowPurchaseConfirmation::symbol
  B ShowPurchaseOptions::symbol
  B ShowQueuedClanInviteNotifications::symbol
@@ -1731,6 +1733,7 @@
  B ToggleCrawlingNotification::symbol
  B ToggleDebugOverlay::symbol
  B ToggleEnableStreaming::symbol
+ B ToggleFriends::symbol
  B ToggleHardwareDecoding::symbol
  B ToggleHardwareEncoding::symbol
  B ToggleInterfaceSetting::symbol
@@ -1746,6 +1749,7 @@
  B ToggleTimeLimits::symbol
  B ToggleTrafficPriority::symbol
  B ToggleVoiceOutputToInput::symbol
+ B ToggleWebBrowser::symbol
  B TrackDetailMore::symbol
  B TrackDetailPlay::symbol
  B TrackListItemGotFocus::symbol
@@ -5846,6 +5850,7 @@
  D ScreenshotReady::pchEvent
  D ScrollToActiveFriend::pchEvent
  D SearchCommunityGroups::pchEvent
+ D SearchFriends::pchEvent
  D SecurityPromptMessageBoxClosing::pchEvent
  D SeekBarChanged::pchEvent
  D SelectAppBeta::pchEvent
@@ -5960,6 +5965,7 @@
  D ShowPasswordToggled::pchEvent
  D ShowPreviewForDefault::pchEvent
  D ShowProfileForSteamID::pchEvent
+ D ShowProfileOptions::pchEvent
  D ShowPurchaseConfirmation::pchEvent
  D ShowPurchaseOptions::pchEvent
  D ShowQueuedClanInviteNotifications::pchEvent
@@ -6094,6 +6100,7 @@
  D ToggleCrawlingNotification::pchEvent
  D ToggleDebugOverlay::pchEvent
  D ToggleEnableStreaming::pchEvent
+ D ToggleFriends::pchEvent
  D ToggleHardwareDecoding::pchEvent
  D ToggleHardwareEncoding::pchEvent
  D ToggleInterfaceSetting::pchEvent
@@ -6109,6 +6116,7 @@
  D ToggleTimeLimits::pchEvent
  D ToggleTrafficPriority::pchEvent
  D ToggleVoiceOutputToInput::pchEvent
+ D ToggleWebBrowser::pchEvent
  D TrackDetailMore::pchEvent
  D TrackDetailPlay::pchEvent
  D TrackListItemGotFocus::pchEvent
@@ -23299,12 +23307,14 @@
  T CFriendsNew::EventLeaveChatWithSteamID(CSteamID)
  T CFriendsNew::EventLoadInviteList(bool)
  T CFriendsNew::EventRemoveFriend(CSteamID, bool)
+ T CFriendsNew::EventSearchFriends()
  T CFriendsNew::EventSendChatToSteamID(panorama::CPanelPtr<panorama::IUIPanel> const&, unsigned long long, panorama::EPanelEventSource_t)
  T CFriendsNew::EventShowChatDialogForSteamID(CSteamID)
  T CFriendsNew::EventShowFriend(unsigned long long, panorama::EPanelEventSource_t)
  T CFriendsNew::EventShowFromController()
  T CFriendsNew::EventShowGroups()
  T CFriendsNew::EventShowInviteFriendsDialog(CSteamID)
+ T CFriendsNew::EventShowProfileOptions()
  T CFriendsNew::EventStartChatWithSteamID(CSteamID, panorama::EPanelEventSource_t)
  T CFriendsNew::EventUpdateInviteCount()
  T CFriendsNew::GetActiveSteamID()
@@ -29457,6 +29467,8 @@
  T COOBECompleteAndCheckForUpdate::~COOBECompleteAndCheckForUpdate()
  T COOBEControllerWelcomeWizardChild::COOBEControllerWelcomeWizardChild(panorama::CPanel2D*, char const*, CTenfootWizardPanel*)
  T COOBEControllerWelcomeWizardChild::GetPanelType() const
+ T COOBEControllerWelcomeWizardChild::OnNavigateFrom()
+ T COOBEControllerWelcomeWizardChild::OnNavigateTo()
  T COOBEControllerWelcomeWizardChild::~COOBEControllerWelcomeWizardChild()
  T COOBEEulaWizardChild::COOBEEulaWizardChild(panorama::CPanel2D*, char const*, CTenfootWizardPanel*, bool)
  T COOBEEulaWizardChild::ComputeURL(char*, int, bool)
@@ -29484,6 +29496,7 @@
  T COOBEWizard::NavigateForward()
  T COOBEWizard::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T COOBEWizard::OnCheckSteamReachableResult(CheckSteamReachableResult_t*, bool)
+ T COOBEWizard::OnContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T COOBEWizard::OnDone()
  T COOBEWizard::OnProgressCheck()
  T COOBEWizard::ShowProgressPanel()
@@ -31724,6 +31737,7 @@
  T CSettingsPanelNetwork::OnNetworkRefresh()
  T CSettingsPanelNetwork::OnNetworkWizardStart(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelNetwork::~CSettingsPanelNetwork()
+ T CSettingsPanelNetworkWiz* ShowContentFrameContent<CSettingsPanelNetworkWiz, CSettingsPanelNetwork*, char const (&) [14]>(panorama::CPanel2D*, ContentFrameSettings_t const&, CSettingsPanelNetwork*&&, char const (&) [14])
  T CSettingsPanelNetworkWiz::CSettingsPanelNetworkWiz(panorama::CPanel2D*, CSettingsPanelNetwork*, char const*)
  T CSettingsPanelNetworkWiz::GetNetworkSetupConfigurationState()
  T CSettingsPanelNetworkWiz::GetNetworkSetupConfigurationState() const
@@ -31838,6 +31852,7 @@
  T CSettingsPanelRemoteClients::ScheduledRefreshClients()
  T CSettingsPanelRemoteClients::UpdateStreamingClientConfig(bool)
  T CSettingsPanelRemoteClients::~CSettingsPanelRemoteClients()
+ T CSettingsPanelRemoteClientsAdvancedClient* ShowContentFrameContent<CSettingsPanelRemoteClientsAdvancedClient, char const (&) [29]>(panorama::CPanel2D*, ContentFrameSettings_t const&, char const (&) [29])
  T CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientConnected::CCallbackInternal_OnStreamingClientConnected()
  T CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientConnected::Run(void*)
  T CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientDisconnected::CCallbackInternal_OnStreamingClientDisconnected()
@@ -31849,6 +31864,7 @@
  T CSettingsPanelRemoteClientsAdvancedClient::GetPanelType() const
  T CSettingsPanelRemoteClientsAdvancedClient::UpdateStreamingClientConfig(bool)
  T CSettingsPanelRemoteClientsAdvancedClient::~CSettingsPanelRemoteClientsAdvancedClient()
+ T CSettingsPanelRemoteClientsAdvancedHost* ShowContentFrameContent<CSettingsPanelRemoteClientsAdvancedHost, char const (&) [27]>(panorama::CPanel2D*, ContentFrameSettings_t const&, char const (&) [27])
  T CSettingsPanelRemoteClientsAdvancedHost::CSettingsPanelRemoteClientsAdvancedHost(panorama::CPanel2D*, char const*)
  T CSettingsPanelRemoteClientsAdvancedHost::EventToggleHardwareEncoding(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelRemoteClientsAdvancedHost::EventToggleTrafficPriority(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -35331,7 +35347,6 @@
  T CTenfootController::SetupJSObjectTemplate()
  T CTenfootController::SetupJSTenfootMsgBoxTemplate()
  T CTenfootController::ShowAccountDisabledDialog()
- T CTenfootController::ShowContentFrameContent(panorama::CPanel2D*, char const*, int, panorama::IUIEvent*)
  T CTenfootController::ShowCyberCafeSecurityPrompt(panorama::IUIEvent*)
  T CTenfootController::ShowErrorOfflineDialog()
  T CTenfootController::ShowLoggedInElsewhereDialog()
@@ -35351,7 +35366,6 @@
  T CTenfootControllerBase::AccessJoin()
  T CTenfootControllerBase::AccessLogin()
  T CTenfootControllerBase::AccessMainMenu()
- T CTenfootControllerBase::AccessOOBE()
  T CTenfootControllerBase::AddNotificationPanel(CTenfootNotification*, float, bool, bool)
  T CTenfootControllerBase::BInScreenSaverMode()
  T CTenfootControllerBase::BInitializeController()
@@ -35422,6 +35436,8 @@
  T CTenfootControllerBase::OnShowURLChoiceDialog(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootControllerBase::OnShowWebBrowser()
  T CTenfootControllerBase::OnSteamPadRightHighActivity()
+ T CTenfootControllerBase::OnToggleFriends()
+ T CTenfootControllerBase::OnToggleWebBrowser()
  T CTenfootControllerBase::OnTruncateBackStack()
  T CTenfootControllerBase::OnUpdateActivePanel(ITenfootController::EPanel)
  T CTenfootControllerBase::OnUpdateClocks()
@@ -35432,6 +35448,7 @@
  T CTenfootControllerBase::RegisterFooterButtonStatic(panorama::CPanel2D*, char const*, char const*)
  T CTenfootControllerBase::RemoveNotificationPanelsOfType(panorama::CPanoramaSymbol const&)
  T CTenfootControllerBase::RequestRestart()
+ T CTenfootControllerBase::ShowContentFrameContent(panorama::CPanel2D*, char const*, int, panorama::IUIEvent*)
  T CTenfootControllerBase::ShowMessageBox(int, char const*, char const*)
  T CTenfootControllerBase::ShowModalDialog(panorama::CPanel2D*, char const*)
  T CTenfootControllerBase::ShowPanel(ITenfootController::EPanel, bool)
@@ -35863,7 +35880,6 @@
  T CTenfootWizardPanel::OnButtonCancel(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootWizardPanel::OnButtonDone(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootWizardPanel::OnButtonNext(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CTenfootWizardPanel::OnContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CTenfootWizardPanel::OnNavigateToInitialChild(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootWizardPanel::~CTenfootWizardPanel()
  T CTestPanel::CTestPanel(panorama::IUIWindow*, char const*)
@@ -39428,6 +39444,7 @@
  T CValveControllerManager::CCallbackInternal_OnSteamLogon::CCallbackInternal_OnSteamLogon()
  T CValveControllerManager::CCallbackInternal_OnSteamLogon::Run(void*)
  T CValveControllerManager::CValveControllerManager()
+ T CValveControllerManager::DownloadFirmwareInfoFromCDN()
  T CValveControllerManager::EnumerateCommunityBindingsAsync(panorama::CPanel2D*, unsigned int)
  T CValveControllerManager::EnumerateLocalBindingsAsync(panorama::CPanel2D*, unsigned int)
  T CValveControllerManager::EnumerateTemplateBindingsAsync(panorama::CPanel2D*, unsigned int)
@@ -42372,6 +42389,9 @@
  T SearchCommunityGroups::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T SearchCommunityGroups::GetEventType()
  T SearchCommunityGroups::MakeEvent(panorama::IUIPanelClient const*, char const*)
+ T SearchFriends::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T SearchFriends::GetEventType()
+ T SearchFriends::MakeEvent(panorama::IUIPanelClient const*)
  T SecurityPromptMessageBoxClosing::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T SecurityPromptMessageBoxClosing::GetEventType()
  T SecurityPromptMessageBoxClosing::MakeEvent(panorama::IUIPanelClient const*)
@@ -42719,6 +42739,9 @@
  T ShowProfileForSteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowProfileForSteamID::GetEventType()
  T ShowProfileForSteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, bool)
+ T ShowProfileOptions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowProfileOptions::GetEventType()
+ T ShowProfileOptions::MakeEvent(panorama::IUIPanelClient const*)
  T ShowPurchaseConfirmation::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowPurchaseConfirmation::MakeEvent(panorama::IUIPanelClient const*)
  T ShowPurchaseOptions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -43225,6 +43248,9 @@
  T ToggleEnableStreaming::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ToggleEnableStreaming::GetEventType()
  T ToggleEnableStreaming::MakeEvent(panorama::IUIPanelClient const*)
+ T ToggleFriends::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ToggleFriends::GetEventType()
+ T ToggleFriends::MakeEvent(panorama::IUIPanelClient const*)
  T ToggleHardwareDecoding::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ToggleHardwareDecoding::GetEventType()
  T ToggleHardwareDecoding::MakeEvent(panorama::IUIPanelClient const*)
@@ -43270,6 +43296,9 @@
  T ToggleVoiceOutputToInput::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ToggleVoiceOutputToInput::GetEventType()
  T ToggleVoiceOutputToInput::MakeEvent(panorama::IUIPanelClient const*)
+ T ToggleWebBrowser::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ToggleWebBrowser::GetEventType()
+ T ToggleWebBrowser::MakeEvent(panorama::IUIPanelClient const*)
  T TrackDetailMore::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T TrackDetailMore::GetEventType()
  T TrackDetailMore::MakeEvent(panorama::IUIPanelClient const*)
@@ -46059,7 +46088,6 @@
  T panorama::CPanelPtr<CMusicQueuePanel>::CPanelPtr(panorama::IUIPanelClient const*)
  T panorama::CPanelPtr<CMusicQueuePanel>::Get() const
  T panorama::CPanelPtr<COOBEProgressPanel>::Get() const
- T panorama::CPanelPtr<COOBEWizard>::Get() const
  T panorama::CPanelPtr<CRefreshLoginPanel>::Get() const
  T panorama::CPanelPtr<CSettingsPanelGameControllerBindRow>::Get() const
  T panorama::CPanelPtr<CSettingsPanelGameControllerNameAndCommitBinding>::Get() const
@@ -48837,6 +48865,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ScreenSaverTimeoutChanged>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ScrollToActiveFriend>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SearchCommunityGroups, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SearchFriends>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SecurityPromptMessageBoxClosing>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SeekBarChanged, float>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SelectAppBeta, unsigned int>(panorama::IUIPanel*, char const*, char const**)
@@ -48941,6 +48970,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPasswordToggled>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPreviewForDefault>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowProfileForSteamID, unsigned long long, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowProfileOptions>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPurchaseConfirmation>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPurchaseOptions, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowQueuedClanInviteNotifications>(panorama::IUIPanel*, char const*, char const**)
@@ -49052,6 +49082,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleCrawlingNotification>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleDebugOverlay>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleEnableStreaming>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleFriends>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleHardwareDecoding>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleHardwareEncoding>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleInterfaceSetting>(panorama::IUIPanel*, char const*, char const**)
@@ -49067,6 +49098,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleTimeLimits>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleTrafficPriority>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleVoiceOutputToInput>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleWebBrowser>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TrackDetailMore>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TrackDetailPlay>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TrackListItemGotFocus>(panorama::IUIPanel*, char const*, char const**)

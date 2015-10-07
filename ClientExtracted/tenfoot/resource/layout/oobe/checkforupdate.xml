@@ -16,21 +16,23 @@
         			  <LoadingThrobber id="Throbber" />
         		  </Panel>
             </Panel>
-            
         </Panel>
-        <Panel class="InputContainerDown ClientUpdateCheckVisibility UpdateCurrent">
-          <Button class="WizardButton" id="FinishOOBEButton" onactivate="RestartForClientUpdate()">
-            <Label text="#OOBE_CheckForUpdates_Finish" />
-          </Button>
-        </Panel>
+    
+        <Panel id="WizardButtons">
+          <Panel class="InputContainerDown ClientUpdateCheckVisibility UpdateCurrent">
+            <Button class="WizardButton" id="FinishOOBEButton" onactivate="RestartForClientUpdate()">
+              <Label text="#OOBE_CheckForUpdates_Finish" />
+            </Button>
+          </Panel>
 
-        <Panel class="InputContainerRight ClientUpdateCheckVisibility UpdateAvailable">
-          <Button class="WizardButton GapRight" id="RestartAndInstallUpdateButton" onactivate="RestartForClientUpdate()">
-            <Label text="#OOBE_CheckForUpdates_RestartInstallNow" />
-          </Button>
-          <Button class="WizardButton" onactivate="ShutdownMachine()">
-            <Label text="#OOBE_CheckForUpdates_Shutdown" />
-          </Button>
+          <Panel class="InputContainerRight ClientUpdateCheckVisibility UpdateAvailable">
+            <Button class="WizardButton GapRight" id="RestartAndInstallUpdateButton" onactivate="RestartForClientUpdate()">
+              <Label text="#OOBE_CheckForUpdates_RestartInstallNow" />
+            </Button>
+            <Button class="WizardButton" onactivate="ShutdownMachine()">
+              <Label text="#OOBE_CheckForUpdates_Shutdown" />
+            </Button>
+          </Panel>
         </Panel>
 	</OOBECompleteAndCheckForUpdate>
 </root>

@@ -5,8 +5,7 @@
 		
 	</styles>
 
-	<SettingsPanel_Display class="SettingsSection">
-
+    <SettingsPanel_Display class="SettingsSection" fullscreen="1" >
     <Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
 		  <!-- main panel -->
 		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">

@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/streamoptions.css" />
 	</styles>
@@ -10,6 +9,7 @@
 		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
 			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_StreamSources" />
+                <Label class="SubTitle" text="#Library_StreamSources_Desc" />
 			</Panel>
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxButtonsVertical">	

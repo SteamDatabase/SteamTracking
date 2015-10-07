@@ -580,9 +580,17 @@ DropDown:focus Label {
 .Button:disabled Label,
 .WizardButton:disabled Label,
 ToggleButton:disabled,
-ToggleButton:disabled .TickBox
+ToggleButton:disabled .TickBox,
+TextEntry:disabled
 {
 	color: detailsdatalabel;
+	desaturation: 0.0;
+	blur: gaussian( 0.7 );
+	opacity: 0.35;
+	background-color: ui_common_control2;
+	border-color: none;
+	box-shadow: none;
+	animation-name: none;
 }
 
 TextEntry,
@@ -645,6 +653,14 @@ TextEntry:focus
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+TextEntry:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+}
+TextEntry:disabled:hover
+{
+	box-shadow: none;
 }
 
 TextEntry.TextInputHandlerActive,

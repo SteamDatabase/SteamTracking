@@ -5,9 +5,9 @@
 		<include src="file://{resources}/styles/oobe/oobe.css" />
 	</styles>
 
-	<OOBELanguageWizardChild class="OOBEControllerHintImage WizardChild FlowNone" tabindex="auto" selectionpos="auto">
+	<OOBELanguageWizardChild class="WizardChild FlowDown" tabindex="auto" selectionpos="auto">
 
-		<Panel id="LanguageWizard" class="WizardContent" tabindex="auto" selectionpos="auto">
+		<Panel class="WizardContent" tabindex="auto" selectionpos="auto">
 			<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
 			
 			<Panel id="SettingsContainer">

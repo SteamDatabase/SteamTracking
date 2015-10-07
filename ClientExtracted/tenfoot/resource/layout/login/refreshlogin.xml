@@ -13,7 +13,7 @@
 		<Panel class="RefreshContainer" tabindex="auto" selectionpos="auto">
 			<Label id="reason" /> <!-- set programmatically -->
 			<Panel id="LoginMessageContainer">
-				<Label id="LoginMessage" class="LoginMessage BumpRight" />
+				<Label id="LoginMessage" class="LoginMessage" />
 			</Panel>
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
 				<Label class="LoginPrompt" text="#Login_AccountName" />
@@ -63,9 +63,9 @@
 				</Button>
 			</Panel>
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
-				<Label class="LoginPromptSm" text="#Login_RememberPassword" />
+				<Label class="LoginPromptSm"  />
 				<Panel class="LoginRightItem">
-					<ToggleButton class="CheckBox" id="SavePassword"/>
+					<ToggleButton class="CheckBox" id="SavePassword" text="#Login_RememberPassword"/>
 				</Panel>
 			</Panel>
 		</Panel>

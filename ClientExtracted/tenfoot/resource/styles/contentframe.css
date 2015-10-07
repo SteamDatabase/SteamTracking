@@ -378,3 +378,27 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	wash-color: #FFFFFFFF;
 }
 
+.OOBE Clock,
+.OOBE #ContentMouseBackButton
+.FullScreenChild #ContentHomeButton,
+.FullScreenChild #ContentMouseBackButton,
+
+{
+	opacity: 0.0;
+}
+
+#ContentFrame.FullScreenChild
+{
+	background-image: none;
+	background-color: #00000000;
+}
+
+.FullScreenChild #ContentFrameHeader
+{
+	visibility: collapse;
+}
+
+.FullScreenChild #ContentPanels
+{
+	height: 100%;
+}

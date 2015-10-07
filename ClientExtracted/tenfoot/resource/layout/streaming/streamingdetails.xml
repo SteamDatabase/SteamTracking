@@ -8,14 +8,14 @@
 	</styles>
 
 	<StreamingDetailsDialog class="TenfootMsgBox" >
-		<Panel id="StreamingDetailsContainer" class="ParentalUnlockPopupBody" tabindex="auto">
+		<Panel id="StreamingDetailsContainer" class="ParentalUnlockPopupBody">
 			<Label id="MsgBoxHeader" text="#StreamingDetails_Title" />
-  		<Panel id="MsgBoxDescriptionArea" tabindex="auto" selectionpos="auto">
+  			<Panel id="MsgBoxDescriptionArea">
 				<Label text="#StreamingDetails_Status" />
 			</Panel>
 			<Panel id="MsgBoxButtons">
-				<Button onactivate="StreamingDetailsShowAdvancedOptions()"><Label text="#StreamingDetails_ButtonModifySettings" /></Button>
-				<Button onactivate="ButtonCancel()"><Label text="#UI_Done" /></Button>
+				<Button tabindex="auto" selectionpos="auto" onactivate="StreamingDetailsShowAdvancedOptions()"><Label text="#StreamingDetails_ButtonModifySettings" /></Button>
+				<Button tabindex="auto" selectionpos="auto" onactivate="ButtonCancel()"><Label text="#UI_Done" /></Button>
 			</Panel>
 		</Panel>
 	</StreamingDetailsDialog>

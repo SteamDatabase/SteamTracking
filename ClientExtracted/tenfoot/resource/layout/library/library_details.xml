@@ -128,29 +128,38 @@
 							<Label class="InnerDesc" text="#Library_Details_UnavailableOnPlatform_HowToStream_Desc" />
 						</Button>
             <!-- game not designed for controllers so prompts might mismatch, but experience is fine -->
-            <Button id="GameNotDesignedForControllerWarning" class="Button LibraryContentDescriptionBlock FlowRight">
-              <Image src="file://{images}/library/icon_warning_controller.png" />
-              <Panel class="FlowDown">
-							  <Label class="InnerTitle" text="#Library_Details_GameNotDesignedForControllerWarning_Title" />
-							  <Label class="InnerDesc" text="#Library_Details_GameNotDesignedForControllerWarning_Desc" />
+            <Panel id="GameNotDesignedForControllerWarning" class="LibraryControllerDescriptionBlock">
+                <Panel class="ControllerWarning_bg" />
+                <Panel class="ControllerWarning_ctn FlowRight">
+                  <Image src="file://{images}/library/icon_warning_controller.png" />
+                  <Panel class="FlowDown">
+                                  <Label class="InnerTitle" text="#Library_Details_GameNotDesignedForControllerWarning_Title" />
+                                  <Label class="InnerDesc" text="#Library_Details_GameNotDesignedForControllerWarning_Desc" />
+                  </Panel>
               </Panel>
-						</Button>
+						</Panel>
             <!-- game experience fundamentally revolves around keyboard/house in specific ways -->
-            <Button id="GameDesignKeyboardMouseWarning" class="Button LibraryContentDescriptionBlock FlowRight">
-              <Image src="file://{images}/library/icon_warning_keyboard.png" />
-              <Panel class="FlowDown">
-							  <Label class="InnerTitle" text="#Library_Details_GameDesignKeyboardMouseWarning_Title" />
-							  <Label class="InnerDesc" text="#Library_Details_GameDesignKeyboardMouseWarning_Desc" />
-              </Panel>
-						</Button>
+            <Panel id="GameDesignKeyboardMouseWarning" class="LibraryControllerDescriptionBlock">
+                <Panel class="ControllerWarning_bg" />
+                <Panel class="ControllerWarning_ctn FlowRight">
+                    <Image src="file://{images}/library/icon_warning_keyboard.png" />
+                    <Panel class="FlowDown">
+                                  <Label class="InnerTitle" text="#Library_Details_GameDesignKeyboardMouseWarning_Title" />
+                                  <Label class="InnerDesc" text="#Library_Details_GameDesignKeyboardMouseWarning_Desc" />
+                     </Panel>
+                </Panel>
+						</Panel>
             <!-- game has interstitials, etc. -->
-            <Button id="GameRequiresMouseKeyboardInteractionWarning" class="Button LibraryContentDescriptionBlock FlowRight">
-              <Image src="file://{images}/library/icon_warning_keyboard.png" />
-              <Panel class="FlowDown">
+            <Panel id="GameRequiresMouseKeyboardInteractionWarning" class="LibraryControllerDescriptionBlock">
+                <Panel class="ControllerWarning_bg" />
+                <Panel class="ControllerWarning_ctn FlowRight">
+                    <Image src="file://{images}/library/icon_warning_keyboard.png" />
+                    <Panel class="FlowDown">
 							  <Label class="InnerTitle" text="#Library_Details_GameRequiresMouseKeyboardInteractionWarning_Title" />
 							  <Label class="InnerDesc" text="#Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc" />
-              </Panel>
-						</Button>
+                    </Panel>
+                </Panel>
+						</Panel>
 
 						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
 						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />

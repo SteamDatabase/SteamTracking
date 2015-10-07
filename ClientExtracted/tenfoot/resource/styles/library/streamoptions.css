@@ -26,7 +26,12 @@ StreamingSourceOptions #MsgBoxButtonArea Button Label.StreamingSourceName
 
 #MsgBoxHeader
 {
-	height: 60px;
+	height: fit-children;
+	flow-children: down;
+}
+#MsgBoxHeader .SubTitle
+{
+	margin-top: 0px;
 }
 
 

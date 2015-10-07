@@ -69,6 +69,7 @@
 		"settings"
 		{
 			"scroll_angle"		"163"
+			"haptic_intensity"		"1"
 		}
 	}
 	"group"

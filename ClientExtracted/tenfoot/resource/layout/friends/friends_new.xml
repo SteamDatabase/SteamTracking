@@ -14,11 +14,14 @@
 			<Panel class="ButtonColumn" tabindex="auto" selectionpos="0,0" onfocus="FocusFriendsMenuRow();" onmoveright="FocusFriendsContent();" >
 				<Panel class="ButtonContainer" rememberchildfocus="true">
 					<Panel class="GamesHorizRule" />
-					<Button id="LocalProfile" onfocus="FriendsViewType(localprofile);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
-						<Label text="YOUR PROFILE" html="true" />
+					<Button id="LocalProfile" onfocus="FriendsViewType(localprofile);" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="ShowProfileOptions();" >
+						<Label text="#Friends_Menu_Profile" html="true" />
 					</Button>
 					<Panel class="GamesHorizRule" />
 					<Label text="#friends_menu_chat" class="Header" />
+					<Button id="SearchFriendsButton" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="SearchFriends();">
+						<Label text="#Friends_Menu_Search_Friend" html="true"/>
+					</Button>
 					<Button id="FriendsTabButton" onfocus="FriendsContentChanged(friends);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
 						<Label text="#Friends_Menu_Friends" html="true" />
 					</Button>
@@ -30,10 +33,7 @@
 					</Button>
 
 					<Panel class="GamesHorizRule" />
-					<Label text="#friends_menu_manage" class="Header" />
-					<Button id="SearchFriendsButton" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="MoveRight(0);">
-						<Label text="#Friends_Menu_Search_Friend" html="true"/>
-					</Button>
+					<Label text="#friends_menu_manage" class="Header" />					
 					<Button id="AddFriendButton" onfocus="" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="AddFriend();">
 						<Label text="#Friends_Menu_Add_Friend" html="true"/>
 					</Button>

@@ -657,7 +657,7 @@ LibraryAppDetails .ContentsRow
 {
 	width: 100%;
 	height: 100%;
-	margin-top: 24px;
+	padding-top: 0px;
 	z-index: 0;
 	flow-children: right-wrap;
 
@@ -669,8 +669,7 @@ LibraryAppDetails .ContentsRow
 .ContentsRow .LibraryDetailsScrollableArea
 {
 	margin: -10px;
-	padding: 10px;
-	padding-bottom: 20px;
+	padding: 32px 10px 20px 10px;
 	width: 1300px;
 	overflow: squish scroll;
 	flow-children: right-wrap;
@@ -703,8 +702,8 @@ LibraryAppDetails .ContentsRow
 .PlayHeaderDetails
 {
 	width: 100%;
-	height: 165px;
-	margin-top: 5px;
+	height: 158px;
+	margin-top: 7px;
 	flow-children: down;
 	background-color: readonly_module;
 	margin-left: 12px;
@@ -1067,6 +1066,16 @@ ParentalButton.Locked
 	pre-transform-scale2d: 0.95;
 	visibility: collapse;
 	vertical-align: bottom;
+	padding-top: 0px;
+	padding-left: 15px;
+	border-radius: 3px;
+
+	box-shadow: module_shadow;
+
+	transition-property: pre-transform-scale2d !immediate;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
 }
 #MoreWaysToPlayBtn Label
 {
@@ -1075,7 +1084,27 @@ ParentalButton.Locked
 #MoreWaysToPlayBtn:focus
 {
 	pre-transform-scale2d: 1.0;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px -50px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
 }
+#MoreWaysToPlayBtn:focus Label
+{
+	color: #ffffff;
+}
+
 .HasMoreWaysToPlay #MoreWaysToPlayBtn
 {
 	visibility: visible;
@@ -3920,7 +3949,7 @@ KeyboardShortcut Image
 .PlayAction.Streaming .StreamAnimator3
 {
 	opacity: 1.0;
-	width: 1868px;
+	width: 1920px;
 	height: 220px;
 
 	vertical-align: bottom;
@@ -3930,7 +3959,7 @@ KeyboardShortcut Image
 	overflow: noclip;
 
 	animation-name: stream-activity;
-	animation-duration: 30s;
+	animation-duration: 36s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
@@ -3939,12 +3968,12 @@ KeyboardShortcut Image
 {
 	0%
 	{
-		position: -934px 0px 0px;
+		position: -1434px 0px 0px;
 	}
 
 	100%
 	{
-		position: 0px 0px 0px;
+		position: -500px 0px 0px;
 	}
 }
 
@@ -5706,7 +5735,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	transition-duration: shortmedduration;
 }
 
-Button.NoContent
+#GamesSuggestion Button.NoContent
 {
 	visibility: collapse;
 }
@@ -6041,20 +6070,37 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 	box-shadow: module_shadow;
 }
 
+
 #UnavailableOnPlatformHowToStreamInfo
 {
-	background-color: #5f821c;
+	background-color: #5f821cCC;
 }
 
 #GameNotDesignedForControllerWarning
 {
-	background-color: #82791c;
+	border-bottom: 2px solid #82791cff;
+}
+#GameNotDesignedForControllerWarning .ControllerWarning_bg
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #82791c00 ), color-stop( 0.1, #82791c80 ), color-stop( 0.9, #82791c80 ), to( #82791c00 ) );
+	opacity-mask: url( "file://{images}/library/top_fade_mask.tga" );
 }
 
 #GameRequiresMouseKeyboardInteractionWarning,
 #GameDesignKeyboardMouseWarning
 {
-	background-color: #823e1c;
+	border-bottom: 2px solid #823e1cff;
+}
+#GameRequiresMouseKeyboardInteractionWarning .ControllerWarning_bg,
+#GameDesignKeyboardMouseWarning .ControllerWarning_bg
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #823e1c00 ), color-stop( 0.1, #823e1c80 ), color-stop( 0.9, #823e1c80 ), to( #823e1c00 ) );
+	opacity-mask: url( "file://{images}/library/top_fade_mask.tga" );
+
 }
 
 .LibraryDetailsSectionRow .LibraryContentDescriptionBlock
@@ -6124,6 +6170,34 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 	padding-right: 10px;
 }
 
+.LibraryControllerDescriptionBlock
+{
+	width: 100%;
+	margin-left: 11px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	height: fit-children;
+
+
+}
+.ControllerWarning_ctn
+{
+	padding: 15px 0px;
+}
+.LibraryControllerDescriptionBlock Label
+{
+	font-size: 26px;
+	width: 1100px;
+}
+.LibraryControllerDescriptionBlock Image
+{
+	margin-right: 10px;
+}
+.LibraryControllerDescriptionBlock .InnerDesc
+{
+	color: #ffffff;
+}
+
 .ImageControllerWarning,
 .ImageKeyboardWarning
 {
@@ -6155,7 +6229,7 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 .LibraryPrelaunchDialog .MsgBoxContents
 {
 	color: #ffffff;
-	font-size: 24px;
+	font-size: 30px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 }

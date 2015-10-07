@@ -15,9 +15,12 @@
 #Reason
 {
 	vertical-align: bottom;
-	margin-left: 220px;
+	margin-left: 0px;
 	margin-top: 24px;
 	color: applabelsolid;
+	font-size: 36px;
+	font-weight: light;
+	margin-bottom: 20px;
 }
 
 .RefreshContainer
@@ -28,14 +31,6 @@
 
 	padding: 24px 24px 24px 24px;
 	background-color: message_box_bg;
-	border: 5px solid #424c50;
-}
-
-TextEntry, Label
-{
-	font-size: 26px;
-	padding-top: 5px;
-	font-family: platformfont;
 }
 
 .FlowRight
@@ -77,6 +72,9 @@ TextEntry, Label
 	padding-right: 24px;
 	padding-top: 12px;
 	width: 380px;
+	font-size: 24px;
+	   color: tcstatictext;
+
 }
 
 .LoginPromptSm
@@ -114,129 +112,10 @@ TextEntry, Label
 	opacity: 1.0;
 }
 
-.Button
-{
-	padding-left: 8px;
-	border-width: 5px;
-	border-style: solid;
-
-	border-color: none;
-	background-color: ui_common_control2;
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-}
-
-Button:hover,ToggleButton:hover,RadioButton:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.0;
-}
-
-
-Button:focus,RadioButton:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-color: #fdfefef0;
-	z-index: 1000;
-
-	color: #00000099;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-ToggleButton:focus
-{
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	pre-transform-scale2d: 1.0;
-	animation-name: main-button-glow-movement;
-
-}
-
-// tickbox to turn togglebuttons into checkboxes
-.CheckBox .TickBox
-{
-	width: 40px;
-	height: 40px;
-	vertical-align: center;
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-}
-
-.CheckBox:Selected .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
-	pre-transform-scale2d: 1.0;
-}
-
-// and make room for the tickbox
-.CheckBox Label
-{
-	padding-left: 46px;
-	padding-top: 4px;
-	color: applabel;
-	width: 100%;
-	text-overflow: clip;
-	white-space: nowrap;
-}
-
-.CheckBox:hover Label
-{
-	color: #ffffffff;
-}
-
-.CheckBox:focus Label
-{
-	color: #000000ff;
-}
-
-.CheckBox:descendantfocus
-{
-	background-color: ui_common_control;	
-	
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	
-}
-
-.CheckBox:Selected:focus .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-}
-
-
-Label
-{
-	margin-top: 0px;
-	margin-right: 12px;
-	margin-bottom: 16px;
-	color: tcstatictext;
-	opacity: 0.85;
-}
-
 // all these button styles are cribbed from librarybutton in library.css.
 // i have modified them a bit here... cc
 // they should be refactored into steamstyles perhaps
-.Button,ToggleButton,RadioButton
+ToggleButton,RadioButton
 {
 	horizontal-align: center;
 
@@ -257,18 +136,7 @@ RefreshLogin .Button
 	width: 185px;
 }
 
-.Button Label
-{
-	text-transform: uppercase;
-	margin-bottom: 4px;
-	color: applabelsolid;
-}
 
-
-.Button:focus Label
-{
-	color: black;
-}
 
 .SteamGuard Label,.SteamGuard TextEntry,
 .TwoFactor Label,.TwoFactor TextEntry
@@ -280,39 +148,10 @@ RefreshLogin .Button
 {
 	horizontal-align: left;
 	vertical-align: center;
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 	transition-property: box-shadow, background-color;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
-#SavePassword:hover
-{	
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-}
-
-
-#SavePassword:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-color: #fdfefef0;
-	z-index: 1000;
-
-	color: #00000099;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;	
-}
 
 
 .LoginPromptContainer.Password
@@ -354,42 +193,6 @@ RefreshLogin .Button
 {
 	// this is a no-op - textentry does not support text-transform
 	text-transform: uppercase;
-}
-
-// blur things while the user is trying to log in
-TextEntry,.Button
-{
-	transition-property: blur, desaturation, box-shadow, background-color, color, border;
-	transition-duration: 0.2s;
-	background-color: ui_common_control2;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-
-}
-
-TextEntry:disabled,.Button:disabled,.CheckBox:disabled
-{
-	desaturation: 0.0;
-	blur: gaussian( 0.7 );
-	opacity: 0.35;
-	background-color: ui_common_control2;
-	border-color: none;
-	box-shadow: none;
-	animation-name: none;
-}
-
-.Button:disabled Label
-{
-	color: tcstatictext;
-}
-
-TextEntry:hover
-{
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-}
-
-.Button:disabled:hover
-{
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
 
@@ -477,6 +280,9 @@ RefreshLogin .LoginContainer
 	horizontal-align: center;
 	width: 75%;
 	height: 36px;
+	font-size: 24px;
+	font-family: platformfont;
+	color: tcstatictext;
 }
 
 // cancel button hidden until code makes it visible
@@ -587,7 +393,7 @@ RefreshLogin #LoginMessageContainer
 
 #LoginMessage
 {
-	font-size: 24px;
+	font-size: 26px;
 	color: applabelsolid;
 	opacity: 0.6;
 }
