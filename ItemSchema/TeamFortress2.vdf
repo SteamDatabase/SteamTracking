@@ -453,7 +453,7 @@
 		}
 	}
 	"item_collections"
-	{
+	{		
 		"Operation_gun_mettle_master_collection"
 		{
 			"name"				"#operation_gun_mettle_master_collection"
@@ -583,25 +583,113 @@
 			"description"		"#GunMettleCosmetics_collection_desc"
 			"items"
 			{
-				"The Rotation Sensation"				"10"
-				"The Physician's Protector"				"10"
-				"The Vascular Vestment"					"10"
-				"Bruce's Bonnet"						"10"
-				"Outta' Sight"							"10"
-				"Support Spurs"							"10"
-				"Lurker's Leathers"						"10"
-				"Commissar's Coat"						"10"
-				"Sheriff's Stetson"						"10"
-				"Wild West Waistcoat"					"10"
-				"Fortunate Son"							"10"
-				"Flak Jack"								"10"
-				"Captain Cardbeard Cutthroat"			"10"
-				"Potassium Bonnett"						"10"
-				"White Russian"							"10"
-				"El Duderino"							"10"
+				"ancient"
+				{
+					"Captain Cardbeard Cutthroat"			"10"
+					"Potassium Bonnett"						"10"
+				}
+				"legendary"
+				{
+					"Bruce's Bonnet"						"10"
+					"El Duderino"							"10"
+					"Sheriff's Stetson"						"10"
+				}	
+				"mythical"
+				{
+					"The Physician's Protector"				"10"
+					"Outta' Sight"							"10"
+					"Fortunate Son"							"10"
+					"White Russian"							"10"
+				}
+				"rare"
+				{
+					"The Rotation Sensation"				"10"
+					"The Vascular Vestment"					"10"
+					"Support Spurs"							"10"
+					"Lurker's Leathers"						"10"
+					"Commissar's Coat"						"10"
+					"Wild West Waistcoat"					"10"
+					"Flak Jack"								"10"
+				}
 			}
 		}
-	}
+
+		"invasion_master_collection"
+		{
+			"name"				"#invasion_master_collection"
+			"description"		"#invasion_master_collection_desc"
+			"is_reference_collection"	"1"
+			"items"
+			{
+				"Invasion Collection Dummy 01"			"10"
+				"Invasion Collection Dummy 02"			"10"
+			}
+		}
+		
+		"Invasion_collection_01_lootlist"
+		{
+			"name"				"#Invasion_collection_01"
+			"description"		"#Invasion_collection_01_desc"
+			"items"
+			{
+				"rare"
+				{
+					"Universal Translator"              "10"
+					"Phobos Filter"                     "10"
+					"Final Frontiersman"                "10"
+					"Life Support System"               "10"
+				}
+				"mythical"
+				{
+					"Captain Space Mann"				"10"
+					"Shooting Star"						"10"			
+					"Rocket Operator"                   "10"
+				}
+				"legendary"
+				{
+					"The Giger Counter"					"10"			
+					"Starduster"                        "10"
+				}
+				"ancient"
+				{
+					"Corona Australis"                  "10"
+					"Sucker Slug"                       "10"
+				}
+			}
+		}
+		
+		"Invasion_collection_02_lootlist"
+		{
+			"name"				"#Invasion_collection_02"
+			"description"		"#Invasion_collection_02_desc"
+			"items"
+			{
+				"rare"
+				{
+					"The Graylien"                      "10"
+					"Cadet Visor"                       "10"
+					"The Space Diver"					"10"
+					"A Head Full of Hot Air"            "10"
+				}
+				"mythical"
+				{
+					"Phononaut"                         "10"
+					"Jupiter Jetpack"					"10"
+					"The C.A.P.P.E.R"					"10"			
+				}
+				"legendary"
+				{
+					"Space Hamster Hammy"				"10"
+					"Taunt: Burstchester"				"10"
+				}
+				"ancient"
+				{
+					"Batsaber"							"10"			
+				}
+			}
+		}
+		
+	} 
 	"item_paintkit_definitions"
 	{
 
@@ -49034,7 +49122,7 @@
 			}
 			"holiday_restriction"	"halloween_or_fullmoon"
 		}
-		
+
 		"dummy_item"
 		{
 			"show_in_armory"	"0"
@@ -49048,7 +49136,7 @@
 			"public_prefab"			"1"
 			"tags"
 			{
-				"is_cosmetic"		"1"	
+				"is_cosmetic"		"1"
 			}
 			"attributes"
 			{
@@ -49159,6 +49247,14 @@
 			"item_type_name"	"#TF_TauntEnabler"
 			"item_slot"			"taunt"
 			"item_quality"		"unique"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"100" 
+				}
+			}
 			"static_attrs"
 			{
 				"cosmetic_allow_inspect"				"1"
@@ -49327,7 +49423,7 @@
 				"is commodity"			"1"
 			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
-			"drop_sound"		"ui/item_paint_can_pickup.wav"		
+			"drop_sound"		"ui/item_paint_can_pickup.wav"
 		}
 		"halloween_costume_piece_2011"
 		{
@@ -49719,7 +49815,7 @@
 			"particle_suffix"		"flamethrower"
 		}
 		"weapon_fireaxe"
-		{	
+		{
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -49954,7 +50050,7 @@
 				"weapon_stattrak_module_scale"			"0.608"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"		
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"scattergun"
 		}
 		"weapon_sniperrifle"
@@ -50014,6 +50110,7 @@
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Bat"
 			"item_name"	"#TF_Weapon_Bat"
+			"inspect_panel_dist" "35"
 			"item_slot"	"melee"
 			"item_quality"	"normal"
 			"baseitem" "0"
@@ -50152,7 +50249,7 @@
 				"weapon_stattrak_module_scale"			"0.497"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"	
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"xifier_class_remap"	"weapon_revolver"
 			"particle_suffix"		"revolver"
 		}
@@ -50674,7 +50771,7 @@
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
-			"drop_sound"		"ui/item_metal_tiny_drop.wav"		
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
 		}
 		"strange_part"
 		{
@@ -50751,7 +50848,7 @@
 			"image_inventory"	"backpack/player/items/all_class/pyrovision_goggles_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"	
+			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/pyrovision_goggles_scout.mdl"
 				"sniper"	"models/player/items/all_class/pyrovision_goggles_sniper.mdl"
@@ -51062,7 +51159,7 @@
 				}
 			}
 		}
-		
+
 		"dynamic_recipe_base"
 		{
 			"item_class"	"tool"
@@ -51438,7 +51535,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"xifier_class_remap"	"triad_trinket"
-			"model_player_per_class"	
+			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/sd_shirt_scout.mdl"
 				"sniper"	"models/player/items/all_class/sd_shirt_sniper.mdl"
@@ -51504,7 +51601,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"xifier_class_remap"	"champ_stamp"
-			"model_player_per_class"	
+			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/sd_tattoos_scout.mdl"
 				"sniper"	"models/player/items/all_class/sd_tattoos_sniper.mdl"
@@ -51525,7 +51622,7 @@
 		{
 			"first_sale_date"	"2012/08/02"
 			"prefab"				"base_misc"
-			"item_class"			"tf_wearable"			
+			"item_class"			"tf_wearable"
 			"craft_class"			"hat"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -51550,7 +51647,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"xifier_class_remap"	"marxman"
-			"model_player_per_class"	
+			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/sd_glasses_scout.mdl"
 				"sniper"	"models/player/items/all_class/sd_glasses_sniper.mdl"
@@ -51580,7 +51677,7 @@
 				{
 					"0"
 					{
-						"model_player_per_class"	
+						"model_player_per_class"
 						{
 							"scout"		"models/player/items/all_class/sd_glasses_scout.mdl"
 							"sniper"	"models/player/items/all_class/sd_glasses_sniper.mdl"
@@ -51596,7 +51693,7 @@
 					}
 					"1"
 					{
-						"model_player_per_class"	
+						"model_player_per_class"
 						{
 							"scout"		"models/player/items/all_class/sd_glasses_scout_cigar.mdl"
 							"sniper"	"models/player/items/all_class/sd_glasses_sniper_cigar.mdl"
@@ -52047,12 +52144,12 @@
 				{
 					"attribute_class"	"sentry_killed_revenge"
 					"value"	"1"
-				}			
+				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
-				}				
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -52334,7 +52431,7 @@
 			"image_inventory_size_h"	"82"
 			"item_quality"		"unique"
 			"model_player"	"models/player/items/mvm_loot/all_class/mvm_flask_generic.mdl"
-			"armory_desc" "action"			
+			"armory_desc" "action"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -52674,7 +52771,7 @@
 				}
 			}
 		}
-		
+
 		"weapon_force_a_nature"
 		{
 			"item_class"	"tf_weapon_scattergun"
@@ -52757,7 +52854,7 @@
 				"sound_single_shot"	"Weapon_Scatter_Gun_Double.Single"
 				"sound_burst"	"Weapon_Scatter_Gun_Double.SingleCrit"
 				"muzzle_flash"	"muzzle_bignasty"
-				"tracer_effect"	"bullet_bignasty_tracer01"				
+				"tracer_effect"	"bullet_bignasty_tracer01"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -53131,7 +53228,7 @@
 				{
 					"hands"			"1"
 				}
-            
+
 				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
@@ -53325,6 +53422,7 @@
 			"item_type_name"	"#TF_Weapon_Laser_Pointer"
 			"item_name"	"#TF_Unique_Achievement_Laser_Pointer"
 			"item_description"	"#TF_Wrangler_Desc"
+			"inspect_panel_dist" "40"
 			"item_slot"	"secondary"
 			"anim_slot"	"item1"
 			"item_quality"	"unique"
@@ -53477,6 +53575,86 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"weapon_machina"
+		{
+			"item_class"	"tf_weapon_sniperrifle"
+			"craft_material_type"	"weapon"
+			"craft_class"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_name"	"#TF_DEX_Rifle"
+			"item_description"	"#TF_DEX_Rifle_Desc"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"machina"
+			"item_iconname"	"machina"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"attributes"
+			{
+				"sniper penetrate players when charged"
+				{
+					"attribute_class"	"sniper_penetrate_players_when_charged"
+					"value"	"1"
+				}
+				"sniper only fire zoomed"
+				{
+					"attribute_class"	"sniper_only_fire_zoomed"
+					"value"	"1"
+				}
+				"sniper full charge damage bonus"
+				{
+					"attribute_class"	"sniper_full_charge_damage_bonus"
+					"value"				"1.15"
+ 				}
+ 				"sniper fires tracer"
+ 				{
+					"attribute_class"	"sniper_fires_tracer"
+					"value"	"1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_SniperRailgun_Large.Single"
+				"sound_burst"		"Weapon_SniperRailgun_Large.SingleCrit"
+				"sound_reload"		"Weapon_SniperRailgun.WorldReload"
+				"sound_deploy"		"Weapon_SniperRailgun.Draw"
+				"sound_empty"		"Weapon_SniperRailgun.ClipEmpty"
+				"sound_special2"	"Weapon_SniperRailgun.NonScoped"
+				"sound_special3"	"Weapon_SniperRailgun.Single"
+				"muzzle_flash"		"dxhr_sniper_muzzleflash"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		
 		"paintkit_weapon"
 		{
 			"craft_class"			""				
@@ -53592,6 +53770,7 @@
 
 		"marketable"
 		{
+			"enabled"									"1"
 			"static_attrs"
 			{
 				"is marketable"							"1"
@@ -73416,69 +73595,9 @@
 		{
 			"name"	"The Machina"
 			"first_sale_date"	"2011/08/11"
-			"item_class"	"tf_weapon_sniperrifle"
-			"craft_material_type"	"weapon"
-			"craft_class"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"		"1"
-				"can_headshot"			"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"prefab"	"weapon_machina"
 			"item_name"	"#TF_DEX_Rifle"
 			"item_description"	"#TF_DEX_Rifle_Desc"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"item_logname"	"machina"
-			"item_iconname"	"machina"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"sniper"	"1"
-			}
-			"attributes"
-			{
-				"sniper penetrate players when charged"
-				{
-					"attribute_class"	"sniper_penetrate_players_when_charged"
-					"value"	"1"
-				}
-				"sniper only fire zoomed"
-				{
-					"attribute_class"	"sniper_only_fire_zoomed"
-					"value"	"1"
-				}
-				"sniper full charge damage bonus"
-				{
-					"attribute_class"	"sniper_full_charge_damage_bonus"
-					"value"				"1.15"
- 				}
- 				"sniper fires tracer"
- 				{
-					"attribute_class"	"sniper_fires_tracer"
-					"value"	"1"
-				}
-				"lunchbox adds minicrits"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"2"
-				}
-			}
 			"visuals"
 			{
 				"sound_single_shot"	"Weapon_SniperRailgun_Large.Single"
@@ -73490,8 +73609,6 @@
 				"sound_special3"	"Weapon_SniperRailgun.Single"
 				"muzzle_flash"		"dxhr_sniper_muzzleflash"
 			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"527"
 		{
@@ -108625,7 +108742,7 @@
 			"prefab"		"no_craft taunt"
 			"item_name"		"#TF_taunt_spy_boxtrot"
 			"item_description"		"#TF_taunt_spy_boxtrot_Desc"
-			"ad_text"	"#TF_taunt_spy_boxtrot_AdText"
+			"ad_text"		"#TF_taunt_spy_boxtrot_AdText"
 			"attributes"
 			{
 				"taunt is press and hold"
@@ -108700,7 +108817,7 @@
 			"prefab"		"no_craft taunt"
 			"item_name"		"#TF_taunt_proletariat_showoff"
 			"item_description"		"#TF_taunt_proletariat_showoff_Desc"
-			"ad_text"				"#TF_taunt_proletariat_showoff_AdText"
+			"ad_text"		"#TF_taunt_proletariat_showoff_AdText"
 			"image_inventory"		"backpack/workshop/player/items/heavy/taunt_soviet_showoff/taunt_soviet_showoff"
 			"capabilities"
 			{
@@ -108715,6 +108832,57 @@
 				"custom_taunt_scene_per_class"
 				{
 					"heavy"		"scenes/workshop/player/heavy/low/taunt_soviet_showoff.vcd"
+				}
+			}
+		}
+		"30621"
+		{
+			"name"		"Taunt: Burstchester"
+			"prefab"		"no_craft taunt marketable"
+			"item_name"		"#TF_invasion_taunt_burstchester"
+			"item_description"		"#TF_invasion_taunt_burstchester_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"scout"		"scenes/workshop/player/scout/low/taunt_burstchester.vcd"
+					"sniper"		"scenes/workshop/player/sniper/low/taunt_burstchester.vcd"
+					"soldier"		"scenes/workshop/player/soldier/low/taunt_burstchester.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/taunt_burstchester.vcd"
+					"medic"		"scenes/workshop/player/medic/low/taunt_burstchester.vcd"
+					"heavy"		"scenes/workshop/player/heavy/low/taunt_burstchester.vcd"
+					"pyro"		"scenes/workshop/player/pyro/low/taunt_burstchester.vcd"
+					"spy"		"scenes/workshop/player/spy/low/taunt_burstchester.vcd"
+					"engineer"		"scenes/workshop/player/engineer/low/taunt_burstchester.vcd"
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"scout"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_scout.mdl"
+					"sniper"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_sniper.mdl"
+					"soldier"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_soldier.mdl"
+					"demoman"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_demo.mdl"
+					"medic"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_medic.mdl"
+					"heavy"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_heavy.mdl"
+					"pyro"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_pyro.mdl"
+					"spy"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_spy.mdl"
+					"engineer"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_engineer.mdl"
 				}
 			}
 		}
@@ -109143,6 +109311,608 @@
 				"heavy"		"1"
 			}
 		}
+		"30646"
+		{
+			"name"		"Captain Space Mann"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_captain_space_mann"
+			"item_description"		"#TF_invasion_captain_space_mann_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/invasion_captain_space_mann/invasion_captain_space_mann_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30647"
+		{
+			"name"		"Phononaut"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_invasion_phononaut"
+			"item_description"		"#TF_invasion_phononaut_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/invasion_phononaut/invasion_phononaut_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30648"
+		{
+			"name"		"Corona Australis"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_corona_australis"
+			"item_description"		"#TF_invasion_corona_australis_Desc"
+			"equip_region"		"whole_head"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/sniper/invasion_corona_australis/invasion_corona_australis"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/invasion_corona_australis/invasion_corona_australis.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30649"
+		{
+			"name"		"Final Frontiersman"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_final_frontiersman"
+			"item_description"		"#TF_invasion_final_frontiersman_Desc"
+			"equip_region"		"feet"
+			"image_inventory"		"backpack/workshop/player/items/sniper/invasion_final_frontiersman/invasion_final_frontiersman"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/invasion_final_frontiersman/invasion_final_frontiersman.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30650"
+		{
+			"name"		"Starduster"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_starduster"
+			"item_description"		"#TF_invasion_starduster_Desc"
+			"equip_region"		"sniper_vest"
+			"image_inventory"		"backpack/workshop/player/items/sniper/invasion_starduster/invasion_starduster"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/invasion_starduster/invasion_starduster.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30651"
+		{
+			"name"		"The Graylien"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_the_graylien"
+			"item_description"		"#TF_invasion_the_graylien_Desc"
+			"equip_region"		"head_skin"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/invasion_the_graylien/invasion_the_graylien"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/invasion_the_graylien/invasion_the_graylien.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30652"
+		{
+			"name"		"Phobos Filter"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_phobos_filter"
+			"item_description"		"#TF_invasion_phobos_filter_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/invasion_phobos_filter/invasion_phobos_filter"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/invasion_phobos_filter/invasion_phobos_filter.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30653"
+		{
+			"name"		"Sucker Slug"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_invasion_sucker_slug"
+			"item_description"		"#TF_invasion_sucker_slug_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/invasion_sucker_slug/invasion_sucker_slug"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/invasion_sucker_slug/invasion_sucker_slug.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"2"
+				}
+			}
+		}
+		"30654"
+		{
+			"name"		"Life Support System"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_life_support_system"
+			"item_description"		"#TF_invasion_life_support_system_Desc"
+			"equip_region"		"engineer_pocket"
+			"image_inventory"		"backpack/workshop/player/items/engineer/invasion_life_support_system/invasion_life_support_system"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/invasion_life_support_system/invasion_life_support_system.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30655"
+		{
+			"name"		"Rocket Operator"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_rocket_operator"
+			"item_description"		"#TF_invasion_rocket_operator_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/invasion_rocket_operator/invasion_rocket_operator"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/invasion_rocket_operator/invasion_rocket_operator.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30658"
+		{
+			"name"		"Universal Translator"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_invasion_universal_translator"
+			"item_description"		"#TF_invasion_universal_translator_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/invasion_universal_translator/invasion_universal_translator"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/invasion_universal_translator/invasion_universal_translator.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30661"
+		{
+			"name"		"Cadet Visor"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_cadet_visor"
+			"item_description"		"#TF_invasion_cadet_visor_Desc"
+			"equip_region"		"glasses"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/invasion_cadet_visor/invasion_cadet_visor"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/invasion_cadet_visor/invasion_cadet_visor.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30662"
+		{
+			"name"		"A Head Full of Hot Air"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_invasion_a_head_full_of_hot_air"
+			"item_description"		"#TF_invasion_a_head_full_of_hot_air_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/pyro/invasion_a_head_full_of_hot_air/invasion_a_head_full_of_hot_air"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/invasion_a_head_full_of_hot_air/invasion_a_head_full_of_hot_air.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30663"
+		{
+			"name"		"Jupiter Jetpack"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_jupiter_jetpack"
+			"item_description"		"#TF_invasion_jupiter_jetpack_Desc"
+			"equip_region"		"Back"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/invasion_jupiter_jetpack/invasion_jupiter_jetpack"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/invasion_jupiter_jetpack/invasion_jupiter_jetpack.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30664"
+		{
+			"name"		"The Space Diver"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_the_space_diver"
+			"item_description"		"#TF_invasion_the_space_diver_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/invasion_the_space_diver/invasion_the_space_diver"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/invasion_the_space_diver/invasion_the_space_diver.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30665"
+		{
+			"name"		"Shooting Star"
+			"prefab"		"weapon_machina no_craft marketable"
+			"item_type_name"		"#TF_Weapon_SniperRifle"
+			"item_name"		"#TF_invasion_sniperrifle"
+			"item_description"		"#TF_invasion_sniperrifle_Desc"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_sniperrifle/c_invasion_sniperrifle"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_sniperrifle/c_invasion_sniperrifle.mdl"
+			"item_logname"		"shooting_star"
+			"item_iconname"		"shooting_star"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"ragdolls become ash"		"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ShootingStar.SingleCharged"
+				"sound_burst"		"Weapon_ShootingStar.SingleCrit"
+				"sound_reload"		"Weapon_SniperRailgun.WorldReload"
+				"sound_deploy"		"Weapon_SniperRailgun.Draw"
+				"sound_empty"		"Weapon_SniperRailgun.ClipEmpty"
+				"sound_special2"		"Weapon_SniperRailgun.NonScoped"
+				"sound_special3"		"Weapon_ShootingStar.Single"
+				"muzzle_flash"		"dxhr_sniper_muzzleflash"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+		"30666"
+		{
+			"name"		"The C.A.P.P.E.R"
+			"prefab"		"weapon_pistol no_craft marketable"
+			"item_name"		"#TF_invasion_pistol"
+			"item_description"		"#TF_invasion_pistol_Desc"
+			"item_logname"		"the_capper"
+			"item_iconname"		"the_capper"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol.mdl"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"ragdolls become ash"		"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+			"visuals_red"
+			{
+				"skin"		"0"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_red"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+			"visuals_blu"
+			{
+				"skin"		"1"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_blue"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+		}
+		"30667"
+		{
+			"name"		"Batsaber"
+			"prefab"		"weapon_bat no_craft marketable"
+			"item_name"		"#TF_invasion_bat"
+			"item_description"		"#TF_invasion_bat_Desc"
+			"item_logname"		"batsaber"
+			"item_iconname"		"batsaber"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_bat/c_invasion_bat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_bat/c_invasion_bat.mdl"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"ragdolls plasma effect"		"1"
+			}
+			"visuals"
+			{
+				"sound_melee_miss"		"Weapon_BatSaber.Swing"
+				"sound_melee_hit"		"Weapon_BatSaber.HitFlesh"
+				"sound_melee_hit_world"		"Weapon_BatSaber.HitWorld"
+				"sound_burst"		"Weapon_BatSaber.SwingCrit"
+				"sound_deploy"		"Weapon_BatSaber.Draw"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+		"30668"
+		{
+			"name"		"The Giger Counter"
+			"prefab"		"weapon_wrangler no_craft marketable"
+			"item_name"		"#TF_invasion_wrangler"
+			"item_description"		"#TF_invasion_wrangler_Desc"
+			"item_logname"		"giger_counter"
+			"item_iconname"		"giger_counter"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler.mdl"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"is giger counter"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+		"30669"
+		{
+			"name"		"Space Hamster Hammy"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_invasion_space_hamster_hammy"
+			"item_description"		"#TF_invasion_space_hamster_hammy_Desc"
+			"equip_region"		"disconnected_floating_item"
+			"image_inventory"		"backpack/workshop/player/items/pyro/invasion_space_hamster_hammy/invasion_space_hamster_hammy"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/invasion_space_hamster_hammy/invasion_space_hamster_hammy.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+		}
+		"30670"
+		{
+			"name"		"Invasion Community Update Medal"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_invasion_community_update_medal"
+			"item_description"		"#TF_invasion_community_update_medal_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+
 
 
 
@@ -127602,6 +128372,107 @@
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
+		"1925"
+		{
+			"name" "Map Token 2Fort Invasion"
+			"first_sale_date"	"2015/09/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_2FortInv"
+			"item_description"	"#TF_MapToken_2FortInv_Desc"
+			"map_name"		"#TF_Map_2FortInv"
+			"ad_text"			"#TF_MapToken_2FortInv_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_2fort"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1926"
+		{
+			"name" "Map Token Probed"
+			"first_sale_date"	"2015/09/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Probed"
+			"item_description"	"#TF_MapToken_Probed_Desc"
+			"map_name"		"#TF_Map_Probed"
+			"ad_text"			"#TF_MapToken_Probed_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_probed"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1927"
+		{
+			"name" "Map Token Watergate"
+			"first_sale_date"	"2015/09/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Watergate"
+			"item_description"	"#TF_MapToken_Watergate_Desc"
+			"map_name"		"#TF_Map_Watergate"
+			"ad_text"			"#TF_MapToken_Watergate_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_watergate"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1928"
+		{
+			"name" "Map Token Byre"
+			"first_sale_date"	"2015/09/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Byre"
+			"item_description"	"#TF_MapToken_Byre_Desc"
+			"map_name"		"#TF_Map_Byre"
+			"ad_text"			"#TF_MapToken_Byre_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_byre"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+
 
 
 
@@ -132491,6 +133362,60 @@
 				"Map Token Snowplow"			"1"
 				"Map Token Borneo"				"1"
 				"Map Token Suijin"				"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_MapTokens"
+			"item_description"	"#TF_Bundle_MapTokens_Desc"
+			"image_inventory"	"backpack/player/items/all_class/stamp_collection"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"2139"
+		{
+			"name" "Map Token Bundle 8"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2015/09/26"
+			"item_class"	"bundle"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"bundle"
+			{
+				"Map Token Egypt"		"1"
+				"Map Token Coldfront"	"1"
+				"Map Token Fastlane"	"1"
+				"Map Token Turbine"		"1"
+				"Map Token Steel"		"1"
+				"Map Token Junction"	"1"
+				"Map Token Watchtower"	"1"
+				"Map Token Hoodoo"		"1"
+				"Map Token Offblast"	"1"
+				"Map Token Yukon"		"1"
+				"Map Token Harvest"		"1"
+				"Map Token Freight"		"1"
+				"Map Token Mountain Lab"		"1"
+				"Map Token Manor Event"			"1"
+				"Map Token Nightfall"			"1"
+				"Map Token Frontier"			"1"
+				"Map Token Lakeside"			"1"
+				"Map Token Gullywash"			"1"
+				"Map Token Kong King"			"1"
+				"Map Token Process"				"1"
+				"Map Token Standin"				"1"
+				"Map Token Snakewater"			"1"
+				"Map Token Snowplow"			"1"
+				"Map Token Borneo"				"1"
+				"Map Token Suijin"				"1"
+				"Map Token 2Fort Invasion"		"1"
+				"Map Token Probed"				"1"
+				"Map Token Watergate"			"1"
+				"Map Token Byre"				"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
 			"item_name"		"#TF_Bundle_MapTokens"
@@ -137737,17 +138662,19 @@
 			}
 			"static_attrs"
 			{
-				"cannot trade"		"1"
-				"is_operation_pass"	"1"
-				
 				"kill eater score type"			"98"	
 				"kill eater score type 2"		"99"	
 				"kill eater score type 3"		"96"	
 				"kill eater user score type 1"	"97"	
 				
+				"cannot trade"		"1"
+				"is_operation_pass"	"1"
 				"weapon_allow_inspect"					"1"
 				"style changes on strange level"	"3"		
-				"cannot restore"					"0"			
+				"cannot restore"					"1"			
+				"cannot delete"						"1"			
+				
+				"deactive date"					"1444694400"	
 			}
 			"attributes"
 			{
@@ -137851,6 +138778,164 @@
 			"event_desc_footer"			"#Footer_GunMettleCosmetics"
 			"collection_reference"		"GunMettleCosmetics_collection"
 		}
+		
+		
+		
+		"5819"
+		{
+			"name"		"Unused Invasion Pass"
+			"first_sale_date"	"2015/10/02"
+			"item_class"	"craft_item"
+			"tool"
+			{
+				"type"	"grant_operation_pass"
+				"use_string" "#ActivateItem"
+				"usage"
+				{
+					"operation_pass" "Activated Invasion Pass" 
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
+			"static_attrs"
+			{
+				"is marketable"			"1"
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_T"
+			"item_quality"		"unique"
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"image_inventory"	"backpack/crafting/ticket_invasion"
+			"ad_text"	"#TF_InactiveInvasionPass_AdText"				
+			"item_name"	"#TF_InactiveInvasionPass"
+			"item_description"	"#TF_InactiveInvasionPass_Desc"
+		}
+		"5820"
+		{
+			"name"	"Activated Invasion Pass"
+			"item_class"	"craft_item"		
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_T"
+			"item_name"			"#TF_ActivatedInvasionPass"			
+			"item_description"	"#TF_ActivatedInvasionPass_Desc"	
+			"image_inventory"	"backpack/player/items/crafting/coin_invasion"
+			"model_player"		"models/player/items/crafting/coin_invasion.mdl"
+			"item_quality"		"unique"
+			"is_tool"			"1"
+			"inspect_panel_dist" "10"
+			"collection_reference"		"invasion_master_collection"
+			"static_attrs"
+			{
+				"cannot trade"		"1"
+				"is_operation_pass"	"1"
+				"weapon_allow_inspect"				"1"
+				"cannot restore"					"1"
+				
+				"deactive date"					"1446422400"	
+				"kill eater score type"			"101"	
+				"kill eater score type 2"		"102"	
+				"kill eater score type 3"		"103"	
+				"kill eater user score type 1"	"104"	
+				"kill eater user score type 2"	"105"	
+			}
+			"attributes"
+			{
+			}
+			"mouse_pressed_sound"	"ui/item_metal_scrap_pickup.wav"
+			"drop_sound"		"ui/item_metal_scrap_drop.wav"		
+		}
+		
+		"5821"
+		{
+			"name"	"Invasion Key" 
+			"first_sale_date"	"2015/10/01"
+			"prefab" "eventkey"
+			"item_name"			"#TF_Tool_Invasion2015Key"					
+			"item_description"	"#TF_Tool_Invasion2015Key_Desc"						
+			"ad_text"			"TF_Tool_Invasion2015Key_AdText"
+			"image_inventory"	"backpack/workshop/cases/invasion_case/invasion_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"invasion2015"
+			}
+		}
+		
+		"5822" 
+		{
+			"name"	"Invasion Case 01"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"invasion2015"
+			}
+			"item_name"		"#TF_Invasion2015Case01"
+			"item_description"	"#TF_Invasion2015Case01_Desc"
+			"ad_text"			"#TF_Invasion2015Case01_AdText"
+			"image_inventory"	"backpack/workshop/cases/invasion_case/invasion_case"
+			"model_player"		"models/workshop/cases/invasion_case/invasion_case.mdl"
+			"static_attrs"
+			{
+				"set supply crate series"		"96"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5821"
+				"weapon_allow_inspect"			"1"
+			}
+			"event_desc_footer"			"#Footer_StrangeUnusualWeapon"			
+			"collection_reference"		"Invasion_collection_01_lootlist"
+		}
+		"5823" 
+		{
+			"name"	"Invasion Case 02"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"invasion2015"
+			}
+			"item_name"		"#TF_Invasion2015Case02"
+			"item_description"	"#TF_Invasion2015Case02_Desc"
+			"ad_text"			"#TF_Invasion2015Case02_AdText"
+			"image_inventory"	"backpack/workshop/cases/invasion_case/invasion_case_rare"
+			"model_player"		"models/workshop/cases/invasion_case/invasion_case_rare.mdl"
+			"static_attrs"
+			{
+				"set supply crate series"		"97"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5821"
+				"weapon_allow_inspect"			"1"
+			}
+			"event_desc_footer"			"#Footer_StrangeUnusualWeapon"			
+			"collection_reference"		"Invasion_collection_02_lootlist"
+		}
+		
+		"5824"
+		{
+			"name"	"Invasion Collection Dummy 01"
+			"prefab" "dummy_item"
+			"item_name"	"#Invasion_collection_01"
+			"collection_reference"		"Invasion_collection_01_lootlist"
+			"item_rarity"	"rare"
+		}
+		
+		"5825"
+		{
+			"name"	"Invasion Collection Dummy 02"
+			"prefab" "dummy_item"
+			"item_name"	"#Invasion_collection_02"
+			"collection_reference"		"Invasion_collection_02_lootlist"
+			"item_rarity"	"rare"
+		}
+		
+		
+		
 		
 		
 		"5999"				
@@ -139732,6 +140817,82 @@
 			"item_name"	"#TF_StrangeFilter_CommunityMapSuijin"
 			"item_description"	"#TF_StrangeFilter_CommunityMapSuijin_Desc"
 			"ad_text"			"#TF_MapToken_Suijin_AdText"
+		}
+
+		"6531"
+		{
+			"name"	"Strange Filter: 2Fort Invasion (Community)"
+			"first_sale_date"	"2015/09/28"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"ctf_2fort_invasion"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_2fort"
+			"item_name"	"#TF_StrangeFilter_CommunityMap2FortInv"
+			"item_description"	"#TF_StrangeFilter_CommunityMap2FortInv_Desc"
+			"ad_text"			"#TF_MapToken_2FortInv_AdText"
+		}
+
+		"6532"
+		{
+			"name"	"Strange Filter: Probed (Community)"
+			"first_sale_date"	"2015/09/28"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"koth_probed"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_probed"
+			"item_name"	"#TF_StrangeFilter_CommunityMapProbed"
+			"item_description"	"#TF_StrangeFilter_CommunityMapProbed_Desc"
+			"ad_text"			"#TF_MapToken_Probed_AdText"
+		}
+
+ 		"6533"
+		{
+			"name"	"Strange Filter: Watergate (Community)"
+			"first_sale_date"	"2015/09/28"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"pd_watergate"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_watergate"
+			"item_name"	"#TF_StrangeFilter_CommunityMapWatergate"
+			"item_description"	"#TF_StrangeFilter_CommunityMapWatergate_Desc"
+			"ad_text"			"#TF_MapToken_Watergate_AdText"
+		}
+
+  		"6534"
+		{
+			"name"	"Strange Filter: Byre (Community)"
+			"first_sale_date"	"2015/09/28"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"arena_byre"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_byre"
+			"item_name"	"#TF_StrangeFilter_CommunityMapByre"
+			"item_description"	"#TF_StrangeFilter_CommunityMapByre_Desc"
+			"ad_text"			"#TF_MapToken_Byre_AdText"
 		}
 		
 		"8926"
@@ -147529,6 +148690,13 @@
 			"effect_type"	"neutral"
 			"stored_as_integer"	"1"
 		}
+		"752"
+		{
+			"name"	"is giger counter"
+			"attribute_class"	"is_giger_counter"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
 		
 		
 		"1000"
@@ -150114,49 +151282,20 @@
 			"Righteous Bison Strangifier"		"1"
 			"supply_crate_loot_list_92_weapons_rare_strange"		"1"
 		}	
-		"gunmettle_cosmetics_ancient"
-		{
-			"loot_list_rarity"		"ancient"
-			"Captain Cardbeard Cutthroat"		"1"
-			"Potassium Bonnett"		"1"
-		}
-		"gunmettle_cosmetics_legendary"
-		{
-			"loot_list_rarity"		"legendary"
-			"Bruce's Bonnet"		"1"
-			"El Duderino"		"1"
-			"Sheriff's Stetson"		"1"
-		}
-		"gunmettle_cosmetics_mythical"
-		{
-			"loot_list_rarity"		"mythical"
-			"The Physician's Protector"		"1"
-			"Outta' Sight"		"1"
-			"Fortunate Son"		"1"
-			"White Russian"		"1"
-		}
-		"gunmettle_cosmetics_rare"
-		{
-			"loot_list_rarity"		"rare"
-			"The Rotation Sensation"		"1"
-			"The Vascular Vestment"		"1"
-			"Support Spurs"		"1"
-			"Lurker's Leathers"		"1"
-			"Commissar's Coat"		"1"
-			"Wild West Waistcoat"		"1"
-			"Flak Jack"		"1"
-		}
-		"gunmettle_cosmetics"
-		{
-			"gunmettle_cosmetics_ancient"		"1"
-			"gunmettle_cosmetics_legendary"		"1"
-			"gunmettle_cosmetics_mythical"		"1"
-			"gunmettle_cosmetics_rare"		"1"
-		}		
 		"gunmettle_cosmetic_loot_list_95"
 		{
 			"hide_lootlist"		"1"
-			"gunmettle_cosmetics"		"1"
+			"loot_list_collection"		"GunMettleCosmetics_collection"
+		}
+		"invasion_case01_loot_list_96"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"Invasion_collection_01_lootlist"
+		}
+		"invasion_case02_loot_list_97"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"Invasion_collection_02_lootlist"
 		}
 	}
 	"revolving_loot_lists"
@@ -150251,8 +151390,10 @@
 		"supply_crate_loot_list_91"	"91"	
 		"supply_crate_loot_list_92"	"92"	
 		"concealedkiller_case_loot_list_93"	"93"	
-		"powerhouse_case_loot_list_94"	"94"	
+		"powerhouse_case_loot_list_94"		"94"	
 		"gunmettle_cosmetic_loot_list_95"	"95"	
+		"invasion_case01_loot_list_96"		"96"	
+		"invasion_case02_loot_list_97"		"97"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -159042,616 +160183,680 @@
 	}
 	"attribute_controlled_attached_particles"
 	{
-		"1"
+		"other_particles"
 		{
-			"system"			"burningplayer_red"
+			"1"
+			{
+				"system"			"burningplayer_red"
+			}
+			"2"
+			{
+				"system"			"burningplayer_flyingbits"
+			}
+			"3"
+			{
+				"system"			"particle_nemesis_burst_blue"
+				"attachment"			"muzzle1"
+			}
+			"4"
+			{
+				"system"			"community_sparkle"
+			}
+			"5"
+			{
+				"system"			"halopoint"
+				"attachment"			"halopoint1"
+			}
 		}
-		"2"
+		
+		"cosmetic_unusual_effects"
 		{
-			"system"			"burningplayer_flyingbits"
-		}
-		"3"
-		{
-			"system"			"particle_nemesis_burst_blue"
-			"attachment"			"muzzle1"
-		}
-		"4"
-		{
-			"system"			"community_sparkle"
-		}
-		"5"
-		{
-			"system"			"halopoint"
-			"attachment"			"halopoint1"
-		}
-		"6"
-		{
-			"system"			"superrare_confetti_green"	
-		}
-		"7"
-		{
-			"system"			"superrare_confetti_purple"
-		}
-		"8"
-		{
-			"system"			"superrare_ghosts"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"9"
-		{
-			"system"			"superrare_greenenergy"
-			"attach_to_rootbone"	"1"
-		}
-		"10"
-		{
-			"system"			"superrare_purpleenergy"
-			"attach_to_rootbone"	"1"
-		}
-		"11"
-		{
-			"system"			"superrare_circling_tf"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"12"
-		{
-			"system"			"superrare_flies"
-			"attach_to_rootbone"	"1"
-		}
+			"6"
+			{
+				"system"			"superrare_confetti_green"	
+			}
+			"7"
+			{
+				"system"			"superrare_confetti_purple"
+			}
+			"8"
+			{
+				"system"			"superrare_ghosts"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"9"
+			{
+				"system"			"superrare_greenenergy"
+				"attach_to_rootbone"	"1"
+			}
+			"10"
+			{
+				"system"			"superrare_purpleenergy"
+				"attach_to_rootbone"	"1"
+			}
+			"11"
+			{
+				"system"			"superrare_circling_tf"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"12"
+			{
+				"system"			"superrare_flies"
+				"attach_to_rootbone"	"1"
+			}
 
-		"13"
-		{
-			"system"			"superrare_burning1"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"14"
-		{
-			"system"			"superrare_burning2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
+			"13"
+			{
+				"system"			"superrare_burning1"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"14"
+			{
+				"system"			"superrare_burning2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
 
-		"15"
-		{
-			"system"			"superrare_plasma1"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"16"
-		{
-			"system"			"superrare_plasma2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"17"
-		{
-			"system"			"superrare_beams1"
-			"attach_to_rootbone"	"1"
-		}
-		"18"
-		{
-			"system"			"superrare_circling_peacesign"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"19"
-		{
-			"system"			"superrare_circling_heart"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"20"
-		{
-			"system"			"stamp_spin"
-			"attach_to_rootbone"	"1"
-		}
-		"28"
-		{
-			"system"				"drg_pipe_smoke"
-			"attach_to_rootbone"	"0"
-			"attachment"			"cig_drg_smoke"
-		}
+			"15"
+			{
+				"system"			"superrare_plasma1"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"16"
+			{
+				"system"			"superrare_plasma2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"17"
+			{
+				"system"			"superrare_beams1"
+				"attach_to_rootbone"	"1"
+			}
+			"18"
+			{
+				"system"			"superrare_circling_peacesign"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"19"
+			{
+				"system"			"superrare_circling_heart"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"20"
+			{
+				"system"			"stamp_spin"
+				"attach_to_rootbone"	"1"
+			}
+			"28"
+			{
+				"system"				"drg_pipe_smoke"
+				"attach_to_rootbone"	"0"
+				"attachment"			"cig_drg_smoke"
+			}
 
-		"29"
-		{
-			"system"			"unusual_storm"
-			"attach_to_rootbone"	"1"
-		}
-		"30"
-		{
-			"system"			"unusual_blizzard"
-			"attach_to_rootbone"	"1"
-		}
-		"31"
-		{
-			"system"			"unusual_orbit_nutsnbolts"
-			"attach_to_rootbone"	"1"
-		}
-		"32"
-		{
-			"system"			"unusual_orbit_planets"
-			"attach_to_rootbone"	"1"
-		}
-		"33"
-		{
-			"system"			"unusual_orbit_fire"
-			"attach_to_rootbone"	"1"
-		}
-		"34"
-		{
-			"system"			"unusual_bubbles"
-			"attach_to_rootbone"	"1"
-		}
-		"35"
-		{
-			"system"			"unusual_smoking"
-			"attach_to_rootbone"	"1"
-		}
-		"36"
-		{
-			"system"			"unusual_steaming"
-			"attach_to_rootbone"	"1"
-		}
-		
-		
-		"37"
-		{
-			"system"			"unusual_orbit_jack_flaming"
-			"attach_to_rootbone"	"1"
-		}
-		"38"
-		{
-			"system"			"unusual_fullmoon_cloudy"
-			"attach_to_rootbone"	"1"
-		}
-		"39"
-		{
-			"system"			"unusual_bubbles_green"
-			"attach_to_rootbone"	"1"
-		}
-		"40"
-		{
-			"system"			"unusual_orbit_fire_dark"
-			"attach_to_rootbone"	"1"
-		}
-		
-		
-
-		"43"
-		{
-			"system"			"unusual_storm_knives" 
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"44"
-		{
-			"system"			"unusual_skull_misty"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"45"
-		{
-			"system"			"unusual_fullmoon_cloudy_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"46"
-		{
-			"system"			"unusual_fullmoon_cloudy_secret"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle"
-		}
-		"47"
-		{
-			"system"			"unusual_storm_spooky"
-			"attach_to_rootbone"	"1"
-			"attachment"		"muzzle" 
-		}
-		
-		"55"
-		{
-			"system"			"unusual_orbit_cards_teamcolor_blue"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		
-		"56"
-		{
-			"system"			"unusual_zap_yellow"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"57"
-		{
-			"system"			"unusual_zap_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"58"
-		{
-			"system"			"unusual_hearts_bubbling" 
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"59"
-		{
-			"system"			"unusual_orbit_cards_teamcolor_red"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"60"
-		{
-			"system"			"unusual_orbit_cash"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"61"
-		{
-			"system"			"unusual_crisp_spotlights"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"62"
-		{
-			"system"			"unusual_spotlights"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		
-		"63"
-		{
-			"system"			"unusual_robot_holo_glow_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"64"
-		{
-			"system"			"unusual_robot_holo_glow_orange"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"65"
-		{
-			"system"			"unusual_robot_orbit_binary"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"66"
-		{
-			"system"			"unusual_robot_orbit_binary2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"67"
-		{
-			"system"			"unusual_robot_orbiting_sparks"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"68"
-		{
-			"system"			"unusual_robot_orbiting_sparks2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"69"
-		{
-			"system"			"unusual_robot_radioactive"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"70"
-		{
-			"system"			"unusual_robot_time_warp"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"71"
-		{
-			"system"			"unusual_robot_time_warp2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"72"
-		{
-			"system"			"unusual_robot_radioactive2"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		
-		"73"
-		{
-			"system"			"unusual_spellbook_circle_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"74"
-		{
-			"system"			"unusual_spellbook_circle_purple"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"75"
-		{
-			"system"			"unusual_bats_flaming_proxy_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"76"
-		{
-			"system"			"unusual_bats_flaming_proxy_purple"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"77"
-		{
-			"system"			"unusual_bats_flaming_proxy_orange"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"78"
-		{
-			"system"			"unusual_meteor_shower_parent_orange"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"79"
-		{
-			"system"			"unusual_meteor_shower_parent_purple"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"80"
-		{
-			"system"			"unusual_meteor_shower_parent_green"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-
-		"81"
-		{
-			"system"			"unusual_tentmonster_purple_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"82"
-		{
-			"system"			"unusual_eyes_purple_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"83"
-		{
-			"system"			"unusual_eyes_orange_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"84"
-		{
-			"system"			"unusual_eyes_green_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"85"
-		{
-			"system"			"unusual_souls_purple_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"86"
-		{
-			"system"			"unusual_souls_green_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		
-		"87"
-		{
-			"system"			"unusual_eotl_frostbite"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"88"
-		{
-			"system"			"unusual_eotl_oribiting_burning_duck_parent"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"89"
-		{
-			"system"			"unusual_eotl_sunrise"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		"90"
-		{
-			"system"			"unusual_eotl_sunset"
-			"attach_to_rootbone"	"1"
-			"attachment"		"unusual"
-		}
-		
-		
-		"701"
-		{
-			"system"				"weapon_unusual_hot"
-			"draw_in_viewmodel"		"1"
-			"use_suffix_name"		"1"
-			"has_viewmodel_specific_effect"		"1"
+			"29"
+			{
+				"system"			"unusual_storm"
+				"attach_to_rootbone"	"1"
+			}
+			"30"
+			{
+				"system"			"unusual_blizzard"
+				"attach_to_rootbone"	"1"
+			}
+			"31"
+			{
+				"system"			"unusual_orbit_nutsnbolts"
+				"attach_to_rootbone"	"1"
+			}
+			"32"
+			{
+				"system"			"unusual_orbit_planets"
+				"attach_to_rootbone"	"1"
+			}
+			"33"
+			{
+				"system"			"unusual_orbit_fire"
+				"attach_to_rootbone"	"1"
+			}
+			"34"
+			{
+				"system"			"unusual_bubbles"
+				"attach_to_rootbone"	"1"
+			}
+			"35"
+			{
+				"system"			"unusual_smoking"
+				"attach_to_rootbone"	"1"
+			}
+			"36"
+			{
+				"system"			"unusual_steaming"
+				"attach_to_rootbone"	"1"
+			}
 			
-			"attachment"			"unusual_0"
-			"control_point_1"		"unusual_1"
-			"control_point_2"		"unusual_2"
-			"control_point_3"		"unusual_3"
-			"control_point_4"		"unusual_4"
-			"control_point_5"		"unusual_5"
-		}
-		"702"
-		{
-			"system"				"weapon_unusual_isotope"
-			"draw_in_viewmodel"		"1"
-			"use_suffix_name"		"1"
-			"has_viewmodel_specific_effect"		"1"
 			
-			"attachment"			"unusual_0"
-			"control_point_1"		"unusual_1"
-			"control_point_2"		"unusual_2"
-			"control_point_3"		"unusual_3"
-			"control_point_4"		"unusual_4"
-			"control_point_5"		"unusual_5"
-		}
-		"703"
-		{
-			"system"				"weapon_unusual_cool"
-			"draw_in_viewmodel"		"1"
-			"use_suffix_name"		"1"
-			"has_viewmodel_specific_effect"		"1"
+			"37"
+			{
+				"system"			"unusual_orbit_jack_flaming"
+				"attach_to_rootbone"	"1"
+			}
+			"38"
+			{
+				"system"			"unusual_fullmoon_cloudy"
+				"attach_to_rootbone"	"1"
+			}
+			"39"
+			{
+				"system"			"unusual_bubbles_green"
+				"attach_to_rootbone"	"1"
+			}
+			"40"
+			{
+				"system"			"unusual_orbit_fire_dark"
+				"attach_to_rootbone"	"1"
+			}
 			
-			"attachment"			"unusual_0"
-			"control_point_1"		"unusual_1"
-			"control_point_2"		"unusual_2"
-			"control_point_3"		"unusual_3"
-			"control_point_4"		"unusual_4"
-			"control_point_5"		"unusual_5"
-		}
-		"704"
-		{
-			"system"				"weapon_unusual_energyorb"
-			"draw_in_viewmodel"		"1"
-			"use_suffix_name"		"1"
-			"has_viewmodel_specific_effect"		"1"
+
+			"43"
+			{
+				"system"			"unusual_storm_knives" 
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"44"
+			{
+				"system"			"unusual_skull_misty"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"45"
+			{
+				"system"			"unusual_fullmoon_cloudy_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"46"
+			{
+				"system"			"unusual_fullmoon_cloudy_secret"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle"
+			}
+			"47"
+			{
+				"system"			"unusual_storm_spooky"
+				"attach_to_rootbone"	"1"
+				"attachment"		"muzzle" 
+			}
 			
-			"attachment"			"unusual_0"
-			"control_point_1"		"unusual_1"
-			"control_point_2"		"unusual_2"
-			"control_point_3"		"unusual_3"
-			"control_point_4"		"unusual_4"
-			"control_point_5"		"unusual_5"
+			"55"
+			{
+				"system"			"unusual_orbit_cards_teamcolor_blue"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			
+			"56"
+			{
+				"system"			"unusual_zap_yellow"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"57"
+			{
+				"system"			"unusual_zap_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"58"
+			{
+				"system"			"unusual_hearts_bubbling" 
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"59"
+			{
+				"system"			"unusual_orbit_cards_teamcolor_red"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"60"
+			{
+				"system"			"unusual_orbit_cash"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"61"
+			{
+				"system"			"unusual_crisp_spotlights"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"62"
+			{
+				"system"			"unusual_spotlights"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			
+			"63"
+			{
+				"system"			"unusual_robot_holo_glow_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"64"
+			{
+				"system"			"unusual_robot_holo_glow_orange"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"65"
+			{
+				"system"			"unusual_robot_orbit_binary"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"66"
+			{
+				"system"			"unusual_robot_orbit_binary2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"67"
+			{
+				"system"			"unusual_robot_orbiting_sparks"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"68"
+			{
+				"system"			"unusual_robot_orbiting_sparks2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"69"
+			{
+				"system"			"unusual_robot_radioactive"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"70"
+			{
+				"system"			"unusual_robot_time_warp"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"71"
+			{
+				"system"			"unusual_robot_time_warp2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"72"
+			{
+				"system"			"unusual_robot_radioactive2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			
+			"73"
+			{
+				"system"			"unusual_spellbook_circle_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"74"
+			{
+				"system"			"unusual_spellbook_circle_purple"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"75"
+			{
+				"system"			"unusual_bats_flaming_proxy_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"76"
+			{
+				"system"			"unusual_bats_flaming_proxy_purple"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"77"
+			{
+				"system"			"unusual_bats_flaming_proxy_orange"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"78"
+			{
+				"system"			"unusual_meteor_shower_parent_orange"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"79"
+			{
+				"system"			"unusual_meteor_shower_parent_purple"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"80"
+			{
+				"system"			"unusual_meteor_shower_parent_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+
+			"81"
+			{
+				"system"			"unusual_tentmonster_purple_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"82"
+			{
+				"system"			"unusual_eyes_purple_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"83"
+			{
+				"system"			"unusual_eyes_orange_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"84"
+			{
+				"system"			"unusual_eyes_green_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"85"
+			{
+				"system"			"unusual_souls_purple_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"86"
+			{
+				"system"			"unusual_souls_green_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			
+			"87"
+			{
+				"system"			"unusual_eotl_frostbite"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"88"
+			{
+				"system"			"unusual_eotl_oribiting_burning_duck_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"89"
+			{
+				"system"			"unusual_eotl_sunrise"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"90"
+			{
+				"system"			"unusual_eotl_sunset"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			
+			"91"
+			{
+				"system"			"unusual_invasion_abduction"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"92"
+			{
+				"system"			"unusual_invasion_atomic"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"93"
+			{
+				"system"			"unusual_invasion_atomic_green"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"94"
+			{
+				"system"			"unusual_invasion_boogaloop"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"95"
+			{
+				"system"			"unusual_invasion_boogaloop_2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"96"
+			{
+				"system"			"unusual_invasion_boogaloop_3"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"97"
+			{
+				"system"			"unusual_invasion_codex"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"98"
+			{
+				"system"			"unusual_invasion_codex_2"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"99"
+			{
+				"system"			"unusual_invasion_nebula"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+		}
+		
+		"weapon_unusual_effects"
+		{
+			"701"
+			{
+				"system"				"weapon_unusual_hot"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				"has_viewmodel_specific_effect"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"702"
+			{
+				"system"				"weapon_unusual_isotope"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				"has_viewmodel_specific_effect"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"703"
+			{
+				"system"				"weapon_unusual_cool"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				"has_viewmodel_specific_effect"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"704"
+			{
+				"system"				"weapon_unusual_energyorb"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				"has_viewmodel_specific_effect"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
 		}
 		
 		
-		
-		
-		
-		
-		
-		"2001"
+		"killstreak_eyeglows"
 		{
-			"system"			"killstreak_eyeglow_1_teamcolor_red"
-		}
-		"22001"
-		{
-			"system"			"killstreak_eyeglow_4_teamcolor_red"
-		}
-		"2002"
-		{
-			"system"			"killstreak_t1_lvl1"
-		}
-		"22002"
-		{
-			"system"			"killstreak_t1_lvl2"
-		}
-		"2003"
-		{
-			"system"			"killstreak_t2_lvl1"
-		}
-		"22003"
-		{
-			"system"			"killstreak_t2_lvl2"
-		}
-		"2004"
-		{
-			"system"			"killstreak_t3_lvl1"
-		}
-		"22004"
-		{
-			"system"			"killstreak_t3_lvl2"
-		}
-		"2005"
-		{
-			"system"			"killstreak_t4_lvl1"
-		}
-		"22005"
-		{
-			"system"			"killstreak_t4_lvl2"
-		}
-		"2006"
-		{
-			"system"			"killstreak_t5_lvl1"
-		}
-		"22006"
-		{
-			"system"			"killstreak_t5_lvl2"
-		}
-		"2007"
-		{
-			"system"			"killstreak_t6_lvl1"
-		}
-		"22007"
-		{
-			"system"			"killstreak_t6_lvl2"
-		}
-		"2008"
-		{
-			"system"			"killstreak_t7_lvl1"
-		}
-		"22008"
-		{
-			"system"			"killstreak_t7_lvl2"
+			"2001"
+			{
+				"system"			"killstreak_eyeglow_1_teamcolor_red"
+			}
+			"22001"
+			{
+				"system"			"killstreak_eyeglow_4_teamcolor_red"
+			}
+			"2002"
+			{
+				"system"			"killstreak_t1_lvl1"
+			}
+			"22002"
+			{
+				"system"			"killstreak_t1_lvl2"
+			}
+			"2003"
+			{
+				"system"			"killstreak_t2_lvl1"
+			}
+			"22003"
+			{
+				"system"			"killstreak_t2_lvl2"
+			}
+			"2004"
+			{
+				"system"			"killstreak_t3_lvl1"
+			}
+			"22004"
+			{
+				"system"			"killstreak_t3_lvl2"
+			}
+			"2005"
+			{
+				"system"			"killstreak_t4_lvl1"
+			}
+			"22005"
+			{
+				"system"			"killstreak_t4_lvl2"
+			}
+			"2006"
+			{
+				"system"			"killstreak_t5_lvl1"
+			}
+			"22006"
+			{
+				"system"			"killstreak_t5_lvl2"
+			}
+			"2007"
+			{
+				"system"			"killstreak_t6_lvl1"
+			}
+			"22007"
+			{
+				"system"			"killstreak_t6_lvl2"
+			}
+			"2008"
+			{
+				"system"			"killstreak_t7_lvl1"
+			}
+			"22008"
+			{
+				"system"			"killstreak_t7_lvl2"
+			}
 		}
 		
-		"3001"
+		"taunt_unusual_effects"
 		{
-			"system"			"utaunt_firework_teamcolor_red"
-			"refire_time"		"2.6"
-		}		
-		"3002"
-		{
-			"system"			"utaunt_firework_teamcolor_blue"
-			"refire_time"		"2.6"
-		}		
-		"3003"
-		{
-			"system"			"utaunt_beams_yellow"
-		}		
-		"3004"
-		{
-			"system"			"utaunt_disco_party"
-		}		
-		"3005"
-		{
-			"system"			"utaunt_hearts_glow_parent"
-		}		
-		"3006"
-		{
-			"system"			"utaunt_meteor_parent"
-		}		
-		"3007"
-		{
-			"system"			"utaunt_cash_confetti"
-		}				
-		"3008"
-		{
-			"system"			"utaunt_tornado_parent_black"
-		}				
-		"3009"
-		{
-			"system"			"utaunt_tornado_parent_white"
-		}			
-		"3010"
-		{
-			"system"			"utaunt_lightning_parent"
-			"refire_time"		"0.9"
-		}	
-		"3011"
-		{
-			"system"			"utaunt_souls_green_parent"
-		}				
-		"3012"
-		{
-			"system"			"utaunt_souls_purple_parent"
-		}				
+			"3001"
+			{
+				"system"			"utaunt_firework_teamcolor_red"
+				"refire_time"		"2.6"
+			}		
+			"3002"
+			{
+				"system"			"utaunt_firework_teamcolor_blue"
+				"refire_time"		"2.6"
+			}		
+			"3003"
+			{
+				"system"			"utaunt_beams_yellow"
+			}		
+			"3004"
+			{
+				"system"			"utaunt_disco_party"
+			}		
+			"3005"
+			{
+				"system"			"utaunt_hearts_glow_parent"
+			}		
+			"3006"
+			{
+				"system"			"utaunt_meteor_parent"
+			}		
+			"3007"
+			{
+				"system"			"utaunt_cash_confetti"
+			}				
+			"3008"
+			{
+				"system"			"utaunt_tornado_parent_black"
+			}				
+			"3009"
+			{
+				"system"			"utaunt_tornado_parent_white"
+			}			
+			"3010"
+			{
+				"system"			"utaunt_lightning_parent"
+				"refire_time"		"0.9"
+			}	
+			"3011"
+			{
+				"system"			"utaunt_souls_green_parent"
+			}				
+			"3012"
+			{
+				"system"			"utaunt_souls_purple_parent"
+			}	
+		}
 	}
 	"armory_data"
 	{
@@ -160952,6 +162157,31 @@
 		{
 			"type_name"			"KillEaterEvent_CosmeticOperationBonusObjectives"
 		}
+		"100"
+		{
+			"type_name"			"KillEaterEvent_TauntsPerformed"
+		}
+		"101"
+		{
+			"type_name"			"KillEaterEvent_InvasionKills"
+		}
+		"102"
+		{
+			"type_name"			"KillEaterEvent_InvasionKillsOnMap01"
+		}
+		"103"
+		{
+			"type_name"			"KillEaterEvent_InvasionKillsOnMap02"
+		}
+		"104"
+		{
+			"type_name"			"KillEaterEvent_InvasionKillsOnMap03"
+		}
+		"105"
+		{
+			"type_name"			"KillEaterEvent_InvasionKillsOnMap04"
+		}
+		
 
 
 	}
@@ -161263,7 +162493,6 @@
 			"tour_complete_loot_list"		"mvm_victory_badge_leveled_advanced3"
 			"difficulty"					"advanced"
 			"loot_image"				"pve/mvm_loot_image_shield"
-			"is_new"					"1"
 
 			"missions"
 			{
@@ -161350,6 +162579,14 @@
 				"maptoken"				"Map Token Gullywash"
 				"authors"				"#cp_gullywash_final1_authors"
 				"quickplay_type"		"disabled"
+			}
+			"8"
+			{
+				"name"					"cp_snowplow"
+				"localizedname"			"#TF_Map_Snowplow"
+				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+				"maptoken"				"Map Token Snowplow"
+				"authors"				"#cp_snowplow_authors"
 			}
 		}
 		"ctf"
@@ -161496,6 +162733,16 @@
 				"maptoken"				"Map Token Snakewater"
 				"authors"				"#cp_snakewater_final1_authors"
 			}
+			"13"
+			{
+				"name"					"cp_powerhouse"
+				"localizedname"			"#TF_Map_cp_powerhouse"
+				"quickplay_type"		"all_users"
+				"tags"
+				{
+					"map_has_deep_water"			"1"
+				}
+			}
 		}
 		"koth"
 		{
@@ -161550,6 +162797,14 @@
 				"strangeprefixtoken"	"#TF_KongKing_StrangePrefix"
 				"maptoken"				"Map Token Kong King"
 				"authors"				"#koth_king_authors"
+			}
+			"7"
+			{
+				"name"					"koth_suijin"
+				"localizedname"			"#TF_Map_Suijin"
+				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
+				"maptoken"				"Map Token Suijin"
+				"authors"				"#koth_suijin_authors"
 			}
 		}
 		"payload"
@@ -161607,6 +162862,14 @@
 				{
 					"beta"				"1"
 				}
+			}
+			"8"
+			{
+				"name"					"pl_borneo"
+				"localizedname"			"#TF_Map_Borneo"
+				"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
+				"maptoken"				"Map Token Borneo"
+				"authors"				"#pl_borneo_authors"
 			}
 		}
 		"payload_race"
@@ -161821,35 +163084,35 @@
 			"0"
 			{
 				"name"					"cp_snowplow"
-				"localizedname"			"#TF_Map_cp_snowplow"
+				"localizedname"			"#TF_Map_Snowplow"
 				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
 				"maptoken"				"Map Token Snowplow"
 				"authors"				"#cp_snowplow_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 			}
  			"1"
 			{
 				"name"					"pl_borneo"
-				"localizedname"			"#TF_Map_pl_borneo"
+				"localizedname"			"#TF_Map_Borneo"
 				"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
 				"maptoken"				"Map Token Borneo"
 				"authors"				"#pl_borneo_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 			}
   			"2"
 			{
 				"name"					"koth_suijin"
-				"localizedname"			"#TF_Map_koth_suijin"
+				"localizedname"			"#TF_Map_Suijin"
 				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
 				"maptoken"				"Map Token Suijin"
 				"authors"				"#koth_suijin_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 			}
 			"3"
 			{
 				"name"					"cp_powerhouse"
 				"localizedname"			"#TF_Map_cp_powerhouse"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 				"tags"
 				{
 					"map_has_deep_water"			"1"
@@ -161876,6 +163139,46 @@
 				{
 					"beta"				"1"
 				}
+			}
+		}
+
+		"community_update"
+		{
+			"0"
+			{
+				"name"					"ctf_2fort_invasion"
+				"localizedname"			"#TF_Map_2FortInv"
+				"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
+				"maptoken"				"Map Token 2Fort Invasion"
+				"authors"				"#ctf_2fort_invasion_authors"
+				"quickplay_type"		"all_users"
+			}
+ 			"1"
+			{
+				"name"					"pd_watergate"
+				"localizedname"			"#TF_Map_Watergate"
+				"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
+				"maptoken"				"Map Token Watergate"
+				"authors"				"#pd_watergate_authors"
+				"quickplay_type"		"advanced_only"
+			}
+  			"2"
+			{
+				"name"					"arena_byre"
+				"localizedname"			"#TF_Map_Byre"
+				"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
+				"maptoken"				"Map Token Byre"
+				"authors"				"#arena_byre_authors"
+				"quickplay_type"		"all_users"
+			}
+			"3"
+			{
+				"name"					"koth_probed"
+				"localizedname"			"#TF_Map_Probed"
+				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+				"maptoken"				"Map Token Probed"
+				"authors"				"#koth_probed_authors"
+				"quickplay_type"		"all_users"
 			}
 		}
 	}
