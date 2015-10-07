@@ -87,7 +87,7 @@ CVideoWatch.prototype.UnlockH264 = function()
 	}
 
 	window.open( 'steam://unlockh264/' );
-	this.SetVideoLoadingText( 'Updating Steam... One Moment Please.' );
+	this.SetVideoLoadingText( 'Initializing Video Decoder...' );
 	this.WaitUnlockH264( Date.now() );
 }
 
@@ -99,9 +99,9 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 		return;
 	}
 
-	if ( Date.now() - rtStart > 30000 )
+	if ( Date.now() - rtStart > 3000 )
 	{
-		this.ShowVideoError( 'Failed to apply a Steam update that is required to watch this video.<br><br>Please ensure your Steam client is connected to Steam and try again.' );
+		this.ShowVideoError( 'The video player failed to initialize the video decoder correctly.<br><br>Press the Home controller button to exit the video and try again.' );
 		return;
 	}
 

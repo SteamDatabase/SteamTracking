@@ -247,12 +247,12 @@ body
 
 .loading_text.tenfoot
 {
-	font-size: 36px;
+	font-size: 40px;
 }
 
 .loading_text.tenfoot.error
 {
-	font-size: 66px;
+	font-size: 40px;
 	margin-top: 200px;
 }
 
