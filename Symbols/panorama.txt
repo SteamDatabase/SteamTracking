@@ -3301,6 +3301,8 @@
  SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+ SteamThreadTools::CThreadSemaphore::Release(long)
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()

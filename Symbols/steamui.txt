@@ -14698,7 +14698,6 @@
  R k_rgchSSAFileTemplate
  R k_rgchSSAFileTemplateNexon
  R k_rgchSSAFileTemplatePerfectWorld
- R panorama::CHTML::s_fScrollDeadzoneScale
  R silk_CB_lags_stage2
  R silk_CB_lags_stage2_10_ms
  R silk_CB_lags_stage3
@@ -45524,9 +45523,9 @@
  T panorama::CHTML::PchGetText() const
  T panorama::CHTML::PostURL(char const*, char const*)
  T panorama::CHTML::PressButton(panorama::KeyCode, wchar_t)
- T panorama::CHTML::ProcessAnalogScroll(float, float, double, float)
+ T panorama::CHTML::ProcessAnalogScroll(float, float, float)
  T panorama::CHTML::ProcessAnalogScrollAxis(float, float, double, void (panorama::CHTML::*)(float, bool))
- T panorama::CHTML::ProcessAnalogZoom(float, float, double, float)
+ T panorama::CHTML::ProcessAnalogZoom(float, float, float)
  T panorama::CHTML::ProcessRawScroll(bool)
  T panorama::CHTML::ProcessRawZoom(float)
  T panorama::CHTML::PwchGetText() const
@@ -56297,8 +56296,6 @@
  b panorama::CHTML::BSetProperty(panorama::CPanoramaSymbol, char const*)::embeddedSymbol
  b panorama::CHTML::BSetProperty(panorama::CPanoramaSymbol, char const*)::htmlScrollingSymbol
  b panorama::CHTML::BSetProperty(panorama::CPanoramaSymbol, char const*)::imgSymbol
- b panorama::CHTML::OnGamePadAnalogImpl(panorama::GamePadData_t const&, bool*)::flLastTimeScroll
- b panorama::CHTML::OnGamePadAnalogImpl(panorama::GamePadData_t const&, bool*)::flLastTimeZoom
  b panorama::CHTMLSimpleNavigationWrapper::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symWrappedHTMLID
  b panorama::CImagePanel::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)::k_symAnimate
  b panorama::CImagePanel::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)::k_symDefaultSource
