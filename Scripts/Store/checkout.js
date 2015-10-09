@@ -3501,6 +3501,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'AliPay';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'unionpay' && providerPaymentMethod == 78 )
+			{
+				$('payment_method_review_text').innerHTML = 'UnionPay';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 			else if ( method.value == 'yandex' && providerPaymentMethod == 12 )
 			{
 				$('payment_method_review_text').innerHTML = 'Yandex';

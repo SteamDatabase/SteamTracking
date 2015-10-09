@@ -150,6 +150,8 @@ CVideoWatch.prototype.Start = function()
    	this.m_playerUI.Init();
 
    	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
+	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeTenFoot )
+		$J( '.dash_player_playback_stats' ).addClass( 'tenfoot' );
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
@@ -160,6 +162,7 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
 	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video...' ); } );
+	$J( this.m_elVideoPlayer ).on( 'togglestats.VideoWatchEvents', function() { _watch.ToggleStats(); } );
 
 	this.GetVideoDetails();
 }
