@@ -51192,6 +51192,7 @@
 		"quest_prefab_1st_operation_pauling"
 		{
 			"prefab"		"dynamic_quest_base"
+			"expiration_date"	"2015-10-12 23:59:59" 
 		}
 
 		"dynamic_quest_base"
@@ -109787,6 +109788,7 @@
 			"item_description"		"#TF_invasion_bat_Desc"
 			"item_logname"		"batsaber"
 			"item_iconname"		"batsaber"
+			"item_quality"	"unique"
 			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_bat/c_invasion_bat"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -161802,6 +161804,13 @@
 				"score"		"3000"
 			}                  
 		}
+		"KillEater_InvasionRank"
+		{
+			"0"               
+			{                 
+				"score"		"999999999"
+			} 
+		}
 		
 
 
@@ -162168,22 +162177,27 @@
 		"101"
 		{
 			"type_name"			"KillEaterEvent_InvasionKills"
+			"level_data"		"KillEater_InvasionRank"
 		}
 		"102"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap01"
+			"level_data"		"KillEater_InvasionRank"
 		}
 		"103"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap02"
+			"level_data"		"KillEater_InvasionRank"
 		}
 		"104"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap03"
+			"level_data"		"KillEater_InvasionRank"
 		}
 		"105"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap04"
+			"level_data"		"KillEater_InvasionRank"
 		}
 		
 
