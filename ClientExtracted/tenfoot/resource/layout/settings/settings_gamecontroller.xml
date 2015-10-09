@@ -11,10 +11,6 @@
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
 
-				<Button id="SteamControllerSupportButton" class="Button" onactivate="ShowSettings( SteamControllerSupport );">
-					<Label class="LongDesc" text="Support Panel" />
-				</Button>
-
 				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown">
 					<Label class="SettingsLabel" text="#SettingsController_ShutdowntimeHeader" />
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			

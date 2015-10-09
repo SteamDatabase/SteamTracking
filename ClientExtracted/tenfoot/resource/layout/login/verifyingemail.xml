@@ -5,12 +5,13 @@
 	</styles>
 
 	<VerifyingEmailWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#VerifyEmail_Verifying_Title" />
-		<Label class="WizardChildDescription" text="#VerifyEmail_Verifying_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#VerifyEmail_Verifying_Description" />
 
-		<Panel id="ThrobberContainer">
-			<Panel class="Throbber" />
-		</Panel>
+		  <Panel id="ThrobberContainer">
+		    <LoadingThrobber id="Throbber" />
+      </Panel>
+    </Panel>
 
 	</VerifyingEmailWizardChild>
 

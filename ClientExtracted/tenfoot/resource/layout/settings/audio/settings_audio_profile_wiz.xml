@@ -7,19 +7,16 @@
 	</styles>
 
 	<SettingsPanelAudio_Profile class="WizardChild" defaultfocus="Profile" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#SettingsAudio_Profile" />
+		<Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsAudio_Profile_Information" />
+		  <Panel class="Spacer"/>
 
-
-		<Label class="SettingsCallout LongDesc" text="#SettingsAudio_Profile_Information" />
-		<Panel class="Spacer"/>
-
-		<Panel class="FlowDown" tabindex="auto" selectionpos="auto">
-			<Label class="SettingsCallout LongDesc" text="#SettingsAudio_Profile_ToDo" />
-			<Panel class="Spacer"/>
-			<DropDown class="AudioDropDown_Wiz" id="Profile" />
-		</Panel>
-
+		  <Panel class="FlowDown" tabindex="auto" selectionpos="auto">
+			  <Label class="SettingsCallout LongDesc" text="#SettingsAudio_Profile_ToDo" />
+			  <Panel class="Spacer"/>
+			  <DropDown class="AudioDropDown_Wiz" id="Profile" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

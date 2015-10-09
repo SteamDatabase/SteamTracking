@@ -5,12 +5,13 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonTryAgain">
-		<Label class="WizardChildTitle" text="#VerifyEmail_Fail_Title" />
-		<Label class="WizardChildDescription" text="#VerifyEmail_Fail_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#VerifyEmail_Fail_Description" />
 
-		<Panel id="ErrorContainer">
-			<Label class="WizardChildDescription" id="ErrorLabel" />
-		</Panel>
+		  <Panel id="ErrorContainer">
+			  <Label class="WizardChildDescription" id="ErrorLabel" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonTryAgain" onactivate="VerifyEmailFail()">

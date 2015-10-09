@@ -11,17 +11,17 @@
 			<!-- main panel -->
 
 
-			<Panel id="ChooseFeaturesPanel">
-				<Panel class="SettingsBody">
+			<Panel id="ChooseFeaturesPanel" class="BackFamilyGroundImage">
+				<Panel id="Instructions">
 					<Label text="#Parental_Choose_Features" />
 				</Panel>
 				<Panel class="Spacer" />
-				<Label class="SettingsValue" text="#Parental_Library_Features" />	
+				<Label class="SettingsCallout" text="#Parental_Library_Features" />	
 				<Panel id="LibraryRadioPanel">
 					<RadioButton group="Library" id="NoLibrary" class="Button RadioButton" text="#Parental_No_Library" onactivate="ParentalAllowAllGames( false )" />
 					<RadioButton group="Library" id="AllLibrary" class="Button RadioButton" text="#Parental_All_Library" onactivate="ParentalAllowAllGames( true )"/>
 				</Panel>
-				<Label class="SettingsValue" text="#Parental_Web_Features" />	
+				<Label class="SettingsCallout" text="#Parental_Web_Features" />	
 				<ToggleButton id="Store" class="CheckBox" text="#Parental_All_Store" onactivate="ParentalCheckBoxSelected()" />
 				<ToggleButton id="Community" class="CheckBox" text="#Parental_All_Community" onactivate="ParentalCheckBoxSelected()" />
 				<ToggleButton id="Friends" class="CheckBox" text="#Parental_All_Friends" onactivate="ParentalCheckBoxSelected()" />

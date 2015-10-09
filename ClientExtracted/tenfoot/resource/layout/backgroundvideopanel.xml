@@ -9,6 +9,6 @@
 		<Panel id="BackgroundMovie" />
 		<LoadingThrobber id="BackgroundThrobber" class="Large"/>		
     
-		<ContentFrame id="ContentFrame" />
+		<ContentFrame id="ContentFrame" class="NotMainMenuContentFrame" />
 	</BackgroundVideoPanel>
 </root>

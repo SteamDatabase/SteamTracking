@@ -121,6 +121,7 @@
  B CMsgSavePageToJPEGResponse::default_instance_
  B CMsgScalePageToValue::default_instance_
  B CMsgScalePageToValueResponse::default_instance_
+ B CMsgScreenDPI::default_instance_
  B CMsgScreenInformationChanged::default_instance_
  B CMsgSearchResults::default_instance_
  B CMsgSetCookie::_default_host_
@@ -302,6 +303,7 @@
  D typeinfo for CMsgSavePageToJPEGResponse
  D typeinfo for CMsgScalePageToValue
  D typeinfo for CMsgScalePageToValueResponse
+ D typeinfo for CMsgScreenDPI
  D typeinfo for CMsgScreenInformationChanged
  D typeinfo for CMsgSearchResults
  D typeinfo for CMsgSetCookie
@@ -470,6 +472,7 @@
  D vtable for CMsgSavePageToJPEGResponse
  D vtable for CMsgScalePageToValue
  D vtable for CMsgScalePageToValueResponse
+ D vtable for CMsgScreenDPI
  D vtable for CMsgScreenInformationChanged
  D vtable for CMsgSearchResults
  D vtable for CMsgSetCookie
@@ -642,6 +645,7 @@
  R typeinfo name for CMsgSavePageToJPEGResponse
  R typeinfo name for CMsgScalePageToValue
  R typeinfo name for CMsgScalePageToValueResponse
+ R typeinfo name for CMsgScreenDPI
  R typeinfo name for CMsgScreenInformationChanged
  R typeinfo name for CMsgSearchResults
  R typeinfo name for CMsgSetCookie
@@ -1710,6 +1714,17 @@
  T CMsgScalePageToValueResponse::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgScalePageToValueResponse::SetCachedSize(int) const
  T CMsgScalePageToValueResponse::~CMsgScalePageToValueResponse()
+ T CMsgScreenDPI::ByteSize() const
+ T CMsgScreenDPI::CMsgScreenDPI()
+ T CMsgScreenDPI::Clear()
+ T CMsgScreenDPI::GetCachedSize() const
+ T CMsgScreenDPI::GetMetadata() const
+ T CMsgScreenDPI::IsInitialized() const
+ T CMsgScreenDPI::MergeFrom(CMsgScreenDPI const&)
+ T CMsgScreenDPI::New() const
+ T CMsgScreenDPI::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgScreenDPI::SetCachedSize(int) const
+ T CMsgScreenDPI::~CMsgScreenDPI()
  T CMsgScreenInformationChanged::ByteSize() const
  T CMsgScreenInformationChanged::CMsgScreenInformationChanged()
  T CMsgScreenInformationChanged::Clear()
@@ -2414,6 +2429,8 @@
  b (anonymous namespace)::CMsgScalePageToValueResponse_reflection_
  b (anonymous namespace)::CMsgScalePageToValue_descriptor_
  b (anonymous namespace)::CMsgScalePageToValue_reflection_
+ b (anonymous namespace)::CMsgScreenDPI_descriptor_
+ b (anonymous namespace)::CMsgScreenDPI_reflection_
  b (anonymous namespace)::CMsgScreenInformationChanged_descriptor_
  b (anonymous namespace)::CMsgScreenInformationChanged_reflection_
  b (anonymous namespace)::CMsgSearchResults_descriptor_
@@ -2600,6 +2617,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSavePageToJPEG_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgScalePageToValueResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgScalePageToValue_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgScreenDPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgScreenInformationChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSearchResults_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_

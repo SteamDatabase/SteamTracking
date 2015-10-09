@@ -20,11 +20,9 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn">
-				<Panel class="HorizontalRule" />
 				<Button class="AdvanceCheckout" onactivate="PaymentMethodSelected()">
 					<Label text="#Checkout_Continue" />
 				</Button>
-				<Panel class="HorizontalRule" />
 				<Panel class="PaymentMethodLogos">
 					<Label class="SecondaryLabel" text="#Checkout_PaymentMethod_LogoHeader" />
 					<Panel id="PaymentMethodLogoRows" />

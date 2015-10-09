@@ -7,10 +7,7 @@
 	</styles>
 
 	<SettingsPanelAudio_Codec class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#SettingsAudio_Codec" />
-
-
+		<Panel class="WizardContent">
 			<Label class="SettingsCallout LongDesc" text="#SettingsAudio_Codec_Information" />
 			<Panel class="Spacer"/>
 
@@ -25,9 +22,9 @@
 			<Panel id="CodecsUnavailable">
 				<Label class="LongDesc Highlight_Error" text="#SettingsAudio_Codec_NoDigital" />
 			</Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-
 			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
 				<Label id="Label" text="#WizardButton_Back" />
 			</Button>

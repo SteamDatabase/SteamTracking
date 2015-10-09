@@ -5,8 +5,9 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
-		<Label class="WizardChildTitle" text="#VerifyEmail_Start_Title" />
-		<Label class="WizardChildDescription" text="#VerifyEmail_Start_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#VerifyEmail_Start_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

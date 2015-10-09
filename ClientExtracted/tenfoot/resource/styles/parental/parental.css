@@ -353,9 +353,8 @@ ParentalReplacementPanel Button:focus
 #ParentalIntroChild #Instructions
 {
 	flow-children: down;
-	font-size: 36px;
-	color: #b0b4b7;
-	font-weight: light;
+	font-size: 24px;
+	color: tcstatictext;
 }
 
 #ParentalIntroChild #IntroPanel
@@ -377,15 +376,8 @@ ParentalReplacementPanel Button:focus
 #ParentalFeaturesChild #ChooseFeaturesPanel
 {
 	flow-children: down;
-	margin-left: -10px;
-	padding-left: 10px;
-	width: 1300px;
+	width: 1920px;
 	height: 820px;
-	background-image: url( "file://{images}/settings/keybg.png" );
-	background-repeat: no-repeat no-repeat;
-	background-position: left 900px top 400px;
-
-
 }
 
 #ParentalFeaturesChild ToggleButton
@@ -486,50 +478,68 @@ AppGridItem.Unlocked .AppImageOverlay
 	background-size: 100% 100%;
 }
 
+#SetRecoveryLine1
+{
+	margin-top: 10px;
+	font-size: 24px;
+	color: tcstatictext;
+}
+
 #SetRecoveryLine2
 {
 	margin-top: 10px;
+	font-size: 24px;
+	color: tcstatictext;
 }
 
 .ParentalSetRecoveryDialog,
 .ParentalSetPINDialog,
+.ParentalIntroChildDialog,
 .ParentalSetEnableCodeDialog
 {
-	margin-top: .0px;
-	padding: 50px 300px 20px 300px;
-
 	flow-children: down;
 	horizontal-align: center;
 	width: 1920px;
-	height: 800px;
+	height: 820px;
 
 	opacity: 1.0;
+}
 
-
+.BackFamilyGroundImage
+{
 	background-image: url( "file://{images}/settings/keybg.png" );
 	background-repeat: no-repeat no-repeat;
-	background-position: left 1200px top 200px;
+	background-position: 80% 25%;
 
 	transition-property: transform;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.ParentalRecoveryEmailEntry,
-.ParentalPINEntry,
-.ParentalEnableCodeEntry
+.ParentalRecoveryEmailEntry
 {
-	flow-children: right;
+	flow-children: down;
 	width: 925px;
 	text-align: left;
+	horizontal-align: left;
+}
+
+.ParentalPINEntry
+{
+	width: 90px;
+}
+
+.ParentalEnableCodeEntry
+{
+	width: 120px;
 }
 
 .ParentalRecoveryEmailEntry Label,
 .ParentalPINEntry Label,
 .ParentalEnableCodeEntry Label
 {
-	vertical-align: center;
-	text-align: right;
+	vertical-align: top;
+	text-align: left;
 	margin-right: 10px;
 	margin-top: 6px;
 	width: 50%;
@@ -562,7 +572,7 @@ ParentalSetRecoveryChild TextEntry
 
 .ParentalSetEnableCodeError
 {
-	font-size: 36px;
+	font-size: 24px;
 	color: red;
 	font-weight: light;
 	opacity: 0.0;
@@ -680,6 +690,11 @@ ParentalSetSuccessChild #ParentalLockImageUnlocked
 	horizontal-align: center;
 }
 
+ParentalSetSuccessChild #ParentalLockImageLocked
+{
+	horizontal-align: center;
+}
+
 ParentalSetSuccessChild .SettingsSuccessSubtitle
 {
 	font-size: 24px;
@@ -713,6 +728,7 @@ ParentalSetSuccessChild .email
 #ParentIcons
 {
 	flow-children: right;
+	horizontal-align: left;
 	width: 500px;
 }
 
@@ -729,9 +745,9 @@ ParentalSetSuccessChild .email
 {
 	margin-top: 20px;
 	max-width: 1100px;
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: light;
-	color: #b0b4b7;
+	color:  #b0b4b7;
 	text-overflow: ellipsis;
 }
 

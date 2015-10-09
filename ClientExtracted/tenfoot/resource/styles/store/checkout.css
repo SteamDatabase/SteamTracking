@@ -30,31 +30,33 @@
 //
 // App section button styles
 //
-CartLineItem, CheckoutGiftRecipientFriend, CheckoutAddFundsButton, Button
+CartLineItem,
+CheckoutGiftRecipientFriend,
+CheckoutAddFundsButton,
+Button
 {
 	width: 100%;
 	padding: 8px 7px 8px 7px;
-	margin: 4px 0px;
+	margin: 0px 0px 4px 0px;
+
 	box-shadow: none;
 	color: detailsdatalabelfocus;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
-	border-style: solid;
-	border-width: 5px;
-	border-color: none;
+	background-color: transparent_module;
+
 	transition-duration: 0.23s;
 	transition-property: border, background-color, color, box-shadow, transform;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-CheckoutAddFundsButton Label, Button Label
+CheckoutAddFundsButton Label,
+Button Label
 {
 	width: 100%;
 	vertical-align: center;
 
 	font-family: platformfont;
-	font-size: 26px;
-	font-weight: bold;
-	transform: translatex(-5px);
+	font-size: 28px;
+	transform: translatex(0px);
 	color: detailsdatalabelfocus;
 	transition-property: transform, color;
 	transition-duration: 0.2s;
@@ -63,8 +65,13 @@ CheckoutAddFundsButton Label, Button Label
 
 CheckoutAddFundsButton:focus Label, Button:focus Label
 {
-	color: #171717f5;
-	transform: translatex(0px);
+	color: #ffffff;
+	transform: translatex(7px);
+}
+
+Button:disabled
+{
+	opacity: 0.5;
 }
 
 Button:disabled Label
@@ -83,19 +90,19 @@ CheckoutAddFundsButton:hover Label, Button:hover Label
 	transform: translatex(0px);
 }
 
-CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:focus, Button:focus
+CartLineItem:focus,
+CheckoutGiftRecipientFriend:focus,
+CheckoutAddFundsButton:focus,
+Button:focus
 {
 	transition-duration: 0.23s;
 
-	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
-	animation-name: links-and-more-button-focus;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
+	animation-name: button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -103,7 +110,7 @@ CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:fo
 
 .AdvanceCheckout
 {
-	background-color: tcstatictext;
+	background-color: store_transparent_module;
 	opacity: 0.5;
 }
 
@@ -416,7 +423,11 @@ CheckoutController.Visible
 	width: 100%;
 	padding: 10px 140px 10px 105px;
 	flow-children: right;
-	background-color: checkout_title_bg;
+}
+
+RemoteContent ShoppingCart .CheckoutTitleRow
+{
+	visibility: collapse;
 }
 
 #CheckoutWalletSection
@@ -452,12 +463,12 @@ CheckoutController.Visible
 
 .CheckoutTitle
 {
-	font-size: 56px;
+	font-size: 48px;
 	line-height: 70px;
-	color: applabelsolid;
+	color: brightblue;
 	white-space: nowrap;
 	width: 990px;
-	font-weight: bold;
+	font-weight: light;
 }
 
 .CheckoutBody
@@ -466,7 +477,7 @@ CheckoutController.Visible
 	height: 100%;
 	padding: 0px 105px 0px 105px;
 	flow-children: right;
-	background-color: checkout_body_bg;
+
 
 	font-size: 27px;
 	width: 100%;
@@ -493,7 +504,7 @@ CheckoutController.Visible
 
 .CheckoutBodyLeftColumn:descendantfocus
 {
-	background-color: checkout_body_descendantfocus_bg;
+	//background-color: checkout_body_descendantfocus_bg;
 }
 
 .CheckoutBodyRightColumn
@@ -516,7 +527,7 @@ CheckoutController.Visible
 
 .CheckoutBodyRightColumn:descendantfocus
 {
-	background-color: checkout_body_descendantfocus_bg;
+	//background-color: checkout_body_descendantfocus_bg;
 }
 
 #PaymentMethod 
@@ -536,7 +547,9 @@ CheckoutController.Visible
 	transform: translateY( 132px );
 	vertical-align: bottom;
 	flow-children: down;
-	background-color: checkout_body_bg;
+
+	background-image: url( "file://{images}/panel_background.png" );
+
 
 	// transitions
 	transform: translate3d( 0px, 1280px, 1000px );
@@ -550,12 +563,22 @@ CheckoutController.Visible
 	transition-delay: 0s;
 }
 
+RemoteContent .CheckoutStep
+{
+//	transform: none;
+}
+
 .CheckoutStep.InStoreStack
 {
 	transform: translate3d( 0px, 70px, 0px );
 	opacity: 1.0;
 	desaturation: 0.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+RemoteContent .CheckoutStep.InStoreStack
+{
+	transform: none;
 }
 
 .CheckoutStep:descendantfocus
@@ -565,6 +588,11 @@ CheckoutController.Visible
 	desaturation: 0.0;
 	wash-color: none;
 	box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+RemoteContent .CheckoutStep:descendantfocus
+{
+	transform: none;
 }
 
 .SecondaryLabel
@@ -673,14 +701,15 @@ CartLineItem
 
 #ItemName
 {
-	color: applabelsolid;
+	color: #67c1f5ff;
 	white-space: nowrap;
-	font-weight: bold;
+	font-size: 30px;
+	margin-left: 10px;
 }
 
 CartLineItem:focus #ItemName
 {
-	color: #171717f5;
+	color: #ffffff;
 }
 
 CartLineItem .Loading
@@ -746,9 +775,10 @@ CartLineItem:descendantfocus .CartLineItemContents
 
 #Notes Label
 {
-	color: secondary_label;
+	color: #faaf40;
 	font-size: 24px;
 	white-space: nowrap;
+	margin-left: 10px;
 }
 
 #Notes Label.WarningNote
@@ -789,6 +819,7 @@ CartLineItem:descendantfocus #Notes Label.WarningNote
 
 CartNoteItem, CartNoteItem:hover
 {
+	width: 100%;
 	margin-left: 12px;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 	transition-property: box-shadow;
@@ -877,6 +908,52 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 	color: #e4e4e4;
 	font-size: 26px;
 	margin-bottom: 20px;
+}
+#PurchaseForSelfBtn,
+#PurchaseForGiftBtn,
+.AdvanceCheckout
+{
+	background-color: store_transparent_module;
+	height: 60px;
+}
+#PurchaseForSelfBtn:focus,
+#PurchaseForGiftBtn:focus,
+.AdvanceCheckout:focus
+{
+	background-color: store_active_module;
+
+	animation-name: purchase-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#PurchaseForSelfBtn Label,
+#PurchaseForGiftBtn Label,
+.AdvanceCheckout Label
+{
+	color: #a3cf06;
+	margin-left: 5px;
+}
+#PurchaseForSelfBtn:focus Label,
+#PurchaseForGiftBtn:focus Label,
+.AdvanceCheckout:focus Label
+{
+	color: #ffffff;
+}
+
+#PurchaseForSelfBtn:disabled Label,
+#PurchaseForGiftBtn:disabled Label
+{
+	color: #313d02;
+}
+
+
+#PurchaseForGiftBtn
+{
+	margin-bottom: 40px;
 }
 
 
@@ -1143,13 +1220,6 @@ CheckoutGiftRecipientFriend:descendantfocus AvatarImage
 }
 
 
-
-CartLineItem:focus, Button:focus #SendToFriendOwns, CheckoutGiftRecipientFriend:descendantfocus #SendToFriendOwns
-{
-	color: error_color_focused;
-}
-
-
 .SendToFriendText
 {
 	margin-left: 8px;
@@ -1281,6 +1351,7 @@ CheckoutPaymentMethodFields
 #SavePaymentInfo
 {
 	margin-top: 34px;
+	width: fit-children;
 }
 
 #MustSavePaymentInfo
@@ -1365,6 +1436,7 @@ CheckoutPaymentMethodFields
 
 #NoPaymentDataFields
 {
+	width: 100%;
 	visibility: collapse;
 	padding: 20px 0px 4px 0px;
 }
@@ -1418,7 +1490,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 .CheckoutShippingInfoLeftColumn
 {
 	width: 600px;
-	height: 500px;
+	height: 550px;
 	margin-right: 24px;
 	flow-children: down;
 }
@@ -1452,7 +1524,6 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 #Country
 {
 	width: 600px;
-	margin-bottom: 28px;
 }
 
 #CountryDropDownMenu
@@ -1464,7 +1535,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 .CheckoutBillingInfoRightColumn
 {
 	width: 250px;
-	height: 500px;
+	height: 550px;
 	position: 624px 0px 0px;
 	flow-children: down;
 }
@@ -1517,7 +1588,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 {
 	width: 700px;
 	margin: 0px 0px 4px 0px;
-	position: 0px 500px 0px;
+	position: 0px 550px 0px;
 }
 
 #ShippingInfoShippingRestrictions

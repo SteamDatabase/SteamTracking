@@ -393,57 +393,6 @@ LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Download
 	height: 20px;
 }
 
-#GameRequires
-{
-	visibility: collapse;
-}
-
-#GameRequires.ShowGameRequires
-{
-	visibility: visible;
-}
-
-#GameRequiresIcons
-{
-	flow-children: right;
-	width: fit-children;
-}
-
-LibraryAppDetails #GameRequiresLabel
-{
-	font-family: platformfont;
-	font-style: italic;
-	font-size: 24px;
-	font-weight: normal;
-	color: messagecolorwash;
-	opacity: 1.0;
-	width: 100%;
-}
-
-#GameRequires Image
-{
-	width: 60px;
-	height: 60px;
-	margin-right: 8px;
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-	wash-color: white;
-	flow-children: right;
-}
-
-#GameRequiresController
-{
-	//Don't show steam controller icon for now
-	//background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
-	visibility: collapse;
-}
-
-#GameRequiresKeyboard
-{
-	background-image: url( "file://{images}/store/icon_keyboard_60px.png" );
-}
-
-
 #DesktopPanels
 {
 	width: 100%;

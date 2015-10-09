@@ -184,6 +184,7 @@
 	"MainMenu_Select"	"SELECT"
 	"MainMenu_Back"		"BACK"
 	"MainMenu_Friends"	"FRIENDS"
+	"MainMenu_Chat"	"CHAT"
 	"MainMenu_Primary"	"STEAM"
 	"MainMenu_Store"	"STORE"
 	"MainMenu_Community"	"COMMUNITY"
@@ -242,18 +243,24 @@
 
 	"MainMenu_MusicGuideLabel" "MUSIC"
 
-	"MainMenu_Welcome_Header"			"WELCOME TO STEAM"
+	"MainMenu_Welcome_Header"			"Welcome To Steam"
+	"MainMenu_Welcome_Sub_BigPicture_H"	"Big Picture"
+	"MainMenu_Welcome_Sub_BigPicture_D"	"With Big Picture Steam comes to your TV. Your Library of games, your friends, and the store you are use to all on your TV. With Big Picture, you choose how you want to play. Use a Steam Controller, your favorite old controller, or your trusty mouse and keyboard."
 	"MainMenu_Welcome_Sub_NoProd_H"		"Need a game?"
-	"MainMenu_Welcome_Sub_NoProd_D"		"Head over to the Steam Store to find something that looks interesting. There are Daily Deals and Free Weekends if you're looking for a bargain, and plenty of Free-to-Play games if you want to try something out first."
-	"MainMenu_Welcome_Sub_NoFriends_H"	"Add some friends?"
-	"MainMenu_Welcome_Sub_NoFriends_D"	"If you have some friends who have already joined Steam, add them to your Friends List, and we'll make it easy to play games together."
+	"MainMenu_Welcome_Sub_NoProd_D"		"Head over to the Steam Store to find the best deals on the newest games or browse to find a classic game you might have missed.  There are also Free-to-Play games if you want to try something out first."
+	"MainMenu_Welcome_Sub_NoFriends_H"	"Your Friends"
+	"MainMenu_Welcome_Sub_NoFriends_D"	"If you have friends who are already on Steam, add them to your friends list.\n\nYou can interact with your friends in all the ways you are already use to on Steam. Chat, keep track of what they are playing, comment on their screenshots or movies and more."
+	"MainMenu_Welcome_Sub_Friends_Hint"	"FRIENDS"
+	"MainMenu_Welcome_Sub_Overlay_H"	"The Overlay"
+	"MainMenu_Welcome_Sub_Overlay_D"	"When you are in-game, press the Steam button to bring up the Overlay. There you can quickly access friends, Steam Community, text entry, settings and more without ever leaving your game.\n\nWhen you are not in a game the Steam button acts as a fast way to get back to the Home screen."
+	"MainMenu_Welcome_Sub_Overlay_Hint"	"OVERLAY / HOME"
 	"MainMenu_Welcome_Sub_Controller_H"	"The Steam Controller"
-	"MainMenu_Welcome_Sub_Controller_D"	"It looks like you've got one plugged in. If you haven't used one before, here are a couple of tips that'll help you get the most out of your controller."
-	"MainMenu_Welcome_Sub_Controller_1"	"Your controller can be customized for every game. Simply select the MANAGE CONTROLLER option on the game page to set it up exactly as you'd like."
-	"MainMenu_Welcome_Sub_Controller_2"	"ADJUST THE SENSITIVITY of your controller pads when using them to control a camera. "
-	"MainMenu_Welcome_Sub_Controller_3"	"When playing a new game, it's best to start with a popular COMMUNITY CREATED TEMPLATE, or one of our GENRE TEMPLATES."
-	"MainMenu_Welcome_Sub_Controller_4"	"The GRIP BUTTONS are great for commands that you want to be able to use without removing your thumbs from the pads (like Reload in an FPS)."
-	"MainMenu_Welcome_Sub_Controller_5"	"Select the OPEN TEXT ENTRY option in the overlay when playing a game that requires you to enter some keyboard text."
+	"MainMenu_Welcome_Sub_Controller_D"	"If you haven't used one before, here are a couple of tips that'll help you get the most out of your controller."
+	"MainMenu_Welcome_Sub_Controller_1"	"Your controller can be customized for every game. Simply select the Manage Controller option on the game page to set it up exactly as you'd like."
+	"MainMenu_Welcome_Sub_Controller_2"	"ADJUST THE SENSITIVITY of your controller pads when using them to control a camera."
+	"MainMenu_Welcome_Sub_Controller_3"	"When playing a new game, it's best to start with a popular community created config, or one of our genre templates."
+	"MainMenu_Welcome_Sub_Controller_4"	"The grip buttons are great for commands that you want to be able to use without removing your thumbs from the pads (like Reload in an FPS)."
+	"MainMenu_Welcome_Sub_Controller_5"	"Select the Open Text Entry option in the Overlay when playing a game that requires you to enter some keyboard text."
 
 	"Test_MainLabel" "Steam 10'\nTEXT..................!"
 
@@ -724,6 +731,8 @@
 	"SettingsDownloads_No_Throttle"	"No Limit"
 	"SettingsDownloads_AllowDownloadsDuringGameplay"	"Allow downloads during gameplay"
 	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in your library."
+	"SettingsDownloads_ThrottleDownloadsWhileStreaming"	"Throttle downloads while streaming"
+	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"If this is checked, Steam will limit download speed to maintain a high quality In-Home Streaming experience."
 
 	// Settings, network screen
 	//
@@ -903,6 +912,19 @@
 	"SettingsController_XInputController"				"XInput Controller"
 	"SettingsController_ResetButtons"						"RESET"
 	"SettingsController_TurnOffOnQuit"					"Turn off when exiting Steam"
+	"SettingsController_Support"						"SUPPORT"
+
+	"Settings_SteamControllerSupport"					"Steam controller support"
+	"Settings_SteamControllerSupport_ExitNotification"	"Press and hold the 'B' button to exit"
+	"SettingsControllerSupport_Heading"					"To check hardware status please press and touch every input now:"
+	"SettingsControllerSupport_SerialNumber"			"Serial Number: {s:serialnum}"
+	"SettingsControllerSupport_BoardRev"				"Board Revision: {s:boardrev}"
+	"SettingsControllerSupport_FirmwareRev"				"Firmware revision: {s:fwrev}"
+	"SettingsControllerSupport_FirmwareDate"			"Firmware date: {s:fwdate}"
+	"SettingsControllerSupport_BootloaderRev"			"Bootloader revision: {s:blrev}"
+	"SettingsControllerSupport_BootloaderDate"			"Bootloader date: {s:bldate}"
+	"SettingsControllerSupport_RadioRev"				"Radio firmware revision: {s:radiorev}"
+	"SettingsControllerSupport_RadioDate"				"Radio firmware date: {s:radiodate}"
 
 	"Settings_Store"				"Store"
 	"SettingsStore_FilterToggle"	"Let me view all content, regardless of my current setup"
@@ -4037,7 +4059,7 @@
 	"ControllerBinding_RequiresClick_Off" "Requires Click - Off"
 	"ControllerBinding_RequiresClick_Off_Description" "The trackpad will send actions on touch."
 	"ControllerBinding_Chording" "Overlap Directions"
-	"ControllerBinding_Chording_Description" "Directions can be limited to a single direction or press both directions when in a diagonal.  When the D-Pad is used for discreet actions such as inventory or commands, Off may be more ideal, where as movement in a game generally requires overlap."
+	"ControllerBinding_Chording_Description" "Directions can be limited to a single direction or press both directions when in a diagonal.  When the D-Pad is used for discrete actions such as inventory or commands, Off may be more ideal, whereas movement in a game generally requires overlap."
 	"ControllerBinding_Chording_Off" "Overlap Directions - Off"
 	"ControllerBinding_Chording_Off_Description" "The D-Pad will only send one direction at a time, a strict cross.  Pressing diagonal will press the closest side.  This is most useful when the D-Pad is being used for quick selection of inventory, discreet commands, or simple UI navigation, where pressing multiple directions at the same time is undesirable."
 	"ControllerBinding_Chording_On" "Overlap Directions - Om"
@@ -4566,4 +4588,7 @@
 	"UI_Prelaunch_InstallGame"				"INSTALL GAME"
 	"UI_Prelaunch_InstallGame_Keyboard"	"INSTALL ANYWAY"
 	"UI_Prelaunch_Cancel"				"CANCEL"
+
+	"Friends_Search_Header"			"Search Friends"
+	"Friends_Search_ResultCount"	"{i:searchresultcount} found"
 }

@@ -348,9 +348,10 @@ ToggleButton .WizardLabel
 .WizardChild .WizardContent,
 .WizardChild .SettingsBottomPanel
 {
+	padding: 20px 0px 0px 0px;
 	margin-left: paddinghorz;
 	margin-right: paddinghorz;
-	margin-top: 20px;
+	margin-top: 50px;
 	flow-children: down;
 	width: 100%;
 	height: 80%;

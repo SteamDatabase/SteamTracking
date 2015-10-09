@@ -9,6 +9,11 @@ FriendsContent_FriendItem
 	opacity: 1.0;
 }
 
+FriendsContent_FriendItem.HiddenByFilter
+{
+	visibility: collapse;
+}
+
 FriendsContent_FriendItem:focus
 {
 	border: 3px solid ui_primary_color;
@@ -40,10 +45,6 @@ FriendsContent_FriendItem.Online
 FriendsContent_FriendItem.Offline
 {
 	//border: 2px solid #6F6F6F;
-}
-
-.GroupContent
-{	
 }
 
 AvatarImage

@@ -5,8 +5,9 @@
 	</styles>
 
 	<ChangingPasswordWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#LostAuthenticator_Title" />
-		<Label class="WizardChildDescription" text="#LostAuthenticator_Success_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#LostAuthenticator_Success_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton" id="ButtonDone" onactivate="ChangePasswordDone()">

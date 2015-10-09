@@ -11,91 +11,317 @@ WelcomeToSteam
 	flow-children:down;
 }
 
-#WelcomeSection:Focus
+#WelcomeSection:focus
 {
-	background-color: #2A5D7C;
-
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	animation-name: none;
 }
 
-
 #TitlePanel
 {
+	flow-children:right;
 	horizontal-align: center;
-	margin-top: 40px;
+	vertical-align: center;
+	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
 #WelcomeTitle
 {
-	text-transform: uppercase;
-	font-size: 80px;
+	font-size: 64px;
 	font-weight: light;
-	color: white;
+	color: #36ceff;
 	text-align: center;
 	font-family: platformfont;
+	margin: 0px 15px 0px 0px;
 }
 
 #UserHasNoProducts
 {
-	background-color: #0C2037;
+	/*background-color: #0C2037;*/
 }
 
-.SubSection
+#icon_image
 {
-	flow-children:down;
-	margin-bottom: 20px;
+	margin: 0px 15px 0px 0px;
+	width: 80px;
+	height: 80px;
+	wash-color: ui_primary_color;
+}
+
+#icon_header_image
+{
+	width: 98px;
+	height: 98px;
+	wash-color: ui_primary_color;
+}
+
+#icon_header_image_Right
+{
+	horizontal-align: right;
+	width: 98px;
+	height: 98px;
+	wash-color: ui_primary_color;
+}
+
+#sub_image_center_large
+{
+	height: 700px;
+}
+
+#WelcomeCapsuleOver
+{
+	opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
+	opacity: 0.0;
+}
+
+MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
+{
+	opacity: 0.0;
+}
+
+#WelcomePanel:descendantfocus #WelcomeCapsuleOver,
+#WelcomePanel:descendantfocus #WelcomeTitle,
+#WelcomePanel:descendantfocus #icon_image 
+{
+	color: #e5f1f9;
+	wash-color: #e5f1f9;
+	opacity: 1.0;
+}
+
+#sub_text_center
+{
+	horizontal-align: center;
+	margin: 48px 24px 48px 24px;
+	width: 920px;
+}
+
+#bulletpoints_header
+{
+	horizontal-align: center;
+	margin: 42px 24px 0px 24px;
+	width: 1200px;
+}
+
+#sub_align_right Label
+{
+	text-align: right;
+	horizontal-align: right;
+}
+
+#sub_images_right
+{
+	margin: 24px 24px 24px 64px;
+}
+
+.welcome_btn_a 
+{
+	vertical-align: center;
+
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 42px;
+	height: 42px;
+	font-size: 20px;
+	margin-top: 24px;
+	box-shadow: #00000022 -3px -3px 4px 6px;
+	 padding: 6px 0px 0 0px;
+	
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttongreen;
+	text-align: center;
+}
+
+#welcome_btn_bump Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+	font-size: 24px;
+	text-align: center;
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+}
+
+#welcome_friends_hint
+{
+	flow-children:right;
+}
+
+.WelcomeBtnBump 
+{
+	width: 89px;
+	height: 38px;
+	margin-top: 24px;
+	margin-right: 12px;
+}
+
+.WelcomeBtnOverlay
+{
+	width: 64px;
+	height: 64px;
+	margin-top: 24px;
+	margin-right: 12px;
 }
 
 .SubPanel
 {
-	flow-children: right;
+	flow-children: down;
 	horizontal-align: center;
+	background-color: none;
+	transition-property: background-color;
+	transition-duration: 1.0s;
+	box-shadow: none;
+	
 }
 
-.SubPanel:focus
+.SubPanelContainer
 {
-		box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
+	flow-children: right;
+	vertical-align: center;
+	horizontal-align: center;
+	opacity: .5;
+	transition-property: opacity;
+	transition-duration: PageTransitionTimeOff;
+	width: 1920px;
 }
 
-.SubPanel Image
+.SubPanelCenterContainer
 {
-	width: 400px;
+	vertical-align: center;
+	horizontal-align: center;
+	opacity: .5;
+	transition-property: opacity;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.SubImageCenterAlign
+{
+	visibility: collapse;
+	vertical-align: top;
+	transform: translateZ(0px );
+	opacity: 0.5;
+	width: 1920px;
+	transition-property: transform;
+	transition-duration: PageTransitionTimeOff;
+}
+
+MainMenu.BelowTheFoldOpen .SubImageCenterAlign
+{
+	visibility: visible;
+}
+
+.BelowTheFoldOpen .SubPanel:focus .SubPanelCenterContainer, 
+.BelowTheFoldOpen .SubPanel:focus .SubPanelContainer
+{
+	background-color: gradient( linear, 0%  0%, 100% 0%, from( #66c0f460 ), color-stop( 0.5, #11111100 ), color-stop( 0.5, #11111100 ), to( #66c0f460 ) );
+	opacity: 1;
+	
+	transform: translateY( 0px ) translateZ( 16px );
+	transition-property: transform;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.BelowTheFoldOpen .SubPanel:focus
+{
+	box-shadow: black -2px -2px 32px 6px;
+}
+
+.SubPanel:hover .SubPanelCenterContainer, 
+.SubPanel:hover .SubPanelContainer
+{
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: PageTransitionTimeOff;
 }
 
 .SubText
 {
+	transform: translateY( 0px ) translateZ( 0px );
 	flow-children: down;
+	vertical-align: center;
+	margin: 48px 24px 48px 24px;
+	width: 550px;
 	
-	margin-left: 20px;
-	width: 1100px;
+	transition-property: transform;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.SubTextRightOffset
+{
+	margin-left: 300px;
+}
+
+.SubTextLeft Label
+{
+	text-align: right;
 }
 
 .SubHeader
 {
 	font-size: 40px;
-	color: white;
-	margin-top: 10px;
+	color: #36ceff;
 }
 
 .SubDesc
 {
-	font-size: 25px;
+	font-size: 24px;
 	color: white;
-	margin-top: 10px;
-	height: 120px;
+	margin-top: 20px;
+	vertical-align: center;
 }
 
-.SubImages
+.SubImages 
 {
 	flow-children: down;
+	margin: 24px 64px 24px 256px;
+	vertical-align:center;
+
+	transform: translateZ(0px );
+	opacity: 1;
+	
+	transition-property: transform;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.BulletpointsFlow
+{
+	flow-children: down;
+	horizontal-align: center;
+	margin-bottom: 64px;
 }
 
 .Bulletpoints
 {
 	flow-children: down;
-	font-size: 30px;
+	font-size: 24px;
 	color: white;
-	margin-top: 10px;
+	horizontal-align: center;
+	width: 1220px;
+}
+
+.SingleBulletPoint 
+{
+	flow-children: right;
+	vertical-align: center;
+	margin: 24px 0px 0px 0px;
+}
+
+.SingleBulletPointImage
+{
+	vertical-align: center;
+	margin-right: 24px;
+	height:96px;
+	width:128px;
+	wash-color: ui_primary_color;
+	box-shadow: #00000022 -3px -3px 2px 6px;
+}
+
+#bulletpointimage_nowash
+{
+	wash-color:none;
+}
+
+.SingleBulletPointText
+{
+	font-size: 24px;
+	color: white;
+	vertical-align: center;
 }

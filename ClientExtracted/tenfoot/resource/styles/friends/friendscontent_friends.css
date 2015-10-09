@@ -4,9 +4,27 @@
 
 FriendsContent_Friends
 {
-	flow-children: right-wrap;
+	height: 900px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+FriendsContent_Friends.ContentList
+{
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+#FriendsListItems
+{
 	overflow: clip scroll;
-	height: 400px;
+	flow-children: right-wrap;
+	width: 100%;
+}
+
+.Filtered #FriendsListItems
+{
+	margin-top: 100px;
 }
 
 Label
@@ -94,4 +112,37 @@ Label
 .HasFriends .ZeroFriendsLabel
 {
 	visibility: collapse;
+}
+
+#ClearFilterButton
+{
+	visibility: collapse;
+	height: 50px;
+	width: 100%;
+	margin-top: 10px;
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	padding: 4px;
+	padding-left: 10px;
+}
+
+#ClearFilterButton Label
+{
+	font-size: 30px;
+	color: white;
+}
+
+#ClearFilterButton:hover
+{
+	border: 1px solid white;	
+}
+
+#ClearFilterButton:focus
+{
+	border: 1px solid white;
+	background-color: friendsonline_darkbg;
+}
+
+FriendsContent_Friends.Filtered #ClearFilterButton
+{
+	visibility: visible;
 }

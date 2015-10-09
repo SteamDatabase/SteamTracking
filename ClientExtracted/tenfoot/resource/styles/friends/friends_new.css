@@ -358,11 +358,11 @@ Label.Header
 	//padding-left: 140px;
 	//padding-right: 40px;
 	padding: 20px;
-	padding-top: -24px;
+	padding-top: 0px;
 	//position: 390px 0px 0px;
 
 	width: 100%;
-	height: 1048px;
+	height: 900px;
 
 	background-color: #2976a344;
 

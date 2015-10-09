@@ -5,14 +5,20 @@
 		<include src="file://{resources}/styles/friends/friendscontent_friends.css" />
 	</styles>
 
-	<FriendsContent_Friends sendchildscrolledintoviewevents="true" >
+	<FriendsContent_Friends >
 
 			<Label text="#friends_no_friends_message" class="ZeroFriendsLabel" />
 
-			<FriendsListHeader friends_category="0" id="Header_Recent" text="#friends_list_recent_container_title" class="ContainerHeader "/>
-			<FriendsListHeader friends_category="1" id="Header_InGame" text="#friends_list_igname_container_title" class="ContainerHeader "/>
-			<FriendsListHeader friends_category="2" id="Header_Online" text="#friends_list_online_container_title" class="ContainerHeader "/>
-			<FriendsListHeader friends_category="3" id="Header_Offline" text="#friends_list_offline_container_title" class="ContainerHeader "/>
+			<Button id="ClearFilterButton" onactivate="FriendsClearFilter();FriendsSelectFirstItem();" selectionpos="auto">
+				<Label text="Filtered view, '{s:filter_string}' , click here to clear" />
+			</Button>
+
+			<Panel id="FriendsListItems" sendchildscrolledintoviewevents="true" selectionpos="auto"  overscroll-y="220" selectionposboundary="both" tabindex="auto">
+				<FriendsListHeader friends_category="0" id="Header_Recent" text="#friends_list_recent_container_title" class="ContainerHeader "/>
+				<FriendsListHeader friends_category="1" id="Header_InGame" text="#friends_list_igname_container_title" class="ContainerHeader "/>
+				<FriendsListHeader friends_category="2" id="Header_Online" text="#friends_list_online_container_title" class="ContainerHeader "/>
+				<FriendsListHeader friends_category="3" id="Header_Offline" text="#friends_list_offline_container_title" class="ContainerHeader "/>
+			</Panel>
 
 	</FriendsContent_Friends>
 </root>

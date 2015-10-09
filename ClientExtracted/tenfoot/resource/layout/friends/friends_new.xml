@@ -45,7 +45,7 @@
 			</Panel>
 
 			<Panel class="ContentContainer">  <!-- content container -->
-				<FriendsContent_Friends id="FriendsContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" movementwrap="right" rememberchildfocus="true" oncancel="FocusFriendsMenuRow();" overscroll-y="120" selectionposboundary="both" />
+				<FriendsContent_Friends id="FriendsContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" movementwrap="right" rememberchildfocus="true" oncancel="FocusFriendsMenuRow();" selectionposboundary="both" />
 				<FriendsContent_Groups id="GroupsContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" movementwrap="right" rememberchildfocus="true" oncancel="FocusFriendsMenuRow();" overscroll-y="120" />
 				<FriendsInvitePage id="InvitesContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" oncancel="FocusFriendsMenuRow();" overscroll-y="120" />
 			</Panel>

@@ -10,9 +10,14 @@ ContentFrame
 	background-image: url( "file://{images}/panel_background.png" );
 	transform: translateY( 100% );	
 
-	transition-property: transform;
+	transition-property: transform, opacity;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: ContentTransitionTime;
+}
+
+.ScreenSaverMode ContentFrame.NotMainMenuContentFrame
+{
+	opacity: 0.0;
 }
 
 ContentFrame:descendantfocus
@@ -220,11 +225,11 @@ RemoteContent .LoadingPanel #ErrorMessage
 
 RemoteContent .LoadingPanel #OfflineStatus1,
 RemoteContent .LoadingPanel #OfflineStatus2,
-RemoteContent .LoadingPanel #ErrorStatus1,
-RemoteContent .LoadingPanel #ErrorStatus2
+RemoteContent .LoadingPanel #ErrorMessage > Label,
 {
 	color: tcstatictext;
 	horizontal-align: center;
+	font-size: medfontsize;
 
 	max-width: 75%;
 	margin-bottom: 20px;

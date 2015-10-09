@@ -8,7 +8,7 @@
 	</styles>
 	
 	<MainMenu defaultfocus="LibraryButton" oncancel="NavigateTenfootBack()">
-		<Panel id="BodyWrapper">
+		<Panel id="BodyWrapper" rememberchildfocus="true" >
 
 			<!-- Top row of menu buttons -->
 			<Panel id="TopRow" class="TopRowBase" tabindex="0" selectionpos="0,0"  selectionposboundary="vertical" >
@@ -26,6 +26,7 @@
 								 
 						<Panel id="InboxImageWrapper">
 							<Image id="InboxImage" class="InboxImage" src="file://{images}/systemmenu/icon_alerts.png" />
+							<Label class="TopRowCounter" text="#MainMenu_InboxShort" />
 							<Panel id="BatteryImages" class="InboxImage" >
 								<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
 								<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
@@ -45,8 +46,9 @@
 						onactivate="ToggleMusicControlPanel( true );">
 						<Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
 					</Button>
-					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >
+					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >				
 						<Image src="file://{images}/systemmenu/icon_downloads.png" />
+						<Label class="TopRowCounter" text="#MainMenu_ActiveDownloadsShort" />
 					</Button>
 					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettingsMenu();" >
 						<Image src="file://{images}/systemmenu/icon_settings.png" />
@@ -66,12 +68,17 @@
 					
 			<!-- The main row of menu buttons in the center of the screen -->
 			<Panel id="MenuRow" tabindex="1" selectionpos="0,20" selectionposboundary="vertical" >
+				<Label  class="TriggerRowLeft MainMenuRowLabel" text="#UI_LeftBumper_Short" />
+				<Label  class="TriggerRowRight MainMenuRowLabel" text="#UI_RightBumper_Short" />
 				<Panel id="MenuRowLeftButton"  selectionpos="-10,0">
+
 					<ParentalButton id="WebButton" class="Button EdgeButton EdgeButtonLeft" tabindex="0" selectionpos="1,20" onactivate="ShowWebBrowser();"> 
 						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_web.png" />
-						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_LeftBumper_Short" />
+						<Label  class="MainMenuRowLabel" text="#MainMenu_Web" />
+
 						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
 					</ParentalButton>
+
 				</Panel>
 
 				<Panel id="MenuRowButtons" selectionpos="0,0">
@@ -95,7 +102,7 @@
 				<Panel id="MenuRowRightButton" selectionpos="10,0">
 					<ParentalButton id="FriendsButton" class="Button EdgeButton EdgeButtonRight" tabindex="4" selectionpos="5,20" onactivate="ShowFriends();"> 
 						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_friends.png" />
-						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_RightBumper_Short" />
+						<Label  class="MainMenuRowLabel" text="#MainMenu_Chat" />
 			      <Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
 					</ParentalButton>
 				</Panel>
@@ -174,13 +181,10 @@
 					</Panel>
 				</Panel>
 			</Panel>
-
-			<Panel id="WelcomePanel" selectionpos="0,160" overscroll-y="400"/>
-
+			<Panel id="WelcomePanel" selectionpos="0,160" overscroll-y="160" />
 		</Panel>
 		<!-- All the contents for backgrounds for the main nav row, and the real contents to drill into on activation -->
-		<Panel id="MainRowContents" hittest="false">
-			<StorePanel id="Store" />				
+		<Panel id="MainRowContents" hittest="false">			
 			<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
 			<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
 		</Panel>

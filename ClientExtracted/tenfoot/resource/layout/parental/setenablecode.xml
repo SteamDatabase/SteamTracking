@@ -9,22 +9,16 @@
 	<ParentalSetEnableCodeChild class="WizardChild" tabindex="auto" selectionpos="auto">
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
-			<Label id="SetEnableCode" text="#Parental_Set_EnableCode" class="SettingsBody" />
-
-			<Panel class="ParentalSetEnableCodeDialog">
-				<Panel class="ParentalEnableCodeEntry" >
-					<Label text="#Parental_Enter_EnableCode" />
-					<TextEntry class="ParentalEnableCodeEntry" id="EnableCode"
-							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
-							   undohistory="enabled" />
-				</Panel>
-				
+			<Panel class="ParentalSetEnableCodeDialog BackFamilyGroundImage">
+				<Label id="Instructions" text="#Parental_Set_EnableCode" />
+				<Panel class="Spacer" />
+				<Label text="#Parental_Enter_EnableCode" />
+						<TextEntry class="ParentalEnableCodeEntry" id="EnableCode"
+								   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+								   undohistory="enabled" />
 				<Label id="ErrorText" text="#Parental_Wrong_EnableCode" class="ParentalSetEnableCodeError" />
 			</Panel>
-
-
 		</Panel>
-
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button selectionpos="1.0,2.0" class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#WizardButton_Next" />

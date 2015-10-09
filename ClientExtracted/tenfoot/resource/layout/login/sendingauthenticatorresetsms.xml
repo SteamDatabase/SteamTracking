@@ -6,12 +6,13 @@
 	</styles>
 
 	<ChangingPasswordWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#LostAuthenticator_Title" />
-		<Label class="WizardChildDescription" text="#LostAuthenticator_Working" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#LostAuthenticator_Working" />
 
-		<Panel id="ThrobberContainer">
-			<Panel class="Throbber" />
-		</Panel>
+		  <Panel id="ThrobberContainer">
+		    <LoadingThrobber id="Throbber" />
+      </Panel>
+    </Panel>
 
 	</ChangingPasswordWizardChild>
 

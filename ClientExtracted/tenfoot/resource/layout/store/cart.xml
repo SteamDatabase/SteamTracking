@@ -15,7 +15,6 @@
 			</Panel>
 			<Panel class="CartSection">
 				<Panel class="CheckoutBodyLeftColumn">
-					<Panel class="HorizontalRule" />
 					<Panel id="LineItems" />
 					<Panel class="CartSubtotalSection">
 						<Panel id="CouponTotalRow">
@@ -31,19 +30,15 @@
 				<Panel class="VerticalRule" />
 				<Panel class="CheckoutBodyRightColumn">
 					<Label class="CartInstructions" text="#Store_Cart_Instructions" />
-					<Panel class="HorizontalRule" />
 					<Button id="PurchaseForSelfBtn" onactivate="PurchaseForSelf()">
 						<Label text="#Store_Cart_PurchaseForSelf" />
 					</Button>
-					<Panel class="HorizontalRule" />
 					<Button id="PurchaseForGiftBtn" onactivate="PurchaseAsGift()">
 						<Label text="#Store_Cart_PurchaseAsGift" />
 					</Button>
-					<Panel class="HorizontalRule" />
 					<Button id="ContineShoppingBtn" onactivate="StoreCloseCheckout( true )">
 						<Label text="#Store_Cart_ContinueShopping" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 			</Panel>
 		</Panel>

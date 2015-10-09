@@ -7,18 +7,16 @@
 	</styles>
 
 	<SettingsPanelAudio_Card class="WizardChild" defaultfocus="Card" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#SettingsAudio_Card" />
+		<Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsAudio_Card_Information" />
+		  <Panel class="Spacer"/>
 
-
-		<Label class="SettingsCallout LongDesc" text="#SettingsAudio_Card_Information" />
-		<Panel class="Spacer"/>
-
-		<Panel class="FlowDown" tabindex="auto" selectionpos="auto">
-			<Label class="SettingsCallout LongDesc" text="#SettingsAudio_Card_ToDo" />
-			<Panel class="Spacer"/>
-			<DropDown class="AudioDropDown_Wiz" id="Card" />
-		</Panel>
+		  <Panel class="FlowDown" tabindex="auto" selectionpos="auto">
+			  <Label class="SettingsCallout LongDesc" text="#SettingsAudio_Card_ToDo" />
+			  <Panel class="Spacer"/>
+			  <DropDown class="AudioDropDown_Wiz" id="Card" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

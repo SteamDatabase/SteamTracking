@@ -1,0 +1,34 @@
+/* Requires msgbox.css.. so add that first */
+
+//
+// Friends Search dialog
+//
+FriendsSearchDialog
+{
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+
+	animation-name: msg-box-appear;
+	animation-duration: MessageBoxAnimationDuration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: 1;
+}
+
+FriendsSearchDialog.Destructing
+{
+	opacity: 0.0;
+
+	animation-name: msg-box-disappear;
+	animation-duration: MessageBoxAnimationDuration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: 1;
+}
+
+.DialogRegion
+{
+	// this is never seen, and only present to trigger the text input handler
+	width: 0px;
+	height: 0px;
+	opacity: 0.0;
+}

@@ -352,6 +352,14 @@ MainMenu.StackDepth3 .HomeGlow
 	margin-bottom: 8px;
 }
 
+#HR4
+{
+	margin-top: 0px;
+	width: 1200px;
+	horizontal-align: center;
+}
+
+
 .SteamUpdated .InboxButtonImage
 {
 	background-image: url( "file://{images}/icon_steam_update.png" );
@@ -657,11 +665,11 @@ MainMenu.StackDepth3 .HomeGlow
 {
 	horizontal-align: center;
 	//vertical-align: center;
-	margin-top: 276px;
+	margin-top: 200px;
 	margin-left: -64px;
 	font-size: 33;
 	background-color: #00000000;
-	height: fit-children;
+	height: 388px;
 	width: 2048px;
 	z-index: MainMenuZIndex;
   overflow:noclip noclip;
@@ -789,6 +797,14 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	box-shadow: none;
 }
 
+.Button.TopRowButton:Focus
+{
+	background-color: #1c486900;
+	box-shadow: none;
+	border-radius: 8px;
+
+}
+	
 .Button:hover
 {	
 	background-color: #15a4d5;
@@ -938,7 +954,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 .TopRowButton
 {
-	flow-children: down;
+	flow-children: none;
 	width: 96px;
 	height: 96px;
 	margin-left: 8px;
@@ -946,6 +962,40 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	vertical-align: center;
 	padding: 0px;
 }
+
+Label.TopRowCounter 
+{
+	background-color: #40d2ff;
+	color:#0d273bff;
+	text-align: center;
+	//font-size: 16px;
+	width: 32px;
+	height: 32px;
+    transform: translatex(32px) translatey(60px);
+	padding-top: -2px;
+	border-radius: 32px;
+	opacity: 1.0;
+	transition-duration: 0.0s;
+}
+
+.TopRowButton:focus
+{
+//opacity: 0.0;
+//pre-transform-scale2d: 0.5;
+padding: 16px;
+}
+
+
+.TopRowButton:focus Label.TopRowCounter 
+{
+padding-top: -2px;
+//margin: 8px;
+transform: translatex(22px) translatey(32px);
+pre-transform-scale2d: 0.8;
+
+
+}
+
 
 .EdgeButton
 {
@@ -975,12 +1025,12 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 .Button.EdgeButton Label
 {
-	background-color: #0C203766;
+	//background-color: #0C203766;
 	height: 52px;
 	margin-bottom: 8px;
 	padding: -2px;
 	font-size: 48px;
-	//transform: translatey(-5px);
+//	transform: translatey(0px);
 	
 	transition-property: opacity, transform;
 	transition-duration: 0.2s;
@@ -1206,9 +1256,6 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	background-color: #0C203700;
 	transform: translatey(-5px);
 
- // opacity: 0.0;
-
- // transform: translatey(64px);
 	transition-property: color, opacity, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.1s;
 	transition-timing-function: linear;
@@ -1224,19 +1271,85 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	transform: translatey(0px);
 	
 }
-.Button .TriggerRow
+
+
+
+#MenuRow .TriggerRowLeft
 {
 	width: 100px;
-	height: 60px;
-	border-radius: 12px;
-	padding-top: 4px;
-	opacity:1.0;
+	height: 48px;
+	background-color: #14c4f933;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
 	
+	padding-top: 5px;
+	padding-right: 8px;
+	color: #00000099;
+    margin: 0px;
+    text-align: right;
+    z-index: 4;
+
+	transform: translatey(155px) translatex(18px);
 	transition-property: opacity;
 	transition-duration: 0.1s, 0.1s !immediate;
 	transition-timing-function: linear;
 	
+	opacity: 0.0;
 }
+
+#MenuRow .TriggerRowRight
+{
+	width: 100px;
+	height: 48px;
+	background-color: #14c4f933;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	
+	padding-top: 5px;
+	padding-left: 8px;
+	color: #00000099;
+    margin: 0px;
+    text-align: left;
+    z-index: 4;
+	horizontal-align: right;
+	transform: translatey(155px) translatex(-18px);
+	transition-property: opacity;
+	transition-duration: 0.1s, 0.1s !immediate;
+	transition-timing-function: linear;
+	
+	opacity: 0.0;
+}
+
+
+
+#MenuRow:descendantfocus .TriggerRowLeft
+{
+	Opacity: 1.0;
+}
+
+#MenuRow:descendantfocus .TriggerRowRight
+{
+	Opacity: 1.0;
+}
+
+.MainMenuRowLabel .TriggerRowLeft:focus
+{
+	Opacity: 1.0;
+}
+
+#MenuRow:descendantfocus .EdgeButtonRight:focus  .MainMenuRowLabel
+{
+	transform: translatey(-5px) translatex(0px);
+}
+
+
+#MenuRow:descendantfocus .EdgeButtonLeft:focus  .MainMenuRowLabel
+{
+	transform: translatey(-5px) translatex(0px);
+}
+
+
+
 
 .Button .TriggerRowName
 {
@@ -1249,7 +1362,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 {
 
 	opacity:1.0;
-	  transform: translatey(-5px) translatex(0px);
+	  //transform: translatey(-8px) translatex(0px);
 
 }
 
@@ -1271,7 +1384,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	horizontal-align: center;
 	vertical-align: center;
 	margin: 0px;
-  transform: translatey(-18px);
+    transform: translatey(-18px);
 	wash-color: ui_primary_color;
 	
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
@@ -1447,7 +1560,7 @@ InboxMenu #SystemIMSButton
 	visibility: collapse;
 }
 
-InboxMenu.ControllerPresent #ControllerBatteryButton,
+InboxMenu.BatteryVisible #ControllerBatteryButton,
 InboxMenu.SystemIMs #SystemIMSButton
 
 {
@@ -1928,7 +2041,7 @@ Button.Locked #ParentalLockImageLocked
 	width: 100%;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
 	flow-children: right;
-  opacity:0.7;
+	opacity:0.7;
   
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.3s, 0.3s !immediate;
@@ -1945,34 +2058,71 @@ Button.Locked #ParentalLockImageLocked
 
 MainMenu.DeletingWelcome #WelcomePanel
 {
-	transform: translatey( 600px );
+	transform: translatey( 590px );
 	visibility: visible;
 	opacity: 0.0;
 }
 
+MainMenu.BelowTheFoldClosed #WelcomePanel:hover
+{
+	box-shadow: box_shadow_mid_color -4px -4px 8px 8px;
+}
+
 MainMenu.BelowTheFoldClosed #WelcomePanel
 {
-	transform: translatey( 600px );
+	width:87%;
+	horizontal-align: center;
+	flow-children:down;
+	border-radius: 8px;
+	box-shadow: none;
+	opacity: 0.7;
+	margin-bottom: 0; 
+
+	transform-origin: 0% 0% parent-relative;
+	transform: translateY( 590px ) translateZ( -64px );
+	transition-property: opacity, transform, box-shadow;
+	transition-duration: PageTransitionTimeOff;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
 {
-	transform: translatey( 570px );
-  opacity:1.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.2s, 0.2s !immediate;
-	transition-timing-function: linear;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e2036ff ), color-stop( 0.5, #0C3251ff ),to( #0e2036ff ) );	
-	box-shadow: #eeeeeeff -4.5px -4.5px 6px 9px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #b6e1faff;
+	background-color: #2A5D7C00 ;
+	height: fit-children;
+	margin-bottom: 0; 
+	horizontal-align: center;
+	
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	
+	opacity: 1.0;
+	opacity-mask: none;
+	transform: translateY( 590px ) translateZ( 0px );
+	transition-property: opacity, transform, box-shadow, background-color;
+	transition-duration: PageTransitionTimeOff; 
 }
 
 MainMenu.BelowTheFoldOpen #WelcomePanel
 {
-	transform: none;
+	transform: translateY( 0px ) translateZ( 0px );
+	horizontal-align: center;
 	opacity:1.0;
+	padding-bottom: 256px;
+	width:100%;
+	
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e2036ff ), color-stop( 0.5, #0C3251ff ),to( #0e2036ff ) );	
 	overflow: clip scroll;
 	height: fit-children;
+	transition-property: transform, box-shadow, background-color;
+	transition-duration: PageTransitionTimeOff;
 }
 
 #ProfileNameWrapper

@@ -5,12 +5,13 @@
 	</styles>
 
 	<ChangingPasswordWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#AccountRecovery_SmsError_Title" />
-		<Label class="WizardChildDescription" text="#AccountRecovery_SmsError_Desciption" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#AccountRecovery_SmsError_Desciption" />
 
-		<Panel id="ErrorContainer">
-			<Label class="WizardChildDescription" id="ErrorLabel" />
-		</Panel>
+		  <Panel id="ErrorContainer">
+			  <Label class="WizardChildDescription" id="ErrorLabel" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonTryAgain" onactivate="ChangePasswordFailTryAgain()">

@@ -112,10 +112,6 @@
 								<Label id="SharingHeader" class="DataHeader" text="#Library_Details_SharingHeader"/>
 								<Label id="SharingValue" class="DataValue" text="#Library_Details_SharingUser"/>
 							</Panel>
-		
-							<Panel id="GameRequires" class="AppMiscHeader">
-								<Label id="GameRequiresLabel" text="#Library_Details_GameRequiresController" />
-							</Panel>
 						</Panel>
 					</Panel>
 	

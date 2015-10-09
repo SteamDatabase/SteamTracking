@@ -12,15 +12,13 @@
 				<!-- main panel -->
 				<Label class="SettingsValue" text="#Parental_Set_Success_Title" />
 				<Label text="#Parental_Set_Success_Instr" />
-				
-
 				<Panel id="ParentIcons">
 					<Panel class="ParentIcons2">
 						<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 						<Label class="SettingsSuccessSubtitle" text="#Parental_Set_Success_FamilyMode" />
 					</Panel>
 					<Panel class="ParentIcons2">
-						<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageUnLocked" src="file://{images}/unlocked_acct.png" />
 						<Label class="SettingsSuccessSubtitle" text="#Parental_Set_Success_ParentMode" />
 					</Panel>
 				</Panel>

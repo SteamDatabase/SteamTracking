@@ -1178,6 +1178,7 @@
  R typeinfo name for CVideoPlayerManager
  R typeinfo name for CVideoPlayerManager::CVideoThread
  R typeinfo name for CVideoWebMCuesParser
+ R typeinfo name for CWSASendToHelper
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemHTTPClientRequest
  R typeinfo name for CWorkItemNetEncryptionHandshakeEncrypt

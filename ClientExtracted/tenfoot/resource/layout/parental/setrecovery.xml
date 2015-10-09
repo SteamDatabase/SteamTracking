@@ -8,36 +8,30 @@
 
 	<ParentalSetRecoveryChild class="WizardChild" tabindex="auto" selectionpos="auto">
 		<Panel class="SettingsBottomPanel">
-      <Panel class="SettingsContent">
 			<!-- main panel -->
-			<Label id="SetRecoveryLine1" text="#Parental_Set_Recovery1" class="SettingsBody" />
-			<Label id="SetRecoveryLine2" text="#Parental_Set_Recovery2" class="SettingsBody" />
-
-			<Panel class="ParentalSetRecoveryDialog">
-				<Panel class="ParentalRecoveryEmailEntry" >
-					<Label text="#Parental_Enter_RecoveryEmail" />
-					<TextEntry class="ParentalRecoveryEmailEntry" id="Email"
-							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
-							   undohistory="enabled" />
-				</Panel>
+			<Panel class="ParentalSetRecoveryDialog BackFamilyGroundImage">
+				<Label text="#Parental_Set_Recovery1"/> 
+				<Label text="#Parental_Set_Recovery2"/> 
+				<Panel class="Spacer" />
+					<Panel class="ParentalRecoveryEmailEntry" >
+						<Label text="#Parental_Enter_RecoveryEmail" /> 
+						<TextEntry id="Email"
+								   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+								   undohistory="enabled" />
+					</Panel>
 			</Panel>
-      </Panel>
-					
-
 		</Panel>
-
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button selectionpos="1.0,2.0" class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#WizardButton_Next" />
-			</Button>
-			<Button selectionpos="2.0,2.0" class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#WizardButton_Back" />
-			</Button>			
-			<Button selectionpos="3.0,2.0" class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
-				<Label id="Label" text="#WizardButton_Cancel" />
-			</Button>
+				<Button selectionpos="1.0,2.0" class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+					<Label id="Label" text="#WizardButton_Next" />
+				</Button>
+				<Button selectionpos="2.0,2.0" class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+					<Label id="Label" text="#WizardButton_Back" />
+				</Button>			
+				<Button selectionpos="3.0,2.0" class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+					<Label id="Label" text="#WizardButton_Cancel" />
+				</Button>
 		</Panel>
-
 	</ParentalSetRecoveryChild>
 
 </root>

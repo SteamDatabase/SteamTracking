@@ -103,6 +103,11 @@ ControllerBindingsGordon.ScreenSaverMode
 	visibility: visible;
 }
 
+.HasMultipleActionSets.ShowBackgroundHelper #GameActionSets
+{
+	visibility: collapse;
+}
+
 .HasMultipleActionSets #TopHalfContainer
 {
 		height: 575px;
@@ -161,7 +166,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #HelperImageBG
 {
-	margin-top: 53px;
+	margin-top: 80px;
 	horizontal-align: left;
 	background-color: #102f4b;
 	
@@ -173,7 +178,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #HelperDescription
 {
-	margin-top: 53px;
+	margin-top: 80px;
 	horizontal-align: right;
 	background-color: #13354c; 
 	

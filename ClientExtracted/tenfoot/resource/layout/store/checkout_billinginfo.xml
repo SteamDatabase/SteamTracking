@@ -92,11 +92,9 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn" tabindex="1" selectionpos="1,0">
-				<Panel class="HorizontalRule" />
 				<Button id="ContinueBtn" class="AdvanceCheckout" tabindex="0" selectionpos="0,0" onactivate="BillingInfoComplete()">
 					<Label text="#Checkout_Continue" />
 				</Button>
-				<Panel class="HorizontalRule" />
 			</Panel>
 		</Panel>
 	</CheckoutBillingInfo>	

@@ -237,7 +237,8 @@
 @define store_details_wash: #163057aa;
 @define store_main_wash: #4eaedea0;
 @define store_module: gradient( linear, 0% 0%, 0% 100%, from( #30778c ), to( #12213d ) );
-@define store_transparent_module: gradient( linear, 0% 0%, 30% 100%, from( #2e8071CC ), to( #143f65CC ) );
+@define store_transparent_module: gradient( linear, 0% 0%, 30% 100%, from( #66993380 ), to( #33661580 ) );
+@define store_active_module: gradient( linear, 0% 0%, 100% 100%, from( #9ddb4fff ), to( #43871bff ) );
 
 //browser
 @define topbarbuttonbackground:  gradient( linear, 0% 0%, 0% 100%, from( #1b2629ff ), to( #13161aff ) );
@@ -958,6 +959,24 @@ TextTooltip.TooltipVisible
 	}
 }
 
+@keyframes 'purchase-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #9ddb4fff ), to( #43871bff ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #9ddb4fff ), to( #d5ffbdff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #9ddb4fff ), to( #43871bff ) );
+	}
+}
+
 @keyframes 'main-button-glow-movement'
 {
 	0%
@@ -1030,6 +1049,33 @@ TextTooltip.TooltipVisible
 	100%
 	{
 		box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+}
+@keyframes 'purchase-button-glow-movement-no-fill'
+{
+	0%
+	{
+		box-shadow: #a3cf06 -4.5px -4.5px 18px 9px;
+	}
+
+	8%
+	{
+		box-shadow: #a3cf06 -4.5px -4.5px 18px 9px;
+	}
+
+	48%
+	{
+		box-shadow: #a3cf06 -1.5px -1.5px 6px 3px;
+	}
+
+	52%
+	{
+		box-shadow: #a3cf06 -1.5px -1.5px 6px 3px;
+	}
+
+	100%
+	{
+		box-shadow: #a3cf06 -4.5px -4.5px 18px 9px;
 	}
 }
 
