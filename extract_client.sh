@@ -40,7 +40,7 @@ done
 
 echo Dumping protobufs
 
-#mono ProtobufDumper/ProtobufDumper.exe ubuntu/ubuntu12_32/steamui.so ../Protobufs/ > /dev/null
+mono ProtobufDumper/ProtobufDumper.exe bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
 #
@@ -53,6 +53,8 @@ echo Dumping buildbot paths
 
 for i in $(find bins/ -name '*.dylib');
 do
+	echo "Dumping $i"
+	
 	name=$(basename "$i" .dylib);
 	
 	strings "$i" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
