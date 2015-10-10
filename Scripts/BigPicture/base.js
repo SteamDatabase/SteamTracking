@@ -480,6 +480,55 @@ function GetCurrencyCode( currencyId )
 	return 'Unknown';
 }
 
+
+/////////////////////////////////////////////////
+// Simple wrappers to create a modal window and handle closing
+/////////////////////////////////////////////////
+function ShowModalDialog( strChildren )
+{
+	var pMainMenu = $.TenfootController( $.GetContextPanel() ).AccessMainMenu();
+	var pPanel = $.CreatePanelWithCurrentContext( pMainMenu );
+
+	pPanel.SetPanelEvent( 'oncancel', function() { CloseModalDialog( pPanel ); } );
+	pPanel.AddClass( 'NxModalBackground' );
+	pPanel.BCreateChildren( strChildren );
+
+	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( pPanel, '' );
+
+	return pPanel;
+}
+
+function IsModalDialogClosing( pPanel )
+{
+	if ( !pPanel )
+		return true;
+
+	return pPanel.BHasClass( 'Destructing' );
+}
+
+function CloseModalDialog( pPanel )
+{
+	pPanel.AddClass( 'Destructing' );
+	$.DispatchEvent( 'MessageBoxClose', pPanel );
+	pPanel.DeleteAsync( 0.15 );
+}
+
+function ShowWebModalDialog( strURL, strTitle )
+{
+	
+	var pModal = ShowModalDialog( "\r\n\t\t<VerticalScrollForwarding class=\"NxModalFrame NxWebModal\" selectionpos=\"auto\" tabindex=\"auto\" target=\"WebModalHTML\" acceptsfocus=\"true\">\r\n\t\t\t<Label id=\"WebModalTitle\" class=\"NxWebModalTitle\" \/>\r\n\t\t\t<HTML id=\"WebModalHTML\" embedded=\"true\" acceptsinput=\"true\" \/>\r\n\t\t<\/VerticalScrollForwarding>" );
+
+	var pTitle = pModal.FindChildInLayoutFile( 'WebModalTitle' );
+	pTitle.text = strTitle;
+
+	var pHTML = pModal.FindChildInLayoutFile( 'WebModalHTML' );
+	pHTML.SetURL( strURL );
+	pHTML.SetDontAllowOverScroll( true );
+
+	return pModal;
+}
+
+
 /*
  * Display a generic popup panel in community
  */
@@ -549,7 +598,7 @@ function CloseBigPicturePopup()
 
 function SetupPopupForPanel( panelid, popup )
 {
-	var panel = $(panelid);
+	var panel = ToPanel(panelid);
 
 	var offsets = ComputeXAndY( panel );
 	DebugOut( "Main width = " + offsets.mainwidth + ", Main height = " + offsets.mainheight );
@@ -594,104 +643,110 @@ function ComputeXAndY( panel )
 	return { x: x, y: y, mainwidth: mainwidth, mainheight: mainheight };
 }
 
-function DisplayYouTubeVideo( videoURL, panelid )
+function ShowPopupMenu( rgOptions, rgSettings )
 {
-	DebugOut( $.GetContextPanel().id + ": DisplayYouTubeVideo( " + videoURL + ", " + panelid + " )" );
+	if( !rgSettings )
+		rgSettings = {};
 
-	var layout = '<root> \
-					<styles> \
-						<include src="file://{resources}/styles/steamstyles.css" /> \
-						<include src="file://{resources}/styles/community/community.css" /> \
-						<include src="file://{resources}/styles/movie.css" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
-					</styles> \
-					<scripts> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-					</scripts> \
-					<Panel oncancel="CloseBigPicturePopup();" class="CommunityAppHubPopup CommunityAppHubScreenshotPopup"> \
-						<Button id="CommunityAppHubPopupButton" > \
-							<HTML id="CommunityAppHubPopupVideoBrowser" embedded="true" /> \
-						</Button> \
-					</Panel> \
-				</root>';
+	var rgAdditionalCSSIncludes = rgSettings.additional_css_includes ? rgSettings.additional_css_includes : [];
+	var strAdditionalCSSIncludes = rgAdditionalCSSIncludes.join("\n");
 
-	DisplayBigPicturePopup(
-		layout,
-		panelid,
-		function ( bSuccess, panelid, popup ) {
-			if ( bSuccess )
-			{
-				var throbber = popup.FindChildTraverse( "Throbber" );
-				var browser = popup.FindChildTraverse( "CommunityAppHubPopupVideoBrowser" );
-				var button = popup.FindChildTraverse( "CommunityAppHubPopupButton" );
-
-				button.style.transform = 'translate3d( ' + popup.GetAttributeInt( "x", 0 ) + 'px, ' + popup.GetAttributeInt( "y", 0 ) + 'px, 0px )';
-				button.style.preTransformScale2d = '0.0';
-
-				if ( browser )
-				{
-					browser.SetURL( videoURL );
-
-					$.RegisterEventHandler( 'PanelLoaded', browser, function()
-					{
-						DebugOut( "Browser loaded" );
-
-						throbber.AddClass( "LoadComplete" );
-						{
-							button.style.opacity = 1;
-							button.style.preTransformScale2d = '1.0';
-							button.style.transform='translatex( 0px )';
-						};
-
-						$.DispatchEventAsync( 0.1, 'SetInputFocus', button );
-
-						$.RegisterKeyBind( button, 'pad_a,steampad_a', function() {	browser.RunJavascript( "toggleVideoPlayback();" ); } );
-						$.RegisterFooterButton( button, "pad_a", "PLAY/PAUSE" );
-
-						$.RegisterKeyBind( button, 'pad_ltrigger,steampad_ltrigger', function() {	browser.RunJavascript( "rewindVideo();" ); } );
-						$.RegisterKeyBind( button, 'pad_ltrigger(up),steampad_ltrigger(up)', function() {	browser.RunJavascript( "stopSeek();" ); } );
-
-						$.RegisterKeyBind( button, 'pad_rtrigger,steampad_rtrigger', function() { browser.RunJavascript( "fastForwardVideo();" ); } );
-						$.RegisterKeyBind( button, 'pad_rtrigger(up),steampad_rtrigger(up)', function() { browser.RunJavascript( "stopSeek();" ); } );
-					} );
-				}
-			}
-		}
-	);
-}
-
-function ShowPopupMenu( rgOptions )
-{
-	var layout = "<root>\r\n\t\t\t\t\t<styles>\r\n\t\t\t\t\t\t<include src=\"file:\/\/{resources}\/styles\/steamstyles.css\" \/>\n\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/shared\/css\/bigpicture\/basestyles.css?v=valveisgoodatcaching\" \/>\n\r\n\t\t\t\t\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/css\/bigpicture\/profile.css?v=valveisgoodatcaching\" \/>\r\n\t\t\t\t\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/css\/bigpicture\/apphub.css?v=valveisgoodatcaching\" \/>\r\n\t\t\t\t\t<\/styles>\r\n\t\t\t\t\t<scripts>\r\n\t\t\t\t\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/bigpicture\/base.js?v=valveisgoodatcaching&amp;l=english\" \/>\r\n\t\t\t\t\t<\/scripts>\r\n\t\t\t\t\t<Panel oncancel=\"CloseBigPicturePopup();\" class=\"MenuPopup\">\r\n\t\t\t\t\t\t<Panel class=\"MenuPopupButtonContainer\" selectionposboundary=\"vertical\" >\r\n\t\t\t\t\t\t<\/Panel>\r\n\t\t\t\t\t<\/Panel>\r\n\t\t\t\t<\/root>";
+	var layout = '<root>' +
+				'	<styles>' +
+				'		<include src="file://{resources}/styles/steamstyles.css" />' +
+				'		<include src="https://steamcommunity-a.akamaihd.net/public/shared/css/bigpicture/basestyles.css" />' +
+				strAdditionalCSSIncludes +
+				'	</styles>' +
+				'	<scripts>' +
+				'		<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js" />' +
+				'	</scripts>' +
+				'	<Panel oncancel="CloseBigPicturePopup();" class="MenuPopup">' +
+				'		<Panel class="MenuPopupButtonContainer" selectionposboundary="vertical"  overscroll-y="150"  >' +
+				'		</Panel>' +
+				'	</Panel>' +
+				'</root>';
 
 	var popup = $.CreatePanel( 'Panel', $.TenfootController( $.GetContextPanel() ).AccessMainMenu(), 'CommunityAppHubPopup' );
-	popup.BLoadLayoutFromString( layout, true, false );
 
-	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( popup, '' );
-	var oContainer = popup.FindChildrenWithClassTraverse("MenuPopupButtonContainer")[0];
-
-	for( var i=0; i<rgOptions.length; i++)
+	$.RegisterEventHandler('PanelLoaded', popup, function()
 	{
-		var oButton = $.CreatePanel( 'Button', oContainer, '' );
-		//oButton.AddClass('Button');
+		var oContainer = popup.FindChildrenWithClassTraverse("MenuPopupButtonContainer")[0];
+		var nOptions = 0;
 
-		oButton.tabindex = "auto";
-		oButton.selectionpos_y = "auto";
+		for ( var i = 0; i < rgOptions.length; i++ )
+		{
+			var oButton;
+			if ( rgOptions[i].label )
+			{
+				oButton = $.CreatePanel('Button', oContainer, '');
+				oButton.AddClass('Button');
 
-		var oLabel = $.CreatePanel( 'Label', oButton, 'MenuPopup_' + i );
+				oButton.tabindex = "auto";
+				oButton.selectionpos_y = "auto";
 
-		oLabel.html = ( rgOptions[i].html == true );
-		oLabel.text =  rgOptions[i].label ;
-		$.RegisterEventHandler('Activated', oButton, rgOptions[i].onactivate);
+				var oLabel = $.CreatePanel('Label', oButton, 'MenuPopup_' + i);
 
-	}
 
-	$.Schedule( 0.01, function() {
-		popup.AddClass('Visible');
+				oLabel.html = ( rgOptions[i].html == true );
+				oLabel.text = rgOptions[i].label;
+
+				nOptions++;
+			}
+			else if ( rgOptions[i].content_xml )
+			{
+				var layout = rgOptions[i].content_xml ;
+
+				var strTag = rgOptions[i].wrapper_tag ? rgOptions[i].wrapper_tag : 'Button';
+				var rgClasses = rgOptions[i].css_classes ? rgOptions[i].css_classes : [];
+
+				oButton = $.CreatePanel(strTag, oContainer, '');
+				if ( strTag == 'Button' )
+					oButton.AddClass('Button');
+
+				if( rgClasses.length > 0 )
+					for( var j=0; j<rgClasses.length; j++ )
+						oButton.AddClass(rgClasses[j]);
+
+				oButton.tabindex = 'auto';
+				oButton.selectionpos_y = 'auto';
+				oButton.BCreateChildren(layout);
+
+				//oButton.AddClass('Button');
+				nOptions++;
+			}
+			else if ( rgOptions[i].content_panel )
+			{
+				rgOptions[i].content_panel.SetParent(oContainer);
+				nOptions++;
+			}
+			else
+			{
+				$.Msg("Option has no label or content, skipping!");
+			}
+
+			if ( rgOptions[i].onactivate )
+				$.RegisterEventHandler('Activated', oButton, rgOptions[i].onactivate);
+
+
+		}
+
+		if ( nOptions > 0 )
+		{
+			$.TenfootController($.GetContextPanel()).ShowModalDialog(popup, '');
+
+			$.Schedule(0.01, function ()
+			{
+				popup.AddClass('Visible');
+				popup.SetFocus();
+			});
+
+
+		}
+		else
+			CloseBigPicturePopup();
 	});
 
-	popup.SetFocus();
-
+	popup.LoadLayoutFromStringAsync( layout, true, false );
 }
 
 function Confirm(strTitle, strText, fnYes, fnNo)
@@ -709,6 +764,40 @@ function Confirm(strTitle, strText, fnYes, fnNo)
 		fnNo();
 	} );
 }
+
+function alert(strText, strTitle, fnOK)
+{
+	if( !strTitle )
+		strTitle = '';
+
+	if( !fnOK )
+		fnOK = function(){ CloseBigPicturePopup(); };
+
+	var pMsgBox = $.TenfootController( $.GetContextPanel() ).ShowMessageBox(
+		$.TenfootMsgBox.k_EMsgBoxButton_OK,
+		strTitle,
+		strText );
+	$.RegisterEventHandler( 'ButtonOK', pMsgBox, function()
+	{
+		fnOK();
+	} );
+}
+
+function EscapePanoramaText( strText )
+{
+	return strText.replace(/&/g, "&amp;")
+					.replace(/</g, "&lt;")
+					.replace(/>/g, "&gt;")
+					.replace(/"/g, "&quot;")
+					//.replace(/'/g, "&#39;")
+					.replace(/\\/g, '\\\\\\\\')
+					.replace(/{/g, '\\\\{')
+					.replace(/}/g, '\\\\}')
+					.replace(/#/g, '\\\\#');
+
+	//str_replace( array( '\\', '{', '}', '#' ), array( '\\\\\\\\', '\\\\{', '\\\\}', '\\\\#' ), EscapeHTML( $string ) );
+}
+
 var CPanelUtils = {
 	MoveToTop: function( oPanel )
 	{
@@ -728,7 +817,214 @@ var CPanelUtils = {
 	{
 		while( oSource.GetChildCount() > 0 )
 			oSource.GetChild(0).SetParent( oTarget );
+	},
+	GetNextSibling: function( oSource )
+	{
+		var oParent = oSource.GetParent();
+		var rgChildren = oParent.Children();
+		for( var i=0; i<rgChildren.length; i++ )
+		{
+			if( rgChildren[i] == oSource && i+1 < rgChildren.length )
+				return rgChildren[i+1];
+		}
+	},
+	GetPreviousSibling: function( oSource )
+	{
+		var oParent = oSource.GetParent();
+		var rgChildren = oParent.Children();
+		for( var i=0; i<rgChildren.length; i++ )
+		{
+			if( rgChildren[i] == oSource && i-1 >= 0)
+				return rgChildren[i-1];
+		}
+	},
+	GetLastChild: function( oSource )
+	{
+		if ( oSource.GetChildCount() < 1 )
+			return null;
+
+		return oSource.GetChild( oSource.GetChildCount() - 1 );
 	}
 };
+
+function ToPanel( value )
+{
+	if ( typeof value === 'string' )
+	{
+		if( value[0] == '#' )
+			return $( value);
+		else
+			return $('#' + value);
+	}
+
+	return value;
+}
+
+var CNXNavigation = function( oNavigationContainer, oTarget, rgOptions )
+{
+	this.oNavigationContainer = oNavigationContainer;
+	this.oTargetContainer = oTarget;
+
+	if( rgOptions )
+	{
+		this.oThrobber = rgOptions.oThrobber || false;
+	}
+
+	this.eLastDirection = k_ELastDirection_None;
+
+	this.Init();
+}
+
+var k_ELastDirection_None = 0;
+var k_ELastDirection_Up = 1;
+var k_ELastDirection_Down = 2;
+
+CNXNavigation.prototype.Init = function()
+{
+	var onFocus = this.onFocusButton.bind(this);
+	var onMoveUp = this.onMoveUp.bind(this);
+	var onMoveDown = this.onMoveDown.bind(this);
+
+	$.Each(this.oNavigationContainer.Children(), function( oPanel )
+	{
+		$.RegisterEventHandler( 'MoveUp', oPanel, onMoveUp );
+		$.RegisterEventHandler( 'MoveDown', oPanel, onMoveDown );
+	});
+
+	$.RegisterEventHandler( 'InputFocusSet', this.oNavigationContainer, onFocus );
+
+	var _this = this;
+	$.RegisterEventHandler( 'Cancelled', this.oTargetContainer, function( )
+	{
+		_this.oNavigationContainer.SetFocus();
+		return true;
+	});
+
+	// set up hover events for the navigation container and the target container, so
+	// that the proper panels are brought to the forefront when the user uses a mouse
+	SetupPanelHoverEvents( this.oNavigationContainer, $.GetContextPanel(), 'MenuHover' );
+	SetupPanelHoverEvents( this.oTargetContainer, $.GetContextPanel(), 'ContentHover' );
+}
+
+CNXNavigation.prototype.onMoveUp = function( oPanel )
+{
+	this.eLastDirection = k_ELastDirection_Up;
+}
+
+CNXNavigation.prototype.onMoveDown = function( oPanel )
+{
+	this.eLastDirection = k_ELastDirection_Down;
+}
+
+CNXNavigation.prototype.onFocusButton = function( oPanel )
+{
+	this.DoFocus( ToPanel( oPanel ) );
+}
+
+CNXNavigation.prototype.DoFocus = function( oNavButton )
+{
+	var strTargetID = oNavButton.GetAttributeString('nxnav-target', '');
+	var strURLSource = oNavButton.GetAttributeString('nxnav-url-source', '');
+
+	if ( !strTargetID )
+		return;
+
+	$.Each(this.oNavigationContainer.Children(), function( oPanel )
+	{
+		oPanel.checked = false;
+	});
+	oNavButton.checked = true;
+
+	var oTarget = $('#' + strTargetID);
+	if( oTarget )
+	{
+		this.ShowPanel( oTarget );
+	}
+	else if( strURLSource ) // Create a new panel and load a URL into it.
+	{
+		// Create main panel
+		var oTarget = $.CreatePanel( 'Panel', this.oTargetContainer, strTargetID );
+		oTarget.AddClass('NxRightContentContainer');
+		oTarget.AddClass('Loading');
+
+		// Add throbber
+		oTarget.BCreateChildren( '<Panel class="NxNavigationLoadingThrobber"><Panel><Label class="StdLabelMed" text="Loading" /><LoadingThrobber/></Panel></Panel>' );
+		// Show it...
+		this.ShowPanel( oTarget );
+
+		// Now make the request.
+		var _this = this;
+		$.AsyncWebRequest( strURLSource,
+			{
+				type: 'GET',
+				success: function( strXML )
+				{
+					oTarget.LoadLayoutFromStringAsync(strXML, true, false);
+				},
+				complete: function( )
+				{
+					oTarget.RemoveClass('Loading');
+				},
+				failure: function( oTarget )
+				{
+					_this.ShowPanelError( oTarget );
+				}
+			}
+		);
+
+	}
+}
+
+
+
+CNXNavigation.prototype.ShowPanelError = function( oTarget )
+{
+	oTarget.BCreateChildren( '<Panel class="NxNavigationLoadingError"><Label class="StdLabelMed" text="Unable to contact the server, please try again later"></Label></Panel>' );
+}
+
+CNXNavigation.prototype.ShowPanel = function( oTarget )
+{
+	// First, hide other panels that aren't our target.
+	var instance = this;
+	$.Each(this.oTargetContainer.Children(), function( oPanel )
+	{
+		if( oPanel == oTarget )
+			return;
+
+		oPanel.AddClass('Animating');
+		oPanel.RemoveClass('Visible');
+
+	});
+
+	// Now show our panel
+
+	if( oTarget.BHasClass('Visible') )
+		return;
+
+	// Move our target panel to the top; this will ensure we get focus priority over the panel that's animating out
+	CPanelUtils.MoveToTop( oTarget );
+
+	// Clear style state...
+	oTarget.RemoveClass('Animating');
+	oTarget.RemoveClass('Up');
+	oTarget.RemoveClass('Down');
+	oTarget.RemoveClass('Visible');
+
+	switch( this.eLastDirection )
+	{
+		case k_ELastDirection_Up:
+			oTarget.AddClass('Up');
+			break;
+
+		case k_ELastDirection_Down:
+			oTarget.AddClass('Down');
+			break;
+	}
+
+	oTarget.AddClass('Animating');
+	oTarget.AddClass('Visible');
+	oTarget.RemoveClass('Up');
+	oTarget.RemoveClass('Down');
+}
 
 

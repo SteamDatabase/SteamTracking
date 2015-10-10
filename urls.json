@@ -273,6 +273,11 @@
 "Styles/BigPicture/profile.css"                  : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?__TIME__",
 "Styles/BigPicture/profile_friendactivity.css"   : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile_friendactivity.css?__TIME__",
 
+"Styles/BigPicture/store.css"                    : "https://steamstore-a.akamaihd.net/public/css/bigpicture/store.css?__TIME__",
+"Styles/BigPicture/subscription.css"             : "https://steamstore-a.akamaihd.net/public/css/bigpicture/subscription.css?__TIME__",
+"Styles/BigPicture/home.css"                     : "https://steamstore-a.akamaihd.net/public/css/bigpicture/home.css?__TIME__",
+"Styles/BigPicture/application.css"              : "https://steamstore-a.akamaihd.net/public/css/bigpicture/application.css?__TIME__",
+
 //
 // Mobile CSS (mixed)
 //
@@ -293,7 +298,7 @@
 //
 // Big Picture JS
 //
-"Scripts/BigPicture/base.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?__TIME__&l=english",
+"Scripts/BigPicture/base.js"                     : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?__TIME__&l=english",
 "Scripts/BigPicture/community.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/community.js?__TIME__&l=english",
 "Scripts/BigPicture/community_common.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/community_common.js?__TIME__&l=english",
 "Scripts/BigPicture/economy.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/economy.js?__TIME__&l=english",
@@ -301,6 +306,7 @@
 "Scripts/BigPicture/market.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/market.js?__TIME__&l=english",
 "Scripts/BigPicture/market_common.js"            : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/market_common.js?__TIME__&l=english",
 "Scripts/BigPicture/profile.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/profile.js?__TIME__&l=english",
+"Scripts/BigPicture/home.js"                     : "https://steamstore-a.akamaihd.net/public/javascript/bigpicture/home.js?__TIME__&l=english",
 
 //
 // Steamworks CSS

@@ -1,0 +1,937 @@
+
+@define greyish_medium: #8f98a0;
+@define almost_white: #c7d5e0;
+@define green_in_page: #a3cf06;
+@define section_bg_color: #000000ff;
+@define purchase_options_height: 94px;
+@define app_warning_color: #f47b20;
+
+.NotImplemented
+{
+	font-size: 30px;
+	color: white;
+	horizontal-align: center;
+	margin-top: 300px;
+}
+
+.ApplicationPage
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ApplicationPageBody
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+	overflow: clip;
+}
+
+#LoadedContent
+{
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	padding-top: 30px;
+	padding-left: 20px;
+	margin-left: -22px;
+}
+#LoadedContent.Application {
+	width: 1700px;
+}
+
+.AppHeaderImage
+{
+	width: 390px;
+	height: 182px;
+	margin: 2px 0px 8px 10px;
+}
+
+.FlowDown
+{
+	flow-children: down;
+}
+
+
+////////////////////////////////////
+// Screenshot
+////////////////////////////////////
+#BGScreenshot
+{
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 3s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#BGScreenshot.Loaded
+{
+	opacity: 1.0;
+}
+
+.BackgroundScreenshotWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+#BackgroundScreenshot
+{
+	width: 100%;
+	height: 100%;
+	desaturation: 1.0;
+	opacity: 0.4;
+}
+
+#BGScreenshot.Loaded #BackgroundScreenshot
+{
+	animation-name: background-screenshot-ambient;
+	animation-duration: 14s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes 'background-screenshot-ambient'
+{
+	from
+	{
+		opacity: 0.4;
+		transform: translate3D( -15px, -10px, 40px );
+	}
+
+	50%
+	{
+		opacity: 0.2;
+	}
+
+	to
+	{
+		opacity: 0.4;
+		transform: translate3D( -60px, 0px, 80px );
+	}
+}
+
+.BackgroundOverlay
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+////////////////////////////////////
+// App details
+////////////////////////////////////
+#AppDetailsSection
+{
+	flow-children: down;
+	overflow: clip scroll;
+	padding-top: 40px;
+}
+
+
+// slideshow
+#AppSlideshow,
+#StoreSlideshowFocusHolder
+{
+	width: 824px;
+	height: 464px;
+}
+
+#StoreSlideshowContainer #AppSlideshow
+{
+	width: 100%;
+	height: 100%;
+	transform-origin: 0% 0%;
+
+	transition-property: transform;
+    transition-timing-function: bigpicture-ease-in-out;
+    transition-duration: 0.0s;
+}
+
+#StoreSlideshowContainer #AppSlideshow.Transitioning
+{
+	transition-duration: 0.3s;
+}
+
+#AppSlideshow > Image,
+#AppSlideshow > Movie,
+{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: 0.3s;
+}
+
+.SlideshowRightOfFocus
+{
+	transform: translateX( 100% );
+}
+
+#AppSlideshow > Image.SlideshowRightOfFocusImmediate,
+#AppSlideshow > Movie.SlideshowRightOfFocusImmediate,
+{
+	transform: translateX( 100% );
+	transition-property: transform !immediate;
+    transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: 0s;
+}
+
+.SlideshowLeftOfFocus
+{
+	transform: translateX( -100% );
+}
+
+
+// slideshow row
+.AppSlideshowRow
+{
+	width: 1900px;
+	padding: 0px 10px 10px 10px;
+	padding-top: 10px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	flow-children: right;
+	border-bottom: 1px solid #2f89bc33;
+	background-color: gradient( linear, 90% 90%, 90% 20%, from( #143f6559 ), to( #00000000 ) );
+	   //background-color: gradient( linear, 90% 90%, 90% 20%, from( #2d637f59 ), to( #143f6500 ) );
+}
+
+.AppSlideshowContainer
+{
+	background-color: transparent_module;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.AppSlideshowContainer:descendantfocus
+{
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+	background-color: action_module;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#AppSlideshow
+{
+	width: 824px;
+	height: 464px;
+}
+
+.NoTopMargin
+{
+	margin-top: 0px;
+}
+
+.AppWishlistButtons
+{
+	width: 100%;
+	flow-children: down;
+	vertical-align: bottom;
+}
+
+.AppWishlistButtons ToggleButton
+{
+	width: 100%;
+	height: 58px;
+	margin-top: 6px;
+	padding: 10px;
+	border-radius: 3px;
+
+	background-color: nontransparent_module;
+
+}
+
+.AppWishlistButtons ToggleButton:focus,
+.AppWishlistButtons ToggleButton:hover
+{
+	color: white;
+	background-color: action_module;
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.AppWishlistButtons ToggleButton Label
+{
+	margin: 0px 10px;
+}
+
+.AppWishlistButtons ToggleButton.AppWishlistStart
+{
+	margin-top: 0px;
+}
+
+.AppWishlistButtons ToggleButton .TickBox
+{
+	background-color: #2f89bc66;
+}
+
+.AppRightOfSlideshow
+{
+	width: 416px;
+	height: 100%;
+	margin-left: 15px;
+	flow-children: down;
+	color: #67c1f5ff;
+	font-size: 26px;
+}
+
+.AppSectionBox
+{
+	width: 100%;
+	padding: 10px;
+	background-color: transparent_module;
+	flow-children: right;
+	margin-bottom: 6px;
+	border-radius: 3px;
+}
+
+.AppSectionBox:focus,
+.AppSectionBox:hover
+{
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+	background-color: action_module;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+//
+// Reviews
+//
+
+.AppSectionBox.ReviewVotesOverview {
+	flow-children: down;	
+}
+
+.AppSectionBox.ReviewVotesOverview.Disabled {
+	background-color: disabled_module;
+}
+
+.ReviewVotesOverview Label {
+	vertical-align: center;
+}
+.AppSectionBox.ReviewVotesOverview.Disabled .AppSectionHeader {
+	color: #2d637f;
+	margin-bottom: 0px;
+}
+.AppSectionBox:focus .AppSectionHeader {
+	color: #ffffff;
+}
+
+.AppSectionBox .AppSectionHeader {
+	font-size: 28px;
+	color: brightblue;
+	font-weight: light;
+	margin-bottom: 6px;
+}
+
+
+.PositiveReviews .ReviewSummary
+{
+	color: #67c1f5ff;
+}
+
+.NegativeReviews .ReviewSummary
+{
+	color: #a34c2a;
+}
+.AppReviewScore_ctn,
+.AppReviewHeader_ctn {
+	flow-children: right;
+}
+
+.VotesTotal {
+	font-size: 28px;
+	color: medgray;
+	margin-left: 4px;
+	margin-bottom: 6px;
+	font-weight: light;
+}
+
+.VotesIcon
+{
+	vertical-align: center;
+	margin-right: 8px;
+}
+
+// tags
+.AppTags
+{
+	max-height: 124px;
+	flow-children: down;
+}
+
+.tags_ctn
+{
+	flow-children: right-wrap;
+	max-height: 58px;
+}
+
+.AppTags .tags_ctn Label
+{
+	margin-right: 20px;
+	font-size: 24px;
+	color: #c6d4df;
+}
+
+// categories
+.Categories {
+	flow-children: down;
+}
+
+.categories_ctn {
+	flow-children: right;
+}
+.AppCategoryIcons
+{
+	width: 52px;
+	height: 32px;
+}
+
+// purchase notes row
+.AppPurchaseNotesRow
+{
+	width: 1275px;
+	flow-children: down;
+}
+
+.AppPurchaseNotesRow .AppDetailsBox
+{
+	min-height: purchase_options_height;
+}
+
+.UnsupportedLanguageTitle
+{
+	color: app_warning_color;
+	font-size: 28px;
+}
+
+.UnsupportedLanguageDetails
+{
+	color: almost_white;
+	font-size: 26px;
+}
+
+.PurchaseNoteHTML
+{
+	color: almost_white;
+    font-size: 26px;
+}
+
+.PurchaseNoteHTML b
+{
+	color: app_warning_color;
+}
+
+.PurchaseNoteHTML strong
+{
+	font-weight: bold;
+}
+
+// purchase options row
+.AppDetailColumns
+{
+	margin-left: 10px;
+	flow-children: right;
+}
+
+.AppDetailsLeftColumn
+{
+	width: 844px;
+	margin-bottom: 130px;
+	flow-children: down;
+}
+
+.AppDetailsOptionsRow .AppDetailsLeftColumn,
+.AppDetailsOptionsRow .AppDetailsRightColumn,
+{
+	margin-bottom: 0px;
+}
+
+.AppDetailsRightColumn
+{
+	width: 416px;
+	margin-bottom: 130px;
+	margin-left: 15px;
+	flow-children: down;
+}
+
+.AppDetailsRow
+{
+	margin: 10px;
+	flow-children: right;
+}
+
+.AppDetailsBox
+{
+	width: 100%;
+	background-color: nontransparent_module;
+	padding: 10px 18px;
+	flow-children: down;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+.AppDetailsOptionsRow
+{
+	margin-bottom: 50px;
+}
+
+.AppDetailsOptionsRow .AppDetailsBox
+{
+	height: purchase_options_height;
+}
+
+.AppDetailsOptionsRow .AppDetailsRightColumn
+{
+	height: 100%;
+}
+
+.AppDetailsOptionsRow .AppNextInQueue
+{
+	vertical-align: bottom;
+}
+
+.AppDetailsBox:focus,
+.AppDetailsBox:hover
+{
+	color: white;
+
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+	background-color: action_module;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.AppDetailsBox.DownloadableContent
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #3e194299 ), to( #86499699 ) );
+}
+
+.AppDetailsBox.DownloadableContent:focus,
+.AppDetailsBox.DownloadableContent:hover
+{
+	color: white;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #86378f99 ), to( #e27cfc99 ) );
+	background-image: none;
+	background-size: 1px 1px;
+}
+
+
+.AppDetailsBox.FreePlayOption
+{
+	background-color: store_transparent_module;
+}
+
+.AppDetailsBox.FreePlayOption:focus,
+.AppDetailsBox.FreePlayOption:hover
+{
+	color: white;
+	background-color: store_active_module;
+	background-image: none;
+
+	box-shadow: #a3cf06 -4.5px -4.5px 16px 9px;
+	animation-name: purchase-button-glow-movement-no-fill;
+}
+
+.AppDetailsBox.FreePlayOption:focus .AppPurchaseHeader,
+.AppDetailsBox.FreePlayOption:hover .AppPurchaseHeader
+{
+	color: white;
+}
+
+.AppDLCTitle
+{
+	font-size: 28px;
+	color: #a670d3;
+}
+
+.AppDLCDetails
+{
+	font-size: 28px;
+	color: almost_white;
+}
+
+.AppDetailsBoxTitle
+{
+	font-size: 28px;
+	color: #67c1f5ff;
+	margin-bottom: 10px;
+	font-weight: light;
+}
+
+.AppDetailsBox:focus .AppDetailsBoxTitle
+{
+	color: white;
+}
+
+.AppPurchaseHeaderRow
+{
+	width: 100%;
+	flow-children: right;
+}
+
+.AppPurchaseHeader
+{
+	width: fill-parent-flow( 1.0 );
+	font-size: 28px;
+	color: green_in_page;
+	vertical-align: center;
+}
+
+.AppPriceOverviewRow
+{
+	flow-children: right;
+	color: greyish_medium;
+	font-size: 24px;
+}
+
+.AppPurchaseCount
+{
+	width: fill-parent-flow( 1.0 );
+}
+
+.AppNextInQueue
+{
+	height: purchase_options_height;
+	flow-children: right;
+	font-size: 26px;
+	color: #67c1f5ff;
+	padding-left: 20px;
+}
+
+.AppNextInQueue Label
+{
+	vertical-align: center;
+}
+
+.AppNextInQueue Image
+{
+	vertical-align: center;
+	margin-left: 14px;
+}
+
+
+// about game row
+.AppAboutGameRow
+{
+	margin-top: 20px;
+}
+
+.AboutGameBox
+{
+	min-height: 200px;
+	max-height: 308px;
+}
+
+.AppAboutGameHeader
+{
+	width: 100%;
+	flow-children: right;
+	margin-bottom: 10px;
+}
+
+.AppAboutGameHeader .AppDetailsBoxTitle
+{
+	margin: 0px;
+	font-weight: light;
+}
+
+.AppAboutGameHeader .AppDetailsBoxTitle
+{
+	width: fill-parent-flow( 1.0 );
+}
+
+.AppReleaseDate
+{
+	font-size: 24px;
+	vertical-align: center;
+	color: greyish_medium;
+}
+
+.AppAboutOverview
+{
+	font-size: 26px;
+	color: almost_white;
+}
+
+.AppDetailsNews
+{
+	height: 308px;
+}
+
+.AppRecentNewsDate
+{
+	font-size: 22px;
+	color: green_in_page;
+}
+
+.AppRecentNewsTitle
+{
+	font-size: 28px;
+	color: almost_white;
+}
+
+.AppRecentNews
+{
+	font-size: 22px;
+	color: greyish_medium;
+}
+
+
+// requirements row
+.AppSysReq
+{
+	max-height: 336px;
+}
+
+.AppRequirementsOverview
+{
+	font-size: 26px;
+	color: almost_white;
+}
+
+.AppDetailsBox .AppRequirementsOverview
+{
+	white-space: nowrap;
+}
+
+.AppRequirementsNotSet
+{
+	font-size: 26px;
+	color: almost_white;
+}
+
+.AppRequirementsOverview b
+{
+	color: greyish_medium;
+	font-weight: normal;
+}
+
+.AppVisitWebsite
+{
+	font-size: 26px;
+	color: #67c1f5ff;
+}
+
+VerticalScrollBar {
+	opacity: 0;
+}
+
+.FriendsWhoOwnApp
+{
+	flow-children: right;
+}
+
+.FriendsWhoOwnApp AvatarImage
+{
+	width: 70px;
+	height: 70px;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 0px;
+	box-shadow: #00000033 -2px -2px 3px 3px;
+	margin-right: 6px;
+}
+
+.FriendsWhoOwnMore
+{
+	font-size: 30px;
+	vertical-align: center;
+	color: greyish_medium;
+	margin-left: 6px;
+}
+
+
+////////////////////////////////////
+// App Detail Modals
+////////////////////////////////////
+.AppModal
+{
+	flow-children: down;
+	padding: 40px;
+}
+
+.AppModalFeatures,
+.AppModalTags
+{
+	max-height: 580px;
+
+}
+.AppModalFeatures .AppModalListPadding,
+.AppModalTags .AppModalListPadding
+{
+	overflow: clip scroll;
+}
+
+
+.AppModalRequirements
+{
+	width: 1160px;
+	height: 800px;
+}
+
+.AppModalTitle
+{
+	margin-bottom: 20px;
+	font-weight: light;
+
+	font-size: 54px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-family: platformfont;
+	color: detailsdatalabel;
+}
+.AppModalSubTitle
+{
+	font-size: 26px;
+	font-family: platformfont;
+	color: #c6d4df;
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+.AppModalRowBtn
+{
+	width: 600px;
+	flow-children: right;
+	padding: 10px;
+	background-color: transparent_module;
+}
+
+.AppModalCategoryTitle
+{
+	width: fill-parent-flow( 1.0 );
+	vertical-align: center;
+	margin-left: 10px;
+	color: #67c1f5;
+	font-size: 26px;
+	white-space: nowrap;
+}
+
+.AppModalTagTitle
+{
+	color: #67c1f5;
+	font-size: 26px;
+}
+
+.AppModalListPadding
+{
+	flow-children: down;
+	padding-bottom: 10px;
+	background-color: #0f283d;
+	padding: 5px;
+}
+
+.AppModalRequirementTabs
+{
+	flow-children: right;
+	margin-right: 10px;
+}
+
+.AppModalRequirementTabs > Button
+{
+	flow-children: right;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: transparent_module;
+	color: #67c1f5;
+	font-size: 26px;
+}
+
+.AppModalRequirementTabs > Button:focus
+{
+	color: white;
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+}
+
+#AppModalRequirements
+{
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+	background-color: #0f283d;
+	margin-top: 10px;
+	overflow: clip scroll;
+}
+
+.AppModalRequirementsSection
+{
+	padding: 20px;
+	flow-children: down;
+
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.AppModalRequirementsSection.Visible
+{
+	opacity: 1.0;
+}
+
+.AppModalRequirementsType
+{
+	font-size: 26px;
+	color: #67c1f5ff;
+}
+
+.AppModalRequirementsSpacer
+{
+	height: 20px;
+	width: 100%;
+}
+
+
+////////////////////////////////////
+// App DLC Section
+////////////////////////////////////
+#AppDLCSection
+{
+	padding-top: 40px;
+	overflow: clip scroll;
+}
+
+.AppDLCSectionBackground
+{
+	width: 100%;
+	padding: 10px 18px;
+
+	background-color: gradient( linear, 90% 20%, 90% 90%, from( #143f6559 ), to( #00000000 ) );
+	flow-children: down;
+}
+
+.AppDLCSectionHeader
+{
+	color: white;
+	font-size: 34px;
+	margin-bottom: 10px;
+}
+
+.AppDLCList
+{
+	width: 100%;
+	flow-children: right-wrap;
+}

@@ -1,0 +1,363 @@
+
+@define greyish_medium: #8f98a0;
+@define almost_white: #c7d5e0;
+@define green_in_page: #a3cf06;
+@define section_bg_color: #000000ff;
+
+////////////////////////////////
+// Purchase option page
+////////////////////////////////
+.PurchaseOptionPage
+{
+	width: 100%;
+	height: 100%;
+}
+
+.PurchaseOptionPageBody
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+}
+
+.PurchaseOptionPageBody #LeftColumn
+{
+	width: 730px;
+	margin-left: 80px;
+	margin-top: 32px;
+	flow-children: down;
+}
+
+.OptionHeader
+{
+	font-size: 22px;
+	color: #2f89bd;
+	margin: 0px 0px 5px 0px;
+}
+
+.PurchaseOptionBtn
+{
+	width: 690px;
+	height: 96px;
+	margin: 0px 10px 4px 0px;
+	padding: 10px 0px 0px 24px;
+	flow-children: down;
+	color: #67c1f5;
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dff ), to( #09334d00 ) );
+}
+.PurchaseOptionBtn:selected
+{
+	width: 730px;
+	margin-right: 0px;
+	padding-right: 40px;
+	background-color: gradient( linear, 0% 100%, 100% 100%, from( #1579a0 ), to( #153b55 ) );
+}
+
+.PurchaseOptionBtn:focus
+{
+	width: 730px;
+	margin-right: 0px;
+	padding-right: 40px;
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
+	animation-name: nx-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.OptionName
+{
+	color: white;
+	font-size: 26px;
+	white-space: nowrap;
+}
+
+.OptionPriceRow
+{
+	flow-children: right;
+	margin-top: 10px;
+}
+
+.OptionCount
+{
+	font-size: 24px;
+	color: almost_white;
+	width: fill-parent-flow( 1.0 );
+}
+
+.PurchaseOptionPageBody #LoadedContent
+{
+	width: 1170px;
+	height: 100%;
+	padding-top: 38px;
+	background-color: gradient( linear, 0 0, 100% 0, from( #2d637f59 ), to( #143f6500 ) );
+}
+
+.SubscriptionDetails
+{
+	width: 1100px;
+	height: 100%;
+}
+
+.SubscriptionContents
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	overflow: clip clip;
+	padding: 60px 20px 140px 18px;
+
+}
+.PackageGroups_ctn
+{
+	height: 710px;
+	width: 100%;
+	flow-children: down;
+	overflow: clip scroll;
+	padding-bottom: 140px;
+}
+
+.PackageInfoHeader
+{
+	font-size: 22px;
+	color: #2f89bd;
+	margin-top: 20px;
+}
+
+.PackageTitle
+{
+	width: 100%;
+	font-size: 45px;
+	color: white;
+	margin-bottom: 8px;
+	white-space: normal;
+	font-weight: light;
+}
+
+.AddToCartRow
+{
+	width: 100%;
+	flow-children: right;
+	height: 90px;
+	padding: 12px;
+}
+
+.AddToCart,
+.AddToAccount
+{
+	height: 80px;
+
+	padding: 10px 0px 0px 24px;
+	flow-children: right;
+
+	color: #67c1f5;
+	background-color: store_transparent_module;
+	box-shadow: fill #00000066 -2px -2px 4px 4px;
+
+	margin-right: 10px;
+	padding: 10px 20px;
+	font-size: 26px;
+	border-radius: 3px;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: supershortduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.AddToCart:focus,
+.AddToAccount:focus
+{
+	color: #ffffff;
+	background-color: store_active_module;
+
+	box-shadow: #a3cf06 -4.5px -4.5px 16px 9px;
+
+	animation-name: purchase-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.AddToCart Label,
+.AddToAccount Label
+{
+	vertical-align: center;
+	color: #a3cf06;
+}
+
+.AddToCart:focus Label,
+.AddToAccount:focus Label
+{
+	color: #ffffff;
+}
+
+.AddToCartPrice
+{
+	width: fill-parent-flow( 1.0 );
+	width: 100%;
+	height: 100%;
+	background-color: #00000044;
+	font-size: 26px;
+	color: detailsdatalabel;
+	padding-left: 10px;
+}
+
+
+.AddToCartPrice .DiscountBlock
+{
+	vertical-align: center;
+}
+
+.AddToCartRow .AddToCartPrice
+{
+	horizontal-align: right;
+	width: fit-children;
+	background-color: none;
+}
+
+.PackageIncludesHeader
+{
+	margin-top: 30px;
+	font-size: 22px;
+    color: #2f89bd;
+}
+
+.AppInPackage
+{
+	padding: 8px;
+	flow-children: right;
+	color: #67c1f5;
+	background-color: nontransparent_module;
+	border-radius: 3px;
+	font-size: 26px;
+	width: 100%;
+	margin-top: 4px;
+
+	box-shadow: fill #00000066 -2px -2px 4px 4px;
+}
+
+.AppInPackage:focus
+{
+	color: #082846ff;
+	background-color: nontransparent_action_module;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.AppTitle
+{
+	color: white;
+	font-size: 26px;
+	white-space: nowrap;
+}
+
+.AppInPackageMiddle
+{
+	flow-children: down;
+	margin-left: 14px;
+	width: fill-parent-flow( 1.0 );
+	vertical-align: center;
+}
+
+.AppInPackageImage
+{
+	width: 232px;
+	height: 87px;
+}
+
+.AppInPackage .DiscountBlock
+{
+	vertical-align: center;
+}
+
+.AppInPackagePlatform
+{
+	flow-children: right;
+	margin-top: 4px;
+}
+
+.PriceNA
+{
+	vertical-align: center;
+}
+
+.SubscriptionPage
+{
+	padding: 0px 80px;
+}
+
+.PackageSavings
+{
+	width: 100%;
+	height: fit-children;
+	padding: 10px;
+	background-color: #00000044;
+	flow-children: down;
+	margin-top: 10px;
+	font-size: 24px;
+
+	color: #2f89bd;
+}
+
+.PackageSavings .Savings
+{
+	color: #a3cf06;
+}
+
+.SavingsDesc
+{
+	width: fill-parent-flow( 1.0 );
+	text-align: right;
+	font-size: 24px;
+}
+
+.SavingsAmount
+{
+	width: 140px;
+	text-align: right;
+}
+
+.PackageGroupDesc
+{
+	font-size: 24px;
+	color: almost_white;
+
+}
+
+.PackageGroupOption
+{
+	width: 100%;
+	margin-top: 4px;
+	flow-children: down;
+	background-color: #00000044;
+}
+.PackageGroupOption:descendantfocus
+{
+	background-color: #57666e44;
+}
+
+.PackageGroupOptionTitle
+{
+	margin: 8px;
+	font-size: 30px;
+	color: white;
+	vertical-align: center;
+}
+VerticalScrollBar
+{
+	opacity: 0;
+}

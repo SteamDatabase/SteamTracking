@@ -1,0 +1,626 @@
+
+@define almost_white: #c7d5e0;
+@define greyish_medium: #8f98a0;
+
+RemotePanel
+{
+	height: 970px;
+}
+
+.HomeSection
+{
+	width: 100%;
+	height: 100%;
+}
+
+.NotImplemented
+{
+	font-size: 30px;
+	color: white;
+	horizontal-align: center;
+	margin-top: 300px;
+}
+
+.NxLeftNavButton.StoreOption Image
+{
+	wash-color: transparent;
+}
+
+.HomeBody
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+	overflow: clip;
+}
+
+#LoadedContent
+{
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	padding-top: 25px;
+	padding-left: 20px;
+	margin-left: -42px;
+}
+
+
+////////////////////////////////////
+// Nav
+////////////////////////////////////
+.NxLeftNavButtonAction.Cart
+{
+	color: #a3cf06;
+	border-color: #a3cf06;
+}
+
+.NxLeftNavButtonAction.Cart Label
+{
+	color: #a3cf06;
+}
+
+.NxLeftNavButtonAction.Cart:focus,
+.NxLeftNavButtonAction.Cart:focus Label
+{
+	color: #072e47;
+	border-color: white;
+}
+.GamesHorizRule
+{
+	height: 20px;
+}
+
+
+////////////////////////////////////
+// Featured
+////////////////////////////////////
+.NxRightContentContainer.FeaturedItems
+{
+	flow-children: down;
+	overflow: squish scroll;
+	padding-bottom: 150px;
+	padding-top: 40px;
+}
+
+.FeaturedWrapping
+{
+	flow-children: right-wrap;
+	z-index: 0;
+}
+.FeaturedWrapping:descendantfocus {
+	z-index: 5;
+}
+
+.FeaturedSpotlightRow
+{
+	flow-children: right;
+	z-index: 0;
+}
+.FeaturedSpotlightRow:descendantfocus {
+	z-index: 5;
+}
+
+.FeaturedSpotlightRow .FeaturedWrapping
+{
+	width: 1046px;
+	height: 700px;
+}
+
+.Spotlight
+{
+	width: 520px;
+	height: 718px;
+	margin: 10px;
+
+	margin: -10px -10px;
+
+	border-radius: 3px;
+
+	pre-transform-scale2d: 0.96;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.15s;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	z-index: -100;
+}
+
+.Spotlight:focus,
+.Spotlight:hover
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	pre-transform-scale2d: 1;
+	z-index: 200;
+}
+
+.SpotlightDetails
+{
+	flow-children: down;
+	width: 100%;
+	min-height: 160px;
+	vertical-align: bottom;
+	padding: 10px 10px 10px 10px;
+	background-color: nontransparent_module;
+}
+.Spotlight:focus .SpotlightDetails,
+.Spotlight:hover .SpotlightDetails {
+	background-color: nontransparent_action_module;
+}
+
+.SpotlightWeeklong
+{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 520px;
+	height: 733px;
+	background-color: nontransparent_module;
+}
+
+.SpotlightWeeklongSubtitle
+{
+	height: fill-parent-flow( 1.0 );
+	align: center center;
+	font-size: 30px;
+	color: greyish_medium;
+}
+
+.SpotlightWeeklongCount
+{
+	margin-top: 450px;
+	horizontal-align: center;
+	font-size: 44px;
+	color: white;
+}
+
+.SpotlightImage
+{
+	width: 520px;
+}
+
+.SpotlightTitle
+{
+	font-size: 36px;
+	color: detailsdatalabel;
+	font-weight: light;
+}
+
+.SpotlightBody
+{
+	font-size: 22px;
+	color: greyish_medium;
+	margin-top: 10px;
+
+}
+
+.Spotlight .DiscountBlock
+{
+	font-size: 22px;
+	color: greyish_medium;
+	margin-top: 10px;
+}
+
+
+////////////////////////////////////
+// Boxes
+////////////////////////////////////
+.NxRightContentContainer.HomeSectionBoxes
+{
+	flow-children: right-wrap;
+	overflow: squish scroll;
+	padding-bottom: 150px;
+	padding-top: 40px;
+}
+
+
+////////////////////////////////////
+// Explore
+////////////////////////////////////
+.NxRightContentContainer.HomeExplore
+{
+	padding-top: 46px;
+	flow-children: down;
+	padding-left: 47px;
+}
+
+.ExploreSection
+{
+	padding-top: 8px;
+	padding-left: 14px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	margin-top: 22px;
+	flow-children: down;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+}
+
+.DiscoveryQueueSection
+{
+	width: 100%;
+	margin-top: 0px;
+}
+
+.DiscoveryQueueApps
+{
+	background-color: #00000022;
+	width: 1350px;
+	height: 218px;
+	margin-top: 8px;
+	padding-left: 10px;
+}
+
+.DiscoveryExhausted
+{
+	flow-children: down;
+	align: center center;
+}
+
+.DiscoveryExhaustedTitle
+{
+	font-size: 28px;
+	color: #67c1f5ff;
+	horizontal-align: center;
+}
+
+.DiscoveryExhaustedInfo
+{
+	font-size: 24px;
+	color: greyish_medium;
+	horizontal-align: center;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.DiscoveryRefresh
+{
+	align: center center;
+	flow-children: down;
+	opacity: 1.0;
+
+	transition-property: opacity;
+    transition-duration: mediumduration;
+    transition-timing-function: bigpicture-ease-in-out;
+}
+
+.DiscoveryQueueApps.Loading .DiscoveryRefresh
+{
+	opacity: 0.0;
+}
+
+.DiscoveryRefreshTitle
+{
+	font-size: 28px;
+	color: #67c1f5ff;
+	horizontal-align: center;
+}
+
+.DiscoveryRefreshDesc
+{
+	font-size: 24px;
+	color: greyish_medium;
+	horizontal-align: center;
+}
+
+.DiscoveryRefreshInfo
+{
+	font-size: 30px;
+	color: almost_white;
+	horizontal-align: center;
+	margin-top: 30px;
+}
+
+.DiscoveryQueueApps LoadingThrobber
+{
+	align: center center;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.DiscoveryQueueApps.Loading LoadingThrobber
+{
+	opacity: 1.0;
+}
+
+.DiscoveryApp
+{
+	width: 412px;
+	height: 192px;
+	vertical-align: center;
+
+	box-shadow: module_shadow;
+}
+
+.DiscoveryApp_2
+{
+	transform: translate3d( 325px, 0px, -100px );
+}
+
+.DiscoveryApp_3
+{
+	transform: translate3d( 650px, 0px, -150px );
+}
+
+.DiscoveryApp_4
+{
+	transform: translate3d( 875px, 0px, -225px );
+}
+
+.DiscoveryApp_5
+{
+	transform: translate3d( 1100px, 0px, -350px );
+}
+
+.DiscoveryQueueApps:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ExploreSectionHeader
+{
+	font-size: 30px;
+	color: detailsdatalabelfocus;
+}
+
+.RecommendedTagsSection
+{
+	width: 100%;
+}
+
+.RecommendedTags
+{
+	width: 100%;
+	margin-top: 10px;
+	flow-children: right;
+}
+
+.RecommendedTags Button
+{
+	width: 430px;
+	height: 128px;
+	background-color: #00000044;
+}
+
+.RecommendedTag_2
+{
+	margin: 0px 15px;
+}
+
+.RecommendedTags Button:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.RecommendedTags Button Label
+{
+	align: center center;
+	font-size: 30px;
+	color: detailsdatalabelfocus;
+}
+
+.RecommendedByCurators
+{
+	width: 100%;
+}
+
+.RecommendedCuratorApps
+{
+	flow-children: right;
+	margin-top: 10px;
+}
+
+.RecommendedCurator
+{
+	width: 432px;
+	height: 242px;
+	background-color: #00000044;
+	flow-children: right;
+	padding: 10px;
+}
+
+.CurratorApp:focus,
+.RecommendedCurator:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.CurratorApp
+{
+	width: 432px;
+	height: 242px;
+	background-color: #00000044;
+	flow-children: down;
+}
+
+.CurratorApp Image
+{
+	width: 432px;
+	height: 202px;
+}
+
+.CurratorApp Label
+{
+	vertical-align: center;
+	margin-left: 10px;
+}
+
+.CurratorApp_2,
+.RecommendedCurator_2
+{
+	margin: 0px 15px;
+}
+
+.RecommendedCuratorInfo
+{
+	margin-left: 10px;
+	flow-children: down;
+}
+
+.RecommendedCuratorName
+{
+	color: detailsdatalabelfocus;
+	font-size: 30px;
+}
+
+.RecommendedCuratorFeature
+{
+	font-size: 22px;
+	color: green;
+	margin-top: 40px;
+}
+
+.RecommendedCuratorDesc
+{
+	font-size: 22px;
+	color: detailsdatalabelfocus;
+}
+
+
+////////////////////////////////////
+// Recently Updated
+////////////////////////////////////
+.NxRightContentContainer.HomeUpdated
+{
+	width: 1640px;
+	height: 990px;
+	flow-children: right-wrap;
+	overflow: squish scroll;
+	padding-bottom: 150px;
+	padding-top: 40px;
+}
+
+.UpdatedItem
+{
+	width: 460px;
+	height: 365px;
+	flow-children: down;
+	background-color: nontransparent_module;
+	margin: 0px;
+
+	border-radius: 3px;
+
+	box-shadow: module_shadow;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	pre-transform-scale2d: 0.96;
+	z-index: 10;
+}
+
+.UpdatedItem:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	background-color: nontransparent_action_module;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	pre-transform-scale2d: 1.0;
+	z-index: 2000;
+}
+
+.UpdatedItem Image
+{
+	width: 460px;
+	height: 215px;
+}
+
+.UpdatedItemNameImage
+{
+	width: 425px;
+	height: 238px;
+}
+
+.UpdatedItemInfo
+{
+	flow-children: right;
+	font-size: 22px;
+	color: greyish_medium;
+	margin-top: 4px;
+	height: 30px;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.UpdatedItem:focus .UpdatedItemInfo
+{
+	color: white;
+}
+
+.UpdatedItemName
+{
+	width: fill-parent-flow( 1.0 );
+	padding-left: 8px;
+	opacity: 0;
+}
+
+.UpdateItemDesc
+{
+	flow-children: right;
+	font-size: 24px;
+	color: greyish_medium;
+	margin-top: 4px;
+	margin: 12px;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.UpdatedItem:focus .UpdateItemDesc
+{
+	color: white;
+}
+
+
+////////////////////////////////////
+// Wishlist
+////////////////////////////////////
+.WishlistEmpty
+{
+	margin-top: 100px;
+	align: center top;
+	font-size: 22px;
+	color: white;
+	flow-children: down;
+}
+
+.WishlistEmpty
+{
+	margin-bottom: 20px;
+}
+
+////////////////////////////////////
+// Scrollbars
+////////////////////////////////////
+VerticalScrollBar {
+	opacity: 0;
+}
