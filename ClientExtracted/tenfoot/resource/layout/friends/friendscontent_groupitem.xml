@@ -6,7 +6,7 @@
 		<include src="file://{resources}/styles/friends/friendscontent_groupitem.css" />
 	</styles>
 
-	<FriendsContent_GroupItem onactivate="GroupItemActivated" selectionpos="auto" oncontextmenu="FriendsMainViewMore();">
+	<FriendsContent_GroupItem onactivate="GroupItemActivated" selectionpos="auto" tabindex="auto" oncontextmenu="FriendsMainViewMore();">
 		<Panel class="GroupContent">
 			<AvatarImage id="Avatar" class="GroupAvatar" />		
 			<Panel class="GroupItemLabelContainer">

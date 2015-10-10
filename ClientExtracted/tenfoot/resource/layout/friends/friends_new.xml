@@ -14,8 +14,12 @@
 			<Panel class="ButtonColumn" tabindex="auto" selectionpos="0,0" onfocus="FocusFriendsMenuRow();" onmoveright="FocusFriendsContent();" >
 				<Panel class="ButtonContainer" rememberchildfocus="true">
 					<Panel class="GamesHorizRule" />
-					<Button id="LocalProfile" onfocus="FriendsViewType(localprofile);" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="ShowProfileOptions();" >
-						<Label text="#Friends_Menu_Profile" html="true" />
+					<Button id="LocalProfile" onfocus="FriendsViewType(localprofile);" class="NxLeftNavButton" selectionpos="auto" onactivate="ShowProfileOptions();" >
+						<AvatarImage id="LocalAvatar"/>						
+						<Panel class="LocalPersonaLabelContainer">
+							<Label text="{s:local_persona_state}" class="LocalPersonaStatus"/>
+							<Label text="{s:local_persona_name}" class="LocalPersonaName" />
+						</Panel>
 					</Button>
 					<Panel class="GamesHorizRule" />
 					<Label text="#friends_menu_chat" class="Header" />

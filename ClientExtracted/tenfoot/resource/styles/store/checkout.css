@@ -52,7 +52,6 @@ CheckoutAddFundsButton Label,
 Button Label
 {
 	width: 100%;
-	vertical-align: center;
 
 	font-family: platformfont;
 	font-size: 28px;
@@ -122,171 +121,6 @@ Button:focus
 CartLineItem:descendantfocus #FinalPrice
 {
 	color: applabelselectedsolid;
-}
-
-.ProminentButton
-{
-	width: 100%;
-	padding: 8px 7px 8px 7px;
-	margin: 4px 0px;
-
-	color: #6c9771ff;
-	background-color: tcstatictext;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-
-	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-.ProminentButton Label
-{
-	width: 100%;
-	vertical-align: center;
-
-	font-family: platformfont;
-	font-size: 26px;
-	font-weight: bold;
-	transform: translatex(-7px);
-	color: detailsdatalabelfocus;
-	transition-property: transform;
-	transform: translateX( 5px );
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in;
-}
-
-.ProminentButton:focus Label
-{
-	color: #7a9908;
-	transform: translatex(0px);
-}	
-
-.ProminentButton:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: #b1e37660 -3px -3px 6px 6px;
-}
-
-.ProminentButton:hover Label
-{
-	transform: translatex(0px);
-}
-
-.ProminentButton:focus
-{
-	color: #9ccd5eff;
-}
-
-.ProminentButton:selected
-{
-	transition-duration: 0.4s !immediate;
-
-	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #9ccd5eff ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	
-	animation-name: links-and-more-button-focus; 
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: ease-in;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.ProminentButton:selected Label
-{
-	color: #648e2e;
-}
-
-#AgreeTerms
-{
-	width: 100%;
-	padding: 8px 7px 8px 7px;
-	margin: 4px 0px;
-
-	transition-property: border, background-color, color, box-shadow, transform;
-	transition-duration: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	background-color: none;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-}
-
-#AgreeTerms:focus 
-{
-	transition-duration: 0.2s !immediate;
-	
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-
-	padding-left: 12px;
-	transform: translatex(0px);
-	
-	animation-name: links-and-more-button-focus; 
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#AgreeTerms Label
-{
-	width: 500px;
-	height: 49px;
-	vertical-align: center;
-	margin-right: 8px;
-	font-size: 22px;
-	line-height: 24px;
-	color: detailsdatalabelfocus;	
-	
-	transform: translatex(-7px);
-	
-	transition-property: transform;
-	transition-duration: 0.23s;
-	transition-timing-function: bigpicture-ease-in-out;	
-}
-
-#AgreeTerms:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
-}
-
-#AgreeTerms:focus Label
-{
-	color: #161718f5;
-	transform: translatex(0px);
-}
-
-#AgreeTerms:hover Label
-{
-	transform: translatex(0px);
-}
-
-#AgreeTerms .TickBox
-{
-	padding: 0px;
-	transform: translatex(-13px);
-	background-color: blue;
-
-	transition-property: transform;
-	transition-duration: 0.23s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-#AgreeTerms:focus .TickBox,
-#AgreeTerms:hover .TickBox
-{
-	transform: translatex(-5px);
-	background-color: #bdbfbf;
 }
 
 
@@ -421,7 +255,7 @@ CheckoutController.Visible
 .CheckoutTitleRow
 {
 	width: 100%;
-	padding: 10px 140px 10px 105px;
+	padding: 10px 140px 10px 70px;
 	flow-children: right;
 }
 
@@ -475,7 +309,7 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 {
 	width: 100%;
 	height: 100%;
-	padding: 0px 105px 0px 105px;
+	padding: 0px 70px 0px 70px;
 	flow-children: right;
 
 
@@ -487,10 +321,10 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 
 .CheckoutBodyLeftColumn
 {
-	width: 988px;
+	width: 1000px;
 	height: 720px;
 	flow-children: down;
-	padding: 34px;
+	padding: 34px 34px 0px 0px;
 }
 
 .CheckoutFormTextEntryLeft .CheckoutBodyLeftColumn
@@ -509,8 +343,8 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 
 .CheckoutBodyRightColumn
 {
-	width: 714px;
-	height: 720px;
+	width: 777px;
+	height: 890px;
 	flow-children: down;
 	padding: 34px;
 	padding-bottom: 0px;
@@ -738,7 +572,7 @@ CartLineItem:descendantfocus .CartLineItemContents
 {
 	width: 100%;
 	flow-children: right;
-	padding: 0px 7px 0px 7px;
+	padding: 0px;
 }
 
 #ItemPrice
@@ -911,14 +745,16 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 }
 #PurchaseForSelfBtn,
 #PurchaseForGiftBtn,
-.AdvanceCheckout
+.AdvanceCheckout,
+.ProminentButton
 {
 	background-color: store_transparent_module;
 	height: 60px;
 }
 #PurchaseForSelfBtn:focus,
 #PurchaseForGiftBtn:focus,
-.AdvanceCheckout:focus
+.AdvanceCheckout:focus,
+.ProminentButton:focus
 {
 	background-color: store_active_module;
 
@@ -932,14 +768,17 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 
 #PurchaseForSelfBtn Label,
 #PurchaseForGiftBtn Label,
-.AdvanceCheckout Label
+.AdvanceCheckout Label,
+.ProminentButton Label
 {
 	color: #a3cf06;
+	vertical-align: center;
 	margin-left: 5px;
 }
 #PurchaseForSelfBtn:focus Label,
 #PurchaseForGiftBtn:focus Label,
-.AdvanceCheckout:focus Label
+.AdvanceCheckout:focus Label,
+.ProminentButton:focus Label
 {
 	color: #ffffff;
 }
@@ -1100,12 +939,19 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 	opacity: 1.0;
 }
 
+#EmailMyGiftBtn,
+#SendToFriendBtn,
+#SendToInventoryBtn
+{
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dff ), to( #09334d00 ) );
+}
+
 .EmailMyGift #EmailMyGiftBtn,
 .SendToFriend #SendToFriendBtn,
 .SendToInventory #SendToInventoryBtn
 {
 	border-color: none;
-	background-color: #00000033;
+	background-color: gradient( linear, 0% 100%, 100% 100%, from( #1579a0 ), to( #153b55 ) );
 	padding-left: 10px;
 
 }
@@ -1114,8 +960,7 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .SendToFriend #SendToFriendBtn:focus,
 .SendToInventory #SendToInventoryBtn:focus
 {
-	border-color: #fdfefef0;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 }
 
 .InlineLabel
@@ -1150,13 +995,17 @@ CheckoutGiftRecipient TextEntry
 	width: 100%;
 	overflow: squish scroll;
 	padding-right: 20px;
-	padding-left: 10px;
+	padding-bottom: 150px;
 
 	opacity: 1.0;
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 
+}
+#SendToFriendsList VerticalScrollBar
+{
+	margin-bottom: 150px;
 }
 
 CheckoutGiftRecipientFriend
@@ -1191,7 +1040,7 @@ CheckoutGiftRecipientFriend AvatarImage
 
 	border: 4px solid;
 	border-radius: 8px;
-	transform: translatex(-7px);
+	transform: translatex(0px);
 	transition-property: transform;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
@@ -1199,7 +1048,7 @@ CheckoutGiftRecipientFriend AvatarImage
 
 CheckoutGiftRecipientFriend:descendantfocus AvatarImage
 {
-	transform: none;
+	transform: translatex(7px);
 }
 
 .SendToFriendText
@@ -1223,7 +1072,7 @@ CheckoutGiftRecipientFriend:descendantfocus AvatarImage
 .SendToFriendText
 {
 	margin-left: 8px;
-	transform: translatex(-7px);
+	transform: translatex(0px);
 	transition-property: transform;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
@@ -1231,7 +1080,7 @@ CheckoutGiftRecipientFriend:descendantfocus AvatarImage
 
 CheckoutGiftRecipientFriend:descendantfocus .SendToFriendText
 {
-	transform: translatex(0px);
+	transform: translatex(7px);
 }
 
 
@@ -1650,13 +1499,11 @@ CheckoutReviewLineItem
 {
 	flow-children: down;
 	width: 100%;
+	padding: 12px;
+	background-color: #00000033;
 }
 
-.CartItemNamePriceRow
-{
-	flow-children: right;
-	width: 100%;
-}
+
 
 
 #RecurringSubscriptionDescription
@@ -1710,12 +1557,18 @@ CheckoutReviewLineItem
 	padding-top: 8px;
 }
 
+.PurchaseBtn
+{
+	margin-bottom: 30px;
+}
+
 .PaymentMethodReviewSection
 {
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	padding-top: 0px;
+
+	padding-top: 30px;
 }
 
 .PaymentMethodReviewRows
@@ -1746,9 +1599,9 @@ CheckoutReviewLineItem
 
 .PaymentMethodReviewHeader
 {
-	width: 200px;
+	width: 300px;
 	text-align: right;
-	font-size: 22px;
+	font-size: 24px;
 	margin-right: 24px;
 	color: tcstatictext;
 }
@@ -1795,7 +1648,7 @@ CheckoutConfirmation .CheckoutBodyRightColumn
 .ReceiptSection
 {
 	margin-top: 40px;
-	margin-left: 150px;
+	margin-left: 0px;
 	flow-children: down;
 }
 

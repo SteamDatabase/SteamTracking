@@ -2406,6 +2406,7 @@
 	"Friends_OnlineFriendsOnly"		"Online Friends Only"
 	"Friends_ChangeProfileName"		"Change Profile Name"
 	"Friends_EditProfile"			"Edit Profile..."
+	"Friends_ViewFullProfile"		"View Full Profile"
 	"Friends_AddFriendAction"		"Add a Friend..."
 	"Friends_FriendsActionsFooter"		"ACTIONS"
 	"Friends_ChooseURL"			"Open URL in browser"
@@ -4571,6 +4572,8 @@
 
 	"friends_search"				"Friends Search"
 	"friends_search_unavailable"	"Friends Search is temporarily unavailable."
+
+	"friends_edit_persona_header"	"Edit Persona Status"
 	
 	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
 	"SignalLossHelper_Description" "In order to ensure the best possible latency and a glitch-free experience, please connect the controller's wireless receiver to its included extender. Make sure there is an unobstructed line-of-sight between the controller and the receiver, and move it away from your system to isolate it from any possible interference." 

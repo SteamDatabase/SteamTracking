@@ -1,6 +1,7 @@
 
 @define frienditem_width: 300px;
 @define frienditem_height:	110px;
+@define friends_list_page_down_count: 18;
 
 FriendsContent_Friends
 {

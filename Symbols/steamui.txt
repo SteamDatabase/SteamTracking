@@ -313,6 +313,7 @@
  B CFriendsContent_GroupItem::m_symbol
  B CFriendsContent_Groups::m_symbol
  B CFriendsContent_Invites::m_symbol
+ B CFriendsEditPersonaDialog::m_symbol
  B CFriendsFeedItemMenuActionButton::m_symbol
  B CFriendsFeedItemMenuDetails::m_symbol
  B CFriendsFeedListItemCommunity::m_symbol
@@ -1050,6 +1051,7 @@
  B ClearMarketingMessage::symbol
  B ClearScreenshotImage::symbol
  B ClearSearchDialog::symbol
+ B ClearShoppingCart::symbol
  B CloseAllGames::symbol
  B CloseAndShowLibrary::symbol
  B CloseAndShowMarket::symbol
@@ -1171,7 +1173,7 @@
  B DumpVDF::symbol
  B EditAppLaunchOptions::symbol
  B EditAppUpdateOptions::symbol
- B EditCommunityProfile::symbol
+ B EditCommunityProfileX::symbol
  B EditPayment::symbol
  B EmailVerificationComplete::symbol
  B EmptyQueue::symbol
@@ -1231,6 +1233,7 @@
  B FriendsSearchResultsResponse::symbol
  B FriendsSelectFirstItem::symbol
  B FriendsSendChatMessage::symbol
+ B FriendsSendChatMessageX::symbol
  B FriendsSetCurrentlyActiveListTabIndex::symbol
  B FriendsSettingCheckBoxSelected::symbol
  B FriendsVoiceChatActivation::symbol
@@ -1566,6 +1569,7 @@
  B ShowFriend::symbol
  B ShowFriendOptionsMenu::symbol
  B ShowFriends::symbol
+ B ShowFriendsInvitesTab::symbol
  B ShowFriendsProfileDetails::symbol
  B ShowFriendsProfileDetailsBySteamID::symbol
  B ShowFriendsProfileDetailsBySteamIDX::symbol
@@ -1819,6 +1823,7 @@
  B ViewControllerDetails::symbol
  B ViewControllerPresets::symbol
  B ViewEntireAlbum::symbol
+ B ViewFullProfile::symbol
  B ViewGuide::symbol
  B ViewGuidesDialog::symbol
  B ViewLegalNotice::symbol
@@ -2060,6 +2065,7 @@
  B g_FriendsContent_Friends_Helper
  B g_FriendsContent_GroupItem_Helper
  B g_FriendsContent_Groups_Helper
+ B g_FriendsEditPersonaDialog_Helper
  B g_FriendsFeedItemMenuActionButton_Helper
  B g_FriendsFeedItemMenuDetails_Helper
  B g_FriendsFeedListItemCommunity_Helper
@@ -3076,6 +3082,7 @@
  B panorama::g_FriendsContent_FriendsLinkerHack
  B panorama::g_FriendsContent_GroupItemLinkerHack
  B panorama::g_FriendsContent_GroupsLinkerHack
+ B panorama::g_FriendsEditPersonaDialogLinkerHack
  B panorama::g_FriendsFeedItemMenuActionButtonLinkerHack
  B panorama::g_FriendsFeedItemMenuDetailsLinkerHack
  B panorama::g_FriendsFeedListItemCommunityLinkerHack
@@ -5380,6 +5387,7 @@
  D ClearMarketingMessage::pchEvent
  D ClearScreenshotImage::pchEvent
  D ClearSearchDialog::pchEvent
+ D ClearShoppingCart::pchEvent
  D CloseAllGames::pchEvent
  D CloseAndShowLibrary::pchEvent
  D CloseAndShowMarket::pchEvent
@@ -5518,7 +5526,7 @@
  D DumpVDF::pchEvent
  D EditAppLaunchOptions::pchEvent
  D EditAppUpdateOptions::pchEvent
- D EditCommunityProfile::pchEvent
+ D EditCommunityProfileX::pchEvent
  D EditPayment::pchEvent
  D EmailVerificationComplete::pchEvent
  D EmptyQueue::pchEvent
@@ -5578,6 +5586,7 @@
  D FriendsSearchResultsResponse::pchEvent
  D FriendsSelectFirstItem::pchEvent
  D FriendsSendChatMessage::pchEvent
+ D FriendsSendChatMessageX::pchEvent
  D FriendsSetCurrentlyActiveListTabIndex::pchEvent
  D FriendsSettingCheckBoxSelected::pchEvent
  D FriendsVoiceChatActivation::pchEvent
@@ -5938,6 +5947,7 @@
  D ShowFriend::pchEvent
  D ShowFriendOptionsMenu::pchEvent
  D ShowFriends::pchEvent
+ D ShowFriendsInvitesTab::pchEvent
  D ShowFriendsProfileDetails::pchEvent
  D ShowFriendsProfileDetailsBySteamID::pchEvent
  D ShowFriendsProfileDetailsBySteamIDX::pchEvent
@@ -6579,6 +6589,7 @@
  D ViewControllerDetails::pchEvent
  D ViewControllerPresets::pchEvent
  D ViewEntireAlbum::pchEvent
+ D ViewFullProfile::pchEvent
  D ViewGuide::pchEvent
  D ViewGuidesDialog::pchEvent
  D ViewLegalNotice::pchEvent
@@ -8311,7 +8322,6 @@
  D k_pchFailedValidation
  D k_pchFavoriteTag
  D k_pchFieldsValidated
- D k_pchHorizontalRule
  D k_pchLoaded
  D k_pchLoading
  D k_pchOnInputSubmit
@@ -9477,6 +9487,7 @@
  D typeinfo for CFriendsController::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsController::CCallback_OnRichInviteReceived
  D typeinfo for CFriendsController::CCallback_OnVoiceCallInitiated
+ D typeinfo for CFriendsEditPersonaDialog
  D typeinfo for CFriendsFeedItemMenuActionButton
  D typeinfo for CFriendsFeedItemMenuDetails
  D typeinfo for CFriendsFeedListItemCommunity
@@ -12859,6 +12870,7 @@
  D vtable for CFriendsController::CCallback_OnPersonaStateChange
  D vtable for CFriendsController::CCallback_OnRichInviteReceived
  D vtable for CFriendsController::CCallback_OnVoiceCallInitiated
+ D vtable for CFriendsEditPersonaDialog
  D vtable for CFriendsFeedItemMenuActionButton
  D vtable for CFriendsFeedItemMenuDetails
  D vtable for CFriendsFeedListItemCommunity
@@ -15647,6 +15659,7 @@
  R typeinfo name for CFriendsController::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsController::CCallback_OnRichInviteReceived
  R typeinfo name for CFriendsController::CCallback_OnVoiceCallInitiated
+ R typeinfo name for CFriendsEditPersonaDialog
  R typeinfo name for CFriendsFeedItemMenuActionButton
  R typeinfo name for CFriendsFeedItemMenuDetails
  R typeinfo name for CFriendsFeedListItemCommunity
@@ -23165,9 +23178,11 @@
  T CFriendsChatDialog::EventFriendLobbyInviteRemoved(CSteamID)
  T CFriendsChatDialog::EventFriendMessageHistoryReceived(CSteamID, int, int)
  T CFriendsChatDialog::EventFriendPersonaStateChanged(CSteamID)
+ T CFriendsChatDialog::EventFriendRemoved(CSteamID)
  T CFriendsChatDialog::EventFriendRichInvite(CSteamID, unsigned int, char const*)
  T CFriendsChatDialog::EventFriendVoiceChatEnded(CSteamID, int)
  T CFriendsChatDialog::EventFriendVoiceChatStarted(CSteamID, int)
+ T CFriendsChatDialog::EventFriendsSendChatMessage()
  T CFriendsChatDialog::EventTextEntryCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CFriendsChatDialog::EventTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CFriendsChatDialog::EventTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
@@ -23200,6 +23215,8 @@
  T CFriendsContent_FriendItem::EventContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CFriendsContent_FriendItem::EventFriendsMainViewMore()
  T CFriendsContent_FriendItem::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriendsContent_FriendItem::EventPageDown()
+ T CFriendsContent_FriendItem::EventPageUp()
  T CFriendsContent_FriendItem::EventPersonaStateChanged()
  T CFriendsContent_FriendItem::EventScrolledIntoView(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsContent_FriendItem::EventScrolledOutOfView(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -23220,6 +23237,7 @@
  T CFriendsContent_Friends::EventFriendLobbyInvite(CSteamID, unsigned int, char const*)
  T CFriendsContent_Friends::EventFriendLobbyInviteRemoved(CSteamID)
  T CFriendsContent_Friends::EventFriendPersonaStateChanged(CSteamID)
+ T CFriendsContent_Friends::EventFriendRemoved(CSteamID)
  T CFriendsContent_Friends::EventFriendRequiresReSort(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsContent_Friends::EventFriendRichInvite(CSteamID, unsigned int, char const*)
  T CFriendsContent_Friends::EventFriendVoiceChatEnded(CSteamID, int)
@@ -23240,6 +23258,8 @@
  T CFriendsContent_GroupItem::EventDisconnectFromGroupChat()
  T CFriendsContent_GroupItem::EventFriendsMainViewMore()
  T CFriendsContent_GroupItem::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriendsContent_GroupItem::EventPageDown()
+ T CFriendsContent_GroupItem::EventPageUp()
  T CFriendsContent_GroupItem::GetPanelType() const
  T CFriendsContent_GroupItem::MarkChatIndicatorRead()
  T CFriendsContent_GroupItem::OnGroupStateChange()
@@ -23252,6 +23272,7 @@
  T CFriendsContent_Groups::CFriendsContent_Groups(panorama::CPanel2D*, char const*)
  T CFriendsContent_Groups::EventGroupChatMessage(ChatRoomMsg_t*)
  T CFriendsContent_Groups::EventSteamGroupAdded(CSteamID)
+ T CFriendsContent_Groups::EventSteamGroupRemoved(CSteamID)
  T CFriendsContent_Groups::EventSteamGroupStateChange(CSteamID)
  T CFriendsContent_Groups::EventUpdateGroupChatState(CSteamID)
  T CFriendsContent_Groups::GetPanelType() const
@@ -23295,6 +23316,15 @@
  T CFriendsController::RequestAllFriends(panorama::CPanel2D*)
  T CFriendsController::SearchFriends(char const*, CUtlVector<CFriendsController::FriendsSearchResult_t, CUtlMemory<CFriendsController::FriendsSearchResult_t> >&, int)
  T CFriendsController::~CFriendsController()
+ T CFriendsEditPersonaDialog::CFriendsEditPersonaDialog(panorama::IUIWindow*, char const*)
+ T CFriendsEditPersonaDialog::CloseDialog()
+ T CFriendsEditPersonaDialog::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T CFriendsEditPersonaDialog::EventCloseModalDialog()
+ T CFriendsEditPersonaDialog::EventDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriendsEditPersonaDialog::EventViewFullProfile()
+ T CFriendsEditPersonaDialog::GetPanelType() const
+ T CFriendsEditPersonaDialog::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CFriendsEditPersonaDialog::~CFriendsEditPersonaDialog()
  T CFriendsFeedItemMenuActionButton::CFriendsFeedItemMenuActionButton(panorama::CPanel2D*, char const*, char const*, bool (CFriendsFeedItemMenuDetails::*)())
  T CFriendsFeedItemMenuActionButton::GetPanelType() const
  T CFriendsFeedItemMenuActionButton::~CFriendsFeedItemMenuActionButton()
@@ -23363,6 +23393,7 @@
  T CFriendsNew::EventFocusContent()
  T CFriendsNew::EventFocusMenuRow()
  T CFriendsNew::EventFriendChatMessage(FriendChatMsg_t*)
+ T CFriendsNew::EventFriendPersonaStateChanged(CSteamID)
  T CFriendsNew::EventFriendsClearFilter()
  T CFriendsNew::EventFriendsContentChanged(char const*)
  T CFriendsNew::EventFriendsSearchFilterString(char const*)
@@ -23378,6 +23409,7 @@
  T CFriendsNew::EventSendChatToSteamID(panorama::CPanelPtr<panorama::IUIPanel> const&, unsigned long long, panorama::EPanelEventSource_t)
  T CFriendsNew::EventShowChatDialogForSteamID(CSteamID)
  T CFriendsNew::EventShowFriend(unsigned long long, panorama::EPanelEventSource_t)
+ T CFriendsNew::EventShowFriendsInvitesTab()
  T CFriendsNew::EventShowFromController()
  T CFriendsNew::EventShowGroups()
  T CFriendsNew::EventShowInviteFriendsDialog(CSteamID)
@@ -26123,6 +26155,7 @@
  T CMainMenu::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CMainMenu::JumpToCommunity()
  T CMainMenu::JumpToLibrary()
+ T CMainMenu::JumpToProfile()
  T CMainMenu::JumpToStore()
  T CMainMenu::LoadMarketingMessages(bool)
  T CMainMenu::MarkMarketingMessageRead(unsigned long long)
@@ -31250,7 +31283,6 @@
  T CSearchDialog::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CSearchDialog::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSearchDialog::EventSearchResultResponse(char const*, CSmartPtr<CStoreSearchResults const, CRefCountAccessor>)
- T CSearchDialog::EventStoreSearchResult(char const*, unsigned int, char const*)
  T CSearchDialog::EventTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSearchDialog::EventTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CSearchDialog::EventTextInputHandlerStateChange(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
@@ -35362,6 +35394,8 @@
  T CTenfootConfirmPasswordDialog::OnTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CTenfootConfirmPasswordDialog::OnVerifyPasswordResponse(VerifyPasswordResponse_t*)
  T CTenfootConfirmPasswordDialog::~CTenfootConfirmPasswordDialog()
+ T CTenfootController::AccessFriendsController()
+ T CTenfootController::AccessGroupsController()
  T CTenfootController::BInScreenSaverMode()
  T CTenfootController::BInitializeController()
  T CTenfootController::BInitializeMainUI()
@@ -35484,8 +35518,6 @@
  T CTenfootController::~CTenfootController()
  T CTenfootControllerBase* panorama::GetThisPtrForJSCall<CTenfootControllerBase>(v8::Local<v8::Object>)
  T CTenfootControllerBase::AccessBackgroundPanel()
- T CTenfootControllerBase::AccessFriendsController()
- T CTenfootControllerBase::AccessGroupsController()
  T CTenfootControllerBase::AccessJoin()
  T CTenfootControllerBase::AccessLogin()
  T CTenfootControllerBase::AccessMainMenu()
@@ -40193,6 +40225,9 @@
  T ClearSearchDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ClearSearchDialog::GetEventType()
  T ClearSearchDialog::MakeEvent(panorama::IUIPanelClient const*)
+ T ClearShoppingCart::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ClearShoppingCart::MakeEvent(panorama::IUIPanelClient const*)
+ T ClearShoppingCartCookie()
  T ClientAPI_InitGlobalInstance()
  T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
@@ -40975,8 +41010,8 @@
  T EditAppUpdateOptions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T EditAppUpdateOptions::GetEventType()
  T EditAppUpdateOptions::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
- T EditCommunityProfile::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T EditCommunityProfile::MakeEvent(panorama::IUIPanelClient const*)
+ T EditCommunityProfileX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T EditCommunityProfileX::MakeEvent(panorama::IUIPanelClient const*)
  T EditPayment::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T EditPayment::GetEventType()
  T EditPayment::MakeEvent(panorama::IUIPanelClient const*)
@@ -41140,6 +41175,7 @@
  T FriendPersonaStateChanged::GetEventType()
  T FriendPersonaStateChanged::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
  T FriendRemoved::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendRemoved::GetEventType()
  T FriendRemoved::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
  T FriendRequiresReSort::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendRequiresReSort::GetEventType()
@@ -41194,7 +41230,10 @@
  T FriendsSelectFirstItem::GetEventType()
  T FriendsSelectFirstItem::MakeEvent(panorama::IUIPanelClient const*)
  T FriendsSendChatMessage::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendsSendChatMessage::GetEventType()
  T FriendsSendChatMessage::MakeEvent(panorama::IUIPanelClient const*)
+ T FriendsSendChatMessageX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendsSendChatMessageX::MakeEvent(panorama::IUIPanelClient const*)
  T FriendsSetCurrentlyActiveListTabIndex::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsSetCurrentlyActiveListTabIndex::MakeEvent(panorama::IUIPanelClient const*, int, int)
  T FriendsSettingCheckBoxSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -42741,6 +42780,9 @@
  T ShowFriends::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowFriends::GetEventType()
  T ShowFriends::MakeEvent(panorama::IUIPanelClient const*)
+ T ShowFriendsInvitesTab::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowFriendsInvitesTab::GetEventType()
+ T ShowFriendsInvitesTab::MakeEvent(panorama::IUIPanelClient const*)
  T ShowFriendsProfileDetails::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowFriendsProfileDetails::GetEventType()
  T ShowFriendsProfileDetails::MakeEvent(panorama::IUIPanelClient const*)
@@ -43023,6 +43065,7 @@
  T SteamGroupAdded::GetEventType()
  T SteamGroupAdded::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
  T SteamGroupRemoved::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T SteamGroupRemoved::GetEventType()
  T SteamGroupRemoved::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
  T SteamGroupStateChange::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T SteamGroupStateChange::GetEventType()
@@ -43180,7 +43223,6 @@
  T StoreSalePageResponse::GetEventType()
  T StoreSalePageResponse::MakeEvent(panorama::IUIPanelClient const*, CSmartPtr<CSalePage const, CRefCountAccessor>)
  T StoreSearchResult::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T StoreSearchResult::GetEventType()
  T StoreSearchResult::MakeEvent(panorama::IUIPanelClient const*, char const*, unsigned int, char const*)
  T StoreSearchResultsResponse::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T StoreSearchResultsResponse::GetEventType()
@@ -43695,6 +43737,9 @@
  T ViewEntireAlbum::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ViewEntireAlbum::GetEventType()
  T ViewEntireAlbum::MakeEvent(panorama::IUIPanelClient const*)
+ T ViewFullProfile::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ViewFullProfile::GetEventType()
+ T ViewFullProfile::MakeEvent(panorama::IUIPanelClient const*)
  T ViewGuide::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ViewGuide::GetEventType()
  T ViewGuide::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
@@ -43913,6 +43958,7 @@
  T bool panorama::DispatchEvent<CancelValidation, unsigned int>(CancelValidation, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<ChangeEmailDone>(ChangeEmailDone, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<ChooseBindingClosing>(ChooseBindingClosing, panorama::IUIPanelClient const*)
+ T bool panorama::DispatchEvent<ClearShoppingCart>(ClearShoppingCart, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<CloseMusicControl>(CloseMusicControl, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<CommitControllerBinds, char const*, bool>(CommitControllerBinds, panorama::IUIPanelClient const*, char const*, bool)
  T bool panorama::DispatchEvent<ConfigBrowserClosing, char const*>(ConfigBrowserClosing, panorama::IUIPanelClient const*, char const*)
@@ -43938,7 +43984,6 @@
  T bool panorama::DispatchEvent<FriendVoiceChatStarted, CSteamID, int>(FriendVoiceChatStarted, panorama::IUIPanelClient const*, CSteamID, int)
  T bool panorama::DispatchEvent<FriendsFilterChanged, char const*>(FriendsFilterChanged, panorama::IUIPanelClient const*, char const*)
  T bool panorama::DispatchEvent<FriendsSearchFilterString, char const*>(FriendsSearchFilterString, panorama::IUIPanelClient const*, char const*)
- T bool panorama::DispatchEvent<FriendsSetCurrentlyActiveListTabIndex, int, int>(FriendsSetCurrentlyActiveListTabIndex, panorama::IUIPanelClient const*, int, int)
  T bool panorama::DispatchEvent<GameFiltersChanged, GameFilterOptions_t>(GameFiltersChanged, panorama::IUIPanelClient const*, GameFilterOptions_t)
  T bool panorama::DispatchEvent<GetAgeGateDateResponse, bool, int, int, int>(GetAgeGateDateResponse, panorama::IUIPanelClient const*, bool, int, int, int)
  T bool panorama::DispatchEvent<GroupChatEvent, ChatMemberStateChange_t*>(GroupChatEvent, panorama::IUIPanelClient const*, ChatMemberStateChange_t*)
@@ -43960,6 +44005,7 @@
  T bool panorama::DispatchEvent<NetworkRefresh>(NetworkRefresh, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<OpenCommunityHome, bool>(OpenCommunityHome, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<OpenCommunityMarket, bool>(OpenCommunityMarket, panorama::IUIPanelClient const*, bool)
+ T bool panorama::DispatchEvent<OpenProfileMenu, bool>(OpenProfileMenu, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<OpenRemoteContent, char const*, char const*, EParentalFeature>(OpenRemoteContent, panorama::IUIPanelClient const*, char const*, char const*, EParentalFeature)
  T bool panorama::DispatchEvent<OpenRemoteContent, char*, char const*, EParentalFeature>(OpenRemoteContent, panorama::IUIPanelClient const*, char*, char const*, EParentalFeature)
  T bool panorama::DispatchEvent<PaymentFieldsUpdated>(PaymentFieldsUpdated, panorama::IUIPanelClient const*)
@@ -43978,6 +44024,7 @@
  T bool panorama::DispatchEvent<ShowChatDialogForSteamID, CSteamID>(ShowChatDialogForSteamID, panorama::IUIPanelClient const*, CSteamID)
  T bool panorama::DispatchEvent<ShowDownloadsForGame, unsigned int>(ShowDownloadsForGame, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<ShowFriend, unsigned long long, panorama::EPanelEventSource_t>(ShowFriend, panorama::IUIPanelClient const*, unsigned long long, panorama::EPanelEventSource_t)
+ T bool panorama::DispatchEvent<ShowFriendsInvitesTab>(ShowFriendsInvitesTab, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<ShowFriendsProfileDetails>(ShowFriendsProfileDetails, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<ShowFromController>(ShowFromController, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<ShowInviteFriendsDialog, CSteamID>(ShowInviteFriendsDialog, panorama::IUIPanelClient const*, CSteamID)
@@ -44015,16 +44062,13 @@
  T bool panorama::DispatchEvent<StorePackageDataResponse, unsigned int, CSmartPtr<CStorePackage const, CRefCountAccessor> >(StorePackageDataResponse, panorama::IUIPanelClient const*, unsigned int, CSmartPtr<CStorePackage const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreRemoveLineItemFromCartResponse, unsigned long long, bool, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >(StoreRemoveLineItemFromCartResponse, panorama::IUIPanelClient const*, unsigned long long, bool, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreSalePageResponse, CSmartPtr<CSalePage const, CRefCountAccessor> >(StoreSalePageResponse, panorama::IUIPanelClient const*, CSmartPtr<CSalePage const, CRefCountAccessor>)
- T bool panorama::DispatchEvent<StoreSearchResult, char const*, unsigned int, char const*>(StoreSearchResult, panorama::IUIPanelClient const*, char const*, unsigned int, char const*)
  T bool panorama::DispatchEvent<StoreSearchResultsResponse, char const*, CSmartPtr<CStoreSearchResults, CRefCountAccessor> >(StoreSearchResultsResponse, panorama::IUIPanelClient const*, char const*, CSmartPtr<CStoreSearchResults, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreSetCouponForCartItem, unsigned long long, unsigned long long>(StoreSetCouponForCartItem, panorama::IUIPanelClient const*, unsigned long long, unsigned long long)
  T bool panorama::DispatchEvent<StoreSetCouponForLineItemResponse, unsigned long long, bool, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >(StoreSetCouponForLineItemResponse, panorama::IUIPanelClient const*, unsigned long long, bool, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreShoppingCartResponse, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >(StoreShoppingCartResponse, panorama::IUIPanelClient const*, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreShow>(StoreShow, panorama::IUIPanelClient const*)
- T bool panorama::DispatchEvent<StoreShowApp, unsigned int>(StoreShowApp, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<StoreShowAppPurchaseOptions, unsigned int, char const*>(StoreShowAppPurchaseOptions, panorama::IUIPanelClient const*, unsigned int, char const*)
  T bool panorama::DispatchEvent<StoreShowDlcForApp, unsigned int>(StoreShowDlcForApp, panorama::IUIPanelClient const*, unsigned int)
- T bool panorama::DispatchEvent<StoreShowPackage, unsigned int>(StoreShowPackage, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<StoreVerifyShippingAddressResponse, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >(StoreVerifyShippingAddressResponse, panorama::IUIPanelClient const*, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StreamingSourceChosen, unsigned long long>(StreamingSourceChosen, panorama::IUIPanelClient const*, unsigned long long)
  T bool panorama::DispatchEvent<TenfootMgrNotificationOngoingVoiceChat, bool>(TenfootMgrNotificationOngoingVoiceChat, panorama::IUIPanelClient const*, bool)
@@ -48665,6 +48709,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ClearMarketingMessage>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ClearScreenshotImage>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ClearSearchDialog>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ClearShoppingCart>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseAllGames>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseAndShowLibrary>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseAndShowMarket>(panorama::IUIPanel*, char const*, char const**)
@@ -48773,7 +48818,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DumpVDF>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EditAppLaunchOptions, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EditAppUpdateOptions, unsigned int>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EditCommunityProfile>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EditCommunityProfileX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EditPayment>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EmailVerificationComplete>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<EmptyQueue>(panorama::IUIPanel*, char const*, char const**)
@@ -48830,6 +48875,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchResultsResponse>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSelectFirstItem>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSendChatMessage>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSendChatMessageX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSetCurrentlyActiveListTabIndex, int, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSettingCheckBoxSelected>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsVoiceChatActivation>(panorama::IUIPanel*, char const*, char const**)
@@ -49138,6 +49184,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriend, unsigned long long, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendOptionsMenu, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriends>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsInvitesTab>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsProfileDetails>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsProfileDetailsBySteamID, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsProfileDetailsBySteamIDX, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
@@ -49379,6 +49426,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewControllerDetails, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewControllerPresets, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewEntireAlbum>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewFullProfile>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewGuide, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewGuidesDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewLegalNotice>(panorama::IUIPanel*, char const*, char const**)

@@ -1,3 +1,6 @@
+
+@define groups_list_page_down_count: 18;
+
 FriendsContent_Groups
 {
 	flow-children: down;

@@ -15,7 +15,6 @@
 		</Panel>
 		<Panel class="CheckoutBody" tabindex="auto" selectionpos="auto">
 			<Panel class="CheckoutBodyLeftColumn">
-				<Panel class="HorizontalRule" />
 
 				<Panel id="CheckoutReviewLineItems" />
 				<Panel class="CheckoutGiftRegionWarningPanel" id="GiftRegionWarningPanel" visible="true">
@@ -46,23 +45,19 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel id="PurchaseButtons" class="CheckoutBodyRightColumn">
-				<Panel class="HorizontalRule" />
-				<ToggleButton id="AgreeTerms" text="#Checkout_Review_AgreeTerms" />
-				<Panel id="AgreeTermsSeparator" class="HorizontalRule" />
+				<ToggleButton id="AgreeTerms" class="CheckBox" text="#Checkout_Review_AgreeTerms" />
 				<Label id="CreditCardSecurityCodeLabel" class="PaymentMethodHeader" text="#Checkout_Review_SecurityCode" />
 				<TextEntry id="ReviewCreditCardSecurityCode" maxchars="4"
 					textinputid="CheckoutFormTextEntryLeft"
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 				/>
 				<Panel id="CreditCardSecurityCodeSeparator" class="HorizontalRule" />
-				<Button class="ProminentButton" onactivate="CompletePurchase()">
+				<Button class="ProminentButton PurchaseBtn" onactivate="CompletePurchase()">
 					<Label id="ButtonContinue" text="#Checkout_Review_Purchase" />
 				</Button>
-				<Panel class="HorizontalRule" />
-				<Button onactivate="EditPayment()">
+				<Button class="Button" onactivate="EditPayment()">
 					<Label text="#Checkout_Review_EditPayment" />
 				</Button>
-				<Panel class="HorizontalRule" />
 				<Panel class="PaymentMethodReviewSection">
 					<Panel class="PaymentMethodReviewRow">
 						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_PaymentMethod" />

@@ -1,8 +1,8 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-    <include src="file://{resources}/styles/textinput/text_input_dualtouch.css" />
-    <include src="file://{resources}/styles/friends/friends_search_result_embedded.css" />
+	<include src="file://{resources}/styles/textinput/text_input_dualtouch.css" />
+	<include src="file://{resources}/styles/friends/friends_search_result_embedded.css" />
 	</styles>
 	
 	<FriendsSearchResultEmbedded class="SearchResultEmbedded">

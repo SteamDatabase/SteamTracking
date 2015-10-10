@@ -1,0 +1,104 @@
+FriendsEditPersonaDialog
+{
+	width: 100%;
+	height: 100%;
+	background-color: #00000066;
+}
+
+FriendsEditPersonaDialog.Destructing
+{
+	opacity: 0.0;
+}
+
+.MsgBoxBodyArea
+{
+	flow-children: down;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.MsgBoxBodyArea .MsgBoxButton
+{
+	margin-bottom: 10px;
+}
+
+.FriendsOptionWrapper
+{
+	width: 100%;
+	flow-children: down;
+	margin-bottom: 40px;
+}
+
+#MsgBoxBodyRegion
+{
+	width: 860px;
+}
+
+#MsgBoxButtons
+{
+	flow-children: down;
+	horizontal-align: left;
+	width: 100%;
+	margin-top: 0px;
+}
+
+#MsgBoxButtons Button
+{
+	padding-left: 10px;
+	text-align: left;
+}
+
+
+#ButtonClose
+{
+	margin-top: 6px;
+	margin-bottom: 0px;
+	horizontal-align: left;
+	min-width: 100px;
+}
+
+DropDownMenu
+{
+	height: fit-children;
+	max-height: 400px;
+	overflow: squish scroll;
+	border-width: 5px;
+}
+
+DropDownMenu.DropDownMenuVisible
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 328px;
+}
+
+.FriendsOptionWrapper DropDown
+{
+	width: 428px;
+	height: 54px;
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.2s;
+	border-width: 5px;
+}
+
+DropDown Label
+{
+}
+
+.FriendsOptionWrapper DropDown:hover
+{
+	pre-transform-scale2d: 1.05;
+}
+
+.FriendsOptionWrapper Label
+{
+	margin-left: 10px;
+	color: detailsdatalabelfocus;
+}
+
+.FriendsOptionWrapper .FriendsOptionLabel
+{
+	width: 252px;
+	font-size: 28px;
+	margin-top: 8px;
+	margin-left: 0px;
+}

@@ -25,19 +25,15 @@
 				</Panel>
 				<Panel class="CheckoutGiftReceiptOptionWrapper" selectionpos="none">
 					<Label class="HowToSendTitle" text="#Checkout_GiftRecipient_HowToSend" />
-					<Panel class="HorizontalRule" />
-					<Button id="EmailMyGiftBtn" onfocus="SetRecipientOptions( EmailMyGift );" onactivate="SetInputFocus( EmailMyGiftOptions )" tabindex="0" selectionpos="0,0">
+					<Button id="EmailMyGiftBtn" class="Button" onfocus="SetRecipientOptions( EmailMyGift );" onactivate="SetInputFocus( EmailMyGiftOptions )" tabindex="0" selectionpos="0,0">
 						<Label text="#Checkout_GiftRecipient_EmailGift" />
 					</Button>
-					<Panel class="HorizontalRule" />
-					<Button id="SendToFriendBtn" onfocus="SetRecipientOptions( SendToFriend );" onactivate="SetInputFocus( SendToFriendOptions )" tabindex="1" selectionpos="0,1">
+					<Button id="SendToFriendBtn" class="Button" onfocus="SetRecipientOptions( SendToFriend );" onactivate="SetInputFocus( SendToFriendOptions )" tabindex="1" selectionpos="0,1">
 						<Label text="#Checkout_GiftRecipient_SendToFriend" />
 					</Button>
-					<Panel class="HorizontalRule" />
-					<Button id="SendToInventoryBtn" onfocus="SetRecipientOptions( SendToInventory );" onactivate="RecipientSelected( inventory )" tabindex="2" selectionpos="0,2">
+					<Button id="SendToInventoryBtn" class="Button" onfocus="SetRecipientOptions( SendToInventory );" onactivate="RecipientSelected( inventory )" tabindex="2" selectionpos="0,2">
 						<Label text="#Checkout_GiftRecipient_SendToInventory" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 			</Panel>
 			<Panel class="VerticalRule" />
@@ -49,15 +45,13 @@
 						textinputid="CheckoutFormTextEntryLeft"
 						textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					/>
-					<Panel class="HorizontalRule" />
 					<Button class="AdvanceCheckout" onactivate="RecipientSelected( email )">
 						<Label text="#Checkout_Continue" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 				<Panel id="SendToFriendOptions" class="GiftRecipientOptions" tabindex="auto" selectionpos="auto">
 					<Label text="#Checkout_GiftRecipient_FriendInstructions" />
-					<Panel id="SendToFriendsList" />
+					<Panel id="SendToFriendsList" overscroll-y="170" />
 				</Panel>
 				<Panel id="SendToInventory" class="GiftRecipientOptions" tabindex="auto" selectionpos="auto">
 					<Label text="#Checkout_GiftRecipient_Inventoryinstructions" />

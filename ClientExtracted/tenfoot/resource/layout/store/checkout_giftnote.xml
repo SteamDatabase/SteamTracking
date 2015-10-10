@@ -65,11 +65,9 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn">
-				<Panel class="HorizontalRule" />
 				<Button class="AdvanceCheckout" onactivate="GiftNoteComplete()">
 					<Label text="#Checkout_Continue" />
 				</Button>
-				<Panel class="HorizontalRule" />
 			</Panel>
 		</Panel>
 	</CheckoutGiftNote>	

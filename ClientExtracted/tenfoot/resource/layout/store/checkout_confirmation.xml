@@ -30,30 +30,25 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel id="PurchaseButtons" class="CheckoutBodyRightColumn" tabindex="auto" selectionpos="auto">
-				<Panel class="HorizontalRule" />
 				<Panel id="ReturnToMicrotransaction" class="CheckoutConfirmationBtnGrouping">
-					<Button onactivate="GoBackToMicroTxnAuth()">
+					<Button class="Button" onactivate="GoBackToMicroTxnAuth()">
 						<Label text="#Checkout_Confirmation_ReturnTransaction" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 				<Panel id="GoToLibrarySection" class="CheckoutConfirmationBtnGrouping">
-					<Button id="GoToLibraryBtn" onactivate="CloseAndShowLibrary();">
+					<Button id="GoToLibraryBtn" class="Button" onactivate="CloseAndShowLibrary();">
 						<Label text="#Checkout_Confirmation_GoToLibrary" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 				<Panel id="ReturnToStoreSection" class="CheckoutConfirmationBtnGrouping">
-					<Button id="ReturnToStoreBtn" onactivate="CloseAndShowStore()">
+					<Button id="ReturnToStoreBtn" class="Button" onactivate="CloseAndShowStore()">
 						<Label text="#Checkout_Confirmation_ReturnToStore" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 				<Panel id="ReturnToMarketSection" class="CheckoutConfirmationBtnGrouping">
-					<Button id="ReturnToMarketBtn" onactivate="CloseAndShowMarket();">
+					<Button id="ReturnToMarketBtn" class="Button" onactivate="CloseAndShowMarket();">
 						<Label text="#Checkout_Confirmation_ReturnToMarket" />
 					</Button>
-					<Panel class="HorizontalRule" />
 				</Panel>
 			</Panel>
 		</Panel>
