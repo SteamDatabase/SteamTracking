@@ -412,6 +412,7 @@
 {
 	width: 1275px;
 	flow-children: down;
+	margin-left: 10px;
 }
 
 .AppPurchaseNotesRow .AppDetailsBox
@@ -488,7 +489,7 @@
 	padding: 10px 18px;
 	flow-children: down;
 	border-radius: 3px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .AppDetailsOptionsRow
@@ -764,6 +765,30 @@ VerticalScrollBar {
 	margin-left: 6px;
 }
 
+// ratings
+.AppRating
+{
+	color: greyish_medium;
+	font-size: 22px;
+}
+
+.AppRatingRow
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.AppRatingRow Label
+{
+	width: fill-parent-flow( 1.0 );
+	margin-left: 16px;
+}
+
+.AppRatingOnline
+{
+	margin-top: 10px;
+}
+
 
 ////////////////////////////////////
 // App Detail Modals
@@ -804,6 +829,7 @@ VerticalScrollBar {
 	font-family: platformfont;
 	color: detailsdatalabel;
 }
+
 .AppModalSubTitle
 {
 	font-size: 26px;
