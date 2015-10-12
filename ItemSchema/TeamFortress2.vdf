@@ -138840,7 +138840,6 @@
 				"is_operation_pass"	"1"
 				"weapon_allow_inspect"				"1"
 				"cannot restore"					"1"
-				"hide_strange_prefix"				"1"
 				"deactive date"					"1446422400"	
 				"kill eater score type"			"101"	
 				"kill eater score type 2"		"102"	
@@ -161811,13 +161810,6 @@
 				"score"		"3000"
 			}                  
 		}
-		"KillEater_InvasionRank"
-		{
-			"0"               
-			{                 
-				"score"		"999999999"
-			} 
-		}
 		
 
 
@@ -162184,27 +162176,22 @@
 		"101"
 		{
 			"type_name"			"KillEaterEvent_InvasionKills"
-			"level_data"		"KillEater_InvasionRank"
 		}
 		"102"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap01"
-			"level_data"		"KillEater_InvasionRank"
 		}
 		"103"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap02"
-			"level_data"		"KillEater_InvasionRank"
 		}
 		"104"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap03"
-			"level_data"		"KillEater_InvasionRank"
 		}
 		"105"
 		{
 			"type_name"			"KillEaterEvent_InvasionKillsOnMap04"
-			"level_data"		"KillEater_InvasionRank"
 		}
 		
 
