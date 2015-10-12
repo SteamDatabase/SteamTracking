@@ -595,6 +595,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/parentalcache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/parentalcache.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp

@@ -739,6 +739,9 @@
  B panorama::UserInputActive::symbol
  B panorama::VRApplicationMenuButtonDown::symbol
  B panorama::VRApplicationMenuButtonUp::symbol
+ B panorama::VRApplicationTransitionAborted::symbol
+ B panorama::VRApplicationTransitionNewAppStarted::symbol
+ B panorama::VRApplicationTransitionStarted::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
  B panorama::VRNotificationBeginInteraction::symbol
@@ -747,6 +750,7 @@
  B panorama::VROverlayHidden::symbol
  B panorama::VROverlayImageLoaded::symbol
  B panorama::VROverlayShown::symbol
+ B panorama::VRProcessQuit::symbol
  B panorama::VRRenderToast::symbol
  B panorama::VRResetDashboard::symbol
  B panorama::VRStatusUpdate::symbol
@@ -1131,6 +1135,9 @@
  D panorama::UserInputActive::pchEvent
  D panorama::VRApplicationMenuButtonDown::pchEvent
  D panorama::VRApplicationMenuButtonUp::pchEvent
+ D panorama::VRApplicationTransitionAborted::pchEvent
+ D panorama::VRApplicationTransitionNewAppStarted::pchEvent
+ D panorama::VRApplicationTransitionStarted::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
  D panorama::VRNotificationBeginInteraction::pchEvent
@@ -1139,6 +1146,7 @@
  D panorama::VROverlayHidden::pchEvent
  D panorama::VROverlayImageLoaded::pchEvent
  D panorama::VROverlayShown::pchEvent
+ D panorama::VRProcessQuit::pchEvent
  D panorama::VRRenderToast::pchEvent
  D panorama::VRResetDashboard::pchEvent
  D panorama::VRStatusUpdate::pchEvent
@@ -1665,6 +1673,7 @@
  D typeinfo for panorama::CUIEvent2<panorama::ESoundType, float>
  D typeinfo for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  D typeinfo for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ D typeinfo for panorama::CUIEvent2<unsigned int, unsigned int>
  D typeinfo for panorama::CUIEvent2<unsigned int, unsigned long long>
  D typeinfo for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  D typeinfo for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
@@ -2236,6 +2245,7 @@
  D vtable for panorama::CUIEvent2<panorama::ESoundType, float>
  D vtable for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  D vtable for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ D vtable for panorama::CUIEvent2<unsigned int, unsigned int>
  D vtable for panorama::CUIEvent2<unsigned int, unsigned long long>
  D vtable for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  D vtable for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
@@ -3090,6 +3100,7 @@
  R typeinfo name for panorama::CUIEvent2<panorama::ESoundType, float>
  R typeinfo name for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  R typeinfo name for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ R typeinfo name for panorama::CUIEvent2<unsigned int, unsigned int>
  R typeinfo name for panorama::CUIEvent2<unsigned int, unsigned long long>
  R typeinfo name for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  R typeinfo name for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
@@ -11228,6 +11239,11 @@
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::~CUIEvent2()
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Copy() const
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::~CUIEvent2()
  T panorama::CUIEvent2<unsigned int, unsigned long long>::Copy() const
  T panorama::CUIEvent2<unsigned int, unsigned long long>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<unsigned int, unsigned long long>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -12501,6 +12517,9 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::UserInputActive>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionAborted>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionNewAppStarted, unsigned int, unsigned int>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionStarted>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
@@ -12509,6 +12528,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayHidden, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayImageLoaded, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayShown, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRProcessQuit, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRRenderToast, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRResetDashboard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent::CanBubble() const
@@ -12802,6 +12822,12 @@
  T panorama::VRApplicationMenuButtonDown::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRApplicationMenuButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRApplicationMenuButtonUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRApplicationTransitionAborted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionAborted::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRApplicationTransitionNewAppStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionNewAppStarted::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned int)
+ T panorama::VRApplicationTransitionStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionStarted::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRDashboardRequested::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardRequested::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned long long)
  T panorama::VRDashboardThumbSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12818,6 +12844,8 @@
  T panorama::VROverlayImageLoaded::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T panorama::VROverlayShown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VROverlayShown::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VRProcessQuit::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRProcessQuit::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRRenderToast::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRRenderToast::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRResetDashboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)

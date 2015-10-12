@@ -2140,6 +2140,7 @@
 	"Profile_Profile_Title"		"Profile"
 	"Profile_Inventory_Title"	"Inventory"
 	"Profile_TradeOffers_Title"	"Trade Offers"
+	"Profile_NewTradeOffer_Title"	   "Trade Offer"
 	
 	"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... {d:progress}%"
 
@@ -2277,7 +2278,9 @@
 	"JoinDialog_UpdateAvailable_WaitForUpdate"			"Download the Update"
 	"Steam_LaunchShortcutFailed_Title"	"Shortcut launch failed"
 	"Steam_LaunchShortcutFailed_Info"		"Failed to launch {s:game}."
-	
+	"Steam_ErrorCantStartVRGame"	"Failed to start {s:game} in VR. (Error: {s:error})"
+	"Steam_WaitingForVRAppQuit"		"Waiting for VR application to quit..."
+
 	"Steam_AppUpdateError_0"		"no error"
 	"Steam_AppUpdateError_1"		"unknown error"
 	"Steam_AppUpdateError_2"		"update paused"

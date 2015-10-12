@@ -827,6 +827,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientmusic.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientremoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvideo.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.h

@@ -3254,6 +3254,7 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 {
 	visibility: visible;
 	margin-left: 0px;
+	width: 700px;
 }
 
 #SettingsInterface_CustomSearchProviderURL

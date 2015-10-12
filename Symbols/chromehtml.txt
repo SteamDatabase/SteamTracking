@@ -694,6 +694,9 @@
  R typeinfo name for IPC::PosixEvent
  R typeinfo name for IPC::PosixMutex
  R typeinfo name for IPC::PosixSharedMemory
+ SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+ SteamStdLib::CCommandLineParam::~CCommandLineParam()
+ SteamStdLib::CommandLine()
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
@@ -2271,6 +2274,9 @@
  __cxa_bad_typeid
  __cxa_begin_catch
  __cxa_end_catch
+ __cxa_guard_abort
+ __cxa_guard_acquire
+ __cxa_guard_release
  __cxa_rethrow
  __divdi3
  __dynamic_cast
@@ -2487,11 +2493,13 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
+ b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableSandbox
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
  b CChromeIPCClient::Init(unsigned int)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
  b _ZZN6google8protobuf55protobuf_AddDesc_google_2fprotobuf_2fdescriptor_2eprotoEvE12already_here.b
+ b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableSandbox
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_HTMLController

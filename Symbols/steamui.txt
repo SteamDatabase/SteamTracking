@@ -2911,6 +2911,9 @@
  B panorama::UserInputActive::symbol
  B panorama::VRApplicationMenuButtonDown::symbol
  B panorama::VRApplicationMenuButtonUp::symbol
+ B panorama::VRApplicationTransitionAborted::symbol
+ B panorama::VRApplicationTransitionNewAppStarted::symbol
+ B panorama::VRApplicationTransitionStarted::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
  B panorama::VRNotificationBeginInteraction::symbol
@@ -2919,6 +2922,7 @@
  B panorama::VROverlayHidden::symbol
  B panorama::VROverlayImageLoaded::symbol
  B panorama::VROverlayShown::symbol
+ B panorama::VRProcessQuit::symbol
  B panorama::VRRenderToast::symbol
  B panorama::VRResetDashboard::symbol
  B panorama::VRStatusUpdate::symbol
@@ -8569,6 +8573,9 @@
  D panorama::UserInputActive::pchEvent
  D panorama::VRApplicationMenuButtonDown::pchEvent
  D panorama::VRApplicationMenuButtonUp::pchEvent
+ D panorama::VRApplicationTransitionAborted::pchEvent
+ D panorama::VRApplicationTransitionNewAppStarted::pchEvent
+ D panorama::VRApplicationTransitionStarted::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
  D panorama::VRNotificationBeginInteraction::pchEvent
@@ -8577,6 +8584,7 @@
  D panorama::VROverlayHidden::pchEvent
  D panorama::VROverlayImageLoaded::pchEvent
  D panorama::VROverlayShown::pchEvent
+ D panorama::VRProcessQuit::pchEvent
  D panorama::VRRenderToast::pchEvent
  D panorama::VRResetDashboard::pchEvent
  D panorama::VRStatusUpdate::pchEvent
@@ -8897,6 +8905,8 @@
  D typeinfo for CCallback<CJoinGameController, AppUpdateStopped_t, false>
  D typeinfo for CCallback<CJoinGameController, DRMDataResponse_t, false>
  D typeinfo for CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>
+ D typeinfo for CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>
+ D typeinfo for CCallback<CJoinGameController, VRProcessQuit_t, false>
  D typeinfo for CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>
  D typeinfo for CCallback<CLibraryAchievementsPanel, UserAchievementStored_t, false>
  D typeinfo for CCallback<CLibraryAchievementsPanel, UserStatsReceived_t, false>
@@ -9187,7 +9197,11 @@
  D typeinfo for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  D typeinfo for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
  D typeinfo for CCallback<CTenfootController, SystemIM_t, false>
+ D typeinfo for CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>
+ D typeinfo for CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>
+ D typeinfo for CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>
  D typeinfo for CCallback<CTenfootController, VRModeExitRequest_t, false>
+ D typeinfo for CCallback<CTenfootController, VRProcessQuit_t, false>
  D typeinfo for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>
  D typeinfo for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationRequested_t, false>
  D typeinfo for CCallback<CTenfootControllerPairing, ControllerConnected_t, false>
@@ -9702,6 +9716,8 @@
  D typeinfo for CJoinGameController::CCallback_OnAppUpdateStopped
  D typeinfo for CJoinGameController::CCallback_OnDRMDataResponse
  D typeinfo for CJoinGameController::CCallback_OnLegacyCDKeyRegistered
+ D typeinfo for CJoinGameController::CCallback_OnVRApplicationTransitionAborted
+ D typeinfo for CJoinGameController::CCallback_OnVRProcessQuit
  D typeinfo for CJoinGameDialog
  D typeinfo for CJoinItemPanel
  D typeinfo for CJoinPanel
@@ -10709,7 +10725,11 @@
  D typeinfo for CTenfootController::CCallback_OnNetworkDeviceStateChange
  D typeinfo for CTenfootController::CCallback_OnSteamSessionInfoClosed
  D typeinfo for CTenfootController::CCallback_OnSteamSessionInfoIssued
+ D typeinfo for CTenfootController::CCallback_OnVRApplicationTransitionAborted
+ D typeinfo for CTenfootController::CCallback_OnVRApplicationTransitionNewAppStarted
+ D typeinfo for CTenfootController::CCallback_OnVRApplicationTransitionStarted
  D typeinfo for CTenfootController::CCallback_OnVRModeExitRequested
+ D typeinfo for CTenfootController::CCallback_OnVRProcessQuit
  D typeinfo for CTenfootController::CDisplayInfoThread
  D typeinfo for CTenfootControllerBase
  D typeinfo for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
@@ -11190,6 +11210,7 @@
  D typeinfo for panorama::CUIEvent2<unsigned int, KeyValues*>
  D typeinfo for panorama::CUIEvent2<unsigned int, bool>
  D typeinfo for panorama::CUIEvent2<unsigned int, char const*>
+ D typeinfo for panorama::CUIEvent2<unsigned int, unsigned int>
  D typeinfo for panorama::CUIEvent2<unsigned int, unsigned long long>
  D typeinfo for panorama::CUIEvent2<unsigned long long, bool>
  D typeinfo for panorama::CUIEvent2<unsigned long long, panorama::EPanelEventSource_t>
@@ -12283,6 +12304,8 @@
  D vtable for CCallback<CJoinGameController, AppUpdateStopped_t, false>
  D vtable for CCallback<CJoinGameController, DRMDataResponse_t, false>
  D vtable for CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>
+ D vtable for CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>
+ D vtable for CCallback<CJoinGameController, VRProcessQuit_t, false>
  D vtable for CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>
  D vtable for CCallback<CLibraryAchievementsPanel, UserAchievementStored_t, false>
  D vtable for CCallback<CLibraryAchievementsPanel, UserStatsReceived_t, false>
@@ -12573,7 +12596,11 @@
  D vtable for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  D vtable for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
  D vtable for CCallback<CTenfootController, SystemIM_t, false>
+ D vtable for CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>
+ D vtable for CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>
+ D vtable for CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>
  D vtable for CCallback<CTenfootController, VRModeExitRequest_t, false>
+ D vtable for CCallback<CTenfootController, VRProcessQuit_t, false>
  D vtable for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>
  D vtable for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationRequested_t, false>
  D vtable for CCallback<CTenfootControllerPairing, ControllerConnected_t, false>
@@ -13083,6 +13110,8 @@
  D vtable for CJoinGameController::CCallback_OnAppUpdateStopped
  D vtable for CJoinGameController::CCallback_OnDRMDataResponse
  D vtable for CJoinGameController::CCallback_OnLegacyCDKeyRegistered
+ D vtable for CJoinGameController::CCallback_OnVRApplicationTransitionAborted
+ D vtable for CJoinGameController::CCallback_OnVRProcessQuit
  D vtable for CJoinGameDialog
  D vtable for CJoinItemPanel
  D vtable for CJoinPanel
@@ -14082,7 +14111,11 @@
  D vtable for CTenfootController::CCallback_OnNetworkDeviceStateChange
  D vtable for CTenfootController::CCallback_OnSteamSessionInfoClosed
  D vtable for CTenfootController::CCallback_OnSteamSessionInfoIssued
+ D vtable for CTenfootController::CCallback_OnVRApplicationTransitionAborted
+ D vtable for CTenfootController::CCallback_OnVRApplicationTransitionNewAppStarted
+ D vtable for CTenfootController::CCallback_OnVRApplicationTransitionStarted
  D vtable for CTenfootController::CCallback_OnVRModeExitRequested
+ D vtable for CTenfootController::CCallback_OnVRProcessQuit
  D vtable for CTenfootController::CDisplayInfoThread
  D vtable for CTenfootControllerBase
  D vtable for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
@@ -14470,6 +14503,7 @@
  D vtable for panorama::CUIEvent2<unsigned int, KeyValues*>
  D vtable for panorama::CUIEvent2<unsigned int, bool>
  D vtable for panorama::CUIEvent2<unsigned int, char const*>
+ D vtable for panorama::CUIEvent2<unsigned int, unsigned int>
  D vtable for panorama::CUIEvent2<unsigned int, unsigned long long>
  D vtable for panorama::CUIEvent2<unsigned long long, bool>
  D vtable for panorama::CUIEvent2<unsigned long long, panorama::EPanelEventSource_t>
@@ -15066,6 +15100,8 @@
  R typeinfo name for CCallback<CJoinGameController, AppUpdateStopped_t, false>
  R typeinfo name for CCallback<CJoinGameController, DRMDataResponse_t, false>
  R typeinfo name for CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>
+ R typeinfo name for CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>
+ R typeinfo name for CCallback<CJoinGameController, VRProcessQuit_t, false>
  R typeinfo name for CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>
  R typeinfo name for CCallback<CLibraryAchievementsPanel, UserAchievementStored_t, false>
  R typeinfo name for CCallback<CLibraryAchievementsPanel, UserStatsReceived_t, false>
@@ -15356,7 +15392,11 @@
  R typeinfo name for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  R typeinfo name for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
  R typeinfo name for CCallback<CTenfootController, SystemIM_t, false>
+ R typeinfo name for CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>
+ R typeinfo name for CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>
+ R typeinfo name for CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>
  R typeinfo name for CCallback<CTenfootController, VRModeExitRequest_t, false>
+ R typeinfo name for CCallback<CTenfootController, VRProcessQuit_t, false>
  R typeinfo name for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>
  R typeinfo name for CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationRequested_t, false>
  R typeinfo name for CCallback<CTenfootControllerPairing, ControllerConnected_t, false>
@@ -15874,6 +15914,8 @@
  R typeinfo name for CJoinGameController::CCallback_OnAppUpdateStopped
  R typeinfo name for CJoinGameController::CCallback_OnDRMDataResponse
  R typeinfo name for CJoinGameController::CCallback_OnLegacyCDKeyRegistered
+ R typeinfo name for CJoinGameController::CCallback_OnVRApplicationTransitionAborted
+ R typeinfo name for CJoinGameController::CCallback_OnVRProcessQuit
  R typeinfo name for CJoinGameDialog
  R typeinfo name for CJoinItemPanel
  R typeinfo name for CJoinPanel
@@ -16888,7 +16930,11 @@
  R typeinfo name for CTenfootController::CCallback_OnNetworkDeviceStateChange
  R typeinfo name for CTenfootController::CCallback_OnSteamSessionInfoClosed
  R typeinfo name for CTenfootController::CCallback_OnSteamSessionInfoIssued
+ R typeinfo name for CTenfootController::CCallback_OnVRApplicationTransitionAborted
+ R typeinfo name for CTenfootController::CCallback_OnVRApplicationTransitionNewAppStarted
+ R typeinfo name for CTenfootController::CCallback_OnVRApplicationTransitionStarted
  R typeinfo name for CTenfootController::CCallback_OnVRModeExitRequested
+ R typeinfo name for CTenfootController::CCallback_OnVRProcessQuit
  R typeinfo name for CTenfootController::CDisplayInfoThread
  R typeinfo name for CTenfootControllerBase
  R typeinfo name for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
@@ -17680,6 +17726,7 @@
  R typeinfo name for panorama::CUIEvent2<unsigned int, KeyValues*>
  R typeinfo name for panorama::CUIEvent2<unsigned int, bool>
  R typeinfo name for panorama::CUIEvent2<unsigned int, char const*>
+ R typeinfo name for panorama::CUIEvent2<unsigned int, unsigned int>
  R typeinfo name for panorama::CUIEvent2<unsigned int, unsigned long long>
  R typeinfo name for panorama::CUIEvent2<unsigned long long, bool>
  R typeinfo name for panorama::CUIEvent2<unsigned long long, panorama::EPanelEventSource_t>
@@ -19975,6 +20022,12 @@
  T CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>::CCallback(CJoinGameController*, void (CJoinGameController::*)(LegacyCDKeyRegistered_t*))
  T CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>::Register(CJoinGameController*, void (CJoinGameController::*)(LegacyCDKeyRegistered_t*))
  T CCallback<CJoinGameController, LegacyCDKeyRegistered_t, false>::Run(void*)
+ T CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>::CCallback(CJoinGameController*, void (CJoinGameController::*)(VRApplicationTransitionAborted_t*))
+ T CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>::Register(CJoinGameController*, void (CJoinGameController::*)(VRApplicationTransitionAborted_t*))
+ T CCallback<CJoinGameController, VRApplicationTransitionAborted_t, false>::Run(void*)
+ T CCallback<CJoinGameController, VRProcessQuit_t, false>::CCallback(CJoinGameController*, void (CJoinGameController::*)(VRProcessQuit_t*))
+ T CCallback<CJoinGameController, VRProcessQuit_t, false>::Register(CJoinGameController*, void (CJoinGameController::*)(VRProcessQuit_t*))
+ T CCallback<CJoinGameController, VRProcessQuit_t, false>::Run(void*)
  T CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>::CCallback(CLibraryAchievementsPanel*, void (CLibraryAchievementsPanel::*)(UserAchievementIconFetched_t*))
  T CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>::Register(CLibraryAchievementsPanel*, void (CLibraryAchievementsPanel::*)(UserAchievementIconFetched_t*))
  T CCallback<CLibraryAchievementsPanel, UserAchievementIconFetched_t, false>::Run(void*)
@@ -20845,9 +20898,21 @@
  T CCallback<CTenfootController, SystemIM_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(SystemIM_t*))
  T CCallback<CTenfootController, SystemIM_t, false>::Register(CTenfootController*, void (CTenfootController::*)(SystemIM_t*))
  T CCallback<CTenfootController, SystemIM_t, false>::Run(void*)
+ T CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionAborted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>::Register(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionAborted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionAborted_t, false>::Run(void*)
+ T CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionNewAppStarted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>::Register(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionNewAppStarted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionNewAppStarted_t, false>::Run(void*)
+ T CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionStarted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>::Register(CTenfootController*, void (CTenfootController::*)(VRApplicationTransitionStarted_t*))
+ T CCallback<CTenfootController, VRApplicationTransitionStarted_t, false>::Run(void*)
  T CCallback<CTenfootController, VRModeExitRequest_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(VRModeExitRequest_t*))
  T CCallback<CTenfootController, VRModeExitRequest_t, false>::Register(CTenfootController*, void (CTenfootController::*)(VRModeExitRequest_t*))
  T CCallback<CTenfootController, VRModeExitRequest_t, false>::Run(void*)
+ T CCallback<CTenfootController, VRProcessQuit_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(VRProcessQuit_t*))
+ T CCallback<CTenfootController, VRProcessQuit_t, false>::Register(CTenfootController*, void (CTenfootController::*)(VRProcessQuit_t*))
+ T CCallback<CTenfootController, VRProcessQuit_t, false>::Run(void*)
  T CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>::CCallback(CTenfootControllerBase*, void (CTenfootControllerBase::*)(RemoteDeviceAuthorizationCancelled_t*))
  T CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>::Register(CTenfootControllerBase*, void (CTenfootControllerBase::*)(RemoteDeviceAuthorizationCancelled_t*))
  T CCallback<CTenfootControllerBase, RemoteDeviceAuthorizationCancelled_t, false>::Run(void*)
@@ -21964,7 +22029,7 @@
  T CConvertAppsController::PreloadNextApp()
  T CConvertAppsController::ProcessRetailInstall()
  T CConvertAppsController::RemoveObseleteGamesDemos()
- T CConvertAppsController::StartConvertApps()
+ T CConvertAppsController::StartConvertApps(bool)
  T CConvertAppsController::StartInstallFromMedia()
  T CConvertAppsController::~CConvertAppsController()
  T CConvertToPNGThread::CConvertToPNGThread()
@@ -23592,7 +23657,6 @@
  T CGameActions::OnSetCurrentUninstallGame(char const*)
  T CGameActions::OnShowAcceptGuestPassDialog(unsigned long long)
  T CGameActions::OnShowAnotherGameIsLaunching()
- T CGameActions::OnShowAppInstallError(unsigned int, char const*, EAppUpdateError)
  T CGameActions::OnShowCDKeyBeforeLaunch(CGameID, KeyValues*)
  T CGameActions::OnShowCacheWorkDialog()
  T CGameActions::OnShowCannotInstallDownloadsDisabled()
@@ -25041,7 +25105,7 @@
  T CInboxButton::KB_ChainToMap()
  T CInboxButton::OnShowMenu(vgui::Menu*)
  T CInboxButton::~CInboxButton()
- T CInboxMsgBox::CInboxMsgBox(panorama::IUIWindow*, char const*)
+ T CInboxMsgBox::CInboxMsgBox(panorama::IUIWindow*, char const*, CMainMenu*)
  T CInboxMsgBox::EventAllowNewClientUpdate()
  T CInboxMsgBox::EventAllowSteamOSUpdate()
  T CInboxMsgBox::EventCloseInboxMenu()
@@ -25359,7 +25423,7 @@
  T CInstallSubConvertApps::OnRetryReadNextDisk()
  T CInstallSubConvertApps::OnShowDeniedLegacyKey(unsigned int)
  T CInstallSubConvertApps::OnShowDiskChangeDialog(int)
- T CInstallSubConvertApps::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
+ T CInstallSubConvertApps::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T CInstallSubConvertApps::OnStartRetailInstall(unsigned int, int)
  T CInstallSubConvertApps::OnStartingNextApp(CSteamApp*)
  T CInstallSubConvertApps::OnTick()
@@ -25445,6 +25509,8 @@
  T CJoinGameController::CCallback_OnAppUpdateStopped::Run(void*)
  T CJoinGameController::CCallback_OnDRMDataResponse::Run(void*)
  T CJoinGameController::CCallback_OnLegacyCDKeyRegistered::Run(void*)
+ T CJoinGameController::CCallback_OnVRApplicationTransitionAborted::Run(void*)
+ T CJoinGameController::CCallback_OnVRProcessQuit::Run(void*)
  T CJoinGameController::CJoinGameController(ISteamJoinGameHandler*)
  T CJoinGameController::Cancel()
  T CJoinGameController::CheckingOverlayAccess(CSteamApp*)
@@ -25458,6 +25524,8 @@
  T CJoinGameController::OnLegacyCDKeyRegistered(LegacyCDKeyRegistered_t*)
  T CJoinGameController::OnTaskCompletion(CJoinGameController::ETask)
  T CJoinGameController::OnUpdateAvailableResult(bool)
+ T CJoinGameController::OnVRApplicationTransitionAborted(VRApplicationTransitionAborted_t*)
+ T CJoinGameController::OnVRProcessQuit(VRProcessQuit_t*)
  T CJoinGameController::Run(unsigned int, char const*, char const*, int)
  T CJoinGameController::RunGame()
  T CJoinGameController::SetOverlayRightsCheckcompleted()
@@ -25481,6 +25549,8 @@
  T CJoinGameDialog::OnContentServersBusy(char const*)
  T CJoinGameDialog::OnGameUpdateProgress(float, int)
  T CJoinGameDialog::OnOSXAccessibilityOK()
+ T CJoinGameDialog::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T CJoinGameDialog::OnOpenVRWaitingForAppExit(char const*, char const*)
  T CJoinGameDialog::OnPostGameLaunchStarting()
  T CJoinGameDialog::OnPreGameLaunchStarting()
  T CJoinGameDialog::OnTick()
@@ -34455,6 +34525,8 @@
  T CStreamingServerGameActions::OnGameUpdateProgress(float, int)
  T CStreamingServerGameActions::OnLaunchJoinGameDialog(unsigned int, char const*, char const*, int)
  T CStreamingServerGameActions::OnNoControllerConfigSelected(CGameID, KeyValues*)
+ T CStreamingServerGameActions::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T CStreamingServerGameActions::OnOpenVRWaitingForAppExit(char const*, char const*)
  T CStreamingServerGameActions::OnOtherSessionAlreadyPlaying(unsigned int, CGameID, KeyValues*)
  T CStreamingServerGameActions::OnPlatformNotSupportedForGame(CGameID)
  T CStreamingServerGameActions::OnPostGameLaunchStarting()
@@ -34465,7 +34537,6 @@
  T CStreamingServerGameActions::OnSetCurrentUninstallGame(char const*)
  T CStreamingServerGameActions::OnShowAcceptGuestPassDialog(unsigned long long)
  T CStreamingServerGameActions::OnShowAnotherGameIsLaunching()
- T CStreamingServerGameActions::OnShowAppInstallError(unsigned int, char const*, EAppUpdateError)
  T CStreamingServerGameActions::OnShowCDKeyBeforeLaunch(CGameID, KeyValues*)
  T CStreamingServerGameActions::OnShowCacheWorkDialog()
  T CStreamingServerGameActions::OnShowCannotInstallDownloadsDisabled()
@@ -34475,10 +34546,10 @@
  T CStreamingServerGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T CStreamingServerGameActions::OnShowDeniedLegacyKey(unsigned int)
  T CStreamingServerGameActions::OnShowDiskChangeDialog(int)
- T CStreamingServerGameActions::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
  T CStreamingServerGameActions::OnShowExternalURL(char const*)
  T CStreamingServerGameActions::OnShowGameInstallInProgress()
  T CStreamingServerGameActions::OnShowGameLaunchProgress()
+ T CStreamingServerGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T CStreamingServerGameActions::OnShowInstallGameWizard(unsigned int)
  T CStreamingServerGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T CStreamingServerGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
@@ -35413,7 +35484,11 @@
  T CTenfootController::CCallback_OnNetworkDeviceStateChange::Run(void*)
  T CTenfootController::CCallback_OnSteamSessionInfoClosed::Run(void*)
  T CTenfootController::CCallback_OnSteamSessionInfoIssued::Run(void*)
+ T CTenfootController::CCallback_OnVRApplicationTransitionAborted::Run(void*)
+ T CTenfootController::CCallback_OnVRApplicationTransitionNewAppStarted::Run(void*)
+ T CTenfootController::CCallback_OnVRApplicationTransitionStarted::Run(void*)
  T CTenfootController::CCallback_OnVRModeExitRequested::Run(void*)
+ T CTenfootController::CCallback_OnVRProcessQuit::Run(void*)
  T CTenfootController::CDisplayInfoThread::Run()
  T CTenfootController::CDisplayInfoThread::~CDisplayInfoThread()
  T CTenfootController::CTenfootController(ITenfootControllerCallback*, panorama::IUIWindow*)
@@ -35488,7 +35563,11 @@
  T CTenfootController::OnTurnOffActiveController()
  T CTenfootController::OnUpdateAmbientTrack()
  T CTenfootController::OnUpdateScreenSaver()
+ T CTenfootController::OnVRApplicationTransitionAborted(VRApplicationTransitionAborted_t*)
+ T CTenfootController::OnVRApplicationTransitionNewAppStarted(VRApplicationTransitionNewAppStarted_t*)
+ T CTenfootController::OnVRApplicationTransitionStarted(VRApplicationTransitionStarted_t*)
  T CTenfootController::OnVRModeExitRequested(VRModeExitRequest_t*)
+ T CTenfootController::OnVRProcessQuit(VRProcessQuit_t*)
  T CTenfootController::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
  T CTenfootController::OnWindowGotFocus(panorama::IUIWindow*)
  T CTenfootController::OnWindowHidden(panorama::IUIWindow*)
@@ -35732,6 +35811,8 @@
  T CTenfootGameActions::OnLaunchOptionChosen(KeyValues*, int)
  T CTenfootGameActions::OnLaunchOptionChosenRemote(unsigned long long, unsigned int, int)
  T CTenfootGameActions::OnNoControllerConfigSelected(CGameID, KeyValues*)
+ T CTenfootGameActions::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T CTenfootGameActions::OnOpenVRWaitingForAppExit(char const*, char const*)
  T CTenfootGameActions::OnOtherSessionAlreadyPlaying(unsigned int, CGameID, KeyValues*)
  T CTenfootGameActions::OnPlatformNotSupportedForGame(CGameID)
  T CTenfootGameActions::OnPostGameLaunchStarting()
@@ -35743,7 +35824,6 @@
  T CTenfootGameActions::OnSetCurrentUninstallGame(char const*)
  T CTenfootGameActions::OnShowAcceptGuestPassDialog(unsigned long long)
  T CTenfootGameActions::OnShowAnotherGameIsLaunching()
- T CTenfootGameActions::OnShowAppInstallError(unsigned int, char const*, EAppUpdateError)
  T CTenfootGameActions::OnShowCDKeyBeforeLaunch(CGameID, KeyValues*)
  T CTenfootGameActions::OnShowCacheWorkDialog()
  T CTenfootGameActions::OnShowCannotInstallDownloadsDisabled()
@@ -35753,10 +35833,10 @@
  T CTenfootGameActions::OnShowDeleteConfirmation(CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, char const*)
  T CTenfootGameActions::OnShowDeniedLegacyKey(unsigned int)
  T CTenfootGameActions::OnShowDiskChangeDialog(int)
- T CTenfootGameActions::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
  T CTenfootGameActions::OnShowExternalURL(char const*)
  T CTenfootGameActions::OnShowGameInstallInProgress()
  T CTenfootGameActions::OnShowGameLaunchProgress()
+ T CTenfootGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T CTenfootGameActions::OnShowInstallGameWizard(unsigned int)
  T CTenfootGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T CTenfootGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
@@ -44015,7 +44095,6 @@
  T bool panorama::DispatchEvent<RemoveFriend, CSteamID, bool>(RemoveFriend, panorama::IUIPanelClient const*, CSteamID, bool)
  T bool panorama::DispatchEvent<ReplaceOrPushTenfootBackStackEvent, panorama::IUIEvent*>(ReplaceOrPushTenfootBackStackEvent, panorama::IUIPanelClient const*, panorama::IUIEvent*)
  T bool panorama::DispatchEvent<SeekBarChanged, float>(SeekBarChanged, panorama::IUIPanelClient const*, float)
- T bool panorama::DispatchEvent<SetFocusedProfileSection, char const*>(SetFocusedProfileSection, panorama::IUIPanelClient const*, char const*)
  T bool panorama::DispatchEvent<SetMainMenuStackDepth, int>(SetMainMenuStackDepth, panorama::IUIPanelClient const*, int)
  T bool panorama::DispatchEvent<SetMainMenuStackDepth, unsigned int>(SetMainMenuStackDepth, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<SetPlayActionModal, bool>(SetPlayActionModal, panorama::IUIPanelClient const*, bool)
@@ -44157,6 +44236,10 @@
  T bool panorama::DispatchEvent<panorama::TouchKeyClicked, panorama::CPanel2D*, panorama::CTouchPad*>(panorama::TouchKeyClicked, panorama::IUIPanelClient const*, panorama::CPanel2D*, panorama::CTouchPad*)
  T bool panorama::DispatchEvent<panorama::TouchKeyStyleChanged, panorama::CPanel2D*, char const*, bool>(panorama::TouchKeyStyleChanged, panorama::IUIPanelClient const*, panorama::CPanel2D*, char const*, bool)
  T bool panorama::DispatchEvent<panorama::TouchKeyStyleChanged, panorama::CPanelPtr<panorama::CPanel2D>, char const*, bool>(panorama::TouchKeyStyleChanged, panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::CPanel2D>, char const*, bool)
+ T bool panorama::DispatchEvent<panorama::VRApplicationTransitionAborted>(panorama::VRApplicationTransitionAborted, panorama::IUIPanelClient const*)
+ T bool panorama::DispatchEvent<panorama::VRApplicationTransitionNewAppStarted, unsigned int, unsigned int>(panorama::VRApplicationTransitionNewAppStarted, panorama::IUIPanelClient const*, unsigned int, unsigned int)
+ T bool panorama::DispatchEvent<panorama::VRApplicationTransitionStarted>(panorama::VRApplicationTransitionStarted, panorama::IUIPanelClient const*)
+ T bool panorama::DispatchEvent<panorama::VRProcessQuit, unsigned int>(panorama::VRProcessQuit, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<panorama::VUMeterBarsChanged, int>(panorama::VUMeterBarsChanged, panorama::IUIPanelClient const*, int)
  T bool panorama::DispatchEvent<panorama::VideoPlayerChangedRepresentation, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerChangedRepresentation, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerEnded, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerEnded, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
@@ -44500,7 +44583,6 @@
  T non-virtual thunk to CGameActions::OnSetCurrentUninstallGame(char const*)
  T non-virtual thunk to CGameActions::OnShowAcceptGuestPassDialog(unsigned long long)
  T non-virtual thunk to CGameActions::OnShowAnotherGameIsLaunching()
- T non-virtual thunk to CGameActions::OnShowAppInstallError(unsigned int, char const*, EAppUpdateError)
  T non-virtual thunk to CGameActions::OnShowCDKeyBeforeLaunch(CGameID, KeyValues*)
  T non-virtual thunk to CGameActions::OnShowCacheWorkDialog()
  T non-virtual thunk to CGameActions::OnShowCannotInstallDownloadsDisabled()
@@ -44665,7 +44747,7 @@
  T non-virtual thunk to CInstallSubConvertApps::OnReadNextDisk(int)
  T non-virtual thunk to CInstallSubConvertApps::OnShowDeniedLegacyKey(unsigned int)
  T non-virtual thunk to CInstallSubConvertApps::OnShowDiskChangeDialog(int)
- T non-virtual thunk to CInstallSubConvertApps::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
+ T non-virtual thunk to CInstallSubConvertApps::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T non-virtual thunk to CInstallSubConvertApps::OnStartRetailInstall(unsigned int, int)
  T non-virtual thunk to CInstallSubConvertApps::OnStartingNextApp(CSteamApp*)
  T non-virtual thunk to CInstallSubConvertApps::OnUpdateRetailInstallProgress(float, float, unsigned long long, unsigned long long)
@@ -44674,6 +44756,8 @@
  T non-virtual thunk to CJoinGameDialog::CloseDialog(bool)
  T non-virtual thunk to CJoinGameDialog::OnContentServersBusy(char const*)
  T non-virtual thunk to CJoinGameDialog::OnGameUpdateProgress(float, int)
+ T non-virtual thunk to CJoinGameDialog::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T non-virtual thunk to CJoinGameDialog::OnOpenVRWaitingForAppExit(char const*, char const*)
  T non-virtual thunk to CJoinGameDialog::OnPostGameLaunchStarting()
  T non-virtual thunk to CJoinGameDialog::OnPreGameLaunchStarting()
  T non-virtual thunk to CJoinGameDialog::ResetUpdateStartTime()
@@ -44822,12 +44906,14 @@
  T non-virtual thunk to CStreamingServerGameActions::OnConversionCompleteAllowProgress()
  T non-virtual thunk to CStreamingServerGameActions::OnConversionFailedDisallowProgress()
  T non-virtual thunk to CStreamingServerGameActions::OnGameUpdateProgress(float, int)
+ T non-virtual thunk to CStreamingServerGameActions::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T non-virtual thunk to CStreamingServerGameActions::OnOpenVRWaitingForAppExit(char const*, char const*)
  T non-virtual thunk to CStreamingServerGameActions::OnPostGameLaunchStarting()
  T non-virtual thunk to CStreamingServerGameActions::OnPreGameLaunchStarting()
  T non-virtual thunk to CStreamingServerGameActions::OnReadNextDisk(int)
  T non-virtual thunk to CStreamingServerGameActions::OnShowDeniedLegacyKey(unsigned int)
  T non-virtual thunk to CStreamingServerGameActions::OnShowDiskChangeDialog(int)
- T non-virtual thunk to CStreamingServerGameActions::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
+ T non-virtual thunk to CStreamingServerGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T non-virtual thunk to CStreamingServerGameActions::OnStartRetailInstall(unsigned int, int)
  T non-virtual thunk to CStreamingServerGameActions::OnStartingNextApp(CSteamApp*)
  T non-virtual thunk to CStreamingServerGameActions::OnUpdateRetailInstallProgress(float, float, unsigned long long, unsigned long long)
@@ -44871,12 +44957,14 @@
  T non-virtual thunk to CTenfootGameActions::OnConversionCompleteAllowProgress()
  T non-virtual thunk to CTenfootGameActions::OnConversionFailedDisallowProgress()
  T non-virtual thunk to CTenfootGameActions::OnGameUpdateProgress(float, int)
+ T non-virtual thunk to CTenfootGameActions::OnOpenVRAppPrelaunchError(char const*, vr::EVRApplicationError)
+ T non-virtual thunk to CTenfootGameActions::OnOpenVRWaitingForAppExit(char const*, char const*)
  T non-virtual thunk to CTenfootGameActions::OnPostGameLaunchStarting()
  T non-virtual thunk to CTenfootGameActions::OnPreGameLaunchStarting()
  T non-virtual thunk to CTenfootGameActions::OnReadNextDisk(int)
  T non-virtual thunk to CTenfootGameActions::OnShowDeniedLegacyKey(unsigned int)
  T non-virtual thunk to CTenfootGameActions::OnShowDiskChangeDialog(int)
- T non-virtual thunk to CTenfootGameActions::OnShowErrorDialog(unsigned int, char const*, EAppUpdateError)
+ T non-virtual thunk to CTenfootGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T non-virtual thunk to CTenfootGameActions::OnStartRetailInstall(unsigned int, int)
  T non-virtual thunk to CTenfootGameActions::OnStartingNextApp(CSteamApp*)
  T non-virtual thunk to CTenfootGameActions::OnStreamingClientExeFinished(EResult, char const*)
@@ -45752,8 +45840,7 @@
  T panorama::CHTML::PchGetText() const
  T panorama::CHTML::PostURL(char const*, char const*)
  T panorama::CHTML::PressButton(panorama::KeyCode, wchar_t)
- T panorama::CHTML::ProcessAnalogScroll(float, float, float)
- T panorama::CHTML::ProcessAnalogScrollAxis(float, float, double, void (panorama::CHTML::*)(float, bool))
+ T panorama::CHTML::ProcessAnalogScroll(float, float, float, bool)
  T panorama::CHTML::ProcessAnalogZoom(float, float, float)
  T panorama::CHTML::ProcessRawScroll(bool)
  T panorama::CHTML::ProcessRawZoom(float)
@@ -45764,14 +45851,11 @@
  T panorama::CHTML::RequestControlString()
  T panorama::CHTML::RequestFocusedNodeValue()
  T panorama::CHTML::RequestLinkAtPosition(int, int)
- T panorama::CHTML::RequestLinkUnderGamepad()
  T panorama::CHTML::ResetScrollbarsAndClearOverflow()
  T panorama::CHTML::ResizeBrowserTextureIfNeeded()
  T panorama::CHTML::RunJavascript(char const*)
  T panorama::CHTML::SaveCurrentPageToJPEG(char const*, int, int)
- T panorama::CHTML::ScrollHelper(bool, float, bool)
- T panorama::CHTML::ScrollPageRight(float, bool)
- T panorama::CHTML::ScrollPageUp(float, bool)
+ T panorama::CHTML::ScrollHelper(bool, float, float, bool)
  T panorama::CHTML::ScrollToXPercent(float)
  T panorama::CHTML::ScrollToYPercent(float)
  T panorama::CHTML::SendPendingHTMLMessages()
@@ -45784,7 +45868,7 @@
  T panorama::CHTML::SetPageDPI(float)
  T panorama::CHTML::SetVerticalScroll(int)
  T panorama::CHTML::SetupJavascriptObjectTemplate()
- T panorama::CHTML::SetupScrollBar(panorama::CHTML::ScrollData_t const&, bool, float, float)
+ T panorama::CHTML::SetupScrollBar(bool, float)
  T panorama::CHTML::ShowPopup()
  T panorama::CHTML::Shutdown()
  T panorama::CHTML::ThreadNotifyPendingPaints()
@@ -47836,6 +47920,11 @@
  T panorama::CUIEvent2<unsigned int, char const*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent2<unsigned int, char const*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent2<unsigned int, char const*>::~CUIEvent2()
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Copy() const
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent2<unsigned int, unsigned int>::~CUIEvent2()
  T panorama::CUIEvent2<unsigned int, unsigned long long>::Copy() const
  T panorama::CUIEvent2<unsigned int, unsigned long long>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<unsigned int, unsigned long long>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -49650,6 +49739,9 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::UserInputActive>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionAborted>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionNewAppStarted, unsigned int, unsigned int>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionStarted>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
@@ -49658,6 +49750,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayHidden, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayImageLoaded, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayShown, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRProcessQuit, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRRenderToast, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRResetDashboard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VUMeterBarsChanged, int>(panorama::IUIPanel*, char const*, char const**)
@@ -50135,6 +50228,12 @@
  T panorama::VRApplicationMenuButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRApplicationMenuButtonUp::GetEventType()
  T panorama::VRApplicationMenuButtonUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRApplicationTransitionAborted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionAborted::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRApplicationTransitionNewAppStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionNewAppStarted::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned int)
+ T panorama::VRApplicationTransitionStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationTransitionStarted::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRDashboardRequested::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardRequested::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned long long)
  T panorama::VRDashboardThumbSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -50151,6 +50250,8 @@
  T panorama::VROverlayImageLoaded::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T panorama::VROverlayShown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VROverlayShown::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VRProcessQuit::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRProcessQuit::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRRenderToast::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRRenderToast::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRResetDashboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)

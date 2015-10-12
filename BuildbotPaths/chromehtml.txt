@@ -77,6 +77,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp

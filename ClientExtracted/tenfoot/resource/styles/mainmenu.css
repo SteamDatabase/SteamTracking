@@ -974,7 +974,7 @@ Label.TopRowCounter
     transform: translatex(32px) translatey(60px);
 	padding-top: -2px;
 	border-radius: 32px;
-	opacity: 1.0;
+	opacity: 0.0;
 	transition-duration: 0.0s;
 }
 
@@ -1030,7 +1030,7 @@ pre-transform-scale2d: 0.8;
 	margin-bottom: 8px;
 	padding: -2px;
 	font-size: 48px;
-//	transform: translatey(0px);
+	text-overflow: ellipsis;
 	
 	transition-property: opacity, transform;
 	transition-duration: 0.2s;
