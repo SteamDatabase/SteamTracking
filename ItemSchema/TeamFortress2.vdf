@@ -148685,7 +148685,7 @@
 			"description_format"	"value_is_particle_index"
 			"hidden"	"1"
 			"effect_type"	"unusual"
-			"stored_as_integer"	"0"
+			"stored_as_integer"	"1"
 		}
 		"751"					
 		{
