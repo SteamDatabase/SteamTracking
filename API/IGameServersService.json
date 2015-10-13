@@ -88,6 +88,26 @@
             ]
         },
         {
+            "name": "DeleteAccount",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Deletes a persistent game server account",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the game server account to delete"
+                }
+            ]
+        },
+        {
             "name": "GetAccountPublicInfo",
             "version": 1,
             "httpmethod": "GET",

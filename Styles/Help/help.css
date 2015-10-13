@@ -874,6 +874,13 @@ body.v6 .page_content_ctn.dark:last-child {
 	padding: 24px 30px 30px 30px;
 }
 
+.login_help_links_box .title {
+	font-size: 17px;
+	line-height: 20px;
+	color: #ffffff;
+	padding-bottom: 8px;
+}
+
 .loginbox input.text_input {
 	width: 270px;
 	font-size: 16px;
@@ -2329,8 +2336,9 @@ img.category_icon {
 {
 	margin-top: 20px;
 	width: auto;
-	background-color: #51313A;
+	background-color: rgba( 169, 72, 71, 0.5 );
 	padding: 20px;
+	min-width: 240px;
 }
 
 .code_text
@@ -2350,8 +2358,9 @@ img.category_icon {
 .code_explanation .title
 {
 	padding-top: 3px;
+	font-family: Arial, Sans-Serif;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 20px;
 }
 
@@ -2381,20 +2390,21 @@ img.category_icon {
 .lock_button_row .lock_button
 {
 	min-width: 170px;
-	background-color: #262D3D;
+	background: rgba( 103, 193, 245, 0.1 );
 	height: 70px;
 	float: left;
-	width: calc( (100% - 40px)/3 - 70px );
+	width: calc( (100% - 40px)/3 - 74px );
 	margin: 10px;
 
-	color: #71A7E8;
+	color: #67c1f5;
 	font-size: 14px;
-	font-weight: bold;
 
 	padding-left: 60px;
 	padding-right: 10px;
 
 	display: table;
+	border: 2px solid transparent;
+	border-radius: 0px;
 }
 
 .lock_button span
@@ -2434,6 +2444,77 @@ img.category_icon {
 	margin-right: 0px;
 }
 
+.lock_button_row .lock_button.selected
+{
+	border: 2px solid #67c1f5;
+	border-radius: 2px;
+}
+
+.ways_to_save
+{
+	margin-top: 10px;
+}
+
+.self_lock_header
+{
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.self_lock_button
+{
+	padding: 14px 16px;
+	background: #D87; /* Old browsers */
+	background: -moz-linear-gradient( 180deg, #D2E885 0%, #a4d007 8%, #aaceff 100% ); /* FF3.6+ */
+	background: -webkit-gradient( linear, left top, left bottom, color-stop( 0%, #D2E885), color-stop( 8%, #a4d007 ), color-stop( 100%, #536904 ) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(180deg, #D2E885 0%, #a4d007 8%, #536904 100% ); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(180deg, #D2E885 0%, #a4d007 8%, #536904 100% ); /* Opera 11.10+ */
+	background: -ms-linear-gradient(180deg, #D2E885 0%, #a4d007 8%, #536904 100% ); /* IE10+ */
+	background: linear-gradient(180deg, #D2E885 0%, #a4d007 8%, #536904 100% ); /* W3C */
+
+	border-radius: 3px;
+	display: inline-block;
+
+	color: #eEeFeF;
+	font-size: 14px;
+}
+
+.self_lock_row
+{
+	margin-top: 14px;
+}
+
+.self_lock_button:hover, a.self_lock_button:hover {
+	color: #eEeFeF;
+}
+
+.self_lock_button.disabled
+{
+	opacity: 0.4;
+}
+
+.self_lock_button
+{
+	opacity: 1.0;
+}
+
+#SaveURLPopup input
+{
+	top: 0px;
+	padding: 5px;
+	min-width: 800px;
+	background-color: #272626;
+	border: 1px solid #000000;
+	color: #8f8f8f;
+}
+
+#SaveURLPopup p
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
 @media screen and (max-width: 910px)
 {
 	.lock_button_row .lock_button
@@ -2444,3 +2525,135 @@ img.category_icon {
 		width: calc( 100% - 70px );
 	}
 }
+
+@media print
+{
+	#unauthorized_login
+	{
+		clear: both;
+	}
+
+	body.v6
+	{
+		background: none;
+		min-height: auto;
+	}
+
+	#global_header
+	{
+		visibility: collapse;
+		display: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.v6_responsive_page, .v6_responsive_page div
+	{
+		background-color: transparent;
+	}
+
+	.responsive_page_content_overlay, .responsive_local_menu_tab, .responsive_page_menu_ctn
+	{
+		visibility: collapse;
+		display: none;
+	}
+
+	#page_content
+	{
+		margin: 10px 10px;
+	}
+
+	#error_contents, .error_bg
+	{
+		display: none;
+		visibility: collapse;
+	}
+
+	.perf_timing_area, #wizard_perf_data
+	{
+		visibility: collapse;
+		display: none;
+	}
+
+	.login_help_links_box
+	{
+		max-width: none;
+		background-color: transparent;
+	}
+
+	.lock_button_row, #submit_lock_form, .self_lock_row
+	{
+		visibility: collapse;
+		display: none;
+	}
+
+	.lock_code_section
+	{
+		background: transparent;
+	}
+
+	.help_header
+	{
+		color: #000000;
+	}
+
+	.help_page_title
+	{
+		color: #000000;
+	}
+
+	#wizard_contents .title, #wizard_contents .help_section_body
+	{
+		color: #333333;
+	}
+
+	.lock_code_section div
+	{
+		color: #222222;
+	}
+}
+
+.unlockcode_entry_box {
+	height: 70px;
+	margin: 10px;
+	margin-left: 0px;
+}
+
+input.authcode_entry_input, input.twofactorauthcode_entry_input {
+	border: none;
+	background-color: transparent;
+	margin-left: 8px;
+	margin-top: 2px;
+	color: #cdcac1;
+	outline: none;
+	width: 220px;
+}
+
+
+input.unlockcode_entry_input.defaulttext {
+	font-style: italic;
+	color: #FEFEFE;
+}
+
+input.unlockcode_entry_input
+{
+	width: 170px;
+	font-size: 28px;
+	line-height: 38px;
+	height: 62px;
+
+	margin: 0px;
+
+	color: #FFFFFF;
+	outline: none;
+	padding: 4px 6px;
+	border: 0px;
+
+	background-color: rgba( 0, 0, 0, 0.8 );
+}
+
+.unlockcode_entry_box
+{
+	float: left;
+}
+

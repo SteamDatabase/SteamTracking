@@ -63,6 +63,14 @@ CStoreHome.prototype.FocusDiscoveryQueue = function()
 	}
 }
 
+function ShowStoreContents( strURL, strName )
+{
+	if ( strURL.substr( 0, 7 ) != 'http://' && strURL.substr( 0, 8 ) != 'https://' )
+		strURL = 'https://store.steampowered.com/' + strURL;
+
+	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
+}
+
 function ShowAppPage( nAppID, strName )
 {
 	var strURL = 'https://store.steampowered.com/app/' + nAppID;

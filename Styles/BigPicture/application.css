@@ -1,5 +1,5 @@
 
-@define greyish_medium: #8f98a0;
+@define greyish_medium: #81a3b8;
 @define almost_white: #c7d5e0;
 @define green_in_page: #a3cf06;
 @define section_bg_color: #000000ff;
@@ -218,8 +218,8 @@
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
 	background-color: action_module;
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -261,8 +261,8 @@
 	background-color: action_module;
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -295,11 +295,21 @@
 .AppSectionBox
 {
 	width: 100%;
-	padding: 10px;
+	padding: 12px;
 	background-color: transparent_module;
 	flow-children: right;
-	margin-bottom: 6px;
+	margin-bottom: 12px;
 	border-radius: 3px;
+
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	transition-property: background-color;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .AppSectionBox:focus,
@@ -308,8 +318,8 @@
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
 	background-color: action_module;
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -319,7 +329,8 @@
 //
 
 .AppSectionBox.ReviewVotesOverview {
-	flow-children: down;	
+	flow-children: down;
+	height: 104px;
 }
 
 .AppSectionBox.ReviewVotesOverview.Disabled {
@@ -378,6 +389,7 @@
 {
 	max-height: 124px;
 	flow-children: down;
+	height: 122px;
 }
 
 .tags_ctn
@@ -405,6 +417,32 @@
 {
 	width: 52px;
 	height: 32px;
+	margin-left: -5px;
+	margin-top: -2px;
+}
+
+// language section
+.AppLanguages
+{
+	flow-children: down;
+	height: 128px;
+	margin-bottom: 0px;
+}
+
+.AppLanguagesHeaderRow
+{
+	flow-children: right;
+}
+
+.AppLanguage
+{
+	color: almost_white;
+	font-size: 24px;
+}
+
+.AppLanguage.LanguageNotSupported
+{
+	color: app_warning_color;
 }
 
 // purchase notes row
@@ -490,6 +528,11 @@
 	flow-children: down;
 	border-radius: 3px;
 	margin-bottom: 15px;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .AppDetailsOptionsRow
@@ -520,8 +563,8 @@
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
 	background-color: action_module;
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -529,6 +572,7 @@
 .AppDetailsBox.DownloadableContent
 {
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #3e194299 ), to( #86499699 ) );
+	background-image: none;
 }
 
 .AppDetailsBox.DownloadableContent:focus,
@@ -608,6 +652,14 @@
 	color: greyish_medium;
 	font-size: 24px;
 }
+.AppDetailsBox:focus .AppPriceOverviewRow
+{
+	color: white;
+}
+.FreePlayOption .AppPriceOverviewRow
+{
+	color: green_in_page;
+}
 
 .AppPurchaseCount
 {
@@ -632,6 +684,12 @@
 {
 	vertical-align: center;
 	margin-left: 14px;
+	wash-color: #2f88bc;
+}
+.AppDetailsBox.AppNextInQueue:focus Image,
+.AppDetailsBox.AppNextInQueue:hover Image
+{
+	wash-color: #ffffff;
 }
 
 
@@ -697,7 +755,7 @@
 
 .AppRecentNews
 {
-	font-size: 22px;
+	font-size: 24px;
 	color: greyish_medium;
 }
 
@@ -740,7 +798,36 @@
 VerticalScrollBar {
 	opacity: 0;
 }
+#AppModalLanguages VerticalScrollBar,
+.AppModalFeatures .AppModalListPadding VerticalScrollBar,
+.AppModalTags .AppModalListPadding VerticalScrollBar
+{
+	opacity: 1;
+}
 
+// DLC overview
+.DLCCount
+{
+	color: medgray;
+}
+
+.AppDLCOverviewRow
+{
+	flow-children: right;
+}
+
+.AppDLCOverviewRow Image
+{
+	width: 264px;
+}
+
+.DLCOverview_1,
+.DLCOverview_2
+{
+	margin-left: 8px;
+}
+
+// friends who own app
 .FriendsWhoOwnApp
 {
 	flow-children: right;
@@ -789,6 +876,17 @@ VerticalScrollBar {
 	margin-top: 10px;
 }
 
+.AppModalRatings
+{
+	width: 500px;
+}
+
+.AppModalRatings
+{
+	color: greyish_medium;
+	font-size: 26px;
+}
+
 
 ////////////////////////////////////
 // App Detail Modals
@@ -809,6 +907,7 @@ VerticalScrollBar {
 .AppModalTags .AppModalListPadding
 {
 	overflow: clip scroll;
+	padding-right: 15px;
 }
 
 
@@ -843,15 +942,14 @@ VerticalScrollBar {
 {
 	width: 600px;
 	flow-children: right;
-	padding: 10px;
+
 	background-color: transparent_module;
 }
 
 .AppModalCategoryTitle
 {
 	width: fill-parent-flow( 1.0 );
-	vertical-align: center;
-	margin-left: 10px;
+
 	color: #67c1f5;
 	font-size: 26px;
 	white-space: nowrap;
@@ -868,7 +966,7 @@ VerticalScrollBar {
 	flow-children: down;
 	padding-bottom: 10px;
 	background-color: #0f283d;
-	padding: 5px;
+	padding: 5px 5px 0px 5px;
 }
 
 .AppModalRequirementTabs
@@ -882,23 +980,27 @@ VerticalScrollBar {
 	flow-children: right;
 	padding: 10px;
 	margin-top: 10px;
-	background-color: transparent_module;
+	margin-right: 10px;
+	background-color: #6ac5f966;
 	color: #67c1f5;
 	font-size: 26px;
+	margin-bottom: 4px;
 }
 
 .AppModalRequirementTabs > Button:focus
 {
 	color: white;
+	background-color: vertical_focus;
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+	margin-bottom: 0px;
+	height: 58px;
 }
 
 #AppModalRequirements
 {
 	width: 100%;
 	height: fill-parent-flow( 1.0 );
-	background-color: #0f283d;
-	margin-top: 10px;
+	background-color: #072e47;
 	overflow: clip scroll;
 }
 
@@ -960,4 +1062,192 @@ VerticalScrollBar {
 {
 	width: 100%;
 	flow-children: right-wrap;
+}
+
+
+////////////////////////////////////
+// Age Check
+////////////////////////////////////
+.AgeCheckPage
+{
+	flow-children: down;
+	padding-top: 160px;
+}
+
+.AppCheckItemImage
+{
+	horizontal-align: center;
+	margin-bottom: 80px;
+}
+
+.AppCheckHeader
+{
+	font-size: 30px;
+	color: #67c1f5ff;
+	horizontal-align: center;
+	margin-bottom: 20px;
+}
+
+.AppCheckDateRow
+{
+	color: #67c1f5ff;
+	font-size: 28px;
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.AppCheckDateRow DropDown
+{
+	height: 54px;
+}
+
+#AgeDay
+{
+	width: 130px;
+}
+
+#AgeDayDropDownMenu
+{
+	width: 130px;
+	height: 334px;
+}
+
+#AgeMonth
+{
+	width: 250px;
+	margin: 0px 20px 0px 20px;
+}
+
+#AgeMonthDropDownMenu
+{
+	width: 250px;
+	height: 334px;
+}
+
+#AgeYear
+{
+	width: 200px;
+}
+
+#AgeDay Label,
+#AgeMonth Label,
+#AgeYear Label,
+.AgeCheckSubmit Label
+{
+	font-size: 26px;
+}
+
+#AgeYearDropDownMenu
+{
+	width: 200px;
+	height: 334px;
+}
+
+.AgeCheckSubmit
+{
+	height: 100%;
+	margin: 0px 0px 0px 20px;
+	padding: 0px 30px;
+}
+
+.AgeCheckSubmit Label
+{
+	align: center center;
+}
+
+.AgeCheckVerifyOnly
+{
+	color: greyish_medium;
+	font-size: 22px;
+	horizontal-align: center;
+	margin-top: 260px;
+}
+
+.AgeCheckApp
+{
+	width: 460px;
+	height: 215px;
+}
+
+.AppCheckPackage
+{
+	width: 710px;
+	height: 233px;
+}
+
+.AgeCheckPage LoadingThrobber
+{
+	horizontal-align: center;
+	margin-top: 200px;
+}
+
+.AgeCheckPage .LoadingError
+{
+	color: #67c1f5ff;
+	margin-top: 200px;
+	font-size: 30px;
+	horizontal-align: center;
+}
+
+
+////////////////////////////////////
+// App Languages Modal
+////////////////////////////////////
+.AppModalLanguages
+{
+	width: 1160px;
+	max-height: 800px;
+}
+
+#AppModalLanguages
+{
+	width: 100%;
+	max-height: 800px;
+	color: almost_white;
+	font-size: 26px;
+	flow-children: down;
+	overflow: clip scroll;
+	padding: 5px 15px 0px 5px;
+	background-color: #0f283d;
+}
+
+.AppLanguageHeaderRow
+{
+	width: 100%;
+	flow-children: right;
+	color: almost_white;
+	font-size: 26px;
+}
+
+.AppLanguageRow
+{
+	width: 100%;
+	flow-children: right;
+	background-color: transparent_module;
+	margin-bottom: 5px;
+	padding: 4px 0px;
+}
+
+.AppLanguageColumn
+{
+	width: 400px;
+	margin-left: 10px;
+}
+
+.AppLanguageCheckColumn
+{
+	width: 200px;
+}
+
+.AppLanguageCheckColumn Label,
+.AppLanguageCheckColumn Image
+{
+	align: center center;
+}
+
+.AppLangageModalNotSupported
+{
+	font-size: 26px;
+	color: app_warning_color;
+	margin-bottom: 20px;
 }

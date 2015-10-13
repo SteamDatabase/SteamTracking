@@ -1,5 +1,5 @@
 
-@define greyish_medium: #8f98a0;
+@define greyish_medium: #81a3b8;
 
 
 ////////////////////////////////////
@@ -61,7 +61,7 @@
  */
 
 .SearchResults {
-	width: 100%;
+	padding-right: 200px;
 	height: 100%;
 
 	flow-children: right-wrap;
@@ -186,8 +186,8 @@
 ////////////////////////////////////
 .BasicHeader
 {
-	width: 550px;
-	height: 313px;
+	width: 470px;
+	height: 275px;
 	padding: 0px;
 	margin: -10px -15px;
 	border-radius: 3px;
@@ -203,8 +203,8 @@
 
 .BasicHeader .BasicHeaderBackground
 {
-	width: 540px;
-	height: 303px;
+	width: 460px;
+	height: 265px;
 	margin-left: 5px;
 	margin-top: 5px;
 
@@ -216,8 +216,8 @@
 .BasicHeader:focus .BasicHeaderBackground,
 .BasicHeader:hover .BasicHeaderBackground
 {
-	width: 540px;
-	height: 303px;
+	width: 460px;
+	height: 265px;
 
 	box-shadow: none;
 }
@@ -225,8 +225,8 @@
 .BasicHeader:focus,
 .BasicHeader:hover
 {
-	width: 550px;
-	height: 313px;
+	width: 470px;
+	height: 275px;
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
@@ -242,7 +242,7 @@
 
 .BasicHeaderInfo
 {
-	position: 0px 257px 0px;
+	position: 0px 220px 0px;
 	height: 50px;
 	flow-children: right;
 	font-size: 22px;
@@ -267,8 +267,8 @@
 
 .BasicHeaderImage
 {
-	width: 540px;
-	height: 252px;
+	width: 460px;
+	height: 215px;
 	margin-left: 5px;
 	margin-top: 5px;
 }
@@ -283,4 +283,57 @@
 .BasicHeader .DiscountBlock
 {
 	margin-top: 10px;
+}
+
+#ContentFilter {
+	position: 1375px 90px 0px;
+	height: fit-children;
+	max-height: 800px;
+}
+
+#ContentFilter:descendantfocus, #ContentFilter:hover {
+	position: 1240px 90px 0px;
+}
+
+.FilterSpacerBottom {
+	margin-bottom: 15px;
+}
+
+#ContentFilter .NxFilterWrapper {
+	max-height: 750px;
+}
+
+.SearchResults .BasicCapsule {
+	width: 460px;
+	height: 323px;
+	padding: 0 5px 5px 0;
+	margin: -5px -10px;
+}
+
+.SearchResults .BasicCapsuleImage {
+	width: 460px;
+	height: 263px;
+}
+
+.SearchResults .BasicCapsuleInfo {
+	position: 0 268px 0;
+	margin-right: 0;
+}
+
+.NxFilterTab:descendantfocus ToggleButton, .NxFilterTab:hover ToggleButton,
+.NxFilterTab ToggleButton:selected,
+.NxFilterTab:descendantfocus RadioButton, .NxFilterTab:hover RadioButton,
+.NxFilterTab RadioButton:selected,
+.NxFilterTab:descendantfocus Button, .NxFilterTab:hover Button,
+.NxFilterTab:descendantfocus DropDown, .NxFilterTab:hover DropDown,
+.NxFilterTab .AlwaysVisible
+{
+	height: 48px;
+	margin: 2px 10px 2px 0;
+}
+
+.NxFilterTab:descendantfocus ToggleButton, .NxFilterTab:hover ToggleButton,
+.NxFilterTab:descendantfocus RadioButton, .NxFilterTab:hover RadioButton,
+{
+	margin: 2px 10px 2px 0;
 }

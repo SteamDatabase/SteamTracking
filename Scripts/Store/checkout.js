@@ -755,7 +755,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1536,22 +1536,22 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'cashu' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CashU customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'onecard' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OneCard customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'molpoints' )
@@ -3676,7 +3676,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'CashU';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
-			else if ( method.value == 'onecard' && providerPaymentMethod == 63 )
+			else if ( method.value == 'onecard' && providerPaymentMethod == 66 )
 			{
 				$('payment_method_review_text').innerHTML = 'OneCard';
 				$('checkout_review_payment_info_area').style.display = 'none';
@@ -4189,7 +4189,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 				case 60:
 				case 61:
 				case 62:
-				case 63:
+				case 66:
 				case 31:
 				case 34:
 				case 36:

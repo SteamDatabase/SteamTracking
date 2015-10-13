@@ -1,6 +1,6 @@
 
 @define almost_white: #c7d5e0;
-@define greyish_medium: #8f98a0;
+@define greyish_medium: #81a3b8;
 
 RemotePanel
 {
@@ -88,7 +88,9 @@ RemotePanel
 	flow-children: right-wrap;
 	z-index: 0;
 }
-.FeaturedWrapping:descendantfocus {
+.FeaturedWrapping:descendantfocus,
+.FeaturedWrapping:hover
+{
 	z-index: 5;
 }
 
@@ -97,7 +99,9 @@ RemotePanel
 	flow-children: right;
 	z-index: 0;
 }
-.FeaturedSpotlightRow:descendantfocus {
+.FeaturedSpotlightRow:descendantfocus,
+.FeaturedSpotlightRow:hover
+{
 	z-index: 5;
 }
 
@@ -164,7 +168,7 @@ RemotePanel
 
 .SpotlightWeeklongSubtitle
 {
-	height: fill-parent-flow( 1.0 );
+	height: 100%;
 	align: center center;
 	font-size: 30px;
 	color: greyish_medium;
@@ -618,9 +622,46 @@ RemotePanel
 	margin-bottom: 20px;
 }
 
+
+////////////////////////////////////
+// Explore
+////////////////////////////////////
+.BrowseGamesBox
+{
+	width: 460px;
+	height: 215px;
+
+	margin: 20px;
+
+	border: 5px solid #b6e1fa00;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+   	background-position: 0px 0px;
+   	background-repeat: no-repeat;
+   	background-size: cover;
+}
+
+.BrowseGamesBox:focus
+{
+	border-color: #b6e1faff;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.BrowseGamesBox Label
+{
+	color: almost_white;
+	font-size: 30px;
+	align: center center;
+}
+
 ////////////////////////////////////
 // Scrollbars
 ////////////////////////////////////
-VerticalScrollBar {
+VerticalScrollBar
+{
 	opacity: 0;
 }
