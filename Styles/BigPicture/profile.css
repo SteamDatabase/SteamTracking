@@ -3529,6 +3529,15 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	height: 100%;
 	width: 100%;
 	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 220px;
+	flow-children: right-wrap;
+	overflow: squish scroll;
+}
+
+#ShowcaseGrid VerticalScrollBar
+{
+	opacity: 0.0;
 }
 
 #ShowcaseGrid .ProfileContentCard, #RightColumn .ProfileContentCard
@@ -3845,10 +3854,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 #GamePlayedImage
 {
 	margin-top: 0px;
-	margin-left: 10px;
+	margin-left: 0px;
 	wash-color: none;
-	margin-left: -10px;
-
 }
 
 #CurrentlyPlaying .ProfileDetailButton
@@ -3859,8 +3866,13 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 #WatchGameButton
 {
-	flow-children: right;
-	height: fit-children;
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	padding: 5px;
+	padding-left: 10px;
+	margin-left: 5px;
+	background-color: transparent_module;
 }
 
 #WatchGameButton Image
@@ -3872,14 +3884,17 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 #WatchGameButton .RightColumn
 {
 	width: fill-parent-flow( 1.0 );
-	height: 100%;
+	margin-left: 15px;
+	margin-bottom: 15px;
 	flow-children: down;
+	vertical-align: bottom;
 }
 
 #WatchGameButton .InGame
 {
 	font-size: 24px;
 	color: friendsingame_solid;
+	margin-bottom: 5px;
 }
 #WatchGameButton:focus .InGame
 {
@@ -4082,7 +4097,15 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 #AchievementsContainer.AchievementsContainer {
+	width: 1400px;
 	padding-bottom: 130px;
+	margin-top: 0px;
+	padding-top: 40px;
+}
+#AchievementsContainer.AchievementsContainer VerticalScrollBar
+{
+	margin-bottom: 130px;
+	margin-top: 84px;
 }
 .ContentGrid {
 	margin-top: 40px;
@@ -4377,6 +4400,29 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	padding-bottom: 140px;
 }
 
+#settings_container.EditProfileWrapper
+{
+	width: 1500px;
+	padding-bottom: 110px;
+	padding-right: 30px;
+}
+#settings_container.EditProfileWrapper VerticalScrollBar
+{
+	margin-bottom: 110px;
+}
+
+#settings_container.EditProfileWrapper RadioButton
+{
+	height: fit-children;
+	min-height: 48px;
+}
+#settings_container.EditProfileWrapper RadioButton Label
+{
+	white-space: normal;
+	text-overflow: clip;
+	width: 100%;
+}
+
 .RowContainer {
 	flow-children: down;
 	margin-bottom: 25px;
@@ -4591,7 +4637,7 @@ LibraryGameBadge:descendantfocus .HeaderLabel {
 	color: detailsdatalabelfocus;
 }
 LibraryGameBadge:descendantfocus .HeaderLabel.NumberElement {
-	color: darkblue;
+	color: #c6d4df;
 }
 LibraryGameBadge .badge_info
 {
@@ -4624,9 +4670,12 @@ LibraryGameBadge .badge_info_description Label
 	width: 100%;
 	margin-left: 80px;
 	margin-right: 80px;
-	margin-bottom: 100px;
-	padding-bottom: 40px;
+	padding-bottom: 140px;
 	overflow: squish scroll;
+}
+#friends_that_play_list VerticalScrollBar
+{
+	margin-bottom: 140px;
 }
 
 #friends_that_play_list .FriendsThatPlaySectionHeader
@@ -4658,4 +4707,89 @@ LibraryGameBadge .badge_info_description Label
 {
 	width: 32%;
 	margin-right: 10px;
+}
+
+
+#TopRow
+{
+	height: 138px;
+	width: 100%;
+	flow-children: right;
+	margin-bottom: 20px;
+	padding-right: 22px;
+}
+
+.ProfileTopRowStack
+{
+	height: 100%;
+	width: 300px;
+	flow-children: down;
+}
+
+.ProfileTopRowStack Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#TopRow .ProfileTopRowShort
+{
+	height: 48%;
+	width: 100%;
+}
+
+.ProfileTopRowShort.Top
+{
+	margin-bottom: 8px;
+}
+
+.ProfileMainAction Image
+{
+	wash-color: #2976a3ff;
+}
+
+.ProfileMainAction:focus Image
+{
+	wash-color: none;
+}
+
+.ProfileMainActionLower
+{
+	flow-children: right;
+	margin-top: 10px;
+}
+
+.ProfileMainActionLower Label
+{
+	vertical-align: center;
+	margin-left: 10px;
+}
+
+.ProfileMainAction .ProfileContentCardSubTitle
+{
+	color: brightblue;
+}
+
+.ProfileMainAction:focus .ProfileContentCardSubTitle
+{
+	color: white;
+}
+
+#ProfileOptionsPopup
+{
+	flow-children: down;
+	width: 300px;
+}
+
+#ProfileOptionsPopup .Button
+{
+	width: 100%;
+}
+
+#ProfileOptionsPopup .Title
+{
+	font-size: 28px;
+	font-weight: light;
+	color: brightblue;
+	margin-bottom: 10px;
 }

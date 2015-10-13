@@ -1182,18 +1182,7 @@ function CheckForPopups()
 	}
 }
 
-function OnMarketClosed()
-{
-	$.UnregisterForUnhandledEvent( 'MarketListingCreated', g_nMarketListingCreatedEventId );
-	$.Schedule( 0.0,
-		function() {
-			$.UnregisterForUnhandledEvent( 'CommunityMarketClosed', g_nMarketClosedEventId );
-		}
-	);
-}
-
 var g_nMarketListingCreatedEventId = 0;
-var g_nMarketClosedEventId = 0;
 
 
 var g_rgMarketGrids = new Array();
@@ -1207,8 +1196,6 @@ $.Schedule( 0.0,
 				g_rgMarketGrids['mylistings'].RefreshGrid();
 			}
 		);
-
-		g_nMarketClosedEventId = $.RegisterForUnhandledEvent( 'CommunityMarketClosed', OnMarketClosed );
 
 		// Set up grids
 		g_rgMarketGrids['popular'] = new CMarketGrid( 'ItemGridPopular', 'https://steamcommunity.com/market/popular' );

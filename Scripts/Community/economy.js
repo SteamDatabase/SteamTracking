@@ -3521,9 +3521,27 @@ SellItemDialog = {
 
 			if ( transport.responseJSON.requires_confirmation )
 			{
+				var bNeedsEmailConfirmation = transport.responseJSON.needs_email_confirmation;
+				var bNeedsMobileConfirmation = transport.responseJSON.needs_mobile_confirmation;
+
+				var strText = '';
+				if ( bNeedsMobileConfirmation )
+				{
+					strText = 'In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.';
+					if ( bNeedsEmailConfirmation )
+					{
+						strText += '<br><br>We have also sent an email to your address (ending in "%s") and you may complete the verification from there.'.replace( /%s/, transport.responseJSON.email_domain );
+						strText += '<br><br><strong>Note:</strong> After October 22nd, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
+					}
+				}
+				else
+				{
+					strText = 'In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, transport.responseJSON.email_domain );
+				}
+
 				ShowAlertDialog(
 						'Additional confirmation needed',
-						'In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, transport.responseJSON.email_domain )
+						strText
 				);
 			}
 			else

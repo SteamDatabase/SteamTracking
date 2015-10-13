@@ -232,7 +232,7 @@ function OnSearchTextChanged( textentry )
 						AddSearchResult( panel, results, data[app] );
 					}
 				},
-				failure: function() { DebugOut( "Failed to load " + url ); }
+				error: function() { DebugOut( "Failed to load " + url ); }
 			}
 		);
 	}

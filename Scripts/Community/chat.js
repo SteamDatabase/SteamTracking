@@ -1359,32 +1359,41 @@ CWebChat.prototype.OnChatFormSubmit = function()
 	if ( strMessage.length == 0 )
 		return;
 
-	$J('#chatmessage').val('');
+	try
+	{
 
-	var ulSteamIDActive = this.m_ActiveFriend.m_ulSteamID;
+		$J('#chatmessage').val('');
 
-	var rgParams = {
-		umqid: this.m_umqid,
-		type: 'saytext',
-		steamid_dst: ulSteamIDActive,
-		text: strMessage
-	};
+		var ulSteamIDActive = this.m_ActiveFriend.m_ulSteamID;
 
-	var _chat = this;
-	var Friend = this.m_ActiveFriend; //capture friend at time of sending
+		var rgParams = {
+			umqid: this.m_umqid,
+			type: 'saytext',
+			steamid_dst: ulSteamIDActive,
+			text: strMessage
+		};
 
-	this.AddToRecentChats( Friend );
+		var _chat = this;
+		var Friend = this.m_ActiveFriend; //capture friend at time of sending
 
-	// echo immediately
-	var elMessage = _chat.m_rgChatDialogs[ Friend.m_unAccountID ].AppendChatMessage( _chat.m_User, new Date(), strMessage, CWebChat.CHATMESSAGE_TYPE_LOCALECHO );
-	$J('#chatmessage').focus();
+		this.AddToRecentChats( Friend );
 
-	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Message', rgParams, true ).done( function(data) {
+		// echo immediately
+		var elMessage = _chat.m_rgChatDialogs[ Friend.m_unAccountID ].AppendChatMessage( _chat.m_User, new Date(), strMessage, CWebChat.CHATMESSAGE_TYPE_LOCALECHO );
+		$J('#chatmessage').focus();
 
-	}).fail( function () {
+		this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Message', rgParams, true ).done( function(data) {
+
+		}).fail( function () {
+			$J('#chatmessage').val( strMessage );
+			ShowAlertDialog( 'Failed to send chat message: There was an error communicating with the network. Please try again later.' );
+		});
+	}
+	catch ( e )
+	{
 		$J('#chatmessage').val( strMessage );
-		alert( 'Failed to send chat message' );
-	});
+		ShowAlertDialog( 'Failed to send chat message: An error was encountered while processing your request:' );
+	}
 }
 
 CWebChat.prototype.OnWindowFocus = function()

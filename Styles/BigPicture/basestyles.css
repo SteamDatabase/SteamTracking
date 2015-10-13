@@ -13,6 +13,9 @@
 @define horizontal_default: gradient( linear, 0% 0%, 100% 100%, from( #2f6682 ), to( #144066 ) );
 @define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
+@define vertical_default: gradient( linear, 0% 0%, 0% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+@define vertical_focus: gradient( linear, 0% 0%, 0% 100%, from( #6ac5f966 ), to( #072e46ff ) );
+
 /* Popup menus */
 .MenuPopup {
 	width: 100%;
@@ -503,6 +506,24 @@
 .FlowDownContainer {
 	flow-children: down;
 	overflow: clip scroll;
+}
+
+.NxEmptyContentContainer
+{
+	width: 1400px;
+}
+
+.NxEmptyContentContainer Label
+{
+	transform: translate3d( -200px, -100px, 0px );
+	align: center center;
+	font-size: 34px;
+	height: 64px;
+	horizontal-align: center;
+	vertical-align: center;
+	color: #67c1f5ff;
+	white-space: nowrap;
+	text-overflow: clip;
 }
 
 .FlowRightContainer

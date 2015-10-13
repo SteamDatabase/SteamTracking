@@ -2343,6 +2343,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
     margin-bottom:12px
 }
 
+.profile_subpage_selector {
+	margin-bottom: 16px;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive div.profile_page {

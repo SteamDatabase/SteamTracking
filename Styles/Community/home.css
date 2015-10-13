@@ -869,3 +869,7 @@ input.textField {
 		font-size: 14px;
 	}
 }
+
+body.waitforauth #mainBody {
+	display: none;
+}

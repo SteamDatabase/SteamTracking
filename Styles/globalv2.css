@@ -356,38 +356,6 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	overflow: hidden;
 }
 
-/* -------------- paging controls -------------*/
-.pagebtn, a.pagebtn {
-	display: inline-block;
-	line-height: 24px;
-	background-color: rgba( 103, 193, 245, 0.2 );
-	border: 1px transparent;
-	border-radius: 3px;
-	cursor: pointer;
-	padding: 0px 16px;
-	color: #66c0f4;
-}
-
-.pagebtn:hover, a.pagebtn:hover {
-	background-color: #66c0f4;
-	border-color: #66c0f4;
-	color: #fff;
-	text-decoration: none;
-}
-
-.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
-	border: 1px solid #253e4c;
-	background-color: transparent;
-	color: #253e4c;
-	cursor: default;
-}
-
-a.pagelink:hover {
-	text-decoration: underline;
-	color: #ffffff;
-}
-
-
 /* note that the old gameLogoHolder_default style does nothing now */
 
 .gameLogo {

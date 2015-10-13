@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #market_warning_header {
 	color: #ffffff;
-	float: left;
 	margin: 0 0 15px 10px;
 	font-size: 17px;
 }
@@ -1937,6 +1936,15 @@ input.filter_search_box:focus {
 	html.responsive .pick_and_sell_button {
 		bottom: auto;
 		top: 8px;
+	}
+
+	/* make sure there's space for the pick and sell button if there's a warning displayed
+		the padding-top ensures that the margin-top on the headertip container stays inside the div (overflow:auto won't work here because the tabs intentionally overflow) */
+	html.responsive #myMarketTabs {
+		padding-top: 1px;
+	}
+	html.responsive .market_headertip_container {
+		margin-top: 40px;
 	}
 
 	html.responsive .market_buynow_paymentinfo_label,

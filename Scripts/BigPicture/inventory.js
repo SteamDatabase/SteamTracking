@@ -174,11 +174,24 @@ var CBigPictureInventoryCache = (function()
 
 	CBigPictureInventoryCache.prototype.BHasInventory = function( appid, rgContexts )
 	{
+		$.Msg( "Checking appid " + appid + " for contexts " + JSON.stringify( rgContexts ) );
+		if (  this.m_inventory[appid] == undefined )
+		{
+			$.Msg( "Missing appid " + appid );
+			return false;
+		}
 		for ( var i = 0; i < rgContexts.length; i++ )
 		{
 			var contextid = rgContexts[i];
-			if (  this.m_inventory[appid] == undefined || this.m_inventory[appid][contextid] == undefined )
+
+			if ( contextid == APPWIDE_CONTEXT )
 			{
+				continue;
+			}
+
+			if ( this.m_inventory[appid][contextid] == undefined )
+			{
+				$.Msg( "Missing context " + contextid );
 				return false;
 			}
 		}
@@ -247,6 +260,7 @@ var CBigPictureInventoryCache = (function()
 			// Failure.. show error...
 			$.Msg( JSON.stringify( data ) );
 			$.Msg( "Failed to get inventory for appid="+appid+" contextid="+contextid );
+			return;
 		}
 
 		var rgSorted = { };
@@ -796,7 +810,7 @@ var CBigPictureInventory = (function()
 	CBigPictureInventory.prototype.BuildGridFromSortedItems = function( rgSorted, loadIndex )
 	{
 		var that = this;
-		var funcCreateBatch = function( rgToCreate, loadIndex )
+		var funcCreateBatch = function( rgToCreate, loadIndex, lastIdx )
 		{
 			$.Schedule( 0.0, function()
 			{
@@ -819,9 +833,9 @@ var CBigPictureInventory = (function()
 							g_strMarketHashName = ''; // BUGBUG
 
 							that.UpdateFastScrollThumbSize();
-							that.m_pGridWrapper.RemoveClass( "InventoryLoading" );
 						}
 					}
+					$.Msg( "Created up to " + lastIdx );
 				}
 			})
 		};
@@ -829,24 +843,26 @@ var CBigPictureInventory = (function()
 		var g = this.m_pItemGrid;
 		g.RemoveAndDeleteChildren();
 		g.SetIgnoreFastMotion( true );
+
+		this.m_pGridWrapper.RemoveClass( "InventoryLoading" );
+
 		var rgToCreate = [];
-		var lastKey = Object.keys(rgSorted)[Object.keys(rgSorted).length - 1]
+		var lastKey = Object.keys(rgSorted)[Object.keys(rgSorted).length - 1];
+		var BATCH_SIZE = 40;
+		var idx = 0;
 		for( key in rgSorted )
 		{
-			/*
-			if ( g_bIsInMarketplace && !rgSorted[key].marketable )
-				continue;
-*/
 			rgToCreate.push( { item: rgSorted[key], grid: g, key: key, final: ( key == lastKey ) } );
-			if ( rgToCreate.length == 21 )
+			if ( rgToCreate.length == BATCH_SIZE )
 			{
-				funcCreateBatch( rgToCreate, loadIndex );
+				funcCreateBatch( rgToCreate, loadIndex, idx );
 				rgToCreate = [];
 			}
+			idx++;
 		}
 
 		if ( rgToCreate.length > 0 )
-			funcCreateBatch( rgToCreate, loadIndex );
+			funcCreateBatch( rgToCreate, loadIndex, idx );
 	}
 
 

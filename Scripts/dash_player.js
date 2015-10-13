@@ -3254,6 +3254,7 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_nThumbnailOffset = 0;
 
 	this.m_fPlaybackRate = 1.0;
+	this.m_bEndOfVODShown = false;
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
@@ -3308,8 +3309,8 @@ CDASHPlayerUI.PLAY_PAUSE_INDEX = 3;
 CDASHPlayerUI.SKIP_FORWARD_INDEX = 4;
 CDASHPlayerUI.PROGRESS_BAR_INDEX = 11;
 CDASHPlayerUI.CLOSED_CAPTION_INDEX = 21;
-CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 22;
-CDASHPlayerUI.SETTINGS_INDEX = 23;
+CDASHPlayerUI.SETTINGS_INDEX = 22;
+CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 23;
 CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX = 31;
 CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX = 35;
 CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX = 41;
@@ -3476,7 +3477,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 	var _ui = this;
 
-	// res selector for live
+	// resolution selector for live
 	if ( this.m_player.BIsLiveContent() )
 	{
 		$J( '#settings_icon' ).on( 'click', function ()
@@ -3524,19 +3525,14 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		{
 			if ( !_ui.m_elClosedCaptionsPanel.is( ':hidden' ) )
 			{
-				$J( '.panel_cancel' ).click();
+				$J( '#captions_done' ).click();
 			}
 
-			_ui.LoadAudioTrackSelected();
-			_ui.LoadVideoTrackSelected();
-			_ui.m_elSettingsPanel.toggle();
-			if ( !_ui.m_elSettingsPanel.is( ':hidden' ) )
-				_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
-			else
-				_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
+			_ui.ShowSettingsPanel();
+
 		} );
 
-		$J( '.settings_done' ).on( 'click', function ()
+		$J( '#settings_done' ).on( 'click', function ()
 		{
 			_ui.m_elSettingsPanel.hide();
 			_ui.SaveAudioTrackSelected();
@@ -3774,7 +3770,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 	$J( '#settings_icon' ).on( 'click', function()
 	{
 		_ui.Hide(0);
-		_ui.ShowSettingsPanelTenFoot();
+		_ui.ShowSettingsPanel();
 		_ui.SwitchElementFocus( CDASHPlayerUI.NO_ELEMENT_INDEX );
 	} );
 
@@ -4118,7 +4114,7 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 	var nLoadedPct = (( rgData.nBufferedEnd - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
 
 	// check for end of VOD playback and show UI if within the last second
-	if ( !this.m_player.BIsLiveContent() )
+	if ( !this.m_player.BIsLiveContent() && !this.m_bEndOfVODShown )
 	{
 		if ( elVideoPlayer.currentTime >= ( rgData.nTimeEnd - rgData.nTimeStart ) - 1 )
 		{
@@ -4127,6 +4123,8 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 				this.m_bHidden = false;
 				clearTimeout( this.m_timeoutHide );
 				$J( this.m_elContainer ).addClass( 'dash_show_player_ui' );
+				this.SwitchElementFocus( CDASHPlayerUI.STOP_INDEX );
+				this.m_bEndOfVODShown = true;
 			}
 		}
 	}
@@ -4639,6 +4637,7 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			this.OnPressButtonB();
 			break;
 		case CDASHPlayerUI.BUTTON_X:
+			this.OnPressButtonX();
 			break;
 		case CDASHPlayerUI.BUTTON_Y:
 			break;
@@ -4725,7 +4724,7 @@ CDASHPlayerUI.prototype.OnPressButtonA = function ()
 
 			case CDASHPlayerUI.SETTINGS_INDEX:
 				this.Hide(0);
-				this.ShowSettingsPanelTenFoot();
+				this.ShowSettingsPanel();
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 				break;
 
@@ -4770,18 +4769,46 @@ CDASHPlayerUI.prototype.OnPressButtonB = function ()
 	}
 }
 
+CDASHPlayerUI.prototype.OnPressButtonX = function ()
+{
+	if ( !this.BInTenFoot() )
+		return;
+
+	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
+	{
+		$J( this.m_player.m_elVideoPlayer ).trigger( 'togglestats' );
+	}
+}
+
 CDASHPlayerUI.prototype.BIsTenFootMainUIHidden = function()
 {
 	return ( $J( '.tenfoot_dash_overlay' ).css( 'opacity') == 0 )
 }
 
-CDASHPlayerUI.prototype.ShowSettingsPanelTenFoot = function()
+CDASHPlayerUI.prototype.ShowSettingsPanel = function()
 {
-	this.LoadAudioTrackSelected();
-	this.LoadVideoTrackSelected();
-	this.LoadPlaybackRateTenFoot();
-	this.m_elSettingsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
-	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+	if ( this.BInTenFoot() )
+	{
+		this.LoadAudioTrackSelected();
+		this.LoadVideoTrackSelected();
+		this.LoadPlaybackRateTenFoot();
+		this.m_elSettingsPanel.fadeIn( CDASHPlayerUI.TENFOOT_UI_FADE_MS );
+		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+	}
+	else
+	{
+		if ( !this.m_elSettingsPanel.is( ':hidden' ) )
+		{
+			$J( '#settings_done' ).click();
+		}
+		else
+		{
+			this.LoadAudioTrackSelected();
+			this.LoadVideoTrackSelected();
+			this.m_elSettingsPanel.show();
+			this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
+		}
+	}
 }
 
 CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFocus, bSaveChanges )
@@ -4831,10 +4858,8 @@ CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFoc
 	}
 	else
 	{
-		// cancel settings
-		this.LoadAudioTrackSelected();
-		this.LoadVideoTrackSelected();
-		this.LoadPlaybackRateTenFoot();
+		// cancel settings - only speed is modified in the settings panel directly
+		this.m_player.SetPlaybackRate( this.m_fPlaybackRate );
 	}
 }
 
@@ -4935,7 +4960,7 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 			case CDASHPlayerUI.LEFT_PAD_RIGHT:
 				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SKIP_FORWARD_INDEX )
 					this.m_nFocusedUIElementIndex = CDASHPlayerUI.SKIP_FORWARD_INDEX;
-				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.SETTINGS_INDEX )
+				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
 					this.m_nFocusedUIElementIndex++;
 				break;
 
@@ -5447,7 +5472,11 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		// customize captions link and action
 		$J( '.customize_captions' ).on( 'click', function()
 		{
-			_ui.m_elSettingsPanel.hide();
+			if ( !_ui.m_elSettingsPanel.is( ':hidden' ) )
+			{
+				$J( '#settings_done' ).click();
+			}
+
 			_ui.ShowClosedCaptionsPanel();
 		} );
 
@@ -5481,7 +5510,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		this.LoadClosedCaptionOptions();
 	}
 
-	$J( '.panel_cancel' ).on('click', function()
+	$J( '#captions_cancel' ).on('click', function()
 	{
 		_ui.LoadClosedCaptionLanguage();
 		_ui.LoadClosedCaptionOptions();
@@ -5489,7 +5518,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
 
-	$J( '.panel_done' ).on('click', function()
+	$J( '#captions_done' ).on('click', function()
 	{
 		_ui.SaveClosedCaptionLanguage();
 		_ui.SaveClosedCaptionOptions();
@@ -5604,22 +5633,28 @@ CDASHPlayerUI.prototype.SetClosedCaptionLanguageInUI = function( strCode )
 
 CDASHPlayerUI.prototype.ShowClosedCaptionsPanel = function()
 {
-	if ( this.m_elClosedCaptionsPanel.is( ':hidden' ) )
+	if ( this.BInTenFoot() )
 	{
 		this.LoadClosedCaptionLanguage();
 		this.LoadClosedCaptionOptions();
 		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelCaptions;
-		if ( this.BInTenFoot() )
-			this.m_elClosedCaptionsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
-		else
-			this.m_elClosedCaptionsPanel.show();
+		this.m_elClosedCaptionsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
 		this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 	}
 	else
 	{
-		// desktop click of CC while Panel is open
-		$J( '.panel_cancel' ).click();
-		this.m_elClosedCaptionsPanel.hide();
+		if ( !this.m_elClosedCaptionsPanel.is( ':hidden' ) )
+		{
+			$J( '#captions_done' ).click();
+		}
+		else
+		{
+			this.LoadClosedCaptionLanguage();
+			this.LoadClosedCaptionOptions();
+			this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelCaptions;
+			this.m_elClosedCaptionsPanel.show();
+			this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
+		}
 	}
 }
 
@@ -5747,6 +5782,14 @@ CDASHPlayerUI.prototype.SetAudioTrackSelectedInUI = function( strCode )
 	}
 }
 
+CDASHPlayerUI.prototype.SetAudioRepresentationSelectedInUI = function()
+{
+	if ( this.BInTenFoot() )
+		this.PanelSelectByValue( $J( '#representation_audio #representation_select' ), this.m_player.m_nAudioRepresentationIndex );
+	else
+		$J('#representation_select_audio' ).val( this.m_player.m_nAudioRepresentationIndex );
+}
+
 CDASHPlayerUI.GetSavedAudioTrackSelected = function( strUniqueSettingsID )
 {
 	var value = WebStorage.GetLocal( 'audio_track_' + strUniqueSettingsID.toString() );
@@ -5768,6 +5811,11 @@ CDASHPlayerUI.prototype.LoadAudioTrackSelected = function()
 	{
 		this.SetAudioTrackSelectedInUI( strCode );
 		this.SwitchAudioTrackSelectedInPlayer( strCode );
+	}
+	else
+	{
+		// if no specific audio track, make sure reps are selected
+		this.SetAudioRepresentationSelectedInUI();
 	}
 }
 
@@ -5804,6 +5852,14 @@ CDASHPlayerUI.prototype.SetVideoTrackSelectedInUI = function( strCode )
 	}
 }
 
+CDASHPlayerUI.prototype.SetVideoRepresentationSelectedInUI = function()
+{
+	if ( this.BInTenFoot() )
+		this.PanelSelectByValue( $J( '#representation_video #representation_select' ), this.m_player.m_nVideoRepresentationIndex );
+	else
+		$J('#representation_select_video' ).val( this.m_player.m_nVideoRepresentationIndex );
+}
+
 CDASHPlayerUI.GetSavedVideoTrackSelected = function( strUniqueSettingsID )
 {
 	var value = WebStorage.GetLocal( 'video_track_' + strUniqueSettingsID.toString() );
@@ -5830,6 +5886,11 @@ CDASHPlayerUI.prototype.LoadVideoTrackSelected = function()
 	{
 		this.SetVideoTrackSelectedInUI( strCode );
 		this.SwitchVideoTrackSelectedInPlayer( strCode );
+	}
+	else
+	{
+		// if there is no track, just make sure the UI is updated
+		this.SetVideoRepresentationSelectedInUI();
 	}
 }
 

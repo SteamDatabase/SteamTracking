@@ -22,6 +22,13 @@
 .blotter_userstatus_content
 {
 	flow-children: down;
+	margin-left: 80px;
+	width: 100%;
+	height: fit-children;
+	max-height: 800px;
+
+	font-size: 26px;
+	overflow: clip noclip;
 }
 
 #blotter_userstatuscontent_label
@@ -239,7 +246,7 @@ Button:focus .dynamiclink_box Label
 
 .ContentAreaFocus .blotter_block.current_selection
 {
-	background-color: gradient( linear, 0.0% 0.0%, 0.0% 100.0%, color-stop( 0.0, #4B7696AA ), color-stop( 1.0, #365B7866 ) );
+	background-color: #1579a0;
 }
 
 .blotter_block:hover
@@ -320,6 +327,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 }
 
 .blotter_block:focus .blotter_author_block Label,
+.blotter_block:focus .blotter_group_announcement_header_text Label,
 .blotter_button_wrapper:focus .blotter_author_block Label
 {
 	color: #161718f5;
@@ -592,14 +600,7 @@ Button:focus .user_status_labels Label.personaname .detail_text
 }
 
 
-.blotter_userstatus_content
-{
-	margin-left: 80px;
-	width: 100%;
 
-	font-size: 23px;
-	overflow: clip noclip;
-}
 
 .blotter_daily_rollup
 {
@@ -778,12 +779,12 @@ Button:focus .user_status_labels Label.personaname .detail_text
 	width: 100%;
 	margin-left: 79px;
 	margin-top: 4px;
-	font-size: 23px;
+	font-size: 26px;
 
 	max-height: 155px;
 }
 .blotter_group_announcement_content_contents {
-	height: 100px;
+	min-height: 100px;
 }
 #LeftActivityColumn .blotter_group_announcement_content_contents {
 	visibility: collapse;
@@ -791,8 +792,9 @@ Button:focus .user_status_labels Label.personaname .detail_text
 
 .blotter_group_announcement_headline
 {
-	height: 40px;
-	font-size: 30px;
+	width: 100%;
+	height: 44px;
+	font-size: 36px;
 	margin-bottom: 10px;
 	color:tcstatictext;
 }
@@ -989,11 +991,7 @@ Label.blotter_group_announcement_header_contents
 {
 	max-height: 800px;
 	width: 100%;
-}
-
-#RightDetailsColumn .blotter_userstatus_content
-{
-	max-height: 800px;
+	padding-bottom: 20px;
 }
 
 #LeftActivityColumn Button Label a,
@@ -1094,8 +1092,8 @@ Button:descendantfocus .blotter_control_container
 
 
 .blotter_workshopitem_preview_square {
-	width: 64px;
-	height: 64px;
+	width: 92px;
+	height: 92px;
 }
 
 .blotter_artwork_large {

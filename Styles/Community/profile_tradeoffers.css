@@ -283,7 +283,7 @@ a.right_controls_large_block {
 .tradeoffer_welcome_ctn {
 	font-size: 20px;
 	text-align: center;
-	padding: 116px 40px;
+	padding: 18% 10%;
 	background-color: #1e1e1f;
 }
 
@@ -407,4 +407,8 @@ div.gray_bevel.newurl_updated {
 	color: #3e8db5;
 	font-size: 18px;
 	line-height: 30px;
+}
+
+.responsive_createtradeoffer {
+	margin: 16px 0;
 }

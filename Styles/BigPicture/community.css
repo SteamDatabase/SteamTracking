@@ -160,3 +160,9 @@
 {
 	margin-top: 0px;
 }
+
+// Hiding until we figure out whats supposed to be in there
+#CommunityHomeContent #Options
+{
+	visibility: collapse;
+}

@@ -393,7 +393,7 @@ $.entity_table = {
 };
 
 // included data: strCode, eCurrencyCode, strSymbol, bSymbolIsPrefix, bWholeUnitsOnly
-$.currency_data = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"Fr.","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"DH","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true}};
+$.currency_data = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"CHF","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"DH","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true}};
 
 
 // takes an integer
@@ -513,10 +513,12 @@ function CloseModalDialog( pPanel )
 	pPanel.DeleteAsync( 0.15 );
 }
 
-function ShowWebModalDialog( strURL, strTitle )
+function ShowWebModalDialog( strURL, strTitle, bTenfootAware )
 {
 	
-	var pModal = ShowModalDialog( "\r\n\t\t<VerticalScrollForwarding class=\"NxModalFrame NxWebModal\" selectionpos=\"auto\" tabindex=\"auto\" target=\"WebModalHTML\" acceptsfocus=\"true\">\r\n\t\t\t<Label id=\"WebModalTitle\" class=\"NxWebModalTitle\" \/>\r\n\t\t\t<HTML id=\"WebModalHTML\" embedded=\"true\" acceptsinput=\"true\" \/>\r\n\t\t<\/VerticalScrollForwarding>" );
+	var strLayout = "\r\n\t\t<VerticalScrollForwarding class=\"NxModalFrame NxWebModal\" selectionpos=\"auto\" tabindex=\"auto\" target=\"WebModalHTML\" acceptsfocus=\"true\">\r\n\t\t\t<Label id=\"WebModalTitle\" class=\"NxWebModalTitle\" \/>\r\n\t\t\t<HTML id=\"WebModalHTML\" embedded=\"true\" acceptsinput=\"true\" dpiaware=\"%dpiaware%\" \/>\r\n\t\t<\/VerticalScrollForwarding>";
+	strLayout = strLayout.replace( '%dpiaware%', bTenfootAware ? 'true' : 'false' );
+	var pModal = ShowModalDialog( strLayout );
 
 	var pTitle = pModal.FindChildInLayoutFile( 'WebModalTitle' );
 	pTitle.text = strTitle;
@@ -844,6 +846,19 @@ var CPanelUtils = {
 			return null;
 
 		return oSource.GetChild( oSource.GetChildCount() - 1 );
+	},
+	// Returns the child's position inside the parent
+	GetChildIndex: function( oSource )
+	{
+		var oParent = oSource.GetParent();
+		var rgChildren = oParent.Children();
+		for( var i=0; i<rgChildren.length; i++ )
+		{
+			if( rgChildren[i] == oSource)
+				return i;
+		}
+
+		return -1;
 	}
 };
 
@@ -929,11 +944,7 @@ CNXNavigation.prototype.DoFocus = function( oNavButton )
 	if ( !strTargetID )
 		return;
 
-	$.Each(this.oNavigationContainer.Children(), function( oPanel )
-	{
-		oPanel.checked = false;
-	});
-	oNavButton.checked = true;
+	this.UpdateSelectedStyle();
 
 	var oTarget = $('#' + strTargetID);
 	if( oTarget )
@@ -942,40 +953,71 @@ CNXNavigation.prototype.DoFocus = function( oNavButton )
 	}
 	else if( strURLSource ) // Create a new panel and load a URL into it.
 	{
-		// Create main panel
-		var oTarget = $.CreatePanel( 'Panel', this.oTargetContainer, strTargetID );
-		oTarget.AddClass('NxRightContentContainer');
-		oTarget.AddClass('Loading');
-
-		// Add throbber
-		oTarget.BCreateChildren( '<Panel class="NxNavigationLoadingThrobber"><Panel><Label class="StdLabelMed" text="Loading" /><LoadingThrobber/></Panel></Panel>' );
-		// Show it...
-		this.ShowPanel( oTarget );
-
-		// Now make the request.
-		var _this = this;
-		$.AsyncWebRequest( strURLSource,
-			{
-				type: 'GET',
-				success: function( strXML )
-				{
-					oTarget.LoadLayoutFromStringAsync(strXML, true, false);
-				},
-				complete: function( )
-				{
-					oTarget.RemoveClass('Loading');
-				},
-				failure: function( oTarget )
-				{
-					_this.ShowPanelError( oTarget );
-				}
-			}
-		);
-
+		this.CreatePanelFromURL( strTargetID, strURLSource )
 	}
 }
 
+CNXNavigation.prototype.UpdateSelectedStyle = function()
+{
+	$.Each(this.oNavigationContainer.Children(), function( oPanel )
+	{
+		oPanel.checked = (oPanel.BHasKeyFocus() || oPanel.BHasDescendantKeyFocus());
+	});
+}
 
+CNXNavigation.prototype.CreatePanelFromURL = function( strTargetID, strURLSource, rgData )
+{
+	if( !rgData )
+		rgData = {};
+
+	// Create main panel
+	var oTarget = $.CreatePanel( 'Panel', this.oTargetContainer, strTargetID );
+	oTarget.AddClass('NxRightContentContainer');
+	oTarget.AddClass('Loading');
+
+	// Add throbber
+	oTarget.BCreateChildren( '<Panel class="NxNavigationLoadingThrobber"><Panel><Label class="StdLabelMed" text="Loading" /><LoadingThrobber/></Panel></Panel>' );
+	// Show it...
+	this.ShowPanel( oTarget );
+
+	// install handler
+	var _this = this;
+	$.RegisterEventHandler( 'LoadAsyncComplete', oTarget, function( pPanel, bSuccess, eDetail, bPartial )
+	{
+		if ( bSuccess )
+		{
+			// nothing to do on success
+		}
+		else
+		{
+			_this.ShowPanelError( oTarget );
+		}
+	});
+
+	// combine params
+	var rgParams = new Array();
+	if ( rgData )
+	{
+		for ( key in rgData )
+		{
+			if ( !rgData[ key ] )
+				rgParams.push( key );
+			else
+				rgParams.push( key + '=' + encodeURIComponent( rgData[ key ] ) );
+		}
+	}
+
+	if ( rgParams.length > 0 )
+	{
+		if (strURLSource.indexOf( '?' ) >= 0)
+			strURLSource += '&' + rgParams.join('&');
+		else
+			strURLSource += '?' + rgParams.join('&');
+	}
+
+	// Now make the request.
+	oTarget.LoadLayoutAsync( strURLSource, true, false );
+}
 
 CNXNavigation.prototype.ShowPanelError = function( oTarget )
 {
