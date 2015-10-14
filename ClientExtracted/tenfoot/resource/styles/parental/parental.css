@@ -21,7 +21,7 @@ ParentalUnlockPopup
 	horizontal-align: center;
 	vertical-align: center;
 	width: 620px;
-	height: 540px;
+	height: 580px;
 
 	opacity: 1.0;
 
@@ -361,10 +361,7 @@ ParentalReplacementPanel Button:focus
 {
 	margin-top: 50px;
 }
-#ParentalIntroChild ToggleButton
-{
-	width: fit-children;
-}
+
 
 .ParentalFeatureLabel
 {
@@ -556,13 +553,14 @@ ParentalSetPINChild TextEntry,
 ParentalSetEnableCodeChild TextEntry
 {
 	horizontal-align: left;
-	height: 40px;
+	height: 50px;
 	font-size: 24px;
-	padding-top: -4px;
-	width: 100px;
+	vertical-align: center;
+	padding-top: 4px;
+	width: 130px;
 	background-color: ui_common_control;
 	margin-top: 10px;
-	padding: -2px 4px;
+	padding: 5px 4px 0px 6px;
 }
 
 ParentalSetRecoveryChild TextEntry
@@ -587,7 +585,7 @@ ParentalSetRecoveryChild TextEntry
 
 ParentalSetEnableCodeChild TextEntry
 {
-	width: 120px;
+	width: 130px;
 }
 
 ParentalSetInProgressChild .SettingsBottomPanel

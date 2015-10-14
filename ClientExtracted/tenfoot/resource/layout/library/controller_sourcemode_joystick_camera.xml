@@ -6,13 +6,10 @@
 	</styles>
 
 	<ControllerSourceModeJoystickCamera class="ControllerMode" tabindex="auto">
-		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_Joystick_Camera_Title" />
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_Joystick_Camera_Title" />
 			<ControllerBindingButton id="JoystickClick" acceptsfocus="false" />
-		</Panel>
-    <Panel id="BindingSlotContainer">
       <ControllerBindingButton id="EdgeBindingJoystick" acceptsfocus="false" />
     </Panel>
   </ControllerSourceModeJoystickCamera>

@@ -35,11 +35,6 @@ WelcomeToSteam
 	margin: 0px 15px 0px 0px;
 }
 
-#UserHasNoProducts
-{
-	/*background-color: #0C2037;*/
-}
-
 #icon_image
 {
 	margin: 0px 15px 0px 0px;
@@ -71,12 +66,14 @@ WelcomeToSteam
 #WelcomeCapsuleOver
 {
 	opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
-	opacity: 0.0;
+	opacity: 0.3;
+	border-radius: 5px;
 }
 
 MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 {
 	opacity: 0.0;
+
 }
 
 #WelcomePanel:descendantfocus #WelcomeCapsuleOver,
@@ -86,6 +83,7 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	color: #e5f1f9;
 	wash-color: #e5f1f9;
 	opacity: 1.0;
+	border-radius: 0px;
 }
 
 #sub_text_center
@@ -142,7 +140,13 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 
 #welcome_friends_hint
 {
-	flow-children:right;
+	flow-children: right;
+	visibility: collapse;
+}
+
+.ControllerPresent #welcome_friends_hint
+{
+	visibility: visible;
 }
 
 .WelcomeBtnBump 
@@ -172,54 +176,47 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	
 }
 
+.SubPanelContainer,
+.SubPanelCenterContainer
+{
+	opacity: .5;
+	transition-property: opacity, transform;
+	transition-duration: PageTransitionTimeOff;
+
+	vertical-align: center;
+	horizontal-align: center;
+}
+
 .SubPanelContainer
 {
 	flow-children: right;
-	vertical-align: center;
-	horizontal-align: center;
-	opacity: .5;
-	transition-property: opacity;
-	transition-duration: PageTransitionTimeOff;
 	width: 1920px;
-}
-
-.SubPanelCenterContainer
-{
-	vertical-align: center;
-	horizontal-align: center;
-	opacity: .5;
-	transition-property: opacity;
-	transition-duration: PageTransitionTimeOff;
 }
 
 .SubImageCenterAlign
 {
-	visibility: collapse;
 	vertical-align: top;
 	transform: translateZ(0px );
-	opacity: 0.5;
+	opacity: 0.0;
 	width: 1920px;
-	transition-property: transform;
+	transition-property: transform, opacity;
 	transition-duration: PageTransitionTimeOff;
 }
 
 MainMenu.BelowTheFoldOpen .SubImageCenterAlign
 {
-	visibility: visible;
+	opacity: 0.5;
 }
 
-.BelowTheFoldOpen .SubPanel:focus .SubPanelCenterContainer, 
-.BelowTheFoldOpen .SubPanel:focus .SubPanelContainer
+.BelowTheFoldOpen .SubPanel:descendantfocus .SubPanelCenterContainer,
+.BelowTheFoldOpen .SubPanel:descendantfocus .SubPanelContainer
 {
 	background-color: gradient( linear, 0%  0%, 100% 0%, from( #66c0f460 ), color-stop( 0.5, #11111100 ), color-stop( 0.5, #11111100 ), to( #66c0f460 ) );
 	opacity: 1;
-	
 	transform: translateY( 0px ) translateZ( 16px );
-	transition-property: transform;
-	transition-duration: PageTransitionTimeOff;
 }
 
-.BelowTheFoldOpen .SubPanel:focus
+.BelowTheFoldOpen .SubPanel:descendantfocus
 {
 	box-shadow: black -2px -2px 32px 6px;
 }
@@ -228,8 +225,6 @@ MainMenu.BelowTheFoldOpen .SubImageCenterAlign
 .SubPanel:hover .SubPanelContainer
 {
 	opacity: 1;
-	transition-property: opacity;
-	transition-duration: PageTransitionTimeOff;
 }
 
 .SubText
@@ -262,7 +257,7 @@ MainMenu.BelowTheFoldOpen .SubImageCenterAlign
 
 .SubDesc
 {
-	font-size: 24px;
+	font-size: 26px;
 	color: white;
 	margin-top: 20px;
 	vertical-align: center;

@@ -1,6 +1,6 @@
 @define achievementstitle: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2ff ), to( #ebebeb00 ) );
 @define achievementsdesc: gradient( linear, 0% 0%, 0% 100%, from( #ffffffcc ), to( #ffffff88 ) );
-@define newstitle: #8f98a0ff;
+@define newstitle: #81a3b8ff;
 @define largenewstitle: gradient( linear, 0% 0%, 0% 160%, from( #f2f2f2ef ), to( #abababee ) );
 @define largenewsbyline: gradient( linear, 0% 0%, 100% 0%, from( #ffffff77 ), color-stop( 0.8, #ffffff77 ), to( #ffffff00 ) );
 @define largenewsbody: gradient( linear, 82% 0%, 98% 0%, from( #c6d4dfef ), to( #c6d4dfce ) );
@@ -707,6 +707,8 @@ LibraryAppDetails .ContentsRow
 
 	padding: 18px;
 
+
+
 }
 #OverlayDashboard .DetailsDataPanel {
 	height: 330px;
@@ -738,8 +740,8 @@ LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel.Small,
 
 	transition-duration: shortduration !immediate;
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -3014,8 +3016,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .music #MusicPanelAllGames
 {
 	opacity: 1.0;
-	padding-top: 0px;
-	padding-left: 0px;
 }
 
 
@@ -4464,7 +4464,7 @@ LibraryDLCItem .DLCInstallState
 
 LibraryDLCItem .DLCInstallState.NotInstalled,
 LibraryDLCItem .DLCInstallState.Installed {
-	wash-color: #8f98a0;
+	wash-color: #81a3b8;
 }
 .DetailsDataPanel:descendantfocus LibraryDLCItem .DLCInstallState.NotInstalled {
 	wash-color: installedblue;
@@ -5348,7 +5348,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	font-family: platformfont;
 	font-size: 30px;
 	font-weight: normal;
-	color: #8f98a0ff;
+	color: #81a3b8ff;
 	padding-left: 10px;
 }
 .EmptyLibraryLabelWrapper .Title {
@@ -5449,9 +5449,13 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .suggested #GamesSuggestion #RecentRow Button#Game1 {
 	transform: translatex(0px);
 }
-.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0,
-.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1 {
+.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0
+{
 	transform: translatex(0px);
+}
+.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1
+{
+	transform: translatex(25px);
 }
 
 #GamesSuggestion Button {
@@ -5648,7 +5652,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #RecentRow Button Label
 {
 	width: 210px;
-	height: 65px;
+	height: fit-children;
 	white-space: normal;
 	vertical-align: center;
 	text-align: left;
@@ -5660,7 +5664,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 .GameDetails Label
 {
-	font-size: 22px;
+	font-size: 26px;
 }
 #GamesSuggestion Button .GameDetails #GameLabel_Expanded {
 	opacity: 0;

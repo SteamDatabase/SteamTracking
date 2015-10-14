@@ -595,7 +595,6 @@ MainMenu.StackDepth3 .HomeGlow
 	visibility: visible;
 }*/
 
-	
 #SelfAvatar
 {
 	border-style: solid;
@@ -609,6 +608,10 @@ MainMenu.StackDepth3 .HomeGlow
 	transition-property: pre-transform-scale2d;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-out;
+}
+#Avatar.TopRowButton:focus #SelfAvatar
+{
+	border-width: 0px;
 }
 
 #SelfAvatar:hover
@@ -982,8 +985,9 @@ Label.TopRowCounter
 {
 //opacity: 0.0;
 //pre-transform-scale2d: 0.5;
-padding: 16px;
+padding: 0px;
 }
+
 
 
 .TopRowButton:focus Label.TopRowCounter 
@@ -2034,21 +2038,23 @@ Button.Locked #ParentalLockImageLocked
 
 #WelcomePanel
 {
+	width: 1920px;
+	height: 1080px;				// allow offscreel scroll, but not infinite
+	pre-transform-scale2d: 0.87;
 	visibility: collapse;
 	z-index: MainContentsZIndex;
+
+	flow-children: down;
+	opacity: 0.7;
+	border-style: solid;	
+	border-width: 5px;
+	border-color: #b6e1fa00;
+
+	transition-property: opacity, transform, box-shadow, background-color, pre-transform-scale2d;
+
+	transition-duration: PageTransitionTimeOff;
+	transition-timing-function: bigpicture-ease-in-out;
 	
-	margin-top: 0px;
-	width: 100%;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
-	flow-children: right;
-	opacity:0.7;
-  
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.3s, 0.3s !immediate;
-	transition-timing-function: linear;
-	
-	height:520px;
-	overflow: clip clip;
 }
 
 .WelcomeNewAccount #WelcomePanel
@@ -2070,30 +2076,18 @@ MainMenu.BelowTheFoldClosed #WelcomePanel:hover
 
 MainMenu.BelowTheFoldClosed #WelcomePanel
 {
-	width:87%;
 	horizontal-align: center;
-	flow-children:down;
 	border-radius: 8px;
-	box-shadow: none;
-	opacity: 0.7;
-	margin-bottom: 0; 
+	box-shadow: none; 
 
-	transform-origin: 0% 0% parent-relative;
-	transform: translateY( 590px ) translateZ( -64px );
-	transition-property: opacity, transform, box-shadow;
-	transition-duration: PageTransitionTimeOff;
-	transition-timing-function: bigpicture-ease-in-out;
+	transform: translateY( 590px );
 }
 
 MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
 {
-	border-style: solid;
 	border-width: 5px;
 	border-color: #b6e1faff;
-	background-color: #2A5D7C00 ;
-	height: fit-children;
-	margin-bottom: 0; 
-	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1e486a00 ), color-stop( 0.5, #2a5d7c00 ),to( #1e486a00 ) );
 	
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	animation-name: main-button-glow-movement-no-fill;
@@ -2102,27 +2096,24 @@ MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+	pre-transform-scale2d: 0.88;
 	
 	opacity: 1.0;
-	opacity-mask: none;
-	transform: translateY( 590px ) translateZ( 0px );
-	transition-property: opacity, transform, box-shadow, background-color;
-	transition-duration: PageTransitionTimeOff; 
+	transform: translateY( 590px );
 }
 
 MainMenu.BelowTheFoldOpen #WelcomePanel
 {
-	transform: translateY( 0px ) translateZ( 0px );
+	transform: translateY( 0px );
 	horizontal-align: center;
-	opacity:1.0;
+	opacity: 1.0;
 	padding-bottom: 256px;
-	width:100%;
+	pre-transform-scale2d: 1.0;
 	
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e2036ff ), color-stop( 0.5, #0C3251ff ),to( #0e2036ff ) );	
 	overflow: clip scroll;
 	height: fit-children;
-	transition-property: transform, box-shadow, background-color;
-	transition-duration: PageTransitionTimeOff;
 }
 
 #ProfileNameWrapper

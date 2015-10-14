@@ -6,10 +6,9 @@
 	</styles>
 
 	<ControllerSourceModeAbsoluteMouse class="ControllerMode" tabindex="auto">
-		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_Mouse_Title" />
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_Mouse_Title" />			
 			<ControllerBindingButton id="AbsMouseClick" acceptsfocus="false" />
 			<ControllerBindingButton id="DoubleTap" acceptsfocus="false" />
 		</Panel>

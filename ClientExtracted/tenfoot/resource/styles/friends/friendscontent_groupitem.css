@@ -1,35 +1,31 @@
 FriendsContent_GroupItem
 {
-
 	margin: 4px;
 	width: 300px;
 	height: 110px;
 	flow-children: none;
 	//background-color: transparent_module;
-		background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
-	//padding: 18px;
-	
+	padding: 0px;
 }
 
 FriendsContent_GroupItem:focus
 {
 	border: 3px solid ui_primary_color;
 
-	background-color: #14C6FC99;
-	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));
-	    	
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));	    	
 }
 
 FriendsContent_GroupItem.ConnectedToChat
 {
-background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 }
 
 FriendsContent_GroupItem.ConnectedToChat:focus
 {
 	border: 3px solid ui_primary_color;
-		background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));
 }
 
 .GroupContent
@@ -49,8 +45,6 @@ AvatarImage
 
 FriendsContent_GroupItem:focus .GroupContent AvatarImage
 {
-	transform: translatey( 2px ) translatex( 2px );
-	margin: 0px;
 	vertical-align: center;
 }
 
@@ -66,7 +60,6 @@ FriendsContent_GroupItem:focus Label
 	margin-left: 8px;
 	//color: ui_primary_color;
 	font-size: 20px;
-	transform: translatey( 2px ) translatex( 7px );
 }
 
 
@@ -82,7 +75,6 @@ FriendsContent_GroupItem:focus Label
 	font-size: 20px;
 	margin-left: 8px;
 	white-space: nowrap;
-	//transform: translatey( 0px ) translatex( 4px );
 }
 
 FriendsContent_GroupItem:focus .GroupItemName
@@ -91,9 +83,7 @@ FriendsContent_GroupItem:focus .GroupItemName
 	font-size: 20px;
 	margin-left: 8px;
 	white-space: nowrap;
-	transform: translatey( 2px ) translatex( 7px );
 }
-
 
 
 .GroupInChat,
@@ -144,7 +134,7 @@ FriendsContent_GroupItem:focus .GroupItemName
 	border-radius: 4px;
 	
 	border-top-left-radius: 0px;
-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 
 	padding: 3px;
 	margin-left: 77px;

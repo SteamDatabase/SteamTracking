@@ -6,7 +6,6 @@
 	</styles>
 
 	<ControllerSourceModeTrigger class="ControllerMode Trigger" tabindex="auto">
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
 			<ControllerBindingButton id="TriggerClick" acceptsfocus="false" />

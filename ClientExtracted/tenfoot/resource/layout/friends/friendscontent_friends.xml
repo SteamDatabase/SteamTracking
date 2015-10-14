@@ -9,7 +9,7 @@
 
 			<Label text="#friends_no_friends_message" class="ZeroFriendsLabel" />
 
-			<Button id="ClearFilterButton" onactivate="FriendsClearFilter();FriendsSelectFirstItem();" selectionpos="auto">
+			<Button id="ClearFilterButton" onactivate="FriendsClearFilter();FriendsSelectFirstItem();" selectionpos="auto" tabindex="auto">
 				<Label text="Filtered view, '{s:filter_string}' , click here to clear" />
 			</Button>
 

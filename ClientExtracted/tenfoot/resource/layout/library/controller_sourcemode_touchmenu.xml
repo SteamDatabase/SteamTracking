@@ -6,10 +6,9 @@
 	</styles>
 
 	<ControllerSourceModeTouchMenu class="ControllerMode" tabindex="auto">
-		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_TouchMenu_Title" />
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
+		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_TouchMenu_Title" />
 			<ControllerBindingButton id="TouchMenu" acceptsfocus="false" />
     </Panel>
 	</ControllerSourceModeTouchMenu>

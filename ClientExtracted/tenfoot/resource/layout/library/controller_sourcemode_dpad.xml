@@ -6,14 +6,14 @@
 	</styles>
 
 	<ControllerSourceModeDpad class="ControllerMode" tabindex="auto">
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
-			<ControllerBindingButton id="DpadLeft" acceptsfocus="false" />
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_DPad_Title" />			
 			<ControllerBindingButton id="DpadUp" acceptsfocus="false" />
+			<ControllerBindingButton id="DpadLeft" acceptsfocus="false" />
 			<ControllerBindingButton id="DpadRight" acceptsfocus="false" />
 			<ControllerBindingButton id="DpadDown" acceptsfocus="false" />
-			<ControllerBindingButton id="EdgeBindingDpad" acceptsfocus="false" />
+			<ControllerBindingButton id="DpadClick" class="RequiresMiddleButton" acceptsfocus="false" />
 		</Panel>
   </ControllerSourceModeDpad>
 </root>

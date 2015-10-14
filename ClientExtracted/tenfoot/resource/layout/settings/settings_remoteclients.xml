@@ -39,7 +39,7 @@
 			  </Panel>
 
 			  <Panel class="FlowRight">
-				  <Panel class="SettingsColumnarContent" >
+				  <Panel class="SettingsColumnarContent FlowDown" >
 					  <Label class="SettingsLabel" text="#Settings_RemoteClients_HostLabel" />
 					
 					  <!-- This is visible if hosting is not supported on this platform -->

@@ -158,36 +158,6 @@ ControllerBindingsGordon.ScreenSaverMode
 	color: white;
 }
 
-.HelperImage
-{
-	horizontal-align: center;
-	vertical-align: center;
-}
-
-#HelperImageBG
-{
-	margin-top: 80px;
-	horizontal-align: left;
-	background-color: #102f4b;
-	
-	width: 50%;
-	height: 90%;
-	
-	visibility: collapse;
-}
-
-#HelperDescription
-{
-	margin-top: 80px;
-	horizontal-align: right;
-	background-color: #13354c; 
-	
-	width: 50%;
-	height: 90%;
-	
-	visibility: collapse;
-}
-
 #BindingsTitle
 {
 	font-size: 60px;
@@ -230,6 +200,56 @@ ControllerBindingsGordon.ScreenSaverMode
 	visibility: collapse;
 }
 
+.HelperImage
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#HelperImageBG
+{
+	margin-top: 80px;
+	horizontal-align: right;
+	background-color: #102f4b;
+	
+	width: 50%;
+	height: 90%;
+	
+	visibility: collapse;
+}
+
+#HelperDescription
+{
+	z-index: 1;
+	margin-top: 80px;
+	horizontal-align: left;
+	background-color: #13354c; 
+	
+	width: 1800px;
+	height: 90%;
+	
+	transition-property: width;
+	transition-timing-function: ease-in;
+	transition-duration: 0.1s;
+	
+	visibility: collapse;
+}
+
+.ShowBackgroundHelper #HelperDescription
+{
+	visibility: visible;
+}
+
+.ShowBackgroundHelper #HelperImageBG
+{
+	visibility: visible;
+}
+
+.HasHelperImage #HelperDescription
+{
+	width: 900px;
+}
+
 #HelperDescriptionHeader
 {
 	font-size: 60px;
@@ -248,7 +268,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #HelperDescriptionText
 {
-	font-size: 22px;
+	font-size: 30px;
 	font-family: platformfont;
 	color: #01caef;
 	margin-top: 140px;
@@ -261,17 +281,6 @@ ControllerBindingsGordon.ScreenSaverMode
 	
 	visibility: visible;
 }
-
-.ShowBackgroundHelper #HelperDescription
-{
-	visibility: visible;
-}
-
-.ShowBackgroundHelper #HelperImageBG
-{
-	visibility: visible;
-}
-
 
 .ShowBackgroundHelper #BackgroundController
 {
@@ -352,9 +361,55 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #BackgroundLines
 {
-	background-position: 208px 73px;
+	background-position: -96px 73px;
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines.png");
 }
+
+.LeftTriggerSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_forward.png");
+}
+
+
+.LeftBumperSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
+}
+
+
+.LeftGripSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
+}
+
+
+.BackButtonSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_4.png");
+}
+
+
+.RightTriggerSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
+}
+
+.RightBumperSelected
+
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_6.png");
+}
+
+.RightGripSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
+}
+
+.StartButtonSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
+}
+
 
 .HasMultipleActionSets #BackgroundController
 {
@@ -393,8 +448,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	border-radius: 2px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #0f99bc;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
+	border-color: #0f99bc44;
 
 	width: 417px;
 	height: 228px;
@@ -402,27 +456,15 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .ModeWrapper.Gyro
 {
-	border-radius: 2px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #0f99bc;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
 	width: 256px;
 	height: 128px;
-
-}
-
-.ModeWrapper.Gyro #SourceModeBackground
-{
-	background-position: 0px 0px;
-
-    background-size: contain;
+	border: 0px;
 }
 
 .ModeWrapper.Gyro #SourceModeLines
 {
 	background-image: none;
-    visibility: collapse;
+  visibility: collapse;
 }
 
 .ModeWrapper.Gyro #BindingLabel
@@ -432,20 +474,15 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .ModeWrapper:focus
 {
-	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	background-color: settingsbackgroundgradient;
 	border-color: white;
-
+	
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-}
-
-.ModeWrapper:focus Label
-{
-	color: #0e182a;
 }
 
 .ModeWrapper.GapRight
@@ -457,15 +494,15 @@ ControllerBindingsGordon.ScreenSaverMode
 {
 	width: bindingbuttonwidth;
 	height: 96px;
-	background-repeat: no-repeat;
-
 	margin-bottom: 9px;
+	background-color: none;
+	border:0px;
 }
 
 .ModeWrapper.Trigger Label
 {
 	margin-top: 5px;
-	margin-left: 96px;
+	margin-left: 20px;
 	margin-right: 0px;
 	width: 100%;
 }
@@ -473,28 +510,14 @@ ControllerBindingsGordon.ScreenSaverMode
 .ModeWrapper.Trigger.Right Label
 {
 	margin-top: 5px;
-	margin-left: 0px;
-	margin-right: 96px;
+	margin-right: 20px;
 	width: 100%;
 	text-align: right;
 }
 
-.ModeWrapper.Trigger.Left #SourceModeBackground
-{
-	background-position: 0px -4px;
-	background-image: url("file://{images}/library/controller/input_controller_glyph_left_trigger.png");
-}
-
-.ModeWrapper.Trigger.Right #SourceModeBackground
-{
-	background-position: 324px -4px;
-	background-image: url("file://{images}/library/controller/input_controller_glyph_right_trigger.png");
-}
-
-
 ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 {
-	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	background-color: settingsbackgroundgradient;
 	border-color: white;
 
 	animation-name: main-button-glow-movement;
@@ -505,10 +528,9 @@ ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 	animation-direction: normal;
 }
 
-ControllerBindingButton.BindingButton:focus Label, Button.Trigger:focus Label
-{
-	color: #0e182a;
-}
+
+
+
 
 .ControllerMode
 {
@@ -523,21 +545,45 @@ ControllerBindingButton.BindingButton:focus Label, Button.Trigger:focus Label
 
 Label.ModeTitle
 {
-	margin-top: 16px;
-	margin-right: 12px;
+	margin-left: 7px;
+	margin-bottom: 10px;
 	font-size: 30px;
 	font-family: platformfont;
 	font-weight: light;
 	text-overflow: ellipsis;
-	color: #0f99bc;
-	horizontal-align: right;
+	color: #00ccff;
+	horizontal-align: left;
+	visibility: collapse;
+}
+
+#Gyro Label.ModeTitle
+{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.NeedsTitle Label.ModeTitle
+{
+	visibility: visible;
 }
 
 #BindingSlotContainer
 {
 	flow-children: down;
-	width: 100%;
-	height: 100%;
+	height: fit-children;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 12px;
+}
+
+#Gyro #BindingSlotContainer
+{
+	horizontal-align: center;
+}
+
+.HideMiddleClick .RequiresMiddleButton
+{
+	visibility: collapse;
 }
 
 #SourceModeBackground
@@ -545,8 +591,16 @@ Label.ModeTitle
 	background-repeat: no-repeat no-repeat;
 	width: 100%;
 	height: 100%;
-	margin-top: 50px;
-	margin-left: 30px;
+	opacity: 0.5;
+	background-size: 75px 75px;
+	background-position: 98% 5%;
+}
+
+#Gyro #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/api/gyro.png");
+	background-size: 60px 60px;
+	background-position: 50% 5%;
 }
 
 #SourceModeLines
@@ -554,6 +608,7 @@ Label.ModeTitle
 	background-repeat: no-repeat no-repeat;
 	width: 100%;
 	height: 100%;
+	opacity: 0.8;
 }
 
 .BindingSlotStrip
@@ -574,17 +629,12 @@ ControllerBindingButton.BindingButton
 	width: bindingbuttonwidth;
 	height: 96px;
 	margin-bottom: 9px;
-	border-radius: 2px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #0f99bc;
-
-	background-repeat: no-repeat;
+	background-color: none;
 }
 
 ControllerBindingButton.BindingButtonPropertiesMode
 {
-    padding-left: 8px;
+  padding-left: 8px;
 	margin-bottom: 9px;
 	border-width: 2px;
 	border-style: solid;
@@ -600,7 +650,7 @@ ControllerBindingButton.BindingButtonPropertiesMode
 
 ControllerBindingButton.BindingButton Label
 {
-	margin-left: 96px;
+	margin-left: 20px;
 	vertical-align: center;
 	width: 100%;
 	text-overflow: clip;
@@ -609,7 +659,7 @@ ControllerBindingButton.BindingButton Label
 ControllerBindingButton.BindingButton.Right Label
 {
 	margin-left: 0px;
-	margin-right: 96px;
+	margin-right: 20px;
 	width: 100%;
 	text-align: right;
 }
@@ -639,44 +689,29 @@ ControllerBindingButton.BindingButton.Right
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #112f47 ), to( #13354c ) );
 }
 
-#LeftBumperButton.BindingButton
-{
-	background-image: url("file://{images}/library/controller/input_controller_glyph_left_bumper.png");
-}
-
-#LeftTriggerButton.BindingButton
-{
-	background-image: url("file://{images}/library/controller/input_controller_glyph_left_trigger.png");
-}
-
-#LeftGripButton.BindingButton
-{
-	background-image: url("file://{images}/library/controller/input_controller_glyph_left_grip.png");
-}
-
 #BackButton.BindingButton
 {
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_back.png");
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	background-position: 5px 8px;
 }
 
-#RightBumperButton.BindingButton
+#BackButton.BindingButton Label
 {
-	background-image: url("file://{images}/library/controller/input_controller_glyph_right_bumper.png");
-}
-
-#RightTriggerButton.BindingButton
-{
-	background-image: url("file://{images}/library/controller/input_controller_glyph_right_trigger.png");
-}
-
-#RightGripButton.BindingButton
-{
-	background-image: url("file://{images}/library/controller/input_controller_glyph_right_grip.png");
+	margin-left: 96px;
 }
 
 #StartButton.BindingButton
 {
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+}
+
+#StartButton.BindingButton Label
+{
+	margin-right: 105px;
 }
 
 .BindingSlotStrip
@@ -750,31 +785,27 @@ ControllerPropertiesMode
 	opacity: 0.0;
 }
 
-ControllerSourceModeDpad #SourceModeBackground
+.ControllerMode ControllerBindingButton
 {
-	background-image: url("file://{images}/library/controller/input_controller_mode_dpad.png");
+	horizontal-align: left;
+	margin-left: 6px;
+	margin-bottom: 2px;
+	
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+	visibility: visible;
 }
 
-ControllerSourceModeDpad #SourceModeLines
+.ControllerMode ControllerBindingButton Label
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_dpad.png");
+	margin-left: 55px;
+	vertical-align: center;
 }
 
-Button:focus ControllerSourceModeDpad #SourceModeLines
+.ControllerMode ControllerBindingButton.Unassigned
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_dpad_focused.png");
-}
-
-ControllerSourceModeDpad #BindingSlotContainer
-{
-	margin-top: 16px;
-	margin-right: 12px;
-}
-
-ControllerSourceModeDpad ControllerBindingButton
-{
-	horizontal-align: right;
-	margin-bottom: 6px;
+	visibility: collapse;
 }
 
 ControllerSourceModeTrigger ControllerBindingButton
@@ -783,126 +814,108 @@ ControllerSourceModeTrigger ControllerBindingButton
 	width: 100%;
 }
 
-ControllerSourceModeJoystickMove #SourceModeBackground
+ControllerSourceModeTrigger.ControllerMode ControllerBindingButton
 {
-	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+	background-image: none;
+	background-size: 0px 0px;
 }
 
-ControllerSourceModeJoystickMove #SourceModeLines
+ControllerSourceModeTrigger #BindingSlotContainer
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	margin-top: 0px;
 }
 
-Button:focus ControllerSourceModeJoystickMove #SourceModeLines
+ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+	height: 48px;
+	margin-bottom: 4px;
 }
 
-ControllerSourceModeJoystickMove #JoystickClick
+#ModeContainer #ABXYButtonA
 {
-	horizontal-align: right;
-	margin-right: 12px;
-	transform: translatey( 175px );
+	background-image: url("file://{images}/library/controller/api/button_a.png");
+}
+#ModeContainer #ABXYButtonA Label
+{
+	color: #42ff00;
+	margin-left: 65px;
 }
 
-ControllerSourceModeJoystickCamera #SourceModeBackground
+#ModeContainer #ABXYButtonB
 {
-	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+	background-image: url("file://{images}/library/controller/api/button_b.png");
+}
+#ModeContainer #ABXYButtonB Label
+{
+	color: #ff0000;
+	margin-left: 65px;
 }
 
-ControllerSourceModeJoystickCamera #SourceModeLines
+#ModeContainer #ABXYButtonX
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+	background-image: url("file://{images}/library/controller/api/button_x.png");
+}
+#ModeContainer #ABXYButtonX Label
+{
+	color: #01c4f5;
+	margin-left: 65px;
 }
 
-Button:focus ControllerSourceModeJoystickCamera #SourceModeLines
+#ModeContainer #ABXYButtonY
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+	background-image: url("file://{images}/library/controller/api/button_y.png");
+}
+#ModeContainer #ABXYButtonY Label
+{
+	color: #ffde00;
+	margin-left: 65px;
 }
 
-ControllerSourceModeJoystickCamera #JoystickClick
+ControllerSourceModeDpad.ControllerMode ControllerBindingButton
 {
-	horizontal-align: right;
-	margin-right: 12px;
-	transform: translatey( 175px );
-}
-
-ControllerSourceModeABXY #BindingSlotContainer
-{
-	margin-top: 16px;
-	margin-right: 12px;
-}
-
-ControllerSourceModeABXY ControllerBindingButton
-{
-	horizontal-align: right;
+	background-size: 36px 36px;
 	margin-bottom: 6px;
 }
 
-ControllerSourceModeABXY #SourceModeBackground
+#ModeContainer #DPadLeft
 {
-	background-image: url("file://{images}/library/controller/input_controller_mode_bpad.png");
+	background-image: url("file://{images}/library/controller/api/virtual_dpad_w.png");
+}
+#ModeContainer #DPadRight
+{
+	background-image: url("file://{images}/library/controller/api/virtual_dpad_e.png");
+}
+#ModeContainer #DPadUp
+{
+	background-image: url("file://{images}/library/controller/api/virtual_dpad_n.png");
+}
+#ModeContainer #DPadDown
+{
+	background-image: url("file://{images}/library/controller/api/virtual_dpad_s.png");
+}
+#ModeContainer #DpadClick
+{
+	background-image: url("file://{images}/library/controller/api/pad_l_click.png");
 }
 
-ControllerSourceModeABXY #SourceModeLines
+ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_bpad.png");
+	height: 48px;
+	margin-bottom: 8px;
 }
 
-Button:focus ControllerSourceModeABXY #SourceModeLines
+#ModeContainer #AbsMouseClick
 {
-	background-image: url("file://{images}/library/controller/controller_config_mode_bpad_focus.png");
+	background-image: url("file://{images}/library/controller/api/click_once.png");
 }
 
-#ABXYButtonA Label
+#ModeContainer #DoubleTap
 {
-	color: #42ff00;
-}
-
-Button:focus #ABXYButtonA Label
-{
-	color: #0e182a;
-}
-
-#ABXYButtonB Label
-{
-	color: #ff0000;
-}
-
-Button:focus #ABXYButtonB Label
-{
-	color: #0e182a;
-}
-
-#ABXYButtonX Label
-{
-	color: #01c4f5;
-}
-
-Button:focus #ABXYButtonX Label
-{
-	color: #0e182a;
-}
-
-#ABXYButtonY Label
-{
-	color: #ffde00;
-}
-
-Button:focus #ABXYButtonY Label
-{
-	color: #0e182a;
-}
-
-ControllerSourceModeAbsoluteMouse .ModeTitle
-{
-	margin-bottom: 40px;
-}
-
-ControllerSourceModeAbsoluteMouse #BindingSlotContainer
-{
-	margin-top: 96px;
-	margin-right: 12px;
+	background-image: url("file://{images}/library/controller/api/click_twice.png");
 }
 
 ControllerSourceModeAbsoluteMouse ControllerBindingButton
@@ -911,53 +924,11 @@ ControllerSourceModeAbsoluteMouse ControllerBindingButton
 	margin-bottom: 6px;
 }
 
-ControllerSourceModeAbsoluteMouse #SourceModeBackground
-{
-	background-image: url("file://{images}/library/controller/input_controller_mode_mouse_complex.png");
-}
-
-ControllerSourceModeAbsoluteMouse #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
-}
-
-Button:focus ControllerSourceModeAbsoluteMouse #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
-}
-
-ControllerSourceModeRelativeMouse #SourceModeBackground
-{
-	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
-}
-
-ControllerSourceModeRelativeMouse #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
-}
-
-Button:focus ControllerSourceModeRelativeMouse #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
-}
-
-
 ControllerSourceModeRelativeMouse #RelMouseClick
 {
 	horizontal-align: right;
 	margin-right: 12px;
 	transform: translatey( 175px );
-}
-
-ControllerSourceModeScrollWheel .ModeTitle
-{
-	margin-bottom: 40px;
-}
-
-ControllerSourceModeScrollWheel #BindingSlotContainer
-{
-	margin-top: 96px;
-	margin-right: 12px;
 }
 
 ControllerSourceModeScrollWheel ControllerBindingButton
@@ -966,38 +937,12 @@ ControllerSourceModeScrollWheel ControllerBindingButton
 	margin-bottom: 6px;
 }
 
-ControllerSourceModeScrollWheel #SourceModeBackground
-{
-	background-image: url("file://{images}/library/controller/input_controller_mode_mouse_complex.png");
-}
-
-ControllerSourceModeScrollWheel #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
-}
-
-Button:focus ControllerSourceModeScrollWheel #SourceModeLines
-{
-	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
-}
-
 ControllerSourceModeTrigger
 {
 	width: bindingbuttonwidth;
 	height: 96px;
 	background-repeat: no-repeat;
 }
-
-
-ControllerSourceModeTrigger #SourceModeBackground
-{
-	background-repeat: no-repeat no-repeat;
-	width: 100%;
-	height: 100%;
-	margin-top: 0px;
-	margin-left: 0px;
-}
-
 
 Slider:focus
 {

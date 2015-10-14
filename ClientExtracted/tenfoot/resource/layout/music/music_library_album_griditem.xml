@@ -5,11 +5,11 @@
 	</styles>
 	
 	<AlbumGridItem>
-		<Image id="AlbumImage" class="AlbumImage" scaling="stretch-to-fit-preserve-aspect" />
-		<Panel id="FocusBorderPanel" class="FocusBorderPanel" />
-		<Panel id="AlbumLabelWrapper">
-			<Label id="AlbumUpperLabel" text="" />
-			<Label id="AlbumLowerLabel" text="" />
-		</Panel>
+        <Panel id="AlbumLabelWrapper">
+            <Label id="AlbumUpperLabel" text="" />
+            <Label id="AlbumLowerLabel" text="" />
+        </Panel>
+        <Image id="AlbumImage" class="AlbumImage" scaling="stretch-to-fit-preserve-aspect" />
+        <Panel class="GridItemBackground" />
 	</AlbumGridItem>
 </root>

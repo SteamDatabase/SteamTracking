@@ -15,7 +15,7 @@
 		</Panel>
 		
 		<Grid id="MusicAlbumGrid" class="MusicAlbumGrid" 
-			scrolldirection="horizontal" verticalcount="2" horizontalcount="5" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto">
+			scrolldirection="horizontal" verticalcount="2" horizontalcount="5" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto" focusmargin="2" >
 		</Grid>
 		
 	</MusicLibraryAlbumPanel>

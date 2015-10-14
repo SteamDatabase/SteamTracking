@@ -10,94 +10,9 @@
 			<Panel id="TitlePanel"> 
 				<Label id="WelcomeTitle" text="#MainMenu_Welcome_Header" />
 			</Panel>
-			<Button class="SubPanel" tabindex="0" selectionpos="0,0" onactivate="None();" >
-				<Panel id="HR4" class="HR" />
-				<Panel class="SubPanelCenterContainer">
-					<Image class="SubImageCenterAlign" src="file://{images}/welcomeupdates/bigpicture.png" scaling="stretch-to-fit-x-preserve-aspect" />	
-					<Panel class="SubText" id ="sub_text_center"> 
-						<Image id="icon_header_image" src="file://{images}/steam_home_os.png" />
-						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_BigPicture_H" />
-						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_BigPicture_D" />
-					</Panel>
-				</Panel>
-			</Button>
-			<Button class="SubPanel" tabindex="1" selectionpos="0,1" onactivate="None();" >
-				<Panel id="HR4" class="HR" />
-				<Panel class="SubPanelCenterContainer">
-					<Image class="SubImageCenterAlign" src="file://{images}/welcomeupdates/gamesbanner.png" scaling="stretch-to-fit-x-preserve-aspect" />	
-					<Panel class="SubText" id ="sub_text_center"> 
-						<Image id="icon_header_image" src="file://{images}/systemmenu/icon_store_offset.png" />
-						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_NoProd_H" />
-						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_NoProd_D" />
-					</Panel>
-				</Panel>
-			</Button>
-			<Button class="SubPanel" tabindex="2" selectionpos="0,2" onactivate="None();">
-				<Panel id="HR4" class="HR" />
-				<Panel class="SubPanelContainer">
-					<Image class="SubImages" src="file://{images}/welcomeupdates/friends.png" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />	
-					<Panel class="SubText"> 
-						<Image id="icon_header_image" src="file://{images}/systemmenu/icon_friends_offset.png"  />
-						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_NoFriends_H" />
-						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_NoFriends_D" />
-						<Panel id="welcome_friends_hint">
-							<Panel class="WelcomeBtnBump" id="welcome_btn_bump">
-								<Image src="file://{images}/welcomeupdates/bumperbtn.png"  />
-								<Label  text="#UI_RightBumper_Short" />
-							</Panel>
-							<Label class="SubDesc" text="#MainMenu_Welcome_Sub_Friends_Hint" />
-						</Panel>	
-					</Panel>
-				</Panel>
-			</Button>
-			<Button class="SubPanel" tabindex="3" selectionpos="0,3" onactivate="None();">
-				<Panel id="HR4" class="HR" />
-				<Panel class="SubPanelContainer">
-					<Panel class="SubText SubTextRightOffset" > 
-						<Image id="icon_header_image" src="file://{images}/steam_home_os.png"  />
-						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_Overlay_H" />
-						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_Overlay_D" />
-						<Panel id="welcome_friends_hint">
-							<Panel class="WelcomeBtnOverlay" id="welcome_btn_bump">
-								<Image src="file://{images}/welcomeupdates/overlaybtn.tga"  />
-							</Panel>
-								<Label class="SubDesc" text="#MainMenu_Welcome_Sub_Overlay_Hint" />
-						</Panel>	
-					</Panel>
-					<Image class="SubImages" id="sub_images_right" src="file://{images}/welcomeupdates/overlay.png" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />	
-				</Panel>
-			</Button>
-			<Button class="SubPanel" tabindex="4" selectionpos="0,4" onactivate="None();">
-				<Panel id="HR4" class="HR" />
-				<Panel class="SubPanelCenterContainer">
-					<Image class="SubImageCenterAlign" id="sub_image_center_large" src="file://{images}/welcomeupdates/controllerbanner.png" scaling="stretch-to-fit-x-preserve-aspect" />
-					<Panel class ="BulletpointsFlow" >
-						<Panel class="SubText" id ="bulletpoints_header"> 
-							<Image id="icon_header_image" src="file://{images}/controller_support_native.png" />
-							<Label class="SubHeader" text="#MainMenu_Welcome_Sub_Controller_H" />
-							<Label class="SubDesc" text="#MainMenu_Welcome_Sub_Controller_D" />
-						</Panel>
-						<Panel class="Bulletpoints">
-							<Panel class="SingleBulletPoint">
-								<Image class="SingleBulletPointImage" src="file://{images}/welcomeupdates/controllermanage.png"/>
-								<Label class="SingleBulletPointText" text="#MainMenu_Welcome_Sub_Controller_1" />
-							</Panel>
-							<Panel class="SingleBulletPoint">
-								<Image class="SingleBulletPointImage" src="file://{images}/welcomeupdates/controllerconfig.png"  />
-								<Label class="SingleBulletPointText" text="#MainMenu_Welcome_Sub_Controller_3" />
-							</Panel>
-							<Panel class="SingleBulletPoint">
-								<Image class="SingleBulletPointImage" src="file://{images}/welcomeupdates/controllergrip.png"  />
-								<Label class="SingleBulletPointText" text="#MainMenu_Welcome_Sub_Controller_4" />
-							</Panel>
-							<Panel class="SingleBulletPoint">
-								<Image class="SingleBulletPointImage" id="bulletpointimage_nowash" src="file://{images}/welcomeupdates/controllerkeyboard.png"   />
-								<Label class="SingleBulletPointText" text="#MainMenu_Welcome_Sub_Controller_5" />
-							</Panel>
-						</Panel>
-					</Panel>	
-				</Panel>
-			</Button>
+      
+      <Panel id="TipsContainer" class="FlowDown" />
+			
 			<Panel id="HR4" class="HR" />
 		</Panel>
 		<Image id="WelcomeCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />

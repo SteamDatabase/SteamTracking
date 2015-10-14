@@ -24,12 +24,13 @@
 .TenfootControllerLossHelperPopupBody
 {
 	padding: 0px 40px 0px 40px;
+	margin-top: 35px;
 
 	flow-children: down;
 	horizontal-align: center;
-	vertical-align: center;
+	vertical-align: top;
 	width: 1024px;
-	height: 800px;
+	height: 900px;
   font-size: 28px;
 	opacity: 1.0;
 

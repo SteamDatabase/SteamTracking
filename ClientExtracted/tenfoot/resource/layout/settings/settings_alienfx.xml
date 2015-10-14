@@ -6,13 +6,8 @@
 	</styles>
 
 	<SettingsPanel_AlienFX class="SettingsSection">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_AlienFXHeader" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto" childfocusonhover="true">
+    <Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
+		  <Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto" childfocusonhover="true">
 
 				<Panel class="VertContainer">
 					<Label text="#Settings_AlienFXDescription" />
@@ -83,7 +78,7 @@
 				<Label class="SettingsLabel" text="#Settings_AlienFXBrightness" />
 				<VUMeter writable="true" id="AlienFXBrightnessLevel" class="VoiceBarContainer SliderContainer" numbars="10" barpaneladdclass="Slider Slider10" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
 				
-				
+			</Panel>
 		</Panel>
 	</SettingsPanel_AlienFX>
 

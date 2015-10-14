@@ -30,7 +30,7 @@
           
 			<Panel class="SettingsContent SettingsRightContent" tabindex="auto" selectionpos="auto">
 				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleDownloadsDuringGameplay" text="#SettingsDownloads_AllowDownloadsDuringGameplay" onactivate="ToggleBackgroundUpdates()"/>
-				<Label class="SettingsLabel" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
+				<Label class="SettingsLabel ExtraMarginBottom" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
 				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleThrottleDownloadsWhileStreaming" text="#SettingsDownloads_ThrottleDownloadsWhileStreaming" onactivate="ToggleDownloadThrottlingWhileStreaming()"/>
 				<Label class="SettingsLabel" text="#SettingsDownloads_ThrottleDownloadsWhileStreamingDetails" />
 			</Panel>

@@ -620,13 +620,13 @@
           </Panel>
 
           <!-- Mouse Mode -->
+					<Panel class="FieldWrapper MouseMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
+						<DropDown id="InvertMouseY" />
+					</Panel>
 					<Panel class="FieldWrapper MouseMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />
-					</Panel>
-					<Panel class="FieldWrapper MouseMode HideInGameActions">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
-						<Slider id="RotationAbsMouse" direction="horizontal" />
 					</Panel>
 					<Panel class="FieldWrapper MouseMode Gyro">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
@@ -643,12 +643,12 @@
 						<Slider id="EdgeSpinScale" direction="horizontal" />
 					</Panel>
 					<Panel class="FieldWrapper MouseMode Advanced">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
-						<DropDown id="InvertMouseY" />
-					</Panel>
-					<Panel class="FieldWrapper MouseMode Advanced">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
 						<Slider id="MouseMoveThreshold" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper MouseMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+						<Slider id="RotationAbsMouse" direction="horizontal" />
 					</Panel>
 					
           <!-- Touch Menu Mode -->

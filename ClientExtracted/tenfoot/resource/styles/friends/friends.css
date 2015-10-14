@@ -2002,13 +2002,6 @@ Friends .LoadError #Error,
 	height: 100%;
 }
 
-#FriendInviteAll Label
-{
-	margin-left: 60px;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
 #FriendsMainBodyInviteList
 {
 	padding-top: 10px;

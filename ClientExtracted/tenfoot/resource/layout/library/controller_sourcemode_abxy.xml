@@ -6,14 +6,13 @@
 	</styles>
 
 	<ControllerSourceModeABXY class="ControllerMode" tabindex="auto">
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
-			<ControllerBindingButton id="ABXYButtonX" acceptsfocus="false" />
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_ABXY_Title" />			
 			<ControllerBindingButton id="ABXYButtonY" acceptsfocus="false" />
+			<ControllerBindingButton id="ABXYButtonX" acceptsfocus="false" />
 			<ControllerBindingButton id="ABXYButtonB" acceptsfocus="false" />
 			<ControllerBindingButton id="ABXYButtonA" acceptsfocus="false" />
-			<ControllerBindingButton id="ABXYButtonClick" acceptsfocus="false" />
 		</Panel>
 	</ControllerSourceModeABXY>
 </root>

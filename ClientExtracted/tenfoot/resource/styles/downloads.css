@@ -36,6 +36,8 @@
 	padding: 12px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+
+	border-radius: 3px;
 	
 	transition-property: pre-transform-scale2d, position, transform, box-shadow;
 	transition-duration: 0.23s;

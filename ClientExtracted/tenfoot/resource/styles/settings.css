@@ -53,12 +53,11 @@ SettingsPanel
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: bigpicture-ease-in-out;
 
-	background-color: settingsbackgroundgradient;
 	z-index: settingszindex;
 	color: tcstatictext;
 	padding-bottom: 20px;
 	margin-bottom: 0px;
-	background-color: settingsbackgroundgradient;
+
 
 	transition-property: opacity, blur, pre-transform-scale2d, wash-color, transform;
 	transition-duration: .3s;
@@ -80,6 +79,10 @@ SettingsPanel
 {
 	margin: 14px 16px 7px 0px;
 	color: tcstatictext;
+}
+.ExtraMarginBottom
+{
+	margin-bottom: 50px;
 }
 
 .PaddedLabel
@@ -252,13 +255,15 @@ ToggleButton .TickBox
 }
 
 Button,
+.Button,
 ParentalButton,
 ToggleButton,
 .CheckBox,
 RadioButton
 {
-	width: 475px;
-	height: 48px;
+	width: 600px;
+	min-height: 48px;
+	height: fit-children;
 }
 
 // legend of textual item in settings RHS
@@ -316,7 +321,7 @@ Label.SettingsStatic
 	horizontal-align: left;
 	vertical-align: top;
 	flow-children: down;
-	width: 500px;
+	width: 650px;
 	height: fit-children;
 }
 
@@ -324,7 +329,7 @@ Label.SettingsStatic
 {
 	horizontal-align: left;
 	vertical-align: top;
-	width: 500px;
+	width: 600px;
 	margin-right: 50px;
 	padding-top: 10px;
 }
@@ -333,17 +338,17 @@ Label.SettingsStatic
 {
 	width: 525px;
 	horizontal-align: left;
-	padding-right: 40px;
-	margin-left: 50px;
+	padding-right: 20px;
+	margin-left: 20px;
 	height: 770px;
 }
 
 .SettingsRightContent
 {
-	width: 525px;
+	width: 650px;
 	height: 770px;
 	flow-children: down;
-	margin-left: 550px;
+	margin-left: 650px;
 	horizontal-align: left;
 	padding-right: 40px;
 }
@@ -357,7 +362,7 @@ Label.SettingsStatic
 .VisibleColumns3 #SettingsContent .SettingsMiddleContent,
 .VisibleColumns3 #SettingsContent .SettingsRightContent
 {
-	width: 400px;
+	width: 460px;
 }
 
 #Settings_Voice .SettingsRightContent
@@ -454,7 +459,7 @@ AvatarImage
 
 DropDown
 {
-	width: 475px;
+	width: 600px;
 	margin-top: 0px;
 }
 
@@ -1265,7 +1270,7 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 
 DropDownMenu
 {
-	width: 475px;
+	width: 575px;
 }
 
 .SettingsGroup
@@ -1501,8 +1506,8 @@ KeyboardShortcut .Graphic
 {
 	flow-children: down;
 	vertical-align: top;
-	width: 475px;
-	margin-left: 200px;
+	width: 600px;
+	margin-left: 100px;
 }
 
 
@@ -1539,7 +1544,7 @@ KeyboardShortcut .Graphic
 
 #GameControllerContent
 {
-	width: 30%;
+
 	height: 100%;
 	visibility: visible;
 }
@@ -1605,7 +1610,7 @@ KeyboardShortcut .Graphic
 .ControllerSettingsButton
 {
 	flow-children: right;
-	width: 475px;
+	width: 600px;
 	visibility: collapse;
 }
 
@@ -3078,13 +3083,13 @@ SettingsPanel_AlienFX .SettingsCenterContent
 {
 	flow-children: right;
 	height: 70px;
-	width: 1050px;
+
 	padding-top: 10px;
 }
 
 #SettingsRemoteClients_Help
 {
-	margin-left: 75px;
+	margin-left: 50px;
 }
 
 #LanguageList,
@@ -3282,10 +3287,7 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 	margin-top: 20px;
 }
 
-#SettingsStore_FilterToggle
-{
-	width: fit-children;
-}
+
 
 .SettingsStore_Config
 {
@@ -3461,7 +3463,7 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 #SettingsBroadcast_SubControls ToggleButton
 {
 	horizontal-align: left;
-	width: 575px;
+	width: 600px;
 }
 
 #SettingsDiskSpaceManagement_IntroBlock
@@ -3486,7 +3488,7 @@ SettingsPanelDiskManagementAppListing.Deleting Button
 .Cookie.Button
 {
 	width: fit-children;
-	min-width: 475px;
+	min-width: 600px;
 	padding-right: 10px;
 }
 

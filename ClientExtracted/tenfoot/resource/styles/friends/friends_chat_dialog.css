@@ -221,6 +221,11 @@ FriendsChatDialog AvatarImage
 	visibility: collapse;
 }
 
+.GroupChat #FriendsMainBodyVoiceHeader_NotConnected
+{
+	visibility: collapse;
+}
+
 #FriendsMainBodyVoiceHeader_Connected
 {
 	visibility: collapse;

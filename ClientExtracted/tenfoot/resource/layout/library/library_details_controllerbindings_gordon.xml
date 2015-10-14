@@ -18,21 +18,21 @@
 									<Label id="HelperDescriptionText" text="#SettingsController_HelperDescriptionText"/>
 						</Panel>
 						<Panel id="HelperImageBG" >
-								<Image id="HelperImage" class="HelperImage" src="file://{images}/library/controller/cropped_controller_config_controller_i_blank.png" />
+								<Image id="HelperImage" class="HelperImage" />
 						</Panel>
 				</Panel>
 				<Panel class="Background" id="BackgroundLines" />
 				<Panel class="BindingSlotStrip" id="Left" selectionpos="0,2">
-					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" selectionpos="0,0"/>
-					<ControllerBindingButton class="BindingButton Gradient1" describesource="true" id="LeftBumperButton" onmoveright="SetInputFocus( RightBumperButton );" selectionpos="0,1"/>
-					<ControllerBindingButton class="BindingButton Gradient2" describesource="true" id="LeftGripButton" onmoveright="SetInputFocus( RightGripButton );" selectionpos="0,2"/>
-					<ControllerBindingButton class="BindingButton Gradient3" id="BackButton" onmoveright="SetInputFocus( Gyro );" onmovedown="SetInputFocus( LeftTrackpad );" selectionpos="0,3"/>
+					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" selectionpos="0,0" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
+					<ControllerBindingButton class="BindingButton Gradient1" describesource="true" id="LeftBumperButton" onmoveright="SetInputFocus( RightBumperButton );" selectionpos="0,1" onfocus="AddStyle(BackgroundLines,LeftBumperSelected)" onblur="RemoveStyle(BackgroundLines, LeftBumperSelected)"/>
+					<ControllerBindingButton class="BindingButton Gradient2" describesource="true" id="LeftGripButton" onmoveright="SetInputFocus( RightGripButton );" selectionpos="0,2" onfocus="AddStyle(BackgroundLines,LeftGripSelected)" onblur="RemoveStyle(BackgroundLines, LeftGripSelected)"/>
+					<ControllerBindingButton class="BindingButton Gradient3" id="BackButton" onmoveright="SetInputFocus( Gyro );" onmovedown="SetInputFocus( LeftTrackpad );" selectionpos="0,3" onfocus="AddStyle(BackgroundLines,BackButtonSelected)" onblur="RemoveStyle(BackgroundLines, BackButtonSelected)"/>
 				</Panel>
 				<Panel class="BindingSlotStrip" id="Right" selectionpos="4,2">
-					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" selectionpos="0,0"/>
-					<ControllerBindingButton class="BindingButton Right Gradient1" describesource="true" id="RightBumperButton" onmoveleft="SetInputFocus( LeftBumperButton );" selectionpos="0,1"/>
-					<ControllerBindingButton class="BindingButton Right Gradient2" describesource="true" id="RightGripButton" onmoveleft="SetInputFocus( LeftGripButton );" selectionpos="0,2"/>
-					<ControllerBindingButton class="BindingButton Right Gradient3" id="StartButton" onmoveleft="SetInputFocus( Gyro );" onmovedown="SetInputFocus( RightTrackpad );" selectionpos="0,3"/>
+					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" selectionpos="0,0" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
+					<ControllerBindingButton class="BindingButton Right Gradient1" describesource="true" id="RightBumperButton" onmoveleft="SetInputFocus( LeftBumperButton );" selectionpos="0,1" onfocus="AddStyle(BackgroundLines,RightBumperSelected)" onblur="RemoveStyle(BackgroundLines, RightBumperSelected)"/>
+					<ControllerBindingButton class="BindingButton Right Gradient2" describesource="true" id="RightGripButton" onmoveleft="SetInputFocus( LeftGripButton );" selectionpos="0,2" onfocus="AddStyle(BackgroundLines,RightGripSelected)" onblur="RemoveStyle(BackgroundLines, RightGripSelected)"/>
+					<ControllerBindingButton class="BindingButton Right Gradient3" id="StartButton" onmoveleft="SetInputFocus( Gyro );" onmovedown="SetInputFocus( RightTrackpad );" selectionpos="0,3" onfocus="AddStyle(BackgroundLines,StartButtonSelected)" onblur="RemoveStyle(BackgroundLines, StartButtonSelected)"/>
 				</Panel>
 				<Panel id="GyroModeContainer">
 					<Button class="ModeWrapper Gyro" id="Gyro" onmoveleft="SetInputFocus( BackButton );" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );"/>

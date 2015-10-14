@@ -6,10 +6,9 @@
 	</styles>
 
 	<ControllerSourceModeScrollWheel class="ControllerMode" tabindex="auto">
-		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_ScrollWheel_Title" />
-		<Panel id="SourceModeBackground" />
 		<Panel id="SourceModeLines" />
 		<Panel id="BindingSlotContainer">	
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_ScrollWheel_Title" />
 			<ControllerBindingButton id="ScrollWheelClockwise" acceptsfocus="false" />
 			<ControllerBindingButton id="ScrollWheelCounterClockwise" acceptsfocus="false" />
 			<ControllerBindingButton id="ScrollWheelClick" acceptsfocus="false" />
