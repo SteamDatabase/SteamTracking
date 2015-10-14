@@ -35755,6 +35755,7 @@
  T CTenfootControllerPairing::OnControllerDisconnected(ControllerDisconnected_t*)
  T CTenfootControllerPairing::OnGamePadDown(panorama::GamePadData_t const&)
  T CTenfootControllerPairing::~CTenfootControllerPairing()
+ T CTenfootControllerStatsInterface::ReportTenfootGameLaunch(unsigned int)
  T CTenfootDebugWindow::CTenfootDebugWindow()
  T CTenfootDebugWindow::Init()
  T CTenfootDebugWindow::OnBeginDebuggerInspect()
