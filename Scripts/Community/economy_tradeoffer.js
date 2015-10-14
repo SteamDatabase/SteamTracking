@@ -587,7 +587,6 @@ CTradeOfferStateManager = {
 					Modal = ShowAlertDialog(
 						'Additional confirmation needed',
 						'In order to send this trade offer, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, data.email_domain )
-							+ '<br><br><strong>Note:</strong> After October 22nd, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.'
 					);
 				}
 				else
