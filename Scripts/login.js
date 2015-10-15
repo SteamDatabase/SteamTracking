@@ -113,7 +113,7 @@ CLoginPromptManager.prototype.BIsUserInMobileClientVersionOrNewer = function( nM
 	if ( (!this.BIsIos() && !this.BIsAndroid()) || this.m_strMobileClientVersion == '' )
 		return false;
 
-	var version = this.m_strMobileClientVersion.match( /(\d+) \((\d+)\.(\d+)(?:\.(\d+))?\)/ );
+	var version = this.m_strMobileClientVersion.match( /(?:(\d+) )?\(?(\d+)\.(\d+)(?:\.(\d+))?\)?/ );
 	if ( version && version.length >= 3 )
 	{
 		var nMajor = parseInt( version[2] );
