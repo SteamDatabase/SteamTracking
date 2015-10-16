@@ -10,7 +10,6 @@
 		"first_valid_item_slot"			"0"	
 		"last_valid_item_slot"		"18"
 		"num_item_presets"				"4"
-		"active_operation_name"			"operation_summer2015"
 	}
 	"qualities"
 	{
@@ -49085,6 +49084,21 @@
 			"max_held_drops"					"2"
 			"contract_reward_case_lootlist"		"summer_2015_cases_lootlist"
 			"contract_reward_weapon_lootlist"	"summer_2015_collections_lootlist"
+			"operation_lootlist"				"periodic_quest_drop"
+		}
+
+		"operation_invasion2015"
+		{
+			"activated_pass_item_name"			"Activated Invasion Pass"
+			"operation_start_date"				"2015-10-15 00:00:00" 
+			"stop_adding_to_queue_date"			"2016-01-01 00:00:00" 
+			"stop_giving_to_player_date"		"2016-01-01 00:00:00" 
+			"queue_freq_min"					"1" 
+			"queue_freq_max"					"84" 
+			"drop_freq_min"						"0.25" 
+			"drop_freq_max"						"0.75" 
+			"max_queue_count"					"2"
+			"operation_lootlist"				"timed_reward_invasion_drop"
 		}
 	}
 	"prefabs"
@@ -74853,10 +74867,10 @@
 			"item_slot"	"misc"
 			"equip_region"	"pyro_head_replacement"
 			"item_quality"	"unique"
-			"image_inventory"	"backpack/player/items/pyro/pyro_halloween_gasmask"
+			"image_inventory"		"backpack/workshop/player/items/pyro/pyro_halloween_gasmask/pyro_halloween_gasmask"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/items/pyro/pyro_halloween_gasmask.mdl"
+			"model_player"		"models/workshop/player/items/pyro/pyro_halloween_gasmask/pyro_halloween_gasmask.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -74866,7 +74880,6 @@
 			{
 				"player_bodygroups"
 				{
-					"hat"			"1"
 					"head"			"1"
 				}
 			}
@@ -151308,6 +151321,24 @@
 		{
 			"hide_lootlist"		"1"
 			"loot_list_collection"		"Invasion_collection_02_lootlist"
+		}
+		"periodic_quest_drop"
+		{
+			"quest25000"		"1"
+			"quest25001"		"1"
+			"quest25002"		"1"
+			"quest25003"		"1"
+			"quest25004"		"1"
+			"quest25005"		"1"
+			"quest25006"		"1"
+			"quest25007"		"1"
+			"quest25008"		"1"
+			"quest25009"		"1"
+			"quest25010"		"1"
+			"quest25011"		"1"
+			"quest25012"		"1"
+			"quest25013"		"1"
+			"quest25014"		"1"
 		}
 	}
 	"revolving_loot_lists"
