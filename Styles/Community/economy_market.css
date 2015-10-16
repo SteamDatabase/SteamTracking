@@ -398,7 +398,7 @@ a.market_listing_item_name_link:hover {
 
 #popularItemsRows .market_listing_price_listings_block,
 #searchResults .market_listing_price_listings_block {
-	width: 172px;
+	min-width: 172px;
 	float: right;
 }
 
@@ -1126,6 +1126,14 @@ input.filter_search_box:focus {
     padding-right: 6px;
 }
 
+#market_buy_commodity_popup .market_listing_item_img_container,
+#market_buy_commodity_popup .market_listing_item_img,
+#market_buy_commodity_popup .market_listing_item_name_block
+{
+	display: inline-block;
+	float: none;
+}
+
 .market_buy_commodity_popup_left_block {
     float: left;
     width: 260px;
@@ -1134,16 +1142,19 @@ input.filter_search_box:focus {
 }
 
 .market_buy_commodity_input_label {
+	display: inline-block;
 	text-align: right;
 	overflow: hidden;
 }
 
 .market_buy_commodity_input_row {
+	text-align: right;
 	margin: 7px 0;
 }
 
 .market_buy_commodity_input {
-	float: right;
+	display: inline-block;
+	text-align: left;
 	min-width: 148px;
 	margin-left: 10px;
 }
@@ -1776,6 +1787,10 @@ input.filter_search_box:focus {
 	html.responsive .market_listing_their_price {
 		width: 75px;
 	}
+
+	/* make sure Quantity text stays centered */
+	html.responsive .market_listing_num_listings {
+		min-width: 97px;	}
 
 	html.responsive .market_listing_listed_date.can_combine {
 		display: none;
