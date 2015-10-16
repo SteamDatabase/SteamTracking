@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 	</styles>
 
-	<ControllerConfigButton>
+	<ControllerConfigButton oncancel="MoveLeft(0);">
 		<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />
 		<Panel id="ConfigContentWrapper">
 				<Label id="Title" />

@@ -1112,6 +1112,8 @@
  B ControllerPropertiesDoneGordon::symbol
  B ControllerSupport::symbol
  B ControllerVolumeFound::symbol
+ B ControllerWarningDialogCancel::symbol
+ B ControllerWarningDialogOK::symbol
  B CopyCDKeyToClipboard::symbol
  B CrawlTrack::symbol
  B CreateAccount::symbol
@@ -5454,6 +5456,8 @@
  D ControllerPropertiesDoneGordon::pchEvent
  D ControllerSupport::pchEvent
  D ControllerVolumeFound::pchEvent
+ D ControllerWarningDialogCancel::pchEvent
+ D ControllerWarningDialogOK::pchEvent
  D CopyCDKeyToClipboard::pchEvent
  D CrawlTrack::pchEvent
  D CreateAccount::pchEvent
@@ -18429,6 +18433,7 @@
  T BIsSameFilesystem(char const*, char const*)
  T BIsScreenLocked()
  T BIsScreenSaverRunning()
+ T BIsSelectedBindingOfficial(unsigned int)
  T BIsStringURL(char const*)
  T BIsValidDirectory(char const*)
  T BIsValidEmailAddress(char const*, int)
@@ -24015,6 +24020,7 @@
  T CGameStreamSession::BRecordProcessAudio()
  T CGameStreamSession::CGameStreamSession(CGameStreamManager*, CGameID const&)
  T CGameStreamSession::CalculateTargetBitrate()
+ T CGameStreamSession::CreateVideoPacket(unsigned short, unsigned int, unsigned short, unsigned char, unsigned short, unsigned short, int)
  T CGameStreamSession::FrameDropped(VideoFrame_t const&)
  T CGameStreamSession::FrameEnd(VideoFrame_t const&)
  T CGameStreamSession::FrameSliceH264(unsigned char, int, int, int, unsigned char*, int)
@@ -24064,6 +24070,7 @@
  T CGameStreamSession::SaveFullSessionStats()
  T CGameStreamSession::SaveStreamingClientConfig(CStreamingClientConfig const&)
  T CGameStreamSession::SendAndFreeVideoPacket(CStreamFrame*)
+ T CGameStreamSession::SetProtectedContent(bool)
  T CGameStreamSession::StoreFrameStats(CFrameStatsAccumulator const&, KeyValues*)
  T CGameStreamSession::SupportsFrameSlices()
  T CGameStreamSession::SynchronizeClientState(CStreamingClientState const&)
@@ -25736,7 +25743,7 @@
  T CLibraryCommunityHubPanel::OnBrowseCommunityHub()
  T CLibraryCommunityHubPanel::ValidateClientPanel(CValidator&, char const*)
  T CLibraryCommunityHubPanel::~CLibraryCommunityHubPanel()
- T CLibraryControllerBindingsGordonPanel::AutosaveVDF()
+ T CLibraryControllerBindingsGordonPanel::AutosaveVDF(bool)
  T CLibraryControllerBindingsGordonPanel::CLibraryControllerBindingsGordonPanel(panorama::IUIWindow*, char const*, unsigned int)
  T CLibraryControllerBindingsGordonPanel::Close()
  T CLibraryControllerBindingsGordonPanel::CreateSourceModePanel(panorama::CPanel2D*, EControllerSourceMode, EControllerSource)
@@ -25764,6 +25771,7 @@
  T CLibraryControllerBindingsGordonPanel::SaveButtonBindings()
  T CLibraryControllerBindingsGordonPanel::SaveContext()
  T CLibraryControllerBindingsGordonPanel::SetAppID(unsigned int)
+ T CLibraryControllerBindingsGordonPanel::SetTitleAndAuthorLabels()
  T CLibraryControllerBindingsGordonPanel::UpdateBackground()
  T CLibraryControllerBindingsGordonPanel::UpdateSavedButtonBinding(Voltroller::DigitalIO)
  T CLibraryControllerBindingsGordonPanel::UpdateSavedModeShiftButtonBinding(Voltroller::DigitalIO, EControllerSource)
@@ -25834,6 +25842,8 @@
  T CLibraryDetailsPanel::OnCloudSyncProgress(RemoteStorageAppSyncProgress_t*)
  T CLibraryDetailsPanel::OnCloudSyncServer(RemoteStorageAppSyncedServer_t*)
  T CLibraryDetailsPanel::OnCloudSyncStateEvaluated(RemoteStorageAppSyncStatusCheck_t*)
+ T CLibraryDetailsPanel::OnControllerWarningDialogCancel(char const*)
+ T CLibraryDetailsPanel::OnControllerWarningDialogOK(char const*)
  T CLibraryDetailsPanel::OnDoneWithLaunchTimeout(panorama::CPanelPtr<panorama::CPanel2D>)
  T CLibraryDetailsPanel::OnFocusContent()
  T CLibraryDetailsPanel::OnFocusMenuRow()
@@ -35755,7 +35765,10 @@
  T CTenfootControllerPairing::OnControllerDisconnected(ControllerDisconnected_t*)
  T CTenfootControllerPairing::OnGamePadDown(panorama::GamePadData_t const&)
  T CTenfootControllerPairing::~CTenfootControllerPairing()
+ T CTenfootControllerStatsInterface::ReportTenfootAppControllerConfigChanged(unsigned int, unsigned long long)
+ T CTenfootControllerStatsInterface::ReportTenfootFeatureInteraction(char const*)
  T CTenfootControllerStatsInterface::ReportTenfootGameLaunch(unsigned int)
+ T CTenfootControllerStatsInterface::ReportTenfootGameLaunchWarningResponse(unsigned int, char const*, bool)
  T CTenfootDebugWindow::CTenfootDebugWindow()
  T CTenfootDebugWindow::Init()
  T CTenfootDebugWindow::OnBeginDebuggerInspect()
@@ -39769,6 +39782,7 @@
  T CValveControllerManager::UpdateAllControllerConfigs()
  T CValveControllerManager::UpdateControllerConfig(unsigned int)
  T CValveControllerManager::Validate(CValidator&, char const*)
+ T CValveControllerManager::WarmConfigCache(unsigned int)
  T CValveControllerManager::~CValveControllerManager()
  T CValveSpecialSurveyWizard::CValveSpecialSurveyWizard(vgui::Panel*, RequestSpecialSurveyResult_t const&)
  T CValveSpecialSurveyWizard::Run()
@@ -40623,6 +40637,12 @@
  T ControllerVolumeFound::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ControllerVolumeFound::GetEventType()
  T ControllerVolumeFound::MakeEvent(panorama::IUIPanelClient const*, char const*)
+ T ControllerWarningDialogCancel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ControllerWarningDialogCancel::GetEventType()
+ T ControllerWarningDialogCancel::MakeEvent(panorama::IUIPanelClient const*, char const*)
+ T ControllerWarningDialogOK::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ControllerWarningDialogOK::GetEventType()
+ T ControllerWarningDialogOK::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T ConvertFrameFromAnnexBtoAVCC(unsigned char const*, int, CUtlBuffer&, CUtlBuffer&, CUtlBuffer&)
  T ConvertImageToRGB(unsigned char const*, int, CUtlBuffer&, int&, int&)
  T ConvertImageToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&)
@@ -44083,6 +44103,7 @@
  T bool panorama::CStylePropertyAnimationProperties::BParseAndAddProperty<panorama::EAnimationDirection>(panorama::EAnimationDirection panorama::AnimationProperty_t::*, bool (*)(panorama::EAnimationDirection*, char const*, char const**), char const*)
  T bool panorama::CStylePropertyTransitionProperties::BParseAndAddProperty<double>(double panorama::TransitionProperty_t::*, bool (*)(double*, char const*, char const**), char const*)
  T bool panorama::DispatchEvent<AddToWishlistResponse, bool, unsigned int>(AddToWishlistResponse, panorama::IUIPanelClient const*, bool, unsigned int)
+ T bool panorama::DispatchEvent<AlwaysLaunchGame>(AlwaysLaunchGame, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<AutosaveControllerBindingsForGame, unsigned int>(AutosaveControllerBindingsForGame, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<AvailableBinding, ControllerBindingInfo_t*>(AvailableBinding, panorama::IUIPanelClient const*, ControllerBindingInfo_t*)
  T bool panorama::DispatchEvent<AvailableCommunityBinding, ControllerBindingInfo_t*>(AvailableCommunityBinding, panorama::IUIPanelClient const*, ControllerBindingInfo_t*)
@@ -48912,6 +48933,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerPropertiesDoneGordon>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerSupport>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerVolumeFound, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerWarningDialogCancel, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerWarningDialogOK, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CopyCDKeyToClipboard, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CrawlTrack>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CreateAccount>(panorama::IUIPanel*, char const*, char const**)
@@ -56009,9 +56032,9 @@
  b CValveControllerManager::GetShortcutOrAppIDString(unsigned int)::s_strAppID
  b CVideoDriverManager::CheckDriver(CSteamApp*, KeyValues*, bool)::bShouldWarnAboutGPU
  b CViewGuidesDialog::AddHRBeforeItem(int)::k_symHorizontalRule
- b Check360GuideButton()::s_SteamControllerGuideButtons
  b Check360GuideButton()::s_flLastGuideButton
  b Check360GuideButton()::s_flLastJoystickUpdate
+ b Check360GuideButton()::s_unSteamControllerGuideButtons
  b CocoaUpdateWindowState()::s_flLastRefreshCachedStatus
  b CryptoPP::Td
  b CryptoPP::Te
@@ -57294,6 +57317,7 @@
  d CSurveySummarizeData::GatherVideoCard(CSurveySummarizeData::GatherEntry const&, CUtlBuffer&)::bInitWMI
  d CTenfootOverlayDispatcher::SendPerGameConfiguration()::nClearEveryFrame
  d CURLHelper::BIsTrustedURL(char const*)::rgpchDomains
+ d CValveControllerManager::SetSavedBindingSelection(unsigned int, char const*)::s_pszPresetIDs
  d GetAlphaSortedLanguageList(int*)::s_vecLanguagesOrdered
  d PosixRegistryManager()::eUniverse
  d VTT for (anonymous namespace)::CaptionGripPanel
@@ -57607,6 +57631,7 @@
  r CDownloadSummaryPanel::CDownloadSummaryPanel(vgui::Panel*, char const*)::ranges
  r CELT_PVQ_U_DATA
  r CGameRecordSession::FrameUncompressed(VideoFrame_t const&, unsigned char*, int, unsigned char*, int)::k_szDesktopPlaceholder
+ r CGameStreamSession::SendAndFreeVideoPacket(CStreamFrame*)::s_ubEmptyIV
  r CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::k_nDefaultButtonIndicies
  r CParentalUINavButton::AddMenuItem(char const*, char const*)::pchUrlPrefix
  r CQOS::SetQOS(int, EStreamQOSType, netadr_t const*, unsigned long*)::s_arrDSCPValues

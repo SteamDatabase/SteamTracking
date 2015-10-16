@@ -1,36 +1,53 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
+	<scripts>
+		<include src="file://{resources}/javascript/base.js" />
+	</scripts>
+	<script>
+		function ConfigBrowserOnLoad()
+		{
+			SetupMenuAndContentHoverEvents( 'ConfigsMenu', 'MenuHover', 'ConfigsRightContainer', 'ContentHover', 'ConfigBrowserContainer' );
+		}
+	</script>
 
-	<ControllerConfigBrowser defaultfocus="RecommendedCategory" tabindex="auto" selectionpos="auto">
+	<ControllerConfigBrowser defaultfocus="RecommendedCategory" tabindex="auto" selectionpos="auto" onload="ConfigBrowserOnLoad();">
 		<Panel class="SettingsHeader">
 			<Label id="ConfigBrowserHeader" class="SettingsHeaderLegend" text="#ControllerBinding_Header" />
 		</Panel>
-		<Panel id="CategoryExplanationBGPanel" >
-			<Label id="CategoryExplanation" text="#ControllerBinding_Explanation_template" />
-		</Panel>
-		<Panel id="ColumnContainer">
-			<Panel class="ConfigColumn" id="ConfigCategoriesColumn">
-				<Button class="ConfigCategory" id="RecommendedCategory" onactivate="SelectConfigCategory( recommended );">
-          <Label text="#Library_Details_Controller_Recommended" />
-        </Button>
-        <Button class="ConfigCategory" id="PersonalCategory" onactivate="SelectConfigCategory( personal );">
-					<Label text="#Library_Details_Controller_Personal" />
-				</Button>
-        <Button class="ConfigCategory" id="CommunityCategory" onactivate="SelectConfigCategory( community );">
-          <Label text="#Library_Details_Controller_Community" />
-        </Button>
-        <Button class="ConfigCategory" id="TemplateCategory" onactivate="SelectConfigCategory( template );">
-          <Label text="#Library_Details_Controller_Templates" />
-        </Button>
-      </Panel>
-            
-			<Panel class="ConfigColumn" id="ConfigsColumn" childfocusonhover="true">
+		
+		<Panel id="ConfigBrowserContainer">
+			<Panel id="ConfigsMenu" class="NxGridButtonRow" selectionposboundary="vertical">
+				<Panel class="GamesButtonContainer" id="ConfigCategoriesColumn" rememberchildfocus="true" onmoveup="None();" onmovedown="None();">
+					<Button class="NxLeftNavButton" id="RecommendedCategory" onfocus="SelectConfigCategory( recommended );" onactivate="MoveRight(0);">
+	          <Label text="#Library_Details_Controller_Recommended" />
+	        </Button>
+	        <Button class="NxLeftNavButton" id="PersonalCategory" onfocus="SelectConfigCategory( personal );" onactivate="MoveRight(0);">
+						<Label text="#Library_Details_Controller_Personal" />
+					</Button>
+	        <Button class="NxLeftNavButton" id="CommunityCategory" onfocus="SelectConfigCategory( community );" onactivate="MoveRight(0);">
+	          <Label text="#Library_Details_Controller_Community" />
+	        </Button>
+	        <Button class="NxLeftNavButton" id="TemplateCategory" onfocus="SelectConfigCategory( template );" onactivate="MoveRight(0);">
+	          <Label text="#Library_Details_Controller_Templates" />
+	        </Button>
+	      </Panel>		
+			</Panel>
+			
+			<Panel selectionpos="1,1000">
+				<Panel id="ConfigsRightContainer" childfocusonhover="true" onmovedown="None();" onmoveup="None();" selectionpos="auto">
+					<Label id="CategoryExplanation" text="#ControllerBinding_Explanation_template" />
+					<Panel id="ConfigsColumn" childfocusonhover="true" overscroll-y="100" />
+					<Label id="NoTemplateConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_template" />
+					<Label id="NoPersonalConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />
+					<Label id="NoCommunityConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_community" />
+					<Label id="NoRecommendedConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_recommended" />
+				</Panel>
 			</Panel>
 		</Panel>
+				
 	</ControllerConfigBrowser>
 </root>

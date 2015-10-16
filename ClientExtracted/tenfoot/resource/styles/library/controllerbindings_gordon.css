@@ -2993,24 +2993,21 @@ ControllerConfigBrowser#ConfigBrowser:descendantfocus
 {
 	width: 100%;
 	height: 100%;
-	background-color: #111625ff;
+	background-color: gradient( radial, 50% 0%, 0px 0px, 50% 100%, from( #102f4b ), to( #080f20 ) );
 	visibility: visible;
 }
 
-ControllerConfigBrowser #ColumnContainer
+#ConfigBrowserContainer
 {
-	margin-top: 180px;
-	width: fit-children;
-	height: 837px;
-	flow-children: right;
-	horizontal-align: center;
+	width: 100%;
+	height: 980px;
+	vertical-align: bottom;
 }
 
-ControllerConfigBrowser #ConfigCategoriesColumn
+#ConfigsMenu
 {
-	width: 575px;
-	flow-children: down;
-	height: 100%;
+	margin-top: 60px;
+	height: fit-children;
 }
 
 ControllerConfigBrowser #ConfigBrowserHeader
@@ -3019,69 +3016,124 @@ ControllerConfigBrowser #ConfigBrowserHeader
 	margin-left: 55px;
 }
 
-ControllerConfigBrowser #CategoryExplanationBGPanel
-{
-	align: center top;
-	margin-top: 179px;
-	margin-left: 625px;
-	width: 1210px;
-	height: 73%;
-	background-color: #0b2231;
-}
-
+.NoConfigMessage,
 ControllerConfigBrowser #CategoryExplanation
 {
-	align: center top;
-	z-index: 100;
-	margin-top: 20px;
-	margin-left: 10px;
-	font-size: 25px;
-	height: 60px;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	font-size: 30px;
 	font-family: platformfont;
-	text-align: left;
-	width: 1160px;
-	
 	color: #75c7fdff;
+	horizontal-align: center;
+	visibility: visible;
 }
 
-ControllerConfigBrowser #ConfigsColumn
+#ConfigsRightContainer
 {
-	margin-top: 100px;
-	margin-left: 65px;
-	width: 1160px;
-	height: 82%;
-	flow-children: down;
-	overflow: squish scroll;
+	padding-top: 90px;
+	padding-left: 135px;
+	position: 390px 0px 0px;
+	padding-right: 40px;
+
+	width: 1500px;
+	height: 1120px;
 	
-	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
-	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+	transform: translateX( 0px );
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
+	
+	flow-children: down;
+}
+
+.ContentHover #ConfigsRightContainer,
+#ConfigsRightContainer:descendantfocus
+{
+	transform: translateX( -200px );
+}
+
+.MenuHover #ConfigsRightContainer
+{
+	transform: translateX( 0px );
+}
+
+#ConfigsColumn
+{
+	flow-children: down;
+	width: 100%;
+	height: fit-children;
+	overflow: clip scroll;
+	margin-bottom: 100px;
+}
+
+.NoConfigMessage
+{
+	text-align: center;
+	visibility: collapse;
+}
+.SelectTemplateBindings.NoTemplateBindings #NoTemplateConfigs
+{
+	visibility: visible;
+}
+.SelectPersonalBindings.NoPersonalBindings #NoPersonalConfigs
+{
+	visibility: visible;
+}
+.SelectCommunityBindings.NoCommunityBindings #NoCommunityConfigs
+{
+	visibility: visible;
+}
+.SelectRecommendedBindings.NoRecommendedBindings #NoRecommendedConfigs
+{
+	visibility: visible;
+}
+
+.SelectTemplateBindings.NoTemplateBindings #CategoryExplanation
+{
+	visibility: collapse;
+}
+.SelectPersonalBindings.NoPersonalBindings #CategoryExplanation
+{
+	visibility: collapse;
+}
+.SelectCommunityBindings.NoCommunityBindings #CategoryExplanation
+{
+	visibility: collapse;
+}
+.SelectRecommendedBindings.NoRecommendedBindings #CategoryExplanation
+{
+	visibility: collapse;
 }
 
 ControllerConfigButton
 {
-	width: 100%;
-	height: 200px;
-	background-color: #25364bff;
-	margin-bottom: 8px;
-	margin-right: 12px;
+	width: 98%;
+	height: 200px;	
+	margin-bottom: 20px;
+		
 	border-width: 2px;
-	border-color: #25364bff;
+	border-style: solid;
+	border-color: #0f99bc44;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 }
 
-ControllerConfigButton #ControllerImage
+ControllerConfigButton:focus
 {
-	background-image: url("file://{images}/library/controller/controller_small_config.png");
-	background-repeat: no-repeat;
-	background-position: center -13px;
-	width: 400px;
-	height: 100%;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
+	border-color: white;
+	
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
-
 
 ControllerConfigButton #RecommendedConfig
 {
-	font-size: 15px;
+	font-size: 25px;
 	font-family: platformfont;
 	
 	align: right top;
@@ -3135,64 +3187,6 @@ ControllerConfigButton #Description
 	color: #75c7fdff;
 }
 
-ControllerConfigBrowser .ConfigCategory
-{
-	background-color: #25364bff;
-	height: 196px;
-	width: 100%;
-	margin-bottom: 8px;
-}
-
-ControllerConfigBrowser .ConfigCategory Label
-{
-	font-size: 65px;
-	font-family: platformfont;
-	font-weight: thin;
-	color: #75c7fdff;
-	horizontal-align: center;
-	vertical-align: center;
-}
-
-ControllerConfigBrowser #PersonalCategory
-{
-	visibility: collapse;
-}
-
-ControllerConfigBrowser.HasPersonalBindings #PersonalCategory
-{
-	visibility: visible;
-}
-
-ControllerConfigBrowser #CommunityCategory
-{
-	visibility: collapse;
-}
-
-ControllerConfigBrowser.HasCommunityBindings #CommunityCategory
-{
-	visibility: visible;
-}
-
-ControllerConfigBrowser #TemplateCategory
-{
-	visibility: collapse;
-}
-
-ControllerConfigBrowser.HasTemplateBindings #TemplateCategory
-{
-	visibility: visible;
-}
-
-ControllerConfigBrowser #RecommendedCategory
-{
-	visibility: collapse;
-}
-
-ControllerConfigBrowser.HasRecommendedBindings #RecommendedCategory
-{
-	visibility: visible;
-}
-
 ControllerConfigBrowser #RecommendedBinding, ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
 {
 	visibility: collapse;
@@ -3216,49 +3210,6 @@ ControllerConfigBrowser.SelectTemplateBindings #TemplateBinding
 ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
 {
 	visibility: visible;
-}
-
-ControllerConfigBrowser.SelectPersonalBindings #PersonalCategory
-{
-	background-color: #195174ff;
-}
-
-ControllerConfigBrowser.SelectCommunityBindings #CommunityCategory
-{
-	background-color: #195174ff;
-}
-
-ControllerConfigBrowser.SelectTemplateBindings #TemplateCategory
-{
-	background-color: #195174ff;
-}
-
-ControllerConfigBrowser.SelectRecommendedBindings #RecommendedCategory
-{
-	background-color: #195174ff;
-}
-
-ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigButton:focus #ConfigContentWrapper
-{
-	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd));
-	border-color: white;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-ControllerConfigBrowser #ConfigCategoriesColumn Button:focus Label, ControllerConfigButton:focus #ConfigContentWrapper Label, ControllerConfigButton:focus #RecommendedConfig
-{
-	color: black;
-}
-
-ControllerConfigButton:focus #ControllerImage
-{
-	wash-color: #dfdfdfff;
 }
 
 .InGameActionsMode .HideInGameActions
