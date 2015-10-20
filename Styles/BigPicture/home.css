@@ -41,8 +41,8 @@ RemotePanel
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 
 	padding-top: 25px;
-	padding-left: 20px;
-	margin-left: -42px;
+	padding-left: 22px;
+	margin-left: -22px;
 }
 
 
@@ -53,6 +53,7 @@ RemotePanel
 {
 	color: #a3cf06;
 	border-color: #a3cf06;
+	margin-bottom: 20px;
 }
 
 .NxLeftNavButtonAction.Cart Label
@@ -66,6 +67,7 @@ RemotePanel
 	color: #072e47;
 	border-color: white;
 }
+
 .GamesHorizRule
 {
 	height: 20px;
@@ -196,15 +198,19 @@ RemotePanel
 
 .SpotlightBody
 {
-	font-size: 22px;
+	font-size: 26px;
 	color: greyish_medium;
 	margin-top: 10px;
 
 }
+.SpotlightBody a
+{
+	color: greyish_medium;
+}
 
 .Spotlight .DiscountBlock
 {
-	font-size: 22px;
+	font-size: 26px;
 	color: greyish_medium;
 	margin-top: 10px;
 }
@@ -240,7 +246,8 @@ RemotePanel
 	padding-bottom: 10px;
 	margin-top: 22px;
 	flow-children: down;
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
 }
 
 .DiscoveryQueueSection
@@ -251,11 +258,14 @@ RemotePanel
 
 .DiscoveryQueueApps
 {
-	background-color: #00000022;
 	width: 1350px;
 	height: 218px;
+
 	margin-top: 8px;
 	padding-left: 10px;
+
+	border-radius: 3px;
+	background-color: transparent_module;
 }
 
 .DiscoveryExhausted
@@ -364,6 +374,11 @@ RemotePanel
 
 .DiscoveryQueueApps:focus
 {
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -375,6 +390,11 @@ RemotePanel
 {
 	font-size: 30px;
 	color: detailsdatalabelfocus;
+}
+.ExploreSectionSubHeader
+{
+	font-size: 24px;
+	color: greyish_medium;
 }
 
 .RecommendedTagsSection
@@ -393,7 +413,9 @@ RemotePanel
 {
 	width: 430px;
 	height: 128px;
-	background-color: #00000044;
+
+	border-radius: 3px;
+	background-color: transparent_module;
 }
 
 .RecommendedTag_2
@@ -403,6 +425,11 @@ RemotePanel
 
 .RecommendedTags Button:focus
 {
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -608,18 +635,25 @@ RemotePanel
 ////////////////////////////////////
 // Wishlist
 ////////////////////////////////////
-.WishlistEmpty
+.WishlistTextWrapper
 {
-	margin-top: 100px;
-	align: center top;
-	font-size: 22px;
+	margin-top: 300px;
+	font-size: 26px;
 	color: white;
 	flow-children: down;
+	vertical-align: center;
+	width: 1400px;
+	height: 800px;
 }
 
 .WishlistEmpty
 {
 	margin-bottom: 20px;
+}
+
+.WishlistTextWrapper Label
+{
+	horizontal-align: center;
 }
 
 
@@ -634,6 +668,7 @@ RemotePanel
 	margin: 20px;
 
 	border: 5px solid #b6e1fa00;
+	border-radius: 3px;
 
 	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
    	background-position: 0px 0px;

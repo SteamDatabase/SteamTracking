@@ -2843,7 +2843,8 @@ input.inputSplits {
 }
 input.inputTagsFilter + label {
 	color: #fff;
-	width: 263px;
+	min-width: 230px;
+	cursor: pointer;
 	display: inline-block;
 	height: 19px;
 	vertical-align: top;
@@ -2854,6 +2855,10 @@ input.inputTagsFilter + label {
 input.inputTagsFilter:checked + label
 {
 	color: #a3cf06;
+}
+
+.filterOption.checked
+{
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba( 87, 110, 4, 0 )), color-stop(100%,rgba( 87, 110, 4, 1 )));background: -moz-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -webkit-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -o-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -ms-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: linear-gradient( to right, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);}
 input.inputTagsFilter:hover + label,
 input.inputTagsFilter:checked + label:hover
@@ -2869,7 +2874,6 @@ input.inputTagsFilter:checked + label:hover
 	padding-bottom: 3px;
 }
 .filterOption:hover {
-	cursor: pointer;
 	background-color: rgba(27,43,59,1);
 }
 

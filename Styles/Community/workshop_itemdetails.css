@@ -1480,7 +1480,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	}
 
 	.mediaTop.mediaOnly .actualmediactn {
-		max-height: 475px;
+		max-height: 538px;
+		background-color: white;
 	}
 
 	.mediaTop .workshopItemControls

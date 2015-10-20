@@ -144,7 +144,13 @@
 	height: 464px;
 }
 
-#StoreSlideshowContainer #AppSlideshow
+.StoreSlideshowContainer
+{
+	width: 100%;
+	height: 100%;
+}
+
+.StoreSlideshowContainer #AppSlideshow
 {
 	width: 100%;
 	height: 100%;
@@ -155,7 +161,7 @@
     transition-duration: 0.0s;
 }
 
-#StoreSlideshowContainer #AppSlideshow.Transitioning
+.StoreSlideshowContainer #AppSlideshow.Transitioning
 {
 	transition-duration: 0.3s;
 }
@@ -235,27 +241,25 @@
 	margin-top: 0px;
 }
 
-.AppWishlistButtons
-{
-	width: 100%;
-	flow-children: down;
-	vertical-align: bottom;
-}
-
-.AppWishlistButtons ToggleButton
+.AppToggles
 {
 	width: 100%;
 	height: 58px;
-	margin-top: 6px;
+	margin-bottom: 15px;
 	padding: 10px;
 	border-radius: 3px;
 
+	color: #67c1f5ff;
 	background-color: nontransparent_module;
-
 }
 
-.AppWishlistButtons ToggleButton:focus,
-.AppWishlistButtons ToggleButton:hover
+.AppToggles Label
+{
+	margin: 0px 0px 0px 8px;
+}
+
+.AppToggles:focus,
+.AppToggles:hover
 {
 	color: white;
 	background-color: action_module;
@@ -267,19 +271,27 @@
 	background-size: cover;
 }
 
-.AppWishlistButtons ToggleButton Label
-{
-	margin: 0px 10px;
-}
-
-.AppWishlistButtons ToggleButton.AppWishlistStart
-{
-	margin-top: 0px;
-}
-
-.AppWishlistButtons ToggleButton .TickBox
+.AppToggles .TickBox
 {
 	background-color: #2f89bc66;
+}
+
+.AppToggles LoadingThrobber
+{
+	width: 38px;
+	height: 38px;
+}
+
+.AppToggles LoadingThrobber .Bar
+{
+	margin-right: 3px;
+	width: 9px;
+	height: 38px;
+}
+
+.AppToggles.Requesting .TickBox
+{
+	visibility: collapse;
 }
 
 .AppRightOfSlideshow
@@ -583,6 +595,20 @@
 	background-image: none;
 	background-size: 1px 1px;
 }
+.AppDetailsBox.Mod
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #7c6a2599 ), to( #b8962299 ) );
+	background-image: none;
+}
+
+.AppDetailsBox.Mod:focus,
+.AppDetailsBox.Mod:hover
+{
+	color: white;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #9a842e99 ), to( #ffd02f99 ) );
+	background-image: none;
+	background-size: 1px 1px;
+}
 
 
 .AppDetailsBox.FreePlayOption
@@ -609,14 +635,21 @@
 
 .AppDLCTitle
 {
-	font-size: 28px;
+	font-size: 32px;
 	color: #a670d3;
 }
 
-.AppDLCDetails
+.AppDLCDetails,
+.AppModDetails,
+.AppModDetails a
 {
-	font-size: 28px;
+	font-size: 26px;
 	color: almost_white;
+}
+.AppModTitle
+{
+	font-size: 32px;
+	color: #fac522;
 }
 
 .AppDetailsBoxTitle
@@ -793,6 +826,18 @@
 {
 	font-size: 26px;
 	color: #67c1f5ff;
+}
+
+.AppDetailsDemo
+{
+	font-size: 26px;
+	color: #67c1f5ff;
+	height: 80px;
+}
+
+.AppDetailsDemo Label
+{
+	vertical-align: center;
 }
 
 VerticalScrollBar {
@@ -1062,6 +1107,7 @@ VerticalScrollBar {
 {
 	width: 100%;
 	flow-children: right-wrap;
+	padding-bottom: 120px;
 }
 
 

@@ -3,6 +3,11 @@ var CStoreHome = function( navigation )
 {
 	this.m_navigation = navigation;
 	this.m_rgHomeSections = { not_implemented: '' };
+
+	var _store = this;
+	$.RegisterEventHandler( 'UnreadyForDisplay', $.GetContextPanel(), function( pPanel ) { _store.OnUnreadyForDisplay( pPanel ); });
+	this.m_hShoppingCartChanged = $.RegisterForUnhandledEvent( 'ShoppingCartChanged', function () { _store.OnShoppingCartChanged(); });
+	this.m_hClearShoppingCart = $.RegisterForUnhandledEvent( 'ClearShoppingCart', function () { _store.OnClearShoppingCart(); });
 }
 
 CStoreHome.prototype.SetSectionNotImplementedTemplate = function( strTemplate )
@@ -61,6 +66,74 @@ CStoreHome.prototype.FocusDiscoveryQueue = function()
 		var pQueue = pChild.FindChildInLayoutFile( 'DiscoveryQueue' );
 		$.DispatchEventAsync( 0.1, 'SetInputFocus', pQueue );
 	}
+}
+
+CStoreHome.prototype.OnUnreadyForDisplay = function( pPanel )
+{
+	var pLeft = $('#LeftColumn');
+	for( var i = 0; i < pLeft.GetChildCount(); i++ )
+	{
+		var pChild = pLeft.GetChild( i );
+		if ( pChild.IsSelected() )
+			continue;
+
+		var strSection = pChild.GetAttributeString( 'section-id', '' );
+		if ( strSection.length <= 0 )
+			continue;
+
+		var pSection = $('#Section_' + strSection);
+		if ( !pSection )
+			continue;
+
+		pSection.DeleteAsync( 0.0 );
+	}
+
+	return true;
+}
+
+CStoreHome.prototype.ShowShoppingCartBtn = function( bShow )
+{
+	var pPanel = $( '#ShoppingCartBtn');
+	if ( pPanel )
+		pPanel.visible = bShow;
+}
+
+CStoreHome.prototype.OnCartButtonFocused = function()
+{
+	var pPanel = $('#ShoppingCartBtn');
+	if ( pPanel.visible )
+	{
+		StoreHome.ShowStoreSection( 'featured' );
+	}
+	else
+	{
+		var pFeatured = $('#FeaturedBtn');
+		if ( pFeatured )
+		{
+			$.DispatchEventAsync( 0.0, 'SetInputFocus', pFeatured );
+		}
+	}
+}
+
+CStoreHome.prototype.OnShoppingCartChanged = function()
+{
+	var _store = this;
+	$.AsyncWebRequest( 'https://store.steampowered.com/cart/getcartstate',
+	{
+		type: 'GET',
+		success: function( data )
+		{
+			if ( data.itemcount )
+				_store.ShowShoppingCartBtn( true );
+			else
+				_store.ShowShoppingCartBtn( false );
+		}
+	});
+}
+
+CStoreHome.prototype.OnClearShoppingCart = function()
+{
+	ShowShoppingCartBtn( false );
 }
 
 function ShowStoreContents( strURL, strName )
@@ -194,7 +267,7 @@ function RegisterSearchDialog()
 {
 	var pContextPanel = $.GetContextPanel();
 	$.RegisterKeyBind( pContextPanel, 'pad_x,steampad_x', function( eSource ) { ShowSearchDialog( eSource ) } );
-	$.RegisterFooterButton( pContextPanel, 'pad_x', 'Search' );
+	$.RegisterFooterButton( pContextPanel, 'pad_x', 'SEARCH' );
 }
 
 function AddPackageToCart( strSessionID, nPackageID )
@@ -210,7 +283,7 @@ function AddBundleToCart( strSessionID, nBundleID )
 function AddPackageToCartInternal( strSessionID, strType, nItemID )
 {
 	
-	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%typeid%', strType );
 	pScript = pScript.replace( '%itemid%', nItemID );
@@ -226,18 +299,131 @@ function AddPackageToCartInternal( strSessionID, strType, nItemID )
 	$.PushBackStack( pContent, 'BackStackPlaceholder()' );
 }
 
+function AddFreeLicense( strSessionID, strPanelID, subid, strDisplayName )
+{
+	var pPanel = $('#' + strPanelID );
+	if ( pPanel.BHasClass( 'AddingLicense' ) )
+		return;
+
+	pPanel.AddClass( 'AddingLicense' );
+
+	$.AsyncWebRequest( 'https://store.steampowered.com/checkout/addfreelicense/' + subid,
+	{
+		type: 'POST',
+		data: { sessionid: strSessionID, 'ajax': true },
+		complete: function()
+		{
+			pPanel.RemoveClass( 'AddingLicense' );
+		},
+		success: function( data )
+		{
+			alert( '%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName ), strDisplayName );
+			pPanel.DeleteAsync( 0.0 );
+		},
+		error: function( data )
+		{
+			if ( data && data.purchaseresultdetail == 9 )
+				alert( 'This product is already available in your Steam library.', strDisplayName );
+			else
+				alert( 'There was a problem adding this product to your account.  Please try again later.', strDisplayName );
+		}
+	});
+}
+
+function ToggleWishlist( strSessionID, strPanelID, nAppID )
+{
+	var pPanel = $('#' + strPanelID );
+	if ( pPanel.BHasClass( 'Requesting' ) )
+		return;
+
+	pPanel.AddClass( 'Requesting' );
+	var bAdd = pPanel.IsSelected();
+	var strURL = bAdd ? 'https://store.steampowered.com/api/addtowishlist/' : 'https://store.steampowered.com/api/removefromwishlist/';
+
+	// insert throbber
+	var pThrobber = $.CreatePanel( 'LoadingThrobber', pPanel, '' );
+	pPanel.MoveChildBefore( pThrobber, pPanel.GetChild( 0 ) );
+
+	$.AsyncWebRequest( strURL,
+	{
+		type: 'POST',
+		data: { sessionid: strSessionID, appid: nAppID },
+		complete: function()
+		{
+			pThrobber.DeleteAsync( 0.0 );
+			pPanel.RemoveClass( 'Requesting' );
+		},
+		success: function( data )
+		{
+			if ( data.success )
+			{
+				pPanel.SetSelected(bAdd);
+			}
+			else
+			{
+				pPanel.SetSelected( !bAdd );
+				alert( 'An error occurred while updating your wishlist. Please try again later.', 'Wishlist' );
+			}
+		},
+		error: function( data )
+		{
+			pPanel.SetSelected( !bAdd );
+			alert( 'An error occurred while updating your wishlist. Please try again later.', 'Wishlist' );
+		}
+	});
+}
+
+function ToggleIgnoreRecommendation( strSessionID, strPanelID, nAppID )
+{
+	var pPanel = $('#' + strPanelID );
+	if ( pPanel.BHasClass( 'Requesting' ) )
+		return;
+
+	// toggle button already took care of toggling state
+	pPanel.AddClass( 'Requesting' );
+	var bChecked = pPanel.checked;
+
+	// insert throbber
+	var pThrobber = $.CreatePanel( 'LoadingThrobber', pPanel, '' );
+	pPanel.MoveChildBefore( pThrobber, pPanel.GetChild( 0 ) );
+
+	var rgData = { sessionid: strSessionID, appid: nAppID };
+	if ( !bChecked )
+		rgData.remove = 1;
+
+	$.AsyncWebRequest( 'https://store.steampowered.com/recommended/ignorerecommendation/',
+	{
+		type: 'POST',
+		data: rgData,
+		complete: function()
+		{
+			pThrobber.DeleteAsync( 0.0 );
+			pPanel.RemoveClass( 'Requesting' );
+		},
+		success: function( data )
+		{
+			pPanel.SetSelected( bChecked );
+		},
+		error: function( data )
+		{
+			pPanel.SetSelected( !bChecked );
+			alert( 'There was a problem saving your changes.  Please try again later.', 'Not Interested' );
+		}
+	});
+}
+
 
 /////////////////////
 // Slideshow
 /////////////////////
-var CStoreSlideshow = function( pPanel, strFullscreenLayout )
+var CStoreSlideshow = function( pPanel )
 {
 	this.m_pPanel = pPanel;
 	this.m_eMode = CStoreSlideshow.k_eModeEmbedded;
 	this.m_iFocusedChild = -1;
-	this.m_strFullscreenLayout = strFullscreenLayout;
 	this.m_bTransitioning = false;
 	this.m_schNextPanel = null;
+	this.m_bEnabled = false;
 
 	this.Init();
 }
@@ -258,10 +444,11 @@ CStoreSlideshow.prototype.Init = function()
 	$.RegisterEventHandler( 'InputFocusSet', this.m_pPanel, function( pPanel ) { return _slideshow.OnFocusSet( pPanel ); } );
 	$.RegisterEventHandler( 'Cancelled', this.m_pPanel, function( pPanel ) { return _slideshow.OnCancelled( pPanel ); } );
 	$.RegisterEventHandler( 'PropertyTransitionEnd', this.m_pPanel, function( pPanel, property ) { return _slideshow.OnPropertyTransitionEnd( pPanel, property ); } );
-	$.RegisterEventHandler( 'MoviePlayerPlaybackEnded', this.m_pPanel, function( pPanel, eError ) { return _slideshow.OnMoviePlayerPlaybackEnded( pPanel, eError ); } )
+	$.RegisterEventHandler( 'MoviePlayerPlaybackEnded', this.m_pPanel, function( pPanel, eError ) { return _slideshow.OnMoviePlayerPlaybackEnded( pPanel, eError ); } );
+	$.RegisterEventHandler( 'ContributeToFooterPanel', this.m_pPanel, function( pPanel, pFooter ) { return _slideshow.OnContributeToFooterPanel( pPanel, pFooter ); } );
 
-	$.RegisterKeyBind( this.m_pPanel, 'pad_left_shoulder,steampad_lshoulder', function() { _slideshow.OnLeftShoudler(); } );
-	$.RegisterKeyBind( this.m_pPanel, 'pad_right_shoulder,steampad_rshoulder', function() { _slideshow.OnRightShoudler(); } );
+	$.RegisterKeyBind( this.m_pPanel, 'pad_ltrigger,steampad_ltrigger', function() { _slideshow.OnLeftShoudler(); } );
+	$.RegisterKeyBind( this.m_pPanel, 'pad_rtrigger,steampad_rtrigger', function() { _slideshow.OnRightShoudler(); } );
 
 	// initialize child positions
 	for ( var i = 0; i < this.m_pPanel.GetChildCount(); i++ )
@@ -514,8 +701,8 @@ CStoreSlideshow.prototype.OnActivated = function( pPanel )
 
 CStoreSlideshow.prototype.CreateFullscreenContainer = function()
 {
-	var pContainer = $.CreatePanel( 'Panel', $.TenfootController( $.GetContextPanel() ).AccessMainMenu(), 'StoreSlideshowContainer' );
-	pContainer.BLoadLayoutFromString( this.m_strFullscreenLayout, true, false );
+	var pContainer = $.CreatePanelWithCurrentContext( $.TenfootController( $.GetContextPanel() ).AccessMainMenu() );
+	pContainer.AddClass( 'StoreSlideshowContainer' );
 
 	return pContainer;
 }
@@ -641,4 +828,39 @@ CStoreSlideshow.prototype.OnMoviePlayerPlaybackEnded = function( pPanel, eError 
 	// if there was a playback error.. treat this like an image so user can see error
 	var flDelay = (eError == 0)? 0.01 : 0;
 	this.ScheduleNextPanel( flDelay );
+}
+
+CStoreSlideshow.prototype.OnContributeToFooterPanel = function( pPanel, pFooter )
+{
+	var bFullscreen = false;
+	if ( this.m_bTransitioning && this.m_eMode == CStoreSlideshow.k_eModeEmbedded )
+		bFullscreen = true;
+	if ( !this.m_bTransitioning && this.m_eMode == CStoreSlideshow.k_eModeFullscreen )
+		bFullscreen = true;
+
+	if ( bFullscreen )
+		pFooter.HideAllPanels();
+}
+
+CStoreSlideshow.prototype.SetEnabled = function( bEnabled )
+{
+	if ( this.m_bEnabled == bEnabled )
+		return;
+
+	this.m_bEnabled = bEnabled;
+
+	var pMovie = this.GetChildIfMovie( this.m_iFocusedChild );
+	if ( this.m_bEnabled )
+	{
+		if ( pMovie )
+			pMovie.Play();
+		else
+			this.ScheduleNextPanel( CStoreSlideshow.k_flNextPanelDelay );
+	}
+	else
+	{
+		this.ScheduleNextPanel( 0 );
+		if ( pMovie )
+			pMovie.Pause();
+	}
 }

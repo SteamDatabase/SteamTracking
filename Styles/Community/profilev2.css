@@ -1731,10 +1731,9 @@ body .pagecontent.profile_subpage_column {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column_bottom.png?v=1' ), url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column.png?v=1' );
 	background-repeat: no-repeat, repeat-y;
 	background-position: bottom center, center;
-	width: 950px;
+	width: 926px;
+	padding: 12px 12px 128px 12px;
 
-	padding-top: 12px;
-	padding-bottom: 128px;
 }
 
 .profile_subpage_general .maincontent {
@@ -2425,10 +2424,6 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		opacity: .65;
 		filter: alpha(opacity=65);
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-	}
-
-	html.responsive .profile_comment_area .commentthread_header .commentthread_count {
-		display: none;
 	}
 
 	html.responsive .profile_small_header_avatar {

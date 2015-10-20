@@ -1067,10 +1067,9 @@ HelpWizard = {
 			type: 'GET',
 			data: g_rgDefaultWizardPageParams
 		}).fail( function( jqxhr ) {
-				$J('#global_actions').hide();
 		}).done( function( data ) {
 			if ( data.html )
-				$J('#global_actions').html( data.html );
+				$J('#global_header').replaceWith( data.html );
 		});
 	},
 };

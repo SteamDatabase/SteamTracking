@@ -399,32 +399,6 @@ function GetAvatarURLFromHash( hash, size )
 }
 
 
-function LaunchWebChat( params )
-{
-	var winChat = window.open( '', 'SteamWebChat', 'height=790,width=1015,resize=yes,scrollbars=yes' );
-	if ( !winChat )
-	{
-		// popup blocked - this sometimes happens when chat is initiated from the store.  just roll with it.
-		return;
-	}
-
-	if ( winChat.location ==  'about:blank' )
-	{
-		// created a new window, set the url
-		if ( params )
-			SetValueLocalStorage( 'rgChatStartupParam', V_ToJSON( params ) );
-
-		winChat.location = 'https://steamcommunity.com/chat/';
-	}
-	else
-	{
-		if ( params )
-			winChat.OnWebchatLaunchURL( params );
-	}
-	winChat.focus();
-}
-
-
 
 
 
@@ -970,6 +944,7 @@ var CCommentThread = Class.create( {
 	m_oTextAreaSizer: null,
 
 	m_bSubscribed: null,
+	m_$SubscribeCheckbox: null,
 
 	initialize: function( type, name, rgCommentData, url, nQuoteBoxHeight )
 	{
@@ -1050,6 +1025,18 @@ var CCommentThread = Class.create( {
 		{
 			this.BindSubscribeButtons( elSubscribe, elUnsubscribe );
 		}
+
+		var _this = this;
+		this.m_$SubscribeCheckbox = $J('#' + strPrefix + '_subscribe_checkbox');
+		this.m_$SubscribeCheckbox.click( function() {
+			if ( _this.m_$SubscribeCheckbox.hasClass( 'waiting' ) )
+				return;
+
+			if ( _this.m_bSubscribed )
+				_this.Unsubscribe( function() {},  function() {ShowAlertDialog('Subscribe to thread', 'There was a problem updating your subscription.  Please try again later.');});
+			else
+				_this.Subscribe( function() {},  function() {ShowAlertDialog('Subscribe to thread', 'There was a problem updating your subscription.  Please try again later.');});
+		});
 
 		this.UpdatePagingDisplay();
 	},
@@ -1607,25 +1594,29 @@ var CCommentThread = Class.create( {
 	Subscribe: function( fnOnSuccess, fnOnFail )
 	{
 		var params = this.ParametersWithDefaults();
+		this.m_$SubscribeCheckbox.addClass('waiting');
 
-		new Ajax.Request( this.GetActionURL( 'subscribe' ), {
-			method: 'post',
-			parameters: params,
-			onSuccess: this.OnSubscriptionChange.bind( this, true, fnOnSuccess ),
-			onFailure: fnOnFail
-		});
+		var _this = this;
+		$J.post( this.GetActionURL( 'subscribe' ), params )
+			.done( function() {
+				_this.OnSubscriptionChange( true, fnOnSuccess );
+			})
+			.fail( fnOnFail )
+			.always( function() { _this.m_$SubscribeCheckbox.removeClass('waiting' ) } );
 	},
 
 	Unsubscribe: function( fnOnSuccess, fnOnFail )
 	{
 		var params = this.ParametersWithDefaults();
+		this.m_$SubscribeCheckbox.addClass('waiting');
 
-		new Ajax.Request( this.GetActionURL( 'unsubscribe' ), {
-			method: 'post',
-			parameters: params,
-			onSuccess: this.OnSubscriptionChange.bind( this, false, fnOnSuccess ),
-			onFailure: fnOnFail
-		});
+		var _this = this;
+		$J.post( this.GetActionURL( 'unsubscribe' ), params )
+			.done( function() {
+				_this.OnSubscriptionChange( false, fnOnSuccess );
+			})
+			.fail( fnOnFail )
+			.always( function() { _this.m_$SubscribeCheckbox.removeClass('waiting' ) } );
 	},
 
 	m_rgSubscriptionUpdateHandlers: null,
@@ -1686,6 +1677,11 @@ var CCommentThread = Class.create( {
 			for ( var i = 0; i < this.m_rgSubscriptionUpdateHandlers.length; i++ )
 				(this.m_rgSubscriptionUpdateHandlers[i])();
 		}
+
+		if ( this.m_bSubscribed )
+			this.m_$SubscribeCheckbox.addClass('checked');
+		else
+			this.m_$SubscribeCheckbox.removeClass('checked');
 
 		var elForumSubscribe = $('forum_subscribe_' + this.m_rgCommentData['feature2'] );
 		var elForumUnsubscribe = $('forum_unsubscribe_' + this.m_rgCommentData['feature2'] );

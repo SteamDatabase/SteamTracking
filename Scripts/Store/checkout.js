@@ -4437,7 +4437,6 @@ function DisplayPendingReceiptPage()
 		case 'denizbank':
 		case 'ptt':
 		case 'cashu':
-		case 'onecard':
 		case 'efecty':
 		case 'baloto':
 		case 'pagoefectivo':

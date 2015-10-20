@@ -9,6 +9,16 @@ body.overflow_hidden .responsive_page_frame {
 	position: relative;
 }
 
+html.responsive {
+	height: 100%;
+}
+
+html.responsive body {
+	min-height: 100%;
+	height: auto;
+	position: relative;
+}
+
 .responsive_page_content {
 }
 

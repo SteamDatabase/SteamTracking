@@ -39,8 +39,10 @@ function FillFormFromNavigation( querystring )
 		rgLocationParams['displayterm'] = 'enter search term or tag'
 
 	var form = $J('#advsearchform');
+	// in responsive mode, these elements are reparented to the localmenu_content area
+	var addtlOptions = $J('.localmenu_content #additional_search_options');
 	g_bPopulatingSearchControls = true;
-	$J(":input",form).each(function(input, element)
+	$J(":input",form ).add(':input', addtlOptions).each(function(input, element)
 	{
 
 		if ( !element || !element.name )

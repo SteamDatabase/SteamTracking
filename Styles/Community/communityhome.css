@@ -313,3 +313,49 @@ input.community_home_search_players_input
 {
 	padding-top: 5px;
 }
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .community_home_search_box {
+		float: none;
+		width: auto;
+		margin: 8px 0;
+	}
+
+	html.responsive .community_home_search_ctn {
+		float: left;
+		width: 50%;
+	}
+
+	html.responsive .community_home_search_ctn.left .community_home_search_content {
+		padding-right: 5%;
+	}
+
+	html.responsive .community_home_search_ctn.right .community_home_search_content {
+		padding-left: 5%;
+	}
+
+	html.responsive .community_home_search_divider {
+		display: none;
+	}
+
+	html.responsive .community_home_search_box .community_home_shortcut_content {
+		min-height: 0;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	html.responsive .community_home_search_ctn {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .community_home_search_ctn.left .community_home_search_content {
+		padding: 0;
+		margin-bottom: 12px;
+	}
+	html.responsive .community_home_search_ctn.right .community_home_search_content {
+		padding: 0;
+	}
+}

@@ -136,6 +136,7 @@
 	margin-bottom: 8px;
 	white-space: normal;
 	font-weight: light;
+	margin-left: 12px;
 }
 
 .AddToCartRow
@@ -152,7 +153,6 @@
 	height: 80px;
 
 	padding: 10px 0px 0px 24px;
-	flow-children: right;
 
 	color: #67c1f5;
 	background-color: store_transparent_module;
@@ -167,6 +167,11 @@
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
+}
+
+.AddToCart
+{
+	flow-children: right;
 }
 
 .AddToCart:focus,
@@ -196,6 +201,22 @@
 .AddToAccount:focus Label
 {
 	color: #ffffff;
+}
+
+.AddToAccount LoadingThrobber
+{
+	visibility: collapse;
+	horizontal-align: center;
+}
+
+.AddToAccount.AddingLicense Label
+{
+	opacity: 0.0;
+}
+
+.AddToAccount.AddingLicense LoadingThrobber
+{
+	visibility: visible;
 }
 
 .AddToCartPrice
@@ -302,6 +323,13 @@
 .SubscriptionPage
 {
 	padding: 0px 80px;
+}
+
+.PackagePurchaseText
+{
+	color: greyish_medium;
+	font-size: 26px;
+	margin-left: 12px;
 }
 
 .PackageSavings

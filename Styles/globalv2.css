@@ -306,6 +306,16 @@ a.friendBlock {
 	}
 }
 
+@media screen and ( max-width: 500px )
+{
+	html.responsive .commentthread_paging.has_view_all_link .pagebtn,
+	html.responsive .commentthread_paging.has_view_all_link .commentthread_pagelinks,
+	html.responsive .commentthread_paging.has_view_all_link .commentthread_pagedropdown	{
+		display: none;
+	}
+}
+
+
 @media screen and (max-width: 910px)
 {
 
@@ -317,11 +327,31 @@ a.friendBlock {
 		display: inline;
 	}
 
-	html.responsive .commentthread_comment_author .actionlink {
+	html.responsive .commentthread_comment_author .community_ban_action {
 		display: none;
 	}
 
+	html.responsive .commentthread_comment_author .actionlink:not(.community_ban_action) {
+		visibility: visible;
+	}
+
 }
+
+	html.responsive.touch .commentthread_pagelinks {
+		display: none;
+	}
+
+	html.responsive.touch .commentthread_pagedropdown {
+		display: inline;
+	}
+
+	html.responsive.touch .commentthread_comment_author .community_ban_action {
+		display: none;
+	}
+
+	html.responsive.touch .commentthread_comment_author .actionlink:not(.community_ban_action) {
+		visibility: visible;
+	}
 
 /* used to display the " - public" next to a group name */
 .pubGroup {
@@ -391,9 +421,69 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 .commentthread_header .commentthread_count {
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUNJREFUeNqkU11Og0AQnm04QI/AEfQGcAO9QXnRUJuGqml8M75oUhOlhEqtD3IDewO5QfcIHKEH2B8/WqBgTAr4JcMAM/Ptt7OzjIAgjAaMMZOOQGudjkduXP3H/GDxCu9Rc/je+GpSfPSklB6MWlhtMTZ7ftHUHrbCdu6mN2lPgLWLKSk3j08z05BSUEf0YQNDCkn/gSE6KMCRcxzpngAK1vBnLeoTTdpixHICJR3SlOLdQuCkthKx5FcxR84c+V95feGIrm+nFtx3JdnRSmUE1Qk1If+eDlP7YBQRKaq9YI7SiiN5w/bd/gtbxOOSIDvbXFKMBq0R/NQ7yTsFZq0QOVAxDwM/LQkwGBzuNHoLef7rPHu4w1EfhNnWiv7wZbSYHPrUABeXbpUk+Vgt7fIyNSFYvUdbXCJbCMGFqM/NjwADANx60v2kqu2YAAAAAElFTkSuQmCC );
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: 0 4px;
 	padding-left: 24px;
 	overflow: hidden;
+}
+
+.commentthread_count_label {
+	margin-right: 8px;
+}
+
+.commentthread_subscribe_ctn {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.commentthread_subscribe_hint {
+	font-size: 10px;
+	line-height: 12px;
+	vertical-align: text-top;
+	cursor: default;
+}
+
+.commentthread_subscribe_hint .commentthread_subscribe_hint_q {
+	color: #66c0f4;
+}
+
+.commentthread_subscribe_checkbox {
+	display: inline-block;
+	position: relative;
+	height: 12px;
+	width: 12px;
+	vertical-align: middle;
+
+	border: 1px solid #385377;
+	border-top-color: #070a0f;
+	border-left-color: #070a0f;
+
+	border-top-right-radius: 1px;
+	border-bottom-left-radius: 1px;
+
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
+.commentthread_subscribe_check {
+	position: absolute;
+	display: none;
+	top: -1px;
+	left: -1px;
+	right: -1px;
+	bottom: -1px;
+
+	background: url( 'data:image/png;base64,' ) no-repeat center;
+}
+
+.commentthread_subscribe_ctn.checked .commentthread_subscribe_check {
+	display: block;
+}
+
+.commentthread_subscribe_ctn.waiting .commentthread_subscribe_check {
+	display: block;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif' );
+	background-size: contain;
 }
 
 .commentthread_paging {

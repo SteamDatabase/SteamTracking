@@ -43,6 +43,11 @@
 	width: 580px;
 }
 
+.ContentAreaFocus .NxRightColumn
+{
+	transform: translatex( -200px );
+}
+
 #InventoryHeading
 {
 	margin-left: 100px;
@@ -327,11 +332,7 @@ DropDownMenu .FilterOption Label:focus
 
 #GridWrapper
 {
-	margin-top: -40px;
-	padding-top: 40px;
-	padding-left: 110px;
-	padding-right: 110px;
-	width: 1600px;
+	width: 1250px;
 	height: 100%;
 	overflow: clip;
 }
@@ -339,26 +340,18 @@ DropDownMenu .FilterOption Label:focus
 #ItemGrid
 {
 	margin-top: -24px;
-	margin-bottom: 100px;
-	margin-left: -110px;
-
-	width: 1610px;
+	margin-bottom: 0px;
+	width: 1250px;
 	height: 100%;
 
-	overflow: noclip squish;
+	overflow: clip squish;
 
-	padding: 130px 370px 30px 104px;
+	padding: 30px 80px 235px 14px;
 }
 
 .FastMotion #ItemGrid
 {
 	opacity: 0.15;
-}
-
-.SearchVisible #ItemGrid
-{
-//	transform: translatex( 388px );
-//	margin-left: -68px;
 }
 
 #FastScrollWrapper
@@ -409,10 +402,11 @@ DropDownMenu .FilterOption Label:focus
 
 .InventoryItem
 {
-	margin: -116px;
-	padding: 20px 8px 8px 8px;
+	margin-right: -116px;
+	margin-bottom: -70px;
+	padding-top: 5px;
 	width: 441px;
-	height: 470px;
+	height: 305px;
 	pre-transform-scale2d: 0.90;
 	z-index: 0;
 
@@ -422,7 +416,7 @@ DropDownMenu .FilterOption Label:focus
 	desaturation: 0.2;
 
 
-	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
+	transition-property: position, pre-transform-scale2d, opacity, box-shadow, wash-color, desaturation, transform;
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 
@@ -725,7 +719,7 @@ DropDownMenu .FilterOption Label:focus
 #ThrobberPanel LoadingThrobber
 {
 	align: center center;
-	transform: translatey( -100px );
+	transform: translate3d( 0px, -100px, 0px );
 }
 
 .InventoryLoading #ThrobberPanel
@@ -943,3 +937,15 @@ TextEntry {
 	margin-bottom: 16px;
 }
 
+.NxEmptyContentContainer
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-delay: 0.25s;
+	transition-duration: shortduration;
+}
+
+.EmptyInventory .NxEmptyContentContainer
+{
+	opacity: 1.0;
+}

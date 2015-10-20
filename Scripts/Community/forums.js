@@ -442,7 +442,7 @@ var CForum = Class.create( {
 			method: 'POST',
 			parameters: {sessionid: g_sessionID},
 			onSuccess: function() { $(strPrefix + '_subscribe').hide(); $(strPrefix + '_unsubscribe').show(); },
-			onFailure: function() { ShowForumModalSuccess( 'There was an error subscribing to this forum.', 'Please try again later.' ); },
+			onFailure: function() { ShowForumSuccessDialogWithDetailTitle( 'Subscribe to Forum', 'There was an error subscribing to this forum.', 'Please try again later.' ); },
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
 	},
@@ -455,7 +455,7 @@ var CForum = Class.create( {
 			method: 'POST',
 			parameters: {sessionid: g_sessionID},
 			onSuccess: function() { $(strPrefix + '_unsubscribe').hide(); $(strPrefix + '_subscribe').show(); },
-			onFailure: function() { ShowForumModalSuccess( 'There was an error unsubscribing from this forum.', 'Please try again later.' ); },
+			onFailure: function() { ShowForumSuccessDialogWithDetailTitle( 'Unsubscribe from Forum', 'There was an error unsubscribing from this forum.', 'Please try again later.' ); },
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
 	}
@@ -476,19 +476,24 @@ function RegisterForumTopicCommentThread( gidTopic, CommentThread )
 
 function Forum_DeleteTopic( gidTopic )
 {
-	ShowConfirmDialog('Delete Thread ',
-		'Are you sure you want to delete this thread? ' +
-		'This action can only be undone by a moderator.',
-		'Delete Thread'
-	).done( function() {
-		Forum_DoDeleteTopic( gidTopic );
-	});
-}
-
-function Forum_DoDeleteTopic( gidTopic )
-{
 	if ( g_rgForumTopics[ gidTopic ] )
-		g_rgForumTopics[ gidTopic ].Delete();
+	{
+		var Topic = g_rgForumTopics[ gidTopic ];
+		if ( Topic.BCheckPermission( 'can_moderate' ) )
+		{
+			Topic.Delete();
+		}
+		else
+		{
+			ShowConfirmDialog('Delete Thread ',
+				'Are you sure you want to delete this thread? ' +
+				'This action can only be undone by a moderator.',
+				'Delete Thread'
+			).done( function() {
+					Topic.Delete();
+				});
+		}
+	}
 }
 
 function Forum_PurgeTopic( gidTopic )
@@ -760,28 +765,22 @@ function Forum_CloseTradingTopic( gidForumTopic )
 	})
 }
 
-
-function ShowForumModalSuccess( strMessage, strDetails )
+function ShowForumSuccessDialog( strTitle, strDetails )
 {
-	$('forum_success_modal_message').update( strMessage );
-	$('forum_success_modal_text').update( strDetails ? strDetails : '&nbsp;' );
-	showContentAsModal( 'forum_modal', $('forum_success_modal_content' ) );
+	ShowForumSuccessDialogWithDetailTitle( strTitle, null, strDetails );
 }
 
-var g_fnForumConfirmAction;
-function Forum_ConfirmAction( strMessage, strDetails, fnAction, strButtonText )
+function ShowForumSuccessDialogWithDetailTitle( strTitle, strDetailTitle, strDetails )
 {
-	$('forum_confirm_message').update( strMessage );
-	$('forum_confirm_text').update( strDetails ? strDetails : '&nbsp;' );
-	$('forum_confirm_button').update( strButtonText ? strButtonText : 'OK' );
-	showContentAsModal( 'forum_modal', $('forum_confirm_modal_content' ) );
-	g_fnForumConfirmAction = fnAction;
-}
+	var $Content = $J('<div/>');
 
-function Forum_OnConfirmActionOK()
-{
-	g_fnForumConfirmAction();
-	hideModal( 'forum_modal' );
+	if ( strDetailTitle )
+		$Content.append( $J('<h2/>', {'class': 'forum_modal_detailtitle'} ).html( strDetailTitle ) );
+
+	$Content.append( $J('<div/>' ).html(strDetails) );
+	var Modal = ShowAlertDialog( strTitle, $Content );
+	Modal.GetContent().css( 'width', '400px' );
+
 }
 
 CForumTopic = Class.create( {
@@ -938,7 +937,7 @@ CForumTopic = Class.create( {
 
 	OnReportPostSuccess: function()
 	{
-		ShowForumModalSuccess( 'Thank you for your report', 'Your report has been sent to the moderators for review.' );
+		ShowForumSuccessDialogWithDetailTitle( ' #Discussions_Report_Button', 'Thank you for your report', 'Your report has been sent to the moderators for review.' );
 	},
 
 	MoveTopic: function()
@@ -973,7 +972,7 @@ CForumTopic = Class.create( {
 	OnModeratorActionFailed: function( transport )
 	{
 		this.m_bAJAXInFlight = false;
-		ShowForumModalSuccess( 'Failed to modify the topic.  Please try again later.' );
+		ShowForumSuccessDialog( '', 'Failed to modify the topic.  Please try again later.' );
 	},
 
 	RecordTopicViewed: function( timelastpost )
@@ -990,10 +989,10 @@ CForumTopic = Class.create( {
 		if ( g_rgForumTopicCommentThreads[ this.m_gidForumTopic ] )
 		{
 			var fnSuccess = function() {
-				ShowForumModalSuccess(  'You\'ve been subscribed to this discussion.', 'You\'ll receive a comment notification whenever someone replies to this discussion.' );
+				ShowForumSuccessDialogWithDetailTitle( 'Subscribe to discussion', 'You\'ve been subscribed to this discussion.', 'You\'ll receive a comment notification whenever someone replies to this discussion.' );
 				fnExternalOnSuccess();
 			};
-			var fnFail = ShowForumModalSuccess.bind( null, 'We\'re sorry, we were unable to subscribe to this discussion.  Please try again later.');
+			var fnFail = ShowForumSuccessDialog.bind( null, 'Subscribe to discussion', 'We\'re sorry, we were unable to subscribe to this discussion.  Please try again later.');
 			g_rgForumTopicCommentThreads[ this.m_gidForumTopic ].Subscribe( fnSuccess, fnFail );
 		}
 	},
@@ -1003,10 +1002,10 @@ CForumTopic = Class.create( {
 		if ( g_rgForumTopicCommentThreads[ this.m_gidForumTopic ] )
 		{
 			var fnSuccess = function() {
-				ShowForumModalSuccess(  'You\'ve been unsubscribed from this discussion.', 'You\'ll no longer receive comment notifications from this discussion.' );
+				ShowForumSuccessDialogWithDetailTitle( 'Unsubscribe from discussion', 'You\'ve been unsubscribed from this discussion.', 'You\'ll no longer receive comment notifications from this discussion.' );
 				fnExternalOnSuccess();
 			};
-			var fnFail = ShowForumModalSuccess.bind( null, 'We\'re sorry, we were unable to unsubscribe from this discussion.  Please try again later.');
+			var fnFail = ShowForumSuccessDialog.bind( null, 'Unsubscribe from discussion', 'We\'re sorry, we were unable to unsubscribe from this discussion.  Please try again later.');
 			g_rgForumTopicCommentThreads[ this.m_gidForumTopic ].Unsubscribe( fnSuccess, fnFail );
 		}
 	},
@@ -1030,7 +1029,7 @@ CForumTopic = Class.create( {
 				else
 					strMessage = 'All reports associated with this topic have already been marked as resolved.';
 
-				ShowForumModalSuccess(  'Reports resolved.', strMessage );
+				ShowForumSuccessDialogWithDetailTitle( 'Resolve reported posts', 'Reports resolved.', strMessage );
 				Topic.m_bAJAXInFlight = false;
 			},
 			onFailure: this.OnModeratorActionFailed.bind(this)
@@ -1054,6 +1053,11 @@ CForumTopic = Class.create( {
 			rgSearchParams['appid'] = this.m_rgForumData['appid'];
 
 		return strBaseURL + '?' + Object.toQueryString( rgSearchParams );
+	},
+
+	BCheckPermission: function( strPermissionName )
+	{
+		return this.m_rgForumData.permissions && this.m_rgForumData.permissions[strPermissionName] == 1;
 	}
 
 } );
@@ -1082,6 +1086,11 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		}
 
 		RegisterForumTopicCommentThread( this.m_rgCommentData['feature2'], this );
+	},
+
+	GetForumTopic: function()
+	{
+		return g_rgForumTopics[ this.m_rgCommentData.feature2 ];
 	},
 
 	OnLocationChange: function( hash )
@@ -1190,15 +1199,18 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 			$super( gidComment, bUndelete, fnOnSuccess );
 			return;
 		}
+		var Topic = this.GetForumTopic();
+		var bIsModerator = Topic && Topic.BCheckPermission( 'can_moderate' );
+
 		var fnOnConfirm = $super.bind( this, gidComment, bUndelete );
-		if ( !bUndelete )
+		if ( !bUndelete && !bIsModerator )
 		{
 			ShowConfirmDialog( '', 'Are you sure you want to delete this post?', 'Delete' )
 				.done( function() { fnOnConfirm(); } );
 		}
 		else
 		{
-			// no confirmation for undeleting
+			// no confirmation for undeleting or for moderators (who can just undo the delete if they decide it was a bad idea
 			fnOnConfirm();
 		}
 	}

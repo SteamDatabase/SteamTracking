@@ -1739,9 +1739,19 @@ body.v6 #footer_nav .popup_menu .hr{
 		min-width: 0;
 	}
 
+	/* workaround for ios safari, having the background be position: fixed introduces display glitches */
+	html.responsive .newmodal_background {
+		position: absolute;
+	}
+
 }
 	html.responsive.touch .newmodal {
 		min-width: 0;
+	}
+
+	/* workaround for ios safari, having the background be position: fixed introduces display glitches */
+	html.responsive.touch .newmodal_background {
+		position: absolute;
 	}
 
 @media screen and (max-width: 910px)

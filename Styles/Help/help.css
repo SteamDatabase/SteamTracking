@@ -872,6 +872,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .login_help_links_box {
 	padding: 24px 30px 30px 30px;
+	margin-top: 20px;
 }
 
 .login_help_links_box .title {
@@ -2048,6 +2049,19 @@ a.guide_row {
 	color: #5eafde;
 }
 
+.help_section_medium_header {
+	padding-bottom: 16px;
+	font-size: 16px;
+	color: #5eafde;
+}
+
+.help_section_mediumwhite_header {
+	padding-bottom: 16px;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+
 .help_section_content {
 	max-width: 700px;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -2064,7 +2078,6 @@ a.guide_row {
 .help_section_body p {
 	margin-bottom: 8px;
 	line-height: 16px;
-
 }
 
 .help_section_body ul {
@@ -2390,7 +2403,7 @@ img.category_icon {
 .lock_button_row .lock_button
 {
 	min-width: 170px;
-	background: rgba( 103, 193, 245, 0.1 );
+	background: #212c3d;
 	height: 70px;
 	float: left;
 	width: calc( (100% - 40px)/3 - 74px );
@@ -2404,7 +2417,12 @@ img.category_icon {
 
 	display: table;
 	border: 2px solid transparent;
-	border-radius: 0px;
+	border-radius: 2px;
+}
+
+.lock_button_row .lock_button:hover
+{
+	background-color: #2f3f57;
 }
 
 .lock_button span
@@ -2631,8 +2649,8 @@ input.authcode_entry_input, input.twofactorauthcode_entry_input {
 
 
 input.unlockcode_entry_input.defaulttext {
-	font-style: italic;
-	color: #FEFEFE;
+	font-style: normal;
+	color: #ffffff;
 }
 
 input.unlockcode_entry_input
@@ -2641,15 +2659,17 @@ input.unlockcode_entry_input
 	font-size: 28px;
 	line-height: 38px;
 	height: 62px;
-
+	font-style: normal;
 	margin: 0px;
+	text-transform: uppercase;
 
 	color: #FFFFFF;
 	outline: none;
 	padding: 4px 6px;
-	border: 0px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 #45556c;
 
-	background-color: rgba( 0, 0, 0, 0.8 );
+	background-color: #101925;
 }
 
 .unlockcode_entry_box

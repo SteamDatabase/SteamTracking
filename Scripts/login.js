@@ -446,7 +446,7 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		}
 		else if ( results.denied_ipt )
 		{
-			ShowDialog( 'Intel&reg; Identity Protection Technology', this.m_$ModalIPT.show() ).always( $J.proxy( this.ClearLoginForm, this ) );
+			ShowDialog( 'Intel® Identity Protection Technology', this.m_$ModalIPT.show() ).always( $J.proxy( this.ClearLoginForm, this ) );
 		}
 		else
 		{

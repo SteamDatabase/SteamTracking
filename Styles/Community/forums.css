@@ -1701,6 +1701,12 @@ select.subforum_select_control {
 	margin-bottom: 8px;
 }
 
+h2.forum_modal_detailtitle {
+	font-weight: normal;
+	color: #ffffff;
+	margin-bottom: 16px;
+}
+
 @media screen and (max-width: 480px)
 {
 	.responsive_tab_ctn.forumselector {

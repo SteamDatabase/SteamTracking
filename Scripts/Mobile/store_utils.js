@@ -138,6 +138,7 @@ function AddToWishlistMobile( appid, divToHide, divToShowSuccess, navref )
 	$J.post(
 		url,
 		{
+			sessionid: g_sessionID,
 			appid: appid
 		},
 		function( data )

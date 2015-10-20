@@ -3452,6 +3452,8 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 		{
 			$J( '<div/>', { id: 'thumbnailcache' } ).appendTo( 'body' );
 		}
+
+		this.PrepareThumbnailDisplay();
 	}
 
 	if ( this.BInTenFoot() )
@@ -5341,10 +5343,8 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 	$J('.progress_time_bar').css('visibility', 'visible');
 
 	// if we have thumbnails to show
-	if (this.m_ThumbnailInfo && this.m_ThumbnailInfo.template)
+	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template && this.m_nThumbnailHeight != 0 )
 	{
-		// find the sprite sheet, the image in the sprite sheet and render it
-		// don't try to get a thumbnail beyond the length of the video
 		var nLastThumbnailTime = Math.floor(( rgData.nTimeEnd - this.m_ThumbnailInfo.period ) / this.m_ThumbnailInfo.period) * this.m_ThumbnailInfo.period;
 		nSeekTo = Math.min(nSeekTo, nLastThumbnailTime);
 
@@ -5353,34 +5353,8 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 		var nThumbnailWidth = $J('.progress_time_info.thumbnails').innerWidth();
 		var strThumbnailSheetURL = this.m_ThumbnailInfo.template.replace('$Seconds$', nThumbnailSheetSeconds);
 		var nXPosInSheet = -1 * nThumbnailWidth * nThumbnailIndexInSheet;
+
 		$J('.progress_time_info').css('background-image', 'url(\'' + strThumbnailSheetURL + '\')');
-
-		// calc the height and offset once, only once the first thumbnail is loaded
-		if ( this.m_nThumbnailHeight == 0 )
-		{
-			var img = new Image;
-			img.src = $J('.progress_time_info').css('background-image').replace(/url\(|\)$/ig, "");
-			this.m_nThumbnailHeight = img.height;
-
-			if ( this.m_nThumbnailHeight == 0 )
-			{
-				var _ui = this;
-				window.setTimeout( function() { _ui.SetProgressBarPreview( fPercent ); }, 100 );
-				return;
-			}
-
-			if ( this.BInTenFoot() )
-				this.m_nThumbnailHeight *= 2;
-
-			var nThumbContainerHeight = $J( '.progress_time_info.thumbnails' ).innerHeight();
-			if ( !this.BInTenFoot() )
-				nThumbContainerHeight -= $J( '.progress_time_info.thumbnails .time_display' ).innerHeight();
-
-			this.m_nThumbnailOffset = Math.floor( ( nThumbContainerHeight - this.m_nThumbnailHeight ) / 2 );
-			$J( '.progress_time_info' ).css( 'background-size', 'auto ' + this.m_nThumbnailHeight + 'px' );
-		}
-
-		// shift to the correct thumbnail in the strip and vertically center
 		$J('.progress_time_info').css('background-position', nXPosInSheet + 'px ' + this.m_nThumbnailOffset + 'px');
 
 		if ( !this.m_schPrecacheTimeout )
@@ -5393,6 +5367,36 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 	$J('.progress_time_info').css('visibility', 'visible');
 
 	this.m_fLastProgressBarScrubPerc = fPercent;
+}
+
+CDASHPlayerUI.prototype.PrepareThumbnailDisplay = function()
+{
+	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template )
+	{
+		var strThumbnailSheetURL = this.m_ThumbnailInfo.template.replace( '$Seconds$', 0 );
+		$J('.progress_time_info').css('background-image', 'url(\'' + strThumbnailSheetURL + '\')');
+
+		var img = new Image;
+		img.src = $J('.progress_time_info').css('background-image').replace(/url\(|\)$/ig, "");
+		this.m_nThumbnailHeight = img.height;
+
+		if ( this.m_nThumbnailHeight == 0 )
+		{
+			var _ui = this;
+			window.setTimeout( function() { _ui.PrepareThumbnailDisplay(); }, 100 );
+			return;
+		}
+
+		if ( this.BInTenFoot() )
+			this.m_nThumbnailHeight *= 2;
+
+		var nThumbContainerHeight = $J( '.progress_time_info.thumbnails' ).innerHeight();
+		if ( !this.BInTenFoot() )
+			nThumbContainerHeight -= $J( '.progress_time_info.thumbnails .time_display' ).innerHeight();
+
+		this.m_nThumbnailOffset = Math.floor( ( nThumbContainerHeight - this.m_nThumbnailHeight ) / 2 );
+		$J( '.progress_time_info' ).css( 'background-size', 'auto ' + this.m_nThumbnailHeight + 'px' );
+	}
 }
 
 CDASHPlayerUI.prototype.PrecacheThumbnail = function( nTargetThumbnailSeconds, nMaxThumbnailTime )
@@ -5877,6 +5881,7 @@ CDASHPlayerUI.prototype.SwitchVideoTrackSelectedInPlayer = function( strVideoAda
 	this.m_ThumbnailInfo = this.m_player.GetThumbnailInfoForVideo();
 	this.m_nThumbnailHeight = 0;
 	this.m_nThumbnailOffset = 0;
+	this.PrepareThumbnailDisplay();
 }
 
 CDASHPlayerUI.prototype.LoadVideoTrackSelected = function()
