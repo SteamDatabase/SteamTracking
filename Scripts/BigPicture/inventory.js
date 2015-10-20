@@ -17,6 +17,17 @@ CHILDREN_TO_MOVE_IN_FAST_MOTION = 24;
 //
 APPWIDE_CONTEXT = 0;
 
+MAX_ITEMS_PER_CONTEXT = 1000000;
+
+// If true, dropdown menus will show counts of items per tag, and will
+// hide items where that count is 0.
+SHOW_FILTER_COUNTS = true;
+
+
+REQUEST_PAGE_SIZE = 60;
+REQUEST_THRESHOLD = 30;
+MAX_GRID_ITEMS = 120;
+
 
 //
 // Standard tags for page-based filtering
@@ -53,6 +64,15 @@ var kStandardTag_Unmarketable =
 	category_name: 'Misc'
 };
 
+function TagIdFromTag( tag )
+{
+	return "Tag_" + tag;
+}
+
+function TagFromTagId( tagid )
+{
+	return tagid.substring( 4 );
+}
 
 
 function ShallowCopyTags(variable)
@@ -99,7 +119,7 @@ function CreateInventoryItemPanel( item, grid )
 
 	if ( item.is_stackable && item.amount > 1 )
 	{
-		var label = $.CreatePanel( 'Label', img, 'Amount' );
+		var label = $.CreatePanel( 'Label', img, '' );
 		label.text = item.amount;
 	}
 
@@ -109,7 +129,7 @@ function CreateInventoryItemPanel( item, grid )
 		name = item.amount + " " + item.name;
 	}
 
-	var name_row = $.CreatePanel( 'Label', p, 'Name' );
+	var name_row = $.CreatePanel( 'Label', p, '' );
 	name_row.AddClass( 'InventoryItemName' );
 	name_row.text = $.html_entity_decode( name );
 
@@ -130,7 +150,6 @@ function CreateInventoryItemPanel( item, grid )
 
 	p.SetPanelEvent( 'onmouseover', function()
 	{
-		//$.Msg( JSON.stringify( item ) );
 		if ( name_row.IsValid() )
 			if ( name_row.contentwidth > name_row.actuallayoutwidth )
 				name_row.AddClass( 'Fade' );
@@ -148,48 +167,49 @@ function CreateInventoryItemPanel( item, grid )
 	return p;
 }
 
-var CBigPictureInventoryCache = (function()
+
+
+var CBigPictureAppInventoryCache = (function()
 {
-	function CBigPictureInventoryCache( loadURL )
+	function CBigPictureAppInventoryCache( appid, loadURL, params )
 	{
 		this.m_strInventoryLoadURL = loadURL;
+		this.m_appid = appid;
 
 		this.m_params = {
 			bTrading: false,
 			bMarket: false
 		};
 
-		this.m_inventory = {};
+		for ( i in params )
+		{
+			this.m_params[i] = params[i];
+		}
+
+		this.m_inventory = [];
+
+		this.m_cachedFilters = { text:'', tags: {} };
+		this.m_cachedContext = [];
+		this.m_cachedResults = [];
 	};
 
-	CBigPictureInventoryCache.prototype.SetInventoryParameter = function( strParam, strValue )
+	CBigPictureAppInventoryCache.prototype.SetInventoryParameter = function( strParam, strValue )
 	{
 		this.m_params[strParam] = strValue;
 	};
 
-	CBigPictureInventoryCache.prototype.GetInventoryParameter = function( strParam )
+	CBigPictureAppInventoryCache.prototype.GetInventoryParameter = function( strParam )
 	{
 		return this.m_params[strParam];
 	}
 
-	CBigPictureInventoryCache.prototype.BHasInventory = function( appid, rgContexts )
+	CBigPictureAppInventoryCache.prototype.BHasInventory = function( rgContexts )
 	{
-		$.Msg( "Checking appid " + appid + " for contexts " + JSON.stringify( rgContexts ) );
-		if (  this.m_inventory[appid] == undefined )
-		{
-			$.Msg( "Missing appid " + appid );
-			return false;
-		}
+		$.Msg( "Checking appid " + this.m_appid + " for contexts " + JSON.stringify( rgContexts ) );
 		for ( var i = 0; i < rgContexts.length; i++ )
 		{
 			var contextid = rgContexts[i];
-
-			if ( contextid == APPWIDE_CONTEXT )
-			{
-				continue;
-			}
-
-			if ( this.m_inventory[appid][contextid] == undefined )
+			if ( contextid != APPWIDE_CONTEXT && this.m_inventory[contextid] == undefined )
 			{
 				$.Msg( "Missing context " + contextid );
 				return false;
@@ -198,23 +218,23 @@ var CBigPictureInventoryCache = (function()
 		return true;
 	};
 
-	CBigPictureInventoryCache.prototype.LoadInventory = function( appid, rgContexts, onsuccess, onfailure )
+	CBigPictureAppInventoryCache.prototype.LoadInventory = function( rgContexts, onsuccess, onfailure )
 	{
-		this.LoadInventoryHelper( appid, rgContexts, 0, 0, null, onsuccess, onfailure );
+		this.LoadInventoryHelper( rgContexts, 0, 0, null, onsuccess, onfailure );
 	};
 
-	CBigPictureInventoryCache.prototype.LoadInventoryHelper = function( appid, rgContexts, currentContext, continue_from, response_so_far, onsuccess, onfailure )
+	CBigPictureAppInventoryCache.prototype.LoadInventoryHelper = function( rgContexts, currentContext, continue_from, response_so_far, onsuccess, onfailure )
 	{
 		var lcontextid = rgContexts[currentContext];
 		if ( lcontextid == APPWIDE_CONTEXT ) // Can't retrieve this, skip it
 		{
 			lcontextid = rgContexts[++currentContext];
 		}
-		
+
 		var params = {
 			trading: Number( this.GetInventoryParameter('bTrading') ),
 			market: Number( this.GetInventoryParameter('bMarket') ),
-			appid: appid,
+			appid: this.m_appid,
 			contextid: lcontextid };
 
 		if ( this.GetInventoryParameter('steamIdPartner') )
@@ -232,7 +252,7 @@ var CBigPictureInventoryCache = (function()
 			params.start = continue_from;
 		}
 
-		var url = this.m_strInventoryLoadURL.replace( '%appid%', appid).replace( '%contextid%', lcontextid );
+		var url = this.m_strInventoryLoadURL.replace( '%appid%', this.m_appid).replace( '%contextid%', lcontextid );
 
 		//$.Msg( url );
 		//$.Msg( JSON.stringify( params ) );
@@ -243,13 +263,13 @@ var CBigPictureInventoryCache = (function()
 			{
 				type: 'GET',
 				data: params,
-				success: function( data ) {that.OnReceiveInventoryResponse( appid, rgContexts, currentContext, continue_from, data, response_so_far, onsuccess, onfailure ); },
-				error: function() {that.OnReceiveInventoryResponse( appid, rgContexts, currentContext, continue_from, null, response_so_far, onsuccess, onfailure ); } // BUGBUG
+				success: function( data ) {that.OnReceiveInventoryResponse( rgContexts, currentContext, continue_from, data, response_so_far, onsuccess, onfailure ); },
+				error: function() {that.OnReceiveInventoryResponse( rgContexts, currentContext, continue_from, null, response_so_far, onsuccess, onfailure ); } // BUGBUG
 			} );
 
 	};
 
-	CBigPictureInventoryCache.prototype.OnReceiveInventoryResponse = function( appid, rgContexts, currentContext, continue_from, data, response_so_far, onsuccess, onfailure )
+	CBigPictureAppInventoryCache.prototype.OnReceiveInventoryResponse = function( rgContexts, currentContext, continue_from, data, response_so_far, onsuccess, onfailure )
 	{
 		// check still matches what we have displayed, otherwise just discard
 		var contextid = rgContexts[currentContext];
@@ -259,11 +279,10 @@ var CBigPictureInventoryCache = (function()
 		{
 			// Failure.. show error...
 			$.Msg( JSON.stringify( data ) );
-			$.Msg( "Failed to get inventory for appid="+appid+" contextid="+contextid );
-			return;
+			$.Msg( "Failed to get inventory for appid="+this.m_appid+" contextid="+contextid );
 		}
 
-		var rgSorted = { };
+		var rgSorted = [];
 		if ( response_so_far != null )
 		{
 			$.Msg( "Got continued response, already had "+Object.keys( response_so_far ).length+" got "+Object.keys( data.rgInventory ).length+" more items." );
@@ -303,68 +322,274 @@ var CBigPictureInventoryCache = (function()
 				item.tags.push( kStandardTag_Marketable );
 			else
 				item.tags.push( kStandardTag_Unmarketable );
+
+			item.parsed_tags = {};
+			for ( t in item.tags )
+			{
+				var tag = item.tags[t];
+				if ( !item.parsed_tags[tag.category] )
+				{
+					item.parsed_tags[tag.category] = {};
+				}
+				item.parsed_tags[tag.category][tag.internal_name] = true;
+			}
 		}
 
 		if ( data.more )
 		{
 			// Request more now as well
 			//$.Msg( '!!! Need to fetch more starting at '+data.more_start );
-			this.LoadInventoryHelper( appid, rgContexts, currentContext, data.more_start, rgSorted, onsuccess, onfailure );
+			this.LoadInventoryHelper( rgContexts, currentContext, data.more_start, rgSorted, onsuccess, onfailure );
 			return;
 		}
 		else if ( ++currentContext < rgContexts.length )
 		{
-			//$.Msg( "More contexts to load, continuing" );
-			if ( this.m_inventory[appid] == undefined )
-			{
-				this.m_inventory[appid] = {};
-			}
-			this.m_inventory[appid][cID] = rgSorted;
-			this.LoadInventoryHelper( appid, rgContexts, currentContext, 0, null, onsuccess, onfailure );
+			this.m_inventory[cID] = rgSorted;
+			this.LoadInventoryHelper( rgContexts, currentContext, 0, null, onsuccess, onfailure );
 			return;
 		}
 
-		if ( this.m_inventory[appid] == undefined )
-		{
-			this.m_inventory[appid] = {};
-		}
-		this.m_inventory[appid][cID] = rgSorted;
+		this.m_inventory[cID] = rgSorted;
 
-		onsuccess( appid, rgContexts );
+		onsuccess( this.m_appid, rgContexts );
 	};
 
-	CBigPictureInventoryCache.prototype.GetSortedInventory = function( appid, rgContexts )
+	CBigPictureAppInventoryCache.prototype.GetSortedInventory = function( rgContexts )
 	{
-		if ( rgContexts.length == 1 )
+		rgSorted = [];
+		for ( var i = 0; i < rgContexts.length; i++ )
 		{
-			return this.m_inventory[appid][rgContexts[0]];
+			var cID = Number( rgContexts[i] );
+			for ( var j in this.m_inventory[cID] )
+			{
+				var item = this.m_inventory[cID][j];
+				rgSorted.push( cID * MAX_ITEMS_PER_CONTEXT + Number( j ) );
+			}
+		}
+
+		return rgSorted;
+	}
+
+	CBigPictureAppInventoryCache.prototype.GetSortedAndFilteredInventory = function( rgContexts, filters )
+	{
+		var strSearchText = filters.text;
+		var rgRequiredTags = filters.tags;
+
+		// Check if we have a previously cached result and return that if it's applicable
+		if ( this.m_cachedResults.length > 0 )
+		{
+			$.Msg( "Returning cached result" );
+			return this.m_cachedResults;
+		}
+
+		if ( strSearchText || (rgRequiredTags && Object.keys(rgRequiredTags).length > 0 ) )
+		{
+			$.Msg( "Filtered" );
+			strSearchText = strSearchText.toLowerCase();
+
+			var rgSorted = [];
+			for ( var i = 0; i < rgContexts.length; i++ )
+			{
+				var cID = Number( rgContexts[i] );
+				for ( var j in this.m_inventory[cID] )
+				{
+					var bMatched = true;
+					var item = this.m_inventory[cID][j];
+
+					if ( strSearchText )
+					{
+						var itemText = item.name.toLowerCase();
+						if ( itemText.indexOf( strSearchText ) == -1 )
+						{
+							// BUGBUG: Search descriptions?
+							continue;
+						}
+					}
+
+					if ( rgRequiredTags )
+					{
+						var bCatMatched = true;
+						for ( cat in rgRequiredTags )
+						{
+							var bFoundAny = this.BItemMatchesCategory( item, cat, rgRequiredTags );
+							if ( !bFoundAny )
+							{
+								bCatMatched = false;
+								break;
+							}
+						}
+						if ( !bCatMatched )
+						{
+							continue;
+						}
+					}
+					rgSorted.push( cID * MAX_ITEMS_PER_CONTEXT + Number( j ) );
+				}
+			}
+
+			this.m_cachedContexts = rgContexts;
+			this.m_cachedFilters = filters;
+			this.m_cachedResults = rgSorted;
+			return rgSorted;
 		}
 		else
 		{
-			// Multiple contexts need to be collated and returned here
-			rgSorted = {};
-			for ( var i = 0; i < rgContexts.length; i++ )
-			{
-				var cID = rgContexts[i];
-				for ( var j in this.m_inventory[appid][cID] )
-				{
-					var item = this.m_inventory[appid][cID][j];
-					rgSorted[ cID * 10000 + item.key] = item;
-				}
-			}
-			return rgSorted;
+			this.m_cachedResults = [];
+			return this.GetSortedInventory( rgContexts );
 		}
+	};
+
+	CBigPictureAppInventoryCache.prototype.ClearCachedResults = function()
+	{
+		this.m_cachedResults = [];
 	}
 
-	CBigPictureInventoryCache.prototype.GetItem = function( appid, contextid, assetid )
+	CBigPictureAppInventoryCache.prototype.GetTags = function( rgContexts )
 	{
-		if ( this.m_inventory[appid] == undefined || this.m_inventory[appid][contextid] == undefined )
+		var rgTags = {};
+
+		for ( var i = 0; i < rgContexts.length; i++ )
+		{
+			var cID = Number( rgContexts[i] );
+			for ( var j in this.m_inventory[cID] )
+			{
+				var item = this.m_inventory[cID][j];
+				for( var tagkey in item.tags )
+				{
+					var sCategoryName = item.tags[tagkey];
+
+					var rgCategory = rgTags[sCategoryName.category];
+					if ( !rgCategory )
+					{
+						if ( typeof sCategoryName.category != "string" )
+							continue;
+
+						rgCategory = rgTags[sCategoryName.category] = { "name": sCategoryName.category_name ? sCategoryName.category_name : sCategoryName.category, "tags": {} };
+					}
+
+					if( rgCategory.tags[ sCategoryName.internal_name ] )
+						rgCategory.tags[ sCategoryName.internal_name ].count++;
+					else
+					{
+						var rgNewTag = { "name": sCategoryName.name, "count": 1 };
+						if( sCategoryName.color )
+							rgNewTag.color = sCategoryName.color;
+						rgCategory.tags[ sCategoryName.internal_name ] = rgNewTag;
+					}
+				}
+			}
+		}
+		return rgTags;
+	};
+
+	CBigPictureAppInventoryCache.prototype.BItemMatchesCategory = function( item, cat, rgRequiredTags )
+	{
+		if ( rgRequiredTags == undefined || rgRequiredTags[cat] == undefined )
+		{
+			return true;
+		}
+
+		var bFoundAny = false;
+		for ( t in rgRequiredTags[cat] )
+		{
+			if ( item.parsed_tags[cat][t] )
+			{
+				bFoundAny = true;
+				break;
+			}
+		}
+
+		return bFoundAny;
+	};
+
+	CBigPictureAppInventoryCache.prototype.GetFilterCounts = function( rgTags, rgContexts, filters )
+	{
+		var strSearchText = filters.text;
+		var rgRequiredTags = filters.tags;
+
+		var rgCounts = {};
+		for ( cat in rgTags )
+		{
+			rgCounts[cat] = { 'any': 0 };
+			for ( tag in rgTags[cat].tags )
+			{
+				rgCounts[cat][tag] = 0;
+			}
+		}
+
+		for ( var i = 0; i < rgContexts.length; i++ )
+		{
+			var cID = Number( rgContexts[i] );
+			for ( var j in this.m_inventory[cID] )
+			{
+				var item = this.m_inventory[cID][j];
+				if ( strSearchText )
+				{
+					var itemText = item.name.toLowerCase();
+					if ( itemText.indexOf( strSearchText ) == -1 )
+					{
+						// BUGBUG: Search descriptions
+						continue;
+					}
+				}
+
+				// Figure out which categories match
+				var rgMatches = {};
+				for ( matchcat in rgTags )
+				{
+					rgMatches[matchcat] = this.BItemMatchesCategory( item, matchcat, rgRequiredTags );
+				}
+
+
+				// For each category, if we match everything _except_ the category we're looking at,
+				// then we want to count the item
+				for ( cat in rgTags )
+				{
+					var bMatches = true;
+					for ( matchcat in rgTags )
+					{
+						if ( matchcat == cat )
+						{
+							continue;
+						}
+						bMatches &= rgMatches[matchcat];
+						if ( !bMatches )
+						{
+							break;
+						}
+					}
+
+					if ( bMatches )
+					{
+						for ( t in item.parsed_tags[cat] )
+						{
+							rgCounts[cat][t]++;
+						}
+						rgCounts[cat]['any']++;
+					}
+				}
+			}
+		}
+		return rgCounts;
+	};
+
+	CBigPictureAppInventoryCache.prototype.GetItemByIndex = function( idx )
+	{
+		var context = Math.floor( idx / MAX_ITEMS_PER_CONTEXT );
+		var i = idx % MAX_ITEMS_PER_CONTEXT;
+
+		return this.m_inventory[context][i];
+	};
+
+	CBigPictureAppInventoryCache.prototype.GetItem = function( contextid, assetid )
+	{
+		if ( this.m_inventory[contextid] == undefined )
 		{
 			$.Msg( "Inventory not found" );
 			return null;
 		}
 
-		var rgAssets = this.m_inventory[appid][contextid];
+		var rgAssets = this.m_inventory[contextid];
 		for ( var i in rgAssets )
 		{
 			var asset = rgAssets[i];
@@ -377,9 +602,125 @@ var CBigPictureInventoryCache = (function()
 		return null;
 	}
 
-	return CBigPictureInventoryCache;
+	return CBigPictureAppInventoryCache;
 })();
 
+
+var CBigPictureInventoryCache = (function()
+{
+	function CBigPictureInventoryCache( loadURL )
+	{
+		this.m_strInventoryLoadURL = loadURL;
+
+		this.m_params = {
+			bTrading: false,
+			bMarket: false
+		};
+
+		this.m_inventories = [];
+	};
+
+	CBigPictureInventoryCache.prototype.SetInventoryParameter = function( strParam, strValue )
+	{
+		this.m_params[strParam] = strValue;
+		for ( i in this.m_inventories )
+		{
+			this.m_inventories[i].SetInventoryParameter( strParam, strValue );
+		}
+	};
+
+	CBigPictureInventoryCache.prototype.GetInventoryParameter = function( strParam )
+	{
+		return this.m_params[strParam];
+	}
+
+	CBigPictureInventoryCache.prototype.BHasInventory = function( appid, rgContexts )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			return false;
+		}
+
+		return this.m_inventories[appid].BHasInventory( rgContexts );
+	};
+
+	CBigPictureInventoryCache.prototype.LoadInventory = function( appid, rgContexts, onsuccess, onfailure )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			$.Msg( "Loading new inventory for " + appid );
+			this.m_inventories[appid] = new CBigPictureAppInventoryCache( appid, this.m_strInventoryLoadURL, this.m_params );
+		}
+
+		this.m_inventories[appid].LoadInventory( rgContexts, onsuccess, onfailure );
+	};
+
+	CBigPictureInventoryCache.prototype.GetSortedInventory = function( appid, rgContexts, start, count )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			return [];
+		}
+
+		return this.m_inventories[appid].GetSortedInventory( rgContexts).slice( start, start + count );
+	};
+
+	CBigPictureInventoryCache.prototype.GetSortedAndFilteredInventory = function( appid, rgContexts, filters, start, count )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			return [];
+		}
+
+		return this.m_inventories[appid].GetSortedAndFilteredInventory( rgContexts, filters).slice( start, start + count );
+	};
+
+	CBigPictureInventoryCache.prototype.GetFilteredInventorySize = function( appid, rgContexts, filters )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			return 0;
+		}
+
+		return this.m_inventories[appid].GetSortedAndFilteredInventory( rgContexts, filters).length;
+	};
+
+	CBigPictureInventoryCache.prototype.ClearCachedResults = function( appid )
+	{
+		if ( this.m_inventories[appid] != undefined )
+		{
+			this.m_inventories[appid].ClearCachedResults();
+		}
+	}
+
+	CBigPictureInventoryCache.prototype.GetTags = function( appid, rgContexts )
+	{
+		return this.m_inventories[appid].GetTags( rgContexts );
+	};
+
+	CBigPictureInventoryCache.prototype.GetFilterCounts = function( appid, rgContexts, rgTags, filters )
+	{
+		return this.m_inventories[appid].GetFilterCounts( rgTags, rgContexts, filters );
+	};
+
+	CBigPictureInventoryCache.prototype.GetItemByIndex = function( appid, idx )
+	{
+		return this.m_inventories[appid].GetItemByIndex( idx );
+	};
+
+	CBigPictureInventoryCache.prototype.GetItem = function( appid, contextid, assetid )
+	{
+		if ( this.m_inventories[appid] == undefined )
+		{
+			$.Msg( "Inventory not found" );
+			return null;
+		}
+
+		return this.m_inventories[appid].GetItem( contextid, assetid );
+	}
+
+	return CBigPictureInventoryCache;
+})();
 
 var CBigPictureInventory = (function()
 {
@@ -395,9 +736,11 @@ var CBigPictureInventory = (function()
 		this.m_curShownContext = 0;
 		this.m_rgContextIds = [];
 		this.m_tags = {};
-		this.m_grid_item_tags = {};
 		this.m_CurrentSearch = 0;
 		this.m_curLoad = 0;
+
+		this.m_firstChildIndex = 0;
+		this.m_lastChildIndex = 0;
 
 		this.m_pContainer = $("#" + this.m_containerID );
 		var c = this.m_pContainer;
@@ -410,9 +753,15 @@ var CBigPictureInventory = (function()
 		this.m_pFastScrollWrapper = c.FindChildTraverse( 'FastScrollWrapper' );
 		this.m_pFastScrollThumb = c.FindChildTraverse( 'FastScrollThumb' );
 		this.m_pContextDropdown = c.FindChildTraverse( 'ContextDropdown' );
+		this.m_pLeftColumn = c.FindChildTraverse( 'LeftColumn' );
 		this.m_pGridWrapper = c.FindChildTraverse( "GridWrapper" );
 
+		var that = this;
+		$.RegisterEventHandler( 'ChildIndexSelected', this.m_pItemGrid, function( p, i ) { that.GridChildIndexSelected( i ); } );
+		$.RegisterEventHandler( 'ScrollToBottom', this.m_pItemGrid, function( p ) { return that.OnScrollToBottom( p ); } );
 		this.m_InventoryCache = new CBigPictureInventoryCache( this.m_strInventoryLoadURL );
+
+		this.m_Navigation = new CNXNavigation( this.m_pLeftColumn, this.m_pGridWrapper );
 	}
 
 	CBigPictureInventory.prototype.Initialize = function()
@@ -421,6 +770,7 @@ var CBigPictureInventory = (function()
 		var that = this;
 		$.RegisterEventHandler( 'DropDownSelectionChanged', container.FindChildTraverse('ContextDropdown'), function()
 		{
+			that.m_InventoryCache.ClearCachedResults( that.m_curAppID );
 			that.UpdateItemInventoryContext();
 		} );
 
@@ -471,17 +821,7 @@ var CBigPictureInventory = (function()
 
 		$.RegisterEventHandler( 'InputFocusSet', itemGrid, function( g )
 		{
-			var parent = that.m_pFastScrollWrapper;
-			var thumb = that.m_pFastScrollThumb;
-			var grid = itemGrid;
-
-			$.Schedule( 0.0, function()
-			{
-				var space = parent.actuallayoutwidth - thumb.actuallayoutwidth;
-				var transform = space * grid.scrollprogress;
-
-				thumb.style.transform = 'translatex( '+transform+'px )';
-			})
+			that.UpdateFastScrollThumbPosition();
 		} );
 
 		$.RegisterKeyBind( inventoryBody, 'pad_x,steampad_x', function() { that.FocusSearch(); } );
@@ -489,6 +829,74 @@ var CBigPictureInventory = (function()
 
 		$.RegisterKeyBind( inventoryBody, 'pad_x,steampad_x', function() { that.ClearAllSearchOptions(); } );
 		$.RegisterFooterButton( inventoryBody, 'pad_x', 'CLEAR ALL' );
+	};
+
+	CBigPictureInventory.prototype.GridChildIndexSelected = function( i )
+	{
+		//$.Msg( "GridChildIndexSelected( "  + i + " )" );
+
+		var grid = this.m_pItemGrid;
+		if ( i >= this.m_lastChildIndex - REQUEST_THRESHOLD )
+		{
+			// Get more
+			// $.Msg( "Get more bottom " + this.m_lastChildIndex + ", " + REQUEST_PAGE_SIZE );
+
+			var filters = this.GetFilters();
+			var rgContexts = this.GetCurrentContexts();
+			var rgSorted = this.m_InventoryCache.GetSortedAndFilteredInventory( this.m_curAppID, rgContexts, filters, this.m_lastChildIndex, REQUEST_PAGE_SIZE );
+			var total =  Object.keys( rgSorted ).length;
+
+			if ( total == 0 )
+			{
+				return;
+			}
+			this.m_lastChildIndex += total;
+
+			this.AddItemsToGrid( rgSorted, ++this.m_curLoad );
+
+			// Do we need to drop some from the top?
+			if ( grid.GetChildCount() > MAX_GRID_ITEMS )
+			{
+				// BUGBUG: Complete
+
+				//$.Msg( "Drop some top" );
+				/*
+				for ( i = REQUEST_PAGE_SIZE - 1; i >= 0; i-- )
+				{
+					grid.GetChild(i).DeleteAsync( 0.0 );
+				}
+				this.m_firstChildIndex += REQUEST_PAGE_SIZE;
+				this.m_topPadding += 200;
+				grid.style.paddingTop = this.m_topPadding + "px";
+				*/
+			}
+		}
+		else if ( i < REQUEST_THRESHOLD )
+		{
+			// Don't need this until we're dropping content
+			/*
+			$.Msg( "Get more top" );
+
+			if ( this.m_pItemGrid.GetChildCount() > MAX_GRID_ITEMS )
+			{
+				$.Msg( "Drop some bottom" );
+			}
+			*/
+		}
+	}
+
+	CBigPictureInventory.prototype.OnScrollToBottom = function(p)
+	{
+		if ( p != this.m_pItemGrid )
+		{
+			return false;
+		}
+
+		$.Msg( "OnScrollToBottom" );
+
+		// BUGBUG: Load the remainder of the inventory and then select the
+		// last item
+		return true;
 	};
 
 	CBigPictureInventory.prototype.GetInventoryCache = function()
@@ -584,6 +992,8 @@ var CBigPictureInventory = (function()
 					cDropdown.GetParent().enabled = true;
 			}
 		}
+
+		this.m_Navigation.UpdateSelectedStyle();
 	};
 
 
@@ -594,6 +1004,7 @@ var CBigPictureInventory = (function()
 		gridWrapper.AddClass( "InventoryLoading" );
 		this.ClearToEmptyInventory();
 
+		gridWrapper.SetDialogVariable( "appname", this.m_rgAppContextData[appid].name );
 		var loadIndex = ++this.m_curLoad;
 		if ( this.m_InventoryCache.BHasInventory( appid, rgContexts ) )
 		{
@@ -624,11 +1035,7 @@ var CBigPictureInventory = (function()
 			this.m_curShownContext = context;
 
 
-			var rgContexts = [ context ];
-			if ( context == APPWIDE_CONTEXT )
-			{
-				rgContexts = this.m_rgContextIds;
-			}
+			var rgContexts = this.GetCurrentContexts();
 			this.m_pContextDropdown.GetParent().SetHasClass( "AlwaysVisible", context != APPWIDE_CONTEXT );
 
 			this.ShowItemInventoryContext( this.m_curAppID, rgContexts, 0, null );
@@ -641,7 +1048,6 @@ var CBigPictureInventory = (function()
 		//$.Msg( "ClearToEmptyInventory" );
 
 		this.m_tags = { };
-		this.m_grid_item_tags = { };
 		var that = this;
 		//$.Schedule( 0.0, function() { that.m_pItemGrid.RemoveAndDeleteChildren(); that.m_pGridWrapper.AddClass("SearchVisible"); } );
 		this.m_pSearchEntry.text = '';
@@ -684,89 +1090,40 @@ var CBigPictureInventory = (function()
 		this.UpdateGridForFilters();
 	};
 
+
 	CBigPictureInventory.prototype.UpdateAllFilterCounts = function( currentSearch )
 	{
-//		$.Msg( JSON.stringify( this.m_tags ) );
-//		$.Msg( JSON.stringify( this.m_grid_item_tags ) );
-		if ( currentSearch == this.m_CurrentSearch )
+		if ( SHOW_FILTER_COUNTS && currentSearch == this.m_CurrentSearch )
 		{
-			for ( id in this.m_tags )
+			var rgContexts = this.GetCurrentContexts();
+			var rgCounts = this.m_InventoryCache.GetFilterCounts( this.m_curAppID, rgContexts, this.m_tags, this.GetFilters() );
+
+			for ( cat in this.m_tags )
 			{
-				var category = this.m_tags[id];
-				if ( category.dirty )
+				var dropdown = this.m_pTagFilters.FindChildTraverse( "Cat_" + cat );
+				var menu  = dropdown.AccessDropDownMenu();
+
+				for ( tag in this.m_tags[cat].tags )
 				{
-					var dropdown = this.m_pTagFilters.FindChildTraverse( id );
-					var menu = dropdown.AccessDropDownMenu();
+					var option = menu.FindChild( TagIdFromTag( tag ) );
 
-					for ( var tag in category.tags )
+					if ( !option )
 					{
-						category.tags[tag].count = 0;
-						category.totalcount = 0;
+						$.Msg( "Couldn't find option " + tag + " in " + cat );
+						continue;
 					}
-
-					// Figure out which categories have to match in order
-					// for an item to be counted in this category.  It
-					// needs to match the search text and every
-					// category but this one.
-					var rgCategories = [ 'Match_Search' ];
-					for ( var cat in this.m_tags )
+					option.text = this.m_tags[cat].tags[tag].name + ' ('+ rgCounts[cat][tag] +')';
+					if ( rgCounts[cat][tag] == 0 )
 					{
-						if ( cat != id )
-						{
-							rgCategories.push( "Cat_" + cat );
-						}
+						option.visible = false;
 					}
-
-					var g = this.m_pItemGrid;
-					for( var i = 0; i < g.GetChildCount(); ++i )
+					else
 					{
-						var p = g.GetChild( i );
-						var bMatch = true;
-						for ( var j = 0; j < rgCategories.length; j++ )
-						{
-							if ( !p.BHasClass( rgCategories[j] ) )
-							{
-								bMatch = false;
-								break;
-							}
-						}
-
-						if ( bMatch )
-						{
-							var item_tags = this.m_grid_item_tags[ p.id ];
-							category.totalcount++;
-							for ( var t in item_tags )
-							{
-								var item_tag = item_tags[t];
-								if ( item_tag.category == id )
-								{
-									category.tags[item_tag.internal_name].count++;
-								}
-							}
-						}
+						option.visible = true;
 					}
-
-					category.dirty = false;
-
-					var bAnyVisible = false;
-					menu.FindChild( 'any' ).text = 'Any (' + category.totalcount + ')';
-					for ( var tag in category.tags )
-					{
-						var option =  menu.FindChild( tag );
-						option.text = category.tags[tag].name+' ('+category.tags[tag].count+')';
-						if ( category.tags[tag].count == 0 )
-						{
-//							$.Msg( "Hiding " + category.tags[tag].name );
-							option.visible = false;
-						}
-						else
-						{
-							bAnyVisible = true;
-							option.visible = true;
-						}
-					}
-					dropdown.GetParent().visible = bAnyVisible;
 				}
+				menu.FindChild( 'any' ).text = 'Any (' + rgCounts[cat]['any'] + ')';
+				dropdown.GetParent().visible = ( rgCounts[cat]['any'] != 0 );
 			}
 		}
 		return false;
@@ -779,35 +1136,21 @@ var CBigPictureInventory = (function()
 			return;
 
 		var p = CreateInventoryItemPanel( item, grid );
-		this.m_grid_item_tags['Item_'+item.id] = item.tags;
 
-		//
-		// Set styles on panel to show that it passes all categories
-		// (since search filters are initially empty).  This will
-		// allow filter counts to be accurately computed before
-		// a search is entered (which we'll do in market to get
-		// proper counts of marketable items).
-		//
-		p.AddClass( "Match_Search" );
-		for ( var cat in this.m_tags )
-		{
-			p.AddClass( "Cat_" + cat );
-		}
-
-		var name_row = p.FindChildrenWithClassTraverse( "InventoryItemName" )[0];
 
 		p.SetPanelEvent( 'onfocus', function()
 		{
-			//$.Msg( JSON.stringify( item ) );
-			if ( name_row.IsValid() )
+		 	var name_row = p.FindChildrenWithClassTraverse( "InventoryItemName" )[0];
+			if ( name_row && name_row.IsValid() )
 				if ( name_row.contentwidth > name_row.actuallayoutwidth )
 					name_row.AddClass( 'Fade' );
 		} );
 
+
 		this.m_funcSetupGridItem( item, p, this );
 	};
 
-	CBigPictureInventory.prototype.BuildGridFromSortedItems = function( rgSorted, loadIndex )
+	CBigPictureInventory.prototype.AddItemsToGrid = function( rgSorted, loadIndex )
 	{
 		var that = this;
 		var funcCreateBatch = function( rgToCreate, loadIndex, lastIdx )
@@ -819,7 +1162,7 @@ var CBigPictureInventory = (function()
 					for( var i in rgToCreate )
 					{
 						var d = rgToCreate[i];
-						that.CreateGridItem( d.item, d.grid, d.key );
+						that.CreateGridItem( that.m_InventoryCache.GetItemByIndex( that.m_curAppID, d.item ), d.grid, d.key );
 
 						if (d.final )
 						{
@@ -835,13 +1178,11 @@ var CBigPictureInventory = (function()
 							that.UpdateFastScrollThumbSize();
 						}
 					}
-					$.Msg( "Created up to " + lastIdx );
 				}
 			})
 		};
 
 		var g = this.m_pItemGrid;
-		g.RemoveAndDeleteChildren();
 		g.SetIgnoreFastMotion( true );
 
 		this.m_pGridWrapper.RemoveClass( "InventoryLoading" );
@@ -863,6 +1204,14 @@ var CBigPictureInventory = (function()
 
 		if ( rgToCreate.length > 0 )
 			funcCreateBatch( rgToCreate, loadIndex, idx );
+	};
+
+	CBigPictureInventory.prototype.RefreshGrid = function()
+	{
+		this.m_pItemGrid.RemoveAndDeleteChildren();
+		this.m_firstChildIndex = 0;
+		this.m_lastChildIndex = 0;
+		this.GridChildIndexSelected( 0 );
 	}
 
 
@@ -875,42 +1224,17 @@ var CBigPictureInventory = (function()
 			return;
 		}
 
-		var rgSorted = this.m_InventoryCache.GetSortedInventory( appid, rgContexts );
-		this.BuildGridFromSortedItems( rgSorted, loadIndex );
+		this.RefreshGrid();
 
 		if ( Object.keys(rgSorted).length == 0 )
 		{
 			this.m_pGridWrapper.RemoveClass( "InventoryLoading" );
-			// BUGBUG: Empty inventory message
 		}
+
+		this.m_pGridWrapper.SetHasClass( "EmptyInventory", Object.keys(rgSorted).length == 0 );
 
 		// Update available tags/counts for items with tags
-		for( key in rgSorted )
-		{
-			for( var tagkey in rgSorted[key].tags )
-			{
-				var sCategoryName = rgSorted[key].tags[tagkey];
-
-				var rgCategory = this.m_tags[sCategoryName.category];
-				if ( !rgCategory )
-				{
-					if ( typeof sCategoryName.category != "string" )
-						continue;
-
-					rgCategory = this.m_tags[sCategoryName.category] = { "name": sCategoryName.category_name ? sCategoryName.category_name : sCategoryName.category, "tags": {} };
-				}
-
-				if( rgCategory.tags[ sCategoryName.internal_name ] )
-					rgCategory.tags[ sCategoryName.internal_name ].count++;
-				else
-				{
-					var rgNewTag = { "name": sCategoryName.name, "count": 1 };
-					if( sCategoryName.color )
-						rgNewTag.color = sCategoryName.color;
-					rgCategory.tags[ sCategoryName.internal_name ] = rgNewTag;
-				}
-			}
-		}
+		this.m_tags = this.m_InventoryCache.GetTags( appid, rgContexts );
 
 		// Update filters to list all the available options
 		var filters = this.m_pTagFilters;
@@ -925,7 +1249,7 @@ var CBigPictureInventory = (function()
 			header.text = category.name;
 			header.AddClass( "DropDownHeader" );
 
-			var filter = $.CreatePanel( 'DropDown', wrapper, t );
+			var filter = $.CreatePanel( 'DropDown', wrapper, "Cat_" + t );
 
 			var option = $.CreatePanel( 'Label', filter, 'any' );
 			option.text = 'Any';
@@ -938,6 +1262,7 @@ var CBigPictureInventory = (function()
 
 			for( var tag in category.tags )
 			{
+				// Some TF items have a blank tag.  Why?  I don't know.
 				if ( ALLOW_MULTISELECT )
 				{
 					option =  $.CreatePanel( 'ToggleButton', filter, tag );
@@ -947,7 +1272,7 @@ var CBigPictureInventory = (function()
 				}
 				else
 				{
-					option =  $.CreatePanel( 'Label', filter, tag );
+					option =  $.CreatePanel( 'Label', filter, TagIdFromTag( tag ) );
 					option.text = category.tags[tag].name;
 				}
 				filter.AddOption( option );
@@ -968,9 +1293,15 @@ var CBigPictureInventory = (function()
 		this.m_pSearchRegion.ScrollToTop();
 	};
 
-	CBigPictureInventory.prototype.UpdateGridForFilters = function()
+	CBigPictureInventory.prototype.GetCurrentContexts = function()
 	{
-		this.m_pGridWrapper.RemoveClass( "NoSearch" );
+		var context = this.m_curShownContext;
+		var rgContexts = (context == APPWIDE_CONTEXT ) ? this.m_rgContextIds : [ context ];
+		return rgContexts;
+	}
+
+	CBigPictureInventory.prototype.GetFilters = function()
+	{
 		var textMatch = this.m_pSearchEntry.text;
 
 		var rgRequiredTags = {};
@@ -980,14 +1311,14 @@ var CBigPictureInventory = (function()
 		for ( var t in this.m_tags )
 		{
 			var category = this.m_tags[t];
-			var dropdown = filters.FindChildTraverse( t );
+			var dropdown = filters.FindChildTraverse( "Cat_" + t );
 
 			if ( ALLOW_MULTISELECT )
 			{
 				var menu = dropdown.AccessDropDownMenu();
 				for( var tag in category.tags )
 				{
-					var option =  menu.FindChild( tag );
+					var option =  menu.FindChild( TagFromTagId( tag ) );
 					if ( option.IsSelected() )
 					{
 						if ( !( t in rgRequiredTags ) )
@@ -1002,110 +1333,30 @@ var CBigPictureInventory = (function()
 			}
 			else
 			{
+				//$.Msg( JSON.stringify( dropdown ) );
 				var selected = dropdown.GetSelected();
 
 				if ( selected.id != 'any' )
 				{
-					rgRequiredTags[t] = {}
+					rgRequiredTags[t] = {};
 					var cat = rgRequiredTags[t];
-					cat[selected.id] = 1;
+					cat[TagFromTagId(selected.id)] = 1;
 				}
 			}
 			category.dirty = true;
 		}
 
-		var funcFilterBatch = function( x, rgToApplyFilters, currentSearch, textMatch, rgRequiredTags )
-		{
-			$.Schedule( 0.0, function()
-			{
-				if ( currentSearch == x.m_CurrentSearch )
-				{
-					for( var i in rgToApplyFilters )
-					{
-						var p = rgToApplyFilters[i];
-						if ( !p.IsValid() )
-							continue;
+		return { text: textMatch, tags: rgRequiredTags };
+	};
 
-						p.visible = true;
-						p.AddClass( "Match_Search" );
+	CBigPictureInventory.prototype.UpdateGridForFilters = function()
+	{
+		this.m_InventoryCache.ClearCachedResults( this.m_curAppID );
+		this.m_pGridWrapper.RemoveClass( "NoSearch" );
+		var filters = this.GetFilters();
+		this.RefreshGrid();
 
-						var item_tags = x.m_grid_item_tags[ p.id ];
-
-						// First check search substring if we have it
-						if ( textMatch.length )
-						{
-							textMatch = textMatch.toLowerCase();
-							for( var iLabel = 0; iLabel < p.GetChildCount(); ++iLabel )
-							{
-								var pLabel = p.GetChild( iLabel );
-								if ( pLabel.BHasClass( 'InventoryItemName' ) )
-								{
-									var itemText = pLabel.text;
-									itemText = itemText.toLowerCase();
-
-									if ( itemText.indexOf( textMatch ) == - 1 )
-									{
-										p.RemoveClass( "Match_Search" );
-										p.visible = false;
-									}
-								}
-							}
-						}
-
-						// Iterate required tags
-						for( var cat in x.m_tags )
-						{
-							var bFoundAnyTag = false;
-							p.AddClass( "Cat_" + cat );
-
-							if ( rgRequiredTags[cat] )
-							{
-								for ( var tag in rgRequiredTags[cat] )
-								{
-									// Check item tags includes this tag
-									for( var t in item_tags )
-									{
-										var item_tag = item_tags[t];
-										if ( item_tag.category == cat && item_tag.internal_name == tag )
-										{
-											bFoundAnyTag = true;
-											break;
-										}
-									}
-								}
-
-								if ( !bFoundAnyTag )
-								{
-									p.visible = false;
-									p.RemoveClass( "Cat_" + cat );
-								}
-							}
-						}
-					}
-				}
-			})
-		};
-
-
-		var g = this.m_pItemGrid;
 		var currentSearch = ++this.m_CurrentSearch;
-		var rgToApplyFilters = [];
-		for( var i = g.GetChildCount() - 1; i >=0 ; --i )
-		{
-			// Assume making visible again first
-			var p = g.GetChild( i );
-			rgToApplyFilters.push( p );
-
-			if ( rgToApplyFilters.length == 200 )
-			{
-				funcFilterBatch( this, rgToApplyFilters, currentSearch, textMatch, rgRequiredTags );
-				rgToApplyFilters = [];
-			}
-		}
-
-		if ( rgToApplyFilters.length )
-			funcFilterBatch( this, rgToApplyFilters, currentSearch, textMatch, rgRequiredTags );
-
 		var that = this;
 		$.Schedule(0.0, function() {that.UpdateAllFilterCounts( currentSearch ); } );
 		this.ForceGridToLeft();
@@ -1113,21 +1364,40 @@ var CBigPictureInventory = (function()
 
 	CBigPictureInventory.prototype.ForceGridToLeft = function()
 	{
-		// BUGBUG: Can remove exception handling when Grid exposes ScrollPanelToLeftEdge.
-		try
-		{
-			this.m_pItemGrid.ScrollPanelToLeftEdge();
-		}
-		catch (err)
-		{
-		}
+		this.m_pItemGrid.ScrollPanelToLeftEdge();
 	}
 
 	CBigPictureInventory.prototype.UpdateFastScrollThumbSize = function()
 	{
 		var thumb = this.m_pFastScrollThumb;
 		var grid = this.m_pItemGrid;
-		thumb.style.width = Math.max( 100*((grid.horizontalcount / (grid.GetChildCount()/grid.verticalcount ))), 5 ) + '%';
+
+		var rgContexts = this.GetCurrentContexts();
+		var filters = this.GetFilters();
+		var total = this.m_InventoryCache.GetFilteredInventorySize( this.m_curAppID, rgContexts, filters );
+
+		thumb.style.width = Math.max( 100*((grid.horizontalcount / (total/grid.verticalcount ))), 5 ) + '%';
+	};
+
+	CBigPictureInventory.prototype.UpdateFastScrollThumbPosition = function()
+	{
+		var parent = this.m_pFastScrollWrapper;
+		var thumb = this.m_pFastScrollThumb;
+		var grid = this.m_pItemGrid;
+
+		var rgContexts = this.GetCurrentContexts();
+		var filters = this.GetFilters();
+		var total = this.m_InventoryCache.GetFilteredInventorySize( this.m_curAppID, rgContexts, filters );
+		var currentCount = grid.GetChildCount();
+
+		$.Schedule( 0.0, function()
+		{
+			var space = parent.actuallayoutwidth - thumb.actuallayoutwidth;
+			var transform = space * grid.scrollprogress;
+			transform = transform / ( total / currentCount ); // Account for total inventory size instead of current child count
+
+			thumb.style.transform = 'translatex( '+transform+'px )';
+		})
 	};
 
 	CBigPictureInventory.prototype.MakeDropDownSelectionChangedCallback = function( obj, dropdown, t )
@@ -1138,7 +1408,7 @@ var CBigPictureInventory = (function()
 			var strSelection = 'Any';
 			if ( selection.id != 'any' )
 			{
-				strSelection = obj.m_tags[t].tags[selection.id].name;
+				strSelection = obj.m_tags[t].tags[TagFromTagId(selection.id)].name;
 				dropdown.GetParent().AddClass( "AlwaysVisible" );
 			}
 			else

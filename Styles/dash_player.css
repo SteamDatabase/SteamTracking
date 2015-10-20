@@ -250,6 +250,8 @@
 
 	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	text-align: left;
+
+	z-index: 1;
 }
 
 .settings_label
@@ -363,6 +365,8 @@
 
 	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	text-align: left;
+
+	z-index: 1;
 }
 
 .dash_closed_captions_customization .panel_title
@@ -666,7 +670,7 @@
 	padding: 40px;
 	display: none;
 
-	z-index: 100;
+	z-index: 2;
 }
 
 #dash_video_buffering_message .loading_text
@@ -854,6 +858,7 @@
 	background-color: #2c2b28;
 	box-shadow: 2px 2px 5px #111111;
 	display: none;
+	z-index: 1;
 }
 
 .dash_overlay .video_representation_live_video span
@@ -1359,7 +1364,7 @@
 	background: linear-gradient(135deg, #126487 0%,#133959 100%);
 	padding: 15px 15px 20px 15px;
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
-	z-index: 100;
+	z-index: 1;
 
 	max-height: 425px;
 	margin: 13px;
@@ -1484,7 +1489,7 @@
 	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
 	padding: 15px 15px 20px 15px;
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
-	z-index: 100;
+	z-index: 1;
 
 	max-height: 420px;
 	overflow: scroll;
@@ -1571,7 +1576,7 @@
 	padding: 40px;
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 
-	z-index: 100;
+	z-index: 2;
 
 	display: none;
 }

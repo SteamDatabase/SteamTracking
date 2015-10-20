@@ -1176,3 +1176,11 @@ LoadingThrobber.HorizontallyCenteredThrobber {
 	padding-left: 48px;
 	padding-top: 8px;
 }
+
+.blotter_nocontent
+{
+	margin-top: 32px;
+	font-size: 28px;
+	height: fit-children;
+	padding: 10px;
+}

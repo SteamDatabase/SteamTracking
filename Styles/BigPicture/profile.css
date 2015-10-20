@@ -3450,6 +3450,12 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	color: foregroundgray;
 }
 
+#AboutMeBlock .Summary.Private
+{
+	color: red;
+	margin-top: 10px;
+}
+
 #BadgeBlock
 {
 	padding: 20px;
@@ -3524,16 +3530,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	padding-left: 6px;
 }
 
-#ShowcaseGrid
-{
-	height: 100%;
-	width: 100%;
-	padding-top: 20px;
-	padding-right: 0px;
-	padding-bottom: 220px;
-	flow-children: right-wrap;
-	overflow: squish scroll;
-}
 
 #ShowcaseGrid VerticalScrollBar
 {
@@ -3869,8 +3865,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	flow-children: down;
 	width: fill-parent-flow( 1.0 );
 	height: 100%;
-	padding: 5px;
-	padding-left: 10px;
+	padding: 12px;
 	margin-left: 5px;
 	background-color: transparent_module;
 }
@@ -3892,7 +3887,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 #WatchGameButton .InGame
 {
-	font-size: 24px;
+	font-size: 26px;
 	color: friendsingame_solid;
 	margin-bottom: 5px;
 }
@@ -3903,7 +3898,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 #WatchGameButton .Playtime
 {
-	font-size: 18px;
+	font-size: 24px;
 	color: foregroundgray;
 }
 #WatchGameButton:focus .Playtime
@@ -3966,6 +3961,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	width: 1600px;
 	padding: 0px;
+	padding-left: 7px;
 	margin: 0px;
 }
 
@@ -4120,9 +4116,16 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 #ProfileContent #content_showcases .ContentGrid
 {
-	margin-top: 0px;
 	height: 900px;
 	width: 1400px;
+
+	padding-top: 20px;
+	padding-right: 0px;
+	margin-left: -40px;
+	margin-top: 6px;
+	padding-bottom: 220px;
+	flow-children: right-wrap;
+	overflow: squish scroll;
 }
 
 #ProfileContent .NxNavigationLoadingThrobber
@@ -4426,11 +4429,14 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 .RowContainer {
 	flow-children: down;
 	margin-bottom: 25px;
+	padding-left: 26px;
+	margin-left: -20px;
 }
 
 
 .EditProfileWrapper TextEntry {
 	width: 600px;
+	white-space: normal;
 }
 
 .SettingsLabel {
@@ -4729,7 +4735,7 @@ LibraryGameBadge .badge_info_description Label
 .ProfileTopRowStack Label
 {
 	vertical-align: center;
-	horizontal-align: center;
+	horizontal-align: left;
 }
 
 #TopRow .ProfileTopRowShort
@@ -4777,13 +4783,7 @@ LibraryGameBadge .badge_info_description Label
 
 #ProfileOptionsPopup
 {
-	flow-children: down;
-	width: 300px;
-}
-
-#ProfileOptionsPopup .Button
-{
-	width: 100%;
+	align: center center;
 }
 
 #ProfileOptionsPopup .Title
@@ -4793,3 +4793,11 @@ LibraryGameBadge .badge_info_description Label
 	color: brightblue;
 	margin-bottom: 10px;
 }
+
+.WarningRow
+{
+	horizontal-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+}
+

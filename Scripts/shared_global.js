@@ -2942,6 +2942,32 @@ function HideWithFade( elem, speed )
 	$Elem.fadeOut( speed || 200 );
 }
 
+
+function LaunchWebChat( params )
+{
+	var winChat = window.open( '', 'SteamWebChat', 'height=790,width=1015,resize=yes,scrollbars=yes' );
+	if ( !winChat )
+	{
+		// popup blocked - this sometimes happens when chat is initiated from the store.  just roll with it.
+		return;
+	}
+
+	if ( winChat.location ==  'about:blank' )
+	{
+		// created a new window, set the url
+		if ( params )
+			SetValueLocalStorage( 'rgChatStartupParam', V_ToJSON( params ) );
+
+		winChat.location = 'https://steamcommunity.com//chat/';
+	}
+	else
+	{
+		if ( params )
+			winChat.OnWebchatLaunchURL( params );
+	}
+	winChat.focus();
+}
+
 function FlushStyleChanges( element )
 {
 	$J( element ).css( 'opacity');

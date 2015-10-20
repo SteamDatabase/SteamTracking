@@ -513,6 +513,17 @@ function CloseModalDialog( pPanel )
 	pPanel.DeleteAsync( 0.15 );
 }
 
+function CloseFocusedModal()
+{
+	var pMainMenu = $.TenfootController( $.GetContextPanel() ).AccessMainMenu();
+	for ( var i = 0; i < pMainMenu.GetChildCount(); i++ )
+	{
+		var pPanel = pMainMenu.GetChild( i );
+		if ( pPanel.BHasClass( 'NxModalBackground' ) && (pPanel.BHasDescendantKeyFocus() || pPanel.BHasKeyFocus()) )
+			CloseModalDialog( pPanel );
+	}
+}
+
 function ShowWebModalDialog( strURL, strTitle, bTenfootAware )
 {
 	
@@ -879,10 +890,16 @@ var CNXNavigation = function( oNavigationContainer, oTarget, rgOptions )
 {
 	this.oNavigationContainer = oNavigationContainer;
 	this.oTargetContainer = oTarget;
+	this.nLoadDelay = 0.5;
+	this.bFirstFocus = true;
 
 	if( rgOptions )
 	{
 		this.oThrobber = rgOptions.oThrobber || false;
+		if ( rgOptions.nLoadDelay != undefined )
+		{
+			this.nLoadDelay = rgOptions.nLoadDelay;
+		}
 	}
 
 	this.eLastDirection = k_ELastDirection_None;
@@ -944,16 +961,34 @@ CNXNavigation.prototype.DoFocus = function( oNavButton )
 	if ( !strTargetID )
 		return;
 
+	// The first thing to get focus gets loaded directly, all the other panels require
+	// a short pause on the nav button before the launch happens.
+	var nLoadDelay = this.nLoadDelay;
+	if ( this.bFirstFocus )
+	{
+		nLoadDelay = 0;
+		this.bFirstFocus = false;
+	}
+
 	this.UpdateSelectedStyle();
 
 	var oTarget = $('#' + strTargetID);
 	if( oTarget )
 	{
-		this.ShowPanel( oTarget );
+		if ( strURLSource && !oTarget.BHasClass( 'NxLoadComplete' ) && !oTarget.BHasClass( 'NxLoadInProgress' ) )
+		{
+			var _this = this;
+			this.ShowPanel( oTarget );
+			$.Schedule( nLoadDelay, function() { _this.LoadIfStillFocused( oNavButton, oTarget, strURLSource ); } );
+		}
+		else
+		{
+			this.ShowPanel( oTarget );
+		}
 	}
 	else if( strURLSource ) // Create a new panel and load a URL into it.
 	{
-		this.CreatePanelFromURL( strTargetID, strURLSource )
+		this.CreatePanelFromURL( oNavButton, nLoadDelay, strTargetID, strURLSource )
 	}
 }
 
@@ -965,7 +1000,16 @@ CNXNavigation.prototype.UpdateSelectedStyle = function()
 	});
 }
 
-CNXNavigation.prototype.CreatePanelFromURL = function( strTargetID, strURLSource, rgData )
+CNXNavigation.prototype.LoadIfStillFocused = function( oNavButton, oTarget, strURLSource )
+{
+	if ( oNavButton.BHasKeyFocus() && !oTarget.BHasClass( 'LoadInProgress' ) )
+	{
+		oTarget.AddClass( 'NxLoadInProgress' );
+		oTarget.LoadLayoutAsync( strURLSource, true, false );
+	}
+};
+
+CNXNavigation.prototype.CreatePanelFromURL = function( oNavButton, nLoadDelay, strTargetID, strURLSource, rgData )
 {
 	if( !rgData )
 		rgData = {};
@@ -987,6 +1031,8 @@ CNXNavigation.prototype.CreatePanelFromURL = function( strTargetID, strURLSource
 		if ( bSuccess )
 		{
 			// nothing to do on success
+			oTarget.RemoveClass( 'NxLoadInProgress' );
+			oTarget.AddClass( 'NxLoadComplete' );
 		}
 		else
 		{
@@ -1015,8 +1061,17 @@ CNXNavigation.prototype.CreatePanelFromURL = function( strTargetID, strURLSource
 			strURLSource += '?' + rgParams.join('&');
 	}
 
-	// Now make the request.
-	oTarget.LoadLayoutAsync( strURLSource, true, false );
+
+	if ( nLoadDelay )
+	{
+		// Schedule the request, we'll make it if the button is still focused when it fires.
+		$.Schedule( nLoadDelay, function() { _this.LoadIfStillFocused( oNavButton, oTarget, strURLSource ); } );
+	}
+	else
+	{
+		// Just load it directly
+		this.LoadIfStillFocused( oNavButton, oTarget, strURLSource );
+	}
 }
 
 CNXNavigation.prototype.ShowPanelError = function( oTarget )

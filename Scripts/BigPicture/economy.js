@@ -151,7 +151,7 @@ function PopulateDetails( item, oDetail, bAllowBorder, rgAppContextData )
 	tags.text = sTagList;
 }
 
-function ShowDetails( item, p, oDetail )
+function ShowDetails( item, p, oDetail, bShowOwnerActions )
 {
 	g_LastGridFocus = p;
 
@@ -170,7 +170,7 @@ function ShowDetails( item, p, oDetail )
 		}
 	}
 
-	if ( item.owner_actions && g_bViewingOwnProfile )
+	if ( item.owner_actions && bShowOwnerActions )
 	{
 		for( i in item.owner_actions )
 		{
