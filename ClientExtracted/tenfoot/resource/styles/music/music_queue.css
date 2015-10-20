@@ -89,7 +89,9 @@ MusicQueuePanel
 {
 	flow-children: down;
 	overflow: squish scroll;
-	height: 580px; 	
+	height: 580px;
+	width: 100%;
+	padding-bottom: 20px;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );

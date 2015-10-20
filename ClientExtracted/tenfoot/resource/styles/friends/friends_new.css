@@ -112,6 +112,15 @@ Friends.SlideAwayToRight
 	margin-top: 80px;
 
 	flow-children: right;	//temp
+
+	transition-property: transform;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.ChatFocus .AllContent
+{
+	transform: translateY( -60px );
 }
 
 
@@ -433,27 +442,8 @@ Friends.addfriend #AddFriendContent
 .ChatFocus .ContentContainer
 {
 	transform: translateX( -900px );
-	opacity: 0.5;
-  opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
-}
-
-FriendsChatDialog:descendantfocus
-{
-	opacity: 1.0;
-	height: 485px;
-	transform: translateX( -950px );
-	background-color: friendschatmsgsbkgnd;
-}
-
-FriendsChatDialog AvatarImage.AvatarVisible
-{
-	opacity: 1.0;
-}
-
-FriendsChatDialog.ClanChatDisabledX
-{
-	visibility: collapse;
-	opacity: 0.5;
+	opacity: 0.0;
+	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
 }
 
 FriendsInvitePage
@@ -555,4 +545,18 @@ Friends.PersonaOffline .LocalPersonaName
 .NxLeftNavButton:focus AvatarImage
 {
 	transform: translateX( 7px );
+}
+
+#FriendsChatProfileBackground
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+.ChatIndividual.ChatFocus #FriendsChatProfileBackground
+{
+	opacity: 1.0;
 }

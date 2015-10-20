@@ -10,28 +10,28 @@
 			onmouseactivate="CloseModalDialog();" >
 	
 		<Panel id="MusicPlayerMenu" class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button onactivate="MusicControlMore();" >
+			<Button class="Button" onactivate="MusicControlMore();" >
 				<Label text="#Music_Control_Browse_Music" />
 			</Button>
-			<Panel class="HorizontalRule"/>
-			<Button id="RemoveCurrentTrackButton" onactivate="RemoveCurrentTrack();" >
+			<Panel class="HorizontalSpace"/>
+			<Button id="RemoveCurrentTrackButton" class="Button" onactivate="RemoveCurrentTrack();" >
 				<Label text="#Music_Control_Remove_Track_From_Queue" />
 			</Button>
-			<Button id="ShowCurrentTrackButton" onactivate="ShowCurrentInSystem();">
+			<Button id="ShowCurrentTrackButton" class="Button" onactivate="ShowCurrentInSystem();">
 				<Label text="#Music_Control_Show_Track_In_System" />
 			</Button>
-			<Button id="ShowCurrentInUserInterfaceButton" onactivate="ShowCurrentInUserInterface();">
+			<Button id="ShowCurrentInUserInterfaceButton" class="Button" onactivate="ShowCurrentInUserInterface();">
 				<Label text="#Music_Control_Show_Album_In_UI" />
 			</Button>
-			<Panel id="ShowRulerWhenShowCurrent" class="HorizontalRule"/>
-			<Button id="BrowseQueueButton" onactivate="BrowseQueue();">
+			<Panel id="ShowRulerWhenShowCurrent" class="HorizontalSpace"/>
+			<Button id="BrowseQueueButton" class="Button" onactivate="BrowseQueue();">
 				<Label text="#Music_Control_Browse_Queue" />
 			</Button>			
-			<Button id="EmptyQueueButton" onactivate="EmptyQueue();">
+			<Button id="EmptyQueueButton" class="Button" onactivate="EmptyQueue();">
 				<Label text="#Music_Control_Clear_Queue" />
 			</Button>
-			<Panel class="HorizontalRule"/>
-			<Button onactivate="CreatePlaylistFromQueue();">
+			<Panel class="HorizontalSpace"/>
+			<Button class="Button" onactivate="CreatePlaylistFromQueue();">
 				<Label text="#Music_Control_Create_Playlist_From_Queue" />
 			</Button>
 

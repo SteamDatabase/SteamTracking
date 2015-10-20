@@ -5,7 +5,7 @@
 	<include src="file://{resources}/styles/friends/friends_search_result_embedded.css" />
 	</styles>
 	
-	<FriendsSearchResultEmbedded class="SearchResultEmbedded">
+	<FriendsSearchResultEmbedded class="SearchResultEmbedded" acceptsfocus="true" selectionpos="auto">
 		<AvatarImage id="Avatar"/>
 		<Panel class="FlowDown PersonaLabelContainer">
 			<Label class="FriendName" text="{s:friend_name}"/>

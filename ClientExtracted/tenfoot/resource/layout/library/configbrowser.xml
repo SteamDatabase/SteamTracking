@@ -41,6 +41,7 @@
 				<Panel id="ConfigsRightContainer" childfocusonhover="true" onmovedown="None();" onmoveup="None();" selectionpos="auto">
 					<Label id="CategoryExplanation" text="#ControllerBinding_Explanation_template" />
 					<Panel id="ConfigsColumn" childfocusonhover="true" overscroll-y="100" />
+					<Panel id="CommunityConfigsColumn" childfocusonhover="true" overscroll-y="100" />
 					<Label id="NoTemplateConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_template" />
 					<Label id="NoPersonalConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />
 					<Label id="NoCommunityConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_community" />

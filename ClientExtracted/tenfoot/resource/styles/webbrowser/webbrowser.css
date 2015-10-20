@@ -1,6 +1,7 @@
 
 @define reticlesetupanimationtime: 0.5s;
 @define mousepanningcursorsize: 99px;
+@define topbarheight: 74px;
 
 WebBrowser
 {
@@ -239,7 +240,7 @@ SlideShow
 .TopBar
 {
 	background-color: topbarbackground;
-	height: 74px;
+	height: topbarheight;
 	width: 100%;
 	visibility: visible;
 	padding: 5px;
@@ -319,22 +320,41 @@ SlideShow
 	transition-timing-function: ease-out;
 }
 
-#ControllerNavButtons,
-.CursorVisible #MouseNavButtons
-{
-	visibility: visible;
-	flow-children: right;
-	margin-top: 4px;
-	margin-bottom: 4px;
-}
-.CursorVisible #ControllerNavButtons,
-#MouseNavButtons
+#XInputPadNavButtons,
+#SteamPadNavButtons,
+#MouseNavButtons,
 {
 	visibility: collapse;
 	flow-children: right;
 	margin-top: 4px;
 	margin-bottom: 4px;
 }
+
+.XInputPad #XInputPadNavButtons
+{
+	visibility: visible;
+}
+
+.SteamPad #SteamPadNavButtons
+{
+	visibility: visible;
+}
+
+.CursorVisible .SteamPad  #MouseNavButtons
+{
+	visibility: collapse;
+}
+
+.CursorVisible .XInputPad #MouseNavButtons
+{
+	visibility: collapse;
+}
+
+.CursorVisible #MouseNavButtons
+{
+	visibility: visible;
+}
+
 
 .ControlBarButton Image,
 .ControlBarButtonMouse Image
@@ -347,7 +367,6 @@ SlideShow
 .ControlBarButton:disabled:hover Image
 {
 	opacity: 0.3;
-
 }
 
 .ControlBarButtonMouse:hover,
@@ -496,7 +515,10 @@ SlideShow
 	animation-direction: normal;
 }
 
-#UrlBar TextEntry, #UrlBar Label, #TabBar Label
+#UrlBar TextEntry,
+#UrlBar Label,
+#TabBar Label,
+#ControlBar Label
 {
 	font-size: 21.0;
 	horizontal-align: center;
@@ -507,7 +529,8 @@ SlideShow
 	font-family: platformfont;
 }
 
-#TabBar Label
+#TabBar Label,
+#ControlBar Label
 {
 	color: #019fdeff;
 	opacity: 1.0;
@@ -515,7 +538,20 @@ SlideShow
 	transition-duration: 0.23s;
 }
 
-.CursorVisible #TabBar Button Label
+#LT_btn, #RT_btn
+{
+	margin-top: 6px;
+	horizontal-align: center;
+}
+
+.CursorVisible #LT_btn,
+.CursorVisible #RT_btn
+{
+	opacity: 0.0;
+}
+
+.SteamPad #LT_btn,
+.SteamPad #RT_btn
 {
 	opacity: 0.0;
 }
@@ -529,6 +565,12 @@ SlideShow
 .CursorVisible #MouseTabRt
 {
 	opacity: 1.0;
+}
+
+.CursorVisible .SteamPad #MouseTabLt,
+.CursorVisible .SteamPad #MouseTabRt
+{
+	opacity: 0.0;
 }
 
 #UrlBar TextEntry
@@ -737,8 +779,3 @@ Tooltip
 	margin-left: 5px;
 }
 
-#LT_btn, #RT_btn
-{
-	margin-top: 6px;
-	horizontal-align: center;
-}

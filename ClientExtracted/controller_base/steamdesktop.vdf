@@ -11,10 +11,10 @@
 
         "bindings"
         {
-			"button_A" "key_press SPACE"
-			"button_B" "key_press E"
-			"button_X" "key_press R"
-			"button_Y" "key_press F"
+			"button_A" "key_press ENTER"
+			"button_B" "key_press SPACE"
+			"button_X" "key_press PAGE_UP"
+			"button_Y" "key_press PAGE_DOWN"
         }
     }
 
@@ -63,7 +63,10 @@
     {
         "id" "3"
         "mode" "absolute_mouse"
-
+		"bindings"
+		{
+			"click"		"key_press LEFT_SHIFT, Left Shift"
+		}
     }
 
 	"group"
@@ -93,12 +96,27 @@
 			"output_trigger"		"2"
 		}
 	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"scrollwheel"
+		"bindings"
+		{
+			"scroll_clockwise"				"mouse_wheel SCROLL_DOWN, Scroll Down"
+			"scroll_counterclockwise"		"mouse_wheel SCROLL_UP, Scroll Up"
+			"click"							"mouse_button MIDDLE, Middle Mouse"
+		}
+		"settings"
+		{
+			"scroll_angle"		"160"
+		}
+	}
 
     "group_source_bindings"
     {
         "0" "button_diamond"
         "1" "joystick"
-        "2" "left_trackpad"
+        "6" "left_trackpad"
         "3" "right_trackpad"
 		"4"	"left_trigger active"
 		"5"	"right_trigger active"
@@ -108,15 +126,14 @@
     {
         "bindings"
         {
-    		"right_bumper"		"mouse_wheel SCROLL_UP, Mouse Scroll Up"
-    		"left_bumper"		"mouse_wheel SCROLL_DOWN, Mouse Scroll Down"
+    		"right_bumper"			"key_press LEFT_ALT, Left Alt"
+    		"left_bumper"			"key_press LEFT_CONTROL, Left Control"
 
-    		"button_escape"		"key_press ESCAPE, Menu"
-    		"button_menu"		"key_press TAB, Tab"
-
-    		"button_back_left"	"mouse_button MIDDLE, Middle Mouse"
-		    "button_back_right"	"key_press LEFT_CONTROL, Left Control"
-
+    		"button_escape"			"key_press ESCAPE, Menu"
+    		"button_menu"			"key_press TAB, Tab"
+		    
+			"button_back_left"		"mouse_button BACK, Mouse Back"
+			"button_back_right"		"mouse_button FORWARD, Mouse Forward"
         }
     }
 

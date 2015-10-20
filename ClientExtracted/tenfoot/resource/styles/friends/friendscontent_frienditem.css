@@ -115,7 +115,8 @@ FriendsContent_FriendItem:focus AvatarImage
 
 .FriendPersonaStatus
 {
-
+	max-height: 24px;
+	width: 100%;
 }
 
 .Offline .FriendPersonaStatus
@@ -125,7 +126,6 @@ FriendsContent_FriendItem:focus AvatarImage
 
 .InGame .FriendPersonaStatus
 {	
-
 	font-size: 20px;
 	color: friendsingame_darkbg;
 }

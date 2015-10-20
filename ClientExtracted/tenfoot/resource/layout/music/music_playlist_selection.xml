@@ -11,7 +11,7 @@
 			onmouseactivate="CloseModalDialog();"  >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
 		
-			<Button id="CreateNewPlaylistButton" onactivate="CreateNewPlaylistFromSelection();" >
+			<Button id="CreateNewPlaylistButton" class="Button" onactivate="CreateNewPlaylistFromSelection();" >
 				<Label id="CreateNewPlaylistLabel" text="#MusicPlaylist_Select_NewPlaylist" />
 			</Button>
 			<Panel class="HorizontalRule" id="RenameHorizontalRule"/>

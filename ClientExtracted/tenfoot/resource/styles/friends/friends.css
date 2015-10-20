@@ -118,10 +118,6 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 //	height: 285px;
 //}
 
-FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
-{
-	height: 285px;
-}
 
 #FriendsChatDialogContainer:descendantfocus
 {
@@ -1640,6 +1636,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 {
 	margin-left: 4px;
 	width: 100%;
+	max-height: 40px;
 	
 }
 

@@ -24,6 +24,11 @@
 	margin-top: 20px;
 }
 
+.BehindTextInputHandler #MsgBoxButtons
+{
+	visibility: collapse;
+}
+
 .AddFriendMsgBox #MsgBoxBodyRegion
 {
 	width: 860px;
@@ -40,6 +45,10 @@
 	transform: translatey( -200px );
 }
 
+.AddFriendMsgBox.BehindDaisyWheelTextInputHandler #MsgBoxBodyRegion
+{
+	transform: translateX( 480px );
+}
 
 //  when we're finding a group, .FindGroup is set so swap out the title and description
 .FindGroup #MsgBoxTitle

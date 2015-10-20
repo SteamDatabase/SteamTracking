@@ -414,12 +414,11 @@
  fgets
  fopen$UNIX2003
  fprintf
- fputs
+ fputs$UNIX2003
  fread
  free
  fseek
  ftell
- fwrite
  fwrite$UNIX2003
  g_VProfManager
  g_VProfProfilesRunningCount

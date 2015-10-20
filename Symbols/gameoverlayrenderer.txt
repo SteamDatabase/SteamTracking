@@ -80,7 +80,6 @@
  B g_pScreenshotStream
  B g_pSerializedWorkQueuedEvent
  B g_pVGUIPaintEvent
- B std::string::_Rep::_S_empty_rep_storage
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
@@ -146,17 +145,8 @@
  D typeinfo for __gnu_cxx::__concurrence_unlock_error
  D typeinfo for std::bad_alloc
  D typeinfo for std::bad_exception
- D typeinfo for std::domain_error
  D typeinfo for std::exception
- D typeinfo for std::invalid_argument
- D typeinfo for std::length_error
- D typeinfo for std::logic_error
- D typeinfo for std::out_of_range
- D typeinfo for std::overflow_error
- D typeinfo for std::range_error
- D typeinfo for std::runtime_error
  D typeinfo for std::type_info
- D typeinfo for std::underflow_error
  D vtable for CAsyncCaptureGL
  D vtable for CBaseOverlayRenderer
  D vtable for CGameStreamBaseMemStream
@@ -174,18 +164,8 @@
  D vtable for __cxxabiv1::__si_class_type_info
  D vtable for __gnu_cxx::__concurrence_lock_error
  D vtable for __gnu_cxx::__concurrence_unlock_error
- D vtable for std::bad_alloc
  D vtable for std::bad_exception
- D vtable for std::domain_error
  D vtable for std::exception
- D vtable for std::invalid_argument
- D vtable for std::length_error
- D vtable for std::logic_error
- D vtable for std::out_of_range
- D vtable for std::overflow_error
- D vtable for std::range_error
- D vtable for std::runtime_error
- D vtable for std::underflow_error
  HideCursor
  InitCursor
  R typeinfo name for CAsyncCaptureGL
@@ -213,17 +193,8 @@
  R typeinfo name for __gnu_cxx::__concurrence_unlock_error
  R typeinfo name for std::bad_alloc
  R typeinfo name for std::bad_exception
- R typeinfo name for std::domain_error
  R typeinfo name for std::exception
- R typeinfo name for std::invalid_argument
- R typeinfo name for std::length_error
- R typeinfo name for std::logic_error
- R typeinfo name for std::out_of_range
- R typeinfo name for std::overflow_error
- R typeinfo name for std::range_error
- R typeinfo name for std::runtime_error
  R typeinfo name for std::type_info
- R typeinfo name for std::underflow_error
  ShowCursor
  T AlignPitch16(unsigned int)
  T BOverlayNeedsPresent
@@ -250,9 +221,7 @@
  T CBaseOverlayRenderer::ValveCheckAsyncCapture()
  T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
  T CBaseOverlayRenderer::ValveGetInputClipRegion(int&, int&, int&, int&)
- T CBaseOverlayRenderer::ValveGetPreferredTextureFormat()
  T CBaseOverlayRenderer::ValveGetRenderFormat()
- T CBaseOverlayRenderer::ValveGetRendererType()
  T CBaseOverlayRenderer::ValveGetRendererWindow()
  T CBaseOverlayRenderer::ValveGetSharedD3DTextureSupport()
  T CBaseOverlayRenderer::ValveLockRenderResources()
@@ -557,69 +526,50 @@
  T __gnu_cxx::__throw_concurrence_lock_error()
  T __gnu_cxx::__throw_concurrence_unlock_error()
  T __gnu_cxx::__verbose_terminate_handler()
- T __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*)
  T __gxx_personality_v0
- T char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
  T operator delete(void*)
  T operator delete[](void*)
  T operator new(unsigned long)
  T operator new[](unsigned long)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >*)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::find(int const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, COverlayGLRenderer::GLTexture*> >*)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::find(int const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >*)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::find(unsigned long const&)
- T std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
- T std::_Rb_tree_increment(std::_Rb_tree_node_base*)
- T std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- T std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- T std::__throw_bad_alloc()
- T std::__throw_length_error(char const*)
- T std::__throw_logic_error(char const*)
- T std::bad_alloc::what() const
- T std::bad_alloc::~bad_alloc()
+ T std::__1::__split_buffer<IPC::IEvent*, std::__1::allocator<IPC::IEvent*>&>::~__split_buffer()
+ T std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, long>)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__find_equal<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> const&)
+ T std::__1::__vector_base<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::~__vector_base()
+ T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
+ T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
+ T std::__1::map<int, COverlayGLRenderer::GLTexture*, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, COverlayGLRenderer::GLTexture*> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
+ T std::__1::map<int, COverlayGLRenderer::GLTexture*, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, COverlayGLRenderer::GLTexture*> > >::operator[](int const&)
+ T std::__1::map<unsigned long, CInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, unsigned long const&)
+ T std::__1::map<unsigned long, CInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::operator[](unsigned long&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t>&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t>&&)
  T std::bad_exception::what() const
  T std::bad_exception::~bad_exception()
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
- T std::domain_error::~domain_error()
  T std::exception::what() const
  T std::exception::~exception()
- T std::invalid_argument::~invalid_argument()
- T std::length_error::length_error(std::string const&)
- T std::length_error::~length_error()
- T std::logic_error::logic_error(std::string const&)
- T std::logic_error::what() const
- T std::logic_error::~logic_error()
- T std::map<int, CBaseOverlayRenderer::SharedTexData_t, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
- T std::map<int, COverlayGLRenderer::GLTexture*, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::operator[](int const&)
- T std::map<unsigned long, CInputHandler::CustomCursorData_t, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::operator[](unsigned long const&)
- T std::out_of_range::~out_of_range()
- T std::overflow_error::~overflow_error()
- T std::range_error::~range_error()
- T std::runtime_error::what() const
- T std::runtime_error::~runtime_error()
- T std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long)
- T std::string::_Rep::_M_dispose(std::allocator<char> const&)
- T std::string::_Rep::_M_grab(std::allocator<char> const&, std::allocator<char> const&)
- T std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
  T std::terminate()
  T std::type_info::__is_function_p() const
  T std::type_info::__is_pointer_p() const
- T std::underflow_error::~underflow_error()
  T std::unexpected()
- T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<IPC::IEvent**, std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> > >, IPC::IEvent* const&)
- T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::push_back(IPC::IEvent* const&)
+ T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T void std::__1::vector<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::__push_back_slow_path<IPC::IEvent* const&>(IPC::IEvent* const&)
  T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
@@ -767,7 +717,6 @@
  malloc
  memcmp
  memcpy
- memmove
  memset
  mmap
  mmap$UNIX2003
@@ -823,6 +772,7 @@
  shm_open
  snprintf
  sscanf
+ std::__1::__vector_base_common<true>::__throw_length_error() const
  strcat
  strcmp
  strcpy

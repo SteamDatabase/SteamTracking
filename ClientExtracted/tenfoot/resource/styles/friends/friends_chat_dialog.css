@@ -38,6 +38,24 @@ FriendsChatDialog AvatarImage
 	opacity: 0.0;
 }
 
+FriendsChatDialog:descendantfocus
+{
+	opacity: 1.0;
+	//height: 485px;
+	transform: translateX( -950px );
+	background-color: friendschatmsgsbkgnd;
+}
+
+.BehindDaisyWheelTextInputHandler FriendsChatDialog
+{
+	transform: translateX( -480px );
+}
+
+FriendsChatDialog AvatarImage.AvatarVisible
+{
+	opacity: 1.0;
+}
+
 #FriendsMainBodyInputTextArea
 {
 	width: fill-parent-flow(1.0);
@@ -122,10 +140,10 @@ FriendsChatDialog AvatarImage
 	visibility: collapse;
 }
 
-.CursorVisible #FriendsMainBodyInputSendButton
-{
-	visibility: visible;
-}
+//.CursorVisible #FriendsMainBodyInputSendButton
+//{
+//	visibility: visible;
+//}
 
 #FriendsMainBodyInputSendButton:hover
 {
@@ -183,7 +201,7 @@ FriendsChatDialog AvatarImage
 
 }
 
-.ChatFocus .VoiceHeaderButton
+FriendsChatDialog:descendantfocus .VoiceHeaderButton
 {
 	visibility: visible;
 	padding: 3px;
@@ -194,11 +212,10 @@ FriendsChatDialog AvatarImage
 	//border: 1px solid white;
 }
 
-.ChatFocus .VoiceHeaderButton:hover
+FriendsChatDialog:descendantfocus .VoiceHeaderButton:hover
 {
 	border: 2px solid white;
 }
-
 
 .CursorVisible .VoiceHeaderButtonHintImage
 {
@@ -289,13 +306,81 @@ FriendsChatDialog AvatarImage
 	background-color: none;
 }
 
+#FriendStatusContainer
+{
+	margin-left: 120px;
+	width: 60%;
+	flow-children: down;
+}
+
+.GroupChat #FriendStatusContainer
+{
+	width: 100%;
+}
+
+#FriendName
+{
+	font-size: 30px;
+	max-height: 40px;
+	color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	white-space: nowrap;
+}
+
+#FriendPersona
+{
+	font-size: 24px;
+	color: ui_primary_color;
+}
+
+.Offline #FriendPersona
+{
+	color: #888888;
+}
+
+.InGame #FriendPersona
+{	
+	color: friendsingame_darkbg;
+}
+
+.GroupChat #FriendName, .GroupChat #FriendPersona, .GroupChat #FriendPersonaDetail, .InGame.GroupChat #FriendPersonaDetail
+{
+	visibility: collapse;
+}
+
+#FriendPersonaDetail
+{
+	font-size: 24px;
+	visibility: collapse;
+	color: ui_primary_color;
+}
+
+.InGame #FriendPersonaDetail
+{
+	visibility: visible;
+}
+
+#GroupName
+{
+	visibility: collapse;	
+	color: white;
+	font-size: 30px;
+}
+
+.GroupChat #GroupName
+{
+	visibility: visible;
+}
+
 AvatarImage
 {
-	width: 100px;
-	height: 100px;
+	width: 94px;
+	height: 94px;
 	transition-duration: 0.28s;
 	transition-property: opacity;
 	opacity: 0.0;
+	border-radius: 4px;
 }
 
 AvatarImage.AvatarVisible
@@ -303,6 +388,20 @@ AvatarImage.AvatarVisible
 	opacity: 1.0;
 }
 
+.InGame AvatarImage
+{
+	border: 2px solid friendsingame_darkbg;
+}
+
+.Online AvatarImage
+{
+	border: 2px solid friendsonline_darkbg;
+}
+
+.Offline AvatarImage
+{
+	border: 2px solid friendsoffline_darkbg;
+}
 
 #FriendsVoiceChatControls
 {
@@ -386,7 +485,7 @@ AvatarImage.AvatarVisible
 	margin-top: 2px;
 	font-weight: medium;
 	font-size: 27px;
-	color: #999999ff;
+	color: #666666ff;
 	width: 100%;
 }
 
@@ -409,7 +508,17 @@ AvatarImage.AvatarVisible
 
 FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 {
-	height: 250px;
+	height: 310px;
+}
+
+FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
+{
+	height: 800px;
+}
+
+.BehindDaisyWheelTextInputHandler FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
+{
+	height: 800px;
 }
 
 #FriendsMainBodyInputGroup
@@ -681,3 +790,27 @@ FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 	visibility: visible;
 }
 
+.ChatMsgOnline
+{
+	color: friendsonline_darkbg;
+}
+
+.ChatMsgInGame
+{
+	color: friendsingame_darkbg;
+}
+
+.ChatMsgHistorical
+{
+	color: #666666ff;
+}
+
+.ChatMsgMessageBody, .ChatMsgMessageBodyMyOwn
+{
+	color: #ddddddff;
+}
+
+.ChatMsgSystem
+{
+	color: #ddddddff;
+}

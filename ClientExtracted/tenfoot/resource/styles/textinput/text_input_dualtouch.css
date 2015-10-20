@@ -468,6 +468,7 @@ TextInputDualTouch
 	background-color: #ffffffff;
 }
 
+
 // most of the time we're using "hardware" pointers that render through the D3D/OpenGL layers, so we don't show
 // our native Panorama elements unless we're specifically asked to (during transitions in/out) and we are actively
 // manipulating that pad
@@ -500,6 +501,10 @@ TextInputDualTouch
 {
 	color: #ffffffff;
 	wash-color: #ffffffff;
+}
+.TouchKeyClicked #TouchKeyLabel
+{
+	color: #072744ff;
 }
 
 /*#TextPreview

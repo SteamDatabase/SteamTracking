@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/music/music_playlist_add.css" />
 	</styles>
@@ -25,11 +24,11 @@
 			</Panel>
 			
 			<Panel id="MsgBoxButtons" tabindex="auto" selectionpos="auto">	
-					<Button id="ButtonOK" class="ButtonOK MsgBoxButton" onactivate="ButtonOK();">
+					<Button id="ButtonOK" class="ButtonOK MsgBoxButton Button" onactivate="ButtonOK();">
 						<Label id="OKButtonText" text="#MusicPlaylist_Add_OK" />
 					</Button>
 
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="ButtonCancel();">
 						<Label id="CancelButtonText" text="#MusicPlaylist_Add_Cancel"/>
 					</Button>
 				</Panel>

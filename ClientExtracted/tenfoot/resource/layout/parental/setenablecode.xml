@@ -14,7 +14,7 @@
 				<Panel class="Spacer" />
 				<Label text="#Parental_Enter_EnableCode" />
 						<TextEntry class="ParentalEnableCodeEntry" id="EnableCode"
-								   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+								   textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 								   undohistory="enabled" />
 				<Label id="ErrorText" text="#Parental_Wrong_EnableCode" class="ParentalSetEnableCodeError" />
 			</Panel>

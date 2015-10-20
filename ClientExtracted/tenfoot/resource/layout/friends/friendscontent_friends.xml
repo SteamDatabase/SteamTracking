@@ -8,6 +8,7 @@
 	<FriendsContent_Friends >
 
 			<Label text="#friends_no_friends_message" class="ZeroFriendsLabel" />
+			<Label text="#friends_no_friends_message_offline" class="NotLoggedInLabel" />
 
 			<Button id="ClearFilterButton" onactivate="FriendsClearFilter();FriendsSelectFirstItem();" selectionpos="auto" tabindex="auto">
 				<Label text="Filtered view, '{s:filter_string}' , click here to clear" />

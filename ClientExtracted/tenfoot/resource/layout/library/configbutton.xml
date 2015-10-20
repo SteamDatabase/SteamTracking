@@ -7,6 +7,7 @@
 
 	<ControllerConfigButton oncancel="MoveLeft(0);">
 		<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />
+		<Label id="Votes" text="#ControllerBindingVotes" />
 		<Panel id="ConfigContentWrapper">
 				<Label id="Title" />
 				<Label id="Author" />

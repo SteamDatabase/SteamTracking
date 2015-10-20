@@ -16,7 +16,7 @@
 					<Panel class="ParentalRecoveryEmailEntry" >
 						<Label text="#Parental_Enter_RecoveryEmail" /> 
 						<TextEntry id="Email"
-								   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+								   textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 								   undohistory="enabled" />
 					</Panel>
 			</Panel>

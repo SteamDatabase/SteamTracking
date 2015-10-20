@@ -148,7 +148,7 @@
 						<Button id="kb_key_m" selectionpos="-6,4" onactivate="SetBinding( key_press, m );" onmovedown="SetInputFocus( kb_key_space );"><Label text="M" /></Button>
 						<Button id="kb_key_comma" selectionpos="-5,4" onactivate="SetBinding( key_press, comma );" onmovedown="SetInputFocus( kb_key_space );"><Label text="," /></Button>
 						<Button id="kb_key_period" selectionpos="-4,4" onactivate="SetBinding( key_press, period );"><Label text="." /></Button>
-						<Button id="kb_key_fowardslash" selectionpos="-3,4" onactivate="SetBinding( key_press, forwardslash );"><Label text="/" /></Button>
+						<Button id="kb_key_forwardslash" selectionpos="-3,4" onactivate="SetBinding( key_press, forwardslash );"><Label text="/" /></Button>
 						<Button id="kb_key_rshift" selectionpos="-2,4" onactivate="SetBinding( key_press, rshift );"><Label text="shift" /></Button>
 					</Panel>
 					<Panel id="VKBCol2" selectionpos="30,0">

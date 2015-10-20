@@ -196,6 +196,12 @@ MinimalProfileEdit
 	method		"internal"
 	filter		"profile"
 }
+SteamIDProfileBG
+{
+	url			"%community%/profiles/%p1%/profilebg"
+	method		"internal"
+	filter		"profile"
+}
 GroupSteamIDPage
 {
 	url			"%community%/gid/%p1%"

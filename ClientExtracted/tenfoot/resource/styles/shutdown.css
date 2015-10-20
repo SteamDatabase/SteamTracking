@@ -12,31 +12,24 @@ Shutdown
 	flow-children: down;
 }
 
+#BackgroundThrobber
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
 #DescriptionLabel
 {
 	text-align: center;
-	width: 75%;
+	height: 50px;
 	font-family: platformfont;
 	font-size: 30px;
-	margin-bottom: 16px;
+	margin-top: 30px;
 	color: tcstatictext;
-	opacity: 1.0;
-}
-
-.ShutdownThrobber
-{
 	opacity: 0.0;
-	width: 54px;
-	height: 54px;
-	margin-bottom: 10px;
-	horizontal-align: center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
 }
 
-.MessageVisible .ShutdownThrobber
+.MessageVisible #DescriptionLabel
 {
 	opacity: 1.0;
 }

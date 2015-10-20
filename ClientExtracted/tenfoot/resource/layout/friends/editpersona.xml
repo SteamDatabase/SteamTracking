@@ -12,7 +12,9 @@
 
 			<Panel id="MsgBoxBodyArea" class="MsgBoxBodyArea">
 
-				<Panel class="FriendsOptionWrapper">
+				<Label id="SteamOfflineMessage" class="FriendsOptionLabel" text="#Friends_SetPersona_OfflineMsg" />
+
+				<Panel class="FriendsOptionWrapper" id="PersonaStateWrapper">
 					<Label id="PersonaState" class="FriendsOptionLabel" text="#Friends_SetPersonaStatus" />
 					<DropDown id="PersonaStateDropdown" class="PersonaStateDropDown">
 						<Label id="Online" text="#Friends_PersonaOnline" />

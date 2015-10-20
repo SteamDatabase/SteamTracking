@@ -18,7 +18,7 @@
 					<TextEntry id="AddFriendTextEntry" 
 						textinputid="FriendsInputTextEntry"
 						textinputdoneactionstring="#Friends_AddFriend_OK"
-						textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat"
+						textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat NoSuggestions"
 					/>
 				</Panel>
 				

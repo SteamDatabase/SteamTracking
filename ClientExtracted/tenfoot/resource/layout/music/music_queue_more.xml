@@ -10,19 +10,19 @@
 			onmouseactivate="CloseModalDialog();" >
 	
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button onactivate="MusicControlMore();" >
+			<Button class="Button" onactivate="MusicControlMore();" >
 				<Label text="#Music_Queue_Browse_Music" />
 			</Button>
 			<Panel class="HorizontalRule"/>
-			<Button id="RemoveCurrentTrackButton" onactivate="RemoveCurrentTrack();" >
+			<Button id="RemoveCurrentTrackButton" class="Button" onactivate="RemoveCurrentTrack();" >
 				<Label text="#Music_Queue_Remove_Track_From_Queue" />
 			</Button>
 			<Panel id="ShowRulerWhenShowCurrent" class="HorizontalRule"/>
-			<Button onactivate="EmptyQueue();">
+			<Button class="Button" onactivate="EmptyQueue();">
 				<Label text="#Music_Queue_Clear_Queue" />
 			</Button>
 			<Panel class="HorizontalRule"/>
-			<Button onactivate="CreatePlaylistFromQueue();">
+			<Button class="Button" onactivate="CreatePlaylistFromQueue();">
 				<Label text="#Music_Queue_Create_Playlist_From_Queue" />
 			</Button>
 		</Panel>

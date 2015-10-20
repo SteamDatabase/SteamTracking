@@ -75,9 +75,6 @@ DropDownMenu.DropDownMenuVisible
 {
 	width: 428px;
 	height: 54px;
-	transition-property: pre-transform-scale2d;
-	transition-duration: 0.2s;
-	border-width: 5px;
 }
 
 DropDown Label
@@ -86,7 +83,7 @@ DropDown Label
 
 .FriendsOptionWrapper DropDown:hover
 {
-	pre-transform-scale2d: 1.05;
+	//pre-transform-scale2d: 1.05;
 }
 
 .FriendsOptionWrapper Label
@@ -95,10 +92,33 @@ DropDown Label
 	color: detailsdatalabelfocus;
 }
 
-.FriendsOptionWrapper .FriendsOptionLabel
+.FriendsOptionLabel
 {
 	width: 252px;
 	font-size: 28px;
 	margin-top: 8px;
 	margin-left: 0px;
+}
+
+Label
+{	
+	color: detailsdatalabelfocus;
+}
+
+#SteamOfflineMessage
+{
+	width: 100%;
+	visibility: collapse;
+
+	margin-bottom: 30px;
+}
+
+.StateNotEditable #SteamOfflineMessage
+{
+	visibility: visible;
+}
+
+.StateNotEditable #PersonaStateWrapper
+{
+	visibility: collapse;
 }

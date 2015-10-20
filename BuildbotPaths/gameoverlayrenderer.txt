@@ -46,13 +46,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(eh_throw.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(eh_type.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(eh_unex_handler.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(functexcept.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(new_handler.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(pure.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(stdexcept.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(string-inst.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(tinfo.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(tree.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libstdc++-static.a(vterminate.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/gamestreammemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/gamestreammemstream.h

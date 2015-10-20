@@ -21,6 +21,7 @@ FriendsContent_Friends.ContentList
 	overflow: clip scroll;
 	flow-children: right-wrap;
 	width: 100%;
+	margin-left: 6px;
 }
 
 .Filtered #FriendsListItems
@@ -103,16 +104,32 @@ Label
 	visibility: visible;
 }
 
-.ZeroFriendsLabel
+.ZeroFriendsLabel, .NotLoggedInLabel
 {
 	width: 100%;
 	text-align: center;
-	vertical-align: center;
+	margin-top: 310px;
+	font-size: 26px;
 }
 
 .HasFriends .ZeroFriendsLabel
 {
 	visibility: collapse;
+}
+
+.NotLoggedIn .ZeroFriendsLabel
+{
+	visibility: collapse;
+}
+
+.NotLoggedInLabel
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn .NotLoggedInLabel
+{
+	visibility: visible;
 }
 
 #ClearFilterButton

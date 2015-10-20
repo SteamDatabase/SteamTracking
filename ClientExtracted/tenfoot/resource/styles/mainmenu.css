@@ -1224,6 +1224,8 @@ pre-transform-scale2d: 0.8;
 	padding: 0px;
 	margin-top:5px;
 	margin-left:5px;
+	border-radius: 3px;
+	box-shadow: fill #00000033 -3px -3px 6px 6px;
 }
 
 .GameButton:focus
@@ -1240,6 +1242,12 @@ pre-transform-scale2d: 0.8;
 	horizontal-align: center;
 	height: 100%;
 	width: fit-children;
+}
+
+.GameButton #SuggestedStatus
+{
+	margin-right: 0px;
+	margin-bottom: 0px;
 }
 
 
@@ -1623,16 +1631,19 @@ InboxMenu .Button
 	padding-top: 0px;
 }
 
+/*
 .InboxEmpty .AlertsMainTitle,
 .AlertsEmpty,
 {
 	visibility: collapse;
 }
+*/
 
-.InboxEmpty .AlertsEmpty,
+#InboxItems .AlertsEmpty,
 {
-	visibility: visible;
+	visibility: collapse;
 }
+
 
 ParentalButton.Locked
 {

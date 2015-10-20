@@ -1838,7 +1838,19 @@ SettingsPanel_GameController_Binding
 {
 	margin-top: 32px;
 	flow-children: right;
+	height: 100%;
 }
+
+.SettingsControllerContent .SettingsRight
+{
+	height: 100%;
+}
+
+.SettingsControllerContent #SettingsControllerBinds
+{
+	height: 750px;
+}
+
 
 #SettingsControllerBinds
 {
@@ -3479,8 +3491,19 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 
 SettingsPanelDiskManagementAppListing.Deleting Button
 {
-	opacity: 0.0;
+	wash-color: #ffffffaa;
 }
+
+SettingsPanelDiskManagementAppListing.EmptyEntry
+{
+	visibility: collapse;
+}
+
+.Empty SettingsPanelDiskManagementAppListing.EmptyEntry
+{
+	visibility: visible;
+}
+
 
 .NonSteamOSButton,
 #SettingsInterface_EnableScreenSaver.CheckBox,

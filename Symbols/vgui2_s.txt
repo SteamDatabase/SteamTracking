@@ -69,7 +69,18 @@
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
  B CryptoPP::AAD_CHANNEL
- B CryptoPP::BufferedTransformation::NULL_CHANNEL
+ B CryptoPP::DEFAULT_CHANNEL
+ B CryptoPP::g_hasAESNI
+ B CryptoPP::g_hasCLMUL
+ B CryptoPP::g_hasISSE
+ B CryptoPP::g_hasMMX
+ B CryptoPP::g_hasSSE2
+ B CryptoPP::g_hasSSSE3
+ B CryptoPP::g_isP4
+ B CryptoPP::g_nullNameValuePairs
+ B CryptoPP::g_powerUpSelfTestStatus
+ B CryptoPP::g_x86DetectionDone
+ B CryptoPP::s_pNullNameValuePairs
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
  B OPENSSL_NONPIC_relocated
@@ -202,18 +213,7 @@
  D .objc_class_name_VGUITranslatorResponder
  D CFontTextureCache::s_pStringPageSize
  D CUtlSymbol::s_bAllowStaticSymbolTable
- D CryptoPP::DEFAULT_CHANNEL
  D CryptoPP::g_cacheLineSize
- D CryptoPP::g_hasAESNI
- D CryptoPP::g_hasCLMUL
- D CryptoPP::g_hasISSE
- D CryptoPP::g_hasMMX
- D CryptoPP::g_hasSSE2
- D CryptoPP::g_hasSSSE3
- D CryptoPP::g_isP4
- D CryptoPP::g_nullNameValuePairs
- D CryptoPP::g_powerUpSelfTestStatus
- D CryptoPP::g_x86DetectionDone
  D g_FallbackFonts
  D g_VGUI2DLLValidate
  D typeinfo for CBaseSurface
@@ -244,7 +244,6 @@
  D typeinfo for CryptoPP::BlockCipher
  D typeinfo for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
  D typeinfo for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- D typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
  D typeinfo for CryptoPP::BlockTransformation
  D typeinfo for CryptoPP::BlockingRng
  D typeinfo for CryptoPP::BufferedTransformation
@@ -254,12 +253,10 @@
  D typeinfo for CryptoPP::Clonable
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- D typeinfo for CryptoPP::DL_BadElement
  D typeinfo for CryptoPP::Exception
  D typeinfo for CryptoPP::FixedBlockSize<16u>
  D typeinfo for CryptoPP::HashInputTooLong
  D typeinfo for CryptoPP::HashTransformation
- D typeinfo for CryptoPP::Integer::RandomNumberType
  D typeinfo for CryptoPP::InvalidArgument
  D typeinfo for CryptoPP::InvalidDataFormat
  D typeinfo for CryptoPP::InvalidKeyLength
@@ -267,7 +264,6 @@
  D typeinfo for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
  D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  D typeinfo for CryptoPP::NameValuePairs
- D typeinfo for CryptoPP::NameValuePairs::ValueTypeMismatch
  D typeinfo for CryptoPP::NonblockingRng
  D typeinfo for CryptoPP::NotCopyable
  D typeinfo for CryptoPP::NotImplemented
@@ -294,6 +290,9 @@
  D typeinfo for IVGuiModuleLoader
  D typeinfo for IValidate
  D typeinfo for VPanelWrapper
+ D typeinfo for std::__1::__basic_string_common<true>
+ D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  D typeinfo for vgui::Bitmap
  D typeinfo for vgui::CBaseOSXSurface<CBaseSurface>
  D typeinfo for vgui::CBaseOSXSurface<vgui::COpenGLSurface>
@@ -351,18 +350,12 @@
  D vtable for CVGui
  D vtable for CVGuiSystemModuleLoader
  D vtable for CryptoPP::Algorithm
- D vtable for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
  D vtable for CryptoPP::ArraySink
  D vtable for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
  D vtable for CryptoPP::BitBucket
- D vtable for CryptoPP::BlockCipher
  D vtable for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- D vtable for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
  D vtable for CryptoPP::BlockingRng
- D vtable for CryptoPP::BufferedTransformation
  D vtable for CryptoPP::BufferedTransformation::NoChannelSupport
- D vtable for CryptoPP::Clonable
- D vtable for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
  D vtable for CryptoPP::Exception
  D vtable for CryptoPP::HashInputTooLong
  D vtable for CryptoPP::InvalidArgument
@@ -375,11 +368,9 @@
  D vtable for CryptoPP::NullNameValuePairs
  D vtable for CryptoPP::OS_RNG_Err
  D vtable for CryptoPP::Rijndael::Base
- D vtable for CryptoPP::Rijndael::Enc
  D vtable for CryptoPP::SHA256
  D vtable for CryptoPP::SelfTestFailure
  D vtable for CryptoPP::SimpleKeyingInterface
- D vtable for CryptoPP::Sink
  D vtable for CryptoPP::X917RNG
  D vtable for VPanelWrapper
  D vtable for vgui::Bitmap
@@ -586,7 +577,6 @@
  R typeinfo name for CryptoPP::BlockCipher
  R typeinfo name for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
  R typeinfo name for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- R typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
  R typeinfo name for CryptoPP::BlockTransformation
  R typeinfo name for CryptoPP::BlockingRng
  R typeinfo name for CryptoPP::BufferedTransformation
@@ -596,12 +586,10 @@
  R typeinfo name for CryptoPP::Clonable
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- R typeinfo name for CryptoPP::DL_BadElement
  R typeinfo name for CryptoPP::Exception
  R typeinfo name for CryptoPP::FixedBlockSize<16u>
  R typeinfo name for CryptoPP::HashInputTooLong
  R typeinfo name for CryptoPP::HashTransformation
- R typeinfo name for CryptoPP::Integer::RandomNumberType
  R typeinfo name for CryptoPP::InvalidArgument
  R typeinfo name for CryptoPP::InvalidDataFormat
  R typeinfo name for CryptoPP::InvalidKeyLength
@@ -609,7 +597,6 @@
  R typeinfo name for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
  R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  R typeinfo name for CryptoPP::NameValuePairs
- R typeinfo name for CryptoPP::NameValuePairs::ValueTypeMismatch
  R typeinfo name for CryptoPP::NonblockingRng
  R typeinfo name for CryptoPP::NotCopyable
  R typeinfo name for CryptoPP::NotImplemented
@@ -636,6 +623,9 @@
  R typeinfo name for IVGuiModuleLoader
  R typeinfo name for IValidate
  R typeinfo name for VPanelWrapper
+ R typeinfo name for std::__1::__basic_string_common<true>
+ R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  R typeinfo name for style_t
  R typeinfo name for vgui::Bitmap
  R typeinfo name for vgui::CBaseOSXSurface<CBaseSurface>
@@ -2232,30 +2222,25 @@
  T CryptoPP::Algorithm::AlgorithmName() const
  T CryptoPP::Algorithm::~Algorithm()
  T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>::AlgorithmName() const
- T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>::~AlgorithmImpl()
  T CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
- T CryptoPP::AlgorithmParametersBase::ParameterNotUsed::~ParameterNotUsed()
  T CryptoPP::ArraySink::CreatePutSpace(unsigned long&)
  T CryptoPP::ArraySink::IsolatedInitialize(CryptoPP::NameValuePairs const&)
  T CryptoPP::ArraySink::Put2(unsigned char const*, unsigned long, int, bool)
  T CryptoPP::ArraySink::~ArraySink()
  T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::CanIncorporateEntropy() const
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::string const&, unsigned long long)
+ T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
  T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::IncorporateEntropy(unsigned char const*, unsigned long)
  T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(bool, unsigned char const*, unsigned long)
  T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(unsigned char const*, unsigned long, unsigned char const*, unsigned char const*)
  T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::~AutoSeededX917RNG()
- T CryptoPP::BERDecodeErr::~BERDecodeErr()
  T CryptoPP::BitBucket::AlgorithmName() const
  T CryptoPP::BitBucket::IsolatedInitialize(CryptoPP::NameValuePairs const&)
  T CryptoPP::BitBucket::Put2(unsigned char const*, unsigned long, int, bool)
  T CryptoPP::BitBucket::~BitBucket()
  T CryptoPP::BlockCipher::GetAlgorithm() const
- T CryptoPP::BlockCipher::~BlockCipher()
  T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
  T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
  T CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::~BlockCipherImpl()
  T CryptoPP::BlockTransformation::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
  T CryptoPP::BlockTransformation::IsPermutation() const
  T CryptoPP::BlockTransformation::OptimalDataAlignment() const
@@ -2269,14 +2254,12 @@
  T CryptoPP::BufferedTransformation::Attachable()
  T CryptoPP::BufferedTransformation::AttachedTransformation()
  T CryptoPP::BufferedTransformation::AttachedTransformation() const
- T CryptoPP::BufferedTransformation::BlockingInputOnly::~BlockingInputOnly()
  T CryptoPP::BufferedTransformation::CanModifyInput() const
- T CryptoPP::BufferedTransformation::ChannelCreatePutSpace(std::string const&, unsigned long&)
- T CryptoPP::BufferedTransformation::ChannelFlush(std::string const&, bool, int, bool)
- T CryptoPP::BufferedTransformation::ChannelMessageSeriesEnd(std::string const&, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPut2(std::string const&, unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPutModifiable2(std::string const&, unsigned char*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::CopyMessagesTo(CryptoPP::BufferedTransformation&, unsigned int, std::string const&) const
+ T CryptoPP::BufferedTransformation::ChannelCreatePutSpace(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long&)
+ T CryptoPP::BufferedTransformation::ChannelFlush(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, int, bool)
+ T CryptoPP::BufferedTransformation::ChannelMessageSeriesEnd(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool)
+ T CryptoPP::BufferedTransformation::ChannelPut2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char const*, unsigned long, int, bool)
+ T CryptoPP::BufferedTransformation::ChannelPutModifiable2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char*, unsigned long, int, bool)
  T CryptoPP::BufferedTransformation::CreatePutSpace(unsigned long&)
  T CryptoPP::BufferedTransformation::Detach(CryptoPP::BufferedTransformation*)
  T CryptoPP::BufferedTransformation::Flush(bool, int, bool)
@@ -2288,11 +2271,10 @@
  T CryptoPP::BufferedTransformation::GetNextMessageSeries()
  T CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
  T CryptoPP::BufferedTransformation::Initialize(CryptoPP::NameValuePairs const&, int)
- T CryptoPP::BufferedTransformation::InvalidChannelName::~InvalidChannelName()
- T CryptoPP::BufferedTransformation::IsolatedInitialize(CryptoPP::NameValuePairs const&)
  T CryptoPP::BufferedTransformation::IsolatedMessageSeriesEnd(bool)
  T CryptoPP::BufferedTransformation::MaxRetrievable() const
  T CryptoPP::BufferedTransformation::MessageSeriesEnd(int, bool)
+ T CryptoPP::BufferedTransformation::NoChannelSupport::NoChannelSupport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::BufferedTransformation::NoChannelSupport::~NoChannelSupport()
  T CryptoPP::BufferedTransformation::NumberOfMessageSeries() const
  T CryptoPP::BufferedTransformation::NumberOfMessages() const
@@ -2301,30 +2283,24 @@
  T CryptoPP::BufferedTransformation::Peek(unsigned char*, unsigned long) const
  T CryptoPP::BufferedTransformation::PutModifiable2(unsigned char*, unsigned long, int, bool)
  T CryptoPP::BufferedTransformation::SetAutoSignalPropagation(int)
- T CryptoPP::BufferedTransformation::SetRetrievalChannel(std::string const&)
+ T CryptoPP::BufferedTransformation::SetRetrievalChannel(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::BufferedTransformation::Skip(unsigned long long)
  T CryptoPP::BufferedTransformation::SkipAll()
  T CryptoPP::BufferedTransformation::SkipMessages(unsigned int)
  T CryptoPP::BufferedTransformation::TotalBytesRetrievable() const
- T CryptoPP::BufferedTransformation::TransferMessagesTo2(CryptoPP::BufferedTransformation&, unsigned int&, std::string const&, bool)
- T CryptoPP::BufferedTransformation::~BufferedTransformation()
+ T CryptoPP::BufferedTransformation::TransferMessagesTo2(CryptoPP::BufferedTransformation&, unsigned int&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
  T CryptoPP::Bufferless<CryptoPP::Sink>::IsolatedFlush(bool, bool)
- T CryptoPP::CallNewHandler()
- T CryptoPP::CannotFlush::~CannotFlush()
  T CryptoPP::Clonable::Clone() const
- T CryptoPP::Clonable::~Clonable()
  T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::~ClonableImpl()
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
  T CryptoPP::CpuId(unsigned int, unsigned int*)
- T CryptoPP::CryptoMaterial::InvalidMaterial::~InvalidMaterial()
- T CryptoPP::DL_BadElement::~DL_BadElement()
  T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::string const&)
+ T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Exception::what() const
  T CryptoPP::Exception::~Exception()
  T CryptoPP::FIPS_140_2_ComplianceEnabled()
  T CryptoPP::GetPowerUpSelfTestStatus()
+ T CryptoPP::HashInputTooLong::HashInputTooLong(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::HashInputTooLong::~HashInputTooLong()
  T CryptoPP::HashTransformation::CalculateDigest(unsigned char*, unsigned char const*, unsigned long)
  T CryptoPP::HashTransformation::CalculateTruncatedDigest(unsigned char*, unsigned long, unsigned char const*, unsigned long)
@@ -2334,12 +2310,9 @@
  T CryptoPP::HashTransformation::Verify(unsigned char const*)
  T CryptoPP::HashTransformation::VerifyDigest(unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::HashTransformation::VerifyTruncatedDigest(unsigned char const*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::HashVerificationFilter::HashVerificationFailed::~HashVerificationFailed()
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected::~InputRejected()
- T CryptoPP::InputRejecting<CryptoPP::Filter>::InputRejected::~InputRejected()
  T CryptoPP::InvalidArgument::~InvalidArgument()
- T CryptoPP::InvalidCiphertext::~InvalidCiphertext()
  T CryptoPP::InvalidDataFormat::~InvalidDataFormat()
+ T CryptoPP::InvalidKeyLength::InvalidKeyLength(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long)
  T CryptoPP::InvalidKeyLength::~InvalidKeyLength()
  T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::BlockSize() const
  T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::DataBuf()
@@ -2349,16 +2322,15 @@
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::HashMultipleBlocks(unsigned int const*, unsigned long)
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalBlockSize() const
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalDataAlignment() const
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::PadLastBlock(unsigned int, unsigned char)
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Restart()
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::TruncatedFinal(unsigned char*, unsigned long)
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Update(unsigned char const*, unsigned long)
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::DigestSize() const
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::HashEndianCorrectedBlock(unsigned int const*)
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::Init()
+ T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::IteratedHashWithStaticTransform()
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::StateBuf()
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::~IteratedHashWithStaticTransform()
- T CryptoPP::NameValuePairs::ValueTypeMismatch::~ValueTypeMismatch()
  T CryptoPP::NonblockingRng::GenerateBlock(unsigned char*, unsigned long)
  T CryptoPP::NonblockingRng::NonblockingRng()
  T CryptoPP::NonblockingRng::~NonblockingRng()
@@ -2366,7 +2338,7 @@
  T CryptoPP::NullNameValuePairs::GetVoidValue(char const*, std::type_info const&, void*) const
  T CryptoPP::NullNameValuePairs::~NullNameValuePairs()
  T CryptoPP::OS_GenerateRandomBlock(bool, unsigned char*, unsigned long)
- T CryptoPP::OS_RNG_Err::OS_RNG_Err(std::string const&)
+ T CryptoPP::OS_RNG_Err::OS_RNG_Err(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::OS_RNG_Err::~OS_RNG_Err()
  T CryptoPP::PowerUpSelfTestInProgressOnThisThread()
  T CryptoPP::RandomNumberGenerator::CanIncorporateEntropy() const
@@ -2374,21 +2346,18 @@
  T CryptoPP::RandomNumberGenerator::GenerateBit()
  T CryptoPP::RandomNumberGenerator::GenerateBlock(unsigned char*, unsigned long)
  T CryptoPP::RandomNumberGenerator::GenerateByte()
- T CryptoPP::RandomNumberGenerator::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::string const&, unsigned long long)
+ T CryptoPP::RandomNumberGenerator::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
  T CryptoPP::RandomNumberGenerator::GenerateWord32(unsigned int, unsigned int)
  T CryptoPP::RandomNumberGenerator::IncorporateEntropy(unsigned char const*, unsigned long)
  T CryptoPP::Rijndael::Base::FillDecTable()
- T CryptoPP::Rijndael::Base::FillEncTable()
  T CryptoPP::Rijndael::Base::UncheckedSetKey(unsigned char const*, unsigned int, CryptoPP::NameValuePairs const&)
  T CryptoPP::Rijndael::Base::~Base()
  T CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
  T CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T CryptoPP::Rijndael::Enc::~Enc()
  T CryptoPP::SHA256::InitState(unsigned int*)
  T CryptoPP::SHA256::Transform(unsigned int*, unsigned int const*)
  T CryptoPP::SHA256::~SHA256()
  T CryptoPP::SelfTestFailure::~SelfTestFailure()
- T CryptoPP::SignatureVerificationFilter::SignatureVerificationFailed::~SignatureVerificationFailed()
  T CryptoPP::SimpleKeyingInterface::GetNextIV(CryptoPP::RandomNumberGenerator&, unsigned char*)
  T CryptoPP::SimpleKeyingInterface::IVSize() const
  T CryptoPP::SimpleKeyingInterface::IsValidKeyLength(unsigned long) const
@@ -2404,21 +2373,15 @@
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVSize() const
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MaxKeyLength() const
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MinKeyLength() const
- T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::string const&, bool) const
- T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::string const&, bool)
- T CryptoPP::Sink::~Sink()
- T CryptoPP::TheBitBucket()
+ T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
+ T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
  T CryptoPP::UnalignedAllocate(unsigned long)
  T CryptoPP::UnalignedDeallocate(void*)
- T CryptoPP::UnknownOID::~UnknownOID()
  T CryptoPP::VerifyBufsEqual(unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::X917RNG::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::string const&, unsigned long long)
+ T CryptoPP::X917RNG::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
  T CryptoPP::X917RNG::X917RNG(CryptoPP::BlockTransformation*, unsigned char const*, unsigned char const*)
  T CryptoPP::X917RNG::~X917RNG()
- T CryptoPP::member_ptr<CryptoPP::BlockTransformation>::~member_ptr()
- T CryptoPP::member_ptr<CryptoPP::RandomNumberGenerator>::reset(CryptoPP::RandomNumberGenerator*)
- T CryptoPP::member_ptr<CryptoPP::RandomNumberGenerator>::~member_ptr()
- T CryptoPP::memcpy_s(void*, unsigned long, void const*, unsigned long)
+ T CryptoPP::simple_ptr<CryptoPP::NullNameValuePairs>::~simple_ptr()
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
  T DisplayReconfigurationCallBack(unsigned int, unsigned int, void*)
@@ -2761,21 +2724,15 @@
  T non-virtual thunk to CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
  T non-virtual thunk to CryptoPP::ArraySink::~ArraySink()
  T non-virtual thunk to CryptoPP::BitBucket::~BitBucket()
- T non-virtual thunk to CryptoPP::BlockCipher::~BlockCipher()
  T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
  T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
  T non-virtual thunk to CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T non-virtual thunk to CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::~BlockCipherImpl()
  T non-virtual thunk to CryptoPP::BufferedTransformation::GetMaxWaitObjectCount() const
  T non-virtual thunk to CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
- T non-virtual thunk to CryptoPP::BufferedTransformation::~BufferedTransformation()
  T non-virtual thunk to CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T non-virtual thunk to CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::~ClonableImpl()
  T non-virtual thunk to CryptoPP::Rijndael::Base::~Base()
  T non-virtual thunk to CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
  T non-virtual thunk to CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T non-virtual thunk to CryptoPP::Rijndael::Enc::~Enc()
- T non-virtual thunk to CryptoPP::Sink::~Sink()
  T non-virtual thunk to vgui::COpenGLSurface::CreateNewTextureID(bool)
  T non-virtual thunk to vgui::COpenGLSurface::Font_DrawSetTextureRGBA(int, unsigned char const*, int, int)
  T non-virtual thunk to vgui::COpenGLSurface::Font_DrawUpdateSubTextureRGBA(int, int, int, unsigned char const*, int, int)
@@ -3142,14 +3099,14 @@
  T sk_unshift
  T sk_value
  T sk_zero
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
- T std::string CryptoPP::IntToString<int>(int, unsigned int)
- T std::string CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
- T std::string CryptoPP::IntToString<unsigned long>(unsigned long, unsigned int)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<int>(int, unsigned int)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned long>(unsigned long, unsigned int)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
+ T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T style_t::Validate(CValidator&, char const*)
- T unsigned int CryptoPP::BitPrecision<unsigned int>(unsigned int const&)
  T vgui::Bitmap::Bitmap(char const*, bool)
  T vgui::Bitmap::ForceUpload()
  T vgui::Bitmap::GetContentSize(int&, int&)
@@ -3434,7 +3391,7 @@
  T vgui::VPanel::~VPanel()
  T vgui::Vertex_t::Vertex_t()
  T vgui::__CreateVGUISetupIVGuiSetup_interface()
- T void CryptoPP::ByteReverse<unsigned int>(unsigned int*, unsigned int const*, unsigned long)
+ T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
  T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<vgui::layoutcmd_base_t>(vgui::layoutcmd_base_t*)
  TSListBase_Init
@@ -3496,7 +3453,6 @@
  __cxa_pure_virtual
  __cxa_throw
  __error
- __gnu_cxx::__exchange_and_add(int volatile*, int)
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
@@ -3551,7 +3507,6 @@
  b CryptoPP::Td
  b CryptoPP::Te
  b CryptoPP::TheBitBucket()::bitBucket
- b CryptoPP::s_NullNameValuePairs
  b CryptoPP::s_TdFilled
  b CryptoPP::s_TeFilled
  b CryptoPP::s_jmpNoCPUID
@@ -3636,7 +3591,6 @@
  b options
  b order
  b realloc_debug_func
- b reference temporary #0 for CryptoPP::BufferedTransformation::NULL_CHANNEL
  b s_CCSyntaxParam
  b s_PSN
  b s_VGUI2Focus
@@ -3657,7 +3611,6 @@
  b s_pVGUIToVirtualKey
  b s_pVirtualKeyToVGUI
  b set_debug_options_func
- b std::__ioinit
  b threadid_callback
  b vec2_invalid
  b vec2_origin
@@ -3740,7 +3693,6 @@
  fseek
  fseeko
  ftell
- fwrite
  fwrite$UNIX2003
  g_VProfManager
  g_VProfProfilesRunningCount
@@ -3880,21 +3832,17 @@
  sscanf
  stat$INODE64
  statfs64
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::bad_alloc::bad_alloc()
  std::bad_alloc::~bad_alloc()
- std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
- std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
- std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
  std::exception::~exception()
- std::ios_base::Init::Init()
- std::ios_base::Init::~Init()
  std::set_new_handler(void (*)())
- std::string::_Rep::_M_destroy(std::allocator<char> const&)
- std::string::_Rep::_S_empty_rep_storage
- std::string::append(char const*, unsigned long)
- std::string::append(std::string const&)
- std::string::append(unsigned long, char)
- std::string::assign(std::string const&)
- std::string::reserve(unsigned long)
  std::terminate()
  strchr
  strcmp
@@ -3950,6 +3898,8 @@
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::AddToTail((anonymous namespace)::BadTextureData_t const&)
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::~CUtlVector()
+ t CryptoPP::SigIllHandlerCPUID(int)
+ t CryptoPP::SigIllHandlerSSE2(int)
  t CryptoPP::TrySSE2()
  t FixCarbonCocoaMiniatureWindowMadness()
  t FreeTree(ExprNode*&)
@@ -3962,21 +3912,15 @@
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
  t ResetTextureParams_GL_TEXTURE_2D()
- t SigIllHandlerCPUID
- t SigIllHandlerSSE2
  t SimplifyNode(ExprNode*&)
  t UpdateApplicationWindowMenuItem(unsigned int)
+ t _GLOBAL__sub_I_cryptlib.cpp
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
- t __static_initialization_and_destruction_0(int, int)
- t __tcf_0
- t __tcf_2
- t __tcf_3
- t __tcf_4
  t _dopr
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
@@ -4020,10 +3964,6 @@
  t fmtint
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned long const*, unsigned long long const*)
  t get_error_values
- t global constructors keyed to CryptoPP::AssignIntToInteger(std::type_info const&, void*, void const*)
- t global constructors keyed to CryptoPP::DEFAULT_CHANNEL
- t global constructors keyed to CryptoPP::PKCS_DigestDecoration<CryptoPP::SHA1>::decoration
- t global constructors keyed to CryptoPP::PolynomialMod2::PolynomialMod2()
  t int_cleanup
  t int_dup_ex_data
  t int_err_del
@@ -4058,10 +3998,9 @@
  vfprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
- vtable for __cxxabiv1::__enum_type_info
+ vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
- vtable for std::bad_alloc
  wcschr
  wcscmp
  wcscpy

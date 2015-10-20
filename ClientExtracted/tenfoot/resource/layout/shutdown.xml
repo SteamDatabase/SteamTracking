@@ -6,7 +6,7 @@
 
 	<Shutdown tabindex="auto" selectionpos="auto">
 		<Panel id="CenterWrapper">
-			<Panel class="ShutdownThrobber" />
+			<LoadingThrobber id="BackgroundThrobber" class="Large"/>		
 			<Label id="DescriptionLabel" />
 		</Panel>
 	</Shutdown>

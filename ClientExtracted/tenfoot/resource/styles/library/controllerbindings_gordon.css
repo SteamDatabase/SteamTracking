@@ -287,128 +287,83 @@ ControllerBindingsGordon.ScreenSaverMode
 	background-image: url( "" );
 }
 
-#BackgroundController
+#BackgroundController,
 {
 	background-position: 535px 79px;
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
 }
 
-.EditLeftTrackpadSource #BackgroundController
+.BackgroundLines
 {
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s1.png");
+	background-position: -96px -80px;
+	transition-property: pre-transform-scale2d, transform, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.EditJoystickSource #BackgroundController
+#BackgroundBaseLines
 {
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s2.png");
-}
-
-.EditGyroSource #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s2.png");
-}
-
-.EditABXYSource #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s3.png");
-}
-
-.EditRightTrackpadSource #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s4.png");
-}
-
-.EditLeftBumper #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_lb.png");
-}
-
-.EditRightBumper #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_rb.png");
-}
-
-.EditLeftTrigger #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_lt.png");
-}
-
-.EditRightTrigger #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_rt.png");
-}
-
-.EditBackButton #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_back.png");
-}
-
-.EditStartButton #BackgroundController
-{
-	background-position: 535px 79px;
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_forward.png");
-}
-
-#BackgroundLines
-{
-	background-position: -96px 73px;
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines.png");
 }
 
-.LeftTriggerSelected
+#BackgroundLines.LeftTriggerSelected
 {
-	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_forward.png");
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_1.png");
 }
 
 
-.LeftBumperSelected
+#BackgroundLines.LeftBumperSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
 }
 
 
-.LeftGripSelected
+#BackgroundLines.LeftGripSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
 }
 
-
-.BackButtonSelected
-{
-	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_4.png");
-}
-
-
-.RightTriggerSelected
+#BackgroundLines.RightTriggerSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
 }
 
-.RightBumperSelected
+#BackgroundLines.RightBumperSelected
 
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_6.png");
 }
 
-.RightGripSelected
+#BackgroundLines.RightGripSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
 }
 
-.StartButtonSelected
+#BackgroundLines.GyroSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
+}
+
+#BackgroundLines.SlotOneSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
 }
+
+#BackgroundLines.SlotTwoSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
+}
+
+#BackgroundLines.SlotThreeSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
+}
+
+#BackgroundLines.SlotFourSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
+}
+
 
 
 .HasMultipleActionSets #BackgroundController
@@ -416,7 +371,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	margin-top: 0px;	
 }
 
-.HasMultipleActionSets #BackgroundLines
+.HasMultipleActionSets .BackgroundLines
 {
 	margin-top: 0px;	
 }
@@ -428,6 +383,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	height: 228px;
 	flow-children: right;
 }
+
 #GyroModeContainer
 {
 	horizontal-align: center;
@@ -445,36 +401,32 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .ModeWrapper
 {
-	border-radius: 2px;
+	border-radius: 16px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #0f99bc44;
-
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 	width: 417px;
 	height: 228px;
 }
 
-.ModeWrapper.Gyro
+#Gyro
 {
-	width: 256px;
+	width: 100%;
+	background-color: #00000000;
 	height: 128px;
 	border: 0px;
+	align: center center;
 }
 
-.ModeWrapper.Gyro #SourceModeLines
+#Gyro:focus
 {
-	background-image: none;
-  visibility: collapse;
-}
-
-.ModeWrapper.Gyro #BindingLabel
-{
-	visibility: collapse;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 }
 
 .ModeWrapper:focus
 {
-	background-color: settingsbackgroundgradient;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 	border-color: white;
 	
 	animation-name: main-button-glow-movement;
@@ -517,9 +469,9 @@ ControllerBindingsGordon.ScreenSaverMode
 
 ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 {
-	background-color: settingsbackgroundgradient;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 	border-color: white;
-
+	border-radius: 8px;
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
@@ -599,6 +551,7 @@ Label.ModeTitle
 #Gyro #SourceModeBackground
 {
 	background-image: url("file://{images}/library/controller/api/gyro.png");
+	//background-color: #00000000;
 	background-size: 60px 60px;
 	background-position: 50% 5%;
 }
@@ -733,14 +686,7 @@ ControllerBindingButton.BindingButton.Right
 	opacity: 0.0;
 }
 
-#BackgroundLines
-{
-	transition-property: pre-transform-scale2d, transform, opacity;
-	transition-duration: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-.BottomPanelVisible #BackgroundLines
+.BottomPanelVisible .BackgroundLines
 {
 	opacity: 0.0;
 }
@@ -1121,11 +1067,6 @@ Slider:Selected
 	opacity: 0.0;
 }
 
-#ModeProperties.ModeShiftVisible
-{
-	//background-color: #121d0a;
-}
-
 #ModeProperties:descendantfocus, #ChooseBinding:descendantfocus
 {
 	opacity: 1.0;
@@ -1137,11 +1078,6 @@ Slider:Selected
 	height: tabheight;
 	padding-top: 10px;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e354dff ), color-stop( 0.50, #0d1f35ff ), to( #0e354dff ) );
-}
-
-.ModeShiftVisible #TabBackground
-{
-	//background-color: gradient( linear, 0% 0%, 100% 0%, from( #132606ff ), color-stop( 0.50, #0b1a06ff ), to( #132606ff ) );
 }
 
 #PropertiesBackground
@@ -1215,525 +1151,7 @@ Slider:Selected
 	visibility: visible;
 }
 
-.ABXYMode
-{
-	visibility: collapse;
-}
-
-.ModeABXYVisible .ABXYMode
-{
-	visibility: visible;
-}
-
-.ModeABXYVisible .ABXYMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeABXYVisible.AdvancedPropertiesVisible .ABXYMode
-{
-	visibility: collapse;
-}
-
-.ModeABXYVisible.AdvancedPropertiesVisible .ABXYMode.Advanced
-{
-	visibility: visible;
-}
-
-.JoystickMoveMode
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.Gyro
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible.GyroSource.AdvancedPropertiesVisible .JoystickMoveMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.GyroSource.AdvancedPropertiesVisible .JoystickMoveMode.Gyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode.NoGyro
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible .JoystickMoveMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.NoGyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickMoveVisible.AdvancedPropertiesVisible.GyroSource .JoystickMoveMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.JoystickCameraMode
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.Gyro
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible.GyroSource.AdvancedPropertiesVisible .JoystickCameraMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.GyroSource.AdvancedPropertiesVisible .JoystickCameraMode.Gyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode.NoGyro
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible .JoystickCameraMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.NoGyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeJoystickCameraVisible.AdvancedPropertiesVisible.GyroSource .JoystickCameraMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.MouseMode
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible .MouseMode
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible .MouseMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.Advanced
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible .MouseMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible .MouseMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-
-.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible.GyroSource.AdvancedPropertiesVisible .MouseMode.Gyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible.GyroSource.AdvancedPropertiesVisible .MouseMode.Gyro
-{
-	visibility: collapse;
-}
-
-
-
-.ModeAbsMouseVisible .MouseMode.NoGyro
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible.GyroSource .MouseMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible .MouseMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.NoGyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeAbsMouseVisible.AdvancedPropertiesVisible.GyroSource .MouseMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.NoGyro
-{
-	visibility: collapse;
-}
-
-
-.TouchMenuMode
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible .TouchMenuMode
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible .TouchMenuMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.Advanced
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible .TouchMenuMode.Gyro
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible .TouchMenuMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible.GyroSource .TouchMenuMode.Gyro.Advanced
-{
-	visibility: collapse;
-}
-
-
-.ModeTouchMenuVisible.GyroSource .TouchMenuMode.Gyro
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible.GyroSource.AdvancedPropertiesVisible .TouchMenuMode.Gyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible.GyroSource.AdvancedPropertiesVisible .TouchMenuMode.Gyro
-{
-	visibility: collapse;
-}
-
-
-
-.ModeTouchMenuVisible .TouchMenuMode.NoGyro
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible.GyroSource .TouchMenuMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible .TouchMenuMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.NoGyro.Advanced
-{
-	visibility: visible;
-}
-
-.ModeTouchMenuVisible.AdvancedPropertiesVisible.GyroSource .TouchMenuMode.NoGyro.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.NoGyro
-{
-	visibility: collapse;
-}
-
-.RelMouseMode
-{
-	visibility: collapse;
-}
-
-.ModeRelMouseVisible .RelMouseMode
-{
-	visibility: visible;
-}
-
-.ModeRelMouseVisible .RelMouseMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeRelMouseVisible.AdvancedPropertiesVisible .RelMouseMode
-{
-	visibility: collapse;
-}
-
-.ModeRelMouseVisible.AdvancedPropertiesVisible .RelMouseMode.Advanced
-{
-	visibility: visible;
-}
-
-.DpadMode
-{
-	visibility: collapse;
-}
-
-.ModeDpadVisible .DpadMode
-{
-	visibility: visible;
-}
-
-.ModeDpadVisible .DpadMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeDpadVisible.AdvancedPropertiesVisible .DpadMode
-{
-	visibility: collapse;
-}
-
-.ModeDpadVisible.AdvancedPropertiesVisible .DpadMode.Advanced
-{
-	visibility: visible;
-}
-
-.ScrollWheelMode
-{
-	visibility: collapse;
-}
-
-.ModeScrollWheelVisible .ScrollWheelMode
-{
-	visibility: visible;
-}
-
-.ModeScrollWheelVisible .ScrollWheelMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeScrollWheelVisible.AdvancedPropertiesVisible .ScrollWheelMode
-{
-	visibility: collapse;
-}
-
-.ModeScrollWheelVisible.AdvancedPropertiesVisible .ScrollWheelMode.Advanced
-{
-	visibility: visible;
-}
-
-
-.TriggerMode
-{
-	visibility: collapse;
-}
-
-.ModeTriggerVisible .TriggerMode
-{
-	visibility: visible;
-}
-
-.ModeTriggerVisible #ModeTab
-{
-	visibility:collapse;
-}
-
-.ModeTriggerVisible #ModeShiftButtonTab
-{
-	visibility: collapse;
-}
-
-.ModeTriggerVisible #TabBackground
-{
-	visibility: collapse;
-}
-
-.ModeTriggerVisible .TriggerMode.Advanced
-{
-	visibility: collapse;
-}
-
-.ModeTriggerVisible.AdvancedPropertiesVisible .TriggerMode
-{
-	visibility: collapse;
-}
-
-.ModeTriggerVisible.AdvancedPropertiesVisible .TriggerMode.Advanced
-{
-	visibility: visible;
-}
-
-.AdvancedPropertiesVisible #ModeTab
-{
-	visibility: collapse;
-}
-
-.AdvancedPropertiesVisible #ModeShiftButtonTab
-{
-	visibility: collapse;
-}
-
-#ModeShiftPulldownTab
-{
-	visibility: collapse;
-}
-
-.ModeShiftVisible #ModeShiftPulldownTab
-{
-	visibility: visible;
-}
-
-.ModeShiftVisible #ModeShiftButtonTab, .ModeShiftVisible.AdvancedPropertiesVisible #ModeShiftPulldownTab
-{
-	visibility: collapse;
-}
-
 .AdvancedPropertiesVisible #TabBackground
-{
-	visibility: collapse;
-}
-
-.AdvancedPropertiesVisible .CenterImage
 {
 	visibility: collapse;
 }
@@ -1853,7 +1271,6 @@ Slider:Selected
 	width: fieldwidth;
 	height: 100%;
 	background-repeat: no-repeat;
-	visibility: collapse;
 }
 
 .CenterImageDpadPanel.CenterImage
@@ -3058,13 +2475,27 @@ ControllerConfigBrowser #CategoryExplanation
 	transform: translateX( 0px );
 }
 
-#ConfigsColumn
+#ConfigsColumn,
+#CommunityConfigsColumn
 {
 	flow-children: down;
 	width: 100%;
 	height: fit-children;
 	overflow: clip scroll;
 	margin-bottom: 100px;
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.SelectPersonalBindings #ConfigsColumn,
+ControllerConfigBrowser.SelectTemplateBindings #ConfigsColumn,
+ControllerConfigBrowser.SelectRecommendedBindings #ConfigsColumn
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
+{
+	visibility: visible;
 }
 
 .NoConfigMessage
@@ -3187,6 +2618,26 @@ ControllerConfigButton #Description
 	color: #75c7fdff;
 }
 
+ControllerConfigButton #Votes
+{
+	font-size: 25px;
+	font-family: platformfont;
+	align: right top;
+	color: white;
+	width: 200px;	
+	margin-top: 10px;
+	margin-right: 15px;
+	visibility: collapse;
+	font-weight: bold;
+	text-align: right;
+	z-index: 2;
+}
+
+ControllerConfigBrowser.SelectCommunityBindings #Votes
+{
+	visibility: visible;
+}
+
 ControllerConfigBrowser #RecommendedBinding, ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
 {
 	visibility: collapse;
@@ -3226,21 +2677,6 @@ ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
 	visibility: visible;
 }
 
-.AnalogTriggerGameActionsFound.ModeTriggerVisible #ModeTab
-{
-	visibility:visible;
-}
-
-.HideIfAnalogTriggersSetToOther .TriggerMode
-{
-	visibility: visible;
-}
-
-.AnalogTriggersActingAsGameAction .HideIfAnalogTriggersSetToOther
-{
-	visibility: collapse;
-}
-
 .FakeABXYButtonPanel
 {
 	width: 72px;
@@ -3272,41 +2708,6 @@ ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
 	font-size: 20px;
 	horizontal-align: center;
 	vertical-align: center;
-}
-
-.InGameActionsMode.ModeABXYVisible #ModeTab
-{
-	visibility:collapse;
-}
-
-.InGameActionsMode .ABXYMode .ShowInGameActions
-{
-	visibility: collapse;
-}
-
-.ModeABXYVisible .ABXYModeGA
-{
-	visibility: collapse;
-}
-
-.ABXYModeGA
-{
-	visibility: collapse;
-}
-
-.InGameActionsMode.ModeABXYVisible .ABXYModeGA
-{
-	visibility: visible;
-}
-
-.DpadModeGA
-{
-	visibility: collapse;
-}
-
-.InGameActionsMode.ModeDpadVisible .DpadModeGA
-{
-	visibility: visible;
 }
 
 .FakeDpadButtonPanel
@@ -3349,4 +2750,37 @@ ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
 #DpadRightButton .FakeDpadButton
 {
 	background-image: url("file://{images}/library/controller/glyph_input_kb_right.png");
+}
+
+
+// .GameActions
+// .Not_GameActions
+// OR BOTH
+
+// .Advanced
+// OR BOTH
+
+// .DpadMode
+// .ABXYMode
+// .JoystickMoveMode
+// .JoystickCameraMode
+// .MouseMode
+// .TouchMenuMode
+// .RelMouseMode
+// .ScrollWheelMode
+// .TriggerMode
+
+// .SourceGyro
+// .Not_SourceGyro
+
+.ABXYMode,
+.JoystickMoveMode,
+.JoystickCameraMode,
+.MouseMode,
+.TouchMenuMode,
+.RelMouseMode,
+.ScrollWheelMode,
+.TriggerMode,
+{
+	visibility: collapse;
 }

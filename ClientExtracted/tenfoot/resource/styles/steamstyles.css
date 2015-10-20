@@ -550,13 +550,17 @@ RadioButton
 	animation-direction: normal;
 }
 
+Label
+{
+font-family: platformfont;
+}
+
 .Button Label,
 .WizardButton Label,
 .CheckBox Label,
 RadioButton Label,
 DropDown Label {
 
-	font-family: platformfont;
 	font-size: 26px;
 	font-weight: normal;
 	color: #67c1f5;
@@ -1413,46 +1417,6 @@ h2
 }
 
 
-
-
-WebController #ActualHomeButton
-{
-	background-size: contain;
-	width: 54px;
-	height: 54px;
-
-	position: 84px 8px 0px;
-}
-
-WebController #MouseBackButton
-{
-	background-size: contain;
-	background-position: 0px 0px;
-	width: 37px;
-	height: 37px;
-	position: 24px 16px 0px;
-}
-
-
-.VR WebController #ActualHomeButton
-{
-	background-size: contain;
-	width: 54px;
-	height: 54px;
-
-	position: 84px 8px 0px;
-}
-
-.VR WebController #MouseBackButton
-{
-	background-size: contain;
-	background-position: 0px 0px;
-	width: 37px;
-	height: 37px;
-	position: 24px 16px 0px;
-}
-
-
 .CursorVisible #ActualHomeButton,
 .CursorVisible #MouseBackButton
 {
@@ -1525,9 +1489,9 @@ WebController #MouseBackButton
 
 .ContextMenuBody
 {
-	padding: 20px 5px 20px 5px;
+	padding: 40px;
 	flow-children: down;
-	width: 350px;
+	width: 450px;
 	opacity: 1.0;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	color: #000000ff;
@@ -1537,14 +1501,14 @@ WebController #MouseBackButton
 
 .ContextMenuBodyCentered
 {
-	padding: 20px 5px 20px 5px;
+	padding: 40px;
 
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
 	border-radius: 3px;
 	opacity: 1.0;
-	width: 380px;
+	width: 450px;
 
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
@@ -1565,80 +1529,33 @@ WebController #MouseBackButton
 }
 	
 
-.ContextMenuBody Button, .ContextMenuBodyCentered Button, .ContextMenuBody ParentalButton, .ContextMenuBodyCentered ParentalButton
+.ContextMenuBody Button,
+.ContextMenuBodyCentered Button,
+.ContextMenuBody ParentalButton,
+.ContextMenuBodyCentered ParentalButton
 {
-	padding: 8px 8px;
-	box-shadow: #eeeeee00 0px 0px 16px 0px;
-	border: 5px solid;
-	color: tcexitrow;
-	margin-left: 10px;
-	margin-right: 10px;
-	height: 53px;
+	min-height: 53px;
+	height: fit-children;
 	width: 100%;
-	transition-property: border, blur, background-color, color, transform, box-shadow;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-out;
+
+	box-shadow: fill #00000033 -3px -3px 6px 6px;
 }
 
 .ContextMenuBody Label, .ContextMenuBodyCentered Label
 {
-	horizontal-align: left;
-	color: #d0d0d0ff;
-	transform: translatex(0px);
-	padding-left: 0px;
-	transition-property: color, position, transform;
-	transition-duration: 0.25s;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-size: deffontsize;
-	font-family: platformfont;
 	text-overflow: ellipsis;
-	max-height: 40px;
+	min-height: 40px;
+	height: fit-children;
 	width: 100%;
-	font-weight: bold;
-
-	padding-right: 14px;
+	padding-bottom: 10px;
 }
 
-.ContextMenuBody Button:focus Label, .ContextMenuBodyCentered Button:focus Label, .ContextMenuBody ParentalButton:focus Label, .ContextMenuBodyCentered ParentalButton:focus Label
+.ContextMenuBody Button:hover,
+.ContextMenuBodyCentered Button:hover,
+.ContextMenuBody ParentalButton:hover,
+.ContextMenuBodyCentered ParentalButton:hover
 {
-	horizontal-align: left;
-	color: #171717f5;
-	transform: translatex(7px);
-	padding-left: 0px;
-	padding-right: 14px;
-}
-
-.ContextMenuBody Button:hover, .ContextMenuBodyCentered Button:hover, .ContextMenuBody ParentalButton:hover, .ContextMenuBodyCentered ParentalButton:hover
-{
-	transition-duration: 0.23s !immediate;
-
-	color: tcexitrowhover;
 	box-shadow: #eeeeee60 -5px -5px 6px 10px;
-}
-
-.ContextMenuBody Button:focus, .ContextMenuBodyCentered Button:focus, .ContextMenuBody ParentalButton:focus, .ContextMenuBodyCentered ParentalButton:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: tcexitrowfocus;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	// Remove border, so we dont transition border out on focus lost, that looks weird.
-	transition-property: blur, background-color, color, transform;
-
-	transform: translatez( 0px );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
 .ContextMenuBody ParentalButton
@@ -1646,7 +1563,8 @@ WebController #MouseBackButton
 	flow-children: right;
 }
 
-.ContextMenuBody ParentalButton.Locked, .ContextMenuBodyCentered ParentalButton.Locked
+.ContextMenuBody ParentalButton.Locked,
+.ContextMenuBodyCentered ParentalButton.Locked
 {
 	wash-color: parental_locked_wash;
 	color: #ffffffff;
@@ -1722,17 +1640,7 @@ WebController #MouseBackButton
 //
 .SystemButton
 {
-	padding: 8px 8px;
-	box-shadow: #eeeeee00 0px 0px 16px 0px;
-	border: 5px solid;
-	color: tcexitrow;
-	margin-left: 20px;
-	margin-right: 20px;
-
 	width: 100%;
-	transition-property: border, blur, background-color, color, transform, box-shadow;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-out;
 
 	visibility: collapse;
 }
@@ -1745,75 +1653,16 @@ WebController #MouseBackButton
 
 .SystemButton Label
 {
-	horizontal-align: left;
-	color: applabelsolid;
-	transform: translatex(0px);
-	padding-left: 0px;
-	transition-property: color, position, transform;
-	transition-duration: 0.25s;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-size: deffontsize;
-	font-family: platformfont;
-	font-weight: bold;
 	text-overflow: ellipsis;
-	max-height: 40px;
 	width: 100%;
-
-	padding-right: 14px;
-}
-
-.SystemButton:focus Label
-{
-	horizontal-align: left;
-	color: applabelselected;
-	transform: translatex(7px);
-	padding-left: 0px;
-	padding-right: 14px;
 }
 
 .SystemButton:hover
 {
-	transition-duration: 0.23s !immediate;
-
-	color: tcexitrowhover;
 	box-shadow: #eeeeee60 -5px -5px 6px 10px;
 }
 
-.SystemButton:focus
-{
-	transition-duration: 0.25s !immediate;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: tcexitrowfocus;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	// Remove border, so we dont transition border out on focus lost, that looks weird.
-	transition-property: blur, background-color, color, transform;
-
-	transform: translatez( 0px );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-
-#MusicPlayerMenu.ContextMenuBodyCentered
-{
-	width: 400px;
-}
-
-MusicQueueMoreDialog .ContextMenuBodyCentered, MusicTrackMoreDialog .ContextMenuBodyCentered
-{
-	width: 400px;
-}
 
 
 //
@@ -2490,9 +2339,6 @@ Button:hover #SuggestedStatus
 {
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
-	/*border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;*/
 
 	animation-name: nx-button-focus;
 	animation-duration: longduration;

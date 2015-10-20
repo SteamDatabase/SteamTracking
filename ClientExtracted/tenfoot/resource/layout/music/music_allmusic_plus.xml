@@ -8,7 +8,7 @@
 			oncancel="ButtonCancel()" 
 			onmouseactivate="CloseModalDialog();" >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button onactivate="SetupLibrary();" >
+			<Button class="Button" onactivate="SetupLibrary();" >
 				<Label text="#Music_Library_Setup" />
 			</Button>
 		</Panel>

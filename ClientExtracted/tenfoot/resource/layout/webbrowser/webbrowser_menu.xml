@@ -6,34 +6,34 @@
 
 	<WebBrowserMoreMenu class="ContextMenu"  tabindex="auto" selectionpos="auto" >
 		<Panel id="ContextMenuBody" class="ContextMenuBody" childfocusonhover="true">
-			<Button id="LinkInNewTabButton" onactivate="ContextMenuEvent( BrowserOpenLinkUnderCursorInNewTab() )">
+			<Button id="LinkInNewTabButton" class="Button" onactivate="ContextMenuEvent( BrowserOpenLinkUnderCursorInNewTab() )">
 				<Label text="#Web_OpenInNewTab" />
 			</Button>
-			<ParentalButton id="EditButton" onactivate="ContextMenuEvent( BrowserURLEdit() )">
+			<ParentalButton id="EditButton" class="Button" onactivate="ContextMenuEvent( BrowserURLEdit() )">
 				<Label text="#Web_Edit" />
 				<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 			</ParentalButton>
-			<Button onactivate="ContextMenuEvent( BrowserBack() )">
+			<Button class="Button" onactivate="ContextMenuEvent( BrowserBack() )">
 				<Label text="#Web_Back" />
 			</Button>
-			<Button onactivate="ContextMenuEvent( BrowserReload() )">
+			<Button class="Button" onactivate="ContextMenuEvent( BrowserReload() )">
 				<Label text="#Web_Reload" />
 			</Button>
-			<Button id="ZoomButton" onactivate="ContextMenuEvent( BrowserZoom() )">
+			<Button id="ZoomButton" class="Button" onactivate="ContextMenuEvent( BrowserZoom() )">
 				<Label text="#Web_Zoom" />
 			</Button>
-			<Button onactivate="ContextMenuEvent( BrowserCopyURL() )">
+			<Button class="Button" onactivate="ContextMenuEvent( BrowserCopyURL() )">
 				<Label text="#Web_CopyURL" />
 			</Button>
-			<ParentalButton onactivate="ContextMenuEvent( BrowserAddBrowserFavorite() )">
+			<ParentalButton class="Button" onactivate="ContextMenuEvent( BrowserAddBrowserFavorite() )">
 				<Label text="#Web_AddFavorite" />
 				<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 			</ParentalButton>
-			<ParentalButton onactivate="ContextMenuEvent( BrowserAddTab() )">
+			<ParentalButton class="Button" onactivate="ContextMenuEvent( BrowserAddTab() )">
 				<Label text="#Web_AddTab" />
 				<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 			</ParentalButton>
-			<Button onactivate="ContextMenuEvent( BrowserCloseTab() )">
+			<Button class="Button" onactivate="ContextMenuEvent( BrowserCloseTab() )">
 				<Label text="#Web_CloseTab" />
 			</Button>
 		</Panel>

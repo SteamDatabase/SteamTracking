@@ -105,6 +105,10 @@
 										<Label id="SteamCloud" class="SteamCloud DataHeader" text="#Library_Details_SteamCloud" />
 										<Label id="SteamCloudValue" class="SteamCloudValue DataValue" text="#Library_Details_SteamCloudValue" />
 									</Panel>
+									<Panel id="RentalRemaining" class="PlayTimeData">
+										<Label id="RentalRemainingHeader" class="DataHeader" text="#Library_Details_RentalRemaining" />
+										<Label id="RentalRemainingValue" class="DataValue" text="#Library_Details_RentalRemainingValue" />
+									</Panel>									
 								</Panel>
 							</Panel>
 	

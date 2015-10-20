@@ -2,6 +2,7 @@
 {
 	width: 100%;
 	flow-children: down;
+	padding: 10px;
 }
 
 .ContextMenuBody Label.QuitSectionHeader
@@ -10,6 +11,11 @@
 	color: #5FB9FDff;
 	margin-bottom: 5px;
 	margin-left: 20px;
+}
+
+.Button
+{
+	width: 100%;
 }
 
 .QuitSectionSpacer
@@ -225,5 +231,7 @@
 
 #QuitDialogButtonParent
 {
-	position: 41% 30% 0px;
+
+	vertical-align: center;
+	horizontal-align: center;
 }

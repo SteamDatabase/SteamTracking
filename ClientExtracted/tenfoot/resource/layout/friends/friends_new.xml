@@ -6,6 +6,7 @@
 	</styles>
 
 	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsButton">
+		<FriendsChatProfileBackground id="FriendsChatProfileBackground" />
 		<Panel class="TempTitle" >
 			<Label text=">" class="Breadcrumb" />
 			<Label text="Friends" />

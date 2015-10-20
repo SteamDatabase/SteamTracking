@@ -1218,12 +1218,12 @@ StorePrice #DiscountPercent
 
 StorePrice #BasePrice
 {
-	color: #666666FF;
+	color: #52636dFF;
 	text-decoration: line-through;
 	width: 0px;
 	margin-right: 4px;
 	margin-top: 7px;
-	font-size: 18px;
+	font-size: 24px;
 	visibility: collapse;
 }
 

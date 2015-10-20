@@ -31,3 +31,51 @@ BackgroundVideoPanel.GamesRunning WebController
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
 }
+
+WebController #ActualHomeButton
+{
+	background-size: contain;
+	width: 54px;
+	height: 54px;
+
+	position: 84px 8px 0px;
+}
+
+WebController #MouseBackButton
+{
+	background-size: contain;
+	background-position: 0px 0px;
+	width: 37px;
+	height: 37px;
+	position: 24px 16px 0px;
+}
+
+
+WebController.SteamPad #ActualHomeButton
+{
+	position: 24px 8px 0px;
+}
+
+.CursorVisible WebController.SteamPad #MouseBackButton
+{
+	opacity: 0.0;
+}
+
+
+.VR WebController #ActualHomeButton
+{
+	background-size: contain;
+	width: 54px;
+	height: 54px;
+
+	position: 84px 8px 0px;
+}
+
+.VR WebController #MouseBackButton
+{
+	background-size: contain;
+	background-position: 0px 0px;
+	width: 37px;
+	height: 37px;
+	position: 24px 16px 0px;
+}

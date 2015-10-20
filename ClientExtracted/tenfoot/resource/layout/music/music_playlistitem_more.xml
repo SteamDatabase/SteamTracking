@@ -9,30 +9,30 @@
 			oncancel="ButtonCancel()" 
 			onmouseactivate="CloseModalDialog();" >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button onactivate="PlaySubsequentPlaylistItems( true, false);" >
+			<Button class="Button" onactivate="PlaySubsequentPlaylistItems( true, false);" >
 				<Label text="#MusicPlaylist_Play_PlaylistItem" />
 			</Button>
-			<Button onactivate="PlayCurrentPlaylistItem( false, false);" >
+			<Button class="Button" onactivate="PlayCurrentPlaylistItem( false, false);" >
 				<Label text="#MusicPlaylist_Add_To_Queue" />
 			</Button>
 			<Panel class="HorizontalRule" />
-			<Button onactivate="MovePlaylistItemBegin();" >
+			<Button class="Button" onactivate="MovePlaylistItemBegin();" >
 				<Label text="#MusicPlaylistItem_Move_Begin" />
 			</Button>
-			<Button onactivate="MovePlaylistItemUp();" >
+			<Button class="Button" onactivate="MovePlaylistItemUp();" >
 				<Label text="#MusicPlaylistItem_Move_Up" />
 			</Button>
-			<Button onactivate="MovePlaylistItemDown();" >
+			<Button class="Button" onactivate="MovePlaylistItemDown();" >
 				<Label text="#MusicPlaylistItem_Move_Down" />
 			</Button>
-			<Button onactivate="MovePlaylistItemEnd();" >
+			<Button class="Button" onactivate="MovePlaylistItemEnd();" >
 				<Label text="#MusicPlaylistItem_Move_End" />
 			</Button>
 			<Panel class="HorizontalRule" />
-			<Button onactivate="DeletePlaylistItem();" >
+			<Button class="Button" onactivate="DeletePlaylistItem();" >
 				<Label  text="#MusicPlaylistItem_Delete" />
 			</Button>
-			<Button onactivate="DeleteAllPlaylistItems();">
+			<Button class="Button" onactivate="DeleteAllPlaylistItems();">
 				<Label text="#MusicPlaylistItem_DeleteAll" />
 			</Button>
 		</Panel>

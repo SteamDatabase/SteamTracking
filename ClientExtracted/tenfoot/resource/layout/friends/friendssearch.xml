@@ -8,12 +8,22 @@
 	<FriendsSearchDialog class="TenfootMsgBox" defaultfocus="Input" oncancel="ButtonCancel()" >
 		<!-- This panel is never visible, but present to trigger the text input handler -->
 		<Panel class="DialogRegion" tabindex="auto" selectionpos="auto">
-			<TextEntry id="Input"
-				textinputid="CheckoutFormTextEntry"
-				textinputclass="FullWidth AppearFromBottomCenter"
-				headerlabel="#Friends_Search_Header"
-				headerdetaillabel="#KeyboardDetail_SearchResultCount"
-				raisechangeevents="true" />
+			<Label class="Header" id="SearchHeaderTitle" text="#Search_Header" />
+
+			<Panel class="InputRow">
+				<TextEntry id="Input" selectionpos="auto"
+					textinputid="CheckoutFormTextEntry"
+					textinputclass="DockLeft AppearFromBottomCenter NoSuggestions"
+					headerlabel="#Friends_Search_Header"
+					headerdetaillabel="#KeyboardDetail_SearchResultCount" />
+			</Panel>
+
+			<Button id="SubmitPartialFilterButton" class="SelectPartialFilterButton Button" selectionpos="auto" onactivate="SubmitPartialFilter()">
+				<Label class="" text="Filter Friends view by '{s:partial_filter}'"/>
+			</Button>
+
+			<Panel id="SearchResults" />
 		</Panel>
 	</FriendsSearchDialog>
 </root>
+

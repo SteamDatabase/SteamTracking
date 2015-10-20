@@ -143,13 +143,13 @@
 
 					<Panel class="GamesHorizRule" />
 					<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
-					<Button id="AddSteamProduct" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton FlowRight" selectionpos="0,101">
+					<Button id="AddSteamProduct" onfocus="GamesViewType(activate);" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton FlowRight" selectionpos="0,101">
 						<Image src="file://{images}/library/icon_activate.png" />
 						<Label text="#Library_AddContent_Activate"/>
 					</Button>
 
-                    <Panel class="GamesHorizRule" />
-                    <Panel class="GamesHorizRule" />
+          <Panel class="GamesHorizRule" />
+          <Panel class="GamesHorizRule" />
 					<Button class="NxLeftNavButtonAction WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
 						<Label id="Label" text="#WizardButton_Next" />
 					</Button>
@@ -175,12 +175,15 @@
 			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="2" />
-            <Panel id="EmptyLibraryArea" >
-                <Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
-            </Panel>
-            <Panel id="EmptySearchArea" >
-			    <Label class="EmptyLabel" text="#Library_AllGames_EmptySearchGrid" />
-            </Panel>
+      <Panel id="EmptyLibraryArea" >
+          <Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
+      </Panel>
+      <Panel id="EmptySearchArea" >
+		    <Label class="EmptyLabel" text="#Library_AllGames_EmptySearchGrid" />
+      </Panel>
+      <Panel id="ActivateProductArea" >
+	    	<Label class="EmptyLabel" text="#Library_ActivateProduct_Hint" />
+      </Panel>
 		</Panel>
 	</LibraryAllGames>
 </root>

@@ -279,20 +279,26 @@
  T _SpewMessage
  T _SpewMessageType
  T __clang_call_terminate
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_erase(std::_Rb_tree_node<FileAndLine_t>*)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, FileAndLine_t const&)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert_unique(FileAndLine_t const&)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::find(FileAndLine_t const&)
- T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_erase(std::_Rb_tree_node<std::pair<SteamVProf::CVProfNode* const, double> >*)
- T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<char const* const, unsigned int> >*)
- T std::set<FileAndLine_t, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::~set()
+ T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
+ T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
+ T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::destroy(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
+ T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, int> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
+ T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, long> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__find_equal<FileAndLine_t>(std::__1::__tree_node_base<void*>*&, FileAndLine_t const&)
+ T std::__1::__vector_base<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::~__vector_base()
+ T std::__1::__vector_base<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::~__vector_base()
+ T std::__1::set<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::~set()
+ T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
  __bzero
  __cxa_atexit
  __cxa_begin_catch
- __cxa_call_unexpected
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
@@ -366,6 +372,7 @@
  fprintf
  free
  fwrite
+ fwrite$UNIX2003
  getenv
  getpid
  gettimeofday
@@ -419,8 +426,6 @@
  snprintf
  sscanf
  stat$INODE64
- std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
- std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::terminate()
  strcasecmp
  strchr

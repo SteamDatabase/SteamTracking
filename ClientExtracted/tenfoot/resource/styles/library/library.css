@@ -474,8 +474,14 @@ LibraryAppDetails.ContentHover #CommonControls:descendantfocus
 #PlayStatsArea.HasPlaytime,
 #PlayStatsArea.HasLastPlayedTime,
 #PlayStatsArea.Purchased,
+#PlayStatsArea.IsVideoRental,
 {
 	visibility: visible;
+}
+
+#PlayStatsArea #RentalRemaining
+{
+	min-width: 475px;
 }
 
 #PlayStatsArea #YouWatchedHeader,
@@ -505,6 +511,7 @@ LibraryAppDetails.ContentHover #CommonControls:descendantfocus
 }
 #PlayStatsArea.HasPlaytime #PurchaseTime,
 #PlayStatsArea.HasLastPlayedTime #PurchaseTime,
+#PlayStatsArea.IsVideoRental #PurchaseTime,
 {
 	visibility: collapse;
 }
@@ -523,6 +530,15 @@ LibraryAppDetails.ContentHover #CommonControls:descendantfocus
 	visibility: collapse;
 }
 #PlayStatsArea.HasLastPlayedTime #LastPlayed
+{
+	visibility: visible;
+}
+
+#PlayStatsArea #RentalRemaining
+{
+	visibility: collapse;
+}
+#PlayStatsArea.IsVideoRental #RentalRemaining
 {
 	visibility: visible;
 }
@@ -2920,7 +2936,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .GamesGrid,
 .GamesSuggestion,
-.GamesDownloads
+.GamesDownloads,
+#ActivateProductArea
 {
 	padding-top: 77px;
 	padding-left: 135px;
@@ -2943,10 +2960,22 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .MenuHover .GamesGrid,
 .MenuHover .GamesSuggestion,
-.MenuHover .GamesDownloads
+.MenuHover .GamesDownloads,
+.MenuHover #ActivateProductArea
 {
 	transform: translateX( 0px );
 }
+
+#ActivateProductArea
+{
+	visibility: collapse;
+}
+
+.activate #ActivateProductArea
+{
+	visibility: visible;
+}
+
 
 .EmptyLabel
 {
@@ -2967,6 +2996,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+
 .EmptyGrid #EmptyLibraryArea
 {
 	opacity: 1.0;
@@ -2979,7 +3009,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 }
 
 .search.EmptyGrid #EmptySearchArea,
-#DownloadsNone
+#DownloadsNone,
+#ActivateProductArea
 {
 	opacity: 1.0;
 
@@ -2994,7 +3025,10 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-timing-function: bigpicture-ease-in-out;
 	z-index: -10;
 }
-#DownloadsNone {
+
+#DownloadsNone
+
+ {
 	position: 0px 0px 0px;
 }
 

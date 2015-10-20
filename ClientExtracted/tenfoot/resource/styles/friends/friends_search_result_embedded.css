@@ -13,6 +13,11 @@ FriendsSearchResultEmbedded.HasContent
 	opacity: 1.0;
 }
 
+FriendsSearchResultEmbedded:focus
+{
+	border: 2px solid white;
+}
+
 AvatarImage
 {
 	margin: 5px;
@@ -33,17 +38,17 @@ AvatarImage
 
 .Online .PersonaState
 {
-	color: friendsonline_darkbg;
+	color: friendsonline_solid;
 }
 
 .Offline .PersonaState
 {
-	color: friendsoffline_darkbg;
+	color: friendsoffline_solid;
 }
 
 .InGame .PersonaState
 {
-	color: friendsingame_darkbg;
+	color: friendsingame_solid;
 }
 
 .InGame AvatarImage

@@ -30,7 +30,6 @@
 //
 // App section button styles
 //
-CartLineItem,
 CheckoutGiftRecipientFriend,
 CheckoutAddFundsButton,
 Button
@@ -89,7 +88,6 @@ CheckoutAddFundsButton:hover Label, Button:hover Label
 	transform: translatex(0px);
 }
 
-CartLineItem:focus,
 CheckoutGiftRecipientFriend:focus,
 CheckoutAddFundsButton:focus,
 Button:focus
@@ -322,9 +320,9 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 .CheckoutBodyLeftColumn
 {
 	width: 1000px;
-	height: 720px;
+	height: 850px;
 	flow-children: down;
-	padding: 34px 34px 0px 0px;
+	padding: 34px 16px 0px 0px;
 }
 
 .CheckoutFormTextEntryLeft .CheckoutBodyLeftColumn
@@ -520,7 +518,7 @@ Button:focus StorePrice #FinalPrice
 	width: 100%;
 	overflow: squish scroll;
 	height: fill-parent-flow( 1.0 );
-	padding-right: 12px;
+	padding: 12px 20px 12px 12px;
 }
 
 CartLineItem
@@ -529,8 +527,25 @@ CartLineItem
 	min-height: 84px;
 	font-size: 26px;
 	flow-children: down;
-	padding: 8px 0px 0px 0px;
-	margin-left: 12px;
+	padding: 8px 8px 0px 8px;
+	margin-bottom: 12px;
+
+	border-radius: 3px;
+	background-color: transparent_module;
+}
+
+CartLineItem:focus
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 #ItemName
@@ -539,6 +554,7 @@ CartLineItem
 	white-space: nowrap;
 	font-size: 30px;
 	margin-left: 10px;
+	max-width: 730px;
 }
 
 CartLineItem:focus #ItemName
@@ -663,7 +679,7 @@ CartNoteItem, CartNoteItem:hover
 
 CartNoteItem Label, CartNoteItem:hover Label
 {
-	color: secondary_label;
+	color: #faaf40;
 	font-size: 21px;
 	line-height: 26px;
 	font-style: italic;

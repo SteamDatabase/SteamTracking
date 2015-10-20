@@ -4,6 +4,7 @@
 		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/friends/invitetolobby.css" />
 	</styles>
 
 	<InviteToLobbyDialog defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto" oncancel="CloseInviteDialog();">
@@ -13,6 +14,7 @@
 			</Panel>
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Label id="OfflineError" class="MsgBoxError" text="#Friends_InviteToLobby_Offline" acceptsfocus="true"/>
 					<Panel id="FriendsList">
 
 					</Panel>

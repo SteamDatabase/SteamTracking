@@ -7,6 +7,7 @@
 
 #PlaylistList
 {
+	width: 100%;
 	flow-children: down;
 	overflow: squish scroll;
 	height: 580px; 	

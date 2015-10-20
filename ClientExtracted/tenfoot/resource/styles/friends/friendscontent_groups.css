@@ -5,6 +5,7 @@ FriendsContent_Groups
 {
 	flow-children: down;
 	overflow: clip scroll;
+	height: 100%;
 }
 
 Label
@@ -75,15 +76,31 @@ Label
 	visibility: visible;
 }
 
-.ZeroGroupsLabel
+.ZeroGroupsLabel, .NotLoggedInLabel
 {
 	width: 100%;
-	margin-top: 400px;
-	text-align: center;
+	margin-top: 285px;
 	vertical-align: center;
+	text-align: center;
+	font-size: 26px;
 }
 
 .HasGroups .ZeroGroupsLabel
 {
 	visibility: collapse;
+}
+
+.NotLoggedIn .ZeroGroupsLabel
+{
+	visibility: collapse;
+}
+
+.NotLoggedInLabel
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn .NotLoggedInLabel
+{
+	visibility: visible;
 }

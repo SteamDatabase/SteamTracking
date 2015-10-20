@@ -9,17 +9,17 @@
 			oncancel="ButtonCancel()" 
 			onmouseactivate="CloseModalDialog();" >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button onactivate="PlaySubsequentTracks( true, false);" >
+			<Button class="Button" onactivate="PlaySubsequentTracks( true, false);" >
 				<Label text="#MusicAlbum_Play" />
 			</Button>
-			<Button onactivate="PlayCurrentTrack( false, false);" >
+			<Button class="Button" onactivate="PlayCurrentTrack( false, false);" >
 				<Label text="#MusicAlbum_Add_To_Queue" />
 			</Button>
-			<Button id="TrackAddToPlaylistButton" onactivate="AddTrackToPlaylist();" >
+			<Button id="TrackAddToPlaylistButton" class="Button" onactivate="AddTrackToPlaylist();" >
 				<Label id="AddToPlaylistLabel" text="#MusicAlbum_Add_To_Playlist" />
 			</Button>
 			<Panel class="HorizontalRule" id="AlbumSeparator"/>
-			<Button id="ViewEntireAlbum" onactivate="ViewEntireAlbum();">
+			<Button id="ViewEntireAlbum" class="Button" onactivate="ViewEntireAlbum();">
 				<Label text="#MusicAlbum_Show_Entire_Album" />
 			</Button>
 		</Panel>

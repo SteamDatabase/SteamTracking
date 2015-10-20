@@ -7,7 +7,7 @@
 		<include src="file://{resources}/styles/music/music_playlist.css" />
 	</styles>
 	
-	<MusicPlaylistPanel onmoveup="PlaylistClose();" hittest="false" >
+	<MusicPlaylistPanel onmoveup="none" hittest="false" >
 		<Image id="GridBackground" class="GridBackground" />
 		<Panel id="UpperRow" class="UpperRow">
 			<Label id="PlaylistTitleLabel" class="PlaylistTitleLabel" text="#MusicPlaylist_Title" />

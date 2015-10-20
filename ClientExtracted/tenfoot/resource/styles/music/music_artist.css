@@ -21,7 +21,7 @@ MusicArtistPanel
 
 .MusicArtistVisible
 {
-	transform: translatey( 128px );
+	transform: translatey( 0px );
 	opacity: 1.0;
 	desaturation: 0.0;
 }

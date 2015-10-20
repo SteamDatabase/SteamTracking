@@ -9,7 +9,7 @@
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_SelectCategory_Title" />
 
-			<Label class="SubTitle" text="#Library_SelectCategory_CodeLabel" />
+			<Label class="SubTitle" text="#Library_SelectCategory_CodeLabel_desc" />
 
 			<Panel id="CategoryStack" overscroll-y="100" />
 

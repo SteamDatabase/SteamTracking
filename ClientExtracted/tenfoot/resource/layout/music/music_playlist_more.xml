@@ -12,34 +12,34 @@
 			<Button onactivate="PlayCurrentPlaylist(true, false);" >
 				<Label id="PlayPlaylistLabel" text="#MusicPlaylist_Play" />
 			</Button>
-			<Button onactivate="PlayCurrentPlaylist(false, false);">
+			<Button class="Button" onactivate="PlayCurrentPlaylist(false, false);">
 				<Label id="AddPlaylistToQueueLabel" text="#MusicPlaylist_Add_To_Queue" />
 			</Button>
 			<Panel class="HorizontalRule" id="MoveHorizontalRule"/>
-			<Button id="PlaylistMoveBeginButton" onactivate="MovePlaylistBegin();" >
+			<Button id="PlaylistMoveBeginButton" class="Button" onactivate="MovePlaylistBegin();" >
 				<Label id="PlaylistMoveBeginLabel" text="#MusicPlaylist_Move_Begin" />
 			</Button>
-			<Button id="PlaylistMoveUpButton" onactivate="MovePlaylistTrackUp();" >
+			<Button id="PlaylistMoveUpButton" class="Button" onactivate="MovePlaylistTrackUp();" >
 				<Label id="PlaylistMoveUpLabel" text="#MusicPlaylist_Move_Up" />
 			</Button>
-			<Button id="PlaylistMoveDownButton" onactivate="MovePlaylistTrackDown();" >
+			<Button id="PlaylistMoveDownButton" class="Button" onactivate="MovePlaylistTrackDown();" >
 				<Label id="PlaylistMoveDownLabel" text="#MusicPlaylist_Move_Down" />
 			</Button>
-			<Button id="PlaylistMoveEndButton" onactivate="MovePlaylistEnd();" >
+			<Button id="PlaylistMoveEndButton" class="Button" onactivate="MovePlaylistEnd();" >
 				<Label id="PlaylistMoveEndLabel" text="#MusicPlaylist_Move_End" />
 			</Button>
 			<Panel class="HorizontalRule" id="RenameHorizontalRule"/>
-			<Button id="PlaylistRenameButton" >
+			<Button id="PlaylistRenameButton" class="Button" >
 				<Label id="PlaylistRenameLabel" text="#MusicPlaylist_Rename" />
 			</Button>
-			<Button id="PlaylistDeleteButton" onactivate="DeletePlaylist();" >
+			<Button id="PlaylistDeleteButton" class="Button" onactivate="DeletePlaylist();" >
 				<Label id="PlaylistDeleteLabel" text="#MusicPlaylist_Delete" />
 			</Button>
 			<Panel class="HorizontalRule" id="AddHorizontalRule"/>
-			<Button id="PlaylistAddButton" >
+			<Button id="PlaylistAddButton" class="Button" >
 				<Label id="PlaylistAddLabel" text="#MusicPlaylist_Add" />
 			</Button>
-			<Button id="PlaylistRemoveTracksButton" onactivate="RemoveTracksOfPlaylist();">
+			<Button id="PlaylistRemoveTracksButton" class="Button" onactivate="RemoveTracksOfPlaylist();">
 				<Label id="PlaylistRemoveTracksLabel" text="#MusicPlaylist_RemoveTracks" />
 			</Button>
 		</Panel>

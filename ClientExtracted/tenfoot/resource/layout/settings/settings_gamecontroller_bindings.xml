@@ -5,11 +5,7 @@
 	</styles>
 
 	<SettingsPanel_GameController_Binding class="SettingsSection" defaultfocus="FirstBindRow" >
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Controller" />
-		</Panel>
-		
+	
 		<!-- main panel -->
 		<Panel class="SettingsControllerContent" tabindex="auto" selectionpos="auto">
 			<Panel id="SettingsControllerLeft" class="FlowDown SettingsRight">
@@ -26,7 +22,7 @@
 					<Label class="SettingsCallout SettingsControllerCommand" text="#SettingsController_Command" />
 					<Label class="SettingsCallout SettingsControllerButton" text="#SettingsController_Button" />
 				</Panel>
-				<Panel id="SettingsControllerBinds" >
+				<Panel id="SettingsControllerBinds" overscroll-y="100" >
 					<SettingsPanel_GameController_BindRow id="FirstBindRow" button="a" action="#SettingsController_A" />
 					<SettingsPanel_GameController_BindRow button="b" action="#SettingsController_B" />
 					<SettingsPanel_GameController_BindRow button="y" action="#SettingsController_Y" />

@@ -15,13 +15,13 @@
 				<Panel class="ParentalRecoveryEmailEntry" >
 					<Label text="#Parental_Enter_PIN" />
 					<TextEntry class="ParentalPINEntry" id="Password"
-							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							   textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>
 				<Panel class="ParentalRecoveryEmailEntry" >
 					<Label text="#Parental_Reenter_PIN" />				
 					<TextEntry class="ParentalPINEntry" id="PasswordReenter"
-							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							   textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>
 			</Panel>			

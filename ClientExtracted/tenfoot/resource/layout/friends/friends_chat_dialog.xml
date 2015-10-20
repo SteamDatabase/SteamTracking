@@ -11,7 +11,12 @@
 				<AvatarImage id="FriendPanelImage1" class="ChatItemAvatar" />
 				<AvatarImage id="FriendPanelImage2" class="ChatItemAvatar" />
 			</Panel>
-			<Label id="ChatWithXLabel" text="#Friends_ChatWith_X" class="FriendsMainBodyRightHeaderText ChatWithXLabel" />
+			<Panel id="FriendStatusContainer">				
+				<Label id="GroupName" text="#Friends_GroupChatWith_X" />
+				<Label id="FriendName" text="#Friends_Chat_FriendName" />
+				<Label id="FriendPersona" text="#Friends_Chat_FriendStatus" />
+				<Label id="FriendPersonaDetail" text="#Friends_Chat_FriendStatusDetail" />
+			</Panel>
 
 			<Panel id="FriendsMainBodyVoiceHeader_NotConnected" class="TopBottomFlow VoiceHeader">
 				<Button class="LeftRightFlow VoiceHeaderButton" onactivate="VoiceChatInitiate()">
@@ -94,7 +99,7 @@
 			<TextEntry id="FriendsMainBodyInputTextArea"
 				textinputid="FriendsInputTextEntry"
 				textinputdoneactionstring="#UI_SendMessage"
-				textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat"
+				textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat DontCloseOnSubmit"
 				textinputautocaps="true"
 				textinputdoublespace="true"
 				multiline="true"        

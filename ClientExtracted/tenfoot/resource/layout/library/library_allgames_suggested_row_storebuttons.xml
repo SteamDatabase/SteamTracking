@@ -8,7 +8,7 @@
 		<Panel class="StoreList AppList" selectionpos="auto">
 			<Label class="HeaderLabel" text="#Library_Suggested_BrowseStore" />
 			<Panel class="SuggestedRow" selectionpos="auto">
-				<Button onactivate="StoreShowGenre(Free to Play);" selectionpos="auto" >
+				<Button onactivate="StoreShow();" selectionpos="auto" >
 					<Label  text="#Library_Suggested_BrowseStore_Free" />
 				</Button>
 				<Button onactivate="StoreShow();" selectionpos="auto" >

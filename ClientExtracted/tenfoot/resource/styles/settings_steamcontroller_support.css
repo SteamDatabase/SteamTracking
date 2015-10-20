@@ -11,6 +11,7 @@
     text-align: center;
     horizontal-align: center;
     width: 100%;
+    margin: 0px 198px 0 0;
     padding-bottom: 6px;
 }
 
@@ -134,14 +135,14 @@
 
 #LeftPadOverlay
 {
-    height: 185px;
+    height: 183px;
     width: 185px;
     position: 90px 95px 0px;
 }
 
 #RightPadOverlay
 {
-    height: 185px;
+    height: 183px;
     width: 185px;
     position: 490px 95px 0px;
 }

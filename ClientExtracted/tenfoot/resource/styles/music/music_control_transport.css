@@ -262,6 +262,7 @@ MusicControlTransport
 	width: 100%;
 	visibility: collapse;
 	flow-children: down;
+	padding: 20px;
 }
 
 #NoMusicQueueEntriesContainer.PanelVisible
@@ -390,7 +391,7 @@ MusicControlTransport
 	overflow: squish scroll;
 	padding-top: 10px;
 	margin-top: -10px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	margin-bottom: -10px;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );

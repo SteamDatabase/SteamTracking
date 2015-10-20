@@ -31,7 +31,12 @@ FriendsContent_GroupItem.ConnectedToChat:focus
 .GroupContent
 {	
 	flow-children: right;
-	//overflow: clip;
+	padding: 3px;
+}
+
+FriendsContent_GroupItem:focus .GroupContent
+{
+	padding: 0px;
 }
 
 AvatarImage
@@ -48,25 +53,23 @@ FriendsContent_GroupItem:focus .GroupContent AvatarImage
 	vertical-align: center;
 }
 
-Label
+FriendsContent_GroupItem Label
 {
 	margin-left: 8px;
 	color: ui_primary_color;
 	font-size: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
-FriendsContent_GroupItem:focus Label
-{
-	margin-left: 8px;
-	//color: ui_primary_color;
-	font-size: 20px;
-}
 
 
 .GroupItemLabelContainer
 {
 	flow-children: down;
 	vertical-align: center;
+	overflow: clip clip;
+	width: 185px;
 }
 
 .GroupItemName

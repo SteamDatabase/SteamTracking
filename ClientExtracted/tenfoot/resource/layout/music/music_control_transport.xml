@@ -83,14 +83,14 @@
 
 		<Panel id="EntriesContainer" childfocusonhover="false">
 			<Panel id="NoMusicQueueEntriesContainer" >			
-				<Button id="BrowseMusic" class="SystemButton PanelVisible" tabindex="auto" selectionpos="auto"
+				<Button id="BrowseMusic" class="SystemButton PanelVisible Button" tabindex="auto" selectionpos="auto"
 						onmoveup="SetInputFocus( SeekControl )"
 						oncontextmenu="MusicControlMore();"
 						onfocus="ControlButtonGotFocus()"
 						onactivate="MusicBrowseMusic();">
 					<Label text="#Music_Transport_Browse_Music" />
 				</Button>
-				<Button id="BrowseQueueButton" class="SystemButton PanelVisible" tabindex="auto" selectionpos="auto"
+				<Button id="BrowseQueueButton" class="SystemButton PanelVisible Button" tabindex="auto" selectionpos="auto"
 						onfocus="ControlButtonGotFocus()"
 						oncontextmenu="MusicControlMore();"
 						onactivate="BrowseQueue();">
@@ -99,7 +99,7 @@
 			</Panel>	
 			
 			<Panel id="MusicQueueEntriesContainer" childfocusonhover="false">
-				<Panel id="MusicQueueEntriesList" onmoveup="SetInputFocus( SeekControl )" >
+				<Panel id="MusicQueueEntriesList" onmoveup="SetInputFocus( SeekControl )" overscroll-y="100" >
 				</Panel>
 			</Panel>
 			

@@ -9,7 +9,7 @@
 
 	<MusicQueuePanel onmouseactivate="CloseModalDialog();" >
 		<Panel class="MusicFullQueuePanel" tabindex="auto" selectionpos="auto">
-			<Panel id="MusicQueueEntriesList"	/>
+			<Panel id="MusicQueueEntriesList" overscroll-y="100" />
 			<Label id="MusicQueueInfoLabel" text="#Music_Queue_X_Of_Y" />
 		</Panel>
 	</MusicQueuePanel>

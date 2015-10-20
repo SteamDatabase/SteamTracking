@@ -624,6 +624,15 @@ Image.SteamPadIcon
 
 }	
 
+Label.PINButtonBox.YButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonyellow;
+}
+
+Label.PINButtonBox.XButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonblue;
+}
 
 .AButtonText,
 .BButtonText,
@@ -1356,7 +1365,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 
 @define pinpaddivider: #878c8eff;
-@define pinpadbuttonshadow: #EEEEEE30 -5px -5px 6px 10px;
+@define pinpadbuttonshadow: #EEEEEE78 -5px -5px 6px 10px;
 
 .DaisyInputTypePIN #Wheel
 {

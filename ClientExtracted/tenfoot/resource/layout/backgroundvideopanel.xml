@@ -8,7 +8,5 @@
 		<EventBackground id="EventBackground" />
 		<Panel id="BackgroundMovie" />
 		<LoadingThrobber id="BackgroundThrobber" class="Large"/>		
-    
-		<ContentFrame id="ContentFrame" class="NotMainMenuContentFrame" />
 	</BackgroundVideoPanel>
 </root>
