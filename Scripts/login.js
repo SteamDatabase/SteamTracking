@@ -641,7 +641,7 @@ CLoginPromptManager.prototype.SetEmailAuthModalState = function( step )
 	var bShowAuthcodeEntry = true;
 	if ( step == 'entercode' )
 	{
-		icon = 'key';
+		icon = 'mail';
 	}
 	else if ( step == 'checkspam' )
 	{
@@ -842,6 +842,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 	var icon = 'key';
 	if ( step == 'entercode' )
 	{
+		icon = 'phone';
 		$J('#login_twofactor_authcode_entry').show();
 		$J('#twofactorcode_entry').val('');
 		$J('#login_twofactorauth_message_entercode_accountname').text( this.m_strUsernameEntered )
