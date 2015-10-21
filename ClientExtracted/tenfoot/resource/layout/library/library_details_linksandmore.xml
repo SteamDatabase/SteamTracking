@@ -25,11 +25,6 @@
 						<Label id="ReturnToAppLabel" text="#Overlay_OpenKeyboard" />
 					</Button>
 
-					<Button id="AppKillButton" class="AppKillButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/exit.png" />
-						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
-					</Button>
-
 
 					<Button id="LibraryDetailsButton" class="NxLeftNavButton" onmoveright="LibraryDetailsFocusContent();" onactivate="LibraryDetailsFocusContent();" >
                         <Image src="file://{images}/library/library_play_button.png" />
@@ -42,14 +37,18 @@
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 
-					<Button id="CDKeyButton" class="Button">
-                        <Image src="file://{images}/library/icon_activate.png" />
+					<Button id="CDKeyButton" class="NxLeftNavButtonAction">
+          	<Image src="file://{images}/library/icon_activate.png" />
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
 
-                    <Panel id="CommunityContentHR" class="HorizontalSpace" />
+					<Button id="AppKillButton" class="AppKillButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/exit.png" />
+						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
+					</Button>
 
-                    <Label id="CommunityContent" text="#Library_Details_CommunityContentHeadline" class="Header" />
+          <Panel id="CommunityContentHR" class="HorizontalSpace" />
+          <Label id="CommunityContent" text="#Library_Details_CommunityContentHeadline" class="Header" />
 
 					<ParentalButton id="CommunityContentAllButton" class="NxLeftNavButton" onmoveright="LibraryDetailsFocusContent();" onactivate="LibraryDetailsFocusContent();" >
 						<Label text="#Library_Details_CommunityContent_All" />

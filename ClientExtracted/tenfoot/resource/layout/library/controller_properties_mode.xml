@@ -182,10 +182,14 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
 					<Slider id="Sensitivity" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" advanced="off">
+				<Panel class="FieldWrapper" modes="absmouse" sources="gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
-					<DropDown id="Acceleration" />
-				</Panel>	
+					<DropDown id="AccelerationGyro" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+					<Slider id="RotationAbsMouse" direction="horizontal" />
+				</Panel>				
 
 				<!-- Mouse Mode Advanced -->
 				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="on">
@@ -217,7 +221,7 @@
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuPosY" />
 					<Slider id="TouchMenuPosY" direction="horizontal" />
-				</Panel>
+				</Panel>			
 				
 				<!-- Touch Menu Mode Advanced -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="on">
@@ -291,11 +295,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
 					<DropDown id="AdaptiveThreshold" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
 					<Slider id="TriggerThreshold" direction="horizontal" />
 				</Panel>									
@@ -519,7 +523,14 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
 					<DropDown id="TriggerCurveExponent" />
 				</Panel>
-				
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
+					<DropDown id="AdaptiveThresholdGA" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
+					<Slider id="TriggerThresholdGA" direction="horizontal" />
+				</Panel>
 
 			</Panel>
 
@@ -648,6 +659,10 @@
 					
 					<!-- Mouse Mode Advanced -->
 					<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
+						<DropDown id="Acceleration" />
+					</Panel>				
+					<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeSpinRadius" />
 						<Slider id="EdgeSpinRadius" direction="horizontal" />
 					</Panel>
@@ -659,12 +674,8 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
 						<Slider id="MouseMoveThreshold" direction="horizontal" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="absmouse" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
-						<Slider id="RotationAbsMouse" direction="horizontal" />
-					</Panel>
-					
-          <!-- Touch Menu Mode -->
+
+					<!-- Touch Menu Mode -->
 					<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityTouchMenu" />					
@@ -683,14 +694,14 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton13" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton13" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="touchmenu" advanced="on">
+				<Panel class="FieldWrapper" modes="touchmenu" advanced="on" sources="joystick" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton14" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton14" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton15" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton15" />
-				</Panel>				
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuScale" />
+					<Slider id="TouchMenuScale" direction="horizontal" />
+				</Panel>	
 					
 					<!-- Relative Mouse Mode -->
 					<Panel class="FieldWrapper" modes="relmouse" advanced="off">

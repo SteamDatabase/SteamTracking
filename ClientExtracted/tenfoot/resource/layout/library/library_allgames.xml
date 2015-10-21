@@ -136,7 +136,7 @@
 						</Panel>
 					</Button>
 					
-					<Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton HideIfParental FlowRight" selectionpos="auto">
+					<Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButtonAction HideIfParental FlowRight" selectionpos="auto">
 						<Image src="file://{images}/library/icon_search.png" />
 						<Label text="#Library_SearchGames"/>
 					</Button>

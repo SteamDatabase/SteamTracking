@@ -9175,7 +9175,6 @@
  D typeinfo for CCallbackImpl<176>
  D typeinfo for CCallbackImpl<196>
  D typeinfo for CCallbackImpl<1>
- D typeinfo for CCallbackImpl<2048>
  D typeinfo for CCallbackImpl<2056>
  D typeinfo for CCallbackImpl<2068>
  D typeinfo for CCallbackImpl<2080>
@@ -9192,6 +9191,7 @@
  D typeinfo for CCallbackImpl<3092>
  D typeinfo for CCallbackImpl<3096>
  D typeinfo for CCallbackImpl<36>
+ D typeinfo for CCallbackImpl<4096>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4108>
  D typeinfo for CCallbackImpl<4120>
@@ -12586,7 +12586,6 @@
  D vtable for CCallbackImpl<176>
  D vtable for CCallbackImpl<196>
  D vtable for CCallbackImpl<1>
- D vtable for CCallbackImpl<2048>
  D vtable for CCallbackImpl<2056>
  D vtable for CCallbackImpl<2068>
  D vtable for CCallbackImpl<2080>
@@ -12603,6 +12602,7 @@
  D vtable for CCallbackImpl<3092>
  D vtable for CCallbackImpl<3096>
  D vtable for CCallbackImpl<36>
+ D vtable for CCallbackImpl<4096>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4108>
  D vtable for CCallbackImpl<4120>
@@ -15388,7 +15388,6 @@
  R typeinfo name for CCallbackImpl<176>
  R typeinfo name for CCallbackImpl<196>
  R typeinfo name for CCallbackImpl<1>
- R typeinfo name for CCallbackImpl<2048>
  R typeinfo name for CCallbackImpl<2056>
  R typeinfo name for CCallbackImpl<2068>
  R typeinfo name for CCallbackImpl<2080>
@@ -15405,6 +15404,7 @@
  R typeinfo name for CCallbackImpl<3092>
  R typeinfo name for CCallbackImpl<3096>
  R typeinfo name for CCallbackImpl<36>
+ R typeinfo name for CCallbackImpl<4096>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4108>
  R typeinfo name for CCallbackImpl<4120>
@@ -21009,9 +21009,6 @@
  T CCallbackImpl<1>::GetCallbackSizeBytes()
  T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<1>::~CCallbackImpl()
- T CCallbackImpl<2048>::GetCallbackSizeBytes()
- T CCallbackImpl<2048>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<2048>::~CCallbackImpl()
  T CCallbackImpl<2056>::GetCallbackSizeBytes()
  T CCallbackImpl<2056>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2056>::~CCallbackImpl()
@@ -21060,6 +21057,9 @@
  T CCallbackImpl<36>::GetCallbackSizeBytes()
  T CCallbackImpl<36>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<36>::~CCallbackImpl()
+ T CCallbackImpl<4096>::GetCallbackSizeBytes()
+ T CCallbackImpl<4096>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4096>::~CCallbackImpl()
  T CCallbackImpl<40>::GetCallbackSizeBytes()
  T CCallbackImpl<40>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<40>::~CCallbackImpl()
@@ -21850,7 +21850,7 @@
  T CControllerBindingButton::LoadGroupBinding(unsigned int, int, EControllerModeInput)
  T CControllerBindingButton::LoadModeShiftBinding(unsigned int, Voltroller::DigitalIO, EControllerSource)
  T CControllerBindingButton::OnActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
- T CControllerBindingButton::RemoveBindingAction(bool)
+ T CControllerBindingButton::RemoveAllBindingActions(bool)
  T CControllerBindingButton::SaveDigitalBinding(unsigned int, Voltroller::DigitalIO)
  T CControllerBindingButton::SaveGroupBinding(unsigned int, int, EControllerModeInput)
  T CControllerBindingButton::SetBindingAction(BindingAction_t const&, char const*, bool)
@@ -36040,8 +36040,8 @@
  T CTenfootOverlayController::CCallback_OnLoggedOn::Run(void*)
  T CTenfootOverlayController::CCallback_OnViewerNeedsApproval::Run(void*)
  T CTenfootOverlayController::CTenfootOverlayController(CTenfootOverlayManager*, CGameID)
- T CTenfootOverlayController::DestroyTouchMenu()
- T CTenfootOverlayController::DisplayTouchMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int)
+ T CTenfootOverlayController::DestroyTouchMenu(unsigned int)
+ T CTenfootOverlayController::DisplayTouchMenu(unsigned int, unsigned int, PopupMenuConfig_t, PopupMenuTouchKey_t*, unsigned int)
  T CTenfootOverlayController::EventTextInputFullscreenClosed(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CTenfootOverlayController::GetBigPictureAppID()
  T CTenfootOverlayController::GetBigPictureGameID()
@@ -36240,7 +36240,7 @@
  T CTimeZoneRegionPanel::CTimeZoneRegionPanel(panorama::CPanel2D*, TimeZoneRegion_t const&)
  T CTimeZoneRegionPanel::GetPanelType() const
  T CTimeZoneRegionPanel::~CTimeZoneRegionPanel()
- T CTouchMenuPanel::CTouchMenuPanel(panorama::CPanel2D*, char const*, unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int)
+ T CTouchMenuPanel::CTouchMenuPanel(panorama::CPanel2D*, char const*, unsigned int, unsigned int, PopupMenuConfig_t, PopupMenuTouchKey_t*, unsigned int)
  T CTouchMenuPanel::GetPanelType() const
  T CTouchMenuPanel::OnGamePadAnalog(panorama::GamePadData_t const&)
  T CTouchMenuPanel::OnGamePadDown(panorama::GamePadData_t const&)
@@ -38604,6 +38604,10 @@
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::AddToTail(CTouchMenuPanel*&&)
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::GrowVector(int)
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::~CUtlVector()
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::GrowVector(int)
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::InsertBefore(int, CTrackItemPanel* const&)
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::ShiftElementsRight(int, int)
