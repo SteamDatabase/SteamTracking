@@ -16,7 +16,7 @@ echo Deleting existing files
 rm -rf "$DIR"/ClientExtracted/*
 rm -rf bins/*
 rm -f "$DIR"/BuildbotPaths/*
-#rm -rf "$DIR"/Protobufs/*
+rm -rf "$DIR"/Protobufs/*
 
 #
 # EXTRACT EVERYTHING
