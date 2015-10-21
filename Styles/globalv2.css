@@ -473,7 +473,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	right: -1px;
 	bottom: -1px;
 
-	background: url( 'data:image/png;base64,' ) no-repeat center;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNpi/P//PwMlgIVcjcGLD70H0UzkaA6cv/cpkBIgywC/mdvOMLGwSsHMIskA145FM1m5eIxB7B+Pnz9YG2t3gGgDrArbi/mkFdJA7J+fPxzYWhWuSLQXlF0CfSUMLOtB7H9/fj87NaW+ESaHYoBJelWaXdWkBnQDdMIzehiZmHhB7Du71pS8unb+AFYD5G08ZopqGtQ7Nc3uZWRkBPvVa9K6TSwcnGog9uvrFxovL5++HFkPI3JC8p+98yayYhANMhBEf3//ZvP2/OBGoPqzOA1AN+T/v3+fQU7/8+P7reP9FenITsfqBRAAKQRpAJsO1Awy5MrKGSXYNGN1AQwELTzwCWTA83NHS471V/biiiFGSjMTEwOFgGIDAAIMAKHJfj735eNRAAAAAElFTkSuQmCC' ) no-repeat center;
 }
 
 .commentthread_subscribe_ctn.checked .commentthread_subscribe_check {
