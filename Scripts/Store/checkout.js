@@ -2744,7 +2744,7 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 			rgBadFields.shipping_address = true;
 		}
 		
-				var regExPOBox = /P\.?O\.?\s+Box\s+#?\d+/i;
+				var regExPOBox = /P\.?O\.?\s+Box/i;
 		if ( regExPOBox.test( $( 'shipping_address' ).value ) )
 		{
 			errorString += 'Delivery of your order cannot be sent to a P.O. Box address.<br/>';
