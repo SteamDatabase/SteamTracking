@@ -523,7 +523,7 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	$J.post( url, {appid: appid} )
+		$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			$JFromIDOrElement(divToHide).hide();
 			if ( data && data.success )
@@ -543,7 +543,7 @@ function AddToWishlistButton( button, appid, navref )
 	var url = 'http://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	$J.post( url, {appid: appid} )
+		$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			if ( data && data.success )
 			{
@@ -997,18 +997,6 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 		$(this.strElPrefix + idSuffix).src = this.strImagePath + val + this.strExtension;
 		this.rgLastVals[idSuffix] = val;
 	}
-}
-
-
-function LaunchWebChat()
-{
-	if ( $JFromIDOrElement('webchat_launch_iframe').length )
-		$JFromIDOrElement('webchat_launch_iframe').remove();
-
-	var iframe = $J( '<iframe/>', {id: 'webchat_launch_iframe' } );
-	iframe.hide();
-	iframe.attr( 'src', 'http://steamcommunity.com/chat/launch/' );
-	$J(document.body).append( iframe );
 }
 
 
