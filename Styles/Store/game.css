@@ -237,10 +237,6 @@ img.game_header_image_full {
     line-height: 18px;
     padding-right: 16px;
 }
-.item_store .game_description_snippet
-{
-	font-size: 14px;
-}
 
 .game_review_summary {
 	color: #A34C25;
@@ -374,6 +370,7 @@ img.game_header_image_full {
 }
 
 .notice_box_content_blue_box {
+    width: 584px;
     color: #67c1f5;
     font-size: 14px;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -772,10 +769,6 @@ img.game_header_image_full {
 	line-height: 32px;
 	font-size: 25px;
 	text-align: center;
-}
-
-.game_purchase_discount .discount_prices {
-	height: 32px;
 }
 
 .game_purchase_discount .discount_original_price {
@@ -1541,10 +1534,6 @@ a.friend_block_holder:hover {
 
 	html.responsive img.package_header {
 		height: auto;
-	}
-
-	html.responsive .notice_box_content {
-		width: auto;
 	}
 }
 
