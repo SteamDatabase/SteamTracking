@@ -21886,6 +21886,7 @@
  T CControllerConfigButton::SetDetails(CSteamID, char const*, char const*, char const*, char const*, long long, unsigned long long)
  T CControllerConfigButton::~CControllerConfigButton()
  T CControllerConfigSave::CControllerConfigSave(panorama::IUIWindow*, char const*, unsigned int, unsigned int, panorama::CPanel2D*)
+ T CControllerConfigSave::EventDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CControllerConfigSave::GetPanelType() const
  T CControllerConfigSave::OnControllerBindingSaveResult(bool, char const*, char const*)
  T CControllerConfigSave::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -21894,6 +21895,7 @@
  T CControllerConfigSave::OnTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CControllerConfigSave::OnTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CControllerConfigSave::OnTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
+ T CControllerConfigSave::PrepareOfficialDropDowns(panorama::CDropDown*, char const*, char const*)
  T CControllerConfigSave::~CControllerConfigSave()
  T CControllerFirmwareUpdateManager::BeginAutomatedUpdate()
  T CControllerFirmwareUpdateManager::BeginInteractiveUpdate()
@@ -23993,7 +23995,7 @@
  T CGameStreamSession::GetCaptureType()
  T CGameStreamSession::GetGameName()
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int)
+ T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int, char const*)
  T CGameStreamSession::OnControllerDetached(unsigned int)
  T CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
@@ -25128,6 +25130,8 @@
  T CInputControllerAttachedMsg::New() const
  T CInputControllerAttachedMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CInputControllerAttachedMsg::SetCachedSize(int) const
+ T CInputControllerAttachedMsg::SharedCtor()
+ T CInputControllerAttachedMsg::SharedDtor()
  T CInputControllerAttachedMsg::~CInputControllerAttachedMsg()
  T CInputControllerDetachedMsg::ByteSize() const
  T CInputControllerDetachedMsg::CInputControllerDetachedMsg()
@@ -25811,6 +25815,7 @@
  T CLibraryDetailsPanel::OnFocusContent()
  T CLibraryDetailsPanel::OnFocusMenuRow()
  T CLibraryDetailsPanel::OnParentalSettingsChanged()
+ T CLibraryDetailsPanel::OnScheduledShowLibraryDetailsSection()
  T CLibraryDetailsPanel::OnSetPlayActionModal(bool)
  T CLibraryDetailsPanel::OnShowHowToStreamDialog()
  T CLibraryDetailsPanel::OnShowLibraryDetailsSection(ELibraryDetailsSection)
@@ -44736,7 +44741,7 @@
  T non-virtual thunk to CGameStreamSession::GetCaptureSliceCount()
  T non-virtual thunk to CGameStreamSession::GetCaptureType()
  T non-virtual thunk to CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int)
+ T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int, bool, bool, unsigned int, unsigned int, char const*)
  T non-virtual thunk to CGameStreamSession::OnControllerDetached(unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)

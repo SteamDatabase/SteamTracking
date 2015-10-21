@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_Parental class="SettingsSection" >
+	<SettingsPanel_Parental class="SettingsSection" defaultfocus="Wizard">
 			<ParentalSettingsWizard id="Wizard" />
 	</SettingsPanel_Parental>
 

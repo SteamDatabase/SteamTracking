@@ -13,6 +13,11 @@
 	margin-left: 20px;
 }
 
+.ContextMenuBody Label
+{
+        font-size: 28px;
+}
+
 .Button
 {
 	width: 100%;
@@ -20,7 +25,7 @@
 
 .QuitSectionSpacer
 {
-	height: 16px;
+	height: 32px;
 }
 
 .AlwaysVisible
@@ -230,8 +235,10 @@
 }
 
 #QuitDialogButtonParent
-{
-
+{  
 	vertical-align: center;
 	horizontal-align: center;
+	
+	background-color:gradient( radial, 0.0% -0.0%, 120.0px -40.0px, 120.0% 150.0%, color-stop( 0.0, #285C73FF ), color-stop( 1.0, #12203Dff));
+	border-radius: 8px;
 }

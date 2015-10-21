@@ -6,7 +6,7 @@
 
 	<WizardPanel class="WizardPanel" oncancel="WizardButtonBack();">
 
-		<Panel id="ChildContainer" />
+		<Panel id="ChildContainer" acceptsfocus="true" />
 
 	</WizardPanel>
 </root>

@@ -133,18 +133,28 @@
 			"edges"
 			{
 	
-				0 { "dest"	87 }
-				1 { "dest"	90 }
-				2 { "dest"	91 }
-				3 { "dest"	15 }
-				4 { "dest"	14 }
-				5 { "dest"	88 }
-				6 { "dest"	129 }
-				7
+				87 { "dest"	87 }
+				89 { "dest"	89 }
+				41 { "dest"	41 }
+				66 { "dest"	66 }
+				90 { "dest"	90 }
+				91 { "dest"	91 }
+				42 { "dest"	42 }
+				92 { "dest"	92 }				
+				15 { "dest"	15	"cost"	InwardCost }
+				14 { "dest"	14 }
+				88 { "dest"	88 }
+				129 { "dest"	129 }
+				37
 				{ 
 					"dest"	37 
 					"cost"	LocalCostOneWayCellEdge
 				}	
+				38
+				{ 
+					"dest"	38 
+					"cost"	LocalCostOneWayCellEdge
+				}					
 			}
 		}
 
@@ -309,12 +319,13 @@
 			{
 				0 { "dest"	 4  	"cost"	InwardCost}
 				1 { "dest"	 5  	"cost"	InwardCost}
-				2 { "dest"	129  	"cost"	InwardCost}
-				3 { "dest"	86  }
-				4 { "dest"	88  }
-				5 { "dest"	37  }
-				6 { "dest"	40  }
-				7 { "dest"	96  }
+				2 { "dest"	15  	"cost"	InwardCost}
+				3 { "dest"	129  	"cost"	InwardCost}
+				4 { "dest"	86  }
+				5 { "dest"	88  }
+				6 { "dest"	37  }
+				7 { "dest"	40  }
+				8 { "dest"	96  }
 			}
 		}
 
@@ -330,8 +341,9 @@
 				0 { "dest"	4  	"cost"	InwardCost}
 				1 { "dest"	5  	"cost"	InwardCost}
 				2 { "dest"	129  	"cost"	InwardCost}
-				3 { "dest"	86  }
-				4 { "dest"	87  }
+				3 { "dest"	14  }
+				4 { "dest"	86  }
+				5 { "dest"	87  }
 			}
 		}
 
@@ -829,7 +841,7 @@
 			"longitude"	"21.005001"
 			"edges"
 			{
-				0 { "dest"	90 	"cost"	InwardCost }
+				0 { "dest"	5 	"cost"	InwardCost }
 				1
 				{ 
 					"dest"	73
@@ -875,10 +887,10 @@
 			"longitude"	"12.562008"
 			"edges"
 			{
-				0 { "dest"	89 	"cost"	InwardCost }
-				1 { "dest"	66 	"cost"	InwardCost }
-				2 { "dest"	67 	"cost"	InwardCost }
-				3
+				66 { "dest"	66 	"cost"	InwardCost }
+				5 { "dest"	5 	"cost"	InwardCost }
+				67 { "dest"	67 }
+				29
 				{ 
 					"dest"	29
 					"cost"	LocalCostOneWayCellEdge
@@ -1315,7 +1327,7 @@
 			"longitude"	"18.070793"
 			"edges"
 			{
-				0 { "dest"	41 }
+				0 { "dest"	5	"cost"	InwardCost }
 				1
 				{ 
 					"dest"	68
@@ -1325,7 +1337,9 @@
 				{ 
 					"dest"	7
 					"cost"	LocalCostOneWayCellEdge
-				}									
+				}		
+				3 { "dest"	67 }							
+				4 { "dest"	41 }
 			}
 		}
 		// #67 Norway
@@ -1337,6 +1351,7 @@
 			"longitude"	"10.749264"
 			"edges"
 			{
+				0 { "dest"	66	"cost"	InwardCost }
 				0 { "dest"	41	"cost"	InwardCost }
 			}
 		}
@@ -1596,10 +1611,8 @@
 			"longitude"	"6.754875"
 			"edges"
 			{
-				0 { "dest"	89	"cost"	InwardCost }
 				1 { "dest"	5	"cost"	InwardCost }
 				2 { "dest"	15	"cost"	InwardCost }
-				3 { "dest"	90	"cost"	InwardCost }
 			}
 		}			
 		// #88 Zurich
@@ -1624,9 +1637,7 @@
 			"longitude"	"9.991207"
 			"edges"
 			{
-				0 { "dest"	87	"cost"	InwardCost }
-				1 { "dest"	90 }
-				2 { "dest"	41 }
+				0 { "dest"	5	"cost"	InwardCost }
 			}
 		}			
 		// #90 Berlin
@@ -1638,14 +1649,8 @@
 			"longitude"	"13.401604"
 			"edges"
 			{
-				0 { "dest"	89 }
 				1 { "dest"	91 }
 				2 { "dest"	5	"cost"	InwardCost }
-				3 
-				{ 
-					"dest"	38 
-					"cost"	LocalCostOneWayCellEdge
-				}			
 			}
 		}			
 		// #91 Munich
@@ -2214,6 +2219,7 @@
 			{
 				0 { "dest"	15	"cost"	InwardCost }
 				1 { "dest"	5	"cost"	InwardCost }
+				2 { "dest"	14 }
 			}
 		}
 		130
@@ -2525,7 +2531,7 @@
 		}
 		156
 		{
-			"name" "Brazil - Porto Alegro"
+			"name" "Brazil - Porto Alegre"
 			"region"	"brazil"
 			"latitude"	"-30.03"
 			"longitude"	"-51.23"
@@ -2727,7 +2733,7 @@
 		"EC"	118
 		
 		//"Egypt"							
-		"EG"	37
+		"EG"	125
 		
 		//"El Salvador"					
 		"SV"	139

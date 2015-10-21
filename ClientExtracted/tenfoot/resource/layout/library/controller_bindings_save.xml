@@ -14,6 +14,8 @@
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
 					<Panel id="SetTitleRegion">
+						<DropDown id="OfficialConfigurationTitleDropDown" class="OfficialTitleDropDown">
+						</DropDown>
 						<Label id="SetTitleHint" text="#Library_ControllerSetTitle" hittest="false"/>
 						<TextEntry id="BindingTitleEntry"
 							maxchars="256" 
@@ -24,6 +26,8 @@
 					</Panel>
 
 					<Panel id="AddDescriptionRegion">
+						<DropDown id="OfficialConfigurationDescDropDown" class="OfficialTitleDropDown">
+						</DropDown>
 						<Label id="AddDescriptionHint" text="#Library_ControllerAddDescription" hittest="false" />
 						<TextEntry id="AddDescriptionEntry" 
 							maxchars="4096"
@@ -43,6 +47,7 @@
 				<Panel id="MsgBoxButtons">	
 					<Button id="ButtonOk" class="ButtonOK MsgBoxButton Button">
 						<Label id="OKButtonText" text="#Library_ControllerSaveConfirm" />
+						<Label id="OKButtonTextPublish" text="#Library_ControllerPublishConfirm" />
 					</Button>
 					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button">
 						<Label id="CancelButtonText" text="#Library_ControllerSaveCancel" />

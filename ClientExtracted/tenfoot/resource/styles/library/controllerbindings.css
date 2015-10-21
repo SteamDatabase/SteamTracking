@@ -1768,6 +1768,24 @@ Button:focus .PActionMappingWrapper Image
 {
 	margin-top: 12px;
 	width: 324px;
+	visibility: visible;
+}
+
+.OfficialTitleDropDown
+{
+	margin-top: 12px;
+	width: 600px;
+	visibility: collapse;
+}
+
+.OfficialConfigurationVisible #OfficialConfigurationTitleDropDown, .OfficialConfigurationVisible #OfficialConfigurationDescDropDown
+{
+	visibility: visible;
+}
+
+.OfficialConfigurationVisible #BindingTitleEntry, .OfficialConfigurationVisible #SetTitleHint, .OfficialConfigurationVisible #AddDescriptionHint, .OfficialConfigurationVisible #AddDescriptionEntry
+{
+	visibility: collapse;
 }
 
 .UploadScreenshotMsgBox #MsgBoxButtons
@@ -1789,9 +1807,39 @@ Button:focus .PActionMappingWrapper Image
 	transform: translatex( 480px );
 }
 
-#VisibilityDropDownDropDownMenu
+#VisibilityDropDownDropDownMenu, #OfficialConfigurationTitleDropDownDropDownMenu, #OfficialConfigurationDescDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
+}
+
+#OKButtonText
+{
+	visibility: visible;
+}
+
+#OKButtonTextPublish
+{
+	visibility: collapse;
+}
+
+.Private #OKButtonText
+{
+	visibility: visible;
+}
+
+.Public #OKButtonText
+{
+	visibility: collapse;
+}
+
+.Public #OKButtonTextPublish
+{
+	visibility: visible;
+}
+
+.Private #OKButtonTextPublish
+{
+	visibility: collapse;
 }
 
 #ThrobberRow, #Throbber

@@ -13545,6 +13545,7 @@
  V_isvalidhex
  V_pretifymem
  V_pretifynum
+ V_qsort_s
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
@@ -15212,6 +15213,8 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
+ t CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::CCompareFnWrapper::Compare(void*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const*)
+ t CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::~CUtlVector()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyUriTableProc
  t CryptoPP::SigIllHandlerCPUID(int)
@@ -15407,6 +15410,7 @@
  t output_message
  t output_pass_setup
  t panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, int, int)::Identity::I(float, bool)
+ t panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::$_0::__invoke(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)
  t panorama::Create_CStylePropertyAlign()
  t panorama::Create_CStylePropertyAnimationProperties()
  t panorama::Create_CStylePropertyBackgroundColor()
