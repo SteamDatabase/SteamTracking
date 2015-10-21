@@ -2100,6 +2100,15 @@ body.v6.refund_policy .page_content_ctn {
 	display: none;
 }
 
+a.pulldown_desktop {
+	display: inline;
+	color: inherit;
+}
+
+a.pulldown_mobile {
+	display: none;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive body.v6 .page_content {
@@ -2217,6 +2226,15 @@ body.v6.refund_policy .page_content_ctn {
 		width: 100%;
 		height: auto;
 		vertical-align: middle;
+	}
+
+	html.responsive a.pulldown_desktop {
+		display: none;
+	}
+
+	html.responsive a.pulldown_mobile {
+		display: inline;
+		color: inherit;
 	}
 }
 
