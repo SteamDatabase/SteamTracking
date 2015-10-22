@@ -241,6 +241,12 @@ img.game_header_image_full {
 {
 	font-size: 14px;
 }
+.item .game_description_snippet
+{
+	max-height: 300px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
 
 .game_review_summary {
 	color: #A34C25;
