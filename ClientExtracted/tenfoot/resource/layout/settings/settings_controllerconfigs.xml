@@ -1,0 +1,42 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_ControllerConfigs class="SettingsSection" defaultfocus="Continents">
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
+
+				<Panel class="VertContainer">	
+					<Label text="#SettingsControllerCfg_Intro" />
+					<Label class="PaddedLabel" text="#SettingsControllerCfg_DesktopNote" />
+					
+					<Panel class="SettingsContent">	
+						<Button id="ConfigDesktop" class="Button" selectionpos="auto" onactivate="OpenConfig( 413080 );">
+							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigDesktop" />
+						</Button>
+					</Panel>
+					
+					<Panel class="SettingsContent">	
+						<Button id="ConfigBigPicture" class="Button" selectionpos="auto" onactivate="OpenConfig( 413090 );">
+							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigBP" />
+						</Button>
+						<Label class="CfgComingSoon" text="#SettingsControllerCfg_ComingSoon" />
+					</Panel>
+					
+					<Panel class="SettingsContent">	
+						<Button id="ConfigBigPictureBrowser" class="Button" selectionpos="auto" onactivate="OpenConfig( 413100 );">
+							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigBPBrowser" />
+						</Button>
+						<Label class="CfgComingSoon" text="#SettingsControllerCfg_ComingSoon" />
+					</Panel>
+										
+				</Panel>
+      </Panel>
+		</Panel>
+	</SettingsPanel_ControllerConfigs>
+
+</root>

@@ -600,7 +600,14 @@
 	"Settings_Keyboard"			"On-Screen Keyboard"
 	"Settings_AddLibraryShortcut" "Add Library Shortcut"
 	"Settings_Parental"				"Family View"
-	"Settings_GameController"		"Controller"
+	"Settings_GameController"		"Add / Test Controllers"
+	"Settings_ControllerManagement"	"Add / Test"
+	"Settings_Personal"				"Personal"
+	"Settings_Features"				"Features"
+	"Settings_Configs"				"Configurations"
+	"Settings_ControllerConfigs"	"Controller Configurations"
+	"Settings_AudioInterface"		"Interface"
+	"Settings_DisplayResolution"	"Resolution"
 
 	"Settings_Network_Wizard"		"Network Configuration"
 	"Settings_AuthorizeLocalDevice"	"Family Library Sharing"
@@ -608,6 +615,16 @@
 	"Settings_Select"				"SELECT"
 	"Settings_Back"					"BACK"
 	"Settings_Done"					"DONE"
+
+	"SettingsControllerCfg_Intro"			"When you're not playing a game, your Steam Controller will use these default configurations."
+	"SettingsControllerCfg_ConfigDesktop"	"Desktop configuration"
+	"SettingsControllerCfg_ConfigDesktop_Desc" "Default Desktop configuration created by Valve, for use with the Steam Controller."
+	"SettingsControllerCfg_ConfigBP"		"Big Picture configuration"
+	"SettingsControllerCfg_ConfigBP_Desc"	"Default Big Picture configuration created by Valve, for use with the Steam Controller."
+	"SettingsControllerCfg_ConfigBPBrowser" "Big Picture Web Browser configuration"
+	"SettingsControllerCfg_ConfigBPBrowser_Desc" "Default Big Picture Web Browser configuration created by Valve, for use with the Steam Controller."
+	"SettingsControllerCfg_DesktopNote"		"Note that changes you make to the Desktop configuration will be lost when Steam isn't running."
+	"SettingsControllerCfg_ComingSoon"		" - coming soon"
 
 	"SettingsAbout_SteamClient"			"Steam Client"
 	"SettingsAbout_Built"				"Steam client built"
@@ -1640,6 +1657,10 @@
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOn"	"TOGGLE MULTI-BUTTON ON"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOff"	"TOGGLE MULTI-BUTTON OFF"
 	"Library_Details_ControllerBindingsGordon_ResetToDefault"	"RESET TO DEFAULT"
+	"Library_Details_ControllerBindingsGordon_ToggleLegacyOn"	"LEGACY KEYS"
+	"Library_Details_ControllerBindingsGordon_ToggleLegacyOff"	"IN-GAME ACTIONS"
+	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOn"	"LEGACY SETTINGS"
+	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOff"	"IN-GAME ACTIONS"
 
 	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
@@ -2246,6 +2267,10 @@
 	"SteamUI_GameRequires_NTFS_Detail"	"The game you are installing requires a drive with the NTFS file system and cannot be installed on a FAT32 filesystem."
 	"SteamUI_OfflineMode_GameNotReady"		"This game is not ready to be played in offline mode."
 	"SteamUI_OfflineMode_GameNotReady_Title"	"Game unavailable"
+	
+	"Steam_Preload_GameNotReady_Title" "Not Yet Available"
+	"Steam_Preload_GameNotReady" "This game is not yet released. It will be unlocked\nand available for play on its official release day."
+	
 	"Steam_RunGame_Title_Error"			"Error"
 	"Steam_RunGame_AnotherGameIsBeingRan"	"Cannot run game. You currently have another game launch in progress, please wait until that is complete."
 	"Steam_RunGame_Title_ConvertingToSteam3Content"		"Steam Content System"
@@ -2263,7 +2288,7 @@
 	"SteamUI_OfflineMode_Title" "Offline Mode"
 	"Steam_CannotInstallInOfflineMode"		"Steam must be in online mode to install games."
 	"SteamUI_DownloadsDisabled_Title" "Downloads Disabled"
-	"Steam_CannotInstallDownloadsDisabled"	"Games cannot be installed when downloads are disabled.\n"
+	"Steam_CannotInstallDownloadsDisabled"	"Games cannot be installed when downloads are disabled."
 	"Steam_RegionRestricted_Title"			"Game unavailable"
 	"Steam_RegionRestrictedPurchase_Info"				"This game was activated with a product code that is valid only in a specific geographic region. Since you are not currently in that region, {s:game} is not available to play."
 	"Steam_ErrorNotEnoughDiskSpace_Title"		"Error"
@@ -4745,4 +4770,10 @@
 	"SteamUI_DeveloperConfigCreatorError" "Error Parsing Custom Configuration"
 
 	"ContentFrame_Header_Store" "Store"
+
+	"SettingsKeyboard_DualtouchSuggestions"					"Select how you want suggestions to work when using the Standard On-Screen Keyboard"
+	"SettingsKeyboard_DTSuggest_SuggestTypoCorrection"		"Include suggestions based on nearby keys"
+	"SettingsKeyboard_DTSuggest_SuggestNoTypoCorrection"	"Only show suggestions based on keys directly typed"
+	"SettingsKeyboard_DTSuggest_NoSuggestions"				"Don't show suggestions"
+	"SettingsKeyboard_UseSystemLanguage"					"(use system language)"
 }

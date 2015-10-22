@@ -6,16 +6,10 @@
 
 	<SettingsPanel_Broadcast class="SettingsSection" defaultfocus="SettingsDownloads_Libraries">
 		<Panel class="SettingsBottomPanel">
-			<!-- main panel -->
-			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
-
-			</Panel>
-			<!-- used for enable/disable CSS -->
-			<Panel id="SettingsBroadcast_SubControls" tabindex="auto" selectionpos="auto">
+      <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
+			  <Panel id="SettingsBroadcast_SubControls" class="FlowDown" tabindex="auto" selectionpos="auto">
 				
-				<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
-					
-					<Label class="SettingsLabel" text="#Settings_Broadcast_PermissionsHeader" />
+          <Label class="SettingsLabel" text="#Settings_Broadcast_PermissionsHeader" />
 					<DropDown id="SettingsBroadcast_Permissions" class="Filter" />			
 					
 					<Panel class="Spacer" />

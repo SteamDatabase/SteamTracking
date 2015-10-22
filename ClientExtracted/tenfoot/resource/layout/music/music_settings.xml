@@ -8,55 +8,57 @@
 	<MusicSettingsPanel class="SettingsSection" tabindex="auto" selectionpos="auto" defaultfocus="CrawlAtStartupCheckbox">
 		<Panel class="SettingsBottomPanel">
 
-			<Panel class="SettingsContent SettingsLeftContent" >
-				<Label class="SettingsStatic" text="#Music_Settings_Database_Header" />
+			<Panel class="SettingsContent FlowRight">
+        <Panel class="SettingsLeftContent">
+				  <Label class="SettingsStatic" text="#Music_Settings_Database_Header" />
 
-				<ToggleButton class="CheckBox" id="CrawlAtStartupCheckbox" onactivate="ToggleCrawlAtStartup();" text="#Music_Settings_Crawl_At_Startup"/>				
-				<ToggleButton class="CheckBox" id="CrawlSteamInstallFoldersCheckbox" onactivate="ToggleCrawlSteamInstallFolders();" text="#Music_Settings_CrawlSteamInstallFolders"/>				
+				  <ToggleButton class="CheckBox" id="CrawlAtStartupCheckbox" onactivate="ToggleCrawlAtStartup();" text="#Music_Settings_Crawl_At_Startup"/>				
+				  <ToggleButton class="CheckBox" id="CrawlSteamInstallFoldersCheckbox" onactivate="ToggleCrawlSteamInstallFolders();" text="#Music_Settings_CrawlSteamInstallFolders"/>				
 				
 								
-				<Label id="DatabaseInfoLabel" class="SettingsStatic" text="#Music_Settings_X_Albums_With_Y_Tracks" />
-				<Button id="ResetDatabaseButton" onactivate="ResetLocalLibraryDatabase()" class="Button">
-					<Label id="DatabaseResetLabel" class="LongDesc" text="#Music_Settings_Reset_Database" />
-				</Button>
-				<Button id="SetDirectoriesButton" onactivate="SetupMusicLibraryInSettings()" class="Button">
-					<Label id="SetDirectoriesLabel" class="LongDesc" text="#Music_Settings_Setup_Music_Library" />
-				</Button>
+				  <Label id="DatabaseInfoLabel" class="SettingsStatic" text="#Music_Settings_X_Albums_With_Y_Tracks" />
+				  <Button id="ResetDatabaseButton" onactivate="ResetLocalLibraryDatabase()" class="Button">
+					  <Label id="DatabaseResetLabel" class="LongDesc" text="#Music_Settings_Reset_Database" />
+				  </Button>
+				  <Button id="SetDirectoriesButton" onactivate="SetupMusicLibraryInSettings()" class="Button">
+					  <Label id="SetDirectoriesLabel" class="LongDesc" text="#Music_Settings_Setup_Music_Library" />
+				  </Button>
 				
-				<Label class="SettingsStatic" text="#Music_Settings_Audio_Header" />
-				<Panel class="FlowDown SettingsRight">
-					<Panel class="HorzSub SettingsRight">
-						<VUMeter writable="true" 
-							id="Volume" class="VoiceBarContainer" numbars="10" 
-							barpaneladdclass="VoiceBar" 
-							barpanelactiveclass="VoiceBarActive" />
-						<Label class="SettingsCallout" text="#Music_Settings_Music_Volume" />
-					</Panel>
-				</Panel>
+				  <Label class="SettingsStatic" text="#Music_Settings_Audio_Header" />
+				  <Panel class="FlowDown SettingsRight">
+					  <Panel class="HorzSub SettingsRight">
+						  <VUMeter writable="true" 
+							  id="Volume" class="VoiceBarContainer" numbars="10" 
+							  barpaneladdclass="VoiceBar" 
+							  barpanelactiveclass="VoiceBarActive" />
+						  <Label class="SettingsCallout" text="#Music_Settings_Music_Volume" />
+					  </Panel>
+				  </Panel>
 				
-				<ToggleButton class="CheckBox" id="MediaKeysEnabledCheckbox" 
-					text="#Music_Settings_MediaKeysEnabled" onactivate="ToggleMediaKeysEnabled();"/>	
+				  <ToggleButton class="CheckBox" id="MediaKeysEnabledCheckbox" 
+					  text="#Music_Settings_MediaKeysEnabled" onactivate="ToggleMediaKeysEnabled();"/>	
 				
-			</Panel>
+			  </Panel>
 	
-			<Panel class="SettingsContent SettingsRightContent" >
-				<Label class="SettingsStatic" text="#Music_Settings_Pause_Music_Header" />
-				<ToggleButton class="CheckBox" id="PauseOnStartAnApplicationCheckbox" 
-					text="#Music_Settings_Pause_On_Start_An_Application" 
-					onactivate="TogglePauseOnAppStartedProcess();"/>
-				<ToggleButton class="CheckBox" id="PauseOnVoiceChatCheckbox" 
-					text="#Music_Settings_Pause_On_Voice_Chat" 
-					onactivate="TogglePauseOnVoiceChat();"/>
+			  <Panel class="SettingsLeftContent" >
+				  <Label class="SettingsStatic" text="#Music_Settings_Pause_Music_Header" />
+				  <ToggleButton class="CheckBox" id="PauseOnStartAnApplicationCheckbox" 
+					  text="#Music_Settings_Pause_On_Start_An_Application" 
+					  onactivate="TogglePauseOnAppStartedProcess();"/>
+				  <ToggleButton class="CheckBox" id="PauseOnVoiceChatCheckbox" 
+					  text="#Music_Settings_Pause_On_Voice_Chat" 
+					  onactivate="TogglePauseOnVoiceChat();"/>
 
-				<Label class="SettingsStatic" text="#Music_Settings_Notification_Header" />
-				<ToggleButton class="CheckBox" id="PlaylistNowPlayingNotificationCheckbox" 
-					text="#Music_Settings_Playlist_Now_Playing" onactivate="TogglePlaylistNowPlayingNotification();"/>	
+				  <Label class="SettingsStatic" text="#Music_Settings_Notification_Header" />
+				  <ToggleButton class="CheckBox" id="PlaylistNowPlayingNotificationCheckbox" 
+					  text="#Music_Settings_Playlist_Now_Playing" onactivate="TogglePlaylistNowPlayingNotification();"/>	
 					
-				<Label class="SettingsStatic" text="#Music_Settings_Logging_Header" />
-				<ToggleButton class="CheckBox" id="LogCrawlingCheckbox" 
-					text="#Music_Settings_Logging_Crawling" onactivate="ToggleLogCrawling();"/>
-			</Panel>
-		</Panel>
+				  <Label class="SettingsStatic" text="#Music_Settings_Logging_Header" />
+				  <ToggleButton class="CheckBox" id="LogCrawlingCheckbox" 
+					  text="#Music_Settings_Logging_Crawling" onactivate="ToggleLogCrawling();"/>
+			  </Panel>
+		  </Panel>
+    </Panel>
 		
 	</MusicSettingsPanel>
 </root>

@@ -922,6 +922,27 @@ ControllerBindingButton.Glyph.KeyboardShape #BindingShape, ControllerBindingButt
 	background-repeat: no-repeat;
 }
 
+ControllerBindingButton.Glyph.GameActionShape
+{
+	width: 72px;
+	height: 72px;
+	background-repeat: no-repeat;
+}
+ControllerBindingButton.Glyph.GameActionShape
+{
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_keyboard_offset.png");
+}
+ControllerBindingButton.Glyph.GameActionShape #BindingShape
+{
+	width: 100%;
+	height: 100%;
+}
+ControllerBindingButton.Glyph.GameActionShape Label
+{
+	font-weight: bold;
+	text-align: center;
+}
+
 ControllerBindingButton.Glyph.GamepadShape
 {
 	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad_offset.png");
@@ -1209,6 +1230,11 @@ Slider:Selected
 	z-index: 100;
 }
 
+#ModeDropDownDropDownMenu
+{
+	max-height: 350px;
+}
+
 .FieldWrapper Button:hover, .FieldWrapper ControllerBindingButton:hover, .FieldWrapper DropDown:hover
 {
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
@@ -1466,14 +1492,14 @@ ChooseBinding #GameActions
 	flow-children: down;
 }
 
-ChooseBinding.GameActionsModeActive #GameActions
+ChooseBinding.InGameActionsView #GameActions
 {
 	visibility: visible;
 }
 
-ChooseBinding.GameActionsModeActive #VirtualMouse,
-ChooseBinding.GameActionsModeActive #VirtualGamepad,
-ChooseBinding.GameActionsModeActive #KeyboardWrapper
+ChooseBinding.InGameActionsView #VirtualMouse,
+ChooseBinding.InGameActionsView #VirtualGamepad,
+ChooseBinding.InGameActionsView #KeyboardWrapper
 {
 	visibility: collapse;
 }

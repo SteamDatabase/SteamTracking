@@ -1,8 +1,9 @@
 "controller_mappings"
 {
     "version" "2"
-    "game" "Steam Desktop"
-
+	"title"			"#SettingsControllerCfg_ConfigDesktop"
+	"description"	"#SettingsControllerCfg_ConfigDesktop_Desc"
+    "game"			"Steam Desktop"
 
     "group"
     {
@@ -65,7 +66,7 @@
         "mode" "absolute_mouse"
 		"bindings"
 		{
-			"click"		"key_press LEFT_SHIFT, Left Shift"
+			"click"		"key_press LEFT_SHIFT"
 		}
     }
 
@@ -75,7 +76,7 @@
 		"mode"		"trigger"
 		"bindings"
 		{
-			"click"		"mouse_button RIGHT, Right Mouse"
+			"click"		"mouse_button RIGHT"
 		}
 		"settings"
 		{
@@ -89,7 +90,7 @@
 		"mode"		"trigger"
 		"bindings"
 		{
-			"click"		"mouse_button LEFT, Left Mouse"
+			"click"		"mouse_button LEFT"
 		}
 		"settings"
 		{
@@ -102,9 +103,9 @@
 		"mode"		"scrollwheel"
 		"bindings"
 		{
-			"scroll_clockwise"				"mouse_wheel SCROLL_DOWN, Scroll Down"
-			"scroll_counterclockwise"		"mouse_wheel SCROLL_UP, Scroll Up"
-			"click"							"mouse_button MIDDLE, Middle Mouse"
+			"scroll_clockwise"				"mouse_wheel SCROLL_DOWN"
+			"scroll_counterclockwise"		"mouse_wheel SCROLL_UP"
+			"click"							"mouse_button MIDDLE"
 		}
 		"settings"
 		{
@@ -112,36 +113,36 @@
 		}
 	}
 
-    "group_source_bindings"
-    {
-        "0" "button_diamond"
-        "1" "joystick"
-        "6" "left_trackpad"
-        "3" "right_trackpad"
-		"4"	"left_trigger active"
-		"5"	"right_trigger active"
-    }
-
-    "switch_bindings"
-    {
-        "bindings"
-        {
-    		"right_bumper"			"key_press LEFT_ALT, Left Alt"
-    		"left_bumper"			"key_press LEFT_CONTROL, Left Control"
-
-    		"button_escape"			"key_press ESCAPE, Menu"
-    		"button_menu"			"key_press TAB, Tab"
-		    
-			"button_back_left"		"mouse_button BACK, Mouse Back"
-			"button_back_right"		"mouse_button FORWARD, Mouse Forward"
-        }
-    }
-
-    "settings"
-    {
-		"left_trackpad_mode"						"none"
-		"right_trackpad_mode"						"none"
-    }
-
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"0" "button_diamond"
+			"1" "joystick"
+			"6" "left_trackpad"
+			"3" "right_trackpad"
+			"4"	"left_trigger active"
+			"5"	"right_trigger active"
+		}
+		"switch_bindings"
+		{
+			"bindings"
+			{
+    			"right_bumper"			"key_press LEFT_ALT"
+    			"left_bumper"			"key_press LEFT_CONTROL"
+    			"button_escape"			"key_press ESCAPE"
+    			"button_menu"			"key_press TAB"
+				"button_back_left"		"mouse_button BACK"
+				"button_back_right"		"mouse_button FORWARD"
+			}
+		}
+		"settings"
+		{
+			"left_trackpad_mode"						"none"
+			"right_trackpad_mode"						"none"
+		}
+	}
 }
 

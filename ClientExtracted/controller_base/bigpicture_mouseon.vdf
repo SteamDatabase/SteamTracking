@@ -36,16 +36,21 @@
 			"hold_repeat_inverval"		"99"
 		}
 	}
-	"group_source_bindings"
+	"preset"
 	{
-		"0" "right_trackpad"
-		"1" "left_trigger"
-		"2" "right_trigger"
-	}
-	"settings"
-	{
-		"left_trackpad_mode" "none"
-		"right_trackpad_mode" "none"
-		"mouse_smoothing"	"1"
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"0" "right_trackpad"
+			"1" "left_trigger"
+			"2" "right_trigger"
+		}
+		"settings"
+		{
+			"left_trackpad_mode" "none"
+			"right_trackpad_mode" "none"
+			"mouse_smoothing"	"1"
+		}
 	}
 }

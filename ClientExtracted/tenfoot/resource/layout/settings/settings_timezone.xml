@@ -7,13 +7,8 @@
 	</styles>
 
 	<SettingsPanel_TimeZone class="SettingsSection" defaultfocus="Continents">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_TimeZone" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
+		  <Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="HorzContainer">
 					<Label class="SettingsCallout" text="#SettingsTimeZone_Intro" />
@@ -25,6 +20,7 @@
 						<!-- region instances added here -->
 					</Panel>
 				</Panel>
+      </Panel>
 		</Panel>
 	</SettingsPanel_TimeZone>
 

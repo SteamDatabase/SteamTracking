@@ -773,6 +773,7 @@
  B CSettingsPanelAudio_Profile::m_symbol
  B CSettingsPanelBorrowerEntry::m_symbol
  B CSettingsPanelBroadcast::m_symbol
+ B CSettingsPanelControllerConfigs::m_symbol
  B CSettingsPanelDiskManagement::m_symbol
  B CSettingsPanelDiskManagementAppListing::m_symbol
  B CSettingsPanelDisplay::m_symbol
@@ -1224,6 +1225,7 @@
  B LibraryDetailsFocusContent::symbol
  B LibraryDetailsFocusMenuRow::symbol
  B LibraryFilter::symbol
+ B LibraryInstallApp::symbol
  B LibrarySearch::symbol
  B LibrarySearchButtonActivated::symbol
  B LibraryShowApp::symbol
@@ -1305,6 +1307,7 @@
  B OpenCommunityHome::symbol
  B OpenCommunityMarket::symbol
  B OpenCommunityMenu::symbol
+ B OpenConfig::symbol
  B OpenEntry::symbol
  B OpenFriendActivity::symbol
  B OpenGameGuides::symbol
@@ -1679,6 +1682,7 @@
  B ToggleHardwareDecoding::symbol
  B ToggleHardwareEncoding::symbol
  B ToggleInterfaceSetting::symbol
+ B ToggleLegacyBindings::symbol
  B ToggleLogCrawling::symbol
  B ToggleMediaKeysEnabled::symbol
  B ToggleMicBoost::symbol
@@ -1808,7 +1812,6 @@
  B g_AgreementsSSAWizard_Helper
  B g_AgreementsWizardChild_Helper
  B g_AlbumGridItem_Helper
- B g_AlienFXSettingsEnabled
  B g_AnimatedImageStrip_Helper
  B g_AnimatingImagePanelLinkerHack
  B g_AnimatingImagePanelPullInModule
@@ -2234,6 +2237,7 @@
  B g_SettingsPanel_Audio_Helper
  B g_SettingsPanel_AuthorizeLocalDevice_Helper
  B g_SettingsPanel_Broadcast_Helper
+ B g_SettingsPanel_ControllerConfigs_Helper
  B g_SettingsPanel_DiskManagement_Helper
  B g_SettingsPanel_Display_Helper
  B g_SettingsPanel_Downloads_Helper
@@ -2269,7 +2273,6 @@
  B g_SlottedSlider_Helper
  B g_SmsErrorWizardChild_Helper
  B g_StackDumpMutex
- B g_SteamControllerSettings
  B g_SteamDoc
  B g_SteamExeFrameFn
  B g_SteamGuardWizardChild_Helper
@@ -3218,6 +3221,7 @@
  B panorama::g_SettingsPanel_AudioLinkerHack
  B panorama::g_SettingsPanel_AuthorizeLocalDeviceLinkerHack
  B panorama::g_SettingsPanel_BroadcastLinkerHack
+ B panorama::g_SettingsPanel_ControllerConfigsLinkerHack
  B panorama::g_SettingsPanel_DiskManagementLinkerHack
  B panorama::g_SettingsPanel_DisplayLinkerHack
  B panorama::g_SettingsPanel_DownloadsLinkerHack
@@ -5595,6 +5599,7 @@
  D LibraryDetailsFocusContent::pchEvent
  D LibraryDetailsFocusMenuRow::pchEvent
  D LibraryFilter::pchEvent
+ D LibraryInstallApp::pchEvent
  D LibrarySearch::pchEvent
  D LibrarySearchButtonActivated::pchEvent
  D LibraryShowApp::pchEvent
@@ -5685,6 +5690,7 @@
  D OpenCommunityHome::pchEvent
  D OpenCommunityMarket::pchEvent
  D OpenCommunityMenu::pchEvent
+ D OpenConfig::pchEvent
  D OpenEntry::pchEvent
  D OpenFriendActivity::pchEvent
  D OpenGameGuides::pchEvent
@@ -6076,6 +6082,7 @@
  D ToggleHardwareDecoding::pchEvent
  D ToggleHardwareEncoding::pchEvent
  D ToggleInterfaceSetting::pchEvent
+ D ToggleLegacyBindings::pchEvent
  D ToggleLogCrawling::pchEvent
  D ToggleMediaKeysEnabled::pchEvent
  D ToggleMicBoost::pchEvent
@@ -10309,6 +10316,7 @@
  D typeinfo for CSettingsPanelAudio_Profile
  D typeinfo for CSettingsPanelBorrowerEntry
  D typeinfo for CSettingsPanelBroadcast
+ D typeinfo for CSettingsPanelControllerConfigs
  D typeinfo for CSettingsPanelDiskManagement
  D typeinfo for CSettingsPanelDiskManagementAppListing
  D typeinfo for CSettingsPanelDisplay
@@ -13709,6 +13717,7 @@
  D vtable for CSettingsPanelAudio_Profile
  D vtable for CSettingsPanelBorrowerEntry
  D vtable for CSettingsPanelBroadcast
+ D vtable for CSettingsPanelControllerConfigs
  D vtable for CSettingsPanelDiskManagement
  D vtable for CSettingsPanelDiskManagementAppListing
  D vtable for CSettingsPanelDisplay
@@ -16530,6 +16539,7 @@
  R typeinfo name for CSettingsPanelAudio_Profile
  R typeinfo name for CSettingsPanelBorrowerEntry
  R typeinfo name for CSettingsPanelBroadcast
+ R typeinfo name for CSettingsPanelControllerConfigs
  R typeinfo name for CSettingsPanelDiskManagement
  R typeinfo name for CSettingsPanelDiskManagementAppListing
  R typeinfo name for CSettingsPanelDisplay
@@ -21437,7 +21447,9 @@
  T CChooseBinding::OnRemoveBinding()
  T CChooseBinding::OnSetBinding(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, char const*)
  T CChooseBinding::OnTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CChooseBinding::OnToggleLegacyBindings()
  T CChooseBinding::RebuildGameActions(unsigned int)
+ T CChooseBinding::SetLegacyBindingsMode(bool)
  T CChooseBinding::Show(CControllerBindingButton*, unsigned int)
  T CChooseBinding::~CChooseBinding()
  T CChoosePurchaseOrAuthorizationPanel::CChoosePurchaseOrAuthorizationPanel(panorama::IUIWindow*, char const*)
@@ -21876,6 +21888,7 @@
  T CControllerConfigBrowser::OnRemoveConfigPrompt()
  T CControllerConfigBrowser::OnSelectConfigCategory(char const*)
  T CControllerConfigBrowser::OnSetFocusToNextPanel(int, panorama::EFocusMoveDirection, bool, float, float, float, float, float)
+ T CControllerConfigBrowser::OpenMostRelevantPanel()
  T CControllerConfigBrowser::PrepareForFocus(panorama::CPanel2D*)
  T CControllerConfigBrowser::Show(panorama::CPanel2D*)
  T CControllerConfigBrowser::~CControllerConfigBrowser()
@@ -21940,7 +21953,7 @@
  T CControllerPropertiesMode::FindActiveBindingInfo(SourceGroupBindingInfo_t*)
  T CControllerPropertiesMode::FindBindingInfo(EControllerSourceMode, int, SourceGroupBindingInfo_t*)
  T CControllerPropertiesMode::GetPanelType() const
- T CControllerPropertiesMode::InGameActionsMode()
+ T CControllerPropertiesMode::HaveAvailableGameActions()
  T CControllerPropertiesMode::LoadActivePropertiesAndBindings()
  T CControllerPropertiesMode::LoadGroupBindings()
  T CControllerPropertiesMode::LoadModeShiftBinding()
@@ -21953,14 +21966,16 @@
  T CControllerPropertiesMode::OnRotationSliderValueChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, float)
  T CControllerPropertiesMode::OnShowAdvancedProperties(bool)
  T CControllerPropertiesMode::OnShowModeShift(bool)
+ T CControllerPropertiesMode::OnToggleLegacyBindings()
  T CControllerPropertiesMode::RebuildModeOptions()
  T CControllerPropertiesMode::RecomputeColumnSelectionPositions(panorama::CPanel2D*)
  T CControllerPropertiesMode::RecomputeSelectionPositions()
  T CControllerPropertiesMode::RestoreButtonBinding(Voltroller::DigitalIO)
  T CControllerPropertiesMode::SaveActivePropertiesAndBindings()
+ T CControllerPropertiesMode::SetLegacyBindingsMode(bool)
  T CControllerPropertiesMode::SetModeShiftBinding(Voltroller::DigitalIO, int, int)
  T CControllerPropertiesMode::ShouldControlBeVisible(panorama::CPanel2D*)
- T CControllerPropertiesMode::Show(unsigned int, EControllerSource, int)
+ T CControllerPropertiesMode::Show(unsigned int, EControllerSource, int, bool)
  T CControllerPropertiesMode::ShowControls()
  T CControllerPropertiesMode::~CControllerPropertiesMode()
  T CControllerSourceModeABXY::CControllerSourceModeABXY(panorama::CPanel2D*, char const*)
@@ -23662,10 +23677,11 @@
  T CGameActions::OnShowExternalURL(char const*)
  T CGameActions::OnShowGameInstallInProgress()
  T CGameActions::OnShowGameLaunchProgress()
+ T CGameActions::OnShowGameOnlyPreloaded(CGameID)
  T CGameActions::OnShowInstallGameWizard(unsigned int)
  T CGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T CGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
- T CGameActions::OnShowLocalizedAudioChoiceDialog(CSteamApp*, KeyValues*)
+ T CGameActions::OnShowLocalizedAudioChoiceDialog(CGameID, KeyValues*)
  T CGameActions::OnShowModNeedsFullGameDialog(unsigned int, char const*)
  T CGameActions::OnShowNTFSRequired()
  T CGameActions::OnShowParentalControlBlocking(CGameID)
@@ -26219,6 +26235,7 @@
  T CMainMenu::EventCloseScreenshotBrowser(bool)
  T CMainMenu::EventDisplayInboxDropdown()
  T CMainMenu::EventDisplayInboxDropdownInternal()
+ T CMainMenu::EventInstallApp(unsigned int)
  T CMainMenu::EventMainMenuSuggestedAppIDs(unsigned int, unsigned int, unsigned int)
  T CMainMenu::EventNotifyMustExitApps()
  T CMainMenu::EventParentalSettingsChanged()
@@ -31711,6 +31728,7 @@
  T CSettingsController::GetDefaultStartupMode()
  T CSettingsController::GetDefaultVoiceDevice(CUtlString&)
  T CSettingsController::GetDualTouchTutorialCompletionCount() const
+ T CSettingsController::GetOnScreenKeyboardSuggestionMode() const
  T CSettingsController::GetOverlayHotkey(vgui::HotKeyInfo*)
  T CSettingsController::GetPreferredMonitor(CUtlString&)
  T CSettingsController::GetPreferredResolution(int&, int&)
@@ -31731,6 +31749,7 @@
  T CSettingsController::SetDefaultTextInputHandlerType(panorama::ETextInputHandlerType_t)
  T CSettingsController::SetDefaultVoiceDevice(char const*)
  T CSettingsController::SetGamepadMappingString(char const*)
+ T CSettingsController::SetOnScreenKeyboardSuggestionMode(unsigned int)
  T CSettingsController::SetOverlayHotkey(vgui::HotKeyInfo const&)
  T CSettingsController::SetScreenSaverEnabled(bool)
  T CSettingsController::SetScreenshotBtn(panorama::GamePadData_t const&)
@@ -31740,12 +31759,9 @@
  T CSettingsController::SetUseSystemAudioForVoice(bool)
  T CSettingsController::UpdateGamepadMappingHints(char const*)
  T CSettingsController::Validate(CValidator&, char const*)
- T CSettingsPanel::BalanceOptionColumns()
  T CSettingsPanel::CSettingsPanel(panorama::CPanel2D*, char const*)
  T CSettingsPanel::GetPanelType() const
  T CSettingsPanel::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
- T CSettingsPanel::MoveOptionToColumn(panorama::CPanel2D*, panorama::CPanel2D*)
- T CSettingsPanel::OnStylesChanged()
  T CSettingsPanel::~CSettingsPanel()
  T CSettingsPanelAbout::CSettingsPanelAbout(panorama::CPanel2D*, char const*)
  T CSettingsPanelAbout::GetPanelType() const
@@ -31835,6 +31851,10 @@
  T CSettingsPanelBroadcast::OnPanelActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CSettingsPanelBroadcast::OnResetData()
  T CSettingsPanelBroadcast::~CSettingsPanelBroadcast()
+ T CSettingsPanelControllerConfigs::CSettingsPanelControllerConfigs(panorama::CPanel2D*, char const*)
+ T CSettingsPanelControllerConfigs::GetPanelType() const
+ T CSettingsPanelControllerConfigs::OnOpenConfig(unsigned int)
+ T CSettingsPanelControllerConfigs::~CSettingsPanelControllerConfigs()
  T CSettingsPanelDiskManagement::CSettingsPanelDiskManagement(panorama::CPanel2D*, char const*)
  T CSettingsPanelDiskManagement::GetPanelType() const
  T CSettingsPanelDiskManagement::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
@@ -31961,7 +31981,6 @@
  T CSettingsPanelInterface::~CSettingsPanelInterface()
  T CSettingsPanelKeyboard::CSettingsPanelKeyboard(panorama::CPanel2D*, char const*)
  T CSettingsPanelKeyboard::GetPanelType() const
- T CSettingsPanelKeyboard::OnLanguageToggle()
  T CSettingsPanelKeyboard::OnPanelActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CSettingsPanelKeyboard::SetInputType(panorama::ETextInputHandlerType_t)
  T CSettingsPanelKeyboard::ShowSelectedLanguage(panorama::CPanel2D*)
@@ -32998,7 +33017,7 @@
  T CSteamAppBase::IsHardware() const
  T CSteamAppBase::IsMediaFile() const
  T CSteamAppBase::IsMusic() const
- T CSteamAppBase::IsPreloadable() const
+ T CSteamAppBase::IsPreloadOnly() const
  T CSteamAppBase::IsPreloadingOrPreloaded() const
  T CSteamAppBase::IsRunning() const
  T CSteamAppBase::IsShortcut() const
@@ -34607,11 +34626,12 @@
  T CStreamingServerGameActions::OnShowExternalURL(char const*)
  T CStreamingServerGameActions::OnShowGameInstallInProgress()
  T CStreamingServerGameActions::OnShowGameLaunchProgress()
+ T CStreamingServerGameActions::OnShowGameOnlyPreloaded(CGameID)
  T CStreamingServerGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T CStreamingServerGameActions::OnShowInstallGameWizard(unsigned int)
  T CStreamingServerGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T CStreamingServerGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
- T CStreamingServerGameActions::OnShowLocalizedAudioChoiceDialog(CSteamApp*, KeyValues*)
+ T CStreamingServerGameActions::OnShowLocalizedAudioChoiceDialog(CGameID, KeyValues*)
  T CStreamingServerGameActions::OnShowModNeedsFullGameDialog(unsigned int, char const*)
  T CStreamingServerGameActions::OnShowNTFSRequired()
  T CStreamingServerGameActions::OnShowParentalControlBlocking(CGameID)
@@ -35907,11 +35927,12 @@
  T CTenfootGameActions::OnShowExternalURL(char const*)
  T CTenfootGameActions::OnShowGameInstallInProgress()
  T CTenfootGameActions::OnShowGameLaunchProgress()
+ T CTenfootGameActions::OnShowGameOnlyPreloaded(CGameID)
  T CTenfootGameActions::OnShowInstallErrorDialog(unsigned int, EAppUpdateError)
  T CTenfootGameActions::OnShowInstallGameWizard(unsigned int)
  T CTenfootGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T CTenfootGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
- T CTenfootGameActions::OnShowLocalizedAudioChoiceDialog(CSteamApp*, KeyValues*)
+ T CTenfootGameActions::OnShowLocalizedAudioChoiceDialog(CGameID, KeyValues*)
  T CTenfootGameActions::OnShowModNeedsFullGameDialog(unsigned int, char const*)
  T CTenfootGameActions::OnShowNTFSRequired()
  T CTenfootGameActions::OnShowParentalControlBlocking(CGameID)
@@ -36221,6 +36242,7 @@
  T CTextureIdProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTexturePanel::CTexturePanel(panorama::CHTML*, char const*)
+ T CTexturePanel::GetMouseCursor()
  T CTexturePanel::Paint()
  T CTexturePanel::~CTexturePanel()
  T CThreadSafeClassMemoryPool<CStreamPacket>::Alloc()
@@ -39233,7 +39255,6 @@
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::GrowVector(int)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::InsertBefore(int, panorama::CPanel2D* const&)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::PurgeAndDeleteElements()
- T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::ShiftElementsLeft(int, int)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::~CUtlVector()
@@ -40758,7 +40779,7 @@
  T CreateShutdownUIHandler(EUIMode)
  T CreateStartupHandler(EUIMode)
  T CreateTenfootOverlay(CGameID, unsigned long long, bool, int)
- T CreateTenfootWindow(bool, bool, bool)
+ T CreateTenfootWindow(bool, bool, bool, bool)
  T CreateVoiceRecorder()
  T CreatingAccountResult::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T CreatingAccountResult::GetEventType()
@@ -41030,6 +41051,7 @@
  T DeleteLocalContent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DeleteLocalContent::GetEventType()
  T DeleteLocalContent::MakeEvent(panorama::IUIPanelClient const*)
+ T DeleteOutdatedControllerFiles(CUtlString, CUtlBuffer&)
  T DeleteOverlayDispatcher::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DeleteOverlayDispatcher::GetEventType()
  T DeleteOverlayDispatcher::MakeEvent(panorama::IUIPanelClient const*, CTenfootOverlayDispatcher*)
@@ -41203,7 +41225,7 @@
  T FastDelegate1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>) const
  T FastDelegate1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>) const
  T FastDelegate1<ControllerFirmwareUpdateArgs_t, bool>::operator()(ControllerFirmwareUpdateArgs_t) const
- T FastDelegate1<bool, void>::InvokeStaticFunction(bool) const
+ T FastDelegate2<bool, bool, void>::InvokeStaticFunction(bool, bool) const
  T FastDelegate2<char const*, CSmartPtr<CStoreSearchResults const, CRefCountAccessor>, bool>::operator()(char const*, CSmartPtr<CStoreSearchResults const, CRefCountAccessor>) const
  T FastDelegate2<panorama::CPanelPtr<panorama::IUIPanel const> const&, GameFilterOptions_t, bool>::operator()(panorama::CPanelPtr<panorama::IUIPanel const> const&, GameFilterOptions_t) const
  T FastDelegate2<panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>, void>::InvokeStaticFunction(panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>) const
@@ -41698,9 +41720,9 @@
  T InitGIDSystem(unsigned int, bool)
  T InitializeChrome(IHTMLChromeController*, EUIMode)
  T InitializeSpewConfig()
- T InitializeTenfootStartup(bool)
+ T InitializeTenfootStartup(bool, bool)
  T InitializeTenfootStartupEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T InitializeTenfootStartupEvent::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T InitializeTenfootStartupEvent::MakeEvent(panorama::IUIPanelClient const*, bool, bool)
  T InitializeTenfootUI(panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>)
  T InitializeTenfootUIEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T InitializeTenfootUIEvent::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>)
@@ -41905,6 +41927,9 @@
  T LibraryFilter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T LibraryFilter::GetEventType()
  T LibraryFilter::MakeEvent(panorama::IUIPanelClient const*)
+ T LibraryInstallApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T LibraryInstallApp::GetEventType()
+ T LibraryInstallApp::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T LibrarySearch::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T LibrarySearch::GetEventType()
  T LibrarySearch::MakeEvent(panorama::IUIPanelClient const*)
@@ -42239,6 +42264,9 @@
  T OpenCommunityMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenCommunityMenu::GetEventType()
  T OpenCommunityMenu::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T OpenConfig::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T OpenConfig::GetEventType()
+ T OpenConfig::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T OpenEntry::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenEntry::GetEventType()
  T OpenEntry::MakeEvent(panorama::IUIPanelClient const*)
@@ -42838,7 +42866,6 @@
  T SettingsDisplayRequestRestart::GetEventType()
  T SettingsDisplayRequestRestart::MakeEvent(panorama::IUIPanelClient const*)
  T SettingsKeyboard_LanguageToggle::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T SettingsKeyboard_LanguageToggle::GetEventType()
  T SettingsKeyboard_LanguageToggle::MakeEvent(panorama::IUIPanelClient const*)
  T SettingsStore_FilterToggle::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T SettingsStore_FilterToggle::GetEventType()
@@ -43635,6 +43662,9 @@
  T ToggleInterfaceSetting::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ToggleInterfaceSetting::GetEventType()
  T ToggleInterfaceSetting::MakeEvent(panorama::IUIPanelClient const*)
+ T ToggleLegacyBindings::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ToggleLegacyBindings::GetEventType()
+ T ToggleLegacyBindings::MakeEvent(panorama::IUIPanelClient const*)
  T ToggleLogCrawling::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ToggleLogCrawling::GetEventType()
  T ToggleLogCrawling::MakeEvent(panorama::IUIPanelClient const*)
@@ -44680,10 +44710,11 @@
  T non-virtual thunk to CGameActions::OnShowExternalURL(char const*)
  T non-virtual thunk to CGameActions::OnShowGameInstallInProgress()
  T non-virtual thunk to CGameActions::OnShowGameLaunchProgress()
+ T non-virtual thunk to CGameActions::OnShowGameOnlyPreloaded(CGameID)
  T non-virtual thunk to CGameActions::OnShowInstallGameWizard(unsigned int)
  T non-virtual thunk to CGameActions::OnShowLaunchEULADialog(CGameID, KeyValues*)
  T non-virtual thunk to CGameActions::OnShowLaunchOptionsDialog(CGameID, KeyValues*)
- T non-virtual thunk to CGameActions::OnShowLocalizedAudioChoiceDialog(CSteamApp*, KeyValues*)
+ T non-virtual thunk to CGameActions::OnShowLocalizedAudioChoiceDialog(CGameID, KeyValues*)
  T non-virtual thunk to CGameActions::OnShowModNeedsFullGameDialog(unsigned int, char const*)
  T non-virtual thunk to CGameActions::OnShowNTFSRequired()
  T non-virtual thunk to CGameActions::OnShowParentalControlBlocking(CGameID)
@@ -49122,7 +49153,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreInstallError>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreLegacyKeyError>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InGameSettingsControlSelected>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InitializeTenfootStartupEvent, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InitializeTenfootStartupEvent, bool, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InstallDemo>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<InstallSteamServiceEvent>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IntroMovieDone>(panorama::IUIPanel*, char const*, char const**)
@@ -49139,6 +49170,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryDetailsFocusContent>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryDetailsFocusMenuRow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryFilter>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryInstallApp, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibrarySearch>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibrarySearchButtonActivated>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryShowApp, unsigned int>(panorama::IUIPanel*, char const*, char const**)
@@ -49219,6 +49251,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenCommunityHome, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenCommunityMarket, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenCommunityMenu, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenConfig, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenEntry>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenFriendActivity, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenGameGuides, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -49575,6 +49608,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleHardwareDecoding>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleHardwareEncoding>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleInterfaceSetting>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleLegacyBindings>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleLogCrawling>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleMediaKeysEnabled>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ToggleMicBoost>(panorama::IUIPanel*, char const*, char const**)
@@ -56235,6 +56269,7 @@
  b dump_panorama_css_properties_command
  b enforcerequiredbranch
  b find_command
+ b g_AlienFXSettingsEnabled
  b g_AnimatingImagePanel_Helper
  b g_AnimationPropertyConverters
  b g_BreakSet
@@ -56273,6 +56308,7 @@
  b g_ScriptSymbols
  b g_ScrollBar_Horizontal_Helper
  b g_ScrollBar_Vertical_Helper
+ b g_SteamControllerSettings
  b g_SteamGamesUIModule
  b g_SteamStartup
  b g_StoreBetaParam
@@ -58589,6 +58625,7 @@
  t Create_SettingsPanel_Audio(char const*, panorama::IUIPanel*)
  t Create_SettingsPanel_AuthorizeLocalDevice(char const*, panorama::IUIPanel*)
  t Create_SettingsPanel_Broadcast(char const*, panorama::IUIPanel*)
+ t Create_SettingsPanel_ControllerConfigs(char const*, panorama::IUIPanel*)
  t Create_SettingsPanel_DiskManagement(char const*, panorama::IUIPanel*)
  t Create_SettingsPanel_Display(char const*, panorama::IUIPanel*)
  t Create_SettingsPanel_Downloads(char const*, panorama::IUIPanel*)

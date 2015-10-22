@@ -1,16 +1,92 @@
 "controller_mappings"
 {
     "version" "2"
-    "game" "Steam Big Picture"
+	"title"			"#SettingsControllerCfg_ConfigBP"
+	"description"	"#SettingsControllerCfg_ConfigBP_Desc"
+    "game"			"Steam Big Picture"
 
-    "group_source_bindings"
+	"group"
     {
+        "id" "0"
+        "mode" "four_buttons"
+        "bindings"
+        {
+        }
     }
+    "group"
+    {
+        "id"    1
+        "mode" "dpad"
+        "bindings"
+        {
+        }
+		"settings"
+		{
+			"requires_click" "0"
+		}
+    }
+    "group"
+    {
+        "id"    "2"
+        "mode" "dpad"
+        "bindings"
+        {
+        }
+		"settings"
+		{
+			"requires_click" "1"
+			"deadzone" "2000"
+			"overlap" "false"
+		}
+    }
+    "group"
+    {
+        "id" "3"
+        "mode" "absolute_mouse"
+		"bindings"
+		{
+		}
+    }
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
 
-    "settings"
-    {
-        "left_trackpad_mode" "none"
-        "right_trackpad_mode" "none"
-		"mouse_smoothing"	"1"
-    }
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"4"	"left_trigger active"
+			"5"	"right_trigger active"
+		}
+
+		"settings"
+		{
+			"left_trackpad_mode" "none"
+			"right_trackpad_mode" "none"
+			"mouse_smoothing"	"1"
+		}
+	}
 }

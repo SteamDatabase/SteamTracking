@@ -406,6 +406,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_alienfx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_audio.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_broadcast.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_controllerconfigs.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_diskmgmt.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_display.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_downloads.o
@@ -1824,6 +1825,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_alienfx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_audio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_broadcast.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_controllerconfigs.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_controllerconfigs.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_diskmgmt.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_diskmgmt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_display.cpp
