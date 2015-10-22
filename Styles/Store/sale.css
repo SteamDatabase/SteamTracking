@@ -68,6 +68,7 @@ body.sale_page_background {
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
+	left: 15px;
 	text-align: right;
 	overflow: hidden;
 	overflow-x: auto;
@@ -188,6 +189,12 @@ html.responsive .btnv6_blue_blue_innerfade {
 	html.responsive .sale_page_purchase_area {
 		left: 2%;
 		right: 2%;
+	}
+
+	html.responsive .bundle_sale .game_header_image
+	{
+		background-position: center center;
+		width: auto;
 	}
 }
 
