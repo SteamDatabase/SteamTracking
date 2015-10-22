@@ -574,7 +574,7 @@ CTradeOfferStateManager = {
 					if ( bNeedsEmailConfirmation )
 					{
 						strText += '<br><br>We have also sent an email to your address (ending in "%s") and you may complete the verification from there.'.replace( /%s/, data.email_domain );
-						strText += '<br><br><strong>Note:</strong> After October 22nd, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
+						strText += '<br><br><strong>Note:</strong> After October 29th, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
 					}
 
 					Modal = ShowAlertDialog(
@@ -635,7 +635,7 @@ CTradeOfferStateManager = {
 					if ( bNeedsEmailConfirmation )
 					{
 						strText += '<br><br>We have also sent an email to your address (ending in "%s") and you may complete the verification from there.'.replace( /%s/, data.email_domain );
-						strText += '<br><br><strong>Note:</strong> After October 22nd, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
+						strText += '<br><br><strong>Note:</strong> After October 29th, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
 					}
 
 					Modal = ShowAlertDialog(
