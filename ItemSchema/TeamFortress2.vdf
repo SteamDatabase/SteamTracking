@@ -49094,8 +49094,8 @@
 		{
 			"name"								"old crate drops"
 			"operation_start_date"				"2015-10-16 00:00:00" 
-			"stop_adding_to_queue_date"			"2115-01-01 00:00:00" 
-			"stop_giving_to_player_date"		"2115-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2030-01-01 00:00:00" 
+			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
 			"operation_lootlist"				"timed_supply_crate_drop"
 		}
 
@@ -49104,8 +49104,8 @@
 			"name"								"campaign drops"
 			"required_item_name"				"Activated Summer 2015 Operation Pass"
 			"operation_start_date"				"2015-10-16 00:00:00" 
-			"stop_adding_to_queue_date"			"2115-01-01 00:00:00" 
-			"stop_giving_to_player_date"		"2115-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2030-01-01 00:00:00" 
+			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
 			"operation_lootlist"				"timed_reward_operation_drop"
 		}
 	}
@@ -67945,10 +67945,10 @@
 			"item_slot"	"head"
 			"equip_region"	"hat"
 			"item_quality"	"unique"
-			"image_inventory"	"backpack/player/items/medic/grimm_hatte"
+			"image_inventory"	"backpack/workshop/player/items/medic/grimm_hatte/grimm_hatte"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/items/medic/grimm_hatte.mdl"
+			"model_player"	"models/workshop/player/items/medic/grimm_hatte/grimm_hatte.mdl"
 			"drop_type"	"drop"
 			"used_by_classes"
 			{
@@ -87935,8 +87935,8 @@
 			"item_type_name"	"#TF_Wearable_Kilt"
 			"item_name"	"#TF_TheCoolBreeze"
 			"item_description"	"#TF_TheCoolBreeze_Desc"
-			"image_inventory"	"backpack/player/items/demo/demo_kilt"
-			"model_player"	"models/player/items/demo/demo_kilt.mdl"
+			"image_inventory"	"backpack/workshop/player/items/demo/demo_kilt/demo_kilt"
+			"model_player"	"models/workshop/player/items/demo/demo_kilt/demo_kilt.mdl"
 			"propername"	"1"
 			"drop_type"	"none"
 			"capabilities"
@@ -109905,15 +109905,11 @@
 		"30670"
 		{
 			"name"		"Invasion Community Update Medal"
-			"prefab"		"no_craft misc"
+			"prefab"			"tournament_medal"
+			"armory_remap"		""
 			"item_name"		"#TF_invasion_community_update_medal"
 			"item_description"		"#TF_invasion_community_update_medal_Desc"
-			"equip_region"		"medal"
 			"image_inventory"		"backpack/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal"
-			"capabilities"
-			{
-				"can_craft_count"		"1"
-			}
 			"model_player_per_class"
 			{
 				"scout"		"models/workshop/player/items/all_class/invasion_community_update_medal/invasion_community_update_medal_scout.mdl"
