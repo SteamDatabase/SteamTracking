@@ -1570,6 +1570,28 @@ a.friend_block_holder:hover {
 	}
 }
 
+@media screen and ( max-width: 479px )
+{
+	html.responsive .bundle img {
+		max-width: 30%;
+	}
+
+	html.responsive .bundle .tab_item_name {
+		font-size: 1em;
+	}
+
+	html.responsive .bundle .tab_item_content {
+		white-space: inherit;
+	}
+
+	html.responsive .bundle .tab_item_discount {
+		margin-right: 10px;
+	}
+
+	html.responsive .bundle .tab_item_discount.no_discount {
+		margin-top: 45px;
+	}
+}
 
 .DRM_notice {
     color: #e1c48a;
