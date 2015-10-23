@@ -138,8 +138,6 @@ CVideoWatch.prototype.Start = function()
 
 	this.SetVideoLoadingText( 'Preparing to Stream Video...' );
 
-		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
-
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 	this.m_player.SetUniqueId( this.m_nAppId + '/' + this.m_strVideoId );
 	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
