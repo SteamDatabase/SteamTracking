@@ -17,7 +17,7 @@
 			-->
 			<Panel id="LeftColumn" class="Column">
 				<!-- Top tab -->
-				<Panel class="FieldWrapper TabHeader" id="ModeTab" modetab="on" >
+				<Panel class="FieldWrapper" id="ModeTab" modetab="on" sources="trackpad joystick ABXY gyro" >
 					<Label class="FieldLabel HideInGameActions" text="#Library_Details_FieldLabel_InputStyle" />
 					<Label class="FieldLabel ShowInGameActions" text="#Library_Details_FieldLabel_InputStyle_GA" />
 					<DropDown id="ModeDropDown" />
@@ -132,19 +132,26 @@
 				</Panel>
 				-->
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
-					<Slider id="AntiDeadZone" direction="horizontal" />
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
+					<DropDown id="InvertXJoystickMove" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
-					<Slider id="AntiDeadZoneBuffer" direction="horizontal" />
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
+					<DropDown id="InvertYJoystickMove" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+					<Slider id="JoystickMoveMouseSensitivity" direction="horizontal" />
 				</Panel>
 
-
 				<!-- Joystick Camera Mode -->
-				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
+				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="joystick trackpad" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+					<DropDown id="OutputJoystickCameraMode" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
@@ -153,7 +160,7 @@
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SwipeDuration" />
 					<DropDown id="SwipeDurationCameraMode" />
-				</Panel>
+				</Panel>			
 
 				<!-- Joystick Camera Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
@@ -161,13 +168,17 @@
 					<DropDown id="JoystickSmoothingCameraMode" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
+					<DropDown id="InvertXJoystickCamera" />
+				</Panel>				
+				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertYJoystickCamera" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivityJoystickCamera" direction="horizontal" />
-				</Panel>
+				</Panel>				
 
 				<!-- Mouse Mode -->
 				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="off">
@@ -182,31 +193,23 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
 					<Slider id="Sensitivity" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" sources="gyro" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
-					<DropDown id="AccelerationGyro" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="off">
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
 					<Slider id="RotationAbsMouse" direction="horizontal" />
 				</Panel>				
 
 				<!-- Mouse Mode Advanced -->
-				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
-					<DropDown id="Trackball" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Friction" />
-					<DropDown id="Friction" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_FrictionVertScale" />
-					<Slider id="VerticalFriction" direction="horizontal" />
-				</Panel>
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad gyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+					<DropDown id="MouseTriggerClamp" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad gyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+					<Slider id="MouseTriggerClampAmount" direction="horizontal" />
 				</Panel>
 
 				<!-- Touch Menu Mode -->
@@ -379,8 +382,6 @@
 				</Panel>
 
 				<!-- Joystick Move Mode -->
-				<Panel id="CenterImageJoystick" class="CenterImage" modes="joystickmove" advanced="off"/>
-
 				<!-- Joystick Move Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
@@ -400,7 +401,7 @@
 				</Panel>
 
 				<!-- Joystick Camera Mode -->
-				<Panel id="CenterImageJoystick" class="CenterImage" modes="joystickcamera" advanced="off"/>
+				<Panel id="CenterImageJoystick" class="CenterImage" modes="joystickcamera joystickmove" advanced="off"/>
 
 				<!-- Joystick Camera Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
@@ -421,10 +422,25 @@
 				</Panel>				
 
 				<!-- Mouse Mode -->
-				<Panel id="CenterImageMouse" class="CenterImage" modes="absmouse" advanced="off">
+				<Panel id="CenterImageMouse" class="CenterImage" modes="absmouse" advanced="off" visualization="on" >
 					<Panel id="CenterImageMouseRotation" class ="CenterImage" />
 				</Panel>
-
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY gyro" advanced="off" visualization="off" >
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
+					<DropDown id="Acceleration" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="off" visualization="off" >
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
+					<DropDown id="Trackball" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" gameactions="off" advanced="off" visualization="off" >
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Friction" />
+					<DropDown id="Friction" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" gameactions="off" advanced="off" visualization="off" >
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_FrictionVertScale" />
+					<Slider id="VerticalFriction" direction="horizontal" />
+				</Panel>
 				<!-- Mouse Mode Advanced -->
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Smoothing" />
@@ -437,11 +453,11 @@
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapDuration" />
 					<Slider id="DoubleTapDuration" direction="horizontal" />
-				</Panel>		
+				</Panel>
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapBeep" />
 					<DropDown id="DoubleTapBeep" />
-				</Panel>
+				</Panel>		
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisAbsMouse" />
@@ -539,12 +555,12 @@
 			-->
 			<Panel id="RightColumnWrapper">
 				<Panel id="RightColumn" class="Column">
-					<Panel class="FieldWrapper TabHeader" id="ModeShiftButtonTab" modeshift="off" gameactions="off" advanced="off" sources="trackpad joystick ABXY button gyro">
+					<Panel class="FieldWrapper" id="ModeShiftButtonTab" modeshift="off" gameactions="off" advanced="off" sources="trackpad joystick ABXY button gyro trigger">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShifting" />
 						<ControllerBindingButton id="ModeShiftButton" describebutton="true" onactivate="ShowModeShift( true );" />
 					</Panel>
 
-					<Panel class="FieldWrapper TabHeader" id="ModeShiftPulldownTab" modeshift="on" gameactions="off" advanced="off" >
+					<Panel class="FieldWrapper" id="ModeShiftPulldownTab" modeshift="on" gameactions="off" advanced="off" >
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShiftButton" />
 						<DropDown id="ModeShiftDropDown" />
 					</Panel>
@@ -626,19 +642,23 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertJoystick" />
 					</Panel>
-          <Panel class="FieldWrapper" modes="joystickmove" advanced="on">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
-            <Slider id="JoystickMoveMouseSensitivity" direction="horizontal" />
-          </Panel>
+					<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
+						<Slider id="AntiDeadZone" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
+						<Slider id="AntiDeadZoneBuffer" direction="horizontal" />
+					</Panel>									
 
           <!-- Joystick Camera Mode -->
 					<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityJoystickCameraMode" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
-						<DropDown id="OutputJoystickCameraMode" />
+					<Panel class="FieldWrapper" modes="joystickcamera" gameactions="off" sources="gyro" advanced="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+						<DropDown id="GyroButtonJoystickCamera" />
 					</Panel>
 
 					<!-- Joystick Camera Mode Advanced -->
@@ -647,7 +667,7 @@
             <Slider id="JoystickCameraMouseSensitivity" direction="horizontal" />
           </Panel>
 
-          <!-- Mouse Mode -->
+					<!-- Mouse Mode -->
 					<Panel class="FieldWrapper" modes="absmouse" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />
@@ -658,10 +678,6 @@
 					</Panel>
 					
 					<!-- Mouse Mode Advanced -->
-					<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
-						<DropDown id="Acceleration" />
-					</Panel>				
 					<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeSpinRadius" />
 						<Slider id="EdgeSpinRadius" direction="horizontal" />
@@ -674,6 +690,10 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
 						<Slider id="MouseMoveThreshold" direction="horizontal" />
 					</Panel>
+					<Panel class="FieldWrapper" modes="absmouse" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
+						<DropDown id="InvertXMouse" />
+					</Panel>					
 
 					<!-- Touch Menu Mode -->
 					<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
@@ -739,6 +759,10 @@
 
 					<!-- Trigger Mode -->
 					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
+						<DropDown id="HapticIntensityTriggerThreshold" />
+					</Panel>					
+					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
 						<DropDown id="HoldRepeatsTrigger" />
 					</Panel>
@@ -746,10 +770,6 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
 						<Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
 					</Panel>				
-					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
-						<DropDown id="HapticIntensityTriggerThreshold" />
-					</Panel>
 				</Panel>
 				
 				<!-- Show advanced properties button -->

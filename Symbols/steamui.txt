@@ -1839,7 +1839,6 @@
  B g_CDKeyWizardChild_Helper
  B g_CTreeViewListControlLinkerHack
  B g_CTreeViewListControlPullInModule
- B g_CarouselMouseScrollRegion_Helper
  B g_Carousel_Helper
  B g_CartLineItem_Helper
  B g_CartNoteItem_Helper
@@ -2087,6 +2086,7 @@
  B g_MenuPullInModule
  B g_MessageBoxLinkerHack
  B g_MessageBoxPullInModule
+ B g_MouseScrollRegion_Helper
  B g_MovieDebug_Helper
  B g_MoviePanel_Helper
  B g_Movie_Helper
@@ -2899,7 +2899,6 @@
  B panorama::g_CDKeyMsgBoxLinkerHack
  B panorama::g_CDKeyWizardChildLinkerHack
  B panorama::g_CarouselLinkerHack
- B panorama::g_CarouselMouseScrollRegionLinkerHack
  B panorama::g_CartLineItemLinkerHack
  B panorama::g_CartNoteItemLinkerHack
  B panorama::g_ChangeEmailFailWizardChildLinkerHack
@@ -3087,6 +3086,7 @@
  B panorama::g_MainMenuLinkerHack
  B panorama::g_ManageDLCDialogLinkerHack
  B panorama::g_ManageSteamGuardWizardLinkerHack
+ B panorama::g_MouseScrollRegionLinkerHack
  B panorama::g_MovieDebugLinkerHack
  B panorama::g_MovieLinkerHack
  B panorama::g_MoviePanelLinkerHack
@@ -45488,7 +45488,6 @@
  T panorama::CCarousel::GetPanelType() const
  T panorama::CCarousel::GetPreviousPanelInLayout(int)
  T panorama::CCarousel::LayoutChildPanels(int, float, float, float, float, float, CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> > const&)
- T panorama::CCarousel::LayoutMouseScrollRegions(float, float)
  T panorama::CCarousel::MarkFocusDirty()
  T panorama::CCarousel::OnBeforeChildrenChanged()
  T panorama::CCarousel::OnCallBeforeStyleAndLayout()
@@ -45503,7 +45502,6 @@
  T panorama::CCarousel::OnTabBackward(int)
  T panorama::CCarousel::OnTabForward(int)
  T panorama::CCarousel::OnUIScaleFactorChanged(float)
- T panorama::CCarousel::Paint()
  T panorama::CCarousel::RegisterForCursorChanges()
  T panorama::CCarousel::RemoveCarouselStyle(panorama::CPanel2D*, int, int)
  T panorama::CCarousel::SetFocusToIndex(int)
@@ -45790,7 +45788,6 @@
  T panorama::CGrid::GetVerticalCount() const
  T panorama::CGrid::GetVisibleChild(int)
  T panorama::CGrid::GetVisibleChildCount() const
- T panorama::CGrid::LayoutMouseScrollRegions(float, float)
  T panorama::CGrid::MotionTimeout(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CGrid::MoveFocusToTopLeft()
  T panorama::CGrid::MoveSelection(panorama::CGrid::EMoveDirection, int)
@@ -45813,7 +45810,6 @@
  T panorama::CGrid::OnSetFocusToNextPanel(int, panorama::EFocusMoveDirection, bool, float, float, float, float, float)
  T panorama::CGrid::OnTabBackward(int)
  T panorama::CGrid::OnTabForward(int)
- T panorama::CGrid::Paint()
  T panorama::CGrid::RegisterForCursorChanges()
  T panorama::CGrid::ScrollPanelToLeftEdge()
  T panorama::CGrid::SetFocusMargin(int)
@@ -46684,16 +46680,13 @@
  T panorama::CSlideShow::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CSlideShow::EventSlideShowOnLayoutInitialized(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CSlideShow::GetPanelType() const
- T panorama::CSlideShow::LayoutMouseScrollRegions(float, float)
  T panorama::CSlideShow::OnGetDefaultInputFocus()
  T panorama::CSlideShow::OnInitializedFromLayout()
- T panorama::CSlideShow::OnLayoutTraverse(float, float)
  T panorama::CSlideShow::OnMoveLeft(int)
  T panorama::CSlideShow::OnMoveRight(int)
  T panorama::CSlideShow::OnSetFocusToNextPanel(int, panorama::EFocusMoveDirection, bool, float, float, float, float, float)
  T panorama::CSlideShow::OnTabBackward(int)
  T panorama::CSlideShow::OnTabForward(int)
- T panorama::CSlideShow::Paint()
  T panorama::CSlideShow::RemoveAndDeletePanel(panorama::CPanel2D*)
  T panorama::CSlideShow::RemoveDisabledFlagFromChildren()
  T panorama::CSlideShow::SetFocusIndex(int, bool)
@@ -57566,6 +57559,7 @@
  d s_rgPropValuesFourSettingRamp
  d s_rgPropValuesGyroAxis
  d s_rgPropValuesGyroButton
+ d s_rgPropValuesMouseTriggerClampRamp
  d s_rgPropValuesOffLeftRight
  d s_rgPropValuesOnOff
  d s_rgPropValuesShape
@@ -58577,6 +58571,7 @@
  t Create_MenuBar()
  t Create_MenuButton()
  t Create_MenuItem()
+ t Create_MouseScrollRegion(char const*, panorama::IUIPanel*)
  t Create_Movie(char const*, panorama::IUIPanel*)
  t Create_MoviePanel(char const*, panorama::IUIPanel*)
  t Create_MusicAlbumPanel(char const*, panorama::IUIPanel*)

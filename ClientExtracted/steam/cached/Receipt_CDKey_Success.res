@@ -35,7 +35,7 @@
 		"textAlignment"		"north-west"
 		"wrap"		"1"
 	}
-	"headline"
+	"Headline"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Headline"
@@ -55,12 +55,12 @@
 		"font"		"uiHeadline"
 		"wrap"		"0"
 	}
-	"Button1"
+	"PrintReceipt"
 	{
 		"ControlName"		"Button"
-		"fieldName"		"Button1"
+		"fieldName"		"PrintReceipt"
 		"xpos"		"164"
-		"ypos"		"368"
+		"ypos"		"240"
 		"wide"		"116"
 		"tall"		"24"
 		"AutoResize"		"0"

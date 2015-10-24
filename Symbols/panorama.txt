@@ -11400,6 +11400,7 @@
  T panorama::CUIPanel::IsSelected() const
  T panorama::CUIPanel::IsSizeTransitioning()
  T panorama::CUIPanel::IsSizeValid()
+ T panorama::CUIPanel::LayoutChildrenInHiding(float, float)
  T panorama::CUIPanel::LayoutTraverse(float, float, float, float)
  T panorama::CUIPanel::LoadLayoutAsync(char const*, bool, bool)
  T panorama::CUIPanel::LoadLayoutFromStringAsync(char const*, bool, bool)
@@ -11419,6 +11420,7 @@
  T panorama::CUIPanel::PaintBackground()
  T panorama::CUIPanel::PaintBackgroundImages()
  T panorama::CUIPanel::PaintChildMarginInspection(panorama::IUIPanel*)
+ T panorama::CUIPanel::PaintChildrenInHiding()
  T panorama::CUIPanel::PaintPanelInspection()
  T panorama::CUIPanel::PaintTraverse()
  T panorama::CUIPanel::PlayFocusChangeSound(int, float)
