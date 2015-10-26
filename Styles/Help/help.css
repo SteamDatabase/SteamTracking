@@ -2677,3 +2677,99 @@ input.unlockcode_entry_input
 	float: left;
 }
 
+#hardware_serial_entry {
+	width: 400px;
+	font-style: normal;
+	margin: 10px 0 10px 0;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+	outline: none;
+	padding: 4px 6px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 #45556c;
+
+	background-color: #101925;
+}
+
+.hardware_serial_divider {
+	background-color: #8f9eb1;
+	height: 1px;
+	width: auto;
+	margin: 6px 180px 22px 0px;
+}
+
+.shipping_form_left
+{
+	clear: left;
+	float: left;
+	text-align: left;
+}
+
+.shipping_form_right
+{
+	clear: right;
+	float: right;
+	text-align: left;
+	width: 292px;
+	margin-right: 60px;
+}
+
+.shipping_form_right label, .shipping_form_left label
+{
+	display: block;
+	text-align: left;
+	margin-bottom: 2px;
+	font-size: 12px;
+}
+
+#shipping_info_entry label {
+	margin-top: 8px;
+}
+
+#shipping_info_entry input {
+	font-size: 16px;
+	line-height: 125%;
+	padding: 2px 4px;
+	margin: 4px 0 4px 0;
+	color: #ffffff;
+	width: 260px;
+	background-color: #000010;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+}
+
+#shipping_info_entry .dselect_container {
+	margin: 4px 0 18px 0;
+	width: 270px;
+}
+
+#shipping_error_display {
+	color: #ff9999;
+}
+
+.shipping_info_address_display_row {
+	font-size: 16px;
+}
+
+.shipping_info_address_display_row .form_row {
+	font-size: 16px;
+	margin: 4px 0 4px 0;
+}
+
+#shipping_info_confirm {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.shipping_change_address_button {
+	padding: 6px 16px 6px 16px;
+	margin: 2px 0 16px 0;
+}
+
+.shipping_change_address_button > span {
+	padding: 0;
+	margin: 0;
+}

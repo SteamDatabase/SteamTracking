@@ -1192,3 +1192,310 @@ function CancelPendingPurchase( transid )
 		window.location.reload();
 	} );
 }
+
+// contains all the functions for generating hardware returns & replacements
+HardwareRMA = {
+	m_bDoingAjax: false,
+	m_sActiveMethod: null,
+	m_nRefundIssueID: null,
+	m_nRefundAppID: null,
+	m_nRefundPackageID: null,
+	m_nRefundTransID: null,
+	m_nRefundLineItemID: null,
+	m_sSerialNumber: "",
+	m_bReplacement: false,
+
+	ShowReplacementForm: function( issueid, appid, packageid, transid, lineitemid ) {
+		this.m_sActiveMethod = 'AjaxHardwareReplacementForm';
+		this.m_nRefundIssueID = issueid;
+		this.m_nRefundAppID = appid;
+		this.m_nRefundPackageID = packageid;
+		this.m_nRefundTransID = transid;
+		this.m_nRefundLineItemID = lineitemid;
+		this.m_bReplacement = true;
+		this.ShowForm( this.m_sActiveMethod, issueid, appid, packageid );
+	},
+
+	ShowRefundForm: function( issueid, appid, packageid, transid, lineitemid ) {
+		this.m_sActiveMethod = 'AjaxHardwareReturnForm';
+		this.m_nRefundIssueID = issueid;
+		this.m_nRefundAppID = appid;
+		this.m_nRefundPackageID = packageid;
+		this.m_nRefundTransID = transid;
+		this.m_nRefundLineItemID = lineitemid;
+		this.m_bReplacement = false;
+		this.ShowForm( this.m_sActiveMethod, issueid, appid, packageid, transid + '_' + lineitemid );
+	},
+
+	ShowForm: function( method, issueid, appid, packageid, transid, refund_to_wallet, loading_div ) {
+		if ( this.m_bDoingAjax )
+			return;
+
+		if ( loading_div )
+		{
+			loading_div.html('<span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
+		}
+		else
+		{
+			$J('#help_hardware_return_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
+		}
+
+		$J.ajax({
+				type: "GET",
+				url: "https://help.steampowered.com/wizard/" + method,
+				data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+					issueid: issueid,
+					appid: appid,
+					packageid: packageid,
+					transid: transid,
+					wallet: refund_to_wallet,
+				} )
+			}).fail( function() {
+				$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>');
+			}).done( function( data ) {
+				if ( data.html && $J('#help_hardware_return_form') )
+				{
+					$J('#help_hardware_return_form').html( data.html );
+
+					if ( $J('#hardware_serial_entry') && $J('#hardware_serial_entry').is(":visible") )
+					{
+						$J('#hardware_serial_entry').focus();
+					}
+
+					HardwareRMA.VerifySerialThenAdvance( HardwareRMA.m_sSerialNumber );
+				}
+				else
+				{
+					$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">Sorry! An unexpected error has occurred while processing your request. Please try again.</div></div>');
+				}
+			}).always( function() {
+				HardwareRMA.m_bDoingAjax = false;
+			} );
+	},
+
+	UpdateRefundSelector: function() {
+		var refund_to_wallet = $J('#refund_wallet_selector').val();
+		this.ShowForm( this.m_sActiveMethod, this.m_nRefundIssueID, this.m_nRefundAppID, this.m_nRefundPackageID, this.m_nRefundTransID, refund_to_wallet );
+	},
+
+	SerialNumberEntryKeyUp: function( input ) {
+		var val = $J(input).val();
+		var input_valid = ( val.length >= 10 && (val[0] == 'f' || val[0] == 'F') );
+		if ( input_valid )
+			$J('#hardware_serial_next').show();
+		else
+			$J('#hardware_serial_next').hide();
+	},
+
+	VerifySerialThenAdvance: function( serial_number ) {
+		var input_valid = ( serial_number.length >= 10 && (serial_number[0] == 'f' || serial_number[0] == 'F') );
+		if ( input_valid )
+		{
+			this.m_sSerialNumber = serial_number;
+			$J('#hardware_refund_serial').hide();
+			$J('#hardware_refund_serial_display').text( serial_number );
+			$J('#hardware_refund_payment').show();
+
+			if ( this.m_bReplacement )
+			{
+				HardwareRMA.ShowShippingAddressForm();
+			}
+
+			$J('#shipping_error_display').html('');
+		}
+		else
+		{
+			HardwareRMA.ShowSerialEntryForm();
+		}
+		$J('#hardware_serial_next').hide();
+	},
+
+	CreateReturn: function( refund_to_wallet ) {
+		if ( this.m_bDoingAjax )
+			return;
+		this.m_bDoingAjax = true;
+
+		$J.ajax({
+				type: "POST",
+				url: "https://help.steampowered.com/wizard/AjaxHardwareCreateReturn",
+				data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+					issueid: this.m_nRefundIssueID,
+					appid: this.m_nRefundAppID,
+					packageid: this.m_nRefundPackageID,
+					transid: (this.m_nRefundTransID + '_' + this.m_nRefundLineItemID),
+					serial_number: this.m_sSerialNumber,
+					wallet: refund_to_wallet
+					} )
+			}).fail( function() {
+				$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>');
+			}).done( function( data ) {
+				if ( data.html && data.success == 1 )
+				{
+					$J('#help_hardware_return_form').html( data.html );
+				}
+				else if ( data.message )
+				{
+					HardwareRMA.DisplayShippingErrorMessage( data.message );
+				}
+				else
+				{
+					HardwareRMA.DisplayShippingErrorMessage( 'Sorry! An unexpected error has occurred while processing your request. Please try again.' );
+				}
+
+				if ( data.invalidserial )
+				{
+					// take them back to the serial page
+					HardwareRMA.m_sSerialNumber = "";
+					HardwareRMA.ShowSerialEntryForm();
+				}
+			}).always( function() {
+				HardwareRMA.m_bDoingAjax = false;
+			} );
+	},
+
+	ValidateReturnShippingAddress: function() {
+		if ( this.m_bDoingAjax )
+			return;
+
+		$J('#shipping_error_display').html('');
+		var rgBadFields = {};	// Shipping_VerifyAddressFields will fill this in, but it doesn't look like we use it anywhere
+		var errorString = Shipping_VerifyAddressFields( rgBadFields );
+		if ( errorString.length > 0 )
+		{
+			this.DisplayShippingErrorMessage( errorString );
+		}
+		else
+		{
+			this.m_bDoingAjax = true;
+			Shipping_VerifyShippingAddress( g_sessionID, 'https://help.steampowered.com/wizard/AjaxVerifyShippingAddress', {
+				onSuccess: function( result ) {
+					HardwareRMA.m_bDoingAjax = false;
+					// Success...
+					if ( result.success == 1 )
+					{
+						HardwareRMA.OnVerifyShippingAddressSuccess( result );
+						return;
+					}
+					else
+					{
+						HardwareRMA.OnVerifyShippingAddressFailure();
+						return;
+					}
+
+										HardwareRMA.OnVerifyShippingAddressFailure();
+				},
+				onFailure: function(){
+										HardwareRMA.m_bDoingAjax = false;
+					HardwareRMA.OnVerifyShippingAddressFailure();
+				}
+			} );
+		}
+	},
+
+	OnVerifyShippingAddressSuccess: function( result ) {
+				if ( result.bValidAddress && result.bSuggestedAddressMatches )
+		{
+			HardwareRMA.SubmitReplacementRMA();
+		}
+		else if ( !result.bSuggestedAddressMatches )
+		{
+						Shipping_UpdateFieldsFromVerificationCall( result );
+			this.ShowShippingCorrectionsForm();
+		}
+		else
+		{
+			var error_text = 'This does not appear to be a valid address. Please check your city, state and postal code entries and try again.';
+			this.DisplayShippingErrorMessage( error_text );
+		}
+	},
+
+	OnVerifyShippingAddressFailure: function() {
+		var error_text = 'Sorry! We couldn\'t verify your shipping information. Please try again later.';
+		this.DisplayShippingErrorMessage( error_text );
+	},
+
+	DisplayShippingErrorMessage: function( strMessage )
+	{
+		$J('#shipping_error_display').html( strMessage );
+		// an animate effect would be nice here
+	},
+
+	UseCorrectedShippingAddress: function() {
+		Shipping_UpdateAddressWithCorrectedFields();
+		HardwareRMA.ShowShippingAddressForm();
+		HardwareRMA.SubmitReplacementRMA();
+	},
+
+	UseUncorrectedShippingAddress: function() {
+		HardwareRMA.ShowShippingAddressForm();
+		HardwareRMA.SubmitReplacementRMA();
+	},
+
+	ShowShippingAddressForm: function() {
+		$J('#shipping_info_confirm').hide();
+		$J('#shipping_info_entry').show();
+		Shipping_UpdateStateSelectState();
+	},
+
+	ShowSerialEntryForm: function() {
+		$J('#shipping_info_confirm').hide();
+		$J('#shipping_info_entry').hide();
+		$J('#hardware_refund_payment').hide();
+		$J('#hardware_refund_serial').show();
+	},
+
+	ShowShippingCorrectionsForm: function() {
+		$J('#shipping_info_confirm').show();
+		$J('#shipping_info_entry').hide();
+	},
+
+	SubmitReplacementRMA: function() {
+		if ( this.m_bDoingAjax )
+			return;
+		this.m_bDoingAjax = true;
+
+		$J.ajax({
+				type: "POST",
+				url: "https://help.steampowered.com/wizard/AjaxHardwareCreateReplacementRMA",
+				data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+					issueid: this.m_nRefundIssueID,
+					appid: this.m_nRefundAppID,
+					packageid: this.m_nRefundPackageID,
+					transid: (this.m_nRefundTransID + '_' + this.m_nRefundLineItemID),
+					serial_number: this.m_sSerialNumber,
+					ShippingFirstName: $J('#shipping_first_name') ? $J('#shipping_first_name').val() : '',
+					ShippingLastName: $J('#shipping_last_name').val(),
+					ShippingAddress: $J('#shipping_address').val(),
+					ShippingAddressTwo: $J('#shipping_address_two').val(),
+					ShippingCountry: $J('#shipping_country').val(),
+					ShippingCity: $J('#shipping_city').val(),
+					ShippingState: ($J('#shipping_country').val() == 'US' ? $J('#shipping_state_select').val() : $J('#shipping_state_text').val()),
+					ShippingPostalCode: $J('#shipping_postal_code').val(),
+					ShippingPhone: $J('#shipping_phone').val(),
+					} )
+			}).fail( function() {
+				HardwareRMA.DisplayShippingErrorMessage( 'Sorry! An unexpected error has occurred while processing your request. Please try again.' );
+			}).done( function( data ) {
+				if ( data.html && data.success == 1 )
+				{
+					$J('#hardware_replacement_dialog').html( data.html );
+				}
+				else if ( data.message )
+				{
+					HardwareRMA.DisplayShippingErrorMessage( data.message );
+				}
+				else
+				{
+					HardwareRMA.DisplayShippingErrorMessage( 'Sorry! An unexpected error has occurred while processing your request. Please try again.' );
+				}
+
+				if ( data.invalidserial )
+				{
+					HardwareRMA.ShowSerialEntryForm();
+				}
+			}).always( function() {
+				HardwareRMA.m_bDoingAjax = false;
+			});
+	}
+
+};
