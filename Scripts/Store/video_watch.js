@@ -101,7 +101,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 	if ( Date.now() - rtStart > 3000 )
 	{
-		this.ShowVideoError( 'The video player failed to initialize the video decoder correctly.<br><br>Press the Home controller button to exit the video and try again.' );
+		this.ShowVideoError( 'The video player failed to initialize the video decoder correctly.<br><br>Please restart the video to try again.' );
 		return;
 	}
 
@@ -278,7 +278,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'This video has not been processed for streaming.' );
 					break;
 				case 15:
-					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure you are logged in and own this video.' );
+					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure the account you are logged in with owns this video.' );
 					break;
 				case 16:
 					_watch.ShowVideoError( 'This video is not currently available to stream.' );
