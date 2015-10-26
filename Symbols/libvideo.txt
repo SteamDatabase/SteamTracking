@@ -4293,9 +4293,7 @@
  T CryptoPP::AlignedDeallocate(void*)
  T CryptoPP::AllocatorBase<unsigned int>::CheckSize(unsigned long)
  T CryptoPP::AllocatorWithCleanup<unsigned char, false>::pointer CryptoPP::StandardReallocate<unsigned char, CryptoPP::AllocatorWithCleanup<unsigned char, false> >(CryptoPP::AllocatorWithCleanup<unsigned char, false>&, unsigned char*, CryptoPP::AllocatorWithCleanup<unsigned char, false>::size_type, CryptoPP::AllocatorWithCleanup<unsigned char, false>::size_type, bool)
- T CryptoPP::AllocatorWithCleanup<unsigned char, true>::allocate(unsigned long, void const*)
  T CryptoPP::AllocatorWithCleanup<unsigned char, true>::deallocate(void*, unsigned long)
- T CryptoPP::AllocatorWithCleanup<unsigned char, true>::pointer CryptoPP::StandardReallocate<unsigned char, CryptoPP::AllocatorWithCleanup<unsigned char, true> >(CryptoPP::AllocatorWithCleanup<unsigned char, true>&, unsigned char*, CryptoPP::AllocatorWithCleanup<unsigned char, true>::size_type, CryptoPP::AllocatorWithCleanup<unsigned char, true>::size_type, bool)
  T CryptoPP::AllocatorWithCleanup<unsigned int, true>::deallocate(void*, unsigned long)
  T CryptoPP::AllocatorWithCleanup<unsigned int, true>::pointer CryptoPP::StandardReallocate<unsigned int, CryptoPP::AllocatorWithCleanup<unsigned int, true> >(CryptoPP::AllocatorWithCleanup<unsigned int, true>&, unsigned int*, CryptoPP::AllocatorWithCleanup<unsigned int, true>::size_type, CryptoPP::AllocatorWithCleanup<unsigned int, true>::size_type, bool)
  T CryptoPP::AlmostInverse(unsigned int*, unsigned int*, unsigned int const*, unsigned long, unsigned int const*, unsigned long)
@@ -4484,7 +4482,6 @@
  T CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >::Clone() const
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
  T CryptoPP::ConstByteArrayParameter::Assign(unsigned char const*, unsigned long, bool)
- T CryptoPP::ConstByteArrayParameter::ConstByteArrayParameter(char const*, bool)
  T CryptoPP::ConstByteArrayParameter::ConstByteArrayParameter(unsigned char const*, unsigned long, bool)
  T CryptoPP::CpuId(unsigned int, unsigned int*)
  T CryptoPP::CryptoMaterial::InvalidMaterial::~InvalidMaterial()

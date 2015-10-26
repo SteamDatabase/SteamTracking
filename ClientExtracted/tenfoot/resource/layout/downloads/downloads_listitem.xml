@@ -12,13 +12,18 @@
 		
 		<Panel class="DownloadsListItemRight" >
 			<Label id="DownloadTitle" class="DownloadText" text="#Downloads_ItemTitle" />
-			<Label id="DownloadStatus" class="DownloadText"	text="#Downloads_ItemStatus" />
-						
+			
+			<Panel id="DownloadStatusWrapper" >
+				<Label id="DownloadStatus" class="DownloadText"	text="#Downloads_ItemStatus" />
+				<Label id="DownloadError" class="DownloadText" text="#Downloads_ItemError" />
+			</Panel>
+							
 			<Panel class ="DownloadBarBackground">
 				<Panel id ="DownloadBarPercent" class="DownloadBarPercent" />
 			</Panel>
 			
 			<Label id="DownloadAmount" class="DownloadText" text="#Downloads_AmountValue" />
+			
 		</Panel>
 	</DownloadsListItem>
 </root>

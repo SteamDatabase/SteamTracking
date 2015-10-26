@@ -13,7 +13,7 @@
 	margin-top: 20px;
 	flow-children: down;
 	width: 100%;
-	padding: 10px 20px 10px 10px;
+	padding: 0px;
 
 	max-height: 280px;
 	overflow: squish scroll;
@@ -38,7 +38,8 @@
 
 #CdKeyContents
 {
-	width: 350px;
+	width: fit-children;
+	margin-right: 8px;
 	font-size: 28px;
 	text-align: left;
 	vertical-align: center;
@@ -120,6 +121,7 @@
 #DontShowAgain
 {
 	visibility: collapse;
+	width: fit-children;
 }
 
 .LaunchGame #DontShowAgain
@@ -127,104 +129,9 @@
 	visibility: visible;
 	margin-top: 30px;
 }
-
-ToggleButton .TickBox
+ToggleButton.CheckBox Label
 {
-	opacity: 1.0;
-}
-
-ToggleButton, .CheckBox
-{
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-
-	background-color: simplebutton;
-
-	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
-	transition-timing-function: ease-out;
-}
-
-.CheckBox
-{
-	background-color: none;
-}
-
-ToggleButton:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.0;
-}
-
-ToggleButton:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	z-index: 1000;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: bigpicture-ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
-	animation-direction: normal;
-}
-
-.CheckBox
-{
-	margin-bottom: 8px;
-	margin-top: 8px;
-}
-
-// tickbox to turn togglebuttons into checkboxes
-.CheckBox .TickBox
-{
-	width: 36px;
-	height: 36px;
-	vertical-align: center;
-	background-color: ui_common_control; 
-}
-
-.CheckBox:Selected .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-color: ui_common_control;
-}
-
-// and make room for the tickbox
-.CheckBox Label
-{
-	padding-left: 46px;
-	padding-right: 12px;
-	padding-top: 4px;
-	text-overflow: clip;
-	white-space: nowrap;
-}
-
-.CheckBox:hover Label
-{
-	color: #ffffffff;
-}
-
-.CheckBox:focus Label
-{
-	color: #000000ff;
+	width: fit-children;
 }
 
 

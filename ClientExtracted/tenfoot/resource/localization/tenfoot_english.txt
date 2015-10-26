@@ -202,10 +202,11 @@
 	"MainMenu_ActivePausesLong" "{d:paused} PAUSED"
 	"MainMenu_CompleteDownloadsLong" "{d:downloads} COMPLETE"
 	"MainMenu_CompleteDownloadsLongPlural" "{d:downloads} COMPLETE"
-	"MainMenu_SystemIMsShort"	"{d:systemims} NEW"
+	"MainMenu_SystemIMsShort"	"{d:systemims}"
 	"MainMenu_SystemIMsLong" "{d:systemims} NEW"
 	"MainMenu_InboxShort"	"{d:inboxcount}"
 	"MainMenu_InboxLong" "{d:inboxcount}"
+	"MainMenu_PendingChatsShort"	"{d:pendingchats}"
 	"MainMenu_NewComments" "{d:commentcount} New Comments"
 	"MainMenu_NewCommentsSingular" "{d:commentcount} New Comment"
 	"MainMenu_NewItems"	"{d:itemcount} New Inventory Items"
@@ -235,6 +236,9 @@
 	"MainMenu_NewClientUpdate"	"New Steam update available"
 	"MainMenu_ControllerBattery" "View Controller Status"
 	"MainMenu_NoPendingAlerts" "You have no pending alerts"
+	"MainMenu_OptIntoBeta" "Enable Steam Beta Client"
+	"MainMenu_OptIntoBeta_Title" "Steam Beta Client"
+	"MainMenu_OptIntoBeta_Message" "The Steam Beta client currently offers the best experience for Steam Controller users.\n\nOpting into the beta will restart your Steam Client.\n\nWould you like to opt in?\n"
 
 	"MainMenu_RestartForClientUpdate_Title"	"New Steam update available"
 	"MainMenu_RestartForClientUpdate"	"A new Steam update is available. Do you want to restart Steam to install it?"
@@ -965,6 +969,8 @@
 	"SettingsControllerSupport_RightPadTesting"				"Touch the entire surface of the right trackpad:"
 	"SettingsControllerSupport_JoystickRangeTesting"		"Move the joystick in a full circle"
 	"SettingsControllerSupport_ButtonsTesting"				"Press all of the controller buttons:"
+	"SettingsControllerSupport_LeftHapticsTesting"			"Pulsing the left haptics (Press A button to continue):"
+	"SettingsControllerSupport_RightHapticsTesting"			"Pulsing the right haptics (Press A button to continue):"
 	"SettingsControllerSupport_TestingComplete"				"Test completed!"
 
 	"Settings_Store"				"Store"
@@ -2704,10 +2710,12 @@
 	"Downloads_Paused"	"DOWNLOADS PAUSED"
 	
 	"Downloads_ItemTitle"				"{s:downloadtitle}"
-	"Downloads_ItemsPaused"				"{i:downloadspaused} ITEMS QUEUED"
-	"Downloads_ItemPaused"				"1 ITEM QUEUED"
-	"Downloads_ItemsComplete"				"{i:downloadscomplete} OF {i:downloadstotal} ITEMS COMPLETE"
-	"Downloads_ItemComplete"				"1 ITEM COMPLETE"	
+	"Downloads_ItemStatus"			"{s:downloadstatus}"
+	"Downloads_ItemError"				"{s:downloaderror}"
+	"Downloads_ItemsPaused"			"{i:downloadspaused} ITEMS QUEUED"
+	"Downloads_ItemPaused"			"1 ITEM QUEUED"
+	"Downloads_ItemsComplete"		"{i:downloadscomplete} OF {i:downloadstotal} ITEMS COMPLETE"
+	"Downloads_ItemComplete"		"1 ITEM COMPLETE"	
 	
 	"Downloads_Summary_TotalAmount"	"Total : {s:downloadamount}"
 	"Downloads_Summary_PeakRate"		"Peak : {s:downloadpeakrate}/s"
@@ -3451,6 +3459,7 @@
 	"BigPicture_YouHaveNPendingInvites"	"View {d:InviteCount} pending friend invites"
 	
 	"Screenshots_Screenshots" 	"SCREENSHOTS"
+	"Screenshots_Screenshots_lwr" 	"Screenshots"
 	"Screenshots_TimeTaken"		"{t:l:timetaken}"
 	"Screenshots_AllGames"		"All Games"
 	"Screenshots_SizeOnDisk"	"{s:sizeondisk}"
@@ -3520,6 +3529,7 @@
 //	"LostAuthenticator_Working"					"Working"
 
 	"You_Are_Offline"						"You are in offline mode"
+	"You_Are_Offline2"						"This content is not available in offline mode.  To exit offline mode and view this content, return to the main menu and select the Offline button in the top row."
 	"Community_Offline2"					"Community content is not available in offline mode.  To exit offline mode and view community content, return to the main menu and select the Offline button in the top row."
 	"Profile_Offline2"						"Your profile content is not available in offline mode.  To exit offline mode and view your profile, return to the main menu and select the Offline button in the top row."
 
@@ -4687,6 +4697,7 @@
 	"ContentFrame_CommunityCount" "{i:communitycount}"
 	"ContentFrame_InboxCount" "{i:inboxcount}"
 	"ContentFrame_DownloadsCount" "{i:downloads}"
+	"ContentFrame_SystemCount" "{i:systemims}"
 
 	"group_item_groupname" 	"{s:group_name}"
 	"group_item_in_chat"	"{d:numfriendsinchat} Chatting"
@@ -4698,6 +4709,7 @@
 	"groups_no_groups_message_offline"	"Groups are not available in offline mode."
 	"friends_no_friends_message" "You have not added any Steam Friends. Search for some on the Steam Community"
 	"friends_no_friends_message_offline" "Friends are not available in offline mode."
+	"friends_filter_friends"			 "Filter Friends"
 
 	"friend_item_friendname"	"{s:friend_name}"
 	"friend_item_persona_state"		"{s:persona_state_label}"

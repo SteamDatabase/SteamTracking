@@ -22,41 +22,71 @@
 					</Panel>
 				</Panel>
 				<Panel id="TopRowRight" selectionpos="1,0" >
-					<ParentalButton id="Inbox" class="Button TopRowButton" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();"  >
-								 
-						<Panel id="InboxImageWrapper">
-							<Image id="InboxImage" class="InboxImage" src="file://{images}/systemmenu/icon_alerts.png" />
-							<Label class="TopRowCounter" text="#MainMenu_InboxShort" />
-							<Panel id="BatteryImages" class="InboxImage" >
-								<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
-								<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
-								<Image class="BatteryLevelLow" src="file://{images}/controller_battery_2.png" />
-								<Image class="BatteryLevelHalf" src="file://{images}/controller_battery_3.png" />
-								<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
-							</Panel>
-							<Image id="OfflineImage" class="InboxImage" src="file://{images}/offline.png" />
-							<Panel id="ParentalLockImages" class="InboxImage" >
+					<Button id="GoOnlineButton" class="Button TopRowButton" onactivate="GoOnline();" selectionpos="auto" tabindex="auto" >
+						<Image class="GoOnlineImage" src="file://{images}/offline.png" />
+					</Button>			
+					<Button id="FamilyModeLock" class="Button TopRowButton" onactivate="ToggleParentalLock();" selectionpos="auto" tabindex="auto" >
+							<Panel id="ParentalLockImages" >
 								<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 								<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
 							</Panel>
-							<Image id="MessagesImage" class="InboxImage" src="file://{images}/messages.png" />
+					</Button>
+					<Button id="ControllerBatteryButton" class="Button TopRowButton" onactivate="ShowSettings( GameController );" selectionpos="auto" tabindex="auto" >
+						<Panel id="BatteryImages" >
+							<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
+							<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
+							<Image class="BatteryLevelLow" src="file://{images}/controller_battery_2.png" />
+							<Image class="BatteryLevelHalf" src="file://{images}/controller_battery_3.png" />
+							<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
+						</Panel>
+					</Button>
+					<ParentalButton id="SystemIMSButton" class="Button TopRowButton" onactivate="DisplaySystemMessages(false);" selectionpos="auto" tabindex="auto" >
+						<Panel class="TopButtonContentWrapper">
+							<Image src="file://{images}/messages.png" />
+								<Panel class="TopRowElement" >
+									<Label class="TopRowCounter" text="#MainMenu_SystemIMsShort" />
+									<Label class="TopRowCounterBackground" text="#MainMenu_SystemIMsShort" /> 
+								</Panel>
 						</Panel>
 					</ParentalButton>
-					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" tabindex="1" selectionpos="2.5,0"
+					<ParentalButton id="Inbox" class="Button TopRowButton" onactivate="DisplayInboxDropdown();" selectionpos="auto" tabindex="auto" >
+						<Panel class="TopButtonContentWrapper" >
+							<Image id="InboxImage" class="InboxImage" src="file://{images}/systemmenu/icon_alerts.png" />
+								<Panel class="TopRowElement" >
+									<Label class="TopRowCounter" text="#MainMenu_InboxShort" />
+									<Label class="TopRowCounterBackground" text="#MainMenu_InboxShort" /> 
+								</Panel>
+						</Panel>
+					</ParentalButton>
+					<Button id="PendingChats" class="Button TopRowButton" onactivate="ShowFriends();" selectionpos="auto" tabindex="auto" >
+						<Panel class="TopButtonContentWrapper" >
+							<Image src="file://{images}/systemmenu/icon_chat.png" />
+							<Panel class="TopRowElement" >
+									<Label class="TopRowCounter" text="#MainMenu_PendingChatsShort" />
+									<Label class="TopRowCounterBackground" text="#MainMenu_PendingChatsShort" /> 
+								</Panel>
+						</Panel>
+					</Button>
+					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" selectionpos="auto" tabindex="auto"
 						onactivate="ToggleMusicControlPanel( true );">
 						<Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
 					</Button>
-					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >				
-						<Image src="file://{images}/systemmenu/icon_downloads.png" />
-						<Label class="TopRowCounter" text="#MainMenu_ActiveDownloadsShort" />
+					<Button id="DownloadsButton" class="Button TopRowButton" onactivate="ShowDownloads();" selectionpos="auto" tabindex="auto" >				
+						<Panel class="TopButtonContentWrapper" >
+							<Image src="file://{images}/systemmenu/icon_downloads.png" />
+									<Panel class="TopRowElement" >
+										<Label class="TopRowCounter" text="#MainMenu_ActiveDownloadsShort" />
+										<Label class="TopRowCounterBackground" text="#MainMenu_ActiveDownloadsShort" /> 
+									</Panel>
+						</Panel>
 					</Button>
-					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettingsMenu();" >
+					<ParentalButton id="SettingsButton" class="Button TopRowButton" onactivate="ShowSettingsMenu();" selectionpos="auto" tabindex="auto" >
 						<Image src="file://{images}/systemmenu/icon_settings.png" />
 					</ParentalButton>
-					<Button id="Exit" class="Button TopRowButton" tabindex="5" selectionpos="4,0" onactivate="ShowQuitDialog();">
+					<Button id="Exit" class="Button TopRowButton" onactivate="ShowQuitDialog();" selectionpos="auto" tabindex="auto">
 						<Image src="file://{images}/systemmenu/icon_power.png" />
 					</Button>
-					<Button id="BetaButton" class="Button TopRowButton" tabindex="6" selectionpos="5,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
+					<Button id="BetaButton" class="Button TopRowButton" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" selectionpos="auto" tabindex="auto" >
 						<Image src="file://{images}/betabutton4.tga" />
 					</Button>
 					<Clock id="Clock" class="Clock" />

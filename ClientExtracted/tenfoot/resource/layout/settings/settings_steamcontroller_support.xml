@@ -76,6 +76,13 @@
         </Panel>
       </Panel>
 
+      <Panel id="LeftHapticsTesting" class="InvisibleElement" >
+        <!-- TODO: This becomes visible when the left haptics test passes and needs to actually show something. -->
+      </Panel>
+      <Panel id="RightHapticsTesting" class="InvisibleElement" >
+        <!-- TODO: This becomes visible when the right haptics test passes and needs to actually show something. -->
+      </Panel>
+
       <Panel id="TestingComplete" class="InvisibleElement" >
         <!-- TODO: This becomes visible when all tests are completed. -->
       </Panel>

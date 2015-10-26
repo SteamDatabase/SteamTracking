@@ -4,9 +4,8 @@
 		<include src="file://{resources}/styles/library/screenshotbrowser.css" />
 	</styles>
 	
-	<ScreenshotBrowser oncancel="CloseScreenshotBrowser( false )" class="ContentFrame" content-delete-at-stack-depth="2" content-title="#Screenshots_Screenshots">
-		<Panel id="AppDetailsClose" onmouseactivate="NavigateTenfootBack();" />
-		<Panel id="Contents">
+	<ScreenshotBrowser oncancel="CloseScreenshotBrowser( false )" class="ContentPanel" content-delete-at-stack-depth="2" content-title="#Screenshots_Screenshots_lwr">
+		<Panel id="Contents" >
 			<Panel id="NoScreenshots">
 				<Label text="#Screenshots_NoScreenshots" />
 				<Panel id="KeyboardHotkeySection" class="HotkeySection">
@@ -22,9 +21,6 @@
 						<KeyboardShortcut id="GamepadBtn" type="gamepad" disabled="true"/>
 					</Panel>
 				</Panel>
-			</Panel>
-			<Panel class="TitleRow">
-				<Label text="#Screenshots_Screenshots" />
 			</Panel>
 			<Panel class="FilterRow" selectionpos="0,0">
 				<DropDown id="AppFilter" selectionpos="0,0" />

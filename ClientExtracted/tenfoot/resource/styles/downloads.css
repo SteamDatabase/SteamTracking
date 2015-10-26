@@ -152,7 +152,7 @@
 	margin-bottom: 5px;
 }
 
-.Downloading .DownloadBarBackground
+.ItemDownloading .DownloadBarBackground
 {
 	visibility: visible;	
 }
@@ -237,6 +237,22 @@ DownloadsListItem:descendantfocus .DownloadBarBackground
 {
 	width: 100%;
 }
+
+#DownloadStatusWrapper
+{
+	flow-children: right;
+}
+
+#DownloadError
+{
+	visibility: collapse;
+}
+
+.ItemPaused #DownloadError
+{
+	visibility: visible;
+}
+
 VerticalScrollBar {
 	opacity: 0;
 }

@@ -2937,7 +2937,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .GamesGrid,
 .GamesSuggestion,
 .GamesDownloads,
-#ActivateProductArea
+#FastScrollWrapper
 {
 	padding-top: 77px;
 	padding-left: 135px;
@@ -2964,6 +2964,14 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .MenuHover #ActivateProductArea
 {
 	transform: translateX( 0px );
+}
+
+#FastScrollWrapper
+{
+	position: 0px 0px 0px;
+	z-index: 100;
+	flow-children: none;
+	width: 100%;
 }
 
 #ActivateProductArea
@@ -3052,18 +3060,10 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 1.0;
 }
 
-
-#FastScrollWrapper
-{
-	z-index: 100;
-	flow-children: right;
-	width: 100%;
-}
-
 #FastScrollLabel
 {
-	margin-top: 100px;
-	margin-left: 520px;
+	margin-top: 0px;
+	margin-left: 600px;
 	font-size: 600px;
 
 	height: 720px;
@@ -3085,7 +3085,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 #TypeToJumpLabel
 {
-	margin-top: 300px;
+	margin-top: 200px;
+	margin-left: 550px;
 	font-size: 300px;
 
 	z-index: 100;
@@ -3105,6 +3106,13 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-duration: 0.5s;
 }
 
+
+#FastScrollWrapper.Moving
+{
+	background-color: #051c2bff;
+	opacity: 0.8;
+}
+
 .Moving #TypeToJumpLabel
 {
 	opacity: 1.0;
@@ -3122,17 +3130,17 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 	overflow: noclip;
 
-	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
-	transition-duration: supershortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
 }
 
 .AppGridItem.Ready
 {
 	opacity: 1;
 	pre-transform-scale2d: 0.94;
-
+	
+	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
 }
 
 .AppGridItem .AppImage
@@ -3294,15 +3302,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 1.0;
 	desaturation: 0.1;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-}
-
-
-
-.Moving .AppGridItem
-{
-	blur: gaussian( 5, 1 );
-	opacity: 0.15;
-	desaturation: 0.7;
 }
 
 
@@ -3518,11 +3517,11 @@ Carousel.CursorVisible:hover .LeftMouseScrollRegion,
 {
 	width: 80px;
 	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
-	z-index: 200;
+	z-index: 300;
 	opacity: 1.0;
 	transition-delay: 0.2s;
 	background-color: mouse_hover_bg_up;
@@ -3545,11 +3544,11 @@ Carousel.CursorVisible:hover .RightMouseScrollRegion,
 	width: 80px;
 	height: 100%;
 	align: right center;
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
-	z-index: 200;
+	z-index: 300;
 	opacity: 1.0;
 	transition-delay: 0.2s;
 	transition-duration: 0.2s;
@@ -4897,7 +4896,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .GamesDownloads
 {
 	width: 1700px;
-	padding-top: 32px;
+	padding-top: 30px;
 	padding-left: 0px;
 	padding-right: 40px;
 	margin-left: 95px;

@@ -13,29 +13,40 @@
 				<Label class="ContentTitle" text="" />
 			</Panel>
 			<Panel id="ContentStatus" >
-				<Panel id="InboxStatus" class="StatusIcon" >
-					<Image src="file://{images}/inbox.png" />
-					<Label class="StatusLabel" text="#ContentFrame_InboxCount" />
-				</Panel>
-				<Panel id="DownloadsStatus" class="StatusIcon" >
-					<Image src="file://{images}/downloads.png" />
-					<Label class="StatusLabel" text="#ContentFrame_DownloadsCount" />
-				</Panel>
-				<Panel id="FriendsStatus" class="StatusIcon" >
-					<Image src="file://{images}/systemmenu/icon_chat.png" />
-					<Label class="StatusLabel" text="#ContentFrame_FriendsCount" />
-				</Panel>
-				<Panel id="CommunityStatus" class="StatusIcon" >
-					<Image src="file://{images}/systemmenu/icon_user.png" />
-					<Label class="StatusLabel" text="#ContentFrame_CommunityCount" />
-				</Panel>
-				<Panel id="ParentalStatus" class="StatusIcon" >
+				<Button id="ParentalStatus" class="StatusIcon" onmouseactivate="ToggleParentalLock();" acceptsfocus="false" >
 					<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 					<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
-				</Panel>
-				<Panel id="OfflineStatus" class="StatusIcon" >
+				</Button>
+				<Button id="OfflineStatus" class="StatusIcon" onmouseactivate="GoOnline();" acceptsfocus="false" >
 					<Image src="file://{images}/offline.png" />
-				</Panel>
+				</Button>
+				<Button id="ControllerStatus" class="StatusIcon" onmouseactivate="ShowSettings( GameController );" acceptsfocus="false" >
+					<Panel id="BatteryImages" >
+						<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
+						<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
+						<Image class="BatteryLevelLow" src="file://{images}/controller_battery_2.png" />
+						<Image class="BatteryLevelHalf" src="file://{images}/controller_battery_3.png" />
+						<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
+					</Panel>
+				</Button>
+				<Button id="SystemStatus" class="StatusIcon" onmouseactivate="DisplaySystemMessages(false);" acceptsfocus="false" >
+					<Image src="file://{images}/messages.png" />
+					<Label class="StatusLabel" text="#ContentFrame_SystemCount" />
+				</Button>
+				<Button id="InboxStatus" class="StatusIcon" onmouseactivate="DisplayInboxDropdown();" acceptsfocus="false" >
+					<Image src="file://{images}/systemmenu/icon_alerts.png" />
+					<Label class="StatusLabel" text="#ContentFrame_InboxCount" />
+				</Button>
+				<Button id="PendingChatStatus" class="StatusIcon" onmouseactivate="ShowFriends();" acceptsfocus="false" >
+					<Image src="file://{images}/systemmenu/icon_chat.png" />
+					<Label class="StatusLabel" text="#ContentFrame_FriendsCount" />
+				</Button>
+				<Button id="DownloadsStatus" class="StatusIcon" onmouseactivate="ShowDownloads();" acceptsfocus="false" >
+					<Image src="file://{images}/downloads.png" />
+					<Label class="StatusLabel" text="#ContentFrame_DownloadsCount" />
+				</Button>
+
+				
 	
 				<Clock id="Clock" />
 			</Panel>

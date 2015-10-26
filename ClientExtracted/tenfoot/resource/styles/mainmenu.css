@@ -284,6 +284,9 @@ MainMenu.StackDepth3 .HomeGlow
 {
  	horizontal-align: right;
  	flow-children: right;
+ 	padding-left: 64px;
+ 	margin-right: 8px;
+ 	
 }
 
 #TopRowLeft
@@ -311,9 +314,9 @@ MainMenu.StackDepth3 .HomeGlow
 
 .TopRowBase Label
 {
-	white-space: nowrap;
-	margin-top: 3px;
-	text-overflow: clip;
+	//white-space: nowrap;
+	//margin-top: 3px;
+	//text-overflow: clip;
 	color: messagecolorwash;
 }
 
@@ -361,19 +364,6 @@ MainMenu.StackDepth3 .HomeGlow
 
 
 .SteamUpdated .InboxButtonImage
-{
-	background-image: url( "file://{images}/icon_steam_update.png" );
-	wash-color: #1c2c5cff;
-
-	animation-name: image-wash-pulse;
-	animation-duration: 3.4s;
-	animation-delay: 0.08s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.SteamUpdated #Inbox:focus .InboxButtonImage
 {
 	background-image: url( "file://{images}/icon_steam_update.png" );
 	wash-color: #1c2c5cff;
@@ -533,10 +523,16 @@ MainMenu.StackDepth3 .HomeGlow
 }
 
 
-.SupportMessage #Inbox
+.SupportMessage #Inbox #InboxImage
 {
-	wash-color: accountwarning;
+	wash-color: #A94847;
 }
+
+.SupportMessage #Inbox:focus #InboxImage
+{
+	wash-color: white;
+}
+
 
 #NewSupportMessagesButton
 {
@@ -800,14 +796,12 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	box-shadow: none;
 }
 
-.Button.TopRowButton:Focus
+.Button.TopRowButton:Hover
 {
-	background-color: #1c486900;
-	box-shadow: none;
-	border-radius: 8px;
-
+    pre-transform-scale2d: .8;
 }
-	
+
+
 .Button:hover
 {	
 	background-color: #15a4d5;
@@ -955,50 +949,152 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 
 
+
+
 .TopRowButton
 {
 	flow-children: none;
-	width: 96px;
-	height: 96px;
-	margin-left: 8px;
-	margin-right: 8px;
+	width: fit-children;
+	height: 128px;
+	margin: 0px;
+	margin-left: 4px;
+	margin-right: 4px;
 	vertical-align: center;
+	horizontal-align: left;
 	padding: 0px;
+	
+	//transform:translatez(-96px);
+    pre-transform-scale2d: 0.8;
+	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
 }
 
-Label.TopRowCounter 
+
+.TopRowButton Image
 {
-	background-color: #40d2ff;
-	color:#0d273bff;
-	text-align: center;
-	//font-size: 16px;
-	width: 32px;
-	height: 32px;
-    transform: translatex(32px) translatey(60px);
-	padding-top: -2px;
-	border-radius: 32px;
-	opacity: 0.0;
+	width: 64px;
+	height: 64px;
+	horizontal-align: left;
+	vertical-align: center;
+	wash-color: ui_primary_color;
+}
+
+
+#TopRowRight:descendantfocus .TopRowButton
+{
+	//pre-transform-scale2d: 1.0;
+}
+
+.TopRowElement
+{
+	width: fit-children;
+	background-color: #00000000;
+	//color:#FFFFFF;
+	margin-top: 44px;
+	//width: 412px;
+//	padding-left: 0px;
+	horizontal-align: left;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
 	transition-duration: 0.0s;
+}
+
+
+.TopRowButton:focus Label
+{
+	color: #ffffff;
+	//pre-transform-scale2d: 1.0;
+	animation-name: none;
+	
 }
 
 .TopRowButton:focus
 {
-//opacity: 0.0;
-//pre-transform-scale2d: 0.5;
-padding: 0px;
+
+	pre-transform-scale2d: 0.8;
+	animation-name: none;
+	box-shadow: none;
+	border-width: 0px;
+}
+
+Label.TopRowCounter
+{
+	width: fit-children;
+	min-width: 36px;
+	background-color: #00000000;
+	color:#40d2ffff;
+	text-align: center;
+	padding-left: 4px;
+	padding-right: 2px;
+	transition-duration: 0.0s;
+}
+
+Label.TopRowCounterBackground
+{
+	background-color: #40d2ff55;
+	width: fit-children;
+		min-width: 36px;
+	color:#00000000;
+    margin-left: 0px;
+    padding-left: 4px;
+	padding-right: 6px;
+	opacity-mask: url( "file://{images}/horizontal_gradient_mask.png" );
+	horizontal-align: left;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transition-duration: 0.0s;
+	z-index: -10;
 }
 
 
 
 .TopRowButton:focus Label.TopRowCounter 
 {
-padding-top: -2px;
-//margin: 8px;
-transform: translatex(22px) translatey(32px);
-pre-transform-scale2d: 0.8;
-
+//pre-transform-scale2d: 0.8;
+transform: none;
 
 }
+
+.TopRowButton:descendantfocus Label.TopRowCounterBackground 
+{
+	background-color: #40d2ff66;
+	width: fit-children;
+	color:#00000000;
+    margin-left: 0px;
+    padding-left: 4px;
+	padding-right: 6px;
+	opacity-mask: url( "file://{images}/horizontal_gradient_mask.png" );
+	horizontal-align: left;
+	opacity: 0.5;
+
+}
+
+.TopRowButton AvatarImage
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.TopRowButton AvatarImage Image, .TopRowButton:focus AvatarImage Image
+{
+	wash-color: none;
+		width: 128px;
+	height: 128px;
+}
+
+.TopRowButton:focus Image
+{
+	wash-color: #ffffff;	
+}
+
+.TopRowButton Label
+{
+	font-size: 30px;
+	
+}
+
+
 
 
 .EdgeButton
@@ -1414,38 +1510,11 @@ pre-transform-scale2d: 0.8;
 	transition-timing-function: linear;
 }
 
-.TopRowButton Image
-{
-	width: 64px;
-	height: 64px;
-	horizontal-align: center;
-	vertical-align: center;
-	wash-color: ui_primary_color;
-}
 
-.TopRowButton AvatarImage
-{
-	horizontal-align: center;
-	vertical-align: center;
-}
 
-.TopRowButton AvatarImage Image, .TopRowButton:focus AvatarImage Image
-{
-	wash-color: none;
-		width: 128px;
-	height: 128px;
-}
 
-.TopRowButton:focus Image
-{
-	wash-color: #8bcdf2;	
-}
 
-.TopRowButton Label
-{
-	font-size: 30px;
-	horizontal-align: center;
-}
+
 
 .ScreenSaverMode MainMenu, .GamesRunning MainMenu
 {
@@ -1542,13 +1611,10 @@ InboxMenu #Wrapper .Button:focus Image
 	wash-color: #ffffff;	
 }
 
-
-
 InboxMenu #Wrapper .Button #ParentalLockImageUnlocked
 {
 	wash-color: red;	
 }
-
 
 InboxMenu #Wrapper, 
 InboxMenu #InboxItems,
@@ -1649,6 +1715,35 @@ ParentalButton.Locked
 {
 	wash-color: parental_locked_wash;
 	transition-property: wash-color, border, blur, background-color, color, transform, box-shadow;
+}
+
+
+#GoOnlineButton,
+#FamilyModeLock,
+#ControllerBatteryButton,
+#SystemIMSButton,
+#PendingChats,
+#Inbox,
+#MusicGuideButton
+{
+	visibility: collapse;
+}
+
+#GoOnlineButton Image
+{
+	wash-color: red;
+}
+
+.BatteryVisible #ControllerBatteryButton,
+.SteamUpdated #NewClientUpdateButton,
+.PendingChats #PendingChats,
+.Offline #GoOnlineButton,
+.FamilyModeEnabled #FamilyModeLock,
+.SystemIMs #SystemIMSButton,
+.IncomingInboxItems #Inbox,
+.MusicGuideVisible #MusicGuideButton
+{
+	visibility: visible;
 }
 
 
@@ -1810,12 +1905,14 @@ Button:focus #MissingImageLabel
 	transform: translatex(0px);
 }
 
+.TopButtonContentWrapper,
 #InboxImageWrapper,
 #ParentalLockImages,
 #BatteryImages
 {
-	width: 100%;
+	width: fit-children;
 	height: 100%;
+	flow-children: right;
 }
 
 InboxMenu #BatteryImages,
@@ -1845,7 +1942,7 @@ InboxMenu #ParentalLockImages
 
 .InboxImage
 {
-	opacity: 0.0;
+	opacity: 1.0;
 
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -1864,162 +1961,6 @@ InboxMenu #ParentalLockImages
 	opacity: 0.0;
 }
 
-@keyframes 'inbox-2-active-animation'
-{
-	0%
-	{
-		opacity: 0;
-	}
-	
-	20%
-	{
-		opacity: 0;
-	}
-
-		
-	50%
-	{
-		opacity: 1.0;
-	}
-	
-	80%
-	{
-		opacity: 0;
-	}
-
-
-	100%
-	{
-		opacity: 0;
-	}
-}
-
-
-@keyframes 'inbox-3-active-animation'
-{
-	0%
-	{
-		opacity: 0;
-	}
-	
-	18%
-	{
-		opacity: 1.0;
-	}
-		
-	33%
-	{
-		opacity: 0;
-	}
-	
-	100%
-	{
-		opacity: 0;
-	}
-}
-
-@keyframes 'inbox-4-active-animation'
-{
-	0%
-	{
-		opacity: 0;
-	}
-		
-	15%
-	{
-		opacity: 1.0;
-	}
-	
-	25%
-	{
-		opacity: 0;
-	}
-
-
-	100%
-	{
-		opacity: 0;
-	}
-}
-
-@keyframes 'inbox-5-active-animation'
-{
-	0%
-	{
-		opacity: 0;
-	}
-		
-	10%
-	{
-		opacity: 1.0;
-	}
-	
-	20%
-	{
-		opacity: 0;
-	}
-
-	100%
-	{
-		opacity: 0;
-	}
-}
-
-.InboxItems1 .InboxImage.VisibleItem,
-.InboxItems0 #InboxImage
-{
-	opacity: 1.0;
-}
-
-// handle the case for 2 icons being visible
-.InboxItems2 .InboxImage.VisibleItem
-{
-	animation-name: inbox-2-active-animation;
-	animation-duration: 5.0s;
-}
-
-.InboxItems3 .InboxImage.VisibleItem
-{
-	animation-name: inbox-3-active-animation;
-	animation-duration: 7.5s;
-}
-
-.InboxItems4 .InboxImage.VisibleItem
-{
-	animation-name: inbox-4-active-animation;
-	animation-duration: 10.0s;
-}
-
-.InboxItems5 .InboxImage.VisibleItem
-{
-	animation-name: inbox-5-active-animation;
-	animation-duration: 12.5s;
-}
-
-.Item1.InboxImage.VisibleItem
-{
-	animation-delay: 2.5s;
-}
-
-.Item2.InboxImage.VisibleItem
-{
-	animation-delay: 5s;
-}
-
-.Item3.InboxImage.VisibleItem
-{
-	animation-delay: 7.5s;
-}
-
-.Item4.InboxImage.VisibleItem
-{
-	animation-delay: 10s;
-}
-
-.Item5.InboxImage.VisibleItem
-{
-	animation-delay: 12.5s;
-}
 
 #ParentalLockImageUnlocked
 {

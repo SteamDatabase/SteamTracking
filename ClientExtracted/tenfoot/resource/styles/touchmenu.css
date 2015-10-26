@@ -1,6 +1,8 @@
 
 @define touchkeyclickedactivetime: 0.13;
 
+@define touchmenufadeinouttime: 0.1s;
+
 #TouchMenu
 {
 
@@ -10,6 +12,12 @@
 	border-radius: 10px;
 	border-bottom-left-radius: 195px;
 	border-bottom-right-radius: 195px;
+	
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: touchmenufadeinouttime;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #TouchMenuHoverKeyDescription

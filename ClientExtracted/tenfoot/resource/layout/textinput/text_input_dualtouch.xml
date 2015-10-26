@@ -86,7 +86,7 @@
 								</Panel>
 							</Panel>
 						</Panel>
-						<Panel id="Row0" class="TouchRow">
+						<Panel id="Row0" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_0_0" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_1_0" class="TouchKey" />
 							<Panel id="TouchKey_2_0" class="TouchKey" />
@@ -94,14 +94,14 @@
 							<Panel id="TouchKey_4_0" class="TouchKey" />
 							<Panel id="TouchKey_5_0" class="TouchKey RightQuadrant" />
 						</Panel>
-							<Panel id="Row1" class="TouchRow">
+						<Panel id="Row1" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_0_1" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_1_1" class="TouchKey" />
 							<Panel id="TouchKey_2_1" class="TouchKey" />
 							<Panel id="TouchKey_3_1" class="TouchKey" />
 							<Panel id="TouchKey_4_1" class="TouchKey RightQuadrant" />
 						</Panel>
-							<Panel id="Row2" class="TouchRow">
+						<Panel id="Row2" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_Alt" class="TouchKey LeftQuadrant">
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/symbols.tga" />
 							</Panel>
@@ -111,7 +111,7 @@
 							<Panel id="TouchKey_3_2" class="TouchKey" />
 							<Panel id="TouchKey_4_2" class="TouchKey RightQuadrant" />
 						</Panel>
-						<Panel id="Row3" class="TouchRow">
+						<Panel id="Row3" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_Shift" class="TouchKey LeftQuadrant">
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
 							</Panel>
@@ -121,7 +121,53 @@
 							<Panel id="TouchKey_3_3" class="TouchKey" />
 							<Panel id="TouchKey_4_3" class="TouchKey RightQuadrant" />
 						</Panel>
+						<Panel id="EmoticonRow0" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_0" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_0" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_0" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_0" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_0" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_0" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow1" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_1" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_1" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_1" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_1" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_1" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_1" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow2" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_2" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_2" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_2" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_2" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_2" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_2" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow3" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_3" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_3" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_3" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_3" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_3" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_3" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow4" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_4" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_4" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_4" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_4" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_4" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_4" class="TouchKey EmoticonTouchKey" />
+						</Panel>
 						<Panel id="LastRow" class="TouchRow">
+							<Panel id="TouchKey_Show_Emoticons" class="TouchKey">
+								<Label class="TouchKeyLabel" text="☺" />
+							</Panel>
+							<Panel id="TouchKey_Hide_Emoticons" class="TouchKey">
+								<Label class="TouchKeyLabel" text="ABC" />
+							</Panel>
 							<Panel id="TouchKey_Space" class="TouchKey BottomQuadrant">
 								<Image class="TouchKeySpaceLabel" src="file://{images}/textinput/space.tga" />
 							</Panel>
@@ -144,7 +190,7 @@
 								</Panel>
 							</Panel>
 						</Panel>
-						<Panel id="Row0" class="TouchRow">
+						<Panel id="Row0" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_6_0" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_7_0" class="TouchKey" />
 							<Panel id="TouchKey_8_0" class="TouchKey" />
@@ -154,14 +200,14 @@
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/del.tga" />
 							</Panel>
 						</Panel>
-						<Panel id="Row1" class="TouchRow">
+						<Panel id="Row1" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_5_1" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_6_1" class="TouchKey" />
 							<Panel id="TouchKey_7_1" class="TouchKey" />
 							<Panel id="TouchKey_8_1" class="TouchKey" />
 							<Panel id="TouchKey_9_1" class="TouchKey RightQuadrant" />
 						</Panel>
-						<Panel id="Row2" class="TouchRow">
+						<Panel id="Row2" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_5_2" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_6_2" class="TouchKey" />
 							<Panel id="TouchKey_7_2" class="TouchKey" />
@@ -173,7 +219,7 @@
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
 							</Panel>
 						</Panel>
-						<Panel id="Row3" class="TouchRow">
+						<Panel id="Row3" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_5_3" class="TouchKey LeftQuadrant" />
 							<Panel id="TouchKey_6_3" class="TouchKey" />
 							<Panel id="TouchKey_7_3" class="TouchKey" />
@@ -181,6 +227,50 @@
 							<Panel id="TouchKey_9_3" class="TouchKey" />
 							<Panel id="TouchKey_Symbols" class="TouchKey RightQuadrant">
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+							</Panel>
+						</Panel>						
+						<Panel id="EmoticonRow5" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_5" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_5" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_5" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_5" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_5" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_5" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow6" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_6" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_6" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_6" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_6" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_6" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_6" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow7" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_7" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_7" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_7" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_7" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_7" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_7" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow8" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_8" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_8" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_8" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_8" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_5_8" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_6_8" class="TouchKey EmoticonTouchKey" />
+						</Panel>
+						<Panel id="EmoticonRow9" class="EmoticonRow">
+							<Panel id="EmoticonTouchKey_1_9" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_2_9" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_3_9" class="TouchKey EmoticonTouchKey" />
+							<Panel id="EmoticonTouchKey_4_9" class="TouchKey EmoticonTouchKey" />
+							<Panel id="TouchKey_Prev_Emoticon" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/back.tga" />
+							</Panel>
+							<Panel id="TouchKey_Next_Emoticon" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/forward.tga" />
 							</Panel>
 						</Panel>
 						<Panel id="LastRow" class="TouchRow">

@@ -2462,6 +2462,230 @@ Button:hover #SuggestedStatus
 	}
 }
 
+/* Right hand filter tab */
+
+.NxFilterTab
+{
+	width: 420px;
+	height: fit-children;
+	max-height: 700px;
+	opacity: 1.0;
+	position: 1825px 120px 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: black;
+	overflow: clip;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1184baee ), to( #0e2744ee ) );
+
+	box-shadow: fill #00000066 -4px -4px 6px 6px;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+	z-index: 5;
+
+}
+
+.ContentAreaFocus .NxFilterTab,
+.ContentHover .NxFilterTab
+{
+	position: 1630px 120px 0px;
+}
+.MenuHover .NxFilterTab
+{
+	position: 1825px 120px 0px;
+}
+
+
+.NxFilterTab:descendantfocus
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+	transform: translatez( 20px );
+	position: 1480px 120px 0px;
+}
+
+.NxFilterTab ToggleButton.CheckBox,
+.NxFilterTab RadioButton,
+.NxFilterTab .NxTagHeader,
+.NxFilterTab Button,
+.NxFilterTab.EmptyFilter Button.NxFilterButton,
+.NxFilterTab DropDown
+{
+	height: 0px;
+
+	margin: 0px;
+}
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab:descendantfocus RadioButton
+{
+	margin: 2px 10px 2px 0px;
+}
+
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab ToggleButton:selected,
+.NxFilterTab:descendantfocus RadioButton,
+.NxFilterTab RadioButton:selected,
+.NxFilterTab:descendantfocus .NxTagHeader,
+.NxFilterTab:descendantfocus Button,
+.NxFilterTab:descendantfocus DropDown,
+.NxFilterTab .AlwaysVisible
+{
+	height: 48px;
+}
+
+.NxFilterTab .NxTagHeader.FilterHeader {
+	height: 56px;
+	margin-left: 10px;
+}
+
+.NxFilterTab .FilterHeader
+{
+	font-size: 34px;
+	color: #ffffff;
+
+}
+
+.NxFilterWrapper
+{
+	position: 150px 0px 0px;
+	width: 400px;
+	height: fit-children;
+	padding: 0px;
+	margin-left: 10px;
+	z-index: 10;
+
+	overflow: clip scroll;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+.NxFilterWrapper:descendantfocus
+{
+	position: 0px 0px 0px;
+	max-height: 600px;
+}
+
+.NxFilterButton
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	height: 45px;
+
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
+
+}
+
+
+.NxFilterButton:selected {
+	background-color: #1579a0;
+}
+
+.NxFilterButton Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67c1f5ff;
+	vertical-align: center;
+}
+
+.NxFilterButton:focus Label
+{
+	color: #FFFFFF;
+}
+
+
+.NxFilterButton.Locked
+{
+	wash-color: parental_locked_wash;
+}
+
+.NxFilterButton.Locked:focus
+{
+	wash-color: none;
+}
+
+.NxFilterButton.Locked Label
+{
+	width: fill-parent-flow(1.0);
+}
+
+.NxFilterButton Image
+{
+	vertical-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height: 32px;
+	width: 32px;
+	wash-color: #67c1f5ff;
+	opacity: 1.0;
+}
+
+.NxFilterButton:focus Image
+{
+	vertical-align: center;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 32px;
+  width: 32px;
+  wash-color: #ffffffff;
+
+	opacity: 1.0;
+}
+
+.NxFilterButton.Locked Image
+{
+	opacity: 1.0;
+	wash-color: none;
+	
+	transition-property: wash-color;
+	transition-duration: 0.08s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.NxFilterButton.Locked:descendantfocus Image
+{
+	wash-color: #2f2f2fff;
+}
+
+.NxFilterButton:focus
+{
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
+	
+	animation-name: nx-filter-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.NxFilterButton:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
 
 
 /* Testing Styles Only */

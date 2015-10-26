@@ -1,0 +1,9 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/overlay/ghostmodecontainer.css" />
+	</styles>
+	
+	<GhostModeContainerPanel>
+
+	</GhostModeContainerPanel>
+</root>

@@ -341,7 +341,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #BackgroundLines.GyroSelected
 {
-	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_14.png");
 }
 
 #BackgroundLines.SlotOneSelected
@@ -364,6 +364,15 @@ ControllerBindingsGordon.ScreenSaverMode
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
 }
 
+#BackgroundLines.BackButtonSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
+}
+
+#BackgroundLines.StartButtonSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_13.png");
+}
 
 
 .HasMultipleActionSets #BackgroundController
@@ -735,8 +744,8 @@ ControllerPropertiesMode
 {
 	horizontal-align: left;
 	margin-left: 6px;
-	margin-bottom: 2px;
-	
+	margin-bottom: 8px;
+height: 44px;
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
 	background-repeat: no-repeat;
 	background-size: 48px 48px;
@@ -827,6 +836,53 @@ ControllerSourceModeDpad.ControllerMode ControllerBindingButton
 	margin-bottom: 6px;
 }
 
+
+#ModeContainer #ScrollWheelClockwise
+{
+	background-image: url("file://{images}/library/controller/api/scroll_wheel_clock.png");
+}
+
+#ModeContainer #ScrollWheelCounterClockwise
+{
+	background-image: url("file://{images}/library/controller/api/scroll_wheel_counter_clock.png");
+}
+
+#ModeContainer #ScrollWheelClick
+{
+	background-image: url("file://{images}/library/controller/api/scroll_wheel_click.png");
+}
+
+#ModeContainer #MouseLeftClick
+{
+	background-image: url("file://{images}/library/controller/api/mouse_left.png");
+}
+
+#ModeContainer #MouseRightClick
+{
+	background-image: url("file://{images}/library/controller/api/mouse_right.png");
+}
+
+#ModeContainer #MouseWheelUp
+{
+	background-image: url("file://{images}/library/controller/api/mouse_wheel_up.png");
+}
+
+#ModeContainer #MouseWheelDown
+{
+	background-image: url("file://{images}/library/controller/api/mouse_wheel_down.png");
+}
+
+#ModeContainer #MouseWheelClick
+{
+	background-image: url("file://{images}/library/controller/api/mouse_wheel_click.png");
+}
+
+
+
+
+
+
+
 #ModeContainer #DPadLeft
 {
 	background-image: url("file://{images}/library/controller/api/virtual_dpad_w.png");
@@ -863,6 +919,7 @@ ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
 {
 	background-image: url("file://{images}/library/controller/api/click_twice.png");
 }
+
 
 ControllerSourceModeAbsoluteMouse ControllerBindingButton
 {

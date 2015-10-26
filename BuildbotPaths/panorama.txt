@@ -179,6 +179,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/algparam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/cryptlib.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/filters.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/iterhash.h
@@ -347,7 +348,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/panoramasymbol.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/../../overlay/common/renderer/openvrutils.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/../layout/stylepropertyfactory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/iui3dsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/opengllazyshaders.cpp

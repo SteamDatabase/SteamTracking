@@ -12,7 +12,7 @@
 				<Button id="NoAlertsButton" class="Button" onactivate="CloseInboxMenu();" >
 					<Label id="NoAlertsLabel" class="LongDescSm" text="#MainMenu_NoPendingAlerts" />
 				</Button>
-				<Button id="ControllerBatteryButton" class="Button" onactivate="ShowSettings( GameController ); CloseInboxMenu();" >
+				<ParentalButton id="ControllerBatteryButton" class="Button" onactivate="ShowSettings( GameController ); CloseInboxMenu();" >
 					<Panel id="BatteryImages" >
 						<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
 						<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
@@ -21,51 +21,51 @@
 						<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
 					</Panel>
 					<Label id="ControllerBatteryLabel" class="LongDescSm" text="#MainMenu_ControllerBattery" />
-				</Button>
+				</ParentalButton>
 				<Button id="NewClientUpdateButton" class="Button" onactivate="AllowNewClientUpdate();" >
 					<Image src="file://{images}/icon_steam_update.png" />
 					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
 				</Button>
-				<Button id="NewInvitesButton" class="Button" onactivate="ShowNewInvites();" >
+				<Button id="OptIntoBeta" class="Button" onactivate="OptIntoClientBeta();" >
+					<Image src="file://{images}/icon_steam_update.png" />
+					<Label id="OptIntoBetaLabel" class="LongDescSm" text="#MainMenu_OptIntoBeta" />
+				</Button>
+				<ParentalButton id="NewInvitesButton" class="Button" onactivate="ShowNewInvites();" >
 					<Image src="file://{images}/invites.png" />
 					<Label id="NewInvitesLabel" class="LongDescSm" text="#MainMenu_NewInvites" />
-				</Button>
-				<Button id="NewGroupInvitesButton" class="Button" onactivate="ShowNewGroupInvites();" >
+				</ParentalButton>
+				<ParentalButton id="NewGroupInvitesButton" class="Button" onactivate="ShowNewGroupInvites();" >
 					<Image src="file://{images}/invites.png" />
 					<Label id="NewGroupInvitesLabel" class="LongDescSm" text="#MainMenu_NewGroupInvites" />
-				</Button>
-				<Button id="SystemIMSButton" class="Button" onactivate="DisplaySystemMessages(); CloseInboxMenu();" >
-					<Image src="file://{images}/messages.png" />
-					<Label id="SystemIMSLabel" class="LongDescSm" text="#MainMenu_NewForYouTitle" />
-				</Button>
-				<Button id="UnreadChatMessagesButton" class="Button" onactivate="ShowUnreadChatMessages();" >
+				</ParentalButton>
+				<ParentalButton id="UnreadChatMessagesButton" class="Button" onactivate="ShowUnreadChatMessages();" >
 					<Image src="file://{images}/comments.png" />
 					<Label id="UnreadChatLabel" class="LongDescSm" text="#MainMenu_UnreadChat" />
-				</Button>
-				<Button id="NewCommentsButton" class="Button" onactivate="ShowNewComments();" >
+				</ParentalButton>
+				<ParentalButton id="NewCommentsButton" class="Button" onactivate="ShowNewComments();" >
 					<Image src="file://{images}/comments.png" />
 					<Label id="NewCommentsLabel" class="LongDescSm" text="#MainMenu_NewComments" />
-				</Button>
-				<Button id="NewItemsButton" class="Button" onactivate="ShowNewItems();" >
+				</ParentalButton>
+				<ParentalButton id="NewItemsButton" class="Button" onactivate="ShowNewItems();" >
 					<Image src="file://{images}/items.png" />
 					<Label id="NewItemsLabel" class="LongDescSm" text="#MainMenu_NewItems" />
-				</Button>
-				<Button id="NewGiftsButton" class="Button" onactivate="ShowNewGifts();" >
+				</ParentalButton>
+				<ParentalButton id="NewGiftsButton" class="Button" onactivate="ShowNewGifts();" >
 					<Image src="file://{images}/gifts.png" />
 					<Label id="NewGiftsLabel" class="LongDescSm" text="#MainMenu_NewGifts" />
-				</Button>
-				<Button id="NewTradeOffersButton" class="Button" onactivate="ShowNewTradeOffers(true);" >
+				</ParentalButton>
+				<ParentalButton id="NewTradeOffersButton" class="Button" onactivate="ShowNewTradeOffers(true);" >
 					<Image src="file://{images}/trade_offer.png" />
 					<Label id="NewTradeOffersLabel" class="LongDescSm" text="#MainMenu_NewTradeOffers" />
-				</Button>
+				</ParentalButton>
 				<Button id="NewAsyncGamesButton" class="Button" onactivate="ShowNewAsyncGames();" >
 					<Image src="file://{images}/async_game.png" />
 					<Label id="NewAsyncGamesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGames" />
 				</Button>
-				<Button id="NewModeratorMessagesButton" class="Button" onactivate="ShowNewModeratorMessages();" >
+				<ParentalButton id="NewModeratorMessagesButton" class="Button" onactivate="ShowNewModeratorMessages();" >
 					<Image src="file://{images}/comments.png" />
 					<Label id="NewModeratorMessagesLabel" class="LongDescSm" text="#MainMenu_NewModeratorMessages" />
-				</Button>
+				</ParentalButton>
 				<Button id="NewSupportMessagesButton" class="Button" onactivate="ShowNewSupportMessages();" >
 					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
 				</Button>
@@ -79,16 +79,6 @@
 				<Button id="GoOnlineButton" class="Button" onactivate="GoOnline();CloseInboxMenu();" >
 					<Image class="GoOnlineImage" src="file://{images}/offline.png" />
 					<Label id="GoOnlineLabel" class="LongDescSm" text="#Quit_GoOnline" />
-				</Button>
-			</Panel>
-			<Panel id="FamilyModeItems" childfocusonhover="true">
-				<Label class="InboxLabelTitle StdTitle" text="#MainMenu_FamilyTitle" />
-				<Button id="FamilyModeLock" class="Button" onactivate="CloseInboxMenu(); ToggleParentalLock();" >
-						<Panel id="ParentalLockImages" >
-							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
-							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
-						</Panel>
-					<Label id="FamilyModeLockLabel" class="LongDescSm" text="#Parental_Inbox_Lock" />
 				</Button>
 			</Panel>
 		</Panel>

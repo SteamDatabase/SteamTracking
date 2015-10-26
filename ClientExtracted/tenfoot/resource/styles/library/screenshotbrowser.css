@@ -17,9 +17,9 @@ ScreenshotBrowser #Contents
 	vertical-align: bottom;
 
 	// transitions
-	transform: translate3d( 0px, 1280px, 1000px );
-	opacity: 0.0;
-	desaturation: 1.0;
+	//transform: translate3d( 0px, 1280px, 1000px );
+	//opacity: 0.0;
+	//desaturation: 1.0;
 
 	transition-property: transform, opacity, desaturation;
 	transition-duration: 0.4s;
@@ -29,9 +29,9 @@ ScreenshotBrowser #Contents
 
 ScreenshotBrowser:descendantfocus #Contents
 {
-	transform: translate3d( 0px, 0px, 0px );
-	opacity: 1.0;
-	desaturation: 0.0;
+	//transform: translate3d( 0px, 0px, 0px );
+	//opacity: 1.0;
+	//desaturation: 0.0;
 
 }
 
@@ -86,8 +86,6 @@ ScreenshotBrowser .TitleRow
 {
 	//	width: 100%;
 	//	height: fill-parent-flow(1.0);
-	x: 0px;
-	y: 108px;
 	width: 1920px;
 	height: 848px;
 	padding-left: 100px;

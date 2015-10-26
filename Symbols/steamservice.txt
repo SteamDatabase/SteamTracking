@@ -437,8 +437,6 @@
  D typeinfo for CryptoPP::AlgorithmParametersBase
  D typeinfo for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
  D typeinfo for CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>
- D typeinfo for CryptoPP::AlgorithmParametersTemplate<int const*>
- D typeinfo for CryptoPP::AlgorithmParametersTemplate<int>
  D typeinfo for CryptoPP::ArraySink
  D typeinfo for CryptoPP::AsymmetricAlgorithm
  D typeinfo for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
@@ -447,7 +445,6 @@
  D typeinfo for CryptoPP::BERDecodeErr
  D typeinfo for CryptoPP::BERGeneralDecoder
  D typeinfo for CryptoPP::BERSequenceDecoder
- D typeinfo for CryptoPP::BaseN_Decoder
  D typeinfo for CryptoPP::BitBucket
  D typeinfo for CryptoPP::BlockCipher
  D typeinfo for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
@@ -461,13 +458,11 @@
  D typeinfo for CryptoPP::ByteArrayParameter
  D typeinfo for CryptoPP::ByteQueue
  D typeinfo for CryptoPP::ByteQueue::Walker
- D typeinfo for CryptoPP::CannotFlush
  D typeinfo for CryptoPP::ClassNullRNG
  D typeinfo for CryptoPP::Clonable
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- D typeinfo for CryptoPP::CombinedNameValuePairs
  D typeinfo for CryptoPP::ConstByteArrayParameter
  D typeinfo for CryptoPP::CryptoMaterial
  D typeinfo for CryptoPP::CryptoMaterial::InvalidMaterial
@@ -479,7 +474,6 @@
  D typeinfo for CryptoPP::FixedBlockSize<16u>
  D typeinfo for CryptoPP::HashInputTooLong
  D typeinfo for CryptoPP::HashTransformation
- D typeinfo for CryptoPP::HexDecoder
  D typeinfo for CryptoPP::InitializeInteger
  D typeinfo for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>
  D typeinfo for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
@@ -545,7 +539,6 @@
  D typeinfo for CryptoPP::TrapdoorFunction
  D typeinfo for CryptoPP::TrapdoorFunctionBounds
  D typeinfo for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- D typeinfo for CryptoPP::Unflushable<CryptoPP::Filter>
  D typeinfo for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
  D typeinfo for CryptoPP::Waitable
  D typeinfo for CryptoPP::X509PublicKey
@@ -656,23 +649,18 @@
  D vtable for CryptoPP::AlgorithmParametersBase
  D vtable for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
  D vtable for CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>
- D vtable for CryptoPP::AlgorithmParametersTemplate<int const*>
- D vtable for CryptoPP::AlgorithmParametersTemplate<int>
  D vtable for CryptoPP::ArraySink
  D vtable for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
  D vtable for CryptoPP::BERDecodeErr
  D vtable for CryptoPP::BERGeneralDecoder
  D vtable for CryptoPP::BERSequenceDecoder
- D vtable for CryptoPP::BaseN_Decoder
  D vtable for CryptoPP::BitBucket
  D vtable for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
  D vtable for CryptoPP::BlockingRng
  D vtable for CryptoPP::BufferedTransformation::NoChannelSupport
  D vtable for CryptoPP::ByteQueue
  D vtable for CryptoPP::ByteQueue::Walker
- D vtable for CryptoPP::CannotFlush
  D vtable for CryptoPP::ClassNullRNG
- D vtable for CryptoPP::CombinedNameValuePairs
  D vtable for CryptoPP::CryptoMaterial::InvalidMaterial
  D vtable for CryptoPP::DERGeneralEncoder
  D vtable for CryptoPP::DERSequenceEncoder
@@ -680,7 +668,6 @@
  D vtable for CryptoPP::Exception
  D vtable for CryptoPP::Filter
  D vtable for CryptoPP::HashInputTooLong
- D vtable for CryptoPP::HexDecoder
  D vtable for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
  D vtable for CryptoPP::InputRejecting<CryptoPP::Filter>::InputRejected
  D vtable for CryptoPP::Integer
@@ -848,8 +835,6 @@
  R typeinfo name for CryptoPP::AlgorithmParametersBase
  R typeinfo name for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
  R typeinfo name for CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>
- R typeinfo name for CryptoPP::AlgorithmParametersTemplate<int const*>
- R typeinfo name for CryptoPP::AlgorithmParametersTemplate<int>
  R typeinfo name for CryptoPP::ArraySink
  R typeinfo name for CryptoPP::AsymmetricAlgorithm
  R typeinfo name for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
@@ -858,7 +843,6 @@
  R typeinfo name for CryptoPP::BERDecodeErr
  R typeinfo name for CryptoPP::BERGeneralDecoder
  R typeinfo name for CryptoPP::BERSequenceDecoder
- R typeinfo name for CryptoPP::BaseN_Decoder
  R typeinfo name for CryptoPP::BitBucket
  R typeinfo name for CryptoPP::BlockCipher
  R typeinfo name for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
@@ -872,13 +856,11 @@
  R typeinfo name for CryptoPP::ByteArrayParameter
  R typeinfo name for CryptoPP::ByteQueue
  R typeinfo name for CryptoPP::ByteQueue::Walker
- R typeinfo name for CryptoPP::CannotFlush
  R typeinfo name for CryptoPP::ClassNullRNG
  R typeinfo name for CryptoPP::Clonable
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- R typeinfo name for CryptoPP::CombinedNameValuePairs
  R typeinfo name for CryptoPP::ConstByteArrayParameter
  R typeinfo name for CryptoPP::CryptoMaterial
  R typeinfo name for CryptoPP::CryptoMaterial::InvalidMaterial
@@ -890,7 +872,6 @@
  R typeinfo name for CryptoPP::FixedBlockSize<16u>
  R typeinfo name for CryptoPP::HashInputTooLong
  R typeinfo name for CryptoPP::HashTransformation
- R typeinfo name for CryptoPP::HexDecoder
  R typeinfo name for CryptoPP::InitializeInteger
  R typeinfo name for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>
  R typeinfo name for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
@@ -956,7 +937,6 @@
  R typeinfo name for CryptoPP::TrapdoorFunction
  R typeinfo name for CryptoPP::TrapdoorFunctionBounds
  R typeinfo name for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- R typeinfo name for CryptoPP::Unflushable<CryptoPP::Filter>
  R typeinfo name for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
  R typeinfo name for CryptoPP::Waitable
  R typeinfo name for CryptoPP::X509PublicKey
@@ -2748,7 +2728,6 @@
  T CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
  T CryptoPP::AlgorithmImpl<CryptoPP::TF_VerifierBase, CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int> >::AlgorithmName() const
  T CryptoPP::AlgorithmParameters CryptoPP::MakeParameters<CryptoPP::ConstByteArrayParameter>(char const*, CryptoPP::ConstByteArrayParameter const&, bool)
- T CryptoPP::AlgorithmParameters CryptoPP::MakeParameters<int const*>(char const*, int const* const&, bool)
  T CryptoPP::AlgorithmParameters& CryptoPP::AlgorithmParameters::operator()<CryptoPP::ConstByteArrayParameter>(char const*, CryptoPP::ConstByteArrayParameter const&, bool)
  T CryptoPP::AlgorithmParameters::AlgorithmParameters()
  T CryptoPP::AlgorithmParameters::AlgorithmParameters(CryptoPP::AlgorithmParameters const&)
@@ -2761,12 +2740,6 @@
  T CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>::AssignValue(char const*, std::type_info const&, void*) const
  T CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>::MoveInto(void*) const
  T CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>::~AlgorithmParametersTemplate()
- T CryptoPP::AlgorithmParametersTemplate<int const*>::AssignValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParametersTemplate<int const*>::MoveInto(void*) const
- T CryptoPP::AlgorithmParametersTemplate<int const*>::~AlgorithmParametersTemplate()
- T CryptoPP::AlgorithmParametersTemplate<int>::AssignValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParametersTemplate<int>::MoveInto(void*) const
- T CryptoPP::AlgorithmParametersTemplate<int>::~AlgorithmParametersTemplate()
  T CryptoPP::AlignedAllocate(unsigned long)
  T CryptoPP::AlignedDeallocate(void*)
  T CryptoPP::AllocatorBase<unsigned int>::CheckSize(unsigned long)
@@ -2805,11 +2778,6 @@
  T CryptoPP::BERGeneralDecoder::~BERGeneralDecoder()
  T CryptoPP::BERLengthDecode(CryptoPP::BufferedTransformation&, unsigned long&)
  T CryptoPP::BERSequenceDecoder::~BERSequenceDecoder()
- T CryptoPP::BaseN_Decoder::BaseN_Decoder(int const*, int, CryptoPP::BufferedTransformation*)
- T CryptoPP::BaseN_Decoder::InitializeDecodingLookupArray(int*, unsigned char const*, unsigned int, bool)
- T CryptoPP::BaseN_Decoder::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::BaseN_Decoder::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BaseN_Decoder::~BaseN_Decoder()
  T CryptoPP::Baseline_Multiply16(unsigned int*, unsigned int const*, unsigned int const*)
  T CryptoPP::Baseline_Multiply2(unsigned int*, unsigned int const*, unsigned int const*)
  T CryptoPP::Baseline_Multiply4(unsigned int*, unsigned int const*, unsigned int const*)
@@ -2913,7 +2881,6 @@
  T CryptoPP::ByteQueue::Walker::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
  T CryptoPP::ByteQueue::Walker::~Walker()
  T CryptoPP::ByteQueue::~ByteQueue()
- T CryptoPP::CannotFlush::~CannotFlush()
  T CryptoPP::ClassNullRNG::AlgorithmName() const
  T CryptoPP::ClassNullRNG::GenerateBlock(unsigned char*, unsigned long)
  T CryptoPP::ClassNullRNG::~ClassNullRNG()
@@ -2921,8 +2888,6 @@
  T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
  T CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >::Clone() const
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
- T CryptoPP::CombinedNameValuePairs::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::CombinedNameValuePairs::~CombinedNameValuePairs()
  T CryptoPP::ConstByteArrayParameter::Assign(unsigned char const*, unsigned long, bool)
  T CryptoPP::ConstByteArrayParameter::ConstByteArrayParameter(unsigned char const*, unsigned long, bool)
  T CryptoPP::CpuId(unsigned int, unsigned int*)
@@ -2975,7 +2940,6 @@
  T CryptoPP::Filter::Initialize(CryptoPP::NameValuePairs const&, int)
  T CryptoPP::Filter::MessageSeriesEnd(int, bool)
  T CryptoPP::Filter::NewDefaultAttachment() const
- T CryptoPP::Filter::Output(int, unsigned char const*, unsigned long, int, bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Filter::ShouldPropagateMessageEnd() const
  T CryptoPP::Filter::ShouldPropagateMessageSeriesEnd() const
  T CryptoPP::Filter::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
@@ -2999,9 +2963,6 @@
  T CryptoPP::HashTransformation::Verify(unsigned char const*)
  T CryptoPP::HashTransformation::VerifyDigest(unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::HashTransformation::VerifyTruncatedDigest(unsigned char const*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::HexDecoder::GetDefaultDecodingLookupArray()
- T CryptoPP::HexDecoder::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::HexDecoder::~HexDecoder()
  T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::ChannelMessageSeriesEnd(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool)
  T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::ChannelPut2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char const*, unsigned long, int, bool)
  T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected::InputRejected()
@@ -3133,7 +3094,6 @@
  T CryptoPP::MontgomeryRepresentation::~MontgomeryRepresentation()
  T CryptoPP::MultiplyByPower2Mod(unsigned int*, unsigned int const*, unsigned long, unsigned int const*, unsigned long)
  T CryptoPP::MultiplyTop(unsigned int*, unsigned int*, unsigned int const*, unsigned int const*, unsigned int const*, unsigned long)
- T CryptoPP::NameValuePairs::GetRequiredIntParameter(char const*, char const*, int&) const
  T CryptoPP::NameValuePairs::ThrowIfTypeMismatch(char const*, std::type_info const&, std::type_info const&)
  T CryptoPP::NameValuePairs::ValueTypeMismatch::ValueTypeMismatch(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::type_info const&, std::type_info const&)
  T CryptoPP::NameValuePairs::ValueTypeMismatch::~ValueTypeMismatch()
@@ -3300,10 +3260,6 @@
  T CryptoPP::TrapdoorFunctionBounds::MaxPreimage() const
  T CryptoPP::UnalignedAllocate(unsigned long)
  T CryptoPP::UnalignedDeallocate(void*)
- T CryptoPP::Unflushable<CryptoPP::Filter>::ChannelFlush(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, int, bool)
- T CryptoPP::Unflushable<CryptoPP::Filter>::Flush(bool, int, bool)
- T CryptoPP::Unflushable<CryptoPP::Filter>::InputBufferIsEmpty() const
- T CryptoPP::Unflushable<CryptoPP::Filter>::IsolatedFlush(bool, bool)
  T CryptoPP::VerifyBufsEqual(unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::WindowSlider::FindNextWindow()
  T CryptoPP::WindowSlider::WindowSlider(CryptoPP::Integer const&, bool, unsigned int)
@@ -6249,7 +6205,6 @@
  T non-virtual thunk to CryptoPP::ArraySink::~ArraySink()
  T non-virtual thunk to CryptoPP::BERGeneralDecoder::~BERGeneralDecoder()
  T non-virtual thunk to CryptoPP::BERSequenceDecoder::~BERSequenceDecoder()
- T non-virtual thunk to CryptoPP::BaseN_Decoder::~BaseN_Decoder()
  T non-virtual thunk to CryptoPP::BitBucket::~BitBucket()
  T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
  T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
@@ -6262,7 +6217,6 @@
  T non-virtual thunk to CryptoPP::DERGeneralEncoder::~DERGeneralEncoder()
  T non-virtual thunk to CryptoPP::DERSequenceEncoder::~DERSequenceEncoder()
  T non-virtual thunk to CryptoPP::Filter::~Filter()
- T non-virtual thunk to CryptoPP::HexDecoder::~HexDecoder()
  T non-virtual thunk to CryptoPP::MessageQueue::~MessageQueue()
  T non-virtual thunk to CryptoPP::PK_FinalTemplate<CryptoPP::TF_VerifierImpl<CryptoPP::TF_SignatureSchemeOptions<CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::PKCS1v15_SignatureMessageEncodingMethod, CryptoPP::SHA1> > >::~PK_FinalTemplate()
  T non-virtual thunk to CryptoPP::RSAFunction::BERDecodePublicKey(CryptoPP::BufferedTransformation&, bool, unsigned long)
@@ -6655,7 +6609,6 @@
  T virtual thunk to CryptoPP::RSAFunction::GetVoidValue(char const*, std::type_info const&, void*) const
  T virtual thunk to CryptoPP::RSAFunction::Validate(CryptoPP::RandomNumberGenerator&, unsigned int) const
  T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
- T void CryptoPP::NameValuePairs::GetRequiredParameter<int const*>(char const*, char const*, int const*&) const
  T void PipeDebugParam<ERegKeyRoot>(ERegKeyRoot)
  T void PipeDebugParam<EUniverse>(EUniverse)
  T void PipeDebugParam<bool>(bool)
@@ -6764,8 +6717,6 @@
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
  b ClearWritingMiniDump::fAsserted
- b CryptoPP::HexDecoder::GetDefaultDecodingLookupArray()::s_array
- b CryptoPP::HexDecoder::GetDefaultDecodingLookupArray()::s_initialized
  b CryptoPP::NullRNG()::s_nullRNG
  b CryptoPP::Td
  b CryptoPP::Te
@@ -7588,7 +7539,6 @@
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r CryptoPP::RoundupSizeTable
  r CryptoPP::SHA256::InitState(unsigned int*)::s
- r CryptoPP::s_vecUpper
  r Cx
  r Hex
  r PEM_dek_info.map
@@ -8570,7 +8520,6 @@
  tcsetattr
  time
  typeinfo for int
- typeinfo for int const*
  typeinfo for std::bad_alloc
  typeinfo for std::exception
  unlink

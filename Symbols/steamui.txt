@@ -26,6 +26,7 @@
  B AcceptBroadcastWatchRequest::symbol
  B AcceptLobbyInvite::symbol
  B AcceptSSA::symbol
+ B AcceptedOptIntoClientBeta::symbol
  B AccountNameSuggestionSelected::symbol
  B AccountSettingsChangeEmail::symbol
  B AccountSettingsChangePassword::symbol
@@ -315,13 +316,13 @@
  B CFriendsProfileDetailsActionButton::m_symbol
  B CFriendsProfileDetailsCompositeHeader::m_symbol
  B CFriendsSearchButton::m_symbol
- B CFriendsSearchDialog::m_symbol
  B CFriendsSearchResultEmbedded::m_symbol
  B CFriendsSelfHeader::m_symbol
  B CGamepadRumbleMsg::default_instance_
  B CGetControllerConfigWorkerBase::m_LastCloudSyncTime
  B CGetControllerConfigWorkerBase::m_mapWorkshopToLocal
  B CGetCursorImageMsg::default_instance_
+ B CGhostModeContainerPanel::m_symbol
  B CGroupListItem::m_symbol
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
@@ -1139,6 +1140,7 @@
  B FriendVoiceChatEnded::symbol
  B FriendVoiceChatStarted::symbol
  B FriendsActions::symbol
+ B FriendsChatInsertEmoticon::symbol
  B FriendsClearFilter::symbol
  B FriendsContentChanged::symbol
  B FriendsFilterChanged::symbol
@@ -1149,13 +1151,12 @@
  B FriendsSearchActivated::symbol
  B FriendsSearchFilterString::symbol
  B FriendsSearchGainFocus::symbol
- B FriendsSearchResult::symbol
- B FriendsSearchResultsResponse::symbol
  B FriendsSelectFirstItem::symbol
  B FriendsSendChatMessage::symbol
  B FriendsSendChatMessageX::symbol
  B FriendsSetCurrentlyActiveListTabIndex::symbol
  B FriendsSettingCheckBoxSelected::symbol
+ B FriendsToggleEmoticonPanel::symbol
  B FriendsVoiceChatActivation::symbol
  B FriendsVoiceChatDeactivation::symbol
  B GameFilter::symbol
@@ -1168,6 +1169,7 @@
  B GamepadBound::symbol
  B GamesViewType::symbol
  B GetAgeGateDateResponse::symbol
+ B GhostModeEnabled::symbol
  B GiftNoteComplete::symbol
  B GoBackButton::symbol
  B GoBackToCart::symbol
@@ -1190,6 +1192,7 @@
  B HTMLRequestRepaint::symbol
  B HTMLScreenShotCaptured::symbol
  B HandleWelcomeMoveUp::symbol
+ B HapticPulse::symbol
  B HelperImageLoaded::symbol
  B HighlightTrack::symbol
  B IgnoreAllPendingFriendInvites::symbol
@@ -1321,6 +1324,7 @@
  B OpenRemotePanel::symbol
  B OpenScreenshotManager::symbol
  B OpenWebPanelInFullBrowser::symbol
+ B OptIntoClientBeta::symbol
  B PageShiftLeft::symbol
  B PageShiftRight::symbol
  B ParentalAllowAllGames::symbol
@@ -1425,7 +1429,6 @@
  B ResolutionConfirmed::symbol
  B RestartDuetoUpdate::symbol
  B RestartForClientUpdate::symbol
- B RightPadMouseEnable::symbol
  B RunNotifications::symbol
  B SaveConfigGordon::symbol
  B SaveControllerBinds::symbol
@@ -1650,7 +1653,6 @@
  B StreamingDetailsShowAdvancedOptions::symbol
  B StreamingSourceChosen::symbol
  B SubmitBroadcastChat::symbol
- B SubmitPartialFilter::symbol
  B SwapPanels::symbol
  B SwitchToHDMIInput::symbol
  B SystemIM::symbol
@@ -2006,10 +2008,10 @@
  B g_FriendsProfileDetailsCompositeHeader_Helper
  B g_FriendsProfileDetails_Helper
  B g_FriendsSearchButton_Helper
- B g_FriendsSearchDialog_Helper
  B g_FriendsSearchResultEmbedded_Helper
  B g_FriendsSelfHeader_Helper
  B g_Friends_Helper
+ B g_GhostModeContainerPanel_Helper
  B g_GraphPanelLinkerHack
  B g_GraphPanelPullInModule
  B g_Grid_Helper
@@ -2804,7 +2806,6 @@
  B panorama::SoundFinished::symbol
  B panorama::SoundMuteChanged::symbol
  B panorama::SoundVolumeChanged::symbol
- B panorama::SteamPadRightHighActivity::symbol
  B panorama::StopStreaming::symbol
  B panorama::StopStreamingAndSuspendClient::symbol
  B panorama::StyleClassesChanged::symbol
@@ -3031,9 +3032,9 @@
  B panorama::g_FriendsProfileDetailsCompositeHeaderLinkerHack
  B panorama::g_FriendsProfileDetailsLinkerHack
  B panorama::g_FriendsSearchButtonLinkerHack
- B panorama::g_FriendsSearchDialogLinkerHack
  B panorama::g_FriendsSearchResultEmbeddedLinkerHack
  B panorama::g_FriendsSelfHeaderLinkerHack
+ B panorama::g_GhostModeContainerPanelLinkerHack
  B panorama::g_GridLinkerHack
  B panorama::g_GroupListItemLinkerHack
  B panorama::g_HTMLHorizontalScrollBarLinkerHack
@@ -3495,6 +3496,7 @@
  D AcceptBroadcastWatchRequest::pchEvent
  D AcceptLobbyInvite::pchEvent
  D AcceptSSA::pchEvent
+ D AcceptedOptIntoClientBeta::pchEvent
  D AccountNameSuggestionSelected::pchEvent
  D AccountSettingsChangeEmail::pchEvent
  D AccountSettingsChangePassword::pchEvent
@@ -5502,6 +5504,7 @@
  D FriendVoiceChatEnded::pchEvent
  D FriendVoiceChatStarted::pchEvent
  D FriendsActions::pchEvent
+ D FriendsChatInsertEmoticon::pchEvent
  D FriendsClearFilter::pchEvent
  D FriendsContentChanged::pchEvent
  D FriendsFilterChanged::pchEvent
@@ -5512,13 +5515,12 @@
  D FriendsSearchActivated::pchEvent
  D FriendsSearchFilterString::pchEvent
  D FriendsSearchGainFocus::pchEvent
- D FriendsSearchResult::pchEvent
- D FriendsSearchResultsResponse::pchEvent
  D FriendsSelectFirstItem::pchEvent
  D FriendsSendChatMessage::pchEvent
  D FriendsSendChatMessageX::pchEvent
  D FriendsSetCurrentlyActiveListTabIndex::pchEvent
  D FriendsSettingCheckBoxSelected::pchEvent
+ D FriendsToggleEmoticonPanel::pchEvent
  D FriendsVoiceChatActivation::pchEvent
  D FriendsVoiceChatDeactivation::pchEvent
  D GameFilter::pchEvent
@@ -5531,6 +5533,7 @@
  D GamepadBound::pchEvent
  D GamesViewType::pchEvent
  D GetAgeGateDateResponse::pchEvent
+ D GhostModeEnabled::pchEvent
  D GiftNoteComplete::pchEvent
  D GoBackButton::pchEvent
  D GoBackToCart::pchEvent
@@ -5558,6 +5561,7 @@
  D HTMLRequestRepaint::pchEvent
  D HTMLScreenShotCaptured::pchEvent
  D HandleWelcomeMoveUp::pchEvent
+ D HapticPulse::pchEvent
  D HelperImageLoaded::pchEvent
  D HighlightTrack::pchEvent
  D IgnoreAllPendingFriendInvites::pchEvent
@@ -5704,6 +5708,7 @@
  D OpenRemotePanel::pchEvent
  D OpenScreenshotManager::pchEvent
  D OpenWebPanelInFullBrowser::pchEvent
+ D OptIntoClientBeta::pchEvent
  D PageShiftLeft::pchEvent
  D PageShiftRight::pchEvent
  D ParentalAllowAllGames::pchEvent
@@ -5808,7 +5813,6 @@
  D ResolutionConfirmed::pchEvent
  D RestartDuetoUpdate::pchEvent
  D RestartForClientUpdate::pchEvent
- D RightPadMouseEnable::pchEvent
  D RunNotifications::pchEvent
  D SSAHTML::ChainToAnimationMap()::chained
  D SSAHTML::ChainToMap()::chained
@@ -6037,7 +6041,6 @@
  D StreamingDetailsShowAdvancedOptions::pchEvent
  D StreamingSourceChosen::pchEvent
  D SubmitBroadcastChat::pchEvent
- D SubmitPartialFilter::pchEvent
  D SuperNavMenu::ChainToAnimationMap()::chained
  D SuperNavMenu::ChainToMap()::chained
  D SuperNavMenu::GetKBMap()::s_pMap
@@ -8472,7 +8475,6 @@
  D panorama::SoundFinished::pchEvent
  D panorama::SoundMuteChanged::pchEvent
  D panorama::SoundVolumeChanged::pchEvent
- D panorama::SteamPadRightHighActivity::pchEvent
  D panorama::StopStreaming::pchEvent
  D panorama::StopStreamingAndSuspendClient::pchEvent
  D panorama::StyleClassesChanged::pchEvent
@@ -9024,6 +9026,7 @@
  D typeinfo for CCallback<CSettingsPanelNetwork_Connect, NetworkDeviceStateChange_t, false>
  D typeinfo for CCallback<CSettingsPanelNetwork_Device, NetworkDeviceStateChange_t, false>
  D typeinfo for CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>
+ D typeinfo for CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>
  D typeinfo for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  D typeinfo for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
  D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
@@ -9458,7 +9461,6 @@
  D typeinfo for CFriendsProfileDetailsActionButton
  D typeinfo for CFriendsProfileDetailsCompositeHeader
  D typeinfo for CFriendsSearchButton
- D typeinfo for CFriendsSearchDialog
  D typeinfo for CFriendsSearchResultEmbedded
  D typeinfo for CFriendsSelfHeader
  D typeinfo for CFullScreenshotPanel
@@ -9538,6 +9540,7 @@
  D typeinfo for CGetControllerConfigWorkerBase
  D typeinfo for CGetControllerConfigWorkerBase::CCallback_OnRemoteStorageAppSyncedClient
  D typeinfo for CGetCursorImageMsg
+ D typeinfo for CGhostModeContainerPanel
  D typeinfo for CGridItem
  D typeinfo for CGridItemChrome
  D typeinfo for CGroupListItem
@@ -9733,6 +9736,8 @@
  D typeinfo for CLoginProgressDialog
  D typeinfo for CLoginUsers
  D typeinfo for CMainMenu
+ D typeinfo for CMainMenu::CCallbackInternal_OnControllerConnected
+ D typeinfo for CMainMenu::CCallbackInternal_OnControllerWirelessPresence
  D typeinfo for CMainMenu::CCallback_OnMarketingMessageUpdate
  D typeinfo for CMainMenu::CCallback_OnPersonaStateChange
  D typeinfo for CManageDLCDialog
@@ -10362,6 +10367,7 @@
  D typeinfo for CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientDisconnected
  D typeinfo for CSettingsPanelRemoteClientsAdvancedHost
  D typeinfo for CSettingsPanelSteamControllerSupport
+ D typeinfo for CSettingsPanelSteamControllerSupport::CCallback_OnControllerDisconnected
  D typeinfo for CSettingsPanelStore
  D typeinfo for CSettingsPanelTimeZone
  D typeinfo for CSettingsPanelVoice
@@ -10799,7 +10805,6 @@
  D typeinfo for ConVar
  D typeinfo for CreateDirectoryDialog
  D typeinfo for CryptoPP::Algorithm
- D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1>
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA256> >, CryptoPP::HMAC<CryptoPP::SHA256> >
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
@@ -10817,7 +10822,6 @@
  D typeinfo for CryptoPP::ByteArrayParameter
  D typeinfo for CryptoPP::Clonable
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >
  D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
  D typeinfo for CryptoPP::Exception
  D typeinfo for CryptoPP::FixedBlockSize<16u>
@@ -10830,7 +10834,6 @@
  D typeinfo for CryptoPP::InvalidKeyLength
  D typeinfo for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
  D typeinfo for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>
  D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  D typeinfo for CryptoPP::MessageAuthenticationCode
  D typeinfo for CryptoPP::MessageAuthenticationCodeImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA256> >
@@ -10846,7 +10849,6 @@
  D typeinfo for CryptoPP::Rijndael::Base
  D typeinfo for CryptoPP::Rijndael::Enc
  D typeinfo for CryptoPP::Rijndael_Info
- D typeinfo for CryptoPP::SHA1
  D typeinfo for CryptoPP::SHA256
  D typeinfo for CryptoPP::SelfTestFailure
  D typeinfo for CryptoPP::SimpleKeyingInterface
@@ -12437,6 +12439,7 @@
  D vtable for CCallback<CSettingsPanelNetwork_Connect, NetworkDeviceStateChange_t, false>
  D vtable for CCallback<CSettingsPanelNetwork_Device, NetworkDeviceStateChange_t, false>
  D vtable for CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>
+ D vtable for CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>
  D vtable for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  D vtable for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
  D vtable for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
@@ -12868,7 +12871,6 @@
  D vtable for CFriendsProfileDetailsActionButton
  D vtable for CFriendsProfileDetailsCompositeHeader
  D vtable for CFriendsSearchButton
- D vtable for CFriendsSearchDialog
  D vtable for CFriendsSearchResultEmbedded
  D vtable for CFriendsSelfHeader
  D vtable for CFullScreenshotPanel
@@ -12947,6 +12949,7 @@
  D vtable for CGetControllerConfigWorkerBase
  D vtable for CGetControllerConfigWorkerBase::CCallback_OnRemoteStorageAppSyncedClient
  D vtable for CGetCursorImageMsg
+ D vtable for CGhostModeContainerPanel
  D vtable for CGridItem
  D vtable for CGridItemChrome
  D vtable for CGroupListItem
@@ -13140,6 +13143,8 @@
  D vtable for CLoginProgressDialog
  D vtable for CLoginUsers
  D vtable for CMainMenu
+ D vtable for CMainMenu::CCallbackInternal_OnControllerConnected
+ D vtable for CMainMenu::CCallbackInternal_OnControllerWirelessPresence
  D vtable for CMainMenu::CCallback_OnMarketingMessageUpdate
  D vtable for CMainMenu::CCallback_OnPersonaStateChange
  D vtable for CManageDLCDialog
@@ -13763,6 +13768,7 @@
  D vtable for CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientDisconnected
  D vtable for CSettingsPanelRemoteClientsAdvancedHost
  D vtable for CSettingsPanelSteamControllerSupport
+ D vtable for CSettingsPanelSteamControllerSupport::CCallback_OnControllerDisconnected
  D vtable for CSettingsPanelStore
  D vtable for CSettingsPanelTimeZone
  D vtable for CSettingsPanelVoice
@@ -14210,7 +14216,6 @@
  D vtable for CryptoPP::InvalidDataFormat
  D vtable for CryptoPP::InvalidKeyLength
  D vtable for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- D vtable for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>
  D vtable for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  D vtable for CryptoPP::NonblockingRng
  D vtable for CryptoPP::NotImplemented
@@ -14218,7 +14223,6 @@
  D vtable for CryptoPP::OS_RNG_Err
  D vtable for CryptoPP::PKCS5_PBKDF2_HMAC<CryptoPP::SHA256>
  D vtable for CryptoPP::Rijndael::Base
- D vtable for CryptoPP::SHA1
  D vtable for CryptoPP::SHA256
  D vtable for CryptoPP::SelfTestFailure
  D vtable for CryptoPP::SimpleKeyingInterface
@@ -15239,6 +15243,7 @@
  R typeinfo name for CCallback<CSettingsPanelNetwork_Connect, NetworkDeviceStateChange_t, false>
  R typeinfo name for CCallback<CSettingsPanelNetwork_Device, NetworkDeviceStateChange_t, false>
  R typeinfo name for CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>
+ R typeinfo name for CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>
  R typeinfo name for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  R typeinfo name for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
@@ -15676,7 +15681,6 @@
  R typeinfo name for CFriendsProfileDetailsActionButton
  R typeinfo name for CFriendsProfileDetailsCompositeHeader
  R typeinfo name for CFriendsSearchButton
- R typeinfo name for CFriendsSearchDialog
  R typeinfo name for CFriendsSearchResultEmbedded
  R typeinfo name for CFriendsSelfHeader
  R typeinfo name for CFullScreenshotPanel
@@ -15756,6 +15760,7 @@
  R typeinfo name for CGetControllerConfigWorkerBase
  R typeinfo name for CGetControllerConfigWorkerBase::CCallback_OnRemoteStorageAppSyncedClient
  R typeinfo name for CGetCursorImageMsg
+ R typeinfo name for CGhostModeContainerPanel
  R typeinfo name for CGridItem
  R typeinfo name for CGridItemChrome
  R typeinfo name for CGroupListItem
@@ -15951,6 +15956,8 @@
  R typeinfo name for CLoginProgressDialog
  R typeinfo name for CLoginUsers
  R typeinfo name for CMainMenu
+ R typeinfo name for CMainMenu::CCallbackInternal_OnControllerConnected
+ R typeinfo name for CMainMenu::CCallbackInternal_OnControllerWirelessPresence
  R typeinfo name for CMainMenu::CCallback_OnMarketingMessageUpdate
  R typeinfo name for CMainMenu::CCallback_OnPersonaStateChange
  R typeinfo name for CMainMenu::UIStateClassSetting_t
@@ -16585,6 +16592,7 @@
  R typeinfo name for CSettingsPanelRemoteClientsAdvancedClient::CCallbackInternal_OnStreamingClientDisconnected
  R typeinfo name for CSettingsPanelRemoteClientsAdvancedHost
  R typeinfo name for CSettingsPanelSteamControllerSupport
+ R typeinfo name for CSettingsPanelSteamControllerSupport::CCallback_OnControllerDisconnected
  R typeinfo name for CSettingsPanelStore
  R typeinfo name for CSettingsPanelTimeZone
  R typeinfo name for CSettingsPanelVoice
@@ -17333,7 +17341,6 @@
  R typeinfo name for ConVar
  R typeinfo name for CreateDirectoryDialog
  R typeinfo name for CryptoPP::Algorithm
- R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1>
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA256> >, CryptoPP::HMAC<CryptoPP::SHA256> >
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
@@ -17351,7 +17358,6 @@
  R typeinfo name for CryptoPP::ByteArrayParameter
  R typeinfo name for CryptoPP::Clonable
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >
  R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
  R typeinfo name for CryptoPP::Exception
  R typeinfo name for CryptoPP::FixedBlockSize<16u>
@@ -17364,7 +17370,6 @@
  R typeinfo name for CryptoPP::InvalidKeyLength
  R typeinfo name for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
  R typeinfo name for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>
  R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  R typeinfo name for CryptoPP::MessageAuthenticationCode
  R typeinfo name for CryptoPP::MessageAuthenticationCodeImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA256> >
@@ -17380,7 +17385,6 @@
  R typeinfo name for CryptoPP::Rijndael::Base
  R typeinfo name for CryptoPP::Rijndael::Enc
  R typeinfo name for CryptoPP::Rijndael_Info
- R typeinfo name for CryptoPP::SHA1
  R typeinfo name for CryptoPP::SHA256
  R typeinfo name for CryptoPP::SelfTestFailure
  R typeinfo name for CryptoPP::SimpleKeyingInterface
@@ -17959,6 +17963,9 @@
  SDL_WasInit
  SDL_free
  SDL_memset
+ SHA1_Final
+ SHA1_Init
+ SHA1_Update
  SHA256_Final
  SHA256_Init
  SHA256_Update
@@ -18074,6 +18081,9 @@
  T AcceptSSA::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AcceptSSA::GetEventType()
  T AcceptSSA::MakeEvent(panorama::IUIPanelClient const*)
+ T AcceptedOptIntoClientBeta::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AcceptedOptIntoClientBeta::GetEventType()
+ T AcceptedOptIntoClientBeta::MakeEvent(panorama::IUIPanelClient const*)
  T AccountNameSuggestionSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AccountNameSuggestionSelected::GetEventType()
  T AccountNameSuggestionSelected::MakeEvent(panorama::IUIPanelClient const*)
@@ -20548,6 +20558,9 @@
  T CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>::CCallback(CSettingsPanelNetwork_WAP*, void (CSettingsPanelNetwork_WAP::*)(NetworkDeviceStateChange_t*))
  T CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>::Register(CSettingsPanelNetwork_WAP*, void (CSettingsPanelNetwork_WAP::*)(NetworkDeviceStateChange_t*))
  T CCallback<CSettingsPanelNetwork_WAP, NetworkDeviceStateChange_t, false>::Run(void*)
+ T CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>::CCallback(CSettingsPanelSteamControllerSupport*, void (CSettingsPanelSteamControllerSupport::*)(ControllerDisconnected_t*))
+ T CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>::Register(CSettingsPanelSteamControllerSupport*, void (CSettingsPanelSteamControllerSupport::*)(ControllerDisconnected_t*))
+ T CCallback<CSettingsPanelSteamControllerSupport, ControllerDisconnected_t, false>::Run(void*)
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::CCallback(CSettingsSubBroadcast*, void (CSettingsSubBroadcast::*)(BroadcastStatus_t*))
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::Register(CSettingsSubBroadcast*, void (CSettingsSubBroadcast::*)(BroadcastStatus_t*))
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::Run(void*)
@@ -22139,6 +22152,7 @@
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateHMAC256(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [32])
  T CCrypto::GenerateHMACMD5(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [16])
+ T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::GenerateSHA256Digest(unsigned char const*, int, unsigned char (*) [32])
  T CCrypto::GenerateSaltedSHA1Digest(char const*, unsigned char const (*) [8], unsigned char (*) [20])
  T CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
@@ -22658,7 +22672,7 @@
  T CDownloadsListItem::OnParentalSettingsChanged()
  T CDownloadsListItem::OnReadyPanelForDisplay(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CDownloadsListItem::Update()
- T CDownloadsListItem::UpdateDownloadStatus(CUtlString&, float*, CUtlString&, CRTime*, CRTime*)
+ T CDownloadsListItem::UpdateDownloadVariables()
  T CDownloadsListItem::~CDownloadsListItem()
  T CDownloadsPage::BLoading()
  T CDownloadsPage::BShowControl(IUINavigatorSubPanel::ENavControl)
@@ -23233,8 +23247,8 @@
  T CFriendListItemBase::UpdatePanelData_Individual()
  T CFriendListItemBase::~CFriendListItemBase()
  T CFriends::GetCurrentlyActiveListTabIndex()
- T CFriendsChatDialog::AppendChatMessageToChatsList(int)
- T CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)
+ T CFriendsChatDialog::AppendChatMessageToChatsList(int, bool)
+ T CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)
  T CFriendsChatDialog::AppendLeaveMessageToChatsList(char const*, char const*, char const*)
  T CFriendsChatDialog::BCanSendMessageToDestination(bool)
  T CFriendsChatDialog::CFriendsChatDialog(panorama::CPanel2D*, char const*)
@@ -23248,7 +23262,9 @@
  T CFriendsChatDialog::EventFriendRichInvite(CSteamID, unsigned int, char const*)
  T CFriendsChatDialog::EventFriendVoiceChatEnded(CSteamID, int)
  T CFriendsChatDialog::EventFriendVoiceChatStarted(CSteamID, int)
+ T CFriendsChatDialog::EventFriendsChatInsertEmoticon(int)
  T CFriendsChatDialog::EventFriendsSendChatMessage()
+ T CFriendsChatDialog::EventFriendsToggleEmoticonPanel()
  T CFriendsChatDialog::EventGroupChatMessage(ChatRoomMsg_t*)
  T CFriendsChatDialog::EventTextEntryCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CFriendsChatDialog::EventTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
@@ -23260,17 +23276,20 @@
  T CFriendsChatDialog::EventVoiceChatInitiate()
  T CFriendsChatDialog::EventVoiceChatToggleHold()
  T CFriendsChatDialog::GetPanelType() const
+ T CFriendsChatDialog::InitChatHistoryTempBuffer()
+ T CFriendsChatDialog::InitEmoticonPanel()
  T CFriendsChatDialog::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CFriendsChatDialog::OnAvatarImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsChatDialog::OnGameInviteReceived(CSteamID, unsigned int, char const*)
  T CFriendsChatDialog::OnKeyDown(panorama::KeyData_t const&)
+ T CFriendsChatDialog::PerformEmoticonSubstitution(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, CUtlString)
  T CFriendsChatDialog::ResetAndPopulateChatsList()
  T CFriendsChatDialog::ScrollChatToBottom()
  T CFriendsChatDialog::SendChatMessage()
  T CFriendsChatDialog::SetChatOffline()
  T CFriendsChatDialog::SetChatOnline()
  T CFriendsChatDialog::SetFriendItem(CSteamID)
- T CFriendsChatDialog::SetFriendPersonaLabels()
+ T CFriendsChatDialog::SetFriendPersonaLabels(bool)
  T CFriendsChatDialog::UpdateVoiceChatConnectionState()
  T CFriendsChatDialog::UpdateVoiceChatPeakLevels()
  T CFriendsChatDialog::~CFriendsChatDialog()
@@ -23299,7 +23318,7 @@
  T CFriendsContent_FriendItem::ScheduledUpdateVoiceChatConnectionState()
  T CFriendsContent_FriendItem::SetSteamID(CSteamID)
  T CFriendsContent_FriendItem::~CFriendsContent_FriendItem()
- T CFriendsContent_Friends::ActivateItemBySteamID(CSteamID)
+ T CFriendsContent_Friends::ActivateItemBySteamID(CSteamID, panorama::EPanelEventSource_t)
  T CFriendsContent_Friends::AddOrReinsertFriend(CSteamID)
  T CFriendsContent_Friends::CFriendsContent_Friends(panorama::CPanel2D*, char const*)
  T CFriendsContent_Friends::CountFriendCategories()
@@ -23338,7 +23357,7 @@
  T CFriendsContent_GroupItem::StartChat(panorama::EPanelEventSource_t)
  T CFriendsContent_GroupItem::UpdateGroupChatState()
  T CFriendsContent_GroupItem::~CFriendsContent_GroupItem()
- T CFriendsContent_Groups::ActivateItemBySteamID(CSteamID)
+ T CFriendsContent_Groups::ActivateItemBySteamID(CSteamID, panorama::EPanelEventSource_t)
  T CFriendsContent_Groups::AddOrReinsertGroup(CSteamID)
  T CFriendsContent_Groups::CFriendsContent_Groups(panorama::CPanel2D*, char const*)
  T CFriendsContent_Groups::EventSteamGroupAdded(CSteamID)
@@ -23467,6 +23486,8 @@
  T CFriendsNew::EventFriendChatMessage(FriendChatMsg_t)
  T CFriendsNew::EventFriendPersonaStateChanged(CSteamID)
  T CFriendsNew::EventFriendPersonaStateChanged(PersonaStateChange_t)
+ T CFriendsNew::EventFriendSearchChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriendsNew::EventFriendSearchTextInputHandlerStateChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T CFriendsNew::EventFriendsClearFilter()
  T CFriendsNew::EventFriendsContentChanged(char const*)
  T CFriendsNew::EventFriendsSearchFilterString(char const*)
@@ -23492,6 +23513,7 @@
  T CFriendsNew::EventUpdateInviteCount()
  T CFriendsNew::GetActiveSteamID()
  T CFriendsNew::GetPanelType() const
+ T CFriendsNew::PopulateSearchResults()
  T CFriendsNew::ShowAddFriendOrGroupMsgBox(bool)
  T CFriendsNew::~CFriendsNew()
  T CFriendsProfileDetails::Action_AcceptFriendship(panorama::EPanelEventSource_t)
@@ -23535,24 +23557,8 @@
  T CFriendsSearchButton::HandleFriendsSearchGainFocus()
  T CFriendsSearchButton::HandleTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsSearchButton::~CFriendsSearchButton()
- T CFriendsSearchDialog* panorama::GetThisPtrForJSCall<CFriendsSearchDialog>(v8::Local<v8::Object>)
- T CFriendsSearchDialog::CFriendsSearchDialog(panorama::CPanel2D*, char const*)
- T CFriendsSearchDialog::Close()
- T CFriendsSearchDialog::DoSearch()
- T CFriendsSearchDialog::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
- T CFriendsSearchDialog::EventFriendsSearchResult(CSteamID)
- T CFriendsSearchDialog::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CFriendsSearchDialog::EventSubmitPartialFilter()
- T CFriendsSearchDialog::EventTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CFriendsSearchDialog::EventTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
- T CFriendsSearchDialog::EventTextInputHandlerStateChange(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
- T CFriendsSearchDialog::GetPanelType() const
- T CFriendsSearchDialog::OnGetDefaultInputFocus()
- T CFriendsSearchDialog::PopulateSearchResults()
- T CFriendsSearchDialog::SetupJavascriptObjectTemplate()
- T CFriendsSearchDialog::ShowTextInputHandlerAfterInit()
- T CFriendsSearchDialog::~CFriendsSearchDialog()
- T CFriendsSearchResultEmbedded::CFriendsSearchResultEmbedded(panorama::CPanel2D*, char const*, char const*)
+ T CFriendsSearchResultEmbedded::CFriendsSearchResultEmbedded(panorama::CPanel2D*, char const*, CFriendsController::FriendsSearchResult_t*)
+ T CFriendsSearchResultEmbedded::EventActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CFriendsSearchResultEmbedded::GetPanelType() const
  T CFriendsSearchResultEmbedded::PchGetSuggestionTitle()
  T CFriendsSearchResultEmbedded::~CFriendsSearchResultEmbedded()
@@ -24801,6 +24807,13 @@
  T CGetCursorImageMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CGetCursorImageMsg::SetCachedSize(int) const
  T CGetCursorImageMsg::~CGetCursorImageMsg()
+ T CGhostModeContainerPanel::CGhostModeContainerPanel(panorama::IUIWindow*, char const*)
+ T CGhostModeContainerPanel::GetPanelType() const
+ T CGhostModeContainerPanel::OnAfterChildrenChanged()
+ T CGhostModeContainerPanel::OnGamePadAnalog(panorama::GamePadData_t const&)
+ T CGhostModeContainerPanel::OnGamePadDown(panorama::GamePadData_t const&)
+ T CGhostModeContainerPanel::OnGamePadUp(panorama::GamePadData_t const&)
+ T CGhostModeContainerPanel::~CGhostModeContainerPanel()
  T CGridItem::ApplyAppImage(CUtlBuffer&, int, int, bool)
  T CGridItem::CGridItem(CGamesPage_Grid*, unsigned int)
  T CGridItem::ChainToAnimationMap()
@@ -25124,6 +25137,7 @@
  T CInboxMsgBox::EventAllowNewClientUpdate()
  T CInboxMsgBox::EventAllowSteamOSUpdate()
  T CInboxMsgBox::EventCloseInboxMenu()
+ T CInboxMsgBox::EventOptIntoClientBeta()
  T CInboxMsgBox::EventShowNewAsyncGames()
  T CInboxMsgBox::EventShowNewComments()
  T CInboxMsgBox::EventShowNewGifts()
@@ -26223,11 +26237,15 @@
  T CMainMenu::AppImageLoader(char const*, unsigned int)
  T CMainMenu::ApplyParentalSettings()
  T CMainMenu::BHasUserAlreadySeenMessage(unsigned long long)
- T CMainMenu::BInboxImageActive(char const*)
+ T CMainMenu::CCallbackInternal_OnControllerConnected::CCallbackInternal_OnControllerConnected()
+ T CMainMenu::CCallbackInternal_OnControllerConnected::Run(void*)
+ T CMainMenu::CCallbackInternal_OnControllerWirelessPresence::CCallbackInternal_OnControllerWirelessPresence()
+ T CMainMenu::CCallbackInternal_OnControllerWirelessPresence::Run(void*)
  T CMainMenu::CCallback_OnMarketingMessageUpdate::Run(void*)
  T CMainMenu::CCallback_OnPersonaStateChange::Run(void*)
  T CMainMenu::CMainMenu(panorama::CPanel2D*, char const*)
  T CMainMenu::DismissMarketingMessage(unsigned long long)
+ T CMainMenu::EventAcceptedOptIntoClientBeta()
  T CMainMenu::EventAllowNewClientUpdate()
  T CMainMenu::EventAppImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CMainMenu::EventAvatarImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -26260,12 +26278,13 @@
  T CMainMenu::JumpToStore()
  T CMainMenu::LoadMarketingMessages(bool)
  T CMainMenu::MarkMarketingMessageRead(unsigned long long)
+ T CMainMenu::NPendingMarketingItems()
  T CMainMenu::OnAddLibraryShortcut()
  T CMainMenu::OnCloseBelowTheFold()
  T CMainMenu::OnCloseCommunity()
  T CMainMenu::OnCloseProfile()
  T CMainMenu::OnCommunityShow()
- T CMainMenu::OnDisplaySystemMessages()
+ T CMainMenu::OnDisplaySystemMessages(bool)
  T CMainMenu::OnMainNavRowBlur()
  T CMainMenu::OnMainNavRowFocused()
  T CMainMenu::OnMarketingMessageUpdate(ClientMarketingMessageUpdate_t*)
@@ -29968,7 +29987,6 @@
  T CParentalEventFilter::FilterContextMenuEvent(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterFeature(EParentalFeature, panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterFriends(panorama::IUIEvent*, bool)
- T CParentalEventFilter::FilterLocked(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterPageShiftLeft(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterPageShiftRight(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterProfile(panorama::IUIEvent*, bool)
@@ -32149,6 +32167,7 @@
  T CSettingsPanelRemoteClientsAdvancedHost::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CSettingsPanelRemoteClientsAdvancedHost::~CSettingsPanelRemoteClientsAdvancedHost()
  T CSettingsPanelSteamControllerSupport* ShowContentFrameContent<CSettingsPanelSteamControllerSupport, char const (&) [32]>(panorama::CPanel2D*, ContentFrameSettings_t const&, char const (&) [32])
+ T CSettingsPanelSteamControllerSupport::CCallback_OnControllerDisconnected::Run(void*)
  T CSettingsPanelSteamControllerSupport::CSettingsPanelSteamControllerSupport(panorama::CPanel2D*, char const*)
  T CSettingsPanelSteamControllerSupport::ChangeTestState(CSettingsPanelSteamControllerSupport::ETestingState)
  T CSettingsPanelSteamControllerSupport::ChangeVisibility(char const*, bool)
@@ -32156,12 +32175,15 @@
  T CSettingsPanelSteamControllerSupport::CheckForExitSequence(SteamControllerStateInternal_t&)
  T CSettingsPanelSteamControllerSupport::GetPanelType() const
  T CSettingsPanelSteamControllerSupport::OnContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CSettingsPanelSteamControllerSupport::OnControllerDisconnected(ControllerDisconnected_t*)
  T CSettingsPanelSteamControllerSupport::OnExitSequence(unsigned int)
  T CSettingsPanelSteamControllerSupport::OnGamePadAnalog(panorama::GamePadData_t const&)
  T CSettingsPanelSteamControllerSupport::OnGamePadDown(panorama::GamePadData_t const&)
  T CSettingsPanelSteamControllerSupport::OnGamePadUp(panorama::GamePadData_t const&)
+ T CSettingsPanelSteamControllerSupport::OnHapticPulse()
  T CSettingsPanelSteamControllerSupport::PopulateControllerInfoSection()
  T CSettingsPanelSteamControllerSupport::RenderPositionImage(panorama::CPanel2D*, short, short, bool)
+ T CSettingsPanelSteamControllerSupport::SetControllerIndex(unsigned int)
  T CSettingsPanelSteamControllerSupport::ShowNotification(char const*)
  T CSettingsPanelSteamControllerSupport::UpdateAnalogStates()
  T CSettingsPanelSteamControllerSupport::UpdateButtonStates()
@@ -35741,7 +35763,6 @@
  T CTenfootControllerBase::OnRemoteDeviceAuthRequest(RemoteDeviceAuthorizationRequested_t*)
  T CTenfootControllerBase::OnRemoveDeviceAuthCancelled(RemoteDeviceAuthorizationCancelled_t*)
  T CTenfootControllerBase::OnReplaceOrPushTenfootBackStack(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IUIEvent*)
- T CTenfootControllerBase::OnRightPadMouseEnable(int)
  T CTenfootControllerBase::OnRunNotifications(CTenfootControllerBase*)
  T CTenfootControllerBase::OnShowFriends()
  T CTenfootControllerBase::OnShowFriendsInvites()
@@ -35754,7 +35775,6 @@
  T CTenfootControllerBase::OnShowQueuedFriendInviteNotifications()
  T CTenfootControllerBase::OnShowURLChoiceDialog(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootControllerBase::OnShowWebBrowser()
- T CTenfootControllerBase::OnSteamPadRightHighActivity()
  T CTenfootControllerBase::OnToggleFriends()
  T CTenfootControllerBase::OnToggleWebBrowser()
  T CTenfootControllerBase::OnTruncateBackStack()
@@ -35768,6 +35788,7 @@
  T CTenfootControllerBase::RegisterFooterButtonStatic(panorama::CPanel2D*, char const*, char const*)
  T CTenfootControllerBase::RemoveNotificationPanelsOfType(panorama::CPanoramaSymbol const&)
  T CTenfootControllerBase::RequestRestart()
+ T CTenfootControllerBase::SetInboxItemClasses(panorama::CPanel2D*)
  T CTenfootControllerBase::ShowContentFrameContent(panorama::CPanel2D*, char const*, int, panorama::IUIEvent*)
  T CTenfootControllerBase::ShowMessageBox(int, char const*, char const*)
  T CTenfootControllerBase::ShowModalDialog(panorama::CPanel2D*, char const*)
@@ -36108,11 +36129,9 @@
  T CTenfootOverlayManager::ComputeCurrentOpacity()
  T CTenfootOverlayManager::DisableOverlayUI()
  T CTenfootOverlayManager::EnableOverlayUI()
- T CTenfootOverlayManager::EnterGhostMode()
  T CTenfootOverlayManager::IncrementRepeats(panorama::KeyCode)
  T CTenfootOverlayManager::InputEvent(panorama::InputMessage_t&)
  T CTenfootOverlayManager::IsOverlayEnabled()
- T CTenfootOverlayManager::LeaveGhostMode()
  T CTenfootOverlayManager::LoadScreenshotNotificationThumb(unsigned int)
  T CTenfootOverlayManager::LoadScreenshotNotificationThumb(unsigned int, CUtlBuffer&, int, int)
  T CTenfootOverlayManager::MouseMoved(int, int)
@@ -36126,6 +36145,7 @@
  T CTenfootOverlayManager::OnEnableOverlay(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootOverlayManager::OnEngineShutdown()
  T CTenfootOverlayManager::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t*)
+ T CTenfootOverlayManager::OnGhostModeEnabled(bool)
  T CTenfootOverlayManager::OnOpenOverlayKeyboard()
  T CTenfootOverlayManager::OnOverlayGamepadInputMsg(panorama::IUIWindow*, panorama::InputMessage_t*)
  T CTenfootOverlayManager::OnPostFrame()
@@ -36139,6 +36159,7 @@
  T CTenfootOverlayManager::OnScreenshotWritten(ScreenshotWritten_t*)
  T CTenfootOverlayManager::OnShowGamepadTextInput(ShowGamepadTextInput_t*)
  T CTenfootOverlayManager::OnWindowResize(int, int)
+ T CTenfootOverlayManager::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned int, float, panorama::EOverlayWindowAlignment, bool)
  T CTenfootOverlayManager::RemoveDispatcherRef()
  T CTenfootOverlayManager::RequestScreenshotFromGame()
  T CTenfootOverlayManager::SetKillInProgress(bool)
@@ -36263,13 +36284,15 @@
  T CTimeZoneRegionPanel::GetPanelType() const
  T CTimeZoneRegionPanel::~CTimeZoneRegionPanel()
  T CTouchMenuPanel::CTouchMenuPanel(panorama::CPanel2D*, char const*, unsigned int, unsigned int, PopupMenuConfig_t, PopupMenuTouchKey_t*, unsigned int)
+ T CTouchMenuPanel::Close()
  T CTouchMenuPanel::GetPanelType() const
  T CTouchMenuPanel::OnGamePadAnalog(panorama::GamePadData_t const&)
  T CTouchMenuPanel::OnGamePadDown(panorama::GamePadData_t const&)
+ T CTouchMenuPanel::OnGamePadUp(panorama::GamePadData_t const&)
  T CTouchMenuPanel::OnImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
+ T CTouchMenuPanel::OnPropertyTransitionEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CStyleSymbol)
  T CTouchMenuPanel::OnTouchKeyClicked(panorama::CPanel2D*, panorama::CTouchPad*)
  T CTouchMenuPanel::OnTouchKeyStyleChanged(panorama::CPanelPtr<panorama::CPanel2D>, char const*, bool)
- T CTouchMenuPanel::OnVisibilityChanged()
  T CTouchMenuPanel::UpdateSteamPadHardwarePointerVisibility()
  T CTouchMenuPanel::UpdateSteamPadHardwarePointers(bool)
  T CTouchMenuPanel::~CTouchMenuPanel()
@@ -37715,6 +37738,11 @@
  T CUtlRBTree<CUtlMap<int, bool, int, CDefLess<int> >::Node_t, int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, bool, int, CDefLess<int> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<int, bool, int, CDefLess<int> >::Node_t, int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, bool, int, CDefLess<int> >::Node_t, int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&) const
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, panorama::CButton*, int, CDefLess<int> >::Node_t const&, bool)
@@ -38626,9 +38654,10 @@
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
- T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::AddToTail(CTouchMenuPanel*&&)
  T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::GrowVector(int)
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::InsertBefore(int, CTouchMenuPanel* const&)
  T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::ShiftElementsRight(int, int)
  T CUtlVector<CTouchMenuPanel*, CUtlMemory<CTouchMenuPanel*> >::~CUtlVector()
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::GrowVector(int)
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::InsertBefore(int, CTrackItemPanel* const&)
@@ -40793,7 +40822,6 @@
  T CryptoPP::Algorithm::Algorithm(bool)
  T CryptoPP::Algorithm::AlgorithmName() const
  T CryptoPP::Algorithm::~Algorithm()
- T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1>::AlgorithmName() const
  T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>::AlgorithmName() const
  T CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
  T CryptoPP::ArraySink::CreatePutSpace(unsigned long&)
@@ -40865,11 +40893,9 @@
  T CryptoPP::Bufferless<CryptoPP::Sink>::IsolatedFlush(bool, bool)
  T CryptoPP::Clonable::Clone() const
  T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::SHA1, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1> >::Clone() const
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
  T CryptoPP::CpuId(unsigned int, unsigned int*)
  T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Exception::what() const
  T CryptoPP::Exception::~Exception()
  T CryptoPP::FIPS_140_2_ComplianceEnabled()
@@ -40913,12 +40939,6 @@
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Restart()
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::TruncatedFinal(unsigned char*, unsigned long)
  T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Update(unsigned char const*, unsigned long)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::DigestSize() const
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::HashEndianCorrectedBlock(unsigned int const*)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::Init()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::IteratedHashWithStaticTransform()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::StateBuf()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 20u, CryptoPP::SHA1, 0u, false>::~IteratedHashWithStaticTransform()
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::DigestSize() const
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::HashEndianCorrectedBlock(unsigned int const*)
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::Init()
@@ -40952,9 +40972,6 @@
  T CryptoPP::Rijndael::Base::~Base()
  T CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
  T CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T CryptoPP::SHA1::InitState(unsigned int*)
- T CryptoPP::SHA1::Transform(unsigned int*, unsigned int const*)
- T CryptoPP::SHA1::~SHA1()
  T CryptoPP::SHA256::InitState(unsigned int*)
  T CryptoPP::SHA256::Transform(unsigned int*, unsigned int const*)
  T CryptoPP::SHA256::~SHA256()
@@ -41119,7 +41136,7 @@
  T DisplayInboxDropdownInternal::MakeEvent(panorama::IUIPanelClient const*)
  T DisplaySystemMessages::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DisplaySystemMessages::GetEventType()
- T DisplaySystemMessages::MakeEvent(panorama::IUIPanelClient const*)
+ T DisplaySystemMessages::MakeEvent(panorama::IUIPanelClient const*, bool)
  T DoRunUninstall::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DoRunUninstall::GetEventType()
  T DoRunUninstall::MakeEvent(panorama::IUIPanelClient const*)
@@ -41250,6 +41267,7 @@
  T FileSelectorDone::GetEventType()
  T FileSelectorDone::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T FillDataStruct(_finddata_t*)
+ T FindEmoticonImageString(char const*, CUtlString&, char const**, char const**)
  T FindLongestStringForLocVariable::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FindLongestStringForLocVariable::GetEventType()
  T FindLongestStringForLocVariable::MakeEvent(panorama::IUIPanelClient const*)
@@ -41361,6 +41379,9 @@
  T FriendsActions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsActions::GetEventType()
  T FriendsActions::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T FriendsChatInsertEmoticon::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendsChatInsertEmoticon::GetEventType()
+ T FriendsChatInsertEmoticon::MakeEvent(panorama::IUIPanelClient const*, int)
  T FriendsClearFilter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsClearFilter::GetEventType()
  T FriendsClearFilter::MakeEvent(panorama::IUIPanelClient const*)
@@ -41388,11 +41409,6 @@
  T FriendsSearchGainFocus::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsSearchGainFocus::GetEventType()
  T FriendsSearchGainFocus::MakeEvent(panorama::IUIPanelClient const*)
- T FriendsSearchResult::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T FriendsSearchResult::GetEventType()
- T FriendsSearchResult::MakeEvent(panorama::IUIPanelClient const*, CSteamID)
- T FriendsSearchResultsResponse::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T FriendsSearchResultsResponse::MakeEvent(panorama::IUIPanelClient const*)
  T FriendsSelectFirstItem::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsSelectFirstItem::GetEventType()
  T FriendsSelectFirstItem::MakeEvent(panorama::IUIPanelClient const*)
@@ -41406,6 +41422,9 @@
  T FriendsSettingCheckBoxSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsSettingCheckBoxSelected::GetEventType()
  T FriendsSettingCheckBoxSelected::MakeEvent(panorama::IUIPanelClient const*)
+ T FriendsToggleEmoticonPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T FriendsToggleEmoticonPanel::GetEventType()
+ T FriendsToggleEmoticonPanel::MakeEvent(panorama::IUIPanelClient const*)
  T FriendsVoiceChatActivation::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsVoiceChatActivation::MakeEvent(panorama::IUIPanelClient const*)
  T FriendsVoiceChatDeactivation::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -41530,6 +41549,9 @@
  T Get_i_Symbol()
  T Get_pre_Symbol()
  T Get_strong_Symbol()
+ T GhostModeEnabled::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T GhostModeEnabled::GetEventType()
+ T GhostModeEnabled::MakeEvent(panorama::IUIPanelClient const*, bool)
  T GiftNoteComplete::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T GiftNoteComplete::GetEventType()
  T GiftNoteComplete::MakeEvent(panorama::IUIPanelClient const*)
@@ -41618,6 +41640,9 @@
  T HandleWelcomeMoveUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T HandleWelcomeMoveUp::GetEventType()
  T HandleWelcomeMoveUp::MakeEvent(panorama::IUIPanelClient const*)
+ T HapticPulse::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T HapticPulse::GetEventType()
+ T HapticPulse::MakeEvent(panorama::IUIPanelClient const*)
  T HelperImageLoaded::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T HelperImageLoaded::GetEventType()
  T HelperImageLoaded::MakeEvent(panorama::IUIPanelClient const*)
@@ -42306,6 +42331,9 @@
  T OpenWebPanelInFullBrowser::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenWebPanelInFullBrowser::GetEventType()
  T OpenWebPanelInFullBrowser::MakeEvent(panorama::IUIPanelClient const*)
+ T OptIntoClientBeta::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T OptIntoClientBeta::GetEventType()
+ T OptIntoClientBeta::MakeEvent(panorama::IUIPanelClient const*)
  T PageShiftLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T PageShiftLeft::GetEventType()
  T PageShiftLeft::MakeEvent(panorama::IUIPanelClient const*, int)
@@ -42672,9 +42700,6 @@
  T RestartForClientUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T RestartForClientUpdate::GetEventType()
  T RestartForClientUpdate::MakeEvent(panorama::IUIPanelClient const*)
- T RightPadMouseEnable::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T RightPadMouseEnable::GetEventType()
- T RightPadMouseEnable::MakeEvent(panorama::IUIPanelClient const*, int)
  T RoundToInteger(double, ERoundingMethod)
  T RunNotifications::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T RunNotifications::GetEventType()
@@ -43485,9 +43510,6 @@
  T SubmitBroadcastChat::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T SubmitBroadcastChat::GetEventType()
  T SubmitBroadcastChat::MakeEvent(panorama::IUIPanelClient const*)
- T SubmitPartialFilter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T SubmitPartialFilter::GetEventType()
- T SubmitPartialFilter::MakeEvent(panorama::IUIPanelClient const*)
  T SubscribedFileDownloadTracker()
  T SubstituteEmoticons(char*, int)
  T SuperNavMenu::ChainToAnimationMap()
@@ -44177,10 +44199,11 @@
  T bool panorama::DispatchEvent<FriendRichInvite, CSteamID, unsigned int, char const*>(FriendRichInvite, panorama::IUIPanelClient const*, CSteamID, unsigned int, char const*)
  T bool panorama::DispatchEvent<FriendVoiceChatEnded, CSteamID, int>(FriendVoiceChatEnded, panorama::IUIPanelClient const*, CSteamID, int)
  T bool panorama::DispatchEvent<FriendVoiceChatStarted, CSteamID, int>(FriendVoiceChatStarted, panorama::IUIPanelClient const*, CSteamID, int)
+ T bool panorama::DispatchEvent<FriendsClearFilter>(FriendsClearFilter, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<FriendsFilterChanged, char const*>(FriendsFilterChanged, panorama::IUIPanelClient const*, char const*)
- T bool panorama::DispatchEvent<FriendsSearchFilterString, char const*>(FriendsSearchFilterString, panorama::IUIPanelClient const*, char const*)
  T bool panorama::DispatchEvent<GameFiltersChanged, GameFilterOptions_t>(GameFiltersChanged, panorama::IUIPanelClient const*, GameFilterOptions_t)
  T bool panorama::DispatchEvent<GetAgeGateDateResponse, bool, int, int, int>(GetAgeGateDateResponse, panorama::IUIPanelClient const*, bool, int, int, int)
+ T bool panorama::DispatchEvent<GhostModeEnabled, bool>(GhostModeEnabled, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<GroupChatEvent, ChatMemberStateChange_t*>(GroupChatEvent, panorama::IUIPanelClient const*, ChatMemberStateChange_t*)
  T bool panorama::DispatchEvent<GroupChatMessage, ChatRoomMsg_t*>(GroupChatMessage, panorama::IUIPanelClient const*, ChatRoomMsg_t*)
  T bool panorama::DispatchEvent<IntroMovieDone>(IntroMovieDone, panorama::IUIPanelClient const*)
@@ -45435,6 +45458,7 @@
  T panorama::CBackgroundImageLayer::IsSet()
  T panorama::CBackgroundImageLayer::MergeTo(panorama::CBackgroundImageLayer*)
  T panorama::CBackgroundImageLayer::OnAppliedToPanel(panorama::IUIPanel*)
+ T panorama::CBackgroundImageLayer::ReloadImage(panorama::IUIPanel*)
  T panorama::CBackgroundImageLayer::SetBackgroundSize(panorama::EBackgroundSizeConstant)
  T panorama::CBackgroundImageLayer::ToString(CFmtStrN<1024, true, true>*)
  T panorama::CBackgroundImageLayer::Validate(CValidator&, char const*)
@@ -47510,16 +47534,19 @@
  T panorama::CTextInputDualTouch::CloseHandlerImpl(bool)
  T panorama::CTextInputDualTouch::CursorMove(panorama::GamePadData_t const&)
  T panorama::CTextInputDualTouch::DisableCursorMode()
+ T panorama::CTextInputDualTouch::EmoticonPageRight()
  T panorama::CTextInputDualTouch::EventInputFocusTopLevelChanged(panorama::CPanelPtr<panorama::CPanel2D>)
  T panorama::CTextInputDualTouch::GetControlInterface()
  T panorama::CTextInputDualTouch::GetPanelType() const
  T panorama::CTextInputDualTouch::GetSupportedLanguages(CUtlVector<ELanguage, CUtlMemory<ELanguage> >&)
  T panorama::CTextInputDualTouch::HandleInputFocusLost(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T panorama::CTextInputDualTouch::InitEmoticons()
  T panorama::CTextInputDualTouch::Initialize(panorama::CTextInputHandlerSettings const&, panorama::ITextInputControl*)
  T panorama::CTextInputDualTouch::LoadConfigurationBuffer(char const*)
  T panorama::CTextInputDualTouch::LoadInputConfigurationFile(ELanguage)
  T panorama::CTextInputDualTouch::LoadInputConfigurationFile(char const*, char const*)
  T panorama::CTextInputDualTouch::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
+ T panorama::CTextInputDualTouch::OnEmoticonClicked(panorama::CPanel2D*)
  T panorama::CTextInputDualTouch::OnGamePadAnalog(panorama::GamePadData_t const&)
  T panorama::CTextInputDualTouch::OnGamePadDown(panorama::GamePadData_t const&)
  T panorama::CTextInputDualTouch::OnGamePadUp(panorama::GamePadData_t const&)
@@ -47534,6 +47561,7 @@
  T panorama::CTextInputDualTouch::OnTouchKeyClicked(panorama::CPanel2D*, panorama::CTouchPad*)
  T panorama::CTextInputDualTouch::OnTouchKeyStyleChanged(panorama::CPanelPtr<panorama::CPanel2D>, char const*, bool)
  T panorama::CTextInputDualTouch::PerformBackspace()
+ T panorama::CTextInputDualTouch::PopulateEmoticonsForCurrentPage()
  T panorama::CTextInputDualTouch::ScheduleKeyRepeats(panorama::GamePadCode)
  T panorama::CTextInputDualTouch::ScheduledKeyRepeatFunction()
  T panorama::CTextInputDualTouch::SetMode(panorama::ETextInputMode_t)
@@ -48443,7 +48471,7 @@
  T panorama::CUIProtoBufMsgMemoryPool<CMsgFillBrushCollection>::Validate(CValidator&, char const*)
  T panorama::CUIProtoBufMsgMemoryPool<CMsgFillBrushCollection>::~CUIProtoBufMsgMemoryPool()
  T panorama::CUIScheduledDel::BScheduled()
- T panorama::CUIScheduledDel::CUIScheduledDel(CUtlDelegate<void ()>)
+ T panorama::CUIScheduledDel::CUIScheduledDel(CUtlDelegate<void ()>, char const*)
  T panorama::CUIScheduledDel::Cancel()
  T panorama::CUIScheduledDel::Schedule(double)
  T panorama::CUIScheduledDel::~CUIScheduledDel()
@@ -48784,6 +48812,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptBroadcastWatchRequest>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptLobbyInvite>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptSSA>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptedOptIntoClientBeta>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AccountNameSuggestionSelected>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AccountSettingsChangeEmail>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AccountSettingsChangePassword>(panorama::IUIPanel*, char const*, char const**)
@@ -49040,7 +49069,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DismissSteamOSDesktopWarningPrompt, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplayInboxDropdown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplayInboxDropdownInternal>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplaySystemMessages>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplaySystemMessages, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DoRunUninstall>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DownloadsActivate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DownloadsDelayedGridPanelUnready>(panorama::IUIPanel*, char const*, char const**)
@@ -49093,6 +49122,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendVoiceChatEnded, CSteamID, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendVoiceChatStarted, CSteamID, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsActions, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsChatInsertEmoticon, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsClearFilter>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsContentChanged, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsFilterChanged, char const*>(panorama::IUIPanel*, char const*, char const**)
@@ -49103,13 +49133,12 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchActivated>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchFilterString, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchGainFocus>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchResult, CSteamID>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSearchResultsResponse>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSelectFirstItem>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSendChatMessage>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSendChatMessageX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSetCurrentlyActiveListTabIndex, int, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsSettingCheckBoxSelected>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsToggleEmoticonPanel>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsVoiceChatActivation>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsVoiceChatDeactivation>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GameFilter, char const*>(panorama::IUIPanel*, char const*, char const**)
@@ -49120,6 +49149,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GameLaunchUpdateAvailableResult, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GamesViewType, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GetAgeGateDateResponse, bool, int, int, int>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GhostModeEnabled, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GiftNoteComplete>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GoBackButton>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<GoBackToCart>(panorama::IUIPanel*, char const*, char const**)
@@ -49136,6 +49166,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HTMLRequestRepaint>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HTMLScreenShotCaptured, int, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HandleWelcomeMoveUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HapticPulse>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HelperImageLoaded>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HighlightTrack, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreAllPendingFriendInvites>(panorama::IUIPanel*, char const*, char const**)
@@ -49258,6 +49289,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenRemotePanel, char const*, unsigned int, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenScreenshotManager>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenWebPanelInFullBrowser>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OptIntoClientBeta>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<PageShiftLeft, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<PageShiftRight, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ParentalAllowAllGames, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -49360,7 +49392,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ResolutionConfirmed>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RestartDuetoUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RestartForClientUpdate>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RightPadMouseEnable, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SaveConfigGordon>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SaveControllerBinds, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ScreenSaverTimeoutChanged>(panorama::IUIPanel*, char const*, char const**)
@@ -49570,7 +49601,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StreamingDetailsShowAdvancedOptions>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StreamingSourceChosen, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SubmitBroadcastChat>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SubmitPartialFilter>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SwapPanels>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SwitchToHDMIInput>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SystemMenuButtonMoveUp>(panorama::IUIPanel*, char const*, char const**)
@@ -49859,7 +49889,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SlottedSliderValueChanged, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundFinished, char const*, void*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundMuteChanged, bool>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SteamPadRightHighActivity>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreaming>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreamingAndSuspendClient>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StyleClassesChanged>(panorama::IUIPanel*, char const*, char const**)
@@ -50277,9 +50306,6 @@
  T panorama::SoundMuteChanged::MakeEvent(panorama::IUIPanelClient const*, bool)
  T panorama::SoundVolumeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SoundVolumeChanged::GetEventType()
- T panorama::SteamPadRightHighActivity::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T panorama::SteamPadRightHighActivity::GetEventType()
- T panorama::SteamPadRightHighActivity::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::StopStreaming::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::StopStreaming::GetEventType()
  T panorama::StopStreaming::MakeEvent(panorama::IUIPanelClient const*)
@@ -54629,6 +54655,7 @@
  T void Deserialize<unsigned int>(CUtlBuffer&, unsigned int*)
  T void Destruct<BetaInfo_t>(BetaInfo_t*)
  T void Destruct<CDlcForApp::DlcOverview_t>(CDlcForApp::DlcOverview_t*)
+ T void Destruct<CFriendsController::FriendsSearchResult_t>(CFriendsController::FriendsSearchResult_t*)
  T void Destruct<CProductMarketingDialog::UpdatePage_t>(CProductMarketingDialog::UpdatePage_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
  T void Destruct<CSteamPurchaseReceipt::LineItem_t>(CSteamPurchaseReceipt::LineItem_t*)
@@ -54690,6 +54717,7 @@
  T void panorama::DispatchEventAsync<FirstTimeGameLaunchControllerPresets, KeyValues*>(float, FirstTimeGameLaunchControllerPresets, panorama::IUIPanelClient const*, KeyValues*)
  T void panorama::DispatchEventAsync<FriendsProfileDetailsActionMoreOnCommunity, unsigned long long>(float, FriendsProfileDetailsActionMoreOnCommunity, panorama::IUIPanelClient const*, unsigned long long)
  T void panorama::DispatchEventAsync<HTMLFormFocusPending>(float, HTMLFormFocusPending, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<HapticPulse>(float, HapticPulse, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<HighlightTrack, char const*>(float, HighlightTrack, panorama::IUIPanelClient const*, char const*)
  T void panorama::DispatchEventAsync<LibraryShowApp, unsigned int>(float, LibraryShowApp, panorama::IUIPanelClient const*, unsigned int)
  T void panorama::DispatchEventAsync<LoadedAsyncWithWebAuth, bool>(float, LoadedAsyncWithWebAuth, panorama::IUIPanelClient const*, bool)
@@ -54785,6 +54813,7 @@
  T void panorama::DispatchEventAsync<panorama::MoviePlayerTogglePlayPause>(float, panorama::MoviePlayerTogglePlayPause, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::PollingForSteamClientUpdate>(float, panorama::PollingForSteamClientUpdate, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::QuitApp>(panorama::QuitApp, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<panorama::Refresh>(float, panorama::Refresh, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::ResetCarouselMouseWheelCounts>(float, panorama::ResetCarouselMouseWheelCounts, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::SetInputFocus>(float, panorama::SetInputFocus, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::SetInputFocus>(panorama::SetInputFocus, panorama::IUIPanelClient const*)
@@ -54849,7 +54878,6 @@
  T void panorama::GetPtrToCallbackArray<unsigned int (panorama::CTextEntry::*)() const>(unsigned int (panorama::CTextEntry::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (*)(panorama::CPanel2D*, char const*, char const*)>(void (*)(panorama::CPanel2D*, char const*, char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (CBroadcastChatPanel::*)(char const*, char const*)>(void (CBroadcastChatPanel::*)(char const*, char const*), v8::Handle<v8::Array>&)
- T void panorama::GetPtrToCallbackArray<void (CFriendsSearchDialog::*)()>(void (CFriendsSearchDialog::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (CSearchDialog::*)()>(void (CSearchDialog::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*)>(void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*, char const*)>(void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*, char const*), v8::Handle<v8::Array>&)
@@ -54896,7 +54924,6 @@
  T void panorama::JSFunctionCallTuple<CTenfootControllerBase*, panorama::CPanel2D*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSFunctionCallTuple<void, panorama::CPanel2D*, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CBroadcastChatPanel, void, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
- T void panorama::JSMethodCallTuple<CFriendsSearchDialog, void>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, float>(v8::FunctionCallbackInfo<v8::Value> const&)
@@ -54998,7 +55025,6 @@
  T void panorama::RegisterJSGlobalFunction<CTenfootControllerBase*, panorama::CPanel2D*>(char const*, CTenfootControllerBase* (*)(panorama::CPanel2D*), bool, char const*)
  T void panorama::RegisterJSGlobalFunction<void, panorama::CPanel2D*, char const*, char const*>(char const*, void (*)(panorama::CPanel2D*, char const*, char const*), bool, char const*)
  T void panorama::RegisterJSMethod<CBroadcastChatPanel, void, char const*, char const*>(char const*, void (CBroadcastChatPanel::*)(char const*, char const*), char const*)
- T void panorama::RegisterJSMethod<CFriendsSearchDialog, void>(char const*, void (CFriendsSearchDialog::*)(), char const*)
  T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, bool>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool), char const*)
  T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, char const*>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*), char const*)
  T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, float>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, float), char const*)
@@ -55133,7 +55159,6 @@
  T void panorama::RestoreFuncPtr<unsigned int (panorama::CTextEntry::*)()>(panorama::HACKY_FUNC_PTR_CASTER<unsigned int (panorama::CTextEntry::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (*)(panorama::CPanel2D*, char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (*)(panorama::CPanel2D*, char const*, char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (CBroadcastChatPanel::*)(char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (CBroadcastChatPanel::*)(char const*, char const*)>&, v8::Local<v8::Array>&, int)
- T void panorama::RestoreFuncPtr<void (CFriendsSearchDialog::*)()>(panorama::HACKY_FUNC_PTR_CASTER<void (CFriendsSearchDialog::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (CSearchDialog::*)()>(panorama::HACKY_FUNC_PTR_CASTER<void (CSearchDialog::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (CTenfootControllerBase::*)(panorama::CPanel2D*, char const*, char const*)>&, v8::Local<v8::Array>&, int)
@@ -56003,9 +56028,10 @@
  b CControllerBindingButton::BSetProperty(panorama::CPanoramaSymbol, char const*)::symType
  b CCrossProcessPipe::BAcceptConnection(IProcessPipe**)::fAsserted
  b CD2LSettings::ResetAccountData()::fAsserted
- b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reOptions
- b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reSimpleCheck
- b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reWWWLong
+ b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reOptions
+ b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reSimpleCheck
+ b CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reWWWLong
+ b CFriendsChatDialog::InitEmoticonPanel()::eUniverse
  b CFriendsListHeader::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symFriendsCategory
  b CGameID::Render() const::nBuf
  b CGameID::Render() const::rgchBuf
@@ -56142,7 +56168,6 @@
  b CValveControllerManager::OnFocusWindowChanged(FocusedSteamWindowChanged_t*)::bForceControllerAppID
  b CVideoDriverManager::CheckDriver(CSteamApp*, KeyValues*, bool)::bShouldWarnAboutGPU
  b CViewGuidesDialog::AddHRBeforeItem(int)::k_symHorizontalRule
- b Check360GuideButton()::s_flLastGuideButton
  b Check360GuideButton()::s_flLastJoystickUpdate
  b Check360GuideButton()::s_unSteamControllerGuideButtons
  b CocoaUpdateWindowState()::s_flLastRefreshCachedStatus
@@ -56155,6 +56180,7 @@
  b CryptoPP::s_jmpNoCPUID
  b CryptoPP::s_jmpNoSSE2
  b DrmManager()::s_SteamDrmManager
+ b FindEmoticonImageString(char const*, CUtlString&, char const**, char const**)::eUniverse
  b FriendItemSortFn(panorama::IUIPanelClient* const&, panorama::IUIPanelClient* const&)::k_symCategoryHeader
  b GCallbackMgr()::s_CallbackMgr
  b GMapJobTypesByMsg()::s_MapJobTypes
@@ -56390,9 +56416,10 @@
  b guard variable for CControllerBindingButton::BSetProperty(panorama::CPanoramaSymbol, char const*)::symDescribeButton
  b guard variable for CControllerBindingButton::BSetProperty(panorama::CPanoramaSymbol, char const*)::symDescribeSource
  b guard variable for CControllerBindingButton::BSetProperty(panorama::CPanoramaSymbol, char const*)::symType
- b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reOptions
- b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reSimpleCheck
- b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState)::reWWWLong
+ b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reOptions
+ b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reSimpleCheck
+ b guard variable for CFriendsChatDialog::AppendChatMessageToChatsList(unsigned long long, unsigned long long, char const*, EChatEntryType, EPersonaState, bool)::reWWWLong
+ b guard variable for CFriendsChatDialog::InitEmoticonPanel()::eUniverse
  b guard variable for CFriendsListHeader::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symFriendsCategory
  b guard variable for CGameStreamSession::ReportSessionStats(bool)::MINIMUM_STATS_REPORTING_INTERVAL
  b guard variable for CGameStreamSystem::UpdateGamepadMouseMode()::iThumbstickLeftX
@@ -56505,6 +56532,7 @@
  b guard variable for CryptoPP::TheBitBucket()::bitBucket
  b guard variable for CryptoPP::ThreadUserTimer::TicksPerSecond()::ticksPerSecond
  b guard variable for DrmManager()::s_SteamDrmManager
+ b guard variable for FindEmoticonImageString(char const*, CUtlString&, char const**, char const**)::eUniverse
  b guard variable for FriendItemSortFn(panorama::IUIPanelClient* const&, panorama::IUIPanelClient* const&)::k_symCategoryHeader
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GMapJobTypesByMsg()::s_MapJobTypes
@@ -56728,7 +56756,7 @@
  b guard variable for panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symTextMode
  b guard variable for panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symUndoEnabled
  b guard variable for panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symWarnCapsLock
- b guard variable for panorama::CTextInputDualTouch::OnStandardTouchKeyClicked(panorama::CPanel2D*, panorama::CTouchPad*)::k_symPropertyOnActivate
+ b guard variable for panorama::CTextInputDualTouch::PopulateEmoticonsForCurrentPage()::eUniverse
  b guard variable for panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount0
  b guard variable for panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount3
  b guard variable for panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount4
@@ -57039,7 +57067,7 @@
  b panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symTextMode
  b panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symUndoEnabled
  b panorama::CTextEntry::BSetProperty(panorama::CPanoramaSymbol, char const*)::symWarnCapsLock
- b panorama::CTextInputDualTouch::OnStandardTouchKeyClicked(panorama::CPanel2D*, panorama::CTouchPad*)::k_symPropertyOnActivate
+ b panorama::CTextInputDualTouch::PopulateEmoticonsForCurrentPage()::eUniverse
  b panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount0
  b panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount3
  b panorama::CTextInputDualTouch::SetSuggestionPanels(CUtlVector<panorama::CSuggestionPanel*, CUtlMemory<panorama::CSuggestionPanel*> > const&)::k_symSuggestionsCount4
@@ -57307,6 +57335,7 @@
  b s_convarStatsMonitorSecs
  b s_cvarVerifySignaturesBeforeLaunch
  b s_flGuideButtonDownTime
+ b s_flGuideButtonUpTime
  b s_flLastDeviceInsertTime
  b s_hCurrentSortingColumnSymbol
  b s_hCurrentSortingColumnSymbol2
@@ -58530,7 +58559,6 @@
  t Create_FriendsListHeader(char const*, panorama::IUIPanel*)
  t Create_FriendsProfileDetailsCompositeHeader(char const*, panorama::IUIPanel*)
  t Create_FriendsSearchButton(char const*, panorama::IUIPanel*)
- t Create_FriendsSearchDialog(char const*, panorama::IUIPanel*)
  t Create_FriendsSelfHeader(char const*, panorama::IUIPanel*)
  t Create_GraphPanel()
  t Create_Grid(char const*, panorama::IUIPanel*)
@@ -58770,7 +58798,7 @@
  t _GLOBAL__sub_I_pcrecpp.cc
  t _ZL29OnDisplayStreamFrameAvailable_block_invoke
  t __cxx_global_array_dtor
- t __cxx_global_var_init114
+ t __cxx_global_var_init115
  t __cxx_global_var_init143
  t access_virt_barray
  t access_virt_sarray

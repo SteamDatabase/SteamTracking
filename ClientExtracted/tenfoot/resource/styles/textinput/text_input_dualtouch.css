@@ -153,6 +153,10 @@ TextInputDualTouch
 {
 	height: 70px;
 	width: 88%;
+
+	background-color: daisy_bg_color;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 #LastRow
@@ -263,6 +267,52 @@ TextInputDualTouch
 	width: 88%;
 }
 
+.EmoticonRow
+{
+	flow-children: right;
+	height: 14.5%;
+	width: 100%;
+	visibility: collapse;
+}
+
+.EmoticonMode .EmoticonRow
+{
+	visibility: visible;
+}
+
+.Left .EmoticonRow
+{
+	horizontal-align: left;
+	margin-left: 48px;
+}
+
+.Right .EmoticonRow
+{
+	horizontal-align: left;
+	margin-left: 11px;
+	width: 91.5%;
+}
+
+.EmoticonTouchKey.Hidden Image
+{
+	visibility: collapse;
+}
+
+.EmoticonTouchKey Image
+{
+	width: 36px;
+	height: 36px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#TouchKey_Show_Emoticons Image
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+
 .NoSuggest #Row0.TouchRow
 {
 	height: 28%;
@@ -307,9 +357,9 @@ TextInputDualTouch
 
 .Left #LastRow
 {
-	x: 0%;
+	//x: 0%;
 	horizontal-align: right;
-	width: 90%;
+	width: 90.8%;
 	margin-right: -14px;
 }
 
@@ -328,6 +378,11 @@ TextInputDualTouch
 	border-style: solid;
 	border-width: 4px;
 	border-color: daisy_bg_color;
+}
+
+.EmoticonTouchKey
+{
+	width: 16.25%;
 }
 
 // 6, 7, B, N
@@ -365,14 +420,14 @@ TextInputDualTouch
 .Left #TouchKey_Space
 {
 	border-right-width: 0px;
-	border-left-width: 0px;
+	border-left-width: 4px;
 	width: 100%;
 }
 
 .Right #TouchKey_Space
 {
 	border-left-width: 0px;
-	border-right-width: 0px;
+	border-right-width: 4px;
 	width: 50%;
 }
 
@@ -696,4 +751,37 @@ TextInputDualTouch.FriendsChat
 .ShowSubmit #TouchKey_Close
 {
 	visibility: collapse;
+}
+
+.EmoticonMode .AlphaNumKeyRow
+{
+	visibility: collapse;
+}
+
+// only show TouchKey_Show_Emoticons and TouchKey_Hide_Emoticons in .AllowEmoticons mode
+#TouchKey_Show_Emoticons
+{
+	visibility: collapse;
+	width: 24%;
+}
+
+.AllowEmoticons #TouchKey_Show_Emoticons
+{
+	visibility: visible;
+}
+
+.EmoticonMode #TouchKey_Show_Emoticons
+{
+	visibility: collapse;
+}
+
+#TouchKey_Hide_Emoticons
+{
+	visibility: collapse;
+	width: 24%;
+}
+
+.EmoticonMode #TouchKey_Hide_Emoticons
+{
+	visibility: visible;
 }

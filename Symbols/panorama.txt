@@ -648,7 +648,6 @@
  B panorama::SoundFinished::symbol
  B panorama::SoundMuteChanged::symbol
  B panorama::SoundVolumeChanged::symbol
- B panorama::SteamPadRightHighActivity::symbol
  B panorama::StopAudioSample::symbol
  B panorama::StopStreaming::symbol
  B panorama::StopStreamingAndSuspendClient::symbol
@@ -1036,7 +1035,6 @@
  D panorama::SoundFinished::pchEvent
  D panorama::SoundMuteChanged::pchEvent
  D panorama::SoundVolumeChanged::pchEvent
- D panorama::SteamPadRightHighActivity::pchEvent
  D panorama::StopAudioSample::pchEvent
  D panorama::StopStreaming::pchEvent
  D panorama::StopStreamingAndSuspendClient::pchEvent
@@ -6720,6 +6718,7 @@
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::Insert(panorama::CUIEngine::ScheduledItem_t const&)
  T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::RemoveAtHead()
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::Swap(int, int)
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::Release()
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::SetPtr(CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T CUtlPtr<panorama::CStyleFileKey>::Release()
@@ -7703,6 +7702,7 @@
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::InsertBefore(int)
+ T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::RemoveAll()
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::~CUtlVector()
  T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::GrowVector(int)
@@ -7985,7 +7985,6 @@
  T ClientHTTP()
  T ClientRemoteClientManager()
  T ClientUtils()
- T ClientVR()
  T ClosePlatformSocket(int)
  T Common_FreeGlobals()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
@@ -8198,7 +8197,6 @@
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
  T CryptoPP::CpuId(unsigned int, unsigned int*)
  T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Exception::what() const
  T CryptoPP::Exception::~Exception()
  T CryptoPP::FIPS_140_2_ComplianceEnabled()
@@ -9023,9 +9021,11 @@
  T panorama::CBackgroundImageLayer::IsSet()
  T panorama::CBackgroundImageLayer::MergeTo(panorama::CBackgroundImageLayer*)
  T panorama::CBackgroundImageLayer::OnAppliedToPanel(panorama::IUIPanel*)
+ T panorama::CBackgroundImageLayer::ReloadImage(panorama::IUIPanel*)
  T panorama::CBackgroundImageLayer::Set(panorama::CBackgroundImageLayer const&)
  T panorama::CBackgroundImageLayer::SetBackgroundSize(panorama::EBackgroundSizeConstant)
  T panorama::CBackgroundImageLayer::ToString(CFmtStrN<1024, true, true>*)
+ T panorama::CBackgroundImageLayer::UnloadImage()
  T panorama::CBackgroundImageLayer::Validate(CValidator&, char const*)
  T panorama::CBackgroundImageLayer::operator==(panorama::CBackgroundImageLayer const&) const
  T panorama::CBackgroundImageLayer::~CBackgroundImageLayer()
@@ -9494,7 +9494,6 @@
  T panorama::COpenGLSurface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned int, float, unsigned int, unsigned int, panorama::EOverlayWindowAlignment)
  T panorama::COpenGLSurface::ReloadChangedFile(char const*)
  T panorama::COpenGLSurface::ReloadTextures()
- T panorama::COpenGLSurface::RenderVRDistortion()
  T panorama::COpenGLSurface::RequestRenderCallback(panorama::CRenderMsg<CMsgRequestRenderCallback> const&)
  T panorama::COpenGLSurface::SetFancyQuadFillBrush(panorama::FancyQuadBrush_t&, CMsgFillBrush const&, float, float)
  T panorama::COpenGLSurface::SetOverlayLetterboxColor(Color)
@@ -10930,7 +10929,7 @@
  T panorama::CUIEngine::RegisterNamedUserPath(char const*, char const*, bool, bool)
  T panorama::CUIEngine::RegisterPanelFactoryWithEngine(panorama::CPanoramaSymbol, panorama::CPanel2DFactory*)
  T panorama::CUIEngine::RegisterPanelTypeEventHandler(panorama::CPanoramaSymbol, panorama::CPanoramaSymbol, CUtlAbstractDelegate, bool)
- T panorama::CUIEngine::RegisterScheduledDelegate(double, CUtlDelegate<void ()>)
+ T panorama::CUIEngine::RegisterScheduledDelegate(double, CUtlDelegate<void ()>, char const*)
  T panorama::CUIEngine::RegisterXHeader(char const*, char const*)
  T panorama::CUIEngine::ReloadLayoutFile(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::RemoveFrameListener(panorama::IUIEngineFrameListener*)
@@ -11299,11 +11298,12 @@
  T panorama::CUIPanel::DispatchReadyForDisplayTraverse(bool)
  T panorama::CUIPanel::EnableAnalogStickScrolling(bool)
  T panorama::CUIPanel::EnableBackgroundMovies(bool)
- T panorama::CUIPanel::EventHandlerDontBubble(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIPanel::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIPanel::EventLoadLayoutFileAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
  T panorama::CUIPanel::EventLoadLayoutFromBase64XMLStringAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
  T panorama::CUIPanel::EventLoadLayoutFromXMLStringAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
+ T panorama::CUIPanel::EventReadyForDisplay(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T panorama::CUIPanel::EventUnreadyForDisplay(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIPanel::FindAncestor(char const*)
  T panorama::CUIPanel::FindChild(char const*)
  T panorama::CUIPanel::FindChildInLayoutFile(char const*)
@@ -12073,7 +12073,7 @@
  T panorama::CUIRenderEngine::WakeThreads()
  T panorama::CUIRenderEngine::~CUIRenderEngine()
  T panorama::CUIScheduledDel::BScheduled()
- T panorama::CUIScheduledDel::CUIScheduledDel(CUtlDelegate<void ()>)
+ T panorama::CUIScheduledDel::CUIScheduledDel(CUtlDelegate<void ()>, char const*)
  T panorama::CUIScheduledDel::Cancel()
  T panorama::CUIScheduledDel::Schedule(double)
  T panorama::CUIScheduledDel::~CUIScheduledDel()
@@ -12174,6 +12174,7 @@
  T panorama::CUIWindowInput::SetInputFocus(panorama::IUIPanel*, bool, bool)
  T panorama::CUIWindowInput::SetInputFocusContext(panorama::IUIPanel*)
  T panorama::CUIWindowInput::SetInputFocusContextInternal(panorama::IUIPanel*, bool)
+ T panorama::CUIWindowInput::SetInputForwarding(panorama::IUIWindowInput*)
  T panorama::CUIWindowInput::SetLastHover(double, unsigned long long, float, float)
  T panorama::CUIWindowInput::SetMouseDownPtr(panorama::IUIPanel*, panorama::MouseCode)
  T panorama::CUIWindowInput::SetMouseTrackingResults(CCopyableUtlVector<panorama::MouseTrackingResults_t, CUtlMemory<panorama::MouseTrackingResults_t> >&)
@@ -12391,7 +12392,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ShutdownMachine>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundFinished, char const*, void*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundMuteChanged, bool>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SteamPadRightHighActivity>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreaming>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreamingAndSuspendClient>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StyleClassesChanged>(panorama::IUIPanel*, char const*, char const**)
@@ -12657,8 +12657,6 @@
  T panorama::SoundMuteChanged::MakeEvent(panorama::IUIPanelClient const*, bool)
  T panorama::SoundVolumeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SoundVolumeChanged::MakeEvent(panorama::IUIPanelClient const*, panorama::ESoundType, float)
- T panorama::SteamPadRightHighActivity::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T panorama::SteamPadRightHighActivity::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::StopAudioSample::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::StopAudioSample::GetEventType()
  T panorama::StopAudioSample::MakeEvent(panorama::IUIPanelClient const*, void*)
@@ -13330,6 +13328,7 @@
  T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
  T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::PanelLocEntry_t>(panorama::CLocalization::PanelLocEntry_t*)
+ T void Destruct<panorama::CUIEngine::ScheduledItem_t>(panorama::CUIEngine::ScheduledItem_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalFunctionRegistration_t>(panorama::CUIEngine::V8GlobalFunctionRegistration_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalObjectRegistration_t>(panorama::CUIEngine::V8GlobalObjectRegistration_t*)
  T void Destruct<panorama::CUIEngine::XHeader_t>(panorama::CUIEngine::XHeader_t*)
@@ -13485,8 +13484,6 @@
  T void std::__1::vector<v8::platform::WorkerThread*, std::__1::allocator<v8::platform::WorkerThread*> >::__push_back_slow_path<v8::platform::WorkerThread*>(v8::platform::WorkerThread*&&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
- T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
  T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
  T vrapi::VROverlay()

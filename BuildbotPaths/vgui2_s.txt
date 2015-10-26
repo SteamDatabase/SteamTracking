@@ -69,7 +69,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vgui_surfacelib/osxfont.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/cryptlib.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/iterhash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/misc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/osrng.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/secblock.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cryptlib.o)

@@ -11,7 +11,6 @@ FriendsChatDialog
 	width: 880px;
 	margin-left: 0px;
 	height: fit-children;
-	flow-children: down;
 	opacity: 0.0;
 
 	transition-duration: mediumduration;
@@ -51,9 +50,11 @@ FriendsChatDialog:descendantfocus
 	transform: translateX( -480px );
 }
 
-FriendsChatDialog AvatarImage.AvatarVisible
+#FriendsMainBodyContainer
 {
-	opacity: 1.0;
+	width: 1000px;
+	height: fit-children;
+	flow-children: down;
 }
 
 #FriendsMainBodyInputTextArea
@@ -80,7 +81,7 @@ FriendsChatDialog AvatarImage.AvatarVisible
 	border-radius: 0px;
 
 	transition-property: opacity;
-	transition-duration: 0.2s;
+	transition-duration: 1.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
@@ -93,11 +94,11 @@ FriendsChatDialog AvatarImage.AvatarVisible
 {
 	color: applabelselectedsolid;
 	
-	transition-duration: 0.4s !immediate;
+
 
 	border-color: #cececeff;
 	background-color: friendsitemmainlistbkgnd;
-
+    opacity: 1.0;
 	animation-name: main-button-glow-movement-no-fill;
 	//animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
@@ -106,13 +107,106 @@ FriendsChatDialog AvatarImage.AvatarVisible
 	animation-direction: normal;
 
 	transition-property: background-color, border;
-	transition-duration: 0.3s !immediate;
+	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMainBodyInputTextArea:hover:disabled
 {
 	background-color: friendschatinputbkgnd_text;
+}
+
+#FriendsMainBodyInputEmoticonButton
+{
+	vertical-align: center;
+	horizontal-align: right;
+	height: 106px;
+	min-width: 106px;
+	font-weight: light;
+	font-size: 24px;
+	color: tclegendlabel;
+	white-space: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+	background-color: friendstab;
+	// friendsonline_lightbg;
+	color: friendsitemmainlistbkgnd_from;
+
+	border-radius: 0px;
+	visibility: collapse;
+
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.CursorVisible #FriendsMainBodyInputEmoticonButton
+{
+	visibility: visible;
+}
+
+#FriendsMainBodyInputEmoticonButton:hover
+{
+	background-color: friendstabcurrentselection;
+}
+
+#EmoticonSelector
+{
+	width: 460px;
+	max-height: 400px;
+	overflow: clip scroll;
+	height: fit-children;
+	flow-children: right-wrap;
+	background-color: #0d273aff;
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-bottom: 115px;
+	padding: 4px;
+	height: 0px;
+
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.ShowEmoticonPanel #EmoticonSelector
+{
+	opacity: 1.0;
+	height: fit-children;
+}
+
+#EmoticonSelector Button
+{
+	margin: 2px;
+	width: 40px;
+	height: 40px;
+	padding: 6px;
+}
+
+#EmoticonSelector Image
+{
+	width: 100%;
+	height: 100%;
+}
+
+#EmoticonSelector Button:hover
+{
+	background-color: friendstab;
+}
+
+
+.FriendChatDisabled #FriendsMainBodyInputEmoticonButton:hover
+{
+	background-color: friendschatinputbkgnd;
+}
+
+#FriendsMainBodyInputEmoticonButton Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+	font-size: 48px;
+	color: tclegendlabel;
 }
 
 #FriendsMainBodyInputSendButton
@@ -509,7 +603,16 @@ AvatarImage.AvatarVisible
 FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
 {
 	height: 310px;
+	opacity: 1.0; 
 }
+
+
+FriendsChatDialog:descendantfocus #FriendsMainBodyInputGroup
+{
+		opacity: 0.8; 
+}
+
+
 
 FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 {
@@ -527,6 +630,10 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 	width: 100%;
 	flow-children: right;
 	vertical-align: bottom;
+	opacity: 0.0;    
+	transition-property: opacity, transform;
+	transition-duration: 4.0s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMainBodyGameInviteButton
@@ -546,7 +653,7 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 #FriendsMainBodyGameInviteButton:hover
 {
 	background-color: #196e9e;
-	border: 2px solid white;
+	//border: 2px solid white;
 }
 
 .HasGameInvite #FriendsMainBodyGameInviteButton
@@ -744,7 +851,8 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 	width: 100%;
 	height: fit-children;
 	background-color: #124b6b;
-	flow-children: down;
+	flow-children: right;
+	horizontal-align:right;
 
 	margin-left: 10px;
 	margin-right: 10px;
@@ -813,4 +921,12 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 .ChatMsgSystem
 {
 	color: #ddddddff;
+}
+
+// Emoticons, mainly
+.InlineImage
+{
+	width: 30px;
+	height: 30px;
+	margin-left: -6px;
 }

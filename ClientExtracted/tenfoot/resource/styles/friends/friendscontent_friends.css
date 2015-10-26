@@ -24,11 +24,6 @@ FriendsContent_Friends.ContentList
 	margin-left: 6px;
 }
 
-.Filtered #FriendsListItems
-{
-	margin-top: 100px;
-}
-
 Label
 {
 	color: white;
@@ -132,35 +127,74 @@ Label
 	visibility: visible;
 }
 
-#ClearFilterButton
+#FriendsContent .NxFilterTab
 {
-	visibility: collapse;
-	height: 50px;
-	width: 100%;
+	position: 888px 0px 0px;
+
 	margin-top: 10px;
-	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
-	padding: 4px;
-	padding-left: 10px;
+	padding-top: 4px;
+	//padding-bottom: -8px;
 }
 
-#ClearFilterButton Label
+.ContentAreaFocus #FriendsContent .NxFilterTab,
+.ContentHover #FriendsContent .NxFilterTab
 {
-	font-size: 30px;
-	color: white;
+	position: 750px 0px 0px;
 }
 
-#ClearFilterButton:hover
+.NxFilterTab .NxTagHeader.FilterHeader
 {
-	border: 1px solid white;	
+	margin-bottom: -16px;
 }
 
-#ClearFilterButton:focus
+.NxFilterTab
 {
-	border: 1px solid white;
-	background-color: friendsonline_darkbg;
+	padding-bottom: 0px;
 }
 
-FriendsContent_Friends.Filtered #ClearFilterButton
+.NxFilterTab TextEntry
 {
-	visibility: visible;
+margin-bottom: 8px;
 }
+
+#FriendsContent .NxFilterTab:descendantfocus
+{
+	position: 560px 0px 0px;
+
+	margin-top: 16px;
+	padding-top: 4px;
+	padding-bottom: 8px;
+}
+
+.NxFilterTab TextEntry
+{
+	width: 100%;
+	height: 0px;
+}
+
+.NxFilterTab:descendantfocus TextEntry,
+.NxFilterTab TextEntry.HasInput
+{
+	height: fit-children;
+	margin-top: 16px;
+
+
+}
+
+.NxFilterTab TextEntry #PlaceHolderText
+{
+	font-style: italics;
+	opacity: 0.5;
+	color: applabelsolid;
+}
+
+.NxFilterTab TextEntry:focus #PlaceHolderText
+{
+	color: applabelselectedsolid;
+}
+
+.NxFilterTab TextEntry.HasInput #PlaceHolderText
+{
+	opacity: 0.0;
+}
+
