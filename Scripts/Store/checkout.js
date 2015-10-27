@@ -2226,17 +2226,8 @@ function UpdateStateSelectState()
 			$J('#billing_state_select_dselect_container').hide();
 		}
 
-		if ( $('shipping_country').value == 'US' )
-		{
-			$J('#shipping_state_text').hide();
-			$J('#shipping_state_select_dselect_container').show();
-		}
-		else
-		{
-			$J('shipping_state_text').show();
-			$J('shipping_state_select_dselect_container').hide();
-		}
-	} 
+		Shipping_UpdateStateSelectState();
+	}
 	catch( e ) 
 	{
 		ReportCheckoutJSError( 'Failed in UpdateStateSelectState()', e );
@@ -2713,95 +2704,14 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 	g_bAutoSubmitPaymentInfo = bAutoSubmitPaymentInfo;
 		var errorString = '';
 
-		var rgBadFields = { 
-		shipping_first_name : false,
-		shipping_last_name : false,
-		shipping_address : false,
-		shipping_city : false,
-		shipping_state_text : false,
-		shipping_phone : false,
-		shipping_postal_code : false,
-		shipping_state_select_trigger: false
-	}
 	
-	try 
+
+	var rgBadFields = {};	// Shipping_VerifyAddressFields will fill this in, but it doesn't look like we use it anywhere
+
+	try
 	{
-		if ( $( 'shipping_first_name' ).value.length < 1 )
-		{
-			errorString += 'Please enter a first name for the shipping address.<br/>';
-			rgBadFields.first_name = true;
-		}
-			
-		if ( $( 'shipping_last_name' ).value.length < 1 )
-		{
-			errorString += 'Please enter a last name for the shipping address.<br/>';
-			rgBadFields.last_name = true;
-		}
-			
-		if ( $( 'shipping_address' ).value.length < 1 )
-		{
-			errorString += 'Please enter your shipping address.<br/>';
-			rgBadFields.shipping_address = true;
-		}
-		
-				var regExPOBox = /P\s?\.?\s?O\s?\.?\s?B\s?o\s?x/i;
-		if ( regExPOBox.test( $( 'shipping_address' ).value ) || regExPOBox.test( $( 'shipping_address_two' ).value ) )
-		{
-			errorString += 'Delivery of your order cannot be sent to a P.O. Box address.<br/>';
-			rgBadFields.shipping_address = true;
-		}
-			
-		if ( $( 'shipping_city' ).value.length < 1 )
-		{
-			errorString += 'Please enter your shipping city.<br/>';
-			rgBadFields.shipping_city = true;
-		}
-			
-				if  ( $( 'shipping_country' ).value == 'US' )
-		{
-			if ( $('shipping_state_select').value.length < 1 )
-			{
-				errorString += 'Please enter a State or Province.<br/>';
-				rgBadFields.shipping_state_select_trigger = true;
-			}
-		}
-	
-		if ( $( 'shipping_phone' ).value.length < 3 )
-		{
-			errorString += 'Please enter your shipping phone number, including area code.<br/>';
-			rgBadFields.shipping_phone = true;
-		}
-		else if  ( $( 'shipping_country' ).value == 'US' )
-		{
-			// Expect 10 digits if in the US, we'll make sure we at least have that many digits
-			var num = $( 'shipping_phone').value;
-			var digitsFound = 0;
-			for ( i = 0; i < num.length; ++i )
-			{
-				var c = num.charAt(i);
-				if ( c >= '0' && c <= '9' )
-					++digitsFound;
-			}
-			if ( digitsFound < 10 )
-			{
-				errorString += 'Please enter your shipping phone number, including area code.<br/>';
-				rgBadFields.shipping_phone = true;
-			}
-		}
-				
-		if ( $( 'shipping_country' ).value == 'US' )
-		{
-			if ( $( 'shipping_postal_code' ).value.length < 5 )
-			{
-				errorString += 'Please enter your zip or postal code.<br/>';
-				rgBadFields.shipping_postal_code = true;
-			}
-		}
-		else if ( $( 'shipping_postal_code' ).value.length < 1 )
-		{
-			errorString += 'Please enter your zip or postal code.<br/>';
-			rgBadFields.shipping_postal_code = true;
-		}
+		errorString = Shipping_VerifyAddressFields( rgBadFields );
+
 	} 
 	catch( e ) 
 	{
@@ -2839,50 +2749,30 @@ function VerifyShippingAddress()
 				g_bVerifyShippingAddressCallRunning = true;
 		
 				AnimateSubmitPaymentInfoButton();
-		
-		new Ajax.Request('https://store.steampowered.com/checkout/verifyshippingaddress/',
-		{
-		    method:'post',
-		    parameters: { 
-				'ShippingFirstName' : $('shipping_first_name') ? $('shipping_first_name').value : '',
-				'ShippingLastName' : $('shipping_last_name').value,
-				'ShippingAddress' : $('shipping_address').value,
-				'ShippingAddressTwo' : $('shipping_address_two').value,
-				'ShippingCountry' : $('shipping_country').value,
-				'ShippingCity' : $('shipping_city').value,
-				'ShippingState' : ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value),
-				'ShippingPostalCode' : $('shipping_postal_code').value,
-				'ShippingPhone' : $('shipping_phone').value,
-			},
-		    onSuccess: function(transport){
-		    	g_bVerifyShippingAddressCallRunning = false;
-				if ( transport.responseText ){
-					try {
-						var result = transport.responseText.evalJSON(true);
-		      		} catch ( e ) {
-		      			// Failure
-		      			OnVerifyShippingAddressFailure();
-		      		}
-		      	   	// Success...
-		      	   	if ( result.success == 1 )
-		      	   	{
-		      	   		OnVerifyShippingAddressSuccess( result );
-		      	   		return;
-		      	   	}
-		      	   	else
-		      	   	{
-		      	   		OnVerifyShippingAddressFailure();
-		      	   		return;
-		      	   	}
-			  	}
-			  	
-								OnVerifyShippingAddressFailure();
-		    },
-		    onFailure: function(){
-								g_bVerifyShippingAddressCallRunning = false;
-				OnVerifyShippingAddressFailure();
-			}
-		});
+
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+			{
+				onSuccess: function( result ) {
+					g_bVerifyShippingAddressCallRunning = false;
+					// Success...
+					if ( result.success == 1 )
+					{
+						OnVerifyShippingAddressSuccess( result );
+						return;
+					}
+					else
+					{
+						OnVerifyShippingAddressFailure();
+						return;
+					}
+
+										OnVerifyShippingAddressFailure();
+				},
+				onFailure: function(){
+										g_bVerifyShippingAddressCallRunning = false;
+					OnVerifyShippingAddressFailure();
+				}
+			} );
 	} 
 	catch(e) 
 	{
@@ -2901,48 +2791,10 @@ function OnVerifyShippingAddressSuccess( result )
 		}
 		else
 		{
-			$('corrected_shipping_address').value = result.correctedAddress.address1.value;
-			$('corrected_shipping_address_two').value = result.correctedAddress.address2.value;
-			$('corrected_shipping_city').value = result.correctedAddress.city.value;
-			$('corrected_shipping_state').value = result.correctedAddress.state.value;
-			$('corrected_shipping_postal_code').value = result.correctedAddress.postcode.value;
-			
-						$('shipping_info_verify_address_entered').innerHTML = '';
-			if ( !result.correctedAddress.address1.matches )
-			{
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.address2.matches && $('shipping_address_two').value )
-			{
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address_two').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
-			{ 
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_city').value + ', ' + ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value) + ' ' + $('shipping_postal_code').value + '<br/>';
-			}
-			
-						$('shipping_info_verify_address_corrected').innerHTML = '';
-
-			if ( !result.correctedAddress.address1.matches )
-			{
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.address2.matches && $('corrected_shipping_address_two').value )
-			{
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address_two').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
-			{ 
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_city').value + ', ' + $('corrected_shipping_state').value + ', ' + $('corrected_shipping_postal_code').value + '<br/>';
-			}
-			
+			Shipping_UpdateFieldsFromVerificationCall( result );
 			$('shipping_info_confirm').show();
 			$('shipping_info_entry').hide();
-		
+
 						var error_text = 'We\'ve found a suggestion for your shipping address.';
 			
 			DisplayErrorMessage( error_text );
@@ -2967,18 +2819,7 @@ function ShippingAddressVerified( bUseCorrected )
 {
 	if ( bUseCorrected )
 	{
-		$('shipping_address').value = $('corrected_shipping_address').value;
-		$('shipping_address_two').value = $('corrected_shipping_address_two').value;
-		$('shipping_city').value = $('corrected_shipping_city').value;
-		if ( $('shipping_country').value == 'US' )
-		{
-			 $('shipping_state_select').value = $('corrected_shipping_state').value;
-		}
-		else
-		{
-			$('shipping_state_text').value = $('corrected_shipping_state').value;
-		}
-		$('shipping_postal_code').value = $('corrected_shipping_postal_code').value;
+		Shipping_UpdateAddressWithCorrectedFields();
 	}
 	
 	ShowShippingAddressForm();

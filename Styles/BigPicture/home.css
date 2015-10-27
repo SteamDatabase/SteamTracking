@@ -83,6 +83,10 @@ RemotePanel
 	overflow: squish scroll;
 	padding-bottom: 150px;
 	padding-top: 40px;
+
+	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 
 .FeaturedWrapping
@@ -90,21 +94,29 @@ RemotePanel
 	flow-children: right-wrap;
 	z-index: 0;
 }
-.FeaturedWrapping:descendantfocus,
-.FeaturedWrapping:hover
+.FeaturedWrapping:descendantfocus
 {
 	z-index: 5;
+}
+.FeaturedWrapping:hover
+{
+	z-index: 6;
 }
 
 .FeaturedSpotlightRow
 {
 	flow-children: right;
 	z-index: 0;
+	//margin-bottom: 100px;
+
 }
-.FeaturedSpotlightRow:descendantfocus,
-.FeaturedSpotlightRow:hover
+.FeaturedSpotlightRow:descendantfocus
 {
 	z-index: 5;
+}
+.FeaturedSpotlightRow:hover
+{
+	z-index: 6;
 }
 
 .FeaturedSpotlightRow .FeaturedWrapping
@@ -115,11 +127,11 @@ RemotePanel
 
 .Spotlight
 {
-	width: 520px;
-	height: 718px;
+	width: 530px;
+	height: 728px;
 	margin: 10px;
 
-	margin: -10px -10px;
+	margin: -15px -10px;
 
 	border-radius: 3px;
 
@@ -132,6 +144,25 @@ RemotePanel
 	z-index: -100;
 }
 
+.Spotlight .SpotlightBackground
+{
+	width: 520px;
+	height: 718px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	border-radius: 3px;
+
+	background-color: nontransparent_module;
+
+	box-shadow: module_shadow;
+}
+.Spotlight:focus .SpotlightBackground,
+.Spotlight:hover .SpotlightBackground
+{
+	box-shadow: none;
+}
+
 .Spotlight:focus,
 .Spotlight:hover
 {
@@ -141,6 +172,8 @@ RemotePanel
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
+	background-color: #b4dff7;
+
 	pre-transform-scale2d: 1;
 	z-index: 200;
 }
@@ -148,7 +181,10 @@ RemotePanel
 .SpotlightDetails
 {
 	flow-children: down;
-	width: 100%;
+	width: 520px;
+	margin: 0px 5px 5px 5px;
+	border-radius: 0px 0px 3px 3px;
+
 	min-height: 160px;
 	vertical-align: bottom;
 	padding: 10px 10px 10px 10px;
@@ -187,6 +223,9 @@ RemotePanel
 .SpotlightImage
 {
 	width: 520px;
+	margin-left: 5px;
+	margin-top: 5px;
+	border-radius: 3px 3px 0px 0px;
 }
 
 .SpotlightTitle
@@ -372,7 +411,8 @@ RemotePanel
 	transform: translate3d( 1100px, 0px, -350px );
 }
 
-.DiscoveryQueueApps:focus
+.DiscoveryQueueApps:focus,
+.DiscoveryQueueApps:hover
 {
 	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
 	background-position: 0px bottom;
@@ -384,6 +424,28 @@ RemotePanel
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+.DiscoveryQueueAppBanner
+{
+	width: 1205px;
+	height: 114px;
+	vertical-align: center;
+	flow-children: right;
+	margin-left: 70px;
+
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/bigpicture/queue_banner.png );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.DiscoveryQueueAppBanner Label
+{
+	font-size: 32px;
+	color: #ffcd6b;
+	vertical-align: center;
+	margin-left: 40px;
 }
 
 .ExploreSectionHeader
@@ -423,7 +485,8 @@ RemotePanel
 	margin: 0px 15px;
 }
 
-.RecommendedTags Button:focus
+.RecommendedTags Button:focus,
+.RecommendedTags Button:hover
 {
 	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
 	background-position: 0px bottom;
@@ -465,7 +528,9 @@ RemotePanel
 }
 
 .CurratorApp:focus,
-.RecommendedCurator:focus
+.CurratorApp:hover,
+.RecommendedCurator:focus,
+.RecommendedCurator:hover
 {
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
@@ -699,4 +764,84 @@ RemotePanel
 VerticalScrollBar
 {
 	opacity: 0;
+}
+
+
+////////////////////////////////////
+// Explore page styles
+////////////////////////////////////
+.ExploreQueuePage
+{
+	flow-children: right;
+	padding: 40px 80px 100px 80px;
+}
+
+.QueueLeftColumn
+{
+	width: 1304px;
+	flow-children: down;
+	margin-top: 34px;
+}
+
+.QueueRightColumn
+{
+	flow-children: down;
+	margin-left: 40px;
+}
+
+.QueueDescription
+{
+	font-size: 30px;
+	color: almost_white;
+	margin-bottom: 20px;
+}
+
+.QueuePageBox
+{
+	width: 416px;
+	height: 136px;
+	background-color: #00000044;
+	margin-bottom: 6px;
+	padding: 16px;
+	flow-children: down;
+}
+
+.QueuePageBoxRow
+{
+	flow-children: right;
+}
+
+.QueuePageHeader
+{
+	color: #67c1f5ff;
+	font-size: 28px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.YourQueueHeader
+{
+	margin-top: 40px;
+}
+
+.QueuePageBoxHeader
+{
+	color: greyish_medium;
+	font-size: 26px;
+}
+
+.QueuePageBoxDesc
+{
+	color: greyish_medium;
+	font-size: 24px;
+	vertical-align: center;
+	width: 240px;
+}
+
+.QueuePageBoxCount
+{
+	color: white;
+	font-size: 70px;
+	min-width: 150px;
+	margin-top: -6px;
 }

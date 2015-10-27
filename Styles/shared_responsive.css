@@ -453,6 +453,12 @@ html.responsive body {
 		min-height: calc( 100vh - 120px );
 	}
 
+	html.responsive .perf_timing_area {
+		margin-top: -22px;
+		position: relative;
+		z-index: 30;
+	}
+
 
 }
 
@@ -481,6 +487,12 @@ html.responsive body {
 	html.responsive.touch .responsive_page_template_content {
 		padding-bottom: 120px;
 		min-height: calc( 100vh - 120px );
+	}
+
+	html.responsive.touch .perf_timing_area {
+		margin-top: -22px;
+		position: relative;
+		z-index: 30;
 	}
 
 
@@ -590,6 +602,16 @@ html.force_desktop body #footer_responsive_optin_spacer {
 		height: 133px;
 	}
 
+}
+
+@media print
+{
+	html .responsive_page_menu_ctn.mainmenu,
+	html .responsive_local_menu_tab,
+	html .responsive_page_menu_ctn.localmenu,
+	html .responsive_header {
+		display: none;
+	}
 }
 
 .responsive_fixonscroll_ctn  {

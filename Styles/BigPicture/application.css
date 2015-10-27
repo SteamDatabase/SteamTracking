@@ -144,6 +144,49 @@
 	height: 464px;
 }
 
+.SlideshowNavHints
+{
+	flow-children: right;
+	position: 0px 70% 0px;
+	background-color: #00000066;
+	padding: 5px;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: supershortduration;
+}
+
+.SlideshowNavHints:hover
+{
+	background-color: #66c0f4;
+	border-radius: 3px;
+}
+
+#AppSlideshow.ShowNavHints:descendantfocus .SlideshowNavHints,
+.AppSlideshowContainer:hover .SlideshowNavHints
+{
+	opacity: 1.0;
+}
+
+.NavHintRight
+{
+	horizontal-align: right;
+}
+
+.SlideshowNavHints Image
+{
+	width: 40px;
+	height: 40px;
+	visibility: visible;
+}
+
+.CursorVisible #AppSlideshow .SlideshowNavHints .NavHintButton
+{
+	visibility: collapse;
+}
+
 .StoreSlideshowContainer
 {
 	width: 100%;
@@ -215,7 +258,7 @@
 .AppSlideshowContainer
 {
 	background-color: transparent_module;
-	padding: 10px;
+	//padding: 10px;
 	border-radius: 3px;
 }
 
@@ -232,8 +275,8 @@
 
 #AppSlideshow
 {
-	width: 824px;
-	height: 464px;
+	width: 844px;
+	height: 475px;
 }
 
 .NoTopMargin
@@ -457,47 +500,6 @@
 	color: app_warning_color;
 }
 
-// purchase notes row
-.AppPurchaseNotesRow
-{
-	width: 1275px;
-	flow-children: down;
-	margin-left: 10px;
-}
-
-.AppPurchaseNotesRow .AppDetailsBox
-{
-	min-height: purchase_options_height;
-}
-
-.UnsupportedLanguageTitle
-{
-	color: app_warning_color;
-	font-size: 28px;
-}
-
-.UnsupportedLanguageDetails
-{
-	color: almost_white;
-	font-size: 26px;
-}
-
-.PurchaseNoteHTML
-{
-	color: almost_white;
-    font-size: 26px;
-}
-
-.PurchaseNoteHTML b
-{
-	color: app_warning_color;
-}
-
-.PurchaseNoteHTML strong
-{
-	font-weight: bold;
-}
-
 // purchase options row
 .AppDetailColumns
 {
@@ -562,7 +564,7 @@
 	height: 100%;
 }
 
-.AppDetailsOptionsRow .AppNextInQueue
+.AppDetailsOptionsRow .AppNextInQueue_REPLACE
 {
 	vertical-align: bottom;
 }
@@ -670,6 +672,14 @@
 	width: 100%;
 	flow-children: right;
 }
+.AppPurchaseHeaderRow .icon_cart
+{
+	height: 35px;
+	width: 30px;
+	margin-right: 10px;
+	padding-top: 5px;
+	wash-color: green_in_page;
+}
 
 .AppPurchaseHeader
 {
@@ -701,11 +711,44 @@
 
 .AppNextInQueue
 {
-	height: purchase_options_height;
-	flow-children: right;
+	width: 180px;
+	height: 104px;
+	flow-children: down;
 	font-size: 26px;
 	color: #67c1f5ff;
 	padding-left: 20px;
+	background-color: #1184baee;
+	margin-left: 40px;
+	width: fill-parent-flow( 1.0 );
+}
+
+.AppNextInQueue:focus,
+.AppNextInQueue:hover
+{
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+}
+
+.AppNextInQueue.InDiscoveryQueue
+{
+	background-color: #a68849;
+	color: #ffcd6b;
+}
+
+.AppQueueRemaining
+{
+	color: #bc974e;
+	font-size: 22px;
+}
+
+.AppNextInQueueRow
+{
+	flow-children: right;
+}
+
+.AppNextInQueueRowWrapper
+{
+	flow-children: down;
+	vertical-align: center;
 }
 
 .AppNextInQueue Label
@@ -766,6 +809,10 @@
 .AppAboutOverview
 {
 	font-size: 26px;
+	color: almost_white;
+}
+.AppAboutOverview a
+{
 	color: almost_white;
 }
 
@@ -907,13 +954,13 @@ VerticalScrollBar {
 .AppRatingRow
 {
 	flow-children: right;
-	width: 100%;
+	width: 400px;
 }
 
 .AppRatingRow Label
 {
-	width: fill-parent-flow( 1.0 );
-	margin-left: 16px;
+	width: 350px;
+	padding-left: 16px;
 }
 
 .AppRatingOnline

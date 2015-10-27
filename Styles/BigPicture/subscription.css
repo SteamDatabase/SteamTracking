@@ -3,6 +3,7 @@
 @define almost_white: #c7d5e0;
 @define green_in_page: #a3cf06;
 @define section_bg_color: #000000ff;
+@define app_warning_color: #f47b20;
 
 ////////////////////////////////
 // Purchase option page
@@ -110,8 +111,8 @@
 	flow-children: down;
 	overflow: clip scroll;
 	padding: 60px 20px 140px 18px;
-
 }
+
 .PackageGroups_ctn
 {
 	height: 710px;
@@ -392,4 +393,47 @@
 VerticalScrollBar
 {
 	opacity: 0;
+}
+
+// important notes
+.PurchaseNoteBtn
+{
+	margin: 27px 0px 40px 0px;
+}
+
+.PurchaseNoteSection
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	padding: 60px 30px 140px 30px;
+}
+
+.PurchaseNoteSection Label
+{
+	width: 100%;
+}
+
+.PurchaseNoteHTML
+{
+	color: almost_white;
+    font-size: 26px;
+}
+
+.PurchaseNoteHTML b
+{
+	color: app_warning_color;
+}
+
+.PurchaseNoteHTML strong
+{
+	font-weight: bold;
+}
+
+.PurchaseNoteHR
+{
+	width: 100%;
+	height: 3px;
+	margin: 14px 0px 14px 0px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #4e5d6b00 ), color-stop( 0.5, #4e5d6bff ), color-stop( 1.0, #4e5d6b00 ) );
 }

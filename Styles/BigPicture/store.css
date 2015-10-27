@@ -106,9 +106,9 @@
 
 	border-radius: 3px;
 
-	background-color: nontransparent_module;
+	//background-color: nontransparent_module;
 
-	box-shadow: module_shadow;
+	//box-shadow: module_shadow;
 }
 
 .BasicCapsule:focus .BasicCapsuleBackground,
@@ -137,6 +137,10 @@
 	pre-transform-scale2d: 1.0;
 	z-index: 200;
 }
+.BasicCapsule:hover
+{
+	z-index: 201;
+}
 
 .BasicCapsuleInfo
 {
@@ -144,7 +148,7 @@
 	height: 50px;
 	flow-children: right;
 	font-size: 24px;
-    color: detailsdatalabel;
+    color: #7892a0;
 	margin: 0px 5px 5px 5px;
 
     transition-property: color;
@@ -152,7 +156,8 @@
     transition-timing-function: bigpicture-ease-in-out;
 }
 
-.BasicCapsule:focus .BasicCapsuleInfo
+.BasicCapsule:focus .BasicCapsuleInfo,
+.BasicCapsule:hover .BasicCapsuleInfo
 {
 	color: white;
 	background-color: action_module;
@@ -170,6 +175,14 @@
 	margin-left: 5px;
 	margin-top: 5px;
 
+	border-radius: 3px 3px 3px 3px;
+
+	box-shadow: module_shadow;
+}
+.BasicCapsule:focus .BasicCapsuleImage,
+.BasicCapsule:hover .BasicCapsuleImage
+{
+	box-shadow: none;
 	border-radius: 3px 3px 0px 0px;
 }
 
@@ -178,6 +191,7 @@
 	width: fill-parent-flow( 1.0 );
 	padding-left: 8px;
 	padding-top: 10px;
+	font-weight: light;
 }
 
 .BasicCapsule .DiscountBlock

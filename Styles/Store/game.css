@@ -1888,7 +1888,8 @@ img.package_header {
 	height: 75px;
 	float: right;
 	cursor: pointer;
-	margin-top: -17px;
+	margin-top: 6px;
+	margin-bottom: -26px;
 	margin-right: -72px;
 	background-size: 100% 200%;
 }

@@ -395,7 +395,7 @@ function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalM
 function Responsive_InitTouchDetection( $ )
 {
 	var $HTML= $J('html');
-	if ( !UseTouchFriendlyMode() && $HTML.hasClass('responsive') )
+	if ( !$HTML.hasClass('touch') && $HTML.hasClass('responsive') )
 	{
 		$J(window ).one('touchstart', function() {
 			// user is on a touch device - enable touch-friendly accessors and

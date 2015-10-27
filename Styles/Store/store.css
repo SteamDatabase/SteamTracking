@@ -444,8 +444,6 @@ a.store_header_btn_content:hover {
 
 div#store_search {
 	float: right;
-	border-left: 1px solid #000000;
-
 	padding: 3px 4px 2px;
 	height: 30px;
 }
@@ -595,6 +593,11 @@ a#store_search_link img {
 	display: block;
 }
 
+.store_nav .tab.lesspadding > span {
+	padding: 0 12px;
+}
+
+
 .store_nav .tab:hover > span, .store_nav .tab:hover, .store_nav .tab.focus > span, .store_nav .tab.focus {
 	filter: none;
     color: #ffffff;
@@ -714,6 +717,13 @@ a#store_search_link img {
 .slider_ctn {
 	position: relative;
 	height: 18px;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .slider_ctn.spotlight {
     width: 308px;
@@ -1645,10 +1655,6 @@ div.game_hover {
 	padding-left: 16px;
 }
 
-.cluster_scroll_area {
-	position: relative;
-}
-
 .cluster_capsule {
 	display: block;
 	float: left;
@@ -2265,26 +2271,30 @@ a.pulldown_mobile {
 
 .main_cluster_content {
 	width 616px;
-}
-
-.main_cluster_content {
-	width: 616px;
 	height: 395px;
 	overflow: hidden;
 	margin-bottom: 4px;
 	position: relative;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+html.touch .main_cluster_content {
+	overflow-x: scroll;
+}
+
+.main_cluster_content::-webkit-scrollbar {
+	display: none;
 }
 
 .cluster_scroll_area {
-	position: relative;
 	overflow: hidden;
 }
 
 .main_cluster_content a.cluster_capsule  {
-	display: block;
+	display: inline-block;
 	width: 616px;
 	height: 395px;
-	float: left;
 	margin-right: 4px;
 	position: relative;
 }

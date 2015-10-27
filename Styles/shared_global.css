@@ -877,6 +877,9 @@ div#global_header {
 	background: #171a21;
 	background-position: center top;
 	min-width: 940px;
+
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 14px;
 }
 
 /**/
@@ -927,11 +930,17 @@ div.admin_actions {
 }
 
 div#global_actions #global_action_menu {
-	float: right;
+	line-height: 24px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#global_action_menu > * {
+	vertical-align: middle;
 }
 
 div#global_actions .user_avatar {
-	float: right;
+	display: inline-block;
 	margin-left: 3px;
 }
 
@@ -1001,9 +1010,10 @@ div#global_header .activebg {
 }
 
 .header_installsteam_btn {
-	float: left;
+	display: inline-block;
 	position: relative;
 	height: 21px;
+	line-height: 21px;
 	margin-right: 3px;
 }
 
@@ -1049,6 +1059,57 @@ div#global_header .activebg {
 
 .header_installsteam_btn_content:hover {
 	text-decoration: none;
+	color: #ffffff;
+}
+
+.global_header_toggle_button {
+	display: inline-block;
+	line-height: 24px;
+	margin: 0 3px 0 8px;
+	cursor: pointer;
+	background-color: #262625;
+}
+
+.global_header_toggle_button:hover,
+.global_header_toggle_button.focus {
+	background-color: #575451;
+}
+
+/* make sure we override any global a styles on the site */
+.global_header_toggle_button,
+a.global_header_toggle_button,
+a.global_header_toggle_button:hover {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.global_header_toggle_button.green,
+.global_header_toggle_button.has_notifications {
+	background-color: #5c7e10;
+}
+
+.global_header_toggle_button.green:hover,
+.global_header_toggle_button.green.focus,
+.global_header_toggle_button.has_notifications:hover,
+.global_header_toggle_button.has_notifications.focus {
+	background-color: #7ea64b;
+}
+
+.global_header_toggle_button.red {
+	background-color: #9a3130;
+}
+
+.global_header_toggle_button.red:hover,
+.global_header_toggle_button.red.focus {
+	background-color: #d75a5a;
+}
+
+.global_header_account_alert {
+	font-weight: bold;
+	padding: 0 54px;
+}
+
+a.global_header_account_alert:hover {
 	color: #ffffff;
 }
 
@@ -1166,78 +1227,22 @@ a.pagelink:hover {
 /* notification box */
 
 #header_notification_area {
-	float: left;
-	margin-right: 3px;
-	margin-top: -6px;
-	margin-left: 8px;
+	display: inline-block;
 }
 
 .header_notification_btn {
-	position: relative;
-	height: 29px;
-
-	cursor: pointer;
+	padding: 0 8px;
 }
 
-.header_notification_btn.no_notifications {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_notification_grey.png' );
-	background-repeat: no-repeat;
-	background-position: center top;
-	width: 29px;
+.header_notification_btn.has_notifications .header_notification_envelope {
+	margin-left: 4px;
 }
 
-.header_notification_btn.no_notifications:hover, .header_notification_btn.no_notifications.focus {
-	background-position: center bottom;
-}
-
-.header_notification_btn.no_notifications .leftcap,
-.header_notification_btn.no_notifications .rightcap,
 .header_notification_btn.no_notifications .notification_count {
 	display: none;
 }
 
 .header_notification_btn.has_notifications {
-	padding: 0 28px 0 10px;
-
-	background-repeat: repeat-x;
-	background-position: 0 -29px;
-
-	line-height: 29px;
-	font-weight: bold;
-	color: #ffffff;
-}
-
-.header_notification_btn.has_notifications, .header_notification_btn.has_notifications .leftcap, .header_notification_btn.has_notifications .rightcap {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_notification_green.png?=1' );
-}
-
-.header_notification_btn.has_notifications:hover, .header_notification_btn.has_notifications.focus {
-	background-position: 0 -87px;
-}
-
-.header_notification_btn.has_notifications:hover .leftcap, .header_notification_btn.has_notifications.focus .leftcap {
-	background-position: 0 -58px;
-}
-.header_notification_btn.has_notifications:hover .rightcap, .header_notification_btn.has_notifications.focus .rightcap {
-	background-position: right -58px;
-}
-
-.header_notification_btn.has_notifications .leftcap {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 5px;
-	height: 29px;
-	background-position: left top;
-}
-
-.header_notification_btn.has_notifications .rightcap {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 20px;
-	height: 29px;
-	background-position: right top;
 }
 
 #header_notification_dropdown .popup_menu_item {
@@ -1312,24 +1317,16 @@ a.pagelink:hover {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_moderator_message.png' );
 }
 
-
-#header_parental_area {
-	float: left;
-	margin-right: 3px;
-	margin-top: -6px;
-	margin-left: 8px;
+.header_parental_btn {
+	padding: 0 12px;
+	width: 23px;
+	background-image: url( 'data:image/png;base64,' );
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-.header_parental_btn {
-	position: relative;
-	top: -1px;
-	height: 30px;
-
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_parent.png' );
-	background-position: center center;
-	background-repeat: no-repeat;
-
-	padding: 0 30px 0 10px;
+.header_parental_btn img {
+	vertical-align: middle;
 }
 
 #header_parental_link.header_parental_btn {

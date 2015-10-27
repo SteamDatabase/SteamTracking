@@ -2257,6 +2257,8 @@ function CScrollSlider( $Scroll, $Container, $Grabber, args )
 	this.m_Slider = new CSlider( $Slider.length ? $Slider : $Container, $Grabber, { fnOnChange: $J.proxy( this.OnSliderChange, this )} );
 
 	this.m_$Scroll.css('overflowX', 'scroll');
+	// add momentum on iOS
+	this.m_$Scroll.css('-webkit-overflow-scrolling', 'touch');
 
 	var _this = this;
 	this.m_$Scroll.on( 'scroll.ScrollSlider', function() {
@@ -2966,6 +2968,29 @@ function LaunchWebChat( params )
 			winChat.OnWebchatLaunchURL( params );
 	}
 	winChat.focus();
+}
+
+function ShowSupportAlerts(url)
+{
+	window.open( url, 'SupportAlerts', 'height=700,width=700,resize=yes,scrollbars=yes' );
+}
+
+function ToggleFamilyView( bLocked, strURL )
+{
+	if ( bLocked )
+	{
+		window.location = strURL;
+	}
+	else
+	{
+		ShowConfirmDialog( 'Return to Family View',
+			'Are you sure you want to return to Family View?',
+			'Return to Family View'
+		).done( function() {
+			ShowBlockingWaitDialog( 'Return to Family View' );
+			window.location = strURL;
+		});
+	}
 }
 
 function FlushStyleChanges( element )

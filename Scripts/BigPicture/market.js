@@ -920,11 +920,14 @@ function DisplaySearchOptions( data )
 	{
 		var facetData = data.facets[facet];
 
-		var header = $.CreatePanel( 'Label', options, '' );
+		var wrapper = $.CreatePanel( 'Panel', options, '' );
+		wrapper.AddClass( 'DropDownWrapper' );
+
+		var header = $.CreatePanel( 'Label', wrapper, '' );
 		header.AddClass( 'FacetHeader' );
 		header.text = facetData.localized_name;
 
-		var dropdown = $.CreatePanel( 'DropDown', options, facet );
+		var dropdown = $.CreatePanel( 'DropDown', wrapper, facet );
 
 		dropdown.text = facetData.localized_name;
 
@@ -1046,6 +1049,10 @@ function OnSearchAppChange()
 								}
 							} );
 	}
+	else
+	{
+		$.Schedule( 0.0, OnSearchSubmit );
+	}
 }
 
 function OnSearchFacetChange()
@@ -1057,22 +1064,23 @@ function OnSearchFacetChange()
 
 function OnSearchClear()
 {
-	$.GetContextPanel().AddClass( "NoSearchRun" );
 	var dropdown = $("#MarketSearchAppDropDown" );
 	$("#MarketSearchText").text = "";
 
 	ClearSearchOptions();
-	dropdown.SetSelected( "app_option_all" );
+	dropdown.SetSelected( "any" );
 
 	// Put back in the fake dropdowns
 	var options = $("#SearchOptions");
+	var wrapper = $.CreatePanel( 'Panel', options, '' );
+	wrapper.AddClass( 'DropDownWrapper' );
 	for ( var i = 0; i < 5; i++ )
 	{
-		var p = $.CreatePanel( 'DropDown', options, '' );
+		var p = $.CreatePanel( 'DropDown', wrapper, '' );
 		p.enabled = false;
 	}
 
-	g_rgMarketGrids['search'].ClearGrid();
+	OnSearchSubmit();
 }
 
 
@@ -1109,15 +1117,16 @@ function GetParamsSearch()
 
 	rgParams['query'] =  $("#MarketSearchText").text;
 
+	$("#MarketSearchText").SetHasClass( "AlwaysVisible", $("#MarketSearchText").text != '' );
+
 	// appid
 	var selectedApp = $("#MarketSearchAppDropDown").GetSelected();
-	var selectedAppId = selectedApp.id;
-	var appid = selectedAppId.substring( selectedAppId.lastIndexOf('_') + 1 );
-
-	if ( appid != 'all' )
+	var appid = selectedApp.id;
+	if ( appid != 'any' )
 	{
 		rgParams['appid'] = appid;
 	}
+	$("#MarketSearchAppDropDown").GetParent().SetHasClass( "AlwaysVisible", appid != 'any' );
 
 	//
 	// All search params
@@ -1125,13 +1134,26 @@ function GetParamsSearch()
 	var options = $( "#SearchOptions" );
 	$.Each( options.Children(), function( elCategory )
 	{
-		if ( elCategory.paneltype == 'DropDown' && elCategory.enabled )
+		if ( elCategory.BHasClass( 'DropDownWrapper' ) )
 		{
-			var param = encodeURIComponent( 'category_' + elCategory.id /*+ '[]' */);
-			var filter = elCategory.AccessDropDownMenu();
-			var selected = elCategory.GetSelected();
+			var dropdown = elCategory.GetChild( 1 ); // Dropdown is always the second child
+			if ( dropdown.enabled )
+			{
+				if ( dropdown.id != "MarketSearchAppDropDown" )
+				{
+					var param = encodeURIComponent( 'category_' + dropdown.id /*+ '[]' */);
+					var filter = dropdown.AccessDropDownMenu();
+					var selected = dropdown.GetSelected();
 
-			rgParams[param] = [ selected.id ];
+					rgParams[param] = [ selected.id ];
+
+					elCategory.SetHasClass( 'AlwaysVisible', selected.id != 'any' );
+				}
+			}
+			else
+			{
+				elCategory.RemoveClass( 'AlwaysVisible' );
+			}
 		}
 	} );
 

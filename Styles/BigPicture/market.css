@@ -779,6 +779,11 @@ Label.HistoryEventDescription
 	padding-left: 41px;
 }
 
+#MarketSearchAppDropDown Panel
+{
+	width: 100%;
+}
+
 #ItemGridMain
 {
 	transform: translatex( 1920px );
@@ -802,7 +807,16 @@ Label.HistoryEventDescription
 {
 	width: 50%;
 	font-size: 24px;
+	height: 0px;
+}
+
+.NoSearchRun #MarketSearchText,
+.NxFilterTab:descendantfocus #MarketSearchText,
+#MarketSearchText.AlwaysVisible
+{
+	height: fit-children;
 	margin-top: 10px;
+	margin-bottom: 16px;
 }
 
 #MarketSearchText #PlaceHolderText
@@ -820,13 +834,6 @@ Label.HistoryEventDescription
 #MarketSearchText.HasInput #PlaceHolderText
 {
 	opacity: 0.0;
-}
-
-#SearchOptions
-{
-	padding: 5px;
-	padding-right: 20px;
-	width: 100%;
 }
 
 #SearchOptions DropDown:disabled
@@ -874,17 +881,18 @@ DropDown Image,
 	overflow: squish scroll;
 	padding-right: 10px;
 	opacity: 0.0;
+	height: 0px;
 }
 
 .SearchOptionsLoading #SearchThrobberPanel
 {
 	opacity: 1.0;
+	height: fit-children;
 }
 
 #SearchContentPanel
 {
 	width: 100%;
-	height: 0px;
 	flow-children: none;
 }
 
@@ -918,6 +926,9 @@ DropDown Image,
 
 #SearchOptions
 {
+	padding: 5px;
+	padding-right: 20px;
+	width: 100%;
 	opacity: 1.0;
 	overflow: squish scroll;
 }
@@ -1020,7 +1031,6 @@ DropDown Image,
 	opacity: 1.0;
 }
 
-#MarketSearchText,
 #MarketSearchAppDropDown
 {
 	margin-bottom: 16px;
@@ -1033,13 +1043,18 @@ DropDown Image,
 	visibility: collapse;
 }
 
+#SearchOptions
+{
+	max-height: 600px;
+}
+
 #MarketSearchPanel VerticalScrollBar .ScrollThumb
 {
 //	background-color: tcstatictext;
 }
 
 #MarketSearchPanel:descendantfocus DropDown,
-#MarketContentPanel.NoSearchRun DropDown
+.NoSearchRun #MarketSearchPanel DropDown
 {
 	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
 	background-repeat: no-repeat;
@@ -1177,3 +1192,22 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	position: -544px -10px 0px;
 }
 
+.DropDownWrapper
+{
+	flow-children: down;
+	width: 100%;
+	height: 0px;
+}
+
+.NxFilterTab:descendantfocus .DropDownWrapper,
+.NxFilterTab .DropDownWrapper.AlwaysVisible,
+.NoSearchRun .DropDownWrapper,
+{
+	height: fit-children;
+}
+
+.NxFilterTab .AlwaysVisible DropDown
+{
+	height: 48px;
+	margin-bottom: 16px;
+}

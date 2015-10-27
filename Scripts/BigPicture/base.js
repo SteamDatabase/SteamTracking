@@ -494,9 +494,16 @@ function ShowModalDialog( strChildren )
 	pPanel.BCreateChildren( strChildren );
 
 	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( pPanel, '' );
+	$.RegisterFooterButton( pPanel, 'Cancelled', '#Library_CloseButton' );
 
 	return pPanel;
 }
+
+function HideActivateFooterBtn( pPanel )
+{
+	$.RegisterFooterButton( pPanel, 'Activated', '' );
+}
+
 
 function IsModalDialogClosing( pPanel )
 {

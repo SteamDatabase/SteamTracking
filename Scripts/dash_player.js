@@ -32,6 +32,8 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nLastDecodedFrameTime = 0;
 	this.m_nCurrentFramerate = 0;
 	this.m_strUniqueId = "";
+	this.m_fCurrentRepresentationBandwidth = 0;
+	this.m_nCurrentDownloadResolution = 0;
 
 	// EME-related
 	this.m_tsLastEncryptedEvent = 0;
@@ -84,12 +86,12 @@ function CDASHPlayer( elVideoPlayer )
 
 CDASHPlayer.TRACK_BUFFER_MS = 8000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
-CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
+CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 60 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
-CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS = 1000;
+CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS = 500;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -1268,6 +1270,7 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 		loader.ChangeRepresentationByIndex( this.m_nVideoRepresentationIndex );
 		loader.SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
 		this.m_nRepChangeTargetHeight = loader.m_adaptation.representations[this.m_nVideoRepresentationIndex].height;
+		this.UpdateStatsForBandwidthDisplay( loader, this.m_nVideoRepresentationIndex );
 
 		$J( this.m_elVideoPlayer ).trigger( 'logevent', [ 'Video Quality', this.m_nRepChangeTargetHeight.toString() ] );
 
@@ -1289,6 +1292,7 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 	if ( iMaxRepresentation == 0 )
 	{
 		this.m_nVideoRepresentationIndex = iMaxRepresentation;
+		this.UpdateStatsForBandwidthDisplay( loader, this.m_nVideoRepresentationIndex );
 		return;
 	}
 
@@ -1326,6 +1330,7 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 
 	// set
 	this.m_nVideoRepresentationIndex = -1;
+	this.UpdateStatsForBandwidthDisplay( loader, iNewRepresentation );
 	loader.ChangeRepresentationByIndex( iNewRepresentation );
 
 	// for alternate video tracks, switch immediately
@@ -1335,6 +1340,12 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 		this.m_nRepChangeTargetHeight = loader.m_adaptation.representations[ iNewRepresentation ].height;
 		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
 	}
+}
+
+CDASHPlayer.prototype.UpdateStatsForBandwidthDisplay = function( loader, nRepresentation )
+{
+	this.m_fCurrentRepresentationBandwidth = ( ( loader.m_adaptation.representations[ nRepresentation ].bandwidth + this.m_nAudioBitRate ) * this.m_elVideoPlayer.playbackRate ) * 1.2;
+	this.m_nCurrentDownloadResolution = loader.m_adaptation.representations[ nRepresentation ].height ? loader.m_adaptation.representations[ nRepresentation ].height : 0;
 }
 
 CDASHPlayer.prototype.BIsRepresentationChanging = function()
@@ -1564,6 +1575,16 @@ CDASHPlayer.prototype.StatsDownloadVideoHeight = function()
 CDASHPlayer.prototype.StatsCurrentDownloadBitRate = function()
 {
 	return (this.m_nCurrentDownloadBitRate / 1000).toFixed(2);
+}
+
+CDASHPlayer.prototype.StatsCurrentRepresentationBandwidth = function()
+{
+	return this.m_fCurrentRepresentationBandwidth;
+}
+
+CDASHPlayer.prototype.StatsDownloadResolution = function()
+{
+	return this.m_nCurrentDownloadResolution;
 }
 
 CDASHPlayer.prototype.StatsBufferInfo = function()
@@ -1848,6 +1869,8 @@ function CSegmentLoader( player, adaptationSet )
 	this.m_statsGameData = {};
 }
 
+CSegmentLoader.nActiveDownloads = 0;
+
 CSegmentLoader.s_BufferUpdateNone = 0;
 CSegmentLoader.s_BufferUpdateAppend = 1;
 CSegmentLoader.s_BufferUpdateRemove = 2;
@@ -2090,6 +2113,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 	else
 		xhr.responseType = 'json';
 
+	CSegmentLoader.nActiveDownloads++;
 	var tsDownloadStart = performance.now();
 	try
 	{
@@ -2097,6 +2121,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 		{
 			if ( xhr.readyState == xhr.DONE )
 			{
+				CSegmentLoader.nActiveDownloads--;
 				if ( _loader.m_xhr == null )
 					return;
 
@@ -2181,6 +2206,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 	}
 	catch ( e )
 	{
+		CSegmentLoader.nActiveDownloads--;
 		PlayerLog( 'Failed to download segment: ' + e );
 		return;
 	}
@@ -2334,7 +2360,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	}
 
 	// if enough to play, but not fully buffered, download with delay to allow adaptive changes to occur
-	if ( unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
+	if ( CSegmentLoader.nActiveDownloads == 0 && unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
 	{
 		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS );
 		return;
@@ -2346,7 +2372,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	if ( this.m_player.m_elVideoPlayer.playbackRate > 1.0 )
 		unDeltaMS /= this.m_player.m_elVideoPlayer.playbackRate;
 
-	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
+	if ( CSegmentLoader.nActiveDownloads == 0 && unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
 	{
 		// should be room in buffer in TRACK_BUFFER_MS time for next segment
 		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
@@ -3691,12 +3717,21 @@ CDASHPlayerUI.prototype.SetupAudioRepresentationsInUI = function()
 	for (var r = 0; r < rgRepresentation.length; r++)
 	{
 		var strChannelInfo;
-		if ( rgRepresentation[r].audioChannels == 2 )
-			strChannelInfo = 'Stereo';
-		else if ( rgRepresentation[r].audioChannels == 6 )
-			strChannelInfo = '5.1 Surround';
-		else
-			strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
+		switch ( rgRepresentation[r].audioChannels )
+		{
+			case 1:
+				strChannelInfo = 'Mono';
+				break;
+			case 2:
+				strChannelInfo = 'Stereo';
+				break;
+			case 6:
+				strChannelInfo = '5.1 Surround';
+				break;
+			default:
+				strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
+				break;
+		}
 
 		$J('#representation_select_audio').append('<option value="' + ( r ) + '">' + strChannelInfo + ' (' + Math.ceil( rgRepresentation[r].bandwidth / 1000 ) + 'Kbps)</option>');
 	}
@@ -3928,12 +3963,21 @@ CDASHPlayerUI.prototype.SetupAudioRepresentationsInUITenFoot = function()
 		for (var r = 0; r < rgRepresentation.length; r++)
 		{
 			var strChannelInfo;
-			if ( rgRepresentation[r].audioChannels == 2 )
-				strChannelInfo = 'Stereo';
-			else if ( rgRepresentation[r].audioChannels == 6 )
-				strChannelInfo = '5.1 Surround';
-			else
-				strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
+			switch ( rgRepresentation[r].audioChannels )
+			{
+				case 1:
+					strChannelInfo = 'Mono';
+					break;
+				case 2:
+					strChannelInfo = 'Stereo';
+					break;
+				case 6:
+					strChannelInfo = '5.1 Surround';
+					break;
+				default:
+					strChannelInfo = rgRepresentation[r].audioChannels + '-Channel';
+					break;
+			}
 
 			if ( r == 0 )
 				$J( '#representation_audio #representation_select' ).append('<div data-value="' + ( r ) + '" class="selected">' + strChannelInfo + ' (' + Math.ceil( rgRepresentation[r].bandwidth / 1000 ) + 'Kbps)</div>');
@@ -4205,10 +4249,21 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 		if ( this.BInTenFoot() )
 		{
 			var strChannels = this.m_player.StatsAudioChannels();
-			if ( strChannels == 2 )
-				strChannelInfo = '/Stereo';
-			else if ( strChannels == 6 )
-				strChannelInfo = '/5.1';
+			switch ( strChannels )
+			{
+				case 1:
+					strChannelInfo = '/Mono';
+					break;
+				case 2:
+					strChannelInfo = '/Stereo';
+					break;
+				case 6:
+					strChannelInfo = '/5.1';
+					break;
+				default:
+					strChannelInfo = '/' + strChannels + '-Channel';
+					break;
+			}
 		}
 
 		if ( this.m_player.m_nPlaybackHeight != 0 )
@@ -4642,6 +4697,7 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			this.OnPressButtonX();
 			break;
 		case CDASHPlayerUI.BUTTON_Y:
+			this.OnPressButtonY();
 			break;
 
 		case CDASHPlayerUI.LEFT_BUMPER:
@@ -4771,7 +4827,7 @@ CDASHPlayerUI.prototype.OnPressButtonB = function ()
 	}
 }
 
-CDASHPlayerUI.prototype.OnPressButtonX = function ()
+CDASHPlayerUI.prototype.OnPressButtonX = function()
 {
 	if ( !this.BInTenFoot() )
 		return;
@@ -4779,6 +4835,17 @@ CDASHPlayerUI.prototype.OnPressButtonX = function ()
 	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
 	{
 		$J( this.m_player.m_elVideoPlayer ).trigger( 'togglestats' );
+	}
+}
+
+CDASHPlayerUI.prototype.OnPressButtonY = function()
+{
+	if ( !this.BInTenFoot() )
+		return;
+
+	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
+	{
+		this.ToggleFullscreen();
 	}
 }
 
@@ -6558,17 +6625,8 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.strGameDataBuffers = '';
 	this.oLastGameDataFrame = {};
 	this.fGameDataTriggerPerf = 0;
-	this.m_nLastKeycode = 0;
-	var _stats = this;
-	$J( window ).on( 'keydown', function ( e ) {
-		var keycode;
-		if (window.event)
-			keycode = window.event.keyCode;
-		else if (e)
-			keycode = e.which;
-
-		_stats.m_nLastKeycode = keycode
-	} );
+	this.nBandwithRequired = 0;
+	this.nDownloadResolution = 0;
 
 	// For Server Event Logging
 	this.m_bAutoLoggingEventsToServer = ( Math.random() * 100 ) < CDASHPlayerStats.LOGGING_RATE_PERC;
@@ -6820,10 +6878,12 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
 	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
 
-	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' (' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ')';
+	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' [' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ']';
 	this.strVideoBuffered = this.m_videoPlayer.StatsVideoBuffer() + 's';
 	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';
 	this.strBandwidth = this.m_videoPlayer.StatsCurrentDownloadBitRate() * 1000;
+	this.nBandwithRequired = this.m_videoPlayer.StatsCurrentRepresentationBandwidth();
+	this.nDownloadResolution = this.m_videoPlayer.StatsDownloadResolution();
 	this.strBuffers = this.m_videoPlayer.StatsBufferInfo();
 	if ( this.m_videoPlayer.StatsGameDataBufferCount() != 0 )
 		this.strGameDataBuffers = this.m_videoPlayer.StatsLastGameDataEventTriggerFrame() + '/' + this.m_videoPlayer.StatsGameDataBufferCount();
@@ -6917,6 +6977,18 @@ CDASHPlayerStats.prototype.Tick = function()
 			value: this.strResolution
 		},
 		{
+			id: 'downloadbandwidth',
+			label: 'Bandwidth Average',
+			value: this.strBandwidth,
+			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgBpsUnits ) }
+		},
+		{
+			id: 'bwrequiredforrep',
+			label: 'Bandwidth Required',
+			value: this.nBandwithRequired,
+			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgBpsUnits ) + ' (' + _stats.nDownloadResolution + 'p)' }
+		},
+		{
 			id: 'videobuffered',
 			label: 'Video Buffered',
 			value: this.strVideoBuffered
@@ -6927,14 +6999,8 @@ CDASHPlayerStats.prototype.Tick = function()
 			value: this.strAudioBuffered
 		},
 		{
-			id: 'downloadbandwidth',
-			label: 'Bandwidth',
-			value: this.strBandwidth,
-			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgBpsUnits ) }
-		},
-		{
 			id: 'dashbuffers',
-			label: 'Buffers',
+			label: '',
 			value: this.strBuffers
 		},
 		{
@@ -7001,11 +7067,11 @@ CDASHPlayerStats.prototype.Tick = function()
 			value: ( this.fGameDataTriggerPerf != 0 ) ? this.fGameDataTriggerPerf + ' ms' : null
 		},
 		{
-			id: 'lastkeydown',
-			label: 'Keycode',
-			value: this.m_nLastKeycode
+			id: 'activedownloads',
+			label: 'Active Downloads',
+			value: CSegmentLoader.nActiveDownloads,
 		},
-];
+	];
 
 	for( var i=0; i < rgStatsDefinitions.length; i++)
 	{
@@ -7016,7 +7082,8 @@ CDASHPlayerStats.prototype.Tick = function()
 			// Create element if needed
 			if( $target.length == 0 )
 			{
-				var container = $J('<div id="'+rgStatDefinition.id+'">' + rgStatDefinition.label + ': <span class="value"></span></div>');
+				var label = ( rgStatDefinition.label == '' ) ? '' : rgStatDefinition.label + ': '
+				var container = $J('<div id="'+rgStatDefinition.id+'">' + label + '<span class="value"></span></div>');
 				$J(this.eleOverlay).append( container );
 				$target = $J( '.value', container );
 			}

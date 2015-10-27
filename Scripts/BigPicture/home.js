@@ -50,24 +50,6 @@ CStoreHome.prototype.ShowStoreSection = function( strSection )
 	this.m_navigation.ShowPanel( pSection );
 }
 
-CStoreHome.prototype.FocusDiscoveryQueue = function()
-{
-	// set button into focus to create section
-	$( '#ExploreBtn').SetFocus();
-
-	// find queue button
-	var pContent = $( '#LoadedContent' );
-	for ( var i = 0; i < pContent.GetChildCount(); i++ )
-	{
-		var pChild = pContent.GetChild( i );
-		if ( !pChild.BHasClass( 'HomeExplore' ) )
-			continue;
-
-		var pQueue = pChild.FindChildInLayoutFile( 'DiscoveryQueue' );
-		$.DispatchEventAsync( 0.1, 'SetInputFocus', pQueue );
-	}
-}
-
 CStoreHome.prototype.OnUnreadyForDisplay = function( pPanel )
 {
 	var pLeft = $('#LeftColumn');
@@ -184,6 +166,18 @@ function ShowAppLibraryPage( nAppID )
 	$.DispatchEvent( 'LibraryShowApp', nAppID );
 }
 
+function ShowDiscoveryQueuePage()
+{
+	var strURL = 'https://store.steampowered.com/explore/';
+	$.DispatchEvent( 'OpenRemoteContent', strURL, 'Your Discovery Queue', 2  );
+}
+
+function LibraryInstallApp( nAppID )
+{
+	$.DispatchEvent( 'LibraryInstallApp', nAppID );
+}
+
+
 function SetOnlyChildVisible( pPanel, strChildID )
 {
 	for ( var i = 0; i < pPanel.GetChildCount(); i++ )
@@ -202,7 +196,7 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 	if ( !nViewedAppID )
 		nViewedAppID = 0;
 
-	var pScript = "\r\n\t\tvar nViewedAppID = %viewed_app%;\r\n\t\tvar postData = {};\r\n\t\tpostData.sessionid = %sessionid%;\r\n\t\tif ( nViewedAppID != 0 )\r\n\t\t\tpostData.appid_to_clear_from_queue = nViewedAppID;\r\n\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/explore\/next',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: postData,\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tif ( data.empty_queue )\r\n\t\t\t\t{\r\n\t\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/bigpicture\/home\/?focus=discovery_queue';\r\n\t\t\t\t\t$.DispatchEvent( 'OpenRemoteContent', strURL , 'Store', 2 );\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tif ( !data.appid )\r\n\t\t\t\t{\r\n\t\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/app\/' + data.appid;\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + data.name + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.DispatchEvent( 'SetContentTitle', $.GetContextPanel(), data.name );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\tvar nViewedAppID = %viewed_app%;\r\n\t\tvar postData = {};\r\n\t\tpostData.sessionid = %sessionid%;\r\n\t\tif ( nViewedAppID != 0 )\r\n\t\t\tpostData.appid_to_clear_from_queue = nViewedAppID;\r\n\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/explore\/next',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: postData,\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tif ( data.empty_queue )\r\n\t\t\t\t{\r\n\t\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/explore';\r\n\t\t\t\t\t$.DispatchEvent( 'OpenRemoteContent', strURL , 'Your Discovery Queue', 2 );\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tif ( !data.appid )\r\n\t\t\t\t{\r\n\t\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/app\/' + data.appid;\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + data.name + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.DispatchEvent( 'SetContentTitle', $.GetContextPanel(), data.name );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%viewed_app%', nViewedAppID );
 
@@ -422,8 +416,10 @@ var CStoreSlideshow = function( pPanel )
 	this.m_eMode = CStoreSlideshow.k_eModeEmbedded;
 	this.m_iFocusedChild = -1;
 	this.m_bTransitioning = false;
-	this.m_schNextPanel = null;
+	this.m_schNextPanel = undefined;
 	this.m_bEnabled = false;
+	this.m_bShowNavHintsOnFocus = true;
+	this.m_schHideNavHints = undefined;
 
 	this.Init();
 }
@@ -442,6 +438,7 @@ CStoreSlideshow.prototype.Init = function()
 	this.m_pPanel.SetAcceptsFocus( true );
 	$.RegisterEventHandler( 'Activated', this.m_pPanel, function( pPanel ) { return _slideshow.OnActivated( pPanel ); } );
 	$.RegisterEventHandler( 'InputFocusSet', this.m_pPanel, function( pPanel ) { return _slideshow.OnFocusSet( pPanel ); } );
+	$.RegisterEventHandler( 'InputFocusLost', this.m_pPanel, function( pPanel ) { return _slideshow.OnFocusLost( pPanel ); } );
 	$.RegisterEventHandler( 'Cancelled', this.m_pPanel, function( pPanel ) { return _slideshow.OnCancelled( pPanel ); } );
 	$.RegisterEventHandler( 'PropertyTransitionEnd', this.m_pPanel, function( pPanel, property ) { return _slideshow.OnPropertyTransitionEnd( pPanel, property ); } );
 	$.RegisterEventHandler( 'MoviePlayerPlaybackEnded', this.m_pPanel, function( pPanel, eError ) { return _slideshow.OnMoviePlayerPlaybackEnded( pPanel, eError ); } );
@@ -449,6 +446,9 @@ CStoreSlideshow.prototype.Init = function()
 
 	$.RegisterKeyBind( this.m_pPanel, 'pad_ltrigger,steampad_ltrigger', function() { _slideshow.OnLeftShoudler(); } );
 	$.RegisterKeyBind( this.m_pPanel, 'pad_rtrigger,steampad_rtrigger', function() { _slideshow.OnRightShoudler(); } );
+
+	// init ui
+	this.CreateEmbedArrows();
 
 	// initialize child positions
 	for ( var i = 0; i < this.m_pPanel.GetChildCount(); i++ )
@@ -659,6 +659,45 @@ CStoreSlideshow.prototype.OnFocusSet = function( pPanel )
 		return false;
 
 	this.SetFocusedChild( this.m_pPanel.GetChildIndex( pPanel ) );
+
+	// show nav hints if necessary
+	if ( this.m_bShowNavHintsOnFocus )
+	{
+		this.m_pPanel.AddClass( 'ShowNavHints' );
+		this.ScheduleHideNavHints( 10 );
+		this.m_bShowNavHintsOnFocus = false;
+	}
+}
+
+CStoreSlideshow.prototype.OnFocusLost = function( pPanel )
+{
+	if ( !this.m_pPanel.BHasDescendantKeyFocus() && !this.m_pPanel.BHasKeyFocus() && !this.m_bTransitioning )
+	{
+		this.m_pPanel.RemoveClass( 'ShowNavHints' );
+		this.ScheduleHideNavHints( 0 );
+		this.m_bShowNavHintsOnFocus = true;
+	}
+}
+
+CStoreSlideshow.prototype.ScheduleHideNavHints = function( nDelay )
+{
+	if ( this.m_schHideNavHints != undefined )
+	{
+		$.CancelScheduled( this.m_schHideNavHints );
+		this.m_schHideNavHints = undefined;
+	}
+
+	if ( nDelay == 0 )
+		return;
+
+	var _slideshow = this;
+	this.m_schHideNavHints = $.Schedule( nDelay, function() { _slideshow.m_pPanel.RemoveClass( 'ShowNavHints' ); _slideshow.m_schHideNavHints = undefined; } );
+}
+
+CStoreSlideshow.prototype.HideNavHints = function()
+{
+	this.ScheduleHideNavHints(0);
+	this.m_pPanel.RemoveClass('ShowNavHints');
 }
 
 CStoreSlideshow.prototype.OnActivated = function( pPanel )
@@ -672,6 +711,7 @@ CStoreSlideshow.prototype.OnActivated = function( pPanel )
 	this.m_bTransitioning = true;
 
 	// go fullscreen
+	this.HideNavHints();
 	var pos = this.m_pPanel.GetPositionWithinWindow();
 	var width = this.m_pPanel.actuallayoutwidth;
 	var height = this.m_pPanel.actuallayoutheight;
@@ -734,13 +774,19 @@ CStoreSlideshow.prototype.OnMoveRight = function()
 CStoreSlideshow.prototype.OnLeftShoudler = function()
 {
 	if ( this.m_eMode == CStoreSlideshow.k_eModeEmbedded )
+	{
+		this.HideNavHints();
 		this.MoveLeft();
+	}
 }
 
 CStoreSlideshow.prototype.OnRightShoudler = function()
 {
 	if ( this.m_eMode == CStoreSlideshow.k_eModeEmbedded )
+	{
+		this.HideNavHints();
 		this.MoveRight();
+	}
 }
 
 CStoreSlideshow.prototype.OnCancelled = function()
@@ -863,4 +909,45 @@ CStoreSlideshow.prototype.SetEnabled = function( bEnabled )
 		if ( pMovie )
 			pMovie.Pause();
 	}
+}
+
+CStoreSlideshow.prototype.CreateEmbedArrows = function()
+{
+	// older clients don't support creating mouse scroll regions
+	var pLeft = null;
+	var pRight = null;
+	try
+	{
+		pLeft = $.CreatePanel( 'MouseScrollRegion', this.m_pPanel, '' );
+		pRight = $.CreatePanel( 'MouseScrollRegion', this.m_pPanel, '' );
+	}
+	catch ( e )
+	{
+	}
+
+	if ( !pLeft || !pRight )
+		return;
+
+	var _slideshow = this;
+	pLeft.AddClass( 'SlideshowNavHints' );
+	pLeft.AddClass( 'NavHintLeft' );
+	pLeft.BCreateChildren( '<Image src="file://{images}/arrow_left.png" /><Image class="NavHintButton" src="file://{images}/library/controller/api/trigger_l_pull.png" />' );
+	$.RegisterEventHandler( 'MouseScroll', pLeft, function( pPanel ) { _slideshow.OnNavButtonScroll( pPanel ); });
+
+
+	pRight.AddClass( 'SlideshowNavHints' );
+	pRight.AddClass( 'NavHintRight' );
+	pRight.BCreateChildren( '<Image class="NavHintButton" src="file://{images}/library/controller/api/trigger_r_pull.png" /><Image src="file://{images}/arrow_right.png" />' );
+	$.RegisterEventHandler( 'MouseScroll', pRight, function( pPanel ) { _slideshow.OnNavButtonScroll( pPanel ); });
+}
+
+CStoreSlideshow.prototype.OnNavButtonScroll = function( pPanel )
+{
+	if ( !pPanel )
+		return;
+
+	if ( pPanel.BHasClass( 'NavHintLeft' ) )
+		this.OnLeftShoudler();
+	else if ( pPanel.BHasClass( 'NavHintRight' ) )
+		this.OnRightShoudler();
 }
