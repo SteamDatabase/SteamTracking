@@ -9604,6 +9604,8 @@
  T bn_sub_part_words
  T bn_sub_words
  T bool CryptoPP::NameValuePairs::GetThisObject<CryptoPP::RSAFunction>(CryptoPP::RSAFunction&) const
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T c2i_ASN1_OBJECT
  T check_defer
  T d2i_ASN1_OBJECT
@@ -10424,6 +10426,12 @@
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
  T unsigned int CryptoPP::DivideThreeWordsByTwo<unsigned int, CryptoPP::DWord>(unsigned int*, unsigned int, unsigned int, CryptoPP::DWord*)
+ T unsigned int std::__1::__sort3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
  T vgui::AnimatingImagePanel::ApplySettings(KeyValues*)
@@ -13664,6 +13672,10 @@
  T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<FriendAlias_t>(FriendAlias_t*)
+ T void std::__1::__insertion_sort_3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T void std::__1::__sort<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -13722,7 +13734,6 @@
  V_isbreakablewspace
  V_pretifymem
  V_pretifynum
- V_qsort_s
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)

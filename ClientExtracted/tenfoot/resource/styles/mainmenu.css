@@ -47,7 +47,7 @@ MainMenu
 
 MainMenu.SlideAwayToLeft
 {
-	opacity: 1.0;
+	opacity: 0.0;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
@@ -651,15 +651,6 @@ MainMenu.StackDepth3 .HomeGlow
 	visibility: collapse;
 }
 
-	
-.SteamLogo
-{
-	height: 32px;
-	width: 73px;
-	margin-left: 42px;
-	opacity: 0.65;
-}
-
 #MenuRow
 {
 	horizontal-align: center;
@@ -770,12 +761,6 @@ MainMenu.StackDepth3 #MenuRow:hover
 	opacity: 0.75;
 }
 
-MainMenu.ScreenshotSlideshowVisible #MenuRow
-{
-	opacity: 0.0;
-}
-
-
 .Button
 {
 	horizontal-align: center;
@@ -821,7 +806,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 	border-color: #b6e1faff;
 	background-color: #2A5D7C00 ;
-  box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;

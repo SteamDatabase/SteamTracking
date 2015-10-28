@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/cloudconflict.css" />
 	</styles>
@@ -17,15 +16,15 @@
 				</Panel>	
 	
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonUpload" class="MsgBoxButton" onactivate="CloudConflictAcceptLocal()">
+					<Button id="ButtonUpload" class="MsgBoxButton Button" onactivate="CloudConflictAcceptLocal()">
 						<Label id="ButtonUploadLabel" text="#Library_CloudConflict_Upload" />
 						<Label id="ButtonUploadDetails" text="#Library_CloudConflict_LocalFilesModified" />
 					</Button>
-					<Button id="ButtonDownload" class="MsgBoxButton" onactivate="CloudConflictAcceptRemote()">
+					<Button id="ButtonDownload" class="MsgBoxButton Button" onactivate="CloudConflictAcceptRemote()">
 						<Label id="ButtonDownloadLabel" text="#Library_CloudConflict_Download" />
 						<Label id="ButtonDownloadDetails" text="#Library_CloudConflict_CloudFilesModified" />
 					</Button>
-					<Button id="ButtonCancel" class="MsgBoxButton" onactivate="CloudConflictCancel()">
+					<Button id="ButtonCancel" class="MsgBoxButton Button" onactivate="CloudConflictCancel()">
 						<Label id="ButtonCancelLabel" text="#Library_CloudConflict_Cancel"/>
 						<Label id="ButtonCancelDetails" text="#Library_CloudConflict_CancelDetails" />
 					</Button>

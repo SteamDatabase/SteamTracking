@@ -2,13 +2,18 @@
 	<styles>		
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/contentframe.css" />
 		<include src="file://{resources}/styles/friends/friends_new.css" />
 	</styles>
 
 	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsTabButton">
 		<FriendsChatProfileBackground id="FriendsChatProfileBackground" />
-		<Panel class="TempTitle" >
-			<Label text="Friends" />
+		<Panel id="ContentFrameHeader" >
+			<Panel id="ContentMouseBackButton" onmouseactivate="BringMainMenuToTop();" />
+			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="BringMainMenuToTop();" />
+			<Panel id="ContentTitles">
+				<Label class="ContentTitle Show" text="#Friends_Menu_Friends" />
+			</Panel>
 		</Panel>
 		<Panel id="Offline">
 			<Button id="OfflineMessage">

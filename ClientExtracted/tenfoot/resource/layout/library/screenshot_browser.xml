@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/library/screenshotbrowser.css" />
 	</styles>
 	
-	<ScreenshotBrowser oncancel="CloseScreenshotBrowser( false )" class="ContentPanel" content-delete-at-stack-depth="2" content-title="#Screenshots_Screenshots_lwr">
+	<ScreenshotBrowser oncancel="CloseScreenshotBrowser()" class="ContentPanel" content-delete-at-stack-depth="2" content-title="#Screenshots_Screenshots_lwr">
 		<Panel id="Contents" >
 			<Panel id="NoScreenshots">
 				<Label text="#Screenshots_NoScreenshots" />

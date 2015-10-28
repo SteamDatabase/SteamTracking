@@ -3548,7 +3548,8 @@
 
 	"SettingsDiskManagement_UnknownApp" "Unknown name"
 	"Settings_DiskManagement"	"Disk Management"
-	"Settings_DiskManagementIntro" "The following items are installed on your local hard drive. To free up disk space, you may choose to delete local content. Note that deleted items will remain in your Steam Library, but once deleted, they must be downloaded again in order to play them."
+	"Settings_DiskManagement_Intro" "The following items are installed on your local hard drive. To free up disk space, you may choose to delete local content. Note that deleted items will remain in your Steam Library, but once deleted, they must be downloaded again in order to play them."
+	"Settings_DiskManagement_Folder" "Choose library folder "
 	"Settings_DiskManagement_App"	"ITEM"
 	"Settings_DiskManagement_Size"	"SIZE ON DISK"
 	"Settings_DiskManagement_AppName" "{s:appname}"
@@ -3556,8 +3557,10 @@
 	"SettingsDiskManagement_Delete_Description" "Are you sure you want to delete {s:appname}? To play it in the future you will need to download it again."
 	"SettingsDiskManagement_ViewInLibrary" "VIEW IN LIBRARY"
 	"SettingsDiskManagement_DeleteApp" "DELETE"
+	"SettingsDiskManagement_MakeDefaultFolder" "MAKE DEFAULT FOLDER"
 	"SettingsDiskManagement_UnknownDisk" "Unknown"
 	"SettingsDiskManagement_AvailableDisk" "You currently have {s:freehdd} of available disk space."
+	"SettingsDiskManagement_IsDefaultFolder" "(Default)"
 
 	"Country_AD"		"Andorra"
 	"Country_AE"		"United Arab Emirates"
@@ -4861,4 +4864,6 @@
 	"SettingsKeyboard_DTSuggest_SuggestNoTypoCorrection"	"Only show suggestions based on keys directly typed"
 	"SettingsKeyboard_DTSuggest_NoSuggestions"				"Don't show suggestions"
 	"SettingsKeyboard_UseSystemLanguage"					"(use system language)"
+
+	"SteamUI_NetworkLoginNeeded_Title"	"Login to your Network"
 }

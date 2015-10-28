@@ -10,10 +10,15 @@
 		  <!-- main panel -->
 		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 				<Panel id="SettingsDiskSpaceManagement_IntroBlock" class="HorzContainer">
-					<Label class="SettingsCallout" text="#Settings_DiskManagementIntro" />
-					<Label class="SettingsCallout" text="#SettingsDiskManagement_AvailableDisk" />
+					<Label class="SettingsCallout" text="#Settings_DiskManagement_Intro" />
 				</Panel>
-
+				
+				<Panel id="SettingsDiskManagement_FoldersBlock" >
+					<Label text="#Settings_DiskManagement_Folder" />
+					<DropDown id="SettingsDiskManagementFolders" />	
+					<Label id="SettingsDiskManagement_IsDefaultFolder" text="#SettingsDiskManagement_IsDefaultFolder" />	
+				</Panel>
+				
 				<Panel class="HorzContainer">
 					<Panel id="SettingsDiskManagementTable">
 						<Panel class="SettingsDiskSpaceManagementHeader">
@@ -25,7 +30,15 @@
 						</Panel>
 					</Panel>
 				</Panel>
+				
+				<Label class="SettingsCallout" text="#SettingsDiskManagement_AvailableDisk" />	
+				
+				
+				
       </Panel>
+      
+      
+      
 		</Panel>
 	</SettingsPanel_DiskManagement>
 

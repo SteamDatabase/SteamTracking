@@ -668,6 +668,7 @@
  B CNet::sm_pResolverThreadPool
  B CNet::sm_pWorkThreadPool
  B CNetConnection::sm_cSSLConnections
+ B CNetworkLoginBrowserHelper::m_symbol
  B CNetworkSettings_AvailableSSID::m_symbol
  B CNewEmailWizardChild::m_symbol
  B CNewPasswordWizardChild::m_symbol
@@ -1079,8 +1080,9 @@
  B DisconnectFromGroupChat::symbol
  B DiskManagementDeleteApp::symbol
  B DiskManagementDeleteThisApp::symbol
- B DiskManagementViewApp::symbol
+ B DiskManagementMakeDefaultFolder::symbol
  B DismissQuitDialog::symbol
+ B DismissScreenshotFullscreen::symbol
  B DismissSteamOSDesktopWarningPrompt::symbol
  B DispatchVideoPlayerEvent::symbol
  B DisplayInboxDropdown::symbol
@@ -2122,6 +2124,7 @@
  B g_MusicSettingsPanel_Helper
  B g_MusicTenfootNotification_Helper
  B g_MusicTrackMoreDialog_Helper
+ B g_NetworkLoginBrowserHelper_Helper
  B g_NetworkSettings_AvailableSSID_Helper
  B g_NewEmailWizardChild_Helper
  B g_NewPasswordWizardChild_Helper
@@ -3121,6 +3124,7 @@
  B panorama::g_MusicSettingsPanelLinkerHack
  B panorama::g_MusicTenfootNotificationLinkerHack
  B panorama::g_MusicTrackMoreDialogLinkerHack
+ B panorama::g_NetworkLoginBrowserHelperLinkerHack
  B panorama::g_NetworkSettings_AvailableSSIDLinkerHack
  B panorama::g_NewEmailWizardChildLinkerHack
  B panorama::g_NewPasswordWizardChildLinkerHack
@@ -3845,6 +3849,9 @@
  D CContentManagmentDialog::GetMessageMap()::s_pMap
  D CContentManagmentDialog::KB_ChainToMap()::chained
  D CContentManagmentDialog::PanelMessageFunc_OnDirectorySelected::InitVar()::bAdded
+ D CContentManagmentDialog::PanelMessageFunc_OnMakeDefaultFolder::InitVar()::bAdded
+ D CContentManagmentDialog::PanelMessageFunc_OnOpenContextMenu::InitVar()::bAdded
+ D CContentManagmentDialog::PanelMessageFunc_OnRemoveInstallFolder::InitVar()::bAdded
  D CD2LDownload::ChainToAnimationMap()::chained
  D CD2LDownload::ChainToMap()::chained
  D CD2LDownload::GetKBMap()::s_pMap
@@ -5441,8 +5448,9 @@
  D DisconnectFromGroupChat::pchEvent
  D DiskManagementDeleteApp::pchEvent
  D DiskManagementDeleteThisApp::pchEvent
- D DiskManagementViewApp::pchEvent
+ D DiskManagementMakeDefaultFolder::pchEvent
  D DismissQuitDialog::pchEvent
+ D DismissScreenshotFullscreen::pchEvent
  D DismissSteamOSDesktopWarningPrompt::pchEvent
  D DispatchVideoPlayerEvent::pchEvent
  D DisplayInboxDropdown::pchEvent
@@ -9949,6 +9957,7 @@
  D typeinfo for CMultipleCallResults<CSteamDoc, DownloadDepotResult_t>
  D typeinfo for CMultipleCallResults<CSteamDoc, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
+ D typeinfo for CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
@@ -10102,6 +10111,7 @@
  D typeinfo for CNegotiationCompleteMsg
  D typeinfo for CNegotiationInitMsg
  D typeinfo for CNegotiationSetConfigMsg
+ D typeinfo for CNetworkLoginBrowserHelper
  D typeinfo for CNetworkSettings_AvailableSSID
  D typeinfo for CNewEmailWizardChild
  D typeinfo for CNewPasswordWizardChild
@@ -13357,6 +13367,7 @@
  D vtable for CMultipleCallResults<CSteamDoc, DownloadDepotResult_t>
  D vtable for CMultipleCallResults<CSteamDoc, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
+ D vtable for CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  D vtable for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
  D vtable for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
@@ -13510,6 +13521,7 @@
  D vtable for CNegotiationCompleteMsg
  D vtable for CNegotiationInitMsg
  D vtable for CNegotiationSetConfigMsg
+ D vtable for CNetworkLoginBrowserHelper
  D vtable for CNetworkSettings_AvailableSSID
  D vtable for CNewEmailWizardChild
  D vtable for CNewPasswordWizardChild
@@ -16173,6 +16185,7 @@
  R typeinfo name for CMultipleCallResults<CSteamDoc, DownloadDepotResult_t>
  R typeinfo name for CMultipleCallResults<CSteamDoc, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
+ R typeinfo name for CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
@@ -16326,6 +16339,7 @@
  R typeinfo name for CNegotiationCompleteMsg
  R typeinfo name for CNegotiationInitMsg
  R typeinfo name for CNegotiationSetConfigMsg
+ R typeinfo name for CNetworkLoginBrowserHelper
  R typeinfo name for CNetworkSettings_AvailableSSID
  R typeinfo name for CNewEmailWizardChild
  R typeinfo name for CNewPasswordWizardChild
@@ -21849,8 +21863,14 @@
  T CContentManagmentDialog::KB_ChainToMap()
  T CContentManagmentDialog::OnCommand(char const*)
  T CContentManagmentDialog::OnDirectorySelected(char const*)
+ T CContentManagmentDialog::OnMakeDefaultFolder(int)
+ T CContentManagmentDialog::OnOpenContextMenu(int)
+ T CContentManagmentDialog::OnRemoveInstallFolder(int)
  T CContentManagmentDialog::OpenDirectorySelectDialog()
  T CContentManagmentDialog::PanelMessageFunc_OnDirectorySelected::InitVar()
+ T CContentManagmentDialog::PanelMessageFunc_OnMakeDefaultFolder::InitVar()
+ T CContentManagmentDialog::PanelMessageFunc_OnOpenContextMenu::InitVar()
+ T CContentManagmentDialog::PanelMessageFunc_OnRemoveInstallFolder::InitVar()
  T CContentManagmentDialog::RebuildContent()
  T CContentManagmentDialog::~CContentManagmentDialog()
  T CControllerBindingButton::BIsBindingEqual(BindingAction_t const&, bool, char const*, BindingAction_t const&, bool, char const*)
@@ -24145,8 +24165,8 @@
  T CGameStreamSystemOSX::UpdateWindowState()
  T CGameStreamSystemOSX::Validate(CValidator&, char const*)
  T CGameStreamSystemOSX::~CGameStreamSystemOSX()
- T CGameStreamVideoEncoder::AddAvailableStage(CGameStreamVideoStage*)
  T CGameStreamVideoEncoder::AddCallback(IGameStreamVideoCallback*)
+ T CGameStreamVideoEncoder::BAddAvailableStage(CGameStreamVideoStage*)
  T CGameStreamVideoEncoder::BHasRegisteredCallbacks()
  T CGameStreamVideoEncoder::BReadVideoStream(unsigned int, unsigned int, bool*)
  T CGameStreamVideoEncoder::BSupportedCodec(EStreamVideoCodec)
@@ -26244,7 +26264,7 @@
  T CMainMenu::EventAppImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CMainMenu::EventAvatarImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CMainMenu::EventCloseAllGames()
- T CMainMenu::EventCloseScreenshotBrowser(bool)
+ T CMainMenu::EventCloseScreenshotBrowser()
  T CMainMenu::EventDisplayInboxDropdown()
  T CMainMenu::EventDisplayInboxDropdownInternal()
  T CMainMenu::EventInstallApp(unsigned int)
@@ -26349,7 +26369,7 @@
  T CMarketingController::FetchMarketingMessages(bool)
  T CMarketingController::IsMsgURLShownInMarketingDialog(char const*)
  T CMarketingController::OnMarketingMessageUpdate(ClientMarketingMessageUpdate_t*)
- T CMarketingController::ShowMarketingMessages(bool)
+ T CMarketingController::ShowMarketingMessages(bool, bool)
  T CMarketingController::TakeSpecialSurvey(unsigned int)
  T CMarketingController::TakeSpecialSurveyResponse(RequestSpecialSurveyResult_t*, bool)
  T CMarketingController::Validate(CValidator&, char const*)
@@ -28704,6 +28724,12 @@
  T CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::CMultipleCallResults(CTenfootController*, void (CTenfootController::*)(HTTPRequestCompleted_t*, bool))
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::Run(void*)
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CTenfootController, HTTPRequestCompleted_t>::~CMultipleCallResults()
  T CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>::CMultipleCallResults(CTenfootController*, void (CTenfootController::*)(WebAuthRequestCallback_t*, bool))
  T CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>::Run(void*)
@@ -29679,6 +29705,19 @@
  T CNegotiationSetConfigMsg::SharedDtor()
  T CNegotiationSetConfigMsg::~CNegotiationSetConfigMsg()
  T CNet::ValidateGlobals(CValidator&)
+ T CNetworkLoginBrowserHelper::CNetworkLoginBrowserHelper(panorama::IUIWindow*, char const*)
+ T CNetworkLoginBrowserHelper::ETextInputModeFromInputType(char const*)
+ T CNetworkLoginBrowserHelper::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T CNetworkLoginBrowserHelper::EventInputFocusLost(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CNetworkLoginBrowserHelper::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CNetworkLoginBrowserHelper::EventInputFocusTopLevelChanged(panorama::CPanelPtr<panorama::CPanel2D>)
+ T CNetworkLoginBrowserHelper::GetPanelType() const
+ T CNetworkLoginBrowserHelper::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CNetworkLoginBrowserHelper::HideReticle()
+ T CNetworkLoginBrowserHelper::OnFormHasFocus(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::HtmlFormHasFocus_t, char const*)
+ T CNetworkLoginBrowserHelper::OnGamepadInput(panorama::GamePadCode)
+ T CNetworkLoginBrowserHelper::OnTextInputUnhandledButtonPress(panorama::GamePadData_t)
+ T CNetworkLoginBrowserHelper::~CNetworkLoginBrowserHelper()
  T CNetworkSettings_AvailableSSID::CNetworkSettings_AvailableSSID(panorama::CPanel2D*, char const*)
  T CNetworkSettings_AvailableSSID::GetPanelType() const
  T CNetworkSettings_AvailableSSID::~CNetworkSettings_AvailableSSID()
@@ -29823,7 +29862,7 @@
  T COverlayBasePanel::CCallback_OnMicroTxnAuthRequest::Run(void*)
  T COverlayBasePanel::COverlayBasePanel(panorama::CPanel2D*, char const*, unsigned int)
  T COverlayBasePanel::EventBrowserGoToURL(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
- T COverlayBasePanel::EventCloseScreenshotBrowser(bool)
+ T COverlayBasePanel::EventCloseScreenshotBrowser()
  T COverlayBasePanel::EventControllerDisableOverlay(CTenfootOverlayController*)
  T COverlayBasePanel::EventNavigateTenfootBack()
  T COverlayBasePanel::EventShowAppScreenshots(unsigned long long)
@@ -31104,8 +31143,8 @@
  T CScreenshotBrowser::EventCloseFullscreen()
  T CScreenshotBrowser::EventDeleteScreenshot()
  T CScreenshotBrowser::EventDeleteScreenshotConfirmed(unsigned long long, unsigned int)
+ T CScreenshotBrowser::EventDismissScreenshotFullscreen()
  T CScreenshotBrowser::EventDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CScreenshotBrowser::EventInputFocusLost(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CScreenshotBrowser::EventPropertyTransitionEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CStyleSymbol)
  T CScreenshotBrowser::EventShareScreenshot(panorama::EPanelEventSource_t)
  T CScreenshotBrowser::EventShowFullscreen()
@@ -31867,12 +31906,15 @@
  T CSettingsPanelControllerConfigs::OnOpenConfig(unsigned int)
  T CSettingsPanelControllerConfigs::~CSettingsPanelControllerConfigs()
  T CSettingsPanelDiskManagement::CSettingsPanelDiskManagement(panorama::CPanel2D*, char const*)
+ T CSettingsPanelDiskManagement::EventActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T CSettingsPanelDiskManagement::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelDiskManagement::GetPanelType() const
  T CSettingsPanelDiskManagement::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CSettingsPanelDiskManagement::OnAppChangeNotification(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelDiskManagement::OnDeleteApp(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelDiskManagement::OnDeleteThisApp(panorama::CPanelPtr<panorama::IUIPanel> const&, unsigned int)
- T CSettingsPanelDiskManagement::OnViewApp(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CSettingsPanelDiskManagement::OnDropdownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CSettingsPanelDiskManagement::OnMakeDefaultFolder(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSettingsPanelDiskManagement::UpdateAppList()
  T CSettingsPanelDiskManagement::~CSettingsPanelDiskManagement()
  T CSettingsPanelDiskManagementAppListing::CSettingsPanelDiskManagementAppListing(panorama::CPanel2D*, char const*, unsigned int)
@@ -35616,6 +35658,7 @@
  T CTenfootController::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t*)
  T CTenfootController::OnGoOffline()
  T CTenfootController::OnGoOnline()
+ T CTenfootController::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CTenfootController::OnIntroMovieDone()
  T CTenfootController::OnLogoutConfirmed()
  T CTenfootController::OnMoviePlayerAudioStart(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -35683,6 +35726,7 @@
  T CTenfootController::ShowCyberCafeSecurityPrompt(panorama::IUIEvent*)
  T CTenfootController::ShowErrorOfflineDialog()
  T CTenfootController::ShowLoggedInElsewhereDialog()
+ T CTenfootController::ShowNetworkLoginDialog()
  T CTenfootController::ShowRefreshLoginDialog(EResult)
  T CTenfootController::ShowSSA(bool, bool, char const*)
  T CTenfootController::ShowSteamGuardAuthDialog(EResult)
@@ -38850,7 +38894,6 @@
  T CUtlVector<CWebBrowser::HTMLTextureFree_t, CUtlMemory<CWebBrowser::HTMLTextureFree_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<CWebBrowser::HTMLTextureFree_t, CUtlMemory<CWebBrowser::HTMLTextureFree_t> >::~CUtlVector()
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::AddToTail(CWebFavorites::WebFrequent_t&&)
- T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::CCompareFnWrapper::Compare(void*, CWebFavorites::WebFrequent_t const*, CWebFavorites::WebFrequent_t const*)
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::Find(CWebFavorites::WebFrequent_t const&) const
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::GrowVector(int)
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::InsertBefore(int, CWebFavorites::WebFrequent_t const&)
@@ -38858,7 +38901,6 @@
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::RemoveMultiple(int, int)
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::ShiftElementsRight(int, int)
- T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::Sort(bool (*)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CWebFavorites::WebFrequent_t, CUtlMemory<CWebFavorites::WebFrequent_t> >::~CUtlVector()
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::Validate(CValidator&, char const*)
@@ -38989,12 +39031,10 @@
  T CUtlVector<LaunchOption_t, CUtlMemory<LaunchOption_t> >::ShiftElementsRight(int, int)
  T CUtlVector<LaunchOption_t, CUtlMemory<LaunchOption_t> >::Validate(CValidator&, char const*)
  T CUtlVector<LaunchOption_t, CUtlMemory<LaunchOption_t> >::~CUtlVector()
- T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::CCompareFnWrapper::Compare(void*, LoginUser_t const*, LoginUser_t const*)
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::GrowVector(int)
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::InsertBefore(int)
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::RemoveAll()
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::ShiftElementsRight(int, int)
- T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::Sort(bool (*)(LoginUser_t const&, LoginUser_t const&))
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::Validate(CValidator&, char const*)
  T CUtlVector<LoginUser_t, CUtlMemory<LoginUser_t> >::~CUtlVector()
  T CUtlVector<MarketingItem_t, CUtlMemory<MarketingItem_t> >::GrowVector(int)
@@ -39087,7 +39127,6 @@
  T CUtlVector<StoreScreenshot_t*, CUtlMemory<StoreScreenshot_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<StoreScreenshot_t*, CUtlMemory<StoreScreenshot_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<StoreScreenshot_t*, CUtlMemory<StoreScreenshot_t*> >::~CUtlVector()
- T CUtlVector<SuggestCandidate_t, CUtlMemory<SuggestCandidate_t> >::CCompareFnWrapper::Compare(void*, SuggestCandidate_t const*, SuggestCandidate_t const*)
  T CUtlVector<SuggestCandidate_t, CUtlMemory<SuggestCandidate_t> >::GrowVector(int)
  T CUtlVector<SuggestCandidate_t, CUtlMemory<SuggestCandidate_t> >::InsertBefore(int, SuggestCandidate_t const&)
  T CUtlVector<SuggestCandidate_t, CUtlMemory<SuggestCandidate_t> >::ShiftElementsLeft(int, int)
@@ -39098,12 +39137,10 @@
  T CUtlVector<SystemIM_t, CUtlMemory<SystemIM_t> >::ShiftElementsRight(int, int)
  T CUtlVector<SystemIM_t, CUtlMemory<SystemIM_t> >::Validate(CValidator&, char const*)
  T CUtlVector<SystemIM_t, CUtlMemory<SystemIM_t> >::~CUtlVector()
- T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::CCompareFnWrapper::Compare(void*, TurnNotification_t const*, TurnNotification_t const*)
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::GrowVector(int)
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::InsertBefore(int, TurnNotification_t const&)
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::ShiftElementsRight(int, int)
- T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::Sort(bool (*)(TurnNotification_t const&, TurnNotification_t const&))
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::SortedFindLessOrEqual(TurnNotification_t const&, bool (*)(TurnNotification_t const&, TurnNotification_t const&), int, int) const
  T CUtlVector<TurnNotification_t, CUtlMemory<TurnNotification_t> >::SortedInsert(TurnNotification_t const&, bool (*)(TurnNotification_t const&, TurnNotification_t const&))
  T CUtlVector<UtlRadixTrieCandidate_t, CUtlMemory<UtlRadixTrieCandidate_t> >::GrowVector(int)
@@ -39172,7 +39209,6 @@
  T CUtlVector<float, CUtlMemory<float> >::~CUtlVector()
  T CUtlVector<int, CUtlMemory<int> >::AddMultipleToTail(int, int const*)
  T CUtlVector<int, CUtlMemory<int> >::AddToTail(int&&)
- T CUtlVector<int, CUtlMemory<int> >::CCompareFnWrapper::Compare(void*, int const*, int const*)
  T CUtlVector<int, CUtlMemory<int> >::CopyArray(int const*, int)
  T CUtlVector<int, CUtlMemory<int> >::FastRemove(int)
  T CUtlVector<int, CUtlMemory<int> >::FindAndFastRemove(int const&)
@@ -39258,11 +39294,9 @@
  T CUtlVector<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t, CUtlMemory<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t, CUtlMemory<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t, CUtlMemory<panorama::CLabel::TextRangeFormat_t::RangeFormatBox_t> >::~CUtlVector()
- T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::CCompareFnWrapper::Compare(void*, panorama::CMovieVideoQualityPopup::Representation_t const*, panorama::CMovieVideoQualityPopup::Representation_t const*)
  T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::GrowVector(int)
  T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::InsertBefore(int)
  T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::ShiftElementsRight(int, int)
- T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::Sort(bool (*)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
  T CUtlVector<panorama::CMovieVideoQualityPopup::Representation_t, CUtlMemory<panorama::CMovieVideoQualityPopup::Representation_t> >::~CUtlVector()
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::AddToTail(panorama::CPanel2D*&&)
  T CUtlVector<panorama::CPanel2D*, CUtlMemory<panorama::CPanel2D*> >::FastRemove(int)
@@ -39308,7 +39342,6 @@
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::ShiftElementsLeft(int, int)
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::~CUtlVector()
- T CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >::CCompareFnWrapper::Compare(void*, panorama::CStyleSymbol const*, panorama::CStyleSymbol const*)
  T CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >::CopyArray(panorama::CStyleSymbol const*, int)
  T CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >::GrowVector(int)
  T CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >::InsertBefore(int, panorama::CStyleSymbol const&)
@@ -40525,7 +40558,7 @@
  T CloseProfileOverlay::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T CloseScreenshotBrowser::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T CloseScreenshotBrowser::GetEventType()
- T CloseScreenshotBrowser::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T CloseScreenshotBrowser::MakeEvent(panorama::IUIPanelClient const*)
  T CloseScreenshotFullscreen::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T CloseScreenshotFullscreen::GetEventType()
  T CloseScreenshotFullscreen::MakeEvent(panorama::IUIPanelClient const*)
@@ -41106,11 +41139,14 @@
  T DiskManagementDeleteThisApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DiskManagementDeleteThisApp::GetEventType()
  T DiskManagementDeleteThisApp::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
- T DiskManagementViewApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T DiskManagementViewApp::GetEventType()
- T DiskManagementViewApp::MakeEvent(panorama::IUIPanelClient const*)
+ T DiskManagementMakeDefaultFolder::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T DiskManagementMakeDefaultFolder::GetEventType()
+ T DiskManagementMakeDefaultFolder::MakeEvent(panorama::IUIPanelClient const*)
  T DismissQuitDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DismissQuitDialog::MakeEvent(panorama::IUIPanelClient const*)
+ T DismissScreenshotFullscreen::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T DismissScreenshotFullscreen::GetEventType()
+ T DismissScreenshotFullscreen::MakeEvent(panorama::IUIPanelClient const*)
  T DismissSteamOSDesktopWarningPrompt::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DismissSteamOSDesktopWarningPrompt::GetEventType()
  T DismissSteamOSDesktopWarningPrompt::MakeEvent(panorama::IUIPanelClient const*, bool)
@@ -44160,6 +44196,7 @@
  T bool panorama::DispatchEvent<ControllerPropertiesClosing>(ControllerPropertiesClosing, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<CreateAccountForgotAccount>(CreateAccountForgotAccount, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<DebugStyleStatus, bool>(DebugStyleStatus, panorama::IUIPanelClient const*, bool)
+ T bool panorama::DispatchEvent<DismissScreenshotFullscreen>(DismissScreenshotFullscreen, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<FinishedLoadingAlbums>(FinishedLoadingAlbums, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<FocusFriendsContent>(FocusFriendsContent, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<ForceNamedTab, char const*>(ForceNamedTab, panorama::IUIPanelClient const*, char const*)
@@ -44370,6 +44407,24 @@
  T bool panorama::ParseUIEventParam<panorama::ScrollBehavior_t>(panorama::ScrollBehavior_t*, panorama::IUIPanel*, char const*, char const**)
  T bool panorama::ParseUIEventParam<unsigned int>(unsigned int*, panorama::IUIPanel*, char const*, char const**)
  T bool panorama::ParseUIEventParam<unsigned long long>(unsigned long long*, panorama::IUIPanel*, char const*, char const**)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(int const&, int const&), int*>(int*, int*, bool (*&)(int const&, int const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
  T celt_decode_with_ec
  T celt_decoder_get_size
  T celt_decoder_init
@@ -46506,7 +46561,6 @@
  T panorama::CPanelPtr<CJoinPanel>::Get() const
  T panorama::CPanelPtr<CLibraryControllerBindingsGordonPanel>::Get() const
  T panorama::CPanelPtr<CLibraryControllerPanel>::Get() const
- T panorama::CPanelPtr<CLibraryScreenshotsSlideshow>::Get() const
  T panorama::CPanelPtr<CLibrarySettingsPanel>::Get() const
  T panorama::CPanelPtr<CLoginPanel>::Get() const
  T panorama::CPanelPtr<CLoginProgressDialog>::Get() const
@@ -48782,6 +48836,7 @@
  T panorama::HashItem(panorama::CStyleSymbol const&)
  T panorama::HtmlFormHasFocus_t::HtmlFormHasFocus_t(panorama::HtmlFormHasFocus_t const&)
  T panorama::HtmlFormHasFocus_t::operator=(panorama::HtmlFormHasFocus_t const&)
+ T panorama::HtmlFormHasFocus_t::~HtmlFormHasFocus_t()
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptBroadcastWatchRequest>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptLobbyInvite>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AcceptSSA>(panorama::IUIPanel*, char const*, char const**)
@@ -48962,7 +49017,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseMusicLibrary>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseProfile>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseProfileOverlay, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseScreenshotBrowser, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseScreenshotBrowser>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloseScreenshotFullscreen>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloudConflictAcceptLocal>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CloudConflictAcceptRemote>(panorama::IUIPanel*, char const*, char const**)
@@ -49038,8 +49093,9 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisconnectFromGroupChat>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DiskManagementDeleteApp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DiskManagementDeleteThisApp, unsigned int>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DiskManagementViewApp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DiskManagementMakeDefaultFolder>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DismissQuitDialog>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DismissScreenshotFullscreen>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DismissSteamOSDesktopWarningPrompt, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplayInboxDropdown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplayInboxDropdownInternal>(panorama::IUIPanel*, char const*, char const**)
@@ -51094,6 +51150,60 @@
  T unquant_coarse_energy
  T unquant_energy_finalise
  T unquant_fine_energy
+ T unsigned int std::__1::__sort3<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T unsigned int std::__1::__sort3<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(int const&, int const&), int*>(int*, int*, int*, bool (*&)(int const&, int const&))
+ T unsigned int std::__1::__sort3<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
+ T unsigned int std::__1::__sort4<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T unsigned int std::__1::__sort4<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(int const&, int const&), int*>(int*, int*, int*, int*, bool (*&)(int const&, int const&))
+ T unsigned int std::__1::__sort4<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
+ T unsigned int std::__1::__sort5<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CloudFile_t*, CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, unsigned long long*, unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T unsigned int std::__1::__sort5<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, LoginUser_t*, LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(int const&, int const&), int*>(int*, int*, int*, int*, int*, bool (*&)(int const&, int const&))
+ T unsigned int std::__1::__sort5<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
  T v8::Isolate::Scope::~Scope()
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
@@ -55207,6 +55317,42 @@
  T void panorama::V8ParamToPanoramaType<panorama::IUIPanel*>(v8::Handle<v8::Value> const&, panorama::IUIPanel**)
  T void panorama::V8ParamToPanoramaType<panorama::IUIPanelStyle*>(v8::Handle<v8::Value> const&, panorama::IUIPanelStyle**)
  T void panorama::V8ParamToPanoramaType<unsigned int>(v8::Handle<v8::Value> const&, unsigned int*)
+ T void std::__1::__insertion_sort_3<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T void std::__1::__insertion_sort_3<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(int const&, int const&), int*>(int*, int*, bool (*&)(int const&, int const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
+ T void std::__1::__sort<CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&, CInstallerManifest::Package_t*>(CInstallerManifest::Package_t*, CInstallerManifest::Package_t*, CUtlVector<CInstallerManifest::Package_t, CUtlMemory<CInstallerManifest::Package_t> >::Sort(int (*)(CInstallerManifest::Package_t const*, CInstallerManifest::Package_t const*))::{lambda(CInstallerManifest::Package_t const&, CInstallerManifest::Package_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&, CLibraryAllGamesPanelBase::AppToAdd_t*>(CLibraryAllGamesPanelBase::AppToAdd_t*, CLibraryAllGamesPanelBase::AppToAdd_t*, CUtlVector<CLibraryAllGamesPanelBase::AppToAdd_t, CUtlMemory<CLibraryAllGamesPanelBase::AppToAdd_t> >::Sort(int (*)(CLibraryAllGamesPanelBase::AppToAdd_t const*, CLibraryAllGamesPanelBase::AppToAdd_t const*))::{lambda(CLibraryAllGamesPanelBase::AppToAdd_t const&, CLibraryAllGamesPanelBase::AppToAdd_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&, CLibrarySuggestions::FriendsPlay_t*>(CLibrarySuggestions::FriendsPlay_t*, CLibrarySuggestions::FriendsPlay_t*, CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::Sort(int (*)(CLibrarySuggestions::FriendsPlay_t const*, CLibrarySuggestions::FriendsPlay_t const*))::{lambda(CLibrarySuggestions::FriendsPlay_t const&, CLibrarySuggestions::FriendsPlay_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&, CUtlGraph<unsigned int, float>::Edge_t*>(CUtlGraph<unsigned int, float>::Edge_t*, CUtlGraph<unsigned int, float>::Edge_t*, CUtlVector<CUtlGraph<unsigned int, float>::Edge_t, CUtlMemory<CUtlGraph<unsigned int, float>::Edge_t> >::Sort(int (*)(CUtlGraph<unsigned int, float>::Edge_t const*, CUtlGraph<unsigned int, float>::Edge_t const*))::{lambda(CUtlGraph<unsigned int, float>::Edge_t const&, CUtlGraph<unsigned int, float>::Edge_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&, CloudFile_t*>(CloudFile_t*, CloudFile_t*, CUtlVector<CloudFile_t, CUtlMemory<CloudFile_t> >::Sort(int (*)(CloudFile_t const*, CloudFile_t const*))::{lambda(CloudFile_t const&, CloudFile_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&, NotPlayedApp_t*>(NotPlayedApp_t*, NotPlayedApp_t*, CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::Sort(int (*)(NotPlayedApp_t const*, NotPlayedApp_t const*))::{lambda(NotPlayedApp_t const&, NotPlayedApp_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&, SortableFriendName_t*>(SortableFriendName_t*, SortableFriendName_t*, CUtlVector<SortableFriendName_t, CUtlMemory<SortableFriendName_t> >::Sort(int (*)(SortableFriendName_t const*, SortableFriendName_t const*))::{lambda(SortableFriendName_t const&, SortableFriendName_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T void std::__1::__sort<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T void std::__1::__sort<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&, unsigned long long*>(unsigned long long*, unsigned long long*, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Sort(int (*)(unsigned long long const*, unsigned long long const*))::{lambda(unsigned long long const&, unsigned long long const&)#1}&)
+ T void std::__1::__sort<bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&), CWebFavorites::WebFrequent_t*>(CWebFavorites::WebFrequent_t*, CWebFavorites::WebFrequent_t*, bool (*&)(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&))
+ T void std::__1::__sort<bool (*&)(LoginUser_t const&, LoginUser_t const&), LoginUser_t*>(LoginUser_t*, LoginUser_t*, bool (*&)(LoginUser_t const&, LoginUser_t const&))
+ T void std::__1::__sort<bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&), SuggestCandidate_t*>(SuggestCandidate_t*, SuggestCandidate_t*, bool (*&)(SuggestCandidate_t const&, SuggestCandidate_t const&))
+ T void std::__1::__sort<bool (*&)(TurnNotification_t const&, TurnNotification_t const&), TurnNotification_t*>(TurnNotification_t*, TurnNotification_t*, bool (*&)(TurnNotification_t const&, TurnNotification_t const&))
+ T void std::__1::__sort<bool (*&)(int const&, int const&), int*>(int*, int*, bool (*&)(int const&, int const&))
+ T void std::__1::__sort<bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&), panorama::CMovieVideoQualityPopup::Representation_t*>(panorama::CMovieVideoQualityPopup::Representation_t*, panorama::CMovieVideoQualityPopup::Representation_t*, bool (*&)(panorama::CMovieVideoQualityPopup::Representation_t const&, panorama::CMovieVideoQualityPopup::Representation_t const&))
+ T void std::__1::__sort<bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&), panorama::CStyleSymbol*>(panorama::CStyleSymbol*, panorama::CStyleSymbol*, bool (*&)(panorama::CStyleSymbol const&, panorama::CStyleSymbol const&))
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -55327,7 +55473,6 @@
  V_isvalidhex
  V_pretifymem
  V_pretifynum
- V_qsort_s
  V_snprintf
  V_strcat
  V_strcmp_prefix

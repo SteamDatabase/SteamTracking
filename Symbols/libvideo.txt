@@ -3793,12 +3793,10 @@
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::~CUtlVector()
- T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::CCompareFnWrapper::Compare(void*, VideoRepresentation_t* const*, VideoRepresentation_t* const*)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::GrowVector(int)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::InsertBefore(int, VideoRepresentation_t* const&)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::PurgeAndDeleteElements()
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::ShiftElementsRight(int, int)
- T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::~CUtlVector()
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::GrowVector(int)
@@ -6812,7 +6810,6 @@
  T V_atof
  T V_atoi
  T V_binarytohex
- T V_qsort_s
  T V_snprintf
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
@@ -7385,7 +7382,10 @@
  T bn_sub_part_words
  T bn_sub_words
  T bool CryptoPP::NameValuePairs::GetThisObject<CryptoPP::RSAFunction>(CryptoPP::RSAFunction&) const
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T bool std::__1::__insertion_sort_incomplete<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
@@ -8363,9 +8363,18 @@
  T tls1_setup_key_block
  T tree_find_sk
  T unsigned int CryptoPP::DivideThreeWordsByTwo<unsigned int, CryptoPP::DWord>(unsigned int*, unsigned int, unsigned int, CryptoPP::DWord*)
+ T unsigned int std::__1::__sort3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T unsigned int std::__1::__sort3<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
+ T unsigned int std::__1::__sort4<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort4<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T unsigned int std::__1::__sort4<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
+ T unsigned int std::__1::__sort5<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort5<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T unsigned int std::__1::__sort5<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
  T v2i_ASN1_BIT_STRING
  T v2i_GENERAL_NAME
  T v2i_GENERAL_NAMES
@@ -8379,8 +8388,14 @@
  T void Destruct<CCookieContainer::CCookieInfo>(CCookieContainer::CCookieInfo*)
  T void Destruct<CHTTPRequestCache::CachedFileLRUData_t>(CHTTPRequestCache::CachedFileLRUData_t*)
  T void Destruct<CUtlString>(CUtlString*)
+ T void std::__1::__insertion_sort_3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__insertion_sort_3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T void std::__1::__insertion_sort_3<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
+ T void std::__1::__sort<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
+ T void std::__1::__sort<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__sort<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T void std::__1::__sort<bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&), VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, bool (*&)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -9373,7 +9388,6 @@
  pthread_self
  pthread_setspecific
  qsort
- qsort_r
  r ASN1_GENERALIZEDTIME_check.max
  r ASN1_GENERALIZEDTIME_check.min
  r ASN1_UTCTIME_check.max

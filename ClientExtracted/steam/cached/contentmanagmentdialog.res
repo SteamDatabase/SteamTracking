@@ -6,7 +6,7 @@
 		"fieldName"		"ContentManagmentDialog"
 		"xpos"		"794"
 		"ypos"		"447"
-		"wide"		"512"
+		"wide"		"640"
 		"tall"		"200"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -43,7 +43,7 @@
 		"fieldName"		"InstallFoldersList"
 		"xpos"		"10"
 		"ypos"		"64"
-		"wide"		"492"
+		"wide"		"620"
 		"tall"		"120"
 		"AutoResize"		"3"
 		"PinCorner"		"0"
@@ -74,33 +74,11 @@
 		"command" "AddInstallFolder"
 	}
 	
-	"RemoveFolderButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"RemoveFolderButton"
-		"labelText"		"#SteamUI_ContentMgr_RemoveInstallFolder"
-		"xpos"		"180"
-		"ypos"		"200"
-		"wide"		"160"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Default"		"0"
-		"command" "RemoveInstallFolder"
-	}
-	
-	
 	"CloseButton"
 	{
 		"ControlName"		"Button"
 		"fieldName"		"CloseButton"
-		"xpos"		"408"
+		"xpos"		"512"
 		"ypos"		"200"
 		"wide"		"92"
 		"tall"		"24"

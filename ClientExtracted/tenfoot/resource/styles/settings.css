@@ -2378,6 +2378,43 @@ color: black;
 	height: 500px;	
 }
 
+#SettingsDiskManagementTable
+{
+	height: 500px;	
+}
+
+#SettingsDiskManagement_FoldersBlock
+{
+	visibility: collapse;
+}
+
+.HasMultipleFolders #SettingsDiskManagement_FoldersBlock
+{
+	visibility: visible;
+}
+
+#SettingsDiskManagement_FoldersBlock
+{
+	flow-children: right;
+}
+
+#SettingsDiskManagement_FoldersBlock Label
+{
+	vertical-align: center;
+	padding : 10px;
+}
+
+#SettingsDiskManagement_IsDefaultFolder
+{
+	visibility: collapse;
+}
+
+.IsDefaultFolder #SettingsDiskManagement_IsDefaultFolder
+{
+	visibility: visible;
+}
+
+
 #SettingsRemoteClientTable:descendantfocus, #SettingsDiskManagementTable:descendantfocus
 {
 	box-shadow: box_shadow_off_color -5px -5px 6px 10px;

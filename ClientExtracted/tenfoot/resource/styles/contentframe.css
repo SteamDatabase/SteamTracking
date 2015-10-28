@@ -435,3 +435,9 @@ RemoteContent .LoadingPanel #ErrorStatus2
 {
 	visibility: visible;
 }
+
+.ScreenshotSlideshowVisible ContentFrame
+{
+	transform: none;
+}
+

@@ -52,13 +52,14 @@ Friends
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
-	transition-property:  transform !immediate;
-	transition-duration: 0.2s;
+	transition-property: transform, opacity;
+	transition-duration: 0.3s, 0.1s;
+	transition-delay: 0.0s, 1.0s;
 	transition-timing-function: ease-in;
 
 	opacity: 1.0;
 	transform: translateX( 0px );
-  background-color: #031a3d;
+	background-color: #031a3d;
 	background-image: url( "file://{images}/panel_background.png" );
 	//transform: translateY( 100% );		background-color: #000000ff;
 }
@@ -71,37 +72,10 @@ Friends.BehindMessageBox.FriendsInputTextEntry
 
 Friends.SlideAwayToRight
 {
-	//opacity: 0.0;
+	opacity: 0.0;
+	transition-delay: 0.0s, 0.0s;
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX(  1920px );	// rotateX( 45deg ) translateZ( -1000px );
-}
-
-.TempTitle
-{	
-	margin-top: 20px;
-	margin-left: 60px;
-	height: 80px;
-
-	flow-children: right;
-
-	padding-left: 90px;
-
-	background-image: url( "file://{images}/steam_home_os.png" );
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	//background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
-}
-
-.TempTitle Label.Breadcrumb
-{
-	color: #626a6e;
-	margin-right: 10px;
-}
-
-.TempTitle Label
-{
-	font-size: 48px;
-	color: white;
 }
 
 .AllContent

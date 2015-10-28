@@ -413,6 +413,10 @@ LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Download
 
 	margin-right: 25px;
 }
+#OverlayDashboard #CommonControls
+{
+	padding-left: 40px;
+}
 
 /* To transition on focus change or hover */
 LibraryAppDetails #CommonControls:descendantfocus,
@@ -647,6 +651,7 @@ LibraryAppDetails .ContentsRow
 .ContentsRow .LibraryDetailsScrollableArea.Overlay
 {
 	width: 1350px;
+	padding-top: 8px;
 }
 
 .LibraryDetailsSectionRow
@@ -672,6 +677,8 @@ LibraryAppDetails .ContentsRow
 	flow-children: down;
 	background-color: readonly_module;
 	margin-left: 12px;
+
+	z-index: 2;
 }
 .LaunchAppDetails
 {
@@ -707,6 +714,8 @@ LibraryAppDetails .ContentsRow
 {
 	width: 425px;
 	height: 450px;
+
+	margin-right: -10px;
 
 	border-radius: 3px;
 
@@ -767,6 +776,7 @@ LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel.Small,
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
 }
 
 .DetailsDataPanel .HeaderLabel
@@ -1022,6 +1032,11 @@ ParentalButton.Locked
 	margin-top: 5px;
 	height: 165px;
 	flow-children: down;
+	z-index: 0;
+}
+.PlayOptions:descendantfocus
+{
+	z-index: 10;
 }
 .PlayAction
 {

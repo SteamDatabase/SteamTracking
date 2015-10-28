@@ -21,14 +21,6 @@
 }
 
 
-#MsgBoxButtons .MsgBoxButton:focus
-{
-background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffffff ), to( #bdbfbfff ) );
-box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-border-color: #ffffffff;
-color: #000000ff;
-}
-
 
 #MsgBoxButtons .MsgBoxButton Label
 {
@@ -39,4 +31,5 @@ color: #000000ff;
 {
 	font-size: 24px;
 	opacity: 0.7;
+	margin-bottom: 10px;
 }
