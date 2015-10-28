@@ -2,24 +2,7 @@ FriendsEditPersonaDialog
 {
 	width: 100%;
 	height: 100%;
-	background-color: #00000066;
-}
-
-FriendsEditPersonaDialog.Destructing
-{
-	opacity: 0.0;
-}
-
-.MsgBoxBodyArea
-{
 	flow-children: down;
-	padding-top: 20px;
-	width: 100%;
-}
-
-.MsgBoxBodyArea .MsgBoxButton
-{
-	margin-bottom: 10px;
 }
 
 .FriendsOptionWrapper
@@ -27,34 +10,6 @@ FriendsEditPersonaDialog.Destructing
 	width: 100%;
 	flow-children: down;
 	margin-bottom: 40px;
-}
-
-#MsgBoxBodyRegion
-{
-	width: 860px;
-}
-
-#MsgBoxButtons
-{
-	flow-children: down;
-	horizontal-align: left;
-	width: 100%;
-	margin-top: 0px;
-}
-
-#MsgBoxButtons Button
-{
-	padding-left: 10px;
-	text-align: left;
-}
-
-
-#ButtonClose
-{
-	margin-top: 6px;
-	margin-bottom: 0px;
-	horizontal-align: left;
-	min-width: 100px;
 }
 
 DropDownMenu
@@ -67,8 +22,7 @@ DropDownMenu
 
 DropDownMenu.DropDownMenuVisible
 {
-	z-index: msgbox_contextmenu_zindex;
-	width: 328px;
+//	width: 328px;
 }
 
 .FriendsOptionWrapper DropDown

@@ -491,6 +491,13 @@ CommunitySearchFriends
 	filter		"friends"
 }
 
+CommunitySearchGroups
+{
+	url		"%community%/search/groups/"
+	method		"internal"
+	filter		"friends"
+}
+
 CommunitySearchForFriend
 {
 	url		"%community%/search/users/?text=%p1%"

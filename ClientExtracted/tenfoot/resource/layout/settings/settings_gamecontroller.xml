@@ -16,6 +16,8 @@
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
 
+				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" />				
+				
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
 
 				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(0);" onfocus="OnControllerButtonFocused(0)" >

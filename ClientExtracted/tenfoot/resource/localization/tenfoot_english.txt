@@ -949,7 +949,7 @@
 	"SettingsController_NoneDetected"						"No controller detected."
 	"SettingsController_XInputController"				"XInput Controller"
 	"SettingsController_ResetButtons"						"RESET"
-	"SettingsController_TurnOffOnQuit"					"Turn off when exiting Steam"
+	"SettingsController_TurnOffOnQuit"					"Turn off on Big Picture Exit"
 	"SettingsController_Support"						"SUPPORT"
 
 	"Settings_SteamControllerSupport"					"Steam controller support"
@@ -2458,6 +2458,8 @@
 	"Friends_ProfileDetails_Action_RemoveGroup" "Remove Group"
 	"Friends_ProfileDetails_Action_WatchGame" "Watch Game"
 	"Friends_ProfileDetails_Action_InviteToWatch" "Invite to Watch"
+	"Friends_AddFriend_Instructions"			  "Select to add a friend"
+	"Friends_JoinGroup_Instructions"			  "Select to join a group"
 	"Friends_AddFriend"			"ADD FRIEND"
 	"Friends_AddFriendTitle"		"Add a Friend"
 	"Friends_AddGroupTitle"			"Add a Group"

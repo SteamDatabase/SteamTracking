@@ -5,16 +5,20 @@
 		<include src="file://{resources}/styles/friends/friends_new.css" />
 	</styles>
 
-	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsButton">
+	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsTabButton">
 		<FriendsChatProfileBackground id="FriendsChatProfileBackground" />
 		<Panel class="TempTitle" >
-			<Label text=">" class="Breadcrumb" />
 			<Label text="Friends" />
 		</Panel>
-		<Panel class="AllContent" >
-			<Panel class="ButtonColumn" tabindex="auto" selectionpos="0,0" onfocus="FocusFriendsMenuRow();" onmoveright="FocusFriendsContent();" >
-				<Panel class="ButtonContainer" rememberchildfocus="true">
-					<Button id="LocalProfile" onfocus="FriendsViewType(localprofile);" class="NxLeftNavButton" selectionpos="auto" onactivate="ShowProfileOptions();" >
+		<Panel id="Offline">
+			<Button id="OfflineMessage">
+				<Label id="OfflineStatus1" text="#You_Are_Offline" />
+				<Label id="OfflineStatus2" text="#You_Are_Offline2" />
+			</Button>
+		</Panel>
+		<Panel class="AllContent" selectionpos="auto" tabindex="auto" >
+			<Panel id="LeftColumn" class="ButtonColumn" tabindex="auto" selectionpos="auto" rememberchildfocus="true" >
+					<Button id="LocalProfile" nxnav-target="ProfileContent" class="NxLeftNavButton" selectionpos="auto" >
 						<AvatarImage id="LocalAvatar"/>						
 						<Panel class="LocalPersonaLabelContainer">
 							<Label text="{s:local_persona_state}" class="LocalPersonaStatus"/>
@@ -23,32 +27,31 @@
 					</Button>
 					<Panel class="GamesHorizRule" />
 					<Label text="#friends_menu_chat" class="Header" />
-					<Button id="FriendsTabButton" onfocus="FriendsContentChanged(friends);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
+					<Button id="FriendsTabButton" nxnav-target="FriendsContent" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
 						<Label text="#Friends_Menu_Friends" html="true" />
 					</Button>
-					<Button id="GroupsButton" onfocus="FriendsContentChanged(groups);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+					<Button id="GroupsButton" nxnav-target="GroupsContent" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Label text="#Friends_Menu_Groups" html="true"/>
 					</Button>
-					<Button id="InvitesButton" onfocus="FriendsContentChanged(invites); LoadInviteList(true);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
+					<Button id="InvitesButton" nxnav-target="InvitesContent" nxnav-url-source="SteamIDInvitesPage" nxnav-always-reload="true" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
 						<Label text="#Friends_Menu_Invites" html="true"/>
 					</Button>
 
 					<Panel class="GamesHorizRule" />
 					<Label text="#friends_menu_manage" class="Header" />					
-					<Button id="AddFriendButton" onfocus="" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="AddFriend();">
+					<Button id="AddFriendButton" nxnav-target="AddFriendsContent" nxnav-url-source="CommunitySearchFriends" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Label text="#Friends_Menu_Add_Friend" html="true"/>
 					</Button>
-					<Button id="SearchGroupButton" onfocus="" class="NxLeftNavButton NxLeftNavButtonAction" selectionpos="auto" onactivate="AddGroup();">
+					<Button id="SearchGroupButton" nxnav-target="SearchGroupContent" nxnav-url-source="CommunitySearchGroups" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Label text="#Friends_Menu_Search_Group" html="true"/>
 					</Button>
-				</Panel>
-				<Panel class="NxGridButtonWell" onactivate="EventFocusMenuRow();" />
 			</Panel>
 
-			<Panel class="ContentContainer">  <!-- content container -->
-				<FriendsContent_Friends id="FriendsContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" movementwrap="right" rememberchildfocus="true" oncancel="FocusFriendsMenuRow();" selectionposboundary="both" />
-				<FriendsContent_Groups id="GroupsContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" movementwrap="right" rememberchildfocus="true" oncancel="FocusFriendsMenuRow();" overscroll-y="120" />
-				<FriendsInvitePage id="InvitesContent" class="ContentList" onmoveleft="FocusFriendsMenuRow();" oncancel="FocusFriendsMenuRow();" overscroll-y="120" />
+			<Panel id="RightColumn" class="ContentContainer" oncancel="MoveLeft(0);" >  <!-- content container -->
+				<FriendsEditPersonaDialog id="ProfileContent" class="FriendsContentContainer" />
+				<FriendsContent_Friends id="FriendsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" selectionposboundary="both" />
+				<FriendsContent_Groups id="GroupsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" overscroll-y="120" />
+				<FriendsInvitePage id="InvitesContent" class="FriendsContentContainer" overscroll-y="120" />
 			</Panel>
 
 			<FriendsChatDialog id="FriendsChatDialog" oncancel="FocusFriendsContent();"/>

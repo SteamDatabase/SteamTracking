@@ -156,11 +156,7 @@
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
 					<DropDown id="CurveExponentCameraMode" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SwipeDuration" />
-					<DropDown id="SwipeDurationCameraMode" />
-				</Panel>			
+				</Panel>		
 
 				<!-- Joystick Camera Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
@@ -659,6 +655,10 @@
 					<Panel class="FieldWrapper" modes="joystickcamera" gameactions="off" sources="gyro" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 						<DropDown id="GyroButtonJoystickCamera" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="trackpad" >
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_SwipeDuration" />
+						<DropDown id="SwipeDurationCameraMode" />
 					</Panel>
 
 					<!-- Joystick Camera Mode Advanced -->

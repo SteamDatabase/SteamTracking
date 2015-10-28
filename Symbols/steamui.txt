@@ -302,6 +302,7 @@
  B CFriendsContent_GroupItem::m_symbol
  B CFriendsContent_Groups::m_symbol
  B CFriendsContent_Invites::m_symbol
+ B CFriendsContent_Remote::m_symbol
  B CFriendsEditPersonaDialog::m_symbol
  B CFriendsFeedItemMenuActionButton::m_symbol
  B CFriendsFeedItemMenuDetails::m_symbol
@@ -1016,6 +1017,7 @@
  B ControllerHideBackground::symbol
  B ControllerPropertiesClosing::symbol
  B ControllerPropertiesDoneGordon::symbol
+ B ControllerSetting_TurnOff::symbol
  B ControllerSupport::symbol
  B ControllerVolumeFound::symbol
  B ControllerWarningDialogCancel::symbol
@@ -1118,7 +1120,6 @@
  B FirstTimeGameLaunchControllerPresets::symbol
  B FocusCurrentRecipientOption::symbol
  B FocusFriendsContent::symbol
- B FocusFriendsMenuRow::symbol
  B FocusGamesGrid::symbol
  B FocusMenuRow::symbol
  B FocusNamedTab::symbol
@@ -1142,7 +1143,6 @@
  B FriendsActions::symbol
  B FriendsChatInsertEmoticon::symbol
  B FriendsClearFilter::symbol
- B FriendsContentChanged::symbol
  B FriendsFilterChanged::symbol
  B FriendsGroupItemLeaveChat::symbol
  B FriendsMainViewMore::symbol
@@ -1238,7 +1238,6 @@
  B ListSegmentViewRetreat::symbol
  B LoadCategories::symbol
  B LoadConfig::symbol
- B LoadInviteList::symbol
  B LoadInviteListX::symbol
  B LoadedAsyncWithWebAuth::symbol
  B LocalLibraryStopCrawling::symbol
@@ -1554,7 +1553,6 @@
  B ShowPasswordToggled::symbol
  B ShowPreviewForDefault::symbol
  B ShowProfileForSteamID::symbol
- B ShowProfileOptions::symbol
  B ShowPurchaseConfirmation::symbol
  B ShowPurchaseOptions::symbol
  B ShowQueuedClanInviteNotifications::symbol
@@ -1753,7 +1751,6 @@
  B ViewControllerDetails::symbol
  B ViewControllerPresets::symbol
  B ViewEntireAlbum::symbol
- B ViewFullProfile::symbol
  B ViewGuide::symbol
  B ViewGuidesDialog::symbol
  B ViewLegalNotice::symbol
@@ -2007,6 +2004,7 @@
  B g_FriendsProfileDetailsActionButton_Helper
  B g_FriendsProfileDetailsCompositeHeader_Helper
  B g_FriendsProfileDetails_Helper
+ B g_FriendsRemoteContent_Helper
  B g_FriendsSearchButton_Helper
  B g_FriendsSearchResultEmbedded_Helper
  B g_FriendsSelfHeader_Helper
@@ -3031,6 +3029,7 @@
  B panorama::g_FriendsProfileDetailsActionButtonLinkerHack
  B panorama::g_FriendsProfileDetailsCompositeHeaderLinkerHack
  B panorama::g_FriendsProfileDetailsLinkerHack
+ B panorama::g_FriendsRemoteContentLinkerHack
  B panorama::g_FriendsSearchButtonLinkerHack
  B panorama::g_FriendsSearchResultEmbeddedLinkerHack
  B panorama::g_FriendsSelfHeaderLinkerHack
@@ -5382,6 +5381,7 @@
  D ControllerHideBackground::pchEvent
  D ControllerPropertiesClosing::pchEvent
  D ControllerPropertiesDoneGordon::pchEvent
+ D ControllerSetting_TurnOff::pchEvent
  D ControllerSupport::pchEvent
  D ControllerVolumeFound::pchEvent
  D ControllerWarningDialogCancel::pchEvent
@@ -5482,7 +5482,6 @@
  D FirstTimeGameLaunchControllerPresets::pchEvent
  D FocusCurrentRecipientOption::pchEvent
  D FocusFriendsContent::pchEvent
- D FocusFriendsMenuRow::pchEvent
  D FocusGamesGrid::pchEvent
  D FocusMenuRow::pchEvent
  D FocusNamedTab::pchEvent
@@ -5506,7 +5505,6 @@
  D FriendsActions::pchEvent
  D FriendsChatInsertEmoticon::pchEvent
  D FriendsClearFilter::pchEvent
- D FriendsContentChanged::pchEvent
  D FriendsFilterChanged::pchEvent
  D FriendsGroupItemLeaveChat::pchEvent
  D FriendsMainViewMore::pchEvent
@@ -5623,7 +5621,6 @@
  D ListSegmentViewRetreat::pchEvent
  D LoadCategories::pchEvent
  D LoadConfig::pchEvent
- D LoadInviteList::pchEvent
  D LoadInviteListX::pchEvent
  D LoadedAsyncWithWebAuth::pchEvent
  D LocalLibraryStopCrawling::pchEvent
@@ -5943,7 +5940,6 @@
  D ShowPasswordToggled::pchEvent
  D ShowPreviewForDefault::pchEvent
  D ShowProfileForSteamID::pchEvent
- D ShowProfileOptions::pchEvent
  D ShowPurchaseConfirmation::pchEvent
  D ShowPurchaseOptions::pchEvent
  D ShowQueuedClanInviteNotifications::pchEvent
@@ -6531,7 +6527,6 @@
  D ViewControllerDetails::pchEvent
  D ViewControllerPresets::pchEvent
  D ViewEntireAlbum::pchEvent
- D ViewFullProfile::pchEvent
  D ViewGuide::pchEvent
  D ViewGuidesDialog::pchEvent
  D ViewLegalNotice::pchEvent
@@ -9436,6 +9431,7 @@
  D typeinfo for CFriendsContent_GroupItem
  D typeinfo for CFriendsContent_Groups
  D typeinfo for CFriendsContent_Invites
+ D typeinfo for CFriendsContent_Remote
  D typeinfo for CFriendsController::CCallback_OnFriendAdded
  D typeinfo for CFriendsController::CCallback_OnFriendChatMsg
  D typeinfo for CFriendsController::CCallback_OnFriendIgnored
@@ -12846,6 +12842,7 @@
  D vtable for CFriendsContent_GroupItem
  D vtable for CFriendsContent_Groups
  D vtable for CFriendsContent_Invites
+ D vtable for CFriendsContent_Remote
  D vtable for CFriendsController::CCallback_OnFriendAdded
  D vtable for CFriendsController::CCallback_OnFriendChatMsg
  D vtable for CFriendsController::CCallback_OnFriendIgnored
@@ -15656,6 +15653,7 @@
  R typeinfo name for CFriendsContent_GroupItem
  R typeinfo name for CFriendsContent_Groups
  R typeinfo name for CFriendsContent_Invites
+ R typeinfo name for CFriendsContent_Remote
  R typeinfo name for CFriendsController::CCallback_OnFriendAdded
  R typeinfo name for CFriendsController::CCallback_OnFriendChatMsg
  R typeinfo name for CFriendsController::CCallback_OnFriendIgnored
@@ -21975,10 +21973,10 @@
  T CControllerPropertiesMode::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CControllerPropertiesMode::OnDropdownMenuFocusChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanelPtr<panorama::IUIPanel>)
  T CControllerPropertiesMode::OnInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CControllerPropertiesMode::OnRotationSliderFocusChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
- T CControllerPropertiesMode::OnRotationSliderValueChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, float)
  T CControllerPropertiesMode::OnShowAdvancedProperties(bool)
  T CControllerPropertiesMode::OnShowModeShift(bool)
+ T CControllerPropertiesMode::OnSliderFocusChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
+ T CControllerPropertiesMode::OnSliderValueChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, float)
  T CControllerPropertiesMode::OnToggleLegacyBindings()
  T CControllerPropertiesMode::RebuildModeOptions()
  T CControllerPropertiesMode::RecomputeColumnSelectionPositions(panorama::CPanel2D*)
@@ -23373,11 +23371,13 @@
  T CFriendsContent_Invites::EventIgnoreAllPendingFriendInvites()
  T CFriendsContent_Invites::EventIgnoreAllPendingGroupInvites()
  T CFriendsContent_Invites::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriendsContent_Invites::EventInvitesRequiresUpdate()
  T CFriendsContent_Invites::EventLoadedAsyncWithWebAuth(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T CFriendsContent_Invites::EventShowFriendsProfileDetailsBySteamID(unsigned long long)
  T CFriendsContent_Invites::GetPanelType() const
- T CFriendsContent_Invites::LoadContent(bool)
  T CFriendsContent_Invites::~CFriendsContent_Invites()
+ T CFriendsContent_Remote::GetPanelType() const
+ T CFriendsContent_Remote::~CFriendsContent_Remote()
  T CFriendsController::AddFriend(CSteamID)
  T CFriendsController::CCallback_OnFriendAdded::Run(void*)
  T CFriendsController::CCallback_OnFriendChatMsg::Run(void*)
@@ -23407,14 +23407,11 @@
  T CFriendsController::RequestAllFriends(panorama::CPanel2D*)
  T CFriendsController::SearchFriends(char const*, CUtlVector<CFriendsController::FriendsSearchResult_t, CUtlMemory<CFriendsController::FriendsSearchResult_t> >&, int)
  T CFriendsController::~CFriendsController()
- T CFriendsEditPersonaDialog::CFriendsEditPersonaDialog(panorama::IUIWindow*, char const*)
- T CFriendsEditPersonaDialog::CloseDialog()
- T CFriendsEditPersonaDialog::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
- T CFriendsEditPersonaDialog::EventCloseModalDialog()
+ T CFriendsEditPersonaDialog::CFriendsEditPersonaDialog(panorama::CPanel2D*, char const*)
  T CFriendsEditPersonaDialog::EventDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CFriendsEditPersonaDialog::EventViewFullProfile()
+ T CFriendsEditPersonaDialog::EventFriendPersonaStateChanged(PersonaStateChange_t)
  T CFriendsEditPersonaDialog::GetPanelType() const
- T CFriendsEditPersonaDialog::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CFriendsEditPersonaDialog::UpdateDropDown()
  T CFriendsEditPersonaDialog::~CFriendsEditPersonaDialog()
  T CFriendsFeedItemMenuActionButton::CFriendsFeedItemMenuActionButton(panorama::CPanel2D*, char const*, char const*, bool (CFriendsFeedItemMenuDetails::*)())
  T CFriendsFeedItemMenuActionButton::GetPanelType() const
@@ -23481,22 +23478,19 @@
  T CFriendsNew::EventAddFriendBySteamID(unsigned long long)
  T CFriendsNew::EventAddGroup()
  T CFriendsNew::EventBlockFriendSteamID(unsigned long long)
+ T CFriendsNew::EventButtonFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsNew::EventFocusContent()
- T CFriendsNew::EventFocusMenuRow()
  T CFriendsNew::EventFriendChatMessage(FriendChatMsg_t)
  T CFriendsNew::EventFriendPersonaStateChanged(CSteamID)
  T CFriendsNew::EventFriendPersonaStateChanged(PersonaStateChange_t)
  T CFriendsNew::EventFriendSearchChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsNew::EventFriendSearchTextInputHandlerStateChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T CFriendsNew::EventFriendsClearFilter()
- T CFriendsNew::EventFriendsContentChanged(char const*)
  T CFriendsNew::EventFriendsSearchFilterString(char const*)
  T CFriendsNew::EventGroupChatMessage(ChatRoomMsg_t*)
  T CFriendsNew::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CFriendsNew::EventInviteToGame(unsigned long long)
- T CFriendsNew::EventInvitesRequiresUpdate()
  T CFriendsNew::EventLeaveChatWithSteamID(CSteamID)
- T CFriendsNew::EventLoadInviteList(bool)
  T CFriendsNew::EventRemoveFriend(CSteamID, bool)
  T CFriendsNew::EventRemoveFriendSteamID(unsigned long long, bool)
  T CFriendsNew::EventSearchFriends()
@@ -23507,13 +23501,13 @@
  T CFriendsNew::EventShowFromController()
  T CFriendsNew::EventShowGroups()
  T CFriendsNew::EventShowInviteFriendsDialog(CSteamID)
- T CFriendsNew::EventShowProfileOptions()
  T CFriendsNew::EventStartChatWithSteamID(CSteamID, panorama::EPanelEventSource_t)
  T CFriendsNew::EventUnblockFriendSteamID(unsigned long long)
  T CFriendsNew::EventUpdateInviteCount()
  T CFriendsNew::GetActiveSteamID()
  T CFriendsNew::GetPanelType() const
  T CFriendsNew::PopulateSearchResults()
+ T CFriendsNew::SetSelectedContentTab(char const*)
  T CFriendsNew::ShowAddFriendOrGroupMsgBox(bool)
  T CFriendsNew::~CFriendsNew()
  T CFriendsProfileDetails::Action_AcceptFriendship(panorama::EPanelEventSource_t)
@@ -25597,7 +25591,7 @@
  T CJoinGameDialog::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T CJoinGameDialog::ShowCantLaunchShortcut(CSteamApp*)
  T CJoinGameDialog::ShowCantStartGame()
- T CJoinGameDialog::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T CJoinGameDialog::ShowCantStartGameDetailed(EAppUpdateError)
  T CJoinGameDialog::ShowConnectionIssuesDialog()
  T CJoinGameDialog::ShowDRMRequestFailed(char const*, EResult)
  T CJoinGameDialog::ShowFilesMissingAndOfflineMessage(char const*)
@@ -26274,7 +26268,6 @@
  T CMainMenu::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CMainMenu::JumpToCommunity()
  T CMainMenu::JumpToLibrary()
- T CMainMenu::JumpToProfile()
  T CMainMenu::JumpToStore()
  T CMainMenu::LoadMarketingMessages(bool)
  T CMainMenu::MarkMarketingMessageRead(unsigned long long)
@@ -31935,6 +31928,7 @@
  T CSettingsPanelGameController::HandleOnControllerButtonFocused(unsigned int)
  T CSettingsPanelGameController::HandleOnIdentifyController(unsigned int)
  T CSettingsPanelGameController::HandleUpdateGameControllers()
+ T CSettingsPanelGameController::OnCheckTurnOff()
  T CSettingsPanelGameController::OnControllerConnected(ControllerConnected_t*)
  T CSettingsPanelGameController::OnControllerDisconnected(ControllerDisconnected_t*)
  T CSettingsPanelGameController::OnDropdownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -32902,7 +32896,6 @@
  T CSteamApp::GetAppInfoSection(KeyValues*, EAppInfoSection) const
  T CSteamApp::GetAppInstallState() const
  T CSteamApp::GetAppOwnershipFlags() const
- T CSteamApp::GetAppRegistryKey(CFmtStrN<256, true, true>&)
  T CSteamApp::GetAppType() const
  T CSteamApp::GetAppUpdateState() const
  T CSteamApp::GetAutoUpdateBehavior() const
@@ -32988,18 +32981,16 @@
  T CSteamApp::RunInstallScript(bool, bool)
  T CSteamApp::SetActiveBeta(char const*)
  T CSteamApp::SetAppInstalled(bool)
+ T CSteamApp::SetAppRegistryKey(bool, char const*)
  T CSteamApp::SetAutoUpdateBehavior(EAppAutoUpdateBehavior)
  T CSteamApp::SetCacheLoadingEnabled(bool, bool)
  T CSteamApp::SetCommonDialogVariables(vgui::EditablePanel*)
  T CSteamApp::SetCurrentLanguage(ELanguage)
  T CSteamApp::SetDisplayName(char const*)
  T CSteamApp::SetHidden(bool)
- T CSteamApp::SetInstalledRegistryKey(bool)
  T CSteamApp::SetLegacyCDKeyForCurrentUser()
  T CSteamApp::SetNewsUpdateViewed()
- T CSteamApp::SetRunningRegistryKey(bool)
  T CSteamApp::SetSortAs(char const*)
- T CSteamApp::SetUpdatingRegistryKey(bool)
  T CSteamApp::SetUserLaunchArguments(char const*)
  T CSteamApp::UninstallApplicationBlocking()
  T CSteamApp::UninstallCleanupFolder()
@@ -34689,7 +34680,7 @@
  T CStreamingServerGameActions::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T CStreamingServerGameActions::ShowCantLaunchShortcut(CSteamApp*)
  T CStreamingServerGameActions::ShowCantStartGame()
- T CStreamingServerGameActions::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T CStreamingServerGameActions::ShowCantStartGameDetailed(EAppUpdateError)
  T CStreamingServerGameActions::ShowConnectionIssuesDialog()
  T CStreamingServerGameActions::ShowDRMRequestFailed(char const*, EResult)
  T CStreamingServerGameActions::ShowFilesMissingAndOfflineMessage(char const*)
@@ -36009,7 +36000,7 @@
  T CTenfootGameActions::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T CTenfootGameActions::ShowCantLaunchShortcut(CSteamApp*)
  T CTenfootGameActions::ShowCantStartGame()
- T CTenfootGameActions::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T CTenfootGameActions::ShowCantStartGameDetailed(EAppUpdateError)
  T CTenfootGameActions::ShowConnectionIssuesDialog()
  T CTenfootGameActions::ShowDRMRequestFailed(char const*, EResult)
  T CTenfootGameActions::ShowExternalSignupForApp(unsigned int)
@@ -38301,11 +38292,6 @@
  T CUtlVector<CFriendsController::FriendsSearchResult_t, CUtlMemory<CFriendsController::FriendsSearchResult_t> >::SortedFindLessOrEqual(CFriendsController::FriendsSearchResult_t const&, bool (*)(CFriendsController::FriendsSearchResult_t const&, CFriendsController::FriendsSearchResult_t const&), int, int) const
  T CUtlVector<CFriendsController::FriendsSearchResult_t, CUtlMemory<CFriendsController::FriendsSearchResult_t> >::SortedInsert(CFriendsController::FriendsSearchResult_t const&, bool (*)(CFriendsController::FriendsSearchResult_t const&, CFriendsController::FriendsSearchResult_t const&))
  T CUtlVector<CFriendsController::FriendsSearchResult_t, CUtlMemory<CFriendsController::FriendsSearchResult_t> >::~CUtlVector()
- T CUtlVector<CFriendsNew::FriendsPage_t*, CUtlMemory<CFriendsNew::FriendsPage_t*> >::GrowVector(int)
- T CUtlVector<CFriendsNew::FriendsPage_t*, CUtlMemory<CFriendsNew::FriendsPage_t*> >::InsertBefore(int, CFriendsNew::FriendsPage_t* const&)
- T CUtlVector<CFriendsNew::FriendsPage_t*, CUtlMemory<CFriendsNew::FriendsPage_t*> >::PurgeAndDeleteElements()
- T CUtlVector<CFriendsNew::FriendsPage_t*, CUtlMemory<CFriendsNew::FriendsPage_t*> >::ShiftElementsRight(int, int)
- T CUtlVector<CFriendsNew::FriendsPage_t*, CUtlMemory<CFriendsNew::FriendsPage_t*> >::~CUtlVector()
  T CUtlVector<CGameActionSet*, CUtlMemory<CGameActionSet*> >::~CUtlVector()
  T CUtlVector<CGameID, CUtlMemory<CGameID> >::AddToTail(CGameID&&)
  T CUtlVector<CGameID, CUtlMemory<CGameID> >::GrowVector(int)
@@ -40101,7 +40087,7 @@
  T CWebBrowser::SaveCurrentPageToJPEG()
  T CWebBrowser::ScheduleMovementTimeoutIfNeeded()
  T CWebBrowser::ShowReticle()
- T CWebBrowser::UpdateCursorBehaviourOnFocusChange(bool)
+ T CWebBrowser::UpdateCursorBehaviourOnFocusChange(bool, bool)
  T CWebBrowser::UpdateTabStatusClasses()
  T CWebBrowser::~CWebBrowser()
  T CWebBrowserMoreMenu::CWebBrowserMoreMenu(panorama::CPanel2D*, char const*, CWebBrowser*)
@@ -40712,6 +40698,9 @@
  T ControllerPropertiesClosing::MakeEvent(panorama::IUIPanelClient const*)
  T ControllerPropertiesDoneGordon::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ControllerPropertiesDoneGordon::MakeEvent(panorama::IUIPanelClient const*)
+ T ControllerSetting_TurnOff::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ControllerSetting_TurnOff::GetEventType()
+ T ControllerSetting_TurnOff::MakeEvent(panorama::IUIPanelClient const*)
  T ControllerSupport::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ControllerSupport::GetEventType()
  T ControllerSupport::MakeEvent(panorama::IUIPanelClient const*)
@@ -41310,9 +41299,6 @@
  T FocusFriendsContent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FocusFriendsContent::GetEventType()
  T FocusFriendsContent::MakeEvent(panorama::IUIPanelClient const*)
- T FocusFriendsMenuRow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T FocusFriendsMenuRow::GetEventType()
- T FocusFriendsMenuRow::MakeEvent(panorama::IUIPanelClient const*)
  T FocusGamesGrid::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FocusGamesGrid::GetEventType()
  T FocusGamesGrid::MakeEvent(panorama::IUIPanelClient const*)
@@ -41385,9 +41371,6 @@
  T FriendsClearFilter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsClearFilter::GetEventType()
  T FriendsClearFilter::MakeEvent(panorama::IUIPanelClient const*)
- T FriendsContentChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T FriendsContentChanged::GetEventType()
- T FriendsContentChanged::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T FriendsFilterChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T FriendsFilterChanged::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T FriendsGroupItemLeaveChat::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -42014,9 +41997,6 @@
  T LoadConfig::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
  T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
- T LoadInviteList::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T LoadInviteList::GetEventType()
- T LoadInviteList::MakeEvent(panorama::IUIPanelClient const*, bool)
  T LoadInviteListX::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T LoadInviteListX::MakeEvent(panorama::IUIPanelClient const*)
  T LoadLibAudio()
@@ -43153,9 +43133,6 @@
  T ShowProfileForSteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowProfileForSteamID::GetEventType()
  T ShowProfileForSteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, bool)
- T ShowProfileOptions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T ShowProfileOptions::GetEventType()
- T ShowProfileOptions::MakeEvent(panorama::IUIPanelClient const*)
  T ShowPurchaseConfirmation::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowPurchaseConfirmation::MakeEvent(panorama::IUIPanelClient const*)
  T ShowPurchaseOptions::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -43950,9 +43927,6 @@
  T ViewEntireAlbum::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ViewEntireAlbum::GetEventType()
  T ViewEntireAlbum::MakeEvent(panorama::IUIPanelClient const*)
- T ViewFullProfile::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T ViewFullProfile::GetEventType()
- T ViewFullProfile::MakeEvent(panorama::IUIPanelClient const*)
  T ViewGuide::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ViewGuide::GetEventType()
  T ViewGuide::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
@@ -44223,7 +44197,6 @@
  T bool panorama::DispatchEvent<NetworkRefresh>(NetworkRefresh, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<OpenCommunityHome, bool>(OpenCommunityHome, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<OpenCommunityMarket, bool>(OpenCommunityMarket, panorama::IUIPanelClient const*, bool)
- T bool panorama::DispatchEvent<OpenProfileMenu, bool>(OpenProfileMenu, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<OpenRemoteContent, char const*, char const*, EParentalFeature>(OpenRemoteContent, panorama::IUIPanelClient const*, char const*, char const*, EParentalFeature)
  T bool panorama::DispatchEvent<OpenRemoteContent, char*, char const*, EParentalFeature>(OpenRemoteContent, panorama::IUIPanelClient const*, char*, char const*, EParentalFeature)
  T bool panorama::DispatchEvent<PaymentFieldsUpdated>(PaymentFieldsUpdated, panorama::IUIPanelClient const*)
@@ -44909,7 +44882,7 @@
  T non-virtual thunk to CJoinGameDialog::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T non-virtual thunk to CJoinGameDialog::ShowCantLaunchShortcut(CSteamApp*)
  T non-virtual thunk to CJoinGameDialog::ShowCantStartGame()
- T non-virtual thunk to CJoinGameDialog::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T non-virtual thunk to CJoinGameDialog::ShowCantStartGameDetailed(EAppUpdateError)
  T non-virtual thunk to CJoinGameDialog::ShowConnectionIssuesDialog()
  T non-virtual thunk to CJoinGameDialog::ShowDRMRequestFailed(char const*, EResult)
  T non-virtual thunk to CJoinGameDialog::ShowFilesMissingAndOfflineMessage(char const*)
@@ -45066,7 +45039,7 @@
  T non-virtual thunk to CStreamingServerGameActions::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T non-virtual thunk to CStreamingServerGameActions::ShowCantLaunchShortcut(CSteamApp*)
  T non-virtual thunk to CStreamingServerGameActions::ShowCantStartGame()
- T non-virtual thunk to CStreamingServerGameActions::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T non-virtual thunk to CStreamingServerGameActions::ShowCantStartGameDetailed(EAppUpdateError)
  T non-virtual thunk to CStreamingServerGameActions::ShowConnectionIssuesDialog()
  T non-virtual thunk to CStreamingServerGameActions::ShowDRMRequestFailed(char const*, EResult)
  T non-virtual thunk to CStreamingServerGameActions::ShowFilesMissingAndOfflineMessage(char const*)
@@ -45128,7 +45101,7 @@
  T non-virtual thunk to CTenfootGameActions::ShowAppUpdateFailed(char const*, int, char const*, EAppUpdateError)
  T non-virtual thunk to CTenfootGameActions::ShowCantLaunchShortcut(CSteamApp*)
  T non-virtual thunk to CTenfootGameActions::ShowCantStartGame()
- T non-virtual thunk to CTenfootGameActions::ShowCantStartGameDetailed(EAppUpdateError, char const*)
+ T non-virtual thunk to CTenfootGameActions::ShowCantStartGameDetailed(EAppUpdateError)
  T non-virtual thunk to CTenfootGameActions::ShowConnectionIssuesDialog()
  T non-virtual thunk to CTenfootGameActions::ShowDRMRequestFailed(char const*, EResult)
  T non-virtual thunk to CTenfootGameActions::ShowFilesMissingAndOfflineMessage(char const*)
@@ -49020,6 +48993,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerFirmwareOutOfDate, ControllerFirmwareUpdateArgs_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerPropertiesClosing>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerPropertiesDoneGordon>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerSetting_TurnOff>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerSupport>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerVolumeFound, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerWarningDialogCancel, char const*>(panorama::IUIPanel*, char const*, char const**)
@@ -49102,7 +49076,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FirstTimeBroadcastClose>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusCurrentRecipientOption>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusFriendsContent>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusFriendsMenuRow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusGamesGrid>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusMenuRow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FocusNamedTab, char const*>(panorama::IUIPanel*, char const*, char const**)
@@ -49124,7 +49097,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsActions, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsChatInsertEmoticon, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsClearFilter>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsContentChanged, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsFilterChanged, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsGroupItemLeaveChat>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<FriendsMainViewMore>(panorama::IUIPanel*, char const*, char const**)
@@ -49204,7 +49176,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ListSegmentViewRetreat>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LoadCategories>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LoadConfig, char const*>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LoadInviteList, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LoadInviteListX>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LoadedAsyncWithWebAuth, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LocalLibraryStopCrawling>(panorama::IUIPanel*, char const*, char const**)
@@ -49508,7 +49479,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPasswordToggled>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPreviewForDefault>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowProfileForSteamID, unsigned long long, bool>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowProfileOptions>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPurchaseConfirmation>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowPurchaseOptions, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowQueuedClanInviteNotifications>(panorama::IUIPanel*, char const*, char const**)
@@ -49696,7 +49666,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewControllerDetails, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewControllerPresets, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewEntireAlbum>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewFullProfile>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewGuide, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewGuidesDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewLegalNotice>(panorama::IUIPanel*, char const*, char const**)
@@ -57449,7 +57418,6 @@
  crc32
  d CControllerPropertiesMode::ShouldControlBeVisible(panorama::CPanel2D*)::s_rgModeNames
  d CControllerPropertiesMode::ShouldControlBeVisible(panorama::CPanel2D*)::s_rgSourceNames
- d CFriendsNew::CFriendsNew(panorama::CPanel2D*, char const*)::s_FriendsPages
  d CSteamDoc::BGetAppGridOverrideFilename(CGameID const&, char*, unsigned long)::rgszExtensions
  d CStreamServer::GetSessionStateName(CStreamServer::ESessionState)::s_pszSessionStateNames
  d CSurveySummarizeData::GatherData()::sectionlabels
@@ -58552,12 +58520,14 @@
  t Create_FriendsChatProfileBackground(char const*, panorama::IUIPanel*)
  t Create_FriendsContent_Friends(char const*, panorama::IUIPanel*)
  t Create_FriendsContent_Groups(char const*, panorama::IUIPanel*)
+ t Create_FriendsEditPersonaDialog(char const*, panorama::IUIPanel*)
  t Create_FriendsFriendListItemCommunity(char const*, panorama::IUIPanel*)
  t Create_FriendsIndicatorContainer(char const*, panorama::IUIPanel*)
  t Create_FriendsInvitePage(char const*, panorama::IUIPanel*)
  t Create_FriendsInvitePageX(char const*, panorama::IUIPanel*)
  t Create_FriendsListHeader(char const*, panorama::IUIPanel*)
  t Create_FriendsProfileDetailsCompositeHeader(char const*, panorama::IUIPanel*)
+ t Create_FriendsRemoteContent(char const*, panorama::IUIPanel*)
  t Create_FriendsSearchButton(char const*, panorama::IUIPanel*)
  t Create_FriendsSelfHeader(char const*, panorama::IUIPanel*)
  t Create_GraphPanel()
