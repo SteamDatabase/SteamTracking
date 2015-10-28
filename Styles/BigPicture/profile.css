@@ -845,6 +845,7 @@ ProfilePanel #UpperRow
 
 	margin-left: 10px;
 	flow-children: right;
+	padding-top: 15px;
 }
 
 #SteamLevelRow Label
@@ -863,13 +864,18 @@ ProfilePanel #UpperRow
 	vertical-align: center;
 }
 
-#SteamLevelRow Label.friendPlayerLevel
+#SteamLevelRow Label
 {
+	height: 100%;
+	width: 100%;
 	font-size: 20px;
+	font-weight: normal;
 	vertical-align: center;
-	margin-top: 4px;
-	padding-top: 16px;
-	margin-right: 4px;
+	margin-right: 0px;
+	margin-top: 0px;
+	text-align: center;
+	color: #FFFFFF99;
+	transform: translatex( 0px );
 }
 
 .friendPlayerLevel
