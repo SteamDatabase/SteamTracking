@@ -5,7 +5,16 @@ var CStoreHome = function( navigation )
 	this.m_rgHomeSections = { not_implemented: '' };
 
 	var _store = this;
-	$.RegisterEventHandler( 'UnreadyForDisplay', $.GetContextPanel(), function( pPanel ) { _store.OnUnreadyForDisplay( pPanel ); });
+
+	// UnreadyForDisplay is only in beta client
+	try
+	{
+		$.RegisterEventHandler( 'UnreadyForDisplay', $.GetContextPanel(), function (pPanel) { _store.OnUnreadyForDisplay(pPanel); });
+	}
+	catch ( e )
+	{
+	}
+
 	this.m_hShoppingCartChanged = $.RegisterForUnhandledEvent( 'ShoppingCartChanged', function () { _store.OnShoppingCartChanged(); });
 	this.m_hClearShoppingCart = $.RegisterForUnhandledEvent( 'ClearShoppingCart', function () { _store.OnClearShoppingCart(); });
 }
