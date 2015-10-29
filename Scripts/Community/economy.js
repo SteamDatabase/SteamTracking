@@ -2711,7 +2711,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 			var elImage = new Element( 'img', {src: v_trim( description.value ) } );
 			elDescription.appendChild( elImage );
 		}
-		else if ( description.type == 'html' )
+		else if ( description.type == 'html' || description.type == 'bbcode' )
 		{
 			elDescription.update( strParsedDescription );
 		}
