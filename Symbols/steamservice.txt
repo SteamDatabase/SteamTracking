@@ -5657,7 +5657,6 @@
  T bn_sub_part_words
  T bn_sub_words
  T bool CryptoPP::NameValuePairs::GetThisObject<CryptoPP::RSAFunction>(CryptoPP::RSAFunction&) const
- T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
@@ -6597,11 +6596,8 @@
  T tls1_setup_key_block
  T tree_find_sk
  T unsigned int CryptoPP::DivideThreeWordsByTwo<unsigned int, CryptoPP::DWord>(unsigned int*, unsigned int, unsigned int, CryptoPP::DWord*)
- T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T unsigned int std::__1::__sort4<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort4<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort5<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T v2i_ASN1_BIT_STRING
  T v2i_GENERAL_NAME
@@ -6621,9 +6617,7 @@
  T void PipeDebugParam<unsigned char>(unsigned char*)
  T void PipeDebugParam<unsigned int>(unsigned int)
  T void PipeDebugParam<unsigned int>(unsigned int*)
- T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__insertion_sort_3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- T void std::__1::__sort<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__sort<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)

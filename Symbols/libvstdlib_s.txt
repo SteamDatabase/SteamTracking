@@ -530,6 +530,7 @@
  T V_memcpy_nocache
  T V_pretifymem
  T V_pretifynum
+ T V_qsort_s
  T V_snprintf
  T V_strcat
  T V_strcmp_prefix
@@ -676,6 +677,7 @@
  printf
  pthread_mutex_lock
  pthread_mutex_unlock
+ qsort_r
  r V_CP437CharsToUTF8::s_table
  r V_MakeFileSafeName::k_rgchBadChars
  r V_Windows1252CharsToUTF8::s_table

@@ -1184,6 +1184,14 @@ Slider:Selected
 	margin-right: 70px;
 }
 
+.ColumnMouse
+{
+	flow-children: down;
+	width: fieldwidth;
+  height: 500px;
+}
+
+
 .FieldWrapper
 {
 	width: fieldwidth;
@@ -1209,14 +1217,19 @@ Slider:Selected
 .FieldWrapper DropDown
 {
 	width: 100%;
+    height: 46px;
+	padding-left: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 1px;
 }
 
 .FieldWrapper Slider
 {
 	width: 100%;
 	height: 20px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-top: 12px;
+	margin-bottom: 22px;
 }
 
 .NoneMode
@@ -1255,7 +1268,7 @@ Slider:Selected
 	transition-duration: 0.23s;
 
 	width: 100%;
-	height: 50px;
+	height: 46px;
 }
 
 .Column ControllerBindingButton:focus Label
@@ -1289,7 +1302,7 @@ Slider:Selected
 
 #ModeDropDownDropDownMenu
 {
-	max-height: 350px;
+	max-height: 300px;
 }
 
 .FieldWrapper Button:hover, .FieldWrapper ControllerBindingButton:hover, .FieldWrapper DropDown:hover
@@ -1442,7 +1455,7 @@ DropDownMenu.DropDownMenuVisible
 #RightColumnWrapper
 {
 	width: fieldwidth;
-	height: 420px;
+	height: 450px;
 }
 
 .AdvancedPropertiesWrapper

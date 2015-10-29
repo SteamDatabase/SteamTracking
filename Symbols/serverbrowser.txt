@@ -4821,8 +4821,6 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
@@ -4998,12 +4996,6 @@
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__swap_out_circular_buffer(std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>&)
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
- T unsigned int std::__1::__sort3<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
- T unsigned int std::__1::__sort4<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort4<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
- T unsigned int std::__1::__sort5<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
  T vgui::AnimatingImagePanel::ApplySettings(KeyValues*)
@@ -7799,10 +7791,6 @@
  T vgui::scheme()
  T vgui::surface()
  T vgui::system()
- T void std::__1::__insertion_sort_3<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
- T void std::__1::__sort<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T void std::__1::__sort<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -7848,6 +7836,7 @@
  V_binarytohex
  V_isbreakablewspace
  V_pretifymem
+ V_qsort_s
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
@@ -8383,6 +8372,7 @@
  pthread_mutex_unlock
  pthread_mutexattr_destroy$UNIX2003
  pthread_mutexattr_init
+ qsort
  r .memset_pattern
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_

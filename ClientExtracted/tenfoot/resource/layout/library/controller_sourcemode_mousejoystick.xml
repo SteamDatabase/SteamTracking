@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+	</styles>
+
+	<ControllerSourceModeAbsoluteMouse class="ControllerMode" tabindex="auto">
+		<Panel id="SourceModeLines" />
+		<Panel id="BindingSlotContainer">	
+			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_MouseJoystick_Title" />			
+			<ControllerBindingButton id="AbsMouseClick" acceptsfocus="false" />
+			<ControllerBindingButton id="DoubleTap" acceptsfocus="false" />
+		</Panel>
+	</ControllerSourceModeAbsoluteMouse>
+</root>

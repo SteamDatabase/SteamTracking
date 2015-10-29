@@ -1,7 +1,7 @@
 
 @define touchkeyclickedactivetime: 0.13;
 
-@define touchmenufadeinouttime: 0.1s;
+@define touchmenufadeinouttime: 0.033s;
 
 #TouchMenu
 {
@@ -10,8 +10,8 @@
 	height: 430px;
 	background-color: #072135bb;
 	border-radius: 10px;
-	border-bottom-left-radius: 195px;
-	border-bottom-right-radius: 195px;
+	//border-bottom-left-radius: 195px;
+	//border-bottom-right-radius: 195px;
 	
 	opacity: 0.0;
 	
@@ -40,21 +40,37 @@
 	
 	background-color: daisy_bg_color;
 	
-	border-radius: 50%;
+	border-radius: 8px;
 }
 
 .TouchKey
 {
 	margin-left: 0px;
 	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
 	width: 75px;
 	height: 75px;
 	background-color: daisy_petal_color;
+    border-radius: 8px;
+    border: 3px solid daisy_bg_color;
+}
+
+.TouchKey Label
+{
+	margin-top: 5px;
+	horizontal-align: center;
+    vertical-align: center;
+	color: tclegendlabel;
+	font-size: 24px;
+	font-family: platformfont;
 }
 
 .TouchKeyHover
 {
 	background-color: daisy_petal_selection_color;
+    border-radius: 6px; 
+    border: 4px solid #ffffff88;
 }
 
 .TouchKeyClicked
