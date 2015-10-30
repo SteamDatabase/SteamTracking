@@ -178,6 +178,16 @@ body.flat_page #footer
 	background-color: black;
 }
 
+.SteamClientMinimized #footer
+{
+	display: none;
+}
+
+.SteamClientMinimized .perf_timing_area
+{
+	display: none;
+}
+
 body.flat_page
 {
 	background-color: black;
@@ -361,6 +371,18 @@ body.iframe .ShowPlayer #LoadedContent
 	margin-right: 20px;
 	margin-left: 20px;
 	overflow: hidden;
+}
+
+.SteamClientMinimized #video_content
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.SteamClientMinimized #video_wrapper
+{
+	padding: 0px;
+	border: 0px solid black;
 }
 
 body.iframe #video_content

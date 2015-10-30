@@ -105888,7 +105888,7 @@
 		{
 			"name"		"Taunt: Zoomin' Broom"
 			"first_sale_date"		"2015/10/27"
-			"prefab"		"no_craft taunt"
+			"prefab"		"no_craft taunt marketable"
 			"item_name"		"#TF_zoomin_broom"
 			"item_description"		"#TF_zoomin_broom_Desc"
 			"ad_text"		"#TF_zoomin_broom_AdText"
@@ -105986,7 +105986,7 @@
 		{
 			"name"		"Taunt: Soldier's Requiem"
 			"first_sale_date"		"2015/10/27"
-			"prefab"		"no_craft taunt"
+			"prefab"		"no_craft taunt marketable"
 			"item_name"		"#TF_taunt_maggots_condolence"
 			"item_description"		"#TF_taunt_maggots_condolence_Desc"
 			"ad_text"		"#TF_taunt_maggots_condolence_AdText"
@@ -106014,7 +106014,7 @@
 		"30675"
 		{
 			"name"		"Roboot"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_roboot"
 			"item_description"		"#TF_hwn2015_roboot_Desc"
 			"equip_region"		"feet"
@@ -106034,7 +106034,7 @@
 		"30676"
 		{
 			"name"		"The Face of Mercy"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_face_of_mercy"
 			"item_description"		"#TF_hwn2015_face_of_mercy_Desc"
 			"item_type_name"		"#TF_Wearable_Mask"
@@ -106054,7 +106054,7 @@
 		"30680"
 		{
 			"name"		"El Caballero"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_western_poncho"
 			"item_description"		"#TF_hwn2015_western_poncho_Desc"
 			"equip_region"		"engineer_pocket"
@@ -106081,7 +106081,7 @@
 		"30681"
 		{
 			"name"		"El Patron"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_western_beard"
 			"item_description"		"#TF_hwn2015_western_beard_Desc"
 			"equip_region"		"beard"
@@ -106108,7 +106108,7 @@
 		"30682"
 		{
 			"name"		"Smokey Sombrero"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_western_hat"
 			"item_description"		"#TF_hwn2015_western_hat_Desc"
 			"equip_region"		"hat"
@@ -106127,7 +106127,7 @@
 		"30684"
 		{
 			"name"		"Neptune's Nightmare"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_neptunes_nightmare"
 			"item_description"		"#TF_hwn2015_neptunes_nightmare_Desc"
 			"equip_region"		"hat"
@@ -106153,7 +106153,7 @@
 		"30685"
 		{
 			"name"		"Thrilling Tracksuit"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_death_racer_jacket"
 			"item_description"		"#TF_hwn2015_death_racer_jacket_Desc"
 			"equip_region"		"shirt"
@@ -106179,7 +106179,7 @@
 		"30686"
 		{
 			"name"		"Death Racer's Helmet"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_death_racer_helmet"
 			"item_description"		"#TF_hwn2015_death_racer_helmet_Desc"
 			"equip_region"		"hat"
@@ -106206,7 +106206,7 @@
 		"30693"
 		{
 			"name"		"Grim Tweeter"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_grim_tweeter"
 			"item_description"		"#TF_hwn2015_grim_tweeter_Desc"
 			"equip_region"		"left_shoulder"
@@ -106253,7 +106253,7 @@
 		"30698"
 		{
 			"name"		"Iron Lung"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_iron_lung"
 			"item_description"		"#TF_hwn2015_iron_lung_Desc"
 			"equip_region"		"shirt"
@@ -106281,7 +106281,7 @@
 		"30700"
 		{
 			"name"		"Duck Billed Hatypus"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_duckyhat"
 			"item_description"		"#TF_hwn2015_duckyhat_Desc"
 			"equip_region"		"hat"
@@ -106326,7 +106326,7 @@
 		"30704"
 		{
 			"name"		"Prehistoric Pullover"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_dino_hoodie"
 			"item_description"		"#TF_hwn2015_dino_hoodie_Desc"
 			"equip_region"		"hat"
@@ -106372,7 +106372,7 @@
 		"30706"
 		{
 			"name"		"Catastrophic Companions"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_catastrophic_companions"
 			"item_description"		"#TF_hwn2015_catastrophic_companions_Desc"
 			"equip_region"		"belt_misc"
@@ -106419,7 +106419,7 @@
 		"30707"
 		{
 			"name"		"Dead'er Alive"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_mechanical_engineer"
 			"item_description"		"#TF_hwn2015_mechanical_engineer_Desc"
 			"equip_region"		"head_skin"
@@ -106445,7 +106445,7 @@
 		"30708"
 		{
 			"name"		"The Hellmet"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_hellmet"
 			"item_description"		"#TF_hwn2015_hellmet_Desc"
 			"equip_region"		"hat"
@@ -106472,7 +106472,7 @@
 		"30716"
 		{
 			"name"		"Crusader's Getup"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_firebug_suit"
 			"item_description"		"#TF_hwn2015_firebug_suit_Desc"
 			"equip_region"		"shirt"
@@ -106499,7 +106499,7 @@
 		"30717"
 		{
 			"name"		"Arthropod's Aspect"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_firebug_mask"
 			"item_description"		"#TF_hwn2015_firebug_mask_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -106526,7 +106526,7 @@
 		"30718"
 		{
 			"name"		"B'aaarrgh-n-Bicorne"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_hwn2015_bargain_bicorne"
 			"item_description"		"#TF_hwn2015_bargain_bicorne_Desc"
 			"equip_region"		"hat"
@@ -106553,7 +106553,7 @@
 		"30719"
 		{
 			"name"		"B'aaarrgh-n-Britches"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_hwn2015_bargain_britches"
 			"item_description"		"#TF_hwn2015_bargain_britches_Desc"
 			"equip_region"		"pants"
@@ -133538,7 +133538,7 @@
 			"image_inventory"	"backpack/player/items/crafting/hwn2015_gargoyle_stone"
 			"item_quality"		"unique"
 			"is_tool"			"1"
-			"inspect_panel_dist" "100"
+			"inspect_panel_dist" "65"
 			"collection_reference"		"halloween2015_collection_lootlist"
 			"visuals"
 			{
