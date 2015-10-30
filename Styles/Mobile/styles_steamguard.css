@@ -71,7 +71,7 @@
 	color: #ffffff;
 }
 
-.steamguard_cannot_change_text, .steamguard_none_text, .steamguard_email_text, .steamguard_splash_text, .steamguard_prechange_text, .steamguard_help_text, .steamguard_errorpage_text, .steamguard_activatewithemail_text {
+.steamguard_cannot_change_text, .steamguard_none_text, .steamguard_email_text, .steamguard_splash_text, .steamguard_prechange_text, .steamguard_help_text, .steamguard_errorpage_text {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 10px;
@@ -405,8 +405,4 @@ input#sms_code {
 
 .steamguard_splashette_top {
 	border-top: 1px solid #000000;
-}
-
-
-.steamguard_activatewithemail_wrapper {
 }

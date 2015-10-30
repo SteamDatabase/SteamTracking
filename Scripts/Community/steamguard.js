@@ -294,30 +294,7 @@ function UseSteamguardWithTwoFactor( near )
 }
 
 
-function HandleTwoFactorSplashContinue( near )
-{	
-	if ( CheckCallInProgress() )
-		return;
-	ShowBusy( near );
-
-	GetValueFromLocalURL( 'steammobile://steamguardset?scheme=twofactor', 60,
-		function( data )
-		{
-			window.location = 'https://steamcommunity.com/steamguard/twofactor_confirm';
-		},
-		FatalError,
-		FatalError
-	);
-}
-
-
-function HandleActivateUsingEmail( near )
-{
-	HandleTwoFactorSplashContinue( near );
-}
-
-
-function HandleActivationCode( near, bUsingSms )
+function HandleActivationCode( near )
 {
 	if ( CheckCallInProgress() )
 		return;
