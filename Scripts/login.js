@@ -861,7 +861,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		$J('#login_twofactor_authcode_entry').hide();
 
 		if ( !this.m_bIsMobileSteamClient
-				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 1, 3 )
+				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 1, 4 )
 				|| this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 2 )
 			)
 		{
