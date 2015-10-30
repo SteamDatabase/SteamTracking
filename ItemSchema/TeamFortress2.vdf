@@ -106249,6 +106249,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
 		}
 		"30698"
 		{
@@ -106414,6 +106422,14 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
 			}
 		}
 		"30707"
