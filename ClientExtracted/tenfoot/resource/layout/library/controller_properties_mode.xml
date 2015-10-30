@@ -330,11 +330,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="both">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
 					<DropDown id="AdaptiveThreshold" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="both">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
 					<Slider id="TriggerThreshold" direction="horizontal" />
 				</Panel>									
@@ -610,15 +610,6 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
 					<DropDown id="TriggerCurveExponent" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
-					<DropDown id="AdaptiveThresholdGA" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
-					<Slider id="TriggerThresholdGA" direction="horizontal" />
-				</Panel>
-
 			</Panel>
 
 			<!--

@@ -1,7 +1,7 @@
 
 @define touchkeyclickedactivetime: 0.13;
 
-@define touchmenufadeinouttime: 0.033s;
+@define touchmenufadeinouttime: 0.1s;
 
 #TouchMenu
 {

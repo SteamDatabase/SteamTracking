@@ -964,7 +964,7 @@
 			"edges"
 			{
 				0 { "dest"	47 	"cost"	InwardCost }
-				1 { "dest"	48 	"cost"	InwardCost }
+				1 { "dest"	160 }
 			}
 		}
 
@@ -983,7 +983,7 @@
 					"cost"	LocalCostToLeaveChina
 				}
 				1 { "dest"	46 	"cost"	InwardCost }
-				2 { "dest"	48 	"cost"	InwardCost }
+				2 { "dest"	159 }
 				3 { "dest"	148 	"cost"	InwardCost }
 				4 
 				{ 
@@ -1007,8 +1007,8 @@
 			"longitude"	"104.049797"
 			"edges"
 			{
-				0 { "dest"	46 	"cost"	InwardCost }
-				1 { "dest"	47 	"cost"	InwardCost }	
+				0 { "dest"	160 	"cost"	InwardCost }
+				1 { "dest"	159 	"cost"	InwardCost }	
 				2 { "dest"	148 	"cost"	InwardCost }	
 			}
 		}
@@ -1264,7 +1264,8 @@
 			"edges"
 			{
 				0 { "dest"	39 	"cost"	InwardCost }
-				1 { "dest"	152 }
+				1 { "dest"	157 }
+				1 { "dest"	158 }
 			}
 		}
 		// #63 US - Washington, DC
@@ -2492,8 +2493,8 @@
 			"longitude"	"131.9"
 			"edges"
 			{
-				0 { "dest"	62	"cost"	InwardCost }
-				1 { "dest"	32 }
+				0 { "dest"	157	"cost"	InwardCost }
+				1 { "dest"	32	"cost"	2 }
 			}		
 		}
 		153
@@ -2538,6 +2539,55 @@
 			"edges"
 			{
 				0 { "dest"	25	"cost"	InwardCost }
+			}		
+		}
+		157
+		{
+			"name" "Russia - Irkutsk"
+			"region"	"eastern_russia"
+			"latitude"	"52.312222"
+			"longitude"	"104.295833"
+			"edges"
+			{
+				0 { "dest"	62	"cost"	InwardCost }
+				1 { "dest"	152 }
+			}		
+		}		
+		158
+		{
+			"name" "Kazakhstan"
+			"region"	"russia"
+			"latitude"	"51.166667"
+			"longitude"	"71.433333"
+			"edges"
+			{
+				0 { "dest"	62	"cost"	InwardCost }
+				1 { "dest"	39	"cost"	InwardCost }
+			}		
+		}			
+		159
+		{
+			"name" "China - Wuhan"
+			"region"	"china"
+			"latitude"	"30.583333"
+			"longitude"	"114.283333"
+			"edges"
+			{
+				0 { "dest"	48 }
+				1 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		160
+		{
+			"name" "China - Xi'an"
+			"region"	"china"
+			"latitude"	"34.266667"
+			"longitude"	"108.9"
+			"edges"
+			{
+				0 { "dest"	48 }
+				1 { "dest"	46	"cost"	InwardCost }
+				2 { "dest"	47	"cost"	InwardCost }
 			}		
 		}
 	}
@@ -2880,7 +2930,7 @@
 		"JO"	30
 		
 		//"Kazakhstan"					
-		"KZ"	39
+		"KZ"	158
 		
 		//"Kenya"							
 		"KE"	131
