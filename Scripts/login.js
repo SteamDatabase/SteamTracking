@@ -860,9 +860,10 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		icon = 'steam';
 		$J('#login_twofactor_authcode_entry').hide();
 
-		if ( !this.m_bIsMobileSteamClient ||
-				this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 32 ) ||
-				this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 1, 5, 6 ) )
+		if ( !this.m_bIsMobileSteamClient
+				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 1, 3 )
+				|| this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 2 )
+			)
 		{
 			$J( '#login_twofactorauth_buttonset_selfhelp div[data-modalstate=selfhelp_sms_reset_start]' ).hide();
 		}
