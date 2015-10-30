@@ -571,11 +571,6 @@ CTradeOfferStateManager = {
 				if ( bNeedsMobileConfirmation )
 				{
 					var strText = 'In order to send this trade offer, you must verify it in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.';
-					if ( bNeedsEmailConfirmation )
-					{
-						strText += '<br><br>We have also sent an email to your address (ending in "%s") and you may complete the verification from there.'.replace( /%s/, data.email_domain );
-						strText += '<br><br><strong>Note:</strong> After October 29th, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
-					}
 
 					Modal = ShowAlertDialog(
 							'Additional confirmation needed',
@@ -632,11 +627,6 @@ CTradeOfferStateManager = {
 				if ( bNeedsMobileConfirmation )
 				{
 					var strText = 'In order to complete this trade, you must verify it in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.';
-					if ( bNeedsEmailConfirmation )
-					{
-						strText += '<br><br>We have also sent an email to your address (ending in "%s") and you may complete the verification from there.'.replace( /%s/, data.email_domain );
-						strText += '<br><br><strong>Note:</strong> After October 29th, accounts with a Steam Guard Mobile Authenticator will only be able to complete this verification step from the Steam Mobile app.';
-					}
 
 					Modal = ShowAlertDialog(
 							'Additional confirmation needed',
