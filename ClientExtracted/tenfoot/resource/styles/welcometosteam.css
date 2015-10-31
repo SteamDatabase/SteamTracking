@@ -16,7 +16,7 @@ WelcomeToSteam
 	animation-name: none;
 }
 
-#TitlePanel
+.TitlePanel
 {
 	flow-children:right;
 	horizontal-align: center;
@@ -63,6 +63,16 @@ WelcomeToSteam
 	height: 700px;
 }
 
+#sub_image_center
+{
+	height: 540px;
+}
+
+#sub_image_center_shortish
+{
+	height: 440px;
+}
+
 #WelcomeCapsuleOver
 {
 	opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
@@ -91,6 +101,13 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	horizontal-align: center;
 	margin: 48px 24px 48px 24px;
 	width: 920px;
+}
+
+#sub_text_center_wide
+{
+	horizontal-align: center;
+	margin: 48px 24px 48px 24px;
+	width: 1020px;
 }
 
 #bulletpoints_header
@@ -319,4 +336,101 @@ MainMenu.BelowTheFoldOpen .SubImageCenterAlign
 	font-size: 24px;
 	color: white;
 	vertical-align: center;
+}
+
+WelcomeToSteamTipSectionContainer
+{
+	flow-children: down;
+}
+
+.SecurityTwoColumnWrapper
+{
+	width: 100%;
+	flow-children: right;
+	padding-top: 20px;
+}
+
+.SecurityTwoColumnWrapper Image
+{
+	margin-left: 8px;
+	margin-right: 30px;
+
+	width: 115px;
+	height: 189px;
+}
+
+.SecurityColumnTextWrapper
+{
+	flow-children: down;
+	vertical-align: center;
+	height: fit-children;
+	width: 860px;
+}
+
+.SecurityColumnTextWrapper Label
+{
+	width: 100%;
+}
+
+.SecurityColumnTextWrapper Label.Header
+{
+	font-size: 30px;
+	color: #36ceff;
+}
+
+.SecurityColumnTextWrapper Label.Content
+{
+	font-size: 26px;
+	color: white;
+	padding-top: 20px;
+}
+
+.SubDesc .Emphasis
+{
+	color: green;
+}
+
+.SecurityCallToActionWrapper
+{
+	margin-top: 30px;
+	padding: 25px;
+	horizontal-align: center;
+	width: 100%;
+	background-color: #234c6c;
+	opacity: 0.3;
+}
+
+Button:descendantfocus .SecurityCallToActionWrapper
+{
+	opacity: 1.0;
+}
+
+.SecurityCallToActionWrapper Label
+{
+	font-size: 26px;
+	color: white;
+	horizontal-align: center;
+}
+
+.SecurityCallToActionWrapper Image
+{
+	width: 40px;
+	height: 40px;
+	margin-bottom: -10px;
+}
+
+.SecurityCallToActionWrapper Label.OnlyController
+{
+	visibility: collapse;
+	z-index: 100;
+}
+
+.ControllerPresent .SecurityCallToActionWrapper Label.OnlyController
+{
+	visibility: visible;
+}
+
+.ControllerPresent .OnlyKBMouse
+{
+	visibility: collapse;
 }

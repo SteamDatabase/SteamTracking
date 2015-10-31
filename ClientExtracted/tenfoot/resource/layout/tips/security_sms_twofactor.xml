@@ -9,7 +9,7 @@
     <Button class="SubPanel" tabindex="4" selectionpos="0,4" onactivate="BrowserGoToURL( https://store.steampowered.com/account/ );">
 			<Panel id="HR4" class="HR" />
 			<Panel class="SubPanelCenterContainer">
-				<Image class="SubImageCenterAlign" id="sub_image_center" src="file://{images}/welcomeupdates/securitybanner.png" scaling="stretch-to-fit-y-preserve-aspect" />
+				<Image class="SubImageCenterAlign" id="sub_image_center" src="file://{images}/welcomeupdates/securitybanner.png" scaling="stretch" />
 				
 				<Panel class="SubText" id="sub_text_center_wide">
           <Label class="SubHeader" text="#MainMenu_Welcome_Sub_Security_Title" />

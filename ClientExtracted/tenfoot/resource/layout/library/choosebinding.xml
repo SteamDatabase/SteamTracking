@@ -9,7 +9,9 @@
 		
 		<Panel id="GameActions" selectionpos="auto"> 
 			<Label id="GameActionsHeader" text="#Library_Details_GameActionsHeader" />
-			<Panel id="GameActionsContainer" selectionpos="auto"/>
+			<Panel id="GameActionsScrollContainer" selectionpos="auto">
+				<Panel id="GameActionsContainer" selectionpos="auto"/>
+			</Panel>
 		</Panel>
 		
 		<Panel id="VirtualMouse" tabindex="auto" selectionpos="-15,0">

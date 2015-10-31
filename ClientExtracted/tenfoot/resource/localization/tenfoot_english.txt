@@ -251,6 +251,7 @@
 
 	"MainMenu_Welcome_Header"			"Welcome to Steam"
 	"MainMenu_Welcome_Controller_Header"	"Your Steam Controller"
+	"MainMenu_Welcome_Security_Header"	"Your Account Security"
 	"MainMenu_Welcome_Sub_BigPicture_H"	"Steam, from your couch"
 	"MainMenu_Welcome_Sub_BigPicture_D"	"The things you love about Steam, now available on your television from the comfort of your couch. Your library of games, your friends, your favorite mods, and great deals on the latest games, all on your TV. Plus, you choose how you want to play. Use a Steam Controller, your favorite old controller, or your trusty mouse and keyboard."
 	"MainMenu_Welcome_Sub_BigPicture_New_H"	"PC Gaming, from your couch"
@@ -281,6 +282,15 @@
 	"MainMenu_Welcome_Sub_Controller_4"	"The grip buttons (found underneath the controller) are great for commands that you want to be able to use without removing your thumbs from the pads (like reload in an FPS)."
 	"MainMenu_Welcome_Sub_Controller_5"	"Select the Open Keyboard option in the Steam Overlay when playing a game that requires you to enter some keyboard text."
 	"MainMenu_Welcome_Sub_Controller_5_Hint"		"OPEN KEYBOARD"
+
+	"MainMenu_Welcome_Sub_Security_PhoneA"					"Add an SMS phone number"
+	"MainMenu_Welcome_Sub_Security_PhoneB"					"If you forget your password or simply can't log in to your account, Steam can send you a text message to get you back in and playing games."
+	"MainMenu_Welcome_Sub_Security_TwoFactorA"				"Better account security\nwith two-factor authentication"
+	"MainMenu_Welcome_Sub_Security_TwoFactorB"				"Email accounts can be easily compromised. Protect your games and items by ensuring only you can access your Steam account. Get the Steam Mobile app now."
+	"MainMenu_Welcome_Sub_Security_DescAction_Phone_Controller"		"Press <img src=\"file://{images}/library/controller/controller_button_a.png\"/> to add a phone number to your account"
+	"MainMenu_Welcome_Sub_Security_DescAction_Phone_MouseKB"		"Click here to add a phone number to your account"
+	"MainMenu_Welcome_Sub_Security_DescAction_TwoFactor_Controller"	"Press <img src=\"file://{images}/library/controller/controller_button_a.png\"/> to learn more and get the mobile app"
+	"MainMenu_Welcome_Sub_Security_DescAction_TwoFactor_MouseKB"	"Click here to learn more and get the mobile app"
 
 	"Test_MainLabel" "Steam 10'\nTEXT..................!"
 
@@ -612,6 +622,7 @@
 	"Settings_ControllerConfigs"	"Controller Configurations"
 	"Settings_AudioInterface"		"Interface"
 	"Settings_DisplayResolution"	"Resolution"
+	"Settings_Web"					"Web Browser"
 
 	"Settings_Network_Wizard"		"Network Configuration"
 	"Settings_AuthorizeLocalDevice"	"Family Library Sharing"

@@ -5,8 +5,23 @@
 		<include src="file://{resources}/styles/contentframe.css" />
 		<include src="file://{resources}/styles/friends/friends_new.css" />
 	</styles>
+	<scripts>
+		<include src="file://{resources}/javascript/base.js" />
+	</scripts>
+	<script>
+		function FriendsOnLoad()
+		{
+			var menuHoverClass = 'MenuHover';
+			var contentHoverClass = 'ContentHover';
 
-	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsTabButton">
+			var hoverItemStyles = {
+														'LeftColumn' :  menuHoverClass , 
+														'RightColumn' : contentHoverClass
+														};
+			SetupPanelsHoverEvents( hoverItemStyles, $('#AllContent') );
+		}
+	</script>	
+	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsTabButton" onload="FriendsOnLoad()" ondescendantfocus="FriendsOnLoad();" >
 		<FriendsChatProfileBackground id="FriendsChatProfileBackground" />
 		<Panel id="ContentFrameHeader" >
 			<Panel id="ContentMouseBackButton" onmouseactivate="BringMainMenuToTop();" />
@@ -21,8 +36,8 @@
 				<Label id="OfflineStatus2" text="#You_Are_Offline2" />
 			</Button>
 		</Panel>
-		<Panel class="AllContent" selectionpos="auto" tabindex="auto" >
-			<Panel id="LeftColumn" class="ButtonColumn" tabindex="auto" selectionpos="auto" rememberchildfocus="true" >
+		<Panel id="AllContent" class="AllContent" selectionpos="auto" tabindex="auto" >
+			<Panel id="LeftColumn" class="ButtonColumn" tabindex="auto" selectionpos="auto" rememberchildfocus="true" ondescendantfocus="AddStyle(AllContent, MenuHover)" ondescendantblur="RemoveStyle(AllContent, MenuHover)" >
 					<Button id="LocalProfile" nxnav-target="ProfileContent" class="NxLeftNavButton" selectionpos="auto" >
 						<AvatarImage id="LocalAvatar"/>						
 						<Panel class="LocalPersonaLabelContainer">
@@ -52,7 +67,7 @@
 					</Button>
 			</Panel>
 
-			<Panel id="RightColumn" class="ContentContainer" oncancel="MoveLeft(0);" >  <!-- content container -->
+			<Panel id="RightColumn" class="ContentContainer" oncancel="MoveLeft(0);" ondescendantfocus="AddStyle( AllContent, ContentHover)" ondescendantblur="RemoveStyle( AllContent, ContentHover)" >  <!-- content container -->
 				<FriendsEditPersonaDialog id="ProfileContent" class="FriendsContentContainer" />
 				<FriendsContent_Friends id="FriendsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" selectionposboundary="both" />
 				<FriendsContent_Groups id="GroupsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" overscroll-y="120" />

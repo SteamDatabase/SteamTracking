@@ -128,16 +128,22 @@ Friends.SlideAwayToRight
 	opacity:0.0;
 }
 
-
-
-
-.ButtonColumn:descendantfocus,
+.MenuHover .ButtonColumn,
+.MenuAreaFocus .ButtonColumn
 {
 	transform: translateX( 0px ) translateY( -8px );
 	opacity: 1.0;
 	pre-transform-scale2d: 1;
 	opacity-mask: none;
 }
+
+.MenuAreaFocus .ContentHover .ButtonColumn
+{
+	transform: translateX( -35px ) translateY( -8px );
+	opacity: 0.5;
+	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
+}
+
 
 .GamesHorizRule
 {
@@ -370,20 +376,46 @@ Label.Header
 }
 
 /* Transitions when grid is in focus */
-.ContentAreaFocus .ContentContainer
+.ContentHover .ContentContainer,
+.ContentAreaFocus .ContentContainer,
 {
 	transform: translateX( -200px );
 	width: 1000px;
 }
 
+.ContentAreaFocus .MenuHover .ContentContainer,
+{
+	transform: none;
+}
+
+
 .ContentAreaFocus.FriendsContent FriendsChatDialog,
-.ContentAreaFocus.GroupsContent FriendsChatDialog
+.ContentAreaFocus.GroupsContent FriendsChatDialog,
+.GroupsContent .ContentHover FriendsChatDialog,
+.FriendsContent .ContentHover FriendsChatDialog
 {
 	transform: translateX( -200px );
 	opacity:0.5;
 }
 
-.ContentAreaFocus FriendsChatDialog
+.GroupsContent.ChatFocus .ContentHover FriendsChatDialog,
+.FriendsContent.ChatFocus .ContentHover FriendsChatDialog
+{
+	transform: translateX( -950px );
+	opacity: 1.0;
+}
+
+.ContentAreaFocus.FriendsContent .MenuHover FriendsChatDialog,
+.ContentAreaFocus.GroupsContent .MenuHover FriendsChatDialog
+{
+	transform: none;
+	opacity: 1.0;
+}
+
+
+
+.ContentAreaFocus FriendsChatDialog,
+.ContentHover FriendsChatDialog,
 {
 	opacity: 0.0;
 }

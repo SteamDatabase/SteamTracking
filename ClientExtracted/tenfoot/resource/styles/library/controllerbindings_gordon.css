@@ -1580,9 +1580,19 @@ ChooseBinding #GameActionsHeader
 	font-size: 40px;
 }
 
-ChooseBinding #GameActionsContainer
+ChooseBinding #GameActionsScrollContainer
 {
 	margin-top: 25px;
+	height: 370px;
+	overflow: clip scroll;
+	horizontal-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ChooseBinding #GameActionsContainer
+{
+	margin-top: 0px;
 	flow-children: right-wrap;
 	horizontal-align: center;
 }

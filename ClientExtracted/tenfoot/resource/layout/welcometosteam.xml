@@ -7,11 +7,7 @@
 
 	<WelcomeToSteam onactivate="OpenBelowTheFold();" oncancel="CloseBelowTheFold();" onmoveup="HandleWelcomeMoveUp();" selectionpos="auto" mousecanactivate="unfocused">
 		<Panel id="WelcomeSection" defaultfocus="WelcomeTitle" tabindex="auto"  >
-			<Panel id="TitlePanel"> 
-				<Label id="WelcomeTitle" text="#MainMenu_Welcome_Header" />
-			</Panel>
-      
-      <Panel id="TipsContainer" class="FlowDown" />
+	    <Panel id="TipSectionContainer" class="FlowDown" />
 			
 			<Panel id="HR4" class="HR" />
 		</Panel>

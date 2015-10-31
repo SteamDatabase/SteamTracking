@@ -10,33 +10,21 @@
 	<script>
 		function LibraryAllGamesOnLoad()
 		{
-			var ancestorPanel = $( '#AllGamesContent' );
-
 			var menuHoverClass = 'MenuHover';
 			var contentHoverClass = 'ContentHover';
 
-			// setup menu
-			var menuPanel = $( '#Menu' );
-			SetupPanelHoverEvents( menuPanel, ancestorPanel, menuHoverClass );
-
-			// setup the other panels
-			var contentPanel = $( '#GamesSuggestion' );
-			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass );
-
-			contentPanel = $( '#GamesGrid' );
-			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass );
-
-			contentPanel = $( '#GamesDownloads' );
-			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass );
-
-			contentPanel = $( '#MusicPanelAllGames' );
-			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass ); 
-
-			contentPanel = $( '#EmptySearchArea' );
-			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass ); 
+			var hoverItemStyles = {
+														'Menu' :  menuHoverClass , 
+														'GamesSuggestion' : contentHoverClass ,
+														'GamesGrid' :  contentHoverClass ,
+														'GamesDownloads' :  contentHoverClass ,
+														'MusicPanelAllGames' :  contentHoverClass ,
+														'EmptySearchArea' :  contentHoverClass 
+														};
+			SetupPanelsHoverEvents( hoverItemStyles, $('#AllGamesContent') );
 		}
 	</script>	
-	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical" content-title="#Library_ContentTitle" onload="LibraryAllGamesOnLoad()">
+	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical" content-title="#Library_ContentTitle" onload="LibraryAllGamesOnLoad()" ondescendantfocus="LibraryAllGamesOnLoad();" >
 		<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />
 		<Panel hittest="false" id="FastScrollWrapper">
 			<Label id="FastScrollLabel" />
