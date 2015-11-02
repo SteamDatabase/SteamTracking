@@ -133437,9 +133437,8 @@
 				"is_operation_pass"	"1"
 				"weapon_allow_inspect"				"1"
 				"cannot restore"					"1"
-				"always_transmit_so"				"1"
-				
-				"deactive date"					"1446422400"	
+				"always_transmit_so"				"1"			
+				"deactive date"					"1446768000"	
 				"kill eater score type"			"101"	
 				"kill eater score type 2"		"102"	
 				"kill eater score type 3"		"103"	
