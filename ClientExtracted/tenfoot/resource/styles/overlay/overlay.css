@@ -16,7 +16,7 @@
 	opacity: 1.0;
 
 	transition-property: opacity, transform;
-	transition-duration: 0.3s;
+	transition-duration: 0.4s;
 	transition-timing-function: linear;
 
 	transform: translateX( 0px );
@@ -26,14 +26,14 @@
 {
 	opacity: 0.0;
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 #OverlayBasePanel.SlideAwayToRight
 {
 	opacity: 0.0;
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX(  0px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 #OverlayBasePanel.KillModalVisible

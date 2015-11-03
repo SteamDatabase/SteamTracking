@@ -2069,10 +2069,10 @@
 		// #119 Venezuela
 		119
 		{
-			"name" "Venezuela"
+			"name" "Colombia and Venezuela"
 			"region"	"south america"
-			"latitude"	"10.509417"
-			"longitude"	"-66.932144"
+			"latitude"	"8.716343"
+			"longitude"	"-73.786382"
 			"edges"
 			{
 				0 { "dest"	23 }
@@ -2308,6 +2308,7 @@
 		{
 			"name" "China (Perfect World Unicom)"
 			"region"	"china-unicom"
+			"deprecated" 1
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
 			"edges"
@@ -2319,6 +2320,7 @@
 		{
 			"name" "China (Perfect World Telecom)"
 			"region"	"china-telecom"
+			"deprecated" 1
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
 			"edges"
