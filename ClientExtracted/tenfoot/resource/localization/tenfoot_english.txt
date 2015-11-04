@@ -607,7 +607,7 @@
 	"Settings_Network"				"Network"
 	"Settings_Controller"			"Controller"
 	"Settings_Voice"				"Voice"
-	"Settings_InGame"				"In-Game"
+	"Settings_InGame"				"Steam Overlay"
 	"Settings_Downloads"		"Downloads"
 	"Settings_Cloud"				"Downloads & Cloud"
 	"Settings_RemoteClients"		"In-Home Streaming"

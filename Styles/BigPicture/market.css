@@ -153,22 +153,18 @@
 #RightColumn
 {
 	width: 100%;
-	height: 1200px;
+	height: 100%;
 	padding-top: 40px;
 }
 
 .ItemGrid
 {
-	margin-top: -64px;
-	margin-left: -67px;
+	width: 1600px;
+	height: 100%;
 
-	width: 106%;
-	height: 680px;
+	padding: 30px 60px 125px 60px;
 
-	margin: 0px 0px 0px -110px;
-	padding: 40px 360px 40px 180px;
-
-	overflow: noclip squish;
+	overflow: clip clip;
 
 	transition-property: transform;
 	transition-duration: mediumduration;

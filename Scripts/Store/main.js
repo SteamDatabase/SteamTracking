@@ -1893,7 +1893,11 @@ function InitHorizontalAutoSliders()
 
 		var fnShowHideButtons = function()
 		{
-			$Wrapper.css('height', $Scroll.children().outerHeight() );
+			var nTallestChild = 0;
+			$Scroll.children().each( function() {
+				nTallestChild = Math.max( nTallestChild, $J(this ).outerHeight() );
+			});
+			$Wrapper.css('height', nTallestChild );
 
 			if ( $Scroll.scrollLeft() <= 1 )
 				$SliderLeft.hide();

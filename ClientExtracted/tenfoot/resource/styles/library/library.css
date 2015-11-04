@@ -2958,9 +2958,10 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	padding-left: 135px;
 	position: 390px 0px 0px;
 	padding-right: 40px;
+	padding-bottom: 260px;
 
 	width: 1500px;
-	height: 1120px;
+	height: 1180px;
 
 	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );

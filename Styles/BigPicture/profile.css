@@ -4161,7 +4161,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 .GameRow {
 	flow-children: right;
 	height: 79px;
-	width: 100%;
+	width: 1500px;
 }
 
 .GameRow.Deleted {

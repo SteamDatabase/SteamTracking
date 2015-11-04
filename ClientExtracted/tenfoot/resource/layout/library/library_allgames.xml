@@ -160,9 +160,9 @@
 			<MusicLibraryAlbumPanel id="MusicPanelAllGames" class="" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="2"  />
-			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
+			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="4" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" selectionposboundary="both"
-						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="2" />
+						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="1" />
       <Panel id="EmptyLibraryArea" >
           <Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
       </Panel>

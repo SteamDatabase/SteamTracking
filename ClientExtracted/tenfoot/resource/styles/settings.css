@@ -314,6 +314,20 @@ Label.SettingsStatic
 	height: fit-children;
 }
 
+.SettingsContentColumnv2
+{
+	horizontal-align: left;
+	vertical-align: top;
+	flow-children: down;
+	width: 550px;
+	height: fit-children;
+}
+
+SettingsPanel .SettingsContentColumnv2 Button
+{
+	width: 470px;
+}
+
 .SettingsColumnarContent
 {
 	horizontal-align: left;
@@ -1461,9 +1475,9 @@ KeyboardShortcut .Graphic
 
 .SettingsGameControllerIcon
 {
-	width: 55px;
-	height: 55px;
-	margin: 0px 0px 0px 0px;
+	width: 48px;
+	height: 48px;
+	margin: -10px 4px 0px 0px;
 }
 
 .SettingsGameControllerImage
@@ -3699,7 +3713,7 @@ SettingsPanel .Button
 {
 	width: 430px;
 	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 3px;
 	background-color: #2a617b;
 	border-radius: 3px;
 }
@@ -3708,7 +3722,8 @@ SettingsPanel .Button
 {
 	text-align: left;
 	width: 250px;
-	padding-top: 5px;
+	padding-top: 25px;
+	padding-bottom: 3px;
 	color: #ffffff;
 	font-size: 30px;
 }

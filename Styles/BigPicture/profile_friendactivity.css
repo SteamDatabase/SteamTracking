@@ -22,13 +22,18 @@
 .blotter_userstatus_content
 {
 	flow-children: down;
+	margin-top: 12px;
 	margin-left: 80px;
 	width: 100%;
 	height: fit-children;
 	max-height: 800px;
 
-	font-size: 26px;
+	font-size: 28px;
 	overflow: clip noclip;
+}
+#LeftActivityColumn .blotter_userstatus_content
+{
+	visibility: collapse;
 }
 
 #blotter_userstatuscontent_label
@@ -171,7 +176,7 @@ Button:focus .dynamiclink_box Label
 .ContentPanel #LeftActivityColumn,
 .ContentPanel #RightDetailsColumn
 {
-	height: 900px;
+	height: 980px;
 }
 
 #RightDetailsColumn
@@ -195,9 +200,9 @@ Button:focus .dynamiclink_box Label
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 
-	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
-	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+	//opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	//opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	//opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 .DetailsHover #RightDetailsColumn,
 #RightDetailsColumn:descendantfocus {
@@ -303,6 +308,11 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 	vertical-align: center;
 /*	padding-bottom: 8px;*/
 }
+.blotter_author_block .user_status_labels .detail_text
+{
+	white-space: normal;
+	width: 470px;
+}
 
 .blotter_action_labels
 {
@@ -317,7 +327,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 
 .blotter_author_block Label
 {
-	font-size: 23px;
+	font-size: 24px;
 	color: applabelsolid;
 	margin-left: 10px;
 
@@ -330,7 +340,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 .blotter_block:focus .blotter_group_announcement_header_text Label,
 .blotter_button_wrapper:focus .blotter_author_block Label
 {
-	color: #161718f5;
+	color: #143f65f5;
 }
 
 .blotter_author_block Label,
@@ -356,7 +366,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 	padding-right: 8px;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	font-size: 23px;
+	font-size: 24px;
 	color: applabelsolid;
 	background-color: gradient( linear, -10% 0%, 100% 0%, from( #24384700 ), color-stop( 0.15, #243847d0 ), color-stop( 0.45, #243847d0 ), to( #24384700 ) );
 	vertical-align: top;
@@ -393,7 +403,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 
 Button:focus .blotter_author_block Label.personaname
 {
-	color: friendsoffline_lightbg;
+	color: #143f65f5;
 }
 
 .blotter_author_block Label.personaname.online
@@ -499,7 +509,7 @@ Button#blotter_post_status
 #post_status_button
 {
 	font-weight: light;
-	font-size: 23px;
+	font-size: 24px;
 	text-transform: uppercase;
 	color: tclegendlabel;
 	white-space: nowrap;
@@ -589,13 +599,13 @@ Button:descendantfocus .blotter_poststatus Label,
 
 .user_status_labels Label.personaname .detail_text
 {
-	font-size: 23px;
+	font-size: 24px;
 	color: applabelsolid;
 }
 
 Button:focus .user_status_labels Label.personaname .detail_text
 {
-	font-size: 23px;
+	font-size: 24px;
 	color: #161718f5;
 }
 
@@ -639,7 +649,7 @@ Button:focus .user_status_labels Label.personaname .detail_text
 
 .blotter_gamepurchase_content Label
 {
-	font-size: 23px;
+	font-size: 24px;
 	max-height: 74px;
 	margin-left: 10px;
 
@@ -668,7 +678,7 @@ Button:focus .user_status_labels Label.personaname .detail_text
 {
 	margin-top: 3px;
 	padding-left: 4px;
-	font-size: 23px;
+	font-size: 24px;
 	height: 28px;
 	text-overflow: clip;
 	width: 216px;
@@ -707,7 +717,7 @@ Button:focus .user_status_labels Label.personaname .detail_text
 .blotter_daily_rollup_line Label,
 .blotter_daily_rollup_line_groups Label
 {
-	font-size: 23px;
+	font-size: 24px;
 	max-height: 30px;
 	margin-left: 10px;
 	margin-right: 6px;
@@ -770,14 +780,14 @@ Button:focus .user_status_labels Label.personaname .detail_text
 	flow-children: down;
 }
 .blotter_block:focus .blotter_group_announcement_header_text {
-	color: #2f89bc;
+	color: #143f65f5;
 }
 
 .blotter_group_announcement_content
 {
 	flow-children: down;
 	width: 100%;
-	margin-left: 79px;
+	//margin-left: 79px;
 	margin-top: 4px;
 	font-size: 26px;
 
@@ -792,11 +802,19 @@ Button:focus .user_status_labels Label.personaname .detail_text
 
 .blotter_group_announcement_headline
 {
-	width: 100%;
-	height: 44px;
+	width: fit-children;
+	min-height: 44px;
 	font-size: 36px;
 	margin-bottom: 10px;
-	color:tcstatictext;
+	color: tcstatictext;
+}
+.blotter_block:focus .blotter_group_announcement_headline
+{
+	color: #161718;
+}
+.blotter_button_wrapper:focus .blotter_group_announcement_headline
+{
+	color: #161718;
 }
 
 Button:focus .blotter_group_announcement_content .blotter_group_announcement_headline
@@ -813,7 +831,7 @@ Button:focus .blotter_group_announcement_content .blotter_group_announcement_hea
 
 Label.blotter_group_announcement_header_contents
 {
-	font-size: 23px;
+	font-size: 24px;
 	opacity: 0.8;
 }
 
@@ -847,6 +865,7 @@ Label.blotter_group_announcement_header_contents
 .blotter_workshopitem_metadata
 {
 	flow-children: down;
+	width: fit-children;
 }
 
 .blotter_workshopitem_title
@@ -854,7 +873,7 @@ Label.blotter_group_announcement_header_contents
 	margin-top: 8px;
 	opacity: 0.95;
 	margin-left: 6px;
-	font-size: 23px;
+	font-size: 24px;
 	margin-bottom: 4px;
 }
 
@@ -862,26 +881,56 @@ Label.blotter_group_announcement_header_contents
 {
 	opacity: 0.8;
 	margin-left: 6px;
-	font-size: 23px;
-	max-height: 160px;
+	font-size: 25px;
+//	max-height: 160px;
+}
+#LeftActivityColumn .blotter_workshopitem_description Label
+{
+	visibility: collapse;
 }
 
+/*
+#blotter_workshop_content
+{
+	max-height: 600px;
+	overflow: clip scroll;
+}
+*/
 .blotter_workshopitem
 {
 	flow-children: right;
-	margin-left: 80px;
+	margin-left: 0px;
+
 }
 
 .blotter_recommendation
 {
 	flow-children: down;
+	width: 100%;
+}
+#LeftActivityColumn .blotter_recommendation .reviewed_app
+{
+	width: 670px;
+}
+#LeftActivityColumn .blotter_recommendation_content
+{
+	visibility: collapse;
+}
+.blotter_recommendation_content
+{
+	margin-top: 20px;
+}
+.blotter_recommendation_content .apphub_CardContentMain
+{
+	font-size: 28px;
+	margin-bottom: 10px;
 }
 
 .apphub_CardContentMain
 {
 	opacity: 0.8;
-	font-size: 23px;
-	margin-left: 80px;
+	font-size: 24px;
+	//margin-left: 80px;
 	max-height: 140px;
 }
 
@@ -935,7 +984,7 @@ Label.blotter_group_announcement_header_contents
 {
 	margin-top: 8px;
 	margin-bottom: 8px;
-	font-size: 23px;
+	font-size: 24px;
 	opacity: 0.6;
 	color: applabelsolid;
 }
@@ -966,7 +1015,7 @@ Label.blotter_group_announcement_header_contents
 
 .blotter_viewallcomments_container Label
 {
-	font-size: 23px;
+	font-size: 24px;
 	opacity: 0.6;
 }
 
@@ -1040,7 +1089,7 @@ Label.blotter_group_announcement_header_contents
 .btn_small_thin:focus
 {
 
-	color: #161718f5;
+	color: #0b1c3b;
 	background-color: button_focus_color;
 
 }

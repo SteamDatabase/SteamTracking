@@ -3426,6 +3426,19 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	display: none;
 }
 
+.castandcrewtitle
+{
+	font-weight: bold;
+	min-width: 130px;
+	float: left;
+}
+
+.castandcrewlist
+{
+	margin-left: 130px;
+}
+
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .game_area_play_stats {

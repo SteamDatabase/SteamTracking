@@ -5,149 +5,121 @@
 	</styles>
 
 	<SettingsPanel oncancel="NavigateTenfootBack()">
-		<!-- main settings panel, a big container of buttons -->  
-		<Panel id="SettingsBottomPanel_" class="SettingsBottomPanel" tabindex="auto" selectionpos="auto" >
+		<Panel class="SettingsBottomPanel FlowRight" tabindex="auto" selectionpos="auto" >
       
-      <Panel id="SettingsContentWrapper_" class="SettingsContent FlowDown">
+      <!-- first column -->
+      <Panel class="SettingsContent SettingsContentColumnv2" tabindex="auto" selectionpos="auto">
         <!-- Personal -->
-        <Panel class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc SettingCategory" text="#Settings_Personal"/>
-          <Panel class="FlowRight">
-            <Button id="AccountSettingsButton" class="Button" onactivate="ShowSettings( Account );">
-					    <Label class="LongDesc" text="#Settings_Account" />
-				    </Button>
-            <Button id="FriendsSettingsButton" class="Button" onactivate="ShowSettings( Friends );">
-					    <Label class="LongDesc" text="#Settings_Friends" />
-				    </Button>
-          </Panel>
-        </Panel>
+        <Label class="LongDesc SettingCategory" text="#Settings_Personal"/>
         
+        <Button id="AccountSettingsButton" class="Button" onactivate="ShowSettings( Account );">
+					<Label class="LongDesc" text="#Settings_Account" />
+				</Button>
+        <Button id="FriendsSettingsButton" class="Button" onactivate="ShowSettings( Friends );">
+					<Label class="LongDesc" text="#Settings_Friends" />
+				</Button>
+      
         <!-- Controller -->
-        <Panel id="ControllerOuterWrapper" class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc SettingCategory" text="#Settings_Controller"/>
-          <Panel id="ControllerInnerWrapperDown" class="FlowDown">
-	          <Panel id="ControllerInnerWrapperRight0" class="FlowRight">
-	          	<Button id="ControllerSettingsButton" class="Button" onactivate="ShowSettings( GameController );">
-						    <Label class="LongDesc" text="#Settings_ControllerManagement" />
-					    </Button>
-	            <Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
-						    <Label class="LongDesc" text="#Settings_InGame" />
-					    </Button>
-	       			<Button id="KeyboardSettingsButton" class="Button" onactivate="ShowSettings( Keyboard );">
-						    <Label class="LongDesc" text="#Settings_Keyboard" />
-					    </Button>
-					  </Panel>
-					  <Panel id="ControllerInnerWrapperRight1" class="FlowRight">
-					    <Button id="ControllerConfigsButton" class="Button" onactivate="ShowSettings( ControllerConfigs );">
-						    <Label class="LongDesc" text="#Settings_Configs" />
-					    </Button>
-	          </Panel>
-	     		</Panel>
-        </Panel>
+        <Label class="LongDesc SettingCategory" text="#Settings_Controller"/>
         
+        <Button id="ControllerSettingsButton" class="Button" onactivate="ShowSettings( GameController );">
+					<Label class="LongDesc" text="#Settings_ControllerManagement" />
+				</Button>
+				<Button id="ControllerConfigsButton" class="Button" onactivate="ShowSettings( ControllerConfigs );">
+					<Label class="LongDesc" text="#Settings_Configs" />
+				</Button>
+	      <Button id="KeyboardSettingsButton" class="Button" onactivate="ShowSettings( Keyboard );">
+					<Label class="LongDesc" text="#Settings_Keyboard" />
+				</Button>
+      
         <!-- Display -->
-        <Panel id="DisplayOuterWrapper" class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc  SettingCategory" text="#Settings_Display"/>
-          <Panel id="DisplayInnerWrapperDown" class="FlowDown">
-            <Panel id="DisplayInnerWrapperRight0" class="FlowRight">
-		    			<Button id="LanguageSettingsButton" class="Button" onactivate="ShowSettings( Language );">
-					      <Label class="LongDesc" text="#Settings_Language" />
-				      </Button>
-				      <Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
-					      <Label class="LongDesc" text="#Settings_Interface" />
-				      </Button>
-        			<Button id="DisplaySettingsButton" class="Button" onactivate="ShowSettings( Display );">
-					      <Label class="LongDesc" text="#Settings_DisplayResolution" />
-				      </Button>
-            </Panel>
-            <Panel id="DisplayInnerWrapperRight1" class="FlowRight">
-				      <Button id="AlienFXSettingsButton" class="Button" onactivate="ShowSettings( AlienFX );">
-					      <Label class="LongDesc" text="#Settings_AlienFX" />
-				      </Button>
-            </Panel>
-          </Panel>
-        </Panel>
-
-        <!-- Audio -->
-        <Panel id="AudioOuterWrapper" class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc SettingCategory" text="#Settings_Audio"/>
-          <Panel id="AudioInnerWrapper" class="FlowRight">
-       			<Button id="AudioSettingsButton" class="Button" onactivate="ShowSettings( Audio );">
-					    <Label class="LongDesc" text="#Settings_AudioInterface" />
-				    </Button>
-				    <Button id="MusicSettingsButton" class="Button" onactivate="ShowSettings( Music );">
-				      <Label class="LongDesc" text="#Settings_Music" />
-				    </Button>
-				    <Button id="VoiceSettingsButton" class="Button" onactivate="ShowSettings( Voice );">
-					    <Label class="LongDesc" text="#Settings_Voice" />
-				    </Button>
-          </Panel>
-        </Panel>
-    
-        <!-- Features -->
-        <Panel class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc SettingCategory" text="#Settings_Features"/>
-          <Panel class="FlowDown">
-            <Panel class="FlowRight">
-						  <Button id="RemoteClientsButton" class="Button" onactivate="ShowSettings( RemoteClients );">    <!-- in-home streaming -->
-    					  <Label class="LongDesc" text="#Settings_RemoteClients" />
-		    		  </Button>
-              <!--
-              <Button id="WebButton" class="Button" onactivate="ShowSettings( Web );">
-    					  <Label class="LongDesc" text="#Settings_Web" />
-		    		  </Button>
-              -->
-       				<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
-					      <Label class="LongDesc" text="#Settings_Broadcast" />
-				      </Button>
-            </Panel>
-            <Panel class="FlowRight">
-       				<Button id="ParentalSettingsButton" class="Button" onactivate="ShowParentalSettings();">        <!-- parental settings -->
-      					<Label class="LongDesc" text="#Parental_Settings_Title" />
-			      	</Button>
-              <Button id="FamilySharingButton" class="Button" onactivate="ShowSettings( AuthorizeLocalDevice );" >
-					      <Label class="LongDesc" text="#Settings_Family_Sharing_Title" />
-				      </Button>
-            </Panel>
-          </Panel>
-        </Panel>
-        
-        <!-- System -->
-        <Panel class="FlowRight SettingCategoryWrapper">
-         	<Label class="LongDesc  SettingCategory" text="#Settings_About"/>
-          <Panel class="FlowDown">
-            <Panel class="FlowRight">
- 							<Button id="StoreSettingsButton" class="Button" onactivate="ShowSettings( Store );">
-					      <Label class="LongDesc" text="#Settings_Store" />
-				      </Button>
-				      <Button id="DownloadsSettingsButton" class="Button" onactivate="ShowSettings( Downloads );">
-					      <Label class="LongDesc" text="#Settings_Downloads" />
-				      </Button>				
-				      <Button id="NetworkSettingsButton" class="Button" onactivate="ShowSettings( Network );">
-					      <Label class="LongDesc" text="#Settings_Network" />
-				      </Button>
-            </Panel>
-            <Panel class="FlowRight">
-         			<Button id="AboutSettingsButton" class="Button" onactivate="ShowSettings( About );">          <!-- system -->
-					      <Label class="LongDesc" text="#Settings_About" />
-				      </Button>
-				      <Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
-					      <Label class="LongDesc" text="#Settings_TimeZone" />
-				      </Button>
-				      <Button id="DiskManagetmentButton" class="Button" onactivate="ShowSettings( DiskManagement );">
-					      <Label class="LongDesc" text="#Settings_DiskManagement" />
-				      </Button>
-            </Panel>
-            <Panel class="FlowRight">
-         			<Button id="AddShortcutSettingsButton" class="Button" onactivate="AddLibraryShortcut();">
-					      <Label class="LongDesc" text="#Settings_AddLibraryShortcut" />
-				      </Button>
-            </Panel>
-          </Panel>
-        </Panel>
-        
+        <Label class="LongDesc SettingCategory" text="#Settings_Display"/>
+      
+        <Button id="LanguageSettingsButton" class="Button" onactivate="ShowSettings( Language );">
+				  <Label class="LongDesc" text="#Settings_Language" />
+			  </Button>
+			  <Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
+				  <Label class="LongDesc" text="#Settings_Interface" />
+			  </Button>
+        <Button id="DisplaySettingsButton" class="Button" onactivate="ShowSettings( Display );">
+				  <Label class="LongDesc" text="#Settings_DisplayResolution" />
+			  </Button>
+        <Button id="AlienFXSettingsButton" class="Button" onactivate="ShowSettings( AlienFX );">
+				  <Label class="LongDesc" text="#Settings_AlienFX" />
+			  </Button>
       </Panel>
-		</Panel>
+      
+      <!-- second column -->
+      <Panel class="SettingsContent SettingsContentColumnv2" tabindex="auto" selectionpos="auto">
+        <!-- Audio -->
+        <Label class="LongDesc SettingCategory" text="#Settings_Audio"/>
+        
+        <Button id="AudioSettingsButton" class="Button" onactivate="ShowSettings( Audio );">
+					<Label class="LongDesc" text="#Settings_AudioInterface" />
+				</Button>
+				<Button id="MusicSettingsButton" class="Button" onactivate="ShowSettings( Music );">
+				  <Label class="LongDesc" text="#Settings_Music" />
+				</Button>
+				<Button id="VoiceSettingsButton" class="Button" onactivate="ShowSettings( Voice );">
+					<Label class="LongDesc" text="#Settings_Voice" />
+				</Button>
+        
+        <!-- Features -->
+        <Label class="LongDesc SettingCategory" text="#Settings_Features"/>
+        
+      	<Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
+		<Label class="LongDesc" text="#Settings_InGame" />
+	</Button>
+
+        <!--
+        <Button id="WebButton" class="Button" onactivate="ShowSettings( Web );">
+    			<Label class="LongDesc" text="#Settings_Web" />
+		    </Button>
+        -->
+       	<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
+					<Label class="LongDesc" text="#Settings_Broadcast" />
+				</Button>
+        <Button id="RemoteClientsButton" class="Button" onactivate="ShowSettings( RemoteClients );">    <!-- in-home streaming -->
+    			<Label class="LongDesc" text="#Settings_RemoteClients" />
+		    </Button>
+       	<Button id="ParentalSettingsButton" class="Button" onactivate="ShowParentalSettings();">        <!-- parental settings -->
+      		<Label class="LongDesc" text="#Parental_Settings_Title" />
+			  </Button>
+        <Button id="FamilySharingButton" class="Button" onactivate="ShowSettings( AuthorizeLocalDevice );" >
+					<Label class="LongDesc" text="#Settings_Family_Sharing_Title" />
+				</Button>
+      </Panel>
+      
+      <!-- third column -->
+      <Panel class="SettingsContent SettingsContentColumnv2" tabindex="auto" selectionpos="auto">
+        <!-- System -->
+        <Label class="LongDesc SettingCategory" text="#Settings_About"/>
+        
+        <Button id="StoreSettingsButton" class="Button" onactivate="ShowSettings( Store );">
+					<Label class="LongDesc" text="#Settings_Store" />
+				</Button>
+				<Button id="DownloadsSettingsButton" class="Button" onactivate="ShowSettings( Downloads );">
+					<Label class="LongDesc" text="#Settings_Downloads" />
+				</Button>				
+				<Button id="NetworkSettingsButton" class="Button" onactivate="ShowSettings( Network );">
+					<Label class="LongDesc" text="#Settings_Network" />
+				</Button>
+        <Button id="AboutSettingsButton" class="Button" onactivate="ShowSettings( About );">          <!-- system -->
+					<Label class="LongDesc" text="#Settings_About" />
+				</Button>
+				<Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
+					<Label class="LongDesc" text="#Settings_TimeZone" />
+				</Button>
+				<Button id="DiskManagetmentButton" class="Button" onactivate="ShowSettings( DiskManagement );">
+					<Label class="LongDesc" text="#Settings_DiskManagement" />
+				</Button>
+        <Button id="AddShortcutSettingsButton" class="Button" onactivate="AddLibraryShortcut();">
+					<Label class="LongDesc" text="#Settings_AddLibraryShortcut" />
+				</Button>
+      </Panel>
+      
+      
+    </Panel>    
 
 	</SettingsPanel>
 

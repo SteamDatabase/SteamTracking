@@ -23,68 +23,86 @@
 				</Panel>
 				<Panel id="TopRowRight" selectionpos="1,0" >
 					<Button id="GoOnlineButton" class="Button TopRowButton" onactivate="GoOnline();" selectionpos="auto" tabindex="auto" >
-						<Image class="GoOnlineImage" src="file://{images}/offline.png" />
+                        <Panel class="background_box" />
+                        <Image class="GoOnlineImage" src="file://{images}/offline.png" />
 					</Button>			
 					<Button id="FamilyModeLock" class="Button TopRowButton" onactivate="ToggleParentalLock();" selectionpos="auto" tabindex="auto" >
-							<Panel id="ParentalLockImages" >
-								<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
-								<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
-							</Panel>
+                        <Panel class="background_box" />
+                        <Panel id="ParentalLockImages" >
+                            <Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+                            <Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
+                        </Panel>
+
 					</Button>
 					<Button id="ControllerBatteryButton" class="Button TopRowButton" onactivate="ShowSettings( GameController );" selectionpos="auto" tabindex="auto" >
-						<Panel id="BatteryImages" >
+                        <Panel class="background_box" />
+                        <Panel id="BatteryImages" >
 							<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
 							<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
 							<Image class="BatteryLevelLow" src="file://{images}/controller_battery_2.png" />
 							<Image class="BatteryLevelHalf" src="file://{images}/controller_battery_3.png" />
 							<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
 						</Panel>
+
 					</Button>
 					<ParentalButton id="SystemIMSButton" class="Button TopRowButton" onactivate="DisplaySystemMessages(false);" selectionpos="auto" tabindex="auto" >
-						<Panel class="TopButtonContentWrapper">
+                        <Panel class="background_box" />
+                        <Panel class="TopButtonContentWrapper">
 							<Image src="file://{images}/messages.png" />
 								<Panel class="TopRowElement" >
 									<Label class="TopRowCounter" text="#MainMenu_SystemIMsShort" />
 									<Label class="TopRowCounterBackground" text="#MainMenu_SystemIMsShort" /> 
 								</Panel>
 						</Panel>
+
 					</ParentalButton>
 					<ParentalButton id="Inbox" class="Button TopRowButton" onactivate="DisplayInboxDropdown();" selectionpos="auto" tabindex="auto" >
-						<Panel class="TopButtonContentWrapper" >
+                        <Panel class="background_box" />
+                        <Panel class="TopButtonContentWrapper" >
 							<Image id="InboxImage" class="InboxImage" src="file://{images}/systemmenu/icon_alerts.png" />
 								<Panel class="TopRowElement" >
-									<Label class="TopRowCounter" text="#MainMenu_InboxShort" />
-									<Label class="TopRowCounterBackground" text="#MainMenu_InboxShort" /> 
+                                    <Label class="TopRowCounter" text="#MainMenu_InboxShort" />
+                                    <Label class="TopRowCounterBackground" text="#MainMenu_InboxShort" />
 								</Panel>
 						</Panel>
+
 					</ParentalButton>
 					<Button id="PendingChats" class="Button TopRowButton" onactivate="ShowFriends();" selectionpos="auto" tabindex="auto" >
-						<Panel class="TopButtonContentWrapper" >
+                        <Panel class="background_box" />
+                        <Panel class="TopButtonContentWrapper" >
 							<Image src="file://{images}/systemmenu/icon_chat.png" />
 							<Panel class="TopRowElement" >
 									<Label class="TopRowCounter" text="#MainMenu_PendingChatsShort" />
 									<Label class="TopRowCounterBackground" text="#MainMenu_PendingChatsShort" /> 
 								</Panel>
 						</Panel>
+
 					</Button>
 					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" selectionpos="auto" tabindex="auto"
 						onactivate="ToggleMusicControlPanel( true );">
-						<Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
+                        <Panel class="background_box" />
+                        <Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
 					</Button>
-					<Button id="DownloadsButton" class="Button TopRowButton" onactivate="ShowDownloads();" selectionpos="auto" tabindex="auto" >				
-						<Panel class="TopButtonContentWrapper" >
+					<Button id="DownloadsButton" class="Button TopRowButton" onactivate="ShowDownloads();" selectionpos="auto" tabindex="auto" >
+                        <Panel class="background_box" />
+                        <Panel class="TopButtonContentWrapper" >
 							<Image src="file://{images}/systemmenu/icon_downloads.png" />
 									<Panel class="TopRowElement" >
 										<Label class="TopRowCounter" text="#MainMenu_ActiveDownloadsShort" />
 										<Label class="TopRowCounterBackground" text="#MainMenu_ActiveDownloadsShort" /> 
 									</Panel>
 						</Panel>
+
 					</Button>
 					<ParentalButton id="SettingsButton" class="Button TopRowButton" onactivate="ShowSettingsMenu();" selectionpos="auto" tabindex="auto" >
-						<Image src="file://{images}/systemmenu/icon_settings.png" />
+                        <Panel class="background_box" />
+                        <Image src="file://{images}/systemmenu/icon_settings.png" />
+
 					</ParentalButton>
 					<Button id="Exit" class="Button TopRowButton" onactivate="ShowQuitDialog();" selectionpos="auto" tabindex="auto">
-						<Image src="file://{images}/systemmenu/icon_power.png" />
+                        <Panel class="background_box" />
+                        <Image src="file://{images}/systemmenu/icon_power.png" />
+
 					</Button>
 					<Button id="BetaButton" class="Button TopRowButton" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" selectionpos="auto" tabindex="auto" >
 						<Image src="file://{images}/betabutton4.tga" />
@@ -144,13 +162,13 @@
 			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" >
 														
 				<Panel class="GameRowContentsWrapper" selectionpos="0,0" >
-					<Panel class="GameItem" selectionpos="1,0" >
+					<Panel class="GameItem game_1" selectionpos="1,0" >
 					
 						<Panel class="GameItemHeader" >
 
 							<Label class="GameRowHeaderLabel" text="#MainMenu_FriendsArePlaying" />
 						</Panel>
-						<Button id="FriendsArePlayingGame" class="Button GameButton" tabindex="0"  selectionpos="0,0" > 
+						<Button id="FriendsArePlayingGame" class="GameButton" tabindex="0"  selectionpos="0,0" >
 							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
@@ -167,11 +185,11 @@
 							</Panel>
 						</Button>
 					</Panel>
-					<Panel class="GameItem" selectionpos="3,0" >
+					<Panel class="GameItem game_2" selectionpos="3,0" >
 						<Panel class="GameItemHeader" >
 							<Label class="GameRowHeaderLabel" text="#MainMenu_RecentPlaying" />
 						</Panel>
-						<Button id="ResumePlayingGame" class="Button GameButton" tabindex="1" selectionpos="0,0" > 
+						<Button id="ResumePlayingGame" class="GameButton" tabindex="1" selectionpos="0,0" >
 							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
@@ -188,11 +206,11 @@
 							</Panel>
 						</Button>
 					</Panel>
-					<Panel class="GameItem"  selectionpos="4,0">
+					<Panel class="GameItem game_3"  selectionpos="4,0">
 						<Panel class="GameItemHeader" >
 							<Label class="GameRowHeaderLabel" text="#MainMenu_UnplayedPlaying" />
 						</Panel>
-						<Button id="UnplayedPlayingGame" class="Button GameButton" tabindex="2" selectionpos="0,0" > 
+						<Button id="UnplayedPlayingGame" class="GameButton" tabindex="2" selectionpos="0,0" >
 							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>

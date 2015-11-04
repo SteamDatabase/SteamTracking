@@ -210,14 +210,14 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 	pScript = pScript.replace( '%viewed_app%', nViewedAppID );
 
 	var pContent = $.CreatePanel( 'RemoteContent', $.TenfootController($.GetContextPanel()).GetContentParent(), '' );
+	$.PushBackStack( pContent, 'BackStackPlaceholder()' );
+
 	pContent.SetPanelEvent( 'onload', pScript );
 	pContent.AddClass( 'ContentPanel' );
 	pContent.SetAttributeString( 'content-title', 'Your Discovery Queue' );
 	pContent.SetAttributeInt( 'content-delete-at-stack-depth', 1 );
 	pContent.ShowLoading();
 	pContent.SetFocus();
-
-	$.PushBackStack( pContent, 'BackStackPlaceholder()' );
 }
 
 function GenerateNewDiscoveryQueue( strSessionID, eQueueType )

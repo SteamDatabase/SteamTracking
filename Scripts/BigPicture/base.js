@@ -941,8 +941,11 @@ CNXNavigation.prototype.Init = function()
 
 	// set up hover events for the navigation container and the target container, so
 	// that the proper panels are brought to the forefront when the user uses a mouse
-	SetupPanelHoverEvents( this.oNavigationContainer, $.GetContextPanel(), 'MenuHover' );
-	SetupPanelHoverEvents( this.oTargetContainer, $.GetContextPanel(), 'ContentHover' );
+	
+	var hoverItemStyles = { };
+	hoverItemStyles[this.oNavigationContainer.id] = 'MenuHover';
+	hoverItemStyles[this.oTargetContainer.id] = 'ContentHover';
+	SetupPanelsHoverEvents( hoverItemStyles, $.GetContextPanel() );
 }
 
 CNXNavigation.prototype.onMoveUp = function( oPanel )
@@ -1132,3 +1135,98 @@ CNXNavigation.prototype.ShowPanel = function( oTarget )
 }
 
 
+
+
+/**
+*
+* Copied from client base.js on 10/29/15 so the client can ship out of sync with the web
+* Remove around Mid November 2015
+*
+*
+**/
+
+
+/**
+ * Helper function to add mouseover/mouseout events when hovering over a menu or content panel
+ * which then adds/removes a class from an ancestor panel
+ */
+function SetupMenuAndContentHoverEvents( menuPanelID, menuHoverClass, contentPanelID, contentHoverClass, ancestorPanelID )
+{
+	var ancestorPanel = $( '#' + ancestorPanelID );
+
+	var hoverItemStyles = {};
+	hoverItemStyles[menuPanelID] = menuHoverClass;
+	hoverItemStyles[contentPanelID] = contentHoverClass;
+											
+	SetupPanelsHoverEvents( hoverItemStyles, ancestorPanel )													
+}
+
+
+/**
+ * for a panel on mouseover add and remove classes on a parent
+ */
+function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses )
+{
+	panel.SetPanelEvent( 
+		'onmouseover', 
+		function() {
+			ancestorPanel.AddClass( hoverClass ); 
+			// now see what classes we need to remove
+			$.Each( uniqueClasses, function( classValue ) 
+			{
+				if ( classValue !=  hoverClass )
+				{
+					ancestorPanel.RemoveClass( classValue ); 				
+				}
+			} );
+		} 
+	);
+	
+	try {
+		$.RegisterForUnhandledEvent( 'WindowCursorHidden', function() 
+			{
+				$.Each( uniqueClasses, function( classValue ) 
+				{
+					ancestorPanel.RemoveClass( classValue );
+				}
+			 	);
+		} );
+	} catch (e) {}
+} 
+
+
+
+function onlyUnique(value, index, self) 
+{ 
+    return self.indexOf(value) === index;
+}
+
+/**
+ * Manages a map of panels and classes to use when that panel is hovered (and the other classes are removed)
+ */
+function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel )
+{
+	var hoverClasses = [];
+	for( var o in hoverPanelStyleMap ) 
+	{
+	    hoverClasses.push(hoverPanelStyleMap[o]);
+	}
+
+	uniqueClasses = hoverClasses.filter( onlyUnique ); 
+	$.Each( uniqueClasses, function( classValue ) 
+	{
+		ancestorPanel.RemoveClass( classValue );
+	} );
+	
+	$.Each( hoverPanelStyleMap, function( value, key ) 
+	{
+		SetupPanelHoverEvent( $( '#' + key ), ancestorPanel, hoverPanelStyleMap[key], uniqueClasses );		
+	} );
+}
+
+
+/**
+*
+*
+*
+**/

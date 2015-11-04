@@ -4,7 +4,7 @@
 	{
 		SteamController10ft { controlname="Frame" title=" " style="SteamController10ft" }
 
-		ConfirmTextHeader { controlname="Label" labeltext="#Steam_VGUIControllerWarningHeader" wrap=1 style=ConfirmTextHeader }
+		ConfirmTextHeader { controlname="Label" labeltext="#Steam_VGUIControllerWarningHeader" wrap=0 style=ConfirmTextHeader }
 		ConfirmText { controlname="Label" labeltext="#Steam_VGUIControllerWarning" wrap=1 style=ConfirmText }
 
 		DontShowCheckButton { controlname="CheckButton" tabposition=3 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
@@ -31,13 +31,13 @@
 		ConfirmTextHeader
 		{
 			textcolor="110 192 236 255"
-			font-size=30
+			font-size=26
 		}	
 
 		ConfirmText
 		{
 			textcolor="110 192 236 255"
-			font-size=24
+			font-size=20
 		}	
 	}
 	

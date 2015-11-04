@@ -307,6 +307,60 @@ RemotePanel
 	background-color: transparent_module;
 }
 
+.DiscoveryQueueSection .DiscoveryQueueApps
+{
+ 	width: 874px;
+	box-shadow: module_shadow;
+}
+.DiscoveryQueueApps .app_ctn
+{
+	width: 100%;
+	margin-top: 12px;
+	margin-right: 12px;
+}
+
+.ExploreSectionRow
+{
+	width: 1340px;
+	flow-children: right;
+}
+
+.DiscoveryQueueAboutBtn
+{
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: down;
+	background-color: transparent_module;
+	margin: 8px 0px 0px 15px;
+	padding: 24px;
+	border-radius: 3px;
+
+	box-shadow: module_shadow;
+}
+
+.DiscoveryQueueReadMore
+{
+	font-size: 28px;
+	color: greyish_medium;
+	margin-top: 28px;
+	height: 100%;
+}
+
+.DiscoveryQueueAboutBtn:focus,
+.DiscoveryQueueAboutBtn:hover
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
 .DiscoveryExhausted
 {
 	flow-children: down;
@@ -393,22 +447,22 @@ RemotePanel
 
 .DiscoveryApp_2
 {
-	transform: translate3d( 325px, 0px, -100px );
+	transform: translate3d( 25%, 0px, -100px );
 }
 
 .DiscoveryApp_3
 {
-	transform: translate3d( 650px, 0px, -150px );
+	transform: translate3d( 45%, 0px, -150px );
 }
 
 .DiscoveryApp_4
 {
-	transform: translate3d( 875px, 0px, -225px );
+	transform: translate3d( 65%, 0px, -225px );
 }
 
 .DiscoveryApp_5
 {
-	transform: translate3d( 1100px, 0px, -350px );
+	transform: translate3d( 85%, 0px, -350px );
 }
 
 .DiscoveryQueueApps:focus,
@@ -428,16 +482,16 @@ RemotePanel
 
 .DiscoveryQueueAppBanner
 {
-	width: 1205px;
+	width: 95%;
 	height: 114px;
 	vertical-align: center;
 	flow-children: right;
-	margin-left: 70px;
+	margin-left: 5%;
 
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/bigpicture/queue_banner.png );
 	background-position: 0px bottom;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100%;
 }
 
 .DiscoveryQueueAppBanner Label
@@ -453,11 +507,6 @@ RemotePanel
 	font-size: 30px;
 	color: detailsdatalabelfocus;
 }
-.ExploreSectionSubHeader
-{
-	font-size: 24px;
-	color: greyish_medium;
-}
 
 .RecommendedTagsSection
 {
@@ -466,23 +515,25 @@ RemotePanel
 
 .RecommendedTags
 {
-	width: 100%;
+	width: 1340px;
 	margin-top: 10px;
-	flow-children: right;
+	flow-children: right-wrap;
 }
 
 .RecommendedTags Button
 {
 	width: 430px;
-	height: 128px;
+	height: 62px;
+	margin: 0px 15px 15px 0px;
+
+	background-color: transparent_module;
 
 	border-radius: 3px;
-	background-color: transparent_module;
+	box-shadow: module_shadow;
 }
 
 .RecommendedTag_2
 {
-	margin: 0px 15px;
 }
 
 .RecommendedTags Button:focus,

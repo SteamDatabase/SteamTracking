@@ -240,19 +240,31 @@
 	transform: translateX( -100% );
 }
 
-
-// slideshow row
-.AppSlideshowRow
+// upper section
+.AppDetailsUpperSection
 {
 	width: 1900px;
 	padding: 0px 10px 10px 10px;
 	padding-top: 10px;
 	margin-top: -10px;
 	margin-bottom: 10px;
-	flow-children: right;
+	flow-children: down;
 	border-bottom: 1px solid #2f89bc33;
 	background-color: gradient( linear, 90% 90%, 90% 20%, from( #143f6559 ), to( #00000000 ) );
 	   //background-color: gradient( linear, 90% 90%, 90% 20%, from( #2d637f59 ), to( #143f6500 ) );
+}
+
+.AppDetailsUpperSection.InLibrary
+{
+	background-color: gradient( radial, 40% 100%, 0px 0px, 100% 100%, from( #c6d4df66 ), to( #c6d4df00 ) );
+	border-bottom: 1px solid #c6d4df;
+	margin-bottom: 20px;
+}
+
+// slideshow row
+.AppSlideshowRow
+{
+	flow-children: right;
 }
 
 .AppSlideshowContainer
@@ -294,6 +306,15 @@
 
 	color: #67c1f5ff;
 	background-color: nontransparent_module;
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#AppInWishlist
+{
+	margin: 12px 0px 0px 0px;
 }
 
 .AppToggles Label
@@ -350,12 +371,11 @@
 .AppSectionBox
 {
 	width: 100%;
-	padding: 12px;
+	padding: 11px 12px 12px 12px;
 	background-color: transparent_module;
 	flow-children: right;
 	margin-bottom: 12px;
 	border-radius: 3px;
-
 
 	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
 	background-position: 0px 0px;
@@ -378,6 +398,40 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+// already in library
+.AppInLibraryHeader
+{
+	color: white;
+	font-size: 32px;
+	margin-top: 20px;
+	font-weight: light;
+	margin-left: 8px;
+}
+
+.AppViewLibraryRow
+{
+	flow-children: right;
+	margin-top: 15px;
+	margin-left: 8px;
+	margin-bottom: 8px;
+}
+
+.AppViewInLibraryBtn
+{
+	border-radius: 3px;
+	width: 400px;
+	box-shadow: module_shadow;
+}
+
+.AppOwnedPlayTime
+{
+	color: #093047;
+	font-size: 24px;
+	vertical-align: center;
+	margin-left: 10px;
+}
+
 
 //
 // Reviews
@@ -442,15 +496,14 @@
 // tags
 .AppTags
 {
-	max-height: 124px;
+	// children are fixed height so we dont have to be
 	flow-children: down;
-	height: 122px;
 }
 
 .tags_ctn
 {
 	flow-children: right-wrap;
-	max-height: 58px;
+	height: 58px;
 }
 
 .AppTags .tags_ctn Label
@@ -479,8 +532,8 @@
 // language section
 .AppLanguages
 {
+	// children size is fixed so ours doesn't have to be
 	flow-children: down;
-	height: 128px;
 	margin-bottom: 0px;
 }
 
@@ -806,6 +859,13 @@
 	color: greyish_medium;
 }
 
+.AppRunningTime
+{
+	font-size: 24px;
+	vertical-align: center;
+	color: greyish_medium;
+}
+
 .AppAboutOverview
 {
 	font-size: 26px;
@@ -961,6 +1021,12 @@ VerticalScrollBar {
 {
 	width: 350px;
 	padding-left: 16px;
+}
+
+.AppRatingRowVideo Label
+{
+	width: 350px;
+	padding-left: 0px;
 }
 
 .AppRatingOnline

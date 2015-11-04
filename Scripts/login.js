@@ -283,6 +283,11 @@ CLoginPromptManager.prototype.GetAuthCode = function( results )
 {
 	if ( this.m_bIsMobile )
 	{
+		//	honor manual entry before anything else
+		var code = $J('#twofactorcode_entry').val();
+		if ( code.length > 0 )
+			return code;
+		
 		if ( this.BIsIos() )
 		{
 			this.m_sAuthCode = '';
@@ -861,8 +866,8 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		$J('#login_twofactor_authcode_entry').hide();
 
 		if ( !this.m_bIsMobileSteamClient
-				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 1, 4 )
-				|| this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 2 )
+				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 32 )
+				|| this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 0 )
 			)
 		{
 			$J( '#login_twofactorauth_buttonset_selfhelp div[data-modalstate=selfhelp_sms_reset_start]' ).hide();

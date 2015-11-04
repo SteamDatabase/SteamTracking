@@ -765,7 +765,7 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 .ProminentButton
 {
 	background-color: store_transparent_module;
-	height: 60px;
+	height: 90px;
 }
 #PurchaseForSelfBtn:focus,
 #PurchaseForGiftBtn:focus,
@@ -1216,7 +1216,15 @@ CheckoutPaymentMethodFields
 #SavePaymentInfo
 {
 	margin-top: 34px;
-	width: fit-children;
+
+}
+#LiveInCountryNoBilling
+{
+	height: fit-children;
+}
+#LiveInCountryNoBilling Label
+{
+	width: 400px;
 }
 
 #MustSavePaymentInfo

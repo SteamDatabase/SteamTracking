@@ -268,9 +268,9 @@ MainMenu.StackDepth3 .HomeGlow
 
 #TopRow
 {
-  margin-top: 64px;
+  margin-top: 44px;
 	vertical-align: top;
-	opacity:0.7;
+	opacity:1;
 	width: 1920px;
 	horizontal-align: right;
 	z-index: MainMenuZIndex;
@@ -278,6 +278,8 @@ MainMenu.StackDepth3 .HomeGlow
 	transition-property: blur, desaturation, opacity, transform;
 	transition-duration: PageTransitionTimeOff;
 	transition-timing-function: bigpicture-ease-in-out;
+
+
  }
  
 #TopRowRight
@@ -285,7 +287,8 @@ MainMenu.StackDepth3 .HomeGlow
  	horizontal-align: right;
  	flow-children: right;
  	padding-left: 64px;
- 	margin-right: 8px;
+	margin-top: 30px;
+ 	margin-right: 74px;
  	
 }
 
@@ -293,7 +296,7 @@ MainMenu.StackDepth3 .HomeGlow
 {
  	flow-children: right;
  	horizontal-align: left;
- 	margin-left:240px;
+ 	margin-left: 290px;
 }
 
 .StackDepth2 #NavigationBar,
@@ -560,7 +563,7 @@ MainMenu.StackDepth3 .HomeGlow
 	flow-children: right;
 	width: 215px;
 	padding-left: 10px;
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 #Clock #Time
@@ -607,7 +610,12 @@ MainMenu.StackDepth3 .HomeGlow
 }
 #Avatar.TopRowButton:focus #SelfAvatar
 {
-	border-width: 0px;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 #SelfAvatar:hover
@@ -667,7 +675,7 @@ MainMenu.StackDepth3 .HomeGlow
 	transform: translateY( -8px ) rotateX( 0deg ) translateZ( -64px );
   opacity-mask: url( "file://{images}/systemmenu/menu_mask.png" );
 	transition-property: blur, desaturation, opacity, transform, opacity-mask;
-	transition-duration: PageTransitionTimeOff;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
@@ -781,25 +789,25 @@ MainMenu.StackDepth3 #MenuRow:hover
 	box-shadow: none;
 }
 
-.Button.TopRowButton:Hover
+
+.Button.TopRowButton .background_box
 {
-    pre-transform-scale2d: .8;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #12334c ), to( #14445e ) );
+	height: 70px;
+	width: 70px;
+	border-radius: 3px;
+}
+.Button.TopRowButton:focus,
+.Button.TopRowButton:hover
+{
+	border-style: none;
+	border-width: 0px;
 }
 
 
+
+.Button:focus,
 .Button:hover
-{	
-	background-color: #15a4d5;
-	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-}
-
-.Button:parentdisabled:hover
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
-	box-shadow: none;
-}
-
-.Button:focus
 {
 	border-style: solid;
 	border-width: 5px;
@@ -814,6 +822,20 @@ MainMenu.StackDepth3 #MenuRow:hover
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	transition-duration: 0.0s;
+}
+
+.Button.TopRowButton:focus .background_box,
+.Button.TopRowButton:hover .background_box
+{
+
+	background-color: action_module ;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 
@@ -853,7 +875,8 @@ MainMenu.StackDepth3 #MenuRow:hover
 		opacity: 0.0;
 }
 
-.EdgeButtonLeft:focus .MainMenuCapsuleOver
+.EdgeButtonLeft:focus .MainMenuCapsuleOver,
+.EdgeButtonLeft:hover .MainMenuCapsuleOver
 {
 	transform: translatey(0px);
 
@@ -885,7 +908,8 @@ MainMenu.StackDepth3 #MenuRow:hover
 }
 
 
-.MainMenuButton:focus
+.MainMenuButton:focus,
+.MainMenuButton:hover
 {
 	border-radius: 8px;
 }
@@ -905,7 +929,8 @@ MainMenu.StackDepth3 #MenuRow:hover
 		transform: translatey(0px);
 }
 
-.MainMenuButton:focus .MainMenuCapsuleOver
+.MainMenuButton:focus .MainMenuCapsuleOver,
+.MainMenuButton:hover .MainMenuCapsuleOver
 {
 	transform: translatey(0px);
 //margin-bottom:-25px;
@@ -940,7 +965,7 @@ MainMenu.StackDepth3 #MenuRow:hover
 {
 	flow-children: none;
 	width: fit-children;
-	height: 128px;
+	height: 70px;
 	margin: 0px;
 	margin-left: 4px;
 	margin-right: 4px;
@@ -949,18 +974,22 @@ MainMenu.StackDepth3 #MenuRow:hover
 	padding: 0px;
 	
 	//transform:translatez(-96px);
-    pre-transform-scale2d: 0.8;
+    //pre-transform-scale2d: 0.8;
 	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
-
+#Avatar.TopRowButton
+{
+	height: 128px;
+}
 
 .TopRowButton Image
 {
 	width: 64px;
 	height: 64px;
-	horizontal-align: left;
+	pre-transform-scale2d: 0.8;
+	horizontal-align: center;
 	vertical-align: center;
 	wash-color: ui_primary_color;
 }
@@ -976,28 +1005,28 @@ MainMenu.StackDepth3 #MenuRow:hover
 	width: fit-children;
 	background-color: #00000000;
 	//color:#FFFFFF;
-	margin-top: 44px;
+	margin-top: 38px;
 	//width: 412px;
 //	padding-left: 0px;
-	horizontal-align: left;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	horizontal-align: center;
 	transition-duration: 0.0s;
 }
 
 
-.TopRowButton:focus Label
+.TopRowButton:focus Label,
+.TopRowButton:hover Label
 {
 	color: #ffffff;
 	//pre-transform-scale2d: 1.0;
 	animation-name: none;
-	
+	transform: none;
 }
 
-.TopRowButton:focus
+.TopRowButton:focus,
+.TopRowButton:hover
 {
 
-	pre-transform-scale2d: 0.8;
+	//pre-transform-scale2d: 0.8;
 	animation-name: none;
 	box-shadow: none;
 	border-width: 0px;
@@ -1008,16 +1037,19 @@ Label.TopRowCounter
 	width: fit-children;
 	min-width: 36px;
 	background-color: #00000000;
-	color:#40d2ffff;
+	color:#96d4f8ff;
 	text-align: center;
 	padding-left: 4px;
 	padding-right: 2px;
+	margin-top: -1px;
 	transition-duration: 0.0s;
 }
 
 Label.TopRowCounterBackground
 {
-	background-color: #40d2ff55;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #133e57 ), to( #14445f ) );
+
 	width: fit-children;
 		min-width: 36px;
 	color:#00000000;
@@ -1025,9 +1057,7 @@ Label.TopRowCounterBackground
     padding-left: 4px;
 	padding-right: 6px;
 	opacity-mask: url( "file://{images}/horizontal_gradient_mask.png" );
-	horizontal-align: left;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	horizontal-align: center;
 	transition-duration: 0.0s;
 	z-index: -10;
 }
@@ -1041,17 +1071,19 @@ transform: none;
 
 }
 
-.TopRowButton:descendantfocus Label.TopRowCounterBackground 
+.TopRowButton:focus Label.TopRowCounterBackground,
+.TopRowButton:hover Label.TopRowCounterBackground
 {
-	background-color: #40d2ff66;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #215c7e ), to( #1a567a ) );
+
 	width: fit-children;
 	color:#00000000;
     margin-left: 0px;
     padding-left: 4px;
 	padding-right: 6px;
 	opacity-mask: url( "file://{images}/horizontal_gradient_mask.png" );
-	horizontal-align: left;
-	opacity: 0.5;
+	horizontal-align: center;
+
 
 }
 
@@ -1066,11 +1098,19 @@ transform: none;
 	wash-color: none;
 		width: 128px;
 	height: 128px;
+	pre-transform-scale2d: 1;
 }
 
-.TopRowButton:focus Image
+.TopRowButton:focus Image,
+.TopRowButton:hover Image
 {
-	wash-color: #ffffff;	
+	wash-color: #ffffff;
+	color: white;
+}
+.TopRowButton.Locked:focus Image,
+.TopRowButton.Locked:hover Image
+{
+	wash-color: #000000;
 }
 
 .TopRowButton Label
@@ -1101,7 +1141,8 @@ transform: none;
 	transition-timing-function: linear;
 }
 
-.EdgeButton:focus
+.EdgeButton:focus,
+.EdgeButton:hover
 {
 	height: 225px;
 	background-position: 0px 5px;
@@ -1230,7 +1271,7 @@ transform: none;
 	transform: translateX( 0px ) rotateX( 0deg ) translateZ( -64px );
 
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.3s, 0.3s !immediate;
+	transition-duration: supershortduration;
 	transition-timing-function: linear;
 }
 
@@ -1241,7 +1282,7 @@ transform: none;
 
 .GameRowContents:descendantfocus
 {
-	transform: translatex(0px) translatey(-32px);
+	transform: translatex(0px) translatey(-22px);
   opacity:1.0;
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
@@ -1252,8 +1293,17 @@ transform: none;
 {
 	horizontal-align: center;
 	flow-children: down;
-	width: 500px;
+	width: 470px;
 	padding-top: 10px;
+}
+.GameItem:descendantfocus .GameItemHeader Label
+{
+	color: white;
+}
+.GameItem.game_1,
+.GameItem.game_2
+{
+	margin-right: 10px;
 }
 
 .GameRowContentsWrapper
@@ -1309,13 +1359,24 @@ transform: none;
 	box-shadow: fill #00000033 -3px -3px 6px 6px;
 }
 
-.GameButton:focus
+.GameButton:focus,
+.GameButton:hover
 {
 	horizontal-align: left;
 	width: 470px;
 	height: 225px;
-	margin-top: 0px;
-	margin-left: 0px;
+	padding: 5px;
+	margin: 0px;
+	box-shadow: none;
+	background-color: #b6e1faff;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 .GameButton Image
@@ -1323,6 +1384,7 @@ transform: none;
 	horizontal-align: center;
 	height: 100%;
 	width: fit-children;
+	border-radius: 3px;
 }
 
 .GameButton #SuggestedStatus
@@ -1357,7 +1419,8 @@ transform: none;
 
 
 
-.Button:focus .MainMenuRowLabel
+.Button:focus .MainMenuRowLabel,
+.Button:hover .MainMenuRowLabel
 {
 	color: #d6f5ffff;
 	opacity: 1.0;
@@ -1430,13 +1493,15 @@ transform: none;
 	Opacity: 1.0;
 }
 
-#MenuRow:descendantfocus .EdgeButtonRight:focus  .MainMenuRowLabel
+#MenuRow:descendantfocus .EdgeButtonRight:focus  .MainMenuRowLabel,
+#MenuRow .EdgeButtonRight:hover  .MainMenuRowLabel
 {
 	transform: translatey(-5px) translatex(0px);
 }
 
 
-#MenuRow:descendantfocus .EdgeButtonLeft:focus  .MainMenuRowLabel
+#MenuRow:descendantfocus .EdgeButtonLeft:focus  .MainMenuRowLabel,
+#MenuRow .EdgeButtonLeft:hover  .MainMenuRowLabel
 {
 	transform: translatey(-5px) translatex(0px);
 }
@@ -1485,7 +1550,8 @@ transform: none;
 	transition-timing-function: linear;
 }
 
-.MainMenuButton:focus Image
+.MainMenuButton:focus Image,
+.MainMenuButton:hover Image
 {
 	wash-color: #b6e1fa;	
 	transform: translatey(-18px);
@@ -1895,9 +1961,9 @@ Button:focus #MissingImageLabel
 #ParentalLockImages,
 #BatteryImages
 {
-	width: fit-children;
+	width: 70px;
 	height: 100%;
-	flow-children: right;
+	flow-children: none;
 }
 
 InboxMenu #BatteryImages,
@@ -1938,13 +2004,16 @@ InboxMenu #ParentalLockImages
 .FamilyModeEnabled #ParentalLockImageUnlocked
 {
 	opacity: 1.0;
+	visibility: visible;
 }
 
 .FamilyModeEnabled.FamilyModeLocked #ParentalLockImageUnlocked,
 .FamilyModeEnabled #ParentalLockImageLocked
 {
 	opacity: 0.0;
+	visibility: collapse;
 }
+
 
 
 #ParentalLockImageUnlocked
@@ -2057,6 +2126,7 @@ MainMenu.BelowTheFoldOpen #WelcomePanel
 {
 	flow-children: down;
 	vertical-align: center;
+	margin-left: 10px;
 }
 
 Label.ProfileLabel
@@ -2071,6 +2141,11 @@ Label.ProfileNameLabel
 	font-size: 42px;
 	margin-top: -4px;
 	color: #36ceff;
+}
+#TopRowLeft:descendantfocus Label.ProfileNameLabel,
+#TopRowLeft:descendantfocus Label.ProfileLabel
+{
+	color: #ffffff;
 }
 
 #MenuRow:descendantfocus 
