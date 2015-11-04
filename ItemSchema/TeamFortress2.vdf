@@ -108545,6 +108545,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"1"
+		"quickplay_map"		"koth_lakeside_event"
 		"theme"		"merasmus_merasmus"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108595,6 +108596,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"1"
+		"quickplay_map"		"koth_viaduct_event"
 		"theme"		"merasmus_monoculus"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108637,6 +108639,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"1"
+		"quickplay_map"		"cp_manor_event"
 		"theme"		"merasmus_hhh"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108683,6 +108686,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"3"
+		"quickplay_map"		"koth_viaduct_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108749,6 +108753,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"4"
+		"quickplay_map"		"koth_lakeside_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108825,6 +108830,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"5"
+		"quickplay_map"		"plr_hightower_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108911,6 +108917,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"5"
+		"quickplay_map"		"sd_doomsday_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -108997,6 +109004,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"1"
+		"quickplay_map"		"cp_manor_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -109063,6 +109071,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"1"
+		"quickplay_map"		"koth_harvest_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -109135,6 +109144,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"3"
+		"quickplay_map"		"cp_gorge_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -109197,6 +109207,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"3"
+		"quickplay_map"		"koth_moonshine_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -109259,6 +109270,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"3"
+		"quickplay_map"		"pl_millstone_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -109321,6 +109333,7 @@
 		"max_bonus_points"		"0"
 		"reward"		"halloween_2015_contract_rewards"
 		"objectives_to_roll"		"3"
+		"quickplay_map"		"cp_sunshine_event"
 		"theme"		"merasmus_general"
 		"operation"		"operation_halloween2015"
 		"descriptions"
@@ -122130,7 +122143,916 @@
 				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_engineer.mdl"
 			}
 		}
-
+		"8888"
+		{
+			"name"				"UGC Highlander 1st Place Platinum Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8889"
+		{
+			"name"				"UGC Highlander 2nd Place Platinum Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8890"
+		{
+			"name"				"UGC Highlander 3rd Place Platinum Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8891"
+		{
+			"name"				"UGC Highlander Platinum Participant Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8892"
+		{
+			"name"				"UGC Highlander 1st Place Gold Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8893"
+		{
+			"name"				"UGC Highlander 2nd Place Gold Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8894"
+		{
+			"name"				"UGC Highlander 3rd Place Gold Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8895"
+		{
+			"name"				"UGC Highlander Gold Participant Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8896"
+		{
+			"name"				"UGC Highlander 1st Place Silver Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_1st"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8897"
+		{
+			"name"				"UGC Highlander 2nd Place Silver Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_2nd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8898"
+		{
+			"name"				"UGC Highlander 3rd Place Silver Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_3rd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8899"
+		{
+			"name"				"UGC Highlander Silver Participant Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8939"
+		{
+			"name"				"UGC Highlander 1st Place Steel Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_1st"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8940"
+		{
+			"name"				"UGC Highlander 2nd Place Steel Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_2nd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8941"
+		{
+			"name"				"UGC Highlander 3rd Place Steel Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_3rd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8942"
+		{
+			"name"				"UGC Highlander Steel Participant Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+ 		"8943"
+		{
+			"name"				"UGC Highlander 1st Place Iron Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_1st"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8944"
+		{
+			"name"				"UGC Highlander 2nd Place Iron Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_2nd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8945"
+		{
+			"name"				"UGC Highlander 3rd Place Iron Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_3rd"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8946"
+		{
+			"name"				"UGC Highlander Iron Participant Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season15"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8947"
+		{
+			"name"				"UGC 6vs6 1st Place Platinum Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8948"
+		{
+			"name"				"UGC 6vs6 2nd Place Platinum Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8949"
+		{
+			"name"				"UGC 6vs6 3rd Place Platinum Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8950"
+		{		
+			"name"				"UGC 6vs6 Platinum Participant Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8951"
+		{		
+			"name"				"UGC 6vs6 Gold Participant Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8952"
+		{		
+			"name"				"UGC 6vs6 Silver Participant Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8953"
+		{		
+			"name"				"UGC 6vs6 Steel Participant Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8954"
+		{		
+			"name"				"UGC 6vs6 Iron Participant Season 17"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season17"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8955"
+		{
+			"name"				"UGC 4vs4 1st Place Gold Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8956"
+		{
+			"name"				"UGC 4vs4 2nd Place Gold Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8957"
+		{
+			"name"				"UGC 4vs4 3rd Place Gold Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+  		"8958"
+		{
+			"name"				"UGC 4vs4 Gold Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8959"
+		{		
+			"name"				"UGC 4vs4 Silver Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8960"
+		{		
+			"name"				"UGC 4vs4 Steel Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8961"
+		{
+			"name"				"UGC 4vs4 Iron Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8962"
+		{
+			"name"				"UGC Highlander 1st Place Platinum Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8963"
+		{
+			"name"				"UGC Highlander 2nd Place Platinum Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8964"
+		{
+			"name"				"UGC Highlander 3rd Place Platinum Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8965"
+		{
+			"name"				"UGC Highlander Platinum Participant Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8966"
+		{
+			"name"				"UGC Highlander 1st Place Gold Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8967"
+		{
+			"name"				"UGC Highlander 2nd Place Gold Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8968"
+		{
+			"name"				"UGC Highlander 3rd Place Gold Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8969"
+		{
+			"name"				"UGC Highlander Gold Participant Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8970"
+		{
+			"name"				"UGC Highlander 1st Place Silver Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_1st"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8971"
+		{
+			"name"				"UGC Highlander 2nd Place Silver Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_2nd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8972"
+		{
+			"name"				"UGC Highlander 3rd Place Silver Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_3rd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8973"
+		{
+			"name"				"UGC Highlander Silver Participant Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8974"
+		{
+			"name"				"UGC Highlander 1st Place Steel Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_1st"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8975"
+		{
+			"name"				"UGC Highlander 2nd Place Steel Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_2nd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8976"
+		{
+			"name"				"UGC Highlander 3rd Place Steel Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_3rd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8977"
+		{
+			"name"				"UGC Highlander Steel Participant Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+ 		"8978"
+		{
+			"name"				"UGC Highlander 1st Place Iron Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_1st"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8979"
+		{
+			"name"				"UGC Highlander 2nd Place Iron Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_2nd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8980"
+		{
+			"name"				"UGC Highlander 3rd Place Iron Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_3rd"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8981"
+		{
+			"name"				"UGC Highlander Iron Participant Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season16"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8982"
+		{
+			"name"				"UGC 6vs6 1st Place Platinum Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8983"
+		{
+			"name"				"UGC 6vs6 2nd Place Platinum Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8984"
+		{
+			"name"				"UGC 6vs6 3rd Place Platinum Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8985"
+		{		
+			"name"				"UGC 6vs6 Platinum Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_platinum_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals_red"
+			{
+				"skin"	"4"
+			}
+		}
+		"8986"
+		{		
+			"name"				"UGC 6vs6 Gold Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8987"
+		{		
+			"name"				"UGC 6vs6 Silver Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8988"
+		{		
+			"name"				"UGC 6vs6 Steel Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8989"
+		{		
+			"name"				"UGC 6vs6 Iron Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8990"
+		{
+			"name"				"UGC 4vs4 1st Place Gold Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_01_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_01.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8991"
+		{
+			"name"				"UGC 4vs4 2nd Place Gold Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_02_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_02.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8992"
+		{
+			"name"				"UGC 4vs4 3rd Place Gold Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_rank_03_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_rank_03.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+  		"8993"
+		{
+			"name"				"UGC 4vs4 Gold Participant Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_gold_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8994"
+		{		
+			"name"				"UGC 4vs4 Silver Participant Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_silver_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8995"
+		{		
+			"name"				"UGC 4vs4 Steel Participant Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_steel_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8996"
+		{
+			"name"				"UGC 4vs4 Iron Participant Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_Season5"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_medals/ugc_season_participation_iron_medal"
+			"model_player"		"models/workshop/player/items/all_class/ugc_medals/ugc_participation.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
 
 
 
@@ -135921,6 +136843,7 @@
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
+
 		
 
 
