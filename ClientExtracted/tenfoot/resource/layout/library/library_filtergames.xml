@@ -23,7 +23,7 @@
 				headerdetaillabel="#KeyboardDetail_SearchResultCount" >
 					<Label class="TextEntryPrompt GameSearchInputHint" text="#Library_HintSearch" />
 			</TextEntry>
-			<Label class="NxTagHeader" text="#Library_TypeHeader" />
+			<Label class="NxTagHeader TypeHeader" text="#Library_TypeHeader" />
 
 			<ToggleButton id="ICanPlay" class="CheckBox GameOption" text="#Library_ReadyToPlay" tabindex="auto" onselect="GameFilter(icanplay);" ondeselect="GameFilter(icanplay);" selectionpos="auto" />
 			<ToggleButton id="ControllerSupported" class="CheckBox GameOption" text="#Library_ControllerSupported" tabindex="auto" onselect="GameFilter(controller);" ondeselect="GameFilter(controller);" selectionpos="auto" />

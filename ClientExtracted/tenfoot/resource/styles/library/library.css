@@ -4797,6 +4797,11 @@ LibraryFilterGames #VR
 	visibility: collapse;
 }
 
+.VideoMode .TypeHeader
+{
+	visibility: collapse;
+}
+
 
 Label.Header
 {
@@ -5372,6 +5377,11 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .MusicMode .MusicOption
 {
 		visibility: visible;
+}
+
+.VideoMode .GameOption
+{
+	visibility: collapse;
 }
 
 .AllGamesFilterLabel
