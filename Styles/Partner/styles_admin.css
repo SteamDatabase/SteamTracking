@@ -1610,6 +1610,45 @@ html, body { height:100%; }
 	width: 100%;
 }
 
+.CastAndCrewRow
+{
+	width: 600px;
+	margin-bottom: 4px;
+}
+
+.CastAndCrewRow button
+{
+	margin-top: 4px;
+}
+
+.CastAndCrewRole
+{
+	width: 240px;
+	display: inline-block;
+}
+
+.CastAndCrewRole select
+{
+	width: 220px;
+}
+
+.CastAndCrewName
+{
+	width: 240px;
+	display: inline-block;
+}
+
+.CastAndCrewName input
+{
+	width: 220px;
+}
+
+.CastAndCrewClear
+{
+	width: 100px;
+	display: inline-block;
+}
+
 .AppReviewRow
 {
 	width: 1000px;

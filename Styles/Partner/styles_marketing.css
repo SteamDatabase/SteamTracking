@@ -219,7 +219,7 @@ div.dateentry {
 }
 
 /* game store page */
-#item_store_filters
+.item_store_filters
 {
 	border: 1px solid white;
 	padding: 10px;
@@ -234,9 +234,12 @@ div.dateentry {
 {
 	height: 6px;
 	cursor: move;
-	cursor: grab;
 	cursor: -moz-grab;
 	margin-bottom: 5px;
+	float: left;
+	width: 10px;
+	margin-top: 9px;
+	margin-right: 5px;
 }
 
 .item_store_filter_grabber_top
@@ -254,4 +257,22 @@ div.dateentry {
 	border-bottom: 1px solid #cccccc;
 	background-color: #000000;
 	width: 100%;
+}
+.item_store_filter_name
+{
+	float: left;
+	width: 500px;
+}
+.item_store_filter_tags
+{
+	float: left;
+	width: 250px;
+}
+.item_store_filter_tags input
+{
+	width: 200px;
+}
+.item_store_filter_controls
+{
+	float: left;
 }
