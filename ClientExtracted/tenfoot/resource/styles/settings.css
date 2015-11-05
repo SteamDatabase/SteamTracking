@@ -2101,6 +2101,13 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	visibility: collapse;
 }
 
+// always hide store settings, this code is moving to the web
+#StoreSettingsButton
+{
+	visibility: collapse;
+}
+
+
 .ClientUpdateMargin
 {
     margin-top: 5px;
