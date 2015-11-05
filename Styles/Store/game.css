@@ -3439,6 +3439,81 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 }
 
 
+
+/* item store items */
+.item_store_items_game_page_container
+{
+	margin-top: 2px;
+	position: relative;
+	padding: 10px;
+
+	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.item_store_overlay_link
+{
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+.item_store_overlay_link:hover
+{
+	opacity: 1;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid #67c1f5;
+}
+.item_store_overlay_link a
+{
+	margin-top: 60px;
+}
+
+.item_def_grid_item
+{
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-right: 4px;
+}
+.item_def_grid_item:nth-child(5n)
+{
+	margin-right: 0px;
+}
+
+.item_def_icon
+{
+	width: 94px;
+	height: 94px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0);
+}
+.item_def_grid_item:hover .item_def_icon
+{
+	border: 1px solid rgba(0,0,0,0);
+}
+
+.item_def_grid_item .item_def_price
+{
+	line-height: 20px;
+	float: right;
+	font-size: 12px;
+}
+
+.item_def_icon_container
+{
+	position: relative;
+	background: #111111;
+}
+
+/* responsive */
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .game_area_play_stats {
