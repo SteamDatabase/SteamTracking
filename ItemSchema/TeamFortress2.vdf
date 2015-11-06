@@ -2325,7 +2325,7 @@
 				"0"
 				{
 					"type"		"map"
-					"value"		"cp_gorge_event_b5"
+					"value"		"cp_gorge_event"
 				}
 				"1"
 				{
@@ -2431,7 +2431,7 @@
 				"1"
 				{
 					"type"		"map"
-					"value"		"cp_gorge_event_b5"
+					"value"		"cp_gorge_event"
 				}
 				"2"
 				{
@@ -102540,7 +102540,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_the_supernatural_stalker"
 			"item_description"		"#TF_sf14_the_supernatural_stalker_Desc"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/sf14_the_supernatural_stalker/sf14_the_supernatural_stalker"
 			"capabilities"
@@ -123053,6 +123053,122 @@
 				"skin"	"0"
 			}
 		}
+		"9029"
+		{
+			"name"	"GAlloween Gold Medal 2015"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Gold"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_engineer.mdl"
+			}
+		}
+ 		"9030"
+		{
+			"name"	"GAlloween Silver Medal 2015"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Silver"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_engineer.mdl"
+			}
+		}
+		"9031"
+		{
+			"name"	"GAlloween Bronze Medal 2015"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Bronze"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_engineer.mdl"
+			}
+		}
+ 		"9032"
+		{
+			"name"	"GAlloween Participant Badge 2015"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Participant"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134360,7 +134476,7 @@
 				"weapon_allow_inspect"				"1"
 				"cannot restore"					"1"
 				"always_transmit_so"				"1"			
-				"deactive date"					"1446768000"	
+				"deactive date"					"1447099200"	
 				"kill eater score type"			"101"	
 				"kill eater score type 2"		"102"	
 				"kill eater score type 3"		"103"	
@@ -134541,7 +134657,7 @@
 				"always_transmit_so"				"1"
 				"allow_halloween_offering"			"1"
 				
-				"deactive date"					"1447286400"	
+				"deactive date"					"1447358400"	
 				
 				"kill eater score type"			"106"			
 				"kill eater score type 2"		"107"			
