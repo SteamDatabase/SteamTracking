@@ -1302,6 +1302,11 @@ body.v6 .help_refund_request_area h2 a:hover {
 	color: #67c1f5;
 }
 
+.help_highlight_bans_text
+{
+	color: #a94847;
+}
+
 a .help_highlight_text:hover {
 	color: #ffffff;
 }
@@ -1656,7 +1661,31 @@ a.guide_row {
 	margin-top: 0px;
 }
 
-.help_notinlibrary_details .HighlightedText
+.help_vacorgameban_details .HighlightedText
+{
+	color: white;
+}
+
+.help_vacorgameban_details
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 20px;
+	width: calc( 644px - 40px );
+	margin-bottom: 20px;
+}
+
+.help_vacorgameban_details p
+{
+	margin-top: 20px;
+	line-height: 16px;
+}
+
+.help_vacorgameban_details p:first-child
+{
+	margin-top: 0px;
+}
+
+.help_vacorgameban_details .HighlightedText
 {
 	color: white;
 }
