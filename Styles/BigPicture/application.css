@@ -1,10 +1,7 @@
 
-@define greyish_medium: #81a3b8;
-@define almost_white: #c7d5e0;
 @define green_in_page: #a3cf06;
 @define section_bg_color: #000000ff;
 @define purchase_options_height: 94px;
-@define app_warning_color: #f47b20;
 
 .NotImplemented
 {
@@ -187,13 +184,13 @@
 	visibility: collapse;
 }
 
-.StoreSlideshowContainer
+.SlideshowContainer
 {
 	width: 100%;
 	height: 100%;
 }
 
-.StoreSlideshowContainer #AppSlideshow
+.SlideshowContainer #AppSlideshow
 {
 	width: 100%;
 	height: 100%;
@@ -204,7 +201,7 @@
     transition-duration: 0.0s;
 }
 
-.StoreSlideshowContainer #AppSlideshow.Transitioning
+.SlideshowContainer #AppSlideshow.Transitioning
 {
 	transition-duration: 0.3s;
 }
@@ -979,6 +976,11 @@ VerticalScrollBar {
 	margin-left: 8px;
 }
 
+.EarlyAccessBox
+{
+	height: 134px;
+}
+
 // friends who own app
 .FriendsWhoOwnApp
 {
@@ -1227,7 +1229,8 @@ VerticalScrollBar {
 ////////////////////////////////////
 // Age Check
 ////////////////////////////////////
-.AgeCheckPage
+.AgeCheckPage,
+.AgeCheckFailedPage
 {
 	flow-children: down;
 	padding-top: 160px;
@@ -1340,7 +1343,8 @@ VerticalScrollBar {
 	margin-top: 200px;
 }
 
-.AgeCheckPage .LoadingError
+.AgeCheckPage .LoadingError,
+.AgeCheckFailedPage .LoadingError
 {
 	color: #67c1f5ff;
 	margin-top: 200px;

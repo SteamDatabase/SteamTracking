@@ -33,6 +33,7 @@
 	background: rgba(0, 0, 0, 0.3);
 	padding: 12px 2%;
 	color: #d6d7d8;
+	margin-bottom: 80px;
 }
 
 #ssa_box img {
@@ -78,4 +79,23 @@
 #privacy_link {
 	margin-left:16px;
 	padding-top:8px;
+}
+
+
+#ssa_box.online_conduct {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.online_conduct ul {
+	margin-left: 20px;
+}
+
+.online_conduct ul li {
+	margin: 8px 0;
+}
+
+.ssa_privacy_input {
+	padding: 8px;
+	font-size: 16px;
 }

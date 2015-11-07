@@ -4209,6 +4209,7 @@ function DisplayReceiptPage()
 {
 	$('cart_area').style.display = 'none';
 	$('receipt_area').style.display = 'block';
+	$('pending_receipt_area').style.display = 'none';
 
 	if ( $('checkout_pipeline') && $('receipt_pipeline') )
 	{

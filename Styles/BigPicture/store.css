@@ -1,5 +1,7 @@
 
 @define greyish_medium: #81a3b8;
+@define almost_white: #c7d5e0;
+@define app_warning_color: #f47b20;
 
 
 ////////////////////////////////////
@@ -191,14 +193,38 @@
 .BasicCapsuleStatus
 {
 	width: fill-parent-flow( 1.0 );
-	padding-left: 8px;
+	padding-left: 0px;
 	padding-top: 10px;
 	font-weight: light;
+
+	transition-property: transform;
+	transition-duration: supershortduration;
+	transition-timing-function: ease-in-out;
+}
+.BasicCapsule:focus .BasicCapsuleStatus,
+.BasicCapsule:hover .BasicCapsuleStatus
+{
+	transform: translateX( 8px );
 }
 
 .BasicCapsule .DiscountBlock
 {
 	margin-top: 10px;
+
+	transition-property: transform;
+	transition-duration: supershortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.BasicCapsule .DiscountFinalPrice
+{
+	padding-right: 0px;
+
+}
+.BasicCapsule:focus .DiscountBlock,
+.BasicCapsule:hover .DiscountBlock
+{
+	transform: translateX( -8px );
 }
 
 
@@ -339,7 +365,7 @@
 
 .SearchResults .BasicCapsuleImage {
 	width: 460px;
-	height: 263px;
+	height: 215px;
 }
 
 .SearchResults .BasicCapsuleInfo {
@@ -584,25 +610,20 @@
 	font-size: 24px;
 }
 
-.NxFilterButton.BrowseTags 
+.BrowseGamesBox.BrowseTags
 {
 	margin-left: 4px;
-	width: 432px;
+	width: 1312px;
 	margin-bottom: 5px;
 	height: 80px;
 	vertical-align: center;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 0px;
 }
 
 .PanelBrowseTags 
 {
-	width: 100%;
-}
-
-.PanelBrowseTagsBottom 
-{
-	height: 200px;
 	width: 100%;
 }
 
@@ -622,14 +643,97 @@
 
 #LoadedContent LoadingThrobber
 {
-	margin-left: 370px;
-	height: 60px;
-	margin-top: 10px;
+	/* background-color: horizontal_default; */
+	/* border-radius: 3px; */
+
+	padding: 20px 50px;
+	position: 585px 320px 0px;
+	z-index: 5;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: supershortduration;
+	transition-delay: 0.5s;
+	transition-timing-function: ease-in-out;
 }
 
-#ContentFilter LoadingThrobber
+#LoadedContent LoadingThrobber.Visible
 {
-	margin-left: 320px;
-	height: 50px;
-	margin-top: 0px;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: supershortduration;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+}
+
+////////////////////////////////////
+// In Library Icons
+////////////////////////////////////
+.InLibraryWrapper Image
+{
+	opacity: 0.5;
+
+	transition-property: opacity;
+	transition-duration: supershortduration;
+	transition-timing-function: ease-in-out;
+}
+.BasicCapsule:descendantfocus .InLibraryWrapper Image,
+.BasicHeader:descendantfocus .InLibraryWrapper Image,
+.UpdatedItem:descendantfocus .InLibraryWrapper Image,
+.PromoItemContainer:descendantfocus .InLibraryWrapper Image
+{
+	opacity: 0.8;
+}
+.InLibraryPanel
+{
+	align: right bottom;
+	margin-bottom: 10px;
+}
+.BasicCapsule:descendantfocus .InLibraryPanel,
+.BasicHeader:descendantfocus .InLibraryPanel,
+.UpdatedItem:descendantfocus .InLibraryPanel,
+.PromoItemContainer:descendantfocus .InLibraryPanel
+{
+	box-shadow: module_shadow;
+}
+
+.InLibraryIcon
+{
+	height: 40px;
+
+	background-color: none;
+
+	background-image: url( "https://steamstore-a.akamaihd.net/public/images/bigpicture/icon_in_library.png" );
+   	background-repeat: no-repeat;
+   	background-size: 64px 64px;
+   	background-position: 6px center;
+
+	margin-left: -74px;
+	margin-right: 74px;
+	transform: translateX( 100% );
+
+	transition-property: transform, background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.BasicCapsule:descendantfocus .InLibraryIcon,
+.BasicHeader:descendantfocus .InLibraryIcon,
+.UpdatedItem:descendantfocus .InLibraryIcon,
+.PromoItemContainer:descendantfocus .InLibraryIcon
+{
+	transform: translateX( 74px );
+	background-color: #14c4f9;
+	box-shadow: module_shadow;
+}
+
+.InLibraryIcon Label
+{
+	margin-left: 80px;
+	vertical-align: center;
+	font-size: 24px;
+	color: white;
+
+	margin-right: 8px;
 }
