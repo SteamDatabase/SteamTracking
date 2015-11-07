@@ -641,7 +641,8 @@
 	horizontal-align: center;
 }
 
-#LoadedContent LoadingThrobber
+.BrowseTagsPage LoadingThrobber,
+.BrowsePage LoadingThrobber
 {
 	/* background-color: horizontal_default; */
 	/* border-radius: 3px; */
@@ -657,7 +658,8 @@
 	transition-timing-function: ease-in-out;
 }
 
-#LoadedContent LoadingThrobber.Visible
+.BrowseTagsPage LoadingThrobber.Visible,
+.BrowsePage LoadingThrobber.Visible
 {
 	opacity: 1.0;
 
