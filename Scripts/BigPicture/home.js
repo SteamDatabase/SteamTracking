@@ -127,6 +127,41 @@ CStoreHome.prototype.OnClearShoppingCart = function()
 	ShowShoppingCartBtn( false );
 }
 
+CStoreHome.prototype.Refresh = function()
+{
+	$.GetContextPanel().Refresh();
+	$.GetContextPanel().SetFocus();
+}
+
+CStoreHome.prototype.InitSettingsPage = function()
+{
+	var pAllGames = $('#FeatureAllGames');
+	if ( pAllGames )
+	{
+		try
+		{
+			pAllGames.SetSelected( $.BGetStoreFeatureAllGames() );
+		}
+		catch( e )
+		{
+		}
+	}
+}
+
+CStoreHome.prototype.ToggleFeatureAllGames = function()
+{
+	try
+	{
+		$.SetStoreFeatureAllGames( !$.BGetStoreFeatureAllGames() );
+	}
+	catch( e )
+	{
+	}
+
+	$.GetContextPanel().SetAttributeInt( 'reloadfromallgames', 1 );
+	this.Refresh();
+}
+
 function ShowStoreContents( strURL, strName )
 {
 	if ( strURL.substr( 0, 7 ) != 'http://' && strURL.substr( 0, 8 ) != 'https://' )
@@ -286,7 +321,7 @@ function AddBundleToCart( strSessionID, nBundleID )
 function AddPackageToCartInternal( strSessionID, strType, nItemID )
 {
 	
-	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%typeid%', strType );
 	pScript = pScript.replace( '%itemid%', nItemID );
@@ -444,4 +479,34 @@ function AddInLibraryIcon( strImageID, unItemID, nItemType )
 
 	var pLabel = $.CreatePanel( 'Label', pInLibraryIcon, '' );
 	pLabel.text = 'In Library';
+}
+
+function SetUserWebData( strKey, strValue )
+{
+	// old clients don't have this method so wrapping in try/catch
+	try
+	{
+		return $.BSetUserWebData( strKey, strValue );
+	}
+	catch( e )
+	{
+
+	}
+
+	return false;
+}
+
+function GetUserWebData( strKey, strDefault )
+{
+	// old clients don't have this method so wrapping in try/catch
+	try
+	{
+		return $.GetUserWebData( strKey, strDefault );
+	}
+	catch( e )
+	{
+
+	}
+
+	return strDefault;
 }

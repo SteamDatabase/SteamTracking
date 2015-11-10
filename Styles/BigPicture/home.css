@@ -80,10 +80,6 @@ RemotePanel
 	overflow: squish scroll;
 	padding-bottom: 150px;
 	padding-top: 40px;
-
-	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 
 .FeaturedWrapping
@@ -892,4 +888,87 @@ VerticalScrollBar
 	font-size: 70px;
 	min-width: 150px;
 	margin-top: -6px;
+}
+
+
+////////////////////////////////////
+// Settings
+////////////////////////////////////
+#HomeSettings
+{
+	flow-children: down;
+	overflow: squish scroll;
+	padding-bottom: 150px;
+	padding-top: 40px;
+}
+
+.FeatureAllGamesSection
+{
+	margin-left: 100px;
+	flow-children: down;
+	width: 1000px;
+}
+
+.AllGamesDescription
+{
+	font-size: 26px;
+	color: almost_white;
+	margin-bottom: 20px;
+}
+
+.SettingsToggle
+{
+	width: 100%;
+	height: 58px;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 3px;
+
+	color: #67c1f5ff;
+	background-color: nontransparent_module;
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.SettingsToggle Label
+{
+	margin: 0px 0px 0px 8px;
+}
+
+.SettingsToggle:focus,
+.SettingsToggle:hover
+{
+	color: white;
+	background-color: action_module;
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.SettingsToggle .TickBox
+{
+	background-color: #2f89bc66;
+}
+
+.SettingsToggle LoadingThrobber
+{
+	width: 38px;
+	height: 38px;
+}
+
+.SettingsToggle LoadingThrobber .Bar
+{
+	margin-right: 3px;
+	width: 9px;
+	height: 38px;
+}
+
+.SettingsToggle.Requesting .TickBox
+{
+	visibility: collapse;
 }
