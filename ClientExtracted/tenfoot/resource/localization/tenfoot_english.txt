@@ -3337,6 +3337,13 @@
 	"SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 	"SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
 	"SteamUI_StreamLaunch_Failed"		"Unable to launch stream."
+	"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
+	"SteamUI_StreamLaunch_InstallDrivers"	"Streaming requires additional driver installation.\n\nPlease follow the Steam prompts on the remote computer."
+
+	"Steam_InstallAudioCaptureDriver_Title"	"Audio Driver Update"
+	"Steam_InstallAudioCaptureDriver_Text"	"Steam needs to update its audio driver, which may require a system reboot."
+	"Steam_InstallGamepadInputDriver_Title"	"Gamepad Driver Update"
+	"Steam_InstallGamepadInputDriver_Text"	"Steam needs to update its gamepad driver, which may require a system reboot."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Please enter the authorization code to allow {s:devicename} to connect and play games."

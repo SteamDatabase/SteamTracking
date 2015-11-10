@@ -168,6 +168,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_source.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_vmouse.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controllerxinput_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/datatracker.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotbuild.o
@@ -286,6 +287,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valvemachosignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valvepesignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valvesignature.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/virtualdevices_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voice_decoder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voice_gain.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voice_mixer_controls_osx.o
@@ -352,6 +354,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_source.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_vmouse.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controllerxinput_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/datatracker.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotbuild.o
@@ -470,6 +473,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valvemachosignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valvepesignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valvesignature.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/virtualdevices_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voice_decoder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voice_gain.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voice_mixer_controls_osx.o
@@ -555,7 +559,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerxinput_dummy.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerxinput_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotbuild.cpp
@@ -670,6 +674,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vac.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule_osx.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/virtualdevices_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrcommon.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrinternal.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.cpp
