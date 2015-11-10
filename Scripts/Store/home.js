@@ -250,7 +250,6 @@ GHomepage = {
 			rgTopSellers = GHomepage.oDisplayLists.top_sellers;
 
 		var rgDisplayListCombined = GHomepage.MergeLists(
-			GHomepage.oDisplayLists.main_cluster_legacy, false,
 			GHomepage.oDisplayLists.main_cluster, true,
 			rgTopSellers, false,
 			GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true
@@ -266,6 +265,11 @@ GHomepage = {
 				GHomepage.rgRecommendedGames, true
 			);
 		}
+
+		rgDisplayListCombined = GHomepage.MergeLists(
+			GHomepage.oDisplayLists.main_cluster_legacy, false,
+			rgDisplayListCombined, false
+		);
 
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
 			rgDisplayListCombined, 'main_cluster', 0, 15
