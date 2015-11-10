@@ -58321,10 +58321,10 @@
 			"item_slot"	"head"
 			"equip_region"	"hat"
 			"item_quality"	"unique"
-			"image_inventory"	"backpack/player/items/demo/inquisitor"
+			"image_inventory"	"backpack/workshop/player/items/demo/inquisitor/inquisitor"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/items/demo/inquisitor.mdl"
+			"model_player"	"models/workshop/player/items/demo/inquisitor/inquisitor.mdl"
 			"drop_type"	"drop"
 			"used_by_classes"
 			{
