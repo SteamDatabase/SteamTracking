@@ -2276,6 +2276,7 @@
  KeyValuesSystemSteam
  Log
  Msg
+ NSApp
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
  OSTypesAreCompatible
@@ -3169,6 +3170,7 @@
  SDL_GameControllerName
  SDL_GameControllerOpen
  SDL_GetClipboardText
+ SDL_GetDisplayBounds
  SDL_GetModState
  SDL_GetMouseState
  SDL_GetTicks
@@ -8518,6 +8520,7 @@
  T OSXHelpers::CIOPollingHelper::ThreadExceptionWrapper(void*)
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
  T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
+ T OSXHelpers::ForceActivateThisAppAndRaiseNSWindow(void*)
  T PanelLessFunc(panorama::IUIPanel* const&, panorama::IUIPanel* const&)
  T PanelSortFunc(panorama::IUIPanel* const*, panorama::IUIPanel* const*)
  T ParseClassSymbols(CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, char const*)
