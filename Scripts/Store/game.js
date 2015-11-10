@@ -13,7 +13,7 @@ function ShowEmbedWidget( )
 	var deferred = new jQuery.Deferred();
 	var fnOK = function() { deferred.resolve(); };
 
-	var Modal = _BuildDialog( "#Widget_Create_Title", $Content, [], fnOK, {} );
+	var Modal = _BuildDialog( "Create Widget to Embed", $Content, [], fnOK, {} );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 
@@ -35,7 +35,7 @@ function ShowShareDialog( )
 	$Content.detach();
 	$Content.show();
 
-	ShowAlertDialog( "#search_share", $Content).always(
+	ShowAlertDialog( "Share", $Content).always(
 		function() {
 			// save it away again for later
 			$Content.hide();
@@ -91,7 +91,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.show();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( '#text_store_not_interested', '#text_game_error_generic' );
+			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -105,7 +105,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.hide();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( '#text_store_not_interested', '#text_game_error_generic' );
+			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -117,7 +117,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
 		}).fail( function() {
-			ShowAlertDialog( '#text_store_follow', '#text_game_error_generic' );
+			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -130,7 +130,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.show();
 			$UnFollowBtn.hide();
 		}).fail( function() {
-			ShowAlertDialog( '#text_store_follow', '#text_game_error_generic' );
+			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 }
@@ -145,7 +145,7 @@ function InitAutocollapse()
 
 		var $Container = $Content.parent();
 
-		var $ReadMore = $J('<div/>', {'class': 'game_page_autocollapse_readmore' }).text( '#btn_read_more' );
+		var $ReadMore = $J('<div/>', {'class': 'game_page_autocollapse_readmore' }).text( 'READ MORE' );
 		var $Fade = $J('<div/>', {'class': 'game_page_autocollapse_fade' } ).append( $ReadMore );
 		$Container.append( $Fade );
 
@@ -453,9 +453,9 @@ function ShowReportDialog( nAppId )
 
 	var content = $J('<div/>', {'class': 'app_report_dialog' } );
 
-	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('#ReportApp_Reason') );
+	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('Please choose a reason why you are reporting this product.') );
 
-		var rgReportOptions = {"1":"#ReportApp_Reason_Scam","2":"#ReportApp_Reason_Malware","3":"#ReportApp_Reason_HateSpeech","4":"#ReportApp_Reason_Pornography","5":"#ReportApp_Reason_NonLabeledAdultContent","6":"#ReportApp_Reason_Libelous","7":"#ReportApp_Reason_Offensive","8":"#ReportApp_Reason_ExploitsChildren","11":"#ReportApp_Reason_ViolatesLaws","13":"#ReportApp_Reason_Broken"};
+		var rgReportOptions = {"1":"Fraud - <span class=\"sub\">This software fraudulently attempts to gather sensitive information, such as your Steam credentials or financial data (e.g. credit card information).<\/span>","2":"Harmful - <span class=\"sub\">This software modifies a customer's computer in unexpected or harmful ways (e.g. is malware or a virus)<\/span>","3":"Hate Speech - <span class=\"sub\">Contains hate speech, i.e. speech that promotes hatred, violence or discrimination against groups or people based on ethnicity, religion, gender, age, disability or sexual orientation<\/span>","4":"Pornography - <span class=\"sub\">Contains pornography<\/span>","5":"Adult Content - <span class=\"sub\">Contains adult content that isn't appropriately labeled and age-gated<\/span>","6":"Defamatory - <span class=\"sub\">Contains Libelous or defamatory statements<\/span>","7":"Offensive - <span class=\"sub\">Contains content that is patently offensive or intended to shock or disgust viewers<\/span>","8":"Child Exploitation - <span class=\"sub\">Contains content that exploits children in any way<\/span>","11":"Legal Violation - <span class=\"sub\">Contains content that violates the laws in your jurisdiction<\/span>","13":"Broken - <span class=\"sub\">Does not download, launch, or run correctly, even on a machine that meets the minimum system requirements.<\/span>"};
 	var rgReportOptionElements = [];
 	for ( var eReportType in rgReportOptions )
 	{
@@ -486,12 +486,12 @@ function ShowReportDialog( nAppId )
 			}
 		}
 	);
-	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('#ReportApp_Details') );
+	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('You may enter additional information that you feel is relevant here:') );
 	content.append( textArea );
 
-	content.append( $J('<div/>', {'class': 'app_report_dialog_dmca' } ).html('#ReportApp_DMCALink') );
+	content.append( $J('<div/>', {'class': 'app_report_dialog_dmca' } ).html('If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="http://steamcommunity.com/dmca/create/">here</a>.') );
 
-	var dialog = ShowConfirmDialog( '#ReportApp_ReportApp', content, '#ReportApp_Report');
+	var dialog = ShowConfirmDialog( 'Report this Product', content, 'Report');
 
 	dialog.done( function() {
 		var eReportTypeSelected = content.find( 'input[type=radio]:checked' ).val();
@@ -512,27 +512,27 @@ function ShowReportDialog( nAppId )
 					var json = jqXHR.responseText.evalJSON();
 					if ( json.success == 29 )
 					{
-						ShowAlertDialog( '#ReportApp_ReportError', '#ReportApp_AlreadyReported' );
+						ShowAlertDialog( 'Error', 'You have already reported this product!' );
 						gReportedApp = true;
 						$J( "#ReportAppBtn").addClass( 'btn_active' );
 					}
 					else
 					{
-						ShowAlertDialog( '#ReportApp_ReportError', '#ReportApp_GenericError' );
+						ShowAlertDialog( 'Error', 'There was a problem saving your report.  Please try again later.' );
 					}
 
 				} );
 		}
 		else
 		{
-			ShowAlertDialog( '#ReportApp_ReportError', '#ReportApp_MustSelectReportType' );
+			ShowAlertDialog( 'Error', 'You must select a reason you are reporting this product!' );
 		}
 	});
 }
 
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 {
-		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>#got_steam_header<\/h1>\r\n\t\t<p>#got_steam_warning3<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>#got_steam_yes_installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"http:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>#got_steam_no_download<\/h3>\r\n\t\t\t\t<h5>#got_steam_no_download_now<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\t#got_steam_blurb <a href=\"http:\/\/store.steampowered.com\/about\/\">#steam_learn_more<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
+		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"http:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"http:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"http:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
 	$ModalContent.find('.gotSteam_AppName').text( strAppName );
 	$ModalContent.find('.gotsteam_action').text( strPlayLaunchVerb );
 	$ModalContent.find( '.gotSteam_SteamURL').attr( 'href', strSteamURL );
