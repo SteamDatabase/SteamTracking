@@ -123145,24 +123145,114 @@
 				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		"9033"
+		{		
+			"name"				"Asiafortress Cup Division 1 1st Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_1st"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"9034"
+		{		
+			"name"				"Asiafortress Cup Division 1 2nd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_2nd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"9035"
+		{		
+			"name"				"Asiafortress Cup Division 1 3rd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_3rd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"9036"
+		{		
+			"name"				"Asiafortress Cup Division 1 Participant Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_Participant"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9037"
+		{		
+			"name"				"Asiafortress Cup Division 2 1st Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_1st"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"9038"
+		{		
+			"name"				"Asiafortress Cup Division 2 2nd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_2nd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"9039"
+		{		
+			"name"				"Asiafortress Cup Division 2 3rd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_3rd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"9040"
+		{		
+			"name"				"Asiafortress Cup Division 2 Participant Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_Participant"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9041"
+		{		
+			"name"				"Asiafortress Cup Division 3 1st Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_1st"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"9042"
+		{		
+			"name"				"Asiafortress Cup Division 3 2nd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_2nd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"9043"
+		{		
+			"name"				"Asiafortress Cup Division 3 3rd Place Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_3rd"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"9044"
+		{		
+			"name"				"Asiafortress Cup Division 3 Participant Season 8"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_Participant"
+			"item_description"	"#TF_TournamentMedal_Season8"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
 
 
 
