@@ -13835,6 +13835,74 @@
 				}
 			}
 		}
+		"917"
+		{
+			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_Champion_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"8"
+				}
+			}
+		}
+		"918"
+		{
+			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"8"
+				}
+			}
+		}
+		"919"
+		{
+			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_SemiFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_SemiFinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"8"
+				}
+			}
+		}
+		"920"
+		{
+			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_QuarterFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_QuarterFinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"8"
+				}
+			}
+		}
 		"1000"
 		{
 			"name"		"Community Season One Spring 2013"
@@ -15066,6 +15134,18 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/service_medal_2015.mdl"
+			}
+		}
+		"1332"
+		{
+			"name"		"prestige coin 2015 level 2"
+			"prefab"		"prestige_2015"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2015"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2015"
+			"image_inventory"		"econ/status_icons/service_medal_2015_2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/service_medal_2015_2.mdl"
 			}
 		}
 		"1333"

@@ -877,6 +877,35 @@ var CPanelUtils = {
 		}
 
 		return -1;
+	},
+	FindPanelWithFocus: function( pPanel )
+	{
+		if ( pPanel.BHasKeyFocus() )
+			return pPanel;
+
+		if ( !pPanel.BHasDescendantKeyFocus() )
+			return null;
+
+		var bContinue = true;
+		while ( bContinue )
+		{
+			bContinue = false;
+			for ( var i = 0; i < pPanel.GetChildCount(); i++ )
+			{
+				var pChild = pPanel.GetChild( i );
+				if ( pChild.BHasKeyFocus() )
+					return pChild;
+
+				if ( !pChild.BHasDescendantKeyFocus() )
+					continue;
+
+				bContinue = true;
+				pPanel = pChild;
+				break;
+			}
+		}
+
+		return null;
 	}
 };
 
@@ -946,6 +975,10 @@ CNXNavigation.prototype.Init = function()
 	hoverItemStyles[this.oNavigationContainer.id] = 'MenuHover';
 	hoverItemStyles[this.oTargetContainer.id] = 'ContentHover';
 	SetupPanelsHoverEvents( hoverItemStyles, $.GetContextPanel() );
+	
+	var pHasFocus = CPanelUtils.FindPanelWithFocus( this.oNavigationContainer );
+	if ( pHasFocus )
+		this.DoFocus( pHasFocus );
 }
 
 CNXNavigation.prototype.onMoveUp = function( oPanel )

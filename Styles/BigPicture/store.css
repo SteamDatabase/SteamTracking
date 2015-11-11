@@ -58,27 +58,6 @@
 	background-image: url( "file://{images}/store/icon_platform_streamingvideo.png" );
 }
 
-/*
- * Search page CSS
- */
-
-#page_featured.SearchResults {
-
-	height: 100%;
-	width: 1400px;
-
-	flow-children: right-wrap;
-
-	padding-top: 40px;
-
-	overflow: clip scroll;
-}
-#browse_videos .SearchResults
-{
-	padding-top: 80px;
-}
-
-
 ////////////////////////////////////
 // Basic Capsules
 ////////////////////////////////////
@@ -320,6 +299,24 @@
 	margin-top: 5px;
 }
 
+.BasicHeader .BasicCapsuleImage
+{
+	width: 460px;
+	height: 215px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	border-radius: 3px 3px 3px 3px;
+
+	box-shadow: module_shadow;
+}
+.BasicHeader:focus .BasicCapsuleImage,
+.BasicHeader:hover .BasicCapsuleImage
+{
+	box-shadow: none;
+	border-radius: 3px 3px 0px 0px;
+}
+
 .BasicHeaderStatus
 {
 	width: fill-parent-flow( 1.0 );
@@ -330,75 +327,6 @@
 .BasicHeader .DiscountBlock
 {
 	margin-top: 10px;
-}
-
-#ContentFilter {
-	position: 1375px 90px 0px;
-	height: fit-children;
-	max-height: 800px;
-}
-
-#ContentFilter:descendantfocus, #ContentFilter:hover {
-	position: 1240px 90px 0px;
-}
-
-.FilterSpacerBottom {
-	margin-bottom: 15px;
-}
-
-#ContentFilter .NxFilterWrapper {
-	max-height: 750px;
-}
-
-.SearchResults .BasicCapsule {
-	width: 460px;
-	height: 323px;
-	padding: 0 5px 5px 0;
-	margin: -5px -10px;
-	opacity: 0;
-
-}
-
-.SearchResults .BasicCapsule.Loaded {
-	opacity: 1;
-}
-
-.SearchResults .BasicCapsuleImage {
-	width: 460px;
-	height: 215px;
-}
-
-.SearchResults .BasicCapsuleInfo {
-	position: 0 268px 0;
-	margin-right: 0;
-}
-
-.NxFilterTab:descendantfocus ToggleButton, .NxFilterTab:hover ToggleButton,
-.NxFilterTab ToggleButton:selected,
-.NxFilterTab:descendantfocus RadioButton, .NxFilterTab:hover RadioButton,
-.NxFilterTab RadioButton:selected,
-.NxFilterTab:descendantfocus Button, .NxFilterTab:hover Button,
-.NxFilterTab:descendantfocus DropDown, .NxFilterTab:hover DropDown,
-.NxFilterTab .AlwaysVisible
-{
-	height: 48px;
-	margin: 2px 10px 2px 0;
-}
-
-.NxFilterTab:descendantfocus ToggleButton, .NxFilterTab:hover ToggleButton,
-.NxFilterTab:descendantfocus RadioButton, .NxFilterTab:hover RadioButton,
-{
-	margin: 2px 10px 2px 0;
-}
-
-.SalePageHeader {
-	horizontal-align: center;
-	margin-top: -50px;
-	margin-right: 50px;
-}
-
-.SalePageHeader {
-	width: 100%;
 }
 
 //
@@ -610,73 +538,18 @@
 	font-size: 24px;
 }
 
-.BrowseGamesBox.BrowseTags
-{
-	margin-left: 4px;
-	width: 1312px;
-	margin-bottom: 5px;
-	height: 80px;
-	vertical-align: center;
-	padding-left: 50px;
-	padding-right: 50px;
-	margin-top: 0px;
-}
-
-.PanelBrowseTags 
-{
-	width: 100%;
-}
-
-.PanelNoResultsFound
-{
-	width: 100%;
-}
-
-.PanelNoResultsFound Label
-{
-	font-size: 36px;
-	color: white;
-	color: #67c1f5ff;
-	margin-top: 200px;
-	horizontal-align: center;
-}
-
-.BrowseTagsPage LoadingThrobber,
-.BrowsePage LoadingThrobber
-{
-	/* background-color: horizontal_default; */
-	/* border-radius: 3px; */
-
-	padding: 20px 50px;
-	position: 585px 320px 0px;
-	z-index: 5;
-	opacity: 0.0;
-
-	transition-property: opacity;
-	transition-duration: supershortduration;
-	transition-delay: 0.5s;
-	transition-timing-function: ease-in-out;
-}
-
-.BrowseTagsPage LoadingThrobber.Visible,
-.BrowsePage LoadingThrobber.Visible
-{
-	opacity: 1.0;
-
-	transition-property: opacity;
-	transition-duration: supershortduration;
-	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
-}
-
 ////////////////////////////////////
 // In Library Icons
 ////////////////////////////////////
 .InLibraryWrapper Image
 {
 	opacity: 0.5;
+	desaturation: 0.6;
+	wash-color: #2f89bc80;
 
-	transition-property: opacity;
+	box-shadow: none;
+
+	transition-property: opacity, desaturation, wash-color;
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 }
@@ -685,19 +558,14 @@
 .UpdatedItem:descendantfocus .InLibraryWrapper Image,
 .PromoItemContainer:descendantfocus .InLibraryWrapper Image
 {
-	opacity: 0.8;
+	opacity: 1;
+	desaturation: 0;
+	wash-color: #2f89bc00;
 }
 .InLibraryPanel
 {
 	align: right bottom;
 	margin-bottom: 10px;
-}
-.BasicCapsule:descendantfocus .InLibraryPanel,
-.BasicHeader:descendantfocus .InLibraryPanel,
-.UpdatedItem:descendantfocus .InLibraryPanel,
-.PromoItemContainer:descendantfocus .InLibraryPanel
-{
-	box-shadow: module_shadow;
 }
 
 .InLibraryIcon

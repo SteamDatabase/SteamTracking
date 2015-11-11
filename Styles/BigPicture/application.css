@@ -244,10 +244,10 @@
 	padding: 0px 10px 10px 10px;
 	padding-top: 10px;
 	margin-top: -10px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	flow-children: down;
-	border-bottom: 1px solid #2f89bc33;
-	background-color: gradient( linear, 90% 90%, 90% 20%, from( #143f6559 ), to( #00000000 ) );
+	//border-bottom: 1px solid #2f89bc33;
+	//background-color: gradient( linear, 90% 90%, 90% 20%, from( #143f6559 ), to( #00000000 ) );
 	   //background-color: gradient( linear, 90% 90%, 90% 20%, from( #2d637f59 ), to( #143f6500 ) );
 }
 
@@ -262,6 +262,8 @@
 .AppSlideshowRow
 {
 	flow-children: right;
+	padding: 10px;
+	margin: -10px;
 }
 
 .AppSlideshowContainer
@@ -269,6 +271,8 @@
 	background-color: transparent_module;
 	//padding: 10px;
 	border-radius: 3px;
+
+	box-shadow: module_shadow;
 }
 
 .AppSlideshowContainer:descendantfocus
@@ -300,6 +304,8 @@
 	margin-bottom: 15px;
 	padding: 10px;
 	border-radius: 3px;
+
+	box-shadow: module_shadow;
 
 	color: #67c1f5ff;
 	background-color: nontransparent_module;
@@ -359,7 +365,7 @@
 {
 	width: 416px;
 	height: 100%;
-	margin-left: 15px;
+	margin-left: 12px;
 	flow-children: down;
 	color: #67c1f5ff;
 	font-size: 26px;
@@ -373,6 +379,8 @@
 	flow-children: right;
 	margin-bottom: 12px;
 	border-radius: 3px;
+
+	box-shadow: module_shadow;
 
 	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
 	background-position: 0px 0px;
@@ -403,7 +411,14 @@
 	font-size: 32px;
 	margin-top: 20px;
 	font-weight: light;
-	margin-left: 8px;
+	margin-left: 0px;
+
+	   padding-left: 76px;
+
+	   background-image: url( "https://steamstore-a.akamaihd.net/public/images/bigpicture/icon_in_library.png" );
+	   background-repeat: no-repeat;
+	   background-size: 64px 64px;
+	   background-position: 6px center;
 }
 
 .AppViewLibraryRow
@@ -486,8 +501,11 @@
 
 .VotesIcon
 {
+	height: 41px;
+	width: 41px;
 	vertical-align: center;
 	margin-right: 8px;
+
 }
 
 // tags
@@ -574,7 +592,7 @@
 {
 	width: 416px;
 	margin-bottom: 130px;
-	margin-left: 15px;
+	margin-left: 12px;
 	flow-children: down;
 }
 
@@ -591,7 +609,9 @@
 	padding: 10px 18px;
 	flow-children: down;
 	border-radius: 3px;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
+
+	box-shadow: module_shadow;
 
 	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
 	background-position: 0px 0px;
@@ -764,18 +784,40 @@
 	width: 180px;
 	height: 104px;
 	flow-children: down;
-	font-size: 26px;
-	color: #67c1f5ff;
 	padding-left: 20px;
-	background-color: #1184baee;
 	margin-left: 40px;
 	width: fill-parent-flow( 1.0 );
+
+	font-size: 26px;
+	color: #67c1f5ff;
+
+	background-color: #1184baee;
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 3px;
+	box-shadow: module_shadow;
+
+	transition-property: transform;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	transform: translateX( 30px );
 }
 
 .AppNextInQueue:focus,
 .AppNextInQueue:hover
 {
+	color: #ffffffff;
+
 	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+	transform: translateX( 0px );
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .AppNextInQueue.InDiscoveryQueue
@@ -812,8 +854,8 @@
 	margin-left: 14px;
 	wash-color: #2f88bc;
 }
-.AppDetailsBox.AppNextInQueue:focus Image,
-.AppDetailsBox.AppNextInQueue:hover Image
+.AppNextInQueue:focus Image,
+.AppNextInQueue:hover Image
 {
 	wash-color: #ffffff;
 }

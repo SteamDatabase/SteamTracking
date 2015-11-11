@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.c747a6ac9f34ba4e8f0db50ebe46e884cb055868.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.98f9e0fc7f6c03db3bd9251609aa1aa588e2ea72.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2533,6 +2533,106 @@
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/cluj_2015_fantasy_gold.302969eed939bc0bc6639e104a11835b29c62d6d.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/cluj_2015_fantasy_gold_large.d06f6d8fab94f84d3a3288d3472664a6a3ad48fa.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 8
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Cluj-Napoca 2015 CS:GO Champion",
+				"defindex": 917,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at DreamHack Cluj-Napoca 2015",
+				"item_description": "This championship trophy was awarded to the Champion at the DreamHack Cluj-Napoca 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.c9a3fae5bb67ed2328a4c4932d96924e4e51cd8d.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 8
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Cluj-Napoca 2015 CS:GO Finalist",
+				"defindex": 918,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at DreamHack Cluj-Napoca 2015",
+				"item_description": "This championship trophy was awarded to the Finalist at the DreamHack Cluj-Napoca 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 8
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Cluj-Napoca 2015 CS:GO Semifinalist",
+				"defindex": 919,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at DreamHack Cluj-Napoca 2015",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the DreamHack Cluj-Napoca 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 8
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Cluj-Napoca 2015 CS:GO Quarterfinalist",
+				"defindex": 920,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at DreamHack Cluj-Napoca 2015",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the DreamHack Cluj-Napoca 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -5672,6 +5772,27 @@
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015.3ca7bf6f40edbae511a8ea595a0054736b397140.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015_large.3b8d6cddfd113b0b20bafa2bbee76a976c198e55.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2015 level 2",
+				"defindex": 1332,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2015 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2015.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2015_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [

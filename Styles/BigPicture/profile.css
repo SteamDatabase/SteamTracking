@@ -59,10 +59,7 @@
 	width: 2120px;
 	height: 948px;
 
-	margin-left: -100px;
-	padding-left: 100px;
-	margin-right: -100px;
-	padding-right: 100px;
+
 
 	perspective-origin: 62% 5% invert;
 
@@ -162,14 +159,9 @@ ProfilePanel #UpperRow
 
 .ProfileBackground .BGScreenshotVisible
 {
-	opacity: 0.0;
-	desaturation: 0.8;
-
-	animation-name: bg-screenshot-ambient;
-	animation-duration: 14s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+	opacity: 0.5;
+	desaturation: 0;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1;
 }
 
 .ProfileBackground .BGScreenshotInvisible
@@ -217,7 +209,7 @@ ProfilePanel #UpperRow
 
 .ProfileBackground .BGOverlayVisible
 {
-	opacity: 1.0;
+	opacity: 0;
 	desaturation: 0.0;
 
 	width: 100%;
@@ -3521,9 +3513,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	overflow: clip;
 
 
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
 
 	transition-delay: 0s;
 	transition-duration: 0.3s;
@@ -3542,23 +3532,30 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	opacity: 0.0;
 }
 
-#ShowcaseGrid .ProfileContentCard, #RightColumn .ProfileContentCard
+#ShowcaseGrid .ProfileContentCard,
+#RightColumn .ProfileContentCard
 {
 	background-color: nontransparent_module;
 	width: 448px;
 	height: 276px;
 	pre-transform-scale2d: 0.97;
 	padding: 15px;
+	margin-bottom: 5px;
 
 	border-radius: 3px;
 
 	flow-children: down;
 
+	box-shadow: module_shadow;
 
 	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
+}
+#ShowcaseGrid #TopRow .ProfileContentCard
+{
+	margin-bottom: 0px;
 }
 
 #ShowcaseGrid .ProfileContentCard:focus,
@@ -3604,6 +3601,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	flow-children: down;
 }
+#RecentGames .GameThumbs
+{
+	flow-children: right-wrap;
+}
 
 .GameThumbs
 {
@@ -3615,9 +3616,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .GameThumbs Image
 {
-	width: 50%;
-	height: 50%;
-	padding: 4px;
+	width: 201px;
+	height: 78px;
+	margin: 4px;
+	border-radius: 3px;
 }
 
 #Friends Grid
@@ -4119,6 +4121,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	margin-top: 0px;
 	padding-top: 57px;
 	height: 780px;
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 #ProfileContent #content_showcases .ContentGrid
 {
@@ -4577,7 +4583,7 @@ Panel.AvatarOptionGame {
 #friends_following .ContentGrid
 {
 	height: 1100px;
-	padding: 70px 40px 40px 0px;
+	padding: 70px 40px 40px 20px;
 	margin: 0px;
 	flow-children: down;
 	width: 100%;
@@ -4730,12 +4736,17 @@ LibraryGameBadge .badge_info_description Label
 	margin-bottom: 20px;
 	padding-right: 22px;
 }
+#TopRow .ProfileMainAction
+{
+	height: 100%;
+}
 
 .ProfileTopRowStack
 {
 	height: 100%;
 	width: 300px;
 	flow-children: down;
+	margin: 1px 0px;
 }
 
 .ProfileTopRowStack Label
@@ -4746,7 +4757,7 @@ LibraryGameBadge .badge_info_description Label
 
 #TopRow .ProfileTopRowShort
 {
-	height: 48%;
+	height: 50%;
 	width: 100%;
 }
 

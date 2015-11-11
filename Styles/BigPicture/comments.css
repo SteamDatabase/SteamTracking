@@ -141,7 +141,7 @@
 
 .commentthread_comment:focus .commentthread_author_link Label.ingame
 {
-	color: friendsingame_lightbg;
+	color: friendsingame_darkbg;
 }
 
 .commentthread_comment_text
@@ -164,14 +164,13 @@ Button:focus .commentthread_comment_text
 
 .commentthread_comment
 {
-	border-width: 5px;
-	border-color: #00000000;
-	border-style: solid;
 	width: 100%;
+	max-height: 400px;
 
 	padding: 10px;
 	padding-left: 0px;
 	padding-bottom: 0px;
+	border-radius: 3px;
 
 	transition-property: opacity,border,background-color,transform;
 	transition-duration: shortduration;
@@ -180,13 +179,15 @@ Button:focus .commentthread_comment_text
 
 .commentthread_comment:focus
 {
-	border-color: #fdfefef0;
 	color: #161718f5;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-	animation-name: links-and-more-button-focus;
-	animation-duration: longduration;
-	animation-delay: mediumduration;
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;

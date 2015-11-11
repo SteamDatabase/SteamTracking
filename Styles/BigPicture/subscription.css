@@ -110,7 +110,7 @@
 	height: 100%;
 	flow-children: down;
 	overflow: clip scroll;
-	padding: 60px 20px 140px 18px;
+	padding: 60px 32px 140px 32px;
 }
 
 .PackageGroups_ctn
@@ -120,6 +120,7 @@
 	flow-children: down;
 	overflow: clip scroll;
 	padding-bottom: 140px;
+	margin-bottom: 4px;
 }
 
 .PackageInfoHeader
@@ -137,7 +138,6 @@
 	margin-bottom: 8px;
 	white-space: normal;
 	font-weight: light;
-	margin-left: 12px;
 }
 
 .AddToCartRow
@@ -145,7 +145,7 @@
 	width: 100%;
 	flow-children: right;
 	height: 110px;
-	padding: 12px;
+	padding: 12px 0px;
 }
 
 .AddToCart,
@@ -246,13 +246,14 @@
 .PackageGroups_ctn .AddToCartRow
 {
 	height: 80px;
+	padding-left: 12px;
 }
 
 .PackageIncludesHeader
 {
-	margin-top: 30px;
 	font-size: 22px;
-    color: #2f89bd;
+	color: #2f89bd;
+	margin: 30px 0px 10px 0px;
 }
 
 .AppInPackage
@@ -264,7 +265,7 @@
 	border-radius: 3px;
 	font-size: 26px;
 	width: 100%;
-	margin-top: 4px;
+	margin-bottom: 10px;
 
 	box-shadow: fill #00000066 -2px -2px 4px 4px;
 }
@@ -330,7 +331,12 @@
 {
 	color: greyish_medium;
 	font-size: 26px;
-	margin-left: 12px;
+}
+
+.PackagePurchaseWarning
+{
+	color: app_warning_color;
+	font-size: 26px;
 }
 
 .PackageSavings
@@ -368,7 +374,7 @@
 {
 	font-size: 24px;
 	color: almost_white;
-
+	margin-bottom: 6px;
 }
 
 .PackageGroupOption
