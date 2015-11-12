@@ -10,7 +10,7 @@
       <!-- first column -->
       <Panel class="SettingsContent SettingsContentColumnv2" tabindex="auto" selectionpos="auto">
         <!-- Personal -->
-        <Label class="LongDesc SettingCategory" text="#Settings_Personal"/>
+        <Label id="PersonalSettingsHeaderLabel" class="LongDesc SettingCategory" text="#Settings_Personal"/>
         
         <Button id="AccountSettingsButton" class="Button" onactivate="ShowSettings( Account );">
 					<Label class="LongDesc" text="#Settings_Account" />
@@ -65,17 +65,14 @@
 				</Button>
         
         <!-- Features -->
-        <Label class="LongDesc SettingCategory" text="#Settings_Features"/>
-        
-      	<Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
-		<Label class="LongDesc" text="#Settings_InGame" />
-	</Button>
+        <Label id="FeaturesSettingsHeaderLabel" class="LongDesc SettingCategory" text="#Settings_Features"/>
 
-        <!--
-        <Button id="WebButton" class="Button" onactivate="ShowSettings( Web );">
+       	<Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
+		      <Label class="LongDesc" text="#Settings_InGame" />
+	      </Button>
+        <Button id="WebBrowserSettingsButton" class="Button" onactivate="ShowSettings( Web );">
     			<Label class="LongDesc" text="#Settings_Web" />
 		    </Button>
-        -->
        	<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
 					<Label class="LongDesc" text="#Settings_Broadcast" />
 				</Button>

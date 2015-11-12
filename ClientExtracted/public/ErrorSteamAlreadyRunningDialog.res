@@ -52,7 +52,7 @@
 		"labelText"		"#Steam_AlreadyRunningError_SupportLink"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=547"
+		"URLText"		"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 	}
 	"Button1"
 	{

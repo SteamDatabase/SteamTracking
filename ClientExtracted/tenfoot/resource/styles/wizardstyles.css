@@ -24,9 +24,7 @@
 
 .WizardPanel:descendantfocus
 {
-	// Temp work around for a bug that causes full screen banding on Windows
-	// opacity: 1.0;
-	opacity: 0.99;
+	opacity: 1.0;
 }
 
 .WizardPanel.Destructing

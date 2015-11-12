@@ -143,13 +143,13 @@
 @define mouse_hover_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
 @define mouse_active_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
 
-@define mouse_off_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #1f445400 ), to( #0d1b2400 ) );
-@define mouse_hover_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
+@define mouse_off_bg_up: gradient( radial, 50% 0%, 0% 0%, 120px 80px, from( #3a809e00 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_up: gradient( radial, 50% 0%, 0% 0%, 120px 80px, from( #3a809eff ), to( #0d1b2400 ) );
+@define mouse_active_bg_up: gradient( radial, 50% -5%, 0% 0%, 140px 80px, from( #3abde5ff ), to( #0d1b2400 ) );
 
-@define mouse_off_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f445400 ), to( #0d1b2400 ) );
-@define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 180px 210px, from( #1f4454ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 180px 210px, from( #4a809eff ), to( #0d1b2400 ) );
+@define mouse_off_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 120px 80px, from( #3a809e00 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 120px 80px, from( #3a809eff ), to( #0d1b2400 ) );
+@define mouse_active_bg_bottom: gradient( radial, 50% 95%, 0% 0%, 140px 80px, from( #3abde5ff ), to( #0d1b2400 ) );
 
 @define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
@@ -476,26 +476,16 @@ RadioButton:hover
    pre-transform-scale2d: 1.0;
 }
 
-
-.Button,
-.WizardButton,
 ToggleButton,
-.CheckBox,
 RadioButton
 {
 	height: 48px;
-
-	border-color: #3d414200;
-
-	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
-	transition-timing-function: ease-out;
 }
 
 .Button,
 .WizardButton,
 .CheckBox {
+	height: 48px;
 	padding: 10px 20px 0px 10px;
 	margin: 0px 0px 4px 0px;
 
@@ -504,7 +494,7 @@ RadioButton
 	font-family: platformfont;
 	background-color: simplebuttonsolid_vertical;
 
-	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-property: background-color, color;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 }
@@ -528,19 +518,8 @@ RadioButton
 .WizardButton:focus,
 .CheckBox:focus {
 	transition-duration: 0.25s !immediate;
-
-	horizontal-align: left;
-
 	color: black;
-
 	background-color: button_focus_color;
-
-	transform: translatex(7px);
-
-	/* Remove border, so we dont transition border out on focus lost, that looks weird. */
-	transition-property: blur, background-color, color, transform;
-
-	transform: translatez( 0px );
 
 	animation-name: button-focus;
 	animation-duration: 1.7s;
@@ -552,7 +531,7 @@ RadioButton
 
 Label
 {
-font-family: platformfont;
+    font-family: platformfont;
 }
 
 .Button Label,
@@ -570,6 +549,7 @@ DropDown Label {
 	transition-duration: 0.25s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
+
 .Button:focus Label,
 .WizardButton:focus Label,
 .CheckBox:focus Label,
@@ -2392,7 +2372,7 @@ Button:hover #SuggestedStatus
 	transform: translateX( -35px ) translateY( -8px );
 
 	opacity: 0.5;
-	transition-delay: 0.08s;
+	transition-delay: 0.0s;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
@@ -2484,7 +2464,7 @@ Button:hover #SuggestedStatus
 	flow-children: down;
 
 	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
@@ -2704,4 +2684,16 @@ Button:hover #SuggestedStatus
 .FlowDown
 {
 	flow-children: down;
+}
+
+.OnlyMouseKB,
+.OnlyController
+{
+	visibility: collapse;
+}
+
+.MouseKBPresent .OnlyMouseKB,
+.ControllerPresent .OnlyController
+{
+	visibility: visible;
 }

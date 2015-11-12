@@ -170,12 +170,6 @@ ProfileWrapper #CommunityFriendsStripWrapper
 	transition-delay: 0s;
 }
 
-.StackDepth2 .ProfileVisible #CommunityFriendsStripWrapper,
-.StackDepth3 .ProfileVisible #CommunityFriendsStripWrapper
-{
-	transform: rotateZ( 0deg );
-}
-
 .CommunityVisible:descendantfocus .CommunityFriendsStripWrapperBackgroundBaseVisible
 {
 	transform-origin: 0% 0% parent-relative;

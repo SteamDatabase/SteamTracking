@@ -190,7 +190,7 @@
 
 #ContentsRow
 {
-	width: 100%;
+	width: 51.5%;
 	height: 100%;
 
 	flow-children: right-wrap;
@@ -371,4 +371,9 @@ Button:focus:hover .ButtonText
 {
 	width: 100%;
 	height: 100%;
+}
+
+#OverlayBasePanel .LibraryDetailsScrollableArea.Overlay
+{
+	max-width: 1300px;
 }

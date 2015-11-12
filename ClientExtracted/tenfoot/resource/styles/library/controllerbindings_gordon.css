@@ -1208,6 +1208,14 @@ Slider:Selected
 	margin-bottom: 5px;
 }
 
+.FieldLabelDark
+{
+	font-size: 28px;
+	font-family: platformfont;
+	color: #007c92;
+	margin-bottom: 5px;
+}
+
 .FieldWrapper.TabHeader
 {
 	margin-top: 10px;
@@ -1302,7 +1310,7 @@ Slider:Selected
 
 #ModeDropDownDropDownMenu
 {
-	max-height: 300px;
+	max-height: 350px;
 }
 
 .FieldWrapper Button:hover, .FieldWrapper ControllerBindingButton:hover, .FieldWrapper DropDown:hover
@@ -1412,6 +1420,7 @@ Slider:Selected
 DropDownMenu.DropDownMenuVisible
 {
 	width: fieldwidth;
+    max-height: 250px;
 }
 
 .FlowDown
@@ -1507,6 +1516,24 @@ DropDownMenu.DropDownMenuVisible
 	font-family: platformfont;
 	vertical-align: center;
 	margin-right: 12px;
+}
+
+#SelectBindingIconHeader
+{
+	padding-top: 5px;
+	color: white;
+	font-size: 24px;
+	font-family: platformfont;
+	vertical-align: center;
+    horizontal-align: right;
+	margin-right: 12px;
+    padding-left: 110px;
+    visibility: collapse;
+}
+
+.ShowIcon #SelectBindingIconHeader
+{
+    visibility: visible;
 }
 
 #BindingDescriptionTextEntry
@@ -1646,6 +1673,19 @@ ChooseBinding .GameActionSelectButton.OriginalBinding
 ChooseBinding .GameActionSelectButton.OriginalBinding Label
 {
 	color: white;
+}
+
+ChooseBinding .IconPreview
+{
+    margin-left: 12px;
+    height: 64px;
+    width: 64px;
+    visibility: collapse;
+}
+
+.ShowIcon #IconPreview 
+{
+    visibility: visible;
 }
 
 .BehindTextInputHandler #ChooseBinding

@@ -11,7 +11,7 @@ FriendsContent_Groups
 Label
 {
 	padding-top: 32px;
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	color: white;
 	font-size: 32px;
 }
@@ -20,6 +20,7 @@ Label
 {
 	padding-bottom: -32px;
 	flow-children: right-wrap;
+	margin-left: 6px;
 }
 
 .GroupButton
@@ -54,6 +55,7 @@ Label
 .HasGroups .GroupsHeader
 {
 	visibility: visible;
+	margin-left: 6px;
 }
 
 .RecentChatsHeader

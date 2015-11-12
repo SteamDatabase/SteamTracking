@@ -1,0 +1,126 @@
+ControllerRegistration
+{	
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.Step_RegisterQuestion,
+.Step_Personalizing,
+.Step_Migrating
+{
+	visibility: collapse;
+}
+
+.Questioning .Step_RegisterQuestion,
+.Personalizing .Step_Personalizing,
+.Migrating .Step_Migrating
+{
+	visibility: visible;
+}
+
+#MsgBoxHeader
+{
+	flow-children: down;
+	height: fit-children;
+}
+
+.StepHeader,
+.StepArea
+{
+	flow-children: down;
+}
+
+.StepButtons
+{
+	flow-children: right;
+}
+
+#SetNameContainer
+{
+	margin-top: 20px;
+	flow-children: right;
+}
+
+#SetNameContainer Label
+{
+	vertical-align: center;
+}
+
+#RegistrationDescription
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+#GuideBrightnessSlider
+{
+	horizontal-align: right;
+	width: 100%;
+	height: 20px;
+	margin-right: 10px;
+	margin-left: 30px;
+	vertical-align: middle;
+}
+
+#GuideBrightnessSlider:focus
+{
+	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+	box-shadow: box_shadow_on_color -2.5px -2.5px 8px 5px;
+	border: 2px solid #fdfefef0;
+	border-radius: 2px;
+}
+
+#GuideBrightnessContainer
+{
+	flow-children: right;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#RegistrationSubDescription
+{
+	font-size: 24px;
+	margin-bottom: 50px;
+}
+
+#ControllerNameEntry
+{
+	margin-left: 10px;	
+	width: 510px;
+	white-space: nowrap;
+	height: 60px;
+}
+
+#MsgBoxButtons
+{
+	margin-top: 0px;
+	width: 100%;
+}
+
+#ButtonCancel
+{
+	visibility: visible;
+	horizontal-align: right;
+	margin-left: 10px;
+}
+
+#ProgressBarContainer
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#ProgressBar
+{
+	width: 750px;
+	height: 12px;
+	horizontal-align: center;
+	background-color: bgwithgradientlogin;
+}
+
+.ProgressBarLeft
+{
+	background-color: gradient( linear, 0% 100%, 100% 0%, from( #00FFFF ), to( #CCFFFF ) );
+}

@@ -1,4 +1,4 @@
-﻿"tenfoot"
+"tenfoot"
 {
 	"UI_Submit"	"Submit"
 	"UI_Select"	"Select"
@@ -202,8 +202,7 @@
 	"MainMenu_ActivePausesLong" "{d:paused} PAUSED"
 	"MainMenu_CompleteDownloadsLong" "{d:downloads} COMPLETE"
 	"MainMenu_CompleteDownloadsLongPlural" "{d:downloads} COMPLETE"
-	"MainMenu_SystemIMsShort"	"{d:systemims}"
-	"MainMenu_SystemIMsLong" "{d:systemims} NEW"
+	"MainMenu_SystemIMsShort_Number"	"{d:systemims}"
 	"MainMenu_InboxShort"	"{d:inboxcount}"
 	"MainMenu_InboxLong" "{d:inboxcount}"
 	"MainMenu_PendingChatsShort"	"{d:pendingchats}"
@@ -540,7 +539,7 @@
 	"ChangeEmail_ConfCode_Description"		"To complete this request, please enter the confirmation code sent to {s:emailaddress} from Steam Support."
 	"ChangeEmail_ConfCode_EnterConfCode"	"Confirmation code"
 	"ChangeEmail_ConfCode_EnterTwoFactorCode"	"Current code from your Steam Guard authenticator"
-	"ChangeEmail_ConfCode_EnterSMSCode"		"For extra security, we have sent an SMS text message to phone associated with your account. Please enter the code here:"
+	"ChangeEmail_ConfCode_EnterSMSCode"		"For extra security, we have sent an SMS text message to the phone number associated with your account. Please enter the code here:"
 	"ChangeEmail_InvalidPassword"			"That password is incorrect. Please try again."
 	"ChangeEmail_InvalidConfirmationCode"	"Please check that you have entered the confirmation code correctly."
 	"ChangeEmail_ServiceUnavailable" 	"Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later."
@@ -711,6 +710,7 @@
 	"VAC_NoBans"	"In good standing"
 	"VAC_BannedFromServers"	"Banned from some secure servers because of a cheating infraction."
 	"SettingsAccount_StartBPM"			 	"Start Steam in Big Picture mode"
+	"SettingsAccount_StartWindowed"			"Start Big Picture mode Windowed"
 
 	// Settings, friends screen
 	"SettingsFriends_Avatar"				"Avatar and profile name"
@@ -876,13 +876,28 @@
 	"SettingsKeyboard_UseDaisyWheel" "Use the Daisy Wheel On-Screen Keyboard"
 	"SettingsKeyboard_UILanguage"	"Use a custom input language"
 
-//Controller Pairing
+	// Web
+	"SettingsWeb_AustralianScrolling"		"Reverse left pad scroll direction"
+	"SettingsWeb_CookiesSection"			"Cookies:"
+	"SettingsWeb_SteamControllerSection"	"Steam Controller controls:"
+
+	// Controller Calibration
+	"ControllerCalibration_Title"			"Steam Controller Calibration"
+	"ControllerCalibration_Instructions"	"Warning: Calibration is only recommended if you are experiencing poor trackpad and/or accelerometer performance.\n\nStart the calibration and place the controller on a stable and level surface within 5 seconds."
+	"ControllerCalibration_Start"			"START"
+	"ControllerCalibration_Counting"		"Calibrating in {d:countdown} seconds"
+	"ControllerCalibration_Trackpads"		"Calibrating trackpads..."
+	"ControllerCalibration_IMU"				"Calibrating IMU..."
+	"ControllerCalibration_Complete"		"Calibration completed"
+
+	// Controller Pairing
 	"ControllerPairing_Header"			"Enter Validation Code"
 	"ControllerPairing_Failure"			"Validation Failed"
 	"ControllerPairing_Failure_Info"			"You did not enter the correct validation code."
 	"ControllerPairing_Success"			"Validation Succeeded"
 	"ControllerPairing_Success_Info" "Your Steam Controller is ready."
 	"BackgroundWelcome_Input"				"Press any button to start"
+
 	// Settings, audio screen
 	"SettingsAudio_MuteAll"					"Mute all"
 	"SettingsAudio_Ambient"					"Ambient sounds"
@@ -962,6 +977,7 @@
 	"SettingsController_ResetButtons"						"RESET"
 	"SettingsController_TurnOffOnQuit"					"Turn off on Big Picture Exit"
 	"SettingsController_Support"						"SUPPORT"
+	"SettingsController_Calibrate"						"CALIBRATE"
 
 	"Settings_SteamControllerSupport"					"Steam controller support"
 	"Settings_SteamControllerSupport_ExitNotification"	"Press and hold the 'B' button to exit"
@@ -1496,6 +1512,20 @@
 	"Controller_WirelessIssue3"	"Hit the Steam Button for help."
 	"Controller_WirelessIssue_Footer" "DISMISS"
 
+	"Controller_Registration_Title"		"CONTROLLER REGISTRATION"
+	"Controller_Registration_Desc"		"Register your controller to your Steam account, and we'll ensure your configurations follow the controller, wherever you take it."
+	"Controller_Registration_Name"		"Controller Name:"
+	"Controller_Registration_Submit"	"Register to this account"
+	"Controller_Registration_Cancel"	"Wait, this isn't my account"
+	"Controller_Registration_SubDesc"	"You can update these at any time in the Big Picture Settings."
+	"Controller_Registration_GuideBrightness"	"Steam Button Brightness:"
+	"Controller_Registration_AbortTitle"	"Registration Aborted"
+	"Controller_Registration_AbortDesc"		"For now, we'll just use configurations from {s:accountname}. Next time you log into your own account, we'll get your controller setup."
+	"Controller_Registration_ProgressTitle"	"Registering..."
+	"Controller_Registration_Personalize_Title" "PERSONALIZE YOUR CONTROLLER"
+	"Controller_Registration_Personalize_Submit" "Submit"
+	"Controller_Registration_Migrating_Title" "MIGRATING CONFIGURATIONS..."
+
 	"Library_Details_ValidateLocalContent"	"Validate Content"
 	"Library_Details_KillApp"		"Exit {s:apptype}"
 	"Library_Details_NewsDate"		"{t:l:date}"
@@ -1566,6 +1596,7 @@
 	"Library_Details_ControllerGenericBinding"	"Generic"
 	"Library_Details_ControllerDoneEditing"		"SAVE"
 	"Library_Details_SelectYourBindingFor"		"SELECT BINDING FOR"
+	"Library_Details_SelectIcon"				"SELECT ICON"
 	"Library_Details_SaveBindingDescription"	"DONE"
 	"Library_Details_MoreWaysToPlay"			"MORE WAYS TO PLAY"
 	"Library_Details_ViewDownloads"				"VIEW DOWNLOADS"
@@ -1680,6 +1711,9 @@
 	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOff"	"IN-GAME ACTIONS"
 	"Library_Details_ControllerBindingsGordon_AddActionSet"	"ADD ACTION SET"
 
+	"IconPicker_Activate"						"SELECT"
+	"Library_IconColorPickerDone"				"DONE"
+
 	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
 	"Library_GameAction_None"						"None"
@@ -1787,7 +1821,7 @@
 	"Library_Details_FieldLabel_ModeShiftButton"	"Mode Shift Button"
 	"Library_Details_FieldLabel_RequiresClick"		"Requires Click"
 	"Library_Details_FieldLabel_Deadzone"			"Deadzone"
-	"Library_Details_FieldLabel_Chording"			"Overlap Directions"
+	"Library_Details_FieldLabel_DPadLayout"			"Layout"
 	"Library_Details_FieldLabel_EdgeBinding"		"Outer Ring Binding"
 	"Library_Details_FieldLabel_EdgeRadius"			"Outer Ring Binding Radius"
 	"Library_Details_FieldLabel_HapticIntensity"	"Haptics Intensity"
@@ -1812,6 +1846,7 @@
 	"Library_Details_FieldLabel_DpadClick"			"Click Action"
 	"Library_Details_FieldLabel_AbsMouseClick"		"Click Action"
 	"Library_Details_FieldLabel_Sensitivity"		"Sensitivity"
+	"Library_Details_FieldLabel_Sensitivity_Mouse_Joystick_Warning" "Adjust sensitivity in-game."
 	"Library_Details_FieldLabel_MouseSensitivity"	"Mouse Sensitivity"
 	"Library_Details_FieldLabel_Rotation"			"Rotation"
 	"Library_Details_FieldLabel_SensitivityVertScale"		"Sensitivity Vertical Scale"
@@ -1880,6 +1915,7 @@
 	"Library_Details_FieldLabel_TouchMenuButton13"	"Touch Menu Button 14"
 	"Library_Details_FieldLabel_TouchMenuButton14"	"Touch Menu Button 15"
 	"Library_Details_FieldLabel_TouchMenuButton15"	"Touch Menu Button 16"
+	"Library_Details_FieldLabel_ShowLabels"			"Display Binding Label on Button"
 	"Library_Details_FieldLabel_DeadzoneX"			"Minimum Joystick X Output Value"
 	"Library_Details_FieldLabel_DeadzoneY"			"Minimum Joystick Y Output Value"
 
@@ -1910,6 +1946,9 @@
 	"Library_Controller_Property_Value_On"				"On"
 	"Library_Controller_Property_Value_Off"				"Off"
 	"Library_Controller_Property_Value_AnalogEmulation"	"Analog Emulation"
+	"Library_Controller_Property_Value_CrossGate"		"Cross Gate"
+	"Library_Controller_Property_Value_RadialWithOverlap"				"Radial With Overlap"
+	"Library_Controller_Property_Value_RadialNoOverlap"				"Radial Without Overlap"
 	"Library_Controller_Property_Value_Low"				"Low"
 	"Library_Controller_Property_Value_Medium"			"Medium"
 	"Library_Controller_Property_Value_High"			"High"
@@ -1977,6 +2016,9 @@
 	"Library_Details_Default_Config_Title"				"Default"
 	"Library_Details_Default_Config_Author"				"Valve Corporation"
 	"Library_Details_Default_Config_Description"		"For best results, edit this generic configuration or start from a template to create unique bindings tailored to this game."
+
+	"Library_IconColorPickerForegoundDescription"		"Foreground Color"
+	"Library_IconColorPickerBackgroundDescription"		"Background Color"
 
 	"Library_AllGames_Header"		"GAMES"
 	"Library_AllGames"			"Games"
@@ -2838,11 +2880,12 @@
 	"Settings_ManageDevices_Authorize" "AUTHORIZE"
 	"Settings_ManageDevices_Remove" "DEAUTHORIZE"
 	
-	"Settings_ManageDeviceAuth_Text" 	"You have authorized the following computers to share your library through Family Library Sharing. You may have up to 10 authorized devices at a given time, including this computer.*"
+	"Settings_ManageDeviceAuth_Text" 	"You have authorized the following computers to share your library through Family Library Sharing. You may have up to 10 authorized devices at a given time, including this computer."
 	"Settings_ManageDevices_Title" "Family Library Sharing"
 	"Settings_ManageDevices_Authorization_Failed" "Device authorization failed ({s:reason})"
 	"Settings_ManageDevices_Deauthorization_Failed" "Device deauthorization failed ({s:reason})"
 	"Settings_ManageDevices_Get_Devices_Failed" "Failed to get authorized devices ({s:reason})"
+	"Settings_ManageDevices"		"Manage Devices"
 
 	"SettingsAccount_ManageDeviceAuth" "Manage Family Library Sharing"
 	
@@ -3344,6 +3387,7 @@
 	"Steam_InstallAudioCaptureDriver_Text"	"Steam needs to update its audio driver, which may require a system reboot."
 	"Steam_InstallGamepadInputDriver_Title"	"Gamepad Driver Update"
 	"Steam_InstallGamepadInputDriver_Text"	"Steam needs to update its gamepad driver, which may require a system reboot."
+	"Steam_InstallGamepadInputDriver_RestartText"	"You will need to restart Steam after installing gamepad driver."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Please enter the authorization code to allow {s:devicename} to connect and play games."
@@ -4200,12 +4244,16 @@
 	"ControllerBinding_RequiresClick_On_Description" "The trackpad will only send actions when clicked."
 	"ControllerBinding_RequiresClick_Off" "Requires Click - Off"
 	"ControllerBinding_RequiresClick_Off_Description" "The trackpad will send actions on touch."
-	"ControllerBinding_Chording" "Overlap Directions"
-	"ControllerBinding_Chording_Description" "Directions can be limited to a single direction or press both directions when in a diagonal.  When the D-Pad is used for discrete actions such as inventory or commands, Off may be more ideal, whereas movement in a game generally requires overlap."
-	"ControllerBinding_Chording_Off" "Overlap Directions - Off"
-	"ControllerBinding_Chording_Off_Description" "The D-Pad will only send one direction at a time, a strict cross.  Pressing diagonal will press the closest side.  This is most useful when the D-Pad is being used for quick selection of inventory, discreet commands, or simple UI navigation, where pressing multiple directions at the same time is undesirable."
-	"ControllerBinding_Chording_On" "Overlap Directions - On"
-	"ControllerBinding_Chording_On_Description" "The D-Pad will send both bindings when pressing a diagonal.  This is most common for character movement or general directional output."
+	"ControllerBinding_DPadLayout" "Directonal Pad Layout"
+	"ControllerBinding_DPadLayout_Description" "This option selects the type of DPad emulation."
+	"ControllerBinding_DPadLayout_RadialNoOverlap" "Radial Without Overlap"
+	"ControllerBinding_DPadLayout_RadialNoOverlap_Description" "A pie shaped layout with diagonals that activate both bound actions."
+	"ControllerBinding_DPadLayout_RadialWithOverlap" "Radial With Overlap"
+	"ControllerBinding_DPadLayout_RadialWithOverlap_Description" "A pie shaped layout with diagonals that do not activate any actions."
+	"ControllerBinding_DPadLayout_AnalogEmulation" "Analog Emulation"
+	"ControllerBinding_DPadLayout_AnalogEmulation_Description" "The directonal bindings are pulsed to simulate an analog stick."
+	"ControllerBinding_DPadLayout_CrossGate" "Cross Gate"
+	"ControllerBinding_DPadLayout_CrossGate_Description" "A cross-shaped pad layout that prioritizes horizontal and vertical movement over the diagonals."
 	"ControllerBinding_DpadClick" "Click Action"
 	"ControllerBinding_DpadClick_Description" "This action will be performed when you click the pad/stick. If the 'Requires Click' option is also set, clicking a pad direction will send the corresponding direction action as well as this action to the game."
 	"ControllerBinding_HapticIntensityDpad" "Haptic Intensity"
@@ -4923,7 +4971,7 @@
 	"UI_Paste_URL"				"[Paste URL]"
 	"UI_Paste_Selection"		"[Paste]"				// comes from a text entry selection; full string too long to fit in UI in English
 
-	"ContentFrame_FriendsCount" "{i:friendsitems}"
+	"ContentFrame_FriendsCount" "{i:pendingchats}"
 	"ContentFrame_CommunityCount" "{i:communitycount}"
 	"ContentFrame_InboxCount" "{i:inboxcount}"
 	"ContentFrame_DownloadsCount" "{i:downloads}"
@@ -5091,4 +5139,19 @@
 	"SettingsKeyboard_UseSystemLanguage"					"(use system language)"
 
 	"SteamUI_NetworkLoginNeeded_Title"	"Login to your Network"
+
+	"Overlay_Friend_Notifications_Invites"		"Friend Invites"
+	"Overlay_Friend_Notifications_More_Unread"		"Chat Conversations"
+	"Overlay_Friend_Notifications_More_Unread_Chats_Plural"		"{d:unreadchats} More Chats"
+	"Overlay_Friend_Notifications_More_Unread_Chats"			"1 More Chat"
+	"Overlay_Friend_Notifications_More_Unread_Invites_Plural"	"{d:unreadinvites} More Invites"
+	"Overlay_Friend_Notifications_More_Unread_Invites"			"1 More Invite"
+	"Overlay_Friend_Notifications_Game_Invite"		"Invited you to play"
+	"Overlay_Friend_Notifications_Voice_Chat"		"Voice Chat Active"
+	"Overlay_Friend_Notifications_Voice_Chat_On_Hold"	"Voice Chat on Hold"
+	"Overlay_Friend_Notifications_Voice_Chat_Ringing"	"Incoming..."
+	"Overlay_Friend_Notifications_Voice_Chat_Dialing"	"Calling..."
+	
+	"Overlay_SteamControllerHUD_HelpText"	"Steam Controller Input Helper - Press the Steam Button to disable"
+	"Overlay_ToggleControllerHUD" "Toggle Controller HUD"
 }

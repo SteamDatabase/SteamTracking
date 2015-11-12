@@ -148,13 +148,8 @@ MainMenu #BodyWrapper
 	transform: translatey( -300px );
 }
 
-MainMenu #BodyWrapper.StoreVisible
-{
-	transform: translatey( -550px );
-}
 
 MainMenu #BodyWrapper:descendantfocus,
-MainMenu #BodyWrapper.StoreVisible:descendantfocus
 {
 	z-index: 100;
 	transform: translatey( 0px );
@@ -198,42 +193,6 @@ MainMenu #BodyWrapper #GameRowContents
 	height: 100%;
 	z-index: top_non_popup_zindex;
 	opacity: 1.0;
-}
-
- .HomeGlow
-{
-	opacity: 0.0;
-	width: 100%;
-	height: 600px;
-	z-index: -1000;
-	margin-bottom: 100px;
-	horizontal-align: center;
-	vertical-align: center;
-
-	transition-property: opacity, transform !immediate;
-	transition-delay: 0.1s, 0.0s;
-	transition-duration: 0.35s, 0.35s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-.MenuRowUnfocused.HomeGlow
-{
-	opacity: 0.0;
-	
-	transition-property: opacity, transform !immediate;
-	transition-delay: 0.08s;
-	transition-duration: 0.1s, 0.35s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-MainMenu.StackDepth2 .HomeGlow
-{
-	opacity: 0.0;
-}
-
-MainMenu.StackDepth3 .HomeGlow
-{
-	opacity: 0.0;
 }
 
 @keyframes 'fade-in'
@@ -297,12 +256,6 @@ MainMenu.StackDepth3 .HomeGlow
  	flow-children: right;
  	horizontal-align: left;
  	margin-left: 290px;
-}
-
-.StackDepth2 #NavigationBar,
-.StackDepth3 #NavigationBar,
-{
-	position: 0px 0px 0px;
 }
 
 
@@ -736,37 +689,6 @@ MainMenu.StackDepth3 .HomeGlow
 {
 	horizontal-align: right;
 	vertical-align: center;
-}
-
-MainMenu.StackDepth2 .HomeGlow
-{
-	opacity: 0.4;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
-}
-
-MainMenu.StackDepth2 #MenuRow:hover
-{
-	blur: gaussian( 0.2 );
-	desaturation: 0.02;
-	opacity: 0.85;
-}
-
-
-MainMenu.StackDepth3 .HomeGlow
-{
-	opacity: 0.1;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
-}
-
-MainMenu.StackDepth3 #MenuRow:hover
-{
-	blur: gaussian( 1.15 );
-	desaturation: 0.1;
-	opacity: 0.75;
 }
 
 .Button

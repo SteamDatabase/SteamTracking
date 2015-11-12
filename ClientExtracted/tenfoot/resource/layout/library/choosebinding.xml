@@ -28,7 +28,10 @@
 			<Panel id="BindingDescriptionWrapper" selectionpos="0,0">
 				<Label id="SelectBindingHeader" text="#Library_Details_SelectYourBindingFor" class="SelectBindingHeader" />
 				<DropDown tabindex="-1" selectionpos="0,-1" id="BindingDescriptionDropDown" />
-				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmoveup="DoNothing();" onmoveleft="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( left_trigger );" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
+				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmoveup="DoNothing();" onmoveleft="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( IconPreview );" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
+				<Label id="SelectBindingIconHeader" text="#Library_Details_SelectIcon" class="SelectBindingIconHeader" />
+				<Button id="IconPreview" class="IconPreview" selectionpos="0,-3" onactivate="AddBindingIcon();" onmoveright="SetInputFocus( left_trigger );"><Image id="BindingIcon" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+				</Button>
 			</Panel>
 				
 			<Panel id="VirtualKeyboard" tabindex="auto" selectionpos="0,1">

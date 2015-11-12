@@ -2802,7 +2802,7 @@
  T CScheduledFunctionMgr::BFrameFuncRun(CReliableTimer&)
  T CScheduledFunctionMgr::CScheduledFunctionMgr()
  T CScheduledFunctionMgr::RemoveScheduledItem(int)
- T CScheduledFunctionMgr::ScheduleItem(CBaseScheduledFunction*, int)
+ T CScheduledFunctionMgr::ScheduleItem(CBaseScheduledFunction*, int, unsigned long long)
  T CScheduledFunctionMgr::ScheduledItemSortFunc(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&)
  T CScheduledFunctionMgr::~CScheduledFunctionMgr()
  T CScheduler::AddItem(int, int)

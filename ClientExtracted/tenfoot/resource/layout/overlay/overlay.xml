@@ -38,6 +38,7 @@
 							</Panel>
 						</Panel>
 					</Panel>
+					<OverlayFriendsNotifications id="FriendsNotifications" class="DetailsDataPanel" selectionpos="auto" tabindex="auto" acceptsfocus="true" onactivate="ShowFriends()" />
 				</Panel>
 				<Panel id="MinimalPanels" />
 			</Panel>

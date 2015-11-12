@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
-	<LibraryFilterGames class="LibraryFilterGames" defaultfocus="GameSearchInput" ondescendantfocus="AsyncEvent( 0.1, GameFilterScrollChildIntoView() );" >
+	<LibraryFilterGames class="LibraryFilterGames" defaultfocus="GameSearchInput" ondescendantfocus="AsyncEvent( 0.1, GameFilterScrollChildIntoView() );" rememberchildfocus="true" >
     <Label class="NxTagHeader AlwaysVisible FilterHeader" text="#Library_FilterHeader" />
     <Panel class="GamesHorizRule" />
     <Panel class="GamesFilterWrapper" selectionpos="0,0" onmoveright="None();" onmoveleft="FocusGamesGrid();"

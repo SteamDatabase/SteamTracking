@@ -10,7 +10,7 @@
 			<Label text="#friends_no_friends_message" class="ZeroFriendsLabel" />
 			<Label text="#friends_no_friends_message_offline" class="NotLoggedInLabel" />
 
-			<Panel id="FriendsListItems" sendchildscrolledintoviewevents="true" selectionpos="auto"  overscroll-y="220" selectionposboundary="both" tabindex="auto" rememberchildfocus="true">
+			<Panel id="FriendsListItems" sendchildscrolledintoviewevents="true" selectionpos="auto"  overscroll-y="270" selectionposboundary="both" tabindex="auto" rememberchildfocus="true">
 				<FriendsListHeader friends_category="0" id="Header_Recent" text="#friends_list_recent_container_title" class="ContainerHeader "/>
 				<FriendsListHeader friends_category="1" id="Header_InGame" text="#friends_list_igname_container_title" class="ContainerHeader "/>
 				<FriendsListHeader friends_category="2" id="Header_Online" text="#friends_list_online_container_title" class="ContainerHeader "/>

@@ -4,6 +4,13 @@
 @define longduration: 1.7s;
 
 
+.WizardPanel
+{
+	opacity: 1.0;
+	transition-duration: 0.0s;
+}
+
+
 ParentalUnlockPopup
 {
 	perspective: 1000;

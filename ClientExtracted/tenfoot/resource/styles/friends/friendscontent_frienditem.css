@@ -7,6 +7,7 @@ FriendsContent_FriendItem
 	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
 	opacity: 1.0;
+	border-radius: 3px;
 }
 
 FriendsContent_FriendItem.HiddenByFilter
@@ -16,10 +17,24 @@ FriendsContent_FriendItem.HiddenByFilter
 
 FriendsContent_FriendItem:focus
 {
-	border: 3px solid ui_primary_color;
+	border: 3px solid #b6e1fa;
+	//padding: 3px;
 	//pre-transform-scale2d: 1.1;
 	//z-index: 10;
-	background-color: #14C6FC99;	    	
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 FriendsContent_FriendItem.ConnectedToChat
@@ -107,10 +122,30 @@ FriendsContent_FriendItem:focus AvatarImage
 	height: 30px;
 	width: 176px;
 	margin-left: 4px;
-	margin-top: 14px;
+	margin-top: 12px;
 	color: white;
 	font-size: 24px;
 	text-overflow: ellipsis;
+}
+
+.Offline .FriendName
+{
+	color: friendsoffline_solid;
+}
+FriendsContent_FriendItem.Offline:focus .FriendName,
+FriendsContent_FriendItem.Offline:focus .FriendPersonaStatus
+{
+	color: #c6d4df;
+}
+
+.Online .FriendName
+{
+	color: friendsonline_solid;
+}
+
+.InGame .FriendName
+{
+	color: friendsingame_darkbg;
 }
 
 .FriendPersonaStatus
@@ -133,14 +168,19 @@ FriendsContent_FriendItem:focus AvatarImage
 .FriendPersonaStatusDetail
 {
 	font-size: 20px;
-	//color: friendsingame_darkbg;
+	margin-top: 2px;
+}
+
+.InGame .FriendPersonaStatusDetail
+{
+	color: friendsingame_darkbg;
 }
 
 .FriendUnreadMessages
 {
 	visibility: collapse;
 
-	visibility: collapse;
+	horizontal-align: right;
 	color: white;
 	font-size: 16px;
 	width: 28px;
@@ -152,8 +192,6 @@ FriendsContent_FriendItem:focus AvatarImage
 	border-bottom-right-radius: 0px;
 
 	padding: 3px;
-	margin-left: 77px;
-	margin-top: 4px;
 	text-align: center;
 }
 

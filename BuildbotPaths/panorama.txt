@@ -325,7 +325,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/../external/v8/include/v8.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/../steamexe/osx/ipctool.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/./layout/layoutfile.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/data/imageloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/data/panoramavideoplayer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/controller.cpp
@@ -336,10 +335,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/steamcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/uiinput.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/uiinput.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/../renderer/styles.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/backgroundimage.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/csshelpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/fillbrush.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/layoutfile.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/layoutfile.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/panel2dfactory.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/stylefile.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/stylefile.h
@@ -359,7 +360,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styleproperties.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styles.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styles.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.cpp
@@ -401,10 +401,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/rendermessages.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/panelptr.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/../../panorama/uifileresource.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/iimagesource.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/imageloader.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/panoramavideoplayer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/panelhandle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../iuiengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/iuiinput.h
@@ -412,6 +410,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanelstyle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuistylefactory.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../data/panoramavideoplayer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/csshelpers.h
@@ -425,6 +424,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/transformations.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uievent.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uievents.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uifileresource.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uijsregistration.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindow.h

@@ -250,6 +250,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/controllerconfigsave.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/controllerproperties.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/controllerproperties_mode.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/controllerregistration.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/countdowntimer.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/createaccountwizard.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/creatingaccountwizardchild.o
@@ -270,7 +271,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/eventbackground.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotaccountnamewizard.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotpasswordwizardchild.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendaddmsgbox.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends_new.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendschatdialog.o
@@ -296,6 +296,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostageyv12.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/ghostmodecontainerpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/groupscontroller.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/iconpickerpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/imageloadwrapper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/installer_build.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/intromovie.o
@@ -362,6 +363,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/musicplaylistpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/musicqueuepanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/musicsettingspanel.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/networkloginhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/newemailwizardchild.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/newpasswordwizardchild.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/oobewizard.o
@@ -372,6 +374,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlaybasepanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlaycontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlayfirsttimebroadcast.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlayfriendsnotifications.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlaymanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlaynotificationpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/overlayvrstate.o
@@ -426,6 +429,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_store.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_timezone.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_voice.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_web.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settingspanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settingssubbrowser.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/shmemstream.o
@@ -433,6 +437,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/smserrorwizardchild.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/ssa.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/stdafx.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/steamcontrollerhud.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/steamguardwizardchild.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/steamlinkauthdialog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/steamservice.o
@@ -498,6 +503,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootchangepassword.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootconfirmpassworddialog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller_calibration.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller_losshelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller_pairing.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootdebugwindow.o
@@ -985,7 +991,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/verticalscrolllist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/vumeter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/iimagesource.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/panoramavideoplayer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/image.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/label.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/panelhandle.h
@@ -1496,8 +1501,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communityfriendsstrip.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communitymainpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communitymainpanel.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendaddmsgbox.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendaddmsgbox.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends_new.cpp
@@ -1539,6 +1542,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_mode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_mode.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerregistration.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerregistration.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/iconpickerpanel.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/iconpickerpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_deviceauth.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_deviceauth.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_eula.cpp
@@ -1709,6 +1716,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicqueuepanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicsettingspanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicsettingspanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/networkloginhelper.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/networkloginhelper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/oobe/../settings/settings_timezone.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/oobe/oobewizard.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/oobe/oobewizard.h
@@ -1722,10 +1731,14 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfirsttimebroadcast.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfirsttimebroadcast.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfriendsnotifications.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfriendsnotifications.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaymanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaymanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/steamcontrollerhud.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/steamcontrollerhud.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_community_guides.h
@@ -1791,6 +1804,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_timezone.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_timezone.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_voice.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_web.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settingspanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settingspanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/shutdownpanel.cpp
@@ -1902,6 +1916,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfoot.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_calibration.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_calibration.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_losshelper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_losshelper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_pairing.cpp

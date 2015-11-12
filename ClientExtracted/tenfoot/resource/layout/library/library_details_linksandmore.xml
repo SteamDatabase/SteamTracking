@@ -22,9 +22,13 @@
 
 					<Button id="OpenKeyboardButton" class="NxLeftNavButtonAction">
                         <Image src="file://{images}/icon_keyboard.png" />
-						<Label id="ReturnToAppLabel" text="#Overlay_OpenKeyboard" />
+						<Label text="#Overlay_OpenKeyboard" />
 					</Button>
-
+					
+					<Button id="ToggleControllerHUDButton" class="NxLeftNavButtonAction">
+						<Image src="file://{images}/library/controller_hud.png" />
+						<Label id="ToggleControllerHUDLabel" text="#Overlay_ToggleControllerHUD" />
+					</Button>					
 
 					<Button id="LibraryDetailsButton" class="NxLeftNavButton" onmoveright="LibraryDetailsFocusContent();" onactivate="LibraryDetailsFocusContent();" >
                         <Image src="file://{images}/library/library_play_button.png" />

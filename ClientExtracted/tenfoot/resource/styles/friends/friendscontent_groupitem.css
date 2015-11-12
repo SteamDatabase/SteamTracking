@@ -8,13 +8,27 @@ FriendsContent_GroupItem
 	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
 	padding: 0px;
+
+	border-radius: 3px;
 }
 
 FriendsContent_GroupItem:focus
 {
-	border: 3px solid ui_primary_color;
+	border: 3px solid #b6e1fa;
 
-	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));	    	
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 FriendsContent_GroupItem.ConnectedToChat

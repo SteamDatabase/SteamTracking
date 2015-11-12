@@ -8,7 +8,7 @@
 
 	width: 390px;
 	height: 430px;
-	background-color: #072135bb;
+	background-color: #222222bb;
 	border-radius: 10px;
 	//border-bottom-left-radius: 195px;
 	//border-bottom-right-radius: 195px;
@@ -38,7 +38,7 @@
 	width: 350px;
 	height: 350px;
 	
-	background-color: daisy_bg_color;
+	background-color: #202020ff;
 	
 	border-radius: 8px;
 }
@@ -53,7 +53,7 @@
 	height: 75px;
     background-color:  #40404090;
     border-radius: 8px;
-    border: 3px solid daisy_bg_color;
+    border: 3px solid #202020ff;
 }
 
 .TouchKey
@@ -64,9 +64,9 @@
 	margin-bottom: 0px;
 	width: 75px;
 	height: 75px;
-	background-color: daisy_petal_color;
+	background-color: #404040ff;
     border-radius: 8px;
-    border: 3px solid daisy_bg_color;
+    border: 3px solid #202020ff;
 }
 
 .TouchKey Label
@@ -75,8 +75,25 @@
 	horizontal-align: center;
     vertical-align: center;
 	color: tclegendlabel;
-	font-size: 24px;
+	font-size: 32px;
 	font-family: platformfont;
+}
+
+#TouchLabel.SmallLabel
+{
+	margin-top: 8px;
+	margin-left: 8px;
+	horizontal-align: left;
+    vertical-align: top;
+	color: tclegendlabel;
+	font-size: 16px;
+	font-family: platformfont;
+}
+
+#TouchMenuIcon
+{
+	horizontal-align: center;
+    vertical-align: center;
 }
 
 .TouchKeyHover

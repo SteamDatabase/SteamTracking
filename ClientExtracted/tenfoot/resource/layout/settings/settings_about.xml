@@ -18,7 +18,7 @@
 			<Button class="Button ResBody" id="SettingsInterface_SteamClientPending"  onactivate="RestartDuetoUpdate();">
 				<Label class="LongDesc" text="#SettingsInterface_SteamClientUpdatePending"  />
 			</Button>
-			<Button id="SettingsAbout_ClientUpdate" onactivate="ShowClientUpdateNews()" class="Button ClientUpdateMargin" >
+			<Button id="SettingsAbout_ClientUpdate" onactivate="ShowClientUpdateNews()" class="Button" >
       	<Label class="LongDesc" text="#SettingsAbout_ClientUpdateButton" />
 			</Button>
 			

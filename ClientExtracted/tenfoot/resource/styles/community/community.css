@@ -23,8 +23,7 @@
 }
 
 
-.StackDepth2 #CommunityWrapper.CommunityInvisible,
-.StackDepth3 #CommunityWrapper.CommunityInvisible
+#CommunityWrapper.CommunityInvisible
 {
 	transform: translate3d( 0px, 1280px, 1000px );
 	opacity: 0.0;
@@ -90,7 +89,7 @@ CommunityPanel #ContentRow
 }
 
 .ContentPanel .CommunityContent,
-.StackDepth1 .ContentPanel #CommunityContent
+.ContentPanel #CommunityContent
 {
 	opacity: 1.0;
 	opacity-mask: none;
@@ -106,16 +105,14 @@ CommunityHubContentPanel #ContentRow,
 	height: 100%;
 }
 
-.StackDepth1 #CommunityMenu #CommunityContent
+#CommunityMenu #CommunityContent
 {
 	opacity: 1.0;
 }
 
 
-.StackDepth2 CommunityPanel #CommunityContent,
-.StackDepth3 CommunityPanel #CommunityContent,
-.StackDepth2 CommunityPanel #ContentRow,
-.StackDepth3 CommunityPanel #ContentRow
+CommunityPanel #CommunityContent,
+CommunityPanel #ContentRow,
 {
 	opacity: 1.0;
 }
@@ -151,8 +148,7 @@ CommunityPanel .CommunityBackground
 }
 
 #OverlayBasePanel .CommunityVisible .CommunityPanel .CommunityBackground,
-.StackDepth2 .CommunityVisible .CommunityPanel .CommunityBackground,
-.StackDepth3 .CommunityVisible .CommunityPanel .CommunityBackground
+.CommunityVisible .CommunityPanel .CommunityBackground,
 {
 	animation-name: background-visible;
 	animation-duration: mediumduration;
@@ -255,18 +251,15 @@ CommunityPanel#CommunityMarketItemPicker
 }
 
 #OverlayBasePanel.Offline #Loading,
-.Offline.StackDepth2 #Loading,
-.Offline.StackDepth3 #Loading,
+.Offline.#Loading,
 .LoadError #Loading
  {
 	opacity: 0.0;
 }
 
 #OverlayBasePanel.Offline #Offline,
-.Offline.StackDepth2 #Offline,
-.Offline.StackDepth3 #Offline,
-.StackDepth2 .LoadError #Error,
-.StackDepth3 .LoadError #Error,
+.Offline. #Offline,
+.LoadError #Error
 {
 	opacity: 1.0;
 }
@@ -305,9 +298,7 @@ CommunityPanel
 }
 
 
-.StackDepth1 #CommunityMenu,
-.StackDepth2 #CommunityMenu,
-.StackDepth3 #CommunityMenu
+#CommunityMenu
 {
 	transform: none;
 }

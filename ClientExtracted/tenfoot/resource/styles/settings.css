@@ -288,13 +288,6 @@ RadioButton
 	width: 1200px;
 }
 
-#SettingsSteamOS_EnableDesktop
-{
-	width: 475px;
-}
-
-
-
 Label.SettingsStatic
 {
 	horizontal-align: center;
@@ -321,6 +314,13 @@ Label.SettingsStatic
 	flow-children: down;
 	width: 550px;
 	height: fit-children;
+	padding-right: 40px;
+}
+
+.SettingsContentColumnv2 Button,
+.SettingsContentColumnv2 ToggleButton,
+{
+	width: 100%;
 }
 
 SettingsPanel .SettingsContentColumnv2 Button
@@ -1505,15 +1505,6 @@ KeyboardShortcut .Graphic
 }
 
 
-.VertContainerScreensaver
-{
-	flow-children: down;
-	vertical-align: top;
-	width: 600px;
-	margin-left: 100px;
-}
-
-
 .SettingsScreensaverPanels
 {
 	width: 100%;
@@ -2097,6 +2088,11 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 .NotLoggedIn #DownloadsSettingsButton,
 .NotLoggedIn #DiskManagetmentButton,
 .NotLoggedIn #AddShortcutSettingsButton,
+.NotLoggedIn #WebBrowserSettingsButton,
+.NotLoggedIn #KeyboardSettingsButton,
+.NotLoggedIn #InterfaceSettingsButton,
+.NotLoggedIn #PersonalSettingsHeaderLabel,
+.NotLoggedIn #FeaturesSettingsHeaderLabel
 {
 	visibility: collapse;
 }
@@ -2105,13 +2101,6 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 #StoreSettingsButton
 {
 	visibility: collapse;
-}
-
-
-.ClientUpdateMargin
-{
-    margin-top: 5px;
-    margin-bottom: 15px;
 }
 
 .SettingsPanel_Family_Sharing_List
@@ -2726,7 +2715,8 @@ SettingsPanelRemoteClientListing #Status
 
 
 /* Hide the news button for client updates if not logged in, it won't work */
-.NotLoggedIn #SettingsAbout_ClientUpdate
+.NotLoggedIn #SettingsAbout_ClientUpdate,
+.NotLoggedIn .ClientBetaOptIn
 {
 	visibility: collapse;
 }
@@ -2747,11 +2737,6 @@ SettingsPanelRemoteClientListing #Status
 .MainBetaVisible .ClientInfoSectionHeader
 {
 	margin-top: 12px;
-}
-
-.NotLoggedIn .ClientBetaOptIn
-{
-	visibility: collapse;
 }
 
 .SteamOS SettingsPanel_Display
@@ -3310,22 +3295,6 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 	transform: translateX( 5px );
 }
 
-#InterfaceSettingsButton
-{
-	visibility: visible;
-}
-
-.SteamOS.Windows #InterfaceSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #SearchProviderContainer
-{
-	visibility: collapse;
-}
-
-
 #SearchProviderContainer
 {
 	visibility: visible;
@@ -3728,7 +3697,7 @@ SettingsPanel .Button
 .SettingCategory
 {
 	text-align: left;
-	width: 250px;
+	width: 100%;
 	padding-top: 25px;
 	padding-bottom: 3px;
 	color: #ffffff;
@@ -3770,4 +3739,14 @@ SettingsPanel_ControllerConfigs .SettingsContent
 	vertical-align: center;
 	font-size: 26px;
 	margin-bottom: 5px;
+}
+
+.OnlyVisibleWithSteamControllersConnected
+{
+	visibility: collapse;
+}
+
+.SteamControllerConnected .OnlyVisibleWithSteamControllersConnected
+{
+	visibility: visible;
 }

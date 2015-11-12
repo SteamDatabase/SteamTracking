@@ -12828,6 +12828,7 @@
  T vgui::RichText::SelectAll()
  T vgui::RichText::SetDrawOffsets(int, int)
  T vgui::RichText::SetDrawTextOnly()
+ T vgui::RichText::SetMaximumCharCount(int)
  T vgui::RichText::SetSectionVisible(int, bool)
  T vgui::RichText::SetText(char const*)
  T vgui::RichText::SetText(wchar_t const*)

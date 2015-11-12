@@ -44,6 +44,7 @@ Friends
 	width: 1920px;
 	height: 1080px;
 	visibility: visible;
+	overflow: clip;
 
 	font-family: platformfont;
 
@@ -59,9 +60,19 @@ Friends
 
 	opacity: 1.0;
 	transform: translateX( 0px );
-	background-color: #031a3d;
+	//background-color: #031a3d;
 	background-image: url( "file://{images}/panel_background.png" );
 	//transform: translateY( 100% );		background-color: #000000ff;
+}
+
+Friends.ChatFocus #ContentTitles
+{
+	visibility: collapse;
+}
+
+Friends.ChatFocus #ContentFrameHeader
+{
+	background-image: none;
 }
 
 Friends.BehindMessageBox.FriendsInputTextEntry
@@ -83,18 +94,19 @@ Friends.SlideAwayToRight
 	width: 100%;
 	height: 100%;
 	overflow: clip;
-	margin-top: 130px;
+	margin-top: 104px;
 	transition-delay: 0.4s;
 	flow-children: right;	//temp
 
 	transition-property: transform;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ChatFocus .AllContent
 {
-	transform: translateY( -60px );
+	height: 1180px;
+	transform: translateY( -105px );
 		//transition-delay: 1.2s;
 		transition-duration: 0.0s;
 }
@@ -313,9 +325,6 @@ Label.Header
 {
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
-	/*border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;*/
 
 	animation-name: nx-button-focus;
 	animation-duration: longduration;
@@ -334,22 +343,13 @@ Label.Header
 
 .FriendsContentContainer
 {
-
-	//padding-left: 140px;
-	//padding-right: 40px;
 	padding: 20px;
 	padding-top: 0px;
-	//position: 390px 0px 0px;
 
 	width: 100%;
-	height: 900px;
+	height: 1000px;
 
-	background-color: #2976a344;
-
-	
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+	background-color: gradient( linear, 0% 100%, 100% 100%, from( #2976a344 ), to( #2976a300 ) );
 
 	transform: translateX( 0px );
 	transition-delay: 0s;
@@ -429,9 +429,10 @@ Label.Header
 	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
 }
 
-FriendsInvitePage
+FriendsInvitePage.FriendsContentContainer
 {
 	flow-children: down;
+	padding-top: 20px;
 }
 
 #AddFriendContent

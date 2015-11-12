@@ -36,9 +36,6 @@ HTMLVerticalScrollBar, VerticalScrollBar
 	vertical-align: top;
 	opacity: 1.0;
 
-	transition-property: opacity;
-
-
 	transition-property: transform;
 	transition-duration: 0.20s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -64,7 +61,7 @@ HTMLVerticalScrollBar .ScrollThumb, VerticalScrollBar .ScrollThumb
 {
 	background-color: #ffffffff;
 	transition-property: position;
-	transition-duration: 0.2s;
+	transition-duration: 0.05s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
@@ -72,7 +69,7 @@ HTMLHorizontalScrollBar .ScrollThumb, HorizontalScrollBar .ScrollThumb
 {
 	background-color: #ffffffff;
 	transition-property: position;
-	transition-duration: 0.2s;
+	transition-duration: 0.05s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 

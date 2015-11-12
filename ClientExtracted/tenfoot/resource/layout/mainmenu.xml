@@ -50,8 +50,8 @@
                         <Panel class="TopButtonContentWrapper">
 							<Image src="file://{images}/messages.png" />
 								<Panel class="TopRowElement" >
-									<Label class="TopRowCounter" text="#MainMenu_SystemIMsShort" />
-									<Label class="TopRowCounterBackground" text="#MainMenu_SystemIMsShort" /> 
+									<Label class="TopRowCounter" text="#MainMenu_SystemIMsShort_Number" />
+									<Label class="TopRowCounterBackground" text="#MainMenu_SystemIMsShort_Number" /> 
 								</Panel>
 						</Panel>
 
@@ -155,10 +155,7 @@
 					</ParentalButton>
 				</Panel>
 			</Panel>
-			
-
-			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
-	<Panel id="HR2" class="HR" />
+			<Panel id="HR2" class="HR" />
 			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" >
 														
 				<Panel class="GameRowContentsWrapper" selectionpos="0,0" >

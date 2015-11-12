@@ -71,7 +71,7 @@
 				<FriendsEditPersonaDialog id="ProfileContent" class="FriendsContentContainer" />
 				<FriendsContent_Friends id="FriendsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" selectionposboundary="both" />
 				<FriendsContent_Groups id="GroupsContent" class="FriendsContentContainer" movementwrap="right" rememberchildfocus="true" overscroll-y="120" />
-				<FriendsInvitePage id="InvitesContent" class="FriendsContentContainer" overscroll-y="120" />
+				<FriendsInvitePage id="InvitesContent" class="FriendsContentContainer" overscroll-y="150" />
 			</Panel>
 
 			<FriendsChatDialog id="FriendsChatDialog" oncancel="FocusFriendsContent();"/>

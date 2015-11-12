@@ -715,7 +715,6 @@ LibraryAppDetails .ContentsRow
 	width: 425px;
 	height: 450px;
 
-	margin-right: -10px;
 
 	border-radius: 3px;
 
@@ -1044,7 +1043,7 @@ ParentalButton.Locked
 }
 #MoreWaysToPlayBtn
 {
-	width: 100%;
+	width: 425px;
 	pre-transform-scale2d: 0.95;
 	visibility: collapse;
 	vertical-align: bottom;
@@ -1091,11 +1090,16 @@ ParentalButton.Locked
 {
 	visibility: visible;
 }
+
+.VR .HasMoreWaysToPlay #MoreWaysToPlayBtn
+{
+	visibility: collapse;
+}
+
 .HasMoreWaysToPlay .PlayAction
 {
 	height: 120px;
 }
-
 
 
 .Offline .FriendsWhoPlay
@@ -2923,23 +2927,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	color: applabelselectedsolid;
 }
 
-.LibraryAllGames
-{
-//	opacity: 0.0;
-//	desaturation: 1.0;
-
-//	transition-property: transform, blur, position, opacity, desaturation;
-//	transition-duration: mediumduration;
-//	transition-timing-function: bigpicture-ease-in-out;
-//	transition-delay: 0s;
-}
-
-.LibraryAllGamesVisible
-{
-//	opacity: 1.0;
-//	desaturation: 0.0;
-}
-
 
 /* Transitions when grid is in focus */
 .ContentAreaFocus .GamesGrid, .ContentHover .GamesGrid,
@@ -3552,6 +3539,7 @@ Carousel.CursorVisible:hover .LeftMouseScrollRegion,
 {
 	width: 100%;
 	height: 80px;
+	background-color: mouse_off_bg_up;
 }
 
 Carousel.CursorVisible:hover .RightMouseScrollRegion,
@@ -3583,27 +3571,37 @@ Grid.CursorVisible:hover .RightMouseScrollRegion,
 	align: center bottom;
 	margin-bottom: 220px;
 	z-index: 300;
+	background-color: mouse_off_bg_bottom;
 }
 
-
-.MouseActive #GamesGrid:hover  .RightMouseScrollRegion:hover,
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion:hover,
 {
-		background-color: mouse_active_bg_bottom;
+	background-color: mouse_hover_bg_bottom;
 }
-
 
 Carousel.CursorVisible:hover  .LeftMouseScrollRegion:hover,
-Carousel.CursorVisible:hover  .LeftMouseScrollRegion:active,
 .MouseActive Grid:hover  .LeftMouseScrollRegion:hover,
-.MouseActive Grid:hover  .LeftMouseScrollRegion:active
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_up;
+}
+
+Carousel.CursorVisible:hover .LeftMouseScrollRegion:active,
+.MouseActive Grid:hover .LeftMouseScrollRegion:active,
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_up;
 }
 
 Carousel.CursorVisible:hover .RightMouseScrollRegion:hover,
+.MouseActive Grid:hover .RightMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
 Carousel.CursorVisible:hover .RightMouseScrollRegion:active,
-.MouseActive Grid:hover .RightMouseScrollRegion:hover,
-.MouseActive Grid:hover .RightMouseScrollRegion:active
+.MouseActive Grid:hover .RightMouseScrollRegion:active,
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_bottom;
 
@@ -3743,7 +3741,7 @@ Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
 Grid .LeftMouseScrollRegion
 {
 	position: 0px 0px 0px;
-	background-color: mouse_hover_bg_up;
+	background-color: mouse_off_bg_up;
 
 	transition-property: background-color, opacity;
 	transition-duration: mediumduration;
@@ -3754,8 +3752,8 @@ Grid .LeftMouseScrollRegion
 
 Grid .RightMouseScrollRegion
 {
-	position: 0px 0px 0px;
-	background-color: mouse_active_bg_bottom;
+	position: 0px -15px 0px;
+	background-color: mouse_off_bg_bottom;
 
 	transition-property: background-color, opacity;
 	transition-duration: mediumduration;

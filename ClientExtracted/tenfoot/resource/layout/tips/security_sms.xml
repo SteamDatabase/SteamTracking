@@ -6,7 +6,7 @@
 	</styles>
 
 	<WelcomeToSteamIndividualTip selectionpos="auto" mousecanactivate="unfocused">
-    <Button class="SubPanel" tabindex="4" selectionpos="0,4" onactivate="OnFeatureInteraction( welcome_sms_activate ); BrowserGoToURL( https://store.steampowered.com/phone/add );" onfocus="OnFeatureInteraction( welcome_sms_activate ); ">
+    <Button class="SubPanel" tabindex="4" selectionpos="0,4" onactivate="OnFeatureInteraction( welcome_sms_activate ); BrowserGoToURL( https://store.steampowered.com/phone/add );" onfocus="OnFeatureInteraction( welcome_sms_focus ); ">
 			<Panel id="HR4" class="HR" />
 			<Panel class="SubPanelCenterContainer">
 				<Image class="SubImageCenterAlign" id="sub_image_center_shortish" src="file://{images}/welcomeupdates/securitybanner.png" scaling="stretch" />

@@ -22,6 +22,8 @@ FriendsContent_Friends.ContentList
 	flow-children: right-wrap;
 	width: 100%;
 	margin-left: 6px;
+	padding-bottom: 140px;
+	//height: 980px;
 }
 
 Label
@@ -63,7 +65,7 @@ Label
 {
 	color: white;
 	width: 100%;
-	font-size: 30px;
+	font-size: 32px;
 	margin-top: 32px;
 	margin-bottom: 4px;
 }
@@ -131,9 +133,10 @@ Label
 {
 	position: 888px 0px 0px;
 
-	margin-top: 10px;
-	padding-top: 4px;
-	//padding-bottom: -8px;
+	margin-top: 30px;
+	padding-top: 14px;
+	padding-bottom: 8px;
+	transform: translatez( 0px );
 }
 
 .ContentAreaFocus #FriendsContent .NxFilterTab,
@@ -160,10 +163,6 @@ margin-bottom: 8px;
 #FriendsContent .NxFilterTab:descendantfocus
 {
 	position: 560px 0px 0px;
-
-	margin-top: 16px;
-	padding-top: 4px;
-	padding-bottom: 8px;
 }
 
 .NxFilterTab TextEntry

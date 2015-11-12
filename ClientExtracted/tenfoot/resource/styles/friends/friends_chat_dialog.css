@@ -1,6 +1,6 @@
 @define friendsitemmainlistbkgnd_from: #f2f2f2ff;
 @define friendsitemmainlistbkgnd: gradient( linear, 0% 0%, 100% 100%, from( friendsitemmainlistbkgnd_from ), to( #cbcbcbde ) );
-@define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
+@define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101080 ), to( #10101090 ) );
 @define friendsverticalscrollpad: 18px;
 @define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
 @define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
@@ -8,10 +8,13 @@
 
 FriendsChatDialog
 {
-	width: 880px;
-	margin-left: 0px;
-	height: fit-children;
+	width: 950px;
+	padding-left: 35px;
+	padding-right: 35px;
+	height: 100%;
 	opacity: 0.0;
+
+	background-color: gradient( linear, 0% 100%, 100% 100%, from( #2976a344 ), to( #2976a300 ) );
 
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -31,7 +34,7 @@ FriendsChatDialog.ZeroFriends
 
 FriendsChatDialog AvatarImage
 {
-	margin-left: 12px;
+	margin-left: 0px;
 	transition-duration: 0.28s;
 	transition-property: opacity;
 	opacity: 0.0;
@@ -41,8 +44,9 @@ FriendsChatDialog:descendantfocus
 {
 	opacity: 1.0;
 	//height: 485px;
-	transform: translateX( -950px );
-	background-color: friendschatmsgsbkgnd;
+	transform: translateX( -985px );
+	background-color: #00000099;
+	box-shadow: module_shadow;
 }
 
 .BehindDaisyWheelTextInputHandler FriendsChatDialog
@@ -170,7 +174,7 @@ FriendsChatDialog:descendantfocus
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.ShowEmoticonPanel #EmoticonSelector
+.CursorVisible .ShowEmoticonPanel #EmoticonSelector
 {
 	opacity: 1.0;
 	height: fit-children;
@@ -260,7 +264,7 @@ FriendsChatDialog:descendantfocus
 {
 	height: 94px;
 	margin-bottom: 8px;
-	margin-top: 12px;
+	margin-top: 26px;
 	width: 92%;
 }
 
@@ -402,7 +406,7 @@ FriendsChatDialog:descendantfocus .VoiceHeaderButton:hover
 
 #FriendStatusContainer
 {
-	margin-left: 120px;
+	margin-left: 110px;
 	width: 60%;
 	flow-children: down;
 }
@@ -560,14 +564,14 @@ AvatarImage.AvatarVisible
 
 	line-height: 33px;
 
-	width: 100%;
+	width: 880px;
 	height: fill-parent-flow( 1.0 );
 	flow-children: down;
 	overflow: squish scroll;
 	padding-right: 16px;
 	margin-right: 2px;
 	padding-top: 4px;
-	margin-left: 8px;
+	margin-left: 0px;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
@@ -593,7 +597,7 @@ AvatarImage.AvatarVisible
 	border-radius: 0px;
 	padding-bottom: 0px;
 
-	background-color: #1a578023;
+	background-color: #00000000;
 
 	transition-property: height;
 	transition-duration: 0.5s;

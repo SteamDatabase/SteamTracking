@@ -1,0 +1,71 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/controllerregistration.css" />
+	</styles>
+
+	<ControllerRegistration defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
+			<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="BindingSaveCancelled()">				
+					<Panel id="MsgBoxHeader" class="MsgBoxHeader RegistrationHeader">
+						<Panel class="Step_RegisterQuestion StepHeader">
+							<Label class="MsgBoxTitle" text="#Controller_Registration_Title" />
+							<Label id="RegistrationDescription" text="#Controller_Registration_Desc" />
+						</Panel>
+						<Panel class="Step_Personalizing StepHeader">
+							<Label class="MsgBoxTitle" text="#Controller_Registration_Personalize_Title" />
+						</Panel>
+						<Panel class="Step_Migrating StepHeader">
+							<Label class="MsgBoxTitle" text="#Controller_Registration_Migrating_Title" />
+						</Panel>
+					</Panel>
+					
+					<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">				
+							<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+								<Panel class="Step_Personalizing StepArea">
+									<Panel id="SetNameContainer">
+										<Label text="#Controller_Registration_Name" hittest="false"/>
+										<TextEntry id="ControllerNameEntry"
+											maxchars="32" 
+											multiline="false"
+											textinputid="BindingTitleTextEntry"
+											textinputdoneactionstring="#Friends_AddFriend_OK"
+											textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+										/>
+									</Panel>
+							
+									<Panel id="GuideBrightnessContainer">
+										<Label text="#Controller_Registration_GuideBrightness" />
+										<Slider id="GuideBrightnessSlider" direction="horizontal" />
+									</Panel>
+									<Label id="RegistrationSubDescription" text="#Controller_Registration_SubDesc" />
+								</Panel>
+								
+								<Panel class="Step_Migrating StepArea">
+									<Panel id="ProgressBarContainer">
+										<ProgressBar id="ProgressBar" />
+									</Panel>
+								</Panel>
+							</Panel>
+							
+							<Panel id="MsgBoxButtons">	
+								<Panel class="Step_RegisterQuestion StepButtons">
+									<Button id="ButtonOk" class="ButtonOK MsgBoxButton Button" onactivate="StartRegistration();">
+										<Label id="OKButtonText" text="#Controller_Registration_Submit" />
+									</Button>
+									<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="AbortRegistration();">
+										<Label id="CancelButtonText" text="#Controller_Registration_Cancel" />
+									</Button>
+								</Panel>
+								
+								<Panel class="Step_Personalizing StepButtons">
+									<Button id="ButtonNext" class="ButtonNext MsgBoxButton Button" onactivate="FinishPersonalization();">
+										<Label id="NextButtonText" text="#Controller_Registration_Personalize_Submit" />
+									</Button>
+								</Panel>
+								
+							</Panel>				
+					</Panel>
+			</Panel>		
+	</ControllerRegistration>
+</root>

@@ -5,15 +5,10 @@
 	</styles>
 
 	<SettingsPanel_About class="SettingsSection" defaultfocus="AuthorizeLocalDeviceButton" tabindex="auto" selectionpos="auto" >
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_ManageDevices_Title" />
-		</Panel>
-
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWide" >
-			<Panel class="FlowDown" >
-				<Label class="Settings" text="#Settings_ManageDeviceAuth_Text"/>
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent FlowDown" tabindex="auto" selectionpos="0,0">
+			  <Label class="Settings" text="#Settings_ManageDeviceAuth_Text"/>
 				
 				<Panel class="SettingsManageDevices_Header" >
 					<Label text="#Settings_ManageDevices_Item" class="SettingsManageDevices_ColumnItem" />
@@ -25,14 +20,9 @@
 				<Panel id="SettingsManageDevices_List" class="SettingsPanel_Family_Sharing_List" >
 					<!-- instances of SettingsPanel_ManageDevices_ListEntry will be programmatically added here -->
 				</Panel>
-			</Panel>
-			
-
-		</Panel>
-		
-	
-		
-	
+        
+		  </Panel>
+    </Panel>
 	</SettingsPanel_About>
 
 </root>

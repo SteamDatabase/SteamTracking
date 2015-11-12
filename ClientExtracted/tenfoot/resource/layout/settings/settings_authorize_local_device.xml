@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_About class="SettingsSection" defaultfocus="AuthorizeLocalDeviceButton" tabindex="auto" selectionpos="auto" >
+	<SettingsPanel_About class="SettingsSection" tabindex="auto" selectionpos="auto" >
 		<!-- main panel -->
     <Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
 		  <Panel class="SettingsContent" >

@@ -20,42 +20,42 @@
 				
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
 
-				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(0);" onfocus="OnControllerButtonFocused(0)" >
+				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController1" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(1);" onfocus="OnControllerButtonFocused(1)" >
+				<Panel id="DetectedController1" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController2" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(2);" onfocus="OnControllerButtonFocused(2)" >
+				<Panel id="DetectedController2" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController3" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(3);" onfocus="OnControllerButtonFocused(3)" >
+				<Panel id="DetectedController3" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController4" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(4);" onfocus="OnControllerButtonFocused(4)" >
+				<Panel id="DetectedController4" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController5" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(5);" onfocus="OnControllerButtonFocused(5)" >
+				<Panel id="DetectedController5" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController6" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(6);" onfocus="OnControllerButtonFocused(6)" >
+				<Panel id="DetectedController6" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>
 
-				<Panel id="DetectedController7" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(7);" onfocus="OnControllerButtonFocused(7)" >
+				<Panel id="DetectedController7" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
 				</Panel>

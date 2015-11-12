@@ -11,32 +11,10 @@
 				<Panel class="VertContainer">
 					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleInterfaceSetting()"/>
 					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM"  onactivate="ToggleInterfaceSetting()" />
+					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_Windowed" text="#SettingsAccount_StartWindowed"  onactivate="ToggleInterfaceSetting()" />					
 					<ToggleButton class="CheckBox" id="Settings_OfflineModeShortcutsEnable" text="#SettingsInterface_OfflineModeShortcutsEnable"  onactivate="ToggleInterfaceSetting()" />
-				
-					<Panel id="SearchProviderContainer">
-						<Label class="SettingsCallout LongDesc" text="#SettingsInterface_SearchProvider" />
-						<Panel id="SearchProviders" class="Radios" childfocusonhover="false">
-							<RadioButton group="SearchProvider" class="Button RadioButton" id="google" tabindex="0.0" text="#SettingsInterface_Search_Google" selectionpos="auto" onactivate="ToggleInterfaceSetting()" />
-							<RadioButton group="SearchProvider" class="Button RadioButton" id="bing" tabindex="1.0" text="#SettingsInterface_Search_Bing" selectionpos="auto" onactivate="ToggleInterfaceSetting()" />
-							<RadioButton group="SearchProvider" class="Button RadioButton" id="custom" tabindex="1.0" text="#SettingsInterface_Search_Custom" selectionpos="auto" onactivate="ToggleInterfaceSetting()" />
-						</Panel>
-						<Panel id="SearchProvidersCustom">
-								<Label class="SettingsCallout LongDesc SettingsSearchProviderHint" text="#SettingsInterface_SearchProvider_Custom" />
-								<TextEntry id="SettingsInterface_CustomSearchProviderURL"
-									textinputid="SettingsInterface_CustomSearchProviderURL_Entry"
-									textinputclass="HalfWidth DockRight AppearFromBottomCenter"
-									undohistory="enabled" />
-						</Panel>
-						<Button class="Cookie Button" onactivate="DeleteAllWebCookies()" selectionpos="auto">
-							<Label class="LongDesc" text="#SettingsInterface_DeleteAllCookies" />
-						</Button>
-
-					</Panel>
-
-				</Panel>
-				
-				<Panel class="VertContainerScreensaver FlowDown">
-					<Panel id="SettingsEnableScreenSaverTimePanel" class="SettingsScreensaverPanels SettingsController FlowDown">
+          
+          <Panel id="SettingsEnableScreenSaverTimePanel" class="SettingsScreensaverPanels SettingsController FlowDown">
 						<Label class="SettingsLabel" text="#SettingsInterface_ScreensaverTimeout" />
 						<DropDown id="SettingsEnableScreenSaverTimePanel_Dropdown" class="SettingsScreensaverPanels_Dropdown" />			
 					</Panel>
@@ -46,7 +24,7 @@
 							<DropDown id="SettingsEnableScreenSaverStylePanel_Dropdown" class="SettingsScreensaverPanels_Dropdown" />			
 					</Panel>
 				</Panel>
-				
+
 				
 		</Panel>
 	</SettingsPanel_Interface>
