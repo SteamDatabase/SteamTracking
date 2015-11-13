@@ -2565,8 +2565,6 @@ function UpdatePaymentInfoForm()
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
-			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process Zong payments through KT at this time.  We apologize for the inconvenience.';
 		}
 		else if ( method.value == 'qiwi' )
 		{
