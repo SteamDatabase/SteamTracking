@@ -83946,8 +83946,8 @@
 			"item_name"	"#TF_TheDigitDivulger"
 			"item_description"	"#TF_TheDigitDivulger_Desc"
 			"propername"	"1"
-			"image_inventory"	"backpack/player/items/scout/scout_gloves"
-			"model_player"	"models/player/items/scout/scout_gloves.mdl"
+			"image_inventory"	"backpack/workshop/player/items/scout/scout_gloves_leather_open/scout_gloves_leather_open"
+			"model_player"	"models/workshop/player/items/scout/scout_gloves_leather_open/scout_gloves_leather_open.mdl"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -83958,30 +83958,22 @@
 				{
 					"0"
 					{
-						"skin_red"	"0"
-						"skin_blu"	"0"
-						"model_player"	"models/player/items/scout/scout_gloves.mdl"
+						"model_player"	"models/workshop/player/items/scout/scout_gloves_leather_open/scout_gloves_leather_open.mdl"
 						"name"	"#TF_TheDigitDivulger_Style0"
 					}
 					"1"
 					{
-						"skin_red"	"1"
-						"skin_blu"	"1"
-						"model_player"	"models/player/items/scout/scout_gloves.mdl"
+						"model_player"	"models/workshop/player/items/scout/scout_gloves_suede_open/scout_gloves_suede_open.mdl"
 						"name"	"#TF_TheDigitDivulger_Style1"
 					}
 					"2"
 					{
-						"skin_red"	"0"
-						"skin_blu"	"0"
-						"model_player"	"models/player/items/scout/scout_gloves_s2.mdl"
+						"model_player"	"models/workshop/player/items/scout/scout_gloves_leather_closed/scout_gloves_leather_closed.mdl"
 						"name"	"#TF_TheDigitDivulger_Style2"
 					}
 					"3"
 					{
-						"skin_red"	"1"
-						"skin_blu"	"1"
-						"model_player"	"models/player/items/scout/scout_gloves_s2.mdl"
+						"model_player"	"models/workshop/player/items/scout/scout_gloves_suede_closed/scout_gloves_suede_closed.mdl"
 						"name"	"#TF_TheDigitDivulger_Style3"
 					}
 				}
@@ -98517,15 +98509,20 @@
 			"equip_region"		"hat"
 			"propername"		"1"
 			"drop_type"		"drop"
-			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_shako/xms2013_sniper_shako"
+			"image_inventory"		"backpack/workshop/player/items/all_class/xms2013_sniper_shako/xms2013_sniper_shako"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/sniper/xms2013_sniper_shako/xms2013_sniper_shako.mdl"
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/xms2013_sniper_shako/xms2013_sniper_shako_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/xms2013_sniper_shako/xms2013_sniper_shako_soldier.mdl"
+			}
 			"used_by_classes"
 			{
 				"sniper"		"1"
+				"soldier"		"1"
 			}
 		}
 		"30317"
@@ -123311,6 +123308,10 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
 			}
 			"attributes"
 			{
@@ -158714,6 +158715,19 @@
 					"map_has_deep_water"			"1"
 				}
 			}
+			"5"
+			{
+				"name"					"ctf_2fort_invasion"
+				"localizedname"			"#TF_Map_2FortInv"
+				"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
+				"maptoken"				"Map Token 2Fort Invasion"
+				"authors"				"#ctf_2fort_invasion_authors"
+				"quickplay_type"		"all_users"
+				"tags"
+				{
+					"map_has_deep_water"			"1"
+				}
+			}
 		}
 		"capture_point"
 		{
@@ -158887,6 +158901,15 @@
 				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
 				"maptoken"				"Map Token Suijin"
 				"authors"				"#koth_suijin_authors"
+			}
+			"8"
+			{
+				"name"					"koth_probed"
+				"localizedname"			"#TF_Map_Probed"
+				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+				"maptoken"				"Map Token Probed"
+				"authors"				"#koth_probed_authors"
+				"quickplay_type"		"all_users"
 			}
 		}
 		"payload"
@@ -159068,6 +159091,15 @@
 				{
 					"map_has_deep_water"			"1"
 				}
+			}
+  			"9"
+			{
+				"name"					"arena_byre"
+				"localizedname"			"#TF_Map_Byre"
+				"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
+				"maptoken"				"Map Token Byre"
+				"authors"				"#arena_byre_authors"
+				"quickplay_type"		"disabled"
 			}
 		}
 
@@ -159262,7 +159294,11 @@
 				"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
 				"maptoken"				"Map Token 2Fort Invasion"
 				"authors"				"#ctf_2fort_invasion_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
+				"tags"
+				{
+					"map_has_deep_water"			"1"
+				}
 			}
  			"1"
 			{
@@ -159271,7 +159307,7 @@
 				"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
 				"maptoken"				"Map Token Watergate"
 				"authors"				"#pd_watergate_authors"
-				"quickplay_type"		"advanced_only"
+				"quickplay_type"		"disabled"
 			}
   			"2"
 			{
@@ -159280,7 +159316,7 @@
 				"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
 				"maptoken"				"Map Token Byre"
 				"authors"				"#arena_byre_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 			}
 			"3"
 			{
@@ -159289,7 +159325,7 @@
 				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
 				"maptoken"				"Map Token Probed"
 				"authors"				"#koth_probed_authors"
-				"quickplay_type"		"all_users"
+				"quickplay_type"		"disabled"
 			}
 		}
 	}
