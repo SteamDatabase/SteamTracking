@@ -100,9 +100,11 @@
  D typeinfo for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  D typeinfo for CAppUpdater::CCallback_OnAppInfoUpdate
+ D typeinfo for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  D typeinfo for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D typeinfo for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
+ D typeinfo for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
@@ -121,6 +123,7 @@
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CConsoleInputThread
  D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -154,9 +157,11 @@
  D vtable for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  D vtable for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  D vtable for CAppUpdater::CCallback_OnAppInfoUpdate
+ D vtable for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  D vtable for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D vtable for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
+ D vtable for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
@@ -174,6 +179,7 @@
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<8>
  D vtable for CConsoleInputThread
  D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -220,9 +226,11 @@
  R typeinfo name for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  R typeinfo name for CAppUpdater::CCallback_OnAppInfoUpdate
+ R typeinfo name for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  R typeinfo name for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  R typeinfo name for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
+ R typeinfo name for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
@@ -241,6 +249,7 @@
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CConsoleInputThread
  R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -325,10 +334,13 @@
  T CAppInstallerBuilder::OnAppBackupStatus(AppBackupStatus_t*)
  T CAppUpdater::BInit(KeyValues*)
  T CAppUpdater::BRunContentUpdate()
+ T CAppUpdater::BRunPasswordCheck()
  T CAppUpdater::BRunWorkshopUpdate()
  T CAppUpdater::CAppUpdater()
  T CAppUpdater::CCallback_OnAppInfoUpdate::Run(void*)
+ T CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse::Run(void*)
  T CAppUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
+ T CAppUpdater::OnCheckAppBetaPasswordResponse(CheckAppBetaPasswordResponse_t*)
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
@@ -340,6 +352,9 @@
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
+ T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
+ T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Run(void*)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
@@ -391,6 +406,9 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<72>::GetCallbackSizeBytes()
+ T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<72>::~CCallbackImpl()
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
@@ -1064,17 +1082,35 @@
  T bool BWaitGetAPICallResult<CreateItemResult_t>(unsigned long long, CreateItemResult_t*, int)
  T bool BWaitGetAPICallResult<RemoteStorageFileShareResult_t>(unsigned long long, RemoteStorageFileShareResult_t*, int)
  T bool BWaitGetAPICallResult<RemoteStoragePublishFileResult_t>(unsigned long long, RemoteStoragePublishFileResult_t*, int)
- T dyld_stub_binding_helper
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T netadr_t::ToString(char*, unsigned int, bool) const
- T std::_Rb_tree<int, std::pair<int const, CCallbackBase*>, std::_Select1st<std::pair<int const, CCallbackBase*> >, std::less<int>, std::allocator<std::pair<int const, CCallbackBase*> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, CCallbackBase*> >*)
- T std::_Rb_tree<int, std::pair<int const, CCallbackBase*>, std::_Select1st<std::pair<int const, CCallbackBase*> >, std::less<int>, std::allocator<std::pair<int const, CCallbackBase*> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, CCallbackBase*> const&)
- T std::_Rb_tree<int, std::pair<int const, CCallbackBase*>, std::_Select1st<std::pair<int const, CCallbackBase*> >, std::less<int>, std::allocator<std::pair<int const, CCallbackBase*> > >::_M_insert_equal(std::pair<int const, CCallbackBase*> const&)
- T std::_Rb_tree<int, std::pair<int const, CCallbackBase*>, std::_Select1st<std::pair<int const, CCallbackBase*> >, std::less<int>, std::allocator<std::pair<int const, CCallbackBase*> > >::find(int const&)
- T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CCallbackBase*>, std::_Select1st<std::pair<unsigned long long const, CCallbackBase*> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CCallbackBase*> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long long const, CCallbackBase*> >*)
- T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CCallbackBase*>, std::_Select1st<std::pair<unsigned long long const, CCallbackBase*> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CCallbackBase*> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<unsigned long long const, CCallbackBase*> const&)
- T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CCallbackBase*>, std::_Select1st<std::pair<unsigned long long const, CCallbackBase*> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CCallbackBase*> > >::_M_insert_equal(std::pair<unsigned long long const, CCallbackBase*> const&)
- T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CCallbackBase*>, std::_Select1st<std::pair<unsigned long long const, CCallbackBase*> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CCallbackBase*> > >::find(unsigned long long const&)
+ T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
+ T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int>)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_multi<std::__1::pair<unsigned long long const, CCallbackBase*>&>(std::__1::pair<unsigned long long const, CCallbackBase*>&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
+ T unsigned int std::__1::__sort3<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T unsigned int std::__1::__sort4<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void Destruct<CUtlString>(CUtlString*)
+ T void std::__1::__insertion_sort_3<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T void std::__1::__sort<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
+ T void std::__1::__sort<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+ T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  TSListBase_Init
  TSListBase_Pop
  TSListBase_UnsafePeek
@@ -1130,9 +1166,9 @@
  _DefaultRuneLocale
  _SpewMessageType
  _Unwind_Resume
+ __bzero
  __cxa_atexit
  __cxa_begin_catch
- __cxa_call_unexpected
  __cxa_end_catch
  __cxa_guard_abort
  __cxa_guard_acquire
@@ -1194,6 +1230,7 @@
  b g_pClientBilling
  b g_pClientConfigStore
  b g_pClientController
+ b g_pClientControllerSerialized
  b g_pClientDepotBuilder
  b g_pClientDeviceAuth
  b g_pClientEngine
@@ -1202,6 +1239,7 @@
  b g_pClientGameStats
  b g_pClientHTMLSurface
  b g_pClientHTTP
+ b g_pClientInventory
  b g_pClientMatchmaking
  b g_pClientMatchmakingServers
  b g_pClientMusic
@@ -1262,7 +1300,6 @@
  b workshop_download_item_command
  chmod$UNIX2003
  close$UNIX2003
- d dyld__mach_header
  d g_bCatchExceptionsInCallbacks
  d s_EAppUpdateError
  d s_ELogonState
@@ -1274,11 +1311,12 @@
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fclose
  fcntl$UNIX2003
  fflush
  fgets
- fopen
+ fopen$UNIX2003
  fread
  free
  fseek
@@ -1315,7 +1353,6 @@
  pthread_mutexattr_init
  putchar
  puts
- qsort
  r s_rgCRCTable_Standard
  read$UNIX2003
  remove
@@ -1325,11 +1362,6 @@
  sprintf
  sscanf
  stat$INODE64
- std::_List_node_base::hook(std::_List_node_base*)
- std::_List_node_base::unhook()
- std::_Rb_tree_increment(std::_Rb_tree_node_base*)
- std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::terminate()
  strcasecmp
  strchr
