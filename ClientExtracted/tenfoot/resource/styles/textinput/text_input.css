@@ -113,15 +113,17 @@ TextInputDaisy
 .DockLeft #BodyContainer
 {
 	horizontal-align: left;
-
 }
 
 .DockRight #BodyContainer
 {
 	horizontal-align: right;
-
 }
 
+.Desktop #BodyContainer
+{
+	horizontal-align: center;
+}
 
 .AppearFromBottomCenter #BodyContainer
 {	

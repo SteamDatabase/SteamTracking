@@ -166,7 +166,8 @@ MainMenu #BodyWrapper:descendantfocus #GameRowContents
 	opacity: 0.5;
 }
 
-MainMenu #BodyWrapper #GameRowContents:descendantfocus
+MainMenu #BodyWrapper #GameRowContents:descendantfocus,
+MainMenu #BodyWrapper #GameRowContents:hover
 {
 	opacity: 1.0;
 }
@@ -1171,14 +1172,6 @@ transform: none;
 	text-overflow: clip;
 }
 
-.GameRowContents:descendantfocus
-{
-	 	wash-color: #ffffff;
-	 		desaturation: 0.0;
-	 	transform-origin: 0% 0% parent-relative;
-  	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
-	}
-
 .GameRowContents
 {
 	margin-top: 620px;
@@ -1204,8 +1197,12 @@ transform: none;
 
 .GameRowContents:descendantfocus
 {
+	wash-color: #ffffff;
+	desaturation: 0.0;
+	transform-origin: 0% 0% parent-relative;
+
 	transform: translatex(0px) translatey(-22px);
-  opacity:1.0;
+ 	opacity:1.0;
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
 	transition-timing-function: linear;

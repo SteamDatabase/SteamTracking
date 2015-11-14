@@ -1560,7 +1560,7 @@ DropDownMenu.DropDownMenuVisible
 
 .ShowBindingDescriptionDropDown #BindingDescriptionDropDown
 {
-	visibility: visible;
+	visibility: collapse;
 }
 
 #BindingDescriptionDropDownDropDownMenu

@@ -591,6 +591,7 @@
  B panorama::MediaVolumeDown::symbol
  B panorama::MediaVolumeMute::symbol
  B panorama::MediaVolumeUp::symbol
+ B panorama::MinimizeApp::symbol
  B panorama::MoveDown::symbol
  B panorama::MoveLeft::symbol
  B panorama::MoveRight::symbol
@@ -979,6 +980,7 @@
  D panorama::MediaVolumeDown::pchEvent
  D panorama::MediaVolumeMute::pchEvent
  D panorama::MediaVolumeUp::pchEvent
+ D panorama::MinimizeApp::pchEvent
  D panorama::MoveDown::pchEvent
  D panorama::MoveLeft::pchEvent
  D panorama::MoveRight::pchEvent
@@ -3202,6 +3204,7 @@
  SDL_JoystickNumAxes
  SDL_JoystickNumButtons
  SDL_JoystickOpen
+ SDL_MinimizeWindow
  SDL_NumJoysticks
  SDL_PollEvent
  SDL_PumpEvents
@@ -8543,6 +8546,7 @@
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
  T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
  T OSXHelpers::ForceActivateThisAppAndRaiseNSWindow(void*)
+ T OSXHelpers::RaiseNSWindow(void*)
  T PanelLessFunc(panorama::IUIPanel* const&, panorama::IUIPanel* const&)
  T PanelSortFunc(panorama::IUIPanel* const*, panorama::IUIPanel* const*)
  T ParseClassSymbols(CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, char const*)
@@ -10698,9 +10702,11 @@
  T panorama::CTopLevelWindowOpenVROverlay::GetWindowBounds(float&, float&, float&, float&)
  T panorama::CTopLevelWindowOpenVROverlay::GetWindowPosition(float&, float&)
  T panorama::CTopLevelWindowOpenVROverlay::IsMouseOver()
+ T panorama::CTopLevelWindowOpenVROverlay::Minimize()
  T panorama::CTopLevelWindowOpenVROverlay::OnWindowResize(unsigned int, unsigned int)
  T panorama::CTopLevelWindowOpenVROverlay::RunPlatformFrame()
  T panorama::CTopLevelWindowOpenVROverlay::SetMouseCursor(panorama::EMouseCursors)
+ T panorama::CTopLevelWindowOpenVROverlay::SetTopMost(bool)
  T panorama::CTopLevelWindowOpenVROverlay::SetVisible(bool)
  T panorama::CTopLevelWindowOpenVROverlay::SetWindowPosition(float, float)
  T panorama::CTopLevelWindowOpenVROverlay::Shutdown()
@@ -10720,10 +10726,12 @@
  T panorama::CTopLevelWindowOverlay::GetWindowBounds(float&, float&, float&, float&)
  T panorama::CTopLevelWindowOverlay::GetWindowPosition(float&, float&)
  T panorama::CTopLevelWindowOverlay::IsMouseOver()
+ T panorama::CTopLevelWindowOverlay::Minimize()
  T panorama::CTopLevelWindowOverlay::OnWindowResize(unsigned int, unsigned int)
  T panorama::CTopLevelWindowOverlay::RunPlatformFrame()
  T panorama::CTopLevelWindowOverlay::SetFixedSurfaceSize(unsigned int, unsigned int)
  T panorama::CTopLevelWindowOverlay::SetMouseCursor(panorama::EMouseCursors)
+ T panorama::CTopLevelWindowOverlay::SetTopMost(bool)
  T panorama::CTopLevelWindowOverlay::SetVisible(bool)
  T panorama::CTopLevelWindowOverlay::SetWindowPosition(float, float)
  T panorama::CTopLevelWindowOverlay::Shutdown()
@@ -10741,11 +10749,13 @@
  T panorama::CTopLevelWindowSDL::GetWindowPosition(float&, float&)
  T panorama::CTopLevelWindowSDL::IncrementRepeats(panorama::KeyCode)
  T panorama::CTopLevelWindowSDL::IsMouseOver()
+ T panorama::CTopLevelWindowSDL::Minimize()
  T panorama::CTopLevelWindowSDL::OnWindowResize(unsigned int, unsigned int)
  T panorama::CTopLevelWindowSDL::PumpMessageLoop()
  T panorama::CTopLevelWindowSDL::SetIcon()
  T panorama::CTopLevelWindowSDL::SetMouseCursor(panorama::EMouseCursors)
  T panorama::CTopLevelWindowSDL::SetPreventForceWindowOnTop(bool)
+ T panorama::CTopLevelWindowSDL::SetTopMost(bool)
  T panorama::CTopLevelWindowSDL::SetVisible(bool)
  T panorama::CTopLevelWindowSDL::SetWindowPosition(float, float)
  T panorama::CTopLevelWindowSDL::Shutdown()
@@ -12397,6 +12407,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MediaVolumeDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MediaVolumeMute>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MediaVolumeUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MinimizeApp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveDown, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveLeft, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveRight, int>(panorama::IUIPanel*, char const*, char const**)
@@ -12555,6 +12566,8 @@
  T panorama::MediaVolumeMute::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::MediaVolumeUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::MediaVolumeUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::MinimizeApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::MinimizeApp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::MoveDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::MoveDown::MakeEvent(panorama::IUIPanelClient const*, int)
  T panorama::MoveLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)

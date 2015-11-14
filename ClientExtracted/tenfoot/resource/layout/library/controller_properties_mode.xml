@@ -474,6 +474,14 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_FrictionVertScale" />
 					<Slider id="VerticalFriction" direction="horizontal" />
 				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="gyro" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroLeft" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseGyroLeft" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" sources="gyro" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroRight" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseGyroRight" />
+				</Panel>				
 				<!-- Mouse Mode Advanced -->
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Smoothing" />
@@ -500,6 +508,10 @@
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="off" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivityMouseJoystick" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="MouseJoystick" sources="gyro" advanced="off" visualization="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityGyroScale" />
+					<Slider id="GyroSensitivityScaleMouseJoystick" direction="horizontal" />
 				</Panel>				
 				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
@@ -512,6 +524,14 @@
 				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger" gameactions="off" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_FrictionVertScale" />
 					<Slider id="VerticalFrictionMouseJoystick" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="MouseJoystick" sources="gyro" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroLeft" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickGyroLeft" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="MouseJoystick" sources="gyro" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroRight" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickGyroRight" />
 				</Panel>
 				<!-- Mouse Joystick Mode Advanced -->
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger">

@@ -1908,12 +1908,12 @@ LibraryAppDetails.ReadyToDownload #ReadyToDownload
 	visibility: visible;
 }
 
-.ReadyToPlay #ReadyToDownload, .ReadyToStream #ReadyToDownload, .UnavailableOnPlatform #ReadyToDownload
+LibraryAppDetails.ReadyToPlay #ReadyToDownload, LibraryAppDetails.ReadyToStream #ReadyToDownload, LibraryAppDetails.UnavailableOnPlatform #ReadyToDownload
 {
 	visibility: collapse;
 }
 
-.ReadyToPlay #ReadyToPlay
+LibraryAppDetails.ReadyToPlay #ReadyToPlay
 {
 	wash-color: readytoplaygreen;
 	opacity: 1.0;
@@ -1921,23 +1921,25 @@ LibraryAppDetails.ReadyToDownload #ReadyToDownload
 	background-image: url( "file://{images}/library/icon_readytoplay.png" );
 }
 
-.ReadyToStream #ReadyToStream
+LibraryAppDetails.ReadyToStream #ReadyToStream
 {
 	wash-color: readytoplaygreen;
 	visibility: visible;
 	background-image: url( "file://{images}/library/icon_readytostream.png" );
 }
 
-.ReadyToPlay.ReadyToStream #ReadyToStream
-{
-	visibility: collapse;
-}
 
-.UnavailableOnPlatform #NotReadyToPlay
+LibraryAppDetails.UnavailableOnPlatform #NotReadyToPlay
 {
 	wash-color: #666666;
 	visibility: visible;
 	background-image: url( "file://{images}/library/icon_readytofail.png" );
+}
+
+LibraryAppDetails.ReadyToPlay.ReadyToStream #ReadyToStream,
+LibraryAppDetails.UnavailableOnPlatform.ReadyToStream #NotReadyToPlay
+{
+	visibility: collapse;
 }
 
 #GridControllerSupport,

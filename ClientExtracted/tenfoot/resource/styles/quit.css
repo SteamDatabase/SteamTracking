@@ -73,6 +73,11 @@
     visibility: visible;
 }
 
+.SteamOS #MinimizeBigPicture
+{
+	visibility: collapse;
+}
+
 .NotLoggedIn .NotLoggedInHidden, .SteamOS.SteamOS_EnableDesktop.NotLoggedIn #QuitBigPicture
 {
 	visibility: collapse;

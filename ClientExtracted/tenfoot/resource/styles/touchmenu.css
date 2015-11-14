@@ -105,7 +105,17 @@
 
 .TouchKeyClicked
 {
-	background-color: #ffffffff;
+    border: 8px solid #eeeeeeaa;
+}
+
+.TouchKeyClicked #TouchLabel
+{
+	font-size: 28px;
+}
+
+.TouchKeyClicked #TouchLabel.SmallLabel
+{
+	font-size: 14px;
 }
 
 #Pointer
