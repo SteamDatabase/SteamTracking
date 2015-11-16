@@ -351,19 +351,26 @@ CVideoWatch.prototype.OnTimeUpdatePlayer = function()
 CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 {
 	var strClosedCaptionCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
-	if ( !strClosedCaptionCode && !this.m_bEnabledAudioDubTrack )
+	if ( !strClosedCaptionCode )
 	{
-		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		if ( !this.m_bEnabledAudioDubTrack )
 		{
-			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+			for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
 			{
-				if ( this.m_player.GetLanguageForCurrentAudioTrack() == strCode )
-					strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
-				else
-					strClosedCaptionCode = strCode;
+				if ( CVTTCaptionLoader.LanguageCountryCodes[ strCode ].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+				{
+					if ( this.m_player.GetLanguageForCurrentAudioTrack() == strCode )
+						strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
+					else
+						strClosedCaptionCode = strCode;
 
-				break;
+					break;
+				}
 			}
+		}
+		else
+		{
+			strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
 		}
 	}
 
