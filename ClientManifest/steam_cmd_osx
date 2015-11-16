@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1439237729"
+	"version"		"1447437936"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.f4b59090f5c311ee2cd3bfc991877434c6d2cfd3"
-		"checksum"		"f4b59090f5c311ee2cd3bfc991877434c6d2cfd3"
-		"size"		"57654"
+		"file"		"steamcmd_public_all.zip.76bb1a1de1425b226b85cf2353f39eb5e908d05a"
+		"checksum"		"76bb1a1de1425b226b85cf2353f39eb5e908d05a"
+		"size"		"57650"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.444b3e83e43eabc04560fb191b52912ccd777b9e"
-		"checksum"		"444b3e83e43eabc04560fb191b52912ccd777b9e"
-		"size"		"15610161"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.0f9064f17631b67d550e2c222ffe66ba62f6ac08_9338220"
+		"file"		"steamcmd_bins_osx.zip.68c1ae06c0f65bc71bb9996aabd6f93ba6b9238a"
+		"checksum"		"68c1ae06c0f65bc71bb9996aabd6f93ba6b9238a"
+		"size"		"16609733"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.23549551367e4adb369e383a1792ea33437dbba9_9941853"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.46ceea73c06ba8ce8c3e7a01256b576288ccbb37"
-		"checksum"		"46ceea73c06ba8ce8c3e7a01256b576288ccbb37"
-		"size"		"1470855"
-		"zipvz"		"steamcmd_osx.zip.vz.e1415b4c1d60d6b4cfd446adce093b879434f92b_1090265"
+		"file"		"steamcmd_osx.zip.b0f04582cf8a528419945de726244ee8541d6b30"
+		"checksum"		"b0f04582cf8a528419945de726244ee8541d6b30"
+		"size"		"1557886"
+		"zipvz"		"steamcmd_osx.zip.vz.ee93bf5a7997bbbce6ef6825273102ec2bea1fa3_1154502"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"3eb6407cf86899abfe0e908f1745e9e33b0c0766b8123c62df23ae9931f5466422236f142b33830c90e655d423dad0db5172688d55df2713ff80412f441eb1cf29a089130c9f336f444afc65a4cfe44706d6a1f23af4b6f54274ca31070a46f8a76044089f8f7ba1f6ea72497938f2a444577e37e9ae6db9e360919b8fa2565b"
+	"osx"		"a8e9ecb648d75309133b518fccf4f27bf9b48dc122024a55d052836e45a72bdcc0398475acc42f7848e1bb5430f4967099c23a819228bbfee97c13a3ba97835ae3e8d5782501644369e130202c4773160e595f82a28c1b6570ff4c9172117a5c96ecfe036d37041a59b442e6399d2ef0f54adda7fa7a7d3e155b73a2eb296782"
 }
