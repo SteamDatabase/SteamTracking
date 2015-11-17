@@ -3729,6 +3729,13 @@ SettingsPanel .SettingsContent
 	padding: 0px 0px 0px 0px;
 }
 
+.SettingsSubcheckboxes
+{
+	margin-top: 4px;
+	margin-left: 56px;
+	margin-bottom: 4px;
+}
+
 // Temp stuff for the coming soon messages on the controller config settings page
 SettingsPanel_ControllerConfigs .SettingsContent
 {

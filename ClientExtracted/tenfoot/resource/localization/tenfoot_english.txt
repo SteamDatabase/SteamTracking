@@ -2931,6 +2931,9 @@
 	"Settings_RemoteClients_AdvancedClientOptions_Title" "Advanced Client Options"
 	"Settings_RemoteClients_AdvancedClientOptions_Description" "To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
 	"Settings_RemoteClients_EnableHardwareEncoding" "Enable hardware encoding"
+	"Settings_RemoteClients_EnableHardwareEncodingNVIDIA" "Enable hardware encoding on NVIDIA GPU"
+	"Settings_RemoteClients_EnableHardwareEncodingAMD" "Enable hardware encoding on AMD GPU (not recommended with Steam Link)"
+	"Settings_RemoteClients_EnableHardwareEncodingIntel" "Enable hardware encoding on Intel iGPU"
 	"Settings_RemoteClients_EnableHardwareDecoding" "Enable hardware decoding"
 	"Settings_RemoteClients_EnableTrafficPriority" "Prioritize network traffic"
 	"Settings_RemoteClients_EnableTrafficPriority_Description" "If you have a newer or high-end router, you might also turn on network traffic prioritization."
@@ -2950,6 +2953,17 @@
 	"Settings_RemoteClients_Resolution720p" 	"1280x720 (720p)"
 	"Settings_RemoteClients_Resolution480p" 	"852x480 (480p)"
 	"Settings_RemoteClients_StreamingSupport"	"View support info"
+	"Settings_RemoteClients_SoftwareEncodingThreads"	"Number of software encoding threads"
+	"Settings_RemoteClients_SoftwareEncodingThreads_0"	"Automatic"
+	"Settings_RemoteClients_SoftwareEncodingThreads_1"	"1"
+	"Settings_RemoteClients_SoftwareEncodingThreads_2"	"2"
+	"Settings_RemoteClients_SoftwareEncodingThreads_3"	"3"
+	"Settings_RemoteClients_SoftwareEncodingThreads_4"	"4"
+	"Settings_RemoteClients_SoftwareEncodingThreads_5"	"5"
+	"Settings_RemoteClients_SoftwareEncodingThreads_6"	"6"
+	"Settings_RemoteClients_SoftwareEncodingThreads_7"	"7"
+	"Settings_RemoteClients_SoftwareEncodingThreads_8"	"8"
+	"Settings_RemoteClients_DynamicallyAdjustResolution" "Adjust resolution to improve performance"
 
 	"Settings_RemoteClients_Connected" "Connected"
 	"Settings_RemoteClients_DifferentUser" "Different user logged in"
@@ -5171,4 +5185,6 @@
 	
 	"Overlay_SteamControllerHUD_HelpText"	"Steam Controller Input Helper - Press the Steam Button to disable"
 	"Overlay_ToggleControllerHUD" "Toggle Controller HUD"
+
+	"Steam_Browser_Disabled" "The Steam Browser is disabled.  Please consult the Steam support website for more information."
 }

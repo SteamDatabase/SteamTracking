@@ -9773,7 +9773,7 @@
  T URLEncode(char const*)
  T URLLabel_Factory()
  T UnlinkFile(char const*)
- T UpdateHardwarSupportCheckboxes(vgui::Panel*, bool)
+ T UpdateHardwareSupportCheckboxes(vgui::Panel*, bool)
  T UpdateProfilingState()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T V_strstr(char const*, char const*)

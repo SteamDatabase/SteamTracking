@@ -2699,3 +2699,9 @@ Button:hover #SuggestedStatus
 {
 	visibility: visible;
 }
+
+HTML #BrowserDisabledMessage
+{
+	horizontal-align: center;
+	vertical-align: center;
+}

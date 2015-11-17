@@ -447,6 +447,7 @@
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
  D vtable for IPC::PosixSharedMemory
+ GetCPUInformation()
  GetMiniDumpBuildID
  GetMiniDumpSteamID
  Log
@@ -664,6 +665,7 @@
  SteamVProf::CVProfile::~CVProfile()
  T CChromeIPCClient::AbortWaitForPendingData()
  T CChromeIPCClient::BExitMasterCEFProcess()
+ T CChromeIPCClient::BIsBrowserEnabled()
  T CChromeIPCClient::BRestartMasterCEFProcess()
  T CChromeIPCClient::BStartMasterCEFProcess(char const*)
  T CChromeIPCClient::BWaitForPendingData()
@@ -707,6 +709,7 @@
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
  T CHTMLController::BDispatchThreadedPaintCommand(HTMLCommandBuffer_t*)
  T CHTMLController::BExitMasterCEFProcess()
+ T CHTMLController::BIsBrowserEnabled()
  T CHTMLController::BStartMasterCEFProcess(char const*)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float)
  T CHTMLController::CHTMLController()
@@ -2499,12 +2502,14 @@
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableSandbox
  b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableWinH264
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
  b CChromeIPCClient::Init(unsigned int)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
+ b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableSandbox
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableWinH264
  b k_InvalidClientID
