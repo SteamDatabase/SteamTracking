@@ -1726,11 +1726,11 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'pinvalidda' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PinValidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'payvalidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PinValidda customers';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for payvalidda customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
@@ -3609,7 +3609,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'pinvalidda' && providerPaymentMethod == 71 )
 			{
-				$('payment_method_review_text').innerHTML = 'PinValidda';
+				$('payment_method_review_text').innerHTML = 'payvalida';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mangirkart' && providerPaymentMethod == 72 )
