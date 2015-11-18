@@ -4294,6 +4294,9 @@
 
 	CCheerPanel.prototype.UpdateCheerMeters = function( flElapsed )
 	{
+		// Just returning here until we enable the Cheer Meter again
+		return;
+
 		var flWeightPerBar = DOTA_CONSTS.CHEER_BAR_COUNT / 100;
 
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
