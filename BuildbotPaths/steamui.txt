@@ -536,6 +536,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/welcome_nocontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/welcometosteam.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/x264wrapper.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/yuvhelpers.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/lzma-9.20/C/LzmaDec.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/miniz/miniz.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/accountutils.cpp
@@ -647,6 +648,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vgui/vprofpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/yuvhelpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/SDL2/SDL_rect.h
@@ -1175,7 +1177,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/storejavascript.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/vgui/chartpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/vgui/vgui_console.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/video/videotypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../external/v8/include/v8.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../steamexe/osx/ipctool.h
