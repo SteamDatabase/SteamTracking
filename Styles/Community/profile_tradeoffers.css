@@ -1,4 +1,25 @@
 
+.trade_offers_escrow_explanation
+{
+	margin-left: 48px;
+	padding: 15px 10px;
+	border: 2px solid white;
+	background-color: #799905;
+
+}
+.trade_offers_escrow_explanation .title
+{
+	font-size: 20px;
+	color: white;
+}
+.trade_offers_escrow_explanation .subtitle
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color: white;
+}
+
 .tradeoffer {
 	padding-top: 24px;
 	padding-left: 48px;

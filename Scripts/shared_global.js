@@ -2782,7 +2782,7 @@ function BindAutoFlyoutEvents()
 				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown') )
 					return;
 
-				if ( $Tab.is( e.toElement ) || $J.contains( $Tab[0], e.toElement ) )
+				if ( $Tab.is( e.relatedTarget ) || $J.contains( $Tab[0], e.relatedTarget ) )
 					return;
 
 				HideFlyoutMenu( null, $Tab, $Content );
@@ -2814,7 +2814,7 @@ function BindAutoFlyoutEvents()
 		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
 
 		if ( !$Content.length || $Content.data('flyout-event-running') || bResponsiveSlidedownMenu ||
-			$Content.is( e.toElement ) || $J.contains( $Content[0], e.toElement ) )
+			$Content.is( e.relatedTarget ) || $J.contains( $Content[0], e.relatedTarget ) )
 			return;
 
 		if ( $Content.is(':visible') )

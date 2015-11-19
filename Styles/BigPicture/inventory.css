@@ -68,15 +68,13 @@
 	transform: none;
 }
 
-.ItemDetailView .InventoryListingWrapper
-{
-	transform: translatey( 1080px );
-	opacity: 0.0;
-}
-
 #ItemDetailWrapper
 {
-	transition-property: opacity, transform;
+	background-color: #031a3d;
+	background-image: url( "file://{images}/panel_background.png" );
+	transform: translateY( 100% );	
+
+	transition-property: transform;
 	transition-duration: mediumduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0.0s;
@@ -85,12 +83,10 @@
 	height: 100%;
 
 	transform: translatey( 1080px );
-	opacity: 0.0;
 }
 
 .ItemDetailView #ItemDetailWrapper
 {
-	opacity: 1.0;
 	transform: translatey( 0px );
 }
 

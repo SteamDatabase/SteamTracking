@@ -3527,7 +3527,10 @@ SellItemDialog = {
 				var strText = '';
 				if ( bNeedsMobileConfirmation )
 				{
-					strText = 'In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.';
+					strText = 'In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.' +
+							'<br><br>' +
+							'If you don\'t see the Confirmations option in the main menu of the app, then make sure you have the latest version of the app.';
+
 				}
 				else
 				{
@@ -4839,5 +4842,29 @@ function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRe
 	});
 	$J(window).trigger('resize.DynamicInventorySizing');
 
+}
+
+function ShowEscrowExplanationDialog( bAddSteamGuardLink )
+{
+	if ( bAddSteamGuardLink )
+	{
+		var dialog = ShowConfirmDialog(
+			'What is Escrow?',
+			'<div class="escrow_explanation">After a trade has been accepted by both parties, if either party\'s account has not been secured by the Steam Guard Mobile Authenticator, then to protect against unauthorized trades, the traded items will be placed in escrow.<br><br>During the escrow period, the items will not be available to either user. This allows users who have not secured their accounts to cancel any unauthorized trades and recover their items.<br><br>Canceling all pending and in-escrow trades will place a trading hold on your account for a few days to prevent any further unauthorized attempts to trade away items.</div>',
+			'Learn About Steam Guard Mobile Authenticator',
+			'Dismiss'
+		);
+		dialog.done( function() {
+			window.open( 'http://store.steampowered.com/mobile' );
+		} );
+	}
+	else
+	{
+		var dialog = ShowAlertDialog(
+			'What is Escrow?',
+			'<div class="escrow_explanation">After a trade has been accepted by both parties, if either party\'s account has not been secured by the Steam Guard Mobile Authenticator, then to protect against unauthorized trades, the traded items will be placed in escrow.<br><br>During the escrow period, the items will not be available to either user. This allows users who have not secured their accounts to cancel any unauthorized trades and recover their items.<br><br>Canceling all pending and in-escrow trades will place a trading hold on your account for a few days to prevent any further unauthorized attempts to trade away items.</div>'
+		);
+	}
+	return false;
 }
 

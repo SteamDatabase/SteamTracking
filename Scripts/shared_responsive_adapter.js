@@ -208,47 +208,6 @@ jQuery( function($) {
 		} ).trigger( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu');
 	}
 
-	$('#responsive_beta_logo' ).click( function() {
-
-		var $ReportBugButton = $J('<div/>', {'class': ' btn_darkblue_white_innerfade btn_medium'} ).append( $J('<span/>').text( 'Report a Bug' ) );
-
-		var $Description = $J('<div/>', {style: 'font-size: 1.2em;' } );
-		$Description.append( $J('<h2/>', {style: "color: #ffffff; margin-top: 12px; margin-left: 12px;"} ).text('Welcome!') );
-		$Description.append( $J('<p/>', {style: "margin-left: 12px;"}).append( "We're currently beta testing a new update to the Steam websites that uses a responsive design to provide a better experience on mobile phones, tablets, touch-enabled laptops, and other devices.<br \/>\r\n<br \/>\r\n\t\t\t\t\t\t\t\tVisit the Steam Mobile forum to learn more or leave feedback." ) );
-
-		//$Description.append( $J('<p/>').append( "You can also report any issues you are having with the new pages here:" ) );
-		$Description.append( $J('<div/>', {'class': 'newmodal_buttons', 'style': 'text-align: left; margin-bottom: 8px;'} ).append(
-			$J('<a/>', {'href': 'http://steamcommunity.com/discussions/forum/8/', 'class': ' btn_darkblue_white_innerfade btn_medium'} ).append( $J('<span/>').text( 'Visit the Steam Mobile forum' ) )
-		).append( $ReportBugButton ) );
-
-		ShowDialog(
-			'Steam Responsive Web Beta',
-			$Description
-		);
-
-		$ReportBugButton.click( function() {
-			var rgSpecs = [];
-
-			rgSpecs.push( '[b]Page[/b]: [url=' + window.location.href + ']' + document.title + '[/url]' );
-			rgSpecs.push( '[b]Device size[/b]: ' + screen.width + 'x' + screen.height + ' (window: ' + (window.innerWidth || '?') + 'x' + (window.innerHeight || '?') + ')' );
-			rgSpecs.push( '[b]Pixel ratio[/b]: ' + ( window.devicePixelRatio || 'unknown' ) );
-			rgSpecs.push( '[b]User Agent[/b]: ' + ( navigator && navigator.userAgent ) || 'unknown' );
-
-			var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-			if ( orientation && orientation.type )
-				orientation = orientation.type;
-			if ( typeof orientation == "string" )
-				rgSpecs.push( '[b]Orientation[/b]: ' + orientation );
-
-			var strPost = '[quote]\n' + rgSpecs.join( '\n' ) + '\n[/quote]\n\nEnter your bug report here:\n\n';
-
-			PostToURLWithSession( 'http://steamcommunity.com/discussions/forum/8/537405286642983692/', {
-				discussions_reply_prefill: strPost,
-				discussions_reply_prefill_prompt: 'We\'ve automatically filled in some information about your device to help us diagnose issues.  Please add your own details to the end of the post.'
-			} );
-		});
-	});
-
 	Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents );
 
 	Responsive_InitFixOnScroll( $ );

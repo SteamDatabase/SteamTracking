@@ -600,3 +600,7 @@ a.chat_ban_admin {
 		margin-right: 1%;
 	}
 }
+
+.has_localization {
+	color: #799905 ;
+}

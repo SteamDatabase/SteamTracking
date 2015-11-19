@@ -325,7 +325,7 @@ html.responsive body {
 }
 
 #responsive_menu_logo,
-#responsive_beta_logo {
+#responsive_header_search_btn {
 	position: absolute;
 	top: 9px;
 	cursor: pointer;
@@ -337,7 +337,7 @@ html.responsive body {
 	left: 8px;
 }
 
-#responsive_beta_logo {
+#responsive_header_search_btn {
 	right: 8px;
 }
 

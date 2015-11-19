@@ -322,7 +322,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 
 .blotter_action_labels Label
 {
-	margin-bottom: 4px;
+	margin-bottom: 0px;
 }
 
 .blotter_author_block Label
@@ -873,8 +873,14 @@ Label.blotter_group_announcement_header_contents
 	margin-top: 8px;
 	opacity: 0.95;
 	margin-left: 6px;
-	font-size: 24px;
+	font-size: 36px;
 	margin-bottom: 4px;
+
+	color: tcstatictext;
+}
+#blotter_button_wrapper_guide:focus .blotter_workshopitem_title
+{
+	color: #0b1c3b;
 }
 
 .blotter_workshopitem_description
@@ -971,6 +977,7 @@ Label.blotter_group_announcement_header_contents
 .blotter_container
 {
 	width: 100%;
+	height: fit-children;
 	padding-top: 20px;
 }
 
@@ -997,6 +1004,8 @@ Label.blotter_group_announcement_header_contents
 #RightDetailsColumn .commentthread_comment
 {
 	margin-left: 0px;
+	height: fit-children;
+	max-height: fit-children;
 }
 
 .blotter_daily_rollup_line Label.blotter_morerollup
@@ -1022,6 +1031,7 @@ Label.blotter_group_announcement_header_contents
 .blotter_comment_thread
 {
 	flow-children: down;
+	height: fit-children;
 	width: 100%;
 }
 
@@ -1201,6 +1211,7 @@ LoadingThrobber.HorizontallyCenteredThrobber {
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 
+	padding-bottom: 160px;
 
 	opacity: 0;
 	width: 100%;

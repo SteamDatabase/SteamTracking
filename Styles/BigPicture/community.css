@@ -38,7 +38,8 @@
 	opacity: 1.0;
 }
 
-.ContentAreaFocus .NxRightColumn
+.ContentAreaFocus .NxRightColumn,
+.ContentHover .NxRightColumn
 {
 	transform: translatex( -200px );
 }

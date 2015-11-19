@@ -1969,6 +1969,15 @@ a.guide_row {
 	max-width: calc( 100% - 8px );
 }
 
+#twofactor_username
+{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	color: #C6D4DF;
+}
+
 #password_twofactor, #twofactor_resetcode
 {
 	width: 50px;

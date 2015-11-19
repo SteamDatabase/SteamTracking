@@ -333,9 +333,11 @@
 // User Reviews
 //
 
-.ReviewHeader {
-	background-color: #000;
-	padding: 10px;
+.ReviewHeader
+{
+	height: 60px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #00000033 ), to( #00000066 ) );
+	padding: 12px;
 	flow-children: right;
 	width: 1600px;
 	margin-bottom: 10px;
@@ -343,13 +345,13 @@
 
 .ReviewHeader  .HeaderTextContainer {
 	flow-children: right;
-	color: #72899e; // @todo
-	font-size: 24px; // @todo
+	color: #66c0f4; // @todo
+	font-size: 28px; // @todo
 
 }
 
 .ReviewHeader > .HeaderTextContainer Label.Count {
-	color: #333333; // @todo
+	color: #7d94a0; // @todo
 	margin-left: 5px;
 }
 
@@ -360,7 +362,7 @@
 
 .ReviewHeader .ScoreContainer Label {
 	horizontal-align: right;
-	font-size: 24px; // @todo
+	font-size: 28px; // @todo
 	color: #72899e; // @todo
 }
 
@@ -386,7 +388,7 @@
 	desaturation: 0.2;
 
 	margin-left: 0px;
-	margin-right: 20px;
+	margin-right: 12px;
 	margin-bottom: 20px;
 
 	/*pre-transform-scale2d: 0.9; */
@@ -403,7 +405,7 @@
 }
 
 .Recommendation.Wide {
-	width: 1060px;
+	width: 1052px;
 }
 
 
@@ -452,6 +454,11 @@
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: pre-transform-scale2d;
+}
+.Recommendation.Down .BackgroundImage
+{
+	wash-color: #ad424f;
+	opacity: 0.6;
 }
 
 .Recommendation:focus .Image
@@ -509,9 +516,17 @@
 
 .Recommendation .ReviewStats Image
 {
-	height: 45px;
-	width: 45px;
+	height: 54px;
+	width: 54px;
 	background-color: #000000;
+}
+.Recommendation.Down .ReviewStats Image
+{
+	wash-color: #ad424f;
+}
+.Recommendation.Up .ReviewStats Image
+{
+	wash-color: #66c0f4;
 }
 
 .Recommendation.AppHubItemTall .ReviewStats Image
@@ -538,6 +553,17 @@
 	font-size: 24px;
 }
 
+.ThrobberFullContainer {
+	width: 1200px;
+	height: 100%;
+	vertical-align: center;
+	visibility: collapse;
+}
+
+.ThrobberFullContainer.Visible {
+	visibility: visible;
+}
+
 ////////////////////////////////////
 // In Library Icons
 ////////////////////////////////////
@@ -553,10 +579,14 @@
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 }
-.BasicCapsule:descendantfocus .InLibraryWrapper Image,
-.BasicHeader:descendantfocus .InLibraryWrapper Image,
-.UpdatedItem:descendantfocus .InLibraryWrapper Image,
-.PromoItemContainer:descendantfocus .InLibraryWrapper Image
+.BasicCapsule:focus .InLibraryWrapper Image,
+.BasicCapsule:hover .InLibraryWrapper Image,
+.BasicHeader:focus .InLibraryWrapper Image,
+.BasicHeader:hover .InLibraryWrapper Image,
+.UpdatedItem:focus .InLibraryWrapper Image,
+.UpdatedItem:hover .InLibraryWrapper Image,
+.PromoItemContainer:focus .InLibraryWrapper Image,
+.PromoItemContainer:hover .InLibraryWrapper Image
 {
 	opacity: 1;
 	desaturation: 0;

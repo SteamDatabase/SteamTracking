@@ -453,13 +453,39 @@ a.market_listing_item_name_link:hover {
 .market_listing_price_without_fee {
 	display: none;
 }
+.market_listing_price_with_publisher_fee_only {
+	color: white;
+	display: none;
+}
+
+.two_factor_sale_enabled .market_listing_price_without_fee {
+	display: none;
+}
+.two_factor_sale_enabled .market_listing_price_with_fee {
+	text-decoration: line-through;
+	color: #626366;
+	display: inline;
+}
+.two_factor_sale_enabled .market_listing_price_with_fee:after {
+	content:"\a";
+	white-space: pre;
+}
+.two_factor_sale_enabled .market_listing_price_with_publisher_fee_only {
+	display: inline;
+}
 
 #market_buynow_dialog_contents .market_listing_price_without_fee {
 	display: inline;
 }
 
-#market_buynow_dialog_contents .market_listing_price_with_fee {
+#market_buynow_dialog_contents .market_listing_price_with_fee,
+#market_buynow_dialog_contents .market_listing_price_with_publisher_fee_only {
 	display: none;
+}
+
+.two_factor_sale_enabled #market_buynow_dialog_totals_transactionfee {
+	color: #626366;
+	text-decoration: line-through;
 }
 
 .market_listing_my_price {
@@ -489,6 +515,27 @@ a.market_listing_item_name_link:hover {
 .market_listing_searchresult .market_listing_their_price > span {
 	vertical-align: top;
 	margin: 1.3em 0;
+}
+
+.market_listing_their_price > .market_table_value .normal_price,
+.market_listing_their_price > .market_table_value .sale_price {
+	color: white;
+}
+
+.two_factor_sale_enabled .market_listing_their_price > .market_table_value .normal_price {
+	color: #626366;
+	text-decoration: line-through;
+	display: inline;
+}
+.two_factor_sale_enabled .market_listing_their_price > .market_table_value .normal_price:after {
+	content:"\a";
+	white-space: pre;
+}
+.market_listing_their_price > .market_table_value .sale_price {
+	display: none;
+}
+.two_factor_sale_enabled .market_listing_their_price > .market_table_value .sale_price {
+	display: inline;
 }
 
 .market_listing_num_listings {
@@ -929,6 +976,18 @@ input.filter_search_box:focus {
 
 .market_listing_nav {
 	padding-top: 24px;
+}
+
+.market_sale_msg
+{
+	position: relative;
+	width: 929px;
+	margin: 0 auto;
+	background-color: rgba( 48, 95, 128, 0.9 );
+	padding: 10px;
+	color: white;
+	font-size: 18px;
+	margin-top: 10px;
 }
 
 .market_listing_warning_msg {

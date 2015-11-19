@@ -1,4 +1,10 @@
 
+function BIsTwoFactorEnabled()
+{
+	var bEnabled = $J( document.body).hasClass( "two_factor_sale_enabled" );
+	return bEnabled;
+}
+
 RemoveListingDialog = {
 	m_bOKClicked: false,
 	m_bInitialized: false,
@@ -606,6 +612,13 @@ BuyItemDialog = {
 			{
 				alert( "An unexpected error occurred trying to show the purchase dialog. Error: " + listingid + " " + this.m_nTotal + " " + this.m_nSubtotal + " " + this.m_nFeeAmount + " " + nFeePublisher + " " + nFeeSteam );
 				return;
+			}
+
+			if ( BIsTwoFactorEnabled() )
+			{
+				this.m_nTotal -= nFeeSteam;
+				this.m_nFeeAmount -= nFeeSteam;
+				//nFeeSteam = 0;
 			}
 
 			$('market_buynow_dialog_totals_subtotal').update( v_currencyformat( this.m_nSubtotal, sWalletCurrencyCode ) );
@@ -1666,8 +1679,12 @@ function CreatePopularItemClosure( data, iLink )
 
 			if ( data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
 			{
-				var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span ' );
-				var elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span ' );
+				var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
+				var elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
+				elPrice.html( elNewPrice.html() );
+
+				elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span.sale_price ' );
+				elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span.sale_price ' );
 				elPrice.html( elNewPrice.html() );
 			}
 		}
@@ -1794,7 +1811,8 @@ function Market_LoadOrderSpread( item_nameid )
 			country: g_strCountryCode,
 			language: g_strLanguage,
 			currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
-			item_nameid: item_nameid
+			item_nameid: item_nameid,
+			two_factor: BIsTwoFactorEnabled() ? 1 : 0
 		}
 	} ).error( function ( ) {
 		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
@@ -1906,7 +1924,8 @@ ItemActivityTicker = {
 				country: g_strCountryCode,
 				language: g_strLanguage,
 				currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
-				item_nameid: this.m_llItemNameID
+				item_nameid: this.m_llItemNameID,
+				two_factor: BIsTwoFactorEnabled() ? 1 : 0
 			}
 		} ).fail( function( jqxhr ) {
 			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );

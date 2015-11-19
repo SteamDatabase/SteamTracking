@@ -308,6 +308,52 @@ function RegisterSearchDialog()
 	$.RegisterFooterButton( pContextPanel, 'pad_x', 'SEARCH' );
 }
 
+var g_bRegisteredForCart = false;
+var g_cItemsInCart = 0;
+function RegisterCartHotkey( cItemsInCart )
+{
+	if ( g_bRegisteredForCart )
+		return;
+
+	g_bRegisteredForCart = true;
+	g_cItemsInCart = cItemsInCart;
+
+	// check if old or new client
+	var bRegistered = false;
+	try
+	{
+		$.RegisterForUnhandledEvent( 'ShoppingCartItemCount', function( cItems )
+		{
+			g_cItemsInCart = cItems;
+			$.DispatchEvent( 'QueuedInvalidateFooterPanel' );
+		});
+
+		bRegistered = true;
+	}
+	catch( e )
+	{
+	}
+
+	if ( !bRegistered )
+		return;
+
+	// register cart button
+	var pContextPanel = $.GetContextPanel();
+	$.RegisterKeyBind( pContextPanel, 'pad_y,steampad_y', function( eSource )
+	{
+		if ( g_cItemsInCart > 0 )
+			ShowShoppingCart();
+	});
+
+	$.RegisterEventHandler( 'ContributeToFooterPanel', pContextPanel, function( pPanel, pFooter )
+	{
+		if ( g_cItemsInCart > 0 )
+			pFooter.SetButton( 'pad_y', 'CART' );
+
+		return false;
+	});
+}
+
 function AddPackageToCart( strSessionID, nPackageID )
 {
 	return AddPackageToCartInternal( strSessionID, 'subid', nPackageID )
@@ -321,7 +367,7 @@ function AddBundleToCart( strSessionID, nBundleID )
 function AddPackageToCartInternal( strSessionID, strType, nItemID )
 {
 	
-	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\r\n\t\t\t\ttry\r\n\t\t\t\t{\r\n\t\t\t\t\t\/\/ new event\r\n\t\t\t\t\tvar cItems = (data && data.itemcount) ? data.itemcount : 0;\r\n\t\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartItemCount', cItems );\r\n\t\t\t\t}\r\n\t\t\t\tcatch( e )\r\n\t\t\t\t{\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%typeid%', strType );
 	pScript = pScript.replace( '%itemid%', nItemID );

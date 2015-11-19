@@ -393,7 +393,7 @@ $.entity_table = {
 };
 
 // included data: strCode, eCurrencyCode, strSymbol, bSymbolIsPrefix, bWholeUnitsOnly
-$.currency_data = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"CHF","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"DH","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true}};
+$.currency_data = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"CHF","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"AED","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true}};
 
 
 // takes an integer
@@ -952,11 +952,13 @@ CNXNavigation.prototype.Init = function()
 	var onFocus = this.onFocusButton.bind(this);
 	var onMoveUp = this.onMoveUp.bind(this);
 	var onMoveDown = this.onMoveDown.bind(this);
+	var onMoveRight = this.onMoveRight.bind(this);
 
 	$.Each(this.oNavigationContainer.Children(), function( oPanel )
 	{
 		$.RegisterEventHandler( 'MoveUp', oPanel, onMoveUp );
 		$.RegisterEventHandler( 'MoveDown', oPanel, onMoveDown );
+		$.RegisterEventHandler( 'MoveRight', oPanel, onMoveRight );
 	});
 
 	$.RegisterEventHandler( 'InputFocusSet', this.oNavigationContainer, onFocus );
@@ -968,13 +970,27 @@ CNXNavigation.prototype.Init = function()
 		return true;
 	});
 
+	$.RegisterEventHandler( 'Activated', this.oNavigationContainer, function( pPanel ) { return _this.onMoveRight( pPanel ); } );
+
 	// set up hover events for the navigation container and the target container, so
 	// that the proper panels are brought to the forefront when the user uses a mouse
 	
 	var hoverItemStyles = { };
 	hoverItemStyles[this.oNavigationContainer.id] = 'MenuHover';
 	hoverItemStyles[this.oTargetContainer.id] = 'ContentHover';
-	SetupPanelsHoverEvents( hoverItemStyles, $.GetContextPanel() );
+
+	SetupPanelsHoverEvents( hoverItemStyles, $.GetContextPanel(), function( pPanel )
+	{
+		// mouse is hovering over one of the panels in hoverItemStyles. If it is the target container panel, and focus
+		// is still in this context, pull focus to that panel
+		var pContext = $.GetContextPanel();
+		if ( !pContext.BHasKeyFocus() && !pContext.BHasDescendantKeyFocus() && !pContext.BHasClass( 'Loading' ) )
+			return;
+
+		if ( pPanel == _this.oTargetContainer && !pPanel.BHasKeyFocus() && !pPanel.BHasDescendantKeyFocus() )
+			pPanel.SetFocus();
+	});
+
 	
 	var pHasFocus = CPanelUtils.FindPanelWithFocus( this.oNavigationContainer );
 	if ( pHasFocus )
@@ -989,6 +1005,20 @@ CNXNavigation.prototype.onMoveUp = function( oPanel )
 CNXNavigation.prototype.onMoveDown = function( oPanel )
 {
 	this.eLastDirection = k_ELastDirection_Down;
+}
+
+CNXNavigation.prototype.onMoveRight = function( oPanel )
+{
+	// focus first panel
+	if ( this.oTargetContainer.GetChildCount() > 0 )
+	{
+		var pTop = this.oTargetContainer.GetChild( 0 );
+		pTop.SetFocus();
+
+		return true;
+	}
+
+	return false;
 }
 
 CNXNavigation.prototype.onFocusButton = function( oPanel )
@@ -1198,7 +1228,7 @@ function SetupMenuAndContentHoverEvents( menuPanelID, menuHoverClass, contentPan
 /**
  * for a panel on mouseover add and remove classes on a parent
  */
-function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses )
+function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses, fnMouseOverCallback )
 {
 	panel.SetPanelEvent( 
 		'onmouseover', 
@@ -1212,6 +1242,9 @@ function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses )
 					ancestorPanel.RemoveClass( classValue ); 				
 				}
 			} );
+
+			if ( fnMouseOverCallback )
+				fnMouseOverCallback( panel );
 		} 
 	);
 	
@@ -1237,7 +1270,7 @@ function onlyUnique(value, index, self)
 /**
  * Manages a map of panels and classes to use when that panel is hovered (and the other classes are removed)
  */
-function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel )
+function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel, fnMouseOverCallback )
 {
 	var hoverClasses = [];
 	for( var o in hoverPanelStyleMap ) 
@@ -1253,9 +1286,73 @@ function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel )
 	
 	$.Each( hoverPanelStyleMap, function( value, key ) 
 	{
-		SetupPanelHoverEvent( $( '#' + key ), ancestorPanel, hoverPanelStyleMap[key], uniqueClasses );		
+		SetupPanelHoverEvent( $( '#' + key ), ancestorPanel, hoverPanelStyleMap[key], uniqueClasses, fnMouseOverCallback );
 	} );
 }
+
+//
+// Manages infinite scroll on a panel
+//
+// pListPanel: Panel to contain children
+// strURL: URL to get more items
+// nTriggerMargin: Child offset from end of list at which more content should be requested
+// nTotalItems: Total number of expected items. Fetching will stop when this is reached.
+// fnGetData: Callback to grab parameters for web request
+// fnExtractChildren: Callback to extract child layout from data returned from web request
+//
+var CInfiniteScroller = (function()
+{
+	function CInfiniteScroller( pListPanel, strURL, nTriggerMargin, nTotalItems, fnGetData, fnExtractChildren )
+	{
+		this.m_pListPanel = pListPanel;
+		this.m_strURL = strURL;
+		this.m_nTriggerMargin = nTriggerMargin;
+		this.m_nTotalItems = nTotalItems;
+		this.m_fnGetData = fnGetData;
+		this.m_fnExtractChildren = fnExtractChildren;
+
+		this.m_nTriggerIndex = Math.max( this.m_pListPanel.GetChildCount() - this.m_nTriggerMargin, -1 );
+
+		var that = this;
+		$.RegisterEventHandler( 'InputFocusSet', that.m_pListPanel, function( p ) { that.OnInputFocusSet( p ) }  );
+	};
+
+	CInfiniteScroller.prototype.OnInputFocusSet = function( p )
+	{
+		$.Msg( this.m_pListPanel.id + " at " + p.tabindex + ", trigger at " + this.m_nTriggerIndex );
+		if ( this.m_nTriggerIndex != -1 && p.tabindex >= this.m_nTriggerIndex && this.m_pListPanel.GetChildCount() < this.m_nTotalItems )
+		{
+			this.m_nTriggerIndex = -1;
+			this.LoadNextData();
+		}
+	},
+
+	CInfiniteScroller.prototype.LoadNextData = function()
+	{
+		var that = this;
+		$.AsyncWebRequest( this.m_strURL,
+			{
+				type: 'GET',
+				data: this.m_fnGetData(),
+				success: function( data )
+				{
+					if ( that.m_fnExtractChildren )
+					{
+						data = that.m_fnExtractChildren( data );
+					}
+					that.m_pListPanel.BCreateChildren( data );
+					that.m_nTriggerIndex = that.m_nTriggerIndex = Math.max( that.m_pListPanel.GetChildCount() - that.m_nTriggerMargin, -1 );
+				},
+				error: function( e )
+				{
+					$.Msg( "Error: " + JSON.stringify( e ) );
+				}
+			} );
+	}
+
+	return CInfiniteScroller;
+})();
+
 
 
 /**

@@ -131,7 +131,7 @@ function HandleChangePageLoad( needGid )
 		{
 			GetValueFromLocalURL( "steammobile://steamguardsuppresstwofactorgid?gid=" + haveGid );
 		}
-	}
+	};
 
 	GetValueFromLocalURL( "steammobile://steamguardgetgid", 5,
 		processGidFunc,
@@ -148,6 +148,37 @@ function HandleChangePageLoad( needGid )
 	);
 }
 
+function HandleSplashettePageLoad( needGid )
+{
+	if ( g_alreadyLoaded )
+	{
+		return;
+	}
+	g_alreadyLoaded = true;
+
+	var processGidFunc = function( haveGid )
+	{
+		if ( needGid && haveGid != needGid )
+		{
+			$J('#splashette_rcode_wrapper').hide();
+		}
+	};
+
+	GetValueFromLocalURL( "steammobile://steamguardgetgid", 5,
+			processGidFunc,
+
+			function( )
+			{
+				processGidFunc( null );
+			},
+
+			function( )
+			{
+				processGidFunc( null );
+			}
+	);
+}
+
 
 function HandleSplashetteChange( near )
 {
@@ -155,6 +186,15 @@ function HandleSplashetteChange( near )
 		return;
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/change';
+}
+
+
+function HandleSplashetteViewRCode( near )
+{
+	if ( CheckCallInProgress() )
+		return;
+	ShowBusy( near );
+	window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode?countdown=0';
 }
 
 

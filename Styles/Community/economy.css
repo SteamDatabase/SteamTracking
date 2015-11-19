@@ -1380,6 +1380,13 @@ html.responsive .newmodal.economy_modal_ctn {
 	max-width: calc( 100% - 4px );
 }
 
+.escrow_explanation
+{
+	max-width: 500px;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+
 @media screen and (max-width: 650px )
 {
 	html.responsive .market_sell_dialog_input_area {

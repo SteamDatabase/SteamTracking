@@ -4818,3 +4818,69 @@ LibraryGameBadge .badge_info_description Label
 	margin-top: 10px;
 }
 
+
+
+/* Groupss list */
+
+#groups_list
+{
+	width: 1700px;
+	padding-right: 150px;
+}
+
+.GroupsGrid
+{
+	height: 1100px;
+	padding: 70px 40px 40px 20px;
+	margin: 0px;
+	flow-children: down;
+	width: 100%;
+}
+
+.Group
+{
+	flow-children: right;
+	height: 115px;
+	width: 50%;
+	margin-right: 10px;
+}
+
+.Group .AvatarImage {
+	width: 96px;
+	height: 96px;
+	margin-right: 10px;
+}
+
+.Group .TextContainer {
+	flow-children: down;
+	width: 100%;
+}
+
+.Group .MemberRow
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.Group .MemberRow Label
+{
+	width: 50%;
+	color: white;
+}
+
+.Group .MemberRow .InGame
+{
+	color: friendsingame_solid;
+}
+
+.Group .MemberRow .Online
+{
+	color: friendsonline_solid;
+}
+
+.Group:focus .MemberRow Label
+{
+	color: #072e47;
+}
+
+

@@ -309,10 +309,6 @@
 
 	color: #67c1f5ff;
 	background-color: nontransparent_module;
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #AppInWishlist
@@ -365,7 +361,7 @@
 {
 	width: 416px;
 	height: 100%;
-	margin-left: 12px;
+	margin-left: 22px;
 	flow-children: down;
 	color: #67c1f5ff;
 	font-size: 26px;
@@ -381,11 +377,6 @@
 	border-radius: 3px;
 
 	box-shadow: module_shadow;
-
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
 
 	transition-property: background-color;
 	transition-duration: mediumduration;
@@ -592,7 +583,7 @@
 {
 	width: 416px;
 	margin-bottom: 130px;
-	margin-left: 12px;
+	margin-left: 22px;
 	flow-children: down;
 }
 
@@ -606,32 +597,47 @@
 {
 	width: 100%;
 	background-color: nontransparent_module;
-	padding: 10px 18px;
+	padding: 18px 18px;
 	flow-children: down;
 	border-radius: 3px;
 	margin-bottom: 12px;
 
 	box-shadow: module_shadow;
+}
 
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
+.AppDetailsLeftColumn .AppDetailsBox
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #4c586159 ), to( #57666e59 ) );
+	background-image: none;
+	box-shadow: none;
+}
+.AppDetailsLeftColumn .AppDetailsBox.PurchaseOptions
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #4c586159 ), to( #57666e59 ) );
+	margin-bottom: 40px;
+}
+.AppDetailsLeftColumn .AppComingSoonBox
+{
+	background-color: #00000000;
+	margin-bottom: 20px;
+	margin-top: -20px;
+	padding-left: 0px;
 }
 
 .AppDetailsOptionsRow
 {
-	margin-bottom: 50px;
+	margin-top: 30px;
+	padding-bottom: 150px;
 }
 
 .AppDetailsOptionsRow .AppDetailsBox
 {
-	height: purchase_options_height;
+	//height: purchase_options_height;
 }
 
 .AppDetailsOptionsRow .AppDetailsRightColumn
 {
-	height: 100%;
+	//height: 100%;
 }
 
 .AppDetailsOptionsRow .AppNextInQueue_REPLACE
@@ -682,6 +688,21 @@
 	background-size: 1px 1px;
 }
 
+.AppComingSoonHeader
+{
+	font-size: 32px;
+	font-weight: light;
+	color: #c6d4df;
+}
+
+.AppComingSoonDetails
+{
+	font-size: 24px;
+	font-weight: light;
+	color: greyish_medium;
+	visibility: collapse;
+}
+
 
 .AppDetailsBox.FreePlayOption
 {
@@ -716,7 +737,7 @@
 .AppModDetails a
 {
 	font-size: 26px;
-	color: almost_white;
+	color: #7c539e;
 }
 .AppModTitle
 {
@@ -757,6 +778,7 @@
 	font-size: 28px;
 	color: green_in_page;
 	vertical-align: center;
+	white-space: nowrap;
 }
 
 .AppPriceOverviewRow
@@ -822,8 +844,18 @@
 
 .AppNextInQueue.InDiscoveryQueue
 {
-	background-color: #a68849;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #b5924cCC ), to( #96793fCC ) );
+	background-image: none;
 	color: #ffcd6b;
+}
+.AppNextInQueue.InDiscoveryQueue:focus
+{
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #b59b59CC ), to( #d6ad5aCC ) );
+	color: white;
+}
+.AppNextInQueue.InDiscoveryQueue:focus .AppQueueRemaining
+{
+	color: white;
 }
 
 .AppQueueRemaining
@@ -854,6 +886,11 @@
 	margin-left: 14px;
 	wash-color: #2f88bc;
 }
+.AppNextInQueue.InDiscoveryQueue Image
+{
+	wash-color: #ffcd6b;
+}
+
 .AppNextInQueue:focus Image,
 .AppNextInQueue:hover Image
 {
@@ -877,7 +914,7 @@
 {
 	width: 100%;
 	flow-children: right;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .AppAboutGameHeader .AppDetailsBoxTitle
@@ -932,10 +969,14 @@
 	color: almost_white;
 }
 
-.AppRecentNews
+.AppDetailsBox .AppRecentNews
 {
 	font-size: 24px;
 	color: greyish_medium;
+}
+.AppDetailsBox:focus .AppRecentNews
+{
+	color: #ffffff;
 }
 
 
@@ -968,10 +1009,14 @@
 	font-weight: normal;
 }
 
-.AppVisitWebsite
+.AppDetailsBox .AppVisitWebsite
 {
 	font-size: 26px;
 	color: #67c1f5ff;
+}
+.AppDetailsBox:focus .AppVisitWebsite
+{
+	color: #ffffff;
 }
 
 .AppDetailsDemo
@@ -1020,7 +1065,7 @@ VerticalScrollBar {
 
 .EarlyAccessBox
 {
-	height: 134px;
+	height: 145px;
 }
 
 // friends who own app

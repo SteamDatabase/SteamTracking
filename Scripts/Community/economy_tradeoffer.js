@@ -574,7 +574,8 @@ CTradeOfferStateManager = {
 
 					Modal = ShowAlertDialog(
 							'Additional confirmation needed',
-							strText
+							strText + '<br><br>' +
+							'If you don\'t see the Confirmations option in the main menu of the app, then make sure you have the latest version of the app.'
 					);
 				}
 				else if ( bNeedsEmailConfirmation )

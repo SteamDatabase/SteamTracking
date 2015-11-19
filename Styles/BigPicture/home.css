@@ -120,11 +120,11 @@ RemotePanel
 
 .Spotlight
 {
-	width: 530px;
+	width: 540px;
 	height: 728px;
 	margin: 10px;
 
-	margin: -15px -10px;
+	margin: -15px -15px;
 
 	border-radius: 3px;
 
@@ -139,7 +139,7 @@ RemotePanel
 
 .Spotlight .SpotlightBackground
 {
-	width: 520px;
+	width: 530px;
 	height: 718px;
 	margin-left: 5px;
 	margin-top: 5px;
@@ -174,7 +174,7 @@ RemotePanel
 .SpotlightDetails
 {
 	flow-children: down;
-	width: 520px;
+	width: 530px;
 	margin: 0px 5px 5px 5px;
 	border-radius: 0px 0px 3px 3px;
 
@@ -191,10 +191,16 @@ RemotePanel
 .SpotlightWeeklong
 {
 	background-repeat: no-repeat;
-	background-size: 100%;
-	width: 520px;
+	background-size: cover;
+	background-position: center top;
+	width: 530px;
 	height: 733px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom:5px;
 	background-color: nontransparent_module;
+
+	border-radius: 3px;
 }
 
 .SpotlightWeeklongSubtitle
@@ -202,20 +208,21 @@ RemotePanel
 	height: 100%;
 	align: center center;
 	font-size: 30px;
+	margin-top: 20px;
 	color: greyish_medium;
 }
 
 .SpotlightWeeklongCount
 {
-	margin-top: 450px;
+	margin-top: 420px;
 	horizontal-align: center;
-	font-size: 44px;
+	font-size: 64px;
 	color: white;
 }
 
 .SpotlightImage
 {
-	width: 520px;
+	width: 530px;
 	margin-left: 5px;
 	margin-top: 5px;
 	border-radius: 3px 3px 0px 0px;

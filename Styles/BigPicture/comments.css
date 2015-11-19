@@ -10,6 +10,7 @@
 .commentthread_comment_container
 {
 	width: 100%;
+	height: fit-children;
 	margin-right: 0px;
 }
 
@@ -198,10 +199,12 @@ Button:focus .commentthread_comment_text
 	flow-children: down;
 	margin-right: 5px;
 	overflow: squish scroll;
+}
+.blotter_comment_thread .commentthread_area
+{
+	overflow: clip clip;
+	height: fit-children;
 
-	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
-	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
 }
 
 .comment_form

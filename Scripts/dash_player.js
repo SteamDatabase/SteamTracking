@@ -664,6 +664,7 @@ CDASHPlayer.prototype.InitVideoControl = function()
 	$J( mediaSource ).on( 'sourceclose.DASHPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
 
 	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
+	$J( this.m_elVideoPlayer).on( 'error.DASHPlayerEvents', function( e ) { _player.OnVideoError( e ); });
 	$J( window ).on( 'resize.DASHPlayerEvents', function() { _player.OnWindowResize(); });
 
 	$J( this.m_elVideoPlayer ).on( 'changeuiplayingstate.DASHPlayerEvents', function( e, playing ) { _player.SavePlaybackStateFromUI( playing ); } );
@@ -830,6 +831,28 @@ CDASHPlayer.prototype.OnVideoStalled = function()
 			}
 		}
 	}
+}
+
+CDASHPlayer.prototype.OnVideoError = function( e )
+{
+	var nCode = 0;
+	if ( this.m_elVideoPlayer.error )
+		nCode = this.m_elVideoPlayer.error.code;
+
+	var strError = 'unknown';
+	if ( nCode == MediaError.MEDIA_ERR_ABORTED )
+		strError = 'aborted';
+	else if ( nCode == MediaError.MEDIA_ERR_DECODE )
+		strError = 'decode';
+	else if ( nCode == MediaError.MEDIA_ERR_NETWORK )
+		strError = 'network';
+	else if ( nCode == MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED )
+		strError = 'not supported';
+	else
+		strError = nCode;
+	
+	console.log( 'Video player error: ' + strError );
+	this.CloseWithError();
 }
 
 CDASHPlayer.prototype.OnTimeUpdate = function()
@@ -5444,7 +5467,7 @@ CDASHPlayerUI.prototype.PrepareThumbnailDisplay = function()
 		$J('.progress_time_info').css('background-image', 'url(\'' + strThumbnailSheetURL + '\')');
 
 		var img = new Image;
-		img.src = $J('.progress_time_info').css('background-image').replace(/url\(|\)$/ig, "");
+		img.src = $J('.progress_time_info').css('background-image').replace(/url\(|\)$/ig, "").replace(/"/g,"");
 		this.m_nThumbnailHeight = img.height;
 
 		if ( this.m_nThumbnailHeight == 0 )

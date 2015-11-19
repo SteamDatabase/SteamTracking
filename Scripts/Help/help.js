@@ -864,12 +864,7 @@ HelpWizard = {
 		}
 
 		var strPassword = $J( '#twofactor_password' ).val();
-		var strTwoFactorCode = $J( '#twofactor_resetcode' ).val();
-		var strSMSCode = $J( '#twofactor_smscode' ).val();
-		if ( $J( 'input:radio[name="verify_with"]:checked' ).val() == 'sms' )
-			strTwoFactorCode = '';
-		else
-			strSMSCode = '';
+		var strTwoFactorCode = $J( '#twofactor_resetcode' ).val(); // may be empty
 
 		var pubKey = RSA.getPublicKey( rsa.publickey_mod, rsa.publickey_exp );
 		var strPasswordEncrypted = RSA.encrypt( strPassword, pubKey );
@@ -892,8 +887,7 @@ HelpWizard = {
 				accountid: nAccountID,
 				password: strPasswordEncrypted,
 				rsatimestamp: rsa.timestamp,
-				twofactor: strTwoFactorCode,
-				smscode: strSMSCode
+				twofactor: strTwoFactorCode
 			}
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
