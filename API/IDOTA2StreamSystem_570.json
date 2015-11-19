@@ -11,6 +11,12 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "64-bit Steam ID of the broadcaster"
+                },
+                {
+                    "name": "league_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "LeagueID to use if we aren't in a lobby"
                 }
             ]
         }
