@@ -519,8 +519,10 @@ Label.ModeTitle
 
 #Gyro Label.ModeTitle
 {
+    horizontal-align: center;
 	margin-left: 0px;
 	margin-right: 0px;
+    font-size: 22px;
 }
 
 .NeedsTitle Label.ModeTitle
@@ -537,9 +539,14 @@ Label.ModeTitle
 	margin-top: 12px;
 }
 
+#Gyro ControllerBindingButton
+{
+    horizontal-align: left;
+}
+
 #Gyro #BindingSlotContainer
 {
-	horizontal-align: center;
+	width: 100%;
 }
 
 .HideMiddleClick .RequiresMiddleButton
@@ -752,6 +759,8 @@ height: 44px;
 	visibility: visible;
 }
 
+
+
 .ControllerMode ControllerBindingButton Label
 {
 	margin-left: 55px;
@@ -836,6 +845,55 @@ ControllerSourceModeDpad.ControllerMode ControllerBindingButton
 	margin-bottom: 6px;
 }
 
+#ModeContainer #EdgeBindingJoystick
+{
+	background-image: url("file://{images}/library/controller/api/pad_r_outer_ring.png");
+}
+
+
+#ModeContainer #JoystickClick
+{
+	background-image: url("file://{images}/library/controller/api/stick_click.png");
+}
+
+
+ControllerSourceModeJoystickCamera.ControllerMode ControllerBindingButton
+{
+    height: 48px;
+	margin-bottom: 6px;
+}
+
+ControllerSourceModeJoystickMove.ControllerMode ControllerBindingButton
+{
+    height: 48px;
+	margin-bottom: 6px;
+}
+
+#Gyro.ControllerMode ControllerBindingButton
+{
+    height: 24px;
+	margin-bottom: 6px;
+}
+
+#Gyro ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
+{
+    height: 24px;
+}
+
+#Gyro ControllerSourceModeMouseJoystick.ControllerMode ControllerBindingButton
+{
+    height: 24px;
+}
+
+#GyroModeContainer #GyroLeanLeft
+{
+	background-image: url("file://{images}/library/controller/api/gyro_lean_left.png");
+}
+
+#GyroModeContainer #GyroLeanRight
+{
+	background-image: url("file://{images}/library/controller/api/gyro_lean_right.png");
+}
 
 #ModeContainer #ScrollWheelClockwise
 {
@@ -876,9 +934,6 @@ ControllerSourceModeDpad.ControllerMode ControllerBindingButton
 {
 	background-image: url("file://{images}/library/controller/api/mouse_wheel_click.png");
 }
-
-
-
 
 
 
@@ -1018,6 +1073,15 @@ ControllerBindingButton.Glyph.GamepadShape #BindingShape
 ControllerBindingButton Label
 {
 	font-size: 30px;
+	font-family: platformfont;
+	font-weight: light;
+	text-overflow: ellipsis;
+	color: #00ccff;
+}
+
+#Gyro ControllerBindingButton Label
+{
+	font-size: 22px;
 	font-family: platformfont;
 	font-weight: light;
 	text-overflow: ellipsis;

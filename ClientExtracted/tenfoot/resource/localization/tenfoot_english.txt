@@ -4977,7 +4977,7 @@
 
 	"ControllerBinding_RecommendedTemplate" "Recommended"
 	"ControllerBinding_SavedCopyPasta_Title" "Custom Controller Config Uploaded!"
-	"ControllerBinding_SavedCopyPasta" "Your custom config was uploaded succesfully.\n\nID: {s:fileid}"
+	"ControllerBinding_SavedCopyPasta" "Your custom config was uploaded succesfully.\nID: {s:fileid}"
 	"ControllerBinding_Official" "Official Developer Config"
 	"ControllerBinding_OfficialDescription" "This config was created by the developers of this game."
 	"ControllerBinding_Header" "Controller Configurations"
