@@ -294,6 +294,7 @@
 "Scripts/Mobile/mobileprofile.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/mobileprofile.js?__TIME__&l=english",
 "Scripts/Mobile/shared_mobile.js"                : "https://steamstore-a.akamaihd.net/public/shared/javascript/shared_mobile.js?__TIME__&l=english",
 "Scripts/Mobile/store_utils.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/mobile/store_utils.js?__TIME__&l=english",
+"Scripts/Mobile/mobileconf.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/mobileconf.js?__TIME__&l=english",
 
 //
 // Big Picture JS
