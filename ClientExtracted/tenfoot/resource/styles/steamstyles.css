@@ -858,7 +858,7 @@ HorizontalScrollBar .ScrollThumb
 	// The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-duration: 0.20s;
-	transition-timing-function: bigpicture-ease-in-out;
+	transition-timing-function: ease-in-out;
 }
 
 // HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions

@@ -1,0 +1,249 @@
+﻿"controller_mappings"
+{
+	"version" "2"
+	"game" "Gamepad with Joystick Camera"
+	"title" "#Title"
+	"description" "#Description"
+
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+		"bindings"
+		{
+			"button_a"		"xinput_button A"
+			"button_b"		"xinput_button B"
+			"button_x"		"xinput_button X"
+			"button_y"		"xinput_button Y"
+		}
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"bindings"
+		{
+			"dpad_north"		"xinput_button dpad_up"
+			"dpad_south"		"xinput_button dpad_down"
+			"dpad_east"		"xinput_button dpad_right"
+			"dpad_west"		"xinput_button dpad_left"
+		}
+		"settings"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"joystick_move"
+		"bindings"
+		{
+			"click"		"xinput_button JOYSTICK_RIGHT"
+		}
+		"settings"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"joystick_move"
+		"bindings"
+		{
+			"click"		"xinput_button JOYSTICK_LEFT"
+		}
+		"settings"
+		{
+			"adaptive_centering"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"xinput_button TRIGGER_LEFT"
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"xinput_button TRIGGER_RIGHT"
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"joystick_move"
+		"bindings"
+		{
+			"click"		"xinput_button JOYSTICK_RIGHT"
+		}
+		"settings"
+		{
+			"output_joystick"		"1"
+		}
+	}
+	"group_source_bindings"
+	{
+		"0"		"button_diamond active"
+		"1"		"left_trackpad active"
+		"2"		"right_trackpad active"
+		"3"		"joystick active"
+		"4"		"left_trigger active"
+		"5"		"right_trigger active"
+		"6"		"right_trackpad inactive"
+	}
+	"switch_bindings"
+	{
+		"bindings"
+		{
+			"button_escape"		"xinput_button start"
+			"button_menu"		"xinput_button select"
+			"right_bumper"		"xinput_button shoulder_right"
+			"left_bumper"		"xinput_button shoulder_left"
+			"button_back_left"		"xinput_button a"
+			"button_back_right"		"xinput_button x"
+		}
+	}
+	"settings"
+	{
+		"left_trackpad_mode"		"0"
+		"right_trackpad_mode"		"0"
+	}
+	
+	"Localization"
+	{
+		"english"
+		{
+			"Title" "Gamepad"
+			"Description" "This template is for games that already have built-in gamepad support.  Intended for dual stick games such as twin-stick shooters, side-scrollers, etc."
+		}
+		"czech"
+		{
+			"Title" "Gamepad"
+			"Description" "Tato šablona je pro většinu her, které přímo podporují gamepad."
+		}
+		"danish"
+		{
+			"Title" "Gamepad"
+			"Description" "Denne skabelon er for de fleste spil, der allerede har indbygget gamepad-understøttelse."
+		}
+		"dutch"
+		{
+			"Title" "Gamepad"
+			"Description" "Dit template is voor de meeste spellen die al ingebouwde gamepadondersteuning hebben."
+		}
+		"finnish"
+		{
+			"Title" "Ohjain"
+			"Description" "Tämä malli on useimmille muita ohjaimia valmiiksi tukeville peleille."
+		}
+		"french"
+		{
+			"Title" "Manette"
+			"Description" "Ce modèle fonctionne pour la plupart des jeux ayant un support manette intégré."
+		}
+		"german"
+		{
+			"Title" "Gamepad"
+			"Description" "Diese Vorlage ist für die meisten Spiele konzipiert, die bereits volle Untersützung für Gamepads mit sich bringen."
+		}
+		"hungarian"
+		{
+			"Title" "Gamepad"
+			"Description" "Ez a sablon a legtöbb olyan játékhoz való, melyek már rendelkeznek beépített gamepad-támogatással."
+		}
+		"italian"
+		{
+			"Title" "Controller"
+			"Description" "Questo modello funziona per la maggior parte dei giochi che supportano i controller in modalità nativa."
+		}
+		"japanese"
+		{
+			"Title" "ゲームパッド"
+		}
+		"koreana"
+		{
+			"Title" "게임패드"
+			"Description" "게임 패드를 지원하도록 설계된 게임들을 위한 설정입니다."
+		}
+		"polish"
+		{
+			"Title" "Kontroler"
+			"Description" "Ten szablon jest odpowiedni dla większości gier, które mają wbudowane wsparcie dla kontrolerów."
+		}
+		"portuguese"
+		{
+			"Title" "Comando"
+			"Description" "Este modelo é indicado para jogos que já têm compatibilidade nativa com comando."
+		}
+		"romanian"
+		{
+			"Title" "Gamepad"
+			"Description" "Șablonul acesta este pentru majoritatea jocurilor care au deja suport pentru gamepad încorporat."
+		}
+		"russian"
+		{
+			"Title" "Геймпад"
+			"Description" "Этот шаблон подходит для большинства игр с поддержкой геймпада."
+		}
+		"spanish"
+		{
+			"Title" "Mando"
+			"Description" "Esta plantilla es para la mayoría de juegos que ya incluyen de serie compatibilidad con mando."
+		}
+		"swedish"
+		{
+			"Title" "Gamepad"
+			"Description" "Denna mall är för de flesta spel som redan har inbyggt stöd för gamepad."
+		}
+		"schinese"
+		{
+			"Title" "手柄"
+			"Description" "该模板适用于已内置手柄支持的大多数游戏。"
+		}
+		"thai"
+		{
+			"Title" "เกมแพด"
+		}
+		"brazilian"
+		{
+			"Title" "Controle padrão"
+			"Description" "Este modelo é para jogos compatíveis com controles padrão."
+		}
+		"bulgarian"
+		{
+			"Title" "Геймпад"
+			"Description" "Този шаблон е за повечето игри, които вече имат вградена поддръжка на геймпад."
+		}
+		"greek"
+		{
+			"Title" "Χειριστήριο"
+			"Description" "Αυτό το πρότυπο ορίζεται στα περισσότερα παιχνίδια που έχουν ήδη υποστήριξη χειριστηρίου."
+		}
+		"turkish"
+		{
+			"Title" "Oyun Kumandası"
+			"Description" "Bu şablon zaten oyun içi oyun kumandası desteğine sahip pek çok oyun içindir."
+		}
+		"ukrainian"
+		{
+			"Title" "Ґеймпад"
+			"Description" "Цей шаблон для більшості ігор, в яких вже вбудовано підтримку геймпада."
+		}
+	}
+}
+

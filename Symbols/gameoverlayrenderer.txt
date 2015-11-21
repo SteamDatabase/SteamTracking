@@ -102,13 +102,11 @@
  CGGetDisplaysWithPoint
  CGGetLastMouseDelta
  CGLChoosePixelFormat
- CGLDestroyContext
  CGLDisable
  CGLEnable
  CGLFlushDrawable
  CGLGetCurrentContext
  CGLGetSurface
- CGLSetCurrentContext
  CGLSetParameter
  CGMainDisplayID
  CGSForceShowCursor
@@ -120,7 +118,6 @@
  D g_IdentityMatrix
  D g_iNotificationPosition
  D g_loggingMutex
- D typeinfo for CAsyncCaptureGL
  D typeinfo for CBaseOverlayRenderer
  D typeinfo for CGameStreamBaseMemStream
  D typeinfo for CGameStreamGameMemStream
@@ -138,7 +135,6 @@
  D typeinfo for IPC::PosixEvent
  D typeinfo for IPC::PosixMutex
  D typeinfo for IPC::PosixSharedMemory
- D typeinfo for SteamThreadTools::CThread
  D typeinfo for __cxxabiv1::__class_type_info
  D typeinfo for __cxxabiv1::__si_class_type_info
  D typeinfo for __gnu_cxx::__concurrence_lock_error
@@ -147,7 +143,6 @@
  D typeinfo for std::bad_exception
  D typeinfo for std::exception
  D typeinfo for std::type_info
- D vtable for CAsyncCaptureGL
  D vtable for CBaseOverlayRenderer
  D vtable for CGameStreamBaseMemStream
  D vtable for CGameStreamGameMemStream
@@ -159,7 +154,6 @@
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
  D vtable for IPC::PosixSharedMemory
- D vtable for SteamThreadTools::CThread
  D vtable for __cxxabiv1::__class_type_info
  D vtable for __cxxabiv1::__si_class_type_info
  D vtable for __gnu_cxx::__concurrence_lock_error
@@ -168,7 +162,6 @@
  D vtable for std::exception
  HideCursor
  InitCursor
- R typeinfo name for CAsyncCaptureGL
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
  R typeinfo name for CGameStreamGameMemStream
@@ -186,7 +179,6 @@
  R typeinfo name for IPC::PosixEvent
  R typeinfo name for IPC::PosixMutex
  R typeinfo name for IPC::PosixSharedMemory
- R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for __cxxabiv1::__class_type_info
  R typeinfo name for __cxxabiv1::__si_class_type_info
  R typeinfo name for __gnu_cxx::__concurrence_lock_error
@@ -198,15 +190,6 @@
  ShowCursor
  T AlignPitch16(unsigned int)
  T BOverlayNeedsPresent
- T CAsyncCaptureGL::AsyncCaptureFrame(unsigned int)
- T CAsyncCaptureGL::AsyncPutFrame(ScreenshotData_t*)
- T CAsyncCaptureGL::CAsyncCaptureGL()
- T CAsyncCaptureGL::Cleanup()
- T CAsyncCaptureGL::CleanupAsyncContext()
- T CAsyncCaptureGL::CleanupRenderData(CAsyncCaptureGL::RenderData_t*)
- T CAsyncCaptureGL::Run()
- T CAsyncCaptureGL::Shutdown()
- T CAsyncCaptureGL::~CAsyncCaptureGL()
  T CBaseOverlayRenderer::CBaseOverlayRenderer()
  T CBaseOverlayRenderer::CleanupMovieStream()
  T CBaseOverlayRenderer::CreateMovieStream()
@@ -228,7 +211,6 @@
  T CBaseOverlayRenderer::ValveTakeScreenshot(bool, unsigned int)
  T CBaseOverlayRenderer::ValveUnlockRenderResources()
  T CBaseOverlayRenderer::~CBaseOverlayRenderer()
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CGameStreamBaseMemStream::CGameStreamBaseMemStream(unsigned int)
  T CGameStreamBaseMemStream::~CGameStreamBaseMemStream()
  T CGameStreamGameMemStream::BGetMessage(GameStreamMessageFromSteam_t*)
@@ -376,10 +358,6 @@
  T CreateShader(char const*, char const*)
  T Exiting()
  T GetGLProcAddress(char*)
- T GetGLRGBAShader(bool)
- T GetGLVertexShader(bool)
- T GetGLYUVShaderUV(bool)
- T GetGLYUVShaderY(bool)
  T GetIMENullImpl()
  T GetMovieResolution(int, int, int*, int*)
  T GetVideoTickCount()
@@ -450,39 +428,16 @@
  T SteamHideCursor()
  T SteamInitCursor()
  T SteamShowCursor()
- T SteamThreadTools::CThread::CThread()
- T SteamThreadTools::CThread::GetName()
- T SteamThreadTools::CThread::GetThreadProc()
- T SteamThreadTools::CThread::Init()
- T SteamThreadTools::CThread::IsAlive()
- T SteamThreadTools::CThread::IsThreadRunning()
- T SteamThreadTools::CThread::Join(unsigned int)
- T SteamThreadTools::CThread::OnExit()
- T SteamThreadTools::CThread::SetName(char const*)
- T SteamThreadTools::CThread::ThreadProc(void*)
- T SteamThreadTools::CThread::~CThread()
- T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
- T SteamThreadTools::CThreadEvent::Set()
- T SteamThreadTools::CThreadLocalBase::Set(void*)
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
- T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
- T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
- T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
- T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
- T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
- T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
- T SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
- T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  T SteamThreadTools::InitMainThread()
  T StopMovieRecording()
  T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedCompareExchange
- T ThreadSleep
  T UpdateVRState(int, int)
  T ValveHookScreenshots
  T WindowInVRBounds(int, int)
@@ -701,8 +656,6 @@
  glVertex2f
  glViewport
  gmtime_r
- kill
- kill$UNIX2003
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -727,29 +680,14 @@
  nanosleep$UNIX2003
  open
  open$UNIX2003
- pthread_cond_broadcast
- pthread_cond_destroy
- pthread_cond_init
- pthread_cond_init$UNIX2003
- pthread_cond_signal
- pthread_cond_timedwait_relative_np
- pthread_cond_wait
- pthread_cond_wait$UNIX2003
- pthread_condattr_destroy
- pthread_condattr_init
  pthread_getspecific
- pthread_join
- pthread_join$UNIX2003
  pthread_key_create
  pthread_key_delete
- pthread_kill
  pthread_mach_thread_np
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
- pthread_mutexattr_destroy
- pthread_mutexattr_destroy$UNIX2003
  pthread_mutexattr_init
  pthread_mutexattr_settype
  pthread_self
@@ -757,7 +695,6 @@
  r IPC::gTable
  realloc
  rename
- sched_yield
  sem_close
  sem_open
  sem_post
@@ -765,9 +702,6 @@
  sem_unlink
  sem_wait
  sem_wait$UNIX2003
- semctl
- semctl$UNIX2003
- semop
  setrlimit
  setrlimit$UNIX2003
  shm_open
@@ -777,8 +711,6 @@
  strcat
  strcmp
  strcpy
- strerror
- strerror$UNIX2003
  strftime
  strftime$UNIX2003
  strlen
@@ -838,6 +770,5 @@
  usleep
  usleep$UNIX2003
  vfprintf
- vsnprintf
  write
  write$UNIX2003

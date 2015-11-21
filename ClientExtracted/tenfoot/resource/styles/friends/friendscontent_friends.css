@@ -197,3 +197,8 @@ margin-bottom: 8px;
 	opacity: 0.0;
 }
 
+EdgeScroller #MaxButton
+{
+	margin-bottom: 100px;
+}
+

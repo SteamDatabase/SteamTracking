@@ -4,7 +4,6 @@
 FriendsContent_Groups
 {
 	flow-children: down;
-	overflow: clip scroll;
 	height: 100%;
 }
 
@@ -18,9 +17,17 @@ Label
 
 .GroupsContainer
 {
-	padding-bottom: -32px;
+	padding-bottom: 140px;
 	flow-children: right-wrap;
 	margin-left: 6px;
+}
+
+.GroupsWrapper
+{
+	flow-children: down;
+	height: 100%;
+	width: 100%;
+	overflow: clip scroll;
 }
 
 .GroupButton
@@ -105,4 +112,9 @@ Label
 .NotLoggedIn .NotLoggedInLabel
 {
 	visibility: visible;
+}
+
+EdgeScroller #MaxButton
+{
+	margin-bottom: 100px;
 }

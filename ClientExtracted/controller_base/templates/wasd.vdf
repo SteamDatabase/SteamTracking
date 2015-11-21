@@ -37,7 +37,6 @@
 		"settings"
 		{
 			"hold_repeat_inverval"		"99"
-			"deadzone"		"5000"
 			"edge_binding_radius"		"24996"
 		}
 	}

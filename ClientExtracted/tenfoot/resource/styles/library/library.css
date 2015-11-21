@@ -399,7 +399,6 @@ LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Download
 	height: 100%;
 	flow-children: right;
 	margin-top: 0px;
-	margin-bottom: 100px;
 	overflow: clip;
 }
 
@@ -597,7 +596,7 @@ LibraryAppDetails .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus
 {
-	width: 1600px;
+	width: 100%;
 	height: 100%;
 	vertical-align: top;
 	padding-top: 0px;
@@ -3508,118 +3507,65 @@ DropDown Label
 
 .LeftMouseScrollRegion, .RightMouseScrollRegion
 {
-	opacity: 0.0;
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration;
-	transition-delay: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
+	width: 100%;
+	height: 80px;
+	
+	z-index: 300;
 
-Carousel.CursorVisible:hover .LeftMouseScrollRegion,
-.MouseActive Grid:hover .LeftMouseScrollRegion
-{
-	width: 80px;
-	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
-	z-index: 300;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_up;
+
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration, shortduration;
+	transition-delay: 0.2s, 0.0s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.MouseActive Grid:hover .LeftMouseScrollRegion
+
+.LeftMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
-}
-
-.MouseActive #GamesGrid:hover .LeftMouseScrollRegion
-{
-	width: 100%;
-	height: 80px;
 	background-color: mouse_off_bg_up;
+	align: center top;
 }
 
-Carousel.CursorVisible:hover .RightMouseScrollRegion,
-.MouseActive Grid:hover .RightMouseScrollRegion,
-{
-	width: 80px;
-	height: 100%;
-	align: right center;
-	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 300;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_bottom;
-}
-
-Grid.CursorVisible:hover .RightMouseScrollRegion,
+.RightMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-}
-
-.MouseActive #GamesGrid:hover .RightMouseScrollRegion
-{
-	width: 100%;
-	height: 80px;
-	align: center bottom;
-	margin-bottom: 220px;
-	z-index: 300;
 	background-color: mouse_off_bg_bottom;
+	align: center bottom;
+	margin-bottom: 295px;
 }
 
-.MouseActive #GamesGrid:hover .RightMouseScrollRegion:hover,
+.MouseActive Grid:hover .LeftMouseScrollRegion,
+.MouseActive Grid:hover .RightMouseScrollRegion
 {
-	background-color: mouse_hover_bg_bottom;
+	opacity: 1.0;
 }
 
-Carousel.CursorVisible:hover  .LeftMouseScrollRegion:hover,
-.MouseActive Grid:hover  .LeftMouseScrollRegion:hover,
-.MouseActive #GamesGrid:hover .LeftMouseScrollRegion:hover
+.MouseActive Grid:hover .LeftMouseScrollRegion:hover,
 {
 	background-color: mouse_hover_bg_up;
 }
 
-Carousel.CursorVisible:hover .LeftMouseScrollRegion:active,
-.MouseActive Grid:hover .LeftMouseScrollRegion:active,
+.MouseActive Grid:hover .RightMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
 .MouseActive #GamesGrid:hover .LeftMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_up;
 }
 
-Carousel.CursorVisible:hover .RightMouseScrollRegion:hover,
-.MouseActive Grid:hover .RightMouseScrollRegion:hover
-{
-	background-color: mouse_hover_bg_bottom;
-}
-
-Carousel.CursorVisible:hover .RightMouseScrollRegion:active,
-.MouseActive Grid:hover .RightMouseScrollRegion:active,
-.MouseActive #GamesGrid:hover .RightMouseScrollRegion:active
+.MouseActive Grid:hover .RightMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_bottom;
 
 }
 
-.LeftMouseScrollRegion
-{
-	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_up;
-	z-index: 100;
-}
-
-.RightMouseScrollRegion
-{
-	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_bottom;
-	z-index: 100;
-}
 
 LibraryAppDetails #RightMouseScrollRegion
 {
@@ -3713,55 +3659,6 @@ OverlayBasePanel #LeftMouseScrollRegion, OverlayBasePanel #RightMouseScrollRegio
 	margin-right: 790px;
 	background-color: mouse_active_bg_bottom;
 }
-
-
-Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover
-{
-	background-color: mouse_hover_bg_up;
-}
-
-Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover:active
-{
-	background-color: mouse_active_bg_up;
-}
-
-Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-
-
-
-Grid .LeftMouseScrollRegion
-{
-	position: 0px 0px 0px;
-	background-color: mouse_off_bg_up;
-
-	transition-property: background-color, opacity;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	z-index: 100;
-}
-
-Grid .RightMouseScrollRegion
-{
-	position: 0px -15px 0px;
-	background-color: mouse_off_bg_bottom;
-
-	transition-property: background-color, opacity;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	z-index: 100;
-}
-
 
 #RightLegend
 {

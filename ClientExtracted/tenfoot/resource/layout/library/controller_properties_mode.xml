@@ -32,7 +32,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 				</Panel>

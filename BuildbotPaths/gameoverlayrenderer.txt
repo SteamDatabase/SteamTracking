@@ -1,5 +1,4 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/asynccapturegl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/gamestream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/glframecapture.o
@@ -16,7 +15,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/threadtools.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/videomemstream.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/asynccapturegl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/gamestream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/glframecapture.o
@@ -62,8 +60,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/videomemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/videomemstream.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayrenderer/asynccapturegl.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayrenderer/asynccapturegl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayrenderer/gamestream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayrenderer/glframecapture.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayrenderer/glinterface.cpp
@@ -76,7 +72,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/basetypes.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/platformtime.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/threadtools.cpp

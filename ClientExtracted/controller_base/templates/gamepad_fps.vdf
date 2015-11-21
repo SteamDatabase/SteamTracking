@@ -30,20 +30,19 @@
 		}
 		"settings"
 		{
-			"deadzone"		"5000"
 		}
 	}
 	"group"
 	{
 		"id"		"2"
-		"mode"		"joystick_camera"
+		"mode"		"mouse_joystick"
 		"bindings"
 		{
 			"click"		"xinput_button JOYSTICK_RIGHT"
 		}
 		"settings"
 		{
-			"output_joystick"		"1"
+			
 		}
 	}
 	"group"
@@ -130,8 +129,8 @@
 	{
 		"english"
 		{
-			"Title" "Gamepad"
-			"Description" "This template is for most games that already have built-in gamepad support."
+			"Title" "Gamepad With Camera Controls"
+			"Description" "This template is for most games that already have built-in gamepad support and have a first or third person controlled camera.  FPS or Third Person Adventure games, etc."
 		}
 		"czech"
 		{
