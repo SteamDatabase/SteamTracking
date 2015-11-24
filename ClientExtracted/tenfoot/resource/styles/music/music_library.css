@@ -1480,16 +1480,34 @@ PlaylistGridItem:focus Label
 .LibraryAllGames MusicLibraryAlbumPanel
 {
 	overflow: clip;
+	width: 1500px;
+	position: 390px 0px 0px;
+
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
 }
-.LibraryAllGames.ContentAreaFocus .MusicAlbumGrid
+
+.LibraryAllGames.ContentAreaFocus MusicLibraryAlbumPanel
 {
 	transform: translateX( -200px );
 }
+
+.LibraryAllGames .MusicAlbumGrid MouseScrollRegion
+{
+	x: -170px;
+}
+
+.LibraryAllGames .MusicAlbumGrid .BottomMouseScrollRegion
+{
+	y: -600px;
+}
+
 .LibraryAllGames .MusicAlbumGrid
 {
 	padding-top: 77px;
 	padding-left: 135px;
-	position: 390px 0px 0px;
 	padding-right: 40px;
 
 	width: 1854px;
@@ -1500,10 +1518,6 @@ PlaylistGridItem:focus Label
 	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 
 	transform: translateX( 0px );
-	transition-delay: 0s;
-	transition-duration: supershortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-property: transform, width;
 }
 
 .LibraryAllGames AlbumGridItem

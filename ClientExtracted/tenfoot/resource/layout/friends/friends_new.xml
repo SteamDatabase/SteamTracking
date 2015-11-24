@@ -24,8 +24,11 @@
 	<Friends oncancel="BringMainMenuToTop();" defaultfocus="FriendsTabButton" onload="FriendsOnLoad()" ondescendantfocus="FriendsOnLoad();" >
 		<FriendsChatProfileBackground id="FriendsChatProfileBackground" />
 		<Panel id="ContentFrameHeader" >
-			<Panel id="ContentMouseBackButton" onmouseactivate="BringMainMenuToTop();" />
-			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="BringMainMenuToTop();" />
+			<Panel id="ContentMouseBackButtonWrapper" class="ContentMouseBackButton">
+				<Panel id="ContentMouseBackButton" onmouseactivate="BringMainMenuToTop();" />
+				<Panel id="ContentMouseBackButtonChat" onmouseactivate="FocusFriendsContent();" />
+			</Panel>
+			<Panel id="ContentHomeButton" class="ContentHomeButton SteamLogo" onmouseactivate="BringMainMenuToTop();" />
 			<Panel id="ContentTitles">
 				<Label class="ContentTitle Show" text="#Friends_Menu_Friends" />
 			</Panel>

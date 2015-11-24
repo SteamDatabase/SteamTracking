@@ -322,8 +322,8 @@ RemoteContent .LoadingPanel #ErrorStatus2
 //
 // Home & Exit Button styles
 //
-#ContentHomeButton,
-#ContentMouseBackButton
+.ContentHomeButton,
+.ContentMouseBackButton
 {
 	vertical-align: center;
 	opacity: 1.0;
@@ -342,8 +342,8 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	transition-duration: 0.23s;
 }
 
-.VR #ContentHomeButton,
-.VR #ContentMouseBackButton
+.VR .ContentHomeButton,
+.VR .ContentMouseBackButton
 {
 	background-image: url( "file://{images}/steam_home_vr.png" );
 	
@@ -353,7 +353,7 @@ RemoteContent .LoadingPanel #ErrorStatus2
 }
 
 
-#ContentMouseBackButton
+.ContentMouseBackButton
 {
 	opacity: 0.0;
 
@@ -364,7 +364,7 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	margin-right: 17px;
 }
 
-.VR #ContentMouseBackButton
+.VR .ContentMouseBackButton
 {
 	background-image: url( "file://{images}/mouse/arrowLdefaultVR.png" );
 	background-position: 0px 0px;
@@ -373,13 +373,13 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	margin-top: 11px;
 }
 
-.CursorVisible #ContentMouseBackButton
+.CursorVisible .ContentMouseBackButton
 {
 	opacity: 1.0;
 }
 
-#ContentHomeButton:hover,
-#ContentMouseBackButton:hover
+.ContentHomeButton:hover,
+.ContentMouseBackButton:hover
 {
 	opacity: 1.0;
 	pre-transform-scale2d: 1.04;
@@ -388,9 +388,9 @@ RemoteContent .LoadingPanel #ErrorStatus2
 }
 
 .OOBE Clock,
-.OOBE #ContentMouseBackButton
-.FullScreenChild #ContentHomeButton,
-.FullScreenChild #ContentMouseBackButton,
+.OOBE .ContentMouseBackButton
+.FullScreenChild .ContentHomeButton,
+.FullScreenChild .ContentMouseBackButton,
 
 {
 	opacity: 0.0;

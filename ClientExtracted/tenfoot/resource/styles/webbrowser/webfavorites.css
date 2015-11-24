@@ -458,77 +458,17 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	background-color: web_bg_color;
 }
 
-.LeftMouseScrollRegion, .RightMouseScrollRegion
+
+MouseScrollRegion
 {
-	opacity: 0.0;
-	transition-property: opacity, background-color;
-	transition-duration: 0.4s;
-	transition-delay: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
+	y: -50px;
 }
 
-.FavoritesGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
-
+FavoritesGrid MouseScrollRegion
 {
-	width: 80px;
-	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_left;
+	y: -45px;
 }
 
-.FavoritesGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion,
-{
-	width: 80px;
-	height: 100%;
-	align: right center;
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_right;
-}
-
-.FavoritesGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
-{
-		background-color: mouse_active_bg_right;
-}
-
-
-.FavoritesGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .FavoritesGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-}
-
-.LeftMouseScrollRegion
-{
-	position: 0px -50px 0px;
-	background-color: mouse_hover_bg_left;
-
-
-	z-index: 100;
-}
-
-.RightMouseScrollRegion
-{
-	position: 0px -50px 0px;
-	background-color: mouse_hover_bg_right;
-	z-index: 100;
-}
 
 .AltTitle #AltTitle
 {

@@ -7,8 +7,8 @@
 	<ContentFrame oncancel="NavigateTenfootBack()">
 		<ContentFramePanels id="ContentPanels" />
 		<Panel id="ContentFrameHeader">
-			<Panel id="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />
-			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="ShowMainMenu();" />
+			<Panel id="ContentMouseBackButton" class="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />
+			<Panel id="ContentHomeButton" class="SteamLogo ContentHomeButton" onmouseactivate="ShowMainMenu();" />
 			<Panel id="ContentTitles">
 				<Label class="ContentTitle" text="" />
 			</Panel>

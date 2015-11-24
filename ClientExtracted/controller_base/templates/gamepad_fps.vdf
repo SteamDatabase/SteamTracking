@@ -1,4 +1,4 @@
-﻿"controller_mappings"
+"controller_mappings"
 {
 	"version" "2"
 	"game" "Gamepad with Joystick Camera"
@@ -30,19 +30,20 @@
 		}
 		"settings"
 		{
+			"deadzone"		"5000"
 		}
 	}
 	"group"
 	{
 		"id"		"2"
-		"mode"		"mouse_joystick"
+		"mode"		"joystick_camera"
 		"bindings"
 		{
 			"click"		"xinput_button JOYSTICK_RIGHT"
 		}
 		"settings"
 		{
-			
+			"output_joystick"		"1"
 		}
 	}
 	"group"
@@ -129,110 +130,8 @@
 	{
 		"english"
 		{
-			"Title" "Gamepad With Camera Controls"
-			"Description" "This template is for most games that already have built-in gamepad support and have a first or third person controlled camera.  FPS or Third Person Adventure games, etc."
-		}
-		"czech"
-		{
-			"Title" "Gamepad"
-			"Description" "Tato šablona je pro většinu her, které přímo podporují gamepad."
-		}
-		"danish"
-		{
-			"Title" "Gamepad"
-			"Description" "Denne skabelon er for de fleste spil, der allerede har indbygget gamepad-understøttelse."
-		}
-		"dutch"
-		{
-			"Title" "Gamepad"
-			"Description" "Dit template is voor de meeste spellen die al ingebouwde gamepadondersteuning hebben."
-		}
-		"finnish"
-		{
-			"Title" "Ohjain"
-		}
-		"french"
-		{
-			"Title" "Manette"
-			"Description" "Ce modèle fonctionne pour la plupart des jeux ayant un support manette intégré."
-		}
-		"german"
-		{
-			"Title" "Gamepad"
-			"Description" "Diese Vorlage ist für die meisten Spiele konzipiert, die bereits volle Untersützung für Gamepads mit sich bringen."
-		}
-		"hungarian"
-		{
-			"Title" "Gamepad"
-			"Description" "Ez a sablon a legtöbb olyan játékhoz való, melyek már rendelkeznek beépített gamepad-támogatással."
-		}
-		"japanese"
-		{
-			"Title" "ゲームパッド"
-		}
-		"korean"
-		{
-			"Title" "게임패드"
-		}
-		"polish"
-		{
-			"Title" "Kontroler"
-			"Description" "Ten szablon jest odpowiedni dla większości gier, które mają wbudowane wsparcie dla kontrolerów."
-		}
-		"portuguese"
-		{
-			"Title" "Comando"
-			"Description" "Este modelo é indicado para jogos que já têm compatibilidade nativa com comando."
-		}
-		"romanian"
-		{
-			"Title" "Gamepad"
-			"Description" "Șablonul acesta este pentru majoritatea jocurilor care au deja suport pentru gamepad încorporat."
-		}
-		"russian"
-		{
-			"Title" "Геймпад"
-			"Description" "Этот шаблон подходит для большинства игр с поддержкой геймпада."
-		}
-		"spanish"
-		{
-			"Title" "Mando"
-			"Description" "Esta plantilla es para la mayoría de juegos que ya incluyen de serie compatibilidad con mando."
-		}
-		"swedish"
-		{
-			"Title" "Gamepad"
-			"Description" "Denna mall är för de flesta spel som redan har inbyggt stöd för gamepad."
-		}
-		"schinese"
-		{
-			"Title" "手柄"
-			"Description" "该模板适用于已内置手柄支持的大多数游戏。"
-		}
-		"brazilian"
-		{
-			"Title" "Controle padrão"
-			"Description" "Este modelo é para jogos compatíveis com controles padrão."
-		}
-		"bulgarian"
-		{
-			"Title" "Геймпад"
-			"Description" "Този шаблон е за повечето игри, които вече имат вградена поддръжка на геймпад."
-		}
-		"greek"
-		{
-			"Title" "Χειριστήριο"
-			"Description" "Αυτό το πρότυπο ορίζεται στα περισσότερα παιχνίδια που έχουν ήδη υποστήριξη χειριστηρίου."
-		}
-		"turkish"
-		{
-			"Title" "Oyun Kumandası"
-			"Description" "Bu şablon zaten oyun içi oyun kumandası desteğine sahip pek çok oyun içindir."
-		}
-		"ukrainian"
-		{
-			"Title" "Ґеймпад"
-			"Description" "Цей шаблон для більшості ігор, в яких вже вбудовано підтримку геймпада."
+			"Title"	"Gamepad"
+			"Description" "This template is for most games that already have built-in gamepad support."
 		}
 	}
 }
