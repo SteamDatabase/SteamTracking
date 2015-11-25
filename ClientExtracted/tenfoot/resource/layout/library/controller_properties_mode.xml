@@ -145,16 +145,32 @@
 				</Panel>
 
         <!-- Mouse Region Mode -->
+        <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_Scale" />
+          <Slider id="ScaleMouseRegion" direction="horizontal" />
+        </Panel>
         <Panel class="FieldWrapper" modes="mouseregion" advanced="off" sources="trackpad joystick ABXY button trigger">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegionClick" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionClick" />
         </Panel>
-				<Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_Scale" />
-					<Slider id="ScaleMouseRegion" direction="horizontal" />
-				</Panel>				
+        <Panel class="FieldWrapper" modes="mouseregion" advanced="off" sources="trackpad">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionTouch" />
+        </Panel>
 
         <!-- Mouse Region Mode Advanced -->
+        <Panel class="FieldWrapper" modes="mouseregion" advanced="on" gameactions="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingMouseRegion" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="mouseregion" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+          <Slider id="EdgeBindingRadiusMouseRegion" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="mouseregion" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
+          <DropDown id="EdgeBindingInvertMouseRegion" />
+        </Panel>
 
         <!-- Joystick Camera Mode -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="joystick trackpad" >
@@ -206,10 +222,14 @@
 					<Slider id="RotationAbsMouse" direction="horizontal" />
 				</Panel>				
 
-				<!-- Mouse Mode Advanced -->
+				<!-- Mouse Mode Advanced -->	
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseTouch" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
@@ -455,14 +475,22 @@
           <Slider id="PositionYMouse" direction="horizontal" />
         </Panel>
 				<Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityHorizScale" />
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RegionHorizScale" />
 					<Slider id="HorizontalSensitivityMouseRegion" direction="horizontal" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RegionVertScale" />
 					<Slider id="VerticalSensitivityMouseRegion" direction="horizontal" />
 				</Panel>
 				<!-- Mouse Region Mode Advanced -->
+        <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStart" />
+          <DropDown id="TeleportStart" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStop" />
+          <DropDown id="TeleportStop" />
+        </Panel>
 
 
         <!-- Joystick Camera Mode -->
@@ -763,17 +791,9 @@
           </Panel>
 
           <!-- Mouse Region Mode -->
-					<Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
-						<DropDown id="HapticIntensityMouseRegion" />
-					</Panel>					
-          <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStart" />
-            <DropDown id="TeleportStart" />
-          </Panel>
-          <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStop" />
-            <DropDown id="TeleportStop" />
+          <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+            <DropDown id="HapticIntensityMouseRegion" />
           </Panel>
 					
 

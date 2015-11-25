@@ -4,6 +4,8 @@ SteamControllerHUD
 	width: 100%;
 	height: 100%;
 	background-color: #00000000;
+	
+	overflow: clip clip;
 }
 
 #ImageRefCountKeeper
@@ -404,4 +406,11 @@ SteamControllerHUD
 	border: 7px;
 	border-style: solid;
 	border-color: ui_primary_color;
+}
+
+.MouseRegion.MouseRegionEdgeBinding
+{
+	border: 5px;
+	border-color: daisy_petal_selection_color;
+	background-color: #00000000;
 }
