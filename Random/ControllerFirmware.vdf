@@ -104,13 +104,29 @@
             "crc128"	"a8522ec25590c4d16200cffeacbcb45f"
             "bootloadertimestamp"	"55d2926d"
         }
-		"12"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_d0g_563be7d1.bin"
-			"firmwaretimestamp"	"563be7d1"
-			"minclientpackage"	"1446742416"
-			"crc128"	"56390023078659e8b76c5baa5d9fd268"
-			"bootloadertimestamp"	"55d2926d"
-		}
+        "12"
+        {
+                "firmwarebinary"	"/firmware/vcf_wired_controller_d0g_563be7d1.bin"
+                "firmwaretimestamp"	"563be7d1"
+                "minclientpackage"	"1446742416"
+                "crc128"	"56390023078659e8b76c5baa5d9fd268"
+                "bootloadertimestamp"	"55d2926d"
+        }
+        "13"
+        {
+                "firmwarebinary"	"/firmware/vcf_wired_controller_d0g_5643849f.bin"
+                "firmwaretimestamp"	"5643849f"
+                "minclientpackage"	"1446742416"
+                "crc128"	"04404cf4fdade77c71aef2bd96e45691"
+                "bootloadertimestamp"	"55d2926d"
+        }
+        "14"
+        {
+                "firmwarebinary"	"/firmware/vcf_wired_controller_d0g_5653a68a.bin"
+                "firmwaretimestamp"	"5653a68a"
+                "minclientpackage"	"1448355412"
+                "crc128"	"8d8df18506e84b17f32cd8a6f207d6ea"
+                "bootloadertimestamp"	"55d2926d"
+        }
     }
 }
