@@ -1270,11 +1270,12 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 
-		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets );
-		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets );
+		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets ) + rgTradeStatusForSlots.me.currency.length;
+		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets ) + rgTradeStatusForSlots.them.currency.length;
 		g_cCurrenciesInTrade = rgTradeStatusForSlots.me.currency.length + rgTradeStatusForSlots.them.currency.length;
 		if ( g_cMyItemsInTrade + g_cTheirItemsInTrade > 0 )
 			Tutorial.OnUserAddedItemsToTrade( g_cMyItemsInTrade, g_cTheirItemsInTrade );
+		RefreshTradeEscrowDisplay();
 	}
 	if ( rgTradeStatus.me.ready && !UserYou.bReady || !rgTradeStatus.me.ready && UserYou.bReady )
 	{
@@ -1886,7 +1887,7 @@ function UpdateReadyButtons()
 	else
 	{
 		var badOffer = g_bWalletBalanceWouldBeOverMax || g_nItemsFromContextWithNoPermissionToReceive > 0;
-		if ( !badOffer && ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) )
+		if ( !badOffer && ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 ) )
 		{
 			$('you_cantready').hide();
 			$('you_notready').show();
@@ -2987,5 +2988,43 @@ function TradingUnloaded( e )
 function StopWatchingForUnload()
 {
 	Event.stopObserving( window, 'unload', TradingUnloaded );
+}
+
+function RefreshTradeEscrowDisplay()
+{
+	var bWeAreSendingItems = g_cMyItemsInTrade > 0;
+	var bTheyAreSendingItems = g_cTheirItemsInTrade > 0;
+	var cEscrowDays = 0;
+
+	if ( bWeAreSendingItems && bTheyAreSendingItems )
+	{
+		cEscrowDays = Math.max( g_daysMyEscrow, g_daysTheirEscrow );
+	}
+	else if ( bWeAreSendingItems )
+	{
+		cEscrowDays = g_daysMyEscrow;
+	}
+	else if ( bTheyAreSendingItems )
+	{
+		cEscrowDays = g_daysTheirEscrow;
+	}
+
+	var $elHeader = $J('#trade_escrow_header');
+	if ( cEscrowDays == 0 )
+	{
+		if ( $elHeader.is( ":visible" ) )
+		{
+			$elHeader.slideUp();
+		}
+	}
+	else
+	{
+		$J('#trade_escrow_days').text( cEscrowDays );
+
+		if ( !$elHeader.is( ":visible" ) )
+		{
+			$elHeader.slideDown();
+		}
+	}
 }
 

@@ -179,43 +179,9 @@ function HandleSplashettePageLoad( needGid )
 	);
 }
 
-
-function HandleSplashetteChange( near )
-{
-	if ( CheckCallInProgress() )
-		return;
-	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/change';
-}
-
-
-function HandleSplashetteViewRCode( near )
-{
-	if ( CheckCallInProgress() )
-		return;
-	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode?countdown=0';
-}
-
-
 function PushLocation( url )
 {
 	return 'steammobile://openurl?url=' + url;
-}
-
-
-function HandleSplashetteHelp( near )
-{
-	window.location = 'https://steamcommunity.com/steamguard/help';
-}
-
-
-function HandleSteamguardPreChangeButton( near )
-{
-	if ( CheckCallInProgress() )
-		return;
-	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/change';
 }
 
 

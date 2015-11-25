@@ -977,3 +977,145 @@
 	width: 1400px;
 	height: 700px;
 }
+
+
+//
+// Mouse scroll regions for grids.
+// This can be removed once the steamstyles.css with the
+// appropriate stuff in it has propped.
+//
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	
+	z-index: 300;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration, shortduration;
+	transition-delay: 0.2s, 0.0s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+	background-color: mouse_off_bg_up;
+	align: center top;
+}
+
+.RightMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+	background-color: mouse_off_bg_bottom;
+	align: center bottom;
+}
+
+.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion,
+.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion
+{
+	opacity: 1.0;
+}
+
+.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_up;
+}
+
+.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
+.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_up;
+}
+
+.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_bottom;
+}
+
+
+//
+// Edge scroller base styles
+//
+EdgeScrollBar
+{
+	height: 100%;
+	width: 100%;
+
+	opacity: 1.0;
+
+	// The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
+	transition-property: transform;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+.EdgeScrollButton
+{
+	width: 100%;
+	height: 80px;
+	
+	z-index: 300;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration, mediumduration;
+	transition-delay: 0.2s, 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+EdgeScroller #MinButton
+{
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+	background-color: mouse_off_bg_up;
+	align: center top;
+}
+
+EdgeScroller #MaxButton
+{
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+	background-color: mouse_off_bg_bottom;
+	align: center bottom;
+}
+
+.CursorVisible EdgeScroller:descendantfocus:hover .EdgeScrollButton
+{
+	opacity: 1.0;
+}
+
+.CursorVisible EdgeScroller:descendantfocus:hover #MinButton:hover
+{
+	background-color: mouse_hover_bg_up;
+}
+
+.CursorVisible EdgeScroller:descendantfocus:hover #MaxButton:hover
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
+.CursorVisible EdgeScroller:descendantfocus:hover #MinButton:active
+{
+	transition-delay: 0.2s, 0.0s;
+	background-color: mouse_active_bg_up;
+}
+
+.CursorVisible EdgeScroller:descendantfocus:hover #MaxButton:active
+{
+	transition-delay: 0.2s, 0.0s;
+	background-color: mouse_active_bg_bottom;
+}
+

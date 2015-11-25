@@ -128,6 +128,26 @@
             ]
         },
         {
+            "name": "QueryLoginToken",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Queries the status of the specified token, which must be owned by you",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "login_token",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Login token to query"
+                }
+            ]
+        },
+        {
             "name": "GetServerSteamIDsByIP",
             "version": 1,
             "httpmethod": "GET",

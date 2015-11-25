@@ -206,6 +206,24 @@
 	transition-duration: 0.3s;
 }
 
+.SlideshowContainer #ContentFrameHeader
+{
+	z-index: 300;
+	background-image: none;
+}
+
+.SlideshowContainer .ContentHomeButton
+{
+	opacity: 0.0;
+}
+
+.CursorVisible .SlideshowContainer .ContentHomeButton
+{
+	opacity: 1.0;
+}
+
+
+
 #AppSlideshow > Image,
 #AppSlideshow > Movie,
 {
@@ -1500,4 +1518,9 @@ VerticalScrollBar {
 	font-size: 26px;
 	color: app_warning_color;
 	margin-bottom: 20px;
+}
+
+DropDownMenu VerticalScrollBar
+{
+	opacity: 1.0;
 }

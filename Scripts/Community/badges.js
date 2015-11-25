@@ -305,7 +305,7 @@ function BuildBoosterModal( strTitle, appid )
 	var $BtnBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium', 'href': g_strProfileURL + '/gamecards/' + appid + '/' } );
 	$BtnBadgeProgress.append( $J('<span/>').text('View badge progress') );
 
-	var $BtnFoilBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium', 'href': g_strProfileURL + '/gamecards/' + appid + '/?border=1' } );
+	var $BtnFoilBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium foil_badge_progress', 'href': g_strProfileURL + '/gamecards/' + appid + '/?border=1' } );
 	$BtnFoilBadgeProgress.append( $J('<span/>').text('View foil badge progress') );
 	$BtnFoilBadgeProgress.hide();
 
@@ -372,7 +372,7 @@ function ExecuteBoosterUnpack( Modal, appid, itemid, nMSBeforeStart )
 				{
 					var item = data.rgItems[i];
 					if ( item.foil )
-						$BtnFoilBadgeProgress.show();
+						$PostUnpackActions.find('.foil_badge_progress').show();
 
 					var $Card = $J('<div/>', {'class': 'booster_unpack_card card_front card' + (i+1) } );
 					var $ImgFlipGradient = $J('<div/>', {'class': 'booster_unpack_card_image_flip_gradient'});

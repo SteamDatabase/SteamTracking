@@ -1083,109 +1083,70 @@ DropDown Image,
 }
 
 
-
-
-.LeftMouseScrollRegion,
-.RightMouseScrollRegion
+.BottomMouseScrollRegion
 {
-	opacity: 0.0;
-	width: 80px;
-	height: 100%;
-	z-index: 200;
+	y: -95px;
+}
 
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration;
-	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	
+	z-index: 300;
 
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
-}
 
-Carousel:descendantfocus .LeftMouseScrollRegion,
-Grid:descendantfocus .LeftMouseScrollRegion
-{
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	
-	background-color: mouse_off_bg_left;
 	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration, shortduration;
+	transition-delay: 0.2s, 0.0s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-Carousel:descendantfocus .RightMouseScrollRegion,
-Grid:descendantfocus .RightMouseScrollRegion
-{
-	align: right center;
-	
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-
-	background-color: mouse_active_bg_right;
-	opacity: 0.0;
-}
-
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-.CursorVisible #ItemGridMain:descendantfocus:hover  .RightMouseScrollRegion
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_right;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
-.CursorVisible #ItemGridMain:descendantfocus:hover  .LeftMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-.CursorVisible #ItemGridMain:descendantfocus:hover  .RightMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_right;
-}
-
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-
-}
 
 .LeftMouseScrollRegion
 {
-	background-color: mouse_active_bg_left;
-	position: 0px -10px 0px;
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+	background-color: mouse_off_bg_up;
+	align: center top;
 }
 
 .RightMouseScrollRegion
 {
-	background-color: mouse_active_bg_right;
-	horizontal-align: right;
-	position: -110px -10px 0px;
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+	background-color: mouse_off_bg_bottom;
+	align: center bottom;
+	y: -95px;
 }
 
-.SearchVisible #ItemGridSearch .RightMouseScrollRegion
+.CursorVisible Grid:hover .LeftMouseScrollRegion,
+.CursorVisible Grid:hover .RightMouseScrollRegion
 {
-	position: -544px -10px 0px;
+	opacity: 1.0;
+}
+
+.CursorVisible Grid:hover .LeftMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_up;
+}
+
+.CursorVisible Grid:hover .RightMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
+.CursorVisible #GamesGrid:hover .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_up;
+}
+
+.CursorVisible Grid:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_bottom;
+
 }
 
 .DropDownWrapper

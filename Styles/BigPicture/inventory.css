@@ -729,108 +729,16 @@ DropDownMenu .FilterOption Label:focus
 }
 
 
-.LeftMouseScrollRegion,
-.RightMouseScrollRegion
+#ItemGrid .LeftMouseScrollRegion,
+#ItemGrid .TopMouseScrollRegion
 {
-	opacity: 0.0;
-	height: 80px;
-	width: 100%;
-	z-index: 200;
-
-	transform: translatex( -110px );
-
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration;
-	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
-
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
+	y: 20px;
 }
 
-Carousel:descendantfocus .LeftMouseScrollRegion,
-Grid:descendantfocus .LeftMouseScrollRegion
+#ItemGrid .RightMouseScrollRegion,
+#ItemGrid .BottomMouseScrollRegion
 {
-	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
-	align: center top;
-	background-color: mouse_off_bg_up;
-	opacity: 0.0;
-}
-
-Carousel:descendantfocus .RightMouseScrollRegion,
-Grid:descendantfocus .RightMouseScrollRegion
-{
-	align: center bottom;
-	
-	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-
-	background-color: mouse_active_bg_bottom;
-	opacity: 0.0;
-}
-
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_up;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_bottom;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_up;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_bottom;
-}
-
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_up;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_bottom;
-
-}
-
-.LeftMouseScrollRegion
-{
-	background-color: mouse_active_bg_up;
-}
-
-.RightMouseScrollRegion
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-#AppCarousel .LeftMouseScrollRegion
-{
-	position: 0px 0px 0px;
-}
-
-#AppCarousel .RightMouseScrollRegion
-{
-	position: 0px 0px 0px;
+	y: -65px;
 }
 
 TextEntry {

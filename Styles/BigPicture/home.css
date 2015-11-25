@@ -80,6 +80,7 @@ RemotePanel
 	overflow: squish scroll;
 	padding-bottom: 150px;
 	padding-top: 40px;
+	height: 995px;
 }
 
 .FeaturedWrapping
@@ -264,6 +265,7 @@ RemotePanel
 	overflow: squish scroll;
 	padding-bottom: 150px;
 	padding-top: 40px;
+	height: 995px;
 }
 
 
@@ -279,14 +281,26 @@ RemotePanel
 
 .ExploreSection
 {
-	padding-top: 8px;
-	padding-left: 14px;
+	padding: 10px;
+	margin: -10px;
 	padding-right: 10px;
-	padding-bottom: 10px;
 	margin-top: 22px;
 	flow-children: down;
 
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
+	opacity: 0.8;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+}
+.ExploreSection:descendantfocus
+{
+	opacity: 1;
+}
+.ExploreSection:descendantfocus .ExploreSectionHeader
+{
+	color: #ffffff;
 }
 
 .ExploreButtonHeader
@@ -299,7 +313,8 @@ RemotePanel
 .DiscoveryQueueSection
 {
 	width: 100%;
-	margin-top: 0px;
+	padding: 10px;
+	margin: -10px;
 }
 
 .DiscoveryQueueApps
@@ -307,8 +322,8 @@ RemotePanel
 	width: 1350px;
 	height: 218px;
 
-	margin-top: 8px;
-	padding-left: 10px;
+	margin-top: 0px;
+	padding-left: 12px;
 
 	border-radius: 3px;
 	background-color: transparent_module;
@@ -330,6 +345,8 @@ RemotePanel
 {
 	width: 1340px;
 	flow-children: right;
+	padding: 10px;
+	margin: -10px;
 }
 
 .DiscoveryQueueAboutBtn
@@ -338,7 +355,7 @@ RemotePanel
 	height: 100%;
 	flow-children: down;
 	background-color: transparent_module;
-	margin: 8px 0px 0px 15px;
+	margin: 0px 0px 0px 15px;
 	padding: 24px;
 	border-radius: 3px;
 
@@ -360,6 +377,8 @@ RemotePanel
 	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
@@ -455,21 +474,29 @@ RemotePanel
 .DiscoveryApp_2
 {
 	transform: translate3d( 25%, 0px, -100px );
+	desaturation: 0.5;
+	wash-color: #1483ba66;
 }
 
 .DiscoveryApp_3
 {
 	transform: translate3d( 45%, 0px, -150px );
+	desaturation: 0.7;
+	wash-color: #1483ba99;
 }
 
 .DiscoveryApp_4
 {
 	transform: translate3d( 65%, 0px, -225px );
+	desaturation: 0.9;
+	wash-color: #1483baCC;
+	opacity: 0.7;
 }
 
 .DiscoveryApp_5
 {
 	transform: translate3d( 85%, 0px, -350px );
+	opacity: 0;
 }
 
 .DiscoveryQueueApps:focus,
@@ -511,19 +538,24 @@ RemotePanel
 
 .ExploreSectionHeader
 {
-	font-size: 30px;
-	color: detailsdatalabelfocus;
+	font-size: 36px;
+	color: #9fc3e0;
 }
 
 .RecommendedTagsSection
 {
 	width: 100%;
+	padding: 10px;
+	margin: -10px;
+	margin-top: 30px;
 }
 
 .RecommendedTags
 {
-	width: 1340px;
-	margin-top: 10px;
+	width: 1360px;
+	padding: 10px;
+	margin: -10px;
+
 	flow-children: right-wrap;
 }
 
@@ -577,7 +609,8 @@ RemotePanel
 .RecommendedCuratorApps
 {
 	flow-children: right;
-	margin-top: 10px;
+	padding: 10px;
+	margin: -10px;
 }
 
 .RecommendedCurator
@@ -659,7 +692,7 @@ RemotePanel
 .NxRightContentContainer.HomeUpdated
 {
 	width: 1640px;
-	height: 990px;
+	height: 995px;
 	flow-children: right-wrap;
 	overflow: squish scroll;
 	padding-bottom: 150px;
@@ -999,3 +1032,20 @@ VerticalScrollBar
 {
 	visibility: collapse;
 }
+
+.NxRightColumn > EdgeScroller
+{
+	width: 100%;
+	height: 100%;
+}
+
+EdgeScroller.NxRightContentContainer #MinButton
+{
+	y: 20px;
+}
+
+EdgeScroller.NxRightContentContainer #MaxButton
+{
+	y: -100px;
+}
+

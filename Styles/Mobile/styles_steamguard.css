@@ -1,4 +1,8 @@
 
+html.responsive body.responsive_page {
+	min-height: 0;
+}
+
 .steamguard_choice_list {
 }
 

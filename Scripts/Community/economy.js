@@ -4846,13 +4846,27 @@ function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRe
 
 function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 {
+	var description = $J( '<div/>', { class: 'escrow_explanation' } );
+
+	description.append( '<div class="escrow_explanation_q">What is a trade hold?</div>' );
+	description.append( '<div class="escrow_explanation_a">A trade hold is a period of time where the items traded are held by Steam before they are delivered.</div>' );
+
+	description.append( '<div class="escrow_explanation_q">Trade holds help protect your items</div>' );
+	description.append( '<div class="escrow_explanation_a">Because Steam accounts are valuable, especially if they have items worth stealing. If you haven\'t protected your account with a physical device (the Steam Guard Mobile Authenticator), a trade hold will give you time to discover your account has been compromised and to prevent your items from leaving your account.</div>' );
+
+	description.append( '<div class="escrow_explanation_q">A delay to catch unauthorized trades</div>' );
+	description.append( '<div class="escrow_explanation_a">If a user trading away items doesn\'t have their account protected by a Mobile Authenticator, item delivery will be delayed by Steam for up to 3 days. This provides the user time to cancel the trade and any others that are pending.<br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items.</div>' );
+
+	description.append( '<div class="escrow_explanation_q">Make fast and secure trades</div>' );
+	description.append( '<div class="escrow_explanation_a">Increase your account security by getting the <a href="http://store.steampowered.com/mobile/">Steam Guard Mobile Authenticator</a> for iOS and Android devices. Using a Mobile Authenticator to confirm trades will ensure that you and only you can trade away your items quickly and securely.</div>' );
+
 	if ( bAddSteamGuardLink )
 	{
 		var dialog = ShowConfirmDialog(
-			'What is Escrow?',
-			'<div class="escrow_explanation">After a trade has been accepted by both parties, if either party\'s account has not been secured by the Steam Guard Mobile Authenticator, then to protect against unauthorized trades, the traded items will be placed in escrow.<br><br>During the escrow period, the items will not be available to either user. This allows users who have not secured their accounts to cancel any unauthorized trades and recover their items.<br><br>Canceling all pending and in-escrow trades will place a trading hold on your account for a few days to prevent any further unauthorized attempts to trade away items.</div>',
+			'Trade Holds',
+			description,
 			'Learn About Steam Guard Mobile Authenticator',
-			'Dismiss'
+			'Close'
 		);
 		dialog.done( function() {
 			window.open( 'http://store.steampowered.com/mobile' );
@@ -4861,8 +4875,8 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 	else
 	{
 		var dialog = ShowAlertDialog(
-			'What is Escrow?',
-			'<div class="escrow_explanation">After a trade has been accepted by both parties, if either party\'s account has not been secured by the Steam Guard Mobile Authenticator, then to protect against unauthorized trades, the traded items will be placed in escrow.<br><br>During the escrow period, the items will not be available to either user. This allows users who have not secured their accounts to cancel any unauthorized trades and recover their items.<br><br>Canceling all pending and in-escrow trades will place a trading hold on your account for a few days to prevent any further unauthorized attempts to trade away items.</div>'
+			'Trade Holds',
+			description
 		);
 	}
 	return false;

@@ -2396,6 +2396,14 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	height:8px;
 }
 
+.submissionRequirements
+{
+	font-size: 15px;
+	color: #e69034;
+	display: block;
+	margin-bottom: 10px;
+}
+
 .workshopItemDescription {
 	font-size:14px;
 	word-wrap:break-word;

@@ -46,7 +46,7 @@ CStoreHome.prototype.ShowStoreSection = function( strSection )
 	var pSection = pContent.FindChild( strID );
 	if ( !pSection )
 	{
-		pSection = $.CreatePanel( 'Panel', pContent, strID );
+		pSection = $.CreatePanel( 'EdgeScroller', pContent, strID );
 		if ( !pSection.BLoadLayoutFromString( this.GetSectionTemplate( strSection ), true, false ) )
 		{
 			$.Msg( 'Failed to load layout file: ' + strSection );

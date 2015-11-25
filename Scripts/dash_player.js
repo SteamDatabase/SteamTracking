@@ -194,10 +194,10 @@ CDASHPlayer.prototype.Close = function()
 	}
 }
 
-CDASHPlayer.prototype.CloseWithError = function( errorToTrigger )
+CDASHPlayer.prototype.CloseWithError = function( errorToTrigger, extraParameters )
 {
 	this.Close();
-	$J( this.m_elVideoPlayer ).trigger( errorToTrigger || 'playbackerror' );
+	$J( this.m_elVideoPlayer ).trigger( errorToTrigger || 'playbackerror', extraParameters || [] );
 }
 
 CDASHPlayer.prototype.SetUniqueId = function( strUniqueId )
@@ -318,12 +318,18 @@ CDASHPlayer.prototype.InitializeEME = function()
 						};
 
 					adaptationSet.representations.forEach( function( representation ) {
-						var capability = { contentType: representation.mimeType + '; codecs="' + representation.codecs + '"', robustness: '' };
-
+						var robustnesses = [ 'HW_SECURE_DECODE', 'SW_SECURE_DECODE' ];
 						if ( adaptationSet.containsAudio ) {
-							keySystemConfigurations[ system ].audioCapabilities.push( capability );
-						} else if ( adaptationSet.containsVideo ) {
-							keySystemConfigurations[ system ].videoCapabilities.push( capability );
+							robustnesses.push( 'SW_SECURE_CRYPTO' )
+						}
+						for ( var k = 0; k < robustnesses.length; ++k  ) {
+							var capability = { contentType: representation.mimeType + '; codecs="' + representation.codecs + '"', robustness: robustnesses[ k ] };
+
+							if ( adaptationSet.containsAudio ) {
+								keySystemConfigurations[ system ].audioCapabilities.push( capability );
+							} else if ( adaptationSet.containsVideo ) {
+								keySystemConfigurations[ system ].videoCapabilities.push( capability );
+							}
 						}
 					});
 				}
@@ -342,6 +348,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 		{
 			navigator.requestMediaKeySystemAccess( system, [ keySystemConfigurations[ system ] ] ).then(
 				function( keySystemAccess ) {
+					PlayerLog( 'Browser video robustness capability', keySystemAccess.getConfiguration().videoCapabilities[ 0 ].robustness );
 					return keySystemAccess.createMediaKeys();
 				}
 			).then(
@@ -364,15 +371,20 @@ CDASHPlayer.prototype.InitializeEME = function()
 				}
 			).catch(
 				function(error) {
-					$J( _player.m_elVideoPlayer ).trigger( 'waitingforwidevine' );
-					if ( --nKeySystemsToTry === 0 ) {
-						if ( ++nRetries >= nMaxRetries ) {
-							PlayerLog( 'Failed to initialize EME after ' + nMaxRetries + ' retries, giving up and erroring.' );
-							_player.CloseWithError( 'drmerrordownload' );
-						} else {
-							PlayerLog( 'Failed to initialize EME, retrying initialization in ' + nTimeBetweenRetriesMs + 'ms' );
-							setTimeout( _init, nTimeBetweenRetriesMs );
+					PlayerLog( 'Failed to initialize EME', error.message );
+					if ( error.message == 'Unsupported keySystem' ) {
+						$J( _player.m_elVideoPlayer ).trigger( 'waitingforwidevine' );
+						if ( --nKeySystemsToTry === 0 ) {
+							if ( ++nRetries >= nMaxRetries ) {
+								PlayerLog( 'Failed to initialize EME after ' + nMaxRetries + ' retries, giving up and erroring.' );
+								_player.CloseWithError( 'drmerrordownload' );
+							} else {
+								PlayerLog( 'Failed to initialize EME, retrying initialization in ' + nTimeBetweenRetriesMs + 'ms' );
+								setTimeout( _init, nTimeBetweenRetriesMs );
+							}
 						}
+					} else {
+						_player.CloseWithError( 'drmerror', [ error.message ] );
 					}
 				}
 			);
@@ -399,7 +411,7 @@ CDASHPlayer.prototype.OnEncrypted = function( event )
 	session.generateRequest( event.initDataType, event.initData ).catch(
 		function(error) {
 			PlayerLog('Failed to generate a license request', error);
-			_player.CloseWithError( 'drmerror' );
+			_player.CloseWithError( 'drmerror', [ error.message ] );
 		}
 	);
 }
@@ -435,9 +447,9 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 						_player.CloseWithError( status === 'output-restricted' || status === 'output-not-allowed' ? 'hdcperror' : 'drmerror' );
 					}
 				});
-			},function() {
-				PlayerLog( 'Failed to update DRM session', arguments );
-				_player.CloseWithError( 'drmerror' );
+			},function( reason ) {
+				PlayerLog( 'Failed to update DRM session', reason );
+				_player.CloseWithError( 'drmerror', [ reason ] );
 			});
 		}
 	});
@@ -5755,7 +5767,15 @@ CDASHPlayerUI.prototype.ShowClosedCaptionsPanel = function()
 CDASHPlayerUI.prototype.SwitchClosedCaptionLanguageInPlayer = function( strCaptionCode )
 {
 	var ccRole = endsWith( strCaptionCode, CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
-	this.m_player.UpdateClosedCaption( strCaptionCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' ), ccRole );
+	var ccCode = strCaptionCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' );
+	this.m_player.UpdateClosedCaption( ccCode, ccRole );
+
+	var strCaptionURL = this.m_player.m_VTTCaptionLoader.GetClosedCaptionUrl( ccCode, ccRole );
+	if ( strCaptionURL )
+	{
+		$J( '.download_subtitle' ).attr( 'href', strCaptionURL );
+		$J( '.download_subtitle' ).attr( 'download', this.m_strUniqueSettingsID + '_' + ccCode + '_' + ccRole );
+	}
 }
 
 CDASHPlayerUI.ChangeClosedCaptionDisplay = function( cueKey, cueValue )

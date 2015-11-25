@@ -663,174 +663,6 @@ ProfilePanel #UpperRow
 }
 
 
-#LowerContentsRow
-{
-	x: -20px;
-	
-	padding-top: 10px;
-	padding-bottom: 10px;
-
-	margin-right: 10px;
-	height: 100%;
-	width: 100%;
-
-	pre-transform-scale2d: 1.0;
-
-	opacity: 0.999;
-	flow-children: right;
-
-	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-}
-
-.OldProfile #LowerContentsRow
-{
-	transform: translatey( 70px );
-}
-
-.StackDepth1 #LowerContentsRow
-{
-	perspective: 1000;
-	animation-name: profilecontent-perspective;
-	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#LowerContentsRow:hover
-{
-	pre-transform-scale2d: 1.03;
-}
-
-#LowerContentsRow:descendantfocus
-{
-	transform: translatey( 46px );
-	pre-transform-scale2d: 1.0;
-}
-
-.OldProfile #LowerContentsRow:descendantfocus
-{
-	transform: translatey( -34px );
-}
-
-.LowerProfileContentCard
-{
-	width: 514px;
-	height: 570px;
-	padding: 10px;
-
-	margin-left: -91px;
-	margin-right: -91px;
-
-	vertical-align: center;
-
-	flow-children: down;
-
-	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform, background-color, opacity;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-}
-
-.LowerProfileContentCard:focus,
-.LowerProfileContentCard:descendantfocus
-{
-
-}
-
-.LowerContentBody
-{
-	width: 494px;
-	height: 524px;
-
-	background-color: transparent_module;
-	box-shadow: fill #00000033 -4px -4px 12px 8px;
-	pre-transform-scale2d: 0.6477732, 0.2824427;
-	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.65;	
-
-	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity-mask, blur, transform, background-color;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-}
-#LowerContentsRow:descendantfocus .LowerContentBody:hover
-{
-	pre-transform-scale2d: 0.667206396, 0.290915981;
-}
-
-#LowerContentsRow:descendantfocus .LowerContentBody,
-
-{
-	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;	
-}
-
-#LowerContentsRow:descendantfocus .LowerContentBody:descendantfocus:hover
-{
-	pre-transform-scale2d: 1.00;
-}
-
-.LowerContentBody:descendantfocus
-{
-	background-color: action_module;	
-}
-
-.LowerProfileContentCard:focus .LowerContentBody,
-.LowerProfileContentCard:descendantfocus .LowerContentBody
-{
-	pre-transform-scale2d: 1.0, 1.0;
-
-	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-	opacity: 0.999999;
-}
-
-.LowerContentBodyInner
-{
-	pre-transform-scale2d: 1.54375, 3.540541;
-	transform: translate3d( 140px, 672px, 0px );
-
-	width: 100%;
-	height: 100%;
-
-	flow-children: down;
-
-	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-}
-
-.LowerProfileContentCard:focus .LowerContentBodyInner,
-.LowerProfileContentCard:descendantfocus .LowerContentBodyInner
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatex( 0px );
-}
-
-.LowerContentHeader
-{
-	margin-left: 12px;
-	margin-top: 12px;
-	font-size: 32px;
-	color: detailsdatalabel;
-	font-weight: light;
-}
-
-#AboutMe .LowerContentHeader
-{
-	margin-bottom: 12px;
-}
-
 #SteamLevelRow
 {
 	/*margin-top: 10px;*/
@@ -1348,18 +1180,6 @@ color: #FFFFFF99;
 	height: 60px;
 }
 
-#Friends #FriendsLowerContentSmall,
-#Groups #GroupsLowerContentSmall
-{
-	opacity: 1.0;
-	flow-children: right;
-	margin-left: 8px;
-
-	transition-property: opacity, transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-}
-
 #SmallFriend1,
 #SmallFriend2,
 #SmallFriend3,
@@ -1409,9 +1229,7 @@ color: #FFFFFF99;
 }
 
 #Friends .FriendRow Image,
-#Friends #FriendsLowerContentSmall Image,
-#Groups .GroupRow Image,
-#Groups #GroupsLowerContentSmall Image
+#Groups .GroupRow Image
 {
 	margin-left: 8px;
 	vertical-align: center;
@@ -1424,34 +1242,20 @@ color: #FFFFFF99;
 	height: 72px;
 }
 
-#Friends #FriendsLowerContentSmall Image,
-#Groups #GroupsLowerContentSmall Image
-{
-	margin-right: 14px;
-	margin-top: 58px;
-	vertical-align: top;
-}
-
 #Friends .FriendRow Image.online,
-#Friends #FriendsLowerContentSmall Image.online,
-#Groups .GroupRow Image.online,
-#Groups #GroupsLowerContentSmall Image.online,
+#Groups .GroupRow Image.online
 {
 	border-color: friendsonline_solid;
 }
 
 #Friends .FriendRow Image.offline,
-#Friends #FriendsLowerContentSmall Image.offline,
-#Groups .GroupRow Image.offline,
-#Groups #GroupsLowerContentSmall Image.offline
+#Groups .GroupRow Image.offline
 {
 	border-color: friendsoffline_solid;
 }
 
 #Friends .FriendRow Image.ingame,
-#Friends #FriendsLowerContentSmall Image.ingame,
-#Groups .GroupRow Image.ingame,
-#Groups #GroupsLowerContentSmall Image.ingame
+#Groups .GroupRow Image.ingame
 {
 	border-color: friendsingame_solid;
 }
@@ -1661,13 +1465,6 @@ color: #FFFFFF99;
 .StackDepth1 ProfilePanel #UpperRow
 {
 	opacity: 0.0;
-}
-
-.StackDepth1 ProfilePanel #ContentsRow .ProfileContentCard,
-.StackDepth1 ProfilePanel #LowerContentsRow .LowerProfileContentCard,
-.StackDepth1 ProfilePanel .LowerContentBody 
-{
-	background-color: #00000000;
 }
 
 .StackDepth1 ProfilePanel #FriendsActivity
@@ -3160,115 +2957,6 @@ Label.AchievementPercent,
 }
 
 
-.LeftMouseScrollRegion,
-.RightMouseScrollRegion
-{
-	opacity: 0.0;
-	width: 80px;
-	height: 100%;
-	z-index: 200;
-
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration;
-	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
-
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-}
-
-Carousel:descendantfocus .LeftMouseScrollRegion,
-Grid:descendantfocus .LeftMouseScrollRegion
-{
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	
-	background-color: mouse_off_bg_left;
-	opacity: 0.0;
-}
-
-Carousel:descendantfocus .RightMouseScrollRegion,
-Grid:descendantfocus .RightMouseScrollRegion
-{
-	align: right center;
-	
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-
-	background-color: mouse_active_bg_right;
-	opacity: 0.0;
-}
-
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
-{
-	transition-delay: 0.0s;
-	opacity: 1.0;
-	background-color: mouse_hover_bg_right;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
-{
-	transition-delay: 0.0s;
-	background-color: mouse_active_bg_right;
-}
-
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-
-}
-
-.LeftMouseScrollRegion
-{
-	background-color: mouse_active_bg_left;
-}
-
-.RightMouseScrollRegion
-{
-	background-color: mouse_active_bg_right;
-	horizontal-align: right;
-}
-
-#ContentsRow .LeftMouseScrollRegion
-{
-	position: 40px -10px 0px;
-}
-
-#ContentsRow .RightMouseScrollRegion
-{
-	position: -640px -10px 0px;
-}
-
-#LowerContentsRow .LeftMouseScrollRegion,
-#LowerContentsRow .RightMouseScrollRegion
-{
-	visibility: collapse;
-}
-
 #PreviewImagePopup Button
 {
 	width: 100%;
@@ -3527,9 +3215,20 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 
-#ShowcaseGrid VerticalScrollBar
+#content_showcases .ContentGrid VerticalScrollBar
 {
 	opacity: 0.0;
+}
+
+.ContentGrid .RightMouseScrollRegion,
+.ContentGrid .BottomMouseScrollRegion
+{
+	y: -80px;
+}
+
+.ContentGrid #MaxButton
+{
+	y: -210px;
 }
 
 #ShowcaseGrid .ProfileContentCard,
@@ -3934,11 +3633,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	margin-bottom: 0px;
 }
 
-#ShowcaseGrid .LeftMouseScrollRegion,
-#ShowcaseGrid .RightMouseScrollRegion
-{
-	opacity: 0.0;
-}
 #ScreenshotsContainer {
 	padding-top: 40px;
 	padding-left: 00px;
@@ -4136,8 +3830,12 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	margin-left: -40px;
 	margin-top: 6px;
 	padding-bottom: 220px;
-	flow-children: right-wrap;
 	overflow: squish scroll;
+}
+
+#ProfileContent #content_showcases #ShowcaseGrid
+{
+	flow-children: right-wrap;
 }
 
 #ProfileContent .NxNavigationLoadingThrobber
@@ -4572,15 +4270,18 @@ Panel.AvatarOptionGame {
 
 #friends_list,
 #friends_blocked,
-#friends_following
+#friends_following,
+#groups_list
 {
 	width: 1700px;
+	height: 1200px;
 	padding-right: 150px;
 }
 
 .FriendsGrid,
 #friends_blocked .ContentGrid,
-#friends_following .ContentGrid
+#friends_following .ContentGrid,
+.GroupsGrid
 {
 	height: 1100px;
 	padding: 70px 40px 40px 20px;
@@ -4589,7 +4290,9 @@ Panel.AvatarOptionGame {
 	width: 100%;
 }
 
-.FriendRow {
+.FriendRow,
+.Group
+{
 	height: 115px;
 	flow-children: right;
 	width: 50%;
@@ -4597,13 +4300,17 @@ Panel.AvatarOptionGame {
 
 }
 
-.FriendRow .AvatarImage {
+.FriendRow .AvatarImage,
+.Group .AvatarImage
+{
 	width: 96px;
 	height: 96px;
 	margin-right: 10px;
 }
 
-.FriendRow .TextContainer {
+.FriendRow .TextContainer,
+.Group .TextContainer
+ {
 	flow-children: down;
 	width: 100%;
 }
@@ -4820,42 +4527,7 @@ LibraryGameBadge .badge_info_description Label
 
 
 
-/* Groupss list */
-
-#groups_list
-{
-	width: 1700px;
-	padding-right: 150px;
-}
-
-.GroupsGrid
-{
-	height: 1100px;
-	padding: 70px 40px 40px 20px;
-	margin: 0px;
-	flow-children: down;
-	width: 100%;
-}
-
-.Group
-{
-	flow-children: right;
-	height: 115px;
-	width: 50%;
-	margin-right: 10px;
-}
-
-.Group .AvatarImage {
-	width: 96px;
-	height: 96px;
-	margin-right: 10px;
-}
-
-.Group .TextContainer {
-	flow-children: down;
-	width: 100%;
-}
-
+/* Groups list */
 .Group .MemberRow
 {
 	flow-children: right;
@@ -4882,5 +4554,24 @@ LibraryGameBadge .badge_info_description Label
 {
 	color: #072e47;
 }
+
+
+.FriendsGrid .LeftMouseScrollRegion,
+.FriendsGrid .TopMouseScrollRegion,
+.GroupsGrid .LeftMouseScrollRegion,
+.GroupsGrid .TopMouseScrollRegion
+{
+	y: 40px;
+}
+
+.FriendsGrid .RightMouseScrollRegion,
+.FriendsGrid .BottomMouseScrollRegion,
+.GroupsGrid .RightMouseScrollRegion,
+.GroupsGrid .BottomMouseScrollRegion
+{
+	y: -175px;
+}
+
+
 
 

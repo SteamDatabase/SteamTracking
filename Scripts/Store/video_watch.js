@@ -154,7 +154,7 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
-	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function() { _watch.OnPlayerDRMError(); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function() { _watch.OnPlayerDRMDownloadError(); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
@@ -214,10 +214,10 @@ CVideoWatch.prototype.OnPlayerPlaybackError = function()
 	this.OnLogEventToServer( 'Playback Error', '' );
 }
 
-CVideoWatch.prototype.OnPlayerDRMError = function()
+CVideoWatch.prototype.OnPlayerDRMError = function( description )
 {
 	this.ShowVideoError( 'This video requires a license to play which cannot be retrieved.<br><br>This may be a temporary network condition.<br><br>Please restart the video to try again.' );
-	this.OnLogEventToServer( 'DRM License Error', '' );
+	this.OnLogEventToServer( 'DRM License Error', description );
 }
 
 CVideoWatch.prototype.OnPlayerDRMDownloadError = function()

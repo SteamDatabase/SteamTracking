@@ -349,7 +349,7 @@
 
 .dash_closed_captions_customization
 {
-	min-width: 300px;
+	min-width: 330px;
 	min-height: 100px;
 
 	position: absolute;
@@ -1606,6 +1606,17 @@
 	top: 20px;
 	left: 20px;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+.download_subtitle
+{
+	color: #9d9d9d;
+	float: right;
+	margin-top: -10px;
+	margin-right: -10px;
+	font-size: 10px;
+	cursor: pointer;
+	display: none;
 }
 
 /*.MoviePlayer_Button_LiveBroadcast_Off {width:58px; height:13px; background-position: -1388px -173px}*/

@@ -5,13 +5,17 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+.market_header_bg {
+	background-color: #46602a;
+	width: 100%;
+}
 #BG_top {
 	position:relative;
-	width:949px;
-	height:109px;
+	width: 949px;/*100%;*/
+	height: 121px;
+	background-color: #46602a;
 	text-align: left;
 	margin: 0 auto;
-	padding-top: 18px;
 }
 
 #BG_top > img {
@@ -58,6 +62,45 @@ h1, h2, h3, h4, h5, h6 {
 	height: 1px;
 	overflow: hidden;
 }
+
+.market_header
+{
+	width: 100%;
+}
+
+.market_header_logo
+{
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/header/market_banner.jpg');
+	background-repeat: no-repeat;
+	height: 121px;
+	width: 949px;
+
+}
+
+.market_header_text
+{
+	display: block;
+	width: 600px;
+	text-align: left;
+	padding: 20px 10px 0px;
+}
+
+.market_title_text
+{
+	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
+	font-size: 34px;
+	color: #ffffff;
+}
+
+.market_subtitle_text
+{
+	font-size: 14px;
+	color: #9dc473;
+}
+
 
 .market_whatsthis {
 	color: #529CDE;
@@ -157,19 +200,9 @@ ul.market_restrictions li {
 
 #myMarketTabs {
 	position: relative; /* position:absolute children need to be relative to this */
-	border: 1px solid black;
-	border-top: none;
-	border-right-color: #111111;
-	border-left-color: #1E1E1E;
 	padding-left: 15px;
 	padding-right: 15px;
-
-	-webkit-box-shadow: -2px 2px 8px #292929 inset;
-	-moz-box-shadow: -2px 2px 8px #292929 inset;
-	box-shadow: -2px 2px 8px #292929 inset;
-	background-image: linear-gradient(to bottom, #404040, #343434);
-	background-image: -moz-linear-gradient(top, #404040, #343434);
-	background-image: -webkit-linear-gradient(top, #404040, #343434);
+	background-color: #1b2838;
 }
 
 #myListings {
@@ -454,7 +487,7 @@ a.market_listing_item_name_link:hover {
 	display: none;
 }
 .market_listing_price_with_publisher_fee_only {
-	color: white;
+	color: #a5cb00;
 	display: none;
 }
 
@@ -536,6 +569,7 @@ a.market_listing_item_name_link:hover {
 }
 .two_factor_sale_enabled .market_listing_their_price > .market_table_value .sale_price {
 	display: inline;
+	color: #a5cb00;
 }
 
 .market_listing_num_listings {
@@ -978,16 +1012,50 @@ input.filter_search_box:focus {
 	padding-top: 24px;
 }
 
+.market_sale_icon {
+	float: left;
+	margin-right: 10px;
+}
+
 .market_sale_msg
 {
 	position: relative;
-	width: 929px;
+	max-width: 929px;
 	margin: 0 auto;
-	background-color: rgba( 48, 95, 128, 0.9 );
 	padding: 10px;
+	padding-bottom: 30px;
+	color: #6fa9d1;
+	font-size: 16px;
+}
+
+.market_sale_msg a
+{
+	color: #6fa9d1;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.market_sale_msg_header
+{
+	font-size: 22px;
 	color: white;
-	font-size: 18px;
-	margin-top: 10px;
+	padding-bottom: 5px;
+}
+
+
+.market_sale_msg_discount
+{
+	display: inline-block;
+	text-transform: uppercase;
+	color: #9cd608;
+	font-size: 16px;
+}
+
+.market_sale_msg_seller
+{
+	display: inline-block;
+	color: #3b6886;
+	font-size: 12px;
 }
 
 .market_listing_warning_msg {

@@ -2,22 +2,25 @@
 .trade_offers_escrow_explanation
 {
 	margin-left: 48px;
-	padding: 15px 10px;
-	border: 2px solid white;
-	background-color: #799905;
-
+	margin-bottom: 20px;
+	background-color: #1e1e1e;
 }
 .trade_offers_escrow_explanation .title
 {
-	font-size: 20px;
+	padding: 10px;
+	font-size: 17px;
 	color: white;
+	background-color: #a6801b;
 }
 .trade_offers_escrow_explanation .subtitle
 {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 16px;
+	padding: 10px;
+	font-size: 14px;
 	color: white;
+}
+.trade_offers_escrow_explanation .escrow_actions
+{
+	padding: 10px;
 }
 
 .tradeoffer {
@@ -208,6 +211,10 @@
 
 .tradeoffer_items_banner.accepted {
 	background-color: #5c7e10;
+}
+
+.tradeoffer_items_banner.in_escrow {
+	background-color: #a6801b;
 }
 
 .tradeoffer_items_rule {
