@@ -1761,6 +1761,7 @@
 	"Library_Details_SourceMode_DPad_Title"				"DIRECTIONAL PAD"
 	"Library_Details_SourceMode_ABXY_Title"				"BUTTON PAD"
 	"Library_Details_SourceMode_MouseJoystick_Title"	"MOUSE-LIKE JOYSTICK"
+	"Library_Details_SourceMode_MouseRegion_Title"	"MOUSE REGION"
 
 	"Library_Details_Source_Title_none"			"UNASSIGNED"
 	"Library_Details_Source_Title_left_trackpad"		"L Pad"
@@ -1851,6 +1852,7 @@
 	"Library_Details_FieldLabel_Sensitivity_Mouse_Joystick_Warning" "Adjust sensitivity in-game."
 	"Library_Details_FieldLabel_MouseSensitivity"	"Mouse Sensitivity"
 	"Library_Details_FieldLabel_Rotation"			"Rotation"
+	"Library_Details_FieldLabel_SensitivityHorizScale"		"Sensitivity Horizontal Scale"
 	"Library_Details_FieldLabel_SensitivityVertScale"		"Sensitivity Vertical Scale"
 	"Library_Details_FieldLabel_Smoothing"			"Smoothing"
 	"Library_Details_FieldLabel_Trackball"			"Trackball Mode"
@@ -1924,6 +1926,13 @@
 	"Library_Details_FieldLabel_AbsMouseGyroRight"	"Gyro Lean Right Binding"
 	"Library_Details_FieldLabel_AbsMouseGyroLeft"	"Gyro Lean Left Binding"
 
+	"Library_Details_FieldLabel_MouseRegion_Scale"	"Region Size"
+	"Library_Details_FieldLabel_MouseRegion_PositionX"	"Horizontal Position"
+	"Library_Details_FieldLabel_MouseRegion_PositionY"	"Vertical Position"
+	"Library_Details_FieldLabel_MouseRegionClick"		"Click Binding"
+	"Library_Details_FieldLabel_TeleportStart"		"Snap Mouse To Region On Mode Shift"
+	"Library_Details_FieldLabel_TeleportStop"		"Snap Mouse Back on Mode Shift End"
+
 	"Library_Details_SourceMode_Title_None"				"None"
 	"Library_Details_SourceMode_Title_Dpad"				"Directional Pad"
 	"Library_Details_SourceMode_Title_Joystick_Move"			"Joystick Move"
@@ -1935,6 +1944,7 @@
 	"Library_Details_SourceMode_Title_Trigger"			"Trigger"
 	"Library_Details_SourceMode_Title_TouchMenu"			"Touch Menu"
 	"Library_Details_SourceMode_Title_MouseJoystick"		"Mouse Joystick"
+	"Library_Details_SourceMode_Title_MouseRegion"		"Mouse Region"
 
 	"Library_Details_ModeShift_Title_None"				"None"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Left Trigger Full Pull"
@@ -1961,7 +1971,8 @@
 	"Library_Controller_Property_Value_Right"			"Right"
 	"Library_Controller_Property_Value_Left_Joystick"	"Left Joystick"
 	"Library_Controller_Property_Value_Right_Joystick"	"Right Joystick"
-	"Library_Controller_Property_Value_Mouse"			"Mouse"
+	"Library_Controller_Property_Value_Mouse_Relative"	"Mouse Relative"
+	"Library_Controller_Property_Value_Mouse_Absolute"	"Mouse Absolute"
 	"Library_Controller_Property_Value_Cross"			"Cross"
 	"Library_Controller_Property_Value_Circle"			"Circle"
 	"Library_Controller_Property_Value_Square"			"Square"
@@ -4815,6 +4826,8 @@
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick" "Gyro Camera Scale"
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick_Description" "When using in combination with a pad also using Mouse Joystick mode, use this setting to scale the relative input of the gyro to be less or greater."
 
+	// Mouse Region
+
 	//Trigger
 	"ControllerBinding_TriggerClick" "Full Pull Action"
 	"ControllerBinding_TriggerClick_Description" "This action will be performed when you pull the trigger the entire way until it clicks (you'll hear a soft click)."
@@ -4924,6 +4937,9 @@
 	"ControllerBinding_ScrollWheelListWrap_Off" "Wrap List - Off"
 	"ControllerBinding_ScrollWheelListWrap_Off_Description" "When scrolling through bindings, once the last item in a particular direction is hit, no further output will be sent until the other direction is sent."
 	//Touchmenu
+
+	"ControllerBinding_ModeDropDown_TouchMenu" "Style of Input - Touch Menu"
+	"ControllerBinding_ModeDropDown_TouchMenu_Description" "This input will act as a Touch Menu.  Touch Menus display on-screen when your finger touches the Touch Pad.  Clicking on one of the shown buttons will fire off the appropriate action.  Touchmenus can have a variety of buttons, layouts, size, opacity, and can use icons."
 	"ControllerBinding_TouchMenuButtonCount" "Touch Menu Button Count"
 	"ControllerBinding_TouchMenuButtonCount_Description" "This selects how many on-screen buttons will show on your touch menu."
 	"ControllerBinding_TouchMenuButtonCount_Button2" "Touch Menu Button Count 2"
@@ -4982,8 +4998,27 @@
 	"ControllerBinding_TouchMenuOpacity_Description" "This slider determines how translucent the touch menu appears on-screen."
 	"ControllerBinding_TouchMenuScale" "Touch Menu Size"
 	"ControllerBinding_TouchMenuScale_Description" "This slider determines the size of the touch menu on-screen."
-	"ControllerBinding_TouchMenuShowLables" "Touch Menu Display Binding Label"
-	"ControllerBinding_TouchMenuShowLables_Description" "Touch menu buttons can show a text label of what is bound to them on the actual button.  If an icon is used, this label will display in the upper left corner.  If disabled, the icon or blank button will be used."
+	"ControllerBinding_TouchMenuShowLabels" "Touch Menu Display Binding Label"
+	"ControllerBinding_TouchMenuShowLabels_Description" "Touch menu buttons can show a text label of what is bound to them on the actual button.  If an icon is used, this label will display in the upper left corner.  If disabled, the icon or blank button will be used."
+	//MouseRegion
+	"ControllerBinding_ModeDropDown_MouseRegion" "Style of Input - Mouse Region"
+	"ControllerBinding_ModeDropDown_MouseRegion_Description" "This input will act as a Mouse Region.  Mouse Region sends mouse input to a game, but treats the pad as a 1:1 map to screen space, so touching a particular place on the pad will always put the cursor in the same place on the screen.  In addition to working great for top-down style games, regions can be restricted to certain areas of the screen, scaled, stretched and mode-shifted in to select mini-maps, toolbars, inventory, etc."
+	"ControllerBinding_MouseRegionClick" "Click Action"
+	"ControllerBinding_MouseRegionClick_Description" "This action will be performed when you click the pad/stick."
+	"ControllerBinding_ScaleMouseRegion" "Region Size"
+	"ControllerBinding_ScaleMouseRegion_Description" "This will scale the size of the region that is mapped to the outer extents of the pad/stick."
+	"ControllerBinding_PositionXMouse" "Region Horizontal Position"
+	"ControllerBinding_PositionXMouse_Description" "This is the on screen horizontal position that the region will be centered around."
+	"ControllerBinding_PositionYMouse" "Region Vertical Position"
+	"ControllerBinding_PositionYMouse_Description" "This is the on screen vertical position that the region will be centered around."
+	"ControllerBinding_TeleportStart" "Snap Mouse on Mode Shift"
+	"ControllerBinding_TeleportStart_Description" "When enabling the mode shift, should the mouse be snapped to the center of the region?"
+	"ControllerBinding_TeleportStop" "Reset Mouse on Mode Shift"
+	"ControllerBinding_TeleportStop_Description" "When disabling the mode shift, should the mouse be snapped back to the position it was before the mode shift was engaged?"
+	"ControllerBinding_HorizontalSensitivityMouseRegion" "Horizontal Sensitivity Scale"
+	"ControllerBinding_HorizontalSensitivityMouseRegion_Description" "Scale the sensitivity of the horizontal region.  You can use this to change the on-screen region from a cirlce to an ellipse or a line."
+	"ControllerBinding_VerticalSensitivityMouseRegion" "Vertical Sensitivity Scale"
+	"ControllerBinding_VerticalSensitivityMouseRegion_Description" "Scale the sensitivity of the vertical region.  You can use this to change the on-screen region from a cirlce to an ellipse or a line."
 
 	"ControllerBinding_RecommendedTemplate" "Recommended"
 	"ControllerBinding_SavedCopyPasta_Title" "Custom Controller Config Uploaded!"

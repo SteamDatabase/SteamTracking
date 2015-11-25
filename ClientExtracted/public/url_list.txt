@@ -916,3 +916,10 @@ SteamControllerHelp
 	url		"http://controller.steampowered.com"
 	method	"external"
 }
+
+LibrarySuggestions
+{
+	url			"%community%/library/suggestions/%p1%/"
+	method		"internal"
+	filter		"community"
+}

@@ -393,3 +393,15 @@ SteamControllerHUD
 	
 	opacity: 0.75;
 }
+
+.MouseRegion
+{
+	visibility: visible;
+	opacity: 0.75;
+	background-color: #07213588;
+	border-radius: 50%;
+	
+	border: 7px;
+	border-style: solid;
+	border-color: ui_primary_color;
+}

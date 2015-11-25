@@ -1873,7 +1873,9 @@ LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
 .Game:hover #SuggestedStatus .StatusImage,
 .GameButton:focus #SuggestedStatus .StatusImage,
 .GameButton:hover #SuggestedStatus .StatusImage,
-LibraryAppDetails .StatusImage
+LibraryAppDetails .StatusImage,
+.UpdatedItem:focus .StatusImage,
+.UpdatedItem:hover .StatusImage,
 {
 	opacity: 1.0;
 	height: 36px;
@@ -1903,17 +1905,17 @@ LibraryAppDetails #ReadyToDownload
 {
 	visibility: collapse;
 }
-LibraryAppDetails.ReadyToDownload #ReadyToDownload
+.ReadyToDownload #ReadyToDownload
 {
 	visibility: visible;
 }
 
-LibraryAppDetails.ReadyToPlay #ReadyToDownload, LibraryAppDetails.ReadyToStream #ReadyToDownload, LibraryAppDetails.UnavailableOnPlatform #ReadyToDownload
+.ReadyToPlay #ReadyToDownload, .ReadyToStream #ReadyToDownload, .UnavailableOnPlatform #ReadyToDownload
 {
 	visibility: collapse;
 }
 
-LibraryAppDetails.ReadyToPlay #ReadyToPlay
+.ReadyToPlay #ReadyToPlay
 {
 	wash-color: readytoplaygreen;
 	opacity: 1.0;
@@ -1921,7 +1923,7 @@ LibraryAppDetails.ReadyToPlay #ReadyToPlay
 	background-image: url( "file://{images}/library/icon_readytoplay.png" );
 }
 
-LibraryAppDetails.ReadyToStream #ReadyToStream
+.ReadyToStream #ReadyToStream
 {
 	wash-color: readytoplaygreen;
 	visibility: visible;
@@ -1929,15 +1931,15 @@ LibraryAppDetails.ReadyToStream #ReadyToStream
 }
 
 
-LibraryAppDetails.UnavailableOnPlatform #NotReadyToPlay
+.UnavailableOnPlatform #NotReadyToPlay
 {
 	wash-color: #666666;
 	visibility: visible;
 	background-image: url( "file://{images}/library/icon_readytofail.png" );
 }
 
-LibraryAppDetails.ReadyToPlay.ReadyToStream #ReadyToStream,
-LibraryAppDetails.UnavailableOnPlatform.ReadyToStream #NotReadyToPlay
+.ReadyToPlay.ReadyToStream #ReadyToStream,
+.UnavailableOnPlatform.ReadyToStream #NotReadyToPlay
 {
 	visibility: collapse;
 }
@@ -1990,8 +1992,7 @@ LibraryAppDetails.UnavailableOnPlatform.ReadyToStream #NotReadyToPlay
 
 #SuggestedStatus
 {
-	transform: translatey( -44px );
-	margin-bottom: 1px;
+	transform: translatey( -43px );
 }
 
 .GameButton #SuggestedStatus
@@ -2001,8 +2002,7 @@ LibraryAppDetails.UnavailableOnPlatform.ReadyToStream #NotReadyToPlay
 
 #RecentRow #SuggestedStatus
 {
-	margin-right: 215px;
-	margin-bottom: 5px;
+	margin-bottom: 50px;
 	transform: translatey( 0px );
 }
 
@@ -2700,12 +2700,23 @@ Button:hover #SuggestedStatus
 	visibility: visible;
 }
 
-HTML #BrowserDisabledMessage
+HTML #BrowserDisabledMessage,
+AutoAuthHTML #BrowserDisabledMessage,
 {
 	horizontal-align: center;
 	vertical-align: center;
+	width: 60%;
+	height: 160px;
+	font-size: 40px;
+	color: ui_primary_color;
+	white-space: normal;
 }
 
+HTML.BrowserDisabled LoadingThrobber,
+AutoAuthHTML.BrowserDisabled LoadingThrobber
+{
+	visibility: collapse;
+}
 
 //
 // Edge scroller base styles

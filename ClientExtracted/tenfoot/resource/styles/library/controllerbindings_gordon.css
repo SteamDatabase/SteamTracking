@@ -936,7 +936,10 @@ ControllerSourceModeJoystickMove.ControllerMode ControllerBindingButton
 }
 
 
-
+#ModeContainer #MouseRegionClick
+{
+	background-image: url("file://{images}/library/controller/api/click_once.png");
+}
 
 #ModeContainer #DPadLeft
 {

@@ -155,7 +155,7 @@
 			</Panel>
 			<Label class="AllGamesFilterLabel" text="#Library_Filter_FilterStringDisplay" html="true" />
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
-			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="100" rememberchildfocus="true" />
+			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="250" rememberchildfocus="true" childfocusonhover="true" />
 			<DownloadsPanel id="GamesDownloads"  class="GamesDownloads" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="150" />
 			<MusicLibraryAlbumPanel id="MusicPanelAllGames" class="" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"

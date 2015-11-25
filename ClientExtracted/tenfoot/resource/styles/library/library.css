@@ -329,7 +329,7 @@ LibraryAppDetails .GameStatusHeader
 	width: 100%;
 	min-height: 67px;
 	height: fit-children;
-	padding: 5px 5px;
+	//padding: 5px 5px;
 	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #00000000 ), color-stop( 1.0, #0000001A ) );
 	color: #67c1f5ff;
 }
@@ -337,7 +337,7 @@ LibraryAppDetails .GameStatusHeaderLine
 {
 	flow-children: right;
 	margin-top: 12px;
-	margin-left: 4px;
+	margin-left: 12px;
 	width: 100%;
 	height: fit-children;
 }
@@ -361,7 +361,7 @@ LibraryAppDetails .GameStatusHeaderLine
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 	z-index: 3010;
 	visibility: collapse;
-	margin: 5px 12px;
+	margin: 5px 12px 0px 13px;
 }
 #DownloadAmount
 {
@@ -384,7 +384,7 @@ LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Download
 	padding: 5px 20px;
 }
 #PlayStatsArea.AppMiscHeader {
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 
@@ -399,18 +399,19 @@ LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Download
 	height: 100%;
 	flow-children: right;
 	margin-top: 0px;
+	margin-bottom: 100px;
 	overflow: clip;
 }
 
 
 #CommonControls
 {
-	width: fit-children;
+	width: 480px;
 	height: 100%;
 	flow-children: down;
 	padding-left: 70px;
 
-	margin-right: 25px;
+	margin-right: 0px;
 }
 #OverlayDashboard #CommonControls
 {
@@ -596,7 +597,7 @@ LibraryAppDetails .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus
 {
-	width: 100%;
+	width: 1600px;
 	height: 100%;
 	vertical-align: top;
 	padding-top: 0px;
@@ -661,6 +662,10 @@ LibraryAppDetails .ContentsRow
 	margin: -10px;
 	padding: 10px;
 }
+.LibraryDetailsSectionRow.TallArea
+{
+	margin-top: 0px;
+}
 
 .LibraryPlayRow
 {
@@ -717,7 +722,8 @@ LibraryAppDetails .ContentsRow
 
 	border-radius: 3px;
 
-	background-color: transparent_module;
+	//background-color: transparent_module;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #4c586159 ), to( #57666e59 ) );
 	flow-children: down;
 
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
@@ -729,10 +735,13 @@ LibraryAppDetails .ContentsRow
 	box-shadow: module_shadow;
 
 	padding: 18px;
-
-
-
 }
+
+#PlayAction.DetailsDataPanel
+{
+	background-color: transparent_module;
+}
+
 #OverlayDashboard .DetailsDataPanel {
 	height: 330px;
 }
@@ -854,7 +863,7 @@ ParentalButton.Locked
 
 .LinksAndMore
 {
-	width: 425px;
+	width: 415px;
 	height: 100%;
 	background-color: #00000000;
 	flow-children: down;
@@ -897,7 +906,7 @@ ParentalButton.Locked
 
 .LinksAndActionsWrapper
 {
-	width: 100%;
+	width: 410px;
 	height: 100%;
 	flow-children: down;
 	opacity: 1.0;
@@ -1014,10 +1023,10 @@ ParentalButton.Locked
 
 .LinksAndMore .SmallHeaderImage
 {
-	margin: 0px 10px 0px 10px;
-	width: 100%;
+	margin: 0px 0px 0px 10px;
+	width: 390px;
 	background-color: dialog_bg_color;
-	height: 190px;
+	height: 182px;
 }
 
 .LinksAndMore:descendantfocus, .LinksAndMore:focus
@@ -3160,7 +3169,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-delay: 0s;
 
 	border-radius: 3px;
-
+	box-shadow: module_shadow;
 
 	background-color: #000000;
 
@@ -3505,9 +3514,260 @@ DropDown Label
 }
 
 
-LibraryAllGames .BottomMouseScrollRegion
+.LeftMouseScrollRegion, .RightMouseScrollRegion
 {
-	y: -295px;
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration;
+	transition-delay: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+Carousel.CursorVisible:hover .LeftMouseScrollRegion,
+.MouseActive Grid:hover .LeftMouseScrollRegion
+{
+	width: 80px;
+	height: 100%;
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 300;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	background-color: mouse_hover_bg_up;
+}
+
+.MouseActive Grid:hover .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+}
+
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	background-color: mouse_off_bg_up;
+}
+
+Carousel.CursorVisible:hover .RightMouseScrollRegion,
+.MouseActive Grid:hover .RightMouseScrollRegion,
+{
+	width: 80px;
+	height: 100%;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 300;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	transition-duration: 0.2s;
+	background-color: mouse_hover_bg_bottom;
+}
+
+Grid.CursorVisible:hover .RightMouseScrollRegion,
+{
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+}
+
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	align: center bottom;
+	margin-bottom: 220px;
+	z-index: 300;
+	background-color: mouse_off_bg_bottom;
+}
+
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion:hover,
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
+Carousel.CursorVisible:hover  .LeftMouseScrollRegion:hover,
+.MouseActive Grid:hover  .LeftMouseScrollRegion:hover,
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_up;
+}
+
+Carousel.CursorVisible:hover .LeftMouseScrollRegion:active,
+.MouseActive Grid:hover .LeftMouseScrollRegion:active,
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_up;
+}
+
+Carousel.CursorVisible:hover .RightMouseScrollRegion:hover,
+.MouseActive Grid:hover .RightMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_bottom;
+}
+
+Carousel.CursorVisible:hover .RightMouseScrollRegion:active,
+.MouseActive Grid:hover .RightMouseScrollRegion:active,
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_bottom;
+
+}
+
+.LeftMouseScrollRegion
+{
+	position: 0px -10px 0px;
+	background-color: mouse_hover_bg_up;
+	z-index: 100;
+}
+
+.RightMouseScrollRegion
+{
+	position: 0px -10px 0px;
+	background-color: mouse_hover_bg_bottom;
+	z-index: 100;
+}
+
+LibraryAppDetails #RightMouseScrollRegion
+{
+	position: 0px 95px 0px;
+	opacity: 0.0;
+	background-color: mouse_off_bg_bottom;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: 0.23s;
+}
+
+LibraryAppDetails #LeftMouseScrollRegion
+{
+	position: 0px 95px 0px;
+	opacity: 1.0;
+	background-color: mouse_off_bg_up;
+}
+
+LibraryAppDetails:descendantfocus:hover #RightMouseScrollRegion
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_bottom;
+}
+
+LibraryAppDetails:descendantfocus:hover #LeftMouseScrollRegion,
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_up;
+}
+
+LibraryAppDetails:descendantfocus #RightMouseScrollRegion:hover:active
+{
+	opacity: 1.0;
+	background-color: mouse_active_bg_bottom;
+}
+
+LibraryAppDetails:descendantfocus #LeftMouseScrollRegion:hover:active
+{
+	opacity: 1.0;
+	background-color: mouse_active_bg_up;
+}
+
+
+OverlayBasePanel #LeftMouseScrollRegion, OverlayBasePanel #RightMouseScrollRegion
+{
+	opacity: 0.0;
+	background-color: mouse_off_bg_bottom;
+}
+
+
+#LibraryMostRecent:descendantfocus:hover .LeftMouseScrollRegion
+{
+	opacity: 1.0;
+	margin-left: 790px;
+	background-color: mouse_hover_bg_up;
+}
+
+#LibraryMostRecent:descendantfocus:hover .RightMouseScrollRegion
+{
+	opacity: 1.0;
+	margin-right: 790px;
+	background-color: mouse_hover_bg_bottom;
+}
+
+
+#LibraryMostRecent:descendantfocus:hover .LeftMouseScrollRegion:hover
+{
+	opacity: 1.0;
+	margin-left: 790px;
+	background-color: mouse_hover_bg_up;
+}
+
+#LibraryMostRecent:descendantfocus:hover .RightMouseScrollRegion:hover
+{
+	opacity: 1.0;
+	margin-right: 790px;
+	background-color: mouse_hover_bg_bottom;
+}
+
+#LibraryMostRecent:descendantfocus .LeftMouseScrollRegion:hover:active
+{
+	opacity: 1.0;
+	margin-left: 790px;
+	background-color: mouse_active_bg_up;
+}
+
+#LibraryMostRecent:descendantfocus .RightMouseScrollRegion:hover:active
+{
+	opacity: 1.0;
+	margin-right: 790px;
+	background-color: mouse_active_bg_bottom;
+}
+
+
+Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_up;
+}
+
+Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover
+{
+	background-color: mouse_active_bg_bottom;
+}
+
+Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover:active
+{
+	background-color: mouse_active_bg_up;
+}
+
+Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
+{
+	background-color: mouse_active_bg_bottom;
+}
+
+
+
+
+Grid .LeftMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	background-color: mouse_off_bg_up;
+
+	transition-property: background-color, opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	z-index: 100;
+}
+
+Grid .RightMouseScrollRegion
+{
+	position: 0px -15px 0px;
+	background-color: mouse_off_bg_bottom;
+
+	transition-property: background-color, opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	z-index: 100;
 }
 
 
@@ -4587,7 +4847,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	margin-bottom: -40px;
 }
 
-.GameSearchInput.HasInput, #GamesFilter:descendantfocus .GameSearchInput
+.GameSearchInput.HasInput, #GamesFilter:descendantfocus .GameSearchInput, .GameSearchInput.VR
 {
 	height: fit-children;
 }
@@ -4667,7 +4927,6 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	padding-left: 0px;
 	padding-right: 40px;
 	margin-left: 95px;
-	max-height: 900px;
 	flow-children: down;
 	overflow: squish scroll;
 }
@@ -4687,7 +4946,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	width: 100%;
 	flow-children: right;
 	/* enough padding for scale and outer glow to render */
-	padding: 8px;
+	padding: 8px 8px 8px 18px;
+	margin-left: -10px;
 }
 
 /* spread out the capsules when content area is in focus */
@@ -4698,31 +4958,13 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
-.ContentAreaFocus #PopularRow .SuggestedRow #Game1,
-.ContentHover #PopularRow .SuggestedRow #Game1,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1,
-.ContentHover #UnPlayedRow .SuggestedRow #Game1 {
-	transform: translatex(20px);
-}
-.ContentAreaFocus #PopularRow .SuggestedRow #Game2,
-.ContentHover #PopularRow .SuggestedRow #Game2,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game2,
-.ContentHover #UnPlayedRow .SuggestedRow #Game2 {
-	transform: translatex(40px);
-}
-.ContentAreaFocus #PopularRow .SuggestedRow #Game3,
-.ContentHover #PopularRow .SuggestedRow #Game3,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game3,
-.ContentHover #UnPlayedRow .SuggestedRow #Game3 {
-	transform: translatex(60px);
-}
 
-.MenuHover #PopularRow .SuggestedRow #Game1,
-.MenuHover #UnPlayedRow .SuggestedRow #Game1,
-.MenuHover #PopularRow .SuggestedRow #Game2,
-.MenuHover #UnPlayedRow .SuggestedRow #Game2,
-.MenuHover #PopularRow .SuggestedRow #Game3,
-.MenuHover #UnPlayedRow .SuggestedRow #Game3
+.MenuHover .SuggestedRow #Game1,
+.MenuHover .SuggestedRow #Game2,
+.MenuHover .SuggestedRow #Game3,
+.MenuHover .SuggestedRow .Game1,
+.MenuHover .SuggestedRow .Game2,
+.MenuHover .SuggestedRow .Game3,
 {
 	transform: translatex(0px);
 }
@@ -4774,13 +5016,13 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .DownloadsSection {
 	flow-children: down;
 	height: 100%;
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
 	margin: 0 30px 10px 0;
 	width: 1470px;
 	padding-left: 10px;
 }
 .DownloadsSection {
 	height: fit-children;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
 }
 
 .AppList Label,
@@ -4798,7 +5040,9 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #GamesSuggestion
 {
 	visibility: collapse;
-	padding-bottom: 20px;
+	padding-bottom: 120px;
+	overflow: clip scroll;
+	height: 980px;
 }
 
 .suggested #GamesSuggestion
@@ -4854,32 +5098,23 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button {
 	pre-transform-scale2d: 0.98;
 }
-.suggested #GamesSuggestion #RecentRow Button#Game0 {
-	transform: translatex(0px);
-}
-.suggested #GamesSuggestion #RecentRow Button#Game1 {
-	transform: translatex(0px);
-}
-.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0
-{
-	transform: translatex(0px);
-}
-.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1
-{
-	transform: translatex(25px);
-}
+
+
 
 #GamesSuggestion Button {
 
-	width: 330px;
-	height: 204px;
+	width: 354px;
+	height: 214px;
 	padding: 0px;
-	margin: 0px;
+	margin: 0px 0px 0px -10px;
+
+	background-color: none;
+	box-shadow: none;
 
 	visibility: visible;
 	opacity: 1;
 
-	pre-transform-scale2d: 0.95;
+	pre-transform-scale2d: 0.98;
 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -4895,18 +5130,18 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	flow-children: down;
 	z-index: 100;
 	margin: 5px;
-	background-color: transparent_module;
-	box-shadow: fill #00000033 -3px -3px 6px 6px;
+	//background-color: transparent_module;
+	//box-shadow: fill #00000033 -3px -3px 6px 6px;
+	border-radius: 3px 3px 3px 3px;
 }
 #GamesSuggestion Button:focus .ImageWrapper,
 #GamesSuggestion Button:hover .ImageWrapper
 {
 	box-shadow: none;
-}
-
-#RecentRow Button .ImageWrapper
-{
-	flow-children: right;
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .suggested #GamesSuggestion #RecentRow Button:focus,
@@ -4950,8 +5185,25 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 	z-index: 98;
 }
-#GamesSuggestion .HeaderLabel,
-.DownloadText.HeaderLabel {
+#GamesSuggestion .HeaderLabel
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: -5px;
+	padding-left: 5px;
+	width: 1300px;
+
+	font-size: 36px;
+	color: #9fc3e0;
+}
+#GamesSuggestion SuggestionsContentRemote .GamesList:descendantfocus .HeaderLabel,
+#GamesSuggestion LibrarySuggestionsRow:descendantfocus .HeaderLabel
+{
+	color: #ffffff;
+}
+
+.DownloadText.HeaderLabel
+{
 	margin-left: 14px;
 	margin-top: 8px;
 	padding-left: 0px;
@@ -4965,9 +5217,16 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #GamesSuggestion Button Image
 {
-	width: 100%;
-	height: 150px;
+	width: 344px;
+	height: 161px;
 	background-color: black;
+	box-shadow: #00000033 -3px -3px 6px 6px;
+	border-radius: 3px;
+}
+#GamesSuggestion Button:descendantfocus Image
+{
+	border-radius: 3px 3px 0px 0px;
+
 }
 
 .FreeGameDetails
@@ -4997,9 +5256,9 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #RecentRow
 {
-	height: 300px;
+	height: 350px;
 }
-#RecentRow #Game2,
+
 #RecentRow #Game3
 {
 	visibility: collapse;
@@ -5007,8 +5266,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #RecentRow Button
 {
-	width: 680px;
-	height: 225px;
+	width: 470px;
+	height: 270px;
 
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f400 ), to( #b6e1fa00 ) );
 
@@ -5024,8 +5283,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #RecentRow Button:focus .GridItemBackground,
 #RecentRow Button:hover .GridItemBackground
 {
-	width: 680px;
-	height: 225px;
+	width: 470px;
+	height: 275px;
 
 	background-color: #b4dff7;
 	z-index: 99;
@@ -5048,26 +5307,17 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #GamesSuggestion #RecentRow Button .GameDetails
 {
-	border: 0px solid #00000000;
-	width: 210px;
-	height: 100%;
-	background-color: transparent_module;
-}
-
-#GamesSuggestion #RecentRow Button:focus .GameDetails,
-#GamesSuggestion #RecentRow Button:hover .GameDetails
-{
-	background-color: nontransparent_action_module;
+	width: 100%;
 }
 
 #RecentRow Button Label
 {
-	width: 210px;
+	width: 100%;
 	height: fit-children;
 	white-space: normal;
 	vertical-align: center;
 	text-align: left;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-right: 20px;
 	padding: 0px;
 }
@@ -5075,7 +5325,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 .GameDetails Label
 {
-	font-size: 26px;
+	font-size: 24px;
 }
 #GamesSuggestion Button .GameDetails #GameLabel_Expanded {
 	opacity: 0;
@@ -5199,17 +5449,47 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	background-color: #1579a0;
 }
 
+
+SuggestionsContentRemote .GamesList,
 LibrarySuggestionsRow
 {
-	height: 270px;
+	height: 300px;
 	width: 100%;
+	opacity: 0.9;
+	desaturation: 0.2;
 	visibility: collapse;
+
+	transition-property: opacity, desaturation;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
+SuggestionsContentRemote .GamesList,
 LibrarySuggestionsRow.Active
 {
 	visibility: visible;
 }
+
+SuggestionsContentRemote .GamesList:descendantfocus,
+LibrarySuggestionsRow:descendantfocus
+{
+	opacity: 1;
+	desaturation: 0;
+}
+
+#GamesSuggestion SuggestionsContentRemote
+{
+	height: fit-children;
+	width: 100%;
+	flow-children: down;
+}
+
+#GamesSuggestion SuggestionsContentRemote #LibraryContent.LibraryLoading
+{
+	visibility: collapse;
+}
+
+
 
 .NxFilterButtonAction
 {
@@ -5351,6 +5631,7 @@ LibrarySuggestionsRow.Active
 	width: 20px;
 	height: 22px;
 	background-color: #00000000;
+	box-shadow: none;
 }
 
 

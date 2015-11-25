@@ -28,7 +28,7 @@
 				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" />
 			</Panel>
 
-			<Panel id="LibraryDetailsSectionsContainer" class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
+			<Panel id="LibraryDetailsSectionsContainer" class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" childfocusonhover="true" >
 				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 	
 				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
@@ -41,7 +41,7 @@
 				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 	
-				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" >
+				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();"  >
 	      <Panel class="LibraryDetailsScrollableArea" overscroll-y="150">
 					<Panel class="LibraryDetailsSectionRow PlayArea">
 						<Panel class="LibraryPlayRow">

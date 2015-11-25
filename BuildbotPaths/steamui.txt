@@ -290,6 +290,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamutils.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideoencoder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostage.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostageamf.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostagecomposite.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostageh264base.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostagenvenc.o
@@ -997,7 +998,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/verticalscrolllist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/vumeter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/data/iimagesource.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/image.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/label.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../controls/panelhandle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../iuiengine.h

@@ -51,8 +51,5 @@
 		<Panel id="RightStickContainer" class="StickContainer" >
 			<Panel id="RightStickCap" class="StickCap" />
 		</Panel>
-<!--		<Panel id="HUDHelpTextContainer">
-			<Label id="HUDHelpText" text="#Overlay_SteamControllerHUD_HelpText" />
-		</Panel>-->
 	</SteamControllerHUD>
 </root>
