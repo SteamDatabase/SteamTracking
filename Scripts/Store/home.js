@@ -32,7 +32,7 @@ GHomepage = {
 			var $Background = $Ctn.children( '.page_background_holder' );
 			var $Menu = $J('#store_header');
 
-			var $TakeoverLink = $J('.home_page_takeover_link' ).children('a');
+			var $TakeoverLink = $J('.home_page_takeover_link' ).children().first();
 			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
 
 			$J(window ).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function() {

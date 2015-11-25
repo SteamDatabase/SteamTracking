@@ -145,15 +145,36 @@ function HighlightPlayer( args )
 	RegisterSteamOnWebPanelShownHandler( $J.proxy( this.OnWebPanelShown, this ) );
 	RegisterSteamOnWebPanelHiddenHandler( $J.proxy( this.OnWebPanelHidden, this ) );
 
+	var _this = this;
 	if ( $J(document.body).hasClass( 'v6' ) )
 	{
 		var $ScreenshotsLinks = $J(this.m_elemPlayerArea).find('.highlight_player_item.highlight_screenshot a.highlight_screenshot_link');
 
-		var _this = this;
 		$ScreenshotsLinks.click( function( event ) {
 			_this.OnScreenshotClick( event, this );
 		} );
 	}
+
+	$J(this.m_elemPlayerArea).find('.highlight_player_item.highlight_screenshot img').on('load', function() {
+		var $Img = $J(this);
+		var $Ctn = $Img.parents('.highlight_player_item');
+
+		var bIsHidden = !$Ctn.is(':visible');
+		if ( bIsHidden )
+			$Ctn.css('visibility','hidden' ).show();
+
+		if ( $Img.height() > $Ctn.height() )
+		{
+			$Ctn.addClass('tall');
+		}
+		else
+		{
+			$Ctn.removeClass('tall');
+		}
+
+		if ( bIsHidden )
+			$Ctn.css('visibility','' ).hide();
+	});
 
 	g_player = this;
 }

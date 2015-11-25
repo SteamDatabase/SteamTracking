@@ -93,6 +93,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	text-align: center;
 }
 
 .screenshot_holder {
@@ -105,6 +106,12 @@
 .highlight_player_item img {
 	width: 100%;
 	display: block;
+}
+
+.highlight_player_item.tall img {
+	width: auto;
+	height: 100%;
+	display: inline-block;
 }
 
 .highlight_overflow {
@@ -3529,6 +3536,11 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	html.responsive #game_highlights .rightcol {
 		width: auto;
 		height: auto;
+	}
+
+	html.responsive #game_highlights a {
+		height: 100%;
+		position: relative;
 	}
 
 	html.responsive .highlight_overflow {

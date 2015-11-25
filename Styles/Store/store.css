@@ -109,7 +109,7 @@ body.v6 #footer {
 	}
 
 	body.v6 #footer_spacer.small_footer {
-		height: 50px;
+		display: none;
 	}
 
     body.v6 #footer .footer_content {
@@ -2451,6 +2451,10 @@ a.cluster_capsule:hover {
 	html.responsive .main_cluster_ctn {
 		max-width: 616px;
 		margin: 0 auto;
+	}
+
+	html.responsive .main_cluster_ctn.large_cluster_responsive {
+		max-width: 462px;
 	}
 }
 
