@@ -569,16 +569,16 @@
 ////////////////////////////////////
 .InLibraryWrapper Image
 {
-	opacity: 0.5;
-	desaturation: 0.6;
+	desaturation: 1.0;
 	wash-color: #2f89bc80;
 
 	box-shadow: none;
 
-	transition-property: opacity, desaturation, wash-color;
+	transition-property: desaturation, wash-color;
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 }
+
 .BasicCapsule:focus .InLibraryWrapper Image,
 .BasicCapsule:hover .InLibraryWrapper Image,
 .BasicHeader:focus .InLibraryWrapper Image,
@@ -588,7 +588,6 @@
 .PromoItemContainer:focus .InLibraryWrapper Image,
 .PromoItemContainer:hover .InLibraryWrapper Image
 {
-	opacity: 1;
 	desaturation: 0;
 	wash-color: #2f89bc00;
 }
