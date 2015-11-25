@@ -46693,6 +46693,10 @@
 				"engineer" "1"
 				"pyro" "1"
 			}
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+			}
 			"attributes"
 			{
 				"vision opt in flags"
@@ -94707,6 +94711,22 @@
 				"pyro"		"1"
 			}
 			"first_sale_date"		"2013/10/09"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/pyro/fall2013_air_raider/fall2013_air_raider.mdl"
+						"name"		"#TF_fall2013_air_raider_style1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/pyro/fall2013_air_raider_s2/fall2013_air_raider_s2.mdl"
+						"name"		"#TF_fall2013_air_raider_style2"
+					}
+				}
+			}
 		}
 		"30163"
 		{
@@ -105074,6 +105094,22 @@
 			{
 				"engineer"		"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson/cc_summer2015_sheriffs_stetson.mdl"
+						"name"		"#TF_cc_summer2015_sheriffs_stetson_style1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson_style1/cc_summer2015_sheriffs_stetson_style1.mdl"
+						"name"		"#TF_cc_summer2015_sheriffs_stetson_style2"
+					}
+				}
+			}
 		}
 		"30635"
 		{
@@ -106570,14 +106606,6 @@
 			"item_description"		"#TF_hwn2015_bargain_britches_Desc"
 			"equip_region"		"pants"
 			"item_type_name"		"#TF_Wearable_Pants"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/scout/hwn2015_bargain_britches/hwn2015_bargain_britches"
 			"capabilities"
 			{
@@ -123249,14 +123277,60 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
 			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
 		}
-
-
-
-
-
-
-
-
+		"9045"
+		{
+			"name"		"Xephos' Philanthropic Physiognomy"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2015_Xephos"
+			"item_description"	"#TF_Medal_JingleJam2015_Xephos_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_engineer.mdl"
+			}
+		}
+		"9046"
+		{
+			"name"		"Honeydew's Charitable Countenance"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2015_Honeydew"
+			"item_description"	"#TF_Medal_JingleJam2015_Honeydew_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_engineer.mdl"
+			}
+		}
 
 
 
