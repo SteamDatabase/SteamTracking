@@ -159356,6 +159356,15 @@
 					"beta"				"1"
 				}
 			}
+			"2"
+			{
+				"name"					"pass_pinewood"
+				"localizedname"			"#TF_Map_pass_pinewood"
+				"tags"
+				{
+					"beta"				"1"
+				}
+			}
 		}
 
 		"community_update"
