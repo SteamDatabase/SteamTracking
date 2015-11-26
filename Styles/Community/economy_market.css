@@ -1026,6 +1026,7 @@ input.filter_search_box:focus {
 	padding-bottom: 30px;
 	color: #6fa9d1;
 	font-size: 16px;
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/header/auth_banner.jpg') no-repeat center;
 }
 
 .market_sale_msg a

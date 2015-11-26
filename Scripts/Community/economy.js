@@ -4852,7 +4852,7 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 	description.append( '<div class="escrow_explanation_a">A trade hold is a period of time where the items traded are held by Steam before they are delivered.</div>' );
 
 	description.append( '<div class="escrow_explanation_q">Trade holds help protect your items</div>' );
-	description.append( '<div class="escrow_explanation_a">Because Steam accounts are valuable, especially if they have items worth stealing. If you haven\'t protected your account with a physical device (the Steam Guard Mobile Authenticator), a trade hold will give you time to discover your account has been compromised and to prevent your items from leaving your account.</div>' );
+	description.append( '<div class="escrow_explanation_a">Steam accounts are valuable, especially if they have items worth stealing. If you haven\'t protected your account with a physical device (the Steam Guard Mobile Authenticator), a trade hold will give you time to discover your account has been compromised and to prevent your items from leaving your account.</div>' );
 
 	description.append( '<div class="escrow_explanation_q">A delay to catch unauthorized trades</div>' );
 	description.append( '<div class="escrow_explanation_a">If a user trading away items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days, item delivery will be delayed by Steam for up to 3 days. This provides the user time to cancel the trade and any others that are pending.<br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items.</div>' );

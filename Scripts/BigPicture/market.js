@@ -237,8 +237,16 @@ function DelayAddSmallItem( nLoadNumber, item, oGrid )
 				var elPrice = $.CreatePanel('Label', elSubContents, '');
 				elPrice.html = true;
 				elPrice.AddClass('ItemPrice');
-				elPrice.text = '%1$s and higher'.replace('%1$s', '<span class=\"BrightText\">' + item.sell_price_text + '</span>');
 
+				if ( g_bTwoFactorSale && item.sale_price_text )
+				{
+					elPrice.text = '%1$s %2$s and higher'.replace('%1$s', '<span class=\"StrikethroughText\">' + item.sell_price_text + '</span>').replace('%2$s', '<span class=\"SaleText\">' + item.sale_price_text + '</span>');
+				}
+				else
+				{
+					elPrice.text = '%1$s and higher'.replace('%1$s', '<span class=\"BrightText\">' + item.sell_price_text + '</span>');
+				}
+				
 				oItem.SetPanelEvent('onactivate', function ()
 				{
 					$.DispatchEvent('ShowMarketDetails', item.asset_description.appid, item.hash_name, '', true);
@@ -309,8 +317,19 @@ function DelayAddNewListing( nLoadNumber, listing, oGrid )
 
 			var oPrice = $.CreatePanel( 'Label', oPriceInfo, '' );
 			oPrice.AddClass( 'SellingFor' );
-			oPrice.text = 'Selling for %1$s'
-				.replace( '%1$s', v_currencyformat(price + fee, GetCurrencyCode( currencyid - 2000 ) ) );
+
+			if ( g_bTwoFactorSale )
+			{
+				oPrice.html = true;
+				oPrice.text = 'Selling for %1$s %2$s'
+					.replace( '%1$s', '<span class="StrikethroughText"/>' + v_currencyformat(price + fee, GetCurrencyCode( currencyid - 2000 ) ) + '</span>' )
+					.replace( '%2$s', v_currencyformat(price, GetCurrencyCode( currencyid - 2000 ) ) );
+			}
+			else
+			{
+				oPrice.text = 'Selling for %1$s'
+					.replace( '%1$s', v_currencyformat(price + fee, GetCurrencyCode( currencyid - 2000 ) ) );
+			}
 
 			oItem.SetPanelEvent( 'onactivate', function()
 			{
@@ -499,63 +518,6 @@ function DelayAddHistoryEvent( nLoadNumber, event, oGrid )
 }
 
 
-function DelayAddSearchItem( nLoadNumber, item, oGrid )
-{
-	$.Schedule( 0.0, function()
-	{
-		if ( oGrid.IsValid() )
-		{
-			if ( !oGrid.FindChild( item.name ) )
-			{
-				var oItem = $.CreatePanel('Button', oGrid, item.name);
-				oItem.AddClass('MarketGridItem');
-
-				$.RegisterFooterButton(oItem, 'pad_a', 'VIEW ITEM PAGE');
-
-				var oContents = $.CreatePanel('Panel', oItem, '');
-				oContents.AddClass('MarketGridItemMainContent');
-
-				var oItemImage = CreateMarketItemImage(item.asset_description, oContents, oItem);
-
-				var elSubContents = $.CreatePanel('Panel', oContents, '');
-				elSubContents.AddClass('MarketGridItemInfo');
-
-				var elCardName = $.CreatePanel('Label', elSubContents, '');
-				elCardName.AddClass('ItemName');
-				elCardName.text = item.name;
-
-				if ( item.asset_description.name_color )
-				{
-					elCardName.style.color = '#' + item.asset_description.name_color;
-				}
-
-				var elSubtitle = $.CreatePanel('Label', elSubContents, '' );
-				elSubtitle.AddClass( 'ItemSubtitle' );
-				elSubtitle.text = item.app_name;
-				if ( item.asset_description.appid == 753  )
-				{
-					elSubtitle.text = item.asset_description.type;
-				}
-
-
-				var elPrice = $.CreatePanel('Label', elSubContents, '');
-				elPrice.html = true;
-				elPrice.AddClass('ItemPrice');
-				elPrice.text = '%1$s and higher'.replace('%1$s', '<span class=\"BrightText\">' + item.sell_price_text + '</span>');
-				oItem.SetPanelEvent('onactivate', function ()
-				{
-					$.DispatchEvent('ShowMarketDetails', item.asset_description.appid, item.hash_name, '', true);
-				});
-			}
-			else
-			{
-				$.Msg("Found duplicate " + item.name);
-			}
-		}
-	} );
-}
-
-
 var CMarketGrid = (function()
 {
 	function CMarketGrid( grid, url )
@@ -601,7 +563,7 @@ var CMarketGrid = (function()
 
 	CMarketGrid.prototype.BLoadMore = function( iChild )
 	{
-		$.Msg( "iChild = " + iChild + ", start = " + this.m_start );
+		//$.Msg( "iChild = " + iChild + ", start = " + this.m_start );
 		if ( iChild >= this.m_start - 30 && !this.m_bLoading )
 		{
 			return true;
@@ -1170,7 +1132,7 @@ function OnSearchRefresh( oGrid, nLoadNumber, data )
 	else
 	{
 		$.Each(data.results, function (item) {
-			DelayAddSearchItem(nLoadNumber, item, oGrid);
+			DelayAddSmallItem(nLoadNumber, item, oGrid);
 		});
 	}
 }
