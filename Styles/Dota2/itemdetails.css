@@ -208,6 +208,11 @@ h2.Title {
     margin-left: 8px;
 }
 
+.CustomItemDetailsContainer
+{
+	margin-top: 15px;
+}
+
 #TreasurePreviewImage {
 	margin-top: 11px;
 	width: 282px;
@@ -280,6 +285,12 @@ h2.Title {
 
 #PreviewSubContainerLeft img {
 	opacity: 0;
+}
+
+
+.CustomDetailsOnly #PreviewSubContainerLeft {
+    margin: auto;
+    float: none;
 }
 
 h3.BundlesContaining,h3.Recommendations {
