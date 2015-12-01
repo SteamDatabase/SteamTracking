@@ -5336,17 +5336,10 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 #GamesSuggestion #PopularRow Button:focus .GameDetails #GameLabel {
 	opacity: 0;
-
-	transition-property: opacity;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-duration: shortmedduration;
 }
-#GamesSuggestion #PopularRow Button:focus .GameDetails #GameLabel_Expanded {
-	opacity: 1;
 
-	transition-property: opacity;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-duration: shortmedduration;
+#GamesSuggestion Button:focus .GameDetails #GameLabel_Expanded {
+	opacity: 1;
 }
 
 #GamesSuggestion Button.NoContent

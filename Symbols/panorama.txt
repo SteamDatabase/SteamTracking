@@ -11012,7 +11012,7 @@
  T panorama::CUIEngine::RunScript(panorama::IUIPanel*, char const*, char const*, int, int, bool)
  T panorama::CUIEngine::RunScript(panorama::IUIPanel*, v8::Persistent<v8::Script, v8::NonCopyablePersistentTraits<v8::Script> >*, bool)
  T panorama::CUIEngine::ScheduledItemSortFunc(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&)
- T panorama::CUIEngine::SetAggressiveFrameRateLimit(bool)
+ T panorama::CUIEngine::SetAggressiveFrameRateLimit(bool, bool)
  T panorama::CUIEngine::SetCookieHeaderForNamedRemoteHost(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&)
  T panorama::CUIEngine::SetCookieHeaderForRemoteHost(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&)
  T panorama::CUIEngine::SetPaintCountTrackingEnabled(bool)
