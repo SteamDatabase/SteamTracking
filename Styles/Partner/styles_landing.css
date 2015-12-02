@@ -351,7 +351,7 @@ body{
 
 		.landingRightCol .panel h2 {
 			line-height: 21px;
-			margin-bottom: 8px;
+			margin-bottom: 15px;
 		}
 
 		.landingRightCol .panel .btn_medium {
@@ -772,24 +772,29 @@ h2 > .small {
 }
 
 h2.green {
-	font-size: 24px;
+	font-size: 20px;
 	color: #A4D007;
 	margin-bottom: 7px;
 }
 
 h2.grey {
-	font-size: 24px;
+	font-size: 20px;
 	color: #808285;
 	margin-bottom: 7px;
 }
 
 h2.bright {
-	font-size: 24px;
+	font-size: 20px;
 	color: #E7E8E9;
 }
 
+h2.bright .releasedate
+{
+	margin-bottom: 4px;
+}
+
 h2.incomplete {
-	font-size: 24px;
+	font-size: 20px;
 	color: #e24044;
 }
 
@@ -1181,6 +1186,13 @@ input {
 .icon_star{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKBJREFUKM+VktENwjAMRJ87QUbICEXKAGQCmgkYjRG6AgNYghH47lc2MD+pgMityv1Y5+TkyzngwJTRFDNl9M4HfFy7ekg0dXVfZMoExEZj4z8QU4w/MQAFqAfvV6BIsxSAGTjvCO5AkUSV7j0PcGN+SuK0FUTcmBLd9NoiQ2dnRTD9WB+chb6ALIkM5MYBLt7XWUyZWyjf/WDKzZRl7b0Bkt8xgrCBuZgAAAAASUVORK5CYII=); width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
 span.icon_star { display: inline-block;}
 span.icon_actual_authority { display: inline-block;}
+
+.icon_edit.icon_inline,
+.icon_download.icon_inline
+{
+	display: inline;
+	font-size: 16px;
+}
 
 .icon {
 	width: 16px; height: 16px; display: inline-block;
