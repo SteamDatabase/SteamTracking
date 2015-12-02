@@ -860,7 +860,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcreposix.a(libpcreposix_la-pcreposix.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_argb.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_from.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_from_argb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.cpu_id.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.planar_functions.o)
@@ -1393,8 +1392,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagecomposite.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagecomposite.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageh264base.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageoutput.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageoutput.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagequeuethread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagequeuethread.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagex264.cpp

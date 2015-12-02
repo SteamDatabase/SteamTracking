@@ -883,10 +883,11 @@
 
 	// Controller Calibration
 	"ControllerCalibration_Title"			"Steam Controller Calibration"
-	"ControllerCalibration_Instructions"	"Warning: Calibration is only recommended if you are experiencing poor trackpad and/or accelerometer performance.\n\nStart the calibration and place the controller on a stable and level surface within 5 seconds."
+	"ControllerCalibration_Instructions"	"Warning: Calibration is only recommended if you are experiencing poor trackpad, joystick, or accelerometer performance.\n\nStart the calibration and place the controller on a stable and level surface within 5 seconds."
 	"ControllerCalibration_Start"			"START"
 	"ControllerCalibration_Counting"		"Calibrating in {d:countdown} seconds"
 	"ControllerCalibration_Trackpads"		"Calibrating trackpads..."
+	"ControllerCalibration_Joystick"		"Calibrating joystick..."
 	"ControllerCalibration_IMU"				"Calibrating IMU..."
 	"ControllerCalibration_Complete"		"Calibration completed"
 
