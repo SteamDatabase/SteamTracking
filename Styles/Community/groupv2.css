@@ -357,6 +357,7 @@ a.readmore_link {
 	color: #66C0F4;
 	font-size: 11px;
 	padding-top: 4px;
+	text-transform: uppercase;
 }
 
 .group_content_header .group_content_header_viewmore {

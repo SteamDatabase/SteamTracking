@@ -300,14 +300,17 @@
 }
 
 
-
 .NxLeftNavButton:hover
 {
 	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	box-shadow: none;
+	background-color: all_games_hover;
 }
 
-
+.NxLeftNavButton:hover Label
+{
+	color: applabelsolid;
+}
 
 .NxLeftNavButtonSpacer
 {

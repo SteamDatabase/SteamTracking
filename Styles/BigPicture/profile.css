@@ -3197,7 +3197,7 @@ Label.AchievementPercent,
 {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	overflow: clip;
 
 
@@ -3296,6 +3296,32 @@ Label.AchievementPercent,
 	color: medgray;
 }
 
+.ProfileContentCard #FriendThumbs
+{
+	flow-children: right-wrap;
+	margin-right: -8px;
+	margin-bottom: -8px;
+	margin-top: 2px;
+}
+
+.ProfileContentCard #FriendThumbs Image,
+.ProfileContentCard #GroupsGrid Image
+{
+	width: 100px;
+	height: 100px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+}
+
+.ProfileContentCard #GroupsGrid
+{
+	width: 215px;
+	flow-children: right-wrap;
+	margin-right: -8px;
+	margin-bottom: -8px;
+	margin-top: 2px;
+}
+
 #RecentGames
 {
 	flow-children: down;
@@ -3321,17 +3347,6 @@ Label.AchievementPercent,
 	border-radius: 3px;
 }
 
-#Friends Grid
-{
-	width: 100%;
-	height: 100%;
-}
-
-#Friends Grid Image
-{
-	margin: 2px;
-}
-
 #Groups #GroupsBottom
 {
 	width: 100%;
@@ -3340,20 +3355,10 @@ Label.AchievementPercent,
 
 #Groups #PrimaryGroup
 {
-	width: 50%;
-	height: 100%;
-	margin-right: 2px;
-}
-
-#Groups Grid
-{
-	width: 50%;
-	height: 100%;
-}
-
-#Groups Grid Image
-{
-	margin: 2px;
+	width: 206px;
+	height: 206px;
+	margin-right: 6px;
+	margin-top: 2px;
 }
 
 .ItemsGrid
@@ -3387,6 +3392,10 @@ Label.AchievementPercent,
 {
 	font-size: 24px;
 	color: applabelsolid;
+}
+.BadgeCollectorShowcase .ShowcaseStat .value
+{
+	font-size: 30px;
 }
 
 .ShowcaseStat .label
@@ -3781,11 +3790,11 @@ Label.AchievementPercent,
 .AchievementsContainer, .StatsContainer, .GamesContainer, .ContentGrid {
 
 	padding: 40px;
-	margin: 0px -40px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	margin-top: -40px;
 
 	flow-children: down;
-	width: 100%;
+	width: 1600px;
 	height: 950px;
 
 }
@@ -4318,17 +4327,27 @@ Panel.AvatarOptionGame {
 .FriendRow.online .TextContainer Label {
 	color: friendsonline_solid;
 }
+.FriendRow.online .TextContainer Label.FriendName,
+.FriendRow.online .TextContainer Label.UserName
+{
+	color: friendsonline_bright;
+}
+
 
 .FriendRow.offline .TextContainer Label {
 	color: friendsoffline_solid;
+}
+.FriendRow.offline:focus .TextContainer Label {
+	color: #ffffff;
 }
 
 .FriendRow.in-game .TextContainer Label {
 	color: friendsingame_solid;
 }
-
-.FriendRow.in-game:focus .TextContainer Label, .FriendRow.offline:focus .TextContainer Label, .FriendRow.online:focus .TextContainer Label {
-	color: #072e47;
+.FriendRow.in-game .TextContainer Label.FriendName,
+.FriendRow.in-game .TextContainer Label.UserName
+{
+	color: friendsingame_bright;
 }
 
 LibraryGameBadge
@@ -4527,7 +4546,71 @@ LibraryGameBadge .badge_info_description Label
 
 
 
-/* Groups list */
+/* Groups and Friends list */
+
+#groups_list
+{
+	width: 1700px;
+	padding-right: 150px;
+	height: 1300px;
+}
+
+.GroupsGrid
+{
+	height: 1100px;
+	padding: 70px 40px 40px 20px;
+	margin: 0px;
+	flow-children: down;
+	width: 100%;
+}
+
+.Group,
+.FriendRow
+{
+	flow-children: right;
+	height: 115px;
+	width: 50%;
+	margin-right: 10px;
+	padding: 12px;
+
+	box-shadow: module_shadow;
+	border-radius: 3px;
+
+	background-color: nontransparent_module;
+}
+.Group:focus,
+.FriendRow:focus {
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.Group .StdLabel {
+	font-size: 30px;
+	color: #ffffff;
+	line-height: 30px;
+}
+
+.Group .AvatarImage {
+	width: 96px;
+	height: 96px;
+	margin-right: 10px;
+}
+
+.Group .TextContainer {
+	flow-children: down;
+	width: 100%;
+}
+
 .Group .MemberRow
 {
 	flow-children: right;
@@ -4538,6 +4621,7 @@ LibraryGameBadge .badge_info_description Label
 {
 	width: 50%;
 	color: white;
+	font-size: 24px;
 }
 
 .Group .MemberRow .InGame
@@ -4549,10 +4633,15 @@ LibraryGameBadge .badge_info_description Label
 {
 	color: friendsonline_solid;
 }
-
-.Group:focus .MemberRow Label
+.FriendRow .FriendName,
+.FriendRow .UserName
 {
-	color: #072e47;
+	font-size: 30px;
+	line-height: 30px;
+}
+.FriendRow .StdLabel
+{
+	font-size: 26px;
 }
 
 

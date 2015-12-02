@@ -1,4 +1,16 @@
 
+
+.maincontent {
+	width: 1280px;
+}
+
+.leftcol
+{
+	float: left;
+	width: 972px;
+	padding-bottom: 50px;
+}
+
 .dmca_notice
 {
 	background-color: #404041;
@@ -15,20 +27,18 @@
 .dmca_notice_id
 {
 	float: left;
-	min-width: 50px;
+	min-width: 70px;
 	color: white;
 	font-size: 1.25em;
-	float: left;
 	padding-top: 5px;
 }
 	
 .dmca_notice_legal_name
 {
 	float: left;
-	width: 250px;
+	width: 450px;
 	color: white;
 	font-size: 1.25em;
-	float: left;
 	padding-top: 5px;
 }
 
@@ -43,7 +53,6 @@
 .dmca_notice_status
 {
 	float: left;
-	width: 300px;
 	color: #ca6a0c;
 	font-size: 12px;
 }
