@@ -1213,6 +1213,22 @@ body.v6 .help_refund_request_area h2 a:hover {
 	text-align: right;
 }
 
+.remove_app_field
+{
+	color: #67c1f5;
+	text-align: left;
+	float: left;
+
+	max-width: 400px;
+	padding: 0px 16px;
+	background: url('https://help.steampowered.com/public/images//icon_remove.png') no-repeat top left;
+}
+
+.view_in_store_link
+{
+	float: right;
+}
+
 .refund_game_name {
 	color: #67c1f5;
 	padding: 0 16px 14px;
@@ -1237,6 +1253,15 @@ body.v6 .help_refund_request_area h2 a:hover {
 	padding: 14px 10px 10px 10px;
 	border: solid 1px #324965;
 }
+
+.remove_games_block {
+	margin-top: 10px;
+	border-spacing: 0;
+	background-color: #151f2d;
+	padding: 14px 10px 10px 10px;
+	border: solid 1px #324965;
+}
+
 
 #refund_text_input
 {
@@ -1661,12 +1686,14 @@ a.guide_row {
 	margin-top: 0px;
 }
 
-.help_vacorgameban_details .HighlightedText
+.help_vacorgameban_details .HighlightedText,
+.help_permanentlyremove_details .HighlightedText
 {
 	color: white;
 }
 
-.help_vacorgameban_details
+.help_vacorgameban_details,
+.help_permanentlyremove_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
@@ -1674,18 +1701,21 @@ a.guide_row {
 	margin-bottom: 20px;
 }
 
-.help_vacorgameban_details p
+.help_vacorgameban_details p,
+.help_permanentlyremove_details p
 {
 	margin-top: 20px;
 	line-height: 16px;
 }
 
-.help_vacorgameban_details p:first-child
+.help_vacorgameban_details p:first-child,
+.help_permanentlyremove_details p:first-child
 {
 	margin-top: 0px;
 }
 
-.help_vacorgameban_details .HighlightedText
+.help_vacorgameban_details .HighlightedText,
+.help_permanentlyremove_details .HighlightedText
 {
 	color: white;
 }

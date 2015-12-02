@@ -180,6 +180,8 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	this.m_playerUI.SetPlayerPlaybackRate();
 
 	$J( this.m_elVideoPlayer ).off( 'bufferingcomplete.VideoWatchEvents' );
+	var strLogUI = ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop ) ? "desktop" : "tenfoot";
+	this.OnLogEventToServer( 'Video Player UI', strLogUI );
 }
 
 CVideoWatch.prototype.OnPlayerDownloadFailed = function()
