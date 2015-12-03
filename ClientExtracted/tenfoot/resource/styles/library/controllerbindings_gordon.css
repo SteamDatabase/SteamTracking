@@ -1963,6 +1963,11 @@ ChooseBinding #kb_key_backslash
 	width: 88px;
 }
 
+ChooseBinding #kb_key_mute
+{
+    width: 72px;
+}
+
 ChooseBinding #kb_key_capslock,
 ChooseBinding #kb_key_enter
 {
@@ -1975,13 +1980,19 @@ ChooseBinding #kb_key_rshift
 	width: 148px;
 }
 
-ChooseBinding #kb_key_lcontrol,
 ChooseBinding #kb_key_rcontrol,
-ChooseBinding #kb_key_lalt,
 ChooseBinding #kb_key_ralt
 {
 	width: 133px;
 }
+
+ChooseBinding #kb_key_lcontrol,
+ChooseBinding #kb_key_lalt,
+ChooseBinding #kb_key_lwin
+{
+	width: 88px;
+}
+
 
 
 ChooseBinding #kb_key_space

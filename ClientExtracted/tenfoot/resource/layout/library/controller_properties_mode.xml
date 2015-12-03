@@ -331,11 +331,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelClockwise" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelClockwise" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="scrollwheel" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelCounterClockwise" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelCounterClockwise" />
-				</Panel>
-				<!-- ScrollWheel Mode Advanced -->
+        <Panel class="FieldWrapper" modes="scrollwheel" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelCounterClockwise" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelCounterClockwise" />
+        </Panel>
+        <!-- ScrollWheel Mode Advanced -->
 				<Panel class="FieldWrapper" modes="scrollwheel" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList0" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList0" />
@@ -563,6 +563,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisAbsMouse" />
 				</Panel>	
+				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="gyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_LeanSensitivity" />
+					<Slider id="LeanSensitivityAbsMouse" direction="horizontal" />
+				</Panel>				
 				
 				<!-- Mouse Joystick Mode -->
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="off" visualization="off">
@@ -610,6 +614,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisMouseJoystick" />
 				</Panel>	
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="gyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_LeanSensitivity" />
+					<Slider id="LeanSensitivityMouseJoystick" direction="horizontal" />
+				</Panel>						
 				
 				<!-- Touch Menu Mode -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
@@ -651,8 +659,21 @@
 				<Panel id="CenterImageRelMouse" class="CenterImage" modes="relmouse" advanced="off"/>
 
 				<!-- ScrollWheel Mode -->
-				<Panel id="CenterImageScrollWheel" class="CenterImage" modes="scrollwheel" advanced="off"/>
-				<!-- ScrollWheel Mode Advanced -->
+        <Panel class="FieldWrapper" modes="scrollwheel" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelType" />
+          <DropDown id="ScrollWheelType" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="scrollwheel" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelInvert" />
+          <DropDown id="ScrollWheelInvert" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="scrollwheel" advanced="off" >
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelFriction" />
+          <DropDown id="ScrollWheelFriction" />
+        </Panel>
+
+
+        <!-- ScrollWheel Mode Advanced -->
 				<Panel class="FieldWrapper" modes="scrollwheel" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList4" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList4" />
@@ -925,7 +946,9 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelClick" />
 					</Panel>
-					<!-- ScrollWheel Mode Advanced -->
+ 
+          
+          <!-- ScrollWheel Mode Advanced -->
 					<Panel class="FieldWrapper" modes="scrollwheel" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList8" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList8" />

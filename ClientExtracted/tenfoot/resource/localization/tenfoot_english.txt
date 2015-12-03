@@ -316,6 +316,7 @@
 	"Login_TwoFactorTitle"			"Steam Guard Authenticator code required"
 	"Login_WrongPassword"			"Please check your account name and password and try again."
 	"Login_WrongPasswordOnly"		"Please check your password and try again."
+	"Login_RateLimited"			"There have been too many login failures from your network in a short time period.  Please wait and try again later."
 	"Login_IPRestriction"			"This account can't be accessed from this location."	
 	"Login_AccountSuspended_Title" 	"Steam - Contact us"
 	"Login_AccountSuspended"		"Steam Support has suspended this account.\n\nAccounts typically become suspended when accessed by someone else, or a payment dispute is in progress.\n\nPlease contact Steam Support to resolve this issue."
@@ -1815,10 +1816,18 @@
 	"Library_Details_KeyName_RightAlt"				"RIGHT ALT"
 	"Library_Details_KeyName_LeftShift"				"LEFT SHIFT"
 	"Library_Details_KeyName_RightShift"			"RIGHT SHIFT"
-	"Library_Details_KeyName_LeftWindows"			"LEFT WIN"
+	"Library_Details_KeyName_LeftWindows"			"WINDOWS KEY"
 	"Library_Details_KeyName_RightWindows"			"RIGHT WIN"
 	"Library_Details_KeyName_LeftControl"			"LEFT CONTROL"
 	"Library_Details_KeyName_RightControl"			"RIGHT CONTROL"
+
+	"Library_Details_KeyName_VolumeUp"				"VOLUME UP"
+	"Library_Details_KeyName_VolumeDown"			"VOLUME DOWN"
+	"Library_Details_KeyName_Mute"					"MUTE"
+	"Library_Details_KeyName_PlayPause"				"PLAY/PAUSE"
+	"Library_Details_KeyName_Stop"					"STOP"
+	"Library_Details_KeyName_NextTrack"				"NEXT TRACK"
+	"Library_Details_KeyName_PrevTrack"				"PREVIOUS TRACK"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -1884,6 +1893,9 @@
 	"Library_Details_FieldLabel_ScrollWheelList8"	"Scroll Wheel List 9"
 	"Library_Details_FieldLabel_ScrollWheelList9"	"Scroll Wheel List 10"
 	"Library_Details_FieldLabel_ScrollWheelListWrap" "Wrap List"
+	"Library_Details_FieldLabel_ScrollWheelType"	"Swipe Direction"
+	"Library_Details_FieldLabel_ScrollWheelInvert"	"Invert Direction"
+	"Library_Details_FieldLabel_ScrollWheelFriction"	"Spin Friction"
 	"Library_Details_FieldLabel_TriggerClick"		"Full Pull Action"
 	"Library_Details_FieldLabel_OutputTrigger"		"Trigger Analog Output"
 	"Library_Details_FieldLabel_TriggerDeadZoneStart" 	"Trigger Range Start"
@@ -1927,6 +1939,7 @@
 	"Library_Details_FieldLabel_AbsMouseGyroRight"	"Gyro Lean Right Binding"
 	"Library_Details_FieldLabel_AbsMouseGyroLeft"	"Gyro Lean Left Binding"
 	"Library_Details_FieldLabel_TouchBinding"		"Touch Binding"
+	"Library_Details_FieldLabel_LeanSensitivity"	"Gyro Lean Point"
 
 	"Library_Details_FieldLabel_MouseRegion_Scale"	"Region Size"
 	"Library_Details_FieldLabel_MouseRegion_PositionX"	"Horizontal Position"
@@ -2022,6 +2035,9 @@
 	"Library_Controller_Property_Value_TriggerDampeningRight"	"Right Trigger Dampening"
 	"Library_Controller_Property_Value_TriggerDampeningLeft"	"Left Trigger Dampening"
 	"Library_Controller_Property_Value_TriggerDampeningBoth"	"Both Trigger Dampening"
+	"Library_Controller_Property_Value_Scroll_Wheel_Type_Circle"	"Circular"
+	"Library_Controller_Property_Value_Scroll_Wheel_Type_Horizontal"	"Horizontal"
+	"Library_Controller_Property_Value_Scroll_Wheel_Type_Vertical"	"Vertical"
 
 	"Library_Details_Controller_Personal"				"Personal"
 	"Library_Details_Controller_Community"				"Community"
@@ -4291,9 +4307,9 @@
 	"ControllerBinding_DPadLayout" "Directional Pad Layout"
 	"ControllerBinding_DPadLayout_Description" "This option selects the type of DPad emulation."
 	"ControllerBinding_DPadLayout_RadialNoOverlap" "Radial Without Overlap"
-	"ControllerBinding_DPadLayout_RadialNoOverlap_Description" "A pie shaped layout with diagonals that activate both bound actions."
+	"ControllerBinding_DPadLayout_RadialNoOverlap_Description" "A four way pie shaped layout with diagonals that only actiovate the single nearest directional action."
 	"ControllerBinding_DPadLayout_RadialWithOverlap" "Radial With Overlap"
-	"ControllerBinding_DPadLayout_RadialWithOverlap_Description" "A pie shaped layout with diagonals that do not activate any actions."
+	"ControllerBinding_DPadLayout_RadialWithOverlap_Description" "A pie shaped layout with diagonals that activate both directional actions."
 	"ControllerBinding_DPadLayout_AnalogEmulation" "Analog Emulation"
 	"ControllerBinding_DPadLayout_AnalogEmulation_Description" "The directional bindings are pulsed to simulate an analog stick."
 	"ControllerBinding_DPadLayout_CrossGate" "Cross Gate"
@@ -4706,6 +4722,9 @@
 	"ControllerBinding_MouseTriggerClampAmount_Description"	"This sets how much the mouse movement should be dampened.  Slide to the right to further stop mouse movement."
 	"ControllerBinding_AbsMouseTouch" "Touch Binding"
 	"ControllerBinding_AbsMouseTouch_Description" "An action can be sent while touching the pad.  If momentum/trackball mode is active, this button will be released when it fully decays.  Otherwise, this button will be released the moment you stop touching the pad."
+	"ControllerBinding_LeanSensitivityAbsMouse" "Gyro Lean Point"
+	"ControllerBinding_LeanSensitivityAbsMouse_Description" "This determines how far the controller must be turned to trigger lean bindings."
+
 	// Mouse Joystick
 	"ControllerBinding_TrackballMouseJoystick" "Trackball Mode"
 	"ControllerBinding_TrackballMouseJoystick_Description" "Trackball mode makes the pad act like a trackball instead of a mouse.  It will have momentum and friction, allowing you to flick it like a trackball."
@@ -4851,6 +4870,8 @@
 	"ControllerBinding_ModeDropDown_MouseJoystick_Description" "This input feels like a mouse, but outputs a joystick.  This is intended for games which do not allow simultaneous mouse and gamepad inputs.  It's the next best option to the real thing for providing an emulated 1:1 response.  NOTE: Since this mode is seen by the game as a joystick, the sensitivity response is limited by the game's gamepad sensitivity settings.  For best results, set the in-game gamepad camera sensitivity to the highest value possible."
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick" "Gyro Camera Scale"
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick_Description" "When using in combination with a pad also using Mouse Joystick mode, use this setting to scale the relative input of the gyro to be less or greater."
+	"ControllerBinding_LeanSensitivityMouseJoystick" "Gyro Lean Point"
+	"ControllerBinding_LeanSensitivityMouseJoystick_Description" "This determines how far the controller must be turned to trigger lean bindings."
 
 	// Mouse Region
 
@@ -4962,6 +4983,12 @@
 	"ControllerBinding_ScrollWheelListWrap_On_Description" "When scrolling in a single direction, the list will restart once either end is reached."
 	"ControllerBinding_ScrollWheelListWrap_Off" "Wrap List - Off"
 	"ControllerBinding_ScrollWheelListWrap_Off_Description" "When scrolling through bindings, once the last item in a particular direction is hit, no further output will be sent until the other direction is sent."
+	"ControllerBinding_ScrollWheelType"	"Swipe Direction"
+	"ControllerBinding_ScrollWheelType_Description"	"Sets the type of motion required to move through the binding list. Either circular swipes of the pad, vertical swipes or horizontal swipes."
+	"ControllerBinding_ScrollWheelInvert"	"Invert Direction"
+	"ControllerBinding_ScrollWheelInvert_Description"	"Switches the direction of the scroll action."
+	"ControllerBinding_ScrollWheelFriction"	"Spin Friction"
+	"ControllerBinding_ScrollWheelFriction_Description"	"This determintes how long the scroll wheel will continute to scroll when flicked. Low friction results in a longer spin."
 	//Touchmenu
 
 	"ControllerBinding_ModeDropDown_TouchMenu" "Style of Input - Touch Menu"

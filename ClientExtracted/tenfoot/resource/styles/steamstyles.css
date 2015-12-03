@@ -76,15 +76,17 @@
 /* Friends Label Colors */
 @define friendsoffline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #ffffff77 ), color-stop( 0.85, #ffffff77 ), to( #ffffff00 ) );
 @define friendsoffline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #252525ff ), color-stop( 0.85, #252525ff ), to( #252525e0 ) );
-@define friendsoffline_solid: #808080ff;
+@define friendsoffline_solid: #617c8aff;
 @define friendsonline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #14c6fcff ), color-stop( 0.85, #3a8da6ff ), to( #3a8da600 ) );
 @define friendsonline_lightbg_to: #0e88ade0;
 @define friendsonline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #11a4d1ff ), color-stop( 0.85, #0e7999ff ), to( friendsonline_lightbg_to ) );
-@define friendsonline_solid: #14c6fcff; 
+@define friendsonline_solid: #14c6fcff;
+@define friendsonline_bright: #50d9f9ff;
 
 @define friendsingame_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #b3d92bff ), color-stop( 0.85, #b3d92bff ), to( #b3d92be0 ) );
 @define friendsingame_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #729100ff ), color-stop( 0.85, #729100ff ), to( #729100e0 ) );
 @define friendsingame_solid: #9cbd26ff;
+@define friendsingame_bright: #c6ff6cff;
 
 @define friendsgolden_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #ffff99ff ), color-stop( 0.85, #ffff99ff ), to( #ffff99ff ) );
 @define friendsgolden_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #ffff99ff ), color-stop( 0.85, #ffff99ff ), to( #ffff99ff ) );
@@ -2762,7 +2764,7 @@ EdgeScrollBar.Vertical .EdgeScrollButton
 	height: 80px;	
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover .EdgeScrollButton
+.CursorVisible .EdgeScroller:descendantfocus:hover .EdgeScrollButton
 {
 	opacity: 1.0;
 }
@@ -2795,47 +2797,47 @@ EdgeScrollBar.Vertical #MaxButton
 	align: center bottom;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover
 {
 	background-color: mouse_hover_bg_left;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover
 {
 	background-color: mouse_hover_bg_right;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover
 {
 	background-color: mouse_hover_bg_up;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover
 {
 	background-color: mouse_hover_bg_bottom;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active
 {
 	transition-delay: 0.2s, 0.0s;
 }																							  
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active
 {
 	background-color: mouse_active_bg_left;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active
 {
 	background-color: mouse_active_bg_right;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active
 {
 	background-color: mouse_active_bg_up;
 }
 
-.CursorVisible EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active
 {
 	background-color: mouse_active_bg_bottom;
 }
