@@ -2457,6 +2457,7 @@ function UpdatePaymentInfoForm()
 		var bShowPaymentSpecificNote = false;
 		var bShowSaveMyAddress = false;
 		var bShowStoredPayPalDetails = false;
+		var bDisabledPaymentMethod = false;
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
 		
@@ -2591,6 +2592,14 @@ function UpdatePaymentInfoForm()
 			$( 'payment_info_form' ).onsubmit = function() { OnSteamAccountSelected(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
+		else if ( method.value == 'disabled' )
+		{
+			bShowAddressForm = false;
+			bShowPaymentSpecificNote = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
+		}
+		
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
@@ -2657,6 +2666,9 @@ function UpdatePaymentInfoForm()
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
 		
+		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'black' : 'none';
+		$('youll_get_to_review').style.display = strAllowPaymentMethod;
+		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 	} 
 	catch( e ) 
 	{
