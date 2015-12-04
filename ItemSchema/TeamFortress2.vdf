@@ -46223,12 +46223,12 @@
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"			"0.5"
+					"value"			"0.7"
 				}
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"			"0.6"
+					"value"			"0.7"
 				}
 				"afterburn immunity"
 				{
@@ -49679,6 +49679,105 @@
 				"is marketable"							"1"
 			}
 		}
+		
+		"item_bak_fear_monger"
+		{
+			"prefab"		"no_craft hat"
+			"import_name"		"bak_fear_monger"
+			"item_name"		"#TF_bak_fear_monger"
+			"item_description"		"#TF_bak_fear_monger_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/bak_fear_monger/bak_fear_monger"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/bak_fear_monger/bak_fear_monger.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"item_bak_arkham_cowl"
+		{
+			"prefab"		"no_craft hat"
+			"import_name"		"bak_arkham_cowl"
+			"item_name"		"#TF_bak_arkham_cowl"
+			"item_description"		"#TF_bak_arkham_cowl_Desc"
+			"equip_region"		"head_skin"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_arkham_cowl/bak_arkham_cowl_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"item_bak_firefly"
+		{
+			"import_name"		"bak_firefly"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_firefly"
+			"item_description"		"#TF_bak_firefly_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/bak_firefly/bak_firefly"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/bak_firefly/bak_firefly.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+
 
 
 	}
@@ -95293,6 +95392,7 @@
 			"image_inventory"		"backpack/workshop/player/items/medic/fall2013_medic_wc_coat/fall2013_medic_wc_coat"
 			"capabilities"
 			{
+				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/fall2013_medic_wc_coat/fall2013_medic_wc_coat.mdl"
@@ -106617,7 +106717,393 @@
 				"scout"		"1"
 			}
 		}
-
+		"30720"
+		{
+			"first_sale_date"	"2015/12/04"
+			"name"		"Arkham Cowl"
+			"ad_text"			"#TF_bak_arkham_cowl_AdText"
+			"prefab"		"item_bak_arkham_cowl"
+		}
+		"30721"
+		{
+			"first_sale_date"	"2015/12/04"
+			"ad_text"			"#TF_bak_firefly_AdText"
+			"name"		"The Firefly"
+			"prefab"		"item_bak_firefly"
+		}
+		"30722"
+		{
+			"first_sale_date"	"2015/12/02"
+			"name"		"Batter's Bracers"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_batarm"
+			"item_description"		"#TF_bak_batarm_Desc"
+			"equip_region"		"arms"
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_batarm/bak_batarm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_batarm/bak_batarm_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30723"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"The Hood of Sorrows"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_bak_hood_of_sorrows"
+			"item_description"		"#TF_bak_hood_of_sorrows_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/bak_hood_of_sorrows/bak_hood_of_sorrows"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/bak_hood_of_sorrows/bak_hood_of_sorrows.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30724"
+		{
+			"first_sale_date"	"2015/12/04"
+			"name"		"Fear Monger"
+			"ad_text"			"#TF_bak_fear_monger_AdText"
+			"prefab"		"item_bak_fear_monger"
+		}
+		"30726"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"Pocket Villians"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_pocket_villians"
+			"item_description"		"#TF_bak_pocket_villians_Desc"
+			"equip_region"		"grenades"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_pocket_villians/bak_pocket_villians_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30727"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"The Caped Crusader"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_caped_crusader"
+			"item_description"		"#TF_bak_caped_crusader_Desc"
+			"equip_region"		"soldier_coat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30728"
+		{
+			"first_sale_date"	"2015/12/02"
+			"name"		"Buttler"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_buttler"
+			"item_description"		"#TF_bak_buttler_Desc"
+			"equip_region"		"belt_misc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_buttler/bak_buttler"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_scout.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_soldier.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_buttler/bak_buttler_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"soldier"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30733"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"Teufort Knight"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_bak_teufort_knight"
+			"item_description"		"#TF_bak_teufort_knight_Desc"
+			"equip_region"		"whole_head"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_heavy.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_teufort_knight/bak_teufort_knight_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30735"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"Sidekick's Side Slick"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_bak_sidekicks_side_slick"
+			"item_description"		"#TF_bak_sidekicks_side_slick_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/bak_sidekicks_side_slick/bak_sidekicks_side_slick"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/bak_sidekicks_side_slick/bak_sidekicks_side_slick.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30736"
+		{
+			"first_sale_date"	"2015/12/03"
+			"name"		"The Bat Backup"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_bat_backup"
+			"item_description"		"#TF_bak_bat_backup_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/bak_bat_backup/bak_bat_backup"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/bak_bat_backup/bak_bat_backup.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30737"
+		{
+			"first_sale_date"	"2015/12/02"
+			"name"		"Crook Combatant"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_crook_combatant"
+			"item_description"		"#TF_bak_crook_combatant_Desc"
+			"equip_region"		"arms"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/bak_crook_combatant/bak_crook_combatant"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/bak_crook_combatant/bak_crook_combatant.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30738"
+		{
+			"first_sale_date"	"2015/12/02"
+			"name"		"Batbelt"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_batbelt"
+			"item_description"		"#TF_bak_batbelt_Desc"
+			"equip_region"		"belt_misc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/bak_batbelt/bak_batbelt"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/bak_batbelt/bak_batbelt_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30739"
+		{
+			"name"		"Promo Fear Monger"
+			"prefab"		"item_bak_fear_monger"
+			"craft_class"	""			
+			"show_in_armory"	"0"
+			"static_attrs"
+			{
+				"non economy"		"1"
+			}
+		}
+		"30740"
+		{
+			"name"		"Promo Arkham Cowl"
+			"prefab"		"item_bak_arkham_cowl"
+			"craft_class"	""			
+			"show_in_armory"	"0"
+			"static_attrs"
+			{
+				"non economy"		"1"
+			}
+		}
+		"30741"
+		{
+			"name"		"Promo The Firefly"
+			"prefab"		"item_bak_firefly"
+			"craft_class"	""			
+			"show_in_armory"	"0"
+			"static_attrs"
+			{
+				"non economy"		"1"
+			}
+		}
+		
 
 
 
@@ -123329,6 +123815,62 @@
 				"pyro"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_pyro.mdl"
 				"spy"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_spy.mdl"
 				"engineer"		"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_engineer.mdl"
+			}
+		}
+		"9047"
+		{
+			"name"		"Special Snowflake"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_SpecialSnowflake"
+			"item_description"	"#TF_Medal_SpecialSnowflake_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/w2015_special_snowflake/w2015_special_snowflake_engineer.mdl"
+			}
+		}
+		"9048"
+		{
+			"name"		"Gift of Giving"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_GiftOfGiving"
+			"item_description"	"#TF_Medal_GiftOfGiving_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_engineer.mdl"
 			}
 		}
 
@@ -144779,7 +145321,16 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 		}
-		
+		"777"
+		{
+			"name"	"non economy"
+			"attribute_class"	"non_economy"
+			"description_string"	"#Attrib_NonEconomyItem"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"0"
+		}
 		"1000"
 		{
 			"name"	"CARD: damage bonus"
@@ -146171,6 +146722,16 @@
 			{
 				"Transylvanian Toupe"	"1"
 				"Vampiric Vesture"	"1"
+			}
+		}
+		"bak_sixties_sidekick"
+		{
+			"name"	"#TF_Set_bak_sixties_sidekick"
+			"items"
+			{
+				"Sidekick's Side Slick"		"1"
+				"The Bat Backup"			"1"
+				"Crook Combatant"			"1"
 			}
 		}
 
