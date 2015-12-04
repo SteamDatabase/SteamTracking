@@ -46223,12 +46223,12 @@
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"			"0.7"
+					"value"			"0.5"
 				}
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"			"0.7"
+					"value"			"0.6"
 				}
 				"afterburn immunity"
 				{
