@@ -3489,7 +3489,7 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	margin-bottom: 0px;
 	margin-right: 4px;
 }
-.item_def_grid_item:nth-child(5n)
+.item_store_items_block .item_def_grid_item:nth-child(5n)
 {
 	margin-right: 0px;
 }
