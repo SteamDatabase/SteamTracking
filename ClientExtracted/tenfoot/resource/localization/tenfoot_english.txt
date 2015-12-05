@@ -2973,7 +2973,7 @@
 	"Settings_RemoteClients_AdvancedClientOptions_Description" "To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
 	"Settings_RemoteClients_EnableHardwareEncoding" "Enable hardware encoding"
 	"Settings_RemoteClients_EnableHardwareEncodingNVIDIA" "Enable hardware encoding on NVIDIA GPU"
-	"Settings_RemoteClients_EnableHardwareEncodingAMD" "Enable hardware encoding on AMD GPU (not recommended with Steam Link)"
+	"Settings_RemoteClients_EnableHardwareEncodingAMD" "Enable hardware encoding on AMD GPU"
 	"Settings_RemoteClients_EnableHardwareEncodingIntel" "Enable hardware encoding on Intel iGPU"
 	"Settings_RemoteClients_EnableHardwareDecoding" "Enable hardware decoding"
 	"Settings_RemoteClients_EnableTrafficPriority" "Prioritize network traffic"

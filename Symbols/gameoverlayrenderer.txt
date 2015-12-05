@@ -344,9 +344,6 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
- T CVROverlayInterfaceGL::CVROverlayInterfaceGL(CVROverlayInterfaceGL::CreateStruct_t const&)
- T CVROverlayInterfaceGL::CreateDistortMap(vr::IVRSystem*, vr::Hmd_Eye, unsigned int, unsigned int) const
- T CVROverlayInterfaceGL::DrawQuad(CVROverlayInterfaceGL::Texture_t*, vr::utils::CVRConstants const&, vr::Hmd_Eye, unsigned int, unsigned int, unsigned int, unsigned int) const
  T CVideoMemStreamWriter::BGetRequestedCaptureFramerate(unsigned int*, unsigned int*)
  T CVideoMemStreamWriter::BGetRequestedGameFramerate(unsigned int*, unsigned int*)
  T CVideoMemStreamWriter::BReadyForNewFrame() const
@@ -528,10 +525,6 @@
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::vector<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::__push_back_slow_path<IPC::IEvent* const&>(IPC::IEvent* const&)
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
- T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
- T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
- T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
  _CGSDefaultConnection
  _Unwind_DeleteException
  _Unwind_GetDataRelBase

@@ -53,7 +53,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/imemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/ipcposix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/renderer/openvrhooks.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/renderer/openvrutils.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/savedmemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/savedmemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/screenshotmessages.cpp
