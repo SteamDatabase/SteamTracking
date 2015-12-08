@@ -129815,7 +129815,50 @@
 				}
 			}
 		}
-
+		"2142"
+		{
+			"name" "Batman Arkham Knight Promo Bundle"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Arkham Cowl"				"1"
+				"The Firefly"				"1"
+				"Batter's Bracers"			"1"
+				"The Hood of Sorrows"		"1"
+				"Fear Monger"				"1"
+				"Pocket Villians"			"1"
+				"The Caped Crusader"		"1"
+				"Buttler"					"1"
+				"Teufort Knight"			"1"
+				"Sidekick's Side Slick"		"1"
+				"The Bat Backup"			"1"
+				"Crook Combatant"			"1"
+				"Batbelt"					"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_BatmanArkhamKnightPromo"
+			"item_description"	"#TF_Bundle_BatmanArkhamKnightPromo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+		}
 
 
 
