@@ -547,6 +547,7 @@
  D typeinfo for CryptoPP::Algorithm
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1>
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
+ D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >, CryptoPP::HMAC<CryptoPP::SHA1> >
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
  D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::TF_EncryptorBase, CryptoPP::TF_ES<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::RSA, int> >
  D typeinfo for CryptoPP::AlgorithmParameters
@@ -608,6 +609,8 @@
  D typeinfo for CryptoPP::FilterPutSpaceHelper
  D typeinfo for CryptoPP::FilterWithBufferedInput
  D typeinfo for CryptoPP::FixedBlockSize<16u>
+ D typeinfo for CryptoPP::HMAC<CryptoPP::SHA1>
+ D typeinfo for CryptoPP::HMAC_Base
  D typeinfo for CryptoPP::HashFilter
  D typeinfo for CryptoPP::HashInputTooLong
  D typeinfo for CryptoPP::HashTransformation
@@ -628,6 +631,7 @@
  D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  D typeinfo for CryptoPP::MaskGeneratingFunction
  D typeinfo for CryptoPP::MessageAuthenticationCode
+ D typeinfo for CryptoPP::MessageAuthenticationCodeImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >
  D typeinfo for CryptoPP::MessageQueue
  D typeinfo for CryptoPP::ModularArithmetic
  D typeinfo for CryptoPP::MontgomeryRepresentation
@@ -661,6 +665,7 @@
  D typeinfo for CryptoPP::SHA256
  D typeinfo for CryptoPP::SelfTestFailure
  D typeinfo for CryptoPP::SimpleKeyingInterface
+ D typeinfo for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >
  D typeinfo for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
  D typeinfo for CryptoPP::Sink
  D typeinfo for CryptoPP::Source
@@ -681,6 +686,7 @@
  D typeinfo for CryptoPP::TrapdoorFunctionBounds
  D typeinfo for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
  D typeinfo for CryptoPP::Unflushable<CryptoPP::Filter>
+ D typeinfo for CryptoPP::VariableKeyLength<16u, 0u, 2147483647u, 1u, 4u, 0u>
  D typeinfo for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
  D typeinfo for CryptoPP::Waitable
  D typeinfo for CryptoPP::X509PublicKey
@@ -879,6 +885,8 @@
  D vtable for CryptoPP::Exception
  D vtable for CryptoPP::Filter
  D vtable for CryptoPP::FilterWithBufferedInput
+ D vtable for CryptoPP::HMAC<CryptoPP::SHA1>
+ D vtable for CryptoPP::HMAC_Base
  D vtable for CryptoPP::HashFilter
  D vtable for CryptoPP::HashInputTooLong
  D vtable for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
@@ -1157,6 +1165,7 @@
  R typeinfo name for CryptoPP::Algorithm
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA1>
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
+ R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >, CryptoPP::HMAC<CryptoPP::SHA1> >
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
  R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::TF_EncryptorBase, CryptoPP::TF_ES<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::RSA, int> >
  R typeinfo name for CryptoPP::AlgorithmParameters
@@ -1218,6 +1227,8 @@
  R typeinfo name for CryptoPP::FilterPutSpaceHelper
  R typeinfo name for CryptoPP::FilterWithBufferedInput
  R typeinfo name for CryptoPP::FixedBlockSize<16u>
+ R typeinfo name for CryptoPP::HMAC<CryptoPP::SHA1>
+ R typeinfo name for CryptoPP::HMAC_Base
  R typeinfo name for CryptoPP::HashFilter
  R typeinfo name for CryptoPP::HashInputTooLong
  R typeinfo name for CryptoPP::HashTransformation
@@ -1238,6 +1249,7 @@
  R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
  R typeinfo name for CryptoPP::MaskGeneratingFunction
  R typeinfo name for CryptoPP::MessageAuthenticationCode
+ R typeinfo name for CryptoPP::MessageAuthenticationCodeImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >
  R typeinfo name for CryptoPP::MessageQueue
  R typeinfo name for CryptoPP::ModularArithmetic
  R typeinfo name for CryptoPP::MontgomeryRepresentation
@@ -1271,6 +1283,7 @@
  R typeinfo name for CryptoPP::SHA256
  R typeinfo name for CryptoPP::SelfTestFailure
  R typeinfo name for CryptoPP::SimpleKeyingInterface
+ R typeinfo name for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >
  R typeinfo name for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
  R typeinfo name for CryptoPP::Sink
  R typeinfo name for CryptoPP::Source
@@ -1291,6 +1304,7 @@
  R typeinfo name for CryptoPP::TrapdoorFunctionBounds
  R typeinfo name for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
  R typeinfo name for CryptoPP::Unflushable<CryptoPP::Filter>
+ R typeinfo name for CryptoPP::VariableKeyLength<16u, 0u, 2147483647u, 1u, 4u, 0u>
  R typeinfo name for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
  R typeinfo name for CryptoPP::Waitable
  R typeinfo name for CryptoPP::X509PublicKey
@@ -1944,11 +1958,12 @@
  T CCoroutineMgr::CCoroutineMgr()
  T CCoroutineMgr::PopCoroutineStack()
  T CCrashHandlerScope::~CCrashHandlerScope()
+ T CCrypto::GenerateHMAC(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [20])
  T CCrypto::GenerateRandomBlock(unsigned char*, int)
  T CCrypto::GetSymmetricEncryptedSize(unsigned int)
  T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
- T CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
- T CCrypto::SymmetricEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
+ T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int)
+ T CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::ValidateStatics(CValidator&, char const*)
  T CCustomAVIOReadContext::Read(void*, unsigned char*, int)
  T CCustomAVIOReadContext::Seek(void*, long long, int)
@@ -4554,6 +4569,17 @@
  T CryptoPP::GetValueHelperClass<CryptoPP::RSAFunction, CryptoPP::RSAFunction>& CryptoPP::GetValueHelperClass<CryptoPP::RSAFunction, CryptoPP::RSAFunction>::operator()<CryptoPP::Integer>(char const*, CryptoPP::Integer const& (CryptoPP::RSAFunction::*)() const)
  T CryptoPP::GetValueHelperClass<CryptoPP::RSAFunction, CryptoPP::RSAFunction>::Assignable()
  T CryptoPP::GetValueHelperClass<CryptoPP::RSAFunction, CryptoPP::RSAFunction>::GetValueHelperClass(CryptoPP::RSAFunction const*, char const*, std::type_info const&, void*, CryptoPP::NameValuePairs const*)
+ T CryptoPP::HMAC<CryptoPP::SHA1>::AccessHash()
+ T CryptoPP::HMAC<CryptoPP::SHA1>::AlgorithmName() const
+ T CryptoPP::HMAC<CryptoPP::SHA1>::HMAC(unsigned char const*, unsigned long)
+ T CryptoPP::HMAC<CryptoPP::SHA1>::~HMAC()
+ T CryptoPP::HMAC_Base::DigestSize() const
+ T CryptoPP::HMAC_Base::OptimalBlockSize() const
+ T CryptoPP::HMAC_Base::Restart()
+ T CryptoPP::HMAC_Base::TruncatedFinal(unsigned char*, unsigned long)
+ T CryptoPP::HMAC_Base::UncheckedSetKey(unsigned char const*, unsigned int, CryptoPP::NameValuePairs const&)
+ T CryptoPP::HMAC_Base::Update(unsigned char const*, unsigned long)
+ T CryptoPP::HMAC_Base::~HMAC_Base()
  T CryptoPP::HashFilter::AlgorithmName() const
  T CryptoPP::HashFilter::CreatePutSpace(unsigned long&)
  T CryptoPP::HashFilter::HashFilter(CryptoPP::HashTransformation&, CryptoPP::BufferedTransformation*, bool, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -4562,9 +4588,12 @@
  T CryptoPP::HashFilter::~HashFilter()
  T CryptoPP::HashInputTooLong::HashInputTooLong(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::HashInputTooLong::~HashInputTooLong()
+ T CryptoPP::HashTransformation::BlockSize() const
  T CryptoPP::HashTransformation::CalculateDigest(unsigned char*, unsigned char const*, unsigned long)
  T CryptoPP::HashTransformation::CalculateTruncatedDigest(unsigned char*, unsigned long, unsigned char const*, unsigned long)
+ T CryptoPP::HashTransformation::CreateUpdateSpace(unsigned long&)
  T CryptoPP::HashTransformation::Final(unsigned char*)
+ T CryptoPP::HashTransformation::OptimalDataAlignment() const
  T CryptoPP::HashTransformation::ThrowIfInvalidTruncatedSize(unsigned long) const
  T CryptoPP::HashTransformation::TruncatedVerify(unsigned char const*, unsigned long)
  T CryptoPP::HashTransformation::Verify(unsigned char const*)
@@ -4648,6 +4677,7 @@
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::IteratedHashWithStaticTransform()
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::StateBuf()
  T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::~IteratedHashWithStaticTransform()
+ T CryptoPP::MessageAuthenticationCode::GetAlgorithm() const
  T CryptoPP::MessageQueue::AnyRetrievable() const
  T CryptoPP::MessageQueue::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
  T CryptoPP::MessageQueue::GetNextMessage()
@@ -4804,6 +4834,12 @@
  T CryptoPP::SimpleKeyingInterface::ThrowIfInvalidKeyLength(unsigned long)
  T CryptoPP::SimpleKeyingInterface::ThrowIfResynchronizable()
  T CryptoPP::SimpleKeyingInterface::~SimpleKeyingInterface()
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::DefaultKeyLength() const
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::GetValidKeyLength(unsigned long) const
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::IVRequirement() const
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::IVSize() const
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::MaxKeyLength() const
+ T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::HMAC_Base, CryptoPP::HMAC<CryptoPP::SHA1> >::MinKeyLength() const
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::DefaultKeyLength() const
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::GetValidKeyLength(unsigned long) const
  T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVRequirement() const
@@ -7979,6 +8015,14 @@
  T non-virtual thunk to CryptoPP::DERSequenceEncoder::~DERSequenceEncoder()
  T non-virtual thunk to CryptoPP::Filter::~Filter()
  T non-virtual thunk to CryptoPP::FilterWithBufferedInput::~FilterWithBufferedInput()
+ T non-virtual thunk to CryptoPP::HMAC<CryptoPP::SHA1>::AlgorithmName() const
+ T non-virtual thunk to CryptoPP::HMAC<CryptoPP::SHA1>::~HMAC()
+ T non-virtual thunk to CryptoPP::HMAC_Base::DigestSize() const
+ T non-virtual thunk to CryptoPP::HMAC_Base::OptimalBlockSize() const
+ T non-virtual thunk to CryptoPP::HMAC_Base::Restart()
+ T non-virtual thunk to CryptoPP::HMAC_Base::TruncatedFinal(unsigned char*, unsigned long)
+ T non-virtual thunk to CryptoPP::HMAC_Base::Update(unsigned char const*, unsigned long)
+ T non-virtual thunk to CryptoPP::HMAC_Base::~HMAC_Base()
  T non-virtual thunk to CryptoPP::HashFilter::~HashFilter()
  T non-virtual thunk to CryptoPP::MessageQueue::~MessageQueue()
  T non-virtual thunk to CryptoPP::PK_DefaultEncryptionFilter::~PK_DefaultEncryptionFilter()

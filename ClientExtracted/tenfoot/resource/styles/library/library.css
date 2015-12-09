@@ -655,7 +655,7 @@ LibraryAppDetails .ContentsRow
 
 .LibraryDetailsSectionRow
 {
-	width: 1300px;
+	width: 1000px;
 	height: fit-children;
 	flow-children: right-wrap;
 	margin: -10px;
