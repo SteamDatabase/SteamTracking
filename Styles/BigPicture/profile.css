@@ -3223,7 +3223,12 @@ Label.AchievementPercent,
 .ContentGrid .RightMouseScrollRegion,
 .ContentGrid .BottomMouseScrollRegion
 {
-	y: -80px;
+	y: 0px;
+}
+
+.TopMouseScrollRegion
+{
+	transform: translateY( 0px );
 }
 
 .ContentGrid #MaxButton
@@ -4658,7 +4663,7 @@ LibraryGameBadge .badge_info_description Label
 .GroupsGrid .RightMouseScrollRegion,
 .GroupsGrid .BottomMouseScrollRegion
 {
-	y: -175px;
+	y: -90px;
 }
 
 
