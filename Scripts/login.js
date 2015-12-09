@@ -389,10 +389,10 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		}
 
 		var bRunningTransfer = false;
-		if ( results.transfer_url && results.transfer_parameters )
+		if ( ( results.transfer_url || results.transfer_urls ) && results.transfer_parameters )
 		{
 			bRunningTransfer = true;
-			this.TransferLogin( results.transfer_url, results.transfer_parameters );
+			this.TransferLogin( results.transfer_urls || [ results.transfer_url ], results.transfer_parameters );
 		}
 
 		if ( this.m_bInEmailAuthProcess )
@@ -471,6 +471,12 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 				$J( '#steamPassword' ).attr( 'type', 'text' );
 				$J( '#steamPassword' ).attr( 'autocomplete', 'off' );
 			}
+			else if ( results.clear_password_field )
+			{
+				$J( '#input_password' ).val('');
+				$J( '#input_password' ).focus();
+			}
+
 		}
 	}
 	if ( bRetry )
@@ -528,32 +534,42 @@ CLoginPromptManager.prototype.CancelEmailAuthProcess = function()
 	}
 };
 
-CLoginPromptManager.prototype.TransferLogin = function( url, parameters )
+CLoginPromptManager.prototype.TransferLogin = function( rgURLs, parameters )
 {
 	if ( this.m_bLoginTransferInProgress )
 		return;
 	this.m_bLoginTransferInProgress = true;
 
-	var $IFrame = $J('<iframe>', {id: 'transfer_iframe' } ).hide();
-	$J(document.body).append( $IFrame );
+	var bOnCompleteFired = false;
+	var _this = this;
+	var fnOnComplete = function() {
+		if ( !bOnCompleteFired )
+			_this.OnTransferComplete();
+		bOnCompleteFired = true;
+	};
 
-	var doc = $IFrame[0].contentWindow.document;
-	doc.open();
-	doc.write( '<form method="POST" action="' + url + '" name="transfer_form">' );
-	for ( var param in parameters )
+	var cResponsesExpected = rgURLs.length;
+	$J(window).on( 'message', function() {
+		if ( --cResponsesExpected == 0 )
+			fnOnComplete();
+	});
+
+	for ( var i = 0 ; i < rgURLs.length; i++ )
 	{
-		doc.write( '<input type="hidden" name="' + param + '" value="' + parameters[param] + '">' );
+		var $IFrame = $J('<iframe>', {id: 'transfer_iframe' } ).hide();
+		$J(document.body).append( $IFrame );
+
+		var doc = $IFrame[0].contentWindow.document;
+		doc.open();
+		doc.write( '<form method="POST" action="' + rgURLs[i] + '" name="transfer_form">' );
+		for ( var param in parameters )
+		{
+			doc.write( '<input type="hidden" name="' + param + '" value="' + V_EscapeHTML( parameters[param] ) + '">' );
+		}
+		doc.write( '</form>' );
+		doc.write( '<script>window.onload = function(){ document.forms["transfer_form"].submit(); }</script>' );
+		doc.close();
 	}
-	doc.write( '</form>' );
-	doc.write( '<script>window.onload = function(){ document.forms["transfer_form"].submit(); }</script>' );
-	doc.close();
-
-	var cLoadCount = 1;
-	var fnOnComplete = $J.proxy( this.OnTransferComplete, this );
-
-	//TODO: use messaging?
-	$IFrame.on( 'load', function( event ) { if ( --cLoadCount == 0 ) fnOnComplete(); } );
-	$IFrame.on( 'error', function( event ) { fnOnComplete(); } );
 
 	// after 10 seconds, give up on waiting for transfer
 	window.setTimeout( fnOnComplete, 10000 );

@@ -3019,7 +3019,14 @@ function RefreshTradeEscrowDisplay()
 	}
 	else
 	{
-		$J('#trade_escrow_days').text( cEscrowDays );
+		if ( cEscrowDays == 1 )
+		{
+			$J('#trade_escrow_days').text( cEscrowDays + ' day' );
+		}
+		else
+		{
+			$J('#trade_escrow_days').text( cEscrowDays + ' days' );
+		}
 
 		if ( !$elHeader.is( ":visible" ) )
 		{

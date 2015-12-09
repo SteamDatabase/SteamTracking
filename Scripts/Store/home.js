@@ -158,7 +158,7 @@ GHomepage = {
 			if ( bHaveUser )
 			{
 				HomeSettings = new CHomeSettings( 'main_cluster', GHomepage.RenderMainCluster );
-				$J('.main_cluster_content').append( HomeSettings.RenderCustomizeButton() );
+				$J('.main_cluster_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
 			GHomepage.RenderMainCluster();
 		} catch( e ) { OnHomepageException(e); }

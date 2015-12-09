@@ -3196,6 +3196,7 @@ select.gray_bevel {
 	position: relative;
 	margin-top: 6px;
 	min-height: 75px;
+	overflow: hidden;
 }
 
 .steam_curator_recommendation

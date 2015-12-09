@@ -426,12 +426,16 @@ a.home_smallcap:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.home_btn.active, .main_cluster_content .home_btn.home_customize_btn.active {
+.home_btn.active, .main_cluster_ctn .home_btn.home_customize_btn.active {
     background: #e3eaef;
     color: #384959;
 }
-.home_btn.active:hover, .main_cluster_content .home_btn.home_customize_btn.active:hover {
+.home_btn.active:hover, .main_cluster_ctn .home_btn.home_customize_btn.active:hover {
     background: #e3eaef;
+}
+
+.main_cluster_ctn {
+	position: relative;
 }
 
 .home_btn.home_customize_btn {

@@ -1692,6 +1692,11 @@ a.guide_row {
 	color: white;
 }
 
+.help_permanentlyremove_details .bold
+{
+	color: white;
+}
+
 .help_vacorgameban_details,
 .help_permanentlyremove_details
 {
@@ -2840,4 +2845,80 @@ input.unlockcode_entry_input
 .shipping_change_address_button > span {
 	padding: 0;
 	margin: 0;
+}
+
+.change_password_intro {
+}
+
+.change_password_content {
+	padding: 20px;
+}
+
+.change_password_form {
+	margin-top: 20px;
+}
+
+.change_password_form > .left {
+	min-width: 80px;
+	margin-right: 10px;
+	float: left;
+}
+
+.change_password_form > .right {
+	min-width: 100px;
+	font-weight: bold;
+}
+
+.change_password_form > .left > div, .change_password_form > .right > div {
+	min-height: 36px;
+	line-height: 28px;
+}
+
+.change_password_form > .left > div {
+	text-align: right;
+}
+
+
+.change_password_form input, #change_password_code input {
+	font-size: 16px;
+	padding: 4px;
+	color: #ffffff;
+	min-width: 200px;
+	background-color: #000010;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+}
+
+.change_password_button {
+	display: inline-block;
+	padding: 6px 10px 6px 10px;
+	background-color: #264963;
+	color: #6abcf0;
+	cursor: pointer;
+	border: none;
+	margin-right: 20px;
+}
+
+.change_password_button:hover {
+	color: #ffffff;
+}
+
+#change_password_request_button {
+	padding: 0 20px 20px 20px;
+}
+
+#change_password_submit_button {
+	padding: 0 20px 20px 20px;
+	margin-top: 10px;
+}
+
+#change_password_code_input {
+	margin: 10px 0 0 140px;
+}
+
+#change_password_error {
+	color: #a94847;
+	font-size: 14px;
 }

@@ -1,17 +1,5 @@
 
 
-function runLocalUrl(url)
-{
-	var iframe = document.createElement("IFRAME");
-	iframe.setAttribute("src", url);
-	document.documentElement.appendChild(iframe);
-	iframe.parentNode.removeChild(iframe);
-	iframe = null;
-}
-
-
-
-
 function PhoneAjax( op, arg, success, error )
 {
 	$J.ajax( {
@@ -51,52 +39,6 @@ function PhoneAjax( op, arg, success, error )
 			 }
 	});
 }
-
-var g_interval = null;
-var g_callInProgress = false;
-
-
-function CheckCallInProgress()
-{
-	return g_callInProgress;
-}
-
-
-//	[status, data], status='ok' / 'error' / 'fatal'
-function GetValueFromLocalURL( url, timeout, success, error, fatal )
-{
-
-	g_callInProgress = true;
-	runLocalUrl( url );
-
-	if ( ! timeout )
-	{
-		timeout = 5;
-	}
-
-	var timeoutTime = Date.now() + 1000 * timeout;
-
-	if ( g_interval != null )
-	{
-		window.clearInterval( g_interval );
-		g_interval = null;
-	}
-
-	g_interval = window.setInterval( function() {
-		
-		
-		if ( Date.now() > timeoutTime )
-		{
-			g_callInProgress = false;				
-			if ( g_interval )
-				window.clearInterval( g_interval );
-			
-			fatal( 'timeout', -1 );
-		}
-
-	}, 100 );
-}
-
 
 var g_alreadyLoaded = false;
 
@@ -187,7 +129,7 @@ function PushLocation( url )
 
 function HandleSteamguardCancel( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/prechange';
@@ -239,7 +181,7 @@ function StartCountdownEnable( name, seconds )
 
 function UseSteamguardWithEmail( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/email';
@@ -248,7 +190,7 @@ function UseSteamguardWithEmail( near )
 
 function HandleSteamguardEmailContinue( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	GetValueFromLocalURL( 'steammobile://steamguardset?scheme=email', 60,
@@ -266,7 +208,7 @@ function HandleSteamguardEmailContinue( near )
 
 function UseSteamguardNoEmail( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/none';
@@ -275,7 +217,7 @@ function UseSteamguardNoEmail( near )
 
 function HandleSteamguardNoneContinue( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	GetValueFromLocalURL( 'steammobile://steamguardset?scheme=none', 60,
@@ -293,7 +235,7 @@ function HandleSteamguardNoneContinue( near )
 
 function UseSteamguardWithTwoFactor( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/twofactor_splash';
@@ -302,7 +244,7 @@ function UseSteamguardWithTwoFactor( near )
 
 function HandleActivationCode( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
 
@@ -347,7 +289,7 @@ function HandleActivationCode( near )
 
 function HandleResendEmail( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	GetValueFromLocalURL( 'steammobile://steamguardsendemail' );
@@ -357,7 +299,7 @@ function HandleResendEmail( near )
 
 function HandlePhoneSplashContinue( near, bForTwoFactor )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
 	var sForTwoFactor = bForTwoFactor ? '1' : '0';
@@ -412,16 +354,16 @@ function HandlePhoneSplashContinue( near, bForTwoFactor )
 
 function HandleAddPhoneButton( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/phone_splash?bRevoke2fOnCancel=false';
+	window.location = 'https://store.steampowered.com/phone/add?returnToSteamguard=1';
 }
 
 
 function HandleRecoveryCodeDone( near )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 
 	if ( g_SteamguardDoneSecondsLeft > 0 )
@@ -434,7 +376,7 @@ function HandleRecoveryCodeDone( near )
 
 function HandlePhoneNumber( near, bForTwoFactor )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
 
@@ -482,7 +424,7 @@ g_SmsCodeFailures = 0;
 
 function DoTwoFactorValidate( sms_code )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy();
 	
@@ -532,7 +474,7 @@ function HandleAjaxError( errorText, fatal )
 
 function HandleSmsCode( near, bForTwoFactor )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
 
@@ -593,7 +535,7 @@ function HandleSmsCode( near, bForTwoFactor )
 
 function HandleSmsResend( near, bForTwoFactor )
 {
-	if ( CheckCallInProgress() )
+	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
 

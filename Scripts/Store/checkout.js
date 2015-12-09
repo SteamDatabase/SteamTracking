@@ -3038,6 +3038,14 @@ function SubmitPaymentInfoForm()
 					errorString += 'Please enter a State or Province.<br/>';
 					rgBadFields.billing_state_select_trigger = true;
 				}
+								if ( $('billing_state_select').value == 'AE' || $('billing_state_select').value == 'AP' || $('billing_state_select').value == 'AA' )
+				{
+					if ( $('billing_city').value != 'APO' && $('billing_city').value != 'FPO' && $('billing_city').value != 'DPO' )
+					{
+						errorString += 'Please enter a valid military address.<br/>';
+						rgBadFields.billing_city = true;
+					}
+				}
 			}
 	
 	

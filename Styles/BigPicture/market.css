@@ -1093,70 +1093,9 @@ DropDown Image,
 }
 
 
-.BottomMouseScrollRegion
+.TopMouseScrollRegion
 {
-	y: -95px;
-}
-
-.LeftMouseScrollRegion, .RightMouseScrollRegion
-{
-	width: 100%;
-	height: 80px;
-	
-	z-index: 300;
-
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-
-	opacity: 0.0;
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration, shortduration;
-	transition-delay: 0.2s, 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-
-.LeftMouseScrollRegion
-{
-	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
-	background-color: mouse_off_bg_up;
-	align: center top;
-}
-
-.RightMouseScrollRegion
-{
-	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-	background-color: mouse_off_bg_bottom;
-	align: center bottom;
-	y: -95px;
-}
-
-.CursorVisible Grid:hover .LeftMouseScrollRegion,
-.CursorVisible Grid:hover .RightMouseScrollRegion
-{
-	opacity: 1.0;
-}
-
-.CursorVisible Grid:hover .LeftMouseScrollRegion:hover,
-{
-	background-color: mouse_hover_bg_up;
-}
-
-.CursorVisible Grid:hover .RightMouseScrollRegion:hover,
-{
-	background-color: mouse_hover_bg_bottom;
-}
-
-.CursorVisible #GamesGrid:hover .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_up;
-}
-
-.CursorVisible Grid:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_bottom;
-
+	y: 90px;
 }
 
 .DropDownWrapper

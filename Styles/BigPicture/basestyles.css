@@ -460,7 +460,7 @@
 }
 
 .ContentHover .NxRightColumn,
-.NxRightColumn:descendantfocus,
+.NxRightColumn.NxRightColumnFocus,
 .ContentAreaFocus .NxRightColumn
 {
 	transform: translatex( -200px );
@@ -983,15 +983,12 @@
 
 
 //
-// Mouse scroll regions for grids.
+// Mouse scroll regions for grids and carousels.
 // This can be removed once the steamstyles.css with the
 // appropriate stuff in it has propped.
 //
-.LeftMouseScrollRegion, .RightMouseScrollRegion
+MouseScrollRegion
 {
-	width: 100%;
-	height: 80px;
-	
 	z-index: 300;
 
 	background-position: center center;
@@ -1005,42 +1002,89 @@
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+.CursorVisible .MouseScrollContainer:hover MouseScrollRegion
+{
+	opacity: 1.0;
+}
+
+
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	width: 80px;
+	height: 100%;
+}
+
+.TopMouseScrollRegion, .BottomMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	transform: translateY( -90px );
+}
+
 .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	align: left center;
+	background-color: mouse_off_bg_left;
+}
+
+.RightMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	align: right center;
+	background-color: mouse_off_bg_right;
+}
+
+.TopMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
 	background-color: mouse_off_bg_up;
 	align: center top;
 }
 
-.RightMouseScrollRegion
+.BottomMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
 	background-color: mouse_off_bg_bottom;
 	align: center bottom;
 }
 
-.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion,
-.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion
+.CursorVisible .MouseScrollContainer:hover .LeftMouseScrollRegion:hover
 {
-	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
 }
 
-.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion:hover,
+.CursorVisible .MouseScrollContainer:hover .RightMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_right;
+}
+
+.CursorVisible .MouseScrollContainer:hover .TopMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_up;
 }
 
-.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion:hover,
+.CursorVisible .MouseScrollContainer:hover .BottomMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_bottom;
 }
 
-.CursorVisible Grid:descendantfocus:hover .LeftMouseScrollRegion:active
+.CursorVisible .MouseScrollContainer:hover .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+.CursorVisible .MouseScrollContainer:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+}
+
+.CursorVisible .MouseScrollContainer:hover .TopMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_up;
 }
 
-.CursorVisible Grid:descendantfocus:hover .RightMouseScrollRegion:active
+.CursorVisible .MouseScrollContainer:hover .BottomMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_bottom;
 }

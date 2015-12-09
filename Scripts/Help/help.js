@@ -546,22 +546,34 @@ HelpWizard = {
 		return null;
 	},
 
+	// returns null if no error, an error string if there is one
+	CheckPasswordValid: function( strLogin, strPassword ) {
+
+		if ( strPassword == '' )
+			return '';
+
+		if ( strLogin.length > 0 && strLogin.toLowerCase() == strPassword.toLowerCase() )
+			return 'Can\'t use your user name as your password';
+
+		if ( strPassword.length < 7 )
+			return 'Password must contain at least 7 characters';
+
+		var iInvalidChar = strPassword.search( /[^\x00-\x7F]/g );
+		if ( iInvalidChar >= 0 )
+			return '%s can\'t be used in passwords'.replace( /%s/, strPassword.charAt( iInvalidChar ) );
+
+		return null;
+	},
+
 	CheckPasswordAvailable: function( strLogin ) {
 		this.m_timerCheckPassword = null;
 		var strPassword = $J( '#password_reset' ).val();
 
-		if ( strPassword == '' )
+		var strError = HelpWizard.CheckPasswordValid( strLogin, strPassword );
+		if ( strError === '' )
 			return HelpWizard.SetPasswordTag( '#password_tag', '', '' );
-
-		if ( strLogin.length > 0 && strLogin.toLowerCase() == strPassword.toLowerCase() )
-			return HelpWizard.SetPasswordTag( '#password_tag', 'error', 'Can\'t use your user name as your password' );
-
-		if ( strPassword.length < 7 )
-			return HelpWizard.SetPasswordTag( '#password_tag', 'error', 'Password must contain at least 7 characters' );
-
-		var iInvalidChar = strPassword.search( /[^\x00-\x7F]/g );
-		if ( iInvalidChar >= 0 )
-			return HelpWizard.SetPasswordTag( '#password_tag', 'error', '%s can\'t be used in passwords'.replace( /%s/, strPassword.charAt( iInvalidChar ) ) );
+		if ( strError !== null )
+			return HelpWizard.SetPasswordTag( '#password_tag', 'error', strError );
 
 		var _this = this;
 		$J.ajax({
@@ -1492,4 +1504,170 @@ HardwareRMA = {
 			});
 	}
 
+};
+
+ChangePasswordWizard = {
+	m_bDoingAjax: false,
+	m_rsa: null,
+	m_strPasswordEncrypted: null,
+	m_bSentCode: false,
+
+	SubmitCurrentPassword: function() {
+		if ( this.m_bDoingAjax )
+			return;
+
+		$J('#change_password_error').text( '' );
+
+		var strLogin = $J('#account_name').text();
+		var current_password = $J('#current_password_input').val();
+		var new_password1 = $J('#new_password_input').val();
+		var new_password2 = $J('#new_password_confirm_input').val();
+
+		if ( new_password1 !== new_password2 )
+		{
+			this.ShowError( 'Passwords do not match' );
+			return;
+		}
+
+		if ( new_password1 == '' || new_password1.length == 0 )
+		{
+			this.ShowError( 'Please enter the new password you wish to use.' );
+			return;
+		}
+
+		var strError = HelpWizard.CheckPasswordValid( strLogin, new_password1 );
+		if ( strError !== null )
+			return this.ShowError( strError );
+
+		if ( this.m_bSentCode )				return this.SubmitChangeCode();
+
+		this.SetLoading( true );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/login/getrsakey/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				username: strLogin
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			$J( '#change_password_form' ).removeClass( 'loading' );
+			ChangePasswordWizard.SetLoading( false );
+		}).done( function( data ) {
+			ChangePasswordWizard.SetLoading( false );
+			ChangePasswordWizard.RequestPasswordChangeCode( data, current_password );
+		});
+	},
+
+	RequestPasswordChangeCode: function( rsa, current_password ) {
+		this.m_rsa = rsa;
+		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
+		{
+			this.ShowError( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' );
+			return;
+		}
+
+		var pubKey = RSA.getPublicKey( rsa.publickey_mod, rsa.publickey_exp );
+		this.m_strPasswordEncrypted = RSA.encrypt( current_password, pubKey );
+		this.SetLoading( true );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/change_password/AjaxRequestPasswordChange/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				password_encrypted: this.m_strPasswordEncrypted,
+				rsa_timestamp: this.m_rsa.timestamp
+			} )
+		}).fail( function( xhr ) {
+			ChangePasswordWizard.ShowError( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' );
+			ChangePasswordWizard.SetLoading( false );
+		}).done( function( data ) {
+			ChangePasswordWizard.SetLoading( false );
+			// show the right entry box and/or complete the function
+			if ( data.error )
+			{
+				ChangePasswordWizard.ShowError( data.error )
+			}
+
+			if ( data.submit_immediately )
+			{
+				ChangePasswordWizard.SubmitChangeCode();
+				return;
+			}
+
+			this.m_bSentCode = true;
+			if ( data.show_code_entry )
+			{
+				$J('#change_password_code').show();
+				$J('#change_password_request_button').hide();
+			}
+			else
+			{
+				$J('#change_password_code').hide();
+				$J('#change_password_request_button').show();
+			}
+		}).always( function() {
+		});
+	},
+
+	SubmitChangeCode: function() {
+		if ( !this.m_rsa.publickey_mod || !this.m_rsa.publickey_exp || !this.m_rsa.timestamp )
+		{
+			this.ShowError( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' );
+			return;
+		}
+
+		this.SetLoading( true );
+
+		var change_code = $J('#change_password_code_input').val();
+		var new_password = $J('#new_password_input').val();
+		var pubKey = RSA.getPublicKey( this.m_rsa.publickey_mod, this.m_rsa.publickey_exp );
+		var strNewPasswordEncrypted = RSA.encrypt( new_password, pubKey );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/change_password/AjaxSubmitPasswordChange/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				password_encrypted: this.m_strPasswordEncrypted,
+				new_password_encrypted: strNewPasswordEncrypted,
+				rsa_timestamp: this.m_rsa.timestamp,
+				change_code: change_code
+			} )
+		}).fail( function( xhr ) {
+			ChangePasswordWizard.ShowError( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' );
+		}).done( function( data ) {
+			// show the right entry box and/or complete the function
+			if ( data.error )
+			{
+				ChangePasswordWizard.ShowError( data.error )
+			}
+			else if ( data.success == 1 )
+			{
+				$J('#change_password_success').show();
+				$J('#change_password_p1').hide();
+			}
+
+		}).always( function() {
+			ChangePasswordWizard.SetLoading( false );
+		});
+	},
+
+	ShowError: function( error ) {
+		$J('#change_password_error').text( error );
+		$J('#page_content').removeClass( 'page_loaded' );
+		$J('#page_content').addClass( 'page_error' );
+	},
+
+	SetLoading: function( loading ) {
+		if ( loading )
+		{
+			this.m_bDoingAjax = true;
+			$J('#loading_throbber').show();
+		}
+		else
+		{
+			this.m_bDoingAjax = false;
+			$J('#loading_throbber').hide();
+		}
+	}
 };

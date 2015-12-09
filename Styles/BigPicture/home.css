@@ -1039,6 +1039,21 @@ VerticalScrollBar
 	height: 100%;
 }
 
+EdgeScroller.NxRightContentContainer .EdgeScrollButton
+{
+	x: -140px;
+}
+
+#Section_recently_updated .EdgeScrollButton
+{
+	x: -80px;
+}
+
+#page_featured .EdgeScrollButton
+{
+	x: 0px;
+}
+
 EdgeScroller.NxRightContentContainer #MinButton
 {
 	y: 20px;

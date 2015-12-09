@@ -732,13 +732,13 @@ DropDownMenu .FilterOption Label:focus
 #ItemGrid .LeftMouseScrollRegion,
 #ItemGrid .TopMouseScrollRegion
 {
-	y: 20px;
+	y: 115px;
 }
 
 #ItemGrid .RightMouseScrollRegion,
 #ItemGrid .BottomMouseScrollRegion
 {
-	y: -65px;
+	y: 15px;
 }
 
 TextEntry {

@@ -83,7 +83,7 @@ input.phone_input_number {
 }
 
 .phone_error {
-	margin: 20px 120px 20px 0px;
+	margin: 20px 0;
 	color: #cc3300;
 	height: 15px;
 
