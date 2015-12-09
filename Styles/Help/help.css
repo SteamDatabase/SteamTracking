@@ -1381,8 +1381,12 @@ div.help_official_support_row {
 
 .help_header_right {
 	float: right;
-	width: 34%;
-	margin-left: 24px;
+	width: 33%;
+}
+
+.help_header_left {
+	float: left;
+	width: 66%;
 }
 
 @media screen and (max-width: 480px )

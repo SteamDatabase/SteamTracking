@@ -155,7 +155,8 @@ HelpWizard = {
 				issue_appid: appid,
 				issue_transid: transid,
 				issue_line_item: gid_line_item,
-				refund_to_wallet: refund_to_wallet
+				refund_to_wallet: refund_to_wallet,
+				serial_number: $J('#hardware_serial_entry').val()
 			} )
 		} ).fail( function( jqxhr ) {
 			$J('#help_refund_request_dialog').html( 'failed to load' );
@@ -383,6 +384,11 @@ HelpWizard = {
 	ShowRefundRequestForm: function( issueid, appid, packageid, transid, refund_to_wallet, loading_div ) {
 		if ( this.m_bLoadingRefundDialog )
 			return;
+
+		if ( $J('#help_hardware_return_form') )
+		{
+			$J('#help_hardware_return_form').html('');
+		}
 
 		if ( loading_div )
 		{
@@ -1222,20 +1228,14 @@ HardwareRMA = {
 		this.ShowForm( this.m_sActiveMethod, issueid, appid, packageid );
 	},
 
-	ShowRefundForm: function( issueid, appid, packageid, transid, lineitemid ) {
-		this.m_sActiveMethod = 'AjaxHardwareReturnForm';
-		this.m_nRefundIssueID = issueid;
-		this.m_nRefundAppID = appid;
-		this.m_nRefundPackageID = packageid;
-		this.m_nRefundTransID = transid;
-		this.m_nRefundLineItemID = lineitemid;
-		this.m_bReplacement = false;
-		this.ShowForm( this.m_sActiveMethod, issueid, appid, packageid, transid + '_' + lineitemid );
-	},
-
 	ShowForm: function( method, issueid, appid, packageid, transid, refund_to_wallet, loading_div ) {
 		if ( this.m_bDoingAjax )
 			return;
+
+		if ( $J('#help_refund_request_form') )
+		{
+			$J('#help_refund_request_form').html('');
+		}
 
 		if ( loading_div )
 		{
@@ -1671,3 +1671,4 @@ ChangePasswordWizard = {
 		}
 	}
 };
+
