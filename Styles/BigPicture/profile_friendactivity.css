@@ -173,6 +173,11 @@ Button:focus .dynamiclink_box Label
 	opacity-mask-scroll-up-down: url( "file://{images}/profile/sharp_scroll_data_mask_both.tga" );
 }
 
+#LeftActivityColumn #MaxButton
+{
+	y: -100px;
+}
+
 .ContentPanel #LeftActivityColumn,
 .ContentPanel #RightDetailsColumn
 {
@@ -204,6 +209,12 @@ Button:focus .dynamiclink_box Label
 	//opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	//opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
+
+#RightDetailsColumn #MaxButton
+{
+	y: -100px;
+}
+
 .DetailsHover #RightDetailsColumn,
 #RightDetailsColumn:descendantfocus {
 	transform: translateX( -400px );
