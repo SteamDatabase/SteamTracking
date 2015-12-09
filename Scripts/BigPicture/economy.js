@@ -28,46 +28,12 @@ function AddActionButton( item, action, container )
 
 	b.SetPanelEvent( 'onactivate', function()
 	{
-		var bStoreLink = false;
-
-		// Check if the link points to the store.  Since these links come from the
-		// backend they aren't universe aware if you're running against a dev
-		// instance, hence the array of links to check.
-		var rgStoreLinks = [ 'http://store.steampowered.com/', 'http://store.steampowered.com' ];
-		var strStoreLinkRemnant = '';
-		for ( i in rgStoreLinks )
-		{
-			var strStoreLink = rgStoreLinks[i];
-			if ( strLink.substring( 0, strStoreLink.length ) == strStoreLink )
-			{
-				strStoreLinkRemnant = strLink.substring( strStoreLink.length );
-				bStoreLink = true;
-			}
-		}
-
-		if ( bStoreLink )
-		{
-			// See if it's an app store link
-			var reApp = new RegExp( '/app/([0-9]+)/' );
-			var results = strStoreLinkRemnant.match(reApp);
-			if ( results )
-			{
-				// BUGBUG: We're pulling the name of the item here and displaying it as the
-				// title of the store page, which is correct for Steam items but
-				// is more coincidental than intentional.
-				$.DispatchEvent( 'OpenRemoteContent', strLink, item.name, 2 );
-			}
-			else
-			{
-				$.DispatchEvent( 'BrowserGoToURL', $.GetContextPanel(), strLink );
-			}
-		}
-		else if ( strLink.substring( 0, 5 ) == 'http:' || strLink.substring( 0, 6 ) == 'https:' )
+		if ( strLink.substring( 0, 5 ) == 'http:' || strLink.substring( 0, 6 ) == 'https:' )
 			$.DispatchEvent( 'BrowserGoToURL', $.GetContextPanel(), strLink );
 		else if( strLink.substring( 0, 6 ) == 'steam:' )
 			$.DispatchEvent( 'ExecuteSteamURL', strLink );
 		else
-			$.Msg( 'Implement: '+strLink );
+			$.Msg( 'Imeplement: '+strLink );
 	} );
 
 }
