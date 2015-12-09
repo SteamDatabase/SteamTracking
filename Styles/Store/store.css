@@ -2397,7 +2397,7 @@ a.cluster_capsule:hover {
 	font-weight: normal;
 }
 
-.main_cluster_content .home_btn.home_customize_btn {
+.main_cluster_ctn .home_btn.home_customize_btn {
 	position: absolute;
 	right: 10px;
 	top: 10px;
@@ -2405,7 +2405,7 @@ a.cluster_capsule:hover {
 	background: rgba( 44, 75, 100, 0.8 );
 	box-shadow: 0 0 12px #000000;
 }
-.main_cluster_content .home_btn.home_customize_btn:hover {
+.main_cluster_ctn .home_btn.home_customize_btn:hover {
 	color: #ffffff;
 	background: #67c1f5; /* Old browsers */
 	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
@@ -2417,11 +2417,11 @@ a.cluster_capsule:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.main_cluster_content:hover .home_customize_btn,
-.main_cluster_content .home_btn.home_customize_btn.active {
+.main_cluster_ctn:hover .home_customize_btn,
+.main_cluster_ctn .home_btn.home_customize_btn.active {
 	display: block;
 }
-.main_cluster_content .home_btn.home_customize_btn.active {
+.main_cluster_ctn .home_btn.home_customize_btn.active {
 	box-shadow: none;
 }
 @media screen and (max-width: 910px)

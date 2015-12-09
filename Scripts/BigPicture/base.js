@@ -490,11 +490,8 @@ function ShowModalDialog( strChildren )
 	var pPanel = $.CreatePanelWithCurrentContext( pMainMenu );
 
 	pPanel.SetPanelEvent( 'oncancel', function() { CloseModalDialog( pPanel ); } );
-	pPanel.SetPanelEvent( 'onmouseactivate', function() { CloseModalDialog( pPanel ); } );
 	pPanel.AddClass( 'NxModalBackground' );
 	pPanel.BCreateChildren( strChildren );
-
-	pPanel.GetChild(0).SetPanelEvent( 'onmouseactivate', 'None();' );
 
 	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( pPanel, '' );
 	$.RegisterFooterButton( pPanel, 'Cancelled', '#Library_CloseButton' );
@@ -546,7 +543,7 @@ function ShowWebModalDialog( strURL, strTitle, bTenfootAware )
 
 	var pHTML = pModal.FindChildInLayoutFile( 'WebModalHTML' );
 	pHTML.SetURL( strURL );
-	pHTML.SetIgnoreCursor( true );
+	pHTML.SetDontAllowOverScroll( true );
 
 	return pModal;
 }
@@ -953,7 +950,6 @@ var k_ELastDirection_Down = 2;
 CNXNavigation.prototype.Init = function()
 {
 	var onFocus = this.onFocusButton.bind(this);
-	var onTargetFocus = this.onTargetFocus.bind(this);
 	var onMoveUp = this.onMoveUp.bind(this);
 	var onMoveDown = this.onMoveDown.bind(this);
 	var onMoveRight = this.onMoveRight.bind(this);
@@ -966,7 +962,6 @@ CNXNavigation.prototype.Init = function()
 	});
 
 	$.RegisterEventHandler( 'InputFocusSet', this.oNavigationContainer, onFocus );
-	$.RegisterEventHandler( 'InputFocusSet', this.oTargetContainer, onTargetFocus );
 
 	var _this = this;
 	$.RegisterEventHandler( 'Cancelled', this.oTargetContainer, function( )
@@ -1026,18 +1021,9 @@ CNXNavigation.prototype.onMoveRight = function( oPanel )
 	return false;
 }
 
-CNXNavigation.prototype.onTargetFocus = function( oPanel )
-{
-	// child of target now has content focus. Update descendantfocus replacement style.
-	this.oTargetContainer.AddClass( 'NxRightColumnFocus' );
-	return false;
-}
-
 CNXNavigation.prototype.onFocusButton = function( oPanel )
 {
 	this.DoFocus( ToPanel( oPanel ) );
-	this.oTargetContainer.RemoveClass( 'NxRightColumnFocus' );
-	return false;
 }
 
 CNXNavigation.prototype.DoFocus = function( oNavButton )
@@ -1120,13 +1106,6 @@ CNXNavigation.prototype.CreatePanelFromURL = function( oNavButton, nLoadDelay, s
 			// nothing to do on success
 			oTarget.RemoveClass( 'NxLoadInProgress' );
 			oTarget.AddClass( 'NxLoadComplete' );
-
-			// If we're hovering over the panel that just loaded, pull focus to
-			// it to mirror the behavior we have when we hover an already loaded panel
-			if ( oTarget.BHasHoverStyle() )
-			{
-				oTarget.SetFocus();
-			}
 		}
 		else
 		{
