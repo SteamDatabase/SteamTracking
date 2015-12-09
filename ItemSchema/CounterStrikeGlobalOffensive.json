@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.acee0fb6f334787192f3c4a288b8d662eb335e86.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.98430ff044e6d304f36cdad304d4ff81308bd3aa.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1245,7 +1245,7 @@
 				"item_class": "weapon_deagle",
 				"item_type_name": "Pistol",
 				"item_name": "R8 Revolver",
-				"item_description": "The R8 magnum revolver delivers a highly accurate and powerful round at the expense of a lengthy trigger-pull. Firing rapidly by fanning the hammer may be the best option when point-blank stopping power is required.",
+				"item_description": "The R8 Revolver delivers a highly accurate and powerful round at the expense of a lengthy trigger-pull. Firing rapidly by fanning the hammer may be the best option when point-blank stopping power is required.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ/weapons/base_weapons/weapon_revolver",
