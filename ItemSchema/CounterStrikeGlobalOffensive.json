@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.98f9e0fc7f6c03db3bd9251609aa1aa588e2ea72.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.acee0fb6f334787192f3c4a288b8d662eb335e86.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1225,6 +1225,33 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_cz75a.057939990f5f295fc5eaf8f758cdef21a7cfeb8a.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_sticker": true,
+					"can_stattrack_swap": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_revolver",
+				"defindex": 64,
+				"item_class": "weapon_deagle",
+				"item_type_name": "Pistol",
+				"item_name": "R8 Revolver",
+				"item_description": "The R8 magnum revolver delivers a highly accurate and powerful round at the expense of a lengthy trigger-pull. Firing rapidly by fanning the hammer may be the best option when point-blank stopping power is required.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/weapon_revolver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_revolver.a7c0ab2973cdc0bdb53ebbef960ecbae8842f719.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -5791,8 +5818,8 @@
 				"image_inventory": "econ/status_icons/service_medal_2015_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015_2.b5b68c527a14fb4c8d60eb619da7dd521675bd78.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015_2_large.e6ece70c2561d90a73d5f5eb418921973a0b4aa1.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -5824,6 +5851,157 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "crate_community_10 Key",
+				"defindex": 1334,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Revolver Case Key",
+				"item_description": "This key only opens Revolver Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_10",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_10.4d149d87b12b269d791362e2529cbfafd295f1ca.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_10",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "prestige coin 2016",
+				"defindex": 1339,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl1.c67ca0c2bca3a6f193f940284ac2b8fe6979311c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl1_large.2dabe9584a18a843e8e64a5b5ae6e78b792f2823.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2016 level 2",
+				"defindex": 1340,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl2.fca2045bdf9cc1b6d6a2dbc2e4fa5e53b81added.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl2_large.113667efbc19c5f236527ed91490680a55a42952.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2016 level 3",
+				"defindex": 1341,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl3.bbf3997a9ff432201b9ce1a5f07dfbc8aad12bb9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl3_large.0cf4db6649dcea51f472dac87d9cb5f45e2425a4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2016 level 4",
+				"defindex": 1342,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl4.1a8b2059cc23cfbc2e27f90be52197cd9b7aec8d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl4_large.f5e3278c684d420867b39c421af42f122642f2de.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2016 level 5",
+				"defindex": 1343,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl5.04402d35378599a7116139a684bf6e7a4b539e91.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl5_large.06fe1268f07b0c6ad65fcdc2cd600a722229f0a6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2016 level 6",
+				"defindex": 1344,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2016 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2016.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2016_lvl6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl6.a66e0f6d73f4a14fbf91b9838e6cc88741ddda08.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2016_lvl6_large.fc26832c27b8c798b289cf72478abf4769d02feb.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "crate_valve_1",
@@ -12127,6 +12305,136 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack_pinups_capsule",
+				"defindex": 4183,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Pinups Capsule",
+				"item_description": "This capsule contains a variety of stickers from the community artist ninjasia.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_pinups_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_pinups_capsule.7d683665bbde870d62b4ad378a10945b2136b1f4.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 108
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_slid3_capsule",
+				"defindex": 4184,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Slid3 Capsule",
+				"item_description": "This capsule contains a variety of stickers from the community artist Slid3.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_slid3_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_slid3_capsule.f534cc63ee1d94322f4e3c363081055ddbff7890.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 109
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_team_roles_capsule",
+				"defindex": 4185,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Roles Capsule",
+				"item_description": "This capsule contains a variety of stickers from the community artist ThePolymath.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_team_roles_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_team_roles_capsule.13875f33d0883e9687a34f101565d0e0cc4fc145.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 110
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_10",
+				"defindex": 4186,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Revolver Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_10",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_10.a7a2e0b4f6ee7a99b25c531b2d3bdef5147200f7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_10",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 111
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -16228,6 +16536,102 @@
 					}
 				]
 				
+			},
+			{
+				"name": "coupon - pinups_sticker_capsule",
+				"defindex": 20123,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Pinups Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - slid3_sticker_capsule",
+				"defindex": 20124,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Slid3 Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - team_roles_sticker_capsule",
+				"defindex": 20125,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Roles Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
 			}
 		]
 		,
@@ -16799,17 +17203,9 @@
 				"stored_as_integer": true
 			},
 			{
-				"name": "postpone fire",
+				"name": "is revolver",
 				"defindex": 76,
-				"attribute_class": "postpone_fire",
-				"effect_type": "neutral",
-				"hidden": true,
-				"stored_as_integer": true
-			},
-			{
-				"name": "has bullet altfire",
-				"defindex": 77,
-				"attribute_class": "has_bullet_altfire",
+				"attribute_class": "is_revolver",
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -17584,6 +17980,7 @@
 					"weapon_mp7",
 					"weapon_sawedoff",
 					"weapon_tec9",
+					"weapon_revolver",
 					"weapon_negev",
 					"weapon_sg556",
 					"weapon_mac10",
@@ -17726,6 +18123,30 @@
 					"weapon_awp",
 					"weapon_m4a1",
 					"weapon_sawedoff"
+				]
+				
+			},
+			{
+				"item_set": "set_community_10",
+				"name": "The Revolver Case Collection",
+				"items": [
+					"weapon_revolver",
+					"weapon_aug",
+					"weapon_deagle",
+					"weapon_hkp2000",
+					"weapon_sawedoff",
+					"weapon_scar20",
+					"weapon_bizon",
+					"weapon_fiveseven",
+					"weapon_negev",
+					"weapon_sg556",
+					"weapon_tec9",
+					"weapon_xm1014",
+					"weapon_ak47",
+					"weapon_g3sg1",
+					"weapon_p90",
+					"weapon_m4a1",
+					"weapon_revolver"
 				]
 				
 			},
@@ -17941,7 +18362,8 @@
 					"weapon_bizon",
 					"weapon_m4a1_silencer",
 					"weapon_sg556",
-					"weapon_hkp2000"
+					"weapon_hkp2000",
+					"weapon_revolver"
 				]
 				
 			},
