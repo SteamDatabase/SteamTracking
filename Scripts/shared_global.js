@@ -1045,7 +1045,7 @@ function V_EscapeRegExp( str )
 
 function V_EscapeHTML( str )
 {
-	return str.replace( /&/g, '&amp;' ).replace( /["']/g, '&quot;' ).replace( /</g, '&lt;').replace( />/g, '&gt;');
+	return String(str).replace( /&/g, '&amp;' ).replace( /["']/g, '&quot;' ).replace( /</g, '&lt;').replace( />/g, '&gt;');
 }
 
 function v_trim( str )
