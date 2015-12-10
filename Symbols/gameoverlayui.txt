@@ -9128,6 +9128,7 @@
  T ClientMusic()
  T ClientParentalSettings()
  T ClientParentalSettingsUncached()
+ T ClientRemoteClientManager()
  T ClientRemoteStorage()
  T ClientScreenshots()
  T ClientUGC()

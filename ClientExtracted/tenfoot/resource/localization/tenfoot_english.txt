@@ -256,6 +256,41 @@
 	"MainMenu_Welcome_Sub_BigPicture_New_H"	"PC Gaming, from your couch"
     "MainMenu_Welcome_Sub_BigPicture_New_D"	"Steam makes it easy to discover new games available to download, easy access to friends, popular mods, and great deals on the latest games, all from the comfort of your couch. You can use a Steam Controller, your favorite old controller, or your trusty mouse and keyboard."
 
+
+    //Controller Update
+    "MainMenu_Welcome_Controller_Update" "The Steam Controller Update"
+    "MainMenu_Welcome_Controller_Update_BusyMonth" "It's been a busy month since the Steam controller officially launched, and with the help of the community, it's already grown so much. Along with the new features in today's update, we thought we'd highlight some of the other big features added in that month."
+    
+    "MainMenu_Welcome_Controller_Update_Gyro_Header" "Gyro"
+    "MainMenu_Welcome_Controller_Update_Gyro_Description" "One of the community's biggest discoveries was how well FPS aiming worked when you combined trackpad and gyro input. Relying on the trackpad for large scale turns, and the gyro for fine tuning, community members found they were much more competitive than they were expecting."
+    "MainMenu_Welcome_Controller_Update_Gyro_SeeVideo" "See Video"
+
+    
+    "MainMenu_Welcome_Controller_Update_Moystick_Header" "Mouse-Like Joystick mode"
+    "MainMenu_Welcome_Controller_Update_Moystick_Description" "Many games with full controller support expect a joystick for camera control, but PC gamers like their mouse for good reason. Thanks to mntorankusu's suggestion, we found a much superior method of emulating joystick cameras, so that it feels like you're aiming with a mouse when playing a first or third person game."
+    "MainMenu_Welcome_Controller_Update_Moystick_Description2" "Some games don't support simultaneous mouse and gamepad input. With Mouse-Like Joystick you can play with gamepad input and still enjoy mouse accuracy."
+
+	"MainMenu_Welcome_Controller_Update_TouchMenu_Header" "Touch Menu"
+	"MainMenu_Welcome_Controller_Update_TouchMenu_Description" "Some games have hotkeys that are infequently used, but you still want to have at your fingertips. We added the Touch Menu, a fully configurable UI with up to 16 buttons, allowing you to select your desired hotkey on a single trackpad."
+	"MainMenu_Welcome_Controller_Update_TouchMenu_Description2" "Add and customize this menu in any game!"
+
+	"MainMenu_Welcome_Controller_Update_MouseRegions_Header" "Mouse Regions"
+	"MainMenu_Welcome_Controller_Update_MouseRegions_Description" "Many PC RTS & RPG games have complex on-screen UI for minimaps, spell bars, inventory slots, and so on. To make it easier to rapidly navigate them, we added Mouse Regions, a configurable way of mapping an entire trackpad to a region on-screen."
+
+	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Header" "Configuration Travelling"
+	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" "Want to play some co-op games at a friend's house? We wanted to
+	make it easy to take your controller with you, so today we're shipping a new feature that ensures your controller's game configurations travel with it, even when you're playing a co-op game on a friend's Steam account.\n* Currently available in Steam Beta client"
+
+	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Header" "Home Theater PCs"
+	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Description" "One of the things we weren't expecting was that so many users would find the Steam Controller great at controlling their HTPC outside of playing games. These users have made a number of great suggestions, and we've managed to ship some of them already."
+	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Description2" "Bring up the On-screen Keyboard whenever you want to enter some text."
+
+	"MainMenu_Welcome_Controller_Update_Shortcut_Header" "Non-Steam Game support"
+	"MainMenu_Welcome_Controller_Update_Shortcut_Description" "Another thing the community has asked for is the ability to share configurations for games bought somewhere other than Steam. Today's update adds that as well, so add your favorite non-Steam game to your library, and we'll automatically find configurations that other users have published."
+
+	"MainMenu_Welcome_Controller_Update_ControllerHUD_Header" "Controller HUD"
+	"MainMenu_Welcome_Controller_Update_ControllerHUD_Description" "With the community rapidly creating and sharing so many different ways to use the Steam Controller, we wanted to make it easier to learn how your controller is operating. The new Controller HUD allows you to easily see exactly what input your controller is generating."
+
 	"MainMenu_Welcome_Sub_NoProd_H"		"Discover the best new games"
 	"MainMenu_Welcome_Sub_NoProd_D"		"Head over to the Steam Store to find great deals on the newest games or browse to find classic games you might have missed. Check out Free-to-Play games for some free entertainment, or explore the Early Access titles to get involved in games as they develop."
 	"MainMenu_Welcome_Sub_NoFriends_H"	"Keep up with friends"

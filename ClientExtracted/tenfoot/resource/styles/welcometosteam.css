@@ -16,6 +16,8 @@ WelcomeToSteam
 	animation-name: none;
 }
 
+
+
 .TitlePanel
 {
 	flow-children:right;
@@ -83,7 +85,6 @@ WelcomeToSteam
 MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 {
 	opacity: 0.0;
-
 }
 
 #WelcomePanel:descendantfocus #WelcomeCapsuleOver,
@@ -100,6 +101,50 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 {
 	horizontal-align: center;
 	margin: 48px 24px 48px 24px;
+	width: 920px;
+}
+
+#sub_touchmenu_right
+{
+	horizontal-align: right;
+	vertical-align:  top;
+	margin: 100px 124px 48px 24px;
+	width: 920px;
+}
+
+#sub_touchmenu_left
+{
+	horizontal-align: left;
+	vertical-align:  bottom;
+	margin: 0px 0px 200px 450px;
+	width: 320px;
+	z-index: 1;
+}
+
+#sub_hometheater_right
+{
+	horizontal-align: right;
+	vertical-align:  bottom;
+	margin: 0px 200px 50px 0px;
+	width: 500px;
+	z-index: 1;
+}
+
+Button.TouchButton
+{
+	flow-children: none;	
+}
+
+.TouchMenuFlow
+{
+	flow-children: down;
+
+}
+#sub_text_right
+{
+	horizontal-align: right;
+	vertical-align:  top;
+	margin: 100px 124px 48px 24px;
 	width: 920px;
 }
 
@@ -121,6 +166,15 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 {
 	text-align: right;
 	horizontal-align: right;
+}
+
+#sub_align_left
+{
+	text-align: left;
+	horizontal-align: left;
+	width: 1000px;
+	margin-left: 150px;
+	z-index: 1;
 }
 
 #sub_images_right
@@ -193,6 +247,8 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	
 }
 
+
+
 .SubPanelContainer,
 .SubPanelCenterContainer
 {
@@ -204,11 +260,13 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	horizontal-align: center;
 }
 
+
 .SubPanelContainer
 {
 	flow-children: right;
 	width: 1920px;
 }
+
 
 .SubImageCenterAlign
 {
@@ -216,6 +274,142 @@ MainMenu.BelowTheFoldOpen #WelcomePanel #WelcomeCapsuleOver
 	transform: translateZ(0px );
 	opacity: 0.0;
 	width: 1920px;
+	transition-property: transform, opacity;
+	transition-duration: PageTransitionTimeOff;
+}
+
+MainMenu.BelowTheFoldOpen Button:focus .SubImageCenterAlign
+{
+	opacity: 1.0;
+}
+
+.FixZControllerUpdate
+{
+	z-index: 0;	
+}
+
+.GyroButtonVisible
+{
+	opacity: 0;
+	transition-property: transform, opacity;
+	transition-duration: PageTransitionTimeOff;
+}
+
+Button:focus .GyroButtonVisible
+{
+	opacity: 1.0;
+}
+
+.SubImageLeftAlignControllerUpdate
+{
+	vertical-align: center;
+	horizontal-align: left;
+	margin-left: 150px;
+	transform: translateZ(0px );
+	opacity: 1.0;
+	//height: 300px;
+	width: 600px;
+	transition-property: transform, opacity;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.GyroImageSize
+{
+	width: 700px;
+	height: 300px;
+	background-image: none;
+	background-size: 500px 300px;
+	background-repeat: no-repeat;
+}
+
+MainMenu.BelowTheFoldOpen .GyroImageSize
+{
+	background-image: url( "file://{images}/welcomeupdates/controller_update_gyro.webm" );
+}
+
+.ControllerHUDImageSize
+{
+	width: 700px;
+	height: 300px;
+	background-image: none;
+	background-size: 500px 300px;
+	background-repeat: no-repeat;
+}
+
+MainMenu.BelowTheFoldOpen .ControllerHUDImageSize
+{
+	background-image: url( "file://{images}/welcomeupdates/controller_update_controllerhud.webm" );
+}
+
+.GyroVideosLeft
+{
+	flow-children: right;
+	horizontal-align: left;
+	width: 960px;
+	margin: 10px 10px 10px 10px;
+}
+
+.GyroVideosLeft:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+
+.SubPanelContainerGyroVideos
+{
+	width: 800px;
+	horizontal-align: center;
+	flow-children: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.sub_gyro_video_align
+{
+	font-size: 30px;
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: left;
+	width: 590px;
+}
+
+.SubImageGyroVideos
+{
+	vertical-align: center;
+	horizontal-align: left;
+	transform: translateZ(0px );
+	opacity: 1.0;
+	width: 300px;
+	margin-left: 100px;
+	transition-property: transform, opacity;
+	transition-duration: PageTransitionTimeOff;
+}
+
+.SubImageGyroVideosPressA
+{
+	vertical-align: bottom;
+	horizontal-align: left;
+	margin-left: 30px;
+	opacity: 1.0;
+	width: 35px;
+	height: 35px;
+}
+
+
+.SubImageRightAlignControllerUpdate
+{
+	vertical-align: center;
+	horizontal-align: right;
+	transform: translateZ(0px );
+	opacity: 1.0;
+	//height: 300px;
+	width: 600px;
 	transition-property: transform, opacity;
 	transition-duration: PageTransitionTimeOff;
 }
