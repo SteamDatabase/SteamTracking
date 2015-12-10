@@ -3010,16 +3010,25 @@ function RefreshTradeEscrowDisplay()
 	}
 
 	var $elHeader = $J('#trade_escrow_header');
+	var $elNoticeNearButton = $J('#trade_escrow_notice_near_button');
+
+
 	if ( cEscrowDays == 0 )
 	{
 		if ( $elHeader.is( ":visible" ) )
 		{
 			$elHeader.slideUp();
 		}
+
+		if ( $elNoticeNearButton.is( ":visible" ) )
+		{
+			$elNoticeNearButton.slideUp();
+		}
 	}
 	else
 	{
 		$J('#trade_escrow_hours').text( ( cEscrowDays * 24 ) + ' hours' );
+		$J('#trade_escrow_hours2').text( ( cEscrowDays * 24 ) + ' hours' );
 
 		if ( bWeAreSendingItems && g_daysMyEscrow != 0 )
 		{
@@ -3042,6 +3051,11 @@ function RefreshTradeEscrowDisplay()
 		if ( !$elHeader.is( ":visible" ) )
 		{
 			$elHeader.slideDown();
+		}
+
+		if ( !$elNoticeNearButton.is( ":visible" ) )
+		{
+			$elNoticeNearButton.slideDown();
 		}
 	}
 }
