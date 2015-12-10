@@ -3019,13 +3019,24 @@ function RefreshTradeEscrowDisplay()
 	}
 	else
 	{
-		if ( cEscrowDays == 1 )
+		$J('#trade_escrow_hours').text( ( cEscrowDays * 24 ) + ' hours' );
+
+		if ( bWeAreSendingItems && g_daysMyEscrow != 0 )
 		{
-			$J('#trade_escrow_days').text( cEscrowDays + ' day' );
+			$J('#trade_escrow_for_me').show();
 		}
 		else
 		{
-			$J('#trade_escrow_days').text( cEscrowDays + ' days' );
+			$J('#trade_escrow_for_me').hide();
+		}
+
+		if ( bTheyAreSendingItems && g_daysTheirEscrow != 0 )
+		{
+			$J('#trade_escrow_for_them').show();
+		}
+		else
+		{
+			$J('#trade_escrow_for_them').hide();
 		}
 
 		if ( !$elHeader.is( ":visible" ) )
