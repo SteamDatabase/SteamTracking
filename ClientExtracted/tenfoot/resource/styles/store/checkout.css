@@ -193,15 +193,21 @@ CheckoutController.Visible
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-#Status.Waiting, #Status.Error
+#Status.Waiting
 {
 	opacity: 0.6;
+}
+#Status.Error
+{
+	opacity: 1;
+	background-color: #00000033;
 }
 
 .CartThrobber
 {
 	horizontal-align: center;
 	opacity: 0.0;
+	visibility: collapse;
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -210,6 +216,7 @@ CheckoutController.Visible
 #Status.Waiting .CartThrobber
 {
 	opacity: 1.0;
+	visibility: visible;
 }
 
 #StatusText
@@ -219,11 +226,20 @@ CheckoutController.Visible
 	width: 1000px;
 	text-align: center;
 }
+#StatusText a
+{
+	color: white;
+}
 
 .CenteringPanel
 {
 	align: center center;
 	flow-children: down;
+}
+#Status.Error .CenteringPanel
+{
+	background-color: nontransparent_module;
+	padding: 30px;
 }
 
 
@@ -860,6 +876,7 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 .VerifyShippingAddressSubTitle
 {
 	padding-top: 20px;
+	color: brightblue;
 }
 
 //
@@ -1416,7 +1433,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 .CheckoutShippingInfoRightColumn
 {
 	width: 250px;
-	height: 500px;
+	height: 550px;
 	position: 624px 0px 0px;
 	flow-children: down;
 }
@@ -1434,6 +1451,12 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 #State
 {
 	width: 248px;
+	height: 56px;
+}
+
+#State Label
+{
+	vertical-align: center;
 }
 
 #StateText
@@ -1455,6 +1478,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 #PhoneNumber
 {
 	width: 248px;
+	vertical-align: top;
 }
 
 #LiveInCountry
@@ -1466,7 +1490,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 
 #ShippingInfoShippingRestrictions
 {
-	position: 0px 500px 0px;
+	position: 0px 550px 0px;
 }
 
 .PaymentMethodLogos
@@ -1504,6 +1528,7 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 CheckoutReview .CheckoutBodyLeftColumn
 {
 	flow-children: down;
+	height: 750px;
 }
 
 CheckoutReview .CheckoutBodyRightColumn
@@ -1598,8 +1623,8 @@ CheckoutReviewLineItem
 .PaymentMethodReviewRows
 {
 	flow-children: down;
-	font-size: 21px;
-	line-height: 24px;
+	font-size: 24px;
+	line-height: 32px;
 	margin-top: 5px;
 	width: 100%;
 }
@@ -1607,6 +1632,10 @@ CheckoutReviewLineItem
 .PaymentMethodReviewRow
 {
 	width: 100%;
+	flow-children: down;
+}
+.PaymentMethodReviewRows .PaymentMethodReviewRow
+{
 	flow-children: right;
 }
 
@@ -1623,10 +1652,11 @@ CheckoutReviewLineItem
 
 .PaymentMethodReviewHeader
 {
-	width: 300px;
-	text-align: right;
+
+	text-align: left;
 	font-size: 24px;
 	margin-right: 24px;
+	margin-top: 15px;
 	color: tcstatictext;
 }
 
@@ -1765,6 +1795,10 @@ DropDownMenu
 {
 	width: 324px;
 	padding: 8px 8px;
+}
+DropDown
+{
+	min-height: 56px;
 }
 
 

@@ -298,7 +298,6 @@ DropDown
 	font-family: platformfont;
 	padding: 10px;
 	z-index: 0;
-	vertical-align: center;
 
 	box-shadow: fill box_shadow_off_color -4.5px -4.5px 18px 9px;
 }
@@ -487,7 +486,7 @@ RadioButton
 .Button,
 .WizardButton,
 .CheckBox {
-	height: 48px;
+	height: fit-children;
 	padding: 10px 20px 0px 10px;
 	margin: 0px 0px 4px 0px;
 
@@ -566,6 +565,7 @@ DropDown:focus Label {
 
 
 .Button:disabled Label,
+.Button:disabled,
 .WizardButton:disabled Label,
 ToggleButton:disabled,
 ToggleButton:disabled .TickBox,
@@ -574,8 +574,7 @@ TextEntry:disabled
 	color: detailsdatalabel;
 	desaturation: 0.0;
 	blur: gaussian( 0.7 );
-	opacity: 0.35;
-	background-color: ui_common_control2;
+	opacity: 0.5;
 	border-color: none;
 	box-shadow: none;
 	animation-name: none;
@@ -599,7 +598,6 @@ TextEntry {
 	font-size: 28px;
 	font-family: platformfont;
 	animation-name: none;
-	vertical-align: center;
 	height: 56px;
 
 	border-color: #385671f0;

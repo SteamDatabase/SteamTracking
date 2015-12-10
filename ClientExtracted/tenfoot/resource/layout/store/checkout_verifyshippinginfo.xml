@@ -13,12 +13,11 @@
 				<Panel class="CheckoutShippingInfoLeftColumn" tabindex="0" selectionpos="0,0">
 					<Label text="#Checkout_ShippingInfo_ShippingAddressSuggestion" />
 					<Label class="VerifyShippingAddressSubTitle" text="#Checkout_ShippingInfo_OurSuggestion"></Label>
-					<Panel class="HorizontalRule" />
 					<Label id="SuggestionAddress1"></Label>
 					<Label id="SuggestionAddress2"></Label>
 					<Label id="SuggestionCityPostCodeState"></Label>
+                    <Panel class="HorizontalRule" />
 					<Label class="VerifyShippingAddressSubTitle" text="#Checkout_ShippingInfo_YouEntered"></Label>
-					<Panel class="HorizontalRule" />
 					<Label id="YouEnteredAddress1"></Label>
 					<Label id="YouEnteredAddress2"></Label>
 					<Label id="YouEnteredCityPostCodeState"></Label>
@@ -26,15 +25,12 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn" tabindex="1" selectionpos="1,0">
-				<Panel class="HorizontalRule" />
 				<Button id="UseSuggestionBtn" tabindex="0" selectionpos="0,0" onactivate="VerifyShippingInfoSuggestion()">
 					<Label text="#Checkout_ShippingInfo_OurSuggestionButton" />
 				</Button>
-				<Panel class="HorizontalRule" />
-				<Button id="UseEnteredBtn" tabindex="1" selectionpos="0,0" onactivate="VerifyShippingInfoUserEntered()">
+				<Button id="UseEnteredBtn" tabindex="2" selectionpos="1,1" onactivate="VerifyShippingInfoUserEntered()">
 					<Label text="#Checkout_ShippingInfo_YouEnteredButton" />
 				</Button>
-				<Panel class="HorizontalRule" />
 			</Panel>
 		</Panel>
 	</CheckoutShippingInfo>	

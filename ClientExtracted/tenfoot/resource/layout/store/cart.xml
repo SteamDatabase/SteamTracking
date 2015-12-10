@@ -15,7 +15,7 @@
 			</Panel>
 			<Panel class="CartSection">
 				<Panel class="CheckoutBodyLeftColumn">
-					<Panel id="LineItems" />
+					<Panel id="LineItems" overscroll-y="100" />
 					<Panel class="CartSubtotalSection">
 						<Panel id="CouponTotalRow">
 							<Label text="#Store_Cart_CouponTotal" />

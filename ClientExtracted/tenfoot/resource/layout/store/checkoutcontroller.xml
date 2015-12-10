@@ -9,7 +9,7 @@
 		<Panel id="Status">
 			<Panel class="CenteringPanel">
 				<LoadingThrobber class="CartThrobber" />
-				<Label id="StatusText" />
+				<Label html="true" id="StatusText" />
 			</Panel>
 		</Panel>
 	</CheckoutController>
