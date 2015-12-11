@@ -4,10 +4,11 @@ function PhoneAjax( op, arg, success, error )
 {
 	$J.ajax( {
 		url: 'https://steamcommunity.com/steamguard/phoneajax',
-
+		type: 'POST',
 		data: {
 				 op: op,
-				 arg: arg
+				 arg: arg,
+				 sessionid: g_sessionID
 			 },
 
 			 success: function( data, textStatus, jqXHR ) {

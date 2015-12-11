@@ -49,6 +49,18 @@
 	margin: 0 auto;
 }
 
+.missing_items_in_escrow {
+	background-color: #a6801b;
+	padding: 12px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+}
+.missing_items_in_escrow a {
+	text-decoration: underline;
+}
+
 .inventory_rightnav {
 	float: right;
 	margin-right: 16px;
