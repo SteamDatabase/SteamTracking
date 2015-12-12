@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1449773266"
+	"version"		"1449885904"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.76bb1a1de1425b226b85cf2353f39eb5e908d05a"
-		"checksum"		"76bb1a1de1425b226b85cf2353f39eb5e908d05a"
-		"size"		"57650"
+		"file"		"steamcmd_public_all.zip.683fa99b92c7f7639c2aebadeabd7da61f043ddd"
+		"checksum"		"683fa99b92c7f7639c2aebadeabd7da61f043ddd"
+		"size"		"57668"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.54cbd2949a1875836398dd3ea6833d0371bb067b"
-		"checksum"		"54cbd2949a1875836398dd3ea6833d0371bb067b"
-		"size"		"16660635"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.9023f72b49f13f5fc8f6278b2085eaadc4016b82_9970626"
+		"file"		"steamcmd_bins_osx.zip.1dd9763a1383f9206b89149818081ac417894cee"
+		"checksum"		"1dd9763a1383f9206b89149818081ac417894cee"
+		"size"		"16660637"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.8a04edd99a52fbf8eb9165915b56c92be05c8927_9956075"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.3e27e92c2072505413f5eaf05f420b7463a57274"
-		"checksum"		"3e27e92c2072505413f5eaf05f420b7463a57274"
-		"size"		"1559130"
-		"zipvz"		"steamcmd_osx.zip.vz.37af41d9f2b57b2d50c2a7c0d9f4788b7882639c_1154245"
+		"file"		"steamcmd_osx.zip.18450cff3498d71c4cb1e5e1be40191f076e7e52"
+		"checksum"		"18450cff3498d71c4cb1e5e1be40191f076e7e52"
+		"size"		"1559260"
+		"zipvz"		"steamcmd_osx.zip.vz.c4c5797d6e470da297c820b06a3d3664ca5e0456_1155773"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"1a1d3a3219cff9dfdc3c11ee6220e516bd17b09623b837e7810a9857ea7e3c90c2fcadc0487c0d22be5cc5069f75ef37b470e03eaa02be59ddc8f4b6a58404b5190d24f5390e1daa7b846c3a66e06cdd96ce9afbca41388b42b7d5796a8f1069239d750583ea2d461b552a5918d13dfd36d4783c05e1cc38ade62915da484bcb"
+	"osx"		"5b5076a45ed7c17420882fb5a8fc764d22088be0dc647afa5bfcc203504cb6d1ab38a73d4f782562d6868eba3c1f0507881fac42bf2fea569d5774e044b78a54f0f43b8f480795d9c6a5934537eee924ba1a607b29dba1f927621e95bcd73d8b6c7f7848e939e2a121aecaf41c8031a699917f21b1bb7c1c7898bb654c847791"
 }
