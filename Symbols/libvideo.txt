@@ -1962,7 +1962,7 @@
  T CCrypto::GenerateRandomBlock(unsigned char*, int)
  T CCrypto::GetSymmetricEncryptedSize(unsigned int)
  T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
- T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int)
+ T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::ValidateStatics(CValidator&, char const*)
  T CCustomAVIOReadContext::Read(void*, unsigned char*, int)

@@ -3508,7 +3508,7 @@
  T CCopyableUtlVectorFixed<panorama::CFillBrushCollection::FillBrush_t, 8ul>::CCopyableUtlVectorFixed(CCopyableUtlVectorFixed<panorama::CFillBrushCollection::FillBrush_t, 8ul> const&)
  T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
  T CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
- T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int)
+ T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsValue::CDebugStatsValue(char const*)
  T CDebugStatsValue::~CDebugStatsValue()
