@@ -114,7 +114,7 @@ img {
 	margin:0;
 }
 #overviewInner {
-	padding:6px 32px;
+	padding:6px 6px;
 	width:850px;
 	text-align:left;
 }
@@ -124,7 +124,7 @@ img {
 }
 #overviewHeroAbilities {
 	float:left;
-	width:580px;
+	width:565px;
 }
 #heroPrimaryPortraitHolder {
 	width:243px;
@@ -253,7 +253,7 @@ img {
 	line-height:21px;
 }
 .overviewAbilityRowDescription {
-	width:468px;
+	width:462px;
 	/*border:solid red 1px;*/
 	float:left;
 }
