@@ -31,6 +31,10 @@ HelpWizard = {
 			return;
 		this.m_sCurrentPage = hash;
 
+		// hide any tooltips that were visible
+		$J('#wizard_contents [data-help-tooltip]' ).each( function() { $J(this ).v_tooltip('hide'); } );
+
+		// fade the page out
 		$J( '#page_content' ).removeClass( 'page_loaded page_error' );
 
 		hash = hash.slice( 1 );	// remove the '#'
@@ -77,6 +81,8 @@ HelpWizard = {
 
 			$J( '#page_content' ).addClass( 'page_loaded' );
 			$J('#wizard_contents').html( data.html );
+
+			BindHelpTooltip($J('#wizard_contents [data-help-tooltip]'));
 
 			// TODO: really only want this when navigating forward, back would remember where you left off otherwise
 			$J(window ).scrollTop( 0 );

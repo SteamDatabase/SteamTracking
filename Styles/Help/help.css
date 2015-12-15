@@ -953,6 +953,7 @@ body.v6 .page_content_ctn.dark:last-child {
 		overflow: hidden;
 		margin-right: 0;
 	}
+
 }
 
 @media screen and (max-width: 580px)
@@ -971,6 +972,14 @@ body.v6 .page_content_ctn.dark:last-child {
 		font-size: 12px;
 		line-height: 20px;
 	}
+
+	html.responsive input.unlockcode_entry_input
+	{
+		padding: 4px 5%;
+		font-size: 16px;
+		width: 90%;
+	}
+
 }
 
 .login_signin_msg span {
@@ -2196,8 +2205,8 @@ img.category_icon {
 }
 
 .help_tooltip {
-	background: #c2c2c2;
-	color: #3d3d3f;
+	background: #1c2837;
+	color: #82909a;
 	font-size: 11px;
 	border-radius: 3px;
 	padding: 5px;
@@ -2732,7 +2741,6 @@ input.unlockcode_entry_input.defaulttext {
 
 input.unlockcode_entry_input
 {
-	width: 170px;
 	font-size: 28px;
 	line-height: 38px;
 	height: 62px;
@@ -2742,7 +2750,7 @@ input.unlockcode_entry_input
 
 	color: #FFFFFF;
 	outline: none;
-	padding: 4px 6px;
+	padding: 4px 10px;
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 #45556c;
 

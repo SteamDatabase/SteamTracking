@@ -72,6 +72,18 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "process ID of the cheat process that ran"
+                },
+                {
+                    "name": "cheat_param_1",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "cheat param 1"
+                },
+                {
+                    "name": "cheat_param_2",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "cheat param 2"
                 }
             ]
         }

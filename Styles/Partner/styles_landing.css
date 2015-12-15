@@ -1481,6 +1481,7 @@ span.icon_actual_authority { display: inline-block;}
 		vertical-align: top;
 		width: 100px;
 		display: inline-block;
+		text-transform: uppercase;
 	}
 
 .platform_holder {

@@ -158,8 +158,21 @@
             ]
         },
         {
-            "name": "GetTournamentPlayerStats",
+            "name": "GetTopLiveGame",
             "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "partner",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Which partner's games to use."
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentPlayerStats",
+            "version": 2,
             "httpmethod": "GET",
             "parameters": [
                 {
@@ -189,6 +202,12 @@
                 {
                     "name": "match_id",
                     "type": "uint64",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "phase_id",
+                    "type": "uint32",
                     "optional": true,
                     "description": ""
                 }

@@ -1,0 +1,43 @@
+{
+    "name": "IDOTA2Ticket_205790",
+    "methods": [
+        {
+            "name": "SetSteamAccountPurchased",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "eventid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The 64-bit Steam ID"
+                }
+            ]
+        },
+        {
+            "name": "SteamAccountValidForEvent",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "eventid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The 64-bit Steam ID"
+                }
+            ]
+        }
+    ]
+}

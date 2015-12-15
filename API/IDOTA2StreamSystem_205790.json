@@ -1,0 +1,24 @@
+{
+    "name": "IDOTA2StreamSystem_205790",
+    "methods": [
+        {
+            "name": "GetBroadcasterInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "broadcaster_steam_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "64-bit Steam ID of the broadcaster"
+                },
+                {
+                    "name": "league_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "LeagueID to use if we aren't in a lobby"
+                }
+            ]
+        }
+    ]
+}
