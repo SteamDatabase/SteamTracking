@@ -1,59 +1,117 @@
 "controller_mappings"
 {
-    "version" "2"
+	"version"		"2"
 	"title"			"#SettingsControllerCfg_ConfigBP"
 	"description"	"#SettingsControllerCfg_ConfigBP_Desc"
-    "game"			"Steam Big Picture"
+	"actions"
+	{
+		"Default"
+		{
+			"title"					"#Set_Default"
+		}
+		
+		"WebBrowser"
+		{
+			"title"					"#Set_WebBrowser"
+			"StickPadGyro"
+			{
+				"Cursor"
+				{
+					"title"		"#Action_Cursor"
+					"input_mode"		"absolute_mouse"
+				}
+				"Scroll"
+				{
+					"title"		"#Action_Scroll"
+					"input_mode"		"absolute_mouse"
+				}
+				"zoom"
+				{
+					"title"		"#Action_Zoom"
+					"input_mode"		"absolute_mouse"
+				}
+			}
+			"Button"
+			{
+				"Select"		"#Action_Select"
+				"Forward"		"#Action_Forward"
+				"Back"		"#Action_Back"
+				"Reload"		"#Action_Reload"
+				"EditURL"		"#Action_EditURL"
+				"CopyURL"		"#Action_CopyURL"
+				"ToggleZoom"		"#Action_Zoom"
+				"AddToFavorites"		"#Action_AddToFavorites"
+				"AddOpenFavorites"		"#Action_OpenFavorites"
+				"OpenContextMenu"		"#Action_OpenContextMenu"
+				"OpenEmptyTab"		"#Action_OpenEmptyTab"
+				"OpenInNewTab"		"#Action_OpenInNewTab"
+				"CloseTab"		"#Action_CloseTab"
+			}
+		}
+	}
+	"localization"
+	{
+		"english"
+		{
+			"Set_Default"		"Default"
+			"Set_WebBrowser"		"Web Browser"
+			"Action_Back"		"Navigate Back"
+			"Action_Forward"		"Navigate Forward"
+			"Action_Reload"		"Reload"
+			"Action_EditURL"		"Edit URL"
+			"Action_CopyURL"		"Copy URL"
+			"Action_Cursor"		"Cursor"
+			"Action_Scroll"		"Scroll"
+			"Action_Select"		"Select"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Add to Favorites"
+			"Action_OpenFavorites"		"Open Favorites"
+			"Action_OpenContextMenu"		"Open Menu"
+			"Action_OpenEmptyTab"		"Open empty new tab"
+			"Action_OpenInNewTab"		"Open link in new tab"
+			"Action_CloseTab"		"Close current tab"
+		}
+	}
+	
+	"game"			"Steam Big Picture"
 
 	"group"
-    {
-        "id" "0"
-        "mode" "four_buttons"
-        "bindings"
-        {
-        }
-    }
-    "group"
-    {
-        "id"    1
-        "mode" "dpad"
-        "bindings"
-        {
-        }
-		"settings"
-		{
-			"requires_click" "0"
-		}
-    }
-    "group"
-    {
-        "id"    "2"
-        "mode" "dpad"
-        "bindings"
-        {
-        }
-		"settings"
-		{
-			"requires_click" "1"
-			"deadzone" "2000"
-			"overlap" "false"
-		}
-    }
-    "group"
-    {
-        "id" "3"
-        "mode" "absolute_mouse"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
 		"bindings"
 		{
+			"button_a"		"game_action WebBrowser Select"
+			"button_y"		"game_action WebBrowser ToggleZoom"
 		}
-    }
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"dpad"
+		"settings"
+		{
+			"deadzone"		"2000"
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"absolute_mouse"
+	}
 	"group"
 	{
 		"id"		"4"
 		"mode"		"trigger"
-		"bindings"
-		{
-		}
 		"settings"
 		{
 			"output_trigger"		"1"
@@ -63,30 +121,91 @@
 	{
 		"id"		"5"
 		"mode"		"trigger"
-		"bindings"
-		{
-		}
 		"settings"
 		{
 			"output_trigger"		"2"
 		}
 	}
-
+	"group"
+	{
+		"id"		"6"
+		"mode"		"absolute_mouse"
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Scroll"
+		}
+	}
+	"group"
+	{
+		"id"		"7"
+		"mode"		"absolute_mouse"
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"8"
+		"mode"		"absolute_mouse"
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
 		"name"		"Default"
 		"group_source_bindings"
 		{
-			"4"	"left_trigger active"
-			"5"	"right_trigger active"
+			"4"		"left_trigger active"
+			"5"		"right_trigger active"
 		}
-
+		"switch_bindings"
+		{
+			"bindings"
+			{
+			}
+		}
 		"settings"
 		{
-			"left_trackpad_mode" "none"
-			"right_trackpad_mode" "none"
-			"mouse_smoothing"	"1"
+		}
+	}
+	"preset"
+	{
+		"id"		"1"
+		"name"		"WebBrowser"
+		"group_source_bindings"
+		{
+			"1"		"left_trigger active"
+			"2"		"right_trigger active"
+			"0"		"button_diamond active"
+			"6"		"left_trackpad active"
+			"7"		"right_trackpad active"
+			"8"		"right_trackpad active modeshift"
+		}
+		"switch_bindings"
+		{
+			"bindings"
+			{
+				"left_click"		"mode_shift right_trackpad 8"
+			}
+		}
+		"settings"
+		{
 		}
 	}
 }

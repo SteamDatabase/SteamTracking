@@ -403,3 +403,38 @@
 	margin-top: 96px;
 }
 
+.ControllerImage
+{
+	horizontal-align: left;
+	margin-left: 40px;
+	vertical-align: center;
+	margin-top: frame_margin_top;
+	margin-bottom: frame_margin_bottom;
+	z-index: notification2_zindex;
+}
+
+.ControllerActivatedNotification .NotificationTwoLabelBodyLineOne,
+.ControllerActivatedNotification .NotificationTwoLabelBodyLineTwo
+{
+	margin-left: 133px;
+	opacity: 1.0;
+}
+
+.ControllerActivatedNotification .NotificationTwoLabelBodyLineTwo
+{
+	visibility: collapse;
+}
+.ControllerActivatedNotification .NotificationTwoLabelBodyLineTwo.NonGuest
+{
+	visibility: visible;
+	opacity: 0.5;
+}
+.ControllerActivatedNotification.HasGuest .NotificationTwoLabelBodyLineTwo.NonGuest
+{
+	visibility: collapse;
+}
+.ControllerActivatedNotification.HasGuest .NotificationTwoLabelBodyLineTwo.Guest
+{
+	visibility: visible;
+	opacity: 0.5;
+}

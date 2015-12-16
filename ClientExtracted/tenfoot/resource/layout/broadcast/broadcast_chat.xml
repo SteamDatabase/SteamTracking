@@ -6,7 +6,7 @@
 	</styles>
 
 	<BroadcastChat tabindex="auto" selectionpos="auto" >
-		<Panel id="ChatContent" />
+		<EdgeScroller id="ChatContent" pagescroll="true" />
 		<Panel id="TextEntryLine">
 			<TextEntry id="ChatEntry"
 					   textinputid="ChatEntry"

@@ -12,9 +12,6 @@
 			<Button class="Button" onactivate="PlaySubsequentTracks( true, false);" >
 				<Label text="#MusicAlbum_Play" />
 			</Button>
-			<Button class="Button" onactivate="PlayCurrentTrack( false, false);" >
-				<Label text="#MusicAlbum_Add_To_Queue" />
-			</Button>
 			<Button id="TrackAddToPlaylistButton" class="Button" onactivate="AddTrackToPlaylist();" >
 				<Label id="AddToPlaylistLabel" text="#MusicAlbum_Add_To_Playlist" />
 			</Button>

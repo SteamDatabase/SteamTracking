@@ -555,6 +555,7 @@
  R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
  R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >
+ R typeinfo name for CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >
  R typeinfo name for CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
  R typeinfo name for CUtlVector<style_t, CUtlMemory<style_t> >
@@ -2056,6 +2057,7 @@
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::Validate(CValidator&, char const*)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::GrowVector(int)
  T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::InsertBefore(int, OpaqueATSUStyle* const&)
@@ -2584,6 +2586,7 @@
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
+ T Sys_ValidateModules(CValidator*, bool)
  T TSLNodeTemplate_t<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::operator delete(void*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T VPanelWrapper::AdditionalWindowHandle(unsigned int, void*)

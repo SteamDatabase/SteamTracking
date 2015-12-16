@@ -34,31 +34,40 @@
  D g_dwClockSpeed
  D typeinfo for CBreakpadFactory
  D typeinfo for CCrashHandler
+ D typeinfo for CPathString
  D typeinfo for CStdMemAlloc
+ D typeinfo for CUniformRandomStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for IBreakpadFactory
  D typeinfo for ICrashHandler
  D typeinfo for IMemAlloc
+ D typeinfo for IUniformRandomStream
  D vtable for CBreakpadFactory
  D vtable for CCrashHandler
+ D vtable for CPathString
  D vtable for CStdMemAlloc
+ D vtable for CUniformRandomStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
+ Gestalt
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSString
  R typeinfo name for CBreakpadFactory
  R typeinfo name for CCrashHandler
+ R typeinfo name for CPathString
  R typeinfo name for CStdMemAlloc
+ R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for IBreakpadFactory
  R typeinfo name for ICrashHandler
  R typeinfo name for IMemAlloc
+ R typeinfo name for IUniformRandomStream
  T AssertMsgImplementation
  T BBlockingGetMiniDumpLock
  T BGetMiniDumpLock
@@ -85,8 +94,14 @@
  T CCrashHandler::WriteMinidump(void*, unsigned int, void*)
  T CCrashHandlerScope::~CCrashHandlerScope()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDirIterator::BNextFile()
+ T CDirIterator::CDirIterator(char const*, char const*)
+ T CDirIterator::CurrentFileName()
+ T CDirIterator::Init(char const*)
+ T CDirIterator::~CDirIterator()
  T CHandlerContext::Breakpad_FilterCallback(int, int, unsigned int, void*)
  T CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))
+ T CHandlerContext::SendPendingDumps()
  T CHandlerContext::SetAppID(unsigned int)
  T CHandlerContext::SetComment(char const*)
  T CHandlerContext::SetSteamID(unsigned long long)
@@ -99,6 +114,9 @@
  T CL2Cache::End()
  T CL2Cache::Start()
  T CL2Cache::~CL2Cache()
+ T CPathString::CPathString(char const*, char const*)
+ T CPathString::Clear()
+ T CPathString::Validate(CValidator&, char const*)
  T CSimpleMachClient::DoVersionCommand()
  T CSimpleMachClient::Init(char const*, unsigned int, bool)
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
@@ -180,10 +198,17 @@
  T CSteam3DumpHelper::Shutdown()
  T CSteam3DumpHelper::~CSteam3DumpHelper()
  T CTestHarness::~CTestHarness()
+ T CUniformRandomStream::GenerateRandomNumber()
+ T CUniformRandomStream::RandomChar()
+ T CUniformRandomStream::RandomFillMemory(void*, unsigned long)
+ T CUniformRandomStream::RandomFloat(float, float)
+ T CUniformRandomStream::RandomInt(int, int)
+ T CUniformRandomStream::SetSeed(int)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::Grow(int)
  T CUtlMemoryBase::NumAllocated() const
@@ -191,25 +216,37 @@
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlString::AssertStringTooLong()
+ T CUtlStringBuilder::Data::MoveToHeap()
+ T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::FindAndRemove(CHandlerContext* const&)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::GrowVector(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::InsertBefore(int, CHandlerContext* const&)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsRight(int, int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::~CUtlVector()
+ T CValObject::ClaimMemoryBlock(void*, unsigned long)
+ T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
+ T CValidator::ClaimArrayMemory(void*)
+ T CValidator::Pop()
+ T CValidator::Push(char const*, void*, char const*)
  T CalculateCPUFreq()
  T CallFlushLogFunc
  T CheckSSE4aTechnology()
  T ClearWritingMiniDump
  T CrashOnPurpose()
  T CreateInterface
+ T CreateSimpleProcess
  T CreateVProfile
  T DefaultSpewFunc(SpewType_t, char const*)
  T DoNewAssertDialog
  T Error
+ T FillDataStruct(_finddata_t*)
  T FindSpewGroup(char const*, int*)
  T GetCPUInformation()
  T GetMemAlloc
+ T GetOSType
  T GetProcessorDetailBlob(int*)
  T InitStackWalk()
  T IsSpewActive
@@ -259,6 +296,7 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Test_SetFailed
  T ThreadGetCurrentId
+ T ThreadGetCurrentProcessId
  T ThreadGetCurrentRunningRef
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
@@ -268,17 +306,26 @@
  T ThreadInterlockedIncrement
  T ThreadIsThreadRunning
  T ThreadSleep
+ T ThreadWaitForProcessExit
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T V_AppendSlash
+ T V_FixDoubleSlashes
+ T V_MakeAbsolutePath
+ T V_RemoveDotSlashes
  T V_StripFilename
  T V_StripTrailingSlash
  T V_UnqualifiedFileName
  T V_snprintf
+ T V_strncat
+ T V_strncpy
  T WriteMiniDump
  T _DMsg
  T _ExitOnFatalAssert
  T _SpewMessage
  T _SpewMessageType
  T __clang_call_terminate
+ T _findfirst(char const*, _finddata_t*)
+ T _findnext(long long, _finddata_t*)
  T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
  T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
@@ -303,16 +350,19 @@
  __cxa_guard_acquire
  __cxa_guard_release
  __divdi3
+ __error
  __fixunsdfdi
  __gxx_personality_v0
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
+ __toupper
  __udivdi3
  __umoddi3
  _dyld_get_image_name
  _exit
+ alphasort$INODE64
  atoi
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
@@ -325,6 +375,9 @@
  b GetProcessorVendorId()::VendorID
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::g_ThreadMainThreadID
+ b TestForAppleGraphicsUpdateInstalled()::bInstalled
+ b TestForAppleGraphicsUpdateInstalled()::bLoaded
+ b TestForAppleGraphicsUpdateInstalled()::handle
  b _SpewMessageType::autoMutex__
  b _ZL6g_Info.0
  b _ZL6g_Info.1
@@ -341,25 +394,33 @@
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
  b s_FlushLogFunc
+ b s_GaussianStream
  b s_GroupCount
  b s_LastMiniDumpTime
  b s_Line
  b s_OSXBreakpadFactory
  b s_SpewType
+ b s_UniformStream
  b s_bCPUHasFastREPMOVSB
  b s_bSetSigHandler
  b s_pFileName
  b s_pSpewGroups
+ b selectBuf
  b sm_bAssertDumpStack
  backtrace
  backtrace_symbols
  bootstrap_look_up
  bootstrap_port
+ chmod
+ chmod$UNIX2003
  d CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::keys
+ d GetOSType::eOSVersion
+ d TestForAppleGraphicsUpdateInstalled()::attribs
  d g_CrashHandlerSingleton
  d s_SpewOutputFunc
  d s_pConversionArrays_NoEscConversion
@@ -369,21 +430,26 @@
  dlopen
  dlsym
  dyld_stub_binder
+ fork
  fprintf
  free
  fwrite
  fwrite$UNIX2003
+ getcwd
  getenv
  getpid
  gettimeofday
  kCFAllocatorDefault
  kCFTypeDictionaryKeyCallBacks
  kCFTypeDictionaryValueCallBacks
+ kill
+ kill$UNIX2003
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
  launch_data_new_string
  launch_msg
+ lstat$INODE64
  mach_msg
  mach_port_allocate
  mach_port_deallocate
@@ -392,6 +458,7 @@
  malloc_size
  memcpy
  memmove
+ mkdir
  nanosleep
  nanosleep$UNIX2003
  objc_msgSend
@@ -421,8 +488,10 @@
  pthread_self
  pthread_setspecific
  realloc
+ scandir$INODE64
  sched_yield
  signal
+ sigprocmask
  snprintf
  sscanf
  stat$INODE64
@@ -433,11 +502,15 @@
  strcpy
  strlen
  strncasecmp
+ strncat
  strncpy
  strrchr
  strstr
  sysctl
  sysctlnametomib
+ system
+ system$UNIX2003
+ t FileSelect(dirent const*)
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()
  t ProcessRawStack(void**, int, int, CStack&)

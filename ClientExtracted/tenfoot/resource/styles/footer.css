@@ -396,9 +396,8 @@ TenfootFooterPanel.WebFooter
 	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
 
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-position: 45% 50%;
 	padding: 0px;
-	background-position: 16px 50%;
 	background-image: url( "file://{images}/footer/start.png" );
 }
 

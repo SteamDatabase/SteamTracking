@@ -127,6 +127,17 @@
 							<Label class="InnerTitle" text="#Library_Details_UnavailableOnPlatform_HowToStream_Title" />
 							<Label class="InnerDesc" text="#Library_Details_UnavailableOnPlatform_HowToStream_Desc" />
 						</Button>
+						<!-- Overlay is disabled - Steam Controller experience will be impacted -->
+						<Panel id="OverlayDisabledWarning" class="LibraryControllerDescriptionBlock">
+							<Panel class="ControllerWarning_bg" />
+							<Panel class="ControllerWarning_ctn FlowRight">
+								<Image src="file://{images}/library/icon_warning_controller.png" />
+								<Panel class="FlowDown">
+									<Label class="InnerTitle" text="#Library_Details_OverlayDisabledWarning_Title" />
+									<Label class="InnerDesc" text="#Library_Details_OverlayDisabledWarning_Desc" />
+								</Panel>
+							</Panel>
+						</Panel>						
             <!-- game not designed for controllers so prompts might mismatch, but experience is fine -->
             <Panel id="GameNotDesignedForControllerWarning" class="LibraryControllerDescriptionBlock">
                 <Panel class="ControllerWarning_bg" />

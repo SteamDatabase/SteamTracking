@@ -5,14 +5,9 @@
 		<include src="file://{resources}/styles/music/music_playlist.css" />
 	</styles>
 	
-	<PlaylistListItem class="TrackButton Button" 
-		onfocus="PlaylistListItemGotFocus();" onactivate="PlaylistItemDetailPlay();">
-		<Label id="TrackPosition" class="TrackPosition"/>
-		<Label id="TrackLabel" class="TrackLabel"/>
-		<Panel >
-			<Label id="TimeLabel" class="TimeLabel" text="0:00"/>
-			<Label id="ElapsedLabel" class="TimeLabel" text="0:00"/>
-		</Panel>
+	<PlaylistListItem class="TrackButton Button" onfocus="PlaylistListItemGotFocus();" onactivate="PlaylistItemDetailPlay();">
+		<Label id="TrackPosition" class="TrackPosition" text="{s:track_position}"/>
+		<Label id="TrackLabel" class="TrackLabel" text="{s:track_name}"/>
 	</PlaylistListItem>
 	
 </root>

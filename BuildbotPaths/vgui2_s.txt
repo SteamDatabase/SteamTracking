@@ -139,6 +139,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/exprsimplifier.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp

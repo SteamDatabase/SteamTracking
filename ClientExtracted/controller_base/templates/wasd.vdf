@@ -127,8 +127,7 @@
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
 	}
-	
-		"Localization"
+	"Localization"
 	{
 		"english"
 		{
@@ -153,6 +152,7 @@
 		"finnish"
 		{
 			"Title" "Näppäimistö (WASD) ja hiiri"
+			"Description" "Tämä malli sopii hyvin peleille, jotka suunniteltiin näppäimistölle ja hiirelle ilman ohjaintukea. Ohjain omaksuu tietyt näppäimistön näppäimet yleisten toimintojen perusteella (liikkuminen WASD-näppäimillä, hyppääminen välilyönnistä jne.). Oikea ohjainlevy toimii hiirenä."
 		}
 		"french"
 		{
@@ -169,7 +169,15 @@
 			"Title" "Billentyűzet (WASD) és egér"
 			"Description" "Ez a sablon remekül működik az olyan Steames játékokhoz, melyek billentyűzetet és egeret szem előtt tartva készültek, igazi gamepad-támogatás nélkül. A játékvezérlő a játék billentyűzetalapú eseményeit gombokkal fogja irányítani, de feltételezéseket fog tenni arra vonatkozóan, hogy mely gombok segítségével mozoghatsz (WASD a mozgáshoz, szóköz az ugráshoz, stb.). A jobb felület az egér mozgását fogja emulálni."
 		}
-		"korean"
+		"italian"
+		{
+			"Title" "Tastiera (WASD) e mouse"
+		}
+		"japanese"
+		{
+			"Title" "キーボード (WASD) とマウス"
+		}
+		"koreana"
 		{
 			"Title" "키보드(WASD)와 마우스"
 		}

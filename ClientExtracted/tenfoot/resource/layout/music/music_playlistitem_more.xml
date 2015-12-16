@@ -12,9 +12,6 @@
 			<Button class="Button" onactivate="PlaySubsequentPlaylistItems( true, false);" >
 				<Label text="#MusicPlaylist_Play_PlaylistItem" />
 			</Button>
-			<Button class="Button" onactivate="PlayCurrentPlaylistItem( false, false);" >
-				<Label text="#MusicPlaylist_Add_To_Queue" />
-			</Button>
 			<Panel class="HorizontalRule" />
 			<Button class="Button" onactivate="MovePlaylistItemBegin();" >
 				<Label text="#MusicPlaylistItem_Move_Begin" />

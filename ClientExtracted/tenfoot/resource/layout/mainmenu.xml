@@ -79,7 +79,7 @@
 
 					</Button>
 					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" selectionpos="auto" tabindex="auto"
-						onactivate="ToggleMusicControlPanel( true );" >
+						onactivate="ShowMusicLibrary();" >
                         <Panel class="background_box" />
                         <Image id="MusicGuideImage" src="file://{images}/systemmenu/icon_music.png"/>
 					</Button>
@@ -156,9 +156,9 @@
 				</Panel>
 			</Panel>
 			<Panel id="HR2" class="HR" />
-			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" >
+			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" ondescendantfocus="AddStyle( MainMenu, GameRowFocus)" ondescendantblur="RemoveStyle( MainMenu, GameRowFocus)" >
 														
-				<Panel class="GameRowContentsWrapper" selectionpos="0,0" >
+				<Panel id="GameRowContentsWrapper" class="GameRowContentsWrapper" selectionpos="auto" >
 					<Panel class="GameItem game_1" selectionpos="1,0" >
 					
 						<Panel class="GameItemHeader" >

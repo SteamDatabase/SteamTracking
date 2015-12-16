@@ -655,11 +655,15 @@ LibraryAppDetails .ContentsRow
 
 .LibraryDetailsSectionRow
 {
-	width: 1000px;
+	width: 1300px;
 	height: fit-children;
 	flow-children: right-wrap;
 	margin: -10px;
 	padding: 10px;
+}
+#OverlayDashboard .LibraryDetailsSectionRow
+{
+	width: 900px;
 }
 .LibraryDetailsSectionRow.TallArea
 {
@@ -2441,7 +2445,7 @@ LibraryRecentNews .LargeNewsByline
 	opacity: 1.0;
 	vertical-align: center;
 	horizontal-align: left;
-	width: 100%;
+	width: 77%;
 	transition-duration: shortduration;
 	transition-property: transform;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -2939,6 +2943,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .ContentAreaFocus .GamesGrid, .ContentHover .GamesGrid,
 .ContentAreaFocus .GamesDownloads, .ContentHover .GamesDownloads,
 .ContentAreaFocus .GamesSuggestion, .ContentHover .GamesSuggestion,
+.ContentAreaFocus .MusicExplorePanel, .ContentHover .MusicExplorePanel
 {
 	transform: translateX( -200px );
 }
@@ -2971,6 +2976,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .MenuHover .GamesGrid,
 .MenuHover .GamesSuggestion,
 .MenuHover .GamesDownloads,
+.MenuHover .MusicExplorePanel,
 .MenuHover #ActivateProductArea
 {
 	transform: translateX( 0px );
@@ -3065,9 +3071,9 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 0.0;
 }
 
-.music #MusicPanelAllGames
+.music #EmptyLibraryArea
 {
-	opacity: 1.0;
+	opacity: 0.0;
 }
 
 #FastScrollLabel
@@ -3519,58 +3525,8 @@ LibraryAllGames .TopMouseScrollRegion
 
 LibraryAllGames .BottomMouseScrollRegion
 {
-	y: -295px;
+	y: -205px;
 }
-
-
-
-Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover
-{
-	background-color: mouse_hover_bg_up;
-}
-
-Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover:active
-{
-	background-color: mouse_active_bg_up;
-}
-
-Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-
-
-
-Grid .LeftMouseScrollRegion
-{
-	position: 0px 0px 0px;
-	background-color: mouse_off_bg_up;
-
-	transition-property: background-color, opacity;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	z-index: 100;
-}
-
-Grid .RightMouseScrollRegion
-{
-	position: 0px -15px 0px;
-	background-color: mouse_off_bg_bottom;
-
-	transition-property: background-color, opacity;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	z-index: 100;
-}
-
 
 #RightLegend
 {
@@ -4030,7 +3986,7 @@ KeyboardShortcut Image
 
 	pre-transform-scale2d: 1.0;
 
-	transition-property: color, transform, pre-transform-scale2d;
+	transition-property: color, background-color, transform, pre-transform-scale2d;
 	transition-timing-function: ease-out;
 
 }
@@ -4049,6 +4005,14 @@ KeyboardShortcut Image
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
+
+#GamesFilter ToggleButton.CheckBox:hover
+{
+	box-shadow: none;
+	background-color: all_games_hover;
+}
+
+
 #GamesFilter ToggleButton.CheckBox:Focus Label {
 	color: #072e47;
 }
@@ -4445,7 +4409,8 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 
 
 .suggested #GamesFilter,
-.downloads #GamesFilter
+.downloads #GamesFilter,
+.music #GamesFilter
 {
 	opacity: 0.0;
 }
@@ -4502,6 +4467,7 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 #GamesFilter.EmptyFilter Button.NxFilterButton
 {
 	height: 0px;
+	min-height: 0px;
 
 	margin: 0px;
 }
@@ -4545,7 +4511,6 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-
 }
 
 .GamesFilterWrapper:descendantfocus
@@ -4644,6 +4609,12 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	margin-left: 14px;
 	height: 0px;
 }
+
+.GameSearchInput:hover Label
+{
+	color: applabelsolid;
+}
+
 #GamesFilter #NxNarrowByName.NxTagHeader {
 	margin-bottom: -40px;
 }
@@ -4795,7 +4766,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 .EmptyLibraryLabelWrapper Label,
 .AppList Label,
-.DownloadText.HeaderLabel
+.DownloadText.HeaderLabel,
+#MusicExplore .HeaderLabel
 {
 	text-align: center;
 	width: 600px;
@@ -4827,7 +4799,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 .AppList Label,
-.DownloadText.HeaderLabel
+.DownloadText.HeaderLabel,
+#MusicExplore .HeaderLabel
 {
 	text-align: left;
 	color: detailsdatalabelfocus;
@@ -5003,7 +4976,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	color: #ffffff;
 }
 
-.DownloadText.HeaderLabel
+.DownloadText.HeaderLabel,
+#MusicExplore .HeaderLabel
 {
 	margin-left: 14px;
 	margin-top: 8px;
@@ -5234,6 +5208,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 /* Filter Button */
+
 #GamesFilter:descendantfocus Button.NxFilterButton
 {
 	width: 100%;
@@ -5245,9 +5220,26 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	box-shadow: none;
 	color: #67c1f5FF;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
-
 }
 
+#GamesFilter Button.NxFilterButton:hover,
+#GamesFilter:descendantfocus Button.NxFilterButton:hover
+{
+	background-color: all_games_hover;
+}
+
+#GamesFilter Button.NxFilterButton:hover Label
+{
+	color: applabelsolid;
+	
+	transition-property: color;
+	transition-duration: 0.23s;
+}
+
+#GamesFilter:descendantfocus Button.NxFilterButton:descendantfocus:hover Label
+{
+	color: #072e47;
+}
 
 .NxFilterButton:selected {
 	background-color: #1579a0;
@@ -5488,6 +5480,7 @@ LibraryAppDetails #UnavailableOnPlatformHowToStreamInfo,
 LibraryAppDetails #GameNotDesignedForControllerWarning,
 LibraryAppDetails #GameRequiresMouseKeyboardInteractionWarning,
 LibraryAppDetails #GameDesignKeyboardMouseWarning,
+LibraryAppDetails #OverlayDisabledWarning,
 {
 	visibility: collapse;
 }
@@ -5498,6 +5491,7 @@ LibraryAppDetails.KBMouseRequired #GameRequiresMouseKeyboardInteractionWarning,
 LibraryAppDetails.ManualControllerSupport #GameNotDesignedForControllerWarning,
 LibraryAppDetails.NoControllerSupport.SteamPad #GameNotDesignedForControllerWarning,
 LibraryAppDetails.NoControllerSupport.XInputPad #GameDesignKeyboardMouseWarning,
+LibraryAppDetails.NoOverlay.SteamPad #OverlayDisabledWarning,
 {
 	visibility: visible;
 }
@@ -5743,4 +5737,31 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 ParentalButton #ParentalLockImageLocked
 {
 	opacity: 0.0;
+}
+
+#ControllerListContainer
+{
+	height: fit-children;
+	flow-children: down;
+	margin-bottom: 20px;
+	width: 100%;
+}
+#ControllerListContainer .Button
+{
+	width: 100%;
+}
+ControllerConfigSelectController #ButtonCancel
+{
+	visibility: visible;
+}
+
+#MusicExplore
+{
+	visibility: collapse;
+	padding-bottom: 20px;
+}
+
+.music #MusicExplore
+{
+	visibility: visible;
 }

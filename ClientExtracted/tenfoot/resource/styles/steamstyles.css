@@ -486,6 +486,7 @@ RadioButton
 .Button,
 .WizardButton,
 .CheckBox {
+	min-height: 48px;
 	height: fit-children;
 	padding: 10px 20px 0px 10px;
 	margin: 0px 0px 4px 0px;
@@ -855,10 +856,8 @@ VerticalScrollBar .ScrollThumb,
 HorizontalScrollBar,
 HorizontalScrollBar .ScrollThumb
 {
-	// The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-out;
 }
 
 // HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions
@@ -2307,13 +2306,17 @@ Button:hover #SuggestedStatus
 	wash-color: #2f2f2fff;
 }
 
-
-
 .NxLeftNavButton:hover,
 .NxLeftNavButtonAction:hover
 {
 	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	box-shadow: none;
+	background-color: all_games_hover;
+}
+
+.NxLeftNavButton:hover Label
+{
+	color: applabelsolid;
 }
 
 .NxLeftNavButton:focus,
@@ -2403,6 +2406,7 @@ Button:hover #SuggestedStatus
 	height:840px;
 }
 
+.MenuHover .NxGridButtonRow .NxGridButtonWell,
 .NxGridButtonRow:descendantfocus .NxGridButtonWell,
 {
 	opacity: 0.0;
@@ -2666,7 +2670,7 @@ Button:hover #SuggestedStatus
 .NxFilterButton:hover
 {
 	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	box-shadow: none;
 }
 
 
@@ -2762,7 +2766,8 @@ EdgeScrollBar.Vertical .EdgeScrollButton
 	height: 80px;	
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover .EdgeScrollButton
+.CursorVisible .EdgeScroller:descendantfocus:hover .EdgeScrollButton,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.PageScroll .EdgeScrollButton
 {
 	opacity: 1.0;
 }
@@ -2795,47 +2800,56 @@ EdgeScrollBar.Vertical #MaxButton
 	align: center bottom;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:hover
 {
 	background-color: mouse_hover_bg_left;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:hover
 {
 	background-color: mouse_hover_bg_right;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:hover
 {
 	background-color: mouse_hover_bg_up;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:hover
 {
 	background-color: mouse_hover_bg_bottom;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll .EdgeScrollButton:active
 {
 	transition-delay: 0.2s, 0.0s;
 }																							  
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:active
 {
 	background-color: mouse_active_bg_left;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:active
 {
 	background-color: mouse_active_bg_right;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:active
 {
 	background-color: mouse_active_bg_up;
 }
 
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:active
 {
 	background-color: mouse_active_bg_bottom;
 }
@@ -2875,6 +2889,7 @@ MouseScrollRegion
 {
 	width: 100%;
 	height: 80px;
+	transform: translateY( -90px );
 }
 
 .LeftMouseScrollRegion

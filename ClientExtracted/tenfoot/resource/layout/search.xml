@@ -5,8 +5,8 @@
 		<include src="file://{resources}/styles/search.css" />
 	</styles>
 	
-	<SearchDialog class="TenfeootMsgBox" defaultfocus="Body" oncancel="ButtonCancel()" >
-		<Panel class="DialogRegion" tabindex="auto" selectionpos="auto">
+	<SearchDialog class="TenfootMsgBox" defaultfocus="Body" oncancel="ButtonCancel()" onmouseactivate="Cancelled(mouse);" >
+		<Panel class="DialogRegion" tabindex="auto" selectionpos="auto" onmouseactivate="None();">
             <Label class="Header" id="SearchHeaderTitle" text="#Search_Header" />
 
 			<Panel class="InputRow">

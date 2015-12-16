@@ -12,7 +12,8 @@ FriendsContent_GroupItem
 	border-radius: 3px;
 }
 
-FriendsContent_GroupItem:focus
+FriendsContent_GroupItem:focus,
+FriendsContent_GroupItem:hover
 {
 	border: 3px solid #b6e1fa;
 

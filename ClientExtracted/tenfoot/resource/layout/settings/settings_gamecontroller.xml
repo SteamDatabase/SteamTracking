@@ -5,18 +5,18 @@
 	</styles>
 
 	<SettingsPanel_GameController class="SettingsSection" defaultfocus="AddController" >
-		<Panel class="SettingsBottomPanel">
-			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto" defaultfocus="AddController">
-				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();">
+		<Panel class="SettingsBottomPanel" >
+			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto" defaultfocus="AddController" rememberchildfocus="true" >
+				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused();">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
 
-				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown">
+				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown" ondescendantfocus="OnNonControllerButtonFocused();">
 					<Label class="SettingsLabel" text="#SettingsController_ShutdowntimeHeader" />
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
 
-				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" />				
+				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused();" />				
 				
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
 
@@ -61,13 +61,33 @@
 				</Panel>
 			</Panel>
 				
-			<Panel id="SteamControllerVersion"  class="SettingsContent SettingsRightContent">
-					  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerVersion_Header" />
-					  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_BatteryValue" />
-					  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerVersion_Title" />
-					  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
-					  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamDongleVersion_Title" />
-					  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
+			<Panel id="SteamControllerVersion"  class="SettingsContent SettingsRightContent" selectionpos="auto" oncancel="SetInputFocus(GameControllerContent);">
+				<Panel id="PersonalizationSection" selectionpos="auto">
+					<Label id="ControllerName" class="SettingsCallout SettingsControllerNameTitle" text="Controller Name" />
+					<Button id="PersonalizeButton" class="Button" selectionpos="auto" onactivate="PersonalizeController();">
+						<Label id="PersonalizeButtonLabel" class="LongDesc" text="#SettingsController_SteamControllerPersonalize" />
+					</Button>
+				</Panel>
+				<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerAccounts" />				
+				<Panel id="RegisteredAccountsContainer" selectionpos="auto"/>
+				
+				<Panel id="ControllerInfo" selectionpos="auto">
+					<Panel id="ControllerInfoButtons">
+						<Button id="IdentifyButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="IdentifyButton();">
+							<Label class="LongDesc" text="#SettingsController_Identify" />
+						</Button>
+						<Button id="SupportButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerSupport();">
+							<Label class="LongDesc" text="#SettingsController_Support" />
+						</Button>
+						<Button id="CalibrateButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerCalibrate();">
+							<Label class="LongDesc" text="#SettingsController_Calibrate" />
+						</Button>
+					</Panel>
+				  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerVersion_Title" />
+				  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
+				  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamDongleVersion_Title" />
+				  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
+				</Panel>
 			</Panel>
 
 			<Panel id="NoControllersFoundPanel" class="SettingsContent SettingsRightContent">

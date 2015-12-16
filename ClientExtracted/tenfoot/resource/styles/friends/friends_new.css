@@ -337,7 +337,7 @@ Label.Header
 .NxLeftNavButtonAction:hover
 {
 	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	box-shadow: none;
 }
 
 .NxLeftNavButton:focus,
@@ -451,8 +451,7 @@ Label.Header
 
 FriendsInvitePage.FriendsContentContainer
 {
-	flow-children: down;
-	padding-top: 20px;
+	padding: 0px;
 }
 
 #AddFriendContent

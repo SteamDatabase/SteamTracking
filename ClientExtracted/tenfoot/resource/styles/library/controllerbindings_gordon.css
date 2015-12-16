@@ -158,19 +158,34 @@ ControllerBindingsGordon.ScreenSaverMode
 	color: white;
 }
 
-#BindingsTitle
+#BindingsTitleContainer
+{
+	horizontal-align: center;
+	flow-children: right;
+	vertical-align: top;
+	width: fit-children;
+	height: 6.5%;
+}
+
+#BindingsTitle,
+#ControllerTitle
 {
 	font-size: 60px;
 	font-family: platformfont;
 	color: #01caef;
 	//margin-top: 20px;
-	text-align: center;
-	
-	horizontal-align: center;
-	vertical-align: top;
-	width: 100%;
-	height: 6.5%;
-	
+	visibility: visible;
+}
+
+#ControllerTitle
+{
+	margin-left: 20px;
+	color: #FFFFFF;
+	visibility: collapse;
+}
+
+.MultipleControllers #ControllerTitle
+{
 	visibility: visible;
 }
 
@@ -389,8 +404,10 @@ ControllerBindingsGordon.ScreenSaverMode
 {
 	horizontal-align: center;
 	width: 1737px;
-	height: 228px;
+	height: fit-children;
 	flow-children: right;
+	vertical-align: bottom;
+	margin-bottom: 120px;
 }
 
 #GyroModeContainer
@@ -416,7 +433,8 @@ ControllerBindingsGordon.ScreenSaverMode
 	border-color: #0f99bc44;
 	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 	width: 417px;
-	height: 228px;
+	height: fit-children;
+	vertical-align: bottom;
 }
 
 #Gyro
@@ -496,7 +514,8 @@ ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 .ControllerMode
 {
 	width: 100%;
-	height: 100%;
+	height: fit-children;
+	min-height: 228px;
 }
 
 .ControllerMode.Trigger
@@ -596,7 +615,7 @@ Label.ModeTitle
 ControllerBindingButton.BindingButton
 {
 	width: bindingbuttonwidth;
-	height: 96px;
+	height: 104px;
 	margin-bottom: 9px;
 	background-color: none;
 }
@@ -663,7 +682,7 @@ ControllerBindingButton.BindingButton.Right
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_back.png");
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
-	background-position: 5px 8px;
+	background-position: 5px 50%;
 }
 
 #BackButton.BindingButton Label
@@ -676,6 +695,7 @@ ControllerBindingButton.BindingButton.Right
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
+	background-position: 97% 50%;
 }
 
 #StartButton.BindingButton Label
@@ -1075,7 +1095,7 @@ ControllerBindingButton.Glyph.GamepadShape #BindingShape
 
 ControllerBindingButton Label
 {
-	font-size: 30px;
+	font-size: 28px;
 	font-family: platformfont;
 	font-weight: light;
 	text-overflow: ellipsis;
@@ -1598,9 +1618,31 @@ DropDownMenu.DropDownMenuVisible
     visibility: collapse;
 }
 
-.ShowIcon #SelectBindingIconHeader
+#SelectBindingIconHeaderGA
+{
+	padding-top: 0px;
+	color: white;
+	font-size: 24px;
+	font-family: platformfont;
+	text-align: center;
+	margin-right: 12px;
+    padding-right: 0px;
+    padding-left: 400px;
+    visibility: collapse;
+	flow-children: right;
+    width: 730px;
+    height: 64px;
+    horizontal-align: right;
+}
+
+.ShowIcon #SelectBindingIconHeader, .ShowIcon #SelectBindingIconHeaderGA
 {
     visibility: visible;
+}
+
+.ShowIcon #GameActionsHeader 
+{
+    width: 880px;
 }
 
 #BindingDescriptionTextEntry
@@ -1672,6 +1714,7 @@ ChooseBinding #GameActionsHeader
 {
 	vertical-align: top;
 	font-size: 40px;
+    horizontal-align: center;
 }
 
 ChooseBinding #GameActionsScrollContainer
@@ -1750,7 +1793,16 @@ ChooseBinding .IconPreview
     visibility: collapse;
 }
 
-.ShowIcon #IconPreview 
+ChooseBinding .IconPreviewGA
+{
+    margin-left: 12px;
+    height: 64px;
+    width: 64px;
+    visibility: collapse;
+    horizontal-align: right;
+}
+
+.ShowIcon #IconPreview, .ShowIcon #IconPreviewGA
 {
     visibility: visible;
 }
@@ -3007,4 +3059,35 @@ ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
 .TriggerMode,
 {
 	visibility: collapse;
+}
+
+#LoadingBlockout
+{
+	width: 100%;
+	height: 100%;
+	visibility: collapse;
+	background-color: #00000077;
+}
+
+#BindingsContainer,
+#ModeContainer
+{
+	visibility: visible;
+}
+
+.BindingLoading #LoadingBlockout,
+{
+	visibility: visible;
+}
+
+.BindingLoading #BindingsContainer,
+.BindingLoading #ModeContainer
+{
+	visibility: collapse;
+}
+
+#ThrobberContainer
+{
+	horizontal-align: center;
+	vertical-align: center;
 }

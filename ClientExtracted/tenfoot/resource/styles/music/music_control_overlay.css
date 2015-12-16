@@ -40,7 +40,7 @@ MusicControlOverlay
 	height: 100%;
 	flow-children: down;
 	background-color: action_module;
-	padding-top: 30px;
+	padding-top: 15px;
 }
 
 .MusicControlOverlay .NowPlayingHeader,
@@ -67,13 +67,16 @@ MusicControlOverlay
 
 .MusicControlOverlay .NowPlayingTrackName
 {
-	font-size: 36px;
+	font-size: 28px;
+	width: fit-children;
 	horizontal-align: center;
+	white-space: nowrap;
 }
 
 .MusicControlOverlay .NowPlayingAlbumName
 {
-	font-size: 30px;
+	font-size: 24px;
+	width: fit-children;
 	horizontal-align: center;
 }
 
@@ -181,4 +184,11 @@ MusicControlOverlay
 	background-color: #111111aa;
 }
 
-
+#AlbumImage
+{
+	width: 150px;
+	height: 150px;
+	horizontal-align: center;
+	background-color: red;
+	margin-bottom: 4px;
+}

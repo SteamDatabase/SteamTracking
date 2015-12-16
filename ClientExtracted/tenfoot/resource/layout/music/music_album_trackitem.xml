@@ -5,14 +5,13 @@
 		<include src="file://{resources}/styles/music/music_album.css" />
 	</styles>
 	
-	<TrackListItem class="TrackButton Button" 
-		onfocus="TrackListItemGotFocus();" onactivate="TrackDetailPlay();">
-		<Label id="TrackPosition" class="TrackPosition" text="XXX"/>
-		<Label id="TrackLabel" class="TrackLabel"/>
-		<Panel >
-			<Label id="TimeLabel" class="TimeLabel" text="0:00"/>
-			<Label id="ElapsedLabel" class="TimeLabel" text="0:00"/>
+	<TrackListItem class="TrackButton Button" onfocus="TrackListItemGotFocus( '', '' );" onactivate="TrackDetailPlay();">
+		<Label id="TrackPosition" class="TrackPosition" text="{s:track_position}"/>
+		<Panel id="PlayPause" class="PlayPauseControlBarButton" tabindex="auto" selectionpos="auto" >
+			<Image id="TogglePauseImage" src="file://{images}/music/icon_queue_pause.png" />
+			<Image id="TogglePlayImage" src="file://{images}/music/icon_queue_play.png" />
 		</Panel>
+		<Label id="TrackLabel" class="TrackLabel" text="{s:track_name}" />
 	</TrackListItem>
 	
 </root>

@@ -9,12 +9,6 @@
 			oncancel="ButtonCancel()"
 			onmouseactivate="CloseModalDialog();" >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
-			<Button class="Button" onactivate="PlayCurrentArtist(true, false);" >
-				<Label id="PlayArtistLabel" text="#MusicArtist_Play" />
-			</Button>
-			<Button class="Button" onactivate="PlayCurrentArtist(false, false);">
-				<Label id="AddArtistToQueueLabel" text="#MusicArtist_Add_To_Queue" />
-			</Button>
 			<Button id="ArtistAddToPlaylistButton" class="Button" onactivate="AddArtistToPlaylist();" >
 				<Label id="AddToPlaylistLabel" text="#MusicArtist_Add_To_Playlist" />
 			</Button>

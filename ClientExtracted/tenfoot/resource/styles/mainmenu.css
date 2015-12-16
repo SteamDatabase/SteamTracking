@@ -293,7 +293,7 @@ MainMenu #BodyWrapper #GameRowContents
 	z-index: MainMenuZIndex;
 	
 	transition-property: opacity, position, transform;
-	transition-duration: PageTransitionTimeOff;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
@@ -1174,16 +1174,13 @@ transform: none;
 
 .GameRowContents
 {
-	margin-top: 620px;
 	width: 100%;
 	height: 512px;
-	//desaturation: 0.7;
-	//wash-color: #8bcdf2;
-	//background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
-	flow-children: right;
+	flow-children: down;
+	overflow: clip scroll;
 
   transform-origin: 0% 0% parent-relative;
-	transform: translateX( 0px ) rotateX( 0deg ) translateZ( -64px );
+	transform: translateY( 620px ) translateZ( -64px );
 
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: supershortduration;
@@ -1201,7 +1198,7 @@ transform: none;
 	desaturation: 0.0;
 	transform-origin: 0% 0% parent-relative;
 
-	transform: translatex(0px) translatey(-22px);
+	transform: translatex(0px) translatey(598px);
  	opacity:1.0;
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
@@ -2075,3 +2072,77 @@ Label.ProfileNameLabel
 	opacity: 1.0;
 }
 
+#MainMenuSuggestions
+{
+	height: fit-children;
+	width: 80%;
+	margin-left: 10%;
+	flow-children: down;
+	visibility: collapse;
+}
+
+#MainMenuSuggestions.SuggestionsLoaded
+{
+	visibility: visible;
+}
+
+
+.WebSuggestions.GameRowFocus .GameRowContents
+{
+	z-index: MainContentsZIndex;
+	transform: translatey( 500px );
+	height: 712px;
+	//margin-top: 200px;
+
+}
+
+.WebSuggestions.GameSuggestionsFocus .GameRowContents
+{
+	transform: translatey( 300px );
+}
+
+.WebSuggestions.GameRowFocus #MenuRow
+{
+	transform: translatey( -80px );
+}
+
+.WebSuggestions.GameRowFocus #HR
+{
+	transform: translatey( -20px );
+}
+
+.WebSuggestions.GameRowFocus #HR2
+{
+	transform: translatey( -120px );
+}
+
+.WebSuggestions.GameSuggestionsFocus #MenuRow
+{
+	transform: translatey( -330px );
+	z-index: 1;
+	desaturation: 0.3;
+	blur: gaussian( 2.0 );
+	wash-color: #000000a4;
+}
+
+.WebSuggestions.GameSuggestionsFocus #HR2
+{
+	opacity: 0.0;
+}
+
+
+#MainMenuSuggestions .AppHubPagePanel
+{
+	height: 300px;
+	width: 1400px;
+	margin: 0px;
+	padding: 0px;
+	flow-children: down;
+}
+
+
+#MainMenuSuggestions .AppHubItemRow
+{
+	height: 248px;
+	width: 1400px;
+}

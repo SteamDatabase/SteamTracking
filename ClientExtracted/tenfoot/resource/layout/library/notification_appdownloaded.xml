@@ -9,6 +9,6 @@
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
 		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
 		<Label id="GameName" class="NotificationTitle" />
-		<Label class="NotificationMessage" text="#Notification_HasFinishedDownload" />
+		<Label id="MessageText" class="NotificationMessage" text="#Notification_HasFinishedDownload" />
 	</Panel>
 </root>

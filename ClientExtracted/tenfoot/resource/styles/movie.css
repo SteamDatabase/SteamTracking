@@ -668,6 +668,12 @@ BroadcastViewer #ErrorMessage
 	height: 100%;
 }
 
+#BroadcastMoviePlayer .AppTitle
+{
+	color: #72899e;
+}
+
+
 #BroadcasterPanel
 {
 	flow-children: right;

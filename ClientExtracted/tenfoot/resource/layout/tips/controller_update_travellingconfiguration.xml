@@ -10,10 +10,10 @@
 	   		<Panel class="TouchMenuFlow"> 
 				<Panel id="HR4" class="HR" />
 				<Panel class="SubPanelCenterContainer">
-					<Image class="SubImageCenterAlign" src="file://{images}/welcomeupdates/controller_update_mouseregions.jpg" scaling="stretch-to-fit-x-preserve-aspect" />	
+					<Image class="SubImageCenterAlign" src="file://{images}/welcomeupdates/controller_update_personalize.jpg" scaling="stretch-to-fit-x-preserve-aspect" />	
 					<Panel class="SubText" id ="sub_touchmenu_right"> 
-						<Label class="SubHeader" id="sub_align_right" text="#MainMenu_Welcome_Controller_Update_MouseRegions_Header" />
-						<Label class="SubDesc" text="#MainMenu_Welcome_Controller_Update_MouseRegions_Description" />
+						<Label class="SubHeader" id="sub_align_right" text="#MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Header" />
+						<Label class="SubDesc" text="#MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" />
 					</Panel>
 				</Panel>
 			</Panel>

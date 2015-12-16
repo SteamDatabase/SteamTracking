@@ -8,7 +8,10 @@
 	<ControllerBindingsGordon defaultfocus="LeftTrackpad">
 		<Button id="VDFDump" onactivate="DumpVDF()" />
 		<Panel id="BindingsContainer" tabindex="auto" selectionpos="0,0">
-			<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />
+			<Panel id="BindingsTitleContainer">
+				<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />
+				<Label id="ControllerTitle" text="#SettingsController_BindingTitle_ForController" />
+			</Panel>
 			<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
 			<Panel id="GameActionSets" selectionpos="0,1"/>
 			<Panel id="TopHalfContainer" selectionpos="0,2">
@@ -39,17 +42,23 @@
 					<Button class="ModeWrapper Gyro" id="Gyro" onmoveleft="SetInputFocus( BackButton );" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );" onfocus="AddStyle(BackgroundLines,GyroSelected)" onblur="RemoveStyle(BackgroundLines, GyroSelected)"/>
 				</Panel>
 			</Panel>
-			<Panel id="ModeContainer">
-				<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetInputFocus( BackButton );" selectionpos="0,7" onfocus="AddStyle(BackgroundLines,SlotOneSelected)" onblur="RemoveStyle(BackgroundLines, SlotOneSelected)"/>
-				<Button class="ModeWrapper GapRight" id="Joystick" onmoveup="SetInputFocus( Gyro );" selectionpos="1,7" onfocus="AddStyle(BackgroundLines,SlotTwoSelected)" onblur="RemoveStyle(BackgroundLines, SlotTwoSelected)"/>
-				<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetInputFocus( Gyro );" selectionpos="3,7" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
-				<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetInputFocus( StartButton );" selectionpos="4,7" onfocus="AddStyle(BackgroundLines,SlotFourSelected)" onblur="RemoveStyle(BackgroundLines, SlotFourSelected)"/>
-			</Panel>
+		</Panel>
+		<Panel id="ModeContainer">
+			<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetInputFocus( BackButton );" selectionpos="0,7" onfocus="AddStyle(BackgroundLines,SlotOneSelected)" onblur="RemoveStyle(BackgroundLines, SlotOneSelected)"/>
+			<Button class="ModeWrapper GapRight" id="Joystick" onmoveup="SetInputFocus( Gyro );" selectionpos="1,7" onfocus="AddStyle(BackgroundLines,SlotTwoSelected)" onblur="RemoveStyle(BackgroundLines, SlotTwoSelected)"/>
+			<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetInputFocus( Gyro );" selectionpos="3,7" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
+			<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetInputFocus( StartButton );" selectionpos="4,7" onfocus="AddStyle(BackgroundLines,SlotFourSelected)" onblur="RemoveStyle(BackgroundLines, SlotFourSelected)"/>
 		</Panel>
 
 		<ControllerPropertiesMode id="ModeProperties" />
 		<ChooseBinding id="ChooseBinding" />
 		<ControllerConfigBrowser id="ConfigBrowser" />
+
+		<Panel id="LoadingBlockout">
+			<Panel id="ThrobberContainer">
+		    <LoadingThrobber id="Throbber" />
+      </Panel>
+		</Panel>
 
 	</ControllerBindingsGordon>
 </root>

@@ -61,6 +61,7 @@
  R typeinfo name for CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >
  R typeinfo name for CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >
  R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
+ R typeinfo name for CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >
  R typeinfo name for CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
  R typeinfo name for CUtlVector<int*, CUtlMemory<int*> >
@@ -312,6 +313,7 @@
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::FindAndRemove(__sFILE* const&)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::GrowVector(int)
@@ -350,6 +352,7 @@
  T StringLessThan(char const* const&, char const* const&)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
+ T Sys_ValidateModules(CValidator*, bool)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCFileSystemStdIODLLValidateIValidate_interface()
  T __CreateCFileSystem_StdioIBaseFileSystem_interface()
@@ -406,6 +409,7 @@
  d s_pConversionArrays_StringCharConversion
  dlclose
  dlopen
+ dlsym
  dyld_stub_binder
  fclose
  feof

@@ -5,18 +5,21 @@
 		<include src="file://{resources}/styles/music/music_library.css" />
 	</styles>
 	
-	<MusicLibraryArtistPanel onmoveup="MusicLibraryActivateGridTabs( ArtistButton );"
-			defaultfocus="MusicArtistGrid" selectionposboundary="vertical" >
+	<MusicLibraryArtistPanel defaultfocus="MusicArtistGrid" selectionposboundary="vertical" >
 		
 		<Panel hittest="false" id="FastScrollWrapper">
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
 		</Panel>
 		
-		<Grid id="MusicArtistGrid" class="MusicArtistGrid"
-			scrolldirection="horizontal" verticalcount="7" horizontalcount="4" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto">
-		</Grid>
+		<Grid id="MusicArtistGrid" class="MusicArtistGrid" scrolldirection="vertical" verticalcount="7" horizontalcount="2" selectionpos="auto" tabindex="auto" focusmargin="1" rememberchildfocus="true" />		
 		
+		<MusicFilterArtists id="ArtistsFilter" selectionpos="500,200" oncancel="SetInputFocus( MusicArtistGrid )"/>
+
+		<Button id="EmptyLibraryArea" >
+			<Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
+		</Button>
+
 	</MusicLibraryArtistPanel>
 	
 </root>

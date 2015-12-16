@@ -1917,6 +1917,8 @@
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CClientStructNetPacket::BHasMsgTraceTag() const
  T CClientStructNetPacket::BHasTargetJobName() const
+ T CClientStructNetPacket::BPacketDecodingFailed() const
+ T CClientStructNetPacket::CClientStructNetPacket(CNetPacket*)
  T CClientStructNetPacket::CubData() const
  T CClientStructNetPacket::GetAppIDRouting() const
  T CClientStructNetPacket::GetCNetPacket() const
@@ -2648,6 +2650,7 @@
  T CPoolAllocatedRNG::~CPoolAllocatedRNG()
  T CProtoBufNetPacket::BHasMsgTraceTag() const
  T CProtoBufNetPacket::BHasTargetJobName() const
+ T CProtoBufNetPacket::BPacketDecodingFailed() const
  T CProtoBufNetPacket::CubData() const
  T CProtoBufNetPacket::GetAppIDRouting() const
  T CProtoBufNetPacket::GetCNetPacket() const
@@ -2929,6 +2932,7 @@
  T CSteamID::Render() const
  T CStructNetPacket::BHasMsgTraceTag() const
  T CStructNetPacket::BHasTargetJobName() const
+ T CStructNetPacket::BPacketDecodingFailed() const
  T CStructNetPacket::CubData() const
  T CStructNetPacket::GetAppIDRouting() const
  T CStructNetPacket::GetCNetPacket() const

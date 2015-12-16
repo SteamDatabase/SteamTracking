@@ -1637,6 +1637,102 @@ KeyboardShortcut .Graphic
 	visibility: visible;
 }
 
+#SteamControllerVersion #PersonalizationSection
+{
+	flow-children: right;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#SteamControllerVersion #ControllerName
+{
+	width: 300px;
+	vertical-align: middle;
+}
+
+#SteamControllerVersion #PersonalizeButton
+{
+	horizontal-align: right;
+	width: 300px;
+}
+
+#SteamControllerVersion #OtherAccountsContainer
+{
+	margin-bottom: 100px;
+}
+
+#SteamControllerVersion .ControllerDetailsButton
+{
+	width: 300px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#SteamControllerVersion Button Label
+{
+	horizontal-align: middle;
+}
+
+#SteamControllerVersion #ControllerInfo
+{
+	flow-children: down;
+	vertical-align: bottom;
+}
+
+#SteamControllerVersion #ControllerInfo #ControllerInfoButtons
+{
+	flow-children: right-wrap;
+	width: 100%;
+	height: 120px;
+}
+
+#SteamControllerVersion #RegisteredAccountsContainer
+{
+	width: 100%;
+	padding-left: 50px;
+	flow-children: down;
+	max-height: 300px;
+	overflow: noclip scroll;
+}
+
+#SteamControllerVersion #SelectAccountNoneLabel
+{
+	horizontal-align: left;
+	vertical-align: middle;
+}
+
+#SteamControllerVersion #RegisteredAccountsContainer Button
+{
+	flow-children: right;
+	margin-top: 0px;
+	padding: 0px;
+	padding-top: 2px;
+	background-color: simplebutton;
+	transition-property: pre-transform-scale2d,color,background-color,blur;
+	transition-duration: 0.2s;
+	color: applabelsolid;
+	width: 400px;
+	border-width: 5px;
+	border-radius: 0px;
+	border-style: solid;
+	box-shadow: box_shadow_off_color -3px -3px 6px 6px;
+}
+
+#SteamControllerVersion #RegisteredAccountsContainer Button:focus
+{
+	border-color: white;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
+	color: black;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	
+	animation-name: main-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
 .SettingsControllerBindingButton
 {
 	opacity: 0.0;

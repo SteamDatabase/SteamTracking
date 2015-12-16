@@ -61,7 +61,7 @@
 	"UI_Label_CopySelected"	"Copy selected text"
 	"UI_Label_OpenLinkInBrowser" "Open URL in browser"
 	"UI_Label_CopyURLToClipboard" "Copy URL to clipboard"
-		
+
 	"UI_TextEntry_CutToClipboard"	"Cut"
 	"UI_TextEntry_CopyToClipboard"	"Copy"
 	"UI_TextEntry_PasteClipboard"	"Paste"
@@ -72,7 +72,7 @@
 	"UI_Agreements"					"Agreements"
 	"UI_ViewAgreements"				"VIEW SSA & PRIVACY POLICY"
 	"UI_I_Agree"					"I agree"
-	
+
 	"Month_January"					"January"
 	"Month_February"				"February"
 	"Month_March"					"March"
@@ -116,8 +116,8 @@
 	"Panorama_Lang_Turkish"			"Turkish"
 	"Panorama_Lang_Arabic"			"Arabic"
 	"Panorama_Lang_Ukrainian"			"Ukrainian"
-	
-	
+
+
 	"Panorama_Lang_Footer_English"			"ENGLISH"
 	"Panorama_Lang_Footer_Spanish"			"SPANISH"
 	"Panorama_Lang_Footer_French"			"FRENCH"
@@ -144,7 +144,7 @@
 	"Panorama_Lang_Footer_Bulgarian"			"BULGARIAN"
 	"Panorama_Lang_Footer_Turkish"			"TURKISH"
 	"Panorama_Lang_Footer_Ukrainian"			"UKRAINIAN"
-	
+
 
 	// selection strings, pre-localized
 	// do not localize these strings!
@@ -177,7 +177,7 @@
 	"Panorama_Selection_Ukrainian"			"Українська (Ukrainian)"
 
 	"Panorama_MoviePlaybackError"		"An error ocurred during playback"
-		
+
 	"MainMenu_Settings"	"SETTINGS"
 	"MainMenu_Exit"	"EXIT"
 	"MainMenu_Library"	"LIBRARY"
@@ -278,8 +278,7 @@
 	"MainMenu_Welcome_Controller_Update_MouseRegions_Description" "Many PC RTS & RPG games have complex on-screen UI for minimaps, spell bars, inventory slots, and so on. To make it easier to rapidly navigate them, we added Mouse Regions, a configurable way of mapping an entire trackpad to a region on-screen."
 
 	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Header" "Configuration Travelling"
-	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" "Want to play some co-op games at a friend's house? We wanted to
-	make it easy to take your controller with you, so today we're shipping a new feature that ensures your controller's game configurations travel with it, even when you're playing a co-op game on a friend's Steam account.\n* Currently available in Steam Beta client"
+	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" "Want to play some co-op games at a friend's house? We wanted to make it easy to take your controller with you, so today we're shipping a new feature that ensures your controller's game configurations travel with it, even when you're playing a co-op game on a friend's Steam account.\n\n*Currently available in Steam Beta client"
 
 	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Header" "Home Theater PCs"
 	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Description" "One of the things we weren't expecting was that so many users would find the Steam Controller great at controlling their HTPC outside of playing games. These users have made a number of great suggestions, and we've managed to ship some of them already."
@@ -352,7 +351,7 @@
 	"Login_WrongPassword"			"Please check your account name and password and try again."
 	"Login_WrongPasswordOnly"		"Please check your password and try again."
 	"Login_RateLimited"			"There have been too many login failures from your network in a short time period.  Please wait and try again later."
-	"Login_IPRestriction"			"This account can't be accessed from this location."	
+	"Login_IPRestriction"			"This account can't be accessed from this location."
 	"Login_AccountSuspended_Title" 	"Steam - Contact us"
 	"Login_AccountSuspended"		"Steam Support has suspended this account.\n\nAccounts typically become suspended when accessed by someone else, or a payment dispute is in progress.\n\nPlease contact Steam Support to resolve this issue."
 	"Login_AccountSuspendedSmaller"		"Steam Support has suspended this account. To resolve this issue, please contact us at\n\nhttp://support.steampowered.com"
@@ -706,7 +705,7 @@
 	"SettingsAbout_BetaChange_Title"	"Beta participation"
 	"SettingsAbout_BetaChange_Description"	"To change your beta state you must restart Steam.\n\nRestart now?"
 	"SettingsAbout_LegalInformation"	"Legal Information"
-	
+
 	// settings, account screen
 	"SettingsAccount_History"			"View account details"
 	"SettingsAccount_Verify"			"Verify email address"
@@ -798,7 +797,7 @@
 	"SettingsInGame_PlaySound"				"Play a sound"
 	"SettingsInGame_Home"					"Home Button"
 	"SettingsInGame_Home_NoEdit"			"Home Button (fixed)"
-	
+
 	// Settings, downloads
 	"SettingsDownloads_Intro"				"Steam Download Settings"
 	"SettingsDownloads_LibrariesLabel"	"Content Libraries"
@@ -935,6 +934,10 @@
 	"ControllerPairing_Success_Info" "Your Steam Controller is ready."
 	"BackgroundWelcome_Input"				"Press any button to start"
 
+	// Dongle update
+	"DongleUpdate_Title"					"Updating Wireless Receiver"
+	"DongleUpdate_Text"						"Your wireless receiver firmware is being updated. This may take several minutes to complete on some systems."
+
 	// Settings, audio screen
 	"SettingsAudio_MuteAll"					"Mute all"
 	"SettingsAudio_Ambient"					"Ambient sounds"
@@ -946,8 +949,8 @@
 	"SettingsInterface_Style0"	 "Bubbles"
 	"SettingsInterface_Style1"	 "TrailerTV"
 	"SettingsInterface_Style2"	 "Game Hubs Screenshots"
-	
-	
+
+
   "SettingsController_Shutdown_15" "15 Minutes"
   "SettingsController_Shutdown_30" "30 Minutes"
   "SettingsController_Shutdown_60" "60 Minutes"
@@ -959,6 +962,9 @@
 	"SettingsController_ShutdowntimeHeader" "Controller shutdown time"
 	"SettingsController_DetectedControllers" "Detected Controllers:"
 	"SettingsController_NoControllersDetected" "No Controllers Detected"
+	"SettingsController_SteamControllerAccounts"		"Registered Accounts:"
+	"SettingsController_SteamControllerPersonalize"		"PERSONALIZE"
+	"SettingsController_SteamControllerRegister"		"REGISTER"
 	"SettingsController_SteamControllerVersion_Header"		"Controller Battery Status:"
 	"SettingsController_SteamControllerVersion_Title"		"Controller Firmware Version:"
 	"SettingsController_SteamDongleVersion_Title"		"Receiver Firmware Version:"
@@ -1015,6 +1021,29 @@
 	"SettingsController_TurnOffOnQuit"					"Turn off on Big Picture Exit"
 	"SettingsController_Support"						"SUPPORT"
 	"SettingsController_Calibrate"						"CALIBRATE"
+	"SettingsController_Accounts_None"					"None"
+	"SettingsController_Accounts_DeregAYSTitle"			"Are you sure?"
+	"SettingsController_Accounts_DeregAYSDesc"			"Deregistering this account will stop your configs travelling with your controller when you log into the account."
+	"SettingsController_Deregister"						"DEREGISTER ACCOUNT"
+	"SettingsController_SwitchControllerAccount"		"SWITCH TO THIS ACCOUNT"
+	"Controller_Registration_TurnOnSound"				"Turn On Sound:"
+	"Controller_Registration_TurnOffSound"				"Turn Off Sound:"
+	"SettingController_HapticSound_Default"				"Default Sound"
+	"SettingController_HapticSound_0"					"Warm and Happy"
+	"SettingController_HapticSound_1"					"Invader"
+	"SettingController_HapticSound_2"					"Controller Confirmed"
+	"SettingController_HapticSound_3"					"Victory!"
+	"SettingController_HapticSound_4"					"Rise and Shine"
+	"SettingController_HapticSound_5"					"Shorty"
+	"SettingController_HapticSound_6"					"Warm Boot"
+	"SettingController_HapticSound_7"					"Next Level"
+	"SettingController_HapticSound_8"					"Shake It Off"
+	"SettingController_HapticSound_9"					"Access Denied"
+	"SettingController_HapticSound_10"					"Deactivate"
+	"SettingController_HapticSound_11"					"Discovery"
+	"SettingController_HapticSound_12"					"Triumph"
+	"SettingController_HapticSound_13"					"The Mann"
+
 
 	"Settings_SteamControllerSupport"					"Steam controller support"
 	"Settings_SteamControllerSupport_ExitNotification"	"Press and hold the 'B' button to exit"
@@ -1043,18 +1072,18 @@
 	"SettingsStore_Description2"	"Your operating system, input device, and any active In-Home Streaming connections are used to determine the content that is compatible with your current setup."
 	"SettingsStore_Description3"	"You're currently viewing Steam Store content designed for"
 	"SettingsStore_Description4"	"The following advanced option will add a menu to Store views, allowing you to easily switch between viewing locally playable titles and all content available on Steam. Notes may be displayed on some items to indicate special requirements such as a keyboard and mouse, or an In-Home Streaming connection."
-	
+
 	"SettingsStore_OSConfig_Win" "Windows (this machine)"
-	"SettingsStore_OSConfig_OSX" "OS X (this machine)"	
+	"SettingsStore_OSConfig_OSX" "OS X (this machine)"
 	"SettingsStore_OSConfig_SteamOS" "SteamOS (this machine)"
 	"SettingsStore_OSConfig_Linux" "Linux (this machine)"
 	"SettingsStore_XInputConfig" "Controller"
 	"SettingsStore_SteampadConfig" "Steam Controller"
 	"SettingsStore_KeyboardConfig"	"Keyboard & Mouse"
 	"SettingsStore_RemoteOSConfig_Win" "Windows (your In-Home Streaming device)"
-	"SettingsStore_RemoteOSConfig_OSX" "OS X (your In-Home Streaming device)"	
-	"SettingsStore_RemoteOSConfig_Linux" "SteamOS or Linux (your In-Home Streaming device)"	
-	
+	"SettingsStore_RemoteOSConfig_OSX" "OS X (your In-Home Streaming device)"
+	"SettingsStore_RemoteOSConfig_Linux" "SteamOS or Linux (your In-Home Streaming device)"
+
 	"Settings_ComingSoon"			"This feature is not ready yet, but it will be coming soon!"
 
 	"SupportMessages_Title"			"Support Message"
@@ -1078,7 +1107,7 @@
 	"Debugger_Properties"			"Properties:"
 	"Debugger_StyleFileLink"		"{s:stylefile}"
 	"Debugger_LayoutFileLink"		"{s:layoutfile}"
-	"Debugger_LayoutFileLink_Code"	"From XML/Code"	
+	"Debugger_LayoutFileLink_Code"	"From XML/Code"
 	"Debugger_InheritedStyleHeader"	"Inherited from "
 	"Debugger_Save"					"Save All Changes"
 	"Debugger_Revert"				"Revert All Changes"
@@ -1191,7 +1220,7 @@
 	"Steam_AddToAccount_Success"				"The package has been added to your account."
 	"Steam_AddToAccount_ViewGame"				"VIEW IN LIBRARY"
 	"Steam_AddToAccount_ViewAllGames"			"VIEW ALL GAMES"
-	
+
 	"Store_AppPurchaseOptions_Title"			"{i:purchase_option_count} Purchase Options"
 	"Store_AppPurchaseOptions_TitleNoCount"			"Purchase Options"
 	"Store_AppPurchaseOptions_AddToCart"		"Add to Cart"
@@ -1253,7 +1282,7 @@
 	"Checkout_Failed_OverlappingPackagesInCart"					"You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC."
 
 	"Checkout_Failed_GetFinalPrice_StoreCountry"				"Your billing address doesn’t look like it matches up with your current country.  Please contact support for assistance or use a payment method registered to your current address."
-	"Checkout_Failed_Finalize_ExceedWalletMax"					"Your purchase has not been completed.\nThe amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance."	
+	"Checkout_Failed_Finalize_ExceedWalletMax"					"Your purchase has not been completed.\nThe amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance."
 	"Checkout_Failed_Finalize_GenericError"						"An unexpected error has occurred. Your purchase has not been completed. Please contact Steam Support."
 	"Checkout_Failed_CCAVSError"								"Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered.\n\nNote that in some cases, your credit card company may put a 'hold' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again."
 	"Checkout_Failed_TimeoutError"								"Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later."
@@ -1278,7 +1307,7 @@
 	"Checkout_VerifyEmail_CanCompleteAfter"		"Your purchase can then be completed once you return to this screen."
 	"Checkout_VerifyEmail_Success"				"Success! Your email address has been verified."
 	"Checkout_VerifyEmail_Thanks"				"Thanks for helping us maintain the security of your account! You may now continue with your purchase."
-	
+
 	"Checkout_PaymentStep_ShippingInfo"	"Shipping Info"
 	"Checkout_PaymentStep_Method"	"Payment Info"
 	"Checkout_PaymentStep_Review"	"Review + Purchase"
@@ -1295,7 +1324,7 @@
 	"Checkout_GiftRecipient_Title"				"Gift Delivery"
 	"Checkout_GiftRecipient_HowToSend"			"How would you like to send your gift?"
 	"Checkout_GiftRecipient_EmailGift"			"Email my gift"
-	"Checkout_GiftRecipient_EmailGiftAddress"			"Email address"	
+	"Checkout_GiftRecipient_EmailGiftAddress"			"Email address"
 	"Checkout_GiftRecipient_SendToFriend"		"Send my gift directly through Steam"
 	"Checkout_GiftRecipient_SendToInventory"	"Store the gift in my inventory to send later"
 	"Checkout_GiftRecipient_EmailInstructions"	"Send my friend a gift email message, including all the info they'll need to get up and running on Steam."
@@ -1322,7 +1351,7 @@
 	"Checkout_GiftNote_MessageRemaining"		"({i:message_remaining} char left)"
 	"Checkout_GiftNote_Sentiment"				"Your sentiment"
 	"Checkout_GiftNote_Signature"				"Your signature"
-	
+
 	"Checkout_PaymentMethod_Title"				"Payment method"
 	"Checkout_PaymentMethod_Instructions"		"Please select a payment method"
 	"Checkout_PaymentMethod_Secondary"			"Secondary method"
@@ -1447,14 +1476,14 @@
 	"Library_Details_Play"		"PLAY"
 	"Library_Details_Watch"		"WATCH"
 	"Library_Details_PlayVR"		"PLAY IN VR"
-	"Library_Details_Play2D"		"PLAY"
+	"Library_Details_Play2D"		"PLAY ON DESKTOP"
 	"Library_Details_Stream"		"STREAM"
 	"Library_Details_Controller"	"STEAM CONTROLLERS"
 	"Library_Details_SharingStatus" "SHARED BY"
 	"Library_Details_SharingInUse"	"IN USE BY"
 	"Library_Details_SharingHeader" "{s:sharing_header}"
 	"Library_Details_SharingUser" "{s:sharing_user}"
-	
+
 	"Library_Details_ComingSoon"	"COMING SOON"
 	"Library_Details_Preload"	"PRELOAD"
 	"Library_Details_Preloaded"	"PRELOADED"
@@ -1472,7 +1501,7 @@
 	"Library_Details_Launch"		"LAUNCH"
 	"Library_Details_LaunchVR"		"LAUNCH IN VR"
 	"Library_Details_LaunchVROverlay" "LAUNCH VR OVERLAY"
-	"Library_Details_Launch2D"		"LAUNCH IN 2D"
+	"Library_Details_Launch2D"		  "LAUNCH ON DESKTOP"
 	"Library_Details_Launching"		"LAUNCHING"
 	"Library_Details_Purchase"		"PURCHASE"
 	"Library_Details_Renew"			"RENEW"
@@ -1484,19 +1513,19 @@
 	"Library_Details_RecentNews"	"RECENT NEWS"
 	"Library_Details_Achievements_MostRecent" "MOST RECENT"
 	"Library_Details_Achievements_SoClose"	"SO CLOSE..."
-	"Library_Details_Achievements_MoreUnachieved"	"MORE UNACHIEVED"	
+	"Library_Details_Achievements_MoreUnachieved"	"MORE UNACHIEVED"
 	"Library_Details_Purchased"	"PURCHASED"
 	"Library_Details_PurchasedValue"	"{t:s:purchased_date}"
 	"Library_Details_YouvePlayed"	"YOU'VE PLAYED"
 	"Library_Details_LastPlayed"	"LAST PLAYED"
 	"Library_Details_LastPlayedValue"	"{t:r:s:lastplayed}"
 	"Library_Details_YouveWatched"	"YOU'VE WATCHED"
-	"Library_Details_LastWatched"	"LAST WATCHED"	
+	"Library_Details_LastWatched"	"LAST WATCHED"
 	"Library_Details_SteamCloud"	"STEAM CLOUD"
 	"Library_Details_SteamCloudValue"	"{s:cloud_status}"
 	"Library_Details_RentalRemaining"	"RENTAL TIME REMAINING"
-	"Library_Details_RentalRemainingValue"	"{t:r:l:t:timeremaining}"	
-	"Library_Details_RentalExpiredValue"	"Your rental time for this video has expired"		
+	"Library_Details_RentalRemainingValue"	"{t:r:l:t:timeremaining}"
+	"Library_Details_RentalExpiredValue"	"Your rental time for this video has expired"
 	"Library_Details_Minutes"	"{i:minutes} Minutes"
 	"Library_Details_Hours"		"{i:hours} Hours"
 	"Library_Details_MinutesSingular"	"{i:minutes} Minute"
@@ -1554,14 +1583,32 @@
 	"Controller_Registration_Name"		"Controller Name:"
 	"Controller_Registration_Submit"	"Register to this account"
 	"Controller_Registration_Cancel"	"Wait, this isn't my account"
+	"Controller_Registration_Guest"		"Use a Guest account"
 	"Controller_Registration_SubDesc"	"You can update these at any time in the Big Picture Settings."
 	"Controller_Registration_GuideBrightness"	"Steam Button Brightness:"
 	"Controller_Registration_AbortTitle"	"Registration Aborted"
 	"Controller_Registration_AbortDesc"		"For now, we'll just use configurations from {s:accountname}. Next time you log into your own account, we'll get your controller setup."
+	"Controller_Registration_MigrateFail"		"Migration Failed"
+	"Controller_Registration_MigrateFailDesc"	"We ran into a problem. Please try registering again later. For now, we'll log you in as a Guest."
+	"Controller_Registration_GuestTitle"	"Using a Guest Account"
+	"Controller_Registration_GuestDesc"		"Ok, we'll use configurations from {s:accountname}."
 	"Controller_Registration_ProgressTitle"	"Registering..."
 	"Controller_Registration_Personalize_Title" "PERSONALIZE YOUR CONTROLLER"
 	"Controller_Registration_Personalize_Submit" "Submit"
 	"Controller_Registration_Migrating_Title" "MIGRATING CONFIGURATIONS..."
+	"Controller_Registration_Selecting_Title" "SELECT CONTROLLER ACCOUNT"
+	"Controller_Registration_Selecting_Desc" "We haven't seen your controller on this account before. Would you like to register it, or use the configurations from another account?"
+	"Controller_Registration_Selecting_Account"	"Use configs from: {s:selaccountname}"
+	"Controller_Registration_FirmwareUpdate_Title"	"Firmware Update Required"
+	"Controller_Registration_FirmwareUpdate_Desc" "To use the latest Steam Controller Personalization and Sharing features, a firmware update is required."
+	"Controller_Registration_FirmwareUpdateAborted_Desc"	"Next time you use your controller with the latest firmware, we'll get your controller setup.  For now, we'll log you in as a Guest."
+
+	"Controller_Registration_Firmware_Submit"	"OK"
+
+	"Controller_Config_FailedLoad"			"Configuration Failure"
+	"Controller_Config_FailedLoad_Desc"		"We were unable to load your configuration at this time. Please try again later."
+	"Controller_Config_CommFailedLoad"		"Download Failed"
+	"Controller_Config_CommFailedLoad_Desc"	"We were unable to download the community configuration at this time. Please try again later."
 
 	"Library_Details_ValidateLocalContent"	"Validate Content"
 	"Library_Details_KillApp"		"Exit {s:apptype}"
@@ -1591,6 +1638,12 @@
 	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Title"		"KEYBOARD/MOUSE REQUIRED"
 	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc"		"The creators of this game have made an interface that requires a keyboard and/or mouse to access portions of the game."
 	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc_Detail"		"The creators of this game have made an interface that requires a keyboard and/or mouse to access portions of the game. For example, it may include an interstitial launcher or an in-game menu that cannot be navigated with a controller."
+	"Library_Details_OverlayDisabledWarning_Title"		"STEAM OVERLAY DISABLED"
+	"Library_Details_OverlayDisabledWarning_Desc"		"The Steam Overlay is disabled.  In-game configuration and some Steam Controller functionality unavailable."
+	"Library_Details_OverlayDisabledWarning_Desc_Detail"		"The Steam Overlay is required to configure your Steam Controller in-game and for some functionality such as On-Screen Displays.  Please enable your Steam Overlay globally or specifically for this game in order to experience full controller functionality."
+
+	"Library_Details_2DLaunchWarning_Title"				"WARNING"
+	"Library_Details_2DLaunchWarning_Desc"				"The title you are launching does not support VR. It will appear on your desktop and may affect VR performance."
 
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
 	"Library_Details_CommunityHubWhatIsIt"	"Community-made content ({d:ugccount} items)."
@@ -1646,6 +1699,7 @@
 	"Library_Details_StartGamePrompt_Description" "You are starting a game that requires a keyboard & mouse. Do you wish to continue?"
 	"Library_Details_DownloadGamePrompt_Title"		"Warning"
 	"Library_Details_DownloadGamePrompt_Description" "You are downloading a game that requires a keyboard & mouse. Do you wish to continue?"
+	"Library_ControllerSelectController"		"Select Controller To Configure"
 	"Library_ControllerSaveBindingTitle"		"Save Bindings"
 	"Library_ControllerSetTitle"			"Set Title"
 	"Library_ControllerAddDescription"		"Add Description"
@@ -1658,7 +1712,7 @@
 	"Library_ControllerSaveDefaultDescription"	  "Configuration created by {s:bindingcreator} for use with the Steam Controller."
 	"Library_ControllerBinding_RequireTitleError"	"Please enter a title to save this binding set."
 	"Library_Controller_ControllerBindingSaveAlreadyInProgress"	"Binding save failed because another save is already in progress."
-	"Library_Controller_ControllerBindingSavedFailedPublish"	"Your bindings have been saved, but publishing to workshop has failed."
+	"Library_Controller_ControllerBindingSavedFailedPublish"	"Failed to upload your controller configuration to the Workshop."
 	"Library_Controller_ControllerBindingFileWriteError"	"Failed writing bindings to disk."
 	"Library_Controller_ControllerBindingSaved"	"Bindings are now saved!"
 	"Library_ControllerBindingPublic"		"Public"
@@ -1734,11 +1788,13 @@
 	"Library_Details_ControllerPad_OuterEdge_40pct" "40 %"
 
 	"Library_Details_ControllerBindingsGordon_Select"	"SELECT"
+	"Library_Details_ControllerBindingsGordon_Import"	"IMPORT CONFIG"
 	"Library_Details_ControllerBindingsGordon_Presets"	"BROWSE CONFIGS"
-	"Library_Details_ControllerBindingsGordon_Save"		"SAVE-AS"
+	"Library_Details_ControllerBindingsGordon_Save"		"EXPORT CONFIG"
 	"Library_Details_ControllerBindingsGordon_Done"		"DONE"
 	"Library_Details_ControllerBindingsGordon_Back"		"BACK"
 	"Library_Details_ControllerBindingsGordon_Remove"	"REMOVE"
+	"Library_Details_ControllerBindingsGordon_Switch"	"SWITCH CONTROLLER"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOn"	"TOGGLE MULTI-BUTTON ON"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOff"	"TOGGLE MULTI-BUTTON OFF"
 	"Library_Details_ControllerBindingsGordon_ResetToDefault"	"RESET TO DEFAULT"
@@ -1758,7 +1814,7 @@
 	"Library_GameAction_None"						"None"
 
 	"Library_Details_Binding_Custom_Description"		"Custom Description..."
-	
+
 	"Library_Details_MouseButton_Left"				"LEFT MOUSE"
 	"Library_Details_MouseButton_Right"				"RIGHT MOUSE"
 	"Library_Details_MouseButton_Middle"			"MIDDLE MOUSE"
@@ -1881,8 +1937,8 @@
 	"Library_Details_FieldLabel_AdaptiveCentering"	"Adaptive Centering"
 	"Library_Details_FieldLabel_VirtualCapSize"		"AC Virtual Stick Cap Size"
 	"Library_Details_FieldLabel_VirtualStickThrow"	"AC Virtual Stick Throw Distance"
-	"Library_Details_FieldLabel_CurveExponent"		"Stick Response Curve"	
-	"Library_Details_FieldLabel_SwipeDuration"			"Swipe Duration"	
+	"Library_Details_FieldLabel_CurveExponent"		"Stick Response Curve"
+	"Library_Details_FieldLabel_SwipeDuration"			"Swipe Duration"
 	"Library_Details_FieldLabel_AntiDeadZone"		"Output Anti-Deadzone"
 	"Library_Details_FieldLabel_AntiDeadZoneBuffer" "Output Anti-Deadzone Buffer"
 	"Library_Details_FieldLabel_EdgeBindingInvert"	"Outer Ring Binding Invert"
@@ -1981,7 +2037,7 @@
 	"Library_Details_FieldLabel_MouseRegion_PositionY"	"Vertical Position"
 	"Library_Details_FieldLabel_MouseRegionClick"		"Click Binding"
 	"Library_Details_FieldLabel_TeleportStart"		"Snap Mouse To Region On Mode Shift"
-	"Library_Details_FieldLabel_TeleportStop"		"Snap Mouse Back on Mode Shift End"
+	"Library_Details_FieldLabel_TeleportStop"		"Snap Mouse Back on Stop"
 	"Library_Details_FieldLabel_RegionHorizScale"		"Region Horizontal Scale"
 	"Library_Details_FieldLabel_RegionVertScale"		"Region Vertical Scale"
 
@@ -2067,9 +2123,12 @@
 	"Library_Controller_Property_Value_TouchMenu_Button13"		"13 Buttons"
 	"Library_Controller_Property_Value_TouchMenu_Button14"		"14 Buttons"
 	"Library_Controller_Property_Value_TouchMenu_Button16"		"16 Buttons"
-	"Library_Controller_Property_Value_TriggerDampeningRight"	"Right Trigger Dampening"
-	"Library_Controller_Property_Value_TriggerDampeningLeft"	"Left Trigger Dampening"
-	"Library_Controller_Property_Value_TriggerDampeningBoth"	"Both Trigger Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningRightSoft"	"Right Trigger Soft Pull Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningLeftSoft"	"Left Trigger Soft Pull Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningBothSoft"	"Both Trigger Soft Pull Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningRightAlways"	"Right Trigger Soft/Full Pull Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningLeftAlways"	"Left Trigger Soft/Full Pull Dampening"
+	"Library_Controller_Property_Value_TriggerDampeningBothAlways"	"Both Trigger Soft/Full Pull Dampening"
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Circle"	"Circular"
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Horizontal"	"Horizontal"
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Vertical"	"Vertical"
@@ -2118,9 +2177,9 @@
 	"Library_LocalMusicTitle"		"Local Music"
 	"Library_DownloadsTitle"		"Downloads"
 	"Library_DownloadsTitle_Detail"		"{d:downloads}"
-	
+
 	"Library_FilterActive"		"(FILTERED)"
-	
+
 	"Library_ListView"			"LIST VIEW"
 	"Library_GridView"			"GRID VIEW"
 	"Library_AddContent"			"+"
@@ -2130,7 +2189,7 @@
 	"Library_ActivateProduct_Title"	"Activate a product"
 	"Library_ActivateProduct_Intro"	"To register your product with Steam, enter the product code distributed with a retail CD/DVD or other Steam product key here."
 	"Library_ActivateProduct_CodeLabel" "Product code"
-	"Library_ActivateProduct_AgreementDesc"	"By activating a product you agree to the Steam Subscriber Agreement and Privacy Policy." 
+	"Library_ActivateProduct_AgreementDesc"	"By activating a product you agree to the Steam Subscriber Agreement and Privacy Policy."
 	"Library_ActivateProduct_Activate"	"I AGREE, ACTIVATE"
 	"Library_ActivateProduct_Hint" "Activate a product key or code on Steam"
   "Library_AddShortcut_Title"     "Add a Shortcut to your Steam Library"
@@ -2158,7 +2217,7 @@
 	"Library_GotoExternalSignup"		"Visit Signup Site"
 	"Library_SkipExternalSignup"		"Later"
 	"Library_NoControllerConfigHeader" "First Time Controller Setup"
-	"Library_NoControllerConfigDesc" "Since this is your first time launching this game with the Steam Controller, we recommend selecting a configuration Template.\n\nYou can always change this later from the Template selector."
+	"Library_NoControllerConfigDesc" "Since this is your first time launching this game with {s:controllername}'s Steam Controller, we recommend selecting a configuration Template.\n\nYou can always change this later from the Template selector."
 	"Library_NoControllerConfigLetsGo" "Let's Go!"
 	"Library_ScreenshotsSlideshowTitle"	"{s:gamename}"
 	"Library_ScreenshotsSlideshowSubTitle"	"Screenshot {d:curss} of {d:totalss}"
@@ -2219,7 +2278,7 @@
 	"Library_Settings_Preferences"			"Preferences"
 	"Library_Settings_Support"				"Support"
 	"Library_Settings_Content"				"Content"
-	
+
 	"Library_TagHeader" "Narrow By Tag"
 	"Library_CategoryHeader" "Your Categories"
 	"Library_TypeHeader" "Narrow By Type"
@@ -2229,6 +2288,7 @@
 	"Library_GamesICanPlay" "Playable"
 	"Library_VRFilter" "Supports VR"
 	"Library_ReadyToPlay" "Ready to Play"
+	"Library_Unplayed" "Unplayed"
 	"Library_PlatformFilter" "{s:platformname} Games"
 	"Library_ControllerSupported" "Controller Supported"
 	"Library_Hidden" "Hidden Games"
@@ -2264,7 +2324,7 @@
 	"Library_Suggested_UnplayedStore" "Popular on Steam"
 	"Library_Suggested_UnplayedMRU" "You just purchased"
 	"Library_Suggested_FreeToPlay" "Play Now!"
-	
+
 	"Library_Filter_RecentlyPlayed" "Recently Played"
 	"Library_Filter_Installed" "Installed"
 	"Library_Filter_ControllerSupported" "Controller Supported"
@@ -2281,8 +2341,8 @@
 	"Library_Filter_MusicByArtist" "Sort by Artist"
 	"Library_AllGames_EmptyGrid" "We came up empty..."
 	"Library_AllGames_EmptySearchGrid" "Search your Steam library"
-	
-	
+
+
 	"Library_Details_EditUpdateOptions" "Set Update Options..."
 	"Library_EditUpdateOptions_Title"	"Updates"
 	"Library_AutoUpdate_CodeLabel"	"Automatic Updates"
@@ -2290,22 +2350,24 @@
 	"Library_AutoUpdate_Disabled"	"Do not automatically update this {s:apptype}"
 	"Library_AutoUpdate_HighPriority"	"High Priority - Always auto-update this {s:apptype} ASAP"
 	"Library_BackgroundUpdates_Label" "While {s:gamename} is running"
-	
+
 	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Follow my global setting (allow background downloads)"
 	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Follow my global setting (stop background downloads)"
 	"Library_AppAllowDownloadsDuringGameplay_Always" "Always allow background downloads"
 	"Library_AppAllowDownloadsDuringGameplay_Never" "Never allow background downloads"
-	
+
 	"Steam_LaunchOption_Game"							"Play {s:gamename}"
 	"Steam_LaunchOption_Application"			"Launch {s:gamename}"
 	"Steam_LaunchOption_SafeMode"					"Launch {s:gamename} in Safe Mode"
-	"Steam_LaunchOption_VR"								"Launch {s:gamename} in VR Mode"
+	"Steam_LaunchOption_VR"								"Launch {s:gamename} in Steam VR Mode"
+	"Steam_LaunchOption_othervr"						"Launch {s:gamename} in Other VR Mode"
+	"Steam_LaunchOption_openvroverlay"					"Launch {s:gamename} as Steam VR Overlay"
 	"Steam_LaunchOption_Server"						"Launch Dedicated Server"
 	"Steam_LaunchOption_Editor"						"Launch Game Editor"
 	"Steam_LaunchOption_Config"						"Launch Configuration Tool"
 	"Steam_LaunchOption_Manual"						"Show Manual"
 	"Steam_LaunchOption_Benchmark"				"Launch Benchmark Tool"
-	
+
 
 	"Activate_SubscriptionSuccess_Headline" "Activation Successful!"
 	"Activate_SubscriptionSuccess" "Your product activation code has successfully been activated. This product or products are now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
@@ -2344,15 +2406,17 @@
 	"Profile_Inventory_Title"	"Inventory"
 	"Profile_TradeOffers_Title"	"Trade Offers"
 	"Profile_NewTradeOffer_Title"	   "Trade Offer"
-	
+
 	"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... {d:progress}%"
 
 	"Notification_GameInviteBody"		"invites you to play {s:gamename}"
+	"Notification_GameInviteBodyVR"		"invites you to play a game"
 	"Notification_TheSteamCommunity"	"The Steam Community"
 	"Notification_AccessWhilePlaying"	"Access while playing"
 	"Notification_HasFinishedDownload"	"Download complete"
 	"Notification_IsNowOnline"		"is now online"
 	"Notification_IsNowPlaying"		"is now playing {s:gamename}"
+	"Notification_MultipleIsNowPlaying"		"You have {d:InGameCount} friends playing games."
 	"Notification_BannedFromChat"		"banned you from {s:chatname} chat"
 	"Notification_KickedFromChat"		"kicked you from {s:chatname} chat"
 	"Notification_VoiceChat"		"invites you to voice chat"
@@ -2363,6 +2427,7 @@
 	"Notification_ItemReceivedSingular"	"You have 1 new item in your inventory"
 	"Notification_ItemsReceived"		"You have {d:numItems} new items in your inventory"
 	"Notification_ClanInvite"		"You are invited to join the group {s:clanname}"
+	"Notification_ClanInviteSimple"		"invites you to join their group"
 	"Notification_StatusUpdate"		"says: {s:statustext}"
 	"Notification_ClanEvent"		"{s:clanname} {s:action}: {s:event}"
 	"Notification_AchievementHeadline_Unlocked"	"Achievement Unlocked!"
@@ -2386,8 +2451,12 @@
 	"Notification_FriendsInviteCount"	"+{d:InviteCount}"
 	"Notification_ClanInvites"		"You have {d:InviteCount} waiting group invites."
 	"Notification_ClansInviteCount"	"+{d:InviteCount}"
+	"Notification_MultipleIsNowPlayingCount" "+{d:InGameCount}"
 	"Notification_SteamLinkAuth_Title"	"Remote device detected"
 	"Notification_SteamLinkAuth_Text"	"Enter access code to confirm"
+	"Notification_Controller_Title"		"{s:controllername}"
+	"Notification_Controller_Text"		"Using configs from {s:accountname}"
+	"Notification_Controller_Guest"		"Using a Guest account."
 
 	"Friends_GroupEvent_NowStarting"		"has event starting"
 
@@ -2398,7 +2467,7 @@
 	"Friends_Header_Online"		"Online"
 	"Friends_Header_Offline"		"Offline"
 
-	
+
 	"Steam_DeleteCacheConfirmation_Title"		"Uninstall?"
 	"Steam_DeleteCacheConfirmation_Text"		"{s:gamename} will remain in your Library, but to play it in the future you'll have to download it again."
 	"Steam_DeleteApplicationConfirmation_Text"	"This will delete all {s:gamename} content from this computer.\n\nThe application will remain in your Library, but to run it in the future you'll have to download its content again."
@@ -2418,10 +2487,10 @@
 	"SteamUI_GameRequires_NTFS_Detail"	"The game you are installing requires a drive with the NTFS file system and cannot be installed on a FAT32 filesystem."
 	"SteamUI_OfflineMode_GameNotReady"		"This game is not ready to be played in offline mode."
 	"SteamUI_OfflineMode_GameNotReady_Title"	"Game unavailable"
-	
+
 	"Steam_Preload_GameNotReady_Title" "Not Yet Available"
 	"Steam_Preload_GameNotReady" "This game is not yet released. It will be unlocked\nand available for play on its official release day."
-	
+
 	"Steam_RunGame_Title_Error"			"Error"
 	"Steam_RunGame_AnotherGameIsBeingRan"	"Cannot run game. You currently have another game launch in progress, please wait until that is complete."
 	"Steam_RunGame_Title_ConvertingToSteam3Content"		"Steam Content System"
@@ -2492,7 +2561,7 @@
 	"Steam_AppUpdateError_0"		"no error"
 	"Steam_AppUpdateError_1"		"unknown error"
 	"Steam_AppUpdateError_2"		"update paused"
-	"Steam_AppUpdateError_3"		"update canceled" 
+	"Steam_AppUpdateError_3"		"update canceled"
 	"Steam_AppUpdateError_4"		"update suspended"
 	"Steam_AppUpdateError_5"		"no licenses"
 	"Steam_AppUpdateError_6"		"no internet connection"
@@ -2526,7 +2595,7 @@
 	"Steam_AppUpdateError_34"		"pending license"
 	"Steam_AppUpdateError_35"		"other session playing"
 	"Steam_AppUpdateError_36"		"corrupt download"
-	
+
 
 	"Friends_Tab_Friends"		"FRIENDS"
 	"Friends_Tab_Groups"		"GROUPS"
@@ -2604,7 +2673,7 @@
 	"Friends_AddFriend"			"ADD FRIEND"
 	"Friends_AddFriendTitle"		"Add a Friend"
 	"Friends_AddGroupTitle"			"Add a Group"
-	"Friends_AddFriendDesc"			"Enter the player name, account name, real name, email address or profile URL name of the person you're looking for."	
+	"Friends_AddFriendDesc"			"Enter the player name, account name, real name, email address or profile URL name of the person you're looking for."
 	"Friends_AddGroupDesc"			"Enter the group name or profile URL name of the group you're looking for."
 	"Friends_AddFriend_OK"			"OK"
 	"Friends_AddFriend_Cancel"		"CANCEL"
@@ -2645,7 +2714,7 @@
 	"Friends_InviteToLobbyFooter"		"INVITE"
 	"Friends_InviteToLobbySent"		"INVITE SENT"
 	"Friends_InviteToLobby_Offline"	"You have no Friends online who are eligible to Invite"
-	
+
 	"Friends_InviteToWatchTitle"		"Invite To Watch"
 	"Friends_InviteToWatchSent"		"INVITE SENT"
 
@@ -2653,7 +2722,7 @@
 	"Community_Market_Title"			"Market"
 	"Community_Workshop_Title"			"Workshop"
 	"Friend_Activity_Title"				"Friend Activity"
-	
+
 	"Community_Friends_InGame_Count"	"{i:numfriendsingame} FRIENDS IN-GAME"
 	"Community_Friends_MoreOnline_Count"	"{i:numfriendsonline} MORE ONLINE"
 	"Community_Friends_JustOnline_Count"	"{i:numfriendsonline} FRIENDS ONLINE"
@@ -2801,7 +2870,7 @@
 	"Web_NextTab" "NEXT TAB"
 	"Web_Previous" "PREV TAB"
 	"Web_TabPosition" "TAB {i:currenttab} of {i:opentabs}"
-	
+
 	"cef_error_title" "Error"
 	"cef_error_header" "Error Code"
 	"cef_cachemiss" "Your form request has expired. Click reload to re-submit the form data."
@@ -2829,7 +2898,7 @@
 	"Downloads_CurrentRate2"				"Current rate"
 	"Downloads_PeakRate"				"Peak rate"
 	"Downloads_TotalDownload"				"Total"
-	
+
 	"Downloads_Pause"		"PAUSE"
 	"Downloads_Resume"		"RESUME"
 	"Downloads_PauseAll"		"PAUSE ALL"
@@ -2838,35 +2907,35 @@
 	"Downloads_ViewSettings"	"VIEW SETTINGS"
 	"Downloads_Remove"	"REMOVE"
 	"Downloads_MoveToTop" "DOWNLOAD NOW"
-	
+
 	"Downloads_QueuedTitel" "{i:downloadsqueued} downloads queued"
 	"Downloads_DeferredTitel" "{i:downloadsdeferred} downloads scheduled"
 	"Downloads_PausedTitel" "{i:downloadspaused} downloads paused"
 	"Downloads_FinishedTitel" "{i:downloadscomplete} downloads finished"
 	"Downloads_Summary" "Download Summary"
-  
+
 	"Downloads_AmountValue"				"{s:downloadamount}"
 	"Downloads_TimeRemainValue"		"{t:r:t:downloadtime}"
 	"Downloads_CurrentRateValue"	"{s:downloadrate}/s"
 	"Downloads_Percent"						"{s:downloadpercent}"
 	"Downloads_Downloading"	"DOWNLOADING"
 	"Downloads_Paused"	"DOWNLOADS PAUSED"
-	
+
 	"Downloads_ItemTitle"				"{s:downloadtitle}"
 	"Downloads_ItemStatus"			"{s:downloadstatus}"
 	"Downloads_ItemError"				"{s:downloaderror}"
 	"Downloads_ItemsPaused"			"{i:downloadspaused} ITEMS QUEUED"
 	"Downloads_ItemPaused"			"1 ITEM QUEUED"
 	"Downloads_ItemsComplete"		"{i:downloadscomplete} OF {i:downloadstotal} ITEMS COMPLETE"
-	"Downloads_ItemComplete"		"1 ITEM COMPLETE"	
-	
+	"Downloads_ItemComplete"		"1 ITEM COMPLETE"
+
 	"Downloads_Summary_TotalAmount"	"Total : {s:downloadamount}"
 	"Downloads_Summary_PeakRate"		"Peak : {s:downloadpeakrate}/s"
 	"Downloads_Summary_CurrentRate"	"Current : {s:downloadrate}/s"
 	"Downloads_Summary_Settings_btn"    "Downloads Settings"
-	
+
 	"Downloads_None"	"No downloads in progress"
-	
+
 	"Downloads_Status_installing"	"Installing {s:downloadpercent}"
 	"Downloads_Status_starting"	"Starting"
 	"Downloads_Status_validating"	"Validating {s:downloadpercent}"
@@ -2886,7 +2955,7 @@
 	"Downloads_Status_preloaded"	"Pre-load complete"
 	"Downloads_Status_finished"	"Download finished at {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download scheduled at {t:t:downloadstart}"
-	
+
 	"Quit_LabelStreamingClient"	"{s:streamingclient}"
 	"Quit_LabelStreamingServer"	"{s:streamingserver}"
 	"Quit_StopStreaming"		"Stop Streaming"
@@ -2906,7 +2975,7 @@
 	"Quit_Sleep"				"Suspend System"
 	"Quit_TurnOffController"		"Turn Off Controller"
 	"Quit_SwitchToHDMIInput"	"Switch to HDMI Input"
-	"Quit_ZeroTracker"			"Center View"
+	"Quit_ZeroTracker"			"Reset Seated Position"
 
 	"OOBE_WelcomeTitle"				"Welcome to Steam"
 	"OOBE_LanguageSelect"			"What language should we use?"
@@ -2925,7 +2994,7 @@
 	"OOBE_CheckForUpdates_Finish"				"RUN STEAM NOW"
 	"OOBE_CheckForUpdates_RestartInstallNow"	"DOWNLOAD AND INSTALL NOW"
 	"OOBE_CheckForUpdates_Shutdown"				"SHUTDOWN"
-	
+
 	"DeviceAuth_ChooseDialog_Title" "Want to play this game?"
 	"DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user {s:owner}. Would you like to request access to {s:owner}'s games on this device?"
 	"DeviceAuth_ChooseDialog_Purchase" "I'D RATHER BUY IT..."
@@ -2942,14 +3011,14 @@
 	"DeviceAuth_RequestDialog_SendPending" "Your email request has been sent. Here’s hoping your wish will be granted soon!"
 	"DeviceAuth_RequestDialog_SendError" "Failed to send authorization request({s:reason})"
 
-	"DeviceAuth_Authorized_Notification" "{s:owner}'s games are now available for you to play on this computer." 
-	"DeviceAuth_Deauthorized_Notification" "{s:owner} has revoked sharing here. Some games may now be unavailable." 
-	"DeviceAuth_StopPlaying_Notification" "Hey, {s:owner} needs this shared gamed back! You have {s:minutes} minutes of playtime remaining..." 
-	"DeviceAuth_SharedLibraryAvaliable_Notification" "Hooray, {s:owner}'s shared games are now available for you to play..." 
-	
+	"DeviceAuth_Authorized_Notification" "{s:owner}'s games are now available for you to play on this computer."
+	"DeviceAuth_Deauthorized_Notification" "{s:owner} has revoked sharing here. Some games may now be unavailable."
+	"DeviceAuth_StopPlaying_Notification" "Hey, {s:owner} needs this shared gamed back! You have {s:minutes} minutes of playtime remaining..."
+	"DeviceAuth_SharedLibraryAvaliable_Notification" "Hooray, {s:owner}'s shared games are now available for you to play..."
+
 	"DeviceAuth_StoppedSharedGame_Title" "Shared Library Warning"
 	"DeviceAuth_StoppedSharedGame_Text" "Steam terminated \"{s:game}\" because {s:owner} is currently using this game library."
-		
+
 	"Settings_ManageDevices_Item" " "
 	"Settings_ManageDevices_Name" "DEVICE NAME"
 	"Settings_ManageDevices_Time" "LAST ACCESSED"
@@ -2960,7 +3029,7 @@
 	"Settings_ManageDevices_Not_Accessed" "Authorized, not yet accessed"
 	"Settings_ManageDevices_Authorize" "AUTHORIZE"
 	"Settings_ManageDevices_Remove" "DEAUTHORIZE"
-	
+
 	"Settings_ManageDeviceAuth_Text" 	"You have authorized the following computers to share your library through Family Library Sharing. You may have up to 10 authorized devices at a given time, including this computer."
 	"Settings_ManageDevices_Title" "Family Library Sharing"
 	"Settings_ManageDevices_Authorization_Failed" "Device authorization failed ({s:reason})"
@@ -2969,7 +3038,7 @@
 	"Settings_ManageDevices"		"Manage Devices"
 
 	"SettingsAccount_ManageDeviceAuth" "Manage Family Library Sharing"
-	
+
 	"Settings_Family_Sharing_Title" "Family Library Sharing"
 	"Settings_Family_Sharing_ManageSharing" "Manage other computers..."
 	"Settings_Family_Sharing_StateAuthorized" "This computer is currently authorized by you for Family Library Sharing.\nSelected accounts can use your game library while logged in here."
@@ -2986,7 +3055,7 @@
 	"Settings_Family_Sharing_List_Empty" "No other local accounts found."
 	"Settings_Family_Sharing_Borrowers" "Select up to 5 people who may use your game library on your authorized computers. The following users have previously logged into Steam on one or more of your shared computers."
 
-	"Settings_RemoteClients_Title" "In-Home Streaming"		
+	"Settings_RemoteClients_Title" "In-Home Streaming"
 	"Settings_RemoteClients_Description" "Stream gameplay from your Windows PC to other computers detected on your local network. \nTo connect, simply log into this same Steam account on another local device."
 	"Settings_RemoteClients_StreamActiveIntro" "Steam is currently being controlled by another device on your local network."
 	"Settings_RemoteClients_StreamActiveDeviceName" "Remote client device name: {s:clientname}"
@@ -3049,9 +3118,9 @@
 	"Settings_RemoteClients_Disabled" "Streaming disabled"
 	"Settings_RemoteClients_Unsupported" "Connected"
 	"Settings_RemoteClients_Disconnected" "Not connected"
-	
-	
-	
+
+
+
 	"Steam_AllowGameLaunch_Info"	"Allow {s:gamename} to launch with optional command line \"{s:arguments}\" ?\nIf you did not request this launch then select Cancel"
 	"Steam_AllowGameLaunch_Title"	"Allow game launch"
 
@@ -3117,7 +3186,7 @@
 	"Parental_Set_Recovery1"		"To assist if your Family View PIN is lost or forgotten, please configure an email address to be used for PIN recovery."
 	"Parental_Set_Recovery2"		"This should be the email address of the parent, not the child, as anyone with access to this email account can disable Family View without knowledge of the PIN."
 	"Parental_Enter_RecoveryEmail"	"Enter Recovery Email"
-	
+
 	"Parental_Set_PIN"				"Now create a 4-digit PIN for your account. This PIN will be required to exit Family View, as well as edit these settings in the future, so you may want to jot it down and keep it in a safe place."
 	"Parental_Enter_PIN"			"Create your PIN"
 	"Parental_Reenter_PIN"			"Re-enter your PIN"
@@ -3144,12 +3213,12 @@
 
 	"Parental_Disable_Success_Title"	"Family View is now disabled"
 	"Parental_Disable_Success_Instr"	"To re-enable Family View at any time, return to these settings."
-	
+
 	"Parental_DisableTitle"		"Disable Family View"
 	"Parental_DisablePrompt"	"Are you sure you want to disable the Family View associated with this account?"
 	"Parental_Disable"			"DISABLE"
 	"Parental_Disable_Cancel"	"CANCEL"
-	
+
 	"GoOnline_Header"			"YOU ARE"
 	"GoOnline_CurrentMode"		"OFFLINE"
 	"GoOnline_Footer"			"SELECT TO CHANGE"
@@ -3186,7 +3255,7 @@
 	"SettingsInterface_Search_Custom"	"Custom (Advanced)"
 	"SettingsInterface_SearchProvider" "Default search engine:"
 	"SettingsInterface_SearchProvider_Custom" "Enter URL:"
-	
+
 	"Overlay_EnterGameText"	"Enter text to send to the game"
 	"Overlay_OpenKeyboard"	"Open Keyboard"
 	"Overlay_HowToClose" "Return to {s:apptype}"
@@ -3198,7 +3267,7 @@
 	"MainMenu_NewSteamOSUpdate"	"Restart to Update {s:osname}"
 	"MainMenu_RestartForSteamOSUpdate_Title"	"Restart {s:osname}"
 	"MainMenu_RestartForSteamOSUpdate"	"{s:osname} updates are available. Would you like to restart to update now?\n\nThe update will take a few minutes; do not manually power off the system."
-	
+
 	"Overlay_AsyncNotificatoinsRequestedDialog_Title" "Allow notifications?"
 	"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Allow notifications"
 	"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Disallow"
@@ -3225,7 +3294,7 @@
 	"FileSelector_Select"	"Select"
 	"FileSelector_DefaultComputername" "Computer"
 	"FileSelector_NoPreview" "No Preview"
-	
+
 	"MusicAlbum_Album"		"Album"
 	"MusicAlbum_Artist"	"Artist"
 	"MusicAlbum_Play" "Play Track"
@@ -3255,26 +3324,26 @@
 	"MusicArtist_All_Play_Next"	"Play Artist Next"
 	"MusicArtist_All_Add_To_Queue"	"Add Artist to Queue"
 	"MusicPlaylist_Title"	"Title"
-	"MusicPlaylist_Play_Playlist"	"Play List"
+	"MusicPlaylist_Play_Playlist"	"Play Playlist"
 	"MusicPlaylist_Play_PlaylistItem"	"Play Track"
-	"MusicPlaylist_Play" "Play List"
+	"MusicPlaylist_Play" "Play Playlist"
 	"MusicPlaylist_Play_Next" "Play Next"
 	"MusicPlaylist_Add_To_Queue" "Add to Queue"
 	"MusicPlaylist_Move_Begin" "Move to Top"
 	"MusicPlaylist_Move_Up" "Move Up"
 	"MusicPlaylist_Move_Down" "Move Down"
 	"MusicPlaylist_Move_End" "Move to Bottom"
-	"MusicPlaylist_Delete" "Delete List"
+	"MusicPlaylist_Delete" "Delete Playlist"
 	"MusicPlaylist_Delete_Header" "Delete Playlist"
 	"MusicPlaylist_Delete_Text" "Are you sure you want to delete '{s:PlaylistName}' ?"
 	"MusicPlaylist_Delete_Yes" "Yes"
 	"MusicPlaylist_Delete_Cancel" "Cancel"
-	"MusicPlaylist_Rename" "Rename List"
-	"MusicPlaylist_Rename_Text" "Rename this playlist"
+	"MusicPlaylist_Rename" "Rename Playlist"
+	"MusicPlaylist_Rename_Text" "Rename this Playlist"
 	"MusicPlaylist_Rename_OK" "OK"
 	"MusicPlaylist_Rename_Cancel" "Cancel"
 	"MusicPlaylist_Rename_Accept" "ACCEPT"
-	"MusicPlaylist_Add" "Create New List"
+	"MusicPlaylist_Add" "Create New Playlist"
 	"MusicPlaylist_Add_Text" "Create Playlist"
 	"MusicPlaylist_Add_OK" "OK"
 	"MusicPlaylist_Add_Cancel" "Cancel"
@@ -3297,11 +3366,11 @@
 	"MusicPlaylist_Select" "SELECT"
 	"MusicPlaylist_Cancel" "CANCEL"
 	"MusicPlaylist_Select_NewPlaylist" "Create New Playlist"
-	
+
 	"Music_TracksInfo_NoTracks" "No tracks"
 	"Music_TracksInfo_OneTrack" "1 track / {s:TracksDuration}"
 	"Music_TracksInfo_MultipleTracks" "{i:TracksCount} tracks / {s:TracksDuration}"
-	
+
 	"Music_Control_Music"	"MUSIC"
 	"Music_Control_System"	"SYSTEM"
 	"Music_Control_Browse_Music"	"Browse Music"
@@ -3310,8 +3379,9 @@
 	"Music_Control_Show_Album_In_UI"	"View Album"
 	"Music_Control_Browse_Queue"	"View Entire Queue"
 	"Music_Control_Clear_Queue"	"Clear Queue"
-	"Music_Control_Create_Playlist_From_Queue" "Create Playlist"	
-	
+	"Music_Control_Create_Playlist_From_Queue" "Create Playlist"
+	"Music_Control_Track_Time"	"{s:track_current_time} / {s:track_total_time}"
+
 	"Music_Transport_Browse_Music"	"Browse Music"
 	"Music_Transport_View_Queue"		"View Queue"
 	"Music_Transport_X_Of_Y"	"{i:CurrentQueueEntry} of {i:QueueCount} - {s:QueueDuration}"
@@ -3326,7 +3396,9 @@
 	"Music_Transport_Footer_Previous" "PREVIOUS"
 	"Music_Transport_Footer_Next" "NEXT"
 	"Music_Transport_Footer_Browse_Music" "BROWSE MUSIC"
+	"Music_Transport_Footer_Now_Playing" "VIEW NOW PLAYING"
 	"Music_Transport_Footer_Volume" "VOLUME"
+	"Music_Transport_Footer_Seek" "SEEK"
 	"Music_Transport_Footer_Done" "DONE"
 	"Music_Transport_Footer_PlayPause" "PLAY / PAUSE"
 
@@ -3350,7 +3422,10 @@
 	"Music_Library_Crawling_Header_DeletedArtists_ProgressGathering" "Gathering artists no longer available"
 	"Music_Library_Crawling_Header_DeletedArtists_ProgressDeleting" "Removing artists no longer available"
 	"Music_Library_Crawling_Header_DuplicateAlbums_Progress" "Removing duplicate albums"
-	
+
+	"Music_Library_Search" "SEARCH"
+	"Music_Library_Select_Album" "SELECT"
+
 	"Music_Library_Setup_Menu_Label" "Add Music Library..."
 	"Music_Library_Setup_Title"	"Library Setup"
 	"Music_Library_Setup_Text" "Which directories would you like to include in your Steam Music library?"
@@ -3365,14 +3440,36 @@
 	"Music_Library_Setup_Footer_Select" "SELECT"
 	"Music_Library_Setup_Footer_RemoveFromList"	"REMOVE FROM LIST"
 	"Music_Library_Setup_Footer_BuildLibrary"	"BUILD LIBRARY"
-	
+
 	"Music_Library_Select_Directory_Header" "Music Library"
 	"Music_Library_Select_Directory_Text"	"Select a directory in which you store music."
 	"Music_Library_Footer_More" "SELECT"
 	"Music_Library_Footer_Play"	"PLAY"
 	"Music_Library_Footer_ContextMenu"	"MORE"
 	"Music_Library_Footer_Cancel_Crawling" "STOP"
-	
+
+	"Music_Albums_Grid_Title"		"Albums"
+	"Music_Artists_Grid_Title"		"Artists"
+	"Music_Playlists_Grid_Title"		"Playlists"
+	"Music_Album_View_Title"		"Album"
+	"Music_Playlist_View_Title"		"Playlist"
+
+	"Music_Now_Playing_Title"	"NOW PLAYING"
+	"Music_Now_Playing_Track_Name"	"{s:now_playing_trackname}"
+	"Music_Now_Playing_Artist"	"{s:now_playing_artist}"
+
+
+	"Music_Artist_Grid_ArtistName"			"{s:artistname}"
+	"Music_Artist_Grid_ArtistAlbumCount"	"( {d:albumcount} Albums, {d:trackcount} Tracks )"
+
+	"Music_Playlist_Grid_ArtistName"		"{s:playlistname}"
+	"Music_Playlist_Grid_Duration_Plural"	"{d:trackcount} Tracks, duration {s:totaltime}"
+	"Music_Playlist_Grid_Duration"			"1 Track, duration {s:totaltime}"
+
+	"Music_Artist_Grid_RowCount_plural_plural"	"( {d:albumcount} Albums, {d:trackcount} Tracks )"
+	"Music_Artist_Grid_RowCount_single_plural"	"( 1 Album, {d:trackcount} Tracks )"
+	"Music_Artist_Grid_RowCount_single_single"	"( 1 Album, 1 Track )"
+
 	"Music_Queue_X_Of_Y"	"{i:CurrentQueueEntry} of {i:QueueCount}"
 	"Music_Queue_X_Tracks"	"{i:QueueCount} tracks"
 	"Music_Queue_Is_Empty"	"The queue is empty"
@@ -3383,7 +3480,7 @@
 	"Music_Queue_Footer_Play"	"PLAY"
 	"Music_Queue_Footer_More"	"MORE"
 	"Music_Queue_Footer_Done"	"DONE"
-	
+
 	"Music_Settings_Header"	"Music"
 	"Music_Settings_Database_Header"	"Database"
 	"Music_Settings_Crawl_At_Startup"	"Scan at startup"
@@ -3396,11 +3493,11 @@
 	"Music_Settings_Stop_Crawling_Text"	"Are you sure you want to stop building the library?"
 	"Music_Settings_Stop_Crawling_Yes" "Yes"
 	"Music_Settings_Stop_Crawling_Cancel" "Cancel"
-	"Music_Settings_Reset_Database_Header" "Reset Local Music Database"	
+	"Music_Settings_Reset_Database_Header" "Reset Local Music Database"
 	"Music_Settings_Reset_Database_Text" "Are you sure you want to reset the music database?"
 	"Music_Settings_Reset_Database_Yes" "Yes"
 	"Music_Settings_Reset_Database_Cancel" "Cancel"
-	
+
 	"Music_Settings_Reset_Database"	"Reset database"
 	"Music_Settings_Stop_Scanning"	"Stop Scanning"
 	"Music_Settings_Setup_Music_Library"	"Setup music library"
@@ -3416,26 +3513,38 @@
 	"Music_Settings_Pause_On_Initiating_Voice_Chat"	"When starting a voice chat"
 	"Music_Settings_Pause_On_Voice_Chat"	"When voice chatting"
 	"Music_Settings_MediaKeysEnabled" "Media Keys"
-	
+
 	"Music_Notification_Now_Playing"	"Now playing"
 	"Music_Notification_Now_Paused"	"Now paused"
 
 	"Music_Overlay_NowPlaying"	"Now Playing"
 	"Music_Overlay_NoMusicSelected"	"No music selected"
-	
+
+	"Music_FilterHeader"	"Filter Albums"
+	"KeyboardHeader_AlbumSearch" "Album search"
+
+	"Music_Filter_Artists_Header"	"Filter Artists"
+
+	"Music_Explore_Albums"			"Albums"
+	"Music_Explore_Artists"			"Artists"
+	"Music_Explore_Playlists"		"Playlists"
+
+	"Music_Explore_Recently_Added"	"Recently Added"
+	"Music_Explore_Recently_Played"	"Recently Played"
+
 	"Library_Details_OptIntoBeta" "Select Beta..."
 	"Library_Details_EditLaunchCommandLine"	"Set Launch Options..."
-	
+
 	"Library_EditCommandLine_CodeLabel" "Recommended for advanced users."
 	"Library_EditCommandLine_Title" "Launch Options for {s:gamename}"
-	
+
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into."
 	"Library_SelectBeta_Title"	"Select Beta"
 	"Library_SelectBeta_PrivateTitle"	"Enter a passcode to unlock private betas."
 	"Library_SelectBeta_BetaPassword"	"PASSCODE"
 	"Library_SelectBeta_PrivateButton"	"CHECK"
 	"Library_SelectBeta_NoBeta" "There are no public betas for this game."
-	
+
 	"Library_SelectBeta_None" "None"
 
 	"Library_SelectCategory_Title"	"Select categories"
@@ -3451,7 +3560,7 @@
 	"Library_SetAppLanguage_Label"	"Select a language for {s:gamename}"
 
 	"Community_SpoofNotice"		"{s:userspoof}"
-	
+
 	"Community_Pending_Gift" "New Gift"
 
 	"HowToStream_Title"					"IN-HOME STREAMING"
@@ -3469,7 +3578,7 @@
 	"SteamUI_StreamClient_Failed_Auth"	"Authentication failed."
 	"SteamUI_StreamClient_Failed_DirectX"	"Please install the DirectX runtime from Microsoft's website."
 	"SteamUI_StreamLaunch_Failed_Title" "Stream Launch Failed"
-	"SteamUI_StreamLaunch_RequiresUI"	"This game launch requires user intervention.\n\nLaunch manually on the remote computer and then join the stream from here." 
+	"SteamUI_StreamLaunch_RequiresUI"	"This game launch requires user intervention.\n\nLaunch manually on the remote computer and then join the stream from here."
 	"SteamUI_StreamLaunch_AccessDenied"	"Authentication problem."
 	"SteamUI_StreamLaunch_Unsupported"	"This game currently doesn't support streaming."
 	"SteamUI_StreamLaunch_ScreenLocked"	"The screen is locked on the remote computer."
@@ -3491,10 +3600,10 @@
 
 	"Steam_OtherSessionPlaying_Title" "Error - Steam"
 	"Steam_OtherSessionPlaying_Text" "Your are logged in on another computer already playing \"{s:existing_app}\".\nLaunching \"{s:launching_app}\" here will disconnect the other session from Steam."
-	
+
 	"Steam_VideoPlayer_Title"	"Error - Video Player"
 	"Steam_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
-	
+
 	"Settings_SteamController"		"Steam Controller"
 	"SettingsSteamController_ResetSettings"		"Reset to Defaults"
 	"SettingsSteamController_ResetSettingsTitle" "Reset Steam Controller Settings"
@@ -3522,7 +3631,7 @@
 	"SettingsRemoteControl_Unblock"			"UNBLOCK THIS DEVICE"
 	"SettingsAudio_Steam"	"Steam Audio Settings"
 	"SettingsAudio_Hardware"	"System Audio Settings"
-	
+
 	"Settings_Broadcast" "Broadcasting"
 	"Settings_Broadcast_Disabled" "Broadcasting disabled"
 	"Settings_Broadcast_InviteOnly" "Only friends whom I invite can watch"
@@ -3555,11 +3664,11 @@
 	"Settings_Broadcast_Disabled_System" "Steam Broadcasting is not currently supported on this operating system."
 	"Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam Broadcasting requires Windows 7 or higher.\n\n Please remove any Windows compatibility settings for all users\n under file properties for Steam.exe and restart Steam."
 	"Settings_Broadcast_Disabled_User" "Your account does not have sufficient privileges to broadcast live streams."
-	
+
 	"Broadcast_Overlay_Title"	"Broadcasting"
 	"Broadcast_Overlay_Text"	"This broadcast is currently followed by {d:NumViewers} viewers"
 	"Broadcast_Overlay_Stop"	"Stop Broadcast"
-	
+
 	"Broadcast_Notification_Joined_Public"	"A user has joined your public broadcast"
 	"Broadcast_Notification_Stopped_Public"	"All users have stopped watching your public broadcast"
 	"Broadcast_Notification_Is_Watching"	"is watching your broadcast"
@@ -3569,7 +3678,7 @@
 	"Broadcast_Notification_AvailableToWatch_Title" "Broadcasting is enabled!"
 	"Broadcast_Notification_AvailableToWatch_Friends" "Your friends can join your broadcast at any time."
 	"Broadcast_Notification_AvailableToWatch_Public" "Any Steam user can join your broadcast at any time."
-	
+
 	"Broadcast_FirstTime_Title" "Steam Broadcasting"
 	"Broadcast_FirstTime_Header" "With Steam Broadcasting you can broadcast your gameplay and watch others play games."
 	"Broadcast_FirstTime_PermissionHeader" "Your friend {s:persona} would like to watch you play. What are your broadcasting preferecences?"
@@ -3625,9 +3734,9 @@
 
 	"SteamUI_AddController_Title"					"Looking for Steam Controllers..."
 	"SteamUI_AddController_HowToPair"	"Please press and hold the X button while powering on your Steam Controller."
-	
+
 	"BigPicture_YouHaveNPendingInvites"	"View {d:InviteCount} pending friend invites"
-	
+
 	"Screenshots_Screenshots" 	"SCREENSHOTS"
 	"Screenshots_Screenshots_lwr" 	"Screenshots"
 	"Screenshots_TimeTaken"		"{t:l:timetaken}"
@@ -3639,7 +3748,7 @@
 	"Screenshots_ViewFullscreen" "VIEW FULLSCREEN"
 
 	"Store_LoadingError"		"Steam was unable to load the requested store section. Please try again."
-	
+
 	"SteamUI_UpdateControllerFirmware_Cancel"	"NOT NOW"
 	"SteamUI_UpdateControllerFirmware_Continue"	"UPDATE"
 	"SteamUI_UpdateControllerFirmware_Done"		"OK"
@@ -3668,7 +3777,7 @@
 	"SteamUI_ConfirmPassword_Password"	"SUBMIT"
 	"SteamUI_ConfirmPassword_FailureTitle" "INCORRECT PASSWORD"
 	"SteamUI_ConfirmPassword_Failure" "That password is incorrect, please try again."
-	
+
 	"LostAuthenticator_Title"					"Reset Authenticator"
 	"LostAuthenticator_SendingSms_Description"	"Since your account has a phone attached to it, we're sending a confirming SMS code to your phone."
 
@@ -4279,19 +4388,23 @@
 	"WebPanel_OpenInFullBrowser" "OPEN IN BROWSER"
 	"MainMenu_MainMenu" "HOME"
 	"MainMenu_Quickmenu" "QUICK MENU"
-	
-	
+
+
 	//HELPER STUFF FOR CONTROLLER CONFIG PANEL
 	"SettingsController_HelperDescriptionHeader"	"Cool Header"
 	"SettingsController_HelperDescriptionText"	"Cool Description"
 	"SettingsController_BindingTitle" "{s:bindingtitle}"
+	"SettingsController_BindingTitle_ForController" "({s:controllername})"
+	"SettingsController_BindingTitle_Guest" "Guest"
 	"SettingsController_BindingCreator" "By {s:bindingcreator}"
 	"SettingsController_AutosaveName"	"Controller Configuration"
+	"SettingsController_AutosaveDescription"	"Your modified configuration for this game."
 	"SettingsController_ModifiedBy"	"By you, based on {s:bindingcreator}'s configuration."
 	"SettingsController_ModifiedByOfficial" "By you, based on the official game configuration."
+	"ControllerNameOnAccount"		"{s:controllername} on account {s:accountname}"
 
 	"ControllerBindingVotes"		"Users:{i:upvotes}"
-	
+
 	"ControllerBinding_ModeDropDown_InGameAction"				"In-Game Action"
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Select this option to make the stick or pad perform the specified In-Game Action."
 	"ControllerBinding_ModeDropDown_OtherAction"				"Other In-Game Action..."
@@ -4658,7 +4771,7 @@
 	"ControllerBinding_Friction_High" "Trackball Friction - High"
 	"ControllerBinding_Friction_High_Description" "With High Friction, the trackball will spin for a short duration, quickly come to a stop after being flicked."
 	"ControllerBinding_VerticalFriction" "Vertical Friction"
-	"ControllerBinding_VerticalFriction_Description" "Vertical Friction determines how fast the vertical movement comes to a stop relative to horizontal movement.  At 50% along the slider it is equal, if less than half it will slow less quickly, if more, more quickly.  For games were you control the camera, it is usaully desirable to have high vertical friction so flicks are primarily used for spinning the camera along the horizontal axis."
+	"ControllerBinding_VerticalFriction_Description" "Vertical Friction determines how fast the vertical movement comes to a stop relative to horizontal movement.  At 50% along the slider it is equal, if less than half it will slow less quickly, if more, more quickly.  For games were you control the camera, it is usually desirable to have high vertical friction so flicks are primarily used for spinning the camera along the horizontal axis."
 	"ControllerBinding_VerticalSensitivity" "Vertical Sensitivity"
 	"ControllerBinding_VerticalSensitivity_Description" "Vertical Sensitivity determines how much vertical movement occurs relative to horizontal movement.  At 50% along the slider it is equal, if less than half it vertical movement will be lower than horizontal, while more will increase the ratio to more vertical movement."
 	"ControllerBinding_SmoothingAbsMouse" "Smoothing"
@@ -4688,13 +4801,13 @@
 	"ControllerBinding_DoubleTapDuration" "Double Tap Duration"
 	"ControllerBinding_DoubleTapDuration_Description" "Double Tap Duration sets the time required between times to register as a double tap.  Lower values will require a very fast double tap while higher values will allow a long time between taps."
 	"ControllerBinding_DoubleTapBeep" "Double Tap Beep"
-	"ControllerBinding_DoubleTapBeep_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."	
+	"ControllerBinding_DoubleTapBeep_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_DoubleTapBeep_On" "Double Tap Beep - On"
 	"ControllerBinding_DoubleTapBeep_On_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_DoubleTapBeep_Off" "Double Tap Beep - Off"
 	"ControllerBinding_DoubleTapBeep_Off_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_MouseTriggerClamp" "Trigger Press Mouse Dampening"
-	"ControllerBinding_MouseTriggerClamp_Description" "The mouse movement can be dampened while the trigger is being pulled.  This can help to correct for accidental movement while pulling the trigger."		
+	"ControllerBinding_MouseTriggerClamp_Description" "The mouse movement can be dampened while the trigger is being pulled.  This can help to correct for accidental movement while pulling the trigger."
 	"ControllerBinding_EdgeSpinRadius" "Edge Spin Radius"
 	"ControllerBinding_EdgeSpinRadius_Description" "If Edge Spin Speed is set, when outside this radius on the pad, the mouse will continue to send input at a constant rate in the specified direction.  The slider can be visualized as extending a radius from the center outward, with fully to the left as always edge spinning and fully right as only the very edge engaging edge spin."
 	"ControllerBinding_EdgeSpinScale" "Edge Spin Speed"
@@ -4712,7 +4825,7 @@
 	"ControllerBinding_InvertMouseY_Off" "Invert Vertical Axis - Off"
 	"ControllerBinding_InvertMouseY_Off_Description" "The mouse vertical axis will act normally, with up movement on the pad corresponding to up movement of the mouse."
 	"ControllerBinding_MouseMoveThreshold" "Movement Threshold"
-	"ControllerBinding_MouseMoveThreshold_Description" "The mouse will accumulate movement until this threshold has been passed and only send at that point.  Intended for applications that exhibit aggresive filtering/clamping of the mouse, which can cause small motions to be lost, but shouldn't generally be required.  Ideally this should be as small of a value while not losing input for small motions."
+	"ControllerBinding_MouseMoveThreshold_Description" "The mouse will accumulate movement until this threshold has been passed and only send at that point.  Intended for applications that exhibit aggressive filtering/clamping of the mouse, which can cause small motions to be lost, but shouldn't generally be required.  Ideally this should be as small of a value while not losing input for small motions."
 	"ControllerBinding_GyroButtonAbsMouse" "Gyro Enable Button"
 	"ControllerBinding_GyroButtonAbsMouse_Description" "The gyro input can be turned on only when a button is pressed."
 	"ControllerBinding_GyroButtonAbsMouse_GyroNone" "Gyro Enable Button - Always On"
@@ -4749,12 +4862,18 @@
 	"ControllerBinding_GyroAxisAbsMouse_Roll_Description" "For controlling the horizontal movement of the mouse, use the roll of the controller."
 	"ControllerBinding_MouseTriggerClamp_Off"	"Trigger Dampening Off"
 	"ControllerBinding_MouseTriggerClamp_Off_Description"	"Trigger Dampening is Disabled"
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRight"	"Trigger Dampening Right"
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRight_Description"	"Trigger Dampening is enabled for the Right Trigger.  Squeezing the trigger will dampen any mouse movements until a full click is engaged."
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeft"	"Trigger Dampening Left"
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeft_Description"	"Trigger Dampening is enabled for the Left Trigger.  Squeezing the trigger will dampen any mouse movements until a full click is engaged."
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBoth"	"Trigger Dampening Both"
-	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBoth_Description"	"Trigger Dampening is enabled for the Both Triggers.  Squeezing either trigger will dampen any mouse movements until a full click is engaged."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRightSoft"	"Trigger Soft Pull Dampening Right"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRightSoft_Description"	"Trigger Dampening is enabled for the Right Trigger Soft Pull.  Squeezing the trigger will dampen any mouse movements until a full click is engaged."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeftSoft"	"Trigger Soft Pull Dampening Left"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeftSoft_Description"	"Trigger Dampening is enabled for the Left Trigger Soft Pull.  Squeezing the trigger will dampen any mouse movements until a full click is engaged."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBothSoft"	"Trigger Soft Pull Dampening Both"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBothSoft_Description"	"Trigger Dampening is enabled for the Both Triggers Soft Pull.  Squeezing either trigger will dampen any mouse movements until a full click is engaged."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRightAlways"	"Trigger Soft/Full Pull Dampening Right"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningRightAlways_Description"	"Trigger Dampening is enabled for the Right Trigger Soft/Full Pull.  Squeezing the trigger including clicking will dampen any mouse movements until fully released."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeftAlways"	"Trigger Soft/Full Pull Dampening Left"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningLeftAlways_Description"	"Trigger Dampening is enabled for the Left Trigger Soft/Full Pull.  Squeezing the trigger including clicking will dampen any mouse movements until fully released."
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBothAlways"	"Trigger Soft/Full Pull Dampening Both"
+	"ControllerBinding_MouseTriggerClamp_TriggerDampeningBothAlways_Description"	"Trigger Dampening is enabled for the Both Triggers Soft/Full Pull.  Squeezing either trigger including clicking will dampen any mouse movements until fully released."
 	"ControllerBinding_MouseTriggerClampAmount"	"Trigger Dampening Amount"
 	"ControllerBinding_MouseTriggerClampAmount_Description"	"This sets how much the mouse movement should be dampened.  Slide to the right to further stop mouse movement."
 	"ControllerBinding_AbsMouseTouch" "Touch Binding"
@@ -4830,13 +4949,13 @@
 	"ControllerBinding_DoubleTapDurationMouseJoystick" "Double Tap Duration"
 	"ControllerBinding_DoubleTapDurationMouseJoystick_Description" "Double Tap Duration sets the time required between times to register as a double tap.  Lower values will require a very fast double tap while higher values will allow a long time between taps."
 	"ControllerBinding_DoubleTapBeepMouseJoystick" "Double Tap Beep"
-	"ControllerBinding_DoubleTapBeepMouseJoystick_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."	
+	"ControllerBinding_DoubleTapBeepMouseJoystick_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_DoubleTapBeepMouseJoystick_On" "Double Tap Beep - On"
 	"ControllerBinding_DoubleTapBeepMouseJoystick_On_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_DoubleTapBeepMouseJoystick_Off" "Double Tap Beep - Off"
 	"ControllerBinding_DoubleTapBeepMouseJoystick_Off_Description" "Double Tap Beep will cause the controller to beep when a double tap is sent."
 	"ControllerBinding_MouseTriggerClampMouseJoystick" "Trigger Press Mouse Dampening"
-	"ControllerBinding_MouseTriggerClampMouseJoystick_Description" "The mouse movement can be dampened while the trigger is being pulled.  This can help to correct for accidental movement while pulling the trigger."		
+	"ControllerBinding_MouseTriggerClampMouseJoystick_Description" "The mouse movement can be dampened while the trigger is being pulled.  This can help to correct for accidental movement while pulling the trigger."
 	"ControllerBinding_EdgeSpinRadiusMouseJoystick" "Edge Spin Radius"
 	"ControllerBinding_EdgeSpinRadiusMouseJoystick_Description" "If Edge Spin Speed is set, when outside this radius on the pad, the mouse will continue to send input at a constant rate in the specified direction.  The slider can be visualized as extending a radius from the center outward, with fully to the left as always edge spinning and fully right as only the very edge engaging edge spin."
 	"ControllerBinding_EdgeSpinScaleMouseJoystick" "Edge Spin Speed"
@@ -5101,10 +5220,10 @@
 	"ControllerBinding_PositionXMouse_Description" "This is the on screen horizontal position that the region will be centered around."
 	"ControllerBinding_PositionYMouse" "Region Vertical Position"
 	"ControllerBinding_PositionYMouse_Description" "This is the on screen vertical position that the region will be centered around."
-	"ControllerBinding_TeleportStart" "Snap Mouse on Mode Shift"
+	"ControllerBinding_TeleportStart" "Snap Mouse on Mode Shift Start"
 	"ControllerBinding_TeleportStart_Description" "When enabling the mode shift, should the mouse be snapped to the center of the region?"
-	"ControllerBinding_TeleportStop" "Reset Mouse on Mode Shift"
-	"ControllerBinding_TeleportStop_Description" "When disabling the mode shift, should the mouse be snapped back to the position it was before the mode shift was engaged?"
+	"ControllerBinding_TeleportStop" "Reset Mouse on Stop/Mode Shift End"
+	"ControllerBinding_TeleportStop_Description" "When you stop touching or disable the mode shift, should the mouse be snapped back to the position it was before the mode shift was engaged?"
 	"ControllerBinding_HorizontalSensitivityMouseRegion" "Horizontal Scale"
 	"ControllerBinding_HorizontalSensitivityMouseRegion_Description" "Scale the horizontal region.  You can use this to change the on-screen region from a cirlce to an ellipse or a line."
 	"ControllerBinding_VerticalSensitivityMouseRegion" "Vertical Scale"
@@ -5114,12 +5233,15 @@
 
 	"ControllerBinding_RecommendedTemplate" "Recommended"
 	"ControllerBinding_SavedCopyPasta_Title" "Custom Controller Config Uploaded!"
-	"ControllerBinding_SavedCopyPasta" "Your custom config was uploaded succesfully.\nID: {s:fileid}"
+	"ControllerBinding_SavedCopyPasta" "Your controller configuration has been uploaded succesfully.\nID: {s:fileid}"
+	"ControllerBinding_PrivateUploadSuccess" "Success!"
+	"ControllerBinding_PrivateUploadSuccess_Description" "Your controller configuration has been uploaded succesfully."
+
 	"ControllerBinding_Official" "Official Developer Config"
 	"ControllerBinding_OfficialDescription" "This config was created by the developers of this game."
 	"ControllerBinding_Header" "Controller Configurations"
 	"ControllerBinding_Explanation_template" "Generic configuration layouts. Good starting points for building a configuration."
-	"ControllerBinding_Explanation_personal" "Configurations you've created for this game."
+	"ControllerBinding_Explanation_personal" "Configurations you've exported for this game."
 	"ControllerBinding_Explanation_community" "Community created configurations for this game."
 	"ControllerBinding_Explanation_recommended" "Recommended configurations for this game."
 	"ControllerBinding_Missing_template" "There are no appropriate templates for this game."
@@ -5184,7 +5306,7 @@
 	"Friends_Menu_Profile"		"Your Profile"
 	"friends_menu_chat"		"Chat"
 	"friends_menu_manage"	"Manage"
-	
+
 	"friends_list_recent_container_title"	"Recent Chats"
 	"friends_list_igname_container_title"	"In-Game"
 	"friends_list_online_container_title"	"Online"
@@ -5203,16 +5325,16 @@
 
 	"FriendsInvitesBP_AcceptAll"	"Accept All"
 	"FriendsInvitesBP_IgnoreAll"	"Ignore All"
-	
+
 	"FriendsInvites_AcceptAllFriends_Footer"	"ACCEPT ALL FRIEND INVITES"
-	"FriendsInvites_IgnoreAllFriends_Footer"	"IGNORE ALL FRIEND INVITES"		
+	"FriendsInvites_IgnoreAllFriends_Footer"	"IGNORE ALL FRIEND INVITES"
 	"FriendsInvites_AcceptAllGroups_Footer"		"ACCEPT ALL GROUP INVITES"
 	"FriendsInvites_IgnoreAllGroups_Footer"		"IGNORE ALL GROUP INVITES"
 
 
 
 	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
-	"SignalLossHelper_Description" "In order to ensure the best possible latency and a glitch-free experience, please connect the controller's wireless receiver to its included extender. Make sure there is an unobstructed line-of-sight between the controller and the receiver, and move it away from your system to isolate it from any possible interference." 
+	"SignalLossHelper_Description" "In order to ensure the best possible latency and a glitch-free experience, please connect the controller's wireless receiver to its included extender. Make sure there is an unobstructed line-of-sight between the controller and the receiver, and move it away from your system to isolate it from any possible interference."
 
 	"Create_Account_Wizard"			"Create Account"
 	"Forgot_Account_Name_Wizard"	"Forgot Account Name"
@@ -5319,7 +5441,7 @@
 	"Overlay_Friend_Notifications_Voice_Chat_On_Hold"	"Voice Chat on Hold"
 	"Overlay_Friend_Notifications_Voice_Chat_Ringing"	"Incoming..."
 	"Overlay_Friend_Notifications_Voice_Chat_Dialing"	"Calling..."
-	
+
 	"Overlay_SteamControllerHUD_HelpText"	"Steam Controller Input Helper - Press the Steam Button to disable"
 	"Overlay_ToggleControllerHUD" "Toggle Controller HUD"
 

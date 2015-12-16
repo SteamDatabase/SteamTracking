@@ -487,7 +487,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStart" />
           <DropDown id="TeleportStart" />
         </Panel>
-        <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="on">
+        <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStop" />
           <DropDown id="TeleportStop" />
         </Panel>

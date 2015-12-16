@@ -9,15 +9,30 @@ function SetupMenuAndContentHoverEvents( menuPanelID, menuHoverClass, contentPan
 	var hoverItemStyles = {};
 	hoverItemStyles[menuPanelID] = menuHoverClass;
 	hoverItemStyles[contentPanelID] = contentHoverClass;
-											
-	SetupPanelsHoverEvents( hoverItemStyles, ancestorPanel )													
+
+	var _this = this;
+	SetupPanelsHoverEvents( hoverItemStyles, ancestorPanel, function( pPanel )
+	{
+		// mouse is hovering over one of the panels in hoverItemStyles. If it is the target container panel, and focus
+		// is still in this context, pull focus to that panel
+		var pContext = $.GetContextPanel();
+		if ( !pContext.BHasKeyFocus() && !pContext.BHasDescendantKeyFocus() && !pContext.BHasClass( 'Loading' ) )
+		{
+			return;
+		}
+
+		if ( pPanel.id == contentPanelID && !pPanel.BHasKeyFocus() && !pPanel.BHasDescendantKeyFocus() )
+		{
+			pPanel.SetFocus();
+		}
+	} );												
 }
 
 
 /**
  * for a panel on mouseover add and remove classes on a parent
  */
-function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses )
+function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses, fnMouseOverCallback )
 {
 	panel.SetPanelEvent( 
 		'onmouseover', 
@@ -31,7 +46,10 @@ function SetupPanelHoverEvent( panel, ancestorPanel, hoverClass, uniqueClasses )
 					ancestorPanel.RemoveClass( classValue ); 				
 				}
 			} );
-		} 
+
+			if ( fnMouseOverCallback )
+				fnMouseOverCallback( panel );
+		}
 	);
 	
 	$.RegisterForUnhandledEvent( 'WindowCursorHidden', function() 
@@ -53,7 +71,7 @@ function onlyUnique(value, index, self)
 /**
  * Manages a map of panels and classes to use when that panel is hovered (and the other classes are removed)
  */
-function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel )
+function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel, fnMouseOverCallback )
 {
 	var hoverClasses = [];
 	for( var o in hoverPanelStyleMap ) 
@@ -69,29 +87,6 @@ function SetupPanelsHoverEvents( hoverPanelStyleMap, ancestorPanel )
 	
 	$.Each( hoverPanelStyleMap, function( value, key ) 
 	{
-		SetupPanelHoverEvent( $( '#' + key ), ancestorPanel, hoverPanelStyleMap[key], uniqueClasses );		
+		SetupPanelHoverEvent( $( '#' + key ), ancestorPanel, hoverPanelStyleMap[key], uniqueClasses, fnMouseOverCallback );		
 	} );
-}
-
-
-
-/**
- * OBSOLETE - DO NOT CALL, JUST HERE FOR BACK COMPAT WITH PUBLIC WEB ASSETS 
- *
- *
- */
-function SetupPanelHoverEvents( panel, ancestorPanel, className )
-{
-	panel.SetPanelEvent( 
-		'onmouseover', 
-		function() {
-			ancestorPanel.AddClass( className );
-		} 
-	);
-	panel.SetPanelEvent( 
-		'onmouseout', 
-		function() {
-			ancestorPanel.RemoveClass( className );
-		} 
-	);
 }

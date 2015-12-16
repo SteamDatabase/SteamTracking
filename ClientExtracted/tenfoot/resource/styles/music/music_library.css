@@ -3,30 +3,6 @@
 @define mediumduration: 0.4s;
 @define longduration: 1.7s;
 
-
-MusicLibraryContainerPanel
-{
-	width: 100%;
-	height: 955px;
-	background-color: none;
-
-	opacity: 0.0;
-	desaturation: 1.0;
-	transform: translate3d( 0px, 1280px, 1000px );
-
-	transition-property: transform, blur, position, opacity, desaturation;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-}
-
-MusicLibraryContainerPanel
-{
-	opacity: 1.0;
-	transform: none;
-	desaturation: 0.0;
-}
-
 #ContentPanel
 {
 	width: 100%;
@@ -65,16 +41,11 @@ MusicLibraryAlbumPanel
 	width: 100%;
 	height: 100%;
 	
-	opacity: 0.0;
+	opacity: 1.0;
 	
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
-}
-
-MusicLibraryAlbumPanel.Active
-{
-	opacity: 1.0;
 }
 
 MusicLibraryArtistPanel
@@ -82,38 +53,24 @@ MusicLibraryArtistPanel
 	width: 100%;
 	height: 100%;
 	
-	opacity: 0.0;
+	opacity: 1.0;
 	
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
 }
-
-
-MusicLibraryArtistPanel.Active
-{
-	opacity: 1.0;
-}
-
 
 MusicLibraryPlaylistPanel
 {
 	width: 100%;
 	height: 100%;
 	
-	opacity: 0.0;
+	opacity: 1.0;
 	
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
 }
-
-
-MusicLibraryPlaylistPanel.Active
-{
-	opacity: 1.0;
-}
-
 
 MusicLibraryCrawlingPanel
 {
@@ -122,11 +79,16 @@ MusicLibraryCrawlingPanel
 	flow-children: down;
 }
 
-
 .MusicLibraryVisible
 {
 	opacity: 1.0;
 	desaturation: 0.0;
+}
+
+.MusicExploreVisible
+{
+	opacity: 1.0;
+	visibility: visible;
 }
 
 
@@ -378,19 +340,22 @@ MusicLibraryCrawlingPanel
 
 .MusicAlbumGrid
 {
-	margin-top: 0px;
-
-	padding-top: 10px;
-	padding-left: 65px;
-	padding-right: 140px;
-	padding-bottom: 70px;
-	transform: translateX( -220px );
 	transition-property: transform;
 	transition-duration: 0.23s;
 	transition-timing-function: bigpicture-ease-in-out;
 
-	width: 100%;
+	width: 1500px;
 	height: 100%;
+	horizontal-align: center;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.MusicAlbumGrid AlbumGridItem
+{
+	width: 220px;
+	height: 220px;
+	margin-bottom: 10px;
 }
 
 .Active #MusicAlbumGrid
@@ -399,18 +364,12 @@ MusicLibraryCrawlingPanel
 	transform: translateX( 0px );
 }
 
-
-#MusicArtistPanel .MusicAlbumGrid
-{
-	padding-top: 40px;
-}
-
 AlbumGridItem
 {
 	width: 326px;
 	height: 326px;
 	vertical-align: top;
-	pre-transform-scale2d: 0.78528;
+	pre-transform-scale2d: 1.0;
 
 	transition-property: pre-transform-scale2d, position, transform, box-shadow;
 	transition-duration: 0.23s;
@@ -422,9 +381,8 @@ AlbumGridItem
 
 AlbumGridItem:focus
 {
-	pre-transform-scale2d: 1.0;
 	z-index: 5;
-
+	pre-transform-scale2d: 1.05;
 	
 	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
 
@@ -439,247 +397,13 @@ AlbumGridItem:hover
 {
 	opacity: 1.0;
 	desaturation: 0.0;
-	pre-transform-scale2d: 0.83;
 }
 
 AlbumGridItem:focus:hover
 {
 	opacity: 1.0;
 	desaturation: 0.0;
-	pre-transform-scale2d: 1.03;
-}
-	
-	
-.Moving AlbumGridItem
-{
-	blur: gaussian( 5, 1 );
-	opacity: 0.15;
-	desaturation: 0.7;
-}
-
-
-.AddLibraryItem
-{
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-}
-
-.AddLibraryItem Label
-{
-	color: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f299 ), color-stop( 0.90, #f2f2f299 ), to( #97989800 ) );
-	font-weight: bold;
-}
-
-.AddLibraryItem #AlbumImage
-{
-	pre-transform-scale2d: 0.6;
-
-	box-shadow: none;
-}
-
-.AddLibraryItem:focus #AlbumImage
-{
-	pre-transform-scale2d: 0.6;
-
-	box-shadow: none;
-}
-
-AlbumGridItem #AlbumImage
-{
-	width: 326px;
-	height: 326px;
-	vertical-align: top;
-	margin: 6px;
-	desaturation: 0.2;
-	opacity: 0.85;
-	box-shadow: fill #00000033 -4px -4px 12px 8px;
-}
-
-
-AlbumGridItem:focus #FocusBorderPanel
-{
-	width: 326px;
-	height: 326px;
-	z-index: 6;
-
-	background-image: url( "file://{images}/music/shadow.png" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 414px 414px;
-}
-
-MusicArtistPanel AlbumGridItem:focus #FocusBorderPanel
-{
-	width: 590px;
-	height: 590px;
-
-	background-image: url( "file://{images}/music/shadow.png" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 634px 634px;
-}
-
-AlbumGridItem:focus #AlbumImage
-{
-	desaturation: 0.0;
-	opacity: 1.0;
-	z-index: 6;
-	pre-transform-scale2d: 1.05;
-
-	box-shadow: inset #00000000 4px 4px 16px 8px;
-}
-
-AlbumGridItem Label
-{
-	height: 32px;
-	width: 300px;
-	font-size: 26px;
-	transform: translateY( 240px );
-	font-family: platformfont;
-	font-weight: normal;
-	color: applabel;
-	opacity: 0.0;
-	text-overflow: clip;
-	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-family: platformfont;
-	z-index: 5;
-
-}
-
-#AlbumLabelWrapper
-{
-	width: 100%;
-	height: 100%;
-	margin: 8px;
-	margin-left: 18px;
-	flow-children: down;
-	visibility: visible;
-	opacity: 1.0;
-	z-index: 10;
-}
-
-
-#AlbumUpperLabel
-{
-	font-weight: bold;
-}
-
-#MusicLibraryAlbumTitlePanel AlbumGridItem:descendantfocus #AlbumUpperLabel 
-{
-	font-weight: normal;	
-	transform: translateY( 272px );
-}
-
-#MusicLibraryAlbumTitlePanel AlbumGridItem:descendantfocus #AlbumLowerLabel 
-{
-	font-weight: bold;	
-	transform: translateY( 211px );
-}
-
-#MusicLibraryAlbumTitlePanel .NoCover #AlbumUpperLabel,
-#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumUpperLabel,
-#MusicLibraryAlbumPanel .NoCover #AlbumUpperLabel,
-#MusicLibraryAlbumPanel .NoCover:focus #AlbumUpperLabel
-{
-	opacity: 0.5;
-	font-size: 64px;
-	max-height: 230px;
-	width: 100%;
-	font-weight: thin;
-	text-transform: uppercase;
-	white-space: normal;
-	text-overflow: clip;
-	height: fit-children;
-	transform: none;
-}
-
-#MusicLibraryAlbumTitlePanel .NoCover #AlbumUpperLabel,
-#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumUpperLabel
-{
-	opacity: 0.2;
-}
-
-#MusicLibraryAlbumTitlePanel .NoCover #AlbumLowerLabel,
-#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumLowerLabel,
-#MusicLibraryAlbumPanel .NoCover #AlbumLowerLabel,
-#MusicLibraryAlbumPanel .NoCover:focus #AlbumLowerLabel
-{
-	opacity: 0.2;
-	font-size: 64px;
-	max-height: 230px;
-	width: 100%;
-	font-weight: thin;
-	text-transform: uppercase;
-	text-overflow: clip;
-	white-space: normal;
-	transform: none;
-	height: fit-children;
-	vertical-align: top;
-}
-
-#MusicLibraryAlbumTitlePanel .NoCover #AlbumLowerLabel,
-#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumLowerLabel
-{
-	opacity: 0.5;
-}
-
-AlbumGridItem:focus Label
-{
-	opacity: 1.0;
-	z-index: 10;
-}
-
-#MusicArtistPanel AlbumGridItem:focus #AlbumUpperLabel
-{
-		opacity: 0.0;
-}
-
-#MusicArtistPanel AlbumGridItem:focus #AlbumLowerLabel
-{
-	opacity: 1.0;
-	transform: translateY( -10px );
-}
-
-#MusicArtistPanel .NoCover:focus #AlbumLowerLabel
-{
-	transform: translateY( 0px );
-	opacity: 0.2;
-}
-
-#MusicArtistPanel AlbumGridItem:focus #AlbumUpperLabel
-{
-		opacity: 0.0;
-}
-
-#MusicArtistPanel .NoCover #AlbumUpperLabel
-{
-	opacity: 0.5;
-	font-size: 122px;
-	max-height: 440px;
-}
-
-#MusicArtistPanel .NoCover:focus #AlbumUpperLabel
-{
-	opacity: 0.5;
-}
-
-#MusicArtistPanel .NoCover #AlbumLowerLabel
-{
-	opacity: 0.2;
-	font-size: 110px;
-	max-height: 370px;
-}
-
-#MusicArtistPanel .NoCover:focus #AlbumUpperLabel
-#MusicArtistPanel .NoCover:focus #AlbumLowerLabel
-{
-		opacity: 1.0;
-		transform: translateY( 0px );
-}
-
+}	
 
 
 .LeftMouseScrollRegion, .RightMouseScrollRegion
@@ -690,84 +414,60 @@ AlbumGridItem:focus Label
 	transition-delay: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transform: translateY( -80px );
-}
 
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
-{
-	width: 80px;
-	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 80px 80px;
+}
+
+.LeftMouseScrollRegion:hover
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_up;
+}
+
+.RightMouseScrollRegion:hover
+{
+	opacity: 1.0;
+	background-color: mouse_active_bg_bottom;
+}
+
+.MusicAlbumGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+.MusicArtistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	margin-top: 80px;
+	width: 50px;
+	align: center top;
+	height: 80px;
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
 	z-index: 200;
 	opacity: 1.0;
 	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_off_bg_up;
 }
-
 
 .MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+.MusicArtistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
 {
-	width: 80px;
-	height: 100%;
-	align: right center;
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
+	width: 50px;
+	horizontal-align: center;
+	height: 80px;
+	align: center bottom;
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
 	z-index: 200;
 	opacity: 1.0;
 	transition-delay: 0.2s;
-	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_off_bg_bottom;
 }
 
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
+.AlbumImage
 {
-		background-color: mouse_active_bg_right;
+	width: 100%;
+	height: 100%;
+	horizontal-align: left;
 }
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover
-{
-	background-color: mouse_hover_bg_left;
-}
-
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
-{
-	background-color: mouse_hover_bg_right;
-
-}
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-
-}
-
-.LeftMouseScrollRegion
-{
-	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_left;
-
-
-	z-index: 100;
-}
-
-.RightMouseScrollRegion
-{
-	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_right;
-	z-index: 100;
-}
-
 
 #FastScrollWrapper
 {
@@ -830,31 +530,12 @@ AlbumGridItem:focus Label
 	transition-duration: 0.5s;
 }
 
-#OverlayBasePanel MusicLibraryContainerPanel
-{
-	height: 1080px;
-	padding-top: 50px;
-	padding-bottom: 60px;
-	margin-bottom: 0px;
-}
-
-#OverlayBasePanel #MusicLibraryContainerPanel
-{
-	height: 1080px;
-	background-color: none;
-}
-
 #OverlayBasePanel .MusicAlbumGrid
 {
 	padding-bottom: 60px;
 	margin-top: 10px;
 }
 
-#OverlayBasePanel #MusicArtistPanel .MusicAlbumGrid
-{
-	padding-bottom: 50px;
-	padding-top: 60px;
-}
 .MusicCrawlAnimation
 {
 	opacity: 1.0;
@@ -912,7 +593,7 @@ AlbumGridItem:focus Label
 	transition-duration: 0.23s;
 	transition-timing-function: ease-out;
 
-	width: 100%;
+	width: 1500px;
 	height: 100%;
 
 	visibility: visible;
@@ -923,336 +604,6 @@ AlbumGridItem:focus Label
 {
 	opacity: 1.0;
 	transform: translateX( 0px );
-}
-
-
-ArtistGridItem
-{
-	width: 356px;
-	height: 90px;
-	vertical-align: top;
-	pre-transform-scale2d: .94;
-
-	transition-property: pre-transform-scale2d, position, transform;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
-}
-
-ArtistGridItem:focus
-{
-	pre-transform-scale2d: 1.0;
-	z-index: 5;
-	transform: translateX( -7px );
-}
-
-ArtistGridItem:hover
-{
-	pre-transform-scale2d: 1.0;
-	z-index: 5;
-	transform: translateX( 0px );
-}
-
-ArtistGridItem:focus:hover
-{
-	pre-transform-scale2d: 1.04;
-	z-index: 5;
-	transform: translateX( -7px );
-}
-
-
-ArtistGridItem:focus #FocusBorderPanel
-{
-	width: 326px;
-	height: 90px;
-	border-width: 8px;
-	border-style: solid;
-	border-color: #f2f2f2ff;
-	z-index: 6;
-
-	background-image: url( "file://{images}/music/shadow.png" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 414px 414px;
-}
-
-#MusicLibraryArtistPanel ArtistGridItem:focus #FocusBorderPanel
-{
-	width: 326px;
-	height: 60px;
-
-	background-image: none;
-	margin: 8px;
-
-	z-index: 6;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-
-	box-shadow: none;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #ffffffff ), to( #bdbfbfff ) );
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-
-#MusicLibraryArtistPanel .MusicArtistGrid #ArtistUpperLabel
-{
-	color: applabel;
-}
-
-#MusicLibraryArtistPanel ArtistGridItem:focus #ArtistUpperLabel
-{
-	color: applabelselected;
-}
-
-ArtistGridItem Label
-{
-	height: 32px;
-	width: 300px;
-	font-size: 26px;
-	font-family: platformfont;
-	font-weight: normal;
-	color: applabel;
-	opacity: 0.8;
-	vertical-align: bottom;
-	text-overflow: clip;
-	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-family: platformfont;
-	z-index: 5;
-}
-
-#ArtistUpperLabel
-{
-	transform: translateY( -48px ) translateX( 16px );
-	font-weight: bold;
-}
-
-.MusicArtistGrid #ArtistUpperLabel
-{
-	text-overflow: ellipsis;
-	height: 40px;
-	transform: translateY( -27px ) translateX( 0px );
-}
-
-#MusicLibraryArtistPanel ArtistGridItem:focus #ArtistUpperLabel
-{
-	text-overflow: ellipsis;
-	height: 40px;
-	transform: translateY( -27px ) translateX( 22px );
-}
-
-ArtistGridItem:focus Label
-{
-	opacity: 1.0;
-	z-index: 6;
-	color: applabelselected;	
-}
-
-
-
-.Moving ArtistGridItem
-{
-	blur: gaussian( 5, 1 );
-	opacity: 0.15;
-	desaturation: 0.7;
-}
-
-
-.MusicArtistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
-{
-	width: 80px;
-	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_left;
-}
-
-
-.MusicArtistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-{
-	width: 80px;
-	height: 100%;
-	align: right center;
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_right;
-}
-
-.MusicArtistGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
-{
-		background-color: mouse_active_bg_right;
-}
-
-.MusicArtistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .MusicArtistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-
-.MusicArtistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, .MusicArtistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-
-}
-
-
-/////////////////////////////////////////
-// AlbumGrid inside the MusicArtistPanel
-/////////////////////////////////////////
-MusicArtistPanel AlbumGridItem
-{
-	width: 590px;
-	height: 590px;
-	vertical-align: top;
-	pre-transform-scale2d: 0.78528;
-
-	desaturation: 0.2;
-	wash-color: #00000033;
-	transition-property: pre-transform-scale2d, wash-color, desaturation, position;
-	transition-duration: 0.23s;
-	transition-delay: 0.0s;
-	transition-timing-function: ease-out;
-
-	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
-}
-
-MusicArtistPanel AlbumGridItem:focus
-{
-	pre-transform-scale2d: 1.0;
-	z-index: 5;
-	desaturation: 0.0;
-	wash-color: none;
-}
-
-MusicArtistPanel AlbumGridItem:hover
-{
-	pre-transform-scale2d: 0.82;
-
-	z-index: 0;
-}
-
-MusicArtistPanel AlbumGridItem:hover #AlbumImage
-{
-	opacity: 1.0;
-	desaturation: 0.0;
-	box-shadow: fill box_shadow_on_color -4.5px -4.5px 8px 8px;
-	}
-
-MusicArtistPanel AlbumGridItem:focus:hover
-{
-	pre-transform-scale2d: 1.03;
-	z-index: 5;
-}
-
-
-MusicArtistPanel AlbumGridItem #AlbumImage
-{
-	width: 590px;
-	height: 590px;
-	vertical-align: top;
-	margin: 10px;
-	desaturation: 0.1;
-	opacity: 0.85;
-	box-shadow: fill #00000033 -4.5px -4.5px 18px 9px;
-	border-radius: 4px;
-	transition-property: opacity, desaturation, box-shadow;
-	transition-duration: 0.23s;
-}
-
-
-
-MusicArtistPanel AlbumGridItem:focus #AlbumImage
-{
-	desaturation: 0.0;
-	opacity: 1.0;
-	z-index: 6;
-	pre-transform-scale2d: 1.05;
-
-	box-shadow: inset #00000044 4px 4px 16px 8px;
-}
-
-MusicArtistPanel AlbumGridItem Label
-{
-	height: 32px;
-	width: 600px;
-	font-size: 26px;
-	font-family: platformfont;
-	font-weight: bold;
-	color: applabel;
-	opacity: 0.0;
-	vertical-align: bottom;
-	text-overflow: clip;
-	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-family: platformfont;
-	z-index: 5;
-
-}
-
-
-
-MusicLibraryArtistPanel .AddLibraryItem
-{
-	background-color: none;
-}
-
-MusicLibraryArtistPanel .AddLibraryItem:hover
-{
-	background-color: none;
-}
-
-MusicLibraryArtistPanel .AddLibraryItem:focus #AlbumImage
-{
-	pre-transform-scale2d: 0.6;
-	box-shadow: none;
-}
-
-MusicArtistPanel MusicLibraryAlbumPanel
-{
-	opacity: 1.0;
-}
-
-MusicArtistPanel #MusicAlbumGrid
-{
-	transform: translateX( 0px );
-}
-
-
-MusicLibraryPlaylistPanel .AddLibraryItem
-{
-	background-color: none;
-}
-
-MusicLibraryPlaylistPanel .AddLibraryItem:hover
-{
-	background-color: none;
 }
 
 ///////////////////////////////////////////////////////
@@ -1271,7 +622,7 @@ MusicLibraryPlaylistPanel .AddLibraryItem:hover
 	transition-duration: 0.23s;
 	transition-timing-function: ease-out;
 
-	width: 100%;
+	width: 1500px;
 	height: 100%;
 
 	visibility: visible;
@@ -1284,20 +635,350 @@ MusicLibraryPlaylistPanel .AddLibraryItem:hover
 	transform: translateX( 0px );
 }
 
+.LibraryAllGames MusicLibraryAlbumPanel
+{
+	overflow: clip;
+}
+
+.LibraryAllGames .MusicAlbumGrid
+{
+	padding-top: 77px;
+	padding-left: 135px;
+	position: 390px 0px 0px;
+	padding-right: 40px;
+	margin-left: 200px;
+
+	width: 1854px;
+	height: 1480px;
+
+	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	transform: translateX( 0px );
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
+}
+
+AlbumGridItem.NoCover #AlbumLabelWrapper
+{
+	visibility: visible;
+}
+
+AlbumGridItem.HiddenByFilter
+{
+	visibility: collapse;
+}
+
+#AlbumLabelWrapper
+{
+	margin: 5px;
+	flow-children: down;
+	visibility: collapse;
+}
+
+#AlbumUpperLabel
+{
+	color: white;
+	font-size: 24px;
+}
+
+#AlbumLowerLabel
+{
+	color: white;
+	font-size: 20px;
+}
+
+.AddLibraryItem #AlbumLowerLabel
+{
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.EmptyLabel
+{
+	position: 0px -100px 0px;
+
+	visibility: visible;
+
+	font-size: 34px;
+	height: 64px;
+	horizontal-align: center;
+	vertical-align: center;
+	color: #67c1f5ff;
+	white-space: nowrap;
+	text-overflow: clip;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+
+.EmptyGrid #EmptyLibraryArea
+{
+	opacity: 1.0;
+
+	vertical-align: center;
+	horizontal-align: center;
+	background-color: #00000044;
+	height: 800px;
+	width: 1350px;
+	z-index: -10;
+}
+
+.search.EmptyGrid #EmptySearchArea,
+#DownloadsNone,
+#ActivateProductArea
+{
+	opacity: 1.0;
+
+	position: 486px 32px 0px;
+	background-color: #00000044;
+	height: 800px;
+	width: 1350px;
+
+	transition-property: transform;
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	z-index: -10;
+}
+
+.AddLibraryItem,
+.AddLibraryItem:focus
+{
+	width: 600px;
+	height: 150px;
+	margin-top: 50px;
+	margin-left: 100px;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+.AddLibraryItem Label
+{
+	color: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f299 ), color-stop( 0.90, #f2f2f299 ), to( #97989800 ) );
+	font-weight: bold;
+}
+
+.AddLibraryItem #AlbumImage,
+.AddLibraryItem .GridItemBackground
+{
+	width: 150px;
+	height: 150px;
+	horizontal-align: left;
+}
+
+.AddLibraryItem #AlbumLabelWrapper
+{
+	margin-left: 150px;
+	margin-top: 30px;
+	visibility: visible;
+}
+
+.AddLibraryItem #AlbumLabelWrapper Label
+{
+	color: black;
+}
+
+.NoMusicAvailable #AlbumsFilter,
+.NoMusicAvailable #ArtistsFilter,
+{
+	visibility: collapse;
+}
+
+.MusicAlbumGrid AlbumGridItem
+{
+	width: 220px;
+	height: 220px;
+	margin-bottom: 10px;
+}
+
+.AddLibraryItem #ArtistUpperLabel,
+.AddLibraryItem #ArtistLowerLabel
+{
+	visibility: collapse;
+}
+
+.AddLibraryItem #PlaylistUpperLabel,
+.AddLibraryItem #PlaylistLowerLabel
+{
+	visibility: collapse;
+}
+
+ArtistGridItem
+{
+	width: 600px;
+	height: fit-children;
+	pre-transform-scale2d: .94;
+
+	margin-bottom: 10px;
+
+	//transition-property: pre-transform-scale2d, position, transform, box-shadow;
+	transition-property:  position;
+	transition-duration: 0.23s;
+	transition-delay: 0.0s;
+	transition-timing-function: bigpicture-ease-in-out;
+	
+	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
+
+	padding: 5px;
+}
+
+ArtistGridItem:focus
+{
+	pre-transform-scale2d: 1.0;
+	z-index: 5;
+	transform: translateX( -7px );
+	
+	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+ArtistGridItem:hover
+{
+	pre-transform-scale2d: 1.0;
+	z-index: 5;
+	transform: translateX( 0px );
+}
+
+ArtistGridItem:focus:hover
+{
+	pre-transform-scale2d: 1.04;
+	z-index: 5;
+	transform: translateX( -7px );
+}
+
+ArtistGridItem Label
+{
+	height: fit-children;
+	font-size: 26px;
+	font-family: platformfont;
+	font-weight: normal;
+	color: applabel;
+	opacity: 1.0;
+	text-overflow: clip;
+	white-space: nowrap;
+	font-family: platformfont;
+	z-index: 5;
+}
+
+ArtistGridItem:focus Label
+{
+	z-index: 6;
+	color: applabelselected;	
+}
+
+#ArtistUpperLabel
+{
+	font-weight: bold;
+	font-size: 30px;
+	text-overflow: ellipsis;
+}	
+
+ArtistGridItem.HiddenByFilter
+{
+	visibility: collapse;
+}
+	
+.Moving ArtistGridItem
+{
+	blur: gaussian( 5, 1 );
+	opacity: 0.15;
+	desaturation: 0.7;
+}
+
+ArtistGridItem #AlbumLabelWrapper
+{
+	height: fit-children;
+	width: 500px;
+	margin: 5px;
+	margin-left: 114px;
+	flow-children: down;
+	visibility: visible;
+}
+
+ArtistGridItem.NoCover #AlbumLabelWrapper
+{
+	visibility: visible;
+}
+
+#AddLibraryText
+{
+	visibility: collapse;
+}
+
+.AddLibraryItem #AddLibraryText
+{
+	visibility: visible;
+	margin-top: 20px;
+}
+
+ArtistGridItem #ArtistUpperLabel
+{
+	color: white;
+	font-size: 40px;
+}
+
+ArtistGridItem #ArtistLowerLabel
+{
+	color: white;
+	font-size: 24px;
+}
+
+ArtistGridItem #AlbumImage
+{
+	width: 100px;
+	height: 100px;
+}
+
+.LibraryAllGames .MusicAlbumGrid MouseScrollRegion
+{
+	x: -170px;
+}
+
+
+.LibraryAllGames .MusicAlbumGrid .TopMouseScrollRegion
+{
+	y: 90px;
+}
+
+.LibraryAllGames .MusicAlbumGrid .BottomMouseScrollRegion
+{
+	y: -500px;
+}
+
+
+ArtistGridItem.AddLibraryItem #AlbumImage
+{
+	width: 150px;
+	height: 150px;
+}
 
 PlaylistGridItem
 {
-	width: 356px;
-	height: 90px;
-	vertical-align: top;
+	width: 600px;
+	height: fit-children;
 	pre-transform-scale2d: .94;
 
-	transition-property: pre-transform-scale2d, position, transform;
-	transition-duration: 0.3s;
+	margin-bottom: 10px;
+
+	//transition-property: pre-transform-scale2d, position, transform, box-shadow;
+	transition-property:  position;
+	transition-duration: 0.23s;
 	transition-delay: 0.0s;
 	transition-timing-function: bigpicture-ease-in-out;
-
+	
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
+
+	padding: 5px;
 }
 
 PlaylistGridItem:focus
@@ -1305,6 +986,14 @@ PlaylistGridItem:focus
 	pre-transform-scale2d: 1.0;
 	z-index: 5;
 	transform: translateX( -7px );
+	
+	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 PlaylistGridItem:hover
@@ -1321,106 +1010,25 @@ PlaylistGridItem:focus:hover
 	transform: translateX( -7px );
 }
 
-
-PlaylistGridItem:focus #FocusBorderPanel
-{
-	width: 326px;
-	height: 90px;
-	border-width: 8px;
-	border-style: solid;
-	border-color: #f2f2f2ff;
-	z-index: 6;
-
-	background-image: url( "file://{images}/music/shadow.png" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 414px 414px;
-}
-
-#MusicLibraryPlaylistPanel PlaylistGridItem:focus #FocusBorderPanel
-{
-	width: 326px;
-	height: 60px;
-
-	background-image: none;
-	margin: 8px;
-
-	z-index: 6;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-
-	box-shadow: none;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #ffffffff ), to( #bdbfbfff ) );
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-
-#MusicLibraryPlaylistPanel .MusicPlaylistGrid #PlaylistUpperLabel
-{
-	color: applabel;
-}
-
-#MusicLibraryPlaylistPanel PlaylistGridItem:focus #ArtistUpperLabel
-{
-	color: applabelselected;
-}
-
 PlaylistGridItem Label
 {
-	height: 32px;
-	width: 300px;
+	height: fit-children;
 	font-size: 26px;
 	font-family: platformfont;
 	font-weight: normal;
 	color: applabel;
-	opacity: 0.8;
-	vertical-align: bottom;
+	opacity: 1.0;
 	text-overflow: clip;
 	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 	z-index: 5;
 }
 
-#PlaylistUpperLabel
+PlaylistGridItem.HiddenByFilter
 {
-	transform: translateY( -48px ) translateX( 16px );
-	font-weight: bold;
+	visibility: collapse;
 }
-
-.MusicPlaylistGrid #PlaylistUpperLabel
-{
-	height: 40px;
-	transform: translateY( -27px ) translateX( 0px );
-}
-
-#MusicLibraryPlaylistPanel PlaylistGridItem:focus #PlaylistUpperLabel
-{
-	height: 40px;
-	transform: translateY( -27px ) translateX( 22px );
-	color: applabelselected;
-}
-
-PlaylistGridItem:focus Label
-{
-	opacity: 1.0;
-	z-index: 6;
-	color: applabelselected;	
-}
-
-
-
+	
 .Moving PlaylistGridItem
 {
 	blur: gaussian( 5, 1 );
@@ -1428,259 +1036,41 @@ PlaylistGridItem:focus Label
 	desaturation: 0.7;
 }
 
-
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+PlaylistGridItem #AlbumLabelWrapper
 {
-	width: 80px;
-	height: 100%;
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_left;
-}
-
-
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-{
-	width: 80px;
-	height: 100%;
-	align: right center;
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_right;
-}
-
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
-{
-		background-color: mouse_active_bg_right;
-}
-
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, .MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
-{
-	background-color: mouse_active_bg_right;
-
-}
-
-.LibraryAllGames MusicLibraryAlbumPanel
-{
-	overflow: clip;
-	width: 1500px;
-	position: 390px 0px 0px;
-
-	transition-delay: 0s;
-	transition-duration: supershortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-property: transform, width;
-}
-
-.LibraryAllGames.ContentAreaFocus MusicLibraryAlbumPanel
-{
-	transform: translateX( -200px );
-}
-
-.LibraryAllGames .MusicAlbumGrid MouseScrollRegion
-{
-	x: -170px;
-}
-
-.LibraryAllGames .MusicAlbumGrid .BottomMouseScrollRegion
-{
-	y: -600px;
-}
-
-.LibraryAllGames .MusicAlbumGrid
-{
-	padding-top: 77px;
-	padding-left: 135px;
-	padding-right: 40px;
-
-	width: 1854px;
-	height: 1480px;
-
-	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
-
-	transform: translateX( 0px );
-}
-
-.LibraryAllGames AlbumGridItem
-{
-	width: 634px;
-	height: 439px;
-	margin: -140px -140px;
-	padding: 82px;
-
-	pre-transform-scale2d: 0.88;
-	opacity: 0.0;
-
-	overflow: noclip;
-
-	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
-	transition-duration: supershortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-}
-
-.LibraryAllGames AlbumGridItem.Ready
-{
-	opacity: 1.0;
-	pre-transform-scale2d: 0.94;
-}
-
-.LibraryAllGames AlbumGridItem #AlbumImage
-{
-	width: 460px;
-	height: 215px;
-	opacity: 0.9;
-	desaturation: 0.2;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 0px;
-
-	transition-property: box-shadow, opacity, desaturation;
-	transition-duration: shortmedduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-
-	border-radius: 3px;
-
-	background-color: #000000;
-
-	z-index: 100;
-}
-
-.LibraryAllGames AlbumGridItem .GridItemBackground
-{
-	width: 470px;
-	height: 255px;
-	opacity: 0;
-	background-color: #FFFFFF;
-	z-index: 99;
-}
-
-.LibraryAllGames AlbumGridItem:focus .GridItemBackground,
-.LibraryAllGames AlbumGridItem:hover .GridItemBackground {
-	width: 470px;
-	height: 225px;
-	opacity: 1;
-	background-color: #b4dff7;
-	z-index: 99;
-
-	box-shadow: box_shadow_on_color -8px -8px 8px 8px;
-	border-radius: 3px;
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: longduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.LibraryAllGames AlbumGridItem:focus #AlbumImage
-{
-	opacity: 1.0;
-	desaturation: 0.6;
-	pre-transform-scale2d: 1;
-	wash-color: #1483ba80;
-}
-
-.LibraryAllGames #AlbumLabelWrapper
-{
-	width: 460px;
-	height: 215px;
-	margin: 8px;
-	margin-left: 18px;
+	height: fit-children;
+	width: 500px;
+	margin: 5px;
+	margin-left: 114px;
 	flow-children: down;
 	visibility: visible;
-	opacity: 1.0;
-	z-index: 101;
 }
 
-.LibraryAllGames AlbumGridItem Label
+PlaylistGridItem.NoCover #AlbumLabelWrapper
 {
-	transform: none;
-	height: fit-children;
-
-	width: fill-parent-flow( 1.0 );
-	font-size: 42px;
-	font-family: platformfont;
-	color: #8f98a0;
-	vertical-align: center;
-	margin-left: 0px;
-	margin-top: 2px;
-	text-overflow: clip;
-	white-space: normal;
-
-	transition-property: color, opacity;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
+	visibility: visible;
 }
 
-
-.LibraryAllGames AlbumGridItem.NoCover Label
+PlaylistGridItem #PlaylistUpperLabel
 {
-		opacity: 1.0;
+	color: white;
+	font-size: 40px;
 }
 
-.LibraryAllGames #AlbumLowerLabel,
-.LibraryAllGames #AlbumUpperLabel
+PlaylistGridItem #PlaylistLowerLabel
 {
-	width: 450px;
-	font-weight: light;
+	color: white;
+	font-size: 24px;
 }
-.LibraryAllGames #AlbumLowerLabel
+
+PlaylistGridItem #AlbumImage
 {
-color: #66c0f4;
+	width: 100px;
+	height: 100px;
 }
-.LibraryAllGames AlbumGridItem:focus #AlbumLowerLabel,
-.LibraryAllGames AlbumGridItem:focus #AlbumUpperLabel
+
+PlaylistGridItem.AddLibraryItem #AlbumImage
 {
-	color: applabel;
+	width: 150px;
+	height: 150px;
 }
-
-.LibraryAllGames AlbumGridItem:focus
-{
-	pre-transform-scale2d: 1.0;
-	background-image: url( "file://{images}/library/game_grid_shadow.png");
-	background-position: left 0px top 0px;
-	background-size: 100% 85%;
-	background-repeat: no-repeat;
-
-	box-shadow: none;
-	animation-name: none;
-
-	opacity: 1.0;
-	z-index: 200;
-}
-
-.LibraryAllGames AlbumGridItem:focus:hover
-{
-	pre-transform-scale2d: 1.0;
-	opacity: 1.0;
-}
-
-.LibraryAllGames AlbumGridItem:hover #AlbumImage
-{
-	opacity: 1.0;
-	desaturation: 0.1;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-}
-

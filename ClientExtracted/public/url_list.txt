@@ -923,3 +923,10 @@ LibrarySuggestions
 	method		"internal"
 	filter		"community"
 }
+
+BigPictureSuggestions
+{
+	url			"%community%/bigpicture/home/%p1%/"
+	method		"internal"
+	filter		"community"
+}

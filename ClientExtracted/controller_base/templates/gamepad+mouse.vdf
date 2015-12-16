@@ -140,8 +140,7 @@
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
 	}
-	
-		"Localization"
+	"Localization"
 	{
 		"english"
 		{
@@ -150,7 +149,7 @@
 		}
 		"czech"
 		{
-			"Title" "Gamepad + myš pro ovládání kamery"
+			"Title" "Gamepad s přesným ovládáním zaměřováním/kamery"
 			"Description" "Tato šablona je pro hry vytvořené pro ovládání gamepadem, ale podporující také myš pro ovládání kamery nebo míření. V této šabloně je využito pravého trackpadu ovladače pro přesné ovládání zmíněné kamery nebo míření."
 		}
 		"danish"
@@ -163,10 +162,15 @@
 			"Title" "Gamepad met zeer precieze camera/vizier"
 			"Description" "Deze template werkt het beste voor spellen die zijn ontworpen met ondersteuning voor een gamepad, maar die ook een desktopmuis ondersteunen voor camerabesturing of om te richten. Hiermee profiteer je het meeste van de rechter-pad van je controller voor nauwkeurig richten en camerabesturing."
 		}
+		"finnish"
+		{
+			"Title" "Ohjain korkeatarkkuuksisella kameralla/tähtäimellä"
+			"Description" "Tämä malli sopii parhaiten peleille, jotka on suunniteltu ohjaimille, mutta jotka hyötyvät hiiren tarkkuudesta. Tämä malli ottaa suurimman hyödyn irti ohjainlevyistä."
+		}
 		"french"
 		{
 			"Title" "Manette avec une caméra/visée de haute précision"
-			"Description" "Ce modèle fonctionne particulièrement bien pour les jeux conçus pour un certain type de manette mais qui sont également compatibles avec une souris pour le contrôle de la caméra et la visée. Grâce à ce modèle, vous pourrez profiter du côté droit du pad de votre contrôleur pour une visée précise et le contrôle de la caméra."
+			"Description" "Ce modèle fonctionne particulièrement bien pour les jeux conçus pour un certain type de manette mais qui sont également compatibles avec une souris pour le contrôle de la caméra et la visée. Grâce au modèle, vous pourrez profiter du côté droit du pad de votre contrôleur pour une visée précise et le contrôle de la caméra."
 		}
 		"german"
 		{
@@ -177,6 +181,15 @@
 		{
 			"Title" "Gamepad nagy pontosságú kamerával/célzással"
 			"Description" "Ez a sablon gamepadhez tervezett játékokkal működik a legjobban, de támogat egeret is a kamerairányításhoz vagy célzáshoz. Ez használja ki a legjobban játékvezérlőd jobb oldali felületét pontos célzáshoz és kamerairányításhoz."
+		}
+		"japanese"
+		{
+			"Title" "高精度のカメラ/エイム機能を持つゲームパッド"
+		}
+		"koreana"
+		{
+			"Title" "정밀 카메라/조준 기능이 있는 게임 패드"
+			"Description" "이 설정은 게임 패드의 사용을 염두에 두고 만들어진 게임을 플레이할 때 가장 적합하지만 카메라 조정이나 조준을 돕기 위해 마우스도 지원합니다. 컨트롤러의 우측 패드로 정밀 조준과 카메라 조정을 할 때 이 설정을 쓰는 것이 좋습니다."
 		}
 		"polish"
 		{

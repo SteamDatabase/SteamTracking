@@ -5,10 +5,13 @@
 		<include src="file://{resources}/styles/music/music.css" />
 	</styles>
 	
-	<MusicPanel hittest="false" content-title="#Music_Library_Header">
-		<MusicLibraryContainerPanel id="MusicLibraryContainerPanel" class="MusicLibraryContainerPanel" />
-		<MusicAlbumPanel id="MusicAlbumPanel" class="MusicAlbumPanel" />
-		<MusicArtistPanel id="MusicArtistPanel" class="MusicArtistPanel" />
-		<MusicPlaylistPanel id="MusicPlaylistPanel" class="MusicPlaylistPanel" />
+	<MusicPanel hittest="false" class="MusicVisible" content-title="#Music_Library_Header">
+		<MusicExplorePanel id="MusicExplorePanel" />
+
+		<Panel id="PanelDuringCrawling">
+			<Label id="CrawlingHeader" class="CrawlingHeader" text="#Music_Library_Crawling_Header" />
+			<MusicLibraryCrawlingPanel id="MusicLibraryCrawlingPanel"/>
+		</Panel>
+
 	</MusicPanel>
 </root>

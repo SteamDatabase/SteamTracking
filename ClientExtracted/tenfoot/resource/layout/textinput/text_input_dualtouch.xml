@@ -225,7 +225,7 @@
 							<Panel id="TouchKey_7_3" class="TouchKey" />
 							<Panel id="TouchKey_8_3" class="TouchKey" />
 							<Panel id="TouchKey_9_3" class="TouchKey" />
-							<Panel id="TouchKey_Symbols" class="TouchKey RightQuadrant">
+							<Panel id="TouchKey_Shift" class="TouchKey RightQuadrant">
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
 							</Panel>
 						</Panel>						

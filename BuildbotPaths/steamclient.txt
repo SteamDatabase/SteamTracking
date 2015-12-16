@@ -557,8 +557,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/vthumbstick.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerxinput_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.h
@@ -989,7 +987,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/wire_format_lite_inl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tlist.tcc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tmap.tcc
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/trefcounter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcre_stringpiece.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcrecpp.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(aifffile.o)

@@ -18,7 +18,7 @@
 														'GamesSuggestion' : contentHoverClass ,
 														'GamesGrid' :  contentHoverClass ,
 														'GamesDownloads' :  contentHoverClass ,
-														'MusicPanelAllGames' :  contentHoverClass ,
+														'MusicExplore' :  contentHoverClass ,
 														'EmptySearchArea' :  contentHoverClass 
 														};
 			SetupPanelsHoverEvents( hoverItemStyles, $('#AllGamesContent') );
@@ -30,7 +30,7 @@
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
 		</Panel>
-		<Panel class="AllGamesContent" id="AllGamesContent" >
+		<Panel class="AllGamesContent" id="AllGamesContent" mousecanactivate="unfocused" >
 			<Panel id="Menu" class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >
 				<Panel class="GamesButtonContainer">
 
@@ -57,7 +57,7 @@
 										<Panel class="ButtonCountCapsule" >
 											<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
 											<Label  text="#Library_Installed_Detail"/>
-						 			</Panel>
+									</Panel>
 						  </Panel>
 					</Button>
 					
@@ -73,8 +73,8 @@
 					
 					<Panel class="GamesHorizRule" />
 					<Label text="#Library_AllGamesBrowse" class="Header" />
-			   	
-			   	<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+
+					<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Panel class="ButtonFlowRight" >
 							<Label id="AllGamesLabel" text="#Library_AllGames"/>
 								<Panel class="ButtonCountCapsule" >
@@ -136,8 +136,8 @@
 						<Label text="#Library_AddContent_Activate"/>
 					</Button>
 
-          <Panel class="GamesHorizRule" />
-          <Panel class="GamesHorizRule" />
+					<Panel class="GamesHorizRule" />
+					<Panel class="GamesHorizRule" />
 					<Button class="NxLeftNavButtonAction WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
 						<Label id="Label" text="#WizardButton_Next" />
 					</Button>
@@ -157,21 +157,19 @@
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
 			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="250" rememberchildfocus="true" childfocusonhover="true" />
 			<DownloadsPanel id="GamesDownloads"  class="GamesDownloads" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="150" />
-			<MusicLibraryAlbumPanel id="MusicPanelAllGames" class="" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
-						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"
-						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="2"  />
+			<MusicExplorePanel id="MusicExplore" class="MusicExpore" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="100" rememberchildfocus="true" />
 			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="4" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="1" />
-      <Panel id="EmptyLibraryArea" >
-          <Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
-      </Panel>
-      <Panel id="EmptySearchArea" >
-		    <Label class="EmptyLabel" text="#Library_AllGames_EmptySearchGrid" />
-      </Panel>
-      <Panel id="ActivateProductArea" >
-	    	<Label class="EmptyLabel" text="#Library_ActivateProduct_Hint" />
-      </Panel>
+			<Panel id="EmptyLibraryArea" >
+				<Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
+			</Panel>
+			<Panel id="EmptySearchArea" >
+				<Label class="EmptyLabel" text="#Library_AllGames_EmptySearchGrid" />
+			</Panel>
+			<Panel id="ActivateProductArea" >
+				<Label class="EmptyLabel" text="#Library_ActivateProduct_Hint" />
+			</Panel>
 		</Panel>
 	</LibraryAllGames>
 </root>

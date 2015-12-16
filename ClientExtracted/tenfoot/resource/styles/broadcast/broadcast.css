@@ -52,6 +52,7 @@ BroadcastViewer.Loading
 
 BroadcastViewer.Loading .WebLoadThrobber
 {
+	margin-top: 0px;
 	visibility: visible;
 }
 

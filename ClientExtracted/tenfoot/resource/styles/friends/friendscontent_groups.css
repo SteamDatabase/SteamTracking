@@ -116,5 +116,5 @@ Label
 
 EdgeScroller #MaxButton
 {
-	margin-bottom: 100px;
+	y: -100px;
 }

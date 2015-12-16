@@ -7,7 +7,6 @@
 	<Panel class="NotificationRoot">
 		<Panel class="NotificationFrame" />
 		<Image id="MessageImage" class="AchievementImage" scaling="stretch-to-cover-preserve-aspect"/>
-		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
 		<Label id="MessageTitle" class="ThreeLineNotificationTitle"/>
 		<Label id="MessageLine1" class="ThreeLineNotificationMessageLine1"/>
 		<Label id="MessageLine2" class="ThreeLineNotificationMessageLine2"/>

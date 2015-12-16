@@ -8,8 +8,21 @@ MusicControlTransport
 {
 	flow-children: down;
 	width: 100%;
-	height: 100%;
+	height: fit-children;
+}
 
+#TransportTopSection
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: down;
+	background-color: message_box_bg_dark;
+}
+
+#TransportTopSection:descendantfocus
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #133e57 ), to( messagecolorwash ) );
 }
 
 .ControlBarButton
@@ -27,7 +40,6 @@ MusicControlTransport
 
 #BrowseMusicControlButton
 {
-	margin-right: 0px;	
 }
 
 
@@ -68,6 +80,10 @@ MusicControlTransport
 	wash-color: ui_primary_dark_color;
 }
 
+#QueuePrevious
+{
+	margin-left: 60px;
+}
 
 #BrowseMusicButton 
 {
@@ -226,12 +242,13 @@ MusicControlTransport
 	vertical-align: center;
 	horizontal-align: center;
 	width: 100%;
-	height: 116px;
+	height: 100px;
 	margin: 10px;
+	margin-top: 0px;
 	padding-left: 10px;
 	margin-bottom: 0px;
 	background-image: url("file://{images}/music/control_bg.png");
-	background-position: left 5px top 23px;
+	background-position: left 5px top 15px;
 	background-size: 610px 70px;
 	background-repeat: no-repeat;
 }
@@ -253,7 +270,9 @@ MusicControlTransport
 {
 	flow-children: down;
 	width: 100%;
-	height: 100%;
+
+	height: 0px;
+	visibility: collapse;
 }
 
 #NoMusicQueueEntriesContainer
@@ -684,13 +703,29 @@ MusicControlQueueEntry.IsPlaying:focus .TrackTime
 	height: 370px;
 }
 
+.SeekContainer
+{
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+
+	flow-children: right;
+}
+
+.SeekContainer Label
+{
+	horizontal-align: right;
+}
+
 SeekBar
 {
-	margin: 15px 10px 0px 0px;
-	width: 100%;
-	height: 10px;
+	margin-top: 5px;
+	width: 80%;
+	height: 15px;
 	background-color: message_box_bg;
-	padding: 2px;
+	margin-right: 10px;
 }
 SeekBar:focus
 {
@@ -715,4 +750,103 @@ SeekBar .SeekBarProgress
 	height: 100%;
 	background-color: messagecolorwash;
 	z-index: 2;
+}
+
+#TrackContainer
+{
+	width: 100%;
+	margin-top: 12px;
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+#TrackName
+{
+	color: white;
+	font-size: 30px;
+}
+
+#TrackTime
+{
+	horizontal-align: right;
+	color: white;	//messagecolorwash;
+	font-size: 20px;
+}
+
+
+#TransportBottomSection
+{
+	width: 100%;
+	height: fit-children;
+	margin-top: 20px;
+}
+
+.TransportBottomButton
+{
+	width: 49%;
+	height: 180px;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( message_box_bg_dark ), to( #14445f ) );
+}
+
+.TransportBottomButton:hover
+{
+	box-shadow: messagecolorwash -4.5px -4.5px 16px 9px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #133e57 ), to( messagecolorwash ) );
+}
+
+.TransportBottomButton:focus
+{
+	box-shadow: messagecolorwash -4.5px -4.5px 16px 9px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #133e57 ), to( messagecolorwash ) );
+}
+
+#MusicExploreButton
+{
+	horizontal-align: left;
+}
+
+.NoCurrentPlaylist #MusicExploreButton
+{
+	horizontal-align: center;
+	width: 60%;
+}
+
+#MusicExploreButton Label
+{
+	color: ui_primary_color;
+	font-size: 30px;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+}
+
+#MusicExploreButton:hover Label,
+#MusicExploreButton:focus Label
+{
+	color: #d6f5ffff;
+}
+
+#CurrentlyPlayingButton
+{
+	horizontal-align: right;
+
+	padding: 10px;
+
+	flow-children: down;
+}
+
+.NoCurrentPlaylist #CurrentlyPlayingButton
+{
+	visibility: collapse;
+}
+
+#CurrentlyPlayingButton Image
+{
+	horizontal-align: center;
+	vertical-align: center;
+	height: 85%;
+	margin-bottom: 4px;
+
+	box-shadow: fill #00000033 -2px -2px 9px 5px;
 }

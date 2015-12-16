@@ -70,7 +70,6 @@
  B g_loggingMutexCreated
  B g_machClient
  B g_nGameID
- B g_pCurrentVRControlPanel
  B g_pCurrentVRHmd
  B g_pGameExitingEvent
  B g_pInGameRenderingEvent
@@ -439,7 +438,6 @@
  T ThreadInterlockedCompareExchange
  T UpdateVRState(int, int)
  T ValveHookScreenshots
- T WindowInVRBounds(int, int)
  T __clang_call_terminate
  T __cxa_allocate_exception
  T __cxa_begin_catch
@@ -547,7 +545,6 @@
  __udivdi3
  __umoddi3
  _dyld_get_image_name
- _dyld_image_count
  abort
  atoi
  b (anonymous namespace)::emergency_mutex
@@ -613,7 +610,6 @@
  d s_pchFragmentShader
  d s_pchVertexShader
  d standard_subs
- dlclose
  dlopen
  dlsym
  dyld_stub_binder

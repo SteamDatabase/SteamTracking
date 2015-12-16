@@ -5,12 +5,12 @@
 		<include src="file://{resources}/styles/library/controllerregistration.css" />
 	</styles>
 
-	<ControllerRegistration defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
+	<ControllerRegistration tabindex="auto" class="TenfootMsgBox" selectionpos="auto" >
 			<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="BindingSaveCancelled()">				
 					<Panel id="MsgBoxHeader" class="MsgBoxHeader RegistrationHeader">
-						<Panel class="Step_RegisterQuestion StepHeader">
+						<Panel class="Step_RegisteringCurrentAccount StepHeader">
 							<Label class="MsgBoxTitle" text="#Controller_Registration_Title" />
-							<Label id="RegistrationDescription" text="#Controller_Registration_Desc" />
+							<Label class="RegistrationDescription" text="#Controller_Registration_Desc" />
 						</Panel>
 						<Panel class="Step_Personalizing StepHeader">
 							<Label class="MsgBoxTitle" text="#Controller_Registration_Personalize_Title" />
@@ -18,6 +18,14 @@
 						<Panel class="Step_Migrating StepHeader">
 							<Label class="MsgBoxTitle" text="#Controller_Registration_Migrating_Title" />
 						</Panel>
+						<Panel class="Step_SelectingAccount StepHeader">
+							<Label class="MsgBoxTitle" text="#Controller_Registration_Selecting_Title" />
+							<Label class="RegistrationDescription" text="#Controller_Registration_Selecting_Desc" />
+						</Panel>
+						<Panel class="Step_FirmwareUpdate StepHeader">
+							<Label class="MsgBoxTitle" text="#Controller_Registration_FirmwareUpdate_Title" />
+							<Label class="FirmwareUpdateDescription" text="#Controller_Registration_FirmwareUpdate_Desc" />	
+						</Panel>						
 					</Panel>
 					
 					<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">				
@@ -28,12 +36,19 @@
 										<TextEntry id="ControllerNameEntry"
 											maxchars="32" 
 											multiline="false"
-											textinputid="BindingTitleTextEntry"
+											textinputid="ControllerNameTextEntry"
 											textinputdoneactionstring="#Friends_AddFriend_OK"
 											textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 										/>
 									</Panel>
-							
+									<Panel id="TurnOnSoundContainer" class="SoundDropdownContainer">
+										<Label text="#Controller_Registration_TurnOnSound" />
+										<DropDown id="TurnOnSoundDropdown" class="SoundDropdown"/>	
+									</Panel>
+									<Panel id="TurnOffSoundContainer" class="SoundDropdownContainer">
+										<Label text="#Controller_Registration_TurnOffSound" />
+										<DropDown id="TurnOffSoundDropdown" class="SoundDropdown"/>
+									</Panel>									
 									<Panel id="GuideBrightnessContainer">
 										<Label text="#Controller_Registration_GuideBrightness" />
 										<Slider id="GuideBrightnessSlider" direction="horizontal" />
@@ -46,14 +61,16 @@
 										<ProgressBar id="ProgressBar" />
 									</Panel>
 								</Panel>
+								
+								<Panel id="OtherAccountsContainer" class="Step_SelectingAccount StepArea"/>
 							</Panel>
 							
 							<Panel id="MsgBoxButtons">	
-								<Panel class="Step_RegisterQuestion StepButtons">
+								<Panel class="Step_RegisteringCurrentAccount StepButtons">
 									<Button id="ButtonOk" class="ButtonOK MsgBoxButton Button" onactivate="StartRegistration();">
 										<Label id="OKButtonText" text="#Controller_Registration_Submit" />
 									</Button>
-									<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="AbortRegistration();">
+									<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="AbortRegistration( false );">
 										<Label id="CancelButtonText" text="#Controller_Registration_Cancel" />
 									</Button>
 								</Panel>
@@ -64,8 +81,21 @@
 									</Button>
 								</Panel>
 								
+								<Panel class="Step_SelectingAccount StepButtons">
+									<Button id="ButtonOkSelecting" class="ButtonOK MsgBoxButton Button" onactivate="StartRegistration();">
+										<Label id="OKButtonText" text="#Controller_Registration_Submit" />
+									</Button>
+									<Button id="ButtonCancelSelecting" class="ButtonCancel MsgBoxButton Button" onactivate="SelectAccount(0);">
+										<Label id="CancelButtonText" text="#Controller_Registration_Guest" />
+									</Button>
+								</Panel>
+								<Panel class="Step_FirmwareUpdate StepButtons">
+									<Button id="ButtonOkSelecting" class="ButtonOK MsgBoxButton Button" onactivate="AbortRegistration( true );">
+										<Label id="OKButtonText" text="#Controller_Registration_Firmware_Submit" />
+									</Button>
+								</Panel>								
 							</Panel>				
 					</Panel>
-			</Panel>		
+				</Panel>		
 	</ControllerRegistration>
 </root>

@@ -54,6 +54,7 @@ Button Label
 
 	font-family: platformfont;
 	font-size: 28px;
+	margin-left: 5px;
 	transform: translatex(0px);
 	color: detailsdatalabelfocus;
 	transition-property: transform, color;
@@ -686,7 +687,6 @@ CartLineItem:descendantfocus #Notes Label.WarningNote
 CartNoteItem, CartNoteItem:hover
 {
 	width: 100%;
-	margin-left: 12px;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 	transition-property: box-shadow;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -711,6 +711,7 @@ CartNoteItem #CartNoteItemButton
 {
 	flow-children: right;
 	margin: 0px 0px 16px 0px;
+	padding: 8px;
 	height: fit-children;
 }
 

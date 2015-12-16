@@ -11,7 +11,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(pme_posix.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(testthread.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(threadtools.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(validator.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(valobject.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(vprof.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(fileio.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(osversion.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(random.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(strtools.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(utlbuffer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(utlmemory.o)
@@ -34,7 +39,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/platform.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/valobject.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fileio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
@@ -52,8 +59,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/pme_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/testthread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/random.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools.cpp

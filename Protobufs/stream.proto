@@ -249,6 +249,7 @@ enum EFrameAccumulatedStat {
 enum ELogFileType {
 	k_ELogFileSystemBoot = 0;
 	k_ELogFileSystemReset = 1;
+	k_ELogFileSystemDebug = 2;
 }
 
 message CDiscoveryRequest {

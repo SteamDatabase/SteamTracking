@@ -2,18 +2,24 @@ ControllerRegistration
 {	
 	horizontal-align: center;
 	vertical-align: center;
+	width: 100%;
+	height: 100%;
 }
 
-.Step_RegisterQuestion,
+.Step_RegisteringCurrentAccount,
 .Step_Personalizing,
-.Step_Migrating
+.Step_Migrating,
+.Step_SelectingAccount,
+.Step_FirmwareUpdate,
 {
 	visibility: collapse;
 }
 
-.Questioning .Step_RegisterQuestion,
+.RegisteringCurrentAccount .Step_RegisteringCurrentAccount,
 .Personalizing .Step_Personalizing,
-.Migrating .Step_Migrating
+.Migrating .Step_Migrating,
+.SelectingAccount .Step_SelectingAccount,
+.FirmwareUpdate .Step_FirmwareUpdate
 {
 	visibility: visible;
 }
@@ -33,6 +39,7 @@ ControllerRegistration
 .StepButtons
 {
 	flow-children: right;
+	width: 100%;
 }
 
 #SetNameContainer
@@ -46,11 +53,61 @@ ControllerRegistration
 	vertical-align: center;
 }
 
-#RegistrationDescription
+.RegistrationDescription
 {
 	margin-top: 10px;
 	margin-bottom: 20px;
 	font-size: 24px;
+}
+
+.FirmwareUpdateDescription
+{
+	margin-top: 24px;
+	margin-bottom: 20px;
+	font-size: 32px;
+}
+
+.SoundDropdown
+{
+	width: 100%;
+	vertical-align: middle;
+    margin-top: 16px;
+    margin-left: 16px;
+    z-index: msgbox_contextmenu_zindex;
+}
+
+
+.SoundDropdownContainer
+{
+	flow-children: right;
+	width: 100%;
+    height: 80px;
+	vertical-align: middle;
+    margin-top: 16px;
+}
+
+.SoundDropdownContainer Label
+{
+	border-width: 0px;
+	vertical-align: center;
+}
+
+DropDownMenu.DropDownMenuVisible
+{
+    max-height: 450px;
+    width: 522px;
+    z-index: msgbox_contextmenu_zindex;
+}
+
+.SoundDropdown DropDown
+{
+	width: 100%;
+    height: 46px;
+	padding-left: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 1px;
+    z-index: msgbox_contextmenu_zindex;
 }
 
 #GuideBrightnessSlider
@@ -99,7 +156,8 @@ ControllerRegistration
 	width: 100%;
 }
 
-#ButtonCancel
+#ButtonCancel,
+#ButtonCancelSelecting
 {
 	visibility: visible;
 	horizontal-align: right;
@@ -123,4 +181,19 @@ ControllerRegistration
 .ProgressBarLeft
 {
 	background-color: gradient( linear, 0% 100%, 100% 0%, from( #00FFFF ), to( #CCFFFF ) );
+}
+
+#OtherAccountsContainer
+{
+	width: fit-children;
+	height: fit-children;
+	margin-bottom: 20px;
+	margin-left: 80px;
+}
+
+.GameActionSelectButton
+{
+	margin-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
 }

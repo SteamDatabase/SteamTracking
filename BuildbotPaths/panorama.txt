@@ -427,6 +427,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uifileresource.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uijsregistration.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uischeduleddel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindow.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowopenvroverlay.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowoverlay.h

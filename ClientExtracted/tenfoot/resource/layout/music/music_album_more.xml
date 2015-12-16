@@ -12,9 +12,6 @@
 			<Button class="Button" onactivate="PlayCurrentAlbum(true, false);" >
 				<Label id="PlayAlbumLabel" text="#MusicAlbum_Play_Album" />
 			</Button>
-			<Button class="Button" onactivate="PlayCurrentAlbum(false, false);">
-				<Label id="AddLabel" text="#MusicAlbum_Add_To_Queue" />
-			</Button>	
 			<Button id="AlbumAddToPlaylistButton" class="Button" onactivate="AddAlbumToPlaylist();" >
 				<Label id="AddToPlaylistLabel" text="#MusicAlbum_Add_To_Playlist" />
 			</Button>

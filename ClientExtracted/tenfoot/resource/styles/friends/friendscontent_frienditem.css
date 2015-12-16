@@ -15,7 +15,8 @@ FriendsContent_FriendItem.HiddenByFilter
 	visibility: collapse;
 }
 
-FriendsContent_FriendItem:focus
+FriendsContent_FriendItem:focus,
+FriendsContent_FriendItem:hover
 {
 	border: 3px solid #b6e1fa;
 	//padding: 3px;

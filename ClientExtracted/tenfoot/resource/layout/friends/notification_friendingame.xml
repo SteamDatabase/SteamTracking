@@ -9,6 +9,6 @@
 		<AvatarImage id="AvatarImage" class="AvatarImage" />
 		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
 		<Label id="FriendName" class="NotificationTitle" />
-		<Label id="MessageText" class="NotificationMessage" text="#Notification_IsNowPlaying" />
+		<Label id="MessageText" class="NotificationTwoLabelBodyLineTwo" text="#Notification_IsNowPlaying" />
 	</Panel>
 </root>
