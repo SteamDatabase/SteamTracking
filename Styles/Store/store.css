@@ -102,13 +102,13 @@ body.v6 #footer {
 
 }
 
-	body.v6 #footer.small_footer {
+	body.v6.infinite_scrolling #footer.small_footer {
 		position: relative;
 		top: auto;
 		bottom: auto;
 	}
 
-	body.v6 #footer_spacer.small_footer {
+	body.v6.infinite_scrolling #footer_spacer.small_footer {
 		display: none;
 	}
 

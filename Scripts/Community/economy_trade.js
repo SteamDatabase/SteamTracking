@@ -1855,6 +1855,19 @@ function ConfirmTrade()
 {
 	if ( g_bConfirmInFlight )
 		return;
+
+	function OnTradeConfirmFailed( data )
+	{
+		if ( data.eresult == 25 )
+		{
+			ShowAlertDialog( 'This trade cannot be completed, because it would exceed the maximum number of items allowed in your inventory.' );
+		}
+		else
+		{
+			RequestTradeStatusUpdate();
+		}
+	}
+
 	if ( UserYou.bReady && UserThem.bReady )
 	{
 		CancelTradeStatusPoll();
@@ -1866,7 +1879,7 @@ function ConfirmTrade()
 				version: g_rgLastFullTradeStatus.version
 			},
 			onSuccess: OnTradeStatusUpdate,
-			onFailure: RequestTradeStatusUpdate,
+			onFailure: OnTradeConfirmFailed,
 			onComplete: function() { g_bConfirmInFlight = false; }
 		});
 	}

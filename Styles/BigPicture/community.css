@@ -95,6 +95,7 @@
 #ContentFilter #FilterButton_11
 {
 	height: 0px;
+	min-height: 0px;
 }
 
 #ContentFilter:descendantfocus #FilterButton_11

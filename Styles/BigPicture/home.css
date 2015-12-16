@@ -57,6 +57,10 @@ RemotePanel
 {
 	color: #a3cf06;
 }
+.NxLeftNavButtonAction.Cart .icon_cart
+{
+	wash-color: #a3cf06;
+}
 
 .NxLeftNavButtonAction.Cart:focus,
 .NxLeftNavButtonAction.Cart:focus Label

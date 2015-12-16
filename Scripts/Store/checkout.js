@@ -629,7 +629,8 @@ function InitializeTransaction()
 		    method:'post',
 		    parameters: { 
 				// Info for all carts
-				'gidShoppingCart' : $('shopping_cart_gid').value,
+				'gidShoppingCart' : $J('#shopping_cart_gid').val() || -1,
+				'gidReplayOfTransID' : $J('#gid_replay' ).val() || -1,
 				'PaymentMethod' : sPaymentMethod,
 				'abortPendingTransactions' : ( $('cancel_pending').checked ? 1 : 0 ),
 		    	
@@ -995,7 +996,8 @@ function GetFinalPriceAndUpdateReviewTab()
 	
 				var transid = $('transaction_id').value;
 		var microtxnid = $('microtxn_id') ? $('microtxn_id').value : -1;
-		var cart = $('cart_id') ? $('cart_id').value : -1;
+		var cart = $J('#shopping_cart_gid' ).val() || -1;
+		var gidReplayOfTransID = $J('#gid_replay' ).val() || -1;
 		new Ajax.Request('https://store.steampowered.com/checkout/getfinalprice/',
 		{
 		    method:'get',
@@ -1004,7 +1006,8 @@ function GetFinalPriceAndUpdateReviewTab()
 				'transid' : transid,
 				'purchasetype' : g_bIsGiftForm ? 'gift' : 'self',
 				'microtxnid' : microtxnid,
-				'cart' : cart
+				'cart' : cart,
+				'gidReplayOfTransID' : gidReplayOfTransID
 			},
 		    onSuccess: function(transport){
 		    	g_bGetFinalPriceRunning = false;

@@ -617,7 +617,7 @@
 .NxFilterTab DropDown
 {
 	height: 0px;
-
+	min-height: 0px;
 	margin: 0px;
 }
 .NxFilterTab:descendantfocus ToggleButton,
