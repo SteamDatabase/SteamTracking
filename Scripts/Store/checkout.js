@@ -1172,13 +1172,13 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'moneybookers' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'MoneyBookers transactions are authorized through the MoneyBookers website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to MoneyBookers';					
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Skrill transactions are authorized through the Skrill website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Skrill';					
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MoneyBookers customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the MoneyBookers website by clicking the “CONFIRM” button after you have selected your payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the MoneyBookers window before the process is complete.';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Skrill customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the Skrill website by clicking the “CONFIRM” button after you have selected your payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Skrill window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'alipay' )
@@ -3357,7 +3357,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'moneybookers' && providerPaymentMethod == 10 )
 			{
-				$('payment_method_review_text').innerHTML = 'MoneyBookers';
+				$('payment_method_review_text').innerHTML = 'Skrill';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'alipay' && providerPaymentMethod == 11 )
