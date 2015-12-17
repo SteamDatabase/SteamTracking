@@ -854,7 +854,8 @@ HorizontalScrollBar .ScrollThumb, HTMLHorizontalScrollBar .ScrollThumb
 VerticalScrollBar,
 VerticalScrollBar .ScrollThumb,
 HorizontalScrollBar,
-HorizontalScrollBar .ScrollThumb
+HorizontalScrollBar .ScrollThumb,
+EdgeScrollBar
 {
 	transition-duration: 0.20s;
 	transition-timing-function: ease-out;
@@ -2732,11 +2733,7 @@ EdgeScrollBar
 
 	opacity: 1.0;
 
-	// The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: transform;
-	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
 }
 
 .EdgeScrollButton

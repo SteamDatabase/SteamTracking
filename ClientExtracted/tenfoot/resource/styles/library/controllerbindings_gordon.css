@@ -636,6 +636,25 @@ ControllerBindingButton.BindingButtonPropertiesMode
 	background-repeat: no-repeat;
 }
 
+ .FieldWrapper ControllerBindingButton.BindingButtonPropertiesModeSmall
+{
+	height: 34px;
+	margin-bottom: 2px;
+}
+
+ .FieldWrapper ControllerBindingButton.BindingButtonPropertiesModeSmall Label
+{
+    font-size: 22px;
+}
+
+ .FieldLabelSmall
+{
+	font-size: 22px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-bottom: 5px;
+}
+
 ControllerBindingButton.BindingButton Label
 {
 	margin-left: 20px;
