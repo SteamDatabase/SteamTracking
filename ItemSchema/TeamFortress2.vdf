@@ -10300,8 +10300,8 @@
 			"max_ilevel"	"5"
 			"static_attrs"
 			{
-				"always tradable"		"1"
 				"is commodity"			"1"
+				"cannot restore"		"1"	
 			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
 			"drop_sound"		"ui/item_paint_can_pickup.wav"
@@ -10335,6 +10335,7 @@
 			{
 				"always tradable"		"1"
 				"is commodity"			"1"
+				"cannot restore"		"1"	
 			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
 			"drop_sound"		"ui/item_paint_can_pickup.wav"
@@ -55316,13 +55317,13 @@
 		"1156"
 		{
 			"name"	"Competitive Matchmaking Beta Pass"
-			"first_sale_date"	"2012/11/18"
+			"first_sale_date"	"2015/11/18"
 			"item_class"	"craft_item"
-			"craft_class"	""
-			"craft_material_type"	""
+			"craft_class"	""		
+			"craft_material_type"	""	
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
+				"can_gift_wrap" 	"0"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Pass"
@@ -55338,10 +55339,10 @@
 			"drop_sound"			"ui/item_paper_pickup.wav"
 			"attributes"
 			{
-				"is marketable"
+				"cannot trade"
 				{
-					"attribute_class"	"is_marketable"
-					"value"	"0"
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
 				}
 			}
 		}
@@ -94279,6 +94280,7 @@
 			{
 				"always tradable"		"1"
 				"is commodity"			"1"
+				"cannot restore"					"1"	
 			}
 			"armory_desc"		"gift_wrap"
 			"show_in_armory"	"1"
@@ -94322,6 +94324,10 @@
 			"max_ilevel"	"5"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
+			"static_attrs"
+			{
+				"cannot restore"					"1"	
+			}
 		}
 		"5044"
 		{
@@ -95358,6 +95364,10 @@
 					"can_gift_wrap" "1"
 				}
 			}
+			"static_attrs"
+			{
+				"cannot restore"					"1"	
+			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
 			"item_name"		"#TF_Tool_GiftWrap_Global"
@@ -95404,13 +95414,10 @@
 			"max_ilevel"	"5"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
-			"attributes"
+			"static_attrs"
 			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value" 	"0"
-				}
+				"cannot restore"					"1"	
+				"cannot trade"						"1"
 			}
 		}
 		"5085"
@@ -95440,13 +95447,10 @@
 			"max_ilevel"	"5"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
-			"attributes"
+			"static_attrs"
 			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value" 	"0"
-				}
+				"cannot restore"					"1"	
+				"cannot trade"						"1"
 			}
 		}
 
@@ -99356,13 +99360,13 @@
 				}
 			}
 			"show_in_armory"	"0"
-			"item_name"			"#TF_DecoratedWeaponFestivizer_Name"
-			"item_description"	"#TF_DecoratedWeaponFestivizer_Desc"
+			"item_name"			"#TF_Winter2015_Festivizer"
+			"item_description"	"#TF_Winter2015_Festivizer_desc"
 			"item_type_name"	"#TF_FestivizerTool"
 			"image_inventory"	"backpack/crafting/professional_grease_basic"		
 			"item_quality"		"unique"
-			"min_ilevel"		"5"
-			"max_ilevel"		"5"
+			"min_ilevel"		"15"
+			"max_ilevel"		"15"
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"			"ui/item_bottle_drop.wav"
 		}
