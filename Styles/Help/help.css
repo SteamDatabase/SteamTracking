@@ -1700,7 +1700,8 @@ a.guide_row {
 }
 
 .help_vacorgameban_details .HighlightedText,
-.help_permanentlyremove_details .HighlightedText
+.help_permanentlyremove_details .HighlightedText,
+.help_tradeban_details .HighlightedText
 {
 	color: white;
 }
@@ -1711,7 +1712,8 @@ a.guide_row {
 }
 
 .help_vacorgameban_details,
-.help_permanentlyremove_details
+.help_permanentlyremove_details,
+.help_tradeban_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
@@ -1720,20 +1722,23 @@ a.guide_row {
 }
 
 .help_vacorgameban_details p,
-.help_permanentlyremove_details p
+.help_permanentlyremove_details p,
+.help_tradeban_details p
 {
 	margin-top: 20px;
 	line-height: 16px;
 }
 
 .help_vacorgameban_details p:first-child,
-.help_permanentlyremove_details p:first-child
+.help_permanentlyremove_details p:first-child,
+.help_tradeban_details p:first-child,
 {
 	margin-top: 0px;
 }
 
 .help_vacorgameban_details .HighlightedText,
-.help_permanentlyremove_details .HighlightedText
+.help_permanentlyremove_details .HighlightedText,
+.help_tradeban_details .HighlightedText,
 {
 	color: white;
 }
