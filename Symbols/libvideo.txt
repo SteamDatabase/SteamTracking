@@ -3603,6 +3603,7 @@
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
+ T CUtlThreadSafeQueue<CLogEvent*>::Count() const
  T CUtlThreadSafeQueue<CLogEvent*>::OnItemAdded()
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
