@@ -73586,7 +73586,7 @@
 		"30742"
 		{
 			"name"		"Shin Shredders"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_shin_shredders"
 			"item_description"		"#TF_dec15_shin_shredders_Desc"
 			"item_type_name"		"#TF_Wearable_Armor"
@@ -73612,7 +73612,7 @@
 		"30743"
 		{
 			"name"		"The Patriot Peak"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_dec15_patriot_peak"
 			"item_description"		"#TF_dec15_patriot_peak_Desc"
 			"propername"		"1"
@@ -73631,7 +73631,7 @@
 		"30744"
 		{
 			"name"		"The Diplomat"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_diplomat"
 			"item_description"		"#TF_dec15_diplomat_Desc"
 			"item_type_name"		"#TF_Wearable_Coat"
@@ -73652,7 +73652,7 @@
 		"30745"
 		{
 			"name"		"Siberian Sweater"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_heavy_sweater"
 			"item_description"		"#TF_dec15_heavy_sweater_Desc"
 			"item_type_name"		"#TF_Wearable_Sweater"
@@ -73672,7 +73672,7 @@
 		"30746"
 		{
 			"name"		"A Well Wrapped Hat"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_dec15_a_well_wrapped_hat"
 			"item_description"		"#TF_dec15_a_well_wrapped_hat_Desc"
 			"visuals"
@@ -73716,7 +73716,7 @@
 		"30747"
 		{
 			"name"		"The Gift Bringer"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_gift_bringer"
 			"item_description"		"#TF_dec15_gift_bringer_Desc"
 			"item_type_name"		"#TF_Wearable_Coat"
@@ -73743,7 +73743,7 @@
 		"30748"
 		{
 			"name"		"The Chill Chullo"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_dec15_chill_chullo"
 			"item_description"		"#TF_dec15_chill_chullo_Desc"
 			"propername"		"1"
@@ -73788,7 +73788,7 @@
 		"30749"
 		{
 			"name"		"Winter Backup"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_winter_backup"
 			"item_description"		"#TF_dec15_winter_backup_Desc"
 			"item_type_name"		"#TF_Wearable_Backpack"
@@ -73808,7 +73808,7 @@
 		"30750"
 		{
 			"name"		"Medical Monarch"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_medic_winter_jacket2_emblem"
 			"item_description"		"#TF_dec15_medic_winter_jacket2_emblem_Desc"
 			"item_type_name"		"#TF_Wearable_Jacket"
@@ -73828,7 +73828,7 @@
 		"30751"
 		{
 			"name"		"Bonk Batter's Backup"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_scout_baseball_bag"
 			"item_description"		"#TF_dec15_scout_baseball_bag_Desc"
 			"item_type_name"		"#TF_Wearable_Backpack"
@@ -73848,7 +73848,7 @@
 		"30752"
 		{
 			"name"		"Chicago Overcoat"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_chicago_overcoat"
 			"item_description"		"#TF_dec15_chicago_overcoat_Desc"
 			"item_type_name"		"#TF_Wearable_Coat"
@@ -73868,7 +73868,7 @@
 		"30753"
 		{
 			"name"		"A Hat to Kill For"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_dec15_a_hat_to_kill_for"
 			"item_description"		"#TF_dec15_a_hat_to_kill_for_Desc"
 			"image_inventory"		"backpack/workshop/player/items/spy/dec15_a_hat_to_kill_for/dec15_a_hat_to_kill_for"
@@ -73886,7 +73886,7 @@
 		"30754"
 		{
 			"name"		"Hot Heels"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_hot_heels"
 			"item_description"		"#TF_dec15_hot_heels_Desc"
 			"item_type_name"		"#TF_Wearable_Shoes"
@@ -73916,7 +73916,7 @@
 		"30755"
 		{
 			"name"		"Berlin Brain Bowl"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_dec15_berlin_brain_bowl"
 			"item_description"		"#TF_dec15_berlin_brain_bowl_Desc"
 			"equip_regions"
@@ -73939,7 +73939,7 @@
 		"30756"
 		{
 			"name"		"Bunnyhopper's Ballistics Vest"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec15_bunnyhoppers_ballistics_vest"
 			"item_description"		"#TF_dec15_bunnyhoppers_ballistics_vest_Desc"
 			"item_type_name"		"#TF_Wearable_Vest"
