@@ -329,6 +329,7 @@
 			"demo_arms"			"1"
 			"sniper_pocket"		"1"			
 			"heavy_hip_pouch"	"1"	
+			"spy_coat"			"1"
 		}
 	}
 	"equip_conflicts"
@@ -2524,60 +2525,78 @@
 	}
 	"32"
 	{
+		"name"		"Get 5 sentry kills in a single life as Engineer"
 		"condition_logic"
 		{
+			"type"		"counter"
+			"end"		"5"
 			"0"
 			{
+				"type"		"event_listener"
+				"action"		"increment"
+				"event_name"		"player_death"
 				"0"
 				{
+					"type"		"AND"
 					"0"
 					{
+						"type"		"OR"
 						"0"
 						{
-							"get_player"		"by_id"
-							"player_key"		"attacker"
-							"scorer_key"		"inflictor_entindex"
 							"type"		"scorer"
+							"player_key"		"attacker"
+							"get_player"		"by_id"
+							"scorer_key"		"inflictor_entindex"
 						}
 						"1"
 						{
-							"get_player"		"by_id"
-							"player_key"		"assister"
-							"scorer_key"		"inflictor_entindex"
 							"type"		"scorer"
+							"player_key"		"assister"
+							"get_player"		"by_id"
+							"scorer_key"		"inflictor_entindex"
 						}
-						"type"		"OR"
 					}
 					"1"
 					{
+						"type"		"player_is_owner"
+						"player_key"		"userid"
 						"get_player"		"by_id"
 						"is_owner"		"0"
-						"player_key"		"userid"
-						"type"		"player_is_owner"
 					}
-					"type"		"AND"
+					"2"
+					{
+						"type"		"OR"
+						"0"
+						{
+							"type"		"player_is_owner"
+							"player_key"		"attacker"
+							"get_player"		"by_id"
+							"is_owner"		"1"
+						}
+						"1"
+						{
+							"type"		"player_is_owner"
+							"player_key"		"assister"
+							"get_player"		"by_id"
+							"is_owner"		"1"
+						}
+					}
 				}
-				"action"		"increment"
-				"event_name"		"player_death"
-				"type"		"event_listener"
 			}
 			"1"
 			{
-				"0"
-				{
-					"get_player"		"by_id"
-					"is_owner"		"1"
-					"player_key"		"userid"
-					"type"		"player_is_owner"
-				}
+				"type"		"event_listener"
 				"action"		"reset"
 				"event_name"		"player_death"
-				"type"		"event_listener"
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
 			}
-			"end"		"5"
-			"type"		"counter"
 		}
-		"name"		"Get 5 sentry kills in a single life as Engineer"
 	}
 	"33"
 	{
@@ -5925,46 +5944,6 @@
 	}
 	"97"
 	{
-		"condition_logic"
-		{
-			"0"
-			{
-				"0"
-				{
-					"0"
-					{
-						"get_player"		"by_id"
-						"player_key"		"attacker"
-						"scorer_key"		"inflictor_entindex"
-						"type"		"scorer"
-					}
-					"1"
-					{
-						"get_player"		"by_id"
-						"player_key"		"assister"
-						"scorer_key"		"inflictor_entindex"
-						"type"		"scorer"
-					}
-					"type"		"OR"
-				}
-				"1"
-				{
-					"get_player"		"by_id"
-					"is_owner"		"0"
-					"player_key"		"userid"
-					"type"		"player_is_owner"
-				}
-				"2"
-				{
-					"custom_damage_key"		"customkill"
-					"type"		"custom_damage"
-					"value"		"TF_DMG_CUSTOM_PLAYER_SENTRY"
-				}
-				"type"		"AND"
-			}
-			"event_name"		"player_death"
-			"type"		"event_listener"
-		}
 		"name"		"Wrangled sentry kill"
 		"required_items"
 		{
@@ -5976,6 +5955,64 @@
 					"1"
 					{
 						"DefIndex"		"140"
+					}
+				}
+			}
+		}
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"player_death"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"OR"
+					"0"
+					{
+						"type"		"scorer"
+						"player_key"		"attacker"
+						"get_player"		"by_id"
+						"scorer_key"		"inflictor_entindex"
+					}
+					"1"
+					{
+						"type"		"scorer"
+						"player_key"		"assister"
+						"get_player"		"by_id"
+						"scorer_key"		"inflictor_entindex"
+					}
+				}
+				"1"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"0"
+				}
+				"2"
+				{
+					"type"		"custom_damage"
+					"custom_damage_key"		"customkill"
+					"value"		"TF_DMG_CUSTOM_PLAYER_SENTRY"
+				}
+				"2"
+				{
+					"type"		"OR"
+					"0"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"attacker"
+						"get_player"		"by_id"
+						"is_owner"		"1"
+					}
+					"0"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"assister"
+						"get_player"		"by_id"
+						"is_owner"		"1"
 					}
 				}
 			}
@@ -14354,8 +14391,14 @@
 			{
 				"animation_replacement"
 				{
-					"ACT_VM_HITCENTER"	"ACT_MELEE_VM_HITCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_MELEE_VM_SWINGHARD"
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
 				}
 			}
 			"attributes"
@@ -28341,7 +28384,7 @@
 				"health regen"
 				{
 					"attribute_class"	"add_health_regen"
-					"value"	"2"
+					"value"	"4"
 				}
 				"allowed in medieval mode"
 				{
@@ -41457,17 +41500,6 @@
 						"name"	"#TF_BlackRose_Style_Black"
 					}
 				}
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
-					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
-					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
-					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
-					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
-					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
-					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
-				}
 			}
 			"attributes"
 			{
@@ -43932,7 +43964,7 @@
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
 			"xifier_class_remap"	"knife"
 		}
 		"795"
@@ -44157,7 +44189,7 @@
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_gold"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
 			"visuals_red"
 			{
 				"skin"	"2"
@@ -46113,7 +46145,7 @@
 			"item_name"			"#TF_Weapon_Knife_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_rust"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
 			"visuals_red"
 			{
 				"skin"	"4"
@@ -46394,7 +46426,7 @@
 			"item_name"			"#TF_Weapon_Knife_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_blood"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
 			"visuals_red"
 			{
 				"skin"	"6"
@@ -46675,7 +46707,7 @@
 			"item_name"			"#TF_Weapon_Knife_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
 			"visuals_red"
 			{
 				"skin"	"2"
@@ -46940,7 +46972,7 @@
 			"item_name"			"#TF_Weapon_Knife_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
 			"xifier_class_remap"	"knife"
 		}
 		"911"
@@ -48684,7 +48716,7 @@
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_e_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_e_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
 			"xifier_class_remap"	"knife"
  		}
 		"960"
@@ -48909,7 +48941,7 @@
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_e_knife_gold"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
-			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_e_knife_v.mdl"
+			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
 			"visuals_red"
 			{
 				"skin"	"2"
@@ -73853,7 +73885,7 @@
 			"item_name"		"#TF_dec15_chicago_overcoat"
 			"item_description"		"#TF_dec15_chicago_overcoat_Desc"
 			"item_type_name"		"#TF_Wearable_Coat"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/dec15_chicago_overcoat/dec15_chicago_overcoat"
 			"capabilities"
 			{
@@ -77708,7 +77740,7 @@
 				"description_string"		"#quest25041objectivedesc3"
 				"DefIndex"		"4203"
 				"optional"		"0"
-				"advanced"		"0"
+				"advanced"		"1"
 				"points"		"3"
 				"conditions_def_index"		"97"
 			}
@@ -92454,6 +92486,26 @@
 				"pyro"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_pyro.mdl"
 				"spy"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_spy.mdl"
 				"engineer"		"models/workshop/player/items/all_class/w2015_gift_of_giving/w2015_gift_of_giving_engineer.mdl"
+			}
+		}
+ 		"9049"
+		{
+			"name"	"EdgeGamers UltiDuo Participant 2015"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_EdgeGamersUltiDuo_Participant"
+			"item_description"		"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/edgegamers_ultiduo_participant/edgegamers_ultiduo_participant_engineer.mdl"
 			}
 		}
 
