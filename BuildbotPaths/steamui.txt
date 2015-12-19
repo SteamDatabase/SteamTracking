@@ -1173,6 +1173,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/pipes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/registrymanager.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/reliabletimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/singleprocesspipe_any.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/steamservice_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/steamui/SettingsSubVoice.cpp
