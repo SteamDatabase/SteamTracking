@@ -86,7 +86,7 @@ function InitCuratorsPagingControls( oPagingData )
 		}
 	} );
 
-	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'] };
+	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ] };
 	g_oCurators.SetStaticParameters( staticParams );
 
 	HandleHashChangeCurators( true );
