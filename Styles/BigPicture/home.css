@@ -345,6 +345,36 @@ RemotePanel
 	margin-right: 12px;
 }
 
+.backToStore
+{
+	margin-top: 20px;
+	padding-left: 12px;
+
+	border-radius: 3px;
+	background-color: transparent_module;
+	box-shadow: module_shadow;
+}
+.backToStore:focus
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+.Button.backToStore:focus Label
+{
+	transform: translatex( 0px );
+	color: white;
+}
+
 .ExploreSectionRow
 {
 	width: 1340px;
@@ -434,6 +464,7 @@ RemotePanel
 	font-size: 28px;
 	color: #67c1f5ff;
 	horizontal-align: center;
+	text-align: center;
 }
 
 .DiscoveryRefreshDesc
@@ -441,6 +472,7 @@ RemotePanel
 	font-size: 24px;
 	color: greyish_medium;
 	horizontal-align: center;
+	text-align: center;
 }
 
 .DiscoveryRefreshInfo
@@ -888,7 +920,7 @@ VerticalScrollBar
 {
 	width: 1304px;
 	flow-children: down;
-	margin-top: 34px;
+	margin-top: 4px;
 }
 
 .QueueRightColumn

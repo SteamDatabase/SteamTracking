@@ -153,7 +153,7 @@ CVideoWatch.prototype.Start = function()
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
-	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
+	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerPlaybackError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function() { _watch.OnPlayerDRMDownloadError(); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
@@ -206,14 +206,14 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 	}
 }
 
-CVideoWatch.prototype.OnPlayerPlaybackError = function()
+CVideoWatch.prototype.OnPlayerPlaybackError = function( description )
 {
 	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 	else
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
-	this.OnLogEventToServer( 'Playback Error', '' );
+	this.OnLogEventToServer( 'Playback Error', description );
 }
 
 CVideoWatch.prototype.OnPlayerDRMError = function( description )

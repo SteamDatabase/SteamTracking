@@ -22,7 +22,7 @@ EventBackground
 	background-color:	particle-system(	base-position( 960px, -400px ), base-position-variance( 1060px, 350px ),
 											particle-size( 16px ), particle-size-variance( 7px ),
 											particles-per-second( 20 ), particles-per-second-variance( 6 ),
-											particle-lifespan-seconds( 18s ), particle-lifespan-seconds-variance( 6s ),
+											particle-lifespan-seconds( 26s ), particle-lifespan-seconds-variance( 6s ),
 											particle-initial-velocity( 0px, 120px ), particle-initial-velocity-variance( 5px, 40px ),
 											particle-velocity-min( -5px, 20px ), particle-velocity-max( 5px, 350px ),
 											gravity-acceleration( 8px, -4px ),
@@ -30,45 +30,6 @@ EventBackground
 											particle-start-color( #FFFFFF33 ), particle-start-color-variance( #00000022 ),
 											particle-end-color( #FFFFFF00 ), particle-end-color-variance( #22222200 ),
 											particle-sharpness( 0.5 ), particle-sharpness-variance( 0.3 ),
-											particle-flicker( 0.01 ), particle-flicker-variance( 0.0 )
+											particle-flicker( 0.0 ), particle-flicker-variance( 0.0 )
 										);
-}
-
-.OnlyInStore
-{
-	opacity: 0.0;
-	transition-property: opacity;
-	transition-duration: 1.4s;
-	transition-delay: 0.4s;
-	transition-timing-function: ease-in-out;
-}
-
-.InStore .OnlyInStore
-{
-	opacity: 1.0;
-
-	// transition out quickly
-	transition-duration: 0.0s;
-	transition-delay: 0.0s;
-}
-
-.Winter
-{
-	width: 100%;
-	height: 100%;
-	background-size: 100% 100%;
-}
-
-.WinterScene
-{
-	width: 948px;
-	height: 304px;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	align: center bottom;
-	margin-bottom: 60px;
-}
-
-.InStore .WinterScene
-{
 }
