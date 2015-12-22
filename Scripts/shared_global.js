@@ -2261,7 +2261,15 @@ function CScrollSlider( $Scroll, $Container, $Grabber, args )
 	this.m_$Scroll.css('-webkit-overflow-scrolling', 'touch');
 
 	var _this = this;
+	var bDidInitialRecalc = false;
 	this.m_$Scroll.on( 'scroll.ScrollSlider', function() {
+		if ( !bDidInitialRecalc )
+		{
+			// we don't want to do this all the time, but on some browsers the first call to
+			//	update ranges is too early and values don't compute correctly.
+			_this.UpdateRanges();
+			bDidInitialRecalc = true;
+		}
 		_this.m_Slider.SetValue( _this.m_$Scroll.scrollLeft() );
 	});
 	$J(window).on('resize.ScrollSlider', function() {

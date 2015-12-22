@@ -1100,11 +1100,9 @@ EdgeScrollBar
 
 	opacity: 1.0;
 
-	// The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: transform;
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-out;
 }
 
 .EdgeScrollButton

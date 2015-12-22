@@ -1860,7 +1860,7 @@ function ConfirmTrade()
 	{
 		if ( data.eresult == 25 )
 		{
-			ShowAlertDialog( 'This trade cannot be completed, because it would exceed the maximum number of items allowed in your inventory.' );
+			ShowAlertDialog( 'This trade cannot be completed because it would exceed the maximum number of items allowed in your inventory.' );
 		}
 		else
 		{

@@ -230,7 +230,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 		if ( !_player.m_mpd.BParse( data, bUseMpdRelativePathForSegments, strURL ) )
 		{
 			PlayerLog( 'Failed to parse MPD file' );
-			_player.CloseWithError();
+			_player.CloseWithError( 'playbackerror', 'Parse MPD File Failure' );
 			return;
 		}
 
@@ -263,7 +263,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 			if ( !_player.BCreateLoaders() )
 			{
 				PlayerLog( 'Failed to create segment loaders' );
-				_player.CloseWithError();
+				_player.CloseWithError( 'playbackerror', 'Create Segment Loaders Failure' );
 				return;
 			}
 
@@ -277,7 +277,6 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 		if ( performance.now() - tsFirstAttempt > CDASHPlayer.MANIFEST_MAX_RETRY_MS )
 		{
 			PlayerLog( 'Failed to download: ' + _player.m_strMPD );
-			_player.CloseWithError();
 			return;
 		}
 
@@ -363,7 +362,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 					if ( !_player.BCreateLoaders() )
 					{
 						PlayerLog( 'Failed to create segment loaders' );
-						_player.CloseWithError();
+						_player.CloseWithError( 'playbackerror', 'Create DRM Segment Loaders Failure' );
 						return;
 					}
 
@@ -444,7 +443,8 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 					if ( status !== 'usable' && status !== 'status-pending' && status !== 'output-downscaled' )
 					{
 						PlayerLog( "Couldn't use an encryption key.", btoa(String.fromCharCode.apply(null, new Uint8Array(keyId))), status );
-						_player.CloseWithError( status === 'output-restricted' || status === 'output-not-allowed' ? 'hdcperror' : 'drmerror' );
+						var errType = ( status === 'output-restricted' || status === 'output-not-allowed' ) ? 'hdcperror' : 'drmerror';
+						_player.CloseWithError( errType, 'Invalid Encryption Key' );
 					}
 				});
 			},function( reason ) {
@@ -478,7 +478,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		if ( !_player.m_mpd.BUpdate( data ) )
 		{
 			PlayerLog( 'Failed to update MPD file' );
-			_player.CloseWithError();
+			_player.CloseWithError( 'playbackerror', 'Update MPD File Failure' );
 			return;
 		}
 
@@ -700,7 +700,7 @@ CDASHPlayer.prototype.OnMediaSourceEnded = function( e )
 CDASHPlayer.prototype.OnMediaSourceClose = function( e )
 {
 		PlayerLog( 'Media source closed' );
-	this.CloseWithError();
+	this.CloseWithError( 'playbackerror', 'Media Source Closed Unexpectedly' );
 }
 
 CDASHPlayer.prototype.SetVODResumeTime = function( nTime )
@@ -864,7 +864,7 @@ CDASHPlayer.prototype.OnVideoError = function( e )
 		strError = nCode;
 	
 	console.log( 'Video player error: ' + strError );
-	this.CloseWithError();
+	this.CloseWithError( 'playbackerror',  'OnVideoError: ' + strError );
 }
 
 CDASHPlayer.prototype.OnTimeUpdate = function()
@@ -1081,7 +1081,7 @@ CDASHPlayer.prototype.GetClosedCaptionsArray = function()
 			{
 				if ( lang.toUpperCase() == language.code.toUpperCase() )
 				{
-					language.display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[lang].displayName );
+					language.display = CVTTCaptionLoader.LanguageCountryCodes[lang].displayName;
 				}
 			}
 
@@ -3624,12 +3624,12 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				{
 					case 'main':
 					case 'dub':
-						display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName );
+						display = CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName;
 						break;
 
 					case 'alternate':
 						if ( rgVideoAdaptations[ r ].description == rgVideoAdaptations[ r ].language )
-							display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName ) );
+							display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName );
 						else
 							display = rgVideoAdaptations[ r ].description;
 						break;
@@ -3670,19 +3670,19 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				{
 					case 'main':
 					case 'dub':
-						display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName );
+						display = CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName;
 						break;
 
 					case 'alternate':
 						if ( rgAudioAdaptations[ r ].description == rgAudioAdaptations[ r ].language )
-							display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName ) );
+							display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName );
 						else
 							display = rgAudioAdaptations[ r ].description;
 						break;
 
 					case 'supplementary':
 						if ( rgAudioAdaptations[ r ].description == rgAudioAdaptations[ r ].language )
-							display = '{0} (Supplementary)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName ) );
+							display = '{0} (Supplementary)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName );
 						else
 							display = rgAudioAdaptations[ r ].description;
 						break;
@@ -3861,12 +3861,12 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 			{
 				case 'main':
 				case 'dub':
-					display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName );
+					display = CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName;
 					break;
 
 				case 'alternate':
 					if ( rgVideoAdaptations[r].description == rgVideoAdaptations[r].language )
-						display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName ) );
+						display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName );
 					else
 						display = rgVideoAdaptations[r].description;
 					break;
@@ -3914,19 +3914,19 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 			{
 				case 'main':
 				case 'dub':
-					display = CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName );
+					display = CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName;
 					break;
 
 				case 'alternate':
 					if ( rgAudioAdaptations[r].description == rgAudioAdaptations[r].language )
-						display = '{0} (Alternate)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName ) );
+						display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName );
 					else
 						display = rgAudioAdaptations[r].description;
 					break;
 
 				case 'supplementary':
 					if ( rgAudioAdaptations[r].description == rgAudioAdaptations[r].language )
-						display = '{0} (Supplementary)'.format( CVTTCaptionLoader.CleanDisplayName( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName ) );
+						display = '{0} (Supplementary)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName );
 					else
 						display = rgAudioAdaptations[r].description;
 					break;
@@ -6514,33 +6514,21 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 	return 0;
 }
 
-CVTTCaptionLoader.CleanDisplayName = function( displayName )
-{
-		var regExName = /[\（\(]([^()]+)[\)\）]/g;
-	var name = regExName.exec( displayName );
-	if ( name == null )
-		name = displayName
-	else
-		name = name[ 1 ];
-
-	return name;
-}
-
 CVTTCaptionLoader.LanguageCountryCodes = {
     "ar-SA":{
-        "displayName":"العربية (Arabic)",
+        "displayName":"Arabic",
         "steamLanguage":"arabic"
     },
     "bg-BG":{
-        "displayName":"Български (Bulgarian)",
+        "displayName":"Bulgarian",
         "steamLanguage":"bulgarian"
     },
     "cs-CZ":{
-        "displayName":"čeština (Czech)",
+        "displayName":"Czech",
         "steamLanguage":"czech"
     },
     "da-DK":{
-        "displayName":"Dansk (Danish)",
+        "displayName":"Danish",
         "steamLanguage":"danish"
     },
     "en-US":{
@@ -6548,99 +6536,99 @@ CVTTCaptionLoader.LanguageCountryCodes = {
         "steamLanguage":"english"
     },
     "fi-FI":{
-        "displayName":"Suomi (Finnish)",
+        "displayName":"Finnish",
         "steamLanguage":"finnish"
     },
     "fr-FR":{
-        "displayName":"Français (French)",
+        "displayName":"French",
         "steamLanguage":"french"
     },
     "de-DE":{
-        "displayName":"Deutsch (German)",
+        "displayName":"German",
         "steamLanguage":"german"
     },
     "el-GR":{
-        "displayName":"Ελληνικά (Greek)",
+        "displayName":"Greek",
         "steamLanguage":"greek"
     },
     "es-ES":{
-        "displayName":"Español (Spanish)",
+        "displayName":"Spanish",
         "steamLanguage":"spanish"
     },
     "es-MX":{
-        "displayName":"Español-Mexicano (Spanish-Mexican)",
+        "displayName":"Spanish-Mexican",
         "steamLanguage":"mexican"
     },
     "hu-HU":{
-        "displayName":"Magyar (Hungarian)",
+        "displayName":"Hungarian",
         "steamLanguage":"hungarian"
     },
     "it-IT":{
-        "displayName":"Italiano (Italian)",
+        "displayName":"Italian",
         "steamLanguage":"italian"
     },
     "ja-JP":{
-        "displayName":"日本語 (Japanese)",
+        "displayName":"Japanese",
         "steamLanguage":"japanese"
     },
     "ko-KR":{
-        "displayName":"한국어 (Korean)",
+        "displayName":"Korean",
         "steamLanguage":"koreana"
     },
     "nl-NL":{
-        "displayName":"Nederlands (Dutch)",
+        "displayName":"Dutch",
         "steamLanguage":"dutch"
     },
     "nb-NO":{
-        "displayName":"Norsk (Norwegian)",
+        "displayName":"Norwegian",
         "steamLanguage":"norwegian"
     },
     "pl-PL":{
-        "displayName":"Polski (Polish)",
+        "displayName":"Polish",
         "steamLanguage":"polish"
     },
     "pt-BR":{
-        "displayName":"Português-Brasil (Portuguese-Brazil)",
+        "displayName":"Portuguese-Brazil",
         "steamLanguage":"brazilian"
     },
     "pt-PT":{
-        "displayName":"Português (Portuguese)",
+        "displayName":"Portuguese",
         "steamLanguage":"portuguese"
     },
     "ro-RO":{
-        "displayName":"Română (Romanian)",
+        "displayName":"Romanian",
         "steamLanguage":"romanian"
     },
     "ru-RU":{
-        "displayName":"Русский (Russian)",
+        "displayName":"Russian",
         "steamLanguage":"russian"
     },
     "sv-SE":{
-        "displayName":"Svenska (Swedish)",
+        "displayName":"Swedish",
         "steamLanguage":"swedish"
     },
     "th-TH":{
-        "displayName":"ไทย (Thai)",
+        "displayName":"Thai",
         "steamLanguage":"thai"
     },
     "tr-TR":{
-        "displayName":"Türkçe (Turkish)",
+        "displayName":"Turkish",
         "steamLanguage":"turkish"
     },
     "uk-UA":{
-        "displayName":"Українська (Ukrainian)",
+        "displayName":"Ukrainian",
         "steamLanguage":"ukrainian"
     },
     "vi-VN":{
-        "displayName":"tiếng Việt (Vietnamese)",
+        "displayName":"Vietnamese",
         "steamLanguage":"vietnamese"
     },
     "zh-CH":{
-        "displayName":"简体中文 (Simplified Chinese)",
+        "displayName":"Simplified Chinese",
         "steamLanguage":"schinese"
 	},
     "zh-CN":{
-        "displayName":"繁體中文 (Traditional Chinese)",
+        "displayName":"Traditional Chinese",
         "steamLanguage":"tchinese"
     },
 }
