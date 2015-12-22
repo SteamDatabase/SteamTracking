@@ -155,8 +155,8 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerPlaybackError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMError( description ); } );
-	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function() { _watch.OnPlayerDRMDownloadError(); } );
-	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMDownloadError( description ); } );
+	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerHDCPError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
 	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video...' ); } );
@@ -222,12 +222,12 @@ CVideoWatch.prototype.OnPlayerDRMError = function( description )
 	this.OnLogEventToServer( 'DRM License Error', description );
 }
 
-CVideoWatch.prototype.OnPlayerDRMDownloadError = function()
+CVideoWatch.prototype.OnPlayerDRMDownloadError = function( description )
 {
 	if ( this.m_bEMECapableHost )
 	{
 		this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br>Please restart the video to try again.' );
-		this.OnLogEventToServer( 'DRM Download Error', '' );
+		this.OnLogEventToServer( 'DRM Download Error', description );
 	}
 	else
 	{
@@ -235,12 +235,12 @@ CVideoWatch.prototype.OnPlayerDRMDownloadError = function()
 	}
 }
 
-CVideoWatch.prototype.OnPlayerHDCPError = function()
+CVideoWatch.prototype.OnPlayerHDCPError = function( description )
 {
 	if ( !this.m_bHDCPErrorReported )
 	{
 		this.ShowVideoError( 'This video cannot be played because one or more of your displays do not support High-Bandwidth Digital Content Protection (HDCP).<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
-		this.OnLogEventToServer( 'HDCP Error', '' );
+		this.OnLogEventToServer( 'HDCP Error', description );
 		this.m_bHDCPErrorReported = true;
 	}
 }
