@@ -9347,6 +9347,12 @@
 						"get_player"		"by_entindex"
 						"is_owner"		"1"
 					}
+					"2"
+					{
+						"type"		"weapon_def_index"
+						"key_to_lookup"		"weapon_def_index"
+						"value"		"228"
+					}
 				}
 			}
 			"1"
@@ -10671,6 +10677,10 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.9"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -13315,6 +13325,7 @@
 				"can_deal_gib_damage"	"1"
 				"can_deal_posthumous_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
 			"inspect_panel_dist" "55"
 			"item_class"	"tf_weapon_grenadelauncher"
@@ -14707,36 +14718,156 @@
 		{
 			"prefab"	"paintkit_weapon weapon_flamethrower"
 			"xifier_class_remap"	"flamethrower"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_grenadelauncher"
 		{
 			"prefab"	"paintkit_weapon weapon_grenade_launcher"
 			"xifier_class_remap"	"grenade_launcher"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_knife"
 		{
 			"prefab"	"paintkit_weapon weapon_knife"
 			"xifier_class_remap"	"knife"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_medigun"
 		{
 			"prefab"	"paintkit_weapon weapon_medigun"
 			"xifier_class_remap"	"medigun"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_minigun"
 		{
 			"prefab"	"paintkit_weapon weapon_minigun"
 			"xifier_class_remap"	"minigun"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_pistol"
 		{
 			"prefab"	"paintkit_weapon weapon_pistol"
 			"xifier_class_remap"	"weapon_pistol"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_revolver"
 		{
 			"prefab"	"paintkit_weapon weapon_revolver"
 			"xifier_class_remap"	"weapon_revolver"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_rocketlauncher"
 		{
@@ -14763,31 +14894,127 @@
 		{
 			"prefab"	"paintkit_weapon weapon_scattergun"
 			"xifier_class_remap"	"scattergun"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_shotgun"
 		{
 			"prefab"	"paintkit_weapon weapon_shotgun_multiclass"
 			"xifier_class_remap"	"weapon_shotgun"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_smg"
 		{
 			"prefab"	"paintkit_weapon weapon_smg"
 			"xifier_class_remap"	"weapon_smg"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_sniperrifle"
 		{
 			"prefab"	"paintkit_weapon weapon_sniperrifle"
 			"xifier_class_remap"	"sniper_rifle"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_stickybomb_launcher"
 		{
 			"prefab"	"paintkit_weapon weapon_stickybomb_launcher"
 			"xifier_class_remap"	"stickybomb_launcher"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 		}
 		"paintkit_weapon_wrench"
 		{
 			"prefab"	"paintkit_weapon weapon_wrench"
 			"xifier_class_remap"	"wrench"
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 		}
 
 		"quest_theme_pauling_base"
@@ -38994,12 +39221,21 @@
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"propername"	"1"
-			"image_inventory"	"backpack/player/items/soldier/fwk_soldier_cowboyhat"
-			"model_player"	"models/player/items/soldier/fwk_soldier_cowboyhat.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat"
 			"drop_type"		"drop"
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_demo.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_engineer.mdl"
+			}
 			"used_by_classes"
 			{
-				"soldier"	"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"engineer"		"1"
 			}
 		}
 		"632"
@@ -43524,7 +43760,7 @@
 			"name"	"The Business Casual"
 			"first_sale_date"	"2012/07/10"
 			"prefab"	"misc"
-			"equip_region"	"shirt"
+			"equip_region"	"spy_coat"
 			"item_type_name"	"#TF_Wearable_Shirt"
 			"item_name"			"#TF_SpyOpenJacket"
 			"item_description"	"#TF_SpyOpenJacket_Desc"
@@ -45976,7 +46212,7 @@
 				"can_craft_count"	"1"
 			}
 			"item_slot"	"misc"
-			"equip_region"	"shirt"
+			"equip_region"	"spy_coat"
 			"item_type_name"	"TF_Wearable_Apparel"
 			"item_name"	"#TF_TW_Spy_Coat"
 			"item_description"	"#TF_TW_Spy_Coat_Desc"
@@ -49235,7 +49471,7 @@
 			"name"	"The Cut-Throat Concierge"
 			"first_sale_date"	"2013/01/24"
 			"prefab"	"misc"
-			"equip_region"	"shirt"
+			"equip_region"	"spy_coat"
 			"item_type_name"	"#TF_Wearable_Shirt"
 			"item_name"	"#TF_TheCutThroatConcierge"
 			"item_description"	"#TF_TheCutThroatConcierge_Desc"
@@ -60626,7 +60862,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_blood_banker"
 			"item_description"		"#TF_jul13_blood_banker_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/jul13_blood_banker/jul13_blood_banker"
 			"propername"		"1"
 			"capabilities"
@@ -60648,7 +60884,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_classy_royale"
 			"item_description"		"#TF_jul13_classy_royale_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/jul13_classy_royale/jul13_classy_royale"
 			"capabilities"
 			{
@@ -63555,7 +63791,7 @@
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_blood_banker"
 			"item_description"		"#TF_hw2013_blood_banker_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"propername"		"1"
 			"visuals"
 			{
@@ -64865,7 +65101,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_xms2013_spy_jacket"
 			"item_description"		"#TF_xms2013_spy_jacket_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/xms2013_spy_jacket/xms2013_spy_jacket"
 			"capabilities"
 			{
@@ -66576,7 +66812,7 @@
 			"item_name"		"#TF_short2014_invisible_ishikawa"
 			"item_description"		"#TF_short2014_invisible_ishikawa_Desc"
 			"item_type_name"		"#TF_Wearable_Apparel"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/short2014_invisible_ishikawa/short2014_invisible_ishikawa"
 			"capabilities"
 			{
@@ -67004,7 +67240,7 @@
 			"item_name"		"#TF_short2014_confidence_trickster"
 			"item_description"		"#TF_short2014_confidence_trickster_Desc"
 			"item_type_name"		"#TF_Wearable_Apparel"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/short2014_confidence_trickster/short2014_confidence_trickster"
 			"capabilities"
 			{
@@ -67161,7 +67397,7 @@
 			"item_name"		"#TF_short2014_spy_ascot_vest"
 			"item_description"		"#TF_short2014_spy_ascot_vest_Desc"
 			"item_type_name"		"#TF_Wearable_Shirt"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/short2014_spy_ascot_vest/short2014_spy_ascot_vest"
 			"capabilities"
 			{
@@ -67906,6 +68142,7 @@
 			"name"		"The Nostromo Napalmer"
 			"first_sale_date"		"2014/11/13"
 			"item_class"		"tf_weapon_flamethrower"
+			"prefab"		"weapon_flamethrower"
 			"craft_class"		"weapon"
 			"craft_material_type"		"weapon"
 			"capabilities"
@@ -67986,7 +68223,7 @@
 			"item_type_name"		"#TF_Wearable_Coat"
 			"item_name"		"#TF_sept2014_lady_killer"
 			"item_description"		"#TF_sept2014_cosmetic_desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/sept2014_lady_killer/sept2014_lady_killer"
 			"capabilities"
 			{
@@ -70389,16 +70626,23 @@
 					"headphones"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/scout/dec2014_copilot_2014/dec2014_copilot_2014"
+			"image_inventory"		"backpack/workshop/player/items/all_class/dec2014_copilot_2014/dec2014_copilot_2014"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/scout/dec2014_copilot_2014/dec2014_copilot_2014.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/dec2014_copilot_2014/dec2014_copilot_2014_scout.mdl"
+				"soldier"		"models/workshop/player/items/all_class/dec2014_copilot_2014/dec2014_copilot_2014_soldier.mdl"
+				"engineer"		"models/workshop/player/items/all_class/dec2014_copilot_2014/dec2014_copilot_2014_engineer.mdl"
+			}
 			"used_by_classes"
 			{
 				"scout"		"1"
+				"soldier"		"1"
+				"engineer"		"1"
 			}
 			"static_attrs"
 			{
@@ -70920,7 +71164,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_dec2014_the_puffy_provocateur"
 			"item_description"		"#TF_dec2014_cosmetic_desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/dec2014_the_puffy_provocateur/dec2014_the_puffy_provocateur"
 			"capabilities"
 			{
@@ -71585,7 +71829,7 @@
 			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_lurkers_leathers"
 			"item_description"		"#TF_cc_summer2015_lurkers_leathers_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"spy_coat"
 			"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers"
 			"capabilities"
 			{
@@ -73857,6 +74101,26 @@
 			{
 				"medic"		"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/medic/dec15_medic_winter_jacket2_emblem/dec15_medic_winter_jacket2_emblem.mdl"
+						"name"		"#TF_dec15_medic_winter_jacket2_emblem_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/medic/dec15_medic_winter_jacket2_emblem2/dec15_medic_winter_jacket2_emblem2.mdl"
+						"name"		"#TF_dec15_medic_winter_jacket2_emblem_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
 		}
 		"30751"
 		{
@@ -73955,7 +74219,7 @@
 			"equip_regions"
 			{
 				"hat"			"1"
-				"face"			"1"
+				"beard"			"1"
 			}
 			"image_inventory"		"backpack/workshop/player/items/medic/dec15_berlin_brain_bowl/dec15_berlin_brain_bowl"
 			"capabilities"
@@ -99357,6 +99621,14 @@
 			"name"	"Winter 2015 Mystery Box"
 			"first_sale_date"	"2015/12/14"
 			"item_class"	"tf_wearable"
+			"prefab"		"randomgiftself"
+			"tool"
+			{
+				"usage"
+				{
+					"loot_list"		"festivizer_2015_lootlist"
+				}
+			}
 			"item_name"			"#TF_Winter_2015_Mystery"
 			"item_description"	"#TF_Winter_2015_Mystery_desc"
 			"image_inventory"	"backpack/crafting/gift_festive"
@@ -99364,6 +99636,8 @@
 			"static_attrs"
 			{
 				"weapon_allow_inspect"			"1"
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 		}
 		
@@ -99389,8 +99663,8 @@
 						"Powerhouse_collection"					"10"
 						"tough_break_drop_collection_01"		"10"
 						"tough_break_drop_collection_02"		"10"
-						"tough_break_case_collection_01"		"10"
-						"tough_break_case_collection_02"		"10"
+						"tough_break_case_collection_01_pyroland"	"10"
+						"tough_break_case_collection_02_warbirds"	"10"
 					}
 				}
 				"usage_capabilities"
@@ -99398,29 +99672,25 @@
 					"can_killstreakify" 	"1"	
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"never craftable"
-				{
-					"attribute_class"	"never_craftable"
-					"value"				"1"
-				}
-				"cannot restore"
-				{
-					"attribute_class"	"cannot_restore"
-					"value"				"1"
-				}
+				"never craftable"	"1"
+				"cannot restore"	"1"
+				"weapon_allow_inspect"			"1"
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"0"
 			"item_name"			"#TF_Winter2015_Festivizer"
 			"item_description"	"#TF_Winter2015_Festivizer_desc"
 			"item_type_name"	"#TF_FestivizerTool"
-			"image_inventory"	"backpack/crafting/professional_grease_basic"		
+			"model_player"		"models/items/festivizer.mdl"
+			"image_inventory"	"backpack/items/festivizer"
 			"item_quality"		"unique"
 			"min_ilevel"		"15"
 			"max_ilevel"		"15"
-			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
-			"drop_sound"			"ui/item_bottle_drop.wav"
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
 		}
 
 		"5840"
@@ -115193,7 +115463,7 @@
 			"description_string"	"#Attrib_IsFestive"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
-			"effect_type"	"positive"
+			"effect_type"	"unusual"
 		}
 
 		"3000"
