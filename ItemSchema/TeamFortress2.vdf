@@ -22655,8 +22655,14 @@
 			{
 				"animation_replacement"
 				{
-					"ACT_VM_HITCENTER"	"ACT_MELEE_VM_HITCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_MELEE_VM_SWINGHARD"
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
 				}
 			}
 			"attributes"
@@ -28721,8 +28727,14 @@
 			{
 				"animation_replacement"
 				{
-					"ACT_VM_HITCENTER"	"ACT_MELEE_VM_HITCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_MELEE_VM_SWINGHARD"
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
 				}
 			}
 			"attributes"
@@ -33240,6 +33252,20 @@
 			"used_by_classes"
 			{
 				"spy"	"1"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
+				}
 			}
 			"attributes"
 			{
@@ -40076,8 +40102,14 @@
 			{
 				"animation_replacement"
 				{
-					"ACT_VM_HITCENTER"	"ACT_MELEE_VM_HITCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_MELEE_VM_SWINGHARD"
+					"ACT_VM_DRAW"	"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_HITCENTER"	"ACT_ITEM2_VM_HITCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_ITEM2_VM_SWINGHARD"
+					"ACT_BACKSTAB_VM_UP"	"ACT_ITEM2_BACKSTAB_VM_UP"
+					"ACT_BACKSTAB_VM_DOWN"	"ACT_ITEM2_BACKSTAB_VM_DOWN"
+					"ACT_BACKSTAB_VM_IDLE"	"ACT_ITEM2_BACKSTAB_VM_IDLE"
+					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
 				}
 
 				"attached_particlesystems"
@@ -40736,22 +40768,8 @@
 			}
 			"item_name"			"#TF_Weapon_Knife_Festive2011"
 			"image_inventory"	"backpack/player/items/spy/xms_knife"
-			"visuals"
-			{
-				"attached_models"
-				{
-					"0"
-					{
-						"model_display_flags"	"1"
-						"model"	"models/player/items/spy/xms_knife.mdl"
-					}
-					"1"
-					{
-						"model_display_flags"	"2"
-						"model"	"models/player/items/spy/xms_knife_v.mdl"
-					}
-				}
-			}
+			"model_player"	"models/weapons/c_models/c_knife/c_knife_xmas.mdl"
+			"attach_to_hands"	"1"
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
