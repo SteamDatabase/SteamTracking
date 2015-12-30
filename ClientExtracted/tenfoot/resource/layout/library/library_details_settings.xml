@@ -44,6 +44,9 @@
           <Button id="ChooseIconButton" class="Button">
               <Label id="ChooseIconLabel" class="LongDesc" text="#Library_Details_ChooseIcon"/>
           </Button>
+				<Button id="ChangeShortcutNameButton" class="Button">
+					<Label id="ChangeShortcutNameLabel" class="LongDesc" text="#Library_Details_ChangeShortcutName"/>
+				</Button>				
 					<Panel class="HorizontalSpace" />
 					<Panel class="HorizontalSpace" />
 

@@ -3751,7 +3751,7 @@ KeyboardShortcut Image
 	}
 }
 
-#LaunchOptions
+#LaunchOptions, #ShortcutName
 {
 	margin-top: 20px;
 	font-size: 28px;

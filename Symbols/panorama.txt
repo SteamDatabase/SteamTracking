@@ -677,6 +677,7 @@
  B panorama::VRDashboardThumbSelected::symbol
  B panorama::VRGamepadFocusGained::symbol
  B panorama::VRGamepadFocusLost::symbol
+ B panorama::VRHideKeyboard::symbol
  B panorama::VRNotificationBeginInteraction::symbol
  B panorama::VRNotificationDestroyed::symbol
  B panorama::VRNotificationHidden::symbol
@@ -687,6 +688,7 @@
  B panorama::VRProcessQuit::symbol
  B panorama::VRRenderToast::symbol
  B panorama::VRResetDashboard::symbol
+ B panorama::VRShowKeyboard::symbol
  B panorama::VRStatusUpdate::symbol
  B panorama::VRUnknownEvent::symbol
  B panorama::VideoPlayerChangedRepresentation::symbol
@@ -1069,6 +1071,7 @@
  D panorama::VRDashboardThumbSelected::pchEvent
  D panorama::VRGamepadFocusGained::pchEvent
  D panorama::VRGamepadFocusLost::pchEvent
+ D panorama::VRHideKeyboard::pchEvent
  D panorama::VRNotificationBeginInteraction::pchEvent
  D panorama::VRNotificationDestroyed::pchEvent
  D panorama::VRNotificationHidden::pchEvent
@@ -1079,6 +1082,7 @@
  D panorama::VRProcessQuit::pchEvent
  D panorama::VRRenderToast::pchEvent
  D panorama::VRResetDashboard::pchEvent
+ D panorama::VRShowKeyboard::pchEvent
  D panorama::VRStatusUpdate::pchEvent
  D panorama::VRUnknownEvent::pchEvent
  D panorama::VideoPlayerChangedRepresentation::pchEvent
@@ -8850,6 +8854,7 @@
  T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusGained, unsigned long long>(panorama::VRGamepadFocusGained, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusLost, unsigned long long>(panorama::VRGamepadFocusLost, panorama::IUIPanel const*, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VRHideKeyboard>(panorama::VRHideKeyboard, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationBeginInteraction, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRNotificationDestroyed, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationDestroyed, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRNotificationHidden, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationHidden, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
@@ -8859,6 +8864,7 @@
  T bool panorama::DispatchEvent<panorama::VROverlayShown, unsigned long long>(panorama::VROverlayShown, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRRenderToast, unsigned int>(panorama::VRRenderToast, panorama::IUIPanel const*, unsigned int)
  T bool panorama::DispatchEvent<panorama::VRResetDashboard>(panorama::VRResetDashboard, panorama::IUIPanel const*)
+ T bool panorama::DispatchEvent<panorama::VRShowKeyboard>(panorama::VRShowKeyboard, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRStatusUpdate, vr::EVRState>(panorama::VRStatusUpdate, panorama::IUIPanel const*, vr::EVRState)
  T bool panorama::DispatchEvent<panorama::VRUnknownEvent, vr::VREvent_t>(panorama::VRUnknownEvent, panorama::IUIPanel const*, vr::VREvent_t)
  T bool panorama::DispatchEvent<panorama::VideoPlayerChangedRepresentation, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerChangedRepresentation, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
@@ -12613,6 +12619,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRGamepadFocusGained, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRGamepadFocusLost, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRHideKeyboard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationDestroyed, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationHidden, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
@@ -12623,6 +12630,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRProcessQuit, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRRenderToast, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRResetDashboard>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRShowKeyboard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent::CanBubble() const
  T panorama::IUIFileSystem::RestoreContentFilename(char const*, CUtlString&)
  T panorama::IUIFileSystem::RestoreResourceFilename(char const*, CUtlString&)
@@ -12933,6 +12941,8 @@
  T panorama::VRGamepadFocusGained::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T panorama::VRGamepadFocusLost::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRGamepadFocusLost::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VRHideKeyboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRHideKeyboard::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRNotificationBeginInteraction::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRNotificationBeginInteraction::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, unsigned int, unsigned long long)
  T panorama::VRNotificationDestroyed::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12953,6 +12963,8 @@
  T panorama::VRRenderToast::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRResetDashboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRResetDashboard::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRShowKeyboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRShowKeyboard::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRStatusUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRStatusUpdate::MakeEvent(panorama::IUIPanelClient const*, vr::EVRState)
  T panorama::VRUnknownEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
