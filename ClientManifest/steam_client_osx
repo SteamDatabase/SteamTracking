@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1451689999"
+	"version"		"1451690001"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b9c015520018655499338cfc2c3a3159e28bbe14"
@@ -146,10 +146,10 @@
 	}
 	"breakpad_osx"
 	{
-		"file"		"breakpad_osx.zip.4c796876e93f6e2b4510cd2a3f6a3c2c6042ace3"
-		"checksum"		"4c796876e93f6e2b4510cd2a3f6a3c2c6042ace3"
+		"file"		"breakpad_osx.zip.81fc91dbb32f7bf60d7fe6d49996297307133b5f"
+		"checksum"		"81fc91dbb32f7bf60d7fe6d49996297307133b5f"
 		"size"		"414313"
-		"zipvz"		"breakpad_osx.zip.vz.f226aaf51c1a37705ae8032d48bae9c4fdefa519_311755"
+		"zipvz"		"breakpad_osx.zip.vz.91998811d9ec751e7901c34120d17d279a6d5a8a_311885"
 	}
 	"miles_osx"
 	{
@@ -182,5 +182,5 @@
 }
 "kvsignatures"
 {
-	"osx"		"51d8bb25e4a0c6af7505e0ada0cc1a250cd47e27bf7d29e6207c56bc76f163d899f325f1772cb0ba6f6233e717d9ba9cbcb2831ac4e252d1828b01522866b5c5282fbe9f15d47461810011d011da7ccd6c6a34fc70ccc894c8a67286324754a53d2139ca27f8657157387dfc336b6efcc724f847939c5a2015576fb41cadc294"
+	"osx"		"9934c9230b1dd6583ac3b4d8a10545a1cb3424b06367e5d71d8682aef809416aaaaa6be9d5f5248b90df093723ae314bf00747bcc1b967f88b965b241d720b6c766938216a27c449c41a72eabd19836a4e1e6723ffa43d94c188bc65ff27d0978704cbe9ed1571c2b960ea10c23e015d5e68ac392ddf47f58c4abadfbe14a0a5"
 }
