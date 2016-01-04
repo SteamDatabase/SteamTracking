@@ -86,7 +86,7 @@ body.v6.login .rightcol .spotlight_block {
 	border: 1px solid #000;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
-	width: 500px;
+	width: 98%;
 	max-width: calc( 100% - 12px );
 	padding: 5px;
 	margin-top: 3px;
@@ -1166,7 +1166,6 @@ label.send_choice_txt {
 /* checkout - gift message */
 
 #gift_message_text {
-	width: 575px;
 	height: 158px;
 	font-size: 18px;
 	resize: none;
