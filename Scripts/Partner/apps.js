@@ -2616,7 +2616,7 @@ function SetScreens( appid, screens )
 {
 	if ( screens.length == 0 )
 	{
-		$('screenshots').innerHTML = 'Your game has no community screen shots. You can upload some above.';
+		$('screenshots').innerHTML = 'Your group has no community screen shots. You can upload some above.';
 		return;
 	}
 	
@@ -2677,7 +2677,7 @@ function SetAvatars( appid, avatars )
 {
 	if ( avatars.length == 0 )
 	{
-		$('avatars').innerHTML = 'Your game has no community avatars. You can upload some above.';
+		$('avatars').innerHTML = 'Your group has no community avatars. You can upload some above.';
 		return;
 	}
 	
@@ -3587,7 +3587,7 @@ function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartner
 
 function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
 {
-	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating new app' );
+	var progressDialog = ShowProgressDialog( "Create New App", "Creating New App" );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
@@ -3646,7 +3646,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 	).fail(
 		function( jqxhr ) {
 			progressDialog.Dismiss();
-			ShowAlertDialog( 'Failed to create new app', jqxhr.responseText );
+			ShowAlertDialog( "Failed to create new app", jqxhr.responseText );
 		}
 	);
 }
