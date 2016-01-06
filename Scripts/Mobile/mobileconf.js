@@ -240,22 +240,22 @@ $J( function() {
 		$elButtons.css( 'bottom', '0' );
 
 		// Begin loading in the details
-		GetValueFromLocalURL( 'steammobile://steamguard?op=conftag&arg1=details' + nConfirmationId, 5, function( data )
+		GetValueFromLocalURL( 'steammobile://steamguard?op=conftag&arg1=details' + nConfirmationId, 5, function( httpParams )
 		{
 			$J.ajax( {
 				url: 'https://steamcommunity.com/mobileconf/details/' + nConfirmationId,
 				type: 'GET',
-				data: data
-			} ).done( function ( data ) {
-				if ( data.success )
+				data: httpParams
+			} ).done( function ( responseData ) {
+				if ( responseData.success )
 				{
-					$elDetails.html( data.html );
+					$elDetails.html( responseData.html );
 				}
 				else
 				{
 					ShowAlertDialog(
 							'Confirmation Error',
-							typeof data.message != 'undefined' ? data.message : 'There was a problem loading details for that confirmation. Please try your request again later.',
+							typeof responseData.message != 'undefined' ? responseData.message : 'There was a problem loading details for that confirmation. Please try your request again later.',
 							'OK'
 					).always( function() {
 						window.history.back();

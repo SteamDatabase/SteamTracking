@@ -275,11 +275,11 @@ function HandleActivationCode( near )
 			if ( code == 88 ||
 				code == 89 )
 			{
-				ShowError( "The activation code is incorrect" );
+				ShowError( 'The activation code is incorrect' );
 			}
 			else
 			{
-				FatalError( "Sorry, there was an error processing your activation code." );
+				FatalError( 'Sorry, there was an error processing your activation code.' );
 			}
 		},
 
@@ -439,18 +439,18 @@ function DoTwoFactorValidate( sms_code )
 		{
 			if ( ++g_SmsCodeFailures > 5 )
 			{
-				FatalError( "Sorry, there was an error processing your SMS code." );
+				FatalError( 'Sorry, there was an error processing your SMS code.' );
 			}
 			else
 			{
 				if ( code == 88 ||
 					code == 89 )
 				{
-					ShowError( "The SMS code is incorrect" );
+					ShowError( 'The SMS code is incorrect' );
 				}
 				else
 				{
-					ShowError( "There was an error with that code" );
+					ShowError( 'There was an error with that code (' + code + ')' );
 				}
 			}
 		},
@@ -518,7 +518,7 @@ function HandleSmsCode( near, bForTwoFactor )
 						
 						if ( ++g_SmsCodeFailures > 5 )
 						{
-							FatalError( "Sorry, there was an error processing your SMS code." );
+							FatalError( 'Sorry, there was an error processing your SMS code.' );
 						}
 						else
 						{

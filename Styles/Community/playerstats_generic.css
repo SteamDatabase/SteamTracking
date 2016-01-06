@@ -36,10 +36,8 @@
 	padding-left:12px;
 }
 #mainContents {
-	width:924px;
 	margin:0;
 	text-align:left;
-	padding: 8px 12px;
 }
 #logo {
 	position:absolute;
@@ -172,7 +170,6 @@
 	padding-left:92px;
 }
 #personalAchieve {
-	padding: 0 16px;
 }
 .achieveHeader {
 	font-weight:normal;
@@ -216,6 +213,18 @@
 .achieveImgHolder img, .CachieveImgHolder img {
 	width: 64px;
 	height: 64px;
+}
+
+.achieveHiddenBox {
+	position: absolute;
+	left: 0;
+	width: 64px;
+	height: 64px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+
+	text-align: center;
+	line-height: 64px;
+	font-size: 22px;
 }
 
 .CachieveImgHolder {
@@ -411,16 +420,6 @@ select {
 }
 .withProgress {
 	top:8px;
-}
-
-
-@media screen and (max-width: 910px)
-{
-	html.responsive #mainContents {
-		width: auto;
-		padding: 8px 12px;
-	}
-
 }
 
 @media screen and (max-width: 529px )

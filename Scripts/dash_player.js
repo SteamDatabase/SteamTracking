@@ -256,7 +256,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 			if ( _player.m_bEMECapableHost )
 				_player.InitializeEME();
 			else
-				_player.CloseWithError( 'drmerrordownload' );
+				_player.CloseWithError( 'drmerrordownload', 'PlayMPD DRM Init Failure' );
 		}
 		else
 		{
@@ -376,14 +376,14 @@ CDASHPlayer.prototype.InitializeEME = function()
 						if ( --nKeySystemsToTry === 0 ) {
 							if ( ++nRetries >= nMaxRetries ) {
 								PlayerLog( 'Failed to initialize EME after ' + nMaxRetries + ' retries, giving up and erroring.' );
-								_player.CloseWithError( 'drmerrordownload' );
+								_player.CloseWithError( 'drmerrordownload', 'Initialize EME' );
 							} else {
 								PlayerLog( 'Failed to initialize EME, retrying initialization in ' + nTimeBetweenRetriesMs + 'ms' );
 								setTimeout( _init, nTimeBetweenRetriesMs );
 							}
 						}
 					} else {
-						_player.CloseWithError( 'drmerror', [ error.message ] );
+						_player.CloseWithError( 'drmerror', [ 'Initialize EME: ' + error.message ] );
 					}
 				}
 			);
@@ -410,7 +410,7 @@ CDASHPlayer.prototype.OnEncrypted = function( event )
 	session.generateRequest( event.initDataType, event.initData ).catch(
 		function(error) {
 			PlayerLog('Failed to generate a license request', error);
-			_player.CloseWithError( 'drmerror', [ error.message ] );
+			_player.CloseWithError( 'drmerror', [ 'Generate License Request Failure: ' + error.message ] );
 		}
 	);
 }
@@ -449,7 +449,7 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 				});
 			},function( reason ) {
 				PlayerLog( 'Failed to update DRM session', reason );
-				_player.CloseWithError( 'drmerror', [ reason ] );
+				_player.CloseWithError( 'drmerror', [ 'Update DRM Session Failure: ' + reason ] );
 			});
 		}
 	});
