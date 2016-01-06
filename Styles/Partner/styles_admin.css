@@ -362,6 +362,10 @@ select.hourselect,  select.minuteselect {
 	padding: 4px;
 }
 
+pre.results {
+	white-space: pre-wrap;
+}
+
 /* message edit: publish tab */
 .checkboxGrid {
 	float: left;
