@@ -401,6 +401,7 @@ span.membersOnline {
 .friendPlayerLevel.lvl_300, .friendPlayerLevel.lvl_400,
 .friendPlayerLevel.lvl_500, .friendPlayerLevel.lvl_600,
 .friendPlayerLevel.lvl_700, .friendPlayerLevel.lvl_800
+.friendPlayerLevel.lvl_900
 {
 	border: none;
 	border-radius: 0;
@@ -447,6 +448,10 @@ span.membersOnline {
 
 .friendPlayerLevel.lvl_800 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png' );
+}
+
+.friendPlayerLevel.lvl_900 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png' );
 }
 
 .friendPlayerLevel.lvl_plus_10 {
