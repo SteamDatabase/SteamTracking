@@ -126380,7 +126380,7 @@
 			"do_B"	"#TF_Tool_GiftWrap_Global"
 			"always_known"	"1"
 			"premium_only"	"0"
-			"disabled"	"0"
+			"disabled"	"1"
 			"input_items"
 			{
 				"2"
