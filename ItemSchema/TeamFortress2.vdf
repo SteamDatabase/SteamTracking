@@ -14569,7 +14569,7 @@
 				"extinguish reduces cooldown"
 				{
 					"attribute_class" "extinguish_reduces_cooldown"
-					"value" "0.2"
+					"value" "0.8"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
