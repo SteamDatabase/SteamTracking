@@ -2783,7 +2783,8 @@ ControllerConfigBrowser #CategoryExplanation
 
 ControllerConfigBrowser.SelectPersonalBindings #ConfigsColumn,
 ControllerConfigBrowser.SelectTemplateBindings #ConfigsColumn,
-ControllerConfigBrowser.SelectRecommendedBindings #ConfigsColumn
+ControllerConfigBrowser.SelectRecommendedBindings #ConfigsColumn,
+ControllerConfigBrowser.SelectEntireLibraryBindings #ConfigsColumn
 {
 	visibility: visible;
 }
@@ -2814,6 +2815,10 @@ ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
 {
 	visibility: visible;
 }
+.SelectEntireLibraryBindings.NoEntireLibraryBindings #NoEntireLibraryConfigs
+{
+	visibility: visible;
+}
 
 .SelectTemplateBindings.NoTemplateBindings #CategoryExplanation
 {
@@ -2831,6 +2836,10 @@ ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
 {
 	visibility: collapse;
 }
+.SelectEntireLibraryBindings.NoEntireLibraryBindings #CategoryExplanation
+{
+	visibility: collapse;
+}
 
 ControllerConfigButton
 {
@@ -2842,6 +2851,14 @@ ControllerConfigButton
 	border-style: solid;
 	border-color: #0f99bc44;
 	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
+	
+	visibility: collapse;
+}
+
+ControllerConfigButton.ReadOnly
+{
+    color: #75c7fd88;
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #13354c ), to( #102030 ) );
 }
 
 ControllerConfigButton:focus
@@ -2855,6 +2872,11 @@ ControllerConfigButton:focus
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+ControllerConfigButton.ReadOnly:focus
+{
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #203040 ), to( #405060 ) );
 }
 
 ControllerConfigButton #RecommendedConfig
@@ -2893,6 +2915,22 @@ ControllerConfigButton #Title
 	font-weight: bold;
 	color: #75c7fdff;
 }
+
+ControllerConfigButton.ReadOnly #Title
+{
+    color: #75c7fd55;
+}
+
+ControllerConfigButton.ReadOnly #Author
+{
+    color: #75c7fd55;
+}
+
+ControllerConfigButton.ReadOnly #Description
+{
+    color: #75c7fd55;
+}
+
 
 ControllerConfigButton #Author
 {
@@ -2933,27 +2971,78 @@ ControllerConfigBrowser.SelectCommunityBindings #Votes
 	visibility: visible;
 }
 
-ControllerConfigBrowser #RecommendedBinding, ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
+ControllerConfigButton.SaveButton #Votes
 {
 	visibility: collapse;
 }
 
-ControllerConfigBrowser.SelectPersonalBindings #PersonalBinding
+ControllerConfigBrowser.SelectPersonalBindings .PersonalBinding
 {
 	visibility: visible;
 }
 
-ControllerConfigBrowser.SelectCommunityBindings #CommunityBinding
+ControllerConfigBrowser.SelectCommunityBindings .CommunityBinding
 {
 	visibility: visible;
 }
 
-ControllerConfigBrowser.SelectTemplateBindings #TemplateBinding
+ControllerConfigBrowser.SelectTemplateBindings .TemplateBinding
 {
 	visibility: visible;
 }
 
-ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
+ControllerConfigBrowser.SelectRecommendedBindings .RecommendedBinding
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectEntireLibraryBindings .EntireLibrary
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.ShowSaveButtons #RecommendedCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.HideSaveButtons .SaveButton
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.RequiresMoreTimeForPublic .SaveButton.CommunityBinding
+{
+	visibility: collapse;
+}
+
+ControllerConfigButton #ConfigButtonSaveIcon
+{
+	horizontal-align: right;
+	align: right top;
+	width: 200px;
+    height: 200px;	
+    visibility: collapse;
+    opacity: 0.6;
+}
+
+ControllerConfigButton.SaveButton #ConfigButtonSaveIcon
+{
+    visibility: visible;
+}
+
+#RequiresMoreTimeToPublishLabel
+{
+	margin-top: 30px;
+	margin-bottom: 70px;
+	font-size: 30px;
+	font-family: platformfont;
+	color: red;
+	horizontal-align: center;
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.SelectCommunityBindings.RequiresMoreTimeForPublic #RequiresMoreTimeToPublishLabel
 {
 	visibility: visible;
 }

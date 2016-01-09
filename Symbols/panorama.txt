@@ -349,9 +349,7 @@
  B g_ConVarPanoramaSteampadButtonRepeatCurveTime
  B g_ConVarPanoramaSteampadButtonRepeatIntervalEnd
  B g_ConVarPanoramaSteampadButtonRepeatIntervalStart
- B g_ConVarUDPPktLossPct
  B g_ConVarUDPSendRetries
- B g_ConVarUDPTestMode
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
  B g_DumpUsedShaders
@@ -8797,13 +8795,13 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T bool panorama::CSSHelpers::BParseCommaSepList<double>(CUtlVector<double, CUtlMemory<double> >*, bool (*)(double*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<float>(CUtlVector<float, CUtlMemory<float> >*, bool (*)(float*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CBackgroundPosition>(CUtlVector<panorama::CBackgroundPosition, CUtlMemory<panorama::CBackgroundPosition> >*, bool (*)(panorama::CBackgroundPosition*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CBackgroundRepeat>(CUtlVector<panorama::CBackgroundRepeat, CUtlMemory<panorama::CBackgroundRepeat> >*, bool (*)(panorama::CBackgroundRepeat*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CPanoramaSymbol>(CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, bool (*)(panorama::CPanoramaSymbol*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CStyleSymbol>(CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >*, bool (*)(panorama::CStyleSymbol*, char const*, char const**), char const*)
- T bool panorama::CSSHelpers::BParseCommaSepList<panorama::EAnimationDirection>(CUtlVector<panorama::EAnimationDirection, CUtlMemory<panorama::EAnimationDirection> >*, bool (*)(panorama::EAnimationDirection*, char const*, char const**), char const*)
+ T bool panorama::CSSHelpers::BParseCommaSepList<double>(CUtlVector<double, CUtlMemory<double> >*, bool (*)(double*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<float>(CUtlVector<float, CUtlMemory<float> >*, bool (*)(float*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CBackgroundPosition>(CUtlVector<panorama::CBackgroundPosition, CUtlMemory<panorama::CBackgroundPosition> >*, bool (*)(panorama::CBackgroundPosition*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CBackgroundRepeat>(CUtlVector<panorama::CBackgroundRepeat, CUtlMemory<panorama::CBackgroundRepeat> >*, bool (*)(panorama::CBackgroundRepeat*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CPanoramaSymbol>(CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, bool (*)(panorama::CPanoramaSymbol*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<panorama::CStyleSymbol>(CUtlVector<panorama::CStyleSymbol, CUtlMemory<panorama::CStyleSymbol> >*, bool (*)(panorama::CStyleSymbol*, char const*, char const**), char const*, bool)
+ T bool panorama::CSSHelpers::BParseCommaSepList<panorama::EAnimationDirection>(CUtlVector<panorama::EAnimationDirection, CUtlMemory<panorama::EAnimationDirection> >*, bool (*)(panorama::EAnimationDirection*, char const*, char const**), char const*, bool)
  T bool panorama::CSSHelpers::BParseCommaSepListWithScaling<panorama::CUILength>(CUtlVector<panorama::CUILength, CUtlMemory<panorama::CUILength> >*, bool (*)(panorama::CUILength*, char const*, char const**, float), char const*, float)
  T bool panorama::CStylePropertyAnimationProperties::BParseAndAddProperty<double>(double panorama::AnimationProperty_t::*, bool (*)(double*, char const*, char const**), char const*)
  T bool panorama::CStylePropertyAnimationProperties::BParseAndAddProperty<float>(float panorama::AnimationProperty_t::*, bool (*)(float*, char const*, char const**), char const*)

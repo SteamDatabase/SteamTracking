@@ -16,6 +16,9 @@
 		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
 		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" editable="0" }
 
+		"AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
+		"AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
+
 		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
 		"EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
 		
@@ -37,20 +40,23 @@
 	layout
 	{
 		region { name="buttons" width=max height=36 align="bottom" }
-	
+
+		place { control="DescriptionLabel"
+				margin-left=20 margin-right=20 margin-top=40 width=max
+				margin-bottom=2 }
+
 		place
 		{
-			control="DescriptionLabel,BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,EnableHardwareDecoding,EnableDebugOverlay"
+			control="BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,EnableHardwareDecoding,EnableDebugOverlay"
 			dir=down
-			align=top
 			width=max
 			margin-left=20
 			margin-right=20
-			margin-top=40
+			margin-top=90
 			spacing=10
 		}
 		place { control="SupportInformationLabel" region="buttons"
-						margin-left=20 margin-top=0
+						margin-left=20 margin-top=0 height=25
 						margin-bottom=2 spacing=10 }
 		place { control="OKButton" region="buttons"
 		        width=92 height=25 align=right

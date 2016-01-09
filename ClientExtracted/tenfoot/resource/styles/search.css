@@ -7,17 +7,17 @@
 {
 	from
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 	}
 
 	50%
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #1483baff ) );
 	}
 
 	to
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 	}
 }
 
@@ -28,18 +28,15 @@
 SearchStoreResult
 {
 	width: 100%;
-	padding: 4px 0px 4px 0px;
-	margin: 0px 14px 2px 0px;
+	padding: 4px 0px 4px 3px;
+	margin: 0px 14px 6px 0px;
 
 	flow-children: right;
 
 	color: applabelselected;
-	background-color: ui_common_control;
-	border-style: solid;
-	border-width: 5px;
-	border-color: none;
+	background-color: transparent_module;
 
-	transition-property: border, background-color, color, box-shadow, transform;
+	transition-property: background-color, color, box-shadow;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
@@ -55,7 +52,7 @@ SearchStoreResult Label
 
 SearchStoreResult:focus Label
 {
-	color: applabelselected;
+	color: #072e47;
 	text-overflow: clip;
 	width: 100%;
 }	
@@ -70,12 +67,9 @@ SearchStoreResult:focus
 	transition-duration: 0.4s !immediate;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	
-	animation-name: links-and-more-button-focus; 
+	background-color: button_focus_color;
+
+	animation-name: button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -131,10 +125,10 @@ SearchDialog.Destructing
 
 .DialogRegion
 {
-	width: 708px;
+	width: 800px;
 	height: 804px;
 	align: center center;
-	padding: 30px;
+	padding: 40px;
 	background-color: message_box_bg;
 	flow-children: down;
 
@@ -143,14 +137,9 @@ SearchDialog.Destructing
 	transition-timing-function: bigpicture-ease-in-out;
 
 
-	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
 
 
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
 .BehindTextInputHandler .DialogRegion
@@ -166,9 +155,9 @@ SearchDialog.Destructing
 }
 
 .Header {
-	font-size: 48px;
+	font-size: 54px;
 	font-family: platformfont;
-	color: #ffffff66;
+	color: detailsdatalabel;
 	margin-bottom: 8px;
 }
 
@@ -215,8 +204,11 @@ LoadingThrobber
 {
 	flow-children: down;
 	overflow: squish scroll;
+	background-color: #0f283d;
 	opacity: 1.0;
 	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
@@ -228,13 +220,15 @@ LoadingThrobber
 
 .ShowSearchDivider #SearchResults
 {
-	padding: 8px 0px;
+	padding: 8px 0px 8px 8px;
 }
 
 .SearchResultsArea
 {
 	width: 100%;
 	height: 100%;
+	padding: 10px;
+	margin: -10px;
 }
 
 #SearchResultsMessageWrapper
@@ -443,8 +437,10 @@ LoadingThrobber
 //
 #StoreHeader
 {
+	width: 184px;
+	height: 69px;
 	margin: 8px;
-	box-shadow: #00000033 -2px -2px 8px 4px;
+	//box-shadow: #00000033 -2px -2px 8px 4px;
 }
 
 .StoreRightColumn
@@ -452,12 +448,33 @@ LoadingThrobber
 	flow-children: down;
 	width: fill-parent-flow( 1.0 );
 }
+.details_ctn
+{
+	flow-children: down;
+	width: 100%;
+}
+.bottomrow
+{
+	width: 100%;
+	flow-children: right;
+}
+.bottomrow #StoreResultPrice
+{
+	width: 200px;
+	margin-top: 10px;
+}
 
 #StoreResultName
 {
 	margin-top: 4px;
-	font-size: 20px;
+	font-size: 28px;
 	white-space: nowrap;
+	font-weight: light;
+	color: #67c1f5ff;
+}
+SearchStoreResult:focus #StoreResultName
+{
+color: #072e47;
 }
 
 .DetailsIconRow
@@ -465,7 +482,7 @@ LoadingThrobber
 	flow-children: right;
 	horizontal-align: right;
 	margin: 0px 10px;
-	vertical-align: center;
+	vertical-align: top;
 	wash-color: #171717f5;
 	visibility: collapse;
 	transition-property: opacity;

@@ -34,17 +34,22 @@
 	        <Button class="NxLeftNavButton" id="TemplateCategory" onfocus="SelectConfigCategory( template );" onactivate="MoveRight(0);">
 	          <Label text="#Library_Details_Controller_Templates" />
 	        </Button>
+					<Button class="NxLeftNavButton" id="EntireLibraryCategory" onfocus="SelectConfigCategory( entirelibrary );" onactivate="MoveRight(0);">
+						<Label text="#Library_Details_Controller_EntireLibrary" />
+					</Button>					
 	      </Panel>		
 			</Panel>
 			
 			<Panel id="ConfigsRightContainer" childfocusonhover="true" onmovedown="None();" onmoveup="None();" selectionpos="1,1000" >
 				<Label id="CategoryExplanation" text="#ControllerBinding_Explanation_template" />
+				<Label id="RequiresMoreTimeToPublishLabel" text="#Library_ControllerSaveReqUseTime" />
 				<Panel id="ConfigsColumn" childfocusonhover="true" overscroll-y="100" />
 				<Panel id="CommunityConfigsColumn" childfocusonhover="true" overscroll-y="100" />
 				<Label id="NoTemplateConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_template" />
 				<Label id="NoPersonalConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />
 				<Label id="NoCommunityConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_community" />
 				<Label id="NoRecommendedConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_recommended" />
+				<Label id="NoEntireLibraryConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />
 			</Panel>
 		</Panel>
 				

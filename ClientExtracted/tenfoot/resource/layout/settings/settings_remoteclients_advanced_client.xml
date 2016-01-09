@@ -35,6 +35,16 @@
 						</DropDown>
 					</Panel>
 					<Panel class="Spacer" />
+					<Panel class="VertContainer">
+						<Label id="AudioChannelsHeader" class="SettingsLabel" text="#Steam_Settings_Streaming_AudioChannelSelect" />
+						<DropDown id="AudioChannels" class="Filter" tabindex="auto">
+							<Label id="0" text="#Steam_Settings_Streaming_AudioChannelAuto_Channels" />
+							<Label id="2" text="#Steam_Settings_Streaming_AudioChannel2" />
+							<Label id="4" text="#Steam_Settings_Streaming_AudioChannel4" />
+							<Label id="6" text="#Steam_Settings_Streaming_AudioChannel6" />
+						</DropDown>
+					</Panel>
+					<Panel class="Spacer" />
 					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_EnableHardwareDecoding" />
 					<ToggleButton class="CheckBox" id="EnableDebugOverlay" onactivate="ToggleDebugOverlay()" text="#Settings_RemoteClients_EnableDebugOverlay" />

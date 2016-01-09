@@ -19,7 +19,7 @@
 			</Panel>
 			<Panel class="SearchDivider" />
 			<Panel class="SearchResultsArea">
-				<Panel id="SearchResults" />
+				<Panel id="SearchResults" overscroll-y="100"/>
 
 				<Panel id="SearchResultsMessageWrapper">
 					<Label class="SearchResultsLabel" id="SearchResultsMessage" />

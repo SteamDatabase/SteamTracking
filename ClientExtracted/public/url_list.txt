@@ -919,7 +919,7 @@ SteamControllerHelp
 
 LibrarySuggestions
 {
-	url			"%community%/library/suggestions/%p1%/"
+	url			"%community%/library/suggestions/%p1%/%p2%"
 	method		"internal"
 	filter		"community"
 }

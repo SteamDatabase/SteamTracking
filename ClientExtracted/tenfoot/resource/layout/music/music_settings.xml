@@ -52,6 +52,8 @@
 				  <Label class="SettingsStatic" text="#Music_Settings_Notification_Header" />
 				  <ToggleButton class="CheckBox" id="PlaylistNowPlayingNotificationCheckbox" 
 					  text="#Music_Settings_Playlist_Now_Playing" onactivate="TogglePlaylistNowPlayingNotification();"/>	
+				  <ToggleButton class="CheckBox" id="HideMusicNotificationsInOverlayCheckbox" 
+					  text="#Music_Settings_Music_Notifications_In_Overlay" onactivate="ToggleMusicNotificationsInOverlay();"/>	
 					
 				  <Label class="SettingsStatic" text="#Music_Settings_Logging_Header" />
 				  <ToggleButton class="CheckBox" id="LogCrawlingCheckbox" 

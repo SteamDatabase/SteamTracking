@@ -137,9 +137,7 @@
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
  B g_ConVarNetEncryptionHandshakeWorkMax_MedPri
- B g_ConVarUDPPktLossPct
  B g_ConVarUDPSendRetries
- B g_ConVarUDPTestMode
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
  B g_CpuTimeUnreliable
@@ -4205,7 +4203,6 @@
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
  T ConVar::ConVar(char const*, char const*, unsigned long long)
- T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const

@@ -3,13 +3,85 @@
     "version" "2"
     "game" "Streaming Client"
 
-    "group_source_bindings"
+	"group"
+	{
+		"id"		"1"
+		"mode"		"trigger"
+		"settings"
+		{
+			"output_trigger"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"trigger"
+		"settings"
+		{
+			"output_trigger"		"0"
+		}
+	}
+	//Dummy Mode for enabling Gyro
+	"group"
+	{
+		"id"		"3"
+		"Mode"		"dpad"
+		"bindings"
+		{
+		}
+	}
+    "settings"
     {
     }
 
-    "settings"
-    {
-        "left_trackpad_mode" "none"
-        "right_trackpad_mode" "none"
-    }
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"1"		"left_trigger active"
+			"2"		"right_trigger active"
+		}
+		"switch_bindings"
+		{
+		}
+		"settings"
+		{
+		}
+	}
+	"preset"
+	{
+		"id"		"2"
+		"name"		"gyro"
+		"group_source_bindings"
+		{
+			"1"		"left_trigger active"
+			"2"		"right_trigger active"
+			"3"		"gyro active"
+		}
+		"switch_bindings"
+		{
+		}
+		"settings"
+		{
+		}
+	}
+	"preset"
+	{
+		"id"		"3"
+		"name"		"bigpicture"
+		"group_source_bindings"
+		{
+			"1"		"left_trigger active"
+			"2"		"right_trigger active"
+		}
+		"switch_bindings"
+		{
+		}
+		"settings"
+		{
+			"mouse_smoothing"	"1"
+		}
+	}
 }

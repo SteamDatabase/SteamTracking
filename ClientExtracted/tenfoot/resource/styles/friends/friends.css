@@ -404,32 +404,6 @@ FriendsChatDialog.ClanChatDisabledX
 	horizontal-align: center;
 }
 
-FriendsSelfHeader
-{
-	flow-children: right;
-	margin-bottom: 4px;
-	margin-top: 6px;
-}
-
-FriendsSelfHeader.Offline Label
-{
-	color: friendsoffline_darkbg;
-}
-
-FriendsSelfHeader.Online Label
-{
-	color: friendsonline_solid;
-}
-
-FriendsSelfHeader.InGame Label
-{
-	color: friendsingame_solid;
-}
-
-FriendsSelfHeader.Golden Label
-{
-	color: friendsgolden_darkbg;
-}
 
 .FriendsMyAvatar
 {
@@ -754,21 +728,6 @@ FriendsSelfHeader.Golden Label
 	color: friendsoffline_darkbg;
 }
 
-GroupListItem.LeftMainListItem.Offline Label
-{
-	color: #DDDDDDFF;
-
-	transition-property: color, pre-transform-scale2d, transform;
-	transition-duration: 0.2s !immediate;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
-{
-	color: #999999FF;
-}
-
-
 
 .LeftMainListItem.Online Label
 {
@@ -828,16 +787,6 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 .LeftMainListItem.Offline:descendantfocus Label
 {
 	color: applabelselectedsolid;
-}
-
-GroupListItem.LeftMainListItem.Offline:focus Label
-{
-	color: applabelselectedsolid;
-}
-
-GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
-{
-	color: #555555FF;
 }
 
 #FriendsMainBodyLeftHeaderButtons
@@ -1092,51 +1041,6 @@ a.ChatMsgMessageBody:hover
 	text-decoration: underline;
 }
 
-
-
-
-FriendsIndicatorContainer
-{
-	horizontal-align: right;
-	vertical-align: center;
-	margin-bottom: 11px;
-	margin-right: 20px;
-	flow-children: right;
-	font-weight: medium;
-	font-size: 24px;
-}
-
-.LeftMainListItem FriendsIndicatorContainer Label.FriendIndicatorContainedText
-{
-	color: friendsoffline_solid;
-	vertical-align: bottom;
-	margin-right: 10px;
-	
-	visibility: collapse;
-}
-
-.LeftMainListItem FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
-{
-	text-align: center;
-	font-size: 18px;
-	padding-right: 8px;
-	padding-top: 2px;
-	margin: 1px;
-	width: 40px;
-	height: 40px;
-
-	background-color: #A0A0A0ff;
-	color: #303030ff;
-	
-	visibility: collapse;
-}
-
-.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedText,
-.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
-{
-	color: #999999ff;
-}
-
 #FriendIndicatorContainedImageChat
 {
 	opacity-mask: url( "file://{images}/friends/friends_indicator_chat.png" );
@@ -1158,138 +1062,6 @@ FriendsIndicatorContainer
 #FriendIndicatorContainedImageFriendRequest
 {
 	opacity-mask: url( "file://{images}/friends/friends_indicator_friendrequest.png" );
-}
-
-FriendsIndicatorContainer.Chat #FriendIndicatorContainedImageChat
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChat #FriendIndicatorContainedImageVoiceChat
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChat.VoiceChatOnHold #FriendIndicatorContainedImageVoiceChat
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.VoiceChat.VoiceChatOnHold #FriendIndicatorContainedImageVoiceChatOnHold
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedImageGameInvite
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedImageFriendRequest
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedImageGroupRequest
-{
-	visibility: visible;
-}
-
-FriendsIndicatorContainer.Chat #FriendIndicatorContainedTextChat
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChat #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.VoiceChatDialing #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextChat,
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.VoiceChat #FriendIndicatorContainedTextVoiceChat
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChatDialing #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChat,
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.VoiceChatDialing #FriendIndicatorContainedTextVoiceChatDialing
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceChatDialing,
-FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatDialing,
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatDialing,
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatDialing,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatDialing,
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceChatRinging
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatRinging,
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatRinging,
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatRinging,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatRinging,
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatOnHold
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatOnHold,
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatOnHold,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatOnHold,
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextGameInvite
-{
-	visibility: visible;
-}
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextGameInvite,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGameInvite
-{
-	visibility: collapse;
-}
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendRequest
-{
-	visibility: visible;
-}
-
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
-{
-	visibility: visible;
-}
-
-
-.LeftMainListItem:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedText
-{
-	color: #303030ff;
-}
-
-.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedText
-{
-	wash-color: #ffffffff;
-	background-color: none;
-}
-
-
-.LeftMainListItem:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
-{
-	background-color: #303030ff;
-	color: friendsoffline_solid;
-}
-
-.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
-{
-	wash-color: #ffffffff;
 }
 
 .AddFriendMsgBox #MsgBoxDescriptionArea

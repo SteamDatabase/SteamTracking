@@ -91,6 +91,13 @@ TextInputDaisy
 	animation-direction: reverse;
 }
 
+// Disable entry/exit animation for vr keyboard
+.VR #BodyContainer
+{
+    animation-name: none;	
+    opacity: 1.0;
+}
+
 .HalfWidth #BodyContainer
 {
 

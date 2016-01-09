@@ -1768,7 +1768,7 @@ Button:focus .PActionMappingWrapper Image
 {
 	margin-top: 12px;
 	width: 324px;
-	visibility: visible;
+	visibility: collapse;
 }
 
 .OfficialTitleDropDown

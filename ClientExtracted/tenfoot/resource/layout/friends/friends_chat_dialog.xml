@@ -52,15 +52,6 @@
 						<Label id="FriendsGameInviteHint" text="#friends_chat_resume_voice_chat" />
 					</Button>
 				</Panel>
-
-
-				<!--
-				<Panel id="FriendsMainBodyStatusGroup">
-					<Label id="FriendsMainBodyStatusGroupLeft" text="#Friends_Chat_X_IsTyping" />
-					<Label id="FriendsMainBodyStatusGroupRight" text="#Friends_Chat_LastMessage" />
-				</Panel>
-				-->
-
 			</Panel>
 			<Panel id="FriendsMainBodyChatContainer">
 				<Panel id="FriendsVoiceChatControls">
@@ -98,7 +89,7 @@
 				<TextEntry id="FriendsMainBodyInputTextArea"
 					textinputid="FriendsInputTextEntry"
 					textinputdoneactionstring="#UI_SendMessage"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat DontCloseOnSubmit AllowEmoticons"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat SubmitButton DontCloseOnSubmit DontCloseOnEnter AllowEmoticons"
 					textinputautocaps="true"
 					textinputdoublespace="true"
 					multiline="true"        

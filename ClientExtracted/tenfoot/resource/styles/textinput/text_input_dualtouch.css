@@ -676,12 +676,14 @@ TextInputDualTouch
 	min-width: 100px;
 }
 
-.FriendsChat #HeaderText, .FriendsChat #Legends, .FriendsChat #TextPreviewBackground
+.FriendsChat #HeaderText, .FriendsChat #Legends, .FriendsChat #TextPreviewBackground,
+.SubmitButton #HeaderText, .SubmitButton #Legends, .SubmitButton #TextPreviewBackground
 {
 	visibility: collapse;
 }
 
-.FriendsChat #BackDrop 
+.FriendsChat #BackDrop,
+.SubmitButton #BackDrop,
 {
 	background-color: white;
 	box-shadow: none;
@@ -698,7 +700,8 @@ TextInputDualTouch.FriendsChat
 	height: 49%;
 }
 
-.FriendsChat #BodyContainer
+.FriendsChat #BodyContainer,
+.SubmitButton #BodyContainer
 {
 	color: #00000000;
 	background-color: #00000000;
@@ -706,7 +709,8 @@ TextInputDualTouch.FriendsChat
 	horizontal-align: center;
 }
 
-.FriendsChat #BackDrop
+.FriendsChat #BackDrop,
+.SubmitButton #BackDrop
 {
 	margin-top: 0px;
 }
@@ -723,17 +727,20 @@ TextInputDualTouch.FriendsChat
 	background-color: #88b51c;
 }
 
-.FriendsChat #TouchKey_Submit
+.FriendsChat #TouchKey_Submit,
+.SubmitButton #TouchKey_Submit
 {
 	visibility: visible;
 }
 
-.FriendsChat #TouchKey_Close
+.FriendsChat #TouchKey_Close,
+.SubmitButton #TouchKey_Close
 {
 	visibility: collapse;
 }
 
-.FriendsChat #TouchKey_Enter
+.FriendsChat #TouchKey_Enter,
+.SubmitButton #TouchKey_Enter
 {
 	visibility: collapse;
 }
@@ -743,7 +750,8 @@ TextInputDualTouch.FriendsChat
 	visibility: collapse;
 }
 
-.FriendsChat #TouchKey_EnterNoClose
+.FriendsChat #TouchKey_EnterNoClose,
+.SubmitButton #TouchKey_EnterNoClose
 {
 	visibility: visible;
 }
