@@ -60,6 +60,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/platform.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/validator.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/convar.h

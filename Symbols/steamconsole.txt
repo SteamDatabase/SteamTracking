@@ -138,6 +138,7 @@
  D typeinfo for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D typeinfo for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D typeinfo for CPathString
+ D typeinfo for CSteamUser
  D typeinfo for CSteamUser::CCallback_OnLicensesUpdated
  D typeinfo for CSteamUser::CCallback_OnLoggedOff
  D typeinfo for CSteamUser::CCallback_OnLogonFailure
@@ -194,6 +195,7 @@
  D vtable for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D vtable for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D vtable for CPathString
+ D vtable for CSteamUser
  D vtable for CSteamUser::CCallback_OnLicensesUpdated
  D vtable for CSteamUser::CCallback_OnLoggedOff
  D vtable for CSteamUser::CCallback_OnLogonFailure
@@ -264,6 +266,7 @@
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  R typeinfo name for CPathString
+ R typeinfo name for CSteamUser
  R typeinfo name for CSteamUser::CCallback_OnLicensesUpdated
  R typeinfo name for CSteamUser::CCallback_OnLoggedOff
  R typeinfo name for CSteamUser::CCallback_OnLogonFailure
@@ -273,6 +276,7 @@
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
  R typeinfo name for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
@@ -580,6 +584,7 @@
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
  T CSteamUser::OnLogonFailure(SteamServerConnectFailure_t*)
  T CSteamUser::OnSteamLogon(SteamServersConnected_t*)
+ T CSteamUser::Validate(CValidator&, char const*)
  T CSteamUser::WaitForLicencesBlocking()
  T CSteamUser::~CSteamUser()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::AllocNode()
@@ -846,6 +851,7 @@
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::~CUtlVector()
  T CUtlVectorAutoPurge<char*>::~CUtlVectorAutoPurge()
+ T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CVariableBitStringBase::AllocInts(int)
  T CVariableBitStringBase::FreeInts()
  T CVariableBitStringBase::ReallocInts(int)
@@ -1169,6 +1175,7 @@
  _Unwind_Resume
  __bzero
  __cxa_atexit
+ __cxa_bad_typeid
  __cxa_begin_catch
  __cxa_end_catch
  __cxa_guard_abort
