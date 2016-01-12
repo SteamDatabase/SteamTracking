@@ -11,7 +11,7 @@
 			<Label id="GameActionsHeader" text="#Library_Details_GameActionsHeader">
 				<Label id="SelectBindingIconHeaderGA" text="#Library_Details_SelectIcon" class="SelectBindingIconHeaderGA">
 					<Button id="IconPreviewGA" class="IconPreviewGA" selectionpos="auto" onactivate="AddBindingIcon();">
-						<Image id="BindingIcon" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+						<Image id="BindingIconGA" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
 					</Button>
 				</Label>
 			</Label>
