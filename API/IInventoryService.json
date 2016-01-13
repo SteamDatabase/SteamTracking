@@ -1,0 +1,24 @@
+{
+    "name": "IInventoryService",
+    "methods": [
+        {
+            "name": "GetPriceSheet",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the Inventory Service price sheet",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "ecurrency",
+                    "type": "int32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}
