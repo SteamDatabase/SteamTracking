@@ -292,11 +292,11 @@ CreateBuyOrderDialog = {
 		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketItemName ), this.m_divContents.show() );
 		modal.always( function() { CreateBuyOrderDialog.OnUserClosedDialog() } );
 
-		$J('#market_buynow_dialog_error').hide();
+		$J('#market_buyorder_dialog_error').hide();
 
 		// show the payment frame
-		$J('#market_buynow_dialog_paymentinfo_frame_container').show();
-		$J('#market_buynow_dialog_placing_order').hide();
+		$J('#market_buyorder_dialog_paymentinfo_frame_container').show();
+		$J('#market_buyorder_dialog_placing_order').hide();
 		$J('#market_buy_commodity_view_in_inventory').hide();
 
 		$J('#market_buy_commodity_input_price').prop( 'disabled', false);
@@ -305,23 +305,22 @@ CreateBuyOrderDialog = {
 		// set our callbacks
 		$J('#market_buy_commodity_input_price').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
 		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
-		$J('#market_buynow_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
-		$J('#market_buynow_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
+		$J('#market_buyorder_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
+		$J('#market_buyorder_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
 		$J('#market_buy_commodity_input_price').blur( function() {
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 			$('market_buy_commodity_input_price').setValue( v_currencyformat( currency, sWalletCurrencyCode ) );
 		});
 
-
 		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 		if ( window.g_rgWalletInfo )
 		{
-			$('market_buynow_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
+			$('market_buyorder_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
 		}
 		else
 		{
-			$('market_buynow_dialog_walletbalance_amount').update( 'no funds' );
+			$('market_buyorder_dialog_walletbalance_amount').update( 'no funds' );
 		}
 
 		// set our default price
@@ -344,32 +343,33 @@ CreateBuyOrderDialog = {
 		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] < price )
 		{
 			// show add funds
-			$J('#market_buynow_dialog_purchase').hide();
-			$J('#market_buynow_dialog_addfunds').show();
-			$J('#market_buynow_dialog_accept_ssa_container').hide();
+			console.log(g_rgWalletInfo['wallet_balance']);
+			$J('#market_buyorder_dialog_purchase').hide();
+			$J('#market_buyorder_dialog_addfunds').show();
+			$J('#market_buyorder_dialog_accept_ssa_container').hide();
 		}
 		else
 		{
 			// show buy button
-			$J('#market_buynow_dialog_addfunds').hide();
-			$J('#market_buynow_dialog_purchase').show();
-			$J('#market_buynow_dialog_accept_ssa_container').show();
+			$J('#market_buyorder_dialog_addfunds').hide();
+			$J('#market_buyorder_dialog_purchase').show();
+			$J('#market_buyorder_dialog_accept_ssa_container').show();
 		}
 	},
 
 	StartPurchase: function() {
-				if ( !$J('#market_buynow_dialog_accept_ssa').prop('checked') )
+				if ( !$J('#market_buyorder_dialog_accept_ssa').prop('checked') )
 		{
 			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 			return;
 		}
 
-		new Effect.BlindUp( 'market_buynow_dialog_paymentinfo_frame_container', { duration: 0.25 } );
-		new Effect.BlindDown( 'market_buynow_dialog_placing_order', { duration: 0.25 } );
+		new Effect.BlindUp( 'market_buyorder_dialog_paymentinfo_frame_container', { duration: 0.25 } );
+		new Effect.BlindDown( 'market_buyorder_dialog_placing_order', { duration: 0.25 } );
 
 		$J('#market_buy_commodity_input_price').prop( 'disabled', true);
 		$J('#market_buy_commodity_input_quantity').prop('disabled', true);
-		$J('#market_buynow_dialog_error').hide();
+		$J('#market_buyorder_dialog_error').hide();
 
 		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
 
@@ -406,7 +406,7 @@ CreateBuyOrderDialog = {
 	OnCreateBuyOrderComplete: function( transport ) {
 		if ( transport.responseJSON && transport.responseJSON.success == 1 )
 		{
-			$J('#market_buynow_dialog_purchase_throbber').show();
+			$J('#market_buyorder_dialog_purchase_throbber').show();
 			$J('#market_buy_commodity_status').html( 'Finding matching item listings at your desired price...' );
 
 			var buy_orderid = transport.responseJSON.buy_orderid;
@@ -502,13 +502,13 @@ CreateBuyOrderDialog = {
 	},
 
 	DisplayError: function( error ) {
-		$J('#market_buynow_dialog_purchase_throbber').hide();
-		$J('#market_buynow_dialog_error').show();
-		$J('#market_buynow_dialog_error_text').html( error );
-		$J('#market_buynow_dialog_error_text').css( 'color', '#ffffff' );
+		$J('#market_buyorder_dialog_purchase_throbber').hide();
+		$J('#market_buyorder_dialog_error').show();
+		$J('#market_buyorder_dialog_error_text').html( error );
+		$J('#market_buyorder_dialog_error_text').css( 'color', '#ffffff' );
 		// this doesn't work, need jquery-color plugin or a different solution
-		$J('#market_buynow_dialog_error_text').animate( {'color':'#ff0000'}, 250 );
-		$J('#market_buynow_dialog_placing_order').hide();
+		$J('#market_buyorder_dialog_error_text').animate( {'color':'#ff0000'}, 250 );
+		$J('#market_buyorder_dialog_placing_order').hide();
 	},
 
 	OnUserClosedDialog: function() {
@@ -1833,18 +1833,20 @@ function Market_LoadOrderSpread( item_nameid )
 
 			// update the jplot graph
 			// we do this infrequently, since it's really expensive, and makes the page feel sluggish
+			var $elOrdersHistogram = $J('#orders_histogram');
 			if ( Market_OrderSpreadPlotLastRefresh
-			&& Market_OrderSpreadPlotLastRefresh + (60*60*1000) < $J.now() )
+			&& Market_OrderSpreadPlotLastRefresh + (60*60*1000) < $J.now()
+			&& $elOrdersHistogram.length )
 			{
-				$J('#orders_histogram').html('');
+				$elOrdersHistogram.html('');
 				Market_OrderSpreadPlot = null;
 			}
 
-			if ( Market_OrderSpreadPlot == null )
+			if ( Market_OrderSpreadPlot == null && $elOrdersHistogram.length )
 			{
 				Market_OrderSpreadPlotLastRefresh = $J.now();
 
-				$J('#orders_histogram').show();
+				$elOrdersHistogram.show();
 				var line1 = data.sell_order_graph;
 				var line2 = data.buy_order_graph;
 				var numYAxisTicks = 11;

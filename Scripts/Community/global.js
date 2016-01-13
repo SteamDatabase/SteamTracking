@@ -401,25 +401,30 @@ function ShowAbuseDialog()
 
 function StandardCommunityBan( steamid, elemLink )
 {
-	ShowPromptDialog(
-		"Community Ban",
-		"This action will ban this user from the community for a month and delete all their comments. Please enter a reason:"
-	).done(	function( note ) {
-		if ( !note )
-			return;
+	$J.get( 'https://steamcommunity.com/actions/communitybandialog', { 'sessionID' : g_sessionID, 'steamID' : steamid } )
+	.done( function( data )
+	{
+		var $Content = $J(data);
+		var Modal = ShowConfirmDialog( "Community Ban & Delete Comments", $Content, 'Ban'
+		).done(	function( ) {
 
-		$J.post( 'https://steamcommunity.com/actions/StandardCommunityBan', {
-			'sessionID' : g_sessionID,
-			'steamid' : steamid,
-			'note' : note
-		}).done( function( data ) {
-			$J(elemLink).replaceWith( '<span style="color: red;">banned</span>' );
-		}).fail( function( jqxhr ) {
-			// jquery doesn't parse json on fail
-			var data = V_ParseJSON( jqxhr.responseText );
-			ShowAlertDialog( 'Community Ban', 'Failed to ban.  Message: ' + data.success );
-		});
-	} );
+			var $Form = $Content.find( 'form#community_ban_form' );
+
+			$J.post( 'https://steamcommunity.com/actions/StandardCommunityBan', $Form.serialize() )
+			.done( function( data ) {
+				$J(elemLink).replaceWith( '<span style="color: red;">Banned</span>' );
+			}).fail( function( jqxhr ) {
+				// jquery doesn't parse json on fail
+				var data = V_ParseJSON( jqxhr.responseText );
+				ShowAlertDialog( 'Community Ban & Delete Comments', 'Failed with error message: ' + data.success );
+			});
+		} );
+
+	}).fail( function( data )
+	{
+		ShowAlertDialog( 'Community Ban & Delete Comments', 'You do not have permissions to view this or you are not logged in.' );
+	});
+
 }
 
 

@@ -243,10 +243,9 @@ $J( function() {
 		GetValueFromLocalURL( 'steammobile://steamguard?op=conftag&arg1=details' + nConfirmationId, 5, function( httpParams )
 		{
 			$J.ajax( {
-				url: 'https://steamcommunity.com/mobileconf/details/' + nConfirmationId + '?test=1&' + httpParams,
+				url: 'https://steamcommunity.com/mobileconf/details/' + nConfirmationId + '?' + httpParams,
 				type: 'GET'
-				// data: httpParams // Not working for some versions of Android? Testing...
-			} ).done( function ( responseData ) {
+							} ).done( function ( responseData ) {
 				if ( responseData.success )
 				{
 					$elDetails.html( responseData.html );

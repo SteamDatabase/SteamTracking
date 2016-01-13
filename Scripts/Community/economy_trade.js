@@ -2184,11 +2184,7 @@ CurrencyDialog = {
 
 		if ( this.m_bIsWallet )
 		{
-			// strip the currency symbol, set commas to periods, set .-- to .00
-			strAmount = strAmount.replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00');
-
-			var flAmount = parseFloat( strAmount ) * 100;
-			nAmount = Math.round( isNaN(flAmount) ? 0 : flAmount );
+			nAmount = GetPriceValueAsInt( strAmount );
 		}
 		else
 		{
@@ -2450,30 +2446,15 @@ CurrencyConversionDialog = {
 	},
 
 	GetInputValueAsInt: function() {
-		var nAmount;
-		var strAmount = $('trade_currency_conversion_input_you').value;
-
-		if ( !strAmount )
-		{
-			return 0;
-		}
-
-		// strip the currency symbol, set commas to periods, set .-- to .00
-		strAmount = strAmount.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( ',', '.' ).replace( '.--', '.00');
-
-		var flAmount = parseFloat( strAmount ) * 100;
-		nAmount = Math.round( isNaN(flAmount) ? 0 : flAmount );
-
-		nAmount = Math.max( nAmount, 0 );
-		return nAmount;
+		return GetPriceValueAsInt( $('trade_currency_conversion_input_you').value );
 	},
 
 	OnAccept: function( event ) {
 
-		var inputValue = $('trade_currency_conversion_input_you').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( ',', '.' ).replace( '.--', '.00');
-		var theirInputValue = $('trade_currency_conversion_input_them').value.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
+		var inputValue = $('trade_currency_conversion_input_you').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( '.--', '.00');
+		var theirInputValue = $('trade_currency_conversion_input_them').value.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( '.--', '.00');
 		var theirInputValueAsFloat = parseFloat( theirInputValue ) * 100;
-		var theirInputValueAsInt = Math.max( Math.round( isNaN(theirInputValueAsFloat) ? 0 : theirInputValueAsFloat ), 0 );
+		var theirInputValueAsInt = GetPriceValueAsInt( $('trade_currency_conversion_input_them').value )
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
 			this.DisplayError( 'Please enter a valid amount above.' );
@@ -2556,9 +2537,7 @@ CurrencyConversionDialog = {
 
 		// Convert the other currency back to our currency.
 		var strAmount = $('trade_currency_conversion_input_them').value;
-		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
-
-		var nAmount = ConvertToOurCurrency( Math.floor( parseFloat( strAmount ) * 100 ) );
+		var nAmount = ConvertToOurCurrency( GetPriceValueAsInt( strAmount ) );
 		$('trade_currency_conversion_input_you').value = v_currencyformat( nAmount, this.m_currency.name.escapeHTML() );
 
 		this.m_bIgnoreConversion = true;

@@ -152,8 +152,9 @@ CVideoWatch.prototype.Start = function()
 		$J( '.dash_player_playback_stats' ).addClass( 'tenfoot' );
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
-	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
+	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDownloadFailed( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerPlaybackError( description ); } );
+	$J( this.m_elVideoPlayer ).on( 'mediaelementerror.VideoWatchEvents', function( event, nCode ) { _watch.OnPlayerMediaElementError( nCode ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMDownloadError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerHDCPError( description ); } );
@@ -184,7 +185,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	this.OnLogEventToServer( 'Video Player UI', strLogUI );
 }
 
-CVideoWatch.prototype.OnPlayerDownloadFailed = function()
+CVideoWatch.prototype.OnPlayerDownloadFailed = function( description )
 {
 	this.m_nVideoRestarts++;
 	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
@@ -194,13 +195,13 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 		else
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
-		this.OnLogEventToServer( 'Download Failed', '' );
+		this.OnLogEventToServer( 'Download Failed', description );
 	}
 	else
 	{
 		var _watch = this;
 		this.ShowVideoError( 'Reestablishing Stream...' );
-		this.OnLogEventToServer( 'Reconnection', '' );
+		this.OnLogEventToServer( 'Reconnection', description );
 		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 		this.GetVideoDetails();
 	}
@@ -214,6 +215,31 @@ CVideoWatch.prototype.OnPlayerPlaybackError = function( description )
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
 	this.OnLogEventToServer( 'Playback Error', description );
+}
+
+CVideoWatch.prototype.OnPlayerMediaElementError = function( nCode )
+{
+	if ( nCode == MediaError.MEDIA_ERR_DECODE || nCode == MediaError.MEDIA_ERR_NETWORK )
+	{
+		if ( nCode == MediaError.MEDIA_ERR_DECODE )
+			strError = 'Decode Error';
+		else if ( nCode == MediaError.MEDIA_ERR_NETWORK )
+			strError = 'Network Error';
+
+		this.OnPlayerDownloadFailed( strError );
+	}
+	else
+	{
+		var strError = 'Unknown';
+		if ( nCode == MediaError.MEDIA_ERR_ABORTED )
+			strError = 'Aborted';
+		else if ( nCode == MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED )
+			strError = 'Source Not Supported';
+		else
+			strError = nCode;
+
+		this.OnPlayerPlaybackError( "OnVideoError: " + strError );
+	}
 }
 
 CVideoWatch.prototype.OnPlayerDRMError = function( description )

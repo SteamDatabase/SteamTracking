@@ -732,6 +732,9 @@ a.item_market_action_button_disabled {
 .market_page_fullwidth .market_large_tab_well .market_section_header_cap, .market_page_fullwidth .market_section_header .market_section_header_cap {
 	display: none;
 }
+.market_page_fullwidth .market_large_tab_well, .market_page_fullwidth .market_section_header {
+	margin-right: 0;
+}
 
 .market_section_title {
 	color: white;
@@ -1197,11 +1200,19 @@ input.filter_search_box:focus {
 
 .market_commodity_orders_header_promote {
     color: whitesmoke;
-    margin: 0 2px 0 2px;
+    margin: 0 2px;
+}
+
+#listings .market_commodity_orders_header_promote {
+	margin: 0;
 }
 
 .market_commodity_orders_table_container {
 	border-top: 1px solid #303030;
+}
+
+#listings .market_commodity_orders_table_container {
+	border-top: none;
 }
 
 .market_commodity_orders_table {
@@ -1329,7 +1340,7 @@ input.filter_search_box:focus {
 	color: whitesmoke;
 }
 
-#market_buynow_dialog_placing_order {
+#market_buynow_dialog_placing_order, #market_buyorder_dialog_placing_order {
 	min-height: 100px;
 }
 
@@ -1444,11 +1455,12 @@ input.filter_search_box:focus {
 	margin: 12px 0;
 }
 
-#market_buynow_dialog .market_listing_action_buttons {
+#market_buynow_dialog .market_listing_action_buttons,
+#market_buyorder_dialog .market_listing_action_buttons {
 	display: none;
 }
 
-#market_buynow_dialog_paymentinfo {
+#market_buynow_dialog_paymentinfo, #market_buyorder_dialog_paymentinfo {
 	position: relative;
 	padding: 18px 4%;
 }
@@ -1467,40 +1479,41 @@ input.filter_search_box:focus {
 	overflow: hidden;
 }
 
-#market_buynow_dialog_paymentinfo_option_labels {
+#market_buynow_dialog_paymentinfo_option_labels, #market_buyorder_dialog_paymentinfo_option_labels {
 	float: left;
 	margin-right: 32px;
 	color: #B0AEAC;
 }
 
-#market_buynow_dialog_paymentmethod {
+#market_buynow_dialog_paymentmethod, #market_buyorder_dialog_paymentmethod {
 	color: #66CC00;}
 
-#market_buynow_dialog_walletbalance {
+#market_buynow_dialog_walletbalance, #market_buyorder_dialog_walletbalance {
 	color: #939393;
 }
 
-#market_buynow_dialog_myaccountname {
+#market_buynow_dialog_myaccountname, #market_buyorder_dialog_myaccountname {
 	color: white;
 }
 
-#market_buynow_dialog_accept_ssa {
+#market_buynow_dialog_accept_ssa, #market_buyorder_dialog_accept_ssa {
 	margin-left: 0;
 }
 
-#market_buynow_dialog_accept_ssa_label {
+#market_buynow_dialog_accept_ssa_label, #market_buyorder_dialog_accept_ssa_label {
 	font-size: 85.7%;
 	color: #B0AEAC;
 }
 
-#market_buynow_dialog_purchase, #market_buynow_dialog_addfunds, #market_buynow_dialog_purchase_throbber {
+#market_buynow_dialog_purchase, #market_buynow_dialog_addfunds, #market_buynow_dialog_purchase_throbber,
+#market_buyorder_dialog_purchase, #market_buyorder_dialog_addfunds, #market_buyorder_dialog_purchase_throbber {
 	float: right;
 	margin-left: 15px;
 	bottom: 18px;
 	right: 18px;
 }
 
-#market_buynow_dialog_purchase_throbber {
+#market_buynow_dialog_purchase_throbber, #market_buyorder_dialog_purchase_throbber {
 	text-align: center;
 }
 
@@ -1587,6 +1600,42 @@ input.filter_search_box:focus {
 	position: absolute;
 	bottom: 0.87em;
 	right: 2px;
+}
+
+#market_buyorder_info {
+	padding: 10px;
+	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif
+}
+
+#market_buyorder_info #market_commodity_buyrequests {
+	font-size: 18px;
+	margin: 5px 0;
+}
+
+#market_buyorder_info_show_details > span {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#market_buyorder_info_details {
+	margin-top: 15px;
+}
+
+#market_buyorder_info_details > div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#market_buyorder_info_details_tablecontainer {
+	background-color: #202020;
+	width: 240px;
+}
+
+#market_buyorder_info_details_explanation {
+	margin-left: 15px;
+	white-space: normal;
+	max-width: calc(100% - 255px);
 }
 
 .market_search_box_container .game_button {
@@ -1943,6 +1992,7 @@ input.filter_search_box:focus {
 	}
 
 	html.responsive #market_buynow_dialog_accept_ssa_container,
+	html.responsive #market_buyorder_dialog_accept_ssa_container
 	html.responsive .market_purchase_restrictions {
 		clear: right;	/* otherwise ugly collisions with the "PURCHASE" button */
 	}
@@ -2102,7 +2152,7 @@ input.filter_search_box:focus {
 @media screen and (max-width: 400px)
 {
 	html.responsive #market_buynow_dialog_item .market_listing_price_listings_block,
-	html.responsive #market_buynow_dialog_item .market_listing_table_header {
+	html.responsive #market_buynow_dialog_item .market_listing_table_header,
 		display: none;
 	}
 

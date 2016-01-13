@@ -864,7 +864,7 @@ CDASHPlayer.prototype.OnVideoError = function( e )
 		strError = nCode;
 	
 	console.log( 'Video player error: ' + strError );
-	this.CloseWithError( 'playbackerror',  'OnVideoError: ' + strError );
+	this.CloseWithError( 'mediaelementerror', nCode );
 }
 
 CDASHPlayer.prototype.OnTimeUpdate = function()
@@ -904,7 +904,7 @@ CDASHPlayer.prototype.OnSegmentDownloadFailed = function()
 {
 		this.StopDownloads();
 
-	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed' );
+	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed', 'Timeout' );
 }
 
 CDASHPlayer.prototype.BIsBuffering = function()
@@ -6542,6 +6542,10 @@ CVTTCaptionLoader.LanguageCountryCodes = {
     "fr-FR":{
         "displayName":"French",
         "steamLanguage":"french"
+    },
+    "fr-CA":{
+        "displayName":"French-Canada",
+        "steamLanguage":"french_canada"
     },
     "de-DE":{
         "displayName":"German",

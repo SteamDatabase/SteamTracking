@@ -3352,6 +3352,9 @@ SellItemDialog = {
 			return;
 		}
 
+		$('market_sell_currency_input').value = v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) )
+		this.OnInputKeyUp( null );
+
 		this.RecalculateTotal( price, quantity );
 		$( 'market_sell_quantity_input' ).value = quantity;
 
@@ -3379,9 +3382,6 @@ SellItemDialog = {
 
 		// validation succeeded
 		this.m_bWaitingForUserToConfirm = true;
-		
-		$('market_sell_currency_input').value = v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) )
-		this.OnInputKeyUp( null );
 
 		$('market_sell_quantity_input').style.borderColor = '';
 		$('market_sell_currency_input').style.borderColor = '';

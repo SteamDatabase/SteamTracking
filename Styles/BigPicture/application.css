@@ -212,12 +212,18 @@
 	background-image: none;
 }
 
-.SlideshowContainer .ContentHomeButton
+.SlideshowContainer .ContentHomeButton,
+.SlideshowContainer .ContentMouseBackButton,
+.VR .SlideshowContainer .ContentHomeButton,
+.VR .SlideshowContainer .ContentMouseBackButton
 {
 	opacity: 0.0;
 }
 
-.CursorVisible .SlideshowContainer .ContentHomeButton
+.CursorVisible .SlideshowContainer .ContentHomeButton,
+.CursorVisible .SlideshowContainer .ContentMouseBackButton,
+.VR .CursorVisible .SlideshowContainer .ContentHomeButton,
+.VR .CursorVisible .SlideshowContainer .ContentMouseBackButton
 {
 	opacity: 1.0;
 }
