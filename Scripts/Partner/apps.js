@@ -1154,14 +1154,14 @@ function EditAchievement( appid, achievement )
 		// insert some descriptive text and a select
 		nameCell.appendChild( document.createElement( 'br' ) );
 		textSpan = document.createElement( "span" );
-		textSpan.innerHTML = "Progress stat ";
+		textSpan.innerHTML = "Progress Stat" + ' ';
 		nameCell.appendChild( textSpan );
 		
 		var progressSelect = document.createElement( "select" );
 		progressSelect.onchange = DirtyRowClosure( row );
 		progressSelect.id = id + "_progress";
 		var noProgressOption = document.createElement( "option" );
-		noProgressOption.text = "[Loading]";
+		noProgressOption.text = "["+"Loading"+"]";
 		noProgressOption.value = "-1";
 		AddOptionToSelect( progressSelect, noProgressOption );
 		progressSelect.selectedIndex = 0;
@@ -1177,11 +1177,11 @@ function EditAchievement( appid, achievement )
 		
 		var theInput;
 		nameCell.insert( new Element( 'br' ) );
-		nameCell.insert( { 'bottom' : 'Min value: ' } );
+		nameCell.insert( { 'bottom' : "Min value:" + ' ' } );
 		theInput = new Element( 'input', { 'size' : '10', 'value' : minVal, 'id' : id + '_minval' } );
 		theInput.onchange = DirtyRowClosure( row );
 		nameCell.insert( theInput );
-		nameCell.insert( { 'bottom' : 'Max: ' } );
+		nameCell.insert( { 'bottom' : "Max:"+' ' } );
 		theInput = new Element( 'input', { 'size' : '10', 'value' : maxVal, 'id' : id + '_maxval' } );
 		nameCell.insert( theInput );
 
@@ -1485,7 +1485,7 @@ function SetAchievementsDiv( appid, achievements )
 		elt = new Element( 'div', { 'style': 'float: left; width: 4em; height: 1em' } );
 		if ( achievement[ "hidden" ] != 0 )
 		{
-			elt.update( "<b>Yes</b>" );
+			elt.update( "<b>"+"Yes"+"</b>" );
 		}
 		eltRow.insert( elt );
 
@@ -1647,7 +1647,7 @@ function SetStat( appid, destRow, stat )
 	btnCell.append( theSpan );
 
 	var btn2 = document.createElement( "input" );
-	btn2.type = "submit";
+	btn2.type = "submit"
  	btn2.onclick = DeleteStatClosure( appid, stat[ "stat_id" ], stat[ "bit_id" ] );
 	btn2.value = "Delete";
 	btnCell.append( btn2 );

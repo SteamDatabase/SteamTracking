@@ -2073,3 +2073,11 @@ div#appAutoHeader_list
 .publishNowWarningOMG {
 	color: #ff7b00;
 }
+
+ul.actualUL li {
+	list-style-type: circle;
+	padding: 4px 0 4px 10px;
+}
+
+ul.actualUL {
+}
