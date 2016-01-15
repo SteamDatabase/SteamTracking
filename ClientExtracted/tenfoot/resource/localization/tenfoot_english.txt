@@ -657,6 +657,7 @@
 	"Settings_AudioInterface"		"Interface"
 	"Settings_DisplayResolution"	"Resolution"
 	"Settings_Web"					"Web Browser"
+	"Settings_Bluetooth"			"Bluetooth"
 
 	"Settings_Network_Wizard"		"Network Configuration"
 	"Settings_AuthorizeLocalDevice"	"Family Library Sharing"
@@ -5480,4 +5481,29 @@
 	"Overlay_ToggleControllerHUD" "Toggle Controller HUD"
 
 	"Steam_Browser_Disabled" "The Steam Browser is disabled.  Please consult the Steam support website for more information."
+
+    "SettingsBluetooth_Intro" "Searching for Bluetooth devices. Please make sure your device is discoverable."
+    "Settings_Bluetooth_Type" "Type"
+    "Settings_Bluetooth_Name" "Name"
+    "Settings_Bluetooth_Connection" "Status"
+    "Settings_BluetoothManagement_UnPair" "DELETE"
+    "Settings_BluetoothManagement_Connect" "CONNECT"
+    "Settings_Bluetooth_NoDevices" "No Bluetooth devices found"
+    "SettingsBluetoothManagement_Pairing_Title" "Connecting to {s:devicename}"
+    "SettingsBluetoothManagement_Pairing_Description" "Attempting to connect to {s:devicename}"
+    "SettingsBluetoothManagement_UnPairing_Title" "Unpair {s:devicename}"
+    "SettingsBluetoothManagement_UnPairing_Description" "Are you sure you want to disconnect from {s:devicename}? You will need to pair the device again if you want to use it."
+
+    "SettingsBluetoothDevice_Type_Phone" "Phone"
+    "SettingsBluetoothDevice_Type_Computer" "Computer"
+    "SettingsBluetoothDevice_Type_Headset" "Headset"
+    "SettingsBluetoothDevice_Type_Headphones" "Headphones"
+    "SettingsBluetoothDevice_Type_Speakers" "Speakers"
+    "SettingsBluetoothDevice_Type_OtherAudio" "Other Audio"
+    "SettingsBluetoothDevice_Type_Keyboard" "Keyboard"
+    "SettingsBluetoothDevice_Type_Mouse" "Mouse"
+    "SettingsBluetoothDevice_Type_Joystick" "Joystick"
+    "SettingsBluetoothDevice_Type_Gamepad" "Gamepad"
+    "SettingsBluetoothDevice_Type_Unknown" "Unknown"
+
 }

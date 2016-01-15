@@ -2311,7 +2311,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	margin-top: 20px;
 }
 
-.SettingsManageDevices_List, #AppList #SettingsDiskManagementTable
+.SettingsManageDevices_List, #AppList #SettingsDiskManagementTable, #SettingsBluetoothDeviceTable
 {
 	height: 500px;
 	width: 1200px;
@@ -2327,7 +2327,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	margin-top: 20px;
 }
 
-.SettingsManageDevices_ColumnName, .SettingsDiskSpaceManagement_ColumnName
+.SettingsManageDevices_ColumnName, .SettingsDiskSpaceManagement_ColumnName, .SettingsBluetooth_ColumnName
 {
 
 	font-size: 24px;
@@ -2445,7 +2445,7 @@ color: black;
 	color: #abb4b9;
 }
 
-#SettingsRemoteClientTable, #SettingsDiskManagementTable
+#SettingsRemoteClientTable, #SettingsDiskManagementTable, #SettingsBluetoothDeviceTable
 {
 	flow-children: down;
 	width: 1025px;
@@ -2479,12 +2479,7 @@ color: black;
     height: fill-parent-flow( 1.0 );
 }
 
-#SettingsDiskManagementTable
-{
-	height: 500px;	
-}
-
-#SettingsDiskManagementTable
+#SettingsDiskManagementTable, #SettingsBluetoothDeviceTable
 {
 	height: 500px;	
 }
@@ -2560,7 +2555,7 @@ color: black;
 	width: 776px;
 }
 
-.SettingsRemoteClientsHeader, .SettingsDiskSpaceManagementHeader
+.SettingsRemoteClientsHeader, .SettingsDiskSpaceManagementHeader, .SettingsBluetoothHeader
 {
 	margin: -12px 0px 0px 0px;
 	padding-bottom: 6px;
@@ -2569,7 +2564,7 @@ color: black;
 	width: 1025px;
 }
 
-#SettingsRemoteClientList, #AppList #SettingsDiskManagementTable
+#SettingsRemoteClientList, #AppList #SettingsDiskManagementTable, #DeviceList #SettingsBluetoothDeviceTable
 {
 	height: fill-parent-flow( 1.0 );
 	width: 100%;
@@ -2626,14 +2621,14 @@ SettingsPanelRemoteClientListing
 }
 
 
-SettingsPanelDiskManagementAppListing Button
+SettingsPanelDiskManagementAppListing Button, SettingsPanelBluetoothDeviceListing Button,
 {
 	width: 100%;
 	flow-children: right;
 	background-color: transparent;
 	width: fit-children;
 
-	padding: 10px 0px 0px 10px;
+	padding: 10px 10px 0px 10px;
 
 	margin-right: 16px;
 	margin-left: 8px;
@@ -2650,7 +2645,7 @@ SettingsPanel_RemoteClients.Loading SettingsPanelRemoteClientListing
 }
 
 
-SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Button:focus
+SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Button:focus, SettingsPanelBluetoothDeviceListing Button:focus
 {
 	transition-duration: 0.25s !immediate;
 
@@ -2669,7 +2664,7 @@ SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Bu
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 
-SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementAppListing Button:descendantfocus
+SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementAppListing Button:descendantfocus, SettingsPanelBluetoothDeviceListing Button:descendantfocus
 
 {
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
@@ -2681,7 +2676,7 @@ SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementApp
 	animation-direction: normal;
 }
 
-SettingsPanelDiskManagementAppListing Button Label
+SettingsPanelDiskManagementAppListing Button Label, SettingsPanelBluetoothDeviceListing Button Label
 {
 	transform: translateX( 0px );
 	transition-property: transform;
@@ -2690,7 +2685,7 @@ SettingsPanelDiskManagementAppListing Button Label
 
 }
 
-SettingsPanelDiskManagementAppListing Button:descendantfocus Label
+SettingsPanelDiskManagementAppListing Button:descendantfocus Label, SettingsPanelBluetoothDeviceListing Button:descendantfocus Label
 {
 	transform: translateX( 7px );
 
@@ -3617,12 +3612,14 @@ SettingsPanelDiskManagementAppListing.Deleting Button
 	wash-color: #ffffffaa;
 }
 
-SettingsPanelDiskManagementAppListing.EmptyEntry
+SettingsPanelDiskManagementAppListing.EmptyEntry, 
+#BluetoothNotFound
 {
 	visibility: collapse;
 }
 
-.Empty SettingsPanelDiskManagementAppListing.EmptyEntry
+.Empty SettingsPanelDiskManagementAppListing.EmptyEntry, 
+.Empty #BluetoothNotFound
 {
 	visibility: visible;
 }
@@ -3852,4 +3849,27 @@ SettingsPanel_ControllerConfigs .SettingsContent
 .SteamControllerConnected .OnlyVisibleWithSteamControllersConnected
 {
 	visibility: visible;
+}
+
+.SettingsBluetooth_ColLeft
+{
+	width: 150px;
+}
+
+.SettingsBluetooth_ColMiddle
+{
+	width: fill-parent-flow(1.0);
+	horizontal-align: right;
+}
+
+
+.SettingsBluetooth_ColRight
+{
+	horizontal-align: right;
+	text-align: right;
+}
+
+#BluetoothNotFound Label
+{
+    margin-left: 10px;
 }

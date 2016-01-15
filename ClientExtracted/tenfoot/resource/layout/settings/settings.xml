@@ -101,6 +101,9 @@
 				<Button id="NetworkSettingsButton" class="Button" onactivate="ShowSettings( Network );">
 					<Label class="LongDesc" text="#Settings_Network" />
 				</Button>
+        <Button id="BluetoothSettingsButton" class="Button" onactivate="ShowSettings( Bluetooth );">
+          <Label class="LongDesc" text="#Settings_Bluetooth" />
+        </Button>
         <Button id="AboutSettingsButton" class="Button" onactivate="ShowSettings( About );">          <!-- system -->
 					<Label class="LongDesc" text="#Settings_About" />
 				</Button>
