@@ -73975,6 +73975,8 @@
 							"engineer"		"models/workshop/player/items/all_class/dec15_a_well_wrapped_hat/dec15_a_well_wrapped_hat_engineer.mdl"
 						}
 						"name"		"#TF_dec15_a_well_wrapped_hat_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 					"1"
 					{
@@ -73991,6 +73993,8 @@
 							"engineer"		"models/workshop/player/items/all_class/dec15_a_well_wrapped_hat_style2/dec15_a_well_wrapped_hat_style2_engineer.mdl"
 						}
 						"name"		"#TF_dec15_a_well_wrapped_hat_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 				}
 			}
