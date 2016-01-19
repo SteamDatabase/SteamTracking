@@ -1325,7 +1325,11 @@ HardwareRMA = {
 	CreateReturn: function( refund_to_wallet ) {
 		if ( this.m_bDoingAjax )
 			return;
+
 		this.m_bDoingAjax = true;
+
+		var explanation = $J('#refund_text_input').val();
+		explanation = explanation.substring(0,4000);	// don't send up too many characters
 
 		$J.ajax({
 				type: "POST",
@@ -1336,6 +1340,7 @@ HardwareRMA = {
 					packageid: this.m_nRefundPackageID,
 					transid: (this.m_nRefundTransID + '_' + this.m_nRefundLineItemID),
 					serial_number: this.m_sSerialNumber,
+					issue_text: explanation,
 					wallet: refund_to_wallet
 					} )
 			}).fail( function() {
@@ -1466,6 +1471,9 @@ HardwareRMA = {
 			return;
 		this.m_bDoingAjax = true;
 
+		var explanation = $J('#refund_text_input').val();
+		explanation = explanation.substring(0,4000);	// don't send up too many characters
+		
 		$J.ajax({
 				type: "POST",
 				url: "https://help.steampowered.com/wizard/AjaxHardwareCreateReplacementRMA",
@@ -1474,6 +1482,8 @@ HardwareRMA = {
 					appid: this.m_nRefundAppID,
 					packageid: this.m_nRefundPackageID,
 					transid: (this.m_nRefundTransID + '_' + this.m_nRefundLineItemID),
+					issue_text: explanation,
+					help_issue: $J('#refund_reason_selector').val(),
 					serial_number: this.m_sSerialNumber,
 					ShippingFirstName: $J('#shipping_first_name') ? $J('#shipping_first_name').val() : '',
 					ShippingLastName: $J('#shipping_last_name').val(),

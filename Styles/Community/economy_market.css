@@ -1020,6 +1020,27 @@ input.filter_search_box:focus {
 	margin-right: 10px;
 }
 
+.market_confirmation_opt_out_removed
+{
+	max-width: 929px;
+	margin: 0 auto;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#183557), color-stop(95%,#1f6a89));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#183557', endColorstr='#1f6a89',GradientType=1 );background: -moz-linear-gradient( left, #183557 5%,#1f6a89 95%);background: -webkit-linear-gradient( left, #183557 5%,#1f6a89 95%);background: -o-linear-gradient( left, #183557 5%,#1f6a89 95%);background: -ms-linear-gradient( left, #183557 5%,#1f6a89 95%);background: linear-gradient( to right, #183557 5%,#1f6a89 95%);	padding: 10px;
+	color: #ffffff;
+	margin-top: 10px;
+}
+.market_confirmation_opt_out_removedemail {
+	color: #67c1f5;
+}
+.market_confirmation_opt_out_removed_image {
+	float: left;
+	padding-right: 20px;
+	height: 40px;
+	margin-top: 5px;
+}
+.market_confirmation_opt_out_removed a {
+	text-decoration: underline;
+}
+
 .market_sale_msg
 {
 	position: relative;

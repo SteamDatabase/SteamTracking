@@ -661,6 +661,9 @@ GStoreItemData = {
 		if ( rgAppData.video && ApplicableSettings.video && !Settings.video )
 			return false;
 
+		if ( !rgAppData.localized && ApplicableSettings.localized && Settings.localized )
+			return false;
+
 		return true;
 	},
 

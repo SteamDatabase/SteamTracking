@@ -1292,54 +1292,6 @@ function addClass( elID, cName )
 	}
 }
 
-$J(function() {
-	$J('#tradeConfirmationSetting_disabled').click(function()
-	{
-		if ( !g_bTradeConfirmationDisabled )
-		{
-			ShowConfirmDialog( 'Really disable confirmation of trades?',
-					'If you disable trade confirmation emails, Steam Support will not provide you with any assistance in recovering items that were stolen from your account, for any reason. You will have to confirm this action by responding to an email that we send you.',
-					'Yes. I agree that Steam Support will be unable to recover stolen items.',
-					'Leave trade confirmation emails enabled.'
-			).done(
-					function ()
-					{
-						$J( '#editForm' ).submit();
-					}
-			).fail(
-					function ()
-					{
-						$J( '#tradeConfirmationSetting_disabled' ).prop( 'checked', false );
-						$J( '#tradeConfirmationSetting_enabled' ).prop( 'checked', true );
-					}
-			);
-		}
-	} );
-
-	$J('#marketConfirmationSetting_disabled').click(function()
-	{
-		if ( !g_bMarketConfirmationDisabled )
-		{
-			ShowConfirmDialog( 'Really disable confirmation of Market transactions?',
-					'If you disable Market confirmation emails, Steam Support will not provide you with any assistance in recovering items that were stolen from your account, for any reason. You will have to confirm this action by responding to an email that we send you.',
-					'Yes. I agree that Steam Support will be unable to recover stolen items.',
-					'Leave Market confirmation emails enabled.'
-			).done(
-					function ()
-					{
-						$J( '#editForm' ).submit();
-					}
-			).fail(
-					function ()
-					{
-						$J( '#marketConfirmationSetting_disabled' ).prop( 'checked', false );
-						$J( '#marketConfirmationSetting_enabled' ).prop( 'checked', true );
-					}
-			);
-		}
-	} );
-} );
-
 function UnlinkFacebook()
 {
 	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/' );
