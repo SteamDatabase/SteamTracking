@@ -3376,6 +3376,7 @@
  T DebugStatsSystem
  T DefaultSpewFunc(SpewType_t, char const*)
  T Deserialize(CUtlBuffer&, char const**)
+ T Deserialize(CUtlBuffer&, void*, int)
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DoNewAssertDialog
  T ECDH_OpenSSL
