@@ -714,6 +714,8 @@ CHomeSettings.prototype.DisplayPopup = function( $Btn )
 		this.m_$Popup.append( this.RenderCheckbox( 'dlc', 'Downloadable Content' ) );
 	if ( this.m_ApplicableSettings.video )
 		this.m_$Popup.append( this.RenderCheckbox( 'video', 'Videos' ) );
+	if ( this.m_ApplicableSettings.localized )
+		this.m_$Popup.append( this.RenderCheckbox( 'localized', 'Games in my language' ) );
 
 	if ( this.m_ApplicableSettings.only_current_platform )
 	{
