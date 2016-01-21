@@ -2543,17 +2543,39 @@
 						"type"		"OR"
 						"0"
 						{
-							"type"		"scorer"
-							"player_key"		"attacker"
-							"get_player"		"by_id"
-							"scorer_key"		"inflictor_entindex"
+							"type"		"AND"
+							"0"
+							{
+								"type"		"scorer"
+								"player_key"		"attacker"
+								"get_player"		"by_id"
+								"scorer_key"		"inflictor_entindex"
+							}
+							"1"
+							{
+								"type"		"player_class"
+								"player_key"		"attacker"
+								"get_player"		"by_id"
+								"value"		"engineer"
+							}
 						}
 						"1"
 						{
-							"type"		"scorer"
-							"player_key"		"assister"
-							"get_player"		"by_id"
-							"scorer_key"		"inflictor_entindex"
+							"type"		"AND"
+							"0"
+							{
+								"type"		"scorer"
+								"player_key"		"assister"
+								"get_player"		"by_id"
+								"scorer_key"		"inflictor_entindex"
+							}
+							"1"
+							{
+								"type"		"player_class"
+								"player_key"		"assister"
+								"get_player"		"by_id"
+								"value"		"engineer"
+							}
 						}
 					}
 					"1"
@@ -10750,22 +10772,6 @@
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_flamethrower/c_flamethrower.mdl"
 			"attach_to_hands"	"1"
-			"visuals"
-			{
-				"attached_models"
-				{
-					"0"
-					{
-						"model_display_flags"	"1"
-						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
-					}
-					"1"
-					{
-						"model_display_flags"	"2"
-						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
-					}
-				}
-			}
 			"attributes"
 			{
 				"extinguish restores health"
@@ -14756,6 +14762,19 @@
 						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
 					}
 				}
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 		}
 		"paintkit_weapon_grenadelauncher"
@@ -15667,6 +15686,22 @@
 				{
 					"attribute_class"	"extinguish_restores_health"
 					"value" "20"
+				}
+			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
 				}
 			}
 		}
@@ -22054,6 +22089,19 @@
 			"armory_desc"	"stockitem"
 			"visuals"
 			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 				"styles"
 				{
 					"0"
@@ -42410,6 +42458,20 @@
 				"sound_special1"		"Weapon_Rainblower.FireLoop"			
 				"sound_special2"		"Weapon_Rainblower.PilotLoop"			
 				"sound_special3"		"Weapon_Rainblower.WindDown"			
+
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_mtp_pickup.wav"
 			"drop_sound"			"ui/item_mtp_drop.wav"
@@ -44352,6 +44414,22 @@
 					"value"	"1"
 				}
 			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
+			}
 			"xifier_class_remap"	"flamethrower"
 		}
 		"799"
@@ -44608,6 +44686,22 @@
 			"visuals_blu"
 			{
 				"skin"	"3"
+			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -46565,6 +46659,22 @@
 			{
 				"skin"	"5"
 			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
+			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -46845,6 +46955,22 @@
 			"visuals_blu"
 			{
 				"skin"	"7"
+			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -47127,6 +47253,22 @@
 			{
 				"skin"	"3"
 			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
+			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -47358,6 +47500,22 @@
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
 				}
 			}
 			"xifier_class_remap"	"flamethrower"
@@ -49104,6 +49262,22 @@
 					"value"	"1"
 				}
 			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
+			}
 			"xifier_class_remap"	"flamethrower"
 		}
 		"964"
@@ -49360,6 +49534,22 @@
 			"visuals_blu"
 			{
 				"skin"	"3"
+			}
+			"visuals"
+			{
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -64978,15 +65168,34 @@
 			"item_description"		"#TF_xms2013_soviet_stache_Desc"
 			"equip_region"		"beard"
 			"propername"		"1"
-			"image_inventory"		"backpack/workshop/player/items/heavy/xms2013_soviet_stache/xms2013_soviet_stache"
+			"image_inventory"		"backpack/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/heavy/xms2013_soviet_stache/xms2013_soviet_stache.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
 				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30307"
@@ -99161,6 +99370,7 @@
 			"attributes"
 			{
 			}
+			"event_desc_footer"	""
 		}
 		"5790" 
 		{
@@ -99180,6 +99390,7 @@
 			"attributes"
 			{
 			}
+			"event_desc_footer"	""
 		}
 		
 		"5791"
@@ -100141,8 +100352,9 @@
 		{
 			"name"	"Winter 2015 Mystery Box"
 			"first_sale_date"	"2015/12/14"
-			"item_class"	"tf_wearable"
 			"prefab"		"randomgiftself"
+			"item_class"	"tool"
+			"item_slot"		""	
 			"tool"
 			{
 				"usage"
