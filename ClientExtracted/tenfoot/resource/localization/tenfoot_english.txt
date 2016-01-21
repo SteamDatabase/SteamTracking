@@ -2042,6 +2042,10 @@
 	"Library_Details_FieldLabel_AbsMouseGyroLeft"	"Gyro Lean Left Binding"
 	"Library_Details_FieldLabel_TouchBinding"		"Touch Binding"
 	"Library_Details_FieldLabel_LeanSensitivity"	"Gyro Lean Point"
+	"Library_Details_FieldLabel_TestHapticSide"		"Test Haptic Side"
+	"Library_Details_FieldLabel_TestHapticRepeat"	"Test Haptic Repeat Count"
+	"Library_Details_FieldLabel_TestHapticOn"		"Test Haptic On Duration"
+	"Library_Details_FieldLabel_TestHapticOff"		"Test Haptic Off Duration"
 
 	"Library_Details_FieldLabel_MouseRegion_Scale"	"Region Size"
 	"Library_Details_FieldLabel_MouseRegion_PositionX"	"Horizontal Position"
@@ -2098,6 +2102,9 @@
 	"Library_Controller_Property_Value_TriggerOff"		"Analog Off"
 	"Library_Controller_Property_Value_TriggerLeft"		"Left Trigger"
 	"Library_Controller_Property_Value_TriggerRight"	"Right Trigger"
+	"Library_Controller_Property_Value_PadBoth"			"Both Pads"
+	"Library_Controller_Property_Value_PadLeft"			"Left Pad"
+	"Library_Controller_Property_Value_PadRight"		"Right Pad"
 	"Library_Controller_Property_Value_Linear"			"Linear"
 	"Library_Controller_Property_Value_Curve_1"			"Aggressive"
 	"Library_Controller_Property_Value_Curve_2"			"Relaxed"
@@ -2426,7 +2433,6 @@
 	"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... {d:progress}%"
 
 	"Notification_GameInviteBody"		"invites you to play {s:gamename}"
-	"Notification_GameInviteBodyVR"		"invites you to play a game"
 	"Notification_TheSteamCommunity"	"The Steam Community"
 	"Notification_AccessWhilePlaying"	"Access while playing"
 	"Notification_HasFinishedDownload"	"Download complete"

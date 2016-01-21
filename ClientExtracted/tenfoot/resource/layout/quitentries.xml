@@ -63,7 +63,7 @@
 
 
 			<Panel class="HorizontalSpace NotLoggedInHidden" />
-			<Button id="QuitRestart" class="SystemButton System SystemCanRestart Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine(true) );" selectionpos="0,12">
+			<Button id="QuitRestart" class="SystemButton System SystemCanRestart Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine(false) );" selectionpos="0,12">
 				<Label text="#Quit_Restart" />
 			</Button>
 			<Button id="QuitSleep" class="SystemButton System SystemCanSuspend Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() );" selectionpos="0,13">

@@ -133,6 +133,7 @@
 		"settings"
 		{
 			"virtual_mode"		"1"
+			"friction"			"1"
 		}
 		"gameactions"
 		{
@@ -146,6 +147,7 @@
 		"settings"
 		{
 			"virtual_mode"		"1"
+			"sensitivity"		"200"
 		}
 		"gameactions"
 		{
@@ -159,6 +161,7 @@
 		"settings"
 		{
 			"virtual_mode"		"1"
+			"sensitivity"		"250"
 		}
 		"gameactions"
 		{
