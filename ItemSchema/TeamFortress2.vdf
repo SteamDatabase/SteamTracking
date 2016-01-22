@@ -93388,7 +93388,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Access_Participant"
 			"item_description"	"#TF_TournamentMedal_Season3"
-			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_participant"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_participant_new"
 			"model_player_per_class"
 			{
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
@@ -93484,7 +93484,7 @@
 			"prefab"			"tournament_medal"
 			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Principal_Participant"
 			"item_description"	"#TF_TournamentMedal_Season3"
-			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_participant"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_participant_new"
 			"model_player_per_class"
 			{
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
