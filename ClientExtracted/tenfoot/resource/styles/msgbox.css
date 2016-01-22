@@ -330,3 +330,8 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	width: 100%;
 }
+
+.GameLaunchWarningColor
+{
+	color: #808000ff;
+}

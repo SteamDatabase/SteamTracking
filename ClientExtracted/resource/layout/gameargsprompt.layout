@@ -1,0 +1,38 @@
+"resource/layout/gameargsprompt.layout"
+{
+	controls
+	{
+		GameArgs { controlname="Frame" title="#Steam_AllowGameLaunch_Title" style="GameArgsPromptDialog" wide=420 tall=220 }
+
+		WarningText { controlname="Label" labeltext="#Steam_AllowGameLaunch_Info" wrap=1 }
+		ArgumentsText { controlname="Label" labeltext="#Steam_AllowGameLaunch_Info_args" wrap=1 style="ArgumentsText" }
+		ConfirmText { controlname="Label" labeltext="#Steam_AllowGameLaunch_Info_Prompt" wrap=1 }
+
+		Cancel { controlname="Button" tabposition=1 labeltext="#QueryBox_Cancel" command="Cancel" }
+		OK { controlname="Button" tabposition=2 labeltext="#MessageBox_OK" command="OK" }
+	}
+	
+	styles
+	{
+		GameArgsPromptDialog
+		{
+			minimum-width = 420
+			minimum-height = 220
+		}
+		
+		ArgumentsText
+		{
+			textcolor = "128 128 0 255"
+		}
+
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=75 margin=10 margin-right=30  }
+
+		place { control="WarningText,ArgumentsText" width=max spacing=15 align=left y=40 margin=15 dir=down margin-bottom=75 }
+		place { control="ConfirmText" region="bottom" align=left width=max spacing=1 margin=5 margin-top=0 margin-bottom=20 }
+		place { control="OK,Cancel" region="bottom" align=right spacing=10 margin-top=30 }
+	}
+}

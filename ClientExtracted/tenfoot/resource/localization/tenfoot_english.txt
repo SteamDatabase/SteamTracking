@@ -3151,10 +3151,8 @@
 	"Settings_RemoteClients_Unsupported" "Connected"
 	"Settings_RemoteClients_Disconnected" "Not connected"
 
-
-
-	"Steam_AllowGameLaunch_Info"	"Allow {s:gamename} to launch with optional command line \"{s:arguments}\" ?\nIf you did not request this launch then select Cancel"
-	"Steam_AllowGameLaunch_Title"	"Allow game launch"
+	"Steam_AllowGameLaunch_Info"	"{s:gamename} is attempting to launch with the optional parameters  shown below.\n<br><br><span class=\"GameLaunchWarningColor\">\"{s:arguments}\"</span><br><br>If you did not request this launch or do not understand these options, select Cancel."
+	"Steam_AllowGameLaunch_Title"	"Allow game launch?"
 
 	"Steam_Parental_GameBlocked_Title"		"Family View"
 	"Steam_Parental_GameBlocked"			"This game is unavailable in Family View"
