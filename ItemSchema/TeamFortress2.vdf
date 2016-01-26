@@ -62157,6 +62157,10 @@
 			}
 			"visuals"
 			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
 				"styles"
 				{
 					"0"
