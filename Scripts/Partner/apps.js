@@ -3678,10 +3678,13 @@ function OnChangeControllerTemplate(appid)
 {
 	SetAppField( 'config', appid, 'steamcontrollertemplateindex', $('SteamControllerTemplate').value );
 
-	if( $('SteamControllerTemplate').value == 1 )
-		$J('#SteamControllerDefaultConfig').show();
-	else
-		$J('#SteamControllerDefaultConfig').hide();
+	for( var i=0; i<7; i++)
+	{
+		if( $('SteamControllerTemplate').value == i )
+			$J('#SteamControllerTemplate_' + i).show();
+		else
+			$J('#SteamControllerTemplate_' + i).hide();
+	}
 }
 
 function UpgradeGreenlightItem( item )

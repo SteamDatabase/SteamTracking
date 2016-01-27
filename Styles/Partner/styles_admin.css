@@ -2544,3 +2544,37 @@ html, body { height:100%; }
 	text-align: right;
 	color: #666666;
 }
+
+.partner_notes {
+	max-height: 200px;
+	overflow: auto;
+}
+.partner_notes.expanded {
+	max-height: none;
+}
+.partner_notes_container {
+	background-color: #333333;
+	margin-bottoM: 5px;
+}
+.partner_notes_header {
+	padding: 5px;
+	background-color: #1f1f1f;
+}
+.partner_notes_timestamp {
+	float: left;
+	font-size: 1.25em;
+	padding-right: 10px;
+}
+.partner_notes_type {
+	float: left;
+	padding-top: 4px;
+	float: left;
+	color: #d19f3e;
+}
+.partner_notes_user {
+	padding: 5px;
+}
+.partner_notes_text {
+	color: #aaaaaa;
+	padding: 5px;
+}
