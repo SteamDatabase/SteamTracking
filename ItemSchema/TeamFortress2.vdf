@@ -9728,7 +9728,6 @@
 					"Smokey Sombrero"					"10"
 					"Thrilling Tracksuit"				"10"
 					"Prehistoric Pullover"				"10"
-					"The Hellmet"						"10"
 					"B'aaarrgh-n-Britches"				"10"
 				}
 				"mythical"
@@ -16396,6 +16395,19 @@
 				"sound_single_shot"	"Weapon_BackBurner.FireStart"
 				"sound_special1"	"Weapon_BackBurner.FireLoop"
 				"sound_burst"	"Weapon_BackBurner.FireLoopCrit"
+				"attached_models"
+				{
+					"0"
+					{
+						"model_display_flags"	"1"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+					"1"
+					{
+						"model_display_flags"	"2"
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -18425,7 +18437,6 @@
 			"item_name"	"#TF_HonestyHalo"
 			"item_description"	"#TF_HonestyHalo_Desc"
 			"item_slot"	"head"
-			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -18450,7 +18461,22 @@
 			{
 				"player_bodygroups"
 				{
-					"hat"			"1"
+					"hat"			"0"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"name"	"#TF_HonestyHalo_Style0"
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+						}
+					}
+					"1"
+					{
+						"name"	"#TF_HonestyHalo_Style1"
+					}
 				}
 			}
 			"attributes"
@@ -42458,20 +42484,6 @@
 				"sound_special1"		"Weapon_Rainblower.FireLoop"			
 				"sound_special2"		"Weapon_Rainblower.PilotLoop"			
 				"sound_special3"		"Weapon_Rainblower.WindDown"			
-
-				"attached_models"
-				{
-					"0"
-					{
-						"model_display_flags"	"1"
-						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
-					}
-					"1"
-					{
-						"model_display_flags"	"2"
-						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_pilotlight.mdl"
-					}
-				}
 			}
 			"mouse_pressed_sound"	"ui/item_mtp_pickup.wav"
 			"drop_sound"			"ui/item_mtp_drop.wav"
@@ -43908,8 +43920,6 @@
 			"item_type_name"	"#TF_Wearable_Hat"
 			"item_name"	"#TF_PyroHazmat"
 			"item_description"	"#TF_PyroHazmat_Desc"
-			"image_inventory"	"backpack/player/items/pyro/pyro_hazmat_f"
-			"model_player"	"models/player/items/pyro/pyro_hazmat_f.mdl"
 			"propername"	"1"
 			"drop_type"	"none"
 			"capabilities"
@@ -43917,15 +43927,21 @@
 				"paintable"		"1"
 				"can_craft_count"	"1"
 			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/pyro_hazmat/pyro_hazmat"
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/pyro_hazmat/pyro_hazmat_sniper.mdl"
+				"pyro"		"models/workshop/player/items/all_class/pyro_hazmat/pyro_hazmat_pyro.mdl"
+			}
 			"used_by_classes"
 			{
-				"pyro"	"1"
+				"sniper"	"1"
+				"pyro" "1"
 			}
 			"visuals"
 			{
 				"player_bodygroups"
 				{
-					"hat"			"1"
 					"head"			"1"
 				}
 				"styles"
@@ -43934,28 +43950,44 @@
 					{
 						"skin_red"	"0"
 						"skin_blu"	"1"
-						"model_player"	"models/player/items/pyro/pyro_hazmat_f.mdl"
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/pyro_hazmat/pyro_hazmat_sniper.mdl"
+							"pyro"		"models/workshop/player/items/all_class/pyro_hazmat/pyro_hazmat_pyro.mdl"
+						}
 						"name"	"#TF_PyroHazmat_Style0"
 					}
 					"1"
 					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
-						"model_player"	"models/player/items/pyro/pyro_hazmat_f.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/pyro_hazmat_2/pyro_hazmat_2_sniper.mdl"
+							"pyro"		"models/workshop/player/items/all_class/pyro_hazmat_2/pyro_hazmat_2_pyro.mdl"
+						}
 						"name"	"#TF_PyroHazmat_Style1"
 					}
 					"2"
 					{
 						"skin_red"	"0"
 						"skin_blu"	"1"
-						"model_player"	"models/player/items/pyro/pyro_hazmat.mdl"
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/pyro_hazmat_3/pyro_hazmat_3_sniper.mdl"
+							"pyro"		"models/workshop/player/items/all_class/pyro_hazmat_3/pyro_hazmat_3_pyro.mdl"
+						}
 						"name"	"#TF_PyroHazmat_Style2"
 					}
 					"3"
 					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
-						"model_player"	"models/player/items/pyro/pyro_hazmat.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/pyro_hazmat_4/pyro_hazmat_4_sniper.mdl"
+							"pyro"		"models/workshop/player/items/all_class/pyro_hazmat_4/pyro_hazmat_4_pyro.mdl"
+						}
 						"name"	"#TF_PyroHazmat_Style3"
 					}
 				}
@@ -47677,7 +47709,7 @@
 				"scout"		"models/workshop/player/items/all_class/witchhat/witchhat_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/witchhat/witchhat_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/witchhat/witchhat_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/witchhat/witchhat_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/witchhat/witchhat_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/witchhat/witchhat_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/witchhat/witchhat_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/witchhat/witchhat_pyro.mdl"
@@ -61717,16 +61749,49 @@
 			"item_name"		"#TF_fall2013_the_special_eyes"
 			"item_description"		"#TF_fall2013_the_special_eyes_Desc"
 			"propername"		"1"
-			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_the_special_eyes/fall2013_the_special_eyes"
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_the_special_eyes/fall2013_the_special_eyes"
 			"capabilities"
 			{
 				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
-			"model_player"		"models/workshop/player/items/engineer/fall2013_the_special_eyes/fall2013_the_special_eyes.mdl"
+			"model_player_per_class"
+			{
+				"pyro"		"models/workshop/player/items/all_class/fall2013_the_special_eyes/fall2013_the_special_eyes_pyro.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_the_special_eyes/fall2013_the_special_eyes_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"pyro"		"1"
 				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"pyro"		"models/workshop/player/items/all_class/fall2013_the_special_eyes/fall2013_the_special_eyes_pyro.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fall2013_the_special_eyes/fall2013_the_special_eyes_engineer.mdl"
+						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"name"		"#TF_fall2013_the_special_eyes_style1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"pyro"		"models/workshop/player/items/all_class/fall2013_the_special_eyes_style1/fall2013_the_special_eyes_style1_pyro.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fall2013_the_special_eyes_style1/fall2013_the_special_eyes_style1_engineer.mdl"
+						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"name"		"#TF_fall2013_the_special_eyes_style2"
+					}
+				}
 			}
 		}
 		"30169"
@@ -65182,7 +65247,7 @@
 				"scout"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/xms2013_soviet_stache/xms2013_soviet_stache_pyro.mdl"
@@ -65194,7 +65259,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -66311,16 +66376,73 @@
 			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_sbox2014_mustachioed_mann"
 			"item_description"		"#TF_sbox2014_mustachioed_mann_Desc"
-			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann"
+			"image_inventory"		"backpack/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/medic/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
 				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_soldier.mdl"
+							"demoman"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann_engineer.mdl"
+						}
+						"name"	"#TF_sbox2014_mustachioed_mann_style0"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_soldier.mdl"
+							"demoman"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/sbox2014_mustachioed_mann_s2/sbox2014_mustachioed_mann_s2_engineer.mdl"
+						}
+						"name"	"#TF_sbox2014_mustachioed_mann_style1"
+					}
+				}
 			}
 		}
 		"30353"
@@ -73511,6 +73633,7 @@
 			"item_description"		"#TF_hwn2015_hellmet_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"item_rarity"	"rare"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -93326,7 +93449,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93350,7 +93473,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93374,7 +93497,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93398,7 +93521,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93422,7 +93545,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93446,7 +93569,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93470,7 +93593,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -93494,7 +93617,7 @@
 				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander/lbtf2_highlander_pyro.mdl"
@@ -97963,7 +98086,7 @@
 				"decoded by itemdefindex"
 				{
 					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5710"
+					"value" "5844"
 				}
 			}
 		}
@@ -97992,7 +98115,7 @@
 
 		"5710"
 		{
-			"name"	"Fall 2013 Acorns Key" 
+			"name"	"Fall 2013 Acorns Key"	
 			"prefab" "eventkey"
 			"first_sale_date"	"2013/10/10"
 			"tool"
@@ -98160,13 +98283,13 @@
 				"decoded by itemdefindex"
 				{
 					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5720"	
+					"value" "5845"	
 				}
 			}
 		}
 		"5720"
 		{
-			"name"	"Strongbox Key 2014" 
+			"name"	"Strongbox Key 2014"	
 			"prefab" "eventkey"
 			"first_sale_date"	"2014/02/07"
 			"tool"
@@ -98410,7 +98533,7 @@
 				"random drop line item unusual chance"		"215"
 				"random drop line item unusual list"		"particle_attribute_hats_series_3"
 				"random drop line item footer desc"			"#Econ_Revolving_Loot_List_Rare_Series_3"
-				"decoded by itemdefindex"					"5740"
+				"decoded by itemdefindex"					"5846"
 				"can shuffle crate contents"				"1"
 			}
 		}
@@ -98437,7 +98560,7 @@
 				"random drop line item unusual chance"		"215"
 				"random drop line item unusual list"		"particle_attribute_hats_series_3"
 				"random drop line item footer desc"			"#Econ_Revolving_Loot_List_Rare_Series_3"
-				"decoded by itemdefindex"					"5740"
+				"decoded by itemdefindex"					"5846"
 				"can shuffle crate contents"				"1"
 			}
 		}
@@ -98461,7 +98584,7 @@
 
 		"5740"
 		{
-			"name"	"Short 2014 Key" 
+			"name"	"Short 2014 Key"	
 			"prefab" "eventkey"
 			"first_sale_date"	"2014/06/19"
 			"tool"
@@ -100097,7 +100220,7 @@
 		
 		"5827"
 		{
-			"name"	"Halloween 2015 Key" 
+			"name"	"Halloween 2015 Key"	
 			"first_sale_date"	"2015/10/28"
 			"prefab" 			"eventkey"
 			"item_name"			"#halloween2015_collection_key"					
@@ -100133,7 +100256,7 @@
 			{
 				"set supply crate series"		"98"		
 				"hide crate series number"		"1"
-				"decoded by itemdefindex"		"5827"
+				"decoded by itemdefindex"		"5847"
 				"weapon_allow_inspect"			"1"
 			}
 			"event_desc_footer"			"#halloween2015_collection_case_footer"			
@@ -100483,6 +100606,69 @@
 			"collection_reference"		"ToughBreakCosmetics_collection"
 		}
 
+
+		"5844"
+		{
+			"name"	"Fall 2013 Acorns Key New" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2013/10/10"
+			"tool"
+			{
+				"restriction"	"fall2013_acorns"
+			}
+			"item_name"		"#TF_Fall2013Key_Acorns"
+			"item_description"	"#TF_Fall2013Key_Acorns_Desc"
+			"image_inventory"	"backpack/crafting/fall_acorn_key"
+		}
+
+		"5845"
+		{
+			"name"	"Strongbox Key 2014 New" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2014/02/07"
+			"tool"
+			{
+				"restriction"	"strongbox_2014"
+			}
+			"item_name"		"#TF_StrongboxKey"
+			"item_description"	"#TF_StrongboxKey_Desc"
+			"image_inventory"	"backpack/crafting/strongbox_crate_key"
+		}
+
+		"5846"
+		{
+			"name"	"Short 2014 Key New" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2014/06/19"
+			"tool"
+			{
+				"restriction"	"short2014"
+			}
+			"item_name"		"#TF_CrateKey_BL"
+			"item_description"	"#TF_CrateKey_BL_Desc"
+			"image_inventory"	"backpack/crafting/summer2014_key"
+		}
+
+		"5847"
+		{
+			"name"	"Halloween 2015 Key New" 
+			"first_sale_date"	"2015/10/28"
+			"prefab" 			"eventkey"
+			"item_name"			"#halloween2015_collection_key"					
+			"item_description"	"#halloween2015_collection_key_desc"						
+			"ad_text"			"#halloween2015_collection_key_adtext"
+			"image_inventory"	"backpack/crafting/halloween2015_gargoyle_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"halloween2015"
+			}
+		}
+	  		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -107046,7 +107232,7 @@
 				"The Rugged Respirator"	"1"
 				"The Squid's Lid"	"1"
 				"The Hollowhead"	"1"
-				"Grub Grenades"	"1"
+				"Grub Grenades"	"1"	
 				"The Gothic Guise"	"1"
 				"The Grease Monkey"	"1"
 				"The Alternative Medicine Mann"	"1"
@@ -107305,7 +107491,7 @@
 		}
 		"2131"
 		{
-			"name" "Love & War Cosmetics Bundle"
+			"name" "Love & War Cosmetics Bundle"	
 			"prefab"	"default_bundle_payment"
 			"first_sale_date"	"2014/06/18"
 			"item_class"	"bundle"
@@ -107547,7 +107733,7 @@
 				"Supernatural Stalker"              "1"
 				"Garden Bristles"                   "1"
 				"Battle Bird"                       "1"
-				"Creature's Grin"                   "1"
+				"Creature's Grin"                   "1"	
 				"Arsonist Apparatus"                "1"
 				"Moccasin Machinery"                "1"
 				"Lollichop Licker"                  "1"
@@ -107999,6 +108185,86 @@
 			"max_ilevel"	"50"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"2145"
+		{
+			"name" "Love & War Cosmetics Bundle New"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2014/06/18"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"The Classified Coif"			"1"		
+				"The Rogue's Robe"				"1"		
+				"The Spook Specs"				"1"
+				"The Sengoku Scorcher"			"1"		
+				"The Man in Slacks"				"1"		
+				"The Razor Cut"					"1"
+				"The Frickin' Sweet Ninja Hood"	"1"
+				"The Southie Shinobi"			"1"		
+				"The Red Socks"					"1"		
+
+				"The Gas Guzzler"				"1"		
+				"The Smoking Skid Lid"			"1"
+				"The Lunatic's Leathers"		"1"		
+				"Yuri's Revenge"				"1"		
+				"The Tools of the Trade"		"1"		
+				"The Joe-on-the-Go"				"1"		
+				"The Aviator Assassin"			"1"
+				"The Sky Captain"				"1"		
+				"The Peacenik's Ponytail"		"1"
+				"The Level Three Chin"			"1"		
+
+				"The Egghead's Overalls"		"1"		
+				"The Lonesome Loafers"			"1"		
+				"Ze Ubermensch"					"1"		
+				"The Au Courant Assassin"		"1"		
+				"The Endothermic Exowear"		"1"		
+				"The Merc's Mohawk"				"1"
+				"The Eye-Catcher"				"1"		
+				"The Medicine Manpurse"			"1"		
+				"Employee of the Mmmph"			"1"
+				"The Frymaster"					"1"		
+
+				"The Combustible Kabuto"		"1"
+				"The Chronoscarf"				"1"		
+				"The Danger"					"1"
+				"The Frontier Djustice"			"1"
+				"Vive La France"				"1"
+				"The Scoper's Smoke"			"1"		
+				"The Triggerman's Tacticals"	"1"		
+				"The Allbrero"					"1"
+				"Seeing Double"					"1"		
+				"Six Pack Abs"					"1"		
+
+				"The Pomade Prince"				"1"
+				"The Paisley Pro"				"1"		
+				"The Argyle Ace"				"1"		
+				"Tipped Lid"					"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_LW_Cosmetics"
+			"item_description"	"#TF_Bundle_LW_Cosmetics_Desc"
+			"image_inventory"	"backpack/player/items/crafting/parts/love_and_war_cosmetics_bundle"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy"		"1"
+				"engineer"	"1"
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
 		}
 
 
@@ -118010,7 +118276,7 @@
 			"The Viking Braider"		"1"
 			"The Flapjack"		"1"
 			"The Gold Digger"		"1"
-			"Pop-eyes"		"1"
+"Pop-eyes"		"1"
 			"Weight Room Warmer"		"1"
 			"The Special Eyes"		"1"
 			"The Chronomancer"		"1"
@@ -118227,7 +118493,7 @@
 		}
 		"halloween_loot_list_2014_pyro_community_cosmetics"
 		{
-			"Creature's Grin"		"1"
+"Creature's Grin"		"1"
 			"Arsonist Apparatus"		"1"
 			"Moccasin Machinery"		"1"
 			"Lollichop Licker"		"1"
