@@ -2558,6 +2558,7 @@ div.early_access_announcements .divider {
 	height: 35px;
 	background-color: rgba(0,0,0,0.8);
 	width: 100%;
+	text-align: left;
 }
 .html5_video_overlay .play_button {
 	width: 19px;

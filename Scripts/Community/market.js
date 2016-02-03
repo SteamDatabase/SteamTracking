@@ -1858,7 +1858,7 @@ function Market_LoadOrderSpread( item_nameid )
 					renderer: $J.jqplot.BarRenderer,
 					rendererOptions: {fillToZero: true},
 					title:{text: 'Buy and Sell Orders (cumulative)', textAlign: 'left' },
-					gridPadding:{left: 45, right:45, top:30},
+					gridPadding:{left: 45, right:45, top:45},
 					axesDefaults:{ showTickMarks:false },
 					axes:{
 						xaxis:{
@@ -1875,9 +1875,9 @@ function Market_LoadOrderSpread( item_nameid )
 						}
 					},
 					grid: {
-						gridLineColor: '#414141',
-						borderColor: '#414141',
-						background: '#262626'
+						gridLineColor: '#1b2939',
+						borderColor: '#1b2939',
+						background: '#101822'
 					},
 					cursor: {
 						show: true,

@@ -247,12 +247,18 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 	var pContent = $.CreatePanel( 'RemoteContent', $.TenfootController($.GetContextPanel()).GetContentParent(), '' );
 	$.PushBackStack( pContent, 'BackStackPlaceholder()' );
 
-	pContent.SetPanelEvent( 'onload', pScript );
+	// for back compat
+	if ( !pContent.RunScriptInPanelContext )
+		pContent.SetPanelEvent( 'onload', pScript );
+	
 	pContent.AddClass( 'ContentPanel' );
 	pContent.SetAttributeString( 'content-title', 'Your Discovery Queue' );
 	pContent.SetAttributeInt( 'content-delete-at-stack-depth', 1 );
 	pContent.ShowLoading();
 	pContent.SetFocus();
+
+	if ( pContent.RunScriptInPanelContext )
+		pContent.RunScriptInPanelContext( pScript );
 }
 
 function GenerateNewDiscoveryQueue( strSessionID, eQueueType )
@@ -373,12 +379,19 @@ function AddPackageToCartInternal( strSessionID, strType, nItemID )
 	pScript = pScript.replace( '%itemid%', nItemID );
 
 	var pContent = $.CreatePanel( 'RemoteContent', $.TenfootController($.GetContextPanel()).GetContentParent(), '' );
-	pContent.SetPanelEvent( 'onload', pScript );
+
+	// for back compat
+	if ( !pContent.RunScriptInPanelContext )
+		pContent.SetPanelEvent( 'onload', pScript );
+
 	pContent.AddClass( 'ContentPanel' );
 	pContent.SetAttributeString( 'content-title', 'Your Shopping Cart' );
 	pContent.SetAttributeInt( 'content-delete-at-stack-depth', 1 );
 	pContent.ShowLoading();
 	pContent.SetFocus();
+
+	if ( pContent.RunScriptInPanelContext )
+		pContent.RunScriptInPanelContext( pScript );
 
 	$.PushBackStack( pContent, 'BackStackPlaceholder()' );
 }

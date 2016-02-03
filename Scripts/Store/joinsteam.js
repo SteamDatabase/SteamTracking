@@ -408,9 +408,9 @@ function CheckPasswordAvail()
 		return;
 	}
 
-	if ( password_before.length < 7 )
+	if ( password_before.length < 8 )
 	{
-		SetPasswordTag( '#password_tag', 'error', 'Password must contain at least 7 characters' );
+		SetPasswordTag( '#password_tag', 'error', 'Password must contain at least 8 characters' );
 		return;
 	}
 

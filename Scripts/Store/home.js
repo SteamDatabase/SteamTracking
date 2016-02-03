@@ -272,7 +272,7 @@ GHomepage = {
 		);
 
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'main_cluster', 0, 15
+			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
 
 		for ( var i = 0; i < rgMainCaps.length; i++ )
@@ -310,7 +310,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.new_on_steam .home_smallcaps' ).empty();
@@ -340,7 +340,7 @@ GHomepage = {
 	RenderRecentlyUpdated: function()
 	{
 		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $RecentlyUpdated =  $J('.home_smallcap_area.recently_updated .home_smallcaps' ).empty();

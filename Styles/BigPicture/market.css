@@ -182,11 +182,23 @@
 
 
 	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
 
 	margin: 0px;
 	transform: none;
+}
+
+.DragScrolling .MarketGridItem
+{
+	transition-duration: 0.0s, supershortduration;
+}
+
+.Flick .MarketGridItem
+{
+	transition-timing-fuction: DragScrollFlickTimingFunction, bigpicture-ease-in-out;
+	transition-duration: DragScrollFlickTime, supershortduration;
 }
 
 .MarketGridItemMainContent

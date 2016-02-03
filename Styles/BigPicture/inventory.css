@@ -411,18 +411,32 @@ DropDownMenu .FilterOption Label:focus
 	opacity: 0.00;
 	desaturation: 0.2;
 
-
-	transition-property: position, pre-transform-scale2d, opacity, box-shadow, wash-color, desaturation, transform;
-	transition-duration: supershortduration;
-	transition-timing-function: ease-in-out;
-
+	transition-property: position;
 
 	flow-children: down;
+}
+
+.DragScrolling .InventoryItem,
+.DragScrolling .InventoryItem.Ready
+{
+	transition-duration: 0.0s, supershortduration;
+}
+
+.Flick .InventoryItem,
+.Flick .InventoryItem.Ready
+{
+	transition-timing-function: DragScrollFlickTimingFunction, bigpicture-ease-in-out;
+	transition-duration: DragScrollFlickTime, shortduration;
 }
 
 .InventoryItem.Ready
 {
 	opacity: 0.85;
+
+	transition-property: position, pre-transform-scale2d, opacity, box-shadow, wash-color, desaturation, transform;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
 }
 
 .InventoryItem.LosingFocus

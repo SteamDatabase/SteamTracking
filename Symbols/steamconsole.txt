@@ -1236,6 +1236,7 @@
  b g_pClientApps
  b g_pClientAudio
  b g_pClientBilling
+ b g_pClientBluetoothManager
  b g_pClientConfigStore
  b g_pClientController
  b g_pClientControllerSerialized

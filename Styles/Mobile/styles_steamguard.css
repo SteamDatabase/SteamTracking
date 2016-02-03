@@ -47,6 +47,7 @@ html.responsive body.responsive_page {
 
 .steamguard_splash_wrapper, .steamguard_done_wrapper, .steamguard_error_wrapper, .steamguard_email_wrapper, .steamguard_none_wrapper, .steamguard_prechange_wrapper, .steamguard_help_wrapper {
 	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 .steamguard_confirm_title, .steamguard_done_title, .steamguard_error_title {
@@ -82,6 +83,9 @@ html.responsive body.responsive_page {
 	font-size: 16px;
 	text-shadow: none;
 	color: #7a7a7a;
+}
+.steamguard_help_text a {
+	color: #67c1f5;
 }
 
 .steamguard_none_warning {

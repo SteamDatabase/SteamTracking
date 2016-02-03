@@ -4453,9 +4453,9 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 			}
 		},
 		grid: {
-			gridLineColor: '#414141',
-			borderColor: '#414141',
-			background: '#262626'
+			gridLineColor: '#1b2939',
+			borderColor: '#1b2939',
+			background: '#101822'
 		},
 		cursor: {
 			show: true,

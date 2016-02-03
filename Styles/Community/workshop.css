@@ -1380,6 +1380,11 @@ a.instructionsBtn:hover {
 	margin-left: 2px;
 }
 
+.paymentinfo_background option
+{
+	background-color: rgba( 0, 0, 0, 1 );
+}
+
 .smallForm {
 	margin:0;
 	padding:0;

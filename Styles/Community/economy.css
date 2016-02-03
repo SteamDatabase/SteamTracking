@@ -307,6 +307,7 @@ a.item_action:hover {
 	font-size: 24px;
 	font-weight: normal;
 	margin-bottom: 5px;
+	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
 }
 
 .hover_item_name_small {
@@ -422,11 +423,14 @@ a.item_action:hover {
 
 input.filter_search_box {
 	padding: 4px 4px;
-	color: #828282;
+	color: #FFF;
 	font-size: 12px;
 	outline: none;
-	border: 1px solid #292929;
-	background-color: #101010;
+	border: 1px solid;
+	border-color: #182636 #45566A #45566A #182636;
+	background-color: #324965;
+	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
+	border-radius: 0px;
 }
 
 input.filter_search_box::-webkit-input-placeholder {
@@ -920,7 +924,7 @@ a.item_market_action_button {
 }
 
 .item_market_action_button_edit:hover > span, .item_market_action_button_edit .item_market_action_button_preload {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_edit_hover.png');
+	background-color: #2B475E;
 }
 
 .item_market_action_button_edit {
@@ -962,8 +966,8 @@ a.item_market_action_button {
 
 .game_button_game_icon > img {
 	position: absolute;
-	left: -1px;
-	top: 1px;
+	left: 3px;
+	top: 3px;
 
 	width: 32px;
 	height: 32px;
@@ -995,11 +999,15 @@ a.game_button {
 }
 
 .game_button > span {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_game.png');
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0;
+	border: 1px solid transparent;
+	border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%);
+	border-image-slice: 1;
+	padding: 2px;
 }
 
 .game_button:hover > span, .game_button .game_button_preload {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_game_hover.png');
+	background: #2b475e;
 }
 
 .market_dialog_iteminfo .item_desc_game_info .item_desc_game_icon {
@@ -1010,12 +1018,17 @@ a.game_button {
 
 .market_headertip_container {
 	padding: 20px 20px;
-    background: #292929;
-    color: #828282;
+	background-color: #292929;
 }
 
 .market_headertip_container:nth-child(3) {
     padding-top: 0px;
+}
+
+.market_headertip_container_warning {
+	background-color: #2B2E34;
+	margin-top: 20px;
+	border: 1px solid #632929;
 }
 
 .market_headertip {
@@ -1060,7 +1073,7 @@ a.game_button {
 }
 
 .jqplot-highlighter-tooltip {
-	background: #393938;
+	background: #121b27;
 	color: white;
 	border: 1px solid #797272;
 	padding: 5px;
@@ -1401,4 +1414,45 @@ html.responsive .newmodal.economy_modal_ctn {
 	html.responsive .market_sell_dialog_input_area {
 		text-align: left;
 	}
+}
+
+.sendgift_area {
+	max-width: 380px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.sendgift_item {
+	max-width: 354px;
+	margin: 24px auto;
+	padding: 0 10px;
+	text-align: left;
+}
+
+.sendgift_area h2 {
+	font-size: 32px;
+}
+
+.sendgift_recipient {
+	line-height: 32px;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.sendgift_recipient > * {
+	vertical-align: middle;
+}
+
+.sendgift_recipient .playerAvatar {
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.sendgift_description {
+	text-align: center;
+	font-size: 24px;
+}
+
+.sendgift_actions {
+	margin-top: 12px;
 }

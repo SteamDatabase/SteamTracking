@@ -261,7 +261,7 @@ function OnLoad_UserPaymentForm()
 	UpdateBankInfo();
 }
 
-function UpdateStateSelectState()
+function UpdateCountrySelectState()
 {
 	try
 	{
@@ -353,7 +353,7 @@ function IsValidRequiredField( fieldName, regex )
 	return true;
 }
 
-function ValidateUserPaymentInfo()
+function ValidateUserPaymentInfo( baseURL )
 {
 		var errorString = '';
 
@@ -429,12 +429,21 @@ function ValidateUserPaymentInfo()
 		{
 			// submit the form
 			$J.ajax( {
-				url: 'https://steamcommunity.com/my/ajaxsaveuserpaymentinfo/',
-				type: "GET",
+				url: baseURL + '/ajaxsaveuserpaymentinfo/',
+				method: "POST",
 				data: $J( "#WorkshopPaymentInfoForm" ).serialize(),
 				success : function( response ) {
-					var dialog = ShowAlertDialog( 'Saved!', 'Your contact and address information have been saved. If you haven\'t already, please fill in your bank account and tax information.');
-					dialog.done( function() { top.location.reload(); } );
+					var dialog = ShowAlertDialog( 'Saved!', response.redirect_url.length != 0 ? 'Your contact and address information have been saved. Since you updated your country, you will now be redirected to an external service to update your tax information.' : 'Your contact and address information have been saved. If you haven\'t already, please fill in your bank account and tax information.' );
+					dialog.done( function() {
+						if ( response.redirect_url.length != 0 )
+						{
+							top.location.assign( response.redirect_url );
+						}
+						else
+						{
+							top.location.reload();
+						}
+					} );
 				},
 				error: function( jqXHR ) {
 					alert( jqXHR.responseText );

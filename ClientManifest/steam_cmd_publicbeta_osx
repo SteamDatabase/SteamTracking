@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1452542768"
+	"version"		"1454005182"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.683fa99b92c7f7639c2aebadeabd7da61f043ddd"
-		"checksum"		"683fa99b92c7f7639c2aebadeabd7da61f043ddd"
-		"size"		"57668"
+		"file"		"steamcmd_public_all.zip.cc35b4ce0695e92f6f2595a74f2db18c5a7bd179"
+		"checksum"		"cc35b4ce0695e92f6f2595a74f2db18c5a7bd179"
+		"size"		"57670"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.5d30da8f9f992f986a04727ecfa4b1c6a0428a9b"
-		"checksum"		"5d30da8f9f992f986a04727ecfa4b1c6a0428a9b"
-		"size"		"16803972"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.f53084081bef93d7af2dd586563dcdcd3775de03_10035070"
+		"file"		"steamcmd_bins_osx.zip.dd74978595dbeac67e73ccdd999e1358176fb499"
+		"checksum"		"dd74978595dbeac67e73ccdd999e1358176fb499"
+		"size"		"16809686"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.01a5b67914eb65cb2751fce2fdf9e1d6bcc4749b_10044782"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.66247c66190f13b441e2205b18848434b0fa1dd6"
-		"checksum"		"66247c66190f13b441e2205b18848434b0fa1dd6"
-		"size"		"1559965"
-		"zipvz"		"steamcmd_osx.zip.vz.7b71ac6c23781d7efee7d13c4d6538af9b2aed5d_1156077"
+		"file"		"steamcmd_osx.zip.1cac037211e612d67850379a7a200409c1984f67"
+		"checksum"		"1cac037211e612d67850379a7a200409c1984f67"
+		"size"		"1559936"
+		"zipvz"		"steamcmd_osx.zip.vz.ee10f72a59ede0bd3dd9117bdd8bfd2cb945e3b1_1156595"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"4bb64b461aef4dd9fb7195789d89ea8d3e50b5433adeada9f70909cb56953dab8a346291bf8ffb428e470a3eb5462fc3679730fbffdc89c8fd656267492e3ad8bb920a2509539f77c0400d7d3fdb03274834ea292c50063141ee8c6e0e2c0054b8199910b785febf83e5abe9b5cab45394d273324041e39e9974eca5ae24f127"
+	"osx"		"acc9c4e752cf88bf22f9329e1e534fcc8c432a84152cd4f8ab60df64ded4c7e1e23e7a8bc10d672035d5463ce4d26358bae43914cbe585db4b3ea6ea59caf837cdcb1c18707d46faad5ae188f4489ae28606330b59e8c11495fd97702fea7ae6799c979d5194bd08ac6721eb1d32ab9a3ce4530b351bc6b90356b0ff8ccf6bdc"
 }

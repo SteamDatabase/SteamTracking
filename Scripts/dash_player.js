@@ -4651,12 +4651,36 @@ CDASHPlayerUI.prototype.OnKeyDown = function( e )
 			case 39:	// right arrow - skip forward
 				$J( '.skip_fwd' ).click();
 				break;
-			case 81:	// q - stop / quit / close
-				this.StopVideo();
-				break;
 			default:
 				bHandled = false;
 				break;
+		}
+
+		// VOD desktop shortcut keys
+		if ( !bHandled && !this.m_player.BIsLiveContent() )
+		{ 
+			var bHandled = true;
+			switch (keycode)
+			{
+				case 81:	// q - stop / quit / close
+					this.StopVideo();
+					break;
+				case 90:	// z - toggle stats
+					this.ToggleStats();
+					break;
+				case 70:	// f - full screen
+					this.ToggleFullscreen();
+					break;
+				case 67:	// c - captions
+					this.ShowClosedCaptionsPanel();
+					break;
+				case 83:	// s - settings
+					this.ShowSettingsPanel();
+					break;
+				default:
+					bHandled = false;
+					break;
+			}
 		}
 	}
 
@@ -4869,7 +4893,7 @@ CDASHPlayerUI.prototype.OnPressButtonX = function()
 
 	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
 	{
-		$J( this.m_player.m_elVideoPlayer ).trigger( 'togglestats' );
+		this.ToggleStats();
 	}
 }
 
@@ -5297,6 +5321,11 @@ CDASHPlayerUI.prototype.OnMouseWheelTenFoot = function ( e )
 			this.DecrementProgressBarPreview(1);
 	}
 
+}
+
+CDASHPlayerUI.prototype.ToggleStats = function()
+{
+	$J( this.m_player.m_elVideoPlayer ).trigger( 'togglestats' );
 }
 
 CDASHPlayerUI.prototype.ToggleFullscreen = function()
@@ -6347,15 +6376,10 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 				{
 					try
 					{
-						// skip size percentages as caption options don't scale with these
-						if (rgKeyVal[0].indexOf('size') == 0 && rgKeyVal[1].indexOf('%') != -1)
-							continue;
-
-						// relative (percentage) screen attributes require snapToLines off
+						// percentage screen attributes require snapToLines off
 						if (newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1)
 						{
 							newCue.snapToLines = false;
-							rgKeyVal[1] = rgKeyVal[1].replace('%', '');
 						}
 
 						// if the value is a number, then make sure the cue knows it's a number
@@ -6373,7 +6397,7 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 			}
 
 			// if no line position was set, set the default
-			if ( typeof newCue["line"] !== "undefined" )
+			if ( typeof newCue["line"] === "undefined" || newCue["line"] == "auto" )
 			{
 				newCue.snapToLines = false;
 				newCue["line"] = CVTTCaptionLoader.s_DefaultLinePosition;

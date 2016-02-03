@@ -642,10 +642,11 @@
 }
 .AppDetailsLeftColumn .AppComingSoonBox
 {
-	background-color: #00000000;
-	margin-bottom: 20px;
-	margin-top: -20px;
-	padding-left: 0px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000050 ), to( #00000000 ) );
+	padding: 18px 18px;
+	width: 100%;
+	margin-bottom: 12px;
+	border-radius: 3px;
 }
 
 .AppDetailsOptionsRow
@@ -1305,12 +1306,16 @@ VerticalScrollBar {
 
 
 ////////////////////////////////////
-// App DLC Section
+// App DLC and More Like This Sections
 ////////////////////////////////////
-#AppDLCSection
+#AppDLCSection,
+#AppMoreLikeThisSection
 {
+	width: 100%;
 	padding-top: 40px;
 	overflow: clip scroll;
+	flow-children: down;
+	padding-left: 55px;
 }
 
 .AppDLCSectionBackground

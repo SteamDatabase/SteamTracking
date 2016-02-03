@@ -101,17 +101,61 @@ RemotePanel
 	z-index: 6;
 }
 
+.FeaturedPromoButton
+{
+	//visibility: collapse;
+	width: 1596px;
+	height: 363px;
+
+	margin: -2px 0px 0px -15px;
+
+	border-radius: 3px;
+
+	pre-transform-scale2d: 0.98;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.15s;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	z-index: -100;
+}
+
+.FeaturedPromoButton:focus,
+.FeaturedPromoButton:hover
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	background-color: #b4dff7;
+
+	pre-transform-scale2d: 1;
+	z-index: 200;
+}
+.FeaturedPromoButton Image
+{
+	width: 1586px;
+	height: 353px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	border-radius: 3px;
+}
+
 .FeaturedSpotlightRow
 {
 	flow-children: right;
 	z-index: 0;
-	//margin-bottom: 100px;
-
 }
+
 .FeaturedSpotlightRow:descendantfocus
 {
 	z-index: 5;
 }
+
 .FeaturedSpotlightRow:hover
 {
 	z-index: 6;

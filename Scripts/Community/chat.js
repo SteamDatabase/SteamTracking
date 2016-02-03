@@ -327,24 +327,35 @@ CChatFriend.prototype.GetStatusDescription = function()
 	}
 	else
 	{
-		switch ( this.m_ePersonaState )
+		if (( this.m_nPersonaStateFlags & 2048 ) != 0 )
 		{
-			case 0:
-				return 'Offline';
-			case 1:
-				return 'Online';
-			case 4:
-				return 'Snooze';
-			case 3:
-				return 'Away';
-			case 2:
-				return 'Busy';
-			case 5:
-				return 'Looking to Trade';
-			case 6:
-				return 'Looking to Play';
-			default:
-				return 'offline';
+			return 'Online using VR';
+		}
+		else if (( this.m_nPersonaStateFlags & 1024 ) != 0 )
+		{
+			return 'Online using Big Picture';
+		}
+		else
+		{
+			switch ( this.m_ePersonaState )
+			{
+				case 0:
+					return 'Offline';
+				case 1:
+					return 'Online';
+				case 4:
+					return 'Snooze';
+				case 3:
+					return 'Away';
+				case 2:
+					return 'Busy';
+				case 5:
+					return 'Looking to Trade';
+				case 6:
+					return 'Looking to Play';
+				default:
+					return 'offline';
+			}
 		}
 	}
 }
