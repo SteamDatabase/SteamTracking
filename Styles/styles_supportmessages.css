@@ -5,13 +5,12 @@ body {
 }
 
 .support_message_page {
-	max-width: 628px;
-	margin: 0 auto;
-	padding: 32px 2%;
+	width: 628px;
+	margin: 0px auto;
 }
 
 .support_message_ctn {
-	margin: 0 auto 16px auto;
+	margin: 32px auto 16px auto;
 	background-color: #a94847;
 	padding: 6px;
 }
@@ -22,7 +21,7 @@ body {
 	background-color: #333230;
 	color: #a3a3a3;
 	border-radius: 3px;
-	padding: 4% 6%;
+	padding: 24px 36px;
 	background-image: url( data:image/gif;base64,R0lGODlhAgABAIAAAEJBQTw7OyH5BAAAAAAALAAAAAACAAEAAAICDAoAOw== );
 }
 
@@ -66,12 +65,6 @@ body {
 	float: left;
 	text-transform: none;
 	margin-right: 14px;
-}
-
-#supportmessages_closebtn,
-.support_message_check_ctn,
-.support_message_paging_ctn {
-	margin-bottom: 8px;
 }
 
 .support_message_check_ctn {
