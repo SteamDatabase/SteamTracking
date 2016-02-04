@@ -181,7 +181,7 @@ body
     top: 0px;
     bottom: 0px;
     background-color: rgba(0,0,0,1);
-    z-index: 2;
+    z-index: 3;
     display: none;
 }
 
@@ -211,7 +211,7 @@ body
 
 .loading_text.error
 {
-    margin-top: -130px;
+    margin-top: 0px;
 }
 
 .loading_text.error a
@@ -247,13 +247,13 @@ body
 
 .loading_text.tenfoot
 {
-	font-size: 36px;
+	font-size: 40px;
 }
 
 .loading_text.tenfoot.error
 {
-	font-size: 66px;
-	margin-top: 200px;
+	font-size: 40px;
+	margin-top: 0px;
 }
 
 .loading_wrapper.tenfoot,
