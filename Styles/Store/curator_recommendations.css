@@ -5,8 +5,9 @@
 }
 .curator_avatar_image
 {
+	padding-top: 5px;
 	width: 90px;
-	margin-right: 20px;
+	margin-right: 2.1%;
 	float: left;
 }
 .curator_avatar
@@ -15,9 +16,7 @@
 }
 .curator_details
 {
-	float: left;
-	width: 830px;
-	margin-top: -5px;
+	overflow: hidden;
 }
 
 body.v6 h2.curator_name
@@ -41,13 +40,16 @@ body.v6 h2.curator_name
 {
 	float: right;
 	text-align: right;
-	width: 250px;
 }
 
 .follow_btn
 {
 	float: right;
 	padding-left: 10px;
+}
+
+.follow_btn_stats {
+	overflow: hidden;
 }
 .following_img
 {
@@ -78,12 +80,18 @@ body.v6 h2.curator_name
 .highlighted_recommendation
 {
 	margin-top: 40px;
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 .highlighted_recommendation_header
 {
 	position: relative;
 	float: left;
-	height: 215px;
+	width: 460px;
+	max-width: 50%;
+}
+.highlighted_recommendation_header img {
+	width: 100%;
+	display: block;
 }
 .highlighted_recommendation_header .ds_flag
 {
@@ -104,15 +112,14 @@ body.v6 h2.curator_name
 }
 .highlighted_recommendation_details_ctn
 {
-	padding-left: 460px;
-	background-color: rgba( 0, 0, 0, 0.2 );
-	height: 215px;
+	overflow: hidden;
+	min-height: 215px;
 }
 .highlighted_recommendation_details
 {
 	position: relative;
-	padding: 20px;
-	height: 175px;
+	padding: 20px 20px 35px 20px;
+	height: 130px;
 }
 .highlighted_recommendation_app_price
 {
@@ -134,7 +141,28 @@ body.v6 h2.curator_name
 .highlighted_recommendation_link
 {
 	position: absolute;
-	bottom: 40px;
+	bottom: 10px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .highlighted_recommendation_details_ctn {
+		min-height: 0;
+	}
+
+	html.responsive .highlighted_recommendation_details {
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .highlighted_recommendation_header {
+		max-width: 100%;
+		float: none;
+		height: auto;
+		margin: 0 auto;
+	}
 }
 
 /* recommendations list */
@@ -163,6 +191,14 @@ body.v6 h2.curator_name
 {
 	top: 68px;
 	left: 16px;
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .recommendation .ds_flag
+	{
+		top: 60px;
+	}
 }
 .recommendation.ds_flagged:not(.ds_wishlist) .recommendation_app_small_cap
 {
@@ -196,20 +232,30 @@ body.v6 h2.curator_name
 .recommendation_leftcol
 {
 	float: left;
-	height: 87px;
+	height: auto;
+	width: 231px;
+	max-width: 40%;
 	padding-right: 10px;
 }
 .recommendation_rightcol
 {
 	position: relative;
-	margin-left: 241px;
+	overflow: hidden;
 }
+
+@media screen and (max-width: 440px)
+{
+	html.responsive .recommendation_rightcol {
+		overflow: visible;
+	}
+}
+
 .recommmendation_app_small_cap_ctn
 {
 }
 .recommendation_app_small_cap
 {
-	width: 231px;
+	width: 100%;
 }
 .recommendation_app_price
 {
@@ -356,4 +402,26 @@ body.v6 h2.curator_name
 a.pagelink:hover {
 	text-decoration: underline;
 	color: #ffffff;
+}
+
+.steam_curators_filters_expand_link {
+	margin-bottom: 12px;
+}
+
+@media screen and (max-width: 560px)
+{
+	html.responsive .follow_controls {
+		float: none;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .curator_details {
+		overflow: visible;
+	}
+
+	html.responsive h2.pageheader.curator_name {
+		clear: left;
+	}
 }
