@@ -1540,7 +1540,7 @@ var CCommentThread = Class.create( {
 			var $DropdownCtn = $J( '#' + strPagePrefix + 'dropdown');
 			var $Select = $DropdownCtn.children( 'select' );
 
-			if ( this.m_cDropdownPages != this.m_cMaxPages || !$Select.length )
+			if ( true )
 			{
 				if ( !$Select.length )
 				{
@@ -1548,16 +1548,38 @@ var CCommentThread = Class.create( {
 					var _this = this;
 					$Select.change( function() {
 						var $Select = $J(this);
-						console.log( 'GoToPage', $Select.val() );
 						_this.GoToPage( $Select.val() );
 					});
 					$DropdownCtn.append( $Select );
 				}
 
-				for ( var iDropdownPage = 0; iDropdownPage < this.m_cMaxPages; iDropdownPage++ )
+				$Select.empty();
+
+				// we always show first, last, + 3 page links closest to current page
+				var fnAddPageDropdown = function( iDropdownPage )
 				{
 					$Select.append( $J('<option/>', { 'value' : iDropdownPage } ).text( iDropdownPage >= 999 ? v_numberformat( iDropdownPage + 1 ) : iDropdownPage + 1) );
+				};
+
+				var cPageLinksAheadBehind = 10;
+				var firstPageLink = Math.max( this.m_iCurrentPage - cPageLinksAheadBehind, 1 );
+				var lastPageLink = Math.min( this.m_iCurrentPage + (cPageLinksAheadBehind*2) + ( firstPageLink - this.m_iCurrentPage ), this.m_cMaxPages - 2 );
+
+				if ( lastPageLink - this.m_iCurrentPage < cPageLinksAheadBehind )
+					firstPageLink = Math.max( this.m_iCurrentPage - (cPageLinksAheadBehind*2) + ( lastPageLink - this.m_iCurrentPage ), 1 );
+
+				fnAddPageDropdown( 0 );
+				if ( firstPageLink != 1 )
+					$Select.append( $J('<option/>', { 'value' : '', 'disabled':1 } ).text('...') );
+
+				for ( var iPage = firstPageLink; iPage <= lastPageLink; iPage++ )
+				{
+					fnAddPageDropdown( iPage );
 				}
+
+				if ( lastPageLink != this.m_cMaxPages - 2 )
+					$Select.append( $J('<option/>', { 'value' : '', 'disabled':1 } ).text('...') );
+				fnAddPageDropdown( this.m_cMaxPages - 1 );
 			}
 
 			$Select.val( this.m_iCurrentPage );
