@@ -97,13 +97,13 @@ a.gutter_item:hover {
 }
 
 @media all and (min-width: 1208px) {
-	.home_page_content, .footer_content, .hardware_ctn {
+	body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
 		padding-left: 204px;
 	}
-	.home_page_gutter {
+	body:not(.no_home_gutter) .home_page_gutter {
 		display: block;
 	}
-	.home_page_body_ctn .page_background_holder {
+	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
 		right: -187px;
 	}
 }
@@ -426,12 +426,16 @@ a.home_smallcap:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.home_btn.active, .main_cluster_content .home_btn.home_customize_btn.active {
+.home_btn.active, .main_cluster_ctn .home_btn.home_customize_btn.active {
     background: #e3eaef;
     color: #384959;
 }
-.home_btn.active:hover, .main_cluster_content .home_btn.home_customize_btn.active:hover {
+.home_btn.active:hover, .main_cluster_ctn .home_btn.home_customize_btn.active:hover {
     background: #e3eaef;
+}
+
+.main_cluster_ctn {
+	position: relative;
 }
 
 .home_btn.home_customize_btn {
@@ -1774,3 +1778,70 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	html.responsive.touch ..home_viewsettings_checkbox {
 		margin-top: 2px;
 	}
+
+
+.market_escrow_sale_banner {
+	display: block;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/twofactor/escrow_market_sale_banner.png' ) center top no-repeat;
+	max-width: 941px;
+	height: 137px;
+	margin: 0 auto 40px auto;
+}
+
+.market_escrow_sale_banner > .content {
+	padding: 0 25% 0 2%;
+
+	font-size: 12px;
+	line-height: 1.7em;
+	color: #ffffff;
+	font-family: "Motiva Sans Light", arial, helvetica, sans-serif;
+}
+
+.market_escrow_sale_header {
+	font-size: 2.3em;
+	padding: 0.7em 0 0.3em;
+	line-height: 1.2em;
+}
+
+.market_escrow_sale_header b {
+	color: #9cc509;
+}
+
+.market_escrow_sale_desc {
+	font-size: 1.3em;
+	line-height: 1.2em;
+	padding: 0.3em 0;
+}
+
+.market_escrow_sale_dates {
+	color: #5eafde;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 680px)
+{
+	html.responsive .market_escrow_sale_banner {
+		background-position: 70% 0%;
+	}
+
+	html.responsive .market_escrow_sale_banner > .content {
+		text-align: center;
+		padding-right: 2%;
+		text-shadow: 1px 1px 1px #000000;
+	}
+
+}
+
+@media screen and (max-width: 580px)
+{
+	html.responsive .market_escrow_sale_banner > .content {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .market_escrow_sale_banner > .content {
+		font-size: 10px;
+	}
+}
