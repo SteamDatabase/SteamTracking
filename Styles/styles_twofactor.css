@@ -103,9 +103,11 @@
 .twofactor_settings_input
 {
 	float: left;
-	background-color: #c0c0c0;
-	border: #82807c;
-	color: #000000;
+	background-color: #2a3f5a;
+	border: 1px solid #000;
+	border-radius: 2px;
+	box-shadow: 1px 1px 0 0 rgba(91, 132, 181, 0.2);
+	color: #c6d4df;
 	font-size: 20px;
 	padding: 5px;
 	cursor: text;
