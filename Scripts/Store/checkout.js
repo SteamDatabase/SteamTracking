@@ -629,7 +629,8 @@ function InitializeTransaction()
 		    method:'post',
 		    parameters: { 
 				// Info for all carts
-				'gidShoppingCart' : $('shopping_cart_gid').value,
+				'gidShoppingCart' : $J('#shopping_cart_gid').val() || -1,
+				'gidReplayOfTransID' : $J('#gid_replay' ).val() || -1,
 				'PaymentMethod' : sPaymentMethod,
 				'abortPendingTransactions' : ( $('cancel_pending').checked ? 1 : 0 ),
 		    	
@@ -666,8 +667,8 @@ function InitializeTransaction()
 				'GifteeEmail' : giftee_email,
 				'GifteeName' : giftee_name,
 				'GiftMessage' : gift_message,
-				'GiftSentiment' : gift_sentiment,
-				'GiftSignature' : gift_signature, 
+				'Sentiment' : gift_sentiment,
+				'Signature' : gift_signature,
 				
 				'BankAccount' : $('bank_account').value,
 				'BankCode' : $('bank_code').value,
@@ -755,7 +756,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -995,7 +996,8 @@ function GetFinalPriceAndUpdateReviewTab()
 	
 				var transid = $('transaction_id').value;
 		var microtxnid = $('microtxn_id') ? $('microtxn_id').value : -1;
-		var cart = $('cart_id') ? $('cart_id').value : -1;
+		var cart = $J('#shopping_cart_gid' ).val() || -1;
+		var gidReplayOfTransID = $J('#gid_replay' ).val() || -1;
 		new Ajax.Request('https://store.steampowered.com/checkout/getfinalprice/',
 		{
 		    method:'get',
@@ -1004,7 +1006,8 @@ function GetFinalPriceAndUpdateReviewTab()
 				'transid' : transid,
 				'purchasetype' : g_bIsGiftForm ? 'gift' : 'self',
 				'microtxnid' : microtxnid,
-				'cart' : cart
+				'cart' : cart,
+				'gidReplayOfTransID' : gidReplayOfTransID
 			},
 		    onSuccess: function(transport){
 		    	g_bGetFinalPriceRunning = false;
@@ -1169,13 +1172,13 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'moneybookers' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'MoneyBookers transactions are authorized through the MoneyBookers website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to MoneyBookers';					
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Skrill transactions are authorized through the Skrill website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Skrill';					
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MoneyBookers customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the MoneyBookers website by clicking the “CONFIRM” button after you have selected your payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the MoneyBookers window before the process is complete.';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Skrill customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the Skrill website by clicking the “CONFIRM” button after you have selected your payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Skrill window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'alipay' )
@@ -1536,22 +1539,22 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'cashu' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CashU customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'onecard' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OneCard customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'molpoints' )
@@ -1726,11 +1729,11 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'pinvalidda' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PinValidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'payvalidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PinValidda customers';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for payvalidda customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
@@ -1741,7 +1744,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MangirKart customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to 15 minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancocreditodeperu' )
@@ -1791,7 +1794,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Trustly customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 			}
@@ -2226,17 +2229,8 @@ function UpdateStateSelectState()
 			$J('#billing_state_select_dselect_container').hide();
 		}
 
-		if ( $('shipping_country').value == 'US' )
-		{
-			$J('#shipping_state_text').hide();
-			$J('#shipping_state_select_dselect_container').show();
-		}
-		else
-		{
-			$J('shipping_state_text').show();
-			$J('shipping_state_select_dselect_container').hide();
-		}
-	} 
+		Shipping_UpdateStateSelectState();
+	}
 	catch( e ) 
 	{
 		ReportCheckoutJSError( 'Failed in UpdateStateSelectState()', e );
@@ -2466,6 +2460,7 @@ function UpdatePaymentInfoForm()
 		var bShowPaymentSpecificNote = false;
 		var bShowSaveMyAddress = false;
 		var bShowStoredPayPalDetails = false;
+		var bDisabledPaymentMethod = false;
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
 		
@@ -2600,6 +2595,14 @@ function UpdatePaymentInfoForm()
 			$( 'payment_info_form' ).onsubmit = function() { OnSteamAccountSelected(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
+		else if ( method.value == 'disabled' )
+		{
+			bShowAddressForm = false;
+			bShowPaymentSpecificNote = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
+		}
+		
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
@@ -2666,6 +2669,9 @@ function UpdatePaymentInfoForm()
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
 		
+		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'black' : 'none';
+		$('youll_get_to_review').style.display = strAllowPaymentMethod;
+		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 	} 
 	catch( e ) 
 	{
@@ -2713,95 +2719,14 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 	g_bAutoSubmitPaymentInfo = bAutoSubmitPaymentInfo;
 		var errorString = '';
 
-		var rgBadFields = { 
-		shipping_first_name : false,
-		shipping_last_name : false,
-		shipping_address : false,
-		shipping_city : false,
-		shipping_state_text : false,
-		shipping_phone : false,
-		shipping_postal_code : false,
-		shipping_state_select_trigger: false
-	}
 	
-	try 
+
+	var rgBadFields = {};	// Shipping_VerifyAddressFields will fill this in, but it doesn't look like we use it anywhere
+
+	try
 	{
-		if ( $( 'shipping_first_name' ).value.length < 1 )
-		{
-			errorString += 'Please enter a first name for the shipping address.<br/>';
-			rgBadFields.first_name = true;
-		}
-			
-		if ( $( 'shipping_last_name' ).value.length < 1 )
-		{
-			errorString += 'Please enter a last name for the shipping address.<br/>';
-			rgBadFields.last_name = true;
-		}
-			
-		if ( $( 'shipping_address' ).value.length < 1 )
-		{
-			errorString += 'Please enter your shipping address.<br/>';
-			rgBadFields.shipping_address = true;
-		}
-		
-				var regExPOBox = /P\.?O\.?\s+Box\s+#?\d+/i;
-		if ( regExPOBox.test( $( 'shipping_address' ).value ) )
-		{
-			errorString += 'Delivery of your order cannot be sent to a P.O. Box address.<br/>';
-			rgBadFields.shipping_address = true;
-		}
-			
-		if ( $( 'shipping_city' ).value.length < 1 )
-		{
-			errorString += 'Please enter your shipping city.<br/>';
-			rgBadFields.shipping_city = true;
-		}
-			
-				if  ( $( 'shipping_country' ).value == 'US' )
-		{
-			if ( $('shipping_state_select').value.length < 1 )
-			{
-				errorString += 'Please enter a State or Province.<br/>';
-				rgBadFields.shipping_state_select_trigger = true;
-			}
-		}
-	
-		if ( $( 'shipping_phone' ).value.length < 3 )
-		{
-			errorString += 'Please enter your shipping phone number, including area code.<br/>';
-			rgBadFields.shipping_phone = true;
-		}
-		else if  ( $( 'shipping_country' ).value == 'US' )
-		{
-			// Expect 10 digits if in the US, we'll make sure we at least have that many digits
-			var num = $( 'shipping_phone').value;
-			var digitsFound = 0;
-			for ( i = 0; i < num.length; ++i )
-			{
-				var c = num.charAt(i);
-				if ( c >= '0' && c <= '9' )
-					++digitsFound;
-			}
-			if ( digitsFound < 10 )
-			{
-				errorString += 'Please enter your shipping phone number, including area code.<br/>';
-				rgBadFields.shipping_phone = true;
-			}
-		}
-				
-		if ( $( 'shipping_country' ).value == 'US' )
-		{
-			if ( $( 'shipping_postal_code' ).value.length < 5 )
-			{
-				errorString += 'Please enter your zip or postal code.<br/>';
-				rgBadFields.shipping_postal_code = true;
-			}
-		}
-		else if ( $( 'shipping_postal_code' ).value.length < 1 )
-		{
-			errorString += 'Please enter your zip or postal code.<br/>';
-			rgBadFields.shipping_postal_code = true;
-		}
+		errorString = Shipping_VerifyAddressFields( rgBadFields );
+
 	} 
 	catch( e ) 
 	{
@@ -2839,50 +2764,30 @@ function VerifyShippingAddress()
 				g_bVerifyShippingAddressCallRunning = true;
 		
 				AnimateSubmitPaymentInfoButton();
-		
-		new Ajax.Request('https://store.steampowered.com/checkout/verifyshippingaddress/',
-		{
-		    method:'post',
-		    parameters: { 
-				'ShippingFirstName' : $('shipping_first_name') ? $('shipping_first_name').value : '',
-				'ShippingLastName' : $('shipping_last_name').value,
-				'ShippingAddress' : $('shipping_address').value,
-				'ShippingAddressTwo' : $('shipping_address_two').value,
-				'ShippingCountry' : $('shipping_country').value,
-				'ShippingCity' : $('shipping_city').value,
-				'ShippingState' : ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value),
-				'ShippingPostalCode' : $('shipping_postal_code').value,
-				'ShippingPhone' : $('shipping_phone').value,
-			},
-		    onSuccess: function(transport){
-		    	g_bVerifyShippingAddressCallRunning = false;
-				if ( transport.responseText ){
-					try {
-						var result = transport.responseText.evalJSON(true);
-		      		} catch ( e ) {
-		      			// Failure
-		      			OnVerifyShippingAddressFailure();
-		      		}
-		      	   	// Success...
-		      	   	if ( result.success == 1 )
-		      	   	{
-		      	   		OnVerifyShippingAddressSuccess( result );
-		      	   		return;
-		      	   	}
-		      	   	else
-		      	   	{
-		      	   		OnVerifyShippingAddressFailure();
-		      	   		return;
-		      	   	}
-			  	}
-			  	
-								OnVerifyShippingAddressFailure();
-		    },
-		    onFailure: function(){
-								g_bVerifyShippingAddressCallRunning = false;
-				OnVerifyShippingAddressFailure();
-			}
-		});
+
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+			{
+				onSuccess: function( result ) {
+					g_bVerifyShippingAddressCallRunning = false;
+					// Success...
+					if ( result.success == 1 )
+					{
+						OnVerifyShippingAddressSuccess( result );
+						return;
+					}
+					else
+					{
+						OnVerifyShippingAddressFailure();
+						return;
+					}
+
+										OnVerifyShippingAddressFailure();
+				},
+				onFailure: function(){
+										g_bVerifyShippingAddressCallRunning = false;
+					OnVerifyShippingAddressFailure();
+				}
+			} );
 	} 
 	catch(e) 
 	{
@@ -2901,48 +2806,10 @@ function OnVerifyShippingAddressSuccess( result )
 		}
 		else
 		{
-			$('corrected_shipping_address').value = result.correctedAddress.address1.value;
-			$('corrected_shipping_address_two').value = result.correctedAddress.address2.value;
-			$('corrected_shipping_city').value = result.correctedAddress.city.value;
-			$('corrected_shipping_state').value = result.correctedAddress.state.value;
-			$('corrected_shipping_postal_code').value = result.correctedAddress.postcode.value;
-			
-						$('shipping_info_verify_address_entered').innerHTML = '';
-			if ( !result.correctedAddress.address1.matches )
-			{
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.address2.matches && $('shipping_address_two').value )
-			{
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address_two').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
-			{ 
-				$('shipping_info_verify_address_entered').innerHTML += $('shipping_city').value + ', ' + ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value) + ' ' + $('shipping_postal_code').value + '<br/>';
-			}
-			
-						$('shipping_info_verify_address_corrected').innerHTML = '';
-
-			if ( !result.correctedAddress.address1.matches )
-			{
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.address2.matches && $('corrected_shipping_address_two').value )
-			{
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address_two').value + '<br/>';
-			}
-			
-			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
-			{ 
-				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_city').value + ', ' + $('corrected_shipping_state').value + ', ' + $('corrected_shipping_postal_code').value + '<br/>';
-			}
-			
+			Shipping_UpdateFieldsFromVerificationCall( result );
 			$('shipping_info_confirm').show();
 			$('shipping_info_entry').hide();
-		
+
 						var error_text = 'We\'ve found a suggestion for your shipping address.';
 			
 			DisplayErrorMessage( error_text );
@@ -2967,18 +2834,7 @@ function ShippingAddressVerified( bUseCorrected )
 {
 	if ( bUseCorrected )
 	{
-		$('shipping_address').value = $('corrected_shipping_address').value;
-		$('shipping_address_two').value = $('corrected_shipping_address_two').value;
-		$('shipping_city').value = $('corrected_shipping_city').value;
-		if ( $('shipping_country').value == 'US' )
-		{
-			 $('shipping_state_select').value = $('corrected_shipping_state').value;
-		}
-		else
-		{
-			$('shipping_state_text').value = $('corrected_shipping_state').value;
-		}
-		$('shipping_postal_code').value = $('corrected_shipping_postal_code').value;
+		Shipping_UpdateAddressWithCorrectedFields();
 	}
 	
 	ShowShippingAddressForm();
@@ -3184,6 +3040,14 @@ function SubmitPaymentInfoForm()
 				{
 					errorString += 'Please enter a State or Province.<br/>';
 					rgBadFields.billing_state_select_trigger = true;
+				}
+								if ( $('billing_state_select').value == 'AE' || $('billing_state_select').value == 'AP' || $('billing_state_select').value == 'AA' )
+				{
+					if ( $('billing_city').value != 'APO' && $('billing_city').value != 'FPO' && $('billing_city').value != 'DPO' )
+					{
+						errorString += 'Please enter a valid military address.<br/>';
+						rgBadFields.billing_city = true;
+					}
 				}
 			}
 	
@@ -3493,12 +3357,17 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'moneybookers' && providerPaymentMethod == 10 )
 			{
-				$('payment_method_review_text').innerHTML = 'MoneyBookers';
+				$('payment_method_review_text').innerHTML = 'Skrill';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'alipay' && providerPaymentMethod == 11 )
 			{
 				$('payment_method_review_text').innerHTML = 'AliPay';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'unionpay' && providerPaymentMethod == 78 )
+			{
+				$('payment_method_review_text').innerHTML = 'UnionPay';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'yandex' && providerPaymentMethod == 12 )
@@ -3671,7 +3540,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'CashU';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
-			else if ( method.value == 'onecard' && providerPaymentMethod == 63 )
+			else if ( method.value == 'onecard' && providerPaymentMethod == 66 )
 			{
 				$('payment_method_review_text').innerHTML = 'OneCard';
 				$('checkout_review_payment_info_area').style.display = 'none';
@@ -3763,7 +3632,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'pinvalidda' && providerPaymentMethod == 71 )
 			{
-				$('payment_method_review_text').innerHTML = 'PinValidda';
+				$('payment_method_review_text').innerHTML = 'payvalida';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mangirkart' && providerPaymentMethod == 72 )
@@ -4184,7 +4053,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 				case 60:
 				case 61:
 				case 62:
-				case 63:
+				case 66:
 				case 31:
 				case 34:
 				case 36:
@@ -4363,6 +4232,7 @@ function DisplayReceiptPage()
 {
 	$('cart_area').style.display = 'none';
 	$('receipt_area').style.display = 'block';
+	$('pending_receipt_area').style.display = 'none';
 
 	if ( $('checkout_pipeline') && $('receipt_pipeline') )
 	{
@@ -4432,7 +4302,6 @@ function DisplayPendingReceiptPage()
 		case 'denizbank':
 		case 'ptt':
 		case 'cashu':
-		case 'onecard':
 		case 'efecty':
 		case 'baloto':
 		case 'pagoefectivo':

@@ -93,6 +93,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	text-align: center;
 }
 
 .screenshot_holder {
@@ -105,6 +106,12 @@
 .highlight_player_item img {
 	width: 100%;
 	display: block;
+}
+
+.highlight_player_item.tall img {
+	width: auto;
+	height: 100%;
+	display: inline-block;
 }
 
 .highlight_overflow {
@@ -236,6 +243,16 @@ img.game_header_image_full {
     font-size: 13px;
     line-height: 18px;
     padding-right: 16px;
+}
+.item_store .game_description_snippet
+{
+	font-size: 14px;
+}
+.item .game_description_snippet
+{
+	max-height: 300px;
+	margin-bottom: 20px;
+	font-size: 15px;
 }
 
 .game_review_summary {
@@ -370,7 +387,6 @@ img.game_header_image_full {
 }
 
 .notice_box_content_blue_box {
-    width: 584px;
     color: #67c1f5;
     font-size: 14px;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -769,6 +785,10 @@ img.game_header_image_full {
 	line-height: 32px;
 	font-size: 25px;
 	text-align: center;
+}
+
+.game_purchase_discount .discount_prices {
+	height: 32px;
 }
 
 .game_purchase_discount .discount_original_price {
@@ -1535,6 +1555,10 @@ a.friend_block_holder:hover {
 	html.responsive img.package_header {
 		height: auto;
 	}
+
+	html.responsive .notice_box_content {
+		width: auto;
+	}
 }
 
 @media screen and ( max-width: 680px )
@@ -1553,6 +1577,28 @@ a.friend_block_holder:hover {
 	}
 }
 
+@media screen and ( max-width: 479px )
+{
+	html.responsive .bundle img {
+		max-width: 30%;
+	}
+
+	html.responsive .bundle .tab_item_name {
+		font-size: 1em;
+	}
+
+	html.responsive .bundle .tab_item_content {
+		white-space: inherit;
+	}
+
+	html.responsive .bundle .tab_item_discount {
+		margin-right: 10px;
+	}
+
+	html.responsive .bundle .tab_item_discount.no_discount {
+		margin-top: 45px;
+	}
+}
 
 .DRM_notice {
     color: #e1c48a;
@@ -1849,7 +1895,8 @@ img.package_header {
 	height: 75px;
 	float: right;
 	cursor: pointer;
-	margin-top: -17px;
+	margin-top: 6px;
+	margin-bottom: -26px;
 	margin-right: -72px;
 	background-size: 100% 200%;
 }
@@ -2511,6 +2558,7 @@ div.early_access_announcements .divider {
 	height: 35px;
 	background-color: rgba(0,0,0,0.8);
 	width: 100%;
+	text-align: left;
 }
 .html5_video_overlay .play_button {
 	width: 19px;
@@ -3149,6 +3197,7 @@ select.gray_bevel {
 	position: relative;
 	margin-top: 6px;
 	min-height: 75px;
+	overflow: hidden;
 }
 
 .steam_curator_recommendation
@@ -3386,6 +3435,94 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	display: none;
 }
 
+.castandcrewtitle
+{
+	font-family: "Motiva Sans Bold", "Motiva Sans",  Arial, Helvetica, sans-serif;
+	width: 150px;
+	float: left;
+}
+
+.castandcrewlist
+{
+	margin-left: 150px;
+}
+
+
+
+/* item store items */
+.item_store_items_game_page_container
+{
+	margin-top: 2px;
+	position: relative;
+	padding: 10px;
+
+	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.item_store_overlay_link
+{
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+.item_store_overlay_link:hover
+{
+	opacity: 1;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid #67c1f5;
+}
+.item_store_overlay_link a
+{
+	margin-top: 60px;
+}
+
+.item_def_grid_item
+{
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-right: 4px;
+}
+.item_store_items_block .item_def_grid_item:nth-child(5n)
+{
+	margin-right: 0px;
+}
+
+.item_def_icon
+{
+	width: 94px;
+	height: 94px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0);
+}
+.item_def_grid_item:hover .item_def_icon
+{
+	border: 1px solid rgba(0,0,0,0);
+}
+
+.item_def_grid_item .item_def_price
+{
+	line-height: 20px;
+	float: right;
+	font-size: 12px;
+}
+
+.item_def_icon_container
+{
+	position: relative;
+	background: #111111;
+}
+
+/* responsive */
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .game_area_play_stats {
@@ -3401,6 +3538,11 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	html.responsive #game_highlights .rightcol {
 		width: auto;
 		height: auto;
+	}
+
+	html.responsive #game_highlights a {
+		height: 100%;
+		position: relative;
 	}
 
 	html.responsive .highlight_overflow {
