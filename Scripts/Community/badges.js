@@ -303,7 +303,7 @@ function BuildBoosterModal( strTitle, appid )
 	var $PostUnpackActions = $J('<div/>', {'class': 'booster_unpack_actions post_unpack' } );
 
 	var $BtnBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium', 'href': g_strProfileURL + '/gamecards/' + appid + '/' } );
-	$BtnBadgeProgress.append( $J('<span/>').text('Просмотреть прогресс значка') );
+	$BtnBadgeProgress.append( $J('<span/>').text('View badge progress') );
 
 	var $BtnFoilBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium foil_badge_progress', 'href': g_strProfileURL + '/gamecards/' + appid + '/?border=1' } );
 	$BtnFoilBadgeProgress.append( $J('<span/>').text('View foil badge progress') );
