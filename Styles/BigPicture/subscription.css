@@ -1,4 +1,6 @@
 
+@define greyish_medium: #8f98a0;
+@define almost_white: #c7d5e0;
 @define green_in_page: #a3cf06;
 @define section_bg_color: #000000ff;
 
@@ -20,45 +22,31 @@
 
 .PurchaseOptionPageBody #LeftColumn
 {
-	width: 730px;
-	margin-left: 80px;
-	padding-top: 32px;
+	margin-left: 98px;
+	margin-top: 38px;
 	flow-children: down;
-	overflow: clip scroll;
-	height: 940px;
-	padding-bottom: 140px;
 }
 
 .OptionHeader
 {
 	font-size: 22px;
 	color: #2f89bd;
-	margin: 0px 0px 5px 0px;
+	margin: 20px 0px 5px 10px;
 }
 
 .PurchaseOptionBtn
 {
 	width: 690px;
 	height: 96px;
-	margin: 0px 10px 4px 0px;
+	margin: 4px 10px 4px 10px;
 	padding: 10px 0px 0px 24px;
 	flow-children: down;
 	color: #67c1f5;
 	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dff ), to( #09334d00 ) );
 }
-.PurchaseOptionBtn:selected
-{
-	width: 730px;
-	margin-right: 0px;
-	padding-right: 40px;
-	background-color: gradient( linear, 0% 100%, 100% 100%, from( #1579a0 ), to( #153b55 ) );
-}
 
 .PurchaseOptionBtn:focus
 {
-	width: 730px;
-	margin-right: 0px;
-	padding-right: 40px;
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
@@ -92,15 +80,15 @@
 
 .PurchaseOptionPageBody #LoadedContent
 {
-	width: 1170px;
+	width: 1070px;
 	height: 100%;
-	padding-top: 38px;
-	background-color: gradient( linear, 0 0, 100% 0, from( #2d637f59 ), to( #143f6500 ) );
+	margin-left: 30px;
+	margin-top: 38px;
 }
 
 .SubscriptionDetails
 {
-	width: 1100px;
+	width: 100%;
 	height: 100%;
 }
 
@@ -110,17 +98,6 @@
 	height: 100%;
 	flow-children: down;
 	overflow: clip scroll;
-	padding: 60px 32px 140px 32px;
-}
-
-.PackageGroups_ctn
-{
-	height: 710px;
-	width: 100%;
-	flow-children: down;
-	overflow: clip scroll;
-	padding-bottom: 140px;
-	margin-bottom: 4px;
 }
 
 .PackageInfoHeader
@@ -132,92 +109,41 @@
 
 .PackageTitle
 {
-	width: 100%;
-	font-size: 45px;
+	font-size: 30px;
 	color: white;
 	margin-bottom: 8px;
-	white-space: normal;
-	font-weight: light;
+	white-space: nowrap;
 }
 
 .AddToCartRow
 {
 	width: 100%;
 	flow-children: right;
-	height: 110px;
-	padding: 12px 0px;
 }
 
 .AddToCart,
 .AddToAccount
 {
-	height: 80px;
-
 	padding: 10px 0px 0px 24px;
-
+	flow-children: down;
 	color: #67c1f5;
-	background-color: store_transparent_module;
-	box-shadow: fill #00000066 -2px -2px 4px 4px;
-
-	margin-right: 10px;
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dff ), to( #09334d00 ) );
 	padding: 10px 20px;
 	font-size: 26px;
-	border-radius: 3px;
-
-	transition-property: pre-transform-scale2d;
-	transition-duration: supershortduration;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-}
-
-.AddToCart
-{
-	flow-children: right;
 }
 
 .AddToCart:focus,
 .AddToAccount:focus
 {
-	color: #ffffff;
-	background-color: store_active_module;
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
-	box-shadow: #a3cf06 -4.5px -4.5px 16px 9px;
-
-	animation-name: purchase-button-glow-movement-no-fill;
+	animation-name: nx-button-focus;
 	animation-duration: longduration;
 	animation-delay: shortduration;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-}
-
-.AddToCart Label,
-.AddToAccount Label
-{
-	vertical-align: center;
-	color: #a3cf06;
-}
-
-.AddToCart:focus Label,
-.AddToAccount:focus Label
-{
-	color: #ffffff;
-}
-
-.AddToAccount LoadingThrobber
-{
-	visibility: collapse;
-	horizontal-align: center;
-}
-
-.AddToAccount.AddingLicense Label
-{
-	opacity: 0.0;
-}
-
-.AddToAccount.AddingLicense LoadingThrobber
-{
-	visibility: visible;
 }
 
 .AddToCartPrice
@@ -226,34 +152,22 @@
 	width: 100%;
 	height: 100%;
 	background-color: #00000044;
+	margin-left: 8px;
 	font-size: 26px;
 	color: detailsdatalabel;
 	padding-left: 10px;
 }
-
 
 .AddToCartPrice .DiscountBlock
 {
 	vertical-align: center;
 }
 
-.PackageGroups_ctn .AddToCartPrice
-{
-	horizontal-align: right;
-	width: fit-children;
-	background-color: none;
-}
-.PackageGroups_ctn .AddToCartRow
-{
-	height: 80px;
-	padding-left: 12px;
-}
-
 .PackageIncludesHeader
 {
+	margin-top: 30px;
 	font-size: 22px;
-	color: #2f89bd;
-	margin: 30px 0px 10px 0px;
+    color: #2f89bd;
 }
 
 .AppInPackage
@@ -261,23 +175,18 @@
 	padding: 8px;
 	flow-children: right;
 	color: #67c1f5;
-	background-color: nontransparent_module;
-	border-radius: 3px;
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dff ), to( #09334d00 ) );
 	font-size: 26px;
 	width: 100%;
-	margin-bottom: 10px;
-
-	box-shadow: fill #00000066 -2px -2px 4px 4px;
+	margin-top: 4px;
 }
 
 .AppInPackage:focus
 {
 	color: #082846ff;
-	background-color: nontransparent_action_module;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement-no-fill;
+	animation-name: nx-button-focus;
 	animation-duration: longduration;
 	animation-delay: shortduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -324,44 +233,24 @@
 
 .SubscriptionPage
 {
-	padding: 0px 80px;
-}
-
-.PackagePurchaseText
-{
-	color: greyish_medium;
-	font-size: 26px;
-}
-
-.PackagePurchaseWarning
-{
-	color: app_warning_color;
-	font-size: 26px;
+	padding: 38px 98px;
 }
 
 .PackageSavings
 {
 	width: 100%;
-	height: fit-children;
 	padding: 10px;
 	background-color: #00000044;
 	flow-children: down;
 	margin-top: 10px;
-	font-size: 24px;
 
-	color: #2f89bd;
-}
-
-.PackageSavings .Savings
-{
-	color: #a3cf06;
+	color: almost_white;
 }
 
 .SavingsDesc
 {
 	width: fill-parent-flow( 1.0 );
 	text-align: right;
-	font-size: 24px;
 }
 
 .SavingsAmount
@@ -374,72 +263,19 @@
 {
 	font-size: 24px;
 	color: almost_white;
-	margin-bottom: 6px;
 }
 
 .PackageGroupOption
 {
 	width: 100%;
-	margin-top: 4px;
+	margin-top: 10px;
 	flow-children: down;
 	background-color: #00000044;
-}
-.PackageGroupOption:descendantfocus
-{
-	background-color: #57666e44;
 }
 
 .PackageGroupOptionTitle
 {
 	margin: 8px;
-	font-size: 30px;
+	font-size: 24px;
 	color: white;
-	vertical-align: center;
-}
-VerticalScrollBar
-{
-	opacity: 0;
-}
-
-// important notes
-.PurchaseNoteBtn
-{
-	margin: 27px 0px 40px 0px;
-}
-
-.PurchaseNoteSection
-{
-	width: 100%;
-	height: 100%;
-	flow-children: down;
-	padding: 60px 30px 140px 30px;
-}
-
-.PurchaseNoteSection Label
-{
-	width: 100%;
-}
-
-.PurchaseNoteHTML
-{
-	color: almost_white;
-    font-size: 26px;
-}
-
-.PurchaseNoteHTML b
-{
-	color: app_warning_color;
-}
-
-.PurchaseNoteHTML strong
-{
-	font-weight: bold;
-}
-
-.PurchaseNoteHR
-{
-	width: 100%;
-	height: 3px;
-	margin: 14px 0px 14px 0px;
-	background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #4e5d6b00 ), color-stop( 0.5, #4e5d6bff ), color-stop( 1.0, #4e5d6b00 ) );
 }
