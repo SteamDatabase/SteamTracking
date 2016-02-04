@@ -82,10 +82,7 @@ function CloseSupportMessageWindow()
 					}
 					else
 					{
-						if ( window.opener )
-							window.close();
-						else
-							window.location = 'https://store.steampowered.com/account/';
+						window.close();
 					}
 				}
 				else if ( transport.responseText )
