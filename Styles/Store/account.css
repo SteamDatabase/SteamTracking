@@ -1006,7 +1006,7 @@ td.wht_total {
 }
 
 .account .page_header_ctn {
-	background: rgba(0, 0, 0, 0) url("https://steamstore-a.akamaihd.net/public/images/v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
+	background: rgba(0, 0, 0, 0) url("http://store.akamai.steamstatic.com/public/images//v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
 }
 
 .phone_header_description img{
@@ -1023,20 +1023,6 @@ td.wht_total {
 	margin: 4px 0 8px 0;
 	color: #808891;
 }
-
-.account_change_country_content {
-	background: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 24px;
-	min-height: 324px;
-	float: left;
-	color: #808891;
-	width: inherit;
-}
-
-.account_change_country_block {
-	margin: 20px;
-}
-
 
 @media screen and (max-width: 910px)
 {
@@ -1081,57 +1067,4 @@ td.wht_total {
 		display: none;
 	}
 
-}
-
-
-#enter_address .form_row {
-	margin: 8px 8px 18px 0;
-}
-
-#enter_address label {
-	display: block;
-}
-
-#enter_address input {
-	background-color: #2a3f5a;
-	color: #fff;
-	border: 1px solid #000;
-	border-radius: 1px;
-	box-shadow: 1px 1px 0px #45556c;
-	min-width: 220px;
-	max-width: calc( 100% - 12px );
-	padding: 4px;
-	margin-top: 4px;
-	font-size: 14px;
-}
-
-#enter_address input:disabled {
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
-}
-
-#billing_row_one {
-	float: left;
-}
-
-#billing_row_two {
-	float: left;
-	padding-left: 10px;
-}
-
-#enter_address #billing_state_select_dselect_container {
-	margin-top: 4px;
-}
-
-#enter_address #billing_state_select_trigger {
-	padding: 2px 2px 2px 8px;
-}
-
-#enter_address .btnv6_blue_hoverfade {
-	padding: 6px 18px 6px 18px;
-}
-
-#address_errors {
-	color: red;
 }
