@@ -63,49 +63,55 @@ function Cluster( args )
 
 		} ).trigger('resize.Cluster');
 
-		// ideally we would use scrolling, but implementing our own touch/drag events
-		// 	requires rewriting less of this other stuff
-		this.elScrollArea.on('touchstart.Cluster', function(event) {
+		var $ScrollCtn = this.elScrollArea.parent();
 
-			var fnGetPageX = function( event )
-			{
-				var TouchEvent = event.originalEvent;
-				var rgTouches = TouchEvent ? TouchEvent.touches : null;
-				if ( !rgTouches || rgTouches.length < 1 )
-					return event.pageX || 0;	//probably wrong
-				return rgTouches[0].pageX || 0;
-			}
+		$ScrollCtn.one( 'touchstart', function() {
+			$J(this ).css('overflowX', 'scroll');
+		});
 
 
-			var nSliderValue = _this.slider.GetValue();
-			var nStartDragX = fnGetPageX( event );
-			var tsDragStart = $J.now();
-			var nDelta = 0;
-			_this.bSuppressScrolling = true;
-
-			$J(document ).on('touchmove.ClusterDrag', function( event ) {
-				nDelta = fnGetPageX( event ) - nStartDragX;
-
-				_this.slider.SetValue( nSliderValue - nDelta );	// will clamp
-				_this.sliderOnChange( _this.slider.GetValue(), true );
-			});
-			$J(document ).on('touchend.ClusterDrag', function(event) {
-				$J(document ).off('.ClusterDrag');
-
-				// if the user swiped quickly, then we'll just jump to the next guy even if we'd normally stop.
-				var tsDragEnd = $J.now();
-				var nRatePerSecond = Math.abs( nDelta ) / ( tsDragEnd - tsDragStart ) * 1000;
-				if ( nRatePerSecond > _this.nCapWidth && Math.abs( nDelta ) < _this.nCapWidth / 2 )
-				{
-					// it was quick, so jump to the next guy
-					_this.slider.SetValue( nSliderValue + _this.nCapWidth * ( nDelta > 0 ? -1 : 1 ) );
-				}
-
-				_this.sliderOnChange( _this.slider.GetValue(), false );
-
+		// ScheduleFinishScroll makes sure we snap to a cap after the user is done scrolling.
+		var nFinishScrollInterval;
+		var fnScheduleFinishScroll = function() {
+			if ( nFinishScrollInterval )
+				window.clearTimeout( nFinishScrollInterval );
+			nFinishScrollInterval = window.setTimeout( function() {
 				_this.bSuppressScrolling = false;
-				_this.startTimer();
-			});
+				_this.sliderOnChange( _this.slider.GetValue(), false );
+			}, 200 );
+		};
+
+		var bMouseDown = false; // or in touch
+		$ScrollCtn.on('mouseDown.cluster', function() {
+			bMouseDown = true;
+			if ( nFinishScrollInterval )
+				window.clearTimeout( nFinishScrollInterval );
+			_this.bSuppressScrolling = true;
+		});
+		$ScrollCtn.on('mouseUp.cluster', function() {
+			bMouseDown = false;
+			fnScheduleFinishScroll();
+		} );
+
+		$ScrollCtn.on('scroll.Cluster', function(event) {
+			if ( $ScrollCtn.is(':animated') )
+				return;
+
+			var value = $ScrollCtn.scrollLeft();
+
+			_this.slider.SetValue( value );	// will clamp
+
+			_this.nCurCap = Math.round( value / _this.nCapWidth );
+			_this.ensureImagesLoaded();
+
+			_this.bSuppressScrolling = false;
+			_this.startTimer();
+
+			// if no mouse down, then we don't know when to finish up the scroll so schedule now.
+			//	this function is called after animations end as well, but they should always be on a cap so
+			//	we don't need to snap.
+			if ( !bMouseDown && ( value % _this.nCapWidth ) != 0 )
+				fnScheduleFinishScroll();
 		});
 	}
 
@@ -166,11 +172,11 @@ Cluster.prototype.scrollToOffset = function( nXOffset, nDuration, fnOnComplete )
 {
 	if ( nDuration )
 	{
-		this.elScrollArea.animate( { left: '-' + nXOffset + 'px' }, nDuration, null, fnOnComplete );
+		this.elScrollArea.parent().animate( { scrollLeft: nXOffset }, nDuration, null, fnOnComplete );
 	}
 	else
 	{
-		this.elScrollArea.css( 'left', '-' + nXOffset + 'px' );
+		this.elScrollArea.parent().scrollLeft( nXOffset );
 		fnOnComplete && fnOnComplete();
 	}
 },
@@ -185,7 +191,9 @@ Cluster.prototype.scrollRight = function( event, bAutoScroll )
 	var bWrappedAround = false;
 
 	var _this = this;
-	this.elScrollArea.stop();
+	var $ScrollCtn = this.elScrollArea.parent();
+
+	$ScrollCtn.stop();
 	if ( this.nCurCap < this.cCapCount )
 	{
 		var cb = function() { _this.onCapsuleFullyVisible() };
@@ -237,27 +245,42 @@ Cluster.prototype.sliderOnChange = function( value, bInDrag )
 		this.nCurCap = Math.round( value / this.nCapWidth );
 		this.ensureImagesLoaded();
 
-		this.elScrollArea.stop();
+		this.elScrollArea.parent().stop();
 		this.scrollToOffset( Math.round(value) );
 	}
 	else if ( !this.bInScroll )
 	{
 		this.nCurCap = Math.round( value / this.nCapWidth );
 		var nSnapValue = this.nCurCap * this.nCapWidth;
+		var $ScrollCtn = this.elScrollArea.parent();
 
-		var nTravelDist = Math.abs( nSnapValue + parseInt( this.elScrollArea.css('left') ) );
+		var nTravelDist = Math.abs( this.elScrollArea.parent().scrollLeft()  - nSnapValue );
 		var nAnimationSpeed = Math.min( 0.8, Math.max( 0.2, nTravelDist / 2500 ) ) * 1000;
+
+		// special case for when we have scrolled past the end to wrap around
+		var bWrapAround = false;
+		var nScrollLeft = $ScrollCtn.scrollLeft();
+		var nCurCapScroll = Math.round( nScrollLeft / this.nCapWidth );
+		if ( nCurCapScroll >= this.cCapCount )
+		{
+			bWrapAround = true;
+			nSnapValue += this.nCapWidth;
+		}
+
 
 		if ( nSnapValue != value )
 		{
-			this.slider.SetValue( nSnapValue, nAnimationSpeed );
+			this.slider.SetValue( bWrapAround ? 0 : nSnapValue, nAnimationSpeed );
 		}
 		if ( nTravelDist )
 		{
 			this.ensureImagesLoaded();
 			var _this = this;
 			var cb = function() { _this.onCapsuleFullyVisible() };
-			this.elScrollArea.animate( { left: '-' + nSnapValue + 'px' },  nAnimationSpeed, null, cb );
+			if ( bWrapAround )
+				cb = function() { _this.scrollToOffset(0); _this.onCapsuleFullyVisible() };
+
+			_this.scrollToOffset( nSnapValue, nAnimationSpeed, cb );
 		}
 	}
 }

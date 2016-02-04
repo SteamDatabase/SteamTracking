@@ -30,9 +30,6 @@ RemotePanel
 	flow-children: right;
 	overflow: clip;
 }
-.HomeBody .NxGridButtonRow {
-	margin-top: 38px;
-}
 
 #LoadedContent
 {
@@ -41,8 +38,40 @@ RemotePanel
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 
 	padding-top: 25px;
-	padding-left: 20px;
-	margin-left: -42px;
+	padding-left: 22px;
+	margin-left: -22px;
+}
+
+
+////////////////////////////////////
+// Nav
+////////////////////////////////////
+.NxLeftNavButtonAction.Cart
+{
+	color: #a3cf06;
+	border-color: #a3cf06;
+	margin-bottom: 20px;
+}
+
+.NxLeftNavButtonAction.Cart Label
+{
+	color: #a3cf06;
+}
+.NxLeftNavButtonAction.Cart .icon_cart
+{
+	wash-color: #a3cf06;
+}
+
+.NxLeftNavButtonAction.Cart:focus,
+.NxLeftNavButtonAction.Cart:focus Label
+{
+	color: #072e47;
+	border-color: white;
+}
+
+.GamesHorizRule
+{
+	height: 20px;
 }
 
 
@@ -54,31 +83,99 @@ RemotePanel
 	flow-children: down;
 	overflow: squish scroll;
 	padding-bottom: 150px;
+	padding-top: 40px;
+	height: 995px;
 }
 
 .FeaturedWrapping
 {
 	flow-children: right-wrap;
+	z-index: 0;
+}
+.FeaturedWrapping:descendantfocus
+{
+	z-index: 5;
+}
+.FeaturedWrapping:hover
+{
+	z-index: 6;
+}
+
+.FeaturedPromoButton
+{
+	//visibility: collapse;
+	width: 1596px;
+	height: 363px;
+
+	margin: -2px 0px 0px -15px;
+
+	border-radius: 3px;
+
+	pre-transform-scale2d: 0.98;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.15s;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	z-index: -100;
+}
+
+.FeaturedPromoButton:focus,
+.FeaturedPromoButton:hover
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	background-color: #b4dff7;
+
+	pre-transform-scale2d: 1;
+	z-index: 200;
+}
+.FeaturedPromoButton Image
+{
+	width: 1586px;
+	height: 353px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	border-radius: 3px;
 }
 
 .FeaturedSpotlightRow
 {
 	flow-children: right;
+	z-index: 0;
+}
+
+.FeaturedSpotlightRow:descendantfocus
+{
+	z-index: 5;
+}
+
+.FeaturedSpotlightRow:hover
+{
+	z-index: 6;
 }
 
 .FeaturedSpotlightRow .FeaturedWrapping
 {
-	width: 1066px;
-	height: 720px;
+	width: 1046px;
+	height: 700px;
 }
 
 .Spotlight
 {
-	width: 520px;
-	height: 733px;
+	width: 540px;
+	height: 728px;
 	margin: 10px;
 
-	margin: -5px -10px;
+	margin: -15px -15px;
+
+	border-radius: 3px;
 
 	pre-transform-scale2d: 0.96;
 
@@ -89,13 +186,35 @@ RemotePanel
 	z-index: -100;
 }
 
-.Spotlight:focus
+.Spotlight .SpotlightBackground
+{
+	width: 530px;
+	height: 718px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	border-radius: 3px;
+
+	background-color: nontransparent_module;
+
+	box-shadow: module_shadow;
+}
+.Spotlight:focus .SpotlightBackground,
+.Spotlight:hover .SpotlightBackground
+{
+	box-shadow: none;
+}
+
+.Spotlight:focus,
+.Spotlight:hover
 {
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+	background-color: #b4dff7;
 
 	pre-transform-scale2d: 1;
 	z-index: 200;
@@ -104,139 +223,84 @@ RemotePanel
 .SpotlightDetails
 {
 	flow-children: down;
-	width: 100%;
+	width: 530px;
+	margin: 0px 5px 5px 5px;
+	border-radius: 0px 0px 3px 3px;
+
 	min-height: 160px;
 	vertical-align: bottom;
 	padding: 10px 10px 10px 10px;
 	background-color: nontransparent_module;
 }
-.Spotlight:focus .SpotlightDetails {
-	background-color: action_module;
+.Spotlight:focus .SpotlightDetails,
+.Spotlight:hover .SpotlightDetails {
+	background-color: nontransparent_action_module;
 }
 
 .SpotlightWeeklong
 {
 	background-repeat: no-repeat;
-	background-size: 100%;
-	width: 520px;
+	background-size: cover;
+	background-position: center top;
+	width: 530px;
 	height: 733px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom:5px;
 	background-color: nontransparent_module;
+
+	border-radius: 3px;
 }
 
 .SpotlightWeeklongSubtitle
 {
-	height: fill-parent-flow( 1.0 );
+	height: 100%;
 	align: center center;
 	font-size: 30px;
+	margin-top: 20px;
 	color: greyish_medium;
 }
 
 .SpotlightWeeklongCount
 {
-	margin-top: 450px;
+	margin-top: 420px;
 	horizontal-align: center;
-	font-size: 44px;
+	font-size: 64px;
 	color: white;
 }
 
 .SpotlightImage
 {
-	width: 520px;
+	width: 530px;
+	margin-left: 5px;
+	margin-top: 5px;
+	border-radius: 3px 3px 0px 0px;
 }
 
 .SpotlightTitle
 {
-	font-size: 30px;
+	font-size: 36px;
 	color: detailsdatalabel;
+	font-weight: light;
 }
 
 .SpotlightBody
 {
-	font-size: 22px;
+	font-size: 26px;
 	color: greyish_medium;
 	margin-top: 10px;
 
+}
+.SpotlightBody a
+{
+	color: greyish_medium;
 }
 
 .Spotlight .DiscountBlock
 {
-	font-size: 22px;
+	font-size: 26px;
 	color: greyish_medium;
 	margin-top: 10px;
-}
-
-
-////////////////////////////////////
-// Basic Capsules
-////////////////////////////////////
-.BasicCapsule
-{
-	width: 550px;
-	height: 370px;
-	padding: 0px;
-	background-color: nontransparent_module;
-	flow-children: down;
-	margin: -5px -10px;
-
-	border-radius: 3px;border-radius: 3px;
-
-	box-shadow: module_shadow;
-
-	pre-transform-scale2d: 0.94;
-
-	transition-property: transform, opacity, pre-transform-scale2d;
-	transition-duration: 0.15s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	z-index: -200;
-}
-
-.BasicCapsule:focus
-{
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: longduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-	background-color: action_module;
-
-	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	pre-transform-scale2d: 1.0;
-	z-index: 200;
-}
-
-.BasicCapsuleInfo
-{
-	flow-children: right;
-	font-size: 22px;
-    color: detailsdatalabel;
-    margin-top: 12px;
-
-    transition-property: color;
-    transition-duration: shortduration;
-    transition-timing-function: bigpicture-ease-in-out;
-}
-
-.BasicCapsule:focus .BasicCapsuleInfo
-{
-	color: white;
-}
-
-.BasicCapsuleImage
-{
-	width: 550px;
-	height: 315px;
-}
-
-.BasicCapsuleStatus
-{
-	width: fill-parent-flow( 1.0 );
-	padding-left: 8px;
 }
 
 
@@ -248,74 +312,152 @@ RemotePanel
 	flow-children: right-wrap;
 	overflow: squish scroll;
 	padding-bottom: 150px;
+	padding-top: 40px;
+	height: 995px;
 }
 
 
 ////////////////////////////////////
 // Explore
 ////////////////////////////////////
-.HomeExplore
+.NxRightContentContainer.HomeExplore
 {
-	width: 1350px;
-	height: 832px;
+	padding-top: 46px;
 	flow-children: down;
+	padding-left: 47px;
 }
 
 .ExploreSection
 {
-	padding-top: 8px;
-	padding-left: 14px;
+	padding: 10px;
+	margin: -10px;
 	padding-right: 10px;
-	padding-bottom: 10px;
 	margin-top: 22px;
 	flow-children: down;
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+
+	opacity: 0.8;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+}
+.ExploreSection:descendantfocus
+{
+	opacity: 1;
+}
+.ExploreSection:descendantfocus .ExploreSectionHeader
+{
+	color: #ffffff;
+}
+
+.ExploreButtonHeader
+{
+	font-size: 28px;
+	color: brightblue;
+	font-weight: light;
 }
 
 .DiscoveryQueueSection
 {
 	width: 100%;
-	margin-top: 0px;
+	padding: 10px;
+	margin: -10px;
 }
 
 .DiscoveryQueueApps
 {
-	background-color: #00000022;
-	width: 100%;
+	width: 1350px;
 	height: 218px;
-	margin-top: 8px;
-	padding-left: 10px;
+
+	margin-top: 0px;
+	padding-left: 12px;
+
+	border-radius: 3px;
+	background-color: transparent_module;
 }
 
-.DiscoveryApp
+.DiscoveryQueueSection .DiscoveryQueueApps
 {
-	width: 412px;
-	height: 192px;
-	vertical-align: center;
+ 	width: 874px;
+	box-shadow: module_shadow;
+}
+.DiscoveryQueueApps .app_ctn
+{
+	width: 100%;
+	margin-top: 12px;
+	margin-right: 12px;
 }
 
-.DiscoveryApp_2
+.backToStore
 {
-	transform: translate3d( 325px, 0px, -100px );
+	margin-top: 20px;
+	padding-left: 12px;
+
+	border-radius: 3px;
+	background-color: transparent_module;
+	box-shadow: module_shadow;
+}
+.backToStore:focus
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+.Button.backToStore:focus Label
+{
+	transform: translatex( 0px );
+	color: white;
 }
 
-.DiscoveryApp_3
+.ExploreSectionRow
 {
-	transform: translate3d( 650px, 0px, -150px );
+	width: 1340px;
+	flow-children: right;
+	padding: 10px;
+	margin: -10px;
 }
 
-.DiscoveryApp_4
+.DiscoveryQueueAboutBtn
 {
-	transform: translate3d( 875px, 0px, -225px );
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: down;
+	background-color: transparent_module;
+	margin: 0px 0px 0px 15px;
+	padding: 24px;
+	border-radius: 3px;
+
+	box-shadow: module_shadow;
 }
 
-.DiscoveryApp_5
+.DiscoveryQueueReadMore
 {
-	transform: translate3d( 1100px, 0px, -350px );
+	font-size: 26px;
+	color: greyish_medium;
+	margin-top: 28px;
+	height: 100%;
 }
 
-.DiscoveryQueueApps:focus
+.DiscoveryQueueAboutBtn:focus,
+.DiscoveryQueueAboutBtn:hover
 {
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -323,38 +465,204 @@ RemotePanel
 	animation-direction: normal;
 }
 
-.ExploreSectionHeader
+.DiscoveryExhausted
+{
+	flow-children: down;
+	align: center center;
+}
+
+.DiscoveryExhaustedTitle
+{
+	font-size: 28px;
+	color: #67c1f5ff;
+	horizontal-align: center;
+}
+
+.DiscoveryExhaustedInfo
+{
+	font-size: 24px;
+	color: greyish_medium;
+	horizontal-align: center;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.DiscoveryRefresh
+{
+	align: center center;
+	flow-children: down;
+	opacity: 1.0;
+
+	transition-property: opacity;
+    transition-duration: mediumduration;
+    transition-timing-function: bigpicture-ease-in-out;
+}
+
+.DiscoveryQueueApps.Loading .DiscoveryRefresh
+{
+	opacity: 0.0;
+}
+
+.DiscoveryRefreshTitle
+{
+	font-size: 28px;
+	color: #67c1f5ff;
+	horizontal-align: center;
+	text-align: center;
+}
+
+.DiscoveryRefreshDesc
+{
+	font-size: 24px;
+	color: greyish_medium;
+	horizontal-align: center;
+	text-align: center;
+}
+
+.DiscoveryRefreshInfo
 {
 	font-size: 30px;
-	color: detailsdatalabelfocus;
+	color: almost_white;
+	horizontal-align: center;
+	margin-top: 30px;
+}
+
+.DiscoveryQueueApps LoadingThrobber
+{
+	align: center center;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.DiscoveryQueueApps.Loading LoadingThrobber
+{
+	opacity: 1.0;
+}
+
+.DiscoveryApp
+{
+	width: 412px;
+	height: 192px;
+	vertical-align: center;
+
+	box-shadow: module_shadow;
+}
+
+.DiscoveryApp_2
+{
+	transform: translate3d( 25%, 0px, -100px );
+	desaturation: 0.5;
+	wash-color: #1483ba66;
+}
+
+.DiscoveryApp_3
+{
+	transform: translate3d( 45%, 0px, -150px );
+	desaturation: 0.7;
+	wash-color: #1483ba99;
+}
+
+.DiscoveryApp_4
+{
+	transform: translate3d( 65%, 0px, -225px );
+	desaturation: 0.9;
+	wash-color: #1483baCC;
+	opacity: 0.7;
+}
+
+.DiscoveryApp_5
+{
+	transform: translate3d( 85%, 0px, -350px );
+	opacity: 0;
+}
+
+.DiscoveryQueueApps:focus,
+.DiscoveryQueueApps:hover
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.DiscoveryQueueAppBanner
+{
+	width: 95%;
+	height: 114px;
+	vertical-align: center;
+	flow-children: right;
+	margin-left: 5%;
+
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/bigpicture/queue_banner.png );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.DiscoveryQueueAppBanner Label
+{
+	font-size: 32px;
+	color: #ffcd6b;
+	vertical-align: center;
+	margin-left: 40px;
+}
+
+.ExploreSectionHeader
+{
+	font-size: 36px;
+	color: #9fc3e0;
 }
 
 .RecommendedTagsSection
 {
 	width: 100%;
+	padding: 10px;
+	margin: -10px;
+	margin-top: 30px;
 }
 
 .RecommendedTags
 {
-	width: 100%;
-	margin-top: 10px;
-	flow-children: right;
+	width: 1360px;
+	padding: 10px;
+	margin: -10px;
+
+	flow-children: right-wrap;
 }
 
 .RecommendedTags Button
 {
 	width: 430px;
-	height: 128px;
-	background-color: #00000044;
+	height: 62px;
+	margin: 0px 15px 15px 0px;
+
+	background-color: transparent_module;
+
+	border-radius: 3px;
+	box-shadow: module_shadow;
 }
 
 .RecommendedTag_2
 {
-	margin: 0px 15px;
 }
 
-.RecommendedTags Button:focus
+.RecommendedTags Button:focus,
+.RecommendedTags Button:hover
 {
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -366,6 +674,10 @@ RemotePanel
 {
 	align: center center;
 	font-size: 30px;
+	color: brightblue;
+}
+.RecommendedTags Button:focus Label
+{
 	color: detailsdatalabelfocus;
 }
 
@@ -377,7 +689,8 @@ RemotePanel
 .RecommendedCuratorApps
 {
 	flow-children: right;
-	margin-top: 10px;
+	padding: 10px;
+	margin: -10px;
 }
 
 .RecommendedCurator
@@ -390,7 +703,9 @@ RemotePanel
 }
 
 .CurratorApp:focus,
-.RecommendedCurator:focus
+.CurratorApp:hover,
+.RecommendedCurator:focus,
+.RecommendedCurator:hover
 {
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
@@ -454,13 +769,14 @@ RemotePanel
 ////////////////////////////////////
 // Recently Updated
 ////////////////////////////////////
-.NxRightContentContainer.Visible.HomeUpdated
+.NxRightContentContainer.HomeUpdated
 {
 	width: 1640px;
-	height: 990px;
+	height: 995px;
 	flow-children: right-wrap;
 	overflow: squish scroll;
 	padding-bottom: 150px;
+	padding-top: 40px;
 }
 
 .UpdatedItem
@@ -559,13 +875,15 @@ RemotePanel
 ////////////////////////////////////
 // Wishlist
 ////////////////////////////////////
-.WishlistEmpty
+.WishlistTextWrapper
 {
-	margin-top: 100px;
-	align: center top;
-	font-size: 22px;
+	margin-top: 300px;
+	font-size: 26px;
 	color: white;
 	flow-children: down;
+	vertical-align: center;
+	width: 1400px;
+	height: 800px;
 }
 
 .WishlistEmpty
@@ -573,9 +891,275 @@ RemotePanel
 	margin-bottom: 20px;
 }
 
+.WishlistTextWrapper Label
+{
+	horizontal-align: center;
+}
+
+
+////////////////////////////////////
+// Explore
+////////////////////////////////////
+.BrowseGamesBox
+{
+	width: 460px;
+	height: 215px;
+
+	margin: 6px;
+
+	border: 5px solid #b6e1fa00;
+	border-radius: 3px;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+   	background-position: 0px 0px;
+   	background-repeat: no-repeat;
+   	background-size: cover;
+}
+
+.BrowseGamesBox:focus
+{
+	border-color: #b6e1faff;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.BrowseGamesBox Label
+{
+	color: brightblue;
+	font-size: 30px;
+	align: center center;
+}
+.BrowseGamesBox:focus Label
+{
+	color: detailsdatalabelfocus;
+}
+
 ////////////////////////////////////
 // Scrollbars
 ////////////////////////////////////
-VerticalScrollBar {
+VerticalScrollBar
+{
 	opacity: 0;
+}
+
+
+////////////////////////////////////
+// Explore page styles
+////////////////////////////////////
+.ExploreQueuePage
+{
+	flow-children: right;
+	padding: 40px 80px 100px 80px;
+}
+
+.QueueLeftColumn
+{
+	width: 1304px;
+	flow-children: down;
+	margin-top: 4px;
+}
+
+.QueueRightColumn
+{
+	flow-children: down;
+	margin-left: 40px;
+}
+
+.QueueDescription
+{
+	font-size: 30px;
+	color: almost_white;
+	margin-bottom: 20px;
+}
+
+.QueuePageBox
+{
+	width: 416px;
+	height: 136px;
+	background-color: #00000044;
+	margin-bottom: 6px;
+	padding: 16px;
+	flow-children: down;
+}
+
+.QueuePageBoxRow
+{
+	flow-children: right;
+}
+
+.QueuePageHeader
+{
+	color: #67c1f5ff;
+	font-size: 28px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.YourQueueHeader
+{
+	margin-top: 40px;
+}
+
+.QueuePageBoxHeader
+{
+	color: greyish_medium;
+	font-size: 26px;
+}
+
+.QueuePageBoxDesc
+{
+	color: greyish_medium;
+	font-size: 24px;
+	vertical-align: center;
+	width: 240px;
+}
+
+.QueuePageBoxCount
+{
+	color: white;
+	font-size: 70px;
+	min-width: 150px;
+	margin-top: -6px;
+}
+
+
+////////////////////////////////////
+// Settings
+////////////////////////////////////
+#HomeSettings
+{
+	flow-children: down;
+	overflow: squish scroll;
+	padding-bottom: 150px;
+	padding-top: 40px;
+}
+
+.FeatureAllGamesSection
+{
+	margin-left: 100px;
+	flow-children: down;
+	width: 1000px;
+}
+
+.AllGamesDescription
+{
+	font-size: 26px;
+	color: almost_white;
+	margin-bottom: 20px;
+}
+
+.SettingsToggle
+{
+	width: 100%;
+	height: 58px;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 3px;
+
+	color: #67c1f5ff;
+	background-color: nontransparent_module;
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.SettingsToggle Label
+{
+	margin: 0px 0px 0px 8px;
+}
+
+.SettingsToggle:focus,
+.SettingsToggle:hover
+{
+	color: white;
+	background-color: action_module;
+	animation: main-button-glow-movement-no-fill longduration bigpicture-ease-in-out 0s infinite normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01_over.jpg" );
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.SettingsToggle .TickBox
+{
+	background-color: #2f89bc66;
+}
+
+.SettingsToggle LoadingThrobber
+{
+	width: 38px;
+	height: 38px;
+}
+
+.SettingsToggle LoadingThrobber .Bar
+{
+	margin-right: 3px;
+	width: 9px;
+	height: 38px;
+}
+
+.SettingsToggle.Requesting .TickBox
+{
+	visibility: collapse;
+}
+
+.NxRightColumn > EdgeScroller
+{
+	width: 100%;
+	height: 100%;
+}
+
+EdgeScroller.NxRightContentContainer .EdgeScrollButton
+{
+	x: -140px;
+}
+
+#Section_recently_updated .EdgeScrollButton
+{
+	x: -80px;
+}
+
+#page_featured .EdgeScrollButton
+{
+	x: 0px;
+}
+
+EdgeScroller.NxRightContentContainer #MinButton
+{
+	y: 20px;
+}
+
+EdgeScroller.NxRightContentContainer #MaxButton
+{
+	y: -100px;
+}
+
+
+.MainMenuSuggestionRow
+{
+	height: 348px;
+	width: 100%;
+}
+
+.MainMenuSuggestions
+{
+	margin-top: 30px;
+	flow-children: right;
+}
+
+.MainMenuSuggestionRow Label
+{
+	color: white;
+	font-size: 24px;
+	width: 100%;
 }
