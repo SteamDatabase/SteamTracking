@@ -1,8 +1,5 @@
 #main {
 	position: relative;
-	max-width: 950px;
-	padding: 0 2%;
-	margin: 0 auto;
 }
 .page_title_area {
 	padding-top: 16px;
@@ -16,7 +13,7 @@
 }
 
 .page_name .blockbg {
-	min-height: 40px;
+	height: 40px;
 }
 
 #ssa_popup_box > h2 {
@@ -29,15 +26,11 @@
 }
 
 #ssa_box {
-	max-width:860px;
-	background: rgba(0, 0, 0, 0.3);
-	padding: 12px 2%;
+	width:860px;
+	background-color:#262626;
+	border: 1px solid #4d4b49;
+	padding:35px 20px 35px 20px;
 	color: #d6d7d8;
-	margin-bottom: 80px;
-}
-
-#ssa_box img {
-	max-width: 100%;
 }
 
 #ssa_box li {
@@ -47,7 +40,8 @@
 #ssa_popup_box {
 	width:450px;
 	height:466px;
-	background: rgba(0, 0, 0, 0.3);
+	background-color:#262626;
+	border: 1px solid #4d4b49;
 	padding:16px;
 	color: #b0aeac;
 	margin: 0px auto;
@@ -79,23 +73,4 @@
 #privacy_link {
 	margin-left:16px;
 	padding-top:8px;
-}
-
-
-#ssa_box.online_conduct {
-	font-size: 14px;
-	line-height: 18px;
-}
-
-.online_conduct ul {
-	margin-left: 20px;
-}
-
-.online_conduct ul li {
-	margin: 8px 0;
-}
-
-.ssa_privacy_input {
-	padding: 8px;
-	font-size: 16px;
 }
