@@ -566,7 +566,7 @@ GStoreItemData = {
 	// filtering
 	FilterItemsForDisplay: function( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )
 	{
-		var rgGoodItems = [], rgOtherItems = [];
+		var rgGoodItems = [], rgOtherItems = [], rgStrictItems = [];
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = rgItems.length;
@@ -585,30 +585,34 @@ GStoreItemData = {
 
 			if ( unAppID )
 			{
-				if ( GStoreItemData.BAppPassesFilters( unAppID, Settings, ApplicableSettings ) )
-					rgGoodItems.push( oItem );
+				if ( GStoreItemData.BAppPassesFilters( unAppID, Settings, ApplicableSettings, true ) )
+					rgStrictItems.push(oItem);
+				else if ( GStoreItemData.BAppPassesFilters( unAppID, Settings, ApplicableSettings ) )
+					rgGoodItems.push(oItem);
 				else
 					rgOtherItems.push( oItem );
 			}
 			else if ( unPackageID )
 			{
-				if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings ) )
+				if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings, true ) )
+					rgStrictItems.push( oItem );
+				else if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings ) )
 					rgGoodItems.push( oItem );
 				else
 					rgOtherItems.push( oItem );
 			}
 
-			if ( rgGoodItems.length >= cMaxItemsToDisplay)
+			if ( rgStrictItems.length >= cMaxItemsToDisplay)
 				break;
 		}
 
 		if ( cMinItemsToDisplay )
 		{
-			for ( i = 0; rgGoodItems.length < cMinItemsToDisplay && i < rgOtherItems.length; i++ )
-				rgGoodItems.push( rgOtherItems[i] );
+			for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgGoodItems.length; i++ )
+				rgStrictItems.push( rgGoodItems[i] );
 		}
 
-		return rgGoodItems;
+		return rgStrictItems;
 	},
 
 
@@ -629,7 +633,7 @@ GStoreItemData = {
 		return true;
 	},
 
-	BAppPassesFilters: function( appid, Settings, ApplicableSettings )
+	BAppPassesFilters: function( appid, Settings, ApplicableSettings, bStrict )
 	{
 		var rgAppData = GStoreItemData.rgAppData[appid];
 		if ( !rgAppData )
@@ -661,16 +665,19 @@ GStoreItemData = {
 		if ( rgAppData.video && ApplicableSettings.video && !Settings.video )
 			return false;
 
+		if ( bStrict && !rgAppData.localized && ApplicableSettings.localized && Settings.localized )
+			return false;
+
 		return true;
 	},
 
-	BPackagePassesFilters: function( packageid, Settings, ApplicableSettings )
+	BPackagePassesFilters: function( packageid, Settings, ApplicableSettings, bStrict )
 	{
 		var rgPackageData = GStoreItemData.rgPackageData[ packageid ];
 		if ( !rgPackageData )
 			return false;
 
-		if ( !GStoreItemData.BItemPassesFilters( rgPackageData, Settings, ApplicableSettings ) )
+		if ( !GStoreItemData.BItemPassesFilters( rgPackageData, Settings, ApplicableSettings, bStrict ) )
 			return false;
 
 		if ( GDynamicStore.BIsPackageIgnored( packageid ) )
