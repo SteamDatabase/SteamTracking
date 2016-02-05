@@ -15,7 +15,6 @@
 /* tabs */
 .tabbar {
 	margin-bottom: 10px;
-	white-space: nowrap;
 }
 .tabarea .tab {
 	display: inline-block;
@@ -106,13 +105,6 @@
 	margin-left: 8px;
 }
 
-/* right column */
-.curators_searchbox,
-.steam_curators_expand_link,
-.explanation_box {
-	margin-bottom: 10px;
-}
-
 
 /* search */
 
@@ -124,6 +116,7 @@
 	color: #9099a1;
 	height: 30px;
 	position: relative;
+	margin-bottom: 10px;
 }
 
 .curators_search_keywords
@@ -264,8 +257,7 @@ a.steam_curator_row:hover
     font-size: 13px;
     color: #8F98A0;
     overflow: hidden;
-    max-width: 390px;
-	margin-right: 95px;
+    width: 390px;
 }
 
 .steam_curators_recommending_text
