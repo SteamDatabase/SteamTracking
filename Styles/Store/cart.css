@@ -86,7 +86,7 @@ body.v6.login .rightcol .spotlight_block {
 	border: 1px solid #000;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
-	width: 500px;
+	width: 98%;
 	max-width: calc( 100% - 12px );
 	padding: 5px;
 	margin-top: 3px;
@@ -1166,7 +1166,6 @@ label.send_choice_txt {
 /* checkout - gift message */
 
 #gift_message_text {
-	width: 575px;
 	height: 158px;
 	font-size: 18px;
 	resize: none;
@@ -1587,9 +1586,9 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 
 #external_landing_header .content {
 	position: relative;
-	width: 940px;
+	max-width: 940px;
 	height: 104px;
-	margin: 0px auto 64px auto;
+	margin: 0 auto 64px auto;
 }
 
 #external_landing_header_logo
@@ -1601,8 +1600,8 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 
 .external_landing_content
 {
-	width: 400px;
-	margin: 0px auto;
+	max-width: 400px;
+	margin: 0 auto;
 	text-align: center;
 	color: #B0AEAC;
 }
@@ -1621,7 +1620,8 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 
 #external_landing_notice
 {
-	font-weight: bold;
+	font-size: 16px;
+	padding: 20px 5%;
 }
 
 #external_landing_notice b
