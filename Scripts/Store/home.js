@@ -6,7 +6,7 @@ function OnHomepageException(e)
 
 GHomepage = {
 	oSettings: {},
-	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null}},
+	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null,"localized":true},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null,"localized":true},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"hidden":null,"localized":true},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"hidden":null,"localized":true}},
 
 	oDisplayListsRaw: {},
 	oDisplayLists: {},
@@ -32,7 +32,7 @@ GHomepage = {
 			var $Background = $Ctn.children( '.page_background_holder' );
 			var $Menu = $J('#store_header');
 
-			var $TakeoverLink = $J('.home_page_takeover_link' ).children('a');
+			var $TakeoverLink = $J('.home_page_takeover_link' ).children().first();
 			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
 
 			$J(window ).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function() {
@@ -158,7 +158,7 @@ GHomepage = {
 			if ( bHaveUser )
 			{
 				HomeSettings = new CHomeSettings( 'main_cluster', GHomepage.RenderMainCluster );
-				$J('.main_cluster_content').append( HomeSettings.RenderCustomizeButton() );
+				$J('.main_cluster_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
 			GHomepage.RenderMainCluster();
 		} catch( e ) { OnHomepageException(e); }
@@ -250,7 +250,6 @@ GHomepage = {
 			rgTopSellers = GHomepage.oDisplayLists.top_sellers;
 
 		var rgDisplayListCombined = GHomepage.MergeLists(
-			GHomepage.oDisplayLists.main_cluster_legacy, false,
 			GHomepage.oDisplayLists.main_cluster, true,
 			rgTopSellers, false,
 			GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true
@@ -267,8 +266,13 @@ GHomepage = {
 			);
 		}
 
+		rgDisplayListCombined = GHomepage.MergeLists(
+			GHomepage.oDisplayLists.main_cluster_legacy, false,
+			rgDisplayListCombined, false
+		);
+
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'main_cluster', 0, 15
+			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
 
 		for ( var i = 0; i < rgMainCaps.length; i++ )
@@ -306,7 +310,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.new_on_steam .home_smallcaps' ).empty();
@@ -336,7 +340,7 @@ GHomepage = {
 	RenderRecentlyUpdated: function()
 	{
 		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $RecentlyUpdated =  $J('.home_smallcap_area.recently_updated .home_smallcaps' ).empty();
@@ -710,6 +714,8 @@ CHomeSettings.prototype.DisplayPopup = function( $Btn )
 		this.m_$Popup.append( this.RenderCheckbox( 'dlc', 'Downloadable Content' ) );
 	if ( this.m_ApplicableSettings.video )
 		this.m_$Popup.append( this.RenderCheckbox( 'video', 'Videos' ) );
+	if ( this.m_ApplicableSettings.localized )
+		this.m_$Popup.append( this.RenderCheckbox( 'localized', 'Games in my language' ) );
 
 	if ( this.m_ApplicableSettings.only_current_platform )
 	{
