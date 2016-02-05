@@ -523,7 +523,7 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	$J.post( url, {appid: appid} )
+		$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			$JFromIDOrElement(divToHide).hide();
 			if ( data && data.success )
@@ -543,7 +543,7 @@ function AddToWishlistButton( button, appid, navref )
 	var url = 'http://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	$J.post( url, {appid: appid} )
+		$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			if ( data && data.success )
 			{
@@ -1000,18 +1000,6 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 }
 
 
-function LaunchWebChat()
-{
-	if ( $JFromIDOrElement('webchat_launch_iframe').length )
-		$JFromIDOrElement('webchat_launch_iframe').remove();
-
-	var iframe = $J( '<iframe/>', {id: 'webchat_launch_iframe' } );
-	iframe.hide();
-	iframe.attr( 'src', 'http://steamcommunity.com/chat/launch/' );
-	$J(document.body).append( iframe );
-}
-
-
 // SEARCH.JS
 
 var g_oSuggestParams;
@@ -1178,21 +1166,6 @@ function SearchSuggestCheckTerm( theform )
 
 // HEADER.JS
 
-
-
-function setTimezoneCookies()
-{
-	var now = new Date();
-	var expire = new Date();
-
-	// One year expiration, this way we don't need to wait at least one page
-	// load to have accurate timezone info each session, but only each time the user
-	// comes with cleared cookies
-	expire.setTime( now.getTime() + 3600000*24*365 );
-	tzOffset = now.getTimezoneOffset() * -1 * 60;
-	isDST = 0;
-	document.cookie = "timezoneOffset=" + tzOffset + "," + isDST + ";expires="+expire.toGMTString() + ";path=/";
-}
 // We always want to have the timezone cookie set for PHP to use
 setTimezoneCookies();
 
@@ -1905,7 +1878,11 @@ function InitHorizontalAutoSliders()
 
 		var fnShowHideButtons = function()
 		{
-			$Wrapper.css('height', $Scroll.children().outerHeight() );
+			var nTallestChild = 0;
+			$Scroll.children().each( function() {
+				nTallestChild = Math.max( nTallestChild, $J(this ).outerHeight() );
+			});
+			$Wrapper.css('height', nTallestChild );
 
 			if ( $Scroll.scrollLeft() <= 1 )
 				$SliderLeft.hide();
