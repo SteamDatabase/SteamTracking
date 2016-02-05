@@ -6,7 +6,7 @@
 
 #parental_notice
 {
-	max-width: 656px;
+	width: 656px;
 	height: 220px;
 	padding: 20px;
 	margin: 20px auto;
@@ -17,7 +17,6 @@
 	background-color: rgba(0, 0, 0, 0.3);
 
 	text-align: center;
-	position: relative;
 }
 
 .mobileBody #parental_notice
@@ -52,8 +51,6 @@
 	height: 24px;
 	padding-left: 5px;
 	margin-right: 10px;
-	font-size: 16px;
-	margin-bottom: 8px;
 }
 
 .mobileBody #parental_notice input
@@ -82,12 +79,11 @@
 }
 
 #parental_recovery
-{
-	position: absolute;
-	bottom: 20px;
-	left: 0;
-	right: 0;
-}
+ {
+	 position: absolute;
+	 bottom: 20px;
+	 width: 656px;
+ }
 
 .parental_settings_form #parental_error
 {
