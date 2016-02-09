@@ -1116,6 +1116,10 @@ img.game_header_image_full {
 	padding: 5px 8px;
 }
 
+.game_area_dlc_list {
+	margin-bottom: 11px;
+}
+
 #dlc_footer #dlc_show_all_link {
 	color: #898a8c;
     background: rgba( 103, 193, 245, 0.1 );
