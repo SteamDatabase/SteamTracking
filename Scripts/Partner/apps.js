@@ -2672,7 +2672,13 @@ function LoadScreens( appid )
 		);
 }
 
-// populate document from set of screenshots
+// Given the hash + suffix portion, return the URL
+function AvatarURL( fn )
+{
+    return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + fn.substring( 0, 2 ) + '/' + fn + '.jpg';
+}
+
+// populate document from set of avatars
 function SetAvatars( appid, avatars )
 {
 	if ( avatars.length == 0 )
@@ -2682,21 +2688,18 @@ function SetAvatars( appid, avatars )
 	}
 	
 	$('avatars').innerHTML = '';
-	rgAvatars=avatars;
-	
+
 	for ( var id = 0; id < avatars.length; id++ )
 	{
 		var divAvatar = document.createElement( 'div' );
 		divAvatar.className = 'avatar';
 
-		var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
-		
 		var anchor = document.createElement( 'a' );
 		anchor.href = '#';
 		anchor.onclick = avatarPopupClosure(appid, avatars[id]);
 				
 		var imgMed = document.createElement( 'img' );
-		imgMed.src = imageBase + avatars[id]['avatar_medium'] + '.jpg';
+		imgMed.src = AvatarURL( avatars[id]['avatar_medium'] );
 		imgMed.border = 0;
 		anchor.appendChild( imgMed );
 		
@@ -2723,13 +2726,11 @@ function avatarPopupClosure(appid, avatar)
 
 function avatarPopup(event, appid, avatar)
 {
-	var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
-
 	var e=event;
 	if (! e )
 		e=window.event; // Microsoft-style
 	
-	var w=350;
+	var w=360;
 	var h=250;
 
 	var win = window.open('','avatar','height=' + h + ',width=' + w + ',left=' + (e.screenX-225) + ',top=' + (e.screenY-175) + ',toolbar=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
@@ -2738,9 +2739,9 @@ function avatarPopup(event, appid, avatar)
 	win.document.write('</head><body style="padding: 20px; cursor: pointer;" onclick="window.close()" onload="document.getElementById(\'root\').style.display=\'block\'">');
 	win.document.write('<div id="root" style="display: none;">');
 
-	win.document.write('<div id="avatarBlockFull"><img src="' + imageBase + avatar['avatar_full'] + '.jpg" /><p class="avatarSizeDesc">184px</p></div>');
-	win.document.write('<div id="avatarBlockMedium"><img src="' + imageBase + avatar['avatar_medium'] + '.jpg" /><p class="avatarSizeDesc">64px</p></div>');
-	win.document.write('<div id="avatarBlockIcon"><img src="' + imageBase + avatar['avatar_icon'] + '.jpg" /><p class="avatarSizeDesc">32px</p></div>');
+    win.document.write('<div id="avatarBlockFull"><img src="' + AvatarURL( avatar['avatar_full'] ) + '" /><p class="avatarSizeDesc">184px</p></div>');
+	win.document.write('<div id="avatarBlockMedium"><img src="' + AvatarURL( avatar['avatar_medium'] ) + '" /><p class="avatarSizeDesc">64px</p></div>');
+	win.document.write('<div id="avatarBlockIcon"><img src="' + AvatarURL( avatar['avatar_icon'] ) + '" /><p class="avatarSizeDesc">32px</p></div>');
 	win.document.write('<br clear="all" />click anywhere to close');
 	win.document.write('</div>');
 	win.document.write('</body></html>');
