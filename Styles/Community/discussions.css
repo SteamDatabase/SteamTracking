@@ -456,7 +456,8 @@ td.wordfilter_action a:hover {
 
 .discussion_tab_content_area h2 {
 	font-size: 18px;
-	margin-bottom: 18px;
+	line-height: 22px;
+	margin: 0 0 18px;
 }
 
 .discussion_tab_content_area h2.discussion_primary_header {
@@ -473,11 +474,12 @@ td.wordfilter_action a:hover {
 
 
 .global_discussion_search_ctn {
-	float: right;
-	margin-top: -6px;
+	margin-bottom: 12px;
 }
 
 .discussions_view_more_link {
+	line-height: 22px;
+	padding-top: 10px;
 	float: right;
 }
 

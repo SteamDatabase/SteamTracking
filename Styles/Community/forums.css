@@ -1321,6 +1321,14 @@ table.forum_auditlog tr.audit_row_secondary {
 	padding: 2px;
 }
 
+.grouped_searchresults_forumname {
+	margin: 12px 0 0 0;
+	padding: 4px 8px;
+	line-height: 24px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 0, 0, 0, 0.2 )), color-stop(95%,rgba( 0, 0, 0, 0 )));background: -moz-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -o-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -ms-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);}
+
 .searchresult_author {
 	position: relative;
 	padding: 2px 0 2px 48px;
