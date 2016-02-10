@@ -567,9 +567,6 @@ var templ_DiscountsSummaryDiv = new Template( ''
 // discounts = map of initial discount values for base price & country overrides (currency/country code => value)
 function CreateDiscount( target, id, discount )
 {
-	if ( discount == null )
-		discount = new Object();
-	
 	var name = (discount['name'] == null ) ? '' : discount['name'];
 	var description = (discount['description'] == null ) ? '' : discount['description'];
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
@@ -788,7 +785,7 @@ function GetInitialCosts()
 	return initialCost;
 }
 
-function AddPctgDiscount( target, id, pctg )
+function AddPctgDiscount( target, pctg, packageid )
 {
 	if ( !pctg )
 		return false;
@@ -842,24 +839,45 @@ function AddPctgDiscount( target, id, pctg )
 	discount['discount'] = { base: discounts, country: discountsCountry, region: discountsRegion };
 	discount['discount_percent'] = pctg;
 
-	AddDiscount( target, id, discount, true );
+	AddDiscount( target, discount, packageid, true );
 	return true;
 }
 
-function AddDiscount( target, id, discount, updateSummary )
+function AddDiscount( target, discount, packageid, updateSummary )
 {
-	var elementId = ++g_nextElementID;
-	var key = id + '[' + elementId + ']';
-	CreateDiscount( target, key, discount );
-	if ( discount )
+	if ( discount == null )
+		discount = new Object();
+
+	if( discount['discount_id'] == null )
 	{
-		g_AllDiscounts[ key ] = discount;
-		if ( updateSummary )
-		{
-			UpdateSummaryDiscounts( $( 'discountSummary' ), 'discountSummary', g_RequiredCurrencies );
-		}
+		CreateAjaxRequest(	g_szBaseURL + "/packages/getnewdiscountid/" + packageid,
+			{},
+			function( results )
+			{
+				if ( results[ 'success' ] )
+				{
+					discount['discount_id'] = results[ 'discountid' ];
+					return AddDiscount( target, discount, packageid, updateSummary );
+				}
+			}
+		);
 	}
-	return key;
+	else
+	{
+		var key = 'discounts' + '[' + discount['discount_id'] + ']';
+
+		CreateDiscount(target, key, discount);
+
+		if (discount)
+		{
+			g_AllDiscounts[key] = discount;
+			if (updateSummary)
+			{
+				UpdateSummaryDiscounts($('discountSummary'), 'discountSummary', g_RequiredCurrencies);
+			}
+		}
+		return key;
+	}
 }
 
 function AddRequiredPackage( target, id, initValue )
@@ -1448,7 +1466,7 @@ packages.ToolTip_Show = function ToolTip_Show( tooltipId, parentId )
 			g_InitialCostsCountry = initialCost.country;
 			g_InitialCostsRegion = initialCost.country;
 
-			AddDiscount( toolTip, 'discounts', discount, false );
+			AddDiscount( toolTip, discount, packageId, false );
 		}
 	}
 	

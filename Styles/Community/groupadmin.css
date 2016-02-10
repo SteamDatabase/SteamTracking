@@ -574,6 +574,15 @@ a.chat_ban_admin {
 	width: 95%;
 }
 
+.avatarDisabledError {
+	color:#ff3333;
+	text-align: center;
+}
+
+.avatarBanTimeEnd {
+	margin: 10px 0;
+}
+
 @media screen and (max-width: 500px)
 {
 	html.responsive .formRow .formRowTitle {

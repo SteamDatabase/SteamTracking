@@ -328,3 +328,53 @@
 		display: none;
 	}
 }
+
+
+/* user bans page */
+.ban_row {
+	padding: 8px;
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 12px;
+}
+
+.ban_row .group_avatar {
+	float: left;
+	margin-right: 12px;
+}
+
+.ban_row .unban_action {
+	float: right;
+	padding: 12px;
+}
+
+.ban_row h3 {
+	margin-bottom: 6px;
+	color: #ffffff;
+}
+
+.ban_row_content {
+	min-width: 300px;
+	overflow: hidden;
+}
+
+.ban_row b {
+	font-weight: normal;
+	color: #9b9b9b;
+}
+
+.ban_row i {
+	font-style: normal;
+	color: #9b9b9b;
+}
+
+.user_bans_page h2 {
+	color: #66C0F4;
+	margin-top: 24px;
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .ban_row_content {
+		clear: both;
+	}
+}

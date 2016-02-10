@@ -4207,6 +4207,19 @@ Label.AchievementPercent,
 	vertical-align: bottom;
 }
 
+.AvatarBannedWrapper
+{
+	flow-children: down;
+}
+
+.AvatarBannedWrapper Label
+{
+	horizontal-align: center;
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #ff0000;
+}
+
 TextEntry.Multiline {
 	height: 250px;
 }

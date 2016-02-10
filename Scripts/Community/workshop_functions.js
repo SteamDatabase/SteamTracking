@@ -446,7 +446,15 @@ function ValidateUserPaymentInfo( baseURL )
 					} );
 				},
 				error: function( jqXHR ) {
-					alert( jqXHR.responseText );
+					var json = jqXHR.responseJSON;
+					if ( json.hasOwnProperty( "msg" ) )
+					{
+						ShowAlertDialog( 'Error', json.msg );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'An unknown error occurred while trying to save your contact information.' );
+					}
 				}
 			} );
 		}

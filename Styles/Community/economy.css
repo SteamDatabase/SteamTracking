@@ -423,12 +423,12 @@ a.item_action:hover {
 
 input.filter_search_box {
 	padding: 4px 4px;
-	color: #FFF;
+	color: #828282;
 	font-size: 12px;
 	outline: none;
 	border: 1px solid;
-	border-color: #182636 #45566A #45566A #182636;
-	background-color: #324965;
+	border-color: #292929;
+	background-color: #101010;
 	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
 	border-radius: 0px;
 }

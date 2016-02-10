@@ -785,6 +785,7 @@ img.game_header_image_full {
 	line-height: 32px;
 	font-size: 25px;
 	text-align: center;
+	overflow: hidden;
 }
 
 .game_purchase_discount .discount_prices {

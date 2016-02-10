@@ -543,8 +543,13 @@ textarea.forumtopic_reply_textarea {
 	filter: alpha(opacity=100);
 }
 
-.forumtopic_comments .commentthread_comment .commentthread_comment_author a {
+.forumtopic_comments .commentthread_comment .commentthread_comment_author a.commentthread_author_link {
 	font-weight: bold;
+	line-height: 24px;
+	display: inline-block;
+}
+
+.forum_author_menu {
 }
 
 a.commentthread_author_valve, a.commentthread_author_developer {

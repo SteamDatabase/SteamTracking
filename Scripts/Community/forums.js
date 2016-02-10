@@ -688,63 +688,19 @@ function Forum_ReplyToPost( gidTopic, gidComment )
 }
 
 var g_elAuthorMenu = null;
-function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, accountIDTarget, strTargetName )
+function Forum_AuthorMenu( elLink, accountIDTarget, gidComment )
 {
-	if ( !event )
-		event = window.event;
-
-	if ( !g_elAuthorMenu )
-		g_elAuthorMenu = $('forum_user_menu');
+	var $Link = $J(elLink);
+	var $Menu = $Link.siblings('.forum_author_menu');
 
 	// reparent the author menu first, so we can make sure it's in the document
-	var elParent = elLink.up('.commentthread_comment');
-	if ( !elParent )
-		elParent = elLink.up( '.forum_op' );
-
-	if ( elParent )
-		elParent.appendChild( g_elAuthorMenu.remove() );
-
-	elParent.style.overflow = 'visible';
+	var $Parent = $Link.parents('.commentthread_comment, .forum_op');
+	$Parent.css( 'overflow', 'visible' );
 
 
-	// now set up the links
-	var elProfileLink = $('forum_user_menu_viewprofile');
-	var elViewPostsLink = $('forum_user_menu_viewposts');
-	var elBanUserLink = $('forum_user_menu_ban');
-	var elModeratorMessageLink = $('forum_user_menu_viewmoderatormessages');
+	$Menu.css('min-width', $Link.width() + 'px' );
 
-	if ( g_rgForumTopics[ gidTopic ] )
-	{
-		var Topic = g_rgForumTopics[ gidTopic ];
-		var rgForumData = Topic.m_rgForumData;
-
-		elProfileLink.href = elLink.href;
-
-		if ( rgForumData.is_public )
-			elViewPostsLink.href = elProfileLink.href + '/posthistory/';
-		else
-			elViewPostsLink.href = Topic.GetSearchURL( { author: accountIDTarget } );
-
-		if ( elBanUserLink )
-		{
-			if ( bCanBan )
-			{
-				elBanUserLink.href = 'javascript:Forum_BanUser( ' + rgForumData['owner'] + ', \'' + rgForumData['gidforum'] + '\', \'' + gidTopic + '\', \'' + gidComment + '\', ' + accountIDTarget + ' );'
-				elBanUserLink.show();
-			}
-			else
-			{
-				elBanUserLink.hide();
-			}
-		}
-
-		if ( elModeratorMessageLink )
-			elModeratorMessageLink.href = elProfileLink.href + '/moderatormessages/';
-
-		$('forum_user_menu_inner').style.minWidth = $(elLink).getWidth() + 'px';
-
-		ShowMenu( elLink, g_elAuthorMenu, 'left', 'bottom', 2 );
-	}
+	ShowMenu( $Link, $Menu, 'left', 'bottom', 2 );
 
 	return false;
 }

@@ -639,7 +639,7 @@ function InitializeTransaction()
 				'CardExpirationYear' : $('expiration_year').value,
 				'CardExpirationMonth' : $('expiration_month').value,
 				
-				// address info, which may go unused be there depending on payment method
+				// address info, which may go unused depending on payment method
 				'FirstName' : $('first_name').value,
 				'LastName' : $('last_name').value,
 				'Address' : $('billing_address').value,
@@ -756,7 +756,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1797,6 +1797,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
+				else if ( method.value == 'bitcoin' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bitcoin transactions are authorized through the BitPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BitPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bitcoin customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the BitPay website.  After completing payment, please click the "Continue to Valve" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the bitpay window before the process is complete.';
+					}
+				}	
 			}
 			else
 			{
@@ -2583,6 +2593,13 @@ function UpdatePaymentInfoForm()
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
+		else if ( method.value == 'bitcoin' )
+		{
+						bShowAddressForm = false || $('billing_country').value == 'US';
+			bShowCountryVerification = $('billing_country').value != 'US';
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = '* Note: Any approved refunds for purchases made with Bitcoin can only be credited to your Steam wallet';
+		}		
 		else if ( method.value == 'steamaccount' )
 		{
 						bShowAddressForm = false;
@@ -2602,7 +2619,6 @@ function UpdatePaymentInfoForm()
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
-		
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
@@ -2939,27 +2955,8 @@ function SubmitPaymentInfoForm()
 				rgBadFields.expiration_year_trigger = true;
 			}
 		}
-		
-		if ( method.value == 'giropay' || method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
-			|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
- 		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
-			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
-			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
-			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'carnet'
-			|| method.value == 'spei' || method.value == '3pay' || method.value == 'isbank'
-			|| method.value == 'garanti' || method.value == 'akbank' || method.value == 'yapikredi'
-			|| method.value == 'halkbank' || method.value == 'bankasya' || method.value == 'finansbank'
-			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
-			|| method.value == 'onecard'
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || method.value == 'webmoney_japan'
-			|| ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || ( method.value == 'updatepaypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
-			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
-			|| method.value == 'gamevoucher'
-			|| method.value == 'pse'  || method.value == 'exito'  || method.value == 'efecty'  || method.value == 'baloto'  
-			|| method.value == 'pinvalidda'  || method.value == 'mangirkart'  || method.value == 'bancocreditodeperu'  || method.value == 'bbvacontinental'  
-			|| method.value == 'safetypay'  || method.value == 'pagoefectivo'  || method.value == 'trustly'  
-		 )
+
+		if ( $('payment_row_country_verification').visible() )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2967,6 +2964,16 @@ function SubmitPaymentInfoForm()
 				rgBadFields.verify_country_only_label = true;
 			}
 		}
+		
+		if ( $('verify_country').visible() )
+		{
+			if ( !$( 'verify_country' ).checked )
+			{
+				errorString += 'Please verify your country selected below.<br/>';
+				rgBadFields.label_verify_country = true;
+			}		
+		}
+				
 		if ( method.value == 'qiwi' )
 		{
 			// Expect 10 digits, we'll make sure we at least have that many digits
@@ -3087,12 +3094,6 @@ function SubmitPaymentInfoForm()
 			{
 				errorString += 'Please enter your zip or postal code.<br/>';
 				rgBadFields.billing_postal_code = true;
-			}
-			
-			if ( !$( 'verify_country' ).checked )
-			{
-				errorString += 'Please verify your country selected below.<br/>';
-				rgBadFields.label_verify_country = true;
 			}
 		}
 		
@@ -3665,6 +3666,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Trustly';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'bitcoin' && providerPaymentMethod == 79 )
+			{
+				$('payment_method_review_text').innerHTML = 'Bitcoin';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}			
 		}
 		
 		$('review_address_body').innerText = $('first_name').value+' '+$('last_name').value;
@@ -4079,6 +4085,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 				case 76:
 				case 77:
 				case 78:
+				case 79:
 				default:
 				{
 					switch ( eErrorDetail )
@@ -4329,6 +4336,12 @@ function DisplayPendingReceiptPage()
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub Store</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
+			
+		case 'bitcoin':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for confirmation of Bitcoin delivery from BitPay.  This process can take several minutes to a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://bitpay.com/">BitPay</a>.';
+			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			break;
 						
 		default:
 			$('pending_purchase_summary_payment_method_notes').style.display = 'none';
@@ -4464,7 +4477,8 @@ function PollForTransactionStatus( txnid, retries, timeout )
 		      			}
 		      		
 			      					      		var bNeedsApproval = (result.success == 22 && result.purchaseresultdetail == 29);
-			      		if ( result.success == 22 && !bNeedsApproval )
+			      		var bPurchaseResultDelayed = (result.success == 22 && result.purchaseresultdetail == 66);
+			      		if ( result.success == 22 && !bNeedsApproval && !bPurchaseResultDelayed )
 		      			{
 		      						      				g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( txnid, retries-1, timeout ), timeout*1000 );
 			      			return;
@@ -4478,6 +4492,10 @@ function PollForTransactionStatus( txnid, retries, timeout )
 		      		   	{
 		      	   			OnPurchaseSuccess( result );
 		      	   			return;
+			      	   	}
+			      	   	else if ( bPurchaseResultDelayed )
+			      	   	{
+			      	   		DisplayPendingReceiptPage();
 			      	   	}
 			      	   	else
 			      	   	{

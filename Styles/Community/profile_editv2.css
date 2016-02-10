@@ -301,3 +301,12 @@
 .edit_subpage_selector .subpage_selector_label {
 	color: #61696D;
 }
+
+.avatarDisabledError {
+	color:#ff3333;
+	text-align: center;
+}
+
+.avatarBanTimeEnd {
+	margin: 10px 0;
+}

@@ -2635,3 +2635,12 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		font-size: 16px;
 	}
 }
+
+body.flat_page .sectionTabsHR {
+	position: static;
+	width: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	max-width: 958px;
+}
