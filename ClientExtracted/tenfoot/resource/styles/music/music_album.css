@@ -13,7 +13,7 @@ MusicAlbumPanel
 	transform: translate3d( 0px, 1280px, 1000px );
 	transform: translatey( 0px );
 	
-	transition-property: transform, blur, position, opacity, desaturation;
+	transition-property: transform, blur, position, opacity, saturation;
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;

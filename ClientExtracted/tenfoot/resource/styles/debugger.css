@@ -11,6 +11,7 @@
 @define foregroundgray : #A6A4A1ff;
 @define transparent: #00000000;
 @define platformfont: "Motiva Sans";
+@define monospacefont: "Courier New";
 
 
 //
@@ -75,7 +76,7 @@ HorizontalScrollBar .ScrollThumb
 //
 // Tooltip
 // 
-Tooltip
+TextTooltip
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( white ), to( #e4e5f0 ) );
 	border-radius: 2.5px;
@@ -731,3 +732,52 @@ DebugStyleSeparator
 	margin-bottom: 10px;
 }
 
+
+//
+// HTTP styles used by labels
+//
+
+a
+{
+	color: blue;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+b
+{
+	font-weight: bold;
+}
+
+i
+{
+	font-style: italics;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+em
+{
+	font-style: italics;
+}
+
+h1
+{
+	font-weight: bold;
+}
+
+h2
+{
+	font-weight: bold;
+}
+
+pre
+{
+	font-family: monospacefont;
+}

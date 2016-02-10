@@ -209,8 +209,8 @@
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
+ T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF32()
- T CStrAutoEncode::~CStrAutoEncode()
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -380,6 +380,7 @@
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strncpy
  V_strnicmp
@@ -395,7 +396,6 @@
  __stack_chk_guard
  __stderrp
  __toupper
- _strlwr
  alphasort$INODE64
  b CUtlSymbol::Initialize()::symbolsInitialized
  b g_CleanupSymbolTable

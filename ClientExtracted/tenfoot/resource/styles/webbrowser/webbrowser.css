@@ -776,3 +776,18 @@ Tooltip
 	margin-left: 5px;
 }
 
+WebBrowser MouseScrollRegion
+{
+	visibility: collapse;
+}
+
+.VR MouseScrollRegion.BrowserScroller
+{
+	visibility: visible;
+}
+
+
+.TopMouseScrollRegion
+{
+	transform: none;
+}

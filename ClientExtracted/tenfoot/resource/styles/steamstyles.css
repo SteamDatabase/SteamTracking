@@ -29,7 +29,7 @@
 @define contextmenu_zindex:       	10000100;
 @define msgbox_zindex:            	90000000;
 // dropdowns/context menus inside of a msgbox must have a higher zindex than the msgbox itself
-@define msgbox_contextmenu_zindex:	90000100;	
+@define msgbox_contextmenu_zindex:	90000100;
 
 // must be bigger than message box z-index
 @define footer_zindex:            	90000500;
@@ -109,7 +109,7 @@
 
 /* Same deal, only the top left corner gets the fade */
 /* radial, centerx centery, offsetx offsety, radiusx radiusy, color stops */
-@define bgwithgradienttopleft: #000000ff, gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b00 ) );					
+@define bgwithgradienttopleft: #000000ff, gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b00 ) );
 
 //settings
 @define simplebutton: gradient( linear, 0% 0%, 100% 100%, from( #30708c77 ), to( #28395922 ) );
@@ -204,7 +204,7 @@
 @define friendstab: #1b4059ff;
 @define friendstabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
 @define friendstabcurrenthover: #1f5369ff;
-@define friendstabdivider: #1a5e80ff; 
+@define friendstabdivider: #1a5e80ff;
 @define friendschatinputbkgnd: gradient( linear, 0% 0%, 100% 100%, from( #456c8aff  ), to( #20324070 ) );
 @define friendschatinputbkgnd_text: gradient( linear, 0% 0%, 100% 100%, from( #5685a850 ), to( #20324070 ) );
 @define chat_window_bg: gradient( linear, -2% 0%, -4% 100%, from( #0b2538ff ), color-stop( 0.5, #0b253800 ), color-stop( 0.6, #0e202e00 ), to( #182d3dcc ) );
@@ -270,7 +270,7 @@
 
 
 // ContextMenu - used in code -- dont rename
-@define ContextMenuFadoutTime: 0.2s; 
+@define ContextMenuFadoutTime: 0.2s;
 
 // Parental - used for locked controls
 @define parental_locked_wash: #888888FF;
@@ -284,6 +284,9 @@
 @define PageTransitionTimeOff: 0.35s;
 @define PageTransitionTimeOn: 0.35s;
 
+
+@define DragScrollFlickTimingFunction: cubic-bezier( 0.15, 0.74, 0.44, 0.98);
+@define DragScrollFlickTime: 2.5s;
 
 DropDown
 {
@@ -445,7 +448,7 @@ DropDown.DropDownMenuVisible:focus
 	border-color: ui_common_control_border;
 	box-shadow: box_shadow_off_color -4px -4px 8px 8px;
 	color: #e1e1e1;
-	
+
 	animation-name: none;
 }
 
@@ -533,7 +536,7 @@ RadioButton
 
 Label
 {
-    font-family: platformfont;
+	font-family: platformfont;
 }
 
 .Button Label,
@@ -573,7 +576,7 @@ ToggleButton:disabled .TickBox,
 TextEntry:disabled
 {
 	color: detailsdatalabel;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian( 0.7 );
 	opacity: 0.5;
 	border-color: none;
@@ -818,10 +821,10 @@ VerticalScrollBar, HTMLVerticalScrollBar
 	transition-property: transform;
 }
 
-VerticalScrollBar .ScrollThumb, HTMLVerticalScrollBar .ScrollThumb
+VerticalScrollBar .ScrollThumb, HTMLVerticalScrollBar .ScrollThumb,
+HorizontalScrollBar .ScrollThumb, HTMLHorizontalScrollBar .ScrollThumb
 {
 	background-color: #66bff3ff;
-
 	transition-property: position;
 }
 
@@ -838,12 +841,6 @@ HorizontalScrollBar, HTMLHorizontalScrollBar
 	transition-property: transform;
 }
 
-HorizontalScrollBar .ScrollThumb, HTMLHorizontalScrollBar .ScrollThumb
-{
-	background-color: #66bff3ff;
-
-	transition-property: position;
-}
 
 // HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions
 
@@ -873,10 +870,21 @@ HorizontalScrollBar.MouseDown,
 HorizontalScrollBar.MouseDown .ScrollThumb
 
 {
-    // Disable the transition when the mouse is dragging the scroll thumb. Note that this must match
-    // when IUIScrollBar::IsMouseDown returns true, or else the content will be out of sync
-    transition-duration: 0.0s;
+	// Disable the transition when the mouse is dragging the scroll thumb. Note that this must match
+	// when IUIScrollBar::IsMouseDown returns true, or else the content will be out of sync
+	transition-duration: 0.0s;
 }
+
+VerticalScrollBar.Flick,
+VerticalScrollBar.Flick .ScrollThumb,
+HorizontalScrollBar.Flick,
+HorizontalScrollBar.Flick .ScrollThumb,
+EdgeScrollBar.Flick
+{
+	transition-duration: DragScrollFlickTime;
+	transition-timing-function: DragScrollFlickTimingFunction;
+}
+
 
 TextTooltip
 {
@@ -891,12 +899,12 @@ TextTooltip
 
 	color: #111111ff;
 
-    visibility: collapse;
+	visibility: collapse;
 }
 
 TextTooltip.TooltipVisible
 {
-    visibility: visible;
+	visibility: visible;
 }
 
 .HorizontalRule
@@ -968,7 +976,7 @@ TextTooltip.TooltipVisible
 	{
 		box-shadow: fill box_shadow_on_color -5.5px -5.5px 18px 9px;
 	}
-	
+
 	40%
 	{
 		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
@@ -1174,12 +1182,12 @@ em
 
 h1
 {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 h2
 {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
@@ -1319,7 +1327,7 @@ h2
 {
 	pre-transform-scale2d: 1.06;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	
+
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
@@ -1362,11 +1370,11 @@ h2
 {
 
 	background-image: url( "file://{images}/steam_home_vr.png" );
-	
+
 	width: 87px;
 	height: 87px;
 	margin-top: 11px;
-	position: 118px 0px 0px;	
+	position: 118px 0px 0px;
 	opacity: 0.0;
 
 
@@ -1427,22 +1435,22 @@ h2
 {
 	from
 	{
-		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	}
 
 	50%
 	{
-		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	}
 
 	to
 	{
-		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	}
 }
 
 
-// 
+//
 // ContextMenu
 //
 .ContextMenu
@@ -1501,13 +1509,13 @@ h2
 {
 	margin-bottom: 0px;
 }
-	
+
 
 .CursorVisible .ContextMenuBodyCentered
 {
 	margin-bottom: 0px;
 }
-	
+
 
 .ContextMenuBody Button,
 .ContextMenuBodyCentered Button,
@@ -1585,10 +1593,10 @@ h2
 }
 
 .StdLabel
-{ 
+{
 	font-size: deffontsize;
 	font-family: platformfont;
-    color: tcstatictext;
+	color: tcstatictext;
 }
 
 .StdLabelMed
@@ -1815,7 +1823,7 @@ HTMLSimpleNavigationWrapper
 {
 	width: 100%;
 	height: 100%;
-	
+
 	z-index: all_top_zindex;
 }
 
@@ -1851,14 +1859,14 @@ LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
 	height: 0px;
 	visibility: collapse;
 	opacity: 0.0;
-	
+
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 
 	horizontal-align: center;
 	vertical-align: center;
-	
+
 	overflow: clip clip;
 
 	transition-property: wash-color, opacity, transform, height;
@@ -1899,7 +1907,7 @@ AppGridItem:focus .StreamingVideoSupport
 	wash-color: installedblue;
 	visibility: visible;
 	background-image: url( "file://{images}/library/icon_readytodownload.png" );
-}	
+}
 
 LibraryAppDetails #ReadyToDownload
 {
@@ -1973,7 +1981,6 @@ LibraryAppDetails #ReadyToDownload
 	flow-children: right;
 	overflow: clip clip;
 
-	transform: translatey( -50px );
 	transition-property: height, transform;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -2018,7 +2025,7 @@ Button:hover #SuggestedStatus
 {
 	width: 100%;
 	height: 3px;
-	background-color: installedblue;	
+	background-color: installedblue;
 	vertical-align: center;
 	horizontal-align: center;
 	margin-top: 3px;
@@ -2028,7 +2035,7 @@ Button:hover #SuggestedStatus
 
 .ReadyToPlay .InstalledState
 {
-	background-color: readytoplaygreen;	
+	background-color: readytoplaygreen;
 }
 
 .UnavailableOnPlatform .InstalledState
@@ -2470,7 +2477,7 @@ Button:hover #SuggestedStatus
 
 	flow-children: down;
 
-	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-property: position, color, background-color, transform, opacity, height, width, saturation;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2493,7 +2500,7 @@ Button:hover #SuggestedStatus
 .NxFilterTab:descendantfocus
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform: translatez( 20px );
 	position: 1480px 120px 0px;
 }
@@ -2642,7 +2649,7 @@ Button:hover #SuggestedStatus
 {
 	opacity: 1.0;
 	wash-color: none;
-	
+
 	transition-property: wash-color;
 	transition-duration: 0.08s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -2658,7 +2665,7 @@ Button:hover #SuggestedStatus
 	color: #082846FF;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
-	
+
 	animation-name: nx-filter-button-focus;
 	animation-duration: longduration;
 	animation-delay: shortduration;
@@ -2723,8 +2730,9 @@ AutoAuthHTML.BrowserDisabled LoadingThrobber
 	visibility: collapse;
 }
 
+
 //
-// Edge scroller base styles
+// Edge scroller and mouse scroll region base styles
 //
 EdgeScrollBar
 {
@@ -2736,7 +2744,8 @@ EdgeScrollBar
 	transition-property: transform;
 }
 
-.EdgeScrollButton
+.EdgeScrollButton,
+MouseScrollRegion
 {
 	z-index: 300;
 
@@ -2751,158 +2760,54 @@ EdgeScrollBar
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-EdgeScrollBar.Horizontal .EdgeScrollButton
+EdgeScrollBar.Horizontal .EdgeScrollButton,
+.LeftMouseScrollRegion,
+.RightMouseScrollRegion
 {
 	width: 80px;
-	height: 100%;	
+	height: 250px;
 }
 
-EdgeScrollBar.Vertical .EdgeScrollButton
+EdgeScrollBar.Vertical .EdgeScrollButton,
+.TopMouseScrollRegion,
+.BottomMouseScrollRegion
 {
-	width: 100%;
-	height: 80px;	
+	width: 250px;
+	height: 80px;
 }
 
 .CursorVisible .EdgeScroller:descendantfocus:hover .EdgeScrollButton,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.PageScroll .EdgeScrollButton
-{
-	opacity: 1.0;
-}
-
-EdgeScrollBar.Horizontal #MinButton
-{
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	background-color: mouse_off_bg_left;
-	align: center top;
-}
-
-EdgeScrollBar.Horizontal #MaxButton
-{
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	background-color: mouse_off_bg_right;
-	align: center bottom;
-}
-
-EdgeScrollBar.Vertical #MinButton
-{
-	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
-	background-color: mouse_off_bg_up;
-	align: center top;
-}
-
-EdgeScrollBar.Vertical #MaxButton
-{
-	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-	background-color: mouse_off_bg_bottom;
-	align: center bottom;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:hover
-{
-	background-color: mouse_hover_bg_left;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:hover
-{
-	background-color: mouse_hover_bg_right;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:hover
-{
-	background-color: mouse_hover_bg_up;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:hover
-{
-	background-color: mouse_hover_bg_bottom;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll .EdgeScrollButton:active
-{
-	transition-delay: 0.2s, 0.0s;
-}																							  
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:active
-{
-	background-color: mouse_active_bg_left;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:active
-{
-	background-color: mouse_active_bg_right;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:active
-{
-	background-color: mouse_active_bg_up;
-}
-
-.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active,
-.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:active
-{
-	background-color: mouse_active_bg_bottom;
-}
-
-
-//
-// Mouse scroll regions in grid and carousel
-//
-MouseScrollRegion
-{
-	z-index: 300;
-
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
-
-	opacity: 0.0;
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration, shortduration;
-	transition-delay: 0.2s, 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.PageScroll .EdgeScrollButton,
 .CursorVisible .MouseScrollContainer:hover MouseScrollRegion
 {
 	opacity: 1.0;
 }
 
-
-.LeftMouseScrollRegion, .RightMouseScrollRegion
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.DragScrolling .EdgeScrollButton,
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Flick .EdgeScrollButton,
+.CursorVisible .MouseScrollContainer.DragScrolling:hover MouseScrollRegion,
+.CursorVisible .MouseScrollContainer.Flick:hover MouseScrollRegion
 {
-	width: 80px;
-	height: 100%;
+	opacity: 0.0;
 }
 
-.TopMouseScrollRegion, .BottomMouseScrollRegion
-{
-	width: 100%;
-	height: 80px;
-	transform: translateY( -90px );
-}
-
+EdgeScrollBar.Horizontal #MinButton,
 .LeftMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	align: left center;
 	background-color: mouse_off_bg_left;
+	align: left center;
 }
 
+EdgeScrollBar.Horizontal #MaxButton,
 .RightMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
-	align: right center;
 	background-color: mouse_off_bg_right;
+	align: right center;
 }
 
+EdgeScrollBar.Vertical #MinButton,
 .TopMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
@@ -2910,6 +2815,7 @@ MouseScrollRegion
 	align: center top;
 }
 
+EdgeScrollBar.Vertical #MaxButton,
 .BottomMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
@@ -2917,42 +2823,71 @@ MouseScrollRegion
 	align: center bottom;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:hover,
 .CursorVisible .MouseScrollContainer:hover .LeftMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_left;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:hover,
 .CursorVisible .MouseScrollContainer:hover .RightMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_right;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:hover,
 .CursorVisible .MouseScrollContainer:hover .TopMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_up;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:hover,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:hover,
 .CursorVisible .MouseScrollContainer:hover .BottomMouseScrollRegion:hover
 {
 	background-color: mouse_hover_bg_bottom;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical .EdgeScrollButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll .EdgeScrollButton:active,
+.CursorVisible .MouseScrollContainer:hover .TopMouseScrollRegion:active,
+.CursorVisible .MouseScrollContainer:hover .BottomMouseScrollRegion:active
+{
+	transition-delay: 0.2s, 0.0s;
+}
+
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MinButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MinButton:active,
 .CursorVisible .MouseScrollContainer:hover .LeftMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_left;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Horizontal #MaxButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Horizontal.PageScroll #MaxButton:active,
 .CursorVisible .MouseScrollContainer:hover .RightMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_right;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MinButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MinButton:active,
 .CursorVisible .MouseScrollContainer:hover .TopMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_up;
 }
 
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.Vertical #MaxButton:active,
+.CursorVisible .EdgeScroller:hover EdgeScrollBar.Vertical.PageScroll #MaxButton:active,
 .CursorVisible .MouseScrollContainer:hover .BottomMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_bottom;
+}
+
+.BottomMouseScrollRegion
+{
+	transform: translateY( -90px );
 }

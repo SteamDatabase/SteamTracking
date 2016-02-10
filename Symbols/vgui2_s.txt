@@ -1515,10 +1515,10 @@
  T CSerializedSurface::SwapBuffers(unsigned int)
  T CSerializedSurface::UnlockCursor()
  T CSerializedSurface::~CSerializedSurface()
+ T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
- T CStrAutoEncode::~CStrAutoEncode()
  T CStyleAppearance::ApplySchemeSettings(vgui::IScheme*, KeyValues*)
  T CStyleAppearance::ApplyStyleSettings(KeyValues*, CLayoutFile*)
  T CStyleAppearance::CStyleAppearance(KeyValues*, CLayoutFile*)
@@ -2082,7 +2082,6 @@
  T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::InsertBefore(int, SFontSpan const&)
  T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::ShiftElementsRight(int, int)
  T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::~CUtlVector()
- T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
  T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
@@ -2145,6 +2144,7 @@
  T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::Validate(CValidator&, char const*)
  T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::~CUtlVector()
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddToTail(wchar_t&&)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::GrowVector(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
@@ -3408,7 +3408,7 @@
  V_FixDoubleSlashes
  V_FixSlashes
  V_MakeAbsolutePath
- V_SplitString
+ V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StripExtension
  V_StripFilename
  V_StripTrailingSlash
@@ -3419,6 +3419,7 @@
  V_UTF32ToUTF8
  V_UTF8ToUTF16
  V_UTF8ToUTF32
+ V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t> >&, int, EStringConvertErrorPolicy)
  V_atof
  V_atoi
  V_binarytohex
@@ -3426,6 +3427,7 @@
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strnchr
  V_strncmp
@@ -3433,6 +3435,8 @@
  V_strnicmp
  V_strtoui64
  V_tolower
+ V_towlower32
+ V_towupper32
  V_vsnprintfRet
  V_wcsncpy
  V_wcstoui64
@@ -3463,11 +3467,8 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __tolower
- __toupper
  __udivdi3
  __umoddi3
- _strlwr
  abort
  access
  aglChoosePixelFormat
@@ -3833,7 +3834,7 @@
  snprintf
  sscanf
  stat$INODE64
- statfs64
+ statfs$INODE64
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)

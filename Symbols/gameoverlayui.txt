@@ -753,9 +753,7 @@
  D CSettingsSubBroadcast::GetKBMap()::s_pMap
  D CSettingsSubBroadcast::GetMessageMap()::s_pMap
  D CSettingsSubBroadcast::KB_ChainToMap()::chained
- D CSettingsSubBroadcast::PanelMessageFunc_HardwareSupportChanged::InitVar()::bAdded
  D CSettingsSubBroadcast::PanelMessageFunc_OnComboBoxChanged::InitVar()::bAdded
- D CSettingsSubBroadcast::PanelMessageFunc_UpdateHardwareSupport::InitVar()::bAdded
  D CSettingsSubBrowser::ChainToAnimationMap()::chained
  D CSettingsSubBrowser::ChainToMap()::chained
  D CSettingsSubBrowser::GetKBMap()::s_pMap
@@ -7953,16 +7951,12 @@
  T CSettingsSubBroadcast::GetMessageMap()
  T CSettingsSubBroadcast::GetPanelClassName()
  T CSettingsSubBroadcast::GetPanelTopClassName() const
- T CSettingsSubBroadcast::HardwareSupportChanged()
  T CSettingsSubBroadcast::KB_ChainToMap()
  T CSettingsSubBroadcast::OnApplyChanges()
  T CSettingsSubBroadcast::OnBroadcastStatus(BroadcastStatus_t*)
  T CSettingsSubBroadcast::OnComboBoxChanged()
  T CSettingsSubBroadcast::OnResetData()
- T CSettingsSubBroadcast::PanelMessageFunc_HardwareSupportChanged::InitVar()
  T CSettingsSubBroadcast::PanelMessageFunc_OnComboBoxChanged::InitVar()
- T CSettingsSubBroadcast::PanelMessageFunc_UpdateHardwareSupport::InitVar()
- T CSettingsSubBroadcast::UpdateHardwareSupport(int)
  T CSettingsSubBroadcast::~CSettingsSubBroadcast()
  T CSettingsSubBrowser::CSettingsSubBrowser(vgui::Panel*)
  T CSettingsSubBrowser::ChainToAnimationMap()
@@ -8105,10 +8099,10 @@
  T CSteamAuthedHTML::Validate(CValidator&, char const*)
  T CSteamAuthedHTML::~CSteamAuthedHTML()
  T CSteamID::Render() const
+ T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
- T CStrAutoEncode::~CStrAutoEncode()
  T CStringProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CStringProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CStringProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -8985,8 +8979,6 @@
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::~CUtlVector()
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::AddToTail(vgui::Panel*&&)
- T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::FastRemove(int)
- T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::FindAndFastRemove(vgui::Panel* const&)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::FindAndRemove(vgui::Panel* const&)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::GrowVector(int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::InsertBefore(int, vgui::Panel* const&)
@@ -9425,7 +9417,6 @@
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetFileTimestampString(long long)
  T GetGameOverlayUIBasePanel()
- T GetHardwareSupportCheckboxVec()
  T GetJpegDimensions(unsigned char const*, int, unsigned int&, unsigned int&)
  T GetLanguageCLocaleName(ELanguage)
  T GetLanguageICUName(ELanguage)
@@ -9436,7 +9427,6 @@
  T GetPanelMessageMapDictionary()
  T GetPchTempTextBuffer_Harmful()
  T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
- T GetSettingsHardwareEncodingState(bool)
  T GetTGADimensions(int, char*, int*, int*)
  T GlobalRNGList()
  T GridMenu::PerformLayout()
@@ -9775,7 +9765,6 @@
  T URLEncode(char const*)
  T URLLabel_Factory()
  T UnlinkFile(char const*)
- T UpdateHardwareSupportCheckboxes(vgui::Panel*, bool)
  T UpdateProfilingState()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T V_strstr(char const*, char const*)
@@ -13918,15 +13907,17 @@
  V_strcat
  V_stricmp_prefix
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strncmp
  V_strncpy
  V_strnicmp
  V_strtoui64
  V_tolower
+ V_towlower32
+ V_towupper32
  V_vsnprintf
  V_vsnprintfRet
- V_wcslower
  V_wcsncpy
  V_wcstoui64
  Warning
@@ -13965,11 +13956,9 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __tolower
  __toupper
  __udivdi3
  __umoddi3
- _strlwr
  abort
  access
  alphasort$INODE64
@@ -14226,7 +14215,6 @@
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
  b GetFileTimestampString(long long)::s_rgchOut
- b GetHardwareSupportCheckboxVec()::s_vecPanels
  b GetPanelAnimationDictionary()::dictionary
  b GetPanelKeyBindingMapDictionary()::dictionary
  b GetPanelMessageMapDictionary()::dictionary
@@ -14323,6 +14311,7 @@
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
+ b g_pClientGameNotifications
  b g_pClientGameStats
  b g_pClientHTMLSurface
  b g_pClientHTTP
@@ -14336,7 +14325,6 @@
  b g_pClientScreenshots
  b g_pClientShortcuts
  b g_pClientStreamClient
- b g_pClientTabletop
  b g_pClientUGC
  b g_pClientUnifiedMessages
  b g_pClientUser
@@ -14358,7 +14346,6 @@
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b guard variable for CryptoPP::TheBitBucket()::bitBucket
  b guard variable for GCallbackMgr()::s_CallbackMgr
- b guard variable for GetHardwareSupportCheckboxVec()::s_vecPanels
  b guard variable for GetPanelAnimationDictionary()::dictionary
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
@@ -14428,7 +14415,6 @@
  b s_bDebugVGUI2Messages
  b s_bFirstLogEntry
  b s_bHWAccelCRC32
- b s_bSettingsHardwareEncodingState
  b s_bSuppressRebindChecks
  b s_hCurrentSortingColumnSymbol
  b s_hCurrentSortingColumnSymbol2

@@ -284,11 +284,13 @@ FriendsChatDialog:descendantfocus
 .VoiceHeader
 {
 	width: fit-children;
-	height: 48px;
-	padding-right: 8px;
+	height: 54px;
+	padding-right: 0px;
 	horizontal-align: right;
 	margin-right: -70px;
 	background-color: #124a6a;
+	padding: 3px;
+	padding-top: 0px;
 	//border-style: none;
 	visibility: collapse;
 }
@@ -303,6 +305,7 @@ FriendsChatDialog:descendantfocus .VoiceHeaderButton
 {
 	visibility: visible;
 	padding: 3px;
+	vertical-align: center;
 }
 
 .CursorVisible .VoiceHeaderButton
@@ -310,10 +313,16 @@ FriendsChatDialog:descendantfocus .VoiceHeaderButton
 	//border: 1px solid white;
 }
 
-FriendsChatDialog:descendantfocus .VoiceHeaderButton:hover
+FriendsChatDialog:descendantfocus .VoiceHeader:hover
 {
-	border: 2px solid white;
+	background-color: friendstabcurrentselection;
 }
+
+FriendsChatDialog:descendantfocus .VoiceHeader:selected
+{
+	background-color: applabelsolid;
+}
+
 
 .CursorVisible .VoiceHeaderButtonHintImage
 {
@@ -668,12 +677,9 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 #FriendsGameInviteHint
 {
 	vertical-align: center;
+	text-transform: uppercase;
 }
 
-.CursorVisible #FriendsGameInviteHint
-{
-	margin-top: 7px;
-}
 
 #FriendsGameInviteHint, #FriendsGameInviteDetails
 {
@@ -800,9 +806,13 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 
 #FriendsMainBodyAcceptVoiceChatButton:hover
 {
-	background-color: #196e9e;
-	border: 2px solid white;
+	background-color: friendstabcurrenselection;
 }
+#FriendsMainBodyAcceptVoiceChatButton:selected
+{
+	background-color: applabelsolid;
+}
+
 
 .VoiceChatRinging #FriendsMainBodyAcceptVoiceChatButton
 {
@@ -852,7 +862,7 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 #FriendsMainBodyPendingVoiceCallButton
 {
 	visibility: collapse;
-	width: 100%;
+	width: 60%;
 	height: fit-children;
 	background-color: #124b6b;
 	flow-children: right;
@@ -875,6 +885,11 @@ FriendsChatDialog.Layout_Keyboard:descendantfocus #FriendsMainBodyChatContainer
 .VoiceChatDialing #FriendsMainBodyPendingVoiceCallButton
 {
 	visibility: visible;
+}
+
+.VoiceChatDialing #FriendsMainBodyPendingVoiceCallButton:hover
+{
+	background-color: friendstabcurrentselection;
 }
 
 #VoiceChatPutOnHoldButton

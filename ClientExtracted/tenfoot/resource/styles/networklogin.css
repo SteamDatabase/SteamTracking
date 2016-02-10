@@ -6,7 +6,7 @@ NetworkLoginBrowserHelper
 
 	z-index: msgbox_zindex;
 
-	transition-property: opacity, blur, desaturation, transform, pre-transform-scale2d;
+	transition-property: opacity, blur, saturation, transform, pre-transform-scale2d;
 	transition-duration: 0.1s !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
 

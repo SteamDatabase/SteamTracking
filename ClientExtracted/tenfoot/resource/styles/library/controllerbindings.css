@@ -26,7 +26,7 @@
 #ControllerBindings#ControllerBindings.BehindAnotherMsgBox
 {
 	opacity: 1.0;
-	desaturation: 0.4;
+	saturation: 0.6;
 	blur: gaussian( 1.5 );
 	transform: translatex( 0px );
 }
@@ -1991,7 +1991,7 @@ Button:focus .PActionMappingWrapper Image
 	border-width: 2px;
 	border-radius: 50%;
 
-	transition-property: transform, background-color, blur, desaturation, opacity; 
+	transition-property: transform, background-color, blur, saturation, opacity; 
 	transition-duration: 0.25s;
 	transition-timing-function: linear;
 
@@ -2188,7 +2188,7 @@ Button:focus .PActionMappingWrapper Image
 
 .PadSettingDropDown 
 {
-	transition-property: desaturation, blur, opacity;
+	transition-property: saturation, blur, opacity;
 	transition-duration: .3s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -2244,7 +2244,7 @@ Button:focus .PActionMappingWrapper Image
 
 	padding: 0px;
 
-	transition-property: background-color, opacity, transform, desaturation, blur !immediate;
+	transition-property: background-color, opacity, transform, saturation, blur !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in;
 }
@@ -2295,7 +2295,7 @@ Button:focus .PActionMappingWrapper Image
 
 	opacity: 1.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
 
@@ -2315,7 +2315,7 @@ Button:focus .PActionMappingWrapper Image
 	animation-name: none;
 	opacity: 1.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 

@@ -15,7 +15,7 @@ Join
 
 	font-family: platformfont;
 
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.20s;
 	transition-timing-function: linear;
 	transform: translateX(0px);
@@ -50,7 +50,7 @@ Join:descendantfocus
 	perspective-origin: 50% 50%;
 	pre-transform-scale2d: 1.0;
 	opacity: 0.6;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: bgcolorwashlight;
 	overflow: noclip clip;
 
@@ -76,7 +76,7 @@ Join:descendantfocus
 	perspective-origin: 50% 50%;
 	pre-transform-scale2d: 1.0;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: none;
 	overflow: noclip clip;
 
@@ -109,7 +109,7 @@ JoinItem:focus
 {
 	transform: translatey(-30px , translatez(0px);
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	pre-transform-scale2d: 1.0;
 }
 
@@ -259,7 +259,7 @@ JoinItem .BezelInside
 JoinItem:focus .JoinItemImage
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 JoinItem .JoinItemImage
@@ -269,7 +269,7 @@ JoinItem .JoinItemImage
 	horizontal-align: center;
 	vertical-align: center;
 	opacity: 0.85;
-	desaturation: 0.1;
+	saturation: 0.9;
 
 	transition-property: pre-transform-scale2d, opacity;
 	transition-duration: shortmedduration;

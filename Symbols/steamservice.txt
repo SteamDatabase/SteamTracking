@@ -6522,6 +6522,7 @@
  T std::__1::__vector_base<char const*, std::__1::allocator<char const*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::~__vector_base()
+ T std::__1::__vector_base<unsigned int, std::__1::allocator<unsigned int> >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<int>(int, unsigned int)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
@@ -6566,6 +6567,7 @@
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::resize(unsigned long)
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__swap_out_circular_buffer(std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>&)
  T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::__append(unsigned long)
+ T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::allocate(unsigned long)
  T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::vector(std::__1::vector<unsigned int, std::__1::allocator<unsigned int> > const&)
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
@@ -8204,6 +8206,7 @@
  t init256
  t init384
  t init512
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
  t int_cb_LHASH_DOALL_ARG
  t int_cleanup
  t int_cleanup_cb_LHASH_DOALL

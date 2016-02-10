@@ -84,30 +84,6 @@ message CBorderData {
 	optional .CBorderData.CBorderSide left = 4;
 }
 
-message CBorderImageData {
-	message CBorderWidthData {
-		optional uint32 width_type = 1;
-		optional double width_value = 2;
-	}
-
-	optional uint32 border_texture_id = 1;
-	optional bool preserve_middle = 2;
-	optional double top_slice_pixels = 3;
-	optional double right_slice_pixels = 4;
-	optional double bottom_slice_pixels = 5;
-	optional double left_slice_pixels = 6;
-	optional .CBorderImageData.CBorderWidthData top_width = 7;
-	optional .CBorderImageData.CBorderWidthData right_width = 8;
-	optional .CBorderImageData.CBorderWidthData bottom_width = 9;
-	optional .CBorderImageData.CBorderWidthData left_width = 10;
-	optional double top_outset_pixels = 11;
-	optional double right_outset_pixels = 12;
-	optional double bottom_outset_pixels = 13;
-	optional double left_outset_pixels = 14;
-	optional uint32 horizontal_repeat_type = 15;
-	optional uint32 vertical_repeat_type = 16;
-}
-
 message CBoxShadowData {
 	optional bool inset = 1;
 	optional double horizontal_offset = 2;
@@ -170,28 +146,31 @@ message CMsgPushCompositingLayer {
 	optional double perspective_depth = 32;
 	optional double opacity = 33;
 	optional uint32 composition_color = 34;
-	optional double desaturation = 35;
-	optional uint32 opacity_mask_texture_id = 36;
-	optional double opacity_mask_opacity = 37;
-	optional .CBorderData border = 38;
-	optional .CBorderImageData border_image = 39;
-	optional .CRadiusData border_radius = 40;
-	optional .CBoxShadowData box_shadow = 41;
-	optional double gaussianblur_passes = 42;
-	optional double gaussianblur_stddevhor = 43;
-	optional double gaussianblur_stddevver = 44;
-	optional double scale_2d_factors_x = 45;
-	optional double scale_2d_factors_y = 46;
-	optional double rotate_2d = 47;
-	optional bool needs_clear = 48;
-	optional bool needs_depth = 49;
-	optional bool needs_redraw_every_frame = 50;
-	optional .CTextShadowData text_shadow = 51;
-	optional uint32 mix_blend_mode = 52;
-	optional double occluded_left_edge = 53;
-	optional double occluded_top_edge = 54;
-	optional double occluded_right_edge = 55;
-	optional double occluded_bottom_edge = 56;
+	optional double saturation = 35;
+	optional double hue_shift = 36;
+	optional double brightness = 37;
+	optional double contrast = 38;
+	optional uint32 opacity_mask_texture_id = 39;
+	optional double opacity_mask_opacity = 40;
+	optional .CBorderData border = 41;
+	optional .CRadiusData border_radius = 42;
+	optional .CBoxShadowData box_shadow = 43;
+	optional double gaussianblur_passes = 44;
+	optional double gaussianblur_stddevhor = 45;
+	optional double gaussianblur_stddevver = 46;
+	optional double scale_2d_factors_x = 47;
+	optional double scale_2d_factors_y = 48;
+	optional double rotate_2d = 49;
+	optional bool needs_clear = 50;
+	optional bool needs_depth = 51;
+	optional bool needs_intermediate_texture = 52;
+	optional bool needs_redraw_every_frame = 53;
+	optional .CTextShadowData text_shadow = 54;
+	optional uint32 mix_blend_mode = 55;
+	optional double occluded_left_edge = 56;
+	optional double occluded_top_edge = 57;
+	optional double occluded_right_edge = 58;
+	optional double occluded_bottom_edge = 59;
 }
 
 message CMsgPopCompositingLayer {
@@ -249,7 +228,8 @@ message CMsgPointWithTransition {
 	optional .CMsgPoint base = 1;
 	optional .CMsgPoint transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgColor {
@@ -264,7 +244,8 @@ message CMsgColor {
 	optional uint32 base = 1;
 	optional uint32 transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgColorStop {
@@ -340,7 +321,8 @@ message CMsgFillBrushCollection {
 	repeated .CMsgFillBrush base = 1;
 	repeated .CMsgFillBrush transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgRenderFillBrushCollection {
@@ -359,11 +341,12 @@ message CMsgPanelPosition {
 	optional .CMsgPoint base = 1;
 	optional .CMsgPoint transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
-	optional .CMsgPoint scroll_offset = 5;
-	optional .CMsgPoint scroll_offset_target = 6;
-	optional .CMsgTransitionData scroll_transition_x = 7;
-	optional .CMsgTransitionData scroll_transition_y = 8;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
+	optional .CMsgPoint scroll_offset = 6;
+	optional .CMsgPoint scroll_offset_target = 7;
+	optional .CMsgTransitionData scroll_transition_x = 8;
+	optional .CMsgTransitionData scroll_transition_y = 9;
 }
 
 message CMsgOpacity {
@@ -378,7 +361,8 @@ message CMsgOpacity {
 	optional double base = 1;
 	optional double transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgRotate2D {
@@ -393,7 +377,8 @@ message CMsgRotate2D {
 	optional double base = 1;
 	optional double transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgOpacityMaskData {
@@ -413,22 +398,72 @@ message CMsgOpacityMask {
 	optional .CMsgOpacityMaskData base = 1;
 	optional .CMsgOpacityMaskData transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
-message CMsgDesaturation {
+message CMsgHueShift {
 	message AnimationFrameData {
 		optional double data = 1;
 	}
 
 	extend .CMsgAnimationFrameData {
-		optional .CMsgDesaturation.AnimationFrameData animation_frame_data = 1005;
+		optional .CMsgHueShift.AnimationFrameData animation_frame_data = 1019;
 	}
 
 	optional double base = 1;
 	optional double transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
+}
+
+message CMsgSaturation {
+	message AnimationFrameData {
+		optional double data = 1;
+	}
+
+	extend .CMsgAnimationFrameData {
+		optional .CMsgSaturation.AnimationFrameData animation_frame_data = 1005;
+	}
+
+	optional double base = 1;
+	optional double transition = 2;
+	optional .CMsgTransitionData transition_data = 3;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
+}
+
+message CMsgBrightness {
+	message AnimationFrameData {
+		optional double data = 1;
+	}
+
+	extend .CMsgAnimationFrameData {
+		optional .CMsgBrightness.AnimationFrameData animation_frame_data = 1020;
+	}
+
+	optional double base = 1;
+	optional double transition = 2;
+	optional .CMsgTransitionData transition_data = 3;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
+}
+
+message CMsgContrast {
+	message AnimationFrameData {
+		optional double data = 1;
+	}
+
+	extend .CMsgAnimationFrameData {
+		optional .CMsgContrast.AnimationFrameData animation_frame_data = 1021;
+	}
+
+	optional double base = 1;
+	optional double transition = 2;
+	optional .CMsgTransitionData transition_data = 3;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgGaussianValues {
@@ -449,7 +484,8 @@ message CMsgGaussianBlur {
 	optional .CMsgGaussianValues base = 1;
 	optional .CMsgGaussianValues transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsg3DTransformPerspective {
@@ -464,7 +500,8 @@ message CMsg3DTransformPerspective {
 	optional double base = 1;
 	optional double transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsg3DTransformPerspectiveOrigin {
@@ -479,7 +516,8 @@ message CMsg3DTransformPerspectiveOrigin {
 	optional .CMsgPoint base = 1;
 	optional .CMsgPoint transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgTransformOriginData {
@@ -502,7 +540,8 @@ message CMsg3DTransformOrigin {
 	optional .CMsgTransformOriginData base = 1;
 	optional .CMsgTransformOriginData transition = 2;
 	optional .CMsgTransitionData transition_data = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsg3DTransformMatrix {
@@ -517,7 +556,8 @@ message CMsg3DTransformMatrix {
 	optional .CMsgMatrix4x4 base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CMsgMatrix4x4 transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgBorderRadius {
@@ -532,7 +572,8 @@ message CMsgBorderRadius {
 	optional .CRadiusData base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CRadiusData transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgBorder {
@@ -547,7 +588,8 @@ message CMsgBorder {
 	optional .CBorderData base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CBorderData transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgBoxShadow {
@@ -562,7 +604,8 @@ message CMsgBoxShadow {
 	optional .CBoxShadowData base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CBoxShadowData transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgTextShadow {
@@ -577,7 +620,8 @@ message CMsgTextShadow {
 	optional .CTextShadowData base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CTextShadowData transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgClip {
@@ -592,7 +636,8 @@ message CMsgClip {
 	optional .CMsgClipData base = 1;
 	optional .CMsgTransitionData transition_data = 2;
 	optional .CMsgClipData transition = 3;
-	repeated .CMsgAnimationData animations = 4;
+	optional uint32 style_symbol = 4;
+	repeated .CMsgAnimationData animations = 5;
 }
 
 message CMsgPushClipLayer {
@@ -602,6 +647,37 @@ message CMsgPushClipLayer {
 }
 
 message CMsgPopClipLayer {
+}
+
+message CMsgPushPanelContextInLayer {
+	optional double transform_m00 = 1;
+	optional double transform_m01 = 2;
+	optional double transform_m02 = 3;
+	optional double transform_m03 = 4;
+	optional double transform_m10 = 5;
+	optional double transform_m11 = 6;
+	optional double transform_m12 = 7;
+	optional double transform_m13 = 8;
+	optional double transform_m20 = 9;
+	optional double transform_m21 = 10;
+	optional double transform_m22 = 11;
+	optional double transform_m23 = 12;
+	optional double transform_m30 = 13;
+	optional double transform_m31 = 14;
+	optional double transform_m32 = 15;
+	optional double transform_m33 = 16;
+	optional .CBoxShadowData box_shadow = 17;
+	optional double width = 18;
+	optional double height = 19;
+	optional double position_x = 20;
+	optional double position_y = 21;
+	optional double position_z = 22;
+	optional .CBorderData border = 23;
+	optional double scroll_x = 24;
+	optional double scroll_y = 25;
+}
+
+message CMsgPopPanelContextInLayer {
 }
 
 message CMsgPushAAndTContext {
@@ -617,22 +693,29 @@ message CMsgPushAAndTContext {
 	optional .CMsg3DTransformPerspectiveOrigin transform_perspective_origin = 11;
 	optional .CMsgOpacity opacity = 12;
 	optional .CMsgColor wash_color = 13;
-	optional .CMsgDesaturation desaturation = 14;
-	optional .CMsgOpacityMask opacity_mask = 15;
-	optional .CMsgBorderRadius border_radius = 16;
-	optional .CMsgGaussianBlur gaussian_blur = 17;
-	optional .CMsgBorder border = 18;
-	optional .CBorderImageData border_image = 19;
-	optional .CMsgBoxShadow box_shadow = 20;
-	optional .CMsgPointWithTransition scale_2d_centered = 21;
-	optional .CMsgRotate2D rotate_2d_centered = 22;
-	optional .CMsgTextShadow text_shadow = 23;
-	optional .CMsgClip clip = 24;
-	optional bool suppress_clip_to_bounds = 25;
-	optional int32 needs_full_repaint = 26;
-	optional bool wants_hit_test = 27;
-	optional uint32 mix_blend_mode = 28;
-	optional bool opaque_background = 29;
+	optional .CMsgHueShift hue_shift = 14;
+	optional .CMsgSaturation saturation = 15;
+	optional .CMsgBrightness brightness = 16;
+	optional .CMsgContrast contrast = 17;
+	optional .CMsgOpacityMask opacity_mask = 18;
+	optional .CMsgBorderRadius border_radius = 19;
+	optional .CMsgGaussianBlur gaussian_blur = 20;
+	optional .CMsgBorder border = 21;
+	optional .CMsgBoxShadow box_shadow = 22;
+	optional .CMsgPointWithTransition scale_2d_centered = 23;
+	optional .CMsgRotate2D rotate_2d_centered = 24;
+	optional .CMsgTextShadow text_shadow = 25;
+	optional .CMsgClip clip = 26;
+	optional bool suppress_clip_to_bounds = 27;
+	optional int32 needs_full_repaint = 28;
+	optional bool needs_intermediate_texture = 29;
+	optional bool clip_after_transform = 30;
+	optional bool wants_hit_test = 31;
+	optional bool wants_hit_test_children = 32;
+	optional uint32 mix_blend_mode = 33;
+	optional bool opaque_background = 34;
+	optional uint32 child_panel_count = 35;
+	optional bool wants_screenspace_quad_output = 36;
 }
 
 message CMsgPopAAndTContext {
@@ -673,6 +756,7 @@ message CMsgDrawTexturedRect {
 	optional .CMsgPoint texture_bottom_right = 5;
 	optional int32 texture_serial = 6 [default = 0];
 	optional uint32 texture_sample_mode = 7 [default = 0];
+	optional .CMsgOpacity texture_opacity = 8;
 }
 
 message CMsgDrawDoubleBufferedRect {
@@ -699,6 +783,7 @@ message CMsgRenderTexturedRect {
 	optional .CMsgPoint texture_bottom_right = 5;
 	optional int32 texture_serial = 6 [default = 0];
 	optional uint32 texture_sample_mode = 7 [default = 0];
+	optional float texture_opacity = 8 [default = 1];
 }
 
 message CMsgLockTexture {
@@ -748,7 +833,9 @@ message CMsgRenderTextRangeFormat {
 }
 
 message CMsgDrawTextRegion {
-	optional bytes wtext = 2;
+	optional bytes raw_text = 11;
+	optional int32 text_chars = 12;
+	optional int32 text_encoding = 13;
 	optional .CMsgTextFormat default_format = 3;
 	optional uint32 text_align = 4;
 	optional uint32 line_height = 5;
@@ -760,7 +847,9 @@ message CMsgDrawTextRegion {
 }
 
 message CMsgRenderTextRegion {
-	optional bytes wtext = 2;
+	optional bytes raw_text = 12;
+	optional int32 text_chars = 13;
+	optional int32 text_encoding = 14;
 	optional .CMsgRenderTextFormat default_format = 3;
 	optional uint32 text_align = 4;
 	optional uint32 line_height = 5;

@@ -61,13 +61,13 @@ StoreApp:descendantfocus
 .BehindMessageBox #ImageCarousel
 {
 	opacity: 0.6;
-	desaturation: 0.3;
+	saturation: 0.7;
 	wash-color: bgcolorwashmedium;
 }
 	
 .BehindMessageBox #AppSections
 {
-	desaturation: 0.5;
+	saturation: 0.5;
 	wash-color: bgcolorwashlight;
 }
 
@@ -91,7 +91,7 @@ StoreApp:descendantfocus
 {
 	width: 100%;
 	height: 100%;
-	desaturation: 1.0;
+	saturation: 0.0;
 	wash-color: store_details_wash;
 	opacity-mask: url( "file://{images}/store/store_app_bg_mask.png" );
 
@@ -362,11 +362,11 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	pre-transform-scale2d: 1.0;
 	wash-color: #00000022;
-	desaturation: 0.2;
+	saturation: 0.8;
 	opacity: 0.9;
 	//opacity-mask: url( "file://{images}/focus_shadow_top.png" ) 1.0;
 
-	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity, opacity-mask;
+	transition-property: position, pre-transform-scale2d, saturation, wash-color, opacity, opacity-mask;
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -376,7 +376,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 #ImageCarousel:hover
 {
 	pre-transform-scale2d: 1.02;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: none;
 	opacity: 1.0;
 }
@@ -385,7 +385,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 {
 	pre-transform-scale2d: 1.00;
 	wash-color: white;
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	position: 0px 125px 0px;
 	//opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
@@ -395,7 +395,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 {
 	pre-transform-scale2d: 1.00;
 	wash-color: white;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 
@@ -409,11 +409,11 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	wash-color: #00000033;
 	blur: gaussian(0.5);
-	desaturation: 0.4;
+	saturation: 0.6;
 	pre-transform-scale2d: 0.57, 0.57;
 	transform: translate3d( -172px, -76px, 0px );
 
-	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
+	transition-property: position, pre-transform-scale2d, saturation, border, wash-color, blur, transform;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -432,13 +432,13 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	box-shadow: #00000044 -4px -4px 8px 8px;
 	wash-color: #00000022;
 	blur: gaussian (0.0);
-	desaturation: 0.2;
+	saturation: 0.8;
 }
 
 #ImageCarousel:descendantfocus .PreviewImage:descendantfocus
 {
 	pre-transform-scale2d: 1.0, 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #00000000;
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -757,12 +757,12 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	height: 215px;
 	margin: 16px 16px 8px 16px;
 	opacity: 0.85;
-	desaturation: 0.1;
+	saturation: 0.9;
 
 	pre-transform-scale2d: 0.722, 0.89;
 	transform: translate3d( -76px, -24px, 0px );
 
-	transition-property: transform, opacity, desaturation, pre-transform-scale2d;
+	transition-property: transform, opacity, saturation, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -772,7 +772,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	pre-transform-scale2d: 1.0, 1.0;
 	transform: translatex( 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 .StoreAppPurchaseSection .AppSectionBody
@@ -2221,7 +2221,7 @@ StoreAppPackage #HeaderImage, StoreAppPackageGroup #HeaderImage, .StoreAppPackag
 	margin: 8px 16px 12px 16px;
 	wash-color: #00000033;
 	opacity: 0.9;
-	desaturation: 0.15;
+	saturation: 0.85;
 
 	transition-property: opacity;
 }
@@ -2230,7 +2230,7 @@ StoreAppPackage:descendantfocus #HeaderImage, StoreAppPackageGroup:descendantfoc
 {
 	wash-color: none;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 StoreAppPackage #PackageName, StoreAppPackageGroup #PackageName, .StoreAppPackage #PackageName
@@ -2440,21 +2440,21 @@ StoreAppDLCItem #DlcHeaderImage
 	width: 546px;
 	height: 255px;
 	box-shadow: #00000044 -4px -4px 8px 8px;
-	desaturation: 0.15;
+	saturation: 0.85;
 	wash-color: #00000044;
 
-	transition-property: desaturation, wash-color;
+	transition-property: saturation, wash-color;
 }
 
 StoreAppDLCItem:hover #DlcHeaderImage
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 }
 
 StoreAppDLCItem:descendantfocus #DlcHeaderImage
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #00000000;
 }
 
@@ -2545,9 +2545,9 @@ StorePackage
 	// transitions
 	transform: translate3d( 0px, 1280px, 1000px );
 	opacity: 0.0;
-	desaturation: 1.0;
+	saturation: 0.0;
 
-	transition-property: transform, opacity, desaturation;
+	transition-property: transform, opacity, saturation;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2557,7 +2557,7 @@ StorePackage:focus, StorePackage:descendantfocus
 {
 	transform: translate3d( 0px, 0px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #AppCarousel
@@ -2571,10 +2571,10 @@ StorePackage:focus, StorePackage:descendantfocus
 
 	pre-transform-scale2d: 1.0;
 	wash-color: bgcolorwashlight;
-	desaturation: 0.2;
+	saturation: 0.8;
 	opacity: 0.85;
 
-	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity;
+	transition-property: position, pre-transform-scale2d, saturation, wash-color, opacity;
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -2584,7 +2584,7 @@ StorePackage:focus, StorePackage:descendantfocus
 #AppCarousel:hover
 {
 	pre-transform-scale2d: 1.02;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: none;
 	opacity: 1.0;
 }
@@ -2593,7 +2593,7 @@ StorePackage:focus, StorePackage:descendantfocus
 {
 	pre-transform-scale2d: 1.00;
 	wash-color: white;
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	position: 0px 140px 0px;
 }
@@ -2602,7 +2602,7 @@ StorePackage:focus, StorePackage:descendantfocus
 {
 	pre-transform-scale2d: 1.00;
 	wash-color: white;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 
@@ -2718,9 +2718,9 @@ StorePackageAppOverview:descendantfocus .ImageBorder
 	box-shadow: #00000066 -2px -2px 4px 4px;
 	width: 460px;
 	height: 215px;
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 0.85;
-	transition-property: desaturation, opacity, box-shadow;
+	transition-property: saturation, opacity, box-shadow;
 	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -2728,7 +2728,7 @@ StorePackageAppOverview:descendantfocus .ImageBorder
 StorePackageAppOverview:descendantfocus #HeaderImage
 {
 	pre-transform-scale2d: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 }
 

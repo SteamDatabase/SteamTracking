@@ -25,7 +25,7 @@ ContentFrame:descendantfocus
 
 .BehindMessageBox ContentFrame
 {
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
 }
@@ -370,12 +370,15 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	width: 87px;
 	height: 87px;
 	margin-top: 11px;
+	opacity: 1.0;
 }
 
 .CursorVisible .ContentMouseBackButton
 {
 	opacity: 1.0;
 }
+
+
 
 .ContentHomeButton:hover,
 .ContentMouseBackButton:hover
@@ -417,6 +420,8 @@ RemoteContent .LoadingPanel #ErrorStatus2
 .OOBE .ContentMouseBackButton
 .FullScreenChild .ContentHomeButton,
 .FullScreenChild .ContentMouseBackButton,
+.VR .FullScreenChild .ContentHomeButton,
+.VR .FullScreenChild .ContentMouseBackButton
 
 {
 	opacity: 0.0;

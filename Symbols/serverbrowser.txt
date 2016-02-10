@@ -4004,9 +4004,9 @@
  T CSpectateGames::CSpectateGames(vgui::Panel*)
  T CSpectateGames::GetNewServerList()
  T CSpectateGames::~CSpectateGames()
+ T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
- T CStrAutoEncode::~CStrAutoEncode()
  T CStringProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CStringProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CStringProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -7851,14 +7851,16 @@
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strncmp
  V_strncpy
  V_strnicmp
  V_strtoui64
  V_tolower
+ V_towlower32
+ V_towupper32
  V_vsnprintfRet
- V_wcslower
  V_wcsncpy
  V_wcstoui64
  Warning
@@ -7888,10 +7890,8 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __tolower
  __toupper
  __udivdi3
- _strlwr
  access
  alphasort$INODE64
  atoi
@@ -8172,6 +8172,7 @@
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
+ b g_pClientGameNotifications
  b g_pClientGameStats
  b g_pClientHTMLSurface
  b g_pClientHTTP
@@ -8185,7 +8186,6 @@
  b g_pClientScreenshots
  b g_pClientShortcuts
  b g_pClientStreamClient
- b g_pClientTabletop
  b g_pClientUGC
  b g_pClientUnifiedMessages
  b g_pClientUser

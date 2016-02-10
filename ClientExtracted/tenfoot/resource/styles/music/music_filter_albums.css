@@ -20,7 +20,7 @@ MusicFilterAlbums
 
 	flow-children: down;
 
-	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-property: position, color, background-color, transform, opacity, height, width, saturation;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -30,7 +30,7 @@ MusicFilterAlbums:hover,
 MusicFilterAlbums:descendantfocus
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform: translatez( 20px );
 	position: 730px 120px 0px;
 }

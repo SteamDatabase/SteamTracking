@@ -20,7 +20,7 @@ MusicQueuePanel
 {
 	opacity: 1.0;
 
-	transition-property: opacity, blur, desaturation, transform;
+	transition-property: opacity, blur, saturation, transform;
 	transition-duration: 0.3s, 0.3s, 0.3s, 0.4s !immediate;
 	transition-timing-function: linear;
 	transform: translatez( 0px ) translatey( 0px );
@@ -31,7 +31,7 @@ MusicQueuePanel
 .MusicQueueVisible.ScreenSaverMode
 {
 	opacity: 0.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
 }

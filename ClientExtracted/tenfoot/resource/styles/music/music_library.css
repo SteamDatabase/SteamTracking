@@ -82,7 +82,7 @@ MusicLibraryCrawlingPanel
 .MusicLibraryVisible
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 .MusicExploreVisible
@@ -371,13 +371,25 @@ AlbumGridItem
 	vertical-align: top;
 	pre-transform-scale2d: 1.0;
 
-	transition-property: pre-transform-scale2d, position, transform, box-shadow;
+	transition-property: position, pre-transform-scale2d, transform, box-shadow;
 	transition-duration: 0.23s;
 	transition-delay: 0.0s;
 	transition-timing-function: bigpicture-ease-in-out;
 	
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
 }
+
+.DragScrolling AlbumGridItem
+{
+	transition-duration: 0.0s, 0.23s;
+}
+
+.Flick AlbumGridItem
+{
+	transition-timing-fuction: DragScrollFlickTimingFunction, bigpicture-ease-in-out;
+	transition-duration: DragScrollFlickTime, 0.23s;
+}
+
 
 AlbumGridItem:focus
 {
@@ -396,71 +408,21 @@ AlbumGridItem:focus
 AlbumGridItem:hover
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 AlbumGridItem:focus:hover
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }	
 
-
-.LeftMouseScrollRegion, .RightMouseScrollRegion
+AlbumGridItem.Hidden
 {
-	opacity: 0.0;
-	transition-property: opacity, background-color;
-	transition-duration: mediumduration;
-	transition-delay: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
-	transform: translateY( -80px );
-
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 80px 80px;
+	visibility: collapse;
 }
 
-.LeftMouseScrollRegion:hover
-{
-	opacity: 1.0;
-	background-color: mouse_hover_bg_up;
-}
 
-.RightMouseScrollRegion:hover
-{
-	opacity: 1.0;
-	background-color: mouse_active_bg_bottom;
-}
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-.MusicArtistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
-{
-	margin-top: 80px;
-	width: 50px;
-	align: center top;
-	height: 80px;
-	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_off_bg_up;
-}
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-.MusicArtistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
-.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
-{
-	width: 50px;
-	horizontal-align: center;
-	height: 80px;
-	align: center bottom;
-	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
-	z-index: 200;
-	opacity: 1.0;
-	transition-delay: 0.2s;
-	background-color: mouse_off_bg_bottom;
-}
 
 .AlbumImage
 {
@@ -816,8 +778,7 @@ ArtistGridItem
 
 	margin-bottom: 10px;
 
-	//transition-property: pre-transform-scale2d, position, transform, box-shadow;
-	transition-property:  position;
+	transition-property:  position, pre-transform-scale2d, transform, box-shadow;
 	transition-duration: 0.23s;
 	transition-delay: 0.0s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -825,6 +786,17 @@ ArtistGridItem
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
 
 	padding: 5px;
+}
+
+.DragScrolling ArtistGridItem
+{
+	transition-duration: 0.0s, 0.23s;
+}
+
+.Flick ArtistGridItem
+{
+	transition-timing-fuction: DragScrollFlickTimingFunction, bigpicture-ease-in-out;
+	transition-duration: DragScrollFlickTime, 0.23s;
 }
 
 ArtistGridItem:focus
@@ -892,7 +864,7 @@ ArtistGridItem.HiddenByFilter
 {
 	blur: gaussian( 5, 1 );
 	opacity: 0.15;
-	desaturation: 0.7;
+	saturation: 0.3;
 }
 
 ArtistGridItem #AlbumLabelWrapper
@@ -938,23 +910,6 @@ ArtistGridItem #AlbumImage
 	width: 100px;
 	height: 100px;
 }
-
-.LibraryAllGames .MusicAlbumGrid MouseScrollRegion
-{
-	x: -170px;
-}
-
-
-.LibraryAllGames .MusicAlbumGrid .TopMouseScrollRegion
-{
-	y: 90px;
-}
-
-.LibraryAllGames .MusicAlbumGrid .BottomMouseScrollRegion
-{
-	y: -500px;
-}
-
 
 ArtistGridItem.AddLibraryItem #AlbumImage
 {
@@ -1033,7 +988,7 @@ PlaylistGridItem.HiddenByFilter
 {
 	blur: gaussian( 5, 1 );
 	opacity: 0.15;
-	desaturation: 0.7;
+	saturation: 0.3;
 }
 
 PlaylistGridItem #AlbumLabelWrapper

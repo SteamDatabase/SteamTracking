@@ -307,7 +307,7 @@
 
 	"MainMenu_Welcome_Sub_Controller_H"	"Steam Controller Tips"
 	"MainMenu_Welcome_Sub_Controller_D"	"Here are a couple of tips to help you get the most out of your Steam Controller."
-	"MainMenu_Welcome_Sub_Controller_1"	"You can quickly view and edit your controller settings while playing. Just hit the Steam button to bring up the in-game Overlay and select “Configure Controller”."
+	"MainMenu_Welcome_Sub_Controller_1"	"You can quickly view and edit your controller settings while playing. Just hit the Steam button to bring up the in-game Overlay and select “Controller Configuration”."
 	"MainMenu_Welcome_Sub_Controller_1_Hint"		"IN-GAME OVERLAY"
 
 	"MainMenu_Welcome_Sub_Controller_2"	"ADJUST THE SENSITIVITY of your controller pads when using them to control a camera."
@@ -951,7 +951,8 @@
 	"SettingsInterface_Style1"	 "TrailerTV"
 	"SettingsInterface_Style2"	 "Game Hubs Screenshots"
 
-
+  "SettingsController_Shutdown_5" "5 Minutes"
+  "SettingsController_Shutdown_10" "10 Minutes"
   "SettingsController_Shutdown_15" "15 Minutes"
   "SettingsController_Shutdown_30" "30 Minutes"
   "SettingsController_Shutdown_60" "60 Minutes"
@@ -1673,7 +1674,7 @@
 	"Library_Details_Controller_Controller7" "Controller Seven"
 	"Library_Details_Controller_Controller8" "Controller Eight"
 	"Library_Details_Controller_PlayerAssigned" "{s:controller_player}"
-	"Library_Details_Controller_Hint"        "Configure Controller"
+	"Library_Details_Controller_Hint"        "Controller Configuration"
 	"Library_Details_Controller_Add"         "Add a Steam Controller"
 	"Library_Details_Controller_HowToPair"   "Pair a new Steam Controller by holding the X and Steam buttons."
 	"Library_Details_CancelControllerDetails" "CANCEL"
@@ -2042,6 +2043,7 @@
 	"Library_Details_FieldLabel_AbsMouseGyroLeft"	"Gyro Lean Left Binding"
 	"Library_Details_FieldLabel_TouchBinding"		"Touch Binding"
 	"Library_Details_FieldLabel_LeanSensitivity"	"Gyro Lean Point"
+	"Library_Details_FieldLabel_TestHaptics"		"Test Haptics Enable"
 	"Library_Details_FieldLabel_TestHapticSide"		"Test Haptic Side"
 	"Library_Details_FieldLabel_TestHapticRepeat"	"Test Haptic Repeat Count"
 	"Library_Details_FieldLabel_TestHapticOn"		"Test Haptic On Duration"
@@ -2161,7 +2163,7 @@
 	"Library_Details_Controller_Recommended"			"Recommended"
 	"Library_Details_Controller_EntireLibrary"			"Your Other Games"
 	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
-	"Library_Details_ManageControllers"					"Configure Controller"
+	"Library_Details_ManageControllers"					"Controller Configuration"
 
 	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
 	"Library_Details_Remove_Binding_Description"		"Would you like to remove this controller binding?"
@@ -2271,6 +2273,7 @@
 	"Library_UploadScreenshotCancel"	"CANCEL"
 	"Library_Details_RemoveFromFavorites"	"Remove from Favorites"
 	"Library_Details_AddToFavorites"	"Add to Favorites"
+	"Library_Details_AllowDesktopConfig"	"Allow Desktop Configuration in Launcher"
 	"Library_CDKeyTitle"			"{s:gamename} CD Keys"
 	"Library_CDKey_Description"		"You may need to enter a key into the game. Select a key here to copy it, and paste it into the game via the Steam Onscreen Keyboard."
 	"Library_CDKey_DontShowAgain"		"Don't show me this again"
@@ -2299,6 +2302,7 @@
 
 	"Library_Settings_Organize"				"Organize"
 	"Library_Settings_Preferences"			"Preferences"
+	"Library_Settings_ControllerSettings"	"Steam Controller"
 	"Library_Settings_Support"				"Support"
 	"Library_Settings_Content"				"Content"
 
@@ -5286,7 +5290,8 @@
 	"ControllerBinding_Missing_personal" "You haven't saved any configurations for this game."
 	"ControllerBinding_Missing_community" "There are no community created configurations for this game.\nMaybe you could be the first to publish one?"
 	"ControllerBinding_Missing_recommended" "The developer for this game has not recommended a configuration yet."
-	"ControllerBinding_NonMigrated_config"	"[Non-Migrated Local Legacy Config]"
+	"ControllerBinding_NonMigrated_config"	"[Local Config]"
+	"ControllerBinding_Autosave_config"		"[Local Legacy Autosave]"
 
 	"KeyboardHeader_StoreSearch"	"Store search"
 	"KeyboardDetail_SearchResultCount"	"{i:searchresultcount} found"

@@ -59,13 +59,13 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 
 .StoreBackgroundTransitionDownAndOff
 {
-	desaturation: 0.3;
+	saturation: 0.7;
 	opacity: 0.0;
 }
 
 .StoreBackgroundTransitionLeftAndOff
 {
-	desaturation: 0.3;
+	saturation: 0.7;
 	opacity: 0.0;
 }
 
@@ -119,7 +119,7 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 	vertical-align: center;
 	visibility: collapse;
 	opacity: 0.0;
-	desaturation: 0.5;
+	saturation: 0.5;
 	wash-color: bgcolorwashmedium;
 	flow-children: down;
 	box-shadow: fill dark_box_shadow_color 20px 20px 40px -44px;
@@ -138,6 +138,6 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 	border-style: solid;
 	border-color: transparent;
 
-	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
+	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, saturation;
 	transition-duration: 0.3s;
 }

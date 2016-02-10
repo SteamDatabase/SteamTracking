@@ -249,7 +249,7 @@ TextInputDualTouch
 	color: #66c0f4;
 	font-size: 22px;
 	
-	transition-property: opacity, desaturation;
+	transition-property: opacity, saturation;
 	transition-duration: 0.3s;
 
 }
@@ -257,7 +257,7 @@ TextInputDualTouch
 .SuggestionActive  #SubHeaderDetailText
 {
 	opacity: 0.2;
-	desaturation: 0.8;
+	saturation: 0.2;
 }
 
 

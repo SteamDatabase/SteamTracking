@@ -5,7 +5,7 @@
 
 #CommunityWrapper
 {
-	transition-property: transform, desaturation, opacity, position, blur, opacity-mask;
+	transition-property: transform, saturation, opacity, position, blur, opacity-mask;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: linear;

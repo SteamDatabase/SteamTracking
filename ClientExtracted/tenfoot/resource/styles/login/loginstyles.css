@@ -25,7 +25,7 @@
 	height: 263px;
 	width: 100%;
 	z-index: 2000;
-	transition-property: blur, desaturation, opacity, transform !immediate;
+	transition-property: blur, saturation, opacity, transform !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 }
@@ -168,11 +168,11 @@
 
 Join.BehindMessageBox:descendantfocus, LoginUser.BehindMessageBox:descendantfocus
 {
-	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-property: blur, saturation, opacity, wash-color, transform !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
-	desaturation: 0.1;
+	saturation: 0.9;
 	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
@@ -181,6 +181,6 @@ Join.BehindMessageBox:descendantfocus, LoginUser.BehindMessageBox:descendantfocu
 Join.BehindTextInputHandler.BehindMessageBox:descendantfocus, LoginUser.BehindTextInputHandler.BehindMessageBox:descendantfocus
 {
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #00000000;
 }

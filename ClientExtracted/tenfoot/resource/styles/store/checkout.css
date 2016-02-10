@@ -403,10 +403,10 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 	// transitions
 	transform: translate3d( 0px, 1280px, 1000px );
 	opacity: 0.0;
-	desaturation: 1.0;
+	saturation: 0.0;
 	wash-color: #0000005f;
 
-	transition-property: transform, opacity, desaturation, wash-color;
+	transition-property: transform, opacity, saturation, wash-color;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -421,7 +421,7 @@ RemoteContent .CheckoutStep
 {
 	transform: translate3d( 0px, 70px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 }
 
@@ -434,7 +434,7 @@ RemoteContent .CheckoutStep.InStoreStack
 {
 	transform: translate3d( 0px, 132px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: none;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 }

@@ -72,7 +72,7 @@ TextInputDaisy
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
-	transition-property: opacity, blur, desaturation;
+	transition-property: opacity, blur, saturation;
 	transition-duration: 0.8s !immediate;
 }
 
@@ -1659,6 +1659,19 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	transition-duration: 0.4s;
 }
 
+.VR #TutorialLeft, .VR #TutorialRight, .VR #TutorialLeftAlphaFade, .VR #TutorialRightAlphaFade, .VR #TutorialLeftPartialDisable, .VR #TutorialRightPartialDisable
+{
+	opacity: 0.0;
+	width: 305px;
+	height: 510px;
+	background-size: 100% 100%;
+	background-position: 0px;
+	z-index: 1000;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+}
+
 #ActualLegends
 {
 	width: 100%;
@@ -1701,20 +1714,30 @@ opacity: 0.0;
 	position: 98px 350px 0px;
 }
 
+.VR #TutorialLeft, .VR #TutorialLeftAlphaFade, .VR #TutorialLeftPartialDisable
+{
+	position: 98px 0px 0px;
+}
+
 #TutorialRight, #TutorialRightAlphaFade, #TutorialRightPartialDisable
 {
 	position: 482px 350px 0px;
 }
 
+.VR #TutorialRight, .VR #TutorialRightAlphaFade, .VR #TutorialRightPartialDisable
+{
+	position: 482px 00px 0px;
+}
+
 #TouchPadLeft, #TouchPadRight
 {
-	transition-property: opacity, blur, desaturation;
+	transition-property: opacity, blur, saturation;
 }
 
 .LeftTutorialEnabled #TouchPadLeft, .RightTutorialEnabled #TouchPadRight
 {
 	blur: gaussian( 1.8 );
-	desaturation: 0.55;
+	saturation: 0.45;
 	opacity: 0.3;
 }
 

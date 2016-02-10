@@ -89,7 +89,7 @@
 
 #OverlayDashboard
 {
-	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-property: blur, saturation, opacity, wash-color, transform !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 	flow-children: down;
@@ -97,7 +97,7 @@
 
 .BehindMessageBox #OverlayDashboard
 {
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 0.85;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
@@ -196,7 +196,7 @@
 	flow-children: right-wrap;
 	opacity: 1.0;
 
-	transition-property: transform, opacity-mask, opacity, desaturation;
+	transition-property: transform, opacity-mask, opacity, saturation;
 	transition-duration: 0.25s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -204,7 +204,7 @@
 #ContentsRow:descendantfocus
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
 

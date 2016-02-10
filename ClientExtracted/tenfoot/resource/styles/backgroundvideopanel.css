@@ -336,7 +336,7 @@ BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning, Welcome
 BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 {
 	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
-	desaturation: 0.3;
+	saturation: 0.7;
 	background-size: 100%;
 	opacity: 0.95;
 }

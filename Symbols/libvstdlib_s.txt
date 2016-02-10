@@ -214,6 +214,7 @@
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::SetGrowSize(int)
+ T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
@@ -264,10 +265,13 @@
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::Swap(CUtlString&)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
@@ -315,6 +319,15 @@
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddToTail(wchar_t&&)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::GrowVector(int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::RemoveMultiple(int, int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsLeft(int, int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::~CUtlVector()
  T CVStdLibDLLValidate::Validate(CValidator&)
  T CanBeginLine
  T CanBreakBetween
@@ -490,8 +503,6 @@
  T V_URLEncodeRaw
  T V_URLParse
  T V_URLPartsToString
- T V_UTF16CharsToUTF32
- T V_UTF16CharsToUTF8
  T V_UTF16ToUChar32
  T V_UTF16ToUTF32
  T V_UTF16ToUTF8
@@ -499,14 +510,18 @@
  T V_UTF32CharsToUTF8
  T V_UTF32ToUTF16
  T V_UTF32ToUTF8
- T V_UTF8CharsToUTF16
- T V_UTF8CharsToUTF32
  T V_UTF8ToUChar32
  T V_UTF8ToUTF16
  T V_UTF8ToUTF32
  T V_UnicodeAdvance(char*, int)
  T V_UnicodeAdvance(unsigned short*, int)
  T V_UnicodeAdvance(wchar_t*, int)
+ T V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
+ T V_UnicodeCaseConvert(CUtlStringBuilder&, int, EStringConvertErrorPolicy)
+ T V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t> >&, int, EStringConvertErrorPolicy)
+ T V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+ T V_UnicodeCaseConvert(unsigned short const*, unsigned short*, int, int, EStringConvertErrorPolicy)
+ T V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
  T V_UnicodeLength(char const*)
  T V_UnicodeLength(unsigned short const*)
  T V_UnicodeLength(wchar_t const*)
@@ -536,6 +551,7 @@
  T V_stricmp(char const*, char const*)
  T V_stricmp_prefix
  T V_stristr(char const*, char const*)
+ T V_strlower_fast
  T V_strnappend
  T V_strnappend_strlen
  T V_strncat
@@ -548,18 +564,19 @@
  T V_strristr
  T V_strtoi64
  T V_strtoui64
+ T V_strupper_fast
  T V_tolower
  T V_toupper
+ T V_towlower32
+ T V_towupper32
  T V_vsnprintf
  T V_vsnprintfRet
  T V_vsnwprintf
  T V_wcscat
- T V_wcslower
  T V_wcsncat
  T V_wcsncpy
  T V_wcstoi64
  T V_wcstoui64
- T V_wcsupr
  T V_whextobinary
  T ValidateDebugStatsGlobal(CValidator&)
  T ValidateKeyValuesGlobal(CValidator&)
@@ -676,10 +693,28 @@
  printf
  pthread_mutex_lock
  pthread_mutex_unlock
+ r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup1
+ r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup2
+ r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseValues
+ r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup1
+ r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup2
+ r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup3
+ r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::k_SpecialUpperCaseLookup4
+ r (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])::s_SpecialUpperCaseValues
  r V_CP437CharsToUTF8::s_table
  r V_MakeFileSafeName::k_rgchBadChars
  r V_Windows1252CharsToUTF8::s_table
  r V_binarytohex::k_rgchHexToASCII
+ r V_towlower32::s_SimpleToLower_1
+ r V_towlower32::s_SimpleToLower_2
+ r V_towlower32::s_SimpleToLower_3
+ r V_towlower32::s_SimpleToLower_4
+ r V_towlower32::s_SimpleToLower_deltas
+ r V_towupper32::s_SimpleToUpper_1
+ r V_towupper32::s_SimpleToUpper_2
+ r V_towupper32::s_SimpleToUpper_3
+ r V_towupper32::s_SimpleToUpper_4
+ r V_towupper32::s_SimpleToUpper_deltas
  r rgentry
  r rgwchIdeogramList
  r wszCantBeginLine
@@ -703,10 +738,43 @@
  strtoull
  swprintf
  swscanf
+ t (anonymous namespace)::InternalUnicodeTableLookupN((anonymous namespace)::InternalUnicodeRangeTableEntry_t const*, int, wchar_t)
+ t (anonymous namespace)::LinguisticToLowerFunctor<char, V_UTF8ToUChar32>::operator()(char const*, wchar_t&, bool&)
+ t (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, V_UTF16ToUChar32>::operator()(unsigned short const*, wchar_t&, bool&)
+ t (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>::operator()(wchar_t const*, wchar_t&, bool&)
+ t (anonymous namespace)::LinguisticToUpperFunctor<char, V_UTF8ToUChar32>::operator()(char const*, wchar_t&, bool&)
+ t (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, V_UTF16ToUChar32>::operator()(unsigned short const*, wchar_t&, bool&)
+ t (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>::operator()(wchar_t const*, wchar_t&, bool&)
+ t (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])
+ t (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])
+ t (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towupper32>::operator()(wchar_t const*, wchar_t&, bool&)
  t CopyToMaxChars(char*, int, char const*, int)
  t GetStackPtr()
  t KeyValuesSystem()
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
+ t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, unsigned short, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(wchar_t const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::LinguisticToLowerFunctor<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::LinguisticToUpperFunctor<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, V_UTF8ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, V_UTF8ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, V_UTF8ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<char, V_UTF8ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, unsigned short, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(char const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, wchar_t, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(char const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, char, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(unsigned short const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, V_UTF16ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, V_UTF16ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, unsigned short, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, V_UTF16ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(unsigned short const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, V_UTF16ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, unsigned short, wchar_t, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(unsigned short const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<unsigned short, V_UTF16ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, unsigned short, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(wchar_t const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
  vasprintf
  vsnprintf
  vswprintf

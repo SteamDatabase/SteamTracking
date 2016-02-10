@@ -295,7 +295,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	// make sure this is rendered after FeaturedPlatform
 	z-index: 1;
 
-	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
+	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, saturation;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	overflow: noclip noclip;
@@ -318,7 +318,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 	flow-children: right;
 	blur: gaussian (2.0);
 
-	desaturation: 1.0;
+	saturation: 0.0;
 	wash-color: bgcolorwash;
 	opacity: 0.5;
 }
@@ -326,7 +326,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 #FrontPage:descendantfocus #FeaturedCapsules
 {
 	transform: translate3d(-340px, -190px, -440px);
-	desaturation: 0.5;
+	saturation: 0.5;
 	wash-color: bgcolorwashlight;
 	opacity: 0.9;
 	blur: gaussian (1.0);
@@ -360,7 +360,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 {
 	animation-name: none;
 	transform: translate3d(-440px, 60px, 0px);
-	desaturation: 0;
+	saturation: 1.0;
 	wash-color: #61e2ff00;
 	opacity: 1.0;
 	blur: none;
@@ -419,8 +419,8 @@ StorePanel:descendantfocus #FeaturedCapsules,
 #FeaturedCapsules:descendantfocus .ActualStoreImage
 {
 	border-color: #fdfefe00;
-	desaturation: 0.2;
-	transition-property: box-shadow, desaturation, wash-color;
+	saturation: 0.8;
+	transition-property: box-shadow, saturation, wash-color;
 	transition-duration: 0.2s;
 
 	animation-duration: 1.7s;
@@ -442,7 +442,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 #FeaturedCapsules:descendantfocus .ActualStoreImage:focus
 {
 
-	desaturation: 0.0;
+	saturation: 1.0;
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -728,14 +728,14 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 1.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #FrontPage:descendantfocus #FeaturedCapsules:descendantfocus .ActualStoreImage
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 
@@ -743,7 +743,7 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
 	blur: gaussian (0.7);
-	desaturation: 0.5;
+	saturation: 0.5;
 }
 
 
@@ -751,7 +751,7 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 StorePanel:descendantfocus .StoreImage,
@@ -763,7 +763,7 @@ StorePanel:descendantfocus .StoreImage,
 	transform: translateY( 0px );
 
 	box-shadow: fill box_shadow_off_color 20px 20px 40px -44px;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform: none;
 	opacity: 1.0;
 	wash-color: transparent;
@@ -1014,7 +1014,7 @@ StoreFeaturedCategory:focus
 #Categories:descendantfocus StoreFeaturedCategory:hover Image
 {
 
-	desaturation: 0.2;
+	saturation: 0.8;
 	wash-color: none;
 	}
 
@@ -1080,11 +1080,11 @@ StoreFeaturedCategory Image
 {
 	width: 100%;
 	height: 100%;
-	desaturation: 0.3;
+	saturation: 0.7;
 	opacity: 0.65;
 	wash-color: store_dark_wash;
 
-	transition-property: wash-color, box-shadow, position, desaturation, pre-transform-scale2d;
+	transition-property: wash-color, box-shadow, position, saturation, pre-transform-scale2d;
 	transition-duration: 0.3s;
 }
 
@@ -1096,7 +1096,7 @@ StoreFeaturedCategory Image
 
 #Categories:descendantfocus StoreFeaturedCategory:descendantfocus Image
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	wash-color: #00000000;
 }
@@ -1114,9 +1114,9 @@ StoreFeaturedCategory Image
 	// transitions
 	transform: translate3d( 0px, 1280px, 1000px );
 	opacity: 0.0;
-	desaturation: 1.0;
+	saturation: 0.0;
 
-	transition-property: transform, opacity, desaturation;
+	transition-property: transform, opacity, saturation;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -1126,7 +1126,7 @@ StoreFeaturedCategory Image
 {
 	transform: translate3d( 0px, -60px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 .Stackable:descendantfocus,
@@ -1134,7 +1134,7 @@ StoreFeaturedCategory Image
 {
 	transform: translate3d( 0px, 0px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 }
 
@@ -1431,7 +1431,7 @@ StoreGenrePreview
 	box-shadow: fill #00000066 0px 0px 4px 0px;
 	pre-transform-scale2d: 0.90;
 
-	transition-property: pre-transform-scale2d, box-shadow, desaturation, position, background-color, wash-color;
+	transition-property: pre-transform-scale2d, box-shadow, saturation, position, background-color, wash-color;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -1539,33 +1539,33 @@ StoreGenrePreview:focus:hover #GenreName
 
 StoreGenrePreview Image
 {
-	desaturation: 0.3;
+	saturation: 0.7;
 	wash-color: store_genre_wash;
 	padding: 1px;
 	opacity: 0.85;
 
-	transition-property: desaturation, opacity, position;
+	transition-property: saturation, opacity, position;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreGenrePreview:focus Image
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: store_genre_wash_focus;
 	opacity: 1.0;
 }
 
 StoreGenrePreview:hover Image
 {
-	desaturation: 0.8;
+	saturation: 0.2;
 	wash-color: #0e6a8f55;
 	opacity: 1.0;
 }
 
 StoreGenrePreview:focus:hover Image
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #429aae44;
 	opacity: 1.0;
 }

@@ -10,10 +10,10 @@ MusicArtistPanel
 
 
 	opacity: 0.0;
-	desaturation: 1.0;
+	saturation: 0.0;
 	transform: translate3d( 0px, 1280px, 1000px );
 
-	transition-property: transform, blur, position, opacity, desaturation;
+	transition-property: transform, blur, position, opacity, saturation;
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -23,7 +23,7 @@ MusicArtistPanel
 {
 	transform: translatey( 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 .ArtistLabel

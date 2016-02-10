@@ -80,7 +80,7 @@
 		}
 		"settings"
 		{
-			"output_trigger"		"1"
+			"output_trigger"		"0"
 		}
 	}
 
@@ -94,7 +94,7 @@
 		}
 		"settings"
 		{
-			"output_trigger"		"2"
+			"output_trigger"		"0"
 		}
 	}
 	"group"

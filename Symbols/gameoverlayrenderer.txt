@@ -21,6 +21,7 @@
  B fn_glBufferSubData
  B fn_glCheckFramebufferStatus
  B fn_glClientActiveTextureARB
+ B fn_glClipControl
  B fn_glCompileShader
  B fn_glCreateProgram
  B fn_glCreateShader

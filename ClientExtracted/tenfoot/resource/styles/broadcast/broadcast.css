@@ -11,9 +11,9 @@ BroadcastViewer
 	
 	transform: translate3d( 0px, 1000px, 0px );
 	opacity: 0.0;
-	desaturation: 1.0;
+	saturation: 0.0;
 	
-	transition-property: transform, opacity, desaturation;
+	transition-property: transform, opacity, saturation;
 	transition-duration: 0.3s;
 	transition-delay: 0s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -23,7 +23,7 @@ BroadcastViewer.Fullscreen
 {
 	transform: translate3d( 0px, 0px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #WebContent

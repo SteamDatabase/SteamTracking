@@ -139,6 +139,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/isteammatchmaking.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/matchmakingtypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steam_api.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steam_api_internal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steamclientpublic.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/basetypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h

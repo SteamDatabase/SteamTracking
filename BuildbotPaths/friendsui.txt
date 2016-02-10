@@ -105,7 +105,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/pngloader.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/sharedlibrarynotifiction.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/steamfriends_test.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/steamtablechallengeoptions.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/vgui_controls.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/constants.h
@@ -213,13 +212,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/sharedlibrarynotifiction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/sharedlibrarynotifiction.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/steamfriends_test.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/steamtablechallengeoptions.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/steamtablechallengeoptions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(algparam.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(asn.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cryptlib.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(dll.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(dsa.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(filters.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(fips140.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hex.o)
@@ -302,6 +300,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_securezeromemory_impl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steam_api.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steam_api_internal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steamclientpublic.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/basetypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h

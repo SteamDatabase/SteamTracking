@@ -73,6 +73,11 @@ WebFavorites.Hidden
 	padding-bottom: 100px;
 }
 
+#FavoritePages MouseScrollRegion
+{
+	opacity: 0.0;
+}
+
 .FavoritesGrid FavoriteGridItem
 {
 	margin: -10px;
@@ -81,6 +86,17 @@ WebFavorites.Hidden
 	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 
+}
+
+.DragScrolling FavoriteGridItem
+{
+	transition-duration: 0.0s;
+}
+
+.Flick FavoriteGridItem
+{
+	transition-timing-fuction: DragScrollFlickTimingFunction;
+	transition-duration: DragScrollFlickTime;
 }
 
 #HistoryWrapper, #FrequentWrapper 
@@ -464,8 +480,9 @@ MouseScrollRegion
 	y: -50px;
 }
 
-FavoritesGrid MouseScrollRegion
+#FavoritePages FavoritesGrid MouseScrollRegion
 {
+	opacity: 1.0;
 	y: -45px;
 }
 

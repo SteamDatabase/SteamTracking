@@ -9,7 +9,7 @@
 	
 	background-color: #00000099;
 	
-	transition-property: transform, border, blur, background-color, color, box-shadow, opacity, desaturation;
+	transition-property: transform, border, blur, background-color, color, box-shadow, opacity, saturation;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.3s;
 	
@@ -22,7 +22,7 @@
 #SystemMenu.BehindAnotherMsgBox
 {
 	z-index: 102;
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: gaussian( 1.5 );
 	wash-color: #66666666;
 }

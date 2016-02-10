@@ -50,7 +50,7 @@
 	// antialiased edges even on a transform of the parent due to the fuzzy edges.
 	margin: -4px -8px;
 
-	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation, opacity-mask !immediate;
+	transition-property: transform, position, opacity, blur, box-shadow, wash-color, saturation, opacity-mask !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 
@@ -66,7 +66,7 @@
 	blur: none;
 	visibility: visible;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #SystemIMBackground:descendantfocus .SystemIMImage.PreviouslyRight
@@ -245,7 +245,7 @@
 #SystemIMBackground:descendantfocus .SystemIMImage
 {
 	blur: gaussian( 0.8 );
-	desaturation: 0.25;
+	saturation: 0.75;
 	opacity: 0.8;
 
 	transform: none;
@@ -256,7 +256,7 @@
 
 	transition-duration: 0.3s;
 	transition-delay: 0.0s !immediate;
-	transition-property: opacity, opacity-mask, z-index, position, box-shadow, z-index, wash-color, desaturation, blur;
+	transition-property: opacity, opacity-mask, z-index, position, box-shadow, z-index, wash-color, saturation, blur;
 }
 
 
@@ -264,7 +264,7 @@
 {
 	opacity: 1.0;
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 	//	transform-origin: 0% 0% parent-relative;
 	//	transform: scalex( 1.5 ) scaley( 1.5 );
 	wash-color: none;

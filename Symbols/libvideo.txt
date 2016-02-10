@@ -2029,6 +2029,7 @@
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
+ T CFileWriterThreadManager::~CFileWriterThreadManager()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<1024, true, true>::Format(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
@@ -6851,6 +6852,7 @@
  T V_snprintf
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
+ T V_strlower_fast
  T V_strncat
  T V_strncmp
  T V_strncpy
@@ -7355,7 +7357,6 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T _strlwr
  T a2d_ASN1_OBJECT
  T a2i_ASN1_INTEGER
  T a2i_ASN1_STRING
@@ -8632,7 +8633,8 @@
  b SHA512.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
- b StaticFileWriterThread()::s_FileWriterThread
+ b StaticFileWriterThread()::s_FileWriterThreadManager
+ b StaticFileWriterThread()::s_pFileWriterThread
  b SteamThreadTools::g_ThreadMainThreadID
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
  b TestForAppleGraphicsUpdateInstalled()::bLoaded
@@ -8729,7 +8731,8 @@
  b guard variable for GetVideoLibData()::data
  b guard variable for GlobalRNGList()::g_tslistPAutoSeededRNG
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
- b guard variable for StaticFileWriterThread()::s_FileWriterThread
+ b guard variable for StaticFileWriterThread()::s_FileWriterThreadManager
+ b guard variable for StaticFileWriterThread()::s_pFileWriterThread
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b id_callback
@@ -10165,6 +10168,8 @@
  t init256
  t init384
  t init512
+ t int (anonymous namespace)::UnicodeConvertT<true, char, wchar_t, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(char const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
  t int_cb_LHASH_DOALL_ARG
  t int_cleanup
  t int_cleanup_cb_LHASH_DOALL

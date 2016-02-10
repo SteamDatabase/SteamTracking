@@ -274,13 +274,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/user.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userfriends.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/usergamenotifications.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/usermatchmaking.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userremotestorage.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userscreenshots.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/usershortcuts.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userstats.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/usertabletop.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vac.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vacmodule_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valveelfsignature.o
@@ -460,13 +460,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/user.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userfriends.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/usergamenotifications.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/usermatchmaking.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userremotestorage.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userscreenshots.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/usershortcuts.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userstats.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/usertabletop.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vac.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vacmodule_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valveelfsignature.o
@@ -552,8 +552,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mapping.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mode.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/filter/trackpad_kalman.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/filter/trackpad_kalman.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/vthumbstick.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
@@ -655,6 +653,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/user.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userfriends.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userfriends.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usergamenotifications.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userinterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userinterface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usermatchmaking.cpp
@@ -667,8 +666,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usershortcuts.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userstats.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userstats.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usertabletop.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usertabletop.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vac.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule_osx.cpp
@@ -717,6 +714,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/content_manifest.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/contentmanifest.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/contentmanifest.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_kalman.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_kalman.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_weightedfilter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cookiecontainer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/countrycodeutils.cpp
@@ -829,6 +829,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientUser.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientdeviceauth.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientgamenotifications.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientmusic.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientremoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvideo.h
@@ -922,6 +923,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/integer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/misc.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/oaep.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/osrng.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/pubkey.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/pwdbased.h
@@ -1132,6 +1134,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cryptlib.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(dll.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(dsa.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(ecp.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(filters.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(fips140.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hex.o)

@@ -75,7 +75,7 @@ MusicExploreRow.Hidden
 
 	pre-transform-scale2d: 0.94;
 
-	transition-property: pre-transform-scale2d, box-shadow, wash-color, opacity, desaturation, opacity-mask;
+	transition-property: pre-transform-scale2d, box-shadow, wash-color, opacity, saturation, opacity-mask;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -136,7 +136,7 @@ MusicExplorePanel #RowContainer
 	flow-children: right;
 	margin-left: 14px;
 	margin-top: 14px;
-	overflow: clip clip;
+	overflow: noclip noclip;
 }
 
 
@@ -213,7 +213,7 @@ MusicExplorePanel AlbumGridItem:focus:hover
 
 MusicExplorePanel AlbumGridItem:focus #AlbumImage
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 MusicExplorePanel AlbumGridItem:focus #FocusBorderPanel
@@ -235,11 +235,11 @@ AlbumGridItem #AlbumImage
 	height: 590px;
 	vertical-align: top;
 	margin: 10px;
-	desaturation: 0.1;
+	saturation: 0.9;
 	opacity: 0.85;
 	box-shadow: fill #00000033 -4.5px -4.5px 18px 9px;
 	border-radius: 4px;
-	transition-property: opacity, desaturation, box-shadow;
+	transition-property: opacity, saturation, box-shadow;
 	transition-duration: 0.23s;
 }
 

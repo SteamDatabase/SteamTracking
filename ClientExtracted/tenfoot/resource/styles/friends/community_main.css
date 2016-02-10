@@ -215,7 +215,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 	pre-transform-scale2d: 1.0;
 	transform: translateX( 130px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #CommunityFeedStrip:descendantfocus FriendsFeedListItemCommunity:descendantfocus:hover
@@ -241,11 +241,11 @@ Carousel:hover .RightMouseScrollRegion:hover
 	perspective-origin: 50% 50%;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 	opacity: 1.0;
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: gaussian(0.2);
 	pre-transform-scale2d: 1.0;
 
-	transition-property: pre-transform-scale2d, blur, opacity, desaturation, opacity-mask;
+	transition-property: pre-transform-scale2d, blur, opacity, saturation, opacity-mask;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -258,11 +258,11 @@ Carousel:hover .RightMouseScrollRegion:hover
 	perspective-origin: 50% 50%;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian(0.0);
 	pre-transform-scale2d: 1.0;
 
-	transition-property: pre-transform-scale2d, opacity-mask, blur, opacity, desaturation;
+	transition-property: pre-transform-scale2d, opacity-mask, blur, opacity, saturation;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -277,7 +277,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel, OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFeedCarousel
 {
 	opacity: 1.0;
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: none;
 	transform: translateY( 350px ) translateX( -330px );
 }
@@ -285,7 +285,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel, Ov
 OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 {
 	opacity: 1.0;
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: none;
 	transform: translateY( 320px ) translateX( 0px ) translateZ( -150px );
 }
@@ -336,7 +336,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	opacity: 0.9;
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: gaussian(0.5);
 	transform: translateY( 00px ) translateZ( -360px );
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.9;
@@ -353,7 +353,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 	transform: translatey( -130px );
 	transition-delay: 0s;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian(0.0);
 	transform: translateX(-130px ) translateY( -170px ) translateZ( 0px );
 	wash-color: white;
@@ -366,10 +366,10 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 {
 	pre-transform-scale2d: 1.025;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian(0.0);
 
-	transition-property: pre-transform-scale2d, blur, opacity, desaturation;
+	transition-property: pre-transform-scale2d, blur, opacity, saturation;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -380,7 +380,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 {
 	pre-transform-scale2d: 1.0;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian(0.0);
 }
 
@@ -392,7 +392,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 {
 	pre-transform-scale2d: 1.025;
 	opacity: 0.85;
-	desaturation: 0.5;
+	saturation: 0.5;
 	blur: gaussian(0.0);
 }
 
@@ -401,7 +401,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 {
 	pre-transform-scale2d: 1.0;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian(0.0);
 }
 
@@ -445,21 +445,21 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 .CommunityVisible:descendantfocus .CommunityFriendStripItem.RightOfFocus7,
 {
 	opacity: 1.0;
-	desaturation: 0.1;
+	saturation: 0.9;
 
 }
 
 .CommunityVisible:descendantfocus .CommunityFriendStripItem.Focused
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity-mask: url( "file://{images}/upper_row_mask.tga" ) 0.0;
 }
 
 .CommunityVisible:descendantfocus FriendsFeedListItemCommunity
 {
 	opacity: 0.0;
-	desaturation: 0.1;
+	saturation: 0.9;
 	pre-transform-scale2d: 1.0;
 
 }
@@ -874,14 +874,14 @@ FriendsFriendListItemCommunity.Golden:descendantfocus  Label
 	width: 184px;
 	pre-transform-scale2d: 1.10;
 	opacity: 0.85;
-	desaturation: 0.2;
+	saturation: 0.8;
 	box-shadow: fill #00000022 -4px -4px 4px 8px;
 }
 
 .CommunityVisible:descendantfocus FriendsFriendListItemCommunity:focus .FriendsFriendListItemCommunityAvatar
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform: translatez(60px);
 	box-shadow: box_shadow_off_color -3px -3px 6px 6px;
 
@@ -950,7 +950,7 @@ FriendsFriendListItemCommunity.Golden:descendantfocus  Label
 	border-style: solid;
 	border-radius: 6px;
 	opacity: 0.85;
-	desaturation: 0.0;
+	saturation: 1.0;
 
 	transform: translatex( 74px );
 
@@ -1132,7 +1132,7 @@ FriendsFeedListItemCommunity
 {
 	flow-children: none;
 	opacity: 0.85;
-	desaturation: 0.5;
+	saturation: 0.5;
 	width: 720px;
 	height: 320px;
 	margin-left: 10px;
@@ -1140,7 +1140,7 @@ FriendsFeedListItemCommunity
 	transform: translatez( -386px ) translatey( 0px ) translatex( 185px );
 	pre-transform-scale2d: 1.0;
 
-	transition-property: opacity, desaturation, transform, position, pre-transform-scale2d;
+	transition-property: opacity, saturation, transform, position, pre-transform-scale2d;
 	//transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -1154,10 +1154,10 @@ FriendsFeedListItemCommunity.SteamidGroupIsOGG
 
 MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails FriendsFeedListItemCommunity
 {
-	desaturation: 0.5;
+	saturation: 0.5;
 	opacity: 0.7;
 	
-	transition-property: opacity, desaturation; 
+	transition-property: opacity, saturation; 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 }
@@ -1166,7 +1166,7 @@ FriendsFeedListItemCommunity:descendantfocus
 {
 	transform: translatez( 0px ) translatey( 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	pre-transform-scale2d: 1.0;
 }
 
@@ -1174,10 +1174,10 @@ FriendsFeedListItemCommunity:descendantfocus
 MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails FriendsFeedListItemCommunity:descendantfocus
 {
 	transform: translatez( 50px ) translatey( 0px );
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	
-	transition-property: opacity, desaturation, transform; 
+	transition-property: opacity, saturation, transform; 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.3s;
 }
@@ -1185,10 +1185,10 @@ MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails FriendsFeedListItemCommunit
 // friends row when the feed item menu is up
 MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails #CommunityFriendsStrip
 {
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 0.7;
 	
-	transition-property: opacity, desaturation; 
+	transition-property: opacity, saturation; 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 } 

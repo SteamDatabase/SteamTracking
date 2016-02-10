@@ -74,6 +74,7 @@ Friends.ChatFocus #ContentFrameHeader
 {
 	background-image: none;
 	z-index: 100;
+	width: fit-children;
 }
 
 .ContentMouseBackButton Panel

@@ -32,11 +32,11 @@ ControllerBindingsGordon.Destructing
 ControllerBindingsGordon.BehindMessageBox:descendantfocus,
 ControllerBindingsGordon.BehindAnotherMsgBox:descendantfocus
 {
-	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-property: blur, saturation, opacity, wash-color, transform !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
-	desaturation: 0.4;
+	saturation: 0.6;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
 }
@@ -45,7 +45,7 @@ ControllerBindingsGordon.BehindMessageBox.BehindTextInputHandler:descendantfocus
 ControllerBindingsGordon.BehindAnotherMsgBox.BehindTextInputHandler:descendantfocus
 {
 	blur: none;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #00000000;
 }
 
@@ -118,6 +118,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	visibility: collapse;
 	flow-children: right;
 	horizontal-align: middle;
+    overflow: scroll;
 }
 
 .GameActionButton

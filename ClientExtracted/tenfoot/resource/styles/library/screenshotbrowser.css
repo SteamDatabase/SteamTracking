@@ -19,9 +19,9 @@ ScreenshotBrowser #Contents
 	// transitions
 	//transform: translate3d( 0px, 1280px, 1000px );
 	//opacity: 0.0;
-	//desaturation: 1.0;
+	//saturation: 0.0;
 
-	transition-property: transform, opacity, desaturation;
+	transition-property: transform, opacity, saturation;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -31,7 +31,7 @@ ScreenshotBrowser:descendantfocus #Contents
 {
 	//transform: translate3d( 0px, 0px, 0px );
 	//opacity: 1.0;
-	//desaturation: 0.0;
+	//saturation: 1.0;
 
 }
 
@@ -111,7 +111,7 @@ ScreenshotBrowserItem
 	background-repeat: no-repeat no-repeat;
 	background-position: 40% 20%;
 
-	transition-property: position, opacity, desaturation, border, pre-transform-scale2d;
+	transition-property: position, opacity, saturation, border, pre-transform-scale2d;
 	transition-duration: 0.25s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -132,7 +132,7 @@ ScreenshotBrowserItem #Screenshot
 {
 	width: 547px;
 	opacity: 0.85;
-	desaturation: 0.2;
+	saturation: 0.8;
 	height: 308px;
 	z-index: 100;
 	margin: 10px;
@@ -145,7 +145,7 @@ ScreenshotBrowserItem:descendantfocus #Screenshot
 {
 	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: bigpicture-ease-in-out;

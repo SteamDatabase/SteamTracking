@@ -89,6 +89,10 @@
 					<Slider id="ButtonDistanceFourButtons" direction="horizontal" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHaptics" />
+					<DropDown id="TestHaptics" />
+				</Panel>				
+				<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHapticRepeat" />
 					<Slider id="TestHapticRepeat" direction="horizontal" />
 				</Panel>
@@ -782,7 +786,7 @@
 					</Panel>
 
 					<!-- ABXY Mode -->
-					<Panel class="FieldWrapper" modes="ABXY" devonly="off" gameactions="off" advanced="off">
+					<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityFourButtons" />
 					</Panel>

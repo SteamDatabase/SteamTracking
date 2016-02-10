@@ -114,7 +114,7 @@
 		"mode"		"trigger"
 		"settings"
 		{
-			"output_trigger"		"1"
+			"output_trigger"		"0"
 		}
 	}
 	"group"
@@ -123,7 +123,7 @@
 		"mode"		"trigger"
 		"settings"
 		{
-			"output_trigger"		"2"
+			"output_trigger"		"0"
 		}
 	}
 	"group"

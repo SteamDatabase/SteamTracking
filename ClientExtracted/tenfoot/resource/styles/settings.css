@@ -1254,9 +1254,9 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 	width: 230px;
 	horizontal-align: right;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: none;
-	transition-property: opacity, blur, desaturation, pre-transform-scale2d, box-shadow;
+	transition-property: opacity, blur, saturation, pre-transform-scale2d, box-shadow;
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: ease-in;
 }
@@ -1264,7 +1264,7 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 .TimeRestrictionDropdown:disabled,.TimeRestrictionDropdown:disabled:hover, #SettingsDownloads_ToggleTimeLimits:selected .SettingsCalloutSnugRight
 {
 	opacity: 0.5;
-	desaturation: 0.5;
+	saturation: 0.5;
 	blur: gaussian( 1.0 );
 	pre-transform-scale2d: 1.0;
 	box-shadow: none;
@@ -1307,7 +1307,7 @@ VUMeter
 .CheckBox:parentdisabled,VUMeter:parentdisabled,Label:parentdisabled,Image:parentdisabled,KeyboardShortcut:parentdisabled,.KeyboardShortcut:parentdisabled,#SettingsInterface_CustomSearchProviderURL:parentdisabled
 {
 	opacity: 0.6;
-	desaturation: 1.0;
+	saturation: 0.0;
 	blur: gaussian( 1.0 );
 
 }

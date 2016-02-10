@@ -503,6 +503,7 @@ message CInputControllerAttachedMsg {
 	optional string serial_number = 6;
 	optional string chip_id = 7;
 	repeated uint32 attributes = 8;
+	optional uint32 dongle_version = 9;
 }
 
 message CInputControllerStateMsg {

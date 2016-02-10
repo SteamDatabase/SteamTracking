@@ -18,7 +18,7 @@ MainMenu
 	font-family: platformfont;
 	opacity: 0.0;
 
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in;
 	transform: translateX( 0px );
@@ -63,14 +63,14 @@ MainMenu.SlideAwayToRight
 
 .BehindMessageBox #BodyWrapper
 {
-	desaturation: 0.2;
+	saturation: 0.8;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
 }
 
 .BehindMessageBox.SearchWheel #BodyWrapper
 {
-  desaturation: none;
+  saturation: 1.0;
 	blur: none;
 	wash-color: none;
 }
@@ -78,19 +78,19 @@ MainMenu.SlideAwayToRight
 
 .BehindMessageBox SettingsPanel
 {
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
 
-	transition-property: blur, desaturation, opacity, wash-color, transform;
+	transition-property: blur, saturation, opacity, wash-color, transform;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 }
 
 .BehindTextInputHandler #BodyWrapper
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	blur: none;
 	wash-color: #ffffffff;
@@ -98,7 +98,7 @@ MainMenu.SlideAwayToRight
 
 .FriendsInputTextEntry.BehindMessageBox #BodyWrapper
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	blur: none;
 	wash-color: #ffffffff;
@@ -106,7 +106,7 @@ MainMenu.SlideAwayToRight
 
 .FriendsInputTextEntry.BehindMessageBox #FriendsMainBodyColumnLeft
 {
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 0.85;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
@@ -114,7 +114,7 @@ MainMenu.SlideAwayToRight
 
 .FriendsInputTextEntry.BehindTextInputHandler #BodyWrapper
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	blur: none;
 	wash-color: #ffffffff;
@@ -124,7 +124,7 @@ MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails,
 MainMenu.BehindMessageBox.CheckoutFormTextEntry,
 MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	opacity: 1.0;
 	blur: none;
 }
@@ -137,7 +137,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
   background-color: #1c486955;
 	
 
-	transition-property: blur, desaturation, opacity, transform, wash-color;
+	transition-property: blur, saturation, opacity, transform, wash-color;
 	transition-duration: PageTransitionTimeOff;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -204,7 +204,7 @@ MainMenu #BodyWrapper #GameRowContents
 	0%
 	{
 		opacity: 0.0;
-		desaturation: 1.0;
+		saturation: 0.0;
 		pre-transform-scale2d: 1.0;
 		blur: gaussian( 7, 7, 2 );
 	}
@@ -212,7 +212,7 @@ MainMenu #BodyWrapper #GameRowContents
 	67%
 	{
 		opacity: 0.0;
-		desaturation: 1.0;
+		saturation: 0.0;
 		pre-transform-scale2d: 1.0;
 		blur: gaussian( 7, 7, 2 );
 	}
@@ -220,7 +220,7 @@ MainMenu #BodyWrapper #GameRowContents
 	100%
 	{
 		opacity: 1.0;
-		desaturation: 0.0;
+		saturation: 1.0;
 		pre-transform-scale2d: 1.0;
 		blur: none;
 	}
@@ -235,7 +235,7 @@ MainMenu #BodyWrapper #GameRowContents
 	horizontal-align: right;
 	z-index: MainMenuZIndex;
 	flow-children: right;
-	transition-property: blur, desaturation, opacity, transform;
+	transition-property: blur, saturation, opacity, transform;
 	transition-duration: PageTransitionTimeOff;
 	transition-timing-function: bigpicture-ease-in-out;
 
@@ -263,7 +263,7 @@ MainMenu #BodyWrapper #GameRowContents
 .TopRowBlurry
 {
 	blur: gaussian( 2.5 );
-	desaturation: 0.15;
+	saturation: 0.85;
 	opacity: 0.70;
 
 	transform: translateZ( -100px ) translateY( -4% );
@@ -628,7 +628,7 @@ MainMenu #BodyWrapper #GameRowContents
 	transform-origin: 0% 0% parent-relative;
 	transform: translateY( -8px ) rotateX( 0deg ) translateZ( -64px );
   opacity-mask: url( "file://{images}/systemmenu/menu_mask.png" );
-	transition-property: blur, desaturation, opacity, transform, opacity-mask;
+	transition-property: blur, saturation, opacity, transform, opacity-mask;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -666,16 +666,16 @@ MainMenu #BodyWrapper #GameRowContents
 	horizontal-align: center;
 	vertical-align: center;
 	opacity:0.7;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.3s, 0.3s !immediate;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
+	transition-duration: 0.3s !immediate;
 	transition-timing-function: linear;
 }
 
 #MenuRowButtons:descendantfocus
 {
 	opacity:1.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.5s, 0.5s !immediate;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
+	transition-duration: 0.5s !immediate;
 	transition-timing-function: linear;
 }
 
@@ -898,7 +898,7 @@ MainMenu #BodyWrapper #GameRowContents
 	
 	//transform:translatez(-96px);
     //pre-transform-scale2d: 0.8;
-	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: color, opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
@@ -1059,7 +1059,7 @@ transform: none;
 
 	box-shadow: none;
 
-	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: color, opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
@@ -1098,7 +1098,7 @@ transform: none;
 	opacity: 1.0;
 	transform: translatey(-10px);
 
-	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: color, opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
@@ -1182,7 +1182,7 @@ transform: none;
   transform-origin: 0% 0% parent-relative;
 	transform: translateY( 620px ) translateZ( -64px );
 
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: supershortduration;
 	transition-timing-function: linear;
 }
@@ -1195,12 +1195,12 @@ transform: none;
 .GameRowContents:descendantfocus
 {
 	wash-color: #ffffff;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform-origin: 0% 0% parent-relative;
 
 	transform: translatex(0px) translatey(598px);
  	opacity:1.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
 	transition-timing-function: linear;
 }
@@ -1327,7 +1327,7 @@ transform: none;
 	background-color: #0C203700;
 	transform: translatey(-5px);
 
-	transition-property: color, opacity, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: color, opacity, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.1s;
 	transition-timing-function: linear;
 
@@ -1461,7 +1461,7 @@ transform: none;
     transform: translatey(-18px);
 	wash-color: ui_primary_color;
 	
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.3s, 0.3s !immediate;
 	transition-timing-function: linear;
 }
@@ -1472,7 +1472,7 @@ transform: none;
 	wash-color: #b6e1fa;	
 	transform: translatey(-18px);
 	opacity: 1.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
 	transition-timing-function: linear;
 }
@@ -1487,7 +1487,7 @@ transform: none;
 {
 	opacity: 0.0;
 
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
 }
@@ -2120,7 +2120,7 @@ Label.ProfileNameLabel
 {
 	transform: translatey( -330px );
 	z-index: 1;
-	desaturation: 0.3;
+	saturation: 0.7;
 	blur: gaussian( 2.0 );
 	wash-color: #000000a4;
 }
@@ -2138,6 +2138,11 @@ Label.ProfileNameLabel
 	margin: 0px;
 	padding: 0px;
 	flow-children: down;
+}
+
+#MainMenuSuggestions .AppHubPagePanel.empty
+{
+	height: 0px;
 }
 
 

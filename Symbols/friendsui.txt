@@ -504,8 +504,6 @@
  D CFriendsDialog::PanelMessageFunc_OnRetry::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnSetShowAvatars::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnSetShowOnlineOnly::InitVar()::bAdded
- D CFriendsDialog::PanelMessageFunc_OnSteamTableChallenge::InitVar()::bAdded
- D CFriendsDialog::PanelMessageFunc_OnSteamTableWatchGame::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnTextChanged::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnUnIgnoreFriend::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnUnblockedIgnoredFriend::InitVar()::bAdded
@@ -628,15 +626,6 @@
  D CSetNicknameDialog::KB_ChainToMap()::chained
  D CSetNicknameDialog::PanelMessageFunc_OnApply::InitVar()::bAdded
  D CSetNicknameDialog::PanelMessageFunc_OnCancel::InitVar()::bAdded
- D CSteamTableChallengeOptions::ChainToAnimationMap()::chained
- D CSteamTableChallengeOptions::ChainToMap()::chained
- D CSteamTableChallengeOptions::GetKBMap()::s_pMap
- D CSteamTableChallengeOptions::GetMessageMap()::s_pMap
- D CSteamTableChallengeOptions::KB_ChainToMap()::chained
- D CSteamTableChallengeOptions::PanelMessageFunc_OnAddFriend::InitVar()::bAdded
- D CSteamTableChallengeOptions::PanelMessageFunc_OnComboBoxChanged::InitVar()::bAdded
- D CSteamTableChallengeOptions::PanelMessageFunc_OnOK::InitVar()::bAdded
- D CSteamTableChallengeOptions::PanelMessageFunc_OnOpenAddFriendMenu::InitVar()::bAdded
  D CTradeInviteBar::ChainToAnimationMap()::chained
  D CTradeInviteBar::ChainToMap()::chained
  D CTradeInviteBar::GetKBMap()::s_pMap
@@ -744,7 +733,6 @@
  D VTT for CPlayersSubCurrentPlayers
  D VTT for CPlayersSubRecentPlayers
  D VTT for CSetNicknameDialog
- D VTT for CSteamTableChallengeOptions
  D VTT for CTradeInviteBar
  D VTT for CTradeInviteNotification
  D VTT for CVoiceBar
@@ -931,7 +919,6 @@
  D construction vtable for vgui::EditablePanel-in-CPlayersSubCurrentPlayers
  D construction vtable for vgui::EditablePanel-in-CPlayersSubRecentPlayers
  D construction vtable for vgui::EditablePanel-in-CSetNicknameDialog
- D construction vtable for vgui::EditablePanel-in-CSteamTableChallengeOptions
  D construction vtable for vgui::EditablePanel-in-CTradeInviteBar
  D construction vtable for vgui::EditablePanel-in-CTradeInviteNotification
  D construction vtable for vgui::EditablePanel-in-CVoiceBar
@@ -972,7 +959,6 @@
  D construction vtable for vgui::Frame-in-CLimitedUserDialog
  D construction vtable for vgui::Frame-in-CPlayersDialog
  D construction vtable for vgui::Frame-in-CSetNicknameDialog
- D construction vtable for vgui::Frame-in-CSteamTableChallengeOptions
  D construction vtable for vgui::Frame-in-vgui::FileOpenDialog
  D construction vtable for vgui::Frame-in-vgui::HTMLPopup
  D construction vtable for vgui::Frame-in-vgui::InputDialog
@@ -1120,7 +1106,6 @@
  D construction vtable for vgui::Panel-in-CPlayersSubCurrentPlayers
  D construction vtable for vgui::Panel-in-CPlayersSubRecentPlayers
  D construction vtable for vgui::Panel-in-CSetNicknameDialog
- D construction vtable for vgui::Panel-in-CSteamTableChallengeOptions
  D construction vtable for vgui::Panel-in-CTradeInviteBar
  D construction vtable for vgui::Panel-in-CTradeInviteNotification
  D construction vtable for vgui::Panel-in-CVoiceBar
@@ -1355,8 +1340,6 @@
  D guard variable for CPlayersSubRecentPlayers::GetMessageMap()::s_pMap
  D guard variable for CSetNicknameDialog::GetKBMap()::s_pMap
  D guard variable for CSetNicknameDialog::GetMessageMap()::s_pMap
- D guard variable for CSteamTableChallengeOptions::GetKBMap()::s_pMap
- D guard variable for CSteamTableChallengeOptions::GetMessageMap()::s_pMap
  D guard variable for CTradeInviteBar::GetKBMap()::s_pMap
  D guard variable for CTradeInviteBar::GetMessageMap()::s_pMap
  D guard variable for CTradeInviteNotification::GetKBMap()::s_pMap
@@ -1620,7 +1603,6 @@
  D typeinfo for CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CFriendsDialog, SteamServersConnected_t, false>
  D typeinfo for CCallback<CFriendsDialog, SteamServersDisconnected_t, false>
- D typeinfo for CCallback<CFriendsDialog, TableGameWatch_t, false>
  D typeinfo for CCallback<CFriendsDialog, TradeInviteReceived_t, false>
  D typeinfo for CCallback<CFriendsDialog, UserAchievementStored_t, false>
  D typeinfo for CCallback<CFriendsDialog, UserRequestingFriendship_t, false>
@@ -1644,13 +1626,11 @@
  D typeinfo for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
- D typeinfo for CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>
  D typeinfo for CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>
  D typeinfo for CCallback<CTradeInviteBar, TradeStartSession_t, false>
  D typeinfo for CCallback<CVoiceBar, GameUsingVoice_t, false>
  D typeinfo for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  D typeinfo for CCallbackBase
- D typeinfo for CCallbackImpl<1032>
  D typeinfo for CCallbackImpl<12>
  D typeinfo for CCallbackImpl<148>
  D typeinfo for CCallbackImpl<156>
@@ -1755,7 +1735,6 @@
  D typeinfo for CFriendsDialog::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
  D typeinfo for CFriendsDialog::CCallback_OnRichInviteReceived
- D typeinfo for CFriendsDialog::CCallback_OnTableGameWatch
  D typeinfo for CFriendsDialog::CCallback_OnUIMenuChange
  D typeinfo for CFriendsDialog::CCallback_OnUserAchievement
  D typeinfo for CFriendsDialog::CCallback_OnUserRequestingFriendship
@@ -1950,8 +1929,6 @@
  D typeinfo for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D typeinfo for CSharedLibraryNotifications::CCallback_OnStopPlaying
  D typeinfo for CSteamFriends_Test
- D typeinfo for CSteamTableChallengeOptions
- D typeinfo for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTradeInviteBar
@@ -2880,7 +2857,6 @@
  D vtable for CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CFriendsDialog, SteamServersConnected_t, false>
  D vtable for CCallback<CFriendsDialog, SteamServersDisconnected_t, false>
- D vtable for CCallback<CFriendsDialog, TableGameWatch_t, false>
  D vtable for CCallback<CFriendsDialog, TradeInviteReceived_t, false>
  D vtable for CCallback<CFriendsDialog, UserAchievementStored_t, false>
  D vtable for CCallback<CFriendsDialog, UserRequestingFriendship_t, false>
@@ -2904,12 +2880,10 @@
  D vtable for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
- D vtable for CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>
  D vtable for CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>
  D vtable for CCallback<CTradeInviteBar, TradeStartSession_t, false>
  D vtable for CCallback<CVoiceBar, GameUsingVoice_t, false>
  D vtable for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
- D vtable for CCallbackImpl<1032>
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<148>
  D vtable for CCallbackImpl<156>
@@ -3014,7 +2988,6 @@
  D vtable for CFriendsDialog::CCallback_OnPersonaStateChange
  D vtable for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
  D vtable for CFriendsDialog::CCallback_OnRichInviteReceived
- D vtable for CFriendsDialog::CCallback_OnTableGameWatch
  D vtable for CFriendsDialog::CCallback_OnUIMenuChange
  D vtable for CFriendsDialog::CCallback_OnUserAchievement
  D vtable for CFriendsDialog::CCallback_OnUserRequestingFriendship
@@ -3208,8 +3181,6 @@
  D vtable for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D vtable for CSharedLibraryNotifications::CCallback_OnStopPlaying
  D vtable for CSteamFriends_Test
- D vtable for CSteamTableChallengeOptions
- D vtable for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTradeInviteBar
@@ -3508,7 +3479,6 @@
  R typeinfo name for CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CFriendsDialog, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CFriendsDialog, SteamServersDisconnected_t, false>
- R typeinfo name for CCallback<CFriendsDialog, TableGameWatch_t, false>
  R typeinfo name for CCallback<CFriendsDialog, TradeInviteReceived_t, false>
  R typeinfo name for CCallback<CFriendsDialog, UserAchievementStored_t, false>
  R typeinfo name for CCallback<CFriendsDialog, UserRequestingFriendship_t, false>
@@ -3532,13 +3502,11 @@
  R typeinfo name for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
- R typeinfo name for CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>
  R typeinfo name for CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>
  R typeinfo name for CCallback<CTradeInviteBar, TradeStartSession_t, false>
  R typeinfo name for CCallback<CVoiceBar, GameUsingVoice_t, false>
  R typeinfo name for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  R typeinfo name for CCallbackBase
- R typeinfo name for CCallbackImpl<1032>
  R typeinfo name for CCallbackImpl<12>
  R typeinfo name for CCallbackImpl<148>
  R typeinfo name for CCallbackImpl<156>
@@ -3643,7 +3611,6 @@
  R typeinfo name for CFriendsDialog::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
  R typeinfo name for CFriendsDialog::CCallback_OnRichInviteReceived
- R typeinfo name for CFriendsDialog::CCallback_OnTableGameWatch
  R typeinfo name for CFriendsDialog::CCallback_OnUIMenuChange
  R typeinfo name for CFriendsDialog::CCallback_OnUserAchievement
  R typeinfo name for CFriendsDialog::CCallback_OnUserRequestingFriendship
@@ -3838,8 +3805,6 @@
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnStopPlaying
  R typeinfo name for CSteamFriends_Test
- R typeinfo name for CSteamTableChallengeOptions
- R typeinfo name for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTradeInviteBar
@@ -4715,9 +4680,6 @@
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(TableGameWatch_t*))
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(TableGameWatch_t*))
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::Run(void*)
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(TradeInviteReceived_t*))
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(TradeInviteReceived_t*))
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::Run(void*)
@@ -4787,9 +4749,6 @@
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(StopPlayingBorrowedApp_t*))
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(StopPlayingBorrowedApp_t*))
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::Run(void*)
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::CCallback(CSteamTableChallengeOptions*, void (CSteamTableChallengeOptions::*)(TableGameStarted_t*))
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::Register(CSteamTableChallengeOptions*, void (CSteamTableChallengeOptions::*)(TableGameStarted_t*))
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::Run(void*)
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::CCallback(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeInviteCanceled_t*))
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::Register(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeInviteCanceled_t*))
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::Run(void*)
@@ -4802,9 +4761,6 @@
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::CCallback(CVoiceBar*, void (CVoiceBar::*)(VoiceEnabledStateChanged_t*))
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::Register(CVoiceBar*, void (CVoiceBar::*)(VoiceEnabledStateChanged_t*))
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::Run(void*)
- T CCallbackImpl<1032>::GetCallbackSizeBytes()
- T CCallbackImpl<1032>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<1032>::~CCallbackImpl()
  T CCallbackImpl<12>::GetCallbackSizeBytes()
  T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<12>::~CCallbackImpl()
@@ -5585,7 +5541,6 @@
  T CFriendsDialog::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendsDialog::CCallback_OnPrimaryChatDestinationSet::Run(void*)
  T CFriendsDialog::CCallback_OnRichInviteReceived::Run(void*)
- T CFriendsDialog::CCallback_OnTableGameWatch::Run(void*)
  T CFriendsDialog::CCallback_OnUIMenuChange::Run(void*)
  T CFriendsDialog::CCallback_OnUserAchievement::Run(void*)
  T CFriendsDialog::CCallback_OnUserRequestingFriendship::Run(void*)
@@ -5680,9 +5635,6 @@
  T CFriendsDialog::OnRichInviteReceived(RichInviteReceived_t*)
  T CFriendsDialog::OnSetShowAvatars()
  T CFriendsDialog::OnSetShowOnlineOnly()
- T CFriendsDialog::OnSteamTableChallenge(unsigned long long)
- T CFriendsDialog::OnSteamTableWatchGame(int)
- T CFriendsDialog::OnTableGameWatch(TableGameWatch_t*)
  T CFriendsDialog::OnTextChanged()
  T CFriendsDialog::OnTick()
  T CFriendsDialog::OnUIMenuChange(FriendsMenuChange_t*)
@@ -5754,8 +5706,6 @@
  T CFriendsDialog::PanelMessageFunc_OnRetry::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnSetShowAvatars::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnSetShowOnlineOnly::InitVar()
- T CFriendsDialog::PanelMessageFunc_OnSteamTableChallenge::InitVar()
- T CFriendsDialog::PanelMessageFunc_OnSteamTableWatchGame::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnTextChanged::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnUnIgnoreFriend::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnUnblockedIgnoredFriend::InitVar()
@@ -7624,37 +7574,10 @@
  T CSteamFriends_Test::GetSteamID(int)
  T CSteamFriends_Test::Init()
  T CSteamID::SetFromStringStrict(char const*, EUniverse)
- T CSteamTableChallengeOptions::CCallback_OnTableGameStarted::Run(void*)
- T CSteamTableChallengeOptions::CSteamTableChallengeOptions(vgui::Panel*, char const*)
- T CSteamTableChallengeOptions::ChainToAnimationMap()
- T CSteamTableChallengeOptions::ChainToMap()
- T CSteamTableChallengeOptions::CreateDynamicControls()
- T CSteamTableChallengeOptions::CreateGame()
- T CSteamTableChallengeOptions::GetAnimMap()
- T CSteamTableChallengeOptions::GetClassSize() const
- T CSteamTableChallengeOptions::GetKBMap()
- T CSteamTableChallengeOptions::GetMessageMap()
- T CSteamTableChallengeOptions::GetPanelClassName()
- T CSteamTableChallengeOptions::GetPanelTopClassName() const
- T CSteamTableChallengeOptions::InviteMenu()
- T CSteamTableChallengeOptions::KB_ChainToMap()
- T CSteamTableChallengeOptions::OnAddFriend(unsigned long long)
- T CSteamTableChallengeOptions::OnComboBoxChanged()
- T CSteamTableChallengeOptions::OnKeyCodeTyped(vgui::KeyCode)
- T CSteamTableChallengeOptions::OnOK()
- T CSteamTableChallengeOptions::OnOpenAddFriendMenu()
- T CSteamTableChallengeOptions::OnTableGameStarted(TableGameStarted_t*)
- T CSteamTableChallengeOptions::PanelMessageFunc_OnAddFriend::InitVar()
- T CSteamTableChallengeOptions::PanelMessageFunc_OnComboBoxChanged::InitVar()
- T CSteamTableChallengeOptions::PanelMessageFunc_OnOK::InitVar()
- T CSteamTableChallengeOptions::PanelMessageFunc_OnOpenAddFriendMenu::InitVar()
- T CSteamTableChallengeOptions::PerformLayout()
- T CSteamTableChallengeOptions::PopulateOptions()
- T CSteamTableChallengeOptions::~CSteamTableChallengeOptions()
+ T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
- T CStrAutoEncode::~CStrAutoEncode()
  T CStringProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CStringProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CStringProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -7957,10 +7880,6 @@
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>* const&)
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlString const&)
- T CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Find(CUtlString const&) const
- T CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Insert(CUtlString const&, KeyValuesAD const&)
- T CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Insert(CUtlString const&, vgui::CheckButton* const&)
- T CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Insert(CUtlString const&, vgui::ComboBox* const&)
  T CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
@@ -8044,19 +7963,6 @@
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, KeyValuesAD, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::CheckButton*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, vgui::ComboBox*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool)
@@ -8221,8 +8127,6 @@
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::~CUtlVector()
- T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::FastRemove(int)
- T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::FindAndFastRemove(CSteamID const&)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::GrowVector(int)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::InsertBefore(int, CSteamID const&)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::ShiftElementsRight(int, int)
@@ -8330,7 +8234,6 @@
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::Validate(CValidator&, char const*)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
@@ -8472,7 +8375,6 @@
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::FindAndRemove(vgui::Panel* const&)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::GrowVector(int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::InsertBefore(int, vgui::Panel* const&)
- T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::PurgeAndDeleteElements()
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::ShiftElementsLeft(int, int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::~CUtlVector()
@@ -8642,14 +8544,12 @@
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAPI_Validate(CValidator&)
- T ClientAppManager()
  T ClientApps()
  T ClientConfigStore()
  T ClientFriends()
  T ClientHTTP()
  T ClientParentalSettings()
  T ClientParentalSettingsUncached()
- T ClientTabletop()
  T ClientUser()
  T ClientUserStats()
  T ClientUtils()
@@ -8934,6 +8834,7 @@
  T CryptoPP::EuclideanDomainOf<CryptoPP::Integer>::Square(CryptoPP::Integer const&) const
  T CryptoPP::EuclideanDomainOf<CryptoPP::Integer>::Subtract(CryptoPP::Integer const&, CryptoPP::Integer const&) const
  T CryptoPP::EuclideanDomainOf<CryptoPP::Integer>::~EuclideanDomainOf()
+ T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Exception::what() const
  T CryptoPP::Exception::~Exception()
  T CryptoPP::FIPS_140_2_ComplianceEnabled()
@@ -9217,6 +9118,7 @@
  T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
  T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
  T CryptoPP::Source::PumpAll2(bool)
+ T CryptoPP::Source::Source(CryptoPP::BufferedTransformation*)
  T CryptoPP::Source::~Source()
  T CryptoPP::SourceTemplate<CryptoPP::StringStore>::GetAutoSignalPropagation() const
  T CryptoPP::SourceTemplate<CryptoPP::StringStore>::IsolatedInitialize(CryptoPP::NameValuePairs const&)
@@ -9380,7 +9282,6 @@
  T KV_ResolveSymbol(char const*)
  T KeyValues::AddSubKey(KeyValues*)
  T KeyValues::Clear()
- T KeyValues::ConvertAndWriteWideString(KeyValues*, CUtlBuffer*, int) const
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::CreateKey(char const*)
  T KeyValues::CreatePeerKey(char const*)
@@ -9428,7 +9329,6 @@
  T KeyValues::KeyValues(char const*, char const*, unsigned long long)
  T KeyValues::KeyValues(char const*, char const*, wchar_t const*)
  T KeyValues::KeyValues(unsigned int)
- T KeyValues::LoadFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*)
  T KeyValues::LoadFromFile(IBaseFileSystem*, char const*, char const*)
  T KeyValues::MakeCopy() const
  T KeyValues::MakeCopyInternal(KeyValues*) const
@@ -9437,15 +9337,11 @@
  T KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
  T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
- T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
- T KeyValues::SaveToBuffer(CUtlBuffer&, bool, EKeyValuesSerializationFlags) const
- T KeyValues::SaveToString(CUtlString&, bool, EKeyValuesSerializationFlags) const
  T KeyValues::SetColor(char const*, Color)
  T KeyValues::Validate(CValidator&, char const*, bool, bool)
  T KeyValues::WriteAsBinary(CUtlBuffer&, bool, bool, bool) const
- T KeyValues::WriteConvertedString(CUtlBuffer*, char const*, bool) const
  T KeyValues::deleteThis()
  T KeyValues::~KeyValues()
  T KeyValuesAD::Copy(KeyValues const*)
@@ -9489,7 +9385,6 @@
  T ListPanelDragger::SetMovable(bool)
  T ListPanelDragger::~ListPanelDragger()
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
  T Localize(char const*)
  T MessageBox_Factory()
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
@@ -12201,7 +12096,6 @@
  T vgui::PageTab::SetCustomTabPanel(vgui::Panel*)
  T vgui::PageTab::UpdateTabSize()
  T vgui::PageTab::~PageTab()
- T vgui::Panel::AddActionSignalTarget(unsigned int)
  T vgui::Panel::AddActionSignalTarget(vgui::Panel*)
  T vgui::Panel::AddKeyBinding(char const*, int, int)
  T vgui::Panel::AddPropertyConverter(char const*, vgui::IPanelAnimationPropertyConverter*)
@@ -13726,11 +13620,11 @@
  V_UTF8ToUChar32
  V_UTF8ToUTF16
  V_UTF8ToUTF32
+ V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
  V_UnqualifiedFileName
  V_WcsSkipArticles
  V_atof
  V_atoi
- V_binarytohex
  V_hextobinary
  V_isbreakablewspace
  V_pretifymem
@@ -13738,6 +13632,7 @@
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strncmp
  V_strncpy
@@ -13745,12 +13640,12 @@
  V_strnistr
  V_strtoui64
  V_tolower
+ V_towlower32
+ V_towupper32
  V_vsnprintfRet
  V_wcscat
- V_wcslower
  V_wcsncpy
  V_wcstoui64
- V_wcsupr
  Warning
  WeakRandomFloat
  _DMsg
@@ -13786,11 +13681,9 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __tolower
  __toupper
  __udivdi3
  __umoddi3
- _strlwr
  abort
  access
  alphasort$INODE64
@@ -14024,7 +13917,6 @@
  b CFriendsDialog::PerformLayout()::s_bOfflineMode
  b CFriendsListSubPanel::ISectionFromMemberAndSource(CSteamID const&, CSteamID const&)::fAsserted
  b CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
- b CSteamTableChallengeOptions::CSteamTableChallengeOptions(vgui::Panel*, char const*)::bAddedSearchPath
  b CUtlSymbol::Initialize()::symbolsInitialized
  b CryptoPP::NullRNG()::s_nullRNG
  b CryptoPP::Td
@@ -14123,6 +14015,7 @@
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
+ b g_pClientGameNotifications
  b g_pClientGameStats
  b g_pClientHTMLSurface
  b g_pClientHTTP
@@ -14136,7 +14029,6 @@
  b g_pClientScreenshots
  b g_pClientShortcuts
  b g_pClientStreamClient
- b g_pClientTabletop
  b g_pClientUGC
  b g_pClientUnifiedMessages
  b g_pClientUser
@@ -14350,14 +14242,12 @@
  floorf
  fmod
  fopen
- fopen$UNIX2003
  fprintf
  fputc
  fread
  free
  frexp
  fseek
- fseeko
  ftell
  fwrite$UNIX2003
  g_VProfManager
@@ -14759,7 +14649,6 @@
  t ListFileNameSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileSizeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileTypeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)

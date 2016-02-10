@@ -53,7 +53,7 @@ MusicControlPanel
 .MusicControlVisible.ScreenSaverMode .MusicControlVisible.GamesRunning
 {
 	opacity: 0.0;
-	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-property: opacity, transform, pre-transform-scale2d, saturation, wash-color, blur;
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
 }

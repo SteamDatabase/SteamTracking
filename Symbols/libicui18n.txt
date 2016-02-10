@@ -1,3 +1,4 @@
+
  B icu_52::IdentifierInfo::ASCII
  B icu_52::IdentifierInfo::CHINESE
  B icu_52::IdentifierInfo::CONFUSABLE_WITH_LATIN
@@ -709,8 +710,6 @@
  R typeinfo name for icu_52::ZoneIdMatchHandler
  T CReg::reg(unsigned short const*, char const*, UErrorCode*)
  T EquivIterator::next()
- T _dyld_func_lookup
- T dyld_stub_binding_helper
  T icu_52::AbsoluteValueSubstitution::calcUpperBound(double) const
  T icu_52::AbsoluteValueSubstitution::composeRuleValue(double, double) const
  T icu_52::AbsoluteValueSubstitution::getDynamicClassID() const
@@ -4801,6 +4800,7 @@
  T_CString_integerToString_52
  T_CString_toUpperCase_52
  _DefaultRuneLocale
+ __bzero
  __cxa_bad_typeid
  __cxa_pure_virtual
  __divdi3
@@ -5036,7 +5036,6 @@
  d caseFirstSub
  d ccLock
  d defaultKeywordValues
- d dyld__mach_header
  d firstLastSub
  d frenchSub
  d gCRegLock
@@ -5081,6 +5080,7 @@
  d ulocdata_getDelimiter_52.delimiterKeys
  d ulocdata_getExemplarSet_52.exemplarSetTypes
  d utransEnumeration
+ dyld_stub_binder
  floor
  fmod
  icu_52::BreakIterator::createWordInstance(icu_52::Locale const&, UErrorCode&)
@@ -5798,6 +5798,7 @@
  strlen
  strncat
  strncpy
+ strtod
  strtod$UNIX2003
  t SPUStringCompare(UElement, UElement)
  t _deleteRule(void*)

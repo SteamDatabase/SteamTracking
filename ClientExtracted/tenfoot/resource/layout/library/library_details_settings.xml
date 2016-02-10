@@ -14,10 +14,14 @@
 
 			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
 
-					<Label id="PreferencesLabel" class="LibrarySettingsHeader" text="#Library_Settings_Preferences" />
+				<Label id="ControllerLabel" class="LibrarySettingsHeader" text="#Library_Settings_ControllerSettings" />
 					<Button id="ManageControllersButton" class="Button">
 						<Label id="ManageControllersLabel" text="#Library_Details_ManageControllers"/>
 					</Button>
+					<ToggleButton class="CheckBox" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>				
+					<Panel class="HorizontalSpace" />
+					<Panel class="HorizontalSpace" />
+				<Label id="PreferencesLabel" class="LibrarySettingsHeader" text="#Library_Settings_Preferences" />	
 					<Button id="UpdateOptionsButton" class="Button">
 						<Label id="UpdateOptionsLabel" class="LongDesc" text="#Library_Details_EditUpdateOptions" />
 					</Button>					

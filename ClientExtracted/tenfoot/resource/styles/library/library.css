@@ -59,9 +59,9 @@
 	blur: none;
 	box-shadow: fill dark_box_shadow_color -6px 0px 12px 16px;
 	opacity: 1.0;
-	desaturation: 0.2;
+	saturation: 0.8;
 
-	transition-property: pre-transform-scale2d, box-shadow, wash-color, opacity, desaturation, opacity-mask;
+	transition-property: pre-transform-scale2d, box-shadow, wash-color, opacity, saturation, opacity-mask;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	background-color: action_module;
@@ -92,7 +92,7 @@
 {
 	box-shadow: inset #000000aa 0px 0px 4px 0px;
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 
@@ -202,7 +202,7 @@ LibraryAppDetails
 
 	transform: translate3d( 0px, 1280px, 1000px );
 
-	transition-property: transform, blur, position, opacity, desaturation !immediate;
+	transition-property: transform, blur, position, opacity, saturation !immediate;
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -220,7 +220,7 @@ LibraryAppDetails
 
 .DetailsBackground
 {
-	transition-property: transform, blur, position, opacity, opacity-mask, desaturation !immediate;
+	transition-property: transform, blur, position, opacity, opacity-mask, saturation !immediate;
 	transition-duration: mediumduration;
 	transition-timing-function: linear;
 	transition-delay: 0s;
@@ -257,7 +257,7 @@ LibraryAppDetails
 .DetailsBackground .BGScreenshotVisible
 {
 	opacity: 0.0;
-	desaturation: 0.8;
+	saturation: 0.2;
 
 	animation-name: bg-screenshot-ambient;
 	animation-duration: 14s;
@@ -310,7 +310,7 @@ LibraryAppDetails
 .DetailsBackground .BGOverlayVisible
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 LibraryAppDetails .GameStatus
@@ -629,7 +629,7 @@ LibraryAppDetails .ContentsRow
 	z-index: 0;
 	flow-children: right-wrap;
 
-	transition-property: opacity, desaturation, pre-transform-scale2d, transform;
+	transition-property: opacity, saturation, pre-transform-scale2d, transform;
 	transition-duration: shortduration !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -637,7 +637,7 @@ LibraryAppDetails .ContentsRow
 .ContentsRow .LibraryDetailsScrollableArea
 {
 	margin: -10px;
-	padding: 32px 10px 20px 10px;
+	padding: 32px 10px 20px 20px;
 	width: 1300px;
 	overflow: squish scroll;
 	flow-children: right-wrap;
@@ -847,7 +847,7 @@ LibrarySettings
 {
 	transform: translate3d( 0px, 64px, 0px );
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 }
 
@@ -2071,7 +2071,7 @@ LibraryRecentNews .LargeNewsByline
 
 #ScreenshotThumb2 {
 	transform: translatey( -12px );
-	desaturation: 0.3;
+	saturation: 0.7;
 	opacity: 1.0;
 	z-index: -2;
 	}
@@ -2081,7 +2081,7 @@ LibraryRecentNews .LargeNewsByline
 
 #ScreenshotThumb3 {
 	transform: translatey( -84px );
-	desaturation: 0.4;
+	saturation: 0.6;
 	opacity: 1.0;
 	z-index: -3;
 	}
@@ -2210,42 +2210,42 @@ LibraryRecentNews .LargeNewsByline
 #WorkshopThumb2
 {
 	transform: translatex( 42px );
-	desaturation: 0.2;
+	saturation: 0.8;
 	z-index: -2;
 }
 
 #WorkshopThumb3
 {
 	transform: translatex( 84px );
-	desaturation: 0.3;
+	saturation: 0.7;
 	z-index: -3;
 }
 
 #WorkshopThumb4
 {
 	transform: translatex( 126px );
-	desaturation: 0.4;
+	saturation: 0.6;
 	z-index: -4;
 }
 
 #WorkshopThumb5
 {
 	transform: translatex( 168px );
-	desaturation: 0.5;
+	saturation: 0.5;
 	z-index: -5;
 }
 
 #WorkshopThumb6
 {
 	transform: translatex( 210px );
-	desaturation: 0.5;
+	saturation: 0.5;
 	z-index: -6;
 }
 
 #WorkshopThumb7
 {
 	transform: translatex( 252px );
-	desaturation: 0.5;
+	saturation: 0.5;
 	z-index: -7;
 }
 
@@ -2569,7 +2569,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
     background-color: ui_common_control2;
     box-shadow: none;
-    desaturation: 0.5;
+    saturation: 0.5;
     blur: gaussian( 0.7 );
     opacity: 0.35;
     background-color: ui_common_control2;
@@ -2759,7 +2759,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .LibraryMostRecent:descendantfocus .RecentApp:focus
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 
 	opacity: 1.0;
 	pre-transform-scale2d: 1.1;
@@ -2953,14 +2953,14 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .GamesDownloads,
 #FastScrollWrapper
 {
-	padding-top: 77px;
-	padding-left: 135px;
+	padding-top: 20px;
+	padding-left: 75px;
 	position: 390px 0px 0px;
-	padding-right: 40px;
-	padding-bottom: 260px;
+	padding-right: 99px;
+	padding-bottom: 257px;
 
 	width: 1500px;
-	height: 1180px;
+	height: 1122px;
 
 	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
@@ -3137,15 +3137,14 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .AppGridItem
 {
-	width: 634px;
-	height: 439px;
-	margin: -140px, -82px;
-	padding: 82px;
+	width: 470px;
+	height: 225px;
 	pre-transform-scale2d: 0.88;
 	opacity: 0.0;
 
 	overflow: noclip;
 
+	transition-property: position;
 }
 
 .AppGridItem.Ready
@@ -3153,22 +3152,35 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 1;
 	pre-transform-scale2d: 0.94;
 	
-	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
+	transition-property: position, transform, blur, opacity, saturation, border, background-color, pre-transform-scale2d, box-shadow;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
+
+.DragScrolling .AppGridItem,
+.DragScrolling .AppGridItem.Ready
+ {
+	 transition-duration: 0.0s, supershortduration;
+ }
+
+.Flick .AppGridItem,
+.Flick .AppGridItem.Ready
+ {
+	 transition-timing-function: DragScrollFlickTimingFunction, bigpicture-ease-in-out;
+	 transition-duration: DragScrollFlickTime, supershortduration;
+ }
 
 .AppGridItem .AppImage
 {
 	width: 460px;
 	height: 215px;
 	opacity: 0.9;
-	desaturation: 0.2;
+	saturation: 0.8;
 	margin-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 0px;
-	transition-property: box-shadow, opacity, desaturation;
+	transition-property: box-shadow, opacity, saturation;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -3185,7 +3197,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .AppGridItem:hover .AppImage
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	wash-color: #00000000;
 }
 
@@ -3214,8 +3226,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .AppGridItem:focus .GridItemBackground,
 .AppGridItem:hover .GridItemBackground {
-	width: 470px;
-	height: 225px;
 	opacity: 1;
 	background-color: #b4dff7;
 	z-index: 99;
@@ -3292,7 +3302,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 }
 .AppGridItem:hover .AppImage {
 	opacity: 1.0;
-	desaturation: 0;
+	saturation: 1.0;
 }
 
 .AppGridItem:focus,
@@ -3316,7 +3326,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .AppGridItem:hover .AppGridItem .AppImage
 {
 	opacity: 1.0;
-	desaturation: 0.1;
+	saturation: 0.9;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 }
 
@@ -3324,7 +3334,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .AppGridItem:focus:hover .GridItemImage
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 }
 
 #ContentWrapper
@@ -3518,14 +3528,9 @@ DropDown Label
 
 }
 
-LibraryAllGames .TopMouseScrollRegion
-{
-	y: 90px;
-}
-
 LibraryAllGames .BottomMouseScrollRegion
 {
-	y: -205px;
+	y: -152px;
 }
 
 #RightLegend
@@ -3633,7 +3638,7 @@ KeyboardShortcut Image
 
 .PlayActionModal #DesktopPanels
 {
-	desaturation: 0.3;
+	saturation: 0.7;
 	opacity: 0.7;
 }
 
@@ -3834,7 +3839,7 @@ KeyboardShortcut Image
 #PrivateBetaPW:disabled, #ShowPrivateBetas:disabled
 {
 	opacity: 0.6;
-	desaturation: 0.4;
+	saturation: 0.6;
 	blur: gaussian( 1.0 );
 }
 
@@ -4399,7 +4404,7 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 
 	flow-children: down;
 
-	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-property: position, color, background-color, transform, opacity, height, width, saturation;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -4456,7 +4461,7 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 #LibraryAllGames #GamesFilter:descendantfocus
 {
 	opacity: 1.0;
-	desaturation: 0.0;
+	saturation: 1.0;
 	transform: translatez( 20px );
 	position: 1480px 120px 0px;
 }
@@ -5240,10 +5245,10 @@ LibrarySuggestionsRow
 	height: 300px;
 	width: 100%;
 	opacity: 0.9;
-	desaturation: 0.2;
+	saturation: 0.8;
 	visibility: collapse;
 
-	transition-property: opacity, desaturation;
+	transition-property: opacity, saturation;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -5258,7 +5263,7 @@ SuggestionsContentRemote .GamesList:descendantfocus,
 LibrarySuggestionsRow:descendantfocus
 {
 	opacity: 1;
-	desaturation: 0;
+	saturation: 1.0;
 }
 
 #GamesSuggestion SuggestionsContentRemote

@@ -16,7 +16,7 @@ TextEntry
 
 TextEntry:disabled,.Button:disabled
 {
-	desaturation: 0.0;
+	saturation: 1.0;
 	blur: gaussian( 0.7 );
 	opacity: 0.40;
 	border-color: none;

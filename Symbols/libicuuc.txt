@@ -1,3 +1,4 @@
+
  B utrace_level_52
  D _ASCIIData_52
  D _Bocu1Data_52
@@ -334,10 +335,8 @@
  T UDataMemory_normalizeDataPointer_52
  T UDataMemory_setData_52
  T UDatamemory_assign_52
- T _dyld_func_lookup
  T cmemory_cleanup_52
  T cmemory_inUse_52
- T dyld_stub_binding_helper
  T icu_52::Appendable::appendCodePoint(int)
  T icu_52::Appendable::appendString(unsigned short const*, int)
  T icu_52::Appendable::getAppendBuffer(int, int, unsigned short*, int, int*)
@@ -876,6 +875,7 @@
  T icu_52::Normalizer2Impl::getCanonValue(int) const
  T icu_52::Normalizer2Impl::getDecomposition(int, unsigned short*, int&) const
  T icu_52::Normalizer2Impl::getFCD16FromNormData(int) const
+ T icu_52::Normalizer2Impl::getNorm16(int) const
  T icu_52::Normalizer2Impl::getRawDecomposition(int, unsigned short*, int&) const
  T icu_52::Normalizer2Impl::getTrailCCFromCompYesAndZeroCC(unsigned short const*, unsigned short const*) const
  T icu_52::Normalizer2Impl::hasCompBoundaryAfter(int, signed char, signed char) const
@@ -2618,6 +2618,7 @@
  T utrie_unserializeDummy_52
  T utrie_unserialize_52
  _DefaultRuneLocale
+ __bzero
  __cxa_bad_typeid
  __cxa_pure_virtual
  __dynamic_cast
@@ -2731,7 +2732,9 @@
  b uni32Singleton
  b uprv_getPOSIXIDForDefaultLocale()::posixID
  ceil
+ close
  close$UNIX2003
+ closedir
  closedir$UNIX2003
  d (anonymous namespace)::_ISO2022CNData
  d (anonymous namespace)::_ISO2022JPData
@@ -2810,7 +2813,6 @@
  d cnvNameType
  d converterData
  d defaultEncodings
- d dyld__mach_header
  d escSeqCharsCN
  d gEnumAliases
  d gEnumAllConverters
@@ -2997,10 +2999,12 @@
  d utf16BEIterator
  d utf8Funcs
  d utf8Iterator
+ dyld_stub_binder
  fclose
  floor
  fmod
  fopen
+ fopen$UNIX2003
  fread
  free
  fseek
@@ -3015,14 +3019,19 @@
  memmove
  memset
  memset_pattern16
+ mmap
  mmap$UNIX2003
  modf
+ munmap
  munmap$UNIX2003
+ open
  open$UNIX2003
- opendir$UNIX2003
+ opendir$INODE64
+ opendir$INODE64$UNIX2003
  operator delete(void*)
  pow
  pthread_cond_broadcast
+ pthread_cond_wait
  pthread_cond_wait$UNIX2003
  pthread_mutex_lock
  pthread_mutex_unlock
@@ -3257,13 +3266,13 @@
  r validityTable
  r yehHamzaToYeh
  r zeroMem
- readdir
+ readdir$INODE64
  readlink
  realloc
  rewind
  setlocale
  sprintf
- stat
+ stat$INODE64
  strcat
  strchr
  strcmp
@@ -3274,6 +3283,7 @@
  strncpy
  strrchr
  strstr
+ strtod
  strtod$UNIX2003
  strtol
  strtoul
@@ -3416,6 +3426,7 @@
  t _load_installedLocales()
  t _matchFromSet(unsigned short const*, unsigned short const*, signed char)
  t _normalize(icu_52::Normalizer2 const*, unsigned short const*, int, icu_52::UnicodeString&, UErrorCode*)
+ t _reset
  t _set_add(USet*, int)
  t _set_addRange(USet*, int, int)
  t _set_addString(USet*, unsigned short const*, int)
@@ -3423,6 +3434,7 @@
  t _toUnicodeWithCallback
  t _uhash_put
  t _uhash_rehash
+ t appendResult(unsigned char*, int, int, int, unsigned short const*)
  t biDiGetMaxValue(IntProperty const&, UProperty)
  t bracketAddOpening
  t bracketProcessChar
@@ -3736,6 +3748,7 @@
  t utf8_nextCharSafeBodyPointer(unsigned char const**, unsigned char const*, int)
  t utf8_nextCharSafeBodyTerminated(unsigned char const**, int)
  t utrie_compact(UNewTrie*, signed char, UErrorCode*)
+ timezone
  timezone$UNIX2003
  tzname
  tzset
