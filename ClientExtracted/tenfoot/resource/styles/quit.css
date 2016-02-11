@@ -194,9 +194,34 @@
 	visibility: visible;
 }
 
-.StreamingClientCanSuspend
+.StreamingClientCanSuspendVisible
+{
+    visibility: collapse;
+}
+
+.StreamingClientCanSuspend .StreamingClientCanSuspendVisible
 {
     visibility: visible;
+}
+
+.NVStreamingActive .NVStreamingVisible
+{
+	visibility: visible;
+}
+
+.NVStreamingActive .NVStreamingHidden
+{
+	visibility: collapse;
+}
+
+.NVStreamingVisible
+{
+	visibility: collapse;
+}
+
+.NVStreamingHidden
+{
+	visibility: visible;
 }
 
 #MusicControllerPanel:descendantfocus .SystemButton:hover

@@ -1,0 +1,57 @@
+"resource/layout/steamvrhmdwarning.layout"
+{
+	controls
+	{
+		SteamVRHMD { controlname="Frame" title=" " style="SteamVRHMD" }
+
+		ConfirmTextHeader { controlname="Label" labeltext="#Steam_VGUIVRHMDWarningHeader" wrap=0 style=ConfirmTextHeader }
+		ConfirmText { controlname="Label" labeltext="#Steam_VGUIVRHMDWarning" wrap=1 style=ConfirmText }
+
+		VRDontShowCheckButton { controlname="CheckButton" tabposition=3 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
+		Help { controlname="Button" tabposition=2 labeltext="#steam_menu_help" textalignment=left }
+		Install { controlname="Button" tabposition=1 labeltext="#SteamUI_InstallSteamVR" textalignment=left }
+		Close { controlname="Button" tabposition=1 labeltext="#vgui_close" textalignment=left }
+	}
+	
+	styles
+	{
+		SteamVRHMD
+		{
+			minimum-width = 706
+			minimum-height = 370
+			inset="0	0 0 0"
+			
+			render_bg 
+			{				
+				// background gradient        
+				0="gradient( x0+1, y0, x1-1, y1-45, dialogbg, almostblack )"
+        5="image( x0 + 3, y0 + 3, x1, y1, graphics/vrwarning_dialog )"
+			}			
+		}
+
+		ConfirmTextHeader
+		{
+			textcolor="110 192 236 255"
+			font-size=26
+		}	
+
+		ConfirmText
+		{
+			textcolor="110 192 236 255"
+			font-size=20
+		}	
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=45 margin=10 }
+
+		place { control="ConfirmTextHeader" width=435 y=116 margin-left=30 }
+		place { control="ConfirmText" width=430 y=140 margin=20 margin-left=30 }
+		place { control="ControllerBackground" width=max y=40 height=max margin=15 }
+		place { control="Install,Close,Help" region="bottom" align=right spacing=20 width=120 height=25  }
+		place { control="VRDontShowCheckButton" region="bottom" align=left spacing=5 margin-left=20 }
+		
+	}
+
+}

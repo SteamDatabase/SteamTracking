@@ -27,8 +27,8 @@
 	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical" content-title="#Library_ContentTitle" onload="LibraryAllGamesOnLoad()" ondescendantfocus="LibraryAllGamesOnLoad();" >
 		<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />
 		<Panel hittest="false" id="FastScrollWrapper">
-			<Label id="FastScrollLabel" />
-			<Label id="TypeToJumpLabel" />
+			<Label id="FastScrollLabel" hittest="false" />
+			<Label id="TypeToJumpLabel" hittest="false" />
 		</Panel>
 		<Panel class="AllGamesContent" id="AllGamesContent" mousecanactivate="unfocused" >
 			<Panel id="Menu" class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >

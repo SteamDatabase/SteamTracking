@@ -174,6 +174,7 @@
 
 						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
 						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
+						<LibraryRentalInfo id="RentalInfo" class="RentalInfo DetailsDataPanel Small" />
 						<LibraryGameBadge id="GameBadge" class="GameBadge DetailsDataPanel Small" />
 					</Panel>
 					<Panel class="LibraryDetailsSectionRow TallArea">

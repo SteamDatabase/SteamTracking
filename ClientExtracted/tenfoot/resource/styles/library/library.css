@@ -1149,7 +1149,8 @@ ParentalButton.Locked
 .ScreenshotsFullWrapper,
 .ControllerFullWrapper,
 .DLCFullWrapper,
-.StreamingFullWrapper
+.StreamingFullWrapper,
+.RentalInfoFull
 {
 	width: 100%;
 	height: 100%;
@@ -1235,6 +1236,34 @@ LibraryAchievements .MoreRemainingLabel
 	color: detailsdatalabel;
 	horizontal-align: center;
 	vertical-align: center;
+}
+
+LibraryRentalInfo .RentalBody
+{
+	font-size: 18px;
+	color: detailsdatalabel;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+LibraryRentalInfo #BodyLabel
+{
+	visibility: visible;
+}
+
+LibraryRentalInfo.RentalActivated #BodyLabel 
+{
+	visibility: collapse;
+}
+
+LibraryRentalInfo #BodyLabelActivated
+{
+	visibility: collapse;
+}
+
+LibraryRentalInfo.RentalActivated #BodyLabelActivated
+{
+	visibility: visible;
 }
 
 LibraryGuides .GuidesBody
@@ -4431,7 +4460,8 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 {
 	opacity: 1.0;
 }
-.VR .suggested #GamesFilter
+.VR .suggested #GamesFilter,
+.VR .music #GamesFilter
 {
 	opacity: 0.0;
 }

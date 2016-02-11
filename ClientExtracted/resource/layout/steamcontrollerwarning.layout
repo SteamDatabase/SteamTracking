@@ -7,7 +7,7 @@
 		ConfirmTextHeader { controlname="Label" labeltext="#Steam_VGUIControllerWarningHeader" wrap=0 style=ConfirmTextHeader }
 		ConfirmText { controlname="Label" labeltext="#Steam_VGUIControllerWarning" wrap=1 style=ConfirmText }
 
-		DontShowCheckButton { controlname="CheckButton" tabposition=3 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
+		ControllerDontShowCheckButton { controlname="CheckButton" tabposition=3 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
 		Help { controlname="Button" tabposition=2 labeltext="#steam_menu_help" }
 		Close { controlname="Button" tabposition=1 labeltext="#vgui_close" }
 	}
@@ -49,7 +49,7 @@
 		place { control="ConfirmText" width=430 y=140 margin=20 margin-left=30 }
 		place { control="ControllerBackground" width=max y=40 height=max margin=15 }
 		place { control="Close,Help" region="bottom" align=right spacing=20 width=100 height=25  }
-		place { control="DontShowCheckButton" region="bottom" align=left spacing=5 margin-left=20 }
+		place { control="ControllerDontShowCheckButton" region="bottom" align=left spacing=5 margin-left=20 }
 		
 	}
 

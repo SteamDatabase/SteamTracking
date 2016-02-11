@@ -930,3 +930,9 @@ BigPictureSuggestions
 	method		"internal"
 	filter		"community"
 }
+
+SteamVRHMDHelp
+{
+	url		"http://steamvr.steampowered.com"
+	method	"external"
+}

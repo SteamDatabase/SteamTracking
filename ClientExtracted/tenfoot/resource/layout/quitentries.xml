@@ -13,12 +13,11 @@
 			<Button class="SystemButton StreamingVisible Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, StopStreaming() )" selectionpos="0,0">
 				<Label text="#Quit_StopStreaming" />
 			</Button>
-			<Button class="SystemButton StreamingClientCanSuspend Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, StopStreamingAndSuspendClient() )" selectionpos="0,1">
+			<Button class="SystemButton StreamingClientCanSuspendVisible Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, StopStreamingAndSuspendClient() )" selectionpos="0,1">
 				<Label text="#Quit_StopStreamingAndSuspendClient" />
 			</Button>
 			<Panel class="QuitSectionSpacer" />
 			<Label class="QuitSectionHeader" text="#Quit_LabelStreamingServer"/>
-			<Panel class="HorizontalSpace" />
 		</Panel>
 		
 		<!-- Local options -->
@@ -29,11 +28,11 @@
 			<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons Button" onactivate="SwitchToHDMIInput()" selectionpos="0,3">
 				<Label text="#Quit_SwitchToHDMIInput" />
 			</Button>
-			<Panel class="HorizontalSpace NotLoggedInHidden" />
-			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden ExitButtons Button" onactivate="MinimizeApp()" selectionpos="0,4">
+			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
+			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="MinimizeApp()" selectionpos="0,4">
 				<Label id="MinimizeBigPictureLabel" text="#Quit_MinimizeBigPicture" />
 			</Button>
-			<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden ExitButtons Button" onactivate="QuitApp()" selectionpos="0,5">
+			<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="QuitApp()" selectionpos="0,5">
 				<Label id="QuitBigPictureLabel" text="#Quit_QuitBigPicture" />
 			</Button>
 			<Button id="QuitExitSteam" class="SystemButton StreamingHidden ExitButtons Button" onactivate="ExitSteam()" selectionpos="0,6">
@@ -48,7 +47,7 @@
 				<Label text="#Quit_ChangeUser" />
 			</Button>
 			
-			<Panel class="HorizontalSpace NotLoggedInHidden" />
+			<Panel class="HorizontalSpace ControllerActiveVisible" />
 			<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton Button" onactivate="TurnOffActiveController()" selectionpos="0,9">
 				<Label text="#Quit_TurnOffController" />
 			</Button>
@@ -62,7 +61,7 @@
 			</Button>
 
 
-			<Panel class="HorizontalSpace NotLoggedInHidden" />
+			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
 			<Button id="QuitRestart" class="SystemButton System SystemCanRestart Button" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine(false) );" selectionpos="0,12">
 				<Label text="#Quit_Restart" />
 			</Button>

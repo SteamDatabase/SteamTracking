@@ -336,6 +336,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_linksandmore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_playaction.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_recentnews.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_rentalinfo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_screenshots.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_screenshots_slideshow.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_settings.o
@@ -1435,6 +1436,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_news.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_nonsteam.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_nonsteam.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_rental.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_rental.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_screenshots.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_screenshots.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_turnnotifications.cpp
@@ -1683,6 +1686,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_playaction.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_recentnews.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_recentnews.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_rentalinfo.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_rentalinfo.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_screenshots.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_screenshots.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_screenshots_slideshow.cpp

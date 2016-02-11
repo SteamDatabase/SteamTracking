@@ -40,6 +40,7 @@
 
 		// Body contents
 		welcomedetails { controlname="CGamesPage_Details_Welcome" zpos="1" }
+		rentaldetails { controlname="CGamesPage_Details_Rental" zpos="1" }
 		dlcdetails { controlname="CGamesPage_Details_DLC" zpos="1" }
 		friendsdetails { controlname="CGamesPage_Details_Friends" zpos="1" }
 		clouddetails { controlname="CGamesPage_Details_Cloud" zpos="1" }
@@ -283,7 +284,7 @@
 		// Body contents
 		place 
 		{ 
-			control=welcomedetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
+			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
 			dir=down
 			width=max
