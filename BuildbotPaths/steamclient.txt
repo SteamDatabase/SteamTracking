@@ -826,13 +826,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientEngine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientMatchmaking.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientRemoteStorage.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientUser.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientdeviceauth.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientgamenotifications.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientmusic.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientremoteclientmanager.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvideo.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
