@@ -212,6 +212,15 @@ line-height: 24px;
 float: right;
 }
 
+.save_button_nag {
+	margin-top: 5px;
+}
+
+.sort_message {
+	white-space: nowrap;
+	color: #67c1f5;
+}
+
 #wishlist_sort_options {
 text-align: right;
 

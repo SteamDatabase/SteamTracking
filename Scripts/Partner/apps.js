@@ -2086,7 +2086,8 @@ function ImageUploadCallback(jsonResponse)
 			{
 				var url = unescape( results[ 'images' ][ imageType ] );
 				var elt = document.getElementById( id );
-				elt.src = url;
+				if ( elt )
+					elt.src = url;
 			}
 		}
 	}	
@@ -2527,7 +2528,7 @@ function LoadInstallScript( appid )
 {
 	// issue ajax request to fetch install script,
 	// then poke it into the document
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/installscript/fetch/" + appid,
 		{},
 		function( results )
@@ -2542,7 +2543,7 @@ function LoadInstallScript( appid )
 				$('installScriptNotPopulated').style.display = 'none';
 				$('installScriptPopulated').style.display = '';
 				$('appInstallScriptDisplay').innerHTML = results[ 'installscript' ];
-			} 
+			}
 		}, 'get'
 		);
 }
@@ -3674,18 +3675,6 @@ function ShowProgressDialog( strTitle, strDescription )
 	deferred.promise( Modal );
 
 	return Modal;
-}
-function OnChangeControllerTemplate(appid)
-{
-	SetAppField( 'config', appid, 'steamcontrollertemplateindex', $('SteamControllerTemplate').value );
-
-	for( var i=0; i<7; i++)
-	{
-		if( $('SteamControllerTemplate').value == i )
-			$J('#SteamControllerTemplate_' + i).show();
-		else
-			$J('#SteamControllerTemplate_' + i).hide();
-	}
 }
 
 function UpgradeGreenlightItem( item )

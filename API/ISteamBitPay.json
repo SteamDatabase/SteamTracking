@@ -1,0 +1,11 @@
+{
+    "name": "ISteamBitPay",
+    "methods": [
+        {
+            "name": "BitPayPaymentNotification",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        }
+    ]
+}

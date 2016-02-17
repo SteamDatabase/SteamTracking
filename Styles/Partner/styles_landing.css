@@ -1634,6 +1634,8 @@ input.datepicker {
 	background-color: #000;
 	color: #999999;
 	padding: 15px 15px 10px 15px;
+	margin-left: -15px;
+	width: 100%;
 	margin-bottom: 0;
 
 	background: #000000;
@@ -1757,6 +1759,8 @@ input.datepicker {
 	background-color: #4d4d4d;
 	border-top: 1px solid #6b8805;
 	padding: 15px;
+	width: 100%;
+	margin-left: -15px;
 }
 
 .alertText {
@@ -2092,4 +2096,81 @@ ul.actualUL li {
 }
 
 ul.actualUL {
+}
+
+/* App landing release steps */
+.releaseProgressContainer {
+	background-color: #000;
+	color: #808285;
+	font-size: 14px;
+	padding: 15px;
+	width: 100%;
+	margin-left: -15px;
+
+}
+
+.releaseProgressContainer .title {
+	color: #fff;
+	font-size: 17px;
+}
+
+.releaseStep > .content {
+	padding: 5px 15px ;
+}
+.releaseStep > .stepState {
+	background-color:#ac966a;
+	height: 5px;
+	margin-bottom: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0 15px;
+	color: #000;
+}
+
+.releaseStep > .stepState.blue {
+	background-color:#638abf;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: 0;
+}
+
+.releaseStep > .stepState.green {
+	background-color:#a4d007;
+
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: 0;
+}
+
+
+.releaseStep a.seeChecklist {
+	color: #e2c58b;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.releaseStep p.failmessage {
+
+}
+
+.releaseStep p.failmessage > span {
+
+	color: #e24044;
+}
+
+.releaseProgressContainer .releaseStep {
+	display: table-cell;
+
+	width: 33.333%;
+	box-sizing: border-box;
+	background-color: grey;
+	vertical-align: top;
+	border-right: 4px solid black;
+	border-left: 4px solid black;
+	background-color: #333333
+}
+
+.releaseProgressContainer .releaseStep:last-child {
+	margin-right: 0;
 }

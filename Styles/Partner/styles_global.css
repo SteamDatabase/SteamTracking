@@ -393,6 +393,11 @@ div.hr-grey hr {
 	color:#cccccc;
 }
 
+.checkboxIndent {
+	padding-left: 24px;
+	padding-top: 4px;
+}
+
 
 #featureBar {
 	margin:0;

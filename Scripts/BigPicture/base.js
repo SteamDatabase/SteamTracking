@@ -683,7 +683,7 @@ function ShowPopupMenu( rgOptions, rgSettings )
 				'	<scripts>' +
 				'		<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js" />' +
 				'	</scripts>' +
-				'	<Panel oncancel="CloseBigPicturePopup();" class="MenuPopup">' +
+				'	<Panel oncancel="CloseBigPicturePopup();" class="MenuPopup" onmouseactivate="CloseBigPicturePopup();">' +
 				'		<Panel class="MenuPopupButtonContainer" selectionposboundary="vertical"  overscroll-y="150"  >' +
 				'		</Panel>' +
 				'	</Panel>' +
@@ -691,7 +691,7 @@ function ShowPopupMenu( rgOptions, rgSettings )
 
 	var popup = $.CreatePanel( 'Panel', $.TenfootController( $.GetContextPanel() ).AccessMainMenu(), 'CommunityAppHubPopup' );
 
-	$.RegisterEventHandler('PanelLoaded', popup, function()
+	$.RegisterEventHandler('LoadAsyncComplete', popup, function()
 	{
 		var oContainer = popup.FindChildrenWithClassTraverse("MenuPopupButtonContainer")[0];
 		var nOptions = 0;
