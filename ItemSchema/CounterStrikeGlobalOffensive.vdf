@@ -94,13 +94,13 @@
 		"normal"
 		{
 			"value"		"0"
-			"weight"		"10"
+			"weight"		"1"
 			"hexColor"		"#B2B2B2"
 		}
 		"genuine"
 		{
 			"value"		"1"
-			"weight"		"30"
+			"weight"		"180"
 			"hexColor"		"#4D7455"
 		}
 		"vintage"
@@ -118,13 +118,13 @@
 		"unique"
 		{
 			"value"		"4"
-			"weight"		"20"
+			"weight"		"10"
 			"hexColor"		"#D2D2D2"
 		}
 		"community"
 		{
 			"value"		"5"
-			"weight"		"100"
+			"weight"		"200"
 			"hexColor"		"#70B04A"
 		}
 		"developer"
@@ -136,7 +136,7 @@
 		"selfmade"
 		{
 			"value"		"7"
-			"weight"		"200"
+			"weight"		"300"
 			"hexColor"		"#70B04A"
 		}
 		"customized"
@@ -148,7 +148,7 @@
 		"strange"
 		{
 			"value"		"9"
-			"weight"		"90"
+			"weight"		"150"
 			"hexColor"		"#CF6A32"
 		}
 		"completed"
@@ -166,7 +166,7 @@
 		"tournament"
 		{
 			"value"		"12"
-			"weight"		"0"
+			"weight"		"50"
 			"hexColor"		"#FFD700"
 		}
 	}
@@ -576,6 +576,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_deagle_aq_deagle_corinthian_heavy"
 			}
+			"67644"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_deserteagle_kumichodragon_light"
+			}
+			"67645"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_deserteagle_kumichodragon_medium"
+			}
+			"67646"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_deserteagle_kumichodragon_heavy"
+			}
 			"131184"
 			{
 				"icon_path"		"econ/default_generated/weapon_elite_an_navy_light"
@@ -767,6 +779,18 @@
 			"133038"
 			{
 				"icon_path"		"econ/default_generated/weapon_elite_cu_dualberretta_dragons_heavy"
+			}
+			"133184"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_aq_dualberettas_cartel_light"
+			}
+			"133185"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_aq_dualberettas_cartel_medium"
+			}
+			"133186"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_aq_dualberettas_cartel_heavy"
 			}
 			"196620"
 			{
@@ -984,6 +1008,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_retrobution_heavy"
 			}
+			"198728"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_augmented_light"
+			}
+			"198729"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_augmented_medium"
+			}
+			"198730"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_augmented_heavy"
+			}
 			"262152"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_so_olive_light"
@@ -1187,6 +1223,18 @@
 			"264126"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_wrathys_heavy"
+			}
+			"264272"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_award_light"
+			}
+			"264273"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_award_medium"
+			}
+			"264274"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_award_heavy"
 			}
 			"458808"
 			{
@@ -1439,6 +1487,18 @@
 			"460778"
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_point_disarray_heavy"
+			}
+			"460848"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak47_supercharged_light"
+			}
+			"460849"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak47_supercharged_medium"
+			}
+			"460850"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak47_supercharged_heavy"
 			}
 			"524324"
 			{
@@ -1824,6 +1884,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_hyper_beast_heavy"
 			}
+			"591924"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_mastery_light"
+			}
+			"591925"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_mastery_medium"
+			}
+			"591926"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_mastery_heavy"
+			}
 			"655448"
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_sp_spray_light"
@@ -1991,6 +2063,18 @@
 			"657330"
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_cu_famas_lenta_heavy"
+			}
+			"657476"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_aq_famas_contour_light"
+			}
+			"657477"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_aq_famas_contour_medium"
+			}
+			"657478"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_aq_famas_contour_heavy"
 			}
 			"720920"
 			{
@@ -2712,6 +2796,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_royal_squire_heavy"
 			}
+			"1050708"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_pioneer_light"
+			}
+			"1050709"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_pioneer_medium"
+			}
+			"1050710"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_pioneer_heavy"
+			}
 			"1114124"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_so_red_light"
@@ -2927,6 +3023,18 @@
 			"1116106"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_alekhya_duo_heavy"
+			}
+			"1116248"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_electricity_light"
+			}
+			"1116249"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_electricity_medium"
+			}
+			"1116250"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_electricity_heavy"
 			}
 			"1245264"
 			{
@@ -3744,6 +3852,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_noxious_heavy"
 			}
+			"1706040"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_citizen_light"
+			}
+			"1706041"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_citizen_medium"
+			}
+			"1706042"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_citizen_heavy"
+			}
 			"1769600"
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_an_silver_light"
@@ -3911,6 +4031,18 @@
 			"1771470"
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_myrcene_heavy"
+			}
+			"1771612"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_gs_mag7_praetorian_light"
+			}
+			"1771613"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_gs_mag7_praetorian_medium"
+			}
+			"1771614"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_gs_mag7_praetorian_heavy"
 			}
 			"1835120"
 			{
@@ -4464,6 +4596,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_cu_tec9_avalanche_heavy"
 			}
+			"1968236"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_jambiya_light"
+			}
+			"1968237"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_jambiya_medium"
+			}
+			"1968238"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_jambiya_heavy"
+			}
 			"2097236"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_granite_light"
@@ -4859,6 +5003,18 @@
 			"2164690"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp7_cu_mp7_classified_heavy"
+			}
+			"2164832"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_sp_mp7_impire_light"
+			}
+			"2164833"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_sp_mp7_impire_medium"
+			}
+			"2164834"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_sp_mp7_impire_heavy"
 			}
 			"2228356"
 			{
@@ -5267,6 +5423,18 @@
 			"2295698"
 			{
 				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_ranger_heavy"
+			}
+			"2295908"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_hyperbeast_light"
+			}
+			"2295909"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_hyperbeast_medium"
+			}
+			"2295910"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_hyperbeast_heavy"
 			}
 			"2359356"
 			{
@@ -6024,6 +6192,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_technicality_heavy"
 			}
+			"2623592"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_necropos_light"
+			}
+			"2623593"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_necropos_medium"
+			}
+			"2623594"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_necropos_heavy"
+			}
 			"3932400"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_am_zebra_dark_light"
@@ -6407,6 +6587,18 @@
 			"3999714"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_kill_confirmed_heavy"
+			}
+			"3999856"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_gs_usp_voltage_light"
+			}
+			"3999857"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_gs_usp_voltage_medium"
+			}
+			"3999858"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_gs_usp_voltage_heavy"
 			}
 			"4128816"
 			{
@@ -8376,6 +8568,150 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_falchion_sp_dapple_heavy"
 			}
+			"33685524"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_ddpat_light"
+			}
+			"33685525"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_ddpat_medium"
+			}
+			"33685526"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_ddpat_heavy"
+			}
+			"33685552"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_webs_light"
+			}
+			"33685553"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_webs_medium"
+			}
+			"33685554"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_webs_heavy"
+			}
+			"33685656"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aa_fade_light"
+			}
+			"33685657"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aa_fade_medium"
+			}
+			"33685658"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aa_fade_heavy"
+			}
+			"33685664"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_so_night_light"
+			}
+			"33685665"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_so_night_medium"
+			}
+			"33685666"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_so_night_heavy"
+			}
+			"33685672"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_blued_light"
+			}
+			"33685673"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_blued_medium"
+			}
+			"33685674"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_blued_heavy"
+			}
+			"33685676"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_forced_light"
+			}
+			"33685677"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_forced_medium"
+			}
+			"33685678"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_forced_heavy"
+			}
+			"33685680"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_oiled_light"
+			}
+			"33685681"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_oiled_medium"
+			}
+			"33685682"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_aq_oiled_heavy"
+			}
+			"33685740"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_am_zebra_light"
+			}
+			"33685741"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_am_zebra_medium"
+			}
+			"33685742"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_am_zebra_heavy"
+			}
+			"33685792"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_mesh_tan_light"
+			}
+			"33685793"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_mesh_tan_medium"
+			}
+			"33685794"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_mesh_tan_heavy"
+			}
+			"33685812"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_forest_boreal_light"
+			}
+			"33685813"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_forest_boreal_medium"
+			}
+			"33685814"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_hy_forest_boreal_heavy"
+			}
+			"33686076"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_tape_urban_light"
+			}
+			"33686077"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_tape_urban_medium"
+			}
+			"33686078"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_tape_urban_heavy"
+			}
+			"33686204"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_dapple_light"
+			}
+			"33686205"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_dapple_medium"
+			}
+			"33686206"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_survival_bowie_sp_dapple_heavy"
+			}
 			"33751060"
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_butterfly_hy_ddpat_light"
@@ -9397,12 +9733,155 @@
 				}
 			}
 		}
-		"prestige_2015"
+		"season7_coin"
 		{
-			"prefab"		"prestige_coin"
+			"prefab"		"operation_coin"
 			"attributes"
 			{
-				"prestige year"		"2015"
+				"season access"		"6"
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+				}
+				"operation minutes played"
+				{
+					"attribute_class"		"operation_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation wins"
+				{
+					"attribute_class"		"operation_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation kills"
+				{
+					"attribute_class"		"operation_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 3k"
+				{
+					"attribute_class"		"operation_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 4k"
+				{
+					"attribute_class"		"operation_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 5k"
+				{
+					"attribute_class"		"operation_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation hsp"
+				{
+					"attribute_class"		"operation_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation mvps"
+				{
+					"attribute_class"		"operation_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive minutes played"
+				{
+					"attribute_class"		"competitive_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive wins"
+				{
+					"attribute_class"		"competitive_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive kills"
+				{
+					"attribute_class"		"competitive_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 3k"
+				{
+					"attribute_class"		"competitive_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 4k"
+				{
+					"attribute_class"		"competitive_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 5k"
+				{
+					"attribute_class"		"competitive_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive hsp"
+				{
+					"attribute_class"		"competitive_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive mvps"
+				{
+					"attribute_class"		"competitive_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"quests complete"
+				{
+					"attribute_class"		"quests_complete"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation points"
+				{
+					"attribute_class"		"operation_points"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"quest id"
+				{
+					"attribute_class"		"quest_id"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 7 completion bitfield"
+				{
+					"attribute_class"		"campaign_completion_bitfield"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 7 last completed quest"
+				{
+					"attribute_class"		"campaign_last_completed_quest"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 8 completion bitfield"
+				{
+					"attribute_class"		"campaign_completion_bitfield"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 8 last completed quest"
+				{
+					"attribute_class"		"campaign_last_completed_quest"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
 			}
 		}
 		"map_token"
@@ -12185,7 +12664,6 @@
 				"tracer frequency alt"		"0"
 				"max player speed"		"225"
 				"max player speed alt"		"225"
-				"armor ratio"		"1.250000"
 				"crosshair min distance"		"4"
 				"crosshair delta distance"		"3"
 				"penetration"		"2"
@@ -12207,15 +12685,15 @@
 				"inaccuracy fire"		"12.000000"
 				"inaccuracy move"		"92.879997"
 				"spread alt"		"0.500000"
-				"inaccuracy crouch alt"		"4.100000"
+				"inaccuracy crouch alt"		"3.680000"
 				"inaccuracy stand alt"		"4.900000"
 				"inaccuracy jump alt"		"0.656000"
 				"inaccuracy land alt"		"0.197000"
 				"inaccuracy ladder alt"		"113.671997"
 				"inaccuracy fire alt"		"7.000000"
 				"inaccuracy move alt"		"122.000000"
-				"recovery time crouch"		"0.430000"
-				"recovery time stand"		"0.525000"
+				"recovery time crouch"		"0.302625"
+				"recovery time stand"		"0.423676"
 				"recoil seed"		"38965"
 				"recoil angle"		"0"
 				"recoil angle alt"		"0"
@@ -12312,8 +12790,7 @@
 				"spread alt"		"1.500000"
 				"inaccuracy fire"		"71.000000"
 				"inaccuracy fire alt"		"52.000000"
-				"inaccuracy move"		"27.740000"
-				"inaccuracy move alt"		"27.740000"
+				"inaccuracy move"		"13.870000"
 				"recoil magnitude"		"29"
 				"recoil magnitude alt"		"23"
 				"tracer frequency"		"1"
@@ -12406,18 +12883,17 @@
 				"in game price"		"850"
 				"primary clip size"		"8"
 				"primary reserve ammo max"		"8"
-				"armor ratio"		"1.950000"
 				"crosshair min distance"		"4"
 				"crosshair delta distance"		"3"
 				"penetration"		"2"
-				"damage"		"115"
+				"damage"		"86"
 				"range modifier"		"0.940000"
 				"bullets"		"1"
 				"time to idle"		"1.500000"
 				"idle interval"		"60"
 				"flinch velocity modifier large"		"0.400000"
 				"flinch velocity modifier small"		"0.400000"
-				"spread"		"0.480000"
+				"spread"		"0.520000"
 				"inaccuracy crouch"		"1.000000"
 				"inaccuracy stand"		"2.000000"
 				"inaccuracy jump"		"0.240000"
@@ -13367,6 +13843,54 @@
 				{
 					"tag_value"		"set_community_8"
 					"tag_text"		"#CSGO_set_community_8"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"514"
+		{
+			"name"		"weapon_knife_survival_bowie"
+			"prefab"		"melee_unusual"
+			"item_name"		"#SFUI_WPNHUD_knife_survival_bowie"
+			"item_description"		"#CSGO_Item_Desc_knife_survival_bowie"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_knife_survival_bowie"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_knife_survival_bowie.vtf"
+			"model_player"		"models/weapons/v_knife_survival_bowie.mdl"
+			"model_world"		"models/weapons/w_knife_survival_bowie.mdl"
+			"model_dropped"		"models/weapons/w_knife_survival_bowie_dropped.mdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"pedestal display model"		"models/weapons/v_knife_survival_bowie_inspect.mdl"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"30.0 -95.0 29.0"
+				"camera_offset"		"7.0 1.5 -1.5"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"knife_survival_bowie"
+					"ViewmodelDim"		"2048"
+					"WorldDim"		"512"
+					"BaseTextureOverride"		"1"
+					"WeaponLength"		"18.434601"
+					"UVScale"		"0.461662"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_11"
+					"tag_text"		"#CSGO_set_community_11"
 					"tag_group"		"ItemSet"
 					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
@@ -14744,8 +15268,8 @@
 		{
 			"name"		"Map Token Black Gold"
 			"prefab"		"map_token"
-			"item_name"		"#CSGO_Collectible_MapTokenBlackgold"
-			"item_description"		"#CSGO_Collectible_MapTokenBlackgold_Desc"
+			"item_name"		"#CSGO_Collectible_MapTokenBlackGold"
+			"item_description"		"#CSGO_Collectible_MapTokenBlackGold_Desc"
 			"image_inventory"		"econ/status_icons/maptoken_blackgold"
 			"map_name"		"#SFUI_Map_de_blackgold"
 			"attributes"
@@ -14933,6 +15457,97 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/maptoken_zoo.mdl"
+			}
+		}
+		"1047"
+		{
+			"name"		"Map Token Santorini"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenSantorini"
+			"item_description"		"#CSGO_Collectible_MapTokenSantorini_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_santorini"
+			"map_name"		"#SFUI_Map_de_santorini"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_santorini.mdl"
+			}
+		}
+		"1048"
+		{
+			"name"		"Map Token Coast"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenCoast"
+			"item_description"		"#CSGO_Collectible_MapTokenCoast_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_coast"
+			"map_name"		"#SFUI_Map_de_coast"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_coast.mdl"
+			}
+		}
+		"1049"
+		{
+			"name"		"Map Token Mikla"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenMikla"
+			"item_description"		"#CSGO_Collectible_MapTokenMikla_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_mikla"
+			"map_name"		"#SFUI_Map_de_mikla"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_mikla.mdl"
+			}
+		}
+		"1050"
+		{
+			"name"		"Map Token Royal"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenRoyal"
+			"item_description"		"#CSGO_Collectible_MapTokenRoyal_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_royal"
+			"map_name"		"#SFUI_Map_de_royal"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_royal.mdl"
+			}
+		}
+		"1051"
+		{
+			"name"		"Map Token Empire"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenEmpire"
+			"item_description"		"#CSGO_Collectible_MapTokenEmpire_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_empire"
+			"map_name"		"#SFUI_Map_de_empire"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_empire.mdl"
+			}
+		}
+		"1052"
+		{
+			"name"		"Map Token Tulip"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenTulip"
+			"item_description"		"#CSGO_Collectible_MapTokenTulip_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_tulip"
+			"map_name"		"#SFUI_Map_de_tulip"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_tulip.mdl"
+			}
+		}
+		"1053"
+		{
+			"name"		"Map Token Cruise"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenCruise"
+			"item_description"		"#CSGO_Collectible_MapTokenCruise_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_cruise"
+			"map_name"		"#SFUI_Map_cs_cruise"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_cruise.mdl"
 			}
 		}
 		"1200"
@@ -15235,17 +15850,6 @@
 				"restriction"		"community_case_4"
 			}
 		}
-		"1312"
-		{
-			"name"		"campaign weapons expert"
-			"item_name"		"#csgo_campaign_weapons"
-			"item_description"		"#csgo_campaign_weapons_desc"
-			"prefab"		"campaign_prefab"
-			"attributes"
-			{
-				"campaign id"		"4"
-			}
-		}
 		"1313"
 		{
 			"name"		"Community Case Key 4"
@@ -15330,17 +15934,6 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/vanguard_gold.mdl"
-			}
-		}
-		"1319"
-		{
-			"name"		"campaign vanguard"
-			"item_name"		"#csgo_campaign_vanguard"
-			"item_description"		"#csgo_campaign_vanguard_desc"
-			"prefab"		"campaign_prefab"
-			"attributes"
-			{
-				"campaign id"		"2"
 			}
 		}
 		"1320"
@@ -15552,6 +16145,73 @@
 			"tool"
 			{
 				"restriction"		"crate_community_10"
+			}
+		}
+		"1335"
+		{
+			"name"		"CommunitySeasonSeven2016"
+			"first_sale_date"		"2016/01/01"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Ticket_CommunitySeasonSeven2016"
+			"item_description"		"#CSGO_Ticket_CommunitySeasonSeven2016_Desc"
+			"image_inventory"		"econ/status_icons/operation_7_pass"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"tool"
+			{
+				"type"		"season_pass"
+				"use_string"		"#ConsumeItem"
+			}
+			"attributes"
+			{
+				"season access"		"6"
+			}
+		}
+		"1336"
+		{
+			"name"		"CommunitySeasonSeven2016 Coin 1"
+			"prefab"		"season7_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin1"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin1_Desc"
+			"image_inventory"		"econ/status_icons/operation_7_bronze"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_7_bronze.mdl"
+				"upgrade threshold"		"9"
+			}
+		}
+		"1337"
+		{
+			"name"		"CommunitySeasonSeven2016 Coin 2"
+			"prefab"		"season7_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin2"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin2_Desc"
+			"image_inventory"		"econ/status_icons/operation_7_silver"
+			"min_ilevel"		"2"
+			"max_ilevel"		"2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_7_silver.mdl"
+				"upgrade threshold"		"14"
+			}
+		}
+		"1338"
+		{
+			"name"		"CommunitySeasonSeven2016 Coin 3"
+			"prefab"		"season7_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin3"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonSeven2016_Coin3_Desc"
+			"image_inventory"		"econ/status_icons/operation_7_gold"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_7_gold.mdl"
 			}
 		}
 		"1339"
@@ -19474,6 +20134,16 @@
 					"value"		"108"
 				}
 			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_pinups_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_pinups_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
 		}
 		"4184"
 		{
@@ -19491,6 +20161,16 @@
 					"value"		"109"
 				}
 			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_slid3_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_slid3_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
 		}
 		"4185"
 		{
@@ -19506,6 +20186,16 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"110"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_team_roles_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_team_roles_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
 				}
 			}
 		}
@@ -19542,6 +20232,43 @@
 					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
+		}
+		"4187"
+		{
+			"item_name"		"#CSGO_crate_community_11"
+			"item_description"		"#CSGO_crate_community_11_desc"
+			"name"		"crate_community_11"
+			"image_inventory"		"econ/weapon_cases/crate_community_11"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"7000"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"crate_community_11"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"112"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_11"
+					"tag_text"		"#CSGO_set_community_11"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+			"loot_list_rare_item_footer"		"#crate_community_11_unusual_lootlist"
+			"loot_list_rare_item_name"		"#crate_community_11_unusual_itemname"
+			"image_unusual_item"		"econ/weapon_cases/crate_community_11_rare_item"
 		}
 		"6001"
 		{
@@ -19684,6 +20411,459 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_tactics.mdl"
+			}
+		}
+		"6012"
+		{
+			"name"		"item 6012"
+			"prefab"		"collectible_untradable"
+		}
+		"6013"
+		{
+			"name"		"item 6013"
+			"prefab"		"collectible_untradable"
+		}
+		"6014"
+		{
+			"name"		"item 6014"
+			"prefab"		"collectible_untradable"
+		}
+		"6015"
+		{
+			"name"		"item 6015"
+			"prefab"		"collectible_untradable"
+		}
+		"6016"
+		{
+			"name"		"item 6016"
+			"prefab"		"collectible_untradable"
+		}
+		"6017"
+		{
+			"name"		"item 6017"
+			"prefab"		"collectible_untradable"
+		}
+		"6018"
+		{
+			"name"		"item 6018"
+			"prefab"		"collectible_untradable"
+		}
+		"6019"
+		{
+			"name"		"item 6019"
+			"prefab"		"collectible_untradable"
+		}
+		"6020"
+		{
+			"name"		"item 6020"
+			"prefab"		"collectible_untradable"
+		}
+		"6021"
+		{
+			"name"		"item 6021"
+			"prefab"		"collectible_untradable"
+		}
+		"6022"
+		{
+			"name"		"item 6022"
+			"prefab"		"collectible_untradable"
+		}
+		"6023"
+		{
+			"name"		"item 6023"
+			"prefab"		"collectible_untradable"
+		}
+		"6024"
+		{
+			"name"		"item 6024"
+			"prefab"		"collectible_untradable"
+		}
+		"6025"
+		{
+			"name"		"item 6025"
+			"prefab"		"collectible_untradable"
+		}
+		"6026"
+		{
+			"name"		"item 6026"
+			"prefab"		"collectible_untradable"
+		}
+		"6027"
+		{
+			"name"		"item 6027"
+			"prefab"		"collectible_untradable"
+		}
+		"6028"
+		{
+			"name"		"item 6028"
+			"prefab"		"collectible_untradable"
+		}
+		"6029"
+		{
+			"name"		"item 6029"
+			"prefab"		"collectible_untradable"
+		}
+		"6030"
+		{
+			"name"		"item 6030"
+			"prefab"		"collectible_untradable"
+		}
+		"6031"
+		{
+			"name"		"item 6031"
+			"prefab"		"collectible_untradable"
+		}
+		"6032"
+		{
+			"name"		"item 6032"
+			"prefab"		"collectible_untradable"
+		}
+		"6033"
+		{
+			"name"		"item 6033"
+			"prefab"		"collectible_untradable"
+		}
+		"6034"
+		{
+			"name"		"item 6034"
+			"prefab"		"collectible_untradable"
+		}
+		"6035"
+		{
+			"name"		"item 6035"
+			"prefab"		"collectible_untradable"
+		}
+		"6036"
+		{
+			"name"		"item 6036"
+			"prefab"		"collectible_untradable"
+		}
+		"6037"
+		{
+			"name"		"item 6037"
+			"prefab"		"collectible_untradable"
+		}
+		"6038"
+		{
+			"name"		"item 6038"
+			"prefab"		"collectible_untradable"
+		}
+		"6039"
+		{
+			"name"		"item 6039"
+			"prefab"		"collectible_untradable"
+		}
+		"6040"
+		{
+			"name"		"item 6040"
+			"prefab"		"collectible_untradable"
+		}
+		"6041"
+		{
+			"name"		"item 6041"
+			"prefab"		"collectible_untradable"
+		}
+		"6042"
+		{
+			"name"		"item 6042"
+			"prefab"		"collectible_untradable"
+		}
+		"6043"
+		{
+			"name"		"item 6043"
+			"prefab"		"collectible_untradable"
+		}
+		"6044"
+		{
+			"name"		"item 6044"
+			"prefab"		"collectible_untradable"
+		}
+		"6045"
+		{
+			"name"		"item 6045"
+			"prefab"		"collectible_untradable"
+		}
+		"6046"
+		{
+			"name"		"item 6046"
+			"prefab"		"collectible_untradable"
+		}
+		"6047"
+		{
+			"name"		"item 6047"
+			"prefab"		"collectible_untradable"
+		}
+		"6048"
+		{
+			"name"		"item 6048"
+			"prefab"		"collectible_untradable"
+		}
+		"6049"
+		{
+			"name"		"item 6049"
+			"prefab"		"collectible_untradable"
+		}
+		"6050"
+		{
+			"name"		"item 6050"
+			"prefab"		"collectible_untradable"
+		}
+		"6051"
+		{
+			"name"		"item 6051"
+			"prefab"		"collectible_untradable"
+		}
+		"6052"
+		{
+			"name"		"item 6052"
+			"prefab"		"collectible_untradable"
+		}
+		"6053"
+		{
+			"name"		"item 6053"
+			"prefab"		"collectible_untradable"
+		}
+		"6054"
+		{
+			"name"		"item 6054"
+			"prefab"		"collectible_untradable"
+		}
+		"6055"
+		{
+			"name"		"item 6055"
+			"prefab"		"collectible_untradable"
+		}
+		"6056"
+		{
+			"name"		"item 6056"
+			"prefab"		"collectible_untradable"
+		}
+		"6057"
+		{
+			"name"		"item 6057"
+			"prefab"		"collectible_untradable"
+		}
+		"6058"
+		{
+			"name"		"item 6058"
+			"prefab"		"collectible_untradable"
+		}
+		"6059"
+		{
+			"name"		"item 6059"
+			"prefab"		"collectible_untradable"
+		}
+		"6060"
+		{
+			"name"		"item 6060"
+			"prefab"		"collectible_untradable"
+		}
+		"6061"
+		{
+			"name"		"item 6061"
+			"prefab"		"collectible_untradable"
+		}
+		"6062"
+		{
+			"name"		"item 6062"
+			"prefab"		"collectible_untradable"
+		}
+		"6063"
+		{
+			"name"		"item 6063"
+			"prefab"		"collectible_untradable"
+		}
+		"6064"
+		{
+			"name"		"item 6064"
+			"prefab"		"collectible_untradable"
+		}
+		"6065"
+		{
+			"name"		"item 6065"
+			"prefab"		"collectible_untradable"
+		}
+		"6066"
+		{
+			"name"		"item 6066"
+			"prefab"		"collectible_untradable"
+		}
+		"6067"
+		{
+			"name"		"item 6067"
+			"prefab"		"collectible_untradable"
+		}
+		"6068"
+		{
+			"name"		"item 6068"
+			"prefab"		"collectible_untradable"
+		}
+		"6069"
+		{
+			"name"		"item 6069"
+			"prefab"		"collectible_untradable"
+		}
+		"6070"
+		{
+			"name"		"item 6070"
+			"prefab"		"collectible_untradable"
+		}
+		"6071"
+		{
+			"name"		"item 6071"
+			"prefab"		"collectible_untradable"
+		}
+		"6072"
+		{
+			"name"		"item 6072"
+			"prefab"		"collectible_untradable"
+		}
+		"6073"
+		{
+			"name"		"item 6073"
+			"prefab"		"collectible_untradable"
+		}
+		"6074"
+		{
+			"name"		"item 6074"
+			"prefab"		"collectible_untradable"
+		}
+		"6075"
+		{
+			"name"		"item 6075"
+			"prefab"		"collectible_untradable"
+		}
+		"6076"
+		{
+			"name"		"item 6076"
+			"prefab"		"collectible_untradable"
+		}
+		"6077"
+		{
+			"name"		"item 6077"
+			"prefab"		"collectible_untradable"
+		}
+		"6078"
+		{
+			"name"		"item 6078"
+			"prefab"		"collectible_untradable"
+		}
+		"6079"
+		{
+			"name"		"item 6079"
+			"prefab"		"collectible_untradable"
+		}
+		"6080"
+		{
+			"name"		"item 6080"
+			"prefab"		"collectible_untradable"
+		}
+		"6081"
+		{
+			"name"		"item 6081"
+			"prefab"		"collectible_untradable"
+		}
+		"6082"
+		{
+			"name"		"item 6082"
+			"prefab"		"collectible_untradable"
+		}
+		"6083"
+		{
+			"name"		"item 6083"
+			"prefab"		"collectible_untradable"
+		}
+		"6084"
+		{
+			"name"		"item 6084"
+			"prefab"		"collectible_untradable"
+		}
+		"6085"
+		{
+			"name"		"item 6085"
+			"prefab"		"collectible_untradable"
+		}
+		"6086"
+		{
+			"name"		"item 6086"
+			"prefab"		"collectible_untradable"
+		}
+		"6087"
+		{
+			"name"		"item 6087"
+			"prefab"		"collectible_untradable"
+		}
+		"6088"
+		{
+			"name"		"item 6088"
+			"prefab"		"collectible_untradable"
+		}
+		"6089"
+		{
+			"name"		"item 6089"
+			"prefab"		"collectible_untradable"
+		}
+		"6090"
+		{
+			"name"		"item 6090"
+			"prefab"		"collectible_untradable"
+		}
+		"6091"
+		{
+			"name"		"item 6091"
+			"prefab"		"collectible_untradable"
+		}
+		"6092"
+		{
+			"name"		"item 6092"
+			"prefab"		"collectible_untradable"
+		}
+		"6093"
+		{
+			"name"		"item 6093"
+			"prefab"		"collectible_untradable"
+		}
+		"6094"
+		{
+			"name"		"item 6094"
+			"prefab"		"collectible_untradable"
+		}
+		"6095"
+		{
+			"name"		"item 6095"
+			"prefab"		"collectible_untradable"
+		}
+		"6096"
+		{
+			"name"		"item 6096"
+			"prefab"		"collectible_untradable"
+		}
+		"6097"
+		{
+			"name"		"item 6097"
+			"prefab"		"collectible_untradable"
+		}
+		"6098"
+		{
+			"name"		"item 6098"
+			"prefab"		"collectible_untradable"
+		}
+		"6099"
+		{
+			"name"		"item 6099"
+			"prefab"		"collectible_untradable"
+		}
+		"7000"
+		{
+			"name"		"community_11 Key"
+			"item_name"		"#CSGO_crate_key_community_11"
+			"item_description"		"#CSGO_crate_key_community_11_desc"
+			"first_sale_date"		"2016-01-19"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_11"
+			"tool"
+			{
+				"restriction"		"crate_community_11"
 			}
 		}
 		"20000"
@@ -22487,6 +23667,42 @@
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"224"
+		{
+			"name"		"campaign 7 completion bitfield"
+			"attribute_class"		"campaign_completion_bitfield"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"225"
+		{
+			"name"		"campaign 7 last completed quest"
+			"attribute_class"		"campaign_last_completed_quest"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"226"
+		{
+			"name"		"campaign 8 completion bitfield"
+			"attribute_class"		"campaign_completion_bitfield"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"227"
+		{
+			"name"		"campaign 8 last completed quest"
+			"attribute_class"		"campaign_last_completed_quest"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
 	}
@@ -42212,6 +43428,400 @@
 			"wear_remap_min"		"0.000000"
 			"wear_remap_max"		"0.400000"
 		}
+		"524"
+		{
+			"name"		"gs_ak47_supercharged"
+			"description_string"		"#PaintKit_gs_ak47_supercharged"
+			"description_tag"		"#PaintKit_gs_ak47_supercharged_Tag"
+			"style"		"9"
+			"pattern"		"workshop/ak47_supercharged"
+			"color0"		"93 73 57"
+			"color1"		"255 255 255"
+			"color2"		"255 255 255"
+			"color3"		"79 79 79"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"125"
+			"phongintensity"		"125"
+			"phongalbedoboost"		"8"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"525"
+		{
+			"name"		"cu_awp_mastery"
+			"description_string"		"#PaintKit_cu_awp_mastery"
+			"description_tag"		"#PaintKit_cu_ak47_mastery_Tag"
+			"style"		"7"
+			"pattern"		"workshop/awp_mastery"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+			"view_model_exponent_override_size"		"1024"
+		}
+		"526"
+		{
+			"name"		"cu_bizon_citizen"
+			"description_string"		"#PaintKit_cu_bizon_citizen"
+			"description_tag"		"#PaintKit_cu_bizon_citizen_Tag"
+			"style"		"7"
+			"pattern"		"workshop/bizon_citizen"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"150"
+			"phongintensity"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"527"
+		{
+			"name"		"aq_deserteagle_kumichodragon"
+			"description_string"		"#PaintKit_aq_deserteagle_kumichodragon"
+			"description_tag"		"#PaintKit_aq_deserteagle_kumichodragon_Tag"
+			"style"		"8"
+			"pattern"		"workshop/deserteagle_kumichodragon"
+			"color0"		"60 54 44"
+			"color1"		"184 204 205"
+			"color2"		"96 85 56"
+			"color3"		"35 25 12"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"180"
+			"phongalbedoboost"		"95"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.760000"
+		}
+		"528"
+		{
+			"name"		"aq_dualberettas_cartel"
+			"description_string"		"#PaintKit_aq_dualberettas_cartel"
+			"description_tag"		"#PaintKit_aq_p250_cartel_Tag"
+			"style"		"8"
+			"pattern"		"workshop/dualberettas_cartel"
+			"color0"		"135 135 135"
+			"color1"		"121 121 121"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"160"
+			"phongalbedoboost"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"529"
+		{
+			"name"		"aq_famas_contour"
+			"description_string"		"#PaintKit_aq_famas_contour"
+			"description_tag"		"#PaintKit_aq_p250_contour_Tag"
+			"style"		"8"
+			"pattern"		"workshop/famas_contour"
+			"color0"		"138 124 120"
+			"color1"		"255 255 255"
+			"color2"		"255 255 255"
+			"color3"		"119 104 104"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"135"
+			"phongalbedoboost"		"35"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"530"
+		{
+			"name"		"cu_fiveseven_augmented"
+			"description_string"		"#PaintKit_cu_fiveseven_augmented"
+			"description_tag"		"#PaintKit_cu_fiveseven_augmented_Tag"
+			"style"		"7"
+			"pattern"		"workshop/fiveseven_augmented"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"100"
+			"phongintensity"		"40"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.610000"
+		}
+		"532"
+		{
+			"name"		"gs_glock18_award"
+			"description_string"		"#PaintKit_gs_glock18_award"
+			"description_tag"		"#PaintKit_gs_glock18_award_Tag"
+			"style"		"9"
+			"pattern"		"workshop/glock18_award"
+			"color0"		"128 128 128 255"
+			"color1"		"202 202 202"
+			"color2"		"117 117 117"
+			"color3"		"131 131 131"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"250"
+			"phongintensity"		"20"
+			"phongalbedoboost"		"10"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"533"
+		{
+			"name"		"gs_m4a4_pioneer"
+			"description_string"		"#PaintKit_gs_m4a4_pioneer"
+			"description_tag"		"#PaintKit_gs_m4a4_pioneer_Tag"
+			"style"		"9"
+			"pattern"		"workshop/m4a4_pioneer"
+			"color0"		"171 171 171"
+			"color1"		"159 159 159"
+			"color2"		"81 70 53"
+			"color3"		"78 39 26"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"66"
+			"phongintensity"		"22"
+			"phongalbedoboost"		"84"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.640000"
+		}
+		"534"
+		{
+			"name"		"am_mac10_electricity"
+			"description_string"		"#PaintKit_am_mac10_electricity"
+			"description_tag"		"#PaintKit_am_mac10_electricity_Tag"
+			"style"		"5"
+			"pattern"		"workshop/mac10_electricity"
+			"color0"		"27 81 236"
+			"color1"		"66 122 201"
+			"color2"		"0 0 0"
+			"color3"		"0 0 0"
+			"pattern_scale"		"5.000000"
+			"phongexponent"		"32"
+			"phongalbedoboost"		"30"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"535"
+		{
+			"name"		"gs_mag7_praetorian"
+			"description_string"		"#PaintKit_gs_mag7_praetorian"
+			"description_tag"		"#PaintKit_gs_mag7_praetorian_Tag"
+			"style"		"9"
+			"pattern"		"workshop/mag7_praetorian"
+			"color0"		"128 128 128 255"
+			"color1"		"150 150 150 255"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"190"
+			"phongintensity"		"180"
+			"phongalbedoboost"		"90"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.450000"
+		}
+		"536"
+		{
+			"name"		"sp_mp7_impire"
+			"description_string"		"#PaintKit_sp_mp7_impire"
+			"description_tag"		"#PaintKit_sp_mp7_impire_Tag"
+			"style"		"3"
+			"pattern"		"workshop/mp9_impire"
+			"color0"		"35 13 13"
+			"color1"		"182 170 170"
+			"color2"		"242 255 30"
+			"color3"		"183 255 153"
+			"pattern_scale"		"2.500000"
+			"phongexponent"		"30"
+			"phongintensity"		"0"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"157.000000"
+			"pattern_rotate_end"		"157.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.400000"
+		}
+		"537"
+		{
+			"name"		"cu_nova_hyperbeast"
+			"description_string"		"#PaintKit_cu_nova_hyperbeast"
+			"description_tag"		"#PaintKit_cu_m4a1_hyper_beast_Tag"
+			"style"		"7"
+			"pattern"		"workshop/nova_hyperbeast"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"180"
+			"phongintensity"		"55"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"538"
+		{
+			"name"		"cu_ssg08_necropos"
+			"description_string"		"#PaintKit_cu_ssg08_necropos"
+			"description_tag"		"#PaintKit_cu_ssg08_necropos_Tag"
+			"style"		"7"
+			"pattern"		"workshop/ssg08_necropos"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"5"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"539"
+		{
+			"name"		"gs_tec9_jambiya"
+			"description_string"		"#PaintKit_gs_tec9_jambiya"
+			"description_tag"		"#PaintKit_gs_tec9_jambiya_Tag"
+			"style"		"9"
+			"pattern"		"workshop/tec9_jambiya"
+			"color0"		"99 96 92"
+			"color1"		"140 135 130"
+			"color2"		"92 92 92"
+			"color3"		"167 150 138"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"50"
+			"phongintensity"		"10"
+			"phongalbedoboost"		"20"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"540"
+		{
+			"name"		"gs_usp_voltage"
+			"description_string"		"#PaintKit_gs_usp_voltage"
+			"description_tag"		"#PaintKit_gs_usp_voltage_Tag"
+			"style"		"9"
+			"pattern"		"workshop/usp_voltage"
+			"color0"		"151 159 163"
+			"color1"		"189 189 189"
+			"color2"		"152 159 163"
+			"color3"		"153 174 174"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"255"
+			"phongalbedoboost"		"20"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
 	}
 	"paint_kits_rarity"
 	{
@@ -42654,6 +44264,22 @@
 		"aq_xm1014_hot_rod"		"mythical"
 		"aa_fade_revolver"		"ancient"
 		"aa_fade_metallic_revolver"		"legendary"
+		"gs_ak47_supercharged"		"legendary"
+		"cu_awp_mastery"		"mythical"
+		"cu_bizon_citizen"		"rare"
+		"aq_deserteagle_kumichodragon"		"mythical"
+		"aq_dualberettas_cartel"		"rare"
+		"aq_famas_contour"		"mythical"
+		"cu_fiveseven_augmented"		"mythical"
+		"gs_glock18_award"		"rare"
+		"gs_m4a4_pioneer"		"legendary"
+		"am_mac10_electricity"		"rare"
+		"gs_mag7_praetorian"		"mythical"
+		"sp_mp7_impire"		"mythical"
+		"cu_nova_hyperbeast"		"legendary"
+		"cu_ssg08_necropos"		"rare"
+		"gs_tec9_jambiya"		"rare"
+		"gs_usp_voltage"		"uncommon"
 	}
 	"item_sets"
 	{
@@ -43542,9 +45168,62 @@
 				"[aa_fade_revolver]weapon_revolver"		"1"
 			}
 		}
+		"set_community_11"
+		{
+			"name"		"#CSGO_set_community_11"
+			"set_description"		"#CSGO_set_community_11_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[cu_bizon_citizen]weapon_bizon"		"1"
+				"[aq_dualberettas_cartel]weapon_elite"		"1"
+				"[am_mac10_electricity]weapon_mac10"		"1"
+				"[cu_ssg08_necropos]weapon_ssg08"		"1"
+				"[gs_tec9_jambiya]weapon_tec9"		"1"
+				"[gs_usp_voltage]weapon_usp_silencer"		"1"
+				"[aq_famas_contour]weapon_famas"		"1"
+				"[cu_fiveseven_augmented]weapon_fiveseven"		"1"
+				"[gs_glock18_award]weapon_glock"		"1"
+				"[gs_mag7_praetorian]weapon_mag7"		"1"
+				"[sp_mp7_impire]weapon_mp7"		"1"
+				"[cu_awp_mastery]weapon_awp"		"1"
+				"[aq_deserteagle_kumichodragon]weapon_deagle"		"1"
+				"[cu_nova_hyperbeast]weapon_nova"		"1"
+				"[gs_ak47_supercharged]weapon_ak47"		"1"
+				"[gs_m4a4_pioneer]weapon_m4a1"		"1"
+			}
+		}
 	}
 	"client_loot_lists"
 	{
+		"crate_community_11_rare"
+		{
+			"[cu_bizon_citizen]weapon_bizon"		"1"
+			"[aq_dualberettas_cartel]weapon_elite"		"1"
+			"[am_mac10_electricity]weapon_mac10"		"1"
+			"[cu_ssg08_necropos]weapon_ssg08"		"1"
+			"[gs_tec9_jambiya]weapon_tec9"		"1"
+			"[gs_usp_voltage]weapon_usp_silencer"		"1"
+		}
+		"crate_community_11_mythical"
+		{
+			"[aq_famas_contour]weapon_famas"		"1"
+			"[cu_fiveseven_augmented]weapon_fiveseven"		"1"
+			"[gs_glock18_award]weapon_glock"		"1"
+			"[gs_mag7_praetorian]weapon_mag7"		"1"
+			"[sp_mp7_impire]weapon_mp7"		"1"
+		}
+		"crate_community_11_legendary"
+		{
+			"[cu_awp_mastery]weapon_awp"		"1"
+			"[aq_deserteagle_kumichodragon]weapon_deagle"		"1"
+			"[cu_nova_hyperbeast]weapon_nova"		"1"
+		}
+		"crate_community_11_ancient"
+		{
+			"[gs_ak47_supercharged]weapon_ak47"		"1"
+			"[gs_m4a4_pioneer]weapon_m4a1"		"1"
+		}
 		"crate_valve_1_rare"
 		{
 			"[hy_skulls]weapon_mp7"		"1"
@@ -43954,6 +45633,14 @@
 		{
 			"[gs_m4a4_royal_squire]weapon_m4a1"		"1"
 			"[aa_fade_revolver]weapon_revolver"		"1"
+		}
+		"crate_community_11"
+		{
+			"crate_community_11_rare"		"1"
+			"crate_community_11_mythical"		"1"
+			"crate_community_11_legendary"		"1"
+			"crate_community_11_ancient"		"1"
+			"community_case_11_unusual"		"1"
 		}
 		"crate_valve_1"
 		{
@@ -46430,6 +48117,11 @@
 		{
 			"set_train"		"1"
 		}
+		"removed_items"
+		{
+			"public_list_contents"		"1"
+			"[cu_m4a1_howling]weapon_m4a1"		"1"
+		}
 		"coupon loot list - bossyburger"
 		{
 			"public_list_contents"		"1"
@@ -47164,6 +48856,7 @@
 		"109"		"crate_sticker_pack_slid3_capsule_lootlist"
 		"110"		"crate_sticker_pack_team_roles_capsule_lootlist"
 		"111"		"crate_community_10"
+		"112"		"crate_community_11"
 	}
 	"quest_reward_loot_lists"
 	{
@@ -49330,7 +51023,7 @@
 			"gamemode"		"deathmatch"
 			"mapgroup"		"mg_op_op06"
 			"expression"		" %act_kill_human% && %weapon_p250% "
-			"expr_bonus"		" %act_kill_human% && %weapon_p250% && %cond_headshot% "
+			"expr_bonus"		" %act_kill_human% && %weapon_p250% && %cond_damage_headshot% "
 			"points"		"30"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"2"
@@ -49374,7 +51067,7 @@
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_zoo"
 			"expression"		" %weapon_aug% && %act_kill_human% "
-			"expr_bonus"		" %weapon_aug% && %act_kill_human% && %cond_zoomed% "
+			"expr_bonus"		" %weapon_aug% && %act_kill_human% && %cond_player_zoomed% "
 			"xp_bonus_percent"		"100"
 			"difficulty"		"1"
 			"loc_name"		"Op_bloodhound_504"
@@ -49421,7 +51114,7 @@
 			"mapgroup"		"mg_active"
 			"map"		"de_mirage"
 			"expression"		" %weapon_awp% && %act_kill_human% "
-			"expr_bonus"		" %weapon_awp% && %act_kill_human% && ( %cond_killstreak% >= 3 ) "
+			"expr_bonus"		" %weapon_awp% && %act_kill_human% && ( %cond_life_killstreak_human% >= 3 ) "
 			"points"		"40"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"2"
@@ -49449,8 +51142,8 @@
 			"name"		"Casual Active CZ or Enemy Weapons 20"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" %act_kill_human% && ( %weapon_cz75a% || %cond_borrowed_gun_enemy% ) "
-			"expr_bonus"		" %act_kill_human% && %cond_borrowed_gun_enemy% "
+			"expression"		" %act_kill_human% && ( %weapon_cz75a% || %cond_item_borrowed_enemy% ) "
+			"expr_bonus"		" %act_kill_human% && %cond_item_borrowed_enemy% "
 			"points"		"20"
 			"operational_points"		"2"
 			"xp_bonus_percent"		"100"
@@ -49484,7 +51177,7 @@
 			"gamemode"		"casual"
 			"mapgroup"		"mg_reserves"
 			"map"		"cs_militia"
-			"expression"		" ( %act_kill_target% ) && ( %cond_victim_team_terrorist% ) && ( %cond_team_ct% ) "
+			"expression"		" ( %act_kill_target% ) && ( %cond_victim_terrorist% ) && ( %cond_player_ct% ) "
 			"points"		"1"
 			"target_team"		"2"
 			"difficulty"		"2"
@@ -49541,7 +51234,7 @@
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_rails"
 			"expression"		" %act_kill_human% && %weapon_awp% "
-			"expr_bonus"		" %act_kill_human% && %weapon_awp% && %cond_headshot% "
+			"expr_bonus"		" %act_kill_human% && %weapon_awp% && %cond_damage_headshot% "
 			"points"		"10"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"1"
@@ -49602,7 +51295,7 @@
 			"mapgroup"		"mg_de_mirage"
 			"map"		"de_mirage"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"300"
 			"xp_bonus_percent"		"40"
@@ -49674,7 +51367,7 @@
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
 			"map"		"cs_agency"
-			"expression"		" ( %act_kill_target% ) && ( %cond_victim_team_terrorist% ) && ( %cond_team_ct% )"
+			"expression"		" ( %act_kill_target% ) && ( %cond_victim_terrorist% ) && ( %cond_player_ct% )"
 			"points"		"1"
 			"target_team"		"2"
 			"difficulty"		"2"
@@ -49695,7 +51388,7 @@
 			"mapgroup"		"mg_de_dust"
 			"map"		"de_dust"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 4 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 4 ) "
 			"points"		"1"
 			"xp_reward"		"300"
 			"xp_bonus_percent"		"20"
@@ -49719,7 +51412,7 @@
 			"mapgroup"		"mg_de_dust2"
 			"map"		"de_dust2"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"400"
 			"xp_bonus_percent"		"50"
@@ -49743,7 +51436,7 @@
 			"mapgroup"		"mg_gd_crashsite"
 			"map"		"gd_crashsite"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"500"
 			"xp_bonus_percent"		"50"
@@ -49765,7 +51458,7 @@
 			"name"		"Casual Op6 income 1,000,000"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
-			"expression"		" ( %act_income% && %cond_team_ct% ) ? %act_income% : 0 "
+			"expression"		" ( %act_income% && %cond_player_ct% ) ? %act_income% : 0 "
 			"points"		"1000000"
 			"xp_reward"		"600"
 			"difficulty"		"3"
@@ -49778,8 +51471,8 @@
 			"name"		"Deathmatch Op6 Chicken Kills"
 			"gamemode"		"deathmatch"
 			"mapgroup"		"mg_op_op06"
-			"expression"		" %act_kill_chicken% && %cond_team_ct% "
-			"expr_bonus"		" %act_kill_chicken% && %cond_team_ct% && ( %cond_chicken_killstreak% >= 2 ) "
+			"expression"		" %act_kill_chicken% && %cond_player_ct% "
+			"expr_bonus"		" %act_kill_chicken% && %cond_player_ct% && ( %cond_life_killstreak_chicken% >= 2 ) "
 			"points"		"300"
 			"xp_reward"		"600"
 			"xp_bonus_percent"		"50"
@@ -49798,8 +51491,8 @@
 			"name"		"Unique Weapons"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
-			"expression"		" %act_kill_human% && %cond_unique_weapon% && %cond_team_ct%"
-			"expr_bonus"		" %act_kill_human% && %cond_unique_weapon% && %cond_team_ct% && %cond_borrowed_gun% "
+			"expression"		" %act_kill_human% && %cond_match_unique_weapon% && %cond_player_ct%"
+			"expr_bonus"		" %act_kill_human% && %cond_match_unique_weapon% && %cond_player_ct% && %cond_item_borrowed% "
 			"points"		"100"
 			"xp_reward"		"600"
 			"xp_bonus_percent"		"100"
@@ -49815,7 +51508,7 @@
 			"gamemode"		"deathmatch"
 			"mapgroup"		"mg_op_op06"
 			"expression"		" %act_dm_bonus_points% "
-			"expr_bonus"		" %act_dm_bonus_points% && ( %cond_killstreak% >= 2 ) "
+			"expr_bonus"		" %act_dm_bonus_points% && ( %cond_life_killstreak_human% >= 2 ) "
 			"points"		"200"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"2"
@@ -49840,8 +51533,8 @@
 			"name"		"Casual Burn Damage Active Duty"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" %cond_burn% ? %act_damage% : 0 "
-			"expr_bonus"		" ( %map_de_train% && %cond_burn% ) ? %act_damage% : 0 "
+			"expression"		" %cond_damage_burn% ? %act_damage% : 0 "
+			"expr_bonus"		" ( %map_de_train% && %cond_damage_burn% ) ? %act_damage% : 0 "
 			"points"		"200"
 			"xp_bonus_percent"		"50"
 			"difficulty"		"1"
@@ -49858,7 +51551,7 @@
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_rails"
 			"expression"		" %weapon_sawedoff% && %act_kill_human% "
-			"expr_bonus"		" %weapon_sawedoff% && %act_kill_human% && ( %cond_killstreak% >= 2 ) "
+			"expr_bonus"		" %weapon_sawedoff% && %act_kill_human% && ( %cond_life_killstreak_human% >= 2 ) "
 			"xp_bonus_percent"		"100"
 			"difficulty"		"1"
 			"loc_name"		"Op_bloodhound_Valeria_tyrants"
@@ -49885,8 +51578,8 @@
 			"name"		"Casual Active SMG kills 30"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" %act_kill_human% && %weapon_smg% && %cond_team_terrorist%  "
-			"expr_bonus"		" %act_kill_human% && %weapon_smg% && %cond_team_terrorist% && %cond_bomb_planted% "
+			"expression"		" %act_kill_human% && %weapon_smg% && %cond_player_terrorist%  "
+			"expr_bonus"		" %act_kill_human% && %weapon_smg% && %cond_player_terrorist% && %cond_roundstate_bomb_planted% "
 			"points"		"25"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"3"
@@ -49930,8 +51623,8 @@
 			"name"		"Enemy Weapon"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
-			"expression"		" %act_kill_human% && %cond_borrowed_gun_enemy% "
-			"expr_bonus"		" %act_kill_human% && %cond_borrowed_gun_enemy% && %cond_borrowed_gun_own% "
+			"expression"		" %act_kill_human% && %cond_item_borrowed_enemy% "
+			"expr_bonus"		" %act_kill_human% && %cond_item_borrowed_enemy% && %cond_item_borrowed_victim% "
 			"points"		"20"
 			"operational_points"		"2"
 			"xp_bonus_percent"		"200"
@@ -49949,8 +51642,8 @@
 			"name"		"Kill a CT in Hostage"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_reserves"
-			"expression"		" %act_kill_human% && %cond_victim_team_ct% && %cond_team_terrorist% "
-			"expr_bonus"		" %act_kill_human% && %cond_victim_team_ct% && %cond_team_terrorist% && %cond_victim_rescuing% "
+			"expression"		" %act_kill_human% && %cond_victim_ct% && %cond_player_terrorist% "
+			"expr_bonus"		" %act_kill_human% && %cond_victim_ct% && %cond_player_terrorist% && %cond_victim_rescuing% "
 			"points"		"40"
 			"xp_bonus_percent"		"100"
 			"difficulty"		"3"
@@ -49965,8 +51658,8 @@
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_log"
-			"expression"		" %act_kill_target% && %cond_victim_team_ct% && %cond_team_terrorist% "
-			"expr_bonus"		" %act_kill_target% && %cond_victim_team_ct% && %weapon_taser%"
+			"expression"		" %act_kill_target% && %cond_victim_ct% && %cond_player_terrorist% "
+			"expr_bonus"		" %act_kill_target% && %cond_victim_ct% && %weapon_taser%"
 			"points"		"1"
 			"target_team"		"3"
 			"difficulty"		"2"
@@ -49987,7 +51680,7 @@
 			"mapgroup"		"mg_cs_office"
 			"map"		"cs_office"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"300"
 			"xp_bonus_percent"		"30"
@@ -50033,7 +51726,7 @@
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_season"
 			"expression"		" %act_kill_human% && %weapon_awp% "
-			"expr_bonus"		" %act_kill_human% && %weapon_awp% && %cond_headshot% "
+			"expr_bonus"		" %act_kill_human% && %weapon_awp% && %cond_damage_headshot% "
 			"points"		"10"
 			"xp_bonus_percent"		"200"
 			"difficulty"		"1"
@@ -50057,8 +51750,8 @@
 			"name"		"Headshots"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
-			"expression"		" %act_kill_human% && %cond_headshot% "
-			"expr_bonus"		" %act_kill_human% && %cond_headshot% && %set_community_2 "
+			"expression"		" %act_kill_human% && %cond_damage_headshot% "
+			"expr_bonus"		" %act_kill_human% && %cond_damage_headshot% && %set_community_2 "
 			"points"		"10"
 			"xp_bonus_percent"		"200"
 			"operational_points"		"1"
@@ -50096,7 +51789,7 @@
 			"mapgroup"		"mg_gd_bank"
 			"map"		"gd_bank"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"500"
 			"xp_bonus_percent"		"30"
@@ -50164,7 +51857,7 @@
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
 			"map"		"de_season"
-			"expression"		" ( %act_kill_target% ) && ( %cond_victim_team_ct% ) && ( %cond_team_terrorist% ) "
+			"expression"		" ( %act_kill_target% ) && ( %cond_victim_ct% ) && ( %cond_player_terrorist% ) "
 			"points"		"1"
 			"target_team"		"3"
 			"difficulty"		"2"
@@ -50184,7 +51877,7 @@
 			"mapgroup"		"mg_gd_cbble"
 			"map"		"gd_cbble"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"400"
 			"xp_bonus_percent"		"50"
@@ -50208,7 +51901,7 @@
 			"mapgroup"		"mg_gd_lake"
 			"map"		"gd_lake"
 			"expression"		" %act_win_match% "
-			"expr_bonus"		" %act_win_match% && ( %cond_total_rounds_played% <= 3 ) "
+			"expr_bonus"		" %act_win_match% && ( %cond_match_rounds_played% <= 3 ) "
 			"points"		"1"
 			"xp_reward"		"300"
 			"xp_bonus_percent"		"50"
@@ -50230,11 +51923,11 @@
 			"name"		"Casual Active Duty Spend 1,000,000"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" ( %act_spend% && %cond_team_terrorist% ) ? %act_spend% : 0 "
+			"expression"		" ( %act_spend% && %cond_player_terrorist% ) ? %act_spend% : 0 "
 			"points"		"1000000"
 			"xp_reward"		"600"
 			"difficulty"		"3"
-			"loc_name"		"Op_bloodhound_529"
+			"loc_name"		"op_bloodhound_booth_Spend"
 			"loc_description"		"#Quest_Spend_Mapgroup_Team_desc"
 			"quest_icon"		"income"
 		}
@@ -50243,11 +51936,11 @@
 			"name"		"Casual blind players"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" %act_flashbang_enemy% && %cond_team_terrorist%"
+			"expression"		" %act_flashbang_enemy% && %cond_player_terrorist%"
 			"points"		"50"
 			"xp_reward"		"600"
 			"difficulty"		"3"
-			"loc_name"		"Op_bloodhound_530"
+			"loc_name"		"op_bloodhound_booth_flash"
 			"loc_description"		"#Quest_Flashbang_Mapgroup_Team_desc"
 			"quest_icon"		"flashbang"
 		}
@@ -50256,16 +51949,1228 @@
 			"name"		"Defend the Bomb"
 			"gamemode"		"casual"
 			"mapgroup"		"mg_active"
-			"expression"		" %act_kill_human% && %cond_team_terrorist% && %cond_bomb_planted% "
-			"expr_bonus"		" %act_kill_human% && %cond_team_terrorist% && %cond_bomb_planted% && %set_bravo_ii% "
+			"expression"		" %act_kill_human% && %cond_player_terrorist% && %cond_roundstate_bomb_planted% "
+			"expr_bonus"		" %act_kill_human% && %cond_player_terrorist% && %cond_roundstate_bomb_planted% && %set_bravo_ii% "
 			"points"		"25"
 			"xp_reward"		"600"
 			"xp_bonus_percent"		"50"
 			"difficulty"		"3"
-			"loc_name"		"Op_bloodhound_531"
+			"loc_name"		"op_bloodhound_booth_bomb"
 			"loc_description"		"#Quest_Defend_Bomb_Mapgroup_desc"
 			"loc_bonus"		"#quest_bonus_set_bravo_ii"
 			"quest_icon"		"bomb"
+		}
+		"124"
+		{
+			"name"		"comp coast"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_coast"
+			"map"		"de_coast"
+			"expression"		"%act_win_round%"
+		}
+		"125"
+		{
+			"name"		"comp empire"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_empire"
+			"map"		"de_empire"
+			"expression"		"%act_win_round%"
+		}
+		"126"
+		{
+			"name"		"comp mikla"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mikla"
+			"map"		"de_mikla"
+			"expression"		"%act_win_round%"
+		}
+		"127"
+		{
+			"name"		"comp royal"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_royal"
+			"map"		"de_royal"
+			"expression"		"%act_win_round%"
+		}
+		"128"
+		{
+			"name"		"comp santorini"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_santorini"
+			"map"		"de_santorini"
+			"expression"		"%act_win_round%"
+		}
+		"129"
+		{
+			"name"		"comp tulip"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_tulip"
+			"map"		"de_tulip"
+			"expression"		"%act_win_round%"
+		}
+		"130"
+		{
+			"name"		"comp cruise"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_cruise"
+			"map"		"cs_cruise"
+			"expression"		"%act_win_round%"
+		}
+		"131"
+		{
+			"name"		"comp nuke"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_nuke"
+			"map"		"de_nuke"
+			"expression"		"%act_win_round%"
+		}
+		"132"
+		{
+			"name"		"comp dust2"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust2"
+			"map"		"de_dust2"
+			"expression"		"%act_win_round%"
+		}
+		"133"
+		{
+			"name"		"comp train"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"expression"		"%act_win_round%"
+		}
+		"134"
+		{
+			"name"		"comp mirage"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mirage"
+			"map"		"de_mirage"
+			"expression"		"%act_win_round%"
+		}
+		"135"
+		{
+			"name"		"comp inferno"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_inferno"
+			"map"		"de_inferno"
+			"expression"		"%act_win_round%"
+		}
+		"136"
+		{
+			"name"		"comp cbble"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cbble"
+			"map"		"de_cbble"
+			"expression"		"%act_win_round%"
+		}
+		"137"
+		{
+			"name"		"comp overpass"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_overpass"
+			"map"		"de_overpass"
+			"expression"		"%act_win_round%"
+		}
+		"138"
+		{
+			"name"		"comp cache"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cache"
+			"map"		"de_cache"
+			"expression"		"%act_win_round%"
+		}
+		"139"
+		{
+			"name"		"comp aztec"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_aztec"
+			"map"		"de_aztec"
+			"expression"		"%act_win_round%"
+		}
+		"140"
+		{
+			"name"		"comp dust"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust"
+			"map"		"de_dust"
+			"expression"		"%act_win_round%"
+		}
+		"141"
+		{
+			"name"		"comp vertigo"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_vertigo"
+			"map"		"de_vertigo"
+			"expression"		"%act_win_round%"
+		}
+		"142"
+		{
+			"name"		"comp office"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_office"
+			"map"		"cs_office"
+			"expression"		"%act_win_round%"
+		}
+		"143"
+		{
+			"name"		"comp italy"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_italy"
+			"map"		"cs_italy"
+			"expression"		"%act_win_round%"
+		}
+		"144"
+		{
+			"name"		"comp assault"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_assault"
+			"map"		"cs_assault"
+			"expression"		"%act_win_round%"
+		}
+		"145"
+		{
+			"name"		"comp militia"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_militia"
+			"map"		"cs_militia"
+			"expression"		"%act_win_round%"
+		}
+		"701"
+		{
+			"name"		"placeholder_701"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"10"
+			"expression"		"%cond_damage_burn% ? %act_damage% : 0"
+			"difficulty"		"1"
+			"loc_name"		"op07_quest_name_701"
+			"quest_icon"		"molotov"
+			"string_tokens"
+			{
+				"commandverb"		"#quest_commandverb_deal"
+				"actions"		"#quest_action_plural_damage_burn"
+				"action"		"#quest_action_singular_damage_burn"
+			}
+		}
+		"702"
+		{
+			"name"		"placeholder_702"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"cs_cruise"
+			"points"		"20"
+			"expression"		"%act_kill_human% && %weapon_secondary%"
+			"expr_bonus"		"%act_kill_human% && %weapon_elite%"
+			"difficulty"		"1"
+			"xp_bonus_percent"		"50"
+			"loc_name"		"op07_quest_name_702"
+			"loc_bonus"		"#quest_bonus_weapon_elite"
+		}
+		"703"
+		{
+			"name"		"placeholder_703"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"map"		"cs_cruise"
+			"points"		"20"
+			"expression"		"%act_kill_human% && %weapon_smg%"
+			"expr_bonus"		"%act_kill_human% && %cond_damage_headshot%"
+			"difficulty"		"1"
+			"xp_bonus_percent"		"50"
+			"loc_name"		"op07_quest_name_703"
+			"quest_icon"		"mp7"
+			"loc_bonus"		"#quest_bonus_headshot"
+		}
+		"704"
+		{
+			"name"		"placeholder_704"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_mikla"
+			"points"		"10"
+			"expression"		"%act_kill_chicken%"
+			"expr_bonus"		"%act_kill_chicken% && ( %cond_life_killstreak_chicken% >= 2 )"
+			"difficulty"		"1"
+			"xp_bonus_percent"		"50"
+			"loc_name"		"op07_quest_name_704"
+			"quest_icon"		"chicken"
+			"loc_bonus"		"#quest_bonus_chickenstreak_2"
+			"string_tokens"
+			{
+				"target"		"#quest_target_chicken"
+			}
+		}
+		"705"
+		{
+			"name"		"placeholder_705"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_mikla"
+			"points"		"25"
+			"expression"		"%act_kill_human% && %weapon_awp%"
+			"expr_bonus"		"%act_kill_human% && !%cond_player_zoomed%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_705"
+			"loc_bonus"		"#quest_bonus_not_zoomed"
+		}
+		"706"
+		{
+			"name"		"placeholder_706"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"ar_baggage"
+			"points"		"10"
+			"expression"		"%act_kill_human%"
+			"difficulty"		"1"
+			"loc_name"		"op07_quest_name_706"
+		}
+		"707"
+		{
+			"name"		"placeholder_707"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_lake"
+			"points"		"20"
+			"expression"		"%act_kill_human%"
+			"expr_bonus"		"%act_kill_human% && %cond_damage_headshot%"
+			"difficulty"		"1"
+			"xp_bonus_percent"		"50"
+			"loc_name"		"op07_quest_name_707"
+			"loc_bonus"		"#quest_bonus_headshot"
+		}
+		"708"
+		{
+			"name"		"placeholder_708"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"ar_shoots"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_708"
+		}
+		"709"
+		{
+			"name"		"placeholder_709"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_coast"
+			"points"		"25"
+			"expression"		"%act_kill_human% && %weapon_ak47%"
+			"expr_bonus"		"%act_kill_human% && %weapon_ak47% && ( %cond_life_killstreak_human% >= 3 )"
+			"difficulty"		"1"
+			"xp_bonus_percent"		"50"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_709"
+			"loc_bonus"		"#quest_bonus_killstreak_3"
+		}
+		"710"
+		{
+			"name"		"placeholder_710"
+			"gamemode"		"deathmatch"
+			"map"		"de_empire"
+			"points"		"20"
+			"expression"		"%act_kill_human% && %weapon_p250%"
+			"expr_bonus"		"%act_kill_human% && %weapon_p250% && %set_kimono%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_710"
+			"loc_bonus"		"#quest_bonus_set_kimono"
+		}
+		"711"
+		{
+			"name"		"placeholder_711"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_santorini"
+			"points"		"30"
+			"expression"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% )"
+			"expr_bonus"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% ) && %cond_player_zoomed%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_711"
+			"loc_bonus"		"#quest_bonus_zoomed"
+		}
+		"712"
+		{
+			"name"		"placeholder_712"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"points"		"25"
+			"expression"		"%act_kill_human% && %weapon_ssg08%"
+			"expr_bonus"		"%act_kill_human% && %cond_damage_headshot%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_712"
+			"loc_bonus"		"#quest_bonus_headshot"
+		}
+		"713"
+		{
+			"name"		"placeholder_713"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_tulip"
+			"points"		"30"
+			"expression"		"%act_kill_human% && ( %weapon_famas% || %weapon_galilar% )"
+			"expr_bonus"		"%act_kill_human% && ( %weapon_famas% || %weapon_galilar% ) && %set_community_11%"
+			"difficulty"		"2"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_713"
+			"loc_bonus"		"#quest_bonus_set_community_11"
+		}
+		"714"
+		{
+			"name"		"placeholder_714"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_santorini"
+			"points"		"40"
+			"expression"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% )"
+			"expr_bonus"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% ) && !%cond_player_zoomed%"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_714"
+			"loc_bonus"		"#quest_bonus_not_zoomed"
+		}
+		"715"
+		{
+			"name"		"placeholder_715"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"20"
+			"expression"		"%act_kill_human% && %weapon_ssg08%"
+			"expr_bonus"		"%act_kill_human% && %cond_damage_headshot%"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_715"
+			"loc_bonus"		"#quest_bonus_headshot"
+		}
+		"716"
+		{
+			"name"		"placeholder_716"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_tulip"
+			"points"		"40"
+			"expression"		"%act_kill_human% && ( %weapon_famas% || %weapon_galilar% )"
+			"expr_bonus"		"%act_kill_human% && ( %weapon_famas% || %weapon_galilar% ) && %cond_item_borrowed_enemy%"
+			"difficulty"		"3"
+			"operational_points"		"2"
+			"loc_name"		"op07_quest_name_716"
+			"loc_bonus"		"#quest_bonus_borrowed_gun_enemy"
+		}
+		"717"
+		{
+			"name"		"placeholder_717"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"map"		"de_bank"
+			"points"		"20"
+			"expression"		"%act_kill_human%"
+			"difficulty"		"1"
+			"loc_name"		"op07_quest_name_717"
+		}
+		"718"
+		{
+			"name"		"placeholder_718"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"map"		"de_lake"
+			"points"		"30"
+			"expression"		"%act_kill_human%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_718"
+		}
+		"719"
+		{
+			"name"		"placeholder_719"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"map"		"de_shortdust"
+			"points"		"5"
+			"expression"		"%act_plant_bomb% || %act_defuse_bomb%"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_719"
+			"quest_icon"		"gungametrbomb"
+			"string_tokens"
+			{
+				"commandverb"		"#quest_commandverb_execute"
+				"actions"		"#quest_action_plural_bomb_plants_or_defuses"
+				"action"		"#quest_action_singular_bomb_plants_or_defuses"
+			}
+		}
+		"720"
+		{
+			"name"		"placeholder_720"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"15"
+			"expression"		"%act_flashbang_enemy%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_720"
+			"quest_icon"		"flashbang"
+			"string_tokens"
+			{
+				"commandverb"		"#quest_commandverb_execute"
+			}
+		}
+		"721"
+		{
+			"name"		"placeholder_721"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"map"		"de_royal"
+			"points"		"25"
+			"expression"		"%act_kill_human% &&  ( %weapon_ssg08% || %weapon_awp% ||  %weapon_g3sg1% ||  %weapon_scar20% )"
+			"expr_bonus"		"%act_kill_human% && %weapon_ssg08%"
+			"difficulty"		"3"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_722"
+			"quest_icon"		"scar20"
+			"loc_bonus"		"#quest_bonus_weapon_ssg08"
+		}
+		"722"
+		{
+			"name"		"placeholder_722"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"15"
+			"expression"		"%act_kill_human% && %cond_item_borrowed_teammate%"
+			"difficulty"		"1"
+			"loc_name"		"op07_quest_name_723"
+			"quest_icon"		"killquest"
+		}
+		"723"
+		{
+			"name"		"placeholder_723"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"5"
+			"expression"		"%act_plant_bomb% || %act_defuse_bomb%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_724"
+			"quest_icon"		"bomb"
+			"string_tokens"
+			{
+				"commandverb"		"#quest_commandverb_execute"
+				"actions"		"#quest_action_plural_bomb_plants_or_defuses"
+				"action"		"#quest_action_singular_bomb_plants_or_defuses"
+			}
+		}
+		"724"
+		{
+			"name"		"placeholder_724"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"50"
+			"expression"		"%cond_damage_burn% ? %act_damage% : 0"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_725"
+			"quest_icon"		"molotov"
+			"string_tokens"
+			{
+				"commandverb"		"#quest_commandverb_deal"
+				"actions"		"#quest_action_plural_damage_burn"
+				"action"		"#quest_action_singular_damage_burn"
+			}
+		}
+		"725"
+		{
+			"name"		"placeholder_725"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"15"
+			"expression"		"%act_kill_human% && %cond_item_borrowed_enemy%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_726"
+			"quest_icon"		"killquest"
+		}
+		"726"
+		{
+			"name"		"placeholder_726"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"15"
+			"expression"		"%act_kill_human% && %weapon_secondary%"
+			"expr_bonus"		"%act_kill_human% && %weapon_revolver%"
+			"difficulty"		"2"
+			"loc_name"		"op07_quest_name_727"
+			"quest_icon"		"p250"
+			"loc_bonus"		"#quest_bonus_weapon_revolver"
+		}
+		"727"
+		{
+			"name"		"placeholder_727"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"40"
+			"expression"		"%act_kill_human% && %cond_damage_headshot%"
+			"expr_bonus"		"%act_kill_human% && %cond_damage_headshot% && %set_community_11%"
+			"difficulty"		"3"
+			"operational_points"		"2"
+			"loc_name"		"op07_quest_name_728"
+			"quest_icon"		"bomb"
+			"loc_bonus"		"#quest_bonus_set_community_11"
+			"string_tokens"
+			{
+				"action"		"#quest_action_singular_headshot_kill"
+				"actions"		"#quest_action_plural_headshot_kill"
+			}
+		}
+		"728"
+		{
+			"name"		"placeholder_728"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"25"
+			"expression"		"%act_kill_human% && %cond_item_borrowed_enemy%"
+			"expr_bonus"		"%act_kill_human% && %cond_item_borrowed_enemy% && %map_de_nuke%"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_729"
+			"quest_icon"		"killquest"
+			"loc_bonus"		"#quest_bonus_de_nuke"
+		}
+		"729"
+		{
+			"name"		"placeholder_729"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"40"
+			"expression"		"%act_kill_human% && %weapon_secondary%"
+			"expr_bonus"		"%act_kill_human% && ( %weapon_glock% || %weapon_hkp2000% || %weapon_usp_silencer% )"
+			"difficulty"		"3"
+			"loc_name"		"op07_quest_name_730"
+			"quest_icon"		"p250"
+			"loc_bonus"		"#quest_bonus_weapon_glock_hkp2000_usp_silencer"
+		}
+		"730"
+		{
+			"name"		"placeholder_730"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op07"
+			"points"		"20"
+			"expression"		"%act_kill_human% && (%cond_life_killstreak_human% == 2)"
+			"expr_bonus"		"%act_kill_human% && (%cond_life_killstreak_human% == 3)"
+			"difficulty"		"3"
+			"operational_points"		"2"
+			"loc_name"		"op07_quest_name_731"
+			"quest_icon"		"bomb"
+			"loc_bonus"		"#quest_bonus_killstreak_3"
+			"string_tokens"
+			{
+				"action"		"#quest_action_singular_multikill"
+				"actions"		"#quest_action_plural_multikill"
+			}
+		}
+		"801"
+		{
+			"name"		"placeholder_801"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_coast"
+			"map"		"de_coast"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_801"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_coast.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_coast"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Nova"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"802"
+		{
+			"name"		"placeholder_802"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_santorini"
+			"map"		"de_santorini"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_802"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_santorini.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_santorini"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_P90"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"803"
+		{
+			"name"		"placeholder_803"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_tulip"
+			"map"		"de_tulip"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_803"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_tulip.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_tulip"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
+		}
+		"804"
+		{
+			"name"		"placeholder_804"
+			"gamemode"		"coopmission"
+			"mapgroup"		"mg_coop_cementplant"
+			"map"		"coop_cementplant"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"600"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_804"
+			"loc_description"		"#Quest_Coop_Desc_Rescue"
+			"server_exec"		"execwithwhitelist coop_cementplant_1.cfg */maps"
+			"string_tokens"
+			{
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"805"
+		{
+			"name"		"placeholder_805"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_empire"
+			"map"		"de_empire"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_805"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_empire.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_empire"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_AK47"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
+		}
+		"806"
+		{
+			"name"		"placeholder_806"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_cbble"
+			"map"		"de_cbble"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_806"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_cbble.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_cbble"
+				"kills"		"quest_guardian_kills_10"
+				"weapon"		"#SFUI_WPNHUD_SCAR20"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_moneyreset"
+			}
+		}
+		"807"
+		{
+			"name"		"placeholder_807"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_royal"
+			"map"		"de_royal"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_807"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_royal.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_royal"
+				"kills"		"quest_guardian_kills_50"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"808"
+		{
+			"name"		"placeholder_808"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_808"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_train.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_train"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
+		}
+		"809"
+		{
+			"name"		"placeholder_809"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_809"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_train_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"server_exec"		"guardian_de_train_alt1.cfg"
+				"map"		"#SFUI_Map_de_train"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
+		}
+		"810"
+		{
+			"name"		"placeholder_810"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_810"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_train_alt2.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_train"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_killrewardsonly"
+			}
+		}
+		"811"
+		{
+			"name"		"placeholder_811"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_vertigo"
+			"map"		"de_vertigo"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_811"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_vertigo.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_vertigo"
+				"kills"		"quest_guardian_kills_5"
+				"weapon"		"#SFUI_WPNHUD_Negev"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_moneyreset"
+			}
+		}
+		"812"
+		{
+			"name"		"placeholder_812"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_mikla"
+			"map"		"de_mikla"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_812"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_mikla.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_mikla"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Tec9"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"813"
+		{
+			"name"		"placeholder_813"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_mikla"
+			"map"		"de_mikla"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_813"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_mikla_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_mikla"
+				"kills"		"quest_guardian_kills_25"
+				"weapon"		"#SFUI_WPNHUD_Glock18"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"814"
+		{
+			"name"		"placeholder_814"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_overpass"
+			"map"		"de_overpass"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"400"
+			"loc_name"		"op07_quest_name_814"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_overpass.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_overpass"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"815"
+		{
+			"name"		"placeholder_815"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_overpass"
+			"map"		"de_overpass"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_815"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_overpass_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_overpass"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"816"
+		{
+			"name"		"placeholder_816"
+			"gamemode"		"coopmission"
+			"mapgroup"		"mg_coop_cementplant"
+			"map"		"coop_cementplant"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"900"
+			"operational_points"		"2"
+			"loc_name"		"op07_quest_name_816"
+			"loc_description"		"#Quest_Coop_Desc_Recon"
+			"server_exec"		"execwithwhitelist coop_cementplant_2.cfg */maps"
+			"string_tokens"
+			{
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"817"
+		{
+			"name"		"placeholder_817"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_tulip"
+			"map"		"de_tulip"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_817"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_tulip_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_tulip"
+				"kills"		"quest_guardian_kills_40"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
+		}
+		"818"
+		{
+			"name"		"placeholder_818"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_dust2"
+			"map"		"de_dust2"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_818"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_dust2_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_dust2"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_killrewardsonly"
+			}
+		}
+		"819"
+		{
+			"name"		"placeholder_819"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_dust2"
+			"map"		"de_dust2"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_819"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_dust2.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_dust2"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"820"
+		{
+			"name"		"placeholder_820"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lake"
+			"map"		"de_lake"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_820"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_lake.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lake"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_Bizon"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"821"
+		{
+			"name"		"placeholder_821"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lake"
+			"map"		"de_lake"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_821"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_lake_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lake"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#SFUI_WPNHUD_Mag7"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"822"
+		{
+			"name"		"placeholder_822"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_mirage"
+			"map"		"de_mirage"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"500"
+			"loc_name"		"op07_quest_name_822"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_mirage.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_mirage"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_CZ75"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_maxmoneylimit"
+			}
+		}
+		"823"
+		{
+			"name"		"placeholder_823"
+			"gamemode"		"coopmission"
+			"mapgroup"		"mg_coop_cementplant"
+			"map"		"coop_cementplant"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"1200"
+			"operational_points"		"3"
+			"loc_name"		"op07_quest_name_823"
+			"loc_description"		"#Quest_Coop_Desc_Bomb"
+			"server_exec"		"execwithwhitelist coop_cementplant_3.cfg */maps"
+			"string_tokens"
+			{
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"824"
+		{
+			"name"		"placeholder_824"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_empire"
+			"map"		"de_empire"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_824"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_empire_alt1.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_empire"
+				"kills"		"quest_guardian_kills_50"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_cantbuy"
+			}
+		}
+		"825"
+		{
+			"name"		"placeholder_825"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_cache"
+			"map"		"de_cache"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_825"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_cache.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_cache"
+				"kills"		"quest_guardian_kills_25"
+				"weapon"		"#SFUI_WPNHUD_DesertEagle"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_killrewardsonly"
+			}
+		}
+		"826"
+		{
+			"name"		"placeholder_826"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_nuke"
+			"map"		"de_nuke"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"operational_points"		"1"
+			"loc_name"		"op07_quest_name_826"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_nuke.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_nuke"
+				"kills"		"quest_guardian_kills_40"
+				"weapon"		"#SFUI_WPNHUD_M4_SILENCER"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_killrewardsonly"
+			}
+		}
+		"827"
+		{
+			"name"		"placeholder_827"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_aztec"
+			"map"		"de_aztec"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"600"
+			"loc_name"		"op07_quest_name_827"
+			"loc_description"		"#Quest_Guardian_Bomb_Desc"
+			"server_exec"		"execwithwhitelist guardian_de_aztec.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_aztec"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"extradetails"		"#quest_guardian_empty"
+			}
 		}
 	}
 	"campaign_definitions"
@@ -50735,7 +53640,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_501"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_501_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_501_radio.mp3"
 				}
 			}
 			"2"
@@ -50747,13 +53652,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_502_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_502_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_502_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_502"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_502_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_502_radio.mp3"
 				}
 			}
 			"3"
@@ -50764,7 +53669,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_503"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_503_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_503_radio.mp3"
 				}
 			}
 			"4"
@@ -50776,13 +53681,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_504_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_504_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_504_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_504"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_504_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_504_radio.mp3"
 				}
 			}
 			"5"
@@ -50794,13 +53699,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_505_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_505_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_505_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_505"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_505_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_505_radio.mp3"
 				}
 			}
 			"6"
@@ -50812,13 +53717,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_506_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_506_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_506_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_506"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_506_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_506_radio.mp3"
 				}
 			}
 			"7"
@@ -50829,7 +53734,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_507"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_507_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_507_radio.mp3"
 				}
 			}
 			"8"
@@ -50840,7 +53745,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_508"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_508_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_508_radio.mp3"
 				}
 			}
 			"9"
@@ -50852,13 +53757,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_509_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_509_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_509_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_509"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_509_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_509_radio.mp3"
 				}
 			}
 			"10"
@@ -50870,7 +53775,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_510"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_510_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_510_radio.mp3"
 				}
 			}
 			"11"
@@ -50883,7 +53788,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_511"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_511_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_511_radio.mp3"
 				}
 			}
 			"12"
@@ -50895,13 +53800,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_512_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_512_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_512_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_512"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_512_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_512_radio.mp3"
 				}
 			}
 			"13"
@@ -50913,13 +53818,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_513_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_513_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_513_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_513"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_513_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_513_radio.mp3"
 				}
 			}
 			"14"
@@ -50930,7 +53835,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_514"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_514_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_514_radio.mp3"
 				}
 			}
 			"15"
@@ -50941,7 +53846,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_515"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_515_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_515_radio.mp3"
 				}
 			}
 			"16"
@@ -50954,13 +53859,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_516_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_516_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_516_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_516"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_516_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_516_radio.mp3"
 				}
 			}
 			"17"
@@ -50972,13 +53877,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_517_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_517_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_517_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_517"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_517_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_517_radio.mp3"
 				}
 			}
 			"18"
@@ -50989,7 +53894,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_518"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_518_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_518_radio.mp3"
 				}
 			}
 			"19"
@@ -51001,7 +53906,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_519"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_519_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_519_radio.mp3"
 				}
 			}
 			"20"
@@ -51013,13 +53918,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_520_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_520_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_520_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_520"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_520_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_520_radio.mp3"
 				}
 			}
 			"21"
@@ -51032,13 +53937,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_521_new_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_521_new"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_new_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_new_radio.mp3"
 				}
 			}
 			"22"
@@ -51049,7 +53954,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_521"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_521_radio.mp3"
 				}
 			}
 			"23"
@@ -51061,7 +53966,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_524"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_524_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_524_radio.mp3"
 				}
 			}
 			"24"
@@ -51073,13 +53978,13 @@
 					"expression"		" %525% "
 					"character_name"		"Hennequet"
 					"description"		"Op_Bloodhound_sebastien_525_turner"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_525_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_525_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_525"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_525_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_525_radio.mp3"
 				}
 			}
 			"25"
@@ -51089,7 +53994,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_526"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_526_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_526_radio.mp3"
 				}
 			}
 			"26"
@@ -51099,7 +54004,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_526_new"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_526_new_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_526_new_radio.mp3"
 				}
 			}
 			"27"
@@ -51109,7 +54014,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_527"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_527_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_527_radio.mp3"
 				}
 			}
 			"28"
@@ -51119,7 +54024,7 @@
 				{
 					"character_name"		"Hennequet"
 					"description"		"Op_bloodhound_Sebastien_528"
-					"audio_file"		"campaign/bloodhound/sebastien/op_bloodhound_sebastien_528_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/sebastien/op_bloodhound_sebastien_528_radio.mp3"
 				}
 			}
 			"29"
@@ -51130,7 +54035,7 @@
 				{
 					"character_name"		"Booth"
 					"description"		"Op_bloodhound_Booth_529"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_529_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_529_radio.mp3"
 				}
 			}
 			"30"
@@ -51141,7 +54046,7 @@
 				{
 					"character_name"		"Booth"
 					"description"		"Op_bloodhound_Booth_530"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_530_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_530_radio.mp3"
 				}
 			}
 			"31"
@@ -51152,13 +54057,13 @@
 					"expression"		" %525% "
 					"character_name"		"Booth"
 					"description"		"Op_Bloodhound_booth_531_turner"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_531_turner_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_531_turner_radio.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Booth"
 					"description"		"Op_bloodhound_Booth_531"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_531_radio.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_531_radio.mp3"
 				}
 			}
 		}
@@ -51176,7 +54081,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_Two_Sides_sub"
-					"audio_file"		"campaign/bloodhound/valeria/op_bloodhound_Valeria_Two_Sides.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/op_bloodhound_Valeria_Two_Sides.mp3"
 				}
 			}
 			"2"
@@ -51187,7 +54092,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_spark_sub"
-					"audio_file"		"campaign/bloodhound/valeria/op_bloodhound_Valeria_spark.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/op_bloodhound_Valeria_spark.mp3"
 				}
 			}
 			"3"
@@ -51198,7 +54103,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_Flames_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_Flames.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_Flames.mp3"
 				}
 			}
 			"4"
@@ -51209,7 +54114,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_tyrants_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_tyrants.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_tyrants.mp3"
 				}
 			}
 			"5"
@@ -51220,7 +54125,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_booth_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_booth.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_booth.mp3"
 				}
 			}
 			"6"
@@ -51231,7 +54136,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_smg_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_smg.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_smg.mp3"
 				}
 			}
 			"7"
@@ -51242,7 +54147,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_knife_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_knife.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_knife.mp3"
 				}
 			}
 			"8"
@@ -51253,7 +54158,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_open_house_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_open_house.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_open_house.mp3"
 				}
 			}
 			"9"
@@ -51264,7 +54169,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_rebirth_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_rebirth.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_rebirth.mp3"
 				}
 			}
 			"10"
@@ -51278,13 +54183,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_labels_turner"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_labels_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_labels_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_meet_mentor_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_meet_mentor.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_meet_mentor.mp3"
 				}
 			}
 			"11"
@@ -51297,13 +54202,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_dead_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_dead_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_dead_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_intro"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_intro.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_intro.mp3"
 				}
 			}
 			"12"
@@ -51313,7 +54218,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_loyalty_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_loyalty.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_loyalty.mp3"
 				}
 			}
 			"13"
@@ -51324,7 +54229,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_resources_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_resources.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_resources.mp3"
 				}
 			}
 			"14"
@@ -51335,7 +54240,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_conflict_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_conflict.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_conflict.mp3"
 				}
 			}
 			"15"
@@ -51347,13 +54252,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_role_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_role_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_role_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_bloodhound_turner_AWP"
-					"audio_file"		"campaign/bloodhound/turner/op_bloodhound_turner_AWP.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/op_bloodhound_turner_AWP.mp3"
 				}
 			}
 			"16"
@@ -51365,7 +54270,7 @@
 				{
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_message_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_message.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_message.mp3"
 				}
 			}
 			"17"
@@ -51377,13 +54282,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_pollock_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_pollock_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_pollock_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_headshot"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_headshot.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_headshot.mp3"
 				}
 			}
 			"18"
@@ -51395,13 +54300,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_underhill_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_underhill_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_underhill_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_prodigy"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_prodigy.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_prodigy.mp3"
 				}
 			}
 			"19"
@@ -51414,13 +54319,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_maghreb_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_maghreb_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_maghreb_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_hero"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_hero.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_hero.mp3"
 				}
 			}
 			"20"
@@ -51431,13 +54336,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_bank_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_bank_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_bank_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_booth"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_booth.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_booth.mp3"
 				}
 			}
 			"21"
@@ -51450,13 +54355,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_fruitless_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_fruitless_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_fruitless_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_chaos"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_chaos.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_chaos.mp3"
 				}
 			}
 			"22"
@@ -51468,13 +54373,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_fear_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_fear_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_fear_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_valeria"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_valeria.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_valeria.mp3"
 				}
 			}
 			"23"
@@ -51486,13 +54391,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_elysee_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_elysee_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_elysee_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_underhill"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_underhill.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_underhill.mp3"
 				}
 			}
 			"24"
@@ -51504,13 +54409,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_history_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_history_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_history_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_shame"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_shame.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_shame.mp3"
 				}
 			}
 			"25"
@@ -51521,13 +54426,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_blunt_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_blunt_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_blunt_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_blunt"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_blunt.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_blunt.mp3"
 				}
 			}
 			"26"
@@ -51539,13 +54444,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_journalist_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_journalist_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_journalist_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_journalist"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_journalist.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_journalist.mp3"
 				}
 			}
 			"27"
@@ -51557,13 +54462,13 @@
 					"expression"		" %525% "
 					"character_name"		"Valeria"
 					"description"		"Op_bloodhound_Valeria_cobble_turner_sub"
-					"audio_file"		"campaign/bloodhound/valeria/Op_bloodhound_Valeria_cobble_turner.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/valeria/Op_bloodhound_Valeria_cobble_turner.mp3"
 				}
 				"story_block"
 				{
 					"character_name"		"Turner"
 					"description"		"Op_Bloodhound_Turner_cobble"
-					"audio_file"		"campaign/bloodhound/turner/Op_Bloodhound_Turner_cobble.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/turner/Op_Bloodhound_Turner_cobble.mp3"
 				}
 			}
 			"29"
@@ -51574,7 +54479,7 @@
 				{
 					"character_name"		"Booth"
 					"description"		"op_bloodhound_booth_Spend_sub"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_spend.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_spend.mp3"
 				}
 			}
 			"30"
@@ -51585,7 +54490,7 @@
 				{
 					"character_name"		"Booth"
 					"description"		"op_bloodhound_booth_flash_sub"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_flash.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_flash.mp3"
 				}
 			}
 			"31"
@@ -51595,10 +54500,710 @@
 				{
 					"character_name"		"Booth"
 					"description"		"op_bloodhound_booth_bomb_sub"
-					"audio_file"		"campaign/bloodhound/booth/op_bloodhound_booth_bomb.mp3"
+					"content_file"		"type:audio,file:campaign/bloodhound/booth/op_bloodhound_booth_bomb.mp3"
 				}
 			}
 		}
+		"7"
+		{
+			"loc_name"		"#csgo_campaign_7"
+			"loc_description"		"#csgo_campaign_7_desc"
+			"season_number"		"6"
+			"1"
+			{
+				"quest_index"		"701"
+				"->"		"2"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_701"
+					"content_file"		"type:audio,file:campaign/op07/op07_701.mp3"
+				}
+			}
+			"2"
+			{
+				"quest_index"		"702"
+				"->"		"3"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_702"
+					"content_file"		"type:audio,file:campaign/op07/op07_702.mp3"
+				}
+			}
+			"3"
+			{
+				"quest_index"		"703"
+				"->"		"4"
+				"->"		"5"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_703"
+					"content_file"		"type:audio,file:campaign/op07/op07_703.mp3"
+				}
+			}
+			"4"
+			{
+				"quest_index"		"704"
+				"->"		"6"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_704"
+					"content_file"		"type:audio,file:campaign/op07/op07_704.mp3"
+				}
+			}
+			"5"
+			{
+				"quest_index"		"705"
+				"->"		"6"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_705"
+					"content_file"		"type:audio,file:campaign/op07/op07_705.mp3"
+				}
+			}
+			"6"
+			{
+				"quest_index"		"706"
+				"->"		"7"
+				"->"		"8"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_706"
+					"content_file"		"type:audio,file:campaign/op07/op07_706.mp3"
+				}
+			}
+			"7"
+			{
+				"quest_index"		"707"
+				"->"		"9"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_707"
+					"content_file"		"type:audio,file:campaign/op07/op07_707.mp3"
+				}
+			}
+			"8"
+			{
+				"quest_index"		"708"
+				"->"		"9"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_708"
+					"content_file"		"type:audio,file:campaign/op07/op07_708.mp3"
+				}
+			}
+			"9"
+			{
+				"quest_index"		"709"
+				"->"		"10"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_709"
+					"content_file"		"type:audio,file:campaign/op07/op07_709.mp3"
+				}
+			}
+			"10"
+			{
+				"quest_index"		"710"
+				"->"		"11"
+				"->"		"14"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_710"
+					"content_file"		"type:audio,file:campaign/op07/op07_710.mp3"
+				}
+			}
+			"11"
+			{
+				"quest_index"		"711"
+				"->"		"12"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_711"
+					"content_file"		"type:audio,file:campaign/op07/op07_711.mp3"
+				}
+			}
+			"12"
+			{
+				"quest_index"		"712"
+				"->"		"13"
+				"->"		"15"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_712"
+					"content_file"		"type:audio,file:campaign/op07/op07_712.mp3"
+				}
+			}
+			"13"
+			{
+				"quest_index"		"713"
+				"->"		"17"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_713"
+					"content_file"		"type:audio,file:campaign/op07/op07_713.mp3"
+				}
+			}
+			"14"
+			{
+				"quest_index"		"714"
+				"->"		"15"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_714"
+					"content_file"		"type:audio,file:campaign/op07/op07_714.mp3"
+				}
+			}
+			"15"
+			{
+				"quest_index"		"715"
+				"->"		"16"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_715"
+					"content_file"		"type:audio,file:campaign/op07/op07_715.mp3"
+				}
+			}
+			"16"
+			{
+				"quest_index"		"716"
+				"->"		"17"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_716"
+					"content_file"		"type:audio,file:campaign/op07/op07_716.mp3"
+				}
+			}
+			"17"
+			{
+				"quest_index"		"717"
+				"->"		"18"
+				"->"		"19"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_717"
+					"content_file"		"type:audio,file:campaign/op07/op07_717.mp3"
+				}
+			}
+			"18"
+			{
+				"quest_index"		"718"
+				"->"		"20"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_718"
+					"content_file"		"type:audio,file:campaign/op07/op07_718.mp3"
+				}
+			}
+			"19"
+			{
+				"quest_index"		"719"
+				"->"		"20"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_719"
+					"content_file"		"type:audio,file:campaign/op07/op07_719.mp3"
+				}
+			}
+			"20"
+			{
+				"quest_index"		"720"
+				"->"		"24"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_720"
+					"content_file"		"type:audio,file:campaign/op07/op07_720.mp3"
+				}
+			}
+			"21"
+			{
+				"quest_index"		"721"
+				"->"		"25"
+				"->"		"26"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_722"
+					"content_file"		"type:audio,file:campaign/op07/op07_722.mp3"
+				}
+			}
+			"22"
+			{
+				"quest_index"		"722"
+				"->"		"21"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_723"
+					"content_file"		"type:audio,file:campaign/op07/op07_723.mp3"
+				}
+			}
+			"23"
+			{
+				"quest_index"		"723"
+				"->"		"21"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_724"
+					"content_file"		"type:audio,file:campaign/op07/op07_724.mp3"
+				}
+			}
+			"24"
+			{
+				"quest_index"		"724"
+				"->"		"22"
+				"->"		"23"
+			}
+			"25"
+			{
+				"quest_index"		"725"
+				"->"		"28"
+			}
+			"26"
+			{
+				"quest_index"		"726"
+				"->"		"29"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_727"
+					"content_file"		"type:audio,file:campaign/op07/op07_727.mp3"
+				}
+			}
+			"27"
+			{
+				"quest_index"		"727"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_728"
+					"content_file"		"type:audio,file:campaign/op07/op07_728.mp3"
+				}
+			}
+			"28"
+			{
+				"quest_index"		"728"
+				"->"		"30"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_729"
+					"content_file"		"type:audio,file:campaign/op07/op07_729.mp3"
+				}
+			}
+			"29"
+			{
+				"quest_index"		"729"
+				"->"		"27"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_730"
+					"content_file"		"type:audio,file:campaign/op07/op07_730.mp3"
+				}
+			}
+			"30"
+			{
+				"quest_index"		"730"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_731"
+					"content_file"		"type:audio,file:campaign/op07/op07_731.mp3"
+				}
+			}
+		}
+		"8"
+		{
+			"loc_name"		"#csgo_campaign_8"
+			"loc_description"		"#csgo_campaign_8_desc"
+			"season_number"		"6"
+			"1"
+			{
+				"quest_index"		"801"
+				"->"		"2"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_801"
+					"content_file"		"type:audio,file:campaign/op07/op07_801.mp3"
+				}
+			}
+			"2"
+			{
+				"quest_index"		"802"
+				"->"		"3"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_802"
+					"content_file"		"type:audio,file:campaign/op07/op07_802.mp3"
+				}
+			}
+			"3"
+			{
+				"quest_index"		"803"
+				"->"		"4"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_803"
+					"content_file"		"type:audio,file:campaign/op07/op07_803.mp3"
+				}
+			}
+			"4"
+			{
+				"quest_index"		"804"
+				"->"		"5"
+				"->"		"8"
+				"->"		"29"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_804"
+					"content_file"		"type:audio,file:campaign/op07/op07_804.mp3"
+				}
+			}
+			"5"
+			{
+				"quest_index"		"805"
+				"->"		"6"
+				"story_block"
+				{
+					"character_name"		"Kincaide"
+					"description"		"op07_subtitle_805"
+					"content_file"		"type:audio,file:campaign/op07/op07_805.mp3"
+				}
+			}
+			"6"
+			{
+				"quest_index"		"806"
+				"->"		"7"
+				"story_block"
+				{
+					"character_name"		"Kincaide"
+					"description"		"op07_subtitle_806"
+					"content_file"		"type:audio,file:campaign/op07/op07_806.mp3"
+				}
+			}
+			"7"
+			{
+				"quest_index"		"807"
+				"story_block"
+				{
+					"character_name"		"Kincaide"
+					"description"		"op07_subtitle_807"
+					"content_file"		"type:audio,file:campaign/op07/op07_807.mp3"
+				}
+			}
+			"8"
+			{
+				"quest_index"		"808"
+				"->"		"9"
+				"->"		"11"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_808"
+					"content_file"		"type:audio,file:campaign/op07/op07_808.mp3"
+				}
+			}
+			"9"
+			{
+				"quest_index"		"809"
+				"->"		"10"
+				"story_block"
+				{
+					"character_name"		"Booth2"
+					"description"		"op07_subtitle_809"
+					"content_file"		"type:audio,file:campaign/op07/op07_809.mp3"
+				}
+			}
+			"10"
+			{
+				"quest_index"		"810"
+				"story_block"
+				{
+					"character_name"		"Booth2"
+					"description"		"op07_subtitle_810"
+					"content_file"		"type:audio,file:campaign/op07/op07_810.mp3"
+				}
+			}
+			"11"
+			{
+				"quest_index"		"811"
+				"->"		"12"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_811"
+					"content_file"		"type:audio,file:campaign/op07/op07_811.mp3"
+				}
+			}
+			"12"
+			{
+				"quest_index"		"812"
+				"->"		"13"
+				"->"		"14"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_812"
+					"content_file"		"type:audio,file:campaign/op07/op07_812.mp3"
+				}
+			}
+			"13"
+			{
+				"quest_index"		"813"
+				"story_block"
+				{
+					"character_name"		"Booth2"
+					"description"		"op07_subtitle_813"
+					"content_file"		"type:audio,file:campaign/op07/op07_813.mp3"
+				}
+			}
+			"14"
+			{
+				"quest_index"		"814"
+				"->"		"16"
+				"->"		"15"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_814"
+					"content_file"		"type:audio,file:campaign/op07/op07_814.mp3"
+				}
+			}
+			"15"
+			{
+				"quest_index"		"815"
+				"story_block"
+				{
+					"character_name"		"Booth2"
+					"description"		"op07_subtitle_815"
+					"content_file"		"type:audio,file:campaign/op07/op07_815.mp3"
+				}
+			}
+			"16"
+			{
+				"quest_index"		"816"
+				"->"		"17"
+				"->"		"19"
+				"->"		"30"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_816"
+					"content_file"		"type:audio,file:campaign/op07/op07_816.mp3"
+				}
+			}
+			"17"
+			{
+				"quest_index"		"817"
+				"->"		"18"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_817"
+					"content_file"		"type:audio,file:campaign/op07/op07_817.mp3"
+				}
+			}
+			"18"
+			{
+				"quest_index"		"818"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_818"
+					"content_file"		"type:audio,file:campaign/op07/op07_818.mp3"
+				}
+			}
+			"19"
+			{
+				"quest_index"		"819"
+				"->"		"20"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_819"
+					"content_file"		"type:audio,file:campaign/op07/op07_819.mp3"
+				}
+			}
+			"20"
+			{
+				"quest_index"		"820"
+				"->"		"21"
+				"->"		"22"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_820"
+					"content_file"		"type:audio,file:campaign/op07/op07_820.mp3"
+				}
+			}
+			"21"
+			{
+				"quest_index"		"821"
+				"story_block"
+				{
+					"character_name"		"CocienaroIzaki"
+					"description"		"op07_subtitle_821"
+					"content_file"		"type:audio,file:campaign/op07/op07_821.mp3"
+				}
+			}
+			"22"
+			{
+				"quest_index"		"822"
+				"->"		"23"
+				"story_block"
+				{
+					"character_name"		"Riley"
+					"description"		"op07_subtitle_822"
+					"content_file"		"type:audio,file:campaign/op07/op07_822.mp3"
+				}
+			}
+			"23"
+			{
+				"quest_index"		"823"
+				"->"		"24"
+				"->"		"25"
+				"->"		"26"
+				"->"		"27"
+				"->"		"31"
+				"story_block"
+				{
+					"character_name"		"Booth2"
+					"description"		"op07_subtitle_823"
+					"content_file"		"type:audio,file:campaign/op07/op07_823.mp3"
+				}
+			}
+			"24"
+			{
+				"quest_index"		"824"
+				"story_block"
+				{
+					"character_name"		"Imogen"
+					"description"		"op07_subtitle_824"
+					"content_file"		"type:audio,file:campaign/op07/op07_824.mp3"
+				}
+			}
+			"25"
+			{
+				"quest_index"		"825"
+				"story_block"
+				{
+					"character_name"		"Imogen"
+					"description"		"op07_subtitle_825"
+					"content_file"		"type:audio,file:campaign/op07/op07_825.mp3"
+				}
+			}
+			"26"
+			{
+				"quest_index"		"826"
+				"story_block"
+				{
+					"character_name"		"Imogen"
+					"description"		"op07_subtitle_826"
+					"content_file"		"type:audio,file:campaign/op07/op07_826.mp3"
+				}
+			}
+			"27"
+			{
+				"quest_index"		"827"
+				"story_block"
+				{
+					"character_name"		"Imogen"
+					"description"		"op07_subtitle_827"
+					"content_file"		"type:audio,file:campaign/op07/op07_827.mp3"
+				}
+			}
+			"28"
+			{
+				"story_block"
+				{
+					"description"		"op07_comic_part_1_desc"
+					"content_file"		"type:comic,file:images/journal/campaign/comic/icon_8_0.png,section:0,numpages:27"
+				}
+			}
+			"29"
+			{
+				"story_block"
+				{
+					"description"		"op07_comic_part_2_desc"
+					"content_file"		"type:comic,file:images/journal/campaign/comic/icon_8_1.png,section:1,numpages:29"
+				}
+			}
+			"30"
+			{
+				"story_block"
+				{
+					"description"		"op07_comic_part_3_desc"
+					"content_file"		"type:comic,file:images/journal/campaign/comic/icon_8_2.png,section:2,numpages:21"
+				}
+			}
+			"31"
+			{
+				"story_block"
+				{
+					"description"		"op07_comic_part_4_desc"
+					"content_file"		"type:comic,file:images/journal/campaign/comic/icon_8_3.png,section:3,numpages:31"
+				}
+			}
+		}
+	}
+	"quest_schedule"
+	{
+		"timezones"		"-2900,+0100,+3100"
+		"16 16:05 120"		"comp coast"
+		"17 17:05 120"		"comp empire"
+		"18 18:05 120"		"comp mikla"
+		"19 19:05 120"		"comp royal"
+		"20 20:05 120"		"comp santorini"
+		"21 21:05 120"		"comp tulip"
+		"22 22:05 120"		"comp cruise"
+		"23 16:05 120"		"comp coast"
+		"24 17:05 120"		"comp nuke"
+		"25 18:05 120"		"comp train"
+		"26 19:05 120"		"comp mirage"
+		"27 20:05 120"		"comp inferno"
+		"28 21:05 120"		"comp cache"
+		"29 22:05 120"		"comp overpass"
+		"30 16:05 120"		"comp dust2"
+		"01 17:05 120"		"comp cbble"
+		"02 18:05 120"		"comp coast"
+		"03 19:05 120"		"comp empire"
+		"04 20:05 120"		"comp mikla"
+		"05 21:05 120"		"comp royal"
+		"06 22:05 120"		"comp santorini"
+		"07 16:05 120"		"comp tulip"
+		"08 17:05 120"		"comp cruise"
+		"09 19:05 120"		"comp aztec"
+		"10 20:05 120"		"comp dust"
+		"11 21:05 120"		"comp vertigo"
+		"12 22:05 120"		"comp office"
+		"13 26:05 120"		"comp italy"
+		"14 17:05 120"		"comp assault"
+		"15 18:05 120"		"comp militia"
 	}
 	"recipes"
 	{

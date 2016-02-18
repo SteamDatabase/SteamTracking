@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.3b976b28bea6c2d4628f34c785f10770ada961bd.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.dcaaa97cee942ac3098ed83bacb36003f61ae4c6.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1435,6 +1435,32 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_knife_falchion.adcc43a018fd4fe315dbdbc7960cfc52c5d63e3e.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_stattrack_swap": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_knife_survival_bowie",
+				"defindex": 514,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Bowie Knife",
+				"item_description": "This full-tang sawback Bowie knife is designed for heavy use in brutal survival situations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapons/base_weapons/weapon_knife_survival_bowie",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_knife_survival_bowie.01addb54d400815308b1d312290594a3177dd55f.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -4243,6 +4269,153 @@
 				
 			},
 			{
+				"name": "Map Token Santorini",
+				"defindex": 1047,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Santorini Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_santorini",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_santorini.574fa0468540b708cb4950f9e978dcaed65ec482.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_santorini_large.57459151521b943df5c5a9ab524f15990f170a39.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Coast",
+				"defindex": 1048,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Coast Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_coast",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_coast.0be2ec9438663fee2f1e4f58fc10e55977c73331.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_coast_large.95b0dcf4d614d6de056313cc4ff9d9a3fa8c971d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Mikla",
+				"defindex": 1049,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Mikla Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_mikla",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_mikla.d8e8fdc6b2092e2ea37884bf528aabb0ce61411b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_mikla_large.ab7edb5dc61566e73edd517bca44569eec19d634.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Royal",
+				"defindex": 1050,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Royal Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_royal",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_royal.9f5c1b3acf9848bfc9323b224626ca7a90c6f15f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_royal_large.03a0bc4f5e72039a36dbac2373323a8e93dfb2f4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Empire",
+				"defindex": 1051,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Empire Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_empire",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_empire.99ff2e407a56473e9dd03928a9df1ee5eeb8dce4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_empire_large.e23b29bcba2fcd3832cfd7a461bb918443ca00f1.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Tulip",
+				"defindex": 1052,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Tulip Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_tulip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_tulip.fce0def26241b9a3f91baca4c9fc5fe03d9dc716.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_tulip_large.2cb61b0ea91b152456669cf25329ba35d0042726.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Cruise",
+				"defindex": 1053,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Cruise Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_cruise",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_cruise.fea625fcecfd66a0ba1fe4be301f4da3f6d0b3fb.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/maptoken_cruise_large.38f36e8f34f79a3eadcc3a7cad84ba09c1b2ed0a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 1200,
 				"item_class": "tool",
@@ -5830,6 +6003,455 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "CommunitySeasonSeven2016",
+				"defindex": 1335,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Operation Wildfire Access Pass",
+				"item_description": "Grants access to all Operation Wildfire features.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_7_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_pass.b32f61c6e309f3a7e65af16b69b247909fcd0c0b.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonSeven2016 Coin 1",
+				"defindex": 1336,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Wildfire Challenge Coin",
+				"item_description": "Participated in Operation Wildfire.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_7_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_bronze.7a8f1b65dc14c4ca034a731367051e2d1adb021b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_bronze_large.51ae9b04cb166973332b33c6e059d78df30e99c4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonSeven2016 Coin 2",
+				"defindex": 1337,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Wildfire Coin",
+				"item_description": "Participated in Operation Wildfire.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_7_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_silver.94b4ec936252f9a4259b8f105554a42782ba9567.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_silver_large.cdcaefceda56aac0f72634df357627169ade3ce7.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonSeven2016 Coin 3",
+				"defindex": 1338,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Wildfire Coin",
+				"item_description": "Participated in Operation Wildfire.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_7_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_gold.0708781909989b690f6adda0b750d9d5294f90c6.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_7_gold_large.f1e8938c5782c84cd0dde19cbcce05536b6d9d90.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 7 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 8 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "prestige coin 2016",
@@ -12389,6 +13011,40 @@
 				
 			},
 			{
+				"name": "crate_community_11",
+				"defindex": 4187,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Operation Wildfire Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_11",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_11.4839d78c3416c2036da2ed42111df77177828399.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_11",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 112
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -12618,6 +13274,1791 @@
 
 				]
 				
+			},
+			{
+				"name": "item 6012",
+				"defindex": 6012,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6013",
+				"defindex": 6013,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6014",
+				"defindex": 6014,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6015",
+				"defindex": 6015,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6016",
+				"defindex": 6016,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6017",
+				"defindex": 6017,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6018",
+				"defindex": 6018,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6019",
+				"defindex": 6019,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6020",
+				"defindex": 6020,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6021",
+				"defindex": 6021,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6022",
+				"defindex": 6022,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6023",
+				"defindex": 6023,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6024",
+				"defindex": 6024,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6025",
+				"defindex": 6025,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6026",
+				"defindex": 6026,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6027",
+				"defindex": 6027,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6028",
+				"defindex": 6028,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6029",
+				"defindex": 6029,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6030",
+				"defindex": 6030,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6031",
+				"defindex": 6031,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6032",
+				"defindex": 6032,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6033",
+				"defindex": 6033,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6034",
+				"defindex": 6034,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6035",
+				"defindex": 6035,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6036",
+				"defindex": 6036,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6037",
+				"defindex": 6037,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6038",
+				"defindex": 6038,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6039",
+				"defindex": 6039,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6040",
+				"defindex": 6040,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6041",
+				"defindex": 6041,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6042",
+				"defindex": 6042,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6043",
+				"defindex": 6043,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6044",
+				"defindex": 6044,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6045",
+				"defindex": 6045,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6046",
+				"defindex": 6046,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6047",
+				"defindex": 6047,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6048",
+				"defindex": 6048,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6049",
+				"defindex": 6049,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6050",
+				"defindex": 6050,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6051",
+				"defindex": 6051,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6052",
+				"defindex": 6052,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6053",
+				"defindex": 6053,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6054",
+				"defindex": 6054,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6055",
+				"defindex": 6055,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6056",
+				"defindex": 6056,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6057",
+				"defindex": 6057,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6058",
+				"defindex": 6058,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6059",
+				"defindex": 6059,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6060",
+				"defindex": 6060,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6061",
+				"defindex": 6061,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6062",
+				"defindex": 6062,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6063",
+				"defindex": 6063,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6064",
+				"defindex": 6064,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6065",
+				"defindex": 6065,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6066",
+				"defindex": 6066,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6067",
+				"defindex": 6067,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6068",
+				"defindex": 6068,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6069",
+				"defindex": 6069,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6070",
+				"defindex": 6070,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6071",
+				"defindex": 6071,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6072",
+				"defindex": 6072,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6073",
+				"defindex": 6073,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6074",
+				"defindex": 6074,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6075",
+				"defindex": 6075,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6076",
+				"defindex": 6076,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6077",
+				"defindex": 6077,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6078",
+				"defindex": 6078,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6079",
+				"defindex": 6079,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6080",
+				"defindex": 6080,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6081",
+				"defindex": 6081,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6082",
+				"defindex": 6082,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6083",
+				"defindex": 6083,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6084",
+				"defindex": 6084,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6085",
+				"defindex": 6085,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6086",
+				"defindex": 6086,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6087",
+				"defindex": 6087,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6088",
+				"defindex": 6088,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6089",
+				"defindex": 6089,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6090",
+				"defindex": 6090,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6091",
+				"defindex": 6091,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6092",
+				"defindex": 6092,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6093",
+				"defindex": 6093,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6094",
+				"defindex": 6094,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6095",
+				"defindex": 6095,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6096",
+				"defindex": 6096,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6097",
+				"defindex": 6097,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6098",
+				"defindex": 6098,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item 6099",
+				"defindex": 6099,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "community_11 Key",
+				"defindex": 7000,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Operation Wildfire Case Key",
+				"item_description": "This key only opens Operation Wildfire Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_11",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_11.1eeb8a813ef7f45d274b8737171a95167fe4cd1d.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_11",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "coupon - bossyburger",
@@ -18101,6 +20542,29 @@
 					"weapon_p90",
 					"weapon_m4a1",
 					"weapon_revolver"
+				]
+				
+			},
+			{
+				"item_set": "set_community_11",
+				"name": "The Wildfire Collection",
+				"items": [
+					"weapon_bizon",
+					"weapon_elite",
+					"weapon_mac10",
+					"weapon_ssg08",
+					"weapon_tec9",
+					"weapon_usp_silencer",
+					"weapon_famas",
+					"weapon_fiveseven",
+					"weapon_glock",
+					"weapon_mag7",
+					"weapon_mp7",
+					"weapon_awp",
+					"weapon_deagle",
+					"weapon_nova",
+					"weapon_ak47",
+					"weapon_m4a1"
 				]
 				
 			},
