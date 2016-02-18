@@ -4,14 +4,14 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	<LibraryPlayAction defaultfocus="PlayActionFullWrapper">
-		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper" onactivate="LaunchGame( true );" >			
+		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper">
 			<Panel id="PlayActionContents">
 
 				<Label id="HeaderLabel" class="PlayActionHeaderLabel" text="#Library_Details_Play" />
 				<Panel class="PlayWrapper">
 					<Panel class="ButtonBodyWrapper" childfocusonhover="true">
-						<Image id="Animator2" class="StreamAnimator2" />			
-						<Image id="Animator3" class="StreamAnimator3" />		
+						<Image id="Animator2" class="StreamAnimator2" />
+						<Image id="Animator3" class="StreamAnimator3" />
 						<Panel id="ButtonBody" class="ButtonBody">
 							<Panel class="ButtonEdge">
 								<Panel id="ButtonGlow" class="ButtonGlow" />

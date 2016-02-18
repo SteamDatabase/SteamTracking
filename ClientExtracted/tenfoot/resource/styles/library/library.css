@@ -3311,6 +3311,11 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 0.0;
 }
 
+.AppGridItem.Shortcut.CustomAppImage.MissingAppImage #MissingImageLabel
+{
+	opacity: 0.8;
+}
+
 #ShortcutsGrid .AppGridItem Label
 {
 	opacity: 1.0;
@@ -5465,12 +5470,42 @@ LibrarySuggestionsRow:descendantfocus
 {
 	padding: 0px;
 }
+
+.SettingsLeftContent,
+.SettingsRightContent
+{
+	height: 100%;
+}
+
 .LibrarySettingsHeader
 {
 	color: #ffffff;
 	padding-bottom: 5px;
 }
 
+.LibrarySettingsSection
+{
+	flow-children: down;
+	width: 100%;
+	height: fit-childen;
+	margin-bottom: 28px;
+}
+
+#ControllerSection,
+#PreferencesSection,
+#SupportSection,
+#ContentSection
+{
+	visibility: collapse;
+}
+
+.ControllerSection #ControllerSection,
+.PreferencesSection #PreferencesSection,
+.SupportSection #SupportSection,
+.ContentSection #ContentSection
+{
+	visibility: visible;
+}
 
 LibraryAppDetails #Loading
 {

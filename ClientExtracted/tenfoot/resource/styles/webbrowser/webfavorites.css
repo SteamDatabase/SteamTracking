@@ -73,7 +73,7 @@ WebFavorites.Hidden
 	padding-bottom: 100px;
 }
 
-#FavoritePages MouseScrollRegion
+#FavoritePages > MouseScrollRegion
 {
 	opacity: 0.0;
 }
@@ -482,7 +482,6 @@ MouseScrollRegion
 
 #FavoritePages FavoritesGrid MouseScrollRegion
 {
-	opacity: 1.0;
 	y: -45px;
 }
 

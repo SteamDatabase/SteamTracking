@@ -2791,6 +2791,16 @@ EdgeScrollBar.Vertical .EdgeScrollButton,
 	opacity: 0.0;
 }
 
+.CursorVisible .MouseScrollContainer.HideScrollUp .TopMouseScrollRegion,
+.CursorVisible .MouseScrollContainer.HideScrollDown .BottomMouseScrollRegion,
+.CursorVisible .MouseScrollContainer.HideScrollLeft .LeftMouseScrollRegion,
+.CursorVisible .MouseScrollContainer.HideScrollRight .RightMouseScrollRegion,
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.AtMinimum #MinButton,
+.CursorVisible .EdgeScroller:descendantfocus:hover EdgeScrollBar.AtMaximum #MaxButton
+ {
+	 opacity: 0.2;
+ }
+
 EdgeScrollBar.Horizontal #MinButton,
 .LeftMouseScrollRegion
 {

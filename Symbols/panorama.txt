@@ -343,6 +343,12 @@
  B gConVarSpewThrottleUnconditionalTriggerCount
  B gZeroNetAdr
  B g_CompletionPortManager
+ B g_ConVarDragScrollAffordance
+ B g_ConVarDragScrollAffordanceVR
+ B g_ConVarDragScrollMinTime
+ B g_ConVarDragScrollMinTimeVR
+ B g_ConVarDragScrollVelocityMultiplier
+ B g_ConVarDragScrollVelocityMultiplierVR
  B g_ConVarEnableUDPHistory
  B g_ConVarIOCPGetCompletionBatchSize
  B g_ConVarMsgErrorDump

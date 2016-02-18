@@ -1505,6 +1505,7 @@
 	"Library_Details_LaunchVROverlay" "LAUNCH VR OVERLAY"
 	"Library_Details_Launch2D"		  "LAUNCH ON DESKTOP"
 	"Library_Details_Launching"		"LAUNCHING"
+	"Library_Details_Running"		"EXIT GAME"
 	"Library_Details_Purchase"		"PURCHASE"
 	"Library_Details_Renew"			"RENEW"
 	"Library_Details_FriendsWhoPlay"	"FRIENDS WHO PLAY"
@@ -1653,6 +1654,9 @@
 
 	"Library_Details_2DLaunchWarning_Title"				"WARNING"
 	"Library_Details_2DLaunchWarning_Desc"				"The title you are launching does not support VR. It will appear on your desktop and may affect VR performance."
+
+	"Library_Details_CloseVRGame_Title"					"Exit?"
+	"Library_Details_CloseVRGame_Desc"					"Please confirm you'd like to exit the current VR application."
 
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
 	"Library_Details_CommunityHubWhatIsIt"	"Community-made content ({d:ugccount} items)."
@@ -5460,6 +5464,7 @@
 	"SteamUI_AppTypeMusicInitialCaps"	"Music"
 	"SteamUI_AppTypeMusicPlural"		"music"
 	"SteamUI_AppTypeMusicInitialCapsPlural"	"Music"
+	"SteamUI_OpenVRApp"						"OpenVR Application"
 	"SteamUI_SteamControllerActionsBlockOutdatedTitle" "Controller Configuration Outdated"
 	"SteamUI_SteamControllerActionsBlockOutdatedDescription" "The developer of this game has made changes to the official configuration that might invalidate your current one.\n\nWe recommend selecting the official configuration to prevent any issues."
 
