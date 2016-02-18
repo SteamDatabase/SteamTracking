@@ -467,6 +467,7 @@
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
+ T CFileWriterThreadManager::~CFileWriterThreadManager()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
@@ -584,6 +585,7 @@
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
  T CSteamUser::OnLogonFailure(SteamServerConnectFailure_t*)
  T CSteamUser::OnSteamLogon(SteamServersConnected_t*)
+ T CSteamUser::PromptForAndSetPassword(char const*)
  T CSteamUser::Validate(CValidator&, char const*)
  T CSteamUser::WaitForLicencesBlocking()
  T CSteamUser::~CSteamUser()
@@ -1146,9 +1148,11 @@
  V_FixSlashes
  V_IsAbsolutePath
  V_MakeAbsolutePath
+ V_ReplaceBadFilenameCharactersInPlace
  V_StripFilename
  V_UTF16ToUTF32
  V_UTF32ToUTF8
+ V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
  V_UnqualifiedFileName
  V_atof
  V_atoi
@@ -1157,6 +1161,7 @@
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
+ V_strlower_fast
  V_strncat
  V_strncmp
  V_strncpy
@@ -1192,7 +1197,6 @@
  __stdinp
  __stdoutp
  __toupper
- _strlwr
  alphasort$INODE64
  atoi
  atoll
@@ -1214,7 +1218,8 @@
  b LogMsg(char const*, ...)::autoMutex__
  b PchWrapText(char const*, int)::s_rgchTextBuf
  b SetAppLogID(unsigned int, char const*)::autoMutex__
- b StaticFileWriterThread()::s_FileWriterThread
+ b StaticFileWriterThread()::s_FileWriterThreadManager
+ b StaticFileWriterThread()::s_pFileWriterThread
  b api_logging_command
  b app_build_all_depots_command
  b app_info_request_command
@@ -1245,6 +1250,7 @@
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
+ b g_pClientGameNotifications
  b g_pClientGameStats
  b g_pClientHTMLSurface
  b g_pClientHTTP
@@ -1260,7 +1266,6 @@
  b g_pClientScreenshots
  b g_pClientShortcuts
  b g_pClientStreamClient
- b g_pClientTabletop
  b g_pClientUGC
  b g_pClientUnifiedMessages
  b g_pClientUser
@@ -1276,7 +1281,8 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for LogMsg(char const*, ...)::autoMutex__
  b guard variable for SetAppLogID(unsigned int, char const*)::autoMutex__
- b guard variable for StaticFileWriterThread()::s_FileWriterThread
+ b guard variable for StaticFileWriterThread()::s_FileWriterThreadManager
+ b guard variable for StaticFileWriterThread()::s_pFileWriterThread
  b help_command
  b info_command
  b k_InvalidClientID
@@ -1430,6 +1436,8 @@
  t workshop_build_item(void*, ConParams&, ConCommand&)
  t workshop_create_legacy_item(void*, ConParams&, ConCommand&)
  t workshop_download_item(void*, ConParams&, ConCommand&)
+ tcgetattr
+ tcsetattr
  time
  typeinfo for SteamThreadTools::CThread
  unlink
