@@ -47,6 +47,13 @@ h2, .title2 {
 	color: #ca5029;
 	font-size: 10px;
 }
+.valveArea,
+.landingRightCol .panel.valveArea{
+	background-color:#472e27;
+}
+.valveArea.padded {
+	padding: 8px;
+}
 
 h2 .valveOnly {
 	vertical-align: middle;
