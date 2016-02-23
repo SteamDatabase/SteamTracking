@@ -8677,7 +8677,6 @@
  T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
  T CryptoPP::CpuId(unsigned int, unsigned int*)
  T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::Exception(CryptoPP::Exception::ErrorType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CryptoPP::Exception::what() const
  T CryptoPP::Exception::~Exception()
  T CryptoPP::FIPS_140_2_ComplianceEnabled()

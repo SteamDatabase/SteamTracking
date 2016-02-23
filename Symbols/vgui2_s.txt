@@ -475,6 +475,7 @@
  R CryptoPP::SHA256_K
  R SHA1_version
  R SHA256_version
+ R SHA512_version
  R STACK_version
  R lh_version
  R typeinfo name for CBaseSurface
@@ -2575,6 +2576,15 @@
  T SHA256_Init
  T SHA256_Transform
  T SHA256_Update
+ T SHA384
+ T SHA384_Final
+ T SHA384_Init
+ T SHA384_Update
+ T SHA512
+ T SHA512_Final
+ T SHA512_Init
+ T SHA512_Transform
+ T SHA512_Update
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
  T SaveBufferToFile(IBaseFileSystem*, char const*, CUtlBuffer const&, char const*)
  T SetScissorRect(int, int, int, int)
@@ -3080,6 +3090,7 @@
  T private_AES_set_encrypt_key
  T sha1_block_data_order
  T sha256_block_data_order
+ T sha512_block_data_order
  T sk_delete
  T sk_delete_ptr
  T sk_dup
@@ -3531,6 +3542,8 @@
  b ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
  b SHA224.m
  b SHA256.m
+ b SHA384.m
+ b SHA512.m
  b SYS_str_reasons
  b _ZL13g_ScissorRect.0
  b _ZL13g_ScissorRect.1

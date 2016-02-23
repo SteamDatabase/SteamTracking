@@ -666,15 +666,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/SDL2/SDL_rect.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/cryptlib.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/hmac.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/hrtimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/misc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/osrng.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/pwdbased.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/secblock.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/seckey.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/sha.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(coded_stream.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(common.o)
@@ -724,8 +719,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(filters.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(fips140.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hex.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hmac.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hrtimer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(iterhash.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(misc.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(osrng.o)

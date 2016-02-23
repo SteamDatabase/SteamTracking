@@ -9,11 +9,6 @@ enum EStreamChannel {
 	k_EStreamChannelDataChannelStart = 3;
 }
 
-enum EStreamDiscoveryMessage {
-	k_EStreamDiscoveryRequest = 1;
-	k_EStreamDiscoveryResponse = 2;
-}
-
 enum EStreamControlMessage {
 	k_EStreamControlAuthenticationRequest = 1;
 	k_EStreamControlAuthenticationResponse = 2;
@@ -250,14 +245,6 @@ enum ELogFileType {
 	k_ELogFileSystemBoot = 0;
 	k_ELogFileSystemReset = 1;
 	k_ELogFileSystemDebug = 2;
-}
-
-message CDiscoveryRequest {
-	optional bytes token = 1;
-}
-
-message CDiscoveryResponse {
-	optional string name = 1;
 }
 
 message CAuthenticationRequestMsg {

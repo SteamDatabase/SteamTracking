@@ -63,7 +63,8 @@ WebController.SteamPad #ActualHomeButton
 	position: 24px 8px 0px;
 }
 
-.CursorVisible WebController.SteamPad #MouseBackButton
+.CursorVisible WebController.SteamPad #MouseBackButton,
+.CursorVisible WebController.SteamPad #ActualHomeButton
 {
 	opacity: 0.0;
 }

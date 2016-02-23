@@ -121,6 +121,7 @@ message CMsgRemoteDeviceStreamingResponse {
 	required .ERemoteDeviceStreamingResult result = 2 [default = k_ERemoteDeviceStreamingSuccess];
 	optional uint32 port = 3;
 	optional bytes encrypted_session_key = 4;
+	optional int32 virtualhere_licensed_device_count = 5;
 }
 
 message CMsgRemoteDeviceProofRequest {

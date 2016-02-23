@@ -184,7 +184,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/pubkey.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/rsa.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/secblock.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/simple.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.6.2/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(coded_stream.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(common.o)

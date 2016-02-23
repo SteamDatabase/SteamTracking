@@ -1492,6 +1492,9 @@
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
  T CCrypto::InitGlobals()
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
+ T CCryptoKeyBase::EnsureCapacity(unsigned int)
+ T CCryptoKeyBase::SetFromHexEncodedString(char const*)
+ T CCryptoKeyBase::~CCryptoKeyBase()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
@@ -1827,9 +1830,6 @@
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRL_DIST_POINTS_free
  T CRL_DIST_POINTS_new
- T CRSAKeyBase::EnsureCapacity(unsigned int)
- T CRSAKeyBase::SetFromHexEncodedString(char const*)
- T CRSAKeyBase::~CRSAKeyBase()
  T CRTime::CRTime()
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
@@ -6522,7 +6522,6 @@
  T std::__1::__vector_base<char const*, std::__1::allocator<char const*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::~__vector_base()
- T std::__1::__vector_base<unsigned int, std::__1::allocator<unsigned int> >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<int>(int, unsigned int)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
@@ -6567,7 +6566,6 @@
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::resize(unsigned long)
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__swap_out_circular_buffer(std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>&)
  T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::__append(unsigned long)
- T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::allocate(unsigned long)
  T std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >::vector(std::__1::vector<unsigned int, std::__1::allocator<unsigned int> > const&)
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)

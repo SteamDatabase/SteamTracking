@@ -3640,6 +3640,7 @@
  R CryptoPP::SHA256_K
  R SHA1_version
  R SHA256_version
+ R SHA512_version
  R STACK_version
  R _pcre_OP_lengths
  R _pcre_default_tables
@@ -9712,6 +9713,15 @@
  T SHA256_Init
  T SHA256_Transform
  T SHA256_Update
+ T SHA384
+ T SHA384_Final
+ T SHA384_Init
+ T SHA384_Update
+ T SHA512
+ T SHA512_Final
+ T SHA512_Init
+ T SHA512_Transform
+ T SHA512_Update
  T ScreenshotHotKeyPressed()
  T ScreenshotToLoad_t::ScreenshotToLoad_t()
  T ScreenshotToLoad_t::Validate(CValidator&, char const*)
@@ -10505,6 +10515,7 @@
  T protobuf_ShutdownFile_htmlmessages_2eproto()
  T sha1_block_data_order
  T sha256_block_data_order
+ T sha512_block_data_order
  T sk_delete
  T sk_delete_ptr
  T sk_dup
@@ -14234,6 +14245,8 @@
  b QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyQueueID
  b SHA224.m
  b SHA256.m
+ b SHA384.m
+ b SHA512.m
  b SYS_str_reasons
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::bLastVisibilityValue
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::dwLastSend

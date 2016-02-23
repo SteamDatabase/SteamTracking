@@ -3395,6 +3395,7 @@
  R CryptoPP::SHA256_K
  R SHA1_version
  R SHA256_version
+ R SHA512_version
  R STACK_version
  R jpeg_aritab
  R jpeg_natural_order
@@ -5199,6 +5200,9 @@
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
+ T CCryptoKeyBase::EnsureCapacity(unsigned int)
+ T CCryptoKeyBase::SetFromHexEncodedString(char const*)
+ T CCryptoKeyBase::~CCryptoKeyBase()
  T CDLLValidate::Validate(CValidator&)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDefOps<CSteamID>::LessFunc(CSteamID const&, CSteamID const&)
@@ -7466,9 +7470,6 @@
  T CProportionalIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
- T CRSAKeyBase::EnsureCapacity(unsigned int)
- T CRSAKeyBase::SetFromHexEncodedString(char const*)
- T CRSAKeyBase::~CRSAKeyBase()
  T CRYPTO_THREADID_cmp
  T CRYPTO_THREADID_cpy
  T CRYPTO_THREADID_current
@@ -9118,7 +9119,6 @@
  T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
  T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
  T CryptoPP::Source::PumpAll2(bool)
- T CryptoPP::Source::Source(CryptoPP::BufferedTransformation*)
  T CryptoPP::Source::~Source()
  T CryptoPP::SourceTemplate<CryptoPP::StringStore>::GetAutoSignalPropagation() const
  T CryptoPP::SourceTemplate<CryptoPP::StringStore>::IsolatedInitialize(CryptoPP::NameValuePairs const&)
@@ -9441,6 +9441,15 @@
  T SHA256_Init
  T SHA256_Transform
  T SHA256_Update
+ T SHA384
+ T SHA384_Final
+ T SHA384_Init
+ T SHA384_Update
+ T SHA512
+ T SHA512_Final
+ T SHA512_Init
+ T SHA512_Transform
+ T SHA512_Update
  T ScrollBar_Horizontal_Factory()
  T ScrollBar_Vertical_Factory()
  T SharedLibraryNotification::ChainToAnimationMap()
@@ -10196,6 +10205,7 @@
  T protobuf_ShutdownFile_htmlmessages_2eproto()
  T sha1_block_data_order
  T sha256_block_data_order
+ T sha512_block_data_order
  T sk_delete
  T sk_delete_ptr
  T sk_dup
@@ -13947,6 +13957,8 @@
  b OPENSSL_init.done
  b SHA224.m
  b SHA256.m
+ b SHA384.m
+ b SHA512.m
  b SYS_str_reasons
  b add_lock_callback
  b added
