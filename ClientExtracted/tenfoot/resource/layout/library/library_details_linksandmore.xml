@@ -19,7 +19,12 @@
                         <Image src="file://{images}/controller_support_full.png" />
 						 <Label id="ManageControllersLabel" text="#Library_Details_ManageControllers"/>
 					</Button>
-
+					
+					<Button id="AppControllerSettingsButton" class="NxLeftNavButtonAction">
+												<Image src="file://{images}/controller_support_full.png" />
+							<Label id="AppControllerSettingsLabel" text="#Library_Details_AppControllerSettings"/>
+					</Button>
+					
 					<Button id="OpenKeyboardButton" class="NxLeftNavButtonAction">
                         <Image src="file://{images}/icon_keyboard.png" />
 						<Label text="#Overlay_OpenKeyboard" />

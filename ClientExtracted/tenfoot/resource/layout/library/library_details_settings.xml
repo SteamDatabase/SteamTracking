@@ -19,7 +19,9 @@
 					<Button id="ManageControllersButton" class="Button">
 						<Label id="ManageControllersLabel" text="#Library_Details_ManageControllers"/>
 					</Button>
-					<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>				
+					<Button id="AppControllerSettingsButton" class="Button">
+						<Label id="AppControllerSettingsLabel" text="#Library_Details_AppControllerSettings"/>
+					</Button>			
 				</Panel>
 
 				<Panel id="PreferencesSection" class="LibrarySettingsSection">
@@ -90,6 +92,13 @@
 					</Button>
 					<Button id="BetaButton" class="Button">
 						<Label id="BetaLabel" class="LongDesc" text="#Library_Details_OptIntoBeta" />
+					</Button>
+				</Panel>
+				
+				<Panel id="MiscSection" class="LibrarySettingsSection">
+					<Label id="MiscLabel" class="LibrarySettingsHeader" text="#Library_Settings_Misc" />
+					<Button id="StorePageButton" class="Button">
+						<Label id="StorePageLabel" text="#Library_Details_StorePage" />
 					</Button>
 				</Panel>
 

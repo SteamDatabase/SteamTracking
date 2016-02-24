@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<EditAppLaunchOptions class="TenfootMsgBox" defaultfocus="Rumble">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    		<Label class="StdTitle" text="#Library_AppControllerSettings_Title" />
+
+			<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>
+			<Panel id="" class="HorizontalSpace" />
+			<Panel id="" class="HorizontalSpace" />
+			<ToggleButton class="CheckBox" id="EnableRumble" text="#Library_Details_EnableRumble" selectionpos="auto" onactivate="ToggleEnableRumble()"/>
+			<Panel id="" class="HorizontalSpace" />
+			<Panel id="" class="HorizontalSpace" />
+			<Panel id="Rumble">
+
+				<Label class="SubTitle" text="#Library_SetAppRumbleFrequency_Label" />
+				<DropDown id="RumbleFrequency" class="AppControllerSettingsDropdown"/>
+			</Panel>
+
+			
+            <Panel id="MsgBoxButtons">
+                <Button class="Button" onactivate="SetAppSteamControllerSettings();">
+                    <Label text="#UI_OK" />
+                </Button>
+                <Button class="Button" onactivate="ButtonCancel();">
+                    <Label text="#UI_Cancel" />
+                </Button>
+            </Panel>        
+        </Panel>
+	</EditAppLaunchOptions>
+</root>

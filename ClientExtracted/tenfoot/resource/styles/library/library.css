@@ -3544,6 +3544,32 @@ DropDown Label
 	color: applabel;
 }
 
+.AppControllerSettingsDropdown
+{
+	width: 100%;
+	vertical-align: middle;
+    margin-top: 16px;
+    z-index: msgbox_contextmenu_zindex;
+}
+
+.AppControllerSettingsDropdown, DropDownMenu.DropDownMenuVisible
+{
+    max-height: 450px;
+    width: 780px;
+    z-index: msgbox_contextmenu_zindex;
+}
+
+.AppControllerSettingsDropdown DropDown
+{
+	width: 100%;
+    height: 46px;
+	padding-left: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 1px;
+    z-index: msgbox_contextmenu_zindex;
+}
+
 
 .GridBackground
 {
@@ -5494,7 +5520,8 @@ LibrarySuggestionsRow:descendantfocus
 #ControllerSection,
 #PreferencesSection,
 #SupportSection,
-#ContentSection
+#ContentSection,
+#MiscSection
 {
 	visibility: collapse;
 }
@@ -5502,7 +5529,8 @@ LibrarySuggestionsRow:descendantfocus
 .ControllerSection #ControllerSection,
 .PreferencesSection #PreferencesSection,
 .SupportSection #SupportSection,
-.ContentSection #ContentSection
+.ContentSection #ContentSection,
+.MiscSection #MiscSection
 {
 	visibility: visible;
 }

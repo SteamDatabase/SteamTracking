@@ -1564,6 +1564,8 @@
 	"Library_Details_RemoveIcon_Confirm"	"YES"
 	"Library_Details_RemoveIcon_Cancel"	"CANCEL"
 	"Library_Details_Settings_Title"		"{s:appname} Settings"
+	"Library_Details_StorePage"		"View Store Page"
+
 
 	"Library_Details_CommunityContent_All"				 "All"
 	"Library_Details_CommunityContent_Screenshots"		 "Screenshots"
@@ -1574,6 +1576,7 @@
 	"Library_Details_CommunityContent_News"				 "News"
 	"Library_Details_CommunityContent_Guides"			 "Guides"
 	"Library_Details_CommunityContent_Reviews"			 "Reviews"
+	
 
 	"Controller_FirstTimeLaunch_String1"	"This is your first time playing this"
 	"Controller_FirstTimeLaunch_String2"	"game with a Steam Controller. Press"
@@ -2090,6 +2093,19 @@
 	"Library_Details_ModeShift_Title_LeftPadClick"		"Left Pad Click"
 	"Library_Details_ModeShift_Title_RightPadClick"		"Right Pad Click"
 
+	"Library_AppControllerSettings_Title"	"Controller Application Options"
+	"Library_Details_EnableRumble"			"[Experimental] Rumble Emulation"
+	"Library_SetAppRumbleFrequency_Label"	"Rumble Emulation Frequency Setting"
+
+	"Library_Controller_Property_Value_Rumble_Frequency_ExtraLow"	"Extra Low"
+	"Library_Controller_Property_Value_Rumble_Frequency_Low"		"Low"
+	"Library_Controller_Property_Value_Rumble_Frequency_MediumLow"	"Medium Low"
+	"Library_Controller_Property_Value_Rumble_Frequency_Default"	"Default"
+	"Library_Controller_Property_Value_Rumble_Frequency_MediumHigh"	"Medium High"
+	"Library_Controller_Property_Value_Rumble_Frequency_High"		"High"
+	"Library_Controller_Property_Value_Rumble_Frequency_ExtraHigh"	"Extra High"
+	"Library_Controller_Property_Value_Rumble_Frequency_8Bit"		"8-Bit"
+
 	"Library_Controller_Property_Value_On"				"On"
 	"Library_Controller_Property_Value_Off"				"Off"
 	"Library_Controller_Property_Value_AnalogEmulation"	"Analog Emulation"
@@ -2171,6 +2187,7 @@
 	"Library_Details_Controller_EntireLibrary"			"Your Other Games"
 	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
 	"Library_Details_ManageControllers"					"Controller Configuration"
+	"Library_Details_AppControllerSettings"				"Controller Application Options"
 
 	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
 	"Library_Details_Remove_Binding_Description"		"Would you like to remove this controller binding?"
@@ -2312,6 +2329,7 @@
 	"Library_Settings_ControllerSettings"	"Steam Controller"
 	"Library_Settings_Support"				"Support"
 	"Library_Settings_Content"				"Content"
+	"Library_Settings_Misc"					"More"
 
 	"Library_TagHeader" "Narrow By Tag"
 	"Library_CategoryHeader" "Your Categories"
