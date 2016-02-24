@@ -2578,3 +2578,43 @@ html, body { height:100%; }
 	color: #aaaaaa;
 	padding: 5px;
 }
+
+.bundleModal .enter_bundle_name {
+	width: 300px;
+}
+.bundleModal .enter_bundle_discount {
+	width: 30px;
+}
+
+.bundleModal h3, .bundleModal h4 {
+	text-transform: none;
+	font-weight: normal;
+	color: #ffffff;
+	font-size: 16px;
+}
+.bundleModal h4 {
+	font-size: 14px;
+}
+
+.bundleModal .bundleModalRow {
+	margin: 16px 0;
+}
+
+.bundleModal .bundleModalDesc {
+	margin-bottom: 6px;
+}
+
+.bundleModal .bundleModalRadioOption {
+	padding-left: 40px;
+	margin: 12px 0;
+}
+
+.bundleModal .bundleModalRadioOption input {
+	float: left;
+}
+
+.bundleModal .bundleModalRadioOption label {
+	display: block;
+	overflow: hidden;
+	padding-left: 4px;
+}

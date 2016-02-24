@@ -401,7 +401,7 @@ function ValidateUserPaymentInfo( baseURL )
 		{
 			errorString += 'Please enter a valid city.<br/>';
 		}
-		if ( $('country').value == 'US' )
+		if ( $('country').value == 'US' || $('country').value == 'UA' )
 		{
 			if ( !IsValidRequiredField( "#zip", gValidFieldAlphaNumericRegex ) )
 			{
@@ -529,7 +529,7 @@ function validateFields()
 			errorString += 'Please enter a valid city.<br/>';
 		}
 
-		if ( $('country').value == 'US' )
+		if ( $('country').value == 'US' || $('country').value == 'UA' )
 		{
 			if ( $( 'zip' ).value.length < 1 )
 			{
@@ -559,7 +559,7 @@ function validateFields()
 		{
 			errorString += 'Please enter a valid city for your bank.<br/>';
 		}
-		if ( $('bankcountry').value == 'US' )
+		if ( $('bankcountry').value == 'US' || $('bankcountry').value == 'UA' )
 		{
 			if ( $( 'bankzip' ).value.length < 1 )
 			{

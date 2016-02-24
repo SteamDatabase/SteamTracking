@@ -85,6 +85,91 @@ body.sale_page_background {
 	font-weight: normal;
 }
 
+.sale_page_vivepromo_main_block
+{
+	padding: 20px 0px 5px 15px;
+	background-color: rgba( 31, 85, 114, 0.7 );
+}
+
+.sale_page_block.vivepromo
+{
+	float: left;
+	margin-bottom: 15px;
+	margin-right: 1px;
+}
+
+.sale_page_vivepromo_block_centering
+{
+	margin: 0 auto;
+}
+
+.sale_page_vivepromo_block_centering.items_1
+{
+	width: 33%;
+}
+
+.sale_page_vivepromo_block_centering.items_2
+{
+	width: 67%;
+}
+
+.sale_page_name_link.vivepromo {
+	max-width: 232px;
+	float: left;
+	margin-top: 5px;
+}
+
+.sale_page_os_vivepromo {
+	float: right;
+	margin-top: 7px;
+	margin-right: 15px;
+}
+
+.sale_page_vivepromo_promo_header {
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	font-size: 18px;
+	color: #53c5cf;
+	margin-bottom: 10px;
+}
+
+.sale_page_vivepromo_promo_header.item_header
+{
+	margin-left: 15px;
+	margin-top: 28px;
+	margin-right: 5px;
+}
+
+.sale_page_browse_more_items
+{
+	margin: 0 auto 50px auto;
+	width: 300px;
+	cursor: pointer;
+}
+
+.sale_page_browse_more_items_button
+{
+	-webkit-border-radius: 35;
+	-moz-border-radius: 35;
+	border-radius: 35px;
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 16px;
+	background: #13b6e2;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.sale_page_browse_more_items_button:hover {
+	background: #12a8e3;
+	text-decoration: none;
+}
+
+.sale_page_browse_more_items_button a
+{
+	color: #ffffff;
+}
+
 .sale_page_release_date {
 	color: #BBBBBB;
 	line-height: 22px;
@@ -195,6 +280,45 @@ html.responsive .btnv6_blue_blue_innerfade {
 	{
 		background-position: center center;
 		width: auto;
+	}
+
+	html.responsive .sale_page_block.vivepromo
+	{
+		width: 100%;
+	}
+
+	html.responsive .sale_page_name_link.vivepromo {
+		margin: 0;
+		max-width: none;
+		float: none;
+	}
+
+	html.responsive .sale_page_os_vivepromo {
+		float: none;
+		margin-top: 0;
+	}
+
+	html.responsive .sale_page_vivepromo_promo_header {
+		margin-left: 0;
+	}
+
+	html.responsive .sale_page_vivepromo_promo_header.item_header {
+		margin-left: 2%;
+	}
+
+	html.responsive .sale_page_vivepromo_main_block {
+		padding: 15px 2% 0px 2%;
+	}
+
+	html.responsive .sale_page_vivepromo_block_centering
+	{
+		margin: inherit;
+	}
+
+	html.responsive .sale_page_vivepromo_block_centering.items_1,
+	html.responsive .sale_page_vivepromo_block_centering.items_2
+	{
+		width: 100%;
 	}
 }
 

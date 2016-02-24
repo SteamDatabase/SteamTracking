@@ -24,6 +24,15 @@ center
 
 }
 
+.reported_item_checkbox
+{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 0px;
+	bottom: 0px;
+}
+
 /* header */
 .apphub_HeaderTop
 {
@@ -619,6 +628,7 @@ a.apphub_more_friends_who_play:hover
 	max-width: 948px;
 	padding: 0 1%;
 	margin: 0 auto;
+	text-align: left;
 }
 
 .apphub_Discussion_Content

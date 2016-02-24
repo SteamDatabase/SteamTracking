@@ -339,12 +339,17 @@ function GameHover( elem, event, divHover, rgHoverData )
 		if ( rgHoverData['type'] == 'app' )
 		{
 			strTargetPrefix = 'hover_app_';
-			strUrlTarget = 'apphover' + ( bPublic ? 'public' : '' ) + '/';
+			strUrlTarget = 'apphover' + ( bPublic ? 'public' : '' ) + '/' + rgHoverData['id'];
 		}
 		else if ( rgHoverData['type'] == 'sub' )
 		{
 			strTargetPrefix = 'hover_sub_';
-			strUrlTarget = 'subhover' + ( bPublic ? 'public' : '' ) + '/';
+			strUrlTarget = 'subhover' + ( bPublic ? 'public' : '' ) + '/' + rgHoverData['id'];
+		}
+		else if ( rgHoverData['type'] == 'bundle' )
+		{
+			strTargetPrefix = 'hover_bundle_';
+			strUrlTarget = 'bundle/' + rgHoverData['id'] + '/hover' + ( bPublic ? '_public' : '' ) + '/';
 		}
 		else
 		{
@@ -376,7 +381,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 			window.setTimeout( function() {
 				if ( oElemState.bWantsHover && !oElemState.bAjaxRequestMade ) {
 					oElemState.bAjaxRequestMade = true;
-					$J.get( 'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'], rgAjaxParams ).done( function( html )
+					$J.get( 'http://store.steampowered.com/' + strUrlTarget, rgAjaxParams ).done( function( html )
 					{
 						var $Content = $J(html);
 						$Content.hide();

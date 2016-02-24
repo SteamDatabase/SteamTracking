@@ -1001,7 +1001,8 @@ var CBigPictureInventory = (function()
 	{
 		var gridWrapper = this.m_pGridWrapper;
 		gridWrapper.AddClass( "NoSearch" );
-		gridWrapper.AddClass( "InventoryLoading" );
+		this.m_pContainer.RemoveClass( "InventoryLoaded" );
+		this.m_pContainer.AddClass( "InventoryLoading" );
 		this.ClearToEmptyInventory();
 
 		gridWrapper.SetDialogVariable( "appname", this.m_rgAppContextData[appid].name );
@@ -1185,7 +1186,8 @@ var CBigPictureInventory = (function()
 		var g = this.m_pItemGrid;
 		g.SetIgnoreFastMotion( true );
 
-		this.m_pGridWrapper.RemoveClass( "InventoryLoading" );
+		this.m_pContainer.RemoveClass( "InventoryLoading" );
+		this.m_pContainer.AddClass( "InventoryLoaded" );
 
 		var rgToCreate = [];
 		var lastKey = Object.keys(rgSorted)[Object.keys(rgSorted).length - 1];
@@ -1228,10 +1230,10 @@ var CBigPictureInventory = (function()
 
 		if ( Object.keys(rgSorted).length == 0 )
 		{
-			this.m_pGridWrapper.RemoveClass( "InventoryLoading" );
+			this.m_pContainer.RemoveClass( "InventoryLoading" );
 		}
 
-		this.m_pGridWrapper.SetHasClass( "EmptyInventory", Object.keys(rgSorted).length == 0 );
+		this.m_pContainer.SetHasClass( "EmptyInventory", Object.keys(rgSorted).length == 0 );
 
 		// Update available tags/counts for items with tags
 		this.m_tags = this.m_InventoryCache.GetTags( appid, rgContexts );

@@ -711,6 +711,18 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background-repeat: no-repeat;
 }
 
+.unsubscribeIcon
+{
+	position: absolute;
+	top: 0px;
+	left: 8px;
+	height: 30px;
+	width: 16px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-position: 0px -90px;
+	background-repeat: no-repeat;
+}
+
 #SubscribeItemBtn.toggled .subscribeIcon
 {
 	background-position: 0px -60px;

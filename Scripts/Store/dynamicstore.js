@@ -38,6 +38,7 @@ GDynamicStore = {
 	s_rgIgnoredApps: {},
 	s_rgIgnoredPackages: {},
 
+	s_rgPersonalizedBundleData: {},
 	s_rgPlaytestData: {},
 
 	s_rgfnOnReadyCallbacks: [],
@@ -264,15 +265,19 @@ GDynamicStore = {
 		}
 
 		// locate elements with dynamic store data
-		var strSelector = '[data-ds-appid], [data-ds-packageid]';
+		var strSelector = '[data-ds-appid], [data-ds-packageid], [data-ds-bundleid]';
 
 		var $DynamicElements;
 		if ( $Selector )
 		{
 			if ( $Selector.is( strSelector ) )
+			{
 				$DynamicElements = $Selector;
+			}
 			else
+			{
 				$DynamicElements = $Selector.find( strSelector );
+			}
 		}
 		else
 		{
@@ -291,10 +296,38 @@ GDynamicStore = {
 			var bWanted = false;
 			var bInCart = false;
 
+			var unBundleID = $El.data('dsBundleid');
 			var unPackageID = $El.data('dsPackageid');
 			var strAppIDs = $El.data('dsAppid');
 
-			if ( unPackageID )
+			if ( unBundleID )
+			{
+				var Bundle = GDynamicStore.GetPersonalizedBundleData( unBundleID, $El.data('dsBundleData') );
+				if ( !Bundle )	// no data available
+					return;
+
+				if ( Bundle.m_cUserItemsInBundle == 0 )
+				{
+					bOwned = true;
+				}
+				else
+				{
+					// pull out all the appids and let the strAppIDs code below handle it
+					var rgAllAppIDsInBundle = [];
+					for( var iBundleItem = 0; iBundleItem < Bundle.m_rgBundleItems.length; iBundleItem++ )
+					{
+						var BundleItem = Bundle.m_rgBundleItems[iBundleItem];
+						for ( var iApp = 0; iApp < BundleItem.m_rgIncludedAppIDs.length; iApp++ )
+						{
+							rgAllAppIDsInBundle.push( BundleItem.m_rgIncludedAppIDs[iApp] );
+						}
+					}
+					strAppIDs = rgAllAppIDsInBundle.join(',');
+				}
+
+				GDynamicStore.UpdateDynamicBundleElements( Bundle, $El );
+			}
+			else if ( unPackageID )
 			{
 				if ( GDynamicStore.s_rgPackagesInCart[unPackageID] )
 					bInCart = true;
@@ -348,27 +381,196 @@ GDynamicStore = {
 				$El.appear();
 			}
 
-			// owned and wishlist are mutually exclusive
-			if ( bOwned )
+			if ( !$El.hasClass('ds_no_flags') )
 			{
-				$El.addClass( 'ds_flagged ds_owned' );
-				$El.append( '<div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>');
-			}
-			else if ( bWanted )
-			{
-				$El.addClass( 'ds_flagged ds_wishlist' );
-				$El.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
-			}
+				// owned and wishlist are mutually exclusive
+				if ( bOwned )
+				{
+					$El.addClass( 'ds_flagged ds_owned' );
+					$El.append( '<div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>');
+				}
+				else if ( bWanted )
+				{
+					$El.addClass( 'ds_flagged ds_wishlist' );
+					$El.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
+				}
 
-			if ( bInCart )
-			{
-				$El.addClass( 'ds_flagged ds_incart' );
-				$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
+				if ( bInCart )
+				{
+					$El.addClass( 'ds_flagged ds_incart' );
+					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
+				}
 			}
 		});
 
+
 		// make sure that the elements are registered as "appearing" if necessary
 		$J.force_appear();
+	},
+
+	GetPersonalizedBundleData: function( unBundleID, rgPageBundleData )
+	{
+		if ( !GDynamicStore.s_rgPersonalizedBundleData[unBundleID] )
+		{
+			if ( !GStoreItemData.rgBundleData[ unBundleID ] && rgPageBundleData && rgPageBundleData.m_rgItems )
+			{
+				GStoreItemData.rgBundleData[ unBundleID ] = rgPageBundleData;
+			}
+
+			var Bundle = GStoreItemData.rgBundleData[ unBundleID ];
+			if ( !Bundle )
+				return null;
+
+			var BundleForUser = {
+				m_nDiscountPct: Bundle.m_nDiscountPct,
+				m_bMustPurchaseAsSet: Bundle.m_bMustPurchaseAsSet,
+				m_cTotalItemsInBundle: Bundle.m_rgItems.length,
+				m_cUserItemsInBundle: 0,
+				m_nPackageBasePriceInCentsWithBundleDiscount: 0,
+				m_nFinalPriceInCents: 0,
+				m_nFinalPriceInCentsWithBundleDiscount: 0,
+				m_rgBundleItems: []
+			};
+
+			for ( var i = 0; i < Bundle.m_rgItems.length; i++ )
+			{
+				var BundleItem = Bundle.m_rgItems[i];
+				if ( GDynamicStore.s_rgOwnedPackages[ BundleItem.m_nPackageID ] )
+					continue;
+
+				if ( BundleItem.m_rgIncludedAppIDs.length )
+				{
+					var bAllAppsOwned = true;
+					for ( var iApp = 0; iApp < BundleItem.m_rgIncludedAppIDs.length; iApp++ )
+					{
+						if ( !GDynamicStore.s_rgOwnedApps[ BundleItem.m_rgIncludedAppIDs[iApp] ] )
+						{
+							bAllAppsOwned = false;
+							break;
+						}
+					}
+
+					if ( bAllAppsOwned )
+						continue;
+				}
+
+				BundleForUser.m_cUserItemsInBundle++;
+				BundleForUser.m_nPackageBasePriceInCentsWithBundleDiscount += BundleItem.m_nBasePriceInCentsWithBundleDiscount;
+				BundleForUser.m_nFinalPriceInCents += BundleItem.m_nFinalPriceInCents;
+				BundleForUser.m_nFinalPriceInCentsWithBundleDiscount += BundleItem.m_nFinalPriceWithBundleDiscount;
+				BundleForUser.m_rgBundleItems.push( BundleItem );
+			}
+
+			GDynamicStore.s_rgPersonalizedBundleData[ unBundleID ] = BundleForUser;
+		}
+
+		return GDynamicStore.s_rgPersonalizedBundleData[ unBundleID ];
+	},
+
+	UpdateDynamicBundleElements: function( Bundle, $El )
+	{
+
+		var $DiscountBlocks = $El.find('.discount_block');
+
+		if ( !Bundle.m_rgBundleItems.length || ( Bundle.m_bMustPurchaseAsSet && Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle ) )
+		{
+			$DiscountBlocks.hide();
+
+			var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
+
+			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
+			if ( Bundle.m_bMustPurchaseAsSet )
+				strTooltip ='This offer is only available when buying all %s items at the same time.'.replace( /%s/, Bundle.m_cTotalItemsInBundle );
+
+			$CartBtn.addClass('btn_disabled' ).attr( 'href', 'javascript:void(0)' ).data('store-tooltip', strTooltip );
+			$CartBtn.parent().css( 'background', '#000000' );
+			BindStoreTooltip( $CartBtn );
+		}
+		else if ( !Bundle.m_bMustPurchaseAsSet )
+		{
+			var bShowDiscountPct = Bundle.m_nFinalPriceInCentsWithBundleDiscount < Bundle.m_nPackageBasePriceInCentsWithBundleDiscount;
+			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
+
+			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount ) );
+			if ( !bShowDiscountPct )
+			{
+				$DiscountBlocks.addClass('no_discount');
+				$DiscountBlocks.find('.discount_final_price' ).addClass('your_price' ).empty().append($J('<div/>', {'class': 'your_price_label'} ).text('Your Price:'), $J('<div/>' ).text( strFormattedFinalPrice ) );
+			}
+			else
+			{
+				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCentsWithBundleDiscount * 100 );
+				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
+				$DiscountBlocks.find('.discount_final_price' ).text( strFormattedFinalPrice );
+			}
+		}
+
+		var $Description = $El.find('.package_contents');
+		if ( $Description.length && $El.hasClass('dynamic_bundle_description') && !Bundle.m_bMustPurchaseAsSet )
+			GDynamicStore.BuildBundleDescription( Bundle, $Description );
+	},
+
+	BuildBundleDescription: function( Bundle, $Description )
+	{
+		if ( Bundle.m_cUserItemsInBundle == 0 )
+		{
+			// already own everything
+			$Description.html( '<b>Collection Complete!</b> %1$s/%2$s items from this collection are already in your library.'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+		}
+		else if ( Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle )
+		{
+			// own some but not all.
+			$Description.html( '<div>%1$s/%2$s items from this bundle are already in your library.</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+			$Description.append( '<div>Buy this bundle to save %1$s%% off the %2$s items you don\'t yet have!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
+
+			// add "complete the set" flag
+			$Description.parents('.dynamic_bundle_description' ).append( $J('<div/>', {'class': 'ds_flag ds_completetheset'} ).text('COMPLETE YOUR COLLECTION!') );
+		}
+		else
+		{
+			$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
+		}
+
+		var rgItemsWithCaps = [];
+		for ( var iBundleItem = 0; iBundleItem < Bundle.m_rgBundleItems.length; iBundleItem++ )
+		{
+			var unPackageID = Bundle.m_rgBundleItems[iBundleItem].m_nPackageID;
+			var PackageData = GStoreItemData.rgPackageData[ unPackageID];
+			if ( PackageData && PackageData.tiny_capsule )
+			{
+				rgItemsWithCaps.push( unPackageID );
+			}
+		}
+
+		if ( rgItemsWithCaps.length )
+		{
+			var bNeedToCollapse = rgItemsWithCaps.length > 5;
+			var $BundleContentsCtn = $J('<div/>', {'class': 'bundle_contents_preview'} );
+			if ( bNeedToCollapse )
+				$BundleContentsCtn.addClass( 'collapsed' );
+
+			var $BundleContentsPosition = $J('<div/>', {'class': 'bundle_contents_preview_position'} );
+			for ( var i = 0; i < rgItemsWithCaps.length; i++ )
+			{
+				var rgLinkParams = { 'class': 'bundle_contents_preview_item ds_collapse_flag' };
+				var Item = GStoreItemData.GetCapParams( 'bundle_component_preview', null, rgItemsWithCaps[i], rgLinkParams );
+				var $Link = $J('<a/>', rgLinkParams );
+
+				var $Img = $J('<img/>', {'src': Item.tiny_capsule, 'class': 'bundle_contents_preview_img' } );
+				if ( i > 0 && bNeedToCollapse )
+				{
+					var flPositionRight = 100 * i / rgItemsWithCaps.length;
+					$Link.addClass( 'floated' ).css( 'left', flPositionRight + '%' ).css('z-index', (rgItemsWithCaps.length - i));
+				}
+				$BundleContentsPosition.append( $Link.append( $Img ) );
+
+
+				GStoreItemData.BindHoverEvents( $Img.parent(), Item.appids.length == 1 ? Item.appids[0] : null, rgItemsWithCaps[i] );
+			}
+
+			$Description.append( $BundleContentsCtn.append($BundleContentsPosition) );
+			GDynamicStore.DecorateDynamicItems( $BundleContentsCtn );
+		}
 	},
 
 	PopulateRecommendedTagList: function()
@@ -432,7 +634,9 @@ GStoreItemData = {
 
 	rgAppData: {},
 	rgPackageData: {},
+	rgBundleData: {},
 	rgNavParams: {},
+	fnFormatCurrency: function( nValueInCents, bWholeUnitsOnly ) { return v_numberformat( nValueInCents / 100 ); },
 
 	AddStoreItemData: function ( rgApps, rgPackages )
 	{
@@ -457,6 +661,22 @@ GStoreItemData = {
 					GStoreItemData.MergeStoreItemData( GStoreItemData.rgPackageData[packageid], rgPackageData[packageid] );
 			}
 		}
+	},
+
+	AddBundleData: function( rgBundles )
+	{
+		if ( rgBundles && typeof rgBundles.length == 'undefined' )
+		{
+			for ( var bundleid in rgBundles )
+			{
+				GStoreItemData.rgBundleData[bundleid] = rgBundles[bundleid];
+			}
+		}
+	},
+
+	SetCurrencyFormatter: function( fn )
+	{
+		GStoreItemData.fnFormatCurrency = fn;
 	},
 
 	MergeStoreItemData: function( rgExistingItemData, rgItemData )
@@ -520,6 +740,11 @@ GStoreItemData = {
 		if ( !rgItemData )
 			return null;
 
+		if ( !unAppID && rgItemData['appids'] && rgItemData['appids'].length == 1 )
+		{
+			unAppID = rgItemData['appids'][0];
+		}
+
 		if ( unAppID )
 		{
 			params['data-ds-appid'] = unAppID;
@@ -530,7 +755,9 @@ GStoreItemData = {
 			params['data-ds-packageid'] = unPackageID;
 			params['href'] = GStoreItemData.GetPackageURL( unPackageID, strFeatureContext, nDepth );
 			if ( rgItemData['appids'] )
-				params['data-ds-appid'] = rgItemData['appids'];
+			{
+				params['data-ds-appid'] = rgItemData['appids'].join( ',' );
+			}
 		}
 
 		return rgItemData;

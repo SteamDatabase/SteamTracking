@@ -322,7 +322,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 		
-		 window.open( 'http://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+		 window.open( 'http://store.steampowered.com//cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	} 
 	catch( e ) 
 	{
@@ -606,8 +606,8 @@ function InitializeTransaction()
 		}
 		else if ( g_bIsInOverlay )
 		{
-						 			$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
-					}		
+						$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+		}
 		else
 		{
 			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
@@ -620,8 +620,8 @@ function InitializeTransaction()
 			}
 			else
 			{
-												$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
-							}
+								$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+			}
 		}
 
 		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
@@ -2399,17 +2399,17 @@ g_rgPaymentMethodsToToggle[31] = 'denizbank';
 g_rgPaymentMethodsToToggle[32] = 'ptt';
 g_rgPaymentMethodsToToggle[33] = 'cashu';
 g_rgPaymentMethodsToToggle[34] = 'onecard';
-g_rgPaymentMethodsToToggle[34] = 'pse';
-g_rgPaymentMethodsToToggle[34] = 'exito';
-g_rgPaymentMethodsToToggle[34] = 'efecty';
-g_rgPaymentMethodsToToggle[34] = 'baloto';
-g_rgPaymentMethodsToToggle[34] = 'pinvalidda';
-g_rgPaymentMethodsToToggle[34] = 'mangirkart';
-g_rgPaymentMethodsToToggle[34] = 'bancocreditodeperu';
-g_rgPaymentMethodsToToggle[34] = 'bbvacontinental';
-g_rgPaymentMethodsToToggle[34] = 'safetypay';
-g_rgPaymentMethodsToToggle[34] = 'pagoefectivo';
-g_rgPaymentMethodsToToggle[34] = 'trustly';
+g_rgPaymentMethodsToToggle[35] = 'pse';
+g_rgPaymentMethodsToToggle[36] = 'exito';
+g_rgPaymentMethodsToToggle[37] = 'efecty';
+g_rgPaymentMethodsToToggle[38] = 'baloto';
+g_rgPaymentMethodsToToggle[39] = 'pinvalidda';
+g_rgPaymentMethodsToToggle[40] = 'mangirkart';
+g_rgPaymentMethodsToToggle[41] = 'bancocreditodeperu';
+g_rgPaymentMethodsToToggle[42] = 'bbvacontinental';
+g_rgPaymentMethodsToToggle[43] = 'safetypay';
+g_rgPaymentMethodsToToggle[44] = 'pagoefectivo';
+g_rgPaymentMethodsToToggle[45] = 'trustly';
 
 function UpdatePaymentMethodList( bIsSplitTransaction )
 {
@@ -4192,7 +4192,7 @@ function OnPurchaseSuccess( result )
 						if ( $('cache_return_url') )
 				window.location = $('cache_return_url').value;
 			else
-				window.location = 'http://store.steampowered.com/account';
+				window.location = 'http://store.steampowered.com/account/';
 			return true;
 		}
 	

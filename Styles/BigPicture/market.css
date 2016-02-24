@@ -1104,12 +1104,6 @@ DropDown Image,
 	transition-property: background-color, border, box-shadow, color;
 }
 
-
-.TopMouseScrollRegion
-{
-	y: 90px;
-}
-
 .DropDownWrapper
 {
 	flow-children: down;

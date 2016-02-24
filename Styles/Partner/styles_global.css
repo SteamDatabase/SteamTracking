@@ -450,7 +450,7 @@ a.contentsLink:hover {
 	color:#ffffff;
 }
 
-input, select , textarea, button, .likeButton {
+input:not([type="radio"]), select , textarea, button, .likeButton {
 	background-color:#565658;
 	font-family:tahoma, arial, helvetica, trebuchet ms, sans-serif;
 	color:#e1e1e1;

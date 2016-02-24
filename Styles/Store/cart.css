@@ -672,6 +672,11 @@ img.payment_method_logo {
 .cart_row {
 	background-color: rgba(0,0,0,0.2);
 	margin: 0px 0px 3px 0px;
+	position: relative;
+}
+
+.cart_row .ds_incart_flag {
+	display: none;
 }
 
 .cart_currency_select {
@@ -700,12 +705,17 @@ img.payment_method_logo {
 	padding-left: 12px;
 }
 .cart_item_list .package_contents {
-	padding-left: 16px;
+	padding: 16px;
 	margin-top: -10px;
-	padding-bottom: 16px;
 	font-size: 12px;
 	color: #a4d7f5;
 }
+.checkout_review_cart_item .package_contents {
+	font-size: 12px;
+	color: #a4d7f5;
+	padding-bottom: 16px;
+}
+
 .cart_item_img {
 	float: left;
 	padding-top: 16px;

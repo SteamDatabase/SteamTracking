@@ -163,7 +163,7 @@ body.v6.blue #footer {
 }
 
 body.v6 #footer_spacer {
-	height: 260px;
+	height: 290px;
 }
 
 
@@ -862,7 +862,7 @@ a#store_search_link img {
 	margin: 0;
 }
 
-.discount_block.no_discount .discount_prices.no_discount {
+.discount_block.no_discount .discount_prices {
     background: none;
 }
 .discount_block.no_discount.main_cap_discount {
@@ -957,8 +957,25 @@ a#store_search_link img {
 .discount_block_inline .discount_prices {
 	padding: 0 5px;
 }
-.discount_block_inline .discount_prices.no_discount {
-    padding: 0px;
+.discount_block_inline.no_discount .discount_prices {
+    padding: 0;
+}
+
+.discount_block.no_discount .discount_original_price {
+	display: none;
+}
+
+.discount_block.no_discount .discount_final_price {
+
+}
+
+.discount_block.game_purchase_discount.no_discount .discount_final_price.your_price {
+	line-height: normal;
+}
+
+
+.discount_block.game_purchase_discount.no_discount .discount_final_price.your_price .your_price_label {
+	font-size: 10px;
 }
 
 .discount_block_collapsable {
@@ -976,14 +993,23 @@ a#store_search_link img {
 	top: 0;
 }
 
-.discount_block.suppress_discount_pct .discount_pct {
+.discount_block.suppress_discount_pct .discount_pct,
+.discount_block.no_discount .discount_pct {
 	display: none;
 }
 
-.discount_block.game_purchase_discount.suppress_discount_pct .discount_final_price {
+.discount_block.game_purchase_discount.no_discount .discount_final_price {
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 32px;
+}
+
+.discount_block.game_purchase_discount.suppress_discount_pct .discount_final_price,
+.discount_block.game_purchase_discount.no_discount .discount_final_price {
 	padding-left: 6px;
 }
-.discount_block.game_purchase_discount.suppress_discount_pct .discount_original_price {
+.discount_block.game_purchase_discount.suppress_discount_pct .discount_original_price,
+.discount_block.game_purchase_discount.no_discount .discount_final_price {
 	left: 6px;
 }
 

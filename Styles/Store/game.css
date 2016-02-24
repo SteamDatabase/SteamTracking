@@ -655,7 +655,8 @@ img.game_header_image_full {
 .game_purchase_action_bg {
 	height: 32px;
 	display: inline-block;
-	background-color: rgba(0,0,0,0.5);
+	/* background-color: rgba(0,0,0,0.5); */
+	background-color: #000000;
 	padding: 2px 2px 2px 0px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -1190,6 +1191,12 @@ img.game_header_image_full {
 	font-size: 11px;
 }
 
+.details_block.vrsupport
+{
+	margin-top: 10px;
+	margin-bottom: 4px;
+	color: #61686d;
+}
 
 .hours_played {
     color: #8f98a0;
@@ -1618,8 +1625,21 @@ a.friend_block_holder:hover {
     background: -ms-linear-gradient(-45deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* IE10+ */
     background: linear-gradient(135deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80827251', endColorstr='#80e2c58b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
-
+.VR_warning {
+	color: #e1c48a;
+	padding: 4px 8px;
+	line-height: 17px;
+	border-radius: 1px;
+	margin-top: 12px;
+	background: -moz-linear-gradient(-45deg,  rgba(130,114,81,0.5) 0%, rgba(226,197,139,0.5) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(130,114,81,0.5)), color-stop(100%,rgba(226,197,139,0.5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(130,114,81,0.5) 0%,rgba(226,197,139,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80827251', endColorstr='#80e2c58b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 #demo_block.block_content_inner {
@@ -1776,6 +1796,11 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 
 /* package page */
 
+.bundle_package_item .tab_item.ds_owned .discount_final_price {
+	text-decoration: line-through;
+	color: #626366;
+}
+
 img.package_header {
 	width: 586px;
 	height: 192px;
@@ -1803,7 +1828,7 @@ img.package_header {
 .package_totals_area {
 	margin-left: auto;
 	color: #9099a1;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 18px;
 	padding-top: 15px;
 
@@ -1815,11 +1840,17 @@ img.package_header {
 	position: relative;
 	padding-right: 124px;
 	text-align: right;
+	margin-bottom: 6px;
+}
+
+.package_totals_row.highlight, .package_totals_row.highlight .price {
+	color: #67c1f5;
 }
 
 .package_totals_area .price {
 	position: absolute;
-	right: 0px;
+	right: 0;
+	bottom: 0;
 	text-align: right;
 	color: #9099a1;
 	font-size: 13px;
@@ -1841,6 +1872,10 @@ img.package_header {
 
 .package_totals_row.savings .price {
 	font-size: 12px;
+}
+
+.package_totals_area .price.bundle_discount {
+	color: #8bc53f;
 }
 
 #package_savings_bar {
@@ -3662,4 +3697,66 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	html.responsive .glance_tags_ctn {
 		margin-top: 10px;
 	}
+}
+
+.dynamic_bundle_description {
+	position: relative;
+}
+
+.ds_flag.ds_completetheset {
+	background: #4F95BD;
+	top: -4px;
+	left: 18px;
+	padding: 0 8px;
+}
+
+.bundle_contents_preview {
+	padding: 6px;
+	margin: 8px -6px 0 -6px;
+	background: rgba(0,0,0,0.5);
+}
+
+.bundle_contents_preview_position {
+	position: relative;
+	height: 45px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item:first-child {
+	position: relative;
+	z-index: 30;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item {
+	display: inline-block;
+}
+
+a.bundle_contents_preview_item .ds_flag {
+	top: 20px;
+}
+
+.bundle_contents_preview.collapsed a.bundle_contents_preview_item {
+	box-shadow: 2px 0 5px 0px #000000;
+}
+
+.bundle_contents_preview a.bundle_contents_preview_item.floated {
+	position: absolute;
+}
+
+.bundle_contents_preview img {
+	display: block;
+}
+
+.bundle_label {
+	cursor: default;
+	color: #A4D7F5;
+	font-size: 18px;
+	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
+}
+
+.bundle_label .bundle_label_tooltip {
+	color: #8f98a0;
+	font-size: 12px;
+	vertical-align: baseline;
 }

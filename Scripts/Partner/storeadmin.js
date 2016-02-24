@@ -217,6 +217,10 @@ function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterTyp
 				{
 					newElement = $J('<div/>', {id: clusterName + '_clusteritem_' + option['itemid'], 'class': option['cssClass'], text : name } );
 				}
+				else if ( option['bundleid'] )
+				{
+					newElement = $J('<div/>', {id: clusterName + '_clusterbundle_' + option['bundleid'], 'class': option['cssClass'], text : name } );
+				}
 				if ( newElement )
 				{
 					list.append( newElement );
@@ -266,6 +270,12 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 			opt.innerHTML = g_rgReferencedPackages[rgItem.packageid];
 			elemIncludedApps.appendChild(opt);
 		}
+		else if ( rgItem.bundleid )
+		{
+			var opt = new Element('div', {id: clusterName + '_clusterbundle_' + rgItem.bundleid, 'class': 'app_Package' } );
+			opt.innerHTML = g_rgReferencedBundles[rgItem.bundleid];
+			elemIncludedApps.appendChild(opt);
+		}
 	}
 	
 	CreateClusterSortable( elemIncludedApps );
@@ -284,16 +294,15 @@ function GetClusterItemsAsArray( elemIncludedApps )
 	var rgItems = [];
 	elemIncludedApps.childElements().each( function( e ) {
 		var id = e.id;
-		var rgMatch = id.match( /clusteritem_([0-9]*)/ );
+		var rgMatch = id.match( /cluster(item|package|bundle)_([0-9]*)/ );
 		if ( rgMatch )
 		{
-			rgItems[ rgItems.length ] = { itemid: rgMatch[1] };
-		}
-		else
-		{
-			rgMatch = id.match( /clusterpackage_([0-9]*)/ );
-			if ( rgMatch )
-				rgItems[ rgItems.length ] = { packageid: rgMatch[1] };
+			if ( rgMatch[1] == 'item' )
+				rgItems.push( { itemid: rgMatch[2] } );
+			else if ( rgMatch[1] == 'package' )
+				rgItems.push( { packageid: rgMatch[2] } );
+			else if ( rgMatch[1] == 'bundle' )
+				rgItems.push( { bundleid: rgMatch[2] } );
 		}
 	});
 	return rgItems;

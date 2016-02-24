@@ -658,6 +658,12 @@ DropDownMenu .FilterOption Label:focus
 #SearchRegion
 {
 	margin-left: 0px;
+	opacity: 0.0;
+}
+
+.InventoryLoaded #SearchRegion
+{
+	opacity: 1.0;
 }
 
 #SearchRegion ToggleButton .TickBox
@@ -743,10 +749,9 @@ DropDownMenu .FilterOption Label:focus
 }
 
 
-#ItemGrid .LeftMouseScrollRegion,
 #ItemGrid .TopMouseScrollRegion
 {
-	y: 115px;
+	y: 20px;
 }
 
 #ItemGrid .RightMouseScrollRegion,
@@ -866,4 +871,22 @@ TextEntry {
 .EmptyInventory .NxEmptyContentContainer
 {
 	opacity: 1.0;
+}
+
+.EmptyInventory #ItemGrid,
+.EmptyInventory #SearchRegion
+{
+	opacity: 0.0;
+}
+
+.ContentHover .EmptyInventory #GridWrapper
+{
+	transform: translatex( 0px );
+}
+
+.ContentHover .EmptyInventory #LeftColumn
+{
+	transform: translateY( -8px );
+	opacity: 1.0;
+	opacity-mask: none;
 }

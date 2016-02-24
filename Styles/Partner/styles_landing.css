@@ -283,7 +283,7 @@ body{
 }
 
 	.filterText.blur {
-		color: #646661;
+		color: #777;
 		font-style: italic;
 	}
 
@@ -2072,13 +2072,6 @@ div#appAutoHeader_list
     top: 32px !important;
 }
 
-.bundleModal .enter_bundle_name {
-	width: 300px;
-}
-.bundleModal .enter_bundle_discount {
-	width: 30px;
-}
-
 #global_action_menu {
 	float: right;
 	text-align: right;
@@ -2194,6 +2187,14 @@ ul.actualUL {
 	background-position-y: 1px;
 	padding-left: 21px;
 }
+
+.landingRightCol .panel h3 {
+	color: #e1c48a;
+	font-size: 13px;
+	text-transform: none;
+	margin-top: 10px;
+}
+
 .landingRightCol .panel.checklist p.subTitle {
 	font-size: 15px;
 	color: #666666;

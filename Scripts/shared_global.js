@@ -1407,9 +1407,9 @@ WebStorage = {
 };
 
 // takes an integer
-function v_numberformat( n, decimals )
+function v_numberformat( n, decimals, strDecimalSymbol, strThousandsSeperator )
 {
-	if ( typeof Number != 'undefined' && typeof Number.toLocaleString != 'undefined' )
+	if ( !strDecimalSymbol && !strThousandsSeperator && typeof Number != 'undefined' && typeof Number.toLocaleString != 'undefined' )
 	{
 		var options = {};
 		if ( typeof decimals != 'undefined' && decimals !== 0 )
@@ -1439,12 +1439,12 @@ function v_numberformat( n, decimals )
 		var c = str.charAt(i);
 		out += c;
 		if ( i < len - 1 && (len - i - 1) % 3 == 0 && c != '-' )
-			out += ',';
+			out += ( strThousandsSeperator || ',' );
 	}
 	if ( ( len < str.length || decimals ) && typeof decimals != 'undefined' && decimals !== 0 )
 	{
 		len++;
-		out += '.';
+		out += ( strDecimalSymbol || '.' );
 		for ( var i = 0; i < ( decimals ? decimals : str.length - len ); i++ )
 		{
 			if ( len + i < str.length )
