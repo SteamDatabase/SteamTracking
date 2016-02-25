@@ -2187,7 +2187,7 @@
 	"Library_Details_Controller_EntireLibrary"			"Your Other Games"
 	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
 	"Library_Details_ManageControllers"					"Controller Configuration"
-	"Library_Details_AppControllerSettings"				"Controller Application Options"
+	"Library_Details_AppControllerSettings"				"Controller Options"
 
 	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
 	"Library_Details_Remove_Binding_Description"		"Would you like to remove this controller binding?"
