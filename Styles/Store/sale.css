@@ -8,6 +8,11 @@ body.sale_page_background {
 	padding-top: 16px;
 }
 
+.vivepromo .ds_flag.ds_owned_flag
+{
+	display: none;
+}
+
 .sale_page_purchase_item {
 	padding: 15px;
 	position: relative;
@@ -88,7 +93,7 @@ body.sale_page_background {
 .sale_page_vivepromo_main_block
 {
 	padding: 20px 0px 5px 15px;
-	background-color: rgba( 31, 85, 114, 0.7 );
+	background-color: rgba( 31, 85, 114, 0.55 );
 }
 
 .sale_page_block.vivepromo
@@ -96,6 +101,16 @@ body.sale_page_background {
 	float: left;
 	margin-bottom: 15px;
 	margin-right: 1px;
+}
+
+.sale_page_vivepromo_releasedate {
+	text-align: center;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, helvetica, sans-serif;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #d8f8ff;
+	position: relative;
+	top: 170px;
 }
 
 .sale_page_vivepromo_block_centering
@@ -139,33 +154,57 @@ body.sale_page_background {
 	margin-right: 5px;
 }
 
-.sale_page_browse_more_items
+.sale_page_vivepromo_browse_more_items
 {
 	margin: 0 auto 50px auto;
 	width: 300px;
 	cursor: pointer;
 }
 
-.sale_page_browse_more_items_button
+.sale_page_vivepromo_header_action
 {
-	-webkit-border-radius: 35;
-	-moz-border-radius: 35;
-	border-radius: 35px;
+	position: relative;
+	top: 130px;
+	float: right;
+	margin-right: 30px;
+}
+
+.sale_page_vivepromo_button
+{
 	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
 	color: #ffffff;
 	font-size: 16px;
-	background: #13b6e2;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
 	text-align: center;
+
+	background: rgba(121,201,220,1);
+	background: -moz-linear-gradient(top, rgba(121,201,220,1) 0%, rgba(53,131,151,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(121,201,220,1)), color-stop(100%, rgba(53,131,151,1)));
+	background: -webkit-linear-gradient(top, rgba(121,201,220,1) 0%, rgba(53,131,151,1) 100%);
+	background: -o-linear-gradient(top, rgba(121,201,220,1) 0%, rgba(53,131,151,1) 100%);
+	background: -ms-linear-gradient(top, rgba(121,201,220,1) 0%, rgba(53,131,151,1) 100%);
+	background: linear-gradient(to bottom, rgba(121,201,220,1) 0%, rgba(53,131,151,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79c9dc', endColorstr='#358397', GradientType=0 );
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
 }
 
-.sale_page_browse_more_items_button:hover {
-	background: #12a8e3;
+.sale_page_vivepromo_button:hover {
+	background: rgba(68,179,207,1);
+	background: -moz-linear-gradient(top, rgba(68,179,207,1) 0%, rgba(42,105,121,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68,179,207,1)), color-stop(100%, rgba(42,105,121,1)));
+	background: -webkit-linear-gradient(top, rgba(68,179,207,1) 0%, rgba(42,105,121,1) 100%);
+	background: -o-linear-gradient(top, rgba(68,179,207,1) 0%, rgba(42,105,121,1) 100%);
+	background: -ms-linear-gradient(top, rgba(68,179,207,1) 0%, rgba(42,105,121,1) 100%);
+	background: linear-gradient(to bottom, rgba(68,179,207,1) 0%, rgba(42,105,121,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44b3cf', endColorstr='#2a6979', GradientType=0 );
 	text-decoration: none;
 }
 
-.sale_page_browse_more_items_button a
+.sale_page_vivepromo_button a
 {
 	color: #ffffff;
 }
@@ -319,6 +358,17 @@ html.responsive .btnv6_blue_blue_innerfade {
 	html.responsive .sale_page_vivepromo_block_centering.items_2
 	{
 		width: 100%;
+	}
+
+	html.responsive .sale_page_vivepromo_header_action {
+		margin: 0 auto;
+		float: none;
+		width: 300px;
+		top: 175px;
+	}
+
+	html.responsive .sale_page_vivepromo_releasedate {
+		display: none;
 	}
 }
 
