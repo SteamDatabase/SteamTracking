@@ -659,3 +659,17 @@ function AddCountryOffsitePurchaseLink( country, name, url )
 	$J( '#offsite_purchase_options_addnew' ).before( newRow );
 }
 
+function AddCountryOffsitePurchasePriceOverride( country, currency, min, max )
+{
+	country = country.toLowerCase();
+
+	var newRow = '<tr id="offsite_purchase_country_price_override_' + country + '">';
+	newRow += '<td>' + country.toUpperCase() + '</td>';
+	newRow += '<td><input type="hidden" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][currency]" value="' + currency.toLowerCase() + '">' + currency.toUpperCase() + '</td>';
+	newRow += '<td><input type="text" onkeypress="return IsNumberKey( event )" size="20" maxlength="20" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][min]" value="' + min + '"></td>';
+	newRow += '<td><input type="text" onkeypress="return IsNumberKey( event )" size="20" maxlength="20" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][max]" value="' + max + '"></td>';
+	newRow += '<td><span tabindex="0" style="cursor: pointer;" class="icon icon_delete" onkeypress="if (event.keyCode==13) $J( this ).click();" onclick="$J( \'#offsite_purchase_country_price_override_' + country + '\' ).remove();"></span></td>';
+	newRow += '</tr>';
+	$J( '#offsite_purchase_country_price_override_addnew' ).before( newRow );
+}
+
