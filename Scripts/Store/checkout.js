@@ -2487,7 +2487,7 @@ function UpdatePaymentInfoForm()
 						$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
 			$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
-			$('payment_info_method_label').innerHTML = 'Your purchase requires you to save a payment method that supports recurring billing.';
+			$('payment_info_method_label').innerHTML = 'Your purchase contains one or more items that will be billed at specfied intervals in the future.  Steam will use any saved payment methods that you have on file for billing you at each renewal period.  If you have no saved payment methods at the time of renewal, your Steam wallet will be used for the payment.';
 		}		
 		else
 		{
