@@ -1,0 +1,11 @@
+{
+    "name": "ITFSystem_440",
+    "methods": [
+        {
+            "name": "GetWorldStatus",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}
