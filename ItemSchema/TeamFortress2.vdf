@@ -10074,10 +10074,6 @@
 		"promo"
 		{
 			"craft_class"			""
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 			"attributes"
 			{
 				"cannot trade"
@@ -10158,7 +10154,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"		"1"
@@ -10211,7 +10206,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -10414,7 +10408,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" "1"
 			}
 			"loadondemand"		"1"
 			"show_in_armory"	"1"
@@ -10445,7 +10438,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -10483,7 +10475,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -10585,7 +10576,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -10667,7 +10657,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -10744,7 +10733,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -10860,7 +10848,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11014,7 +11001,6 @@
 		{
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"nameable"		"1"
 			}
 			"tags"
@@ -11056,7 +11042,6 @@
 		{
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"nameable"		"1"
 			}
 			"tags"
@@ -11166,7 +11151,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11219,7 +11203,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11259,7 +11242,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11365,7 +11347,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11427,7 +11408,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_collect" "1"
 			}
 			"show_in_armory"	"1"
@@ -11481,7 +11461,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11604,7 +11583,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Boots"
@@ -11648,7 +11626,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -11836,7 +11813,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"item_name"	"#TF_Pyrovision_Goggles"
@@ -12072,10 +12048,6 @@
 		"strangifier_base"
 		{
 			"item_class"	"tool"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 				"type"	"strangifier"
@@ -12108,10 +12080,6 @@
 		"killstreakifier_base"
 		{
 			"item_class"	"tool"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 				"type"	"killstreakifier"
@@ -12250,7 +12218,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"item_class"	"tf_weapon_sapper"
@@ -12314,7 +12281,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -12376,7 +12342,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -12458,7 +12423,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -12532,7 +12496,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -12597,7 +12560,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"paintable"			"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
@@ -12642,7 +12604,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"paintable"			"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
@@ -12735,7 +12696,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -12817,7 +12777,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -12873,7 +12832,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -12938,7 +12896,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13014,7 +12971,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13069,7 +13025,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13134,7 +13089,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13196,7 +13150,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13269,7 +13222,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13334,7 +13286,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13443,7 +13394,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"usable"		"1"
 				"can_craft_count"	"1"
 			}
@@ -13807,7 +13757,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_collect" "1"
 			}
 			"tags"
@@ -13895,7 +13844,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -13992,7 +13940,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14060,7 +14007,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14163,7 +14109,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14215,7 +14160,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14298,7 +14242,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14395,7 +14338,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14474,7 +14416,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Laser_Pointer"
@@ -14535,7 +14476,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -14589,7 +14529,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -14652,7 +14591,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -15564,10 +15502,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_scattergun"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"14"
 		{
@@ -15575,10 +15509,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_sniperrifle"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"15"
 		{
@@ -15586,10 +15516,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_minigun"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"16"
 		{
@@ -15642,10 +15568,6 @@
 			"prefab"	"weapon_rocketlauncher"
 			"xifier_class_remap"	"rocket_launcher"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"19"
 		{
@@ -15653,10 +15575,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_grenade_launcher"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"20"
 		{
@@ -15664,10 +15582,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_stickybomb_launcher"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"21"
 		{
@@ -15675,10 +15589,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_flamethrower"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 			"attributes"
 			{
 				"extinguish restores health"
@@ -15970,10 +15880,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_medigun"
 			"baseitem" "1"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 		}
 		"30"
 		{
@@ -16057,7 +15963,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"baseitem" "1"
 			"item_type_name"	"#TF_Weapon_GrapplingHook"
@@ -16121,6 +16026,21 @@
 			"xifier_class_remap"	"grappling_hook"
 		}
 
+		"1163"
+		{
+			"name"	"Default Power Up Canteen (MvM)"
+			"prefab"	"powerup_bottle"
+			"attributes"
+			{
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value" "1"
+				}
+			}
+			"item_quality"		"normal"
+			"baseitem" 			"1"
+		}
 
 
 
@@ -16135,7 +16055,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -16229,7 +16148,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -16342,7 +16260,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -16424,7 +16341,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -16509,7 +16425,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -16574,7 +16489,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_collect"	"1"
 			}
 			"tags"
@@ -16661,7 +16575,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_collect" "1"
 			}
 			"show_in_armory"	"1"
@@ -16765,7 +16678,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -16804,7 +16716,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -16843,7 +16754,6 @@
 			{
 				"paintable"		"1"
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -16882,7 +16792,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -16953,7 +16862,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -16993,7 +16901,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17059,7 +16966,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Shield"
@@ -17118,7 +17024,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Watch"
@@ -17189,7 +17094,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Watch"
@@ -17278,7 +17182,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17320,7 +17223,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17382,7 +17284,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17416,7 +17317,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17458,7 +17358,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17500,7 +17399,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17535,7 +17433,6 @@
 			{
 				"paintable"		"1"
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17570,7 +17467,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17604,7 +17500,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -17639,7 +17534,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17674,7 +17568,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17709,7 +17602,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17752,7 +17644,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17795,7 +17686,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17829,7 +17719,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17871,7 +17760,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -17911,7 +17799,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -18021,7 +17908,6 @@
 			{
 				"paintable"		"1"
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -18163,7 +18049,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -18203,7 +18088,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -18245,7 +18129,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -18293,7 +18176,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Medal"
@@ -18512,7 +18394,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_L4DHat"
@@ -18585,7 +18466,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -18655,7 +18535,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -18732,7 +18611,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -18822,7 +18700,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Boots"
@@ -18932,7 +18809,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19054,7 +18930,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19176,7 +19051,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19268,7 +19142,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -19412,7 +19285,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"static_attrs"
 			{
@@ -19433,7 +19305,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19469,7 +19340,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19510,7 +19380,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19553,7 +19422,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19595,7 +19463,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19643,7 +19510,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19713,7 +19579,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19756,7 +19621,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -19795,7 +19659,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -19857,7 +19720,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -19918,7 +19780,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20000,7 +19861,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -20039,7 +19899,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20102,7 +19961,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20145,7 +20003,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20194,7 +20051,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"show_in_armory"	"1"
@@ -20257,7 +20113,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_collect" "1"
 			}
 			"show_in_armory"	"1"
@@ -20705,7 +20560,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20758,7 +20612,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20832,7 +20685,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -20897,7 +20749,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -20939,7 +20790,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -20975,7 +20825,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21016,7 +20865,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -21058,7 +20906,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21100,7 +20947,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -21144,7 +20990,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21186,7 +21031,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21220,7 +21064,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -21264,7 +21107,6 @@
 			{
 				"paintable"		"1"
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21307,7 +21149,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -21342,7 +21183,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"show_in_armory"	"1"
@@ -21412,7 +21252,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21451,7 +21290,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21490,7 +21328,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21528,7 +21365,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21566,7 +21402,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21638,7 +21473,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21705,7 +21539,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21744,7 +21577,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21803,7 +21635,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -21975,7 +21806,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22011,10 +21841,6 @@
 			"prefab"	"weapon_rocketlauncher"
 			"craft_class"	""
 			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"item_slot"	"primary"
@@ -22210,7 +22036,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
@@ -22242,7 +22067,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"craft_class"	"hat"
@@ -22277,7 +22101,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22343,7 +22166,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22425,7 +22247,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -22466,7 +22287,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -22507,7 +22327,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22635,7 +22454,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -22671,7 +22489,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22735,7 +22552,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22816,7 +22632,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -22901,7 +22716,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -22948,7 +22762,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -22987,7 +22800,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -23060,7 +22872,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Shield"
@@ -23117,7 +22928,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -23280,7 +23090,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
@@ -23364,7 +23173,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" "#TF_Wearable_Hat"
@@ -23662,7 +23470,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23698,7 +23505,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23734,7 +23540,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23770,7 +23575,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23814,7 +23618,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23857,7 +23660,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23900,7 +23702,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23943,7 +23744,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -23979,7 +23779,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -24015,7 +23814,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -24051,7 +23849,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -24084,7 +23881,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Hat"
@@ -24258,7 +24054,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"loadondemand" "1"
@@ -24328,7 +24123,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -24392,7 +24186,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#Tf_Weapon_Pipebomblauncher"
@@ -24465,7 +24258,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -24515,10 +24307,6 @@
 			"item_class"	"craft_item"
 			"craft_class"	"craft_bar"
 			"craft_material_type"	"craft_bar"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_CraftItem"
 			"item_name"	"#TF_Haunted_Metal"
@@ -24542,7 +24330,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24604,7 +24391,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24666,7 +24452,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24728,7 +24513,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24790,7 +24574,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24852,7 +24635,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24914,7 +24696,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -24976,7 +24757,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25038,7 +24818,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25100,7 +24879,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25162,7 +24940,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25681,7 +25458,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25816,7 +25592,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -25891,7 +25666,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -25928,7 +25702,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -25992,7 +25765,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" "1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -26029,7 +25801,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26075,7 +25846,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Glasses"
@@ -26107,7 +25877,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Badge"
@@ -26146,7 +25915,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Watch"
@@ -26186,7 +25954,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26235,7 +26002,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Badge"
@@ -26349,7 +26115,6 @@
 			"capabilities"
 			{
 				"nameable"	"1"
-				"can_gift_wrap" "1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -26386,7 +26151,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26449,6 +26213,10 @@
 			"name"	"The Crusader's Crossbow"
 			"first_sale_date"	"2010/12/08"
 			"prefab" "weapon_crusader_crossbow"
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_CrusadersCrossbow.Single"
+			}
 		}
 		"306"
 		{
@@ -26462,7 +26230,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -26495,7 +26262,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26554,7 +26320,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26642,7 +26407,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -26675,7 +26439,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26752,7 +26515,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26813,7 +26575,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -26890,7 +26651,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" "1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -26926,7 +26686,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -26967,7 +26726,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -27016,7 +26774,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -27069,7 +26826,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27131,7 +26887,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -27165,7 +26920,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -27199,7 +26953,6 @@
 			{
 				"paintable"		"1"
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -27232,7 +26985,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -27274,7 +27026,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -27314,7 +27065,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -27354,7 +27104,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27412,7 +27161,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27469,7 +27217,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27559,7 +27306,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27639,7 +27385,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -27679,7 +27424,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -27748,7 +27492,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" "#TF_Wearable_Hat"
@@ -27787,14 +27530,6 @@
 				"engineer" "1"
 				"pyro" "1"
 			}
-			"attributes"
-			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value"				"1"
-				}
-			}
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
@@ -27819,7 +27554,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" "#TF_Wearable_Hat"
@@ -27857,14 +27591,6 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
-			}
-			"attributes"
-			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value"				"1"
-				}
 			}
 			"static_attrs"
 			{
@@ -27933,7 +27659,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"show_in_armory"	"1"
@@ -27975,11 +27700,6 @@
 			}
 			"attributes"
 			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value"				"1"
-				}
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
 					"attribute_class"	"counts_as_assister"
@@ -28062,7 +27782,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Hat"
@@ -28102,7 +27821,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Hat"
@@ -28276,7 +27994,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" "#TF_Wearable_Hat"
@@ -28429,7 +28146,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"loadondemand" "1"
@@ -28479,7 +28195,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28532,7 +28247,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28586,7 +28300,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -28671,7 +28384,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28748,7 +28460,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28806,7 +28517,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28883,7 +28593,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -28966,7 +28675,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -29009,7 +28717,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -29050,7 +28757,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"		"1"
 			}
@@ -29095,7 +28801,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -29191,7 +28896,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -29357,7 +29061,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -29410,7 +29113,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -29454,7 +29156,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -29514,7 +29215,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29596,7 +29296,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29682,7 +29381,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29724,7 +29422,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29758,7 +29455,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29794,7 +29490,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -29848,7 +29543,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29909,7 +29603,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -29954,7 +29647,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -30005,7 +29697,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -30061,7 +29752,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -30105,7 +29795,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -30151,7 +29840,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -30193,7 +29881,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -30237,7 +29924,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -30282,7 +29968,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -30321,7 +30006,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -30374,7 +30058,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -30434,7 +30117,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -30472,7 +30154,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -30575,7 +30256,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -30896,7 +30576,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -30997,7 +30676,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -31070,7 +30748,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -31128,7 +30805,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31200,7 +30876,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31273,7 +30948,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31334,7 +31008,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -31373,7 +31046,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 			}
 			"loadondemand" "1"
@@ -31453,7 +31125,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Badge"
@@ -31573,7 +31244,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31662,7 +31332,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31722,7 +31391,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -31813,7 +31481,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -31898,7 +31565,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Badge"
@@ -31945,7 +31611,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_SpaceChem_Fishcake_Type"
@@ -32004,7 +31669,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -32050,7 +31714,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -32094,7 +31757,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -32137,7 +31799,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -32232,7 +31893,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"can_craft_if_purchased"	"1"
@@ -32276,7 +31936,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_mark"	"1"
 				"paintable"			"1"
@@ -32347,7 +32006,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -32426,7 +32084,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -32544,7 +32201,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -32617,7 +32273,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -32660,7 +32315,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -32695,7 +32349,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -32771,7 +32424,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -32860,7 +32512,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -32919,7 +32570,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -32992,7 +32642,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"loadondemand" "1"
@@ -33049,7 +32698,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -33112,7 +32760,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"loadondemand" "1"
@@ -33168,7 +32815,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"loadondemand" "1"
@@ -33237,7 +32883,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -33270,7 +32915,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -33335,7 +32979,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -33416,7 +33059,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -33502,7 +33144,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"		"1"
 			}
@@ -33543,7 +33184,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -33609,7 +33249,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -33651,7 +33290,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 			}
@@ -33843,7 +33481,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -33911,7 +33548,6 @@
 			{
 				"nameable"		"1"
 				"can_customize_texture"	"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -34072,7 +33708,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34108,7 +33743,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"paintable"				"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -34145,7 +33779,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34180,7 +33813,6 @@
 			{
 				"nameable"		"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -34235,7 +33867,6 @@
 			{
 				"nameable"				"1"
 				"paintable"				"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_count"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -34277,7 +33908,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -34316,7 +33946,6 @@
 			{
 				"nameable"				"1"
 				"can_craft_count"		"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34350,7 +33979,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"paintable"			"1"
 			}
 			"loadondemand"		"1"
@@ -34427,7 +34055,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34474,7 +34101,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34513,7 +34139,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 			}
@@ -34649,7 +34274,6 @@
 			"capabilities"
 			{
 				"nameable"				"1"
-				"can_gift_wrap"			"1"
 				"can_craft_count"		"1"
 			}
 			"tags"
@@ -34736,7 +34360,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 			}
@@ -34781,7 +34404,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 			}
@@ -34824,7 +34446,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -34868,7 +34489,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -34917,7 +34537,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -34966,7 +34585,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -35021,7 +34639,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -35059,7 +34676,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -35106,7 +34722,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -35164,7 +34779,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -35228,7 +34842,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -35271,7 +34884,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -35355,7 +34967,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -35436,7 +35047,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -35794,7 +35404,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
@@ -35860,7 +35469,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 			}
@@ -35906,7 +35514,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -35964,7 +35571,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -36573,7 +36179,6 @@
 			{
 				"nameable"		"1"
 				"can_craft_count"	"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
@@ -36619,7 +36224,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -36659,7 +36263,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -36737,7 +36340,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -36808,7 +36410,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -36857,7 +36458,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"propername" "1"
 			"show_in_armory"	"1"
@@ -37043,7 +36643,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"propername" "1"
 			"show_in_armory"	"1"
@@ -37120,7 +36719,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"propername" "1"
 			"show_in_armory"	"1"
@@ -37197,7 +36795,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"propername" "1"
 			"show_in_armory"	"1"
@@ -37269,7 +36866,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"propername" "1"
@@ -37403,7 +36999,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"propername" "1"
@@ -37585,7 +37180,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -37627,7 +37221,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -37696,7 +37289,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -37791,7 +37383,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -37868,7 +37459,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -37922,7 +37512,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -38004,7 +37593,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -38063,7 +37651,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -38151,7 +37738,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -38541,7 +38127,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
@@ -38581,7 +38166,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -38632,7 +38216,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -38906,7 +38489,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -38944,7 +38526,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_customize_texture"	"1"
 				"can_craft_if_purchased"	"1"
@@ -39011,7 +38592,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -39049,7 +38629,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -39110,7 +38689,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_customize_texture"	"1"
 				"can_craft_if_purchased"	"1"
@@ -39160,7 +38738,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_customize_texture"	"1"
 				"can_craft_if_purchased"	"1"
@@ -39280,7 +38857,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -39319,7 +38895,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"			"1"
 				"can_craft_if_purchased"	"1"
@@ -39502,7 +39077,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -39608,7 +39182,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -39677,7 +39250,6 @@
 			{
 				"nameable"				"1"
 				"paintable"				"1"
-				"can_gift_wrap" 		"1"
 				"can_craft_count"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -39819,7 +39391,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -39879,7 +39450,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -39942,7 +39512,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
@@ -39989,7 +39558,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -40036,7 +39604,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
@@ -40079,7 +39646,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -40163,7 +39729,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -40307,7 +39872,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -40352,7 +39916,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -40401,10 +39964,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_Festive2011"
 			"image_inventory"	"backpack/player/items/heavy/xms_heavy_minigunlights"
 			"model_player"	"models/weapons/c_models/c_minigun/c_minigun_xmas.mdl"
@@ -40483,7 +40042,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -40618,10 +40176,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"		"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_Festive2011"
 			"image_inventory"	"backpack/player/items/soldier/xms_rocketlauncher"
 			"visuals"
@@ -40653,10 +40207,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_Festive2011"
 			"image_inventory"	"backpack/player/items/pyro/xms_flamethrower"
 			"visuals"
@@ -40698,10 +40248,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Bat_Festive2011"
 			"image_inventory"	"backpack/player/items/scout/xms_bat"
 			"visuals"
@@ -40733,10 +40279,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_Festive2011"
 			"image_inventory"	"backpack/player/items/demo/xms_stickybomb_launcher"
 			"model_player"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_xmas.mdl"
@@ -40772,10 +40314,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_Festive2011"
 			"image_inventory"	"backpack/player/items/engineer/xms_wrench"
 			"visuals"
@@ -40807,10 +40345,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_Festive2011"
 			"image_inventory"	"backpack/player/items/medic/xms_medigun"
 			"visuals"
@@ -40842,10 +40376,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_Festive2011"
 			"image_inventory"	"backpack/player/items/sniper/xms_sniperrifle"
 			"visuals"
@@ -40877,10 +40407,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_Festive2011"
 			"image_inventory"	"backpack/player/items/spy/xms_knife"
 			"model_player"	"models/weapons/c_models/c_knife/c_knife_xmas.mdl"
@@ -41049,10 +40575,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_Festive2011"
 			"image_inventory"	"backpack/player/items/scout/xms_scattergun"
 			"visuals"
@@ -41286,7 +40808,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"item_class"	"craft_item"
 			"show_in_armory"	"1"
@@ -41589,7 +41110,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -41746,10 +41266,6 @@
 			"prefab"	"valve"
 			"first_sale_date"	"2012/08/16"
 			"item_class"	"craft_item"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Ticket"
 			"item_name"	"#TF_MvM_ChallengeTicket"
@@ -41824,7 +41340,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -41950,7 +41465,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -42088,7 +41602,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -42144,7 +41657,6 @@
 			{
 				"nameable"			"1"
 				"paintable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -42204,7 +41716,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"paintable"		"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
@@ -42274,7 +41785,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -42332,7 +41842,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -42416,7 +41925,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -42524,7 +42032,6 @@
 			{
 				"nameable"		"1"
 				"can_craft_count"	"1"
-				"can_gift_wrap"		"1"
 			}
 			"item_type_name"	"#TF_Wearable_Backpack"
 			"item_name"	"#TF_PyroMusicDevice"
@@ -42635,7 +42142,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -42709,7 +42215,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -42894,7 +42399,6 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
@@ -42975,10 +42479,6 @@
 			"prefab"	"valve"
 			"first_sale_date"	"2012/08/16"
 			"item_class"	"craft_item"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Ticket"
 			"item_name"	"#TF_MvM_SquadSurplusVoucher"
@@ -43423,7 +42923,6 @@
 			"item_class"	"tf_weapon_pep_brawler_blaster"
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -43486,7 +42985,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -43518,7 +43016,6 @@
 			"model_player"	"models/weapons/c_models/c_pep_pistol/c_pep_pistol.mdl"
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"can_collect" "1"
 			}
 			"used_by_classes"
@@ -43625,7 +43122,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -44295,10 +43791,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle.mdl"
@@ -44321,10 +43813,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun.mdl"
@@ -44346,10 +43834,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
@@ -44363,10 +43847,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench.mdl"
@@ -44380,10 +43860,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun.mdl"
@@ -44405,10 +43881,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb.mdl"
@@ -44430,10 +43902,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower.mdl"
@@ -44471,10 +43939,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun.mdl"
@@ -44496,10 +43960,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_AdvancedMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher.mdl"
@@ -44521,10 +43981,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_gold"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle.mdl"
@@ -44554,10 +44010,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun.mdl"
@@ -44587,10 +44039,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_gold"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
@@ -44612,10 +44060,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_gold"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench.mdl"
@@ -44637,10 +44081,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun.mdl"
@@ -44670,10 +44110,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_gold"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb.mdl"
@@ -44703,10 +44139,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_gold"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower.mdl"
@@ -44752,10 +44184,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun.mdl"
@@ -44785,10 +44213,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_AdvancedMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_gold"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher.mdl"
@@ -45541,10 +44965,6 @@
 		{
 			"name"			"Deflector"
 			"prefab"		"weapon_minigun"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 			"craft_class"	""
 			"baseitem"		"0"
 			"show_in_armory"	"0"
@@ -45562,7 +44982,6 @@
 			"craft_class"	"weapon"
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"item_name"	"#TF_CSGO_AWP"
@@ -45826,7 +45245,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -46440,7 +45858,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -46493,10 +45910,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_rust"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle.mdl"
@@ -46526,10 +45939,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_rust"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun.mdl"
@@ -46559,10 +45968,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_rust"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
@@ -46584,10 +45989,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_rust"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench.mdl"
@@ -46609,10 +46010,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_rust"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun.mdl"
@@ -46642,10 +46039,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_rust"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb.mdl"
@@ -46675,10 +46068,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_rust"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower.mdl"
@@ -46724,10 +46113,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_rust"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun.mdl"
@@ -46757,10 +46142,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_IntermediateMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_rust"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher.mdl"
@@ -46790,10 +46171,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_blood"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle.mdl"
@@ -46823,10 +46200,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_blood"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun.mdl"
@@ -46856,10 +46229,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_blood"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
@@ -46881,10 +46250,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_blood"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench.mdl"
@@ -46906,10 +46271,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_blood"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun.mdl"
@@ -46939,10 +46300,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_blood"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb.mdl"
@@ -46972,10 +46329,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_blood"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower.mdl"
@@ -47021,10 +46374,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_blood"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun.mdl"
@@ -47054,10 +46403,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_IntermediateMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_blood"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher.mdl"
@@ -47087,10 +46432,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond.mdl"
@@ -47120,10 +46461,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond.mdl"
@@ -47153,10 +46490,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
@@ -47178,10 +46511,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond.mdl"
@@ -47203,10 +46532,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond.mdl"
@@ -47236,10 +46561,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond.mdl"
@@ -47269,10 +46590,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond.mdl"
@@ -47318,10 +46635,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond.mdl"
@@ -47351,10 +46664,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_ExpertMVMLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond.mdl"
@@ -47384,10 +46693,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond.mdl"
@@ -47409,10 +46714,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond.mdl"
@@ -47434,10 +46735,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
@@ -47451,10 +46748,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond.mdl"
@@ -47468,10 +46761,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond.mdl"
@@ -47493,10 +46782,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond.mdl"
@@ -47518,10 +46803,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond.mdl"
@@ -47559,10 +46840,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond.mdl"
@@ -47584,10 +46861,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_ExpertMVMRareLoot"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond.mdl"
@@ -48139,7 +47412,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"item_class"	"tf_weapon_sapper"
 			"prefab"	"weapon_sapper"
@@ -48257,11 +47529,24 @@
 			"item_type_name"	"#TF_Wearable_Apparel"
 			"item_name"	"#TF_Exorcizor"
 			"item_description"	"#TF_Exorcizor_Desc"
-			"image_inventory"	"backpack/player/items/spy/hwn_spy_priest"
-			"model_player"		"models/player/items/spy/hwn_spy_priest.mdl"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"soldier"	"models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_soldier.mdl"
+				"medic"		"models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_medic.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hwn_spy_priest/hwn_spy_priest_spy.mdl"
+			}
 			"propername"	"1"
 			"used_by_classes"
 			{
+				"soldier"		"1"
+				"medic"		"1"
+				"pyro"		"1"
 				"spy"	"1"
 			}
 		}
@@ -48316,7 +47601,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -48469,7 +47753,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"loadondemand" "1"
 			"propername" "1"
@@ -48651,18 +47934,18 @@
 			}
 			"item_name"	"#TF_HM_DisguiseHat"
 			"item_description"	"#TF_HM_DisguiseHat_Desc"
-			"image_inventory"	"backpack/player/items/all_class/hm_disguisehat_demo"
+			"image_inventory"	"backpack/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_demo"
 			"model_player_per_class"
 			{
-				"scout"		"models/player/items/all_class/hm_disguisehat_scout.mdl"
-				"sniper"	"models/player/items/all_class/hm_disguisehat_sniper.mdl"
-				"soldier"	"models/player/items/all_class/hm_disguisehat_soldier.mdl"
-				"demoman"	"models/player/items/all_class/hm_disguisehat_demo.mdl"
-				"medic"		"models/player/items/all_class/hm_disguisehat_medic.mdl"
-				"heavy"		"models/player/items/all_class/hm_disguisehat_heavy.mdl"
-				"spy"		"models/player/items/all_class/hm_disguisehat_spy.mdl"
-				"engineer"	"models/player/items/all_class/hm_disguisehat_engineer.mdl"
-				"pyro"		"models/player/items/all_class/hm_disguisehat_pyro.mdl"
+				"scout"		"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_scout.mdl"
+				"sniper"	"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_sniper.mdl"
+				"soldier"	"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_soldier.mdl"
+				"demoman"	"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_demo.mdl"
+				"medic"		"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_medic.mdl"
+				"heavy"		"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_heavy.mdl"
+				"spy"		"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_spy.mdl"
+				"engineer"	"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_engineer.mdl"
+				"pyro"		"models/workshop_partner/player/items/all_class/hm_disguisehat/hm_disguisehat_pyro.mdl"
 			}
 			"used_by_classes"
 			{
@@ -48739,7 +48022,6 @@
 			"capabilities"
 			{
 				"nameable"			"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
@@ -48978,10 +48260,6 @@
 			"first_sale_date"	"2012/11/28"
 			"prefab"	"misc"
 			"craft_class"			"" 
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0" 
-			}
 			"item_type_name"	"#TF_Wearable_Badge"
 			"item_name"	"#TF_Clacker2012"
 			"item_description"	"#TF_Clacker2012_Desc"
@@ -49022,7 +48300,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"0" 
 			}
 			"item_logname"	"memory_maker"
 			"item_iconname"	"memory_maker"
@@ -49144,10 +48421,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_e_sniperrifle"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_e_sniperrifle.mdl"
@@ -49169,10 +48442,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_e_minigun"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_e_minigun.mdl"
@@ -49194,10 +48463,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_e_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
@@ -49211,10 +48476,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_e_wrench"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_e_wrench.mdl"
@@ -49228,10 +48489,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_e_medigun"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_e_medigun.mdl"
@@ -49253,10 +48510,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_e_stickybomb"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_e_stickybomb.mdl"
@@ -49278,10 +48531,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_e_flamethrower"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_e_flamethrower.mdl"
@@ -49319,10 +48568,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_e_scattergun"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_e_scattergun.mdl"
@@ -49344,10 +48589,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_AdvancedMVMLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_e_rocketlauncher"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_e_rocketlauncher.mdl"
@@ -49369,10 +48610,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_SniperRifle_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_e_sniperrifle_gold"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_e_sniperrifle.mdl"
@@ -49402,10 +48639,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Minigun_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_e_minigun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_e_minigun.mdl"
@@ -49435,10 +48668,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Knife_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_e_knife_gold"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
@@ -49460,10 +48689,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Wrench_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_e_wrench_gold"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_e_wrench.mdl"
@@ -49485,10 +48710,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Medigun_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_e_medigun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_e_medigun.mdl"
@@ -49518,10 +48739,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_StickybombLauncher_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_e_stickybomb_gold"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_e_stickybomb.mdl"
@@ -49551,10 +48768,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Flamethrower_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_e_flamethrower_gold"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_e_flamethrower.mdl"
@@ -49600,10 +48813,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_Scattergun_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_e_scattergun_gold"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_e_scattergun.mdl"
@@ -49633,10 +48842,6 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_RocketLauncher_AdvancedMVMRareLoot_Engineer"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_e_rocketlauncher_gold"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_e_rocketlauncher.mdl"
@@ -49905,7 +49110,7 @@
 			"prefab"	"misc"
 			"capabilities"
 			{
-				"paintable"		"0"
+				"paintable"		"1"
 				"can_craft_count"	"1"
 			}
 			"item_slot"	"misc"
@@ -49913,8 +49118,8 @@
 			"item_type_name"	"TF_Wearable_Apparel"
 			"item_name"	"#TF_DocsHoliday"
 			"item_description"	"#TF_DocsHoliday_Desc"
-			"image_inventory"	"backpack/player/items/medic/medic_hawaiian_shirt"
-			"model_player"	"models/player/items/medic/medic_hawaiian_shirt.mdl"
+			"image_inventory"	"backpack/workshop/player/items/medic/hawaiian_shirt/hawaiian_shirt"
+			"model_player"	"models/workshop/player/items/medic/hawaiian_shirt/hawaiian_shirt.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -49926,15 +49131,24 @@
 				{
 					"0"
 					{
+						"model_player"		"models/workshop/player/items/medic/hawaiian_shirt/hawaiian_shirt.mdl"
 						"skin_red"	"0"
 						"skin_blu"	"1"
 						"name"	"#TF_DocsHoliday_Style0"
 					}
 					"1"
 					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
+						"model_player"		"models/workshop/player/items/medic/hawaiian_shirt_s2/hawaiian_shirt_s2.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"name"	"#TF_DocsHoliday_Style1"
+					}
+					"2"
+					{
+						"model_player"		"models/workshop/player/items/medic/hawaiian_shirt_s3/hawaiian_shirt_s3.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_DocsHoliday_Style2"
 					}
 				}
 			}
@@ -50080,7 +49294,7 @@
 			"prefab"	"beard"
 			"capabilities"
 			{
-				"paintable"		"0"
+				"paintable"		"1"
 				"can_craft_count" "1"
 			}
 			"item_type_name"		"#TF_Wearable_Hair"
@@ -50088,20 +49302,26 @@
 			"item_description"	"#TF_TheMuttonMann_Desc"
 			"propername"	"1"
 			"drop_type"	"none"
-			"image_inventory"	"backpack/player/items/all_class/winter_sideburns_medic"
+			"image_inventory"		"backpack/workshop/player/items/all_class/winter_sideburns/winter_sideburns"
 			"model_player_per_class"
 			{
-				"sniper"	"models/player/items/all_class/winter_sideburns_sniper.mdl"
-				"medic"		"models/player/items/all_class/winter_sideburns_medic.mdl"
-				"engineer"	"models/player/items/all_class/winter_sideburns_engy.mdl"
-				"demoman"	"models/player/items/all_class/winter_sideburns_demo.mdl"
+				"scout"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_heavy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/winter_sideburns/winter_sideburns_engineer.mdl"
 			}
 			"used_by_classes"
 			{
+				"scout"		"1"
 				"sniper"	"1"
-				"engineer" "1"
+				"soldier"		"1"
 				"demoman" "1"
 				"medic" "1"
+				"heavy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"987"
@@ -50420,7 +49640,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -50488,7 +49707,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -50566,7 +49784,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -50646,7 +49863,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -50915,10 +50131,6 @@
 			"baseitem"		"0"
 			"item_quality"	"unique"
 			"xifier_class_remap"	"grenade_launcher"
-			"capabilities"
-			{
-				"can_gift_wrap" "1"
-			}
 			"item_name"			"#TF_Weapon_GrenadeLauncher_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_grenadelauncher/c_grenadelauncher_xmas"
 			"model_player"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_xmas.mdl"
@@ -51008,7 +50220,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"0"	
 			}
 			"loadondemand"	"1"
 			"craft_class"	""		
@@ -51144,7 +50355,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -51791,7 +51001,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"0"	
 			}
 			"loadondemand"	"1"
 			"craft_class"	""		
@@ -52793,7 +52002,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -53128,10 +52336,6 @@
 		{
 			"name"			"Festive Sapper"
 			"prefab"	"weapon_sapper"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"item_class"	"tf_weapon_sapper"		
 			"propername"	"0"
 			"craft_class"	""
@@ -53511,7 +52715,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -53593,7 +52796,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -53671,7 +52873,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -53740,7 +52941,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Parachute"
@@ -53794,7 +52994,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"item_class"	"tf_weapon_sapper"
 			"craft_class" ""
@@ -53838,7 +53037,6 @@
 			"item_description"	"#TF_Weapon_BackScatter_Desc"
 			"capabilities"
 			{
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -53897,7 +53095,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -55175,7 +54372,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -55355,7 +54551,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
 			"tags"
@@ -55587,7 +54782,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -55679,7 +54873,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -55746,7 +54939,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap" 	"1"
 			}
 			"tags"
 			{
@@ -55840,9 +55032,6 @@
 		"1155"
 		{
 			"name"	"TF_WEAPON_PASSTIME_GUN"
-			"capabilities"
-			{
-			}
 			"tags"
 			{
 			}
@@ -55885,10 +55074,6 @@
 			"item_class"	"craft_item"
 			"craft_class"	""		
 			"craft_material_type"	""	
-			"capabilities"
-			{
-				"can_gift_wrap" 	"0"
-			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Pass"
 			"item_name"			"#TF_Competitive_Pass"
@@ -56196,6 +55381,7 @@
 				}
 			}
 		}
+		
 
 
 
@@ -61924,16 +61110,77 @@
 			"equip_region"		"hat"
 			"propername"		"1"
 			"drop_type"		"drop"
-			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_the_cotton_head/fall2013_the_cotton_head"
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head"
 			"capabilities"
 			{
 				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
-			"model_player"		"models/workshop/player/items/pyro/fall2013_the_cotton_head/fall2013_the_cotton_head.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
 				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_soldier.mdl"
+							"demoman"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fall2013_the_cotton_head/fall2013_the_cotton_head_engineer.mdl"
+						}
+						"name"		"#TF_fall2013_the_cotton_head_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_soldier.mdl"
+							"demoman"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fall2013_the_cotton_head_s2/fall2013_the_cotton_head_s2_engineer.mdl"
+						}
+						"name"		"#TF_fall2013_the_cotton_head_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
 			}
 		}
 		"30176"
@@ -66012,13 +65259,6 @@
 			"item_description"		"#TF_sbox2014_trenchers_topper_Desc"
 			"equip_region"		"hat"
 			"drop_type"		"drop"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_trenchers_topper/sbox2014_trenchers_topper"
 			"capabilities"
 			{
@@ -66029,6 +65269,30 @@
 			"used_by_classes"
 			{
 				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/engineer/sbox2014_trenchers_topper/sbox2014_trenchers_topper.mdl"
+						"name"		"#TF_sbox2014_trenchers_topper_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/engineer/sbox2014_trenchers_topper_s2/sbox2014_trenchers_topper_s2.mdl"
+						"name"		"#TF_sbox2014_trenchers_topper_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
 			}
 		}
 		"30337"
@@ -68509,7 +67773,6 @@
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"		"1"
 				"can_craft_count"		"1"
 			}
 			"tags"
@@ -73611,14 +72874,6 @@
 			"item_description"		"#TF_hwn2015_catastrophic_companions_Desc"
 			"equip_region"		"belt_misc"
 			"item_type_name"		"#TF_Wearable_Mascot"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2015_catastrophic_companions/hwn2015_catastrophic_companions"
 			"capabilities"
 			{
@@ -74599,7 +73854,7 @@
 					"shoes_socks"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/all_class/dec15_hot_heels/dec15_hot_heels"
+			"image_inventory"		"backpack/workshop/player/items/scout/dec15_hot_heels/dec15_hot_heels"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -74607,7 +73862,7 @@
 			}
 			"model_player_per_class"
 			{
-				"scout"		"models/workshop/player/items/all_class/dec15_hot_heels/dec15_hot_heels_scout.mdl"
+				"scout"		"models/workshop/player/items/scout/dec15_hot_heels/dec15_hot_heels.mdl"
 			}
 			"used_by_classes"
 			{
@@ -95462,10 +94717,6 @@
 		{
 			"name"	"Supply Crate 2"
 			"prefab" "eventcrate"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"armory_desc" "supply_crate"
 			"armory_remap"		"Supply Crate"
 			"show_in_armory"	"0"
@@ -95513,6 +94764,7 @@
 				"always tradable"		"1"
 				"is commodity"			"1"
 				"cannot restore"					"1"	
+				"cannot giftwrap"		"1"
 			}
 			"armory_desc"		"gift_wrap"
 			"show_in_armory"	"1"
@@ -95559,6 +94811,7 @@
 			"static_attrs"
 			{
 				"cannot restore"					"1"	
+				"cannot giftwrap"					"1"
 			}
 		}
 		"5044"
@@ -95580,6 +94833,7 @@
 			"static_attrs"
 			{
 				"is commodity"			"1"
+				"cannot giftwrap"		"1"
 			}
 			"armory_desc" "desctag"
 			"show_in_armory"	"1"
@@ -95599,10 +94853,6 @@
 		{
 			"name"	"Supply Crate 3"
 			"prefab" "eventcrate"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"armory_desc" "supply_crate"
 			"show_in_armory"	"0"
 			"armory_remap"		"Supply Crate"
@@ -96268,7 +95518,6 @@
 			"capabilities"
 			{
 				"nameable"				"1"
-				"can_gift_wrap" 		"1"
 				"usable_gc"				"1"
 				"usable_out_of_game"	"1"
 			}
@@ -96289,6 +95538,10 @@
 			"item_quality"	"unique"
 			"min_ilevel"	"100"
 			"max_ilevel"	"100"
+			"static_attrs"
+			{
+				"tool needs giftwrap"	"1"
+			}
 			"attributes"
 			{
 				"cannot trade"
@@ -96544,10 +95797,6 @@
 			"prefab"	"valve"
 			"first_sale_date"	"2012/11/29"
 			"item_class"	"tool"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 				"type"	"account_upgrade_to_premium"
@@ -96599,6 +95848,7 @@
 			"static_attrs"
 			{
 				"cannot restore"					"1"	
+				"cannot giftwrap"					"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
@@ -96650,6 +95900,7 @@
 			{
 				"cannot restore"					"1"	
 				"cannot trade"						"1"
+				"cannot giftwrap"					"1"
 			}
 		}
 		"5085"
@@ -96683,6 +95934,7 @@
 			{
 				"cannot restore"					"1"	
 				"cannot trade"						"1"
+				"cannot giftwrap"					"1"
 			}
 		}
 
@@ -97426,10 +96678,6 @@
 		{
 			"name"	"Strange Bacon Grease"
 			"prefab" "strangifier_base"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 				"usage"
@@ -98037,10 +97285,6 @@
 		{
 			"name"	"Pomson 6000 Strangifier"
 			"prefab" "strangifier_base"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"attributes"
 			{
 				"tool target item"
@@ -100564,10 +99808,6 @@
 		{
 			"name"	"Festivizer 2015"
 			"item_class"	"tool"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 				"type"	"paintkit_weapon_festivizer"
@@ -100665,6 +99905,40 @@
 			"collection_reference"		"ToughBreakCosmetics_collection"
 		}
 
+		"5843"		
+		{
+			"name"	"Common Stat Clock"
+			"item_class"	"tool"
+			"prefab" "strangifier_base"
+			"tool"
+			{
+				"usage"
+				{
+					"itemrarity_restrictions"	"1"
+				}
+			}		
+			"static_attrs"
+			{
+				"never craftable"	"1"
+				"cannot restore"	"1"
+				"weapon_allow_inspect"			"1"
+				"is marketable"			"1"
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"0"
+			"item_name"			"#TF_Common_StatClock"
+			"item_description"	"#TF_Common_StatClock_desc"
+			"item_type_name"	"#TF_T"
+			"inspect_panel_dist" "12"
+			"model_player"		"models/weapons/c_models/stattrack.mdl"
+			"image_inventory"	"backpack/weapons/c_models/stattrack"
+			"item_quality"		"unique"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"			"ui/item_metal_tiny_drop.wav"
+		}
 
 		"5844"
 		{
@@ -102469,10 +101743,6 @@
 		{
 			"name"	"Strangifier"
 			"prefab" "strangifier_base"
-			"capabilities"
-			{
-				"can_gift_wrap" 	"1"
-			}
 			"tool"
 			{
 
@@ -109644,6 +108914,7 @@
 				}
 			}
 		}
+		
 
 
 		
@@ -116054,6 +115325,20 @@
 			"description_format" "value_is_percentage"
 			"hidden" "0"
 			"effect_type" "positive"
+		}
+		"785"
+		{
+			"name"					"cannot giftwrap"
+			"attribute_class"		"cannot_giftwrap"
+			"hidden"				"1"
+			"stored_as_integer"	"1"
+		}
+		"786"
+		{
+			"name"					"tool needs giftwrap"
+			"attribute_class"		"tool_needs_giftwrap"
+			"hidden"				"1"
+			"stored_as_integer"	"1"
 		}
 		
 		"1000"
