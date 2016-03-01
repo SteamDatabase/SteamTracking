@@ -73,6 +73,10 @@
 					<Image class="SteamOSUpdate" src="file://{images}/icon_steam_update.png" />
 					<Label id="NewSteamOSUpdateLabel" class="LongDescSm" text="#MainMenu_NewSteamOSUpdate" />
 				</Button>
+				<Button id="PromptForAlienwareDeepSleepDisableButton" class="Button" onactivate="PromptForAlienwareDeepSleepDisable();" >
+					<Image src="file://{images}/controller_support_native.png" />
+					<Label id="PromptForAlienwareDeepSleepDisableLabel" class="LongDescSm" text="#MainMenu_PromptForAlienwareDeepSleepDisable" />
+				</Button>
 			</Panel>
 			<Panel id="OfflineItems" childfocusonhover="true">
 				<Label class="InboxLabelTitle StdTitle" text="#MainMenu_OfflineTitle" />

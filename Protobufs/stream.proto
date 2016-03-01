@@ -9,12 +9,20 @@ enum EStreamChannel {
 	k_EStreamChannelDataChannelStart = 3;
 }
 
+enum EStreamDiscoveryMessage {
+	k_EStreamDiscoveryPingRequest = 1;
+	k_EStreamDiscoveryPingResponse = 2;
+}
+
 enum EStreamControlMessage {
 	k_EStreamControlAuthenticationRequest = 1;
 	k_EStreamControlAuthenticationResponse = 2;
 	k_EStreamControlNegotiationInit = 3;
 	k_EStreamControlNegotiationSetConfig = 4;
 	k_EStreamControlNegotiationComplete = 5;
+	k_EStreamControlClientHandshake = 6;
+	k_EStreamControlServerHandshake = 7;
+	k_EStreamControlStartNetworkTest = 8;
 	k_EStreamControl_LAST_SETUP_MESSAGE = 15;
 	k_EStreamControlStartAudioData = 50;
 	k_EStreamControlStopAudioData = 51;
@@ -247,6 +255,32 @@ enum ELogFileType {
 	k_ELogFileSystemDebug = 2;
 }
 
+message CDiscoveryPingRequest {
+	optional uint32 sequence = 1;
+	optional uint32 packet_size_requested = 2;
+}
+
+message CDiscoveryPingResponse {
+	optional uint32 sequence = 1;
+	optional uint32 packet_size_received = 2;
+}
+
+message CStreamingClientHandshakeInfo {
+	optional int32 network_test = 2;
+}
+
+message CClientHandshakeMsg {
+	required .CStreamingClientHandshakeInfo info = 1;
+}
+
+message CStreamingServerHandshakeInfo {
+	optional int32 mtu = 1;
+}
+
+message CServerHandshakeMsg {
+	required .CStreamingServerHandshakeInfo info = 1;
+}
+
 message CAuthenticationRequestMsg {
 	optional bytes token = 1;
 	optional .EStreamVersion version = 2 [default = k_EStreamVersionNone];
@@ -260,6 +294,13 @@ message CAuthenticationResponseMsg {
 
 	optional .CAuthenticationResponseMsg.AuthenticationResult result = 1 [default = SUCCEEDED];
 	optional .EStreamVersion version = 2 [default = k_EStreamVersionNone];
+}
+
+message CStartNetworkTestMsg {
+	optional uint32 frames = 1;
+	optional uint32 framerate = 2;
+	optional uint32 bitrate_kbps = 3;
+	optional uint32 burst_bitrate_kbps = 4;
 }
 
 message CStreamVideoMode {

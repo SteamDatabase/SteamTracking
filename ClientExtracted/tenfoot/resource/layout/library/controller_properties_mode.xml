@@ -98,6 +98,10 @@
 				</Panel>
 				
 				<!-- Joystick Move Mode -->
+				<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+					<DropDown id="GyroButtonJoystickMove" />
+				</Panel>
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
 					<DropDown id="OutputJoystick" />
@@ -105,12 +109,11 @@
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
-				</Panel>
+				</Panel>	
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingJoystick" />
 				</Panel>
-
 				<!-- Joystick Move Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
@@ -820,10 +823,10 @@
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
             <DropDown id="HapticIntensityJoystick" />
           </Panel>
-          <Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
-            <DropDown id="GyroButtonJoystickMove" />
-          </Panel>
+					<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" advanced="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputAxis" />
+						<DropDown id="OutputAxisJoystickMove" />
+					</Panel>					
 
           <!-- Joystick Move Mode Advanced -->
           <Panel class="FieldWrapper" modes="joystickmove" advanced="on">

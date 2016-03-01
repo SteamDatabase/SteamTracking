@@ -26,7 +26,7 @@
 	    {
 			"ControlName"	    "Label"
 			"labelText"	    "%CurrentDLRate%"
-			style=bigtext
+			style=bigtextNonUpper
 	    }
 	
 		"peak_download_rate"
@@ -40,7 +40,7 @@
 		{
 			"ControlName"	    "Label"
 			"labelText"	    "%PeakDLRate%"
-			style="bigtext"
+			style="bigtextNonUpper"
 		}
 	
 		"total_downloaded"
@@ -53,14 +53,14 @@
 		{
 			"ControlName"	    "Label"
 			"labelText"	    "%TotalDownloaded%"
-			style="bigtext"
+			style="bigtextNonUpper"
 		}
 		
 		"disk_status_value"
 		{
 			"ControlName"	    "Label"
 			"labelText"	    "%DiskUsage%"
-			style="bigtext"
+			style="bigtextNonUpper"
 		}
 		
 		"disk_status_label"
@@ -148,7 +148,6 @@
 			font-size   "15"
 			textcolor   "text"
 			padding-top	"0"
-			font-style="uppercase"
 		}
 		
 		container
@@ -163,6 +162,13 @@
 		 font-style="uppercase"
 		 textcolor="text"
 		}
+		
+		bigtextNonUpper
+		{
+		 font-family=basefont
+		 font-size=17
+		 textcolor="text"
+		}		
 		
 		bigtextlabel 
 		{
