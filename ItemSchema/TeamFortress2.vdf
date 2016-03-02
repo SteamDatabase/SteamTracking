@@ -13889,6 +13889,11 @@
 					"value"	"1"
 				}
 			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_CrusadersCrossbow.Single"
+				"sound_burst"	"Weapon_CrusadersCrossbow.SingleCrit"
+			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"xifier_class_remap"	"crusader_crossbow"
@@ -26213,10 +26218,6 @@
 			"name"	"The Crusader's Crossbow"
 			"first_sale_date"	"2010/12/08"
 			"prefab" "weapon_crusader_crossbow"
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_CrusadersCrossbow.Single"
-			}
 		}
 		"306"
 		{
@@ -34022,6 +34023,14 @@
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
+			}
+			"attributes"
+			{
+				"always tradable"
+				{
+					"attribute_class"	"always_tradable"
+					"value"				"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
