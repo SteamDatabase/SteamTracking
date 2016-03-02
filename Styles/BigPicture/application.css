@@ -1535,3 +1535,47 @@ DropDownMenu VerticalScrollBar
 {
 	opacity: 1.0;
 }
+
+.VRIcons
+{
+	flow-children: right;
+}
+
+.AppModalVRTagTitle
+{
+	color: #67c1f5;
+	font-size: 26px;
+}
+
+.AppDetailsBox.VRWarning,
+.AppDetailsBox.VRWarning:hover
+{
+	flow-children: right;
+	padding-top: 4px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #823e1c00 ), to( #823e1ca0 ) );
+	border-bottom: 2px solid #823e1cff;
+
+	animation-name: none;
+	background-image: none;
+	color: none;
+}
+
+.VRWarning Image
+{
+	margin-right: 15px;
+	wash-color: #cc6d2b;
+}
+
+.AppVRWarningHeader
+{
+	font-size: 26px;
+	color: #f4902d;
+}
+
+.AppVRWarningText
+{
+	font-size: 24px;
+	color: almost_white;
+	width: 653px;
+}
+

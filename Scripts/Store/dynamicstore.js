@@ -544,6 +544,10 @@ GDynamicStore = {
 
 		if ( rgItemsWithCaps.length )
 		{
+			// show no more than 9 items
+			rgItemsWithCaps.slice( 0, 9 );
+
+			// if there's more than 5 items, we overlap them a little bit on the display
 			var bNeedToCollapse = rgItemsWithCaps.length > 5;
 			var $BundleContentsCtn = $J('<div/>', {'class': 'bundle_contents_preview'} );
 			if ( bNeedToCollapse )

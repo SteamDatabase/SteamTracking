@@ -3497,27 +3497,32 @@ SellItemDialog = {
 
 		if ( transport.responseJSON )
 		{
-			this.Dismiss();
+		    this.Dismiss();
+
+		    var idNameShow = ( transport.responseJSON.requires_confirmation ? '_pending' : '' );
+		    var idNameHide = ( transport.responseJSON.requires_confirmation ? '' : '_pending' );
+
+		    new Effect.BlindUp( 'market_headertip_itemsold' + idNameHide, { duration: 0.0 } );
 
 			if ( this.m_nConfirmedQuantity > 1 )
 			{
-				$( 'market_headertip_itemsold_itemname' ).update( v_numberformat( this.m_nConfirmedQuantity ) + ' ' + this.m_item.name.escapeHTML() );
+				$( 'market_headertip_itemsold_itemname'+idNameShow ).update( v_numberformat( this.m_nConfirmedQuantity ) + ' ' + this.m_item.name.escapeHTML() );
 			}
 			else
 			{
-				$( 'market_headertip_itemsold_itemname' ).update( this.m_item.name.escapeHTML() );
+			    $( 'market_headertip_itemsold_itemname'+idNameShow ).update( this.m_item.name.escapeHTML() );
 			}
 
 			if ( this.m_item.name_color )
 			{
-				$('market_headertip_itemsold_itemname').style.color = '#' + this.m_item.name_color;
+			    $('market_headertip_itemsold_itemname'+idNameShow).style.color = '#' + this.m_item.name_color;
 			}
 			else
 			{
-				$('market_headertip_itemsold_itemname').style.color = '';
+			    $('market_headertip_itemsold_itemname'+idNameShow).style.color = '';
 			}
 
-			new Effect.BlindDown( 'market_headertip_itemsold', { duration: 0.25 } );
+			new Effect.BlindDown( 'market_headertip_itemsold'+idNameShow, { duration: 0.25 } );
 
 			if ( transport.responseJSON.requires_confirmation )
 			{
@@ -4848,26 +4853,31 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 {
 	var description = $J( '<div/>', { class: 'escrow_explanation' } );
 
-	description.append( '<div class="escrow_explanation_q">What is a trade hold?</div>' );
-	description.append( '<div class="escrow_explanation_a">A trade hold is a period of time where the items traded are held by Steam before they are delivered.</div>' );
+	description.append( '<div class="escrow_explanation_q">Market holds will begin on March 9th, you can avoid holds and protect your account by enabling the Steam Guard Mobile Authenticator now.</div>' );
 
-	description.append( '<div class="escrow_explanation_q">Trade holds help protect your items</div>' );
+	description.append( '<div class="escrow_explanation_q">What is a trade or market hold?</div>' );
+	description.append( '<div class="escrow_explanation_a">A hold is a period of time where items are held by Steam before a trade is completed or a Market listing is posted.</div>' );
+
+	description.append( '<div class="escrow_explanation_q">Items holds help protect your items</div>' );
 	description.append( '<div class="escrow_explanation_a">Steam accounts are valuable, especially if they have items worth stealing. If you haven\'t protected your account with a physical device (the Steam Guard Mobile Authenticator), a trade hold will give you time to discover your account has been compromised and to prevent your items from leaving your account.</div>' );
 
-	description.append( '<div class="escrow_explanation_q">A delay to catch unauthorized trades</div>' );
-	description.append( '<div class="escrow_explanation_a">If a user trading away items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days, item delivery will be delayed by Steam for up to 3 days. This provides the user time to cancel the trade and any others that are pending.<br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items.</div>' );
+	description.append( '<div class="escrow_explanation_q">A delay to catch and stop item theft</div>' );
+	description.append( '<div class="escrow_explanation_a">If a user trading away or selling items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days: <br><span style="color: #5aa9d6">Trades:</span> item delivery from completed trades will be delayed by Steam for up to 3 days <br><span style="color: #5aa9d6">Market:</span> starting March 9th, sell listings will be held by Steam before they are posted, for up to 15 days <br><br>This provides the user time to cancel any pending transactions they didn\'t authorize. <br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items. There is no cooldown for cancelling market listings.</div>' );
 
-	description.append( '<div class="escrow_explanation_q">Remove the need for trade holds</div>' );
-	description.append( '<div class="escrow_explanation_a">Using a Mobile Authenticator ensures that you and only you can trade away your items quickly and securely, so trade holds are no longer necessary. Increase your account security by getting the <a href="http://store.steampowered.com/mobile/">Steam Guard Mobile Authenticator</a> for iOS and Android devices. </div>' );
+	description.append( '<div class="escrow_explanation_q">Remove the need for item holds</div>' );
+	description.append( '<div class="escrow_explanation_a">Using a Mobile Authenticator ensures that you and only you can trade or sell your items quickly and securely, so holds are no longer necessary. Increase your account security by getting the <a href="http://store.steampowered.com/mobile/">Steam Guard Mobile Authenticator</a> for iOS and Android devices. </div>' );
+
+	description.append( '<div class="escrow_explanation_a"><a href="http://store.steampowered.com/news/20631/">Read the Steam blog post about account security</a> for a detailed explanation on why we implemented holds.</div>' );
 
 	if ( bAddSteamGuardLink )
 	{
 		var dialog = ShowConfirmDialog(
-			'Trade Holds',
+			'Trade and Market Holds',
 			description,
 			'Learn About Steam Guard Mobile Authenticator',
 			'Close'
 		);
+
 		dialog.done( function() {
 			window.open( 'http://store.steampowered.com/mobile' );
 		} );

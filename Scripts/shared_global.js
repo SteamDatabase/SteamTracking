@@ -373,6 +373,7 @@ function CModal( $Content, rgParams )
 	this.m_fnOnResize = null;
 	this.m_bDismissOnBackgroundClick = !rgParams.bExplicitDismissalOnly;
 	this.m_nMaxWidth = 0;
+	this.m_nMaxHeight = 0;
 
 	this.m_fnOnDismiss = null;
 	this.m_bRemoveContentOnDismissal = false;
@@ -441,6 +442,11 @@ CModal.prototype.SetMaxWidth = function ( nMaxWidth )
 	this.m_nMaxWidth = nMaxWidth;
 }
 
+CModal.prototype.SetMaxHeight = function ( nMaxHeight )
+{
+	this.m_nMaxHeight = nMaxHeight;
+}
+
 CModal.prototype.AdjustSizing = function( duration )
 {
 	if ( !this.m_$Content )
@@ -457,6 +463,11 @@ CModal.prototype.AdjustSizing = function( duration )
 	if ( this.m_nMaxWidth && nMaxWidth > this.m_nMaxWidth )
 	{
 		nMaxWidth = this.m_nMaxWidth;
+	}
+
+	if ( this.m_nMaxHeight && nMaxHeight > this.m_nMaxHeight )
+	{
+		nMaxHeight = this.m_nMaxHeight;
 	}
 
 	// if the modal has a 'newmodal_sized_content' div, it wants to be the max height, so set it now

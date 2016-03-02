@@ -226,6 +226,18 @@ ul.market_restrictions li {
 	color: #BCBCBC;
 }
 
+.missing_items_in_escrow {
+	background-color: #a6801b;
+	padding: 12px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+}
+.missing_items_in_escrow a {
+	text-decoration: underline;
+}
+
 .pick_and_sell_button {
 	line-height: 0;
 	display: inline-block;

@@ -1393,14 +1393,14 @@ html.responsive .newmodal.economy_modal_ctn {
 	max-width: calc( 100% - 4px );
 }
 
-.escrow_explanation
-{
+.escrow_explanation{
 	max-width: 600px;
-	font-size: 16px;
+	font-size: 14px;
 }
 .escrow_explanation_q {
 	color: #5aa9d6;
 	padding-bottom: 10px;
+	font-size: 16px;
 }
 .escrow_explanation_a {
 	padding-bottom: 30px;

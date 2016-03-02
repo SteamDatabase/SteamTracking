@@ -358,7 +358,7 @@ function HandleAddPhoneButton( near )
 	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
-	window.location = 'https://store.steampowered.com/phone/add?returnToSteamguard=1';
+	window.location = 'https://steamcommunity.com/steamguard/phone_splash?bRevoke2fOnCancel=false';
 }
 
 

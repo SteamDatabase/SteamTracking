@@ -74,6 +74,30 @@ RemotePanel
 	height: 20px;
 }
 
+.NxFilterTab  .GamesHorizRule
+{
+	height: 0px;
+}
+
+.NxFilterTab:descendantfocus .GamesHorizRule,
+.NxFilterTab:hover .GamesHorizRule
+{
+	height: 20px;
+}
+
+.NxFilterWrapper
+{
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+.NxFilterTab:descendantfocus .NxFilterWrapper,
+.NxFilterTab:hover .NxFilterWrapper
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
 
 ////////////////////////////////////
 // Featured
