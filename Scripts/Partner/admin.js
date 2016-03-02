@@ -1259,3 +1259,36 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 }
 
 
+function ShowAddBundleDialog()
+{
+	var dialog = ShowConfirmDialog( 'Create New Bundle', $J('#editBundleModal').show() , 'Create New Bundle' );
+
+	var $Form = dialog.GetContent().find('form');
+	dialog.SetRemoveContentOnDismissal( false );
+	dialog.GetContent().css('width','640px');
+	dialog.AdjustSizing();
+	dialog.done( function() {
+		var waitdialog = ShowBlockingWaitDialog( 'Create New Bundle', 'Saving changes...' );
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/bundles/create/",
+			data: $Form.serialize(),
+			dataType: 'json'
+		}).done(function( msg ) {
+			if( msg.success == 1 )
+			{
+				window.location = 'https://partner.steamgames.com/bundles/view/' + msg.bundleid;
+			}
+			else
+			{
+				waitdialog.Dismiss();
+				ShowAlertDialog("Bundle creation failed: " + (msg.error? msg.error : msg.success ) );
+			}
+		} ).fail( function() {
+			waitdialog.Dismiss();
+		});
+
+	} );
+}
+
+

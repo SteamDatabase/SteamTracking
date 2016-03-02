@@ -2206,3 +2206,7 @@ p.optionalChecks {
 .checklistSmall {
 	font-size: 12px;
 }
+
+.tr.highlightHover.future {
+	display: none;
+}

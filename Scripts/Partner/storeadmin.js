@@ -70,7 +70,7 @@ function PopulatePackageAppLists( rgIncludedItemIds )
 
 var g_rgstrLastSearch = "";
 var g_nFindPackageTimer = 0;
-function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCollection, grantor )
+function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, bStorePackagesOnly )
 {
 	if ( g_nFindPackageTimer )
 		window.clearTimeout( g_nFindPackageTimer );
@@ -90,6 +90,9 @@ function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCo
 			term : matchText,
 			sessionid: g_sessionID
 		};
+		if ( bStorePackagesOnly )
+			params['store_packages_only'] = 1;
+
 		new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestpackagejson/', {
 			method: 'post',
 			parameters: params,
