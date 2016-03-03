@@ -7713,6 +7713,7 @@
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
+ T CUtlStringBuilder::Format(char const*, ...)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Swap(CUtlString&)
@@ -8465,6 +8466,7 @@
  T ClientHTTP()
  T ClientRemoteClientManager()
  T ClientUtils()
+ T ClientVR()
  T ClosePlatformSocket(int)
  T Common_FreeGlobals()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
@@ -9015,6 +9017,7 @@
  T ParseModifier(char const*, char const**)
  T ParseNamespace(char const*, char const**)
  T PchLanguageToELanguage(char const*, ELanguage)
+ T PchNameFromEAttachedHardwareDevice(int)
  T PchNameFromEStyleFlags(int)
  T PchNameFromEUniverse(int)
  T PchSpewGroupName(ESpewGroup)
@@ -14600,6 +14603,7 @@
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
  T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
+ T vrapi::VRChaperone()
  T vrapi::VROverlay()
  T vrapi::VRSystem()
  T xmlMemdup
@@ -15667,7 +15671,6 @@
  closedir$UNIX2003
  crc32
  d GetErrorString.ParserErrMsg
- d SetWindowStylesForAttachedDevices(panorama::CTopLevelWindow*, CUtlVector<panorama::EAttachedHardwareDevice, CUtlMemory<panorama::EAttachedHardwareDevice> > const&)::s_pszDeviceClassNames
  d TRattType
  d TRdefDecls
  d TRdtdTok
@@ -15687,6 +15690,7 @@
  d panorama::s_ETextDecoration
  d panorama::s_ETextTransform
  d rgubFontKey
+ d s_EAttachedHardwareDevice
  d s_EStyleFlags
  d s_EUniverse
  d s_GamePadCode

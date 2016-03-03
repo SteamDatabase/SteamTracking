@@ -818,7 +818,9 @@
 	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in your library."
 	"SettingsDownloads_ThrottleDownloadsWhileStreaming"	"Throttle downloads while streaming"
 	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"If this is checked, Steam will limit download speed to maintain a high quality In-Home Streaming experience."
-
+	"SettingsDownloads_ShowDownloadRatesInBits"	"Display download rates in bits per second"
+	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"If this is checked, Steam will display download rates in bits per second, for instance \"4 Mbps\" instead of \"500 KB/s\"."
+	
 	// Settings, network screen
 	//
 	"SettingsNetwork_ReconfigureNetwork"	"Configure network settings"
@@ -1362,6 +1364,7 @@
 	"Checkout_PaymentMethod_SecurityCode"		"Security code"
 	"Checkout_PaymentMethod_SaveInfo"			"Save my payment information"
 	"Checkout_PaymentMethod_MustSaveInfo"			"Your payment information will be saved because your cart contains a renewing subscription"
+	"Checkout_PaymentMethod_ContainsRecurringSubscription"			"Your purchase contains one or more items that will be billed at specified intervals in the future.  Steam will use any saved payment methods that you have on file for billing you at each renewal period.  If you have no saved payment methods at the time of renewal, your Steam wallet will be used for the payment"
 	"Checkout_PaymentMethod_UpdatePayPal"	"For your security, you will be required to re-authorize your purchase with PayPal."
 	"Checkout_PaymentMethod_PayPalInstructions"	"PayPal transactions are authorized through the PayPal web site."
 	"Checkout_PaymentMethod_ClickAndBuyInstructions" "ClickandBuy transactions are authorized through the ClickandBuy web site. Press continue to open a new web browser window to initiate the transaction."
@@ -1654,12 +1657,32 @@
 	"Library_Details_OverlayDisabledWarning_Title"		"STEAM OVERLAY DISABLED"
 	"Library_Details_OverlayDisabledWarning_Desc"		"The Steam Overlay is disabled.  In-game configuration and some Steam Controller functionality unavailable."
 	"Library_Details_OverlayDisabledWarning_Desc_Detail"		"The Steam Overlay is required to configure your Steam Controller in-game and for some functionality such as On-Screen Displays.  Please enable your Steam Overlay globally or specifically for this game in order to experience full controller functionality."
+	"Library_Details_VRIncorrectControllerWarning_Title"		"CONTROL MISMATCH"
+	"Library_Details_VRIncorrectControllerWarning_Desc"			"This VR application requires controls different from your currently active controller. One of the following is required:"
 
+	"Library_Details_VRController_Tracked"						"Tracked motion controllers"
+	"Library_Details_VRController_Gamepad"						"Gamepad"
+	"Library_Details_VRController_KBMouse"						"Keyboard/Mouse"
+
+	"Library_Details_VRPlayAreaWarning_Title"					"PLAY AREA WARNING"
+	"Library_Details_VRPlayAreaWarning_Uncalibrated"			"Your play area is currently uncalibrated. Please run Room Setup."
+	"Library_Details_VRPlayAreaWarning_RoomScale"				"This game requires Room Scale VR but your play area is currently configured for Standing Only."
+	"Library_Details_VRPlayAreaWarning_NotEnoughRoom"			"Your play area does not meet the play area requirements for this game.  The game requires {s:requiredwidth}m x {s:requireddepth}m, and your current play area is configured as {s:currentwidth}m x {s:currentdepth}m."
+	
 	"Library_Details_2DLaunchWarning_Title"				"WARNING"
 	"Library_Details_2DLaunchWarning_Desc"				"The title you are launching does not support VR. It will appear on your desktop and may affect VR performance."
 
 	"Library_Details_CloseVRGame_Title"					"Exit?"
 	"Library_Details_CloseVRGame_Desc"					"Please confirm you'd like to exit the current VR application."
+
+	"Library_Details_IncorrectVRControlsWarning_Title"				"WARNING"
+	"Library_Details_IncorrectVRControlsWarning_Desc"				"The title you are launching does not support your currently active controller."
+
+	"Library_Details_IncorrectVRPlayAreaWarning_Title"				"WARNING"
+	"Library_Details_IncorrectVRPlayAreaWarning_Uncalibrated"		"Your play area is currently uncalibrated.  Select OK to launch Room Setup."
+	"Library_Details_IncorrectVRPlayAreaWarning_RoomScale"			"This game requires Room Scale and your play area is currently configured as Standing Only. You may be unable to play."
+	"Library_Details_IncorrectVRPlayAreaWarning_NotEnoughRoom"		"Your play area does not meet the play area requirements for this game. You may be unable to play."
+	"Library_Details_IncorrectVRPlayAreaWarning_RoomSetup"			"RUN ROOM SETUP"
 
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
 	"Library_Details_CommunityHubWhatIsIt"	"Community-made content ({d:ugccount} items)."
@@ -2971,7 +2994,7 @@
 
 	"Downloads_AmountValue"				"{s:downloadamount}"
 	"Downloads_TimeRemainValue"		"{t:r:t:downloadtime}"
-	"Downloads_CurrentRateValue"	"{s:downloadrate}/s"
+	"Downloads_CurrentRateValue"	"{s:downloadrate}"
 	"Downloads_Percent"						"{s:downloadpercent}"
 	"Downloads_Downloading"	"DOWNLOADING"
 	"Downloads_Paused"	"DOWNLOADS PAUSED"
@@ -2985,8 +3008,8 @@
 	"Downloads_ItemComplete"		"1 ITEM COMPLETE"
 
 	"Downloads_Summary_TotalAmount"	"Total : {s:downloadamount}"
-	"Downloads_Summary_PeakRate"		"Peak : {s:downloadpeakrate}/s"
-	"Downloads_Summary_CurrentRate"	"Current : {s:downloadrate}/s"
+	"Downloads_Summary_PeakRate"		"Peak : {s:downloadpeakrate}"
+	"Downloads_Summary_CurrentRate"	"Current : {s:downloadrate}"
 	"Downloads_Summary_Settings_btn"    "Downloads Settings"
 
 	"Downloads_None"	"No downloads in progress"

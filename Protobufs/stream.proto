@@ -23,6 +23,7 @@ enum EStreamControlMessage {
 	k_EStreamControlClientHandshake = 6;
 	k_EStreamControlServerHandshake = 7;
 	k_EStreamControlStartNetworkTest = 8;
+	k_EStreamControlKeepAlive = 9;
 	k_EStreamControl_LAST_SETUP_MESSAGE = 15;
 	k_EStreamControlStartAudioData = 50;
 	k_EStreamControlStopAudioData = 51;
@@ -294,6 +295,9 @@ message CAuthenticationResponseMsg {
 
 	optional .CAuthenticationResponseMsg.AuthenticationResult result = 1 [default = SUCCEEDED];
 	optional .EStreamVersion version = 2 [default = k_EStreamVersionNone];
+}
+
+message CKeepAliveMsg {
 }
 
 message CStartNetworkTestMsg {

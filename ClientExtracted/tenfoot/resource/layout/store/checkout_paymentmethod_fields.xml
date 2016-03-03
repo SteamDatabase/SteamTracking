@@ -65,6 +65,6 @@
 			<ToggleButton id="LiveInCountryNoBilling" class="CheckBox" text="#Checkout_PaymentMethod_VerifyCountry" />
 		</Panel>
 		<ToggleButton id="SavePaymentInfo" class="CheckBox" selected="true" text="#Checkout_PaymentMethod_SaveInfo" />
-		<Label id="MustSavePaymentInfo" visible="false" text="#Checkout_PaymentMethod_MustSaveInfo" />
+		<Label id="ContainsRecurringSubscription" visible="false" text="#Checkout_PaymentMethod_ContainsRecurringSubscription" />
 	</CheckoutPaymentMethodFields>	
 </root>

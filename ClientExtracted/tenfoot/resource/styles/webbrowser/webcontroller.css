@@ -70,20 +70,21 @@ WebController.SteamPad #ActualHomeButton
 }
 
 
-.VR WebController #ActualHomeButton
-{
-	background-size: contain;
-	width: 54px;
-	height: 54px;
-
-	position: 84px 8px 0px;
-}
-
+.VR WebController #ActualHomeButton,
 .VR WebController #MouseBackButton
 {
 	background-size: contain;
 	background-position: 0px 0px;
-	width: 37px;
-	height: 37px;
-	position: 24px 16px 0px;
+	width: 60px;
+	height: 60px;
+}
+
+.VR WebController #ActualHomeButton
+{
+	position: 96px 0px 0px;
+}
+
+.VR WebController #MouseBackButton
+{
+	position: 24px 0px 0px;
 }

@@ -32,7 +32,9 @@
 				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleDownloadsDuringGameplay" text="#SettingsDownloads_AllowDownloadsDuringGameplay" onactivate="ToggleBackgroundUpdates()"/>
 				<Label class="SettingsLabel ExtraMarginBottom" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
 				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleThrottleDownloadsWhileStreaming" text="#SettingsDownloads_ThrottleDownloadsWhileStreaming" onactivate="ToggleDownloadThrottlingWhileStreaming()"/>
-				<Label class="SettingsLabel" text="#SettingsDownloads_ThrottleDownloadsWhileStreamingDetails" />
+				<Label class="SettingsLabel ExtraMarginBottom" text="#SettingsDownloads_ThrottleDownloadsWhileStreamingDetails" />
+				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleShowDownloadRatesInBits" text="#SettingsDownloads_ShowDownloadRatesInBits" onactivate="ToggleShowDownloadRatesInBits()"/>
+				<Label class="SettingsLabel" text="#SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails" />
 			</Panel>
           
 		</Panel>	

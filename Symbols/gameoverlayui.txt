@@ -8176,6 +8176,7 @@
  T CURLManager::~CURLManager()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
+ T CUtlBuffer::CUtlBuffer(void const*, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
  T CUtlBuffer::CheckGet(int)
  T CUtlBuffer::CheckPut(int)
@@ -8426,6 +8427,7 @@
  T CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::PurgeAndDeleteElements()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
+ T CUtlMemoryBase::CUtlMemoryBase(int, void*, int)
  T CUtlMemoryBase::ConvertToGrowableMemory(int)
  T CUtlMemoryBase::Count() const
  T CUtlMemoryBase::EnsureCapacity(int)
@@ -9411,6 +9413,7 @@
  T GOverlayVRState()
  T GenerateBuildIdentifierFromDateAndTimeMacros(char const*, char const*, char*, unsigned long)
  T GenerateJavascriptForCheckoutReturn(char const*, CUtlString*)
+ T GetAppInfoSection(unsigned int, EAppInfoSection, KeyValues*)
  T GetAttributesAsString(CDirIterator const&)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
