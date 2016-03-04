@@ -47558,6 +47558,13 @@
 				"pyro"		"1"
 				"spy"	"1"
 			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+						"grenades"		"1"
+				}
+			}
 		}
 		"937"
 		{
@@ -58722,17 +58729,36 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jogon"
 			"item_description"		"#TF_jogon_Desc"
-			"equip_region"		"scout_pants"
+			"equip_region"		"pants"
 			"propername"		"1"
-			"image_inventory"		"backpack/workshop/player/items/scout/jogon/jogon"
+			"image_inventory"		"backpack/workshop/player/items/all_class/jogon/jogon"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/scout/jogon/jogon.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/jogon/jogon_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/jogon/jogon_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/jogon/jogon_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/jogon/jogon_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/jogon/jogon_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/jogon/jogon_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/jogon/jogon_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/jogon/jogon_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/jogon/jogon_engineer.mdl"
+			}
 			"used_by_classes"
 			{
 				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30069"
@@ -60936,17 +60962,24 @@
 			"item_type_name"		"#TF_Wearable_ElectronicDevice"
 			"item_name"		"#TF_fall2013_beep_boy"
 			"item_description"		"#TF_fall2013_beep_boy_Desc"
-			"equip_region"		"engineer_belt"
+			"equip_region"		"belt_misc"
 			"propername"		"1"
-			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_beep_boy/fall2013_beep_boy"
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_beep_boy/fall2013_beep_boy"
 			"capabilities"
 			{
 				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
-			"model_player"		"models/workshop/player/items/engineer/fall2013_beep_boy/fall2013_beep_boy.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/fall2013_beep_boy/fall2013_beep_boy_scout.mdl"
+				"pyro"		"models/workshop/player/items/all_class/fall2013_beep_boy/fall2013_beep_boy_pyro.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_beep_boy/fall2013_beep_boy_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"pyro"		"1"
 				"engineer"		"1"
 			}
 		}
@@ -61151,6 +61184,11 @@
 			}
 			"visuals"
 			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
 				"styles"
 				{
 					"0"
@@ -71346,6 +71384,48 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_engineer.mdl"
+						}
+						"name"		"#TF_cc_summer2015_the_rotation_sensation_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation_style2/cc_summer2015_the_rotation_sensation_style2_engineer.mdl"
+						}
+						"name"		"#TF_cc_summer2015_the_rotation_sensation_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
 		}
 		"30625"
 		{
@@ -73325,18 +73405,11 @@
 		{
 			"first_sale_date"	"2015/12/03"
 			"name"		"Sidekick's Side Slick"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft misc"
 			"item_name"		"#TF_bak_sidekicks_side_slick"
 			"item_description"		"#TF_bak_sidekicks_side_slick_Desc"
-			"equip_region"		"hat"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"glasses"
 			"image_inventory"		"backpack/workshop/player/items/scout/bak_sidekicks_side_slick/bak_sidekicks_side_slick"
 			"capabilities"
 			{
@@ -73347,6 +73420,42 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_bak_sidekicks_side_slick_style1_NoHat"
+						"model_player"		"models/workshop/player/items/scout/bak_sidekicks_side_slick/bak_sidekicks_side_slick.mdl"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+							"headphones"		"1"
+						}
+					}
+					"1"
+					{
+						"name"		"#TF_bak_sidekicks_side_slick_style1_Hat"
+						"model_player"		"models/workshop/player/items/scout/bak_sidekicks_side_slick/bak_sidekicks_side_slick.mdl"
+					}
+					"2"
+					{
+						"name"		"#TF_bak_sidekicks_side_slick_style2_NoHat"
+						"model_player"		"models/workshop/player/items/scout/bak_sidekicks_side_slick_s2/bak_sidekicks_side_slick_s2.mdl"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+							"headphones"		"1"
+						}
+					}
+					"3"
+					{
+						"name"		"#TF_bak_sidekicks_side_slick_style2_Hat"
+						"model_player"		"models/workshop/player/items/scout/bak_sidekicks_side_slick_s2/bak_sidekicks_side_slick_s2.mdl"
+					}
+				}
 			}
 		}
 		"30736"
@@ -99153,6 +99262,7 @@
 				"kill eater score type 3"		"96"	
 				"kill eater user score type 1"	"97"	
 				
+				"never craftable"					"1"
 				"cannot trade"		"1"
 				"is_operation_pass"	"1"
 				"weapon_allow_inspect"					"1"
@@ -99335,6 +99445,7 @@
 				"cannot restore"					"1"
 				"always_transmit_so"				"1"			
 				"deactive date"					"1447099200"	
+				"never craftable"					"1"
 				"kill eater score type"			"101"	
 				"kill eater score type 2"		"102"	
 				"kill eater score type 3"		"103"	
@@ -99516,6 +99627,7 @@
 				"cannot restore"					"1"
 				"always_transmit_so"				"1"
 				"allow_halloween_offering"			"1"
+				"never craftable"					"1"
 				
 				"deactive date"					"1447358400"	
 				
@@ -99675,6 +99787,7 @@
 				"cannot restore"					"1"			
 				"cannot delete"						"1"			
 				"always_transmit_so"				"1"
+				"never craftable"					"1"
 				
 				"deactive date"					"1459540800"	
 			}
