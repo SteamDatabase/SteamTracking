@@ -55,13 +55,17 @@
 
 #ssa_body {
 	border:solid #4d4d49 1px;
-	padding-top:6px;
 	margin-top:10px;
-	padding:6px 7px 6px 7px;
+	padding: 8px;
+	font-size: 14px;
 }
 
 #ssa_body p {
 	margin:9px 0px;
+}
+
+#ssa_body a {
+	text-decoration: underline;
 }
 
 #ssa_popup_box > p {
@@ -87,11 +91,11 @@
 	line-height: 18px;
 }
 
-.online_conduct ul {
+#ssa_box ul {
 	margin-left: 20px;
 }
 
-.online_conduct ul li {
+#ssa_box ul li {
 	margin: 8px 0;
 }
 
