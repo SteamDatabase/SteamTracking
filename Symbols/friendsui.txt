@@ -13627,7 +13627,6 @@
  V_UTF32CharsToUTF8
  V_UTF32ToUTF16
  V_UTF32ToUTF8
- V_UTF8ToUChar32
  V_UTF8ToUTF16
  V_UTF8ToUTF32
  V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)

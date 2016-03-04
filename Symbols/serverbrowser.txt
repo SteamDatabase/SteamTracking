@@ -7839,7 +7839,6 @@
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8
  V_UTF32ToUTF8
- V_UTF8ToUChar32
  V_UTF8ToUTF32
  V_UnqualifiedFileName
  V_WcsSkipArticles
