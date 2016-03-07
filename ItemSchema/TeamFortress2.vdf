@@ -59625,6 +59625,60 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades_engineer.mdl"
+						}
+						"name"		"#TF_jul13_sweet_shades_style0"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/jul13_sweet_shades_s1/jul13_sweet_shades_s1_engineer.mdl"
+						}
+						"name"		"#TF_jul13_sweet_shades_style1"
+					}
+					"2"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/jul13_sweet_shades_s2/jul13_sweet_shades_s2_engineer.mdl"
+						}
+						"name"		"#TF_jul13_sweet_shades_style2"
+					}
+				}
+			}
 		}
 		"30105"
 		{
@@ -64655,16 +64709,82 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_xms2013_spy_jacket"
 			"item_description"		"#TF_xms2013_spy_jacket_Desc"
-			"equip_region"		"spy_coat"
-			"image_inventory"		"backpack/workshop/player/items/spy/xms2013_spy_jacket/xms2013_spy_jacket"
+			"image_inventory"		"backpack/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket"
+			"equip_region"		"shirt"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/spy/xms2013_spy_jacket/xms2013_spy_jacket.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
 				"spy"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"grenades"		"1"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_engineer.mdl"
+						}
+						"name"		"#TF_xms2013_spy_jacket_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_engineer.mdl"
+						}
+						"name"		"#TF_xms2013_spy_jacket_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
 			}
 		}
 		"30310"
