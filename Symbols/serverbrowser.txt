@@ -8117,6 +8117,7 @@
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CUtlSymbol::Initialize()::symbolsInitialized
+ b DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted

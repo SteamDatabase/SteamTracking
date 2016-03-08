@@ -14222,6 +14222,7 @@
  b CryptoPP::s_TeFilled
  b CryptoPP::s_jmpNoCPUID
  b CryptoPP::s_jmpNoSSE2
+ b DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b ERR_error_string.buf
  b ERR_get_state.fallback
  b GCallbackMgr()::s_CallbackMgr

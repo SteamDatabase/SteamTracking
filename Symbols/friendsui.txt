@@ -13939,6 +13939,7 @@
  b CryptoPP::s_pMul
  b CryptoPP::s_pSqu
  b CryptoPP::s_pTop
+ b DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b ERR_error_string.buf
  b ERR_get_state.fallback
  b GCallbackMgr()::s_CallbackMgr
