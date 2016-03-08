@@ -553,11 +553,11 @@ function AddToWishlistButton( button, appid, navref )
 			if ( data && data.success )
 			{
 				$J(button).addClass('btn_disabled');
-				$J('span',button).text("#wishlist_on_wishlist");
+				$J('span',button).text("On Wishlist");
 			}
 			else
 			{
-				$J('span',button).text( "#m_oops_sorry" );
+				$J('span',button).text( "Oops, sorry!" );
 			}
 
 			if ( typeof GDynamicStore != 'undefined' )
@@ -574,7 +574,7 @@ function IgnoreButton( button, appid )
 		$J(button).addClass('btn_disabled');
 		GDynamicStore.InvalidateCache();
 	}).fail( function() {
-		ShowAlertDialog( '#text_store_not_interested', '#text_game_error_generic' );
+		ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
 
@@ -634,7 +634,7 @@ function HideRecommendation( type, itemid, divBtn, elemContainer )
 			if ( transport.responseJSON )
 			{
 				if ( $(elemContainer) )
-					$(elemContainer).update( '<div class="recommendation_ignored">#recommended_will_show_something_else</div>' );
+					$(elemContainer).update( '<div class="recommendation_ignored">Okay, we\'ll recommend something else here next time</div>' );
 			}
 			else
 			{
@@ -965,7 +965,7 @@ Countdown.prototype.render = function( remainDays, remainHours, remainMinutes, r
 	}
 	else
 	{
-		str += remainDays + ' #days ';
+		str += remainDays + ' days ';
 	}
 	str += (remainHours < 10 ? '0' : '') + remainHours + ':';
 	str += (remainMinutes < 10 ? '0' : '') + remainMinutes + ':';
@@ -1144,7 +1144,7 @@ function SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestio
 {
 	ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
 	var text = $Term.val();
-	if ( text == '#text_search_the_store' )
+	if ( text == 'search the store' )
 	{
 		$Term.val( '' );
 		$Term.removeClass( 'default' );
@@ -1156,13 +1156,13 @@ function SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions
 	var text = $Term.val();
 	if ( text == '' )
 	{
-		$Term.val( '#text_search_the_store' );
+		$Term.val( 'search the store' );
 		$Term.addClass( 'default' );
 	}
 }
 function SearchSuggestCheckTerm( theform )
 {
-	if ( theform.term.value == '#text_search_the_store' )
+	if ( theform.term.value == 'search the store' )
 	{
 		theform.term.value = '';
 	}
@@ -1380,7 +1380,7 @@ function AddFreeLicense( subid, strDisplayName )
 	$J.post( 'https://store.steampowered.com/checkout/addfreelicense/' + subid, { ajax: true, sessionid: g_sessionID }).done( function() {
 		ShowAlertDialog(
 			strDisplayName,
-			'#LicenseOnDemand_AddFreeGame_Success'.replace( /%s/, strDisplayName )
+			'%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName )
 		).done( function() {
 			window.location.reload();
 		});
@@ -1389,9 +1389,9 @@ function AddFreeLicense( subid, strDisplayName )
 	}).fail( function( jqXHR ) {
 		var data = V_ParseJSON( jqXHR.responseText );
 		if ( data && data.purchaseresultdetail == 9 )
-			ShowAlertDialog( strDisplayName, '#LicenseOnDemand_Error_AlreadyOwned' );
+			ShowAlertDialog( strDisplayName, 'This product is already available in your Steam library.' );
 		else
-			ShowAlertDialog( strDisplayName, '#LicenseOnDemand_Error_Generic' );
+			ShowAlertDialog( strDisplayName, 'There was a problem adding this product to your account.  Please try again later.' );
 	}).always( function () {
 		delete window.g_bAddFreeLicenseInFlight;
 	});
@@ -1399,7 +1399,7 @@ function AddFreeLicense( subid, strDisplayName )
 
 function ChangeLanguage( strTargetLanguage, bStayOnPage )
 {
-	var Modal = ShowBlockingWaitDialog( '#global_menu_change_language', '' );
+	var Modal = ShowBlockingWaitDialog( 'Change language', '' );
 	$J.post( 'https://store.steampowered.com/account/setlanguage/', {language: strTargetLanguage, sessionid: g_sessionID })
 	.done( function() {
 		if ( bStayOnPage )
@@ -1413,7 +1413,7 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 		}
 	}).fail( function() {
 		Modal.Dismiss();
-		ShowAlertDialog( '#global_menu_change_language', '#text_game_error_generic' );
+		ShowAlertDialog( 'Change language', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
 

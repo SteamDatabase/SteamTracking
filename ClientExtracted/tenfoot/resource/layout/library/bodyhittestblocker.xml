@@ -1,9 +1,0 @@
-<root>
-	<styles>
-		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
-	</styles>
-	
-	<Panel>
-	</Panel>
-</root>

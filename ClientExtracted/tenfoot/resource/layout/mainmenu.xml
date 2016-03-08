@@ -234,5 +234,6 @@
 			<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
 		</Panel>
 		<ContentFrame id="ContentFrame" />
+		<Panel id="BodyHittestBlocker" onmouseactivate="None();"/>
 	</MainMenu>	
 </root>

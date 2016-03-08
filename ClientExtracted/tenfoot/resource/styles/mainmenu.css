@@ -190,10 +190,16 @@ MainMenu #BodyWrapper #GameRowContents
 
 #BodyHittestBlocker
 {
+	visibility: collapse;
 	width: 100%;
 	height: 100%;
 	z-index: top_non_popup_zindex;
 	opacity: 1.0;
+}
+
+.PlayActionModal #BodyHittestBlocker
+{
+	visibility: visible;
 }
 
 @keyframes 'fade-in'
