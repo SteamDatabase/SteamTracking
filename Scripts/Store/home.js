@@ -353,7 +353,7 @@ GHomepage = {
 			if ( oItem.announcementid.length != 0 )
 			{
 				var strAnnouncementLink = 'http://steamcommunity.com/ogg/' + oItem.appid + '/announcements/detail/' + oItem.announcementid + '/';
-				var $AnnouncementLink = $J('<div/>', {'class': 'recently_updated_announcement_link', 'text' : 'View Update Details', 'data-ds-link' : strAnnouncementLink } );
+				var $AnnouncementLink = $J('<div/>', {'class': 'recently_updated_announcement_link', 'text' : '#text_view_update_details', 'data-ds-link' : strAnnouncementLink } );
 				$AnnouncementLink.click(function(e) {
 					top.location.href = $J( this).attr( 'data-ds-link' );
 					return false;
@@ -551,7 +551,7 @@ GHomepage = {
 
 		if ( rgRecommendedSpotlightOptions.length > 0 )
 		{
-			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[0], 'Similar to games you play' );
+			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[0], '#recommended_recentplaytime_title' );
 			if ( $Spotlight )
 			{
 				$Element.append( $Spotlight );
@@ -574,7 +574,7 @@ GHomepage = {
 			for ( var i = 0; i < rgWishlistItemsOnSale.length; i++ )
 			{
 				// game from wishlist on sale
-				$Spotlight = GHomepage.RenderRecommendedSpotlight( rgWishlistItemsOnSale[i], 'From your wishlist' );
+				$Spotlight = GHomepage.RenderRecommendedSpotlight( rgWishlistItemsOnSale[i], '#recommended_wishlist_title' );
 				if ( $Spotlight )
 				{
 					$Spotlight.children( 'a.recommended_spotlight' ).addClass( 'wishlist_recommendation' );
@@ -592,7 +592,7 @@ GHomepage = {
 				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
 				if ( rgGamesShown.indexOf( unAppID ) == -1 )
 				{
-					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
+					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, '#home_recommendedspotlight_friends' );
 					if ( $Spotlight )
 					{
 						$Element.append( $Spotlight );
@@ -606,7 +606,7 @@ GHomepage = {
 
 		if ( rgGamesShown.length < 2 && rgRecommendedSpotlightOptions.length > 1 && rgGamesShown.indexOf( rgRecommendedSpotlightOptions[1] ) == -1 )
 		{
-			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], 'Similar to games you play' );
+			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], '#recommended_recentplaytime_title' );
 			if ( $Spotlight )
 			{
 				$Element.append( $Spotlight );
@@ -669,7 +669,7 @@ function CHomeSettings( strSectionName, fnOnSettingsChange )
 
 CHomeSettings.prototype.RenderCustomizeButton = function()
 {
-	var $Btn = $J('<div/>', {'class': 'home_btn home_customize_btn' } ).text( 'Customize' );
+	var $Btn = $J('<div/>', {'class': 'home_btn home_customize_btn' } ).text( '#home_viewsettings_Customize' );
 	$Btn.click( $J.proxy( this.DisplayPopup, this, $Btn ) );
 	return $Btn;
 };
@@ -684,46 +684,46 @@ CHomeSettings.prototype.DisplayPopup = function( $Btn )
 	this.m_$ActiveBtn.addClass( 'active' );
 
 	this.m_$Popup = $J('<div/>', {'class': 'home_viewsettings_popup' } );
-	this.m_$Popup.append( $J('<div/>', {'class': 'home_viewsettings_instructions' } ).text( 'Select the types of products that you wish to see in this section' ) );
+	this.m_$Popup.append( $J('<div/>', {'class': 'home_viewsettings_instructions' } ).text( '#home_viewsettings_Instructions' ) );
 
 	if ( this.m_ApplicableSettings.popular_new_releases )
-		this.m_$Popup.append( this.RenderCheckbox( 'popular_new_releases', 'Popular New Releases' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'popular_new_releases', '#home_viewsettings_PopularNewReleases' ) );
 	if ( this.m_ApplicableSettings.top_sellers )
-		this.m_$Popup.append( this.RenderCheckbox( 'top_sellers', 'Top Sellers' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'top_sellers', '#home_viewsettings_TopSellers' ) );
 	if ( this.m_ApplicableSettings.early_access )
-		this.m_$Popup.append( this.RenderCheckbox( 'early_access', 'Early Access Products' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'early_access', '#home_viewsettings_EarlyAccess' ) );
 	if ( this.m_ApplicableSettings.games_already_in_library )
-		this.m_$Popup.append( this.RenderCheckbox( 'games_already_in_library', 'Games already in your account' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'games_already_in_library', '#home_viewsettings_GamesAlreadyInLibrary' ) );
 	if ( this.m_ApplicableSettings.games_not_in_library )
-		this.m_$Popup.append( this.RenderCheckbox( 'games_not_in_library', 'Games not in your account' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'games_not_in_library', '#home_viewsettings_GamesNotInLibrary' ) );
 	if ( this.m_ApplicableSettings.recommended_for_you )
-		this.m_$Popup.append( this.RenderCheckbox( 'recommended_for_you', 'Recommended For You' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'recommended_for_you', '#home_viewsettings_RecommendedForYou' ) );
 	if ( this.m_ApplicableSettings.prepurchase )
-		this.m_$Popup.append( this.RenderCheckbox( 'prepurchase', 'Prepurchase' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'prepurchase', '#home_viewsettings_Prepurchase' ) );
 	if ( this.m_ApplicableSettings.games )
-		this.m_$Popup.append( this.RenderCheckbox( 'games', 'Games' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'games', '#home_viewsettings_Games' ) );
 	if ( this.m_ApplicableSettings.software )
-		this.m_$Popup.append( this.RenderCheckbox( 'software', 'Software' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'software', '#home_viewsettings_Software' ) );
 	if ( this.m_ApplicableSettings.dlc_for_you )
-		this.m_$Popup.append( this.RenderCheckbox( 'dlc_for_you', 'DLC for your games & software' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'dlc_for_you', '#home_viewsettings_DLCForYou' ) );
 	if ( this.m_ApplicableSettings.recently_viewed )
-		this.m_$Popup.append( this.RenderCheckbox( 'recently_viewed', 'Products you\'ve recently viewed' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'recently_viewed', '#home_viewsettings_RecentlyViewed' ) );
 	if ( this.m_ApplicableSettings.new_on_steam )
-		this.m_$Popup.append( this.RenderCheckbox( 'new_on_steam', 'New On Steam' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'new_on_steam', '#home_viewsettings_NewOnSteam' ) );
 	if ( this.m_ApplicableSettings.dlc )
-		this.m_$Popup.append( this.RenderCheckbox( 'dlc', 'Downloadable Content' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'dlc', '#home_viewsettings_DLC' ) );
 	if ( this.m_ApplicableSettings.video )
-		this.m_$Popup.append( this.RenderCheckbox( 'video', 'Videos' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'video', '#home_viewsettings_Video' ) );
 	if ( this.m_ApplicableSettings.localized )
-		this.m_$Popup.append( this.RenderCheckbox( 'localized', 'Games in my language' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'localized', '#home_viewsettings_Localized' ) );
 
 	if ( this.m_ApplicableSettings.only_current_platform )
 	{
 		// this one is a little magic
 		if ( GDynamicStore.s_bUserOnLinux )
-			this.m_$Popup.append( this.RenderCheckbox( 'only_current_platform', 'Available for Linux/SteamOS' ) );
+			this.m_$Popup.append( this.RenderCheckbox( 'only_current_platform', '#home_viewsettings_OnlyCurrentPlatform_linux' ) );
 		else if ( GDynamicStore.s_bUserOnMacOS )
-			this.m_$Popup.append( this.RenderCheckbox( 'only_current_platform', 'Available for Mac' ) );
+			this.m_$Popup.append( this.RenderCheckbox( 'only_current_platform', '#home_viewsettings_OnlyCurrentPlatform_mac' ) );
 	}
 
 	var nOffsetTop = $Btn.position().top + $Btn.outerHeight();
@@ -792,7 +792,7 @@ CHomeSettings.prototype.OnCheckboxToggle = function( strSettingName, $Checkbox )
 	}).fail( function() {
 		_this.DismissPopup();
 		_this.m_Settings[strSettingName] = bEnabled;	// revert
-		ShowAlertDialog( 'Customize', 'There was a problem saving your preferences.  Please try again later.' );
+		ShowAlertDialog( '#home_viewsettings_Customize', '#home_viewsettings_Error' );
 	} );
 };
 
@@ -879,7 +879,7 @@ GSteamCurators = {
 		$Item.append( $J('<div/>', {'class': 'steam_curator_name' } ).text( curator.name ) );
 		if ( curator.curator_description )
 		{
-			$Item.append( $J('<div/>', {'class': 'steam_curator_featuring_desc' } ).text( 'Featuring:' ) );
+			$Item.append( $J('<div/>', {'class': 'steam_curator_featuring_desc' } ).text( '#home_steam_curators_featuring' ) );
 			$Item.append( $J('<div/>', {'class': 'steam_curator_desc' } ).text( curator.curator_description ) );
 		}
 		$Item.append( $J('<div/>', {'style': 'clear: left;' } ) );

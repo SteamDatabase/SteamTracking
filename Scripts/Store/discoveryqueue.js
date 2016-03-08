@@ -178,7 +178,7 @@ CDiscoveryQueue.prototype.Transition = function( delta )
 
 CDiscoveryQueue.prototype.RenderCustomizeButton = function()
 {
-	var $Btn = $J('<div/>', {'class': 'home_btn home_customize_btn' } ).text( 'Customize' );
+	var $Btn = $J('<div/>', {'class': 'home_btn home_customize_btn' } ).text( '#home_viewsettings_Customize' );
 	$Btn.click( $J.proxy( this.DisplayCustomizePopup, this, $Btn ) );
 	return $Btn;
 };
@@ -193,10 +193,10 @@ CDiscoveryQueue.prototype.DisplayCustomizePopup = function( $Btn )
 	this.m_$ActiveBtn.addClass( 'active' );
 
 	this.m_$Popup = $J('<div/>', {'class': 'home_viewsettings_popup' } );
-	this.m_$Popup.append( $J('<div/>', {'class': 'home_viewsettings_instructions' } ).text( 'Select the types of products that you wish to see in this section' ) );
+	this.m_$Popup.append( $J('<div/>', {'class': 'home_viewsettings_instructions' } ).text( '#home_viewsettings_Instructions' ) );
 
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_early_access', 'Early Access Products' ) );
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_coming_soon', 'Unreleased Products' ) );
+	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_early_access', '#home_viewsettings_EarlyAccess' ) );
+	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_coming_soon', '#home_viewsettings_ComingSoon' ) );
 
 	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'os_win', 'Windows' ) );
 	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'os_mac', 'Mac OS X' ) );
@@ -262,7 +262,7 @@ CDiscoveryQueue.prototype.OnCustomizeCheckboxToggle = function( strSettingName, 
 	}).fail( function() {
 		_this.DismissCustomizePopup();
 		_this.m_Settings[strSettingName] = bEnabled;	// revert
-		ShowAlertDialog( 'Customize', 'There was a problem saving your preferences.  Please try again later.' );
+		ShowAlertDialog( '#home_viewsettings_Customize', '#home_viewsettings_Error' );
 	} );
 };
 
@@ -283,7 +283,7 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 	}).done( function ( data ) {
 		window.location = 'https://store.steampowered.com/explore/next';
 	}).fail( function() {
-		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
+		ShowAlertDialog( '#explore_refresh_queue', '#home_viewsettings_Error' );
 	} );
 }
 

@@ -387,18 +387,18 @@ GDynamicStore = {
 				if ( bOwned )
 				{
 					$El.addClass( 'ds_flagged ds_owned' );
-					$El.append( '<div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>');
+					$El.append( '<div class="ds_flag ds_owned_flag">#DynamicStore_InLibrary&nbsp;&nbsp;</div>');
 				}
 				else if ( bWanted )
 				{
 					$El.addClass( 'ds_flagged ds_wishlist' );
-					$El.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
+					$El.append( '<div class="ds_flag ds_wishlist_flag">#DynamicStore_OnWishlist&nbsp;&nbsp;</div>');
 				}
 
 				if ( bInCart )
 				{
 					$El.addClass( 'ds_flagged ds_incart' );
-					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
+					$El.append( '<div class="ds_flag ds_incart_flag">#DynamicStore_InCart&nbsp;&nbsp;</div>');
 				}
 			}
 		});
@@ -478,9 +478,9 @@ GDynamicStore = {
 
 			var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
 
-			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
+			var strTooltip = '#Bundle_AlreadyOwned_Tooltip';
 			if ( Bundle.m_bMustPurchaseAsSet )
-				strTooltip ='This offer is only available when buying all %s items at the same time.'.replace( /%s/, Bundle.m_cTotalItemsInBundle );
+				strTooltip ='#Bundle_MustPurchaseAsSet_Tooltip'.replace( /%s/, Bundle.m_cTotalItemsInBundle );
 
 			$CartBtn.addClass('btn_disabled' ).attr( 'href', 'javascript:void(0)' ).data('store-tooltip', strTooltip );
 			$CartBtn.parent().css( 'background', '#000000' );
@@ -515,20 +515,20 @@ GDynamicStore = {
 		if ( Bundle.m_cUserItemsInBundle == 0 )
 		{
 			// already own everything
-			$Description.html( '<b>Collection Complete!</b> %1$s/%2$s items from this collection are already in your library.'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+			$Description.html( '#Bundle_AllAlreadyOwned_Message'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
 		}
 		else if ( Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle )
 		{
 			// own some but not all.
-			$Description.html( '<div>%1$s/%2$s items from this bundle are already in your library.</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
-			$Description.append( '<div>Buy this bundle to save %1$s%% off the %2$s items you don\'t yet have!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
+			$Description.html( '<div>#Bundle_SomeAlreadyInLibrary</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+			$Description.append( '<div>#Bundle_BuyToSave_SomeItems</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
 
 			// add "complete the set" flag
-			$Description.parents('.dynamic_bundle_description' ).append( $J('<div/>', {'class': 'ds_flag ds_completetheset'} ).text('COMPLETE YOUR COLLECTION!') );
+			$Description.parents('.dynamic_bundle_description' ).append( $J('<div/>', {'class': 'ds_flag ds_completetheset'} ).text('#Bundle_Flag_CompleteYourCollection') );
 		}
 		else
 		{
-			$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
+			$Description.html( '<div>#Bundle_BuyToSave_AllItems</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
 		}
 
 		var rgItemsWithCaps = [];
@@ -928,7 +928,7 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 		},
 		function( data )
 		{
-			ShowAlertDialog( 'How does this work?', data );
+			ShowAlertDialog( '#explore_queue_how_does_this_work', data );
 		}
 	);
 }
