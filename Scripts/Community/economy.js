@@ -4853,8 +4853,6 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 {
 	var description = $J( '<div/>', { class: 'escrow_explanation' } );
 
-	description.append( '<div class="escrow_explanation_q">Market holds will begin on March 9th, you can avoid holds and protect your account by enabling the Steam Guard Mobile Authenticator now.</div>' );
-
 	description.append( '<div class="escrow_explanation_q">What is a trade or market hold?</div>' );
 	description.append( '<div class="escrow_explanation_a">A hold is a period of time where items are held by Steam before a trade is completed or a Market listing is posted.</div>' );
 
@@ -4862,7 +4860,7 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 	description.append( '<div class="escrow_explanation_a">Steam accounts are valuable, especially if they have items worth stealing. If you haven\'t protected your account with a physical device (the Steam Guard Mobile Authenticator), a trade hold will give you time to discover your account has been compromised and to prevent your items from leaving your account.</div>' );
 
 	description.append( '<div class="escrow_explanation_q">A delay to catch and stop item theft</div>' );
-	description.append( '<div class="escrow_explanation_a">If a user trading away or selling items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days: <br><span style="color: #5aa9d6">Trades:</span> item delivery from completed trades will be delayed by Steam for up to 3 days <br><span style="color: #5aa9d6">Market:</span> starting March 9th, sell listings will be held by Steam before they are posted, for up to 15 days <br><br>This provides the user time to cancel any pending transactions they didn\'t authorize. <br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items. There is no cooldown for cancelling market listings.</div>' );
+	description.append( '<div class="escrow_explanation_a">If a user trading away or selling items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days: <br><span style="color: #5aa9d6">Trades:</span> starting March 9th, item delivery from completed trades will be delayed by Steam for up to 15 days <br><span style="color: #5aa9d6">Market:</span> starting March 9th, sell listings will be held by Steam before they are posted, for up to 15 days <br><br>This provides the user time to cancel any pending transactions they didn\'t authorize. <br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items. There is no cooldown for cancelling market listings.</div>' );
 
 	description.append( '<div class="escrow_explanation_q">Remove the need for item holds</div>' );
 	description.append( '<div class="escrow_explanation_a">Using a Mobile Authenticator ensures that you and only you can trade or sell your items quickly and securely, so holds are no longer necessary. Increase your account security by getting the <a href="http://store.steampowered.com/mobile/">Steam Guard Mobile Authenticator</a> for iOS and Android devices. </div>' );

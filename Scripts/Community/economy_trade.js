@@ -3019,8 +3019,8 @@ function RefreshTradeEscrowDisplay()
 	}
 	else
 	{
-		$J('#trade_escrow_hours').text( ( cEscrowDays * 24 ) + ' hours' );
-		$J('#trade_escrow_hours2').text( ( cEscrowDays * 24 ) + ' hours' );
+		$J('#trade_escrow_hours').text( ( cEscrowDays ) + ( ( cEscrowDays != 1 ) ? ' days' : ' day') );
+		$J('#trade_escrow_hours2').text( ( cEscrowDays ) + ( ( cEscrowDays != 1 ) ? ' days' : ' day') );
 
 		if ( bWeAreSendingItems && g_daysMyEscrow != 0 )
 		{
