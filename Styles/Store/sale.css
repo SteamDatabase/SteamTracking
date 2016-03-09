@@ -21,8 +21,21 @@ body.sale_page_background {
 
 .sale_page_block {
 	margin-bottom: 28px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, helvetica, sans-serif;
+	font-family: "Motiva Sans", "Motiva Sans", arial, helvetica, sans-serif;
+	font-size: 13px;
 }
+
+.sale_page_block b {
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	font-weight: normal;
+}
+
+.sale_page_block span.collectionComplete {
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #A3CF06;
+}
+
 
 .sale_page_purchase_item .ds_flag {
 	left: 15px;
@@ -288,6 +301,11 @@ body.sale_page_background {
 .bundle_sale .discount_final_price
 {
 	font-size: 14px;
+}
+
+.bundle_contents_preview_position
+{
+	margin-left: 6px;
 }
 
 /* page admin block ended up with a bunch of random styles that are now copied/pasted everywhere- undo some of the damage here */

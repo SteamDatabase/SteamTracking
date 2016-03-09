@@ -170,3 +170,40 @@ input.phone_input_number {
 	margin-left: 10px;
 
 }
+
+#phone_tos_header {
+	font-size: 18px;
+	background: #612f3a;
+	color: #ffffff;
+	padding: 5px;
+}
+
+#phone_tos_header img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.phone_tos_text {
+	font-size: 14px;
+}
+
+.phone_tos_list {
+	margin: 20px 0 20px 60px;
+	font-size: 14px;
+}
+
+.phone_tos_list li {
+	margin: 5px 0 5px 20px;
+}
+
+.phone_tos_content {
+	padding: 25px 5% 10px 5%;
+}
+
+.tos_block_time {
+	font-weight: bold;
+}
+
+#phone_add_subtext {
+	margin-top: 30px;
+}

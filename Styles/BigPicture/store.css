@@ -169,6 +169,24 @@
 	border-radius: 3px 3px 0px 0px;
 }
 
+.BasicCapsuleIcon
+{
+	vertical-align: center;
+	transition-property: transform;
+	transition-duration: supershortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.BasicCapsuleVRIcon
+{
+	visibility: collapse;
+}
+
+.VR .BasicCapsuleVRIcon
+{
+	visibility: visible;
+}
+
 .BasicCapsuleStatus
 {
 	width: fill-parent-flow( 1.0 );
@@ -180,8 +198,11 @@
 	transition-duration: supershortduration;
 	transition-timing-function: ease-in-out;
 }
+
 .BasicCapsule:focus .BasicCapsuleStatus,
-.BasicCapsule:hover .BasicCapsuleStatus
+.BasicCapsule:hover .BasicCapsuleStatus,
+.BasicCapsule:focus .BasicCapsuleIcon,
+.BasicCapsule:hover .BasicCapsuleIcon
 {
 	transform: translateX( 8px );
 }

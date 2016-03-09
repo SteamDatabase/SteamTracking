@@ -1,14 +1,15 @@
 
-
+var g_checkforTOS = false;
 function PhoneAjax( op, arg, success, error )
 {
 	$J.ajax( {
 		url: 'https://steamcommunity.com/steamguard/phoneajax',
 		type: 'POST',
 		data: {
-				 op: op,
-				 arg: arg,
-				 sessionid: g_sessionID
+				op: op,
+				arg: arg,
+				checkfortos: g_checkforTOS ? 1 : 0,
+				sessionid: g_sessionID
 			 },
 
 			 success: function( data, textStatus, jqXHR ) {
@@ -26,6 +27,57 @@ function PhoneAjax( op, arg, success, error )
 							 error( data.error_text );
 						 }
 					 }
+				 }
+				 else if ( data && data.tos_warning )
+				 {
+					 g_checkforTOS = false;
+
+					 var sVAC = '';
+					 if ( data.tos_warning.vac )
+					 {
+						 sVAC += '<div class="tos_list_header">' + 'VAC Bans in the following game(s):' + '</div>';
+						 $J.each( data.tos_warning.vac, function( key, app )
+						 {
+							 sVAC += '<div class="tos_list_item">-' + app + '</div>';
+						 } );
+					 }
+
+					 var sLocks = '';
+					 if ( data.tos_warning.active_locks )
+					 {
+						 sLocks = '<div class="tos_list_header">' + 'Support alert(s)' + '</div>';
+					 }
+
+					 var sTosList = sLocks + sVAC;
+
+					 $J( '#steamguard_tos_list' ).html( sTosList );
+
+					 if ( data.tos_warning.time_allowed_to_add )
+					 {
+						 var sTimeText = 'If no future violations occur on this phone number, you will be able to add this phone number without inheriting these restrictions on ' + data.tos_warning.time_allowed_to_add + '.';
+						 $J( '#phone_tos_time_add').html( sTimeText );
+					 }
+
+					 $J( '.steamguard_confirm_wrapper' ).hide();
+					 $J( '.steamguard_tos_wrapper' ).show();
+					 ClearBusy();
+
+					 if ( data.tos_warning.vac_policy == 2 || data.tos_warning.tos_policy == 2 )
+					 {
+						 $J( '#steamguard_next_button' ).hide();
+						 $J( '.steamguard_centered_button > #steamguard_cancel_button' ).hide();
+						 $J( '#steamguard_done_button' ).show();
+						 $J( '#phone_tos_details' ).html( 'We are unable to accept this phone number at this time due to the following violations associated with it:' );
+					 }
+					 else
+					 {
+						 $J( "#phone_warning_subtext" ).html( 'If you would like to add this phone number to your account now and inherit these restrictions, click Next.' );
+						 $J( "#phone_warning_subtext" ).show();
+						 $J( '#phone_tos_details' ).html( 'Adding this phone number to your account will also add the following (including any associated restrictions) to your account:' );
+
+						 StartCountdownEnable( '#steamguard_next_button', 15 );
+					 }
+
 				 }
 				 else
 				 {
@@ -428,7 +480,7 @@ function DoTwoFactorValidate( sms_code )
 	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy();
-	
+
 	GetValueFromLocalURL( 'steammobile://steamguardvalidate?code=' + sms_code, 60,
 		function()
 		{
@@ -478,6 +530,10 @@ function HandleSmsCode( near, bForTwoFactor )
 	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
+
+	if ( g_SteamguardDoneSecondsLeft > 0 )
+		return;
+
 
 	var sms_code = $J('#sms_code').val();
 	sms_code = sms_code.replace( /[^0-9a-zA-Z]/g, '' );		// clobber non-alphanumeric

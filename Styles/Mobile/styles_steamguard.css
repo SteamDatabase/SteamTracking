@@ -414,3 +414,52 @@ input#sms_code {
 .steamguard_splashette_top {
 	border-top: 1px solid #000000;
 }
+
+.steamguard_tos_header {
+	background-color: #612f3a;
+	color: #ffffff;
+	font-size: 18px;
+	text-shadow: none;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+
+.steamguard_tos_header img {
+	vertical-align: middle;
+	margin-right: 5px;
+	float: left;
+}
+
+.steamguard_tos_text, #steamguard_tos_list > div {
+	font-size: 16px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.steamguard_tos_warningtext {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.steamguard_tos_text {
+	margin-bottom: 20px;
+}
+
+#steamguard_tos_list {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#steamguard_tos_list .tos_list_header {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+#steamguard_tos_list .tos_list_item {
+	margin-left: 40px;
+}
+
+.steamguard_tos_subtext {
+	margin-top: 20px;
+}

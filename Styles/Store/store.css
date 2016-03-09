@@ -109,7 +109,7 @@ body.v6 #footer {
 	}
 
 	body.v6.infinite_scrolling #footer_spacer.small_footer {
-		display: none;
+		height: 50px;
 	}
 
     body.v6 #footer .footer_content {
@@ -1186,6 +1186,10 @@ a#store_search_link img {
     width: 231px;
     height: 87px;
 	line-height: 87px;
+}
+.large .tab_item_cap img {
+	width: 231px;
+	height: 87px;
 }
 
 .tab_item_discount {

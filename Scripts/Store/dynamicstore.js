@@ -515,12 +515,12 @@ GDynamicStore = {
 		if ( Bundle.m_cUserItemsInBundle == 0 )
 		{
 			// already own everything
-			$Description.html( '<b>Collection Complete!</b> %1$s/%2$s items from this collection are already in your library.'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+			$Description.html( '<span class="collectionComplete">Collection Complete!</span> %1$s of %2$s items from this collection are already in your library.'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
 		}
 		else if ( Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle )
 		{
 			// own some but not all.
-			$Description.html( '<div>%1$s/%2$s items from this bundle are already in your library.</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
+			$Description.html( '<div>%1$s of %2$s items from this bundle are already in your library.</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
 			$Description.append( '<div>Buy this bundle to save %1$s%% off the %2$s items you don\'t yet have!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
 
 			// add "complete the set" flag
