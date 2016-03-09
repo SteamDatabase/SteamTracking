@@ -846,7 +846,8 @@ a.applink {
 	text-decoration: line-through;
 }
 
-.package_Public 
+.package_Public,
+.landingTable .tr.package_Public
 {
 	color: GoldenRod;
 	text-decoration: none;
@@ -857,7 +858,8 @@ a.applink {
 	text-decoration: none;
 }
 
-.package_Hidden {
+.package_Hidden,
+.landingTable .tr.package_Hidden {
 	color: #999999;
 	text-decoration: line-through;
 }
