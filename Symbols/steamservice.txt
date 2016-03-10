@@ -4253,7 +4253,6 @@
  T OPENSSL_stderr
  T OPENSSL_uni2asc
  T OPENSSL_wipe_cpu
- T OSTypesAreCompatible
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::RealRun()
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)

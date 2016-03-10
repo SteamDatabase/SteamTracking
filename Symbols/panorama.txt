@@ -2408,7 +2408,6 @@
  NSApp
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
- OSTypesAreCompatible
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8

@@ -931,7 +931,6 @@
  D x509_dir_lookup
  D x509_file_lookup
  D x509_name_ff
- Gestalt
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
  R AES_version
@@ -5736,7 +5735,6 @@
  T GetMemAlloc
  T GetMessageList()
  T GetNetErrorName(unsigned int)
- T GetOSType
  T GetPchTempTextBuffer_Harmful()
  T GetProcessorDetailBlob(int*)
  T GetTimelineSegment(VideoAdaptationSet_t*, int)
@@ -5936,7 +5934,6 @@
  T OPENSSL_stderr
  T OPENSSL_uni2asc
  T OPENSSL_wipe_cpu
- T OSTypesAreCompatible
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::RealRun()
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
@@ -8638,9 +8635,6 @@
  b StaticFileWriterThread()::s_FileWriterThreadManager
  b StaticFileWriterThread()::s_pFileWriterThread
  b SteamThreadTools::g_ThreadMainThreadID
- b TestForAppleGraphicsUpdateInstalled()::bInstalled
- b TestForAppleGraphicsUpdateInstalled()::bLoaded
- b TestForAppleGraphicsUpdateInstalled()::handle
  b VideoLibInit()::s_bInitialized
  b WHIRLPOOL.m
  b X509_verify_cert_error_string.buf
@@ -8735,7 +8729,6 @@
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for StaticFileWriterThread()::s_FileWriterThreadManager
  b guard variable for StaticFileWriterThread()::s_pFileWriterThread
- b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b id_callback
  b impl
@@ -8934,7 +8927,6 @@
  d GENERAL_NAME_ch_tt
  d GENERAL_SUBTREE_seq_tt
  d GetErrorString.ParserErrMsg
- d GetOSType::eOSVersion
  d ISSUING_DIST_POINT_seq_tt
  d NAME_CONSTRAINTS_seq_tt
  d NETSCAPE_CERT_SEQUENCE_aux
@@ -9050,7 +9042,6 @@
  d TRxmlTok
  d TS_str_functs
  d TS_str_reasons
- d TestForAppleGraphicsUpdateInstalled()::attribs
  d UI_str_functs
  d UI_str_reasons
  d USERNOTICE_seq_tt

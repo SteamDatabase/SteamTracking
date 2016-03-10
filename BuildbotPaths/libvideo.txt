@@ -68,7 +68,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(coroutine.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(debugstatssystem.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(keyvaluessystem.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(osversion.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(random.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(strtools.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(strtools_unicode.o)
@@ -378,7 +377,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/random.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
