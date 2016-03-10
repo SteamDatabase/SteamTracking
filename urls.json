@@ -284,7 +284,6 @@
 "Styles/Mobile/shared_mobile.css"                : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_mobile.css?__TIME__",
 "Styles/Mobile/styles_profile.css"               : "https://steamcommunity-a.akamaihd.net/public/css/mobile/styles_profile.css?__TIME__",
 "Styles/Mobile/styles_steamguard.css"            : "https://steamcommunity-a.akamaihd.net/public/css/mobile/styles_steamguard.css?__TIME__",
-"Styles/Mobile/styles_store.css"                 : "https://steamstore-a.akamaihd.net/public/css/mobile/styles_store.css?__TIME__",
 
 //
 // Mobile JS (mixed)
@@ -293,7 +292,6 @@
 "Scripts/Mobile/economy_utils.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/economy_utils.js?__TIME__&l=english",
 "Scripts/Mobile/mobileprofile.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/mobileprofile.js?__TIME__&l=english",
 "Scripts/Mobile/shared_mobile.js"                : "https://steamstore-a.akamaihd.net/public/shared/javascript/shared_mobile.js?__TIME__&l=english",
-"Scripts/Mobile/store_utils.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/mobile/store_utils.js?__TIME__&l=english",
 "Scripts/Mobile/mobileconf.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/mobileconf.js?__TIME__&l=english",
 
 //
