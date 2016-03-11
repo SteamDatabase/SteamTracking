@@ -262,11 +262,11 @@
 		"flair"				"1"
 		"head_skin"			"1"			
 		"earbuds_special"	"1"
-		"medic_hip"			"1"			
 		"left_shoulder"		"1"			
 		"belt_misc"	"1"					
 		"disconnected_floating_item"	"1"
 		"zombie_body"		"1"
+		"sleeves"			"1"
 
 		"shared"
 		{
@@ -326,10 +326,10 @@
 		}
 		"shared"
 		{
-			"demo_arms"			"1"
 			"sniper_pocket"		"1"			
 			"heavy_hip_pouch"	"1"	
 			"spy_coat"			"1"
+			"medic_hip"			"1"			
 		}
 	}
 	"equip_conflicts"
@@ -28157,7 +28157,7 @@
 			"item_slot"	"misc"
 			"equip_regions"
 			{
-				"arms"			"1"
+				"sleeves"		"1"
 				"feet"			"1"
 			}
 			"item_quality"	"unique"
@@ -33880,7 +33880,7 @@
 			"equip_regions"
 			{
 				"shirt"			"1"
-				"arms"			"1"
+				"sleeves"		"1"
 			}
 			"image_inventory"	"backpack/player/items/crafting/tneck_backpack_icon"
 			"image_inventory_size_w"	"128"
@@ -35767,7 +35767,7 @@
 			"item_description"	"#TF_Hwn_ScoutMisc1_Desc"
 			"equip_regions"
 			{
-				"arms"			"1"
+				"sleeves"		"1"
 				"necklace"		"1"
 			}
 			"item_slot"	"misc"
@@ -35939,7 +35939,7 @@
 			"item_description"	"#TF_Hwn_SoldierMisc1_Desc"
 			"propername"	"1"
 			"item_slot"	"misc"
-			"equip_region"	"arms"
+			"equip_region"	"sleeves"
 			"image_inventory"	"backpack/player/items/soldier/hwn_soldier_misc1"
 			"model_player"	"models/player/items/soldier/hwn_soldier_misc1.mdl"
 			"used_by_classes"
@@ -36036,7 +36036,7 @@
 			"item_description"	"#TF_Hwn_HeavyMisc1_Desc"
 			"propername"	"1"
 			"item_slot"	"misc"
-			"equip_region"	"arms"
+			"equip_region"	"sleeves"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/heavy/hwn_heavy_misc1"
 			"model_player"	"models/player/items/heavy/hwn_heavy_misc1.mdl"
@@ -47176,7 +47176,7 @@
 			{
 				"paintable"	"1"
 			}
-			"equip_region"	"arms"
+			"equip_region"	"sleeves"
 			"item_type_name"	"#TF_Wearable_Apparel"
 			"item_name"	"#TF_SpookySleeves"
 			"item_description"	"#TF_SpookySleeves_Desc"
@@ -59582,7 +59582,7 @@
 			"item_type_name"		"#TF_Wearable_Glove"
 			"item_name"		"#TF_jul13_falconer_punch"
 			"item_description"		"#TF_jul13_falconer_punch_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/sniper/jul13_falconer_punch/jul13_falconer_punch"
 			"propername"		"1"
 			"capabilities"
@@ -59810,7 +59810,7 @@
 			"equip_regions"
 			{
 				"shirt"		"1"
-				"demo_arms"		"1"
+				"sleeves"		"1"
 			}
 			"image_inventory"		"backpack/workshop/player/items/demo/jul13_gallant_gael/jul13_gallant_gael"
 			"propername"		"1"
@@ -60131,7 +60131,7 @@
 			"equip_regions"
 			{
 				"shirt"		"1"
-				"demo_arms"		"1"
+				"sleeves"		"1"
 			}
 			"propername"		"1"
 			"visuals"
@@ -60183,7 +60183,7 @@
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_jul13_shoguns_guard"
 			"item_description"		"#TF_jul13_shoguns_guard_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_shoguns_guard/jul13_shoguns_guard"
 			"propername"		"1"
 			"capabilities"
@@ -63505,7 +63505,7 @@
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_galactic_gauntlets"
 			"item_description"		"#TF_hw2013_galactic_gauntlets_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/hw2013_galactic_gauntlets/hw2013_galactic_gauntlets"
 			"model_player"		"models/workshop/player/items/soldier/hw2013_galactic_gauntlets/hw2013_galactic_gauntlets.mdl"
@@ -64404,7 +64404,7 @@
 			"equip_regions"
 			{
 				"shirt"		"1"
-				"arms"		"1"
+				"sleeves"		"1"
 			}
 			"image_inventory"		"backpack/workshop/player/items/medic/hw2013_ramses_regalia/hw2013_ramses_regalia"
 			"model_player"		"models/workshop/player/items/medic/hw2013_ramses_regalia/hw2013_ramses_regalia.mdl"
@@ -64540,7 +64540,7 @@
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_abhorrent_appendages"
 			"item_description"		"#TF_hw2013_the_abhorrent_appendages_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/pyro/hw2013_the_abhorrent_appendages/hw2013_the_abhorrent_appendages"
 			"capabilities"
@@ -66285,7 +66285,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_sbox2014_demo_samurai_sleeves"
 			"item_description"		"#TF_sbox2014_demo_samurai_sleeves_Desc"
-			"equip_region"		"demo_arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves"
 			"capabilities"
 			{
@@ -68174,7 +68174,7 @@
 			"item_type_name"		"#TF_Wearable_Coat"
 			"item_name"		"#TF_sept2014_mann_of_the_seven_sees"
 			"item_description"		"#TF_sept2014_cosmetic_desc"
-			"equip_region"		"demo_arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/demo/sept2014_mann_of_the_seven_sees/sept2014_mann_of_the_seven_sees"
 			"capabilities"
 			{
@@ -68369,7 +68369,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_medic_kriegsmaschine_9000"
 			"item_description"		"#TF_sf14_medic_kriegsmaschine_9000_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/sf14_medic_kriegsmaschine_9000/sf14_medic_kriegsmaschine_9000"
 			"capabilities"
@@ -68461,7 +68461,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_fowl_fists"
 			"item_description"		"#TF_sf14_fowl_fists_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/scout/sf14_fowl_fists/sf14_fowl_fists"
 			"capabilities"
@@ -68687,7 +68687,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_skinless_slashers"
 			"item_description"		"#TF_sf14_skinless_slashers_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_skinless_slashers/sf14_skinless_slashers"
 			"capabilities"
@@ -68753,7 +68753,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_roo_rippers"
 			"item_description"		"#TF_sf14_roo_rippers_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_roo_rippers/sf14_roo_rippers"
 			"capabilities"
@@ -69238,7 +69238,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_hw2014_robot_arm"
 			"item_description"		"#TF_sf14_hw2014_robot_arm_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_hw2014_robot_arm/sf14_hw2014_robot_arm"
 			"capabilities"
@@ -70627,7 +70627,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_dec2014_armoured_appendages"
 			"item_description"		"#TF_dec2014_cosmetic_desc"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/pyro/dec2014_armoured_appendages/dec2014_armoured_appendages"
 			"capabilities"
 			{
@@ -73353,7 +73353,7 @@
 			"item_name"		"#TF_bak_batarm"
 			"item_description"		"#TF_bak_batarm_Desc"
 			"item_type_name"		"#TF_Wearable_Armor"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"image_inventory"		"backpack/workshop/player/items/all_class/bak_batarm/bak_batarm"
 			"capabilities"
 			{
@@ -73670,7 +73670,7 @@
 			"item_name"		"#TF_bak_crook_combatant"
 			"item_description"		"#TF_bak_crook_combatant_Desc"
 			"item_type_name"		"#TF_Wearable_Gloves"
-			"equip_region"		"arms"
+			"equip_region"		"sleeves"
 			"visuals"
 			{
 				"player_bodygroups"
