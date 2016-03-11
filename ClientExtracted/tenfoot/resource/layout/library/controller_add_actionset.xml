@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<EditShortcutName class="TenfootMsgBox" defaultfocus="ActionSetName">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    		<Label class="StdTitle" text="#Library_AddActionSet_Title" />
+
+    		<Label class="SubTitle" text="#Library_AddActionSet_CodeLabel" />
+	    	<TextEntry id="ActionSetName"
+		       	textinputid="ActionSetNameTextEntry"
+    			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+
+            <Panel id="MsgBoxButtons">
+                <Button class="Button" onactivate="SetActionSetName();">
+                    <Label text="#UI_OK" />
+                </Button>
+                <Button class="Button" onactivate="ButtonCancel();">
+                    <Label text="#UI_Cancel" />
+                </Button>
+            </Panel>        
+        </Panel>
+	</EditShortcutName>
+</root>

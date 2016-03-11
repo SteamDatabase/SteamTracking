@@ -3816,7 +3816,7 @@ KeyboardShortcut Image
 	}
 }
 
-#LaunchOptions, #ShortcutName
+#LaunchOptions, #ShortcutName, #ActionSetName
 {
 	margin-top: 20px;
 	font-size: 28px;
@@ -5876,6 +5876,7 @@ ControllerConfigSelectController #ButtonCancel
 .VR .OculusVRController .VRSupportsOculusController #VRGameRequiresDifferentControls, 
 .VR .SteamVRController .VRSupportsSteamVRController #VRGameRequiresDifferentControls,
 .VR .XInputPad .VRSupportsXInputController #VRGameRequiresDifferentControls,
+.VR .SteamPad .VRSupportsXInputController #VRGameRequiresDifferentControls,
 .VR .NoActiveController #VRGameRequiresDifferentControls
 {
 	visibility: collapse;

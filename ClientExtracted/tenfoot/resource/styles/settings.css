@@ -3873,3 +3873,13 @@ SettingsPanel_ControllerConfigs .SettingsContent
 {
     margin-left: 10px;
 }
+
+.VROnly
+{
+	visibility: collapse;
+}
+
+.VR .VROnly
+{
+	visibility: visible;
+}

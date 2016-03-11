@@ -116,6 +116,12 @@
         <Button id="AddShortcutSettingsButton" class="Button" onactivate="AddLibraryShortcut();">
 					<Label class="LongDesc" text="#Settings_AddLibraryShortcut" />
 				</Button>
+				
+        <!-- VR Settings -->
+        <Label class="LongDesc SettingCategory VROnly" text="#Settings_VRSettings"/>
+        <Button id="VRSettings" class="Button VROnly" onactivate="ShowVRSettings();">
+					<Label class="LongDesc" text="#Settings_VRSettings" />
+				</Button>
       </Panel>
       
       

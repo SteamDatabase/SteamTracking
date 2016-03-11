@@ -3,6 +3,7 @@
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
+ B CJSMethodArgument::default_instance_
  B CMemoryPool::g_ReportFunc
  B CMsgAddHeader::default_instance_
  B CMsgBrowserCreate::default_instance_
@@ -42,11 +43,19 @@
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
+ B CMsgJSExecuteCallback::default_instance_
+ B CMsgJSMethodCall::default_instance_
+ B CMsgJSRaiseException::default_instance_
+ B CMsgJSRegisterMethod::default_instance_
+ B CMsgJSReleaseCallback::default_instance_
+ B CMsgJSValue::default_instance_
+ B CMsgJSValue_JSObjectProperty::default_instance_
  B CMsgKeyChar::default_instance_
  B CMsgKeyDown::default_instance_
  B CMsgKeyUp::default_instance_
  B CMsgLinkAtPosition::default_instance_
  B CMsgLinkAtPositionResponse::default_instance_
+ B CMsgLoadLocalization::default_instance_
  B CMsgLoadedRequest::default_instance_
  B CMsgLoadingResource::default_instance_
  B CMsgMouseDblClick::default_instance_
@@ -82,6 +91,8 @@
  B CMsgSetFocus::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
+ B CMsgSetLocalFileRequestMapping::default_instance_
+ B CMsgSetLocalFileRequestMapping_AdditionalRoute::default_instance_
  B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
@@ -812,6 +823,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
  D typeinfo for CHTMLProtoBufMsg<CMsgHidePopup>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyChar>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -838,6 +850,7 @@
  D typeinfo for CHistoryGames
  D typeinfo for CIntProperty
  D typeinfo for CInternetGames
+ D typeinfo for CJSMethodArgument
  D typeinfo for CLanGames
  D typeinfo for CModList
  D typeinfo for CModList::CCallback_OnAppDataChanged
@@ -879,11 +892,19 @@
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
+ D typeinfo for CMsgJSExecuteCallback
+ D typeinfo for CMsgJSMethodCall
+ D typeinfo for CMsgJSRaiseException
+ D typeinfo for CMsgJSRegisterMethod
+ D typeinfo for CMsgJSReleaseCallback
+ D typeinfo for CMsgJSValue
+ D typeinfo for CMsgJSValue_JSObjectProperty
  D typeinfo for CMsgKeyChar
  D typeinfo for CMsgKeyDown
  D typeinfo for CMsgKeyUp
  D typeinfo for CMsgLinkAtPosition
  D typeinfo for CMsgLinkAtPositionResponse
+ D typeinfo for CMsgLoadLocalization
  D typeinfo for CMsgLoadedRequest
  D typeinfo for CMsgLoadingResource
  D typeinfo for CMsgMouseDblClick
@@ -919,6 +940,8 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
+ D typeinfo for CMsgSetLocalFileRequestMapping
+ D typeinfo for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
@@ -1606,6 +1629,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
  D vtable for CHTMLProtoBufMsg<CMsgHidePopup>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D vtable for CHTMLProtoBufMsg<CMsgKeyChar>
  D vtable for CHTMLProtoBufMsg<CMsgKeyDown>
  D vtable for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -1632,6 +1656,7 @@
  D vtable for CHistoryGames
  D vtable for CIntProperty
  D vtable for CInternetGames
+ D vtable for CJSMethodArgument
  D vtable for CLanGames
  D vtable for CModList
  D vtable for CModList::CCallback_OnAppDataChanged
@@ -1673,11 +1698,19 @@
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
+ D vtable for CMsgJSExecuteCallback
+ D vtable for CMsgJSMethodCall
+ D vtable for CMsgJSRaiseException
+ D vtable for CMsgJSRegisterMethod
+ D vtable for CMsgJSReleaseCallback
+ D vtable for CMsgJSValue
+ D vtable for CMsgJSValue_JSObjectProperty
  D vtable for CMsgKeyChar
  D vtable for CMsgKeyDown
  D vtable for CMsgKeyUp
  D vtable for CMsgLinkAtPosition
  D vtable for CMsgLinkAtPositionResponse
+ D vtable for CMsgLoadLocalization
  D vtable for CMsgLoadedRequest
  D vtable for CMsgLoadingResource
  D vtable for CMsgMouseDblClick
@@ -1713,6 +1746,8 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
+ D vtable for CMsgSetLocalFileRequestMapping
+ D vtable for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
@@ -1891,6 +1926,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHidePopup>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyChar>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -1917,6 +1953,7 @@
  R typeinfo name for CHistoryGames
  R typeinfo name for CIntProperty
  R typeinfo name for CInternetGames
+ R typeinfo name for CJSMethodArgument
  R typeinfo name for CLanGames
  R typeinfo name for CModList
  R typeinfo name for CModList::CCallback_OnAppDataChanged
@@ -1958,11 +1995,19 @@
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
+ R typeinfo name for CMsgJSExecuteCallback
+ R typeinfo name for CMsgJSMethodCall
+ R typeinfo name for CMsgJSRaiseException
+ R typeinfo name for CMsgJSRegisterMethod
+ R typeinfo name for CMsgJSReleaseCallback
+ R typeinfo name for CMsgJSValue
+ R typeinfo name for CMsgJSValue_JSObjectProperty
  R typeinfo name for CMsgKeyChar
  R typeinfo name for CMsgKeyDown
  R typeinfo name for CMsgKeyUp
  R typeinfo name for CMsgLinkAtPosition
  R typeinfo name for CMsgLinkAtPositionResponse
+ R typeinfo name for CMsgLoadLocalization
  R typeinfo name for CMsgLoadedRequest
  R typeinfo name for CMsgLoadingResource
  R typeinfo name for CMsgMouseDblClick
@@ -1998,6 +2043,8 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
+ R typeinfo name for CMsgSetLocalFileRequestMapping
+ R typeinfo name for CMsgSetLocalFileRequestMapping_AdditionalRoute
  R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
@@ -2072,7 +2119,6 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, int, int, bool (*)(unsigned long long const&, unsigned long long const&)>::Node_t, int, CUtlMap<unsigned long long, int, int, bool (*)(unsigned long long const&, unsigned long long const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
- R typeinfo name for CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(vgui::ListPanel::IndexItem_t const&, vgui::ListPanel::IndexItem_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >
  R typeinfo name for CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >
@@ -2559,6 +2605,7 @@
  T CHFontProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CHFontProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
+ T CHTMLBaseProtoBufMsg::UpdateBrowserIDCrossProc(CUtlBuffer*, unsigned int)
  T CHTMLHeader::ByteSize() const
  T CHTMLHeader::CHTMLHeader()
  T CHTMLHeader::Clear()
@@ -2607,6 +2654,8 @@
  T CHTMLProtoBufMsg<CMsgHidePopup>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSRaiseException>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSRaiseException>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyChar>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgKeyChar>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyDown>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2704,6 +2753,19 @@
  T CInternetGames::SupportsItem(IGameList::InterfaceItem_e)
  T CInternetGames::Validate(CValidator&, char const*)
  T CInternetGames::~CInternetGames()
+ T CJSMethodArgument::ByteSize() const
+ T CJSMethodArgument::CJSMethodArgument()
+ T CJSMethodArgument::Clear()
+ T CJSMethodArgument::GetCachedSize() const
+ T CJSMethodArgument::GetMetadata() const
+ T CJSMethodArgument::IsInitialized() const
+ T CJSMethodArgument::MergeFrom(CJSMethodArgument const&)
+ T CJSMethodArgument::New() const
+ T CJSMethodArgument::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CJSMethodArgument::SetCachedSize(int) const
+ T CJSMethodArgument::SharedCtor()
+ T CJSMethodArgument::SharedDtor()
+ T CJSMethodArgument::~CJSMethodArgument()
  T CKeyBindingsMgr::AddPanelToContext(vgui::KeyBindingContextHandle_t, vgui::Panel*)
  T CKeyBindingsMgr::Find(vgui::KeyBindingContextHandle_t)
  T CKeyBindingsMgr::GetKeyBindingsFile(vgui::KeyBindingContextHandle_t)
@@ -3202,6 +3264,93 @@
  T CMsgJSDialogResponse::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgJSDialogResponse::SetCachedSize(int) const
  T CMsgJSDialogResponse::~CMsgJSDialogResponse()
+ T CMsgJSExecuteCallback::ByteSize() const
+ T CMsgJSExecuteCallback::CMsgJSExecuteCallback()
+ T CMsgJSExecuteCallback::Clear()
+ T CMsgJSExecuteCallback::GetCachedSize() const
+ T CMsgJSExecuteCallback::GetMetadata() const
+ T CMsgJSExecuteCallback::IsInitialized() const
+ T CMsgJSExecuteCallback::MergeFrom(CMsgJSExecuteCallback const&)
+ T CMsgJSExecuteCallback::New() const
+ T CMsgJSExecuteCallback::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSExecuteCallback::SetCachedSize(int) const
+ T CMsgJSExecuteCallback::~CMsgJSExecuteCallback()
+ T CMsgJSMethodCall::ByteSize() const
+ T CMsgJSMethodCall::CMsgJSMethodCall()
+ T CMsgJSMethodCall::Clear()
+ T CMsgJSMethodCall::GetCachedSize() const
+ T CMsgJSMethodCall::GetMetadata() const
+ T CMsgJSMethodCall::IsInitialized() const
+ T CMsgJSMethodCall::MergeFrom(CMsgJSMethodCall const&)
+ T CMsgJSMethodCall::New() const
+ T CMsgJSMethodCall::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSMethodCall::SetCachedSize(int) const
+ T CMsgJSMethodCall::SharedCtor()
+ T CMsgJSMethodCall::SharedDtor()
+ T CMsgJSMethodCall::~CMsgJSMethodCall()
+ T CMsgJSRaiseException::ByteSize() const
+ T CMsgJSRaiseException::CMsgJSRaiseException()
+ T CMsgJSRaiseException::Clear()
+ T CMsgJSRaiseException::GetCachedSize() const
+ T CMsgJSRaiseException::GetMetadata() const
+ T CMsgJSRaiseException::IsInitialized() const
+ T CMsgJSRaiseException::MergeFrom(CMsgJSRaiseException const&)
+ T CMsgJSRaiseException::New() const
+ T CMsgJSRaiseException::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSRaiseException::SetCachedSize(int) const
+ T CMsgJSRaiseException::SharedCtor()
+ T CMsgJSRaiseException::SharedDtor()
+ T CMsgJSRaiseException::~CMsgJSRaiseException()
+ T CMsgJSRegisterMethod::ByteSize() const
+ T CMsgJSRegisterMethod::CMsgJSRegisterMethod()
+ T CMsgJSRegisterMethod::Clear()
+ T CMsgJSRegisterMethod::GetCachedSize() const
+ T CMsgJSRegisterMethod::GetMetadata() const
+ T CMsgJSRegisterMethod::IsInitialized() const
+ T CMsgJSRegisterMethod::MergeFrom(CMsgJSRegisterMethod const&)
+ T CMsgJSRegisterMethod::New() const
+ T CMsgJSRegisterMethod::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSRegisterMethod::SetCachedSize(int) const
+ T CMsgJSRegisterMethod::SharedCtor()
+ T CMsgJSRegisterMethod::SharedDtor()
+ T CMsgJSRegisterMethod::~CMsgJSRegisterMethod()
+ T CMsgJSReleaseCallback::ByteSize() const
+ T CMsgJSReleaseCallback::CMsgJSReleaseCallback()
+ T CMsgJSReleaseCallback::Clear()
+ T CMsgJSReleaseCallback::GetCachedSize() const
+ T CMsgJSReleaseCallback::GetMetadata() const
+ T CMsgJSReleaseCallback::IsInitialized() const
+ T CMsgJSReleaseCallback::MergeFrom(CMsgJSReleaseCallback const&)
+ T CMsgJSReleaseCallback::New() const
+ T CMsgJSReleaseCallback::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSReleaseCallback::SetCachedSize(int) const
+ T CMsgJSReleaseCallback::~CMsgJSReleaseCallback()
+ T CMsgJSValue::ByteSize() const
+ T CMsgJSValue::CMsgJSValue()
+ T CMsgJSValue::Clear()
+ T CMsgJSValue::GetCachedSize() const
+ T CMsgJSValue::GetMetadata() const
+ T CMsgJSValue::IsInitialized() const
+ T CMsgJSValue::MergeFrom(CMsgJSValue const&)
+ T CMsgJSValue::New() const
+ T CMsgJSValue::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSValue::SetCachedSize(int) const
+ T CMsgJSValue::SharedCtor()
+ T CMsgJSValue::SharedDtor()
+ T CMsgJSValue::~CMsgJSValue()
+ T CMsgJSValue_JSObjectProperty::ByteSize() const
+ T CMsgJSValue_JSObjectProperty::CMsgJSValue_JSObjectProperty()
+ T CMsgJSValue_JSObjectProperty::Clear()
+ T CMsgJSValue_JSObjectProperty::GetCachedSize() const
+ T CMsgJSValue_JSObjectProperty::GetMetadata() const
+ T CMsgJSValue_JSObjectProperty::IsInitialized() const
+ T CMsgJSValue_JSObjectProperty::MergeFrom(CMsgJSValue_JSObjectProperty const&)
+ T CMsgJSValue_JSObjectProperty::New() const
+ T CMsgJSValue_JSObjectProperty::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSValue_JSObjectProperty::SetCachedSize(int) const
+ T CMsgJSValue_JSObjectProperty::SharedCtor()
+ T CMsgJSValue_JSObjectProperty::SharedDtor()
+ T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
  T CMsgKeyChar::Clear()
@@ -3259,6 +3408,19 @@
  T CMsgLinkAtPositionResponse::SharedCtor()
  T CMsgLinkAtPositionResponse::SharedDtor()
  T CMsgLinkAtPositionResponse::~CMsgLinkAtPositionResponse()
+ T CMsgLoadLocalization::ByteSize() const
+ T CMsgLoadLocalization::CMsgLoadLocalization()
+ T CMsgLoadLocalization::Clear()
+ T CMsgLoadLocalization::GetCachedSize() const
+ T CMsgLoadLocalization::GetMetadata() const
+ T CMsgLoadLocalization::IsInitialized() const
+ T CMsgLoadLocalization::MergeFrom(CMsgLoadLocalization const&)
+ T CMsgLoadLocalization::New() const
+ T CMsgLoadLocalization::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgLoadLocalization::SetCachedSize(int) const
+ T CMsgLoadLocalization::SharedCtor()
+ T CMsgLoadLocalization::SharedDtor()
+ T CMsgLoadLocalization::~CMsgLoadLocalization()
  T CMsgLoadedRequest::ByteSize() const
  T CMsgLoadedRequest::CMsgLoadedRequest()
  T CMsgLoadedRequest::Clear()
@@ -3670,6 +3832,32 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
+ T CMsgSetLocalFileRequestMapping::ByteSize() const
+ T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
+ T CMsgSetLocalFileRequestMapping::Clear()
+ T CMsgSetLocalFileRequestMapping::GetCachedSize() const
+ T CMsgSetLocalFileRequestMapping::GetMetadata() const
+ T CMsgSetLocalFileRequestMapping::IsInitialized() const
+ T CMsgSetLocalFileRequestMapping::MergeFrom(CMsgSetLocalFileRequestMapping const&)
+ T CMsgSetLocalFileRequestMapping::New() const
+ T CMsgSetLocalFileRequestMapping::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetLocalFileRequestMapping::SetCachedSize(int) const
+ T CMsgSetLocalFileRequestMapping::SharedCtor()
+ T CMsgSetLocalFileRequestMapping::SharedDtor()
+ T CMsgSetLocalFileRequestMapping::~CMsgSetLocalFileRequestMapping()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::ByteSize() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::CMsgSetLocalFileRequestMapping_AdditionalRoute()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::Clear()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::GetCachedSize() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::GetMetadata() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::IsInitialized() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::MergeFrom(CMsgSetLocalFileRequestMapping_AdditionalRoute const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::New() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SetCachedSize(int) const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedCtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedDtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::~CMsgSetLocalFileRequestMapping_AdditionalRoute()
  T CMsgSetSharedPaintBuffers::ByteSize() const
  T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
  T CMsgSetSharedPaintBuffers::Clear()
@@ -4089,6 +4277,11 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::~CUtlHandleTable()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::EnsureCapacity(int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Find(vgui::CFontWidthCache::key_t const&) const
@@ -4273,9 +4466,6 @@
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
- T CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(vgui::ListPanel::IndexItem_t const&, vgui::ListPanel::IndexItem_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(vgui::ListPanel::IndexItem_t const&, vgui::ListPanel::IndexItem_t const&), CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(vgui::ListPanel::IndexItem_t const&, vgui::ListPanel::IndexItem_t const&), CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >::Find(void* const&) const
  T CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(void* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >::Insert(void* const&, bool)
@@ -4328,6 +4518,7 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -4453,6 +4644,7 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
+ T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
@@ -4822,7 +5014,7 @@
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
+ T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
@@ -4888,6 +5080,7 @@
  T non-virtual thunk to vgui::HTML::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T non-virtual thunk to vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
+ T non-virtual thunk to vgui::HTML::BrowserJSMethodCall(CMsgJSMethodCall const*)
  T non-virtual thunk to vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
@@ -4982,6 +5175,7 @@
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::operator[](int&&)
+ T std::__1::pair<int*, int> std::__1::get_temporary_buffer<int>(int)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
@@ -4999,11 +5193,8 @@
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
  T unsigned int std::__1::__sort3<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T unsigned int std::__1::__sort4<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort4<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
  T vgui::AnimatingImagePanel::ApplySettings(KeyValues*)
@@ -5724,6 +5915,7 @@
  T vgui::HTML::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
  T vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
+ T vgui::HTML::BrowserJSMethodCall(CMsgJSMethodCall const*)
  T vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
@@ -5858,6 +6050,7 @@
  T vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()
  T vgui::HTML::PerformLayout()
  T vgui::HTML::PostURL(char const*, char const*, bool)
+ T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::SendPendingHTMLMessages()
@@ -6058,7 +6251,6 @@
  T vgui::ListPanel::ApplySchemeSettings(vgui::IScheme*)
  T vgui::ListPanel::ApplySettings(KeyValues*)
  T vgui::ListPanel::ApplyUserConfigSettings(KeyValues*)
- T vgui::ListPanel::AscendingSortFunc(void*, int const*, int const*)
  T vgui::ListPanel::BIsItemInVisibleScrollRegion(int)
  T vgui::ListPanel::CalculateColumnDesiredWidth(int)
  T vgui::ListPanel::CalculateVisibleRowPositions()
@@ -6149,7 +6341,6 @@
  T vgui::ListPanel::PanelMessageFunc_OpenColumnChoiceMenu::InitVar()
  T vgui::ListPanel::PanelMessageFunc_ResizeColumnToContents::InitVar()
  T vgui::ListPanel::PerformLayout()
- T vgui::ListPanel::RBTreeLessFunc(vgui::ListPanel::IndexItem_t&, vgui::ListPanel::IndexItem_t&)
  T vgui::ListPanel::RemoveAll()
  T vgui::ListPanel::RemoveColumn(int)
  T vgui::ListPanel::RemoveItem(int)
@@ -7800,9 +7991,7 @@
  T vgui::surface()
  T vgui::system()
  T void std::__1::__insertion_sort_3<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__sort<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
- T void std::__1::__sort<CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort_s(void*, int (*)(void*, int const*, int const*))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -7901,6 +8090,8 @@
  b (anonymous namespace)::CHTMLHeader_reflection_
  b (anonymous namespace)::CHTMLPageSecurityInfo_descriptor_
  b (anonymous namespace)::CHTMLPageSecurityInfo_reflection_
+ b (anonymous namespace)::CJSMethodArgument_descriptor_
+ b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgBrowserCreateResponse_descriptor_
@@ -7977,6 +8168,20 @@
  b (anonymous namespace)::CMsgJSConfirm_reflection_
  b (anonymous namespace)::CMsgJSDialogResponse_descriptor_
  b (anonymous namespace)::CMsgJSDialogResponse_reflection_
+ b (anonymous namespace)::CMsgJSExecuteCallback_descriptor_
+ b (anonymous namespace)::CMsgJSExecuteCallback_reflection_
+ b (anonymous namespace)::CMsgJSMethodCall_descriptor_
+ b (anonymous namespace)::CMsgJSMethodCall_reflection_
+ b (anonymous namespace)::CMsgJSRaiseException_descriptor_
+ b (anonymous namespace)::CMsgJSRaiseException_reflection_
+ b (anonymous namespace)::CMsgJSRegisterMethod_descriptor_
+ b (anonymous namespace)::CMsgJSRegisterMethod_reflection_
+ b (anonymous namespace)::CMsgJSReleaseCallback_descriptor_
+ b (anonymous namespace)::CMsgJSReleaseCallback_reflection_
+ b (anonymous namespace)::CMsgJSValue_JSObjectProperty_descriptor_
+ b (anonymous namespace)::CMsgJSValue_JSObjectProperty_reflection_
+ b (anonymous namespace)::CMsgJSValue_descriptor_
+ b (anonymous namespace)::CMsgJSValue_reflection_
  b (anonymous namespace)::CMsgKeyChar_descriptor_
  b (anonymous namespace)::CMsgKeyChar_reflection_
  b (anonymous namespace)::CMsgKeyDown_descriptor_
@@ -7987,6 +8192,8 @@
  b (anonymous namespace)::CMsgLinkAtPositionResponse_reflection_
  b (anonymous namespace)::CMsgLinkAtPosition_descriptor_
  b (anonymous namespace)::CMsgLinkAtPosition_reflection_
+ b (anonymous namespace)::CMsgLoadLocalization_descriptor_
+ b (anonymous namespace)::CMsgLoadLocalization_reflection_
  b (anonymous namespace)::CMsgLoadedRequest_descriptor_
  b (anonymous namespace)::CMsgLoadedRequest_reflection_
  b (anonymous namespace)::CMsgLoadingResource_descriptor_
@@ -8057,6 +8264,10 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_descriptor_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_reflection_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_descriptor_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_reflection_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
@@ -8117,7 +8328,7 @@
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CUtlSymbol::Initialize()::symbolsInitialized
- b DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
+ b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
@@ -8241,10 +8452,6 @@
  b s_bDebugVGUI2Messages
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
- b s_hCurrentSortingColumnSymbol
- b s_hCurrentSortingColumnSymbol2
- b s_pSortFunc
- b s_pSortFuncSecondary
  b selectBuf
  b vec2_invalid
  b vec2_origin
@@ -8309,9 +8516,6 @@
  d intconverter
  d p_floatconverter
  d p_intconverter
- d s_bSortAscending
- d s_bSortAscendingSecondary
- d s_iDuplicateIndex
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d stringconverter
@@ -8376,6 +8580,7 @@
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
+ operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
  pthread_mutex_destroy
  pthread_mutex_init
@@ -8387,6 +8592,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreate_offsets_
@@ -8425,11 +8631,19 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSExecuteCallback_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSMethodCall_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSRaiseException_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSRegisterMethod_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSReleaseCallback_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_JSObjectProperty_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyChar_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLinkAtPositionResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLinkAtPosition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadLocalization_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadingResource_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseDblClick_offsets_
@@ -8465,6 +8679,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_AdditionalRoute_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
@@ -8524,6 +8740,7 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
  std::exception::~exception()
+ std::nothrow
  std::terminate()
  strcat
  strchr
@@ -8619,7 +8836,7 @@
  t Create_ToggleButton()
  t Create_TreeView()
  t DefaultSortFunc(KeyValues*, KeyValues*)
- t DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ t DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
@@ -8634,12 +8851,14 @@
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
- t NullSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t SimplifyNode(ExprNode*&)
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
+ t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
+ t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
+ t void std::__1::__stable_sort_move<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*)
  time
  typeinfo for std::exception
  vsnprintf

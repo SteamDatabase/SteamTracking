@@ -384,9 +384,22 @@
 				<Panel class="FieldWrapper" modes="trigger" advanced="off" gameactions="both">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
 					<Slider id="TriggerThreshold" direction="horizontal" />
-				</Panel>									
-				
-			</Panel>
+				</Panel>
+        <!-- Trigger Mode Advanced -->
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
+          <Slider id="TriggerDeadZoneStart" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
+          <Slider id="TriggerDeadZoneEnd" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
+          <DropDown id="TriggerCurveExponent" />
+        </Panel>
+
+      </Panel>
 			
 			<!--
 				Middle Column
@@ -719,19 +732,37 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
 					<DropDown id="OutputTrigger" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
-					<Slider id="TriggerDeadZoneStart" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
-					<Slider id="TriggerDeadZoneEnd" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
-					<DropDown id="TriggerCurveExponent" />
-				</Panel>
-			</Panel>
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
+          <DropDown id="HapticIntensityTriggerThreshold" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+          <DropDown id="HoldRepeatsTrigger" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
+          <Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
+        </Panel>
+        <!-- Trigger Mode Advanced -->
+        <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam0" />
+          <Slider id="TestParam0" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam1" />
+          <Slider id="TestParam1" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam2" />
+          <Slider id="TestParam2" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam3" />
+          <Slider id="TestParam3" direction="horizontal" />
+        </Panel>
+
+      </Panel>
 
 			<!--
 				Right Column
@@ -990,20 +1021,16 @@
 					</Panel>					
 					
 
-					<!-- Trigger Mode -->
-					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
-						<DropDown id="HapticIntensityTriggerThreshold" />
-					</Panel>					
-					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
-						<DropDown id="HoldRepeatsTrigger" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
-						<Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
-					</Panel>				
-				</Panel>
+					<!-- Trigger Mode Advanced -->
+          <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam4" />
+            <Slider id="TestParam4" direction="horizontal" />
+          </Panel>
+          <Panel class="FieldWrapper" modes="trigger" devonly="on" gameactions="off" advanced="on">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TestParam5" />
+            <Slider id="TestParam5" direction="horizontal" />
+          </Panel>
+        </Panel>
 				
 				<!-- Show advanced properties button -->
 				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="ShowAdvancedProperties">

@@ -110,7 +110,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .HasMultipleActionSets #TopHalfContainer
 {
-		height: 575px;
+		height: 525px;
 }
 
 #GameActionSets
@@ -415,7 +415,7 @@ ControllerBindingsGordon.ScreenSaverMode
 {
 	horizontal-align: center;
 	vertical-align: bottom;
-	margin-bottom: 32px;
+	margin-bottom: 0px;
 	width: 256px;
 	height: 128px;
 	flow-children: down;
@@ -423,7 +423,8 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .HasMultipleActionSets #GyroModeContainer
 {
-	margin-bottom: 8px;	
+	margin-bottom: -16px;	
+
 }
 
 .ModeWrapper
@@ -445,6 +446,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	height: 128px;
 	border: 0px;
 	align: center center;
+   	pre-transform-scale2d: 0.85;
 }
 
 #Gyro:focus
@@ -1062,12 +1064,12 @@ ControllerBindingButton.Glyph
 	background-repeat: no-repeat;
 }
 
-ControllerBindingButton.Glyph.KeyboardShape, ControllerBindingButton.Glyph.UnboundShape, ControllerBindingButton.Glyph.MouseShape
+ControllerBindingButton.Glyph.KeyboardShape, ControllerBindingButton.Glyph.UnboundShape, ControllerBindingButton.Glyph.MouseShape, ControllerBindingButton.Glyph.ControllerActionShape
 {
 	background-image: url("file://{images}/library/controller/glyph_input_wrapper_keyboard_offset.png");
 }
 
-ControllerBindingButton.Glyph.KeyboardShape #BindingShape, ControllerBindingButton.Glyph.UnboundShape #BindingShape, ControllerBindingButton.Glyph.MouseShape #BindingShape
+ControllerBindingButton.Glyph.KeyboardShape #BindingShape, ControllerBindingButton.Glyph.UnboundShape #BindingShape, ControllerBindingButton.Glyph.MouseShape #BindingShape, ControllerBindingButton.Glyph.ControllerActionShape #BindingShape
 {
 	width: 100%;
 	height: 100%;
@@ -1733,7 +1735,7 @@ ChooseBinding.InGameActionsView #KeyboardWrapper
 ChooseBinding #GameActionsHeader
 {
 	vertical-align: top;
-	font-size: 40px;
+	font-size: 32px;
     horizontal-align: center;
 }
 
@@ -1803,6 +1805,11 @@ ChooseBinding .GameActionSelectButton.OriginalBinding
 ChooseBinding .GameActionSelectButton.OriginalBinding Label
 {
 	color: white;
+}
+
+ChooseBinding .ControllerActionButton
+{
+    margin-left: 116px;
 }
 
 ChooseBinding .IconPreview

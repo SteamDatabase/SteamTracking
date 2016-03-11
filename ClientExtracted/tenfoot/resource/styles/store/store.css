@@ -78,46 +78,10 @@
 	animation-timing-function: bigpicture-ease-in-out;
 }
 
-//
-// Store Panel
-//
-StorePanel
-{
-	width: 100%;
-	height: 100%;
-	vertical-align: bottom;
-	opacity: 0.0;
-
-	transition-property: opacity;
-	transition-duration: 0.4s;
-	transition-delay: 0.0s;
-	transition-timing-function: linear;
-}
-
-StorePanel.StoreVisible
-{
-	opacity: 1.0;
-}
-
-
-StorePanel:descendantfocus
-{
-
-}
-
 #Contents
 {
 	width: 100%;
 	height: 100%;
-}
-
-StorePanel Carousel
-{
-	width: 100%;
-	horizontal-align: center;
-
-	// set height so panels flowed below do not move when image sizes transition
-	height: 580px;
 }
 
 .LeftMouseScrollRegion, .RightMouseScrollRegion
@@ -308,7 +272,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 
-StorePanel:descendantfocus #FeaturedCapsules,
 .WebBrowserActive #FeaturedCapsules
 {
 	perspective-origin: 50% 50%;
@@ -512,10 +475,6 @@ StorePanel:descendantfocus #FeaturedCapsules,
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-StorePackageAppOverview.Focused:descendantfocus .CapsuleControllerSupport
-{
-	visibility: visible;
-}
 
 //.CapsuleControllerSupportContainer:descendantfocus .CapsuleControllerSupport .MacSupport .WindowsSupport .SteamOSSupport
 //{
@@ -530,10 +489,7 @@ StorePackageAppOverview.Focused:descendantfocus .CapsuleControllerSupport
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.MacAvailable .MacSupport
-{
-	margin: 0px;
-}
+
 
 .CapsuleControllerSupportContainer.SteamOSAvailable .SteamOSSupport
 {
@@ -542,10 +498,7 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.MacAvailable .MacSup
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.SteamOSAvailable .SteamOSSupport
-{
-	margin: 0px;
-}
+
 
 .CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
 {
@@ -555,11 +508,6 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.SteamOSAvailable .St
 	background-repeat: no-repeat;
 	horizontal-align: right;
 	vertical-align: center;
-}
-
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
-{
-	margin: 0px;
 }
 
 
@@ -573,10 +521,6 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .Wi
 	vertical-align: center;
 }
 
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.StreamingVideoAvailable .StreamingVideoSupport
-{
-	margin: 0px;
-}
 
 .CapsuleControllerSupportContainer .CapsuleControllerSupport
 {
@@ -624,17 +568,6 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.StreamingVideoAvaila
 	background-repeat: no-repeat;
 }
 
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
-.SteamPad StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
-{
-	margin: 0px;
-	width: 45px;
-	height: 45px;
-	margin-top: -2px;
-	margin-left: 4px;
-}
-
-
 
 //.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 //{
@@ -658,21 +591,6 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 	background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-}
-
-//StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
-//{
-//	visibility: collapse;
-//}
-
-.SteamPad StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
-{
-	visibility: visible;
-	margin: 0px;
-	width: 45px;
-	margin-top: -2px;
-	margin-left: 2px;
-	height: 45px;
 }
 
 
@@ -754,7 +672,6 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 	saturation: 1.0;
 }
 
-StorePanel:descendantfocus .StoreImage,
 .WebBrowserActive .StoreImage,
 {
 	pre-transform-scale2d: 1.0;
@@ -792,11 +709,6 @@ StorePanel:descendantfocus .StoreImage,
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-}
-
-StorePanel:descendantfocus #FeaturedPlatform
-{
-	opacity: 0.0;
 }
 
 
@@ -903,13 +815,6 @@ StorePanel:descendantfocus #FeaturedPlatform
 	opacity: 1.0;
 }
 
-#FrontPage:descendantfocus #Categories StoreFeaturedCategory
-{
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-	transition-property: transform, opacity-mask, box-shadow, position, pre-transform-scale2d;
-}
-
 #FrontPage:descendantfocus #Categories 
 {
 	transition-duration: 0.3s;
@@ -928,27 +833,6 @@ StorePanel:descendantfocus #FeaturedPlatform
 {
 	opacity: 1.0;
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
-}
-
-#FrontPage:descendantfocus  #Categories:descendantfocus StoreFeaturedCategory.PreviouslyRight
-{
-	opacity-mask: url( "file://{images}/focus_shadow_right2.png" ) 0.0;
-}
-
-#FrontPage:descendantfocus  #Categories:descendantfocus StoreFeaturedCategory.PreviouslyLeft
-{
-	opacity-mask: url( "file://{images}/focus_shadow_left2.png" ) 0.0;
-}
-
-#FrontPage:descendantfocus  #Categories:descendantfocus StoreFeaturedCategory.RightOfFocus1
-{
-	opacity-mask: url( "file://{images}/focus_shadow_right2.png" ) 1.0;
-	transition-property: transform, box-shadow, position, pre-transform-scale2d;
-}
-
-#FrontPage:descendantfocus  #Categories:descendantfocus StoreFeaturedCategory.LeftOfFocus1
-{
-	opacity-mask: url( "file://{images}/focus_shadow_left2.png" ) 1.0;
 }
 
 #FrontPage #Categories:descendantfocus 
@@ -972,133 +856,6 @@ StorePanel:descendantfocus #FeaturedPlatform
 {
 	pre-transform-scale2d: 1.00;
 	transform: translatey(-140px);
-}
-
-StoreFeaturedCategory
-{
-	width: 460px;
-	height: FeaturedCategoryFocusHeight;
-
-	vertical-align: center;
-	transform: translatez(-100px);
-	pre-transform-scale2d: FeaturedCategoryScale, FeaturedCategoryScale;
-
-	transition-property: position, box-shadow, transform, pre-transform-scale2d;
-	transition-duration: 0.3s;
-}
-
-#Categories:descendantfocus StoreFeaturedCategory
-{
-	pre-transform-scale2d: 1.0, 1.0;
-}
-
-StoreFeaturedCategory:focus
-{
-	transform: translatez(0px);
-	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.5s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#Categories:descendantfocus StoreFeaturedCategory:hover
-{
-	transform: translatez(-90px);
-	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
-}
-
-#Categories:descendantfocus StoreFeaturedCategory:hover Image
-{
-
-	saturation: 0.8;
-	wash-color: none;
-	}
-
-StoreFeaturedCategory:descendantfocus:hover
-{
-	border-color: #fdfefef0;
-	transform: translatez(25px);
-	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
-}
-
-#Categories:descendantfocus StoreFeaturedCategory:focus:hover
-{
-	border-color: #fdfefef0;
-	transform: translatez(25px);
-	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
-}
-
-
-StoreFeaturedCategory #Images
-{
-	width: 100%;
-	height: 100%;
-}
-
-StoreFeaturedCategory Label
-{
-	color: applabel;
-
-	width: 100%;
-	font-size: FeaturedCapsuleTextHeight;
-	text-transform: uppercase;
-	font-weight: bold;
-	padding-bottom: FeaturedCapsuleTextPadding;
-
-	horizontal-align: center;
-	vertical-align: bottom;
-	text-align: center;
-
-	transition-property: transform, box-shadow, pre-transform-scale2d;
-	transition-duration: 0.3s;
-}
-
-StoreFeaturedCategory:descendantfocus Label
-{
-	color: white;
-}
-
-StoreFeaturedCategory #Gradient
-{
-	width: 100%;
-	vertical-align: bottom;
-	height: 170px;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop(0.70, #00000099 ), to( #000000dd  ) );
-
-}
-
-StoreFeaturedCategory:descendantfocus #Gradient
-{
-
-}
-
-StoreFeaturedCategory Image
-{
-	width: 100%;
-	height: 100%;
-	saturation: 0.7;
-	opacity: 0.65;
-	wash-color: store_dark_wash;
-
-	transition-property: wash-color, box-shadow, position, saturation, pre-transform-scale2d;
-	transition-duration: 0.3s;
-}
-
-#Categories:descendantfocus StoreFeaturedCategory Image
- {
-	opacity: 1.0;
-	wash-color: store_genre_wash;
- }
-
-#Categories:descendantfocus StoreFeaturedCategory:descendantfocus Image
-{
-	saturation: 1.0;
-	opacity: 1.0;
-	wash-color: #00000000;
 }
 
 
@@ -1136,42 +893,6 @@ StoreFeaturedCategory Image
 	opacity: 1.0;
 	saturation: 1.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
-}
-
-StoreStackable
-{
-	background-color: black;
-}
-
-StoreStackable #Background
-{
-	width: 100%;
-	height: 100%;
-	color: none;
-	background-image: url( "file://{images}/store/store_app_bg.png" );
-	opacity-mask: url( "file://{images}/bg_gradient_mask.tga" ) 1.0;
-	opacity: 1.0;
-}
-
-StoreStackable #Loading
-{
-	flow-children: down;
-}
-
-StoreStackable #Loading #LoadingStatus
-{
-	margin-top: 6px;
-	color: applabel;
-}
-
-StoreStackable.Error #Loading #LoadingStatus
-{
-	margin-top: 0px;
-}
-
-StoreStackable.Loaded #Loaded
-{
-	opacity: 1.0;
 }
 
 
@@ -1242,14 +963,6 @@ CartLineItem #BasePrice,
 	width: fit-children;
 }
 
-StoreBrowseByCategoryItem StorePrice #BasePrice,
-StoreAppPurchaseSection StorePrice #BasePrice,
-StorePackage StorePrice #BasePrice
-{
-	margin-top: 4px;
-	font-size: 21px;
-	width: fit-children;
-}
 
 CartLineItem:descendantfocus #FinalPrice
 {
@@ -1417,163 +1130,6 @@ StoreSlideshow:hover .RightMouseScrollRegion.Disabled
 	height: 700px;
 	margin-top: 115px;
 	padding: 10px 225px 10px 105px;
-}
-
-
-//
-// StoreGenrePreview
-//
-StoreGenrePreview
-{
-	width: 450px;
-	height: 251px;
-	margin: 10px;
-	box-shadow: fill #00000066 0px 0px 4px 0px;
-	pre-transform-scale2d: 0.90;
-
-	transition-property: pre-transform-scale2d, box-shadow, saturation, position, background-color, wash-color;
-	transition-duration: 0.4s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-StoreGenrePreview:hover
-{
-	pre-transform-scale2d: 0.93;
-	z-index: 1;
-	box-shadow: fill box_shadow_on_color -4.5px -4.5px 6px 9px;
-}
-
-
-StoreGenrePreview:focus
-{
-	pre-transform-scale2d: 1.1;
-	z-index: 100;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-StoreGenrePreview:focus:hover
-{
-	pre-transform-scale2d: 1.13;
-	z-index: 100;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-StoreGenrePreview #Screenshots
-{
-	width: 100%;
-	height: 100%;
-}
-
-StoreGenrePreview #Gradient
-{
-	width: 100%;
-	height: 100%;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop(0.70, #00000044 ), to( #00000099  ) );
-}
-
-StoreGenrePreview:focus #Gradient
-{
-	width: 100%;
-	height: 100%;
-	background-color: store_colorful_focus;
-}
-
-StoreGenrePreview #GenreName
-{
-	width: 100%;
-	height: 100%;
-	vertical-align: center;
-	padding-top: 85px;
-	padding-bottom: 10px;
-
-	color: applabelsolid;
-	font-size: 36px;
-	line-height: 50px;
-	font-family: platformfont;
-	font-weight: normal;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-family: platformfont;
-
-	pre-transform-scale2d: 0.9;
-	transform: translatey( 0px );
-
-	transition-property: color, pre-transform-scale2d, transform;
-	transition-duration: 0.4s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-StoreGenrePreview:focus #GenreName
-{
-
-	pre-transform-scale2d: 1.0;
-	transform: translatey( 0px );
-}
-
-StoreGenrePreview:hover #GenreName
-{
-	transform: translatey( 0px );
-	pre-transform-scale2d: 0.83;
-
-}
-
-StoreGenrePreview:focus:hover #GenreName
-{
-	transform: translatey( 0px );
-	pre-transform-scale2d: 1.0;
-	pre-transform-scale2d: 1.0;
-}
-
-StoreGenrePreview Image
-{
-	saturation: 0.7;
-	wash-color: store_genre_wash;
-	padding: 1px;
-	opacity: 0.85;
-
-	transition-property: saturation, opacity, position;
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-StoreGenrePreview:focus Image
-{
-	saturation: 1.0;
-	wash-color: store_genre_wash_focus;
-	opacity: 1.0;
-}
-
-StoreGenrePreview:hover Image
-{
-	saturation: 0.2;
-	wash-color: #0e6a8f55;
-	opacity: 1.0;
-}
-
-StoreGenrePreview:focus:hover Image
-{
-	saturation: 1.0;
-	wash-color: #429aae44;
-	opacity: 1.0;
-}
-
-StoreGenrePreview Image.Focused
-{
-	position: 0px 0px 0px;
-	opacity: 1.0;
 }
 
 

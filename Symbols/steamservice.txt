@@ -6704,6 +6704,7 @@
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
+ b AssertMsgImplementation::s_bDisableDebuggerBreak
  b BN_options.data
  b BN_options.init
  b BUF_str_reasons
@@ -7750,6 +7751,7 @@
  t InitTicks()
  t KeyValuesSystem()
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
@@ -8407,6 +8409,7 @@
  t rsa_priv_decode
  t rsa_priv_encode
  t rsa_priv_print
+ t rsa_pss_decode
  t rsa_pub_cmp
  t rsa_pub_decode
  t rsa_pub_encode

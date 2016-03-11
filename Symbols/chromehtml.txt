@@ -3,6 +3,7 @@
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
+ B CJSMethodArgument::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgBrowserCreate::default_instance_
  B CMsgBrowserCreateResponse::default_instance_
@@ -41,11 +42,19 @@
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
+ B CMsgJSExecuteCallback::default_instance_
+ B CMsgJSMethodCall::default_instance_
+ B CMsgJSRaiseException::default_instance_
+ B CMsgJSRegisterMethod::default_instance_
+ B CMsgJSReleaseCallback::default_instance_
+ B CMsgJSValue::default_instance_
+ B CMsgJSValue_JSObjectProperty::default_instance_
  B CMsgKeyChar::default_instance_
  B CMsgKeyDown::default_instance_
  B CMsgKeyUp::default_instance_
  B CMsgLinkAtPosition::default_instance_
  B CMsgLinkAtPositionResponse::default_instance_
+ B CMsgLoadLocalization::default_instance_
  B CMsgLoadedRequest::default_instance_
  B CMsgLoadingResource::default_instance_
  B CMsgMouseDblClick::default_instance_
@@ -81,6 +90,8 @@
  B CMsgSetFocus::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
+ B CMsgSetLocalFileRequestMapping::default_instance_
+ B CMsgSetLocalFileRequestMapping_AdditionalRoute::default_instance_
  B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
@@ -141,6 +152,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSAlert>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSConfirm>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSMethodCall>
  D typeinfo for CHTMLProtoBufMsg<CMsgLinkAtPositionResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgLoadedRequest>
  D typeinfo for CHTMLProtoBufMsg<CMsgLoadingResource>
@@ -169,6 +181,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgUpdateToolTip>
  D typeinfo for CHTMLProtoBufMsg<CMsgVerticalScrollBarSizeResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
+ D typeinfo for CJSMethodArgument
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
@@ -207,11 +220,19 @@
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
+ D typeinfo for CMsgJSExecuteCallback
+ D typeinfo for CMsgJSMethodCall
+ D typeinfo for CMsgJSRaiseException
+ D typeinfo for CMsgJSRegisterMethod
+ D typeinfo for CMsgJSReleaseCallback
+ D typeinfo for CMsgJSValue
+ D typeinfo for CMsgJSValue_JSObjectProperty
  D typeinfo for CMsgKeyChar
  D typeinfo for CMsgKeyDown
  D typeinfo for CMsgKeyUp
  D typeinfo for CMsgLinkAtPosition
  D typeinfo for CMsgLinkAtPositionResponse
+ D typeinfo for CMsgLoadLocalization
  D typeinfo for CMsgLoadedRequest
  D typeinfo for CMsgLoadingResource
  D typeinfo for CMsgMouseDblClick
@@ -247,6 +268,8 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
+ D typeinfo for CMsgSetLocalFileRequestMapping
+ D typeinfo for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
@@ -310,6 +333,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
  D vtable for CHTMLProtoBufMsg<CMsgJSAlert>
  D vtable for CHTMLProtoBufMsg<CMsgJSConfirm>
+ D vtable for CHTMLProtoBufMsg<CMsgJSMethodCall>
  D vtable for CHTMLProtoBufMsg<CMsgLinkAtPositionResponse>
  D vtable for CHTMLProtoBufMsg<CMsgLoadedRequest>
  D vtable for CHTMLProtoBufMsg<CMsgLoadingResource>
@@ -338,6 +362,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgUpdateToolTip>
  D vtable for CHTMLProtoBufMsg<CMsgVerticalScrollBarSizeResponse>
  D vtable for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
+ D vtable for CJSMethodArgument
  D vtable for CMsgAddHeader
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
@@ -376,11 +401,19 @@
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
+ D vtable for CMsgJSExecuteCallback
+ D vtable for CMsgJSMethodCall
+ D vtable for CMsgJSRaiseException
+ D vtable for CMsgJSRegisterMethod
+ D vtable for CMsgJSReleaseCallback
+ D vtable for CMsgJSValue
+ D vtable for CMsgJSValue_JSObjectProperty
  D vtable for CMsgKeyChar
  D vtable for CMsgKeyDown
  D vtable for CMsgKeyUp
  D vtable for CMsgLinkAtPosition
  D vtable for CMsgLinkAtPositionResponse
+ D vtable for CMsgLoadLocalization
  D vtable for CMsgLoadedRequest
  D vtable for CMsgLoadingResource
  D vtable for CMsgMouseDblClick
@@ -416,6 +449,8 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
+ D vtable for CMsgSetLocalFileRequestMapping
+ D vtable for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
@@ -485,6 +520,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSAlert>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSConfirm>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSMethodCall>
  R typeinfo name for CHTMLProtoBufMsg<CMsgLinkAtPositionResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgLoadedRequest>
  R typeinfo name for CHTMLProtoBufMsg<CMsgLoadingResource>
@@ -513,6 +549,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgUpdateToolTip>
  R typeinfo name for CHTMLProtoBufMsg<CMsgVerticalScrollBarSizeResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
+ R typeinfo name for CJSMethodArgument
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
@@ -551,11 +588,19 @@
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
+ R typeinfo name for CMsgJSExecuteCallback
+ R typeinfo name for CMsgJSMethodCall
+ R typeinfo name for CMsgJSRaiseException
+ R typeinfo name for CMsgJSRegisterMethod
+ R typeinfo name for CMsgJSReleaseCallback
+ R typeinfo name for CMsgJSValue
+ R typeinfo name for CMsgJSValue_JSObjectProperty
  R typeinfo name for CMsgKeyChar
  R typeinfo name for CMsgKeyDown
  R typeinfo name for CMsgKeyUp
  R typeinfo name for CMsgLinkAtPosition
  R typeinfo name for CMsgLinkAtPositionResponse
+ R typeinfo name for CMsgLoadLocalization
  R typeinfo name for CMsgLoadedRequest
  R typeinfo name for CMsgLoadingResource
  R typeinfo name for CMsgMouseDblClick
@@ -591,6 +636,8 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
+ R typeinfo name for CMsgSetLocalFileRequestMapping
+ R typeinfo name for CMsgSetLocalFileRequestMapping_AdditionalRoute
  R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
@@ -807,6 +854,8 @@
  T CHTMLProtoBufMsg<CMsgJSAlert>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSConfirm>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSConfirm>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSMethodCall>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSMethodCall>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgLinkAtPositionResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgLinkAtPositionResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgLoadedRequest>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -867,6 +916,19 @@
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::Init()
  T CIPCToolMachClient::~CIPCToolMachClient()
+ T CJSMethodArgument::ByteSize() const
+ T CJSMethodArgument::CJSMethodArgument()
+ T CJSMethodArgument::Clear()
+ T CJSMethodArgument::GetCachedSize() const
+ T CJSMethodArgument::GetMetadata() const
+ T CJSMethodArgument::IsInitialized() const
+ T CJSMethodArgument::MergeFrom(CJSMethodArgument const&)
+ T CJSMethodArgument::New() const
+ T CJSMethodArgument::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CJSMethodArgument::SetCachedSize(int) const
+ T CJSMethodArgument::SharedCtor()
+ T CJSMethodArgument::SharedDtor()
+ T CJSMethodArgument::~CJSMethodArgument()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -1310,6 +1372,93 @@
  T CMsgJSDialogResponse::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgJSDialogResponse::SetCachedSize(int) const
  T CMsgJSDialogResponse::~CMsgJSDialogResponse()
+ T CMsgJSExecuteCallback::ByteSize() const
+ T CMsgJSExecuteCallback::CMsgJSExecuteCallback()
+ T CMsgJSExecuteCallback::Clear()
+ T CMsgJSExecuteCallback::GetCachedSize() const
+ T CMsgJSExecuteCallback::GetMetadata() const
+ T CMsgJSExecuteCallback::IsInitialized() const
+ T CMsgJSExecuteCallback::MergeFrom(CMsgJSExecuteCallback const&)
+ T CMsgJSExecuteCallback::New() const
+ T CMsgJSExecuteCallback::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSExecuteCallback::SetCachedSize(int) const
+ T CMsgJSExecuteCallback::~CMsgJSExecuteCallback()
+ T CMsgJSMethodCall::ByteSize() const
+ T CMsgJSMethodCall::CMsgJSMethodCall()
+ T CMsgJSMethodCall::Clear()
+ T CMsgJSMethodCall::GetCachedSize() const
+ T CMsgJSMethodCall::GetMetadata() const
+ T CMsgJSMethodCall::IsInitialized() const
+ T CMsgJSMethodCall::MergeFrom(CMsgJSMethodCall const&)
+ T CMsgJSMethodCall::New() const
+ T CMsgJSMethodCall::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSMethodCall::SetCachedSize(int) const
+ T CMsgJSMethodCall::SharedCtor()
+ T CMsgJSMethodCall::SharedDtor()
+ T CMsgJSMethodCall::~CMsgJSMethodCall()
+ T CMsgJSRaiseException::ByteSize() const
+ T CMsgJSRaiseException::CMsgJSRaiseException()
+ T CMsgJSRaiseException::Clear()
+ T CMsgJSRaiseException::GetCachedSize() const
+ T CMsgJSRaiseException::GetMetadata() const
+ T CMsgJSRaiseException::IsInitialized() const
+ T CMsgJSRaiseException::MergeFrom(CMsgJSRaiseException const&)
+ T CMsgJSRaiseException::New() const
+ T CMsgJSRaiseException::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSRaiseException::SetCachedSize(int) const
+ T CMsgJSRaiseException::SharedCtor()
+ T CMsgJSRaiseException::SharedDtor()
+ T CMsgJSRaiseException::~CMsgJSRaiseException()
+ T CMsgJSRegisterMethod::ByteSize() const
+ T CMsgJSRegisterMethod::CMsgJSRegisterMethod()
+ T CMsgJSRegisterMethod::Clear()
+ T CMsgJSRegisterMethod::GetCachedSize() const
+ T CMsgJSRegisterMethod::GetMetadata() const
+ T CMsgJSRegisterMethod::IsInitialized() const
+ T CMsgJSRegisterMethod::MergeFrom(CMsgJSRegisterMethod const&)
+ T CMsgJSRegisterMethod::New() const
+ T CMsgJSRegisterMethod::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSRegisterMethod::SetCachedSize(int) const
+ T CMsgJSRegisterMethod::SharedCtor()
+ T CMsgJSRegisterMethod::SharedDtor()
+ T CMsgJSRegisterMethod::~CMsgJSRegisterMethod()
+ T CMsgJSReleaseCallback::ByteSize() const
+ T CMsgJSReleaseCallback::CMsgJSReleaseCallback()
+ T CMsgJSReleaseCallback::Clear()
+ T CMsgJSReleaseCallback::GetCachedSize() const
+ T CMsgJSReleaseCallback::GetMetadata() const
+ T CMsgJSReleaseCallback::IsInitialized() const
+ T CMsgJSReleaseCallback::MergeFrom(CMsgJSReleaseCallback const&)
+ T CMsgJSReleaseCallback::New() const
+ T CMsgJSReleaseCallback::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSReleaseCallback::SetCachedSize(int) const
+ T CMsgJSReleaseCallback::~CMsgJSReleaseCallback()
+ T CMsgJSValue::ByteSize() const
+ T CMsgJSValue::CMsgJSValue()
+ T CMsgJSValue::Clear()
+ T CMsgJSValue::GetCachedSize() const
+ T CMsgJSValue::GetMetadata() const
+ T CMsgJSValue::IsInitialized() const
+ T CMsgJSValue::MergeFrom(CMsgJSValue const&)
+ T CMsgJSValue::New() const
+ T CMsgJSValue::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSValue::SetCachedSize(int) const
+ T CMsgJSValue::SharedCtor()
+ T CMsgJSValue::SharedDtor()
+ T CMsgJSValue::~CMsgJSValue()
+ T CMsgJSValue_JSObjectProperty::ByteSize() const
+ T CMsgJSValue_JSObjectProperty::CMsgJSValue_JSObjectProperty()
+ T CMsgJSValue_JSObjectProperty::Clear()
+ T CMsgJSValue_JSObjectProperty::GetCachedSize() const
+ T CMsgJSValue_JSObjectProperty::GetMetadata() const
+ T CMsgJSValue_JSObjectProperty::IsInitialized() const
+ T CMsgJSValue_JSObjectProperty::MergeFrom(CMsgJSValue_JSObjectProperty const&)
+ T CMsgJSValue_JSObjectProperty::New() const
+ T CMsgJSValue_JSObjectProperty::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJSValue_JSObjectProperty::SetCachedSize(int) const
+ T CMsgJSValue_JSObjectProperty::SharedCtor()
+ T CMsgJSValue_JSObjectProperty::SharedDtor()
+ T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
  T CMsgKeyChar::Clear()
@@ -1367,6 +1516,19 @@
  T CMsgLinkAtPositionResponse::SharedCtor()
  T CMsgLinkAtPositionResponse::SharedDtor()
  T CMsgLinkAtPositionResponse::~CMsgLinkAtPositionResponse()
+ T CMsgLoadLocalization::ByteSize() const
+ T CMsgLoadLocalization::CMsgLoadLocalization()
+ T CMsgLoadLocalization::Clear()
+ T CMsgLoadLocalization::GetCachedSize() const
+ T CMsgLoadLocalization::GetMetadata() const
+ T CMsgLoadLocalization::IsInitialized() const
+ T CMsgLoadLocalization::MergeFrom(CMsgLoadLocalization const&)
+ T CMsgLoadLocalization::New() const
+ T CMsgLoadLocalization::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgLoadLocalization::SetCachedSize(int) const
+ T CMsgLoadLocalization::SharedCtor()
+ T CMsgLoadLocalization::SharedDtor()
+ T CMsgLoadLocalization::~CMsgLoadLocalization()
  T CMsgLoadedRequest::ByteSize() const
  T CMsgLoadedRequest::CMsgLoadedRequest()
  T CMsgLoadedRequest::Clear()
@@ -1778,6 +1940,32 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
+ T CMsgSetLocalFileRequestMapping::ByteSize() const
+ T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
+ T CMsgSetLocalFileRequestMapping::Clear()
+ T CMsgSetLocalFileRequestMapping::GetCachedSize() const
+ T CMsgSetLocalFileRequestMapping::GetMetadata() const
+ T CMsgSetLocalFileRequestMapping::IsInitialized() const
+ T CMsgSetLocalFileRequestMapping::MergeFrom(CMsgSetLocalFileRequestMapping const&)
+ T CMsgSetLocalFileRequestMapping::New() const
+ T CMsgSetLocalFileRequestMapping::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetLocalFileRequestMapping::SetCachedSize(int) const
+ T CMsgSetLocalFileRequestMapping::SharedCtor()
+ T CMsgSetLocalFileRequestMapping::SharedDtor()
+ T CMsgSetLocalFileRequestMapping::~CMsgSetLocalFileRequestMapping()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::ByteSize() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::CMsgSetLocalFileRequestMapping_AdditionalRoute()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::Clear()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::GetCachedSize() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::GetMetadata() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::IsInitialized() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::MergeFrom(CMsgSetLocalFileRequestMapping_AdditionalRoute const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::New() const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SetCachedSize(int) const
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedCtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedDtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::~CMsgSetLocalFileRequestMapping_AdditionalRoute()
  T CMsgSetSharedPaintBuffers::ByteSize() const
  T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
  T CMsgSetSharedPaintBuffers::Clear()
@@ -2303,6 +2491,8 @@
  b (anonymous namespace)::CHTMLHeader_reflection_
  b (anonymous namespace)::CHTMLPageSecurityInfo_descriptor_
  b (anonymous namespace)::CHTMLPageSecurityInfo_reflection_
+ b (anonymous namespace)::CJSMethodArgument_descriptor_
+ b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgBrowserCreateResponse_descriptor_
@@ -2379,6 +2569,20 @@
  b (anonymous namespace)::CMsgJSConfirm_reflection_
  b (anonymous namespace)::CMsgJSDialogResponse_descriptor_
  b (anonymous namespace)::CMsgJSDialogResponse_reflection_
+ b (anonymous namespace)::CMsgJSExecuteCallback_descriptor_
+ b (anonymous namespace)::CMsgJSExecuteCallback_reflection_
+ b (anonymous namespace)::CMsgJSMethodCall_descriptor_
+ b (anonymous namespace)::CMsgJSMethodCall_reflection_
+ b (anonymous namespace)::CMsgJSRaiseException_descriptor_
+ b (anonymous namespace)::CMsgJSRaiseException_reflection_
+ b (anonymous namespace)::CMsgJSRegisterMethod_descriptor_
+ b (anonymous namespace)::CMsgJSRegisterMethod_reflection_
+ b (anonymous namespace)::CMsgJSReleaseCallback_descriptor_
+ b (anonymous namespace)::CMsgJSReleaseCallback_reflection_
+ b (anonymous namespace)::CMsgJSValue_JSObjectProperty_descriptor_
+ b (anonymous namespace)::CMsgJSValue_JSObjectProperty_reflection_
+ b (anonymous namespace)::CMsgJSValue_descriptor_
+ b (anonymous namespace)::CMsgJSValue_reflection_
  b (anonymous namespace)::CMsgKeyChar_descriptor_
  b (anonymous namespace)::CMsgKeyChar_reflection_
  b (anonymous namespace)::CMsgKeyDown_descriptor_
@@ -2389,6 +2593,8 @@
  b (anonymous namespace)::CMsgLinkAtPositionResponse_reflection_
  b (anonymous namespace)::CMsgLinkAtPosition_descriptor_
  b (anonymous namespace)::CMsgLinkAtPosition_reflection_
+ b (anonymous namespace)::CMsgLoadLocalization_descriptor_
+ b (anonymous namespace)::CMsgLoadLocalization_reflection_
  b (anonymous namespace)::CMsgLoadedRequest_descriptor_
  b (anonymous namespace)::CMsgLoadedRequest_reflection_
  b (anonymous namespace)::CMsgLoadingResource_descriptor_
@@ -2459,6 +2665,10 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_descriptor_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_reflection_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_descriptor_
+ b (anonymous namespace)::CMsgSetLocalFileRequestMapping_reflection_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
@@ -2564,6 +2774,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreate_offsets_
@@ -2602,11 +2813,19 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSExecuteCallback_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSMethodCall_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSRaiseException_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSRegisterMethod_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSReleaseCallback_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_JSObjectProperty_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyChar_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLinkAtPositionResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLinkAtPosition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadLocalization_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadingResource_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseDblClick_offsets_
@@ -2642,6 +2861,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_AdditionalRoute_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_

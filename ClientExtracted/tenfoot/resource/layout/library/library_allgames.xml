@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/library/library.css" />
-		<include src="file://{resources}/styles/store/filterselector.css" />
 	</styles>
 	<scripts>
 		<include src="file://{resources}/javascript/base.js" />

@@ -7,7 +7,7 @@
         "xpos"      "494"
         "ypos"      "447"
 		"wide"		"300"
-		"tall"		"580"
+		"tall"		"590"
 		"AutoResize"		"0"
 		"PinCorner"     "0"
         "settitlebarvisible"        "1"
@@ -322,10 +322,11 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}		
-	"ShowExit"
+
+	"ShowVR"
 	{
 		"ControlName"		"CheckButton"
-		"fieldName"		"ShowExit"
+		"fieldName"		"ShowVR"
 		"xpos"		"30"
 		"ypos"		"395"
 		"wide"		"475"
@@ -334,19 +335,37 @@
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"12"
+		"tabPosition"		"13"
+		"paintbackground"		"1"
+		"labelText"		"#app_task_steamvr"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}	
+	"ShowExit"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowExit"
+		"xpos"		"30"
+		"ypos"		"445"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"14"
 		"paintbackground"		"1"
 		"labelText"		"#app_task_exit_steam"
 		"textAlignment"		"west"
 		"wrap"		"0"
-	}	
-			
+	}				
+
 	"Divider2"
 	{
 		"ControlName"		"Divider"
 		"fieldName"		"Divider2"
 		"xpos"		"20"
-		"ypos"		"520"
+		"ypos"		"540"
 		"wide"		"268"
 		"tall"		"2"
 		"AutoResize"	"0"
@@ -361,7 +380,7 @@
         "ControlName"       "Button"
         "fieldName"     "OKButton"
         "xpos"      "130"
-        "ypos"      "533"
+        "ypos"      "553"
         "wide"      "75"
         "tall"      "24"
         "AutoResize"        "0"
@@ -381,7 +400,7 @@
         "ControlName"       "Button"
         "fieldName"     "CancelButton"
         "xpos"      "215"
-        "ypos"      "533"
+        "ypos"      "553"
         "wide"      "75"
         "tall"      "24"
         "AutoResize"        "0"
@@ -399,7 +418,7 @@
 
 	layout 
 	{
-		place { controls="ShowStore,ShowMyGames,ShowCommunity,ShowFriendActivity,ShowFriends,ShowMusicPlayer,ShowScreenshots,ShowServers,ShowSettings,ShowBigPicture,ShowExit" dir=down height=28 x=30 y=195 }
+		place { controls="ShowStore,ShowMyGames,ShowCommunity,ShowFriendActivity,ShowFriends,ShowMusicPlayer,ShowScreenshots,ShowServers,ShowSettings,ShowBigPicture,ShowVR, ShowExit" dir=down height=28 x=30 y=195 }
 
 	}
 }

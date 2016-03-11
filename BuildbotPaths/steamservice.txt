@@ -1,9 +1,9 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/lib/engines
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/cert.pem
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/certs
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/private
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/lib/engines
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/cert.pem
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/certs
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/private
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/SteamServiceClient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/etwwin32.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp

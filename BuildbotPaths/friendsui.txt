@@ -352,6 +352,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Frame.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/GraphPanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/HTML.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/HTML_js.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/HotKeyEntry.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/ImageList.h

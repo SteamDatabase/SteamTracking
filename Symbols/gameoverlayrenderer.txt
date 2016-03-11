@@ -354,6 +354,7 @@
  T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
  T CreateShader(char const*, char const*)
  T Exiting()
+ T GetEnvBool(char const*)
  T GetGLProcAddress(char*)
  T GetIMENullImpl()
  T GetMovieResolution(int, int, int*, int*)
@@ -579,6 +580,7 @@
  b s_bDoLog
  b s_bFirstLogEntry
  b s_bIsVideoRecording
+ b s_bStreamForOpenVR
  b s_pGamestream
  bootstrap_look_up
  bootstrap_port

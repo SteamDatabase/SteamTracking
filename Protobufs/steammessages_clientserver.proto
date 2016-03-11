@@ -406,6 +406,8 @@ message CMsgClientAccountInfo {
 	optional string facebook_name = 9;
 	optional bool steamguard_notify_newmachines = 14;
 	optional string steamguard_machine_name_user_chosen = 15;
+	optional bool is_phone_verified = 16;
+	optional uint32 two_factor_state = 17;
 }
 
 message CMsgClientAppMinutesPlayedData {

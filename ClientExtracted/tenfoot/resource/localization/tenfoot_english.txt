@@ -33,6 +33,7 @@
 	"UI_Alt"		"SYMBOLS"
 	"UI_LeftGrip_Short" "LG"
 	"UI_RightGrip_Short" "RG"
+	"UI_Delete"		"DELETE"
 
 	"UI_Backspace"	"BACKSPACE"
 	"UI_Spacebar"	"SPACE"
@@ -658,6 +659,7 @@
 	"Settings_DisplayResolution"	"Resolution"
 	"Settings_Web"					"Web Browser"
 	"Settings_Bluetooth"			"Bluetooth"
+	"Settings_VRSettings"		"VR Settings"
 
 	"Settings_Network_Wizard"		"Network Configuration"
 	"Settings_AuthorizeLocalDevice"	"Family Library Sharing"
@@ -1482,6 +1484,7 @@
 	"Library_Details_Watch"		"WATCH"
 	"Library_Details_PlayVR"		"PLAY IN VR"
 	"Library_Details_Play2D"		"PLAY ON DESKTOP"
+	"Library_Details_PlayTheatre" "PLAY IN THEATER"
 	"Library_Details_Stream"		"STREAM"
 	"Library_Details_Controller"	"STEAM CONTROLLERS"
 	"Library_Details_SharingStatus" "SHARED BY"
@@ -1670,7 +1673,8 @@
 	"Library_Details_VRPlayAreaWarning_NotEnoughRoom"			"Your play area does not meet the play area requirements for this game.  The game requires {s:requiredwidth}m x {s:requireddepth}m, and your current play area is configured as {s:currentwidth}m x {s:currentdepth}m."
 	
 	"Library_Details_2DLaunchWarning_Title"				"WARNING"
-	"Library_Details_2DLaunchWarning_Desc"				"The title you are launching does not support VR. It will appear on your desktop and may affect VR performance."
+	"Library_Details_2DLaunchWarning_Desc"				"{s:gamename} does not support VR. It will appear on your desktop and may affect VR performance."
+	"Library_Details_2DLaunchWarning_Desc_VRGame"				"{s:gamename} has native VR support, but you are launching the desktop version. Do you want to continue?"
 
 	"Library_Details_CloseVRGame_Title"					"Exit?"
 	"Library_Details_CloseVRGame_Desc"					"Please confirm you'd like to exit the current VR application."
@@ -1847,6 +1851,8 @@
 	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOn"	"LEGACY SETTINGS"
 	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOff"	"IN-GAME ACTIONS"
 	"Library_Details_ControllerBindingsGordon_AddActionSet"	"ADD ACTION SET"
+	"Library_Details_ControllerBindingsGordon_RenameActionSet" "MANAGE ACTION SET"
+	"Library_Details_ControllerBindingsGordon_DeleteActionSet" "DELETE ACTION SET"
 	"Library_Details_ControllerBindingsGordon_CommunityNextPage" "NEXT PAGE"
 	"Library_Details_ControllerBindingsGordon_CommunityPreviousPage" "PREVIOUS PAGE"
 
@@ -1964,6 +1970,12 @@
 	"Library_Details_KeyName_NextTrack"				"NEXT TRACK"
 	"Library_Details_KeyName_PrevTrack"				"PREVIOUS TRACK"
 
+	"Library_Details_ControllerAction_Keyboard"		"SHOW KEYBOARD"
+	"Library_Details_ControllerAction_Screenshot"	"TAKE SCREENSHOT"
+	"Library_Details_ControllerAction_ChangePreset"	"CHANGE ACTION SET"
+	"Library_Details_ControllerAction_NextPreset"	"NEXT ACTION SET"
+	"Library_Details_ControllerAction_ChangeTo"		"CHANGE TO"
+
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
 	"Library_Details_FieldLabel_ModeShiftButton"	"Mode Shift Button"
@@ -2040,6 +2052,12 @@
 	"Library_Details_FieldLabel_TriggerThreshold"		"Soft Pull Point"
 	"Library_Details_FieldLabel_TriggerAdaptiveThreshold"		"Soft Pull Trigger Style"
 	"Library_Details_FieldLabel_TriggerHapticIntensity" 	"Haptic Intensity"
+	"Library_Details_FieldLabel_TestParam0" 	"Test 0"
+	"Library_Details_FieldLabel_TestParam1" 	"Test 1"
+	"Library_Details_FieldLabel_TestParam2" 	"Test 1"
+	"Library_Details_FieldLabel_TestParam3" 	"Test 3"
+	"Library_Details_FieldLabel_TestParam4" 	"Test 4"
+	"Library_Details_FieldLabel_TestParam5" 	"Test 5"
 	"Library_Details_FieldLabel_ButtonRadius"		"Button Radius"
 	"Library_Details_FieldLabel_ButtonDistance"		"Button Distance"
 	"Library_Details_FieldLabel_GyroButton"			"Gyro Enable Button"
@@ -3632,6 +3650,18 @@
 	"Library_EditShortcutName_CodeLabel" "This will change the name that appears in your library for this shortcut."
 	"Library_EditShortcutName_Title" "Rename Shortcut for {s:gamename}"
 
+	"Library_AddActionSet_Title"	"Add Action Set"
+	"Library_AddActionSet_CodeLabel" "This will add a new set of actions that can be switched to."
+
+	"Library_RenameActionSet_Title"	"Rename Action Set"
+	"Library_RenameActionSet_CodeLabel" "Rename this Action Set to a new title."
+
+	"Library_DeleteActionSet_Title"	"Delete Action Set"
+	"Library_DeleteActionSet_CodeLabel" "Are you sure you want to delete {s:actionsetname}?"
+
+	"Library_SelectActionSet_Title"	"Select Action Set"
+	"Library_SelectActionSet_CodeLabel" "Change to this action set when you press the button."
+
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into."
 	"Library_SelectBeta_Title"	"Select Beta"
 	"Library_SelectBeta_PrivateTitle"	"Enter a passcode to unlock private betas."
@@ -4539,6 +4569,8 @@
 	"ControllerBinding_ModeShiftDropDown_LeftPadClick_Description" "When pressed, this button will shift the normal mode of the controller into its alternate mode which is assigned on this screen."
 	"ControllerBinding_ModeShiftDropDown_RightPadClick" "Mode Shift - Right Pad Click"
 	"ControllerBinding_ModeShiftDropDown_RightPadClick_Description" "When pressed, this button will shift the normal mode of the controller into its alternate mode which is assigned on this screen."
+	"ControllerBinding_PresetDropDown_None"		"None"
+	"ControllerBinding_PresetDropDown_Next"		"Next Action Set"
 	//Dpad
 	"ControllerBinding_ModeDropDown_Dpad" "Style of Input - Directional Pad"
 	"ControllerBinding_ModeDropDown_Dpad_Description" "This input will act as a D-pad.  D-Pad's are a 4 way directional input that is digital (on or off) in nature.  Any type of button can be assigned, but X-Input buttons will only work with X-Input Gamepad compatible games."
@@ -4551,7 +4583,7 @@
 	"ControllerBinding_DPadLayout" "Directional Pad Layout"
 	"ControllerBinding_DPadLayout_Description" "This option selects the type of DPad emulation."
 	"ControllerBinding_DPadLayout_RadialNoOverlap" "Radial Without Overlap"
-	"ControllerBinding_DPadLayout_RadialNoOverlap_Description" "A four way pie shaped layout with diagonals that only actiovate the single nearest directional action."
+	"ControllerBinding_DPadLayout_RadialNoOverlap_Description" "A four way pie shaped layout with diagonals that only activate the single nearest directional action."
 	"ControllerBinding_DPadLayout_RadialWithOverlap" "Radial With Overlap"
 	"ControllerBinding_DPadLayout_RadialWithOverlap_Description" "A pie shaped layout with diagonals that activate both directional actions."
 	"ControllerBinding_DPadLayout_AnalogEmulation" "Analog Emulation"

@@ -89,7 +89,7 @@
 				<TextEntry id="FriendsMainBodyInputTextArea"
 					textinputid="FriendsInputTextEntry"
 					textinputdoneactionstring="#UI_SendMessage"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat SubmitButton DontCloseOnSubmit DontCloseOnEnter AllowEmoticons"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat SubmitButton Minimal DontCloseOnSubmit DontCloseOnEnter AllowEmoticons"
 					textinputautocaps="true"
 					textinputdoublespace="true"
 					multiline="true"        
@@ -100,11 +100,11 @@
 				<Button id="FriendsMainBodyInputEmoticonButton" onactivate="FriendsToggleEmoticonPanel();" >
 					<Label text="☺" />
 				</Button>
-			</Panel>
-		</Panel>		
+      </Panel>
+      <Panel id="EmoticonSelector">
+      </Panel>
+    </Panel>		
 
-		<Panel id="EmoticonSelector">
-		</Panel>
 		
 	</FriendsChatDialog>
 </root>

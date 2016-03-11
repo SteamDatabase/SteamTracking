@@ -1,0 +1,29 @@
+"resource/layout/steamrootdialog_gamespage_details2.layout"
+{
+	controls
+	{
+	}
+
+	styles
+	{
+		CGamesPage_Details
+		{
+			bgcolor="none"
+			inset="0 0 0 1"
+			
+			render
+			{
+			}
+			
+			render_bg
+			{
+				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
+			}
+		}		
+	}
+
+	layout
+	{
+		place { controls="WebContent" width=max height=max }
+	}
+}

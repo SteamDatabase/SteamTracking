@@ -538,6 +538,7 @@
  asctime_r
  atoi
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
+ b AssertMsgImplementation::s_bDisableDebuggerBreak
  b ClearWritingMiniDump::fAsserted
  b GetCPUInformation()::pi
  b GetCRunTimeVersion::rgchVersionStr

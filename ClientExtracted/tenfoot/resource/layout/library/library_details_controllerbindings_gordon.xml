@@ -13,7 +13,7 @@
 				<Label id="ControllerTitle" text="#SettingsController_BindingTitle_ForController" />
 			</Panel>
 			<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
-			<Panel id="GameActionSets" selectionpos="0,1"/>
+			<Panel id="GameActionSets" selectionpos="0,1" />
 			<Panel id="TopHalfContainer" selectionpos="0,2">
 				<Panel class="Background" id="BackgroundController" >
 						<Panel id="HelperDescription" >

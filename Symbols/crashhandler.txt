@@ -365,6 +365,7 @@
  alphasort$INODE64
  atoi
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
+ b AssertMsgImplementation::s_bDisableDebuggerBreak
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b ClearWritingMiniDump::fAsserted
  b GetCPUInformation()::pi

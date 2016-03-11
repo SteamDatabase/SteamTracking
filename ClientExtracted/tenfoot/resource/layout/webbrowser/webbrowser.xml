@@ -16,7 +16,7 @@
 					<TextEntry id="UrlTextEntry" selectionpos="1,0"
 							textinputid="UrlBarTextEntry"
 							textinputdoneactionstring="#Web_UrlGo"
-							textinputclass="AppearFromBottomCenter" />
+							textinputclass="AppearFromBottomCenter SubmitButton" />
 				</Panel>
 				<Panel id="ControlBar" selectionpos="2,0">
 					<Panel id="ControlBar_Buttons">

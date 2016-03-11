@@ -164,6 +164,7 @@ FriendsChatDialog:descendantfocus
 	background-color: #0d273aff;
 	horizontal-align: right;
 	vertical-align: bottom;
+    margin-top: 4px;
 	margin-bottom: 115px;
 	padding: 4px;
 	height: 0px;
