@@ -47180,12 +47180,23 @@
 			"item_type_name"	"#TF_Wearable_Apparel"
 			"item_name"	"#TF_SpookySleeves"
 			"item_description"	"#TF_SpookySleeves_Desc"
-			"image_inventory"	"backpack/workshop/player/items/scout/scout_halloweenjacket/scout_halloweenjacket"
-			"model_player"		"models/workshop/player/items/scout/scout_halloweenjacket/scout_halloweenjacket.mdl"
 			"propername"	"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/halloweenjacket/halloweenjacket"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/halloweenjacket/halloweenjacket_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/halloweenjacket/halloweenjacket_sniper.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/halloweenjacket/halloweenjacket_demo.mdl"
+				"heavy"		"models/workshop/player/items/all_class/halloweenjacket/halloweenjacket_heavy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/halloweenjacket/halloweenjacket_engineer.mdl"
+			}
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
+				"sniper"		"1"
+				"Demoman"		"1"
+				"heavy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"926"
@@ -61104,6 +61115,7 @@
 			"capabilities"
 			{
 				"can_craft_count"		"1"
+				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/fall2013_the_insidious_incinerator/fall2013_the_insidious_incinerator.mdl"
 			"used_by_classes"
@@ -64744,7 +64756,6 @@
 				"player_bodygroups"
 				{
 					"dogtags"		"1"
-					"grenades"		"1"
 				}
 				"styles"
 				{
@@ -64761,6 +64772,10 @@
 							"pyro"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_pyro.mdl"
 							"spy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_spy.mdl"
 							"engineer"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_engineer.mdl"
+						}
+						"additional_hidden_bodygroups"
+						{
+							"grenades"		"1"
 						}
 						"name"		"#TF_xms2013_spy_jacket_style1"
 						"skin_red"		"0"
@@ -64780,7 +64795,47 @@
 							"spy"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_spy.mdl"
 							"engineer"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_engineer.mdl"
 						}
+						"additional_hidden_bodygroups"
+						{
+							"grenades"		"1"
+						}
 						"name"		"#TF_xms2013_spy_jacket_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"2"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xms2013_jacket/xms2013_jacket_engineer.mdl"
+						}
+						"name"		"#TF_xms2013_spy_jacket_style3"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"3"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xmas2013_jacket_s2/xmas2013_jacket_s2_engineer.mdl"
+						}
+						"name"		"#TF_xms2013_spy_jacket_style4"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 					}
@@ -73361,10 +73416,10 @@
 		"30726"
 		{
 			"first_sale_date"	"2015/12/03"
-			"name"		"Pocket Villians"
+			"name"		"Pocket Villains"
 			"prefab"		"no_craft misc"
-			"item_name"		"#TF_bak_pocket_villians"
-			"item_description"		"#TF_bak_pocket_villians_Desc"
+			"item_name"		"#TF_bak_pocket_villains"
+			"item_description"		"#TF_bak_pocket_villains_Desc"
 			"item_type_name"		"#TF_Wearable_PocketBuddy"
 			"equip_region"		"grenades"
 			"visuals"
@@ -107629,7 +107684,7 @@
 				"Batter's Bracers"			"1"
 				"The Hood of Sorrows"		"1"
 				"Fear Monger"				"1"
-				"Pocket Villians"			"1"
+				"Pocket Villains"			"1"
 				"The Caped Crusader"		"1"
 				"Buttler"					"1"
 				"Teufort Knight"			"1"
