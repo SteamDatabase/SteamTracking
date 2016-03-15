@@ -2271,6 +2271,8 @@
 	"Library_LocalMusicTitle"		"Local Music"
 	"Library_DownloadsTitle"		"Downloads"
 	"Library_DownloadsTitle_Detail"		"{d:downloads}"
+	"Library_VRGames"			"VR"
+	"Library_VRGames_Detail" "{d:vrgames}"
 
 	"Library_FilterActive"		"(FILTERED)"
 

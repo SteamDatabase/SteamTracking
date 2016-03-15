@@ -73,6 +73,17 @@
 					<Panel class="GamesHorizRule" />
 					<Label text="#Library_AllGamesBrowse" class="Header" />
 
+					<Button id="VRGamesFilter" onfocus="GamesViewType(vrgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+						<Panel class="ButtonFlowRight" >
+							<Label text="#Library_VRGames" html="true"/>
+								<Panel class="ButtonCountCapsule" >									
+									<Image  class="FilterHelp" src="file://{images}/library/icon_filter.png" />
+									<Label text="#Library_VRGames_Detail"/>
+								</Panel>
+						</Panel>
+					</Button>
+
+
 					<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
 						<Panel class="ButtonFlowRight" >
 							<Label id="AllGamesLabel" text="#Library_AllGames"/>

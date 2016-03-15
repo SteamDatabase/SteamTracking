@@ -4497,6 +4497,17 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 	opacity: 0.0;
 }
 
+#VRGamesFilter
+{
+	visibility: collapse;
+}
+
+.VR #VRGamesFilter
+{
+	visibility: visible;
+}
+
+
 .Windows #GamesFilter #Platform
 {
 	visibility: collapse;
