@@ -618,6 +618,11 @@ div.youraccount_history_home>div.account_wallet {
 
 .email_pref_ctn {
 	padding-top: 8px;
+	transition: opacity 0.25s;
+}
+
+.email_pref_ctn.disabled {
+	opacity: 0.5;
 }
 
 .email_footer_notes {

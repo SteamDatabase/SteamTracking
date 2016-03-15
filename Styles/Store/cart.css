@@ -1076,6 +1076,16 @@ label.send_choice_txt {
 	/* border-top: 1px solid #38444e; */
 }
 
+.send_choice_inner.email_pref_ctn label {
+	line-height: 17px;
+
+	display: inline-block;
+	padding-left: 0px;
+	vertical-align: top;
+	padding-bottom: 5px;
+	width: 550px;
+}
+
 #send_via_friends_box {
 	margin-top: 20px;
 }
