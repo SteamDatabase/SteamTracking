@@ -604,6 +604,9 @@ a.commentthread_allcommentslink:hover {
 	padding-bottom: 19px;
 	min-height: 40px;
 	padding-left: 58px;
+
+	/* The descendant comment text element has overflow set, but a chrome bug allows some unicode characters to spill out of that.  overflow at this level seems to stop it */
+	overflow: hidden;
 }
 
 .valve_links {
