@@ -1961,11 +1961,18 @@ LibraryAppDetails #ReadyToDownload
 
 .FullController #GridControllerSupport,
 .SteamPad .FullController #GridControllerSupport
+.VR .VRSupportsXInputController #GridControllerSupport,
 {
 	visibility: visible;
 	background-image: url( "file://{images}/controller_support_full.png" );
 }
 
+.VR .VRSupportsSteamVRController #GridControllerSupport,
+.VR .VRSupportsOculusController #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_input_motioncontroller.png" );
+}
 
 
 /* For installed games: */
