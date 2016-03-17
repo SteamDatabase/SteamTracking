@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1457636973"
+	"version"		"1457636974"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b9c015520018655499338cfc2c3a3159e28bbe14"
@@ -146,8 +146,14 @@
 		"sha2vz"		"7fdf9465d7488915bc70ac7fedba6fbcd40035f830313825238548ae4cc8bfcd"
 		"IsBootstrapperPackage"		"1"
 	}
+	"hotfix_win32"
+	{
+		"file"		"hotfix_win32.zip.e8bbbf77626fe68cb554875b70cd592e22de563a"
+		"size"		"810649"
+		"sha2"		"ddb8f2c3e80075ac5629ba05ea7bf0d4fd65de2cbfb3bc61b2bebe758b3e0419"
+	}
 }
 "kvsignatures"
 {
-	"win32"		"48151405201ebfacc7f99ae8dae472204391e5a25a32510143c48fc65964b849b54e85b0eff2c9c44e0fc667b9bf67a23e89e600337766b4cad88eeb0f1c0b271074578ca0ddfd355f83029d9eade7693b70dd60819b3f42bd0bbf3bc0c7e5fe0fcca631776eeea381e5ef4126e82476ca2b9b4e3512bce45391275cd8fbdebb"
+	"win32"		"97139ac9dca7d84c46dbfde302db75f67a9ed8308b84446f4139a41cdd435d96920edc293df538488983bce66ce2dbc280ca4e82534fccc79e3c8bfd4a76b7e89ba9ccdcf21c72223e03a5772523bac6a78747f27bb50e2bd41d8ff87f3c8be9b430fffac1230721737dd8563a7a443d683f48909ff29e167dfb158e62b257b1"
 }
