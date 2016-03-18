@@ -1135,13 +1135,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldelegateimpl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlexpiringmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlfixedlinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlfixedmemory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlflags.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlgraph.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmaplru.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h

@@ -69,6 +69,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional bool screen_locked = 13;
 	optional bool games_running = 14;
 	repeated string mac_addresses = 15;
+	optional uint32 download_lan_peer_group = 16;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

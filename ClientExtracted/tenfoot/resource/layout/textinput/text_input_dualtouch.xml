@@ -57,7 +57,7 @@
 			</Panel>
 
 			<Panel id="TextPreviewBackground">
-				<TextEntry id="TextPreview" />
+				<TextEntry id="TextPreview" acceptsfocus="false" />
 				<LoadingThrobber id="LoadingThrobber" />
 
 				<Panel id="YButtonWrapper">

@@ -8289,6 +8289,7 @@
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
