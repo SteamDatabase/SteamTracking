@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.83a9ad4690388868ab33c627af730c43d4b0f0d9.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.73e85c3adeffd07573a5260fb565ebe9fd3c3df5.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2693,6 +2693,156 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 8
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Pick 'Em Challenge Bronze",
+				"defindex": 921,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Columbus 2016 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the MLG Columbus 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_pickem_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_bronze.9dc85ac5dc86e99d8c3752ce5736bd40e91da108.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_bronze_large.3c1b65089cd8bb8decbfb3b23bef11b063160032.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Pick 'Em Challenge Silver",
+				"defindex": 922,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Columbus 2016 Pick'Em Trophy",
+				"item_description": "This silver trophy was awarded during the MLG Columbus 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_pickem_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_silver.c227a6f5e2a2f7b1ca322c9bfcc075a012ac4dba.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_silver_large.6bc225f541fef1400a14d089fa33b60cb4771520.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Pick 'Em Challenge Gold",
+				"defindex": 923,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Columbus 2016 Pick'Em Trophy",
+				"item_description": "This gold trophy was awarded during the MLG Columbus 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_pickem_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_gold.d11cf2c2aefc9f20cbe4989e64a3d9532023c63e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_pickem_gold_large.6bf41cd0c3206b139aefa4aaf9bce25ec0242fc3.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Fantasy Team Bronze",
+				"defindex": 924,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Columbus 2016 Fantasy Trophy",
+				"item_description": "This bronze trophy was awarded during the MLG Columbus 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_fantasy_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_bronze.2a62366a91fe3369399bc86e22ca0b1e14390ee4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_bronze_large.39d6b4fba0abb72dcd764f3e6c928e2d42845511.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Fantasy Team Silver",
+				"defindex": 925,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Columbus 2016 Fantasy Trophy",
+				"item_description": "This silver trophy was awarded during the MLG Columbus 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_fantasy_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_silver.5e84d3ae8490351b9cdbc87251419e77af6fe6ad.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_silver_large.4c63b8c6a41d5d3f4f5f67b1c6ec555a3acfe8f4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 Fantasy Team Gold",
+				"defindex": 926,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Columbus 2016 Fantasy Trophy",
+				"item_description": "This gold trophy was awarded during the MLG Columbus 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/mlg_2016_fantasy_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_gold.a222cdc35d2f867b8895a2a1262b1362a15823f1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_gold_large.0e41417dacac4770b36c6a5b5c0b42aee019ebdf.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
 					}
 				]
 				
@@ -13040,6 +13190,1658 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 112
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_nip",
+				"defindex": 4188,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Ninjas in Pyjamas | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/nip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/nip.261a2bb3b7b7b3f97efb6dbe6625023627596426.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/nip_large.95f63fd87e0143562f129b010dbb9d3c2eb79327.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_splc",
+				"defindex": 4189,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Splyce | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/splc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/splc.42538f4c8cab8272527bce4ae0f4b5ba65b424e7.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/splc_large.5fb439a52d1eea4026eaab03d48d4c36faf497d5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_clg",
+				"defindex": 4190,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Counter Logic Gaming | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/clg.fccb2b53001c53c0f4bc67d6dfa238319a9a0b18.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/clg_large.450e51a3c8182571fdd2b371b117445fa710767c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_gamb",
+				"defindex": 4191,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Gambit Gaming | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/gamb.14e5bc88b316154518c9efe8b3e0b8f540c25001.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/gamb_large.21c521cfac01917916ccfd68755ceb24d5a90135.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_flip",
+				"defindex": 4192,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Flipsid3 Tactics | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/flip.a096a88cb3e00d8b3b02ab1249645772229e986e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/flip_large.1641f21389abcd1dfe54e3ff5d078ad4f8d877d1.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_liq",
+				"defindex": 4193,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Liquid | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/liq.953501365e87ad0a86adb07570be8373c5564ca5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/liq_large.cd10b1b4cf08b333df8733d689cc933ea9678f0b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_mss",
+				"defindex": 4194,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "mousesports | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/mss.3120fb68a15541fb3afbad8c8429d3b36527af0e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/mss_large.a8e967297297c0c759844ac61973bcae4e203af4.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_navi",
+				"defindex": 4195,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Natus Vincere | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/navi.bb362bb12484254d2f7a9c48c78d4deddde7a4bc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/navi_large.6f7a09b08e070ce1bc24076f21921d156d6ffb0d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_vp",
+				"defindex": 4196,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Virtus.Pro | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/vp.341d845546e9c2cabe3d77aa8efeb03db512fd56.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/vp_large.6feea5b273142103a559d52d9cc8b6ef62037a5d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_c9",
+				"defindex": 4197,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cloud9 | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/c9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/c9.ea1325d3fb903f97e2eadb52c6df1cf4b11e0813.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/c9_large.7dff0f0ec35687844916caad605badfa5dc33bce.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_g2",
+				"defindex": 4198,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "G2 Esports | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/g2.0a631786138510558ec1ec8c43135c4378ba7b99.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/g2_large.16d45988ff3d97210848ccd04bc3e3f777d18d22.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_faze",
+				"defindex": 4199,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "FaZe Clan | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/faze.66d73b786570726737840c2e6e0c0f0b6f02a658.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/faze_large.e13327ddc12744e0c2e1e63b6379f0d614a50511.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_astr",
+				"defindex": 4200,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Astralis | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/astr.158cb69ccab9a42bbab8cea853d7656232012708.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/astr_large.242898dba12ecc079eeb375582dbb5329235fb44.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_nv",
+				"defindex": 4201,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team EnVyUs | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/nv.ee941bf2907ef7f6176eec9aebce8c4362740f8c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/nv_large.027e54cf4c2a1c3c8f865d013518e8474fc347d5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_fntc",
+				"defindex": 4202,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Fnatic | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc.c8783066f24ae6aced9fea7233f83044e94a3830.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc_large.d41daa0cc6420292b8c4ff4e9cc8cad2a909c591.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_lumi",
+				"defindex": 4203,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Luminosity Gaming | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/lumi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/lumi.2b4b6363528203dfb075646915fee89507baad8e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/lumi_large.2595b7be8085a7d3c07bd8f2eda73f254576f341.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_mlg",
+				"defindex": 4204,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG | MLG Columbus 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/columbus2016/mlg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/mlg.ecad863d15a7ea6d36b33c1032563faed7651a34.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/mlg_large.d59553e8ded237f4e5f2d0ab6dcbff0601119d85.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_legends",
+				"defindex": 4205,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single MLG Columbus 2016 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_columbus2016_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_columbus2016_01.9a3d8c702c1c05adfa8b633dd57ba79b851a39d9.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 113
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_columbus2016_challengers",
+				"defindex": 4206,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single MLG Columbus 2016 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_columbus2016_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_columbus2016_02.822df8d98ea9f5048de0574b4fd7e907e747571b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 114
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_group_1",
+				"defindex": 4207,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Challengers (Foil) | MLG Columbus 2016",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Challengers teams at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_columbus2016_group_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_columbus2016_group_1.b3e54b10a7346b5457a7ab82c5e1898891f7dd8d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 115
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_group_2",
+				"defindex": 4208,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Legends (Foil) | MLG Columbus 2016",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Legends teams at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_columbus2016_group_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_columbus2016_group_2.ef0c6ef8c057f22ee214e0d32cf63cf360ec7729.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 116
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_nip",
+				"defindex": 4209,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Ninjas in Pyjamas | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Ninjas in Pyjamas at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_nip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_nip.5355d35ce7cb88e5b0aa9c929b344f459a3bd649.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 117
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_splc",
+				"defindex": 4210,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Splyce | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Splyce at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_splc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_splc.034f419b549e5f2601135ea3030b131e4ba4633d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 118
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 62
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_clg",
+				"defindex": 4211,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Counter Logic Gaming | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Counter Logic Gaming at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_clg.b2befae2db0ecbf152c79d90a917e9564a817558.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 119
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 49
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_gamb",
+				"defindex": 4212,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Gambit Gaming | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Gambit Gaming at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_gamb.9afb2fa1b24a9212eb0608b18f9200f599df319b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 120
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 63
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_flip",
+				"defindex": 4213,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Flipsid3 Tactics | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Flipsid3 Tactics at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_flip.abf234fc0485da1b09ad5c1a83cedca2329cf2be.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 121
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 43
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_liq",
+				"defindex": 4214,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Liquid | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Liquid at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_liq.01701629d90a71b7d4c96c71d270abe505dcede1.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 122
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 48
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_mss",
+				"defindex": 4215,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | mousesports | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from mousesports at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_mss.abdca3c1e639578f73e16c145be969f6842973d3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 123
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 29
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_navi",
+				"defindex": 4216,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Natus Vincere | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Natus Vincere at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_navi.c98941582ee0c1ce2731a33f4daa305db8dbd917.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 124
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_vp",
+				"defindex": 4217,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Virtus.Pro | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Virtus.Pro at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_vp.14c1aafd758c46057a6ec0342b92423a2047f294.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 125
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 31
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_c9",
+				"defindex": 4218,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Cloud9 | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Cloud9 at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_c9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_c9.9a6ee4530bf96c42ef88abfc8f16765dd3b55a59.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 126
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_g2",
+				"defindex": 4219,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | G2 Esports | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from G2 Esports at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_g2.94e48e24d614cab100400843df68646d1d4e8032.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 127
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 59
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_faze",
+				"defindex": 4220,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | FaZe Clan | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from FaZe Clan at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_faze.e105d8ad0c4641546883a1a7e36e64cba0a8a4ce.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 128
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 61
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_astr",
+				"defindex": 4221,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Astralis | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Astralis at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_astr.7f0c56ba2656bb0213161078e0fddb07735eecda.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 129
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 60
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_nv",
+				"defindex": 4222,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team EnVyUs | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team EnVyUs at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_nv.7c69465530e3dccf46564d2ca6bc8ede59edf808.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 130
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 46
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_fntc",
+				"defindex": 4223,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Fnatic | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Fnatic at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_fntc.1a6a5f5b2831807369a271056dfc0841bf429a00.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 131
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_columbus2016_lumi",
+				"defindex": 4224,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Luminosity Gaming | MLG Columbus 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Luminosity Gaming at MLG Columbus 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/columbus2016_lumi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/columbus2016_lumi.50bf958d88c38fffe2650c9680d0b6f0a8174303.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 132
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 57
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_dust2",
+				"defindex": 4225,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_dust2.2fea28b012011637caa7cd7ac4f37df3567e6106.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 133
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_mirage",
+				"defindex": 4226,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_mirage.bd8f54e70095c90c18ccfe3561ae247e09394607.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 134
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_inferno",
+				"defindex": 4227,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_inferno.d824bb6e7b2b4be8531852461c5389ae781e935d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 135
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_cbble",
+				"defindex": 4228,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cbble.2ba8ce1ebc239cb85198c5c821ac40713426e195.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 136
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_overpass",
+				"defindex": 4229,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_overpass.38922d46515c990eb33d52ba20a92dd340cbe3c3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 137
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_cache",
+				"defindex": 4230,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cache.a69ce7a3846d51b92e87a80b7c51f8ea975b56d4.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 138
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_train",
+				"defindex": 4231,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_train.fa2a82c7f5c06ba25515b4fa40616bed304914cb.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 139
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "crate_columbus2016_promo_de_nuke",
+				"defindex": 4232,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "MLG Columbus 2016 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_nuke.8d596a4b152b17becfd5a9a5a5c085b9057b39e5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 140
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
 					}
 				]
 				

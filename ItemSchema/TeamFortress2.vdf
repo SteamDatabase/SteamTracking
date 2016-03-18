@@ -1786,6 +1786,17 @@
 					"loadout_key"		"weapon_def_index"
 					"value"		"LOADOUT_POSITION_MELEE"
 				}
+				"2"
+				{
+					"type"		"AND"
+					"0"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"userid"
+						"get_player"		"by_id"
+						"is_owner"		"0"
+					}
+				}
 			}
 		}
 	}
@@ -61497,6 +61508,22 @@
 			{
 				"spy"		"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/spy/fall2013_escapist/fall2013_escapist.mdl"
+						"name"		"#TF_fall2013_escapist_style1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/spy/fall2013_escapist_s2/fall2013_escapist_s2.mdl"
+						"name"		"#TF_fall2013_escapist_style2"
+					}
+				}
+			}
 		}
 		"30185"
 		{
@@ -66315,16 +66342,43 @@
 					"head"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/pyro/sbox2014_pyro_zipper_suit/sbox2014_pyro_zipper_suit"
+			"image_inventory"		"backpack/workshop/player/items/all_class/sbox2014_zipper_suit/sbox2014_zipper_suit"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/pyro/sbox2014_pyro_zipper_suit/sbox2014_pyro_zipper_suit.mdl"
+			"model_player_per_class"
+			{
+				"pyro"		"models/workshop/player/items/all_class/sbox2014_zipper_suit/sbox2014_zipper_suit_pyro.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sbox2014_zipper_suit/sbox2014_zipper_suit_engineer.mdl"
+			}
 			"used_by_classes"
 			{
 				"pyro"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_sbox2014_pyro_zipper_suit_style0"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"name"		"#TF_sbox2014_pyro_zipper_suit_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+						}
+					}
+				}
 			}
 		}
 		"30368"
@@ -73741,34 +73795,22 @@
 		{
 			"name"		"Promo Fear Monger"
 			"prefab"		"item_bak_fear_monger"
-			"craft_class"	""			
-			"show_in_armory"	"0"
-			"static_attrs"
-			{
-				"non economy"		"1"
-			}
+			"craft_class"		""
+			"show_in_armory"		"0"
 		}
 		"30740"
 		{
 			"name"		"Promo Arkham Cowl"
 			"prefab"		"item_bak_arkham_cowl"
-			"craft_class"	""			
-			"show_in_armory"	"0"
-			"static_attrs"
-			{
-				"non economy"		"1"
-			}
+			"craft_class"		""
+			"show_in_armory"		"0"
 		}
 		"30741"
 		{
 			"name"		"Promo The Firefly"
 			"prefab"		"item_bak_firefly"
-			"craft_class"	""			
-			"show_in_armory"	"0"
-			"static_attrs"
-			{
-				"non economy"		"1"
-			}
+			"craft_class"		""
+			"show_in_armory"		"0"
 		}
 		"30742"
 		{
