@@ -1,0 +1,10 @@
+﻿"Language" "english" 
+"Tokens" 
+{ 
+SteamClean_Title "Deleting Steam?"
+SteamClean_Message "Steam still has game content stored in %@.  Do you want Steam to delete them now?"
+SteamClean_Delete "Delete files"
+SteamClean_Keep "Keep files"
+SteamClean_ShowInFinder "Show in Finder"
+}
+

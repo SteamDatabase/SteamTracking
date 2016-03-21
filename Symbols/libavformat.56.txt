@@ -1,0 +1,621 @@
+ BZ2_bzDecompress
+ BZ2_bzDecompressEnd
+ BZ2_bzDecompressInit
+ D ff_aac_demuxer
+ D ff_celt_codec
+ D ff_dirac_codec
+ D ff_flac_codec
+ D ff_flac_demuxer
+ D ff_gif_demuxer
+ D ff_id3v1_genre_str
+ D ff_id3v2_34_metadata_conv
+ D ff_id3v2_4_metadata_conv
+ D ff_id3v2_picture_types
+ D ff_matroska_demuxer
+ D ff_mkv_metadata_conv
+ D ff_mov_demuxer
+ D ff_mp3_demuxer
+ D ff_ogg_demuxer
+ D ff_ogm_audio_codec
+ D ff_ogm_old_codec
+ D ff_ogm_text_codec
+ D ff_ogm_video_codec
+ D ff_old_dirac_codec
+ D ff_old_flac_codec
+ D ff_opus_codec
+ D ff_rawvideo_options
+ D ff_riff_info_conv
+ D ff_skeleton_codec
+ D ff_speex_codec
+ D ff_theora_codec
+ D ff_vorbis_codec
+ D ff_vorbiscomment_metadata_conv
+ D ff_wav_demuxer
+ D ffio_url_class
+ D ffurl_context_class
+ R ff_codec_bmp_tags
+ R ff_codec_movaudio_tags
+ R ff_codec_movsubtitle_tags
+ R ff_codec_movvideo_tags
+ R ff_codec_wav_guids
+ R ff_codec_wav_tags
+ R ff_id3v2_3_tags
+ R ff_id3v2_4_tags
+ R ff_id3v2_mime_tags
+ R ff_id3v2_tags
+ R ff_log2_tab
+ R ff_mkv_codec_tags
+ R ff_mkv_mime_tags
+ R ff_mp4_obj_type
+ R ff_sipr_subpk_size
+ T _dyld_func_lookup
+ T av_add_index_entry
+ T av_append_packet
+ T av_codec_get_id
+ T av_codec_get_tag
+ T av_dump_format
+ T av_filename_number_test
+ T av_find_best_stream
+ T av_find_default_stream_index
+ T av_find_input_format
+ T av_get_frame_filename
+ T av_get_packet
+ T av_guess_codec
+ T av_guess_format
+ T av_hex_dump
+ T av_hex_dump_log
+ T av_iformat_next
+ T av_index_search_timestamp
+ T av_interleaved_write_frame
+ T av_match_ext
+ T av_new_program
+ T av_oformat_next
+ T av_pkt_dump2
+ T av_pkt_dump_log2
+ T av_probe_input_buffer
+ T av_probe_input_format
+ T av_probe_input_format2
+ T av_read_frame
+ T av_read_pause
+ T av_read_play
+ T av_register_all
+ T av_register_input_format
+ T av_register_output_format
+ T av_sdp_create
+ T av_seek_frame
+ T av_stream_get_side_data
+ T av_url_split
+ T av_write_frame
+ T av_write_trailer
+ T avformat_alloc_context
+ T avformat_close_input
+ T avformat_configuration
+ T avformat_find_stream_info
+ T avformat_free_context
+ T avformat_get_class
+ T avformat_get_riff_audio_tags
+ T avformat_get_riff_video_tags
+ T avformat_license
+ T avformat_network_deinit
+ T avformat_network_init
+ T avformat_new_stream
+ T avformat_open_input
+ T avformat_query_codec
+ T avformat_seek_file
+ T avformat_version
+ T avformat_write_header
+ T avio_alloc_context
+ T avio_check
+ T avio_close
+ T avio_close_dyn_buf
+ T avio_closep
+ T avio_enum_protocols
+ T avio_flush
+ T avio_get_str
+ T avio_get_str16be
+ T avio_get_str16le
+ T avio_open
+ T avio_open2
+ T avio_open_dyn_buf
+ T avio_pause
+ T avio_printf
+ T avio_put_str
+ T avio_put_str16le
+ T avio_r8
+ T avio_rb16
+ T avio_rb24
+ T avio_rb32
+ T avio_rb64
+ T avio_read
+ T avio_rl16
+ T avio_rl24
+ T avio_rl32
+ T avio_rl64
+ T avio_seek
+ T avio_seek_time
+ T avio_size
+ T avio_w8
+ T avio_wb16
+ T avio_wb24
+ T avio_wb32
+ T avio_wb64
+ T avio_wl16
+ T avio_wl24
+ T avio_wl32
+ T avio_wl64
+ T avio_write
+ T avpriv_new_chapter
+ T avpriv_set_pts_info
+ T dyld_stub_binding_helper
+ T ff_add_index_entry
+ T ff_add_param_change
+ T ff_brktimegm
+ T ff_check_interrupt
+ T ff_codec_get_id
+ T ff_codec_get_tag
+ T ff_codec_guid_get_id
+ T ff_compute_frame_duration
+ T ff_crc04C11DB7_update
+ T ff_crcA001_update
+ T ff_data_to_hex
+ T ff_dynarray_add
+ T ff_find_stream_index
+ T ff_flac_parse_picture
+ T ff_free_parser_state
+ T ff_gen_search
+ T ff_gen_syncpoint_search
+ T ff_generate_avci_extradata
+ T ff_get_audio_frame_size
+ T ff_get_bmp_header
+ T ff_get_line
+ T ff_get_pcm_codec_id
+ T ff_get_v_length
+ T ff_get_wav_header
+ T ff_hex_to_data
+ T ff_id3v1_read
+ T ff_id3v2_free_extra_meta
+ T ff_id3v2_match
+ T ff_id3v2_parse_apic
+ T ff_id3v2_read
+ T ff_id3v2_tag_len
+ T ff_index_search_timestamp
+ T ff_interleave_add_packet
+ T ff_interleave_packet_per_dts
+ T ff_iso8601_to_unix_time
+ T ff_make_absolute_url
+ T ff_metadata_conv
+ T ff_metadata_conv_ctx
+ T ff_mov_get_channel_layout
+ T ff_mov_get_channel_layout_tag
+ T ff_mov_get_lpcm_codec_id
+ T ff_mov_iso639_to_lang
+ T ff_mov_lang_to_iso639
+ T ff_mov_read_chan
+ T ff_mov_read_esds
+ T ff_mov_read_stsd_entries
+ T ff_mp4_parse_es_descr
+ T ff_mp4_read_dec_config_descr
+ T ff_mp4_read_descr
+ T ff_mp4_read_descr_len
+ T ff_ntp_time
+ T ff_parse_key_value
+ T ff_pcm_read_seek
+ T ff_program_add_stream_index
+ T ff_put_v
+ T ff_raw_audio_read_header
+ T ff_raw_read_partial_packet
+ T ff_raw_video_read_header
+ T ff_read_frame_flush
+ T ff_read_packet
+ T ff_read_riff_info
+ T ff_reduce_index
+ T ff_replaygain_export
+ T ff_replaygain_export_raw
+ T ff_restore_parser_state
+ T ff_rm_reorder_sipr_data
+ T ff_sdp_write_media
+ T ff_seek_frame_binary
+ T ff_store_parser_state
+ T ff_update_cur_dts
+ T ff_url_join
+ T ff_vorbis_comment
+ T ff_vorbiscomment_length
+ T ff_vorbiscomment_write
+ T ff_wav_codec_get_id
+ T ff_write_chained
+ T ffio_close_null_buf
+ T ffio_fdopen
+ T ffio_fill
+ T ffio_get_checksum
+ T ffio_init_checksum
+ T ffio_init_context
+ T ffio_open_dyn_packet_buf
+ T ffio_open_null_buf
+ T ffio_read_indirect
+ T ffio_read_partial
+ T ffio_read_varlen
+ T ffio_rewind_with_probe_data
+ T ffio_set_buf_size
+ T ffurl_alloc
+ T ffurl_close
+ T ffurl_connect
+ T ffurl_get_file_handle
+ T ffurl_get_multi_file_handle
+ T ffurl_open
+ T ffurl_protocol_next
+ T ffurl_read
+ T ffurl_read_complete
+ T ffurl_register_protocol
+ T ffurl_seek
+ T ffurl_shutdown
+ T ffurl_size
+ T ffurl_write
+ __assert_rtn
+ __divdi3
+ __fixunsdfdi
+ __memcpy_chk
+ __moddi3
+ __snprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ __udivdi3
+ __umoddi3
+ __vsnprintf_chk
+ abort
+ atoi
+ av_base64_decode
+ av_buffer_alloc
+ av_buffer_ref
+ av_buffer_unref
+ av_compare_mod
+ av_compare_ts
+ av_crc
+ av_crc_get_table
+ av_d2q
+ av_default_item_name
+ av_dict_copy
+ av_dict_count
+ av_dict_free
+ av_dict_get
+ av_dict_set
+ av_display_rotation_get
+ av_dup_packet
+ av_fast_malloc
+ av_fast_realloc
+ av_frame_alloc
+ av_frame_free
+ av_free
+ av_free_packet
+ av_freep
+ av_get_audio_frame_duration
+ av_get_bits_per_sample
+ av_get_channel_layout_nb_channels
+ av_get_channel_name
+ av_get_codec_tag_string
+ av_gettime
+ av_grow_packet
+ av_init_packet
+ av_isdigit
+ av_isspace
+ av_log
+ av_lzo1x_decode
+ av_malloc_tracked
+ av_mallocz_tracked
+ av_match_name
+ av_new_packet
+ av_opt_free
+ av_opt_get
+ av_opt_set_defaults
+ av_opt_set_dict
+ av_packet_new_side_data
+ av_packet_unref
+ av_parse_video_rate
+ av_parser_close
+ av_parser_init
+ av_parser_parse2
+ av_realloc_array
+ av_realloc_tracked
+ av_reallocp
+ av_reallocp_array
+ av_reduce
+ av_rescale
+ av_rescale_q
+ av_rescale_q_rnd
+ av_rescale_rnd
+ av_shrink_packet
+ av_strcasecmp
+ av_strdup
+ av_strlcat
+ av_strlcatf
+ av_strlcpy
+ av_strncasecmp
+ av_strstart
+ av_timegm
+ av_usleep
+ av_xiphlacing
+ avcodec_alloc_context3
+ avcodec_close
+ avcodec_decode_audio4
+ avcodec_decode_video2
+ avcodec_descriptor_get
+ avcodec_find_decoder
+ avcodec_is_open
+ avcodec_open2
+ avcodec_register_all
+ avcodec_string
+ avpriv_ac3_channel_layout_tab
+ avpriv_dirac_parse_sequence_header
+ avpriv_flac_parse_streaminfo
+ avpriv_mpa_decode_header
+ avpriv_mpa_freq_tab
+ avpriv_mpeg4audio_get_config
+ avpriv_mpeg4audio_sample_rates
+ avpriv_mpegaudio_decode_header
+ avpriv_report_missing_feature
+ avpriv_request_sample
+ avpriv_toupper4
+ avpriv_vorbis_parse_extradata
+ avpriv_vorbis_parse_frame
+ avpriv_vorbis_parse_reset
+ b av_register_all.initialized
+ b first_iformat
+ b first_oformat
+ b first_protocol
+ d .compoundliteral
+ d av_format_context_class
+ d avformat_options
+ d dyld__mach_header
+ d ebml_header
+ d ebml_syntax
+ d id3v2_2_metadata_conv
+ d id3v2_extra_meta_funcs
+ d matroska_aac_profile.aac_profiles
+ d matroska_attachments
+ d matroska_chapter
+ d matroska_chapter_entry
+ d matroska_chapters
+ d matroska_cluster
+ d matroska_cluster_incremental_parsing
+ d matroska_clusters
+ d matroska_clusters_incremental
+ d matroska_doctypes
+ d matroska_index
+ d matroska_index_entry
+ d matroska_seekhead
+ d matroska_segment
+ d matroska_segments
+ d matroska_simpletag
+ d matroska_tag
+ d matroska_tags
+ d matroska_track
+ d matroska_track_encoding
+ d matroska_track_encodings
+ d matroska_tracks
+ d mov_ch_layout_map
+ d mov_codec_ch_layouts
+ d mov_default_parse_table
+ d ogg_codecs
+ d set_codec_from_probe_data.fmt_id_type
+ d wav_metadata_conv
+ fprintf
+ fputc
+ fwrite
+ gmtime
+ inflate
+ inflateEnd
+ inflateInit_
+ lrintf
+ memchr
+ memcmp
+ memcpy
+ memmove
+ memset
+ memset_pattern16
+ r .memset_pattern51
+ r avio_close_dyn_buf.padbuf
+ r ebml_parse_elem.max_lengths
+ r ff_data_to_hex.hex_table_lc
+ r ff_data_to_hex.hex_table_uc
+ r ff_generate_avci_extradata.avci100_1080i_extradata
+ r ff_generate_avci_extradata.avci100_1080p_extradata
+ r ff_generate_avci_extradata.avci100_720p_extradata
+ r ff_generate_avci_extradata.avci50_1080i_extradata
+ r ff_qt_default_palette_16
+ r ff_qt_default_palette_256
+ r ff_qt_default_palette_4
+ r ffio_url_options
+ r gif87a_sig
+ r gif89a_sig
+ r mac_to_unicode
+ r matroska_attachment
+ r matroska_blockgroup
+ r matroska_chapter_display
+ r matroska_cluster_incremental
+ r matroska_index_pos
+ r matroska_info
+ r matroska_parse_tracks.sipr_bit_rate
+ r matroska_seekhead_entry
+ r matroska_tagtargets
+ r matroska_track_audio
+ r matroska_track_encoding_compression
+ r matroska_track_video
+ r mov_ch_layout_map_1ch
+ r mov_ch_layout_map_2ch
+ r mov_ch_layout_map_3ch
+ r mov_ch_layout_map_4ch
+ r mov_ch_layout_map_5ch
+ r mov_ch_layout_map_6ch
+ r mov_ch_layout_map_7ch
+ r mov_ch_layout_map_8ch
+ r mov_ch_layout_map_9ch
+ r mov_ch_layout_map_misc
+ r mov_ch_layouts_aac
+ r mov_ch_layouts_ac3
+ r mov_ch_layouts_alac
+ r mov_ch_layouts_wav
+ r mov_mdhd_language_map
+ r mp3_parse_info_tag.xing_offtbl
+ r mp4_audio_types
+ r options
+ r sipr_swaps
+ sscanf
+ strchr
+ strcmp
+ strcpy
+ strftime$UNIX2003
+ strlen
+ strncmp
+ strptime$UNIX2003
+ strrchr
+ strspn
+ strstr
+ strtol
+ t adts_aac_probe
+ t adts_aac_read_header
+ t append_packet_chunked
+ t celt_header
+ t compute_pkt_fields
+ t compute_pkt_fields2
+ t decode_str
+ t dirac_gptopts
+ t dirac_header
+ t dump_metadata
+ t dump_stream_format
+ t dyn_buf_seek
+ t dyn_buf_write
+ t dyn_packet_buf_write
+ t ebml_free
+ t ebml_parse
+ t ebml_parse_elem
+ t ebml_read_num
+ t ffio_url_child_class_next
+ t ffio_url_child_next
+ t fill_buffer
+ t flac_header
+ t flac_probe
+ t flac_read_header
+ t format_child_class_next
+ t format_child_next
+ t format_to_name
+ t free_apic
+ t free_geobtag
+ t gif_probe
+ t gif_read_header
+ t gif_read_packet
+ t hex_dump_internal
+ t interleave_compare_dts
+ t matroska_convert_tag
+ t matroska_decode_buffer
+ t matroska_parse_block
+ t matroska_parse_cluster
+ t matroska_parse_seekhead_entry
+ t matroska_probe
+ t matroska_read_close
+ t matroska_read_header
+ t matroska_read_packet
+ t matroska_read_seek
+ t mov_metadata_gnre
+ t mov_metadata_int8_bypass_padding
+ t mov_metadata_int8_no_padding
+ t mov_metadata_track_or_disc_number
+ t mov_probe
+ t mov_read_chan
+ t mov_read_chap
+ t mov_read_chpl
+ t mov_read_close
+ t mov_read_cmov
+ t mov_read_ctts
+ t mov_read_custom
+ t mov_read_dac3
+ t mov_read_dec3
+ t mov_read_default
+ t mov_read_dref
+ t mov_read_dvc1
+ t mov_read_elst
+ t mov_read_enda
+ t mov_read_esds
+ t mov_read_extradata
+ t mov_read_fiel
+ t mov_read_ftyp
+ t mov_read_glbl
+ t mov_read_hdlr
+ t mov_read_header
+ t mov_read_ilst
+ t mov_read_mdat
+ t mov_read_mdhd
+ t mov_read_meta
+ t mov_read_moof
+ t mov_read_moov
+ t mov_read_mvhd
+ t mov_read_packet
+ t mov_read_pasp
+ t mov_read_sbgp
+ t mov_read_seek
+ t mov_read_smi
+ t mov_read_stco
+ t mov_read_stps
+ t mov_read_strf
+ t mov_read_stsc
+ t mov_read_stsd
+ t mov_read_stss
+ t mov_read_stsz
+ t mov_read_stts
+ t mov_read_tfdt
+ t mov_read_tfhd
+ t mov_read_tkhd
+ t mov_read_trak
+ t mov_read_trex
+ t mov_read_trun
+ t mov_read_udta_string
+ t mov_read_wave
+ t mov_read_wfex
+ t mov_read_wide
+ t mp3_read_header
+ t mp3_read_packet
+ t mp3_read_probe
+ t mp3_seek
+ t null_buf_write
+ t ogg_packet
+ t ogg_probe
+ t ogg_read_close
+ t ogg_read_header
+ t ogg_read_packet
+ t ogg_read_page
+ t ogg_read_seek
+ t ogg_read_timestamp
+ t ogm_dshow_header
+ t ogm_header
+ t ogm_packet
+ t old_dirac_gptopts
+ t old_dirac_header
+ t old_flac_header
+ t opus_header
+ t opus_packet
+ t parse_packet
+ t parse_value
+ t pkt_dump_internal
+ t probe_codec
+ t read_apic
+ t read_frame_internal
+ t read_geobtag
+ t skeleton_header
+ t speex_header
+ t speex_packet
+ t theora_gptopts
+ t theora_header
+ t try_decode_frame
+ t update_initial_durations
+ t update_stream_timings
+ t url_alloc_for_protocol
+ t urlcontext_child_class_next
+ t urlcontext_child_next
+ t urlcontext_to_name
+ t vorbis_cleanup
+ t vorbis_header
+ t vorbis_packet
+ t wav_probe
+ t wav_read_header
+ t wav_read_packet
+ t wav_read_seek
+ t write_packet
+ uncompress

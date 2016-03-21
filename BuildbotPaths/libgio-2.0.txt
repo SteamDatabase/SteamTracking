@@ -1,0 +1,2 @@
+/Users/buildbot/buildslave/pango_osx/build/glib-2.42.0/lib32/lib/gio/modules
+/Users/buildbot/buildslave/pango_osx/build/glib-2.42.0/lib64/lib/gio/modules

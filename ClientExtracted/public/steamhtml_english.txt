@@ -1,0 +1,11 @@
+"steamhtml"
+{
+	"appdetails_tab_overview"	"OVERVIEW"
+	"appdetails_tab_dlc"		"DLC"
+	"appdetails_tab_friends"	"FRIENDS"
+	"appdetails_tab_news"		"NEWS"
+
+	"appdetails_dlc_header"		"Downloadable Content"
+	"appdetails_dlc_shop"		"Shop for DLC"
+	"appdetails_dlc_installed"	"%installed%/%total% Installed"
+}

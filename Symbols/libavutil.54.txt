@@ -1,0 +1,443 @@
+ D av_pix_fmt_descriptors
+ R av_aes_size
+ R av_md5_size
+ R av_reverse
+ R av_sha_size
+ R av_tree_node_size
+ R ff_log2_tab
+ T _dyld_func_lookup
+ T av_add_q
+ T av_adler32_update
+ T av_aes_alloc
+ T av_aes_crypt
+ T av_aes_init
+ T av_audio_fifo_alloc
+ T av_audio_fifo_drain
+ T av_audio_fifo_free
+ T av_audio_fifo_read
+ T av_audio_fifo_realloc
+ T av_audio_fifo_reset
+ T av_audio_fifo_size
+ T av_audio_fifo_space
+ T av_audio_fifo_write
+ T av_base64_decode
+ T av_base64_encode
+ T av_basename
+ T av_blowfish_crypt
+ T av_blowfish_crypt_ecb
+ T av_blowfish_init
+ T av_bmg_get
+ T av_buffer_alloc
+ T av_buffer_allocz
+ T av_buffer_create
+ T av_buffer_default_free
+ T av_buffer_is_writable
+ T av_buffer_make_writable
+ T av_buffer_pool_get
+ T av_buffer_pool_init
+ T av_buffer_pool_uninit
+ T av_buffer_realloc
+ T av_buffer_ref
+ T av_buffer_unref
+ T av_channel_layout_extract_channel
+ T av_compare_mod
+ T av_compare_ts
+ T av_cpu_count
+ T av_crc
+ T av_crc_get_table
+ T av_crc_init
+ T av_ctz
+ T av_d2q
+ T av_d2str
+ T av_default_item_name
+ T av_des_crypt
+ T av_des_init
+ T av_des_mac
+ T av_dict_copy
+ T av_dict_count
+ T av_dict_free
+ T av_dict_get
+ T av_dict_parse_string
+ T av_dict_set
+ T av_dirname
+ T av_display_matrix_flip
+ T av_display_rotation_get
+ T av_display_rotation_set
+ T av_div_q
+ T av_downmix_info_update_side_data
+ T av_evaluate_lls
+ T av_expr_eval
+ T av_expr_free
+ T av_expr_parse
+ T av_expr_parse_and_eval
+ T av_fast_malloc
+ T av_fast_realloc
+ T av_fifo_alloc
+ T av_fifo_drain
+ T av_fifo_free
+ T av_fifo_generic_read
+ T av_fifo_generic_write
+ T av_fifo_realloc2
+ T av_fifo_reset
+ T av_fifo_size
+ T av_fifo_space
+ T av_file_map
+ T av_file_unmap
+ T av_find_info_tag
+ T av_find_nearest_q_idx
+ T av_frame_alloc
+ T av_frame_clone
+ T av_frame_copy
+ T av_frame_copy_props
+ T av_frame_free
+ T av_frame_get_buffer
+ T av_frame_get_plane_buffer
+ T av_frame_get_side_data
+ T av_frame_is_writable
+ T av_frame_make_writable
+ T av_frame_move_ref
+ T av_frame_new_side_data
+ T av_frame_ref
+ T av_frame_remove_side_data
+ T av_frame_unref
+ T av_free
+ T av_freep
+ T av_gcd
+ T av_get_bits_per_pixel
+ T av_get_bytes_per_sample
+ T av_get_channel_layout
+ T av_get_channel_layout_channel_index
+ T av_get_channel_layout_nb_channels
+ T av_get_channel_layout_string
+ T av_get_channel_name
+ T av_get_cpu_flags
+ T av_get_default_channel_layout
+ T av_get_packed_sample_fmt
+ T av_get_picture_type_char
+ T av_get_pix_fmt
+ T av_get_pix_fmt_name
+ T av_get_pix_fmt_string
+ T av_get_planar_sample_fmt
+ T av_get_random_seed
+ T av_get_sample_fmt
+ T av_get_sample_fmt_name
+ T av_get_sample_fmt_string
+ T av_get_time_base_q
+ T av_get_token
+ T av_gettime
+ T av_hmac_alloc
+ T av_hmac_calc
+ T av_hmac_final
+ T av_hmac_free
+ T av_hmac_init
+ T av_hmac_update
+ T av_image_alloc
+ T av_image_check_sar
+ T av_image_check_size
+ T av_image_copy
+ T av_image_copy_plane
+ T av_image_fill_linesizes
+ T av_image_fill_max_pixsteps
+ T av_image_fill_pointers
+ T av_image_get_linesize
+ T av_init_lls
+ T av_isdigit
+ T av_isgraph
+ T av_isspace
+ T av_isxdigit
+ T av_lfg_init
+ T av_log
+ T av_log2
+ T av_log2_16bit
+ T av_log_default_callback
+ T av_log_get_level
+ T av_log_set_callback
+ T av_log_set_flags
+ T av_log_set_level
+ T av_lzo1x_decode
+ T av_malloc_tracked
+ T av_mallocz_tracked
+ T av_match_name
+ T av_md5_alloc
+ T av_md5_final
+ T av_md5_init
+ T av_md5_sum
+ T av_md5_update
+ T av_memcpy_backptr
+ T av_mul_q
+ T av_nearer_q
+ T av_opt_child_class_next
+ T av_opt_child_next
+ T av_opt_eval_double
+ T av_opt_eval_flags
+ T av_opt_eval_float
+ T av_opt_eval_int
+ T av_opt_eval_int64
+ T av_opt_eval_q
+ T av_opt_find
+ T av_opt_find2
+ T av_opt_flag_is_set
+ T av_opt_free
+ T av_opt_get
+ T av_opt_get_double
+ T av_opt_get_int
+ T av_opt_get_q
+ T av_opt_next
+ T av_opt_set
+ T av_opt_set_bin
+ T av_opt_set_defaults
+ T av_opt_set_dict
+ T av_opt_set_double
+ T av_opt_set_int
+ T av_opt_set_q
+ T av_opt_show2
+ T av_parse_color
+ T av_parse_cpu_flags
+ T av_parse_time
+ T av_parse_video_rate
+ T av_parse_video_size
+ T av_pix_fmt_count_planes
+ T av_pix_fmt_desc_get
+ T av_pix_fmt_desc_get_id
+ T av_pix_fmt_desc_next
+ T av_pix_fmt_get_chroma_sub_sample
+ T av_pix_fmt_swap_endianness
+ T av_rc4_crypt
+ T av_rc4_init
+ T av_read_image_line
+ T av_realloc_array
+ T av_realloc_tracked
+ T av_reallocp
+ T av_reallocp_array
+ T av_reduce
+ T av_register_malloc
+ T av_rescale
+ T av_rescale_q
+ T av_rescale_q_rnd
+ T av_rescale_rnd
+ T av_sample_fmt_is_planar
+ T av_samples_alloc
+ T av_samples_copy
+ T av_samples_fill_arrays
+ T av_samples_get_buffer_size
+ T av_samples_set_silence
+ T av_set_cpu_flags_mask
+ T av_set_options_string
+ T av_sha_alloc
+ T av_sha_final
+ T av_sha_init
+ T av_sha_update
+ T av_solve_lls
+ T av_stereo3d_alloc
+ T av_stereo3d_create_side_data
+ T av_strcasecmp
+ T av_strdup
+ T av_strerror
+ T av_stristart
+ T av_stristr
+ T av_strlcat
+ T av_strlcatf
+ T av_strlcpy
+ T av_strncasecmp
+ T av_strnstr
+ T av_strstart
+ T av_strtod
+ T av_sub_q
+ T av_timegm
+ T av_tree_destroy
+ T av_tree_enumerate
+ T av_tree_find
+ T av_tree_insert
+ T av_tree_node_alloc
+ T av_update_lls
+ T av_usleep
+ T av_vlog
+ T av_write_image_line
+ T av_xtea_crypt
+ T av_xtea_init
+ T avpriv_emms_yasm
+ T avpriv_float_dsp_init
+ T avpriv_init_lls
+ T avpriv_open
+ T avpriv_report_missing_feature
+ T avpriv_request_sample
+ T avpriv_scalarproduct_float_c
+ T avpriv_set_systematic_pal2
+ T avpriv_solve_lls
+ T avutil_configuration
+ T avutil_license
+ T avutil_version
+ T dyld_stub_binding_helper
+ T ff_butterflies_float_sse
+ T ff_cpu_cpuid
+ T ff_cpu_cpuid_test
+ T ff_cpu_xgetbv
+ T ff_evaluate_lls_sse2
+ T ff_float_dsp_init_x86
+ T ff_get_cpu_flags_x86
+ T ff_init_lls_x86
+ T ff_scalarproduct_float_sse
+ T ff_update_lls_avx
+ T ff_update_lls_sse2
+ T ff_vector_dmul_scalar_avx
+ T ff_vector_dmul_scalar_sse2
+ T ff_vector_fmac_scalar_avx
+ T ff_vector_fmac_scalar_sse
+ T ff_vector_fmul_add_avx
+ T ff_vector_fmul_add_sse
+ T ff_vector_fmul_avx
+ T ff_vector_fmul_reverse_avx
+ T ff_vector_fmul_reverse_sse
+ T ff_vector_fmul_scalar_sse
+ T ff_vector_fmul_sse
+ __divdi3
+ __error
+ __isinfd
+ __isnand
+ __memcpy_chk
+ __moddi3
+ __snprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ __stderrp
+ __vsnprintf_chk
+ acos
+ asin
+ atan
+ atan2
+ b av_crc_table
+ b av_get_cpu_flags.flags
+ b av_log_default_callback.count
+ b av_log_default_callback.is_atty
+ b av_log_default_callback.prev
+ b checked
+ b dec_multbl
+ b enc_multbl
+ b flags
+ b get_generic_seed.buffer
+ b get_generic_seed.i
+ b inv_sbox
+ b s_cb_free
+ b s_cb_malloc
+ b s_cb_realloc
+ b sbox
+ bsearch
+ ceil
+ clock$UNIX2003
+ close$UNIX2003
+ cos
+ cosh
+ d av_log_callback
+ d av_log_default_callback.print_prefix
+ d av_log_level
+ d av_parse_cpu_flags.class
+ d av_parse_cpu_flags.cpuflags_opts
+ d av_parse_time.date_fmt
+ d av_parse_time.time_fmt
+ d channel_layout_map
+ d channel_names
+ d class
+ d color_table
+ d const_names
+ d cpuflags_mask
+ d dyld__mach_header
+ d file_log_ctx_class
+ d imgutils_class
+ d sample_fmt_info
+ d use_color
+ d video_rate_abbrs
+ d video_size_abbrs
+ exp
+ exp2
+ fabs
+ fcntl$UNIX2003
+ floor
+ fprintf
+ fputs$UNIX2003
+ free
+ fstat
+ fwrite
+ getenv
+ gettimeofday
+ gmtime
+ isatty
+ llrint
+ localtime
+ log
+ memcmp
+ memcpy
+ memset
+ mktime$UNIX2003
+ mmap$UNIX2003
+ munmap$UNIX2003
+ nanosleep$UNIX2003
+ open$UNIX2003
+ posix_memalign
+ pow
+ r IP_shuffle
+ r K256
+ r PC1_shuffle
+ r PC2_shuffle
+ r S_boxes_P_shuffle
+ r av_base64_encode.b64
+ r av_crc_table_params
+ r color
+ r const_values
+ r map2
+ r orig_p
+ r orig_s
+ r rcon
+ r si_prefixes
+ read$UNIX2003
+ realloc
+ sin
+ sinh
+ strchr
+ strcmp
+ strerror_r
+ strlen
+ strncmp
+ strrchr
+ strspn
+ strstr
+ strtod$UNIX2003
+ strtol
+ strtoll
+ strtoul
+ sysctl
+ t av_des_crypt_mac
+ t butterflies_float_c
+ t color_table_compare
+ t des_encdec
+ t eval_expr
+ t evaluate_lls
+ t init_multbl2
+ t opt_list
+ t parse_expr
+ t parse_factor
+ t parse_primary
+ t parse_subexpr
+ t parse_term
+ t pool_release_buffer
+ t set_string_number
+ t sha1_init
+ t sha1_transform
+ t sha256_transform
+ t small_strptime
+ t update_lls
+ t vector_dmul_scalar_c
+ t vector_fmac_scalar_c
+ t vector_fmul_add_c
+ t vector_fmul_c
+ t vector_fmul_reverse_c
+ t vector_fmul_scalar_c
+ t vector_fmul_window_3dnowext
+ t vector_fmul_window_c
+ t vector_fmul_window_sse
+ t verify_expr
+ t write_number
+ t xtea_crypt_ecb
+ tan
+ tanh
+ time
+ trunc

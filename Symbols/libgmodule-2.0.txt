@@ -1,0 +1,66 @@
+
+ T _dyld_func_lookup
+ T dyld_stub_binding_helper
+ T g_module_build_path
+ T g_module_close
+ T g_module_error
+ T g_module_make_resident
+ T g_module_name
+ T g_module_open
+ T g_module_supported
+ T g_module_symbol
+ __error
+ b g_module_global_lock
+ b main_module
+ b module_debug_flags
+ b module_debug_initialized
+ b modules
+ close
+ close$UNIX2003
+ d _g_module_debug_init.keys
+ d dyld__mach_header
+ d module_error_private
+ dlclose
+ dlerror
+ dlopen
+ dlsym
+ g_file_test
+ g_filename_display_name
+ g_free
+ g_getenv
+ g_malloc_n
+ g_parse_debug_string
+ g_path_get_dirname
+ g_private_get
+ g_private_replace
+ g_rec_mutex_lock
+ g_rec_mutex_unlock
+ g_return_if_fail_warning
+ g_scanner_destroy
+ g_scanner_eof
+ g_scanner_get_next_token
+ g_scanner_input_file
+ g_scanner_new
+ g_scanner_scope_add_symbol
+ g_strconcat
+ g_strdup
+ g_strdup_printf
+ open
+ open$UNIX2003
+ strcmp
+ strlen
+ strncmp
+ strrchr
+ t _g_module_build_path
+ t _g_module_close
+ t _g_module_debug_init
+ t _g_module_open
+ t _g_module_self
+ t _g_module_symbol
+ t fetch_dlerror
+ t g_module_find_by_handle
+ t g_module_find_by_name
+ t g_module_set_error
+ t g_module_set_error_unduped
+ t parse_libtool_archive
+ t str_check_suffix

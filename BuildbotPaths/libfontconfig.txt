@@ -1,0 +1,4 @@
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib32/etc/fonts
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib32/var/cache/fontconfig
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib64/etc/fonts
+/Users/buildbot/buildslave/pango_osx/build/fontconfig-2.11.1/lib64/var/cache/fontconfig

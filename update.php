@@ -12,21 +12,6 @@
 		private $Requests = [];
 		private $URLsToFetch = [];
 		
-		private $ClientArchives =
-		[
-			'resources_all.zip',
-			'remoteui_all.zip',
-			'public_all.zip',
-			'strings_all.zip',
-			'tenfoot_all.zip',
-			'tenfoot_images_all.zip',
-			'tenfoot_misc_all.zip',
-			'steam_osx.zip',
-			'bins_osx.zip',
-			'bins_client_osx.zip',
-			'steamcmd_bins_osx.zip',
-		];
-		
 		private $Options = Array(
 			CURLOPT_USERAGENT      => 'SteamDB',
 			CURLOPT_ENCODING       => 'gzip',
@@ -188,20 +173,20 @@
 			// Get archives from beta manifest
 			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' || $File === 'ClientManifest/steam_cmd_publicbeta_osx' )
 			{
-				foreach( $this->ClientArchives as $Archive )
+				if( Preg_Match_All( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
 				{
-					if( Preg_Match( '/"' . Str_Replace( '.', '\.', $Archive ) . '\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
+					foreach( $Test[ 1 ] as $Index => $Archive )
 					{
-						$Test = $Test[ 1 ];
+						$Hash = $Test[ 2 ][ $Index ];
 						
-						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Test )
+						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Hash )
 						{
-							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Test );
+							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Hash );
 							
-							$this->ETags[ $Archive ] = $Test;
+							$this->ETags[ $Archive ] = $Hash;
 							
 							$this->URLsToFetch[ ] = Array(
-								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Test,
+								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
 								'File' => '.support/' . $Archive
 							);
 						}
@@ -210,13 +195,13 @@
 							$this->Log( 'Matched {lightblue}' . $Archive . '{normal}, but we already have it cached' );
 						}
 					}
-					else
-					{
-						$this->Log( '{yellow}Failed to find {lightblue}' . $Archive );
-					}
+				}
+				else
+				{
+					$this->Log( '{yellow}Failed to find any archives' );
 				}
 				
-				unset( $Test );
+				unset( $Test, $Archive, $Hash, $Index );
 			}
 			// Convert group members to JSON
 			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' )

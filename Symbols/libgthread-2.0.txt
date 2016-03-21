@@ -1,0 +1,11 @@
+
+ T _dyld_func_lookup
+ T dyld_stub_binding_helper
+ T g_thread_init
+ T g_thread_init_with_errorcheck_mutexes
+ __stack_chk_fail
+ __stack_chk_guard
+ d dyld__mach_header
+ g_assertion_message_expr
+ g_logv
+ t g_warning

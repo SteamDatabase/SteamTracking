@@ -1,7 +1,13 @@
 Protobufs/google/
 .support/
 
+*.asi
+*.flt
+*.mix
+*.dylib
 *.wav
+*.mp3
+*.dic
 *.tmp
 *.webm
 
@@ -10,6 +16,7 @@ ClientExtracted/ubuntu12_32/steam
 ClientExtracted/ubuntu12_64/steam
 ClientExtracted/steam/drivercheck/
 ClientExtracted/ThirdPartyLegalNotices.doc
+ClientExtracted/Frameworks/
 
 # Ignore all translations
 ClientExtracted/**/*_brazilian*.[ht]*
