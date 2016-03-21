@@ -47,6 +47,13 @@
 			"labelText"		"#Overlay_SettingsEnable"
 			"Default"		"0"
 		}
+
+		"EnableDesktopGameTheater"
+		{
+			"ControlName"		"CheckButton"
+			"labelText"		"#Overlay_SettingsDesktopGameTheaterCheck"
+			"Default"		"0"
+		}
 		
 		"LaunchOptionsButton"
 		{
@@ -105,8 +112,8 @@
 		
 		place {control=Divider1 start=ManualLabelName dir=down margin-top=20 region=main width=max }
 		
-		place {controls=EnableOverlayCheck start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
-		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableOverlayCheck dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
+		place {controls=EnableOverlayCheck,EnableDesktopGameTheater start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
+		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 
 	}
 }

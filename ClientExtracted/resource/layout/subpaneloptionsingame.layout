@@ -5,6 +5,7 @@
 		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
 		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
 		EnableSCTenfootOverlayCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }	
+		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }	
 		HotKeySelector {	ControlName=HotKeyEntry	}
 		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
 		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
@@ -53,8 +54,8 @@
 	{
 		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
 		region { name=top region=box margin-top=10 }
-		region { name=topleft region=top y=120 width=255 margin-right=20 }
-		region { name=topright region=top x=263 width=235 y=121}
+		region { name=topleft region=top y=130 width=255 margin-right=20 }
+		region { name=topright region=top x=263 width=235 y=131}
 		
 		region { name=bottom region=box y=320 }
 		
@@ -62,6 +63,7 @@
 		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
 		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 }
 		place [!$OSX&&!$LINUX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=20 }
+		place [!$OSX&&!$LINUX] { controls=EnableVRDesktopGameTheaterCheck region=top start=EnableSCTenfootOverlayCheck dir=down height=20 }
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
 		
 		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck dir=down spacing=5 start=HotKeySelector margin-top=44 width=max region=topleft }
