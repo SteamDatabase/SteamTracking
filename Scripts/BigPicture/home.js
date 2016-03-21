@@ -205,6 +205,12 @@ function ShowPackagePage( nPackageID, strPackageName )
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strPackageName, 2  );
 }
 
+function ShowBundlePage( nBundleID, strName )
+{
+	var strURL = 'https://store.steampowered.com/bundle/' + nBundleID;
+	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
+}
+
 function ShowAppLibraryPage( nAppID )
 {
 	$.DispatchEvent( 'LibraryShowApp', nAppID );
