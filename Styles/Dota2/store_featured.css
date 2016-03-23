@@ -591,7 +591,7 @@
 	padding: 0;
 	position: relative;
 	width: 616px;
-    height: 520px;
+    height: 438px;
 	background-color: #071215;
 	margin-bottom:16px;
 	box-shadow: 0px 0px 5px #000;
@@ -599,7 +599,7 @@
 
 .CarouselCells {
 	position: absolute;
-	top: 481px;
+	top: 400px;
 	right: 0;
 	cursor: pointer;
 	z-index: 1000;
@@ -630,14 +630,14 @@
 .CarouselContainer .CarouselImages {
 	padding: 0;
 	margin: 0;
-    height: 520px;
+    height: 438px;
 	list-style: none;
 	list-style-type: none;
 }
 
 .CarouselContainer .CarouselImages img {
 	width: 616px;
-	height: 418px;
+	height: 336px;
 }
 
 .CarouselFooter {
