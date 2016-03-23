@@ -250,7 +250,7 @@ var HighlightPlayer = Class.create( {
 		{
 			var modelid = this.m_rgSketchfabModels[ id ];
 			var iframe = target.down('iframe');
-			var url = "https://sketchfab.com/models/" + modelid + "/embed"
+			var url = "https://sketchfab.com/models/" + modelid + "/embed?autostart=1"
 			if ( iframe.src != url )
 				iframe.src = url;
 		}

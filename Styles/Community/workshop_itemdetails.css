@@ -183,6 +183,8 @@
 	height: 358px;
 }
 
+
+
 /*
 .highlight_strip_item.focus {
 	margin: 0px;
@@ -192,6 +194,17 @@
 .highlight_strip_item img {
 	height: 65px;
 	max-width: 116px;
+}
+
+img.workshop_sketchfab_play_overlay_image
+{
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	top: 50%;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
 }
 
 #highlight_selector_strip {
