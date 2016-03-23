@@ -377,8 +377,9 @@ function CreateDateControl( target, id, initValue )
 		initValue = 0;
 
 	// always set to Pacific time
+	var now = new Date();
 	var initDate = new Date( initValue * 1000 );
-	initDate = new Date( initDate.getTime() + (initDate.getTimezoneOffset() * 60000) + (g_pacificTimeOffset * 1000) );
+	initDate = new Date( initDate.getTime() + (now.getTimezoneOffset() * 60000) + (g_pacificTimeOffset * 1000) );
 	
 	var dateBlock = templ_DateControl.evaluate( { ControlId: id } );
 	target.insert( dateBlock );
@@ -433,11 +434,12 @@ function CreateDateControl( target, id, initValue )
 }
 
 var templ_DiscountDiv = new Template( ''
+		+ '	<form id="packageDiscount#{DiscountId}Form" onsubmit="return false;">'
 		+ '	<div class="boxlist_item" id="#{DiscountId}_discountDiv">'
 		+ '		<input type="hidden" id="#{DiscountId}_group" name="#{DiscountId}[group]" value="#{Group}">'
 		+ '		<div class="boxlist_title"><span>#{Name}</span>'
 		+ '			<div class="boxlist_controls visible">'
-		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( \'#{DiscountId}\' ); return false;">'
+		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( #{PackageId}, \'#{DiscountId}\' ); return false;">'
 		+ '				<input style="float: right;" value="Hide Discount" type="submit" onclick="OnClickHideDiscount( \'#{DiscountId}\' ); return false;">'
 		+ '			</div>'
 		+ '			<div class="boxlist_controls hidden">'
@@ -472,7 +474,7 @@ var templ_DiscountDiv = new Template( ''
 		+ '						<div style="width: 50px;float: left">End:</div>'
 		+ '						<div id="#{DiscountId}_enddateDiv"></div>'
 		+ '					</div>'
-		+ '					(Note: All times in PDT)'
+		+ '					(Note: All times in PST/PDT)'
 		+ '				</div>'
 		+ '			</div>'
 		+ '			<div class="formrow">'
@@ -533,8 +535,11 @@ var templ_DiscountDiv = new Template( ''
 		+ '				</div>'
 		+ '				<div style="clear: both;"></div>'
 		+ '			</div>'
+		+ '		<input type="hidden" name="sessionid" value="#{SessionId}" />'
+		+ '		<input id="packageDiscount#{DiscountId}Submit" style="float: right;" type="submit" value="Save Discount" onclick="SetPackageCost( #{PackageId}, \'packageDiscount#{DiscountId}Form\', \'packageDiscount#{DiscountId}Submit\' ); return false;" />'
 		+ '		</div>'
 		+ '	</div>'
+		+ '	</form>'
 		);
 
 var templ_DiscountsSummaryDiv = new Template( ''
@@ -565,7 +570,7 @@ var templ_DiscountsSummaryDiv = new Template( ''
 // name = string
 // packages = array of packages (ints) 
 // discounts = map of initial discount values for base price & country overrides (currency/country code => value)
-function CreateDiscount( target, id, discount )
+function CreateDiscount( target, id, discount, packageid )
 {
 	var name = (discount['name'] == null ) ? '' : discount['name'];
 	var description = (discount['description'] == null ) ? '' : discount['description'];
@@ -576,7 +581,7 @@ function CreateDiscount( target, id, discount )
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, Name: name, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 	
 	// set up start & end dates
@@ -674,7 +679,7 @@ function CreateDiscount( target, id, discount )
 	}
 }
 
-function OnClickDeleteDiscount( id )
+function OnClickDeleteDiscount( packageid, id )
 {
 	var escapedID = id.replace(/[[\]]/g, "\\$&");
 
@@ -685,9 +690,22 @@ function OnClickDeleteDiscount( id )
 	}
 	if( confirm("Please don't delete historical discount data. Set the end date to \"now\" if you just want to end a discount early. If you have questions ask Kadar\r\n\r\nDelete this discount?") )
 	{
- 		$( id + '_discountDiv' ).remove();
-		g_AllDiscounts[ id ] = undefined;
-		UpdateSummaryDiscounts();
+		var discountid = id.slice(10,-1);
+		CreateAjaxRequest(	g_szBaseURL + "/packages/removepackagediscount/" + packageid,
+			{ 'discountid' : discountid, 'sessionid' : g_sessionID },
+			function( results )
+			{
+				if ( results[ 'success' ] )
+				{
+					$( id + '_discountDiv' ).remove();
+					g_AllDiscounts[ id ] = undefined;
+					UpdateSummaryDiscounts();
+				}
+			},
+			'post'
+		);
+
+
 	}
 }
 
@@ -794,7 +812,7 @@ function AddPctgDiscount( target, pctg, packageid )
 	var discountsCountry = new Object();
 	var discountsRegion = new Object();
 	
-	var form = $('packageForm');
+	var form = $('packageCostForm');
 	// Iterate over form, looking for initial costs and initial country costs to discount
 	for ( var i = 0; i < form.elements.length; i++ )
 	{
@@ -866,7 +884,7 @@ function AddDiscount( target, discount, packageid, updateSummary )
 	{
 		var key = 'discounts' + '[' + discount['discount_id'] + ']';
 
-		CreateDiscount(target, key, discount);
+		CreateDiscount(target, key, discount, packageid );
 
 		if (discount)
 		{
