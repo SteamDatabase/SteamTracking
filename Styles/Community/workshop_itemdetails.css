@@ -176,8 +176,13 @@
 	height: 32px;
 
 	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_game_highlight_video.png );
-
 }
+
+.workshop_sketchfab_preview {
+	width: 636px;
+	height: 358px;
+}
+
 /*
 .highlight_strip_item.focus {
 	margin: 0px;

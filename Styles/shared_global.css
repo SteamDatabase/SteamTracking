@@ -1475,16 +1475,13 @@ img.dynamiclink_preview {
 	height: 0;
 }
 
-/*
-.dynamiclink_youtubeviewvideoembedded {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 100%;
-	height: auto;
-	width: 580px;
-	height: 353px;
+.dynamiclink_sketchfabmodelembedded {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
-*/
+
 .dynamiclink_youtubeviewvideoembedded iframe {
 	position: absolute;
 	top: 0;
@@ -1498,6 +1495,21 @@ img.dynamiclink_preview {
 	padding-bottom: 4px;
 	color: #bfbfbf;
 }
+
+.dynamiclink_sketchfabmodelembedded {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.dynamiclink_sketchfabmodelembedded iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 
 .adult_content_age_gate {
 	text-align: center;

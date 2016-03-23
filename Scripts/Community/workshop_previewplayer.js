@@ -87,6 +87,7 @@ var HighlightPlayer = Class.create( {
 	m_rgMovieFlashvars: null,
 	m_rgDefaultMovieFlashvars: null,
 	m_rgScreenshotURLs: null,
+	m_rgSketchfabModels: null,
 	m_bVideoOnlyMode: false,
 
 	m_timerInterval: false,
@@ -99,6 +100,7 @@ var HighlightPlayer = Class.create( {
 		this.m_elemStripScroll = $(args.elemStripScroll);
 		this.m_rgMovieFlashvars = args.rgMovieFlashvars || new Array();
 		this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
+		this.m_rgSketchfabModels = args.rgSketchfabModels || new Array();
 		this.m_rgDefaultMovieFlashvars = $H( args.rgDefaultMovieFlashvars || {} );
 		this.m_bVideoOnlyMode = args.bVideoOnlyMode;
 
@@ -164,8 +166,10 @@ var HighlightPlayer = Class.create( {
 	{
 		if ( this.BIsMovie( elem ) )
 			this.HighlightMovie( this.GetMovieId( elem ) );
-		else
+		else if ( this.BIsScreenshot( elem ) )
 			this.HighlightScreenshot( this.GetScreenshotId( elem ) );
+		else if ( this.BIsSketchfabModel( elem ) )
+			this.HighlightSketchfabModel( this.GetSketchfabModelId( elem ) );
 
 		// preload the next screenshot in-order
 		var nextItem = this.m_activeItem.next( '.highlight_player_item' );
@@ -196,6 +200,14 @@ var HighlightPlayer = Class.create( {
 		this.StartTimer();
 	},
 
+	HighlightSketchfabModel: function( id )
+	{
+		this.LoadSketchfabModel( id );
+
+		this.TransitionTo( $('highlight_sketchfab_model_' + id) );
+		this.HighlightStripItem( 'thumb_sketchfab_model_' + id );
+	},
+
 	LoadMovie: function( id )
 	{
 		var strTarget = 'movie_' + id;
@@ -203,7 +215,6 @@ var HighlightPlayer = Class.create( {
 
 		if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
 		{
-
 			player = new YT.Player(strTarget, {
 				height: rgFlashVars['STAGE_HEIGHT'],
 				width: rgFlashVars['STAGE_WIDTH'],
@@ -232,6 +243,19 @@ var HighlightPlayer = Class.create( {
 		}
 	},
 
+	LoadSketchfabModel: function( id )
+	{
+		var target = $( 'highlight_sketchfab_model_' + id );
+		if ( target )
+		{
+			var modelid = this.m_rgSketchfabModels[ id ];
+			var iframe = target.down('iframe');
+			var url = "https://sketchfab.com/models/" + modelid + "/embed"
+			if ( iframe.src != url )
+				iframe.src = url;
+		}
+	},
+
 	TransitionTo: function( elem )
 	{
 		if ( this.m_activeItem )
@@ -248,6 +272,10 @@ var HighlightPlayer = Class.create( {
 
 				this.m_activeItem.hide();
 			}
+			else if ( this.BIsSketchfabModel( this.m_activeItem ) )
+			{
+				this.m_activeItem.hide();
+			}
 			else
 			{
 				//(cross) fade screenshots
@@ -257,6 +285,10 @@ var HighlightPlayer = Class.create( {
 		}
 
 		if ( this.BIsMovie( elem ) )
+		{
+			elem.show();
+		}
+		else if ( this.BIsSketchfabModel( elem ) )
 		{
 			elem.show();
 		}
@@ -325,6 +357,11 @@ var HighlightPlayer = Class.create( {
 		return elem.hasClassName( 'highlight_screenshot' ) || elem.hasClassName( 'highlight_strip_screenshot' );
 	},
 
+	BIsSketchfabModel : function ( elem )
+	{
+		return elem.hasClassName( 'highlight_sketchfab_model' ) || elem.hasClassName( 'highlight_strip_sketchfab_model' );
+	},
+
 	GetMovieId: function( elem )
 	{
 		return elem.id.replace( /(highlight|thumb)_movie_/, '' );
@@ -333,6 +370,11 @@ var HighlightPlayer = Class.create( {
 	GetScreenshotId: function( elem )
 	{
 		return elem.id.replace( /(highlight|thumb)_screenshot_/, '' );
+	},
+
+	GetSketchfabModelId: function( elem )
+	{
+		return elem.id.replace( /(highlight|thumb)_sketchfab_model_/, '' );
 	},
 
 	Transition: function()
@@ -379,7 +421,7 @@ var HighlightPlayer = Class.create( {
 
 	StartCycle: function()
 	{
-		if ( !this.BIsMovie( this.m_activeItem ) )
+		if ( this.BIsScreenshot( this.m_activeItem ) )
     		this.StartTimer();
 	},
 

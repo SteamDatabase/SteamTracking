@@ -507,15 +507,33 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	margin-bottom: 32px;
 }
 
+.pending_gift .item_desc_icon img {
+	max-width: 100%;
+}
+
 .pending_gift_leftcol {
 	float: left;
 	width: 350px;
 	margin-right: 10px;
+	max-width: 48%;
 }
 
 .pending_gift_rightcol {
-	float: left;
-	width: 526px;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 540px)
+{
+	html.responsive .pending_gift_leftcol {
+		float: none;
+		width: auto;
+		margin: 0 auto 10px auto;
+		max-width: 350px;
+	}
+
+	html.responsive .content.gift_controls {
+		margin-top: 10px;
+	}
 }
 
 .pending_gift .content {
@@ -554,7 +572,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .content.gift_controls {
-	width: 434px;
+	max-width: 434px;
 	margin: 70px auto 0px;
 	text-align: center;
 	color: #b4b4b4;

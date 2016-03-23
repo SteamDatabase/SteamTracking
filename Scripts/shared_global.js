@@ -1220,6 +1220,20 @@ function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
 	}
 }
 
+function DynamicLink_ShowSketchfabModelInline( elem, details )
+{
+	var url = "https://sketchfab.com/models/" + details.modelid + "/embed";
+	var el = $J(elem);
+	var wrapper = $J( '<div/>', { 'class' : 'dynamiclink_sketchfabmodelembedded', 'frameborder' : '0' } );
+	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', "mozallowfullscreen" : true, "webkitallowfullscreen" : true, src: url } );
+	if ( el.length )
+	{
+		wrapper.append( iframeContent );
+		el.after( wrapper );
+		el.remove();
+	}
+}
+
 function ReplaceDynamicLink( id, strHTML )
 {
 	var el = $J('#'+id);

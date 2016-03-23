@@ -229,6 +229,9 @@ function OnUnpackGiftResults( gidGift, packageid, packagename, transport )
 			UserYou.ReloadInventory( 753, 1 );
 		}
 
+		if ( $('unpacked_gift_' + gidGift) )
+			ClearGiftWithMessage( gidGift, $('unpacked_gift_' + gidGift) );
+
 		if ( $('gift_unpack_install_modal_installbtn' ) )
 		{
 			if ( packageid == 15479 )
