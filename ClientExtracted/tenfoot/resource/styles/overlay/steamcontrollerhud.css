@@ -414,3 +414,60 @@ SteamControllerHUD
 	border-color: daisy_petal_selection_color;
 	background-color: #00000000;
 }
+
+// Action set indicator styles
+
+#ActionSetFadeMask
+{
+	background-color: #072135bb;
+	
+	width: 500px;
+	height: 200px;
+	
+	x: 710px;
+	y: 800px;
+	
+	opacity-mask: url( "file://{images}/overlay/actionset_fademask.png" );
+	
+	opacity: 0.95;
+	
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#ActionSetFadeMask.FadeOut
+{
+	opacity: 0.0;
+}
+
+#ActionSetLabelsContainer
+{
+	width: fit-children;
+	height: fit-children;
+	
+	y: -20px;
+	
+	horizontal-align: center;
+	
+	flow-children: down;
+	
+	transition-property: position;
+	transition-duration: 0.1s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.ActionSetLabel
+{
+	margin-left: 15px;
+	vertical-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+	
+	color: tclegendlabel;
+	font-size: 38px;
+	font-family: platformfont;
+    text-overflow: ellipsis;
+	
+	horizontal-align: center;
+}

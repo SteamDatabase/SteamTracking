@@ -751,6 +751,14 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	bottom: 0px;
 }
 
+.reported_item_checkbox
+{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 0px;
+	bottom: 0px;
+}
 
 @media screen and (max-width: 910px)
 {

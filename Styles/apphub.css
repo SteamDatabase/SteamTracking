@@ -24,15 +24,6 @@ center
 
 }
 
-.reported_item_checkbox
-{
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	right: 0px;
-	bottom: 0px;
-}
-
 /* header */
 .apphub_HeaderTop
 {

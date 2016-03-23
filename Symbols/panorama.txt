@@ -1169,7 +1169,7 @@
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CCallbackBase
- D typeinfo for CCallbackImpl<8>
+ D typeinfo for CCallbackImpl<16>
  D typeinfo for CCookie
  D typeinfo for CDragStartCallbacks
  D typeinfo for CDynamicFunc<bool (*)()>
@@ -1848,7 +1848,7 @@
  D vtable for CCDDBAppDetailCommon
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
- D vtable for CCallbackImpl<8>
+ D vtable for CCallbackImpl<16>
  D vtable for CCookie
  D vtable for CDragStartCallbacks
  D vtable for CDynamicFunc<bool (*)()>
@@ -2473,7 +2473,7 @@
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CCallbackBase
- R typeinfo name for CCallbackImpl<8>
+ R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCookie
  R typeinfo name for CDirWatcher
  R typeinfo name for CDragStartCallbacks
@@ -3616,15 +3616,14 @@
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
- T CCallbackImpl<8>::GetCallbackSizeBytes()
- T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<8>::~CCallbackImpl()
+ T CCallbackImpl<16>::GetCallbackSizeBytes()
+ T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<16>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
- T CCallbackMgr::PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -8636,7 +8635,6 @@
  T CWorkThreadPool::Validate(CValidator&, char const*)
  T CalculateIndividualSelectorSpecificity(panorama::CStyleSelector const&)
  T CalculateSelectorSpecificity(panorama::StyleFromFile_t const*)
- T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
@@ -8648,7 +8646,6 @@
  T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
  T CheckEqualsHelper(char const*, int, char const*, int, char const*, int)
  T ClientAPI_Init()
- T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAPI_Validate(CValidator&)
@@ -14379,7 +14376,6 @@
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::end()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::~__deque_base()
- T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()

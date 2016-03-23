@@ -793,9 +793,9 @@
  D typeinfo for CCallback<CModList, AppInfoChanged_t, false>
  D typeinfo for CCallbackBase
  D typeinfo for CCallbackImpl<12>
+ D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<28>
  D typeinfo for CCallbackImpl<4>
- D typeinfo for CCallbackImpl<8>
  D typeinfo for CColorProperty
  D typeinfo for CCookie
  D typeinfo for CDLLValidate
@@ -1600,9 +1600,9 @@
  D vtable for CCallback<CDialogGameInfo, PersonaStateChange_t, false>
  D vtable for CCallback<CModList, AppInfoChanged_t, false>
  D vtable for CCallbackImpl<12>
+ D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<28>
  D vtable for CCallbackImpl<4>
- D vtable for CCallbackImpl<8>
  D vtable for CColorProperty
  D vtable for CCookie
  D vtable for CDLLValidate
@@ -1896,9 +1896,9 @@
  R typeinfo name for CCallback<CModList, AppInfoChanged_t, false>
  R typeinfo name for CCallbackBase
  R typeinfo name for CCallbackImpl<12>
+ R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<28>
  R typeinfo name for CCallbackImpl<4>
- R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CColorProperty
  R typeinfo name for CCookie
  R typeinfo name for CDLLValidate
@@ -2401,21 +2401,20 @@
  T CCallbackImpl<12>::GetCallbackSizeBytes()
  T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<12>::~CCallbackImpl()
+ T CCallbackImpl<16>::GetCallbackSizeBytes()
+ T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<16>::~CCallbackImpl()
  T CCallbackImpl<28>::GetCallbackSizeBytes()
  T CCallbackImpl<28>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<28>::~CCallbackImpl()
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
- T CCallbackImpl<8>::GetCallbackSizeBytes()
- T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<8>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
- T CCallbackMgr::PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -4803,7 +4802,6 @@
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
- T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
  T CallbackMgr_RunCallbacks(int, bool)
@@ -4811,7 +4809,6 @@
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T ClientAPI_Init()
- T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAPI_Validate(CValidator&)
@@ -5119,7 +5116,6 @@
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
- T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()
@@ -8587,8 +8583,6 @@
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
  r .memset_pattern
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_

@@ -5277,7 +5277,6 @@
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
- T CCallbackMgr::PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -9295,7 +9294,6 @@
  T CVolumeSlider::~CVolumeSlider()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
- T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
@@ -9306,7 +9304,6 @@
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T ChatIDFromClanID(CSteamID const&)
  T ClientAPI_Init()
- T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientApps()
@@ -10734,7 +10731,6 @@
  T sk_unshift
  T sk_value
  T sk_zero
- T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()
@@ -14882,8 +14878,6 @@
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
  pthread_self
  qsort
  r .memset_pattern

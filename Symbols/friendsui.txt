@@ -4873,7 +4873,6 @@
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
- T CCallbackMgr::PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -8719,7 +8718,6 @@
  T CVoiceTraffic::OnTick()
  T CVoiceTraffic::Paint()
  T CVoiceTraffic::~CVoiceTraffic()
- T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
@@ -8734,7 +8732,6 @@
  T ClanIDFromChatID(CSteamID const&)
  T ClanIDFromSteamID(CSteamID const&)
  T ClientAPI_Init()
- T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAPI_Validate(CValidator&)
@@ -10423,7 +10420,6 @@
  T sk_zero
  T std::__1::__deque_base<unsigned int, std::__1::allocator<unsigned int> >::clear()
  T std::__1::__deque_base<unsigned long long, std::__1::allocator<unsigned long long> >::clear()
- T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
  T std::__1::__split_buffer<CryptoPP::WindowSlider, std::__1::allocator<CryptoPP::WindowSlider>&>::~__split_buffer()
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
@@ -14524,8 +14520,6 @@
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
  qsort
  r .memset_pattern
  r .memset_pattern1
