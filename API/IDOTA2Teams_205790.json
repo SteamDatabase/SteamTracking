@@ -1,0 +1,24 @@
+{
+    "name": "IDOTA2Teams_205790",
+    "methods": [
+        {
+            "name": "GetTeamInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "team_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Team ID that you're requesting info about"
+                },
+                {
+                    "name": "league_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "League ID for which you're requesting all regisered teams info"
+                }
+            ]
+        }
+    ]
+}

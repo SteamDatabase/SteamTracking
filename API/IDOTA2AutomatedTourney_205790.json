@@ -1,0 +1,11 @@
+{
+    "name": "IDOTA2AutomatedTourney_205790",
+    "methods": [
+        {
+            "name": "GetActiveTournamentList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}
