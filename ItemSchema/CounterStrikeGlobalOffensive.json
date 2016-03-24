@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.73e85c3adeffd07573a5260fb565ebe9fd3c3df5.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ae09d92cbdeb249295de73b73b551fa6e93d8a37.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -13654,8 +13654,8 @@
 				"image_inventory": "econ/stickers/columbus2016/fntc",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc.c8783066f24ae6aced9fea7233f83044e94a3830.png",
-				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc_large.d41daa0cc6420292b8c4ff4e9cc8cad2a909c591.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc.e3d5f4b8d6d98344d769ebc0d7790e928db7d5ed.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/columbus2016/fntc_large.e0c25fd0d0c4f0c1935e7a6aa792db3da6637af2.png",
 				"capabilities": {
 					"decodable": true
 				},
@@ -14569,7 +14569,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_dust2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_dust2.2fea28b012011637caa7cd7ac4f37df3567e6106.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_dust2.cf28c5c9360806999509a6adce1c02bf30421bf8.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14605,7 +14605,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_mirage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_mirage.bd8f54e70095c90c18ccfe3561ae247e09394607.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_mirage.bbb2b84e6d14d9d7634475dad482ada35977eaa3.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14641,7 +14641,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_inferno",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_inferno.d824bb6e7b2b4be8531852461c5389ae781e935d.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_inferno.bc1ef2fd8a91d14c6c2e7e2a444e2c05feb4956e.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14677,7 +14677,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_cbble",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cbble.2ba8ce1ebc239cb85198c5c821ac40713426e195.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cbble.3cf5fe89e7edaca0acf314b67cdd18c29ac785d5.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14713,7 +14713,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_overpass",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_overpass.38922d46515c990eb33d52ba20a92dd340cbe3c3.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_overpass.6ca6faaa7e9bd88599ac9fd566624b82a49253dc.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14749,7 +14749,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_cache",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cache.a69ce7a3846d51b92e87a80b7c51f8ea975b56d4.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_cache.f0f2c5b00fca82486aa0dccf8b3c2200db618289.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14785,7 +14785,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_train",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_train.fa2a82c7f5c06ba25515b4fa40616bed304914cb.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_train.8e6d7a5c7031a0f374d5671ef2c3430521443813.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -14821,7 +14821,7 @@
 				"image_inventory": "econ/weapon_cases/crate_columbus2016_promo_de_nuke",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_nuke.8d596a4b152b17becfd5a9a5a5c085b9057b39e5.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_columbus2016_promo_de_nuke.7a231ae8e8be1de61cc92ee5d6ce6d7cd9e3e9c6.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true

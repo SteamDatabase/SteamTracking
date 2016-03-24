@@ -19293,6 +19293,16 @@
 					"value"		"80"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_9"
+					"tag_text"		"#CSGO_set_community_9"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 			"loot_list_rare_item_footer"		"#crate_community_9_unusual_lootlist"
 			"loot_list_rare_item_name"		"#crate_community_9_unusual_itemname"
 			"image_unusual_item"		"econ/weapon_cases/crate_community_9_rare_item"
@@ -33825,6 +33835,22 @@
 			"description_string"		"#StickerKit_desc_team_roles_support_foil"
 			"sticker_material"		"team_roles_capsule/support_foil"
 			"item_rarity"		"legendary"
+		}
+		"1315"
+		{
+			"name"		"allstars_a_holo"
+			"item_name"		"#StickerKit_allstars_a_holo"
+			"description_string"		"#StickerKit_desc_allstars_a_holo"
+			"sticker_material"		"tournament_assets/allstars_a_holo"
+			"item_rarity"		"mythical"
+		}
+		"1316"
+		{
+			"name"		"allstars_b_holo"
+			"item_name"		"#StickerKit_allstars_b_holo"
+			"description_string"		"#StickerKit_desc_allstars_b_holo"
+			"sticker_material"		"tournament_assets/allstars_b_holo"
+			"item_rarity"		"mythical"
 		}
 	}
 	"paint_kits"
@@ -52289,6 +52315,7 @@
 			"difficulty"		"1"
 			"xp_bonus_percent"		"50"
 			"loc_name"		"op07_quest_name_702"
+			"quest_icon"		"deathmatch"
 			"loc_bonus"		"#quest_bonus_weapon_elite"
 		}
 		"703"
@@ -52312,7 +52339,7 @@
 			"gamemode"		"deathmatch"
 			"mapgroup"		"mg_op_op07"
 			"map"		"de_mikla"
-			"points"		"10"
+			"points"		"20"
 			"expression"		"%act_kill_chicken%"
 			"expr_bonus"		"%act_kill_chicken% && ( %cond_life_killstreak_chicken% >= 2 )"
 			"difficulty"		"1"
@@ -52336,6 +52363,7 @@
 			"expr_bonus"		"%act_kill_human% && !%cond_player_zoomed%"
 			"difficulty"		"2"
 			"loc_name"		"op07_quest_name_705"
+			"quest_icon"		"awp"
 			"loc_bonus"		"#quest_bonus_not_zoomed"
 		}
 		"706"
@@ -52348,6 +52376,7 @@
 			"expression"		"%act_kill_human%"
 			"difficulty"		"1"
 			"loc_name"		"op07_quest_name_706"
+			"quest_icon"		"gungameprogressive"
 		}
 		"707"
 		{
@@ -52361,6 +52390,7 @@
 			"difficulty"		"1"
 			"xp_bonus_percent"		"50"
 			"loc_name"		"op07_quest_name_707"
+			"quest_icon"		"gungameprogressive"
 			"loc_bonus"		"#quest_bonus_headshot"
 		}
 		"708"
@@ -52373,6 +52403,7 @@
 			"expression"		"%act_win_match%"
 			"difficulty"		"3"
 			"loc_name"		"op07_quest_name_708"
+			"quest_icon"		"gungameprogressive"
 		}
 		"709"
 		{
@@ -52387,18 +52418,21 @@
 			"xp_bonus_percent"		"50"
 			"operational_points"		"1"
 			"loc_name"		"op07_quest_name_709"
+			"quest_icon"		"ak47"
 			"loc_bonus"		"#quest_bonus_killstreak_3"
 		}
 		"710"
 		{
 			"name"		"placeholder_710"
 			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op07"
 			"map"		"de_empire"
 			"points"		"20"
 			"expression"		"%act_kill_human% && %weapon_p250%"
 			"expr_bonus"		"%act_kill_human% && %weapon_p250% && %set_kimono%"
 			"difficulty"		"2"
 			"loc_name"		"op07_quest_name_710"
+			"quest_icon"		"p250"
 			"loc_bonus"		"#quest_bonus_set_kimono"
 		}
 		"711"
@@ -52412,6 +52446,7 @@
 			"expr_bonus"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% ) && %cond_player_zoomed%"
 			"difficulty"		"2"
 			"loc_name"		"op07_quest_name_711"
+			"quest_icon"		"aug"
 			"loc_bonus"		"#quest_bonus_zoomed"
 		}
 		"712"
@@ -52424,6 +52459,7 @@
 			"expr_bonus"		"%act_kill_human% && %weapon_ssg08% && %cond_damage_headshot%"
 			"difficulty"		"2"
 			"loc_name"		"op07_quest_name_712"
+			"quest_icon"		"ssg08"
 			"loc_bonus"		"#quest_bonus_headshot"
 		}
 		"713"
@@ -52438,6 +52474,7 @@
 			"difficulty"		"2"
 			"operational_points"		"1"
 			"loc_name"		"op07_quest_name_713"
+			"quest_icon"		"famas"
 			"loc_bonus"		"#quest_bonus_set_community_11"
 		}
 		"714"
@@ -52451,6 +52488,7 @@
 			"expr_bonus"		"%act_kill_human% && ( %weapon_aug% || %weapon_sg556% ) && !%cond_player_zoomed%"
 			"difficulty"		"3"
 			"loc_name"		"op07_quest_name_714"
+			"quest_icon"		"aug"
 			"loc_bonus"		"#quest_bonus_not_zoomed"
 		}
 		"715"
@@ -52463,6 +52501,7 @@
 			"expr_bonus"		"%act_kill_human% && %weapon_ssg08% && %cond_damage_headshot%"
 			"difficulty"		"3"
 			"loc_name"		"op07_quest_name_715"
+			"quest_icon"		"ssg08"
 			"loc_bonus"		"#quest_bonus_headshot"
 		}
 		"716"
@@ -52477,6 +52516,7 @@
 			"difficulty"		"3"
 			"operational_points"		"2"
 			"loc_name"		"op07_quest_name_716"
+			"quest_icon"		"famas"
 			"loc_bonus"		"#quest_bonus_borrowed_gun_enemy"
 		}
 		"717"
@@ -52489,6 +52529,7 @@
 			"expression"		"%act_kill_human%"
 			"difficulty"		"1"
 			"loc_name"		"op07_quest_name_717"
+			"quest_icon"		"bomb"
 		}
 		"718"
 		{
@@ -52500,6 +52541,7 @@
 			"expression"		"%act_kill_human%"
 			"difficulty"		"2"
 			"loc_name"		"op07_quest_name_718"
+			"quest_icon"		"gungametrbomb"
 		}
 		"719"
 		{
@@ -52629,7 +52671,7 @@
 			"difficulty"		"3"
 			"operational_points"		"2"
 			"loc_name"		"op07_quest_name_728"
-			"quest_icon"		"bomb"
+			"quest_icon"		"headshot"
 			"loc_bonus"		"#quest_bonus_set_community_11"
 			"string_tokens"
 			{
@@ -55291,10 +55333,6 @@
 		"28 14:05 120"		"comp cache"
 		"29 15:05 120"		"comp overpass"
 		"30 16:05 120"		"comp dust2"
-		"01 13:05 120"		"comp cbble"
-		"02 14:05 120"		"comp coast"
-		"03 15:05 120"		"comp empire"
-		"04 16:05 120"		"comp mikla"
 		"05 13:05 120"		"comp royal"
 		"06 14:05 120"		"comp santorini"
 		"07 15:05 120"		"comp tulip"
