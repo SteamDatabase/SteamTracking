@@ -9739,6 +9739,7 @@
 					"Smokey Sombrero"					"10"
 					"Thrilling Tracksuit"				"10"
 					"Prehistoric Pullover"				"10"
+					"The Hellmet"						"10"
 					"B'aaarrgh-n-Britches"				"10"
 				}
 				"mythical"
@@ -39637,21 +39638,61 @@
 			"equip_region" "beard"
 			"item_quality"	"unique"
 			"propername" "1"
-			"image_inventory"	"backpack/player/items/all_class/xms_heavy_beard"
+			"image_inventory"		"backpack/workshop/player/items/all_class/xms_beard/xms_beard"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"soldier"	"models/player/items/all_class/xms_soldier_beard.mdl"
-				"heavy"		"models/player/items/all_class/xms_heavy_beard.mdl"
-			}
 			"min_ilevel"	"15"
 			"max_ilevel"	"15"
 			"drop_type"	"none"
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/xms_beard/xms_beard_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/xms_beard/xms_beard_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/xms_beard/xms_beard_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/xms_beard/xms_beard_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/xms_beard/xms_beard_heavy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/xms_beard/xms_beard_engineer.mdl"
+			}
 			"used_by_classes"
 			{
-				"soldier"	"1"
-				"heavy"	"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/xms_beard/xms_beard_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xms_beard/xms_beard_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xms_beard/xms_beard_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xms_beard/xms_beard_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xms_beard/xms_beard_heavy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xms_beard/xms_beard_engineer.mdl"
+						}
+						"name"	"#TF_AllFather_Style1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"sniper"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_heavy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/xms_beard_s2/xms_beard_s2_engineer.mdl"
+						}
+						"name"	"#TF_AllFather_Style2"
+					}
+				}
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_pickup.wav"
@@ -44383,12 +44424,32 @@
 			"item_type_name"	"#TF_Wearable_Hat"
 			"item_name"	"#TF_HeavyMustacheHat"
 			"item_description"	"#TF_HeavyMustacheHat_Desc"
-			"image_inventory"	"backpack/player/items/heavy/heavy_mustachehat"
-			"model_player"	"models/player/items/heavy/heavy_mustachehat.mdl"
+			"image_inventory"	"backpack/workshop/player/items/heavy/mustachehat/mustachehat"
+			"model_player"	"models/workshop/player/items/heavy/mustachehat/mustachehat.mdl"
 			"propername"	"1"
 			"used_by_classes"
 			{
 				"heavy"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"	"models/workshop/player/items/heavy/mustachehat/mustachehat.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_HeavyMustacheHat_Style1"
+					}
+					"1"
+					{
+						"model_player"	"models/workshop/player/items/heavy/mustachehat_s2/mustachehat_s2.mdl"
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_HeavyMustacheHat_Style2"
+					}
+				}
 			}
 		}
 		"823"
@@ -49317,8 +49378,8 @@
 			"item_name"	"#TF_HeavysHockeyHair"
 			"item_description"	"#TF_HeavysHockeyHair_Desc"
 			"item_type_name"	"#TF_Wearable_Hair"
-			"image_inventory"	"backpack/player/items/heavy/heavy_skullet"
-			"model_player"	"models/player/items/heavy/heavy_skullet.mdl"
+			"image_inventory"	"backpack/workshop/player/items/heavy/skullet/skullet"
+			"model_player"	"models/workshop/player/items/heavy/skullet/skullet.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -66971,7 +67032,7 @@
 			"item_description"		"#TF_short2014_all_mercs_mask_Desc"
 			"item_type_name"		"#TF_Wearable_Bandana"
 			"equip_region"		"beard"
-			"valid_for_shuffle"	"0"
+			"valid_for_shuffle"		"1"
 			"image_inventory"		"backpack/workshop/player/items/all_class/short2014_all_mercs_mask/short2014_all_mercs_mask"
 			"capabilities"
 			{
@@ -73338,7 +73399,6 @@
 			"item_description"		"#TF_hwn2015_hellmet_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
-			"item_rarity"	"rare"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -74073,15 +74133,21 @@
 					"grenades"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/soldier/dec15_gift_bringer/dec15_gift_bringer"
+			"image_inventory"		"backpack/workshop/player/items/all_class/dec15_gift_bringer/dec15_gift_bringer"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
+				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/soldier/dec15_gift_bringer/dec15_gift_bringer.mdl"
+			"model_player_per_class"
+			{
+				"soldier"		"models/workshop/player/items/all_class/dec15_gift_bringer/dec15_gift_bringer_soldier.mdl"
+				"heavy"		"models/workshop/player/items/all_class/dec15_gift_bringer/dec15_gift_bringer_heavy.mdl"
+			}
 			"used_by_classes"
 			{
 				"soldier"		"1"
+				"heavy"		"1"
 			}
 		}
 		"30748"
@@ -97889,7 +97955,7 @@
 				"decoded by itemdefindex"
 				{
 					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5844"
+					"value" "5710"
 				}
 			}
 		}
@@ -97918,7 +97984,7 @@
 
 		"5710"
 		{
-			"name"	"Fall 2013 Acorns Key"	
+			"name"	"Fall 2013 Acorns Key" 
 			"prefab" "eventkey"
 			"first_sale_date"	"2013/10/10"
 			"tool"
@@ -98086,13 +98152,13 @@
 				"decoded by itemdefindex"
 				{
 					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5845"	
+					"value" "5720"	
 				}
 			}
 		}
 		"5720"
 		{
-			"name"	"Strongbox Key 2014"	
+			"name"	"Strongbox Key 2014" 
 			"prefab" "eventkey"
 			"first_sale_date"	"2014/02/07"
 			"tool"
@@ -98336,7 +98402,7 @@
 				"random drop line item unusual chance"		"215"
 				"random drop line item unusual list"		"particle_attribute_hats_series_3"
 				"random drop line item footer desc"			"#Econ_Revolving_Loot_List_Rare_Series_3"
-				"decoded by itemdefindex"					"5846"
+				"decoded by itemdefindex"					"5740"
 				"can shuffle crate contents"				"1"
 			}
 		}
@@ -98363,7 +98429,7 @@
 				"random drop line item unusual chance"		"215"
 				"random drop line item unusual list"		"particle_attribute_hats_series_3"
 				"random drop line item footer desc"			"#Econ_Revolving_Loot_List_Rare_Series_3"
-				"decoded by itemdefindex"					"5846"
+				"decoded by itemdefindex"					"5740"
 				"can shuffle crate contents"				"1"
 			}
 		}
@@ -98387,7 +98453,7 @@
 
 		"5740"
 		{
-			"name"	"Short 2014 Key"	
+			"name"	"Short 2014 Key" 
 			"prefab" "eventkey"
 			"first_sale_date"	"2014/06/19"
 			"tool"
@@ -100026,7 +100092,7 @@
 		
 		"5827"
 		{
-			"name"	"Halloween 2015 Key"	
+			"name"	"Halloween 2015 Key" 
 			"first_sale_date"	"2015/10/28"
 			"prefab" 			"eventkey"
 			"item_name"			"#halloween2015_collection_key"					
@@ -100062,7 +100128,7 @@
 			{
 				"set supply crate series"		"98"		
 				"hide crate series number"		"1"
-				"decoded by itemdefindex"		"5847"
+				"decoded by itemdefindex"		"5827"
 				"weapon_allow_inspect"			"1"
 			}
 			"event_desc_footer"			"#halloween2015_collection_case_footer"			
@@ -100444,7 +100510,7 @@
 			"drop_sound"			"ui/item_metal_tiny_drop.wav"
 		}
 
-		"5844"
+		"5844"		
 		{
 			"name"	"Fall 2013 Acorns Key New" 
 			"prefab" "eventkey"
@@ -100458,7 +100524,7 @@
 			"image_inventory"	"backpack/crafting/fall_acorn_key"
 		}
 
-		"5845"
+		"5845"		
 		{
 			"name"	"Strongbox Key 2014 New" 
 			"prefab" "eventkey"
@@ -100472,7 +100538,7 @@
 			"image_inventory"	"backpack/crafting/strongbox_crate_key"
 		}
 
-		"5846"
+		"5846"		
 		{
 			"name"	"Short 2014 Key New" 
 			"prefab" "eventkey"
@@ -100486,7 +100552,7 @@
 			"image_inventory"	"backpack/crafting/summer2014_key"
 		}
 
-		"5847"
+		"5847"		
 		{
 			"name"	"Halloween 2015 Key New" 
 			"first_sale_date"	"2015/10/28"
@@ -107065,7 +107131,7 @@
 				"The Rugged Respirator"	"1"
 				"The Squid's Lid"	"1"
 				"The Hollowhead"	"1"
-				"Grub Grenades"	"1"	
+				"Grub Grenades"	"1"
 				"The Gothic Guise"	"1"
 				"The Grease Monkey"	"1"
 				"The Alternative Medicine Mann"	"1"
@@ -107324,7 +107390,7 @@
 		}
 		"2131"
 		{
-			"name" "Love & War Cosmetics Bundle"	
+			"name" "Love & War Cosmetics Bundle"
 			"prefab"	"default_bundle_payment"
 			"first_sale_date"	"2014/06/18"
 			"item_class"	"bundle"
@@ -107566,7 +107632,7 @@
 				"Supernatural Stalker"              "1"
 				"Garden Bristles"                   "1"
 				"Battle Bird"                       "1"
-				"Creature's Grin"                   "1"	
+				"Creature's Grin"                   "1"
 				"Arsonist Apparatus"                "1"
 				"Moccasin Machinery"                "1"
 				"Lollichop Licker"                  "1"
@@ -108021,7 +108087,7 @@
 		}
 		"2145"
 		{
-			"name" "Love & War Cosmetics Bundle New"
+			"name" "Love & War Cosmetics Bundle New"		
 			"prefab"	"default_bundle_payment"
 			"first_sale_date"	"2014/06/18"
 			"item_class"	"bundle"
@@ -118132,7 +118198,7 @@
 			"The Viking Braider"		"1"
 			"The Flapjack"		"1"
 			"The Gold Digger"		"1"
-"Pop-eyes"		"1"
+			"Pop-eyes"		"1"
 			"Weight Room Warmer"		"1"
 			"The Special Eyes"		"1"
 			"The Chronomancer"		"1"
@@ -118349,7 +118415,7 @@
 		}
 		"halloween_loot_list_2014_pyro_community_cosmetics"
 		{
-"Creature's Grin"		"1"
+			"Creature's Grin"		"1"
 			"Arsonist Apparatus"		"1"
 			"Moccasin Machinery"		"1"
 			"Lollichop Licker"		"1"
