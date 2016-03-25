@@ -1356,6 +1356,7 @@ a.pagelink:hover {
 
 /* dynamic links */
 .dynamiclink_box {
+	position: relative;
 	font-family: Helvetica, Arial, sans-serif;
 	border: 1px solid rgba( 84, 133, 183, 1);
 	background-color: rgba( 84, 133, 183, 0.6);
@@ -1508,6 +1509,16 @@ img.dynamiclink_preview {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+img.dynamiclink_sketchfab_play_overlay_image
+{
+	position: absolute;
+	left: 83px;
+	margin-left: -25px;
+	top: 50%;
+	margin-top: -25px;
+	width: 50px;
+	height: 50px;
 }
 
 
