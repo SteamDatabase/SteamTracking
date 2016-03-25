@@ -948,3 +948,6 @@ a.tab, .tab a {
 	cursor: pointer;
 }
 
+.newlines {
+	white-space: pre-wrap;
+}
