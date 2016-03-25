@@ -4134,11 +4134,12 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_StreamLaunch_AccessDenied"	"Authentication problem."
 "SteamUI_StreamLaunch_Unsupported"	"This game currently doesn't support streaming."
 "SteamUI_StreamLaunch_ScreenLocked"	"The screen is locked on the remote computer."
+"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
+"SteamUI_StreamLaunch_VRActive"	"The remote computer is currently in VR mode so it cannot start an In-Home Streaming session."
 "SteamUI_StreamLaunch_OtherGameRunning"	"There is another game already running on the remote computer."
 "SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 "SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
 "SteamUI_StreamLaunch_Failed"		"Unable to launch stream."
-"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
 "SteamUI_StreamLaunch_InstallDrivers"	"Streaming requires additional driver installation.\n\nPlease follow the Steam prompts on the remote computer."
 "SteamUI_StreamLaunch_StillDownloading" "Update is in progress on %ClientName%.  %game% will be ready to stream when the download completes."
 

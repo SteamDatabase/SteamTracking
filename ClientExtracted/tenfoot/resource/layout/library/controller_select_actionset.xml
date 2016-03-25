@@ -13,6 +13,12 @@
 				<Panel id="SelectPresetDropDownPanel" class="SelectPresetDropDownContainer">
 					<DropDown id="SelectPresetDropDown" />
 				</Panel>
+				<Panel id="" class="HorizontalSpace" />
+				<Panel id="" class="HorizontalSpace" />
+				<ToggleButton class="CheckBox" id="EnableDisplay" text="#Library_Details_EnableActionSetDisplay" selectionpos="auto" onactivate="ToggleEnableDisplay()"/>
+				<Panel id="" class="HorizontalSpace" />
+				<ToggleButton class="CheckBox" id="EnableBeep" text="#Library_Details_EnableActionSetBeep" selectionpos="auto" onactivate="ToggleEnableBeep()"/>
+				<Panel id="" class="HorizontalSpace" />
 
             <Panel id="MsgBoxButtons">
                 <Button class="Button" onactivate="SelectActionSet();">

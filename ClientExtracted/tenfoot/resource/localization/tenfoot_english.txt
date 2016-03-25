@@ -2143,6 +2143,8 @@
 	"Library_AppControllerSettings_Title"	"Controller Application Options"
 	"Library_Details_EnableRumble"			"[Experimental] Rumble Emulation"
 	"Library_SetAppRumbleFrequency_Label"	"Rumble Emulation Frequency Setting"
+	"Library_Details_EnableActionSetDisplay"	"Display Action Set on Change"
+	"Library_Details_EnableActionSetBeep"		"Beep on Change"
 
 	"Library_Controller_Property_Value_Rumble_Frequency_ExtraLow"	"Extra Low"
 	"Library_Controller_Property_Value_Rumble_Frequency_Low"		"Low"
@@ -3713,11 +3715,12 @@
 	"SteamUI_StreamLaunch_AccessDenied"	"Authentication problem."
 	"SteamUI_StreamLaunch_Unsupported"	"This game currently doesn't support streaming."
 	"SteamUI_StreamLaunch_ScreenLocked"	"The screen is locked on the remote computer."
+	"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
+	"SteamUI_StreamLaunch_VRActive"	"The remote computer is currently in VR mode so it cannot start an In-Home Streaming session."
 	"SteamUI_StreamLaunch_OtherGameRunning"	"There is another game already running on the remote computer."
 	"SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 	"SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
 	"SteamUI_StreamLaunch_Failed"		"Unable to launch stream."
-	"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Streaming requires additional driver installation.\n\nPlease follow the Steam prompts on the remote computer."
 
 	"Steam_InstallAudioCaptureDriver_Title"	"Audio Driver Update"

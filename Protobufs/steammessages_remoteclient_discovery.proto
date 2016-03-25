@@ -42,6 +42,8 @@ enum ERemoteDeviceStreamingResult {
 	k_ERemoteDeviceStreamingCanceled = 6;
 	k_ERemoteDeviceStreamingDriversNotInstalled = 7;
 	k_ERemoteDeviceStreamingDisabled = 8;
+	k_ERemoteDeviceStreamingBroadcastingActive = 9;
+	k_ERemoteDeviceStreamingVRActive = 10;
 }
 
 message CMsgRemoteClientBroadcastHeader {
@@ -70,6 +72,8 @@ message CMsgRemoteClientBroadcastStatus {
 	optional bool games_running = 14;
 	repeated string mac_addresses = 15;
 	optional uint32 download_lan_peer_group = 16;
+	optional bool broadcasting_active = 17;
+	optional bool vr_active = 18;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {
