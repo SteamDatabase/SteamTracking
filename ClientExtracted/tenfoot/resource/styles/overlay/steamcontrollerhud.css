@@ -455,6 +455,8 @@ SteamControllerHUD
 	transition-property: position;
 	transition-duration: 0.1s;
 	transition-timing-function: bigpicture-ease-in-out;
+	
+	overflow: noclip;
 }
 
 .ActionSetLabel
