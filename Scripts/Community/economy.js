@@ -2909,7 +2909,7 @@ function PopulateMarketActions( elActions, item )
 						var strInfo = '';
 						if ( transport.responseJSON.lowest_price )
 						{
-							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
+							strInfo += 'En düşük fiyat: ' + transport.responseJSON.lowest_price + '<br>'
 						}
 						else
 						{
