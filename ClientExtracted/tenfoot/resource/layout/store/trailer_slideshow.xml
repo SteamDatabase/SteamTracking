@@ -4,12 +4,12 @@
 		<include src="file://{resources}/styles/store/store.css" />
 	</styles>
 	
-	<StoreApp class="Stackable" hittest="false" oncancel="StoreRemoveFromStack();">
+	<Panel class="Stackable" hittest="false" oncancel="StoreRemoveFromStack();">
 		<Panel id="Loading">
 			<Label id="LoadingStatus" />
 		</Panel>
 		<Panel id="Loaded">
 			<StoreSlideshow id="Slideshow" />
 		</Panel>
-	</StoreApp>	
+	</Panel>	
 </root>
