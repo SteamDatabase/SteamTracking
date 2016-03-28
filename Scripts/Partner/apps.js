@@ -1154,14 +1154,14 @@ function EditAchievement( appid, achievement )
 		// insert some descriptive text and a select
 		nameCell.appendChild( document.createElement( 'br' ) );
 		textSpan = document.createElement( "span" );
-		textSpan.innerHTML = "Progress Stat" + ' ';
+		textSpan.innerHTML = "AppAdmin_Achievements_New_ProgressStat" + ' ';
 		nameCell.appendChild( textSpan );
 		
 		var progressSelect = document.createElement( "select" );
 		progressSelect.onchange = DirtyRowClosure( row );
 		progressSelect.id = id + "_progress";
 		var noProgressOption = document.createElement( "option" );
-		noProgressOption.text = "["+"Loading"+"]";
+		noProgressOption.text = "["+"AppAdmin_Achievements_New_Loading"+"]";
 		noProgressOption.value = "-1";
 		AddOptionToSelect( progressSelect, noProgressOption );
 		progressSelect.selectedIndex = 0;
@@ -1177,11 +1177,11 @@ function EditAchievement( appid, achievement )
 		
 		var theInput;
 		nameCell.insert( new Element( 'br' ) );
-		nameCell.insert( { 'bottom' : "Min value:" + ' ' } );
+		nameCell.insert( { 'bottom' : "AppAdmin_Achievements_New_MinValue" + ' ' } );
 		theInput = new Element( 'input', { 'size' : '10', 'value' : minVal, 'id' : id + '_minval' } );
 		theInput.onchange = DirtyRowClosure( row );
 		nameCell.insert( theInput );
-		nameCell.insert( { 'bottom' : "Max:"+' ' } );
+		nameCell.insert( { 'bottom' : "AppAdmin_Achievements_New_MaxValue"+' ' } );
 		theInput = new Element( 'input', { 'size' : '10', 'value' : maxVal, 'id' : id + '_maxval' } );
 		nameCell.insert( theInput );
 
@@ -1471,12 +1471,12 @@ function SetAchievementsDiv( appid, achievements )
 		elt = new Element( 'div', { 'style': 'float: left; width: 5em' } );
 		switch ( achievement[ "permission" ] )
 		{
-		case "1": elt.update( "GS" ); break;
-		case "2": elt.update( "Official GS" ); break;
+		case "1": elt.update( "AppAdmin_Achievements_New_Option_GameServer" ); break;
+		case "2": elt.update( "AppAdmin_Achievements_New_Option_Official" ); break;
 
 		case "0": 
 		default: 
-			elt.update( "Client" );
+			elt.update( "AppAdmin_Achievements_New_Option_Client" );
 		}
 		eltRow.insert( elt );
 		
@@ -1598,12 +1598,12 @@ function SetStat( appid, destRow, stat )
 
 	switch ( stat[ "permission" ] )
 	{
-	case "1": addCell( row, "GS" ); break;
-	case "2": addCell( row, "Official GS" ); break;
+	case "1": addCell( row, "AppAdmin_Achievements_New_Option_GameServer" ); break;
+	case "2": addCell( row, "AppAdmin_Achievements_New_Option_Official" ); break;
 
 	case "0": 
 	default: 
-		addCell( row, "Client" ); break;
+		addCell( row, "AppAdmin_Achievements_New_Option_Client" ); break;
 	}
 
 	var incrementVal = "";
@@ -3375,7 +3375,7 @@ function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartner
 
 function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
 {
-	var progressDialog = ShowProgressDialog( "Create New App", "Creating New App" );
+	var progressDialog = ShowProgressDialog( "Steamworks_CreateApp_Msg_Create_Title", "Steamworks_CreateApp_Msg_Create_Creating" );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
@@ -3398,7 +3398,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			if ( response.success == 1 )
 			{
 				var divDone = $J('<div/>', { 'style' : 'font-weight: bold; color: white;' } );
-				divDone.append( "Done creating new app!" );
+				divDone.append( "Steamworks_CreateApp_Msg_DoneCreatingApp" );
 				$J( "#WaitingContainer" ).html( divDone );
 
 				if ( response.messages )
@@ -3410,7 +3410,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 				}
 				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
 
-				progressMessages.append( '<div class="add_dlc_msg parent">Done!</div>' );
+				progressMessages.append( '<div class="add_dlc_msg parent">Steamworks_CreateApp_Msg_Done</div>' );
 				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
 				return;
 			}
@@ -3434,7 +3434,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 	).fail(
 		function( jqxhr ) {
 			progressDialog.Dismiss();
-			ShowAlertDialog( "Failed to create new app", jqxhr.responseText );
+			ShowAlertDialog( "Steamworks_CreateApp_Msg_FailedToCreate", jqxhr.responseText );
 		}
 	);
 }
@@ -3479,7 +3479,7 @@ function UpgradeGreenlightItem( item )
 
 	prompt.done( function( appName ) {
 		var appType = appTypeElem.val();
-		var waitingDialog = ShowBlockingWaitDialog( 'Converting', 'Please wait...' );
+		var waitingDialog = ShowBlockingWaitDialog( '#SteamworksAccess_UpgradeGreenlightEntries_Upgrading', '#SteamworksAccess_UpgradeGreenlightEntries_PleaseWait' );
 			$J.ajax(
 				{
 					type: "POST",
@@ -3489,7 +3489,7 @@ function UpgradeGreenlightItem( item )
 						if ( response.success == 1 )
 						{
 							waitingDialog.Dismiss();
-							var dialog = ShowAlertDialog( 'Converted!', 'We have successfully converted your product to a full Steamworks application! The appid is: ' + response.appid );
+							var dialog = ShowAlertDialog( '#SteamworksAccess_UpgradeGreenlightEntries_UpgradedTitle', '#SteamworksAccess_UpgradeGreenlightEntries_UpgradedDesc' + response.appid );
 							dialog.done(function() {
 								top.location.href = "https://partner.steamgames.com/apps/landing/" + response.appid;
 							});
