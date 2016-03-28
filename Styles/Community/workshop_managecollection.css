@@ -111,6 +111,16 @@
 	cursor: pointer;
 }
 
+.collectionTypeLabel .description
+{
+	color: #ffffff;
+}
+
+.collectionTypeLabel .collectionTypeDesc
+{
+	color: #8F98A0;
+}
+
 .collectionTypeOption
 {
 	top: 0px;

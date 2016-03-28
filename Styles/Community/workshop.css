@@ -4195,9 +4195,9 @@ html.responsive #ig_bottom {
 
 .imagesizepreview {
 	float: right;
-	border: 1px solid #454543;
-	background-color: #262625;
-	color: #565656;
+	border: 1px solid #8F98A0;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	color: #8F98A0;
 	box-shadow: 0 0 2px 2px #262625;
 	width: 195px;
 	height: 195px;
