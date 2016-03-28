@@ -1070,6 +1070,8 @@ function OnGetFinalPriceSuccess( result )
 				if ( result.providerpaymentmethod == 0 && result.total > result.steamAccountBalance )
 				{
 					SetTabEnabled( 'payment_info' );
+										g_bUseRemainingSteamAccount = true;
+					ShowNextPaymentMethod();
 					return;
 				}
 			}
