@@ -61416,6 +61416,8 @@
 					{
 						"model_player"		"models/workshop/player/items/sniper/fall2013_brimfull_of_bullets_s3/fall2013_brimfull_of_bullets_s3.mdl"
 						"name"		"#TF_fall2013_brimfull_of_bullets_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 				}
 			}
