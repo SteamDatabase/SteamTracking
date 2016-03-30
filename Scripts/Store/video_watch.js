@@ -14,13 +14,13 @@ function BMediaSourceExtensionsSupported()
 }
 
 
-var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId, bEMECapable )
+var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId, bEMECapable, strVideoTitle )
 {
 	this.m_eClientType = eClientType;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
 	this.m_nAppId = appId;
 	this.m_strVideoId = strVideoId;
-	this.m_strVideoTitle = appId;
+	this.m_strVideoTitle = strVideoTitle;
 	this.m_DASHPlayerStats = null;
 	this.m_rtRestartTime = rtRestartTime;
 	this.m_strLanguage = strLanguage;
@@ -136,8 +136,6 @@ CVideoWatch.prototype.Start = function()
 		return;
 	}
 
-	this.SetVideoLoadingText( 'Preparing to Stream Video...' );
-
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 	this.m_player.SetUniqueId( this.m_nAppId + '/' + this.m_strVideoId );
 	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
@@ -145,9 +143,10 @@ CVideoWatch.prototype.Start = function()
 
 	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
+	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
    	this.m_playerUI.Init();
 
-   	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
+	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
 	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeTenFoot )
 		$J( '.dash_player_playback_stats' ).addClass( 'tenfoot' );
 
@@ -160,7 +159,7 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerHDCPError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
-	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video...' ); } );
+	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( _watch.m_strVideoTitle ); } );
 	$J( this.m_elVideoPlayer ).on( 'togglestats.VideoWatchEvents', function() { _watch.ToggleStats(); } );
 
 	this.GetVideoDetails();
@@ -170,9 +169,6 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 {
 	$J( '#page_contents' ).removeClass( 'loading_video' );
 	$J( '#page_contents' ).addClass( 'show_player' );
-
-	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
-	document.title = this.m_strVideoTitle + ' :: Steam';
 
 	// options that need setting on playback start
 	this.SetVideoTrack();
@@ -293,7 +289,6 @@ CVideoWatch.prototype.GetVideoDetails = function()
 		if ( data.success == 'ready' )
 		{
 			_watch.LoadVideoMPD( data.video_url );
-			_watch.m_strVideoTitle = data.video_title;
 		}
 		else if ( data.success == 'error' )
 		{

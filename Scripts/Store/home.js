@@ -1103,7 +1103,7 @@ var g_bDisableAutoloader = false;
 
 					var nItems = 0;
 					var rgSimilarItems = [];
-					var rgBuckets = ['recent', 'played', 'friends', 'wishlist', 'curators'];
+					var rgBuckets = ['played', 'friends', 'wishlist', 'curators'];
 					while( rgSimilarItems.length < 3 && rgBuckets.length > 0 )
 					{
 						var nIndex = ele.srand.nextIntBetween(0,rgBuckets.length);

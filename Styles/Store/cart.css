@@ -720,10 +720,13 @@ img.payment_method_logo {
 	float: left;
 	padding-top: 16px;
 	width: 120px;
+
 }
 
 .cart_item_img img {
 	width: 100%;
+	height: 45px;
+	background-color: #000000;
 }
 
 .cart_item_desc {

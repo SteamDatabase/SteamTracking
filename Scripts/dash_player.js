@@ -86,12 +86,11 @@ function CDASHPlayer( elVideoPlayer )
 
 CDASHPlayer.TRACK_BUFFER_MS = 8000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
-CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 60 * 1000;
+CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 2 * 60 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
-CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS = 500;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -1014,6 +1013,10 @@ CDASHPlayer.prototype.SeekTo = function( nTime )
 	if ( bCanSeekImmediately )
 	{
 		this.m_elVideoPlayer.currentTime = nTime;
+		for (var i = 0; i < this.m_loaders.length; i++)
+		{
+			this.m_loaders[i].ScheduleNextDownload();
+		}
 	}
 	else
 	{
@@ -2218,7 +2221,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 						}
 					}
 					catch (e) {
-						PlayerLog('Exception while appending: ' + e);
+						PlayerLog('Append Buffer Exception: ' + e);
 					}
 				}
 				else
@@ -2293,10 +2296,31 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 	// first add any queued buffers
 	if ( this.m_bufSegments.length > 0 )
 	{
-		this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateAppend;
-		var segment = this.m_bufSegments[0];
-		this.m_bufSegments.splice( 0, 1 );
-		this.m_sourceBuffer.appendBuffer( segment.data );
+		try
+		{
+			this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateAppend;
+			var segment = this.m_bufSegments[0];
+			// This may throw a QuotaExceededError exception if the prepareAppend call
+			// can't evict enough frames from a full buffer for the data being added.
+			// ref: https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/mediasource/SourceBuffer.cpp&sq=package:chromium&rcl=1458760914&l=549
+			this.m_sourceBuffer.appendBuffer( segment.data );
+			this.m_bufSegments.splice( 0, 1 );
+		}
+		catch (e)
+		{
+			// No room for the new data so hold on to it and the
+			// next time the download scheduler runs, it will
+			// repeat the evict and append process to catch up
+			if ( e.name === 'QuotaExceededError' )
+			{
+				$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ e.name, this.ContainsVideo() ? "Video" : "Audio" ] );
+				this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateNone;
+			}
+			else
+			{
+				$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'UpdateBuffer AppendBuffer Exception: ' + e.name, e.message ] );
+			}
+		}
 
 		return;
 	}
@@ -2324,9 +2348,16 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 
 			if ( nEnd > nStart )
 			{
-				this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateRemove;
-				this.m_sourceBuffer.remove( nStart, nEnd );
-				return;
+				try
+				{
+					this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateRemove;
+					this.m_sourceBuffer.remove( nStart, nEnd );
+					return;
+				}
+				catch (e)
+				{
+					$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'UpdateBuffer RemoveBuffer Exception: ' + e.name, e.message ] );
+				}
 			}
 		}
 	}
@@ -2394,29 +2425,29 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 		return;
 	}
 
-	// if enough to play, but not fully buffered, download with delay to allow adaptive changes to occur
-	if ( CSegmentLoader.nActiveDownloads == 0 && unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
+	// if there are downloaded segments not currently in the sourcebuffer,
+	// try adding those instead of downloading new ones
+	if ( this.m_bufSegments.length > 0 )
 	{
-		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS );
+		this.m_schWaitForBuffer = setTimeout( function ()
+			{
+				_loader.UpdateBuffer();
+				_loader.ScheduleNextDownload();
+			},
+			CDASHPlayer.TRACK_BUFFER_MS / 2 );
 		return;
 	}
 
-	// next segment is available but buffer is full. Can wait on download
-	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS;
-
+	// determine when the next segment download happens
+	unDeltaMS = Math.max( unAmountBuffered - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS, CDASHPlayer.DOWNLOAD_RETRY_MS );
 	if ( this.m_player.m_elVideoPlayer.playbackRate > 1.0 )
 		unDeltaMS /= this.m_player.m_elVideoPlayer.playbackRate;
 
-	if ( CSegmentLoader.nActiveDownloads == 0 && unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
-	{
-		// should be room in buffer in TRACK_BUFFER_MS time for next segment
-		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
-	}
+	// either start the next download or wait and check the status again soon
+	if ( CSegmentLoader.nActiveDownloads == 0 )
+		this.m_schNextDownload = setTimeout( function () { _loader.DownloadNextSegment() }, unDeltaMS );
 	else
-	{
-		// no more room in buffer, don't download now. Check again soon.
-		this.m_schWaitForBuffer = setTimeout( function() { _loader.ScheduleNextDownload() }, unDeltaMS );
-	}
+		this.m_schWaitForBuffer = setTimeout( function () { _loader.ScheduleNextDownload() }, unDeltaMS );
 }
 
 CSegmentLoader.prototype.BIsLoaderStalling = function()
@@ -2583,8 +2614,6 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 
 			clearTimeout( this.m_schWaitForBuffer );
 			this.m_schWaitForBuffer = null;
-
-			this.ScheduleNextDownload();
 		}
 
 		return true; // can shift time now

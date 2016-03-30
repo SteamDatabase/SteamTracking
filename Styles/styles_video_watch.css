@@ -123,7 +123,6 @@ body
 
 .loading_throbber .bar
 {
-    -webkit-animation: test 2s infinite;
     float: left;
     margin-right: 6px;
     width: 12px;
@@ -273,3 +272,4 @@ body
 {
 	height: 120px;
 }
+

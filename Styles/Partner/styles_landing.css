@@ -2134,6 +2134,7 @@ ul.actualUL {
 
 .releaseStep p.failmessage {
 	color: #dddddd;
+	white-space: pre-line;
 }
 
 .releaseStep p.failmessage > span {

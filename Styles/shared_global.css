@@ -1605,7 +1605,7 @@ span.bb_spoiler:hover > span {
 	visibility: visible;
 }
 
-blockquote.bb_blockquote {
+blockquote.bb_blockquote, .bb_wysiwyg blockquote {
 	border: 1px solid #535354;
 	border-radius: 3px;
 	padding: 12px;
@@ -1622,7 +1622,7 @@ div.bb_quoteauthor {
 	font-style: italic;
 }
 
-div.bb_h1 {
+div.bb_h1, .bb_wysiwyg h1 {
 	font-size: 15px;
 	color: #5aa9d6;
 	font-weight: normal;
@@ -1639,7 +1639,7 @@ span.bb_link_host {
 	top: -1px;
 }
 
-div.bb_code {
+div.bb_code, .bb_wysiwyg pre {
 	border: 1px solid #535354;
 	border-radius: 3px;
 	padding: 12px;

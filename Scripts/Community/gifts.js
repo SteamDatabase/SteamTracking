@@ -17,11 +17,19 @@ function ShowAcceptGiftOptions( gidGift )
 	elStepAccept.show();
 }
 
-function ShowDeclineGiftOptions( event, gidGift )
+function ShowDeclineGiftOptions( gidGift, steamidSender )
 {
-	if (!event) event = window.event;
-	Event.stop( event );
-	showContentAsModal( 'gift_modal', $('decline_gift_prompt_' + gidGift ) );
+	var $Content = $J('#decline_gift_prompt_' + gidGift );
+	var $TextArea = $Content.find('textarea');
+
+	var Modal = ShowConfirmDialog(
+		'Decline gift', $Content.show(), 'Decline gift'
+	).done( function() {
+			DoDeclineGift( gidGift, steamidSender, $TextArea.val() );
+	});
+	Modal.SetRemoveContentOnDismissal( false );
+
+	$TextArea.focus();
 }
 
 function UnpackGift( gidGift )
@@ -157,19 +165,21 @@ function DoAcceptGift( gidGift, bUnpack )
 	} );
 }
 
-function DoDeclineGift( gidGift, steamidSender )
+function DoDeclineGift( gidGift, steamidSender, note )
 {
-	var elDeclineGiftButtons = $('decline_gift_buttons_' + gidGift);
-
-	ShowWaiting( gidGift, elDeclineGiftButtons,  $('gift' + gidGift + '_decline_wait') );
+	var WaitDialog = ShowBlockingWaitDialog( 'Decline gift' );
 
 	var action = 'decline';
 
-	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
-		method: 'post',
-		parameters: { sessionid: g_sessionID, steamid_sender: steamidSender },
-		onComplete: function( transport ) { OnDeclineGiftResults( gidGift, transport ); }
-	} );
+	$J.post( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action,
+		{ sessionid: g_sessionID, steamid_sender: steamidSender, note: note }
+	).done( function(data) {
+		OnDeclineGiftResults( gidGift, data );
+	}).fail( function() {
+		OnDeclineGiftResults( gidGift );
+	}).always( function() {
+		WaitDialog.Dismiss();
+	});
 }
 
 function OnAcceptGiftResults( gidGift, bUnpack, transport )
@@ -262,9 +272,9 @@ function ShowAcceptedGiftMessage( gidGift, gidGiftNew )
 	ClearGiftWithMessage( gidGift, $('accepted_gift_' + gidGift) );
 }
 
-function OnDeclineGiftResults( gidGift, transport )
+function OnDeclineGiftResults( gidGift, data )
 {
-	if ( transport.responseJSON && transport.responseJSON.success == 1 )
+	if ( data && data.success == 1 )
 	{
 		hideModal( 'gift_modal' );
 		ClearGiftWithMessage( gidGift, $('declined_gift_' + gidGift) );
@@ -275,10 +285,6 @@ function OnDeclineGiftResults( gidGift, transport )
 		ShowDefaultGiftOptions( gidGift );
 		ShowGiftModalError( 'Unable to decline gift.  The gift may have already been declined or redeemed.' );
 	}
-
-	// reset the buttons in the decline gift popup
-	$('gift' + gidGift + '_decline_wait').hide();
-	$('decline_gift_buttons_' + gidGift).show();
 }
 
 function ClearGiftWithMessage( gidGift, elMessage )

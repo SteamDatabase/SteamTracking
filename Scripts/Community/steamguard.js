@@ -1,5 +1,6 @@
 
 var g_checkforTOS = false;
+var g_bSkipVoipCheck = true;
 function PhoneAjax( op, arg, success, error )
 {
 	$J.ajax( {
@@ -9,6 +10,7 @@ function PhoneAjax( op, arg, success, error )
 				op: op,
 				arg: arg,
 				checkfortos: g_checkforTOS ? 1 : 0,
+				skipvoip: g_bSkipVoipCheck ? 1 : 0,
 				sessionid: g_sessionID
 			 },
 
@@ -27,6 +29,12 @@ function PhoneAjax( op, arg, success, error )
 							 error( data.error_text );
 						 }
 					 }
+				 }
+				 else if ( data && data.voip_warning )
+				 {
+					 g_bSkipVoipCheck = true;
+
+					 bToggleWarning( true );
 				 }
 				 else if ( data && data.tos_warning )
 				 {
@@ -59,7 +67,7 @@ function PhoneAjax( op, arg, success, error )
 					 }
 
 					 $J( '.steamguard_confirm_wrapper' ).hide();
-					 $J( '.steamguard_tos_wrapper' ).show();
+					 $J( '.steamguard_warning_wrapper' ).show();
 					 ClearBusy();
 
 					 if ( data.tos_warning.vac_policy == 2 || data.tos_warning.tos_policy == 2 )
@@ -234,10 +242,7 @@ function StartCountdownEnable( name, seconds )
 
 function UseSteamguardWithEmail( near )
 {
-	if ( BIsMobileAPICallInProgress() )
-		return;
-	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/email';
+	window.location = 'https://steamcommunity.com/steamguard/twofactor_remove';
 }
 
 
@@ -426,12 +431,34 @@ function HandleRecoveryCodeDone( near )
 	window.location = 'https://steamcommunity.com/steamguard/twofactor_done';
 }
 
+function bToggleWarning( bShow )
+{
+	if ( bShow )
+	{
+		$J( '#enter_phone_body').hide();
+		$J( '.steamguard_warning_wrapper').show();
+	}
+	else
+	{
+		$J( '.steamguard_warning_wrapper').hide();
+		$J( '#enter_phone_body').show();
+	}
 
-function HandlePhoneNumber( near, bForTwoFactor )
+}
+
+
+function HandlePhoneNumber( near, bForTwoFactor, resetForm )
 {
 	if ( BIsMobileAPICallInProgress() )
 		return;
 	ClearError();
+
+	if ( resetForm )
+	{
+		bToggleWarning( false );
+		g_bSkipVoipCheck = false;
+		return;
+	}
 
 	var phone_number = $J('#phone_number').val();
 	phone_number = phone_number.replace( /[^\x00-\x7F]/g, '' ).trim(); // remove non-standard-ASCII characters

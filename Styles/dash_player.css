@@ -914,19 +914,19 @@
 .tenfoot_dash_overlay #dash_video_title_banner
 {
 	position: relative;
-	font-size: 36px;
+	font-size: 30px;
 	color: #FFF;
 	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
 	cursor: default;
-	top: 15px;
+	top: 13px;
 	left: 17px;
 	width: 538px;
-	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;
 	float: left;
 	letter-spacing: -0.4px;
 	text-shadow: inherit;
+	line-height: 30px;
+	height: 62px;
 }
 
 .tenfoot_dash_overlay .shuttle_controls

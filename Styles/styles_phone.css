@@ -83,10 +83,9 @@ input.phone_input_number {
 }
 
 .phone_error {
-	margin: 20px 0;
-	color: #cc3300;
-	height: 15px;
-
+	margin: 20px 0 0 0;
+	border: 2px solid #b44040;
+	padding: 10px;
 }
 
 .current_phone_box .phone_header_description img {
@@ -148,8 +147,7 @@ input.phone_input_number {
 }
 
 .phone_input_container {
-	margin-top: 5px;
-
+	background: rgba( 0, 0, 0, 0.3 );
 }
 
 .phone_sms_warning {
@@ -171,14 +169,14 @@ input.phone_input_number {
 
 }
 
-#phone_tos_header {
+#phone_warning_header {
 	font-size: 18px;
 	background: #612f3a;
 	color: #ffffff;
 	padding: 5px;
 }
 
-#phone_tos_header img {
+#phone_warning_header img {
 	vertical-align: middle;
 	margin-right: 5px;
 }
@@ -196,8 +194,8 @@ input.phone_input_number {
 	margin: 5px 0 5px 20px;
 }
 
-.phone_tos_content {
-	padding: 25px 5% 10px 5%;
+.phone_warning_content {
+	padding: 20px 5% 15px 5%;
 }
 
 .tos_block_time {
@@ -206,4 +204,8 @@ input.phone_input_number {
 
 #phone_add_subtext {
 	margin-top: 30px;
+}
+
+#phone_warning_container {
+	padding: 0;
 }

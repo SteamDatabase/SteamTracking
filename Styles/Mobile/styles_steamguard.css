@@ -1,6 +1,12 @@
 
 html.responsive body.responsive_page {
 	min-height: 0;
+	background-color: #060f16;
+}
+
+.steamguard_bodybg {
+	background:  url(https://steamcommunity-a.akamaihd.net/public/images/mobile/blue_glow.png) center top no-repeat;
+	padding-top: 20px;
 }
 
 .steamguard_choice_list {
@@ -9,8 +15,8 @@ html.responsive body.responsive_page {
 .steamguard_choice_wrapper {
 	margin-top: 30px;
 	margin-bottom: 30px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 18px;
+	margin-right: 18px;
 }
 
 .steamguard_choice_bar {
@@ -42,7 +48,7 @@ html.responsive body.responsive_page {
 }
 
 .steamguard_confirm_wrapper {
-	margin-top: 20px;
+	padding-bottom: 20px;
 }
 
 .steamguard_splash_wrapper, .steamguard_done_wrapper, .steamguard_error_wrapper, .steamguard_email_wrapper, .steamguard_none_wrapper, .steamguard_prechange_wrapper, .steamguard_help_wrapper {
@@ -50,24 +56,58 @@ html.responsive body.responsive_page {
 	margin-bottom: 20px;
 }
 
-.steamguard_confirm_title, .steamguard_done_title, .steamguard_error_title {
-	font-size: 18px;
+.steamguard_additionaltext_wrapper {
+	background-color: #14293b;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.steamguard_steps_title {
+	font-size: 22px;
 	text-shadow: none;
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+.steamguard_confirm_title, .steamguard_done_title, .steamguard_error_title {
+	font-size: 16px;
+	text-shadow: none;
+	color: #ffffff;
+	text-align: left;
+	margin-left: 18px;
+	margin-right: 18px;
 }
 
 .steamguard_confirm_text, .steamguard_done_text, .steamguard_error_text {
+	margin-left: 18px;
+	margin-right: 18px;
+	margin-top: 10px;
+	font-size: 14px;
+	text-shadow: none;
+	color: #a2a2a2;
+	text-align: left;
+}
+
+.steamguard_confirm_text a {
+	color: #2489ce;
+}
+
+.steamguard_hint_text {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 10px;
-	font-size: 18px;
+	font-size: 14px;
 	text-shadow: none;
-	color: #7a7a7a;
+	color: #216489;
 	text-align: center;
+	display: inline-block;
 }
 
-.steamguard_cannot_change_title, .steamguard_none_title, .steamguard_email_title, .steamguard_splash_title, .steamguard_prechange_title, .steamguard_help_title, .steamguard_twofactordone_success {
+.steamguard_cannot_change_title, .steamguard_none_title, .steamguard_email_title, .steamguard_splash_title, .steamguard_prechange_title, .steamguard_help_title, .steamguard_done_title {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 20px;
@@ -76,16 +116,17 @@ html.responsive body.responsive_page {
 	color: #ffffff;
 }
 
-.steamguard_cannot_change_text, .steamguard_none_text, .steamguard_email_text, .steamguard_splash_text, .steamguard_prechange_text, .steamguard_help_text, .steamguard_errorpage_text {
-	margin-left: 20px;
-	margin-right: 20px;
+.steamguard_cannot_change_text, .steamguard_none_text, .steamguard_email_text, .steamguard_splash_text, .steamguard_prechange_text, .steamguard_help_text, .steamguard_errorpage_text, .steamguard_done_text {
+	margin-left: 18px;
+	margin-right: 18px;
 	margin-top: 10px;
 	font-size: 16px;
 	text-shadow: none;
-	color: #7a7a7a;
+	color: #a2a2a2;
 }
 .steamguard_help_text a {
 	color: #67c1f5;
+	font-size: 16px;
 }
 
 .steamguard_none_warning {
@@ -188,8 +229,8 @@ html.responsive body.responsive_page {
 }
 
 input#activationcode_entry {
-	background-color: #1e1e1e;
-	border-radius: 2px;
+	background-color: #2b2b2a;
+	border-color: #216489;
 	color: #ffffff;
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -201,22 +242,22 @@ input#activationcode_entry {
 }
 
 input#phone_number {
-	background-color: #1e1e1e;
-	border-radius: 2px;
+	background-color: #2b2a2a;
+	border-color: #216489;
+	border-width: 1px;
 	color: #ffffff;
 	font-size: 20px;
 	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-top: 5px;
 	padding: 3px 3px 3px 3px;
-	text-align: center;
 	display: inline-block;
-	width: 60%;
+	width: 63%;
 }
 
 
 input#sms_code {
-	background-color: #1e1e1e;
-	border-radius: 2px;
+	background-color: #2b2a2a;
+	border-color: #216489;
 	color: #ffffff;
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -224,7 +265,7 @@ input#sms_code {
 	padding: 3px 3px 3px 3px;
 	text-align: center;
 	display: inline-block;
-	width: 30%;
+	width: 62%;
 }
 
 
@@ -250,8 +291,6 @@ input#sms_code {
 .steamguard_revocation_code_wrapper {
 	background-color: rgba(169, 72, 71, 0.5);
 	text-align: center;
-	margin-right: 10px;
-	margin-left: 10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -266,32 +305,26 @@ input#sms_code {
 
 .steamguard_revocation_left_icon {
 	float: left;
-	height: 50px;
-
+	height: 42px;
 	position: relative;
 	top: 50%;
-	margin-left: 10px;
+	margin-left: calc(67% - 200px);
 }
 
 .steamguard_revocation_right_icon {
 	float: right;
-	height: 50px;
-
+	height: 42px;
 	position: relative;
 	top: 50%;
-	margin-right: 10px;
+	margin-right: calc(67% - 200px);
 }
 
 .steamguard_revocation_code {
 	position: relative;
 	top: 50%;
-
 	background-color: #2a2a2a;
 	text-align: center;
-	border: 4px solid #ffffff;
-	border-radius: 4px;
-
-	text-align: center;
+	border: 2px solid #ffffff;
 	padding: 10px 30px 10px 30px;
 	font-size: 18px;
 	font-style: bold;
@@ -315,12 +348,21 @@ input#sms_code {
 }
 
 .steamguard_country_dropdown_container {
-	margin-top: 5px;
-	width: 80%;
+	margin-top: 20px;
 	display: inline-block;
 }
 
 .steamguard_country_dropdown {
+	background: linear-gradient(to bottom, #fdfdfd 100%, #eeeeee 100%);
+	border-radius: none;
+	display: inline-block;
+	font-size: 15px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px 0 10px;
+	text-shadow: none;
+	width: 77%;
+
 }
 
 .steamguard_button_row {
@@ -348,17 +390,19 @@ input#sms_code {
 	font-size: 18px;
 	text-shadow: none;
 	color: #ffffff;
+	width: 80%;
+	margin: 0 auto;
 }
 
 
 /* "splashette" menu items, closely matches native UI */
 
 .steamguard_splashette_wrapper {
-	margin-top: 20px;
 }
 
 .steamguard_splashette_chevron {
 	margin-top: 10px;
+	margin-bottom: 10px;
 	float: right;
 	font-size: 25px;
 	text-shadow: none;
@@ -384,16 +428,18 @@ input#sms_code {
 	font-size: 18px;
 	text-shadow: none;
 	color: #ffffff;
+	font-weight: normal;
 }
 
 .steamguard_splashette_single_text {
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	font-size: 18px;
 	text-shadow: none;
 	color: #ffffff;
+	font-weight: normal;
 }
 
 .steamguard_splashette_details {
@@ -415,35 +461,35 @@ input#sms_code {
 	border-top: 1px solid #000000;
 }
 
-.steamguard_tos_header {
+.steamguard_warning_header {
 	background-color: #612f3a;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 16px;
 	text-shadow: none;
-	margin-top: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	padding: 5px;
+	vertical-align: middle;
 }
 
-.steamguard_tos_header img {
-	vertical-align: middle;
+#warning_image_text {
+	line-height: 38px;
+}
+
+#warning_image {
 	margin-right: 5px;
 	float: left;
 }
 
-.steamguard_tos_text, #steamguard_tos_list > div {
-	font-size: 16px;
+.steamguard_warning_content {
+	font-size: 14px;
 	text-shadow: none;
-	color: #ffffff;
+	color: #a2a2a2;
+	margin: 5px 18px 25px 18px;
 }
 
 .steamguard_tos_warningtext {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-.steamguard_tos_text {
-	margin-bottom: 20px;
 }
 
 #steamguard_tos_list {
@@ -462,4 +508,16 @@ input#sms_code {
 
 .steamguard_tos_subtext {
 	margin-top: 20px;
+}
+
+.steamguard_accept_voip {
+	margin-top: 35px;
+	text-align: center;
+	font-size: 14px;
+	text-shadow: none;
+}
+
+.steamguard_warning_hint {
+	color: #216489;
+	font-size: 14px;
 }
