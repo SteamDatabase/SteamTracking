@@ -29238,10 +29238,10 @@
 			"item_slot"	"head"
 			"equip_region"	"hat"
 			"item_quality"	"unique"
-			"image_inventory"	"backpack/player/items/medic/fieldcap"
+			"image_inventory"	"backpack/workshop/player/items/medic/fieldcap/fieldcap"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/items/medic/fieldcap.mdl"
+			"model_player"	"models/workshop/player/items/medic/fieldcap/fieldcap.mdl"
 			"drop_type"	"drop"
 			"used_by_classes"
 			{
@@ -57596,11 +57596,30 @@
 					"headphones"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/scout/robo_scout_dogger/robo_scout_dogger"
-			"model_player"		"models/workshop/player/items/scout/robo_scout_dogger/robo_scout_dogger.mdl"
+			"image_inventory"		"backpack/workshop/player/items/all_class/robo_dogger/robo_dogger"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/robo_dogger/robo_dogger_engineer.mdl"
+			}
 			"used_by_classes"
 			{
 				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30019"
@@ -59289,6 +59308,33 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/scout/jul13_koolboy/jul13_koolboy.mdl"
+						"name"		"#TF_jul13_koolboy_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/scout/jul13_koolboy_2/jul13_koolboy_2.mdl"
+						"name"		"#TF_jul13_koolboy_style2"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"2"
+					{
+						"model_player"		"models/workshop/player/items/scout/jul13_koolboy_3/jul13_koolboy_3.mdl"
+						"name"		"#TF_jul13_koolboy_style3"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
 			}
 		}
 		"30084"
@@ -61351,6 +61397,27 @@
 			"used_by_classes"
 			{
 				"sniper"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/sniper/fall2013_brimfull_of_bullets/fall2013_brimfull_of_bullets.mdl"
+						"name"		"#TF_fall2013_brimfull_of_bullets_style0"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/sniper/fall2013_brimfull_of_bullets_s2/fall2013_brimfull_of_bullets_s2.mdl"
+						"name"		"#TF_fall2013_brimfull_of_bullets_style1"
+					}
+					"2"
+					{
+						"model_player"		"models/workshop/player/items/sniper/fall2013_brimfull_of_bullets_s3/fall2013_brimfull_of_bullets_s3.mdl"
+						"name"		"#TF_fall2013_brimfull_of_bullets_style2"
+					}
+				}
 			}
 		}
 		"30175"
@@ -65201,6 +65268,22 @@
 			"used_by_classes"
 			{
 				"sniper"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/sniper/xms2013_sniper_beard/xms2013_sniper_beard.mdl"
+						"name"		"#TF_xms2013_sniper_beard_style1"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/sniper/xms2013_sniper_beard_s2/xms2013_sniper_beard_s2.mdl"
+						"name"		"#TF_xms2013_sniper_beard_style2"
+					}
+				}
 			}
 		}
 		"30318"
