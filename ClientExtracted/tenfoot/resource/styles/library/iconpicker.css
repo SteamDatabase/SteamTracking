@@ -17,7 +17,6 @@
 	padding: 12px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-
 	border-radius: 4px;
 	
 	transition-property: pre-transform-scale2d, position, transform, box-shadow;
@@ -108,9 +107,14 @@ IconPickerListItem:descendantfocus
 
 .IconPickerListItem Button,
 .IconPickerListItem Button Image
-
 {
 	width: 100%;
+}
+
+.ListItemImage
+{
+	width: 128px;
+    height: 128px;
 }
 
 VerticalScrollBar {
@@ -118,6 +122,12 @@ VerticalScrollBar {
 }
 HorizontalScrollBar {
 	opacity: 0;
+}
+
+#IconPreview
+{
+	width: 256px;
+    height: 256px;
 }
 
 

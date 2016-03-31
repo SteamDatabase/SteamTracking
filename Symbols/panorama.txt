@@ -680,6 +680,10 @@
  B panorama::SoundFinished::symbol
  B panorama::SoundMuteChanged::symbol
  B panorama::SoundVolumeChanged::symbol
+ B panorama::StartButton::symbol
+ B panorama::StartButtonUp::symbol
+ B panorama::SteampadGuideButton::symbol
+ B panorama::SteampadGuideButtonUp::symbol
  B panorama::StopAudioSample::symbol
  B panorama::StopStreaming::symbol
  B panorama::StopStreamingAndSuspendClient::symbol
@@ -792,6 +796,7 @@
  B vrapi::g_VRCompositor
  B vrapi::g_VRControlPanel
  B vrapi::g_VRDashboardManager
+ B vrapi::g_VRExternalEventSource
  B vrapi::g_VRNotifications
  B vrapi::g_VROverlay
  B vrapi::g_VRRenderModels
@@ -1103,6 +1108,10 @@
  D panorama::SoundFinished::pchEvent
  D panorama::SoundMuteChanged::pchEvent
  D panorama::SoundVolumeChanged::pchEvent
+ D panorama::StartButton::pchEvent
+ D panorama::StartButtonUp::pchEvent
+ D panorama::SteampadGuideButton::pchEvent
+ D panorama::SteampadGuideButtonUp::pchEvent
  D panorama::StopAudioSample::pchEvent
  D panorama::StopStreaming::pchEvent
  D panorama::StopStreamingAndSuspendClient::pchEvent
@@ -11410,6 +11419,7 @@
  T panorama::CTopLevelWindow::BIsOverlay()
  T panorama::CTopLevelWindow::BIsSteamWMOverlay()
  T panorama::CTopLevelWindow::BIsVROverlay()
+ T panorama::CTopLevelWindow::BIsVROverlayFocused()
  T panorama::CTopLevelWindow::BIsVisible()
  T panorama::CTopLevelWindow::BIsWindowInLayoutPass()
  T panorama::CTopLevelWindow::BOnMoveEdge(panorama::EFocusMoveDirection)
@@ -11481,6 +11491,7 @@
  T panorama::CTopLevelWindowOpenVROverlay::BInitializeSurface(int, int, unsigned long long, bool, bool)
  T panorama::CTopLevelWindowOpenVROverlay::BIsFullscreen()
  T panorama::CTopLevelWindowOpenVROverlay::BIsVROverlay()
+ T panorama::CTopLevelWindowOpenVROverlay::BIsVROverlayFocused()
  T panorama::CTopLevelWindowOpenVROverlay::BIsVisible()
  T panorama::CTopLevelWindowOpenVROverlay::BOnMoveEdge(panorama::EFocusMoveDirection)
  T panorama::CTopLevelWindowOpenVROverlay::CTopLevelWindowOpenVROverlay(panorama::CUIEngine*)
@@ -13172,6 +13183,7 @@
  T panorama::CUIWindowInput::QueuePanelFocusEvent(panorama::IUIPanel*, panorama::CPanoramaSymbol)
  T panorama::CUIWindowInput::RemoveMouseTrackingPanel(panorama::IUIPanel*)
  T panorama::CUIWindowInput::RemovePanelInputHook(panorama::IUIPanel*, panorama::IInputCapture*)
+ T panorama::CUIWindowInput::RereadControllerState()
  T panorama::CUIWindowInput::ResetMouseMoveCount()
  T panorama::CUIWindowInput::RunFrame()
  T panorama::CUIWindowInput::SetInputFocus(panorama::IUIPanel*, bool, bool)
@@ -13444,6 +13456,10 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ShutdownMachine>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundFinished, char const*, void*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundMuteChanged, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StartButton>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StartButtonUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SteampadGuideButton>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SteampadGuideButtonUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreaming>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreamingAndSuspendClient>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StyleClassesChanged>(panorama::IUIPanel*, char const*, char const**)
@@ -13823,6 +13839,18 @@
  T panorama::SoundVolumeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SoundVolumeChanged::FormatEventArgs(char const*)
  T panorama::SoundVolumeChanged::MakeEvent(panorama::IUIPanelClient const*, panorama::ESoundType, float)
+ T panorama::StartButton::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::StartButton::FormatEventArgs(char const*)
+ T panorama::StartButton::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::StartButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::StartButtonUp::FormatEventArgs(char const*)
+ T panorama::StartButtonUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::SteampadGuideButton::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::SteampadGuideButton::FormatEventArgs(char const*)
+ T panorama::SteampadGuideButton::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::SteampadGuideButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::SteampadGuideButtonUp::FormatEventArgs(char const*)
+ T panorama::SteampadGuideButtonUp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::StopAudioSample::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::StopAudioSample::FormatEventArgs(char const*)
  T panorama::StopAudioSample::GetEventType()

@@ -94,6 +94,8 @@
 {
 	horizontal-align: center;
     vertical-align: center;
+    width: 256px;
+    height: 256px;
 }
 
 .TouchKeyHover

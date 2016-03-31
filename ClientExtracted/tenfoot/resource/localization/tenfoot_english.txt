@@ -3662,8 +3662,11 @@
 	"Library_AddActionSet_Title"	"Add Action Set"
 	"Library_AddActionSet_CodeLabel" "This will add a new set of actions that can be switched to."
 
-	"Library_RenameActionSet_Title"	"Rename Action Set"
+	"Library_ManageActionSet_Title"	"Manage Action Sets"
 	"Library_RenameActionSet_CodeLabel" "Rename this Action Set to a new title."
+
+	"Library_CursorOnActionSet_CodeLabel"	"Action Set to switch to when cursor is shown"
+	"Library_CursorOffActionSet_CodeLabel"	"Action Set to switch to when cursor is hidden"
 
 	"Library_DeleteActionSet_Title"	"Delete Action Set"
 	"Library_DeleteActionSet_CodeLabel" "Are you sure you want to delete {s:actionsetname}?"

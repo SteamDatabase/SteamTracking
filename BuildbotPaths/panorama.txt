@@ -99,6 +99,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/stdafx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/steamcontroller.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/steamcontroller_new.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/stylefile.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/styleproperties.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/stylepropertyfactory.o
