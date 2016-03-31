@@ -1746,7 +1746,7 @@
 	"Library_ControllerSaveBindingTitle"		"Save Bindings"
 	"Library_ControllerSetTitle"			"Set Title"
 	"Library_ControllerAddDescription"		"Add Description"
-	"Library_ControllerSaveReqUseTime"		"Please play with your configuration for at least an hour before publishing it."
+	"Library_ControllerSaveReqUseTime"		"Please play with your configuration for at least fifteen minutes before publishing it."
 	"Library_ControllerSaveConfirm"			"SAVE"
 	"Library_ControllerPublishConfirm"	"PUBLISH"
 	"Library_ControllerSaveCancel"			"CANCEL"
