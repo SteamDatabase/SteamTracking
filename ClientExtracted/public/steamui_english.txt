@@ -4483,9 +4483,9 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_VGUIControllerWarningHeader" "Using a Steam Controller?"
 
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"
-"Steam_VGUIVRHMDWarning" "Install SteamVR to make full use of your headset, then use this same button each time you'd like to launch or exit VR using Steam."
+"Steam_VGUIVRHMDWarning" "Install SteamVR to make full use of your headset with Steam, then use this same button each time you'd like to launch or exit VR using Steam."
 "Steam_VGUIVRHMDWarningHeader" "Using a VR Headset?"
-"Steam_VGUIVRHMDOculusHelp" "For Oculus Rift users, in addition to installing SteamVR you will need to enable SteamVR by <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">following these instructions</a>."
+"Steam_VGUIVRHMDOculusHelp" "If you want to use a Oculus Rift with SteamVR <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">following these instructions</a>."
 "SteamUI_InstallSteamVR" "Install SteamVR"
 
 "Steam_Browser_Disabled" "The Steam Browser is disabled."
