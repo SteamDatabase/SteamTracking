@@ -791,7 +791,27 @@ GStoreItemData = {
 			nPlatforms++;
 		}
 
-		return strHTML + ( nPlatforms > 1 ? '<span class="platform_img steamplay"></span>' : '' );
+		if ( nPlatforms > 1 )
+		{
+			strHTML += '<span class="platform_img steamplay"></span>';
+		}
+
+		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift )
+		{
+			strHTML += '<span class="platform_img hmd_separator"></span>';
+
+			if ( rgItemData.vr_htcvive )
+			{
+				strHTML += '<span class="platform_img htcvive"></span>';
+			}
+			if ( rgItemData.vr_oculusrift )
+			{
+				strHTML += '<span class="platform_img oculusrift"></span>';
+			}
+		}
+
+		return strHTML;
+
 	},
 
 	// filtering

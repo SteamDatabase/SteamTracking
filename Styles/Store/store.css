@@ -36,7 +36,7 @@ html {
 body.v6 {
 	position: relative;
 	min-height: 100%;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Motiva Sans',Arial, Helvetica, sans-serif;
 	color: #c6d4df;
 	font-size: 12px;
 }
@@ -1414,6 +1414,7 @@ span.platform_img {
 span.platform_img.steamplay {
 	width: 64px;
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_steamplay.png' );
+	padding-right: 5px;
 }
 
 span.platform_img.win {
@@ -1434,6 +1435,19 @@ span.platform_img.streamingvideo {
 	background-position-x: 2px;
 }
 
+span.platform_img.htcvive {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_htcvive.png' );
+}
+
+span.platform_img.oculusrift {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_oculusrift.png' );
+}
+
+span.platform_img.hmd_separator {
+	border-left: 1px solid #CCC;
+	width: 5px;
+	margin-left: 5px;
+}
 .promo_item_list .item .info .OS span.platform_img.streamingvideo {
 	background-position: 0px 1px;
 }
