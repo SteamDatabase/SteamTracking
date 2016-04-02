@@ -242,7 +242,10 @@ function StartCountdownEnable( name, seconds )
 
 function UseSteamguardWithEmail( near )
 {
-	window.location = 'https://steamcommunity.com/steamguard/twofactor_remove';
+	if ( BIsMobileAPICallInProgress() )
+		return;
+	ShowBusy( near );
+	window.location = 'https://steamcommunity.com/steamguard/email';
 }
 
 
