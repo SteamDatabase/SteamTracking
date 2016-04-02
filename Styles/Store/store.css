@@ -36,7 +36,7 @@ html {
 body.v6 {
 	position: relative;
 	min-height: 100%;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Motiva Sans',Arial, Helvetica, sans-serif;
 	color: #c6d4df;
 	font-size: 12px;
 }
