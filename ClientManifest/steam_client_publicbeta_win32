@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1459555796"
+	"version"		"1459806404"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b9c015520018655499338cfc2c3a3159e28bbe14"
@@ -69,9 +69,9 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.ad680029c2a337b9961697503d1576397fd30e91"
-		"size"		"122873"
-		"sha2"		"35b2a94c0d00c66a780d5eee5b474fb37bb0dd18836994a88b197adc36f4ccf6"
+		"file"		"strings_en_all.zip.56df545d149fcbb241f0f3521e94c3fab077d45f"
+		"size"		"122870"
+		"sha2"		"b11617b8efee99b601e69630811794e09f83522d15692d1d3005ed57cfb617c0"
 	}
 	"strings_all"
 	{
@@ -131,23 +131,23 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.a18defe1c9ae1372c415733b827d01e7723d1ba1"
-		"size"		"30844705"
-		"sha2"		"314a89f6eec66cf95c4a3458f6b9468b855881ffb75829841e9b7de87a4ed24a"
-		"zipvz"		"bins_win32.zip.vz.5f6f2032700139f92c202f08cb9d151b83543926_16636147"
-		"sha2vz"		"6eeee3f43549c7e47675920bbc6f0b337059a0517bbf423a9ab173ffc81bbe04"
+		"file"		"bins_win32.zip.d60946c6981a4eadd0bcab441fdb05bfbe13e67c"
+		"size"		"30844924"
+		"sha2"		"9203d4259e9832ab652363023ae7a4da72a59c0dc7730c552b1b549ea75cbc3f"
+		"zipvz"		"bins_win32.zip.vz.1de609adee6c1b99bb4b7cbd56b2aeb8229aecbc_16633669"
+		"sha2vz"		"da094f9aa7253baab92c0570b357490d437d843f765e907535a1eb01a9ebac4d"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.ea053282418d3cdd9dadf0d0a2e3776947d448fa"
-		"size"		"1331154"
-		"sha2"		"3c1fad0b86a168c0e7663073d6ef29d8f202bdcae13871f4114ed01814b40b05"
-		"zipvz"		"steam_win32.zip.vz.4f9c1c4f7bdd39433a69a03766a339b73cf364a7_1079360"
-		"sha2vz"		"6d100877172340d590dd03a0eb6b8ddb055ce855d113c8e35d7f30595833e09a"
+		"file"		"steam_win32.zip.edd63bc0ef37b50c62cd6cca51e48ca82048c883"
+		"size"		"1331150"
+		"sha2"		"f1a300b839d67df5e77fd77bf96d0562b8bb33654b27f5572baea14c6b57bc42"
+		"zipvz"		"steam_win32.zip.vz.523c16c9b34592ba2b8e769db700348465a7d5a1_1080690"
+		"sha2vz"		"383482d3b16ae28100d38cc4ec26472678685c3968cbb165db1ae6bef8fba3d0"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"c1382b8bdcdc1e07a17aed15db17af7e04382d7352ffe8e8249817ccefa4134313724cf02034976a9bf74beae46ea5b3032a34e1902adb05db5316bd6590acd2a6560b845aea04f3109bcdb2e67130b6bcf9f5c2db8b5f685ebb8bc8642c5456cca8399bde42d13bfbac33509744713a672375c8a75d9318b73567c2770303f2"
+	"win32"		"16a929723bf6546ff83abd7539a896c9daf4720c10d9ef0bd889679ed3ac3e6df7125b5b1230420e779f38e4cef2bdd3df52fe6f7da32f5f8bcc83c5efb9547fbfdaefa8988320849cc49768fbf8a1f87a0cbc35c2ace8dd7923c0dc88f16944b1f0c34cae80b508a930e24a33c1e0bd804c152b624d84b1318285696b0ca3a2"
 }
