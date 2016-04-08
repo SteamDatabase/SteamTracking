@@ -12,7 +12,7 @@ echo $$ > $LOCKFILE
 php update.php "$1"
 
 git add -A
-git commit -a -m "$(shuf -n 1 .support/emoji.txt) $(git status --porcelain | sed '{:q;N;s/\n/, /g;t q}' | sed 's/^ *//g')"
+git commit -S -a -m "$(shuf -n 1 .support/emoji.txt) $(git status --porcelain | sed '{:q;N;s/\n/, /g;t q}' | sed 's/^ *//g')"
 git push
 
 rm $LOCKFILE
