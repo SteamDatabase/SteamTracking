@@ -395,11 +395,17 @@ pre.results {
     line-height: 17px;
     padding-left: 24px;
     font-style: italic;
+	display: block;
 }
 
 .controllerLeft {
     float: left;
-    min-width: 417px;
+    width: 450px;
+}
+.controllerRight {
+	float: left;
+	width: 335px;
+	margin-left: 14px;
 }
 
 .gameimagepreview {

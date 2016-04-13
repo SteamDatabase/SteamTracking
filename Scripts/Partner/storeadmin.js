@@ -676,3 +676,73 @@ function IsNumberKey( evt )
 	return true;
 }
 
+function SetFreeToPlay( appid, packageid )
+{
+	var dialog = ShowConfirmDialog( "Free On Demand Package", "This will set your package as Free. Are you sure you wish to continue?<br><br>Select the appropriate purchase text:" );
+	var input = dialog.m_$Content.find( 'input' );
+	input.val( '#genre_free2play' );
+	input.select();
+
+	//var buttons = dialog.m_$Content.
+	$J('<select><option value="#PurchaseButton_FreeToPlay">Free To Play</option><option value="#PurchaseButton_Free">Free</option></select>')
+		.insertBefore( dialog.m_$Content.find('.newmodal_buttons') );
+
+	//dialog.m_$Content.append(  );
+	var select = dialog.m_$Content.find( 'select' );
+	select.val( '#PurchaseButton_FreeToPlay' );
+	select.select();
+
+	dialog.done( function ( )
+	{
+		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Saving your changes...");
+		new Ajax.Request( 'https://partner.steamgames.com/store/ajaxupdatef2pstore',
+			{
+				method: 'POST',
+				parameters: {
+					'appid' : appid,
+					'displaytext' : select.val(),
+					'sessionid' : g_sessionID
+				},
+				onSuccess: function( transport )
+				{
+					dialog.Dismiss();
+					var results = transport.responseJSON;
+					if ( results[ 'success' ] == 1 )
+					{
+						// Now change the package type
+						new Ajax.Request( 'https://partner.steamgames.com/store/ajaxpackagesave/' + packageid,
+							{
+								method: 'POST',
+								parameters: {
+									'action' : 'save',
+									'billing_type' : 12,
+									'sessionid' : g_sessionID
+								},
+								onSuccess: function( transport )
+								{
+									var results = transport.responseJSON;
+									if ( results.success == 1 )
+									{
+										OnAIWaitComplete(function(){
+											dialog.Dismiss();
+											top.location.href = 'https://partner.steamgames.com/store/packagelanding/' + packageid;
+										});
+									}
+									else
+									{
+										dialog.Dismiss();
+										ShowAlertDialog( "Error", "Failed to change package type: %1$s".replace('%1$s', results.success ) );
+									}
+								}
+							} );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', "Failed to update store app page: %1$s".replace('%1$s', results[ 'success' ] ) );
+					}
+				}
+			});
+	});
+
+}
+

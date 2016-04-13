@@ -3156,7 +3156,7 @@ function RenderPageControl( target, onChange, context, currentPage, maxPage )
 
 function DeleteLeaderboardEntry( onDelete, appid, leaderboardid, steamid, personaname )
 {
-	if ( !confirm( 'Are you sure you want to delete the leaderboard entry for: ' + personaname + '?' ) )
+	if ( !confirm( "Are you sure you want to delete the leaderboard entry for: %1$s?".replace('%1$s', personaname ) ) )
 		return;
 		
 	AppsAjaxRequest(
@@ -3326,6 +3326,38 @@ function CreatePHPDateFromObject( d )
 	dateData['minute'] = d.getUTCMinutes();
 
 	return dateData;
+}
+
+function VerifyReleaseGame( appid, data )
+{
+	var strAcceptString = "Release my app";
+	var dialog = ShowPromptDialog( "Confirm App Release", "If you are ready to make your app playable to customers right now, please type the phrase \"%1$s\" into the box below".replace('%1$s', strAcceptString), "Release Now", null );
+
+	var input = $J( dialog.m_$Content ).find( "input" );
+	var releasebtn = $J( dialog.m_$Content ).find( "button" );
+	releasebtn.prop('disabled', true);
+
+
+	input.on('keyup', function(event){
+		if( input.val().toLowerCase() == strAcceptString.toLowerCase() )
+			releasebtn.prop('disabled', false);
+		else if( input.val().localeCompare( strAcceptString, "standard", { sensitivity: 'base' } ) === 0 )
+			releasebtn.prop('disabled', false);
+		else
+			releasebtn.prop('disabled', true);
+	})
+
+	dialog.done( function( )
+	{
+		ReleaseGame(appid, data);
+	} );
+
+	dialog.fail( function() {
+		$J("#publish_button").show();
+		$J("#publish_button").show();
+		$J('#publish_status').hide();
+	})
+
 }
 
 function ReleaseGame(appid, data)

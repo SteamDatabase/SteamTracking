@@ -1089,7 +1089,7 @@ HelpWizard = {
 			if ( data.html )
 				$J('#global_header').replaceWith( data.html );
 		});
-	},
+	}
 };
 
 function Logout()

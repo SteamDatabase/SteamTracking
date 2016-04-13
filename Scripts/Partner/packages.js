@@ -1253,33 +1253,6 @@ function HighlightCheckboxParent( checkbox )
 	}
 }
 
-//
-// Publishing
-//
-
-function DiffPackage( packageid, target )
-{
-	//$('appOutput').innerHTML = '';
-	if ( target != null )
-	{
-		$(target).innerHTML = '';
-		ShowElement( target );
-	}
-
-	CreateAjaxRequest( 	g_szBaseURL + "/packages/diff/" + packageid,
-						{},
-						function( results )
-						{
-							theDiffs = results[ 'opened' ] + results[ 'diff' ];
-							if ( theDiffs == "" )
-							{
-								theDiffs = "[No changes detected.]";
-							}
-							
-							$(target).innerHTML = "<pre>" + theDiffs + "</pre>";
-						}
-					);				
-}
 
 //
 // many of our AJAX actions send back JSON with two items in it:
@@ -1309,44 +1282,6 @@ function StandardCallback( results, elementName )
 	}
 }
 
-function RevertPackage( packageid, target )
-{
-	if ( !confirm( "Revert all unpublished changes?" ) )
-	{
-		return;
-	}
-
-	$('packageOutput').innerHTML = "";
-	HideElement( 'packageDiff' );
-	$('packageDiff').innerHTML = '';
-	$('publishbtn').style.display = 'none';
-
-	CreateAjaxRequest(	g_szBaseURL + "/packages/revert/" + packageid,
-						{},
-						function( results )
-						{
-							StandardCallback( results, 'packageOutput' );
-						}
-					);
-}
-
-function PreparePackage( packageid )
-{
-	$('packageOutput').innerHTML = "";
-	HideElement( 'packageDiff' );
-
-	CreateAjaxRequest(	g_szBaseURL + "/packages/prepare/" + packageid,
-						{},
-						function( results )
-						{
-							StandardCallback( results, 'packageOutput' );
-							if ( results[ 'success' ] )
-							{
-								$('publishHidden').style.display = '';
-							}
-						}
-					);
-}
 
 function CancelEvent( event )
 {
