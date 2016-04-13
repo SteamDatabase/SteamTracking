@@ -242,10 +242,7 @@ function StartCountdownEnable( name, seconds )
 
 function UseSteamguardWithEmail( near )
 {
-	if ( BIsMobileAPICallInProgress() )
-		return;
-	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/email';
+	window.location = 'https://steamcommunity.com/steamguard/twofactor_remove';
 }
 
 
@@ -253,7 +250,7 @@ function HandleSteamguardEmailContinue( near )
 {
 	if ( BIsMobileAPICallInProgress() )
 		return;
-	ShowBusy( near );
+
 	GetValueFromLocalURL( 'steammobile://steamguardset?scheme=email', 60,
 		function(data)
 		{
@@ -376,7 +373,7 @@ function HandlePhoneSplashContinue( near, bForTwoFactor )
 					var result = GetValueFromLocalURL( 'steammobile://steamguardset?scheme=twofactor&ph=1', 60,
 							function()
 							{
-								window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&bRevoke2fOnCancel=';
+								window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&step=1&bRevoke2fOnCancel=';
 							},
 						
 							function( data, code )
@@ -505,7 +502,7 @@ function HandlePhoneNumber( near, bForTwoFactor, resetForm )
 g_SmsCodeFailures = 0;
 
 
-function DoTwoFactorValidate( sms_code )
+function DoTwoFactorValidate( sms_code, nStep )
 {
 	if ( BIsMobileAPICallInProgress() )
 		return;
@@ -514,7 +511,7 @@ function DoTwoFactorValidate( sms_code )
 	GetValueFromLocalURL( 'steammobile://steamguardvalidate?code=' + sms_code, 60,
 		function()
 		{
-			window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode';
+			window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode?step=' + ( nStep ? nStep : 3 );
 		},
 
 		function( data, code )
@@ -555,7 +552,7 @@ function HandleAjaxError( errorText, fatal )
 
 
 
-function HandleSmsCode( near, bForTwoFactor )
+function HandleSmsCode( near, bForTwoFactor, nStep )
 {
 	if ( BIsMobileAPICallInProgress() )
 		return;
@@ -577,7 +574,7 @@ function HandleSmsCode( near, bForTwoFactor )
 			{
 				if ( bForTwoFactor )
 				{
-					DoTwoFactorValidate( sms_code );
+					DoTwoFactorValidate( sms_code, nStep );
 				}
 			}
 			else
@@ -587,7 +584,7 @@ function HandleSmsCode( near, bForTwoFactor )
 					{
 						if ( bForTwoFactor )
 						{
-							DoTwoFactorValidate( sms_code );
+							DoTwoFactorValidate( sms_code, nStep );
 						}
 						else
 						{
@@ -626,25 +623,23 @@ function HandleSmsResend( near, bForTwoFactor )
 		return;
 	ClearError();
 
-	ShowBusy( near );
 
 	PhoneAjax( 'send_sms_code', bForTwoFactor,
 		function()
 		{
+			ShowAlertDialog( 'Send SMS Code' , 'We\'ve sent a new SMS code to your phone.' );
 			g_SmsCodeFailures = 0;
-			ClearBusy();
 			$J('#sms_code').val('');
 		},
 
 		function( error_text, fatal )
 		{
-			ClearBusy();
 			$J('#sms_code').val('');
 
 			if ( fatal ) {
-				FatalError( errorText );
-			} else if ( errorText ) {
-				ShowError( errorText );
+				FatalError( error_text );
+			} else if ( error_text ) {
+				ShowError( error_text );
 			}
 		}
 	);

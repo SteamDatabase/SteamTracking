@@ -58,6 +58,23 @@
 	background-image: url( "file://{images}/store/icon_platform_streamingvideo.png" );
 }
 
+.HTCViveLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_htcvivelogo.png" );
+}
+
+.OculusRiftLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_oculusriftlogo.png" );
+}
+
+.HMDSeparator
+{
+	border-left: 1px solid #CCCCCC;
+	width: 1px;
+	margin: 0px 5px;
+}
+
 ////////////////////////////////////
 // Basic Capsules
 ////////////////////////////////////

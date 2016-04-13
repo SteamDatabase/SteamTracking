@@ -2599,8 +2599,6 @@ function UpdatePaymentInfoForm()
 		{
 						bShowAddressForm = false || $('billing_country').value == 'US';
 			bShowCountryVerification = $('billing_country').value != 'US';
-			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Any approved refunds for purchases made with Bitcoin can only be credited to your Steam wallet';
 		}		
 		else if ( method.value == 'steamaccount' )
 		{

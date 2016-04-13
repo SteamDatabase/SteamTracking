@@ -1445,8 +1445,8 @@ span.platform_img.oculusrift {
 
 span.platform_img.hmd_separator {
 	border-left: 1px solid #CCC;
-	width: 5px;
-	margin-left: 5px;
+	width: 1px;
+	margin: 0px 5px;
 }
 .promo_item_list .item .info .OS span.platform_img.streamingvideo {
 	background-position: 0px 1px;
