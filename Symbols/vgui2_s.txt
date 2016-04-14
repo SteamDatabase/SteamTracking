@@ -214,6 +214,7 @@
  D CFontTextureCache::s_pStringPageSize
  D CUtlSymbol::s_bAllowStaticSymbolTable
  D CryptoPP::g_cacheLineSize
+ D g_BitStringEndMasks
  D g_FallbackFonts
  D g_VGUI2DLLValidate
  D typeinfo for CBaseSurface
@@ -496,6 +497,7 @@
  R typeinfo name for CSystem
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>
  R typeinfo name for CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>
  R typeinfo name for CUtlLinkedList<CInputBase::InputContext_t, int>
  R typeinfo name for CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>
@@ -512,7 +514,6 @@
  R typeinfo name for CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>
- R typeinfo name for CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned int, short, short, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >
@@ -530,7 +531,6 @@
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, short, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, short, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t, int, CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -548,6 +548,7 @@
  R typeinfo name for CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >
  R typeinfo name for CUtlVector<CStyleAppearance::line_t, CUtlMemory<CStyleAppearance::line_t> >
  R typeinfo name for CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >
  R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
@@ -970,6 +971,8 @@
  T CBaseSurface::WakeMainThread(bool)
  T CBaseSurface::setFocus(unsigned int)
  T CBaseSurface::~CBaseSurface()
+ T CBitStringT<CVariableBitStringBase>::GetBit(int) const
+ T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CCopyableUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::CCopyableUtlVector(CCopyableUtlVector<SFontDescription, CUtlMemory<SFontDescription> > const&)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
@@ -1656,11 +1659,18 @@
  T CUtlDict<vgui::Bitmap*, int>::RemoveAll()
  T CUtlDict<vgui::Bitmap*, int>::Validate(CValidator&, char const*)
  T CUtlDict<vgui::Bitmap*, int>::~CUtlDict()
- T CUtlDict<vgui::IImage*, unsigned short>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<vgui::IImage*, unsigned short>::Insert(char const*, vgui::IImage* const&)
- T CUtlDict<vgui::IImage*, unsigned short>::RemoveAll()
- T CUtlDict<vgui::IImage*, unsigned short>::Validate(CValidator&, char const*)
- T CUtlDict<vgui::IImage*, unsigned short>::~CUtlDict()
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertOrReplace(CUtlString const&, vgui::IImage* const&)
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::Purge()
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::PurgeAndDeleteElements()
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::Validate(CValidator&, char const*)
+ T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::~CUtlHashMap()
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Free(int)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::InsertBefore(int, CFontTextureCache::CacheLRUEntry_t const&)
@@ -1724,7 +1734,6 @@
  T CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, short, short, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Validate(CValidator&, char const*)
@@ -1825,12 +1834,6 @@
  T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t const&) const
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned short, CUtlMap<char const*, vgui::IImage*, unsigned short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t, unsigned int, CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned int> >::Find(CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t const&) const
  T CUtlRBTree<CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t, unsigned int, CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned int> >::FindInsertionPosition(CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t const&, bool, unsigned int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t, unsigned int, CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<unsigned int> >::Insert(CUtlMap<int, CFontTextureCache*, unsigned int, bool (*)(int const&, int const&)>::Node_t const&, bool)
@@ -1933,7 +1936,6 @@
  T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_RotateRight(unsigned long, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_NextInorder(unsigned short, unsigned long, void*) const
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RemoveRebalance(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
@@ -1941,6 +1943,8 @@
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
+ T CUtlStringWrap::CUtlStringWrap(char const*)
+ T CUtlStringWrap::~CUtlStringWrap()
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -2010,6 +2014,11 @@
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::ShiftElementsRight(int, int)
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::Validate(CValidator&, char const*)
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
@@ -2207,6 +2216,11 @@
  T CVGuiSystemModuleLoader::Validate(CValidator&, char const*)
  T CVGuiSystemModuleLoader::~CVGuiSystemModuleLoader()
  T CValidateAutoPushPop::~CValidateAutoPushPop()
+ T CVariableBitStringBase::AllocInts(int)
+ T CVariableBitStringBase::FreeInts()
+ T CVariableBitStringBase::ReallocInts(int)
+ T CVariableBitStringBase::Resize(int)
+ T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CharacterSetBuild(characterset_s*, char const*)
@@ -2512,6 +2526,7 @@
  T LoadTGA(int, char*, unsigned char**, int*, int*, int*)
  T MouseCode_VGUIToVirtualKey(vgui::MouseCode)
  T MouseCode_VirtualKeyToVGUI(int)
+ T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T MyDrawEventHandler(OpaqueEventHandlerCallRef*, OpaqueEventRef*, void*)
  T OBJ_add_object
  T OBJ_bsearch_
@@ -3649,17 +3664,17 @@
  d ERR_str_reasons
  d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
- d __block_descriptor_tmp521
- d __block_descriptor_tmp523
- d __block_descriptor_tmp536
+ d __block_descriptor_tmp525
+ d __block_descriptor_tmp527
  d __block_descriptor_tmp538
  d __block_descriptor_tmp540
+ d __block_descriptor_tmp542
  d __block_literal_global
- d __block_literal_global522
- d __block_literal_global524
- d __block_literal_global537
+ d __block_literal_global526
+ d __block_literal_global528
  d __block_literal_global539
  d __block_literal_global541
+ d __block_literal_global543
  d err_defaults
  d ex_class
  d free_func

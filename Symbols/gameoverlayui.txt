@@ -740,6 +740,7 @@
  D CScreenshotManager::PanelMessageFunc_DoMultiSelectAction::InitVar()::bAdded
  D CScreenshotManager::PanelMessageFunc_OnComboBoxChanged::InitVar()::bAdded
  D CScreenshotManager::PanelMessageFunc_OnDeleteDialogClosed::InitVar()::bAdded
+ D CScreenshotManager::PanelMessageFunc_OnEndDrag::InitVar()::bAdded
  D CScreenshotManager::PanelMessageFunc_OnItemVisible::InitVar()::bAdded
  D CScreenshotManager::PanelMessageFunc_OnScreenshotHotkeyChanged::InitVar()::bAdded
  D CScreenshotManager::PanelMessageFunc_OnWrapPanelClicked::InitVar()::bAdded
@@ -8056,6 +8057,7 @@
  T CScreenshotManager::LoadSince(CGameID, unsigned int)
  T CScreenshotManager::OnComboBoxChanged()
  T CScreenshotManager::OnDeleteDialogClosed()
+ T CScreenshotManager::OnEndDrag()
  T CScreenshotManager::OnItemVisible(int, int)
  T CScreenshotManager::OnScreenshotDeleted(ScreenshotDeleted_t*)
  T CScreenshotManager::OnScreenshotHotkeyChanged()
@@ -8070,6 +8072,7 @@
  T CScreenshotManager::PanelMessageFunc_DoMultiSelectAction::InitVar()
  T CScreenshotManager::PanelMessageFunc_OnComboBoxChanged::InitVar()
  T CScreenshotManager::PanelMessageFunc_OnDeleteDialogClosed::InitVar()
+ T CScreenshotManager::PanelMessageFunc_OnEndDrag::InitVar()
  T CScreenshotManager::PanelMessageFunc_OnItemVisible::InitVar()
  T CScreenshotManager::PanelMessageFunc_OnScreenshotHotkeyChanged::InitVar()
  T CScreenshotManager::PanelMessageFunc_OnWrapPanelClicked::InitVar()

@@ -4,13 +4,12 @@
 	{
 		ScreenshotManager { title="#steam_screenshotsupload_title" style="CScreenshotManager" }
 
-		DarkRegionDetails { controlname="ImagePanel" style=DarkRegionDetails zpos="-1" }
-		SSDetails { controlname="ImagePanel" style=SSDetails }
+		SSDetails { controlname="ImagePanel" style=SSDetails scaling=fit}
 		SSDate { controlname="Label" labelText="%selected_ss_date%" }
 		SSSize { controlname="Label" labelText="#Overlay_Screenshots_Size_Cloud" }
 		SSSizeOriginal { controlname="Label" labelText="#Overlay_Screenshots_Size_Original" }
 
-		grid { alignment="left" interiorspacing=5 wwheelpct=50 style="WrapPanel" }
+		grid { alignment="left" interiorspacing=5 wheelpct=50 style="WrapPanel" }
 		view_screenshots { controlname="Button" labeltext="#Overlay_View_All_Screenshots" command="viewscreenshots" }
 		view_local_library_button { controlname="Button" labeltext="#Overlay_View_Local" command="viewlocallibrary" visible=0 }
 		selectorlabel { controlname="Label" labeltext="#Overlay_Screenshots_Show" }
@@ -111,11 +110,7 @@
 			}
 		}
 
-		DarkRegionDetails
-		{
-			bgcolor="none"
-		}
-
+	
 		SSDetails
 		{
 			minimum-width=320
@@ -198,16 +193,15 @@
 	{
 		region { name="selectorbar" margin-left=10 margin-right=340 margin-top=25 height=80 }
 		place { control="selectorlabel" region="selectorbar" x=0 y=8 }
-		place { control="game_selector" region="selectorbar" start="selectorlabel" dir=right y=-5 }
+		place { control="game_selector" region="selectorbar" start="selectorlabel" dir=right y=-5 width=278 }
 
-		region { name="details" align=right margin-right=10 margin-top=34 margin-bottom=5 width=335 height=max }
+		region { name="details" align=right margin-right=10 margin-top=34 margin-bottom=5 margin-left=358 height=max }
 		region { name="list" margin-left=10 margin-right=340 margin-top=58 margin-bottom=35 width=max }
 
-		place {	control="grid" region="list" x=0 y=0 width=max height=max }
+		place {	control="grid" region="list" x=0 y=0 width=340 height=max }
 		place { control="no_screenshots" region="list" y=50 align="top-center" }
 
-		place { control="DarkRegionDetails" region="details" x=0 y=0 width=max height=max z="-1" }
-		place { control="SSDetails" region="details" y=0 width=333 height=250 align="top-center"  }
+		place { control="SSDetails" region="details" y=0 width=max height=max margin-bottom=128 align="top-center" }
 		place { control="SSDate" start="SSDetails" dir=down margin-top=4 margin-left=8 align=left }
 		place { control="SSSize,SSSizeOriginal" start="SSDate" margin-right=15 align=right dir=left }
 

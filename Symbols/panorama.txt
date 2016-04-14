@@ -694,6 +694,7 @@
  B panorama::TabBackward::symbol
  B panorama::TabForward::symbol
  B panorama::TextEntryUpdate::symbol
+ B panorama::TextInputFinished::symbol
  B panorama::TextInputHandlerStateChange::symbol
  B panorama::TimeoutFastScrollSound::symbol
  B panorama::ToggleConsole::symbol
@@ -713,6 +714,7 @@
  B panorama::VRApplicationTransitionStarted::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
+ B panorama::VRDashboardVisibilityChanged::symbol
  B panorama::VRGamepadFocusGained::symbol
  B panorama::VRGamepadFocusLost::symbol
  B panorama::VRHideKeyboard::symbol
@@ -1122,6 +1124,7 @@
  D panorama::TabBackward::pchEvent
  D panorama::TabForward::pchEvent
  D panorama::TextEntryUpdate::pchEvent
+ D panorama::TextInputFinished::pchEvent
  D panorama::TextInputHandlerStateChange::pchEvent
  D panorama::TimeoutFastScrollSound::pchEvent
  D panorama::ToggleConsole::pchEvent
@@ -1141,6 +1144,7 @@
  D panorama::VRApplicationTransitionStarted::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
+ D panorama::VRDashboardVisibilityChanged::pchEvent
  D panorama::VRGamepadFocusGained::pchEvent
  D panorama::VRGamepadFocusLost::pchEvent
  D panorama::VRHideKeyboard::pchEvent
@@ -1733,6 +1737,7 @@
  D typeinfo for panorama::CUIPanelEvent1<panorama::IDragStartCallbacks*>
  D typeinfo for panorama::CUIPanelEvent1<panorama::IImageSource*>
  D typeinfo for panorama::CUIPanelEvent2<KeyValues*, void*>
+ D typeinfo for panorama::CUIPanelEvent2<bool, char const*>
  D typeinfo for panorama::CUIPanelEvent2<char const*, bool>
  D typeinfo for panorama::CUIPanelEvent2<char const*, char const*>
  D typeinfo for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
@@ -2345,6 +2350,7 @@
  D vtable for panorama::CUIPanelEvent1<panorama::IDragStartCallbacks*>
  D vtable for panorama::CUIPanelEvent1<panorama::IImageSource*>
  D vtable for panorama::CUIPanelEvent2<KeyValues*, void*>
+ D vtable for panorama::CUIPanelEvent2<bool, char const*>
  D vtable for panorama::CUIPanelEvent2<char const*, bool>
  D vtable for panorama::CUIPanelEvent2<char const*, char const*>
  D vtable for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
@@ -3276,6 +3282,7 @@
  R typeinfo name for panorama::CUIPanelEvent1<panorama::IDragStartCallbacks*>
  R typeinfo name for panorama::CUIPanelEvent1<panorama::IImageSource*>
  R typeinfo name for panorama::CUIPanelEvent2<KeyValues*, void*>
+ R typeinfo name for panorama::CUIPanelEvent2<bool, char const*>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, bool>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, char const*>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
@@ -9439,6 +9446,7 @@
  T bool panorama::DispatchEvent<panorama::SoundMuteChanged, bool>(panorama::SoundMuteChanged, panorama::IUIPanel const*, bool)
  T bool panorama::DispatchEvent<panorama::SoundVolumeChanged, panorama::ESoundType, float>(panorama::SoundVolumeChanged, panorama::IUIPanel const*, panorama::ESoundType, float)
  T bool panorama::DispatchEvent<panorama::TextEntryUpdate>(panorama::TextEntryUpdate, panorama::IUIPanelClient const*)
+ T bool panorama::DispatchEvent<panorama::TextInputFinished, bool, char*>(panorama::TextInputFinished, panorama::IUIPanelClient const*, bool, char*)
  T bool panorama::DispatchEvent<panorama::ToggleFullscreen, panorama::CTopLevelWindowSDL*, bool>(panorama::ToggleFullscreen, panorama::IUIPanel const*, panorama::CTopLevelWindowSDL*, bool)
  T bool panorama::DispatchEvent<panorama::TopLevelWindowClose, panorama::CTopLevelWindow*>(panorama::TopLevelWindowClose, panorama::IUIPanel const*, panorama::CTopLevelWindow*)
  T bool panorama::DispatchEvent<panorama::UnreadyForDisplay>(panorama::UnreadyForDisplay, panorama::IUIPanel const*)
@@ -9446,6 +9454,7 @@
  T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonUp>(panorama::VRApplicationMenuButtonUp, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::VRDashboardRequested, panorama::IUIPanel const*, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VRDashboardVisibilityChanged, bool>(panorama::VRDashboardVisibilityChanged, panorama::IUIPanel const*, bool)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusGained, unsigned long long>(panorama::VRGamepadFocusGained, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusLost, unsigned long long>(panorama::VRGamepadFocusLost, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRHideKeyboard>(panorama::VRHideKeyboard, panorama::IUIPanel const*)
@@ -11726,7 +11735,7 @@
  T panorama::CUIEngine::GetCurrentFrameTime()
  T panorama::CUIEngine::GetCurrentV8ObjectTemplateToSetup()
  T panorama::CUIEngine::GetDisplayLanguage()
- T panorama::CUIEngine::GetFocusedWindow()
+ T panorama::CUIEngine::GetFocusedWindow(bool)
  T panorama::CUIEngine::GetJSObjectTemplateForPanel(panorama::IUIPanel*)
  T panorama::CUIEngine::GetJavaScriptContextForPanel(panorama::IUIPanel*)
  T panorama::CUIEngine::GetLastDispatchedEventSymbol()
@@ -12490,6 +12499,11 @@
  T panorama::CUIPanelEvent2<KeyValues*, void*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIPanelEvent2<KeyValues*, void*>::Validate(CValidator&, char const*)
  T panorama::CUIPanelEvent2<KeyValues*, void*>::~CUIPanelEvent2()
+ T panorama::CUIPanelEvent2<bool, char const*>::Copy() const
+ T panorama::CUIPanelEvent2<bool, char const*>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIPanelEvent2<bool, char const*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIPanelEvent2<bool, char const*>::Validate(CValidator&, char const*)
+ T panorama::CUIPanelEvent2<bool, char const*>::~CUIPanelEvent2()
  T panorama::CUIPanelEvent2<char const*, bool>::Copy() const
  T panorama::CUIPanelEvent2<char const*, bool>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIPanelEvent2<char const*, bool>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -13469,6 +13483,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TabBackward, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TabForward, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TextEntryUpdate>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TextInputFinished, bool, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TextInputHandlerStateChange, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TimeoutFastScrollSound>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ToggleConsole>(panorama::IUIPanel*, char const*, char const**)
@@ -13485,6 +13500,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionStarted>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardVisibilityChanged, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRGamepadFocusGained, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRGamepadFocusLost, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRHideKeyboard>(panorama::IUIPanel*, char const*, char const**)
@@ -13885,6 +13901,9 @@
  T panorama::TextEntryUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TextEntryUpdate::FormatEventArgs(char const*)
  T panorama::TextEntryUpdate::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::TextInputFinished::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::TextInputFinished::FormatEventArgs(char const*)
+ T panorama::TextInputFinished::MakeEvent(panorama::IUIPanelClient const*, bool, char const*)
  T panorama::TextInputHandlerStateChange::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TextInputHandlerStateChange::FormatEventArgs(char const*)
  T panorama::TextInputHandlerStateChange::MakeEvent(panorama::IUIPanelClient const*, bool)
@@ -13958,6 +13977,9 @@
  T panorama::VRDashboardThumbSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardThumbSelected::FormatEventArgs(char const*)
  T panorama::VRDashboardThumbSelected::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VRDashboardVisibilityChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRDashboardVisibilityChanged::FormatEventArgs(char const*)
+ T panorama::VRDashboardVisibilityChanged::MakeEvent(panorama::IUIPanelClient const*, bool)
  T panorama::VRGamepadFocusGained::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRGamepadFocusGained::FormatEventArgs(char const*)
  T panorama::VRGamepadFocusGained::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
