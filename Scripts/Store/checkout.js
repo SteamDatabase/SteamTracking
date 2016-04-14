@@ -2895,7 +2895,6 @@ function SubmitPaymentInfoForm()
 		billing_address : false,
 		security_code : false,
 		billing_city : false,
-		label_verify_country : false,
 		billing_state_text : false,
 		billing_phone : false,
 		billing_postal_code : false,
@@ -2907,7 +2906,6 @@ function SubmitPaymentInfoForm()
 		bank_code : false,
 		bank_iban : false,
 		bank_bic : false,
-		verify_country_only_label: false,
 		mobile_number_label: false
 	}
 	
@@ -2956,24 +2954,6 @@ function SubmitPaymentInfoForm()
 			}
 		}
 
-		if ( $('payment_row_country_verification').visible() )
-		{
-			if ( !$('verify_country_only').checked )
-			{
-				errorString += 'Please verify your country selected below.<br/>';
-				rgBadFields.verify_country_only_label = true;
-			}
-		}
-		
-		if ( $('verify_country').visible() )
-		{
-			if ( !$( 'verify_country' ).checked )
-			{
-				errorString += 'Please verify your country selected below.<br/>';
-				rgBadFields.label_verify_country = true;
-			}		
-		}
-				
 		if ( method.value == 'qiwi' )
 		{
 			// Expect 10 digits, we'll make sure we at least have that many digits
@@ -3005,12 +2985,6 @@ function SubmitPaymentInfoForm()
 					errorString += 'Please enter your 10 digit mobile account number.<br/>';
 					rgBadFields.mobile_number_label = true;
 				}
-			}
-
-			if ( !$('verify_country_only').checked )
-			{
-				errorString += 'Please verify your country selected below.<br/>';
-				rgBadFields.verify_country_only_label = true;
 			}
 		}
 		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) )

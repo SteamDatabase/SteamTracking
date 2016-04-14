@@ -1346,23 +1346,12 @@ label.send_choice_txt {
 	display: block;
 	float:left;
 	clear:left;
-	height: 11px;
+	height: 14px;
 	padding: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-top: 3px;
-}
-
-#i_verify_country label
-{
-	clear: none;
-	display: block;
-	font-size: 11px;
-	padding-left: 12px;
-	margin-left: 12px;
-	width: 180px;
-	line-height: 12px;
 }
 
 #save_my_address
@@ -1377,24 +1366,17 @@ label.send_choice_txt {
 	clear: none;
 	display: block;
 	font-size: 12px;
-	padding-left: 12px;
-	margin-left: 12px;
+	padding-left: 6px;
+	margin-left: 6px;
 	line-height: 12px;
 	overflow: hidden;
 }
 
 
-
-#verify_country_check
-{
-	float: left;
-	padding-top: 2px;
-}
-
 #verify_country_notes
 {
 	overflow: hidden;
-	padding-left: 4px;
+	font-size: 12px;
 }
 
 #cancel_pending_check
