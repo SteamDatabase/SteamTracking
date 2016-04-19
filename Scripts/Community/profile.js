@@ -177,7 +177,7 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 				break;
 
 			case 24:
-				strMessage = 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.';
+				strMessage = 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/#HelpWithLimitedAccount">Visit Steam Support</a> for more information.';
 				break;
 
 			default:

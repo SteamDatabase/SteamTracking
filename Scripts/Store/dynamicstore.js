@@ -461,6 +461,9 @@ GDynamicStore = {
 				BundleForUser.m_rgBundleItems.push( BundleItem );
 			}
 
+			// fix the price
+			BundleForUser.m_nFinalPriceInCentsWithBundleDiscount = GStoreItemData.CalculateCurrencyAppropriatePrice( BundleForUser.m_nFinalPriceInCentsWithBundleDiscount );
+
 			GDynamicStore.s_rgPersonalizedBundleData[ unBundleID ] = BundleForUser;
 		}
 
@@ -640,7 +643,8 @@ GStoreItemData = {
 	rgPackageData: {},
 	rgBundleData: {},
 	rgNavParams: {},
-	fnFormatCurrency: function( nValueInCents, bWholeUnitsOnly ) { return v_numberformat( nValueInCents / 100 ); },
+	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
+	nCurrencyMinPriceIncrement : 1,
 
 	AddStoreItemData: function ( rgApps, rgPackages )
 	{
@@ -681,6 +685,26 @@ GStoreItemData = {
 	SetCurrencyFormatter: function( fn )
 	{
 		GStoreItemData.fnFormatCurrency = fn;
+	},
+
+	SetCurrencyMinPriceIncrement: function( nMinPriceIncrement )
+	{
+		GStoreItemData.nCurrencyMinPriceIncrement = nMinPriceIncrement;
+	},
+
+	CalculateCurrencyAppropriatePrice: function( nPrice )
+	{
+		if ( GStoreItemData.nCurrencyMinPriceIncrement > 1 )
+		{
+			var nRoundingAmount = GStoreItemData.nCurrencyMinPriceIncrement;
+			var dAmount = nPrice / nRoundingAmount;
+			// round "half away from zero" - javascript Math.round rounds -1.5 to -1, which is not desired
+			var dSign = dAmount < 0 ? -1 : 1;
+			dAmount = ( dSign * Math.floor( Math.abs( dAmount ) + 0.5 ) ) * nRoundingAmount;
+			nPrice = dAmount;
+		}
+
+		return nPrice;
 	},
 
 	MergeStoreItemData: function( rgExistingItemData, rgItemData )
@@ -917,6 +941,9 @@ GStoreItemData = {
 			return false;
 
 		if ( bStrict && !rgAppData.localized && ApplicableSettings.localized && Settings.localized )
+			return false;
+
+		if ( rgAppData.virtual_reality && ApplicableSettings.virtual_reality && !Settings.virtual_reality )
 			return false;
 
 		return true;

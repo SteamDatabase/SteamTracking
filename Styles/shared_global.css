@@ -1085,7 +1085,9 @@ div#global_header .activebg {
 a.global_header_toggle_button,
 a.global_header_toggle_button:hover {
 	color: #ffffff;
-	font-weight: bold;
+	font-weight: normal;
+	font-size: 12px;
+	font-family: 'Motiva Sans Bold',Arial,Helvetica,Verdana,sans-serif;
 }
 
 .global_header_toggle_button.green,

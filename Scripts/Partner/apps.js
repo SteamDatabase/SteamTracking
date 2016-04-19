@@ -3497,13 +3497,13 @@ function ShowProgressDialog( strTitle, strDescription )
 
 function UpgradeGreenlightItem( item )
 {
-	var prompt = ShowPromptDialog( "Import Application", 'You can choose to rename your application if you wish.' );
+	var prompt = ShowPromptDialog( "Import Application", "You can choose to rename your application if you wish." );
 	var input = prompt.m_$Content.find( 'input' );
 	input.val( item['title'] );
 	input.select();
 
 	input.after(
-		'<div>Product Type:</div><div><select name="appTypeGreenlight" id="appTypeGreenlight" style="width: 100px;"><option value="Game">Game</option><option value="Application">Application</option></select></div>'
+		'<div>'+"Product Type:"+'</div><div><select name="appTypeGreenlight" id="appTypeGreenlight" style="width: 100px;"><option value="Game">'+"Game"+'</option><option value="Application">'+"Application"+'</option></select></div>'
 	);
 
 	var content = prompt.m_$Content;

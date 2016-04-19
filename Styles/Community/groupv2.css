@@ -1628,6 +1628,11 @@ a.headlineLink:hover {
 	margin-bottom: 8px;
 }
 
+.announcement_hidden {
+	color: #FFC369;
+	font-size: 16px;
+}
+
 @media screen and (max-width: 910px)
 {
 

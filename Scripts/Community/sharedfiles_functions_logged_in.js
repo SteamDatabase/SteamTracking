@@ -59,7 +59,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
 		case 24:
-			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/#HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
 			return false;
 		case 21:
 			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
@@ -259,7 +259,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 24 )
 	{
-		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.' );
+		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/#HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
 	}
 	else if ( transport.responseJSON.success == 16 )
 	{
@@ -374,13 +374,33 @@ function SendSubscribeItemRequest()
 	$('PublishedFileSubscribe').request( {
 		onSuccess: function( response )
 		{
-			if ($('JustSubscribed') !== null )
+			switch( response.responseJSON.success )
 			{
-				$('JustSubscribed').show();
+				case 1:
+				{
+					if ($('JustSubscribed') !== null )
+					{
+						$('JustSubscribed').show();
+					}
+					$('SubscribeItemBtn').addClassName("toggled");
+					$('SubscribeItemOptionAdd').className = "subscribeOption add";
+					$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
+				}
+				break;
+
+				case 15:
+				{
+					ShowAlertDialog( "Error", "You do not have permission to subscribe to this item." );
+				}
+				break;
+
+				default:
+				{
+					ShowAlertDialog( "Error", "There was a problem trying to subscribe to this item. Please try again later." );
+				}
+				break;
 			}
-			$('SubscribeItemBtn').addClassName("toggled");
-			$('SubscribeItemOptionAdd').className = "subscribeOption add";
-			$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
+
 			$('action_wait').hide();
 		}
 	} );

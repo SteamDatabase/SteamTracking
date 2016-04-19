@@ -1680,7 +1680,8 @@ a.guide_row {
 	padding: 0px 8px 0px 8px;
 }
 
-.help_notinlibrary_details
+.help_notinlibrary_details,
+.help_missingrefund_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
@@ -1688,15 +1689,23 @@ a.guide_row {
 	margin-bottom: 20px;
 }
 
-.help_notinlibrary_details p
+.help_notinlibrary_details p,
+.help_missingrefund_details p
 {
 	margin-top: 20px;
 	line-height: 16px;
 }
 
-.help_notinlibrary_details p:first-child
+.help_notinlibrary_details p:first-child,
+.help_missingrefund_details p:first-child
 {
 	margin-top: 0px;
+}
+
+.help_missingrefund_details b
+{
+	font-weight: normal;
+	color: white;
 }
 
 .help_vacorgameban_details .HighlightedText,
@@ -2169,6 +2178,10 @@ a.guide_row {
 .help_section_body p {
 	margin-bottom: 8px;
 	line-height: 16px;
+}
+
+.help_section_body ol {
+	margin-left: 20px;
 }
 
 .help_section_body ul {
@@ -2939,3 +2952,47 @@ input.unlockcode_entry_input
 	color: #a94847;
 	font-size: 14px;
 }
+
+.help_home_error_events {
+	max-width: 712px;
+	margin-bottom: 20px;
+}
+
+.help_event_limiteduser {
+	border: 1px solid #e4ba00;
+	padding: 8px;
+	max-width: 720px;
+}
+
+.help_event_limiteduser_spend {
+	margin-top: 20px;
+}
+
+.help_event_limiteduser_spend span {
+	color: #c6d4df;
+}
+
+.help_event_limiteduser_link {
+	display: block;
+	margin: 10px 0 10px 40px;
+}
+
+.help_event_description {
+	margin: 10px 0 20px 0;
+}
+
+.help_limiteduser_spend_ctn {
+	background-color: #324965;
+	height: 10px;
+	border-radius: 5px;
+	margin: 7px 0;
+
+	box-shadow: inset 1px 1px 3px #353535;
+	-webkit-box-shadow: inset 1px 1px 3px #353535;
+}
+
+.help_limiteduser_spend_progress_bar {
+	border: 1px solid #000000;
+	border-radius: 4px;
+	height: 8px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#6a7787), color-stop(95%,#182636));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a7787', endColorstr='#182636',GradientType=0 );background: -moz-linear-gradient( top, #6a7787 5%, #182636 95%);background: -webkit-linear-gradient( top, #6a7787 5%, #182636 95%);background: -o-linear-gradient( top, #6a7787 5%, #182636 95%);background: -ms-linear-gradient( top, #6a7787 5%, #182636 95%);background: linear-gradient( to bottom, #6a7787 5%, #182636 95%);}
