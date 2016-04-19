@@ -325,21 +325,21 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 
 		var strStatus = '';
 		if ( oItem.recommended )
-			strStatus = '#store_tab_recommended';
+			strStatus = 'Recommended For You';
 		else if ( oItem.status_string )
 			strStatus = oItem.status_string;
 		else if ( rgData && rgData.early_access )
-			strStatus = '#msg_early_access_now_available'
+			strStatus = 'Early Access Now Available'
 		else if ( oItem.new_on_steam )
-			strStatus = '#label_new_on_steam';
+			strStatus = 'New On Steam';
 		else if ( oItem.top_seller )
-			strStatus = '#home_maincap_TopSeller';
+			strStatus = 'Top Seller';
 		else if ( rgData && rgData.coming_soon )
-			strStatus = '#msg_prepurchase_now'
+			strStatus = 'Pre-Purchase Now'
 		else if ( rgData && rgData.video )
-			strStatus = '#msg_now_available_to_watch'
+			strStatus = 'Now Available to Watch'
 		else
-			strStatus = '#text_now_available'
+			strStatus = 'Now Available'
 
 		// navigation metrics feature
 		var strFeature = 'main_cluster';

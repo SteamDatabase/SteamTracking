@@ -4312,7 +4312,7 @@ function DisplayPendingReceiptPage()
 			break;
 			
 		case 'bitcoin':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for confirmation of Bitcoin delivery from BitPay.  This process can take several minutes to a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for settlement on the bitcoin network.  This settlement requires at least one blockchain confirmation and can take several minutes to a few hours.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://bitpay.com/">BitPay</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
