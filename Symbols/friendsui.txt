@@ -10051,58 +10051,41 @@
  T non-virtual thunk to vgui::SectionedListPanelItem::ShouldDisplay(char const*)
  T non-virtual thunk to vgui::SectionedListPanelItem::~SectionedListPanelItem()
  T non-virtual thunk to vgui::ToolPanel::InstanceToolWindow(vgui::Panel*, bool, vgui::ToolPanel*, char const*, bool, bool)
- T png_64bit_product
- T png_access_version_number
- T png_ascii_from_fixed
- T png_ascii_from_fp
+ T png_XYZ_from_xy
+ T png_XYZ_from_xy_checked
  T png_benign_error
  T png_build_gamma_table
- T png_build_grayscale_palette
  T png_calculate_crc
  T png_calloc
  T png_check_IHDR
  T png_check_cHRM_fixed
- T png_check_chunk_name
  T png_check_fp_number
  T png_check_fp_string
- T png_check_keyword
  T png_chunk_benign_error
  T png_chunk_error
+ T png_chunk_unknown_handling
  T png_chunk_warning
  T png_combine_row
- T png_convert_from_struct_tm
- T png_convert_from_time_t
- T png_convert_to_rfc1123
- T png_crc_error
  T png_crc_finish
  T png_crc_read
  T png_create_info_struct
  T png_create_read_struct
  T png_create_read_struct_2
- T png_create_struct
  T png_create_struct_2
- T png_create_write_struct
- T png_create_write_struct_2
- T png_data_freer
  T png_decompress_chunk
- T png_default_flush
  T png_default_read_data
- T png_default_write_data
- T png_destroy_info_struct
+ T png_destroy_gamma_table
  T png_destroy_read_struct
- T png_destroy_struct
  T png_destroy_struct_2
- T png_destroy_write_struct
- T png_do_background
  T png_do_bgr
- T png_do_chop
+ T png_do_check_palette_indexes
+ T png_do_compose
+ T png_do_encode_alpha
  T png_do_expand
- T png_do_expand_16
  T png_do_expand_palette
  T png_do_gamma
  T png_do_gray_to_rgb
  T png_do_invert
- T png_do_pack
  T png_do_packswap
  T png_do_quantize
  T png_do_read_filler
@@ -10112,106 +10095,24 @@
  T png_do_read_swap_alpha
  T png_do_read_transformations
  T png_do_rgb_to_gray
- T png_do_shift
  T png_do_strip_channel
  T png_do_swap
  T png_do_unpack
  T png_do_unshift
- T png_do_write_interlace
- T png_do_write_intrapixel
- T png_do_write_invert_alpha
- T png_do_write_swap_alpha
- T png_do_write_transformations
  T png_error
- T png_fixed
- T png_fixed_error
- T png_flush
+ T png_formatted_warning
  T png_free
  T png_free_data
- T png_free_default
- T png_gamma_16bit_correct
  T png_gamma_8bit_correct
  T png_gamma_correct
  T png_gamma_significant
  T png_get_IHDR
- T png_get_PLTE
- T png_get_bKGD
- T png_get_bit_depth
- T png_get_cHRM
- T png_get_cHRM_fixed
  T png_get_channels
- T png_get_chunk_cache_max
- T png_get_chunk_malloc_max
- T png_get_color_type
- T png_get_compression_buffer_size
- T png_get_compression_type
- T png_get_copyright
- T png_get_current_pass_number
- T png_get_current_row_number
- T png_get_error_ptr
- T png_get_filter_type
- T png_get_gAMA
- T png_get_gAMA_fixed
- T png_get_hIST
- T png_get_header_ver
- T png_get_header_version
- T png_get_iCCP
- T png_get_image_height
- T png_get_image_width
- T png_get_int_32
- T png_get_interlace_type
- T png_get_io_chunk_name
- T png_get_io_chunk_type
- T png_get_io_ptr
- T png_get_io_state
- T png_get_libpng_ver
- T png_get_mem_ptr
- T png_get_oFFs
- T png_get_pCAL
- T png_get_pHYs
- T png_get_pHYs_dpi
- T png_get_pixel_aspect_ratio
- T png_get_pixel_aspect_ratio_fixed
- T png_get_pixels_per_inch
- T png_get_pixels_per_meter
- T png_get_rgb_to_gray_status
  T png_get_rowbytes
- T png_get_rows
- T png_get_sBIT
- T png_get_sCAL
- T png_get_sCAL_fixed
- T png_get_sCAL_s
- T png_get_sPLT
- T png_get_sRGB
- T png_get_signature
- T png_get_tIME
- T png_get_tRNS
- T png_get_text
- T png_get_uint_16
- T png_get_uint_31
- T png_get_uint_32
- T png_get_unknown_chunks
- T png_get_user_chunk_ptr
- T png_get_user_height_max
- T png_get_user_transform_ptr
- T png_get_user_width_max
  T png_get_valid
- T png_get_x_offset_inches
- T png_get_x_offset_inches_fixed
- T png_get_x_offset_microns
- T png_get_x_offset_pixels
- T png_get_x_pixels_per_inch
- T png_get_x_pixels_per_meter
- T png_get_y_offset_inches
- T png_get_y_offset_inches_fixed
- T png_get_y_offset_microns
- T png_get_y_offset_pixels
- T png_get_y_pixels_per_inch
- T png_get_y_pixels_per_meter
  T png_handle_IEND
  T png_handle_IHDR
  T png_handle_PLTE
- T png_handle_as_unknown
  T png_handle_bKGD
  T png_handle_cHRM
  T png_handle_gAMA
@@ -10231,16 +10132,11 @@
  T png_handle_unknown
  T png_handle_zTXt
  T png_info_destroy
- T png_info_init_3
- T png_init_io
  T png_init_read_transformations
  T png_longjmp
  T png_malloc
- T png_malloc_default
  T png_malloc_warn
  T png_muldiv
- T png_muldiv_warn
- T png_permit_mng_features
  T png_read_chunk_header
  T png_read_data
  T png_read_destroy
@@ -10249,9 +10145,7 @@
  T png_read_finish_row
  T png_read_image
  T png_read_info
- T png_read_png
  T png_read_row
- T png_read_rows
  T png_read_sig
  T png_read_start_row
  T png_read_transform_info
@@ -10259,134 +10153,39 @@
  T png_reciprocal
  T png_reciprocal2
  T png_reset_crc
- T png_reset_zstream
- T png_save_int_32
- T png_save_uint_16
- T png_save_uint_32
+ T png_safecat
  T png_set_IHDR
  T png_set_PLTE
- T png_set_add_alpha
  T png_set_bKGD
- T png_set_background
- T png_set_background_fixed
- T png_set_benign_errors
- T png_set_bgr
- T png_set_cHRM
  T png_set_cHRM_fixed
- T png_set_chunk_cache_max
- T png_set_chunk_malloc_max
- T png_set_compression_buffer_size
- T png_set_compression_level
- T png_set_compression_mem_level
- T png_set_compression_method
- T png_set_compression_strategy
- T png_set_compression_window_bits
- T png_set_crc_action
  T png_set_error_fn
  T png_set_expand
- T png_set_expand_16
- T png_set_expand_gray_1_2_4_to_8
  T png_set_filler
- T png_set_filter
- T png_set_filter_heuristics
- T png_set_filter_heuristics_fixed
- T png_set_flush
- T png_set_gAMA
  T png_set_gAMA_fixed
- T png_set_gamma
- T png_set_gamma_fixed
  T png_set_gray_to_rgb
  T png_set_hIST
  T png_set_iCCP
  T png_set_interlace_handling
- T png_set_invalid
- T png_set_invert_alpha
- T png_set_invert_mono
- T png_set_keep_unknown_chunks
  T png_set_longjmp_fn
  T png_set_mem_fn
  T png_set_oFFs
  T png_set_pCAL
  T png_set_pHYs
- T png_set_packing
- T png_set_packswap
- T png_set_palette_to_rgb
- T png_set_quantize
  T png_set_read_fn
- T png_set_read_status_fn
- T png_set_read_user_chunk_fn
- T png_set_read_user_transform_fn
- T png_set_rgb_to_gray
- T png_set_rgb_to_gray_fixed
- T png_set_rows
  T png_set_sBIT
- T png_set_sCAL
- T png_set_sCAL_fixed
  T png_set_sCAL_s
  T png_set_sPLT
- T png_set_sRGB
  T png_set_sRGB_gAMA_and_cHRM
- T png_set_shift
- T png_set_sig_bytes
  T png_set_strip_16
- T png_set_strip_alpha
- T png_set_swap
- T png_set_swap_alpha
  T png_set_tIME
  T png_set_tRNS
- T png_set_tRNS_to_alpha
- T png_set_text
  T png_set_text_2
- T png_set_unknown_chunk_location
  T png_set_unknown_chunks
- T png_set_user_limits
- T png_set_user_transform_info
- T png_set_write_fn
- T png_set_write_status_fn
- T png_set_write_user_transform_fn
  T png_sig_cmp
- T png_start_read_image
+ T png_user_version_check
  T png_warning
- T png_write_IDAT
- T png_write_IEND
- T png_write_IHDR
- T png_write_PLTE
- T png_write_bKGD
- T png_write_cHRM_fixed
- T png_write_chunk
- T png_write_chunk_data
- T png_write_chunk_end
- T png_write_chunk_start
- T png_write_data
- T png_write_destroy
- T png_write_end
- T png_write_filtered_row
- T png_write_find_filter
- T png_write_finish_row
- T png_write_flush
- T png_write_gAMA_fixed
- T png_write_hIST
- T png_write_iCCP
- T png_write_iTXt
- T png_write_image
- T png_write_info
- T png_write_info_before_PLTE
- T png_write_oFFs
- T png_write_pCAL
- T png_write_pHYs
- T png_write_png
- T png_write_row
- T png_write_rows
- T png_write_sBIT
- T png_write_sCAL_s
- T png_write_sPLT
- T png_write_sRGB
- T png_write_sig
- T png_write_start_row
- T png_write_tEXt
- T png_write_tIME
- T png_write_tRNS
- T png_write_zTXt
+ T png_warning_parameter_signed
+ T png_warning_parameter_unsigned
  T png_zalloc
  T png_zfree
  T private_AES_set_decrypt_key
@@ -13871,7 +13670,6 @@
  __memcpy_chk
  __memset_chk
  __moddi3
- __snprintf_chk
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -13882,7 +13680,6 @@
  abort
  access
  alphasort$INODE64
- atof
  atoi
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
@@ -14436,10 +14233,6 @@
  d vgui::ScrollBarSlider::Paint()::styleNameList
  d vtable for (anonymous namespace)::CaptionGripPanel
  d vtable for (anonymous namespace)::ScrollBarButton
- deflate
- deflateEnd
- deflateInit2_
- deflateReset
  dlclose
  dlopen
  dlsym
@@ -14459,7 +14252,6 @@
  fputc
  fread
  free
- frexp
  fseek
  ftell
  fwrite$UNIX2003
@@ -14489,7 +14281,6 @@
  glTexImage2D
  glTexParameteri
  glVertex2f
- gmtime
  inflate
  inflateEnd
  inflateInit_
@@ -14507,7 +14298,6 @@
  memset
  memset_pattern16
  mmap$UNIX2003
- modf
  munmap$UNIX2003
  open$UNIX2003
  operator delete(void*)
@@ -14546,35 +14336,16 @@
  r lvalues
  r obj_objs
  r onebppswaptable
- r png_convert_to_rfc1123.short_months
+ r png_combine_row.display_mask
+ r png_combine_row.row_mask
  r png_digit
+ r png_do_read_interlace.png_pass_inc
+ r png_format_number.digits
+ r png_formatted_warning.valid_parameters
  r png_read_finish_row.png_pass_yinc
  r png_read_finish_row.png_pass_ystart
- r png_read_row.png_pass_dsp_mask
- r png_read_row.png_pass_mask
  r png_read_start_row.png_pass_inc
  r png_read_start_row.png_pass_start
- r png_write_IDAT.png_IDAT
- r png_write_IEND.png_IEND
- r png_write_IHDR.png_IHDR
- r png_write_PLTE.png_PLTE
- r png_write_bKGD.png_bKGD
- r png_write_cHRM_fixed.png_cHRM
- r png_write_gAMA_fixed.png_gAMA
- r png_write_hIST.png_hIST
- r png_write_iCCP.png_iCCP
- r png_write_iTXt.png_iTXt
- r png_write_oFFs.png_oFFs
- r png_write_pCAL.png_pCAL
- r png_write_pHYs.png_pHYs
- r png_write_sBIT.png_sBIT
- r png_write_sCAL_s.png_sCAL
- r png_write_sPLT.png_sPLT
- r png_write_sRGB.png_sRGB
- r png_write_tEXt.png_tEXt
- r png_write_tIME.png_tIME
- r png_write_tRNS.png_tRNS
- r png_write_zTXt.png_zTXt
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
@@ -15048,9 +14819,11 @@
  t png_build_16bit_table
  t png_format_buffer
  t png_inflate
- t png_init_filter_heuristics
- t png_text_compress
- t png_write_compressed_data_out
+ t png_read_filter_row_avg
+ t png_read_filter_row_paeth_1byte_pixel
+ t png_read_filter_row_paeth_multibyte_pixel
+ t png_read_filter_row_sub
+ t png_read_filter_row_up
  t post_process_1pass
  t post_process_2pass
  t post_process_prepass

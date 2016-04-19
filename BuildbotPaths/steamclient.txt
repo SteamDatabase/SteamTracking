@@ -1,14 +1,8 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/lib/engines
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl
 /Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/cert.pem
 /Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/certs
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.i386/ssl/private
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.x86_64/lib/engines
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.x86_64/ssl
 /Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.x86_64/ssl/cert.pem
 /Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.x86_64/ssl/certs
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1s/.x86_64/ssl/private
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libmathlib.a(color_conversion.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libmathlib.a(mathlib_base.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libmathlib.a(randsse.o)
@@ -1201,7 +1195,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libjpeg.a(jutils.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_chartables.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_compile.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_config.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_exec.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_fullinfo.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_globals.o)

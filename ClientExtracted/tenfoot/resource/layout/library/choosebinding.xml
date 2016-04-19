@@ -26,7 +26,7 @@
 			<Button id="mouse_middle_button" selectionpos="201,1" onactivate="SetBinding( mouse_button, middle );"><Label text="M" /></Button>
 			<Button id="mouse_scroll_down" selectionpos="201,2" onmoveright="SetInputFocus( mouse_right_button );" onmoveleft="SetInputFocus( mouse_left_button );" onmovedown="DoNothing();" onactivate="SetBinding( mouse_button, scroll_down );"><Label text="^" /></Button>	
 			<Button id="mouse_right_button" selectionpos="202,1" onmoveright="SetInputFocus( kb_key_esc );" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_forward_button );" onactivate="SetBinding( mouse_button, right );"><Label text="R" /></Button>
-			<Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );"><Label text="4" /></Button>	
+			<Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );" onmoveleft="SetInputFocus( button_b );"><Label text="4" /></Button>	
 			<Button id="mouse_forward_button" selectionpos="202,3" onmoveup="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( kb_key_tab );" onactivate="SetBinding( mouse_button, forward );" onmoveleft="SetInputFocus( mouse_back_button );"><Label text="5" /></Button>	
 		</Panel>
 		
@@ -127,7 +127,7 @@
 						<Button id="kb_key_pad_7" selectionpos="-3,2" onactivate="SetBinding( key_press, pad_7 );"><Label text="7" /></Button>
 						<Button id="kb_key_pad_8" selectionpos="-2,2" onactivate="SetBinding( key_press, pad_8 );"><Label text="8" /></Button>
 						<Button id="kb_key_pad_9" selectionpos="-1,2" onactivate="SetBinding( key_press, pad_9 );"><Label text="9" /></Button>
-						<Button id="kb_key_pad_plus" selectionpos="0,2" onmovedown="SetInputFocus( kb_key_pad_enter );" onmoveright="SetInputFocus( left_joystick );" onactivate="SetBinding( key_press, pad_plus );"><Label text="+" /></Button>
+						<Button id="kb_key_pad_plus" selectionpos="0,2" onmovedown="SetInputFocus( kb_key_pad_enter );" onmoveright="SetInputFocus( lstick_left );" onactivate="SetBinding( key_press, pad_plus );"><Label text="+" /></Button>
 					</Panel>
 				</Panel>
 				<Panel id="VKBRow4" selectionpos="0,3">
@@ -223,14 +223,22 @@
 			<Panel id="GamepadBoundLayerDPDN" />
 			<Panel id="GamepadBoundLayerDPUP" />
 			<Panel id="GamepadBoundLayerDPLT" />
-			<Panel id="GamepadBoundLayerDPRT" />			
+			<Panel id="GamepadBoundLayerDPRT" />
+			<Panel id="GamepadBoundLayerLSLeft" />
+			<Panel id="GamepadBoundLayerLSRight" />
+			<Panel id="GamepadBoundLayerLSUp" />
+			<Panel id="GamepadBoundLayerLSDown" />
+			<Panel id="GamepadBoundLayerRSLeft" />
+			<Panel id="GamepadBoundLayerRSRight" />
+			<Panel id="GamepadBoundLayerRSUp" />
+			<Panel id="GamepadBoundLayerRSDown" />
 			<Panel id="GamepadFocusLayer" />
 
 			<Panel id="GamepadRowWrapper">
 				<Panel id="GamepadTopRow" selectionpos="0,0">
 					<Panel id="LeftTriggerShoulderWrapper" selectionpos="15,0">
-						<Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onmoveleft="SetInputFocus( kb_key_pad_dash );" onactivate="SetBinding( gamepad, trigger_left );" />
-						<Button class="GamepadButton" id="left_shoulder" selectionpos="-1,1" onmoveleft="SetInputFocus( kb_key_pad_dash );" onactivate="SetBinding( gamepad, shoulder_left );" />
+						<Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onmoveleft="SetInputFocus( kb_key_pad_dash );" onmovedown="SetInputFocus( left_shoulder );" onactivate="SetBinding( gamepad, trigger_left );" />
+						<Button class="GamepadButton" id="left_shoulder" selectionpos="-1,1" onmoveleft="SetInputFocus( kb_key_pad_dash );" onmovedown="SetInputFocus( lstick_up );" onactivate="SetBinding( gamepad, shoulder_left );" />
 					</Panel>
 					<Panel id="RightTriggerShoulderWrapper" selectionpos="75,0">
 						<Button class="GamepadButton" id="right_trigger" selectionpos="0,0" onmoveright="SetInputFocus( mouse_left_button );" onactivate="SetBinding( gamepad, trigger_right );" />
@@ -238,16 +246,20 @@
 					</Panel>
 				</Panel>
 				<Panel id="GamepadMiddleRow" selectionpos="0,1">
-					<Button class="GamepadButton" id="left_joystick" selectionpos="15,1" onactivate="SetBinding( gamepad, joystick_left );" onmoveleft="SetInputFocus( kb_key_pad_plus );" onmovedown="SetInputFocus( dpad_up );" />
+					<Button class="GamepadButton" id="left_joystick" selectionpos="15,1" onactivate="SetBinding( gamepad, joystick_left );" onmoveleft="SetInputFocus( lstick_left );" onmovedown="SetInputFocus( lstick_down );" onmoveright="SetInputFocus( lstick_right );" onmoveup="SetInputFocus( lstick_up );" />
+					<Button class="GamepadButton" id="lstick_up" selectionpos="15,1" onactivate="SetBinding( gamepad, lstick_up );" onmoveleft="SetInputFocus( kb_key_pad_plus );" onmovedown="SetInputFocus( left_joystick );" />
+					<Button class="GamepadButton" id="lstick_down" selectionpos="15,1" onactivate="SetBinding( gamepad, lstick_down );" onmoveleft="SetInputFocus( kb_key_pad_plus );" onmoveup="SetInputFocus( left_joystick );" onmovedown="SetInputFocus( dpad_up );" />
+					<Button class="GamepadButton" id="lstick_left" selectionpos="15,1" onactivate="SetBinding( gamepad, lstick_left );" onmoveleft="SetInputFocus( kb_key_pad_plus );" onmoveright="SetInputFocus( left_joystick );" />
+					<Button class="GamepadButton" id="lstick_right" selectionpos="15,1" onactivate="SetBinding( gamepad, lstick_right );" onmoveleft="SetInputFocus( left_joystick );" onmovedown="SetInputFocus( dpad_up );" />
 					<Button class="GamepadButton" id="button_select" selectionpos="45,2" onactivate="SetBinding( gamepad, select );" onmoveup="SetInputFocus( left_shoulder );" />
-					<Button class="GamepadButton" id="button_start" selectionpos="55,2" onactivate="SetBinding( gamepad, start );" onmoveup="SetInputFocus( right_shoulder );" />
+					<Button class="GamepadButton" id="button_start" selectionpos="55,2" onactivate="SetBinding( gamepad, start );" onmoveup="SetInputFocus( right_shoulder );" onmovedown="SetInputFocus( rstick_up );" />
 					<Panel id="ABXYWrapper" selectionpos="75,1">
 						<Button class="GamepadButton" id="button_y" selectionpos="1,0" onactivate="SetBinding( gamepad, y );" onmoveright="SetInputFocus( mouse_left_button );" />
 						<Panel id="ABXYMiddleWrapper" selectionpos="0,1">
 							<Button class="GamepadButton" id="button_x" selectionpos="0,0" onactivate="SetBinding( gamepad, x );" />
 							<Button class="GamepadButton" id="button_b" selectionpos="2,0" onactivate="SetBinding( gamepad, b );" onmoveright="SetInputFocus( mouse_left_button );" />
 						</Panel>
-						<Button class="GamepadButton" id="button_a" selectionpos="1,2" onactivate="SetBinding( gamepad, a );" onmovedown="SetInputFocus( right_joystick );" onmoveleft="SetInputFocus( button_x );" onmoveright="SetInputFocus( button_b );" />
+						<Button class="GamepadButton" id="button_a" selectionpos="1,2" onactivate="SetBinding( gamepad, a );" onmovedown="SetInputFocus( rstick_up );" onmoveleft="SetInputFocus( button_x );" onmoveright="SetInputFocus( button_b );" />
 					</Panel>
 				</Panel>
 				<Panel id="GamepadBottomRow" selectionpos="1,2">
@@ -255,11 +267,15 @@
 						<Button class="GamepadButton" id="dpad_up" selectionpos="1,0" onactivate="SetBinding( gamepad, dpad_up );" />
 						<Panel id="DpadMiddleWrapper" selectionpos="0,1">
 							<Button class="GamepadButton" id="dpad_left" selectionpos="0,0" onactivate="SetBinding( gamepad, dpad_left );" onmoveleft="SetInputFocus( kb_key_pad_6 );" />
-							<Button class="GamepadButton" id="dpad_right" selectionpos="2,0" onactivate="SetBinding( gamepad, dpad_right );" onmoveright="SetInputFocus( right_joystick );" />
+							<Button class="GamepadButton" id="dpad_right" selectionpos="2,0" onactivate="SetBinding( gamepad, dpad_right );" onmoveright="SetInputFocus( rstick_left );" />
 						</Panel>
 						<Button class="GamepadButton" id="dpad_down" selectionpos="1,2" onmoveright="SetInputFocus( dpad_right );" onactivate="SetBinding( gamepad, dpad_down );" />
 					</Panel>
-					<Button class="GamepadButton" id="right_joystick" selectionpos="60,2" onactivate="SetBinding( gamepad, joystick_right );" onmoveleft="SetInputFocus( dpad_right );" />
+					<Button class="GamepadButton" id="right_joystick" selectionpos="60,2" onactivate="SetBinding( gamepad, joystick_right );" onmoveleft="SetInputFocus( rstick_left );" onmoveright="SetInputFocus( rstick_right );" onmoveup="SetInputFocus( rstick_up );" onmovedown="SetInputFocus( rstick_down );" />
+					<Button class="GamepadButton" id="rstick_up" selectionpos="60,2" onactivate="SetBinding( gamepad, rstick_up );" onmoveleft="SetInputFocus( dpad_right );" onmovedown="SetInputFocus( right_joystick );" />
+					<Button class="GamepadButton" id="rstick_down" selectionpos="60,2" onactivate="SetBinding( gamepad, rstick_down );" onmoveleft="SetInputFocus( dpad_right );" onmoveup="SetInputFocus( right_joystick );" />
+					<Button class="GamepadButton" id="rstick_left" selectionpos="60,2" onactivate="SetBinding( gamepad, rstick_left );" onmoveleft="SetInputFocus( dpad_right );" onmoveright="SetInputFocus( right_joystick );"/>
+					<Button class="GamepadButton" id="rstick_right" selectionpos="60,2" onactivate="SetBinding( gamepad, rstick_right );" onmoveleft="SetInputFocus( right_joystick );" />
 				</Panel>
 			</Panel>
 		</Panel>

@@ -287,10 +287,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngrutil.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngset.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngtrans.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngwio.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngwrite.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngwtran.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngwutil.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/color.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.h

@@ -19,7 +19,7 @@
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
 		"LocalCostToLeaveChina"							6.5
-		"LocalCostCanadaToUS"					1.5
+		"LocalCostCanadaToUS"					2.5
 		"LocalCostIndiaToDubai"					2
 		"InwardCost"	0.2
 	}
@@ -31,6 +31,7 @@
 		{
 			"name"	"default"
 			"region"	"global"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 { "dest"	31	"cost"	InwardCost }
@@ -42,13 +43,13 @@
 		{
 			"name" "US - Chicago"
 			"region"	"usa"
-			"latitude"	"41.849105"
-			"longitude"	"-87.635622"
+			"countrycode"	"US"
+			"latitude"	"41.882673"
+			"longitude"	"-87.623321"
 			"edges"
 			{
 				0 { "dest"	79  }
 				1 { "dest"	80  }
-				2 { "dest"	2  }
 				3 { "dest"	63	"cost"	InwardCost }
 				4 { "dest"	95  }
 				5 { "dest"	77  }
@@ -67,6 +68,7 @@
 		{
 			"name" "US - New York"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"40.728527"
 			"longitude"	"-73.990949"
 			"edges"
@@ -74,12 +76,6 @@
 				0 { "dest"	63	"cost"	InwardCost }
 				1 { "dest"	83  }
 				2 { "dest"	82  }
-				3 { "dest"	1  }
-				4
-				{ 
-					"dest"	81 
-					"cost"	LocalCostOneWayCellEdge
-				}				
 				5 { "dest"	 3  }
 			}
 		}
@@ -90,6 +86,7 @@
 			"name" "West Atlantic"
 			"transit"	1
 			"region"	"usa"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 { "dest"	 63  }
@@ -106,8 +103,9 @@
 		{
 			"name" "UK - London"
 			"region"	"europe"
-			"latitude"	"51.508742"
-			"longitude"	"-2.247562"
+			"countrycode"	"GB"
+			"latitude"	"51.500710"
+			"longitude"	"-0.124569"
 			"edges"
 			{
 				0 { "dest"	85 }
@@ -128,8 +126,9 @@
 		{
 			"name" "Germany - Frankfurt"
 			"region"	"europe"
-			"latitude"	"50.113533"
-			"longitude"	"8.688469"
+			"countrycode"	"DE"
+			"latitude"	"50.106744"
+			"longitude"	"8.662188"
 			"edges"
 			{
 	
@@ -166,6 +165,7 @@
 			"name" "6 - Deprecated"
 			"deprecated" 1
 			"region"	"europe"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 { "dest"	 29 }
@@ -178,8 +178,9 @@
 		{
 			"name" "Russia - Moscow"
 			"region"	"russia"
-			"latitude"	"55.754941"
-			"longitude"	"37.616329"
+			"countrycode"	"RU"
+			"latitude"	"55.750969"
+			"longitude"	"37.616969"
 			"edges"
 			{
 				0 { "dest"	66 }
@@ -194,8 +195,9 @@
 		{
 			"name" "South Korea"
 			"region"	"korea"
-			"latitude"	"37.557642"
-			"longitude"	"126.973629"
+			"countrycode"	"KR"
+			"latitude"	"37.555928"
+			"longitude"	"126.970543"
 			"edges"
 			{
 				0
@@ -209,6 +211,7 @@
 					"cost"	LocalCostOneWayCellEdge
 				}
 				2 { "dest"	17 }
+				3 { "dest"	32 	"cost"	2 }
 			}
 		}
 
@@ -217,6 +220,7 @@
 		{
 			"name" "Taiwan"
 			"region"	"asia"
+			"countrycode"	"TW"
 			"latitude"	"23.84565"
 			"longitude"	"120.992002"
 			"edges"
@@ -232,8 +236,9 @@
 		{
 			"name" "US - San Jose"
 			"region"	"usa"
-			"latitude"	"37.771258"
-			"longitude"	"-122.409775"
+			"countrycode"	"US"
+			"latitude"	"37.612217"
+			"longitude"	"-122.218863"
 			"edges"
 			{
 				0 { "dest"	75 }
@@ -254,8 +259,9 @@
 		{
 			"name" "US - Phoenix"
 			"region"	"usa"
-			"latitude"	"33.447485"
-			"longitude"	"-112.063508"
+			"countrycode"	"US"
+			"latitude"	"33.449131"
+			"longitude"	"-112.068850"
 			"edges"
 			{
 				0 { "dest"	64 	"cost"	InwardCost}
@@ -268,8 +274,9 @@
 		{
 			"name" "US - Miami"
 			"region"	"usa"
-			"latitude"	"25.78258"
-			"longitude"	"-80.233369"
+			"countrycode"	"US"
+			"latitude"	"25.776221"
+			"longitude"	"-80.186072"
 			"edges"
 			{
 				0 { "dest"	50  	"cost"	InwardCost }
@@ -296,6 +303,7 @@
 		{
 			"name" "East Atlantic"
 			"transit"	1
+			"countrycode"	"--"
 			"region"	"global"
 			"edges"
 			{
@@ -313,11 +321,12 @@
 		{
 			"name" "France - Paris"
 			"region"	"europe"
-			"latitude"	"48.864715"
-			"longitude"	"2.349358"
+			"countrycode"	"FR"
+			"latitude"	"48.859961"
+			"longitude"	"2.326540"
 			"edges"
 			{
-				0 { "dest"	 4  	"cost"	InwardCost}
+				0 { "dest"	 4  	"cost"	0.8 }
 				1 { "dest"	 5  	"cost"	InwardCost}
 				2 { "dest"	15  	"cost"	InwardCost}
 				3 { "dest"	129  	"cost"	InwardCost}
@@ -334,13 +343,14 @@
 		{
 			"name" "Netherlands"
 			"region"	"europe"
-			"latitude"	"52.372246"
-			"longitude"	"4.888058"
+			"countrycode"	"NL"
+			"latitude"	"52.379115"
+			"longitude"	"4.900231"
 			"edges"
 			{
-				0 { "dest"	4  	"cost"	InwardCost}
+				0 { "dest"	4  	"cost"	0.8 }
 				1 { "dest"	5  	"cost"	InwardCost}
-				2 { "dest"	129  	"cost"	InwardCost}
+				2 { "dest"	129  	"cost"	1}
 				3 { "dest"	14  }
 				4 { "dest"	86  }
 				5 { "dest"	87  }
@@ -352,6 +362,7 @@
 		{
 			"name" "Romania"
 			"region"	"europe"
+			"countrycode"	"RO"
 			"latitude"	"44.429857"
 			"longitude"	"26.097164"
 			"edges"
@@ -367,6 +378,7 @@
 			"name" "West Pacific"
 			"transit"	1
 			"region"	"global"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 
@@ -398,6 +410,7 @@
 			"name" "East Pacific"
 			"transit"	1
 			"region"	"global"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 { "dest"	10  }
@@ -415,6 +428,7 @@
 			"name" "Asia To Australia"
 			"transit"	1
 			"region"	"global"
+			"countrycode"	"--"
 			"edges"
 			{
 				0 { "dest"	52  }
@@ -428,8 +442,9 @@
 		{
 			"name" "Canada - Toronto"
 			"region"	"canada"
-			"latitude"	"43.651975"
-			"longitude"	"-79.388924"
+			"countrycode"	"CA"
+			"latitude"	"43.642539"
+			"longitude"	"-79.387030"
 			"edges"
 			{
 				0 { "dest"	 135  }
@@ -464,6 +479,7 @@
 		{
 			"name" "New Zealand"
 			"region"	"australasia"
+			"countrycode"	"NZ"
 			"latitude"	"-36.853252"
 			"longitude"	"174.768791"
 			"edges"
@@ -534,12 +550,13 @@
 		{
 			"name" "Brazil - Sao Paulo"
 			"region"	"brazil"
+			"countrycode"	"BR"
 			"latitude"	"-23.543845"
 			"longitude"	"-46.62941"
 			"edges"
 			{
 				0 { "dest"	23 }
-				1 { "dest"	116 }
+				1 { "dest"	116	"cost"	2 }
 				2 { "dest"	153 }
 				3 { "dest"	154 }
 				4 { "dest"	155 }
@@ -552,6 +569,7 @@
 		{
 			"name" "South Africa - Johannesburg"
 			"region"	"africa"
+			"countrycode"	"ZA"
 			"latitude"	"-26.214591"
 			"longitude"	"28.046379"
 			"edges"
@@ -598,8 +616,9 @@
 		{
 			"name" "Iceland & Greenland"
 			"region"	"europe"
-			"latitude"	"64.134577"
-			"longitude"	"-21.897469"
+			"countrycode"	"IS"
+			"latitude"	"64.150345"
+			"longitude"	"-21.933007"
 			"edges"
 			{
 				0 { "dest"	41  	"cost"	InwardCost }
@@ -611,8 +630,9 @@
 		{
 			"name" "Israel"
 			"region"	"middle east"
-			"latitude"	"31.770208"
-			"longitude"	"35.210323"
+			"countrycode"	"IL"
+			"latitude"	"32.086745"
+			"longitude"	"34.789736"
 			"edges"
 			{
 				0 { "dest"	 123	"cost"	InwardCost  }
@@ -624,6 +644,7 @@
 		{
 			"name" "US - Seattle"
 			"region"	"seattle"
+			"countrycode"	"US"
 			"latitude"	"47.605816"
 			"longitude"	"-122.336395"
 			"edges"
@@ -664,8 +685,9 @@
 		{
 			"name" "Japan"
 			"region"	"japan"
-			"latitude"	"35.692995"
-			"longitude"	"139.70129"
+			"countrycode"	"JP"
+			"latitude"	"35.676398"
+			"longitude"	"139.699326"
 			"edges"
 			{
 				0
@@ -702,6 +724,7 @@
 		{
 			"name" "China - Hong Kong"
 			"region"	"hongkong"
+			"countrycode"	"HK"
 			"latitude"	"22.289096"
 			"longitude"	"114.212151"
 			"edges"
@@ -720,8 +743,9 @@
 		{
 			"name" "Thailand"
 			"region"	"southeast asia"
-			"latitude"	"13.728713"
-			"longitude"	"100.538206"
+			"countrycode"	"TH"
+			"latitude"	"13.731878"
+			"longitude"	"100.539940"
 			"edges"
 			{
 				0 { "dest"	35 	"cost"	InwardCost }
@@ -733,8 +757,9 @@
 		{
 			"name" "Singapore"
 			"region"	"southeast asia"
-			"latitude"	"1.274309"
-			"longitude"	"103.852901"
+			"countrycode"	"SG"
+			"latitude"	"1.287287"
+			"longitude"	"103.852982"
 			"edges"
 			{
 				0 { "dest"	17  }
@@ -795,8 +820,9 @@
 		{
 			"name" "India - Mumbai"
 			"region"	"india"
-			"latitude"	"19.082884"
-			"longitude"	"72.835922"
+			"countrycode"	"IN"
+			"latitude"	"19.088819"
+			"longitude"	"72.867469"
 			"edges"
 			{
 				0 
@@ -823,8 +849,9 @@
 		{
 			"name" "Italy"
 			"region"	"europe"
-			"latitude"	"41.902277"
-			"longitude"	"12.478752"
+			"countrycode"	"IT"
+			"latitude"	"41.890195"
+			"longitude"	"12.492346"
 			"edges"
 			{
 				0 { "dest"	5 	"cost"	InwardCost }
@@ -837,6 +864,7 @@
 		{
 			"name" "Poland"
 			"region"	"europe"
+			"countrycode"	"PL"
 			"latitude"	"52.227799"
 			"longitude"	"21.005001"
 			"edges"
@@ -855,8 +883,9 @@
 		{
 			"name" "Russia - Yekaterinburg"
 			"region"	"russia"
-			"latitude"	"56.830944"
-			"longitude"	"60.609856"
+			"countrycode"	"RU"
+			"latitude"	"56.790101"
+			"longitude"	"60.597659"
 			"edges"
 			{
 				0 { "dest"	151 	"cost"	InwardCost }
@@ -869,8 +898,9 @@
 		{
 			"name" "Spain & Portugal"
 			"region"	"europe"
-			"latitude"	"40.42186"
-			"longitude"	"-3.715096"
+			"countrycode"	"ES"
+			"latitude"	"40.415405"
+			"longitude"	"-3.707378"
 			"edges"
 			{
 				0 { "dest"	14 	"cost"	InwardCost }
@@ -883,6 +913,7 @@
 		{
 			"name" "Denmark"
 			"region"	"europe"
+			"countrycode"	"DK"
 			"latitude"	"55.677584"
 			"longitude"	"12.562008"
 			"edges"
@@ -893,7 +924,7 @@
 				29
 				{ 
 					"dest"	29
-					"cost"	LocalCostOneWayCellEdge
+					"cost"	2
 				}					
 			}
 		}
@@ -903,8 +934,9 @@
 		{
 			"name" "Czech Republic"
 			"region"	"europe"
-			"latitude"	"50.071244"
-			"longitude"	"14.434319"
+			"countrycode"	"CZ"
+			"latitude"	"50.086473"
+			"longitude"	"14.411409"
 			"edges"
 			{
 				0 { "dest"	5 	"cost"	InwardCost }
@@ -918,6 +950,7 @@
 		{
 			"name" "Greece"
 			"region"	"europe"
+			"countrycode"	"GR"
 			"latitude"	"37.978845"
 			"longitude"	"23.717766"
 			"edges"
@@ -932,6 +965,7 @@
 		{
 			"name" "Indonesia"
 			"region"	"southeast asia"
+			"countrycode"	"ID"
 			"latitude"	"-6.227934"
 			"longitude"	"106.827621"
 			"edges"
@@ -945,8 +979,9 @@
 		{
 			"name" "Philippines"
 			"region"	"southeast asia"
-			"latitude"	"14.604847"
-			"longitude"	"120.979729"
+			"countrycode"	"PH"
+			"latitude"	"14.595480"
+			"longitude"	"120.979080"
 			"edges"
 			{
 				0 { "dest"	35 	"cost"	InwardCost }
@@ -958,9 +993,10 @@
 		46
 		{
 			"name" "China - Beijing"
+			"countrycode"	"CN"
 			"region"	"china"
-			"latitude"	"39.943436"
-			"longitude"	"116.385727"
+			"latitude"	"39.904586"
+			"longitude"	"116.397689"
 			"edges"
 			{
 				0 { "dest"	47 	"cost"	InwardCost }
@@ -973,6 +1009,7 @@
 		{
 			"name" "China - Shanghai"
 			"region"	"china"
+			"countrycode"	"CN"
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
 			"edges"
@@ -1003,6 +1040,7 @@
 		{
 			"name" "China - Chengdu"
 			"region"	"china"
+			"countrycode"	"CN"
 			"latitude"	"30.571721"
 			"longitude"	"104.049797"
 			"edges"
@@ -1018,8 +1056,9 @@
 		{
 			"name" "US - Denver"
 			"region"	"usa"
-			"latitude"	"39.732538"
-			"longitude"	"-104.983034"
+			"countrycode"	"US"
+			"latitude"	"39.742256"
+			"longitude"	"-104.996910"
 			"edges"
 			{
 				0 { "dest"	1 	"cost"	InwardCost }
@@ -1032,8 +1071,9 @@
 		{
 			"name" "US - Atlanta"
 			"region"	"usa"
-			"latitude"	"33.742613"
-			"longitude"	"-84.376717"
+			"countrycode"	"US"
+			"latitude"	"33.756316"
+			"longitude"	"-84.373447"
 			"edges"
 			{
 				0 { "dest"	63 	"cost"	InwardCost }
@@ -1048,8 +1088,9 @@
 		{
 			"name" "Australia - QLD"
 			"region"	"australasia"
-			"latitude"	"-27.459539"
-			"longitude"	"153.026848"
+			"countrycode"	"AU"
+			"latitude"	"-27.474656"
+			"longitude"	"153.030153"
 			"edges"
 			{
 				0 
@@ -1064,8 +1105,9 @@
 		{
 			"name" "Australia - NSW"
 			"region"	"australasia"
-			"latitude"	"-33.861293"
-			"longitude"	"151.181145"
+			"countrycode"	"AU"
+			"latitude"	"-33.852315"
+			"longitude"	"151.210770"
 			"edges"
 			{
 				0 { "dest"	17  }
@@ -1101,8 +1143,9 @@
 		{
 			"name" "Australia - VIC"
 			"region"	"australasia"
-			"latitude"	"-37.814124"
-			"longitude"	"144.962883"
+			"countrycode"	"AU"
+			"latitude"	"-37.818403"
+			"longitude"	"144.967007"
 			"edges"
 			{
 				0 
@@ -1122,8 +1165,9 @@
 		{
 			"name" "Australia - SA"
 			"region"	"australasia"
-			"latitude"	"-34.930979"
-			"longitude"	"138.590813"
+			"countrycode"	"AU"
+			"latitude"	"-34.928623"
+			"longitude"	"138.599958"
 			"edges"
 			{
 				0 
@@ -1148,6 +1192,7 @@
 		{
 			"name" "Australia - WA"
 			"region"	"australasia"
+			"countrycode"	"AU"
 			"latitude"	"-31.952162"
 			"longitude"	"115.849972"
 			"edges"
@@ -1259,6 +1304,7 @@
 		{
 			"name" "Russia - Novosibirsk"
 			"region"	"russia"
+			"countrycode"	"RU"
 			"latitude"	"55.021725"
 			"longitude"	"82.923088"
 			"edges"
@@ -1273,14 +1319,20 @@
 		{
 			"name" "US - Washington, DC"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"38.89768"
 			"longitude"	"-77.036531"
 			"edges"
 			{
-				0 { "dest"	2	"cost"	InwardCost }
+				0 { "dest"	2  }
 				1 { "dest"	83 }
 				2 { "dest"	84 }
 				3 { "dest"	50 }
+				4
+				{ 
+					"dest"	81 
+					"cost"	LocalCostOneWayCellEdge
+				}								
 			}
 		}
 		// #64 US - Los Angeles
@@ -1288,8 +1340,9 @@
 		{
 			"name" "US - Los Angeles"
 			"region"	"usa"
-			"latitude"	"34.045832"
-			"longitude"	"-118.240786"
+			"countrycode"	"US"
+			"latitude"	"34.038518"
+			"longitude"	"-118.228077"
 			"edges"
 			{
 				0 { "dest"	10	"cost"	InwardCost }
@@ -1308,6 +1361,7 @@
 		{
 			"name" "US - Dallas"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"32.780347"
 			"longitude"	"-96.800752"
 			"edges"
@@ -1324,11 +1378,13 @@
 		{
 			"name" "Sweden"
 			"region"	"europe"
+			"countrycode"	"SE"
 			"latitude"	"59.327585"
 			"longitude"	"18.070793"
 			"edges"
 			{
 				0 { "dest"	5	"cost"	InwardCost }
+				15 { "dest"	15 	"cost"	InwardCost }
 				1
 				{ 
 					"dest"	68
@@ -1348,8 +1404,9 @@
 		{
 			"name" "Norway"
 			"region"	"europe"
-			"latitude"	"59.919237"
-			"longitude"	"10.749264"
+			"countrycode"	"NO"
+			"latitude"	"59.910609"
+			"longitude"	"10.754294"
 			"edges"
 			{
 				0 { "dest"	66	"cost"	InwardCost }
@@ -1361,6 +1418,7 @@
 		{
 			"name" "Finland"
 			"region"	"europe"
+			"countrycode"	"FI"
 			"latitude"	"60.174306"
 			"longitude"	"24.937248"
 			"edges"
@@ -1373,6 +1431,7 @@
 		{
 			"name" "Ireland"
 			"region"	"europe"
+			"countrycode"	"IE"
 			"latitude"	"53.343993"
 			"longitude"	"-6.27491"
 			"edges"
@@ -1385,6 +1444,7 @@
 		{
 			"name" "Cambodia"
 			"region"	"southeast asia"
+			"countrycode"	"KH"
 			"latitude"	"11.566144"
 			"longitude"	"104.937973"
 			"edges"
@@ -1397,6 +1457,7 @@
 		{
 			"name" "Vietnam"
 			"region"	"southeast asia"
+			"countrycode"	"VN"
 			"latitude"	"10.844096"
 			"longitude"	"106.631584"
 			"edges"
@@ -1409,8 +1470,9 @@
 		{
 			"name" "Malaysia"
 			"region"	"southeast asia"
-			"latitude"	"3.135031"
-			"longitude"	"101.688595"
+			"countrycode"	"MY"
+			"latitude"	"3.152940"
+			"longitude"	"101.703790"
 			"edges"
 			{
 				0 { "dest"	35	"cost"	InwardCost }
@@ -1421,13 +1483,14 @@
 		{
 			"name" "Ukraine"
 			"region"	"europe"
-			"latitude"	"50.457504"
-			"longitude"	"30.518303"
+			"countrycode"	"UA"
+			"latitude"	"50.455690"
+			"longitude"	"30.521386"
 			"edges"
 			{
 				0 { "dest"	7 }
 				1 { "dest"	93 }
-				2 { "dest"	38 }
+				2 { "dest"	5}
 			}
 		}		
 		// #74 San Diego
@@ -1435,6 +1498,7 @@
 		{
 			"name" "US - San Diego"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"32.713355"
 			"longitude"	"-117.117219"
 			"edges"
@@ -1448,6 +1512,7 @@
 		{
 			"name" "US - Sacramento"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"38.582526"
 			"longitude"	"-121.510506"
 			"edges"
@@ -1460,6 +1525,7 @@
 		{
 			"name" "US - Minneapolis"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"44.974514"
 			"longitude"	"-93.267274"
 			"edges"
@@ -1472,6 +1538,7 @@
 		{
 			"name" "US - St. Louis"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"38.631891"
 			"longitude"	"-90.181704"
 			"edges"
@@ -1484,6 +1551,7 @@
 		{
 			"name" "US - Houston"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"29.75484"
 			"longitude"	"-95.367036"
 			"edges"
@@ -1502,6 +1570,7 @@
 		{
 			"name" "US - Detroit"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"42.326062"
 			"longitude"	"-83.04883"
 			"edges"
@@ -1514,6 +1583,7 @@
 		{
 			"name" "US - Pittsburgh"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"40.449037"
 			"longitude"	"-80.005617"
 			"edges"
@@ -1527,15 +1597,16 @@
 		{
 			"name" "Canada - Montreal"
 			"region"	"canada"
+			"countrycode"	"CA"
 			"latitude"	"45.506347"
 			"longitude"	"-73.555183"
 			"edges"
 			{
-				0 { "dest"	20	"cost"	InwardCost }
+				0 { "dest"	20	"cost"	InwardCost}
 				1 { "dest"	136 }
 				1 
 				{ 
-					"dest"	2 
+					"dest"	2
 					"cost"	LocalCostCanadaToUS
 				}
 			}
@@ -1545,6 +1616,7 @@
 		{
 			"name" "US - Boston"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"42.350425"
 			"longitude"	"-71.039314"
 			"edges"
@@ -1557,11 +1629,12 @@
 		{
 			"name" "US - Philadelphia"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"39.949753"
 			"longitude"	"-75.1579"
 			"edges"
 			{
-				0 { "dest"	2	"cost"	InwardCost }
+				0 { "dest"	2 }
 				1 { "dest"	63	"cost"	InwardCost }
 			}
 		}			
@@ -1570,6 +1643,7 @@
 		{
 			"name" "US - Charlotte"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"35.232159"
 			"longitude"	"-80.848818"
 			"edges"
@@ -1583,8 +1657,9 @@
 		{
 			"name" "UK - Manchester"
 			"region"	"europe"
-			"latitude"	"53.484777"
-			"longitude"	"-2.247562"
+			"countrycode"	"GB"
+			"latitude"	"53.474199"
+			"longitude"	"-2.248119"
 			"edges"
 			{
 				0 { "dest"	4	"cost"	InwardCost }
@@ -1595,6 +1670,7 @@
 		{
 			"name" "Belgium"
 			"region"	"europe"
+			"countrycode"	"BE"
 			"latitude"	"50.847573"
 			"longitude"	"4.348869"
 			"edges"
@@ -1608,8 +1684,9 @@
 		{
 			"name" "Germany - Dusseldorf"
 			"region"	"europe"
-			"latitude"	"51.227528"
-			"longitude"	"6.754875"
+			"countrycode"	"DE"
+			"latitude"	"51.219684"
+			"longitude"	"6.794386"
 			"edges"
 			{
 				1 { "dest"	5	"cost"	InwardCost }
@@ -1621,8 +1698,9 @@
 		{
 			"name" "Switzerland"
 			"region"	"europe"
-			"latitude"	"47.372315"
-			"longitude"	"8.546505"
+			"countrycode"	"CH"
+			"latitude"	"47.366074"
+			"longitude"	"8.541189"
 			"edges"
 			{
 				0 { "dest"	5	"cost"	InwardCost }
@@ -1634,6 +1712,7 @@
 		{
 			"name" "Germany - Hamburg"
 			"region"	"europe"
+			"countrycode"	"DE"
 			"latitude"	"53.550099"
 			"longitude"	"9.991207"
 			"edges"
@@ -1646,8 +1725,9 @@
 		{
 			"name" "Germany - Berlin"
 			"region"	"europe"
-			"latitude"	"52.509535"
-			"longitude"	"13.401604"
+			"countrycode"	"DE"
+			"latitude"	"52.516277"
+			"longitude"	"13.377734"
 			"edges"
 			{
 				1 { "dest"	91 }
@@ -1659,6 +1739,7 @@
 		{
 			"name" "Germany - Munich"
 			"region"	"europe"
+			"countrycode"	"DE"
 			"latitude"	"48.144098"
 			"longitude"	"11.577873"
 			"edges"
@@ -1672,8 +1753,9 @@
 		{
 			"name" "Austria"
 			"region"	"europe"
-			"latitude"	"48.210032"
-			"longitude"	"16.388168"
+			"countrycode"	"AT"
+			"latitude"	"48.207475"
+			"longitude"	"16.361858"
 			"edges"
 			{
 				0 { "dest"	5	"cost"	InwardCost }
@@ -1686,8 +1768,9 @@
 		{
 			"name" "Hungary"
 			"region"	"europe"
-			"latitude"	"47.494937"
-			"longitude"	"19.015617"
+			"countrycode"	"HU"
+			"latitude"	"47.498354"
+			"longitude"	"19.040453"
 			"edges"
 			{
 				0 { "dest"	92	"cost"	InwardCost }
@@ -1704,14 +1787,15 @@
 		{
 			"name" "Canada - Vancouver"
 			"region"	"canada"
-			"latitude"	"49.253465"
-			"longitude"	"-123.11451"
+			"countrycode"	"CA"
+			"latitude"	"49.295464"
+			"longitude"	"-123.140552"
 			"edges"
 			{
 				0 
 				{ 
 					"dest"	31 
-					"cost"	1
+					"cost"	LocalCostCanadaToUS
 				}
 				1 { "dest"	20	"cost"	InwardCost }
 				2 { "dest"	134 }
@@ -1721,7 +1805,8 @@
 		95
 		{
 			"name" "US - Columbus"
-			"region"	"europe"
+			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"39.962386"
 			"longitude"	"-83.018618"
 			"edges"
@@ -1734,6 +1819,7 @@
 		{
 			"name" "France - Marseille"
 			"region"	"europe"
+			"countrycode"	"FR"
 			"latitude"	"43.2932"
 			"longitude"	"5.359612"
 			"edges"
@@ -1753,8 +1839,9 @@
 		{
 			"name" "South Africa - Cape Town"
 			"region"	"africa"
-			"latitude"	"-33.92513"
-			"longitude"	"18.422356"
+			"countrycode"	"ZA"
+			"latitude"	"-33.917449"
+			"longitude"	"18.428065"
 			"edges"
 			{
 				0 { "dest"	26 }
@@ -1820,6 +1907,7 @@
 		{
 			"name" "LAN Event (USA)"
 			"region"	"usa"
+			"countrycode"	"US"
 			"edges"
 			{
 				0 
@@ -1835,6 +1923,7 @@
 		{
 			"name" "LAN Event (Europe)"
 			"region"	"europe"
+			"countrycode"	"GB"
 			"edges"
 			{
 				0 
@@ -1850,6 +1939,7 @@
 		{
 			"name" "LAN Event (Asia)"
 			"region"	"asia"
+			"countrycode"	"SG"
 			"edges"
 			{
 				0 
@@ -2019,6 +2109,7 @@
 		115
 		{
 			"name" "Mexico"
+			"countrycode"	"MX"
 			"region"	"north america"
 			"latitude"	"19.435514"
 			"longitude"	"-99.142342"
@@ -2032,8 +2123,9 @@
 		{
 			"name" "Argentina"
 			"region"	"south america"
-			"latitude"	"-34.606085"
-			"longitude"	"-58.383064"
+			"countrycode"	"AR"
+			"latitude"	"-34.603703"
+			"longitude"	"-58.381608"
 			"edges"
 			{
 				0 { "dest"	25 }
@@ -2045,8 +2137,9 @@
 		{
 			"name" "Chile"
 			"region"	"south america"
-			"latitude"	"-33.468108"
-			"longitude"	"-70.645523"
+			"countrycode"	"CL"
+			"latitude"	"-33.464900"
+			"longitude"	"-70.659992"
 			"edges"
 			{
 				0 { "dest"	116 }
@@ -2058,8 +2151,9 @@
 		{
 			"name" "Peru"
 			"region"	"south america"
-			"latitude"	"-12.039321"
-			"longitude"	"-77.059822"
+			"countrycode"	"PE"
+			"latitude"	"-12.046371"
+			"longitude"	"-77.042791"
 			"edges"
 			{
 				0 { "dest"	117 }
@@ -2070,6 +2164,7 @@
 		119
 		{
 			"name" "Colombia and Venezuela"
+			"countrycode"	"VE"
 			"region"	"south america"
 			"latitude"	"8.716343"
 			"longitude"	"-73.786382"
@@ -2154,8 +2249,9 @@
 		{
 			"name" "Turkey"
 			"region"	"middle east"
-			"latitude"	"41.071069"
-			"longitude"	"29.024162"
+			"countrycode"	"TR"
+			"latitude"	"41.022696"
+			"longitude"	"28.997054"
 			"edges"
 			{
 				0 { "dest"	92 	"cost"	InwardCost  }
@@ -2166,6 +2262,7 @@
 		{
 			"name" "Egypt"
 			"region"	"middle east"
+			"countrycode"	"EG"
 			"latitude"	"30.040566"
 			"longitude"	"31.221428"
 			"edges"
@@ -2178,8 +2275,9 @@
 		{
 			"name" "Saudi Arabia"
 			"region"	"middle east"
-			"latitude"	"24.686952"
-			"longitude"	"46.666489"
+			"countrycode"	"SA"
+			"latitude"	"24.691566"
+			"longitude"	"46.672031"
 			"edges"
 			{
 				0 { "dest"	127 }
@@ -2191,8 +2289,9 @@
 		{
 			"name" "United Arab Emirates"
 			"region"	"middle east"
-			"latitude"	"25.264568"
-			"longitude"	"55.292473"
+			"countrycode"	"UA"
+			"latitude"	"25.194631"
+			"longitude"	"55.274589"
 			"edges"
 			{
 				0 { "dest"	36 }
@@ -2203,8 +2302,9 @@
 		{
 			"name" "Pakistan"
 			"region"	"asia"
-			"latitude"	"24.906367"
-			"longitude"	"67.013168"
+			"countrycode"	"PK"
+			"latitude"	"24.845544"
+			"longitude"	"66.992161"
 			"edges"
 			{
 				0 { "dest"	36 }
@@ -2214,8 +2314,9 @@
 		{
 			"name" "Luxembourg"
 			"region"	"europe"
-			"latitude"	"49.614269"
-			"longitude"	"6.135006"
+			"countrycode"	"LU"
+			"latitude"	"49.600567"
+			"longitude"	"6.134500"
 			"edges"
 			{
 				0 { "dest"	15	"cost"	InwardCost }
@@ -2227,6 +2328,7 @@
 		{
 			"name" "West Africa"
 			"region"	"africa"
+			"countrycode"	"NG"
 			"latitude"	"6.402648"
 			"longitude"	"3.420868"
 			"edges"
@@ -2238,6 +2340,7 @@
 		{
 			"name" "East Africa"
 			"region"	"africa"
+			"countrycode"	"KE"
 			"latitude"	"-1.285293"
 			"longitude"	"36.835442"
 			"edges"
@@ -2249,8 +2352,9 @@
 		{
 			"name" "Northwest Africa"
 			"region"	"africa"
-			"latitude"	"33.523079"
-			"longitude"	"-7.584"
+			"countrycode"	"MA"
+			"latitude"	"33.594967"
+			"longitude"	"-7.618794"
 			"edges"
 			{
 				0 { "dest"	24 }
@@ -2261,6 +2365,7 @@
 		{
 			"name" "Canada - Edmonton"
 			"region"	"canada"
+			"countrycode"	"CA"
 			"latitude"	"53.543572"
 			"longitude"	"-113.489628"
 			"edges"
@@ -2272,6 +2377,7 @@
 		{
 			"name" "Canada - Calgary"
 			"region"	"canada"
+			"countrycode"	"CA"
 			"latitude"	"51.048301"
 			"longitude"	"-114.055424"
 			"edges"
@@ -2285,6 +2391,7 @@
 		{
 			"name" "Canada - Winnipeg"
 			"region"	"canada"
+			"countrycode"	"CA"
 			"latitude"	"49.898173"
 			"longitude"	"-97.141972"
 			"edges"
@@ -2296,6 +2403,7 @@
 		{
 			"name" "Canada - Ottawa"
 			"region"	"canada"
+			"countrycode"	"CA"
 			"latitude"	"45.421588"
 			"longitude"	"-75.696659"
 			"edges"
@@ -2308,6 +2416,7 @@
 		{
 			"name" "China (Perfect World Unicom)"
 			"region"	"china-unicom"
+			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
@@ -2320,6 +2429,7 @@
 		{
 			"name" "China (Perfect World Telecom)"
 			"region"	"china-telecom"
+			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
@@ -2332,6 +2442,7 @@
 		{
 			"name" "Central America"
 			"region"	"central america"
+			"countrycode"	"PA"
 			"latitude"	"11.539234"
 			"longitude"	"-85.633793"
 			"edges"
@@ -2343,6 +2454,7 @@
 		{
 			"name" "Caribbean"
 			"region"	"central america"
+			"countrycode"	"PR"
 			"latitude"	"18.542117"
 			"longitude"	"-72.335701"
 			"edges"
@@ -2354,6 +2466,7 @@
 		{
 			"name" "India - Chennai"
 			"region"	"india"
+			"countrycode"	"IN"
 			"latitude"	"13.090179"
 			"longitude"	"80.240707"
 			"edges"
@@ -2374,8 +2487,9 @@
 		{
 			"name" "India - Delhi"
 			"region"	"india"
-			"latitude"	"28.613459"
-			"longitude"	"77.186508"
+			"countrycode"	"IN"
+			"latitude"	"28.614255"
+			"longitude"	"77.201825"
 			"edges"
 			{
 				0 { "dest"	36	"cost"	InwardCost }
@@ -2386,8 +2500,9 @@
 		{
 			"name" "India - Bangalore"
 			"region"	"india"
-			"latitude"	"12.961736"
-			"longitude"	"77.625961"
+			"countrycode"	"IN"
+			"latitude"	"12.974995"
+			"longitude"	"77.593371"
 			"edges"
 			{
 				0 { "dest"	36	"cost"	InwardCost }
@@ -2398,8 +2513,9 @@
 		{
 			"name" "India - Hyderabad"
 			"region"	"india"
-			"latitude"	"17.392579"
-			"longitude"	"78.460922"
+			"countrycode"	"IN"
+			"latitude"	"17.376301"
+			"longitude"	"78.483646"
 			"edges"
 			{
 				0 { "dest"	36	"cost"	InwardCost }
@@ -2410,8 +2526,9 @@
 		{
 			"name" "India - Kolkata"
 			"region"	"india"
-			"latitude"	"22.593726"
-			"longitude"	"88.37059"
+			"countrycode"	"IN"
+			"latitude"	"22.585163"
+			"longitude"	"88.346783"
 			"edges"
 			{
 				0 { "dest"	36	"cost"	InwardCost }
@@ -2422,6 +2539,7 @@
 		{
 			"name" "US - Honolulu"
 			"region"	"usa"
+			"countrycode"	"US"
 			"latitude"	"21.307033"
 			"longitude"	"-157.858567"
 			"edges"
@@ -2433,8 +2551,9 @@
 		{
 			"name" "US - Anchorage"
 			"region"	"usa"
-			"latitude"	"61.219020"
-			"longitude"	"-149.901452"
+			"countrycode"	"US"
+			"latitude"	"61.167744"
+			"longitude"	"-150.042759"
 			"edges"
 			{
 				0 { "dest"	31	"cost"	InwardCost }
@@ -2444,6 +2563,7 @@
 		{
 			"name" "China - Guangzhou"
 			"region"	"china"
+			"countrycode"	"CN"
 			"latitude"	"23.125205"
 			"longitude"	"113.257198"
 			"edges"
@@ -2457,6 +2577,7 @@
 		{
 			"name" "Russia - St. Petersburg"
 			"region"	"russia"
+			"countrycode"	"RU"
 			"latitude"	"59.933330"
 			"longitude"	"30.320451"
 			"edges"
@@ -2468,8 +2589,9 @@
 		{
 			"name" "Russia - Rostov-na-Donu"
 			"region"	"russia"
-			"latitude"	"47.23"
-			"longitude"	"39.7"
+			"countrycode"	"RU"
+			"latitude"	"47.237902"
+			"longitude"	"39.699560"
 			"edges"
 			{
 				0 { "dest"	7	"cost"	InwardCost }
@@ -2479,8 +2601,9 @@
 		{
 			"name" "Russia - Kazan"
 			"region"	"russia"
-			"latitude"	"55.790278"
-			"longitude"	"49.134722"
+			"countrycode"	"RU"
+			"latitude"	"55.796787"
+			"longitude"	"49.098977"
 			"edges"
 			{
 				0 { "dest"	7	"cost"	InwardCost }
@@ -2491,20 +2614,22 @@
 		{
 			"name" "Russia - Vladivostok"
 			"region"	"eastern_russia"
+			"countrycode"	"RU"
 			"latitude"	"43.133333"
 			"longitude"	"131.9"
 			"edges"
 			{
 				0 { "dest"	157	"cost"	InwardCost }
-				1 { "dest"	32	"cost"	2 }
+				1 { "dest"	32	"cost"	3 }
 			}		
 		}
 		153
 		{
 			"name" "Brazil - Recife"
 			"region"	"brazil"
-			"latitude"	"-8.053452"
-			"longitude"	"-34.931101"
+			"countrycode"	"BR"
+			"latitude"	"-8.056999"
+			"longitude"	"-34.881475"
 			"edges"
 			{
 				0 { "dest"	25	"cost"	InwardCost }
@@ -2514,6 +2639,7 @@
 		{
 			"name" "Brazil - Brasilia"
 			"region"	"brazil"
+			"countrycode"	"BR"
 			"latitude"	"-15.79"
 			"longitude"	"-47.88"
 			"edges"
@@ -2525,8 +2651,9 @@
 		{
 			"name" "Brazil - Rio de Janeiro"
 			"region"	"brazil"
-			"latitude"	"-22.9"
-			"longitude"	"-43.2"
+			"countrycode"	"BR"
+			"latitude"	"-22.903390"
+			"longitude"	"-43.191672"
 			"edges"
 			{
 				0 { "dest"	25	"cost"	InwardCost }
@@ -2536,8 +2663,9 @@
 		{
 			"name" "Brazil - Porto Alegre"
 			"region"	"brazil"
-			"latitude"	"-30.03"
-			"longitude"	"-51.23"
+			"countrycode"	"BR"
+			"latitude"	"-30.042432"
+			"longitude"	"-51.233240"
 			"edges"
 			{
 				0 { "dest"	25	"cost"	InwardCost }
@@ -2547,8 +2675,9 @@
 		{
 			"name" "Russia - Irkutsk"
 			"region"	"eastern_russia"
-			"latitude"	"52.312222"
-			"longitude"	"104.295833"
+			"countrycode"	"RU"
+			"latitude"	"52.298552"
+			"longitude"	"104.296581"
 			"edges"
 			{
 				0 { "dest"	62	"cost"	InwardCost }
@@ -2559,8 +2688,9 @@
 		{
 			"name" "Kazakhstan"
 			"region"	"russia"
-			"latitude"	"51.166667"
-			"longitude"	"71.433333"
+			"countrycode"	"KZ"
+			"latitude"	"51.125940"
+			"longitude"	"71.446104"
 			"edges"
 			{
 				0 { "dest"	62	"cost"	InwardCost }
@@ -2571,8 +2701,9 @@
 		{
 			"name" "China - Wuhan"
 			"region"	"china"
-			"latitude"	"30.583333"
-			"longitude"	"114.283333"
+			"countrycode"	"CN"
+			"latitude"	"30.531663"
+			"longitude"	"114.282076"
 			"edges"
 			{
 				0 { "dest"	48 }
@@ -2583,8 +2714,9 @@
 		{
 			"name" "China - Xi'an"
 			"region"	"china"
-			"latitude"	"34.266667"
-			"longitude"	"108.9"
+			"countrycode"	"CN"
+			"latitude"	"34.296195"
+			"longitude"	"108.964354"
 			"edges"
 			{
 				0 { "dest"	48 }
@@ -2650,7 +2782,7 @@
 		"BH"	30
 		
 		//"Bangladesh"	
-		"BD"	36
+		"BD"	145
 		
 		//"Barbados"		
 		"BB"	140
@@ -2671,7 +2803,7 @@
 		"BM"	140
 		
 		//"Bhutan"		
-		"BT"	36
+		"BT"	145
 		
 		//"Bolivia"		
 		"BO"	118
@@ -2942,12 +3074,15 @@
 		
 		//"Korea	Republic of"			
 		"KR"	8
+
+		//"Korea	PDRK"			
+		"KP"	8
 		
 		//"Kuwait"						
 		"KW"	127
 		
 		//"Kyrgyzstan"					
-		"KG"	39
+		"KG"	158
 		
 		//"Lao People's Democratic Republic"			
 		"LA"	34
@@ -3049,7 +3184,7 @@
 		"NR"	0
 		
 		//"Nepal"							
-		"NP"	36
+		"NP"	142
 		
 		//"Netherlands"					
 		"NL"	15
@@ -3232,7 +3367,7 @@
 		"TW"	9
 		
 		//"Tajikistan"					
-		"TJ"	39
+		"TJ"	158
 		
 		//"Tanzania	United Republic of"
 		"TZ"	131
@@ -3262,7 +3397,7 @@
 		"TR"	124
 		
 		//"Turkmenistan"					
-		"TM"	39
+		"TM"	158
 		
 		//"Turks and Caicos Islands"			
 		"TC"	140
@@ -3292,7 +3427,7 @@
 		"UY"	116
 		
 		//"Uzbekistan"					
-		"UZ"	39
+		"UZ"	158
 		
 		//"Vanuatu"						
 		"VU"	0

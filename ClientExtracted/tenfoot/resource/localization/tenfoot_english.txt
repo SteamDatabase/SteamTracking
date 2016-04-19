@@ -1892,6 +1892,14 @@
 	"Library_Details_GamepadButton_B"				"B BUTTON"
 	"Library_Details_GamepadButton_X"				"X BUTTON"
 	"Library_Details_GamepadButton_Y"				"Y BUTTON"
+	"Library_Details_GamepadButton_LStickUp"		"LSTICK UP"
+	"Library_Details_GamepadButton_LStickDown"		"LSTICK DOWN"
+	"Library_Details_GamepadButton_LStickLeft"		"LSTICK LEFT"
+	"Library_Details_GamepadButton_LStickRight"		"LSTICK RIGHT"
+	"Library_Details_GamepadButton_RStickUp"		"RSTICK UP"
+	"Library_Details_GamepadButton_RStickDown"		"RSTICK DOWN"
+	"Library_Details_GamepadButton_RStickLeft"		"RSTICK LEFT"
+	"Library_Details_GamepadButton_RStickRight"		"RSTICK RIGHT"
 
 	"Library_Details_SourceMode_None_Title"				"UNASSIGNED"
 	"Library_Details_SourceMode_Joystick_Move_Title"	"JOYSTICK MOVE"
@@ -4594,6 +4602,7 @@
 	"ControllerBinding_ModeShiftDropDown_Y_Description" "When pressed, this button will shift the normal mode of the controller into its alternate mode which is assigned on this screen."
 	"ControllerBinding_PresetDropDown_None"		"None"
 	"ControllerBinding_PresetDropDown_Next"		"Next Action Set"
+	"ControllerBinding_PresetDropDown_Prev"		"Previous Action Set"
 	//Dpad
 	"ControllerBinding_ModeDropDown_Dpad" "Style of Input - Directional Pad"
 	"ControllerBinding_ModeDropDown_Dpad_Description" "This input will act as a D-pad.  D-Pad's are a 4 way directional input that is digital (on or off) in nature.  Any type of button can be assigned, but X-Input buttons will only work with X-Input Gamepad compatible games."
