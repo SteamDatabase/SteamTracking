@@ -1,0 +1,443 @@
+
+/* header */
+
+body.v6 .page_title_area
+{
+	position: relative;
+	height: auto;
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+.admin_only_notice
+{
+	position: absolute;
+	top: 25px;
+	padding: 3px;
+	background-color: darkred;
+	color: white;
+	font-size: 11px;
+}
+
+.game_page_background.game
+{
+	min-height: 1080px;
+}
+.page_content.with_background
+{
+	background-color: rgba(0,0,0,0.3);
+	padding: 12px;
+}
+div.rightcol
+{
+	width: 286px;
+}
+.item_store_home div.leftcol
+{
+	width: 640px;
+}
+
+.breadcrumbs
+{
+	margin-bottom: 10px;
+	padding-top: 7px;
+}
+
+.pageHeaderCapsule
+{
+	float: left;
+	box-shadow: 0 0 5px 0 #000000;
+}
+body.v6 .item .page_content_ctn .page_content
+{
+	width: 916px;
+}
+body.v6 .page_title_area.browse h2.pageheader,
+body.v6 h2.pageheader
+{
+	margin-bottom: 6px;
+}
+
+body.v6 h2.pageheader.itemtitle
+{
+	color: #a7acac;
+	font-size: 30px;
+}
+
+#store_search
+{
+	margin-top: -4px;
+}
+
+#cart_status_data
+{
+	float: right;
+}
+#cart_status_data .store_header_btn
+{
+	height: 27px;
+}
+#cart_status_data .store_header_btn_content
+{
+	line-height: 27px;
+}
+
+.search_bar
+{
+	position: relative;
+	width: 928px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	padding: 6px 0px 0px 12px;
+	height: 33px;
+	background-color: rgba(255, 255, 255, 0.13 );
+}
+.searchbox
+{
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/itemstore_header_search.png?v=1 );
+}
+.searchbox:hover
+{
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/itemstore_header_search_hover.png?v=1 );
+}
+.searchbox input.default
+{
+	color: #aaaaaa;
+}
+
+.itemstore_tabarea
+{
+}
+.itemstore_tabbar_ctn
+{
+	height: 35px;
+}
+.itemstore_tabbar
+{
+	white-space: nowrap;
+	margin-bottom: 0px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 35px;
+}
+
+.itemstore_tabarea .itemstore_tab {
+	display: inline-block;
+	margin-right: 0px;
+	border-bottom: 2px solid rgba(0,0,0,0);
+}
+.itemstore_tabarea .itemstore_tab .tab_content {
+	font-size: 13px;
+	color: #ffffff;
+	line-height: 30px;
+	padding: 0 8px;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+.itemstore_tabarea .itemstore_tab .tab_content:hover {
+	color: #ffffff;
+}
+
+.itemstore_tabarea .itemstore_tab.active {
+	border-bottom: 2px solid #ffffff;
+}
+.itemstore_tabarea .itemstore_tab.active .tab_content {
+	line-height: 30px;
+	font-size: 14px;
+	color: #ffffff;
+	text-shadow: -1px -1px rgba( 0, 0, 0, 0.25 );
+	cursor: default;
+	box-shadow: none;
+}
+
+/* home */
+.item_store_home_header
+{
+	padding-top: 30px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	font-style: italic;
+	color: #7ea64b;
+}
+
+.item_store_home .item_def_grid_item:nth-child(3n)
+{
+	margin-right: 0px;
+}
+.item_store_home .item_def_grid_item
+{
+	margin-right: 10px;
+}
+.item_store_home .item_def_grid_item .item_def_icon
+{
+	width: 184px;
+	height: 184px;
+}
+
+.item_def_row_item.small .item_def_icon
+{
+	width: 50px;
+	height: 50px;
+}
+.item_def_row_item.small .item_def_name
+{
+	font-size: 12px;
+	line-height: 12px;
+	display: block;
+}
+.item_def_row_item.small .item_def_price
+{
+	font-size: 12px;
+	line-height: 12px;
+	position: relative;
+	display: block;
+	margin-top: 5px;
+	margin-left: 12px;
+	right: 0px;
+	top: 0px;
+}
+
+/* browse paging */
+.ItemDefs_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 2px;
+	padding: 0px 8px;
+	margin-top: 6px;
+}
+
+.ItemDefs_paging_summary
+{
+	color: #969696;
+	float: left;
+}
+
+.ItemDefs_paging_controls
+{
+	float: right;
+}
+
+.ItemDefs_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.ItemDefs_paging_pagelink, .ItemDefs_paging_controls .commentthread_pagelink {
+	color: #999999;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.ItemDefs_paging_pagelink:hover, .ItemDefs_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.ItemDefs_paging_pagelink.active, .ItemDefs_paging_controls .commentthread_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.ItemDefs_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+
+/* browsing */
+.loading_item_defs
+{
+	padding-top: 100px;
+	text-align: center;
+	font-size: 24px;
+}
+.loading_item_defs img
+{
+	vertical-align: middle;
+	padding-right: 20px;
+}
+
+.item_def_rows
+{
+	min-height: 735px;
+}
+
+.item_def_row_item
+{
+	position: relative;
+	background: rgba(30,30,30,0.3);
+	margin-bottom: 5px;
+	border: 1px solid rgba(0,0,0,0);
+	padding: 5px;
+}
+.item_def_row_item:hover
+{
+	border: 1px solid #66c0f4;
+}
+
+.item_def_row .item_def_details
+{
+	position: relative;
+}
+
+.item_def_grid_item
+{
+	display: inline-block;
+	margin-right: 14px;
+	margin-bottom: 20px;
+}
+.item_def_rows .item_def_grid_item:nth-child(4n)
+{
+	margin-right: 0px;
+}
+.item_def_icon_container
+{
+	position: relative;
+	background: #111111;
+}
+
+.item_def_icon
+{
+	width: 202px;
+	height: 202px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0);
+}
+.item_def_grid_item .item_def_icon:hover
+{
+	border: 1px solid #66c0f4;
+}
+.item_def_row_item .item_def_icon_container
+{
+	float: left;
+}
+.item_def_row_item .item_def_icon
+{
+	width: 100px;
+	height: 100px;
+}
+.item_def_details
+{
+	float: left;
+}
+.item_def_name
+{
+	line-height: 20px;
+	display: inline-block;
+}
+.item_def_row_item .item_def_name
+{
+	font-size: 24px;
+	line-height: 24px;
+	margin-left: 12px;
+	margin-top: 12px;
+}
+.item_def_grid_item .item_def_name
+{
+	max-width: 170px;
+}
+
+.item_def_grid_item .item_def_price
+{
+	line-height: 20px;
+	float: right;
+}
+.item_def_row_item .item_def_price
+{
+	font-size: 20px;
+	line-height: 20px;
+	position: absolute;
+	right: 12px;
+	top: 12px;
+}
+
+.item_def_desc
+{
+	margin-top: 5px;
+	font-size: 14px;
+	max-width: 600px;
+	overflow-y: auto;
+	height: 80px;
+	margin-left: 12px;
+}
+
+.browse_add_to_cart
+{
+	display: none;
+}
+.item_def_row_item:hover .browse_add_to_cart
+{
+	position: absolute;
+	top: 40px;
+	right: 5px;
+	display: block;
+}
+
+/* detail page */
+.item_def_image_container
+{
+	position: relative;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(4,31,45,1)));background: -moz-linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););background: -webkit-linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););background: -o-linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););background: -ms-linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););background: linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););	text-align: center;
+	box-shadow: 0 0 5px 0 #000000;
+}
+.item_def_image
+{
+	width: 512px;
+	height: 512px;
+}
+.item_def_name
+{
+
+}
+.content_desc_disclaimer
+{
+	padding-bottom: 10px;
+	font-size: 12px;
+	color: #7d94a0;
+}
+
+.item_owned
+{
+	margin-top: 10px;
+	padding: 10px;
+	position: relative;
+
+	background: -moz-linear-gradient(left,  rgba(163,207,6,0.6) 0%, rgba(75,106,33,0.6) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(163,207,6,0.6)), color-stop(100%,rgba(75,106,33,0.6))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 ); /* IE6-9 */
+
+	font-size: 15px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	color: #a3cf06;
+	margin-bottom: 10px;
+}
+
+.special_tags
+{
+	margin-top: 20px;
+	font-size: 15px;
+	color: #61686d;
+}
+
+.market_commodity_explanation
+{
+	margin-top: 20px;
+	font-size: 15px;
+	color: #61686d;
+}
+.market_commodity_explanation li
+{
+	margin-left: 20px;
+}
+
+#market_info_ctn
+{
+	margin-top: 20px;
+	padding: 10px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
