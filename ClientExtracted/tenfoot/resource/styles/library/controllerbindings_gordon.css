@@ -1807,9 +1807,24 @@ ChooseBinding .GameActionSelectButton.OriginalBinding Label
 	color: white;
 }
 
-ChooseBinding .ControllerActionButton
+ChooseBinding .ControllerActionSetButton, ChooseBinding .ControllerActionButton
 {
     margin-left: 116px;
+}
+
+ChooseBinding #change_preset 
+{
+    visibility: collapse;
+}
+    
+.LegacyBinding #change_preset 
+{
+    visibility: visible;
+}
+
+.LegacyBinding #show_keyboard
+{
+    margin-left: 0px;
 }
 
 ChooseBinding .IconPreview

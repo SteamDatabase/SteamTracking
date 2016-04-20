@@ -1982,6 +1982,7 @@
 	"Library_Details_ControllerAction_Screenshot"	"TAKE SCREENSHOT"
 	"Library_Details_ControllerAction_ChangePreset"	"CHANGE ACTION SET"
 	"Library_Details_ControllerAction_NextPreset"	"NEXT ACTION SET"
+	"Library_Details_ControllerAction_PreviousPreset" "LAST USED ACTION SET"
 	"Library_Details_ControllerAction_ChangeTo"		"CHANGE TO"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
