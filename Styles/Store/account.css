@@ -794,6 +794,7 @@ td.license_date_col {
 td.wht_date {
 	text-align: right;
 	padding: 6px;
+	min-width: 66px;
 	width: 10%;
 	font-size: 10px;
 	color: #717c84;

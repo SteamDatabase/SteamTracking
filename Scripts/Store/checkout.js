@@ -1542,7 +1542,7 @@ function OnGetFinalPriceSuccess( result )
 				else if ( method.value == 'cashu' )
 				{
 					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to CashU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CashU customers';
@@ -1552,7 +1552,7 @@ function OnGetFinalPriceSuccess( result )
 				else if ( method.value == 'onecard' )
 				{
 					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to OneCard';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OneCard customers';
