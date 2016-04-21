@@ -722,6 +722,14 @@ TextInputDualTouch.FriendsChat
 	visibility: collapse;
 }
 
+#TouchKey_Enter,
+#TouchKey_EnterNoClose
+{
+	background-color: #3f643a;
+}
+
+#TouchKey_Enter.TouchKeyHover,
+#TouchKey_EnterNoClose.TouchKeyHover,
 #TouchKey_Submit.TouchKeyHover
 {
 	background-color: #88b51c;
