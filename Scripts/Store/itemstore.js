@@ -85,6 +85,7 @@ function ContinueCheckout( checkoutParams )
 	var params = {
 		'method' : 'POST',
 		'action' : 'https://store.steampowered.com/itemcart/checkout/',
+		'style' : 'display: none'
 	};
 
 	var form = $J("<form/>", params );
@@ -95,6 +96,8 @@ function ContinueCheckout( checkoutParams )
 			form.append( $J( '<input/>', { type: 'hidden', name: key, value: value } ) );
 		}
 	)
+
+	form.appendTo( "body" );
 
 	form.submit();
 }
