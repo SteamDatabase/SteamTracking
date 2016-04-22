@@ -14775,8 +14775,8 @@
 		{
 			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Semifinalist"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_SemiFinalist"
-			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_SemiFinalist_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_Semifinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_Semifinalist_Desc"
 			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
 			"attributes"
 			{
@@ -14792,8 +14792,8 @@
 		{
 			"name"		"DreamHack Cluj-Napoca 2015 CS:GO Quarterfinalist"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_QuarterFinalist"
-			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_QuarterFinalist_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cluj2015_Quarterfinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cluj2015_Quarterfinalist_Desc"
 			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
 			"attributes"
 			{
@@ -14900,6 +14900,74 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/mlg_fantasy_2016_gold.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"9"
+				}
+			}
+		}
+		"927"
+		{
+			"name"		"MLG Columbus 2016 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Columbus2016_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_Columbus2016_Champion_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"9"
+				}
+			}
+		}
+		"928"
+		{
+			"name"		"MLG Columbus 2016 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Columbus2016_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_Columbus2016_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"9"
+				}
+			}
+		}
+		"929"
+		{
+			"name"		"MLG Columbus 2016 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Columbus2016_Semifinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Columbus2016_Semifinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"9"
+				}
+			}
+		}
+		"930"
+		{
+			"name"		"MLG Columbus 2016 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Columbus2016_Quarterfinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Columbus2016_Quarterfinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
 				"tournament event id"
 				{
 					"attribute_class"		"tournament_event_id"
@@ -52686,11 +52754,11 @@
 			"mapgroup"		"mg_op_op07"
 			"points"		"25"
 			"expression"		"%act_kill_human% && %cond_item_borrowed_enemy%"
-			"expr_bonus"		"%act_kill_human% && %cond_item_borrowed_enemy% && %map_de_nuke%"
+			"expr_bonus"		"%act_kill_human% && %cond_item_borrowed_enemy% && %map_de_santorini%"
 			"difficulty"		"3"
 			"loc_name"		"op07_quest_name_729"
 			"quest_icon"		"killquest"
-			"loc_bonus"		"#quest_bonus_de_nuke"
+			"loc_bonus"		"#quest_bonus_de_santorini"
 		}
 		"729"
 		{
@@ -60852,6 +60920,58 @@
 				"9"
 				{
 					"team"		"6"
+					"clutch_kills"		"13"
+					"pistol_kills"		"25"
+					"opening_kills"		"13"
+					"sniper_kills"		"2"
+					"KDR"		"1.125000"
+					"enemy_kills"		"108"
+					"deaths"		"96"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"2.250000"
+						"enemy_kills"		"18"
+						"deaths"		"8"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"1"
+						"KDR"		"0.961538"
+						"enemy_kills"		"25"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"1.185185"
+						"enemy_kills"		"32"
+						"deaths"		"27"
+						"matches_played"		"2"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"9"
+						"pistol_kills"		"14"
+						"opening_kills"		"5"
+						"sniper_kills"		"1"
+						"KDR"		"0.942857"
+						"enemy_kills"		"33"
+						"deaths"		"35"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -60934,6 +61054,58 @@
 				"9"
 				{
 					"team"		"6"
+					"clutch_kills"		"15"
+					"pistol_kills"		"18"
+					"opening_kills"		"22"
+					"sniper_kills"		"43"
+					"KDR"		"1.036364"
+					"enemy_kills"		"114"
+					"deaths"		"110"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"8"
+						"KDR"		"1.250000"
+						"enemy_kills"		"15"
+						"deaths"		"12"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"5"
+						"sniper_kills"		"11"
+						"KDR"		"0.933333"
+						"enemy_kills"		"28"
+						"deaths"		"30"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"6"
+						"opening_kills"		"11"
+						"sniper_kills"		"15"
+						"KDR"		"1.300000"
+						"enemy_kills"		"39"
+						"deaths"		"30"
+						"matches_played"		"2"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"6"
+						"opening_kills"		"4"
+						"sniper_kills"		"9"
+						"KDR"		"0.842105"
+						"enemy_kills"		"32"
+						"deaths"		"38"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61016,6 +61188,58 @@
 				"9"
 				{
 					"team"		"6"
+					"clutch_kills"		"14"
+					"pistol_kills"		"18"
+					"opening_kills"		"14"
+					"sniper_kills"		"1"
+					"KDR"		"1.080808"
+					"enemy_kills"		"107"
+					"deaths"		"99"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.777778"
+						"enemy_kills"		"16"
+						"deaths"		"9"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"1"
+						"KDR"		"1.037037"
+						"enemy_kills"		"28"
+						"deaths"		"27"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"9"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.680000"
+						"enemy_kills"		"42"
+						"deaths"		"25"
+						"matches_played"		"2"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.552632"
+						"enemy_kills"		"21"
+						"deaths"		"38"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61098,6 +61322,58 @@
 				"9"
 				{
 					"team"		"6"
+					"clutch_kills"		"8"
+					"pistol_kills"		"15"
+					"opening_kills"		"14"
+					"sniper_kills"		"21"
+					"KDR"		"1"
+					"enemy_kills"		"107"
+					"deaths"		"107"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"0"
+						"opening_kills"		"4"
+						"sniper_kills"		"3"
+						"KDR"		"2"
+						"enemy_kills"		"20"
+						"deaths"		"10"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"3"
+						"sniper_kills"		"3"
+						"KDR"		"0.655172"
+						"enemy_kills"		"19"
+						"deaths"		"29"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"8"
+						"opening_kills"		"4"
+						"sniper_kills"		"7"
+						"KDR"		"1.413793"
+						"enemy_kills"		"41"
+						"deaths"		"29"
+						"matches_played"		"2"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"3"
+						"sniper_kills"		"8"
+						"KDR"		"0.692308"
+						"enemy_kills"		"27"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61169,6 +61445,69 @@
 				"9"
 				{
 					"team"		"57"
+					"clutch_kills"		"20"
+					"pistol_kills"		"29"
+					"opening_kills"		"36"
+					"sniper_kills"		"117"
+					"KDR"		"1.331035"
+					"enemy_kills"		"193"
+					"deaths"		"145"
+					"matches_played"		"9"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"3"
+						"sniper_kills"		"10"
+						"KDR"		"0.789474"
+						"enemy_kills"		"15"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"3"
+						"sniper_kills"		"10"
+						"KDR"		"3"
+						"enemy_kills"		"18"
+						"deaths"		"6"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"9"
+						"opening_kills"		"14"
+						"sniper_kills"		"32"
+						"KDR"		"1.051724"
+						"enemy_kills"		"61"
+						"deaths"		"58"
+						"matches_played"		"3"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"9"
+						"pistol_kills"		"7"
+						"opening_kills"		"9"
+						"sniper_kills"		"34"
+						"KDR"		"1.444444"
+						"enemy_kills"		"52"
+						"deaths"		"36"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"6"
+						"opening_kills"		"7"
+						"sniper_kills"		"31"
+						"KDR"		"1.807692"
+						"enemy_kills"		"47"
+						"deaths"		"26"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61307,6 +61646,69 @@
 				"9"
 				{
 					"team"		"57"
+					"clutch_kills"		"6"
+					"pistol_kills"		"32"
+					"opening_kills"		"42"
+					"sniper_kills"		"0"
+					"KDR"		"1.010870"
+					"enemy_kills"		"186"
+					"deaths"		"184"
+					"matches_played"		"9"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.235294"
+						"enemy_kills"		"21"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.692308"
+						"enemy_kills"		"9"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"12"
+						"opening_kills"		"16"
+						"sniper_kills"		"0"
+						"KDR"		"0.859155"
+						"enemy_kills"		"61"
+						"deaths"		"71"
+						"matches_played"		"3"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"9"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"1"
+						"enemy_kills"		"44"
+						"deaths"		"44"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"12"
+						"sniper_kills"		"0"
+						"KDR"		"1.307692"
+						"enemy_kills"		"51"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61445,6 +61847,69 @@
 				"9"
 				{
 					"team"		"57"
+					"clutch_kills"		"21"
+					"pistol_kills"		"36"
+					"opening_kills"		"22"
+					"sniper_kills"		"53"
+					"KDR"		"1.546053"
+					"enemy_kills"		"235"
+					"deaths"		"152"
+					"matches_played"		"9"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"7"
+						"KDR"		"1.411765"
+						"enemy_kills"		"24"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"1"
+						"KDR"		"2.200000"
+						"enemy_kills"		"22"
+						"deaths"		"10"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"10"
+						"opening_kills"		"6"
+						"sniper_kills"		"18"
+						"KDR"		"1.377358"
+						"enemy_kills"		"73"
+						"deaths"		"53"
+						"matches_played"		"3"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"10"
+						"opening_kills"		"6"
+						"sniper_kills"		"13"
+						"KDR"		"1.523810"
+						"enemy_kills"		"64"
+						"deaths"		"42"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"8"
+						"opening_kills"		"7"
+						"sniper_kills"		"14"
+						"KDR"		"1.733333"
+						"enemy_kills"		"52"
+						"deaths"		"30"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61538,6 +62003,69 @@
 				"9"
 				{
 					"team"		"12"
+					"clutch_kills"		"6"
+					"pistol_kills"		"20"
+					"opening_kills"		"23"
+					"sniper_kills"		"67"
+					"KDR"		"0.890625"
+					"enemy_kills"		"114"
+					"deaths"		"128"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"7"
+						"KDR"		"1.454545"
+						"enemy_kills"		"16"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"14"
+						"KDR"		"2.375000"
+						"enemy_kills"		"19"
+						"deaths"		"8"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"7"
+						"opening_kills"		"9"
+						"sniper_kills"		"16"
+						"KDR"		"0.888889"
+						"enemy_kills"		"32"
+						"deaths"		"36"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"7"
+						"sniper_kills"		"15"
+						"KDR"		"0.800000"
+						"enemy_kills"		"24"
+						"deaths"		"30"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"15"
+						"KDR"		"0.534884"
+						"enemy_kills"		"23"
+						"deaths"		"43"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61631,6 +62159,69 @@
 				"9"
 				{
 					"team"		"12"
+					"clutch_kills"		"5"
+					"pistol_kills"		"17"
+					"opening_kills"		"10"
+					"sniper_kills"		"3"
+					"KDR"		"0.938462"
+					"enemy_kills"		"122"
+					"deaths"		"130"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.142857"
+						"enemy_kills"		"16"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.272727"
+						"enemy_kills"		"14"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.903226"
+						"enemy_kills"		"28"
+						"deaths"		"31"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.933333"
+						"enemy_kills"		"28"
+						"deaths"		"30"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"7"
+						"opening_kills"		"1"
+						"sniper_kills"		"3"
+						"KDR"		"0.818182"
+						"enemy_kills"		"36"
+						"deaths"		"44"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61724,6 +62315,69 @@
 				"9"
 				{
 					"team"		"12"
+					"clutch_kills"		"15"
+					"pistol_kills"		"29"
+					"opening_kills"		"21"
+					"sniper_kills"		"10"
+					"KDR"		"1.091603"
+					"enemy_kills"		"143"
+					"deaths"		"131"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"1"
+						"opening_kills"		"3"
+						"sniper_kills"		"2"
+						"KDR"		"1.117647"
+						"enemy_kills"		"19"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"1.700000"
+						"enemy_kills"		"17"
+						"deaths"		"10"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"11"
+						"opening_kills"		"5"
+						"sniper_kills"		"1"
+						"KDR"		"1.785714"
+						"enemy_kills"		"50"
+						"deaths"		"28"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"3"
+						"sniper_kills"		"3"
+						"KDR"		"0.965517"
+						"enemy_kills"		"28"
+						"deaths"		"29"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"9"
+						"opening_kills"		"5"
+						"sniper_kills"		"4"
+						"KDR"		"0.617021"
+						"enemy_kills"		"29"
+						"deaths"		"47"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61817,6 +62471,69 @@
 				"9"
 				{
 					"team"		"12"
+					"clutch_kills"		"16"
+					"pistol_kills"		"27"
+					"opening_kills"		"20"
+					"sniper_kills"		"1"
+					"KDR"		"1.393443"
+					"enemy_kills"		"170"
+					"deaths"		"122"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.909091"
+						"enemy_kills"		"21"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"2.125000"
+						"enemy_kills"		"17"
+						"deaths"		"8"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.600000"
+						"enemy_kills"		"40"
+						"deaths"		"25"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"9"
+						"opening_kills"		"4"
+						"sniper_kills"		"1"
+						"KDR"		"1.785714"
+						"enemy_kills"		"50"
+						"deaths"		"28"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"6"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"0.840000"
+						"enemy_kills"		"42"
+						"deaths"		"50"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -61910,6 +62627,69 @@
 				"9"
 				{
 					"team"		"12"
+					"clutch_kills"		"10"
+					"pistol_kills"		"22"
+					"opening_kills"		"25"
+					"sniper_kills"		"2"
+					"KDR"		"1.244444"
+					"enemy_kills"		"168"
+					"deaths"		"135"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.235294"
+						"enemy_kills"		"21"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.333333"
+						"enemy_kills"		"16"
+						"deaths"		"12"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.424242"
+						"enemy_kills"		"47"
+						"deaths"		"33"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"8"
+						"sniper_kills"		"1"
+						"KDR"		"1.620690"
+						"enemy_kills"		"47"
+						"deaths"		"29"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"6"
+						"opening_kills"		"5"
+						"sniper_kills"		"1"
+						"KDR"		"0.840909"
+						"enemy_kills"		"37"
+						"deaths"		"44"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62003,6 +62783,58 @@
 				"9"
 				{
 					"team"		"1"
+					"clutch_kills"		"10"
+					"pistol_kills"		"13"
+					"opening_kills"		"13"
+					"sniper_kills"		"7"
+					"KDR"		"0.843972"
+					"enemy_kills"		"119"
+					"deaths"		"141"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.777778"
+						"enemy_kills"		"21"
+						"deaths"		"27"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.684211"
+						"enemy_kills"		"13"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"5"
+						"opening_kills"		"5"
+						"sniper_kills"		"7"
+						"KDR"		"0.907407"
+						"enemy_kills"		"49"
+						"deaths"		"54"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"0.878049"
+						"enemy_kills"		"36"
+						"deaths"		"41"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62096,6 +62928,58 @@
 				"9"
 				{
 					"team"		"1"
+					"clutch_kills"		"14"
+					"pistol_kills"		"25"
+					"opening_kills"		"19"
+					"sniper_kills"		"25"
+					"KDR"		"1.055556"
+					"enemy_kills"		"133"
+					"deaths"		"126"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"4"
+						"KDR"		"1.636364"
+						"enemy_kills"		"36"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"4"
+						"KDR"		"0.611111"
+						"enemy_kills"		"11"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"9"
+						"opening_kills"		"6"
+						"sniper_kills"		"6"
+						"KDR"		"1"
+						"enemy_kills"		"48"
+						"deaths"		"48"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"8"
+						"opening_kills"		"8"
+						"sniper_kills"		"11"
+						"KDR"		"1"
+						"enemy_kills"		"38"
+						"deaths"		"38"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62189,6 +63073,69 @@
 				"9"
 				{
 					"team"		"1"
+					"clutch_kills"		"18"
+					"pistol_kills"		"23"
+					"opening_kills"		"34"
+					"sniper_kills"		"15"
+					"KDR"		"1.048485"
+					"enemy_kills"		"173"
+					"deaths"		"165"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"5"
+						"sniper_kills"		"3"
+						"KDR"		"1.178571"
+						"enemy_kills"		"33"
+						"deaths"		"28"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.470588"
+						"enemy_kills"		"8"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"9"
+						"opening_kills"		"13"
+						"sniper_kills"		"0"
+						"KDR"		"1.274510"
+						"enemy_kills"		"65"
+						"deaths"		"51"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"7"
+						"opening_kills"		"6"
+						"sniper_kills"		"9"
+						"KDR"		"0.707317"
+						"enemy_kills"		"29"
+						"deaths"		"41"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"1"
+						"opening_kills"		"6"
+						"sniper_kills"		"3"
+						"KDR"		"1.357143"
+						"enemy_kills"		"38"
+						"deaths"		"28"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -62282,6 +63229,58 @@
 				"9"
 				{
 					"team"		"1"
+					"clutch_kills"		"11"
+					"pistol_kills"		"25"
+					"opening_kills"		"14"
+					"sniper_kills"		"0"
+					"KDR"		"0.867188"
+					"enemy_kills"		"111"
+					"deaths"		"128"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.642857"
+						"enemy_kills"		"18"
+						"deaths"		"28"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"7"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.666667"
+						"enemy_kills"		"12"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"7"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.111111"
+						"enemy_kills"		"50"
+						"deaths"		"45"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"8"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.837838"
+						"enemy_kills"		"31"
+						"deaths"		"37"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62453,6 +63452,47 @@
 				"9"
 				{
 					"team"		"46"
+					"clutch_kills"		"12"
+					"pistol_kills"		"9"
+					"opening_kills"		"11"
+					"sniper_kills"		"34"
+					"KDR"		"0.875000"
+					"enemy_kills"		"56"
+					"deaths"		"64"
+					"matches_played"		"3"
+					"stage0"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"8"
+						"KDR"		"0.833333"
+						"enemy_kills"		"15"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"5"
+						"KDR"		"0.500000"
+						"enemy_kills"		"10"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"4"
+						"opening_kills"		"8"
+						"sniper_kills"		"21"
+						"KDR"		"1.192308"
+						"enemy_kills"		"31"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -62613,6 +63653,36 @@
 				"9"
 				{
 					"team"		"46"
+					"clutch_kills"		"4"
+					"pistol_kills"		"12"
+					"opening_kills"		"5"
+					"sniper_kills"		"2"
+					"KDR"		"1.108108"
+					"enemy_kills"		"41"
+					"deaths"		"37"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"6"
+						"opening_kills"		"3"
+						"sniper_kills"		"2"
+						"KDR"		"0.888889"
+						"enemy_kills"		"16"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"6"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.315789"
+						"enemy_kills"		"25"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -62695,6 +63765,36 @@
 				"9"
 				{
 					"team"		"46"
+					"clutch_kills"		"1"
+					"pistol_kills"		"9"
+					"opening_kills"		"7"
+					"sniper_kills"		"0"
+					"KDR"		"0.975610"
+					"enemy_kills"		"40"
+					"deaths"		"41"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.684211"
+						"enemy_kills"		"13"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.227273"
+						"enemy_kills"		"27"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -62777,6 +63877,36 @@
 				"9"
 				{
 					"team"		"46"
+					"clutch_kills"		"4"
+					"pistol_kills"		"7"
+					"opening_kills"		"8"
+					"sniper_kills"		"0"
+					"KDR"		"0.750000"
+					"enemy_kills"		"30"
+					"deaths"		"40"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.526316"
+						"enemy_kills"		"10"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"2"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"0.952381"
+						"enemy_kills"		"20"
+						"deaths"		"21"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -62848,6 +63978,58 @@
 				"9"
 				{
 					"team"		"60"
+					"clutch_kills"		"6"
+					"pistol_kills"		"11"
+					"opening_kills"		"12"
+					"sniper_kills"		"2"
+					"KDR"		"0.823529"
+					"enemy_kills"		"84"
+					"deaths"		"102"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"1"
+						"KDR"		"0.590909"
+						"enemy_kills"		"13"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.933333"
+						"enemy_kills"		"14"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.967742"
+						"enemy_kills"		"30"
+						"deaths"		"31"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"6"
+						"opening_kills"		"5"
+						"sniper_kills"		"1"
+						"KDR"		"0.794118"
+						"enemy_kills"		"27"
+						"deaths"		"34"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62919,6 +64101,58 @@
 				"9"
 				{
 					"team"		"60"
+					"clutch_kills"		"10"
+					"pistol_kills"		"23"
+					"opening_kills"		"20"
+					"sniper_kills"		"63"
+					"KDR"		"1.260870"
+					"enemy_kills"		"116"
+					"deaths"		"92"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"14"
+						"KDR"		"1.750000"
+						"enemy_kills"		"28"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"5"
+						"sniper_kills"		"11"
+						"KDR"		"1.666667"
+						"enemy_kills"		"20"
+						"deaths"		"12"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"11"
+						"opening_kills"		"7"
+						"sniper_kills"		"19"
+						"KDR"		"1.480000"
+						"enemy_kills"		"37"
+						"deaths"		"25"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"6"
+						"sniper_kills"		"19"
+						"KDR"		"0.794872"
+						"enemy_kills"		"31"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -62990,6 +64224,58 @@
 				"9"
 				{
 					"team"		"60"
+					"clutch_kills"		"6"
+					"pistol_kills"		"21"
+					"opening_kills"		"27"
+					"sniper_kills"		"1"
+					"KDR"		"1.189474"
+					"enemy_kills"		"113"
+					"deaths"		"95"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.888889"
+						"enemy_kills"		"16"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.416667"
+						"enemy_kills"		"17"
+						"deaths"		"12"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"10"
+						"opening_kills"		"12"
+						"sniper_kills"		"0"
+						"KDR"		"1.857143"
+						"enemy_kills"		"52"
+						"deaths"		"28"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"7"
+						"sniper_kills"		"1"
+						"KDR"		"0.756757"
+						"enemy_kills"		"28"
+						"deaths"		"37"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -63061,6 +64347,58 @@
 				"9"
 				{
 					"team"		"60"
+					"clutch_kills"		"14"
+					"pistol_kills"		"18"
+					"opening_kills"		"12"
+					"sniper_kills"		"0"
+					"KDR"		"1.125000"
+					"enemy_kills"		"99"
+					"deaths"		"88"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"1.277778"
+						"enemy_kills"		"23"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.454545"
+						"enemy_kills"		"16"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.076923"
+						"enemy_kills"		"28"
+						"deaths"		"26"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"8"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.969697"
+						"enemy_kills"		"32"
+						"deaths"		"33"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -63132,6 +64470,58 @@
 				"9"
 				{
 					"team"		"60"
+					"clutch_kills"		"4"
+					"pistol_kills"		"18"
+					"opening_kills"		"11"
+					"sniper_kills"		"12"
+					"KDR"		"1.170213"
+					"enemy_kills"		"110"
+					"deaths"		"94"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"2"
+						"opening_kills"		"3"
+						"sniper_kills"		"4"
+						"KDR"		"1.600000"
+						"enemy_kills"		"24"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"2"
+						"sniper_kills"		"2"
+						"KDR"		"1.461538"
+						"enemy_kills"		"19"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"8"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.218750"
+						"enemy_kills"		"39"
+						"deaths"		"32"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"6"
+						"KDR"		"0.823529"
+						"enemy_kills"		"28"
+						"deaths"		"34"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -63203,6 +64593,58 @@
 				"9"
 				{
 					"team"		"31"
+					"clutch_kills"		"16"
+					"pistol_kills"		"23"
+					"opening_kills"		"25"
+					"sniper_kills"		"38"
+					"KDR"		"1.030534"
+					"enemy_kills"		"135"
+					"deaths"		"131"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.454545"
+						"enemy_kills"		"16"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"2"
+						"opening_kills"		"0"
+						"sniper_kills"		"1"
+						"KDR"		"0.470588"
+						"enemy_kills"		"8"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"13"
+						"opening_kills"		"11"
+						"sniper_kills"		"9"
+						"KDR"		"1.295455"
+						"enemy_kills"		"57"
+						"deaths"		"44"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"7"
+						"opening_kills"		"10"
+						"sniper_kills"		"28"
+						"KDR"		"0.915254"
+						"enemy_kills"		"54"
+						"deaths"		"59"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63274,6 +64716,58 @@
 				"9"
 				{
 					"team"		"31"
+					"clutch_kills"		"10"
+					"pistol_kills"		"19"
+					"opening_kills"		"20"
+					"sniper_kills"		"11"
+					"KDR"		"0.910345"
+					"enemy_kills"		"132"
+					"deaths"		"145"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.153846"
+						"enemy_kills"		"15"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"1"
+						"KDR"		"0.600000"
+						"enemy_kills"		"9"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"5"
+						"opening_kills"		"9"
+						"sniper_kills"		"7"
+						"KDR"		"1.106383"
+						"enemy_kills"		"52"
+						"deaths"		"47"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"11"
+						"opening_kills"		"6"
+						"sniper_kills"		"3"
+						"KDR"		"0.800000"
+						"enemy_kills"		"56"
+						"deaths"		"70"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63345,6 +64839,58 @@
 				"9"
 				{
 					"team"		"31"
+					"clutch_kills"		"16"
+					"pistol_kills"		"19"
+					"opening_kills"		"13"
+					"sniper_kills"		"0"
+					"KDR"		"1.023622"
+					"enemy_kills"		"130"
+					"deaths"		"127"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.125000"
+						"enemy_kills"		"9"
+						"deaths"		"8"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.705882"
+						"enemy_kills"		"12"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"9"
+						"pistol_kills"		"5"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.227273"
+						"enemy_kills"		"54"
+						"deaths"		"44"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"10"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.948276"
+						"enemy_kills"		"55"
+						"deaths"		"58"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63416,6 +64962,58 @@
 				"9"
 				{
 					"team"		"31"
+					"clutch_kills"		"11"
+					"pistol_kills"		"30"
+					"opening_kills"		"19"
+					"sniper_kills"		"45"
+					"KDR"		"1.037037"
+					"enemy_kills"		"140"
+					"deaths"		"135"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"11"
+						"KDR"		"2.125000"
+						"enemy_kills"		"17"
+						"deaths"		"8"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.500000"
+						"enemy_kills"		"9"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"13"
+						"opening_kills"		"6"
+						"sniper_kills"		"20"
+						"KDR"		"1.261905"
+						"enemy_kills"		"53"
+						"deaths"		"42"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"10"
+						"opening_kills"		"11"
+						"sniper_kills"		"14"
+						"KDR"		"0.910448"
+						"enemy_kills"		"61"
+						"deaths"		"67"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63487,6 +65085,58 @@
 				"9"
 				{
 					"team"		"31"
+					"clutch_kills"		"12"
+					"pistol_kills"		"31"
+					"opening_kills"		"18"
+					"sniper_kills"		"0"
+					"KDR"		"1.097744"
+					"enemy_kills"		"146"
+					"deaths"		"133"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"2.571429"
+						"enemy_kills"		"18"
+						"deaths"		"7"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"6"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.687500"
+						"enemy_kills"		"11"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"8"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.041667"
+						"enemy_kills"		"50"
+						"deaths"		"48"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"9"
+						"pistol_kills"		"15"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.080645"
+						"enemy_kills"		"67"
+						"deaths"		"62"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63558,6 +65208,47 @@
 				"9"
 				{
 					"team"		"29"
+					"clutch_kills"		"12"
+					"pistol_kills"		"24"
+					"opening_kills"		"18"
+					"sniper_kills"		"61"
+					"KDR"		"1.064815"
+					"enemy_kills"		"115"
+					"deaths"		"108"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"6"
+						"opening_kills"		"6"
+						"sniper_kills"		"12"
+						"KDR"		"1.136364"
+						"enemy_kills"		"25"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"8"
+						"opening_kills"		"6"
+						"sniper_kills"		"27"
+						"KDR"		"1.282051"
+						"enemy_kills"		"50"
+						"deaths"		"39"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"10"
+						"opening_kills"		"6"
+						"sniper_kills"		"22"
+						"KDR"		"0.851064"
+						"enemy_kills"		"40"
+						"deaths"		"47"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63696,6 +65387,47 @@
 				"9"
 				{
 					"team"		"29"
+					"clutch_kills"		"9"
+					"pistol_kills"		"20"
+					"opening_kills"		"16"
+					"sniper_kills"		"3"
+					"KDR"		"0.842975"
+					"enemy_kills"		"102"
+					"deaths"		"121"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"3"
+						"KDR"		"1.062500"
+						"enemy_kills"		"17"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"1"
+						"opening_kills"		"8"
+						"sniper_kills"		"0"
+						"KDR"		"0.720000"
+						"enemy_kills"		"36"
+						"deaths"		"50"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"15"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"0.890909"
+						"enemy_kills"		"49"
+						"deaths"		"55"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63767,6 +65499,47 @@
 				"9"
 				{
 					"team"		"29"
+					"clutch_kills"		"9"
+					"pistol_kills"		"19"
+					"opening_kills"		"8"
+					"sniper_kills"		"0"
+					"KDR"		"0.741667"
+					"enemy_kills"		"89"
+					"deaths"		"120"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.600000"
+						"enemy_kills"		"12"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.800000"
+						"enemy_kills"		"36"
+						"deaths"		"45"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"9"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.745455"
+						"enemy_kills"		"41"
+						"deaths"		"55"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -63793,6 +65566,47 @@
 				"9"
 				{
 					"team"		"29"
+					"clutch_kills"		"7"
+					"pistol_kills"		"10"
+					"opening_kills"		"14"
+					"sniper_kills"		"0"
+					"KDR"		"0.929204"
+					"enemy_kills"		"105"
+					"deaths"		"113"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.789474"
+						"enemy_kills"		"15"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.813953"
+						"enemy_kills"		"35"
+						"deaths"		"43"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"6"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"1.078431"
+						"enemy_kills"		"55"
+						"deaths"		"51"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -64073,6 +65887,36 @@
 				"9"
 				{
 					"team"		"43"
+					"clutch_kills"		"8"
+					"pistol_kills"		"10"
+					"opening_kills"		"11"
+					"sniper_kills"		"2"
+					"KDR"		"1.059701"
+					"enemy_kills"		"71"
+					"deaths"		"67"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"2"
+						"KDR"		"0.769231"
+						"enemy_kills"		"20"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"8"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.243902"
+						"enemy_kills"		"51"
+						"deaths"		"41"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64133,6 +65977,36 @@
 				"9"
 				{
 					"team"		"43"
+					"clutch_kills"		"7"
+					"pistol_kills"		"3"
+					"opening_kills"		"4"
+					"sniper_kills"		"0"
+					"KDR"		"0.869565"
+					"enemy_kills"		"60"
+					"deaths"		"69"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"0"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.846154"
+						"enemy_kills"		"22"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.883721"
+						"enemy_kills"		"38"
+						"deaths"		"43"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64193,6 +66067,36 @@
 				"9"
 				{
 					"team"		"43"
+					"clutch_kills"		"2"
+					"pistol_kills"		"7"
+					"opening_kills"		"15"
+					"sniper_kills"		"0"
+					"KDR"		"1.125000"
+					"enemy_kills"		"72"
+					"deaths"		"64"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"10"
+						"sniper_kills"		"0"
+						"KDR"		"1.636364"
+						"enemy_kills"		"36"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"0.857143"
+						"enemy_kills"		"36"
+						"deaths"		"42"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64253,6 +66157,36 @@
 				"9"
 				{
 					"team"		"43"
+					"clutch_kills"		"5"
+					"pistol_kills"		"8"
+					"opening_kills"		"11"
+					"sniper_kills"		"33"
+					"KDR"		"0.984615"
+					"enemy_kills"		"64"
+					"deaths"		"65"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"6"
+						"KDR"		"0.840000"
+						"enemy_kills"		"21"
+						"deaths"		"25"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"3"
+						"opening_kills"		"7"
+						"sniper_kills"		"27"
+						"KDR"		"1.075000"
+						"enemy_kills"		"43"
+						"deaths"		"40"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64402,6 +66336,58 @@
 				"9"
 				{
 					"team"		"6"
+					"clutch_kills"		"5"
+					"pistol_kills"		"23"
+					"opening_kills"		"12"
+					"sniper_kills"		"4"
+					"KDR"		"1.091743"
+					"enemy_kills"		"119"
+					"deaths"		"109"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.818182"
+						"enemy_kills"		"20"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"1"
+						"KDR"		"0.823529"
+						"enemy_kills"		"28"
+						"deaths"		"34"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"9"
+						"opening_kills"		"2"
+						"sniper_kills"		"3"
+						"KDR"		"1.500000"
+						"enemy_kills"		"42"
+						"deaths"		"28"
+						"matches_played"		"2"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"0.805556"
+						"enemy_kills"		"29"
+						"deaths"		"36"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -64473,6 +66459,47 @@
 				"9"
 				{
 					"team"		"59"
+					"clutch_kills"		"7"
+					"pistol_kills"		"16"
+					"opening_kills"		"11"
+					"sniper_kills"		"0"
+					"KDR"		"0.925000"
+					"enemy_kills"		"74"
+					"deaths"		"80"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.500000"
+						"enemy_kills"		"7"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.933333"
+						"enemy_kills"		"14"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"9"
+						"opening_kills"		"8"
+						"sniper_kills"		"0"
+						"KDR"		"1.039216"
+						"enemy_kills"		"53"
+						"deaths"		"51"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -64566,6 +66593,58 @@
 				"9"
 				{
 					"team"		"61"
+					"clutch_kills"		"4"
+					"pistol_kills"		"26"
+					"opening_kills"		"20"
+					"sniper_kills"		"0"
+					"KDR"		"0.933333"
+					"enemy_kills"		"98"
+					"deaths"		"105"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.210526"
+						"enemy_kills"		"23"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"1.384615"
+						"enemy_kills"		"18"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"14"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"0.720930"
+						"enemy_kills"		"31"
+						"deaths"		"43"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.866667"
+						"enemy_kills"		"26"
+						"deaths"		"30"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64659,6 +66738,58 @@
 				"9"
 				{
 					"team"		"61"
+					"clutch_kills"		"2"
+					"pistol_kills"		"11"
+					"opening_kills"		"7"
+					"sniper_kills"		"6"
+					"KDR"		"0.695652"
+					"enemy_kills"		"64"
+					"deaths"		"92"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.789474"
+						"enemy_kills"		"15"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"0"
+						"sniper_kills"		"1"
+						"KDR"		"1.428571"
+						"enemy_kills"		"10"
+						"deaths"		"7"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.564103"
+						"enemy_kills"		"22"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"5"
+						"KDR"		"0.629630"
+						"enemy_kills"		"17"
+						"deaths"		"27"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -64752,6 +66883,47 @@
 				"9"
 				{
 					"team"		"61"
+					"clutch_kills"		"6"
+					"pistol_kills"		"6"
+					"opening_kills"		"10"
+					"sniper_kills"		"30"
+					"KDR"		"0.938462"
+					"enemy_kills"		"61"
+					"deaths"		"65"
+					"matches_played"		"4"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"0"
+						"opening_kills"		"1"
+						"sniper_kills"		"10"
+						"KDR"		"1"
+						"enemy_kills"		"17"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"9"
+						"KDR"		"1.500000"
+						"enemy_kills"		"15"
+						"deaths"		"10"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"5"
+						"opening_kills"		"5"
+						"sniper_kills"		"11"
+						"KDR"		"0.763158"
+						"enemy_kills"		"29"
+						"deaths"		"38"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -65125,6 +67297,47 @@
 				"9"
 				{
 					"team"		"59"
+					"clutch_kills"		"4"
+					"pistol_kills"		"12"
+					"opening_kills"		"11"
+					"sniper_kills"		"4"
+					"KDR"		"0.800000"
+					"enemy_kills"		"60"
+					"deaths"		"75"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.500000"
+						"enemy_kills"		"8"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"3"
+						"KDR"		"3.333333"
+						"enemy_kills"		"20"
+						"deaths"		"6"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"6"
+						"sniper_kills"		"1"
+						"KDR"		"0.603774"
+						"enemy_kills"		"32"
+						"deaths"		"53"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -65196,6 +67409,47 @@
 				"9"
 				{
 					"team"		"59"
+					"clutch_kills"		"12"
+					"pistol_kills"		"16"
+					"opening_kills"		"7"
+					"sniper_kills"		"2"
+					"KDR"		"1.083333"
+					"enemy_kills"		"78"
+					"deaths"		"72"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.785714"
+						"enemy_kills"		"11"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"2.111111"
+						"enemy_kills"		"19"
+						"deaths"		"9"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"10"
+						"opening_kills"		"5"
+						"sniper_kills"		"2"
+						"KDR"		"0.979592"
+						"enemy_kills"		"48"
+						"deaths"		"49"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -65267,6 +67521,47 @@
 				"9"
 				{
 					"team"		"59"
+					"clutch_kills"		"6"
+					"pistol_kills"		"11"
+					"opening_kills"		"16"
+					"sniper_kills"		"39"
+					"KDR"		"0.869048"
+					"enemy_kills"		"73"
+					"deaths"		"84"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"1"
+						"KDR"		"0.235294"
+						"enemy_kills"		"4"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"5"
+						"sniper_kills"		"18"
+						"KDR"		"2.666667"
+						"enemy_kills"		"24"
+						"deaths"		"9"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"4"
+						"opening_kills"		"10"
+						"sniper_kills"		"20"
+						"KDR"		"0.775862"
+						"enemy_kills"		"45"
+						"deaths"		"58"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -65338,6 +67633,47 @@
 				"9"
 				{
 					"team"		"59"
+					"clutch_kills"		"3"
+					"pistol_kills"		"17"
+					"opening_kills"		"8"
+					"sniper_kills"		"1"
+					"KDR"		"0.960526"
+					"enemy_kills"		"73"
+					"deaths"		"76"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.071429"
+						"enemy_kills"		"15"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.833333"
+						"enemy_kills"		"11"
+						"deaths"		"6"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"12"
+						"opening_kills"		"5"
+						"sniper_kills"		"1"
+						"KDR"		"0.839286"
+						"enemy_kills"		"47"
+						"deaths"		"56"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -65409,6 +67745,58 @@
 				"9"
 				{
 					"team"		"49"
+					"clutch_kills"		"7"
+					"pistol_kills"		"38"
+					"opening_kills"		"18"
+					"sniper_kills"		"1"
+					"KDR"		"1.007874"
+					"enemy_kills"		"128"
+					"deaths"		"127"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.214286"
+						"enemy_kills"		"17"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"10"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.111111"
+						"enemy_kills"		"20"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"19"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.160714"
+						"enemy_kills"		"65"
+						"deaths"		"56"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"1"
+						"KDR"		"0.666667"
+						"enemy_kills"		"26"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -65547,6 +67935,58 @@
 				"9"
 				{
 					"team"		"49"
+					"clutch_kills"		"10"
+					"pistol_kills"		"19"
+					"opening_kills"		"28"
+					"sniper_kills"		"97"
+					"KDR"		"1.159664"
+					"enemy_kills"		"138"
+					"deaths"		"119"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"13"
+						"KDR"		"1.384615"
+						"enemy_kills"		"18"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"4"
+						"KDR"		"0.705882"
+						"enemy_kills"		"12"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"8"
+						"opening_kills"		"18"
+						"sniper_kills"		"58"
+						"KDR"		"1.461538"
+						"enemy_kills"		"76"
+						"deaths"		"52"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"5"
+						"sniper_kills"		"22"
+						"KDR"		"0.864865"
+						"enemy_kills"		"32"
+						"deaths"		"37"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -65618,6 +68058,58 @@
 				"9"
 				{
 					"team"		"49"
+					"clutch_kills"		"15"
+					"pistol_kills"		"16"
+					"opening_kills"		"11"
+					"sniper_kills"		"0"
+					"KDR"		"0.907563"
+					"enemy_kills"		"108"
+					"deaths"		"119"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"2"
+						"enemy_kills"		"28"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.666667"
+						"enemy_kills"		"10"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"10"
+						"pistol_kills"		"6"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.833333"
+						"enemy_kills"		"45"
+						"deaths"		"54"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"5"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.694444"
+						"enemy_kills"		"25"
+						"deaths"		"36"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -65689,6 +68181,69 @@
 				"9"
 				{
 					"team"		"49"
+					"clutch_kills"		"10"
+					"pistol_kills"		"32"
+					"opening_kills"		"24"
+					"sniper_kills"		"18"
+					"KDR"		"1.111842"
+					"enemy_kills"		"169"
+					"deaths"		"152"
+					"matches_played"		"8"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.538462"
+						"enemy_kills"		"20"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"0"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.578947"
+						"enemy_kills"		"11"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"14"
+						"opening_kills"		"12"
+						"sniper_kills"		"6"
+						"KDR"		"1.185185"
+						"enemy_kills"		"64"
+						"deaths"		"54"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"8"
+						"opening_kills"		"4"
+						"sniper_kills"		"11"
+						"KDR"		"1.189189"
+						"enemy_kills"		"44"
+						"deaths"		"37"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"6"
+						"sniper_kills"		"1"
+						"KDR"		"1.034483"
+						"enemy_kills"		"30"
+						"deaths"		"29"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -65760,6 +68315,36 @@
 				"9"
 				{
 					"team"		"33"
+					"clutch_kills"		"3"
+					"pistol_kills"		"5"
+					"opening_kills"		"2"
+					"sniper_kills"		"0"
+					"KDR"		"0.648649"
+					"enemy_kills"		"24"
+					"deaths"		"37"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.736842"
+						"enemy_kills"		"14"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.555556"
+						"enemy_kills"		"10"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -65898,6 +68483,47 @@
 				"9"
 				{
 					"team"		"33"
+					"clutch_kills"		"4"
+					"pistol_kills"		"12"
+					"opening_kills"		"4"
+					"sniper_kills"		"0"
+					"KDR"		"0.865672"
+					"enemy_kills"		"58"
+					"deaths"		"67"
+					"matches_played"		"3"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.800000"
+						"enemy_kills"		"16"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.529412"
+						"enemy_kills"		"9"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.100000"
+						"enemy_kills"		"33"
+						"deaths"		"30"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -65969,6 +68595,36 @@
 				"9"
 				{
 					"team"		"33"
+					"clutch_kills"		"0"
+					"pistol_kills"		"5"
+					"opening_kills"		"4"
+					"sniper_kills"		"0"
+					"KDR"		"0.500000"
+					"enemy_kills"		"18"
+					"deaths"		"36"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.777778"
+						"enemy_kills"		"14"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.222222"
+						"enemy_kills"		"4"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66040,6 +68696,47 @@
 				"9"
 				{
 					"team"		"33"
+					"clutch_kills"		"10"
+					"pistol_kills"		"13"
+					"opening_kills"		"8"
+					"sniper_kills"		"22"
+					"KDR"		"0.696970"
+					"enemy_kills"		"46"
+					"deaths"		"66"
+					"matches_played"		"3"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"6"
+						"KDR"		"0.833333"
+						"enemy_kills"		"15"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"7"
+						"opening_kills"		"2"
+						"sniper_kills"		"3"
+						"KDR"		"0.750000"
+						"enemy_kills"		"12"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"13"
+						"KDR"		"0.593750"
+						"enemy_kills"		"19"
+						"deaths"		"32"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66121,6 +68818,47 @@
 				"9"
 				{
 					"team"		"61"
+					"clutch_kills"		"8"
+					"pistol_kills"		"11"
+					"opening_kills"		"7"
+					"sniper_kills"		"0"
+					"KDR"		"0.774648"
+					"enemy_kills"		"55"
+					"deaths"		"71"
+					"matches_played"		"4"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.428571"
+						"enemy_kills"		"9"
+						"deaths"		"21"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"1.636364"
+						"enemy_kills"		"18"
+						"deaths"		"11"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"6"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.717949"
+						"enemy_kills"		"28"
+						"deaths"		"39"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66180,6 +68918,58 @@
 				"9"
 				{
 					"team"		"29"
+					"clutch_kills"		"23"
+					"pistol_kills"		"41"
+					"opening_kills"		"31"
+					"sniper_kills"		"13"
+					"KDR"		"1.166667"
+					"enemy_kills"		"175"
+					"deaths"		"150"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"9"
+						"opening_kills"		"6"
+						"sniper_kills"		"2"
+						"KDR"		"1.136364"
+						"enemy_kills"		"25"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"10"
+						"pistol_kills"		"3"
+						"opening_kills"		"8"
+						"sniper_kills"		"9"
+						"KDR"		"1.238095"
+						"enemy_kills"		"52"
+						"deaths"		"42"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"22"
+						"opening_kills"		"13"
+						"sniper_kills"		"2"
+						"KDR"		"1.070175"
+						"enemy_kills"		"61"
+						"deaths"		"57"
+						"matches_played"		"3"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.275862"
+						"enemy_kills"		"37"
+						"deaths"		"29"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66228,6 +69018,47 @@
 				"9"
 				{
 					"team"		"61"
+					"clutch_kills"		"3"
+					"pistol_kills"		"10"
+					"opening_kills"		"9"
+					"sniper_kills"		"3"
+					"KDR"		"1.063492"
+					"enemy_kills"		"67"
+					"deaths"		"63"
+					"matches_played"		"4"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"2"
+						"KDR"		"0.950000"
+						"enemy_kills"		"19"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"3.800000"
+						"enemy_kills"		"19"
+						"deaths"		"5"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"6"
+						"sniper_kills"		"1"
+						"KDR"		"0.763158"
+						"enemy_kills"		"29"
+						"deaths"		"38"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66452,6 +69283,58 @@
 				"9"
 				{
 					"team"		"48"
+					"clutch_kills"		"14"
+					"pistol_kills"		"18"
+					"opening_kills"		"21"
+					"sniper_kills"		"36"
+					"KDR"		"1.174312"
+					"enemy_kills"		"128"
+					"deaths"		"109"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"1"
+						"opening_kills"		"2"
+						"sniper_kills"		"4"
+						"KDR"		"1.692308"
+						"enemy_kills"		"22"
+						"deaths"		"13"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"6"
+						"opening_kills"		"6"
+						"sniper_kills"		"12"
+						"KDR"		"1.304348"
+						"enemy_kills"		"30"
+						"deaths"		"23"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"6"
+						"opening_kills"		"6"
+						"sniper_kills"		"8"
+						"KDR"		"1.565217"
+						"enemy_kills"		"36"
+						"deaths"		"23"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"7"
+						"sniper_kills"		"12"
+						"KDR"		"0.800000"
+						"enemy_kills"		"40"
+						"deaths"		"50"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66500,6 +69383,58 @@
 				"9"
 				{
 					"team"		"48"
+					"clutch_kills"		"4"
+					"pistol_kills"		"22"
+					"opening_kills"		"23"
+					"sniper_kills"		"0"
+					"KDR"		"0.931298"
+					"enemy_kills"		"122"
+					"deaths"		"131"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.947368"
+						"enemy_kills"		"18"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"1"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.333333"
+						"enemy_kills"		"32"
+						"deaths"		"24"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"9"
+						"opening_kills"		"8"
+						"sniper_kills"		"0"
+						"KDR"		"0.857143"
+						"enemy_kills"		"30"
+						"deaths"		"35"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"8"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"0.792453"
+						"enemy_kills"		"42"
+						"deaths"		"53"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66548,6 +69483,58 @@
 				"9"
 				{
 					"team"		"49"
+					"clutch_kills"		"6"
+					"pistol_kills"		"18"
+					"opening_kills"		"9"
+					"sniper_kills"		"1"
+					"KDR"		"0.669291"
+					"enemy_kills"		"85"
+					"deaths"		"127"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.533333"
+						"enemy_kills"		"8"
+						"deaths"		"15"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.470588"
+						"enemy_kills"		"8"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"8"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.800000"
+						"enemy_kills"		"44"
+						"deaths"		"55"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"6"
+						"opening_kills"		"3"
+						"sniper_kills"		"1"
+						"KDR"		"0.625000"
+						"enemy_kills"		"25"
+						"deaths"		"40"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66596,6 +69583,69 @@
 				"9"
 				{
 					"team"		"48"
+					"clutch_kills"		"22"
+					"pistol_kills"		"19"
+					"opening_kills"		"7"
+					"sniper_kills"		"0"
+					"KDR"		"1.048951"
+					"enemy_kills"		"150"
+					"deaths"		"143"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1"
+						"enemy_kills"		"16"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.230769"
+						"enemy_kills"		"32"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"1.214286"
+						"enemy_kills"		"34"
+						"deaths"		"28"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"12"
+						"pistol_kills"		"9"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.978723"
+						"enemy_kills"		"46"
+						"deaths"		"47"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"1"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.846154"
+						"enemy_kills"		"22"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66644,6 +69694,58 @@
 				"9"
 				{
 					"team"		"48"
+					"clutch_kills"		"8"
+					"pistol_kills"		"18"
+					"opening_kills"		"17"
+					"sniper_kills"		"1"
+					"KDR"		"0.789474"
+					"enemy_kills"		"105"
+					"deaths"		"133"
+					"matches_played"		"6"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.136364"
+						"enemy_kills"		"25"
+						"deaths"		"22"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"1"
+						"KDR"		"0.535714"
+						"enemy_kills"		"15"
+						"deaths"		"28"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.062500"
+						"enemy_kills"		"34"
+						"deaths"		"32"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"0.607843"
+						"enemy_kills"		"31"
+						"deaths"		"51"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66658,6 +69760,36 @@
 				"9"
 				{
 					"team"		"33"
+					"clutch_kills"		"3"
+					"pistol_kills"		"6"
+					"opening_kills"		"5"
+					"sniper_kills"		"0"
+					"KDR"		"0.540541"
+					"enemy_kills"		"20"
+					"deaths"		"37"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"0.611111"
+						"enemy_kills"		"11"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.473684"
+						"enemy_kills"		"9"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66672,6 +69804,36 @@
 				"9"
 				{
 					"team"		"43"
+					"clutch_kills"		"7"
+					"pistol_kills"		"10"
+					"opening_kills"		"11"
+					"sniper_kills"		"2"
+					"KDR"		"1.159420"
+					"enemy_kills"		"80"
+					"deaths"		"69"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.153846"
+						"enemy_kills"		"30"
+						"deaths"		"26"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"3"
+						"opening_kills"		"7"
+						"sniper_kills"		"2"
+						"KDR"		"1.162791"
+						"enemy_kills"		"50"
+						"deaths"		"43"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66686,6 +69848,69 @@
 				"9"
 				{
 					"team"		"57"
+					"clutch_kills"		"15"
+					"pistol_kills"		"30"
+					"opening_kills"		"20"
+					"sniper_kills"		"0"
+					"KDR"		"1.223603"
+					"enemy_kills"		"197"
+					"deaths"		"161"
+					"matches_played"		"9"
+					"stage0"
+					{
+						"clutch_kills"		"6"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"1.222222"
+						"enemy_kills"		"22"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"3.222222"
+						"enemy_kills"		"29"
+						"deaths"		"9"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"8"
+						"opening_kills"		"7"
+						"sniper_kills"		"0"
+						"KDR"		"1.264151"
+						"enemy_kills"		"67"
+						"deaths"		"53"
+						"matches_played"		"3"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"10"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.909091"
+						"enemy_kills"		"40"
+						"deaths"		"44"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"4"
+						"sniper_kills"		"0"
+						"KDR"		"1.054054"
+						"enemy_kills"		"39"
+						"deaths"		"37"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66700,6 +69925,69 @@
 				"9"
 				{
 					"team"		"57"
+					"clutch_kills"		"10"
+					"pistol_kills"		"34"
+					"opening_kills"		"28"
+					"sniper_kills"		"17"
+					"KDR"		"0.977143"
+					"enemy_kills"		"171"
+					"deaths"		"175"
+					"matches_played"		"9"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"4"
+						"sniper_kills"		"1"
+						"KDR"		"0.739130"
+						"enemy_kills"		"17"
+						"deaths"		"23"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.833333"
+						"enemy_kills"		"10"
+						"deaths"		"12"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"12"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"0.931035"
+						"enemy_kills"		"54"
+						"deaths"		"58"
+						"matches_played"		"3"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"8"
+						"sniper_kills"		"11"
+						"KDR"		"1.130435"
+						"enemy_kills"		"52"
+						"deaths"		"46"
+						"matches_played"		"2"
+					}
+					"stage6"
+					{
+						"clutch_kills"		"7"
+						"pistol_kills"		"9"
+						"opening_kills"		"4"
+						"sniper_kills"		"5"
+						"KDR"		"1.055556"
+						"enemy_kills"		"38"
+						"deaths"		"36"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}
@@ -66709,13 +69997,6 @@
 			"code"		"pyth"
 			"dob"		"1993-09-21"
 			"geo"		"SE"
-			"events"
-			{
-				"9"
-				{
-					"team"		"1"
-				}
-			}
 		}
 		"24868593"
 		{
@@ -66728,6 +70009,36 @@
 				"9"
 				{
 					"team"		"62"
+					"clutch_kills"		"1"
+					"pistol_kills"		"3"
+					"opening_kills"		"0"
+					"sniper_kills"		"0"
+					"KDR"		"0.352941"
+					"enemy_kills"		"12"
+					"deaths"		"34"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"2"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.277778"
+						"enemy_kills"		"5"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.437500"
+						"enemy_kills"		"7"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66742,6 +70053,36 @@
 				"9"
 				{
 					"team"		"62"
+					"clutch_kills"		"3"
+					"pistol_kills"		"10"
+					"opening_kills"		"7"
+					"sniper_kills"		"5"
+					"KDR"		"0.656250"
+					"enemy_kills"		"21"
+					"deaths"		"32"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"3"
+						"sniper_kills"		"2"
+						"KDR"		"0.444444"
+						"enemy_kills"		"8"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"3"
+						"KDR"		"0.928571"
+						"enemy_kills"		"13"
+						"deaths"		"14"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66756,6 +70097,36 @@
 				"9"
 				{
 					"team"		"62"
+					"clutch_kills"		"3"
+					"pistol_kills"		"9"
+					"opening_kills"		"3"
+					"sniper_kills"		"0"
+					"KDR"		"0.529412"
+					"enemy_kills"		"18"
+					"deaths"		"34"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.555556"
+						"enemy_kills"		"10"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.500000"
+						"enemy_kills"		"8"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66770,6 +70141,36 @@
 				"9"
 				{
 					"team"		"62"
+					"clutch_kills"		"5"
+					"pistol_kills"		"9"
+					"opening_kills"		"6"
+					"sniper_kills"		"17"
+					"KDR"		"0.939394"
+					"enemy_kills"		"31"
+					"deaths"		"33"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"6"
+						"opening_kills"		"2"
+						"sniper_kills"		"8"
+						"KDR"		"1.187500"
+						"enemy_kills"		"19"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"4"
+						"sniper_kills"		"9"
+						"KDR"		"0.705882"
+						"enemy_kills"		"12"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66784,6 +70185,36 @@
 				"9"
 				{
 					"team"		"62"
+					"clutch_kills"		"0"
+					"pistol_kills"		"7"
+					"opening_kills"		"1"
+					"sniper_kills"		"0"
+					"KDR"		"0.361111"
+					"enemy_kills"		"13"
+					"deaths"		"36"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"4"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.421053"
+						"enemy_kills"		"8"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.294118"
+						"enemy_kills"		"5"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66798,6 +70229,69 @@
 				"9"
 				{
 					"team"		"48"
+					"clutch_kills"		"5"
+					"pistol_kills"		"30"
+					"opening_kills"		"42"
+					"sniper_kills"		"84"
+					"KDR"		"1.191358"
+					"enemy_kills"		"193"
+					"deaths"		"162"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"6"
+						"KDR"		"0.937500"
+						"enemy_kills"		"15"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"5"
+						"opening_kills"		"9"
+						"sniper_kills"		"20"
+						"KDR"		"1.370370"
+						"enemy_kills"		"37"
+						"deaths"		"27"
+						"matches_played"		"1"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"7"
+						"opening_kills"		"14"
+						"sniper_kills"		"34"
+						"KDR"		"1.485714"
+						"enemy_kills"		"52"
+						"deaths"		"35"
+						"matches_played"		"2"
+					}
+					"stage4"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"9"
+						"opening_kills"		"13"
+						"sniper_kills"		"23"
+						"KDR"		"1.019231"
+						"enemy_kills"		"53"
+						"deaths"		"52"
+						"matches_played"		"2"
+					}
+					"stage5"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"6"
+						"opening_kills"		"4"
+						"sniper_kills"		"1"
+						"KDR"		"1.125000"
+						"enemy_kills"		"36"
+						"deaths"		"32"
+						"matches_played"		"1"
+					}
 				}
 			}
 		}
@@ -66812,6 +70306,47 @@
 				"9"
 				{
 					"team"		"63"
+					"clutch_kills"		"7"
+					"pistol_kills"		"11"
+					"opening_kills"		"13"
+					"sniper_kills"		"2"
+					"KDR"		"0.931373"
+					"enemy_kills"		"95"
+					"deaths"		"102"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"1"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.652174"
+						"enemy_kills"		"15"
+						"deaths"		"23"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"3"
+						"opening_kills"		"6"
+						"sniper_kills"		"0"
+						"KDR"		"1.875000"
+						"enemy_kills"		"30"
+						"deaths"		"16"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"7"
+						"opening_kills"		"4"
+						"sniper_kills"		"2"
+						"KDR"		"0.793651"
+						"enemy_kills"		"50"
+						"deaths"		"63"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -66826,6 +70361,47 @@
 				"9"
 				{
 					"team"		"63"
+					"clutch_kills"		"10"
+					"pistol_kills"		"8"
+					"opening_kills"		"12"
+					"sniper_kills"		"2"
+					"KDR"		"0.900000"
+					"enemy_kills"		"90"
+					"deaths"		"100"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"3"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.826087"
+						"enemy_kills"		"19"
+						"deaths"		"23"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"2"
+						"opening_kills"		"1"
+						"sniper_kills"		"0"
+						"KDR"		"0.950000"
+						"enemy_kills"		"19"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"5"
+						"pistol_kills"		"3"
+						"opening_kills"		"9"
+						"sniper_kills"		"2"
+						"KDR"		"0.912281"
+						"enemy_kills"		"52"
+						"deaths"		"57"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -66840,6 +70416,47 @@
 				"9"
 				{
 					"team"		"63"
+					"clutch_kills"		"12"
+					"pistol_kills"		"24"
+					"opening_kills"		"10"
+					"sniper_kills"		"2"
+					"KDR"		"0.939394"
+					"enemy_kills"		"93"
+					"deaths"		"99"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"8"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.900000"
+						"enemy_kills"		"18"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"3"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.952381"
+						"enemy_kills"		"20"
+						"deaths"		"21"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"8"
+						"pistol_kills"		"13"
+						"opening_kills"		"8"
+						"sniper_kills"		"2"
+						"KDR"		"0.948276"
+						"enemy_kills"		"55"
+						"deaths"		"58"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -66854,6 +70471,47 @@
 				"9"
 				{
 					"team"		"63"
+					"clutch_kills"		"6"
+					"pistol_kills"		"19"
+					"opening_kills"		"15"
+					"sniper_kills"		"33"
+					"KDR"		"0.886598"
+					"enemy_kills"		"86"
+					"deaths"		"97"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"4"
+						"opening_kills"		"3"
+						"sniper_kills"		"6"
+						"KDR"		"1"
+						"enemy_kills"		"18"
+						"deaths"		"18"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"5"
+						"KDR"		"0.789474"
+						"enemy_kills"		"15"
+						"deaths"		"19"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"4"
+						"pistol_kills"		"10"
+						"opening_kills"		"10"
+						"sniper_kills"		"22"
+						"KDR"		"0.883333"
+						"enemy_kills"		"53"
+						"deaths"		"60"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -66868,6 +70526,47 @@
 				"9"
 				{
 					"team"		"63"
+					"clutch_kills"		"13"
+					"pistol_kills"		"24"
+					"opening_kills"		"14"
+					"sniper_kills"		"0"
+					"KDR"		"1"
+					"enemy_kills"		"98"
+					"deaths"		"98"
+					"matches_played"		"5"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"2"
+						"sniper_kills"		"0"
+						"KDR"		"0.904762"
+						"enemy_kills"		"19"
+						"deaths"		"21"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"0"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.900000"
+						"enemy_kills"		"18"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"9"
+						"pistol_kills"		"19"
+						"opening_kills"		"9"
+						"sniper_kills"		"0"
+						"KDR"		"1.070175"
+						"enemy_kills"		"61"
+						"deaths"		"57"
+						"matches_played"		"3"
+					}
 				}
 			}
 		}
@@ -66882,6 +70581,102 @@
 				"9"
 				{
 					"team"		"46"
+					"clutch_kills"		"2"
+					"pistol_kills"		"6"
+					"opening_kills"		"3"
+					"sniper_kills"		"0"
+					"KDR"		"0.756757"
+					"enemy_kills"		"28"
+					"deaths"		"37"
+					"matches_played"		"2"
+					"stage0"
+					{
+						"clutch_kills"		"2"
+						"pistol_kills"		"5"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.823529"
+						"enemy_kills"		"14"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"0"
+						"pistol_kills"		"1"
+						"opening_kills"		"3"
+						"sniper_kills"		"0"
+						"KDR"		"0.700000"
+						"enemy_kills"		"14"
+						"deaths"		"20"
+						"matches_played"		"1"
+					}
+				}
+			}
+		}
+		"158900"
+		{
+			"name"		"THREAT"
+			"code"		"threat"
+			"dob"		"1988-04-05"
+			"geo"		"SE"
+			"events"
+			{
+				"9"
+				{
+					"team"		"1"
+					"clutch_kills"		"8"
+					"pistol_kills"		"19"
+					"opening_kills"		"5"
+					"sniper_kills"		"0"
+					"KDR"		"0.709924"
+					"enemy_kills"		"93"
+					"deaths"		"131"
+					"matches_played"		"7"
+					"stage0"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"2"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.708333"
+						"enemy_kills"		"17"
+						"deaths"		"24"
+						"matches_played"		"1"
+					}
+					"stage1"
+					{
+						"clutch_kills"		"1"
+						"pistol_kills"		"3"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.352941"
+						"enemy_kills"		"6"
+						"deaths"		"17"
+						"matches_played"		"1"
+					}
+					"stage2"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"9"
+						"opening_kills"		"5"
+						"sniper_kills"		"0"
+						"KDR"		"1.040000"
+						"enemy_kills"		"52"
+						"deaths"		"50"
+						"matches_played"		"3"
+					}
+					"stage3"
+					{
+						"clutch_kills"		"3"
+						"pistol_kills"		"5"
+						"opening_kills"		"0"
+						"sniper_kills"		"0"
+						"KDR"		"0.450000"
+						"enemy_kills"		"18"
+						"deaths"		"40"
+						"matches_played"		"2"
+					}
 				}
 			}
 		}

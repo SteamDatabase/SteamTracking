@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ae09d92cbdeb249295de73b73b551fa6e93d8a37.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.8997ebedbd731c870f674c329a2675e6ff04fe90.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2836,6 +2836,106 @@
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_gold.a222cdc35d2f867b8895a2a1262b1362a15823f1.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/mlg_2016_fantasy_gold_large.0e41417dacac4770b36c6a5b5c0b42aee019ebdf.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 CS:GO Champion",
+				"defindex": 927,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at MLG Columbus 2016",
+				"item_description": "This championship trophy was awarded to the Champion at the MLG Columbus 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.c9a3fae5bb67ed2328a4c4932d96924e4e51cd8d.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 CS:GO Finalist",
+				"defindex": 928,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at MLG Columbus 2016",
+				"item_description": "This championship trophy was awarded to the Finalist at the MLG Columbus 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 CS:GO Semifinalist",
+				"defindex": 929,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at MLG Columbus 2016",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the MLG Columbus 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "MLG Columbus 2016 CS:GO Quarterfinalist",
+				"defindex": 930,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at MLG Columbus 2016",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the MLG Columbus 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
