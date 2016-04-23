@@ -441,3 +441,49 @@ body.v6 h2.pageheader.itemtitle
 	padding: 10px;
 	background-color: rgba( 0, 0, 0, 0.5 );
 }
+
+.workshop_previews_scroll
+{
+	width: 100%;
+	padding-top: 10px;
+	height: 90px;
+	background: rgba( 0, 0, 0, 0.5 );
+	text-align: center;
+	box-shadow: 0 0 5px 0 #000000;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+.workshop_previews
+{
+	text-align: left;
+	height: 75px;
+	width: 100%;
+	white-space: nowrap;
+	position: relative;
+	float: left;
+}
+.workshop_preview
+{
+	display: inline-block;
+	padding-left: 1px;
+	padding-right: 1px;
+	border: 1px solid rgba(0,0,0,0);
+}
+.workshop_preview:hover
+{
+	border: 1px solid #ffffff;
+}
+.workshop_preview.selected
+{
+	border: 1px solid rgba(255, 255, 255, 0.75 );
+}
+.workshop_preview_image
+{
+	height: 65px;
+}
+
+#workshop_preview_main .workshop_preview_image
+{
+	width: 65px;
+	height: 65px;
+}

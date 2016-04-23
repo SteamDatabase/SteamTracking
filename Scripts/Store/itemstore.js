@@ -168,3 +168,38 @@ function GetMarketPriceOverview( container, params )
 	)
 }
 
+function CItemStoreHighlightPlayer( containerID, rgParams ) {
+	rgParams = rgParams || {};
+
+	var player = this;
+
+	var width = 0;
+	for ( var i = 0; i < rgParams.length; ++i )
+	{
+		var elemID = rgParams[i].id;
+		var elem = $J( "#" + elemID ).data( 'url', rgParams[i].url );
+		width += rgParams[i].width + 5;
+		$J( "#" + elemID ).click( function() {
+			var elem = $J( this );
+			player.OnSelected( elem, elem.data( 'url' ) );
+		} );
+	}
+
+	this.m_currentElem = null;
+	this.OnSelected( $J( "#" + rgParams[0].id ), rgParams[0].url );
+}
+
+CItemStoreHighlightPlayer.prototype.OnSelected = function( elem, imgURL )
+{
+	if ( this.m_currentElem )
+	{
+		this.m_currentElem.removeClass( "selected" );
+	}
+
+	this.m_currentElem = elem;
+	this.m_currentElem.addClass( "selected" );
+
+	$J( "#preview_image" ).attr( 'src', imgURL );
+	$J( "#preview_image" ).attr( 'srcset', imgURL );
+}
+
