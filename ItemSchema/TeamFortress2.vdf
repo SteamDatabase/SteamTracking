@@ -74281,10 +74281,14 @@
 					"0"
 					{
 						"name"		"#TF_dec15_patriot_peak_Style0"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 					"1"
 					{
 						"name"		"#TF_dec15_patriot_peak_Style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"additional_hidden_bodygroups"
 						{
 							"headphones"		"1"
