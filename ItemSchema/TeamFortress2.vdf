@@ -59050,6 +59050,8 @@
 							"medic"		"models/workshop/player/items/all_class/enlightened_mann/enlightened_mann_medic.mdl"
 							"spy"		"models/workshop/player/items/all_class/enlightened_mann/enlightened_mann_spy.mdl"
 						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"name"		"#TF_enlightened_mann_style0"
 					}
 					"1"
@@ -59060,6 +59062,8 @@
 							"medic"		"models/workshop/player/items/all_class/enlightened_mann_s2/enlightened_mann_s2_medic.mdl"
 							"spy"		"models/workshop/player/items/all_class/enlightened_mann_s2/enlightened_mann_s2_spy.mdl"
 						}
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"name"		"#TF_enlightened_mann_style1"
 					}
 				}
@@ -74269,6 +74273,24 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_dec15_patriot_peak_Style0"
+					}
+					"1"
+					{
+						"name"		"#TF_dec15_patriot_peak_Style1"
+						"additional_hidden_bodygroups"
+						{
+							"headphones"		"1"
+						}
+					}
+				}
 			}
 		}
 		"30744"
@@ -133003,6 +133025,12 @@
 				"tags"
 				{
 				}
+			}
+			"3"
+			{
+				"name"					"cp_degrootkeep"
+				"localizedname"			"#TF_Map_cp_degrootkeep"
+				"quickplay_type"		"all_users"
 			}
 		}
 	}
