@@ -362,6 +362,7 @@ function MapTypeToText( type )
 		case 2048: return "Video";
 		case 4096: return "Plugin";
 		case 8192: return "Music";
+		case 1024: return "Franchise";
 		default: return 'UNKNOWN: ' + type;
 	}
 }

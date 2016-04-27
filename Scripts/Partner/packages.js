@@ -572,7 +572,7 @@ var templ_DiscountsSummaryDiv = new Template( ''
 // discounts = map of initial discount values for base price & country overrides (currency/country code => value)
 function CreateDiscount( target, id, discount, packageid )
 {
-	var name = (discount['name'] == null ) ? '' : discount['name'];
+	var name = ( (discount['name'] == null ) ? '' : discount['name'] ) + ' (' + discount['discount_id'] + ')';
 	var description = (discount['description'] == null ) ? '' : discount['description'];
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
 	var group = (discount['group'] == null) ? '' : discount['group'];

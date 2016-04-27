@@ -52,7 +52,7 @@ function AppsAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
 function StandardCallback( results, elementName )
 {
 	elt = $(elementName);
-	
+
 	// check type of elt
 	if ( typeof( elt ) == "object" )
 	{
@@ -83,7 +83,7 @@ function StandardCallback( results, elementName )
 		elt.className = results[ 'success' ] ? "outputSuccess" : "outputFailure";
 
 		ShowUnpublishedChangesWarningIfNeeded();
-		
+
 		return true;
 	}
 	else
@@ -194,7 +194,7 @@ function SetRefundsIgnorePlaytime( appid, ignorePlaytime )
 // Set the signing info
 //
 function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
-{	
+{
     AppsAjaxRequest( g_szBaseURL + '/apps/setsigninginfo/' + appid,
 		{ 'filekeymap': fileKeyMap, 'signaturescheckedonlaunch': signaturesCheckedOnLaunch },
 		function( results )
@@ -203,7 +203,7 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 			// now reflect results
 			CommonSetHandler( results );
 		}
-		);		
+		);
 }
 
 //
@@ -321,7 +321,7 @@ function EconomyInventoryLogoUploadCallback( appid, jsonResponse )
 //
 // handler for selecting an app in the app list.
 // redirects the browser to the location for the particular appid
-// 
+//
 function AppSelect( controller, method )
 {
 	if ( controller == "" || controller == undefined )
@@ -334,7 +334,7 @@ function AppSelect( controller, method )
 	}
 	var appSelect = $('appSelect');
 	var newID = appSelect.options[ appSelect.selectedIndex ].value;
-	
+
 	if ( newID == "-1" ) return;
 
 	var newLocation = g_szBaseURL + '/' + controller + '/' + method + '/' + newID;
@@ -350,11 +350,11 @@ function BuildSelect( appid )
 	var buildSelect = $( 'buildSelect' );
 	var newBuild    = buildSelect.options[ buildSelect.selectedIndex ].value;
 
-	window.location = g_szBaseURL + '/errors/viewbuild/' + appid + '/' + newBuild;  
+	window.location = g_szBaseURL + '/errors/viewbuild/' + appid + '/' + newBuild;
 }
 
 
-// 
+//
 // ajax requestor to ping the cser and ask it to load more minidumps for the given error
 //
 function RequestTenMoreMinidumps( errorid )
@@ -382,13 +382,13 @@ function MigrateTargetFixup( migrateSelect )
 	{
 		return;
 	}
-		
+
 	var victimID = migrateSelect.options[ migrateSelect.selectedIndex ].value;
-	
+
 	if ( victimID > 0 )
 	{
 		$('publish_anchor').href = g_szBaseURL + "/apps/publishing/" + victimID;
-	} 
+	}
 }
 
 function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
@@ -419,7 +419,7 @@ function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
 function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector )
 {
 	var appidDest = selector.options[ selector.selectedIndex ].value;
-	
+
 	if ( appidDest == -1 )
 	{
 		alert( "Please select a game first." );
@@ -638,12 +638,12 @@ function FetchLocalizedForm( elt, key )
 				delete formData[ lang ];
 			}
 		}
-		
+
 		// now catch the case where there's only an english string
 		// in the otherwise localized form, and back the data off
 		// to a regular string
 		var keysRemaining = Object.keys( formData );
-		if ( keysRemaining.length == 1 && keysRemaining[ 0 ] == 'english' ) 
+		if ( keysRemaining.length == 1 && keysRemaining[ 0 ] == 'english' )
 		{
 			formData = formData[ 'english' ];
 		}
@@ -662,7 +662,7 @@ function SaveAchievementClosure( appid, statid, bitid )
 		var displayName = FetchLocalizedForm( $( id + '_displayname' ), 'display_name' );
 		var description = FetchLocalizedForm( $( id + '_description' ), 'description' );
 		var progressSelect = $( id + '_progress' );
-		
+
 		AppsAjaxRequest( g_szBaseURL + "/apps/saveachievement/" + appid,
 			{
 			'statid' : statid,
@@ -776,7 +776,7 @@ function LocalizedAchievementField( achievement, field, fallback, language )
 		else
 			results[ 'string' ] = '';
 	}
-	
+
 	return results;
 }
 
@@ -784,7 +784,7 @@ function LocalizedAchievementField( achievement, field, fallback, language )
 function AchievementSpan( achievement, field, fallback, language )
 {
 	data = LocalizedAchievementField( achievement, field, fallback, language );
-	
+
 	var text = "";
 	var newSpan = $J( '<span>' );
 
@@ -801,7 +801,7 @@ function AchievementSpan( achievement, field, fallback, language )
 			firstSpan.text( data['string'] );
 			newSpan.append( firstSpan );
 		}
-		
+
 		var secondSpan = $J( '<span>' );
 
 		if ( language == "english" )
@@ -813,7 +813,7 @@ function AchievementSpan( achievement, field, fallback, language )
 		secondSpan.addClass( 'outputNeutral' );
 		newSpan.append( secondSpan );
 	}
-		
+
 	return newSpan;
 }
 
@@ -841,7 +841,7 @@ function addCell( tr, txt )
 // pokes a given achievement into a given DOM element for its TR.
 //
 // assumes the row is empty at entry.
-// 
+//
 function SetAchievement( appid, destRow, achievement )
 {
 	var row = $J( destRow );
@@ -850,14 +850,14 @@ function SetAchievement( appid, destRow, achievement )
 	var nameCell = $J( '<td>' );
 	nameCell.text( achievement[ "api_name" ] );
 	nameCell.append( $J( '<br>' ) );
-	
+
 	// Add the achievement progress stat line
 	if ( typeof achievement[ 'progress' ] === 'object' )
 	{
 		// currently only support direct stat value mapping
 		var progressSpan = $J( '<span>' );
 		progressSpan.text( achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')' );
-		
+
 		nameCell.append( progressSpan );
 		nameCell.append( $J( '<br>' ) );
 	}
@@ -867,9 +867,9 @@ function SetAchievement( appid, destRow, achievement )
 	// obviously some kind of helper would be handy here. maybe it could just
 	// return the span DOM object instead of going through the parser.
 	var descCell = $J( '<td>' );
-	
+
 	var rgLanguageDisplay = g_rgLanguages;
-	
+
 	var bPrefix = false;
 	var languages;
 	if ( g_language == "all" )
@@ -894,7 +894,7 @@ function SetAchievement( appid, destRow, achievement )
 		descCell.append( AchievementSpan( achievement, "display_name", achievement.api_name + '_NAME', language ) );
 		descCell.append( $J( '<br>' ) );
 	}
-	
+
 	// TODO Commonify description and display name
 	for ( language in languages )
 	{
@@ -907,17 +907,17 @@ function SetAchievement( appid, destRow, achievement )
 		descCell.append( $J( '<br>' ) );
 	}
 	row.append( descCell );
-	
+
 	switch ( achievement[ "permission" ] )
 	{
 	case "1": addCell( row, "GS" ); break;
 	case "2": addCell( row, "Official GS" ); break;
 
-	case "0": 
-	default: 
+	case "0":
+	default:
 		addCell( row, "Client" );
 	}
-	
+
 	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "<b>Yes</b>" : "" );
 
 	// TODO jqueryize the rest here
@@ -955,7 +955,7 @@ function SetAchievement( appid, destRow, achievement )
 // server callback - here's a new stat we need to add
 //
 // would be nice to commonify this with the SetItemsWorker code path
-// 
+//
 function NewStat( appid, stat )
 {
 	var parentDiv = document.getElementById( "appStatDisplay" );
@@ -975,7 +975,7 @@ function NewStat( appid, stat )
 // server callback - here's a new achievement we need to add
 //
 // would be nice to commonify this with the SetItemsWorker code path
-// 
+//
 function NewAchievement( appid, achievement )
 {
 	var parentDiv = document.getElementById( "appAchievementDisplay" );
@@ -1018,7 +1018,7 @@ function AchievementEditLocalizeHelper( container, form, achievement, field, fal
 	for ( language in languages )
 	{
 		var subItem = $J( '<input>' );
-		
+
 		if ( ( g_language == "all" && language in g_rgEditingLanguages ) )
 		{
 			// viewing all languages and this is a lang we're editing; add a prefix
@@ -1046,8 +1046,8 @@ function AchievementEditLocalizeHelper( container, form, achievement, field, fal
 		{
 			subItem.val( data.string );
 		}
-		
-		$J( form ).append( subItem ); 
+
+		$J( form ).append( subItem );
 	}
 }
 
@@ -1071,7 +1071,7 @@ function AddOptionToSelect( select, option )
 
 
 //
-// Builds the stat permission drop-down 
+// Builds the stat permission drop-down
 //
 function CreateStatPermissionSelect( id )
 {
@@ -1086,7 +1086,7 @@ function CreateStatPermissionSelect( id )
 		option.value = i;
 		AddOptionToSelect( itemSelect, option );
 	}
-	
+
 	return itemSelect;
 }
 
@@ -1149,14 +1149,14 @@ function EditAchievement( appid, achievement )
 		// ensure nameCell is extended
 		Element.extend( nameCell );
 		nameCell.appendChild( item );
-		
+
 		// achievement progress
 		// insert some descriptive text and a select
 		nameCell.appendChild( document.createElement( 'br' ) );
 		textSpan = document.createElement( "span" );
 		textSpan.innerHTML = "Progress Stat" + ' ';
 		nameCell.appendChild( textSpan );
-		
+
 		var progressSelect = document.createElement( "select" );
 		progressSelect.onchange = DirtyRowClosure( row );
 		progressSelect.id = id + "_progress";
@@ -1174,7 +1174,7 @@ function EditAchievement( appid, achievement )
 			minVal = achievement.progress.min_val;
 			maxVal = achievement.progress.max_val;
 		}
-		
+
 		var theInput;
 		nameCell.insert( new Element( 'br' ) );
 		nameCell.insert( { 'bottom' : "Min value:" + ' ' } );
@@ -1199,7 +1199,7 @@ function EditAchievement( appid, achievement )
 						// later when we do the expression-evaluator thing we'll redo this.
 						statThisOne = achievement.progress.value.operand1;
 					}
-					
+
 					results.sort(
 						function( statLeft, statRight )
 							{
@@ -1223,20 +1223,20 @@ function EditAchievement( appid, achievement )
 						option = document.createElement( "option" );
 						option.text = results[i]['name'];
 						option.value = results[i]['name'];
-						
+
 						AddOptionToSelect( elt, option );
-						
+
 						if ( results[i].name === statThisOne )
 						{
 							option.selected = true;
 						}
 					}
-					
+
 					noProgressOption.text = "None";
 				},
 				'get'
 			);
-		
+
 		// we use a form to contain each localizable field;
 		// this gives us a convenient json serialization path
 		// through prototype.
@@ -1281,7 +1281,7 @@ function EditAchievement( appid, achievement )
 		formText = formText.replace( /IMAGE_SOURCE/g, achievement[ "icon" ] );
 		formText = formText.replace( /IMAGE_ID/g, achievementID + "_icon" );
 		formText = formText.replace( /GRAY/g, false );
-		
+
 		row.insertCell( -1 ).innerHTML = formText;
 
 		formText = $('stock_upload_form').innerHTML;
@@ -1328,7 +1328,7 @@ function EditAchievement( appid, achievement )
 // fIdMaker turns the item into an id in the DOM. fSetter pokes the
 // item into the row in question.
 //
-// 
+//
 function SetItemsWorker( appid, items, parentDivID, sourceDivID, newTableID, fIdMaker, fSetter )
 {
 	var parentDiv = document.getElementById( parentDivID );
@@ -1340,7 +1340,7 @@ function SetItemsWorker( appid, items, parentDivID, sourceDivID, newTableID, fId
 	// firstChild is dangerous, fails if we change formatting ion table template
 	theTable = parentDiv.firstChild;
 	theTable.id = newTableID;
-	
+
 	// we need to find the tbody in the table, so our rows
 	// go in the right place
 	var insertionParent = theTable;
@@ -1350,7 +1350,7 @@ function SetItemsWorker( appid, items, parentDivID, sourceDivID, newTableID, fId
 	{
 		insertionParent = theTable.tBodies[ 0 ];
 	}
-	
+
 	// crack parameter and iterate achievements/stats
 	for ( var index = 0; index < count; index++ )
 	{
@@ -1396,9 +1396,9 @@ function SetAchievementsDiv( appid, achievements )
 	var eltRow;
 	var text;
 	var newImg;
-	
+
 	parentDiv.update('');
-	
+
 	// crack parameter and iterate achievements/stats
 	for ( index = 0; index < items.length; index++ )
 	{
@@ -1407,15 +1407,15 @@ function SetAchievementsDiv( appid, achievements )
 		// make a new container "row" div for the whole item
 		eltRow = new Element( 'div' );
 		parentDiv.insert( eltRow );
-		
+
 		var achievement = theItem;
-		
+
 		// achievement specific:
 		// jam a bunch of floated-left divs in there to hold the item's fields
 		elt = new Element( 'div', { 'style' : 'float: left; width: 6em' } );
 		elt.update( achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ] );
 		eltRow.insert( elt );
-		
+
 		elt = new Element( 'div', { 'style' : 'float: left; width: 24em' } );
 		elt.update( achievement[ 'api_name' ] );
 		elt.insert( new Element( 'br' ) );
@@ -1425,12 +1425,12 @@ function SetAchievementsDiv( appid, achievements )
 			// currently only support direct stat value mapping
 			progressSpan = new Element( 'span' );
 			progressSpan.innerHTML = achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')';
-			
+
 			elt.insert( progressSpan );
 		}
 		eltRow.insert( elt );
 
-		
+
 		elt = new Element( 'div', { 'style' : 'float: left; width: 36em' } );
 		var rgLanguageDisplay = g_rgLanguages;
 		var bPrefix = false;
@@ -1455,7 +1455,7 @@ function SetAchievementsDiv( appid, achievements )
 			}
 			elt.insert( eltSub );
 		}
-		
+
 		// TODO Commonify description and display name
 		for ( language in languages )
 		{
@@ -1467,19 +1467,19 @@ function SetAchievementsDiv( appid, achievements )
 			elt.insert( eltSub );
 		}
 		eltRow.insert( elt );
-		
+
 		elt = new Element( 'div', { 'style': 'float: left; width: 5em' } );
 		switch ( achievement[ "permission" ] )
 		{
 		case "1": elt.update( "GS" ); break;
 		case "2": elt.update( "Official GS" ); break;
 
-		case "0": 
-		default: 
+		case "0":
+		default:
 			elt.update( "Client" );
 		}
 		eltRow.insert( elt );
-		
+
 		// give this element a minimum height, since it is often empty of content and
 		// would snap to zero height
 		elt = new Element( 'div', { 'style': 'float: left; width: 4em; height: 1em' } );
@@ -1587,7 +1587,7 @@ function FetchAlternate( item, field, alternate )
 // pokes a given stat into a given DOM element for its TR.
 //
 // assumes the row is empty at entry.
-// 
+//
 function SetStat( appid, destRow, stat )
 {
 	var row = $J( destRow );
@@ -1601,8 +1601,8 @@ function SetStat( appid, destRow, stat )
 	case "1": addCell( row, "GS" ); break;
 	case "2": addCell( row, "Official GS" ); break;
 
-	case "0": 
-	default: 
+	case "0":
+	default:
 		addCell( row, "Client" ); break;
 	}
 
@@ -1626,7 +1626,7 @@ function SetStat( appid, destRow, stat )
 
 	var displayName = "";
 	if ( "display" in stat )
-	{	
+	{
 		if ( "name" in stat["display"] )
 		{
 			displayName = stat["display"]["name"];
@@ -1802,13 +1802,13 @@ function EditStat( appid, stat )
 		}
 		item.click( DirtyRowClosure( row ) );
 		addCell( row, item );
-		
+
 		item = $J( "<input>" );
 		item.css( "width", "100%" );
 		item.attr( 'id', id + "_displayname" );
 		var displayName = "";
 		if ( "display" in stat )
-		{	
+		{
 			if ( "name" in stat["display"] )
 			{
 				displayName = stat["display"]["name"];
@@ -1867,16 +1867,24 @@ function FlagsToString( flags )
 // pokes a given stat into a given DOM element for its TR.
 //
 // assumes the row is empty at entry.
-// 
+//
 function SetDrmModule( appid, destRow, drmModule )
 {
 	var d=new Date();
 	d.setTime( drmModule[ 'date' ]*1000 );
-	var downloadlink = '<a href="'+ encodeURI( drmModule[ 'download' ] )+ '">' + drmModule[ 'module' ] + '</a>';
-	
+
 	destRow.insertCell( -1 ).innerHTML = drmModule[ 'buildcrc' ];
 
-	destRow.insertCell( -1 ).innerHTML = downloadlink;
+	if ( drmModule[ 'download' ] !== undefined )
+	{
+		// insert a cell; figure out what to put there
+		var downloadlink = 'Not available';
+		if ( drmModule[ 'download' ] )
+		{
+			downloadlink = '<a href="'+ encodeURI( drmModule[ 'download' ] )+ '">' + drmModule[ 'module' ] + '</a>';
+		}
+		destRow.insertCell( -1).innerHTML = downloadlink;
+	}
 
 	if ( drmModule[ 'download_orig' ] !== undefined )
 	{
@@ -1916,12 +1924,12 @@ function EditDrmModule( drmModule )
 function SetInstallscriptOverride( appid, bOverride )
 {
 	$('overrideOutput').innerHTML = 'Saving...';
-	
-	callback = function( results ) 
-		{ 
+
+	callback = function( results )
+		{
 			StandardCallback( results, 'overrideOutput' );
 		}
-		
+
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/setinstallscriptoverride/' + appid,
 		{ 'override' : bOverride ? "1" : "0" },
@@ -1940,8 +1948,8 @@ function ItemsPageSetActiveTab( tabName )
 	for ( i = 0; i < tabs.length; i++ )
 	{
 		curTabDiv = $( tabs[i] + 'Tab' );
-		curTabBody = $( tabs[i] ); 
-	
+		curTabBody = $( tabs[i] );
+
 		if ( tabName == tabs[i] )
 		{
 			curTabDiv.className = 'tab activetab';
@@ -1975,7 +1983,7 @@ function SetDedicatedGameServers( appid, gamedir, versions, message, serverbrows
 {
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/setdedicatedgs/' + appid,
-		{ 
+		{
 			'gamedir' : gamedir,
 			'versions' : versions,
 			'message' : message,
@@ -2047,10 +2055,10 @@ function GetUserName()
 function ImageUploadCallback(jsonResponse)
 {
 	var results = jsonResponse.evalJSON(true);
-	
+
 	// poke in results
 	StandardCallback( results, 'upload_response' );
-	
+
 	// look for any new images we can replace in the DOM. because we
 	// get these data out of the DOM (our image uploader stashes them
 	// in an iframe) we need to decode them. first, we figure out
@@ -2090,7 +2098,7 @@ function ImageUploadCallback(jsonResponse)
 					elt.src = url;
 			}
 		}
-	}	
+	}
 }
 
 function AsyncNotificationsLocCallbackClosure( appid )
@@ -2133,14 +2141,14 @@ function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
 		{
 			var response = jsonResponse.evalJSON(true);
 			StandardCallback( response, 'achievement_upload_response' );
-	
+
 			AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievement/" + appid + "/" + statid + "/" + bitid,
 				{},
 				function( results )
 				{
 					var val = gray ? "icon_gray" : "icon";
 					$( IDFromAchievement( statid, bitid) + "_" + val ).src = results[ val ];
-					
+
 					fn = DirtyRowClosure( $( IDFromAchievement( statid, bitid ) ) );
 					fn();
 				}
@@ -2153,23 +2161,23 @@ function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
 function ModuleUploadCallback(appid, jsonResponse)
 {
 	var results = jsonResponse.evalJSON(true);
-	
+
 	StandardCallback( results, 'module_upload_response' );
 	LoadDRM( appid );
 }
 
 function SteamworksDRMCallback(appid, jsonResponse)
 {
-	var results = jsonResponse.evalJSON(true); 
-	
-	StandardCallback( results, 'steamwork_drm_response' ); 
-	
+	var results = jsonResponse.evalJSON(true);
+
+	StandardCallback( results, 'steamwork_drm_response' );
+
 }
 
 function InstallScriptUploadCallback(appid, jsonResponse)
 {
 	var results = jsonResponse.evalJSON(true);
-	
+
 	StandardCallback( results, 'installscript_upload_response' );
 	LoadInstallScript( appid );
 }
@@ -2177,7 +2185,7 @@ function InstallScriptUploadCallback(appid, jsonResponse)
 function ScreenshotUploadCallback( appid, jsonResponse )
 {
 	var results = jsonResponse.evalJSON( true );
-	
+
 	StandardCallback( results, 'screenshot_upload_response' );
 	document.forms['screenshot_upload_form'].reset();
 	LoadScreens( appid );
@@ -2186,9 +2194,9 @@ function ScreenshotUploadCallback( appid, jsonResponse )
 function CommunityCapsuleUploadCallback( appid, jsonResponse )
 {
 	var results = jsonResponse.evalJSON( true );
-	
+
 	StandardCallback( results, 'capsule_upload_response' );
-	
+
 	// poke the image in there
 	if ( 'images' in results )
 	{
@@ -2398,7 +2406,7 @@ function PopulateAchievementLanguages( appid, languages )
 		victim = Object.keys(languages)[ 0 ];
 	}
 	g_language = victim;
-	
+
 	var cLanguages = 0;
 	var i = 2;								// leave two holes - for "all" and "tokens"
 	for ( lang in languages )
@@ -2406,18 +2414,18 @@ function PopulateAchievementLanguages( appid, languages )
 		// add language to language selector
 		langSelect.options[i] = new Option( g_rgLanguages[lang], lang);
 		langSelect.options[i].id = "opt" + lang;
-		
+
 		if ( lang == victim )
 		{
 			langSelect.options[i].selected = true;
 		}
-		
+
 		// add language to list of current editing languages
 		g_rgEditingLanguages[ lang ] = 1;
 		i++;
 		cLanguages++;
 	}
-	
+
 	// this routine is also side effecting through the g_bLocalized global,
 	// which indicates whether the app supports more than one language (thus
 	// enabling a bunch of localization-related UI).
@@ -2434,17 +2442,17 @@ function PopulateAchievementLanguages( appid, languages )
 // handler for selecting a language while editing achievements.
 // re-fetches achievements; when they display, they will pick up
 // the new language.
-// 
+//
 function LanguageSelect( appid )
 {
 	var langSelect = $('languageSelect');
 	g_language = langSelect.options[ langSelect.selectedIndex ].value;
-	
+
 	// issue ajax request to fetch achievements,
 	// then when they come back, poke them into the document
-	
+
 	$('appAchievementDisplay').innerHTML = "Loading achievements...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievements/" + appid,
 		{},
 		function( results )
@@ -2462,9 +2470,9 @@ function LoadAchievements( appid )
 {
 	// issue ajax request to fetch achievements,
 	// then when they come back, poke them into the document
-	
+
 	$('appAchievementDisplay').innerHTML = "Loading achievements...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchachievements/" + appid,
 		{},
 		function( results )
@@ -2489,9 +2497,9 @@ function LoadStats( appid )
 {
 	// issue ajax request to fetch stats,
 	// then when they come back, poke them into the document
-	
+
 	$('appStatDisplay').innerHTML = "Loading gameplay stats...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchstats/" + appid,
 		{},
 		function( results )
@@ -2508,9 +2516,9 @@ function LoadDRM( appid )
 {
 	// issue ajax request to fetch DRM modules,
 	// then when they come back, poke them into the document
-	
+
 	$('appDrmDisplay').innerHTML = "Loading application DRM information...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchdrm/" + appid,
 		{},
 		function( results )
@@ -2556,7 +2564,7 @@ function LoadSigningInfo( appid )
 {
 	// issue ajax request to fetch signing info,
 	// then when they come back, poke them into the document
-	
+
 	$('signinginfo_display').innerHTML = "Loading signing info...";
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchsigninginfo/" + appid,
 		{},
@@ -2572,7 +2580,7 @@ function LoadSigningInfo( appid )
 		    {
 		        signatureCheckOnLaunchOSX = results['signaturescheckedonlaunch']['osx'];
 		    }
-		    
+
 	            for( var filename in results['signedfiles'] )
 	            {
 	                var row = AddSigningRow();
@@ -2587,7 +2595,7 @@ function LoadSigningInfo( appid )
 				row['checkonlaunch']['osx'].checked = true;
 			}
 	            }
-             
+
 		    $('signinginfo_display').innerHTML = "";
 		}, 'get'
 		);
@@ -2596,7 +2604,7 @@ function LoadSigningInfo( appid )
 
 function DeleteScreenClosure( appid, screenid )
 {
-	var theClosure = 
+	var theClosure =
 	function()
 		{
 			AppsAjaxRequest( g_szBaseURL + "/apps/deletescreen/" + appid + "/" + screenid,
@@ -2620,9 +2628,9 @@ function SetScreens( appid, screens )
 		$('screenshots').innerHTML = 'Your group has no community screen shots. You can upload some above.';
 		return;
 	}
-	
+
 	$('screenshots').innerHTML = '';
-	
+
 	for ( var id = 0; id < screens.length; id++ )
 	{
 		var divScreen = document.createElement( 'div' );
@@ -2632,11 +2640,11 @@ function SetScreens( appid, screens )
 
 		var anchor = document.createElement( 'a' );
 		anchor.href = imageBase + screens[id]['screen'] + ".jpg";
-		
+
 		var img = document.createElement( 'img' );
 		img.src = imageBase + screens[id]['screen_thumb'] + ".jpg";
 		img.border = 0;
-		
+
 		anchor.appendChild( img );
 		divScreen.appendChild( anchor );
 		divScreen.appendChild( document.createElement( 'br' ) );
@@ -2648,8 +2656,8 @@ function SetScreens( appid, screens )
 		anchor2.innerHTML = "Delete";
 
 		divScreen.appendChild( anchor2 );
-		
-		$('screenshots').appendChild( divScreen );  
+
+		$('screenshots').appendChild( divScreen );
 	}
 }
 
@@ -2661,9 +2669,9 @@ function LoadScreens( appid )
 {
 	// issue ajax request to fetch screen shots,
 	// then when they come back, poke them into the document
-	
+
 	$('screenshots').innerHTML = "Loading screen shots...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchscreens/" + appid,
 		{},
 		function( results )
@@ -2687,7 +2695,7 @@ function SetAvatars( appid, avatars )
 		$('avatars').innerHTML = 'Your group has no community avatars. You can upload some above.';
 		return;
 	}
-	
+
 	$('avatars').innerHTML = '';
 
 	for ( var id = 0; id < avatars.length; id++ )
@@ -2698,12 +2706,12 @@ function SetAvatars( appid, avatars )
 		var anchor = document.createElement( 'a' );
 		anchor.href = '#';
 		anchor.onclick = avatarPopupClosure(appid, avatars[id]);
-				
+
 		var imgMed = document.createElement( 'img' );
 		imgMed.src = AvatarURL( avatars[id]['avatar_medium'] );
 		imgMed.border = 0;
 		anchor.appendChild( imgMed );
-		
+
 		divAvatar.appendChild( anchor );
 		divAvatar.appendChild( document.createElement( 'br' ) );
 
@@ -2714,8 +2722,8 @@ function SetAvatars( appid, avatars )
 		anchor2.innerHTML = "Delete";
 
 		divAvatar.appendChild( anchor2 );
-		
-		$('avatars').appendChild( divAvatar );  
+
+		$('avatars').appendChild( divAvatar );
 	}
 }
 
@@ -2730,7 +2738,7 @@ function avatarPopup(event, appid, avatar)
 	var e=event;
 	if (! e )
 		e=window.event; // Microsoft-style
-	
+
 	var w=360;
 	var h=250;
 
@@ -2748,13 +2756,13 @@ function avatarPopup(event, appid, avatar)
 	win.document.write('</body></html>');
 	win.document.close();
 	win.focus();
-	
+
 }
 
 function LoadAvatars( appid )
 {
 	$('avatars').innerHTML = "Loading avatars...";
-	
+
 	AppsAjaxRequest( g_szBaseURL + "/apps/fetchavatars/" + appid,
 		{},
 		function( results )
@@ -2771,14 +2779,14 @@ function AvatarUploadCallback(appid, jsonResponse)
 
 	StandardCallback( results, 'avatar_upload_response' );
 	document.forms['avatar_upload_form'].reset();
-	
+
 	LoadAvatars( appid );
 }
 
 
 function DeleteAvatarClosure( appid, screenid )
 {
-	var theClosure = 
+	var theClosure =
 	function()
 		{
 			AppsAjaxRequest( g_szBaseURL + "/apps/deleteavatar/" + appid + "/" + screenid,
@@ -2809,18 +2817,18 @@ function SetAppLanguages( appid )
 
 function SetAppDrmGuid( appid )
 {
-	AppsAjaxRequest( g_szBaseURL + '/apps/setdrmguid/' + appid, 
-					$('drmguid_selection_form').serialize(true), 
-					function(results ) 
+	AppsAjaxRequest( g_szBaseURL + '/apps/setdrmguid/' + appid,
+					$('drmguid_selection_form').serialize(true),
+					function(results )
 					{
-						StandardCallback(results, 'setguidoutput') ; 
+						StandardCallback(results, 'setguidoutput') ;
 					}
-					) ; 
+					) ;
 }
 
 function UpdateCEGEnabledStatus( appid, enabledflag, versionset, uniqueid )
 {
-    
+
 	AppsAjaxRequest( g_szBaseURL + '/apps/updatecegenabledstatus/' + appid,
 					{ appid: appid, enabledflag: enabledflag, versionset: versionset},
 					function(results )
@@ -2832,7 +2840,7 @@ function UpdateCEGEnabledStatus( appid, enabledflag, versionset, uniqueid )
 
 function GetCEGPropStatus( versionset, appid, uniqueid )
 {
-    
+
 	AppsAjaxRequest( g_szBaseURL + '/apps/getcegpropstatus/' + appid,
 					{ versionset: versionset, appid: appid},
 					function(results )
@@ -2846,37 +2854,37 @@ function GetCEGPropStatus( versionset, appid, uniqueid )
 function AddGameAndChallengeGroup( appid, groupname )
 {
     $('addgameandchallengegroupoutput').innerHTML = "Talking to Vac Server..."
-	AppsAjaxRequest( g_szBaseURL + '/apps/addgameandchallengegroup/' + appid, 
+	AppsAjaxRequest( g_szBaseURL + '/apps/addgameandchallengegroup/' + appid,
 					{ groupname: groupname },
-					function(results ) 
+					function(results )
 					{
-						RefreshCallback(results) ; 
+						RefreshCallback(results) ;
 					}
-					) ; 
+					) ;
 }
 
 function AddChallengeForChallengeGroup( appid, groupid, challengetype )
 {
     $('addchallengeforchallengegroupoutput').innerHTML = "Talking to Vac Server..."
-	AppsAjaxRequest( g_szBaseURL + '/apps/addchallengeforchallengegroup/' + appid, 
+	AppsAjaxRequest( g_szBaseURL + '/apps/addchallengeforchallengegroup/' + appid,
 					{ groupid: groupid, challengetype: challengetype },
-					function(results ) 
+					function(results )
 					{
-						RefreshCallback(results) ; 
+						RefreshCallback(results) ;
 					}
-					) ; 
+					) ;
 }
 
 function AddModuleForChallengeGroup( appid, groupid, modulename )
 {
     $('addmoduleforchallengegroupoutput').innerHTML = "Talking to Vac Server..."
-	AppsAjaxRequest( g_szBaseURL + '/apps/addmoduleforchallengegroup/' + appid, 
+	AppsAjaxRequest( g_szBaseURL + '/apps/addmoduleforchallengegroup/' + appid,
 					{ groupid: groupid, modulename: modulename },
-					function(results ) 
+					function(results )
 					{
-						RefreshCallback(results) ; 
+						RefreshCallback(results) ;
 					}
-					) ; 
+					) ;
 }
 
 //
@@ -2894,7 +2902,7 @@ function LoadAchievementCounts( appid )
 			delete results[ 'total' ];
 			var unlocalized = results[ 'unlocalized' ];
 			delete results[ 'unlocalized' ];
-			
+
 			if ( 0 && ( unlocalized[ 'descs' ] != 0 || unlocalized[ 'names' ] != 0 ) )
 			{
 				var elt = $( 'missing_unlocalized' );
@@ -2910,7 +2918,7 @@ function LoadAchievementCounts( appid )
 				elt.innerHTML = text;
 				elt.style.display = '';
 				elt.className = "outputNeutral";
-				
+
 			}
 
 			for ( lang in results )
@@ -2919,19 +2927,19 @@ function LoadAchievementCounts( appid )
 				if ( lang == 'token' )
 					langName = 'localization tokens';
 				var elt = $( 'missing_' + lang );
-				
+
 				if ( elt != null )
 				{
 					var text = '';
 					var cNames = results[ lang ][ 'names' ];
 					var cDescs = results[ lang ][ 'descs' ];
-					
+
 					if ( lang == "english" )
 					{
 						cNames += unlocalized[ 'names' ];
 						cDescs += unlocalized[ 'descs' ];
 					}
-					
+
 					if ( cNames < cAchievements )
 					{
 						text = "Missing " + ( cAchievements - cNames ) + " names in " + langName + ". ";
@@ -2940,7 +2948,7 @@ function LoadAchievementCounts( appid )
 					{
 						text = text + "Missing " + ( cAchievements - cDescs ) + " descriptions in " + langName + ". ";
 					}
-	
+
 					if ( text != '' )
 					{
 						elt.style.display = '';
@@ -2968,7 +2976,7 @@ function CrossBranchApp( appid )
 	{
 		return false;
 	}
-	
+
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/crossbranch/' + appid,
 		{},
@@ -2977,7 +2985,7 @@ function CrossBranchApp( appid )
 			StandardCallback( results, 'appOutput' );
 		}
 		);
-	
+
 }
 
 //
@@ -3010,7 +3018,7 @@ function CreateCommunityGroup( appid )
 function CancelEvent( event )
 {
 	if ( !event ) var event = window.event;
-	
+
 	event.cancelBubble = true;
 	if ( event.stopPropagation ) event.stopPropagation();
 }
@@ -3020,13 +3028,13 @@ function CancelEvent( event )
 // element - ID of element to update with progress & results
 // template - html template for each row
 // dataRequest - 0 = global, 1 = global around specified user, 2 = friends of user
-// onReceivedEntries - callback reporting new total entries in leaderboard (params: leaderboardid, totalCount) 
+// onReceivedEntries - callback reporting new total entries in leaderboard (params: leaderboardid, totalCount)
 //
 function GetLeaderboardEntries( target, template, onReceivedEntries, appid, leaderboardid, dataRequest, rangeStart, rangeEnd, steamid )
 {
 	var element = $( target );
 	element.innerHTML = 'Loading...';
-	
+
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/getleaderboardentries/' + appid,
 		{
@@ -3043,14 +3051,14 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 				element.innerHTML = 'Unable to load entries';
 				return;
 			}
-			
+
 			if ( results[ 'entries' ].length == 0 )
 			{
 				element.innerHTML = 'No entries in this leaderboard';
 				return;
 			}
-			
-			element.innerHTML = '';			
+
+			element.innerHTML = '';
 			for (var i = 0; i < results[ 'entries' ].length; i++)
 			{
 				var rank = results['entries'][i]['rank'];
@@ -3058,12 +3066,12 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 				var score = results['entries'][i]['score'];
 				var personaname = results['entries'][i]['personaname'];
 				var details = results['entries'][i]['details'];
-				
+
 				var deletename = personaname.replace( /'/g, "\\'" );
 				var html = template.evaluate( { score: score, steamid: steamid, rank: rank, leaderboardid: leaderboardid, personaname: personaname, details: details, deletename: deletename } );
 				element.insert( html );
 			}
-			
+
 			onReceivedEntries( leaderboardid, results['totalEntries'] );
 		}, 'get'
 		);
@@ -3078,7 +3086,7 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 // context - passed as first param to onChange
 // currentPage - selected page
 // maxPage - last page that can be selected. If 0, target is left blank
-// 
+//
 function RenderPageControl( target, onChange, context, currentPage, maxPage )
 {
 	// special case for no results found
@@ -3087,13 +3095,13 @@ function RenderPageControl( target, onChange, context, currentPage, maxPage )
 		$( target ).innerHTML = '';
 		return;
 	}
-		
-	// setup config	
+
+	// setup config
 	var startEllipsis = false;
 	var startPage = 1;
 	var endEllipsis = false;
 	var endPage = maxPage;
-	
+
 	if ( maxPage > 7 )
 	{
 		if ( currentPage - 3 > 1 )
@@ -3101,29 +3109,29 @@ function RenderPageControl( target, onChange, context, currentPage, maxPage )
 			startEllipsis = true;
 			startPage = currentPage - 2;
 		}
-		
+
 		if ( currentPage + 3 < maxPage )
 		{
 			endEllipsis = true;
 			endPage = currentPage + 2;
-		}		
+		}
 	}
-	
+
 	function CreateLink( page, inner )
 	{
 		return '<a href="javascript:' + onChange + '( ' + context + ', ' + page + ');">' + inner + '</a>';
 	}
-	
+
 	// build HTML
 	var html = '';
 	if ( currentPage > 1 )
 		html += CreateLink( currentPage - 1, "&lt;&lt;" ) + ' ';
-	
+
 	html += 'Page: ';
-	
+
 	if ( startEllipsis )
 		html += CreateLink( 1, 1 ) + ' &nbsp;...&nbsp; ';
-	
+
 	for ( var i = startPage; i <= endPage; i++ )
 	{
 		if ( i > startPage )
@@ -3134,22 +3142,22 @@ function RenderPageControl( target, onChange, context, currentPage, maxPage )
 		{
 			html += i;
 		}
-		else 
+		else
 		{
 			html += CreateLink( i, i );
 		}
 	}
-	
+
 	if ( endEllipsis )
 	{
 		html += ' &nbsp;...&nbsp; ' + CreateLink( maxPage, maxPage );
 	}
-	
+
 	if ( currentPage < maxPage )
 	{
 		html += ' ' + CreateLink( currentPage + 1, '&gt;&gt;' );
 	}
-	
+
 	// set it
 	$( target ).innerHTML = html;
 }
@@ -3158,23 +3166,23 @@ function DeleteLeaderboardEntry( onDelete, appid, leaderboardid, steamid, person
 {
 	if ( !confirm( "Are you sure you want to delete the leaderboard entry for: %1$s?".replace('%1$s', personaname ) ) )
 		return;
-		
+
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/deleteleaderboardentry/' + appid,
 		{
-			'leaderboardid' : leaderboardid,			
+			'leaderboardid' : leaderboardid,
 			'steamid' : steamid
 		},
 		function ( results )
 		{
 			if ( !results[ 'success' ] )
 			{
-				alert( results['message'] );				
+				alert( results['message'] );
 			}
-			
-			onDelete( leaderboardid );			
+
+			onDelete( leaderboardid );
 		}
-		);	
+		);
 }
 
 

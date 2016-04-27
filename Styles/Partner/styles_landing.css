@@ -2055,6 +2055,19 @@ div#appAutoHeader_list
 	color: #ff7b00;
 }
 
+.publishOptions_pri {
+	min-width: 32px;
+}
+.publishOptions_name {
+	min-width: 200px;
+}
+.publishOptions_state {
+	min-width: 60px;
+}
+.publishControls_pri {
+	margin-top: 0px;
+}
+
 ul.actualUL li {
 	list-style-type: circle;
 	padding: 4px 0 4px 10px;
