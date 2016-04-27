@@ -242,7 +242,7 @@ function exitFullScreen()
 
 function RecordAJAXPageView( url )
 {
-	if ( typeof _gaq != "undefined" && _gaq )
+	if ( typeof ga != "undefined" && ga )
 	{
 		var baseURL = 'https://steamcommunity.com';
 		var idx = url.indexOf( baseURL );
@@ -250,7 +250,7 @@ function RecordAJAXPageView( url )
 		{
 			url = url.substring( idx + baseURL.length );
 		}
-		_gaq.push( ['_trackPageview', url ] );
+		ga( 'send', 'pageview', url );
 	}
 }
 

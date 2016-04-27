@@ -2996,3 +2996,32 @@ input.unlockcode_entry_input
 	border-radius: 4px;
 	height: 8px;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#6a7787), color-stop(95%,#182636));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a7787', endColorstr='#182636',GradientType=0 );background: -moz-linear-gradient( top, #6a7787 5%, #182636 95%);background: -webkit-linear-gradient( top, #6a7787 5%, #182636 95%);background: -o-linear-gradient( top, #6a7787 5%, #182636 95%);background: -ms-linear-gradient( top, #6a7787 5%, #182636 95%);background: linear-gradient( to bottom, #6a7787 5%, #182636 95%);}
+
+.help_login_nag {
+	margin: 30px 0;
+	max-width: 712px;
+}
+
+.help_login_nag_left {
+	float: left;
+	text-align: center;
+	margin-right: 32px;
+}
+
+.help_login_nag_left a.btn_medium > span {
+	min-width: 152px;
+}
+
+.help_login_nag_forgot_password {
+	font-size: 10px;
+	margin-top: 8px;
+}
+
+.help_login_nag_right {
+	overflow: hidden;
+}
+
+.btn_login_nag.btnv6_blue_hoverfade {
+	background: #67c1f5;
+	color: #ffffff !important;	/* buttons.css uses !important, so the war has begun */
+}

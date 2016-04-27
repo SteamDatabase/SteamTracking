@@ -2,34 +2,60 @@
 HelpWizard = {
 	m_sCurrentPage: null,
 	m_steamid: '',
+	m_bUseHistoryAPI: false,
+	m_bInSearch: false,
 
-	LoadPageFromHash: function( fresh_page_load ) {
-		var hash = window.location.hash;
-		if ( hash.length < 2 )
-			hash = '#Home';
+	LoadPageFromHash: function( fresh_page_load, url, link_click, search_query ) {
+		var wizard_url = url;
+		if ( !wizard_url )
+		{
+			if ( window.location.hash.length < 2 )
+				wizard_url = 'Home';
+			else
+				wizard_url = window.location.hash.replace( /^#!?/,'');
+		}
 
-		var hash_params = $J.deparam( hash.replace('#','') );
-		var search_active = (hash_params && (typeof hash_params.text !== 'undefined'));
+		var hash_params = $J.deparam( wizard_url );
+		var bWasInSearch = this.m_bInSearch;
+		var search_active = (hash_params && (typeof hash_params.text !== 'undefined')) || search_query;
 		var search_text = null;
 		if ( search_active )
 		{
+			HelpWizard.m_bInSearch = true;
+
 			search_text = hash_params.text;
 			if ( fresh_page_load || search_text.length == 0 || $J('#help_search_support_input').length == 0 )
 			{
-				hash = '#' + hash_params.home;
+				wizard_url = hash_params.home;
 				this.m_sHashStringParse = null;
 			}
 			else
 			{
 				// update search string
-				this.SearchParseHashParameters( false );
+				this.SearchParseHashParameters( !link_click );
+				if ( HelpWizard.m_bUseHistoryAPI && link_click )
+				{
+					if ( !bWasInSearch )
+					{
+						history.pushState( { wizard_url: wizard_url, in_search: true }, '', '#' + wizard_url );
+					}
+					else
+					{
+						history.replaceState( { wizard_url: wizard_url, in_search: true }, '', '#' + wizard_url );
+					}
+				}
 				return;
 			}
 		}
+		else
+		{
+			HelpWizard.m_bInSearch = false;
+			this.m_sHashStringParse = null;
+		}
 
-		if ( hash == this.m_sCurrentPage )
+		if ( wizard_url == this.m_sCurrentPage && bWasInSearch == HelpWizard.m_bInSearch )
 			return;
-		this.m_sCurrentPage = hash;
+		this.m_sCurrentPage = wizard_url;
 
 		// hide any tooltips that were visible
 		$J('#wizard_contents [data-help-tooltip]' ).each( function() { $J(this ).v_tooltip('hide'); } );
@@ -37,18 +63,29 @@ HelpWizard = {
 		// fade the page out
 		$J( '#page_content' ).removeClass( 'page_loaded page_error' );
 
-		hash = hash.slice( 1 );	// remove the '#'
+
+		if ( HelpWizard.m_bUseHistoryAPI )
+		{
+			if ( link_click )
+				history.pushState( {wizard_url: wizard_url}, '', wizard_url == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url );
+			else
+				history.replaceState( {wizard_url: wizard_url}, '', wizard_url == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url );
+		}
 
 		try
 		{
-			ga( 'send', 'pageview', '/wizard/' + hash );
+			// https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications
+			ga( 'set', 'page', HelpWizard.m_bUseHistoryAPI ? window.location.pathname : '/wizard/' + wizard_url );
+			if ( link_click )
+				ga( 'send', 'pageview' );
 		}
 		catch ( e )
 		{
 		}
 
+
 		$J.ajax( {
-			url: 'https://help.steampowered.com/wizard/' + hash,
+			url: 'https://help.steampowered.com/wizard/' + wizard_url,
 			type: 'GET',
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 			} )
@@ -79,13 +116,12 @@ HelpWizard = {
 				HelpWizard.m_steamid = data.steamid;
 			}
 
-			$J( '#page_content' ).addClass( 'page_loaded' );
 			$J('#wizard_contents').html( data.html );
-
-			BindHelpTooltip($J('#wizard_contents [data-help-tooltip]'));
+			HelpWizard.FinishPageLoad();
 
 			// TODO: really only want this when navigating forward, back would remember where you left off otherwise
-			$J(window ).scrollTop( 0 );
+			if ( !HelpWizard.m_bUseHistoryAPI || link_click )
+				$J(window ).scrollTop( 0 );
 
 			if ( search_active && search_text.length > 0 )
 			{
@@ -94,18 +130,90 @@ HelpWizard = {
 			}
 
 		} ).always( function() {
+			HelpWizard.m_bSearchBoxMoved = false;
+			HelpWizard.m_sSearchResultDisplayed = false;
 			if ( search_active && search_text.length > 0 )
 			{
 				$J('#help_search_support_input').val( search_text );
 				HelpWizard.SearchSupportFAQs( search_text );
-
 			}
 		} );
 	},
 
+	FinishPageLoad: function() {
+		$J( '#page_content' ).addClass( 'page_loaded' );
+
+		BindHelpTooltip($J('#wizard_contents [data-help-tooltip]'));
+	},
+
 	HookOnHashChange: function() {
+		HelpWizard.m_bUseHistoryAPI = !!(window.history && window.history.pushState);
+
+		// used to avoid redundant calls to LoadPageFromHash when navigating through hash URLs (still used for search)
+		var strPoppedStateHash;
+
+		if ( HelpWizard.m_bUseHistoryAPI )
+		{
+			var fnGetWizardURL = function( href ) {
+				var base = 'https://help.steampowered.com/';
+				// chop off base url if it's prefixed on the link
+				if ( href.substr( 0, base.length ) == base )
+				{
+					// help site url
+					href = href.substr( base.length );
+				}
+
+				var matches = href.match( /^\/*(?:#!?|wizard)\/*/ );
+				if ( matches )
+				{
+					href = href.substr( matches[0].length );
+
+					// does this wizard url have a hash component in it?  This happens when things use the old
+					//	hash change method of navigation
+					var iHash = href.indexOf( '#' )
+					if ( iHash > 0 && iHash + 1 < href.length )
+					{
+						href = href.substr( iHash + 1 );
+					}
+
+					return href;
+				}
+				else if ( href.length == 0 )
+				{
+					return 'Home';
+				}
+				else
+				{
+					return null;
+				}
+			};
+
+			$J(document).on('click', 'a', function(e) {
+				var wizard_url = fnGetWizardURL( $J(this).attr('href') );
+
+				if ( wizard_url !== null )
+				{
+					e.preventDefault();
+					HelpWizard.LoadPageFromHash( false, wizard_url, true );
+				}
+
+			});
+			$J(window).on('popstate', function( e ) {
+				var oState = e.originalEvent.state;
+
+				var wizard_url = oState && oState.wizard_url;
+				if ( !wizard_url )
+					wizard_url = fnGetWizardURL( window.location.href );
+				HelpWizard.LoadPageFromHash( false, wizard_url, false, oState && oState.in_search );
+
+				strPoppedStateHash = window.location.hash;
+			});
+		}
+
 		$J(window).on( 'hashchange', function() {
-			HelpWizard.LoadPageFromHash( false );
+
+			if ( strPoppedStateHash !== window.location.hash )
+				HelpWizard.LoadPageFromHash( false );
 		});
 	},
 
@@ -123,9 +231,15 @@ HelpWizard = {
 		$J( '#page_content' ).addClass( 'page_error' );
 	},
 
-	UpdateHashWithForm: function( targetHash, form )
+	PromptLogin: function()
 	{
-		window.location.hash = targetHash + '/?' + $J( form ).serialize();
+		var redirect = window.location.pathname;
+		if ( window.location.search )
+			redirect += window.location.search;
+		if ( window.location.hash && window.location.hash.length > 2 )
+			redirect += '#' + window.location.hash;
+
+		HelpWizard.LoadPageFromHash( false, 'Login/?redir=' + encodeURIComponent( redirect ) );
 	},
 
 	SubmitRefundRequest: function( help_issue, appid, transid, gid_line_item, refund_to_wallet, spoofing ) {
@@ -267,33 +381,40 @@ HelpWizard = {
 	UpdateSearchHashURL: function() {
 		var hash_params = {};
 		hash_params.text = $J('#help_search_support_input').val().trim();
-		hash_params.home = this.m_sCurrentPage.replace( '#', '' );
+		hash_params.home = this.m_sCurrentPage;
 
 		var new_hash = $J.param( hash_params );
-		if ( window.location.hash != new_hash )
+		if ( HelpWizard.m_bUseHistoryAPI )
 		{
-			this.m_bSearchUpdatingHash = true;
-			window.location.hash = new_hash;
-			// the change of the hash will trigger the actual start
+			HelpWizard.LoadPageFromHash( false, new_hash, true, true );
+		}
+		else
+		{
+			if ( window.location.hash != new_hash )
+			{
+				// the change of the hash will trigger the actual start
+				this.m_bSearchUpdatingHash = true;
+				window.location.hash = new_hash;
+			}
 		}
 	},
 
-	SearchParseHashParameters: function( fresh_page_load ) {
+	SearchParseHashParameters: function( from_navigation )
+	{
 
-		if ( fresh_page_load )
-			return;
-
-		var hash_string = window.location.hash.replace('#','');
+		var hash_string = window.location.hash.replace( /^#!?/, '' );
 		if ( hash_string === this.m_sHashStringParse )
 			return;	// we've handled this string already
 
 		this.m_sHashStringParse = hash_string;
 
 		var hash_params = $J.deparam( hash_string );
-		if ( hash_params.text || fresh_page_load && $J('#help_search_support_input') )
+		if ( hash_params.text && from_navigation )
 		{
 			if ( hash_params.text !== $J('#help_search_support_input').val().trim() )
 				$J('#help_search_support_input').val( hash_params.text );
+
+			HelpWizard.MoveUpSearchBox();
 		}
 
 		if ( this.m_bUpdatingHash )
@@ -309,18 +430,27 @@ HelpWizard = {
 		}
 	},
 
+	m_bSearchBoxMoved: false,
 	MoveUpSearchBox: function() {
 		if ( $J('#help_search_support_input').val().length > 0 )
 		{
-			$J('#help_home_block').slideUp( 200 );
-			$J('#help_home_block').hide( 200 );
-			$J('#search_breadcrumbs').show();
+			if ( !this.m_bSearchBoxMoved )
+			{
+				$J('#help_home_block').slideUp( 200 );
+				$J('#help_home_block').hide( 200 );
+				$J('#search_breadcrumbs').show();
+			}
+			this.m_bSearchBoxMoved = true;
 		}
 		else
 		{
-			$J('#help_home_block').show( 100 );
-			$J('#faqs_search_results').html( '' );
-			$J('#search_breadcrumbs').hide();
+			if ( this.m_bSearchBoxMoved )
+			{
+				$J('#help_home_block').show( 100 );
+				$J('#faqs_search_results').html( '' );
+				$J('#search_breadcrumbs').hide();
+				this.m_bSearchBoxMoved = false;
+			}
 			this.m_sSearchResultDisplayed = null;
 		}
 	},
@@ -437,6 +567,10 @@ HelpWizard = {
 				if ( $J('#refund_gift_request_button') )
 					$J('#refund_gift_request_button').show();
 				$J('#help_refund_request_form').html( data.html );
+			}
+			else if ( data.need_login )
+			{
+				HelpWizard.PromptLogin();
 			}
 			else
 			{
@@ -1276,6 +1410,10 @@ HardwareRMA = {
 
 					HardwareRMA.VerifySerialThenAdvance( HardwareRMA.m_sSerialNumber );
 				}
+				else if ( data.need_login )
+				{
+					HelpWizard.PromptLogin();
+				}
 				else
 				{
 					$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">Sorry! An unexpected error has occurred while processing your request. Please try again.</div></div>');
@@ -1353,6 +1491,10 @@ HardwareRMA = {
 				else if ( data.message )
 				{
 					HardwareRMA.DisplayShippingErrorMessage( data.message );
+				}
+				else if ( data.need_login )
+				{
+					HelpWizard.PromptLogin();
 				}
 				else
 				{
