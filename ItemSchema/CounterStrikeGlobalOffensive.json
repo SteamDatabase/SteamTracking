@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.8997ebedbd731c870f674c329a2675e6ff04fe90.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.1c72427be6f80f8cda409cac51a9f962865967f4.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -6828,6 +6828,31 @@
 
 				]
 				
+			},
+			{
+				"name": "community_12 Key",
+				"defindex": 1347,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Chroma 3 Case Key",
+				"item_description": "This key only opens Chroma 3 cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_12",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_12.89e026230580ed4b9ad7e64590105df3476d6714.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_12",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -14947,6 +14972,40 @@
 				
 			},
 			{
+				"name": "crate_community_12",
+				"defindex": 4233,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Chroma 3 Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_12",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_12.7555fc0b45c4d1e0ff1c117af393463f29f20f66.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_12",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 141
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -22467,6 +22526,30 @@
 					"weapon_nova",
 					"weapon_ak47",
 					"weapon_m4a1"
+				]
+				
+			},
+			{
+				"item_set": "set_community_12",
+				"name": "The Chroma 3 Collection",
+				"items": [
+					"weapon_elite",
+					"weapon_g3sg1",
+					"weapon_m249",
+					"weapon_mp9",
+					"weapon_hkp2000",
+					"weapon_sawedoff",
+					"weapon_sg556",
+					"weapon_cz75a",
+					"weapon_galilar",
+					"weapon_ssg08",
+					"weapon_tec9",
+					"weapon_xm1014",
+					"weapon_aug",
+					"weapon_p250",
+					"weapon_ump45",
+					"weapon_bizon",
+					"weapon_m4a1_silencer"
 				]
 				
 			},
