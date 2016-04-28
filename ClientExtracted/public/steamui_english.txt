@@ -4092,8 +4092,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AllowGameLaunch_Title"	"Allow game launch?"
 
 "Steam_Parental_UnlockTitle"			"Family View"
-"Steam_Parental_UnlockInstructions"		"Adults, enter your PIN below to exit Family View"
-"Steam_Parental_UnlockInstructions2"	"(Sorry, kids!)"
+"Steam_Parental_UnlockInstructions"		"Enter your PIN below to exit Family View"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"I Forgot My PIN"
 "Steam_Parental_NoRecoveryEmail"		"No Recovery Email Set"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "No recovery email address is set for your account. To update your recovery email address, please exit Family View and rerun Family View setup."

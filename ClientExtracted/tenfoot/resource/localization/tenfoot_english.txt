@@ -3260,7 +3260,7 @@
 	"Parental_CurrentMode_Unlocked" "THIS IS NOT"
 	"Parental_Unlocked"		"FAMILY VIEW"
 	"Parental_Locked"		"FAMILY VIEW"
-	"Parental_EnterPIN"		"Adults, enter your PIN below to exit Family View. (Sorry, kids!)"
+	"Parental_EnterPIN"		"Enter your PIN below to exit Family View."
 	"Parental_UnlockFailureTitle" "Family View"
 	"Parental_UnlockFailure"	  "Nice try. Please enter the correct PIN."
 	"Parental_UnlockFailureExceeded"	"Too many failed attempts. Please restart Steam to try again."
@@ -3275,14 +3275,14 @@
 	"Parental_SelectToEnter"	"Select to change"
 	"Parental_SelectToAccess"	"Select to view"
 	"Parental_SelectToLock"	"Select to change"
-	"Parental_MoreGames"	"Other Games"
+	"Parental_MoreGames"	"And more..."
 	"Parental_AddToUnblockedGames"	"Add to Family Games"
 	"Parental_RemoveFromUnblockedGames"	"Remove from Family Games"
 	"Parent_Mode"	"Family View"
 	"Parental_Settings_Title" "Family View"
 	"Parental_Inbox_Lock" "Enable Family View"
 
-	"Parental_Intro1"				"Whether a Steam account is your own or your child’s, Family View can be used to limit access to the features you choose. A PIN is then used to exit Family View and access these features."
+	"Parental_Intro1"				"Whether a Steam account is your own or a family member's, Family View can be used to limit access to the features you choose. A PIN is then used to exit Family View and access these features."
 	"Parental_Intro2"				"Step through these settings to create a Family View for your account."
 
 	"Parental_Choose_Features"						"Which content and features would you like your account to be able to access while in Family View?"
@@ -3306,7 +3306,7 @@
 	"Parental_Choose_Apps"			"Choose the games you want to be accessible while in Family View."
 
 	"Parental_Set_Recovery1"		"To assist if your Family View PIN is lost or forgotten, please configure an email address to be used for PIN recovery."
-	"Parental_Set_Recovery2"		"This should be the email address of the parent, not the child, as anyone with access to this email account can disable Family View without knowledge of the PIN."
+	"Parental_Set_Recovery2"		"This should be the email address of the account holder, as anyone with access to this email account can disable Family View without knowledge of the PIN."
 	"Parental_Enter_RecoveryEmail"	"Enter Recovery Email"
 
 	"Parental_Set_PIN"				"Now create a 4-digit PIN for your account. This PIN will be required to exit Family View, as well as edit these settings in the future, so you may want to jot it down and keep it in a safe place."

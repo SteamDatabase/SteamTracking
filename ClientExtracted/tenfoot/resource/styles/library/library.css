@@ -3055,7 +3055,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 1.0;
 
 	position: 486px 32px 0px;
-	background-color: #00000044;
+	background-color: none;
 	height: 800px;
 	width: 1350px;
 	z-index: -10;
