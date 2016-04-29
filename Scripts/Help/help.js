@@ -104,6 +104,8 @@ HelpWizard = {
 				return;
 			}
 
+			document.title = data.title || 'Steam Support';
+
 			if ( !data.html )
 			{
 				HelpWizard.ShowPageError();
