@@ -1027,9 +1027,13 @@ a.readmore_link
 	width: 638px;
 	height: 638px;
 }
-.slideshow_item_image.landscape
+.slideshow_item_image.aspectratio_16x9
 {
 	height: 358px;
+}
+.slideshow_item_image.aspectratio_4x3
+{
+	height: 479px;
 }
 
 .slideshow_item_title

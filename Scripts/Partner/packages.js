@@ -437,7 +437,7 @@ var templ_DiscountDiv = new Template( ''
 		+ '	<form id="packageDiscount#{DiscountId}Form" onsubmit="return false;">'
 		+ '	<div class="boxlist_item" id="#{DiscountId}_discountDiv">'
 		+ '		<input type="hidden" id="#{DiscountId}_group" name="#{DiscountId}[group]" value="#{Group}">'
-		+ '		<div class="boxlist_title"><span>#{Name}</span>'
+		+ '		<div class="boxlist_title"><span>#{Name} (#{DiscountNumber})</span>'
 		+ '			<div class="boxlist_controls visible">'
 		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( #{PackageId}, \'#{DiscountId}\' ); return false;">'
 		+ '				<input style="float: right;" value="Hide Discount" type="submit" onclick="OnClickHideDiscount( \'#{DiscountId}\' ); return false;">'
@@ -572,16 +572,17 @@ var templ_DiscountsSummaryDiv = new Template( ''
 // discounts = map of initial discount values for base price & country overrides (currency/country code => value)
 function CreateDiscount( target, id, discount, packageid )
 {
-	var name = ( (discount['name'] == null ) ? '' : discount['name'] ) + ' (' + discount['discount_id'] + ')';
+	var name = (discount['name'] == null ) ? '' : discount['name'];
 	var description = (discount['description'] == null ) ? '' : discount['description'];
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
 	var group = (discount['group'] == null) ? '' : discount['group'];
 	var discount_percent = (discount['discount_percent'] == null ) ? 0 : discount['discount_percent'];
+	var discount_number = (discount['discount_id'] == null) ? '' : discount['discount_id']; // the actual discountID used by the rack, not the HTML elementID
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 	
 	// set up start & end dates
