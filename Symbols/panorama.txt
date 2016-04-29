@@ -627,6 +627,8 @@
  B panorama::MoveUp::symbol
  B panorama::None::symbol
  B panorama::OverlayGamepadInputMsg::symbol
+ B panorama::PadBackButton::symbol
+ B panorama::PadBackButtonUp::symbol
  B panorama::PageDown::symbol
  B panorama::PageLeft::symbol
  B panorama::PagePanelDown::symbol
@@ -712,6 +714,7 @@
  B panorama::VRApplicationTransitionAborted::symbol
  B panorama::VRApplicationTransitionNewAppStarted::symbol
  B panorama::VRApplicationTransitionStarted::symbol
+ B panorama::VRChaperoneChanged::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
  B panorama::VRDashboardVisibilityChanged::symbol
@@ -1056,6 +1059,8 @@
  D panorama::MoveUp::pchEvent
  D panorama::None::pchEvent
  D panorama::OverlayGamepadInputMsg::pchEvent
+ D panorama::PadBackButton::pchEvent
+ D panorama::PadBackButtonUp::pchEvent
  D panorama::PageDown::pchEvent
  D panorama::PageLeft::pchEvent
  D panorama::PagePanelDown::pchEvent
@@ -1142,6 +1147,7 @@
  D panorama::VRApplicationTransitionAborted::pchEvent
  D panorama::VRApplicationTransitionNewAppStarted::pchEvent
  D panorama::VRApplicationTransitionStarted::pchEvent
+ D panorama::VRChaperoneChanged::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
  D panorama::VRDashboardVisibilityChanged::pchEvent
@@ -9452,6 +9458,7 @@
  T bool panorama::DispatchEvent<panorama::UnreadyForDisplay>(panorama::UnreadyForDisplay, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonDown>(panorama::VRApplicationMenuButtonDown, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonUp>(panorama::VRApplicationMenuButtonUp, panorama::IUIPanel const*)
+ T bool panorama::DispatchEvent<panorama::VRChaperoneChanged>(panorama::VRChaperoneChanged, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::VRDashboardRequested, panorama::IUIPanel const*, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardVisibilityChanged, bool>(panorama::VRDashboardVisibilityChanged, panorama::IUIPanel const*, bool)
@@ -13424,6 +13431,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveRight, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveUp, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::None>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PadBackButton>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PadBackButtonUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageLeft>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PagePanelDown>(panorama::IUIPanel*, char const*, char const**)
@@ -13500,6 +13509,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionAborted>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionNewAppStarted, unsigned int, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationTransitionStarted>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRChaperoneChanged>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardVisibilityChanged, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -13649,6 +13659,12 @@
  T panorama::OverlayGamepadInputMsg::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::OverlayGamepadInputMsg::FormatEventArgs(char const*)
  T panorama::OverlayGamepadInputMsg::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*, panorama::InputMessage_t*)
+ T panorama::PadBackButton::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PadBackButton::FormatEventArgs(char const*)
+ T panorama::PadBackButton::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PadBackButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PadBackButtonUp::FormatEventArgs(char const*)
+ T panorama::PadBackButtonUp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PageDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PageDown::FormatEventArgs(char const*)
  T panorama::PageDown::MakeEvent(panorama::IUIPanelClient const*)
@@ -13973,6 +13989,9 @@
  T panorama::VRApplicationTransitionStarted::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRApplicationTransitionStarted::FormatEventArgs(char const*)
  T panorama::VRApplicationTransitionStarted::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRChaperoneChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRChaperoneChanged::FormatEventArgs(char const*)
+ T panorama::VRChaperoneChanged::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRDashboardRequested::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardRequested::FormatEventArgs(char const*)
  T panorama::VRDashboardRequested::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned long long)

@@ -6,13 +6,10 @@
 		<include src="file://{resources}/styles/overlay/overlay.css" />
 	</styles>
 
-	<BroadcastOverlay class="BroadcastOverlayPanel" >
-				<Label text="#Broadcast_Overlay_Title" class="HeaderLabel" /> 
-				<Label id="BroadcastLabelText" class="HeaderLabel" text="#Broadcast_Overlay_Text" /> 
-				
-				<Button id="BroadcastStopBotton" tabindex="auto" selectionpos="auto" onactivate="StopBroadcast()" >
-					<Label text="#Broadcast_Overlay_Stop" /> 
-				</Button>
+	<BroadcastOverlay class="BroadcastOverlayPanel" onactivate="ShowBroadcastDashboard(chat);" tabindex="auto" selectionpos="auto">
+		 <Panel id="RecordStatusIcon" />		
+		 <Label id="PlaybackStatusLabel" text="#Broadcast_Playback" />	
+		 <Image id="SpectatorIcon" />	         
+		 <Label id="SpectatorCountLabel" text="#Broadcast_SpectatorCount" /> 	
 	</BroadcastOverlay>
-
 </root>

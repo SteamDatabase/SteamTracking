@@ -22,6 +22,7 @@
 					</Panel>
 				</Panel>
 				<Panel id="TopRowRight" selectionpos="1,0" >
+					<BroadcastOverlay id="Broadcast" class="TopRowButton"/>
 					<Button id="GoOnlineButton" class="Button TopRowButton" onactivate="GoOnline();" selectionpos="auto" tabindex="auto" >
                         <Panel class="background_box" />
                         <Image class="GoOnlineImage" src="file://{images}/offline.png" />

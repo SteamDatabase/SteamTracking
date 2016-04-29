@@ -438,3 +438,14 @@
 	visibility: visible;
 	opacity: 0.5;
 }
+
+#OverlayDashboard #Notifications #AvatarImage
+{
+	height: 128px;
+	width: 128px;
+
+	border-style: solid;
+	border-width: 4px;
+	border-radisu: 0px;
+	margin-right: 10px;
+}

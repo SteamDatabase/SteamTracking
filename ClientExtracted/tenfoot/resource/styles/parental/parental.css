@@ -215,6 +215,10 @@ ParentalReplacementPanel Button:focus
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+LibraryAppDetails ParentalReplacementPanel #UnlockButton
+{
+	visibility: collapse;
+}
 
 
 #ParentalGridItemContents,

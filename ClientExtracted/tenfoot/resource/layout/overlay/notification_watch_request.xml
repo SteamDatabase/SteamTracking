@@ -8,10 +8,10 @@
 
 	<OverlayNotificationWatchRequest class="OverlayNotificationWatchRequest" >
 		
-		<AvatarImage id="AvatarImage"  />
+		<AvatarImage id="AvatarImage" />
 		
 		<Panel class="OverlayNotificationWatchRequestFrame" >
-			<Label id="MessageText" text="#Broadcast_Notification_Viewer_Request" class="OverlayNotificationWatchRequestText" />
+			<Label id="MessageText" text="#Broadcast_Notification_Viewer_Request_Overlay" class="OverlayNotificationWatchRequestText" />
 			<Panel class="OverlayNotificationWatchRequestCapsule" >
 				<Button id="AcceptButton" onactivate="AcceptBroadcastWatchRequest()" >
 					<Label text="#Broadcast_Notification_Accept_Request" /> 

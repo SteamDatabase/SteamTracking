@@ -143,11 +143,19 @@
 	height: 70px;
 }
 
+#NotificationArea
+{
+	flow-children: right;
+	horizontal-align: right;
+	height: 70px;
+}
+
 #Clock
 {
 	color: detailsdatalabelfocus;
 	flow-children: right;
 	horizontal-align: right;
+	vertical-align: center;
 	text-align: left;
 	font-size: 36px;
 	line-height: 36px;
@@ -199,6 +207,9 @@
 	transition-property: transform, opacity-mask, opacity, saturation;
 	transition-duration: 0.25s;
 	transition-timing-function: bigpicture-ease-in-out;
+
+	padding-top: 10px;
+	padding-bottom: 120px;
 }
 
 #ContentsRow:descendantfocus
@@ -223,15 +234,25 @@
 	font-family: platformfont;
 }
 
+#Notifications.Empty
+{
+	visibility: collapse;
+}
+
 #OverlayNotificationList
 {
 	margin: 0px;
+	margin-top: 8px;
 	width: 100%;
 	height: 50%;
 	
-	overflow: squish scroll;
+	flow-children: right;
+}
 
-	flow-children: down;
+#OverlayNotificationList AvatarImage
+{
+	margin-right: 4px;
+	border-radius: 0px;
 }
 
 #BroadcastStopBotton
@@ -376,4 +397,152 @@ Button:focus:hover .ButtonText
 #OverlayBasePanel .LibraryDetailsScrollableArea.Overlay
 {
 	max-width: 1300px;
+}
+
+
+
+.BroadcastOverlayPanel
+{
+	visibility: visible;
+	height: 70px;
+	padding-top: 5px;
+	padding-left: 12px;
+	padding-right: 8px;
+	width: fit-children;
+	flow-children: right;
+	horizontal-align: center;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #12334c ), to( #14445e ) );
+
+	border-radius: 3px;
+
+
+}
+
+.Button.TopRowButton.BroadcastOverlayPanel
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #12334c ), to( #14445e ) );
+}
+
+.BroadcastOverlayPanel:hover,
+.BroadcastOverlayPanel:focus
+{
+	background-color: action_module;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	horizontal-align: center;
+}
+
+.Button.TopRowButton.BroadcastOverlayPanel:hover,
+.Button.TopRowButton.BroadcastOverlayPanel:focus
+{
+	border-style: solid;
+	border-width: 5px;
+}
+
+.BroadcastOverlayPanel:hover Label,
+.BroadcastOverlayPanel:focus Label
+{
+	transform: none;
+}
+
+
+ContentFrame .BroadcastOverlayPanel
+{
+	background-color: transparent;
+}
+
+ContentFrame #PlaybackStatusLabel,
+ContentFrame #SpectatorIcon
+{
+	visibility: collapse;
+}
+
+#MicStatusIcon,		
+#RecordStatusIcon,
+#SpectatorIcon	         
+{
+	width: 48px;
+	height: 48px;
+	margin-right: 6px;
+	horizontal-align: center;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 48px 48px;		
+	vertical-align: middle;
+}
+
+#SpectatorCountLabel,
+#PlaybackStatusLabel
+{	
+	width: fit-children;
+	margin-bottom: 6px;
+	margin-right: 6px;
+	font-size: 30px;
+	font-weight: light;
+	color: ui_primary_color;
+	font-family: platformfont;
+	vertical-align: middle;
+}
+
+.BroadcastOverlayPanel:hover #SpectatorCountLabel,
+.BroadcastOverlayPanel:hover #PlaybackStatusLabel,
+.BroadcastOverlayPanel:focus #SpectatorCountLabel,
+.BroadcastOverlayPanel:focus #PlaybackStatusLabel
+{
+	color: applabelsolid;
+}
+
+#MicStatusIcon	
+{
+	margin-right: 0px;
+	wash-color: ui_primary_color;
+	background-image: url( "file://{images}/systemmenu/microphone.png" );
+	width: 54px;
+	height: 54px;
+	background-size: 54px 54px;		
+	background-position: 0px -3px;
+	margin-right: 0px;
+}
+
+.BroadcastOverlayPanel:hover #MicStatusIcon,
+.BroadcastOverlayPanel:focus #MicStatusIcon
+{
+	wash-color: applabelsolid;
+}
+
+#RecordStatusIcon	
+{
+	width: 38px;
+	height: 38px;
+	background-size: 38px 38px;	
+	margin-bottom: 4px;
+	background-color: red;
+	border-radius: 50%;
+}
+
+#SpectatorIcon
+{
+	width: 54px;
+	height: 54px;
+	background-size: 54px 54px;	
+	wash-color: ui_primary_color;
+	background-image: url( "file://{images}/systemmenu/group.png" );
+}
+
+.BroadcastOverlayPanel:hover #SpectatorIcon,
+.BroadcastOverlayPanel:focus #SpectatorIcon
+{
+	wash-color: applabelsolid;
+}
+
+OverlayBasePanel .BroadcastOverlayPanel
+{
+	margin-right: 10px;
 }

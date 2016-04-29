@@ -11,13 +11,16 @@
 	<OverlayBasePanel>
 		<Panel id="BodyWrapper">
 	 		<Panel id="OverlayDashboard" defaultfocus="LinksAndMore" >
-				<Panel id="UpperRow" class="UpperRow">
-					<Panel id="HeaderLabels">
+				<Panel id="UpperRow" class="UpperRow" tabindex="auto" selectionpos="auto">
+					<Panel id="HeaderLabels" tabindex="auto" selectionpos="auto">
 						<Label id="GameName" class="GameName" text="" />
-						<Clock id="Clock" />
+						<Panel id="NotificationArea" tabindex="auto" selectionpos="auto">
+							<BroadcastOverlay id="BroadcastNotification" />
+							<Clock id="Clock" />
+						</Panel>
 					</Panel>
 				</Panel>
-				<Panel id="DesktopPanels">
+				<Panel id="DesktopPanels" tabindex="auto" selectionpos="auto">
 					<Panel id="CommonControls" tabindex="auto" selectionpos="auto">
 						<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" rememberchildfocus="true" />
 					</Panel>			  
@@ -28,7 +31,7 @@
 								<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
 								<StreamingOverlay id="Streaming" class="DetailsDataPanel Small" />
 								<OverlayNotificationPanel id="Notifications" class="Controller DetailsDataPanel Small" />
-								<BroadcastOverlay id="Broadcast" class="Controller DetailsDataPanel Small" />
+
 							</Panel>
 							<Panel class="LibraryDetailsSectionRow">
 								<LibraryGuides id="Guides" class="Guides DetailsDataPanel" />

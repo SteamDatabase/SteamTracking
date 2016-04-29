@@ -16,6 +16,7 @@
 				<Label class="ContentTitle" text="" />
 			</Panel>
 			<Panel id="ContentStatus" >
+				<BroadcastOverlay id="Broadcast"/>
 				<Button id="ParentalStatus" class="StatusIcon" onmouseactivate="ToggleParentalLock();" acceptsfocus="false" >
 					<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 					<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />

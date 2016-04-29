@@ -46,9 +46,9 @@ TextInputFullscreen.MinimalKeyboard
 	font-family: platformfont;
 }
 
-#EnteredText.Multiline
+.Multiline #EnteredText
 {
-	height: 20%;
+	height: 200px;
 }
 
 #WheelWrapper

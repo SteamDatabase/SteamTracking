@@ -8,12 +8,12 @@
 		<Panel class="StoreList AppList" selectionpos="auto">
 			<Label class="HeaderLabel" text="#Library_Suggested_BrowseStore" />
 			<Panel class="SuggestedRow" selectionpos="auto">
-				<Button onactivate="StoreShow();" selectionpos="auto" >
+				<ParentalButton onactivate="StoreShow();" selectionpos="auto" >
 					<Label  text="#Library_Suggested_BrowseStore_Free" />
-				</Button>
-				<Button onactivate="StoreShow();" selectionpos="auto" >
+				</ParentalButton>
+				<ParentalButton onactivate="StoreShow();" selectionpos="auto" >
 					<Label  text="#Library_Suggested_BrowseStore_AllGames"  />
-				</Button>
+				</ParentalButton>
 			</Panel>
 		</Panel>
 	</LibrarySuggestionsRow>

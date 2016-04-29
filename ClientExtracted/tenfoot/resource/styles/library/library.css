@@ -4844,7 +4844,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .EmptyLibraryLabelWrapper .Title {
 	color: #67C1F5ff;
 }
-.StoreList Button {
+.StoreList Button,
+.StoreList ParentalButton {
 	height: 205px;
 	padding: 20px;
 }
@@ -4898,7 +4899,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	visibility: visible;
 }
 
-.suggested #GamesGrid, .music #GamesGrid, .downloads #GamesGrid
+.suggested #GamesGrid, .music #GamesGrid, .downloads #GamesGrid, .activate #GamesGrid
 {
 	visibility: collapse;
 }
@@ -4917,7 +4918,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 
-.StoreList Button Label
+.StoreList Button Label,
+.StoreList ParentalButton Label
 {
 	horizontal-align: center;
 	vertical-align: center;
@@ -4939,7 +4941,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 
 
-.SuggestedRow Button {
+.SuggestedRow Button,
+.SuggestedRow ParentalButton {
 
 	width: 354px;
 	height: 214px;
@@ -4961,7 +4964,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	transition-property: background-color, box-shadow, pre-transform-scale2d, border, transform;
 }
 
-.SuggestedRow Button .ImageWrapper
+.SuggestedRow Button .ImageWrapper,
+.SuggestedRow ParentalButton .ImageWrapper
 {
 	width: 100%;
 	height: 100%;
@@ -4972,8 +4976,11 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	//box-shadow: fill #00000033 -3px -3px 6px 6px;
 	border-radius: 3px 3px 3px 3px;
 }
+
 .SuggestedRow Button:focus .ImageWrapper,
-.SuggestedRow Button:hover .ImageWrapper
+.SuggestedRow Button:hover .ImageWrapper,
+.SuggestedRow ParentalButton:focus .ImageWrapper,
+.SuggestedRow ParentalButton:hover .ImageWrapper
 {
 	box-shadow: none;
 	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
@@ -5003,7 +5010,10 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 .suggested .SuggestedRow Button:focus,
-.suggested .SuggestedRow Button:hover
+.suggested .SuggestedRow Button:hover,
+.suggested .SuggestedRow ParentalButton:focus,
+.suggested .SuggestedRow ParentalButton:hover
+
 {
 	pre-transform-scale2d: 1;
 
@@ -5054,7 +5064,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 }
 
-.SuggestedRow Button Image
+.SuggestedRow Button Image,
+.SuggestedRow ParentalButton Image
 {
 	width: 344px;
 	height: 161px;
@@ -5062,7 +5073,9 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	box-shadow: #00000033 -3px -3px 6px 6px;
 	border-radius: 3px;
 }
-.SuggestedRow Button:descendantfocus Image
+
+.SuggestedRow Button:descendantfocus Image,
+.SuggestedRow ParentalButton:descendantfocus Image
 {
 	border-radius: 3px 3px 0px 0px;
 
@@ -5086,7 +5099,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	color: #67C1F5ff;
 }
 
-.SuggestedRow Button .GameDetails
+.SuggestedRow Button .GameDetails,
+.SuggestedRow ParentalButton .GameDetails
 {
 	padding-top: 5px;
 	height: 35px;
@@ -5166,7 +5180,9 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 {
 	font-size: 24px;
 }
-.SuggestedRow Button .GameDetails #GameLabel_Expanded {
+
+.SuggestedRow Button .GameDetails #GameLabel_Expanded,
+.SuggestedRow ParentalButton .GameDetails #GameLabel_Expanded {
 	opacity: 0;
 
 	transition-property: opacity;
@@ -5181,7 +5197,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	opacity: 1;
 }
 
-.SuggestedRow Button.NoContent
+.SuggestedRow Button.NoContent,
+.SuggestedRow ParentalButton.NoContent
 {
 	visibility: collapse;
 }
@@ -5350,6 +5367,23 @@ LibrarySuggestionsRow:descendantfocus
 	visibility: collapse;
 }
 
+#StoreButtons ParentalButton
+{
+	background-color: action_module;
+	opacity: 1.0;
+	saturation: 1.0;
+	box-shadow: inset #00000044 0px 0px 4px 0px;
+
+	margin: 5px;
+}
+
+#StoreButtons ParentalButton:focus
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
 
 
 .NxFilterButtonAction
@@ -5996,3 +6030,22 @@ Label.NotEnoughRoom
 }
 
 
+.ParentalBlockPanel
+{
+	width: 100%;
+	height: 100%;
+	transition-property: opacity, transform;
+	transition-duration: shortduration;
+	opacity: 0.0;
+	padding: 32px 10px 140px 10px;
+}
+
+.CommunityBlocked.CommunityContentSectionFocused .ParentalBlockPanel
+{
+	opacity: 1.0;
+}
+
+.CommunityBlocked CommunityHubContentPanel
+{
+	visibility: collapse;
+}

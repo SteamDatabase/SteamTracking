@@ -288,6 +288,29 @@ MainMenu #BodyWrapper #GameRowContents
 	color: messagecolorwash;
 }
 
+#BroadcastLive
+{
+	horizontal-align: center;
+	margin-top: 80px;
+	opacity: 0.0;
+}
+
+.Broadcasting #BroadcastLive
+{
+	opacity: 1.0;
+}
+
+#BroadcastLive Button
+{
+	border: 1px solid white;
+	padding: 5px;
+}
+
+#BroadcastLive Button Label
+{
+	font-size: 24px;
+}
+
 .HR
 {
 	width: 1900px;

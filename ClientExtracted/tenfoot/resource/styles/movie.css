@@ -761,6 +761,11 @@ BroadcastViewer #ErrorMessage
 	transform: translatey( 110px );
 }
 
+.Unstarted #BroadcastStatusText
+{
+	transform: translatey( 0px );
+}
+
 .PlaybackError #BroadcastStatusText
 {
 	transform: none;
@@ -804,3 +809,17 @@ BroadcastViewer #ErrorMessage
 	font-size: 36px;
 	align: left center;
 }
+
+
+#LoadingThrobber,
+.Unstarted #LoadingThrobber.Visible
+{
+	visibility: collapse;
+}
+
+#LoadingThrobber.Visible
+{
+	visibility: visible;
+}
+
+
