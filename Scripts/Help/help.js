@@ -879,7 +879,7 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
@@ -930,7 +930,7 @@ HelpWizard = {
 			}
 			else if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
@@ -977,7 +977,7 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
@@ -1054,7 +1054,7 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
@@ -1085,7 +1085,7 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
@@ -1117,7 +1117,7 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.hash )
 			{
-				window.location.hash = data.hash;
+				window.location = 'https://help.steampowered.com/' + data.hash;
 			}
 			else if ( data.html )
 			{
