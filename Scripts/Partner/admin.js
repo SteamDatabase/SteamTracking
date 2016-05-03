@@ -363,6 +363,7 @@ function MapTypeToText( type )
 		case 4096: return "Plugin";
 		case 8192: return "Music";
 		case 1024: return "Franchise";
+		case 16384: return "Series";
 		default: return 'UNKNOWN: ' + type;
 	}
 }

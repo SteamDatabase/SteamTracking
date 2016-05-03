@@ -63,6 +63,7 @@ HelpWizard = {
 		// fade the page out
 		$J( '#page_content' ).removeClass( 'page_loaded page_error' );
 
+	        $J( '#loading_throbber' ).removeClass('page_loaded');
 
 		if ( HelpWizard.m_bUseHistoryAPI )
 		{
@@ -134,6 +135,7 @@ HelpWizard = {
 		} ).always( function() {
 			HelpWizard.m_bSearchBoxMoved = false;
 			HelpWizard.m_sSearchResultDisplayed = false;
+            		$J( '#loading_throbber' ).addClass( 'page_loaded' );
 			if ( search_active && search_text.length > 0 )
 			{
 				$J('#help_search_support_input').val( search_text );
@@ -485,7 +487,7 @@ HelpWizard = {
 		catch ( e )
 		{
 		}
-
+	        $J( '#loading_throbber' ).removeClass('page_loaded');
 		$J.ajax({
 			type: "GET",
 			url: "https://help.steampowered.com/wizard/AjaxSearchResults/",
@@ -504,6 +506,7 @@ HelpWizard = {
 		}).always( function() {
 			HelpWizard.m_bSearchRunning = false;
 			HelpWizard.m_sSearchTextLoading = null;
+            		$J( '#loading_throbber').addClass('page_loaded');
 
 			// start the search we have queued
 			if ( HelpWizard.m_sSearchTextQueued )
@@ -581,6 +584,50 @@ HelpWizard = {
 		}).always( function() {
 			HelpWizard.m_bLoadingRefundDialog = false;
 		} );
+	},
+
+	ShowCreateHelpRequestForm: function()
+	{
+		if ( !HelpWizard.m_steamid )
+		{
+			this.PromptLogin();
+			return;
+		}
+
+		$J('#wizard_contents').addClass('show_create_help_request_form');
+		$J('#create_help_request_issue_text').focus();
+	},
+
+	DismissCreateHelpRequestForm: function() {
+		$J('#wizard_contents').removeClass('show_create_help_request_form');
+	},
+
+	SubmitCreateHelpRequestForm: function ( form )
+	{
+		var $Form = $J(form);
+		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+
+		$J.ajax({
+				type: $Form.attr( 'method' ),
+				url: $Form.attr( 'action' ),
+				data: $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams )
+		}).done( function( data ) {
+			if ( data.need_login )
+			{
+				HelpWizard.PromptLogin();
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+			}
+			else
+			{
+				ShowAlertDialog( 'Contact Steam Support', 'Request Sent' );
+				HelpWizard.DismissCreateHelpRequestForm();
+			}
+		}).always( function() {
+			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		});
 	},
 
 	UpdateRefundSelector: function() {

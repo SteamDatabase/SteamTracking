@@ -408,206 +408,6 @@ body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .conte
 	background: #171a21;
 }
 
-
-.searchbox {
-
-	background-image: url( 'https://help.steampowered.com/public/images/v6/store_header_search.png?v=1' );
-
-	color: #a6a5a2;
-	width: 216px;
-	height: 30px;
-
-	position: relative;
-	z-index: 150;
-	cursor: text;
-}
-.searchbox:hover {
-    background-image: url( 'https://help.steampowered.com/public/images/v6/store_header_search_hover.png' );
-}
-
-
-.searchbox input {
-	border: none;
-	background-color: transparent;
-	color: #000000;
-	margin-top: 6px;
-	margin-left: 8px;
-	width: 180px;
-	outline: none;
-}
-
-.searchbox input.default {
-	font-style: italic;
-    color: #305d8a;
-}
-
-
-/*
- * SEARCH SUGGESTIONS
- */
-
-
-.search_suggest {
-	text-align: left;
-	width: 430px;
-
-	top: 39px;
-	right: 4px;
-}
-
-.search_suggest .match {
-	display: block;
-	position: relative;
-	height: 54px;
-	overflow: hidden;
-	border-top: 1px solid #13242e;
-}
-
-.search_suggest .match.focus {
-	background-color: #212d3d;
-}
-
-.search_suggest .match:hover {
-	text-decoration: none;
-}
-
-.search_suggest .match .match_img {
-	position: absolute;
-	left: 4px;
-	top: 4px;
-}
-
-.search_suggest .match .match_img img {
-	width: 120px;
-	height: 45px;
-}
-
-.search_suggest .match .match_name {
-	position: absolute;
-	left: 134px;
-	top: 12px;
-	width: 258px;
-
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-
-	font-size: 14px;
-	color: #ffffff;
-}
-
-.search_suggest .match .match_price {
-	position: absolute;
-	left: 134px;
-	top: 30px;
-}
-
-.search_suggest .match .ds_flag {
-	top: 18px;
-	left: 4px;
-}
-
-.slider_ctn {
-	position: relative;
-	height: 18px;
-}
-.slider_ctn.spotlight {
-    width: 308px;
-}
-
-.slider {
-	position: absolute;
-	left: 39px;
-	right: 39px;
-	top: 0;
-	bottom: 0;
-	background-color: rgba( 0, 0, 0, 0.2 );
-	border-radius: 3px;
-}
-
-.slider.slider_text {
-	opacity: 0.2;
-	text-align: center;
-	line-height: 13px;
-	font-size: 10px;
-	color: #ffffff;
-}
-
-.slider .handle {
-	position: absolute;
-	top: 0;
-    background-color: rgba( 0, 0, 0, 0.2 );
-	border-radius: 3px;
-	height: 18px;
-	width: 60px;
-	cursor: pointer;
-}
-
-.slider_ctn .slider_left, .slider_ctn .slider_right {
-	position: absolute;
-	width: 38px;
-	top: 0;
-	bottom: 0;
-	background-color: rgba( 0, 0, 0, 0.4 );
-	border-radius: 3px;
-	cursor: pointer;
-}
-.highlight_ctn .slider_ctn .slider_left, .highlight_ctn .slider_ctn .slider_right, .highlight_ctn .slider .handle {
-	background-color: rgba( 35, 60, 81, 0.4 );
-}
-
-.slider_ctn .slider_left:hover, .slider_ctn .slider_right:hover, .slider .handle:hover {
-    background: #3d6c8d; /* Old browsers */
-    background: -moz-linear-gradient(-45deg,  #3d6c8d 0%, #2e5470 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3d6c8d), color-stop(100%,#2e5470)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* IE10+ */
-    background: linear-gradient(135deg,  #3d6c8d 0%,#2e5470 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d6c8d', endColorstr='#2e5470',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-}
-
-.slider_left {
-	left: 0;
-}
-
-.slider_right {
-	right: 0;
-}
-.slider_right span {
-    display: inline-block;
-    background-position: -9px 0px;
-    background-repeat: no-repeat;
-    background-image: url('https://help.steampowered.com/public/images//v6/icon_cluster_controls.png');
-    width: 9px;
-    height: 7px;
-    margin-left: 15px;
-    margin-top: 5px;
-}
-.slider_left span {
-    display: inline-block;
-    background-position: -18px 0px;
-    background-repeat: no-repeat;
-    background-image: url('https://help.steampowered.com/public/images//v6/icon_cluster_controls.png');
-    width: 9px;
-    height: 7px;
-    margin-left: 13px;
-    margin-top: 5px;
-}
-.slider_right:hover span {
-    background-position: -9px -7px;
-}
-.slider_left:hover span {
-    background-position: -18px -7px;
-}
-
-.slider_left.disabled, .slider_right.disabled {
-	opacity: 0.4;
-	cursor: default;
-}
-
-
 /* Dark page cut */
 
 body.v6 .page_content_ctn.dark {
@@ -664,6 +464,28 @@ body.v6 .page_content_ctn.dark:last-child {
 {
 	0% { opacity: 0.0; }
 	100% { opacity: 1.0; }
+}
+
+
+#loading_throbber.page_loaded
+{
+    opacity: 0.0;
+    visibility: hidden;
+}
+
+#loading_throbber
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    opacity: 1.0;
+    visibility: visible;
+
+    transition:  opacity 0.3s linear;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+
 }
 
 #wizard_contents, #error_contents
@@ -723,7 +545,7 @@ body.v6 .page_content_ctn.dark:last-child {
 {
 	color: #67c1f5;
 	font-size: 44pt;
-	font-family: Motiva Light;
+	font-family: "Motiva Sans Light";
 	padding-top: 32px;
 }
 
@@ -1048,6 +870,10 @@ body.v6 .page_content_ctn.dark:last-child {
 	margin: 14px 0 8px 0;
 }
 
+.help_divider.full {
+	max-width: none;
+}
+
 #help_search_support_input {
 	height: 44px;
 	width: 720px;
@@ -1315,6 +1141,10 @@ body.v6 .help_refund_request_area h2 a:hover {
 	font-size: 24px;
 	color: #ffffff;
 	line-height: 28px;
+}
+
+.help_app_header .game_name a:hover {
+	color: #ffffff;
 }
 
 .help_app_header .account_details {
@@ -1685,7 +1515,7 @@ a.guide_row {
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
-	width: calc( 644px - 40px );
+	max-width: 604px;
 	margin-bottom: 20px;
 }
 
@@ -3024,4 +2854,211 @@ input.unlockcode_entry_input
 .btn_login_nag.btnv6_blue_hoverfade {
 	background: #67c1f5;
 	color: #ffffff !important;	/* buttons.css uses !important, so the war has begun */
+}
+
+.create_help_request_form {
+	display: none;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.show_create_help_request_form .create_help_request_form {
+	display: block;
+	opacity: 1.0;
+}
+
+.help_hide_for_create_request {
+	transition: visibility 0.5s, opacity 0.5s;
+}
+
+.show_create_help_request_form .help_hide_for_create_request {
+	visibility: hidden;
+	position: absolute;
+	opacity: 0;
+}
+
+.create_help_request_form {
+	background: #111a25;
+	padding: 20px;
+	max-width: 672px;
+}
+
+.create_help_request_secondary {
+	font-size: 14px;
+	color: #67c1f5;
+	line-height: 16px;
+	margin-bottom: 16px;
+}
+
+.create_help_request_avatar_ctn {
+	float: left;
+	padding-right: 8px;
+}
+
+.help_request_textarea_ctn {
+	overflow: hidden;
+}
+
+.help_request_textarea_ctn textarea {
+	padding: 8px;
+	width: calc( 100% - 2px - 16px );
+	min-height: 80px;
+	height: 25vh;
+	resize: none;
+	font-size: 16px;
+}
+
+.help_request_create_action {
+	padding-top: 8px;
+	text-align: right;
+}
+
+
+.help_request_table {
+	background: #1b2735;
+	margin-top: 20px;
+}
+
+.help_request_header {
+	background: #1d2836;
+	padding: 10px 10px 4px 10px;
+}
+
+.help_request_header > .title {
+	margin-bottom: 6px;
+}
+
+.help_request_headers .col {
+	color: #515d6a;
+	font-size: 11px;
+}
+
+.help_request_columns .col {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	padding: 0 4px;
+}
+
+.help_request_headers .col.message,
+.help_request_columns .col.message {
+	padding-left: 0px;
+}
+
+.help_request_columns .col:not(.message) {
+	float: right;
+	width: 15%;
+}
+
+a.help_request_row {
+	line-height: 16px;
+	display: block;
+	text-decoration: none;
+	padding: 10px 10px;
+
+	font-size: 13px;
+	color: #9eb3cc;
+}
+
+.help_request_name {
+	color: #ffffff;
+}
+
+.help_request_row .col.title {
+	color: #e3ebf4;
+}
+
+.help_request_header, .help_request_row {
+	border-bottom: 1px solid #25313f;
+}
+
+a.help_request_row.closed {
+	background: #121f30;
+}
+
+a.help_request_row.closed, a.help_request_row.closed .help_request_name {
+	color: #515d6a;
+}
+
+.help_request_header_left {
+	display: inline-block;;
+}
+
+.help_request_header_info {
+	float: right;
+}
+
+.help_request_header_row {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	line-height: 20px;
+
+	color: #7c8da1;
+}
+
+.help_request_header_row b {
+	font-weight: normal;
+	color: #9eb3cc;
+}
+
+@media screen and ( max-width: 600px )
+{
+	.help_request_columns .col.date_created {
+		display: none;
+	}
+
+	.help_request_columns .col.status {
+		width: 20%;
+	}
+
+	html.responsive .help_request_header_left,
+	html.responsive .help_request_header_info {
+		display: block;
+		float: none;
+		margin-bottom: 12px;
+	}
+}
+
+.help_request_page {
+	font-size: 13px;
+}
+
+.help_request_icon {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-right: 12px;
+}
+
+.help_request_title {
+	font-size: 14px;
+	color: #67c1f5;
+	margin-top: 32px;
+	line-height: 20px;
+}
+
+.help_request_area {
+	font-size: 12px;
+	color: #9eb3cc;
+	line-height: 20px;
+}
+
+.help_request_initial_body {
+	background: #131d28;
+	padding: 20px;
+	color: #6a798a;
+}
+
+.help_request_author_bar {
+	line-height: 36px;
+	margin-bottom: 8px;
+}
+
+.help_request_author_bar .playerAvatar {
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: middle;
 }
