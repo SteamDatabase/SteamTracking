@@ -19,7 +19,7 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 		}
 		else if ( results.success == 24 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank">Visit Steam Support</a> for more information.' );
 		}
 		else
 		{
@@ -49,7 +49,7 @@ function UserReview_VoteTag( recommendationID, tagID, bRateUp, baseURL, callback
 		}
 		else if ( results.success == 24 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank">Visit Steam Support</a> for more information.' );
 		}
 		else
 		{

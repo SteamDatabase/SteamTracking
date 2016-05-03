@@ -1314,6 +1314,11 @@ a.apphub_more_friends_who_play:hover
 	color: #a0a08b;
 }
 
+.apphub_CardContentMain .apphub_CardTextContent .received_compensation {
+	font-size: 11px;
+	color: #AB9569;
+}
+
 .apphub_CardContentMain .hr {
 	height: 2px;
 	background-color: #272f38;

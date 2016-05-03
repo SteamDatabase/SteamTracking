@@ -431,12 +431,22 @@ table.wordfilter_table {
 	width: 100%;
 }
 
+.wordfilter_table th {
+	padding-right: 10px;
+}
+
+tr.wordfilter_row.inactive {
+	opacity: .2;
+}
+
 tr.wordfilter_row:hover {
 	background-color: #3C3C3D;
 }
 
 td.wordfilter_word {
 	color: #ffffff;
+	word-break: break-all;
+	word-wrap: break-word;
 }
 
 td.wordfilter_action > a {
@@ -452,6 +462,27 @@ td.wordfilter_action a {
 }
 td.wordfilter_action a:hover {
 	color: #ffffff;
+}
+
+.wordfilter_addword_container {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 10px;
+}
+
+.wordfilter_addword_header {
+	font-size: 11px;
+	color: #8f98a0;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+.wordfilter_testword_container {
+	margin: 30px 0 0 0;
+}
+
+#testfilter_results {
+	float:right;
+	margin-right: 15px;
 }
 
 .discussion_tab_content_area h2 {

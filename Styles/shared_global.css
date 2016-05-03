@@ -1759,6 +1759,44 @@ body.v6 #footer_nav .popup_menu .hr{
 	padding-left: 18px;
 }
 
+/* Scrollbar CSS. Move this to somewhere common before checking in thankx */
+
+.v_scrollbar {
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 2px;
+}
+
+.v_scrollbar > .handle {
+	background: #3d6c8d; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #3d6c8d 0%, #2e5470 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3d6c8d), color-stop(100%,#2e5470)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #3d6c8d 0%,#2e5470 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d6c8d', endColorstr='#2e5470',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border-radius: 2px;
+}
+
+.v_scrollbar.horizontal {
+	height: 14px;
+}
+
+.v_scrollbar.vertical {
+	width: 14px;
+}
+
+.v_scrollbar.vertical > .handle {
+
+	height: 24px;
+	width: 14px;
+}
+
+.v_scrollbar.horizontal > .handle {
+
+	height: 14px;
+	width: 24px;
+}
 
 @media screen and (max-width: 910px)
 {

@@ -59,7 +59,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
 		case 24:
-			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/#HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
 			return false;
 		case 21:
 			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
@@ -259,7 +259,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 24 )
 	{
-		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/#HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
+		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
 	}
 	else if ( transport.responseJSON.success == 16 )
 	{

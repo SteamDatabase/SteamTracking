@@ -1434,7 +1434,7 @@ WebStorage = {
 // takes an integer
 function v_numberformat( n, decimals, strDecimalSymbol, strThousandsSeperator )
 {
-	if ( !strDecimalSymbol && !strThousandsSeperator && typeof Number != 'undefined' && typeof Number.toLocaleString != 'undefined' )
+	if ( typeof strDecimalSymbol == 'undefined' && typeof strThousandsSeperator == 'undefined' && typeof Number != 'undefined' && typeof Number.toLocaleString != 'undefined' )
 	{
 		var options = {};
 		if ( typeof decimals != 'undefined' && decimals !== 0 )
@@ -1464,12 +1464,12 @@ function v_numberformat( n, decimals, strDecimalSymbol, strThousandsSeperator )
 		var c = str.charAt(i);
 		out += c;
 		if ( i < len - 1 && (len - i - 1) % 3 == 0 && c != '-' )
-			out += ( strThousandsSeperator || ',' );
+			out += ( typeof strThousandsSeperator == 'undefined' ? ',' : strThousandsSeperator );
 	}
 	if ( ( len < str.length || decimals ) && typeof decimals != 'undefined' && decimals !== 0 )
 	{
 		len++;
-		out += ( strDecimalSymbol || '.' );
+		out += ( typeof strDecimalSymbol == 'undefined' ? ',' : strDecimalSymbol );
 		for ( var i = 0; i < ( decimals ? decimals : str.length - len ); i++ )
 		{
 			if ( len + i < str.length )
@@ -1571,7 +1571,7 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 				break;
 			case 24:
 				ShowAlertDialog( 'Error',
-					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.'
+					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank">Visit Steam Support</a> for more information.'
 				);
 				break;
 			case 15:
@@ -3043,6 +3043,156 @@ function setTimezoneCookies()
 function FlushStyleChanges( element )
 {
 	$J( element ).css( 'opacity');
+}
+
+var k_EScrollbarDirectionVertical = 1;
+var k_EScrollbarDirectionHorizontal = 2;
+
+window.VScrollbar = function( eleTarget, eleHandle, direction )
+{
+	this.m_eleHandle = eleHandle;
+	this.m_eleTarget = eleTarget;
+
+	var instance = this;
+
+	var propOffset, propSize, propOuterSize, propDimension, propPage, directionInvert, propOffsetEvent;
+
+	if( direction == k_EScrollbarDirectionVertical)
+	{
+		propOffset = 'top';
+		propSize = 'height';
+		propOuterSize = 'outerHeight';
+		propDimension = 'y';
+		propPage = 'pageY';
+		propOffsetEvent = 'offsetY';
+	} else if( direction == k_EScrollbarDirectionHorizontal )
+	{
+		propOffset = 'left';
+		propSize = 'width';
+		propOuterSize = 'outerWidth';
+		propDimension = 'x';
+		propPage = 'pageX';
+		propOffsetEvent = 'offsetX';
+
+		this.m_eleTarget.first().css({'white-space': 'nowrap'});
+	}
+
+	// Set up some CSS properties we need
+	this.m_eleHandle.css({position: 'absolute'});
+	if( this.m_eleHandle.parent().css('position') == 'static' )
+		this.m_eleHandle.parent().css({position: 'relative'}); // Needs to be relative or absolute, only set it if we didn't do it in CSS
+	this.m_eleTarget.css({position: 'relative', float: 'left'});
+	this.m_eleTarget.parent().css({position: 'relative', overflow: 'hidden'});
+
+
+	var funcUpdate = function()
+	{
+		if( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]() == 0 )
+		{
+			instance.m_eleHandle.parent().addClass('disabled');
+			return false;
+		}
+
+		if( instance.m_flPercent < 0 )
+			instance.m_flPercent = 0;
+
+		if( instance.m_flPercent > 1 )
+			instance.m_flPercent = 1;
+
+		instance.m_eleHandle.parent().removeClass('disabled');
+
+		var percent = instance.m_flPercent;
+
+		// Update container
+		instance.m_eleTarget[0].style[propOffset] = -percent * ( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]()) + 'px';
+
+		// Update scroll handle
+		var handleMax = instance.m_eleHandle.parent()[propSize]() - instance.m_eleHandle[propOuterSize]();
+		instance.m_eleHandle[0].style[propOffset] = ( percent * handleMax ) + 'px';
+
+		//if ( eleTarget[propSize]() < eleTarget.parent()[propSize]() )
+		//	instance.m_eleTarget[0].style[propOffset] = '0px';
+		//else
+		instance.m_eleTarget[0].style[propOffset] = -percent * ( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]()) + 'px';
+
+		return true;
+	}
+
+	var funcMouseMove = function( event ) {
+		var localDimension = event[propPage] - instance.m_eleHandle.parent().offset()[propOffset];
+		var localMax = instance.m_eleHandle.parent()[propSize]() - instance.m_eleHandle[propOuterSize]();
+
+		var percent = localDimension / localMax;
+		instance.m_flPercent = percent;
+
+		if( funcUpdate() )
+			event.preventDefault();
+
+	}
+
+	$J(eleTarget).bind('mousewheel DOMMouseScroll',function( event ){
+		var delta = event.originalEvent.wheelDelta || event.originalEvent.detail * -12;
+
+		var localY = instance.m_eleTarget.position()[propOffset] * -1;
+		var localMax = instance.m_eleTarget[propOuterSize]() - instance.m_eleTarget.parent()[propSize]();
+
+		if( localY <= 0 && delta > 0 || localY == localMax && delta < 0 )
+			return;
+
+		localY -= delta;
+
+		if( localY < 0 ) localY = 0;
+		if( localY > localMax  ) localY = localMax;
+
+		var percent = localY / localMax;
+
+		instance.m_flPercent = percent;
+
+		if( funcUpdate() )
+			event.preventDefault();
+	});
+
+	$J(eleHandle.parent()).bind('click',function( event ){
+		var localY = instance.m_eleTarget.position()[propOffset] * -1;
+		var localMax = instance.m_eleTarget[propOuterSize]() - instance.m_eleTarget.parent()[propSize]();
+
+		var step = instance.m_eleTarget.parent()[propSize]();
+
+		if( event[propOffsetEvent] < instance.m_eleHandle.position()[propOffset] )
+			step *= -1;
+
+		localY += step;
+
+		if( localY < 0 ) localY = 0;
+		if( localY > localMax  ) localY = localMax;
+
+		var percent = localY / localMax;
+
+		instance.m_flPercent = percent;
+
+		if( funcUpdate() )
+			event.preventDefault();
+	});
+
+	eleHandle.mousedown(function( event ){
+		$J(window).bind('mousemove.scroll', funcMouseMove);
+		event.stopPropagation();
+	});
+
+	eleHandle.click(function( event ){
+		event.stopPropagation();
+	});
+
+	$J(window).mouseup(function( event ){
+		$J(window).unbind('mousemove.scroll');
+		event.stopPropagation();
+	});
+
+
+
+	funcUpdate();
+
+
 }
 
 

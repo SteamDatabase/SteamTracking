@@ -346,6 +346,11 @@ div#news_search {
     font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
 }
 
+.newsPostBlock .body h2 {
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
 .body img {
 	float: left;
 	clear: both;

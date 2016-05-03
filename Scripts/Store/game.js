@@ -248,7 +248,7 @@ function ShowEULA( elLink )
 
 // formerly user_reviews_store.js
 
-var g_recommendationContents = [ 'friend', 'all', 'positive', 'negative', 'recent', 'funny' ];
+var g_recommendationContents = [ 'friend', 'summary', 'recent_short', 'all', 'positive', 'negative', 'recent', 'funny' ];
 
 
 function OnRecommendationVotedUp( recommendationid )
@@ -407,6 +407,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 
 function SelectReviews( appid, context, reviewDayRange, language )
 {
+	$J( "#ReviewsTab_summary" ).removeClass( "active" );
 	$J( "#ReviewsTab_all" ).removeClass( "active" );
 	$J( "#ReviewsTab_recent" ).removeClass( "active" );
 	$J( "#ReviewsTab_positive" ).removeClass( "active" );
@@ -414,6 +415,7 @@ function SelectReviews( appid, context, reviewDayRange, language )
 	$J( "#ReviewsTab_funny" ).removeClass( "active" );
 	$J( "#ReviewsTab_" + context ).addClass( "active" );
 
+	$J( "#Reviews_summary" ).hide();
 	$J( "#Reviews_all" ).hide();
 	$J( "#Reviews_recent" ).hide();
 	$J( "#Reviews_positive" ).hide();
