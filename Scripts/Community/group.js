@@ -571,6 +571,223 @@ function SetGroupState( groupid, action )
         });
 }
 
+function UpdateImageList( rgClanImages, strClanURL )
+{
+	var eleContainer = $J('#clan_image_list_container > div');
+	eleContainer.empty();
+	var eleTarget = $J('#body');
+
+	for( var i=0; i < rgClanImages.length; i++ )
+	{
+		var ele = $J('<div class="clan_image" data-image-filename="%6$s" data-image-id="%5$s" data-image-url="%3$s" data-thumbnail-url="%4$s" ><img src="%1$s" ><span class="delete"/><span class="thumbnail"/><span class="full"/><div class="clan_image_filename">%2$s</div></div>'
+				.replace('%1$s', rgClanImages[i].thumb_url)
+				.replace('%2$s', rgClanImages[i].file_name )
+				.replace('%3$s', rgClanImages[i].url)
+				.replace('%4$s', rgClanImages[i].thumb_url )
+				.replace('%5$s', rgClanImages[i].imageid )
+				.replace('%6$s', rgClanImages[i].file_name )
+		);
+
+		var fnImageDelete = DeleteImage.bind(ele, strClanURL, rgClanImages[i].file_name );
+		var fnImageThumb = InsertImage.bind(eleTarget, rgClanImages[i].thumb_url, rgClanImages[i].url );
+		var fnImageFull = InsertImage.bind(eleTarget, rgClanImages[i].url, false );
+
+		$J('.delete', ele).on('click', fnImageDelete);
+		if( rgClanImages[i].thumb_url != rgClanImages[i].url )
+			$J('.thumbnail', ele).text( "Thumbnail"  ).on('click', fnImageThumb);
+		else
+			$J('.thumbnail', ele).remove();
+		$J('.full', ele).text( "Full size" ).on('click', fnImageFull);
+
+		eleContainer.append(ele);
+	}
+}
+
+function InsertImage( strImageURL, strFullURL, event )
+{
+	var nCursorPosition = this.prop('selectionStart');
+	var strCurrentText = this.val();
+
+	var strInsertText = '[img]' + strImageURL + '[/img]';
+	if( strFullURL )
+		strInsertText = '[url=' + strFullURL + ']' + strInsertText + '[/url]';
+
+	this.val(strCurrentText.substring(0,  nCursorPosition) + strInsertText + strCurrentText.substring(nCursorPosition, strCurrentText.length));
+}
+
+function DeleteImage(strClanURL, strFileName)
+{
+	var imageid = this.data('image-id');
+
+	var ele = this;
+
+	if( !imageid )
+		return false; // ?????
+
+	ShowConfirmDialog( "Delete Image", "Are you sure you want to delete %1$s?<br><br>Old announcements which reference this image will no longer work.".replace("%1$s", strFileName) )
+.done( function() {
+		$J.ajax({
+			url: strClanURL + '/deleteimage',
+			cache: false,
+			type: "POST",
+			data: { imageid: imageid },
+			error: function( jqXHR ) {
+				var json = jqXHR.responseJSON;
+				var error = 16;
+				if ( json && json.hasOwnProperty( "success" ) )
+					error = json.success;
+
+				ShowDialog( "Error deleting image", "An error has occured. Please try again later. (%1$s)".replace('%1$s', error ) );
+			},
+			success: function( response )
+			{
+				ele.fadeOut();
+			}
+		});
+	}
+);
+}
+
+function ClanUploadImage( ele, strClanURL )
+{
+	var rgFiles = ele.files;
+	var nFiles = rgFiles.length;
+	if( nFiles < 1 )
+	{
+		ShowAlertDialog( "Error uploading images", "No images were selected to upload" );
+	}
+	var strUploadingString = "Uploading image %1$s\/%2$s<br><br>This dialog will automatically close when finished.";
+
+	var dialog = ShowDialog( "Please wait...", '' );
+
+	ProcessNextImage(0, nFiles, rgFiles, dialog, strClanURL)
+}
+
+function ProcessNextImage(nImageCurrent, nImagesTotal, rgImages, dialog, strClanURL)
+{
+	var fd = new FormData();
+	fd.append( 'clanimage', rgImages[nImageCurrent] );
+	fd.append( 'sessionid', g_sessionID );
+
+	$J('.newmodal_content > div', dialog.GetContent()).html( "Uploading image %1$s\/%2$s<br><br>This dialog will automatically close when finished.".replace('%1$s',nImageCurrent+1).replace('%2$s',nImagesTotal) )
+
+	$J.ajax({
+		url: strClanURL + '/uploadimage',
+		cache: false,
+		type: "POST",
+		data: fd,
+		contentType: false,
+		processData: false,
+		error: function( jqXHR ) {
+			var json = jqXHR.responseJSON;
+			var error = 16;
+			if ( json && json.hasOwnProperty( "success" ) )
+				error = json.success;
+
+			dialog.Dismiss();
+			ShowDialog( "Error uploading image", "An error has occured. Please try again later. (%1$s)".replace('%1$s', error ) );
+		},
+		success: function( response )
+		{
+			nImageCurrent++;
+			if( nImageCurrent >= nImagesTotal )
+			{
+				dialog.Dismiss();
+
+				$J.ajax({
+					url: strClanURL + '/getimages',
+					cache: false,
+					type: "POST",
+					error: function( jqXHR ) {
+						document.location.reload();
+					},
+					success: function( response )
+					{
+						g_rgClanImages = response.images;
+						UpdateImageList( g_rgClanImages, strClanURL );
+					}
+				});
+
+
+
+			} else {
+				ProcessNextImage(nImageCurrent, nImagesTotal, rgImages, dialog, strClanURL)
+			}
+		}
+	});
+}
+
+function OnImageSearch( val )
+{
+	var rgImages = $J('.clan_image');
+	var needle = val.toLowerCase();
+
+	for( var i=0; i<rgImages.length; i++)
+	{
+		var ele = $J(rgImages[i]);
+		var haystack = ele.data('image-filename').toLowerCase();
+		if( haystack.indexOf( needle ) == -1 )
+			ele.hide();
+		else
+			ele.show();
+	}
+
+	g_scrollbarImages.Reset();
+}
+
+function SwapLanguageFields( nNewLanguage )
+{
+	// First copy the current form data to their submitted fields
+	SaveFields();
+
+	// Now copy the requested fields to the editable form
+	g_nCurrentLanguage = nNewLanguage;
+
+	var strHeadline = $J('#'+g_nCurrentLanguage+'_headline').val( );
+	var strBody = $J('#'+g_nCurrentLanguage+'_body').val( );
+
+	$J('#headline').val( strHeadline );
+	$J('#body').val( strBody );
+
+}
+
+function UpdateHighlights()
+{
+	for( var i=0; i < 27; i++ )
+	{
+		if( $J('#'+i+'_headline').val() &&  $J('#'+i+'_body').val() )
+			$J('#'+i+'_opt').addClass('has_localization');
+		else
+			$J('#'+i+'_opt').removeClass('has_localization');
+	}
+}
+
+function SaveFields()
+{
+	var strHeadline = $J('#headline').val();
+	var strBody = $J('#body').val();
+
+	if($J('#'+g_nCurrentLanguage+'_headline').val() != strHeadline || $J('#'+g_nCurrentLanguage+'_body').val() != strBody )
+	{
+		$J('#'+g_nCurrentLanguage+'_headline').val( strHeadline );
+		$J('#'+g_nCurrentLanguage+'_body').val( strBody );
+		$J('#'+g_nCurrentLanguage+'_updated').val( 1 );
+
+	}
+
+
+
+	UpdateHighlights();
+
+}
+
+
+function SaveAnnouncement()
+{
+	SaveFields();
+	$('post_announcement_form').submit();
+}
+
 jQuery( function($) {
 	var $MemberTiles = $('.grouppage_member_tiles');
 	if ( $MemberTiles.length )

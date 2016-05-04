@@ -3087,10 +3087,12 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 
 	var funcUpdate = function()
 	{
+		var bScrolled = true;
 		if( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]() == 0 )
 		{
 			instance.m_eleHandle.parent().addClass('disabled');
-			return false;
+			instance.m_flPercent = 0;
+			bScrolled = false;
 		}
 
 		if( instance.m_flPercent < 0 )
@@ -3110,12 +3112,7 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		var handleMax = instance.m_eleHandle.parent()[propSize]() - instance.m_eleHandle[propOuterSize]();
 		instance.m_eleHandle[0].style[propOffset] = ( percent * handleMax ) + 'px';
 
-		//if ( eleTarget[propSize]() < eleTarget.parent()[propSize]() )
-		//	instance.m_eleTarget[0].style[propOffset] = '0px';
-		//else
-		instance.m_eleTarget[0].style[propOffset] = -percent * ( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]()) + 'px';
-
-		return true;
+		return bScrolled;
 	}
 
 	var funcMouseMove = function( event ) {
@@ -3188,7 +3185,11 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		event.stopPropagation();
 	});
 
+	this.Reset = function() {
+		instance.m_flPercent = 0;
 
+		return funcUpdate();
+	}
 
 	funcUpdate();
 

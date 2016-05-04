@@ -1632,6 +1632,99 @@ a.headlineLink:hover {
 	color: #FFC369;
 	font-size: 16px;
 }
+.clan_image_list_container {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	margin-left: -10px;
+}
+
+.clan_image_list_container > div {
+
+	line-height: 14px;
+
+}
+
+.clan_image {
+	margin: 2px;
+	vertical-align: top;
+	display: inline-block;
+	width: 128px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.clan_image > img {
+	max-width: 128px;
+	max-height: 128px;
+}
+
+.clan_image .delete {
+	position: absolute;
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/screenshots_delete.gif);
+	width: 18px;
+	height: 18px;
+	top: 2px;
+	right: 2px;
+	right: -100%;
+	opacity: 0;
+	transition: right 0.3s, opacity 0.3s;
+	cursor: pointer;
+
+}
+
+.clan_image .thumbnail, .clan_image .full {
+	position: absolute;
+	left: 0px;
+	background: rgba(0,0,0,0.8);
+	color: #67c1f5 ;
+	font-size: 10px;
+	padding: 1px 5px;
+	transition: left 0.3s, opacity 0.3s;
+	opacity: 0;
+	left: -100%;
+	cursor: pointer;
+}
+
+.clan_image .thumbnail {
+	top: 25px;
+}
+
+
+.clan_image .full {
+	top: 5px;
+}
+
+.clan_image:hover .thumbnail, .clan_image:hover .full {
+	left: 0px;
+	opacity: 1;
+}
+
+.clan_image:hover .delete {
+	right: 2px;
+	opacity: 1;
+}
+
+.clan_image .clan_image_filename {
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.images_search_container {
+	float: right;
+}
+
+.images_search_container input {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/searchbox_workshop_submit.gif' );
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-color: #2a3f5a;
+	font-size: 12px;
+	padding: 3px;
+	margin-top: -2px;
+
+
+}
 
 @media screen and (max-width: 910px)
 {
@@ -1737,3 +1830,23 @@ a.headlineLink:hover {
 		border-bottom: none;
 	}
 }
+
+
+/* Groups page specific scrollbar CSS */
+#clan_images_container {
+	position: relative;
+}
+
+.clan_image_list_container {
+	max-height: 500px;
+	margin-bottom: 15px;
+}
+
+#clan_images_container  .v_scrollbar {
+	position: absolute;
+	right: -5px;
+	top: 5px;
+	bottom: 5px;
+	max-height: 490px; /* I am impressed this works. GOOD JOB CSS! */
+}
+
