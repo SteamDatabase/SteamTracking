@@ -454,6 +454,62 @@ body.sale_page_background {
 	color: #ffffff;
 }
 
+.sale_page_three_section_first_block
+{
+	padding: 35px 0px 25px 15px;
+	background-color: #365d7e;
+}
+
+.sale_page_three_section_lower_blocks
+{
+	margin-top: 25px;
+	padding: 35px 0px 25px 15px;
+	background-color: #365d7e;
+}
+
+.sale_page_three_section_promo_header {
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.sale_page_three_section_browse_more_items
+{
+	margin: 0 auto 50px auto;
+	width: 260px;
+	cursor: pointer;
+	padding: 25px;
+}
+
+.sale_page_three_section_button
+{
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	text-align: center;
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+
+	background: #6CA8E2;
+}
+
+.sale_page_three_section_button:hover {
+
+	background: #365d7e;
+	text-decoration: none;
+}
+
+.sale_page_three_section_button a
+{
+	color: #ffffff;
+}
+
 /* page admin block ended up with a bunch of random styles that are now copied/pasted everywhere- undo some of the damage here */
 html.responsive .btnv6_blue_blue_innerfade {
 	float: none;
