@@ -475,6 +475,14 @@ body.sale_page_background {
 	text-transform: uppercase;
 }
 
+.sale_page_three_section_lower_blocks_promo_header {
+	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
 .sale_page_three_section_browse_more_items
 {
 	margin: 0 auto 50px auto;
