@@ -476,7 +476,6 @@ function InitializeTransaction()
 	var gift_message = '';
 	var gift_sentiment = '';
 	var gift_signature = '';
-	var gift_scheduled_send = 0;
 	var bIsGift = false;
 	
 		$('is_external_finalize_transaction').value = 0;
@@ -537,7 +536,6 @@ function InitializeTransaction()
 			gift_message = $('gift_message_text').value;
 			gift_sentiment = $('gift_sentiment').value;
 			gift_signature = $('gift_signature').value;
-			gift_scheduled_send = GatherScheduledSendFields();
 		}
 		
 		var bHasCardInfo = false;
@@ -671,7 +669,6 @@ function InitializeTransaction()
 				'GiftMessage' : gift_message,
 				'Sentiment' : gift_sentiment,
 				'Signature' : gift_signature,
-				'ScheduledSendOnDate': gift_scheduled_send,
 				
 				'BankAccount' : $('bank_account').value,
 				'BankCode' : $('bank_code').value,
@@ -1984,13 +1981,19 @@ function CheckFriendDisplay()
 		}
 
 		if ( IsRadioButtonChecked('send_via_friends') )
-		{			
+		{
+			$J( '#send_via_friends_box' ).show();
+			
 			for ( var accountid in g_MapFriendsAvatars )
 			{
 				var img = $('friend_avatar_img_'+accountid);
-				if ( img && img.src != g_MapFriendsAvatars[accountid] )
+				if ( img )
 					img.src = g_MapFriendsAvatars[accountid];
 			}
+		}
+		else
+		{
+			$J('#send_via_friends_box').hide();
 		}
 	} 
 	catch(e)
@@ -2027,28 +2030,11 @@ function SubmitGiftDeliveryForm()
 	
 		var rgBadFields = { 
 		email_input : false, 
-		friends_chooser : false,
-		schedule_send_time : false
-	};
+		friends_chooser : false
+	}
 	
 	try 
 	{
-
-		if ( $J('#cart_send_schedule_options').hasClass( 'schedule_selected' ) && $J('.cart_send_choice.selected').hasClass('supports_schedule_send') )
-		{
-			var $ScheduleSendElement = $J('#cart_send_schedule_options').find( 'select, input' );
-			var $TimeElement = $ScheduleSendElement.filter( '#schedule_send_time' );
-			var b24hTime = ( $ScheduleSendElement.filter('#schedule_send_ampm').length == 0 );
-			var rgTimeParse = $TimeElement.val().match( /([0-2]?[0-9]) *(?::|h) *([0-5][0-9])/ );
-			if ( !rgTimeParse || rgTimeParse[1] > 23 ||
-				( !b24hTime && ( rgTimeParse[1] > 12 || rgTimeParse[1] < 1 ) ) )
-			{
-				rgBadFields.schedule_send_time = true;
-				errorString += 'The time of day specified is not valid.<br/>';
-			}
-		}
-		
-
 		if ( $( 'send_via_email' ).checked )
 		{
 			var email = $('email_input').value;
@@ -2156,7 +2142,7 @@ function SubmitGiftNoteForm()
 		gift_message_text : false, 
 		gift_sentiment_trigger : false,
 		gift_signature : false
-	};
+	}
 	
 	try 
 	{
@@ -4706,38 +4692,6 @@ function UpdateWillBeSentToNote()
 	}
 }
 
-// could validate we rendered correct timezone with:
-// 		parseInt( V_GetCookie( 'timezoneOffset' ) ) * -1 / 60 == (new Date()).getTimezoneOffset()
-function GatherScheduledSendFields()
-{
-	if ( !$J('#cart_send_schedule_options').hasClass( 'schedule_selected' ) )
-		return 0;
-	
-	var year = $J('#schedule_send_year').val();
-	var month = $J('#schedule_send_month').val();
-	var day = $J('#schedule_send_day').val();
-
-	var rgTimeParse = $J('#schedule_send_time').val().match( /([0-2]?[0-9]) *(?::|h) *([0-5][0-9])/ );
-	
-	if ( !rgTimeParse )
-		return 0;	// should have validated before
-	
-	var hour = parseInt( rgTimeParse[1] );
-	var minute = parseInt( rgTimeParse[2] );
-	
-	var b24hTime = (  $J('#schedule_send_ampm').length == 0 );
-	if ( !b24hTime )
-	{
-		if ( hour == 12 )
-			hour -= 12;	
-		if ( $J('#schedule_send_ampm' ).val() == 'pm' )
-			hour += 12;
-	}
-
-	var d = new Date( year, month - 1, day, hour, minute );
-	return d.getTime() / 1000;
-}
-
 var g_bSendGiftCallRunning = false;
 function SendGift()
 {
@@ -4750,7 +4704,7 @@ function SendGift()
 	var gift_message = '';
 	var gift_sentiment = '';
 	var gift_signature = '';
-	var gift_scheduled_send = 0;
+	var bIsGift = true;
 
 	try
 	{
@@ -4766,7 +4720,6 @@ function SendGift()
 		gift_message = $('gift_message_text').value;
 		gift_sentiment = $('gift_sentiment').value;
 		gift_signature = $('gift_signature').value;
-		gift_scheduled_send = GatherScheduledSendFields();
 
 				g_bSendGiftCallRunning = true;
 
@@ -4781,7 +4734,6 @@ function SendGift()
 				'GiftMessage' : gift_message,
 				'GiftSentiment' : gift_sentiment,
 				'GiftSignature' : gift_signature,
-				'ScheduledSendOnDate': gift_scheduled_send,
 				'GiftGID':		g_gidGift,
 				'SessionID':	g_sessionID
 			},
@@ -4791,18 +4743,13 @@ function SendGift()
 				{
 					var result = transport.responseJSON.success;
 			      	   	// Success...
-					if ( result == 1 || result == 22 )
-					{
-						if ( gift_scheduled_send )
-							$J('#send_gift_success_msg').html( 'Your gift has been scheduled for delivery' );
-						else
-							$J('#send_gift_success_msg').html( 'Your gift has been sent' );
-
+			      	   	if ( result == 1 || result == 22 )
+			      	   	{
 						OnSendGiftSuccess( result );
-					}
+			      	   	}
 					else
 					{
-						OnSendGiftFailure( result );
+			      	   		OnSendGiftFailure( result );
 					}
 			  	}
 				else
