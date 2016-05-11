@@ -10000,6 +10000,41 @@
 				}
 			}
 		}
+		
+		"MayflowerCosmetics_collection"
+		{
+			"name"				"MayflowerCosmetics_collection"
+			"description"		"MayflowerCosmetics_collection_desc"
+			"items"
+			{
+				"ancient"
+				{
+					"Bedouin Bandana"						"10"
+					"The Skullcap"							"10"
+				}
+				"legendary"
+				{
+					"The Dayjogger"							"10"
+					"Dad Duds"								"10"
+				}
+				"mythical"
+				{
+					"Herald's Helm"							"10"
+					"The Lurking Legionnaire"				"10"
+					"The Gauzed Gaze"						"10"
+					"The Patriot's Pouches"					"10"
+				}
+				"rare"
+				{
+					"The Airdog"							"10"
+					"Courtly Cuirass"						"10"
+					"Squire's Sabatons"						"10"
+					"The Surgical Survivalist"				"10"
+					"The Demo's Dustcatcher"				"10"
+					"The Scoped Spartan"					"10"
+				}
+			}
+		}
 	} 
 	"operations"
 	{
@@ -38352,12 +38387,73 @@
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"propername"	"1"
-			"image_inventory"	"backpack/player/items/soldier/fwk_soldier_seacaptain"
-			"model_player"	"models/player/items/soldier/fwk_soldier_seacaptain.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain"
 			"drop_type"		"drop"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_engineer.mdl"
+			}
 			"used_by_classes"
 			{
-				"soldier"	"1"
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fwk_seacaptain/fwk_seacaptain_engineer.mdl"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_SoldierHat1_Style0"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"scout"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_scout.mdl"
+							"sniper"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_sniper.mdl"
+							"soldier"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_soldier.mdl"
+							"Demoman"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_demo.mdl"
+							"medic"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_medic.mdl"
+							"heavy"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_heavy.mdl"
+							"pyro"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_pyro.mdl"
+							"spy"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_spy.mdl"
+							"engineer"		"models/workshop/player/items/all_class/fwk_seacaptain_s2/fwk_seacaptain_s2_engineer.mdl"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_SoldierHat1_Style1"
+					}
+				}
 			}
 		}
 		"612"
@@ -58960,15 +59056,34 @@
 			"equip_region"		"hat"
 			"propername"		"1"
 			"drop_type"		"drop"
-			"image_inventory"		"backpack/workshop/player/items/sniper/riflemans_rallycap/riflemans_rallycap"
+			"image_inventory"		"backpack/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/sniper/riflemans_rallycap/riflemans_rallycap.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/riflemans_rallycap/riflemans_rallycap_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
 				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30068"
@@ -60318,16 +60433,35 @@
 					"hat"		"1"
 				}
 			}
-			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_soldier_fedora/jul13_soldier_fedora"
+			"image_inventory"		"backpack/workshop/player/items/all_class/jul13_fedora/jul13_fedora"
 			"capabilities"
 			{
 				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
-			"model_player"		"models/workshop/player/items/soldier/jul13_soldier_fedora/jul13_soldier_fedora.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/jul13_fedora/jul13_fedora_engineer.mdl"
+			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
 				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30120"
@@ -64932,15 +65066,20 @@
 			"item_name"		"#TF_xms2013_pyro_arctic_suit"
 			"item_description"		"#TF_xms2013_pyro_arctic_suit_Desc"
 			"equip_region"		"shirt"
-			"image_inventory"		"backpack/workshop/player/items/pyro/xms2013_pyro_arctic_suit/xms2013_pyro_arctic_suit"
+			"image_inventory"		"backpack/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit"
 			"propername"		"1"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/pyro/xms2013_pyro_arctic_suit/xms2013_pyro_arctic_suit.mdl"
+			"model_player_per_class"
+			{
+				"Demoman"		"models/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit_demo.mdl"
+				"pyro"		"models/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit_pyro.mdl"
+			}
 			"used_by_classes"
 			{
+				"Demoman"		"1"
 				"pyro"		"1"
 			}
 		}
@@ -72249,11 +72388,15 @@
 					"0"
 					{
 						"model_player"		"models/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson/cc_summer2015_sheriffs_stetson.mdl"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"name"		"#TF_cc_summer2015_sheriffs_stetson_style1"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson_style1/cc_summer2015_sheriffs_stetson_style1.mdl"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"name"		"#TF_cc_summer2015_sheriffs_stetson_style2"
 					}
 				}
@@ -72728,16 +72871,35 @@
 			"item_name"		"#TF_invasion_universal_translator"
 			"item_description"		"#TF_invasion_universal_translator_Desc"
 			"equip_region"		"hat"
-			"image_inventory"		"backpack/workshop/player/items/demo/invasion_universal_translator/invasion_universal_translator"
+			"image_inventory"		"backpack/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
-			"model_player"		"models/workshop/player/items/demo/invasion_universal_translator/invasion_universal_translator.mdl"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/invasion_universal_translator/invasion_universal_translator_engineer.mdl"
+			}
 			"used_by_classes"
 			{
-				"demoman"		"1"
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30661"
@@ -74691,6 +74853,332 @@
 			"used_by_classes"
 			{
 				"medic"		"1"
+			}
+		}
+		"30767"
+		{
+			"name"		"The Airdog"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_may16_airdog"
+			"item_description"		"#TF_may16_airdog_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/snowboard_hat/snowboard_hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/snowboard_hat/snowboard_hat.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30768"
+		{
+			"name"		"Bedouin Bandana"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_may16_bedouin_bandana"
+			"item_description"		"#TF_may16_bedouin_bandana_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/angsty_hood/angsty_hood"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_soldier.mdl"
+				"Demoman"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/angsty_hood/angsty_hood_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30769"
+		{
+			"name"		"Herald's Helm"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_may16_heralds_helm"
+			"item_description"		"#TF_may16_heralds_helm_Desc"
+			"equip_region"		"whole_head"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/knight_helmet/knight_helmet"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/knight_helmet/knight_helmet.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30770"
+		{
+			"name"		"Courtly Cuirass"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_courtly_cuirass"
+			"item_description"		"#TF_may16_courtly_cuirass_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/scout/medieval_glory_armor/medieval_glory_armor"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/medieval_glory_armor/medieval_glory_armor.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30771"
+		{
+			"name"		"Squire's Sabatons"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_squires_sabatons"
+			"item_description"		"#TF_may16_squires_sabatons_Desc"
+			"equip_region"		"feet"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/medieval_glory_boots/medieval_glory_boots"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/medieval_glory_boots/medieval_glory_boots.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30773"
+		{
+			"name"		"The Surgical Survivalist"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_surgical_survivalist"
+			"item_description"		"#TF_may16_surgical_survivalist_Desc"
+			"equip_region"		"pants"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/cardiologists_camo/cardiologists_camo"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/cardiologists_camo/cardiologists_camo.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30775"
+		{
+			"name"		"The Skullcap"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_skullcap"
+			"item_description"		"#TF_may16_skullcap_Desc"
+			"equip_region"		"face"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/skullmask/skullmask"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/skullmask/skullmask.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30777"
+		{
+			"name"		"The Lurking Legionnaire"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_lurking_legionnaire"
+			"item_description"		"#TF_may16_lurking_legionnaire_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/majors_mark/majors_mark"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/majors_mark/majors_mark.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30779"
+		{
+			"name"		"The Dayjogger"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_may16_dayjogger"
+			"item_description"		"#TF_may16_dayjogger_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/vampire_shades/vampire_shades"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/vampire_shades/vampire_shades.mdl"
+			"used_by_classes"
+			{
+				"Demoman"		"1"
+			}
+		}
+		"30780"
+		{
+			"name"		"The Patriot's Pouches"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_patriots_pouches"
+			"item_description"		"#TF_may16_patriots_pouches_Desc"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/shooters_supplies/shooters_supplies"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/shooters_supplies/shooters_supplies.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30785"
+		{
+			"name"		"Dad Duds"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_dad_duds"
+			"item_description"		"#TF_may16_dad_duds_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/all_work_and_no_plaid/all_work_and_no_plaid"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/all_work_and_no_plaid/all_work_and_no_plaid.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30786"
+		{
+			"name"		"The Gauzed Gaze"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_may16_gauzed_gaze"
+			"item_description"		"#TF_may16_gauzed_gaze_Desc"
+			"equip_region"		"whole_head"
+			"image_inventory"		"backpack/workshop/player/items/medic/surgical_stare/surgical_stare"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/surgical_stare/surgical_stare.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30788"
+		{
+			"name"		"The Demo's Dustcatcher"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_demos_dustcatcher"
+			"item_description"		"#TF_may16_demos_dustcatcher_Desc"
+			"equip_region"		"demoman_collar"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/demolitionists_dustcatcher/demolitionists_dustcatcher"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/demolitionists_dustcatcher/demolitionists_dustcatcher.mdl"
+			"used_by_classes"
+			{
+				"Demoman"		"1"
+			}
+		}
+		"30789"
+		{
+			"name"		"The Scoped Spartan"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_may16_scoped_spartan"
+			"item_description"		"#TF_may16_scoped_spartan_Desc"
+			"equip_region"		"Back"
+			"image_inventory"		"backpack/workshop/player/items/sniper/headhunters_wrap/headhunters_wrap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/headhunters_wrap/headhunters_wrap.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
 			}
 		}
 
@@ -102763,7 +103251,53 @@
 				"restriction"	"halloween2015"
 			}
 		}
-	  		
+		
+		"5848"
+		{
+			"name"	"Mayflower Cosmetic Key" 
+			"first_sale_date"	"2016/05/10"
+			"prefab" "eventkey"
+			"item_name"			"#TF_Tool_MayflowerCosmeticKey"					
+			"item_description"	"#TF_Tool_MayflowerCosmeticKey_Desc"						
+			"ad_text"			"#TF_Tool_MayflowerCosmeticKey_AdText" 
+			"image_inventory"	"backpack/crafting/cosmetic_case_key_spring"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"mayflowercosmetic2016"
+			}
+		}
+		
+		"5849" 
+		{
+			"name"	"Mayflower Cosmetic Case"
+			"first_sale_date"	"2016/05/10"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"mayflowercosmetic2016"
+			}
+			"item_name"		"#TF_MayflowerCosmeticCase"
+			"item_description"	"#TF_MayflowerCosmeticCase_desc"
+			"ad_text"			"#TF_MayflowerCosmeticCase_AdText"
+			"image_inventory"	"backpack/player/items/crafting/cosmetic_case_spring"
+			"model_player"		"models/player/items/crafting/cosmetic_case.mdl"
+			"default_skin"		"2"
+			"static_attrs"
+			{
+				"set supply crate series"		"102"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5848"
+				"weapon_allow_inspect"			"1"
+			}
+			"event_desc_footer"			"#Footer_MayflowerCosmetics"
+			"collection_reference"		"MayflowerCosmetics_collection"
+		}	
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -120833,6 +121367,11 @@
 			"hide_lootlist"		"1"
 			"loot_list_collection"		"ToughBreakCosmetics_collection"
 		}
+		"mayflower_cosmetic_loot_list_102"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"MayflowerCosmetics_collection"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -120934,6 +121473,7 @@
 		"tough_break_case_collection_01_lootlist_99"	"99"	
 		"tough_break_case_collection_02_lootlist_100"	"100"	
 		"tough_break_cosmetic_loot_list_101"			"101"	
+		"mayflower_cosmetic_loot_list_102"	"102"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -132236,7 +132776,7 @@
 				"localizedname"			"#TF_MountainLab"
 				"strangeprefixtoken"	"#TF_MountainLab_StrangePrefix"
 				"maptoken"				"Map Token Mountain Lab"
-				"authors"				"#cp_mountainlab"
+				"authors"				"#cp_mountainlab_authors"
 			}
 			"6"
 			{
