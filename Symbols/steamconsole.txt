@@ -421,7 +421,6 @@
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
- T CCallbackMgr::PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -461,13 +460,13 @@
  T CFileWriterThread::BWriteAsync(CFileWriter*, void const*, int)
  T CFileWriterThread::CFileWriterThread()
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
+ T CFileWriterThread::GlobalDestruction()
  T CFileWriterThread::RegisterWriter(CFileWriter const*)
  T CFileWriterThread::Run()
  T CFileWriterThread::StartThreadIfNecessary()
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
- T CFileWriterThreadManager::~CFileWriterThreadManager()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
@@ -754,15 +753,14 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
- T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
- T CUtlString::VAppendFormat(char const*, char*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Truncate(unsigned long)
@@ -876,7 +874,6 @@
  T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
  T CachedVPKRead_t::Less(CachedVPKRead_t const&, CachedVPKRead_t const&)
- T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
@@ -884,7 +881,6 @@
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
  T ClientAPI_InitLocalInstance(EAccountType)
- T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAppManager()
@@ -894,6 +890,7 @@
  T ClientDepotBuilder()
  T ClientFriends()
  T ClientProductBuilder()
+ T ClientRemoteClientManager()
  T ClientRemoteStorage()
  T ClientUGC()
  T ClientUser()
@@ -946,6 +943,7 @@
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
+ T ConVar::SetLock(bool)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
@@ -1094,7 +1092,6 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T netadr_t::ToString(char*, unsigned int, bool) const
- T std::__1::__list_imp<CCallbackMgr::InProcCallResult_t, std::__1::allocator<CCallbackMgr::InProcCallResult_t> >::clear()
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int>)
@@ -1132,6 +1129,7 @@
  Test_IsActive
  Test_SetFailed
  ThreadGetCurrentId
+ ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
  ThreadInMainThread
  ThreadInterlockedAssignIf
@@ -1173,7 +1171,6 @@
  V_wcstoui64
  Warning
  WeakRandomInt
- WeakRandomUint32
  _DMsg
  _DefaultRuneLocale
  _SpewMessageType
@@ -1198,6 +1195,7 @@
  __stdoutp
  __toupper
  alphasort$INODE64
+ atexit
  atoi
  atoll
  b (anonymous namespace)::_CLEANUP
@@ -1218,7 +1216,6 @@
  b LogMsg(char const*, ...)::autoMutex__
  b PchWrapText(char const*, int)::s_rgchTextBuf
  b SetAppLogID(unsigned int, char const*)::autoMutex__
- b StaticFileWriterThread()::s_FileWriterThreadManager
  b StaticFileWriterThread()::s_pFileWriterThread
  b api_logging_command
  b app_build_all_depots_command
@@ -1281,7 +1278,6 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for LogMsg(char const*, ...)::autoMutex__
  b guard variable for SetAppLogID(unsigned int, char const*)::autoMutex__
- b guard variable for StaticFileWriterThread()::s_FileWriterThreadManager
  b guard variable for StaticFileWriterThread()::s_pFileWriterThread
  b help_command
  b info_command
@@ -1360,12 +1356,8 @@
  operator new(unsigned long)
  operator new[](unsigned long)
  printf
- pthread_mutex_destroy
- pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
  putchar
  puts
  r s_rgCRCTable_Standard
