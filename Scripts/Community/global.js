@@ -874,6 +874,31 @@ var CAutoSizingTextArea = Class.create( {
 
 
 
+
+function UpdateParameterInCurrentURL( strParamName, strParamValue, rgRemoveParameters )
+{
+	var path = window.location.pathname;
+	var query = window.location.search;
+	var params = {};
+	if ( query && query.length > 2 )
+		params = $J.deparam( query.substr( 1 ) );
+
+	if ( strParamValue === null )
+		delete params[strParamName];
+	else
+		params[strParamName] = strParamValue;
+
+	// comment thread specific
+	if ( rgRemoveParameters )
+		for( var i = 0; i < rgRemoveParameters.length; i++ )
+			delete params[ rgRemoveParameters[i] ];
+
+	query = $J.param( params );
+
+	return path + ( query ? '?' + query : '' );
+}
+
+
 var g_rgCommentThreads = {};
 function InitializeCommentThread( type, name, rgCommentData, url, nQuoteBoxHeight )
 {
@@ -923,6 +948,7 @@ var CCommentThread = Class.create( {
 	m_bIncludeRaw: false,
 	m_rgRawCommentCache: null,
 	m_bHasPaging: true,
+	m_bTrackNavigation: false,	// should we track navigation in the URL?
 
 	// these vars are id's we'll update when values change
 	m_votecountID: null,
@@ -957,6 +983,7 @@ var CCommentThread = Class.create( {
 		this.m_bSubscribed = rgCommentData['subscribed'];
 
 		this.m_bHasPaging = !rgCommentData['no_paging'];
+		this.m_bTrackNavigation = !!rgCommentData['track_navigation'];
 
 
 		var strPrefix = 'commentthread_' + this.m_strName;
@@ -979,12 +1006,26 @@ var CCommentThread = Class.create( {
 			this.m_oTextAreaSizer = new CAutoSizingTextArea( this.m_elTextArea, iMinHeight, this.OnTextInput.bind( this, elSaveButton ) );
 		}
 
+		var _this = this;
+
 		if ( this.m_bHasPaging )
 		{
 			$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
 			$(strPrefix + '_fpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
 			$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 			$(strPrefix + '_fpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+
+			if ( this.m_bTrackNavigation && window.history && window.history.pushState )
+			{
+				window.history.replaceState( {comment_thread_page: this.m_iCurrentPage }, '' );
+
+				$J(window).on('popstate', function( e ) {
+					var oState = e.originalEvent.state;
+
+					if ( oState && typeof oState.comment_thread_page != 'undefined' )
+						_this.GoToPage( oState.comment_thread_page );
+				});
+			}
 		}
 
 		var elForm = $( strPrefix + '_form');
@@ -1014,7 +1055,6 @@ var CCommentThread = Class.create( {
 			this.BindSubscribeButtons( elSubscribe, elUnsubscribe );
 		}
 
-		var _this = this;
 		this.m_$SubscribeCheckbox = $J('#' + strPrefix + '_subscribe_checkbox');
 		this.m_$SubscribeCheckbox.click( function() {
 			if ( _this.m_$SubscribeCheckbox.hasClass( 'waiting' ) )
@@ -1124,7 +1164,7 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'post' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseAddComment.bind( this ),
+			onSuccess: this.OnResponseAddComment.bind( this, ++this.m_nRenderAjaxSequenceNumber ),
 			onFailure: this.OnFailureDisplayError.bind( this ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		} );
@@ -1153,7 +1193,7 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'delete' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: fnOnSuccess ? fnOnSuccess : this.OnResponseDeleteComment.bind( this ),
+			onSuccess: fnOnSuccess ? fnOnSuccess : this.OnResponseDeleteComment.bind( this, ++this.m_nRenderAjaxSequenceNumber ),
 			onFailure: this.OnFailureDisplayError.bind( this ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		} );
@@ -1198,7 +1238,7 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'voteup' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseVoteUp.bind( this ),
+			onSuccess: this.OnResponseVoteUp.bind( this, ++this.m_nRenderAjaxSequenceNumber ),
 			onFailure: this.OnFailureDisplayError.bind( this ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		} );
@@ -1220,12 +1260,12 @@ var CCommentThread = Class.create( {
 		$('comment_edit_' + gidComment).hide();
 	},
 
-	OnResponseEditComment: function( gidComment, transport )
+	OnResponseEditComment: function( gidComment, nAjaxSequenceNumber, transport )
 	{
 		if ( transport.responseJSON && transport.responseJSON.success)
 		{
 			// no need to hide because render will replace our whole element
-			this.OnResponseRenderComments( CCommentThread.RENDER_DELETEDPOST, transport );	//display the updated comment thread
+			this.OnResponseRenderComments( CCommentThread.RENDER_DELETEDPOST, nAjaxSequenceNumber, transport );	//display the updated comment thread
 		}
 		else
 		{
@@ -1256,7 +1296,7 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'edit' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseEditComment.bind( this, gidComment ),
+			onSuccess: this.OnResponseEditComment.bind( this, gidComment, ++this.m_nRenderAjaxSequenceNumber ),
 			onFailure: this.OnEditFailureDisplayError.bind( this, gidComment ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		} );
@@ -1286,9 +1326,10 @@ var CCommentThread = Class.create( {
 			this.GoToPage( this.m_iCurrentPage - 1 );
 	},
 
-	GoToPage: function( iPage )
+	m_nRenderAjaxSequenceNumber: 0,
+	GoToPage: function( iPage, eRenderReason )
 	{
-		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || iPage == this.m_iCurrentPage )
+		if (  iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && !this.m_bLoading ) )
 			return;
 
 		var params = this.ParametersWithDefaults( {
@@ -1300,12 +1341,12 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'render' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseRenderComments.bind( this, CCommentThread.RENDER_GOTOPAGE ),
+			onSuccess: this.OnResponseRenderComments.bind( this, eRenderReason || CCommentThread.RENDER_GOTOPAGE, ++this.m_nRenderAjaxSequenceNumber ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
 	},
 
-	GoToPageWithComment: function( gidComment )
+	GoToPageWithComment: function( gidComment, eRenderReason )
 	{
 		// see if it's on the current page
 		if ( this.m_bLoading || $('comment_' + gidComment ) )
@@ -1319,19 +1360,19 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'render' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseRenderComments.bind( this, CCommentThread.RENDER_GOTOPOST ),
+			onSuccess: this.OnResponseRenderComments.bind( this, eRenderReason || CCommentThread.RENDER_GOTOCOMMENT, ++this.m_nRenderAjaxSequenceNumber ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
 	},
 
-	OnResponseAddComment: function( transport )
+	OnResponseAddComment: function( nAjaxSequenceNumber, transport )
 	{
 		if ( transport.responseJSON && transport.responseJSON.success)
 		{
 			$('commentthread_' + this.m_strName + '_entry_error').hide();
 			this.m_elTextArea.value='';
 			this.CheckTextAreaSize();
-			this.OnResponseRenderComments( CCommentThread.RENDER_NEWPOST, transport );	//display the updated comment thread
+			this.OnResponseRenderComments( CCommentThread.RENDER_NEWPOST, nAjaxSequenceNumber, transport );	//display the updated comment thread
 
 			if ( $('commentthread_' + this.m_strName + '_subscribeoptions') )
 				$('commentthread_' + this.m_strName + '_subscribeoptions').show();
@@ -1342,19 +1383,19 @@ var CCommentThread = Class.create( {
 		}
 	},
 
-	OnResponseDeleteComment: function( transport )
+	OnResponseDeleteComment: function( nAjaxSequenceNumber, transport )
 	{
 		if ( transport.responseJSON && transport.responseJSON.success )
-			this.OnResponseRenderComments( CCommentThread.RENDER_DELETEDPOST, transport );
+			this.OnResponseRenderComments( CCommentThread.RENDER_DELETEDPOST, nAjaxSequenceNumber, transport );
 		else
 			this.OnFailureDisplayError( transport );
 	},
 
-	OnResponseVoteUp: function( transport )
+	OnResponseVoteUp: function( nAjaxSequenceNumber, transport )
 	{
 		if ( transport.responseJSON && transport.responseJSON.success )
 		{
-			this.OnResponseRenderComments( CCommentThread.RENDER_GOTOPOST, transport );
+			this.OnResponseRenderComments( CCommentThread.RENDER_GOTOCOMMENT, nAjaxSequenceNumber, transport );
 			this.m_bLoadingUserHasUpVoted = !this.m_bLoadingUserHasUpVoted;	// we can switch this to getting from the response after 8/24/2012
 			this.m_cUpVotes = transport.responseJSON.upvotes;
 
@@ -1392,8 +1433,11 @@ var CCommentThread = Class.create( {
 		elError.show();
 	},
 
-	OnResponseRenderComments: function( eRenderReason, transport )
+	OnResponseRenderComments: function( eRenderReason, nAjaxSequenceNumber, transport )
 	{
+		if ( this.m_nRenderAjaxSequenceNumber != nAjaxSequenceNumber )
+			return;
+
 		if ( transport.responseJSON )
 		{
 			var response = transport.responseJSON;
@@ -1412,6 +1456,23 @@ var CCommentThread = Class.create( {
 				// this page is no logner valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
 				this.GoToPage.bind( this, this.m_iCurrentPage - 1 ).defer();
 				return;
+			}
+
+			if ( this.m_bTrackNavigation && window.history && window.history.pushState )
+			{
+				var params = window.location.search.length ? $J.deparam( window.location.search.substr(1) ) : {};
+				if ( ( !params['ctp'] && this.m_iCurrentPage != 0 ) || ( params['ctp'] && params['ctp'] != this.m_iCurrentPage + 1 ) )
+				{
+					var fnStateUpdate = window.history.pushState.bind( window.history );
+					var url = UpdateParameterInCurrentURL( 'ctp', this.m_iCurrentPage == 0 ? null : this.m_iCurrentPage + 1, ['tscn'] );
+					if ( eRenderReason == CCommentThread.RENDER_GOTOPAGE_HASHCHANGE || eRenderReason == CCommentThread.RENDER_GOTOCOMMENT_HASHCHANGE )
+					{
+						fnStateUpdate = window.history.replaceState.bind( window.history );
+						if ( eRenderReason == CCommentThread.RENDER_GOTOCOMMENT_HASHCHANGE )
+							url += window.location.hash;
+					}
+					fnStateUpdate( { comment_thread_page: this.m_iCurrentPage }, '', url );
+				}
 			}
 
 			this.DoTransitionToNewPosts( response, eRenderReason );
@@ -1503,14 +1564,30 @@ var CCommentThread = Class.create( {
 			{
 				$(strPagePrefix + 'controls').show();
 				if ( this.m_iCurrentPage > 0 )
+				{
 					$(strPagePrefix + 'btn_prev').removeClassName('disabled');
+					if ( this.m_bTrackNavigation )
+						$(strPagePrefix + 'btn_prev').href = UpdateParameterInCurrentURL( 'ctp', this.m_iCurrentPage == 1 ? null : this.m_iCurrentPage, ['tscn'] );
+				}
 				else
+				{
 					$(strPagePrefix + 'btn_prev').addClassName('disabled');
+					if ( this.m_bTrackNavigation )
+						$(strPagePrefix + 'btn_prev').href = 'javascript:void(0);';
+				}
 
 				if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+				{
 					$(strPagePrefix + 'btn_next').removeClassName('disabled');
+					if ( this.m_bTrackNavigation )
+						$(strPagePrefix + 'btn_next').href = UpdateParameterInCurrentURL( 'ctp', this.m_iCurrentPage + 2, ['tscn'] );
+				}
 				else
+				{
 					$(strPagePrefix + 'btn_next').addClassName('disabled');
+					if ( this.m_bTrackNavigation )
+						$(strPagePrefix + 'btn_next').href = 'javascript:void(0);';
+				}
 
 				var elPageLinks = $(strPagePrefix + 'links');
 				elPageLinks.update('');
@@ -1590,15 +1667,23 @@ var CCommentThread = Class.create( {
 
 	AddPageLink: function( elPageLinks, iPage )
 	{
-		var el = new Element( 'span', {'class': 'commentthread_pagelink' } );
-		el.update( (iPage + 1) + ' ' );
+		var el;
+		if ( this.m_bTrackNavigation )
+			el = new Element( 'a', {'class': 'commentthread_pagelink', 'href': UpdateParameterInCurrentURL( 'ctp', iPage + 1, ['tscn'] ) } );
+		else
+			el = new Element( 'span', {'class': 'commentthread_pagelink' } );
+
+		el.update( (iPage + 1) );
+
+		var fnGoToPage = this.GoToPage.bind( this, iPage );
 
 		if ( iPage == this.m_iCurrentPage )
 			el.addClassName( 'active' );
 		else
-			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
+			el.observe( 'click',  function(e) { e.stop(); fnGoToPage(); } );
 		
 		elPageLinks.insert( el );
+		elPageLinks.insert( ' ' );
 	},
 
 	Subscribe: function( fnOnSuccess, fnOnFail )
@@ -1723,10 +1808,12 @@ var CCommentThread = Class.create( {
 	}
 
 } );
-CCommentThread.RENDER_NEWPOST = 0;
-CCommentThread.RENDER_GOTOPAGE = 1;
-CCommentThread.RENDER_GOTOPOST = 2;
-CCommentThread.RENDER_DELETEDPOST = 3;
+CCommentThread.RENDER_NEWPOST = 1;
+CCommentThread.RENDER_GOTOPAGE = 2;
+CCommentThread.RENDER_GOTOCOMMENT = 3;
+CCommentThread.RENDER_DELETEDPOST = 4;
+CCommentThread.RENDER_GOTOPAGE_HASHCHANGE = 5;
+CCommentThread.RENDER_GOTOCOMMENT_HASHCHANGE = 6;
 
 // static accessor
 CCommentThread.DeleteComment = function( id, gidcomment )

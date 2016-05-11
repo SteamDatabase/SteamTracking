@@ -153,6 +153,11 @@ GHomepage = {
 			GHomepage.oDisplayLists.popular_new, false
 		);
 
+		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.MergeLists(
+			GHomepage.oDisplayListsRaw.popular_featured_items, true,
+			GHomepage.oDisplayLists.popular_new, true
+		);
+
 		// MAIN CLUSTER
 		try {
 			if ( bHaveUser )
@@ -171,6 +176,16 @@ GHomepage = {
 				$J('.home_smallcap_area.new_on_steam .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
 			GHomepage.RenderNewOnSteam();
+		} catch( e ) { OnHomepageException(e); }
+
+		// POPULAR NEW ON STEAM
+		try {
+			if ( bHaveUser )
+			{
+				HomeSettings = new CHomeSettings( 'new_on_steam', GHomepage.RenderPopularNewOnSteam );
+				$J('.home_smallcap_area.popular_new_on_steam .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
+			}
+			GHomepage.RenderPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
 
@@ -310,7 +325,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 4, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 4
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.new_on_steam .home_smallcaps' ).empty();
@@ -318,7 +333,7 @@ GHomepage = {
 		{
 			var oItem = rgFeaturedLaunchTitles[i];
 
-			var $CapCtn = GHomepage.BuildHomePageSmallCap( 'new_on_steam', oItem.appid, oItem.packageid );
+			var $CapCtn = GHomepage.BuildHomePageHeaderCap( 'new_on_steam', oItem.appid, oItem.packageid );
 			$NewOnSteam.append( $CapCtn );
 		}
 		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
@@ -333,6 +348,43 @@ GHomepage = {
 		else
 		{
 			$J('.home_smallcap_area.new_on_steam').hide();
+		}
+	},
+
+	RenderPopularNewOnSteam: function()
+	{
+		var rgNewOnSteamNoMainCap = [];
+		for( var i = 0; i < GHomepage.oDisplayLists.popular_new_on_steam.length; i++ )
+		{
+			var rgItem = GHomepage.oDisplayLists.popular_new_on_steam[i];
+			if ( !GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgItem ) ] )
+				rgNewOnSteamNoMainCap.push( rgItem );
+		}
+
+		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
+			rgNewOnSteamNoMainCap, 'popular_new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+		);
+
+		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_smallcaps' ).empty();
+		for( var i = 0; i < rgFeaturedLaunchTitles.length; i++ )
+		{
+			var oItem = rgFeaturedLaunchTitles[i];
+
+			var $CapCtn = GHomepage.BuildHomePageSmallCap( 'popular_new_on_steam', oItem.appid, oItem.packageid );
+			$NewOnSteam.append( $CapCtn );
+		}
+		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
+		$NewOnSteam.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
+
+		if ( rgFeaturedLaunchTitles.length )
+		{
+			$J('.home_smallcap_area.popular_new_on_steam').show();
+			$NewOnSteam.InstrumentLinks();
+			GDynamicStore.DecorateDynamicItems( $NewOnSteam );
+		}
+		else
+		{
+			$J('.home_smallcap_area.popular_new_on_steam').hide();
 		}
 	},
 
@@ -467,6 +519,23 @@ GHomepage = {
 		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
 
 		$CapCtn.append( $J('<img/>', { src: rgItemData.small_capsulev5 } ) );
+		$CapCtn.append( $J('<div/>', {'class': 'home_smallcap_title ellipsis' } ).html( rgItemData.name ) );
+		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
+
+		return $CapCtn;
+	},
+
+	BuildHomePageHeaderCap: function( strFeatureContext, unAppID, unPackageID )
+	{
+		var params = { 'class': 'home_headercap' };
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		if ( !rgItemData )
+			return null;
+
+		var $CapCtn = $J('<a/>', params );
+		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+
+		$CapCtn.append( $J('<img/>', { src: rgItemData.header } ) );
 		$CapCtn.append( $J('<div/>', {'class': 'home_smallcap_title ellipsis' } ).html( rgItemData.name ) );
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
 

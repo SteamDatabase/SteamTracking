@@ -168,18 +168,28 @@ function GetMarketPriceOverview( container, params )
 	)
 }
 
-function CItemStoreHighlightPlayer( containerID, rgParams ) {
+function CItemStoreHighlightPlayer( rgParams, scrollbar ) {
 	rgParams = rgParams || {};
 
 	var player = this;
 
-	var width = 0;
+	this.m_scrollbar = scrollbar;
+
+	this.m_previewImageElem = $J( "#preview_image" );
+	this.m_previewImageElem.mouseover( function() { player.StopHighlightTimer(); } );
+	this.m_previewImageElem.mouseout( function() { player.StartHighlightTimer(); } );
+
+	this.m_scrollbar.m_eleTarget.mouseover( function() { player.StopHighlightTimer(); } );
+	this.m_scrollbar.m_eleTarget.mouseout( function() { player.StartHighlightTimer(); } );
+	this.m_scrollbar.m_eleHandle.mouseover( function() { player.StopHighlightTimer(); } );
+	this.m_scrollbar.m_eleHandle.mouseout( function() { player.StartHighlightTimer(); } );
+
 	for ( var i = 0; i < rgParams.length; ++i )
 	{
 		var elemID = rgParams[i].id;
-		var elem = $J( "#" + elemID ).data( 'url', rgParams[i].url );
-		width += rgParams[i].width + 5;
-		$J( "#" + elemID ).click( function() {
+		var elem = $J( "#" + elemID );
+		elem.data( 'url', rgParams[i].url );
+		elem.click( function() {
 			var elem = $J( this );
 			player.OnSelected( elem, elem.data( 'url' ) );
 		} );
@@ -187,6 +197,41 @@ function CItemStoreHighlightPlayer( containerID, rgParams ) {
 
 	this.m_currentElem = null;
 	this.OnSelected( $J( "#" + rgParams[0].id ), rgParams[0].url );
+
+	this.StartHighlightTimer();
+}
+
+CItemStoreHighlightPlayer.prototype.StartHighlightTimer = function()
+{
+	this.StopHighlightTimer();
+
+	var player = this;
+	this.m_timeoutID = setTimeout(
+		function() {
+			player.CheckHighlightNextItem();
+		},
+		5000
+	);
+}
+
+CItemStoreHighlightPlayer.prototype.StopHighlightTimer = function()
+{
+	if ( this.m_timeoutID )
+	{
+		clearTimeout( this.m_timeoutID );
+		this.m_timeoutID = false;
+	}
+}
+
+CItemStoreHighlightPlayer.prototype.CheckHighlightNextItem = function()
+{
+	var nextElem = this.m_currentElem.next();
+	if ( nextElem.length == 0 )
+	{
+		var siblings = this.m_currentElem.siblings();
+		nextElem = $J( siblings[0] );
+	}
+	this.OnSelected( nextElem, nextElem.data( 'url' ) );
 }
 
 CItemStoreHighlightPlayer.prototype.OnSelected = function( elem, imgURL )
@@ -199,7 +244,13 @@ CItemStoreHighlightPlayer.prototype.OnSelected = function( elem, imgURL )
 	this.m_currentElem = elem;
 	this.m_currentElem.addClass( "selected" );
 
-	$J( "#preview_image" ).attr( 'src', imgURL );
-	$J( "#preview_image" ).attr( 'srcset', imgURL );
+	var player = this;
+	this.m_previewImageElem.fadeOut( 250, function() {
+		player.m_previewImageElem.attr( 'src', imgURL );
+		player.m_previewImageElem.attr( 'srcset', imgURL );
+		player.m_previewImageElem.fadeIn( 250 );
+	} );
+
+	this.StartHighlightTimer();
 }
 

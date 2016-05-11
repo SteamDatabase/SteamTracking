@@ -4417,6 +4417,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 			if ( rgAction.link.substr( 0, 6 ) != "steam:" )
 			{
 				elNewAction.attr( 'target', '_blank' );
+				elNewAction.attr( 'rel', 'noreferrer' );
 			}
 
 			elNewAction.text( rgAction.name );

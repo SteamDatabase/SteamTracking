@@ -1216,6 +1216,7 @@ function HandleMarketActionMenu( elActionMenuButton, item )
 		if ( rgAction.link.substr( 0, 6 ) != "steam:" )
 		{
 			elNewAction.attr( 'target', '_blank' );
+			elNewAction.attr( 'rel', 'noreferrer' );
 		}
 
 		elNewAction.text( rgAction.name );

@@ -393,11 +393,93 @@ a.home_smallcap:hover {
 	opacity: 0.3;
 }
 
+/*
+ * HEADER CAPS (new on steam)
+ */
+.home_headercaps {
+	min-height: 131px;
+}
+
+.home_headercap_area.recently_updated .home_headercaps {
+	min-height: 201px;
+}
+
+.home_actions_ctn {
+	visibility: hidden;
+}
+
+.home_actions_hover_parent:hover .home_actions_ctn {
+	visibility: visible;
+}
+
+a.home_headercap {
+	display: block;
+	position: relative;
+	float: left;
+
+	width: 202px;
+	padding: 15px;
+	border: 1px solid transparent;
+	background: rgba( 0, 0, 0, 0.2 );
+
+	margin-right: 1px;
+
+}
+
+a.home_headercap:hover {
+	border-color: rgba( 139, 185, 224, 0.2 );
+	text-decoration: none;
+}
+.new_on_steam a.home_headercap {
+	height: 127px;
+	margin-bottom: 1px;
+}
+
+.home_headercap img {
+	width: 202px;
+}
+
+.home_headercap .home_headercap_title {
+	color: #c7d5e0;
+	font-size: 13px;
+}
+
+.home_headercap .recently_updated_desc {
+	color: #9099a1;
+	line-height: 14px;
+	height: 56px;
+	overflow: hidden;
+	padding-top: 14px;
+}
+.home_headercap .recently_updated_announcement_link {
+	color: #67c1f5;
+	font-size: 11px;
+	line-height: 14px;
+	padding-top: 14px;
+}
+.home_headercap .recently_updated_announcement_link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.home_headercap .ds_flag {
+	left: 14px;
+}
+
+.home_headercap.ds_flagged:not(.ds_wishlist) img {
+	opacity: 0.3;
+}
+
 .home_actions_ctn {
 	float: right;
 }
 .home_actions_icon {
     margin-right: 5px;
+}
+
+.new_on_steam h2 {
+	margin-top: 30px;
+	margin-bottom: 7px;
 }
 
 .home_btn {
@@ -1521,6 +1603,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	}
 
 	html.responsive .home_smallcaps a.home_smallcap,
+	html.responsive .home_smallcaps a.home_headercap,
 	html.responsive .curated_app_item,
 	html.responsive .underten .home_specials_grid .special {
 		float: none;

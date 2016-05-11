@@ -1571,7 +1571,7 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 				break;
 			case 24:
 				ShowAlertDialog( 'Error',
-					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank">Visit Steam Support</a> for more information.'
+					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.'
 				);
 				break;
 			case 15:

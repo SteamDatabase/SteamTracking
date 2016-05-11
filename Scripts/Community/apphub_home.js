@@ -316,7 +316,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 24 )
 	{
-		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount">Visit Steam Support</a> for more information.' );
+		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.' );
 	}
 	else if ( transport.responseJSON.success == 16 )
 	{

@@ -109,6 +109,19 @@ var CForum = Class.create( {
 		BindOnHashChange( this.OnLocationChange.bind(this) );
 		this.OnLocationChange( window.location.hash );
 
+		var _this = this;
+		if ( window.history && window.history.pushState )
+		{
+			window.history.replaceState( {forum_page: this.m_iCurrentPage }, '' );
+
+			$J(window).on('popstate', function( e ) {
+				var oState = e.originalEvent.state;
+
+				if ( oState && typeof oState.forum_page != 'undefined' )
+					_this.GoToPage( oState.forum_page, false, true );
+			});
+		}
+
 
 		$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage ) );
 		$(strPrefix + '_footerpagebtn_prev') && $(strPrefix + '_footerpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage ) );
@@ -301,9 +314,10 @@ var CForum = Class.create( {
 		this.GoToPage( this.m_iCurrentPage, true /* force */ );
 	},
 
+	m_nAjaxSequenceNumber: 0,
 	GoToPage: function( iPage, bForce )
 	{
-		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && !bForce ) )
+		if ( iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && !bForce ) )
 			return;
 
 		var params = {
@@ -317,13 +331,18 @@ var CForum = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'render' ), {
 			method: 'get',
 			parameters: params,
-			onSuccess: this.OnResponseRenderTopics.bind( this ),
+			onSuccess: this.OnResponseRenderTopics.bind( this, ++this.m_nAjaxSequenceNumber ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
 	},
 
-	OnResponseRenderTopics: function( transport, bNewTopic )
+	OnResponseRenderTopics: function( nSequenceNumber, transport )
 	{
+		if ( nSequenceNumber != this.m_nAjaxSequenceNumber )
+		{
+			return;
+		}
+
 		if ( transport.responseJSON )
 		{
 			var response = transport.responseJSON;
@@ -344,7 +363,16 @@ var CForum = Class.create( {
 			elTopics.update( response.topics_html );
 
 
-			if ( this.m_iCurrentPage != this.m_iInitialPage || window.location.hash.length > 1)
+			if ( window.history && window.history.pushState )
+			{
+				var params = window.location.search.length ? $J.deparam( window.location.search.substr(1) ) : {};
+				var urlpage = params['fp'] ? params['fp'] - 1 : 0;
+				if ( urlpage != this.m_iCurrentPage )
+				{
+					window.history.pushState( { forum_page: this.m_iCurrentPage }, '', UpdateParameterInCurrentURL( 'fp', this.m_iCurrentPage == 0 ? null : this.m_iCurrentPage + 1 ) );
+				}
+			}
+			else if ( this.m_iCurrentPage != this.m_iInitialPage || window.location.hash.length > 1)
 			{
 				if ( this.m_iCurrentPage != this.m_iInitialPage )
 					window.location.hash = 'p' + ( this.m_iCurrentPage + 1);
@@ -423,13 +451,15 @@ var CForum = Class.create( {
 
 	AddPageLink: function( elPageLinks, iPage )
 	{
-		var el = new Element( 'span', {'class': 'forum_paging_pagelink' } );
+		var el = new Element( 'a', {'class': 'forum_paging_pagelink', 'href': UpdateParameterInCurrentURL( 'fp', iPage ? iPage + 1 : null ) } );
 		el.update( (iPage + 1) + ' ' );
+
+		var fnGoToPage = this.GoToPage.bind( this, iPage );
 
 		if ( iPage == this.m_iCurrentPage )
 			el.addClassName( 'active' );
 		else
-			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
+			$J(el).on('click', function(e) { e.preventDefault(); fnGoToPage();  });
 
 		elPageLinks.insert( el );
 	},
@@ -1055,7 +1085,7 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		{
 			var gidComment = hash.substring(2);
 			if ( !$( 'comment_' + gidComment ) )
-				this.GoToPageWithComment( gidComment );
+				this.GoToPageWithComment( gidComment, CCommentThread.RENDER_GOTOCOMMENT_HASHCHANGE );
 			else
 				this.UpdatePermLinkHighlight();
 		}
@@ -1063,12 +1093,12 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		{
 			var iPage = parseInt( hash.substring(2) ) - 1;
 			if ( this.m_iCurrentPage != iPage )
-				this.GoToPage( iPage );
+				this.GoToPage( iPage, CCommentThread.RENDER_GOTOPAGE_HASHCHANGE );
 		}
 		else if ( !hash )
 		{
 			// reset to initial view
-			this.GoToPage( this.m_iInitialPage );
+			//this.GoToPage( this.m_iInitialPage );
 			this.UpdatePermLinkHighlight();
 		}
 	},
@@ -1116,7 +1146,7 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 
 		if ( eRenderReason == CCommentThread.RENDER_GOTOPAGE || eRenderReason == CCommentThread.RENDER_NEWPOST )
 		{
-			if ( this.m_iCurrentPage != this.m_iInitialPage || window.location.hash.length > 1)
+			if ( ( !window.history || !window.history.pushState ) && ( this.m_iCurrentPage != this.m_iInitialPage || window.location.hash.length > 1 ) )
 				window.location.hash = 'p' + ( this.m_iCurrentPage + 1);
 		}
 		else
@@ -1134,7 +1164,7 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		else
 		{
 			elContainer.style.height = '';
-			if ( eRenderReason != CCommentThread.RENDER_GOTOPOST && eRenderReason != CCommentThread.RENDER_DELETEDPOST )
+			if ( eRenderReason != CCommentThread.RENDER_GOTOCOMMENT && eRenderReason != CCommentThread.RENDER_GOTOCOMMENT_HASHCHANGE && eRenderReason != CCommentThread.RENDER_DELETEDPOST && eRenderReason != CCommentThread.RENDER_GOTOPAGE_HASHCHANGE )
 				ScrollToIfNotInView.defer( elArea, 80, 40 );
 		}
 

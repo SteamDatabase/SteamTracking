@@ -444,23 +444,13 @@ body.v6 h2.pageheader.itemtitle
 
 .workshop_previews_scroll
 {
-	width: 100%;
 	padding-top: 10px;
-	height: 90px;
 	background: rgba( 0, 0, 0, 0.5 );
-	text-align: center;
 	box-shadow: 0 0 5px 0 #000000;
-	overflow-x: auto;
-	overflow-y: hidden;
 }
 .workshop_previews
 {
-	text-align: left;
-	height: 75px;
-	width: 100%;
-	white-space: nowrap;
-	position: relative;
-	float: left;
+	padding-bottom: 2px;
 }
 .workshop_preview
 {

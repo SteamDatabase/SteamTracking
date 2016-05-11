@@ -209,3 +209,8 @@ input.phone_input_number {
 #phone_warning_container {
 	padding: 0;
 }
+
+.phone_twofactor_warning_text {
+	max-width: 600px;
+	font-size: 14px;
+}
