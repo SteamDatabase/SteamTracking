@@ -192,10 +192,6 @@ img.payment_method_logo {
 	display: block;
 }
 
-.button_row .btn_medium {
-	margin-left: 12px;
-}
-
 .button_row .continue, .button_row .working, .cart_checkout_buttons .continue {
 	float: right;
 	margin-left: 20px;
@@ -1040,55 +1036,18 @@ img.payment_method_logo {
 .checkout_content.cart_send_choice {
 	background-color: rgba(0,0,0,0.2);
 	padding: 16px;
-	font-size: 14px;
 	margin-top: 2px;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .checkout_content.cart_send_choice p {
-	margin-top: 5px;
+	font-size: 13px;
+	margin-top: 3px;
 }
 
 .checkout_content.cart_send_choice p em {
 	font-style: normal;
 	font-family: "Motiva Sans Light Italic", "Motiva Sans Italic", arial, tahoma, sans-serif;
-}
-
-.cart_send_choice:not(.selected) .cart_send_selected_only {
-	display: none;
-}
-
-.cart_send_schedule_options {
-	margin-top: 12px;
-}
-
-.cart_send_schedule_datepicker {
-	display: none;
-	margin-top: 5px;
-}
-
-.cart_send_schedule_options.schedule_selected .cart_send_schedule_datepicker {
-	display: block;
-}
-
-.cart_send_schedule_options.schedule_selected .cart_send_schedule_button {
-	display: none;
-}
-
-.checkout_content_box  .cart_send_schedule_datepicker select,
-.checkout_content_box  .cart_send_schedule_datepicker input {
-	width: auto;
-	padding: 2px;
-	line-height: 18px;
-	margin: 4px;
-}
-.checkout_content_box  .cart_send_schedule_datepicker input[type="text"] {
-	padding: 2px 6px;
-}
-
-.cart_send_schedule_datepicker .datepicker_group {
-	display: inline-block;
-	white-space: nowrap;
 }
 
 .checkout_content .cart_bodycopy {
@@ -1136,7 +1095,6 @@ label.send_choice_txt {
 
 #friends_chooser {
 	max-width: 560px;
-	min-height: 189px;
 	height: 189px;
 	border: 1px solid #4d4b49;
 	overflow: auto;
