@@ -25,7 +25,7 @@
 			<Panel class="FilterRow" selectionpos="0,0">
 				<DropDown id="AppFilter" selectionpos="0,0" />
 			</Panel>
-			<Grid id="ContentGrid" scrolldirection="horizontal" verticalcount="2" horizontalcount="3" selectionpos="0,1"/>
+			<Grid id="ContentGrid" scrolldirection="vertical" verticalcount="2" horizontalcount="3" selectionpos="0,1"/>
 		</Panel>
 	</ScreenshotBrowser>
 </root>

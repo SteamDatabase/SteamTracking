@@ -8,7 +8,7 @@ FriendsContent_GroupItem
 	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
 	padding: 0px;
-
+	border: 3px;
 	border-radius: 3px;
 }
 
@@ -49,16 +49,12 @@ FriendsContent_GroupItem.ConnectedToChat:focus
 	padding: 3px;
 }
 
-FriendsContent_GroupItem:focus .GroupContent
-{
-	padding: 0px;
-}
 
 AvatarImage
 {
 	margin: 5px;
-	width: 100px;
-	height: 100px;
+	width: 94px;
+	height: 94px;
 	border-radius: 4px;
 }
 

@@ -8,4 +8,18 @@
 	"appdetails_dlc_header"		"Downloadable Content"
 	"appdetails_dlc_shop"		"Shop for DLC"
 	"appdetails_dlc_installed"	"%installed%/%total% Installed"
+
+	"appdetails_options"			"Options"
+	"appdetails_gamesettings"		"Game Settings"
+	"appdetails_getsupport"			"Get Support"
+	"appdetails_viewstore"			"View Store"
+	"appdetails_viewdiscussions"	"View Discussions"
+	"appdetails_viewcommunity"		"More Community"
+
+	"appdetails_achievements"		"Achievements"
+	"appdetails_achievements_all"	"View all"
+
+	"appdetails_friendsplaying_title"		"Friends"
+	"appdetails_friendsplaying_subtitle"	"PLAYING THIS NOW"
+	"appdetails_friendsplaying_watch"		"WATCH"
 }

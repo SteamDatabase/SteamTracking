@@ -416,7 +416,13 @@ Button:focus:hover .ButtonText
 
 	border-radius: 3px;
 
+	visibility: collapse;
+}
 
+.BroadcastOverlayPanel.Live,
+.BroadcastOverlayPanel.RequestsPending
+{
+	visibility: visible;
 }
 
 .Button.TopRowButton.BroadcastOverlayPanel
@@ -466,7 +472,8 @@ ContentFrame #SpectatorIcon
 
 #MicStatusIcon,		
 #RecordStatusIcon,
-#SpectatorIcon	         
+#SpectatorIcon,
+#RequestsIcon
 {
 	width: 48px;
 	height: 48px;
@@ -478,7 +485,7 @@ ContentFrame #SpectatorIcon
 	vertical-align: middle;
 }
 
-#SpectatorCountLabel,
+.BroadcastOverlayPanel Label,
 #PlaybackStatusLabel
 {	
 	width: fit-children;
@@ -491,10 +498,25 @@ ContentFrame #SpectatorIcon
 	vertical-align: middle;
 }
 
-.BroadcastOverlayPanel:hover #SpectatorCountLabel,
-.BroadcastOverlayPanel:hover #PlaybackStatusLabel,
-.BroadcastOverlayPanel:focus #SpectatorCountLabel,
-.BroadcastOverlayPanel:focus #PlaybackStatusLabel
+.RequestsPending #PlaybackStatusLabel
+{
+	color: #14c6fc40;
+}
+
+.BroadcastOverlayPanel .RequestsOnly,
+.BroadcastOverlayPanel .LiveOnly,
+.BroadcastOverlayPanel.Live .RequestsOnly
+{
+	visibility: collapse;
+}
+
+.BroadcastOverlayPanel.RequestsPending .RequestsOnly,
+.BroadcastOverlayPanel.Live .LiveOnly
+{
+	visibility: visible;
+}
+
+.BroadcastOverlayPanel:hover Label
 {
 	color: applabelsolid;
 }
@@ -517,7 +539,7 @@ ContentFrame #SpectatorIcon
 	wash-color: applabelsolid;
 }
 
-#RecordStatusIcon	
+#RecordStatusIcon
 {
 	width: 38px;
 	height: 38px;
@@ -527,6 +549,11 @@ ContentFrame #SpectatorIcon
 	border-radius: 50%;
 }
 
+.RequestsPending #RecordStatusIcon
+{
+	background-color: #ad454340;
+}
+
 #SpectatorIcon
 {
 	width: 54px;
@@ -534,6 +561,15 @@ ContentFrame #SpectatorIcon
 	background-size: 54px 54px;	
 	wash-color: ui_primary_color;
 	background-image: url( "file://{images}/systemmenu/group.png" );
+}
+
+#RequestsIcon
+{
+	width: 54px;
+	height: 54px;
+	background-size: 54px 54px;	
+	wash-color: ui_primary_color;
+	background-image: url( "file://{images}/systemmenu/grouprequest.png" );
 }
 
 .BroadcastOverlayPanel:hover #SpectatorIcon,

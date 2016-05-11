@@ -2478,9 +2478,10 @@ LibraryRecentNews .LargeNewsByline
 	transition-duration: shortduration;
 	transition-property: transform;
 	transition-timing-function: bigpicture-ease-in-out;
-
+	text-overflow: clip;
 	font-family: platformfont;
 	font-size: 36px;
+	height: fit-children;
 	font-weight: normal;
 	color: #67c1f5ff;
 	margin-left: 16px;

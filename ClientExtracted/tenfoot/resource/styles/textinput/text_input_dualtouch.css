@@ -66,6 +66,13 @@ TextInputDualTouch
 	vertical-align: center;
 }
 
+#UrlBarTextEntry #Backdrop
+{
+	margin-bottom: 420px;
+	margin-top: 70px;
+}
+
+
 #TextPreviewBackground
 {
 	y: 8%;

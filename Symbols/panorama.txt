@@ -6,6 +6,7 @@
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWorkspace
+ AES_decrypt
  AssertMsgImplementation
  B AutoReloadFailedLayoutReloads::symbol
  B CBorderData::default_instance_
@@ -286,7 +287,6 @@
  B CNet::sm_pResolverThreadPool
  B CNet::sm_pWorkThreadPool
  B CNetConnection::sm_cSSLConnections
- B COpenSSLWrapper::m_nInstances
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -322,20 +322,6 @@
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
  B ConCommandBaseMgr::g_bReplicatedReadOnly
- B CryptoPP::AAD_CHANNEL
- B CryptoPP::DEFAULT_CHANNEL
- B CryptoPP::g_hasAESNI
- B CryptoPP::g_hasCLMUL
- B CryptoPP::g_hasISSE
- B CryptoPP::g_hasMMX
- B CryptoPP::g_hasSSE2
- B CryptoPP::g_hasSSSE3
- B CryptoPP::g_isP4
- B CryptoPP::g_nullNameValuePairs
- B CryptoPP::g_pAssignIntToInteger
- B CryptoPP::g_powerUpSelfTestStatus
- B CryptoPP::g_x86DetectionDone
- B CryptoPP::s_pNullNameValuePairs
  B DispatchVideoPlayerEvent::symbol
  B ImageUnreferenced::symbol
  B InterfaceReg::s_pInterfaceRegs
@@ -345,6 +331,7 @@
  B VideoPlayerFreeAudio::symbol
  B VideoPlayerInitAudio::symbol
  B debug_dead_pad
+ B force_php_generation
  B gConVarEnableSpewThrottle
  B gConVarSpewThrottleNagFrequencyMs
  B gConVarSpewThrottlePeriodMs
@@ -845,7 +832,6 @@
  D CUDPConnection::sm_hSocketSharedClient
  D CUDPConnection::sm_hSocketSharedClientIOCP
  D CUtlSymbol::s_bAllowStaticSymbolTable
- D CryptoPP::g_cacheLineSize
  D DispatchVideoPlayerEvent::pchEvent
  D FragSource_FancyQuadFlag
  D FragSource_FancyQuadTextureType
@@ -1446,86 +1432,6 @@
  D typeinfo for ConCommand
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
- D typeinfo for CryptoPP::Algorithm
- D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
- D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
- D typeinfo for CryptoPP::AlgorithmParameters
- D typeinfo for CryptoPP::AlgorithmParametersBase
- D typeinfo for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
- D typeinfo for CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>
- D typeinfo for CryptoPP::ArraySink
- D typeinfo for CryptoPP::AuthenticatedSymmetricCipher
- D typeinfo for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- D typeinfo for CryptoPP::AutoSignaling<CryptoPP::BufferedTransformation>
- D typeinfo for CryptoPP::BitBucket
- D typeinfo for CryptoPP::BlockCipher
- D typeinfo for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- D typeinfo for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>
- D typeinfo for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- D typeinfo for CryptoPP::BlockOrientedCipherModeBase
- D typeinfo for CryptoPP::BlockPaddingSchemeDef
- D typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
- D typeinfo for CryptoPP::BlockTransformation
- D typeinfo for CryptoPP::BlockingRng
- D typeinfo for CryptoPP::BufferedTransformation
- D typeinfo for CryptoPP::BufferedTransformation::BlockingInputOnly
- D typeinfo for CryptoPP::BufferedTransformation::NoChannelSupport
- D typeinfo for CryptoPP::Bufferless<CryptoPP::BufferedTransformation>
- D typeinfo for CryptoPP::Bufferless<CryptoPP::Sink>
- D typeinfo for CryptoPP::ByteArrayParameter
- D typeinfo for CryptoPP::ByteQueue
- D typeinfo for CryptoPP::ByteQueue::Walker
- D typeinfo for CryptoPP::CBC_Decryption
- D typeinfo for CryptoPP::CBC_ModeBase
- D typeinfo for CryptoPP::CipherModeBase
- D typeinfo for CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>
- D typeinfo for CryptoPP::Clonable
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>, CryptoPP::Rijndael::Dec>
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- D typeinfo for CryptoPP::ConstByteArrayParameter
- D typeinfo for CryptoPP::Exception
- D typeinfo for CryptoPP::Filter
- D typeinfo for CryptoPP::FilterPutSpaceHelper
- D typeinfo for CryptoPP::FilterWithBufferedInput
- D typeinfo for CryptoPP::FixedBlockSize<16u>
- D typeinfo for CryptoPP::HashInputTooLong
- D typeinfo for CryptoPP::HashTransformation
- D typeinfo for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>
- D typeinfo for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
- D typeinfo for CryptoPP::InvalidArgument
- D typeinfo for CryptoPP::InvalidCiphertext
- D typeinfo for CryptoPP::InvalidDataFormat
- D typeinfo for CryptoPP::InvalidKeyLength
- D typeinfo for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- D typeinfo for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- D typeinfo for CryptoPP::MessageAuthenticationCode
- D typeinfo for CryptoPP::MessageQueue
- D typeinfo for CryptoPP::NameValuePairs
- D typeinfo for CryptoPP::NameValuePairs::ValueTypeMismatch
- D typeinfo for CryptoPP::NonblockingRng
- D typeinfo for CryptoPP::NotCopyable
- D typeinfo for CryptoPP::NotImplemented
- D typeinfo for CryptoPP::NullNameValuePairs
- D typeinfo for CryptoPP::OS_RNG_Err
- D typeinfo for CryptoPP::RandomNumberGenerator
- D typeinfo for CryptoPP::Rijndael::Base
- D typeinfo for CryptoPP::Rijndael::Dec
- D typeinfo for CryptoPP::Rijndael::Enc
- D typeinfo for CryptoPP::Rijndael_Info
- D typeinfo for CryptoPP::SHA256
- D typeinfo for CryptoPP::SelfTestFailure
- D typeinfo for CryptoPP::SimpleKeyingInterface
- D typeinfo for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
- D typeinfo for CryptoPP::Sink
- D typeinfo for CryptoPP::StreamTransformation
- D typeinfo for CryptoPP::StreamTransformationFilter
- D typeinfo for CryptoPP::SymmetricCipher
- D typeinfo for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- D typeinfo for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
- D typeinfo for CryptoPP::Waitable
- D typeinfo for CryptoPP::X917RNG
  D typeinfo for IAudioSinkDeviceListener
  D typeinfo for IDynamicFunction
  D typeinfo for IMemAlloc
@@ -1856,10 +1762,7 @@
  D typeinfo for panorama::IUIWindowInput
  D typeinfo for panorama::SDLOGLSurfaceNameSpace::CCompositionLayer
  D typeinfo for panorama::V8ArrayBufferAllocator
- D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for v8::ArrayBuffer::Allocator
  D vtable for CBorderData
@@ -2119,48 +2022,6 @@
  D vtable for CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>
  D vtable for ConCommand
  D vtable for ConVar
- D vtable for CryptoPP::Algorithm
- D vtable for CryptoPP::AlgorithmParameters
- D vtable for CryptoPP::AlgorithmParametersBase
- D vtable for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
- D vtable for CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>
- D vtable for CryptoPP::ArraySink
- D vtable for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- D vtable for CryptoPP::BitBucket
- D vtable for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- D vtable for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>
- D vtable for CryptoPP::BlockOrientedCipherModeBase
- D vtable for CryptoPP::BlockingRng
- D vtable for CryptoPP::BufferedTransformation::BlockingInputOnly
- D vtable for CryptoPP::BufferedTransformation::NoChannelSupport
- D vtable for CryptoPP::ByteQueue
- D vtable for CryptoPP::ByteQueue::Walker
- D vtable for CryptoPP::CBC_Decryption
- D vtable for CryptoPP::CipherModeBase
- D vtable for CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>
- D vtable for CryptoPP::Exception
- D vtable for CryptoPP::Filter
- D vtable for CryptoPP::FilterWithBufferedInput
- D vtable for CryptoPP::HashInputTooLong
- D vtable for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
- D vtable for CryptoPP::InvalidArgument
- D vtable for CryptoPP::InvalidCiphertext
- D vtable for CryptoPP::InvalidDataFormat
- D vtable for CryptoPP::InvalidKeyLength
- D vtable for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- D vtable for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- D vtable for CryptoPP::MessageQueue
- D vtable for CryptoPP::NameValuePairs::ValueTypeMismatch
- D vtable for CryptoPP::NonblockingRng
- D vtable for CryptoPP::NotImplemented
- D vtable for CryptoPP::NullNameValuePairs
- D vtable for CryptoPP::OS_RNG_Err
- D vtable for CryptoPP::Rijndael::Base
- D vtable for CryptoPP::SHA256
- D vtable for CryptoPP::SelfTestFailure
- D vtable for CryptoPP::SimpleKeyingInterface
- D vtable for CryptoPP::StreamTransformationFilter
- D vtable for CryptoPP::X917RNG
  D vtable for IPC::BinarySemaphore
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
@@ -2475,10 +2336,6 @@
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
  Plat_localtime
- R CryptoPP::Rijndael::Base::Sd
- R CryptoPP::Rijndael::Base::Se
- R CryptoPP::Rijndael::Base::rcon
- R CryptoPP::SHA256_K
  R jpeg_aritab
  R jpeg_natural_order
  R jpeg_natural_order2
@@ -2974,86 +2831,6 @@
  R typeinfo name for ConCommand
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
- R typeinfo name for CryptoPP::Algorithm
- R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
- R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
- R typeinfo name for CryptoPP::AlgorithmParameters
- R typeinfo name for CryptoPP::AlgorithmParametersBase
- R typeinfo name for CryptoPP::AlgorithmParametersBase::ParameterNotUsed
- R typeinfo name for CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>
- R typeinfo name for CryptoPP::ArraySink
- R typeinfo name for CryptoPP::AuthenticatedSymmetricCipher
- R typeinfo name for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- R typeinfo name for CryptoPP::AutoSignaling<CryptoPP::BufferedTransformation>
- R typeinfo name for CryptoPP::BitBucket
- R typeinfo name for CryptoPP::BlockCipher
- R typeinfo name for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- R typeinfo name for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>
- R typeinfo name for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- R typeinfo name for CryptoPP::BlockOrientedCipherModeBase
- R typeinfo name for CryptoPP::BlockPaddingSchemeDef
- R typeinfo name for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
- R typeinfo name for CryptoPP::BlockTransformation
- R typeinfo name for CryptoPP::BlockingRng
- R typeinfo name for CryptoPP::BufferedTransformation
- R typeinfo name for CryptoPP::BufferedTransformation::BlockingInputOnly
- R typeinfo name for CryptoPP::BufferedTransformation::NoChannelSupport
- R typeinfo name for CryptoPP::Bufferless<CryptoPP::BufferedTransformation>
- R typeinfo name for CryptoPP::Bufferless<CryptoPP::Sink>
- R typeinfo name for CryptoPP::ByteArrayParameter
- R typeinfo name for CryptoPP::ByteQueue
- R typeinfo name for CryptoPP::ByteQueue::Walker
- R typeinfo name for CryptoPP::CBC_Decryption
- R typeinfo name for CryptoPP::CBC_ModeBase
- R typeinfo name for CryptoPP::CipherModeBase
- R typeinfo name for CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>
- R typeinfo name for CryptoPP::Clonable
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>, CryptoPP::Rijndael::Dec>
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- R typeinfo name for CryptoPP::ConstByteArrayParameter
- R typeinfo name for CryptoPP::Exception
- R typeinfo name for CryptoPP::Filter
- R typeinfo name for CryptoPP::FilterPutSpaceHelper
- R typeinfo name for CryptoPP::FilterWithBufferedInput
- R typeinfo name for CryptoPP::FixedBlockSize<16u>
- R typeinfo name for CryptoPP::HashInputTooLong
- R typeinfo name for CryptoPP::HashTransformation
- R typeinfo name for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>
- R typeinfo name for CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected
- R typeinfo name for CryptoPP::InvalidArgument
- R typeinfo name for CryptoPP::InvalidCiphertext
- R typeinfo name for CryptoPP::InvalidDataFormat
- R typeinfo name for CryptoPP::InvalidKeyLength
- R typeinfo name for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- R typeinfo name for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- R typeinfo name for CryptoPP::MessageAuthenticationCode
- R typeinfo name for CryptoPP::MessageQueue
- R typeinfo name for CryptoPP::NameValuePairs
- R typeinfo name for CryptoPP::NameValuePairs::ValueTypeMismatch
- R typeinfo name for CryptoPP::NonblockingRng
- R typeinfo name for CryptoPP::NotCopyable
- R typeinfo name for CryptoPP::NotImplemented
- R typeinfo name for CryptoPP::NullNameValuePairs
- R typeinfo name for CryptoPP::OS_RNG_Err
- R typeinfo name for CryptoPP::RandomNumberGenerator
- R typeinfo name for CryptoPP::Rijndael::Base
- R typeinfo name for CryptoPP::Rijndael::Dec
- R typeinfo name for CryptoPP::Rijndael::Enc
- R typeinfo name for CryptoPP::Rijndael_Info
- R typeinfo name for CryptoPP::SHA256
- R typeinfo name for CryptoPP::SelfTestFailure
- R typeinfo name for CryptoPP::SimpleKeyingInterface
- R typeinfo name for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
- R typeinfo name for CryptoPP::Sink
- R typeinfo name for CryptoPP::StreamTransformation
- R typeinfo name for CryptoPP::StreamTransformationFilter
- R typeinfo name for CryptoPP::SymmetricCipher
- R typeinfo name for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- R typeinfo name for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
- R typeinfo name for CryptoPP::Waitable
- R typeinfo name for CryptoPP::X917RNG
  R typeinfo name for EVideoPlayerEvent
  R typeinfo name for IAudioSinkDeviceListener
  R typeinfo name for IDynamicFunction
@@ -3417,10 +3194,7 @@
  R typeinfo name for panorama::SDLOGLSurfaceNameSpace::CCompositionLayer
  R typeinfo name for panorama::StyleFromFile_t
  R typeinfo name for panorama::V8ArrayBufferAllocator
- R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for v8::ArrayBuffer::Allocator
  R typeinfo name for v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*
@@ -3539,6 +3313,8 @@
  SteamVProf::CVProfile::OutputReport(int, char const*, int)
  SteamVProf::CVProfile::~CVProfile()
  StringAfterPrefix
+ T AES_set_decrypt_key
+ T AES_set_encrypt_key
  T AngleQuaternion(QAngle const&, Quaternion&)
  T AppendStyleFlagsToString(CFmtStrN<1024, true, true>*, unsigned int)
  T AudioSinkList()
@@ -6722,8 +6498,6 @@
  T CTSList<CMsgRequestRenderCallback*>::Purge()
  T CTSList<CMsgRequestRenderCallback*>::operator delete(void*)
  T CTSList<CMsgRequestRenderCallback*>::~CTSList()
- T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::Purge()
- T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::~CTSList()
  T CTSList<panorama::CMsgLiteRefCount*>::operator delete(void*)
  T CTSList<panorama::CUIRenderEngine::RenderCommandBuffer_t*>::Purge()
  T CTSList<panorama::CUIRenderEngine::RenderCommandBuffer_t*>::~CTSList()
@@ -7921,7 +7695,6 @@
  T CUtlStringBuilder::AppendFormat(char const*, ...)
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
- T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
@@ -8736,322 +8509,6 @@
  T CreateKeyValuesFromJSON(CUtlBuffer&)
  T CreatePanoramaUIEngineInternal
  T CreateSoundAudioDevice(int, int, int)
- T CryptoPP::Algorithm::Algorithm(bool)
- T CryptoPP::Algorithm::AlgorithmName() const
- T CryptoPP::Algorithm::~Algorithm()
- T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>::AlgorithmName() const
- T CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
- T CryptoPP::AlgorithmParameters CryptoPP::MakeParameters<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>(char const*, CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme const&, bool)
- T CryptoPP::AlgorithmParameters::AlgorithmParameters()
- T CryptoPP::AlgorithmParameters::AlgorithmParameters(CryptoPP::AlgorithmParameters const&)
- T CryptoPP::AlgorithmParameters::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParameters::~AlgorithmParameters()
- T CryptoPP::AlgorithmParametersBase::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParametersBase::ParameterNotUsed::ParameterNotUsed(char const*)
- T CryptoPP::AlgorithmParametersBase::ParameterNotUsed::~ParameterNotUsed()
- T CryptoPP::AlgorithmParametersBase::~AlgorithmParametersBase()
- T CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>::AssignValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>::MoveInto(void*) const
- T CryptoPP::AlgorithmParametersTemplate<CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme>::~AlgorithmParametersTemplate()
- T CryptoPP::AlignedAllocate(unsigned long)
- T CryptoPP::AlignedDeallocate(void*)
- T CryptoPP::AllocatorWithCleanup<unsigned char, true>::deallocate(void*, unsigned long)
- T CryptoPP::ArraySink::CreatePutSpace(unsigned long&)
- T CryptoPP::ArraySink::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::ArraySink::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::ArraySink::~ArraySink()
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::CanIncorporateEntropy() const
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::IncorporateEntropy(unsigned char const*, unsigned long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(bool, unsigned char const*, unsigned long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(unsigned char const*, unsigned long, unsigned char const*, unsigned char const*)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::~AutoSeededX917RNG()
- T CryptoPP::AutoSignaling<CryptoPP::BufferedTransformation>::GetAutoSignalPropagation() const
- T CryptoPP::AutoSignaling<CryptoPP::BufferedTransformation>::SetAutoSignalPropagation(int)
- T CryptoPP::BitBucket::AlgorithmName() const
- T CryptoPP::BitBucket::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::BitBucket::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BitBucket::~BitBucket()
- T CryptoPP::BlockCipher::GetAlgorithm() const
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>::BlockCipherFinal(unsigned char const*, unsigned long)
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>::IsForwardTransformation() const
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>::~BlockCipherFinal()
- T CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T CryptoPP::BlockOrientedCipherModeBase::IsForwardTransformation() const
- T CryptoPP::BlockOrientedCipherModeBase::IsRandomAccess() const
- T CryptoPP::BlockOrientedCipherModeBase::IsSelfInverting() const
- T CryptoPP::BlockOrientedCipherModeBase::MandatoryBlockSize() const
- T CryptoPP::BlockOrientedCipherModeBase::ResizeBuffers()
- T CryptoPP::BlockOrientedCipherModeBase::Resynchronize(unsigned char const*, int)
- T CryptoPP::BlockOrientedCipherModeBase::UncheckedSetKey(unsigned char const*, unsigned int, CryptoPP::NameValuePairs const&)
- T CryptoPP::BlockOrientedCipherModeBase::~BlockOrientedCipherModeBase()
- T CryptoPP::BlockTransformation::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T CryptoPP::BlockTransformation::IsPermutation() const
- T CryptoPP::BlockTransformation::OptimalDataAlignment() const
- T CryptoPP::BlockTransformation::OptimalNumberOfParallelBlocks() const
- T CryptoPP::BlockingRng::BlockingRng()
- T CryptoPP::BlockingRng::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::BlockingRng::~BlockingRng()
- T CryptoPP::BufferedTransformation::AnyMessages() const
- T CryptoPP::BufferedTransformation::AnyRetrievable() const
- T CryptoPP::BufferedTransformation::Attach(CryptoPP::BufferedTransformation*)
- T CryptoPP::BufferedTransformation::Attachable()
- T CryptoPP::BufferedTransformation::AttachedTransformation()
- T CryptoPP::BufferedTransformation::AttachedTransformation() const
- T CryptoPP::BufferedTransformation::BlockingInputOnly::BlockingInputOnly(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::BufferedTransformation::BlockingInputOnly::~BlockingInputOnly()
- T CryptoPP::BufferedTransformation::CanModifyInput() const
- T CryptoPP::BufferedTransformation::ChannelCreatePutSpace(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long&)
- T CryptoPP::BufferedTransformation::ChannelFlush(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, int, bool)
- T CryptoPP::BufferedTransformation::ChannelMessageSeriesEnd(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPut2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPutModifiable2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::CreatePutSpace(unsigned long&)
- T CryptoPP::BufferedTransformation::Detach(CryptoPP::BufferedTransformation*)
- T CryptoPP::BufferedTransformation::Flush(bool, int, bool)
- T CryptoPP::BufferedTransformation::Get(unsigned char&)
- T CryptoPP::BufferedTransformation::Get(unsigned char*, unsigned long)
- T CryptoPP::BufferedTransformation::GetAutoSignalPropagation() const
- T CryptoPP::BufferedTransformation::GetMaxWaitObjectCount() const
- T CryptoPP::BufferedTransformation::GetNextMessage()
- T CryptoPP::BufferedTransformation::GetNextMessageSeries()
- T CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
- T CryptoPP::BufferedTransformation::Initialize(CryptoPP::NameValuePairs const&, int)
- T CryptoPP::BufferedTransformation::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::BufferedTransformation::IsolatedMessageSeriesEnd(bool)
- T CryptoPP::BufferedTransformation::MaxRetrievable() const
- T CryptoPP::BufferedTransformation::MessageSeriesEnd(int, bool)
- T CryptoPP::BufferedTransformation::NoChannelSupport::NoChannelSupport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::BufferedTransformation::NoChannelSupport::~NoChannelSupport()
- T CryptoPP::BufferedTransformation::NumberOfMessageSeries() const
- T CryptoPP::BufferedTransformation::NumberOfMessages() const
- T CryptoPP::BufferedTransformation::NumberOfMessagesInThisSeries() const
- T CryptoPP::BufferedTransformation::Peek(unsigned char&) const
- T CryptoPP::BufferedTransformation::Peek(unsigned char*, unsigned long) const
- T CryptoPP::BufferedTransformation::PutModifiable2(unsigned char*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::SetAutoSignalPropagation(int)
- T CryptoPP::BufferedTransformation::SetRetrievalChannel(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::BufferedTransformation::Skip(unsigned long long)
- T CryptoPP::BufferedTransformation::SkipAll()
- T CryptoPP::BufferedTransformation::SkipMessages(unsigned int)
- T CryptoPP::BufferedTransformation::TotalBytesRetrievable() const
- T CryptoPP::BufferedTransformation::TransferMessagesTo2(CryptoPP::BufferedTransformation&, unsigned int&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::Bufferless<CryptoPP::BufferedTransformation>::IsolatedFlush(bool, bool)
- T CryptoPP::Bufferless<CryptoPP::Sink>::IsolatedFlush(bool, bool)
- T CryptoPP::ByteQueue::AnyRetrievable() const
- T CryptoPP::ByteQueue::ByteQueue(unsigned long)
- T CryptoPP::ByteQueue::CleanupUsedNodes()
- T CryptoPP::ByteQueue::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::ByteQueue::CreatePutSpace(unsigned long&)
- T CryptoPP::ByteQueue::CurrentSize() const
- T CryptoPP::ByteQueue::Get(unsigned char&)
- T CryptoPP::ByteQueue::Get(unsigned char*, unsigned long)
- T CryptoPP::ByteQueue::IsEmpty() const
- T CryptoPP::ByteQueue::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::ByteQueue::MaxRetrievable() const
- T CryptoPP::ByteQueue::Peek(unsigned char&) const
- T CryptoPP::ByteQueue::Peek(unsigned char*, unsigned long) const
- T CryptoPP::ByteQueue::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::ByteQueue::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::ByteQueue::Walker::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::ByteQueue::Walker::Get(unsigned char&)
- T CryptoPP::ByteQueue::Walker::Get(unsigned char*, unsigned long)
- T CryptoPP::ByteQueue::Walker::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::ByteQueue::Walker::MaxRetrievable() const
- T CryptoPP::ByteQueue::Walker::Peek(unsigned char&) const
- T CryptoPP::ByteQueue::Walker::Peek(unsigned char*, unsigned long) const
- T CryptoPP::ByteQueue::Walker::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::ByteQueue::Walker::~Walker()
- T CryptoPP::ByteQueue::~ByteQueue()
- T CryptoPP::CBC_Decryption::ProcessData(unsigned char*, unsigned char const*, unsigned long)
- T CryptoPP::CBC_Decryption::ResizeBuffers()
- T CryptoPP::CBC_Decryption::~CBC_Decryption()
- T CryptoPP::CBC_ModeBase::IVRequirement() const
- T CryptoPP::CBC_ModeBase::MinLastBlockSize() const
- T CryptoPP::CipherModeBase::DefaultKeyLength() const
- T CryptoPP::CipherModeBase::GetValidKeyLength(unsigned long) const
- T CryptoPP::CipherModeBase::IVSize() const
- T CryptoPP::CipherModeBase::IsValidKeyLength(unsigned long) const
- T CryptoPP::CipherModeBase::MaxKeyLength() const
- T CryptoPP::CipherModeBase::MinKeyLength() const
- T CryptoPP::CipherModeBase::OptimalDataAlignment() const
- T CryptoPP::CipherModeBase::ResizeBuffers()
- T CryptoPP::CipherModeBase::SetFeedbackSize(unsigned int)
- T CryptoPP::CipherModeBase::~CipherModeBase()
- T CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>::AlgorithmName() const
- T CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>::CipherModeFinalTemplate_ExternalCipher(CryptoPP::BlockCipher&, unsigned char const*, int)
- T CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>::~CipherModeFinalTemplate_ExternalCipher()
- T CryptoPP::Clonable::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>, CryptoPP::Rijndael::Dec>::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
- T CryptoPP::CpuId(unsigned int, unsigned int*)
- T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::what() const
- T CryptoPP::Exception::~Exception()
- T CryptoPP::FIPS_140_2_ComplianceEnabled()
- T CryptoPP::Filter::Attachable()
- T CryptoPP::Filter::AttachedTransformation()
- T CryptoPP::Filter::AttachedTransformation() const
- T CryptoPP::Filter::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::Filter::Detach(CryptoPP::BufferedTransformation*)
- T CryptoPP::Filter::Flush(bool, int, bool)
- T CryptoPP::Filter::Initialize(CryptoPP::NameValuePairs const&, int)
- T CryptoPP::Filter::MessageSeriesEnd(int, bool)
- T CryptoPP::Filter::NewDefaultAttachment() const
- T CryptoPP::Filter::ShouldPropagateMessageEnd() const
- T CryptoPP::Filter::ShouldPropagateMessageSeriesEnd() const
- T CryptoPP::Filter::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::Filter::~Filter()
- T CryptoPP::FilterWithBufferedInput::FlushDerived()
- T CryptoPP::FilterWithBufferedInput::ForceNextPut()
- T CryptoPP::FilterWithBufferedInput::InitializeDerived(CryptoPP::NameValuePairs const&)
- T CryptoPP::FilterWithBufferedInput::InitializeDerivedAndReturnNewSizes(CryptoPP::NameValuePairs const&, unsigned long&, unsigned long&, unsigned long&)
- T CryptoPP::FilterWithBufferedInput::IsolatedFlush(bool, bool)
- T CryptoPP::FilterWithBufferedInput::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::FilterWithBufferedInput::NextPut(unsigned char const*, unsigned long)
- T CryptoPP::FilterWithBufferedInput::NextPutModifiable(unsigned char*, unsigned long)
- T CryptoPP::FilterWithBufferedInput::NextPutMultiple(unsigned char const*, unsigned long)
- T CryptoPP::FilterWithBufferedInput::NextPutSingle(unsigned char const*)
- T CryptoPP::FilterWithBufferedInput::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::FilterWithBufferedInput::PutMaybeModifiable(unsigned char*, unsigned long, int, bool, bool)
- T CryptoPP::FilterWithBufferedInput::PutModifiable2(unsigned char*, unsigned long, int, bool)
- T CryptoPP::FilterWithBufferedInput::~FilterWithBufferedInput()
- T CryptoPP::GetPowerUpSelfTestStatus()
- T CryptoPP::HashInputTooLong::HashInputTooLong(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::HashInputTooLong::~HashInputTooLong()
- T CryptoPP::HashTransformation::CalculateDigest(unsigned char*, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::CalculateTruncatedDigest(unsigned char*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::Final(unsigned char*)
- T CryptoPP::HashTransformation::ThrowIfInvalidTruncatedSize(unsigned long) const
- T CryptoPP::HashTransformation::TruncatedVerify(unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::Verify(unsigned char const*)
- T CryptoPP::HashTransformation::VerifyDigest(unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::VerifyTruncatedDigest(unsigned char const*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::ChannelMessageSeriesEnd(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool)
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::ChannelPut2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char const*, unsigned long, int, bool)
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected::InputRejected()
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::InputRejected::~InputRejected()
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::IsolatedFlush(bool, bool)
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::IsolatedMessageSeriesEnd(bool)
- T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::InvalidArgument::~InvalidArgument()
- T CryptoPP::InvalidCiphertext::~InvalidCiphertext()
- T CryptoPP::InvalidDataFormat::~InvalidDataFormat()
- T CryptoPP::InvalidKeyLength::InvalidKeyLength(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long)
- T CryptoPP::InvalidKeyLength::~InvalidKeyLength()
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::BlockSize() const
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::DataBuf()
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::GetByteOrder() const
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::~IteratedHash()
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::CreateUpdateSpace(unsigned long&)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::HashMultipleBlocks(unsigned int const*, unsigned long)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalBlockSize() const
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalDataAlignment() const
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Restart()
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::TruncatedFinal(unsigned char*, unsigned long)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Update(unsigned char const*, unsigned long)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::DigestSize() const
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::HashEndianCorrectedBlock(unsigned int const*)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::Init()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::IteratedHashWithStaticTransform()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::StateBuf()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::~IteratedHashWithStaticTransform()
- T CryptoPP::MessageQueue::AnyRetrievable() const
- T CryptoPP::MessageQueue::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::MessageQueue::GetNextMessage()
- T CryptoPP::MessageQueue::IsolatedFlush(bool, bool)
- T CryptoPP::MessageQueue::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::MessageQueue::IsolatedMessageSeriesEnd(bool)
- T CryptoPP::MessageQueue::MaxRetrievable() const
- T CryptoPP::MessageQueue::MessageQueue(unsigned int)
- T CryptoPP::MessageQueue::NumberOfMessageSeries() const
- T CryptoPP::MessageQueue::NumberOfMessages() const
- T CryptoPP::MessageQueue::NumberOfMessagesInThisSeries() const
- T CryptoPP::MessageQueue::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::MessageQueue::TotalBytesRetrievable() const
- T CryptoPP::MessageQueue::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::MessageQueue::~MessageQueue()
- T CryptoPP::NameValuePairs::ThrowIfTypeMismatch(char const*, std::type_info const&, std::type_info const&)
- T CryptoPP::NameValuePairs::ValueTypeMismatch::ValueTypeMismatch(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::type_info const&, std::type_info const&)
- T CryptoPP::NameValuePairs::ValueTypeMismatch::~ValueTypeMismatch()
- T CryptoPP::NonblockingRng::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::NonblockingRng::NonblockingRng()
- T CryptoPP::NonblockingRng::~NonblockingRng()
- T CryptoPP::NotImplemented::~NotImplemented()
- T CryptoPP::NullNameValuePairs::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::NullNameValuePairs::~NullNameValuePairs()
- T CryptoPP::OS_GenerateRandomBlock(bool, unsigned char*, unsigned long)
- T CryptoPP::OS_RNG_Err::OS_RNG_Err(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::OS_RNG_Err::~OS_RNG_Err()
- T CryptoPP::PowerUpSelfTestInProgressOnThisThread()
- T CryptoPP::RandomNumberGenerator::CanIncorporateEntropy() const
- T CryptoPP::RandomNumberGenerator::DiscardBytes(unsigned long)
- T CryptoPP::RandomNumberGenerator::GenerateBit()
- T CryptoPP::RandomNumberGenerator::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::RandomNumberGenerator::GenerateByte()
- T CryptoPP::RandomNumberGenerator::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::RandomNumberGenerator::GenerateWord32(unsigned int, unsigned int)
- T CryptoPP::RandomNumberGenerator::IncorporateEntropy(unsigned char const*, unsigned long)
- T CryptoPP::Rijndael::Base::FillDecTable()
- T CryptoPP::Rijndael::Base::UncheckedSetKey(unsigned char const*, unsigned int, CryptoPP::NameValuePairs const&)
- T CryptoPP::Rijndael::Base::~Base()
- T CryptoPP::Rijndael::Dec::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T CryptoPP::SHA256::InitState(unsigned int*)
- T CryptoPP::SHA256::Transform(unsigned int*, unsigned int const*)
- T CryptoPP::SHA256::~SHA256()
- T CryptoPP::SecBlock<unsigned char, CryptoPP::AllocatorWithCleanup<unsigned char, false> >::~SecBlock()
- T CryptoPP::SecBlock<unsigned char, CryptoPP::AllocatorWithCleanup<unsigned char, true> >::~SecBlock()
- T CryptoPP::SelfTestFailure::~SelfTestFailure()
- T CryptoPP::SimpleKeyingInterface::GetIVAndThrowIfInvalid(CryptoPP::NameValuePairs const&, unsigned long&)
- T CryptoPP::SimpleKeyingInterface::GetNextIV(CryptoPP::RandomNumberGenerator&, unsigned char*)
- T CryptoPP::SimpleKeyingInterface::IVSize() const
- T CryptoPP::SimpleKeyingInterface::IsValidKeyLength(unsigned long) const
- T CryptoPP::SimpleKeyingInterface::MaxIVLength() const
- T CryptoPP::SimpleKeyingInterface::MinIVLength() const
- T CryptoPP::SimpleKeyingInterface::Resynchronize(unsigned char const*, int)
- T CryptoPP::SimpleKeyingInterface::SetKey(unsigned char const*, unsigned long, CryptoPP::NameValuePairs const&)
- T CryptoPP::SimpleKeyingInterface::ThrowIfInvalidIV(unsigned char const*)
- T CryptoPP::SimpleKeyingInterface::ThrowIfInvalidIVLength(int)
- T CryptoPP::SimpleKeyingInterface::ThrowIfInvalidKeyLength(unsigned long)
- T CryptoPP::SimpleKeyingInterface::ThrowIfResynchronizable()
- T CryptoPP::SimpleKeyingInterface::~SimpleKeyingInterface()
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::DefaultKeyLength() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::GetValidKeyLength(unsigned long) const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVRequirement() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVSize() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MaxKeyLength() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MinKeyLength() const
- T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::StreamTransformation::GetOptimalBlockSizeUsed() const
- T CryptoPP::StreamTransformation::MandatoryBlockSize() const
- T CryptoPP::StreamTransformation::MinLastBlockSize() const
- T CryptoPP::StreamTransformation::OptimalBlockSize() const
- T CryptoPP::StreamTransformation::ProcessLastBlock(unsigned char*, unsigned char const*, unsigned long)
- T CryptoPP::StreamTransformation::Seek(unsigned long long)
- T CryptoPP::StreamTransformationFilter::AlgorithmName() const
- T CryptoPP::StreamTransformationFilter::FirstPut(unsigned char const*)
- T CryptoPP::StreamTransformationFilter::InitializeDerivedAndReturnNewSizes(CryptoPP::NameValuePairs const&, unsigned long&, unsigned long&, unsigned long&)
- T CryptoPP::StreamTransformationFilter::LastPut(unsigned char const*, unsigned long)
- T CryptoPP::StreamTransformationFilter::NextPutModifiable(unsigned char*, unsigned long)
- T CryptoPP::StreamTransformationFilter::NextPutMultiple(unsigned char const*, unsigned long)
- T CryptoPP::StreamTransformationFilter::StreamTransformationFilter(CryptoPP::StreamTransformation&, CryptoPP::BufferedTransformation*, CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme, bool)
- T CryptoPP::StreamTransformationFilter::~StreamTransformationFilter()
- T CryptoPP::SymmetricCipher::GetAlgorithm() const
- T CryptoPP::UnalignedAllocate(unsigned long)
- T CryptoPP::UnalignedDeallocate(void*)
- T CryptoPP::VerifyBufsEqual(unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::X917RNG::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::X917RNG::X917RNG(CryptoPP::BlockTransformation*, unsigned char const*, unsigned char const*)
- T CryptoPP::X917RNG::~X917RNG()
- T CryptoPP::simple_ptr<CryptoPP::NullNameValuePairs>::~simple_ptr()
- T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
  T DefaultCompletionFunc(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DispatchVideoPlayerEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -9086,7 +8543,6 @@
  T GetNumBytesForFormat(unsigned int)
  T GetPchTempTextBuffer_Harmful()
  T GetWrapFlowXY(panorama::IUIPanel const*, panorama::EFlowDirection, int*, int*)
- T GlobalRNGList()
  T HitTestCoordinatesAgainstQuadTree(panorama::ScreenSpacePanelQuad_t*, float, float, bool)
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -9312,7 +8768,6 @@
  T TSLNodeTemplate_t<CMsgRequestRenderCallback*>::operator delete(void*)
  T TSLNodeTemplate_t<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
- T TSLNodeTemplate_t<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::operator delete(void*)
  T TSLNodeTemplate_t<panorama::CGamepadController::RemoteGamepadInput_t>::operator delete(void*)
  T TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>::operator delete(void*)
  T TSLNodeTemplate_t<panorama::CUIEngine::QueuedEvent_t>::operator delete(void*)
@@ -9510,88 +8965,32 @@
  T jinit_1pass_quantizer
  T jinit_2pass_quantizer
  T jinit_arith_decoder
- T jinit_arith_encoder
- T jinit_c_coef_controller
- T jinit_c_main_controller
- T jinit_c_master_control
- T jinit_c_prep_controller
- T jinit_color_converter
  T jinit_color_deconverter
- T jinit_compress_master
  T jinit_d_coef_controller
  T jinit_d_main_controller
  T jinit_d_post_controller
- T jinit_downsampler
- T jinit_forward_dct
  T jinit_huff_decoder
- T jinit_huff_encoder
  T jinit_input_controller
  T jinit_inverse_dct
  T jinit_marker_reader
- T jinit_marker_writer
  T jinit_master_decompress
  T jinit_memory_mgr
  T jinit_merged_upsampler
  T jinit_upsampler
- T jpeg_CreateCompress
  T jpeg_CreateDecompress
  T jpeg_abort
- T jpeg_abort_compress
- T jpeg_abort_decompress
- T jpeg_add_quant_table
  T jpeg_alloc_huff_table
  T jpeg_alloc_quant_table
- T jpeg_calc_jpeg_dimensions
  T jpeg_calc_output_dimensions
  T jpeg_consume_input
  T jpeg_core_output_dimensions
- T jpeg_default_colorspace
- T jpeg_default_qtables
  T jpeg_destroy
- T jpeg_destroy_compress
  T jpeg_destroy_decompress
- T jpeg_fdct_10x10
- T jpeg_fdct_10x5
- T jpeg_fdct_11x11
- T jpeg_fdct_12x12
- T jpeg_fdct_12x6
- T jpeg_fdct_13x13
- T jpeg_fdct_14x14
- T jpeg_fdct_14x7
- T jpeg_fdct_15x15
- T jpeg_fdct_16x16
- T jpeg_fdct_16x8
- T jpeg_fdct_1x1
- T jpeg_fdct_1x2
- T jpeg_fdct_2x1
- T jpeg_fdct_2x2
- T jpeg_fdct_2x4
- T jpeg_fdct_3x3
- T jpeg_fdct_3x6
- T jpeg_fdct_4x2
- T jpeg_fdct_4x4
- T jpeg_fdct_4x8
- T jpeg_fdct_5x10
- T jpeg_fdct_5x5
- T jpeg_fdct_6x12
- T jpeg_fdct_6x3
- T jpeg_fdct_6x6
- T jpeg_fdct_7x14
- T jpeg_fdct_7x7
- T jpeg_fdct_8x16
- T jpeg_fdct_8x4
- T jpeg_fdct_9x9
- T jpeg_fdct_float
- T jpeg_fdct_ifast
- T jpeg_fdct_islow
- T jpeg_finish_compress
  T jpeg_finish_decompress
- T jpeg_finish_output
  T jpeg_free_large
  T jpeg_free_small
  T jpeg_get_large
  T jpeg_get_small
- T jpeg_has_multiple_scans
  T jpeg_idct_10x10
  T jpeg_idct_10x5
  T jpeg_idct_11x11
@@ -9626,73 +9025,19 @@
  T jpeg_idct_float
  T jpeg_idct_ifast
  T jpeg_idct_islow
- T jpeg_input_complete
  T jpeg_mem_available
  T jpeg_mem_init
  T jpeg_mem_term
- T jpeg_new_colormap
  T jpeg_open_backing_store
- T jpeg_quality_scaling
  T jpeg_read_header
- T jpeg_read_raw_data
  T jpeg_read_scanlines
  T jpeg_resync_to_restart
- T jpeg_save_markers
- T jpeg_set_colorspace
- T jpeg_set_defaults
- T jpeg_set_linear_quality
- T jpeg_set_marker_processor
- T jpeg_set_quality
- T jpeg_simple_progression
- T jpeg_start_compress
  T jpeg_start_decompress
- T jpeg_start_output
  T jpeg_std_error
- T jpeg_suppress_tables
- T jpeg_write_m_byte
- T jpeg_write_m_header
- T jpeg_write_marker
- T jpeg_write_raw_data
- T jpeg_write_scanlines
- T jpeg_write_tables
  T jround_up
  T jzero_far
  T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser
- T non-virtual thunk to CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
- T non-virtual thunk to CryptoPP::ArraySink::~ArraySink()
- T non-virtual thunk to CryptoPP::BitBucket::~BitBucket()
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>::IsForwardTransformation() const
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>::~BlockCipherFinal()
- T non-virtual thunk to CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T non-virtual thunk to CryptoPP::BlockOrientedCipherModeBase::IsForwardTransformation() const
- T non-virtual thunk to CryptoPP::BlockOrientedCipherModeBase::IsRandomAccess() const
- T non-virtual thunk to CryptoPP::BlockOrientedCipherModeBase::IsSelfInverting() const
- T non-virtual thunk to CryptoPP::BlockOrientedCipherModeBase::MandatoryBlockSize() const
- T non-virtual thunk to CryptoPP::BlockOrientedCipherModeBase::~BlockOrientedCipherModeBase()
- T non-virtual thunk to CryptoPP::BufferedTransformation::GetMaxWaitObjectCount() const
- T non-virtual thunk to CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
- T non-virtual thunk to CryptoPP::ByteQueue::Walker::~Walker()
- T non-virtual thunk to CryptoPP::ByteQueue::~ByteQueue()
- T non-virtual thunk to CryptoPP::CBC_Decryption::ProcessData(unsigned char*, unsigned char const*, unsigned long)
- T non-virtual thunk to CryptoPP::CBC_Decryption::~CBC_Decryption()
- T non-virtual thunk to CryptoPP::CBC_ModeBase::MinLastBlockSize() const
- T non-virtual thunk to CryptoPP::CipherModeBase::OptimalDataAlignment() const
- T non-virtual thunk to CryptoPP::CipherModeBase::~CipherModeBase()
- T non-virtual thunk to CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>::AlgorithmName() const
- T non-virtual thunk to CryptoPP::CipherModeFinalTemplate_ExternalCipher<CryptoPP::CBC_Decryption>::~CipherModeFinalTemplate_ExternalCipher()
- T non-virtual thunk to CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T non-virtual thunk to CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>, CryptoPP::Rijndael::Dec>::Clone() const
- T non-virtual thunk to CryptoPP::Filter::~Filter()
- T non-virtual thunk to CryptoPP::FilterWithBufferedInput::~FilterWithBufferedInput()
- T non-virtual thunk to CryptoPP::MessageQueue::~MessageQueue()
- T non-virtual thunk to CryptoPP::Rijndael::Base::~Base()
- T non-virtual thunk to CryptoPP::Rijndael::Dec::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T non-virtual thunk to CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T non-virtual thunk to CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T non-virtual thunk to CryptoPP::StreamTransformationFilter::~StreamTransformationFilter()
  T non-virtual thunk to panorama::CLayoutFile::ApplyMatchedStylesToPanelStyle(panorama::IUIPanelStyle*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> > const&, panorama::EStyleRepaint&, bool&)
  T non-virtual thunk to panorama::CLayoutFile::BReplaceDefines(panorama::CPanoramaSymbol, char*, unsigned int)
  T non-virtual thunk to panorama::CLayoutFile::BuildMatchingStyleList(CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)
@@ -10349,6 +9694,7 @@
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, unsigned long long)
  T panorama::CPanelKeyValue::Validate(CValidator&, char const*)
  T panorama::CPanelKeyValue::~CPanelKeyValue()
+ T panorama::CPanelPtr<panorama::CPanel2D>::Get() const
  T panorama::CPanelPtr<panorama::CUIPanel>::Get() const
  T panorama::CPanelPtr<panorama::IUIPanel const>::Get() const
  T panorama::CPanelPtr<panorama::IUIPanel>::Get() const
@@ -11745,6 +11091,7 @@
  T panorama::CUIEngine::GetCurrentV8ObjectTemplateToSetup()
  T panorama::CUIEngine::GetDisplayLanguage()
  T panorama::CUIEngine::GetFocusedWindow(bool)
+ T panorama::CUIEngine::GetHapticFeedbackPositionForInteraction()
  T panorama::CUIEngine::GetJSObjectTemplateForPanel(panorama::IUIPanel*)
  T panorama::CUIEngine::GetJavaScriptContextForPanel(panorama::IUIPanel*)
  T panorama::CUIEngine::GetLastDispatchedEventSymbol()
@@ -12082,6 +11429,7 @@
  T panorama::CUIInputEngine::GetConnectGamePadPowerLevel(int)
  T panorama::CUIInputEngine::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CUIInputEngine::GetGamePadBindForEvent(char const*, panorama::IUIPanel const*)
+ T panorama::CUIInputEngine::GetHapticFeedbackPositionForInteraction()
  T panorama::CUIInputEngine::GetInputCapture()
  T panorama::CUIInputEngine::GetLastGamePadControllerActiveTime() const
  T panorama::CUIInputEngine::GetLastSteamControllerActiveIndex() const
@@ -14240,8 +13588,6 @@
  T protobuf_ShutdownFile_renderer_2frendermessages_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
  T protobuf_ShutdownFile_uifontfile_5fformat_2eproto()
- T std::__1::__deque_base<unsigned int, std::__1::allocator<unsigned int> >::clear()
- T std::__1::__deque_base<unsigned long long, std::__1::allocator<unsigned long long> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::begin()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::end()
@@ -14250,10 +13596,6 @@
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>::~__split_buffer()
- T std::__1::__split_buffer<unsigned int*, std::__1::allocator<unsigned int*> >::push_front(unsigned int* const&)
- T std::__1::__split_buffer<unsigned int*, std::__1::allocator<unsigned int*>&>::push_front(unsigned int* const&)
- T std::__1::__split_buffer<unsigned long long*, std::__1::allocator<unsigned long long*> >::push_front(unsigned long long* const&)
- T std::__1::__split_buffer<unsigned long long*, std::__1::allocator<unsigned long long*>&>::push_front(unsigned long long* const&)
  T std::__1::__split_buffer<v8::Task**, std::__1::allocator<v8::Task**> >::push_back(v8::Task**&&)
  T std::__1::__split_buffer<v8::Task**, std::__1::allocator<v8::Task**> >::push_front(v8::Task**&&)
  T std::__1::__split_buffer<v8::Task**, std::__1::allocator<v8::Task**> >::~__split_buffer()
@@ -14319,11 +13661,7 @@
  T std::__1::__vector_base<v8::platform::WorkerThread*, std::__1::allocator<v8::platform::WorkerThread*> >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
  T std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<int>(int, unsigned int)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned long>(unsigned long, unsigned int)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::overflow(int)
@@ -14334,16 +13672,6 @@
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::str(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::underflow()
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_stringbuf()
- T std::__1::deque<unsigned int, std::__1::allocator<unsigned int> >::__add_back_capacity()
- T std::__1::deque<unsigned int, std::__1::allocator<unsigned int> >::__add_back_capacity(unsigned long)
- T std::__1::deque<unsigned int, std::__1::allocator<unsigned int> >::__append(unsigned long, unsigned int const&)
- T std::__1::deque<unsigned int, std::__1::allocator<unsigned int> >::__erase_to_end(std::__1::__deque_iterator<unsigned int, unsigned int const*, unsigned int const&, unsigned int const* const*, int, 1024>)
- T std::__1::deque<unsigned int, std::__1::allocator<unsigned int> >::assign(unsigned long, unsigned int const&)
- T std::__1::deque<unsigned long long, std::__1::allocator<unsigned long long> >::__add_back_capacity()
- T std::__1::deque<unsigned long long, std::__1::allocator<unsigned long long> >::__add_back_capacity(unsigned long)
- T std::__1::deque<unsigned long long, std::__1::allocator<unsigned long long> >::__append(unsigned long, unsigned long long const&)
- T std::__1::deque<unsigned long long, std::__1::allocator<unsigned long long> >::__erase_to_end(std::__1::__deque_iterator<unsigned long long, unsigned long long const*, unsigned long long const&, unsigned long long const* const*, int, 512>)
- T std::__1::deque<unsigned long long, std::__1::allocator<unsigned long long> >::assign(unsigned long, unsigned long long const&)
  T std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> >::__add_back_capacity()
  T std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> >::pop_front()
  T std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> >::push_back(v8::Task* const&)
@@ -14450,7 +13778,6 @@
  T v8::platform::WorkerThread::WorkerThread(v8::platform::TaskQueue*)
  T v8::platform::WorkerThread::~WorkerThread()
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
- T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
  T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::LocEntry_t>(panorama::CLocalization::LocEntry_t*)
@@ -14661,6 +13988,7 @@
  T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
  T vrapi::VRChaperone()
+ T vrapi::VRDashboardManager()
  T vrapi::VROverlay()
  T vrapi::VRSystem()
  T xmlMemdup
@@ -14752,16 +14080,13 @@
  __cxa_atexit
  __cxa_bad_typeid
  __cxa_begin_catch
- __cxa_call_unexpected
  __cxa_demangle
  __cxa_end_catch
  __cxa_free_exception
- __cxa_get_exception_ptr
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_pure_virtual
- __cxa_rethrow
  __cxa_throw
  __divdi3
  __dynamic_cast
@@ -15228,6 +14553,7 @@
  b (anonymous namespace)::CUIFontFilePackagePB_reflection_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
@@ -15238,13 +14564,6 @@
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
  b CUtlSymbol::Initialize()::symbolsInitialized
- b CryptoPP::Td
- b CryptoPP::Te
- b CryptoPP::TheBitBucket()::bitBucket
- b CryptoPP::s_TdFilled
- b CryptoPP::s_TeFilled
- b CryptoPP::s_jmpNoCPUID
- b CryptoPP::s_jmpNoSSE2
  b EmptyStr
  b GCallbackMgr()::s_CallbackMgr
  b GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
@@ -15252,7 +14571,6 @@
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
- b GlobalRNGList()::g_tslistPAutoSeededRNG
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
@@ -15320,14 +14638,12 @@
  b g_pfnSoundDeviceFactory
  b g_pfnVoiceDeviceFactory
  b g_queuePacketsToDelete
- b guard variable for CryptoPP::TheBitBucket()::bitBucket
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
- b guard variable for GlobalRNGList()::g_tslistPAutoSeededRNG
  b guard variable for MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePos
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePosVar
@@ -15746,7 +15062,6 @@
  bootstrap_port
  ceil
  ceilf
- clock$UNIX2003
  close$UNIX2003
  closedir$UNIX2003
  crc32
@@ -15994,6 +15309,8 @@
  pow
  powf
  printf
+ private_AES_set_decrypt_key
+ private_AES_set_encrypt_key
  pthread_attr_destroy
  pthread_attr_init
  pthread_attr_setstacksize
@@ -16013,7 +15330,6 @@
  r BValveDomain(char const*)::k_pchSteamPowered
  r BValveDomain(char const*)::k_pchValveSoftware
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
- r CryptoPP::SHA256::InitState(unsigned int*)::s
  r IPC::gTable
  r ascii_class
  r base_dither_matrix
@@ -16302,19 +15618,7 @@
  r select_ncolors.RGB_order
  r start_pass.aanscalefactor
  r start_pass.aanscales
- r start_pass_fdctmgr.aanscalefactor
- r start_pass_fdctmgr.aanscales
  r state_transition_table
- r std_chrominance_quant_tbl
- r std_huff_tables.bits_ac_chrominance
- r std_huff_tables.bits_ac_luminance
- r std_huff_tables.bits_dc_chrominance
- r std_huff_tables.bits_dc_luminance
- r std_huff_tables.val_ac_chrominance
- r std_huff_tables.val_ac_luminance
- r std_huff_tables.val_dc_chrominance
- r std_huff_tables.val_dc_luminance
- r std_luminance_quant_tbl
  r tinfl_decompress::s_dist_base
  r tinfl_decompress::s_dist_extra
  r tinfl_decompress::s_length_base
@@ -16324,7 +15628,6 @@
  r utf8_lead_bits
  r v8::base::(anonymous namespace)::kNoThread
  r whitespace
- read$UNIX2003
  readdir$INODE64
  realloc
  realpath$DARWIN_EXTSN
@@ -16345,9 +15648,7 @@
  semaphore_wait
  setjmp
  shm_open
- signal
  sin
- sleep$UNIX2003
  snprintf
  sprintf
  sscanf
@@ -16402,13 +15703,9 @@
  std::__1::locale::locale(std::__1::locale const&)
  std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::~locale()
- std::bad_alloc::bad_alloc()
- std::bad_alloc::~bad_alloc()
  std::exception::~exception()
  std::nothrow
- std::set_new_handler(void (*)())
  std::terminate()
- std::uncaught_exception()
  strchr
  strcmp
  strcpy
@@ -16429,14 +15726,13 @@
  sysconf
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ t BDecryptAESUsingOpenSSL(unsigned char const*, unsigned int, unsigned char*, unsigned int*, aes_key_st*, unsigned char const*, bool)
+ t BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)
  t BlockingWait(int*, unsigned int, int*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::~CUtlVector()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyUriTableProc
- t CryptoPP::SigIllHandlerCPUID(int)
- t CryptoPP::SigIllHandlerSSE2(int)
- t CryptoPP::TrySSE2()
  t DestroyDeclAttTableProc
  t DestroyUriTableProc
  t DetectEncoding
@@ -16483,12 +15779,10 @@
  t SDLKeysymToKeyCode(SDL_Keysym)
  t SetEncoding
  t SimplifyNode(ExprNode*&)
- t SymmetricDecryptWorker(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>&)
  t TrieRaw
  t TrieTok
  t TryTok
  t WindowInputPriorityOrder(panorama::CUIWindowInput* const&, panorama::CUIWindowInput* const&, void*)
- t _GLOBAL__sub_I_cryptlib.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
@@ -16535,21 +15829,14 @@
  t __cxx_global_var_init99
  t access_virt_barray
  t access_virt_sarray
- t add_huff_table
  t alloc_barray
  t alloc_large
  t alloc_sarray
  t alloc_small
  t arith_decode
- t arith_encode
  t bool std::__1::__insertion_sort_incomplete<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
- t build_ycc_rgb_table
- t cmyk_ycck_convert
  t color_quantize
  t color_quantize3
- t compress_data
- t compress_first_pass
- t compress_output
  t consume_data
  t consume_markers
  t create_colorindex
@@ -16562,65 +15849,33 @@
  t decompress_data
  t decompress_onepass
  t decompress_smooth_data
- t do_barray_io
- t do_sarray_io
  t dummy_consume_data
  t dump_panorama_css_properties(void*, ConParams&, ConCommand&)
- t emit_bits_e
- t emit_bits_s
- t emit_dht
- t emit_dqt
- t emit_eobrun
  t emit_message
- t emit_restart
- t emit_restart_e
- t emit_sof
- t encode_mcu
- t encode_mcu_AC_first
- t encode_mcu_AC_refine
- t encode_mcu_DC_first
- t encode_mcu_DC_refine
- t encode_mcu_gather
- t encode_mcu_huff
  t error_exit
  t examine_app0
- t examine_app14
  t fill_inverse_cmap
  t finish_input_pass
  t finish_output_pass
- t finish_pass
  t finish_pass1
  t finish_pass2
  t finish_pass_1_quant
- t finish_pass_gather
- t finish_pass_huff
- t finish_pass_master
  t format_message
- t forward_DCT
- t forward_DCT_float
  t free_pool
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned long const*, unsigned long long const*)
- t fullsize_downsample
- t fullsize_smooth_downsample
  t fullsize_upsample
  t get_interesting_appn
  t get_sof
  t gray_rgb_convert
  t grayscale_convert
- t h2v1_downsample
  t h2v1_merged_upsample
  t h2v1_upsample
- t h2v2_downsample
  t h2v2_merged_upsample
- t h2v2_smooth_downsample
  t h2v2_upsample
  t init_error_limit
- t int_downsample
  t int_upsample
  t jpeg_fill_bit_buffer
- t jpeg_gen_optimal_table
  t jpeg_huff_decode
- t jpeg_make_c_derived_tbl
  t jpeg_make_d_derived_tbl
  t merged_1v_upsample
  t merged_2v_upsample
@@ -16629,9 +15884,7 @@
  t next_marker
  t noop_upsample
  t null_convert
- t null_method
  t output_message
- t output_pass_setup
  t panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, int, int)::Identity::I(float, bool)
  t panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::$_0::__invoke(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)
  t panorama::Create_CStylePropertyAlign()
@@ -16862,8 +16115,6 @@
  t parse_parse_buffer(JSON_parser_struct*)
  t pass2_fs_dither
  t pass2_no_dither
- t pass_startup
- t per_scan_setup
  t png_build_16bit_table
  t png_format_buffer
  t png_inflate
@@ -16875,10 +16126,7 @@
  t post_process_1pass
  t post_process_2pass
  t post_process_prepass
- t pre_process_context
- t pre_process_data
  t prepare_for_output_pass
- t prepare_for_pass
  t prescan_quantize
  t process_data_context_main
  t process_data_crank_post
@@ -16896,13 +16144,7 @@
  t reset_error_mgr
  t reset_input_controller
  t reset_marker_reader
- t rgb_gray_convert
- t rgb_ycc_convert
- t rgb_ycc_start
- t save_marker
- t select_scan_parameters
  t self_destruct
- t sep_downsample
  t sep_upsample
  t set_error(JSON_parser_struct*)
  t skip_variable
@@ -16911,16 +16153,11 @@
  t start_pass
  t start_pass_1_quant
  t start_pass_2_quant
- t start_pass_coef
  t start_pass_dcolor
- t start_pass_downsample
  t start_pass_dpost
- t start_pass_fdctmgr
- t start_pass_huff
  t start_pass_huff_decoder
  t start_pass_main
  t start_pass_merged_upsample
- t start_pass_prep
  t start_pass_upsample
  t unsigned int std::__1::__sort3<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort4<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
@@ -16934,23 +16171,13 @@
  t v8::base::ThreadEntry(void*)
  t v8::base::UnlockNativeHandle(_opaque_pthread_mutex_t*)
  t void std::__1::__sort<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
- t write_file_header
- t write_file_trailer
- t write_frame_header
- t write_marker_byte
- t write_marker_header
- t write_scan_header
- t write_tables_only
  t ycc_rgb_convert
  t ycck_cmyk_convert
  time
  typeinfo for SteamThreadTools::CThread
- typeinfo for int
  typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
- typeinfo for std::bad_alloc
  typeinfo for std::exception
- typeinfo for unsigned char const*
  typeinfo for void*
  unlink
  usleep$UNIX2003
@@ -17046,8 +16273,6 @@
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
- vtable for __cxxabiv1::__enum_type_info
- vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcslen

@@ -1,9 +1,6 @@
 
  AssertMsgImplementation
  B CMemoryPool::g_ReportFunc
- B CStringNormalization::m_bInitialized
- B CURLUtils::m_Mutex
- B CURLUtils::m_bInitialized
  B CUtlSymbol::s_pSymbolTable
  B ConCommandBase::s_pConCommandBases
  B InterfaceReg::s_pInterfaceRegs
@@ -22,6 +19,7 @@
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CreateVProfile
+ D g_BitStringEndMasks
  D g_VStdLibDLLValidate
  D pCV
  D typeinfo for CDebugStatsSystem
@@ -60,7 +58,7 @@
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
- R typeinfo name for CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >
+ R typeinfo name for CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>
  R typeinfo name for CUtlLinkedList<CCoroutine, int>
  R typeinfo name for CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>
  R typeinfo name for CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >
@@ -71,10 +69,8 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >
- R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
- R typeinfo name for CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >
+ R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >
  R typeinfo name for CUtlVector<int, CUtlMemory<int> >
  R typeinfo name for CVStdLibDLLValidate
  R typeinfo name for ICvar
@@ -100,6 +96,8 @@
  SteamVProf::CVProfile::~CVProfile()
  T AllocString(char const*, int)
  T BHanIdeograph
+ T CBitStringT<CVariableBitStringBase>::GetBit(int) const
+ T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CCoroutine::RestoreStack()
  T CCoroutine::Validate(CValidator&, char const*)
@@ -181,14 +179,19 @@
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::CUtlHash(int, int, int, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString>)
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::Element(unsigned long long)
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::Find(CUtlString const&) const
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::GetNextHandle(unsigned long long) const
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::Insert(CUtlString const&)
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::Purge()
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::Validate(CValidator&, char const*)
- T CUtlHash<CUtlString, CDefCaselessUtlStringEquals, CDefHashKey<CUtlString> >::~CUtlHash()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::AllocNode()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::CUtlHashMap()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::EnsureCapacity(int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Find(char const* const&) const
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::FindInBucket(int, char const* const&) const
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::IncrementalRehash()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertOrReplace(char const* const&, bool const&)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertUnconstructed(char const* const&, int*, bool)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Purge()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::RehashNodesInBucket(int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Validate(CValidator&, char const*)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::~CUtlHashMap()
  T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
  T CUtlLinkedList<CCoroutine, int>::Free(int)
  T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
@@ -209,11 +212,11 @@
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Validate(CValidator&, char const*)
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::~CUtlMap()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
+ T CUtlMemoryBase::Count() const
  T CUtlMemoryBase::EnsureCapacity(int)
  T CUtlMemoryBase::Grow(int)
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
- T CUtlMemoryBase::SetGrowSize(int)
  T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
@@ -284,21 +287,16 @@
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Validate(CValidator&, char const*)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::GrowVector(int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::RemoveAll()
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::RemoveMultiple(int, int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::SetCount(int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::ShiftElementsLeft(int, int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const*&&)
  T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
@@ -330,6 +328,12 @@
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::~CUtlVector()
  T CVStdLibDLLValidate::Validate(CValidator&)
+ T CValidateAutoPushPop::~CValidateAutoPushPop()
+ T CVariableBitStringBase::AllocInts(int)
+ T CVariableBitStringBase::FreeInts()
+ T CVariableBitStringBase::ReallocInts(int)
+ T CVariableBitStringBase::Resize(int)
+ T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CanBeginLine
  T CanBreakBetween
  T CanBreakRepeated
@@ -606,6 +610,7 @@
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
+ ThreadImplOneTimeInit
  ThreadInterlockedAssignIf64
  ThreadInterlockedDecrement
  ThreadInterlockedIncrement
@@ -627,9 +632,11 @@
  __tolower
  __toupper
  atoi
+ b CStringNormalization::Initialize()::threadonce_1175_24
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted
+ b CURLUtils::IsTLD(char const*)::threadonce_118_21
  b DebugStatsSystem::g_DebugStatsSystem
  b KeyValuesSystem()::s_KeyValuesSystem
  b SteamStdLib::CCommandLine::CheckParm(int, char const**) const::sz
@@ -643,7 +650,6 @@
  b V_pretifynum::current
  b V_pretifynum::output
  b g_CleanupSymbolTable
- b g_mapLock
  b g_mapPairs
  b g_pCustomICvarIF
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
@@ -687,6 +693,7 @@
  memcmp
  memcpy
  memmove
+ memset
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)

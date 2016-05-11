@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/library/screenshotbrowser.css" />
 	</styles>
 	
-	<ScreenshotBrowserItem hittest="false" mousecanactivate="iffocused" onblur="AddStyle( LastFocused ); AsyncEvent( 0.2, RemoveStyle( LastFocused ) );">
+	<ScreenshotBrowserItem onblur="AddStyle( LastFocused ); AsyncEvent( 0.2, RemoveStyle( LastFocused ) );">
 		<Image id="Screenshot" />
 		<Panel class="ScreenshotItemDescRow" hittest="false">
 			<Label id="Caption" hittest="false" />

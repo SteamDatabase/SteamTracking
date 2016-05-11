@@ -163,22 +163,8 @@
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
  B ConCommandBaseMgr::g_bReplicatedReadOnly
- B CryptoPP::AAD_CHANNEL
- B CryptoPP::DEFAULT_CHANNEL
- B CryptoPP::g_hasAESNI
- B CryptoPP::g_hasCLMUL
- B CryptoPP::g_hasISSE
- B CryptoPP::g_hasMMX
- B CryptoPP::g_hasSSE2
- B CryptoPP::g_hasSSSE3
- B CryptoPP::g_isP4
- B CryptoPP::g_nullNameValuePairs
- B CryptoPP::g_powerUpSelfTestStatus
- B CryptoPP::g_x86DetectionDone
- B CryptoPP::s_pNullNameValuePairs
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
- B OPENSSL_NONPIC_relocated
  B OPENSSL_ia32cap_P
  B __g_CreateCRunGameEngineIRunGameEngine_reg
  B __g_CreateCVGUIApplicationOverlayIVGUIHostApplication_reg
@@ -287,7 +273,6 @@
  B g_targetHeight
  B g_targetWidth
  B g_vecTempTextBuffer
- B obj_cleanup_defer
  B pcre_callout
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
@@ -833,7 +818,6 @@
  D CreateDirectoryDialog::GetKBMap()::s_pMap
  D CreateDirectoryDialog::GetMessageMap()::s_pMap
  D CreateDirectoryDialog::KB_ChainToMap()::chained
- D CryptoPP::g_cacheLineSize
  D DirectoryTreeView::ChainToAnimationMap()::chained
  D DirectoryTreeView::ChainToMap()::chained
  D DirectoryTreeView::GetKBMap()::s_pMap
@@ -2254,53 +2238,6 @@
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
  D typeinfo for CreateDirectoryDialog
- D typeinfo for CryptoPP::Algorithm
- D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
- D typeinfo for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
- D typeinfo for CryptoPP::ArraySink
- D typeinfo for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- D typeinfo for CryptoPP::BitBucket
- D typeinfo for CryptoPP::BlockCipher
- D typeinfo for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- D typeinfo for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- D typeinfo for CryptoPP::BlockTransformation
- D typeinfo for CryptoPP::BlockingRng
- D typeinfo for CryptoPP::BufferedTransformation
- D typeinfo for CryptoPP::BufferedTransformation::NoChannelSupport
- D typeinfo for CryptoPP::Bufferless<CryptoPP::Sink>
- D typeinfo for CryptoPP::ByteArrayParameter
- D typeinfo for CryptoPP::Clonable
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- D typeinfo for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- D typeinfo for CryptoPP::Exception
- D typeinfo for CryptoPP::FixedBlockSize<16u>
- D typeinfo for CryptoPP::HashInputTooLong
- D typeinfo for CryptoPP::HashTransformation
- D typeinfo for CryptoPP::InvalidArgument
- D typeinfo for CryptoPP::InvalidDataFormat
- D typeinfo for CryptoPP::InvalidKeyLength
- D typeinfo for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- D typeinfo for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- D typeinfo for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- D typeinfo for CryptoPP::NameValuePairs
- D typeinfo for CryptoPP::NonblockingRng
- D typeinfo for CryptoPP::NotCopyable
- D typeinfo for CryptoPP::NotImplemented
- D typeinfo for CryptoPP::NullNameValuePairs
- D typeinfo for CryptoPP::OS_RNG_Err
- D typeinfo for CryptoPP::RandomNumberGenerator
- D typeinfo for CryptoPP::Rijndael::Base
- D typeinfo for CryptoPP::Rijndael::Enc
- D typeinfo for CryptoPP::Rijndael_Info
- D typeinfo for CryptoPP::SHA256
- D typeinfo for CryptoPP::SelfTestFailure
- D typeinfo for CryptoPP::SimpleKeyingInterface
- D typeinfo for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
- D typeinfo for CryptoPP::Sink
- D typeinfo for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- D typeinfo for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
- D typeinfo for CryptoPP::Waitable
- D typeinfo for CryptoPP::X917RNG
  D typeinfo for DirectoryTreeView
  D typeinfo for GridMenu
  D typeinfo for HTMLComboBoxHost
@@ -2329,10 +2266,7 @@
  D typeinfo for SerializedOverlayPumps
  D typeinfo for ZooDialog
  D typeinfo for ZooDialog::ZooPropertyPage
- D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for vgui::AnimatingImagePanel
  D typeinfo for vgui::AnimationController
@@ -3502,29 +3436,6 @@
  D vtable for CVolumeSlider
  D vtable for ConVar
  D vtable for CreateDirectoryDialog
- D vtable for CryptoPP::Algorithm
- D vtable for CryptoPP::ArraySink
- D vtable for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- D vtable for CryptoPP::BitBucket
- D vtable for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- D vtable for CryptoPP::BlockingRng
- D vtable for CryptoPP::BufferedTransformation::NoChannelSupport
- D vtable for CryptoPP::Exception
- D vtable for CryptoPP::HashInputTooLong
- D vtable for CryptoPP::InvalidArgument
- D vtable for CryptoPP::InvalidDataFormat
- D vtable for CryptoPP::InvalidKeyLength
- D vtable for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- D vtable for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- D vtable for CryptoPP::NonblockingRng
- D vtable for CryptoPP::NotImplemented
- D vtable for CryptoPP::NullNameValuePairs
- D vtable for CryptoPP::OS_RNG_Err
- D vtable for CryptoPP::Rijndael::Base
- D vtable for CryptoPP::SHA256
- D vtable for CryptoPP::SelfTestFailure
- D vtable for CryptoPP::SimpleKeyingInterface
- D vtable for CryptoPP::X917RNG
  D vtable for DirectoryTreeView
  D vtable for GridMenu
  D vtable for HTMLComboBoxHost
@@ -3667,17 +3578,6 @@
  Plat_ctime
  Plat_gmtime
  Plat_localtime
- R AES_version
- R ASN1_version
- R BN_version
- R CryptoPP::Rijndael::Base::Sd
- R CryptoPP::Rijndael::Base::Se
- R CryptoPP::Rijndael::Base::rcon
- R CryptoPP::SHA256_K
- R SHA1_version
- R SHA256_version
- R SHA512_version
- R STACK_version
  R _pcre_OP_lengths
  R _pcre_default_tables
  R _pcre_hspace_list
@@ -3694,7 +3594,6 @@
  R jpeg_natural_order5
  R jpeg_natural_order6
  R jpeg_natural_order7
- R lh_version
  R typeinfo name for AppModalQueryBox
  R typeinfo name for BlankImage
  R typeinfo name for CAchievementImagePanel
@@ -4240,53 +4139,6 @@
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
  R typeinfo name for CreateDirectoryDialog
- R typeinfo name for CryptoPP::Algorithm
- R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>
- R typeinfo name for CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >
- R typeinfo name for CryptoPP::ArraySink
- R typeinfo name for CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>
- R typeinfo name for CryptoPP::BitBucket
- R typeinfo name for CryptoPP::BlockCipher
- R typeinfo name for CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>
- R typeinfo name for CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>
- R typeinfo name for CryptoPP::BlockTransformation
- R typeinfo name for CryptoPP::BlockingRng
- R typeinfo name for CryptoPP::BufferedTransformation
- R typeinfo name for CryptoPP::BufferedTransformation::NoChannelSupport
- R typeinfo name for CryptoPP::Bufferless<CryptoPP::Sink>
- R typeinfo name for CryptoPP::ByteArrayParameter
- R typeinfo name for CryptoPP::Clonable
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>
- R typeinfo name for CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >
- R typeinfo name for CryptoPP::Exception
- R typeinfo name for CryptoPP::FixedBlockSize<16u>
- R typeinfo name for CryptoPP::HashInputTooLong
- R typeinfo name for CryptoPP::HashTransformation
- R typeinfo name for CryptoPP::InvalidArgument
- R typeinfo name for CryptoPP::InvalidDataFormat
- R typeinfo name for CryptoPP::InvalidKeyLength
- R typeinfo name for CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>
- R typeinfo name for CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>
- R typeinfo name for CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>
- R typeinfo name for CryptoPP::NameValuePairs
- R typeinfo name for CryptoPP::NonblockingRng
- R typeinfo name for CryptoPP::NotCopyable
- R typeinfo name for CryptoPP::NotImplemented
- R typeinfo name for CryptoPP::NullNameValuePairs
- R typeinfo name for CryptoPP::OS_RNG_Err
- R typeinfo name for CryptoPP::RandomNumberGenerator
- R typeinfo name for CryptoPP::Rijndael::Base
- R typeinfo name for CryptoPP::Rijndael::Enc
- R typeinfo name for CryptoPP::Rijndael_Info
- R typeinfo name for CryptoPP::SHA256
- R typeinfo name for CryptoPP::SelfTestFailure
- R typeinfo name for CryptoPP::SimpleKeyingInterface
- R typeinfo name for CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >
- R typeinfo name for CryptoPP::Sink
- R typeinfo name for CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>
- R typeinfo name for CryptoPP::VariableKeyLength<16u, 16u, 32u, 8u, 4u, 0u>
- R typeinfo name for CryptoPP::Waitable
- R typeinfo name for CryptoPP::X917RNG
  R typeinfo name for DirectoryTreeView
  R typeinfo name for GridMenu
  R typeinfo name for HTMLComboBoxHost
@@ -4315,10 +4167,7 @@
  R typeinfo name for SerializedOverlayPumps
  R typeinfo name for ZooDialog
  R typeinfo name for ZooDialog::ZooPropertyPage
- R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for vgui::AnimatingImagePanel
  R typeinfo name for vgui::AnimationController
@@ -4484,31 +4333,6 @@
  T AES_cbc_encrypt
  T AES_decrypt
  T AES_encrypt
- T AES_options
- T AES_set_decrypt_key
- T AES_set_encrypt_key
- T ASN1_OBJECT_create
- T ASN1_OBJECT_free
- T ASN1_OBJECT_new
- T ASN1_STRING_clear_free
- T ASN1_STRING_cmp
- T ASN1_STRING_copy
- T ASN1_STRING_data
- T ASN1_STRING_dup
- T ASN1_STRING_free
- T ASN1_STRING_length
- T ASN1_STRING_length_set
- T ASN1_STRING_new
- T ASN1_STRING_set
- T ASN1_STRING_set0
- T ASN1_STRING_type
- T ASN1_STRING_type_new
- T ASN1_check_infinite_end
- T ASN1_const_check_infinite_end
- T ASN1_get_object
- T ASN1_object_size
- T ASN1_put_eoc
- T ASN1_put_object
  T AppModalQueryBox::AppModalQueryBox(wchar_t const*, wchar_t const*, CVGUIApplicationOverlay*)
  T AppModalQueryBox::ChainToAnimationMap()
  T AppModalQueryBox::ChainToMap()
@@ -4525,107 +4349,18 @@
  T BConvertRGBToRGBA(CUtlBuffer&, int, int)
  T BConvertToValidWebURL(char*, int)
  T BCreateDirectory(char const*)
+ T BF_cbc_encrypt
+ T BF_decrypt
+ T BF_encrypt
  T BFileExists(char const*)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
  T BGetLocalFormattedTime(long, char*, int, bool)
- T BIO_callback_ctrl
- T BIO_clear_flags
- T BIO_copy_next_retry
- T BIO_ctrl
- T BIO_ctrl_pending
- T BIO_ctrl_wpending
- T BIO_dup_chain
- T BIO_find_type
- T BIO_free
- T BIO_free_all
- T BIO_get_callback
- T BIO_get_callback_arg
- T BIO_get_ex_data
- T BIO_get_ex_new_index
- T BIO_get_retry_BIO
- T BIO_get_retry_reason
- T BIO_gets
- T BIO_indent
- T BIO_int_ctrl
- T BIO_method_name
- T BIO_method_type
- T BIO_new
- T BIO_new_file
- T BIO_new_fp
- T BIO_next
- T BIO_number_read
- T BIO_number_written
- T BIO_pop
- T BIO_printf
- T BIO_ptr_ctrl
- T BIO_push
- T BIO_puts
- T BIO_read
- T BIO_s_file
- T BIO_set
- T BIO_set_callback
- T BIO_set_callback_arg
- T BIO_set_ex_data
- T BIO_set_flags
- T BIO_snprintf
- T BIO_test_flags
- T BIO_vfree
- T BIO_vprintf
- T BIO_vsnprintf
- T BIO_write
  T BIsFileReadOnly(char const*)
  T BIsReleasedSomewhere(CGameID)
  T BIsValidDirectory(char const*)
- T BN_add_word
- T BN_asc2bn
- T BN_bin2bn
- T BN_bn2bin
- T BN_bn2dec
- T BN_bn2hex
- T BN_clear
- T BN_clear_bit
- T BN_clear_free
- T BN_cmp
- T BN_consttime_swap
- T BN_copy
- T BN_dec2bn
- T BN_div_word
- T BN_dup
- T BN_free
- T BN_get_params
- T BN_get_word
- T BN_hex2bn
- T BN_init
- T BN_is_bit_set
- T BN_lshift
- T BN_lshift1
- T BN_mask_bits
- T BN_mod_word
- T BN_mul_word
- T BN_new
- T BN_num_bits
- T BN_num_bits_word
- T BN_options
- T BN_print
- T BN_print_fp
- T BN_rshift
- T BN_rshift1
- T BN_set_bit
- T BN_set_negative
- T BN_set_params
- T BN_set_word
- T BN_sub_word
- T BN_swap
- T BN_ucmp
- T BN_value_one
  T BResizeImageInternal(CUtlBuffer&, int, int, int&, int&, bool, bool)
  T BResizeImageRGB(CUtlBuffer&, int, int, int&, int&)
  T BResizeImageRGBA(CUtlBuffer&, int, int, int&, int&, bool)
- T BUF_memdup
- T BUF_strdup
- T BUF_strlcat
- T BUF_strlcpy
- T BUF_strndup
  T BasePanel()
  T BestMatch_t::KBMatchLessFunc(BestMatch_t const&, BestMatch_t const&)
  T BlankImage::GetContentSize(int&, int&)
@@ -7854,79 +7589,6 @@
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
  T CRTime::UpdateRealTime()
- T CRYPTO_THREADID_cmp
- T CRYPTO_THREADID_cpy
- T CRYPTO_THREADID_current
- T CRYPTO_THREADID_get_callback
- T CRYPTO_THREADID_hash
- T CRYPTO_THREADID_set_callback
- T CRYPTO_THREADID_set_numeric
- T CRYPTO_THREADID_set_pointer
- T CRYPTO_add_lock
- T CRYPTO_cleanup_all_ex_data
- T CRYPTO_dbg_free
- T CRYPTO_dbg_get_options
- T CRYPTO_dbg_malloc
- T CRYPTO_dbg_realloc
- T CRYPTO_dbg_set_options
- T CRYPTO_destroy_dynlockid
- T CRYPTO_dup_ex_data
- T CRYPTO_ex_data_new_class
- T CRYPTO_free
- T CRYPTO_free_ex_data
- T CRYPTO_free_locked
- T CRYPTO_get_add_lock_callback
- T CRYPTO_get_dynlock_create_callback
- T CRYPTO_get_dynlock_destroy_callback
- T CRYPTO_get_dynlock_lock_callback
- T CRYPTO_get_dynlock_value
- T CRYPTO_get_ex_data
- T CRYPTO_get_ex_data_implementation
- T CRYPTO_get_ex_new_index
- T CRYPTO_get_id_callback
- T CRYPTO_get_lock_name
- T CRYPTO_get_locked_mem_ex_functions
- T CRYPTO_get_locked_mem_functions
- T CRYPTO_get_locking_callback
- T CRYPTO_get_mem_debug_functions
- T CRYPTO_get_mem_debug_options
- T CRYPTO_get_mem_ex_functions
- T CRYPTO_get_mem_functions
- T CRYPTO_get_new_dynlockid
- T CRYPTO_get_new_lockid
- T CRYPTO_is_mem_check_on
- T CRYPTO_lock
- T CRYPTO_malloc
- T CRYPTO_malloc_locked
- T CRYPTO_mem_ctrl
- T CRYPTO_mem_leaks
- T CRYPTO_mem_leaks_cb
- T CRYPTO_mem_leaks_fp
- T CRYPTO_memcmp
- T CRYPTO_new_ex_data
- T CRYPTO_num_locks
- T CRYPTO_pop_info
- T CRYPTO_push_info_
- T CRYPTO_realloc
- T CRYPTO_realloc_clean
- T CRYPTO_remalloc
- T CRYPTO_remove_all_info
- T CRYPTO_set_add_lock_callback
- T CRYPTO_set_dynlock_create_callback
- T CRYPTO_set_dynlock_destroy_callback
- T CRYPTO_set_dynlock_lock_callback
- T CRYPTO_set_ex_data
- T CRYPTO_set_ex_data_implementation
- T CRYPTO_set_id_callback
- T CRYPTO_set_locked_mem_ex_functions
- T CRYPTO_set_locked_mem_functions
- T CRYPTO_set_locking_callback
- T CRYPTO_set_mem_debug_functions
- T CRYPTO_set_mem_debug_options
- T CRYPTO_set_mem_ex_functions
- T CRYPTO_set_mem_functions
- T CRYPTO_strdup
- T CRYPTO_thread_id
  T CRefreshLoginDialog::Activate(EResult)
  T CRefreshLoginDialog::CCallback_OnLogonFailure::Run(void*)
  T CRefreshLoginDialog::CCallback_OnLogonSuccess::Run(void*)
@@ -8297,8 +7959,6 @@
  T CStringProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CStringProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CStringProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
- T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::Purge()
- T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::~CTSList()
  T CTextureIdProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTextureIdProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -9303,6 +8963,14 @@
  T CallbackMgr_RunCallbacks(int, bool)
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
+ T Camellia_DecryptBlock
+ T Camellia_DecryptBlock_Rounds
+ T Camellia_Ekeygen
+ T Camellia_EncryptBlock
+ T Camellia_EncryptBlock_Rounds
+ T Camellia_cbc_encrypt
+ T Camellia_decrypt
+ T Camellia_encrypt
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T ChatIDFromClanID(CSteamID const&)
@@ -9381,171 +9049,13 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreateKeyValuesFromJSON(CUtlBuffer&)
- T CryptoPP::Algorithm::Algorithm(bool)
- T CryptoPP::Algorithm::AlgorithmName() const
- T CryptoPP::Algorithm::~Algorithm()
- T CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256>::AlgorithmName() const
- T CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
- T CryptoPP::ArraySink::CreatePutSpace(unsigned long&)
- T CryptoPP::ArraySink::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::ArraySink::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::ArraySink::~ArraySink()
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::CanIncorporateEntropy() const
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::IncorporateEntropy(unsigned char const*, unsigned long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(bool, unsigned char const*, unsigned long)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::Reseed(unsigned char const*, unsigned long, unsigned char const*, unsigned char const*)
- T CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael>::~AutoSeededX917RNG()
- T CryptoPP::BitBucket::AlgorithmName() const
- T CryptoPP::BitBucket::IsolatedInitialize(CryptoPP::NameValuePairs const&)
- T CryptoPP::BitBucket::Put2(unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BitBucket::~BitBucket()
- T CryptoPP::BlockCipher::GetAlgorithm() const
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
- T CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
- T CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T CryptoPP::BlockTransformation::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T CryptoPP::BlockTransformation::IsPermutation() const
- T CryptoPP::BlockTransformation::OptimalDataAlignment() const
- T CryptoPP::BlockTransformation::OptimalNumberOfParallelBlocks() const
- T CryptoPP::BlockingRng::BlockingRng()
- T CryptoPP::BlockingRng::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::BlockingRng::~BlockingRng()
- T CryptoPP::BufferedTransformation::AnyMessages() const
- T CryptoPP::BufferedTransformation::AnyRetrievable() const
- T CryptoPP::BufferedTransformation::Attach(CryptoPP::BufferedTransformation*)
- T CryptoPP::BufferedTransformation::Attachable()
- T CryptoPP::BufferedTransformation::AttachedTransformation()
- T CryptoPP::BufferedTransformation::AttachedTransformation() const
- T CryptoPP::BufferedTransformation::CanModifyInput() const
- T CryptoPP::BufferedTransformation::ChannelCreatePutSpace(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long&)
- T CryptoPP::BufferedTransformation::ChannelFlush(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, int, bool)
- T CryptoPP::BufferedTransformation::ChannelMessageSeriesEnd(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPut2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char const*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::ChannelPutModifiable2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned char*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::CreatePutSpace(unsigned long&)
- T CryptoPP::BufferedTransformation::Detach(CryptoPP::BufferedTransformation*)
- T CryptoPP::BufferedTransformation::Flush(bool, int, bool)
- T CryptoPP::BufferedTransformation::Get(unsigned char&)
- T CryptoPP::BufferedTransformation::Get(unsigned char*, unsigned long)
- T CryptoPP::BufferedTransformation::GetAutoSignalPropagation() const
- T CryptoPP::BufferedTransformation::GetMaxWaitObjectCount() const
- T CryptoPP::BufferedTransformation::GetNextMessage()
- T CryptoPP::BufferedTransformation::GetNextMessageSeries()
- T CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
- T CryptoPP::BufferedTransformation::Initialize(CryptoPP::NameValuePairs const&, int)
- T CryptoPP::BufferedTransformation::IsolatedMessageSeriesEnd(bool)
- T CryptoPP::BufferedTransformation::MaxRetrievable() const
- T CryptoPP::BufferedTransformation::MessageSeriesEnd(int, bool)
- T CryptoPP::BufferedTransformation::NoChannelSupport::NoChannelSupport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::BufferedTransformation::NoChannelSupport::~NoChannelSupport()
- T CryptoPP::BufferedTransformation::NumberOfMessageSeries() const
- T CryptoPP::BufferedTransformation::NumberOfMessages() const
- T CryptoPP::BufferedTransformation::NumberOfMessagesInThisSeries() const
- T CryptoPP::BufferedTransformation::Peek(unsigned char&) const
- T CryptoPP::BufferedTransformation::Peek(unsigned char*, unsigned long) const
- T CryptoPP::BufferedTransformation::PutModifiable2(unsigned char*, unsigned long, int, bool)
- T CryptoPP::BufferedTransformation::SetAutoSignalPropagation(int)
- T CryptoPP::BufferedTransformation::SetRetrievalChannel(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::BufferedTransformation::Skip(unsigned long long)
- T CryptoPP::BufferedTransformation::SkipAll()
- T CryptoPP::BufferedTransformation::SkipMessages(unsigned int)
- T CryptoPP::BufferedTransformation::TotalBytesRetrievable() const
- T CryptoPP::BufferedTransformation::TransferMessagesTo2(CryptoPP::BufferedTransformation&, unsigned int&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::Bufferless<CryptoPP::Sink>::IsolatedFlush(bool, bool)
- T CryptoPP::Clonable::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T CryptoPP::ClonableImpl<CryptoPP::SHA256, CryptoPP::AlgorithmImpl<CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>, CryptoPP::SHA256> >::Clone() const
- T CryptoPP::CpuId(unsigned int, unsigned int*)
- T CryptoPP::DetectX86Features()
- T CryptoPP::Exception::what() const
- T CryptoPP::Exception::~Exception()
- T CryptoPP::FIPS_140_2_ComplianceEnabled()
- T CryptoPP::GetPowerUpSelfTestStatus()
- T CryptoPP::HashInputTooLong::HashInputTooLong(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::HashInputTooLong::~HashInputTooLong()
- T CryptoPP::HashTransformation::CalculateDigest(unsigned char*, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::CalculateTruncatedDigest(unsigned char*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::Final(unsigned char*)
- T CryptoPP::HashTransformation::ThrowIfInvalidTruncatedSize(unsigned long) const
- T CryptoPP::HashTransformation::TruncatedVerify(unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::Verify(unsigned char const*)
- T CryptoPP::HashTransformation::VerifyDigest(unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::HashTransformation::VerifyTruncatedDigest(unsigned char const*, unsigned long, unsigned char const*, unsigned long)
- T CryptoPP::InvalidArgument::~InvalidArgument()
- T CryptoPP::InvalidDataFormat::~InvalidDataFormat()
- T CryptoPP::InvalidKeyLength::InvalidKeyLength(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long)
- T CryptoPP::InvalidKeyLength::~InvalidKeyLength()
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::BlockSize() const
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::DataBuf()
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::GetByteOrder() const
- T CryptoPP::IteratedHash<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, CryptoPP::HashTransformation>::~IteratedHash()
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::CreateUpdateSpace(unsigned long&)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::HashMultipleBlocks(unsigned int const*, unsigned long)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalBlockSize() const
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::OptimalDataAlignment() const
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Restart()
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::TruncatedFinal(unsigned char*, unsigned long)
- T CryptoPP::IteratedHashBase<unsigned int, CryptoPP::HashTransformation>::Update(unsigned char const*, unsigned long)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::DigestSize() const
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::HashEndianCorrectedBlock(unsigned int const*)
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::Init()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::IteratedHashWithStaticTransform()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::StateBuf()
- T CryptoPP::IteratedHashWithStaticTransform<unsigned int, CryptoPP::EnumToType<CryptoPP::ByteOrder, 1>, 64u, 32u, CryptoPP::SHA256, 32u, true>::~IteratedHashWithStaticTransform()
- T CryptoPP::NonblockingRng::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::NonblockingRng::NonblockingRng()
- T CryptoPP::NonblockingRng::~NonblockingRng()
- T CryptoPP::NotImplemented::~NotImplemented()
- T CryptoPP::NullNameValuePairs::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::NullNameValuePairs::~NullNameValuePairs()
- T CryptoPP::OS_GenerateRandomBlock(bool, unsigned char*, unsigned long)
- T CryptoPP::OS_RNG_Err::OS_RNG_Err(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T CryptoPP::OS_RNG_Err::~OS_RNG_Err()
- T CryptoPP::PowerUpSelfTestInProgressOnThisThread()
- T CryptoPP::RandomNumberGenerator::CanIncorporateEntropy() const
- T CryptoPP::RandomNumberGenerator::DiscardBytes(unsigned long)
- T CryptoPP::RandomNumberGenerator::GenerateBit()
- T CryptoPP::RandomNumberGenerator::GenerateBlock(unsigned char*, unsigned long)
- T CryptoPP::RandomNumberGenerator::GenerateByte()
- T CryptoPP::RandomNumberGenerator::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::RandomNumberGenerator::GenerateWord32(unsigned int, unsigned int)
- T CryptoPP::RandomNumberGenerator::IncorporateEntropy(unsigned char const*, unsigned long)
- T CryptoPP::Rijndael::Base::FillDecTable()
- T CryptoPP::Rijndael::Base::UncheckedSetKey(unsigned char const*, unsigned int, CryptoPP::NameValuePairs const&)
- T CryptoPP::Rijndael::Base::~Base()
- T CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
- T CryptoPP::SHA256::InitState(unsigned int*)
- T CryptoPP::SHA256::Transform(unsigned int*, unsigned int const*)
- T CryptoPP::SHA256::~SHA256()
- T CryptoPP::SelfTestFailure::~SelfTestFailure()
- T CryptoPP::SimpleKeyingInterface::GetNextIV(CryptoPP::RandomNumberGenerator&, unsigned char*)
- T CryptoPP::SimpleKeyingInterface::IVSize() const
- T CryptoPP::SimpleKeyingInterface::IsValidKeyLength(unsigned long) const
- T CryptoPP::SimpleKeyingInterface::MaxIVLength() const
- T CryptoPP::SimpleKeyingInterface::MinIVLength() const
- T CryptoPP::SimpleKeyingInterface::Resynchronize(unsigned char const*, int)
- T CryptoPP::SimpleKeyingInterface::SetKey(unsigned char const*, unsigned long, CryptoPP::NameValuePairs const&)
- T CryptoPP::SimpleKeyingInterface::ThrowIfInvalidKeyLength(unsigned long)
- T CryptoPP::SimpleKeyingInterface::~SimpleKeyingInterface()
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::DefaultKeyLength() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::GetValidKeyLength(unsigned long) const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVRequirement() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::IVSize() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MaxKeyLength() const
- T CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >::MinKeyLength() const
- T CryptoPP::Sink::CopyRangeTo2(CryptoPP::BufferedTransformation&, unsigned long long&, unsigned long long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool) const
- T CryptoPP::Sink::TransferTo2(CryptoPP::BufferedTransformation&, unsigned long long&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
- T CryptoPP::UnalignedAllocate(unsigned long)
- T CryptoPP::UnalignedDeallocate(void*)
- T CryptoPP::VerifyBufsEqual(unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::X917RNG::GenerateIntoBufferedTransformation(CryptoPP::BufferedTransformation&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned long long)
- T CryptoPP::X917RNG::X917RNG(CryptoPP::BlockTransformation*, unsigned char const*, unsigned char const*)
- T CryptoPP::X917RNG::~X917RNG()
- T CryptoPP::simple_ptr<CryptoPP::NullNameValuePairs>::~simple_ptr()
- T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
- T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
+ T DES_SPtrans
+ T DES_decrypt3
+ T DES_ede3_cbc_encrypt
+ T DES_encrypt1
+ T DES_encrypt2
+ T DES_encrypt3
+ T DES_ncbc_encrypt
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DirectoryTreeView::ChainToAnimationMap()
  T DirectoryTreeView::ChainToMap()
@@ -9561,40 +9071,6 @@
  T DirectoryTreeView::~DirectoryTreeView()
  T EAppReleaseStateFromName(char const*)
  T EParentalFeatureFromName(char const*)
- T ERR_add_error_data
- T ERR_add_error_vdata
- T ERR_clear_error
- T ERR_error_string
- T ERR_error_string_n
- T ERR_free_strings
- T ERR_func_error_string
- T ERR_get_err_state_table
- T ERR_get_error
- T ERR_get_error_line
- T ERR_get_error_line_data
- T ERR_get_implementation
- T ERR_get_next_error_library
- T ERR_get_state
- T ERR_get_string_table
- T ERR_lib_error_string
- T ERR_load_ERR_strings
- T ERR_load_strings
- T ERR_peek_error
- T ERR_peek_error_line
- T ERR_peek_error_line_data
- T ERR_peek_last_error
- T ERR_peek_last_error_line
- T ERR_peek_last_error_line_data
- T ERR_pop_to_mark
- T ERR_put_error
- T ERR_reason_error_string
- T ERR_release_err_state_table
- T ERR_remove_state
- T ERR_remove_thread_state
- T ERR_set_error_data
- T ERR_set_implementation
- T ERR_set_mark
- T ERR_unload_strings
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
  T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, char*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
@@ -9625,7 +9101,6 @@
  T GetPchTempTextBuffer_Harmful()
  T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
  T GetTGADimensions(int, char*, int*, int*)
- T GlobalRNGList()
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()
  T HTMLComboBoxHost::ChainToAnimationMap()
@@ -9844,44 +9319,20 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T MusicNameColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T MusicPositionColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
- T OBJ_add_object
- T OBJ_bsearch_
- T OBJ_bsearch_ex_
- T OBJ_cleanup
- T OBJ_cmp
- T OBJ_create
- T OBJ_create_objects
- T OBJ_dup
- T OBJ_ln2nid
- T OBJ_new_nid
- T OBJ_nid2ln
- T OBJ_nid2obj
- T OBJ_nid2sn
- T OBJ_obj2nid
- T OBJ_obj2txt
- T OBJ_sn2nid
- T OBJ_txt2nid
- T OBJ_txt2obj
  T OPENSSL_atomic_add
  T OPENSSL_cleanse
  T OPENSSL_cpuid_setup
  T OPENSSL_far_spin
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
- T OPENSSL_ia32cap_loc
  T OPENSSL_indirect_call
- T OPENSSL_init
  T OPENSSL_instrument_halt
- T OPENSSL_isservice
  T OPENSSL_rdtsc
- T OPENSSL_showfatal
- T OPENSSL_stderr
  T OPENSSL_wipe_cpu
  T OSOverlay()
  T OSXHelpers::GetDefaultDocumentFolderForPlatform()
  T OSXHelpers::GetDefaultFolderForPlatform(NSSearchPathDirectory)
  T OSXHelpers::IsMinimizeOnTitleDblClickEnabled()
- T OpenSSLDie
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
  T PchNameFromECurrencyCode(int)
@@ -9892,32 +9343,12 @@
  T ProcessInputEvents()
  T ProcessInputThread(void*)
  T QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ T RC4
+ T RC4_options
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
  T RealMain(void*)
  T RegisterEventTaps(int, CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >&)
  T RoundToInteger(double, ERoundingMethod)
- T SHA1_Final
- T SHA1_Init
- T SHA1_Transform
- T SHA1_Update
- T SHA224
- T SHA224_Final
- T SHA224_Init
- T SHA224_Update
- T SHA256
- T SHA256_Final
- T SHA256_Init
- T SHA256_Transform
- T SHA256_Update
- T SHA384
- T SHA384_Final
- T SHA384_Init
- T SHA384_Update
- T SHA512
- T SHA512_Final
- T SHA512_Init
- T SHA512_Transform
- T SHA512_Update
  T ScreenshotHotKeyPressed()
  T ScreenshotToLoad_t::ScreenshotToLoad_t()
  T ScreenshotToLoad_t::Validate(CValidator&, char const*)
@@ -9966,7 +9397,6 @@
  T Sys_GetFactoryThis()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
- T TSLNodeTemplate_t<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::operator delete(void*)
  T TimeCompare(unsigned int const*, unsigned int const*)
  T URLEncode(char const*)
  T URLLabel_Factory()
@@ -10028,32 +9458,41 @@
  T _pcre_valid_utf
  T _pcre_was_newline
  T _pcre_xclass
- T a2d_ASN1_OBJECT
- T asn1_Finish
- T asn1_GetSequence
- T asn1_add_error
- T asn1_const_Finish
+ T aesni_cbc_encrypt
+ T aesni_ccm64_decrypt_blocks
+ T aesni_ccm64_encrypt_blocks
+ T aesni_ctr32_encrypt_blocks
+ T aesni_decrypt
+ T aesni_ecb_encrypt
+ T aesni_encrypt
+ T aesni_set_decrypt_key
+ T aesni_set_encrypt_key
+ T aesni_xts_decrypt
+ T aesni_xts_encrypt
+ T bn_GF2m_mul_2x2
  T bn_add_words
- T bn_cmp_part_words
- T bn_cmp_words
  T bn_div_words
- T bn_dup_expand
- T bn_expand2
  T bn_mul_add_words
+ T bn_mul_comba4
+ T bn_mul_comba8
+ T bn_mul_mont
  T bn_mul_words
+ T bn_sqr_comba4
+ T bn_sqr_comba8
  T bn_sqr_words
  T bn_sub_part_words
  T bn_sub_words
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
- T c2i_ASN1_OBJECT
- T check_defer
- T d2i_ASN1_OBJECT
  T delete_JSON_parser
- T i2a_ASN1_OBJECT
- T i2d_ASN1_OBJECT
- T i2t_ASN1_OBJECT
+ T gcm_ghash_4bit_mmx
+ T gcm_ghash_4bit_x86
+ T gcm_ghash_clmul
+ T gcm_gmult_4bit_mmx
+ T gcm_gmult_4bit_x86
+ T gcm_gmult_clmul
+ T gcm_init_clmul
  T init_JSON_config
  T int RoundToIntegerType<int>(double, ERoundingMethod)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
@@ -10063,88 +9502,32 @@
  T jinit_1pass_quantizer
  T jinit_2pass_quantizer
  T jinit_arith_decoder
- T jinit_arith_encoder
- T jinit_c_coef_controller
- T jinit_c_main_controller
- T jinit_c_master_control
- T jinit_c_prep_controller
- T jinit_color_converter
  T jinit_color_deconverter
- T jinit_compress_master
  T jinit_d_coef_controller
  T jinit_d_main_controller
  T jinit_d_post_controller
- T jinit_downsampler
- T jinit_forward_dct
  T jinit_huff_decoder
- T jinit_huff_encoder
  T jinit_input_controller
  T jinit_inverse_dct
  T jinit_marker_reader
- T jinit_marker_writer
  T jinit_master_decompress
  T jinit_memory_mgr
  T jinit_merged_upsampler
  T jinit_upsampler
- T jpeg_CreateCompress
  T jpeg_CreateDecompress
  T jpeg_abort
- T jpeg_abort_compress
- T jpeg_abort_decompress
- T jpeg_add_quant_table
  T jpeg_alloc_huff_table
  T jpeg_alloc_quant_table
- T jpeg_calc_jpeg_dimensions
  T jpeg_calc_output_dimensions
  T jpeg_consume_input
  T jpeg_core_output_dimensions
- T jpeg_default_colorspace
- T jpeg_default_qtables
  T jpeg_destroy
- T jpeg_destroy_compress
  T jpeg_destroy_decompress
- T jpeg_fdct_10x10
- T jpeg_fdct_10x5
- T jpeg_fdct_11x11
- T jpeg_fdct_12x12
- T jpeg_fdct_12x6
- T jpeg_fdct_13x13
- T jpeg_fdct_14x14
- T jpeg_fdct_14x7
- T jpeg_fdct_15x15
- T jpeg_fdct_16x16
- T jpeg_fdct_16x8
- T jpeg_fdct_1x1
- T jpeg_fdct_1x2
- T jpeg_fdct_2x1
- T jpeg_fdct_2x2
- T jpeg_fdct_2x4
- T jpeg_fdct_3x3
- T jpeg_fdct_3x6
- T jpeg_fdct_4x2
- T jpeg_fdct_4x4
- T jpeg_fdct_4x8
- T jpeg_fdct_5x10
- T jpeg_fdct_5x5
- T jpeg_fdct_6x12
- T jpeg_fdct_6x3
- T jpeg_fdct_6x6
- T jpeg_fdct_7x14
- T jpeg_fdct_7x7
- T jpeg_fdct_8x16
- T jpeg_fdct_8x4
- T jpeg_fdct_9x9
- T jpeg_fdct_float
- T jpeg_fdct_ifast
- T jpeg_fdct_islow
- T jpeg_finish_compress
  T jpeg_finish_decompress
- T jpeg_finish_output
  T jpeg_free_large
  T jpeg_free_small
  T jpeg_get_large
  T jpeg_get_small
- T jpeg_has_multiple_scans
  T jpeg_idct_10x10
  T jpeg_idct_10x5
  T jpeg_idct_11x11
@@ -10179,64 +9562,24 @@
  T jpeg_idct_float
  T jpeg_idct_ifast
  T jpeg_idct_islow
- T jpeg_input_complete
  T jpeg_mem_available
  T jpeg_mem_init
  T jpeg_mem_term
- T jpeg_new_colormap
  T jpeg_open_backing_store
- T jpeg_quality_scaling
  T jpeg_read_header
- T jpeg_read_raw_data
  T jpeg_read_scanlines
  T jpeg_resync_to_restart
- T jpeg_save_markers
- T jpeg_set_colorspace
- T jpeg_set_defaults
- T jpeg_set_linear_quality
- T jpeg_set_marker_processor
- T jpeg_set_quality
- T jpeg_simple_progression
- T jpeg_start_compress
  T jpeg_start_decompress
- T jpeg_start_output
  T jpeg_std_error
- T jpeg_suppress_tables
- T jpeg_write_m_byte
- T jpeg_write_m_header
- T jpeg_write_marker
- T jpeg_write_raw_data
- T jpeg_write_scanlines
- T jpeg_write_tables
  T jround_up
  T jzero_far
- T lh_delete
- T lh_doall
- T lh_doall_arg
- T lh_free
- T lh_insert
- T lh_new
- T lh_num_items
- T lh_retrieve
- T lh_strhash
+ T md5_block_asm_data_order
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser
  T non-virtual thunk to COverlayWebBrowserHTML::~COverlayWebBrowserHTML()
  T non-virtual thunk to CSteamAuthedHTML::~CSteamAuthedHTML()
- T non-virtual thunk to CryptoPP::AlgorithmImpl<CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> >, CryptoPP::SimpleKeyingInterfaceImpl<CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info>, CryptoPP::TwoBases<CryptoPP::BlockCipher, CryptoPP::Rijndael_Info> > >::AlgorithmName() const
- T non-virtual thunk to CryptoPP::ArraySink::~ArraySink()
- T non-virtual thunk to CryptoPP::BitBucket::~BitBucket()
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::IsForwardTransformation() const
- T non-virtual thunk to CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>::~BlockCipherFinal()
- T non-virtual thunk to CryptoPP::BlockCipherImpl<CryptoPP::Rijndael_Info, CryptoPP::BlockCipher>::BlockSize() const
- T non-virtual thunk to CryptoPP::BufferedTransformation::GetMaxWaitObjectCount() const
- T non-virtual thunk to CryptoPP::BufferedTransformation::GetWaitObjects(CryptoPP::WaitObjectContainer&, CryptoPP::CallStack const&)
- T non-virtual thunk to CryptoPP::ClonableImpl<CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)0, CryptoPP::Rijndael::Enc>, CryptoPP::Rijndael::Enc>::Clone() const
- T non-virtual thunk to CryptoPP::Rijndael::Base::~Base()
- T non-virtual thunk to CryptoPP::Rijndael::Enc::AdvancedProcessBlocks(unsigned char const*, unsigned char const*, unsigned char*, unsigned long, unsigned int) const
- T non-virtual thunk to CryptoPP::Rijndael::Enc::ProcessAndXorBlock(unsigned char const*, unsigned char const*, unsigned char*) const
  T non-virtual thunk to LayoutDebugDialog::CursorMoved(vgui::Panel*, int, int)
  T non-virtual thunk to LayoutDebugDialog::KeyCodeReleased(vgui::Panel*, int)
  T non-virtual thunk to LayoutDebugDialog::KeyCodeTyped(vgui::Panel*, int)
@@ -10508,33 +9851,15 @@
  T png_zfree
  T private_AES_set_decrypt_key
  T private_AES_set_encrypt_key
+ T private_Camellia_set_key
+ T private_RC4_set_key
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
+ T ripemd160_block_asm_data_order
  T sha1_block_data_order
  T sha256_block_data_order
  T sha512_block_data_order
- T sk_delete
- T sk_delete_ptr
- T sk_dup
- T sk_find
- T sk_find_ex
- T sk_free
- T sk_insert
- T sk_is_sorted
- T sk_new
- T sk_new_null
- T sk_num
- T sk_pop
- T sk_pop_free
- T sk_push
- T sk_set
- T sk_set_cmp_func
- T sk_shift
- T sk_sort
- T sk_unshift
- T sk_value
- T sk_zero
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()
@@ -10593,11 +9918,7 @@
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
  T std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<int>(int, unsigned int)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned int>(unsigned int, unsigned int)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > CryptoPP::IntToString<unsigned long>(unsigned long, unsigned int)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::overflow(int)
@@ -13172,7 +12493,7 @@
  T vgui::ScrollBarSlider::SetValue(int)
  T vgui::ScrollBarSlider::SetValueNoCallback(int)
  T vgui::ScrollBarSlider::~ScrollBarSlider()
- T vgui::SimpleDialog::AddButton(char const*, KeyValues*, vgui::Panel*)
+ T vgui::SimpleDialog::AddButton(char const*, KeyValues*, vgui::Panel*, bool)
  T vgui::SimpleDialog::ChainToAnimationMap()
  T vgui::SimpleDialog::ChainToMap()
  T vgui::SimpleDialog::DoModal()
@@ -13832,7 +13153,6 @@
  T vgui::surface()
  T vgui::system()
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
- T void CryptoPP::GetUserKey<unsigned int>(CryptoPP::ByteOrder, unsigned int*, unsigned long, unsigned char const*, unsigned long)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
  T void Destruct<CUtlString>(CUtlString*)
@@ -13853,8 +13173,12 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- TSListBase_Init
- TSListBase_SwapList
+ T vpaes_cbc_encrypt
+ T vpaes_decrypt
+ T vpaes_encrypt
+ T vpaes_set_decrypt_key
+ T vpaes_set_encrypt_key
+ T whirlpool_block_mmx
  Test_IsActive
  Test_SetFailed
  ThreadGetCurrentId
@@ -13937,7 +13261,6 @@
  __cxa_atexit
  __cxa_bad_typeid
  __cxa_begin_catch
- __cxa_call_unexpected
  __cxa_end_catch
  __cxa_free_exception
  __cxa_guard_abort
@@ -13952,7 +13275,6 @@
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
- __memset_chk
  __moddi3
  __sprintf_chk
  __stack_chk_fail
@@ -13960,7 +13282,6 @@
  __stderrp
  __toupper
  __udivdi3
- __umoddi3
  abort
  access
  alphasort$INODE64
@@ -14209,8 +13530,6 @@
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
- b BN_options.data
- b BN_options.init
  b CBasePanel::ShowLegacyCDKeyDataOnce()::bAlreadyHandled
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -14225,16 +13544,7 @@
  b CSteamID::Render() const::rgchBuf
  b CUtlSymbol::Initialize()::symbolsInitialized
  b CheckModifierDiffs(unsigned long)::s_lastModifierCode
- b CryptoPP::Td
- b CryptoPP::Te
- b CryptoPP::TheBitBucket()::bitBucket
- b CryptoPP::s_TdFilled
- b CryptoPP::s_TeFilled
- b CryptoPP::s_jmpNoCPUID
- b CryptoPP::s_jmpNoSSE2
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
- b ERR_error_string.buf
- b ERR_get_state.fallback
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
@@ -14244,47 +13554,20 @@
  b GetPanelMessageMapDictionary()::dictionary
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
- b GlobalRNGList()::g_tslistPAutoSeededRNG
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b MusicNameColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyMusicName
  b MusicPositionColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyMusicPosition
  b OPENSSL_cpuid_setup.trigger
- b OPENSSL_init.done
  b ProcessInputEvents()::bInitialized
  b ProcessInputEvents()::iCurCommand
  b ProcessInputEvents()::rgLastTenCommands
  b ProcessInputEvents()::s_bFocus
  b QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyQueueID
- b SHA224.m
- b SHA256.m
- b SHA384.m
- b SHA512.m
- b SYS_str_reasons
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::bLastVisibilityValue
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::dwLastSend
  b SpewOutputLogging(SpewType_t, char const*)::pFile
  b __g_CRunGameEngine_singleton
- b add_lock_callback
- b added
- b allow_customize
- b allow_customize_debug
- b amih
- b app_locks
- b bn_limit_bits
- b bn_limit_bits_high
- b bn_limit_bits_low
- b bn_limit_bits_mont
- b build_SYS_str_reasons.init
- b build_SYS_str_reasons.strerror_tab
- b disabling_threadid
- b dyn_locks
- b dynlock_create_callback
- b dynlock_destroy_callback
- b dynlock_lock_callback
- b err_fns
- b ex_data
- b free_debug_func
  b g_AnimatingImagePanel_Helper
  b g_AnimationPropertyConverters
  b g_BreakSet
@@ -14361,7 +13644,6 @@
  b g_pGetSymbolProc
  b g_pSysModuleSteam
  b g_serializedOverlay
- b get_debug_options_func
  b guard variable for (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
  b guard variable for (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
@@ -14370,14 +13652,12 @@
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
- b guard variable for CryptoPP::TheBitBucket()::bitBucket
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetPanelAnimationDictionary()::dictionary
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
- b guard variable for GlobalRNGList()::g_tslistPAutoSeededRNG
  b guard variable for MusicNameColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyMusicName
  b guard variable for MusicPositionColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyMusicPosition
  b guard variable for QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyQueueID
@@ -14405,11 +13685,6 @@
  b guard variable for vgui::WrapPanel::ApplySingleSetting(KeyValues*)::hKeyAnimate
  b guard variable for vgui::WrapPanel::ApplySingleSetting(KeyValues*)::hKeyInteriorSpacing
  b guard variable for vgui::WrapPanel::ApplySingleSetting(KeyValues*)::hKeyWheelPct
- b id_callback
- b impl
- b int_error_hash
- b int_thread_hash
- b int_thread_hash_references
  b k_InvalidClientID
  b k_rgBitrates
  b k_rgDimensions
@@ -14417,22 +13692,14 @@
  b k_rgPermissions
  b k_rgShowChatCorner
  b k_rgShowFPSCorner
- b locking_callback
  b mCurPosition
  b mCurToken
  b mExprTree
  b mExpression
  b mIdentifier
- b malloc_debug_func
- b mh
- b mh_mode
- b num_disable
- b options
- b order
  b pcrecpp::default_options
  b pcrecpp::empty_string
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
- b realloc_debug_func
  b s_BlankImage
  b s_BuildGroupFileCache
  b s_CurrentRoutingIDPtr
@@ -14445,8 +13712,6 @@
  b s_pSortContext
  b s_pWrapPanelSorting
  b selectBuf
- b set_debug_options_func
- b threadid_callback
  b vec2_invalid
  b vec2_origin
  b vgui::EditablePanel::GetControlString(char const*, char const*)::buf
@@ -14503,15 +13768,10 @@
  bootstrap_port
  ceil
  ceilf
- clock$UNIX2003
  close$UNIX2003
  cos
  crc32
  d .memset_pattern
- d BN_value_one.const_one
- d ERR_str_functs
- d ERR_str_libraries
- d ERR_str_reasons
  d VTT for (anonymous namespace)::CaptionGripPanel
  d VTT for (anonymous namespace)::GripPanel
  d VTT for (anonymous namespace)::ScrollBarButton
@@ -14520,32 +13780,16 @@
  d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
- d err_defaults
- d ex_class
  d floatconverter
  d fontconverter
- d free_func
- d free_locked_func
  d g_ColInfo
  d g_KeyNames
  d g_MouseNames
  d g_bCatchExceptionsInCallbacks
  d g_prchEmoticons
- d impl_default
- d int_err_library_number
  d intconverter
- d lock_names
- d malloc_ex_func
- d malloc_func
- d malloc_locked_ex_func
- d malloc_locked_func
- d methods_filep
- d new_nid
- d nid_objs
  d p_floatconverter
  d p_intconverter
- d realloc_ex_func
- d realloc_func
  d s_EAppReleaseState
  d s_ECurrencyCode
  d s_EParentalFeature
@@ -14577,22 +13821,16 @@
  dyld_stub_binder
  exit
  fclose
- feof
- ferror
  fflush
- fgets
  floor
  floorf
  fmod
- fopen
  fopen$UNIX2003
  fprintf
  fputc
  fread
  free
- fseek
  fseeko
- ftell
  ftruncate
  fwrite$UNIX2003
  g_ClockSpeed
@@ -14640,7 +13878,6 @@
  launch_data_new_string
  launch_msg
  localeconv
- localtime
  log10
  longjmp
  lround
@@ -14677,10 +13914,6 @@
  qsort
  r .memset_pattern
  r .memset_pattern1
- r BN_num_bits_word.bits
- r BN_value_one.data_one
- r CryptoPP::SHA256::InitState(unsigned int*)::s
- r Hex
  r IPC::gTable
  r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
  r ascii_class
@@ -14705,9 +13938,6 @@
  r k_rgchAddCachedPmtMethodPage
  r k_rgchAddFundsPage
  r k_rgchDefaultHomePage
- r ln_objs
- r lvalues
- r obj_objs
  r onebppswaptable
  r opcode_possessify
  r png_combine_row.display_mask
@@ -14839,22 +14069,9 @@
  r rep_max
  r rep_min
  r select_ncolors.RGB_order
- r sn_objs
  r start_pass.aanscalefactor
  r start_pass.aanscales
- r start_pass_fdctmgr.aanscalefactor
- r start_pass_fdctmgr.aanscales
  r state_transition_table
- r std_chrominance_quant_tbl
- r std_huff_tables.bits_ac_chrominance
- r std_huff_tables.bits_ac_luminance
- r std_huff_tables.bits_dc_chrominance
- r std_huff_tables.bits_dc_luminance
- r std_huff_tables.val_ac_chrominance
- r std_huff_tables.val_ac_luminance
- r std_huff_tables.val_dc_chrominance
- r std_huff_tables.val_dc_luminance
- r std_luminance_quant_tbl
  r sub_end_of_word
  r sub_start_of_word
  r twobppswaptable
@@ -14864,8 +14081,6 @@
  r utf8_lead_bits
  r verbnames
  r verbs
- read$UNIX2003
- realloc
  remove
  rename
  scandir$INODE64
@@ -14879,8 +14094,6 @@
  setjmp
  setlocale
  shm_open
- signal
- sleep$UNIX2003
  snprintf
  sprintf
  sscanf
@@ -14936,11 +14149,8 @@
  std::__1::locale::locale(std::__1::locale const&)
  std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::~locale()
- std::bad_alloc::bad_alloc()
- std::bad_alloc::~bad_alloc()
  std::exception::~exception()
  std::nothrow
- std::set_new_handler(void (*)())
  std::terminate()
  strcat
  strchr
@@ -15046,9 +14256,6 @@
  t Create_TextEntry()
  t Create_ToggleButton()
  t Create_TreeView()
- t CryptoPP::SigIllHandlerCPUID(int)
- t CryptoPP::SigIllHandlerSSE2(int)
- t CryptoPP::TrySSE2()
  t DefaultSortFunc(KeyValues*, KeyValues*)
  t DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t FileSelect(dirent const*)
@@ -15074,54 +14281,56 @@
  t PNGWarningFunction(png_struct_def*, char const*)
  t SimplifyNode(ExprNode*&)
  t SuppressNotificationsForVideoCallback(unsigned int)
- t _GLOBAL__sub_I_cryptlib.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
  t _GLOBAL__sub_I_pcrecpp.cc
  t __cxx_global_array_dtor
- t _dopr
+ t _aesni_decrypt3
+ t _aesni_decrypt4
+ t _aesni_decrypt6
+ t _aesni_encrypt3
+ t _aesni_encrypt4
+ t _aesni_encrypt6
+ t _aesni_set_encrypt_key
+ t _mul_1x1_ialu
+ t _mul_1x1_mmx
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact
+ t _vpaes_decrypt_core
+ t _vpaes_encrypt_core
+ t _vpaes_preheat
+ t _vpaes_schedule_192_smear
+ t _vpaes_schedule_core
+ t _vpaes_schedule_mangle
+ t _vpaes_schedule_round
+ t _vpaes_schedule_transform
  t _x86_AES_decrypt
  t _x86_AES_decrypt_compact
  t _x86_AES_encrypt
  t _x86_AES_encrypt_compact
  t _x86_AES_set_encrypt_key
+ t _x86_Camellia_decrypt
+ t _x86_Camellia_encrypt
+ t _x86_DES_decrypt
+ t _x86_DES_encrypt
  t access_virt_barray
  t access_virt_sarray
- t add_huff_table
  t add_to_class
- t added_obj_LHASH_COMP
- t added_obj_LHASH_HASH
  t adjust_recurse
  t alloc_barray
  t alloc_large
  t alloc_sarray
  t alloc_small
- t app_info_LHASH_COMP
- t app_info_LHASH_HASH
- t app_info_free
  t arith_decode
- t arith_encode
- t bn_expand_internal
- t build_ycc_rgb_table
- t cb_leak_LHASH_DOALL_ARG
  t check_escape
  t check_posix_syntax
- t cleanup1_LHASH_DOALL
- t cleanup2_LHASH_DOALL
- t cleanup3_LHASH_DOALL
- t cmyk_ycck_convert
  t color_quantize
  t color_quantize3
  t compare_opcodes
  t compile_branch
  t compile_regex
- t compress_data
- t compress_first_pass
- t compress_output
  t consume_data
  t consume_markers
  t could_be_empty_branch
@@ -15135,111 +14344,38 @@
  t decompress_data
  t decompress_onepass
  t decompress_smooth_data
- t def_cleanup_cb
- t def_cleanup_util_cb
- t def_get_class
- t default_malloc_ex
- t default_malloc_locked_ex
- t default_realloc_ex
- t do_barray_io
- t do_sarray_io
- t doapr_outch
  t dummy_consume_data
- t emit_bits_e
- t emit_bits_s
- t emit_dht
- t emit_dqt
- t emit_eobrun
  t emit_message
- t emit_restart
- t emit_restart_e
- t emit_sof
- t encode_mcu
- t encode_mcu_AC_first
- t encode_mcu_AC_refine
- t encode_mcu_DC_first
- t encode_mcu_DC_refine
- t encode_mcu_gather
- t encode_mcu_huff
- t err_state_LHASH_COMP
- t err_state_LHASH_HASH
- t err_string_data_LHASH_COMP
- t err_string_data_LHASH_HASH
  t error_exit
- t ex_class_item_LHASH_COMP
- t ex_class_item_LHASH_HASH
  t examine_app0
- t examine_app14
- t file_ctrl
- t file_free
- t file_gets
- t file_new
- t file_puts
- t file_read
- t file_write
  t fill_inverse_cmap
  t find_firstassertedchar
  t find_fixedlength
  t finish_input_pass
  t finish_output_pass
- t finish_pass
  t finish_pass1
  t finish_pass2
  t finish_pass_1_quant
- t finish_pass_gather
- t finish_pass_huff
- t finish_pass_master
- t fmtint
  t format_message
- t forward_DCT
- t forward_DCT_float
  t free_pool
- t fullsize_downsample
- t fullsize_smooth_downsample
  t fullsize_upsample
  t get_chr_property_list
- t get_error_values
  t get_interesting_appn
  t get_sof
  t gray_rgb_convert
  t grayscale_convert
- t h2v1_downsample
  t h2v1_merged_upsample
  t h2v1_upsample
- t h2v2_downsample
  t h2v2_merged_upsample
- t h2v2_smooth_downsample
  t h2v2_upsample
  t init_error_limit
- t int_cleanup
- t int_downsample
- t int_dup_ex_data
- t int_err_del
- t int_err_del_item
- t int_err_get
- t int_err_get_item
- t int_err_get_next_lib
- t int_err_set_item
- t int_free_ex_data
- t int_get_new_index
- t int_new_class
- t int_new_ex_data
- t int_thread_del_item
- t int_thread_get
- t int_thread_get_item
- t int_thread_release
- t int_thread_set_item
  t int_upsample
  t is_anchored
  t is_startline
  t jpeg_fill_bit_buffer
- t jpeg_gen_optimal_table
  t jpeg_huff_decode
- t jpeg_make_c_derived_tbl
  t jpeg_make_d_derived_tbl
  t match
- t mem_LHASH_COMP
- t mem_LHASH_HASH
  t merged_1v_upsample
  t merged_2v_upsample
  t new_color_map_1_quant
@@ -15247,15 +14383,11 @@
  t next_marker
  t noop_upsample
  t null_convert
- t null_method
  t output_message
- t output_pass_setup
  t parse_buffer_reserve_for(JSON_parser_struct*, unsigned int)
  t parse_parse_buffer(JSON_parser_struct*)
  t pass2_fs_dither
  t pass2_no_dither
- t pass_startup
- t per_scan_setup
  t png_build_16bit_table
  t png_format_buffer
  t png_inflate
@@ -15267,12 +14399,8 @@
  t post_process_1pass
  t post_process_2pass
  t post_process_prepass
- t pre_process_context
- t pre_process_data
  t prepare_for_output_pass
- t prepare_for_pass
  t prescan_quantize
- t print_leak_LHASH_DOALL_ARG
  t process_data_context_main
  t process_data_crank_post
  t process_data_simple_main
@@ -15289,13 +14417,7 @@
  t reset_error_mgr
  t reset_input_controller
  t reset_marker_reader
- t rgb_gray_convert
- t rgb_ycc_convert
- t rgb_ycc_start
- t save_marker
- t select_scan_parameters
  t self_destruct
- t sep_downsample
  t sep_upsample
  t set_error(JSON_parser_struct*)
  t skip_variable
@@ -15304,16 +14426,11 @@
  t start_pass
  t start_pass_1_quant
  t start_pass_2_quant
- t start_pass_coef
  t start_pass_dcolor
- t start_pass_downsample
  t start_pass_dpost
- t start_pass_fdctmgr
- t start_pass_huff
  t start_pass_huff_decoder
  t start_pass_main
  t start_pass_merged_upsample
- t start_pass_prep
  t start_pass_upsample
  t update_box
  t use_merged_upsample
@@ -15322,31 +14439,21 @@
  t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
  t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
  t void std::__1::__stable_sort_move<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*)
- t write_file_header
- t write_file_trailer
- t write_frame_header
- t write_marker_byte
- t write_marker_header
- t write_scan_header
- t write_tables_only
  t ycc_rgb_convert
  t ycck_cmyk_convert
  time
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
- typeinfo for std::bad_alloc
  typeinfo for std::exception
  unlink
  usleep$UNIX2003
  vasprintf
- vfprintf
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp
  vtable for __cxxabiv1::__class_type_info
- vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcschr

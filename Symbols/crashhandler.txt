@@ -36,19 +36,16 @@
  D typeinfo for CCrashHandler
  D typeinfo for CPathString
  D typeinfo for CStdMemAlloc
- D typeinfo for CUniformRandomStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for IBreakpadFactory
  D typeinfo for ICrashHandler
  D typeinfo for IMemAlloc
- D typeinfo for IUniformRandomStream
  D vtable for CBreakpadFactory
  D vtable for CCrashHandler
  D vtable for CPathString
  D vtable for CStdMemAlloc
- D vtable for CUniformRandomStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
@@ -60,14 +57,12 @@
  R typeinfo name for CCrashHandler
  R typeinfo name for CPathString
  R typeinfo name for CStdMemAlloc
- R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for IBreakpadFactory
  R typeinfo name for ICrashHandler
  R typeinfo name for IMemAlloc
- R typeinfo name for IUniformRandomStream
  T AssertMsgImplementation
  T BBlockingGetMiniDumpLock
  T BGetMiniDumpLock
@@ -198,12 +193,6 @@
  T CSteam3DumpHelper::Shutdown()
  T CSteam3DumpHelper::~CSteam3DumpHelper()
  T CTestHarness::~CTestHarness()
- T CUniformRandomStream::GenerateRandomNumber()
- T CUniformRandomStream::RandomChar()
- T CUniformRandomStream::RandomFillMemory(void*, unsigned long)
- T CUniformRandomStream::RandomFloat(float, float)
- T CUniformRandomStream::RandomInt(int, int)
- T CUniformRandomStream::SetSeed(int)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -216,6 +205,7 @@
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlString::AssertStringTooLong()
+ T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
@@ -297,7 +287,6 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Test_SetFailed
  T ThreadGetCurrentId
- T ThreadGetCurrentProcessId
  T ThreadGetCurrentRunningRef
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
@@ -401,13 +390,11 @@
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
  b s_FlushLogFunc
- b s_GaussianStream
  b s_GroupCount
  b s_LastMiniDumpTime
  b s_Line
  b s_OSXBreakpadFactory
  b s_SpewType
- b s_UniformStream
  b s_bCPUHasFastREPMOVSB
  b s_bSetSigHandler
  b s_pFileName

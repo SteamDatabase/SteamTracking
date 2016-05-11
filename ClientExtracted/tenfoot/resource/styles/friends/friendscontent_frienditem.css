@@ -7,6 +7,7 @@ FriendsContent_FriendItem
 	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
 	box-shadow: module_shadow;
 	opacity: 1.0;
+	border: 3px;
 	border-radius: 3px;
 }
 
@@ -45,7 +46,7 @@ FriendsContent_FriendItem.ConnectedToChat
 
 FriendsContent_FriendItem.ConnectedToChat:focus
 {
-	border: 2px solid white;
+	border: 3px solid white;
 }
 
 FriendsContent_FriendItem.InGame
@@ -66,9 +67,10 @@ FriendsContent_FriendItem.Offline
 AvatarImage
 {
 	margin: 5px;
-	width: 100px;
-	height: 100px;
+	width: 95px;
+	height: 95px;
 	border-radius: 4px;
+	border: 2px;
 }
 
 .InGame AvatarImage
@@ -93,24 +95,6 @@ Label
 	font-size: 22px;
 }
 
-FriendsContent_FriendItem:focus Label
-{
-	//padding-top: 4px;
-	//margin-left: 8px;
-	//color: ui_primary_color;
-	transform: translatey( -3px ) translatex( -3px );
-}
-
-
-FriendsContent_FriendItem:focus AvatarImage
-{
-	margin-left:5px;
-	margin-bottom: -1px;
-		width: 100px;
-	height: 100px;
-	//color: ui_primary_color;
-	transform: translatey( -3px ) translatex( -3px );
-}
 
 .FriendItemLabelContainer
 {

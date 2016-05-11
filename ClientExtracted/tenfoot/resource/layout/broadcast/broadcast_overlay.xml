@@ -8,8 +8,10 @@
 
 	<BroadcastOverlay class="BroadcastOverlayPanel" onactivate="ShowBroadcastDashboard(chat);" tabindex="auto" selectionpos="auto">
 		 <Panel id="RecordStatusIcon" />		
-		 <Label id="PlaybackStatusLabel" text="#Broadcast_Playback" />	
-		 <Image id="SpectatorIcon" />	         
-		 <Label id="SpectatorCountLabel" text="#Broadcast_SpectatorCount" /> 	
+		 <Label id="PlaybackStatusLabel" text="#Broadcast_Playback" />
+		 <Image id="SpectatorIcon" class="LiveOnly" />
+		 <Label id="SpectatorCountLabel" class="LiveOnly" text="#Broadcast_SpectatorCount" />
+		 <Image id="RequestsIcon" class="RequestsOnly" />
+		 <Label id="RequestCountLabel" class="RequestsOnly" text="#Broadcast_RequestCount" />
 	</BroadcastOverlay>
 </root>

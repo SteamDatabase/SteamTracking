@@ -1676,6 +1676,9 @@
 	"Library_Details_2DLaunchWarning_Desc"				"{s:gamename} does not support VR. It will appear on your desktop and may affect VR performance."
 	"Library_Details_2DLaunchWarning_Desc_VRGame"				"{s:gamename} has native VR support, but you are launching the desktop version. Do you want to continue?"
 
+	"Library_Details_OculusOnlyGameWarning_Title"				"WARNING"
+	"Library_Details_OculusOnlyGameWarning_Desc" "{s:gamename} will launch outside of the SteamVR environment. You may need to remove your headset in order to return to Steam."
+
 	"Library_Details_CloseVRGame_Title"					"Exit?"
 	"Library_Details_CloseVRGame_Desc"					"Please confirm you'd like to exit the current VR application."
 
@@ -3816,6 +3819,7 @@
 
 	"Broadcast_Playback"		"LIVE"
 	"Broadcast_SpectatorCount"	"{d:NumViewers}"
+	"Broadcast_RequestCount"	"{d:NumRequests}"
 
 	"Broadcast_Notification_Header"	  "VIEWER REQUESTS"
 	"Broadcast_Notification_Joined_Public"	"A user has joined your public broadcast"

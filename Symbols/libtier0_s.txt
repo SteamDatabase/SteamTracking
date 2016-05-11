@@ -427,6 +427,7 @@
  T ThreadGetPriority
  T ThreadGetProcessExitCode
  T ThreadGetProcessListInfo
+ T ThreadImplOneTimeInit
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
  T ThreadInterlockedAssignIf128
@@ -455,6 +456,7 @@
  T ThreadSetPriority
  T ThreadShellExecute
  T ThreadSleep
+ T ThreadSpinWaitForValue
  T ThreadTerminate
  T ThreadTerminateProcessCode
  T ThreadWaitForProcessExit
