@@ -452,6 +452,11 @@ body.v6 h2.pageheader.itemtitle
 {
 	padding-bottom: 2px;
 }
+
+.workshop_previews_scroll .v_scrollbar.disabled {
+	display: none;
+}
+
 .workshop_preview
 {
 	display: inline-block;

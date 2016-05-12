@@ -251,6 +251,8 @@ CItemStoreHighlightPlayer.prototype.OnSelected = function( elem, imgURL )
 		player.m_previewImageElem.fadeIn( 250 );
 	} );
 
+	this.m_scrollbar.EnsureVisible( this.m_currentElem );
+
 	this.StartHighlightTimer();
 }
 
