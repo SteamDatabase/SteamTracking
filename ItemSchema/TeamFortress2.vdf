@@ -74858,7 +74858,7 @@
 		"30767"
 		{
 			"name"		"The Airdog"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_may16_airdog"
 			"item_description"		"#TF_may16_airdog_Desc"
 			"equip_region"		"hat"
@@ -74885,7 +74885,7 @@
 		"30768"
 		{
 			"name"		"Bedouin Bandana"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_may16_bedouin_bandana"
 			"item_description"		"#TF_may16_bedouin_bandana_Desc"
 			"equip_region"		"hat"
@@ -74932,7 +74932,7 @@
 		"30769"
 		{
 			"name"		"Herald's Helm"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_may16_heralds_helm"
 			"item_description"		"#TF_may16_heralds_helm_Desc"
 			"equip_region"		"whole_head"
@@ -74959,7 +74959,7 @@
 		"30770"
 		{
 			"name"		"Courtly Cuirass"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_courtly_cuirass"
 			"item_description"		"#TF_may16_courtly_cuirass_Desc"
 			"equip_region"		"shirt"
@@ -74977,7 +74977,7 @@
 		"30771"
 		{
 			"name"		"Squire's Sabatons"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_squires_sabatons"
 			"item_description"		"#TF_may16_squires_sabatons_Desc"
 			"equip_region"		"feet"
@@ -75002,7 +75002,7 @@
 		"30773"
 		{
 			"name"		"The Surgical Survivalist"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_surgical_survivalist"
 			"item_description"		"#TF_may16_surgical_survivalist_Desc"
 			"equip_region"		"pants"
@@ -75022,7 +75022,7 @@
 		"30775"
 		{
 			"name"		"The Skullcap"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_skullcap"
 			"item_description"		"#TF_may16_skullcap_Desc"
 			"equip_region"		"face"
@@ -75042,7 +75042,7 @@
 		"30777"
 		{
 			"name"		"The Lurking Legionnaire"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_lurking_legionnaire"
 			"item_description"		"#TF_may16_lurking_legionnaire_Desc"
 			"equip_region"		"shirt"
@@ -75062,7 +75062,7 @@
 		"30779"
 		{
 			"name"		"The Dayjogger"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_may16_dayjogger"
 			"item_description"		"#TF_may16_dayjogger_Desc"
 			"equip_region"		"hat"
@@ -75082,7 +75082,7 @@
 		"30780"
 		{
 			"name"		"The Patriot's Pouches"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_patriots_pouches"
 			"item_description"		"#TF_may16_patriots_pouches_Desc"
 			"equip_region"		"shirt"
@@ -75108,7 +75108,7 @@
 		"30785"
 		{
 			"name"		"Dad Duds"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_dad_duds"
 			"item_description"		"#TF_may16_dad_duds_Desc"
 			"equip_region"		"shirt"
@@ -75127,7 +75127,7 @@
 		"30786"
 		{
 			"name"		"The Gauzed Gaze"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_may16_gauzed_gaze"
 			"item_description"		"#TF_may16_gauzed_gaze_Desc"
 			"equip_region"		"whole_head"
@@ -75146,7 +75146,7 @@
 		"30788"
 		{
 			"name"		"The Demo's Dustcatcher"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_demos_dustcatcher"
 			"item_description"		"#TF_may16_demos_dustcatcher_Desc"
 			"equip_region"		"demoman_collar"
@@ -75166,7 +75166,7 @@
 		"30789"
 		{
 			"name"		"The Scoped Spartan"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_scoped_spartan"
 			"item_description"		"#TF_may16_scoped_spartan_Desc"
 			"equip_region"		"Back"
