@@ -600,6 +600,15 @@
 	position: 1825px 120px 0px;
 }
 
+.LibraryDetailsSectionPanel .NxFilterTab
+{
+	position: 1330px 120px 0px;
+}
+.LibraryDetailsSectionPanel .MenuHover .NxFilterTab
+{
+	position: 1525px 120px 0px;
+}
+
 
 .NxFilterTab:descendantfocus
 {
@@ -607,6 +616,11 @@
 	desaturation: 0.0;
 	transform: translatez( 20px );
 	position: 1480px 120px 0px;
+}
+
+.LibraryDetailsSectionPanel .NxFilterTab:descendantfocus
+{
+	position: 1180px 120px 0px;
 }
 
 .NxFilterTab ToggleButton.CheckBox,
@@ -647,7 +661,21 @@
 {
 	font-size: 34px;
 	color: #ffffff;
+}
 
+.NxFilterTab:descendantfocus .NxTagHeader.WorkshopTagHeader {
+	height: 36px;
+	margin-left: 10px;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.NxFilterTab:descendantfocus .SelectTagFilter,
+.NxFilterTab .SelectTagFilter.AlwaysVisible {
+	 width: 100%;
+}
+.NxFilterTab:descendantfocus .SelectTagFilterOption {
+	width: 100%;
 }
 
 .NxFilterWrapper

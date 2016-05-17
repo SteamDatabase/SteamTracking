@@ -223,17 +223,46 @@ function ConfirmBlock()
 	).done( function() {
 			$J.post(
 				'https://steamcommunity.com/actions/BlockUserAjax',
-				{sessionID: g_sessionID, steamid: steamid }
+				{sessionID: g_sessionID, steamid: steamid, block: 1 }
 			).done( function() {
 				ShowAlertDialog( 'Block All Communication',
 					'You have blocked all communications with this player.'
-				);
+				).done( function() {
+					location.reload();
+				} );
 			} ).fail( function() {
 				ShowAlertDialog( 'Block All Communication',
 					'Error processing your request. Please try again.'
 				);
 			} );
 		} );
+}
+
+// unblock a user, with confirmation
+function ConfirmUnblock()
+{
+	var steamid = g_rgProfileData['steamid'];
+	var strPersonaName = g_rgProfileData['personaname'];
+
+	ShowConfirmDialog( 'Unblock All Communication',
+	'You are about to unblock all communication with %s.'.replace( /%s/, strPersonaName ),
+	'Yes, unblock them'
+).done( function() {
+	$J.post(
+		'https://steamcommunity.com/actions/BlockUserAjax',
+		{sessionID: g_sessionID, steamid: steamid, block: 0 }
+	).done( function() {
+		ShowAlertDialog( 'Unblock All Communication',
+			'You have unblocked all communications with this player.'
+		).done( function() {
+			location.reload();
+		} );
+	} ).fail( function() {
+		ShowAlertDialog( 'Unblock All Communication',
+			'Error processing your request. Please try again.'
+		);
+	} );
+} );
 }
 
 function InitProfileSummary( strSummary )

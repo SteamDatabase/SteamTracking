@@ -157,6 +157,15 @@ a:hover {
 	float: left;
 	padding-bottom: 7px;
 }
+
+/* on pages that have been updated to be responsive, make sure leftcol fits next to the right column */
+html.responsive #profileBlock {
+	width: auto;
+	max-width: 638px;
+	float: none;
+	overflow: hidden;
+}
+
 #profileBlock p {
 	font-size: 14px;
 	font-family: 'Motiva Sans Light', Arial, Tahoma;

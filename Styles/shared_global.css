@@ -1766,6 +1766,10 @@ body.v6 #footer_nav .popup_menu .hr{
 	border-radius: 2px;
 }
 
+.v_scrollbar_target div.animating {
+	transition: left 0.3s, top 0.3s;
+}
+
 .v_scrollbar > .handle {
 	background: #3d6c8d; /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  #3d6c8d 0%, #2e5470 100%); /* FF3.6+ */

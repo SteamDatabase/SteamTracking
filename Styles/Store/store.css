@@ -1026,7 +1026,7 @@ a#store_search_link img {
 }
 
 .spotlight_scroll_ctn {
-    background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -moz-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	margin-bottom: 3px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -moz-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	margin-bottom: 4px;
     height: 395px;
 }
 

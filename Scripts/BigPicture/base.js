@@ -1343,11 +1343,20 @@ var CInfiniteScroller = (function()
 
 		var that = this;
 		$.RegisterEventHandler( 'InputFocusSet', that.m_pListPanel, function( p ) { that.OnInputFocusSet( p ) }  );
+		that.m_pListPanel.SetPanelEvent( 'onscrolledtobottom', function()
+		{
+			$.Msg( "Scrolled to bottom" );
+			if (  that.m_nTriggerIndex != -1 && that.m_pListPanel.GetChildCount() < that.m_nTotalItems )
+			{
+				that.m_nTriggerIndex = -1;
+				that.LoadNextData();
+			}
+		} );
 	};
 
 	CInfiniteScroller.prototype.OnInputFocusSet = function( p )
 	{
-		$.Msg( this.m_pListPanel.id + " at " + p.tabindex + ", trigger at " + this.m_nTriggerIndex );
+		$.Msg( this.m_pListPanel.id + " at " + p.tabindex + ", trigger at " + this.m_nTriggerIndex + ", child count " + this.m_pListPanel.GetChildCount() );
 		if ( this.m_nTriggerIndex != -1 && p.tabindex >= this.m_nTriggerIndex && this.m_pListPanel.GetChildCount() < this.m_nTotalItems )
 		{
 			this.m_nTriggerIndex = -1;

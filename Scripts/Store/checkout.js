@@ -295,11 +295,14 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			{
 				PollForTransactionStatus( $('transaction_id').value, 120, 15 ); 
 			}
-
 		}
 		else
 		{
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
+			if ( method.value == 'unionpay' )
+			{
+				PollForTransactionStatus( $('transaction_id').value, 20, 15 ); 
+			}
 		}
 		
 		$J('#purchase_button_bottom').hide();
@@ -4330,6 +4333,12 @@ function DisplayPendingReceiptPage()
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a target="_blank" href="https://help.bitpay.com/8450-Disputes-/">BitPay</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
+			
+		case 'unionpay':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for a successful notification from Unionpay.  Normally, this process can take several minutes.  In extreme cases, it may take up to a few days.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Note: If your purchase fails, Steam will email you a link that will let you try your purchase (with the discount) again for up to 72 hours.';
+			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			break;
 						
 		default:
 			$('pending_purchase_summary_payment_method_notes').style.display = 'none';
@@ -4398,6 +4407,14 @@ function HandlePollForTransactionStatusFailure()
 {
 	try
 	{
+		var method = $('payment_method');
+
+		if ( method.value == 'unionpay' )
+		{
+			DisplayPendingReceiptPage();
+			return;
+		}
+
 		var error_text = '';
 		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="http://store.valvesoftware.com/account/">account status page</a> or your email for a confirmation receipt.';
 	}

@@ -3082,18 +3082,24 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 	if( this.m_eleHandle.parent().css('position') == 'static' )
 		this.m_eleHandle.parent().css({position: 'relative'}); // Needs to be relative or absolute, only set it if we didn't do it in CSS
 	this.m_eleTarget.css({position: 'relative', float: 'left'});
+	this.m_eleTarget.css(propOffset, '0px');
+	this.m_eleTarget.addClass('animating');
+	this.m_eleTarget.parent().addClass('v_scrollbar_target');
 	this.m_eleTarget.parent().css({position: 'relative', overflow: 'hidden'});
+	this.m_nDesiredPosition = 0;
+	this.m_flPercent = 0;
 
 
-	var funcUpdate = function()
+	var funcUpdate = function( bDisableTransitions )
 	{
 		var bScrolled = true;
-		if( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]() == 0 )
+		if( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]() <= 0 )
 		{
 			instance.m_eleHandle.parent().addClass('disabled');
 			instance.m_flPercent = 0;
 			bScrolled = false;
-		}
+		} else
+			instance.m_eleHandle.parent().removeClass('disabled');
 
 		if( instance.m_flPercent < 0 )
 			instance.m_flPercent = 0;
@@ -3101,16 +3107,23 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		if( instance.m_flPercent > 1 )
 			instance.m_flPercent = 1;
 
-		instance.m_eleHandle.parent().removeClass('disabled');
 
 		var percent = instance.m_flPercent;
 
+		if( bDisableTransitions )
+			instance.DisableTransitions();
+
+		instance.m_nDesiredPosition = -percent * ( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]());
+
 		// Update container
-		instance.m_eleTarget[0].style[propOffset] = -percent * ( instance.m_eleTarget[propSize]() - instance.m_eleTarget.parent()[propSize]()) + 'px';
+		instance.m_eleTarget[0].style[propOffset] = instance.m_nDesiredPosition + 'px';
 
 		// Update scroll handle
 		var handleMax = instance.m_eleHandle.parent()[propSize]() - instance.m_eleHandle[propOuterSize]();
 		instance.m_eleHandle[0].style[propOffset] = ( percent * handleMax ) + 'px';
+
+		if( bDisableTransitions )
+			instance.EnableTransitions();
 
 		return bScrolled;
 	}
@@ -3122,15 +3135,16 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		var percent = localDimension / localMax;
 		instance.m_flPercent = percent;
 
-		if( funcUpdate() )
+		if( funcUpdate(true) )
 			event.preventDefault();
+
 
 	}
 
 	$J(eleTarget).bind('mousewheel DOMMouseScroll',function( event ){
 		var delta = event.originalEvent.wheelDelta || event.originalEvent.detail * -12;
 
-		var localY = instance.m_eleTarget.position()[propOffset] * -1;
+		var localY = instance.m_nDesiredPosition * -1;
 		var localMax = instance.m_eleTarget[propOuterSize]() - instance.m_eleTarget.parent()[propSize]();
 
 		if( localY <= 0 && delta > 0 || localY == localMax && delta < 0 )
@@ -3185,13 +3199,42 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		event.stopPropagation();
 	});
 
+	// Resets scroll position to 0 and updates the window. Useful when adding/removing elements or resizing the scroll area
 	this.Reset = function() {
 		instance.m_flPercent = 0;
+
+		return funcUpdate(true);
+	}
+
+	// Ensures target element is visible. This is taken from position() (NOT OFFSET) so the element must be a direct child of the scroll area
+	this.EnsureVisible = function( ele ) {
+		var $ele = $J(ele);
+		var eleSize = $ele[propOuterSize](true);
+		var minEdge = $ele.position()[propOffset] - (eleSize * 0.5);
+		var maxEdge = minEdge + (eleSize * 2);
+
+
+		var viewportMax = instance.m_eleTarget[propOuterSize]() - instance.m_eleTarget.parent()[propSize]();
+		var viewportSize = instance.m_eleTarget.parent()[propSize]();
+		var viewportPosition = instance.m_eleTarget.position()[propOffset] * -1;
+
+		if( viewportPosition > minEdge )
+			instance.m_flPercent = minEdge / viewportMax;
+		else if( ( viewportPosition + viewportSize ) < maxEdge )
+			instance.m_flPercent = ( maxEdge - viewportSize ) / viewportMax;
 
 		return funcUpdate();
 	}
 
-	funcUpdate();
+	this.EnableTransitions = function() {
+		instance.m_eleTarget.addClass('animating');
+	}
+
+	this.DisableTransitions = function() {
+		instance.m_eleTarget.removeClass('animating');
+	}
+
+	funcUpdate(true);
 
 
 }
