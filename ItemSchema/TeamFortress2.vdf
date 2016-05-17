@@ -10010,7 +10010,7 @@
 				"ancient"
 				{
 					"Bedouin Bandana"						"10"
-					"The Skullcap"							"10"
+					"The Dead Head"							"10"
 				}
 				"legendary"
 				{
@@ -75021,7 +75021,7 @@
 		}
 		"30775"
 		{
-			"name"		"The Skullcap"
+			"name"		"The Dead Head"
 			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_may16_skullcap"
 			"item_description"		"#TF_may16_skullcap_Desc"
