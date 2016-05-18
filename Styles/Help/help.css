@@ -1147,9 +1147,17 @@ body.v6 .help_refund_request_area h2 a:hover {
 	color: #ffffff;
 }
 
-.help_app_header .account_details {
+.help_app_header {
 	overflow: hidden;
 	margin-top: 10px;
+}
+
+.account_details {
+    overflow: hidden;
+    margin-top: 10px;
+    float: right;
+    width: 33%;
+
 }
 
 .help_app_header .subbox {
@@ -1465,7 +1473,9 @@ a.guide_row {
 
 .help_purchase_detail_box {
 	background-color: #1c2837;
-	padding: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	margin: 6px;
 	line-height: 20px;
 	color: #82909a;
@@ -1493,6 +1503,23 @@ a.guide_row {
 	vertical-align: middle;
 }
 
+.help_purchase_failure_note {
+	color: #67c1f5;
+}
+
+.help_purchase_failure_box {
+	background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgba(78, 145, 187, 0.3) 0%, rgba(52, 67, 93, 0.3) 100%) repeat scroll 0 0;
+	padding: 14px 14px 24px 14px;
+	margin-top: 6px;
+	margin-bottom: 14px;
+	color: white;
+	line-height:18px;
+}
+
+.help_purchase_failure_box > p {
+	margin-top: 10px;
+}
+
 .help_purchase_package.price_strikeout .refund_value,
 .help_microtxn_info.price_strikeout .refund_value
 {
@@ -1515,7 +1542,7 @@ a.guide_row {
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
-	max-width: 604px;
+	max-width: 702px;
 	margin-bottom: 20px;
 }
 
@@ -3024,6 +3051,11 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 .help_request_page {
 	font-size: 13px;
+	max-width: 940px;
+
+
+	background: url( 'https://help.steampowered.com/public/images/helprequests/footer_gradient.png' ) bottom center no-repeat;
+	padding-bottom: 48px;
 }
 
 .help_request_icon {
@@ -3046,19 +3078,195 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	line-height: 20px;
 }
 
-.help_request_initial_body {
+.help_request_message {
 	background: #131d28;
-	padding: 20px;
 	color: #6a798a;
+	margin-bottom: 16px;
+}
+
+.help_request_message.new {
+	transition: background 0.5s, color 0.5s;
+	background: #253040;
+	color: #9eb3cc;
+}
+
+.help_request_message .help_request_text {
+	padding: 20px;
 }
 
 .help_request_author_bar {
-	line-height: 36px;
-	margin-bottom: 8px;
+	padding: 20px 20px 0 20px;
+	min-height: 36px;
+}
+
+.help_request_author_bar .author_bar_text {
+	padding: 8px 0;
+}
+
+
+.help_request_message.from_steam {
+	background: #253040;
+	color: #9eb3cc;
+}
+
+.help_request_message.from_steam .help_request_author_bar {
+	background: #4a8db4;
+	color: #c2d2e4;
+	padding-top: 0;
 }
 
 .help_request_author_bar .playerAvatar {
-	display: inline-block;
+	float: left;
 	margin-right: 8px;
 	vertical-align: middle;
 }
+
+.help_request_footerbox {
+	margin-top: 28px;
+
+	background: rgba( 15, 22, 31, 0.42 );
+	padding: 20px 20px 4px 20px;
+	color: #67c1f5;
+}
+
+.help_request_footerbox.update_options, .help_request_footerbox.add_reply {
+	padding-bottom: 20px;
+}
+
+.help_request_didthishelp {
+	text-align: center;
+}
+
+.help_request_footerbox .prompt {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+
+.help_request_didthishelp .btn_medium {
+	margin: 0 20px 16px 20px;
+}
+
+.help_request_footerbox .update_options_left {
+	float: left;
+	margin-right: 40px;
+}
+
+.help_request_footerbox .update_options_right {
+	overflow: hidden;
+	text-align: right;
+}
+.help_request_footerbox.update_options a {
+	white-space: nowrap;
+}
+
+.help_request_footerbox.update_options.close_only .update_options_left {
+	display: none;
+}
+.help_request_footerbox.update_options.close_only .update_options_right {
+	text-align: center;
+}
+
+@media screen and (max-width: 400px )
+{
+	html.responsive .help_request_footerbox .update_options_left {
+		float: none;
+		margin-bottom: 16px;
+		text-align: center;
+		margin-right: 0;
+	}
+
+	.help_request_footerbox .update_options_right {
+		text-align: center;
+	}
+
+	.help_request_footerbox.update_options a {
+	}
+}
+
+#billing_state_select_droplist, #shipping_state_select_droplist, #shipping_state_droplist
+{
+    max-height: 225px;
+    overflow-y: auto;
+}
+
+#billing_country_droplist, #expiration_year_droplist
+{
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+#expiration_month_dselect_container.dselect_container
+{
+    display: inline-block;
+    width: 54px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+#expiration_year_dselect_container.dselect_container
+{
+    display: inline-block;
+    width: 68px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+#security_code_section
+{
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    margin: 4px 0 18px 0;
+}
+
+#security_code.text
+{
+    width: 36px;
+}
+
+#what_is_this
+{
+    padding-left: 5px;
+    text-align: left;
+    padding-top:5px;
+}
+
+#what_is_this a
+{
+    color: #cdcac1;
+    text-decoration: underline;
+    clear: none;
+    font-weight: normal;
+}
+
+.market_image {
+    background: #071215;
+
+    -webkit-box-shadow: 0 0 14px #030303 inset;
+    -moz-box-shadow: 0 0 14px #030303 inset;
+    box-shadow: 0 0 14px #030303 inset;
+
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    width: 150px;
+    height: 150px;
+    padding: 0 40px;
+    margin-right: 15px;
+    float: left;
+    text-align: center;
+}
+
+#largeiteminfo {
+    overflow: hidden;
+    max-width: 444px;
+    font-size: 14px;
+
+}
+
+.item_name {
+
+    font-size: 24px;
+}
+

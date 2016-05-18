@@ -594,12 +594,15 @@ HelpWizard = {
 			return;
 		}
 
-		$J('#wizard_contents').addClass('show_create_help_request_form');
+		if ( !$J('#wizard_contents > .wizard_content_wrapper').length )
+			$J('#wizard_contents').wrapInner( '<div class="wizard_content_wrapper"></div>');
+
+		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
 		$J('#create_help_request_issue_text').focus();
 	},
 
 	DismissCreateHelpRequestForm: function() {
-		$J('#wizard_contents').removeClass('show_create_help_request_form');
+		$J('#wizard_contents > .wizard_content_wrapper').removeClass('show_create_help_request_form');
 	},
 
 	SubmitCreateHelpRequestForm: function ( form )
@@ -1229,6 +1232,65 @@ HelpWizard = {
 		}).always( function() {
 			if ( strLoadingID )
 				$J( strLoadingID ).removeClass( 'loading' );
+		});
+	},
+
+	CanUseProofOfPurchase: function( strSessionID, strCode, supportURL ) {
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryCanUseProofOfPurchase",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID
+			} )
+		}).fail( function( xhr ) {
+
+		}).done( function( data ) {
+			if ( data.success )
+			{
+				window.location = "https://help.steampowered.com/wizard/HelpWithLoginProofOfPurchase/?s="+ strSessionID + "&code=" + strCode + "&time=" + data.time;
+			}
+			else
+			{
+				window.location = supportURL; // just show support URL
+			}
+		});
+	},
+
+	SubmitProofOfPurchase: function( strSessionID, strCode ) {
+		$J.ajax({
+			type: "POST",
+			url: "https://store.steampowered.com/checkout/submitproofofpurchase",
+			crossDomain:  true,
+			dataType: "json",
+			data: {
+				s: strSessionID,
+				code : strCode,
+				CardNumber: $J('#card_number').val(),
+				CardExpirationYear: $J('#expiration_year').val(),
+				CardExpirationMonth: $J('#expiration_month').val(),
+				CardSecurityCode: $J('#security_code').val(),
+				CardType: $J('#payment_method').val(),
+				FirstName: $J('#first_name').val(),
+				LastName: $J('#last_name').val(),
+				Address: $J('#billing_address').val(),
+				AddressTwo: $J('#billing_address_two').val(),
+				Country: $J('#billing_country').val(),
+				City: $J('#billing_city').val(),
+				State: ($J('#billing_country').val() == 'US' ? $J('#billing_state_select').val() : $J('#billing_state_text').val() ),
+				PostalCode: $J('#billing_postal_code').val(),
+				Phone: $J('#billing_phone').val()
+			}
+		}).fail(function (xhr) {
+
+		}).done(function (data) {
+			if ( data.success ) 
+			{
+				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID + "&code=" + data.code + "&account=" + data.accountid ;
+			}
+			else 
+			{
+				// TODO failed to verify card
+			}
 		});
 	},
 
@@ -1878,4 +1940,145 @@ ChangePasswordWizard = {
 		}
 	}
 };
+
+HelpRequestPage = {
+
+	ShowFooterbox: function( strType ) {
+		if ( strType == 'add_reply' )
+		{
+			// hide "did this help"
+			$J('.help_request_didthishelp').slideUp();
+			// show the add reply area
+			$J('.help_request_footerbox.add_reply').slideDown();
+
+			// show the "update options" box (if not visible) with the close ticket option
+			$J('.help_request_footerbox.update_options').addClass('close_only').stop().fadeIn();
+
+			$J('#create_help_request_issue_text').focus();
+		}
+		else if ( strType == 'update_options' )
+		{
+			$J('.help_request_footerbox:not(.update_options):visible').stop().slideUp();
+			$J('.help_request_footerbox.update_options').removeClass('close_only').stop().fadeIn();
+			$J('#create_help_request_issue_text').blur();
+		}
+		else if ( strType == 'didthishelp' )
+		{
+			$J('.help_request_footerbox.add_reply').stop().slideUp();
+			$J('.help_request_footerbox.update_options').stop().fadeOut();
+			$J('.help_request_didthishelp').slideDown();
+			$J('#create_help_request_issue_text').blur();
+		}
+	},
+
+	ShowReplyForm: function() {
+		HelpRequestPage.ShowFooterbox( 'add_reply' );
+	},
+
+
+	SubmitReplyForm: function ( form )
+	{
+		var $Form = $J(form);
+		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+
+		console.log( $Form.serialize() );
+
+		$J.ajax({
+			type: $Form.attr( 'method' ),
+			url: $Form.attr( 'action' ),
+			data: $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams )
+		}).done( function( data ) {
+			if ( data.need_login )
+			{
+				HelpWizard.PromptLogin();
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Send a reply', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+			}
+			else
+			{
+				if ( data.html )
+				{
+					$J('#wizard_contents').html( data.html );
+					HelpWizard.FinishPageLoad();
+					window.setTimeout( function() {
+						$J('.help_request_message:not(.from_steam):last').addClass('new');
+					}, 15 );
+				}
+			}
+		}).always( function() {
+			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		});
+	},
+
+	CloseHelpRequest: function( reference_code, help_requestid )
+	{
+		$J.ajax( {
+			url: 'https://help.steampowered.com/wizard/AjaxCancelHelpRequest/' + reference_code,
+			type: 'POST',
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				help_requestid: help_requestid,
+				help_request_page: 1
+			} )
+		} ).fail( function( jqxhr ) {
+			ShowAlertDialog( 'Click here to close this ticket', 'There was a problem canceling your request. Please try again.' );
+		} ).done( function( data ) {
+			if ( data.need_login )
+			{
+				HelpWizard.PromptLogin();
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Click here to close this ticket', data.error );
+			}
+			else
+			{
+				if ( data.html )
+				{
+					$J('#wizard_contents').html( data.html );
+					HelpWizard.FinishPageLoad();
+				}
+			}
+		} );
+	}
+};
+
+function UpdateStateSelectState()
+{
+	var cc = $J('#billing_country').val();
+	if ( cc == 'US' )
+	{
+		$J('#billing_state_label').show();
+		$J('#billing_state_input').show();
+		$J('#billing_state_text').hide();
+		$J('#billing_state_select_dselect_container').show();
+	}
+	else
+	{
+		$J('#billing_state_label').hide();
+		$J('#billing_state_input').hide();
+		$J('#billing_state_text').show();
+		$J('#billing_state_select_dselect_container').hide();
+	}
+}
+
+function PopupCVV2Explanation()
+{
+	try
+	{
+		var method = $J('#payment_method');
+		var type = 'non-amex';
+		if ( method && method.val() == 3 )
+		{
+			type = 'amex';
+		}
+
+				window.open( 'http://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+	}
+	catch( e )
+	{
+
+	}
+}
 
