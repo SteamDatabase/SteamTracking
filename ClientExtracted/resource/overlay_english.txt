@@ -18,6 +18,7 @@
 "Overlay_SettingsScreenshotActionLabel" "When a screenshot is taken"
 "Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Use Desktop Game Theatre when launching desktop games while SteamVR is active"
 "Overlay_SettingsDesktopGameTheaterCheck" "Use Desktop Game Theatre while SteamVR is active"
+"Overlay_SettingsIsVRShortcut"			"Include in VR Library"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"In-game FPS counter"
 "Steam_Settings_Ingame_ShowFPS_Off" "Off"

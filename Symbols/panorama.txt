@@ -9229,6 +9229,7 @@
  T panorama::CFragmentShader::CreateShader()
  T panorama::CFragmentShader::~CFragmentShader()
  T panorama::CGamepadController::CGamepadController(panorama::IUIInput*)
+ T panorama::CGamepadController::CheckStickZeroed(panorama::CGamepadController::xdevice_t*, int, int, int, int)
  T panorama::CGamepadController::CloseXDevice(int, bool)
  T panorama::CGamepadController::GetAxisValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerAxis)
  T panorama::CGamepadController::GetButtonValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerButton)

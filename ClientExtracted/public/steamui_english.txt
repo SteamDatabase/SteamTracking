@@ -4502,4 +4502,7 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_OculusOnlyGameWarning_Title" "Warning"
 "Steam_OculusOnlyGameWarning_Desc" "%launching_app% will launch outside of the SteamVR environment. You may need to remove your headset in order to return to Steam."
+
+"Steam_IncorrectVRSDKWarning_Title" "Warning"
+"Steam_IncorrectVRSDKWarning_Desc" "%launching_app% does not support your currently active headset."
 }

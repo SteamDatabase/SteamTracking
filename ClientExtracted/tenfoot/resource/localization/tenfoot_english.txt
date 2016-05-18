@@ -1683,10 +1683,10 @@
 	"Library_Details_CloseVRGame_Desc"					"Please confirm you'd like to exit the current VR application."
 
 	"Library_Details_IncorrectVRControlsWarning_Title"				"WARNING"
-	"Library_Details_IncorrectVRControlsWarning_Desc"				"The title you are launching does not support your currently active controller."
+	"Library_Details_IncorrectVRControlsWarning_Desc"				"{s:gamename} does not support your currently active controller."
 
 	"Library_Details_IncorrectSDKWarning_Title"				"WARNING"
-	"Library_Details_IncorrectSDKWarning_Desc"		"This title you are launching does not support your currently active headset."
+	"Library_Details_IncorrectSDKWarning_Desc"		"{s:gamename} does not support your currently active headset."
 
 	"Library_Details_IncorrectVRPlayAreaWarning_Title"				"WARNING"
 	"Library_Details_IncorrectVRPlayAreaWarning_Uncalibrated"		"Your play area is currently uncalibrated.  Select OK to launch Room Setup."

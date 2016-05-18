@@ -592,7 +592,6 @@
  T BUF_strlcat
  T BUF_strlcpy
  T BWritingMiniDump
- T BuildSignatureBuffer(KeyValues*, CUtlBuffer&)
  T CAST_cbc_encrypt
  T CAST_cfb64_encrypt
  T CAST_decrypt
@@ -2100,6 +2099,7 @@
  T KeyValues::Clear()
  T KeyValues::ConvertAndWriteWideString(KeyValues*, CUtlBuffer*, int) const
  T KeyValues::CreateKey(char const*)
+ T KeyValues::CreatePeerKey(char const*)
  T KeyValues::FindKey(char const*) const
  T KeyValues::FindKey(char const*, bool)
  T KeyValues::FreeBuffers()
@@ -3517,6 +3517,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r s_rgCRCTable_Standard
+ r s_szSignature2Name
  r s_szSignatureName
  r sigoid_srt
  r sn_objs
@@ -3596,9 +3597,11 @@
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BN_from_montgomery_word
+ t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t DispatchOpenSSLErrors()
  t FileSelect(dirent const*)
+ t FindSignaturePeer(KeyValues*, char const*, bool)
  t FreeTree(ExprNode*&)
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()

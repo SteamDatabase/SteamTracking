@@ -162,6 +162,7 @@
  D vtable for std::exception
  HideCursor
  InitCursor
+ NSApp
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
  R typeinfo name for CGameStreamGameMemStream
@@ -670,6 +671,8 @@
  munmap$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ objc_msgSend
+ objc_msgSend_stret
  open
  open$UNIX2003
  pthread_getspecific
