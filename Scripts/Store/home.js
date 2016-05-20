@@ -362,7 +362,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'popular_new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_smallcaps' ).empty();
