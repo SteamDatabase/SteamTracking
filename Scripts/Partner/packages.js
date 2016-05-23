@@ -682,13 +682,6 @@ function CreateDiscount( target, id, discount, packageid )
 
 function OnClickDeleteDiscount( packageid, id )
 {
-	var escapedID = id.replace(/[[\]]/g, "\\$&");
-
-	if( $J('#' + escapedID + '_group').val() )
-	{
-		alert('You cannot delete discounts which have discount groups using this tool. Please use the new discount tool instead (Not the multi-discount tool).');
-		return ;
-	}
 	if( confirm("Please don't delete historical discount data. Set the end date to \"now\" if you just want to end a discount early. If you have questions ask Kadar\r\n\r\nDelete this discount?") )
 	{
 		var discountid = id.slice(10,-1);
