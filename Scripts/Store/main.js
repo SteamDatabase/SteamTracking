@@ -119,7 +119,7 @@ function RowHeightForTab( tab )
 function TabSelect( elem, target )
 {
 	$J('#last_tab').val(target);
-	$Elem = $JFromIDOrElement( elem );
+	var $Elem = $JFromIDOrElement( elem );
 	$Elem.siblings().removeClass( 'active' );
 	$Elem.addClass( 'active' );
 
@@ -257,7 +257,7 @@ function ScrollCarouselSmallCaps( targetid, delta, pageSize, totalCount )
 			$J.force_appear();
 			GDynamicStore.HandleCarouselChange( targetid, elem.curPos, pageSize );
 		}
-	}
+	};
 
 	elem.effect = new Effect.Move( elem, {x: -808 * delta, afterFinish: cb.bind( this, targetid ), duration: 0.4 } );
 
@@ -298,7 +298,7 @@ function UpdateSmallCapControl( targetid, delta, pageSize, totalCount )
 var g_HoverState = {
 	target: null,
 	hiding: false
-}
+};
 
 function GetHoverState( $Elem )
 {
@@ -604,7 +604,7 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 					$Error.html( data.strError );
 				}
 				else if ( $Error.data( 'strOrigMessage' ) )
-					$Error.html( $Error.data( 'strOrigMessage' ) )
+					$Error.html( $Error.data( 'strOrigMessage' ) );
 				$Error.show();
 			}
 		} );
@@ -817,7 +817,7 @@ function expandTXItem( item )
 		return;
 
 	if ( blurb.visible() )
-		Effect.BlindUp( blurb, { duration: 0.25 } )
+		Effect.BlindUp( blurb, { duration: 0.25 } );
 	else
 		Effect.BlindDown( blurb, { duration: 0.25 } )
 }
@@ -926,7 +926,7 @@ function Countdown( elClock, nEndTimeLocalTime )
 Countdown.prototype.setCallback = function( cbkExpired )
 {
 	this.cbkExpired = cbkExpired;
-}
+};
 
 Countdown.prototype.refreshClock = function()
 {
@@ -954,7 +954,7 @@ Countdown.prototype.refreshClock = function()
 	}
 
 	this.render( remainDays, remainHours, remainMinutes, remainSeconds );
-}
+};
 
 Countdown.prototype.render = function( remainDays, remainHours, remainMinutes, remainSeconds )
 {
@@ -971,7 +971,7 @@ Countdown.prototype.render = function( remainDays, remainHours, remainMinutes, r
 	str += (remainMinutes < 10 ? '0' : '') + remainMinutes + ':';
 	str += (remainSeconds < 10 ? '0' : '') + remainSeconds;
 	this.$Clock.text( str );
-}
+};
 
 function GraphicalCountdown( nEndTimeLocalTime, strImagePath, strElPrefix )
 {
@@ -993,7 +993,7 @@ GraphicalCountdown.prototype.render = function( remainDays, remainHours, remainM
 	this.setImage( 'minutes_units', remainMinutes % 10 );
 	this.setImage( 'seconds_tens', Math.floor( remainSeconds / 10 ) );
 	this.setImage( 'seconds_units', remainSeconds % 10 );
-}
+};
 
 GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 {
@@ -1002,7 +1002,7 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 		$(this.strElPrefix + idSuffix).src = this.strImagePath + val + this.strExtension;
 		this.rgLastVals[idSuffix] = val;
 	}
-}
+};
 
 
 // SEARCH.JS
@@ -1221,7 +1221,7 @@ CTextInputSuggest.prototype.HideSuggestions = function()
 		this.m_$SuggestionsCtn.fadeOut( 'fast' );
 	else
 		this.m_$SuggestionsCtn.hide();
-}
+};
 
 CTextInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
 {
@@ -1230,7 +1230,7 @@ CTextInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
 	this.m_bHaveSuggestions = false;
 	this.m_$Focus = $J();
 	this.HideSuggestions();
-}
+};
 
 CTextInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
 {
@@ -1264,7 +1264,7 @@ CTextInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
 		this.m_bHaveSuggestions = false;
 		this.HideSuggestions();
 	}
-}
+};
 
 CTextInputSuggest.prototype.OnTextChanged = function( event )
 {
@@ -1278,7 +1278,7 @@ CTextInputSuggest.prototype.OnTextChanged = function( event )
 		this.m_fnSuggestForTerm( value, function( rgSuggestions ) { _this.SetSuggestions( rgSuggestions ); } );
 		this.m_strLastVal = value;
 	}
-}
+};
 
 CTextInputSuggest.prototype.OnKeyDown = function( event )
 {
@@ -1318,7 +1318,7 @@ CTextInputSuggest.prototype.OnKeyDown = function( event )
 		if ( $NewSuggestion )
 			this.SetFocus( $NewSuggestion );
 	}
-}
+};
 
 CTextInputSuggest.prototype.SetFocus = function( $Suggestion )
 {
@@ -1326,13 +1326,13 @@ CTextInputSuggest.prototype.SetFocus = function( $Suggestion )
 	this.m_$Focus = $Suggestion;
 	this.m_$Focus.addClass( 'focus' );
 	this.m_strLastFocusVal = $Suggestion.text();
-}
+};
 
 CTextInputSuggest.prototype.Destroy = function()
 {
 	this.m_$SuggestionsCtn.remove();
 	this.m_$Input.off( '.CTextInputSuggest' );
-}
+};
 
 // tags in the menu
 function EnsureStoreMenuTagsLoaded( strId )
@@ -1349,7 +1349,7 @@ function EnsureStoreMenuTagsLoaded( strId )
 		var url = 'https://store.steampowered.com/tagdata/recommendedtags';
 
 		$J.get( url, {ll: 'english'} ).done( function( data ) {
-			rgYourPopularTags = data || [];
+			var rgYourPopularTags = data || [];
 			if ( rgYourPopularTags.length > 0 )
 			{
 				$Element.empty();
@@ -1357,7 +1357,7 @@ function EnsureStoreMenuTagsLoaded( strId )
 				for( var i = 0; i < rgYourPopularTags.length && i < 5; i++ )
 				{
 					var tag = rgYourPopularTags[i];
-					var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) })
+					var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
 					$Link.text( tag.name );
 					$Element.append( $Link );
 				}
@@ -1791,12 +1791,12 @@ function dropdownSelectOption( dropdownName, subId, inCart )
 	$J('#add_to_cart_' + dropdownName + '_description_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_description_' + subId).html() );
 	if ( inCart )
 	{
-		$J('#add_to_cart_' + dropdownName + '_add_button').hide()
+		$J('#add_to_cart_' + dropdownName + '_add_button').hide();
 		$J('#add_to_cart_' + dropdownName + '_in_cart_button').show();
 	}
 	else
 	{
-		$J('#add_to_cart_' + dropdownName + '_add_button').show()
+		$J('#add_to_cart_' + dropdownName + '_add_button').show();
 		$J('#add_to_cart_' + dropdownName + '_in_cart_button').hide();
 	}
 	HideMenu('add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu');
@@ -1861,7 +1861,7 @@ function InitHorizontalAutoSliders()
 				} while ( $TryChild.length );
 
 				return $Wrapper.width() / 3;
-			}
+			};
 
 			$SliderLeft.click( function() {
 				Slider.SetValue( Slider.GetValue() - fnGetScrollIncrement(), 250 );
@@ -1898,7 +1898,7 @@ function InitHorizontalAutoSliders()
 				$SliderRight.show();
 			else
 				$SliderRight.hide();
-		}
+		};
 
 		$Scroll.on( 'scroll.AutoSlider v_contentschagned.AutoSlider', fnShowHideButtons );
 		$J(window ).on('resize.AutoSlider', fnShowHideButtons );

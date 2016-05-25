@@ -471,7 +471,7 @@ CEmoticonPopup.prototype.OnButtonClick = function()
 		var _this = this;
 		window.setTimeout( function() { $J(document).one( 'click.EmoticonPopup', _this.m_fnOnDocumentClick ) }, 0 );
 	}
-}
+};
 
 CEmoticonPopup.prototype.DismissPopup = function()
 {
@@ -480,7 +480,7 @@ CEmoticonPopup.prototype.DismissPopup = function()
 	this.m_bVisible = false;
 
 	$J(document).off( 'click.EmoticonPopup' );
-}
+};
 
 CEmoticonPopup.prototype.BuildPopup = function()
 {
@@ -507,7 +507,7 @@ CEmoticonPopup.prototype.BuildPopup = function()
 
 	$J(document.body).append( this.m_$Popup );
 	PositionEmoticonHover( this.m_$Popup, this.m_$EmoticonButton );
-}
+};
 
 CEmoticonPopup.prototype.GetEmoticonClickClosure = function ( strEmoticonName )
 {
@@ -529,7 +529,7 @@ CEmoticonPopup.prototype.GetEmoticonClickClosure = function ( strEmoticonName )
 		if ( window.DismissEmoticonHover )
 			window.setTimeout( DismissEmoticonHover, 1 );
 	};
-}
+};
 
 function PositionEmoticonHover( $Hover, $Target )
 {
@@ -684,7 +684,7 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 		}
 		else
 			return null;
-	}
+	};
 
 	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
 		fnDataFactory: fnDataFactory,
@@ -746,8 +746,8 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 
 function abuseSSDescripCheck()
 {
-	chkd_inap = $('abuseType1').checked;
-	chkd_cprt = $('abuseType5').checked;
+	var chkd_inap = $('abuseType1').checked;
+	var chkd_cprt = $('abuseType5').checked;
 	if ( chkd_inap )
 	{
 		$('abuseDescriptionLabel').setStyle( { color: '#777777', fontStyle: 'italic' } );
@@ -1048,7 +1048,7 @@ var CCommentThread = Class.create( {
 			elAutosubscribe.observe( 'change', this.OnAutosubscribeToggle.bind( this ) );
 		}
 
-		var elSubscribe = $(strPrefix + '_subscribe')
+		var elSubscribe = $(strPrefix + '_subscribe');
 		var elUnsubscribe = $(strPrefix + '_unsubscribe' );
 		if ( elSubscribe && elUnsubscribe )
 		{
@@ -2115,7 +2115,7 @@ CGameSelectorOwnedGames.s_rgOwnedGamesReadyCallbacks = [];
 CGameSelectorOwnedGames.AreOwnedGamesLoaded = function()
 {
 	return CGameSelectorOwnedGames.s_rgOwnedGames != null;
-}
+};
 CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 {
 	if ( !CGameSelectorOwnedGames.AreOwnedGamesLoaded() )
@@ -2159,7 +2159,7 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 		// data is already ready
 		fnCallback();
 	}
-}
+};
 
 
 function TargetIsChild( event, selector )
@@ -2187,55 +2187,11 @@ function addEvent(el, ev, fn, useCapture)
 		el["on"+ev] = fn;
 	}
 }
-function fixFloatHeight(floatDiv, fixedDiv, type, topDiv)
-{
-	floatDivEl = document.getElementById(floatDiv);
-	fixedDivEl = document.getElementById(fixedDiv);
-	if(floatDivEl && fixedDivEl)
-	{
-		floatHeight = floatDivEl.offsetHeight;
-		fixedHeight = fixedDivEl.offsetHeight;
-		if(type == 1)
-		{
-			if(topDiv)
-			{
-				floatHeight += document.getElementById(topDiv).offsetHeight;
-			}
-			if(floatHeight > fixedHeight)
-			{
-				fixedDivEl.style.height = floatHeight+'px';
-			}
-		}
-		else
-		{
-			if(fixedHeight > floatHeight)
-			{
-				floatDivEl.style.height = fixedHeight+'px';
-			}
-		}
-	}
-}
-
-function setCheck(checkDiv, checkField)
-{
-	realField = eval('document.loginForm.'+checkField);
-	curVal = realField.value;
-	if(curVal == 0)
-	{
-		document.getElementById(checkDiv).style.color = '#909090';
-		realField.value = 1;
-	}
-	else
-	{
-		document.getElementById(checkDiv).style.color = '#000000';
-		realField.value = 0;
-	}
-}
 
 function createQuery2( postUrl, returnFn, postData )
 {
-	uid = Math.round(Math.random()*100000);
-	rUid = "requester"+uid;
+	var uid = Math.round(Math.random()*100000);
+	var rUid = "requester"+uid;
 	eval(rUid+" = new xHttpQuery_Post();");
 	eval(rUid+".postUrl = postUrl;");
 	eval(rUid+".returnFn = returnFn;");
@@ -2273,6 +2229,7 @@ function xHttpQuery_Post()
 			this.dataEncoded = true;
 		}
 		updateInProgress = true;
+		var req;
 		if ( window.XMLHttpRequest )
 		{
 			req = new XMLHttpRequest();
@@ -2290,15 +2247,6 @@ function xHttpQuery_Post()
 			req.send( this.postData );
 		}
 	}
-}
-
-function GetNameHistory( a_el )
-{
-	//createQuery2( profileURL + '/namehistory/', ReceiveNameHistory, { "json": 1 } );
-	steamId = a_el.id.replace( /namehistory_link_/, '' );
-//	alert( steamId );
-	$('namehistory_'+steamId).show();
-	//alert( a_el.id + "\n" + a_el.href );
 }
 
 function winDim(wh, vs)
@@ -2327,7 +2275,7 @@ function getGoodElement(el,nn,cn,next)
 	{
 		el = el.parentNode;
 	}
-	thisClass = ' '+el.className+' ';
+	var thisClass = ' '+el.className+' ';
 	if( el.nodeName && el.nodeName.toLowerCase() != "body" && thisClass.indexOf(' '+cn+' ') == -1)
 	{
 		return getGoodElement(el,nn,cn,1);
@@ -2347,8 +2295,8 @@ function addGameActions()
 	var pageDivs = document.getElementsByTagName("div");
 	for(var x = 0; x < pageDivs.length; x++)
 	{
-		tempClassName = " "+pageDivs[x].className+" ";
-		tempParentClassName = " "+pageDivs[x].parentNode.className+" ";
+		var tempClassName = " "+pageDivs[x].className+" ";
+		var tempParentClassName = " "+pageDivs[x].parentNode.className+" ";
 		if(tempClassName.indexOf(" gameContainer ") != -1 || tempParentClassName.indexOf(" gameContainer ") != -1)
 		{
 			addEvent(pageDivs[x], "mouseover", listItem_hilite, false);
@@ -2360,26 +2308,26 @@ function addGameActions()
 
 function getPopPos(e, pw, ph, offset)
 {
-	w = winDim('w','v');
-	h = winDim('h','v');
-	sl = winDim('w','s');
-	st = winDim('h','s');
+	var w = winDim('w','v');
+	var h = winDim('h','v');
+	var sl = winDim('w','s');
+	var st = winDim('h','s');
 	// mouse x/y within viewport
-	vmX = e.clientX;
-	vmY = e.clientY;
+	var vmX = e.clientX;
+	var vmY = e.clientY;
 	// mouse x/y within document
-	smX = vmX + sl;
-	smY = vmY + st;
-	l = (pw > vmX) ? (smX + offset) : (smX - pw - offset);
-	t = (ph > vmY) ? (smY + offset) : (smY - ph - offset);
-	popTL = new Array(t, l);
+	var smX = vmX + sl;
+	var smY = vmY + st;
+	var l = (pw > vmX) ? (smX + offset) : (smX - pw - offset);
+	var t = (ph > vmY) ? (smY + offset) : (smY - ph - offset);
+	var popTL = new Array(t, l);
 	return popTL;
 }
 
 var keepTooltip = false;
 function tooltipCreate(tipEl, e)
 {
-	ttEl = document.getElementById('tooltip');
+	var ttEl = document.getElementById('tooltip');
 	if(ttEl)
 	{
 		ttEl.parentNode.removeChild(ttEl);
@@ -2389,7 +2337,7 @@ function tooltipCreate(tipEl, e)
 	ttEl.style.position = 'absolute';
 	ttEl.appendChild(tipEl);
 	document.getElementsByTagName('body')[0].appendChild(ttEl);
-	tipTL = getPopPos(e, ttEl.clientWidth, ttEl.clientHeight, 6);
+	var tipTL = getPopPos(e, ttEl.clientWidth, ttEl.clientHeight, 6);
 	ttEl.style.top = tipTL[0] + 'px';
 	ttEl.style.left = tipTL[1] + 'px';
 }
@@ -2402,7 +2350,7 @@ function tooltipDestroy(go)
 	}
 	else
 	{
-		ttEl = document.getElementById('tooltip');
+		var ttEl = document.getElementById('tooltip');
 		if(ttEl)
 		{
 			ttEl.parentNode.removeChild(ttEl);
@@ -2414,9 +2362,9 @@ function getElement( elementId )
 {
 	var elem;
 	if ( document.getElementById ) // standard compliant method
-		elem = document.getElementById( elementId )
+		elem = document.getElementById( elementId );
 	else if ( document.all ) // old msie versions
-		elem = document.all[ elementId ]
+		elem = document.all[ elementId ];
 	else
 		elem = false;
 
@@ -2434,7 +2382,7 @@ function setImage( elementId, strImage )
 
 function iSwapFullURL( imgID, newImg )
 {
-	newImgPath = newImg;
+	var newImgPath = newImg;
 	setImage( imgID, newImgPath );
 }
 
@@ -2541,7 +2489,7 @@ FixedElementOnScrollWrapper = Class.create({
 
 function iSwap( imgID, newImg )
 {
-	newImgPath = "https://steamcommunity-a.akamaihd.net/public/images/" + newImg;
+	var newImgPath = "https://steamcommunity-a.akamaihd.net/public/images/" + newImg;
 	setImage( imgID, newImgPath );
 }
 

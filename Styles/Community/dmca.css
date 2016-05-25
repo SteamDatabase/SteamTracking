@@ -1,7 +1,10 @@
 
 body {
-	background: #262627 url('https://alden.valvesoftware.com/community/public/images/groups/group_page_background.png') top repeat-x;
 	background-position: 0 105px;
+	color: #c6d4df;
+}
+.req {
+	color: #ca6a0c;
 }
 .dmca_page_title
 {
@@ -17,8 +20,7 @@ body {
 	position: relative;
 	padding-bottom: 20px;
 	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x,
-				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
+	background:	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
 				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
 }
 
@@ -79,10 +81,13 @@ body {
 input[type=text], input[type=password], select {
 	font-size: 14px;
 	line-height: 20px;
-	background-color: #565658;
-	border: solid 1px #262627;
-	box-shadow: 1px 1px 0px #39393A;
+
+	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
-	padding: 4px 5px 4px 8px;
-	color: #BFBFBF;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+	margin-bottom: 6px;
+	outline: none;
+	padding: 4px 6px;
 }

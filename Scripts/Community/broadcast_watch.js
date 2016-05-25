@@ -61,7 +61,7 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	{
 		this.m_ulViewerToken = 0;
 	}
-}
+};
 
 CBroadcastWatch.s_UpdateTimeoutSec = 60;
 CBroadcastWatch.k_InBrowser = 1;
@@ -72,22 +72,22 @@ CBroadcastWatch.prototype.ToggleStats = function()
 {
 	if ( this.m_DASHPlayerStats )
 		this.m_DASHPlayerStats.Toggle();
-}
+};
 
 CBroadcastWatch.prototype.GetChat = function()
 {
 	return this.m_chat;
-}
+};
 
 CBroadcastWatch.prototype.GetBroadcastID = function()
 {
 	return this.m_ulBroadcastID;
-}
+};
 
 CBroadcastWatch.prototype.IsBroadcaster = function()
 {
 	return (this.m_ulBroadcastSteamID == this.m_ulViewerSteamID);
-}
+};
 
 CBroadcastWatch.prototype.ShowVideoError = function( strError )
 {
@@ -103,7 +103,7 @@ CBroadcastWatch.prototype.ShowVideoError = function( strError )
 		$J( '#PageLoadingText' ).addClass( 'Error' );
 		$J( '#LoadingContent' ).addClass( 'HideThrobber' );
 	}
-}
+};
 
 CBroadcastWatch.prototype.SetVideoLoadingText = function( strText )
 {
@@ -115,7 +115,7 @@ CBroadcastWatch.prototype.SetVideoLoadingText = function( strText )
 	{
 		$J('#PageLoadingText').html( strText );
 	}
-}
+};
 
 CBroadcastWatch.prototype.UnlockH264 = function()
 {
@@ -128,7 +128,7 @@ CBroadcastWatch.prototype.UnlockH264 = function()
 	window.open( 'steam://unlockh264/' );
 	this.SetVideoLoadingText( 'Updating Steam...' );
 	this.WaitUnlockH264( Date.now() );
-}
+};
 
 CBroadcastWatch.prototype.WaitUnlockH264 = function( rtStart )
 {
@@ -146,7 +146,7 @@ CBroadcastWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 	var _watch = this;
 	window.setTimeout( function() { _watch.WaitUnlockH264( rtStart ); }, 5000 );
-}
+};
 
 CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 {
@@ -188,7 +188,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 
 		this.GetBroadcastMPD();
 	}
-}
+};
 
 CBroadcastWatch.prototype.SetGameDataUpdateFrequency = function( flFreq )
 {
@@ -196,39 +196,39 @@ CBroadcastWatch.prototype.SetGameDataUpdateFrequency = function( flFreq )
 		return;
 
 	CDASHPlayer.GAMEDATA_TRIGGER_MS = 1000 / Math.max( 3, Math.min( 10, flFreq ) );
-}
+};
 
 CBroadcastWatch.prototype.DisableChatTooltips = function()
 {
 	this.m_bDisableChatTooltips = true;
-}
+};
 
 CBroadcastWatch.prototype.OnPlayerBufferingComplete = function()
 {
 	$J( '#PageContents' ).removeClass( 'LoadingVideo' );
-}
+};
 
 CBroadcastWatch.prototype.OnPlayerDownloadFailed = function()
 {
 	this.SetVideoLoadingText( 'Loading...' );
 	this.GetBroadcastMPD();
-}
+};
 
 CBroadcastWatch.prototype.OnPlayerPlaybackError = function()
 {
 	this.ShowVideoError( 'An unexpected error occurred while playing this video' );
-}
+};
 
 CBroadcastWatch.prototype.OnGameFrameReceived = function( pts, Data )
 {
 	this.PostMessageToIFrameParent( "OnGameDataReceived", { pts: pts, data: Data } );
-}
+};
 
 CBroadcastWatch.prototype.AddBroadcasterName = function( str )
 {
 	var strEscaped = $J( '<span/>' ).text( this.m_strBroadcastName ).html();
 	return str.replace( /%s/, strEscaped );
-}
+};
 
 function LocalizeCount( strSingular, strPlural, nValue )
 {
@@ -349,7 +349,7 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 	{
 		_watch.ShowVideoError( 'An unexpected error occurred while trying to view this broadcast' );
 	});
-}
+};
 
 CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 {
@@ -359,7 +359,7 @@ CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 	this.m_player.Close();
 	this.m_DASHPlayerStats.Reset();
 	this.m_player.PlayMPD( url );
-}
+};
 
 CBroadcastWatch.prototype.OnVideoIFrameBroadcastIDChanged = function( ulBroadcastID )
 {
@@ -368,12 +368,12 @@ CBroadcastWatch.prototype.OnVideoIFrameBroadcastIDChanged = function( ulBroadcas
 
 	this.m_chat.RequestChatInfo( ulBroadcastID );
 	this.HideLoadingPanel();
-}
+};
 
 CBroadcastWatch.prototype.HideLoadingPanel = function()
 {
 	$J( '#PageContents' ).addClass( 'ShowPlayer' );
-}
+};
 
 CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 {
@@ -400,7 +400,7 @@ CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 	{
 		_watch.ScheduleBroadcastInfoUpdate();
 	});
-}
+};
 
 CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 {
@@ -468,7 +468,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	}
 
 	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged", { viewer_count: data.viewer_count } );
-}
+};
 
 function OpenBroadcastLink()
 {
@@ -481,7 +481,7 @@ CBroadcastWatch.prototype.ScheduleBroadcastInfoUpdate = function()
 {
 	var _watch = this;
 	this.m_timeoutUpdate = setTimeout( function() { _watch.UpdateBroadcastInfo() }, CBroadcastWatch.s_UpdateTimeoutSec * 1000 );
-}
+};
 
 CBroadcastWatch.prototype.SubmitChat = function()
 {
@@ -489,12 +489,12 @@ CBroadcastWatch.prototype.SubmitChat = function()
 	{
 		this.m_chat.ChatSubmit();
 	}
-}
+};
 
 CBroadcastWatch.prototype.FocusChatTextArea = function()
 {
 	$J( chatmessage ).attr( 'placeholder', '' );
-}
+};
 
 function CreateUnmuteFunc( chat, viewer, elMute )
 {
@@ -537,7 +537,7 @@ CBroadcastWatch.prototype.ShowViewers = function()
 	$J( '#ChatViewersBtn' ).addClass( 'ViewersVisible' );
 
 	this.UpdateBroadcastViewerUI();
-}
+};
 
 CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 {
@@ -605,7 +605,7 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 		$J( '#ViewerModalError' ).text( 'Failed to load user list' );
 		$J( '#ViewerModalError' ).show();
 	});
-}
+};
 
 CBroadcastWatch.prototype.CloseViewers = function()
 {
@@ -619,17 +619,17 @@ CBroadcastWatch.prototype.CloseViewers = function()
 	$J( '#ViewerModal' ).hide();
 	$J( '#ChatViewerModalBackdrop' ).hide();
 	$J( '#ModalBackground' ).hide();
-}
+};
 
 CBroadcastWatch.prototype.MinimizeChat = function()
 {
 	$J( '#PageContents' ).addClass( 'MinimizedChat' );
-}
+};
 
 CBroadcastWatch.prototype.MaximizeChat = function()
 {
 	$J( '#PageContents' ).removeClass( 'MinimizedChat' );
-}
+};
 
 CBroadcastWatch.prototype.ReportBroadcast = function()
 {
@@ -650,7 +650,7 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 		data = v_trim( data );
 		if ( data.length < 1 )
 		{
-			alert( 'Please enter a valid reason.')
+			alert( 'Please enter a valid reason.');
 			return;
 		}
 
@@ -671,7 +671,7 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 			alert( 'There was a problem submitting your request to our servers. Please try again.')
 		});
 	});
-}
+};
 
 CBroadcastWatch.prototype.UpdateBroadcast = function()
 {
@@ -690,18 +690,18 @@ CBroadcastWatch.prototype.UpdateBroadcast = function()
 	).done( function( json )
 	{
 		$J( '#BroadcastAdminUpdateResult' ).show();
-		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green')
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green');
 		$J( '#BroadcastAdminUpdateResult' ).text( 'Broadcast updated.' );
 		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	})
 	.fail( function()
 	{
 		$J( '#BroadcastAdminUpdateResult' ).show();
-		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red')
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red');
 		$J( '#BroadcastAdminUpdateResult' ).text( 'Failed to update broadcast.' );
 		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	});
-}
+};
 
 CBroadcastWatch.prototype.StopBroadcast = function()
 {
@@ -722,18 +722,18 @@ CBroadcastWatch.prototype.StopBroadcast = function()
 	).done( function( json )
 	{
 		$J( '#BroadcastAdminUpdateResult' ).show();
-		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green')
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green');
 		$J( '#BroadcastAdminUpdateResult' ).text( 'Broadcast stopped.' );
 		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	})
 	.fail( function()
 	{
 		$J( '#BroadcastAdminUpdateResult' ).show();
-		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red')
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red');
 		$J( '#BroadcastAdminUpdateResult' ).text( 'Failed to stop broadcast' );
 		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	});
-}
+};
 
 CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data )
 {
@@ -741,5 +741,5 @@ CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data
 		return;
 
 	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
-}
+};
 

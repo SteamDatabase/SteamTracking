@@ -213,6 +213,10 @@ select {
 	border-right: 0px;
 }
 
+.rightcol .review_developer_response_container .leftcol {
+	display: none;
+}
+
 .review_developer_response_title
 {
 	padding-bottom: 5px;

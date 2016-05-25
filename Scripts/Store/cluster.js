@@ -138,14 +138,14 @@ Cluster.prototype.initSlider = function()
 		value: 0,
 		fnOnChange: function( value, bInDrag ) { _this.sliderOnChange( value, bInDrag ); }
 	});
-}
+};
 
 Cluster.prototype.startTimer = function()
 {
 	this.clearInterval();
 	var _this = this;
 	this.interval = window.setInterval( function() { _this.scrollRight( null, true ); }, 5000 );
-}
+};
 
 Cluster.prototype.clearInterval = function()
 {
@@ -154,19 +154,19 @@ Cluster.prototype.clearInterval = function()
 		window.clearInterval( this.interval );
 		this.interval = false;
 	}
-}
+};
 
 Cluster.prototype.mouseOver = function( event )
 {
 	this.bSuppressScrolling = true;
 	this.clearInterval();
-}
+};
 
 Cluster.prototype.mouseOut = function( event )
 {
 	this.bSuppressScrolling = false;
 	this.startTimer();
-}
+};
 
 Cluster.prototype.scrollToOffset = function( nXOffset, nDuration, fnOnComplete )
 {
@@ -209,7 +209,7 @@ Cluster.prototype.scrollRight = function( event, bAutoScroll )
 	this.slider.SetValue( this.nCurCap * this.nCapWidth, bWrappedAround ? 0 : nDuration );
 	this.ensureImagesLoaded();
 	this.bInScroll = false;
-}
+};
 
 Cluster.prototype.scrollLeft = function()
 {
@@ -236,7 +236,7 @@ Cluster.prototype.scrollLeft = function()
 	this.slider.SetValue( this.nCurCap * this.nCapWidth, bWrappedAround ? 0 : nDuration );
 	this.ensureImagesLoaded();
 	this.bInScroll = false;
-}
+};
 
 Cluster.prototype.sliderOnChange = function( value, bInDrag )
 {
@@ -283,7 +283,7 @@ Cluster.prototype.sliderOnChange = function( value, bInDrag )
 			_this.scrollToOffset( nSnapValue, nAnimationSpeed, cb );
 		}
 	}
-}
+};
 
 Cluster.prototype.ensureImagesLoaded = function()
 {
@@ -301,7 +301,7 @@ Cluster.prototype.ensureImagesLoaded = function()
 			this.rgCapsToLoad[i] = null;
 		}
 	}
-}
+};
 
 Cluster.prototype.onCapsuleFullyVisible = function()
 {
@@ -309,7 +309,7 @@ Cluster.prototype.onCapsuleFullyVisible = function()
 	{
 		this.onChangeCB( this );
 	}
-}
+};
 
 Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOverride )
 {
@@ -329,17 +329,17 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 		else if ( oItem.status_string )
 			strStatus = oItem.status_string;
 		else if ( rgData && rgData.early_access )
-			strStatus = 'Early Access Now Available'
+			strStatus = 'Early Access Now Available';
 		else if ( oItem.new_on_steam )
 			strStatus = 'New On Steam';
 		else if ( oItem.top_seller )
 			strStatus = 'Top Seller';
 		else if ( rgData && rgData.coming_soon )
-			strStatus = 'Pre-Purchase Now'
+			strStatus = 'Pre-Purchase Now';
 		else if ( rgData && rgData.video )
-			strStatus = 'Now Available to Watch'
+			strStatus = 'Now Available to Watch';
 		else
-			strStatus = 'Now Available'
+			strStatus = 'Now Available';
 
 		// navigation metrics feature
 		var strFeature = 'main_cluster';

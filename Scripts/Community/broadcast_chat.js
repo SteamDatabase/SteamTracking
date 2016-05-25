@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 var CBroadcastChat = function( broadcastSteamID )
 {
@@ -6,7 +6,7 @@ var CBroadcastChat = function( broadcastSteamID )
 	this.m_ulBroadcastID = 0;
 
 	this.m_strPersonaName = '';
-	this.m_steamID = ''
+	this.m_steamID = '';
 	this.m_unInstanceID = Math.floor( Math.random() * 4294967296 );
 	this.m_webapi = null;
 
@@ -56,7 +56,7 @@ CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","d
 CBroadcastChat.prototype.GetChatID = function()
 {
 	return this.m_ulChatID;
-}
+};
 
 CBroadcastChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 {
@@ -71,7 +71,7 @@ CBroadcastChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 	}
 	var strRegex = ':(' + rgEmoticonsStripped.join( '|' ) + '):';
 	this.m_regexUserEmoticons = new RegExp( strRegex, 'g' );
-}
+};
 
 CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 {
@@ -141,7 +141,7 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 CBroadcastChat.prototype.log = function( strMsg )
 {
 	console.log("%c BroadcastChat: " + strMsg, 'background: #171717; color: #57cbde');
-}
+};
 
 CBroadcastChat.prototype.BeginRequestLoop = function()
 {
@@ -294,7 +294,7 @@ CBroadcastChat.prototype.SyncChat = function()
 	this.m_tsFirstRequest = null;
 	this.m_nFromFirstRequestMS = 0;
 	this.m_nNextChatTS = 0;
-}
+};
 
 CBroadcastChat.prototype.AddLinks = function( strHTML )
 {
@@ -326,7 +326,7 @@ CBroadcastChat.prototype.AddLinks = function( strHTML )
 	} );
 
 	return strHTML;
-}
+};
 
 CBroadcastChat.prototype.AddEmoticons = function( strHTML, steamID, bLocal )
 {
@@ -335,7 +335,7 @@ CBroadcastChat.prototype.AddEmoticons = function( strHTML, steamID, bLocal )
 		regexEmoticons = this.m_regexUserEmoticons;
 
 	return strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' );
-}
+};
 
 
 CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame, steamID, strMessage, bLocal )
@@ -379,7 +379,7 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	}
 
 	this.UpdateScroll();
-}
+};
 
 CBroadcastChat.prototype.TrimChat = function()
 {
@@ -397,7 +397,7 @@ CBroadcastChat.prototype.TrimChat = function()
 
 	$box.scrollTop( $box.scrollTop() - (nPrevHeight - $box[0].scrollHeight ) );
 	$J('.scrollbar').perfectScrollbar('update');
-}
+};
 
 CBroadcastChat.prototype.UpdateScroll = function()
 {
@@ -408,12 +408,12 @@ CBroadcastChat.prototype.UpdateScroll = function()
 		this.ScrollToBottom();
 
 	this.m_nLastHeight = $J('#ChatBox')[0].offsetHeight;
-}
+};
 
 CBroadcastChat.prototype.ScrollToBottom = function()
 {
 	$J('#ChatBox').scrollTop( $J('#ChatBox').prop("scrollHeight") );
-}
+};
 
 CBroadcastChat.prototype.DisplayChatError = function( strError )
 {
@@ -422,7 +422,7 @@ CBroadcastChat.prototype.DisplayChatError = function( strError )
 	eleMessage.show();
 	$J('#ChatMessages').append( eleMessage );
 	$J('#ChatBox').scrollTop( $J( '#ChatBox' ).prop( "scrollHeight" ) );
-}
+};
 
 CBroadcastChat.prototype.DisplayChatNotification = function( strNotification )
 {
@@ -431,7 +431,7 @@ CBroadcastChat.prototype.DisplayChatNotification = function( strNotification )
 	eleMessage.show();
 	$J('#ChatMessages').append( eleMessage );
 	$J('#ChatBox').scrollTop( $J( '#ChatBox' ).prop( "scrollHeight" ) );
-}
+};
 
 CBroadcastChat.prototype.ChatSubmit = function()
 {
@@ -472,7 +472,7 @@ CBroadcastChat.prototype.ChatSubmit = function()
 	{
 		_chat.DisplayChatError( 'Failed to send chat message: %s'.replace( /%s/, strMessage ) );
 	});
-}
+};
 
 CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
 {
@@ -501,7 +501,7 @@ CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
 	var nTop = rectViewerBtn.bottom - rectBody.top + 2;
 	var nRight = rectBody.right - rectViewerBtn.right;
 	$J( '#ChatMessageMenu' ).css( {top: nTop, right: nRight} );
-}
+};
 
 CBroadcastChat.prototype.HideChatMessageMenu = function()
 {
@@ -510,7 +510,7 @@ CBroadcastChat.prototype.HideChatMessageMenu = function()
 
 	$J( '#ChatMessageMenuBackground' ).hide();
 	this.UpdateScroll();
-}
+};
 
 CBroadcastChat.prototype.MuteChatMessageUser = function()
 {
@@ -520,7 +520,7 @@ CBroadcastChat.prototype.MuteChatMessageUser = function()
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
 	this.UpdateScroll();
-}
+};
 
 CBroadcastChat.prototype.UnmuteChatMessageUser = function()
 {
@@ -530,7 +530,7 @@ CBroadcastChat.prototype.UnmuteChatMessageUser = function()
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
 	this.UpdateScroll();
-}
+};
 
 CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
 {
@@ -538,7 +538,7 @@ CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
 	var elChatName = $J( '.tmplChatName', elMessage );
 
 	this.MuteUser( steamID, elChatName.text() );
-}
+};
 
 CBroadcastChat.prototype.UnmuteUserByMessage = function( elMessage )
 {
@@ -546,7 +546,7 @@ CBroadcastChat.prototype.UnmuteUserByMessage = function( elMessage )
 	var elChatName = $J( '.tmplChatName', elMessage );
 
 	this.UnmuteUser( steamID, elChatName.text() );
-}
+};
 
 CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
 {
@@ -587,7 +587,7 @@ CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
 
 		if ( !bOwner )
 		this.DisplayChatNotification( '%s has been muted'.replace( /%s/, strPersonaName ) );
-}
+};
 
 CBroadcastChat.prototype.UnmuteUser = function( steamID, strPersonaName )
 {
@@ -622,7 +622,7 @@ CBroadcastChat.prototype.UnmuteUser = function( steamID, strPersonaName )
 	{
 		this.DisplayChatNotification( '%s has been unmuted'.replace( /%s/, strPersonaName ) );
 	}
-}
+};
 
 CBroadcastChat.prototype.IsUserMutedLocally = function( steamID )
 {
@@ -630,7 +630,7 @@ CBroadcastChat.prototype.IsUserMutedLocally = function( steamID )
 		return true;
 
 	return false;
-}
+};
 
 CBroadcastChat.prototype.GetMutedUsers = function()
 {
@@ -641,7 +641,7 @@ CBroadcastChat.prototype.GetMutedUsers = function()
 	});
 
 	return rgSteamID;
-}
+};
 
 CBroadcastChat.prototype.RemoveUserMessages = function( steamID )
 {
@@ -649,7 +649,7 @@ CBroadcastChat.prototype.RemoveUserMessages = function( steamID )
 	$J( '#ChatMessages' ).find( str ).remove();
 
 	$J('.scrollbar').perfectScrollbar('update');
-}
+};
 
 CBroadcastChat.prototype.OnRemoveUserMessages = function()
 {
@@ -681,4 +681,4 @@ CBroadcastChat.prototype.OnRemoveUserMessages = function()
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
 	this.UpdateScroll();
-}
+};

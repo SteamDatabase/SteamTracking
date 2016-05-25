@@ -297,7 +297,7 @@ HelpWizard = {
 		} );
 	},
 
-	CancelHelpRequest: function( help_requestid, transid, gid_line_item )
+	CancelHelpRequest: function( reference_code, transid, gid_line_item )
 	{
 		ShowConfirmDialog(
 				'Cancel your refund request',
@@ -310,10 +310,10 @@ HelpWizard = {
 				'I\'d like a refund'
 		).done( function() {
 			$J.ajax( {
-				url: 'https://help.steampowered.com/wizard/AjaxCancelHelpRequest/',
+				url: 'https://help.steampowered.com/wizard/AjaxCancelHelpRequest/' + reference_code,
 				type: 'POST',
 				data: $J.extend( {}, g_rgDefaultWizardPageParams, {
-					help_requestid: help_requestid
+					reference_code: reference_code
 				} )
 			} ).fail( function( jqxhr ) {
 				ShowAlertDialog( 'Cancel your refund request', 'There was a problem canceling your request. Please try again.' );
@@ -1283,13 +1283,14 @@ HelpWizard = {
 		}).fail(function (xhr) {
 
 		}).done(function (data) {
-			if ( data.success ) 
+			if ( data.success )
 			{
 				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID + "&code=" + data.code + "&account=" + data.accountid ;
 			}
 			else 
 			{
-				// TODO failed to verify card
+				var elError = $J( '#form_submit_error' );
+				elError.text( data.errorMsg ).slideDown();
 			}
 		});
 	},
@@ -1425,8 +1426,8 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 function ShowCancelPurchaseDialog(transid)
 {
 	var Modal = ShowConfirmDialog( 'Cancel this pending purchase?',
-		'<div class="help_dialog_text">' + 'This purchase is still pending. Your payment provider has not yet told us if they will charge you for this transaction.<br><br>Please contact your payment provider and verify the status of this purchase. If this purchase was not completed through your payment provider, you may cancel the purchase below.' + '</div>',
-	 	'This purchase was never completed',
+		'<div class="help_dialog_text">' + 'This purchase is still pending. Your payment provider has not yet told us if they will charge you for this transaction.<br><br>This will cancel the purchase on Steam.  If you haven\'t canceled this purchase with your payment provider, do so now to make sure they don\'t charge you.' + '</div>',
+	 	'Cancel my purchase',
 	 	'Close'
 	 );
 
@@ -2012,13 +2013,13 @@ HelpRequestPage = {
 		});
 	},
 
-	CloseHelpRequest: function( reference_code, help_requestid )
+	CloseHelpRequest: function( reference_code )
 	{
 		$J.ajax( {
 			url: 'https://help.steampowered.com/wizard/AjaxCancelHelpRequest/' + reference_code,
 			type: 'POST',
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
-				help_requestid: help_requestid,
+				reference_code: reference_code,
 				help_request_page: 1
 			} )
 		} ).fail( function( jqxhr ) {
@@ -2080,5 +2081,40 @@ function PopupCVV2Explanation()
 	{
 
 	}
+}
+
+function IsDigitOrEditKeypress( e )
+{
+	try
+	{
+		var keynum = 0;
+
+		if( e.keyCode )
+		{
+			keynum = e.keyCode;
+		}
+		else if( e.which )
+		{
+			keynum = e.which;
+		}
+
+		// tab
+		if ( keynum == 9 ) return true;
+		// backspace
+		if ( keynum == 8 ) return true;
+		// delete
+		if ( keynum == 46 ) return true;
+		// arrows
+		if ( keynum == 37 || keynum == 38 || keynum == 39 || keynum == 40 ) return true;
+
+		// digits
+		if ( keynum >= 48 && keynum <= 57 ) return true;
+	}
+	catch( e )
+	{
+
+	}
+
+	return false;
 }
 

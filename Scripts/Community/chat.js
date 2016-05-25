@@ -38,13 +38,13 @@ CChatFriend.prototype.ReadPersonaFields = function( rgFriendData )
 	this.m_bInGame = rgFriendData.m_bInGame || false;
 	this.m_nInGameAppID = rgFriendData.m_nInGameAppID || 0;
 	this.m_strInGameName = rgFriendData.m_strInGameName || '';
-}
+};
 
 // callbacks will be passed a reference to this object when persona state changes
 CChatFriend.prototype.RegisterOnPersonaStateChange = function ( fnOnChange )
 {
 	this.m_rgPersonaStateChangeListeners.push( fnOnChange );
-}
+};
 
 CChatFriend.prototype.Refresh = function( nRetryInterval )
 {
@@ -53,7 +53,7 @@ CChatFriend.prototype.Refresh = function( nRetryInterval )
 		url: 'https://steamcommunity.com/chat/friendstate/' + this.m_unAccountID,
 		type: 'GET'
 	}).done( function( data ) { _friend.OnRefreshedData( data, nRetryInterval ); } );
-}
+};
 
 CChatFriend.prototype.OnRefreshedData = function( data, nRetryInterval )
 {
@@ -73,7 +73,7 @@ CChatFriend.prototype.OnRefreshedData = function( data, nRetryInterval )
 		var _friend = this;
 		this.m_nRetryTimeoutID = window.setTimeout( function() { _friend.Refresh( nNextRetry ); }, nNextRetry );
 	}
-}
+};
 
 CChatFriend.prototype.OnPersonaStateChange = function()
 {
@@ -82,7 +82,7 @@ CChatFriend.prototype.OnPersonaStateChange = function()
 	{
 		this.m_rgPersonaStateChangeListeners[i]( this );
 	}
-}
+};
 
 CChatFriend.prototype.Render = function( target, bCurrentUser )
 {
@@ -171,7 +171,7 @@ CChatFriend.prototype.UnregisterPersonaElements = function( elFriend )
 			delete elFriend[varName];
 		}
 	}
-}
+};
 
 CChatFriend.prototype.RenderChatDialog = function( WebChat )
 {
@@ -263,24 +263,24 @@ CChatFriend.prototype.UpdateUnreadMessageDisplay = function( bFlash )
 			elUnreadMessages.hide();
 		}
 	}
-}
+};
 
 CChatFriend.prototype.FlashUnreadMessageDisplay = function( elUnreadMessages, cPulses )
 {
 	var elFlash = elUnreadMessages.children('.message_count_flash');
 	var _this = this;
 	elFlash.fadeIn( 50, function() { elFlash.fadeOut( 200, function() { if ( cPulses > 1 ) _this.FlashUnreadMessageDisplay( elUnreadMessages, cPulses - 1 ); } ); } );
-}
+};
 
 CChatFriend.prototype.BIsOnline = function()
 {
 	return this.m_ePersonaState != 0;
-}
+};
 
 CChatFriend.prototype.BIsInGame = function()
 {
 	return this.m_bInGame ? true : false;
-}
+};
 
 CChatFriend.prototype.GetOnlineState = function()
 {
@@ -314,7 +314,7 @@ CChatFriend.prototype.GetStateSortValue = function()
 		return 1;
 	else
 		return 0;
-}
+};
 
 CChatFriend.prototype.GetStatusDescription = function()
 {
@@ -358,7 +358,7 @@ CChatFriend.prototype.GetStatusDescription = function()
 			}
 		}
 	}
-}
+};
 
 CChatFriend.prototype.GetAvatarURL = function( size )
 {
@@ -445,17 +445,17 @@ CFriendsList.prototype.Toggle = function()
 {
 	if ( !this.m_bVisisble )
 	{
-		this.m_elFriendsList.show( 'fast' )
+		this.m_elFriendsList.show( 'fast' );
 		this.m_elGroupToggleControl.text( '–' );
 		this.m_bVisisble = true;
 	}
 	else
 	{
-		this.m_elFriendsList.hide( 'fast' )
+		this.m_elFriendsList.hide( 'fast' );
 		this.m_elGroupToggleControl.text( '+' );
 		this.m_bVisisble = false;
 	}
-}
+};
 
 CFriendsList.prototype.AddIfNotInList = function( Friend )
 {
@@ -471,11 +471,11 @@ CFriendsList.prototype.AddIfNotInList = function( Friend )
 	this.AddFriendToList( Friend );
 	this.m_bOnlineFriendCountDirty = true;
 	this.UpdateOnlineFriendCountDisplay();
-}
+};
 
 CFriendsList.prototype.AddFriendToList = function( Friend )
 {
-	var node = { m_Friend: Friend, m_elFriend: null, m_bWasOnline: false, m_bWasInGame: false, m_next: null, m_prev: null }
+	var node = { m_Friend: Friend, m_elFriend: null, m_bWasOnline: false, m_bWasInGame: false, m_next: null, m_prev: null };
 	node.m_next = node;
 	node.m_prev = node;
 	node.m_OnStateChangeClosure = CFriendsList.OnPersonaStateChangeClosure( this, node );
@@ -517,7 +517,7 @@ CFriendsList.prototype.BIsInCorrectPosition = function( node )
 
 	return 	( node.m_prev == null || CChatFriend.LessFunc( node.m_prev.m_Friend, node.m_Friend ) ) &&
 		( node.m_next == null || CChatFriend.LessFunc( node.m_Friend, node.m_next.m_Friend ) );
-}
+};
 
 CFriendsList.prototype.Insert = function( insert )
 {
@@ -775,7 +775,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
 		regexEmoticons = CWebChatDialog.s_regexMyEmoticons;
 
-	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' )
+	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' );
 
 	elText.html( strHTML );
 
@@ -998,7 +998,7 @@ CWebChat.prototype.GetPref = function( strPrefName )
 	}
 
 	return this.m_rgPrefs[strPrefName];
-}
+};
 
 CWebChat.prototype.SetPref = function( strPrefName, value )
 {
@@ -1008,7 +1008,7 @@ CWebChat.prototype.SetPref = function( strPrefName, value )
 		SetValueLocalStorage( 'webchat_' + strPrefName, value );
 	else
 		UnsetValueLocalStorage( 'webchat_' + strPrefName );
-}
+};
 
 CWebChat.prototype.SetOnline = function( bOnline )
 {
@@ -1036,14 +1036,14 @@ CWebChat.prototype.AttemptReconnect = function()
 
 	//TODO: we always wait 5 seconds before attempting to connect again
 	this.m_nReconnectTimer = window.setTimeout( $J.proxy( this.LogOn, this ), 5000 );
-}
+};
 
 CWebChat.prototype.LogOn = function()
 {
 	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Logon', { ui_mode: 'web' }, true, null, 15 /* timeout */ )
 		.done( $J.proxy( this.OnConnect, this ) )
 		.fail( $J.proxy( this.OnConnectFail, this ) );
-}
+};
 
 CWebChat.prototype.LogOff = function( bSendAsBeacon )
 {
@@ -1287,7 +1287,7 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 		else if ( !Friend.m_bChatHistoryLoaded )
 		{
 			var elDialog = $J('<div/>', {'class': 'chat_dialog'} );
-			$J('#chatlog').append( elDialog )
+			$J('#chatlog').append( elDialog );
 			var elHeader = Friend.RenderChatDialog( this );
 			var elContentWrapper = $J('<div/>', {'class': 'chat_dialog_content'} );
 			var elScrollWrapper = $J('<div/>', {'class': 'chat_dialog_scroll' } );
@@ -1405,7 +1405,7 @@ CWebChat.prototype.OnChatFormSubmit = function()
 		$J('#chatmessage').val( strMessage );
 		ShowAlertDialog( 'Failed to send chat message: An error was encountered while processing your request:' );
 	}
-}
+};
 
 CWebChat.prototype.OnWindowFocus = function()
 {
@@ -1415,12 +1415,12 @@ CWebChat.prototype.OnWindowFocus = function()
 			this.m_ActiveFriend.ResetUnreadMessageCount();
 		this.m_bWindowHasFocus = true;
 	}
-}
+};
 
 CWebChat.prototype.OnWindowBlur = function()
 {
 	this.m_bWindowHasFocus = false;
-}
+};
 
 CWebChat.prototype.SettingsDialog = function()
 {
@@ -1450,7 +1450,7 @@ CWebChat.prototype.SettingsDialog = function()
 
 		_chat.SetPref( 'soundmuted', !bEnabled );
 		return true;
-	}
+	};
 	var $SoundCheckbox = this.SettingsCheckbox( 'settings_sound', 'Play a sound', bSoundChecked, fnSoundChange, !bSoundEnabled, strNotes );
 	$Dialog.append( $SoundCheckbox );
 
@@ -1465,7 +1465,7 @@ CWebChat.prototype.SettingsDialog = function()
 			$J('.chat_timestamp').hide();
 
 		return true;
-	}
+	};
 	var $TimestampCheckbox = this.SettingsCheckbox( 'settings_timestamps', 'Display timestamps in chat log', bTimestampChecked, fnTimestampChange );
 	$Dialog.append( $TimestampCheckbox );
 
@@ -1492,7 +1492,7 @@ CWebChat.prototype.SettingsDialog = function()
 		// stop watching when the modal gets dismissed
 		Modal.always( function() { window.clearInterval( nNotificationCheckInterval ) } );
 	}
-}
+};
 
 CWebChat.prototype.SettingsNotificationCheckbox = function()
 {
@@ -1524,10 +1524,10 @@ CWebChat.prototype.SettingsNotificationCheckbox = function()
 			Notification.requestPermission();
 		}
 		return true;
-	}
+	};
 
 	return this.SettingsCheckbox( 'settings_notifications', 'Display a desktop notification', bNotificationsChecked, fnNotificationsChange, !bNotificationsEnabled, strNotes );
-}
+};
 
 CWebChat.prototype.SettingsCheckbox = function( strId, strLabel, bChecked, fnOnChange, bDisabled, strNotes )
 {
@@ -1556,7 +1556,7 @@ CWebChat.prototype.SettingsCheckbox = function( strId, strLabel, bChecked, fnOnC
 	});
 
 	return $Row;
-}
+};
 
 CWebChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 {
@@ -1571,7 +1571,7 @@ CWebChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 	}
 	var strRegex = ':(' + rgEmoticonsStripped.join( '|' ) + '):';
 	CWebChatDialog.s_regexMyEmoticons = new RegExp( strRegex, 'g' );
-}
+};
 
 function InitializeChat()
 {
@@ -1696,6 +1696,6 @@ var CTitleManager = {
 		if ( this.m_rgCurrentMessages.length == 1 )
 			this.ClearInterval();
 	}
-}
+};
 
 

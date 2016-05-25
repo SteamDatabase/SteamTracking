@@ -181,7 +181,7 @@ RemoveListingDialog = {
 			event.stop();
 		}
 	}
-}
+};
 
 function RemoveMarketListing( sElementPrefix, listingid, appid, contextid, itemid )
 {
@@ -250,7 +250,7 @@ CancelMarketBuyOrderDialog = {
 	OnFailure: function( transport ) {
 		alert( 'failed to cancel buy order' );
 	}
-}
+};
 
 function CancelMarketBuyOrder( buy_orderid )
 {
@@ -519,7 +519,7 @@ CreateBuyOrderDialog = {
 		}
 		this.m_bActive = false;
 	}
-}
+};
 
 function Market_ShowBuyOrderPopup( unAppId, sMarketHashName, strMarketItemName ) {
 	if ( typeof g_rgWalletInfo != 'undefined' && g_rgWalletInfo['wallet_currency'] == 0 )
@@ -908,7 +908,7 @@ BuyItemDialog = {
 	OnInputKeyUp: function( event ) {
 
 	}
-}
+};
 
 function BuyMarketListing( sElementPrefix, listingid, appid, contextid, itemid )
 {
@@ -946,11 +946,11 @@ function MergeWithAssetArray( newAssets )
 		return;
 	}
 
-	for( appid in newAssets )
+	for( var appid in newAssets )
 	{
-		for ( contextid in newAssets[appid] )
+		for ( var contextid in newAssets[appid] )
 		{
-			for ( assetid in newAssets[appid][contextid] )
+			for ( var assetid in newAssets[appid][contextid] )
 			{
 				if ( typeof( g_rgAssets[appid] ) == 'undefined' )
 				{
@@ -975,7 +975,7 @@ function MergeWithListingInfoArray ( newListings )
 		return;
 	}
 
-	for( listingid in newListings )
+	for( var listingid in newListings )
 	{
 		g_rgListingInfo[listingid] = newListings[listingid];
 	}
@@ -988,7 +988,7 @@ function MergeWithAppDataArray( newAppData )
 		return;
 	}
 
-	for ( appid in newAppData )
+	for ( var appid in newAppData )
 	{
 		if ( typeof g_rgAppContextData[appid] == 'undefined' )
 		{
@@ -1398,7 +1398,7 @@ AdvancedSearchDialog = {
 			event.stop();
 		}
 	}
-}
+};
 
 function ShowAdvancedSearchOptions()
 {
@@ -1420,7 +1420,7 @@ function ProcessFilterData( data )
 	elFilters.empty();
 	elFilters.css( 'text-align', 'inherit' );
 
-	var cCategories = 0
+	var cCategories = 0;
 	$J.each( data.facets, function( sCategory, oCategory ) {
 		cCategories++;
 	} );
@@ -1645,7 +1645,7 @@ var g_bMarketWindowHidden = false;
 function CreatePopularItemClosure( data, iLink )
 {
 	return function() {
-		var elOldLink = $J('#resultlink_' + iLink)
+		var elOldLink = $J('#resultlink_' + iLink);
 
 		// Don't do anything if none of the data changed
 		if ( g_rgPreviousPopularData == null ||
@@ -2001,7 +2001,7 @@ ItemActivityTicker = {
 
 		setTimeout( function() { ItemActivityTicker.AdvanceTicker(); }, this.m_nTickerAdvanceRate );
 	}
-}
+};
 
 $J(function() {
 	$$('a.tooltip').each( function( elem ) {

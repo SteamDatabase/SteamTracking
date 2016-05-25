@@ -367,7 +367,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 	$Select.val( g_AchievementShowcaseLastApp );
 
 
-	var $SelectInstructions = $J('<div/>', {'class': 'showcase_achievement_picker_instructions' } ).text( 'Select a game to see your achievements from that game.' )
+	var $SelectInstructions = $J('<div/>', {'class': 'showcase_achievement_picker_instructions' } ).text( 'Select a game to see your achievements from that game.' );
 
 	var $AchievementCtn = $J('<div/>', {'class': 'showcase_achievement_picker_list'} );
 
@@ -409,7 +409,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 				} );
 			}
 		}
-	}
+	};
 
 	fnOnSelectChange();
 	$Select.change( fnOnSelectChange );
@@ -663,11 +663,11 @@ function updateGroup(go)
 {
 	if(go == 1)
 	{
-		groupList = document.getElementById('primaryGroup');
+		var groupList = document.getElementById('primaryGroup');
 		addClass( 'primaryGroup', 'disabled' );
 		currentDisabled['primaryGroup'] = true;
 		groupList.blur();
-		activeGroup = groupList.options[groupList.selectedIndex].value;
+		var activeGroup = groupList.options[groupList.selectedIndex].value;
 		var postData = {
 			"xml": 1,
 			"type": "groupDetails",
@@ -725,9 +725,10 @@ function setupEditors()
 				currentDisabled[i.id] = false;
 				addEvent(i, 'focus', checkAllowInput, false);
 				// if there's an individual save button, attach save handler and hide button
+				var saveButton;
 				if(i.id.indexOf('weblink_') != -1)
 				{
-					thisWLink = i.id.substr(8,1);
+					var thisWLink = i.id.substr(8,1);
 					saveButton = document.getElementById('save_weblink_'+thisWLink);
 				}
 				else
@@ -760,8 +761,8 @@ saveBatches['mainData'] = new Array(
 
 function batchSave(batchList)
 {
-	thisList = saveBatches[batchList];
-	for(x=0;x<thisList.length;x++)
+	var thisList = saveBatches[batchList];
+	for(var x=0;x<thisList.length;x++)
 	{
 		saveField(false, thisList[x]);
 	}
@@ -769,7 +770,7 @@ function batchSave(batchList)
 
 function validateFields()
 {
-	bOk = true;
+	var bOk = true;
 	if ( document.getElementById( 'personaName' ) && document.getElementById( 'personaName' ).value.length < 2 )
 	{
 		alert( 'Your Profile Name must be at least 2 characters long.' );
@@ -785,7 +786,7 @@ function validateFields()
 		alert( 'There is a maximum length of 3000 characters for summaries. Please shorten it and try again.' );
 		bOk = false;
 	}
-	for( x=1; x <= 3; x++ )
+	for( var x=1; x <= 3; x++ )
 	{
 		if ( document.getElementById( 'weblink_' + x + '_title' ) && document.getElementById( 'weblink_' + x + '_title' ).value.length > 128 )
 		{
@@ -816,6 +817,7 @@ function saveField(e, fId)
 	}
 	if(el || fId)
 	{
+		var fieldId;
 		if(!fId)
 		{
 			// id should be save_<associated field id>
@@ -825,7 +827,7 @@ function saveField(e, fId)
 		{
 			fieldId = fId;
 		}
-		dataField = document.getElementById(fieldId);
+		var dataField = document.getElementById(fieldId);
 		if(currentDisabled[dataField.id])
 		{
 			return false;
@@ -840,6 +842,7 @@ function saveField(e, fId)
 			currentDisabled[dataField.id] = true;
 			addClass( dataField.id, 'disabled' );
 			dataField.blur();
+			var newContent;
 			if(dataField.tagName == 'SELECT')
 			{
 				newContent = dataField.options[dataField.selectedIndex].value;
@@ -865,14 +868,14 @@ function receiveFieldSave()
 	{
 		if(req.status == 200)
 		{
-			response = req.responseXML.documentElement;
-			fieldId = response.getElementsByTagName('fieldId')[0].firstChild.nodeValue;
-			results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
+			var response = req.responseXML.documentElement;
+			var fieldId = response.getElementsByTagName('fieldId')[0].firstChild.nodeValue;
+			var results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
 			updateInProgress = false;
 
-				dataField = document.getElementById(fieldId);
+				var dataField = document.getElementById(fieldId);
 				dataField.disabled = false;
-				saveButton = document.getElementById('save_'+fieldId);
+				var saveButton = document.getElementById('save_'+fieldId);
 				if(saveButton)
 				{
 					saveButton.value = 'Save';
@@ -880,7 +883,7 @@ function receiveFieldSave()
 				}
 				if(results == "OK")
 				{
-					newContent = response.getElementsByTagName('newContent')[0].firstChild.nodeValue;
+					var newContent = response.getElementsByTagName('newContent')[0].firstChild.nodeValue;
 					dataField.value = newContent;
 					currentVals[fieldId] = dataField.value;
 					removeClass( fieldId, 'changed' );
@@ -910,21 +913,21 @@ function receiveGroupDetails()
 	{
 		if(req.status == 200)
 		{
-			response = req.responseXML.documentElement;
+			var response = req.responseXML.documentElement;
 			updateInProgress = false;
-			results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
+			var results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
 			if(results == "OK")
 			{
-				groupId = response.getElementsByTagName('groupId')[0].firstChild.nodeValue;
-				newGroupLink = response.getElementsByTagName('groupLink')[0].firstChild.nodeValue;
-				newGroupName = response.getElementsByTagName('groupName')[0].firstChild.nodeValue;
-				newGroupAbbreviation = response.getElementsByTagName('groupAbbreviation')[0].firstChild.nodeValue;
-				newGroupAvatar = response.getElementsByTagName('groupAvatar')[0].firstChild.nodeValue;
+				var groupId = response.getElementsByTagName('groupId')[0].firstChild.nodeValue;
+				var newGroupLink = response.getElementsByTagName('groupLink')[0].firstChild.nodeValue;
+				var newGroupName = response.getElementsByTagName('groupName')[0].firstChild.nodeValue;
+				var newGroupAbbreviation = response.getElementsByTagName('groupAbbreviation')[0].firstChild.nodeValue;
+				var newGroupAvatar = response.getElementsByTagName('groupAvatar')[0].firstChild.nodeValue;
 				
 				document.getElementById('primaryGroupAvatarImage').src = newGroupAvatar;
 				document.getElementById('groupLink').innerHTML = '<a href="'+newGroupLink+'">View '+newGroupName+'\'s profile</a>';
 				
-				groupList = document.getElementById('primaryGroup');
+				var groupList = document.getElementById('primaryGroup');
 				removeClass( 'primaryGroup', 'disabled' );
 				if(groupList.selectedIndex == currentVals['primaryGroup'] ) 
 				{
@@ -934,13 +937,13 @@ function receiveGroupDetails()
 				{
 					addClass( 'primaryGroup', 'changed' );
 				}
+				groupList.focus();
 			}
 			else
 			{
 				alert( "There was an error with your group selection.\\n\\nError:\\n&quot;+results+&quot;\\n\\nPlease address the error and try again." );
 			}
 			currentDisabled['primaryGroup'] = false;
-			groupList.focus();
 		}
 	}
 }
@@ -1108,7 +1111,7 @@ function updateLocation(e)
 		if ( !eCountryC && !eStateC && !eCityC )
 			return;
 
-		cVal = el.selectedIndex;
+		var cVal = el.selectedIndex;
 		if(el.id == 'country')
 		{
 			// change of country field fired this event
@@ -1198,6 +1201,7 @@ function checkField(e)
 	el = window.event ? window.event.srcElement : e ? e.target : null;
 	if(el)
 	{
+		var cVal;
 		if(el.tagName == 'SELECT')
 		{
 			cVal = el.selectedIndex;
@@ -1206,12 +1210,14 @@ function checkField(e)
 		{
 			cVal = el.value;
 		}
-		changed = false;
+
+		var changed = false;
+		var saveButton;
 		if(el.id.indexOf('weblink_') != -1)
 		{
-			thisWLink = el.id.substr(8,1);
-			wtitle = document.getElementById('weblink_'+thisWLink+'_title');
-			wurl = document.getElementById('weblink_'+thisWLink+'_url');
+			var thisWLink = el.id.substr(8,1);
+			var wtitle = document.getElementById('weblink_'+thisWLink+'_title');
+			var wurl = document.getElementById('weblink_'+thisWLink+'_url');
 			if(wtitle.value != currentVals['weblink_'+thisWLink+'_title'] || wurl.value != currentVals['weblink_'+thisWLink+'_url'])
 			{
 				changed = true;
@@ -1247,23 +1253,6 @@ function checkField(e)
 	}
 }
 
-function addWeblink()
-{
-	elLink2 = document.getElementById('weblink_2_title_block');
-	elLink3 = document.getElementById('weblink_3_title_block');
-	if(elLink2.style.display == 'none')
-	{
-		elLink2.style.display = 'block';
-		document.getElementById('weblink_2_url_block').style.display = 'block';
-	}
-	else if(elLink3.style.display == 'none')
-	{
-		elLink3.style.display = 'block';
-		document.getElementById('weblink_3_url_block').style.display = 'block';
-		document.getElementById('addWebsite').style.display = 'none';
-	}
-}
-
 function removeClass( elID, cName )
 {
 	el = document.getElementById( elID );
@@ -1276,8 +1265,8 @@ function removeClass( elID, cName )
 
 function addClass( elID, cName )
 {
-	el = document.getElementById( elID );
-	tmpClass = ' ' + el.className + ' ';
+	var el = document.getElementById( elID );
+	var tmpClass = ' ' + el.className + ' ';
 	if ( tmpClass.indexOf( cName ) != -1 )
 	{
 		return; // already has specified class

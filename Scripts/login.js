@@ -65,7 +65,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 	this.m_$ModalAuthCode = this.GetModalContent( 'loginAuthCodeModal' );
 	this.m_$ModalAuthCode.find('[data-modalstate]' ).each( function() {
 		$J(this).click( function() { _this.SetEmailAuthModalState( $J(this).data('modalstate') ); } );
-	})
+	});
 	this.m_$ModalAuthCode.find('form').submit( function(e) {
 		_this.SetEmailAuthModalState('submit');
 		e.preventDefault();
@@ -106,8 +106,8 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 		$J.ajax( { url: 'https://steamcommunity-a.akamaihd.net/public/shared/javascript/crypto/rsa.js', type: 'get', dataType: 'script', cache: true } );
 }
 
-CLoginPromptManager.prototype.BIsIos = function() { return this.m_strMobileClientType == 'ios'; }
-CLoginPromptManager.prototype.BIsAndroid = function() { return this.m_strMobileClientType == 'android'; }
+CLoginPromptManager.prototype.BIsIos = function() { return this.m_strMobileClientType == 'ios'; };
+CLoginPromptManager.prototype.BIsAndroid = function() { return this.m_strMobileClientType == 'android'; };
 
 CLoginPromptManager.prototype.BIsUserInMobileClientVersionOrNewer = function( nMinMajor, nMinMinor, nMinPatch ) {
 	if ( (!this.BIsIos() && !this.BIsAndroid()) || this.m_strMobileClientVersion == '' )
@@ -122,7 +122,7 @@ CLoginPromptManager.prototype.BIsUserInMobileClientVersionOrNewer = function( nM
 
 		return nMajor > nMinMajor || ( nMajor == nMinMajor && ( nMinor > nMinMinor || ( nMinor == nMinMinor && nPatch >= nMinPatch ) ) );
 	}
-}
+};
 
 CLoginPromptManager.prototype.GetParameters = function( rgParams )
 {
@@ -131,7 +131,7 @@ CLoginPromptManager.prototype.GetParameters = function( rgParams )
 		rgDefaultParams['sessionid'] = this.m_strSessionID;
 
 	return $J.extend( rgDefaultParams, rgParams );
-}
+};
 
 CLoginPromptManager.prototype.$LogonFormElement = function( strElementName )
 {
@@ -148,7 +148,7 @@ CLoginPromptManager.prototype.$LogonFormElement = function( strElementName )
 	{
 		return $J( elInput );
 	}
-}
+};
 
 CLoginPromptManager.prototype.HighlightFailure = function( msg )
 {
@@ -730,7 +730,7 @@ CLoginPromptManager.prototype.CancelTwoFactorAuthProcess = function()
 		this.LoginComplete();
 	else
 		this.ClearLoginForm();
-}
+};
 
 
 CLoginPromptManager.prototype.OnTwoFactorResetOptionsResponse = function( results )
@@ -749,14 +749,14 @@ CLoginPromptManager.prototype.OnTwoFactorResetOptionsResponse = function( result
 		this.SetTwoFactorAuthModalState( 'selfhelp_failure' );
 		$J( '#login_twofactorauth_details_selfhelp_failure' ).text( results.message );
 	}
-}
+};
 
 
 CLoginPromptManager.prototype.OnTwoFactorRecoveryFailure = function()
 {
 	this.SetTwoFactorAuthModalState( 'selfhelp_failure' );
 	$J( '#login_twofactorauth_details_selfhelp_failure' ).text( '' ); // v0v
-}
+};
 
 
 CLoginPromptManager.prototype.OnStartRemoveTwoFactorResponse = function( results )
@@ -770,7 +770,7 @@ CLoginPromptManager.prototype.OnStartRemoveTwoFactorResponse = function( results
 		this.SetTwoFactorAuthModalState( 'selfhelp_failure' );
 		$J( '#login_twofactorauth_details_selfhelp_failure' ).text( results.message );
 	}
-}
+};
 
 
 CLoginPromptManager.prototype.OnRemoveTwoFactorResponse = function( results )
@@ -796,7 +796,7 @@ CLoginPromptManager.prototype.OnRemoveTwoFactorResponse = function( results )
 		this.SetTwoFactorAuthModalState( 'selfhelp_failure' );
 		$J( '#login_twofactorauth_details_selfhelp_failure' ).text( results.message );
 	}
-}
+};
 
 
 CLoginPromptManager.prototype.OnUseTwoFactorRecoveryCodeResponse = function( results )
@@ -820,7 +820,7 @@ CLoginPromptManager.prototype.OnUseTwoFactorRecoveryCodeResponse = function( res
 		this.SetTwoFactorAuthModalState( 'selfhelp_failure' );
 		$J( '#login_twofactorauth_details_selfhelp_failure' ).text( results.message );
 	}
-}
+};
 
 
 CLoginPromptManager.prototype.OnTwoFactorAuthSuccessContinue = function()
@@ -839,7 +839,7 @@ CLoginPromptManager.prototype.OnTwoFactorAuthSuccessContinue = function()
 	{
 		this.LoginComplete();
 	}
-}
+};
 
 CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 {
@@ -872,7 +872,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		icon = 'phone';
 		$J('#login_twofactor_authcode_entry').show();
 		$J('#twofactorcode_entry').val('');
-		$J('#login_twofactorauth_message_entercode_accountname').text( this.m_strUsernameEntered )
+		$J('#login_twofactorauth_message_entercode_accountname').text( this.m_strUsernameEntered );
 		$J('#twofactorcode_entry').focus();
 	}
 	else if ( step == 'incorrectcode' )
@@ -960,7 +960,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 			var rgParameters = {
 				smscode: $J( '#twofactorcode_entry' ).val(),
 				reset: this.m_bTwoFactorReset ? 1 : 0
-			}
+			};
 
 			$J.post( this.m_strBaseURL + 'removetwofactor/', this.GetParameters( rgParameters ) )
 					.done( $J.proxy( this.OnRemoveTwoFactorResponse, this ) )
@@ -1017,7 +1017,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		}
 		else
 		{
-			var rgParameters = { rcode: $J( '#twofactorcode_entry' ).val() }
+			var rgParameters = { rcode: $J( '#twofactorcode_entry' ).val() };
 
 			$J.post( this.m_strBaseURL + 'userecoverycode/', this.GetParameters( rgParameters ) )
 					.done( $J.proxy( this.OnUseTwoFactorRecoveryCodeResponse, this ) )
@@ -1052,7 +1052,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 	}
 
 	$J('#login_twofactorauth_icon').attr( 'class', 'auth_icon auth_icon_' + icon );
-}
+};
 
 CLoginPromptManager.prototype.SubmitTwoFactorCode = function()
 {
@@ -1066,7 +1066,7 @@ CLoginPromptManager.prototype.SubmitTwoFactorCode = function()
 	$J('#login_twofactorauth_buttonset_waiting').show();
 
 	this.DoLogin();
-}
+};
 
 CLoginPromptManager.sm_$Modals = null;	// static
 CLoginPromptManager.prototype.InitModalContent = function()
@@ -1085,7 +1085,7 @@ CLoginPromptManager.prototype.InitModalContent = function()
 	{
 		CLoginPromptManager.sm_$Modals = $modals;
 	}
-}
+};
 
 CLoginPromptManager.prototype.GetModalContent = function( strModalType )
 {

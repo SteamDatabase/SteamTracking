@@ -153,7 +153,7 @@ function LoadTrendingTopics()
 	var elTrendingTopics = $('group_trending_topics');
 	if ( elTrendingTopics.children.length == 0 )
 	{
-		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>')
+		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 		g_bTrendingTopicsLoading = true;
 		new Ajax.Updater( elTrendingTopics, g_strGroupURL + '/trendingtopics', {method: 'get', onSuccess: function() { Forum_InitTooltips.defer(); } } );
 	}
@@ -223,25 +223,25 @@ function dayEventsReceive()
 	{
 		if ( req.status == 200 )
 		{
-			response = req.responseXML.documentElement;
+			var response = req.responseXML.documentElement;
 			updateInProgress = false;
-			results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
+			var results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
 			if ( results != 'OK' )
 			{
 				alert( results );
 				return false;
 			}
 			// clear existing list
-			expandedEvents = document.getElementById( 'eventsExpanded' );
+			var expandedEvents = document.getElementById( 'eventsExpanded' );
 			while( expandedEvents.childNodes.length > 0 )
 			{
 				expandedEvents.removeChild( expandedEvents.childNodes[0] );
 			}
-			eventCount = response.getElementsByTagName( 'eventCount' )[0].firstChild.nodeValue;
-			expiredEventCount = response.getElementsByTagName( 'expiredEventCount' )[0].firstChild.nodeValue;
+			var eventCount = response.getElementsByTagName( 'eventCount' )[0].firstChild.nodeValue;
+			var expiredEventCount = response.getElementsByTagName( 'expiredEventCount' )[0].firstChild.nodeValue;
 			if ( eventCount > 0 || expiredEventCount > 0 )
 			{
-				mdy = response.getElementsByTagName( 'mdy' )[0].firstChild.nodeValue;
+				var mdy = response.getElementsByTagName( 'mdy' )[0].firstChild.nodeValue;
 				if ( calCurrentFocus != undefined )
 				{
 					if ( document.getElementById( 'cal1_' + calCurrentFocus ) )
@@ -257,20 +257,20 @@ function dayEventsReceive()
 				calCurrentClass = document.getElementById( 'cal1_' + mdy ) .className;
 				document.getElementById( 'cal1_' + mdy ) .className = 'isFocus';
 				calCurrentFocus = mdy;
-				selectedEvent = response.getElementsByTagName( 'selectedEvent' )[0].firstChild.nodeValue;
+				var selectedEvent = response.getElementsByTagName( 'selectedEvent' )[0].firstChild.nodeValue;
 				expandedEvents.innerHTML += '<p class="sectionText" id="fullEventTitle">Showing events for ' + mdy + '</p>';
 				if ( eventCount > 0 )
 				{
-					events = response.getElementsByTagName( 'event' );
-					for( x = 0; x < events.length; x++ )
+					var events = response.getElementsByTagName( 'event' );
+					for( var x = 0; x < events.length; x++ )
 					{
 						expandedEvents.innerHTML += events[x].firstChild.nodeValue;
 					}
 				}
 				if ( expiredEventCount > 0 )
 				{
-					events = response.getElementsByTagName( 'expiredEvent' );
-					for( x = 0; x < events.length; x++ )
+					var events = response.getElementsByTagName( 'expiredEvent' );
+					for( var x = 0; x < events.length; x++ )
 					{
 						expandedEvents.innerHTML += events[x].firstChild.nodeValue;
 					}
@@ -288,36 +288,36 @@ function monthEventsReceive()
 	{
 		if ( req.status == 200 )
 		{
-			response = req.responseXML.documentElement;
+			var response = req.responseXML.documentElement;
 			updateInProgress = false;
-			results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
+			var results = response.getElementsByTagName('results')[0].firstChild.nodeValue;
 			if ( results != 'OK' )
 			{
 				alert( results );
 				return false;
 			}
 			// clear existing lists
-			eventList = document.getElementById( 'eventListing' );
+			var eventList = document.getElementById( 'eventListing' );
 			while( eventList.childNodes.length > 0 )
 			{
 				eventList.removeChild( eventList.childNodes[0] );
 			}
-			expiredEventList = document.getElementById( 'expiredEventListing' );
+			var expiredEventList = document.getElementById( 'expiredEventListing' );
 			while( expiredEventList.childNodes.length > 0 )
 			{
 				expiredEventList.removeChild( expiredEventList.childNodes[0] );
 			}
-			expandedEvents = document.getElementById( 'eventsExpanded' );
+			var expandedEvents = document.getElementById( 'eventsExpanded' );
 			while( expandedEvents.childNodes.length > 0 )
 			{
 				expandedEvents.removeChild( expandedEvents.childNodes[0] );
 			}
 			//get and populate new ones
-			eventCount = response.getElementsByTagName( 'eventCount' )[0].firstChild.nodeValue;
-			expiredEventCount = response.getElementsByTagName( 'expiredEventCount' )[0].firstChild.nodeValue;
-			monthName = response.getElementsByTagName( 'monthName' )[0].firstChild.nodeValue;
-			year = response.getElementsByTagName( 'year' )[0].firstChild.nodeValue;
-			bPastMonth = response.getElementsByTagName( 'bPastMonth' )[0].firstChild.nodeValue;
+			var eventCount = response.getElementsByTagName( 'eventCount' )[0].firstChild.nodeValue;
+			var expiredEventCount = response.getElementsByTagName( 'expiredEventCount' )[0].firstChild.nodeValue;
+			var monthName = response.getElementsByTagName( 'monthName' )[0].firstChild.nodeValue;
+			var year = response.getElementsByTagName( 'year' )[0].firstChild.nodeValue;
+			var bPastMonth = response.getElementsByTagName( 'bPastMonth' )[0].firstChild.nodeValue;
 			if ( bPastMonth == 1 )
 			{
 				document.getElementById( 'futureEventsHeader' ).innerHTML = '';
@@ -348,16 +348,16 @@ function monthEventsReceive()
 			}
 			if ( eventCount > 0 )
 			{
-				events = response.getElementsByTagName('event');
-				for( x = 0; x < events.length; x++ )
+				var events = response.getElementsByTagName('event');
+				for( var x = 0; x < events.length; x++ )
 				{
 					eventList.innerHTML += events[x].firstChild.nodeValue;
 				}
 			}
 			if ( expiredEventCount > 0 )
 			{
-				events = response.getElementsByTagName('expiredEvent');
-				for( x = 0; x < events.length; x++ )
+				var events = response.getElementsByTagName('expiredEvent');
+				for( var x = 0; x < events.length; x++ )
 				{
 					expiredEventList.innerHTML += events[x].firstChild.nodeValue;
 				}
@@ -369,7 +369,7 @@ function monthEventsReceive()
 
 function validateSearchSubmit()
 {
-	tbox = document.getElementById( 'searchKey' );
+	var tbox = document.getElementById( 'searchKey' );
 	if ( tbox.value == '' )
 	{
 		return false;
@@ -669,7 +669,7 @@ function ProcessNextImage(nImageCurrent, nImagesTotal, rgImages, dialog, strClan
 	fd.append( 'clanimage', rgImages[nImageCurrent] );
 	fd.append( 'sessionid', g_sessionID );
 
-	$J('.newmodal_content > div', dialog.GetContent()).html( "Uploading image %1$s\/%2$s<br><br>This dialog will automatically close when finished.".replace('%1$s',nImageCurrent+1).replace('%2$s',nImagesTotal) )
+	$J('.newmodal_content > div', dialog.GetContent()).html( "Uploading image %1$s\/%2$s<br><br>This dialog will automatically close when finished.".replace('%1$s',nImageCurrent+1).replace('%2$s',nImagesTotal) );
 
 	$J.ajax({
 		url: strClanURL + '/uploadimage',

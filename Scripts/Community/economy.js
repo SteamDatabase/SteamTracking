@@ -102,7 +102,7 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 		var oInventoryToShow = oFirstNonEmptyInventory ? oFirstNonEmptyInventory : oFirstInventory;
 		if ( oInventoryToShow )
 		{
-			ShowItemInventory( oInventoryToShow.appid, oInventoryToShow.contextid )
+			ShowItemInventory( oInventoryToShow.appid, oInventoryToShow.contextid );
 			UserYou.SetDefaultInventoryId( oInventoryToShow );
 		}
 
@@ -158,7 +158,7 @@ function ReadInventoryCookie( cookie )
 			{
 				// cookie wasn't valid, but we do know the app, see if there's another context we can use
 				var rgContexts = g_rgAppContextData[ oCookieParams.appid ].rgContexts;
-				for ( contextid in rgContexts )
+				for ( var contextid in rgContexts )
 				{
 					if ( rgContexts[contextid].asset_count )
 					{
@@ -546,7 +546,7 @@ var CInventory = Class.create( {
 			var nPageHeight = $J(window).height();
 			var nStartOffset = $J(window).scrollTop() - ( nPageHeight * 0.5 );
 			var nEndOffset = $J(window).scrollTop() + ( nPageHeight * 1.5  );
-			rgLazyLoadImages = _this.m_rgLazyLoadImages;
+			var rgLazyLoadImages = _this.m_rgLazyLoadImages;
 
 			var iStart, iEnd;
 			for ( iStart = 0; iStart < rgLazyLoadImages.length; iStart++ )
@@ -666,7 +666,7 @@ var CInventory = Class.create( {
 					continue;
 
 				var rgTag = rgCategory.tags[ sInternalName ];
-				rgTag.internal_name = sInternalName
+				rgTag.internal_name = sInternalName;
 				rgCategoryTags.push( rgTag );
 			}
 
@@ -696,7 +696,7 @@ var CInventory = Class.create( {
 				if( rgTag.color )
 				{
 					var elTagName = new Element( 'span' );
-					$J(elTagName).text( rgTag.name )
+					$J(elTagName).text( rgTag.name );
 					elTagName.style.color = "#" + rgTag.color;
 					elTagLabel.appendChild( elTagName );
 				}
@@ -1508,7 +1508,7 @@ var CAppwideInventory = Class.create( CInventory, {
 
 		for ( var iContext = 0; iContext < this.rgContextIds.length; iContext++ )
 		{
-			var contextid = this.rgContextIds[ iContext ]
+			var contextid = this.rgContextIds[ iContext ];
 			var inventory = this.rgChildInventories[ contextid ];
 			for ( var iItem = 0; iItem < inventory.rgItemElements.length; iItem++ )
 			{
@@ -3033,7 +3033,7 @@ MessageDialog = {
 		event.stop();
 		this.Dismiss(); 
 	}
-}
+};
 
 function SSAPopup()
 {
@@ -3352,7 +3352,7 @@ SellItemDialog = {
 			return;
 		}
 
-		$('market_sell_currency_input').value = v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) )
+		$('market_sell_currency_input').value = v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 		this.OnInputKeyUp( null );
 
 		this.RecalculateTotal( price, quantity );
@@ -3649,7 +3649,7 @@ SellItemDialog = {
 			$( 'market_sell_dialog_total_youreceive_amount' ).update( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 		}
 	}
-}
+};
 
 function ShowHover( elem, item )
 {
@@ -4003,7 +4003,7 @@ var Filter = {
 		if( Object.values( rgCategories ).length > 0 && (!elItem.rgItem.tags || !elItem.rgItem.tags.length ) )
 			return false;
 
-		for( sCategoryName in rgCategories )
+		for( var sCategoryName in rgCategories )
 		{
 			if( typeof sCategoryName != "string" )
 				continue;
@@ -4530,7 +4530,7 @@ function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, time
 	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
 	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
 	plotPriceHistory.axes.yaxis.numberTicks = rgYAxis[2];
-	plotPriceHistory.axes.yaxis.tickInterval = rgYAxis[4]
+	plotPriceHistory.axes.yaxis.tickInterval = rgYAxis[4];
 
 	plotPriceHistory.replot();
 
@@ -4614,7 +4614,7 @@ function ReportTradeScam( steamIDTarget, strPersonaName )
 {
 	var $Dialog = $J('<div/>');
 	$Dialog.append( $J('<div/>', {'class': 'trade_scam_report_label' }).html( 'Use this to report %s to Steam Support for an attempted scam.<br><br>Please provide a brief description:'.replace( /%s/, strPersonaName ) ) );
-	var $TextArea = $J('<textarea/>', {'rows': 3, 'cols': 26 })
+	var $TextArea = $J('<textarea/>', {'rows': 3, 'cols': 26 });
 	$Dialog.append( $J('<div/>', {'class': 'gray_bevel fullwidth' }).append( $TextArea ) );
 	var Modal = ShowConfirmDialog( 'Report Scam', $Dialog, 'Report Scam').done( function() {
 		if ( !$TextArea.val() )

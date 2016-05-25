@@ -3596,6 +3596,11 @@ Label.AchievementPercent,
 	font-size: 28px;
 }
 
+#InviteToWatch .ProfileContentCardTitle
+{
+	margin-bottom: 20px;
+}
+
 #WatchGameButton
 {
 	flow-children: down;

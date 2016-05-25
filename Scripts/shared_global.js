@@ -79,7 +79,7 @@ Steam = {
 		else
 			$A.attr( 'target', '_blank' );
 	}
-}
+};
 
 
 // proto functions used to accept an id or an element.
@@ -228,11 +228,11 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 		$TextArea.bind( "keyup change",
 			function()
 			{
-				var str = $J(this).val()
-				var mx = parseInt($J(this).attr('maxlength'))
+				var str = $J(this).val();
+				var mx = parseInt($J(this).attr('maxlength'));
 				if (str.length > mx)
 				{
-					$J(this).val(str.substr(0, mx))
+					$J(this).val(str.substr(0, mx));
 					return false;
 				}
 			}
@@ -400,23 +400,23 @@ function CModal( $Content, rgParams )
 CModal.prototype.OnDismiss = function( fn )
 {
 	this.m_fnOnDismiss = fn;
-}
+};
 
 CModal.prototype.OnResize = function( fn )
 {
 	this.m_fnOnResize = fn;
-}
+};
 
 CModal.prototype.GetContent = function ()
 {
 	return this.m_$Content;
-}
+};
 
 CModal.prototype.GetBoundOnResizeEvent = function()
 {
 	// in case someone outside needs to tell the modal to resize on certain events (eg images or iframes loading in the modal)
 	return this.m_fnSizing;
-}
+};
 
 CModal.prototype.OnContentChanged = function()
 {
@@ -425,27 +425,27 @@ CModal.prototype.OnContentChanged = function()
 	if ( !this.m_$StandardContent.length )
 		this.m_$StandardContent = this.m_$Content;
 	this.m_$SizedContent = this.m_$Content.find( '.newmodal_sized_content' );
-}
+};
 
 CModal.prototype.SetRemoveContentOnDismissal = function ( bRemoveContent )
 {
 	this.m_bRemoveContentOnDismissal = bRemoveContent;
-}
+};
 
 CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundClick )
 {
 	this.m_bDismissOnBackgroundClick = bDismissOnBackgroundClick;
-}
+};
 
 CModal.prototype.SetMaxWidth = function ( nMaxWidth )
 {
 	this.m_nMaxWidth = nMaxWidth;
-}
+};
 
 CModal.prototype.SetMaxHeight = function ( nMaxHeight )
 {
 	this.m_nMaxHeight = nMaxHeight;
-}
+};
 
 CModal.prototype.AdjustSizing = function( duration )
 {
@@ -518,7 +518,7 @@ CModal.prototype.AdjustSizing = function( duration )
 		this.m_$Content.css( 'left', nLeft );
 		this.m_$Content.css( 'top', nTop );
 	}
-}
+};
 
 CModal.prototype.Show = function()
 {
@@ -543,7 +543,7 @@ CModal.prototype.Show = function()
 
 	this.m_bVisible = true;
 	CModal.PushActiveModal( this );
-}
+};
 
 CModal.prototype.Dismiss = function()
 {
@@ -575,12 +575,12 @@ CModal.prototype.Dismiss = function()
 		$J(document).off( 'keyup.CModal', this.m_fnOnEscapeKeyPress );
 		CModal.HideModalBackground();
 	}
-}
+};
 
 CModal.prototype.BIsActiveModal = function()
 {
 	return CModal.s_rgModalStack.length && CModal.s_rgModalStack[ CModal.s_rgModalStack.length - 1 ] == this;
-}
+};
 
 /* static */
 CModal.ShowModalBackground = function()
@@ -593,7 +593,7 @@ CModal.ShowModalBackground = function()
 	}
 	CModal.s_$Background.stop();	// stop running animations
 	CModal.s_$Background.fadeTo( 200, 0.8 );
-}
+};
 
 CModal.HideModalBackground = function()
 {
@@ -602,7 +602,7 @@ CModal.HideModalBackground = function()
 		CModal.s_$Background.stop();	// stop running animations
 		CModal.s_$Background.fadeOut( 200, 0 );
 	}
-}
+};
 
 CModal.s_rgModalStack = [];
 CModal.GetActiveModal = function()
@@ -611,12 +611,12 @@ CModal.GetActiveModal = function()
 		return CModal.s_rgModalStack[CModal.s_rgModalStack.length-1];
 	else
 		return null;
-}
+};
 CModal.DismissActiveModal = function()
 {
 	if ( CModal.s_rgModalStack.length )
 		CModal.s_rgModalStack[CModal.s_rgModalStack.length-1].Dismiss();
-}
+};
 
 CModal.PushActiveModal = function( Modal )
 {
@@ -626,7 +626,7 @@ CModal.PushActiveModal = function( Modal )
 		CModal.s_rgModalStack[i].m_$Content.css( 'z-index', 899 );
 	}
 	CModal.s_rgModalStack.push( Modal );
-}
+};
 
 CModal.PopActiveModal = function( Modal )
 {
@@ -641,7 +641,7 @@ CModal.PopActiveModal = function( Modal )
 
 	if ( CModal.s_rgModalStack.length )
 		CModal.s_rgModalStack[ CModal.s_rgModalStack.length - 1 ].m_$Content.css( 'z-index', 1000 );
-}
+};
 
 // this will set the right headers for a cross-domain request to community
 function GetDefaultCommunityAJAXParams( path, method )
@@ -681,7 +681,7 @@ function CDelayedAJAXData( strURL, msDelayBeforeAJAX )
 CDelayedAJAXData.prototype.GetAJAXParams = function()
 {
 	return GetDefaultCommunityAJAXParams( this.m_strURL, 'GET' );
-}
+};
 
 CDelayedAJAXData.prototype.QueueAjaxRequestIfNecessary = function()
 {
@@ -702,7 +702,7 @@ CDelayedAJAXData.prototype.QueueAjaxRequestIfNecessary = function()
 				});
 		}, this.m_msDelayBeforeAJAX );
 	}
-}
+};
 
 CDelayedAJAXData.prototype.CancelAJAX = function()
 {
@@ -710,7 +710,7 @@ CDelayedAJAXData.prototype.CancelAJAX = function()
 		window.clearTimeout( this.m_timerDelayedAJAX );
 
 	this.m_fnOnAJAXComplete = null;
-}
+};
 
 CDelayedAJAXData.prototype.RunWhenAJAXReady = function( fnOnReady )
 {
@@ -722,22 +722,22 @@ CDelayedAJAXData.prototype.RunWhenAJAXReady = function( fnOnReady )
 		this.QueueAjaxRequestIfNecessary();
 	}
 	// if ajax failed we will not call fnOnReady
-}
+};
 
 CDelayedAJAXData.prototype.Show = function( $HoverContent )
 {
 	$HoverContent.children().detach();
 	$HoverContent.append( this.m_$Data );
-}
+};
 
 function InitMiniprofileHovers()
 {
 	var $Hover = $J('<div/>', {'class': 'miniprofile_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'miniprofile_hover_inner shadow_content'} );
 
-	var $HoverArrowLeft = $J('<div/>', {'class': 'hover_arrow left miniprofile_arrow'} )
+	var $HoverArrowLeft = $J('<div/>', {'class': 'hover_arrow left miniprofile_arrow'} );
 	$HoverArrowLeft.append( '<div class="miniprofile_arrow_inner"></div>' );
-	var $HoverArrowRight = $J('<div/>', {'class': 'hover_arrow right miniprofile_arrow'} )
+	var $HoverArrowRight = $J('<div/>', {'class': 'hover_arrow right miniprofile_arrow'} );
 	$HoverArrowRight.append( '<div class="miniprofile_arrow_inner"></div>' );
 
 	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>'), $HoverContent, $HoverArrowLeft, $HoverArrowRight );
@@ -745,7 +745,7 @@ function InitMiniprofileHovers()
 	$Hover.hide();
 	$J(document.body).append( $Hover );
 
-	var fnDataFactory = function( key ) { return new CDelayedAJAXData( 'miniprofile/' + key, MINIPROFILE_DELAY_BEFORE_AJAX ); }
+	var fnDataFactory = function( key ) { return new CDelayedAJAXData( 'miniprofile/' + key, MINIPROFILE_DELAY_BEFORE_AJAX ); };
 
 	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
 		fnDataFactory: fnDataFactory,
@@ -819,7 +819,7 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 
 			if ( timerHover )
 			{
-				window.clearTimeout( timerHover )
+				window.clearTimeout( timerHover );
 				timerHover = null;
 			}
 
@@ -864,7 +864,7 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 			$Hover.stop();
 			$Hover.fadeOut( MINIPROFILE_ANIM_SPEED );
 		}
-	}
+	};
 
 	var strEventNamespace = 'AjaxHover' + strDataName;
 	$J(document ).on('mouseenter.' + strEventNamespace, strSelector, function() {
@@ -981,7 +981,7 @@ CEmoticonDelayedAJAXData.prototype.GetAJAXParams = function()
 		cache: true,
 		data: {l: 'english' }
 	}
-}
+};
 
 function InitEmoticonHovers()
 {
@@ -1082,7 +1082,7 @@ function V_ToJSON( object )
 	if ( typeof JSON == 'object' && JSON.stringify )
 		return JSON.stringify( object );	// built-in / json2.js
 	else
-		Object.toJSON( object )				// prototype
+		Object.toJSON( object );				// prototype
 }
 
 function V_IsJSON( str )
@@ -1264,7 +1264,7 @@ CScrollOffsetWatcher.prototype.Recalc = function()
 {
 	this.nOffsetTop = this.m_$Element.offset().top;
 	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
-}
+};
 
 CScrollOffsetWatcher.sm_rgWatchers = [];
 CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0;
@@ -1296,7 +1296,7 @@ CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
 	// use a 1ms timeout to roll these together as much as possible on page load
 	if ( !CScrollOffsetWatcher.m_nTimeoutInitialLoad )
 		CScrollOffsetWatcher.m_nTimeoutInitialLoad = window.setTimeout( function() { CScrollOffsetWatcher.OnScroll(); CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0; }, 1 );
-}
+};
 
 CScrollOffsetWatcher.ForceRecalc = function()
 {
@@ -1306,7 +1306,7 @@ CScrollOffsetWatcher.ForceRecalc = function()
 	}
 
 	CScrollOffsetWatcher.OnScroll();
-}
+};
 
 CScrollOffsetWatcher.OnScroll = function()
 {
@@ -1339,7 +1339,7 @@ CScrollOffsetWatcher.OnScroll = function()
 		$J(window).off( 'scroll.ScrollOffsetWatcher' );
 		$J(window).off( 'resize.ScrollOffsetWatcher' );
 	}
-}
+};
 
 function LoadImageGroupOnScroll( elTarget, strGroup )
 {
@@ -1571,7 +1571,7 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 				break;
 			case 24:
 				ShowAlertDialog( 'Error',
-					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.'
+					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.'
 				);
 				break;
 			case 15:
@@ -1693,7 +1693,7 @@ CAjaxInfiniteScrollingControls.prototype.DoneRestoreScrollTop = function()
 		this.m_LoadingDialog = null;
 	}
 	this.m_bRestoringScrollTop = false;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
 {
@@ -1724,14 +1724,14 @@ CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
 			window.scrollTo( 0, scrollTopPrevious );
 		}
 	}
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.OnUnload = function( event )
 {
 	var scrollOffset = document.viewport.getScrollOffsets();
 	var scrollTop = scrollOffset.top;
 	$J( "#" + this.m_strElementPrefix + '_scroll_top').val( scrollTop );
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.OnScroll = function( event )
 {
@@ -1748,49 +1748,49 @@ CAjaxInfiniteScrollingControls.prototype.OnScroll = function( event )
 	{
 		this.NextPage();
 	}
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.GetActionURL = function( action )
 {
 	var url = this.m_strActionURL + action + '/';
 	return url;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.SetPreRequestHandler = function( fnHandler )
 {
 	this.m_fnPreRequestHandler = fnHandler;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.SetResponseHandler = function( fnHandler )
 {
 	this.m_fnResponseHandler = fnHandler;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.SetPageChangingHandler = function ( fnHandler )
 {
 	this.m_fnPageChangingHandler = fnHandler;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.SetPageChangedHandler = function ( fnHandler )
 {
 	this.m_fnPageChangedHandler = fnHandler;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.SetStaticParameters = function ( rgParams )
 {
 	this.m_rgStaticParams = rgParams;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.OnAJAXComplete = function()
 {
 	this.m_bLoading = false;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.NextPage = function()
 {
 	if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
 		this.LoadPage( this.m_iCurrentPage + 1 );
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 {
@@ -1844,7 +1844,7 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 	});
 
 	return true;
-}
+};
 
 CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( transport )
 {
@@ -1896,7 +1896,7 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 	{
 		this.DoneRestoreScrollTop();
 	}
-}
+};
 
 function CAjaxPagingControls( rgSearchData, url )
 {
@@ -1942,49 +1942,49 @@ CAjaxPagingControls.prototype.GetActionURL = function( action )
 {
 	var url = this.m_strActionURL + action + '/';
 	return url;
-}
+};
 
 CAjaxPagingControls.prototype.SetPreRequestHandler = function( fnHandler )
 {
 	this.m_fnPreRequestHandler = fnHandler;
-}
+};
 
 CAjaxPagingControls.prototype.SetResponseHandler = function( fnHandler )
 {
 	this.m_fnResponseHandler = fnHandler;
-}
+};
 
 CAjaxPagingControls.prototype.SetPageChangingHandler = function ( fnHandler )
 {
 	this.m_fnPageChangingHandler = fnHandler;
-}
+};
 
 CAjaxPagingControls.prototype.SetPageChangedHandler = function ( fnHandler )
 {
 	this.m_fnPageChangedHandler = fnHandler;
-}
+};
 
 CAjaxPagingControls.prototype.SetStaticParameters = function ( rgParams )
 {
 	this.m_rgStaticParams = rgParams;
-}
+};
 
 CAjaxPagingControls.prototype.OnAJAXComplete = function()
 {
 	this.m_bLoading = false;
-}
+};
 
 CAjaxPagingControls.prototype.NextPage = function()
 {
 	if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
 		this.GoToPage( this.m_iCurrentPage + 1 );
-}
+};
 
 CAjaxPagingControls.prototype.PrevPage = function()
 {
 	if ( this.m_iCurrentPage > 0 )
 		this.GoToPage( this.m_iCurrentPage - 1 );
-}
+};
 
 CAjaxPagingControls.prototype.GoToPage = function( iPage, bForce )
 {
@@ -2029,7 +2029,7 @@ CAjaxPagingControls.prototype.GoToPage = function( iPage, bForce )
 	});
 
 	return true;
-}
+};
 
 CAjaxPagingControls.prototype.OnResponseRenderResults = function( transport )
 {
@@ -2063,7 +2063,7 @@ CAjaxPagingControls.prototype.OnResponseRenderResults = function( transport )
 
 		this.UpdatePagingDisplay();
 	}
-}
+};
 
 CAjaxPagingControls.prototype.UpdatePagingDisplay = function()
 {
@@ -2128,7 +2128,7 @@ CAjaxPagingControls.prototype.UpdatePagingDisplay = function()
 
 	if ( this.m_fnPageChangedHandler != null )
 		this.m_fnPageChangedHandler( this.m_iCurrentPage );
-}
+};
 
 CAjaxPagingControls.prototype.AddPageLink = function( elPageLinks, iPage )
 {
@@ -2141,7 +2141,7 @@ CAjaxPagingControls.prototype.AddPageLink = function( elPageLinks, iPage )
 		el.observe( 'click', this.GoToPage.bind( this, iPage ) );
 
 	elPageLinks.insert( el );
-}
+};
 
 
 function CSlider( $Container, $Grabber, args )
@@ -2172,7 +2172,7 @@ function CSlider( $Container, $Grabber, args )
 		{
 			return event.pageX || 0;
 		}
-	}
+	};
 
 	var _this = this;
 	this.m_$Container.on( 'mousedown touchstart', function( event ) {
@@ -2219,7 +2219,7 @@ function CSlider( $Container, $Grabber, args )
 
 		event.preventDefault();
 	});
-};
+}
 
 CSlider.prototype.CalcRatios = function()
 {
@@ -2305,7 +2305,7 @@ function CScrollSlider( $Scroll, $Container, $Grabber, args )
 	} );
 
 	this.UpdateRanges();
-};
+}
 
 CScrollSlider.prototype.SetValue = function( value, nAnimationSpeed ) {
 	if ( nAnimationSpeed )
@@ -2316,11 +2316,11 @@ CScrollSlider.prototype.SetValue = function( value, nAnimationSpeed ) {
 	{
 		this.m_$Scroll.stop().scrollLeft( value );
 	}
-}
+};
 
 CScrollSlider.prototype.GetValue = function() {
 	return this.m_Slider.GetValue();
-}
+};
 
 CScrollSlider.prototype.UpdateRanges = function()
 {
@@ -2345,7 +2345,7 @@ CScrollSlider.prototype.OnSliderChange = function( value, bInDrag )
 
 function IsValidEmailAddress( email )
 {
-	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
 	return ( email != '' && email_regex.test(email) );
 }
 
@@ -2452,7 +2452,7 @@ SearchFieldWithText.prototype.handleClickOrFocus = function()
 		if ( this.defaultTextCSSClass )
 			this.elem.removeClassName( this.defaultTextCSSClass );
 	}
-}
+};
 
 SearchFieldWithText.prototype.handleBlur = function()
 {
@@ -2462,7 +2462,7 @@ SearchFieldWithText.prototype.handleBlur = function()
 		if ( this.defaultTextCSSClass )
 			this.elem.addClassName( this.defaultTextCSSClass );
 	}
-}
+};
 
 SearchFieldWithText.prototype.handleKeypress = function()
 {
@@ -2482,7 +2482,7 @@ SearchFieldWithText.prototype.handleKeypress = function()
 	{
 		this.onEnterFunc();
 	}
-}
+};
 
 SearchFieldWithText.prototype.ClearIfDefaultValue = function()
 {
@@ -2490,7 +2490,7 @@ SearchFieldWithText.prototype.ClearIfDefaultValue = function()
 	{
 		this.elem.value = '';
 	}
-}
+};
 
 
 function CWebAPI( strWebAPIHost, strSecureWebAPIHost, strOAuth2Token )
@@ -2509,7 +2509,7 @@ CWebAPI.prototype.BuildURL = function( strInterface, strMethod, bSecure, strVers
 	strURL += strInterface + '/' + strMethod + '/' + strVersion + '/';
 
 	return strURL;
-}
+};
 
 CWebAPI.prototype.ExecJSONP = function( strInterface, strMethod, rgParams, bSecure, strVersion, cTimeoutSecs )
 {
@@ -2544,7 +2544,7 @@ CWebAPI.prototype.ExecBeacon = function( strInterface, strMethod, rgParams, bSec
 	rgParams.access_token = this.m_strOAuth2Token;
 
 	var fdParams = new FormData();
-	for ( key in rgParams )
+	for ( var key in rgParams )
 		fdParams.append( key, rgParams[key] );
 
 	navigator.sendBeacon( this.BuildURL( strInterface, strMethod, bSecure, strVersion ), fdParams );
@@ -3035,8 +3035,8 @@ function setTimezoneCookies()
 	// load to have accurate timezone info each session, but only each time the user
 	// comes with cleared cookies
 	expire.setTime( now.getTime() + 3600000*24*365 );
-	tzOffset = now.getTimezoneOffset() * -1 * 60;
-	isDST = 0;
+	var tzOffset = now.getTimezoneOffset() * -1 * 60;
+	var isDST = 0;
 	document.cookie = "timezoneOffset=" + tzOffset + "," + isDST + ";expires="+expire.toGMTString() + ";path=/";
 }
 
@@ -3126,7 +3126,7 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 			instance.EnableTransitions();
 
 		return bScrolled;
-	}
+	};
 
 	var funcMouseMove = function( event ) {
 		var localDimension = event[propPage] - instance.m_eleHandle.parent().offset()[propOffset];
@@ -3139,7 +3139,7 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 			event.preventDefault();
 
 
-	}
+	};
 
 	$J(eleTarget).bind('mousewheel DOMMouseScroll',function( event ){
 		var delta = event.originalEvent.wheelDelta || event.originalEvent.detail * -12;
@@ -3204,7 +3204,7 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 		instance.m_flPercent = 0;
 
 		return funcUpdate(true);
-	}
+	};
 
 	// Ensures target element is visible. This is taken from position() (NOT OFFSET) so the element must be a direct child of the scroll area
 	this.EnsureVisible = function( ele ) {
@@ -3224,19 +3224,19 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 			instance.m_flPercent = ( maxEdge - viewportSize ) / viewportMax;
 
 		return funcUpdate();
-	}
+	};
 
 	this.EnableTransitions = function() {
 		instance.m_eleTarget.addClass('animating');
-	}
+	};
 
 	this.DisableTransitions = function() {
 		instance.m_eleTarget.removeClass('animating');
-	}
+	};
 
 	funcUpdate(true);
 
 
-}
+};
 
 

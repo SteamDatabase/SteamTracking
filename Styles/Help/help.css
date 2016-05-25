@@ -3008,6 +3008,19 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	color: #515d6a;
 }
 
+.help_request_state_msg {
+	font-size: 13px;
+	color: #515d6a;
+	margin-bottom: 8px;
+	white-space: normal;
+}
+
+.help_request_state_msg b {
+	font-size: 15px;
+	color: #8fca1d;
+	font-weight: normal;
+}
+
 .help_request_header_left {
 	display: inline-block;;
 }

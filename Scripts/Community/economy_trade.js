@@ -820,7 +820,7 @@ CTradeStateManager = {
 			}
 		}
 	}
-}
+};
 
 function SetStackableItemInTrade( item, xferAmount )
 {
@@ -1134,7 +1134,7 @@ function OnTradeStatusUpdate( transport )
 	try {
 		if ( transport.responseJSON && transport.responseJSON.success )
 		{
-			rgNewTradeStatus = transport.responseJSON;
+			var rgNewTradeStatus = transport.responseJSON;
 
 			if ( rgNewTradeStatus.trade_status == 1 ||rgNewTradeStatus.trade_status == 6 )
 			{
@@ -1266,7 +1266,6 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 
 		UpdateSlots( rgTradeStatusForSlots.them.assets, rgTradeStatusForSlots.them.currency, false, UserThem, rgTradeStatusForSlots.version );
 
-		iLastRefreshVersion = rgTradeStatus.version;
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 
@@ -2108,7 +2107,7 @@ CurrencyDialog = {
 		if ( this.m_bIsWallet && g_rgWalletInfo['wallet_fee'] )
 		{
 			this.m_$Dialog.find('#trade_currency_fee_amount_percent').text( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
-			var feeInfo = CalculateFeeAmount( maximum )
+			var feeInfo = CalculateFeeAmount( maximum );
 			maximum = maximum - feeInfo.fees;
 		}
 
@@ -2393,7 +2392,7 @@ CurrencyConversionDialog = {
 		if ( g_rgWalletInfo['wallet_fee'] )
 		{
 			$('trade_currency_conversion_fee_amount_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
-			var feeInfo = CalculateFeeAmount( maximum )
+			var feeInfo = CalculateFeeAmount( maximum );
 			maximum = maximum - feeInfo.fees;
 		}
 
@@ -2454,7 +2453,7 @@ CurrencyConversionDialog = {
 		var inputValue = $('trade_currency_conversion_input_you').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( '.--', '.00');
 		var theirInputValue = $('trade_currency_conversion_input_them').value.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( '.--', '.00');
 		var theirInputValueAsFloat = parseFloat( theirInputValue ) * 100;
-		var theirInputValueAsInt = GetPriceValueAsInt( $('trade_currency_conversion_input_them').value )
+		var theirInputValueAsInt = GetPriceValueAsInt( $('trade_currency_conversion_input_them').value );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
 			this.DisplayError( 'Please enter a valid amount above.' );
@@ -2820,7 +2819,7 @@ function CTutorial( MAX_STEPS )
 CTutorial.prototype.Init = function() {
 	this.bActive = true;
 	this.UpdateStepDisplay();
-}
+};
 
 CTutorial.prototype.UpdateStepDisplay = function() {
 	for ( var i = 1; i <= this.MAX_STEPS; i++ )

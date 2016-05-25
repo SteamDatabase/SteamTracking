@@ -1320,7 +1320,8 @@ a.pagelink:hover {
 }
 
 /* re-uses comment icon */
-.header_notification_moderatormessage .notification_icon {
+.header_notification_moderatormessage .notification_icon,
+.header_notification_helprequestreply .notification_icon {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_moderator_message.png' );
 }
 
