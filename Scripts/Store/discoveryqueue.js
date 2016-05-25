@@ -34,7 +34,7 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 	this.m_rgItems = [];
 	this.m_$Queue.empty();
 	this.m_iActiveItem = 0;
-	this.m_$Overlay.attr( 'href', 'https://store.steampowered.com/explore/next/')
+	this.m_$Overlay.attr( 'href', 'https://store.steampowered.com/explore/next/');
 
 	for ( var i = 0; i < rgDiscoveryQueue.length; i++ )
 	{
@@ -120,7 +120,7 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 		$Item.addClass( this.m_strPosClassPrefix + (i + 2) );
 		this.m_$Queue.append( $Item );
 	}
-}
+};
 
 
 CDiscoveryQueue.prototype.OnItemClick = function( $Item )
@@ -132,7 +132,7 @@ CDiscoveryQueue.prototype.OnItemClick = function( $Item )
 		if ( delta >= -1 && delta <= 3 )
 			this.Transition( delta );
 	}
-}
+};
 
 
 CDiscoveryQueue.prototype.Transition = function( delta )
@@ -173,7 +173,7 @@ CDiscoveryQueue.prototype.Transition = function( delta )
 	var activeItem = this.m_rgItems[ this.m_iActiveItem ];
 	this.m_$ActiveLink.attr( 'href', activeItem.data('href') );
 	GDynamicStore.AddImpression( activeItem, activeItem.data('appid'), activeItem.data('href') );
-}
+};
 
 
 CDiscoveryQueue.prototype.RenderCustomizeButton = function()
@@ -285,5 +285,5 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 	}).fail( function() {
 		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
 	} );
-}
+};
 
