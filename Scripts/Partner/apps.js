@@ -117,6 +117,19 @@ function ShowUnpublishedChangesWarningIfNeeded()
 }
 
 
+function SetAppField( section, appid, varName, value )
+{
+	var data = { section: section, varName: varName, value: value };
+	AppsAjaxRequest( 'https://partner.steamgames.com/apps/ajaxsetappfield/' + appid,
+		data,
+		function ( results )
+		{
+			CommonSetHandler( results );
+		}
+	);
+}
+
+
 //
 // Common output setter for some of the app management calls.
 // Pretty thin wrapper around StandardCallback.

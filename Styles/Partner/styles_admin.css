@@ -7,6 +7,11 @@
 	min-width: 800px;
 	text-align: left;
 }
+
+.AdminPageContent strong {
+	color: #ddd;
+}
+
 ol {
 	margin-top: 2px;
 }
