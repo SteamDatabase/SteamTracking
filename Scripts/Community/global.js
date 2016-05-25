@@ -2229,7 +2229,7 @@ function xHttpQuery_Post()
 			this.dataEncoded = true;
 		}
 		updateInProgress = true;
-		var req;
+		// req is intentionally a global.  The contract for this function is that the callers look at the "req" global in their callback to see results.
 		if ( window.XMLHttpRequest )
 		{
 			req = new XMLHttpRequest();
