@@ -620,7 +620,7 @@ GHomepage = {
 
 		if ( rgRecommendedSpotlightOptions.length > 0 )
 		{
-			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[0], 'Similar to games you play' );
+			var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[0], 'Similar to games you play' );
 			if ( $Spotlight )
 			{
 				$Element.append( $Spotlight );
@@ -643,7 +643,7 @@ GHomepage = {
 			for ( var i = 0; i < rgWishlistItemsOnSale.length; i++ )
 			{
 				// game from wishlist on sale
-				$Spotlight = GHomepage.RenderRecommendedSpotlight( rgWishlistItemsOnSale[i], 'From your wishlist' );
+				var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgWishlistItemsOnSale[i], 'From your wishlist' );
 				if ( $Spotlight )
 				{
 					$Spotlight.children( 'a.recommended_spotlight' ).addClass( 'wishlist_recommendation' );
@@ -661,7 +661,7 @@ GHomepage = {
 				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
 				if ( rgGamesShown.indexOf( unAppID ) == -1 )
 				{
-					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
+					var $Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
 					if ( $Spotlight )
 					{
 						$Element.append( $Spotlight );
@@ -675,7 +675,7 @@ GHomepage = {
 
 		if ( rgGamesShown.length < 2 && rgRecommendedSpotlightOptions.length > 1 && rgGamesShown.indexOf( rgRecommendedSpotlightOptions[1] ) == -1 )
 		{
-			$Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], 'Similar to games you play' );
+			var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], 'Similar to games you play' );
 			if ( $Spotlight )
 			{
 				$Element.append( $Spotlight );
@@ -910,7 +910,7 @@ GSteamCurators = {
 		$Item.append( $CapCtn );
 
 		// app image
-		$Image = $J('<img/>', { src: rgItemData.headerv5 } );
+		var $Image = $J('<img/>', { src: rgItemData.headerv5 } );
 		$CapCtn.append( $Image );
 
 		// show up to 3 curators per app
@@ -1072,7 +1072,7 @@ var g_bDisableAutoloader = false;
 			this.nNextTrigger = $(ele).height() + offset.top - 750;
 
 			ele.bTriggerActive = false;
-			ele.tagIndex = 0
+			ele.tagIndex = 0;
 			ele.nRecommendedDataIndex = 0;
 			ele.rgSeenApps = [];
 
@@ -1102,7 +1102,7 @@ var g_bDisableAutoloader = false;
 							items: []
 						};
 
-						nItems = 0
+						nItems = 0;
 
 						while( nItems < 2 && this.rgRecommendedData.tags[this.nRecommendedDataIndex].items.length > 0)
 						{
@@ -1333,7 +1333,7 @@ var g_bDisableAutoloader = false;
 				}
 
 				bAutoLoaderReady = true;
-			}
+			};
 
 			var scrollFunc = function( event ){
 				if ( g_bDisableAutoloader )
@@ -1376,7 +1376,7 @@ var g_bDisableAutoloader = false;
 			this.nNextTrigger = $(ele).height() + offset.top - 750;
 
 			ele.bTriggerActive = false;
-			ele.tagIndex = 0
+			ele.tagIndex = 0;
 			ele.nRecommendedDataIndex = 0;
 			ele.rgSeenApps = [];
 			ele.nPage = 0;
@@ -1432,7 +1432,7 @@ var g_bDisableAutoloader = false;
 				}
 
 				bAutoLoaderReady = true;
-			}
+			};
 
 			var scrollFunc = function( event ){
 				if ( g_bDisableAutoloader )
