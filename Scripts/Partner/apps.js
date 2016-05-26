@@ -3421,12 +3421,17 @@ function CreateDemo( parentId, demoName )
 	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true );
 }
 
+function CreateTool( parentId, strName, bAddToFreeSub )
+{
+	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, bAddToFreeSub );
+}
+
 function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
 {
 	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
+function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bAddToFreeSub )
 {
 	var progressDialog = ShowProgressDialog( "Create New App", "Creating New App" );
 	progressDialog.done( function() { top.location.reload(); } );
@@ -3444,6 +3449,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'publisherid' : pubId,
 			'parentid' : parentId,
 			'f2p' : bF2P ? 1 : 0,
+			'add_to_free_sub' : bAddToFreeSub ? 1 : 0,
 			'sessionid' : g_sessionID
 		}
 	).done(
@@ -3557,5 +3563,17 @@ function UpgradeGreenlightItem( item )
 			);
 	} );
 
+}
+
+function onAjaxFail( xhr )
+{
+	var msg = "An error has occurred. Please try again later";
+	try{
+		var data = $J.parseJSON( xhr.responseText );
+		if( data.message )
+			msg = data.message;
+
+	} catch(e) {};
+	ShowAlertDialog( "Error", msg );
 }
 
