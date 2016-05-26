@@ -1,0 +1,239 @@
+{
+    "name": "ICSGOTournaments_730",
+    "methods": [
+        {
+            "name": "GetTournamentFantasyLineup",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user inventory"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentItems",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user inventory"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentLayout",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentPredictions",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user inventory"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                }
+            ]
+        },
+        {
+            "name": "UploadTournamentFantasyLineup",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user inventory"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                },
+                {
+                    "name": "sectionid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event section id"
+                },
+                {
+                    "name": "pickid0",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PickID to select for the slot"
+                },
+                {
+                    "name": "itemid0",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                },
+                {
+                    "name": "pickid1",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PickID to select for the slot"
+                },
+                {
+                    "name": "itemid1",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                },
+                {
+                    "name": "pickid2",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PickID to select for the slot"
+                },
+                {
+                    "name": "itemid2",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                },
+                {
+                    "name": "pickid3",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PickID to select for the slot"
+                },
+                {
+                    "name": "itemid3",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                },
+                {
+                    "name": "pickid4",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PickID to select for the slot"
+                },
+                {
+                    "name": "itemid4",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                }
+            ]
+        },
+        {
+            "name": "UploadTournamentPredictions",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The event ID"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user inventory"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                },
+                {
+                    "name": "sectionid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event section id"
+                },
+                {
+                    "name": "groupid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event group id"
+                },
+                {
+                    "name": "index",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Index in group"
+                },
+                {
+                    "name": "pickid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Pick ID to select"
+                },
+                {
+                    "name": "itemid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ItemID to lock in for the pick"
+                }
+            ]
+        }
+    ]
+}
