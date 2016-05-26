@@ -1235,7 +1235,7 @@ HelpWizard = {
 		});
 	},
 
-	CanUseProofOfPurchase: function( strSessionID, strCode, supportURL ) {
+	CanUseProofOfPurchase: function( strSessionID, strCode, supportURL, bLostPhone ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryCanUseProofOfPurchase",
@@ -1247,7 +1247,31 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.success )
 			{
-				window.location = "https://help.steampowered.com/wizard/HelpWithLoginProofOfPurchase/?s="+ strSessionID + "&code=" + strCode + "&time=" + data.time;
+				// user can use proof of purchase to recover account
+				if ( strCode.length > 0 )
+				{
+					// we already have a recovery code, so user already verified access to email address
+					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID + "&code=" + strCode + "&time=" + data.time;
+				}
+				else if ( bLostPhone )
+				{
+					// user lost phone and must first verify email
+					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoSendCode/?nav=lostphone&s=" + strSessionID;
+				}
+				else
+				{
+					// user lost access to email
+					if ( data.verifiedPhone )
+					{
+						// user has a verified phone on record, must contact support
+						window.location = supportURL;
+					}
+					else
+					{
+						// user lost access to email, no linked phone. Go directly to credit card verification
+						window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID + "&time=" + data.time;
+					}
+				}
 			}
 			else
 			{
