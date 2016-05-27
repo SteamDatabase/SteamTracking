@@ -184,7 +184,7 @@
 			"edges"
 			{
 				0 { "dest"	66 }
-				1 { "dest"	149 }
+				1 { "dest"	149	"cost"	InwardCost }
 				2 { "dest"	150 }
 				3 { "dest"	151 }
 			}
@@ -326,7 +326,7 @@
 			"longitude"	"2.326540"
 			"edges"
 			{
-				0 { "dest"	 4  	"cost"	0.8 }
+				0 { "dest"	 4  	"cost"	0.5 }
 				1 { "dest"	 5  	"cost"	InwardCost}
 				2 { "dest"	15  	"cost"	InwardCost}
 				3 { "dest"	129  	"cost"	InwardCost}
@@ -348,7 +348,7 @@
 			"longitude"	"4.900231"
 			"edges"
 			{
-				0 { "dest"	4  	"cost"	0.8 }
+				0 { "dest"	4  	"cost"	0.5 }
 				1 { "dest"	5  	"cost"	InwardCost}
 				2 { "dest"	129  	"cost"	1}
 				3 { "dest"	14  }
@@ -2724,6 +2724,19 @@
 				2 { "dest"	47	"cost"	InwardCost }
 			}		
 		}
+		161
+		{
+			"name" "Mongolia"
+			"region"	"asia"
+			"countrycode"	"MN"
+			"latitude"	"47.918842"
+			"longitude"	"106.917608"
+			"edges"
+			{
+				0 { "dest"	157 }
+				1 { "dest"	46 }
+			}		
+		}
 	}
 	"countries"
 	{
@@ -2779,7 +2792,7 @@
 		"BS"	140
 		
 		//"Bahrain"		
-		"BH"	30
+		"BH"	127
 		
 		//"Bangladesh"	
 		"BD"	145
@@ -3163,7 +3176,7 @@
 		"MC"	37
 		
 		//"Mongolia"						
-		"MN"	46
+		"MN"	161
 		
 		//"Montserrat"					
 		"MS"	140
