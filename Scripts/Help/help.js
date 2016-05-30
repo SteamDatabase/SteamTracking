@@ -533,11 +533,11 @@ HelpWizard = {
 
 		if ( loading_div )
 		{
-			loading_div.html('<span style="margin:auto"><img src="http://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
+			loading_div.html('<span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
 		}
 		else
 		{
-			$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="http://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
+			$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
 		}
 
 		try
@@ -1515,11 +1515,11 @@ HardwareRMA = {
 
 		if ( loading_div )
 		{
-			loading_div.html('<span style="margin:auto"><img src="http://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
+			loading_div.html('<span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
 		}
 		else
 		{
-			$J('#help_hardware_return_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="http://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
+			$J('#help_hardware_return_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
 		}
 
 		$J.ajax({
