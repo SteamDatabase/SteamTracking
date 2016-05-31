@@ -469,6 +469,7 @@
  T CFileWriterThread::~CFileWriterThread()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
+ T CFmtStrN<256, true, true>::Format(char const*, ...)
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
  T CKeyErrorContext::~CKeyErrorContext()
