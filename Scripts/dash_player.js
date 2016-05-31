@@ -341,8 +341,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 	var _init = function() {
 		// Attempt to initialize systems
 		var nKeySystemsToTry = Object.keys( keySystemConfigurations ).length;
-		
-		for ( var system in keySystemConfigurations )
+		var _requestMediaKeyAccess = function( system )
 		{
 			navigator.requestMediaKeySystemAccess( system, [ keySystemConfigurations[ system ] ] ).then(
 				function( keySystemAccess ) {
@@ -386,6 +385,11 @@ CDASHPlayer.prototype.InitializeEME = function()
 					}
 				}
 			);
+		};
+
+		for ( var system in keySystemConfigurations )
+		{
+			_requestMediaKeyAccess( system );
 		}
 	};
 	_init();
@@ -772,7 +776,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 		if ( !this.m_schDroppedFrames )
 		{
 			var _player = this;
-			m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
+			this.m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
 		}
 	}
 }
@@ -780,7 +784,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 CDASHPlayer.prototype.MeasureDroppedFrames = function()
 {
 	var _player = this;
-	m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
+	this.m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
 	var tsNow = performance.now();
 
 	var nDroppedTotal = ( this.m_elVideoPlayer.webkitDroppedFrames || this.m_elVideoPlayer.webkitDroppedFrameCount );
@@ -1080,7 +1084,7 @@ CDASHPlayer.prototype.GetClosedCaptionsArray = function()
 				roles: adaptation.roles,
 			};
 
-			for ( lang in CVTTCaptionLoader.LanguageCountryCodes )
+			for ( var lang in CVTTCaptionLoader.LanguageCountryCodes )
 			{
 				if ( lang.toUpperCase() == language.code.toUpperCase() )
 				{
@@ -2252,7 +2256,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 	// Hint to the CDN to get the next segment ready for download
 	if ( CSegmentLoader.PIPELINE_NEXT_SEGMENT && !this.m_player.BIsLiveContent() && this.m_nNextSegment < this.m_nTotalSegments )
 	{
-		urlNext = CMPDParser.GetSegmentURL( this.m_adaptation, this.m_representation, this.m_nNextSegment );
+		var urlNext = CMPDParser.GetSegmentURL( this.m_adaptation, this.m_representation, this.m_nNextSegment );
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open( "GET" , urlNext );
 		xmlhttp.setRequestHeader( "Range", "bytes=0-" + parseInt( CSegmentLoader.PIPELINE_RANGE_BYTES - 1) );
@@ -2626,7 +2630,7 @@ CSegmentLoader.prototype.RemoveAllBuffers = function()
 	this.m_bufSegments = [];
 
 	// clears all buffer data from the player
-	buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
+	var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
 	var nMaxBuffered = 0;
 	for ( var i = 0; i < buffered.length; i++ )
 	{
@@ -2654,7 +2658,7 @@ CSegmentLoader.prototype.GetGameDataFrames = function()
 CSegmentLoader.prototype.ClearGameDataFramesBefore = function( nBeforeTime )
 {
 	var spliceCount = 0;
-	for ( i = 0; i < this.m_rgGameDataFrames.length; i++ )
+	for ( var i = 0; i < this.m_rgGameDataFrames.length; i++ )
 	{
 		if ( ( this.m_rgGameDataFrames[i].pts / 1000 ) < nBeforeTime )
 			spliceCount++;
@@ -2796,7 +2800,7 @@ CMPDParser.GetEventLogLink = function()
 CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, strURL )
 {
 	var _mpd = this;
-	xml = $J( xmlDoc );
+	var xml = $J( xmlDoc );
 	_mpd.m_xml = xml;
 
 	// get mpd
@@ -3082,7 +3086,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 CMPDParser.prototype.BUpdate = function( xmlDoc )
 {
 	var _mpd = this;
-	xml = $J( xmlDoc );
+	var xml = $J( xmlDoc );
 	_mpd.m_xml = xml;
 
 	// make sure it is an mpd
@@ -3189,7 +3193,7 @@ CMPDParser.prototype.ParseDuration = function( xml, strAttr )
 		return null;
 
 	var ret = 0;
-	match = val.match( /(\d*)H/ );
+	var match = val.match( /(\d*)H/ );
 	if ( match )
 		ret += parseFloat(match[1]) * 60 * 60;
 
@@ -5314,6 +5318,7 @@ CDASHPlayerUI.prototype.ScrubUIOnKeyDown = function ( nKeyDirection, bFromLeftPa
 		case CDASHPlayerUI.RIGHT_PAD_DOWN:
 			if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
 				this.DecrementVolume(4);
+			break;
 
 		default:
 			break;
@@ -5679,7 +5684,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		_ui.LoadClosedCaptionLanguage();
 		_ui.LoadClosedCaptionOptions();
 		_ui.m_elClosedCaptionsPanel.hide();
-		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
+		_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
 
 	$J( '#captions_done' ).on('click', function()
@@ -5687,7 +5692,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		_ui.SaveClosedCaptionLanguage();
 		_ui.SaveClosedCaptionOptions();
 		_ui.m_elClosedCaptionsPanel.hide();
-		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
+		_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
 
 	this.m_bClosedCaptionPanelInit = true;
@@ -5918,7 +5923,7 @@ CDASHPlayerUI.prototype.SaveClosedCaptionOptions = function()
 {
 	if ( this.BInTenFoot() )
 	{
-		strCaptionCode = $J( '#representation_captions_language #representation_select .selected' ).attr( 'data-value' );
+		var strCaptionCode = $J( '#representation_captions_language #representation_select .selected' ).attr( 'data-value' );
 
 		$J( '#captions_options_wrapper > .panel_select_wrapper', this.m_elClosedCaptionsPanel ).each( function ( index, element )
 		{
@@ -6380,7 +6385,7 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode, rol
 
 CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaptionCode, role )
 {
-	browserCue = window.VTTCue || window.TextTrackCue;
+	var browserCue = window.VTTCue || window.TextTrackCue;
 
 	// there may be a track but the cues are empty, so try to get it first and then create if needed
 	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode, role );
@@ -6998,9 +7003,9 @@ CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes, rgUnits )
 
 CDASHPlayerStats.prototype.Tick = function()
 {
-	$ele = $J(this.m_elVideoPlayer);
-	ele = this.m_elVideoPlayer;
-	videoPlayer = this.m_videoPlayer;
+	var $ele = $J(this.m_elVideoPlayer);
+	var ele = this.m_elVideoPlayer;
+	var videoPlayer = this.m_videoPlayer;
 	var _stats = this;
 	var rgStatsDefinitions = [
 		// Webkit
@@ -7164,9 +7169,9 @@ CDASHPlayerStats.prototype.Tick = function()
 	for( var i=0; i < rgStatsDefinitions.length; i++)
 	{
 		var rgStatDefinition = rgStatsDefinitions[i];
-		if( rgStatDefinition.value != undefined && rgStatDefinition.value != NaN )
+		if( rgStatDefinition.value != undefined && !isNaN( rgStatDefinition.value ) )
 		{
-			$target = $J( '.value', $J('#' + rgStatDefinition.id) );
+			var $target = $J( '.value', $J('#' + rgStatDefinition.id) );
 			// Create element if needed
 			if( $target.length == 0 )
 			{

@@ -544,7 +544,7 @@ function InitializeTransaction()
 		}
 		
 		var bHasCardInfo = false;
-		method = $('payment_method');
+		var method = $('payment_method');
 		if ( BIsCreditCardMethod( method.value ) )
 		{
 			bHasCardInfo = true;
@@ -2466,7 +2466,7 @@ function UpdatePaymentInfoForm()
 			$('payment_info_method_label').innerHTML = 'Please select a payment method';
 		}
 		
-		method = $('payment_method');
+		var method = $('payment_method');
 		if ( !method )
 			return;
 		var card_is_stored = BIsStoredCreditCard();
@@ -2899,7 +2899,7 @@ function OnVerifyShippingAddressFailure()
 
 function SubmitPaymentInfoForm()
 {
-		method = $('payment_method');
+		var method = $('payment_method');
 	if ( !method )
 		return;
 
@@ -3209,7 +3209,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 {
 	try 
 	{
-				method = $('payment_method');
+				var method = $('payment_method');
 		if ( method && price_data )
 		{
 			var providerPaymentMethod = price_data.providerpaymentmethod ? price_data.providerpaymentmethod : 0;

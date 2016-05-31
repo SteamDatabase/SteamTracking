@@ -288,7 +288,7 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
 {
 	var fnOnKeyUp = function( event ) {
-		if ( Modal.BIsActiveModal() && event.which == 13 && ( !event.target || event.target.nodeName != 'TEXTAREA' ) )
+		if ( Modal.BIsActiveModal() && !event.isDefaultPrevented() && event.which == 13 && ( !event.target || event.target.nodeName != 'TEXTAREA' ) )
 			fnOnEnter();
 	};
 	$J(document).on( 'keyup.SharedConfirmDialog', fnOnKeyUp );
@@ -3238,5 +3238,163 @@ window.VScrollbar = function( eleTarget, eleHandle, direction )
 
 
 };
+
+function InitAutoComplete( elInput, fnSearch, fnOnChange )
+{
+	return new CAutoComplete( elInput, fnSearch, fnOnChange );
+}
+
+function CAutoComplete( elInput, fnSearch, fnOnChange )
+{
+	this.m_bSuppresseNextKeyUp = false;
+	this.m_hSearchTimeout = 0;
+	this.m_strLastSearch = '';
+
+		this.m_$Input = $J( elInput );
+	this.m_fnSearch = fnSearch;
+	this.m_fnOnChange = fnOnChange;
+
+		var strName = this.m_$Input.attr( 'name' );
+	if ( !strName )
+		strName = 'unknown';
+
+	strName = strName + '_autocomplete';
+
+	this.m_$Popup = $J ( '<div class="' + strName + '"></div>' );
+	this.m_$Popup.css( 'width', this.m_$Input.outerWidth() + 'px' );
+	this.m_$Input.after( this.m_$Popup );
+
+	var _this = this;
+	this.m_$Input.on( 'keydown.autocomplete', function( event ) { _this.OnInputKeyDown( event ); } );
+	this.m_$Input.on( 'keyup.autocomplete', function( event ) { _this.OnInputKeyUp( event ); } );
+	this.m_$Input.on( 'blur.autocomplete', function( event ) { _this.OnInputBlur( event ); } );
+	this.m_$Input.on( 'change input paste', function( event ) { _this.OnInputChange( event ); } );
+
+	this.m_$Popup.on( 'mousedown.autocomplete', function( event ) { _this.m_$Popup.data( 'mousedown', true ); } );
+	this.m_$Popup.on( 'mouseup.autocomplete', function( event ) { _this.m_$Popup.data( 'mousedown', false ); } );
+}
+
+CAutoComplete.KEY_ENTER = 13;
+CAutoComplete.KEY_UP = 38;
+CAutoComplete.KEY_DOWN = 40;
+
+CAutoComplete.prototype.OnInputChange = function( event )
+{
+		if ( this.m_fnOnChange )
+		this.m_fnOnChange( this.m_$Input, null );
+
+	if ( this.m_hSearchTimeout == 0 )
+	{
+		var _this = this;
+		var fnDoSearch = function()
+		{
+			_this.m_hSearchTimeout = 0;
+			var strSearch = _this.m_$Input.val();
+			if ( strSearch == _this.m_strLastSearch )
+				return;
+
+			_this.m_strLastSearch = strSearch;
+			_this.m_fnSearch( _this.m_$Input, strSearch, function( $Contents ) { _this.SetPopupContents( $Contents ); } );
+		};
+
+		this.m_hSearchTimeout = window.setTimeout( fnDoSearch, 300 );
+	}
+}
+
+CAutoComplete.prototype.SetPopupContents = function( $Contents )
+{
+	if ( !$Contents )
+	{
+		this.ClosePopup();
+		return;
+	}
+
+	this.m_$Popup.html( '' );
+	this.m_$Popup.append( $Contents );
+
+	var _this = this;
+	this.m_$Popup.children().on( 'click.autocomplete', function( event ) { _this.SelectSuggestion( $J( this ) ); } );
+	this.m_$Popup.show();
+}
+
+CAutoComplete.prototype.OnInputBlur = function( event )
+{
+	if ( !this.m_$Popup.data( 'mousedown' ) )
+		this.ClosePopup();
+}
+
+CAutoComplete.prototype.SelectSuggestion = function( $Suggestion )
+{
+	if ( $Suggestion.length == 0 )
+		return;
+
+	this.m_$Input.val( $Suggestion.data( 'suggestion' ) );
+	if ( this.m_fnOnChange )
+		this.m_fnOnChange( this.m_$Input, $Suggestion );
+
+	this.ClosePopup();
+	this.m_$Input.focus();
+}
+
+CAutoComplete.prototype.ClosePopup = function()
+{
+	if ( this.m_hSearchTimeout != 0 )
+	{
+		window.clearTimeout( this.m_hSearchTimeout );
+		this.m_hSearchTimeout = 0;
+	}
+
+	this.m_strLastSearch = '';
+	this.m_$Popup.hide();
+}
+
+CAutoComplete.prototype.OnInputKeyDown = function( event )
+{
+	var $CurSuggestion = this.m_$Popup.children('.focus');
+	var $NewSuggestion = $J();
+
+	if ( event.keyCode == CAutoComplete.KEY_ENTER )
+	{
+		this.SelectSuggestion( $CurSuggestion );
+		this.m_bSuppressNextKeyUp = true;
+		event.preventDefault();
+		return;
+	}
+
+	if ( event.keyCode == CAutoComplete.KEY_UP || event.keyCode == CAutoComplete.KEY_DOWN )
+	{
+		if ( event.keyCode == CAutoComplete.KEY_UP )
+		{
+			if ( $CurSuggestion.length )
+				$NewSuggestion = $CurSuggestion.prev();
+			if ( !$NewSuggestion.length )
+				$NewSuggestion = this.m_$Popup.children( 'div:last-child' );
+		}
+		else
+		{
+			if ( $CurSuggestion.length )
+				$NewSuggestion = $CurSuggestion.next();
+			if ( !$NewSuggestion.length )
+				$NewSuggestion = this.m_$Popup.children( 'div:first-child' );
+		}
+
+		if ( $NewSuggestion.length  )
+		{
+			$CurSuggestion.removeClass( 'focus' );
+			$NewSuggestion.addClass( 'focus' );
+		}
+
+				event.preventDefault();
+	}
+}
+
+CAutoComplete.prototype.OnInputKeyUp = function( event )
+{
+	if ( this.m_bSuppressNextKeyUp && event.keyCode == CAutoComplete.KEY_ENTER )
+	{
+		this.m_bSuppressNextKeyUp = false;
+		event.preventDefault();
+	}
+}
 
 

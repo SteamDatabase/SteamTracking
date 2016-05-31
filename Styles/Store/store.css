@@ -882,6 +882,18 @@ a#store_search_link img {
 	display: inline-block;
 }
 
+.discount_block .bundle_base_discount {
+	display: inline-block;
+	text-decoration: line-through;
+	color: #626366;
+}
+
+.discount_block.no_discount .bundle_base_discount {
+	text-decoration: none;
+	color: #b0aeac;
+	border-right: 1px solid #626366;
+}
+
 .discount_original_price, .discount_final_price {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
@@ -922,7 +934,8 @@ a#store_search_link img {
 .discount_block_large {
 }
 
-.discount_block_large .discount_pct {
+.discount_block_large .discount_pct,
+.discount_block_large .bundle_base_discount {
 	line-height: 34px;
 	padding: 0 5px;
 
@@ -950,7 +963,8 @@ a#store_search_link img {
 	padding-left: 0;
 }
 
-.discount_block_inline .discount_pct {
+.discount_block_inline .discount_pct,
+.discount_block_inline .bundle_base_discount {
 	padding: 0 3px;
 }
 
@@ -1002,15 +1016,6 @@ a#store_search_link img {
 	padding-top: 0;
 	padding-bottom: 0;
 	line-height: 32px;
-}
-
-.discount_block.game_purchase_discount.suppress_discount_pct .discount_final_price,
-.discount_block.game_purchase_discount.no_discount .discount_final_price {
-	padding-left: 6px;
-}
-.discount_block.game_purchase_discount.suppress_discount_pct .discount_original_price,
-.discount_block.game_purchase_discount.no_discount .discount_final_price {
-	left: 6px;
 }
 
 /* spotlight styles */
@@ -1209,7 +1214,12 @@ a#store_search_link img {
 	width: auto;
 }
 
-.tab_item_discount .discount_pct {
+.tab_item_discount .bundle_base_discount {
+	display: none;
+}
+
+.tab_item_discount .discount_pct,
+.tab_item_discount.no_discount .bundle_base_discount {
 	display: block;
 	float: left;
 	font-size: 14px;
@@ -2292,7 +2302,8 @@ a.pulldown_mobile {
 		font-size: 24px;
 	}
 
-	html.responsive .tab_item_discount .discount_pct {
+	html.responsive .tab_item_discount .discount_pct,
+	html.responsive .tab_item_discount.no_discount .bundle_base_discount {
 		display: inline-block;
 		float: none;
 		margin-top: 0;

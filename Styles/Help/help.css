@@ -189,7 +189,7 @@ body.v6.in_client {
 
 body.v6 {
 	background: url( 'https://help.steampowered.com/public/images/blue_body_top.jpg?v=2' ) center top no-repeat,
-    url( 'https://help.steampowered.com/public/images/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
+		url( 'https://help.steampowered.com/public/images/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
 }
 
 body.v6 > div#global_header {
@@ -775,7 +775,6 @@ body.v6 .page_content_ctn.dark:last-child {
 		overflow: hidden;
 		margin-right: 0;
 	}
-
 }
 
 @media screen and (max-width: 580px)
@@ -2672,7 +2671,7 @@ input.unlockcode_entry_input
 	float: right;
 	text-align: left;
 	width: 292px;
-	margin-right: 60px;
+	margin-right: 200px;
 }
 
 .shipping_form_right label, .shipping_form_left label
@@ -3135,6 +3134,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_footerbox {
+	position: relative;
 	margin-top: 28px;
 
 	background: rgba( 15, 22, 31, 0.42 );
@@ -3196,6 +3196,76 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	.help_request_footerbox.update_options a {
 	}
 }
+
+.help_request_attachment_upload.formdata .attachment_upload_legacy {
+	display: none;
+}
+
+.help_request_attachment_upload.legacy .attachment_upload_formdata {
+	display: none;
+}
+
+.help_request_attachment_upload {
+	margin: 12px 0;
+}
+
+.attachment_upload_targetarea {
+	padding: 10px;
+	background: #253040;
+}
+
+.help_request_attachment_overlay_ctn {
+	position: relative;
+}
+
+@keyframes showAttachmentDropOverlay {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+body.ready_for_drop .help_request_attachment_overlay_ctn .attachment_drop_overlay {
+	opacity: 1;
+	display: flex;
+	animation: showAttachmentDropOverlay 0.4s;	/* animation instead of transition because we are changing display */
+}
+
+.help_request_attachment_overlay_ctn .attachment_drop_overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: rgba( 0, 0, 0, 0.75 );
+	opacity: 0;
+	z-index: 10;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.help_request_attachment_overlay_ctn .attachment_drop_overlay .text {
+	text-align: center;
+	font-size: 24px;
+}
+
+ul.attached_file_list {
+	padding-left: 24px;
+}
+
+.attached_file_size {
+	color: #9eb3cc;
+}
+
+.help_request_attachments {
+	margin-top: 16px;
+}
+
+.help_request_attachment_fakelink {
+	cursor: not-allowed;
+}
+
 
 #billing_state_select_droplist, #shipping_state_select_droplist, #shipping_state_droplist
 {

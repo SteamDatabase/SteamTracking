@@ -45,6 +45,9 @@ ul li {
 	border-top: 1px solid gray;
 }
 
+.btn_green_white_innerfade.btn_border_2px.btn_medium.wide {
+	padding: 0px 20px;
+}
 
 .small {
 	font-size: 85%;

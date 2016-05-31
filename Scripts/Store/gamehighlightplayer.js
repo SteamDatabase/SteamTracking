@@ -181,7 +181,7 @@ function HighlightPlayer( args )
 
 HighlightPlayer.prototype.HighlightItem = function( elem, bUserAction )
 {
-	$Elem = $JFromIDOrElement( elem );
+	var $Elem = $JFromIDOrElement( elem );
 	if ( this.BIsMovie( $Elem ) )
 		this.HighlightMovie( this.GetMovieId( $Elem ), bUserAction );
 	else

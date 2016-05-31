@@ -425,8 +425,9 @@ GDynamicStore = {
 				m_nDiscountPct: Bundle.m_nDiscountPct,
 				m_bMustPurchaseAsSet: Bundle.m_bMustPurchaseAsSet,
 				m_cTotalItemsInBundle: Bundle.m_rgItems.length,
+				m_bContainsDiscountedPackage: false,
 				m_cUserItemsInBundle: 0,
-				m_nPackageBasePriceInCentsWithBundleDiscount: 0,
+				m_nPackageBasePriceInCents: 0,
 				m_nFinalPriceInCents: 0,
 				m_nFinalPriceInCentsWithBundleDiscount: 0,
 				m_rgBundleItems: []
@@ -454,8 +455,9 @@ GDynamicStore = {
 						continue;
 				}
 
+				BundleForUser.m_bContainsDiscountedPackage |= BundleItem.m_bPackageDiscounted;
 				BundleForUser.m_cUserItemsInBundle++;
-				BundleForUser.m_nPackageBasePriceInCentsWithBundleDiscount += BundleItem.m_nBasePriceInCentsWithBundleDiscount;
+				BundleForUser.m_nPackageBasePriceInCents += BundleItem.m_nBasePriceInCents;
 				BundleForUser.m_nFinalPriceInCents += BundleItem.m_nFinalPriceInCents;
 				BundleForUser.m_nFinalPriceInCentsWithBundleDiscount += BundleItem.m_nFinalPriceWithBundleDiscount;
 				BundleForUser.m_rgBundleItems.push( BundleItem );
@@ -491,18 +493,17 @@ GDynamicStore = {
 		}
 		else if ( !Bundle.m_bMustPurchaseAsSet )
 		{
-			var bShowDiscountPct = Bundle.m_nFinalPriceInCentsWithBundleDiscount < Bundle.m_nPackageBasePriceInCentsWithBundleDiscount;
 			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
 
 			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount ) );
-			if ( !bShowDiscountPct )
+			if ( !Bundle.m_bContainsDiscountedPackage )
 			{
 				$DiscountBlocks.addClass('no_discount');
 				$DiscountBlocks.find('.discount_final_price' ).addClass('your_price' ).empty().append($J('<div/>', {'class': 'your_price_label'} ).text('Your Price:'), $J('<div/>' ).text( strFormattedFinalPrice ) );
 			}
 			else
 			{
-				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCentsWithBundleDiscount * 100 );
+				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCents - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCents * 100 );
 				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
 				$DiscountBlocks.find('.discount_final_price' ).text( strFormattedFinalPrice );
 			}

@@ -803,33 +803,43 @@ img.game_header_image_full {
 
 .game_purchase_discount {
 	height: 32px;
+	overflow: hidden;
 }
 
-.game_purchase_discount .discount_pct {
-	position: absolute;
-	left: 0px;
-	width: 69px;
+
+.game_purchase_discount .discount_pct,
+.game_purchase_discount .bundle_base_discount {
+	display: inline-block;
 	height: 32px;
 	line-height: 32px;
 	font-size: 25px;
 	text-align: center;
 	overflow: hidden;
+	padding: 0 6px;
+}
+
+.game_purchase_discount:not(.no_discount) .bundle_base_discount {
+	font-size: 16px;
 }
 
 .game_purchase_discount .discount_prices {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
 	height: 32px;
 }
 
 .game_purchase_discount .discount_original_price {
 	position: absolute;
-	left: 76px;
+	left: auto;
+	right: 6px;
 	top: 2px;
 	font-size: 11px;
 }
 
 /* this is not absolutely positioned, so the div sizes to this */
 .game_purchase_discount .discount_final_price {
-	padding-left: 76px;
+	padding-left: 8px;
 	padding-top: 13px;
 	padding-right: 6px;
 	font-size: 14px;

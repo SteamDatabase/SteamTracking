@@ -138,3 +138,137 @@ textarea#leaderboard_blob {
 	width: 1024px;
 	height: 256px;
 }
+
+/* Episodic, Season and Series */
+#episode_list_wrapper .episode {
+	padding: 10px;
+	margin-bottom: 20px;
+	height: 250px;
+}
+
+#episode_list_wrapper .episode .header_image_col {
+	float: left;
+	min-width: 250px;
+}
+
+#episode_list_wrapper .episode .header_image_col img {
+	width: 230px;
+	height: 108px;
+	border: solid 1px #777777;
+	display: block;
+}
+
+#episode_list_wrapper .episode .header_image_col .empty_image {
+	width: 230px;
+	border: 2px dotted gray;
+	height: 98px;
+	text-align: center;
+	padding-top: 10px
+}
+
+#episode_list_wrapper .episode .store_edit_col {
+	float: left;
+}
+
+#episode_list_wrapper .episode .store_edit_col .label {
+	width: 140px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .label_dd {
+	width: 140px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .label.desc {
+	vertical-align: top;
+	margin-top: 6px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .episode_name {
+	width: 400px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .LocTextArea {
+	width: 407px;
+	margin-left: 4px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .LocTextArea textarea {
+	height: 75px;
+	resize: none;
+}
+
+#episode_list_wrapper .episode .store_edit_col .episode_buttons {
+	float: right;
+	margin-top: 10px;
+}
+
+#episode_list_wrapper .episode .action_item_col {
+	float: left;
+	max-width: 270px;
+}
+
+#episode_list_wrapper .titleDragHandle {
+	top: 0px;
+	cursor: move;
+}
+
+#episode_list_wrapper .titleDrag {
+	position: relative;
+	top: 1px;
+	left: 10px;
+}
+
+#episode_list_wrapper .episode_processing {
+	visibility: hidden;
+	position: absolute;
+	z-index: 100;
+
+	background-color: rgba(20, 20, 20, 0.75);
+	height: 100%;
+	width: 100%;
+}
+
+#episode_list_wrapper .episode_processing.processing {
+	visibility: visible;
+}
+
+#episode_list_wrapper .episode_processing.processing .throbber {
+	width: 100%;
+	height: 100%;
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif') center center no-repeat;
+}
+
+#episode_list_wrapper .boxlist_item {
+	width: 1095px;
+	margin-bottom: 15px;
+}
+
+#episode_list_wrapper .boxlist_item form {
+	border: 1px solid #373737;
+	background-color: #323233;
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+}
+
+#episode_list_wrapper .episode_error_message {
+	color: red;
+}
+
+#addSeason #addSeasonName,
+#addSeason #appEpisodeType {
+	width: 208px;
+}
+
+#addSeason #addCustomSeasonName {
+	width: 200px;
+}
+
+#addSeason #addSeasonEpisodeCount {
+	width: 30px;
+}

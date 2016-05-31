@@ -174,7 +174,7 @@ HelpWizard = {
 
 					// does this wizard url have a hash component in it?  This happens when things use the old
 					//	hash change method of navigation
-					var iHash = href.indexOf( '#' )
+					var iHash = href.indexOf( '#' );
 					if ( iHash > 0 && iHash + 1 < href.length )
 					{
 						href = href.substr( iHash + 1 );
@@ -586,53 +586,6 @@ HelpWizard = {
 		} );
 	},
 
-	ShowCreateHelpRequestForm: function()
-	{
-		if ( !HelpWizard.m_steamid )
-		{
-			this.PromptLogin();
-			return;
-		}
-
-		if ( !$J('#wizard_contents > .wizard_content_wrapper').length )
-			$J('#wizard_contents').wrapInner( '<div class="wizard_content_wrapper"></div>');
-
-		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
-		$J('#create_help_request_issue_text').focus();
-	},
-
-	DismissCreateHelpRequestForm: function() {
-		$J('#wizard_contents > .wizard_content_wrapper').removeClass('show_create_help_request_form');
-	},
-
-	SubmitCreateHelpRequestForm: function ( form )
-	{
-		var $Form = $J(form);
-		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
-
-		$J.ajax({
-				type: $Form.attr( 'method' ),
-				url: $Form.attr( 'action' ),
-				data: $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams )
-		}).done( function( data ) {
-			if ( data.need_login )
-			{
-				HelpWizard.PromptLogin();
-			}
-			else if ( data.error )
-			{
-				ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
-			}
-			else
-			{
-				ShowAlertDialog( 'Contact Steam Support', 'Request Sent' );
-				HelpWizard.DismissCreateHelpRequestForm();
-			}
-		}).always( function() {
-			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
-		});
-	},
-
 	UpdateRefundSelector: function() {
 		var transid = $J('#refund_selector').val();
 		var refund_to_wallet = $J('#refund_wallet_selector').val();
@@ -681,7 +634,7 @@ HelpWizard = {
 			type: 'POST',
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				gid_guestpass: gid_guestpass,
-				mark_refundable: mark_refundable ? 1 : 0,
+				mark_refundable: mark_refundable ? 1 : 0
 			} )
 		} ).fail( function( jqxhr ) {
 			$J('#help_refund_request_dialog').html( 'failed to load' );
@@ -809,7 +762,7 @@ HelpWizard = {
 		var bHasNumbers = false;
 		var bHasSymbols = false;
 
-		for( i = 0; i < pass.length; ++i )
+		for( var i = 0; i < pass.length; ++i )
 		{
 			if ( pass.charAt(i) >= 'a' && pass.charAt(i) <= 'z' )
 				bHasLowercase = true;
@@ -1281,6 +1234,10 @@ HelpWizard = {
 	},
 
 	SubmitProofOfPurchase: function( strSessionID, strCode ) {
+		var $WaitDialog = ShowBlockingWaitDialog(
+			'Proof of Purchase',
+			'Verifing payment information' );
+
 		$J.ajax({
 			type: "POST",
 			url: "https://store.steampowered.com/checkout/submitproofofpurchase",
@@ -1316,6 +1273,10 @@ HelpWizard = {
 				var elError = $J( '#form_submit_error' );
 				elError.text( data.errorMsg ).slideDown();
 			}
+		})
+		.always( function()
+		{
+			$WaitDialog.Dismiss();
 		});
 	},
 
@@ -1530,7 +1491,7 @@ HardwareRMA = {
 					appid: appid,
 					packageid: packageid,
 					transid: transid,
-					wallet: refund_to_wallet,
+					wallet: refund_to_wallet
 				} )
 			}).fail( function() {
 				$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>');
@@ -1676,8 +1637,6 @@ HardwareRMA = {
 						HardwareRMA.OnVerifyShippingAddressFailure();
 						return;
 					}
-
-										HardwareRMA.OnVerifyShippingAddressFailure();
 				},
 				onFailure: function(){
 										HardwareRMA.m_bDoingAjax = false;
@@ -1771,7 +1730,7 @@ HardwareRMA = {
 					ShippingCity: $J('#shipping_city').val(),
 					ShippingState: ($J('#shipping_country').val() == 'US' ? $J('#shipping_state_select').val() : $J('#shipping_state_text').val()),
 					ShippingPostalCode: $J('#shipping_postal_code').val(),
-					ShippingPhone: $J('#shipping_phone').val(),
+					ShippingPhone: $J('#shipping_phone').val()
 					} )
 			}).fail( function() {
 				HardwareRMA.DisplayShippingErrorMessage( 'Sorry! An unexpected error has occurred while processing your request. Please try again.' );
@@ -1968,6 +1927,206 @@ ChangePasswordWizard = {
 
 HelpRequestPage = {
 
+	ShowCreateHelpRequestForm: function()
+	{
+		if ( !HelpWizard.m_steamid )
+		{
+			this.PromptLogin();
+			return;
+		}
+
+		if ( !$J('#wizard_contents > .wizard_content_wrapper').length )
+			$J('#wizard_contents').wrapInner( '<div class="wizard_content_wrapper"></div>');
+
+		HelpRequestPage.InitHelpRequestAttachmentUpload( $J('#create_help_request_form') );
+
+		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
+		$J('#create_help_request_issue_text').focus();
+	},
+
+	DismissCreateHelpRequestForm: function() {
+		$J('#wizard_contents > .wizard_content_wrapper').removeClass('show_create_help_request_form');
+	},
+
+	SubmitCreateHelpRequestForm: function ( form )
+	{
+		var $Form = $J(form);
+		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+
+		var oParams = {
+			type: $Form.attr( 'method' ),
+			url: $Form.attr( 'action' )
+		};
+
+		if ( typeof FormData != 'undefined' )
+		{
+			var fd = new FormData( $Form[0] );
+
+			for ( var key in g_rgDefaultWizardPageParams )
+				fd.append( key, g_rgDefaultWizardPageParams[key] );
+
+			// do we have files to upload?
+			var $FileList = $Form.find('ul.attached_file_list').children();
+			$FileList.each( function() {
+				fd.append( 'attachments[]', $J(this).data('file') );
+			});
+
+			oParams['data'] = fd;
+			oParams['processData'] = false;
+			oParams['contentType'] = false;
+		}
+		else
+		{
+			//TODO: should just submit the page as normal?
+			oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
+		}
+
+
+		$J.ajax(
+			oParams
+		).done( function( data ) {
+			if ( data.need_login )
+			{
+				HelpWizard.PromptLogin();
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+			}
+			else
+			{
+				HelpWizard.LoadPageFromHash( false, 'HelpRequest/' + data.reference_code, true );
+				//HelpRequestPage.DismissCreateHelpRequestForm();
+			}
+		}).always( function() {
+			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		});
+	},
+
+	GetFormattedFilesize: function( size )
+	{
+		var nUnit = 0;
+		var cBytes = size;
+		while ( cBytes >= 1024 && nUnit < 4 )
+		{
+			nUnit++;
+			cBytes /= 1024;
+		}
+
+		var strOutput = v_numberformat( cBytes, 1 ) + ' ';
+		switch ( nUnit )
+		{
+			case 0:
+				strOutput += 'B';
+				break;
+			case 1:
+				strOutput += 'KB';
+				break;
+			case 2:
+				strOutput += 'MB';
+				break;
+			case 3:
+				strOutput += 'GB';
+				break;
+			case 4:
+				strOutput += 'TB';
+				break;
+		}
+
+		return strOutput;
+	},
+
+	InitHelpRequestAttachmentUpload: function( $Form ) {
+		var $AttachmentUpload = $Form.find( '.help_request_attachment_upload' );
+
+		if ( !$AttachmentUpload.length )
+			return;
+
+		var $Overlay = $AttachmentUpload.parents('.help_request_attachment_overlay_ctn').children('.attachment_drop_overlay');
+
+		var elDiv = $AttachmentUpload[0];
+
+		// sniff out support
+		if ( ( 'draggable' in elDiv || 'ondragstart' in elDiv ) && typeof window.FormData != 'undefined' )
+		{
+			$AttachmentUpload.addClass( 'formdata' );
+
+			var bInDrag = false;
+			var nDragTimeout;
+			$J(document.body).on('dragover', function() {
+				$J(document.body).addClass('ready_for_drop');
+				bInDrag = true;
+			}).on( 'dragleave drop', function(e) {
+
+				// dragleave fires for every element, and unlike mouseout, doesn't tell you where it's headed.
+				// dragover, on the other hand, fires constantly.  So we just do a timeout and if we haven't seen
+				//	a dragover in 100ms then we assume it's over.
+
+				e.preventDefault();
+				bInDrag = false;
+				window.clearInterval( nDragTimeout );
+				nDragTimeout = window.setTimeout( function() {
+					if ( !bInDrag )
+						$J(document.body).removeClass('ready_for_drop');
+				}, 100 );
+			});
+
+			var $List = $AttachmentUpload.find( '.attached_file_list' );
+			var fnAddFileToUploadList = function( file ){
+				var $Item = $J('<li/>');
+				$Item.text( file.name );
+				$Item.data('file', file);
+
+				$Item.append( ' ', $J('<span/>', {'class': 'attached_file_size' } ).text( HelpRequestPage.GetFormattedFilesize( file.size ) ) );
+
+				var $RemoveLink = $J('<a/>', {href: 'javascript:void(0);' } );
+				$RemoveLink.text('remove').click( function() { $Item.remove(); } );
+				$Item.append( ' ', $RemoveLink );
+				$List.append( $Item );
+
+				$List.parent().show();
+			};
+
+			$Overlay.on('dragover', function(e) {
+				// need to prevent default on dragover for some reason
+				e.preventDefault();
+			}).on('drop', function(e) {
+				e.preventDefault();
+
+				var rgFiles = e.originalEvent.dataTransfer.files;
+				if ( rgFiles.length )
+				{
+					for ( var i = 0; i < rgFiles.length; i++ )
+					{
+						fnAddFileToUploadList( rgFiles[i] );
+					}
+				}
+			});
+
+			// hook up browsing for files
+			var $FileInput = $AttachmentUpload.find( 'input.attachment_upload_browse_input');
+			var $BrowseLink = $AttachmentUpload.find( '.attachment_browse_link' );
+			// delegate browse link click to a click() on the file input, to open the browse dialog
+			$BrowseLink.click( function(e) {
+				$FileInput.click();
+				e.preventDefault();
+			});
+
+			$FileInput.change( function() {
+				for ( var i = 0; i < this.files.length; i++ )
+				{
+					fnAddFileToUploadList( this.files[i] );
+				}
+				$J(this).val('');
+			});
+
+		}
+		else
+		{
+			$AttachmentUpload.addClass( 'legacy' );
+		}
+	},
+
 	ShowFooterbox: function( strType ) {
 		if ( strType == 'add_reply' )
 		{
@@ -2006,13 +2165,38 @@ HelpRequestPage = {
 		var $Form = $J(form);
 		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
 
-		console.log( $Form.serialize() );
-
-		$J.ajax({
+		var oParams = {
 			type: $Form.attr( 'method' ),
-			url: $Form.attr( 'action' ),
-			data: $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams )
-		}).done( function( data ) {
+			url: $Form.attr( 'action' )
+		};
+		
+		if ( typeof FormData != 'undefined' )
+		{
+			var fd = new FormData( $Form[0] );
+
+			for ( var key in g_rgDefaultWizardPageParams )
+				fd.append( key, g_rgDefaultWizardPageParams[key] );
+
+			// do we have files to upload?
+			var $FileList = $Form.find('ul.attached_file_list').children();
+			$FileList.each( function() {
+				fd.append( 'attachments[]', $J(this).data('file') );
+			});
+
+			oParams['data'] = fd;
+			oParams['processData'] = false;
+			oParams['contentType'] = false;
+		}
+		else
+		{
+			//TODO: should just submit the page as normal?
+			oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
+		}
+
+
+		$J.ajax(
+			oParams
+		).done( function( data ) {
 			if ( data.need_login )
 			{
 				HelpWizard.PromptLogin();

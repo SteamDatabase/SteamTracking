@@ -461,7 +461,9 @@ input:not([type="radio"]), select , textarea, button, .likeButton {
 	padding: 3px;
 }
 
-input[type=submit]:not(.btn_green_white_innerfade), button {
+input[type=submit]:not(.btn_green_white_innerfade),
+input[type=reset]:not(.btn_green_white_innerfade),
+button {
 	border-radius: 2px;
 	border: none;
 	padding: 3px 5px;
@@ -496,7 +498,8 @@ button[type=submit].btn_darkblue_white_innerfade.btn_medium {
 	line-height: 30px;
 }
 
-input[type=submit].btn_darkblue_white_innerfade.btn_small_thin, button.btn_darkblue_white_innerfade.btn_small_thin {
+input[type=submit].btn_darkblue_white_innerfade.btn_small_thin, button.btn_darkblue_white_innerfade.btn_small_thin,
+input[type=reset].btn_darkblue_white_innerfade.btn_small_thin, button.btn_darkblue_white_innerfade.btn_small_thin {
 	font-size: 12px;
 	line-height: 20px;
 }

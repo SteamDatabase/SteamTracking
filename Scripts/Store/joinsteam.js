@@ -82,7 +82,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	else
 	{
 		var bNameOK = true;
-		for( i=0; i<accountname.length; ++i )
+		for( var i=0; i<accountname.length; ++i )
 		{
 			if ( accountname.charAt(i) >= 'a' && accountname.charAt(i) <= 'z' )
 				continue;
@@ -344,7 +344,7 @@ function CalculatePasswordStrength( pass )
 	var bHasNumbers = false;
 	var bHasSymbols = false;
 		
-	for( i = 0; i < pass.length; ++i )
+	for( var i = 0; i < pass.length; ++i )
 	{
 		if ( pass.charAt(i) >= 'a' && pass.charAt(i) <= 'z' )
 			bHasLowercase = true;
@@ -517,7 +517,7 @@ function RefreshCaptcha()
 	      	  return;
 	      	}
 	      	
-	      	gid = result.gid;
+	      	var gid = result.gid;
 			if ( gid != -1 ) 
 			{
 				$('captchaImg').src = 'https://store.steampowered.com/public/captcha.php?gid='+gid;

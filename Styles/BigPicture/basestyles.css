@@ -666,6 +666,7 @@
 .NxFilterTab:descendantfocus .NxTagHeader.WorkshopTagHeader {
 	height: 36px;
 	margin-left: 10px;
+	margin-top: 10px;
 	font-size: 24px;
 	color: #ffffff;
 }
@@ -676,6 +677,10 @@
 }
 .NxFilterTab:descendantfocus .SelectTagFilterOption {
 	width: 100%;
+}
+
+.NxFilterTab .SelectTagFilter.Hidden {
+	visibility: collapse;
 }
 
 .NxFilterWrapper

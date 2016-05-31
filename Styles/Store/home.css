@@ -1468,50 +1468,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	-webkit-animation-delay: 0.32s;
 }
 
-.v6launch_announcement {
-	margin-bottom: 25px;
-}
-.v6launch_announcement .v6launch_title1 {
-	font-size: 43px;
-	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	color: #ffffff;
-	float: left;
-	margin-top: 30px;
-}
-.v6launch_announcement .v6launch_title2 {
-	font-size: 43px;
-	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	color: #66C0F4;
-	margin-top: -10px;
-	float: left;
-}
-.v6launch_announcement .v6launch_description {
-	color: #C6D4DF;
-	font-size: 16px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-
-}
-.v6launch_announcement .v6launch_avatar {
-	padding: 5px;
-	-webkit-box-shadow: 0 0 3 #66C0F4;
-	-moz-box-shadow:  0 0 3 #66C0F4;
-	box-shadow:  0 0 3 #66C0F4;
-	width: 92px;
-	height: 92px;
-	float: left;
-	background-color: #66C0F4;
-	margin-top: 17px;
-	margin-right: 10px;
-	margin-bottom: 12px;
-}
-.v6launch_announcement .v6launch_banner {
-	position: absolute;
-	margin-top: -3px;
-	margin-left: -3px;
-}
-
 .hardware_content {
 	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 	font-size: 20px;
