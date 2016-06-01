@@ -368,7 +368,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 				}
 			).catch(
 				function(error) {
-					PlayerLog( 'Failed to initialize EME', error.message );
+					PlayerLog( 'Failed to initialize EME: ', error.message );
 					if ( error.message == 'Unsupported keySystem' ) {
 						$J( _player.m_elVideoPlayer ).trigger( 'waitingforwidevine' );
 						if ( --nKeySystemsToTry === 0 ) {
@@ -6968,6 +6968,8 @@ CDASHPlayerStats.prototype.Toggle = function()
 CDASHPlayerStats.prototype.CalculateTotals = function()
 {
 	// runs on a 500ms timer, so frame counts must be multiplied by 2.
+	var ele = this.m_elVideoPlayer;
+
 	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
 	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
 
@@ -7003,7 +7005,6 @@ CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes, rgUnits )
 
 CDASHPlayerStats.prototype.Tick = function()
 {
-	var $ele = $J(this.m_elVideoPlayer);
 	var ele = this.m_elVideoPlayer;
 	var videoPlayer = this.m_videoPlayer;
 	var _stats = this;
@@ -7169,7 +7170,7 @@ CDASHPlayerStats.prototype.Tick = function()
 	for( var i=0; i < rgStatsDefinitions.length; i++)
 	{
 		var rgStatDefinition = rgStatsDefinitions[i];
-		if( rgStatDefinition.value != undefined && !isNaN( rgStatDefinition.value ) )
+		if( rgStatDefinition.value != undefined && !Number.isNaN( rgStatDefinition.value ) )
 		{
 			var $target = $J( '.value', $J('#' + rgStatDefinition.id) );
 			// Create element if needed
