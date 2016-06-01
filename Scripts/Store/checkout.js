@@ -727,6 +727,8 @@ function OnInitializeTransactionSuccess( result )
 {
 	try 
 	{
+		var method = $('payment_method');
+		
 				$('transaction_id').value = result.transid;
 		
 				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
@@ -4542,6 +4544,7 @@ function NewPollForTransactionStatusClosure( txnid, retries, timeout )
 var g_LastFinalizedTransactionID = -1;
 function FinalizeTransaction()
 {
+	var method = $('payment_method');
 		if ( g_bFinalizeTransactionInProgress || g_timeoutPoll ) 
 		return;
 
