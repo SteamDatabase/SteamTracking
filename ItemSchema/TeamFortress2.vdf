@@ -15297,13 +15297,6 @@
 			"item_name"		"#TF_bak_fear_monger"
 			"item_description"		"#TF_bak_fear_monger_Desc"
 			"equip_region"		"pyro_head_replacement"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"head"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/pyro/bak_fear_monger/bak_fear_monger"
 			"capabilities"
 			{
@@ -15317,6 +15310,10 @@
 			}
 			"visuals"
 			{
+				"player_bodygroups"
+				{
+					"head"		"0"
+				}
 				"styles"
 				{
 					"0"
@@ -15325,6 +15322,10 @@
 						"name"		"#TF_bak_fear_monger_style1"
 						"skin_red"		"0"
 						"skin_blu"		"1"
+						"additional_hidden_bodygroups"
+						{
+							"head"		"1"
+						}
 					}
 					"1"
 					{

@@ -239,6 +239,10 @@ p.blurb2 {
 #MacSystemRam {
 	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_macram_bg.gif');
 }
+#VRHeadSets {
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_vrheadset_bg.png');
+}
+
 .chartRange {
 	color:#616161;
 	text-transform:uppercase;
