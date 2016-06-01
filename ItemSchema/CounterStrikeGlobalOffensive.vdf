@@ -9400,6 +9400,10 @@
 			"prefab"		"collectible_untradable"
 			"item_quality"		"genuine"
 		}
+		"commodity_pin"
+		{
+			"prefab"		"collectible"
+		}
 		"season1_coin"
 		{
 			"prefab"		"operation_coin"
@@ -21182,60 +21186,159 @@
 			"name"		"item 6088"
 			"prefab"		"collectible_untradable"
 		}
-		"6089"
+		"6101"
 		{
-			"name"		"item 6089"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Dust II"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_DustII"
+			"item_description"		"#CSGO_Collectible_Pin_DustII_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_dust2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_dust2.mdl"
+				"upgrade threshold"		"6001"
+			}
 		}
-		"6090"
+		"6102"
 		{
-			"name"		"item 6090"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Guardian Elite"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_GuardianElite"
+			"item_description"		"#CSGO_Collectible_Pin_GuardianElite_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_guardianelite"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_guardianelite.mdl"
+				"upgrade threshold"		"6002"
+			}
 		}
-		"6091"
+		"6103"
 		{
-			"name"		"item 6091"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Mirage"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_Mirage"
+			"item_description"		"#CSGO_Collectible_Pin_Mirage_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_mirage"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_mirage.mdl"
+				"upgrade threshold"		"6003"
+			}
 		}
-		"6092"
+		"6104"
 		{
-			"name"		"item 6092"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Inferno"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_Inferno"
+			"item_description"		"#CSGO_Collectible_Pin_Inferno_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_inferno"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_inferno.mdl"
+				"upgrade threshold"		"6004"
+			}
 		}
-		"6093"
+		"6105"
 		{
-			"name"		"item 6093"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Italy"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_Italy"
+			"item_description"		"#CSGO_Collectible_Pin_Italy_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_italy"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_italy.mdl"
+				"upgrade threshold"		"6005"
+			}
 		}
-		"6094"
+		"6106"
 		{
-			"name"		"item 6094"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Victory"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_Victory"
+			"item_description"		"#CSGO_Collectible_Pin_Victory_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_victory"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_victory.mdl"
+				"upgrade threshold"		"6006"
+			}
 		}
-		"6095"
+		"6107"
 		{
-			"name"		"item 6095"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Militia"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_Militia"
+			"item_description"		"#CSGO_Collectible_Pin_Militia_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_militia"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_militia.mdl"
+				"upgrade threshold"		"6007"
+			}
 		}
-		"6096"
+		"6108"
 		{
-			"name"		"item 6096"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Nuke"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_Nuke"
+			"item_description"		"#CSGO_Collectible_Pin_Nuke_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_nuke"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_nuke.mdl"
+				"upgrade threshold"		"6008"
+			}
 		}
-		"6097"
+		"6109"
 		{
-			"name"		"item 6097"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Train"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_Train"
+			"item_description"		"#CSGO_Collectible_Pin_Train_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_train"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_train.mdl"
+				"upgrade threshold"		"6009"
+			}
 		}
-		"6098"
+		"6110"
 		{
-			"name"		"item 6098"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Guardian"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_Guardian"
+			"item_description"		"#CSGO_Collectible_Pin_Guardian_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_guardian"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_guardian.mdl"
+				"upgrade threshold"		"6010"
+			}
 		}
-		"6099"
+		"6111"
 		{
-			"name"		"item 6099"
-			"prefab"		"collectible_untradable"
+			"name"		"Commodity Pin - Tactics"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_Tactics"
+			"item_description"		"#CSGO_Collectible_Pin_Tactics_Desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_tactics"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_tactics.mdl"
+				"upgrade threshold"		"6011"
+			}
 		}
 		"7000"
 		{
@@ -22328,6 +22431,14 @@
 			"item_description"		"#coupon_desc"
 			"loot_list_name"		"coupon loot list - team_roles_sticker_capsule"
 			"prefab"		"coupon_team_roles_capsule_prefab"
+		}
+		"20126"
+		{
+			"name"		"coupon - pins_series_1"
+			"item_name"		"#coupon_pins_series_1"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - pins_series_1"
+			"prefab"		"valve coupon_prefab"
 		}
 	}
 	"attributes"
@@ -49142,6 +49253,11 @@
 			"public_list_contents"		"1"
 			"crate_sticker_pack_team_roles_capsule"		"1"
 		}
+		"coupon loot list - pins_series_1"
+		{
+			"public_list_contents"		"1"
+			"crate_pins_series_1"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -70917,6 +71033,63 @@
 					}
 				}
 			}
+		}
+	}
+	"items"
+	{
+		"4235"
+		{
+			"item_name"		"#CSGO_crate_pins_series_1"
+			"name"		"crate_pins_series_1"
+			"item_description"		"#CSGO_crate_pins_series_1_desc"
+			"image_inventory"		"econ/weapon_cases/crate_pins_series_1"
+			"first_sale_date"		"2016/06/01"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"143"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"143"		"crate_pins_series_1"
+	}
+	"client_loot_lists"
+	{
+		"crate_pins_series_1_rare"
+		{
+			"Commodity Pin - Guardian"		"1"
+			"Commodity Pin - Tactics"		"1"
+			"Commodity Pin - Nuke"		"1"
+			"Commodity Pin - Train"		"1"
+		}
+		"crate_pins_series_1_mythical"
+		{
+			"Commodity Pin - Victory"		"1"
+			"Commodity Pin - Militia"		"1"
+			"Commodity Pin - Italy"		"1"
+		}
+		"crate_pins_series_1_legendary"
+		{
+			"Commodity Pin - Mirage"		"1"
+			"Commodity Pin - Inferno"		"1"
+		}
+		"crate_pins_series_1_ancient"
+		{
+			"Commodity Pin - Dust II"		"1"
+			"Commodity Pin - Guardian Elite"		"1"
+		}
+		"crate_pins_series_1"
+		{
+			"crate_pins_series_1_rare"		"1"
+			"crate_pins_series_1_mythical"		"1"
+			"crate_pins_series_1_legendary"		"1"
+			"crate_pins_series_1_ancient"		"1"
 		}
 	}
 	"paint_kits"

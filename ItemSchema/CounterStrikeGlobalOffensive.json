@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.1c72427be6f80f8cda409cac51a9f962865967f4.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.51d2ccf27a2adfc3bca508320f5de6eba1241688.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -15006,6 +15006,38 @@
 				
 			},
 			{
+				"name": "crate_pins_series_1",
+				"defindex": 4235,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 1",
+				"item_description": "This capsule contains a single Series 1 collectible pin. Collectible pins can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_pins_series_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_pins_series_1.d43d773dc49e91152169d79cfca70a76a7ef7c06.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 143
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -16777,18 +16809,19 @@
 				
 			},
 			{
-				"name": "item 6089",
-				"defindex": 6089,
+				"name": "Commodity Pin - Dust II",
+				"defindex": 6101,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Dust II Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_dust2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_dust2.21cfa1f8900c3e59fd207dc500ab4287feeccbc0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_dust2_large.619f7e63556591eda38a7982f63dcd686f746371.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16797,18 +16830,19 @@
 				
 			},
 			{
-				"name": "item 6090",
-				"defindex": 6090,
+				"name": "Commodity Pin - Guardian Elite",
+				"defindex": 6102,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Guardian Elite Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_guardianelite",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardianelite.6a9648fd4eba0ccbe729e2173b57ad7502880a70.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardianelite_large.709bd555c8af75e87ee661aaacc5ea4f87ac8f36.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16817,18 +16851,19 @@
 				
 			},
 			{
-				"name": "item 6091",
-				"defindex": 6091,
+				"name": "Commodity Pin - Mirage",
+				"defindex": 6103,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Mirage Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_mirage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_mirage.0b6a425a4ee64a014165b49076498de1aaf2d3ea.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_mirage_large.52d568542487696880ef395ef009853cdd88c2e8.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16837,18 +16872,19 @@
 				
 			},
 			{
-				"name": "item 6092",
-				"defindex": 6092,
+				"name": "Commodity Pin - Inferno",
+				"defindex": 6104,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Inferno Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_inferno",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno.790dbd55c964e62eae58eef4228e3b1ba4b45a39.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno_large.082a3bf33e7f6e812a47b11821f477e491f4ad2d.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16857,18 +16893,19 @@
 				
 			},
 			{
-				"name": "item 6093",
-				"defindex": 6093,
+				"name": "Commodity Pin - Italy",
+				"defindex": 6105,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Italy Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_italy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_italy.27b52667dff5127fe2227aee83cb3dce4880f0bf.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_italy_large.ebe62876c27f1bd012cb1c3b61b4b8e8ec2d6a9a.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16877,18 +16914,19 @@
 				
 			},
 			{
-				"name": "item 6094",
-				"defindex": 6094,
+				"name": "Commodity Pin - Victory",
+				"defindex": 6106,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Victory Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_victory",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_victory.f7bca47001d46f306897c89bae3ab30b86528c4f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_victory_large.64efa85ea1f1241610c21ca355ee60a24430c581.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16897,18 +16935,19 @@
 				
 			},
 			{
-				"name": "item 6095",
-				"defindex": 6095,
+				"name": "Commodity Pin - Militia",
+				"defindex": 6107,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Militia Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_militia",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_militia.96fadc5cc09ab53f30f8a9cb7a5fbb44913f5700.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_militia_large.7c2d05990e80c386018596b4dc45982aa1bf8e4e.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16917,18 +16956,19 @@
 				
 			},
 			{
-				"name": "item 6096",
-				"defindex": 6096,
+				"name": "Commodity Pin - Nuke",
+				"defindex": 6108,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Nuke Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_nuke",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_nuke.775c18ed5f8d424609a8e4d629770be11897f1c0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_nuke_large.a523a4fe17b12c42f7a99e12fc6db499ff97d5bb.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16937,18 +16977,19 @@
 				
 			},
 			{
-				"name": "item 6097",
-				"defindex": 6097,
+				"name": "Commodity Pin - Train",
+				"defindex": 6109,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Train Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_train",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_train.c91b16153b969f0e3f6c57fef19b1ef1ad2a8450.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_train_large.86f41b7a5eb7046a720fea36546d71b54ff30200.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16957,18 +16998,19 @@
 				
 			},
 			{
-				"name": "item 6098",
-				"defindex": 6098,
+				"name": "Commodity Pin - Guardian",
+				"defindex": 6110,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Guardian Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_guardian",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian.df1b403aa0f46e534b00495eae4266c7aea3bd2e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_large.0ec6a8661f634532fbf231a2838c1db57ab6537c.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -16977,18 +17019,19 @@
 				
 			},
 			{
-				"name": "item 6099",
-				"defindex": 6099,
+				"name": "Commodity Pin - Tactics",
+				"defindex": 6111,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Tactics Pin",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ/status_icons/collectible_pin_tactics",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics.fc68bc1c1ad538846b975d4b118398c9cc4abe79.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.d90bab9e7a60906d447d8b6663a52cde989a7047.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -20963,6 +21006,38 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
 				"item_name": "Team Roles Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - pins_series_1",
+				"defindex": 20126,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 1",
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
