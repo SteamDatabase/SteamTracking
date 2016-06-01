@@ -265,12 +265,17 @@ SupportFrontPage
 }
 HelpFrontPage
 {
-	url			"%help%/"
+	url			"%help%"
 	method		"internal"
 }
 ChangePassword
 {
-	url			"%help%/change_password/?option=%p1%"
+	url			"%help%change_password/?option=%p1%"
+	method		"internal"
+}
+MyHelpRequests
+{
+	url			"%help%wizard/HelpRequests"
 	method		"internal"
 }
 SupportNewTicket
@@ -291,13 +296,13 @@ SupportAppPage
 }
 HelpAppPage
 {
-	url			"%help%/#HelpWithGame/?appid=%p1%"
+	url			"%help%wizard/HelpWithGame/?appid=%p1%"
 	method		"internal"
 }
 
 HelpWithLogin
 {
-	url			"%help%/#HelpWithLogin?redir=clientlogin"
+	url			"%help%wizard/HelpWithLogin?redir=clientlogin"
 	Method		"internal"
 }
 

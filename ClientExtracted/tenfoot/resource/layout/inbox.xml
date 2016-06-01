@@ -66,6 +66,10 @@
 					<Image src="file://{images}/comments.png" />
 					<Label id="NewModeratorMessagesLabel" class="LongDescSm" text="#MainMenu_NewModeratorMessages" />
 				</ParentalButton>
+				<ParentalButton id="NewHelpRequestRepliesButton" class="Button" onactivate="ShowHelpRequests();" >
+					<Image src="file://{images}/comments.png" />
+					<Label id="NewHelpRequestRepliesLabel" class="LongDescSm" text="#MainMenu_NewModeratorMessages" />
+				</ParentalButton>
 				<Button id="NewSupportMessagesButton" class="Button" onactivate="ShowNewSupportMessages();" >
 					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
 				</Button>

@@ -4088,6 +4088,9 @@ Set a category for these games to help you find them quickly and organize your L
 "steam_inbox_moderatormessage"	"1 community moderation message"
 "steam_inbox_moderatormessages"	"%count% community moderation messages"
 
+"steam_inbox_helprequestreply"		"1 reply from Steam Support"
+"steam_inbox_helprequestreplies"	"%count% replies from Steam Support"
+
 "Steam_AllowGameLaunch_Info"	"%game% is attempting to launch with the optional parameters  shown below."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
 "Steam_AllowGameLaunch_Info_Prompt" "If you did not request this launch or do not understand these options, select Cancel."

@@ -225,6 +225,8 @@
 	"MainMenu_NewAsyncGameInvitesSingular"	"{d:asyncgameinvitescount} New Game Invite"
 	"MainMenu_NewModeratorMessages"		"{d:moderatormessagecount} Community Moderation Messages"
 	"MainMenu_NewModeratorMessagesSingular"	"{d:moderatormessagecount} Community Moderation Message"
+	"MainMenu_NewHelpRequestReplies"		"{d:helprequestreplycount} replies from Steam Support"
+	"MainMenu_NewHelpRequestRepliesSingular"	"{d:helprequestreplycount} reply from Steam Support"
 	"MainMenu_UnreadChatSingular"	"{d:unreadchatmessagecount} Unread Chat Message"
 	"MainMenu_UnreadChat"			"{d:unreadchatmessagecount} Unread Chat Messages"
 	"MainMenu_AlertsTitle" "Your Alerts"
