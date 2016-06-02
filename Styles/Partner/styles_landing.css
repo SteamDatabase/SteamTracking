@@ -2256,3 +2256,10 @@ p.optionalChecks {
 .admin_overview_graphic_container .step_image {
 	position: absolute;
 }
+
+.landingRightCol .panel.bundle h2 {
+	margin-bottom: 0px;
+}
+.landingRightCol .panel.bundle .grayRule {
+	margin-top: 25px;
+}
