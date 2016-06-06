@@ -94715,8 +94715,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_First_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
 		}
 		"9095"
 		{		
@@ -94724,8 +94724,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Second_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
 		}
 		"9096"
 		{		
@@ -94733,8 +94733,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Third_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
 		}
 		"9097"
 		{		
@@ -94742,8 +94742,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Participant"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
 		}
 		"9098"
 		{		
@@ -94751,8 +94751,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Open_First_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
 		}
 		"9099"
 		{		
@@ -94760,8 +94760,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Second_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
 		}
 		"9100"
 		{		
@@ -94769,17 +94769,17 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Third_Place"
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
 		}
 		"9101"
 		{		
 			"name"				"ozfortress Open Participant Season 15"
 			"prefab"			"tournament_medal"
-			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"																																																 ``
 			"item_description"	"#TF_TournamentMedal_Season15"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
-			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
 		}
 		"9102"
 		{		
