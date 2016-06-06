@@ -94776,7 +94776,7 @@
 		{		
 			"name"				"ozfortress Open Participant Season 15"
 			"prefab"			"tournament_medal"
-			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"																																																 ``
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"
 			"item_description"	"#TF_TournamentMedal_Season15"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
 			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
