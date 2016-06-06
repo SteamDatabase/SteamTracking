@@ -80,6 +80,8 @@
 		
 		Textentryfocus_chat
 		{
+			// opaque bgcolor for rendering optimization during typing
+			bgcolor=DialogBG
 			render
 			{
 				// lines around

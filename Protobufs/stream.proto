@@ -69,6 +69,9 @@ enum EStreamControlMessage {
 	k_EStreamControlSetStreamingClientConfig = 99;
 	k_EStreamControlSystemSuspend = 100;
 	k_EStreamControlSetControllerSettings = 101;
+	k_EStreamControlVirtualHereRequest = 102;
+	k_EStreamControlVirtualHereReady = 103;
+	k_EStreamControlVirtualHereShareDevice = 104;
 }
 
 enum EStreamVersion {
@@ -619,6 +622,18 @@ message CSetActivityMsg {
 }
 
 message CSystemSuspendMsg {
+}
+
+message CVirtualHereRequestMsg {
+	optional string hostname = 1;
+}
+
+message CVirtualHereReadyMsg {
+	optional uint32 licensed_device_count = 1;
+}
+
+message CVirtualHereShareDeviceMsg {
+	optional string device_address = 1;
 }
 
 message CStreamDataLostMsg {

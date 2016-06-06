@@ -4417,7 +4417,7 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_UpdateControllerFirmware_Required_Title" "New Controller Firmware Available"
 "SteamUI_UpdateControllerFirmware_Required" "There is new firmware for your Steam Controller. Please switch to Big Picture mode to begin the update process."
 "SteamUI_UpdateControllerMigration_Title"	"Controller Re-Migration Required"
-"SteamUI_UpdateControllerMigration"			"We've fixed an issue in the controller migration process related to non-steam games. Please switch to Big Picture mode to re-migrate your controller configurations."
+"SteamUI_UpdateControllerMigration"			"We've fixed an issue in the controller migration process related to non-Steam games. Please switch to Big Picture mode to re-migrate your controller configurations."
 
 "Steam_Screenshots_ViewAll" "View all screenshots"
 "Steam_Screenshots_ViewRecent" "View recent screenshots from"

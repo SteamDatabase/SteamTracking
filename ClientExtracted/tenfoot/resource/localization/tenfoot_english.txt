@@ -2580,6 +2580,9 @@
 	"Notification_Controller_Text"		"Using configs from {s:accountname}"
 	"Notification_Controller_Guest"		"Using a Guest account."
 
+	"Notification_VirtualHere"			"VirtualHere"
+	"Notification_PurchaseVirtualHere"	"Available in the Steam Store for USB sharing"
+
 	"Friends_GroupEvent_NowStarting"		"has event starting"
 
 	"Friends_GroupEvent_NewEventScheduled"	"has scheduled an event"
@@ -4912,7 +4915,7 @@
 	"ControllerBinding_VerticalSensitivityJoystickCamera" "Sensitivity Vertical Scale"
 	"ControllerBinding_VerticalSensitivityJoystickCamera_Description" "Vertical Sensitivity Scale determines how much vertical movement occurs relative to horizontal movement.  At 50% along the slider it is equal, if less than half it vertical movement will be lower than horizontal, while more will increase the ratio to more vertical movement."
 	"ControllerBinding_JoystickSmoothingCameraMode" "Smooth Joystick"
-	"ControllerBinding_JoystickSmoothingCameraMode_Description" "Smoothing returns the stick to its neutral position as if it were driven by a phsyical spring rather than instantly returning when you stop touching."
+	"ControllerBinding_JoystickSmoothingCameraMode_Description" "Smoothing returns the stick to its neutral position as if it were driven by a physical spring rather than instantly returning when you stop touching."
 	"ControllerBinding_JoystickSmoothingCameraMode_On" "Smooth Joystick - On"
 	"ControllerBinding_JoystickSmoothingCameraMode_On_Description" "Smoothing returns the stick to its neutral position as if it were driven by a phsyical spring rather than instantly returning when you stop touching."
 	"ControllerBinding_JoystickSmoothingCameraMode_Off" "Smooth Joystick - Off"
