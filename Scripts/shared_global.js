@@ -2924,6 +2924,11 @@ function UpdateNotificationCounts()
 
 				});
 
+				if ( !notifications[ 11 ] )
+				{
+					$J('.global_header_account_alert').hide();
+				}
+
 				var cTotalNotifications = 0;
 				for ( var type in notifications )
 					cTotalNotifications += ( notifications[type] || 0 );

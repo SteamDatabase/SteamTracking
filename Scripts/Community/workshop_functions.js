@@ -902,9 +902,19 @@ function AddContributor( steamid, profileName, avatarLink )
 		onSuccess: (function(publishedfileid){
 			return function(transport)
 			{
-				// Grey out modal or show spinner?
 				gFriendsPicker.Dismiss();
-				location.reload();
+
+				var responseJSON = transport.responseJSON;
+				switch ( responseJSON.success )
+				{
+					case 1:
+						// Grey out modal or show spinner?
+						location.reload();
+						break;
+					default:
+						ShowAlertDialog( 'Error', 'The specified profile could not be found.' );
+						break;
+				}
 			}
 		}(publishedfileid))
 	};

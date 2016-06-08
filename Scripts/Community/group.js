@@ -654,7 +654,7 @@ function ClanUploadImage( ele, strClanURL )
 	var nFiles = rgFiles.length;
 	if( nFiles < 1 )
 	{
-		ShowAlertDialog( "Error uploading images", "No images were selected to upload" );
+		return;
 	}
 	var strUploadingString = "Uploading image %1$s\/%2$s<br><br>This dialog will automatically close when finished.";
 

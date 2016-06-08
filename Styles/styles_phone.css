@@ -147,7 +147,7 @@ input.phone_input_number {
 }
 
 .phone_input_container {
-	background: rgba( 0, 0, 0, 0.3 );
+
 }
 
 .phone_sms_warning {
@@ -213,4 +213,22 @@ input.phone_input_number {
 .phone_twofactor_warning_text {
 	max-width: 600px;
 	font-size: 14px;
+}
+
+.phone_change_description {
+	font-size: 14px;
+	line-height: 35px;
+	margin-bottom: 15px;
+}
+
+.phone_change_support {
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+.verify_sms_form_container {
+	background: rgba( 0, 0, 0, .3);
+	margin: 15px 0;
+	text-align: center;
+	padding-bottom: 10px;
 }

@@ -730,6 +730,7 @@ function OnInitializeTransactionSuccess( result )
 		var method = $('payment_method');
 		
 				$('transaction_id').value = result.transid;
+		var method = $('payment_method');
 		
 				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
 		{

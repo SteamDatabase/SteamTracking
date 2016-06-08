@@ -1111,6 +1111,15 @@ a.global_header_toggle_button:hover {
 	background-color: #d75a5a;
 }
 
+.global_header_toggle_button.yellow {
+	background-color: #bb9d2f;
+}
+
+.global_header_toggle_button.yellow:hover,
+.global_header_toggle_button.yellow.focus {
+	background-color: #c1a643;
+}
+
 .global_header_account_alert {
 	font-weight: bold;
 	padding: 0 54px;

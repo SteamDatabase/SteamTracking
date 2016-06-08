@@ -924,6 +924,9 @@ td.wht_total {
 	font-size: 16px;
 	line-height: 30px;
 }
+.account_header_line.noicon {
+	padding-left: 8px;
+}
 
 .account_header_line img {
 	height: 100%;
@@ -944,6 +947,20 @@ td.wht_total {
 
 .account_setting_sub_block {
 	width: 30%;
+	padding: 1em;
+	float: left;
+	color: #808891;
+}
+
+.account_setting_sub_block_1-2 {
+	width: 45%;
+	padding: 1em;
+	float: left;
+	color: #808891;
+}
+
+.account_setting_sub_block_2-3 {
+	width: 60%;
 	padding: 1em;
 	float: left;
 	color: #808891;
@@ -1140,4 +1157,30 @@ td.wht_total {
 
 #address_errors {
 	color: red;
+}
+
+
+.account_preferences input[type=checkbox] {
+	margin-right: 4px;
+}
+.account_preferences input[type=checkbox], .account_preferences label {
+	line-height: 20px;
+	vertical-align: middle;
+	display: inline-block;
+	color: #b8b6b4;
+	cursor: pointer;
+	font-size: 16px;
+
+}
+
+.account_preferences input[type=checkbox]:disabled+label {
+	color: #4d5f69;
+}
+
+.account_preferences select {
+	margin: 10px 0;
+}
+
+.minispacer {
+	height: 15px;
 }

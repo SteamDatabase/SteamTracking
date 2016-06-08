@@ -273,3 +273,29 @@ body
 	height: 120px;
 }
 
+.series_name {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #80bde5;
+}
+
+.tenfoot .series_name {
+    font-size: 48px;
+}
+
+.season_name {
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: inline;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tenfoot .season_name {
+    font-size: 40px;
+}
+
+.video_name {
+    display: inline;
+}

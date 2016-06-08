@@ -296,7 +296,8 @@ function UseSteamguardWithTwoFactor( near )
 	if ( BIsMobileAPICallInProgress() )
 		return;
 	ShowBusy( near );
-	window.location = 'https://steamcommunity.com/steamguard/twofactor_splash';
+	var now = Date.getTime() / 1000;
+	window.location = 'https://steamcommunity.com/steamguard/twofactor_splash?phonetime=' + now;
 }
 
 
@@ -363,12 +364,22 @@ function HandlePhoneSplashContinue( near, bForTwoFactor )
 	var sForTwoFactor = bForTwoFactor ? '1' : '0';
 	var phoneNumberLocation = 'https://steamcommunity.com/steamguard/phone_number?bForTwoFactor=' + sForTwoFactor + '&bRevoke2fOnCancel=';
 
+	var now = 0;
 	if ( bForTwoFactor )
 	{
-		PhoneAjax( 'has_phone', null,
+		now = Date.now() / 1000;
+	}
+
+	if ( bForTwoFactor )
+	{
+		PhoneAjax( 'has_phone', now,
 			function( data )
 			{
-				if ( data.has_phone )
+				if ( data.phoneTimeMinutesOff )
+				{
+					window.location = 'https://steamcommunity.com/steamguard/twofactor_wrongtime?minutesoff=' + data.phoneTimeMinutesOff;
+				}
+				else if ( data.has_phone )
 				{
 					var result = GetValueFromLocalURL( 'steammobile://steamguardset?scheme=twofactor&ph=1', 60,
 							function()

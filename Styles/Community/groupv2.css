@@ -858,7 +858,7 @@ fieldset.editRow_textarea label {
 	margin: 0px;
 }
 
-.group_breadcrumbs, .group_breadcrumbs a {
+.group_breadcrumbs {
 	color: #8f98a0;
 	font-size: 12px;
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

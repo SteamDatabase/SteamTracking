@@ -6,11 +6,11 @@ function InitSupportMessages( cMessages )
 {
 	g_cTotalMessages = cMessages;
 	ShowSupportMessage( 0 );
-	$('supportmessage_page_prev').observe( 'click', function() { ShowSupportMessage( g_iActiveMessage - 1 ) } );
-	$('supportmessage_page_next').observe( 'click', function() { ShowSupportMessage( g_iActiveMessage + 1 ) } );
+	$('supportmessage_pagebtn_prev').observe( 'click', function() { ShowSupportMessage( g_iActiveMessage - 1 ) } );
+	$('supportmessage_pagebtn_next').observe( 'click', function() { ShowSupportMessage( g_iActiveMessage + 1 ) } );
 
 	if ( BAreAllMessagesAcked() )
-		$('supportmessages_closebtn').removeClassName('disabled');
+		$('supportmessages_closebtn').removeClassName('btn_disabled');
 }
 
 function ShowSupportMessage( iMessage )
@@ -30,14 +30,14 @@ function ShowSupportMessage( iMessage )
 	{
 		$('supportmessage_cur').update( iMessage + 1 );
 		if ( iMessage > 0 )
-			$('supportmessage_page_prev').removeClassName('disabled');
+			$('supportmessage_pagebtn_prev').removeClassName('disabled');
 		else
-			$('supportmessage_page_prev').addClassName('disabled');
+			$('supportmessage_pagebtn_prev').addClassName('disabled');
 
 		if ( iMessage < g_cTotalMessages - 1 )
-			$('supportmessage_page_next').removeClassName('disabled');
+			$('supportmessage_pagebtn_next').removeClassName('disabled');
 		else
-			$('supportmessage_page_next').addClassName('disabled');
+			$('supportmessage_pagebtn_next').addClassName('disabled');
 	}
 	g_iActiveMessage = iMessage;
 }
@@ -60,9 +60,9 @@ function BAreAllMessagesAcked()
 function OnSupportMessageAcked( iMessage )
 {
 	if ( BAreAllMessagesAcked() )
-		$('supportmessages_closebtn').removeClassName('disabled');
+		$('supportmessages_closebtn').removeClassName('btn_disabled');
 	else
-		$('supportmessages_closebtn').addClassName('disabled');
+		$('supportmessages_closebtn').addClassName('btn_disabled');
 }
 
 function CloseSupportMessageWindow()
@@ -82,10 +82,7 @@ function CloseSupportMessageWindow()
 					}
 					else
 					{
-						if ( window.opener )
-							window.close();
-						else
-							window.location = 'https://store.steampowered.com/account/';
+						window.close();
 					}
 				}
 				else if ( transport.responseText )
