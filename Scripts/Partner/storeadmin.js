@@ -681,6 +681,12 @@ function UpdateButtonGroupValue(key)
 {
 	var radioValue = $J('input:radio[name='+key+'_radio]:checked').val();
 	$J('#'+key+'_input').val(radioValue);
+	MarkSentinal(key); // If we have one.
+}
+
+function MarkSentinal(key)
+{
+	$J('#'+key+'_sentinel').val("1");
 }
 
 function IsNumberKey( evt )
