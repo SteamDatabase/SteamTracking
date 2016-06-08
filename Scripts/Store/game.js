@@ -543,22 +543,4 @@ function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 	//ShowDialog( 'Got Steam?', $ModalContent );
 }
 
-function ChangeSeason( el, season )
-{
-	// switch active season indicator
-	$J( '.series_seasons .season_selector .season_name' ).removeClass( 'active' );
-	$J( el ).addClass( 'active' );
-	
-	// switch which episodes are shown
-	$J( '.season_episode_list_wrapper .season_episode_list' ).removeClass( 'active' );
-	$J( '.season_episode_list_wrapper .season_episode_list[data-season="' + season + '"]' ).addClass( 'active' );
-
-	// load the images
-	$J( '.season_episode_list.active .episode_image_col img').each( function( index, value )
-	{
-		$J( this ).attr( 'src', $J( this ).data( 'src' ) );
-	});
-}
-
-
 
