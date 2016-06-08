@@ -249,10 +249,10 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 				rgIncludedPackageIds[ rgItem.packageid ] = true; 
 		} );
 	}
-	
-	Event.observe( elemAllApps, 'dblclick', MoveClusterItem.bindAsEventListener( null, elemAllApps, elemIncludedApps, true ) );
-	Event.observe( elemIncludedApps, 'dblclick', MoveClusterItem.bindAsEventListener( null, elemAllApps, elemIncludedApps, false ) );
-	
+
+	$J(elemAllApps).on( 'dblclick', MoveClusterItem.bind( null, elemAllApps, elemIncludedApps, true ) )
+	$J(elemIncludedApps).on( 'dblclick', MoveClusterItem.bind( null, elemAllApps, elemIncludedApps, false ) )
+
 	Event.observe( elemAllApps.up('form'), 'submit', SerializeClusterToForm.bindAsEventListener( null, elemAllApps.up('form'), 'capsule_lists[' + clusterName + ']', elemIncludedApps ) );
 	
 	// is the list of included apps an empty array?
@@ -311,16 +311,25 @@ function GetClusterItemsAsArray( elemIncludedApps )
 	return rgItems;
 }
 
-function MoveClusterItem( event, elemAvailable, elemIncluded, bAdding )
+function MoveClusterItem( elemAvailable, elemIncluded, bAdding, event )
 {
 	var elemFrom = bAdding ? $(elemAvailable) : $(elemIncluded);
 	var elemTo = bAdding ? $(elemIncluded) : $(elemAvailable);
-	var elem = event.element();
-	if ( elem && elem.descendantOf( elemFrom ) )
+	var elem = event.target;
+
+	if ( elem && $J.contains( elemFrom, elem ) )
 	{
-		elemTo.appendChild( elem.remove() );
+		$J(elemTo).append( $J(elem).detach() );
 	}
 	CreateClusterSortable( elemIncluded );
+}
+
+function MoveAll( elSrc, elDest )
+{
+	$J.each(elSrc.children(), function(i, j) {
+		elDest.append( $J(j).detach() );
+	});
+	CreateClusterSortable( elDest[0] );
 }
 
 function CreateClusterSortable( elem )
@@ -665,6 +674,13 @@ function UpdateButtonGroup(key)
 	var radioValue = $J('input:radio[name='+key+'_radio]:checked').val();
 	$J('.'+key+'_input').val('');
 	$J('#'+key+'_input_' + radioValue).val(true);
+}
+
+
+function UpdateButtonGroupValue(key)
+{
+	var radioValue = $J('input:radio[name='+key+'_radio]:checked').val();
+	$J('#'+key+'_input').val(radioValue);
 }
 
 function IsNumberKey( evt )

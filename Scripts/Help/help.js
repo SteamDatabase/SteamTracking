@@ -1236,7 +1236,7 @@ HelpWizard = {
 	SubmitProofOfPurchase: function( strSessionID, strCode ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
-			'Verifing payment information' );
+			'Verifying payment information' );
 
 		$J.ajax({
 			type: "POST",

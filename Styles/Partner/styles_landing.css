@@ -1306,7 +1306,6 @@ span.icon_actual_authority { display: inline-block;}
 	float: left;
 	margin-right: 10px;
 	width: 45%;
-    min-height: 150px;
 	padding: 12px;
 	margin-top: 16px;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#AACEFF), color-stop(95%,#ffffff));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AACEFF', endColorstr='#ffffff',GradientType=0 );background: -moz-linear-gradient( top, #AACEFF 5%, #ffffff 95%);background: -webkit-linear-gradient( top, #AACEFF 5%, #ffffff 95%);background: -o-linear-gradient( top, #AACEFF 5%, #ffffff 95%);background: -ms-linear-gradient( top, #AACEFF 5%, #ffffff 95%);background: linear-gradient( to bottom, #AACEFF 5%, #ffffff 95%);}

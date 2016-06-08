@@ -2496,6 +2496,18 @@ html, body { height:100%; }
 	max-height: 64px;
 }
 
+/* For Bulk Approve Pricing Tool */
+.pending_package_item>td {
+	vertical-align: top;
+	border-top: 1px solid #444;
+}
+.pending_package_name {
+	min-width: 200px;
+}
+
+
+
+
 .priceChangedNew
 {
 	color: #82a6d7;
@@ -2673,4 +2685,12 @@ html, body { height:100%; }
 	display: block;
 	overflow: hidden;
 	padding-left: 4px;
+}
+
+.tradingcardtips {
+	margin-top:10px;
+	margin-bottom:20px;
+	padding:12px;
+	background-color:#333;
+	border:1px solid #00adee;
 }

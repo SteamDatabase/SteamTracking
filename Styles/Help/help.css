@@ -668,6 +668,24 @@ body.v6 .page_content_ctn.dark:last-child {
 	font-size: 14px;
 }
 
+.hipri_button_ctn {
+	margin-bottom: 24px;
+}
+
+.help_wizard_button.help_wizard_button_highpri {
+	border-color: #9fb462 #627c2e #566e2c #798d53;
+	background-color: #6d892f;
+	}
+
+.help_wizard_button.help_wizard_button_highpri:not(.disabled):not(.nohover):hover {
+	border-color: #abc16a #718d34 #627e30 #87a341;
+	background-color: #7c9b35;
+}
+
+.help_wizard_arrow_right.help_wizard_button_highpri {
+	background-image: url("https://help.steampowered.com/public/images/arrow_right_white.png");
+}
+
 .login_page {
 	padding: 20px 0px;
 }
@@ -1584,6 +1602,13 @@ a.guide_row {
 	padding: 20px;
 	width: calc( 644px - 40px );
 	margin-bottom: 20px;
+}
+
+.help_footer_information
+{
+    padding: 20px;
+    width: calc( 644px - 40px );
+    margin-bottom: 20px;
 }
 
 .help_vacorgameban_details p,
@@ -3353,3 +3378,28 @@ ul.attached_file_list {
     font-size: 24px;
 }
 
+.vac_ban_header {
+    color: #B0454D;
+    font-size: 16px;
+}
+
+.vac_body {
+    padding-top: 25px;
+}
+
+.vac_title {
+    color: #c6d4df;
+    font-size: 18px;
+}
+
+.quick_text_editor {
+    float: left;
+}
+
+.quick_text_editor_list {
+    float: right;
+}
+
+.quick_text_requires_update {
+    background-color: orange;
+}
