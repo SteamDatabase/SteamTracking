@@ -299,7 +299,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		else
 		{
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
-			if ( method.value == 'unionpay' )
+			if ( method.value != 'paypal' && method.value != 'storedpaypal' && method.value != 'updatepaypal' )
 			{
 				PollForTransactionStatus( $('transaction_id').value, 80, 15 ); 
 			}
@@ -3613,7 +3613,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'nanaco' && providerPaymentMethod == 83 )
 			{
-				$('payment_method_review_text').innerHTML = 'Nanaco';
+				$('payment_method_review_text').innerHTML = 'nanacoギフト';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'zong' && providerPaymentMethod == 39 )
