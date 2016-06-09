@@ -591,7 +591,7 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000),
 
 .mainLoginLeftPanel {
 	min-width: 350px;
-	max-width: 520px;
+	max-width: 400px;
 	float: left;
 	padding: 17px 20px;
 }
