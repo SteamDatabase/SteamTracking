@@ -299,7 +299,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		else
 		{
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
-			if ( method.value == 'unionpay' )
+			if ( method.value != 'paypal' && method.value != 'storedpaypal' && method.value != 'updatepaypal' )
 			{
 				PollForTransactionStatus( $('transaction_id').value, 80, 15 ); 
 			}
