@@ -272,3 +272,13 @@ textarea#leaderboard_blob {
 #addSeason #addSeasonEpisodeCount {
 	width: 30px;
 }
+
+.edit_actions {
+	text-align: right;
+	width: 1095px;
+	margin-top: -25px;
+}
+
+.edit_actions input {
+	margin-right: 3px;
+}

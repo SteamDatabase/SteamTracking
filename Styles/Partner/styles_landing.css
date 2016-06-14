@@ -686,7 +686,7 @@ p {
 
 .buttonRow {
 	display: block;
-	background-position: 8px 15px;
+	background-position: 8px 13px;
 	background-repeat: no-repeat;
 	padding: 5px 5px 5px 35px;
 	color: #e7e8e9;
@@ -721,6 +721,9 @@ p {
 	}
 	.buttonRow .subText .betaLink:hover {
 		color:#ffffff;
+	}
+	.buttonRow.parentApp {
+		background-size: 16px;
 	}
 
 
