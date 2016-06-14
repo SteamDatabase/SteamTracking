@@ -1180,11 +1180,12 @@ setTimezoneCookies();
 // fnSuggestForTerm will be called with two values, the current string to get suggestions for,
 //	and the callback to invoke with the new values.  You should always invoke the callback per call
 //	to fnSuggestForTerm, but can delay due to ajax if needed.
-function CTextInputSuggest( $InputElement, fnSuggestForTerm )
+function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest )
 {
 	this.m_bHaveSuggestions = false;
 	this.m_$Input = $InputElement;
 	this.m_fnSuggestForTerm = fnSuggestForTerm;
+	this.m_fnOnSuggest = fnOnSuggest || function( term ) {};
 	this.m_strLastVal = '';
 
 	this.m_$Focus = $J();
@@ -1196,7 +1197,17 @@ function CTextInputSuggest( $InputElement, fnSuggestForTerm )
 	this.m_$SuggestionsCtn.append( this.m_$Suggestions );
 
 	this.m_$SuggestionsCtn.hide();
-	this.m_$Input.after( this.m_$SuggestionsCtn );
+	$J(document.body).append( this.m_$SuggestionsCtn );
+
+	var zIndex = 200;	//normal popup zindex
+	this.m_$Input.parents().each( function() {
+		var zIndexParent = $J(this).css('zIndex');
+		if ( zIndexParent != 'auto' && zIndexParent != 0 )
+		{
+			zIndex = zIndexParent;
+		}
+	});
+	this.m_$SuggestionsCtn.css( 'zIndex', zIndex + 20 );
 
 	var _this = this;
 	this.m_$Input.on( 'keyup.CTextInputSuggest click.CTextInputSuggest', function( event ) { _this.OnTextChanged( event ) } );
@@ -1230,6 +1241,8 @@ CTextInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
 	this.m_bHaveSuggestions = false;
 	this.m_$Focus = $J();
 	this.HideSuggestions();
+	
+	this.m_fnOnSuggest( $Suggestion.text() );
 };
 
 CTextInputSuggest.prototype.SetSuggestions = function( rgSuggestions )

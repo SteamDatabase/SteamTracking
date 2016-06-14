@@ -75,7 +75,7 @@ function CreateWidget( nAppId )
 	$J('#widget_finished').show();
 }
 
-function InitQueueControls( store_appid, steamworks_appid )
+function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
 {
 	var $FollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_inactive');
 	var $UnFollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_active');
@@ -133,6 +133,36 @@ function InitQueueControls( store_appid, steamworks_appid )
 			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
+
+	// discovery queue settings dialog
+	var bQueueIsValid = true;
+	var $NextInQueueBtn = $J('.btn_next_in_queue');
+
+	$NextInQueueBtn.click( function() {
+		if ( bQueueIsValid )
+			$J('#next_in_queue_form').submit();
+		else
+			window.location = 'https://store.steampowered.com/explore/startnew';
+	});
+
+	$J('a.dq_settings_link').click( function() {
+		CDiscoveryQueue.ShowCustomizeDialog( function( data ) {
+			if ( data && data.queue && ( data.queue.indexOf( store_appid ) == -1 ||
+				( next_in_queue_appid && data.queue.indexOf( next_in_queue_appid ) == -1 ) ) )
+			{
+				ShowConfirmDialog( 'Customize Your Discovery Queue', 'We\'ve built you a new Discovery Queue by applying your customizations.  What would you like to do?',
+					'Start exploring the new Queue','Stay here'
+				).done( function() {
+					window.location = 'https://store.steampowered.com/explore/startnew';
+				});
+				bQueueIsValid = false;
+			}
+			else
+			{
+				bQueueIsValid = true;
+			}
+		} );
+	} );
 }
 
 

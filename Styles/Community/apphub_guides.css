@@ -67,6 +67,7 @@
 
 .apphub_ContentGuides .workshopItemCollection
 {
+	display: block;
 	background-color: rgba( 84, 133, 183, 0.4);
 	margin-bottom: 0px;
 }
@@ -263,6 +264,7 @@
 
 .guide_home_category_selection
 {
+	display: block;
 	height: 56px;
 	width: 202px;
 	margin-right: 8px;

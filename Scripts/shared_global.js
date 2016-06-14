@@ -94,6 +94,15 @@ function $JFromIDOrElement( elem )
 		return $J( elem );
 }
 
+/**	Show a popup dialog like confirm(), with two buttons.  Clicking ok resolves with done(), cancel or closing the window resolves with fail()
+ *
+ * @param strTitle			Title bar text
+ * @param strDescription	Message text
+ * @param strOKButton		Text to show on OK button (default "OK")
+ * @param strCancelButton	Text to show on Cancel button (default "Cancel")
+ * @param strSecondaryActionButton	Add a secondary ok button (three buttons total).  Resolves with done() like OK but passes 'SECONDARY' as argument to handler
+ * @returns CModal
+ */
 function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
 {
 	if ( !strOKButton )
@@ -135,6 +144,13 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	return Modal;
 }
 
+/**	Show a dialog with a single button, like alert().  Button click or closing the modal resolve deferred with done().
+ *
+ * @param strTitle			Title bar text
+ * @param strDescription	Message text
+ * @param strOKButton		Text on the OK button ("OK" by default)
+ * @returns CModal
+ */
 function ShowAlertDialog( strTitle, strDescription, strOKButton )
 {
 	if ( !strOKButton )
@@ -159,7 +175,13 @@ function ShowAlertDialog( strTitle, strDescription, strOKButton )
 
 }
 
-// rgModalParams are documented at the CModal class declaration
+/**	Show a popup dialog.  Has no buttons.  Closing the dialog resolves deferred with done().
+ *
+ * @param strTitle			Title bar text
+ * @param strDescription	Message text
+ * @param rgModalParams		See CModal
+ * @returns CModal
+ */
 function ShowDialog( strTitle, strDescription, rgModalParams )
 {
 	var deferred = new jQuery.Deferred();
@@ -175,6 +197,9 @@ function ShowDialog( strTitle, strDescription, rgModalParams )
 	return Modal;
 }
 
+/**
+ * @returns CModal
+ */
 function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton )
 {
 	if ( !strOKButton )
@@ -212,6 +237,9 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 	return Modal;
 }
 
+/**
+ * @returns CModal
+ */
 function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, strCancelButton, textAreaMaxLength )
 {
 	if ( !strOKButton )
@@ -265,6 +293,9 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 	return Modal;
 }
 
+/**
+ * @returns CModal
+ */
 function ShowBlockingWaitDialog( strTitle, strDescription )
 {
 	var deferred = new jQuery.Deferred();
@@ -295,6 +326,10 @@ function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
 	deferred.always( function() { $J(document).off( 'keyup.SharedConfirmDialog' ); } );
 }
 
+/**
+ * @returns CModal
+ * @private
+ */
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
@@ -407,6 +442,9 @@ CModal.prototype.OnResize = function( fn )
 	this.m_fnOnResize = fn;
 };
 
+/**
+ * @returns jQuery
+ */
 CModal.prototype.GetContent = function ()
 {
 	return this.m_$Content;

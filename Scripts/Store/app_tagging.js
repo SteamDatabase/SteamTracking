@@ -11,6 +11,56 @@ function TagLink( tag, language )
 	return url;
 }
 
+
+function AppTaggingMatchTags( rgTerms, rgTags, rgSuggestions )
+{
+	var regexNormalize = new RegExp( /\W/g );
+	if ( rgTags && rgTags.length )
+	{
+		for ( var i = 0; i < rgTags.length; i++ )
+		{
+			var strNameNormalized = rgTags[i].name_normalized;
+			if ( !strNameNormalized )
+			{
+				strNameNormalized = rgTags[i].name_normalized = rgTags[i].name.replace( regexNormalize, '').toLowerCase();
+			}
+
+			var bMatch = true;
+			for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
+			{
+				if ( strNameNormalized.indexOf( rgTerms[iTerm] ) == -1 )
+				{
+					bMatch = false;
+					break;
+				}
+			}
+			if ( bMatch )
+			{
+				rgSuggestions.push( rgTags[i].name );
+				if ( rgSuggestions.length >= 10 )
+					break;
+			}
+		}
+	}
+}
+
+function GetTagSuggestFunc( rgTagList )
+{
+	return function( value, fnSetSuggestions )
+	{
+		var rgSuggestions = [];
+		if ( value )
+		{
+			var rgTerms = value.toLowerCase().split( ' ' );
+			AppTaggingMatchTags( rgTerms, rgTagList, rgSuggestions );
+
+			rgSuggestions.sort();
+		}
+
+		fnSetSuggestions( rgSuggestions );
+	};
+}
+
 function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, bShowBanOption )
 {
 	var $AppTagModal = $J('#app_tagging_modal');
@@ -210,7 +260,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 				// also load the global popular tags, to populate the autocomplete with
 				$J.get( 'http://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
-					rgGlobalPopularTags = data || [];
+					for ( var i = 0; i < data.length; i++ )
+						rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy
 					fnRemoveYourTagsFromGlobalTags();
 				});
 			}
@@ -411,65 +462,19 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	};
 
 	var fnOnSubmit = function(event) {
-		event.preventDefault();
+		if ( event )
+			event.preventDefault();
 
 		if ( $AppTagInput.val().length == 0 )
 			return;
 
 		fnApplyTag( $AppTagInput.val(), false );
-		$AppTagInput.val('');
-		$AppTagInput.change();
+		$AppTagInput.val('').change().focus();
 	};
 
 	var fnRemoveYourTagsFromGlobalTags = function()
 	{
 			};
-
-	var fnMatchTags = function( rgTerms, rgTags, rgSuggestions )
-	{
-		var regexNormalize = new RegExp( /\W/g );
-		if ( rgTags && rgTags.length )
-		{
-			for ( var i = 0; i < rgTags.length; i++ )
-			{
-				var strNameNormalized = rgTags[i].name_normalized;
-				if ( !strNameNormalized )
-				{
-					strNameNormalized = rgTags[i].name_normalized = rgTags[i].name.replace( regexNormalize, '').toLowerCase();
-				}
-
-				var bMatch = true;
-				for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
-				{
-					if ( strNameNormalized.indexOf( rgTerms[iTerm] ) == -1 )
-					{
-						bMatch = false;
-						break;
-					}
-				}
-				if ( bMatch )
-				{
-					rgSuggestions.push( rgTags[i].name );
-					if ( rgSuggestions.length >= 10 )
-						break;
-				}
-			}
-		}
-	};
-
-	var fnSuggestTerms = function( value, fnSetSuggestions )
-	{
-		var rgSuggestions = [];
-		if ( value )
-		{
-			var rgTerms = value.toLowerCase().split( ' ' );
-			fnMatchTags( rgTerms, rgGlobalPopularTags, rgSuggestions );
-
-			rgSuggestions.sort();
-		}
-
-		fnSetSuggestions( rgSuggestions );
-	};
 
 	window.ShowAppTagModal = function( appid )
 	{
@@ -505,7 +510,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			$AppTagForm.submit( fnOnSubmit );
 			$AppTagForm.keyup( function( event ) { if ( event.which == 13 ) event.stopPropagation() } );
 
-			TextSuggest = new CTextInputSuggest( $AppTagInput, fnSuggestTerms );
+			TextSuggest = new CTextInputSuggest( $AppTagInput, GetTagSuggestFunc( rgGlobalPopularTags ), function( suggestion ) { fnOnSubmit(); } );
 
 			// hack to size the input control correctly
 			$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );

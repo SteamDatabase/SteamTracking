@@ -161,3 +161,22 @@ body.v6 .leftcol h2.pageheader {
 .explore_rightcol_explain {
 	color: #636a6f;
 }
+
+.discovery_queue_customize_ctn {
+	background: #17212f;
+	padding: 12px;
+	margin-bottom: 24px;
+	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-size: 15px;
+	border: 1px solid #223c4f;
+}
+
+.discovery_queue_customize_ctn > .btn_medium {
+	margin-right: 8px;
+}
+
+.new_feature {
+	color: #99cc00;
+	font-family: "Motiva Sans Bold", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-size: 17px;
+}

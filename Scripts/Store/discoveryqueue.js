@@ -1,3 +1,4 @@
+"use strict";
 
 function CDiscoveryQueue( eQueueType, rgDiscoveryQueue, Settings, params )
 {
@@ -175,103 +176,143 @@ CDiscoveryQueue.prototype.Transition = function( delta )
 	GDynamicStore.AddImpression( activeItem, activeItem.data('appid'), activeItem.data('href') );
 };
 
-
-CDiscoveryQueue.prototype.RenderCustomizeButton = function()
+CDiscoveryQueue.prototype.HandleSettingsChanged = function( data )
 {
-	var $Btn = $J('<div/>', {'class': 'home_btn home_customize_btn' } ).text( 'Customize' );
-	$Btn.click( $J.proxy( this.DisplayCustomizePopup, this, $Btn ) );
-	return $Btn;
+	GStoreItemData.AddStoreItemData( data.rgAppData, null );
+	this.m_Settings = data.settings;
+	this.BuildQueue( data.queue );
 };
 
-CDiscoveryQueue.prototype.DisplayCustomizePopup = function( $Btn )
+CDiscoveryQueue.prototype.ShowCustomizeDialog = function()
 {
-	if ( this.m_$Popup )
+	var _this = this;
+	CDiscoveryQueue.ShowCustomizeDialog( function(data) { _this.HandleSettingsChanged(data); } );
+};
+
+CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
+{
+	if ( CDiscoveryQueue.sm_bCustomizeDialogVisible )
 		return;
 
-	this.m_$ActiveBtn = $Btn;
+	CDiscoveryQueue.sm_bCustomizeDialogVisible = true;
 
-	this.m_$ActiveBtn.addClass( 'active' );
+	$J.get( 'https://store.steampowered.com/explore/discoveryqueuesettings' )
+	.done( function(data) {
+		var rgGlobalPopularTags = data.popular_tags;
 
-	this.m_$Popup = $J('<div/>', {'class': 'home_viewsettings_popup' } );
-	this.m_$Popup.append( $J('<div/>', {'class': 'home_viewsettings_instructions' } ).text( 'Select the types of products that you wish to see in this section' ) );
+		var Modal = ShowConfirmDialog( 'Customize Your Discovery Queue', data.html );
+		Modal.GetContent().css( 'width', '720px' );
+		Modal.AdjustSizing();
 
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_early_access', 'Early Access Products' ) );
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'include_coming_soon', 'Unreleased Products' ) );
+		var $SettingsContent = Modal.GetContent().find('.dq_settings_content');
 
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'os_win', 'Windows' ) );
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'os_mac', 'Mac OS X' ) );
-	this.m_$Popup.append( this.RenderCustomizeCheckbox( 'os_linux', 'Linux' ) );
+		var $AppTagInput = $SettingsContent.find( '.dq_tagsearch input[name=tag]' );
+		var $AppTagButton = $SettingsContent.find( '.dq_tagsearch button' );
+		var $TagsCtn = $SettingsContent.find('.dq_excluded_tags');
 
-	var nOffsetTop = $Btn.position().top + $Btn.outerHeight();
-	var nOffsetRight = $Btn.position().left + $Btn.outerWidth( true );
-
-	this.m_$Popup.css( 'top', nOffsetTop + 'px' );
-
-	$Btn.parent().append( this.m_$Popup );
-
-	this.m_$Popup.css( 'left', ( nOffsetRight - this.m_$Popup.outerWidth() ) + 'px' );
-
-	var _this = this;
-	window.setTimeout( function() {
-		$J(document).on( 'click.CDiscoveryQueue', function( event ) {
-			if ( !_this.m_$Popup.has( event.target).length && !_this.m_$Popup.is( event.target ) )
-				_this.DismissCustomizePopup();
-		}).on( 'keyup.CDiscoveryQueue', function( event ) {
-			if ( event.which == 27 )
-				_this.DismissCustomizePopup();
+		$TagsCtn.children('.app_tag_control').each( function() {
+			var $Tag = $J(this);
+			$Tag.children( '.app_tag_checkbox').click( function() { $Tag.remove(); Modal.AdjustSizing(); } );
 		});
-	}, 1 );
-};
 
-CDiscoveryQueue.prototype.RenderCustomizeCheckbox = function( strSettingName, strDisplayLabel )
-{
-	var $Row = $J('<div/>', {'class': 'home_viewsettings_checkboxrow ellipsis' } );
+		var fnUpdateTagButtonState = function() {
+			if ( $AppTagInput.val().length > 0 )
+				$AppTagButton.removeClass( 'btn_disabled' );
+			else
+				$AppTagButton.addClass( 'btn_disabled' );
+		};
 
-	var $Checkbox = $J('<div/>', {'class': 'home_viewsettings_checkbox' } );
-	if ( this.m_Settings[strSettingName] )
-		$Checkbox.addClass('checked');
+		var fnFlashTag = function( $Tag )
+		{
+			$Tag.addClass('tag_control_flash');
+			window.setTimeout( function() { $Tag.removeClass( 'tag_control_flash' ) }, 1100 );
+		};
 
-	var $Label = $J('<div/>', {'class': 'home_viewsettings_label'} ).text( strDisplayLabel );
+		var fnAddExcludedTag = function( strUserTag ) {
+			// find the tag
+			var regexNormalize = new RegExp( /\W/g );
+			var strNormalizedUserTag = strUserTag.replace( regexNormalize, '').toLowerCase();
+			for ( var i = 0; i < rgGlobalPopularTags.length; i++ )
+			{
+				var globalTag = rgGlobalPopularTags[i];
+				var strNameNormalized = globalTag.name_normalized;
+				if ( !strNameNormalized )
+				{
+					strNameNormalized = globalTag.name_normalized = globalTag.name.replace( regexNormalize, '').toLowerCase();
+				}
 
-	$Row.append( $Checkbox, $Label );
-	$Row.click( $J.proxy( this.OnCustomizeCheckboxToggle, this, strSettingName, $Checkbox ) );
+				if ( strNormalizedUserTag == strNameNormalized )
+				{
+					var $Tag = $TagsCtn.find( '.app_tag_control[data-tagid=' + globalTag.tagid +']' );
+					if ( !$Tag.length )
+					{
+						$Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': globalTag.tagid } );
+						$Tag.append( $J('<div/>', {'class': 'app_tag_checkbox checked'} ).click( function() { $Tag.remove(); Modal.AdjustSizing(); } ) );
+						$Tag.append( $J('<a/>', {'class': 'app_tag', 'href': TagLink( globalTag.name ) } ).text( globalTag.name ) );
+						$TagsCtn.append( $Tag );
+						Modal.AdjustSizing();
+					}
 
-	return $Row;
-};
+					fnFlashTag( $Tag );
+				}
+			}
+		};
 
-CDiscoveryQueue.prototype.OnCustomizeCheckboxToggle = function( strSettingName, $Checkbox )
-{
-	var bEnabled = $Checkbox.hasClass( 'checked' );
+		var fnOnSubmit = function(event) {
+			if ( event )
+				event.preventDefault();
 
-	if ( bEnabled )
-		$Checkbox.removeClass( 'checked' );
-	else
-		$Checkbox.addClass( 'checked' );
+			if ( $AppTagInput.val().length == 0 )
+				return;
 
-	this.m_Settings[strSettingName] = !bEnabled;
+			fnAddExcludedTag( $AppTagInput.val() );
+			$AppTagInput.val('');
+			$AppTagInput.change();
+			$AppTagInput.focus();
+		};
 
-	var _this = this;
-	$J.post( 'https://store.steampowered.com/explore/updatediscoveryqueuesettings', {
-		sessionid: g_sessionID,
-		queuetype: this.m_eQueueType,
-		settings: V_ToJSON( this.m_Settings )
-	}).done( function ( data ) {
-		GStoreItemData.AddStoreItemData( data.rgAppData, null );
-		_this.m_Settings = data.settings;
-		_this.BuildQueue( data.queue );
-	}).fail( function() {
-		_this.DismissCustomizePopup();
-		_this.m_Settings[strSettingName] = bEnabled;	// revert
-		ShowAlertDialog( 'Customize', 'There was a problem saving your preferences.  Please try again later.' );
-	} );
-};
+		$AppTagInput.val('');
+		$AppTagInput.change( fnUpdateTagButtonState );
+		$AppTagInput.keyup( fnUpdateTagButtonState );
+		fnUpdateTagButtonState();
+		$AppTagInput.focus();
 
-CDiscoveryQueue.prototype.DismissCustomizePopup = function()
-{
-	this.m_$Popup.remove();
-	this.m_$Popup = null;
-	this.m_$ActiveBtn.removeClass( 'active' );
-	$J(document).off( 'click.CDiscoveryQueue' ).off( 'keyup.CDiscoveryQueue' );
+		$AppTagInput.parents('form').submit( fnOnSubmit );
+		$AppTagInput.parents('form').keyup( function( event ) { if ( event.which == 13 ) event.stopPropagation() } );
+
+		var TextSuggest = new CTextInputSuggest( $AppTagInput, GetTagSuggestFunc( data.popular_tags ), function( suggestion ) { fnOnSubmit(); } );
+
+		Modal.done( function() {
+			// save changes
+			var oSettings = {};
+			oSettings.exclude_early_access = !$SettingsContent.find('#dqs_exclude_early_access_inverted').prop('checked');
+			oSettings.exclude_software = !$SettingsContent.find('#dqs_exclude_software_inverted').prop('checked');
+			oSettings.include_coming_soon = $SettingsContent.find('#dqs_include_comingsoon').prop('checked');
+
+			oSettings.excluded_tagids = [];
+			$TagsCtn.children('.app_tag_control').each( function() {
+				oSettings.excluded_tagids.push( $J(this).data('tagid') );
+			});
+
+			$J.post( 'https://store.steampowered.com/explore/updatediscoveryqueuesettings',{
+				sessionid: g_sessionID,
+				settings: V_ToJSON(oSettings),
+				queuetype: 0			} ).done( function( data ) {
+				fnOnSettingsChanged( data );
+			}).fail( function() {
+				ShowAlertDialog( 'Customize Your Discovery Queue', 'There was a problem saving your preferences.  Please try again later.' );
+			});
+		});
+
+		Modal.always( function() {
+			CDiscoveryQueue.sm_bCustomizeDialogVisible = false;
+			TextSuggest.Destroy();
+		});
+	})
+	.fail( function() {
+		CDiscoveryQueue.sm_bCustomizeDialogVisible = false;
+	});
+
 };
 
 CDiscoveryQueue.prototype.GenerateNewQueue = function()

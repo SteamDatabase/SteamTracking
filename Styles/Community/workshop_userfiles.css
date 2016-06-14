@@ -1486,6 +1486,7 @@ textarea {
 
 .workshopItemCollection
 {
+	display: block;
 	position: relative;
 	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 4px;

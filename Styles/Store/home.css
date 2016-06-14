@@ -404,14 +404,6 @@ a.home_smallcap:hover {
 	min-height: 201px;
 }
 
-.home_actions_ctn {
-	visibility: hidden;
-}
-
-.home_actions_hover_parent:hover .home_actions_ctn {
-	visibility: visible;
-}
-
 a.home_headercap {
 	display: block;
 	position: relative;

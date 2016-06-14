@@ -1966,16 +1966,28 @@ img.package_header {
 	margin-bottom: 4px;
 }
 
+.next_in_queue_area {
+	float: right;
+}
+
+.queue_ctn .queue_settings_link_ctn.queue_reason_description {
+	text-align: right;
+	font-size: 12px;
+	margin-bottom: 0;
+	margin-right: -8px;
+	line-height: 15px;
+}
+
 .btn_next_in_queue {
 	background: url('https://steamstore-a.akamaihd.net/public/images/v6/app/queue_next_btn.png') top left no-repeat;
 	width: 205px;
 	height: 75px;
-	float: right;
 	cursor: pointer;
-	margin-top: 6px;
+	background-size: 100% 200%;
 	margin-bottom: -26px;
 	margin-right: -72px;
-	background-size: 100% 200%;
+	margin-top: -9px;
+	float: right;
 }
 
 .btn_next_in_queue .next_in_queue_content {
@@ -1987,9 +1999,12 @@ img.package_header {
 	html.responsive .queue_ctn {
 		width: auto;
 	}
-	html.responsive .btn_next_in_queue {
-		margin-right: -26px;
+	html.responsive .next_in_queue_area {
 		max-width: 40%;
+	}
+	html.responsive .btn_next_in_queue {
+		max-width: 100%;
+		margin-right: -26px;
 	}
 }
 
@@ -2016,6 +2031,7 @@ img.package_header {
 	font-size: 10px;
 	color: #bc974e;
 	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .btn_next_in_queue span.finish_queue_text {
@@ -3090,18 +3106,14 @@ h2.bb_tag + br {
 	background: #557dab;
 }
 
-.app_tag_form_ctn {
-	position: relative;
-}
-
 .app_tag_form_ctn button {
-	position: absolute;
-	right: 0;
-	top: 0;
+	float: right;
+	margin-left: 12px;
 }
 
 .app_tag_form_ctn .gray_bevel.for_text_input {
 	height: 27px;
+	overflow: hidden;
 }
 
 .app_tag_form_ctn .gray_bevel.for_text_input input {
@@ -3141,6 +3153,66 @@ form#app_tag_form {
 
 .app_tag_modal_beta_callout a:hover {
 	color: #f7cb89;
+}
+
+/* Discovery queue settings dialog */
+.dq_settings_content {
+	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.dq_settings_section {
+	margin: 12px 0;
+}
+
+.dq_settings_content .dq_settings_section_title {
+	font-family: "Motiva Sans Thin", "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-weight: normal;
+	color: #67c1f5;
+	padding: 10px 0px 3px 0px;
+}
+
+.dq_settings_checkrow {
+	max-width: 300px;
+	background-color: #19191b;
+	line-height: 21px;
+	font-size: 14px;
+	padding: 0 6px;
+	margin-bottom: 1px;
+
+	cursor: pointer;
+}
+
+.dq_settings_checkrow input[type=checkbox] {
+	float: left;
+	height: 21px;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.dq_settings_checkrow label {
+	display: block;
+	overflow: hidden;
+}
+
+.dq_settings_tags {
+	width: 256px;
+}
+
+.dq_excluded_tags {
+	margin-bottom: 12px;
+}
+
+.dq_customize_new {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 14px;
+	padding: 0 4px;
+	background: #99cc00;
+	color: #000000;
+	vertical-align: text-top;
+	margin-right: 2px;
 }
 
 
@@ -3853,7 +3925,7 @@ div.agegate_text_container > h2 {
 .series_seasons .season_selector {
 	padding: 0px 0px;
 	box-shadow: 0 5px 2px -2px rgba(0,0,0,0.5);
-	margin: 3px 0px;
+	margin: 5px 0px;
 	position: relative;
 	white-space: nowrap;
 	overflow: hidden;

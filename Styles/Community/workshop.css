@@ -3123,7 +3123,7 @@ input.searchText
 }
 
 .modal_frame {
-	width:528px;
+	width:828px;
 	position:absolute;
 	z-index:1000;
 	background-color:#000000;
@@ -3135,6 +3135,16 @@ input.searchText
 	min-width: 900px;
 	z-index:1000;
 	background-color:#000000;
+}
+
+#reportsModal .modal_top_band {
+	width: 848px;
+}
+#reportsModal .modal_box {
+	width: 842px;
+}
+#reportsModal .reportsTable {
+	width: 802px;
 }
 
 .reportsTable
@@ -3972,7 +3982,7 @@ html.responsive #ig_bottom {
 
 #ig_bottom:not(.item) .sectionTabsHR {
 	position: relative;
-	top: -3px;
+	top: -8px;
 	left: 0px;
 }
 

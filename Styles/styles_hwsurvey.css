@@ -220,27 +220,7 @@ p.blurb2 {
 	left:8px;
 	width:240px;
 	height:90px;
-}
-#PCVideoCardMfg {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_pcvideocardmfg_bg.gif');
-}
-#DXLevels {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_dxsystems_bg.gif?v=2');
-}
-#PCCPUMfg {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_pccpumfg_bg.gif');
-}
-#PCCPUs {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_numcpus_bg.gif');
-}
-#MacHardware {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_machardware_bg.gif');
-}
-#MacSystemRam {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_macram_bg.gif');
-}
-#VRHeadSets {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_vrheadset_bg.png');
+	background-color: black;
 }
 
 .chartRange {
@@ -273,7 +253,25 @@ p.blurb2 {
 	left:96px;
 	top:160px;
 	text-decoration:none;
-}	
+}
+
+.legendColorBox { display: none; }
+.legendLabel { margin-top: 20px; }
+.chartKey { height: 30px; flow-children: right; position: absolute; top: 130px; left: 6px; width: 240px; }
+.legendChild { margin-left: 10px; float: left; }
+.legendColor { height: 8px; width: 8px; float: left; margin-right: 4px;}
+.legendText { color: #616161; font-size: 10px; float: left; }
+.chartLegend { top:40px; left: 250px; position:absolute; }
+.legendLabel div { font-size: 11px; margin-top: 4px; }
+
+#DXLevels .chartKey {
+	width: 300px;
+}
+
+#DXLevels .legendText  {
+	font-size: 9px;
+}
+
 
 #platform_pulldown {
 	color:#acacac;

@@ -3403,3 +3403,26 @@ ul.attached_file_list {
 .quick_text_requires_update {
     background-color: orange;
 }
+
+.vac_body .help_tradeban_details {
+	margin-top: 15px;
+}
+
+.no_vac_bans_header {
+	color: #8fca1d;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.no_vac_bans_moreinfo {
+	margin-top: 35px;
+}
+
+.issue_help_requests {
+	margin-bottom: 24px;
+	max-width: 740px;
+}
+
+.issue_help_requests .help_request_table {
+	margin-top: 0;
+}
