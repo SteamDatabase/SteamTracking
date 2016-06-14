@@ -1816,9 +1816,7 @@ function Market_LoadOrderSpread( item_nameid )
 			two_factor: BIsTwoFactorEnabled() ? 1 : 0
 		}
 	} ).error( function ( ) {
-		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
 	} ).success( function( data ) {
-		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
 		if ( data.success == 1 )
 		{
 			$J('#market_commodity_forsale').html( data.sell_order_summary );
@@ -1917,6 +1915,7 @@ ItemActivityTicker = {
 	Start: function( item_nameid ) {
 		this.m_llItemNameID = item_nameid;
 		this.Load();
+		PollOnUserActionAfterInterval( 'ItemActivityTicker' + item_nameid, 10000, $J.proxy( this.Load, this ), 2 * 60 * 1000 );
 	},
 
 	Load: function() {
@@ -1931,9 +1930,7 @@ ItemActivityTicker = {
 				two_factor: BIsTwoFactorEnabled() ? 1 : 0
 			}
 		} ).fail( function( jqxhr ) {
-			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );
 		} ).done( function( data ) {
-			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );
 			if ( data.success == 1 )
 			{
 				if ( data.timestamp > ItemActivityTicker.m_nTimeLastLoaded )

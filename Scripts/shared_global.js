@@ -2859,30 +2859,50 @@ function BindAutoFlyoutEvents()
 	});
 }
 
+function PollOnUserActionAfterInterval( strNamespace, nPollInterval, fnCallback, nPollImmediateInterval )
+{
+	var bCallbackInvoked = false;
+	var tsLastUserAction = $J.now();
+	var fnInvokeCallbackOnNextUserAction;
 
-var DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS = 15 * 1000;
+	var strEvents = ['touchstart','mousemove','focus','scroll',''].join( '.' + strNamespace + ' ' );
+
+	var fnDoPoll = function() {
+		if ( !bCallbackInvoked )
+			fnCallback();
+		bCallbackInvoked = true;
+		fnInvokeCallbackOnNextUserAction();
+	};
+
+	fnInvokeCallbackOnNextUserAction = function() {
+		window.setTimeout( function() {
+			bCallbackInvoked = false;
+			if ( nPollImmediateInterval && $J.now() <= tsLastUserAction + nPollImmediateInterval )
+			{
+				fnDoPoll();
+			}
+			else
+			{
+				$J(window).on( strEvents, function() {
+					$J(window ).off( '.' + strNamespace );
+					tsLastUserAction = $J.now();
+					fnDoPoll();
+				});
+			}
+		}, nPollInterval );
+	};
+
+	fnInvokeCallbackOnNextUserAction();
+}
+
+var DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS = 30 * 1000;
 function EnableNotificationCountPolling()
 {
 	var $NotificationItems = $J('.notification_ctn');
 	var $NotificationTotalCounts = $J('.notification_count_total_ctn');
 	if ( $NotificationItems.length || $NotificationTotalCounts.length )
 	{
-		var bNotificationCountRequested = false;
-		var fnRequestNotificationOnNextUserAction;
-		fnRequestNotificationOnNextUserAction = function() {
-			window.setTimeout( function() {
-				bNotificationCountRequested = false;
-				$J(window).on('touchstart.NotificationPoll mousemove.NotificationPoll focus.NotificationPoll scroll.NotificationPoll', function() {
-					if ( !bNotificationCountRequested )
-						UpdateNotificationCounts();
-					$J(window ).off('.NotificationPoll');
-					bNotificationCountRequested = true;
-					fnRequestNotificationOnNextUserAction();
-				});
-			}, DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS );
-		};
-
-		fnRequestNotificationOnNextUserAction();
+		PollOnUserActionAfterInterval( 'NotificationCountPoll', DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS, UpdateNotificationCounts );
 	}
 }
 
