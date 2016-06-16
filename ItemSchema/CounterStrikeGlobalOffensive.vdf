@@ -1032,6 +1032,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_augmented_heavy"
 			}
+			"198948"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_five_seven_daimyo_light"
+			}
+			"198949"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_five_seven_daimyo_medium"
+			}
+			"198950"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_five_seven_daimyo_heavy"
+			}
 			"262152"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_so_olive_light"
@@ -1247,6 +1259,18 @@
 			"264274"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_award_heavy"
+			}
+			"264488"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock_wasteland_rebel_light"
+			}
+			"264489"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock_wasteland_rebel_medium"
+			}
+			"264490"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock_wasteland_rebel_heavy"
 			}
 			"458808"
 			{
@@ -1704,6 +1728,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_cu_aug_swallows_heavy"
 			}
+			"526620"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_aristocrat_light"
+			}
+			"526621"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_aristocrat_medium"
+			}
+			"526622"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_aristocrat_heavy"
+			}
 			"589944"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_sp_snake_light"
@@ -1919,6 +1955,18 @@
 			"591926"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_mastery_heavy"
+			}
+			"592160"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_phobos_light"
+			}
+			"592161"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_phobos_medium"
+			}
+			"592162"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_phobos_heavy"
 			}
 			"655448"
 			{
@@ -2868,6 +2916,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_pioneer_heavy"
 			}
+			"1050928"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_desolate_space_light"
+			}
+			"1050929"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_desolate_space_medium"
+			}
+			"1050930"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_desolate_space_heavy"
+			}
 			"1114124"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_so_red_light"
@@ -3096,6 +3156,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_electricity_heavy"
 			}
+			"1116468"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_aq_mac_10_alien_camo_light"
+			}
+			"1116469"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_aq_mac_10_alien_camo_medium"
+			}
+			"1116470"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_aq_mac_10_alien_camo_heavy"
+			}
 			"1245264"
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_hy_zombie_light"
@@ -3323,6 +3395,18 @@
 			"1247250"
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_shapewood_heavy"
+			}
+			"1247556"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_gs_p90_full_throttle_light"
+			}
+			"1247557"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_gs_p90_full_throttle_medium"
+			}
+			"1247558"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_gs_p90_full_throttle_heavy"
 			}
 			"1572924"
 			{
@@ -3960,6 +4044,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_Curse_heavy"
 			}
+			"1706312"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_gs_pp_bizon_harvester_light"
+			}
+			"1706313"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_gs_pp_bizon_harvester_medium"
+			}
+			"1706314"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_gs_pp_bizon_harvester_heavy"
+			}
 			"1769600"
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_an_silver_light"
@@ -4488,6 +4584,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_sawedoff_gs_sawedoff_fubar_heavy"
 			}
+			"1902928"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_cu_sawed_off_lime_light"
+			}
+			"1902929"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_cu_sawed_off_lime_medium"
+			}
+			"1902930"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_cu_sawed_off_lime_heavy"
+			}
 			"1966088"
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_so_olive_light"
@@ -4728,6 +4836,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_am_tec9_redblast_heavy"
 			}
+			"1968476"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_am_tec_9_sea_salt_light"
+			}
+			"1968477"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_am_tec_9_sea_salt_medium"
+			}
+			"1968478"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_am_tec_9_sea_salt_heavy"
+			}
 			"2097236"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_granite_light"
@@ -4943,6 +5063,18 @@
 			"2099354"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_p2000_oceani_heavy"
+			}
+			"2099516"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_gs_p2000_imperial_dragon_light"
+			}
+			"2099517"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_gs_p2000_imperial_dragon_medium"
+			}
+			"2099518"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_gs_p2000_imperial_dragon_heavy"
 			}
 			"2162708"
 			{
@@ -5580,6 +5712,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_hyperbeast_heavy"
 			}
+			"2296120"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_aq_nova_sci_fi_light"
+			}
+			"2296121"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_aq_nova_sci_fi_medium"
+			}
+			"2296122"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_aq_nova_sci_fi_heavy"
+			}
 			"2359356"
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_hy_gelpen_light"
@@ -5868,6 +6012,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_cu_p250_asiimov_heavy"
 			}
+			"2361664"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_gs_p250_metal_panels_light"
+			}
+			"2361665"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_gs_p250_metal_panels_medium"
+			}
+			"2361666"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_gs_p250_metal_panels_heavy"
+			}
 			"2490552"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_so_pmc_light"
@@ -6035,6 +6191,18 @@
 			"2492442"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_hy_scar20_jungler_heavy"
+			}
+			"2492756"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_bloodsport_light"
+			}
+			"2492757"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_bloodsport_medium"
+			}
+			"2492758"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_bloodsport_heavy"
 			}
 			"2556016"
 			{
@@ -6215,6 +6383,18 @@
 			"2558118"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_atlas_heavy"
+			}
+			"2558296"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_aerial_light"
+			}
+			"2558297"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_aerial_medium"
+			}
+			"2558298"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_aerial_heavy"
 			}
 			"2621544"
 			{
@@ -6587,6 +6767,18 @@
 			"3934354"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_soultaker_heavy"
+			}
+			"3934508"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1_mecha_industries_light"
+			}
+			"3934509"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1_mecha_industries_medium"
+			}
+			"3934510"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1_mecha_industries_heavy"
 			}
 			"3997796"
 			{
@@ -7044,6 +7236,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_revolver_aa_fade_metallic_revolver_heavy"
 			}
+			"4196684"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_cu_r8_cybersport_light"
+			}
+			"4196685"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_cu_r8_cybersport_medium"
+			}
+			"4196686"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_cu_r8_cybersport_heavy"
+			}
 			"32768020"
 			{
 				"icon_path"		"econ/default_generated/weapon_bayonet_hy_ddpat_light"
@@ -7331,6 +7535,126 @@
 			"32769686"
 			{
 				"icon_path"		"econ/default_generated/weapon_bayonet_am_doppler_phase4_heavy"
+			}
+			"32770232"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_lore_light"
+			}
+			"32770233"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_lore_medium"
+			}
+			"32770234"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_lore_heavy"
+			}
+			"32770252"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_stonewash_light"
+			}
+			"32770253"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_stonewash_medium"
+			}
+			"32770254"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_cu_bayonet_stonewash_heavy"
+			}
+			"32770272"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_emerald_marbleized_light"
+			}
+			"32770273"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_emerald_marbleized_medium"
+			}
+			"32770274"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_emerald_marbleized_heavy"
+			}
+			"32770276"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase1_light"
+			}
+			"32770277"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase1_medium"
+			}
+			"32770278"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase1_heavy"
+			}
+			"32770280"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase2_light"
+			}
+			"32770281"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase2_medium"
+			}
+			"32770282"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase2_heavy"
+			}
+			"32770284"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase3_light"
+			}
+			"32770285"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase3_medium"
+			}
+			"32770286"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase3_heavy"
+			}
+			"32770288"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase4_light"
+			}
+			"32770289"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase4_medium"
+			}
+			"32770290"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_gamma_doppler_phase4_heavy"
+			}
+			"32770292"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_gs_bayonet_autotronic_light"
+			}
+			"32770293"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_gs_bayonet_autotronic_medium"
+			}
+			"32770294"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_gs_bayonet_autotronic_heavy"
+			}
+			"32770312"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_hy_ocean_knife_light"
+			}
+			"32770313"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_hy_ocean_knife_medium"
+			}
+			"32770314"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_hy_ocean_knife_heavy"
+			}
+			"32770320"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_marked_up_light"
+			}
+			"32770321"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_marked_up_medium"
+			}
+			"32770322"
+			{
+				"icon_path"		"econ/default_generated/weapon_bayonet_am_marked_up_heavy"
 			}
 			"33095700"
 			{
@@ -7620,6 +7944,126 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_flip_am_doppler_phase4_heavy"
 			}
+			"33097916"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_lore_light"
+			}
+			"33097917"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_lore_medium"
+			}
+			"33097918"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_lore_heavy"
+			}
+			"33097936"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_stonewash_light"
+			}
+			"33097937"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_stonewash_medium"
+			}
+			"33097938"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_cu_flip_stonewash_heavy"
+			}
+			"33097952"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_emerald_marbleized_light"
+			}
+			"33097953"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_emerald_marbleized_medium"
+			}
+			"33097954"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_emerald_marbleized_heavy"
+			}
+			"33097956"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase1_light"
+			}
+			"33097957"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase1_medium"
+			}
+			"33097958"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase1_heavy"
+			}
+			"33097960"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase2_light"
+			}
+			"33097961"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase2_medium"
+			}
+			"33097962"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase2_heavy"
+			}
+			"33097964"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase3_light"
+			}
+			"33097965"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase3_medium"
+			}
+			"33097966"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase3_heavy"
+			}
+			"33097968"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase4_light"
+			}
+			"33097969"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase4_medium"
+			}
+			"33097970"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_gamma_doppler_phase4_heavy"
+			}
+			"33097976"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_gs_flip_autotronic_light"
+			}
+			"33097977"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_gs_flip_autotronic_medium"
+			}
+			"33097978"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_gs_flip_autotronic_heavy"
+			}
+			"33097992"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_hy_ocean_knife_light"
+			}
+			"33097993"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_hy_ocean_knife_medium"
+			}
+			"33097994"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_hy_ocean_knife_heavy"
+			}
+			"33098000"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_marked_up_light"
+			}
+			"33098001"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_marked_up_medium"
+			}
+			"33098002"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_flip_am_marked_up_heavy"
+			}
 			"33161236"
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_gut_hy_ddpat_light"
@@ -7907,6 +8351,126 @@
 			"33162902"
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_gut_am_doppler_phase4_heavy"
+			}
+			"33163456"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_lore_light"
+			}
+			"33163457"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_lore_medium"
+			}
+			"33163458"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_lore_heavy"
+			}
+			"33163476"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_stonewash_light"
+			}
+			"33163477"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_stonewash_medium"
+			}
+			"33163478"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_cu_gut_stonewash_heavy"
+			}
+			"33163488"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_emerald_marbleized_light"
+			}
+			"33163489"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_emerald_marbleized_medium"
+			}
+			"33163490"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_emerald_marbleized_heavy"
+			}
+			"33163492"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase1_light"
+			}
+			"33163493"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase1_medium"
+			}
+			"33163494"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase1_heavy"
+			}
+			"33163496"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase2_light"
+			}
+			"33163497"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase2_medium"
+			}
+			"33163498"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase2_heavy"
+			}
+			"33163500"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase3_light"
+			}
+			"33163501"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase3_medium"
+			}
+			"33163502"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase3_heavy"
+			}
+			"33163504"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase4_light"
+			}
+			"33163505"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase4_medium"
+			}
+			"33163506"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_gamma_doppler_phase4_heavy"
+			}
+			"33163516"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_gs_gut_autotronic_light"
+			}
+			"33163517"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_gs_gut_autotronic_medium"
+			}
+			"33163518"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_gs_gut_autotronic_heavy"
+			}
+			"33163528"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_hy_ocean_knife_light"
+			}
+			"33163529"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_hy_ocean_knife_medium"
+			}
+			"33163530"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_hy_ocean_knife_heavy"
+			}
+			"33163536"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_marked_up_light"
+			}
+			"33163537"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_marked_up_medium"
+			}
+			"33163538"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_gut_am_marked_up_heavy"
 			}
 			"33226772"
 			{
@@ -8196,6 +8760,126 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_doppler_phase4_heavy"
 			}
+			"33228996"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_lore_light"
+			}
+			"33228997"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_lore_medium"
+			}
+			"33228998"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_lore_heavy"
+			}
+			"33229016"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_stonewash_light"
+			}
+			"33229017"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_stonewash_medium"
+			}
+			"33229018"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_cu_karam_stonewash_heavy"
+			}
+			"33229024"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_emerald_marbleized_light"
+			}
+			"33229025"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_emerald_marbleized_medium"
+			}
+			"33229026"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_emerald_marbleized_heavy"
+			}
+			"33229028"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase1_light"
+			}
+			"33229029"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase1_medium"
+			}
+			"33229030"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase1_heavy"
+			}
+			"33229032"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase2_light"
+			}
+			"33229033"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase2_medium"
+			}
+			"33229034"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase2_heavy"
+			}
+			"33229036"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase3_light"
+			}
+			"33229037"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase3_medium"
+			}
+			"33229038"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase3_heavy"
+			}
+			"33229040"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase4_light"
+			}
+			"33229041"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase4_medium"
+			}
+			"33229042"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_gamma_doppler_phase4_heavy"
+			}
+			"33229056"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_gs_karam_autotronic_light"
+			}
+			"33229057"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_gs_karam_autotronic_medium"
+			}
+			"33229058"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_gs_karam_autotronic_heavy"
+			}
+			"33229064"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_ocean_knife_light"
+			}
+			"33229065"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_ocean_knife_medium"
+			}
+			"33229066"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_ocean_knife_heavy"
+			}
+			"33229080"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_marked_up_fine_light"
+			}
+			"33229081"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_marked_up_fine_medium"
+			}
+			"33229082"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_karambit_am_marked_up_fine_heavy"
+			}
 			"33292308"
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_ddpat_light"
@@ -8483,6 +9167,126 @@
 			"33293974"
 			{
 				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_doppler_phase4_heavy"
+			}
+			"33294536"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_lore_light"
+			}
+			"33294537"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_lore_medium"
+			}
+			"33294538"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_lore_heavy"
+			}
+			"33294556"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_stonewash_light"
+			}
+			"33294557"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_stonewash_medium"
+			}
+			"33294558"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_cu_m9_bay_stonewash_heavy"
+			}
+			"33294560"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_emerald_marbleized_light"
+			}
+			"33294561"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_emerald_marbleized_medium"
+			}
+			"33294562"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_emerald_marbleized_heavy"
+			}
+			"33294564"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase1_light"
+			}
+			"33294565"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase1_medium"
+			}
+			"33294566"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase1_heavy"
+			}
+			"33294568"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase2_light"
+			}
+			"33294569"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase2_medium"
+			}
+			"33294570"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase2_heavy"
+			}
+			"33294572"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase3_light"
+			}
+			"33294573"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase3_medium"
+			}
+			"33294574"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase3_heavy"
+			}
+			"33294576"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase4_light"
+			}
+			"33294577"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase4_medium"
+			}
+			"33294578"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_gamma_doppler_phase4_heavy"
+			}
+			"33294596"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_gs_m9_bay_autotronic_light"
+			}
+			"33294597"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_gs_m9_bay_autotronic_medium"
+			}
+			"33294598"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_gs_m9_bay_autotronic_heavy"
+			}
+			"33294604"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_ocean_knife_90_light"
+			}
+			"33294605"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_ocean_knife_90_medium"
+			}
+			"33294606"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_ocean_knife_90_heavy"
+			}
+			"33294612"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_marked_up_90_light"
+			}
+			"33294613"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_marked_up_90_medium"
+			}
+			"33294614"
+			{
+				"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_marked_up_90_heavy"
 			}
 			"33357844"
 			{
@@ -71642,5 +72446,1232 @@
 		"am_tec9_redblast"		"mythical"
 		"cu_ump45_primalsaber"		"legendary"
 		"cu_xm1014_spectrum"		"mythical"
+	}
+	"paint_kits"
+	{
+		"558"
+		{
+			"name"		"cu_bayonet_lore"
+			"description_string"		"#Paintkit_cu_lore"
+			"description_tag"		"#Paintkit_cu_lore_Tag"
+			"style"		"7"
+			"pattern"		"bayonet_lore"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"559"
+		{
+			"name"		"cu_flip_lore"
+			"description_string"		"#Paintkit_cu_lore"
+			"description_tag"		"#Paintkit_cu_lore_Tag"
+			"style"		"7"
+			"pattern"		"flip_lore"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"560"
+		{
+			"name"		"cu_gut_lore"
+			"description_string"		"#Paintkit_cu_lore"
+			"description_tag"		"#Paintkit_cu_lore_Tag"
+			"style"		"7"
+			"pattern"		"gut_lore"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"255"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"561"
+		{
+			"name"		"cu_karam_lore"
+			"description_string"		"#Paintkit_cu_lore"
+			"description_tag"		"#Paintkit_cu_lore_Tag"
+			"style"		"7"
+			"pattern"		"karam_lore"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"64"
+			"phongintensity"		"5"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"562"
+		{
+			"name"		"cu_m9_bay_lore"
+			"description_string"		"#Paintkit_cu_lore"
+			"description_tag"		"#Paintkit_cu_lore_Tag"
+			"style"		"7"
+			"pattern"		"m9_bay_lore"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"563"
+		{
+			"name"		"cu_bayonet_stonewash"
+			"description_string"		"#Paintkit_cu_stonewash"
+			"description_tag"		"#Paintkit_cu_stonewash_Tag"
+			"style"		"9"
+			"pattern"		"bayonet_black_laminate"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"232 216 197"
+			"color3"		"232 225 208"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"64"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"564"
+		{
+			"name"		"cu_flip_stonewash"
+			"description_string"		"#Paintkit_cu_stonewash"
+			"description_tag"		"#Paintkit_cu_stonewash_Tag"
+			"style"		"9"
+			"pattern"		"flip_black_laminate"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"232 216 197"
+			"color3"		"232 225 208"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"128"
+			"phongintensity"		"20"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"565"
+		{
+			"name"		"cu_gut_stonewash"
+			"description_string"		"#Paintkit_cu_stonewash"
+			"description_tag"		"#Paintkit_cu_stonewash_Tag"
+			"style"		"9"
+			"pattern"		"gut_black_laminate"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"232 216 197"
+			"color3"		"209 198 173"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"255"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"566"
+		{
+			"name"		"cu_karam_stonewash"
+			"description_string"		"#Paintkit_cu_stonewash"
+			"description_tag"		"#Paintkit_cu_stonewash_Tag"
+			"style"		"9"
+			"pattern"		"karambit_black_laminate"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"232 216 197"
+			"color3"		"232 225 208"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"95"
+			"phongintensity"		"64"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"567"
+		{
+			"name"		"cu_m9_bay_stonewash"
+			"description_string"		"#Paintkit_cu_stonewash"
+			"description_tag"		"#Paintkit_cu_stonewash_Tag"
+			"style"		"9"
+			"pattern"		"m9bay_black_laminate"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"232 216 197"
+			"color3"		"232 225 208"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"255"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"568"
+		{
+			"name"		"am_emerald_marbleized"
+			"description_string"		"#PaintKit_am_marbleized_g"
+			"description_tag"		"#PaintKit_am_marbleized_g_Tag"
+			"style"		"5"
+			"pattern"		"smoke2"
+			"color0"		"2 69 34"
+			"color1"		"15 15 1"
+			"color2"		"1 13 17 255"
+			"color3"		"8 2 22 255"
+			"pattern_scale"		"1.600000"
+			"phongexponent"		"34"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.080000"
+		}
+		"569"
+		{
+			"name"		"am_gamma_doppler_phase1"
+			"description_string"		"#PaintKit_am_marbleized_g"
+			"description_tag"		"#PaintKit_am_marbleized_g_Tag"
+			"style"		"5"
+			"pattern"		"smoke2"
+			"color0"		"11 14 27 255"
+			"color1"		"30 22 12 255"
+			"color2"		"13 98 45"
+			"color3"		"11 14 27 255"
+			"pattern_scale"		"1.600000"
+			"phongexponent"		"34"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"-50.000000"
+			"pattern_rotate_end"		"-70.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.080000"
+		}
+		"570"
+		{
+			"name"		"am_gamma_doppler_phase2"
+			"description_string"		"#PaintKit_am_marbleized_g"
+			"description_tag"		"#PaintKit_am_marbleized_g_Tag"
+			"style"		"5"
+			"pattern"		"smoke2"
+			"color0"		"9 15 18"
+			"color1"		"9 99 45"
+			"color2"		"23 30 12"
+			"color3"		"9 99 49"
+			"pattern_scale"		"1.600000"
+			"phongexponent"		"34"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"-50.000000"
+			"pattern_rotate_end"		"-70.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.080000"
+		}
+		"571"
+		{
+			"name"		"am_gamma_doppler_phase3"
+			"description_string"		"#PaintKit_am_marbleized_g"
+			"description_tag"		"#PaintKit_am_marbleized_g_Tag"
+			"style"		"5"
+			"pattern"		"smoke2"
+			"color0"		"6 8 15 255"
+			"color1"		"23 105 117"
+			"color2"		"6 63 13"
+			"color3"		"20 28 9"
+			"pattern_scale"		"1.600000"
+			"phongexponent"		"34"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"-50.000000"
+			"pattern_rotate_end"		"-70.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.080000"
+		}
+		"572"
+		{
+			"name"		"am_gamma_doppler_phase4"
+			"description_string"		"#PaintKit_am_marbleized_g"
+			"description_tag"		"#PaintKit_am_marbleized_g_Tag"
+			"style"		"5"
+			"pattern"		"smoke2"
+			"color0"		"7 9 18"
+			"color1"		"23 117 103"
+			"color2"		"97 165 43"
+			"color3"		"28 26 9"
+			"pattern_scale"		"1.600000"
+			"phongexponent"		"34"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"-50.000000"
+			"pattern_rotate_end"		"-70.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.080000"
+		}
+		"573"
+		{
+			"name"		"gs_bayonet_autotronic"
+			"description_string"		"#PaintKit_gs_autotronic"
+			"description_tag"		"#PaintKit_gs_autotronic_Tag"
+			"style"		"9"
+			"pattern"		"bayonet_future_alt"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"146 141 132"
+			"color3"		"204 198 191"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"80"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"20"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.850000"
+		}
+		"574"
+		{
+			"name"		"gs_flip_autotronic"
+			"description_string"		"#PaintKit_gs_autotronic"
+			"description_tag"		"#PaintKit_gs_autotronic_Tag"
+			"style"		"9"
+			"pattern"		"flip_future"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"162 155 141"
+			"color3"		"222 215 211"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"80"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.850000"
+		}
+		"575"
+		{
+			"name"		"gs_gut_autotronic"
+			"description_string"		"#PaintKit_gs_autotronic"
+			"description_tag"		"#PaintKit_gs_autotronic_Tag"
+			"style"		"9"
+			"pattern"		"gut_future"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"208 201 188"
+			"color3"		"218 211 203"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"80"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.850000"
+		}
+		"576"
+		{
+			"name"		"gs_karam_autotronic"
+			"description_string"		"#PaintKit_gs_autotronic"
+			"description_tag"		"#PaintKit_gs_autotronic_Tag"
+			"style"		"9"
+			"pattern"		"karam_future"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"97 85 61"
+			"color3"		"111 104 98"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"80"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"60"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.850000"
+		}
+		"577"
+		{
+			"name"		"gs_m9_bay_autotronic"
+			"description_string"		"#PaintKit_gs_autotronic"
+			"description_tag"		"#PaintKit_gs_autotronic_Tag"
+			"style"		"9"
+			"pattern"		"m9_bay_future"
+			"color0"		"255 255 255"
+			"color1"		"255 255 255"
+			"color2"		"208 201 188"
+			"color3"		"218 211 203"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"80"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.850000"
+		}
+		"578"
+		{
+			"name"		"hy_ocean_knife"
+			"description_string"		"#PaintKit_hy_ocean_knife"
+			"description_tag"		"#PaintKit_hy_ocean_Tag"
+			"style"		"2"
+			"pattern"		"camo_wood"
+			"color0"		"35 45 92 255"
+			"color1"		"108 124 128 255"
+			"color2"		"51 75 113 255"
+			"color3"		"39 46 58 255"
+			"pattern_scale"		"3.000000"
+			"phongexponent"		"16"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"579"
+		{
+			"name"		"hy_ocean_knife_90"
+			"description_string"		"#PaintKit_hy_ocean_knife"
+			"description_tag"		"#PaintKit_hy_ocean_Tag"
+			"style"		"2"
+			"pattern"		"camo_wood"
+			"color0"		"35 45 92 255"
+			"color1"		"108 124 128 255"
+			"color2"		"51 75 113 255"
+			"color3"		"39 46 58 255"
+			"pattern_scale"		"3.000000"
+			"phongexponent"		"16"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"90.000000"
+			"pattern_rotate_end"		"90.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"580"
+		{
+			"name"		"am_marked_up"
+			"description_string"		"#PaintKit_am_marked_up"
+			"description_tag"		"#PaintKit_am_marked_up_Tag"
+			"style"		"5"
+			"pattern"		"stealth"
+			"color0"		"20 20 20"
+			"color1"		"26 26 26"
+			"color2"		"26 14 47"
+			"color3"		"76 76 76"
+			"pattern_scale"		"2.700000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.480000"
+		}
+		"581"
+		{
+			"name"		"am_marked_up_90"
+			"description_string"		"#PaintKit_am_marked_up"
+			"description_tag"		"#PaintKit_am_marked_up_Tag"
+			"style"		"5"
+			"pattern"		"stealth"
+			"color0"		"20 20 20"
+			"color1"		"26 26 26"
+			"color2"		"26 14 47"
+			"color3"		"76 76 76"
+			"pattern_scale"		"2.700000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"90.000000"
+			"pattern_rotate_end"		"90.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.480000"
+		}
+		"582"
+		{
+			"name"		"am_marked_up_fine"
+			"description_string"		"#PaintKit_am_marked_up"
+			"description_tag"		"#PaintKit_am_marked_up_Tag"
+			"style"		"5"
+			"pattern"		"stealth"
+			"color0"		"20 20 20"
+			"color1"		"26 26 26"
+			"color2"		"26 14 47"
+			"color3"		"76 76 76"
+			"pattern_scale"		"3.900000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"30.000000"
+			"pattern_rotate_end"		"30.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.480000"
+		}
+		"583"
+		{
+			"name"		"gs_aug_aristocrat"
+			"description_string"		"#PaintKit_gs_aug_aristocrat"
+			"description_tag"		"#PaintKit_gs_aug_aristocrat_Tag"
+			"style"		"9"
+			"pattern"		"workshop/aug_aristocrat_silver"
+			"color0"		"128 128 128"
+			"color1"		"202 202 202"
+			"color2"		"73 42 9"
+			"color3"		"62 62 62"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"255"
+			"phongalbedoboost"		"50"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.660000"
+		}
+		"584"
+		{
+			"name"		"gs_awp_phobos"
+			"description_string"		"#PaintKit_gs_awp_phobos"
+			"description_tag"		"#PaintKit_gs_awp_phobos_Tag"
+			"style"		"9"
+			"pattern"		"workshop/awp-phobos"
+			"color0"		"66 73 110"
+			"color1"		"255 255 255"
+			"color2"		"6 6 6"
+			"color3"		"91 91 91"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"15"
+			"phongalbedoboost"		"90"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.400000"
+		}
+		"585"
+		{
+			"name"		"cu_five_seven_daimyo"
+			"description_string"		"#PaintKit_cu_five_seven_daimyo"
+			"description_tag"		"#PaintKit_cu_five_seven_daimyo_Tag"
+			"style"		"7"
+			"pattern"		"workshop/five_seven_daimyo_majestic_nose8c_sRGB_3"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"60"
+			"phongintensity"		"4"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.700000"
+		}
+		"586"
+		{
+			"name"		"cu_glock_wasteland_rebel"
+			"description_string"		"#PaintKit_cu_glock_wasteland_rebel"
+			"description_tag"		"#PaintKit_cu_glock_wasteland_rebel_Tag"
+			"style"		"7"
+			"pattern"		"workshop/glock_wasteland_rebel"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"50"
+			"phongintensity"		"2"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.540000"
+		}
+		"587"
+		{
+			"name"		"gs_m4a1_mecha_industries"
+			"description_string"		"#PaintKit_gs_m4a1_mecha_industries"
+			"description_tag"		"#PaintKit_gs_m4a1_mecha_industries_Tag"
+			"style"		"9"
+			"pattern"		"workshop/m4a1-s_mecha"
+			"color0"		"190 188 183"
+			"color1"		"194 194 194"
+			"color2"		"165 161 152"
+			"color3"		"124 123 117"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"70"
+			"phongintensity"		"25"
+			"phongalbedoboost"		"4"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"588"
+		{
+			"name"		"cu_m4a4_desolate_space"
+			"description_string"		"#PaintKit_cu_m4a4_desolate_space"
+			"description_tag"		"#PaintKit_cu_m4a4_desolate_space_Tag"
+			"style"		"7"
+			"pattern"		"workshop/m4a4_desolatespace2"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"0"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"589"
+		{
+			"name"		"aq_mac_10_alien_camo"
+			"description_string"		"#PaintKit_aq_mac_10_alien_camo"
+			"description_tag"		"#PaintKit_aq_mac_10_alien_camo_Tag"
+			"style"		"8"
+			"pattern"		"workshop/mac_10_alien_camo"
+			"color0"		"214 194 221"
+			"color1"		"205 142 125"
+			"color2"		"122 75 60"
+			"color3"		"194 152 126"
+			"pattern_scale"		"3.000000"
+			"phongexponent"		"32"
+			"phongalbedoboost"		"7"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"590"
+		{
+			"name"		"aq_nova_sci_fi"
+			"description_string"		"#PaintKit_aq_nova_sci_fi"
+			"description_tag"		"#PaintKit_aq_nova_sci_fi_Tag"
+			"style"		"8"
+			"pattern"		"workshop/nova_sci_fi"
+			"color0"		"128 128 128 255"
+			"color1"		"150 150 150 255"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"2.000000"
+			"phongexponent"		"32"
+			"phongalbedoboost"		"15"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"591"
+		{
+			"name"		"gs_p2000_imperial_dragon"
+			"description_string"		"#PaintKit_gs_p2000_imperial_dragon"
+			"description_tag"		"#PaintKit_gs_p2000_imperial_dragon_Tag"
+			"style"		"9"
+			"pattern"		"workshop/p2000_asiandawn_final"
+			"color0"		"55 41 35"
+			"color1"		"232 169 136"
+			"color2"		"215 98 217"
+			"color3"		"203 146 84"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"120"
+			"phongintensity"		"75"
+			"phongalbedoboost"		"230"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.630000"
+		}
+		"592"
+		{
+			"name"		"gs_p250_metal_panels"
+			"description_string"		"#PaintKit_gs_p250_metal_panels"
+			"description_tag"		"#PaintKit_gs_p250_metal_panels_Tag"
+			"style"		"9"
+			"pattern"		"workshop/metalpanels_green"
+			"color0"		"255 255 255"
+			"color1"		"238 255 193"
+			"color2"		"255 236 172"
+			"color3"		"211 190 156"
+			"pattern_scale"		"2.200000"
+			"phongexponent"		"170"
+			"phongalbedoboost"		"60"
+			"view_model_exponent_override_size"		"512"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"180.000000"
+			"pattern_rotate_end"		"180.000000"
+			"wear_remap_min"		"0.050000"
+			"wear_remap_max"		"0.800000"
+		}
+		"593"
+		{
+			"name"		"gs_p90_full_throttle"
+			"description_string"		"#PaintKit_gs_p90_full_throttle"
+			"description_tag"		"#PaintKit_gs_p90_full_throttle_Tag"
+			"style"		"9"
+			"pattern"		"workshop/p90_fullthrottle_final"
+			"color0"		"42 42 42"
+			"color1"		"248 244 227"
+			"color2"		"15 18 24"
+			"color3"		"255 255 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"0"
+			"phongalbedoboost"		"10"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"594"
+		{
+			"name"		"gs_pp_bizon_harvester"
+			"description_string"		"#PaintKit_gs_pp_bizon_harvester"
+			"description_tag"		"#PaintKit_gs_pp_bizon_harvester_Tag"
+			"style"		"9"
+			"pattern"		"workshop/pp_bizon_harvester"
+			"color0"		"128 128 128 255"
+			"color1"		"174 171 162"
+			"color2"		"192 190 181"
+			"color3"		"214 214 214"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"220"
+			"phongintensity"		"45"
+			"phongalbedoboost"		"35"
+			"view_model_exponent_override_size"		"512"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"595"
+		{
+			"name"		"cu_r8_cybersport"
+			"description_string"		"#PaintKit_cu_r8_cybersport"
+			"description_tag"		"#PaintKit_cu_r8_cybersport_Tag"
+			"style"		"7"
+			"pattern"		"workshop/revolver_cybersport"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"70"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"596"
+		{
+			"name"		"cu_sawed_off_lime"
+			"description_string"		"#PaintKit_cu_sawed_off_lime"
+			"description_tag"		"#PaintKit_cu_sawed_off_lime_Tag"
+			"style"		"7"
+			"pattern"		"workshop/sawed_off_lime"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"47"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"597"
+		{
+			"name"		"gs_scar20_bloodsport"
+			"description_string"		"#PaintKit_gs_scar20_bloodsport"
+			"description_tag"		"#PaintKit_gs_scar20_bloodsport_Tag"
+			"style"		"9"
+			"pattern"		"workshop/scar20_voltaic"
+			"color0"		"255 255 255"
+			"color1"		"192 192 192"
+			"color2"		"23 13 13"
+			"color3"		"21 16 16"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"12"
+			"phongalbedoboost"		"6"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.450000"
+		}
+		"598"
+		{
+			"name"		"cu_sg553_aerial"
+			"description_string"		"#PaintKit_cu_sg553_aerial"
+			"description_tag"		"#PaintKit_cu_sg553_aerial_Tag"
+			"style"		"9"
+			"pattern"		"workshop/aerial_sg553"
+			"color0"		"128 128 128 255"
+			"color1"		"212 212 212"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"222"
+			"phongintensity"		"8"
+			"phongalbedoboost"		"12"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"599"
+		{
+			"name"		"am_tec_9_sea_salt"
+			"description_string"		"#PaintKit_am_tec_9_sea_salt"
+			"description_tag"		"#PaintKit_am_tec_9_sea_salt_Tag"
+			"style"		"5"
+			"pattern"		"workshop/tec_9_seasalt"
+			"color0"		"16 85 189"
+			"color1"		"68 178 255"
+			"color2"		"38 38 38"
+			"color3"		"215 215 215"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongalbedoboost"		"15"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+	}
+	"items"
+	{
+		"1350"
+		{
+			"name"		"community_13 Key"
+			"item_name"		"#CSGO_crate_key_community_13"
+			"item_description"		"#CSGO_crate_key_community_13_desc"
+			"first_sale_date"		"2016-06-10"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_13"
+			"tool"
+			{
+				"restriction"		"crate_community_13"
+			}
+		}
+		"4236"
+		{
+			"item_name"		"#CSGO_crate_community_13"
+			"item_description"		"#CSGO_crate_community_13_desc"
+			"name"		"crate_community_13"
+			"image_inventory"		"econ/weapon_cases/crate_community_13"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1350"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"crate_community_13"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"144"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_13"
+					"tag_text"		"#CSGO_set_community_13"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"144"		"crate_community_13"
+	}
+	"client_loot_lists"
+	{
+		"crate_community_13_rare"
+		{
+			"[cu_five_seven_daimyo]weapon_fiveseven"		"1"
+			"[aq_mac_10_alien_camo]weapon_mac10"		"1"
+			"[aq_nova_sci_fi]weapon_nova"		"1"
+			"[gs_p250_metal_panels]weapon_p250"		"1"
+			"[gs_pp_bizon_harvester]weapon_bizon"		"1"
+			"[cu_sg553_aerial]weapon_sg556"		"1"
+			"[am_tec_9_sea_salt]weapon_tec9"		"1"
+		}
+		"crate_community_13_mythical"
+		{
+			"[gs_aug_aristocrat]weapon_aug"		"1"
+			"[gs_awp_phobos]weapon_awp"		"1"
+			"[gs_p90_full_throttle]weapon_p90"		"1"
+			"[cu_r8_cybersport]weapon_revolver"		"1"
+			"[cu_sawed_off_lime]weapon_sawedoff"		"1"
+		}
+		"crate_community_13_legendary"
+		{
+			"[cu_m4a4_desolate_space]weapon_m4a1"		"1"
+			"[gs_p2000_imperial_dragon]weapon_hkp2000"		"1"
+			"[gs_scar20_bloodsport]weapon_scar20"		"1"
+		}
+		"crate_community_13_ancient"
+		{
+			"[cu_glock_wasteland_rebel]weapon_glock"		"1"
+			"[gs_m4a1_mecha_industries]weapon_m4a1_silencer"		"1"
+		}
+		"crate_community_13"
+		{
+			"crate_community_13_rare"		"1"
+			"crate_community_13_mythical"		"1"
+			"crate_community_13_legendary"		"1"
+			"crate_community_13_ancient"		"1"
+			"community_case_13_unusual"		"1"
+		}
+	}
+	"item_sets"
+	{
+		"set_community_13"
+		{
+			"name"		"#CSGO_set_community_13"
+			"set_description"		"#CSGO_set_community_13_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[cu_five_seven_daimyo]weapon_fiveseven"		"1"
+				"[aq_mac_10_alien_camo]weapon_mac10"		"1"
+				"[aq_nova_sci_fi]weapon_nova"		"1"
+				"[gs_p250_metal_panels]weapon_p250"		"1"
+				"[gs_pp_bizon_harvester]weapon_bizon"		"1"
+				"[cu_sg553_aerial]weapon_sg556"		"1"
+				"[am_tec_9_sea_salt]weapon_tec9"		"1"
+				"[gs_aug_aristocrat]weapon_aug"		"1"
+				"[gs_awp_phobos]weapon_awp"		"1"
+				"[gs_p90_full_throttle]weapon_p90"		"1"
+				"[cu_r8_cybersport]weapon_revolver"		"1"
+				"[cu_sawed_off_lime]weapon_sawedoff"		"1"
+				"[cu_m4a4_desolate_space]weapon_m4a1"		"1"
+				"[gs_p2000_imperial_dragon]weapon_hkp2000"		"1"
+				"[gs_scar20_bloodsport]weapon_scar20"		"1"
+				"[cu_glock_wasteland_rebel]weapon_glock"		"1"
+				"[gs_m4a1_mecha_industries]weapon_m4a1_silencer"		"1"
+			}
+		}
+	}
+	"paint_kits_rarity"
+	{
+		"cu_bayonet_lore"		"legendary"
+		"cu_flip_lore"		"legendary"
+		"cu_gut_lore"		"legendary"
+		"cu_karam_lore"		"legendary"
+		"cu_m9_bay_lore"		"legendary"
+		"cu_bayonet_stonewash"		"mythical"
+		"cu_flip_stonewash"		"mythical"
+		"cu_gut_stonewash"		"mythical"
+		"cu_karam_stonewash"		"mythical"
+		"cu_m9_bay_stonewash"		"mythical"
+		"am_emerald_marbleized"		"legendary"
+		"am_gamma_doppler_phase1"		"mythical"
+		"am_gamma_doppler_phase2"		"mythical"
+		"am_gamma_doppler_phase3"		"mythical"
+		"am_gamma_doppler_phase4"		"mythical"
+		"gs_bayonet_autotronic"		"mythical"
+		"gs_flip_autotronic"		"mythical"
+		"gs_gut_autotronic"		"mythical"
+		"gs_karam_autotronic"		"mythical"
+		"gs_m9_bay_autotronic"		"mythical"
+		"hy_ocean_knife"		"rare"
+		"hy_ocean_knife_90"		"rare"
+		"am_marked_up"		"rare"
+		"am_marked_up_90"		"rare"
+		"am_marked_up_fine"		"rare"
+		"gs_aug_aristocrat"		"mythical"
+		"gs_awp_phobos"		"rare"
+		"cu_five_seven_daimyo"		"rare"
+		"cu_glock_wasteland_rebel"		"legendary"
+		"gs_m4a1_mecha_industries"		"legendary"
+		"cu_m4a4_desolate_space"		"mythical"
+		"aq_mac_10_alien_camo"		"rare"
+		"aq_nova_sci_fi"		"rare"
+		"gs_p2000_imperial_dragon"		"mythical"
+		"gs_p250_metal_panels"		"rare"
+		"gs_p90_full_throttle"		"mythical"
+		"gs_pp_bizon_harvester"		"rare"
+		"cu_r8_cybersport"		"mythical"
+		"cu_sawed_off_lime"		"mythical"
+		"gs_scar20_bloodsport"		"legendary"
+		"cu_sg553_aerial"		"rare"
+		"am_tec_9_sea_salt"		"rare"
 	}
 }
