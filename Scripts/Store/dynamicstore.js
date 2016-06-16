@@ -256,7 +256,7 @@ GDynamicStore = {
 			GDynamicStore.s_rgfnOnReadyCallbacks.push( fnCallback );
 	},
 
-	DecorateDynamicItems: function( $Selector ) {
+	DecorateDynamicItems: function( $Selector, bForceRecalculate ) {
 
 		if ( !GDynamicStore.m_bLoadComplete )
 		{
@@ -287,8 +287,14 @@ GDynamicStore = {
 		$DynamicElements.each( function() {
 			var $El = $J(this);
 
-			if ( $El.data('dsInstrumented') )
+			if ( bForceRecalculate )
+			{
+				$El.removeClass( 'ds_flagged ds_owned ds_wishlist ds_incart' ).children( '.ds_flag' ).remove();
+			}
+			else if ( $El.data('dsInstrumented') )
+			{
 				return;
+			}
 
 			$El.data('dsInstrumented', true);
 
@@ -441,17 +447,7 @@ GDynamicStore = {
 
 				if ( BundleItem.m_rgIncludedAppIDs.length )
 				{
-					var bAllAppsOwned = true;
-					for ( var iApp = 0; iApp < BundleItem.m_rgIncludedAppIDs.length; iApp++ )
-					{
-						if ( !GDynamicStore.s_rgOwnedApps[ BundleItem.m_rgIncludedAppIDs[iApp] ] )
-						{
-							bAllAppsOwned = false;
-							break;
-						}
-					}
-
-					if ( bAllAppsOwned )
+					if ( GDynamicStore.BAreAllAppsOwned( BundleItem.m_rgIncludedAppIDs ) )
 						continue;
 				}
 
@@ -494,6 +490,7 @@ GDynamicStore = {
 		else if ( !Bundle.m_bMustPurchaseAsSet )
 		{
 			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
+			$DiscountBlocks.show();
 
 			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount ) );
 			if ( !Bundle.m_bContainsDiscountedPackage )
@@ -503,15 +500,35 @@ GDynamicStore = {
 			}
 			else
 			{
+				$DiscountBlocks.removeClass('no_discount');
 				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCents - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCents * 100 );
 				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
-				$DiscountBlocks.find('.discount_final_price' ).text( strFormattedFinalPrice );
+				$DiscountBlocks.find('.discount_final_price' ).removeClass('your_price').text( strFormattedFinalPrice );
 			}
 		}
 
 		var $Description = $El.find('.package_contents');
 		if ( $Description.length && $El.hasClass('dynamic_bundle_description') && !Bundle.m_bMustPurchaseAsSet )
 			GDynamicStore.BuildBundleDescription( Bundle, $Description );
+
+		if ( $El.is( '.package_totals_area' ) )
+		{
+			if ( !Bundle.m_rgBundleItems.length )
+			{
+				$El.hide();
+			}
+			else
+			{
+				$El.show();
+				if ( Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle )
+				{
+					$El.find('.bundle_final_package_price_desc' ).text( 'Individual price of the %s items you don\'t already have:'.replace( '%s', Bundle.m_cUserItemsInBundle ) );
+				}
+				$El.find('.bundle_final_package_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCents ) );
+				$El.find('.bundle_final_price_with_discount' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount ) );
+				$El.find('.bundle_savings' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCents - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) );
+			}
+		}
 	},
 
 	BuildBundleDescription: function( Bundle, $Description )
@@ -618,6 +635,17 @@ GDynamicStore = {
 		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
 	},
 
+	BAreAllAppsOwned: function( rgAppIds )
+	{
+		for ( var i = 0; i < rgAppIds.length; i++ )
+		{
+			if ( !GDynamicStore.s_rgOwnedApps[rgAppIds[i]] )
+				return false;
+		}
+
+		return true;
+	},
+
 	GetAvailablePlaytestForApp: function( appid )
 	{
 		if( !GDynamicStore.s_rgPlaytestData || !GDynamicStore.s_rgPlaytestData.available_tests )
@@ -635,6 +663,81 @@ GDynamicStore = {
 	BIsPlaytesting: function( testid )
 	{
 		return GDynamicStore.s_rgPlaytestData.current_test == testid ? true: false;
+	},
+
+	DisplayBundleSimulator: function( unBundleID )
+	{
+		if ( !GDynamicStore.m_bLoadComplete )
+		{
+			GDynamicStore.OnReady( function() { GDynamicStore.DisplayBundleSimulator( unBundleID ) } );
+			return;
+		}
+
+		var Bundle = GStoreItemData.rgBundleData[ unBundleID ];
+		if ( !Bundle )
+		{
+			ShowAlertDialog( '', 'Unknown bundle ID ' + unBundleID );
+			return;
+		}
+
+		var $Form = $J('<form/>', {'class': 'bundle_simulator_form'});
+		$Form.append( $J('<h2/>').text('Check the items to "own"') );
+		$Form.append( $J('<div/>', {'class': 'bundle_simulator_secondary' } ).append(
+			$J('<a/>', {'href': 'javascript:void(0);'} ).click( function() { $Form.find('input').prop('checked', true ); } ).text( "Select all" ),
+			' - ',
+			$J('<a/>', {'href': 'javascript:void(0);'} ).click( function() { $Form.find('input').prop('checked', false ); } ).text( "Select none" )
+		) );
+
+		for ( var i =0; i < Bundle.m_rgItems.length; i++ )
+		{
+			var BundleItem = Bundle.m_rgItems[i];
+			var id = 'bundle_check_' + i;
+			var nPackageID = BundleItem.m_nPackageID;
+			var rgAppIDs = BundleItem.m_rgIncludedAppIDs;
+
+			var $Row = $J('<div/>', {'class': 'bundle_simulator_row'} );
+			var $Checkbox = $J('<input/>', {type: 'checkbox', id: id } );
+			if ( GDynamicStore.s_rgOwnedPackages[nPackageID] || ( rgAppIDs.length && GDynamicStore.BAreAllAppsOwned( rgAppIDs ) ) )
+				$Checkbox.prop('checked', true);
+
+			$Checkbox.data( 'BundleItem', BundleItem );
+			$Row.append( $Checkbox );
+
+			var strLabel = GStoreItemData.rgPackageData[nPackageID].name;
+			if ( rgAppIDs.length == 1 )
+				strLabel = GStoreItemData.rgAppData[rgAppIDs[0]].name;
+			$Row.append( $J('<label/>', {'for': id } ).text( strLabel ) );
+
+			$Form.append( $Row );
+		}
+
+		var Modal;
+
+		Modal = ShowConfirmDialog( '', $Form, 'Update Display' ).done( function() {
+			$Form.find('input').each( function() {
+				var $Checkbox = $J(this);
+				var BundleItem = $Checkbox.data('BundleItem');
+				var nPackageID = BundleItem.m_nPackageID;
+				var rgAppIDs = BundleItem.m_rgIncludedAppIDs;
+				if ( $Checkbox.prop('checked') )
+				{
+					GDynamicStore.s_rgOwnedPackages[nPackageID] = true;
+					for ( var i = 0; i < rgAppIDs.length; i++ )
+						GDynamicStore.s_rgOwnedApps[rgAppIDs[i]] = true;
+				}
+				else
+				{
+					delete GDynamicStore.s_rgOwnedPackages[nPackageID];
+					for ( var i = 0; i < rgAppIDs.length; i++ )
+						delete GDynamicStore.s_rgOwnedApps[rgAppIDs[i]];
+				}
+
+				GDynamicStore.s_rgPersonalizedBundleData = {};
+				GDynamicStore.DecorateDynamicItems( null, true );
+			});
+			Modal.GetContent().remove();
+		});
+		Modal.SetRemoveContentOnDismissal( false );
 	}
 };
 

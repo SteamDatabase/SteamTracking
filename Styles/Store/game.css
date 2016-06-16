@@ -4127,3 +4127,35 @@ div.agegate_text_container > h2 {
 		position: inherit;
 	}
 }
+
+.bundle_simulator_form .bundle_simulator_row {
+	line-height: 24px;
+	font-size: 16px;
+	padding: 4px 8px;
+
+	white-space: nowrap;
+}
+
+.bundle_simulator_secondary {
+	margin: 6px 0;
+}
+
+.bundle_simulator_form .bundle_simulator_row:nth-child(2n) {
+	/* background: rgba( 0, 0, 0, 0.4 ); */
+}
+
+.bundle_simulator_form .bundle_simulator_row:hover {
+	background: rgba( 255, 255, 255, 0.1 );
+}
+
+.bundle_simulator_form .bundle_simulator_row input {
+	display: block;
+	float: left;
+	vertical-align: middle;
+	margin-right: 8px;
+	height: 24px;
+}
+.bundle_simulator_form .bundle_simulator_row label {
+	display: block;
+	overflow: hidden;
+}
