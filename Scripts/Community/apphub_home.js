@@ -279,6 +279,9 @@ function SelectLanguageFilter( url )
 
 function RequestCurrentUserVotes( publishedFileIDs )
 {
+	if ( !g_steamID )
+		return;
+
 	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetvotes/', {
 			'publishedfileids' : publishedFileIDs
 		}

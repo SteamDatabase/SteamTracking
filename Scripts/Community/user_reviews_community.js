@@ -1,6 +1,9 @@
 
 function RequestCurrentUserRecommendationVotes( recommendationIDs )
 {
+	if ( !g_steamID )
+		return;
+
 	$J.post( 'https://steamcommunity.com/userreviews/ajaxgetvotes/', {
 			'recommendationids' : recommendationIDs
 		}
