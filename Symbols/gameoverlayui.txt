@@ -9243,7 +9243,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
- T KeyValuesTextParser::KeyValuesTextParser(bool)
+ T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
@@ -9856,7 +9856,6 @@
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
- T ripemd160_block_asm_data_order
  T sha1_block_data_order
  T sha256_block_data_order
  T sha512_block_data_order
@@ -13180,7 +13179,6 @@
  T vpaes_encrypt
  T vpaes_set_decrypt_key
  T vpaes_set_encrypt_key
- T whirlpool_block_mmx
  Test_IsActive
  Test_SetFailed
  ThreadGetCurrentId

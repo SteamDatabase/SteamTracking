@@ -80,8 +80,8 @@ ControllerBindingsGordon.ScreenSaverMode
 #TopHalfContainer
 {
 	height: 625px;
-	padding-left: 15px;
-	padding-right: 15px;
+    padding-left: 8px;
+	padding-right: 8px;
 }
 
 #TopHalfContainer .Background
@@ -91,6 +91,14 @@ ControllerBindingsGordon.ScreenSaverMode
 	width: 1800px;
 	height: 100%;
 }
+
+#SwitchContainer
+{
+	height: 625px;
+    padding-top: 100px;
+    width: 1880px;
+}
+
 
 .HasMultipleActionSets #Left,
 .HasMultipleActionSets #Right
@@ -108,9 +116,9 @@ ControllerBindingsGordon.ScreenSaverMode
 	visibility: collapse;
 }
 
-.HasMultipleActionSets #TopHalfContainer
+.HasMultipleActionSets.BottomPanelVisible #GameActionSets
 {
-		height: 525px;
+	visibility: collapse;
 }
 
 #GameActionSets
@@ -121,40 +129,62 @@ ControllerBindingsGordon.ScreenSaverMode
     overflow: scroll;
 }
 
-.GameActionButton
+#ActivatorCoontainer
+{
+	visibility: visible;
+	flow-children: down;
+	horizontal-align: left;
+}
+
+#Activators
+{
+	visibility: visible;
+	flow-children: right;
+	horizontal-align: left;
+    overflow: scroll;
+}
+
+.GameActionButton, 
+.ActivatorButton
 {
 	height: 50px;
 }
 
-.GameActionButton Label
+.GameActionButton Label, 
+.ActivatorButton Label
 {
 	horizontal-align: middle;
 	text-transform: uppercase;
 }
 
-.GameActionButton:focus
+.GameActionButton:focus, 
+.ActivatorButton:focus
 {
 	padding-top: 5px;
 	background-color: simplebuttonsolid_vertical;
 }
 
-.GameActionButton:hover Label
+.GameActionButton:hover Label,
+.ActivatorButton:hover Label
 {
 	color: #f2f2f2ff;
 }
 
-.GameActionButton:focus Label
+.GameActionButton:focus Label,
+.ActivatorButton:focus Label
 {
 	color: #f2f2f2ff;
 	transform: none;
 }
 
-.GameActionButton:selected
+.GameActionButton:selected,
+.ActivatorButton:selected
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
 }
 
-.GameActionButton:selected Label
+.GameActionButton:selected Label,
+.ActivatorButton:selected Label
 {
 	color: white;
 }
@@ -303,7 +333,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	background-image: url( "" );
 }
 
-#BackgroundController,
+#BackgroundController
 {
 	background-position: 535px 79px;
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
@@ -423,8 +453,13 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .HasMultipleActionSets #GyroModeContainer
 {
-	margin-bottom: -16px;	
+	margin-bottom: 85px;
+    margin-right: 20px;
+}
 
+.BottomPanelVisible #GyroModeContainer
+{
+	visibility: collapse;
 }
 
 .ModeWrapper
@@ -762,7 +797,7 @@ ControllerBindingButton.BindingButton.Right
 	pre-transform-scale2d: 0.80;
 }
 
-ControllerPropertiesMode
+ControllerPropertiesMode, ControllerPropertiesActivator
 {
 	transition-property: transform;
 	transition-duration: 0.2s;
@@ -771,7 +806,7 @@ ControllerPropertiesMode
 	transform: translatey( propertiesheight );
 }
 
-.BottomPanelVisible ControllerPropertiesMode
+.BottomPanelVisible ControllerPropertiesMode, ControllerPropertiesActivator
 {
 	transform: translatey( 0px );
 }
@@ -1245,7 +1280,7 @@ Slider:Selected
 }
 
 
-#ModeProperties, #ChooseBinding
+#ModeProperties, #ChooseBinding, #ActivatorProperties
 {
 	width: 100%;
 	height: propertiesheight;
@@ -1254,7 +1289,7 @@ Slider:Selected
 	opacity: 0.0;
 }
 
-#ModeProperties:descendantfocus, #ChooseBinding:descendantfocus
+#ModeProperties:descendantfocus, #ChooseBinding:descendantfocus, #ActivatorProperties:descendantfocus
 {
 	opacity: 1.0;
 }
@@ -1279,6 +1314,12 @@ Slider:Selected
 	horizontal-align: center;
 	flow-children: right;
 }
+
+.HasActivators .ColumnContainer
+{
+	margin-top: 64px;
+}
+
 
 .Column
 {
@@ -1479,10 +1520,147 @@ Slider:Selected
 	horizontal-align: center;
 }
 
+
+.CenterImageRingOuter
+{
+	width: 400px;
+	height: 400px;
+    border-radius: 100%;
+    border: 4px solid #00ccffaa inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 5;
+   	opacity: 1.0;
+    background-color: gradient( radial, 50% 50%, 0px 0px, 100% 100%, from ( #040910 ), color-stop( 0.86, blue ) );
+
+}
+
+.CenterImageRingInner
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 2px solid blue inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 10;
+   	opacity: 1.0;
+    background-color: black;
+} 
+
+.CenterImageRingInnerCrossVertical
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 75%;
+    border: 2px #11111111;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 11;
+   	opacity: 0.60;
+    background-color: black;
+} 
+
+.CenterImageRingInnerCrossHorizontal
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 75%;
+    border: 2px #11111111;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 11;
+   	opacity: 0.60;
+    background-color: black;
+} 
+
+.CenterImageRingAntiBuffer
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 4px solid blue inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 15;
+   	opacity: 0.60;
+    background-color: black;
+} 
+
+.CenterImageRingAnti
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 4px solid blue inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 12;
+   	opacity: 0.30;
+    background-color: yellow;
+} 
+
+@keyframes 'visualization_ring_anim'
+{
+	0%
+	{
+		opacity: 0.40;
+	}
+
+	50%
+	{
+		opacity: 0.50;
+	}
+
+	100%
+	{
+		opacity: 0.40;
+	}
+}
+
+.CenterImageRingEdge
+{
+    height: 400px;
+    width: 400px;
+	background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 4px solid blue inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 18;
+   	opacity: 0.40;
+    background-color: white;
+
+	animation-name: visualization_ring_anim;
+	animation-duration: 3.0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+} 
+
+
 .CenterImage
 {
-	width: fieldwidth;
-	height: 100%;
+	width: 500px;
+	height: 500px;
 	background-repeat: no-repeat;
 }
 
@@ -1493,7 +1671,18 @@ Slider:Selected
 
 #CenterImageJoystick.CenterImage
 {
-	background-image: url("file://{images}/library/controller/controller_config_inspector_stick_bg.png");
+	height: 406px;
+    width: 406px;
+	background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 6px solid #00ccff inset;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 0;
+   	opacity: 1.0;
+    background-color: #00afdf;
 }
 
 .CenterImageABXYPanel.CenterImage,
@@ -1518,11 +1707,19 @@ Slider:Selected
 
 #CenterImageMouseRotation
 {
-	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_rotation.png");
+	height: 8px;
+    width: 396px;
+    border-radius: 2px;
+    border: 1px solid #102f4b;
+	horizontal-align: center;
+    vertical-align: center;
+  	margin-bottom: 47px;
+    margin-left: 12px;
+    z-index: 10;
+   	opacity: 1.0;
+    background-color: white;
 	visibility: collapse;
 	background-position: center center;
-	height: 400px;
-	margin-top: 28px;
 }
 
 

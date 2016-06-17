@@ -13,7 +13,12 @@
 	    	<TextEntry id="ActionSetName"
 		       	textinputid="ActionSetNameTextEntry"
     			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
-
+				<Panel id="" class="HorizontalSpace" />
+				<Panel id="" class="HorizontalSpace" />
+				<Panel id="PresetToCopyDropDownPanel" class="SelectPresetDropDownContainer">
+					<Label class="SubTitle" text="#Library_PresetToCopyToActionSet_CodeLabel" />
+					<DropDown class="AppControllerSettingsDropdown" id="PresetToCopyDropDown" />
+				</Panel>
             <Panel id="MsgBoxButtons">
                 <Button class="Button" onactivate="SetActionSetName();">
                     <Label text="#UI_OK" />

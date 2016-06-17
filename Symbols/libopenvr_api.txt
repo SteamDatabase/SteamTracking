@@ -1,11 +1,13 @@
 
  .objc_class_name_NSAutoreleasePool
+ .objc_class_name_NSBundle
+ .objc_class_name_NSString
  B g_SuspendResumeLock
  B g_nCurThreadSuspendCount
  B g_pCurThread
  B vr::g_pVRControlPanel
  B vr::g_pVRDashboardManager
- B vr::g_pVRTrackedCamera
+ B vr::g_pVRTrackedCameraInternal
  D VTT for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D VTT for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -23,6 +25,8 @@
  D vtable for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  NSHomeDirectory
+ OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSString
  R Json::Value::maxInt
  R Json::Value::maxLargestInt
  R Json::Value::maxLargestUInt
@@ -37,6 +41,7 @@
  T CVRLog::LogDirect(LogLevel, bool, char const*, char*&)
  T CVRLog::~CVRLog()
  T CVRPathRegistry::BLoadFromFile()
+ T CVRPathRegistry::GetOpenVRConfigPath()
  T CVRPathRegistry::GetPaths(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, char const*, char const*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*)
  T CVRPathRegistry::GetVRPathRegistryFilename()
  T GetEnglishStringForHmdError(vr::EVRInitError)
@@ -58,6 +63,7 @@
  T Json::Reader::decodeUnicodeCodePoint(Json::Reader::Token&, char const*&, char const*, unsigned int&)
  T Json::Reader::decodeUnicodeEscapeSequence(Json::Reader::Token&, char const*&, char const*, unsigned int&)
  T Json::Reader::getFormattedErrorMessages() const
+ T Json::Reader::getLocationSnippet(char const*) const
  T Json::Reader::parse(char const*, char const*, Json::Value&, bool)
  T Json::Reader::parse(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, Json::Value&, bool)
  T Json::Reader::readArray(Json::Reader::Token&)
@@ -101,9 +107,9 @@
  T Json::valueToString(long long)
  T Json::valueToString(unsigned long long)
  T Log(char const*, ...)
+ T Path_FixSlashes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char)
  T Path_IsDirectory(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T Path_Join(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char)
- T Path_Join(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char)
  T Path_ReadBinaryFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int*)
  T Path_ReadTextFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T Plat_IsInDebugSession()
@@ -115,7 +121,7 @@
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
  T VRControlPanel
  T VRDashboardManager
- T VRTrackedCamera
+ T VRTrackedCameraInternal
  T VR_GetGenericInterface
  T VR_GetInitToken
  T VR_GetStringForHmdError
@@ -148,6 +154,7 @@
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
+ T std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)
  T std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_istringstream()
  T std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
  T std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_ostringstream()
@@ -253,6 +260,7 @@
  std::__1::__vector_base_common<true>::__throw_length_error() const
  std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
  std::__1::basic_istream<char, std::__1::char_traits<char> >::operator>>(double&)
+ std::__1::basic_istream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_istream<char, std::__1::char_traits<char> >&, bool)
  std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::~sentry()
@@ -291,6 +299,7 @@
  std::__1::ios_base::init(void*)
  std::__1::locale::use_facet(std::__1::locale::id&) const
  std::__1::locale::~locale()
+ std::__1::to_string(int)
  std::exception::~exception()
  std::terminate()
  strftime
@@ -301,10 +310,10 @@
  t Json::duplicateAndPrefixStringValue(char const*, unsigned int)
  t Json::normalizeEOL(char const*, char const*)
  t ParseStringListFromJson(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, Json::Value const&, char const*)
- t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.76517.ii
- t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.76662.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.76553.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.76709.ii
+ t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11678.ii
+ t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11784.ii
+ t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.84924.ii
+ t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.85092.ii
  typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >

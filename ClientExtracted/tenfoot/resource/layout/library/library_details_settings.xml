@@ -35,6 +35,7 @@
 					<Button id="SetLanguageButton" class="Button">
 						<Label id="SetLanguageLabel" class="LongDesc" text="#Library_Details_SetLanguage" />
 					</Button>
+					<ToggleButton id="IncludeInVRButton" class="CheckBox" text="#Library_Details_IncludeInVR" tabindex="auto" selectionpos="auto" onselect="IncludeInVRButtonChanged(true);" ondeselect="IncludeInVRButtonChanged(false);"/>
 				</Panel>
 
 				<Panel id="OrganizeSection" class="LibrarySettingsSection">

@@ -516,7 +516,40 @@
 			}
 		}
 
+		support_alert_ack
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=1000
+			font-style=none
+			textcolor=white
+			padding-left=50
+			padding-right=50
+			padding-top=6
+			inset="-8 -3 8 0"
+			render {}
+			render_bg {
+				0="fill( x0, y0 + 3, x1-1, y1, support_lock_ack1 )"
 
+			}
+		}
+
+		support_alert_ack:hover
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=1000
+			font-style=none
+			textcolor=white
+			padding-left=50
+			padding-right=50
+			padding-top=6
+			inset="-8 -3 8 0"
+			render {}
+			render_bg {
+				0="fill( x0, y0 + 3, x1-1, y1, support_lock_ack2 )"
+			}
+		}
 
 		inbox_button [!$OSX]
 		{

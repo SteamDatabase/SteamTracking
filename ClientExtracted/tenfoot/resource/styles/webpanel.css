@@ -175,3 +175,26 @@ HTML #MousePanningImage
 {
 	opacity: 1.0;
 }
+
+HTML MouseScrollRegion
+{
+	visibility: collapse;
+}
+
+HTML.HasVerticalScrollbar .TopMouseScrollRegion,
+HTML.HasVerticalScrollbar .BottomMouseScrollRegion
+{
+	visibility: visible;
+}
+
+HTML .BottomMouseScrollRegion
+{
+	transform: translatex( 0px );
+}
+
+HTML.HasHorizontalScrollbar .LeftMouseScrollRegion,
+HTML.HasHorizontalScrollbar .RightMouseScrollRegion
+{
+	visibility: visible;
+}
+

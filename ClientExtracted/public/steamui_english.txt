@@ -1249,7 +1249,7 @@ This should take less than a minute."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% pending)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"You already own %subscription%."
-"Steam_UpdateNews_Title"	"Steam - Update News"
+"Steam_UpdateNews_Title"	"Steam - News"
 "Steam_SettingsNotification_Info"	"Notify me (with Steam instant messages) about additions or changes to:"
 "Steam_SettingsNotification_MyGames"	"My Games"
 "Steam_SettingsNotification_UpcomingReleases"	"Upcoming and new releases"
@@ -2368,8 +2368,8 @@ You'll need to log out of OS X for the change to take effect."
 "SteamUI_PickShortcutTitle"		"Add a Game"
 
 "SteamUI_StatusShortcutReady"		"Shortcut"
-"Steam_RightClick_CreateShortcut"		"Create shortcut"
-"Steam_RightClick_DeleteShortcut"		"Delete shortcut"
+"Steam_RightClick_CreateShortcut"		"Create Shortcut"
+"Steam_RightClick_DeleteShortcut"		"Delete Shortcut"
 "Steam_minigamescolumn_shortcuts"		"SHORTCUTS"
 
 "Steam_menu_AddShortcut"			"Add a Non-Steam Game to My Library..."
@@ -2859,7 +2859,7 @@ Make one now by emailing a gift to someone you know."
 "Skin_By_Random_n"			"Steam skin based on design by random_n"
 "Steam_PackageVersion"			"Steam package versions: %package_version%"
 
-"Steam_UpdateNewsMultiple_Title"	"Steam - Update News (%item% of %total%)"
+"Steam_UpdateNewsMultiple_Title"	"Steam - News (%item% of %total%)"
 
 "Steam_P2PAvailability"			"Availability:"
 "Steam_P2PAvailabilityValue"		"%availability%"
@@ -3872,7 +3872,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Convert_Content_Done" "Conversion complete. Missing content is being downloaded..."
 "Steam_Convert_Content_Error" "Conversion failed (%error%)"
 
-"Steam_SupportAlert"	"You have an alert from Steam Support"
+"Steam_SupportAlert"	"You have an account alert"
 "steam_inventory"	"Inventory"
 "steam_inbox_item"	"1 new item in your inventory"
 "steam_inbox_items"	"%items% new items in your inventory"

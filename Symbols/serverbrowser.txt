@@ -4933,7 +4933,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
- T KeyValuesTextParser::KeyValuesTextParser(bool)
+ T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)

@@ -70,6 +70,7 @@
  B ConCommandBase::s_pConCommandBases
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
+ B OPENSSL_ia32cap_P
  B __g_CreateCInputOSXIInputInternal_reg
  B __g_CreateCInputOSXIInput_reg
  B __g_CreateCLocalizedStringTableILocalize_reg
@@ -419,7 +420,7 @@
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlPriorityQueue<MessageItem_t>
  R typeinfo name for CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >
+ R typeinfo name for CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CLayoutFile::AppearanceKey_t, CStyleAppearance*, int, CDefLess<CLayoutFile::AppearanceKey_t> >::Node_t, int, CUtlMap<CLayoutFile::AppearanceKey_t, CStyleAppearance*, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -523,11 +524,17 @@
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  SteamVProf::CVProfile::~CVProfile()
+ T AES_cbc_encrypt
+ T AES_decrypt
+ T AES_encrypt
  T AdvanceOverWhitespace(unsigned short const*)
  T ApplyBlurAndTransparencyToTextBitmap(int, int, int, unsigned char*, unsigned char*, Color, Color)
  T BCreateDirectory(char const*)
  T BDeleteRegistryKey(ERegKeyRoot, char const*)
  T BExtractRegParts(char const*, ERegKeyRoot*, char*, int, char*, int)
+ T BF_cbc_encrypt
+ T BF_decrypt
+ T BF_encrypt
  T BFileExists(char const*)
  T BGetRegistryValueStr(ERegKeyRoot, char const*, char const*, char*, int)
  T BGetRegistryValueUint(ERegKeyRoot, char const*, char const*, unsigned int*)
@@ -885,7 +892,7 @@
  T CLocalizedStringTable::CLocalizedStringTable()
  T CLocalizedStringTable::ConstructRelativeDateString(wchar_t*, int, unsigned int, bool)
  T CLocalizedStringTable::ConstructString(wchar_t*, int, char const*, KeyValues*)
- T CLocalizedStringTable::ConstructString(wchar_t*, int, unsigned long, KeyValues*)
+ T CLocalizedStringTable::ConstructString(wchar_t*, int, unsigned int, KeyValues*)
  T CLocalizedStringTable::ConstructString(wchar_t*, int, wchar_t*, int, ...)
  T CLocalizedStringTable::ConstructString(wchar_t*, int, wchar_t*, int, char*)
  T CLocalizedStringTable::ConstructTimeIntervalStringFromSeconds(wchar_t*, int, int, int, char const*, char const*)
@@ -898,21 +905,21 @@
  T CLocalizedStringTable::FindAsUTF8(char const*)
  T CLocalizedStringTable::FindExistingValueIndex(wchar_t const*)
  T CLocalizedStringTable::FindIndex(char const*)
- T CLocalizedStringTable::GetFileNameByIndex(unsigned long)
+ T CLocalizedStringTable::GetFileNameByIndex(unsigned int)
  T CLocalizedStringTable::GetFirstStringIndex()
  T CLocalizedStringTable::GetLanguage()
  T CLocalizedStringTable::GetLocalizationFileCount()
  T CLocalizedStringTable::GetLocalizationFileName(int)
- T CLocalizedStringTable::GetNameByIndex(unsigned long)
- T CLocalizedStringTable::GetNextStringIndex(unsigned long)
- T CLocalizedStringTable::GetValueByIndex(unsigned long)
+ T CLocalizedStringTable::GetNameByIndex(unsigned int)
+ T CLocalizedStringTable::GetNextStringIndex(unsigned int)
+ T CLocalizedStringTable::GetValueByIndex(unsigned int)
  T CLocalizedStringTable::OnResourceFileChanged(char const*)
  T CLocalizedStringTable::ParseUTF16File(unsigned short const*, char const*)
  T CLocalizedStringTable::ParseUTF8File(char const*, char const*)
  T CLocalizedStringTable::ReloadLocalizationFiles()
  T CLocalizedStringTable::RemoveAll()
  T CLocalizedStringTable::SaveToFile(IFileSystem*, char const*)
- T CLocalizedStringTable::SetValueByIndex(unsigned long, wchar_t*)
+ T CLocalizedStringTable::SetValueByIndex(unsigned int, wchar_t*)
  T CLocalizedStringTable::SymLess(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&)
  T CLocalizedStringTable::Validate(CValidator&, char const*)
  T CLocalizedStringTable::~CLocalizedStringTable()
@@ -1419,12 +1426,12 @@
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::Find(CLocalizedStringTable::localizedstring_t const&) const
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::FindInsertionPosition(CLocalizedStringTable::localizedstring_t const&, bool, unsigned long&, bool&, bool&)
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::Insert(CLocalizedStringTable::localizedstring_t const&, bool)
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::NewNode(bool)
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::RemoveAll()
- T CUtlRBTree<CLocalizedStringTable::localizedstring_t, unsigned long, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<unsigned long> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::Find(CLocalizedStringTable::localizedstring_t const&) const
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CLocalizedStringTable::localizedstring_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::Insert(CLocalizedStringTable::localizedstring_t const&, bool)
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::Find(COSXFont::abc_cache_t const&) const
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(COSXFont::abc_cache_t const&, bool, unsigned short&, bool&, bool&)
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::Insert(COSXFont::abc_cache_t const&, bool)
@@ -1581,11 +1588,6 @@
  T CUtlRBTreeBase<unsigned int, CDefRBTreeBalanceListener<unsigned int> >::_LinkToParent(unsigned int, unsigned int, bool, unsigned long, void*)
  T CUtlRBTreeBase<unsigned int, CDefRBTreeBalanceListener<unsigned int> >::_RotateLeft(unsigned int, unsigned long, void*)
  T CUtlRBTreeBase<unsigned int, CDefRBTreeBalanceListener<unsigned int> >::_RotateRight(unsigned int, unsigned long, void*)
- T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_InsertRebalance(unsigned long, unsigned long, void*)
- T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_LinkToParent(unsigned long, unsigned long, bool, unsigned long, void*)
- T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_NextInorder(unsigned long, unsigned long, void*) const
- T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_RotateLeft(unsigned long, unsigned long, void*)
- T CUtlRBTreeBase<unsigned long, CDefRBTreeBalanceListener<unsigned long> >::_RotateRight(unsigned long, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RemoveRebalance(unsigned short, unsigned long, void*)
@@ -1873,6 +1875,14 @@
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
+ T Camellia_DecryptBlock
+ T Camellia_DecryptBlock_Rounds
+ T Camellia_Ekeygen
+ T Camellia_EncryptBlock
+ T Camellia_EncryptBlock_Rounds
+ T Camellia_cbc_encrypt
+ T Camellia_decrypt
+ T Camellia_encrypt
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CharacterSetBuild(characterset_s*, char const*)
@@ -1887,6 +1897,13 @@
  T CreateDirRecursive(char const*)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
+ T DES_SPtrans
+ T DES_decrypt3
+ T DES_ede3_cbc_encrypt
+ T DES_encrypt1
+ T DES_encrypt2
+ T DES_encrypt3
+ T DES_ncbc_encrypt
  T DisplayReconfigurationCallBack(unsigned int, unsigned int, void*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FontManager()
@@ -1967,7 +1984,7 @@
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesBuilder::CreateNewKey()
- T KeyValuesTextParser::KeyValuesTextParser(bool)
+ T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
@@ -1980,6 +1997,16 @@
  T MouseCode_VirtualKeyToVGUI(int)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T MyDrawEventHandler(OpaqueEventHandlerCallRef*, OpaqueEventRef*, void*)
+ T OPENSSL_atomic_add
+ T OPENSSL_cleanse
+ T OPENSSL_cpuid_setup
+ T OPENSSL_far_spin
+ T OPENSSL_ia32_cpuid
+ T OPENSSL_ia32_rdrand
+ T OPENSSL_indirect_call
+ T OPENSSL_instrument_halt
+ T OPENSSL_rdtsc
+ T OPENSSL_wipe_cpu
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::GetMainBundle()
  T OSXHelpers::GetScreenResolution(int&, int&, char const*)
@@ -1993,6 +2020,8 @@
  T PchNameFromEUniverse(int)
  T PosixRegistryManager()
  T PriorityQueueComp(MessageItem_t const&, MessageItem_t const&)
+ T RC4
+ T RC4_options
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
  T ReadToEndOfLine(unsigned short const*)
  T ReadUnicodeToken(unsigned short const*, unsigned short*, int, bool&)
@@ -2090,8 +2119,40 @@
  T __CreateCVGuiSystemModuleLoaderIVGuiModuleLoader_interface()
  T __CreateVPanelWrapperIPanel_interface()
  T __clang_call_terminate
+ T aesni_cbc_encrypt
+ T aesni_ccm64_decrypt_blocks
+ T aesni_ccm64_encrypt_blocks
+ T aesni_ctr32_encrypt_blocks
+ T aesni_decrypt
+ T aesni_ecb_encrypt
+ T aesni_encrypt
+ T aesni_set_decrypt_key
+ T aesni_set_encrypt_key
+ T aesni_xts_decrypt
+ T aesni_xts_encrypt
+ T bn_GF2m_mul_2x2
+ T bn_add_words
+ T bn_div_words
+ T bn_mul_add_words
+ T bn_mul_comba4
+ T bn_mul_comba8
+ T bn_mul_mont
+ T bn_mul_words
+ T bn_sqr_comba4
+ T bn_sqr_comba8
+ T bn_sqr_words
+ T bn_sub_part_words
+ T bn_sub_words
  T drawVGUI(OpaqueWindowPtr*, CGContext*, CGRect*)
+ T gcm_ghash_4bit_mmx
+ T gcm_ghash_4bit_x86
+ T gcm_ghash_clmul
+ T gcm_gmult_4bit_mmx
+ T gcm_gmult_4bit_x86
+ T gcm_gmult_clmul
+ T gcm_init_clmul
  T hardwareListenerProc(unsigned long, void*)
+ T md5_block_asm_data_order
  T non-virtual thunk to CInputBase::PostKeyMessage(char const*, char const*, wchar_t const*)
  T non-virtual thunk to CInputBase::PostLogMessage(char const*)
  T non-virtual thunk to CInputBase::PostMessage(unsigned int, char const*, IIMEPostCallback::PostItem_t const*, int, unsigned int, float)
@@ -2251,6 +2312,13 @@
  T png_warning_parameter_unsigned
  T png_zalloc
  T png_zfree
+ T private_AES_set_decrypt_key
+ T private_AES_set_encrypt_key
+ T private_Camellia_set_key
+ T private_RC4_set_key
+ T sha1_block_data_order
+ T sha256_block_data_order
+ T sha512_block_data_order
  T style_t::Validate(CValidator&, char const*)
  T vgui::Bitmap::Bitmap(char const*, bool)
  T vgui::Bitmap::ForceUpload()
@@ -2536,6 +2604,11 @@
  T vgui::__CreateVGUISetupIVGuiSetup_interface()
  T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<vgui::layoutcmd_base_t>(vgui::layoutcmd_base_t*)
+ T vpaes_cbc_encrypt
+ T vpaes_decrypt
+ T vpaes_encrypt
+ T vpaes_set_decrypt_key
+ T vpaes_set_encrypt_key
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
@@ -2636,6 +2709,7 @@
  b GetDeviceColorSpace()::colorspace
  b HandleFlagsChanged(NSEvent*)::s_priorFlags
  b InitializeCharacterSets()::s_CharacterSetInitialized
+ b OPENSSL_cpuid_setup.trigger
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
@@ -2912,6 +2986,35 @@
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
+ t _aesni_decrypt3
+ t _aesni_decrypt4
+ t _aesni_decrypt6
+ t _aesni_encrypt3
+ t _aesni_encrypt4
+ t _aesni_encrypt6
+ t _aesni_set_encrypt_key
+ t _mul_1x1_ialu
+ t _mul_1x1_mmx
+ t _sha1_block_data_order_ssse3
+ t _sse_AES_decrypt_compact
+ t _sse_AES_encrypt_compact
+ t _vpaes_decrypt_core
+ t _vpaes_encrypt_core
+ t _vpaes_preheat
+ t _vpaes_schedule_192_smear
+ t _vpaes_schedule_core
+ t _vpaes_schedule_mangle
+ t _vpaes_schedule_round
+ t _vpaes_schedule_transform
+ t _x86_AES_decrypt
+ t _x86_AES_decrypt_compact
+ t _x86_AES_encrypt
+ t _x86_AES_encrypt_compact
+ t _x86_AES_set_encrypt_key
+ t _x86_Camellia_decrypt
+ t _x86_Camellia_encrypt
+ t _x86_DES_decrypt
+ t _x86_DES_encrypt
  t appEvtHndlr(OpaqueEventHandlerCallRef*, OpaqueEventRef*, void*)
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned long const*, unsigned long long const*)
  t png_build_16bit_table

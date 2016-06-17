@@ -198,7 +198,7 @@
 		BigPictureStatusStyle
 		{
 			image="graphics/icon_status_bigpic"
-			padding-left=4
+			padding-left=2
 		}
 		
 		MobileStatusStyle
@@ -216,7 +216,7 @@
 		BigPictureStatusStyleInGame
 		{
 			image="graphics/icon_status_bigpic_ingame"
-			padding-left=4
+			padding-left=2
 		}
 	
 		MobileStatusStyleInGame

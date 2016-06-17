@@ -7,57 +7,54 @@
 
 	<ControllerBindingsGordon defaultfocus="LeftTrackpad">
 		<Button id="VDFDump" onactivate="DumpVDF()" />
-		<Panel id="BindingsContainer" tabindex="auto" selectionpos="0,0">
+		<Panel id="BindingsContainer" tabindex="auto" selectionpos="auto">
 			<Panel id="BindingsTitleContainer">
 				<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />
 				<Label id="ControllerTitle" text="#SettingsController_BindingTitle_ForController" />
 			</Panel>
 			<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
-			<Panel id="GameActionSets" selectionpos="0,1" />
-			<Panel id="TopHalfContainer" selectionpos="0,2">
-				<Panel class="Background" id="BackgroundController" >
-						<Panel id="HelperDescription" >
-									<Label id="HelperDescriptionHeader" text="#SettingsController_HelperDescriptionHeader" />
-									<Label id="HelperDescriptionText" text="#SettingsController_HelperDescriptionText"/>
-						</Panel>
-						<Panel id="HelperImageBG" >
-								<Image id="HelperImage" class="HelperImage" />
-						</Panel>
-				</Panel>
+			<Panel id="GameActionSets" selectionpos="auto" onmovedown="SetInputFocus( LeftTrigger );" onmoveright="None();"/>
+			<Panel id="TopHalfContainer" selectionpos="auto">
 				<Panel class="Background BackgroundLines" id="BackgroundBaseLines" />
-				<Panel class="Background BackgroundLines" id="BackgroundLines" />
-				<Panel class="BindingSlotStrip" id="Left" selectionpos="0,2">
-					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" selectionpos="0,0" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
-					<ControllerBindingButton class="BindingButton Gradient1" describesource="true" id="LeftBumperButton" onmoveright="SetInputFocus( RightBumperButton );" selectionpos="0,1" onfocus="AddStyle(BackgroundLines,LeftBumperSelected)" onblur="RemoveStyle(BackgroundLines, LeftBumperSelected)"/>
-					<ControllerBindingButton class="BindingButton Gradient2" describesource="true" id="LeftGripButton" onmoveright="SetInputFocus( RightGripButton );" selectionpos="0,2" onfocus="AddStyle(BackgroundLines,LeftGripSelected)" onblur="RemoveStyle(BackgroundLines, LeftGripSelected)"/>
-					<ControllerBindingButton class="BindingButton Gradient3" id="BackButton" onmoveright="SetInputFocus( Gyro );" onmovedown="SetInputFocus( LeftTrackpad );" selectionpos="0,3" onfocus="AddStyle(BackgroundLines,BackButtonSelected)" onblur="RemoveStyle(BackgroundLines, BackButtonSelected)"/>
+				<Panel class="Background" id="BackgroundController" >
+					<Panel id="HelperDescription" >
+						<Label id="HelperDescriptionHeader" text="#SettingsController_HelperDescriptionHeader" />
+						<Label id="HelperDescriptionText" text="#SettingsController_HelperDescriptionText"/>
+					</Panel>
+					<Panel id="HelperImageBG" >
+						<Image id="HelperImage" class="HelperImage" />
+					</Panel>
 				</Panel>
-				<Panel class="BindingSlotStrip" id="Right" selectionpos="4,2">
-					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" selectionpos="0,0" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
-					<ControllerBindingButton class="BindingButton Right Gradient1" describesource="true" id="RightBumperButton" onmoveleft="SetInputFocus( LeftBumperButton );" selectionpos="0,1" onfocus="AddStyle(BackgroundLines,RightBumperSelected)" onblur="RemoveStyle(BackgroundLines, RightBumperSelected)"/>
-					<ControllerBindingButton class="BindingButton Right Gradient2" describesource="true" id="RightGripButton" onmoveleft="SetInputFocus( LeftGripButton );" selectionpos="0,2" onfocus="AddStyle(BackgroundLines,RightGripSelected)" onblur="RemoveStyle(BackgroundLines, RightGripSelected)"/>
-					<ControllerBindingButton class="BindingButton Right Gradient3" id="StartButton" onmoveleft="SetInputFocus( Gyro );" onmovedown="SetInputFocus( RightTrackpad );" selectionpos="0,3" onfocus="AddStyle(BackgroundLines,StartButtonSelected)" onblur="RemoveStyle(BackgroundLines, StartButtonSelected)"/>
+				<Panel class="Background BackgroundLines" id="BackgroundLines" />
+				<Panel class="BindingSlotStrip" id="Left" tabindex="auto" selectionpos="auto">
+					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" onmovedown="SetSwitchInputFocus( LeftBumperButton );" onmoveleft="None();" onmoveup="SetInputFocus( GameActionSets );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
+				</Panel>
+				<Panel class="BindingSlotStrip" id="Right" tabindex="auto" selectionpos="auto">
+					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" onmovedown="SetSwitchInputFocus( RightBumperButton );" onmoveright="None();" onmoveup="SetInputFocus( GameActionSets );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
+				</Panel>				
+				<Panel id="Switches" tabindex="auto" selectionpos="auto" class="ModeContainer">				
 				</Panel>
 				<Panel id="GyroModeContainer">
-					<Button class="ModeWrapper Gyro" id="Gyro" onmoveleft="SetInputFocus( BackButton );" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );" onfocus="AddStyle(BackgroundLines,GyroSelected)" onblur="RemoveStyle(BackgroundLines, GyroSelected)"/>
+					<Button class="ModeWrapper Gyro" id="Gyro" tabindex="auto" selectionpos="auto" onmoveleft="SetSwitchInputFocus( BackButton );" onmoveright="SetSwitchInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );" onfocus="AddStyle(BackgroundLines,GyroSelected)" onblur="RemoveStyle(BackgroundLines, GyroSelected)"/>
 				</Panel>
 			</Panel>
 		</Panel>
-		<Panel id="ModeContainer">
-			<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetInputFocus( BackButton );" selectionpos="0,7" onfocus="AddStyle(BackgroundLines,SlotOneSelected)" onblur="RemoveStyle(BackgroundLines, SlotOneSelected)"/>
-			<Button class="ModeWrapper GapRight" id="Joystick" onmoveup="SetInputFocus( Gyro );" selectionpos="1,7" onfocus="AddStyle(BackgroundLines,SlotTwoSelected)" onblur="RemoveStyle(BackgroundLines, SlotTwoSelected)"/>
-			<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetInputFocus( Gyro );" selectionpos="3,7" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
-			<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetInputFocus( StartButton );" selectionpos="4,7" onfocus="AddStyle(BackgroundLines,SlotFourSelected)" onblur="RemoveStyle(BackgroundLines, SlotFourSelected)"/>
+		<Panel id="ModeContainer" tabindex="auto" selectionpos="auto" >
+			<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetSwitchInputFocus( BackButton );" onmovedown="None();" onmoveleft="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotOneSelected)" onblur="RemoveStyle(BackgroundLines, SlotOneSelected)"/>
+			<Button class="ModeWrapper GapRight" id="Joystick" onmoveup="SetInputFocus( Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotTwoSelected)" onblur="RemoveStyle(BackgroundLines, SlotTwoSelected)"/>
+			<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetInputFocus( Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
+			<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetSwitchInputFocus( StartButton );" onmovedown="None();" onmoveright="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotFourSelected)" onblur="RemoveStyle(BackgroundLines, SlotFourSelected)"/>
 		</Panel>
 
 		<ControllerPropertiesMode id="ModeProperties" />
+		<ControllerPropertiesActivator id="ActivatorProperties" />
 		<ChooseBinding id="ChooseBinding" />
 		<ControllerConfigBrowser id="ConfigBrowser" />
 
 		<Panel id="LoadingBlockout">
 			<Panel id="ThrobberContainer">
-		    <LoadingThrobber id="Throbber" />
-      </Panel>
+				<LoadingThrobber id="Throbber" />
+			</Panel>
 		</Panel>
 
 	</ControllerBindingsGordon>

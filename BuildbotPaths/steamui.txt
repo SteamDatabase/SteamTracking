@@ -264,6 +264,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerconfigsave.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerconfigsave.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerconfigselectcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_activator.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_activator.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_mode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerproperties_mode.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerregistration.cpp

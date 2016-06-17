@@ -440,6 +440,7 @@
  T V_EscapeShellArgumentAndAppend(char*, unsigned long, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_EscapeShellArgumentAndAppendWin32(char*, unsigned long, char const*)
+ T V_EscapeStringForPHP
  T V_ExtractDomainFromURL
  T V_ExtractFileExtension
  T V_ExtractFilePath

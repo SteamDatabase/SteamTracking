@@ -6050,3 +6050,15 @@ Label.NotEnoughRoom
 {
 	visibility: collapse;
 }
+
+#IncludeInVRButton
+{
+	visibility: collapse;
+}
+
+.Shortcut #IncludeInVRButton
+{
+	visibility: visible;
+}
+
+
