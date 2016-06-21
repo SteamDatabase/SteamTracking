@@ -56,11 +56,11 @@
 }
 
 .support_message a {
-	color: #cbd5de;
+	color: #67c1f5;
 }
 
 .support_message a:hover {
-	text-decoration: underline;
+	color: #FFFFFF;
 }
 
 .support_message_controls {

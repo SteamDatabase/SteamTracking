@@ -16,7 +16,7 @@ function OnLocationChange ( elIgnored, hash )
 	{
 		FillFormFromNavigation( hash.substr(1) );
 	}
-	else
+	else if ( !g_bUseHistoryAPI )
 	{
 		var query = '';
 		var href = window.location.href;
@@ -27,7 +27,7 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
-function FillFormFromNavigation( querystring )
+function FillFormFromNavigation( querystring, link_click, initial_load )
 {
 	var rgLocationParams = querystring.toQueryParams();
 
@@ -71,13 +71,16 @@ function FillFormFromNavigation( querystring )
 		}
 		else
 		{
-			if ( element && newvalue )
+			if ( element )
 			{
 				element.value = newvalue ? newvalue : '';
-				var rgSplitValues = newvalue.split(',');
-				for( var i=0; i<rgSplitValues.length; i++)
+				if ( newvalue )
 				{
-					$J('div[data-param=\''+jqEscapeSelectorAttribute(name)+'\'][data-value=\''+jqEscapeSelectorAttribute(rgSplitValues[i])+'\']').addClass('checked');
+					var rgSplitValues = newvalue.split(',');
+					for( var i=0; i<rgSplitValues.length; i++)
+					{
+						$J('div[data-param=\''+jqEscapeSelectorAttribute(name)+'\'][data-value=\''+jqEscapeSelectorAttribute(rgSplitValues[i])+'\']').addClass('checked');
+					}
 				}
 			}
 		}
@@ -85,7 +88,7 @@ function FillFormFromNavigation( querystring )
 
 	g_bPopulatingSearchControls = false;
 
-	AjaxSearchResults( true );
+	AjaxSearchResultsInternal( !link_click, initial_load );
 }
 
 function OnSearchDselectChange( elem, name )
@@ -98,38 +101,74 @@ function OnSearchDselectChange( elem, name )
 	AjaxSearchResults();
 }
 
+function GatherSearchParameters()
+{
+	var rgRawParameters = $('advsearchform').serialize( true );
+
+	for ( var key in rgRawParameters )
+	{
+		if ( !rgRawParameters[key] || key == 'displayterm' )
+			delete rgRawParameters[key];
+	}
+
+	return rgRawParameters;
+}
+
 var g_ajaxInFlight;
 var g_rgDesiredParameters = null;
 var g_rgCurrentParameters = null;
 var g_bPopulatingSearchControls = false;
-function AjaxSearchResults( bOnLocationChange )
+var g_bUseHistoryAPI = !!(window.history && window.history.pushState);
+function AjaxSearchResults()
 {
 	// we're in the middle of filling in all the controls from the hash parameter
 	if ( g_bPopulatingSearchControls )
 		return;
 
+	// all page # changes come through as location changes, so reset to 1 here
+	//	when changing search parameters
+	$('search_current_page').value = 1;
+
+	AjaxSearchResultsInternal( false, false );
+}
+
+function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
+{
+	console.log( 'AjaxSearchResults location change? ' + ( bOnLocationChange ? 'yes' : 'no' ) );
+
+	// we're in the middle of filling in all the controls from the hash parameter
+	if ( g_bPopulatingSearchControls )
+		return;
+
+	var rgParameters = GatherSearchParameters();
+
+	// remove snr for history purposes
+	var snr = rgParameters['snr'];
+	delete rgParameters['snr'];
+	delete rgParameters['sort_by'];
+	if ( rgParameters['page'] === 1 || rgParameters['page'] === '1' )
+		delete rgParameters['page'];
+
 	if ( !bOnLocationChange )
 	{
-		// all page # changes come through as location changes, so reset to 1 here
-		//	when changing search parameters
-		$('search_current_page').value = 1;
-	}
+		if ( g_bUseHistoryAPI )
+		{
+			history.pushState( { params: rgParameters}, '', '?' + Object.toQueryString( rgParameters ) );
+		}
+		else
+		{
 
-	var rgRawParameters = $('advsearchform').serialize( true );
-	var rgParameters = {};
-	for ( var param in rgRawParameters )
+			window.location = '#' + Object.toQueryString( rgParameters );
+		}
+	}
+	else if ( bInitialLoad && g_bUseHistoryAPI )
 	{
-		if ( rgRawParameters[param] && param != 'snr' && param != 'displayterm' )
-			rgParameters[param] = rgRawParameters[param];
+		history.replaceState( { params: rgParameters}, '', '?' + Object.toQueryString( rgParameters ) );
 	}
 
-	if ( !bOnLocationChange )
-	{
-		window.location = '#' + Object.toQueryString( rgParameters );
-	}
 
-	if ( rgRawParameters['snr'] )
-		rgParameters['snr'] = rgRawParameters['snr'];
+	if ( snr )
+		rgParameters['snr'] = snr;
 
 	UpdateTags();
 
@@ -182,7 +221,10 @@ function SearchLinkClick( elem )
 	if ( iQuery > 0 && href.length > iQuery + 1 )
 	{
 		var query = href.substr( iQuery + 1 );
-		window.location = '#' + query;
+		if ( g_bUseHistoryAPI )
+			FillFormFromNavigation( query, true );
+		else
+			window.location = '#' + query;
 	}
 	else
 	{
@@ -200,11 +242,31 @@ LocationHashObserver = Class.create(Abstract.TimedObserver, {
 
 function InitSearchPage()
 {
-	new LocationHashObserver( null, 0.2, OnLocationChange );
-	if ( window.location.hash && window.location.hash.length > 1 )
+	if ( g_bUseHistoryAPI )
 	{
-		// seems like this isn't needed for all browsers, but it is needed for the client
-		OnLocationChange( null, window.location.hash );
+		$J(window).on('popstate', function( e ) {
+			var oState = e.originalEvent.state;
+
+			FillFormFromNavigation( window.location.search ? window.location.search.substr(1) : '' );
+		});
+
+		if ( window.location.hash.length )
+		{
+			FillFormFromNavigation( window.location.hash.substr(1), false, true /* initial load - will ReplaceState */ );
+		}
+		else
+		{
+			g_rgCurrentParameters = GatherSearchParameters();
+		}
+	}
+	else
+	{
+		new LocationHashObserver( null, 0.2, OnLocationChange );
+		if ( window.location.hash && window.location.hash.length > 1 )
+		{
+			// seems like this isn't needed for all browsers, but it is needed for the client
+			OnLocationChange( null, window.location.hash );
+		}
 	}
 }
 

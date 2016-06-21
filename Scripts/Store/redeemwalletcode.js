@@ -193,6 +193,10 @@ function OnValidateWalletCodeFailure( detail )
 				sErrorMessage = 'The Steam Wallet code you have entered does not appear to be activated.  Please note that it may take several hours after time of purchase before activation is completed by your retailer.  If the problem persists, please return to where the code was purchased for further assistance.';
 				break;
 
+			case 9:
+				sErrorMessage = 'The Steam Wallet code you have entered has already been previously redeemed on your account.';
+				break;
+
 			default:
 				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
 				break;

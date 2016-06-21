@@ -108,9 +108,10 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 
 CLoginPromptManager.prototype.BIsIos = function() { return this.m_strMobileClientType == 'ios'; };
 CLoginPromptManager.prototype.BIsAndroid = function() { return this.m_strMobileClientType == 'android'; };
+CLoginPromptManager.prototype.BIsWinRT = function() { return this.m_strMobileClientType == 'winrt'; };
 
 CLoginPromptManager.prototype.BIsUserInMobileClientVersionOrNewer = function( nMinMajor, nMinMinor, nMinPatch ) {
-	if ( (!this.BIsIos() && !this.BIsAndroid()) || this.m_strMobileClientVersion == '' )
+	if ( (!this.BIsIos() && !this.BIsAndroid() && !this.BIsWinRT() ) || this.m_strMobileClientVersion == '' )
 		return false;
 
 	var version = this.m_strMobileClientVersion.match( /(?:(\d+) )?\(?(\d+)\.(\d+)(?:\.(\d+))?\)?/ );
@@ -248,8 +249,10 @@ CLoginPromptManager.prototype.RunLocalURL = function(url)
 	$IFrame.remove();
 };
 
-// read results from Android client
-CLoginPromptManager.prototype.GetValueFromLocalURL = function( url )
+var g_interval = null;
+
+// read results from Android or WinRT clients
+CLoginPromptManager.prototype.GetValueFromLocalURL = function( url, callback )
 {
 	window.g_status = null;
 	window.g_data = null;
@@ -257,19 +260,32 @@ CLoginPromptManager.prototype.GetValueFromLocalURL = function( url )
 
 	var timeoutTime = Date.now() + 1000 * 5;
 
-	while ( true )
+	if ( g_interval != null )
 	{
+		window.clearInterval( g_interval );
+		g_interval = null;
+	}
+
+	// poll regularly (but gently) for an update.
+	g_interval = window.setInterval( function() {
 		var status = window.SGHandler.getResultStatus();
 		if ( status && status != 'busy' )
 		{
+			if ( g_interval )
+				window.clearInterval( g_interval );
+
 			var value = window.SGHandler.getResultValue();
-			return [ status, value ];
+			callback( [ status, value ] );
+			return;
 		}
 		if ( Date.now() > timeoutTime )
 		{
-			return ['error', 'timeout'];
+			if ( g_interval )
+				window.clearInterval( g_interval );
+			callback( ['error', 'timeout'] );
+			return;
 		}
-	}
+	}, 100);
 };
 
 // this function is invoked by iOS after the steammobile:// url is triggered by GetAuthCode.
@@ -279,15 +295,18 @@ function receiveAuthCode( code )
 	$J(document).trigger( 'SteamMobile_ReceiveAuthCode', [ code ] );
 };
 
-CLoginPromptManager.prototype.GetAuthCode = function( results )
+CLoginPromptManager.prototype.GetAuthCode = function( results, callback )
 {
 	if ( this.m_bIsMobile )
 	{
 		//	honor manual entry before anything else
 		var code = $J('#twofactorcode_entry').val();
 		if ( code.length > 0 )
-			return code;
-		
+		{
+			callback( results, code );
+			return;
+		}
+
 		if ( this.BIsIos() )
 		{
 			this.m_sAuthCode = '';
@@ -295,23 +314,33 @@ CLoginPromptManager.prototype.GetAuthCode = function( results )
 
 			// this is expected to trigger receiveAuthCode and we'll have this value set by the time it's done
 			if ( this.m_sAuthCode.length > 0 )
-				return this.m_sAuthCode;
+			{
+				callback( results, this.m_sAuthCode );
+				return;
+			}
 		}
-		else if ( this.BIsAndroid() )
+		else if ( this.BIsAndroid() || this.BIsWinRT() )
 		{
-			var result = this.GetValueFromLocalURL( "steammobile://twofactorcode?gid=" + results.token_gid );
-			if ( result[0] == 'ok' )
-				return result[1];
+			var result = this.GetValueFromLocalURL('steammobile://twofactorcode?gid=' + results.token_gid, function(result) {
+				if ( result[0] == 'ok' )
+				{
+					callback(results, result[1]);
+				} else {
+					// this may be in the modal
+					callback(results, $J('#twofactorcode_entry').val());
+				}
+			});
+			return;
 		}
 
 		// this may be in the modal
-		return $J('#twofactorcode_entry').val();
+		callback(results, $J('#twofactorcode_entry').val());
 	}
 	else
 	{
 		var authCode = this.m_sAuthCode;
 		this.m_sAuthCode = '';
-		return authCode;
+		callback( results, authCode );
 	}
 };
 
@@ -320,39 +349,7 @@ CLoginPromptManager.prototype.OnRSAKeyResponse = function( results )
 {
 	if ( results.publickey_mod && results.publickey_exp && results.timestamp )
 	{
-		var form = this.m_$LogonForm[0];
-
-		var pubKey = RSA.getPublicKey( results.publickey_mod, results.publickey_exp );
-		var username = this.m_strUsernameCanonical;
-		var password = form.elements['password'].value;
-		password = password.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
-		var encryptedPassword = RSA.encrypt( password, pubKey );
-
-		var rgParameters = {
-			password: encryptedPassword,
-			username: username,
-			twofactorcode: this.GetAuthCode( results ),
-			emailauth: form.elements['emailauth'] ? form.elements['emailauth'].value : '',
-			loginfriendlyname: form.elements['loginfriendlyname'] ? form.elements['loginfriendlyname'].value : '',
-			captchagid: this.m_gidCaptcha,
-			captcha_text: form.elements['captcha_text'] ? form.elements['captcha_text'].value : '',
-			emailsteamid: this.m_steamidEmailAuth,
-			rsatimestamp: results.timestamp,
-			remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false'
-		};
-		if ( this.m_bIsMobile )
-			rgParameters.oauth_client_id = form.elements['oauth_client_id'].value;
-
-		var _this = this;
-		$J.post( this.m_strBaseURL + 'dologin/', this.GetParameters( rgParameters ) )
-			.done( $J.proxy( this.OnLoginResponse, this ) )
-			.fail( function() {
-				ShowAlertDialog( 'Error', 'There was a problem communicating with the Steam servers.  Please try again later.' );
-
-				$J('#login_btn_signin').show();
-				$J('#login_btn_wait').hide();
-				_this.m_bLoginInFlight = false;
-			});
+		this.GetAuthCode( results , $J.proxy(this.OnAuthCodeResponse, this) );
 	}
 	else
 	{
@@ -367,6 +364,44 @@ CLoginPromptManager.prototype.OnRSAKeyResponse = function( results )
 		this.m_bLoginInFlight = false;
 	}
 };
+
+CLoginPromptManager.prototype.OnAuthCodeResponse = function( results, authCode )
+{
+	var form = this.m_$LogonForm[0];
+	var pubKey = RSA.getPublicKey(results.publickey_mod, results.publickey_exp);
+	var username = this.m_strUsernameCanonical;
+	var password = form.elements['password'].value;
+	password = password.replace(/[^\x00-\x7F]/g, ''); // remove non-standard-ASCII characters
+	var encryptedPassword = RSA.encrypt(password, pubKey);
+
+	var rgParameters = {
+		password: encryptedPassword,
+		username: username,
+		twofactorcode: authCode,
+		emailauth: form.elements['emailauth'] ? form.elements['emailauth'].value : '',
+		loginfriendlyname: form.elements['loginfriendlyname'] ? form.elements['loginfriendlyname'].value : '',
+		captchagid: this.m_gidCaptcha,
+		captcha_text: form.elements['captcha_text'] ? form.elements['captcha_text'].value : '',
+		emailsteamid: this.m_steamidEmailAuth,
+		rsatimestamp: results.timestamp,
+		remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false'
+	};
+
+	if (this.m_bIsMobile)
+		rgParameters.oauth_client_id = form.elements['oauth_client_id'].value;
+
+	var _this = this;
+	$J.post(this.m_strBaseURL + 'dologin/', this.GetParameters(rgParameters))
+		.done($J.proxy(this.OnLoginResponse, this))
+		.fail(function () {
+			ShowAlertDialog('Error', 'There was a problem communicating with the Steam servers.  Please try again later.');
+
+			$J('#login_btn_signin').show();
+			$J('#login_btn_wait').hide();
+			_this.m_bLoginInFlight = false;
+		});
+};
+
 
 CLoginPromptManager.prototype.OnLoginResponse = function( results )
 {
@@ -890,6 +925,7 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		if ( !this.m_bIsMobileSteamClient
 				|| this.BIsAndroid() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 32 )
 				|| this.BIsIos() && !this.BIsUserInMobileClientVersionOrNewer( 2, 0, 0 )
+				// no version minimum for Windows phones
 			)
 		{
 			$J( '#login_twofactorauth_buttonset_selfhelp div[data-modalstate=selfhelp_sms_reset_start]' ).hide();

@@ -49,6 +49,11 @@
 	margin-top: 7px;
 }
 
+.searchbar_left {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
 .searchbar .label {
 	font-size: 12px;
 	color: #4c6c8c;
@@ -62,10 +67,10 @@
 	border: 1px solid #000;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
-	width: 400px;
+	width: 300px;
 	padding: 5px;
 
-	max-width: calc( 100% - 10px - 2px );
+	max-width: calc( 100% - 80px - 2px );
 }
 
 .sortbox .dselect_container {

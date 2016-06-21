@@ -68,14 +68,7 @@ function SelectScreenshot( id )
 
 function SelectAllScreenshots()
 {
-	for( var i = 0; i < g_rgLoadedScreenshots.length; ++i )
-	{
-		var id = g_rgLoadedScreenshots[i];
-		cb = $('screenshot_checkbox_'+id);
-		cb.checked = true;
-		item = $('imgWallItem_' + id);
-		$(item).addClassName( 'imgWallItemChecked' );
-	}
+	$J('.screenshot_checkbox').prop( 'checked', true );
 
 	ScreenshotUpdateBatchCount();
 	return false;
@@ -83,14 +76,7 @@ function SelectAllScreenshots()
 
 function DeselectAllScreenshots()
 {
-	for( var i = 0; i < g_rgLoadedScreenshots.length; ++i )
-	{
-		var id = g_rgLoadedScreenshots[i];
-		cb = $('screenshot_checkbox_'+id);
-		cb.checked = false;
-		item = $('imgWallItem_' + id);
-		$(item).removeClassName( 'imgWallItemChecked' );
-	}
+	$J('.screenshot_checkbox').prop( 'checked', false );
 
 	ScreenshotUpdateBatchCount();
 	return false;

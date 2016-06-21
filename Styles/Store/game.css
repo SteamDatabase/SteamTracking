@@ -3954,13 +3954,17 @@ div.agegate_text_container > h2 {
 	clear: both;
 	height: 110px;
 	width: 100%;
+	position: relative;
 
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
+.series_episode .ds_flag {
+	top: 6px;
+}
+
 .series_episode .episode_image_col {
 	float: left;
-
 }
 
 .series_episode .episode_image {
@@ -4014,7 +4018,7 @@ div.agegate_text_container > h2 {
 
 .series_episode .episode_action_col {
 	position: relative;
-	right: 6px;
+	right: 16px;
 	text-align: right;
 	float: right;
 }
@@ -4159,3 +4163,4 @@ div.agegate_text_container > h2 {
 	display: block;
 	overflow: hidden;
 }
+

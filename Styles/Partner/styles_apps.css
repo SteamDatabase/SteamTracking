@@ -273,12 +273,17 @@ textarea#leaderboard_blob {
 	width: 30px;
 }
 
-.edit_actions {
+.season .edit_actions {
 	text-align: right;
 	width: 1095px;
-	margin-top: -25px;
+	margin-top: -23px;
 }
 
-.edit_actions input {
+.season .edit_actions input {
 	margin-right: 3px;
+}
+
+.season .edit_actions .iconLink {
+	padding-left: 20px;
+	margin-right: 5px;
 }
