@@ -3426,3 +3426,7 @@ ul.attached_file_list {
 .issue_help_requests .help_request_table {
 	margin-top: 0;
 }
+
+.agent_actions .help_section_text {
+	color: #ef5e30;
+}
