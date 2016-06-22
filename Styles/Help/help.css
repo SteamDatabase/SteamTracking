@@ -3158,6 +3158,11 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	vertical-align: middle;
 }
 
+.help_request_text ol,
+.help_request_text ul {
+	padding: 8px 0px 0px 40px;
+}
+
 .help_request_footerbox {
 	position: relative;
 	margin-top: 28px;
