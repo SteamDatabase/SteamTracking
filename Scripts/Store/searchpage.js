@@ -134,7 +134,6 @@ function AjaxSearchResults()
 
 function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 {
-	console.log( 'AjaxSearchResults location change? ' + ( bOnLocationChange ? 'yes' : 'no' ) );
 
 	// we're in the middle of filling in all the controls from the hash parameter
 	if ( g_bPopulatingSearchControls )
@@ -145,7 +144,8 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 	// remove snr for history purposes
 	var snr = rgParameters['snr'];
 	delete rgParameters['snr'];
-	delete rgParameters['sort_by'];
+	if ( rgParameters['sort_by'] == '_ASC' )
+		delete rgParameters['sort_by'];
 	if ( rgParameters['page'] === 1 || rgParameters['page'] === '1' )
 		delete rgParameters['page'];
 
