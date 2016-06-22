@@ -289,10 +289,22 @@ body
     font-size: 24px;
     display: inline;
     font-weight: bold;
-    margin-right: 10px;
 }
 
 .tenfoot .season_name {
+    font-size: 40px;
+}
+
+.episode_number {
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: inline;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline;
+}
+
+.tenfoot .episode_number {
     font-size: 40px;
 }
 
