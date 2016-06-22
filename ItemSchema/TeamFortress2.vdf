@@ -133473,6 +133473,19 @@
 			}
 		}
 	}
+	"matchmaking_categories"
+	{
+		"competitive_6v6"
+		{
+			"localized_name"	"#TF_MMCat_Competitive6v6"
+			"max_excludes"	"0"
+
+			"valid_match_groups"
+			{
+				"MatchGroup_Ladder_6v6"	"1"
+			}
+		}
+	}
 	"maps"
 	{
 		"attack_defense"
@@ -134314,6 +134327,306 @@
 				"localizedname"			"#TF_Map_cp_degrootkeep"
 				"quickplay_type"		"all_users"
 			}
+		}
+		"competitive_6v6"
+		{
+			"mm_type"	"competitive_6v6"
+			"localized_name"	"#GameType_Competitive_6v6"
+			"localized_desc"	"#Gametype_Competitive_6v6_Desc"
+			"list_image"		"gametype_competitive_6v6"
+			
+			"0"
+			{
+				"name"			"cp_process_final"
+				"localizedname"	"#TF_Map_Process"
+				"quickplay_type"		"disabled"
+			}
+			"1"
+			{
+				"name"			"cp_gorge"
+				"localizedname"	"#TF_Map_cp_gorge"
+				"quickplay_type"		"disabled"
+			}
+			"2"
+			{
+				"name"			"cp_badlands"
+				"localizedname"	"#TF_Map_cp_badlands"
+				"quickplay_type"		"disabled"
+			}
+			"3"
+			{
+				"name"			"cp_vanguard"
+				"localizedname"	"#TF_Map_Vanguard"
+				"quickplay_type"		"disabled"
+			}
+			"4"
+			{
+				"name"			"cp_granary"
+				"localizedname"	"#TF_Map_cp_granary"
+				"quickplay_type"		"disabled"
+			}
+			"5"
+			{
+				"name"			"cp_foundry"
+				"localizedname"	"#TF_Map_cp_foundry"
+				"quickplay_type"		"disabled"
+			}
+			"6"
+			{
+				"name"			"cp_gullywash_final1"
+				"localizedname"	"#TF_Gullywash"
+				"quickplay_type"		"disabled"
+			}
+			"7"
+			{
+				"name"			"cp_snakewater_final1"
+				"localizedname"	"#TF_Map_Snakewater"
+				"quickplay_type"		"disabled"
+			}
+			"8"
+			{
+				"name"			"koth_viaduct"
+				"localizedname"	"#TF_Map_koth_viaduct"
+				"quickplay_type"		"disabled"
+			}
+		}
+	}
+	"master_maps_list"
+	{
+		"0"
+		{
+			"name"			"Missing"
+			"localizedname"	"#TF_Map_Unknown"
+		}
+		"1"
+		{
+			"name"			"cp_gorge"
+			"localizedname"	"#TF_Map_cp_gorge"
+		}
+		"2"
+		{
+			"name"			"cp_badlands"
+			"localizedname"	"#TF_Map_cp_badlands"
+		}
+		"3"
+		{
+			"name"			"cp_vanguard"
+			"localizedname"	"#TF_Map_Vanguard"
+		}
+		"4"
+		{
+			"name"			"cp_granary"
+			"localizedname"	"#TF_Map_cp_granary"
+		}
+		"5"
+		{
+			"name"			"cp_foundry"
+			"localizedname"	"#TF_Map_cp_foundry"
+		}
+		"6"
+		{
+			"name"			"cp_gullywash_final1"
+			"localizedname"	"#TF_Gullywash"
+		}
+		"7"
+		{
+			"name"			"cp_snakewater_final1"
+			"localizedname"	"#TF_Map_Snakewater"
+		}
+		"8"
+		{
+			"name"			"koth_viaduct"
+			"localizedname"	"#TF_Map_koth_viaduct"
+		}
+		"9"
+		{
+			"name"			"cp_gravelpit"
+			"localizedname"	"#TF_Map_cp_gravelpit"
+		}
+		"10"
+		{
+			"name"			"cp_dustbowl"
+			"localizedname"	"#TF_Map_cp_dustbowl"
+		}
+		"11"
+		{
+			"name"			"cp_well"
+			"localizedname"	"#TF_Map_cp_well"
+		}
+		"12"
+		{
+			"name"			"ctf_2fort"
+			"localizedname"	"#TF_Map_ctf_2fort"
+		}
+		"13"
+		{
+			"name"			"tc_hydro"
+			"localizedname"	"#TF_Map_tc_hydro"
+		}
+		"14"
+		{
+			"name"			"ctf_well"
+			"localizedname"	"#TF_Map_ctf_well"
+		}
+		"15"
+		{
+			"name"			"pl_goldrush"
+			"localizedname"	"#TF_Map_pl_goldrush"
+		}
+		"16"
+		{
+			"name"			"cp_fastlane"
+			"localizedname"	"#TF_Fastlane"
+		}
+		"17"
+		{
+			"name"			"ctf_turbine"
+			"localizedname"	"#TF_Turbine"
+		}
+		"18"
+		{
+			"name"			"pl_badwater"
+			"localizedname"	"#TF_Map_pl_badwater"
+		}
+		"19"
+		{
+			"name"			"cp_steel"
+			"localizedname"	"#TF_Steel"
+		}
+		"20"
+		{
+			"name"			"cp_egypt_final"
+			"localizedname"	"#TF_Egypt"
+		}
+		"21"
+		{
+			"name"			"cp_junction_final"
+			"localizedname"	"#TF_Junction"
+		}
+		"22"
+		{
+			"name"			"plr_pipeline"
+			"localizedname"	"#TF_Map_plr_pipeline"
+		}
+		"23"
+		{
+			"name"			"pl_hoodoo_final"
+			"localizedname"	"#TF_Hoodoo"
+		}
+		"24"
+		{
+			"name"			"koth_sawmill"
+			"localizedname"	"#TF_Map_koth_sawmill"
+		}
+		"25"
+		{
+			"name"			"koth_nucleus"
+			"localizedname"	"#TF_Map_koth_nucleus"
+		}
+		"26"
+		{
+			"name"			"ctf_sawmill"
+			"localizedname"	"#TF_Map_ctf_sawmill"
+		}
+		"27"
+		{
+			"name"			"cp_yukon_final"
+			"localizedname"	"#TF_Yukon"
+		}
+		"28"
+		{
+			"name"			"koth_harvest_final"
+			"localizedname"	"#TF_Harvest"
+		}
+		"29"
+		{
+			"name"			"ctf_doublecross"
+			"localizedname"	"#TF_Map_ctf_doublecross"
+		}
+		"30"
+		{
+			"name"			"cp_freight_final1"
+			"localizedname"	"#TF_Freight"
+		}
+		"31"
+		{
+			"name"			"pl_upward"
+			"localizedname"	"#TF_Map_pl_upward"
+		}
+		"32"
+		{
+			"name"			"plr_hightower"
+			"localizedname"	"#TF_Map_plr_hightower"
+		}
+		"33"
+		{
+			"name"			"pl_thundermountain"
+			"localizedname"	"#TF_Map_pl_thundermountain"
+		}
+		"34"
+		{
+			"name"			"cp_coldfront"
+			"localizedname"	"#TF_Coldfront"
+		}
+		"35"
+		{
+			"name"			"cp_mountainlab"
+			"localizedname"	"#TF_MountainLab"
+		}
+		"36"
+		{
+			"name"			"cp_degrootkeep"
+			"localizedname"	"#TF_Map_cp_degrootkeep"
+		}
+		"37"
+		{
+			"name"			"cp_5gorge"
+			"localizedname"	"#TF_Map_cp_5gorge"
+		}
+		"38"
+		{
+			"name"			"pl_frontier_final"
+			"localizedname"	"#TF_Frontier"
+		}
+		"39"
+		{
+			"name"			"plr_nightfall_final"
+			"localizedname"	"#TF_Nightfall"
+		}
+		"40"
+		{
+			"name"			"koth_lakeside_final"
+			"localizedname"	"#TF_Lakeside"
+		}
+		"41"
+		{
+			"name"			"koth_badlands"
+			"localizedname"	"#TF_Map_koth_badlands"
+		}
+		"42"
+		{
+			"name"			"pl_barnblitz"
+			"localizedname"	"#TF_Map_pl_barnblitz"
+		}
+		"43"
+		{
+			"name"			"sd_doomsday"
+			"localizedname"	"#TF_Map_sd_doomsday"
+		}
+		"44"
+		{
+			"name"			"koth_king"
+			"localizedname"	"#TF_KongKing"
+		}
+		"45"
+		{
+			"name"			"cp_standin_final"
+			"localizedname"	"#TF_Map_Standin"
+		}
+		"46"
+		{
+			"name"			"cp_process_final"
+			"localizedname"	"#TF_Map_Process"
 		}
 	}
 	"steam_packages"
