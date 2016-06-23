@@ -95,17 +95,17 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var fnSetCheckboxTooltip = function( $Checkbox )
 	{
 		if ( $Checkbox.hasClass('checked') )
-			$Checkbox.data('store-tooltip', '#App_Tags_WithdrawTagHint' );
+			$Checkbox.data('store-tooltip', 'You have applied this tag.  Click to remove.' );
 		else
-			$Checkbox.data('store-tooltip', '#App_Tags_ApplyTagHint' );
+			$Checkbox.data('store-tooltip', 'Click here to apply this tag.' );
 	};
 
 	var fnSetReportTooltip = function( $ReportFlag )
 	{
 		if ( $ReportFlag.hasClass('reported') )
-			$ReportFlag.data('store-tooltip', '#App_Tags_ReportedHint' );
+			$ReportFlag.data('store-tooltip', 'You have reported this tag as being incorrectly applied to this product.  Click again to remove the report.' );
 		else
-			$ReportFlag.data('store-tooltip', '#App_Tags_ReportTagHint' );
+			$ReportFlag.data('store-tooltip', 'Click to report for this tag as being incorrectly applied to this product.' );
 	};
 
 	var fnCheckboxClick = function( checkbox, tag, bPopular, tagid )
@@ -135,12 +135,12 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				if ( bShowBanOption )
 				{
 					var $Ban = $J('<div/>', {'class': 'app_tag_ban'} );
-					$Ban.data('store-tooltip', '#App_Tags_BanHint' );
+					$Ban.data('store-tooltip', 'Click here to remove this tag from this product.  This option is limited to developers and Steam staff.' );
 					BindStoreTooltip( $Ban );
 					$Tag.append( $Ban );
 
 					$Ban.click( function() {
-						ShowConfirmDialog( '#App_Tags_BanTag', '#App_Tags_BanTagPrompt'.replace( /%s/, tag )).done( function()
+						ShowConfirmDialog( 'Ban Tag', 'Are you sure you want to remove the "%s" tag from this product?'.replace( /%s/, tag )).done( function()
 						{
 							$Ban.trigger('mouseleave');	// to clear the tooltip
 							fnApplyTag( tag, false, true, -1 );
@@ -170,7 +170,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		else
 		{
 			var $Link = $J('<div/>', {'class': 'app_tag not_browseable' }).text(tag);
-			$Link.data('store-tooltip', '#App_Tags_NotEnoughTaggedX'.replace( /%s/, $Link.html() ) );
+			$Link.data('store-tooltip', 'Not enough items tagged with "%s" yet'.replace( /%s/, $Link.html() ) );
 			BindStoreTooltip( $Link );
 			$Tag.append( $Link );
 		}
@@ -180,7 +180,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 	var fnMakeFrequentTag = function( tagid, tag )
 	{
-		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid, 'data-store-tooltip': '#App_Tags_ApplyTagHint' }).text( tag ).click( function() { fnApplyTag( tag ) } );
+		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid, 'data-store-tooltip': 'Click here to apply this tag.' }).text( tag ).click( function() { fnApplyTag( tag ) } );
 		BindStoreTooltip( $Tag );
 		return $Tag;
 	};
@@ -284,7 +284,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 			if ( $YourTags.children().length == 0 )
 			{
-				$YourTags.append( $J('<div/>', {'class': 'app_tag_control no_tags_yet'}).text('#App_Tags_NoTagsYet' ) );
+				$YourTags.append( $J('<div/>', {'class': 'app_tag_control no_tags_yet'}).text('No tags entered yet' ) );
 			}
 
 			var cPopularTagsToDisplay = 16;
@@ -332,7 +332,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				if ( !rgUserTags[i].is_reported &&  !rgUserTags[i].browseable )
 				{
 					var $AppTag = $J('<div/>', {'class': 'app_tag not_browseable' }).text( rgUserTags[i].name );
-					$AppTag.data('store-tooltip', '#App_Tags_NotEnoughTaggedX'.replace( /%s/, $AppTag.html() ) );
+					$AppTag.data('store-tooltip', 'Not enough items tagged with "%s" yet'.replace( /%s/, $AppTag.html() ) );
 					BindStoreTooltip( $AppTag );
 					$YourTagsOnPage.append( $AppTag );
 				}
@@ -448,7 +448,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 			if ( eReportType > 0 && !withdraw )
 			{
-				ShowAlertDialog( '#App_Tags_ReportATag', '#App_Tags_ThankYouForYourReport');
+				ShowAlertDialog( 'Report a Tag', 'Thank you for your report.  Tags that reach a certain threshold of reports will be removed from the product.');
 			}
 			else if ( eReportType == -1 )
 			{
@@ -457,7 +457,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			}
 
 		}).fail( function() {
-			ShowAlertDialog( '#App_Tags_ModalTitle', 'There was a problem adding your tag.' );
+			ShowAlertDialog( 'View and edit tags for this product', 'There was a problem adding your tag.' );
 		});
 	};
 
@@ -480,7 +480,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	{
 
 		$AppTagModal.show();
-		var Modal = ShowAlertDialog( '#App_Tags_ModalTitle', $AppTagModal, '#Shared_ButtonClose' );
+		var Modal = ShowAlertDialog( 'View and edit tags for this product', $AppTagModal, 'Close' );
 		Modal.GetContent().addClass( 'app_tag_modal_frame');
 		fnBuildTagDisplay( Modal );
 		Modal.AdjustSizing();
@@ -861,7 +861,7 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 				if ( typeof GDynamicStore != 'undefined' )
 					GDynamicStore.DecorateDynamicItems( $Element );
 			}).fail( function () {
-				$GamesElement.find( '.browse_tag_loading').text( '#App_Tags_Browse_ProblemLoading' );
+				$GamesElement.find( '.browse_tag_loading').text( 'Sorry, there was a problem loading items.  Please try again later.' );
 			});
 
 			rgTagResults[unTagID] = $Element;
@@ -1003,7 +1003,7 @@ function InitBannedTagModal( appid, $BanModal )
 	var bBansChanged = false;
 	window.ShowAppTagBanModal = function() {
 		$BanModal.show();
-		ShowAlertDialog( '#App_Tags_BannedTags', $BanModal).always( function() {
+		ShowAlertDialog( 'Banned Tags', $BanModal).always( function() {
 			if ( bBansChanged )
 				window.location.reload();
 		} );
@@ -1012,9 +1012,9 @@ function InitBannedTagModal( appid, $BanModal )
 			var $Flag = $J(this);
 			var $Row = $Flag.parent( '.app_tag_control' );
 			var tag = $Row.data('tag');
-			ShowConfirmDialog( '#App_Tags_UnbanTag',
-				'#App_Tags_UnbanTagPrompt'.replace( /%s/, tag ),
-				'#App_Tags_UnbanTag')
+			ShowConfirmDialog( 'Unban Tag',
+				'Are you sure you want to unban the "%s" tag?'.replace( /%s/, tag ),
+				'Unban Tag')
 				.done( function() {
 					var rgParams = {
 						appid: appid,
@@ -1026,7 +1026,7 @@ function InitBannedTagModal( appid, $BanModal )
 					$J.post( 'http://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
 						$Row.hide( 'fast' );
 					}).fail( function () {
-						ShowAlertDialog( '#App_Tags_UnbanTag', '#App_Tags_Ban_Error' );
+						ShowAlertDialog( 'Unban Tag', 'There was a problem banning or unbanning this tag.  Please try again later.' );
 					});
 					bBansChanged = true;
 				});
