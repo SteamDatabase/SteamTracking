@@ -1352,7 +1352,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 .LoadingWrapper
 {
 	position: relative;
-	width: 450px;
+	max-width: 450px;
 	margin: auto auto;
 	vertical-align: middle;
 }

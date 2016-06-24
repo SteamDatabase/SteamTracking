@@ -3989,13 +3989,13 @@ div.agegate_text_container > h2 {
 	display: inline;
 	color: #8f98a0;
 	font-size: 11px;
+	margin-right: 20px;
 }
 
 .series_episode .episode_runtime {
 	display: inline;
 	color: #8f98a0;
 	font-size: 11px;
-	margin-left: 20px;
 }
 
 .series_episode .episode_description {

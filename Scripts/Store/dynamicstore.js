@@ -492,7 +492,7 @@ GDynamicStore = {
 			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
 			$DiscountBlocks.show();
 
-			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCentsWithBundleDiscount ) );
+			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCents ) );
 			if ( !Bundle.m_bContainsDiscountedPackage )
 			{
 				$DiscountBlocks.addClass('no_discount');
