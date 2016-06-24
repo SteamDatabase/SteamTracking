@@ -65,6 +65,7 @@
 "Styles/styles_video.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_video.css?__TIME__",
 "Styles/styles_video_watch.css"                  : "https://steamstore-a.akamaihd.net/public/css/styles_video_watch.css?__TIME__",
 "Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
+"Styles/styles_autumn_2014_main.css"             : "https://steamstore-a.akamaihd.net/public/css/promo/autumn_2014_main.css?__TIME__",
 
 //
 // Community CSS
