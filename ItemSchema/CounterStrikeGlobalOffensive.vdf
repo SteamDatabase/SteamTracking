@@ -15987,6 +15987,176 @@
 				}
 			}
 		}
+		"931"
+		{
+			"name"		"ESL One Cologne 2016 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_Champion_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"932"
+		{
+			"name"		"ESL One Cologne 2016 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"933"
+		{
+			"name"		"ESL One Cologne 2016 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_Semifinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_Semifinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"934"
+		{
+			"name"		"ESL One Cologne 2016 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_Quarterfinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_Quarterfinalist_Desc"
+			"image_inventory"		"econ/status_icons/trophy_majors_finalists"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/trophy_majors_finalists.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"935"
+		{
+			"name"		"Cologne 2016 Pick 'Em Challenge Bronze"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_pickem_2016_bronze"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2016_bronze.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"936"
+		{
+			"name"		"Cologne 2016 Pick 'Em Challenge Silver"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_pickem_2016_silver"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2016_silver.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"937"
+		{
+			"name"		"Cologne 2016 Pick 'Em Challenge Gold"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_pickem_2016_gold"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2016_gold.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"938"
+		{
+			"name"		"Cologne 2016 Fantasy Team Challenge Bronze"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_fantasy_2016_bronze"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_fantasy_2016_bronze.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"939"
+		{
+			"name"		"Cologne 2016 Fantasy Team Challenge Silver"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_fantasy_2016_silver"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_fantasy_2016_silver.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"940"
+		{
+			"name"		"Cologne 2016 Fantasy Team Challenge Gold"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze_Desc"
+			"image_inventory"		"econ/status_icons/cologne_fantasy_2016_gold"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_fantasy_2016_gold.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
 		"1000"
 		{
 			"name"		"Community Season One Spring 2013"
@@ -56525,12 +56695,8 @@
 		"28 14:05 120"		"comp cache"
 		"29 15:05 120"		"comp overpass"
 		"30 16:05 120"		"comp dust2"
-		"05 13:05 120"		"comp royal"
-		"06 14:05 120"		"comp santorini"
-		"07 15:05 120"		"comp tulip"
-		"08 16:05 120"		"comp cruise"
-		"09 13:05 120"		"comp aztec"
-		"10 14:05 120"		"comp dust"
+		"01 13:05 120"		"comp cbble"
+		"02 14:05 120"		"comp coast"
 		"11 15:05 120"		"comp vertigo"
 		"12 16:05 120"		"comp office"
 		"13 13:05 120"		"comp italy"
@@ -61885,6 +62051,4681 @@
 			"tournament_player_id"		"234052"
 		}
 	}
+	"prefabs"
+	{
+		"cologne2016_sticker_capsule_prefab"
+		{
+			"first_sale_date"		"2016-06-24"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+		}
+		"cologne2016_signature_capsule_prefab"
+		{
+			"first_sale_date"		"2016-06-24"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_signature_pack_cologne2016_group_players_collection"
+					"tag_text"		"#CSGO_crate_signature_pack_cologne2016_group_players_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"145"		"crate_sticker_pack_cologne2016_legends"
+		"146"		"crate_sticker_pack_cologne2016_challengers"
+		"147"		"crate_signature_pack_cologne2016_group_1_legendary"
+		"148"		"crate_signature_pack_cologne2016_group_2_legendary"
+		"149"		"cologne2016_signatures_nip"
+		"150"		"cologne2016_signatures_optc"
+		"151"		"cologne2016_signatures_clg"
+		"152"		"cologne2016_signatures_gamb"
+		"153"		"cologne2016_signatures_flip"
+		"154"		"cologne2016_signatures_liq"
+		"155"		"cologne2016_signatures_mss"
+		"156"		"cologne2016_signatures_navi"
+		"157"		"cologne2016_signatures_vp"
+		"158"		"cologne2016_signatures_sk"
+		"159"		"cologne2016_signatures_g2"
+		"160"		"cologne2016_signatures_faze"
+		"161"		"cologne2016_signatures_astr"
+		"162"		"cologne2016_signatures_nv"
+		"163"		"cologne2016_signatures_fntc"
+		"164"		"cologne2016_signatures_dig"
+		"165"		"crate_cologne2016_promo_de_dust2"
+		"166"		"crate_cologne2016_promo_de_mirage"
+		"167"		"crate_cologne2016_promo_de_cbble"
+		"168"		"crate_cologne2016_promo_de_overpass"
+		"169"		"crate_cologne2016_promo_de_cache"
+		"170"		"crate_cologne2016_promo_de_train"
+		"171"		"crate_cologne2016_promo_de_nuke"
+	}
+	"client_loot_lists"
+	{
+		"cologne2016_rare_nip"
+		{
+			"[cologne2016_team_nip]sticker"		"1"
+		}
+		"cologne2016_rare_optc"
+		{
+			"[cologne2016_team_optc]sticker"		"1"
+		}
+		"cologne2016_rare_clg"
+		{
+			"[cologne2016_team_clg]sticker"		"1"
+		}
+		"cologne2016_rare_gamb"
+		{
+			"[cologne2016_team_gamb]sticker"		"1"
+		}
+		"cologne2016_rare_flip"
+		{
+			"[cologne2016_team_flip]sticker"		"1"
+		}
+		"cologne2016_rare_liq"
+		{
+			"[cologne2016_team_liq]sticker"		"1"
+		}
+		"cologne2016_rare_mss"
+		{
+			"[cologne2016_team_mss]sticker"		"1"
+		}
+		"cologne2016_rare_navi"
+		{
+			"[cologne2016_team_navi]sticker"		"1"
+		}
+		"cologne2016_rare_vp"
+		{
+			"[cologne2016_team_vp]sticker"		"1"
+		}
+		"cologne2016_rare_sk"
+		{
+			"[cologne2016_team_sk]sticker"		"1"
+		}
+		"cologne2016_rare_g2"
+		{
+			"[cologne2016_team_g2]sticker"		"1"
+		}
+		"cologne2016_rare_faze"
+		{
+			"[cologne2016_team_faze]sticker"		"1"
+		}
+		"cologne2016_rare_astr"
+		{
+			"[cologne2016_team_astr]sticker"		"1"
+		}
+		"cologne2016_rare_nv"
+		{
+			"[cologne2016_team_nv]sticker"		"1"
+		}
+		"cologne2016_rare_fntc"
+		{
+			"[cologne2016_team_fntc]sticker"		"1"
+		}
+		"cologne2016_rare_dig"
+		{
+			"[cologne2016_team_dig]sticker"		"1"
+		}
+		"cologne2016_rare_esl"
+		{
+			"[cologne2016_team_esl]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_legends_rare"
+		{
+			"[cologne2016_team_nip]sticker"		"1"
+			"[cologne2016_team_clg]sticker"		"1"
+			"[cologne2016_team_liq]sticker"		"1"
+			"[cologne2016_team_navi]sticker"		"1"
+			"[cologne2016_team_vp]sticker"		"1"
+			"[cologne2016_team_sk]sticker"		"1"
+			"[cologne2016_team_astr]sticker"		"1"
+			"[cologne2016_team_fntc]sticker"		"1"
+			"[cologne2016_team_esl]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_legends_mythical"
+		{
+			"[cologne2016_team_nip_holo]sticker"		"1"
+			"[cologne2016_team_clg_holo]sticker"		"1"
+			"[cologne2016_team_liq_holo]sticker"		"1"
+			"[cologne2016_team_navi_holo]sticker"		"1"
+			"[cologne2016_team_vp_holo]sticker"		"1"
+			"[cologne2016_team_sk_holo]sticker"		"1"
+			"[cologne2016_team_astr_holo]sticker"		"1"
+			"[cologne2016_team_fntc_holo]sticker"		"1"
+			"[cologne2016_team_esl_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_legends_legendary"
+		{
+			"[cologne2016_team_nip_foil]sticker"		"1"
+			"[cologne2016_team_clg_foil]sticker"		"1"
+			"[cologne2016_team_liq_foil]sticker"		"1"
+			"[cologne2016_team_navi_foil]sticker"		"1"
+			"[cologne2016_team_vp_foil]sticker"		"1"
+			"[cologne2016_team_sk_foil]sticker"		"1"
+			"[cologne2016_team_astr_foil]sticker"		"1"
+			"[cologne2016_team_fntc_foil]sticker"		"1"
+			"[cologne2016_team_esl_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_legends"
+		{
+			"crate_sticker_pack_cologne2016_legends_mythical"		"1"
+			"crate_sticker_pack_cologne2016_legends_legendary"		"1"
+		}
+		"crate_sticker_pack_cologne2016_challengers_rare"
+		{
+			"[cologne2016_team_optc]sticker"		"1"
+			"[cologne2016_team_gamb]sticker"		"1"
+			"[cologne2016_team_flip]sticker"		"1"
+			"[cologne2016_team_mss]sticker"		"1"
+			"[cologne2016_team_g2]sticker"		"1"
+			"[cologne2016_team_faze]sticker"		"1"
+			"[cologne2016_team_nv]sticker"		"1"
+			"[cologne2016_team_dig]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_challengers_mythical"
+		{
+			"[cologne2016_team_optc_holo]sticker"		"1"
+			"[cologne2016_team_gamb_holo]sticker"		"1"
+			"[cologne2016_team_flip_holo]sticker"		"1"
+			"[cologne2016_team_mss_holo]sticker"		"1"
+			"[cologne2016_team_g2_holo]sticker"		"1"
+			"[cologne2016_team_faze_holo]sticker"		"1"
+			"[cologne2016_team_nv_holo]sticker"		"1"
+			"[cologne2016_team_dig_holo]sticker"		"1"
+			"[cologne2016_team_esl_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_challengers_legendary"
+		{
+			"[cologne2016_team_optc_foil]sticker"		"1"
+			"[cologne2016_team_gamb_foil]sticker"		"1"
+			"[cologne2016_team_flip_foil]sticker"		"1"
+			"[cologne2016_team_mss_foil]sticker"		"1"
+			"[cologne2016_team_g2_foil]sticker"		"1"
+			"[cologne2016_team_faze_foil]sticker"		"1"
+			"[cologne2016_team_nv_foil]sticker"		"1"
+			"[cologne2016_team_dig_foil]sticker"		"1"
+			"[cologne2016_team_esl_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_cologne2016_challengers"
+		{
+			"crate_sticker_pack_cologne2016_challengers_mythical"		"1"
+			"crate_sticker_pack_cologne2016_challengers_legendary"		"1"
+		}
+		"cologne2016_signatures_nip"
+		{
+			"[cologne2016_signature_pyth]sticker"		"1"
+			"[cologne2016_signature_forest]sticker"		"1"
+			"[cologne2016_signature_friberg]sticker"		"1"
+			"[cologne2016_signature_getright]sticker"		"1"
+			"[cologne2016_signature_xizt]sticker"		"1"
+		}
+		"cologne2016_signatures_optc"
+		{
+			"[cologne2016_signature_daps]sticker"		"1"
+			"[cologne2016_signature_mixwell]sticker"		"1"
+			"[cologne2016_signature_naf]sticker"		"1"
+			"[cologne2016_signature_rush]sticker"		"1"
+			"[cologne2016_signature_stanislaw]sticker"		"1"
+		}
+		"cologne2016_signatures_clg"
+		{
+			"[cologne2016_signature_reltuc]sticker"		"1"
+			"[cologne2016_signature_koosta]sticker"		"1"
+			"[cologne2016_signature_hazed]sticker"		"1"
+			"[cologne2016_signature_pita]sticker"		"1"
+			"[cologne2016_signature_tarik]sticker"		"1"
+		}
+		"cologne2016_signatures_gamb"
+		{
+			"[cologne2016_signature_spaze]sticker"		"1"
+			"[cologne2016_signature_dosia]sticker"		"1"
+			"[cologne2016_signature_hooch]sticker"		"1"
+			"[cologne2016_signature_mou]sticker"		"1"
+			"[cologne2016_signature_adrenkz]sticker"		"1"
+		}
+		"cologne2016_signatures_flip"
+		{
+			"[cologne2016_signature_b1ad3]sticker"		"1"
+			"[cologne2016_signature_waylander]sticker"		"1"
+			"[cologne2016_signature_shara]sticker"		"1"
+			"[cologne2016_signature_markeloff]sticker"		"1"
+			"[cologne2016_signature_worldedit]sticker"		"1"
+		}
+		"cologne2016_signatures_liq"
+		{
+			"[cologne2016_signature_jdm64]sticker"		"1"
+			"[cologne2016_signature_elige]sticker"		"1"
+			"[cologne2016_signature_s1mple]sticker"		"1"
+			"[cologne2016_signature_hiko]sticker"		"1"
+			"[cologne2016_signature_nitro]sticker"		"1"
+		}
+		"cologne2016_signatures_mss"
+		{
+			"[cologne2016_signature_chrisj]sticker"		"1"
+			"[cologne2016_signature_denis]sticker"		"1"
+			"[cologne2016_signature_spiidi]sticker"		"1"
+			"[cologne2016_signature_nex]sticker"		"1"
+			"[cologne2016_signature_niko]sticker"		"1"
+		}
+		"cologne2016_signatures_navi"
+		{
+			"[cologne2016_signature_edward]sticker"		"1"
+			"[cologne2016_signature_flamie]sticker"		"1"
+			"[cologne2016_signature_guardian]sticker"		"1"
+			"[cologne2016_signature_seized]sticker"		"1"
+			"[cologne2016_signature_zeus]sticker"		"1"
+		}
+		"cologne2016_signatures_vp"
+		{
+			"[cologne2016_signature_byali]sticker"		"1"
+			"[cologne2016_signature_neo]sticker"		"1"
+			"[cologne2016_signature_pasha]sticker"		"1"
+			"[cologne2016_signature_snax]sticker"		"1"
+			"[cologne2016_signature_taz]sticker"		"1"
+		}
+		"cologne2016_signatures_sk"
+		{
+			"[cologne2016_signature_coldzera]sticker"		"1"
+			"[cologne2016_signature_fallen]sticker"		"1"
+			"[cologne2016_signature_fer]sticker"		"1"
+			"[cologne2016_signature_fnx]sticker"		"1"
+			"[cologne2016_signature_taco]sticker"		"1"
+		}
+		"cologne2016_signatures_g2"
+		{
+			"[cologne2016_signature_bodyy]sticker"		"1"
+			"[cologne2016_signature_rpk]sticker"		"1"
+			"[cologne2016_signature_scream]sticker"		"1"
+			"[cologne2016_signature_shox]sticker"		"1"
+			"[cologne2016_signature_smithzz]sticker"		"1"
+		}
+		"cologne2016_signatures_faze"
+		{
+			"[cologne2016_signature_aizy]sticker"		"1"
+			"[cologne2016_signature_fox]sticker"		"1"
+			"[cologne2016_signature_kioshima]sticker"		"1"
+			"[cologne2016_signature_rain]sticker"		"1"
+			"[cologne2016_signature_jkaem]sticker"		"1"
+		}
+		"cologne2016_signatures_astr"
+		{
+			"[cologne2016_signature_gla1ve]sticker"		"1"
+			"[cologne2016_signature_device]sticker"		"1"
+			"[cologne2016_signature_dupreeh]sticker"		"1"
+			"[cologne2016_signature_karrigan]sticker"		"1"
+			"[cologne2016_signature_xyp9x]sticker"		"1"
+		}
+		"cologne2016_signatures_nv"
+		{
+			"[cologne2016_signature_apex]sticker"		"1"
+			"[cologne2016_signature_happy]sticker"		"1"
+			"[cologne2016_signature_devil]sticker"		"1"
+			"[cologne2016_signature_kennys]sticker"		"1"
+			"[cologne2016_signature_nbk]sticker"		"1"
+		}
+		"cologne2016_signatures_fntc"
+		{
+			"[cologne2016_signature_flusha]sticker"		"1"
+			"[cologne2016_signature_jw]sticker"		"1"
+			"[cologne2016_signature_krimz]sticker"		"1"
+			"[cologne2016_signature_olofmeister]sticker"		"1"
+			"[cologne2016_signature_dennis]sticker"		"1"
+		}
+		"cologne2016_signatures_dig"
+		{
+			"[cologne2016_signature_cajunb]sticker"		"1"
+			"[cologne2016_signature_msl]sticker"		"1"
+			"[cologne2016_signature_tenzki]sticker"		"1"
+			"[cologne2016_signature_rubino]sticker"		"1"
+			"[cologne2016_signature_k0nfig]sticker"		"1"
+		}
+		"crate_signature_pack_cologne2016_group_1_rare"
+		{
+			"[cologne2016_signature_daps]sticker"		"1"
+			"[cologne2016_signature_mixwell]sticker"		"1"
+			"[cologne2016_signature_naf]sticker"		"1"
+			"[cologne2016_signature_rush]sticker"		"1"
+			"[cologne2016_signature_stanislaw]sticker"		"1"
+			"[cologne2016_signature_spaze]sticker"		"1"
+			"[cologne2016_signature_dosia]sticker"		"1"
+			"[cologne2016_signature_hooch]sticker"		"1"
+			"[cologne2016_signature_mou]sticker"		"1"
+			"[cologne2016_signature_adrenkz]sticker"		"1"
+			"[cologne2016_signature_b1ad3]sticker"		"1"
+			"[cologne2016_signature_waylander]sticker"		"1"
+			"[cologne2016_signature_shara]sticker"		"1"
+			"[cologne2016_signature_markeloff]sticker"		"1"
+			"[cologne2016_signature_worldedit]sticker"		"1"
+			"[cologne2016_signature_chrisj]sticker"		"1"
+			"[cologne2016_signature_denis]sticker"		"1"
+			"[cologne2016_signature_spiidi]sticker"		"1"
+			"[cologne2016_signature_nex]sticker"		"1"
+			"[cologne2016_signature_niko]sticker"		"1"
+			"[cologne2016_signature_bodyy]sticker"		"1"
+			"[cologne2016_signature_rpk]sticker"		"1"
+			"[cologne2016_signature_scream]sticker"		"1"
+			"[cologne2016_signature_shox]sticker"		"1"
+			"[cologne2016_signature_smithzz]sticker"		"1"
+			"[cologne2016_signature_aizy]sticker"		"1"
+			"[cologne2016_signature_fox]sticker"		"1"
+			"[cologne2016_signature_kioshima]sticker"		"1"
+			"[cologne2016_signature_rain]sticker"		"1"
+			"[cologne2016_signature_jkaem]sticker"		"1"
+			"[cologne2016_signature_apex]sticker"		"1"
+			"[cologne2016_signature_happy]sticker"		"1"
+			"[cologne2016_signature_devil]sticker"		"1"
+			"[cologne2016_signature_kennys]sticker"		"1"
+			"[cologne2016_signature_nbk]sticker"		"1"
+			"[cologne2016_signature_cajunb]sticker"		"1"
+			"[cologne2016_signature_msl]sticker"		"1"
+			"[cologne2016_signature_tenzki]sticker"		"1"
+			"[cologne2016_signature_rubino]sticker"		"1"
+			"[cologne2016_signature_k0nfig]sticker"		"1"
+		}
+		"crate_signature_pack_cologne2016_group_1_legendary"
+		{
+			"[cologne2016_signature_daps_foil]sticker"		"1"
+			"[cologne2016_signature_mixwell_foil]sticker"		"1"
+			"[cologne2016_signature_naf_foil]sticker"		"1"
+			"[cologne2016_signature_rush_foil]sticker"		"1"
+			"[cologne2016_signature_stanislaw_foil]sticker"		"1"
+			"[cologne2016_signature_spaze_foil]sticker"		"1"
+			"[cologne2016_signature_dosia_foil]sticker"		"1"
+			"[cologne2016_signature_hooch_foil]sticker"		"1"
+			"[cologne2016_signature_mou_foil]sticker"		"1"
+			"[cologne2016_signature_adrenkz_foil]sticker"		"1"
+			"[cologne2016_signature_b1ad3_foil]sticker"		"1"
+			"[cologne2016_signature_waylander_foil]sticker"		"1"
+			"[cologne2016_signature_shara_foil]sticker"		"1"
+			"[cologne2016_signature_markeloff_foil]sticker"		"1"
+			"[cologne2016_signature_worldedit_foil]sticker"		"1"
+			"[cologne2016_signature_chrisj_foil]sticker"		"1"
+			"[cologne2016_signature_denis_foil]sticker"		"1"
+			"[cologne2016_signature_spiidi_foil]sticker"		"1"
+			"[cologne2016_signature_nex_foil]sticker"		"1"
+			"[cologne2016_signature_niko_foil]sticker"		"1"
+			"[cologne2016_signature_bodyy_foil]sticker"		"1"
+			"[cologne2016_signature_rpk_foil]sticker"		"1"
+			"[cologne2016_signature_scream_foil]sticker"		"1"
+			"[cologne2016_signature_shox_foil]sticker"		"1"
+			"[cologne2016_signature_smithzz_foil]sticker"		"1"
+			"[cologne2016_signature_aizy_foil]sticker"		"1"
+			"[cologne2016_signature_fox_foil]sticker"		"1"
+			"[cologne2016_signature_kioshima_foil]sticker"		"1"
+			"[cologne2016_signature_rain_foil]sticker"		"1"
+			"[cologne2016_signature_jkaem_foil]sticker"		"1"
+			"[cologne2016_signature_apex_foil]sticker"		"1"
+			"[cologne2016_signature_happy_foil]sticker"		"1"
+			"[cologne2016_signature_devil_foil]sticker"		"1"
+			"[cologne2016_signature_kennys_foil]sticker"		"1"
+			"[cologne2016_signature_nbk_foil]sticker"		"1"
+			"[cologne2016_signature_cajunb_foil]sticker"		"1"
+			"[cologne2016_signature_msl_foil]sticker"		"1"
+			"[cologne2016_signature_tenzki_foil]sticker"		"1"
+			"[cologne2016_signature_rubino_foil]sticker"		"1"
+			"[cologne2016_signature_k0nfig_foil]sticker"		"1"
+		}
+		"crate_signature_pack_cologne2016_group_2_rare"
+		{
+			"[cologne2016_signature_pyth]sticker"		"1"
+			"[cologne2016_signature_forest]sticker"		"1"
+			"[cologne2016_signature_friberg]sticker"		"1"
+			"[cologne2016_signature_getright]sticker"		"1"
+			"[cologne2016_signature_xizt]sticker"		"1"
+			"[cologne2016_signature_reltuc]sticker"		"1"
+			"[cologne2016_signature_koosta]sticker"		"1"
+			"[cologne2016_signature_hazed]sticker"		"1"
+			"[cologne2016_signature_pita]sticker"		"1"
+			"[cologne2016_signature_tarik]sticker"		"1"
+			"[cologne2016_signature_jdm64]sticker"		"1"
+			"[cologne2016_signature_elige]sticker"		"1"
+			"[cologne2016_signature_s1mple]sticker"		"1"
+			"[cologne2016_signature_hiko]sticker"		"1"
+			"[cologne2016_signature_nitro]sticker"		"1"
+			"[cologne2016_signature_edward]sticker"		"1"
+			"[cologne2016_signature_flamie]sticker"		"1"
+			"[cologne2016_signature_guardian]sticker"		"1"
+			"[cologne2016_signature_seized]sticker"		"1"
+			"[cologne2016_signature_zeus]sticker"		"1"
+			"[cologne2016_signature_byali]sticker"		"1"
+			"[cologne2016_signature_neo]sticker"		"1"
+			"[cologne2016_signature_pasha]sticker"		"1"
+			"[cologne2016_signature_snax]sticker"		"1"
+			"[cologne2016_signature_taz]sticker"		"1"
+			"[cologne2016_signature_coldzera]sticker"		"1"
+			"[cologne2016_signature_fallen]sticker"		"1"
+			"[cologne2016_signature_fer]sticker"		"1"
+			"[cologne2016_signature_fnx]sticker"		"1"
+			"[cologne2016_signature_taco]sticker"		"1"
+			"[cologne2016_signature_gla1ve]sticker"		"1"
+			"[cologne2016_signature_device]sticker"		"1"
+			"[cologne2016_signature_dupreeh]sticker"		"1"
+			"[cologne2016_signature_karrigan]sticker"		"1"
+			"[cologne2016_signature_xyp9x]sticker"		"1"
+			"[cologne2016_signature_flusha]sticker"		"1"
+			"[cologne2016_signature_jw]sticker"		"1"
+			"[cologne2016_signature_krimz]sticker"		"1"
+			"[cologne2016_signature_olofmeister]sticker"		"1"
+			"[cologne2016_signature_dennis]sticker"		"1"
+		}
+		"crate_signature_pack_cologne2016_group_2_legendary"
+		{
+			"[cologne2016_signature_pyth_foil]sticker"		"1"
+			"[cologne2016_signature_forest_foil]sticker"		"1"
+			"[cologne2016_signature_friberg_foil]sticker"		"1"
+			"[cologne2016_signature_getright_foil]sticker"		"1"
+			"[cologne2016_signature_xizt_foil]sticker"		"1"
+			"[cologne2016_signature_reltuc_foil]sticker"		"1"
+			"[cologne2016_signature_koosta_foil]sticker"		"1"
+			"[cologne2016_signature_hazed_foil]sticker"		"1"
+			"[cologne2016_signature_pita_foil]sticker"		"1"
+			"[cologne2016_signature_tarik_foil]sticker"		"1"
+			"[cologne2016_signature_jdm64_foil]sticker"		"1"
+			"[cologne2016_signature_elige_foil]sticker"		"1"
+			"[cologne2016_signature_s1mple_foil]sticker"		"1"
+			"[cologne2016_signature_hiko_foil]sticker"		"1"
+			"[cologne2016_signature_nitro_foil]sticker"		"1"
+			"[cologne2016_signature_edward_foil]sticker"		"1"
+			"[cologne2016_signature_flamie_foil]sticker"		"1"
+			"[cologne2016_signature_guardian_foil]sticker"		"1"
+			"[cologne2016_signature_seized_foil]sticker"		"1"
+			"[cologne2016_signature_zeus_foil]sticker"		"1"
+			"[cologne2016_signature_byali_foil]sticker"		"1"
+			"[cologne2016_signature_neo_foil]sticker"		"1"
+			"[cologne2016_signature_pasha_foil]sticker"		"1"
+			"[cologne2016_signature_snax_foil]sticker"		"1"
+			"[cologne2016_signature_taz_foil]sticker"		"1"
+			"[cologne2016_signature_coldzera_foil]sticker"		"1"
+			"[cologne2016_signature_fallen_foil]sticker"		"1"
+			"[cologne2016_signature_fer_foil]sticker"		"1"
+			"[cologne2016_signature_fnx_foil]sticker"		"1"
+			"[cologne2016_signature_taco_foil]sticker"		"1"
+			"[cologne2016_signature_gla1ve_foil]sticker"		"1"
+			"[cologne2016_signature_device_foil]sticker"		"1"
+			"[cologne2016_signature_dupreeh_foil]sticker"		"1"
+			"[cologne2016_signature_karrigan_foil]sticker"		"1"
+			"[cologne2016_signature_xyp9x_foil]sticker"		"1"
+			"[cologne2016_signature_flusha_foil]sticker"		"1"
+			"[cologne2016_signature_jw_foil]sticker"		"1"
+			"[cologne2016_signature_krimz_foil]sticker"		"1"
+			"[cologne2016_signature_olofmeister_foil]sticker"		"1"
+			"[cologne2016_signature_dennis_foil]sticker"		"1"
+		}
+		"crate_cologne2016_promo_de_dust2"
+		{
+			"set_dust_2"		"1"
+		}
+		"crate_cologne2016_promo_de_mirage"
+		{
+			"set_mirage"		"1"
+		}
+		"crate_cologne2016_promo_de_cbble"
+		{
+			"set_cobblestone"		"1"
+		}
+		"crate_cologne2016_promo_de_overpass"
+		{
+			"set_overpass"		"1"
+		}
+		"crate_cologne2016_promo_de_cache"
+		{
+			"set_cache"		"1"
+		}
+		"crate_cologne2016_promo_de_train"
+		{
+			"set_train"		"1"
+		}
+		"crate_cologne2016_promo_de_nuke"
+		{
+			"set_nuke"		"1"
+		}
+	}
+	"items"
+	{
+		"4237"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_nip"
+			"name"		"crate_sticker_pack_cologne2016_nip"
+			"item_description"		"#StickerKit_desc_cologne2016_team_nip"
+			"image_inventory"		"econ/stickers/cologne2016/nip"
+			"loot_list_name"		"cologne2016_rare_nip"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4238"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_optc"
+			"name"		"crate_sticker_pack_cologne2016_optc"
+			"item_description"		"#StickerKit_desc_cologne2016_team_optc"
+			"image_inventory"		"econ/stickers/cologne2016/optc"
+			"loot_list_name"		"cologne2016_rare_optc"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4239"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_clg"
+			"name"		"crate_sticker_pack_cologne2016_clg"
+			"item_description"		"#StickerKit_desc_cologne2016_team_clg"
+			"image_inventory"		"econ/stickers/cologne2016/clg"
+			"loot_list_name"		"cologne2016_rare_clg"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4240"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_gamb"
+			"name"		"crate_sticker_pack_cologne2016_gamb"
+			"item_description"		"#StickerKit_desc_cologne2016_team_gamb"
+			"image_inventory"		"econ/stickers/cologne2016/gamb"
+			"loot_list_name"		"cologne2016_rare_gamb"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4241"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_flip"
+			"name"		"crate_sticker_pack_cologne2016_flip"
+			"item_description"		"#StickerKit_desc_cologne2016_team_flip"
+			"image_inventory"		"econ/stickers/cologne2016/flip"
+			"loot_list_name"		"cologne2016_rare_flip"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4242"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_liq"
+			"name"		"crate_sticker_pack_cologne2016_liq"
+			"item_description"		"#StickerKit_desc_cologne2016_team_liq"
+			"image_inventory"		"econ/stickers/cologne2016/liq"
+			"loot_list_name"		"cologne2016_rare_liq"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4243"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_mss"
+			"name"		"crate_sticker_pack_cologne2016_mss"
+			"item_description"		"#StickerKit_desc_cologne2016_team_mss"
+			"image_inventory"		"econ/stickers/cologne2016/mss"
+			"loot_list_name"		"cologne2016_rare_mss"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4244"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_navi"
+			"name"		"crate_sticker_pack_cologne2016_navi"
+			"item_description"		"#StickerKit_desc_cologne2016_team_navi"
+			"image_inventory"		"econ/stickers/cologne2016/navi"
+			"loot_list_name"		"cologne2016_rare_navi"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4245"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_vp"
+			"name"		"crate_sticker_pack_cologne2016_vp"
+			"item_description"		"#StickerKit_desc_cologne2016_team_vp"
+			"image_inventory"		"econ/stickers/cologne2016/vp"
+			"loot_list_name"		"cologne2016_rare_vp"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4246"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_sk"
+			"name"		"crate_sticker_pack_cologne2016_sk"
+			"item_description"		"#StickerKit_desc_cologne2016_team_sk"
+			"image_inventory"		"econ/stickers/cologne2016/sk"
+			"loot_list_name"		"cologne2016_rare_sk"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4247"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_g2"
+			"name"		"crate_sticker_pack_cologne2016_g2"
+			"item_description"		"#StickerKit_desc_cologne2016_team_g2"
+			"image_inventory"		"econ/stickers/cologne2016/g2"
+			"loot_list_name"		"cologne2016_rare_g2"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4248"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_faze"
+			"name"		"crate_sticker_pack_cologne2016_faze"
+			"item_description"		"#StickerKit_desc_cologne2016_team_faze"
+			"image_inventory"		"econ/stickers/cologne2016/faze"
+			"loot_list_name"		"cologne2016_rare_faze"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4249"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_astr"
+			"name"		"crate_sticker_pack_cologne2016_astr"
+			"item_description"		"#StickerKit_desc_cologne2016_team_astr"
+			"image_inventory"		"econ/stickers/cologne2016/astr"
+			"loot_list_name"		"cologne2016_rare_astr"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4250"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_nv"
+			"name"		"crate_sticker_pack_cologne2016_nv"
+			"item_description"		"#StickerKit_desc_cologne2016_team_nv"
+			"image_inventory"		"econ/stickers/cologne2016/nv"
+			"loot_list_name"		"cologne2016_rare_nv"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4251"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_fntc"
+			"name"		"crate_sticker_pack_cologne2016_fntc"
+			"item_description"		"#StickerKit_desc_cologne2016_team_fntc"
+			"image_inventory"		"econ/stickers/cologne2016/fntc"
+			"loot_list_name"		"cologne2016_rare_fntc"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4252"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_dig"
+			"name"		"crate_sticker_pack_cologne2016_dig"
+			"item_description"		"#StickerKit_desc_cologne2016_team_dig"
+			"image_inventory"		"econ/stickers/cologne2016/dig"
+			"loot_list_name"		"cologne2016_rare_dig"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4253"
+		{
+			"item_name"		"#StickerKit_cologne2016_team_esl"
+			"name"		"crate_sticker_pack_cologne2016_esl"
+			"item_description"		"#StickerKit_desc_cologne2016_team_esl"
+			"image_inventory"		"econ/stickers/cologne2016/esl"
+			"loot_list_name"		"cologne2016_rare_esl"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4254"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_cologne2016_legends"
+			"name"		"crate_sticker_pack_cologne2016_legends"
+			"item_description"		"#CSGO_crate_sticker_pack_cologne2016_legends_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_cologne2016_01"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"145"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_cologne2016_legends_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_cologne2016_legends_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4255"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_cologne2016_challengers"
+			"name"		"crate_sticker_pack_cologne2016_challengers"
+			"item_description"		"#CSGO_crate_sticker_pack_cologne2016_challengers_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_cologne2016_02"
+			"prefab"		"cologne2016_sticker_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"146"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_cologne2016_challengers_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_cologne2016_challengers_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4256"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_group_1"
+			"name"		"crate_signature_pack_cologne2016_group_1"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_group_1_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_cologne2016_group_1"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"147"
+				}
+			}
+		}
+		"4257"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_group_2"
+			"name"		"crate_signature_pack_cologne2016_group_2"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_group_2_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_cologne2016_group_2"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"148"
+				}
+			}
+		}
+		"4258"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_nip"
+			"name"		"crate_signature_pack_cologne2016_nip"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_nip_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_nip"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"149"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"1"
+				}
+			}
+		}
+		"4259"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_optc"
+			"name"		"crate_signature_pack_cologne2016_optc"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_optc_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_optc"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"150"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"66"
+				}
+			}
+		}
+		"4260"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_clg"
+			"name"		"crate_signature_pack_cologne2016_clg"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_clg_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_clg"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"151"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"49"
+				}
+			}
+		}
+		"4261"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_gamb"
+			"name"		"crate_signature_pack_cologne2016_gamb"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_gamb_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_gamb"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"152"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"63"
+				}
+			}
+		}
+		"4262"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_flip"
+			"name"		"crate_signature_pack_cologne2016_flip"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_flip_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_flip"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"153"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"43"
+				}
+			}
+		}
+		"4263"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_liq"
+			"name"		"crate_signature_pack_cologne2016_liq"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_liq_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_liq"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"154"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"48"
+				}
+			}
+		}
+		"4264"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_mss"
+			"name"		"crate_signature_pack_cologne2016_mss"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_mss_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_mss"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"155"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"29"
+				}
+			}
+		}
+		"4265"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_navi"
+			"name"		"crate_signature_pack_cologne2016_navi"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_navi_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_navi"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"156"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"12"
+				}
+			}
+		}
+		"4266"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_vp"
+			"name"		"crate_signature_pack_cologne2016_vp"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_vp_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_vp"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"157"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"31"
+				}
+			}
+		}
+		"4267"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_sk"
+			"name"		"crate_signature_pack_cologne2016_sk"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_sk_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_sk"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"158"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"14"
+				}
+			}
+		}
+		"4268"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_g2"
+			"name"		"crate_signature_pack_cologne2016_g2"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_g2_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_g2"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"159"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"59"
+				}
+			}
+		}
+		"4269"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_faze"
+			"name"		"crate_signature_pack_cologne2016_faze"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_faze_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_faze"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"160"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"61"
+				}
+			}
+		}
+		"4270"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_astr"
+			"name"		"crate_signature_pack_cologne2016_astr"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_astr_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_astr"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"161"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"60"
+				}
+			}
+		}
+		"4271"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_nv"
+			"name"		"crate_signature_pack_cologne2016_nv"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_nv_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_nv"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"162"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"46"
+				}
+			}
+		}
+		"4272"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_fntc"
+			"name"		"crate_signature_pack_cologne2016_fntc"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_fntc_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_fntc"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"163"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"6"
+				}
+			}
+		}
+		"4273"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_cologne2016_dig"
+			"name"		"crate_signature_pack_cologne2016_dig"
+			"item_description"		"#CSGO_crate_signature_pack_cologne2016_dig_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2016_dig"
+			"prefab"		"cologne2016_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"164"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"24"
+				}
+			}
+		}
+		"4274"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_dust2"
+			"name"		"crate_cologne2016_promo_de_dust2"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_dust2"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"165"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_dust_2"
+					"tag_text"		"#CSGO_set_dust_2"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4275"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_mirage"
+			"name"		"crate_cologne2016_promo_de_mirage"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_mirage"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"166"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_mirage"
+					"tag_text"		"#CSGO_set_mirage"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4276"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_cbble"
+			"name"		"crate_cologne2016_promo_de_cbble"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_cbble"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"167"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cobblestone"
+					"tag_text"		"#CSGO_set_cobblestone"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4277"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_overpass"
+			"name"		"crate_cologne2016_promo_de_overpass"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_overpass"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"168"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_overpass"
+					"tag_text"		"#CSGO_set_overpass"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4278"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_cache"
+			"name"		"crate_cologne2016_promo_de_cache"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_cache"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"169"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cache"
+					"tag_text"		"#CSGO_set_cache"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4279"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_train"
+			"name"		"crate_cologne2016_promo_de_train"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_train"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"170"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_train"
+					"tag_text"		"#CSGO_set_train"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4280"
+		{
+			"item_name"		"#CSGO_crate_cologne2016_promo_de_nuke"
+			"name"		"crate_cologne2016_promo_de_nuke"
+			"image_inventory"		"econ/weapon_cases/crate_cologne2016_promo_de_nuke"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"171"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"10"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_nuke"
+					"tag_text"		"#CSGO_set_nuke"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+	}
+	"sticker_kits"
+	{
+		"1317"
+		{
+			"name"		"cologne2016_team_nip"
+			"item_name"		"#StickerKit_cologne2016_team_nip"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nip"
+			"sticker_material"		"cologne2016/nip"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+		}
+		"1318"
+		{
+			"name"		"cologne2016_team_nip_holo"
+			"item_name"		"#StickerKit_cologne2016_team_nip_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nip_holo"
+			"sticker_material"		"cologne2016/nip_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+		}
+		"1319"
+		{
+			"name"		"cologne2016_team_nip_foil"
+			"item_name"		"#StickerKit_cologne2016_team_nip_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nip_foil"
+			"sticker_material"		"cologne2016/nip_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+		}
+		"1320"
+		{
+			"name"		"cologne2016_team_nip_gold"
+			"item_name"		"#StickerKit_cologne2016_team_nip_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nip_gold"
+			"sticker_material"		"cologne2016/nip_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+		}
+		"1321"
+		{
+			"name"		"cologne2016_team_optc"
+			"item_name"		"#StickerKit_cologne2016_team_optc"
+			"description_string"		"#StickerKit_desc_cologne2016_team_optc"
+			"sticker_material"		"cologne2016/optc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+		}
+		"1322"
+		{
+			"name"		"cologne2016_team_optc_holo"
+			"item_name"		"#StickerKit_cologne2016_team_optc_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_optc_holo"
+			"sticker_material"		"cologne2016/optc_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+		}
+		"1323"
+		{
+			"name"		"cologne2016_team_optc_foil"
+			"item_name"		"#StickerKit_cologne2016_team_optc_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_optc_foil"
+			"sticker_material"		"cologne2016/optc_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+		}
+		"1324"
+		{
+			"name"		"cologne2016_team_optc_gold"
+			"item_name"		"#StickerKit_cologne2016_team_optc_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_optc_gold"
+			"sticker_material"		"cologne2016/optc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+		}
+		"1325"
+		{
+			"name"		"cologne2016_team_clg"
+			"item_name"		"#StickerKit_cologne2016_team_clg"
+			"description_string"		"#StickerKit_desc_cologne2016_team_clg"
+			"sticker_material"		"cologne2016/clg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+		}
+		"1326"
+		{
+			"name"		"cologne2016_team_clg_holo"
+			"item_name"		"#StickerKit_cologne2016_team_clg_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_clg_holo"
+			"sticker_material"		"cologne2016/clg_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+		}
+		"1327"
+		{
+			"name"		"cologne2016_team_clg_foil"
+			"item_name"		"#StickerKit_cologne2016_team_clg_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_clg_foil"
+			"sticker_material"		"cologne2016/clg_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+		}
+		"1328"
+		{
+			"name"		"cologne2016_team_clg_gold"
+			"item_name"		"#StickerKit_cologne2016_team_clg_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_clg_gold"
+			"sticker_material"		"cologne2016/clg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+		}
+		"1329"
+		{
+			"name"		"cologne2016_team_gamb"
+			"item_name"		"#StickerKit_cologne2016_team_gamb"
+			"description_string"		"#StickerKit_desc_cologne2016_team_gamb"
+			"sticker_material"		"cologne2016/gamb"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+		}
+		"1330"
+		{
+			"name"		"cologne2016_team_gamb_holo"
+			"item_name"		"#StickerKit_cologne2016_team_gamb_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_gamb_holo"
+			"sticker_material"		"cologne2016/gamb_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+		}
+		"1331"
+		{
+			"name"		"cologne2016_team_gamb_foil"
+			"item_name"		"#StickerKit_cologne2016_team_gamb_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_gamb_foil"
+			"sticker_material"		"cologne2016/gamb_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+		}
+		"1332"
+		{
+			"name"		"cologne2016_team_gamb_gold"
+			"item_name"		"#StickerKit_cologne2016_team_gamb_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_gamb_gold"
+			"sticker_material"		"cologne2016/gamb_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+		}
+		"1333"
+		{
+			"name"		"cologne2016_team_flip"
+			"item_name"		"#StickerKit_cologne2016_team_flip"
+			"description_string"		"#StickerKit_desc_cologne2016_team_flip"
+			"sticker_material"		"cologne2016/flip"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+		}
+		"1334"
+		{
+			"name"		"cologne2016_team_flip_holo"
+			"item_name"		"#StickerKit_cologne2016_team_flip_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_flip_holo"
+			"sticker_material"		"cologne2016/flip_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+		}
+		"1335"
+		{
+			"name"		"cologne2016_team_flip_foil"
+			"item_name"		"#StickerKit_cologne2016_team_flip_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_flip_foil"
+			"sticker_material"		"cologne2016/flip_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+		}
+		"1336"
+		{
+			"name"		"cologne2016_team_flip_gold"
+			"item_name"		"#StickerKit_cologne2016_team_flip_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_flip_gold"
+			"sticker_material"		"cologne2016/flip_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+		}
+		"1337"
+		{
+			"name"		"cologne2016_team_liq"
+			"item_name"		"#StickerKit_cologne2016_team_liq"
+			"description_string"		"#StickerKit_desc_cologne2016_team_liq"
+			"sticker_material"		"cologne2016/liq"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+		}
+		"1338"
+		{
+			"name"		"cologne2016_team_liq_holo"
+			"item_name"		"#StickerKit_cologne2016_team_liq_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_liq_holo"
+			"sticker_material"		"cologne2016/liq_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+		}
+		"1339"
+		{
+			"name"		"cologne2016_team_liq_foil"
+			"item_name"		"#StickerKit_cologne2016_team_liq_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_liq_foil"
+			"sticker_material"		"cologne2016/liq_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+		}
+		"1340"
+		{
+			"name"		"cologne2016_team_liq_gold"
+			"item_name"		"#StickerKit_cologne2016_team_liq_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_liq_gold"
+			"sticker_material"		"cologne2016/liq_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+		}
+		"1341"
+		{
+			"name"		"cologne2016_team_mss"
+			"item_name"		"#StickerKit_cologne2016_team_mss"
+			"description_string"		"#StickerKit_desc_cologne2016_team_mss"
+			"sticker_material"		"cologne2016/mss"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+		}
+		"1342"
+		{
+			"name"		"cologne2016_team_mss_holo"
+			"item_name"		"#StickerKit_cologne2016_team_mss_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_mss_holo"
+			"sticker_material"		"cologne2016/mss_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+		}
+		"1343"
+		{
+			"name"		"cologne2016_team_mss_foil"
+			"item_name"		"#StickerKit_cologne2016_team_mss_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_mss_foil"
+			"sticker_material"		"cologne2016/mss_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+		}
+		"1344"
+		{
+			"name"		"cologne2016_team_mss_gold"
+			"item_name"		"#StickerKit_cologne2016_team_mss_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_mss_gold"
+			"sticker_material"		"cologne2016/mss_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+		}
+		"1345"
+		{
+			"name"		"cologne2016_team_navi"
+			"item_name"		"#StickerKit_cologne2016_team_navi"
+			"description_string"		"#StickerKit_desc_cologne2016_team_navi"
+			"sticker_material"		"cologne2016/navi"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+		}
+		"1346"
+		{
+			"name"		"cologne2016_team_navi_holo"
+			"item_name"		"#StickerKit_cologne2016_team_navi_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_navi_holo"
+			"sticker_material"		"cologne2016/navi_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+		}
+		"1347"
+		{
+			"name"		"cologne2016_team_navi_foil"
+			"item_name"		"#StickerKit_cologne2016_team_navi_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_navi_foil"
+			"sticker_material"		"cologne2016/navi_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+		}
+		"1348"
+		{
+			"name"		"cologne2016_team_navi_gold"
+			"item_name"		"#StickerKit_cologne2016_team_navi_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_navi_gold"
+			"sticker_material"		"cologne2016/navi_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+		}
+		"1349"
+		{
+			"name"		"cologne2016_team_vp"
+			"item_name"		"#StickerKit_cologne2016_team_vp"
+			"description_string"		"#StickerKit_desc_cologne2016_team_vp"
+			"sticker_material"		"cologne2016/vp"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+		}
+		"1350"
+		{
+			"name"		"cologne2016_team_vp_holo"
+			"item_name"		"#StickerKit_cologne2016_team_vp_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_vp_holo"
+			"sticker_material"		"cologne2016/vp_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+		}
+		"1351"
+		{
+			"name"		"cologne2016_team_vp_foil"
+			"item_name"		"#StickerKit_cologne2016_team_vp_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_vp_foil"
+			"sticker_material"		"cologne2016/vp_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+		}
+		"1352"
+		{
+			"name"		"cologne2016_team_vp_gold"
+			"item_name"		"#StickerKit_cologne2016_team_vp_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_vp_gold"
+			"sticker_material"		"cologne2016/vp_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+		}
+		"1353"
+		{
+			"name"		"cologne2016_team_sk"
+			"item_name"		"#StickerKit_cologne2016_team_sk"
+			"description_string"		"#StickerKit_desc_cologne2016_team_sk"
+			"sticker_material"		"cologne2016/sk"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+		}
+		"1354"
+		{
+			"name"		"cologne2016_team_sk_holo"
+			"item_name"		"#StickerKit_cologne2016_team_sk_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_sk_holo"
+			"sticker_material"		"cologne2016/sk_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+		}
+		"1355"
+		{
+			"name"		"cologne2016_team_sk_foil"
+			"item_name"		"#StickerKit_cologne2016_team_sk_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_sk_foil"
+			"sticker_material"		"cologne2016/sk_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+		}
+		"1356"
+		{
+			"name"		"cologne2016_team_sk_gold"
+			"item_name"		"#StickerKit_cologne2016_team_sk_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_sk_gold"
+			"sticker_material"		"cologne2016/sk_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+		}
+		"1357"
+		{
+			"name"		"cologne2016_team_g2"
+			"item_name"		"#StickerKit_cologne2016_team_g2"
+			"description_string"		"#StickerKit_desc_cologne2016_team_g2"
+			"sticker_material"		"cologne2016/g2"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+		}
+		"1358"
+		{
+			"name"		"cologne2016_team_g2_holo"
+			"item_name"		"#StickerKit_cologne2016_team_g2_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_g2_holo"
+			"sticker_material"		"cologne2016/g2_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+		}
+		"1359"
+		{
+			"name"		"cologne2016_team_g2_foil"
+			"item_name"		"#StickerKit_cologne2016_team_g2_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_g2_foil"
+			"sticker_material"		"cologne2016/g2_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+		}
+		"1360"
+		{
+			"name"		"cologne2016_team_g2_gold"
+			"item_name"		"#StickerKit_cologne2016_team_g2_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_g2_gold"
+			"sticker_material"		"cologne2016/g2_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+		}
+		"1361"
+		{
+			"name"		"cologne2016_team_faze"
+			"item_name"		"#StickerKit_cologne2016_team_faze"
+			"description_string"		"#StickerKit_desc_cologne2016_team_faze"
+			"sticker_material"		"cologne2016/faze"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+		}
+		"1362"
+		{
+			"name"		"cologne2016_team_faze_holo"
+			"item_name"		"#StickerKit_cologne2016_team_faze_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_faze_holo"
+			"sticker_material"		"cologne2016/faze_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+		}
+		"1363"
+		{
+			"name"		"cologne2016_team_faze_foil"
+			"item_name"		"#StickerKit_cologne2016_team_faze_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_faze_foil"
+			"sticker_material"		"cologne2016/faze_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+		}
+		"1364"
+		{
+			"name"		"cologne2016_team_faze_gold"
+			"item_name"		"#StickerKit_cologne2016_team_faze_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_faze_gold"
+			"sticker_material"		"cologne2016/faze_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+		}
+		"1365"
+		{
+			"name"		"cologne2016_team_astr"
+			"item_name"		"#StickerKit_cologne2016_team_astr"
+			"description_string"		"#StickerKit_desc_cologne2016_team_astr"
+			"sticker_material"		"cologne2016/astr"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+		}
+		"1366"
+		{
+			"name"		"cologne2016_team_astr_holo"
+			"item_name"		"#StickerKit_cologne2016_team_astr_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_astr_holo"
+			"sticker_material"		"cologne2016/astr_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+		}
+		"1367"
+		{
+			"name"		"cologne2016_team_astr_foil"
+			"item_name"		"#StickerKit_cologne2016_team_astr_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_astr_foil"
+			"sticker_material"		"cologne2016/astr_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+		}
+		"1368"
+		{
+			"name"		"cologne2016_team_astr_gold"
+			"item_name"		"#StickerKit_cologne2016_team_astr_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_astr_gold"
+			"sticker_material"		"cologne2016/astr_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+		}
+		"1369"
+		{
+			"name"		"cologne2016_team_nv"
+			"item_name"		"#StickerKit_cologne2016_team_nv"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nv"
+			"sticker_material"		"cologne2016/nv"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+		}
+		"1370"
+		{
+			"name"		"cologne2016_team_nv_holo"
+			"item_name"		"#StickerKit_cologne2016_team_nv_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nv_holo"
+			"sticker_material"		"cologne2016/nv_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+		}
+		"1371"
+		{
+			"name"		"cologne2016_team_nv_foil"
+			"item_name"		"#StickerKit_cologne2016_team_nv_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nv_foil"
+			"sticker_material"		"cologne2016/nv_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+		}
+		"1372"
+		{
+			"name"		"cologne2016_team_nv_gold"
+			"item_name"		"#StickerKit_cologne2016_team_nv_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_nv_gold"
+			"sticker_material"		"cologne2016/nv_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+		}
+		"1373"
+		{
+			"name"		"cologne2016_team_fntc"
+			"item_name"		"#StickerKit_cologne2016_team_fntc"
+			"description_string"		"#StickerKit_desc_cologne2016_team_fntc"
+			"sticker_material"		"cologne2016/fntc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+		}
+		"1374"
+		{
+			"name"		"cologne2016_team_fntc_holo"
+			"item_name"		"#StickerKit_cologne2016_team_fntc_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_fntc_holo"
+			"sticker_material"		"cologne2016/fntc_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+		}
+		"1375"
+		{
+			"name"		"cologne2016_team_fntc_foil"
+			"item_name"		"#StickerKit_cologne2016_team_fntc_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_fntc_foil"
+			"sticker_material"		"cologne2016/fntc_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+		}
+		"1376"
+		{
+			"name"		"cologne2016_team_fntc_gold"
+			"item_name"		"#StickerKit_cologne2016_team_fntc_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_fntc_gold"
+			"sticker_material"		"cologne2016/fntc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+		}
+		"1377"
+		{
+			"name"		"cologne2016_team_dig"
+			"item_name"		"#StickerKit_cologne2016_team_dig"
+			"description_string"		"#StickerKit_desc_cologne2016_team_dig"
+			"sticker_material"		"cologne2016/dig"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+		}
+		"1378"
+		{
+			"name"		"cologne2016_team_dig_holo"
+			"item_name"		"#StickerKit_cologne2016_team_dig_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_dig_holo"
+			"sticker_material"		"cologne2016/dig_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+		}
+		"1379"
+		{
+			"name"		"cologne2016_team_dig_foil"
+			"item_name"		"#StickerKit_cologne2016_team_dig_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_dig_foil"
+			"sticker_material"		"cologne2016/dig_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+		}
+		"1380"
+		{
+			"name"		"cologne2016_team_dig_gold"
+			"item_name"		"#StickerKit_cologne2016_team_dig_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_dig_gold"
+			"sticker_material"		"cologne2016/dig_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+		}
+		"1381"
+		{
+			"name"		"cologne2016_team_esl"
+			"item_name"		"#StickerKit_cologne2016_team_esl"
+			"description_string"		"#StickerKit_desc_cologne2016_team_esl"
+			"sticker_material"		"cologne2016/esl"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"0"
+		}
+		"1382"
+		{
+			"name"		"cologne2016_team_esl_holo"
+			"item_name"		"#StickerKit_cologne2016_team_esl_holo"
+			"description_string"		"#StickerKit_desc_cologne2016_team_esl_holo"
+			"sticker_material"		"cologne2016/esl_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"0"
+		}
+		"1383"
+		{
+			"name"		"cologne2016_team_esl_foil"
+			"item_name"		"#StickerKit_cologne2016_team_esl_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_team_esl_foil"
+			"sticker_material"		"cologne2016/esl_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"0"
+		}
+		"1384"
+		{
+			"name"		"cologne2016_team_esl_gold"
+			"item_name"		"#StickerKit_cologne2016_team_esl_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_team_esl_gold"
+			"sticker_material"		"cologne2016/esl_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"0"
+		}
+		"1385"
+		{
+			"name"		"cologne2016_signature_reltuc"
+			"item_name"		"#StickerKit_cologne2016_signature_reltuc"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_reltuc"
+			"sticker_material"		"cologne2016/sig_reltuc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"1386"
+		{
+			"name"		"cologne2016_signature_reltuc_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_reltuc_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_reltuc_foil"
+			"sticker_material"		"cologne2016/sig_reltuc_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"1387"
+		{
+			"name"		"cologne2016_signature_reltuc_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_reltuc_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_reltuc_gold"
+			"sticker_material"		"cologne2016/sig_reltuc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"1388"
+		{
+			"name"		"cologne2016_signature_koosta"
+			"item_name"		"#StickerKit_cologne2016_signature_koosta"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_koosta"
+			"sticker_material"		"cologne2016/sig_koosta"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"161590"
+		}
+		"1389"
+		{
+			"name"		"cologne2016_signature_koosta_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_koosta_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_koosta_foil"
+			"sticker_material"		"cologne2016/sig_koosta_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"161590"
+		}
+		"1390"
+		{
+			"name"		"cologne2016_signature_koosta_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_koosta_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_koosta_gold"
+			"sticker_material"		"cologne2016/sig_koosta_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"161590"
+		}
+		"1391"
+		{
+			"name"		"cologne2016_signature_hazed"
+			"item_name"		"#StickerKit_cologne2016_signature_hazed"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hazed"
+			"sticker_material"		"cologne2016/sig_hazed"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"1392"
+		{
+			"name"		"cologne2016_signature_hazed_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_hazed_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hazed_foil"
+			"sticker_material"		"cologne2016/sig_hazed_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"1393"
+		{
+			"name"		"cologne2016_signature_hazed_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_hazed_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hazed_gold"
+			"sticker_material"		"cologne2016/sig_hazed_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"1394"
+		{
+			"name"		"cologne2016_signature_pita"
+			"item_name"		"#StickerKit_cologne2016_signature_pita"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pita"
+			"sticker_material"		"cologne2016/sig_pita"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"26459"
+		}
+		"1395"
+		{
+			"name"		"cologne2016_signature_pita_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_pita_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pita_foil"
+			"sticker_material"		"cologne2016/sig_pita_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"26459"
+		}
+		"1396"
+		{
+			"name"		"cologne2016_signature_pita_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_pita_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pita_gold"
+			"sticker_material"		"cologne2016/sig_pita_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"26459"
+		}
+		"1397"
+		{
+			"name"		"cologne2016_signature_tarik"
+			"item_name"		"#StickerKit_cologne2016_signature_tarik"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tarik"
+			"sticker_material"		"cologne2016/sig_tarik"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"1398"
+		{
+			"name"		"cologne2016_signature_tarik_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_tarik_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tarik_foil"
+			"sticker_material"		"cologne2016/sig_tarik_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"1399"
+		{
+			"name"		"cologne2016_signature_tarik_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_tarik_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tarik_gold"
+			"sticker_material"		"cologne2016/sig_tarik_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"1400"
+		{
+			"name"		"cologne2016_signature_daps"
+			"item_name"		"#StickerKit_cologne2016_signature_daps"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_daps"
+			"sticker_material"		"cologne2016/sig_daps"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"19892353"
+		}
+		"1401"
+		{
+			"name"		"cologne2016_signature_daps_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_daps_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_daps_foil"
+			"sticker_material"		"cologne2016/sig_daps_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"19892353"
+		}
+		"1402"
+		{
+			"name"		"cologne2016_signature_daps_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_daps_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_daps_gold"
+			"sticker_material"		"cologne2016/sig_daps_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"19892353"
+		}
+		"1403"
+		{
+			"name"		"cologne2016_signature_mixwell"
+			"item_name"		"#StickerKit_cologne2016_signature_mixwell"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mixwell"
+			"sticker_material"		"cologne2016/sig_mixwell"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"27224124"
+		}
+		"1404"
+		{
+			"name"		"cologne2016_signature_mixwell_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_mixwell_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mixwell_foil"
+			"sticker_material"		"cologne2016/sig_mixwell_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"27224124"
+		}
+		"1405"
+		{
+			"name"		"cologne2016_signature_mixwell_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_mixwell_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mixwell_gold"
+			"sticker_material"		"cologne2016/sig_mixwell_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"27224124"
+		}
+		"1406"
+		{
+			"name"		"cologne2016_signature_naf"
+			"item_name"		"#StickerKit_cologne2016_signature_naf"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_naf"
+			"sticker_material"		"cologne2016/sig_naf"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"40885967"
+		}
+		"1407"
+		{
+			"name"		"cologne2016_signature_naf_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_naf_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_naf_foil"
+			"sticker_material"		"cologne2016/sig_naf_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"40885967"
+		}
+		"1408"
+		{
+			"name"		"cologne2016_signature_naf_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_naf_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_naf_gold"
+			"sticker_material"		"cologne2016/sig_naf_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"40885967"
+		}
+		"1409"
+		{
+			"name"		"cologne2016_signature_rush"
+			"item_name"		"#StickerKit_cologne2016_signature_rush"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rush"
+			"sticker_material"		"cologne2016/sig_rush"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"63326592"
+		}
+		"1410"
+		{
+			"name"		"cologne2016_signature_rush_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_rush_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rush_foil"
+			"sticker_material"		"cologne2016/sig_rush_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"63326592"
+		}
+		"1411"
+		{
+			"name"		"cologne2016_signature_rush_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_rush_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rush_gold"
+			"sticker_material"		"cologne2016/sig_rush_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"63326592"
+		}
+		"1412"
+		{
+			"name"		"cologne2016_signature_stanislaw"
+			"item_name"		"#StickerKit_cologne2016_signature_stanislaw"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_stanislaw"
+			"sticker_material"		"cologne2016/sig_stanislaw"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"21583315"
+		}
+		"1413"
+		{
+			"name"		"cologne2016_signature_stanislaw_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_stanislaw_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_stanislaw_foil"
+			"sticker_material"		"cologne2016/sig_stanislaw_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"21583315"
+		}
+		"1414"
+		{
+			"name"		"cologne2016_signature_stanislaw_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_stanislaw_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_stanislaw_gold"
+			"sticker_material"		"cologne2016/sig_stanislaw_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"66"
+			"tournament_player_id"		"21583315"
+		}
+		"1415"
+		{
+			"name"		"cologne2016_signature_apex"
+			"item_name"		"#StickerKit_cologne2016_signature_apex"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_apex"
+			"sticker_material"		"cologne2016/sig_apex"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"1416"
+		{
+			"name"		"cologne2016_signature_apex_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_apex_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_apex_foil"
+			"sticker_material"		"cologne2016/sig_apex_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"1417"
+		{
+			"name"		"cologne2016_signature_apex_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_apex_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_apex_gold"
+			"sticker_material"		"cologne2016/sig_apex_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"1418"
+		{
+			"name"		"cologne2016_signature_happy"
+			"item_name"		"#StickerKit_cologne2016_signature_happy"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_happy"
+			"sticker_material"		"cologne2016/sig_happy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"1419"
+		{
+			"name"		"cologne2016_signature_happy_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_happy_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_happy_foil"
+			"sticker_material"		"cologne2016/sig_happy_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"1420"
+		{
+			"name"		"cologne2016_signature_happy_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_happy_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_happy_gold"
+			"sticker_material"		"cologne2016/sig_happy_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"1421"
+		{
+			"name"		"cologne2016_signature_devil"
+			"item_name"		"#StickerKit_cologne2016_signature_devil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_devil"
+			"sticker_material"		"cologne2016/sig_devil"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"44238623"
+		}
+		"1422"
+		{
+			"name"		"cologne2016_signature_devil_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_devil_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_devil_foil"
+			"sticker_material"		"cologne2016/sig_devil_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"44238623"
+		}
+		"1423"
+		{
+			"name"		"cologne2016_signature_devil_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_devil_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_devil_gold"
+			"sticker_material"		"cologne2016/sig_devil_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"44238623"
+		}
+		"1424"
+		{
+			"name"		"cologne2016_signature_kennys"
+			"item_name"		"#StickerKit_cologne2016_signature_kennys"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kennys"
+			"sticker_material"		"cologne2016/sig_kennys"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"1425"
+		{
+			"name"		"cologne2016_signature_kennys_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_kennys_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kennys_foil"
+			"sticker_material"		"cologne2016/sig_kennys_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"1426"
+		{
+			"name"		"cologne2016_signature_kennys_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_kennys_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kennys_gold"
+			"sticker_material"		"cologne2016/sig_kennys_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"1427"
+		{
+			"name"		"cologne2016_signature_nbk"
+			"item_name"		"#StickerKit_cologne2016_signature_nbk"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nbk"
+			"sticker_material"		"cologne2016/sig_nbk"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"1428"
+		{
+			"name"		"cologne2016_signature_nbk_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_nbk_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nbk_foil"
+			"sticker_material"		"cologne2016/sig_nbk_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"1429"
+		{
+			"name"		"cologne2016_signature_nbk_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_nbk_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nbk_gold"
+			"sticker_material"		"cologne2016/sig_nbk_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"1430"
+		{
+			"name"		"cologne2016_signature_b1ad3"
+			"item_name"		"#StickerKit_cologne2016_signature_b1ad3"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_b1ad3"
+			"sticker_material"		"cologne2016/sig_b1ad3"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"1431"
+		{
+			"name"		"cologne2016_signature_b1ad3_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_b1ad3_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_b1ad3_foil"
+			"sticker_material"		"cologne2016/sig_b1ad3_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"1432"
+		{
+			"name"		"cologne2016_signature_b1ad3_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_b1ad3_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_b1ad3_gold"
+			"sticker_material"		"cologne2016/sig_b1ad3_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"1433"
+		{
+			"name"		"cologne2016_signature_waylander"
+			"item_name"		"#StickerKit_cologne2016_signature_waylander"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_waylander"
+			"sticker_material"		"cologne2016/sig_waylander"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"38340970"
+		}
+		"1434"
+		{
+			"name"		"cologne2016_signature_waylander_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_waylander_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_waylander_foil"
+			"sticker_material"		"cologne2016/sig_waylander_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"38340970"
+		}
+		"1435"
+		{
+			"name"		"cologne2016_signature_waylander_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_waylander_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_waylander_gold"
+			"sticker_material"		"cologne2016/sig_waylander_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"38340970"
+		}
+		"1436"
+		{
+			"name"		"cologne2016_signature_shara"
+			"item_name"		"#StickerKit_cologne2016_signature_shara"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shara"
+			"sticker_material"		"cologne2016/sig_shara"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53330928"
+		}
+		"1437"
+		{
+			"name"		"cologne2016_signature_shara_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_shara_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shara_foil"
+			"sticker_material"		"cologne2016/sig_shara_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53330928"
+		}
+		"1438"
+		{
+			"name"		"cologne2016_signature_shara_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_shara_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shara_gold"
+			"sticker_material"		"cologne2016/sig_shara_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53330928"
+		}
+		"1439"
+		{
+			"name"		"cologne2016_signature_markeloff"
+			"item_name"		"#StickerKit_cologne2016_signature_markeloff"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_markeloff"
+			"sticker_material"		"cologne2016/sig_markeloff"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"1440"
+		{
+			"name"		"cologne2016_signature_markeloff_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_markeloff_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_markeloff_foil"
+			"sticker_material"		"cologne2016/sig_markeloff_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"1441"
+		{
+			"name"		"cologne2016_signature_markeloff_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_markeloff_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_markeloff_gold"
+			"sticker_material"		"cologne2016/sig_markeloff_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"1442"
+		{
+			"name"		"cologne2016_signature_worldedit"
+			"item_name"		"#StickerKit_cologne2016_signature_worldedit"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_worldedit"
+			"sticker_material"		"cologne2016/sig_worldedit"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"1443"
+		{
+			"name"		"cologne2016_signature_worldedit_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_worldedit_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_worldedit_foil"
+			"sticker_material"		"cologne2016/sig_worldedit_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"1444"
+		{
+			"name"		"cologne2016_signature_worldedit_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_worldedit_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_worldedit_gold"
+			"sticker_material"		"cologne2016/sig_worldedit_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"1445"
+		{
+			"name"		"cologne2016_signature_flusha"
+			"item_name"		"#StickerKit_cologne2016_signature_flusha"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flusha"
+			"sticker_material"		"cologne2016/sig_flusha"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"1446"
+		{
+			"name"		"cologne2016_signature_flusha_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_flusha_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flusha_foil"
+			"sticker_material"		"cologne2016/sig_flusha_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"1447"
+		{
+			"name"		"cologne2016_signature_flusha_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_flusha_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flusha_gold"
+			"sticker_material"		"cologne2016/sig_flusha_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"1448"
+		{
+			"name"		"cologne2016_signature_jw"
+			"item_name"		"#StickerKit_cologne2016_signature_jw"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jw"
+			"sticker_material"		"cologne2016/sig_jw"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"1449"
+		{
+			"name"		"cologne2016_signature_jw_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_jw_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jw_foil"
+			"sticker_material"		"cologne2016/sig_jw_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"1450"
+		{
+			"name"		"cologne2016_signature_jw_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_jw_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jw_gold"
+			"sticker_material"		"cologne2016/sig_jw_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"1451"
+		{
+			"name"		"cologne2016_signature_krimz"
+			"item_name"		"#StickerKit_cologne2016_signature_krimz"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_krimz"
+			"sticker_material"		"cologne2016/sig_krimz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"1452"
+		{
+			"name"		"cologne2016_signature_krimz_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_krimz_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_krimz_foil"
+			"sticker_material"		"cologne2016/sig_krimz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"1453"
+		{
+			"name"		"cologne2016_signature_krimz_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_krimz_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_krimz_gold"
+			"sticker_material"		"cologne2016/sig_krimz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"1454"
+		{
+			"name"		"cologne2016_signature_olofmeister"
+			"item_name"		"#StickerKit_cologne2016_signature_olofmeister"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_olofmeister"
+			"sticker_material"		"cologne2016/sig_olofmeister"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"1455"
+		{
+			"name"		"cologne2016_signature_olofmeister_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_olofmeister_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_olofmeister_foil"
+			"sticker_material"		"cologne2016/sig_olofmeister_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"1456"
+		{
+			"name"		"cologne2016_signature_olofmeister_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_olofmeister_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_olofmeister_gold"
+			"sticker_material"		"cologne2016/sig_olofmeister_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"1457"
+		{
+			"name"		"cologne2016_signature_dennis"
+			"item_name"		"#StickerKit_cologne2016_signature_dennis"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dennis"
+			"sticker_material"		"cologne2016/sig_dennis"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"108076825"
+		}
+		"1458"
+		{
+			"name"		"cologne2016_signature_dennis_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_dennis_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dennis_foil"
+			"sticker_material"		"cologne2016/sig_dennis_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"108076825"
+		}
+		"1459"
+		{
+			"name"		"cologne2016_signature_dennis_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_dennis_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dennis_gold"
+			"sticker_material"		"cologne2016/sig_dennis_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"108076825"
+		}
+		"1460"
+		{
+			"name"		"cologne2016_signature_aizy"
+			"item_name"		"#StickerKit_cologne2016_signature_aizy"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_aizy"
+			"sticker_material"		"cologne2016/sig_aizy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"90685224"
+		}
+		"1461"
+		{
+			"name"		"cologne2016_signature_aizy_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_aizy_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_aizy_foil"
+			"sticker_material"		"cologne2016/sig_aizy_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"90685224"
+		}
+		"1462"
+		{
+			"name"		"cologne2016_signature_aizy_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_aizy_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_aizy_gold"
+			"sticker_material"		"cologne2016/sig_aizy_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"90685224"
+		}
+		"1463"
+		{
+			"name"		"cologne2016_signature_fox"
+			"item_name"		"#StickerKit_cologne2016_signature_fox"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fox"
+			"sticker_material"		"cologne2016/sig_fox"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"1939536"
+		}
+		"1464"
+		{
+			"name"		"cologne2016_signature_fox_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_fox_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fox_foil"
+			"sticker_material"		"cologne2016/sig_fox_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"1939536"
+		}
+		"1465"
+		{
+			"name"		"cologne2016_signature_fox_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_fox_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fox_gold"
+			"sticker_material"		"cologne2016/sig_fox_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"1939536"
+		}
+		"1466"
+		{
+			"name"		"cologne2016_signature_kioshima"
+			"item_name"		"#StickerKit_cologne2016_signature_kioshima"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kioshima"
+			"sticker_material"		"cologne2016/sig_kioshima"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"40517167"
+		}
+		"1467"
+		{
+			"name"		"cologne2016_signature_kioshima_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_kioshima_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kioshima_foil"
+			"sticker_material"		"cologne2016/sig_kioshima_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"40517167"
+		}
+		"1468"
+		{
+			"name"		"cologne2016_signature_kioshima_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_kioshima_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_kioshima_gold"
+			"sticker_material"		"cologne2016/sig_kioshima_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"40517167"
+		}
+		"1469"
+		{
+			"name"		"cologne2016_signature_rain"
+			"item_name"		"#StickerKit_cologne2016_signature_rain"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rain"
+			"sticker_material"		"cologne2016/sig_rain"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"37085479"
+		}
+		"1470"
+		{
+			"name"		"cologne2016_signature_rain_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_rain_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rain_foil"
+			"sticker_material"		"cologne2016/sig_rain_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"37085479"
+		}
+		"1471"
+		{
+			"name"		"cologne2016_signature_rain_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_rain_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rain_gold"
+			"sticker_material"		"cologne2016/sig_rain_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"37085479"
+		}
+		"1472"
+		{
+			"name"		"cologne2016_signature_jkaem"
+			"item_name"		"#StickerKit_cologne2016_signature_jkaem"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jkaem"
+			"sticker_material"		"cologne2016/sig_jkaem"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"42442914"
+		}
+		"1473"
+		{
+			"name"		"cologne2016_signature_jkaem_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_jkaem_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jkaem_foil"
+			"sticker_material"		"cologne2016/sig_jkaem_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"42442914"
+		}
+		"1474"
+		{
+			"name"		"cologne2016_signature_jkaem_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_jkaem_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jkaem_gold"
+			"sticker_material"		"cologne2016/sig_jkaem_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"61"
+			"tournament_player_id"		"42442914"
+		}
+		"1475"
+		{
+			"name"		"cologne2016_signature_coldzera"
+			"item_name"		"#StickerKit_cologne2016_signature_coldzera"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_coldzera"
+			"sticker_material"		"cologne2016/sig_coldzera"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"79720871"
+		}
+		"1476"
+		{
+			"name"		"cologne2016_signature_coldzera_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_coldzera_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_coldzera_foil"
+			"sticker_material"		"cologne2016/sig_coldzera_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"79720871"
+		}
+		"1477"
+		{
+			"name"		"cologne2016_signature_coldzera_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_coldzera_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_coldzera_gold"
+			"sticker_material"		"cologne2016/sig_coldzera_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"79720871"
+		}
+		"1478"
+		{
+			"name"		"cologne2016_signature_fallen"
+			"item_name"		"#StickerKit_cologne2016_signature_fallen"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fallen"
+			"sticker_material"		"cologne2016/sig_fallen"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"424467"
+		}
+		"1479"
+		{
+			"name"		"cologne2016_signature_fallen_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_fallen_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fallen_foil"
+			"sticker_material"		"cologne2016/sig_fallen_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"424467"
+		}
+		"1480"
+		{
+			"name"		"cologne2016_signature_fallen_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_fallen_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fallen_gold"
+			"sticker_material"		"cologne2016/sig_fallen_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"424467"
+		}
+		"1481"
+		{
+			"name"		"cologne2016_signature_fer"
+			"item_name"		"#StickerKit_cologne2016_signature_fer"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fer"
+			"sticker_material"		"cologne2016/sig_fer"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"38921219"
+		}
+		"1482"
+		{
+			"name"		"cologne2016_signature_fer_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_fer_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fer_foil"
+			"sticker_material"		"cologne2016/sig_fer_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"38921219"
+		}
+		"1483"
+		{
+			"name"		"cologne2016_signature_fer_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_fer_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fer_gold"
+			"sticker_material"		"cologne2016/sig_fer_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"38921219"
+		}
+		"1484"
+		{
+			"name"		"cologne2016_signature_fnx"
+			"item_name"		"#StickerKit_cologne2016_signature_fnx"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fnx"
+			"sticker_material"		"cologne2016/sig_fnx"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"170178574"
+		}
+		"1485"
+		{
+			"name"		"cologne2016_signature_fnx_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_fnx_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fnx_foil"
+			"sticker_material"		"cologne2016/sig_fnx_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"170178574"
+		}
+		"1486"
+		{
+			"name"		"cologne2016_signature_fnx_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_fnx_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_fnx_gold"
+			"sticker_material"		"cologne2016/sig_fnx_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"170178574"
+		}
+		"1487"
+		{
+			"name"		"cologne2016_signature_taco"
+			"item_name"		"#StickerKit_cologne2016_signature_taco"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taco"
+			"sticker_material"		"cologne2016/sig_taco"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"52876568"
+		}
+		"1488"
+		{
+			"name"		"cologne2016_signature_taco_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_taco_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taco_foil"
+			"sticker_material"		"cologne2016/sig_taco_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"52876568"
+		}
+		"1489"
+		{
+			"name"		"cologne2016_signature_taco_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_taco_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taco_gold"
+			"sticker_material"		"cologne2016/sig_taco_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"14"
+			"tournament_player_id"		"52876568"
+		}
+		"1490"
+		{
+			"name"		"cologne2016_signature_chrisj"
+			"item_name"		"#StickerKit_cologne2016_signature_chrisj"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_chrisj"
+			"sticker_material"		"cologne2016/sig_chrisj"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"1491"
+		{
+			"name"		"cologne2016_signature_chrisj_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_chrisj_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_chrisj_foil"
+			"sticker_material"		"cologne2016/sig_chrisj_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"1492"
+		{
+			"name"		"cologne2016_signature_chrisj_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_chrisj_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_chrisj_gold"
+			"sticker_material"		"cologne2016/sig_chrisj_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"1493"
+		{
+			"name"		"cologne2016_signature_denis"
+			"item_name"		"#StickerKit_cologne2016_signature_denis"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_denis"
+			"sticker_material"		"cologne2016/sig_denis"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"1494"
+		{
+			"name"		"cologne2016_signature_denis_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_denis_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_denis_foil"
+			"sticker_material"		"cologne2016/sig_denis_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"1495"
+		{
+			"name"		"cologne2016_signature_denis_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_denis_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_denis_gold"
+			"sticker_material"		"cologne2016/sig_denis_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"1496"
+		{
+			"name"		"cologne2016_signature_spiidi"
+			"item_name"		"#StickerKit_cologne2016_signature_spiidi"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spiidi"
+			"sticker_material"		"cologne2016/sig_spiidi"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"1497"
+		{
+			"name"		"cologne2016_signature_spiidi_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_spiidi_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spiidi_foil"
+			"sticker_material"		"cologne2016/sig_spiidi_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"1498"
+		{
+			"name"		"cologne2016_signature_spiidi_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_spiidi_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spiidi_gold"
+			"sticker_material"		"cologne2016/sig_spiidi_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"1499"
+		{
+			"name"		"cologne2016_signature_nex"
+			"item_name"		"#StickerKit_cologne2016_signature_nex"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nex"
+			"sticker_material"		"cologne2016/sig_nex"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"1500"
+		{
+			"name"		"cologne2016_signature_nex_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_nex_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nex_foil"
+			"sticker_material"		"cologne2016/sig_nex_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"1501"
+		{
+			"name"		"cologne2016_signature_nex_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_nex_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nex_gold"
+			"sticker_material"		"cologne2016/sig_nex_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"1502"
+		{
+			"name"		"cologne2016_signature_niko"
+			"item_name"		"#StickerKit_cologne2016_signature_niko"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_niko"
+			"sticker_material"		"cologne2016/sig_niko"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"81417650"
+		}
+		"1503"
+		{
+			"name"		"cologne2016_signature_niko_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_niko_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_niko_foil"
+			"sticker_material"		"cologne2016/sig_niko_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"81417650"
+		}
+		"1504"
+		{
+			"name"		"cologne2016_signature_niko_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_niko_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_niko_gold"
+			"sticker_material"		"cologne2016/sig_niko_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"81417650"
+		}
+		"1505"
+		{
+			"name"		"cologne2016_signature_edward"
+			"item_name"		"#StickerKit_cologne2016_signature_edward"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_edward"
+			"sticker_material"		"cologne2016/sig_edward"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"1506"
+		{
+			"name"		"cologne2016_signature_edward_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_edward_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_edward_foil"
+			"sticker_material"		"cologne2016/sig_edward_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"1507"
+		{
+			"name"		"cologne2016_signature_edward_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_edward_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_edward_gold"
+			"sticker_material"		"cologne2016/sig_edward_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"1508"
+		{
+			"name"		"cologne2016_signature_flamie"
+			"item_name"		"#StickerKit_cologne2016_signature_flamie"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flamie"
+			"sticker_material"		"cologne2016/sig_flamie"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"1509"
+		{
+			"name"		"cologne2016_signature_flamie_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_flamie_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flamie_foil"
+			"sticker_material"		"cologne2016/sig_flamie_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"1510"
+		{
+			"name"		"cologne2016_signature_flamie_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_flamie_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_flamie_gold"
+			"sticker_material"		"cologne2016/sig_flamie_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"1511"
+		{
+			"name"		"cologne2016_signature_guardian"
+			"item_name"		"#StickerKit_cologne2016_signature_guardian"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_guardian"
+			"sticker_material"		"cologne2016/sig_guardian"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"1512"
+		{
+			"name"		"cologne2016_signature_guardian_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_guardian_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_guardian_foil"
+			"sticker_material"		"cologne2016/sig_guardian_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"1513"
+		{
+			"name"		"cologne2016_signature_guardian_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_guardian_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_guardian_gold"
+			"sticker_material"		"cologne2016/sig_guardian_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"1514"
+		{
+			"name"		"cologne2016_signature_seized"
+			"item_name"		"#StickerKit_cologne2016_signature_seized"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_seized"
+			"sticker_material"		"cologne2016/sig_seized"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"1515"
+		{
+			"name"		"cologne2016_signature_seized_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_seized_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_seized_foil"
+			"sticker_material"		"cologne2016/sig_seized_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"1516"
+		{
+			"name"		"cologne2016_signature_seized_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_seized_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_seized_gold"
+			"sticker_material"		"cologne2016/sig_seized_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"1517"
+		{
+			"name"		"cologne2016_signature_zeus"
+			"item_name"		"#StickerKit_cologne2016_signature_zeus"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_zeus"
+			"sticker_material"		"cologne2016/sig_zeus"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"1518"
+		{
+			"name"		"cologne2016_signature_zeus_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_zeus_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_zeus_foil"
+			"sticker_material"		"cologne2016/sig_zeus_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"1519"
+		{
+			"name"		"cologne2016_signature_zeus_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_zeus_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_zeus_gold"
+			"sticker_material"		"cologne2016/sig_zeus_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"1520"
+		{
+			"name"		"cologne2016_signature_pyth"
+			"item_name"		"#StickerKit_cologne2016_signature_pyth"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pyth"
+			"sticker_material"		"cologne2016/sig_pyth"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"57312567"
+		}
+		"1521"
+		{
+			"name"		"cologne2016_signature_pyth_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_pyth_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pyth_foil"
+			"sticker_material"		"cologne2016/sig_pyth_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"57312567"
+		}
+		"1522"
+		{
+			"name"		"cologne2016_signature_pyth_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_pyth_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pyth_gold"
+			"sticker_material"		"cologne2016/sig_pyth_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"57312567"
+		}
+		"1523"
+		{
+			"name"		"cologne2016_signature_forest"
+			"item_name"		"#StickerKit_cologne2016_signature_forest"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_forest"
+			"sticker_material"		"cologne2016/sig_forest"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"1524"
+		{
+			"name"		"cologne2016_signature_forest_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_forest_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_forest_foil"
+			"sticker_material"		"cologne2016/sig_forest_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"1525"
+		{
+			"name"		"cologne2016_signature_forest_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_forest_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_forest_gold"
+			"sticker_material"		"cologne2016/sig_forest_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"1526"
+		{
+			"name"		"cologne2016_signature_friberg"
+			"item_name"		"#StickerKit_cologne2016_signature_friberg"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_friberg"
+			"sticker_material"		"cologne2016/sig_friberg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"1527"
+		{
+			"name"		"cologne2016_signature_friberg_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_friberg_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_friberg_foil"
+			"sticker_material"		"cologne2016/sig_friberg_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"1528"
+		{
+			"name"		"cologne2016_signature_friberg_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_friberg_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_friberg_gold"
+			"sticker_material"		"cologne2016/sig_friberg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"1529"
+		{
+			"name"		"cologne2016_signature_getright"
+			"item_name"		"#StickerKit_cologne2016_signature_getright"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_getright"
+			"sticker_material"		"cologne2016/sig_getright"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"1530"
+		{
+			"name"		"cologne2016_signature_getright_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_getright_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_getright_foil"
+			"sticker_material"		"cologne2016/sig_getright_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"1531"
+		{
+			"name"		"cologne2016_signature_getright_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_getright_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_getright_gold"
+			"sticker_material"		"cologne2016/sig_getright_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"1532"
+		{
+			"name"		"cologne2016_signature_xizt"
+			"item_name"		"#StickerKit_cologne2016_signature_xizt"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xizt"
+			"sticker_material"		"cologne2016/sig_xizt"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"1533"
+		{
+			"name"		"cologne2016_signature_xizt_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_xizt_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xizt_foil"
+			"sticker_material"		"cologne2016/sig_xizt_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"1534"
+		{
+			"name"		"cologne2016_signature_xizt_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_xizt_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xizt_gold"
+			"sticker_material"		"cologne2016/sig_xizt_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"1535"
+		{
+			"name"		"cologne2016_signature_cajunb"
+			"item_name"		"#StickerKit_cologne2016_signature_cajunb"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_cajunb"
+			"sticker_material"		"cologne2016/sig_cajunb"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"18062315"
+		}
+		"1536"
+		{
+			"name"		"cologne2016_signature_cajunb_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_cajunb_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_cajunb_foil"
+			"sticker_material"		"cologne2016/sig_cajunb_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"18062315"
+		}
+		"1537"
+		{
+			"name"		"cologne2016_signature_cajunb_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_cajunb_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_cajunb_gold"
+			"sticker_material"		"cologne2016/sig_cajunb_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"18062315"
+		}
+		"1538"
+		{
+			"name"		"cologne2016_signature_msl"
+			"item_name"		"#StickerKit_cologne2016_signature_msl"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_msl"
+			"sticker_material"		"cologne2016/sig_msl"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"24134891"
+		}
+		"1539"
+		{
+			"name"		"cologne2016_signature_msl_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_msl_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_msl_foil"
+			"sticker_material"		"cologne2016/sig_msl_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"24134891"
+		}
+		"1540"
+		{
+			"name"		"cologne2016_signature_msl_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_msl_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_msl_gold"
+			"sticker_material"		"cologne2016/sig_msl_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"24134891"
+		}
+		"1541"
+		{
+			"name"		"cologne2016_signature_tenzki"
+			"item_name"		"#StickerKit_cologne2016_signature_tenzki"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tenzki"
+			"sticker_material"		"cologne2016/sig_tenzki"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"37214922"
+		}
+		"1542"
+		{
+			"name"		"cologne2016_signature_tenzki_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_tenzki_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tenzki_foil"
+			"sticker_material"		"cologne2016/sig_tenzki_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"37214922"
+		}
+		"1543"
+		{
+			"name"		"cologne2016_signature_tenzki_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_tenzki_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_tenzki_gold"
+			"sticker_material"		"cologne2016/sig_tenzki_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"37214922"
+		}
+		"1544"
+		{
+			"name"		"cologne2016_signature_rubino"
+			"item_name"		"#StickerKit_cologne2016_signature_rubino"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rubino"
+			"sticker_material"		"cologne2016/sig_rubino"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"35103983"
+		}
+		"1545"
+		{
+			"name"		"cologne2016_signature_rubino_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_rubino_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rubino_foil"
+			"sticker_material"		"cologne2016/sig_rubino_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"35103983"
+		}
+		"1546"
+		{
+			"name"		"cologne2016_signature_rubino_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_rubino_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rubino_gold"
+			"sticker_material"		"cologne2016/sig_rubino_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"35103983"
+		}
+		"1547"
+		{
+			"name"		"cologne2016_signature_k0nfig"
+			"item_name"		"#StickerKit_cologne2016_signature_k0nfig"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_k0nfig"
+			"sticker_material"		"cologne2016/sig_k0nfig"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"19403447"
+		}
+		"1548"
+		{
+			"name"		"cologne2016_signature_k0nfig_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_k0nfig_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_k0nfig_foil"
+			"sticker_material"		"cologne2016/sig_k0nfig_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"19403447"
+		}
+		"1549"
+		{
+			"name"		"cologne2016_signature_k0nfig_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_k0nfig_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_k0nfig_gold"
+			"sticker_material"		"cologne2016/sig_k0nfig_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"24"
+			"tournament_player_id"		"19403447"
+		}
+		"1550"
+		{
+			"name"		"cologne2016_signature_jdm64"
+			"item_name"		"#StickerKit_cologne2016_signature_jdm64"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jdm64"
+			"sticker_material"		"cologne2016/sig_jdm64"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"7223652"
+		}
+		"1551"
+		{
+			"name"		"cologne2016_signature_jdm64_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_jdm64_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jdm64_foil"
+			"sticker_material"		"cologne2016/sig_jdm64_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"7223652"
+		}
+		"1552"
+		{
+			"name"		"cologne2016_signature_jdm64_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_jdm64_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_jdm64_gold"
+			"sticker_material"		"cologne2016/sig_jdm64_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"7223652"
+		}
+		"1553"
+		{
+			"name"		"cologne2016_signature_elige"
+			"item_name"		"#StickerKit_cologne2016_signature_elige"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_elige"
+			"sticker_material"		"cologne2016/sig_elige"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"106428011"
+		}
+		"1554"
+		{
+			"name"		"cologne2016_signature_elige_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_elige_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_elige_foil"
+			"sticker_material"		"cologne2016/sig_elige_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"106428011"
+		}
+		"1555"
+		{
+			"name"		"cologne2016_signature_elige_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_elige_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_elige_gold"
+			"sticker_material"		"cologne2016/sig_elige_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"106428011"
+		}
+		"1556"
+		{
+			"name"		"cologne2016_signature_s1mple"
+			"item_name"		"#StickerKit_cologne2016_signature_s1mple"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_s1mple"
+			"sticker_material"		"cologne2016/sig_s1mple"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"73936547"
+		}
+		"1557"
+		{
+			"name"		"cologne2016_signature_s1mple_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_s1mple_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_s1mple_foil"
+			"sticker_material"		"cologne2016/sig_s1mple_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"73936547"
+		}
+		"1558"
+		{
+			"name"		"cologne2016_signature_s1mple_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_s1mple_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_s1mple_gold"
+			"sticker_material"		"cologne2016/sig_s1mple_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"73936547"
+		}
+		"1559"
+		{
+			"name"		"cologne2016_signature_hiko"
+			"item_name"		"#StickerKit_cologne2016_signature_hiko"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hiko"
+			"sticker_material"		"cologne2016/sig_hiko"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"2791"
+		}
+		"1560"
+		{
+			"name"		"cologne2016_signature_hiko_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_hiko_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hiko_foil"
+			"sticker_material"		"cologne2016/sig_hiko_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"2791"
+		}
+		"1561"
+		{
+			"name"		"cologne2016_signature_hiko_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_hiko_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hiko_gold"
+			"sticker_material"		"cologne2016/sig_hiko_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"2791"
+		}
+		"1562"
+		{
+			"name"		"cologne2016_signature_nitro"
+			"item_name"		"#StickerKit_cologne2016_signature_nitro"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nitro"
+			"sticker_material"		"cologne2016/sig_nitro"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"35624002"
+		}
+		"1563"
+		{
+			"name"		"cologne2016_signature_nitro_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_nitro_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nitro_foil"
+			"sticker_material"		"cologne2016/sig_nitro_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"35624002"
+		}
+		"1564"
+		{
+			"name"		"cologne2016_signature_nitro_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_nitro_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_nitro_gold"
+			"sticker_material"		"cologne2016/sig_nitro_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"48"
+			"tournament_player_id"		"35624002"
+		}
+		"1565"
+		{
+			"name"		"cologne2016_signature_bodyy"
+			"item_name"		"#StickerKit_cologne2016_signature_bodyy"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_bodyy"
+			"sticker_material"		"cologne2016/sig_bodyy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53029647"
+		}
+		"1566"
+		{
+			"name"		"cologne2016_signature_bodyy_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_bodyy_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_bodyy_foil"
+			"sticker_material"		"cologne2016/sig_bodyy_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53029647"
+		}
+		"1567"
+		{
+			"name"		"cologne2016_signature_bodyy_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_bodyy_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_bodyy_gold"
+			"sticker_material"		"cologne2016/sig_bodyy_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53029647"
+		}
+		"1568"
+		{
+			"name"		"cologne2016_signature_rpk"
+			"item_name"		"#StickerKit_cologne2016_signature_rpk"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rpk"
+			"sticker_material"		"cologne2016/sig_rpk"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53985773"
+		}
+		"1569"
+		{
+			"name"		"cologne2016_signature_rpk_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_rpk_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rpk_foil"
+			"sticker_material"		"cologne2016/sig_rpk_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53985773"
+		}
+		"1570"
+		{
+			"name"		"cologne2016_signature_rpk_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_rpk_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_rpk_gold"
+			"sticker_material"		"cologne2016/sig_rpk_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"53985773"
+		}
+		"1571"
+		{
+			"name"		"cologne2016_signature_scream"
+			"item_name"		"#StickerKit_cologne2016_signature_scream"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_scream"
+			"sticker_material"		"cologne2016/sig_scream"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"28502520"
+		}
+		"1572"
+		{
+			"name"		"cologne2016_signature_scream_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_scream_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_scream_foil"
+			"sticker_material"		"cologne2016/sig_scream_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"28502520"
+		}
+		"1573"
+		{
+			"name"		"cologne2016_signature_scream_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_scream_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_scream_gold"
+			"sticker_material"		"cologne2016/sig_scream_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"28502520"
+		}
+		"1574"
+		{
+			"name"		"cologne2016_signature_shox"
+			"item_name"		"#StickerKit_cologne2016_signature_shox"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shox"
+			"sticker_material"		"cologne2016/sig_shox"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"46654567"
+		}
+		"1575"
+		{
+			"name"		"cologne2016_signature_shox_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_shox_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shox_foil"
+			"sticker_material"		"cologne2016/sig_shox_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"46654567"
+		}
+		"1576"
+		{
+			"name"		"cologne2016_signature_shox_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_shox_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_shox_gold"
+			"sticker_material"		"cologne2016/sig_shox_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"46654567"
+		}
+		"1577"
+		{
+			"name"		"cologne2016_signature_smithzz"
+			"item_name"		"#StickerKit_cologne2016_signature_smithzz"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_smithzz"
+			"sticker_material"		"cologne2016/sig_smithzz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"14321919"
+		}
+		"1578"
+		{
+			"name"		"cologne2016_signature_smithzz_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_smithzz_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_smithzz_foil"
+			"sticker_material"		"cologne2016/sig_smithzz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"14321919"
+		}
+		"1579"
+		{
+			"name"		"cologne2016_signature_smithzz_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_smithzz_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_smithzz_gold"
+			"sticker_material"		"cologne2016/sig_smithzz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"59"
+			"tournament_player_id"		"14321919"
+		}
+		"1580"
+		{
+			"name"		"cologne2016_signature_gla1ve"
+			"item_name"		"#StickerKit_cologne2016_signature_gla1ve"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_gla1ve"
+			"sticker_material"		"cologne2016/sig_gla1ve"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"50245293"
+		}
+		"1581"
+		{
+			"name"		"cologne2016_signature_gla1ve_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_gla1ve_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_gla1ve_foil"
+			"sticker_material"		"cologne2016/sig_gla1ve_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"50245293"
+		}
+		"1582"
+		{
+			"name"		"cologne2016_signature_gla1ve_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_gla1ve_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_gla1ve_gold"
+			"sticker_material"		"cologne2016/sig_gla1ve_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"50245293"
+		}
+		"1583"
+		{
+			"name"		"cologne2016_signature_device"
+			"item_name"		"#StickerKit_cologne2016_signature_device"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_device"
+			"sticker_material"		"cologne2016/sig_device"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"27447936"
+		}
+		"1584"
+		{
+			"name"		"cologne2016_signature_device_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_device_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_device_foil"
+			"sticker_material"		"cologne2016/sig_device_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"27447936"
+		}
+		"1585"
+		{
+			"name"		"cologne2016_signature_device_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_device_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_device_gold"
+			"sticker_material"		"cologne2016/sig_device_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"27447936"
+		}
+		"1586"
+		{
+			"name"		"cologne2016_signature_dupreeh"
+			"item_name"		"#StickerKit_cologne2016_signature_dupreeh"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dupreeh"
+			"sticker_material"		"cologne2016/sig_dupreeh"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"44589228"
+		}
+		"1587"
+		{
+			"name"		"cologne2016_signature_dupreeh_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_dupreeh_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dupreeh_foil"
+			"sticker_material"		"cologne2016/sig_dupreeh_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"44589228"
+		}
+		"1588"
+		{
+			"name"		"cologne2016_signature_dupreeh_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_dupreeh_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dupreeh_gold"
+			"sticker_material"		"cologne2016/sig_dupreeh_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"44589228"
+		}
+		"1589"
+		{
+			"name"		"cologne2016_signature_karrigan"
+			"item_name"		"#StickerKit_cologne2016_signature_karrigan"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_karrigan"
+			"sticker_material"		"cologne2016/sig_karrigan"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"29164525"
+		}
+		"1590"
+		{
+			"name"		"cologne2016_signature_karrigan_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_karrigan_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_karrigan_foil"
+			"sticker_material"		"cologne2016/sig_karrigan_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"29164525"
+		}
+		"1591"
+		{
+			"name"		"cologne2016_signature_karrigan_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_karrigan_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_karrigan_gold"
+			"sticker_material"		"cologne2016/sig_karrigan_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"29164525"
+		}
+		"1592"
+		{
+			"name"		"cologne2016_signature_xyp9x"
+			"item_name"		"#StickerKit_cologne2016_signature_xyp9x"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xyp9x"
+			"sticker_material"		"cologne2016/sig_xyp9x"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"30416534"
+		}
+		"1593"
+		{
+			"name"		"cologne2016_signature_xyp9x_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_xyp9x_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xyp9x_foil"
+			"sticker_material"		"cologne2016/sig_xyp9x_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"30416534"
+		}
+		"1594"
+		{
+			"name"		"cologne2016_signature_xyp9x_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_xyp9x_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_xyp9x_gold"
+			"sticker_material"		"cologne2016/sig_xyp9x_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"60"
+			"tournament_player_id"		"30416534"
+		}
+		"1595"
+		{
+			"name"		"cologne2016_signature_spaze"
+			"item_name"		"#StickerKit_cologne2016_signature_spaze"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spaze"
+			"sticker_material"		"cologne2016/sig_spaze"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"109497526"
+		}
+		"1596"
+		{
+			"name"		"cologne2016_signature_spaze_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_spaze_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spaze_foil"
+			"sticker_material"		"cologne2016/sig_spaze_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"109497526"
+		}
+		"1597"
+		{
+			"name"		"cologne2016_signature_spaze_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_spaze_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_spaze_gold"
+			"sticker_material"		"cologne2016/sig_spaze_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"109497526"
+		}
+		"1598"
+		{
+			"name"		"cologne2016_signature_dosia"
+			"item_name"		"#StickerKit_cologne2016_signature_dosia"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dosia"
+			"sticker_material"		"cologne2016/sig_dosia"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"146641530"
+		}
+		"1599"
+		{
+			"name"		"cologne2016_signature_dosia_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_dosia_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dosia_foil"
+			"sticker_material"		"cologne2016/sig_dosia_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"146641530"
+		}
+		"1600"
+		{
+			"name"		"cologne2016_signature_dosia_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_dosia_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_dosia_gold"
+			"sticker_material"		"cologne2016/sig_dosia_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"146641530"
+		}
+		"1601"
+		{
+			"name"		"cologne2016_signature_hooch"
+			"item_name"		"#StickerKit_cologne2016_signature_hooch"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hooch"
+			"sticker_material"		"cologne2016/sig_hooch"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"5809933"
+		}
+		"1602"
+		{
+			"name"		"cologne2016_signature_hooch_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_hooch_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hooch_foil"
+			"sticker_material"		"cologne2016/sig_hooch_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"5809933"
+		}
+		"1603"
+		{
+			"name"		"cologne2016_signature_hooch_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_hooch_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_hooch_gold"
+			"sticker_material"		"cologne2016/sig_hooch_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"5809933"
+		}
+		"1604"
+		{
+			"name"		"cologne2016_signature_mou"
+			"item_name"		"#StickerKit_cologne2016_signature_mou"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mou"
+			"sticker_material"		"cologne2016/sig_mou"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"52678767"
+		}
+		"1605"
+		{
+			"name"		"cologne2016_signature_mou_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_mou_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mou_foil"
+			"sticker_material"		"cologne2016/sig_mou_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"52678767"
+		}
+		"1606"
+		{
+			"name"		"cologne2016_signature_mou_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_mou_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_mou_gold"
+			"sticker_material"		"cologne2016/sig_mou_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"52678767"
+		}
+		"1607"
+		{
+			"name"		"cologne2016_signature_adrenkz"
+			"item_name"		"#StickerKit_cologne2016_signature_adrenkz"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_adrenkz"
+			"sticker_material"		"cologne2016/sig_adrenkz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"46200979"
+		}
+		"1608"
+		{
+			"name"		"cologne2016_signature_adrenkz_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_adrenkz_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_adrenkz_foil"
+			"sticker_material"		"cologne2016/sig_adrenkz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"46200979"
+		}
+		"1609"
+		{
+			"name"		"cologne2016_signature_adrenkz_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_adrenkz_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_adrenkz_gold"
+			"sticker_material"		"cologne2016/sig_adrenkz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"63"
+			"tournament_player_id"		"46200979"
+		}
+		"1610"
+		{
+			"name"		"cologne2016_signature_byali"
+			"item_name"		"#StickerKit_cologne2016_signature_byali"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_byali"
+			"sticker_material"		"cologne2016/sig_byali"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"1611"
+		{
+			"name"		"cologne2016_signature_byali_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_byali_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_byali_foil"
+			"sticker_material"		"cologne2016/sig_byali_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"1612"
+		{
+			"name"		"cologne2016_signature_byali_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_byali_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_byali_gold"
+			"sticker_material"		"cologne2016/sig_byali_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"1613"
+		{
+			"name"		"cologne2016_signature_neo"
+			"item_name"		"#StickerKit_cologne2016_signature_neo"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_neo"
+			"sticker_material"		"cologne2016/sig_neo"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"1614"
+		{
+			"name"		"cologne2016_signature_neo_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_neo_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_neo_foil"
+			"sticker_material"		"cologne2016/sig_neo_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"1615"
+		{
+			"name"		"cologne2016_signature_neo_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_neo_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_neo_gold"
+			"sticker_material"		"cologne2016/sig_neo_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"1616"
+		{
+			"name"		"cologne2016_signature_pasha"
+			"item_name"		"#StickerKit_cologne2016_signature_pasha"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pasha"
+			"sticker_material"		"cologne2016/sig_pasha"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"1617"
+		{
+			"name"		"cologne2016_signature_pasha_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_pasha_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pasha_foil"
+			"sticker_material"		"cologne2016/sig_pasha_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"1618"
+		{
+			"name"		"cologne2016_signature_pasha_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_pasha_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_pasha_gold"
+			"sticker_material"		"cologne2016/sig_pasha_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"1619"
+		{
+			"name"		"cologne2016_signature_snax"
+			"item_name"		"#StickerKit_cologne2016_signature_snax"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_snax"
+			"sticker_material"		"cologne2016/sig_snax"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"1620"
+		{
+			"name"		"cologne2016_signature_snax_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_snax_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_snax_foil"
+			"sticker_material"		"cologne2016/sig_snax_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"1621"
+		{
+			"name"		"cologne2016_signature_snax_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_snax_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_snax_gold"
+			"sticker_material"		"cologne2016/sig_snax_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"1622"
+		{
+			"name"		"cologne2016_signature_taz"
+			"item_name"		"#StickerKit_cologne2016_signature_taz"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taz"
+			"sticker_material"		"cologne2016/sig_taz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+		"1623"
+		{
+			"name"		"cologne2016_signature_taz_foil"
+			"item_name"		"#StickerKit_cologne2016_signature_taz_foil"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taz_foil"
+			"sticker_material"		"cologne2016/sig_taz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+		"1624"
+		{
+			"name"		"cologne2016_signature_taz_gold"
+			"item_name"		"#StickerKit_cologne2016_signature_taz_gold"
+			"description_string"		"#StickerKit_desc_cologne2016_signature_taz_gold"
+			"sticker_material"		"cologne2016/sig_taz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"10"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+	}
 	"pro_players"
 	{
 		"9419182"
@@ -62097,6 +66938,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"6"
+				}
 			}
 		}
 		"71288472"
@@ -62230,6 +67075,10 @@
 						"deaths"		"38"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"6"
 				}
 			}
 		}
@@ -62365,6 +67214,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"6"
+				}
 			}
 		}
 		"28361465"
@@ -62499,6 +67352,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"6"
+				}
 			}
 		}
 		"424467"
@@ -62632,6 +67489,10 @@
 						"deaths"		"26"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"14"
 				}
 			}
 		}
@@ -62834,6 +67695,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"14"
+				}
 			}
 		}
 		"58113672"
@@ -63035,6 +67900,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"14"
+				}
 			}
 		}
 		"12065295"
@@ -63190,6 +68059,10 @@
 						"deaths"		"43"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"12"
 				}
 			}
 		}
@@ -63347,6 +68220,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"12"
+				}
 			}
 		}
 		"3648428"
@@ -63502,6 +68379,10 @@
 						"deaths"		"47"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"12"
 				}
 			}
 		}
@@ -63659,6 +68540,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"12"
+				}
 			}
 		}
 		"156257548"
@@ -63815,6 +68700,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"12"
+				}
 			}
 		}
 		"26224992"
@@ -63960,6 +68849,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"1"
+				}
 			}
 		}
 		"93724"
@@ -64104,6 +68997,10 @@
 						"deaths"		"38"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"1"
 				}
 			}
 		}
@@ -64261,6 +69158,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"1"
+				}
 			}
 		}
 		"24295201"
@@ -64405,6 +69306,10 @@
 						"deaths"		"37"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"1"
 				}
 			}
 		}
@@ -64618,6 +69523,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"46"
+				}
 			}
 		}
 		"40517167"
@@ -64695,6 +69604,10 @@
 						"deaths"		"97"
 						"matches_played"		"5"
 					}
+				}
+				"10"
+				{
+					"team"		"61"
 				}
 			}
 		}
@@ -64808,6 +69721,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"46"
+				}
 			}
 		}
 		"29478439"
@@ -64920,6 +69837,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"46"
+				}
 			}
 		}
 		"444845"
@@ -65031,6 +69952,10 @@
 						"deaths"		"21"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"46"
 				}
 			}
 		}
@@ -65155,6 +70080,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"60"
+				}
 			}
 		}
 		"27447936"
@@ -65277,6 +70206,10 @@
 						"deaths"		"39"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"60"
 				}
 			}
 		}
@@ -65401,6 +70334,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"60"
+				}
 			}
 		}
 		"30416534"
@@ -65523,6 +70460,10 @@
 						"deaths"		"33"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"60"
 				}
 			}
 		}
@@ -65647,6 +70588,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"24"
+				}
 			}
 		}
 		"460206"
@@ -65769,6 +70714,10 @@
 						"deaths"		"59"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"31"
 				}
 			}
 		}
@@ -65893,6 +70842,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"31"
+				}
 			}
 		}
 		"234052"
@@ -66015,6 +70968,10 @@
 						"deaths"		"58"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"31"
 				}
 			}
 		}
@@ -66139,6 +71096,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"31"
+				}
 			}
 		}
 		"18860354"
@@ -66262,6 +71223,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"31"
+				}
 			}
 		}
 		"28273376"
@@ -66373,6 +71338,10 @@
 						"deaths"		"47"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"29"
 				}
 			}
 		}
@@ -66553,6 +71522,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"29"
+				}
 			}
 		}
 		"90378773"
@@ -66665,6 +71638,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"29"
+				}
 			}
 		}
 		"13465075"
@@ -66731,6 +71708,10 @@
 						"deaths"		"51"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"29"
 				}
 			}
 		}
@@ -67042,6 +72023,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"43"
+				}
 			}
 		}
 		"53258137"
@@ -67131,6 +72116,10 @@
 						"deaths"		"43"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"43"
 				}
 			}
 		}
@@ -67311,6 +72300,10 @@
 						"deaths"		"40"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"43"
 				}
 			}
 		}
@@ -67513,6 +72506,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"6"
+				}
 			}
 		}
 		"28502520"
@@ -67624,6 +72621,10 @@
 						"deaths"		"51"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"59"
 				}
 			}
 		}
@@ -67769,6 +72770,10 @@
 						"deaths"		"30"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"61"
 				}
 			}
 		}
@@ -68048,6 +73053,10 @@
 						"deaths"		"38"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"61"
 				}
 			}
 		}
@@ -68575,6 +73584,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"59"
+				}
 			}
 		}
 		"14321919"
@@ -68687,6 +73700,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"59"
+				}
 			}
 		}
 		"53985773"
@@ -68798,6 +73815,10 @@
 						"deaths"		"56"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"59"
 				}
 			}
 		}
@@ -68921,6 +73942,10 @@
 						"deaths"		"39"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"49"
 				}
 			}
 		}
@@ -69112,6 +74137,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"48"
+				}
 			}
 		}
 		"518760"
@@ -69234,6 +74263,10 @@
 						"deaths"		"36"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"49"
 				}
 			}
 		}
@@ -69368,6 +74401,10 @@
 						"deaths"		"29"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"49"
 				}
 			}
 		}
@@ -69984,6 +75021,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"61"
+				}
 			}
 		}
 		"81417650"
@@ -70095,6 +75136,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"29"
+				}
 			}
 		}
 		"90685224"
@@ -70184,6 +75229,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"61"
+				}
 			}
 		}
 		"59614824"
@@ -70272,6 +75321,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"24"
+				}
 			}
 		}
 		"57742580"
@@ -70359,6 +75412,10 @@
 						"deaths"		"22"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"24"
 				}
 			}
 		}
@@ -70559,6 +75616,10 @@
 						"deaths"		"53"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"48"
 				}
 			}
 		}
@@ -70771,6 +75832,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"48"
+				}
 			}
 		}
 		"35624002"
@@ -70871,6 +75936,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"48"
+				}
 			}
 		}
 		"38738282"
@@ -70959,6 +76028,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"43"
+				}
 			}
 		}
 		"170178574"
@@ -71035,6 +76108,10 @@
 						"deaths"		"37"
 						"matches_played"		"2"
 					}
+				}
+				"10"
+				{
+					"team"		"14"
 				}
 			}
 		}
@@ -71113,6 +76190,10 @@
 						"matches_played"		"2"
 					}
 				}
+				"10"
+				{
+					"team"		"14"
+				}
 			}
 		}
 		"57312567"
@@ -71121,6 +76202,13 @@
 			"code"		"pyth"
 			"dob"		"1993-09-21"
 			"geo"		"SE"
+			"events"
+			{
+				"10"
+				{
+					"team"		"1"
+				}
+			}
 		}
 		"24868593"
 		{
@@ -71417,6 +76505,10 @@
 						"matches_played"		"1"
 					}
 				}
+				"10"
+				{
+					"team"		"48"
+				}
 			}
 		}
 		"38340970"
@@ -71471,6 +76563,10 @@
 						"deaths"		"63"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"43"
 				}
 			}
 		}
@@ -71527,6 +76623,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"63"
+				}
 			}
 		}
 		"5809933"
@@ -71581,6 +76681,10 @@
 						"deaths"		"58"
 						"matches_played"		"3"
 					}
+				}
+				"10"
+				{
+					"team"		"63"
 				}
 			}
 		}
@@ -71637,6 +76741,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"63"
+				}
 			}
 		}
 		"46200979"
@@ -71692,6 +76800,10 @@
 						"matches_played"		"3"
 					}
 				}
+				"10"
+				{
+					"team"		"63"
+				}
 			}
 		}
 		"44238623"
@@ -71735,6 +76847,10 @@
 						"deaths"		"20"
 						"matches_played"		"1"
 					}
+				}
+				"10"
+				{
+					"team"		"46"
 				}
 			}
 		}
@@ -71804,6 +76920,174 @@
 				}
 			}
 		}
+		"161590"
+		{
+			"name"		"koosta"
+			"code"		"koosta"
+			"dob"		"1996-03-06"
+			"geo"		"US"
+			"events"
+			{
+				"10"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"26459"
+		{
+			"name"		"pita"
+			"code"		"pita"
+			"dob"		"1990-12-18"
+			"geo"		"SE"
+			"events"
+			{
+				"10"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"19892353"
+		{
+			"name"		"daps"
+			"code"		"daps"
+			"dob"		"1993-07-28"
+			"geo"		"CA"
+			"events"
+			{
+				"10"
+				{
+					"team"		"66"
+				}
+			}
+		}
+		"27224124"
+		{
+			"name"		"MIXWELL"
+			"code"		"mixwell"
+			"dob"		"1995-10-10"
+			"geo"		"ES"
+			"events"
+			{
+				"10"
+				{
+					"team"		"66"
+				}
+			}
+		}
+		"40885967"
+		{
+			"name"		"NAF"
+			"code"		"naf"
+			"dob"		"1997-11-24"
+			"geo"		"CA"
+			"events"
+			{
+				"10"
+				{
+					"team"		"66"
+				}
+			}
+		}
+		"63326592"
+		{
+			"name"		"Rush"
+			"code"		"rush"
+			"dob"		"1994-05-05"
+			"geo"		"US"
+			"events"
+			{
+				"10"
+				{
+					"team"		"66"
+				}
+			}
+		}
+		"21583315"
+		{
+			"name"		"STANISLAW"
+			"code"		"stanislaw"
+			"dob"		"1994-03-22"
+			"geo"		"CA"
+			"events"
+			{
+				"10"
+				{
+					"team"		"66"
+				}
+			}
+		}
+		"35103983"
+		{
+			"name"		"RUBINO"
+			"code"		"rubino"
+			"dob"		"1994-03-21"
+			"geo"		"NO"
+			"events"
+			{
+				"10"
+				{
+					"team"		"24"
+				}
+			}
+		}
+		"19403447"
+		{
+			"name"		"k0nfig"
+			"code"		"k0nfig"
+			"dob"		"1997-04-19"
+			"geo"		"DK"
+			"events"
+			{
+				"10"
+				{
+					"team"		"24"
+				}
+			}
+		}
+		"53029647"
+		{
+			"name"		"bodyy"
+			"code"		"bodyy"
+			"dob"		"1997-01-08"
+			"geo"		"FR"
+			"events"
+			{
+				"10"
+				{
+					"team"		"59"
+				}
+			}
+		}
+		"50245293"
+		{
+			"name"		"gla1ve"
+			"code"		"gla1ve"
+			"dob"		"1998-04-27"
+			"geo"		"DK"
+			"events"
+			{
+				"10"
+				{
+					"team"		"60"
+				}
+			}
+		}
+		"109497526"
+		{
+			"name"		"spaze"
+			"code"		"spaze"
+			"dob"		"1997-05-28"
+			"geo"		"RU"
+			"events"
+			{
+				"10"
+				{
+					"team"		"63"
+				}
+			}
+		}
 	}
 	"items_game_live"
 	{
@@ -71813,7 +77097,7 @@
 			{
 				"events"
 				{
-					"9"
+					"10"
 					{
 						"clutch_kills"		"0"
 						"pistol_kills"		"0"

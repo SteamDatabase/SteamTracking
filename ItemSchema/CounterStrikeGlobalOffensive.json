@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.f3ecf14792b567e1c31fd235840d94f42d965537.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.6ea0fd3d163567082c34c9da90ad15d009ea9bae.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2943,6 +2943,256 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 9
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2016 CS:GO Champion",
+				"defindex": 931,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at ESL One Cologne 2016",
+				"item_description": "This championship trophy was awarded to the Champion at the ESL One Cologne 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.c9a3fae5bb67ed2328a4c4932d96924e4e51cd8d.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2016 CS:GO Finalist",
+				"defindex": 932,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at ESL One Cologne 2016",
+				"item_description": "This championship trophy was awarded to the Finalist at the ESL One Cologne 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2016 CS:GO Semifinalist",
+				"defindex": 933,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at ESL One Cologne 2016",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the ESL One Cologne 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2016 CS:GO Quarterfinalist",
+				"defindex": 934,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at ESL One Cologne 2016",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the ESL One Cologne 2016 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Pick 'Em Challenge Bronze",
+				"defindex": 935,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_pickem_2016_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Pick 'Em Challenge Silver",
+				"defindex": 936,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_pickem_2016_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Pick 'Em Challenge Gold",
+				"defindex": 937,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_pickem_2016_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Fantasy Team Challenge Bronze",
+				"defindex": 938,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Fantasy Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_fantasy_2016_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Fantasy Team Challenge Silver",
+				"defindex": 939,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Fantasy Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_fantasy_2016_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "Cologne 2016 Fantasy Team Challenge Gold",
+				"defindex": 940,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Cologne 2016 Fantasy Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2016 Fantasy Team Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/cologne_fantasy_2016_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
 					}
 				]
 				
@@ -15092,6 +15342,1622 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 144
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_nip",
+				"defindex": 4237,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Ninjas in Pyjamas | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/nip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/nip.6619d8ef602064766cdf8505cc73aadff01daf1c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/nip_large.200c635d839ad294c88b8115e03dcbe5000a6eec.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_optc",
+				"defindex": 4238,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "OpTic Gaming | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/optc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/optc.a3687d719fac4e3be78d7c7f9a59cf64cbd39e3f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/optc_large.25ccf4fa4303f8d22486347950fc1a61d251abe5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_clg",
+				"defindex": 4239,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Counter Logic Gaming | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/clg.64bf4e5b8924f06f9ffdacb3146ca375f2eb8975.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/clg_large.b0f2c60ff41b20957b00dc1a1b3bc60eaaeecfda.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_gamb",
+				"defindex": 4240,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Gambit Gaming | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/gamb.d8c1255ae169265ebaeba92dce751b23de631ea6.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/gamb_large.df542e11fdb2f464c95230e6259e2e2b1f9b0429.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_flip",
+				"defindex": 4241,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Flipsid3 Tactics | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/flip.5bcbfce40a5cb3fbb69754214f839b547167507e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/flip_large.38b6723bbf830ba79dd7c777e5349b64a9eb23f7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_liq",
+				"defindex": 4242,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Liquid | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/liq.8927803e223ea5b1ca71c96c8f0a774231ec001a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/liq_large.83914e804013fedfda4a477196a97dad5a909337.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_mss",
+				"defindex": 4243,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "mousesports | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/mss.717504ee0792b0074f1554507244e54992be9614.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/mss_large.e306b7efa9e3e92a8142def7e33d8176235c910e.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_navi",
+				"defindex": 4244,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Natus Vincere | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/navi.9a1c6fc5ccfd7030f7c1b5a06d4ba166ad2696cf.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/navi_large.27a0fde230a21da1a21c86acc3ffd729cbf499c5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_vp",
+				"defindex": 4245,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Virtus.Pro | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/vp.aba1125b9892cbf198b713e684c1382aa093aac7.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/vp_large.870c68cff17bbd16b6b5555169a8f9eeed51b083.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_sk",
+				"defindex": 4246,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "SK Gaming | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/sk.9d420bf857ab438293291d8126fe5d9e05e4cc2c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/sk_large.7edbf52c9589d3a73ac667c6a8af594c418abfc0.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_g2",
+				"defindex": 4247,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "G2 Esports | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/g2.a2c2867adfd70ab2be7a0eb63237e00c9d741463.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/g2_large.845d69de1140f080f15a12446999070f88ba390e.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_faze",
+				"defindex": 4248,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "FaZe Clan | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/faze.87f1c13d61a40482fd0471446a7b25c7beea0510.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/faze_large.20e12e924a1362d20586b9fd402559c1e3f3f4c2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_astr",
+				"defindex": 4249,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Astralis | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/astr.9f2e414a6d55df9edc89575d73093c5051a385b2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/astr_large.169c7a8869c0415cfdaf955ffd350af237fb8f6a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_nv",
+				"defindex": 4250,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team EnVyUs | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/nv.e3fabc1deacb0969c704dfe728a1a30d0f9f4b17.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/nv_large.d81a927a5c1293abd58240fb58fce9526106c00a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_fntc",
+				"defindex": 4251,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Fnatic | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/fntc.a2f7808481f24ed9433a0e1b5acc71be1e7bca1e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/fntc_large.8bbbfa9d7e71645897b0fd2e77ca6e1552e8c42b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_dig",
+				"defindex": 4252,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Dignitas | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/dig",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/dig.aaf4312af92c29bfe4296af9c30bcfaf22ff1064.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/dig_large.f89bccfec7b23d19145f85f3796d02dd92a5deac.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_esl",
+				"defindex": 4253,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL | Cologne 2016",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2016/esl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/esl.d5ff0d9cf1c3405f943946bbd52d9392bfc60901.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2016/esl_large.18a7387619866f77d2543c8917767cacbf19d639.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_legends",
+				"defindex": 4254,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single Cologne 2016 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_cologne2016_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_cologne2016_01.71341854f197beb8edddb3ade5f4ec8ea25bf15e.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 145
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_cologne2016_challengers",
+				"defindex": 4255,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single Cologne 2016 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_cologne2016_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_cologne2016_02.9e66c2b505b4dc9334d78246217463bf1e142466.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 146
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_group_1",
+				"defindex": 4256,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Challengers (Foil) | Cologne 2016",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Challengers teams at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_cologne2016_group_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_cologne2016_group_1.b78f6f450d7b907ec4fc0b4f9d5e507a87aabc72.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 147
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_group_2",
+				"defindex": 4257,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Legends (Foil) | Cologne 2016",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Legends teams at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_cologne2016_group_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_cologne2016_group_2.4a338f28ae9afd677c419ac1d1a58682110cce98.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 148
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_nip",
+				"defindex": 4258,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Ninjas in Pyjamas | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Ninjas in Pyjamas at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_nip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_nip.63e1d81498dca7394ac1faeb20abb2147ba9cfd2.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 149
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_optc",
+				"defindex": 4259,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | OpTic Gaming | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from OpTic Gaming at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_optc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_optc.9b0e05e02ea6f10d4a5a576c32a9fbb3dc958a61.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 150
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 66
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_clg",
+				"defindex": 4260,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Counter Logic Gaming | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Counter Logic Gaming at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_clg.d221ba021e476941bcc89f037546a48164189f72.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 151
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 49
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_gamb",
+				"defindex": 4261,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Gambit Gaming | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Gambit Gaming at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_gamb.5b2df6827ae0134d934bdde49596b057c733fa66.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 152
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 63
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_flip",
+				"defindex": 4262,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Flipsid3 Tactics | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Flipsid3 Tactics at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_flip.e31fe35e7e681fe457e8c9318c1e9ac44d9056ef.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 153
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 43
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_liq",
+				"defindex": 4263,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Liquid | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Liquid at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_liq.118986b0210f9622870a9922f714b65396b39e31.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 154
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 48
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_mss",
+				"defindex": 4264,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | mousesports | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from mousesports at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_mss.43d5e0d301c0476670c4a0a8d9626e85a6361225.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 155
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 29
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_navi",
+				"defindex": 4265,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Natus Vincere | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Natus Vincere at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_navi.f67abac618d43ebd006228ba6a2aee76ce5cf039.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 156
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_vp",
+				"defindex": 4266,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Virtus.Pro | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Virtus.Pro at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_vp.a9b6677351c16227e4733dec91f44a4cb70df317.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 157
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 31
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_sk",
+				"defindex": 4267,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | SK Gaming | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from SK Gaming at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_sk.525516163e4356efa09cd4c9d5629ef635a06ee6.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 158
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 14
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_g2",
+				"defindex": 4268,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | G2 Esports | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from G2 Esports at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_g2.cb1335f4ebbd2314d775b4b30279a57005a98aea.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 159
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 59
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_faze",
+				"defindex": 4269,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | FaZe Clan | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from FaZe Clan at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_faze.b97ae3f45b193d7ae06fcca524cf3c9d3378d72a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 160
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 61
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_astr",
+				"defindex": 4270,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Astralis | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Astralis at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_astr.924017dc668ef0387a9be84140691a59bc7b17bc.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 161
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 60
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_nv",
+				"defindex": 4271,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team EnVyUs | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team EnVyUs at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_nv.ac991dfd8e1c2788b18a011291ab4f82eaa2895b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 162
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 46
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_fntc",
+				"defindex": 4272,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Fnatic | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Fnatic at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_fntc.35cb5119431222cf3f15ad2d1f7d273766ff0c37.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 163
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_cologne2016_dig",
+				"defindex": 4273,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Dignitas | Cologne 2016",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Dignitas at Cologne 2016.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2016_dig",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2016_dig.3fb1cfd4022f5bd4b83ad8a109d450b2bd45c831.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 164
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 24
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_dust2",
+				"defindex": 4274,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_dust2.a2a6c0bfb1bedb62cab626eb18f3cabad99bd55c.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 165
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_mirage",
+				"defindex": 4275,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_mirage.22a4700e330b3fbc7161c1b98c13aee8edeb2ba3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 166
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_cbble",
+				"defindex": 4276,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_cbble.ebac6436d59545e869f193eabb5b704f62d27f30.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 167
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_overpass",
+				"defindex": 4277,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_overpass.ae687c6e4b521a9617e982915266157aee4c48bf.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 168
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_cache",
+				"defindex": 4278,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_cache.6233f9fc52acf0956b23dc4b168f8d611d9ac8c7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 169
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_train",
+				"defindex": 4279,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_train.9d07311ba0f80e6f9765fc0ce4e2198ed46d3c62.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 170
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_cologne2016_promo_de_nuke",
+				"defindex": 4280,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cologne 2016 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_cologne2016_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_cologne2016_promo_de_nuke.7f36906aa5ad77f39c0a17a9bcc0988b95d76157.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 171
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 10
 					}
 				]
 				
