@@ -1554,6 +1554,7 @@ a.guide_row {
 	padding: 0px 8px 0px 8px;
 }
 
+.help_issue_details,
 .help_notinlibrary_details,
 .help_missingrefund_details
 {
@@ -1563,6 +1564,7 @@ a.guide_row {
 	margin-bottom: 20px;
 }
 
+.help_issue_details p,
 .help_notinlibrary_details p,
 .help_missingrefund_details p
 {
@@ -1570,6 +1572,7 @@ a.guide_row {
 	line-height: 16px;
 }
 
+.help_issue_details p:first-child,
 .help_notinlibrary_details p:first-child,
 .help_missingrefund_details p:first-child
 {
@@ -3434,4 +3437,32 @@ ul.attached_file_list {
 
 .agent_actions .help_section_text {
 	color: #ef5e30;
+}
+
+.help_damagedwalletcode_details .help_request_title {
+	margin-top: 10px;
+}
+
+.help_damagedwalletcode_details .wallet_card_img {
+	margin-top: 10px;
+	height: 500px;
+}
+
+.help_damagedwalletcode_details .highlight {
+	color: #67c1f5;
+}
+
+.help_pendingform_title {
+	color: #67c1f5;
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+.help_pendingform_notadded {
+	color: #ffffff;
+	padding-bottom: 10px;
+}
+
+.help_pendingform_cont {
+	padding-bottom: 10px;
 }

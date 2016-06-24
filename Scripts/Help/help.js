@@ -1944,6 +1944,24 @@ HelpRequestPage = {
 		$J('#create_help_request_issue_text').focus();
 	},
 
+	ShowPendingPurchaseHelpRequestForm: function( strPendingElementID )
+	{
+		var Modal = ShowConfirmDialog(
+			'Pending purchase',
+			$J( strPendingElementID ).html(),
+			'I still need help from Steam Support',
+			'OK, Close'
+			);
+		//format modal
+		var content = Modal.GetContent();
+		content.css( 'max-width', '700px' );
+		content.find( '.newmodal_buttons' ).find( '.btn_green_white_innerfade' ).addClass( 'btn_blue_white_innerfade' ).removeClass( 'btn_green_white_innerfade' );
+		content.find( '.newmodal_buttons' ).find( '.btn_blue_white_innerfade' ).clone( true ).appendTo( content.find( '.newmodal_buttons' ) );
+		content.find( '.newmodal_buttons' ).find( '.btn_blue_white_innerfade' ).first().remove();
+
+		Modal.done( function() { HelpRequestPage.ShowCreateHelpRequestForm() } );
+	},
+
 	DismissCreateHelpRequestForm: function() {
 		$J('#wizard_contents > .wizard_content_wrapper').removeClass('show_create_help_request_form');
 	},
@@ -1974,6 +1992,22 @@ HelpRequestPage = {
 			oParams['data'] = fd;
 			oParams['processData'] = false;
 			oParams['contentType'] = false;
+
+			if ( $Form.data('require-attachments') == 1 && fd.getAll( 'attachments[]' ).length == 0 )
+			{
+				var dialog = ShowConfirmDialog( 'Contact Steam Support', $Form.data('attachment-dialog-contents'), 'Yes', 'No' );
+				dialog.GetContent().css( 'max-width', '40%' );
+				dialog.fail( function( bWasCancel )
+				{
+					if ( bWasCancel )
+					{
+						$Form.data('require-attachments', 0 );
+						HelpRequestPage.SubmitCreateHelpRequestForm( form );
+					}
+				} );
+				dialog.always( function() { $Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false ); } );
+				return;
+			}
 		}
 		else
 		{
