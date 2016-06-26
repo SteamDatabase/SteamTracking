@@ -1795,6 +1795,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	line-height: 17px;
 	color: #acb2b8;
 	overflow-wrap: break-word;
+	overflow: hidden;
 }
 
 .review_box .content .gradient, .review_box .view_more {
