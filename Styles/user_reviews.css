@@ -128,6 +128,7 @@ select {
 	color: #acb2b8;
 	font-family: 'Motiva Sans', arial, tahoma;
 	overflow-wrap: break-word;
+	overflow: hidden;
 }
 .review_area_content b {
 	font-family: 'Motiva Sans Bold', arial, tahoma;
