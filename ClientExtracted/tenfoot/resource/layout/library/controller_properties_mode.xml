@@ -113,6 +113,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
 					<DropDown id="CurveExponent" />
 				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" dependency="CustomCurve">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CustomCurveExponent" />
+					<Slider id="JoystickMoveCustomCurveExponent" direction="horizontal" />
+				</Panel>				
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneShape" />
 					<DropDown id="DeadZoneShape" />
@@ -503,9 +507,8 @@
         </Panel>
 
 
-        <!-- Joystick Camera Mode -->
-				<Panel id="CenterImageJoystickContainer" class="CenterImage" modes="joystickcamera joystickmove" visualization="onlyadvanced" >
-
+        <!-- Visualizations -->
+				<Panel id="CenterImageJoystickContainer" class="CenterImage" modes="joystickcamera joystickmove" visualization="deadzone" >
 					<Panel id="CenterImageJoystickInnerDeadzone" class ="CenterImageRingInner"/>
 					<Panel id="CenterImageJoystickInnerDeadzoneCrossVert" class ="CenterImageRingInnerCrossVertical"/>
 					<Panel id="CenterImageJoystickInnerDeadzoneCrossHoriz" class ="CenterImageRingInnerCrossHorizontal"/>					
@@ -515,7 +518,69 @@
 					<Panel id="CenterImageJoystick" class="CenterImage" />
 					<Panel id="CenterImageJoystickOuterDeadzone" class ="CenterImageRingOuter"/>
 				</Panel>
-
+				<Panel id="CenterImageJoystickCurve" class="CenterImage" modes="joystickmove absmouse trigger" visualization="curve" >
+					<Panel class="CenterGraph" id="CenterImageGraphContainer" modes="joystickmove absmouse trigger" >
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>
+						<Panel class="GraphBar"/>						
+					</Panel>
+					<Label class="GraphLabelSide" text="#Library_Details_GraphLabel_Output" />	
+					<Label class="GraphLabelBottom" text="#Library_Details_GraphLabel_Deflection" />
+				</Panel>
+					
 				<!-- Joystick Camera Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
@@ -535,7 +600,7 @@
 				</Panel>				
 
 				<!-- Mouse Mode -->
-				<Panel id="CenterImageMouse" class="CenterImage" modes="absmouse MouseJoystick" advanced="off" visualization="on" >
+				<Panel id="CenterImageMouse" class="CenterImage" modes="absmouse MouseJoystick" advanced="off" visualization="rotation" >
 					<Panel id="CenterImageMouseRotation" class ="CenterImage" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY gyro" advanced="off" visualization="off" >
@@ -720,22 +785,18 @@
 				</Panel>
 				
 				<!-- Trigger Mode -->
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
 					<DropDown id="OutputTrigger" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
 					<Slider id="TriggerDeadZoneStart" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off" visualization="off" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
 					<Slider id="TriggerDeadZoneEnd" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
-					<DropDown id="TriggerCurveExponent" />
-				</Panel>				
+				</Panel>		
 				<!-- Now In Activators
         <Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
@@ -1002,8 +1063,16 @@
 						<DropDown id="ScrollWheelListWrap" />
 					</Panel>					
 					
-					<!-- Trigger Mode Advanced -->
-        </Panel>
+					<!-- Trigger Mode -->
+					<Panel class="FieldWrapper" modes="trigger" gameactions="off" advanced="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
+						<DropDown id="TriggerCurveExponent" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="trigger" advanced="off" dependency="CustomCurve">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_CustomCurveExponent" />
+						<Slider id="TriggerCustomCurveExponent" direction="horizontal" />
+					</Panel>
+				</Panel>
 				
 				<!-- Show advanced properties button -->
 				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="ShowAdvancedProperties">

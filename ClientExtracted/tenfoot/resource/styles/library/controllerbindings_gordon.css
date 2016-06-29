@@ -1386,8 +1386,8 @@ Slider:Selected
 {
 	width: 100%;
 	height: 20px;
-	margin-top: 12px;
-	margin-bottom: 22px;
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
 .NoneMode
@@ -1520,6 +1520,78 @@ Slider:Selected
 	horizontal-align: center;
 }
 
+.GraphLabelSide {
+	transform-origin: 0% 0% parent-relative;
+	transform: rotatez( 90deg ) translatex( 100% ) translatey( -8% );
+	font-size: 20px;
+	font-family: platformfont;
+	color: #01caef;
+    margin-left: 10px;
+	margin-bottom: 16px;
+    horizontal-align: center;
+    vertical-align: bottom;
+}
+
+.GraphLabelBottom
+{
+	font-size: 20px;
+	font-family: platformfont;
+	color: #01caef;
+    margin-left: 32px;
+	margin-bottom: 56px;
+    horizontal-align: center;
+    vertical-align: bottom;
+}
+
+.CenterGraph
+{
+    flow-children: right;
+	width: 500px;
+	height: 408px;
+	background-repeat: no-repeat;
+    z-index: 40;
+    margin-left: 48px;
+  	margin-bottom: 70px;
+    border: 2px solid #102f4b;
+    border-radius: 8px;
+    background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0, #0e86ab00 ), 
+    color-stop( .1, #0e86ab00 ), color-stop( .1, #102f4b ), color-stop( .1025, #102f4b ), color-stop( .1025, #0e86ab00 ),
+    color-stop( .2, #0e86ab00 ), color-stop( .2, #102f4b ), color-stop( .2025, #102f4b ), color-stop( .2025, #0e86ab00 ),
+    color-stop( .3, #0e86ab00 ), color-stop( .3, #102f4b ), color-stop( .3025, #102f4b ), color-stop( .3025, #0e86ab00 ),
+    color-stop( .4, #0e86ab00 ), color-stop( .4, #102f4b ), color-stop( .4025, #102f4b ), color-stop( .4025, #0e86ab00 ),
+    color-stop( .5, #0e86ab00 ), color-stop( .5, #102f4b ), color-stop( .5025, #102f4b ), color-stop( .5025, #0e86ab00 ),
+    color-stop( .6, #0e86ab00 ), color-stop( .6, #102f4b ), color-stop( .6025, #102f4b ), color-stop( .6025, #0e86ab00 ),
+    color-stop( .7, #0e86ab00 ), color-stop( .7, #102f4b ), color-stop( .7025, #102f4b ), color-stop( .7025, #0e86ab00 ),
+    color-stop( .8, #0e86ab00 ), color-stop( .8, #102f4b ), color-stop( .8025, #102f4b ), color-stop( .8025, #0e86ab00 ),
+    color-stop( .9, #0e86ab00 ), color-stop( .9, #102f4b ), color-stop( .9025, #102f4b ), color-stop( .9025, #0e86ab00 ) ),
+    gradient( linear, 0% 0%, 0% 100%, color-stop( 0, #0e86ab00 ), 
+    color-stop( .1, #0e86ab00 ), color-stop( .1, #102f4b ), color-stop( .1025, #102f4b ), color-stop( .1025, #0e86ab00 ),
+    color-stop( .2, #0e86ab00 ), color-stop( .2, #102f4b ), color-stop( .2025, #102f4b ), color-stop( .2025, #0e86ab00 ),
+    color-stop( .3, #0e86ab00 ), color-stop( .3, #102f4b ), color-stop( .3025, #102f4b ), color-stop( .3025, #0e86ab00 ),
+    color-stop( .4, #0e86ab00 ), color-stop( .4, #102f4b ), color-stop( .4025, #102f4b ), color-stop( .4025, #0e86ab00 ),
+    color-stop( .5, #0e86ab00 ), color-stop( .5, #102f4b ), color-stop( .5025, #102f4b ), color-stop( .5025, #0e86ab00 ),
+    color-stop( .6, #0e86ab00 ), color-stop( .6, #102f4b ), color-stop( .6025, #102f4b ), color-stop( .6025, #0e86ab00 ),
+    color-stop( .7, #0e86ab00 ), color-stop( .7, #102f4b ), color-stop( .7025, #102f4b ), color-stop( .7025, #0e86ab00 ),
+    color-stop( .8, #0e86ab00 ), color-stop( .8, #102f4b ), color-stop( .8025, #102f4b ), color-stop( .8025, #0e86ab00 ),
+    color-stop( .9, #0e86ab00 ), color-stop( .9, #102f4b ), color-stop( .9025, #102f4b ), color-stop( .9025, #0e86ab00 ) );
+}
+
+.GraphBar
+{
+	height: 400px;
+    width: 24px;
+    border-radius: 8px;
+    border: 1px solid #102f4b;
+	horizontal-align: left;
+    vertical-align: bottom;
+    margin-left: 0px;
+ 
+    z-index: 40;
+   	opacity: 1.0;
+    background-color: #00ccffff;
+	visibility: visible;
+	background-position: center center;
+}
 
 .CenterImageRingOuter
 {
@@ -1657,6 +1729,7 @@ Slider:Selected
 } 
 
 
+
 .CenterImage
 {
 	width: 500px;
@@ -1685,7 +1758,7 @@ Slider:Selected
     background-color: #00afdf;
 }
 
-.CenterImageABXYPanel.CenterImage,
+.CenterImageABXYPanel.CenterImage
 {
 	background-image: url("file://{images}/library/controller/controller_config_inspector_bpad_bg.png");
 }
