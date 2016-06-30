@@ -1481,3 +1481,18 @@ body.v6 .summer2016_header .cloud {
 	left: 1400px;
 	animation-delay: -3.6s;
 }
+
+body.v6 .summer2016_header .stars {
+	position: absolute;
+	top: 0;
+	width: 315px;
+	height: 452px;
+}
+
+.stars.R {
+	right: -315px;
+}
+
+.stars.L {
+	left: -315px;
+}
