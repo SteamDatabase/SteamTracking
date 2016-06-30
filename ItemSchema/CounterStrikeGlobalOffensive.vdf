@@ -16076,8 +16076,8 @@
 		{
 			"name"		"Cologne 2016 Pick 'Em Challenge Silver"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze"
-			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmSilver"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmSilver_Desc"
 			"image_inventory"		"econ/status_icons/cologne_pickem_2016_silver"
 			"attributes"
 			{
@@ -16093,8 +16093,8 @@
 		{
 			"name"		"Cologne 2016 Pick 'Em Challenge Gold"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze"
-			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmBronze_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_PickEmGold"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_PickEmGold_Desc"
 			"image_inventory"		"econ/status_icons/cologne_pickem_2016_gold"
 			"attributes"
 			{
@@ -16127,8 +16127,8 @@
 		{
 			"name"		"Cologne 2016 Fantasy Team Challenge Silver"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze"
-			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasySilver"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasySilver_Desc"
 			"image_inventory"		"econ/status_icons/cologne_fantasy_2016_silver"
 			"attributes"
 			{
@@ -16144,8 +16144,8 @@
 		{
 			"name"		"Cologne 2016 Fantasy Team Challenge Gold"
 			"prefab"		"collectible_untradable"
-			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze"
-			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyBronze_Desc"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2016_FantasyGold"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2016_FantasyGold_Desc"
 			"image_inventory"		"econ/status_icons/cologne_fantasy_2016_gold"
 			"attributes"
 			{
@@ -21777,58 +21777,146 @@
 		}
 		"6012"
 		{
-			"name"		"item 6012"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Guardian 2"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_guardian_2"
+			"item_description"		"#CSGO_Collectible_Pin_guardian_2_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_guardian_2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_guardian_2.mdl"
+			}
 		}
 		"6013"
 		{
-			"name"		"item 6013"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Bravo"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_bravo"
+			"item_description"		"#CSGO_Collectible_Pin_bravo_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_bravo"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_bravo.mdl"
+			}
 		}
 		"6014"
 		{
-			"name"		"item 6014"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Baggage"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_baggage"
+			"item_description"		"#CSGO_Collectible_Pin_baggage_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_baggage"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_baggage.mdl"
+			}
 		}
 		"6015"
 		{
-			"name"		"item 6015"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Phoenix"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_phoenix"
+			"item_description"		"#CSGO_Collectible_Pin_phoenix_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_phoenix"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_phoenix.mdl"
+			}
 		}
 		"6016"
 		{
-			"name"		"item 6016"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Office"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_office"
+			"item_description"		"#CSGO_Collectible_Pin_office_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_office"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_office.mdl"
+			}
 		}
 		"6017"
 		{
-			"name"		"item 6017"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Cobblestone"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_cobblestone"
+			"item_description"		"#CSGO_Collectible_Pin_cobblestone_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_cobblestone"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_cobblestone.mdl"
+			}
 		}
 		"6018"
 		{
-			"name"		"item 6018"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Overpass"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_overpass"
+			"item_description"		"#CSGO_Collectible_Pin_overpass_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_overpass"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_overpass.mdl"
+			}
 		}
 		"6019"
 		{
-			"name"		"item 6019"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Bloodhound"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_bloodhound"
+			"item_description"		"#CSGO_Collectible_Pin_bloodhound_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_bloodhound"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_bloodhound.mdl"
+			}
 		}
 		"6020"
 		{
-			"name"		"item 6020"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Cache"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_cache"
+			"item_description"		"#CSGO_Collectible_Pin_cache_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_cache"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_cache.mdl"
+			}
 		}
 		"6021"
 		{
-			"name"		"item 6021"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Valeria"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_valeria"
+			"item_description"		"#CSGO_Collectible_Pin_valeria_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_valeria"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_valeria.mdl"
+			}
 		}
 		"6022"
 		{
-			"name"		"item 6022"
-			"prefab"		"collectible_untradable"
+			"name"		"Collectible Pin - Chroma"
+			"prefab"		"attendance_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_chroma"
+			"item_description"		"#CSGO_Collectible_Pin_chroma_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_chroma"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_chroma.mdl"
+			}
 		}
 		"6023"
 		{
@@ -76964,7 +77052,7 @@
 		}
 		"27224124"
 		{
-			"name"		"MIXWELL"
+			"name"		"mixwell"
 			"code"		"mixwell"
 			"dob"		"1995-10-10"
 			"geo"		"ES"
@@ -76992,7 +77080,7 @@
 		}
 		"63326592"
 		{
-			"name"		"Rush"
+			"name"		"RUSH"
 			"code"		"rush"
 			"dob"		"1994-05-05"
 			"geo"		"US"
@@ -77006,7 +77094,7 @@
 		}
 		"21583315"
 		{
-			"name"		"STANISLAW"
+			"name"		"stanislaw"
 			"code"		"stanislaw"
 			"dob"		"1994-03-22"
 			"geo"		"CA"
