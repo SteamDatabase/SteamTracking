@@ -37,6 +37,49 @@
                     "description": "comma-separated list of allowed client IP country codes in ISO 3166-1 format - blank for not used"
                 }
             ]
+        },
+        {
+            "name": "SetPerformanceStats",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "cdnname",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Steam name of CDN property"
+                },
+                {
+                    "name": "mbps_sent",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Outgoing network traffic in Mbps"
+                },
+                {
+                    "name": "mbps_recv",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Incoming network traffic in Mbps"
+                },
+                {
+                    "name": "cpu_percent",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Percent CPU load"
+                },
+                {
+                    "name": "cache_hit_percent",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Percent cache hits"
+                }
+            ]
         }
     ]
 }
