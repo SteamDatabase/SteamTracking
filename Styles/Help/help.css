@@ -2107,16 +2107,16 @@ img.category_icon {
 }
 
 .help_tooltip {
-	background: #1c2837;
-	color: #82909a;
-	font-size: 11px;
-	border-radius: 3px;
-	padding: 5px;
-	max-width: 225px;
-	white-space: normal;
-	box-shadow: 0 0 3px #000000;
-	word-wrap: break-word;
-}
+	 background: #1c2837;
+	 color: #82909a;
+	 font-size: 11px;
+	 border-radius: 3px;
+	 padding: 5px;
+	 max-width: 225px;
+	 white-space: normal;
+	 box-shadow: 0 0 3px #000000;
+	 word-wrap: break-word;
+ }
 
 .LoadingWrapper
 {
@@ -3400,17 +3400,6 @@ ul.attached_file_list {
     font-size: 18px;
 }
 
-.quick_text_editor {
-    float: left;
-}
-
-.quick_text_editor_list {
-    float: right;
-}
-
-.quick_text_requires_update {
-    background-color: orange;
-}
 
 .vac_body .help_tradeban_details {
 	margin-top: 15px;

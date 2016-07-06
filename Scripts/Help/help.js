@@ -996,6 +996,49 @@ HelpWizard = {
 		});
 	},
 
+	ResetPhoneNumber: function( strSessionID, strCode ) {
+
+		$J( '#reset_phonenumber_form' ).addClass( 'loading' );
+
+		var elError = $J( '#form_submit_error' );
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryResetPhoneNumber/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryResetPhoneNumber/",
+			data: {
+				sessionid: g_sessionID,
+				s: strSessionID,
+				code: strCode
+			}
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function() {
+			$J( '#reset_phonenumber_form' ).removeClass( 'loading' );
+		});
+	},
+
 
 	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin )
 	{
@@ -1204,7 +1247,8 @@ HelpWizard = {
 				if ( strCode.length > 0 )
 				{
 					// we already have a recovery code, so user already verified access to email address
-					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID + "&code=" + strCode + "&time=" + data.time;
+					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID
+						+ "&code=" + strCode + "&time=" + data.time + "&digits=" + data.digits;
 				}
 				else if ( bLostPhone )
 				{
@@ -1222,7 +1266,8 @@ HelpWizard = {
 					else
 					{
 						// user lost access to email, no linked phone. Go directly to credit card verification
-						window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID + "&time=" + data.time;
+						window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID
+							+ "&time=" + data.time + "&digits=" + data.digits;
 					}
 				}
 			}
@@ -1233,7 +1278,7 @@ HelpWizard = {
 		});
 	},
 
-	SubmitProofOfPurchase: function( strSessionID, strCode ) {
+	SubmitProofOfPurchase: function( strSessionID, strCode, strNav ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
 			'Verifying payment information' );
@@ -1266,7 +1311,8 @@ HelpWizard = {
 		}).done(function (data) {
 			if ( data.success )
 			{
-				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID + "&code=" + data.code + "&account=" + data.accountid ;
+				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID +
+					"&code=" + data.code + "&account=" + data.accountid + "&nav=" + strNav;
 			}
 			else 
 			{
