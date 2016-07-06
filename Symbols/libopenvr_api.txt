@@ -312,8 +312,8 @@
  t ParseStringListFromJson(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, Json::Value const&, char const*)
  t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11678.ii
  t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11784.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.84924.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.85092.ii
+ t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.30837.ii
+ t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.30987.ii
  typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
