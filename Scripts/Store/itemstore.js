@@ -32,7 +32,7 @@ function AddMtxItemToCart( appid, assetclassid, quantity )
 		function( data ) {
 			if ( !data || !data.success )
 			{
-				ShowAlertDialog( '#title_error', '#cart_add_failed' );
+				ShowAlertDialog( 'Error', 'SORRY, WE COULDN\'T ADD YOUR ITEM!' );
 			}
 			else
 			{
@@ -40,7 +40,7 @@ function AddMtxItemToCart( appid, assetclassid, quantity )
 				$J( "#store_header_cart_btn").show();
 				var elemCartCount = $J("#cart_item_count_value");
 				elemCartCount.html( parseInt( elemCartCount.html() ) + 1 );
-				var dialog = ShowConfirmDialog( '#item_store_added_item_title', '#item_store_added_item_text', '#item_store_checkout', '#item_store_continue_shopping' );
+				var dialog = ShowConfirmDialog( 'Added to Shopping Cart', 'The item was added to your shopping cart.<br><br>Would you like to Checkout now or Continue Shopping?', 'Checkout', 'Continue Shopping' );
 				dialog.done(
 					function() {
 						StartCheckout( appid );
@@ -68,13 +68,13 @@ function StartCheckout( appid )
 				}
 				break;
 				case 39:
-					ShowAlertDialog( '#title_error', '#cart_error_failed_to_load' );
+					ShowAlertDialog( 'Error', 'There was an error trying to load your shopping cart.  Please try again later.' );
 					break;
 				case 42:
-					ShowAlertDialog( '#title_error', '#checkout_error_no_items' );
+					ShowAlertDialog( 'Error', 'You must have items in your cart to checkout.' );
 					break;
 				default:
-					ShowAlertDialog( '#title_error', '#checkout_failed_inittransaction' );
+					ShowAlertDialog( 'Error', 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.' );
 			}
 		}
 	);
@@ -114,7 +114,7 @@ function GetMarketPriceOverview( container, params )
 	var elMarketLink = $J( '<a/>', {
 		'href': 'http://steamcommunity.com/market/listings/' + appid + '/' + encodeURIComponent( strMarketHashName )
 	} );
-	elMarketLink.html( '#Economy_Market_PriceOverview_Header' );
+	elMarketLink.html( 'View in Community Market' );
 	elPriceInfoHeader.append( elMarketLink );
 
 	elPriceInfo.append( elPriceInfoHeader );
@@ -141,19 +141,19 @@ function GetMarketPriceOverview( container, params )
 				var strInfo = '';
 				if ( json.lowest_price )
 				{
-					strInfo += '#Economy_Market_Listing_Price_StartingAt ' + json.lowest_price + '<br>'
+					strInfo += 'Starting at: ' + json.lowest_price + '<br>'
 				}
 				else
 				{
-					strInfo += '#Economy_Market_PriceOverview_NoListings' + '<br>';
+					strInfo += 'There are no listings currently available for this item.' + '<br>';
 				}
 
 				if ( json.volume )
 				{
-					var strVolume = '#Economy_Market_PriceOverview_DailyVolume';
+					var strVolume = '%1$s sold in the last 24 hours';
 					strVolume = strVolume.replace( '%1$s', json.volume );
 					//strInfo += '#Economy_Market_PriceOverview_Median ' + json.median_price + '<br>';
-					strInfo += '#Economy_Market_PriceOverview_VolumeLabel ' + strVolume + '<br>';
+					strInfo += 'Volume: ' + strVolume + '<br>';
 				}
 
 				elPriceInfoContent.html( strInfo );
@@ -162,7 +162,7 @@ function GetMarketPriceOverview( container, params )
 	)
 	.fail(
 		function() {
-			var strInfo = '#Economy_Market_Listings_Error';
+			var strInfo = 'There was an error getting listings for this item. Please try again later.';
 			elPriceInfoContent.html( strInfo );
 		}
 	)

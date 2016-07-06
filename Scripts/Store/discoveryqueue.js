@@ -200,7 +200,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 	.done( function(data) {
 		var rgGlobalPopularTags = data.popular_tags;
 
-		var Modal = ShowConfirmDialog( '#discoveryqueue_settings_title', data.html );
+		var Modal = ShowConfirmDialog( 'Customize Your Discovery Queue', data.html );
 		Modal.GetContent().css( 'width', '720px' );
 		Modal.AdjustSizing();
 
@@ -300,7 +300,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 				queuetype: 0			} ).done( function( data ) {
 				fnOnSettingsChanged( data );
 			}).fail( function() {
-				ShowAlertDialog( '#discoveryqueue_settings_title', '#home_viewsettings_Error' );
+				ShowAlertDialog( 'Customize Your Discovery Queue', 'There was a problem saving your preferences.  Please try again later.' );
 			});
 		});
 
@@ -324,7 +324,7 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 	}).done( function ( data ) {
 		window.location = 'https://store.steampowered.com/explore/next';
 	}).fail( function() {
-		ShowAlertDialog( '#explore_refresh_queue', '#home_viewsettings_Error' );
+		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
 	} );
 };
 
