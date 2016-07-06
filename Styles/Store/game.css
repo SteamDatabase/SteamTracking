@@ -4107,9 +4107,12 @@ div.agegate_text_container > h2 {
 	display: block;
 }
 
+.series_episode.nosub {
+	margin-bottom: 10px;
+}
+
 @media screen and (max-width: 910px )
 {
-
 	html.responsive .series_episode .episode_image_col {
 		width: 30%;
 		height: auto;
@@ -4120,8 +4123,21 @@ div.agegate_text_container > h2 {
 	}
 
 	html.responsive .series_episode .episode_details_col {
-		width: 60%;
-		padding: 5px 8px 5px 8px;
+		width: 65%;
+		padding: 5px 5px 5px 8px;
+	}
+
+	html.responsive .series_episode .episode_description {
+		height: 45px;
+		overflow: auto;
+	}
+
+	html.responsive .series_episode.nosub .episode_description {
+		height: 57px;
+	}
+
+	html.responsive .series_episode.nosub .episode_action_col {
+		display: none;
 	}
 }
 

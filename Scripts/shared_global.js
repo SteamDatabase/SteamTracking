@@ -113,7 +113,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	var deferred = new jQuery.Deferred();
 	var fnOK = function() { deferred.resolve( 'OK' ); };
 	var fnSecondary = function() { deferred.resolve( 'SECONDARY' ); };
-	var fnCancel = function() { deferred.reject(); };
+	var fnCancel = function( bWasCancelButton ) { deferred.reject( bWasCancelButton ); };
 
 	var rgButtons = [];
 
@@ -129,7 +129,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	}
 
 	var $CancelButton = _BuildDialogButton( strCancelButton );
-	$CancelButton.click( fnCancel );
+	$CancelButton.click( function() { fnCancel( true ); } );
 	rgButtons.push( $CancelButton );
 
 	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel );
@@ -157,10 +157,10 @@ function ShowAlertDialog( strTitle, strDescription, strOKButton )
 		strOKButton = 'OK';
 
 	var deferred = new jQuery.Deferred();
-	var fnOK = function() { deferred.resolve(); };
+	var fnOK = function( bWasCancelButton ) { deferred.resolve( bWasCancelButton ); };
 
 	var $OKButton = _BuildDialogButton( strOKButton );
-	$OKButton.click( fnOK );
+	$OKButton.click( function() { fnOK( true ); } );
 
 	var Modal = _BuildDialog( strTitle, strDescription, [ $OKButton ], fnOK );
 	deferred.always( function() { Modal.Dismiss(); } );
@@ -360,7 +360,7 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	if ( fnOnCancel )
 	{
 		Modal.OnDismiss( fnOnCancel );
-		$CloseButton.click( fnOnCancel );
+		$CloseButton.click( function() { Modal.Dismiss(); } );
 	}
 
 	// on responsive pages, the 'newmodal' element covers the whole viewable area (so that we can control scrolling
@@ -3313,7 +3313,7 @@ function CAutoComplete( elInput, fnSearch, fnOnChange )
 	this.m_hSearchTimeout = 0;
 	this.m_strLastSearch = '';
 
-		this.m_$Input = $J( elInput );
+	this.m_$Input = $J( elInput );
 	this.m_fnSearch = fnSearch;
 	this.m_fnOnChange = fnOnChange;
 

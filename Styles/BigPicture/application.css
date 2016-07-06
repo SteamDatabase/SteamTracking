@@ -960,7 +960,8 @@
 	color: greyish_medium;
 }
 
-.AppRunningTime
+.AppRunningTime,
+.AppReleaseSeriesInfo
 {
 	font-size: 24px;
 	vertical-align: center;

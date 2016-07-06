@@ -2644,3 +2644,20 @@ body.flat_page .sectionTabsHR {
 	top: 0;
 	max-width: 958px;
 }
+
+.manage_friends_max_block_ctn {
+	margin: 20px 10% 0 10%;
+	text-align: center;
+	padding: 15px;
+	background-color: rgba( 0, 0 , 0, .3 );
+}
+
+.manage_friends_max_block_header {
+	font-size: 16px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.manage_friends_max_block_ctn > a {
+	margin-top: 30px;
+}

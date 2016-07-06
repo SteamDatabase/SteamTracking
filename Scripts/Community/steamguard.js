@@ -53,7 +53,7 @@ function PhoneAjax( op, arg, success, error )
 					 var sLocks = '';
 					 if ( data.tos_warning.active_locks )
 					 {
-						 sLocks = '<div class="tos_list_header">' + 'Support alert(s)' + '</div>';
+						 sLocks = '<div class="tos_list_header">' + 'This phone number is associated with an account that has either been compromised or violated the Steam Terms of Service. If you believe this is in error, please contact <a href="https://support.steampowered.com/newticket.php?category=320" target="_blank" rel="noreferrer">Steam Support</a> to resolve this alert.' + '</div>';
 					 }
 
 					 var sTosList = sLocks + sVAC;
@@ -75,7 +75,7 @@ function PhoneAjax( op, arg, success, error )
 						 $J( '#steamguard_next_button' ).hide();
 						 $J( '.steamguard_centered_button > #steamguard_cancel_button' ).hide();
 						 $J( '#steamguard_done_button' ).show();
-						 $J( '#phone_tos_details' ).html( 'We are unable to accept this phone number at this time due to the following violations associated with it:' );
+						 $J( '#phone_tos_details' ).html( 'We are unable to accept this phone number due to the following violations associated with it:' );
 					 }
 					 else
 					 {

@@ -2618,6 +2618,11 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 
 			clearTimeout( this.m_schWaitForBuffer );
 			this.m_schWaitForBuffer = null;
+
+			// live content needs to schedule the next download now whereas
+			// vod waits until the new resolution is buffered, then kicks off the next download
+			if ( this.m_player.BIsLiveContent() )
+				this.ScheduleNextDownload();
 		}
 
 		return true; // can shift time now

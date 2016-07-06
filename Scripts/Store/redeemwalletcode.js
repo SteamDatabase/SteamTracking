@@ -529,6 +529,10 @@ function OnRedeemWalletCodeFailure( success, detail )
 					case 44:
 						sErrorMessage = 'The Steam Wallet code you have entered appears to be valid; However, your Steam account is currently restricted from activating Steam Wallet codes. Please contact <a href="https://support.steampowered.com/newticket.php?category=15">Steam Support</a> for further assistance.';
 						break;
+
+					case 68:
+						sErrorMessage = 'The Steam Wallet code you have entered appears to be valid, however, U.S. government regulations limit Steam Wallet activity to $2000 on any day. Please try again after 24 hours.';
+						break;
 				
 					default:
 						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';

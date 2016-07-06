@@ -70,6 +70,13 @@
 	animation-direction: normal;
 }
 
+.SubscriptionContents .BundleName
+{
+	color: white;
+	font-size: 26px;
+	white-space: nowrap;
+}
+
 .OptionName
 {
 	color: white;
@@ -315,6 +322,61 @@
 {
 	flow-children: right;
 	margin-top: 4px;
+}
+
+.AppEpisodeImage
+{
+	width: 236px;
+	height: 110px;
+	vertical-align: center;
+}
+
+.AppEpisodeName
+{
+	color: white;
+	font-size: 26px;
+	white-space: nowrap;
+	width: 550px;
+}
+
+.AppEpisodeDetails
+{
+	flow-children: down;
+	margin-left: 14px;
+}
+
+.AppEpisodeDetailsRow
+{
+	flow-children: right;
+}
+
+.AppEpisodeDetails .AppReleaseDate
+{
+	color: #8f98a0;
+	font-size: 18px;
+	margin-right: 20px;
+}
+
+.AppEpisodeDetails .AppRuntime
+{
+	color: #8f98a0;
+	font-size: 18px;
+}
+
+.AppEpisodeDescription .AppDescription
+{
+	font-size: 20px;
+	margin-top: 4px;
+	color: #acb2b8;
+	width: 550px;
+	height: 72px;
+}
+
+.AppEpisodePrice
+{
+	width: fit-children;
+	vertical-align: middle;
+	horizontal-align: right;
 }
 
 .PriceNA

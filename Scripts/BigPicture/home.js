@@ -211,6 +211,12 @@ function ShowBundlePage( nBundleID, strName )
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 
+function ShowSeasonsAndEpisodes( nAppID, strAppName )
+{
+	var strURL = 'https://store.steampowered.com/seasonsandepisodes/' + nAppID + '/?ver=nx';
+	$.DispatchEvent( 'OpenRemoteContent', strURL, strAppName, 2  );
+}
+
 function ShowAppLibraryPage( nAppID )
 {
 	$.DispatchEvent( 'LibraryShowApp', nAppID );

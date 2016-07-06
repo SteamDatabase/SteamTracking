@@ -183,7 +183,7 @@ body.apphub_blue
 
 .apphub_SectionFilterLabel.language
 {
-	padding-left: 50px;
+	padding-left: 20px;
 }
 
 
@@ -366,6 +366,15 @@ div.filterselect_options div.option:hover {
 
 div.filterselect div.option img, div.filterselect_options div.option img {
 	vertical-align: middle;
+}
+
+div.filterselect.user_reviews_rating_filter {
+	width: auto;
+	min-width: 150px;
+}
+div.filterselect_options.user_reviews_rating_filter {
+	width: auto;
+	min-width: 150px;
 }
 
 /* stats filter */

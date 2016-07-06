@@ -1798,6 +1798,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	overflow: hidden;
 }
 
+.review_box .content b {
+	font-family: 'Motiva Sans Bold', arial, tahoma;
+	font-weight: normal;
+}
+
 .review_box .content .gradient, .review_box .view_more {
 	display: none;
 }

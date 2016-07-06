@@ -277,6 +277,13 @@ function SelectLanguageFilter( url )
 	window.location = url;
 }
 
+function SelectUserReviewRatingFilter( url )
+{
+	HideMenu( $('filterrating'), $('filterrating_options') );
+
+	window.location = url;
+}
+
 function RequestCurrentUserVotes( publishedFileIDs )
 {
 	if ( !g_steamID )
