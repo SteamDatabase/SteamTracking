@@ -93202,7 +93202,7 @@
 		}
 		"9224"
 		{		
-			"name"				"AsiaFortress Cup Mercenaries Cup 1st Place Season 7"
+			"name"				"AsiaFortress Mercenaries Cup 1st Place Season 7"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_MC_1st"
 			"item_description"	"#TF_TournamentMedal_Season7"
@@ -93211,7 +93211,7 @@
 		}
 		"9225"
 		{		
-			"name"				"AsiaFortress Cup Mercenaries Cup 2nd Place Season 7"
+			"name"				"AsiaFortress Mercenaries Cup 2nd Place Season 7"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_MC_2nd"
 			"item_description"	"#TF_TournamentMedal_Season7"
@@ -93220,7 +93220,7 @@
 		}
 		"9226"
 		{		
-			"name"				"AsiaFortress Cup Mercenaries Cup 3rd Place Season 7"
+			"name"				"AsiaFortress Mercenaries Cup 3rd Place Season 7"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_MC_3rd"
 			"item_description"	"#TF_TournamentMedal_Season7"
@@ -93229,7 +93229,7 @@
 		}
 		"9227"
 		{		
-			"name"				"AsiaFortress Cup Mercenaries Cup Participant Season 7"
+			"name"				"AsiaFortress Mercenaries Cup Participant Season 7"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_MC_Participant"
 			"item_description"	"#TF_TournamentMedal_Season7"
