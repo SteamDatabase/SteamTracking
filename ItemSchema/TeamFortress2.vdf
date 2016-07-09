@@ -15929,36 +15929,14 @@
 		"8"
 		{
 			"name"	"TF_WEAPON_BONESAW"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-			}
+			"prefab"	"weapon_bonesaw"
 			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_bonesaw"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"item_type_name"	"#TF_Weapon_Bonesaw"
-			"item_name"	"#TF_Weapon_Bonesaw"
-			"item_slot"	"melee"
 			"item_quality"	"normal"
 			"baseitem" "1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_bonesaw/c_bonesaw"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_bonesaw/c_bonesaw.mdl"
-			"used_by_classes"
-			{
-				"medic"	"1"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9"
 		{
@@ -22038,39 +22016,14 @@
 		{
 			"name"	"Upgradeable TF_WEAPON_BONESAW"
 			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_bonesaw"
 			"prefab"	"weapon_bonesaw"
 			"craft_class"	""
 			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
-			"item_type_name"	"#TF_Weapon_Bonesaw"
-			"item_name"	"#TF_Weapon_Bonesaw"
-			"item_slot"	"melee"
 			"item_quality"		"unique"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_bonesaw/c_bonesaw"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_bonesaw/c_bonesaw.mdl"
-			"used_by_classes"
-			{
-				"medic"	"1"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"xifier_class_remap"	"weapon_bonesaw"
 		}
 		"199"
 		{
@@ -74245,13 +74198,15 @@
 			"anim_slot"		"MELEE_ALLCLASS"
 			"used_by_classes"
 			{
-				"scout"		"1"
-				"sniper"		"1"
-				"soldier"		"1"
-				"Demoman"		"1"
-				"medic"		"1"
-				"heavy"		"1"
-				"pyro"		"1"
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"Demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"spy" "1"
+				"engineer" "1"
 			}
 			"static_attrs"
 			{
@@ -74259,12 +74214,10 @@
 			}
 			"visuals"
 			{
-				"sound_melee_miss"		"Weapon_Sword.Swing"
-				"sound_melee_hit"		"Weapon_Sword.HitFlesh"
-				"sound_melee_hit_world"		"Weapon_Sword.HitWorld"
-				"sound_burst"		"Weapon_Sword.SwingCrit"
-				"sound_special1"		"Sword.Hit"
-				"sound_special2"		"Sword.Idle"
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
 			}
 			"mouse_pressed_sound"		"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -130171,7 +130124,7 @@
 		"core"
 		{
 			"localized_name"	"#TF_MMCat_Core"
-			"max_excludes"	"3"
+			"max_excludes"	"100"
 
 			"valid_match_groups"
 			{
@@ -130181,7 +130134,7 @@
 		"alternative"
 		{
 			"localized_name"	"#TF_MMCat_Alternative"
-			"max_excludes"	"3"
+			"max_excludes"	"100"
 
 			"valid_match_groups"
 			{
