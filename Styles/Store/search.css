@@ -125,6 +125,8 @@
 	font-size: 11px;
 	line-height: 45px;
 	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .search_result_row .col.search_metascore {

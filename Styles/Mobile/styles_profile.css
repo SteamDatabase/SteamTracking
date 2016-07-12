@@ -459,6 +459,10 @@ span.membersOnline {
 	text-shadow: 1px 1px #1a1a1a;
 }
 
+.friendPlayerLevel.lvl_1100 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 0 -32px;

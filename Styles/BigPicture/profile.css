@@ -917,6 +917,20 @@ ProfilePanel #UpperRow
 	background-position: 10px 0px;
 }
 
+.friendPlayerLevel.lvl_1100
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_space_bp.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 10px -58px;

@@ -3326,6 +3326,7 @@ function CAutoComplete( elInput, fnSearch, fnOnChange )
 	this.m_$Popup = $J ( '<div class="' + strName + '"></div>' );
 	this.m_$Popup.css( 'width', this.m_$Input.outerWidth() + 'px' );
 	this.m_$Input.after( this.m_$Popup );
+	this.m_$Popup.hide();
 
 	var _this = this;
 	this.m_$Input.on( 'keydown.autocomplete', function( event ) { _this.OnInputKeyDown( event ); } );

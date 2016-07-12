@@ -1231,50 +1231,21 @@ HelpWizard = {
 		});
 	},
 
-	CanUseProofOfPurchase: function( strSessionID, strCode, supportURL, bLostPhone ) {
+	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, bLostEmail, bLostPhone ) {
 		$J.ajax({
 			type: "POST",
-			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryCanUseProofOfPurchase",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
-				s: strSessionID
+				s: strSessionID,
+				code: strCode,
+				nav: strNav,
+				lostemail: bLostEmail ? 1 : 0,
+				lostphone: bLostPhone ? 1 : 0
 			} )
 		}).fail( function( xhr ) {
 
 		}).done( function( data ) {
-			if ( data.success )
-			{
-				// user can use proof of purchase to recover account
-				if ( strCode.length > 0 )
-				{
-					// we already have a recovery code, so user already verified access to email address
-					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID
-						+ "&code=" + strCode + "&time=" + data.time + "&digits=" + data.digits;
-				}
-				else if ( bLostPhone )
-				{
-					// user lost phone and must first verify email
-					window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoSendCode/?nav=lostphone&s=" + strSessionID;
-				}
-				else
-				{
-					// user lost access to email
-					if ( data.verifiedPhone )
-					{
-						// user has a verified phone on record, must contact support
-						window.location = supportURL;
-					}
-					else
-					{
-						// user lost access to email, no linked phone. Go directly to credit card verification
-						window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoProofOfPurchase/?s=" + strSessionID
-							+ "&time=" + data.time + "&digits=" + data.digits;
-					}
-				}
-			}
-			else
-			{
-				window.location = supportURL; // just show support URL
-			}
+			window.location = data.redirect;
 		});
 	},
 
@@ -1318,6 +1289,11 @@ HelpWizard = {
 			{
 				var elError = $J( '#form_submit_error' );
 				elError.text( data.errorMsg ).slideDown();
+
+				if ( data.stop )
+				{
+					$J( '#form_verify_pop').hide();
+				}
 			}
 		})
 		.always( function()

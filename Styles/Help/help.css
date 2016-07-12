@@ -576,9 +576,10 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button {
 	display: block;
-	max-width: 740px;
+	max-width: 714px;
 
 	margin-top: 10px;
+	padding-right: 28px;
 	border: solid 1px;
 	border-color: #66778b #323f51 #323f51 #66778b;
 
@@ -593,11 +594,13 @@ body.v6 .page_content_ctn.dark:last-child {
 	cursor: default;
 }
 
-.help_wizard_button:hover {
+.help_wizard_button:hover,
+.help_wizard_button.opened {
 	color: white;
 }
 
-.help_wizard_button a:hover {
+.help_wizard_button a:hover,
+.help_wizard_button.opened a {
 	color: #ffffff;
 }
 
@@ -624,7 +627,8 @@ body.v6 .page_content_ctn.dark:last-child {
 	padding: 10px 14px 10px 14px;
 }
 
-.help_wizard_button:not(.disabled):not(.nohover):hover {
+.help_wizard_button:not(.disabled):not(.nohover):hover,
+.help_wizard_button.opened {
 	background-color: #4581a5;
 	border-color: #8faec7 #4e5d6f #4e5d6f #8faec7;
 }
@@ -660,12 +664,15 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_wizard_button_notes {
-	background-color: #121a25;
+	background-color: rgba(0,0,0,0.2);
 	max-width: 616px;
 	padding: 12px;
 	margin: 10px 0 0 0;
-
 	font-size: 14px;
+}
+
+.help_wizard_button_notes p{
+	padding-bottom: 10px;
 }
 
 .hipri_button_ctn {
@@ -684,6 +691,11 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_arrow_right.help_wizard_button_highpri {
 	background-image: url("https://help.steampowered.com/public/images/arrow_right_white.png");
+}
+
+.help_wizard_button.help_wizard_arrow_right {
+	padding: 0px;
+	padding-right: 30px;
 }
 
 .login_page {
@@ -883,7 +895,7 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_divider {
 	background-color: #3b718d;
 	height: 1px;
-	max-width: 740px;
+	max-width: 714px;
 	margin: 14px 0 8px 0;
 }
 
@@ -893,14 +905,19 @@ body.v6 .page_content_ctn.dark:last-child {
 
 #help_search_support_input {
 	height: 44px;
-	width: 720px;
+	width: 714px;
 	font-family: "Motiva Sans Light Italic", "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 24px;
+	color: #c6d4df;
 	padding: 10px;
-	color: #ffffff;
 	background-color: #324965;
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 #45556c;
+	box-sizing: border-box;
+}
+
+#help_search_support_input .input {
+	color: #67c1f5;
 }
 
 #help_search_support_form {
@@ -1059,6 +1076,13 @@ body.v6 .help_refund_request_area h2 a:hover {
 /*.refund_bright {
 	color: #fdfdfd;
 }*/
+
+.info_box {
+	padding: 10px;
+	background-color: #1d2a3b;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
 
 .purchase_detail_field {
 	color: #67c1f5;
@@ -1311,7 +1335,7 @@ div.help_official_support_row {
 }
 
 .help_game_guides_box {
-	background-color: #121a25;
+	background-color: rgba(0,0,0,0.2);
 	padding: 14px;
 	margin-bottom: 20px;
 }
@@ -1490,9 +1514,7 @@ a.guide_row {
 
 .help_purchase_detail_box {
 	background-color: #1c2837;
-	padding-left: 10px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+	padding: 10px;
 	margin: 6px;
 	line-height: 20px;
 	color: #82909a;
@@ -1560,8 +1582,9 @@ a.guide_row {
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
-	max-width: 702px;
+	max-width: 712px;
 	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
 .help_issue_details p,
@@ -1598,13 +1621,27 @@ a.guide_row {
 }
 
 .help_vacorgameban_details,
-.help_permanentlyremove_details,
+.help_permanentlyremove_details
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 20px;
+	max-width: 712px;
+	margin-bottom: 20px;
+}
+
 .help_tradeban_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
-	width: calc( 644px - 40px );
+	max-width: 712px;
 	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.help_tradeban_details .info_box
+{
+	margin-top: 10px;
+	margin-bottom: 30px;
 }
 
 .help_footer_information
@@ -1615,12 +1652,18 @@ a.guide_row {
 }
 
 .help_vacorgameban_details p,
-.help_permanentlyremove_details p,
-.help_tradeban_details p
+.help_permanentlyremove_details p
 {
 	margin-top: 20px;
 	line-height: 16px;
 }
+
+.help_tradeban_details p
+{
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+
 
 .help_vacorgameban_details p:first-child,
 .help_permanentlyremove_details p:first-child,
@@ -2047,7 +2090,7 @@ a.guide_row {
 
 
 .help_section_content {
-	max-width: 700px;
+	max-width: 712px;
 	background-color: rgba(0, 0, 0, 0.2);
 	display: table;
 	font-size: 12px;
@@ -2075,6 +2118,30 @@ a.guide_row {
 .help_section_body li {
 	margin-bottom: 4px;
 	line-height: 20px;
+}
+
+.help_step_container {
+	position: relative;
+	overflow: hidden;
+}
+
+.help_step_section {
+	max-width: 712px;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-height: 1000px;
+	transition: max-height .25s;
+}
+
+.help_step_section .help_section_body
+{
+	padding-top: 10px;
+}
+
+.help_step_section.help_section_hidden {
+	max-height: 0;
+	transition: max-height .25s;
+	overflow: hidden;
 }
 
 .captcha_section {
@@ -2664,6 +2731,11 @@ input.unlockcode_entry_input
 	float: left;
 }
 
+.paypay_result_box
+{
+    margin: 16px 16px 16px 16px;
+}
+
 #hardware_serial_entry {
 	width: 400px;
 	font-style: normal;
@@ -2935,6 +3007,15 @@ input.unlockcode_entry_input
 	background: #111a25;
 	padding: 20px;
 	max-width: 672px;
+}
+
+.create_help_request_instructions {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.create_help_request_instructions ul {
+	padding: 8px 0px 0px 40px;
 }
 
 .create_help_request_secondary {
@@ -3454,4 +3535,37 @@ ul.attached_file_list {
 
 .help_pendingform_cont {
 	padding-bottom: 10px;
+}
+
+.help_chargeback_description_content {
+	padding-bottom: 20px;
+	line-height: 18px;
+}
+
+.help_chargeback_instructions {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 18px 28px 18px 18px;
+	border-top: 1px solid #5eafde;
+	margin-top: 20px;
+}
+
+.help_chargeback_note {
+	color: #82909a;
+}
+
+.help_chargeback_step {
+	color: #67c1f5;
+}
+
+.help_chargeback_box {
+	background: #222A3B;
+	padding: 14px 14px 24px 14px;
+	margin-top: 6px;
+	margin-bottom: 14px;
+	color: white;
+	line-height:18px;
+}
+
+.help_chargeback_content {
+	max-width: 712px;
 }

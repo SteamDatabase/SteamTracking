@@ -90,6 +90,49 @@ function SendMobileConfirmationOp( op, confirmationID, confirmationKey, success,
 }
 
 
+function SendMultiMobileConfirmationOp( op, rgConfirmationId, rgConfirmationKey, success, error )
+{
+	GetValueFromLocalURL( 'steammobile://steamguard?op=conftag&arg1=' + op, 5,
+		function ( data )
+		{
+			queryString = "op=" + op + "&" + data;
+
+			for ( var i = 0; i < rgConfirmationId.length; i++ )
+			{
+				queryString += "&cid[]=" + rgConfirmationId[i];
+				queryString += "&ck[]=" + rgConfirmationKey[i];
+			}
+
+			$J.ajax( {
+				url: 'https://steamcommunity.com/mobileconf/multiajaxop',
+
+				data: queryString,
+				method: 'POST',
+
+				success: function( data, textStatus, jqXHR ) {
+					if ( data && data.success )
+					{
+						success( data );
+					}
+					else
+					{
+						if ( error )
+							error( data );
+					}
+				},
+
+				error: function( jqXHR, textStatus ) {
+					if ( error )
+						error( null );
+				}
+			});
+		},
+		error,
+		error
+	);
+}
+
+
 function RemoveConfirmationFromList( confirmationID )
 {
 	$J('#conf' + confirmationID).remove();
@@ -123,7 +166,7 @@ function ConfirmFromDetails( confirmationID, confirmationKey )
 
 			ShowAlertDialog(
 					'Confirmation Error',
-					'There was a problem canceling that confirmation. Please try your request again later.',
+					'There was a problem performing that action. Please try your request again later.',
 					'OK'
 			);
 		}
@@ -162,6 +205,76 @@ function CancelFromDetails( confirmationID, confirmationKey )
 					'OK'
 			);
 		}
+	);
+}
+
+
+function ActionForAllSelected( op )
+{
+	var $rgChecked = $J('.mobileconf_list_checkbox input:checked');
+	if ( $rgChecked.length == 0 )
+	{
+		return;
+	}
+
+	var rgConfirmationId = [];
+	var rgConfirmationKey = [];
+
+	$J.each( $rgChecked, function( key ) {
+		var $this = $J(this);
+		var nConfirmationId = $this.data('confid');
+		var nConfirmationKey = $this.data('key');
+
+		rgConfirmationId.push( nConfirmationId );
+		rgConfirmationKey.push( nConfirmationKey );
+	});
+
+	SendMultiMobileConfirmationOp( op, rgConfirmationId, rgConfirmationKey,
+			function( data )
+			{
+				for ( var i = 0; i < rgConfirmationId.length; i++ )
+				{
+					RemoveConfirmationFromList( rgConfirmationId[i] );
+				}
+
+				var nChecked = $J('.mobileconf_list_checkbox input:checked').length;
+				var $elButtons = $J( '#mobileconf_buttons' );
+
+				if ( nChecked == 0 )
+				{
+					$elButtons.css( 'bottom', -$elButtons.height() + 'px' );
+				}
+
+				// Show the "All done" text instead of the list if applicable
+				if ( $J('.mobileconf_list_entry').length == 0 )
+				{
+					$J( '#mobileconf_done' ).show();
+				}
+				else
+				{
+					$J( '#mobileconf_list' ).show();
+				}
+			},
+
+			function( data )
+			{
+				if ( typeof data != 'undefined' && data && typeof data.message != 'undefined' )
+				{
+					ShowAlertDialog(
+							'Confirmation Error',
+							data.message,
+							'OK'
+					);
+
+					return;
+				}
+
+				ShowAlertDialog(
+						'Confirmation Error',
+						'There was a problem performing that action. Please try your request again later.',
+						'OK'
+				);
+			}
 	);
 }
 
@@ -284,6 +397,43 @@ $J( function() {
 			var $elDetails = $J( '#mobileconf_details' );
 			$elDetails.css( 'position', 'static' );
 		}, 550)
+	});
+
+	$J('.mobileconf_list_checkbox').click( function( e ) {
+		e.stopPropagation();
+
+		var nChecked = $J('.mobileconf_list_checkbox input:checked').length;
+		var $elButtons = $J( '#mobileconf_buttons' );
+
+		if ( nChecked > 0 )
+		{
+			var $btnCancel = $J( '#mobileconf_buttons .mobileconf_button_cancel' );
+			var $btnAccept = $J( '#mobileconf_buttons .mobileconf_button_accept' );
+			$btnCancel.unbind();
+			$btnAccept.unbind();
+
+			$btnCancel.text( 'Cancel Selected' );
+			$btnAccept.text( 'Confirm Selected' );
+
+			$btnCancel.click( function() {
+				ActionForAllSelected( 'cancel' );
+			});
+
+			$btnAccept.click( function() {
+				ActionForAllSelected( 'allow' );
+			});
+
+			if ( $elButtons.is(':hidden') )
+			{
+				$elButtons.css( 'bottom', -$elButtons.height() + 'px' );
+				$elButtons.show();
+			}
+			$elButtons.css( 'bottom', '0' );
+		}
+		else
+		{
+			$elButtons.css( 'bottom', -$elButtons.height() + 'px' );
+		}
 	});
 
 	$J(window).on('hashchange', function() {

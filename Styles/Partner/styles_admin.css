@@ -465,17 +465,39 @@ pre.results {
 }
 
 .screenshot_thumb {
-	float: left;
+	display: block;
 	margin: 4px;
-	width: 248px;
-	height: 140px;
+	background-color: black;
 }
+
+.screenshot_link {
+	display: inline-block;
+}
+
+.screenshot_thumb .imagelanguagelist {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#screenshots .imagerow {
+	height: 10px;
+}
+
+.screenshot_actual.drag_over {
+	background-color: grey;
+}
+
+.screenshot_upload_row > span {
+	display: inline-block;
+	width: 800px;
+}
+
 
 #screenshot_container .screenshot_actual {
 	width: 248px;
 	height: 140px;
 	
-	background-color: black;
+
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
