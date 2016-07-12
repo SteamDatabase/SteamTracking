@@ -74358,6 +74358,7 @@
 				{
 					"pyro"		"scenes/workshop/player/items/spring_rider/spring_rider_outro_prop.vcd"
 				}
+				"stop_taunt_if_moved"	"1"
 			}
 		}
 		"30767"
