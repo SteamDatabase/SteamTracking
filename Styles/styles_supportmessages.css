@@ -150,16 +150,3 @@ a.btn_contact_support > span {
 	font-weight: bold;
 	color: #FFFFFF;
 }
-
-.chargeback_hr {
-	margin:20px;
-	border: 1px solid #000;
-}
-
-.chargeback_contents {
-	padding: 10px 0px 0px 10px;
-}
-
-.chargeback_expiration {
-	color:#67c1f5;
-}
