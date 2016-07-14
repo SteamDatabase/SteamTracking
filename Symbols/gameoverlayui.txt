@@ -1,4 +1,3 @@
-
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSProcessInfo
@@ -13195,6 +13194,7 @@
  ThreadSleep
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FixDoubleSlashes

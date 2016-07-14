@@ -2011,6 +2011,7 @@
 
 	"Library_Details_ControllerAction_Keyboard"		"SHOW KEYBOARD"
 	"Library_Details_ControllerAction_Screenshot"	"TAKE SCREENSHOT"
+	"Library_Details_ControllerAction_MousePosition" "MOVE CURSOR"
 	"Library_Details_ControllerAction_ChangePreset"	"CHANGE ACTION SET"
 	"Library_Details_ControllerAction_NextPreset"	"NEXT ACTION SET"
 	"Library_Details_ControllerAction_PreviousPreset" "LAST USED ACTION SET"
@@ -2102,6 +2103,7 @@
 	"Library_Details_FieldLabel_ButtonRadius"		"Button Radius"
 	"Library_Details_FieldLabel_ButtonDistance"		"Button Distance"
 	"Library_Details_FieldLabel_GyroButton"			"Gyro Enable Button"
+	"Library_Details_FieldLabel_GyroButtonInvert"	"Gyro Button Behavior - Turns Gyro"
 	"Library_Details_FieldLabel_GyroAxis"			"Gyro Steering Axis"
 	"Library_Details_FieldLabel_GyroNeutralAngle"	"Gyro Pitch Neutral Angle"
 	"Library_Details_FieldLabel_GyroPointerMode"	"Gyro Mouse Mode"
@@ -3734,6 +3736,15 @@
 	"Library_SelectActionSet_Title"	"Select Action Set"
 	"Library_SelectActionSet_CodeLabel" "Change to this action set when you press the button."
 
+	"Library_SelectMousePosition_Title"	"Select Cursor Position"
+	"Library_SelectMousePosition_CodeLabel"	"Move Cursor to the desired position and press the A button to confirm.  It is recommended that you bind this action from within game for easiest positioning.  While the position will remain proportional, different aspect ratios and resolutions may change in-game layouts, causing variation in precise positioning."
+	"Library_SelectMousePosition_CodeLabel_Overlay" "Move Cursor to the desired position and press the A button to confirm."
+
+	"Library_SelectMousePosition_Teleport_Title"	"Cursor Position Release Behavior"
+	"Library_SelectMousePosition_Teleport_CodeLabel"	"When releasing the button, the cursor can return to it's original position or stay in the new position.  Please select your preference."
+	"Library_SelectMousePosition_Teleport_Yes"	"Return to Old Position"
+	"Library_SelectMousePosition_Teleport_No"	"Remain in New Position"
+
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into."
 	"Library_SelectBeta_Title"	"Select Beta"
 	"Library_SelectBeta_PrivateTitle"	"Enter a passcode to unlock private betas."
@@ -3779,7 +3790,6 @@
 	"SteamUI_StreamLaunch_Unsupported"	"This game currently doesn't support streaming."
 	"SteamUI_StreamLaunch_ScreenLocked"	"The screen is locked on the remote computer."
 	"SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
-	"SteamUI_StreamLaunch_VRActive"	"The remote computer is currently in VR mode so it cannot start an In-Home Streaming session."
 	"SteamUI_StreamLaunch_OtherGameRunning"	"There is another game already running on the remote computer."
 	"SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 	"SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
@@ -4742,6 +4752,12 @@
 	"ControllerBinding_EdgeBindingInvertDpad_On_Description" "The assigned button will be sent if inside the specified Outer Ring Binding Radius. For example, 'Walk' or 'Sneak' could be sent when insde a certain zone."
 	"ControllerBinding_EdgeBindingInvertDpad_Off" "Outer Ring Invert - Off"
 	"ControllerBinding_EdgeBindingInvertDpad_Off_Description" "The assigned button will be sent if outside the specified Outer Ring Binding Radius. For example, 'Run' or 'Sprint' could be sent when outside a certain zone."
+	"ControllerBinding_GyroButtonInvertDpad" "Gyro Button Behavior - Turns Gyro"
+	"ControllerBinding_GyroButtonInvertDpad_Description" "The gyro input button behavior can be flipped.  If set to off, gyro will turn off when the button is pressed."
+	"ControllerBinding_GyroButtonInvertDpad_On" "Gyro Button Behavior - On"
+	"ControllerBinding_GyroButtonInvertDpad_On_Description" "If set, gyro will turn on when the button is pressed."
+	"ControllerBinding_GyroButtonInvertDpad_Off" "Gyro Button Behavior - Off"
+	"ControllerBinding_GyroButtonInvertDpad_Off_Description" "If set, gyro will turn off when the button is pressed."
 	//ABXY
 	"ControllerBinding_ModeDropDown_ABXY" "Style of Input - Button Pad"
 	"ControllerBinding_ModeDropDown_ABXY_Description" "This input will act as a set of buttons.  You can assign actions to these buttons.  Any type of button can be assigned, but X-Input buttons will only work with X-Input Gamepad compatible games."
@@ -4902,6 +4918,12 @@
 	"ControllerBinding_OutputAxisJoystickMove_AxisY_Description" "Output will be sent only to the vertical axis."
 	"ControllerBinding_OutputAxisJoystickMove_AxisX" "Horizontal Only"
 	"ControllerBinding_OutputAxisJoystickMove_AxisX_Description" "Output will be sent only to the horizontal axis."
+	"ControllerBinding_GyroButtonInvertJoystickMove" "Gyro Button Behavior - Turns Gyro"
+	"ControllerBinding_GyroButtonInvertJoystickMove_Description" "The gyro input button behavior can be flipped.  If set to off, gyro will turn off when the button is pressed."
+	"ControllerBinding_GyroButtonInvertJoystickMove_On" "Gyro Button Behavior - On"
+	"ControllerBinding_GyroButtonInvertJoystickMove_On_Description" "If set, gyro will turn on when the button is pressed."
+	"ControllerBinding_GyroButtonInvertJoystickMove_Off" "Gyro Button Behavior - Off"
+	"ControllerBinding_GyroButtonInvertJoystickMove_Off_Description" "If set, gyro will turn off when the button is pressed."
 	//Joystick Camera
 	"ControllerBinding_ModeDropDown_Camera" "Style of Input - Joystick Camera"
 	"ControllerBinding_ModeDropDown_Camera_Description" "This input will operate as a joystick optimized for controlling a first or third person camera.  Joystick will only work with X-Input compatible gamepad games."
@@ -5101,6 +5123,12 @@
 	"ControllerBinding_GyroButtonAbsMouse_GyroLeftTriggerThreshold_Description" "The gyro input will be on only when the Left Trigger is barely pulled."
 	"ControllerBinding_GyroButtonAbsMouse_GyroRightTriggerThreshold" "Gyro Enable Button - Right Trigger Soft Pull"
 	"ControllerBinding_GyroButtonAbsMouse_GyroRightTriggerThreshold_Description" "The gyro input will be on only when the Right Trigger is barely pulled."
+	"ControllerBinding_GyroButtonInvertAbsMouse" "Gyro Button Behavior - Turns Gyro"
+	"ControllerBinding_GyroButtonInvertAbsMouse_Description" "The gyro input button behavior can be flipped.  If set to off, gyro will turn off when the button is pressed."
+	"ControllerBinding_GyroButtonInvertAbsMouse_On" "Gyro Button Behavior - On"
+	"ControllerBinding_GyroButtonInvertAbsMouse_On_Description" "If set, gyro will turn on when the button is pressed."
+	"ControllerBinding_GyroButtonInvertAbsMouse_Off" "Gyro Button Behavior - Off"
+	"ControllerBinding_GyroButtonInvertAbsMouse_Off_Description" "If set, gyro will turn off when the button is pressed."
 	"ControllerBinding_GyroAxisAbsMouse" "Gyro Steering Axis"
 	"ControllerBinding_GyroAxisAbsMouse_Description" "For controlling the horizontal movement of the mouse, you can use either the yaw or roll of the controller."
 	"ControllerBinding_GyroAxisAbsMouse_Yaw" "Gyro Steering Axis - Yaw"
@@ -5277,7 +5305,12 @@
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick_Description" "When using in combination with a pad also using Mouse Joystick mode, use this setting to scale the relative input of the gyro to be less or greater."
 	"ControllerBinding_LeanSensitivityMouseJoystick" "Gyro Lean Point"
 	"ControllerBinding_LeanSensitivityMouseJoystick_Description" "This determines how far the controller must be turned to trigger lean bindings."
-
+	"ControllerBinding_GyroButtonInvertMouseJoystick" "Gyro Button Behavior - Turns Gyro"
+	"ControllerBinding_GyroButtonInvertMouseJoystick_Description" "The gyro input button behavior can be flipped.  If set to off, gyro will turn off when the button is pressed."
+	"ControllerBinding_GyroButtonInvertMouseJoystick_On" "Gyro Button Behavior - On"
+	"ControllerBinding_GyroButtonInvertMouseJoystick_On_Description" "If set, gyro will turn on when the button is pressed."
+	"ControllerBinding_GyroButtonInvertMouseJoystick_Off" "Gyro Button Behavior - Off"
+	"ControllerBinding_GyroButtonInvertMouseJoystick_Off_Description" "If set, gyro will turn off when the button is pressed."
 	// Mouse Region
 
 	//Trigger

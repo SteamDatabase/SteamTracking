@@ -7,6 +7,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/http.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpclient.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/job.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/job.h

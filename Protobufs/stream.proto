@@ -72,6 +72,7 @@ enum EStreamControlMessage {
 	k_EStreamControlVirtualHereRequest = 102;
 	k_EStreamControlVirtualHereReady = 103;
 	k_EStreamControlVirtualHereShareDevice = 104;
+	k_EStreamControlSetSpectatorMode = 105;
 }
 
 enum EStreamVersion {
@@ -634,6 +635,10 @@ message CVirtualHereReadyMsg {
 
 message CVirtualHereShareDeviceMsg {
 	optional string device_address = 1;
+}
+
+message CSetSpectatorModeMsg {
+	optional bool enabled = 1;
 }
 
 message CStreamDataLostMsg {

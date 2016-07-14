@@ -44,8 +44,8 @@
 		place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" dir=down margin-top=10 margin-right=20 width=max }
 		
 		place { control="BroadcastStatusHeader" margin-left=20 margin-right=20 margin-top=20 }
-		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
-		
+		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=25 }
+
 		place { start="BroadcastStatusHeader" margin-top=4 control="BroadcastHelpHeader" dir=down }
 		place { start="BroadcastStatus" margin-top=4 control="BroadcastHelpURL" dir=down }
 		

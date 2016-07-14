@@ -1,5 +1,5 @@
-
  B CCDDBAppDetailCommon::default_instance_
+ B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
  B CLogger::s_VecModuleAddressRanges
@@ -211,6 +211,7 @@
  D typeinfo for CDebugStatsSystem
  D typeinfo for CFrameFunction<CJobMgr>
  D typeinfo for CFrameFunction<CScheduledFunctionMgr>
+ D typeinfo for CHTTPClientMgr
  D typeinfo for CIPCServer
  D typeinfo for CIPCServer::CThreadClient
  D typeinfo for CKeyValuesSystem
@@ -279,6 +280,7 @@
  D vtable for CDebugStatsSystem
  D vtable for CFrameFunction<CJobMgr>
  D vtable for CFrameFunction<CScheduledFunctionMgr>
+ D vtable for CHTTPClientMgr
  D vtable for CIPCServer
  D vtable for CIPCServer::CThreadClient
  D vtable for CKeyValuesSystem
@@ -331,6 +333,7 @@
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CFrameFunction<CJobMgr>
  R typeinfo name for CFrameFunction<CScheduledFunctionMgr>
+ R typeinfo name for CHTTPClientMgr
  R typeinfo name for CIPCServer
  R typeinfo name for CIPCServer::CThreadClient
  R typeinfo name for CKeyValuesSystem
@@ -368,6 +371,7 @@
  R typeinfo name for CUtlLinkedList<TimeDilationRecord_t, int>
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemFunctionCall
  R typeinfo name for CWorkThread
@@ -706,6 +710,7 @@
  T CFrameFunctionMgr::Register(CBaseFrameFunction*)
  T CFrameFunctionMgr::Shutdown()
  T CFrameFunctionMgr::~CFrameFunctionMgr()
+ T CHTTPClientMgr::Validate(CValidator&, char const*)
  T CIPCLogCounts::AddIPCLogCount(char const*, char const*, char const*)
  T CIPCLogCounts::IPCLogCounts_t::IPCLogCounts_t(CIPCLogCounts::IPCLogCounts_t const&)
  T CIPCLogCounts::SpewIPCLogCount()
@@ -1478,6 +1483,8 @@
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::~CUtlVector()
  T CUtlVector<CJobMgr::JobSleeping_t, CUtlMemory<CJobMgr::JobSleeping_t> >::FastRemove(int)
  T CUtlVector<CJobMgr::JobSleeping_t, CUtlMemory<CJobMgr::JobSleeping_t> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
@@ -1751,7 +1758,7 @@
  T Deserialize(CUtlBuffer&, char const**)
  T Deserialize(CUtlBuffer&, void*, int)
  T DeserializeVaArgs(char const*, char const*, char*, int)
- T DispatchOpenSSLErrors()
+ T DispatchOpenSSLErrors(char const*)
  T DoNewAssertDialog
  T ECDH_OpenSSL
  T ECDH_compute_key

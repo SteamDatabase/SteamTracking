@@ -23,6 +23,7 @@
 								<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 								<Label class="Plus" text="+" />
 								<KeyboardShortcut class="TriggerButtonBox" id="RT_btn" type="gamepad" />
+								<Image class="TriggerButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 							</Panel>
 						</Panel>
 					</Panel>

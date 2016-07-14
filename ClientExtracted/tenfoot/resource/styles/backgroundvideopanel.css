@@ -17,6 +17,11 @@ BackgroundVideoPanel
 
 }
 
+BackgroundVideoPanel.FullScreenFadeOut
+{
+    opacity: 0.0;
+}
+
 BackgroundVideoPanel.VR 
 {
 	background-color: #0b2c38ee;

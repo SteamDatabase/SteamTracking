@@ -2086,6 +2086,11 @@ LibraryRecentNews .LargeNewsByline
 		flow-children: right;
 	}
 
+.VR #ScreenshotThumbs
+{
+	height: 220px;
+}
+
 .ScreenshotsSmallThumb {
 	margin: 4px;
 	height: 210px;
@@ -2431,8 +2436,17 @@ LibraryRecentNews .LargeNewsByline
 	margin-right: 20px;
 	width: 100%;
 }
-#HowToWrapper .Plus {
+
+#HowToWrapper .Plus 
+{
 	margin-top: 10px;
+}
+
+.VR #HowToWrapper .Plus
+{
+	font-size: 38px;
+	line-height: 40px;
+	margin-top: 55px;	
 }
 
 #HowToWrapper .ScreenshotLegendButtons {
@@ -3619,6 +3633,11 @@ LibraryAllGames .BottomMouseScrollRegion
 	margin-left: 6px;
 }
 
+.VR .TriggerButtonBox
+{
+	visibility: collapse;
+}
+
 .MiddleButton
 {
 	background-image: url( "file://{images}/overlay/notification_middlebutton.png" );
@@ -3626,9 +3645,34 @@ LibraryAllGames .BottomMouseScrollRegion
 	width: 54px;
 	height: 54px;
 	margin-right: 0px;
-
 }
 
+.VR .MiddleButton
+{
+	background-image: url( "file://{images}/library/icon_steamvr_system.png" );
+	background-size: 78px 112px;
+	width: 78px;
+	height: 112px;
+	margin-right: 20px;
+	margin-top: 8px;
+}
+
+#HowToWrapper .TriggerButton
+{
+	visibility: collapse;
+}
+
+.VR #HowToWrapper .TriggerButton
+{
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_steamvr_trigger.png" );
+	background-size: 78px 112px;
+	width: 78px;
+	height: 112px;
+	margin-right: 0px;
+	margin-left: 20px;
+	margin-top: 8px;
+}
 
 #BigScreenshot
 {

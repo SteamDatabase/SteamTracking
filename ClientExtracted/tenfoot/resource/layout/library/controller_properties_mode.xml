@@ -129,7 +129,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
 					<Slider id="DeadZoneOuterRadius" direction="horizontal" />
 				</Panel>				
-				
+			
 
         <!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
@@ -226,7 +226,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
 					<Slider id="MouseTriggerClampAmount" direction="horizontal" />
 				</Panel>
-
+				<Panel class="FieldWrapper" modes="absmouse" gameactions="off" sources="gyro" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+					<DropDown id="GyroButtonInvertAbsMouse" />
+				</Panel>
+						
 				<!-- Mouse Joystick Mode -->
 				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
@@ -262,7 +266,8 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadzoneY" />
 					<Slider id="DeadzoneYJoystickMouse" direction="horizontal" />
 				</Panel>				
-				
+
+						
 				<!-- Touch Menu Mode -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButtonCount" />
@@ -478,6 +483,7 @@
 					<Slider id="JoystickMoveMouseSensitivity" direction="horizontal" />
 				</Panel>
 
+				
 
         <!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
@@ -682,6 +688,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroRight" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickGyroRight" />
 				</Panel>
+				<Panel class="FieldWrapper" modes="MouseJoystick" gameactions="off" sources="gyro" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+					<DropDown id="GyroButtonInvertMouseJoystick" />
+				</Panel>				
 				<!-- Mouse Joystick Mode Advanced -->
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTap" />
@@ -871,7 +881,10 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertDpad" />
 					</Panel>
-
+				<Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+					<DropDown id="GyroButtonInvertDpad" />
+				</Panel>
 					<!-- ABXY Mode -->
 					<!-- Now In Activators
 					<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="off">
@@ -901,8 +914,12 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputAxis" />
 						<DropDown id="OutputAxisJoystickMove" />
 					</Panel>					
-
+					<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+						<DropDown id="GyroButtonInvertJoystickMove" />
+					</Panel>	
           <!-- Joystick Move Mode Advanced -->
+					
           <Panel class="FieldWrapper" modes="joystickmove" advanced="on">
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
             <Slider id="EdgeBindingRadiusJoystick" direction="horizontal" />
@@ -948,7 +965,11 @@
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
             <Slider id="JoystickCameraMouseSensitivity" direction="horizontal" />
           </Panel>
-
+				<Panel class="FieldWrapper" modes="joystickcamera" gameactions="off" sources="gyro" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+					<DropDown id="GyroButtonInvertJoystickCamera" />
+				</Panel>
+						
 					<!-- Mouse Mode -->
 					<Panel class="FieldWrapper" modes="absmouse" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />

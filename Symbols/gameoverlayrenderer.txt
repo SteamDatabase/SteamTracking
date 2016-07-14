@@ -1,4 +1,7 @@
 
+ .objc_class_name_NSApplication
+ .objc_class_name_NSCursor
+ .objc_class_name_NSView
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -163,6 +166,9 @@
  HideCursor
  InitCursor
  NSApp
+ OBJC_CLASS_$_NSApplication
+ OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSView
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
  R typeinfo name for CGameStreamGameMemStream
@@ -352,6 +358,8 @@
  T CVideoMemStreamWriter::GetFrameSize() const
  T CVideoMemStreamWriter::Release() const
  T CVideoMemStreamWriter::~CVideoMemStreamWriter()
+ T CocoaForceArrowCursor()
+ T CocoaRestoreSystemCursor()
  T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
  T CreateShader(char const*, char const*)
  T Exiting()
@@ -390,6 +398,7 @@
  T IPC::PurgeCurrentProcess()
  T IPC::crc32(unsigned int, void*, unsigned int)
  T InitializeGameStream()
+ T InvalidateNSViewCursorRects()
  T IsOverlayEnabled
  T Log(char const*, ...)
  T NotifyVRCleanup
@@ -407,6 +416,7 @@
  T SendOneTimeInputPid()
  T SetNotificationPosition
  T SetVideoCaptureType(EVideoCaptureType)
+ T SetupCocoaHooking()
  T ShutdownGameStream()
  T StartMovieRecordingNextFrame(int, int)
  T SteamCFRunLoopRun()
@@ -559,6 +569,7 @@
  b GetGLProcAddress(char*)::m_pLibGL
  b Log(char const*, ...)::bCheckedLogEnabled
  b SendOneTimeInputPid()::s_bOneTimeInitializationDone
+ b SetupCocoaHooking()::s_bInitialized
  b SteamThreadTools::g_ThreadMainThreadID
  b __gnu_cxx::__verbose_terminate_handler()::terminating
  b eh_globals
@@ -578,6 +589,7 @@
  b g_pMovieRenderer
  b init
  b s_Pid
+ b s_bCursorForcedToArrow
  b s_bDoLog
  b s_bFirstLogEntry
  b s_bIsVideoRecording
@@ -586,6 +598,7 @@
  bootstrap_look_up
  bootstrap_port
  ceilf
+ class_getInstanceMethod
  close
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
@@ -665,6 +678,7 @@
  memcmp
  memcpy
  memset
+ method_exchangeImplementations
  mmap
  mmap$UNIX2003
  munmap
@@ -713,7 +727,10 @@
  strncpy
  strstr
  strtoull
+ t -[NSCursor(OverrideNSCursor) hooked_set]
+ t -[NSView(OverrideNSView) hooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
+ t ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)
  t Init()
  t InitTicks()
  t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)

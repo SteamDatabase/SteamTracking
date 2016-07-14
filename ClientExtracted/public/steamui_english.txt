@@ -4140,7 +4140,6 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_StreamLaunch_Unsupported"	"This game currently doesn't support streaming."
 "SteamUI_StreamLaunch_ScreenLocked"	"The screen is locked on the remote computer."
 "SteamUI_StreamLaunch_Broadcasting"	"The remote computer is currently using Steam Broadcasting so it cannot start an In-Home Streaming session."
-"SteamUI_StreamLaunch_VRActive"	"The remote computer is currently in VR mode so it cannot start an In-Home Streaming session."
 "SteamUI_StreamLaunch_OtherGameRunning"	"There is another game already running on the remote computer."
 "SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 "SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
@@ -4508,4 +4507,7 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_IncorrectVRSDKWarning_Title" "Warning"
 "Steam_IncorrectVRSDKWarning_Desc" "%launching_app% does not support your currently active headset."
+
+"Steam_VacBanOnAccount"		"VAC Ban(s) on Account"
+"Steam_NoVacBanOnAccount"	"No VAC Bans on Account"
 }

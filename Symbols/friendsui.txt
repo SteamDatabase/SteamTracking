@@ -1,4 +1,3 @@
-
  AssertMsgImplementation
  B CChatRoomDlg::m_ulLinkID
  B CCookie::default_instance_
@@ -8567,7 +8566,7 @@
  T DSA_sign_setup
  T DSA_size
  T DSA_verify
- T DispatchOpenSSLErrors()
+ T DispatchOpenSSLErrors(char const*)
  T ECDH_OpenSSL
  T ECDH_compute_key
  T ECDSA_OpenSSL

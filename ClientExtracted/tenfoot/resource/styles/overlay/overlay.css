@@ -95,6 +95,11 @@
 	flow-children: down;
 }
 
+.FullScreenFadeOut #OverlayDashboard
+{
+	opacity: 0.2;
+}
+
 .BehindMessageBox #OverlayDashboard
 {
 	saturation: 0.6;

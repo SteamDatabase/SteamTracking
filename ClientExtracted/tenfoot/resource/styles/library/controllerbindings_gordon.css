@@ -7,6 +7,7 @@
 @define bindingbuttonwidth: 420px;
 @define negbindingbuttonwidth: -420px;
 
+
 ControllerBindingsGordon
 {
 	opacity: 0.0;
@@ -22,7 +23,14 @@ ControllerBindingsGordon
 ControllerBindingsGordon:descendantfocus
 {
 	opacity: 1.0;
+
 }
+
+ControllerBindingsGordon.FullScreenFadeOut:descendantfocus
+{
+	opacity: 0.2;
+}
+
 
 ControllerBindingsGordon.Destructing
 {
@@ -99,6 +107,30 @@ ControllerBindingsGordon.ScreenSaverMode
     width: 1880px;
 }
 
+SelectMousePosition
+{
+    opacity: 1.0;
+}
+
+.SelectMousePositionBody .MsgBoxBodyRegion
+{
+    background-color: gradient( radial, 0% -0%, 120px -40px, 120% 150%, from( #285c7388 ), to( #12203d88 ) ); 
+}
+
+.FullScreenButton
+ {
+	min-height: 1920px;
+	height: 1080px;
+    opacity: 0.4;
+	color: detailsdatalabel;
+	font-size: deffontsize;
+	font-family: platformfont;
+	background-color: simplebuttonsolid_vertical;
+
+	transition-property: background-color, color;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
 
 .HasMultipleActionSets #Left,
 .HasMultipleActionSets #Right

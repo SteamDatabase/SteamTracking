@@ -305,6 +305,11 @@ HelpWithLogin
 	url			"%help%wizard/HelpWithLogin?redir=clientlogin"
 	Method		"internal"
 }
+HelpVacBans
+{
+	url			"%help%wizard/VacBans"
+	method		"internal"
+}
 
 StoreFrontPage
 {

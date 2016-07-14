@@ -1,4 +1,3 @@
-
  .objc_class_name_NSAppleEventManager
  .objc_class_name_NSApplication
  .objc_class_name_NSArray
@@ -1255,7 +1254,7 @@
  T CSystem::SetClipboardText(wchar_t const*, int)
  T CSystem::SetRegistryInteger(char const*, int)
  T CSystem::SetRegistryString(char const*, char const*)
- T CSystem::SetShellExecuteFunction(void (*)(char const*, char const*))
+ T CSystem::SetShellExecuteFunction(bool (*)(char const*, char const*))
  T CSystem::SetUserConfigFile(char const*, char const*)
  T CSystem::SetWatchForComputerUse(bool)
  T CSystem::ShellExecute(char const*, char const*)
@@ -2615,6 +2614,7 @@
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
  V_CopyAndFixSlashes
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes
  V_FixSlashes
  V_MakeAbsolutePath

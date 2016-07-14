@@ -1,4 +1,3 @@
-
  AssertMsgImplementation
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_

@@ -181,6 +181,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_rootdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_settings.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_cloud.cpp

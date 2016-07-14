@@ -120,29 +120,26 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"VACInfoLinkImage"
+	"VacInfoURL"
 	{
-		"ControlName"		"ImagePanel"
-		"fieldName"		"VACInfoLinkImage"
-		"xpos"		"468"
-		"ypos"		"58"
-		"wide"		"28"
-		"tall"		"28"
+		"ControlName"		"URLLabel"
+		"fieldName"		"VacInfoLink"
+		"labelText"		"#Steam_NoVacBanOnAccount"
+		"URLText"		"Steam://url/HelpVacBans/"
+		"xpos"		"136"
+		"ypos"		"67"
+		"wide"		"340"
+		"tall"		"42"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
-		"visible"		"0"
+		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"image"		"graphics/icon_click_for_details"
-		"fillcolor"		""
-		"gradientStart"		""
-		"gradientEnd"		""
-		"gradientVertical"		"0"
-		"scaleImage"		"0"
-		"zpos"			"2"
+		"textAlignment"		"north-west"
+		"wrap"		"1"
 	}
-	
+
 	"SecurityStatusLabel"
 	{
 		"ControlName"		"Label"
@@ -280,7 +277,7 @@
 		"paintbackground"		"1"
 		"textAlignment"		"north-east"
 		"wrap"		"0"
-		}
+	}
 
 	
 	"ContactEmailLabel"
@@ -396,24 +393,6 @@
 		"labelText"		"#VAC_Status"
 		"textAlignment"		"west"
 		"wrap"		"0"
-	}
-	"VACStatusLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"VACStatusLabel"
-		"xpos"		"136"
-		"ypos"		"67"
-		"wide"		"340"
-		"tall"		"42"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#VAC_NoBans"
-		"textAlignment"		"north-west"
-		"wrap"		"1"
 	}
 	"Divider2"
 	{

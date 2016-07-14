@@ -361,6 +361,7 @@
  D typeinfo for CHTTPCacheInitializeThread
  D typeinfo for CHTTPClient
  D typeinfo for CHTTPClientConnection
+ D typeinfo for CHTTPClientMgr
  D typeinfo for CHTTPClientRequest
  D typeinfo for CHTTPClientResponse
  D typeinfo for CHTTPClientWorkThread
@@ -521,6 +522,7 @@
  D vtable for CHTTPCacheInitializeThread
  D vtable for CHTTPClient
  D vtable for CHTTPClientConnection
+ D vtable for CHTTPClientMgr
  D vtable for CHTTPClientRequest
  D vtable for CHTTPClientResponse
  D vtable for CHTTPClientWorkThread
@@ -634,6 +636,7 @@
  R typeinfo name for CHTTPCacheInitializeThread
  R typeinfo name for CHTTPClient
  R typeinfo name for CHTTPClientConnection
+ R typeinfo name for CHTTPClientMgr
  R typeinfo name for CHTTPClientRequest
  R typeinfo name for CHTTPClientResponse
  R typeinfo name for CHTTPClientWorkThread
@@ -738,6 +741,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
+ R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
  R typeinfo name for CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
@@ -1344,7 +1348,7 @@
  T CHTTPCacheInitializeThread::~CHTTPCacheInitializeThread()
  T CHTTPClient::AddClientConnectionBackToPool(CHTTPClientConnection*)
  T CHTTPClient::BFrameFuncHandleCompletedWorkItems(CReliableTimer&)
- T CHTTPClient::CHTTPClient(CFrameFunctionMgr*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*)
+ T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*)
  T CHTTPClient::CancelRequest(CHTTPRequestHandle*)
  T CHTTPClient::CreateWorkerThread(CWorkThreadPool*)
  T CHTTPClient::GetSSLContextForClientCert(char const*, char const*)
@@ -1390,6 +1394,9 @@
  T CHTTPClientConnection::TriggerRecvCallback()
  T CHTTPClientConnection::Validate(CValidator&, char const*)
  T CHTTPClientConnection::~CHTTPClientConnection()
+ T CHTTPClientMgr::InsertHTTPClient(CHTTPClient*)
+ T CHTTPClientMgr::RemoveHTTPClient(CHTTPClient*)
+ T CHTTPClientMgr::Validate(CValidator&, char const*)
  T CHTTPClientRequest::BuildClientRequestLineAndHeaders(CUtlBuffer&) const
  T CHTTPClientRequest::BuildPOSTParams()
  T CHTTPClientRequest::CHTTPClientRequest(CHTTPClientRequest*, char const*, EHTTPStatusCode)
@@ -2562,6 +2569,8 @@
  T CUtlLinkedList<unsigned int, int>::Unlink(int)
  T CUtlLinkedList<unsigned int, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<unsigned int, int>::~CUtlLinkedList()
+ T CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Find(CHTTPClient::HostLookup_t const&) const
+ T CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Insert(CHTTPClient::HostLookup_t const&)
  T CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Validate(CValidator&, char const*)
  T CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Find(CHTTPClient::SSLContextLookup_t const&) const
  T CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Insert(CHTTPClient::SSLContextLookup_t const&, COpenSSLContext* const&)
@@ -2649,6 +2658,7 @@
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
  T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
  T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
@@ -2797,6 +2807,13 @@
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FastRemove(int)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FindAndFastRemove(CHTTPClient* const&)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::GrowVector(int)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::InsertBefore(int, CHTTPClient* const&)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::~CUtlVector()
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::GrowVector(int)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::InsertBefore(int, CHTTPClientConnection* const&)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::ShiftElementsRight(int, int)
@@ -3460,7 +3477,7 @@
  T DeleteVideoPlayer
  T DeleteVideoPlayerManager()
  T DeserializeVaArgs(char const*, char const*, char*, int)
- T DispatchOpenSSLErrors()
+ T DispatchOpenSSLErrors(char const*)
  T DoNewAssertDialog
  T DynBind_SCDynamicStoreCreate(__CFAllocator const*, __CFString const*, void (*)(__SCDynamicStore const*, __CFArray const*, void*), SCDynamicStoreContext*)
  T DynBind_SCDynamicStoreCreateRunLoopSource(__CFAllocator const*, __SCDynamicStore const*, long)

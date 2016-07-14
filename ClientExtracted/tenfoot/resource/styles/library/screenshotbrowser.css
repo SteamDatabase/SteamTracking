@@ -235,6 +235,11 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 	visibility: visible;
 }
 
+.VR #KeyboardHotkeySection
+{
+	visibility: collapse;
+}
+
 #GamepadHotkeySection
 {
 	flow-children: down;
@@ -263,6 +268,53 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 {
 	horizontal-align: center;	
 	vertical-align: center;
+}
+
+.VR #GamepadHotkeySection #InGameControllerScreenshot
+{
+	visibility: collapse;
+}
+
+.VR #GamepadHotkeySection #GamepadBtn
+{
+	visibility: collapse;
+}
+
+.VR #GamepadHotkeySection .Plus
+{
+	font-size: 38px;
+	line-height: 40px;
+	margin-top: 10px;	
+}
+
+#GamepadHotkeySection .MiddleButton
+{
+	background-image: url( "file://{images}/settings/icon_middle.tga" );
+}
+
+.VR #GamepadHotkeySection .MiddleButton
+{
+	background-image: url( "file://{images}/library/icon_steamvr_system.png" );
+	width: 78px;
+	height: 112px;
+	margin-right: 20px;
+	margin-top: 8px;
+}
+
+#GamepadHotkeySection .TriggerButton
+{
+	visibility: collapse;
+}
+
+.VR #GamepadHotkeySection .TriggerButton
+{
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_steamvr_trigger.png" );
+	width: 78px;
+	height: 112px;
+	margin-right: 0px;
+	margin-left: 20px;
+	margin-top: 8px;
 }
 	
 .LeftMouseScrollRegion, .RightMouseScrollRegion

@@ -15,10 +15,11 @@
 				<Panel id="GamepadHotkeySection" class="HotkeySection">
 					<Label class="HotkeyHeader" text="#Screenshots_ControllerHeader" />
 					<Panel class="GamepadHotkeyRow">
-						<Image class="icon" src="file://{images}/settings/icon_middle.tga" />
+						<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 						<Label id="InGameControllerScreenshot" text="#SettingsInGame_Home" />
-						<Label text="+" />
+						<Label class="Plus" text="+" />
 						<KeyboardShortcut id="GamepadBtn" type="gamepad" disabled="true"/>
+                        <Image class="TriggerButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 					</Panel>
 				</Panel>
 			</Panel>

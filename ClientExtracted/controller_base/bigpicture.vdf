@@ -48,6 +48,10 @@
 				"CloseTab"		"#Action_CloseTab"
 			}
 		}
+		"Mouse"
+		{
+			"title"					"#Set_Mouse"
+		}
 	}
 	"localization"
 	{
@@ -55,6 +59,7 @@
 		{
 			"Set_Default"		"Default"
 			"Set_WebBrowser"		"Web Browser"
+			"Set_Mouse"				"Mouse"
 			"Action_Back"		"Navigate Back"
 			"Action_Forward"		"Navigate Forward"
 			"Action_Reload"		"Reload"
@@ -168,6 +173,15 @@
 			"WebBrowser"		"zoom"
 		}
 	}
+	"group"
+	{
+		"id"		"9"
+		"mode"		"absolute_mouse"
+		"settings"
+		{
+			"sensitivity"		"250"
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -206,6 +220,21 @@
 			{
 				"left_click"		"mode_shift right_trackpad 8"
 			}
+		}
+		"settings"
+		{
+		}
+	}
+	"preset"
+	{
+		"id"		"2"
+		"name"		"Mouse"
+		"group_source_bindings"
+		{
+			"9"		"right_trackpad active"
+		}
+		"switch_bindings"
+		{
 		}
 		"settings"
 		{

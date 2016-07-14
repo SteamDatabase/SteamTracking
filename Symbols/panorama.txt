@@ -1,4 +1,3 @@
-
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSProcessInfo
@@ -10843,6 +10842,7 @@
  T panorama::CTopLevelWindow::SetMinFPS(float)
  T panorama::CTopLevelWindow::SetPanelVisible(int, bool)
  T panorama::CTopLevelWindow::SetPreventForceWindowOnTop(bool)
+ T panorama::CTopLevelWindow::SetShouldUseGameWindowSize(bool)
  T panorama::CTopLevelWindow::SetUIScaleFactor(float)
  T panorama::CTopLevelWindow::SetWindowPriority(int)
  T panorama::CTopLevelWindow::Shutdown()

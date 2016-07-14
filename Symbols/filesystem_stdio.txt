@@ -1,4 +1,3 @@
-
  AssertMsgImplementation
  B CUtlSymbol::s_pSymbolTable
  B InterfaceReg::s_pInterfaceRegs
