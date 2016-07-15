@@ -130171,7 +130171,7 @@
 			"1"
 			{
 				"name"					"cp_egypt_final"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Egypt"
 				"strangeprefixtoken"	"#TF_Egypt_StrangePrefix"
 				"maptoken"				"Map Token Egypt"
@@ -130186,13 +130186,13 @@
 			"3"
 			{
 				"name"					"cp_gravelpit"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Map_cp_gravelpit"
 			}
 			"4"
 			{
 				"name"					"cp_junction_final"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Junction"
 				"strangeprefixtoken"	"#TF_Junction_StrangePrefix"
 				"maptoken"				"Map Token Junction"
@@ -130210,7 +130210,7 @@
 			"6"
 			{
 				"name"					"cp_steel"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Steel"
 				"strangeprefixtoken"	"#TF_Steel_StrangePrefix"
 				"maptoken"				"Map Token Steel"
@@ -130234,6 +130234,7 @@
 				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
 				"maptoken"				"Map Token Snowplow"
 				"authors"				"#cp_snowplow_authors"
+				"quickplay_type"		"disabled"
 			}
 		}
 		"ctf"
@@ -130347,7 +130348,7 @@
 			"3"
 			{
 				"name"					"cp_fastlane"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Fastlane"
 				"strangeprefixtoken"	"#TF_Fastlane_StrangePrefix"
 				"maptoken"				"Map Token Fastlane"
@@ -130356,7 +130357,7 @@
 			"4"
 			{
 				"name"					"cp_freight_final1"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Freight"
 				"strangeprefixtoken"	"#TF_Freight_StrangePrefix"
 				"maptoken"				"Map Token Freight"
@@ -130369,14 +130370,14 @@
 			"5"
 			{
 				"name"					"cp_granary"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Map_cp_granary"
 				"quickplay_type"		"all_users"
 			}
 			"6"
 			{
 				"name"					"cp_well"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Map_cp_well"
 				"tags"
 				{
@@ -130386,7 +130387,7 @@
 			"7"
 			{
 				"name"					"cp_yukon_final"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Yukon"
 				"strangeprefixtoken"	"#TF_Yukon_StrangePrefix"
 				"maptoken"				"Map Token Yukon"
@@ -130513,7 +130514,7 @@
 			"3"
 			{
 				"name"					"koth_nucleus"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Map_koth_nucleus"
 			}
 			"4"
@@ -130602,7 +130603,7 @@
 			"3"
 			{
 				"name"					"pl_hoodoo_final"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Hoodoo"
 				"strangeprefixtoken"	"#TF_Hoodoo_StrangePrefix"
 				"maptoken"				"Map Token Hoodoo"
@@ -130696,7 +130697,7 @@
 			"2"
 			{
 				"name"					"plr_nightfall_final"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Nightfall"
 				"strangeprefixtoken"	"#TF_Nightfall_StrangePrefix"
 				"maptoken"				"Map Token Nightfall"
@@ -130745,6 +130746,16 @@
 				"name"					"cp_degrootkeep"
 				"enabled"				"1"
 				"localizedname"			"#TF_Map_cp_degrootkeep"
+				"quickplay_type"		"disabled"
+			}
+			"4"
+			{
+				"name"					"cp_snowplow"
+				"enabled"				"1"
+				"localizedname"			"#TF_Map_Snowplow"
+				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+				"maptoken"				"Map Token Snowplow"
+				"authors"				"#cp_snowplow_authors"
 				"quickplay_type"		"disabled"
 			}
 		}
@@ -131184,6 +131195,16 @@
 				"localizedname"			"#TF_Map_cp_degrootkeep"
 				"quickplay_type"		"all_users"
 			}
+			"4"
+			{
+				"name"					"cp_snowplow"
+				"enabled"				"1"
+				"localizedname"			"#TF_Map_Snowplow"
+				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+				"maptoken"				"Map Token Snowplow"
+				"authors"				"#cp_snowplow_authors"
+				"quickplay_type"		"disabled"
+			}
 		}
 		"competitive_6v6"
 		{
@@ -131565,6 +131586,186 @@
 		{
 			"name"			"pass_district"
 			"localizedname"	"#TF_Map_pass_district"
+		}
+		"53"
+		{
+			"name"			"ctf_landfall"
+			"localizedname"	"#TF_Map_Landfall"
+		}
+		"54"
+		{
+			"name"					"cp_snowplow"
+			"localizedname"			"#TF_Map_Snowplow"
+		}
+		"55"
+		{
+			"name"					"ctf_2fort_invasion"
+			"localizedname"			"#TF_Map_2FortInv"
+		}
+		"56"
+		{
+			"name"					"cp_powerhouse"
+			"localizedname"			"#TF_Map_cp_powerhouse"
+		}
+		"57"
+		{
+			"name"					"koth_suijin"
+			"localizedname"			"#TF_Map_Suijin"
+		}
+		"58"
+		{
+			"name"					"koth_probed"
+			"localizedname"			"#TF_Map_Probed"
+		}
+		"59"
+		{
+			"name"					"koth_highpass"
+			"localizedname"			"#TF_Map_Highpass"
+		}
+		"60"
+		{
+			"name"					"pl_cactuscanyon"
+			"localizedname"			"TF_Map_pl_cactuscanyon"
+		}
+		"61"
+		{
+			"name"					"pl_borneo"
+			"localizedname"			"#TF_Map_Borneo"
+		}
+		"62"
+		{
+			"name"					"pl_snowycoast"
+			"localizedname"			"#TF_Map_Snowycoast"
+		}
+		"63"
+		{
+			"name"					"pd_watergate"
+			"localizedname"			"#TF_Map_Watergate"
+		}
+		"64"
+		{
+			"name"					"arena_watchtower"
+			"localizedname"			"#TF_WatchTower"
+		}
+		"65"
+		{
+			"name"					"arena_offblast_final"
+			"localizedname"			"#TF_Offblast"
+		}
+		"66"
+		{
+			"name"					"arena_badlands"
+			"localizedname"			"#TF_Map_arena_badlands"
+		}
+		"67"
+		{
+			"name"					"arena_granary"
+			"localizedname"			"#TF_Map_arena_granary"
+		}
+		"68"
+		{
+			"name"					"arena_lumberyard"
+			"localizedname"			"#TF_Map_arena_lumberyard"
+		}
+		"69"
+		{
+			"name"					"arena_nucleus"
+			"localizedname"			"#TF_Map_arena_nucleus"
+		}
+		"70"
+		{
+			"name"					"arena_ravine"
+			"localizedname"			"#TF_Map_arena_ravine"
+		}
+		"71"
+		{
+			"name"					"arena_sawmill"
+			"localizedname"			"#TF_Map_arena_sawmill"
+		}
+		"72"
+		{
+			"name"					"arena_well"
+			"localizedname"			"#TF_Map_arena_well"
+		}
+  		"73"
+		{
+			"name"					"arena_byre"
+			"localizedname"			"#TF_Map_Byre"
+		}
+		"74"
+		{
+			"name"					"cp_gorge_event"
+			"localizedname"			"#TF_Map_GorgeEvent"
+		}
+		"75"
+		{
+			"name"					"cp_sunshine_event"
+			"localizedname"			"#TF_Map_SunshineEvent"				
+		}
+		"76"
+		{
+			"name"					"koth_moonshine_event"
+			"localizedname"			"#TF_Map_MoonshineEvent"
+		}
+		"77"
+		{
+			"name"					"pl_millstone_event"
+			"localizedname"			"#TF_Map_MillstoneEvent"
+		}
+		"78"
+		{
+			"name"					"koth_viaduct_event"
+			"localizedname"			"#TF_Map_koth_viaduct_event"
+		}
+		"79"
+		{
+			"name"					"cp_manor_event"
+			"localizedname"			"#TF_ManorEvent"
+		}
+		"80"
+		{
+			"name"					"koth_harvest_event"
+			"localizedname"			"#TF_Map_koth_harvest_event"
+		}
+		"81"
+		{
+			"name"					"koth_lakeside_event"
+			"localizedname"			"#TF_Map_koth_lakeside_event"
+		}
+		"82"
+		{
+			"name"					"plr_hightower_event"
+			"localizedname"			"#TF_Map_plr_hightower_event"
+		}
+		"83"
+		{
+			"name"					"sd_doomsday_event"
+			"localizedname"			"#TF_Map_sd_doomsday_event"
+		}
+		"84"
+		{
+			"name"					"rd_asteroid"
+			"localizedname"			"#TF_Map_rd_asteroid"
+		}
+		"85"
+		{
+			"name"					"ctf_foundry"
+			"localizedname"			"#TF_Map_powerup_ctf_foundry"
+		}
+		"86"
+		{
+			"name"					"ctf_gorge"
+			"localizedname"			"#TF_Map_powerup_ctf_gorge"
+		}
+		"87"
+		{
+			"name"					"ctf_thundermountain"
+			"localizedname"			"#TF_Map_powerup_ctf_thundermountain"
+		}
+		"88"
+		{
+			"name"					"ctf_hellfire"
+			"localizedname"			"#TF_Map_powerup_ctf_hellfire"
 		}
 	}
 	"steam_packages"
