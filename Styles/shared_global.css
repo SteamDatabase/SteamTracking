@@ -536,7 +536,8 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	.friendPlayerLevel.lvl_300, .friendPlayerLevel.lvl_400,
 	.friendPlayerLevel.lvl_500, .friendPlayerLevel.lvl_600,
 	.friendPlayerLevel.lvl_700, .friendPlayerLevel.lvl_800,
-	.friendPlayerLevel.lvl_900, .friendPlayerLevel.lvl_1000
+	.friendPlayerLevel.lvl_900, .friendPlayerLevel.lvl_1000,
+	.friendPlayerLevel.lvl_1100
 {
 	border: none;
 	border-radius: 0;
