@@ -186,7 +186,7 @@ function OnValidateWalletCodeFailure( detail )
 				break;
 				
 			case 15:
-				sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed.  If you have recently purchased this code, please contact the seller for further assistance.';
+				sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed. Steam Support is unable to issue you a new code.';
 				break;
 
 			case 58:
