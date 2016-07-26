@@ -1849,7 +1849,7 @@ function InitHorizontalAutoSliders()
 			$Slider.append( $J('<div/>', {'class': 'handle'} ) )
 		);
 		$Wrapper.after( $SliderCtn );
-		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].scrollHeight ); };
+		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].scrollHeight - 1 ); };
 
 		$Wrapper.on('v_contentschanged.AutoSlider', function() {
 			fnFixHeight();

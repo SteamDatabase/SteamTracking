@@ -2865,10 +2865,10 @@ input.inputSplits {
 }
 input.inputTagsFilter + label {
 	color: #fff;
-	min-width: 230px;
+	width: 230px;
 	cursor: pointer;
 	display: inline-block;
-	height: 19px;
+	min-height: 19px;
 	vertical-align: top;
 	padding-top: 4px;
 	margin-left: -31px;

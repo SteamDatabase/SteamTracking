@@ -190,14 +190,14 @@ jQuery( function($) {
 			{
 				if ( bShouldUseResponsiveMenu )
 				{
-					$Affordance.show();
+					$Affordance.addClass( 'active' );
 					fnInitLocalMenu();
 					$LocalMenu.find('.localmenu_content' ).append( $LocalMenuContent );
 				}
 				else
 				{
 					fnResetMenuState();
-					$Affordance.hide();
+					$Affordance.removeClass('active');
 					for ( var i = 0; i < rgMenuContents.length; i++ )
 					{
 						rgMenuContents[i].wrapper.append( rgMenuContents[i].content );

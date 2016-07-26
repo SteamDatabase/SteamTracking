@@ -328,3 +328,12 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 	} );
 };
 
+//
+// Purpose: Sets the queue type cookie for the queue we're entering then redirects
+//
+function BeginDiscoveryQueue( eQueueType, eleAnchorTarget )
+{
+	WebStorage.SetCookie( 'queue_type', eQueueType );
+	window.location = eleAnchorTarget.href;
+}
+

@@ -67,6 +67,9 @@ function CheckVoteResultsJSON( json )
 		case 15:
 			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. Please make sure that you own the this game and that your account is in good standing.' );
 			return false;
+		case 17:
+			ShowAlertDialog( 'Error', 'Your account is VAC Banned in this game and you\'re unable to perform this action as a result.' );
+			return false;
 		case 1:
 			return true;
 		default:

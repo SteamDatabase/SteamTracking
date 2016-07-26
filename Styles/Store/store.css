@@ -208,6 +208,12 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
     margin-top: 30px;
     margin-bottom: 7px;
 }
+
+body.v6 .responsive_home_spotlight_recommended .home_leftcol .spotlight_content h2 {
+	margin-bottom: 2px;
+	margin-top: 1px;
+}
+
 body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6  .apps_recommended_by_curators_ctn h2 {
     margin-top: 40px;
     margin-bottom: 7px;
@@ -826,6 +832,7 @@ a#store_search_link img {
 .store_horizontal_autoslider_ctn {
 	overflow: hidden;
 	margin-bottom: 1px;
+	padding-bottom: 1px;
 }
 
 .store_horizontal_minislider_ctn {
@@ -1132,6 +1139,11 @@ a#store_search_link img {
 
     margin-bottom: 4px;
     padding-left: 244px;
+}
+
+.tab_item:hover,
+.large .tab_item:hover {
+	background: rgba( 0, 0, 0, 0.4 );
 }
 
 .tab_item_overlay {
@@ -1850,6 +1862,14 @@ body.v6 .discover_queue_empty>h3 {
 .dq_item {
 	position: absolute;
 	box-shadow: 0 0 8px 0 #000000;
+}
+.dq_item,
+.dq_item div,
+.dq_item img {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
 }
 
 .dq_item .dq_item_cap {

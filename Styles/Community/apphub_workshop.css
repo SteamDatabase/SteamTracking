@@ -1177,7 +1177,6 @@ input.inputTagsFilter + label {
 	color: #fff;
 	width: 263px;
 	display: inline-block;
-	height: 19px;
 	vertical-align: top;
 	padding-top: 4px;
 	margin-left: -31px;
@@ -1192,7 +1191,6 @@ input.inputTagsFilter:checked + label:hover
 	margin-left: -10px;
 	padding-left: 10px;
 	margin-right: -10px;
-	height: 20px;
 	padding-top: 0px;
 	padding-bottom: 3px;
 }

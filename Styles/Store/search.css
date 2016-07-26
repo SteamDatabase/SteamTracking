@@ -33,6 +33,7 @@
 
 .page_header_ctn.search {
 	padding-bottom: 70px;
+	background: url('https://steamstore-a.akamaihd.net/public/images//v6/search/cluster_bg.png' ) bottom center no-repeat;
 }
 .page_header_ctn.search.salebg {
 	padding-bottom: 30px;
@@ -40,18 +41,26 @@
 }
 
 .searchbar {
-	margin-bottom: 20px;
+	margin-bottom: 4px;
 	position: relative;
+	background: rgba( 0, 0, 0, 0.4 );
+	padding: 6px;
 }
 
 .searchbar .sortbox {
 	float: right;
-	margin-top: 7px;
+	margin-top: 4px;
 }
 
 .searchbar_left {
 	overflow: hidden;
 	white-space: nowrap;
+	padding-bottom: 1px;
+}
+
+.searchbar_left > button {
+	height: 25px;
+	margin-left: 5px;
 }
 
 .searchbar .label {
@@ -62,11 +71,11 @@
 }
 
 #term {
-	background-color: #2a3f5a;
+	background-color: rgba( 103, 193, 245, 0.2 );
 	color: #fff;
 	border: 1px solid #000;
 	border-radius: 3px;
-	box-shadow: 1px 1px 0px #45556c;
+	box-shadow: 1px 1px 0px rgba( 103, 193, 245, 0.15 );
 	width: 300px;
 	padding: 5px;
 
@@ -90,6 +99,15 @@
 	text-decoration: none;
 	color: #c6d4df;
 	font-family: "Motiva Sans Light", arial narrow, arial, tahoma;
+}
+
+.search_result_row {
+	border: 1px solid rgba( 139, 185, 224, 0 );
+}
+
+.search_result_row:hover {
+	border: 1px solid rgba( 139, 185, 224, 0.2 );
+	background: rgba( 0, 0, 0, 0.4 );
 }
 
 #search_result_container {
@@ -235,7 +253,7 @@
 }
 
 .page_content {
-	padding-top: 20px;
+	/* padding-top: 20px; */
 }
 
 /* autocomplete */

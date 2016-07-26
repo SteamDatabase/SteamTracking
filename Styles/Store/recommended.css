@@ -1557,6 +1557,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background-color: rgba( 0, 0, 0, 0.3 );
 	margin-bottom: 6px;
 	display: block;
+	line-height: 15px;
 }
 .short_header:hover {
 	background: rgba( 255, 255, 255, 0.2 );
@@ -1742,10 +1743,12 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #d6d7d8;
 	font-family: 'Motiva Sans', arial, tahoma;
 	padding: 3px 0;
+	line-height: 19px;
 }
 
 .review_box .vote_header .hours {
 	font-size: 12px;
+	line-height: 15px;
 }
 
 .review_box .vote_header .thumb {

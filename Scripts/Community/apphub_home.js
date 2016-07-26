@@ -332,6 +332,10 @@ function ValidateVoteSuccess( transport )
 	{
 		ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 	}
+	else if ( transport.responseJSON.success == 17 )
+	{
+		ShowAlertDialog( 'Error', 'Your account is VAC Banned in this game and you\'re unable to perform this action as a result.' );
+	}
 	else if ( transport.responseJSON.success != 1 )
 	{
 		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + transport.responseJSON.success );

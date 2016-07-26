@@ -1052,6 +1052,7 @@ img.payment_method_logo {
 .checkout_content.cart_send_choice p em {
 	font-style: normal;
 	font-family: "Motiva Sans Light Italic", "Motiva Sans Italic", arial, tahoma, sans-serif;
+	color: #8F98A0;
 }
 
 .cart_send_choice:not(.selected) .cart_send_selected_only {

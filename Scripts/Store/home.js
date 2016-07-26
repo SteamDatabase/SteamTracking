@@ -362,16 +362,16 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 3, 3
 		);
 
-		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_smallcaps' ).empty();
+		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_headercaps' );
 		for( var i = 0; i < rgFeaturedLaunchTitles.length; i++ )
 		{
 			var oItem = rgFeaturedLaunchTitles[i];
 
-			var $CapCtn = GHomepage.BuildHomePageSmallCap( 'popular_new_on_steam', oItem.appid, oItem.packageid );
-			$NewOnSteam.append( $CapCtn );
+			var $CapCtn = GHomepage.BuildHomePageHeaderCap( 'popular_new_on_steam', oItem.appid, oItem.packageid );
+			$NewOnSteam.prepend( $CapCtn );
 		}
 		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
 		$NewOnSteam.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
@@ -598,11 +598,12 @@ GHomepage = {
 	{
 		var $Element = $J('#home_recommended_spotlight');
 		var rgGamesShown = [];
+		var nGamesToShow = 1;
 
 		var rgRecommendedSpotlightOptions = [];
 
 		// prefer recommended things that have a discount and passes filter
-		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < 2; i++ )
+		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < nGamesToShow; i++ )
 		{
 			var unAppID = GHomepage.rgRecommendedGames[i].appid;
 			if ( GStoreItemData.BAppPassesFilters( unAppID, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) &&
@@ -611,7 +612,7 @@ GHomepage = {
 		}
 
 		// then recommended items that pass the filter
-		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < 2; i++ )
+		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < nGamesToShow; i++ )
 		{
 			var unAppID = GHomepage.rgRecommendedGames[i].appid;
 			if ( GStoreItemData.BAppPassesFilters( unAppID, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) )
@@ -628,7 +629,7 @@ GHomepage = {
 			}
 		}
 
-		if ( rgGamesShown.length < 2 )
+		if ( rgGamesShown.length < nGamesToShow )
 		{
 			// try and find something onsale from wishlist that we have data for
 			var rgWishlistItemsOnSale = [];
@@ -654,7 +655,7 @@ GHomepage = {
 			}
 		}
 
-		if ( rgGamesShown.length < 2 && GHomepage.rgFriendRecommendations )
+		if ( rgGamesShown.length < nGamesToShow && GHomepage.rgFriendRecommendations )
 		{
 			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
 			{
@@ -673,7 +674,7 @@ GHomepage = {
 			}
 		}
 
-		if ( rgGamesShown.length < 2 && rgRecommendedSpotlightOptions.length > 1 && rgGamesShown.indexOf( rgRecommendedSpotlightOptions[1] ) == -1 )
+		if ( rgGamesShown.length < nGamesToShow && rgRecommendedSpotlightOptions.length > 1 && rgGamesShown.indexOf( rgRecommendedSpotlightOptions[1] ) == -1 )
 		{
 			var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], 'Similar to games you play' );
 			if ( $Spotlight )
@@ -1468,6 +1469,12 @@ function TabSelectLast()
 		TabSelect( $J('#'+strLastValue+'_trigger')[0], strLastValue );
 		LoadDelayedImages('home_tabs');
 	}
+}
+
+function BeginDiscoveryQueue( eQueueType, eleAnchorTarget )
+{
+	WebStorage.SetCookie( 'queue_type', eQueueType );
+	window.location = eleAnchorTarget.href;
 }
 
 jQuery( document ).ready(function( $ ) {

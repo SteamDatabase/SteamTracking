@@ -269,6 +269,11 @@ html.responsive body {
 }
 
 .responsive_local_menu_tab {
+	display: none;
+}
+
+.responsive_local_menu_tab.active {
+	display: block;
 	background-color: rgba( 104, 157, 221, 0.6 );
 	position: fixed;
 	right: 0;

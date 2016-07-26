@@ -275,14 +275,21 @@ a.home_block_footer_btn:hover {
 .home_specials_grid .special {
 	background: #2e3e4e;
 	background: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid rgba( 139, 185, 224, 0 );
+
 	padding: 16px 17px 16px 16px;
 	margin-bottom: 2px;
 
 	float: left;
 	position: relative;
-	width: 120px;
-	height: 51px;
+	width: 118px;
+	height: 58px;
 	overflow: hidden;
+}
+
+.home_specials_grid .special:hover {
+	background: rgba( 0, 0, 0, 0.4 );
+	border: 1px solid rgba( 139, 185, 224, 0.2 );
 }
 
 .home_specials_grid .special:nth-child(2n+1)
@@ -306,11 +313,12 @@ a.home_block_footer_btn:hover {
 	display: inline-block;
 }
 
-.home_specials_grid .special .special_img_ctn .ds_flag {
-	top: 18px;
+.home_specials_grid .special.special_img_ctn .ds_flag {
+	top: 34px;
+	left: 16px;
 }
 
-.home_specials_grid .special .special_img_ctn.ds_flagged:not(.ds_wishlist) img {
+.home_specials_grid .special.special_img_ctn.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 
@@ -352,6 +360,7 @@ a.home_smallcap {
 
 a.home_smallcap:hover {
 	border-color: rgba( 139, 185, 224, 0.2 );
+	background: rgba( 0, 0, 0, 0.4 );
 	text-decoration: none;
 }
 .recently_updated a.home_smallcap {
@@ -420,6 +429,7 @@ a.home_headercap {
 
 a.home_headercap:hover {
 	border-color: rgba( 139, 185, 224, 0.2 );
+	background: rgba( 0, 0, 0, 0.4 );
 	text-decoration: none;
 }
 .new_on_steam a.home_headercap {
@@ -821,6 +831,7 @@ a.home_headercap:hover {
 	color: #8F98A0;
     overflow: hidden;
     height: 32px;
+	line-height: 16px;
 }
 .steam_curator_featuring_desc
 {
@@ -828,6 +839,7 @@ a.home_headercap:hover {
 	text-transform: uppercase;
 	color: #61686D;
 	font-size: 9px;
+	line-height: 11px;
 }
 
 @media screen and (max-width: 910px)
@@ -976,7 +988,7 @@ a.curated_app_link img {
 }
 
 .home_recommended_spotlight {
-	height: 341px;/*380px;*/
+	height: 152px;
 	margin-bottom: 2px;
 	background-color: rgba( 64, 120, 152, 0.4 );
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 64, 120, 152, 0.4 )), color-stop(95%,rgba(0,0,0,0.2)));background: -moz-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -webkit-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -o-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -ms-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);	padding: 16px;
@@ -1217,16 +1229,18 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	display: inline-block;
 	width: 213px;
 	height: auto;
+	text-align: center;
 	margin: 10px 21px 0 -22px;
+	background: #000000;
 	margin-top: 8px;
 	transition: scale 0.5s;
 	-webkit-transition: scale 0.5s;
 }
 
 .home_content.single a.screenshot img {
-	display: block;
-	width: 100%;
-	height: auto;
+	display: inline-block;
+	max-width: 100%;
+	max-height: 120px;
 	position: relative;
 	z-index: 9;
 	transition: transform .2s ease-out, z-index 0.2s, box-shadow 0.2s ease-out;
@@ -1544,6 +1558,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	}
 
 	html.responsive .home_smallcaps,
+	html.responsive .home_headercaps,
 	html.responsive .apps_recommended_by_curators,
 	html.responsive .underten .home_specials_grid {
 		white-space: nowrap;
@@ -1551,12 +1566,16 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	}
 
 	html.responsive .home_smallcaps a.home_smallcap,
-	html.responsive .home_smallcaps a.home_headercap,
+	html.responsive .home_headercaps a.home_headercap,
 	html.responsive .curated_app_item,
 	html.responsive .underten .home_specials_grid .special {
 		float: none;
 		display: inline-block;
 		white-space: normal;	/* override the nowrap we set above */
+	}
+
+	html.responsive .home_headercaps a.home_headercap {
+		vertical-align: top;
 	}
 
 	html.responsive .home_leftcol.home_tab_col {
@@ -1735,12 +1754,11 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	}
 
 	html.responsive .recommended .recommended_spotlight_ctn {
-		float: left;
-		width: 48%;
+		/* float: left; */
 	}
 
 	html.responsive .recommended .recommended_spotlight_ctn:nth-child(2) {
-		margin-right: 4%;
+		/* margin-right: 4%; */
 	}
 
 	html.responsive .recommended_spotlight_cap,
@@ -1809,6 +1827,58 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	html.responsive.touch ..home_viewsettings_checkbox {
 		margin-top: 2px;
 	}
+
+.popular_new_on_steam h2 {
+	margin-top: 30px;
+	margin-bottom: 7px;
+}
+
+.new_on_steam_button {
+
+	min-height: 127px;
+}
+
+.new_on_steam_button > div {
+	height: 64px;
+	line-height: 64px;
+	border-radius: 2px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#396685), color-stop(95%,#2b415c));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#396685', endColorstr='#2b415c',GradientType=1 );background: -moz-linear-gradient( left, #396685 5%,#2b415c 95%);background: -webkit-linear-gradient( left, #396685 5%,#2b415c 95%);background: -o-linear-gradient( left, #396685 5%,#2b415c 95%);background: -ms-linear-gradient( left, #396685 5%,#2b415c 95%);background: linear-gradient( to right, #396685 5%,#2b415c 95%);	padding: 15px 5px;
+}
+
+
+.new_on_steam_button > div > span {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 21px;
+	width: 100%;
+	line-height: 26px;
+	font-family: "Motiva Sans Thin", Arial, sans-serif;
+
+	color: #67c1f5;
+
+}
+
+.home_smallcaps.medium
+{
+	min-height: 145px;
+	font-size: 0;
+}
+
+.home_smallcaps.medium .home_smallcap {
+	width: 202px;
+	margin-bottom: 1px;
+	float: none;
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: top;
+}
+
+.home_smallcaps.medium .home_smallcap img {
+	width: 202px;
+	height: 78px;
+}
+
 
 
 .market_escrow_sale_banner {

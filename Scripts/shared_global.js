@@ -1410,7 +1410,14 @@ WebStorage = {
 		if ( !window[type + 'Storage'] )
 			return WebStorage.GetCookie( key );
 
-		var value = storage.getItem(key);
+		var value;
+		try {
+			value = storage.getItem(key);
+		} catch(err) {
+			// storage.getItem can throw SecurityError based on user's browser setting.
+			value = null;
+		}
+
 		try {
 			value = V_ParseJSON( value );
 		} catch(err){

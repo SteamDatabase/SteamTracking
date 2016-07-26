@@ -248,8 +248,9 @@ a.steam_curator_row:hover
 }
 .steam_curator_name
 {
-	padding-top: 12px;
+	padding-top: 10px;
 	font-size: 15px;
+	line-height: 17px;
     color: #c6d4df;
 }
 .steam_curator_recommending
@@ -258,10 +259,12 @@ a.steam_curator_row:hover
 	text-transform: uppercase;
     color: #61686D;
     font-size: 9px;
+	line-height: 11px;
 }
 .steam_curator_desc
 {
     font-size: 13px;
+	line-height: 16px;
     color: #8F98A0;
     overflow: hidden;
     max-width: 390px;

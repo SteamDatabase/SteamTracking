@@ -3878,6 +3878,10 @@ a.bundle_contents_preview_item .ds_flag {
 	vertical-align: baseline;
 }
 
+.game_area_description.bundle_description {
+	margin-bottom: 16px;
+}
+
 .agegate_tags {
 	text-align: center;
 	width: 350px;
