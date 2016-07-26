@@ -195,6 +195,7 @@ textarea.gray {
 .formlabel {
 	width: 12em;
 	float: left;
+	line-height: 15px;
 }
 
 .formlabelwide {

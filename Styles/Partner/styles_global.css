@@ -634,6 +634,7 @@ input.radio {
 	float: left;
 	color: #FFFFFF;
 	text-align: center;
+	line-height: 18px;
 	padding: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
