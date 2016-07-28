@@ -14657,7 +14657,7 @@
 			"image_inventory"	"backpack/weapons/c_models/c_lochnload/c_lochnload"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_lochnload/c_lochnload.mdl"
+			"model_player"	"models/workshop/weapons/c_models/c_lochnload/c_lochnload.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -18309,7 +18309,7 @@
 			"image_inventory"	"backpack/player/items/scout/scout_nohat"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	""
+			"model_player"	"models/player/items/scout/scout_nohat.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -18511,7 +18511,7 @@
 			"image_inventory"	"backpack/player/items/sniper/sniper_nohat"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	""
+			"model_player"	"models/player/items/sniper/sniper_nohat.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -18550,7 +18550,7 @@
 			"image_inventory"	"backpack/player/items/engineer/engineer_nohat"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	""
+			"model_player"	"models/player/items/engineer/engineer_nohat.mdl"
 			"drop_type"	"none"
 			"used_by_classes"
 			{
@@ -74133,6 +74133,7 @@
 		{
 			"name"		"Prinny Pouch"
 			"prefab"		"promo misc"
+			"first_sale_date"		"2016/07/07"
 			"item_name"		"#TF_prinny_pouch"
 			"item_description"		"#TF_prinny_pouch_Desc"
 			"item_type_name"		"#TF_Wearable_Pouch"
@@ -74164,6 +74165,7 @@
 		"30758"
 		{
 			"name"		"Prinny Machete"
+			"first_sale_date"		"2016/07/07"
 			"item_class"		"saxxy"
 			"prefab"		"promo weapon_melee_allclass"
 			"craft_material_type"		"weapon"
@@ -74226,6 +74228,7 @@
 		{
 			"name"		"Prinny Hat"
 			"prefab"		"promo hat"
+			"first_sale_date"		"2016/07/07"
 			"item_name"		"#TF_prinny_hat"
 			"item_description"		"#TF_prinny_hat_Desc"
 			"equip_region"		"hat"
@@ -86078,6 +86081,7 @@
 		{		
 			"name"				"Florida LAN Medal 2014"
 			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_Florida_LAN"
 			"item_description"	"#TF_TournamentMedal_2014"
 			"image_inventory"	"backpack/workshop/player/items/all_class/florida_lan_medal/florida_lan_medal"
@@ -87231,6 +87235,7 @@
 		{
 			"name"	"Florida LAN Medal 2015"
 			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_Florida_LAN"
 			"item_description"	"#TF_TournamentMedal_2015"
 			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan_medal_2015/florida_lan_medal_2015"
@@ -93246,6 +93251,20 @@
 				"basename"		"models/workshop/player/items/all_class/reddit_random_acts/reddit_random_acts_%s.mdl"
 			}
 		}
+ 		"9230"
+		{
+			"name"	"Florida LAN Medal 2016"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Florida_LAN"
+			"item_description"	"#TF_TournamentMedal_2016"
+			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan/florida_lan"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/florida_lan/florida_lan_%s.mdl"
+			}
+		}
+
 
 
 
@@ -114322,7 +114341,7 @@
 		"498"
 		{
 			"name" "bot custom jump particle"
-			"attribute_class"	"bot_custom_jump_particle__mvm"
+			"attribute_class"	"bot_custom_jump_particle"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
@@ -115977,7 +115996,7 @@
 		"1000"
 		{
 			"name"	"CARD: damage bonus"
-			"attribute_class"	"mult_dmg__mvm"
+			"attribute_class"	"mult_dmg"
 			"description_string"	"#Attrib_DamageDone_Positive"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
@@ -115987,7 +116006,7 @@
 		"1001"
 		{
 			"name"	"CARD: dmg taken from bullets reduced"
-			"attribute_class"	"mult_dmgtaken_from_bullets__mvm"
+			"attribute_class"	"mult_dmgtaken_from_bullets"
 			"description_string"	"#Attrib_DmgTaken_From_Bullets_Reduced"
 			"description_format"	"value_is_inverted_percentage"
 			"hidden"	"0"
@@ -115998,7 +116017,7 @@
 		"1002"
 		{
 			"name"	"CARD: move speed bonus"
-			"attribute_class"	"mult_player_movespeed__mvm"
+			"attribute_class"	"mult_player_movespeed"
 			"description_string"	"#Attrib_MoveSpeed_Bonus"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
@@ -116009,7 +116028,7 @@
 		"1003"
 		{
 			"name"	"CARD: health regen"
-			"attribute_class"	"add_health_regen__mvm"
+			"attribute_class"	"add_health_regen"
 			"description_string"	"#Attrib_HealthRegen"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -116020,7 +116039,7 @@
 		"1004"
 		{
 			"name"	"SPELL: set item tint RGB"
-			"attribute_class"	"set_item_tint_rgb_override__halloween"
+			"attribute_class"	"set_item_tint_rgb_override"
 			"description_string"	"#Attrib_HalloweenSpell_RGB"			
 			"description_format"	"value_is_from_lookup_table"
 			"hidden"	"0"
@@ -116031,7 +116050,7 @@
 		"1005"
 		{
 			"name"	"SPELL: set Halloween footstep type"
-			"attribute_class"	"halloween_footstep_type__halloween"
+			"attribute_class"	"halloween_footstep_type"
 			"description_string"	"#Attrib_HalloweenSpell_Footstep"			
 			"description_format"	"value_is_from_lookup_table"
 			"hidden"	"0"
@@ -116042,7 +116061,7 @@
 		"1006"
 		{
 			"name"	"SPELL: Halloween voice modulation"
-			"attribute_class"	"halloween_voice_modulation__halloween"
+			"attribute_class"	"halloween_voice_modulation"
 			"description_string"	"#Attrib_HalloweenSpell_Voice"			
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -116053,7 +116072,7 @@
 		"1007"
 		{
 			"name"	"SPELL: Halloween pumpkin explosions"
-			"attribute_class"	"halloween_pumpkin_explosions__halloween"
+			"attribute_class"	"halloween_pumpkin_explosions"
 			"description_string"	"#Attrib_HalloweenSpell_PumpkinBombs"			
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -116064,7 +116083,7 @@
 		"1008"
 		{
 			"name"	"SPELL: Halloween green flames"
-			"attribute_class"	"halloween_green_flames__halloween"
+			"attribute_class"	"halloween_green_flames"
 			"description_string"	"#Attrib_HalloweenSpell_GreenFlames"			
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -116075,7 +116094,7 @@
 		"1009"
 		{
 			"name"	"SPELL: Halloween death ghosts"
-			"attribute_class"	"halloween_death_ghosts__halloween"
+			"attribute_class"	"halloween_death_ghosts"
 			"description_string"	"#Attrib_HalloweenSpell_DeathGhosts"			
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -116086,7 +116105,7 @@
 		"1030"
 		{
 			"name"	"Attack not cancel charge"
-			"attribute_class"	"attack_not_cancel_charge__mvm"
+			"attribute_class"	"attack_not_cancel_charge"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
@@ -130402,7 +130421,7 @@
 			"9"
 			{
 				"name"					"cp_gullywash_final1"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Gullywash"
 				"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
 				"maptoken"				"Map Token Gullywash"
@@ -130429,7 +130448,7 @@
 			"12"
 			{
 				"name"					"cp_snakewater_final1"
-				"enabled"				"0"
+				"enabled"				"1"
 				"localizedname"			"#TF_Map_Snakewater"
 				"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
 				"maptoken"				"Map Token Snakewater"
@@ -130756,6 +130775,16 @@
 				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
 				"maptoken"				"Map Token Snowplow"
 				"authors"				"#cp_snowplow_authors"
+				"quickplay_type"		"disabled"
+			}
+			"5"
+			{
+				"name"					"koth_probed"
+				"enabled"				"1"
+				"localizedname"			"#TF_Map_Probed"
+				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+				"maptoken"				"Map Token Probed"
+				"authors"				"#koth_probed_authors"
 				"quickplay_type"		"disabled"
 			}
 		}
@@ -131594,178 +131623,223 @@
 		}
 		"54"
 		{
-			"name"					"cp_snowplow"
-			"localizedname"			"#TF_Map_Snowplow"
+			"name"			"cp_snowplow"
+			"localizedname"	"#TF_Map_Snowplow"
 		}
 		"55"
 		{
-			"name"					"ctf_2fort_invasion"
-			"localizedname"			"#TF_Map_2FortInv"
+			"name"			"ctf_2fort_invasion"
+			"localizedname"	"#TF_Map_2FortInv"
 		}
 		"56"
 		{
-			"name"					"cp_powerhouse"
-			"localizedname"			"#TF_Map_cp_powerhouse"
+			"name"			"cp_powerhouse"
+			"localizedname"	"#TF_Map_cp_powerhouse"
 		}
 		"57"
 		{
-			"name"					"koth_suijin"
-			"localizedname"			"#TF_Map_Suijin"
+			"name"			"koth_suijin"
+			"localizedname"	"#TF_Map_Suijin"
 		}
 		"58"
 		{
-			"name"					"koth_probed"
-			"localizedname"			"#TF_Map_Probed"
+			"name"			"koth_probed"
+			"localizedname"	"#TF_Map_Probed"
 		}
 		"59"
 		{
-			"name"					"koth_highpass"
-			"localizedname"			"#TF_Map_Highpass"
+			"name"			"koth_highpass"
+			"localizedname"	"#TF_Map_Highpass"
 		}
 		"60"
 		{
-			"name"					"pl_cactuscanyon"
-			"localizedname"			"TF_Map_pl_cactuscanyon"
+			"name"			"pl_cactuscanyon"
+			"localizedname"	"TF_Map_pl_cactuscanyon"
 		}
 		"61"
 		{
-			"name"					"pl_borneo"
-			"localizedname"			"#TF_Map_Borneo"
+			"name"			"pl_borneo"
+			"localizedname"	"#TF_Map_Borneo"
 		}
 		"62"
 		{
-			"name"					"pl_snowycoast"
-			"localizedname"			"#TF_Map_Snowycoast"
+			"name"			"pl_snowycoast"
+			"localizedname"	"#TF_Map_Snowycoast"
 		}
 		"63"
 		{
-			"name"					"pd_watergate"
-			"localizedname"			"#TF_Map_Watergate"
+			"name"			"pd_watergate"
+			"localizedname"	"#TF_Map_Watergate"
 		}
 		"64"
 		{
-			"name"					"arena_watchtower"
-			"localizedname"			"#TF_WatchTower"
+			"name"			"arena_watchtower"
+			"localizedname"	"#TF_WatchTower"
 		}
 		"65"
 		{
-			"name"					"arena_offblast_final"
-			"localizedname"			"#TF_Offblast"
+			"name"			"arena_offblast_final"
+			"localizedname"	"#TF_Offblast"
 		}
 		"66"
 		{
-			"name"					"arena_badlands"
-			"localizedname"			"#TF_Map_arena_badlands"
+			"name"			"arena_badlands"
+			"localizedname"	"#TF_Map_arena_badlands"
 		}
 		"67"
 		{
-			"name"					"arena_granary"
-			"localizedname"			"#TF_Map_arena_granary"
+			"name"			"arena_granary"
+			"localizedname"	"#TF_Map_arena_granary"
 		}
 		"68"
 		{
-			"name"					"arena_lumberyard"
-			"localizedname"			"#TF_Map_arena_lumberyard"
+			"name"			"arena_lumberyard"
+			"localizedname"	"#TF_Map_arena_lumberyard"
 		}
 		"69"
 		{
-			"name"					"arena_nucleus"
-			"localizedname"			"#TF_Map_arena_nucleus"
+			"name"			"arena_nucleus"
+			"localizedname"	"#TF_Map_arena_nucleus"
 		}
 		"70"
 		{
-			"name"					"arena_ravine"
-			"localizedname"			"#TF_Map_arena_ravine"
+			"name"			"arena_ravine"
+			"localizedname"	"#TF_Map_arena_ravine"
 		}
 		"71"
 		{
-			"name"					"arena_sawmill"
-			"localizedname"			"#TF_Map_arena_sawmill"
+			"name"			"arena_sawmill"
+			"localizedname"	"#TF_Map_arena_sawmill"
 		}
 		"72"
 		{
-			"name"					"arena_well"
-			"localizedname"			"#TF_Map_arena_well"
+			"name"			"arena_well"
+			"localizedname"	"#TF_Map_arena_well"
 		}
   		"73"
 		{
-			"name"					"arena_byre"
-			"localizedname"			"#TF_Map_Byre"
+			"name"			"arena_byre"
+			"localizedname"	"#TF_Map_Byre"
 		}
 		"74"
 		{
-			"name"					"cp_gorge_event"
-			"localizedname"			"#TF_Map_GorgeEvent"
+			"name"			"cp_gorge_event"
+			"localizedname"	"#TF_Map_GorgeEvent"
 		}
 		"75"
 		{
-			"name"					"cp_sunshine_event"
-			"localizedname"			"#TF_Map_SunshineEvent"				
+			"name"			"cp_sunshine_event"
+			"localizedname"	"#TF_Map_SunshineEvent"				
 		}
 		"76"
 		{
-			"name"					"koth_moonshine_event"
-			"localizedname"			"#TF_Map_MoonshineEvent"
+			"name"			"koth_moonshine_event"
+			"localizedname"	"#TF_Map_MoonshineEvent"
 		}
 		"77"
 		{
-			"name"					"pl_millstone_event"
-			"localizedname"			"#TF_Map_MillstoneEvent"
+			"name"			"pl_millstone_event"
+			"localizedname"	"#TF_Map_MillstoneEvent"
 		}
 		"78"
 		{
-			"name"					"koth_viaduct_event"
-			"localizedname"			"#TF_Map_koth_viaduct_event"
+			"name"			"koth_viaduct_event"
+			"localizedname"	"#TF_Map_koth_viaduct_event"
 		}
 		"79"
 		{
-			"name"					"cp_manor_event"
-			"localizedname"			"#TF_ManorEvent"
+			"name"			"cp_manor_event"
+			"localizedname"	"#TF_ManorEvent"
 		}
 		"80"
 		{
-			"name"					"koth_harvest_event"
-			"localizedname"			"#TF_Map_koth_harvest_event"
+			"name"			"koth_harvest_event"
+			"localizedname"	"#TF_Map_koth_harvest_event"
 		}
 		"81"
 		{
-			"name"					"koth_lakeside_event"
-			"localizedname"			"#TF_Map_koth_lakeside_event"
+			"name"			"koth_lakeside_event"
+			"localizedname"	"#TF_Map_koth_lakeside_event"
 		}
 		"82"
 		{
-			"name"					"plr_hightower_event"
-			"localizedname"			"#TF_Map_plr_hightower_event"
+			"name"			"plr_hightower_event"
+			"localizedname"	"#TF_Map_plr_hightower_event"
 		}
 		"83"
 		{
-			"name"					"sd_doomsday_event"
-			"localizedname"			"#TF_Map_sd_doomsday_event"
+			"name"			"sd_doomsday_event"
+			"localizedname"	"#TF_Map_sd_doomsday_event"
 		}
 		"84"
 		{
-			"name"					"rd_asteroid"
-			"localizedname"			"#TF_Map_rd_asteroid"
+			"name"			"rd_asteroid"
+			"localizedname"	"#TF_Map_rd_asteroid"
 		}
 		"85"
 		{
-			"name"					"ctf_foundry"
-			"localizedname"			"#TF_Map_powerup_ctf_foundry"
+			"name"			"ctf_foundry"
+			"localizedname"	"#TF_Map_powerup_ctf_foundry"
 		}
 		"86"
 		{
-			"name"					"ctf_gorge"
-			"localizedname"			"#TF_Map_powerup_ctf_gorge"
+			"name"			"ctf_gorge"
+			"localizedname"	"#TF_Map_powerup_ctf_gorge"
 		}
 		"87"
 		{
-			"name"					"ctf_thundermountain"
-			"localizedname"			"#TF_Map_powerup_ctf_thundermountain"
+			"name"			"ctf_thundermountain"
+			"localizedname"	"#TF_Map_powerup_ctf_thundermountain"
 		}
 		"88"
 		{
-			"name"					"ctf_hellfire"
-			"localizedname"			"#TF_Map_powerup_ctf_hellfire"
+			"name"			"ctf_hellfire"
+			"localizedname"	"#TF_Map_powerup_ctf_hellfire"
+		}
+		"89"
+		{
+			"name"			"mvm_ghost_town"
+			"localizedname"	"#TF_MVM_Map_Ghost_Town"
+		}
+		"90"
+		{
+			"name"			"mvm_mannhattan"
+			"localizedname"	"#TF_MVM_Map_Mannhattan"
+		}
+		"91"
+		{
+			"name"			"mvm_rottenburg"
+			"localizedname"	"#TF_MVM_Map_Rottenburg"
+		}
+		"92"
+		{
+			"name"			"mvm_bigrock"
+			"localizedname"	"#TF_MVM_Map_Bigrock"
+		}
+		"93"
+		{
+			"name"			"mvm_decoy"
+			"localizedname"	"#TF_MVM_Map_Decoy"
+		}
+		"94"
+		{
+			"name"			"mvm_coaltown"
+			"localizedname"	"#TF_MVM_Map_CoalTown"
+		}
+		"95"
+		{
+			"name"			"mvm_mannworks"
+			"localizedname"	"#TF_MVM_Map_Mannworks"
+		}
+		"96"
+		{
+			"name"			"tr_dustbowl"
+			"localizedname"	"#TF_Map_tr_dustbowl"
+		}
+		"97"
+		{
+			"name"			"tr_target"
+			"localizedname"	"#TF_Map_tr_target"
 		}
 	}
 	"steam_packages"
@@ -131839,7 +131913,7 @@
 			"name"				"Pyro vs Heavy"		
 			"localized_name"	"#TF_War_PyroVsHeavy"
 			"start_time"		"2016-01-01 00:00:00"
-			"end_time"			"2017-01-01	00:00:00"
+			"end_time"			"2016-08-15	00:00:00"
 
 			"sides"
 			{
