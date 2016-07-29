@@ -2109,7 +2109,12 @@ ChooseBinding .GameActionSelectButton.OriginalBinding Label
 	color: white;
 }
 
-ChooseBinding .ControllerActionSetButton, ChooseBinding .ControllerActionButton
+ChooseBinding .ControllerActionSetButton
+{
+    margin-left: 60px;
+}
+
+ChooseBinding .ControllerActionButton
 {
     margin-left: 116px;
 }
@@ -2232,21 +2237,6 @@ ChooseBinding Button.GamepadButton
 	box-shadow: none;
 }
 
-ChooseBinding Button Label, ChooseBinding Label
-{
-	margin: 0px;
-	padding: 0px;
-	font-size: 25px;
-	font-weight: thin;
-	color: #00d4ffff;
-	vertical-align: center;
-	horizontal-align: center;
-	transform: translatex( 0px );
-
-	transition-property: color;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in;
-}
 
 ChooseBinding Button:hover
 {
@@ -2265,12 +2255,19 @@ ChooseBinding Button.GamepadButton
 	box-shadow: none;
 }
 
+.ChooseBindingIconImage
+{
+    margin: 6px;
+	wash-color: #00d4ffff;
+}
+
+
 ChooseBinding Button Label, ChooseBinding Label
 {
 	margin: 0px;
 	padding: 0px;
 	font-size: 25px;
-	font-weight: thin;
+	font-weight: normal;
 	color: #00d4ffff;
 	vertical-align: center;
 	horizontal-align: center;
@@ -2299,8 +2296,14 @@ ChooseBinding Button.OriginalBinding:focus
 
 ChooseBinding Button:focus Label
 {
-	color: #353535ff;
+    wash-color: #353535ff;
 }
+
+ChooseBinding Button:focus Image
+{
+    wash-color: #353535ff;
+}
+
 
 ChooseBinding Button.OriginalBinding
 {
@@ -2311,6 +2314,11 @@ ChooseBinding Button.OriginalBinding
 ChooseBinding Button.OriginalBinding Label
 {
 	color: #54dd01ff;
+}
+
+ChooseBinding Button.OriginalBinding Image
+{
+	wash-color: #54dd01ff;
 }
 
 ChooseBinding Button.OriginalBinding:focus Label
@@ -2453,10 +2461,10 @@ ChooseBinding #VirtualGamepad
 	height: 420px;
 
 	background-image: url( "file://{images}/library/controller/binding_virtual_gamepad_bg.png" ); 
-	background-position: center center;
+	//background-position: absolute center;
 	background-repeat: no-repeat;
 
-	margin-left: -88px;
+	margin-left: -120px;
 	visibility: visible;
 }
 
@@ -2475,435 +2483,435 @@ ChooseBinding #GamepadBoundLayerDPUP, ChooseBinding #GamepadBoundLayerDPDN, Choo
 
 ChooseBinding.LeftTriggerBound #GamepadBoundLayer
 {
-	background-position: 100px 22px;
+	background-position: 104px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_lt.png" ); 
 }
 
 ChooseBinding.RightTriggerBound #GamepadBoundLayer
 {
-	background-position: 342px 22px;
+	background-position: 346px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rt.png" ); 
 }
 
 ChooseBinding.LeftShoulderBound #GamepadBoundLayer
 {
-	background-position: 95px 29px;
+	background-position: 99px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_lb.png" ); 
 }
 
 ChooseBinding.RightShoulderBound #GamepadBoundLayer
 {
-	background-position: 318px 29px;
+	background-position: 322px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rb.png" ); 
 }
 
 ChooseBinding.LeftJoystickBound #GamepadBoundLayer
 {
-	background-position: 107px 91px;
+	background-position: 111px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
 }
 
 ChooseBinding.RightJoystickBound #GamepadBoundLayer
 {
-	background-position: 281px 162px;
+	background-position: 285px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
 }
 
 ChooseBinding.LStickLeftBound #GamepadBoundLayer
 {
-	background-position: 92px 91px;
+	background-position: 96px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls_left.png" ); 
 }
 
 ChooseBinding.LStickRightBound #GamepadBoundLayer
 {
-	background-position: 122px 91px;
+	background-position: 126px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls_right.png" ); 
 }
 
 ChooseBinding.LStickUpBound #GamepadBoundLayer
 {
-	background-position: 107px 76px;
+	background-position: 111px 76px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls_up.png" ); 
 }
 
 ChooseBinding.LStickDownBound #GamepadBoundLayer
 {
-	background-position: 107px 106px;
+	background-position: 111px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls_down.png" ); 
 }
 
 ChooseBinding.RStickLeftBound #GamepadBoundLayer
 {
-	background-position: 266px 162px;
+	background-position: 270px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_left.png" ); 
 }
 
 ChooseBinding.RStickRightBound #GamepadBoundLayer
 {
-	background-position: 296px 162px;
+	background-position: 300px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_right.png" ); 
 }
 
 ChooseBinding.RStickUpBound #GamepadBoundLayer
 {
-	background-position: 281px 177px;
+	background-position: 285px 177px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_up.png" ); 
 }
 
 ChooseBinding.RStickDownBound #GamepadBoundLayer
 {
-	background-position: 281px 147px;
+	background-position: 285px 147px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_down.png" ); 
 }
 
 ChooseBinding.SelectButtonBound #GamepadBoundLayer
 {
-	background-position: 183px 106px;
+	background-position: 187px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_back.png" ); 
 }
 
 ChooseBinding.StartButtonBound #GamepadBoundLayer
 {
-	background-position: 256px 106px;
+	background-position: 260px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_start.png" ); 
 }
 
 ChooseBinding.AButtonBound #GamepadBoundLayer
 {
-	background-position: 335px 127px;
+	background-position: 339px 127px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_a.png" ); 
 }
 
 ChooseBinding.BButtonBound #GamepadBoundLayer
 {
-	background-position: 361px 103px;
+	background-position: 365px 103px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_b.png" ); 
 }
 
 ChooseBinding.XButtonBound #GamepadBoundLayer
 {
-	background-position: 311px 102px;
+	background-position: 315px 102px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_x.png" ); 
 }
 
 ChooseBinding.YButtonBound #GamepadBoundLayer
 {
-	background-position: 336px 78px;
+	background-position: 340px 78px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_y.png" ); 
 }
 
 ChooseBinding.DpadUpBound #GamepadBoundLayer
 {
-	background-position: 181px 250px;
+	background-position: 185px 250px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_up.png" ); 
 }
 
 ChooseBinding.DpadDownBound #GamepadBoundLayer
 {
-	background-position: 181px 278px;
+	background-position: 185px 278px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_dn.png" ); 
 }
 
 ChooseBinding.DpadLeftBound #GamepadBoundLayer
 {
-	background-position: 166px 265px;
+	background-position: 170px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_lt.png" ); 
 }
 
 ChooseBinding.DpadRightBound #GamepadBoundLayer
 {
-	background-position: 194px 265px;
+	background-position: 198px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_rt.png" ); 
 }
 
 ChooseBinding.LeftTriggerMultiBound #GamepadBoundLayerLT
 {
-	background-position: 100px 22px;
+	background-position: 104px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_lt.png" ); 
 }
 
 ChooseBinding.RightTriggerMultiBound #GamepadBoundLayerRT
 {
-	background-position: 342px 22px;
+	background-position: 346px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rt.png" ); 
 }
 
 ChooseBinding.LeftShoulderMultiBound #GamepadBoundLayerLB
 {
-	background-position: 95px 29px;
+	background-position: 99px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_lb.png" ); 
 }
 
 ChooseBinding.RightShoulderMultiBound #GamepadBoundLayerRB
 {
-	background-position: 318px 29px;
+	background-position: 322px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rb.png" ); 
 }
 
 ChooseBinding.LeftJoystickMultiBound #GamepadBoundLayerLS
 {
-	background-position: 107px 91px;
+	background-position: 111px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_ls.png" ); 
 }
 
 ChooseBinding.RightJoystickMultiBound #GamepadBoundLayerRS
 {
-	background-position: 281px 162px;
+	background-position: 285px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rs.png" ); 
 }
 
 ChooseBinding.LStickLeftMultiBound #GamepadBoundLayerLSLeft
 {
-	background-position: 102px 91px;
+	background-position: 106px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
 }
 
 ChooseBinding.LStickRightMultiBound #GamepadBoundLayerLSRight
 {
-	background-position: 112px 91px;
+	background-position: 116px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
 }
 
 ChooseBinding.LStickUpMultiBound #GamepadBoundLayerLSUp
 {
-	background-position: 107px 96px;
+	background-position: 111px 96px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
 }
 
 ChooseBinding.LStickDownMultiBound #GamepadBoundLayerLSDown
 {
-	background-position: 107px 86px;
+	background-position: 111px 86px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
 }
 
 ChooseBinding.RStickLeftMultiBound #GamepadBoundLayerRSLeft
 {
-	background-position: 276px 162px;
+	background-position: 280px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
 }
 
 ChooseBinding.RStickRightMultiBound #GamepadBoundLayerRSRight
 {
-	background-position: 286px 162px;
+	background-position: 290px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
 }
 
 ChooseBinding.RStickUpMultiBound #GamepadBoundLayerRSUp
 {
-	background-position: 281px 167px;
+	background-position: 285px 167px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
 }
 
 ChooseBinding.RStickDownMultiBound #GamepadBoundLayerRSDown
 {
-	background-position: 281px 157px;
+	background-position: 285px 157px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
 }
 
 ChooseBinding.SelectButtonMultiBound #GamepadBoundLayerBK
 {
-	background-position: 183px 106px;
+	background-position: 187px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_back.png" ); 
 }
 
 ChooseBinding.StartButtonMultiBound #GamepadBoundLayerST
 {
-	background-position: 256px 106px;
+	background-position: 260px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_start.png" ); 
 }
 
 ChooseBinding.AButtonMultiBound #GamepadBoundLayerA
 {
-	background-position: 336px 127px;
+	background-position: 340px 127px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_a.png" ); 
 }
 
 ChooseBinding.BButtonMultiBound #GamepadBoundLayerB
 {
-	background-position: 361px 103px;
+	background-position: 365px 103px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_b.png" ); 
 }
 
 ChooseBinding.XButtonMultiBound #GamepadBoundLayerX
 {
-	background-position: 311px 102px;
+	background-position: 316px 102px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_x.png" ); 
 }
 
 ChooseBinding.YButtonMultiBound #GamepadBoundLayerY
 {
-	background-position: 336px 78px;
+	background-position: 340px 78px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_y.png" ); 
 }
 
 ChooseBinding.DpadUpMultiBound #GamepadBoundLayerDPUP
 {
-	background-position: 181px 250px;
+	background-position: 185px 250px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_up.png" ); 
 }
 
 ChooseBinding.DpadDownMultiBound #GamepadBoundLayerDPDN
 {
-	background-position: 181px 278px;
+	background-position: 185px 278px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_dn.png" ); 
 }
 
 ChooseBinding.DpadLeftMultiBound #GamepadBoundLayerDPLT
 {
-	background-position: 166px 265px;
+	background-position: 170px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_lt.png" ); 
 }
 
 ChooseBinding.DpadRightMultiBound #GamepadBoundLayerDPRT
 {
-	background-position: 194px 265px;
+	background-position: 198px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_rt.png" ); 
 }
 
 
 ChooseBinding.LeftTriggerFocus #GamepadFocusLayer
 {
-	background-position: 100px 22px;
+	background-position: 104px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_lt.png" ); 
 }
 
 ChooseBinding.RightTriggerFocus #GamepadFocusLayer
 {
-	background-position: 342px 22px;
+	background-position: 346px 22px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rt.png" ); 
 }
 
 ChooseBinding.LeftShoulderFocus #GamepadFocusLayer
 {
-	background-position: 95px 29px;
+	background-position: 99px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_lb.png" ); 
 }
 
 ChooseBinding.RightShoulderFocus #GamepadFocusLayer
 {
-	background-position: 318px 29px;
+	background-position: 322px 29px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rb.png" ); 
 }
 
 ChooseBinding.LeftJoystickFocus #GamepadFocusLayer
 {
-	background-position: 107px 91px;
+	background-position: 111px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls.png" ); 
 }
 
 ChooseBinding.RightJoystickFocus #GamepadFocusLayer
 {
-	background-position: 281px 162px;
+	background-position: 285px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs.png" ); 
 }
 
 
 ChooseBinding.LStickLeftFocus #GamepadFocusLayer
 {
-	background-position: 92px 91px;
+	background-position: 96px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls_left.png" ); 
 }
 
 ChooseBinding.LStickRightFocus #GamepadFocusLayer
 {
-	background-position: 122px 91px;
+	background-position: 126px 91px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls_right.png" ); 
 }
 
 ChooseBinding.LStickUpFocus #GamepadFocusLayer
 {
-	background-position: 107px 76px;
+	background-position: 111px 76px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls_up.png" ); 
 }
 
 ChooseBinding.LStickDownFocus #GamepadFocusLayer
 {
-	background-position: 107px 106px;
+	background-position: 111px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls_down.png" ); 
 }
 
 ChooseBinding.RStickLeftFocus #GamepadFocusLayer
 {
-	background-position: 266px 162px;
+	background-position: 270px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs_left.png" ); 
 }
 
 ChooseBinding.RStickRightFocus #GamepadFocusLayer
 {
-	background-position: 296px 162px;
+	background-position: 300px 162px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs_right.png" ); 
 }
 
 ChooseBinding.RStickUpFocus #GamepadFocusLayer
 {
-	background-position: 281px 147px;
+	background-position: 285px 147px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs_up.png" ); 
 }
 
 ChooseBinding.RStickDownFocus #GamepadFocusLayer
 {
-	background-position: 281px 177px;
+	background-position: 285px 177px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs_down.png" ); 
 }
 
 ChooseBinding.SelectButtonFocus #GamepadFocusLayer
 {
-	background-position: 183px 106px;
+	background-position: 187px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_back.png" ); 
 }
 
 ChooseBinding.StartButtonFocus #GamepadFocusLayer
 {
-	background-position: 256px 106px;
+	background-position: 260px 106px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_start.png" ); 
 }
 
 ChooseBinding.AButtonFocus #GamepadFocusLayer
 {
-	background-position: 336px 127px;
+	background-position: 340px 127px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_a.png" ); 
 }
 
 ChooseBinding.BButtonFocus #GamepadFocusLayer
 {
-	background-position: 361px 103px;
+	background-position: 365px 103px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_b.png" ); 
 }
 
 ChooseBinding.XButtonFocus #GamepadFocusLayer
 {
-	background-position: 311px 102px;
+	background-position: 315px 102px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_x.png" ); 
 }
 
 ChooseBinding.YButtonFocus #GamepadFocusLayer
 {
-	background-position: 336px 78px;
+	background-position: 340px 78px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_y.png" ); 
 }
 
 ChooseBinding.DpadUpFocus #GamepadFocusLayer
 {
-	background-position: 181px 250px;
+	background-position: 185px 250px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_up.png" ); 
 }
 
 ChooseBinding.DpadDownFocus #GamepadFocusLayer
 {
-	background-position: 181px 278px;
+	background-position: 185px 278px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_dn.png" ); 
 }
 
 ChooseBinding.DpadLeftFocus #GamepadFocusLayer
 {
-	background-position: 166px 265px;
+	background-position: 170px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_lt.png" ); 
 }
 
 ChooseBinding.DpadRightFocus #GamepadFocusLayer
 {
-	background-position: 194px 265px;
+	background-position: 198px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_rt.png" ); 
 }
 

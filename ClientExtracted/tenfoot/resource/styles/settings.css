@@ -2887,6 +2887,11 @@ SettingsPanel_Display.Underscan
 	visibility: collapse;
 }
 
+.HideVideoMemory #VideoMemoryLabel, .HideVideoMemory #VideoMemoryValue
+{
+    visibility: collapse;
+}
+
 #SettingsDownloads_TimeLimitFromDropDownMenu, 
 #SettingsDownloads_TimeLimitToDropDownMenu  
 {

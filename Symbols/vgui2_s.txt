@@ -557,6 +557,7 @@
  T CBaseSurface::CalculateMouseVisible()
  T CBaseSurface::ClearAllCookies()
  T CBaseSurface::ClearTextColorRangeValues()
+ T CBaseSurface::ClearWebCache()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
  T CBaseSurface::CountPopupsViewable()
  T CBaseSurface::CreateBrowser(unsigned int, IHTMLResponses*, bool, char const*, char const*)

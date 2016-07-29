@@ -921,6 +921,7 @@
 	// Web
 	"SettingsWeb_AustralianScrolling"		"Reverse left pad scroll direction"
 	"SettingsWeb_CookiesSection"			"Cookies:"
+	"SettingsWeb_BrowserSection"			"Browser:"
 	"SettingsWeb_SteamControllerSection"	"Steam Controller controls:"
 
 	// Controller Calibration
@@ -1865,6 +1866,8 @@
 	"Library_Details_ControllerBindingsGordon_CommunityNextPage" "NEXT PAGE"
 	"Library_Details_ControllerBindingsGordon_CommunityPreviousPage" "PREVIOUS PAGE"
 	"Library_Details_ControllerBindingsGordon_ShowActivator"	"SHOW ACTIVATORS"
+	"Library_Details_ControllerBindingsGordon_NextActionSet"	"NEXT SET"
+	"Library_Details_ControllerBindingsGordon_PreviousActionSet"	"PREV SET"
 
 	"Library_Details_FieldLabel_ActivatorType"			"Activation Type"
 	"Library_Details_FieldLabel_ActivatorBinding"	"Binding"
@@ -2161,6 +2164,11 @@
 	"Library_Details_FieldLabel_Interruptable"		"Interruptable"
 	"Library_Details_FieldLabel_LongPressTime"		"Long Press Time"
 	"Library_Details_FieldLabel_DoubleTapTime"		"Double Tap Time"
+	"Library_Details_FieldLabel_SoftPressStyle"		"Soft Press Style"
+	"Library_Details_FieldLabel_SoftPressThreshold"		"Soft Press Threshold"
+	"Library_Details_FieldLabel_AnalogOutputAxis"	"Analog Output"
+	"Library_Details_FieldLabel_AnalogStart"		"Analog Range Start"
+	"Library_Details_FieldLabel_AnalogEnd"			"Analog Range End"
 
 	"Library_Details_SourceMode_Title_None"				"None"
 	"Library_Details_SourceMode_Title_Dpad"				"Directional Pad"
@@ -2211,6 +2219,7 @@
 
 	"Library_Controller_Property_Value_On"				"On"
 	"Library_Controller_Property_Value_Off"				"Off"
+	"Library_Controller_Property_Value_Pressure"		"Analog"
 	"Library_Controller_Property_Value_AnalogEmulation"	"Analog Emulation"
 	"Library_Controller_Property_Value_CrossGate"		"Cross Gate"
 	"Library_Controller_Property_Value_RadialWithOverlap"				"Radial With Overlap"
@@ -2231,6 +2240,17 @@
 	"Library_Controller_Property_Value_TriggerOff"		"Analog Off"
 	"Library_Controller_Property_Value_TriggerLeft"		"Left Trigger"
 	"Library_Controller_Property_Value_TriggerRight"	"Right Trigger"
+	"Library_Controller_Property_Value_LeftStickRight"	"Left Stick Push Right"
+
+	"Library_Controller_Property_Value_LeftStickRight"	"Left Stick Push Right"
+	"Library_Controller_Property_Value_LeftStickLeft"	"Left Stick Push Left"
+	"Library_Controller_Property_Value_LeftStickUp"		"Left Stick Push Up"
+	"Library_Controller_Property_Value_LeftStickDown"	"Left Stick Push Down"
+	"Library_Controller_Property_Value_RightStickRight"	"Right Stick Push Right"
+	"Library_Controller_Property_Value_RightStickLeft"	"Right Stick Push Left"
+	"Library_Controller_Property_Value_RightStickUp"	"Right Stick Push Up"
+	"Library_Controller_Property_Value_RightStickDown"	"Right Stick Push Down"
+
 	"Library_Controller_Property_Value_PadBoth"			"Both Pads"
 	"Library_Controller_Property_Value_PadLeft"			"Left Pad"
 	"Library_Controller_Property_Value_PadRight"		"Right Pad"
@@ -4032,6 +4052,10 @@
 	"SettingsInterface_DeleteTitle"	"Delete Cookies"
 	"SettingsInterface_DeleteMsg"	"Clear all Steam browser cookie data?"
 
+	"SettingsInterface_ClearWebCache"		"Clear browser cache"
+	"SettingsInterface_ClearWebCacheTitle"	"Clear Browser Cache"
+	"SettingsInterface_ClearWebCacheMsg"	"Delete all files in the built-in web browser cache?"
+
 	"SettingsDiskManagement_UnknownApp" "Unknown name"
 	"Settings_DiskManagement"	"Disk Management"
 	"Settings_DiskManagement_Intro" "The following items are installed on your local hard drive. To free up disk space, you may choose to delete local content. Note that deleted items will remain in your Steam Library, but once deleted, they must be downloaded again in order to play them."
@@ -5750,6 +5774,36 @@
 	"ControllerBinding_Release_CycleBindings_On_Description" "When on this will make this activator cycle through each of its bindings in order each time it is activated."
 	"ControllerBinding_Release_CycleBindings_Off" "Cycle Bindings - Off"
 	"ControllerBinding_Release_CycleBindings_Off_Description" "When off all bindings will be fired at the same time."
+
+	"ControllerBinding_AddActivatorButton"	"Add Activator"
+	"ControllerBinding_AddActivatorButton_Description"	"You can add additional activators to this input."
+
+	"ControllerBinding_ActivatorButton0"	"Activator"
+	"ControllerBinding_ActivatorButton0_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton1"	"Activator"
+	"ControllerBinding_ActivatorButton1_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton2"	"Activator"
+	"ControllerBinding_ActivatorButton2_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton3"	"Activator"
+	"ControllerBinding_ActivatorButton3_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton4"	"Activator"
+	"ControllerBinding_ActivatorButton4_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton5"	"Activator"
+	"ControllerBinding_ActivatorButton5_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton6"	"Activator"
+	"ControllerBinding_ActivatorButton6_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton7"	"Activator"
+	"ControllerBinding_ActivatorButton7_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton8"	"Activator"
+	"ControllerBinding_ActivatorButton8_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton9"	"Activator"
+	"ControllerBinding_ActivatorButton9_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton10"	"Activator"
+	"ControllerBinding_ActivatorButton10_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton11"	"Activator"
+	"ControllerBinding_ActivatorButton11_Description"	"Select this Activator."
+	"ControllerBinding_ActivatorButton12"	"Activator"
+	"ControllerBinding_ActivatorButton12_Description"	"Select this Activator."
 
 	"Library_PresetToCopyToActionSet_CodeLabel"	"Action Set to Copy into New Action Set"
 

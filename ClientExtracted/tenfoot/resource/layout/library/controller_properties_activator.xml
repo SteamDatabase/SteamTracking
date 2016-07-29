@@ -171,11 +171,7 @@
 				<Panel class="FieldWrapper" activators="softpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_StartDelay" />
 					<Slider id="SoftPress_StartDelay" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper" activators="softpress">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EndDelay" />
-					<Slider id="SoftPress_EndDelay" direction="horizontal" />
-				</Panel>				
+				</Panel>			
 			</Panel>
 
 			<!--

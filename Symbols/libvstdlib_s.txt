@@ -268,7 +268,6 @@
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
- T CUtlStringBuilder::Access()
  T CUtlStringBuilder::AppendChar(char)
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
@@ -277,7 +276,6 @@
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::SetLength(unsigned long)
  T CUtlStringBuilder::Swap(CUtlString&)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
@@ -470,9 +468,9 @@
  T V_MatchWildcardString
  T V_NormalizeUTF8
  T V_NormalizeUTF8Old
- T V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
- T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
- T V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
+ T V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ T V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_RemoveDotSlashes
  T V_ReplaceBadFilenameCharacters
  T V_ReplaceBadFilenameCharactersInPlace

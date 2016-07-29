@@ -24,10 +24,15 @@
 									undohistory="enabled" />
 						</Panel>
             
-            <Label class="SettingsCallout LongDesc" text="#SettingsWeb_CookiesSection" />
+            <Label class="SettingsCallout LongDesc" text="#SettingsWeb_BrowserSection" />
+						<Button class="Cache Button" onactivate="ClearWebCache()" selectionpos="auto">
+							<Label class="LongDesc" text="#SettingsInterface_ClearWebCache" />
+						</Button>
+
 						<Button class="Cookie Button" onactivate="DeleteAllWebCookies()" selectionpos="auto">
 							<Label class="LongDesc" text="#SettingsInterface_DeleteAllCookies" />
 						</Button>
+
 
             <Panel class="OnlyVisibleWithSteamControllersConnected FlowDown">
               <Label class="SettingsCallout LongDesc" text="#SettingsWeb_SteamControllerSection" />

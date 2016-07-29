@@ -757,9 +757,12 @@
 
 "Steam_Settings_Browser"	"Web Browser"
 "Overlay_SettingsBrowserDesc" "The following settings apply to the web browser used inside the Steam Client and the Steam In-Game Overlay."
+"Steam_SettingsBrowserClearWebCache"	"Delete Web Browser Cache"
 "Steam_SettingsBrowserClearAllCookies"	"Delete All Browser Cookies"
 "Steam_Settings_Browser_DeleteTitle"	"Delete Cookies"
 "Steam_Settings_Browser_DeleteMsg"	"Clear all Steam browser cookie data?"
+"Steam_Settings_Browser_ClearWebCacheTitle"	"Clear Browser Cache"
+"Steam_Settings_Browser_ClearWebCacheMsg"	"Delete all files in the built-in web browser cache?"
 
 } 
 }  

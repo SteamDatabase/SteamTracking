@@ -118,6 +118,7 @@
  B g_machClient
  B s_NoEscConversion
  B s_StringCharConversion
+ CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
  CValidator::Pop()
@@ -291,6 +292,7 @@
  D typeinfo for CMsgZoomToElementAtPositionResponse
  D typeinfo for CMsgZoomToFocusedElement
  D typeinfo for COSXChromeIPCWakeThread
+ D typeinfo for CPathString
  D typeinfo for CSharedMemStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -472,6 +474,7 @@
  D vtable for CMsgZoomToElementAtPositionResponse
  D vtable for CMsgZoomToFocusedElement
  D vtable for COSXChromeIPCWakeThread
+ D vtable for CPathString
  D vtable for CSharedMemStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -659,6 +662,7 @@
  R typeinfo name for CMsgZoomToElementAtPositionResponse
  R typeinfo name for CMsgZoomToFocusedElement
  R typeinfo name for COSXChromeIPCWakeThread
+ R typeinfo name for CPathString
  R typeinfo name for CSharedMemStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -709,7 +713,13 @@
  SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
  SteamVProf::CVProfile::OutputReport(int, char const*, int)
  SteamVProf::CVProfile::~CVProfile()
+ T BDeleteFileIfExists(char const*)
+ T BFileExists(char const*)
+ T BIsValidDirectory(char const*)
+ T BRemoveDirectory(char const*)
+ T BRemoveDirectoryRecursive(char const*)
  T CChromeIPCClient::AbortWaitForPendingData()
+ T CChromeIPCClient::BClearCacheAndRestartCEFProcess()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
  T CChromeIPCClient::BRestartMasterCEFProcess()
@@ -750,9 +760,14 @@
  T CCookie::SharedDtor()
  T CCookie::~CCookie()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDirIterator::BNextFile()
+ T CDirIterator::CDirIterator(char const*, char const*)
+ T CDirIterator::Init(char const*)
+ T CDirIterator::~CDirIterator()
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CHTMLBaseProtoBufMsg::BDeserializeCrossProc(CUtlBuffer*, EHTMLCommands*, unsigned int*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
+ T CHTMLController::BClearCacheAndRestartCEF()
  T CHTMLController::BDispatchThreadedPaintCommand(HTMLCommandBuffer_t*)
  T CHTMLController::BExitMasterCEFProcess()
  T CHTMLController::BIsBrowserEnabled()
@@ -2213,6 +2228,9 @@
  T COSXChromeIPCWakeThread::ShutdownFromMainThread()
  T COSXChromeIPCWakeThread::TimedWaitFromMainThread(IPC::IEvent*, unsigned int)
  T COSXChromeIPCWakeThread::~COSXChromeIPCWakeThread()
+ T CPathString::CPathString(char const*, char const*)
+ T CPathString::Clear()
+ T CPathString::Validate(CValidator&, char const*)
  T CSharedMemStream::BWaitForDataToGet()
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
@@ -2309,6 +2327,7 @@
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
+ T FillDataStruct(_finddata_t*)
  T HTMLCommandBuffer_t::Validate(CValidator&, char const*)
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -2340,6 +2359,7 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::crc32(unsigned int, void*, unsigned int)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
+ T MakeFileWriteable(char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
@@ -2347,11 +2367,14 @@
  T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
+ T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initIPcEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeES9_S9_
  T _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendIPKcEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueERS5_E4typeESA_SA_
  T __CreateCHTMLControllerIHTMLChromeController_interface()
  T __clang_call_terminate
+ T _findfirst(char const*, _finddata_t*)
+ T _findnext(long long, _finddata_t*)
  T int V_sprintf_safe<64ul>(char (&) [64ul], char const*, ...)
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
@@ -2455,7 +2478,9 @@
  ThreadWaitForProcessExit
  V_ComposeFileName
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_FixDoubleSlashes
  V_FixSlashes
+ V_MakeAbsolutePath
  V_RemoveDotSlashes
  V_StripFilename
  V_UnqualifiedFileName
@@ -2485,7 +2510,9 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ __toupper
  __udivdi3
+ alphasort$INODE64
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
  b (anonymous namespace)::CHTMLHeader_descriptor_
@@ -2726,9 +2753,11 @@
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_HTMLController
+ b selectBuf
  bootstrap_look_up
  bootstrap_port
  ceilf
+ chmod$UNIX2003
  close$UNIX2003
  connect$UNIX2003
  d s_pConversionArrays_NoEscConversion
@@ -2751,6 +2780,7 @@
  launch_data_free
  launch_data_new_string
  launch_msg
+ lstat$INODE64
  mach_msg
  mach_port_allocate
  mach_port_deallocate
@@ -2886,6 +2916,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
  recvmsg$UNIX2003
+ rmdir
+ scandir$INODE64
  sched_yield
  sem_close
  sem_open
@@ -2898,6 +2930,7 @@
  snprintf
  socket
  sprintf
+ stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
@@ -2932,6 +2965,7 @@
  strerror$UNIX2003
  strlen
  strncpy
+ strrchr
  strtod$UNIX2003
  strtof$UNIX2003
  strtol
@@ -2940,11 +2974,13 @@
  strtoull
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
+ t FileSelect(dirent const*)
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception
+ unlink
  usleep$UNIX2003
  vasprintf
  vsnprintf

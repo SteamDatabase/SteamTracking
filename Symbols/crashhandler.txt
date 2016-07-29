@@ -205,14 +205,13 @@
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlString::AssertStringTooLong()
- T CUtlStringBuilder::Access()
+ T CUtlStringBuilder::AppendChar(char)
  T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::SetLength(unsigned long)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::FindAndRemove(CHandlerContext* const&)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::GrowVector(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::InsertBefore(int, CHandlerContext* const&)
@@ -451,7 +450,6 @@
  malloc_size
  memcpy
  memmove
- memset
  mkdir
  nanosleep
  nanosleep$UNIX2003

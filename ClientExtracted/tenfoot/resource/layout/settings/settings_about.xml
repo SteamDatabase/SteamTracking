@@ -76,8 +76,8 @@
 				<Label class="SettingsLegend" id="DriverDateLabel" text="#SettingsAbout_DriverDateLabel" />
 				<Label class="SettingsValue" id="DriverDateValue" text="#SettingsAbout_DriverDate" />
 
-				<Label class="SettingsLegend" text="#SettingsAbout_VideoRAMLabel" />
-				<Label class="SettingsValue" text="#SettingsAbout_VideoRAM" />
+				<Label class="SettingsLegend" id="VideoMemoryLabel" text="#SettingsAbout_VideoRAMLabel" />
+				<Label class="SettingsValue" id="VideoMemoryValue" text="#SettingsAbout_VideoRAM" />
 
 		</Panel>
 	</Panel>	
