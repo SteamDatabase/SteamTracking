@@ -2891,7 +2891,7 @@ input.inputTagsFilter:checked + label:hover
 	margin-left: -10px;
 	padding-left: 10px;
 	margin-right: -10px;
-	height: 20px;
+	min-height: 20px;
 	padding-top: 0px;
 	padding-bottom: 3px;
 }
