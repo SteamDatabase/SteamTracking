@@ -100,9 +100,15 @@
 
 	position: relative;
 }
+.commentnotification:hover {
+	background: rgba( 0, 0, 0, 0.6 );
+}
 
 .commentnotification.unread {
 	background-position: top center;
+}
+.commentnotification.unread:hover {
+	background: rgba( 103, 193, 245, 0.6 );
 }
 
 .commentnotification_icon {
@@ -123,6 +129,9 @@
 	font-weight: normal;
 	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
 	text-shadow: 1px 1px rgba( 0, 0, 0, 0.5 );
+}
+.commentnotification.unread:hover .commentnotification_title {
+	color: #ffffff;
 }
 
 .commentnotification_description {

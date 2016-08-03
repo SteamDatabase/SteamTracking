@@ -460,7 +460,7 @@ img.game_header_image_full {
 
 
     font-size: 12px;
-	color: #898a8c;
+	color: #8f98a0;
 
 	padding: 16px;
 	padding-bottom: 26px;
@@ -3944,21 +3944,15 @@ div.agegate_text_container > h2 {
 }
 
 .series_episode {
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
 
-	padding: 0px;
-	margin-top: 0;
-	margin-bottom: 30px;
-	clear: both;
-	height: 110px;
+	min-height: 110px;
+	overflow: auto;
+	height: auto !important;
 	width: 100%;
-	position: relative;
 
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
@@ -3969,6 +3963,8 @@ div.agegate_text_container > h2 {
 
 .series_episode .episode_image_col {
 	float: left;
+	height: 110px;
+	overflow: hidden;
 }
 
 .series_episode .episode_image {
@@ -3977,16 +3973,13 @@ div.agegate_text_container > h2 {
 }
 
 .series_episode .episode_details_col {
-	padding: 6px 6px 6px 12px;
+	padding: 6px 6px 2px 12px;
 	float: left;
 	width: 360px;
 }
 
 .series_episode .episode_name {
 	color: #fff;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
 }
 
 .series_episode .episode_date {
@@ -4005,26 +3998,28 @@ div.agegate_text_container > h2 {
 .series_episode .episode_description {
 	font-size: 12px;
 	margin-top: 4px;
-	height: 43px;
-	overflow: hidden;
+	margin-bottom: 24px;
 	color: #acb2b8;
 }
 
-.series_episode.active {
-	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
-	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.series_episode.nosub .episode_description {
+	margin-bottom: 10px;
 }
 
-.series_episode .episode_action_col {
+.series_episode.active {
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(103,193,245,0.4) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(103,193,245,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(103,193,245,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6667c1f5',GradientType=1 ); /* IE6-9 */
+}
+
+.series_seasons .episode_action_col {
 	position: relative;
 	right: 16px;
-	text-align: right;
 	float: right;
+	margin-bottom: -10px;
+	top: -19px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .series_seasons .season_name {
@@ -4129,15 +4124,6 @@ div.agegate_text_container > h2 {
 	html.responsive .series_episode .episode_details_col {
 		width: 65%;
 		padding: 5px 5px 5px 8px;
-	}
-
-	html.responsive .series_episode .episode_description {
-		height: 45px;
-		overflow: auto;
-	}
-
-	html.responsive .series_episode.nosub .episode_description {
-		height: 57px;
 	}
 
 	html.responsive .series_episode.nosub .episode_action_col {

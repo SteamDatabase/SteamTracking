@@ -153,7 +153,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
 				ShowConfirmDialog( 'Customize Your Discovery Queue', 'We\'ve built you a new Discovery Queue by applying your customizations.  What would you like to do?',
 					'Start exploring the new Queue','Stay here'
 				).done( function() {
-					window.location = 'https://store.steampowered.com/explore/startnew';
+					window.location = 'https://store.steampowered.com/explore/startnew/' + g_eDiscoveryQueueType + '/';
 				});
 				bQueueIsValid = false;
 			}
@@ -161,7 +161,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
 			{
 				bQueueIsValid = true;
 			}
-		} );
+		}, g_eDiscoveryQueueType );
 	} );
 }
 

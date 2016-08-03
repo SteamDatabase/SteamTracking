@@ -328,7 +328,10 @@
 {
 	width: 236px;
 	height: 110px;
-	vertical-align: center;
+	vertical-align: top;
+	box-shadow: #000000AA -2px -2px 4px 4px;
+	margin-top: 0px;
+	margin-left: 1px;
 }
 
 .AppEpisodeName
@@ -369,7 +372,11 @@
 	margin-top: 4px;
 	color: #acb2b8;
 	width: 550px;
-	height: 72px;
+}
+
+.AppEpisodeDescription .AppDescription.NoSub
+{
+	width: 690px;
 }
 
 .AppEpisodePrice
