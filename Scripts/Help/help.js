@@ -533,11 +533,11 @@ HelpWizard = {
 
 		if ( loading_div )
 		{
-			loading_div.html('<span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
+			loading_div.html('<span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span>');
 		}
 		else
 		{
-			$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
+			$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span></div>');
 		}
 
 		try
@@ -1231,7 +1231,7 @@ HelpWizard = {
 		});
 	},
 
-	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, bLostEmail, bLostPhone ) {
+	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, bLostEmail, bLostPhone, bNoSelfPOP ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
@@ -1240,7 +1240,8 @@ HelpWizard = {
 				code: strCode,
 				nav: strNav,
 				lostemail: bLostEmail ? 1 : 0,
-				lostphone: bLostPhone ? 1 : 0
+				lostphone: bLostPhone ? 1 : 0,
+				noselfpop: bNoSelfPOP ? 1 : 0,
 			} )
 		}).fail( function( xhr ) {
 
@@ -1498,11 +1499,11 @@ HardwareRMA = {
 
 		if ( loading_div )
 		{
-			loading_div.html('<span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span>');
+			loading_div.html('<span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span>');
 		}
 		else
 		{
-			$J('#help_hardware_return_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif" alt=""></span></div>');
+			$J('#help_hardware_return_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span></div>');
 		}
 
 		$J.ajax({
@@ -1953,7 +1954,7 @@ HelpRequestPage = {
 	{
 		if ( !HelpWizard.m_steamid )
 		{
-			this.PromptLogin();
+			HelpWizard.PromptLogin();
 			return;
 		}
 
@@ -2276,7 +2277,49 @@ HelpRequestPage = {
 			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
 		});
 	},
-
+	SubmitRefundToCardForm: function( form )
+	{
+		var $Form = $J(form);
+		$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+		var oParams = {
+			type: $Form.attr( 'method' ),
+			url: $Form.attr( 'action' )
+			};
+		oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
+		ShowConfirmDialog(
+				'Refund',
+				'<p>Depending on your bank and payment method, it may take <b>7 or more days</b> for funds to be returned to you.</p> Are you sure you want to change your refund?',
+				'Refund',
+				'Cancel')
+				.fail( function()
+				 {
+				 	$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+				 })
+				.done( function() {
+        			$J.ajax(
+        				oParams
+        			).done( function( data ) {
+        				ShowAlertDialog( 'Refund Request Updated', 'Your refund has been processed.' )
+        				.done( function(){
+        					HelpWizard.LoadPageFromHash( false, 'HelpRequest/' + $Form.children('input[name="reference_code"]').val(), true );
+        				});
+        			}).fail( function ( jqxhr )
+        			{
+        				if ( $J.parseJSON(jqxhr.responseText).error != 2 )
+        				{
+        					ShowAlertDialog( 'Error', 'Sorry! An unexpected error has occurred while processing your request. Please try again.' );
+        					$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+        				}
+        				else
+        				{
+        					ShowAlertDialog( 'Refund Failed', 'There was an error refunding your purchase. If you need the refund to go back to the original payment method, please update your ticket and we will investigate.' )
+        					.done( function(){
+        							HelpRequestPage.ShowReplyForm();
+        						});
+        				}
+        			});
+        		});
+	},
 	CloseHelpRequest: function( reference_code )
 	{
 		$J.ajax( {

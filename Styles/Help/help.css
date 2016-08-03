@@ -140,7 +140,7 @@ input[type=submit]:hover {
 }
 
 .dselect_container a.trigger {
-	background: rgba( 103, 193, 245, 0.1 );
+	background: rgba( 103, 193, 245, 0.2 );
 }
 
 .dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
@@ -574,6 +574,27 @@ body.v6 .page_content_ctn.dark:last-child {
 	margin-top: 15px;
 }
 
+.help_page_text{
+	line-height: 18px;
+	max-width: 712px;
+}
+
+#payment_header_title{
+	padding-top: 30px;
+}
+
+.submit_proof{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.help_page_purchasetoprove {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 10px;
+	max-width: 712px;
+	margin-top: 15px;
+}
+
 .help_wizard_button {
 	display: block;
 	max-width: 714px;
@@ -979,6 +1000,11 @@ body.v6 .help_refund_request_area h2 a:hover {
 {
 	margin-top: 20px;
 	max-width: 604px;
+}
+
+.warning
+{
+	color: #a94847;
 }
 
 .help_refund_request_area h1.failed
@@ -2768,10 +2794,10 @@ input.unlockcode_entry_input
 .shipping_form_right
 {
 	clear: right;
-	float: right;
+	float: left;
 	text-align: left;
 	width: 292px;
-	margin-right: 200px;
+	margin-left: 76px;
 }
 
 .shipping_form_right label, .shipping_form_left label
@@ -2787,13 +2813,14 @@ input.unlockcode_entry_input
 }
 
 #shipping_info_entry input {
-	font-size: 16px;
-	line-height: 125%;
+	font-size: 13px;
+	line-height: 18px;
 	padding: 2px 4px;
-	margin: 4px 0 4px 0;
+	margin: 0px 0 4px 0;
 	color: #ffffff;
 	width: 260px;
-	background-color: #000010;
+	color: #ffffff;
+	background-color: #324965;
 	border-top: solid 1px #182636;
 	border-left: solid 1px #182636;
 	border-right: solid 1px #45566a;
@@ -2801,7 +2828,7 @@ input.unlockcode_entry_input
 }
 
 #shipping_info_entry .dselect_container {
-	margin: 4px 0 18px 0;
+	margin: 0px 0 18px 0;
 	width: 270px;
 }
 
@@ -3431,8 +3458,7 @@ ul.attached_file_list {
 
 #what_is_this a
 {
-    color: #cdcac1;
-    text-decoration: underline;
+    color: #67c1f5;
     clear: none;
     font-weight: normal;
 }
@@ -3537,13 +3563,8 @@ ul.attached_file_list {
 	padding-bottom: 10px;
 }
 
-.help_chargeback_description_content {
-	padding-bottom: 20px;
-	line-height: 18px;
-}
-
-.help_chargeback_instructions {
-	background-color: rgba(0, 0, 0, 0.2);
+.help_restrictedaccount_instructions {
+	background: #111a25;
 	padding: 18px 28px 18px 18px;
 	border-top: 1px solid #5eafde;
 	margin-top: 20px;
@@ -3553,7 +3574,7 @@ ul.attached_file_list {
 	color: #82909a;
 }
 
-.help_chargeback_step {
+.help_restrictedaccount_step {
 	color: #67c1f5;
 }
 
@@ -3566,6 +3587,43 @@ ul.attached_file_list {
 	line-height:18px;
 }
 
-.help_chargeback_content {
+.help_restrictedaccount_content {
 	max-width: 712px;
+}
+
+.help_restrictedaccount_description {
+	line-height: 18px;
+	padding-bottom: 20px;
+}
+
+.fraud_refund_table {
+	background: #222A3B;
+	border-collapse:collapse;
+	border: 2px solid #222A3B;
+	margin: 10px 0 10px 0;
+}
+
+.fraud_refund_table td {
+	padding: 10px;
+	border:none;
+}
+
+.fraud_refund_table tr.fraud_other_row {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.btn_link {
+	background:none!important;
+	border:none;
+	padding:0!important;
+	font: inherit;
+	/*border is optional*/
+	cursor: pointer;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.btn_link:hover {
+	text-decoration: none;
+	color: #66c0f4;
 }
