@@ -3352,7 +3352,7 @@ function CreatePHPDateFromObject( d )
 function VerifyReleaseGame( appid, data )
 {
 	var strAcceptString = "Release my app";
-	var dialog = ShowPromptDialog( "Confirm App Release", "If you are ready to make your app playable to customers right now, please type the phrase \"%1$s\" into the box below".replace('%1$s', strAcceptString), "Release Now", null );
+	var dialog = ShowPromptDialog( "Confirm App Release", "If you are ready to release your app and make it available to customers immediately, please type the phrase \"%1$s\" into the box below.".replace('%1$s', strAcceptString), "Release Now", null );
 
 	var input = $J( dialog.m_$Content ).find( "input" );
 	var releasebtn = $J( dialog.m_$Content ).find( "button" );

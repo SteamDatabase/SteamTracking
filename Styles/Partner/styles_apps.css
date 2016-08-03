@@ -142,8 +142,7 @@ textarea#leaderboard_blob {
 /* Episodic, Season and Series */
 #episode_list_wrapper .episode {
 	padding: 10px;
-	margin-bottom: 20px;
-	height: 250px;
+	margin-bottom: 10px;
 }
 
 #episode_list_wrapper .episode .header_image_col {
@@ -197,7 +196,7 @@ textarea#leaderboard_blob {
 }
 
 #episode_list_wrapper .episode .store_edit_col .LocTextArea textarea {
-	height: 58px;
+	height: 90px;
 	resize: none;
 }
 
