@@ -76,7 +76,7 @@ HelpWizard = {
 		try
 		{
 			// https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications
-			ga( 'set', 'page', HelpWizard.m_bUseHistoryAPI ? window.location.pathname : '/wizard/' + wizard_url );
+			ga( 'set', 'page', HelpWizard.m_bUseHistoryAPI ? window.location.pathname + window.location.search : '/wizard/' + wizard_url );
 			if ( link_click )
 				ga( 'send', 'pageview' );
 		}
