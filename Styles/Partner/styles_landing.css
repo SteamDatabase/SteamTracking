@@ -1358,8 +1358,23 @@ span.icon_actual_authority { display: inline-block;}
     .nonDevActionSection>.text {
         font-size: 14px;
         color: #999999;
-        min-height: 110px;
+        margin-bottom: 20px;
     }
+
+	.nonDevActionSection .signupitem {
+		font-size: 14px;
+		color: #999999;
+	}
+
+	.nonDevActionSection .signupitembutton {
+		font-size: 14px;
+		white-space: nowrap;
+		padding: 4px;
+	}
+
+	.nonDevActionSection .td {
+		vertical-align: top;
+	}
 
     .nonDevActionSection>.link {
         margin-top: 8px;
