@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.eca82fbe073858d1863607da9697c92c35aa33f5.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.a431791a4829512d47f6b70a511d9bf8b7b78da3.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -718,7 +718,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_taser.3c80d155bf0547c377217920f2c7329c8b00d472.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_hkp2000",
@@ -976,7 +980,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_flashbang.bbde1307eeb99d78ef67c3a87a3a713023b63af2.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_hegrenade",
@@ -993,7 +1001,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_hegrenade.7b344756d5dbdda4fd2e583a227a670599889f59.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_smokegrenade",
@@ -1010,7 +1022,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_smokegrenade.8746d3fec5a1041d61412295aee74c7d873ccacb.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_molotov",
@@ -1027,7 +1043,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_molotov.d700f0165e02bd9f2cb6bdb63bb76b4cac450b76.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_decoy",
@@ -1044,7 +1064,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_decoy.d09e626c3d81f1f262bbca6146407f279a24dd03.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_incgrenade",
@@ -1061,7 +1085,11 @@
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_incgrenade.94d31f4f1af7d2e695f403d9a55f2cd64f3459b2.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
-				"craft_material_type": "weapon"
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_c4",
@@ -1081,7 +1109,11 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true
-				}
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "musickit_default",
@@ -24285,6 +24317,38 @@
 				"defindex": 223,
 				"attribute_class": "tournament_mvp_account_id",
 				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "recovery time crouch final",
+				"defindex": 228,
+				"attribute_class": "recovery_time_crouch_final",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "recovery time stand final",
+				"defindex": 229,
+				"attribute_class": "recovery_time_stand_final",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "recovery transition start bullet",
+				"defindex": 230,
+				"attribute_class": "recovery_transition_start_bullet",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "recovery transition end bullet",
+				"defindex": 231,
+				"attribute_class": "recovery_transition_end_bullet",
+				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
 			}
