@@ -51,7 +51,7 @@
 	var DOTA_CONSTS =
 	{
 		LEAGUE_ID_TI5: 2733,
-
+		LEAGUE_ID_TI6: 4664,
 		TEAM_RADIANT: 2,
 		TEAM_DIRE: 3,
 
@@ -430,7 +430,7 @@
 		
 		if ( g_bIsDev )
 		{
-			Data.league_id = DOTA_CONSTS.LEAGUE_ID_TI5;
+			Data.league_id = DOTA_CONSTS.LEAGUE_ID_TI6;
 		}
 
 		if ( null === g_Tournament && undefined !== Data.league_id && Data.league_id > 0 )
@@ -4510,22 +4510,27 @@
 	{
 		var $LI = this.$m_DummyGameListing.clone().removeAttr( 'id' );
 
-		if ( undefined !== GameData.watch_url )
+		if( GameData && GameData.watch_url )
 		{
-			$LI.attr( 'data-linkurl', GameData.watch_url );
-		}
 
-		if ( GameData.team1_logo_url_large )
-		{
-			$LI.find( '.Team1' ).append( CreateImage( GameData.team1_logo_url_large ) );
-		}
+			if ( undefined !== GameData.watch_url )
+			{
+				$LI.attr( 'data-linkurl', GameData.watch_url );
+			}
 
-		if ( GameData.team2_logo_url_large )
-		{
-			$LI.find( '.Team2' ).append( CreateImage( GameData.team2_logo_url_large ) );
-		}
+			if ( GameData.team1_logo_url_large )
+			{
+				$LI.find( '.Team1' ).append( CreateImage( GameData.team1_logo_url_large ) );
+			}
 
-		return $LI;
+			if ( GameData.team2_logo_url_large )
+			{
+				$LI.find( '.Team2' ).append( CreateImage( GameData.team2_logo_url_large ) );
+			}
+
+			return $LI;
+		}
+		return null;
 	}
 
 	CTournamentBox.prototype.OnWindowResize = function()
@@ -4765,6 +4770,10 @@
 			var bRadiant = nTeam == DOTA_CONSTS.TEAM_RADIANT;
 			for ( var iPlayer = 0; iPlayer < DOTA_CONSTS.PLAYERS_PER_TEAM; ++iPlayer )
 			{
+				if( !g_Match )
+				{
+					continue;
+				}
 				var $CurPanel = this.$m_ChildPanels[nTeam][iPlayer];
 				var Player = g_Match.GetPlayer( nTeam, iPlayer );
 				if ( !Player || !Player.BIsValid() )

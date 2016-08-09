@@ -1361,6 +1361,7 @@ body.iframe #ChatDragHandle
 
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
+    min-height: calc( 100vh );
 }
 
 @media screen and (max-aspect-ratio: 10/9),
