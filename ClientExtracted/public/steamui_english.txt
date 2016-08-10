@@ -328,8 +328,8 @@ This should take less than a minute."
 "Steam_LogoutDialogOKButton"			"Logout"
 "Steam_LogoutDialogLabel"			"Account Name:"
 
-"Steam_FlushConfigDialogTitle"			"Steam - Reset Configuration"
-"Steam_FlushConfigDialogMsg"			"This will reset your local Steam configuration and you will need login to Steam again.\n\nDo you wish to continue?"
+"Steam_FlushConfigDialogTitle"			"Steam - Clear Download Cache"
+"Steam_FlushConfigDialogMsg"			"This will clear your local download cache and you will need login to Steam again.\n\nDo you wish to continue?"
 
 "Steam_AccountDialog_Logout"			"Logout..."
 "Steam_RunGame_Title_Error"			"Steam - Error"
@@ -1426,7 +1426,7 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_AutoUpdateTimeRestrictionStart"	"From"
 "Steam_AutoUpdateTimeRestrictionEnd"		"To"
 "Steam_AllowDownloadsDuringGameplay"	"Allow downloads during gameplay"
-"Steam_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in each game's Properties page"
+"Steam_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other \nSteam application running. You can also override this on a per-game basis in each game's Properties page"
 "Steam_ThrottleDownloadsWhileStreaming"	"Throttle downloads while streaming"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"If this is checked, Steam will limit download speed to maintain a high quality In-Home Streaming experience."
 "Steam_DownloadRatesInBits"			"Display download rates in bits per second"
@@ -3913,6 +3913,9 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_ContentMgr_RemoveFailed" "Removing selected Steam library folder failed."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "The default Steam install folder can't be removed."
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "Only empty Steam library folders can be removed."
+"SteamUI_ContentMgr_FlushDownloadConfig" "Clear Download Cache"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Clearing the download cache might resolve issues downloading or starting apps"
+"SteamUI_ContentMgr_FlushDownloadConfigTip" "This will not affect your already installed games or saved games"
 
 "SteamUI_InstallUnder" "Install under %s1"
 "SteamUI_CreateNewDrive" "Create new Steam library on drive %s1"
@@ -4072,6 +4075,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Family_Options_Title" "Family View"
 "Steam_Settings_Family_Options_Text" "Family View can be used to restrict access to content and features while in a PIN-protected Family View."
 
+"Steam_Game_Family_Sharing_Unsupported" "Steam Family Sharing is currently not supported by this title."
 
 "Steam_AccountPage_ManageDeviceAuth"	"Manage Family Library Sharing..."
 

@@ -89,6 +89,12 @@
 			"ControlName"		"Label"
 			"labelText"		"#Steam_ExternalSignupPropertiesLabel"
 		}
+		
+		"FamilySharingUnsupportedLabel"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_Game_Family_Sharing_Unsupported"
+		}
 	}
     
     
@@ -114,6 +120,8 @@
 		
 		place {controls=EnableOverlayCheck,EnableDesktopGameTheater start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
 		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
+		
+		place {controls=FamilySharingUnsupportedLabel margin-top=472 margin-left=20 }
 
 	}
 }
