@@ -445,6 +445,10 @@ tr.wordfilter_row:hover {
 	background-color: #3C3C3D;
 }
 
+tr.wordfilter_row.begin_group {
+	border-top: 1px solid #8F98A0;
+}
+
 td.wordfilter_word {
 	color: #ffffff;
 	word-break: break-all;

@@ -429,19 +429,40 @@ function StandardCommunityBan( steamid, elemLink )
 
 
 
-function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea )
+function CEmoticonPopup( $EmoticonButton, $Textarea )
 {
-	this.m_rgEmoticons = rgEmoticons;
 	this.m_$EmoticonButton = $EmoticonButton;
 	this.m_$TextArea = $Textarea;
+
+	if ( CEmoticonPopup.sm_deferEmoticonsLoaded == null )
+		CEmoticonPopup.sm_deferEmoticonsLoaded = new jQuery.Deferred();
 
 	this.m_bVisible = false;
 	this.m_$Popup = null;
 
 	var _this = this;
-	this.m_$EmoticonButton.click( function() { _this.OnButtonClick(); } );
+	this.m_$EmoticonButton.one('mouseenter', function() { _this.LoadEmoticons(); } );
+	this.m_$EmoticonButton.click( function() { _this.LoadEmoticons(); CEmoticonPopup.sm_deferEmoticonsLoaded.done( function() { _this.OnButtonClick(); } ) } );
 	this.m_fnOnDocumentClick = function() { _this.DismissPopup(); };
 }
+
+CEmoticonPopup.sm_rgEmoticons = [];
+CEmoticonPopup.sm_bEmoticonsLoaded = false;
+CEmoticonPopup.sm_deferEmoticonsLoaded = null;
+
+CEmoticonPopup.prototype.LoadEmoticons = function()
+{
+	if ( CEmoticonPopup.sm_bEmoticonsLoaded )
+		return;
+
+	CEmoticonPopup.sm_bEmoticonsLoaded = true;
+	CEmoticonPopup.sm_rgEmoticons = [];
+	$J.get( 'https://steamcommunity.com/actions/EmoticonList' )
+		.done( function(data) {
+			if ( data )
+				CEmoticonPopup.sm_rgEmoticons = data;
+		}).always( function() { CEmoticonPopup.sm_deferEmoticonsLoaded.resolve() } );
+};
 
 CEmoticonPopup.prototype.OnButtonClick = function()
 {
@@ -491,9 +512,9 @@ CEmoticonPopup.prototype.BuildPopup = function()
 	var $Content = $J('<div/>', {'class': 'emoticon_popup_content' } );
 	$PopupInner.append( $Content );
 
-	for( var i = 0; i < this.m_rgEmoticons.length; i++ )
+	for( var i = 0; i < CEmoticonPopup.sm_rgEmoticons.length; i++ )
 	{
-		var strEmoticonName = this.m_rgEmoticons[i].replace( /:/g, '' );
+		var strEmoticonName = CEmoticonPopup.sm_rgEmoticons[i].replace( /:/g, '' );
 		var strEmoticonURL = 'https://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
 
 		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
