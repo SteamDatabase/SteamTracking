@@ -21,8 +21,10 @@
 .Broadcast_Card .apphub_CardContentViewers
 {
 	font-size: 13px;
-	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-	color: #636363;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #636363;
 	float: right;
 	padding: 5px;
 }

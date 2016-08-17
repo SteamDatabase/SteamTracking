@@ -8,8 +8,10 @@
 .profile_badges_header_title {
 
 	font-size: 24px;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	color: #5491cf;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #5491cf;
 }
 
 .profile_badges_sortoptions {
@@ -109,8 +111,10 @@ a.badge_row {
 	line-height: 32px;
 	font-size: 20px;
 	color: #ffffff;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	white-space: nowrap;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -922,8 +926,10 @@ img.gamecard {
 
 .booster_creator_page {
 
-	font-family: "Motiva sans light", "Motiva sans", Helvetica, Arial, sans-serif;
-	line-height: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			line-height: 18px;
 	position: relative;
 }
 
@@ -1098,8 +1104,10 @@ select#booster_game_selector {
 	font-size: 13px;
 	line-height: 18px;
 	padding: 3px 0;
-	font-family: "Motiva sans light", "Motiva sans", Helvetica, Arial, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 #booster_game_selector > option.available {
 	color: #ffffff;

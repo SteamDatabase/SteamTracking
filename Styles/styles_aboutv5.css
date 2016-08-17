@@ -348,7 +348,7 @@ a.mac_portal_btn {
     font-weight: bold;
 }
 
-#about_boxes_last_call_to_action img {
+#about_boxes_last_call_to_action .about_install_ctn {
     margin-top: 2em;
 }
 
@@ -367,4 +367,42 @@ a.mac_portal_btn {
 {
     color: #8cc540;
     font-size: 150%;
+}
+
+.about_install_ctn {
+	background: rgba( 58, 58, 58, 1.0 );
+	border-radius: 2px;
+	padding: 2px;
+
+	display: inline-block;
+}
+
+.about_install_ctn .about_install_footer {
+	color: #999;
+	font-size: 12px;
+
+	line-height: 17px;
+	padding: 2px 8px 0 8px;
+}
+
+.about_install_ctn .btn_medium,
+.about_install_ctn .btn_medium > span {
+	display: block;
+}
+
+.about_install_ctn .btn_medium > span {
+	color: #ffffff;
+	font-size: 16px;
+	padding: 8px 24px 8px 12px;
+	line-height: 28px;
+}
+
+.about_install_ctn .btn_medium > span > img {
+	height: 26px;
+	margin-right: 8px;
+	vertical-align: top;
+}
+
+.about_boxes_last_call_to_action .about_install_ctn {
+	margin-top: 2em;
 }

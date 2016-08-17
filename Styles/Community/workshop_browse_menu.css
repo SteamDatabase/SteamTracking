@@ -43,16 +43,20 @@
 {
 	font-size: 22px;
 	color: #66c0f4;
-	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .customBrowseText
 {
 	font-size: 13px;
 	line-height: 17px;
 	color: #c6d4df;
-	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .Portal2CustomTextTitle
 {
@@ -219,8 +223,10 @@ input.search_text.default_text {
 	padding-right: 10px;
 	font-size: 18px;
 	color: #67c1f5;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	margin-right: 4px;
 	margin-bottom: 3px;
 }

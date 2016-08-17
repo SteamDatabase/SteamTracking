@@ -39,7 +39,7 @@ input.phone_input_number {
 .current_phone_box {
 	background: rgba(42, 63, 90, 0.5 );
 	padding: 20px;
-
+	margin-bottom: 20px;
 }
 
 .phone_subheader {
@@ -231,4 +231,21 @@ input.phone_input_number {
 	margin: 15px 0;
 	text-align: center;
 	padding-bottom: 10px;
+}
+
+.phone_requires_verification_box {
+	border: 1px solid rgba( 166, 128, 27 , 1 );
+	background: rgba( 0, 0, 0, 0.5 );
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.phone_requires_verification_header img {
+	vertical-align: middle;
+}
+
+.phone_requires_verification_header {
+	float: left;
+	font-size: 18px;
+	margin-top: 5px;
 }

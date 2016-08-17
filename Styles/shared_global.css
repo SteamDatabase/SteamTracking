@@ -314,8 +314,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#52515
 
 	color: #ffffff;
 	font-size: 13px;
-	font-family: 'Motiva Sans', Arial,Helvetica,Verdana,sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
 
+		
 	background-repeat: no-repeat;
 	background-position: top left;
 
@@ -896,8 +898,10 @@ div#global_header {
 	background-position: center top;
 	min-width: 940px;
 
-	font-family: 'Motiva Sans',Arial,Helvetica,Verdana,sans-serif;
-	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
 }
 
 /**/
@@ -1100,8 +1104,10 @@ a.global_header_toggle_button:hover {
 	color: #ffffff;
 	font-weight: normal;
 	font-size: 12px;
-	font-family: 'Motiva Sans Bold',Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .global_header_toggle_button.green,
 .global_header_toggle_button.has_notifications {
@@ -1449,8 +1455,10 @@ img.dynamiclink_preview {
 .dynamiclink_name {
 	font-size: 16px;
 	color: #66C0F4;
-	font-family: 'Motiva Sans', arial, tahoma;
-	white-space: nowrap;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			white-space: nowrap;
 	text-overflow: ellipsis;
 }
 .dynamiclink_name .dynamiclink_type {

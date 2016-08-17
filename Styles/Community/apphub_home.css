@@ -81,8 +81,10 @@ body.apphub_blue
 .appHubLoadingPageModal
 {
 	font-size: 14px;
-	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-	text-align: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-align: center;
 	line-height: 35px;
 	height: 75px;
 	overflow: hidden;
@@ -522,8 +524,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .apphub_StoreAppText
 {
 	color: #8c8b8a;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
 	text-align: left;
 }
 
@@ -610,8 +614,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	padding-left: 15px;
 	float: left;
-	font-family: 'Motiva Sans', Arial, Tahoma;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 18px;
 	color: white;
 }
 

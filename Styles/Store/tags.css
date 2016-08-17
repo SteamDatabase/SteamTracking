@@ -22,8 +22,10 @@ body.tag_page > .perf_timing_area .perf_timing_link {
 body.tag_page h2.pageheader {
 	color: #ffffff;
 	font-size: 34px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	text-shadow: 1px 1px 0 #000000;
 	margin-top: -4px;
 }
@@ -31,8 +33,10 @@ body.tag_page h2.pageheader {
 body.tag_page h3 {
 	color: #ffffff;
 	font-size: 22px;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: normal;
 }
 
 .tag_browse_header_desc {
@@ -51,8 +55,10 @@ body.tag_page h3 {
 }
 
 .tag_browse_options {
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	color: #8f98a0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #8f98a0;
 	font-size: 15px;
 	margin-bottom: 2px;
 }
@@ -180,7 +186,10 @@ body.tag_page h3 {
 	color: #898a8c;
 	font-size: 13px;
 	line-height: 18px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		
 
 	padding-top: 12px;
 	padding-bottom: 20px;
@@ -222,8 +231,10 @@ body.tag_page h3 {
 	padding: 100px 140px;
 	text-align: center;
 	color: #b0aeac;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
 
+		
 	margin-bottom: 36px;
     margin-top: 30px;
 
@@ -276,8 +287,10 @@ body.tag_page h3 {
 }
 
 .tag_announce_page .new_page_content {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .tag_announce_page h1, .tag_announce_page h2 {
 	color: #ffffff;
@@ -297,14 +310,18 @@ body.tag_page h3 {
 .tag_announce_page h2 {
 	font-size: 30px;
 	line-height: 29px;
-	font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
-	margin-bottom: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			margin-bottom: 12px;
 }
 
 body.tag_page.tag_announce_page h3 {
 	font-size: 21px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	margin-bottom: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-bottom: 24px;
 }
 
 .tag_announce_header {
@@ -326,8 +343,10 @@ body.tag_page.tag_announce_page h3 {
 .tag_announce_howdoesthiswork {
 	color: #b0aeac;
 	font-size: 15px;
-	font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
-	text-align: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			text-align: center;
 	margin-bottom: 16px;
 }
 

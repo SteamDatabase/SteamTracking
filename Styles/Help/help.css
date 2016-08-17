@@ -30,10 +30,12 @@ a.nohover:hover {
 
 textarea
 {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 12px;
 	color: #ffffff;
-	background-color: #324965;
+	background-color: #1a2738;
 	border: 1px solid #000;
 	box-shadow: 1px 1px 0 #45556c;
 	padding: 4px;
@@ -56,6 +58,16 @@ input[type=submit] {
 
 input[type=submit]:hover {
 	color: #ffffff;
+}
+
+input[type=text] {
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+	padding: 4px;
 }
 
 .help_site_button {
@@ -126,7 +138,7 @@ input[type=submit]:hover {
 }
 .dselect_container a.trigger, .dselect_container a.activetrigger {
 	display: block;
-	color: #dfdfdf;
+	color: #67C1F5;
 	padding: 0 30px 0 8px;
 	font-size: 12px;
 	line-height: 24px;
@@ -178,9 +190,11 @@ body.v6 {
 	position: relative;
 	min-height: 100%;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	color: #c6d4df;
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #c6d4df;
+	font-size: 13px;
 }
 
 body.v6.in_client {
@@ -255,8 +269,10 @@ body.v6 #footer .rule{
 body.v6 #footer .valve_links {
 	margin-top: 8px;
 	float: left;
-	font-family: 'Motiva Sans', Arial,Helvetica,Verdana,sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 13px;
 	color: #61686D;
 }
 body.v6 #footer .valve_links a {
@@ -295,8 +311,10 @@ body.v6 > .perf_timing_area .perf_timing_link {
 }
 
 body.v6 h2 {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 18px;
 	color: #67c1f5;
 }
@@ -350,8 +368,10 @@ body.v6 h2.pageheader {
 body.v6 h3 {
 	color: #ffffff;
 	font-size: 22px;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: normal;
 }
 
 body.v6 h4 {
@@ -375,8 +395,10 @@ body.v6 .page_content {
 .breadcrumbs {
     color: #61686d;
     font-size: 12px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	padding-top: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding-top: 10px;
 }
 .breadcrumbs a {
     color: #8f98a0;
@@ -545,8 +567,10 @@ body.v6 .page_content_ctn.dark:last-child {
 {
 	color: #67c1f5;
 	font-size: 44pt;
-	font-family: "Motiva Sans Light";
-	padding-top: 32px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding-top: 32px;
 }
 
 #error_description
@@ -884,8 +908,10 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_header {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
 	color: #FFFFFF;
 }
 
@@ -927,7 +953,10 @@ body.v6 .page_content_ctn.dark:last-child {
 #help_search_support_input {
 	height: 44px;
 	width: 714px;
-	font-family: "Motiva Sans Light Italic", "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
 	font-size: 24px;
 	color: #c6d4df;
 	padding: 10px;
@@ -968,21 +997,27 @@ body.v6 .page_content_ctn.dark:last-child {
 	padding: 15px;
 }
 
-.help_refund_request_area h1 {
-	font-size: 18px;
-	font-weight: normal;
-	margin-bottom: 6px;
-	color: #67c1f5;
+.refund_directions {
+
 }
+
+body.v6 .help_refund_request_area h1 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	color: #67c1f5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 body.v6 .help_refund_request_area h2 {
 	font-size: 12px;
 	margin-bottom: 15px;
-	color: #82909a;
+	color: #c6d4df;
 }
 
 body.v6 .help_refund_request_area h2 a {
-	color: #adc4d3;
+	color: #ffffff;
 }
 
 body.v6 .help_refund_request_area h2 a:hover {
@@ -1019,7 +1054,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_notes {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .refund_notes_left {
@@ -1045,11 +1080,11 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_field {
-	color: #778592;
+
 }
 
 .refund_value {
-	color: #c6d4df;
+	color: #67c1f5;
 }
 
 .refund_info_box {
@@ -1062,7 +1097,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 .refund_notes_box
 {
-	padding: 10px;
+	padding: 10px 10px 10px 0px;
 	margin-right: 9%;
 }
 
@@ -1152,8 +1187,9 @@ body.v6 .help_refund_request_area h2 a:hover {
 	margin-top: 10px;
 	border-spacing: 0;
 	background-color: #151f2d;
-	padding: 14px 10px 10px 10px;
+	padding: 14px 10px 6px 10px;
 	border: solid 1px #324965;
+	width: 88%;
 }
 
 .remove_games_block {
@@ -1168,7 +1204,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 #refund_text_input
 {
 	width: 100%;
-	font-size: 16px;
+	font-size: 13px;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
@@ -1332,8 +1368,10 @@ div.help_official_support_row {
 
 .help_game_header {
 	color: #67c1f5;
-	font-family: "Motiva Sans Light","Motiva Sans",arial,tahoma,sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
 	font-weight: normal;
 }
 
@@ -1348,14 +1386,12 @@ div.help_official_support_row {
 }
 
 .help_your_issue {
-	color: #C6D4DF;
-	font-style: italic;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .help_your_issue_start {
 	color: #8c96a0;
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 16px;
 	padding-top: 10px;
 }
@@ -1604,7 +1640,10 @@ a.guide_row {
 
 .help_issue_details,
 .help_notinlibrary_details,
-.help_missingrefund_details
+.help_missingrefund_details,
+.help_cannot_launch_game_details,
+.help_cannot_install_game_details,
+.help_before_contacting_steam_support_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
@@ -1647,7 +1686,8 @@ a.guide_row {
 }
 
 .help_vacorgameban_details,
-.help_permanentlyremove_details
+.help_permanentlyremove_details,
+.help_cdkey_issue_details
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
@@ -1677,6 +1717,7 @@ a.guide_row {
     margin-bottom: 20px;
 }
 
+.help_cdkey_issue_details p,
 .help_vacorgameban_details p,
 .help_permanentlyremove_details p
 {

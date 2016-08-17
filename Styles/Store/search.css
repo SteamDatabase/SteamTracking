@@ -5,8 +5,10 @@
 .pagesubheader {
 	font-size: 18px;
 	color: #9099a1;
-	font-family: "Motiva Sans Light", Arial, Tahoma, "Times New Roman", Times, serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .searchtag {
 	color: #67c1f5;
@@ -98,8 +100,10 @@
 	display: block;
 	text-decoration: none;
 	color: #c6d4df;
-	font-family: "Motiva Sans Light", arial narrow, arial, tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .search_result_row {
 	border: 1px solid rgba( 139, 185, 224, 0 );

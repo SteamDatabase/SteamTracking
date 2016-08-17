@@ -322,8 +322,10 @@ textarea.forumtopic_reply_textarea {
 	margin-bottom: 16px;
 }
 .breadcrumbs, .breadcrumbs a {
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	color: #8f98a0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #8f98a0;
 	font-size: 12px;
 }
 .breadcrumbs a:hover {
@@ -425,8 +427,10 @@ textarea.forumtopic_reply_textarea {
 
 .forum_op .topic {
 	font-size: 30px;
-	font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
-	line-height: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			line-height: 36px;
 	color: #ffffff;
 
 	margin-bottom: 12px;
@@ -977,8 +981,10 @@ a.forum_comment_action:hover {
 	color: #8f98a0;
 	font-size: 12px;
 	text-decoration: none;
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	margin-bottom: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin-bottom: 12px;
 	margin-top: 8px;
 }
 .forum_breadcrumbs a {

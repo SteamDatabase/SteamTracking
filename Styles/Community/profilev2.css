@@ -198,8 +198,10 @@ div.profile_page.has_profile_background {
 	line-height: 40px;
 	font-size: 24px;
 	color: #ffffff;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .profile_header .profile_header_centered_persona {
 	position: absolute;
@@ -399,8 +401,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 
 	line-height: 26px;
 	font-size: 20px;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .profile_customization {
 	position: relative;
@@ -421,8 +425,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 }
 
 .profile_customization_header {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	color: #5491cf;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #5491cf;
 	font-size: 20px;
 	line-height: 30px;
 
@@ -480,8 +486,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 
 .showcase_stat .value {
 	font-size: 1em;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
 }
 .showcase_stat .label {
 	font-size: 0.5em;
@@ -740,8 +748,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 }
 
 .showcase_item_detail_title {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 24px;
 	padding-top: 10px;
 	color: #ffffff;
 
@@ -797,8 +807,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .favoritegroup_showcase_group .favoritegroup_namerow .favoritegroup_name {
 	font-size: 24px;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 @media screen and (max-width: 480px)
 {
@@ -949,8 +961,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .myworkshop_showcase_header .myworkshop_playerName {
 	font-size: 24px;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
 }
 
 .workshop_showcase_mini_app {
@@ -1540,8 +1554,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	text-decoration: underline;
 }
 .profile_count_link_total {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	color: #9b9b9b;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #9b9b9b;
 	font-size: 24px;
 }
 
@@ -1550,8 +1566,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 }
 
 .profile_in_game_header {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	font-size: 20px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 20px;
 }
 
 .profile_in_game_name {
@@ -1816,8 +1834,10 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .profile_comment_area .commentthread_header .commentthread_count {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	background: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			background: none;
 	padding-left: 0px;
 	font-size: 20px;
 }

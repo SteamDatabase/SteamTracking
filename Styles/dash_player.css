@@ -189,8 +189,10 @@
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
 	width: 100%;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	margin-left: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin-left: 10px;
 	height: 25px;
 }
 
@@ -248,8 +250,10 @@
 	background: rgba(44,43,40,1);
 	box-shadow: 2px 2px 5px #111111;
 
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	text-align: left;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-align: left;
 
 	z-index: 1;
 }
@@ -363,8 +367,10 @@
 	background: rgba(44,43,40,1);
 	box-shadow: 2px 2px 5px #111111;
 
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	text-align: left;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-align: left;
 
 	z-index: 1;
 }
@@ -373,8 +379,10 @@
 {
 	font-size: 24px;
 	color: #CCC;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	padding-bottom: 20px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding-bottom: 20px;
 	text-align: center;
 }
 
@@ -382,8 +390,10 @@
 {
 	font-size: 24px;
 	color: #CCC;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	padding-bottom: 20px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding-bottom: 20px;
 	text-align: center;
 }
 
@@ -406,8 +416,10 @@
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
 	width: 100%;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	margin-left: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin-left: 10px;
 	height: 25px;
 }
 
@@ -641,8 +653,10 @@
 	left: 10px;
 	font-size: 22px;
 	color: #FFF;
-	font-family: 'Motiva Sans Bold', Helvetica, Arial, sans-serif;
-	text-shadow: 1px 1px 2px #000000;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-shadow: 1px 1px 2px #000000;
 	cursor: default;
 
 	opacity: 0.0;
@@ -675,8 +689,10 @@
 
 #dash_video_buffering_message .loading_text
 {
-	font-family: 'Motiva Sans Light', Arial, Helvetica, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
 	line-height: 14px;
 	text-align: center;
 	margin-top: 28px;
@@ -881,6 +897,14 @@
 	cursor: pointer;
 }
 
+.modal_panel_wrapper #select_captions_force_sub_msg
+{
+	display: none;
+	font-size: 13px;
+	margin-left: 10px;
+	color: #CCC;
+}
+
 /* Big Picture / Controller UI */
 
 .tenfoot_dash_overlay
@@ -916,8 +940,10 @@
 	position: relative;
 	font-size: 30px;
 	color: #FFF;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	cursor: default;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			cursor: default;
 	top: 13px;
 	left: 17px;
 	width: 538px;
@@ -1224,8 +1250,10 @@
 	left: 65px;
 	right: 65px;
 	padding: 0 5px;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 24px;
 	color: #FFFFFF;
 	background-color: #1284a9;
 }
@@ -1245,8 +1273,10 @@
 
 .tenfoot_dash_overlay .left_time {
 	color: #FFFFFF;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 24px;
 	top: 27px;
 	position: absolute;
 	left: 15px;
@@ -1255,8 +1285,10 @@
 
 .tenfoot_dash_overlay .right_time {
 	color: #FFFFFF;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 24px;
 	top: 27px;
 	position: absolute;
 	right: 15px;
@@ -1266,8 +1298,10 @@
 .tenfoot_dash_overlay .video_quality_label
 {
 	float: right;
-	font-family: 'Motiva Sans Light', times, Helvetica, Arial, sans-serif;
-	color: #1877a2;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #1877a2;
 	position: absolute;
 	top: 165px;
 	right: 28px;
@@ -1294,8 +1328,10 @@
 .tenfoot_modal_panel_wrapper .panel_buttons
 {
 	text-align: center;
-	font-family: 'Motiva Sans Medium', times, Helvetica, Arial, sans-serif;
-	font-size: 28px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-size: 28px;
 	text-transform: uppercase;
 	text-shadow: black 2px 2px 8px;
 	margin-top: 15px;
@@ -1375,15 +1411,19 @@
 .tenfoot_settings_panel .panel_title
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 44px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 44px;
 }
 
 .tenfoot_settings_panel .settings_label
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 36px;
 	color: #16B9E5;
 	text-align: center;
 	margin: 20px 0 0 0;
@@ -1405,14 +1445,20 @@
  {
 	height: 51px;
 	border: 5px solid transparent;
+	overflow: hidden;
  }
+
+.tenfoot_modal_panel_wrapper .panel_select.disabled
+{
+	opacity: 0.4;
+	cursor: default;
+}
 
 .tenfoot_modal_panel_wrapper .panel_select:hover,
 .tenfoot_modal_panel_wrapper .panel_select.tenfoot_focus
 {
 	background-color: #c3c6c9;
 	border: 5px solid #FFFFFF;
-
 }
 
 .tenfoot_modal_panel_wrapper .panel_select.selected
@@ -1447,8 +1493,10 @@
 	float: left;
 	width: 600px;
 	overflow: hidden;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 36px;
 	color: #FFF;
 	text-align: center;
 	padding-top: 4px;
@@ -1500,15 +1548,19 @@
 .tenfoot_dash_closed_captions_customization .panel_title
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 44px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 44px;
 }
 
 .tenfoot_dash_closed_captions_customization .settings_label
 {
 	text-transform: uppercase;
-	font-family: 'Motiva Sans', Helvetica, Arial, sans-serif;
-	font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 36px;
 	color: #16B9E5;
 	text-align: center;
 	margin: 20px 0 0 0;
@@ -1583,8 +1635,10 @@
 
 #tenfoot_dash_video_buffering_message .loading_text
 {
-	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
-	font-size: 32px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 32px;
 	text-align: center;
 	margin-top: -18px;
 }

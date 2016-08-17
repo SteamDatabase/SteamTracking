@@ -861,8 +861,10 @@ fieldset.editRow_textarea label {
 .group_breadcrumbs {
 	color: #8f98a0;
 	font-size: 12px;
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	text-decoration: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-decoration: none;
 	margin-bottom: 12px;
 }
 .group_breadcrumbs a {
@@ -1370,12 +1372,17 @@ a.headlineLink:hover {
 
 .curation_app_block_name {
 	font-size: 15px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	color: white;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: white;
 }
 
 .curation_app_block_blurb {
-	font-family: "Motiva Sans Light Italic", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
 	font-style: normal;
 	padding-top: 4px;
 	font-size: 13px;

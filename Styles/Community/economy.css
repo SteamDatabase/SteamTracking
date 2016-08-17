@@ -308,8 +308,10 @@ a.item_action:hover {
 	font-size: 24px;
 	font-weight: normal;
 	margin-bottom: 5px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .hover_item_name_small {
 	font-size: 12px;
@@ -430,8 +432,10 @@ input.filter_search_box {
 	border: 1px solid;
 	border-color: #292929;
 	background-color: #101010;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	border-radius: 0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			border-radius: 0px;
 }
 
 input.filter_search_box::-webkit-input-placeholder {

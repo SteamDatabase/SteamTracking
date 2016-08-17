@@ -2,6 +2,61 @@
     "name": "IEconService",
     "methods": [
         {
+            "name": "GetTradeHistory",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Gets a history of trades",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "max_trades",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The number of trades to return information for"
+                },
+                {
+                    "name": "start_after_time",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The time of the last trade shown on the previous page of results, or the time of the first trade if navigating back"
+                },
+                {
+                    "name": "start_after_tradeid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The tradeid shown on the previous page of results, or the ID of the first trade if navigating back"
+                },
+                {
+                    "name": "navigating_back",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "The user wants the previous page of results, so return the previous max_trades trades before the start time and ID"
+                },
+                {
+                    "name": "get_descriptions",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If set, the item display data for the items included in the returned trades will also be returned"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The language to use when loading item display data"
+                },
+                {
+                    "name": "include_failed",
+                    "type": "bool",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetTradeOffers",
             "version": 1,
             "httpmethod": "GET",

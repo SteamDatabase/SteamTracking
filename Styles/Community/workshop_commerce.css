@@ -6,8 +6,10 @@
 	background-color: #a13e37;
 	text-align: left;
 	color: #ffebb2;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .workshop_commerce_not_visible_title
 {
 	font-size: 24px;
@@ -28,8 +30,10 @@
 {
 	font-size: 18px;
 	color: #13110D;
-	font-family: "Motiva Sans Bold",Arial,Helvetica,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 .workshop_commerce_status_desc
 {
 	font-size: 14px;
@@ -47,8 +51,10 @@
 {
 	font-size: 18px;
 	color: #13110d;
-	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 .workshop_commerce_publishing_option_desc
 {
 	color: #56503e;
@@ -114,24 +120,30 @@
 {
 	font-size: 30px;
 	color: #ffffff;
-	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .sectionTitle
 {
 	font-size: 18px;
 	line-height: 30px;
 	color: #66c0f4;
-	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .section
 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 14px;
-	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
-	color: #8f98a0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #8f98a0;
 }
 .section p {
 	margin-bottom: 8px;
@@ -223,8 +235,10 @@
 }
 .priceOpt label strong {
 	font-weight: normal;
-	font-family: "Motiva Sans Bold", Arial, Tahoma, Sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 .priceOpt input {
 	width: 28px;
 	padding: 0;

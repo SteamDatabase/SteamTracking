@@ -45,8 +45,10 @@
 .twofactor_settings_choice_header,  .twofactor_deauthorize_header
 {
 	color: #67c1f5;
-	font-family: "Motiva Sans Light", Arial, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
 	margin: 10px 10px 15px 0;
 }
 
@@ -54,8 +56,10 @@
 {
 	display: block;
 	color: #67c1f5;
-	font-family: "Motiva Sans Light", Arial, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
 	margin: 10px 10px 15px 20px;
 }
 
@@ -339,8 +343,10 @@ a.img_link {
 
 .app_links p{
 	font-size: 16px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .phone_left_col{
 	max-width: 616px;

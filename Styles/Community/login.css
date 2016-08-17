@@ -6,8 +6,10 @@ body {
 .modal_box h1 {
 	padding-left:20px;
 	font-size: 36px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .modal_box p {
 	padding-left:20px;
@@ -195,8 +197,10 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 .auth_button h3, .twofactorauth_button h3 {
 	font-weight: normal;
 	font-size: 22px;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-	color: #66C0F4;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #66C0F4;
 }
 
 .twofactorauth_button h3, .twofactorauth_button h5 {
@@ -259,16 +263,20 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	.OpenID_MainHeader h1{
 		font-size: 24px;
 		color: #ffffff;
-		font-family: 'Motiva Sans Thin', Arial, Tahoma;
-		font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+				font-weight: normal;
 		padding: 24px 0px 0px 18px;
 	}
 	
 	.OpenID_MainHeader h2{
 		font-size: 16px;
 		color: #e1b54a;
-		font-family: 'Motiva Sans Thin', Arial, Tahoma;
-		font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+				font-weight: normal;
 		padding: 10px 8px 8px 0px;
 		height: 45px;
 	}

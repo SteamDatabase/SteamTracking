@@ -141,8 +141,10 @@
     padding: 4px 4px 4px 6px;
     color: #8f98a0;
     font-size: 12px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .block_content {
     border: 1px solid #28394d;
@@ -169,8 +171,10 @@ a.linkbar {
     display: block;
     color: #9fbbcb;
     font-size: 13px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    line-height: 28px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    line-height: 28px;
 }
 
 a.linkbar:hover {
@@ -199,8 +203,10 @@ a.linkbar .rightblock {
     line-height: 28px;
     padding: 0 8px;
     font-size: 13px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    color: #9fbbcb;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    color: #9fbbcb;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -345,16 +351,20 @@ a.pagelink:hover {
     width: 940px;
 }
 .header_early_access h1 {
-    font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		    font-weight: normal;
     font-size: 45px;
     color: #ffffff;
     padding-left: 16px;
     padding-top: 10px;
 }
 body.v6 .header_early_access h2 {
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
     font-size: 17px;
     color: #C6D4DF;
     padding-left: 16px;

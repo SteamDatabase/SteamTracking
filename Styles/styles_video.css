@@ -297,8 +297,10 @@ div.slider .handle {
 .leftcol .block_header,
 .rightcol .block_header {
 	font-size: 18px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	color: #66C0F4;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #66C0F4;
 }
 
 .block_content h4 {

@@ -101,8 +101,10 @@ html.responsive body {
 
 .mainmenu_contents_items {
 
-	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .responsive_page_menu_ctn.localmenu .responsive_page_menu {
 	background: #171a21;
@@ -542,8 +544,10 @@ html.responsive body {
 	height: 24px;
 	max-width: 98%;
 	min-width: 250px;
-	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .responsive_tab_control select option {
 	background: #3a6d8b;

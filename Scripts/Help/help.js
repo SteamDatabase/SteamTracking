@@ -496,6 +496,9 @@ HelpWizard = {
 				l: g_strLanguage
 			} )
 		}).done( function( data ) {
+			if ( typeof Valve_OnHelpWizardNavigate != 'undefined' )
+				Valve_OnHelpWizardNavigate( data );
+
 			// update the text if the search term hasn't changed since we got the result
 			if ( HelpWizard.m_sSearchTextQueued == null )
 			{
@@ -1952,7 +1955,7 @@ HelpRequestPage = {
 
 	ShowCreateHelpRequestForm: function()
 	{
-		if ( !HelpWizard.m_steamid )
+		if ( !HelpWizard.m_steamid && !$J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
 		{
 			HelpWizard.PromptLogin();
 			return;
@@ -2130,6 +2133,21 @@ HelpRequestPage = {
 
 			var $List = $AttachmentUpload.find( '.attached_file_list' );
 			var fnAddFileToUploadList = function( file ){
+
+								var cubAttached = 0;
+				var $FileList = $Form.find( 'ul.attached_file_list' ).children();
+				$FileList.each( function()
+				{
+					cubAttached += $J(this).data( 'file' ).size;
+				});
+
+				if ( file.size + cubAttached > 10000000 )
+				{
+					var strError = 'Help request attachments are limited to %d megabytes.<br><br>Please resize any attachments so their total file size is under this limit.'.replace( /%d/, 10 );
+					ShowAlertDialog( 'Contact Steam Support', strError );
+					return;
+				}
+
 				var $Item = $J('<li/>');
 				$Item.text( file.name );
 				$Item.data('file', file);

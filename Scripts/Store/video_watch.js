@@ -30,6 +30,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, view
 	this.m_bHDCPErrorReported = false;
 	this.m_bEMECapableHost = bEMECapable;
 	this.m_bEnabledAudioDubTrack = false;
+	this.n_LastPlaybackTime = 0;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -368,7 +369,12 @@ CVideoWatch.prototype.SetResumeTimeForAppID = function()
 
 CVideoWatch.prototype.OnTimeUpdatePlayer = function()
 {
-	WebStorage.SetLocal( "steam_video_watch_last_time_indicator_" + this.m_nAppId, parseInt( this.m_player.m_elVideoPlayer.currentTime.toFixed(0) ) );
+	var nCurrentTime = parseInt( this.m_player.m_elVideoPlayer.currentTime.toFixed(0) );
+	if ( this.n_LastPlaybackTime != nCurrentTime )
+	{
+		this.n_LastPlaybackTime = nCurrentTime;
+		WebStorage.SetLocal( "steam_video_watch_last_time_indicator_" + this.m_nAppId, nCurrentTime );
+	}
 }
 
 CVideoWatch.prototype.SetClosedCaptionLanguage = function()

@@ -115,8 +115,7 @@ body
 
 .loading_throbber
 {
-    flow-children: right;
-    margin: 0px 337px -20px auto;
+    margin: 0px auto -20px auto;
     width: 62px;
     height: 62px;
 }
@@ -204,8 +203,10 @@ body
     color: #60acde;
     font-size: 24px;
     text-align: center;
-    font-family: Motiva Sans Light;
-    margin-top: 40px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    margin-top: 40px;
 }
 
 .loading_text.error
@@ -222,8 +223,8 @@ body
 .loading_wrapper,
 .loaded_wrapper
 {
-    position: relative;
-    width: 750px;
+    width: 100%;
+    margin: 100px;
 }
 
 .show_player .loading_wrapper,
@@ -258,13 +259,13 @@ body
 .loading_wrapper.tenfoot,
 .loaded_wrapper.tenfoot
 {
-	width: 960px;
+    width: 100%;
+    margin: 100px;
 }
 
 .loading_throbber.tenfoot
 {
-	flow-children: right;
-	margin: 0px 440px -20px auto;
+	margin: 0px auto -20px auto;
 	height: 120px;
 }
 

@@ -7,8 +7,10 @@
 {
 	font-size: 14px;
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	margin-bottom: 8px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-bottom: 8px;
 }
 
 .recommended_bodygradient
@@ -92,8 +94,10 @@
 
 .recommendation_highlight .highlight_description h4 {
 	margin-bottom: 8px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    color: #acb2b8;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    color: #acb2b8;
     font-weight: normal;
 }
 
@@ -152,8 +156,10 @@
 	padding-top: 10px;
 	padding-left: 6px;
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
 }
 
 .recommendation_carousel_scroll {
@@ -320,8 +326,10 @@
 }
 .recommendation_area .underlined_links {
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
 }
 .recommendation_area .commentCount {
 	float:right;
@@ -364,7 +372,10 @@
 	color: #acb2b8;
 	font-size: 13px;
 	font-style: normal;
-    font-family: "Motiva Sans Regular Italic", Arial, Helvetica, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-style: italic;
 	line-height: 19px;
 	-moz-border-radius: 5px;
 	margin-bottom: 16px;
@@ -752,8 +763,10 @@ textarea.comment_input
 	top: 42px;
 	font-size: 11px;
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .recently_viewed_row .recently_viewed_price {
 	position: absolute;
@@ -947,8 +960,10 @@ textarea.comment_input
     color: #8f98a0;
     font-size: 14px;
     font-weight: normal;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    margin-bottom: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    margin-bottom: 12px;
 }
 
 .game_hover_box h4 {
@@ -957,8 +972,10 @@ textarea.comment_input
     font-size: 17px;
     margin-bottom: 0;
 
-    font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 
 .friendactivity_tab_header {
@@ -1131,8 +1148,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_message ul {
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	list-style: square;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			list-style: square;
 	list-style-position: inside;
 }
 
@@ -1147,8 +1166,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_message_signup, .recommended_login_message_signup a {
 	color: #8f98a0;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 11px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 11px;
 }
 
 .recommended_login_button {
@@ -1360,8 +1381,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	font-weight: normal;
 	margin-bottom: 3px;
     color: #66c0f4;
-    font-family: "Motiva Sans Light", Arial, tahoma, sans-serif;
-    width: 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    width: 100%;
     border-top: 1px solid #212c3d;
     padding-top: 10px;
 }
@@ -1396,8 +1419,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #d6d7d8;
 	padding: 10px 11px;
 	font-size: 13px;
-	font-family: "Motiva Sans", Arial, tahoma, sans-serif;
-    -webkit-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+	font-family: "			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    -webkit-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
     -moz-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
     box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
 }
@@ -1442,8 +1467,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_create_vote_controls {
 	color: #acb2b8;
     font-size: 13px;
-    font-family: "Motiva Sans", Arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .review_create_vote_controls .btn_active {
 	text-shadow: none;
@@ -1507,8 +1534,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 
 .user_reviews_header {
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
     font-size: 18px;
     color: #67c1f5;
 
@@ -1520,8 +1549,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .user_reviews_sub_header {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 18px;
 	color: #5188b5;
 	padding-bottom: 5px;
@@ -1545,8 +1576,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	margin-bottom: 5px;
 }
 .user_reviews_summary_bar .game_review_summary {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 19px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 19px;
 	line-height: 9px;
 }
 
@@ -1563,6 +1596,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background: rgba( 255, 255, 255, 0.2 );
 }
 
+.rightcol .review_box .short_header .hours {
+	opacity: 0.5;
+}
+
 .review_box .short_header .thumb,
 .review_box .short_header .persona_name,
 .review_box .short_header .hours {
@@ -1576,7 +1613,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .short_header .persona_name,
 .review_box .short_header .hours {
 	margin-top: 6px;
-	margin-left: 4px;
+	margin-left: 6px;
 }
 .review_box .short_header .persona_name {
 	max-width: 120px;
@@ -1586,7 +1623,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .review_box .shortcol .content {
-	color: #8091a2;
+	color: #9fb4c9;
 }
 .review_box.short {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#223246+0,223246+100&1+-1,1+0,0+92 */
@@ -1741,14 +1778,20 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .vote_header .title {
 	font-size: 16px;
 	color: #d6d7d8;
-	font-family: 'Motiva Sans', arial, tahoma;
-	padding: 3px 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 3px 0;
 	line-height: 19px;
 }
 
 .review_box .vote_header .hours {
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 11px;
 	line-height: 15px;
+	opacity: 0.5;
 }
 
 .review_box .vote_header .thumb {
@@ -1793,8 +1836,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .review_box .content {
 	margin-right: 8px;
-	font-family: 'Motiva Sans', arial, tahoma;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 13px;
 	line-height: 17px;
 	color: #acb2b8;
 	overflow-wrap: break-word;
@@ -1802,8 +1847,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .review_box .content b {
-	font-family: 'Motiva Sans Bold', arial, tahoma;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-weight: normal;
 }
 
 .review_box .content .gradient, .review_box .view_more {
@@ -1819,8 +1866,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box.expanded .content b
 {
 	font-weight: normal;
-	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .review_box.partial .view_more {
 	display: block;
@@ -1865,10 +1914,18 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 .review_box .postedDate {
 	margin: 0px 0px 8px;
-	font-size: 11px;
+	font-size: 10px;
+	text-transform: uppercase;
 	font-style: normal;
-	color: #a0a08b;
+	color: #8091a2;
 	display: inline-block;
+	opacity: 0.6;
+}
+.rightcol .review_box .postedDate {
+	color: #8091a2;
+	text-transform: uppercase;
+	font-size: 10px;
+	opacity: 0.5;
 }
 
 .review_box .receivedCompensation {
@@ -1882,6 +1939,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background-color: #363f4c;
 	height: 1px;
 }
+.rightcol .review_box .hr {
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
 
 .review_box .control_block {
 	margin: 8px 0;
@@ -1891,9 +1951,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
-	color: #898a8c;
+	color: #8091a2;
 	font-size: 12px;
+	opacity: 0.6;
 }
+
 
 .review_box .noReviewsYetTitle {
 	font-size: 16px;
@@ -1941,20 +2003,12 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 
-
-.review_box .control_block .text {
-	display: inline-block;
-	margin-right: 9px;
-	color: #898a8c;
-	font-size: 12px;
-}
-
 #Reviewssummary0 .recent_reviews .review_box .rightcol {
 	width: 294px;
 }
 
 .rightcol .review_box.short {
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 /* filter */

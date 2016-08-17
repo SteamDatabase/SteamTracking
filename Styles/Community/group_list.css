@@ -269,8 +269,10 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 
 .groupBlock a.linkTitle {
 	font-size: 17px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .membersInGame {
 	color: #90BA3C;

@@ -57,8 +57,10 @@
 	padding: 2px 0;
     color: #8F98A0;
     font-size: 13px;
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .discovery_queue_apps
 {
@@ -82,24 +84,30 @@
 }
 .queue_page_desc {
     font-size: 16px;
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .faq_ctn {
 	width: 640px;
 }
 
 .faq_question {
-	font-family: "Motiva Sans Thin", "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-weight: normal;
 	font-size: 18px;
 	color: #67c1f5;
 	padding: 10px 0px 3px 0px;
 }
 
 .faq_answer {
-	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-size: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
 	margin-bottom: 20px;
 	line-height: 21px;
 }
@@ -147,8 +155,10 @@ body.v6 .leftcol h2.pageheader {
 .explore_rightcol_count {
 	font-size: 48px;
 	font-weight: normal;
-	font-family: "Motiva Sans Bold", arial, tahoma, sans-serif;
-	color: white;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: white;
 	float: left;
 	padding: 0px 10px 0px 0px;
 }
@@ -166,8 +176,10 @@ body.v6 .leftcol h2.pageheader {
 	background: #17212f;
 	padding: 12px;
 	margin-bottom: 24px;
-	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-size: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
 	border: 1px solid #223c4f;
 }
 
@@ -177,6 +189,8 @@ body.v6 .leftcol h2.pageheader {
 
 .new_feature {
 	color: #99cc00;
-	font-family: "Motiva Sans Bold", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-size: 17px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 17px;
 }

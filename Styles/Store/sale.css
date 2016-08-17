@@ -21,18 +21,24 @@ body.sale_page_background {
 
 .sale_page_block {
 	margin-bottom: 28px;
-	font-family: "Motiva Sans", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 13px;
 }
 
 .sale_page_block b {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-weight: normal;
 }
 
 .sale_page_block span.collectionComplete {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-weight: normal;
 	color: #A3CF06;
 }
 
@@ -118,8 +124,10 @@ body.sale_page_background {
 
 .sale_page_vivepromo_releasedate {
 	text-align: center;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 36px;
 	text-transform: uppercase;
 	color: #d8f8ff;
 	position: relative;
@@ -154,8 +162,10 @@ body.sale_page_background {
 }
 
 .sale_page_vivepromo_promo_header {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-size: 18px;
 	color: #53c5cf;
 	margin-bottom: 10px;
 }
@@ -184,8 +194,10 @@ body.sale_page_background {
 
 .sale_page_vivepromo_button
 {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			color: #ffffff;
 	font-size: 16px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
@@ -230,8 +242,10 @@ body.sale_page_background {
 
 .sale_page_browse_more_button
 {
-	font-family: "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 16px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
 	text-align: center;
@@ -369,8 +383,10 @@ body.sale_page_background {
 }
 
 .sale_page_vr_launch_promo_header {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-size: 18px;
 	color: #FFFFFF;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -429,8 +445,10 @@ body.sale_page_background {
 
 .sale_page_vr_launch_button
 {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			color: #ffffff;
 	font-size: 16px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
@@ -468,16 +486,20 @@ body.sale_page_background {
 }
 
 .sale_page_three_section_promo_header {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-size: 18px;
 	color: #FFFFFF;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 
 .sale_page_three_section_lower_blocks_promo_header {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			font-size: 18px;
 	color: #FFFFFF;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -493,8 +515,10 @@ body.sale_page_background {
 
 .sale_page_three_section_button
 {
-	font-family: "Motiva Sans Medium", "Motiva Sans", arial, helvetica, sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			color: #ffffff;
 	font-size: 16px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;

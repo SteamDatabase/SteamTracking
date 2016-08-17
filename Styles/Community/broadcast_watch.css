@@ -325,8 +325,10 @@ body.iframe .LoadingContentBackground
 	color: #60acde;
 	font-size: 22px;
 	text-align: center;
-	font-family: Motiva Sans Light;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .LoadingText.Error
 {
@@ -879,8 +881,10 @@ body.iframe #ChatDragHandle
 
 .BroadcastTitleRow
 {
-	font-family: Motiva Sans Light;
-	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
 }
 
 #BroadcastPersonaRow
@@ -955,8 +959,10 @@ body.iframe #ChatDragHandle
 	line-height: 22px;
 
 	font-size: 13px;
-	font-family: Motiva Sans Light;
-	color: #9099a1;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #9099a1;
 	background: rgba( 43, 74, 99, 0.5 );
 }
 

@@ -118,23 +118,8 @@ function ReceiveInviteProcessResponse()
 					ckicks--;
 					newc = Math.max( 0, ckicks );
 				}
-				else if ( data.itype == 'suggestedfriend' )
-				{
-					pref = 'sinvites_';
-					csuggestedplayers--;
-					newc = Math.max( 0, csuggestedplayers );
-					if ( newc == 0 )
-					{
-                        // We reached 0 suggested friends, display a corresponding text
-					    emptyMessageElement = document.getElementById( 'sinvites_empty_message' );
-					    if ( emptyMessageElement )
-					    {
-                            emptyMessageElement.style.display = 'inline';
-                        }
-					}
-				}
 
-				newfullcount = cgroupinvites + cplayerinvites + csuggestedplayers + ckicks;
+				newfullcount = cgroupinvites + cplayerinvites + ckicks;
 				if ( newc == 1 )
 				{
 					document.getElementById( pref + 'plural' ).style.display = 'none';

@@ -1,11 +1,15 @@
 
 h3 {
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-	margin-bottom: 3px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-bottom: 3px;
 }
 h4 {
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-	margin-bottom: 3px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-bottom: 3px;
 	color: #67c1f5;
 	font-size: 14px;
 	font-weight: normal;
@@ -17,8 +21,10 @@ h4 {
 {
 	font-size: 28px;
 	color: white;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	margin-top: 20px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-top: 20px;
 }
 
 .page_desc
@@ -72,8 +78,10 @@ h4 {
 {
 	font-size: 13px;
 	padding-bottom: 20px;
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-	color: #acb2b8;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #acb2b8;
 }
 
 .service_providers
@@ -131,8 +139,10 @@ a.ws_about_big_button {
 	padding: 26px 16px 10px 16px;
 
 	text-align: center;
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
 
+		
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#294767), color-stop(95%,#1f3449));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#294767', endColorstr='#1f3449',GradientType=0 );background: -moz-linear-gradient( top, #294767 5%, #1f3449 95%);background: -webkit-linear-gradient( top, #294767 5%, #1f3449 95%);background: -o-linear-gradient( top, #294767 5%, #1f3449 95%);background: -ms-linear-gradient( top, #294767 5%, #1f3449 95%);background: linear-gradient( to bottom, #294767 5%, #1f3449 95%);
 }
 a.ws_about_big_button.one,
@@ -171,13 +181,17 @@ a.ws_about_big_button span {
 }
 .FAQ_Q {
 	font-size: 13px;
-	font-family: 'Motiva Sans Bold', Arial, Tahoma;
-	line-height: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			line-height: 16px;
 }
 .FAQ_A {
 	font-size: 13px;
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-	margin-bottom: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-bottom: 12px;
 	line-height: 16px;
 }
 .rightDetailsBlock span {

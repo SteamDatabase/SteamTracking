@@ -334,8 +334,10 @@
 
 .guideInfoTitle
 {
-	font-family: 'Motiva Sans', Arial, Tahoma;
-	font-size: 17px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 17px;
 	color: white;
 	padding-top: 28px;
 	padding-left: 12px;

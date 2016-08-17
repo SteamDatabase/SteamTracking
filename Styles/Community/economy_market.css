@@ -90,8 +90,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .market_title_text
 {
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	font-size: 34px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 34px;
 	color: #ffffff;
 }
 
@@ -218,12 +220,30 @@ ul.market_restrictions li {
 
 .my_market_header_active {
 	color: white;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .my_market_header_count {
 	font-size: 75%;
 	color: #BCBCBC;
+}
+
+#escrow_description {
+	margin-bottom: 15px;
+}
+.escrow_description_link {
+
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 12px;
+}
+
+.escrow_description_link a {
+	text-decoration: underline;
+	color: white;
 }
 
 .missing_items_in_escrow {
@@ -753,8 +773,10 @@ a.item_market_action_button_disabled {
 .market_section_title {
 	color: white;
 	font-size: 28px;
-	font-family: "motiva sans Light", Arial, Sans-Serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .market_large_tab_well > .market_section_title, .market_section_header > .market_section_title {
 	position: absolute;
@@ -795,8 +817,10 @@ a.item_market_action_button_disabled {
 	min-width: 195px;
 
 	font-size: 14px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	text-align: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-align: center;
 	color: #969aa1;
 }
 
@@ -922,8 +946,10 @@ a.market_tab_well_tab_inactive:hover {
 
 .market_search_sidebar_section_tip_small {
 	margin-bottom: 5px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 12px;
 	color: #4582A5;
 }
 
@@ -954,8 +980,10 @@ a.market_tab_well_tab_inactive:hover {
 	border-image-slice: 1;
 	padding: 2px 4px 2px;
 
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 12px;
 	color: #fff;
 	line-height: 24px;
 
@@ -980,8 +1008,10 @@ a.market_tab_well_tab_inactive:hover {
 	height: 20px;
 	border-radius: 0px;
 	color: #fff;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	padding: 2px 0 2px 4px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 2px 0 2px 4px;
 	background-color: #324965;
 	border-width: 1px;
 	border-style: solid;
@@ -1059,8 +1089,10 @@ input.filter_search_box:focus {
 }
 
 .market_listing_nav_container {
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 12px;
 
 }
 
@@ -1219,8 +1251,10 @@ input.filter_search_box:focus {
 }
 
 #market_commodity_order_spread {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	position: relative;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			position: relative;
 	padding: 0px;
 	margin: 0px;
 }
@@ -1294,8 +1328,10 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_buy_button {
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	min-width: 45%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			min-width: 45%;
 	margin: 16px;
 }
 
@@ -1656,8 +1692,10 @@ input.filter_search_box:focus {
 
 #market_buyorder_info {
 	padding: 10px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 #market_buyorder_info #market_commodity_buyrequests {
 	font-size: 18px;
@@ -1705,13 +1743,17 @@ input.filter_search_box:focus {
 #market_search_advanced_show > span {
 	padding: 0 5px;
 	line-height: 30px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .market_search_results_header {
 	min-height: 60px;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	padding: 5px 15px 0px 0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			padding: 5px 15px 0px 0px;
 }
 
 .market_search_results_title {
@@ -1783,8 +1825,10 @@ input.filter_search_box:focus {
 	width: 258px;
 	height: 19px;
 	font-size: 14px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	color: #D2D2D2;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #D2D2D2;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #182636 #45566A #45566A #182636;

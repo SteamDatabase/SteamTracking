@@ -375,8 +375,10 @@ a.general_btn:hover {
 	float: left;
 	color: #67c1f5;
 	font-size: 16px;
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 /** end copy **/
 
 
@@ -497,8 +499,10 @@ h3 {
 	color: #D2E885;
 	margin-bottom: 8px;
 	margin-right: 17px;
-	font-family: 'Motiva Sans Light', Arial, Tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .hasLinkedItems h1
 {
@@ -2916,8 +2920,10 @@ div.hover {
 .authorSection .followStatsBlock
 {
 	font-size: 13px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .followStatValue
 {
@@ -2934,8 +2940,10 @@ div.hover {
 {
 	color: #67c1f5;
 	font-size: 42px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .followStatsTitleContainer
 {
@@ -2948,8 +2956,10 @@ div.hover {
 	color: #8f98a0;
 	padding-top: 8px;
 	font-size: 18px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .workshopAuthorHeader
 {

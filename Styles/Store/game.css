@@ -311,8 +311,10 @@ img.game_header_image_full {
 
 	margin-bottom: 2px;
 	font-size: 13px;
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .game_area_bubble .content {
 	overflow: hidden;
@@ -322,8 +324,10 @@ img.game_header_image_full {
 .game_area_bubble h1 {
 	font-size: 24px;
     font-weight: normal;
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .game_area_comingsoon {
 
@@ -398,8 +402,10 @@ img.game_header_image_full {
 	width: 584px;
 	color: #acb2b8;
     font-size: 14px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	padding: 15px 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 15px 15px;
     margin-bottom: 15px;
 }
 
@@ -410,14 +416,18 @@ img.game_header_image_full {
 
 .notice_box_content strong {
     font-weight: normal;
-    font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
 
 .notice_box_content_blue_box {
     color: #67c1f5;
     font-size: 14px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    padding: 15px 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    padding: 15px 15px;
     margin-bottom: 15px;
     background: -moz-linear-gradient(-60deg,  rgba(39,67,88,1) 0%, rgba(54,95,125,0.3) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(39,67,88,0.8)), color-stop(100%,rgba(54,95,125,0.3))); /* Chrome,Safari4+ */
@@ -438,8 +448,10 @@ img.game_header_image_full {
     font-size: 18px;
     font-weight: normal;
     color: #ffffff;
-    font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
 
 
 .subscription_page_region_restriction {
@@ -618,8 +630,10 @@ img.game_header_image_full {
 .game_area_purchase_game_wrapper.bundle .bundleTag,
 .game_area_purchase_game.bundle .bundleTag {
 	color: #a4d7f5;
-	font-family: "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-size: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
 	margin-left: 3px;
 }
 .game_area_purchase_game_wrapper.bundle .bundleTag .bundleHelper,
@@ -640,8 +654,10 @@ img.game_header_image_full {
 .game_area_purchase_game h1,
 .game_area_offsite_purchase h1 {
 	font-size: 21px;
-    font-family: "Motiva Sans", arial, tahoma;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #ffffff;
     font-weight: normal;
 }
 
@@ -899,8 +915,10 @@ img.game_header_image_full {
 }
 
 .game_description_column h2.gradientbg {
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
     font-size: 18px;
     color: #67c1f5;
 
@@ -926,8 +944,10 @@ img.game_header_image_full {
 	margin-right: 3px;
 }
 .game_description_column .block .block_header h4 {
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
     font-size: 18px;
     color: #67c1f5;
     margin-bottom: 8px;
@@ -980,8 +1000,10 @@ img.game_header_image_full {
 
 .game_description_column .block .block_content a h4 {
     font-size: 13px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    font-weight: normal;
     color: #8f98a0;
     width: 171px;
     text-overflow: ellipsis;
@@ -994,8 +1016,10 @@ img.game_header_image_full {
 
 .game_area_description_bodylabel {
     color: #8f98a0;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-    font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-size: 13px;
     line-height: 18px;
 }
 
@@ -1004,17 +1028,20 @@ img.game_header_image_full {
     font-size: 14px;
 	margin-top: 30px;
 	overflow: hidden;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .game_area_description p {
 	margin-bottom: 8px;
 }
 
 .game_area_description p strong, .game_area_description strong {
-    font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .game_area_description h2 {
 	margin-bottom: 6px;
@@ -1029,9 +1056,10 @@ img.game_header_image_full {
 }
 
 .game_area_description h2.bb_tag strong {
-    font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
 
 #game_area_reviews {
 	font-size: 12px;
@@ -1189,8 +1217,10 @@ img.game_header_image_full {
     background-repeat: no-repeat;
 	height: 35px;
 	width: 270px;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
 	color: #8BC53F;
 	text-align: right;
 	padding-right: 43px;
@@ -1300,8 +1330,10 @@ a.communitylink_achievement.communitylink_achivement_plusmore {
     border-radius: 1px;
 
 	font-size: 13px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	color: #67c1f5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #67c1f5;
 	text-align: center;
 	padding-top: 14px;
 	height: 50px;
@@ -1521,8 +1553,10 @@ a.friend_block_holder:hover {
 	position:absolute;
 	z-index:1000;
 	background-color:#000000;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .rightcol.game_meta_data {
     margin-top: 16px;
@@ -2022,8 +2056,10 @@ img.package_header {
 	font-size: 15px;
 	line-height: 13px;
 	color: #ffcc6a;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .btn_next_in_queue:hover span, .btn_next_in_queue:hover span .queue_sub_text {
 	color: #ffffff;
 }
@@ -2076,8 +2112,10 @@ body.v6 .game_area_already_owned.page_content {
 
 
     font-size: 18px;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-    line-height: 40px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
 	width: 925px;
@@ -2140,8 +2178,10 @@ body.v6 .game_area_already_owned.page_content {
 }
 .game_area_already_owned_btn .btn_blue_white_innerfade > span {
     color: #3a6e8b;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    font-size: 16px;
     text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1 );
 
     background: rgb(193,228,249); /* Old browsers */
@@ -2316,8 +2356,10 @@ div.early_access_banner p {
 	display: block;
 	color: #fff;
 	font-size: 15px;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-	margin: 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin: 0;
 	padding: 0;
 	position: relative;
 	width: 350px;
@@ -2364,16 +2406,20 @@ div.early_access_header .heading {
 }
 
 div.early_access_header .heading h1 {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 30px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 30px;
 	font-weight: normal;
 	font-style: normal;
 	color: #fff;
 }
 
 div.early_access_header .heading h2 {
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-    font-size: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-size: 15px;
 	font-weight: normal;
 	font-style: normal;
 	background-image: none;
@@ -2398,15 +2444,20 @@ div.early_access_header .devnotes {
 }
 
 div.early_access_header .devnotes > .devs_say {
-    font-family: "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 11px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 11px;
 	color: #61686d;
 	margin: 10px 0 0 0;
 	text-transform: uppercase;
 	font-style: normal;
 }
 div.early_access_header .devnotes > div {
-    font-family: "Motiva Sans Regular Italic", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-style: italic;
 	font-size: 14px;
 	color: #8f98a0;
 	line-height: 21px;
@@ -2422,8 +2473,10 @@ div.early_access_header .devnotes > div b,
 div.early_access_header .devnotes > div p b,
 div.early_access_header .devnotes > div strong,
 div.early_access_header .devnotes > div p strong {
-	font-weight: normal;
-	font-family: "Motiva Sans Bold Italic", "Motiva Sans", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-style: italic;
 }
 
 div.early_access_header .devnotes > div h2.bb_tag {
@@ -2439,8 +2492,10 @@ div.early_access_header .devnotes ul, div.early_access_header .devnotes ol {
 }
 
 div.early_access_header .devnotes h1 {
-    font-family: "Motiva Sans Medium", arial, tahoma, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		    font-weight: normal;
 	font-size: 14px;
 	color: #fff;
 	margin-top: 10px;
@@ -2539,8 +2594,10 @@ div.early_access_announcements .post.wide {
 
 div.early_access_announcements .post h1 {
 	color: #ffffff;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
 	line-height: 29px;
     font-weight: normal;
 }
@@ -2567,17 +2624,20 @@ div.early_access_announcements .post h2 {
 
 div.early_access_announcements .post, div.early_access_announcements .post p, div.early_access_announcements .post ul, div.early_access_announcements .post .bb_h1  {
 	color: #8f98a0;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 13px;
 	line-height: 18px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
 div.early_access_announcements .post b {
-    font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
 
 div.early_access_announcements .post .container {
 	height: 195px;
@@ -3157,8 +3217,10 @@ form#app_tag_form {
 
 /* Discovery queue settings dialog */
 .dq_settings_content {
-	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 16px;
 	color: #ffffff;
 }
 
@@ -3167,9 +3229,10 @@ form#app_tag_form {
 }
 
 .dq_settings_content .dq_settings_section_title {
-	font-family: "Motiva Sans Thin", "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
-	font-weight: normal;
-	color: #67c1f5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #67c1f5;
 	padding: 10px 0px 3px 0px;
 }
 
@@ -3297,8 +3360,10 @@ select.gray_bevel {
 .breadcrumbs {
     color: #61686d;
     font-size: 12px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 .breadcrumbs a {
     color: #8f98a0;
 }
@@ -3315,8 +3380,10 @@ select.gray_bevel {
     display: none;
 }
 .apphub_HomeHeaderContent .apphub_AppName {
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    padding-left: 0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    padding-left: 0px;
 }
 
 /* Subs */
@@ -3561,22 +3628,27 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 }
 
 .game_pt_info h1 {
-	font-family: "Motiva Sans Thin", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
-	font-size: 30px;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 30px;
 	color: #ffe8a3;
 }
 
 .game_pt_info p {
-	font-family: "Motiva Sans Light", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
 
+		
 	color: #c6d4df;
 	font-size: 15px;
 }
 
 .game_pt_info .game_pt_note {
-	font-family: "Motiva Sans Light", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
-	color: #e8d59b;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #e8d59b;
 	margin: 2px 0 12px 0;
 }
 
@@ -3586,8 +3658,10 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 
 .castandcrewtitle
 {
-	font-family: "Motiva Sans Bold", "Motiva Sans",  Arial, Helvetica, sans-serif;
-	width: 150px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			width: 150px;
 	float: left;
 }
 
@@ -3869,8 +3943,10 @@ a.bundle_contents_preview_item .ds_flag {
 	cursor: default;
 	color: #A4D7F5;
 	font-size: 18px;
-	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .bundle_label .bundle_label_tooltip {
 	color: #8f98a0;
@@ -3954,8 +4030,10 @@ div.agegate_text_container > h2 {
 	height: auto !important;
 	width: 100%;
 
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .series_episode .ds_flag {
 	top: 6px;
@@ -4019,8 +4097,10 @@ div.agegate_text_container > h2 {
 	float: right;
 	margin-bottom: -10px;
 	top: -19px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .series_seasons .season_name {
 	display: inline-block;

@@ -1,7 +1,9 @@
 
 .pagecontent {
-	font-family: "Motiva Sans Light",Arial,Helvetica,Verdana,sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 13px;
 }
 
 .pagecontent.auction_page .maincontent {
@@ -469,7 +471,10 @@ a.home_active_bid.win:hover {
 
 .auction_game_name {
 	color: white;
-	font-family: "Motiva Sans Light Italic",Arial,Helvetica,Verdana,sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
 	font-size: 18px;
 	margin-bottom: 0.5em;
 }
@@ -490,8 +495,10 @@ a.home_active_bid.win:hover {
 }
 
 .auction_bidder_name {
-	font-family: "Motiva Sans Bold",Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .auction_block_bidinfo {
 	width: 365px;
@@ -594,8 +601,10 @@ a.auction_bid_cancel {
 
 .auction_dialog {
 	max-width: 500px;
-	font-family: "Motiva Sans Light",Arial,Helvetica,Verdana,sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 13px;
 }
 
 .auction_dialog .rule {

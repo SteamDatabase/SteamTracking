@@ -1281,13 +1281,13 @@ function addClass( elID, cName )
 	}
 }
 
-function UnlinkFacebook()
+function UnlinkFacebook( from_page )
 {
-	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/' );
+	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/', {from_page: from_page } );
 }
 
-function LinkFacebook()
+function LinkFacebook( from_page )
 {
-	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/' );
+	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/', {from_page: from_page } );
 }
 

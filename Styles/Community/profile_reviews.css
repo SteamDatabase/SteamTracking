@@ -1,8 +1,10 @@
 
 
 .review_list h1 {
-	font-family: "Motiva Sans Light", consolas, arial, tahoma, sans-serif;
-	font-size: 21px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 21px;
 	font-weight: normal;
 	border-bottom: 1px solid #445f7f;
 	color: #fff;
@@ -63,8 +65,10 @@
 .review_box .vote_header .title {
 	font-size: 16px;
 	color: #d6d7d8;
-	font-family: 'Motiva Sans', arial, tahoma;
-	padding: 5px 0 0 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 5px 0 0 0;
 }
 
 .review_box .vote_header .hours {
@@ -80,8 +84,10 @@
 
 .review_box .content {
 	margin: 0 8px;
-	font-family: 'Motiva Sans', arial, tahoma;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 13px;
 	color: #cdcac1;
 	overflow-wrap: break-word;
 

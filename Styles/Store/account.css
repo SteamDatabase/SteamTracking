@@ -160,8 +160,10 @@
 
 .accountBalance .price {
 	color: #ffffff;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
 }
 
 

@@ -56,8 +56,10 @@ body.v6.login .rightcol .spotlight_block {
 
 .checkout_content_box h3.tab_header
 {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 18px;
 	color: #67c1f5;
 	margin-top: 30px;
@@ -135,8 +137,10 @@ img.payment_method_logo {
 .checkout_error {
 	background-color: rgba(162,77,0,1);
 	color: #ffffff;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	margin: 15px 0px 15px 0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin: 15px 0px 15px 0px;
 	padding: 11px 15px 11px 19px;
 }
 
@@ -288,8 +292,10 @@ img.payment_method_logo {
 .cart_digital_notice_content {
 	padding-left: 84px;
 	padding-top: 8px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 
 .cart_digital_notice_steam_logo {
@@ -1042,8 +1048,10 @@ img.payment_method_logo {
 	padding: 16px;
 	font-size: 14px;
 	margin-top: 2px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .checkout_content.cart_send_choice p {
 	margin-top: 5px;
@@ -1051,7 +1059,10 @@ img.payment_method_logo {
 
 .checkout_content.cart_send_choice p em {
 	font-style: normal;
-	font-family: "Motiva Sans Light Italic", "Motiva Sans Italic", arial, tahoma, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
 	color: #8F98A0;
 }
 
@@ -1095,8 +1106,10 @@ img.payment_method_logo {
 .checkout_content .cart_bodycopy {
 	padding-bottom: 15px;
 	font-size: 13px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .checkout_content .cart_bodycopy.highlight {
 	color: #ffcc6a;
 }
@@ -1471,8 +1484,10 @@ label.send_choice_txt {
 #receipt_area p, #ackgift_area p {
 	margin: 9px 0px;
 	font-size: 13px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .btn_checkout_print {
 	display: block;
@@ -1843,8 +1858,10 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 	padding: 4px 4px 4px 6px;
 	color: #8f98a0;
 	font-size: 12px;
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .block_content {
 	border: 1px solid #28394d;
@@ -1912,8 +1929,10 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -moz-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -o-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);	width: 260px;
 	padding: 12px 12px 15px 12px;
 	border-radius: 2px;
-	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
-	text-decoration: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-decoration: none;
 }
 .checkout_gotsteam_area a.btn_blue.leftbtn {
 	margin-right: 16px;

@@ -163,8 +163,10 @@
 	text-align: center;
 	font-size: 24px;
 	color: #ffffff;
-	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 #badge_completed {
 	max-width: 414px;

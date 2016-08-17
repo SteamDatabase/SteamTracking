@@ -37,8 +37,10 @@
 }
 
 .block .block_header {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 18px;
 	color: #67c1f5;
 	background: transparent;
@@ -46,8 +48,10 @@
 }
 
 .block .block_sub_header {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 14px;
 	color: #67c1f5;
 	background: transparent;
@@ -55,8 +59,10 @@
 }
 
 .block .block_title {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 12px;
 	color: #8f98a0;
 	background: transparent;
@@ -152,8 +158,10 @@
 }
 
 .currency_change_option {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	display: block;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			display: block;
 }
 
 .currency_change_option > span {

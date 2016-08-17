@@ -25,16 +25,20 @@
     padding: 4px;
     color: #8f98a0;
     font-size: 12px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 a.linkbar {
 	padding-left: 12px;
     display: block;
     color: #9fbbcb;
     font-size: 13px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    line-height: 28px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    line-height: 28px;
 }
 
 a.linkbar:hover {
@@ -76,8 +80,10 @@ div#main_content {
 }
 #main_header h1 {
     font-size: 24px;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-    font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
 }
 
 #main_header_expanded {
@@ -306,8 +312,10 @@ div#news_search {
 	font-weight: normal;
 	font-size: 24px;
 	max-width: 562px;
-    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .newsPostBlock .headline .posttitle a, .newsPostBlock .headline .posttitle a:active, .newsPostBlock .headline .posttitle a:visited {
 	color: #ffffff;
@@ -326,8 +334,10 @@ div#news_search {
 	clear: left;
 	margin-bottom: 10px;
     font-size: 14px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 .newsPostBlock .body a {
     color: #9fbbcb;
     text-decoration: underline;
@@ -338,13 +348,17 @@ div#news_search {
 }
 
 .newsPostBlock .body i {
-    font-style: normal;
-    font-family: "Motiva Sans Regular Italic", Arial, Helvetica, sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-style: italic;
 }
 .newsPostBlock .body b, .newsPostBlock .body .strong {
     font-weight: normal;
-    font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .newsPostBlock .body h2 {
 	margin-top: 10px;

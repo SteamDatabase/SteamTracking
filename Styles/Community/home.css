@@ -617,8 +617,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000),
 .mainLoginLeftPanel>h1, .mainLoginRightPanel>.createInfo>h1 {
 	color: #ffffff;
 	font-size: 22px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 }
 
 .mainLoginLeftPanel>p, .mainLoginRightPanel>.createInfo>p {

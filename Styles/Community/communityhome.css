@@ -14,16 +14,20 @@ body
 	margin: 0px auto;
 	padding: 20px 1% 0 1%;
 	text-align: left;
-	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .community_home_title
 {
 	font-weight: normal;
 	font-size: 26px;
 	color: #FFFFFF;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-	text-align: left;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-align: left;
 }
 
 .community_home_subtitle
@@ -81,8 +85,10 @@ body
 	margin: 0px auto;
 	padding-top: 5px;
 	padding-bottom: 10px;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .appHubShortcutText {
 	overflow: hidden;
@@ -301,8 +307,10 @@ input.community_home_search_players_input
 	padding: 0 1% 20px 1%;
 	margin: 0 auto;
 	text-align: left;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .community_home_sort_buttons
 {

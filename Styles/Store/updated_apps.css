@@ -75,8 +75,10 @@ a:hover {
 {
 	font-size: 12px;
 	padding-right: 5px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .updated_app_date
 {
@@ -86,8 +88,10 @@ a:hover {
 .updated_app_announcement_headline
 {
 	font-size: 24px;
-    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	margin-top: 3px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-top: 3px;
 }
 .updated_app_announcement_headline a {
     color: #ffffff;
@@ -105,16 +109,20 @@ a:hover {
 {
 	color: #acb2b8;
 	font-size: 14px;
-    font-family: "Motiva Sans", arial, tahoma, sans-serif;
-	line-height: 19px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			line-height: 19px;
 	overflow: hidden;
     margin-top: 10px;
 }
 
 .updated_app_announcement_text b {
     font-weight: normal;
-    font-family: "Motiva Sans Bold", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .updated_app.expanded .updated_app_announcement_text
 {

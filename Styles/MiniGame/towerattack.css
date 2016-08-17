@@ -10,8 +10,10 @@
 	padding-top: 10px;
 	width: 1280px;
 
-	font-family: 'Motiva Sans Thin', Arial, Helvetica, sans-serif;
-	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 13px;
 	color: #2a2624;
 }
 .breadcrumbs a {

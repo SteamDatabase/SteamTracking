@@ -464,15 +464,19 @@ html.responsive .formRowFields .gray_bevel {
 .permissionRow.permissionHeaderRow .permissionText {
 	font-size: 16px;
 	color: #C6D4DF;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .sectionHeader {
 	border-bottom: 1px solid #61686D;
 	color: #C6D4DF;
 	font-size: 15px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 #memberManageList .member_block_content, #memberManageList .member_block_content a {
 	color: #E1E1E1;

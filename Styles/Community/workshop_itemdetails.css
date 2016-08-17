@@ -2604,8 +2604,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	width: 606px;
 	margin-bottom: 2px;
 	font-size: 13px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .game_area_required_dlc a {
 	text-decoration: underline;
 	color: #d5d6d8;
@@ -2692,9 +2694,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game > h1 {
 	font-size: 20px;
 	color: white;
-	font-weight: normal;
-	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
-	width: 450px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			width: 450px;
 }
 .game_area_purchase_game > h1.purchase {
 	margin-top: 5px;
@@ -2718,9 +2721,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game > h1 span {
 	color: #5c8699;
 	font-size: 13px;
-	font-weight: normal;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .game_area_purchase_game.buy > h1 span {
 	color: #66c0f4;
 }
@@ -2866,8 +2870,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 
 	font-size: 18px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	line-height: 40px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			line-height: 40px;
 	color: #a3cf06;
 	margin-bottom: 1px;
 	margin-top: 0px;
@@ -2899,8 +2905,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	display: block;
 	margin-bottom: 8px;
 	font-size: 14px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	color: #c7d5e0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #c7d5e0;
 }
 
 .game_area_already_owned_btn {

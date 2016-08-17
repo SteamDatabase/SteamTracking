@@ -9,8 +9,10 @@
 {
     color: #C6D4DF;
     font-size: 16px;
-    font-family: "Motiva Sans Light","Motiva Sans",arial,tahoma,sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 /* tabs */
 .tabbar {
@@ -149,8 +151,10 @@
 
 .explanation_box
 {
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	padding: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 15px;
 	border-radius: 4px;
 	border: 1px solid #223a4e;
 }
@@ -357,8 +361,10 @@ a.steam_curator_row:hover
 	font-size: 19px;
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 50px 50px;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 /* paging buttons */
 .pagebtn, a.pagebtn {

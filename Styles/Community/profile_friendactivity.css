@@ -1747,8 +1747,10 @@ div.slider div.handle:hover {
 .blotter_block .vote_header .title {
 	font-size: 16px;
 	color: #d6d7d8;
-	font-family: 'Motiva Sans', arial, tahoma;
-	padding: 5px 0 0 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 5px 0 0 0;
 }
 
 .blotter_block .vote_header .hours {
@@ -1766,8 +1768,10 @@ div.slider div.handle:hover {
 	line-height: 20px;
 	font-size: 13px;
 	color: #c6d4df;
-	font-family: 'Motiva Sans', arial, tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .blotter_block .control_block .text {
 	display: inline-block;

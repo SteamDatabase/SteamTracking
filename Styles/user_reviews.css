@@ -114,8 +114,10 @@ select {
 	color: #D6D7D8;
 	padding-top: 4px;
 	padding-bottom: 2px;
-	font-family: 'Motiva Sans', arial, tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .playTime  {
 	font-size: 12px;
@@ -126,13 +128,17 @@ select {
 	font-size: 13px;
 	line-height: 17px;
 	color: #acb2b8;
-	font-family: 'Motiva Sans', arial, tahoma;
-	overflow-wrap: break-word;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			overflow-wrap: break-word;
 	overflow: hidden;
 }
 .review_area_content b {
-	font-family: 'Motiva Sans Bold', arial, tahoma;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-weight: normal;
 }
 
 .review_edit_text_area
@@ -230,8 +236,10 @@ select {
 	font-size: 13px;
 	line-height: 17px;
 	color: #CDCAC1;
-	font-family: 'Motiva Sans', arial, tahoma;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .review_developer_response_badge
 {

@@ -75,14 +75,18 @@
 .headerblue {
     color: #67c1f5;
     font-size: 26px;
-    font-family: "Motiva Sans Light";
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .headerwhite {
     color: #FFFFFF;
     font-size: 26px;
-    font-family: "Motiva Sans Light";
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .greyHR {
 	background-color:#4d4d4e;

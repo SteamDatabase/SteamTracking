@@ -766,9 +766,10 @@ a.commentthread_allcommentslink:hover {
 
 .modal_box h2 {
 	color: #c6d4df;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-size: 22px;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 22px;
 	margin-bottom: 10px;
 }
 

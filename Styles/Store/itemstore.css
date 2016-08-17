@@ -412,8 +412,10 @@ body.v6 h2.pageheader.itemtitle
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 ); /* IE6-9 */
 
 	font-size: 15px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	color: #a3cf06;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #a3cf06;
 	margin-bottom: 10px;
 }
 

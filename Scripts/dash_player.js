@@ -1017,10 +1017,6 @@ CDASHPlayer.prototype.SeekTo = function( nTime )
 	if ( bCanSeekImmediately )
 	{
 		this.m_elVideoPlayer.currentTime = nTime;
-		for (var i = 0; i < this.m_loaders.length; i++)
-		{
-			this.m_loaders[i].ScheduleNextDownload();
-		}
 	}
 	else
 	{
@@ -1133,6 +1129,16 @@ CDASHPlayer.prototype.GetAllVideoAdaptations = function()
 	return rgVideoAdaptations;
 }
 
+CDASHPlayer.prototype.GetCurrentAudioAdaptation = function()
+{
+	return this.GetAdaptationByTrackID( this.m_strAudioAdaptationID );
+}
+
+CDASHPlayer.prototype.GetCurrentVideoAdaptation = function()
+{
+	return this.GetAdaptationByTrackID( this.m_strVideoAdaptationID );
+}
+
 CDASHPlayer.prototype.GetRepresentationsArray = function ( bVideo )
 {
 	var rgRespresentations = [];
@@ -1234,6 +1240,11 @@ CDASHPlayer.prototype.UpdateAudioAdaptationSet = function ( strAdaptationID )
 		this.m_strAudioAdaptationID = strAdaptationID;
 		this.GetAudioLoader().ChangeAdaptationSet( adaptation );
 		this.UpdateAudioRepresentation( this.m_nAudioRepresentationIndex, true );
+
+		if ( adaptation.forceSub )
+		{
+			this.UpdateClosedCaption( adaptation.forceSub, CVTTCaptionLoader.s_Subtitle );
+		}
 	}
 }
 
@@ -2239,7 +2250,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					}
 
 					var gameData = {appid: responseData.appid, broadcastrelayid: responseData.broadcastrelayid, segmentid: responseData.segmentid };
-					_loader.m_statsGameData = gameData;					
+					_loader.m_statsGameData = gameData;
 				}
 
 				_loader.ScheduleNextDownload();
@@ -2396,7 +2407,7 @@ CSegmentLoader.prototype.DownloadFailed = function()
 	this.m_player.OnSegmentDownloadFailed();
 }
 
-CSegmentLoader.prototype.ScheduleNextDownload = function()
+CSegmentLoader.prototype.ScheduleNextDownload = function( nAtTime )
 {
 	var _loader = this;
 	if ( this.m_bNeedInitSegment )
@@ -2405,11 +2416,11 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 		return;
 	}
 
-	// make sure we aren't already scheduled
+	// if there is one already scheduled, cancel to reschedule
 	if ( this.m_schNextDownload != null )
 	{
-		PlayerLog( 'Already scheduled next download' );
-		return;
+		clearTimeout( this.m_schNextDownload );
+		this.m_schNextDownload = null;
 	}
 
 	// check if the next segment is available
@@ -2422,7 +2433,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	}
 
 	// check if we need to buffer. Keep downloading for dynamic content, minimum amount for VOD
-	var unAmountBuffered = this.GetAmountBuffered();
+	var unAmountBuffered = this.GetAmountBuffered( nAtTime );
 	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_MS )
 	{
 		this.DownloadNextSegment();
@@ -2470,7 +2481,7 @@ CSegmentLoader.prototype.BIsLoaderBuffered = function()
 		return true;
 }
 
-CSegmentLoader.prototype.GetAmountBufferedInPlayer = function()
+CSegmentLoader.prototype.GetAmountBufferedInPlayer = function( nAtTime )
 {
 	var nBuffered = 0;
 	var buffered = {};
@@ -2480,6 +2491,9 @@ CSegmentLoader.prototype.GetAmountBufferedInPlayer = function()
 	{
 		// playback might not have started yet so need to ensure it is within the buffered area
 		var nCurrentTime = this.m_player.m_elVideoPlayer.currentTime;
+		if ( typeof nAtTime !== 'undefined' )
+			nCurrentTime = nAtTime;
+
 		if ( nCurrentTime < buffered.start( 0 ) )
 			nCurrentTime = buffered.start( 0 );
 
@@ -2492,10 +2506,10 @@ CSegmentLoader.prototype.GetAmountBufferedInPlayer = function()
 	return Math.floor( nBuffered * 1000 );
 }
 
-CSegmentLoader.prototype.GetAmountBuffered = function()
+CSegmentLoader.prototype.GetAmountBuffered = function( nAtTime )
 {
 	// include data we haven't fed to player
-	var nBuffered = this.GetAmountBufferedInPlayer();
+	var nBuffered = this.GetAmountBufferedInPlayer( nAtTime );
    	for ( var i = 0; i < this.m_bufSegments.length; i++ )
 	{
 		nBuffered += this.m_bufSegments[i].duration;
@@ -2610,7 +2624,8 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 	}
 	else
 	{
-		// if not downloading, update next scheduled download in case we did a seek to the end of the buffered data
+		// if a scheduled download is setup, or we're waiting for the buffered content
+		// to be added, clear it all and then get a new download schedule setup
 		if ( ( !this.m_xhr && this.m_schNextDownload ) || this.m_schWaitForBuffer )
 		{
 			clearTimeout( this.m_schNextDownload );
@@ -2619,10 +2634,7 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 			clearTimeout( this.m_schWaitForBuffer );
 			this.m_schWaitForBuffer = null;
 
-			// live content needs to schedule the next download now whereas
-			// vod waits until the new resolution is buffered, then kicks off the next download
-			if ( this.m_player.BIsLiveContent() )
-				this.ScheduleNextDownload();
+			this.ScheduleNextDownload( nSeekTime );
 		}
 
 		return true; // can shift time now
@@ -2901,6 +2913,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 		adaptationSet.containsAudio = false;
 		adaptationSet.containsGame = false;
 		adaptationSet.description = ( typeof xmlAdaptation.attr( 'description' ) === 'undefined' || xmlAdaptation.attr( 'description' ) == '' ) ? adaptationSet.language : xmlAdaptation.attr( 'description' );
+		adaptationSet.forceSub = ( typeof xmlAdaptation.attr( 'forceSub' ) === 'undefined' || xmlAdaptation.attr( 'forceSub' ) == '' ) ? '' : xmlAdaptation.attr( 'forceSub' );
 		adaptationSet.id = ( typeof xmlAdaptation.attr( 'id' ) === 'undefined' ) ? null : xmlAdaptation.attr( 'id' );
 
 		if ( !adaptationSet.isClosedCaption )
@@ -3662,12 +3675,12 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				{
 					case 'main':
 					case 'dub':
-						display = CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName;
+						display = CVTTCaptionLoader.GetDisplayNameFromCode( rgVideoAdaptations[ r ].language );
 						break;
 
 					case 'alternate':
 						if ( rgVideoAdaptations[ r ].description == rgVideoAdaptations[ r ].language )
-							display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgVideoAdaptations[ r ].language ].displayName );
+							display = '{0} (Alternate)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgVideoAdaptations[ r ].language ) );
 						else
 							display = rgVideoAdaptations[ r ].description;
 						break;
@@ -3708,19 +3721,19 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				{
 					case 'main':
 					case 'dub':
-						display = CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName;
+						display = CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[ r ].language );
 						break;
 
 					case 'alternate':
 						if ( rgAudioAdaptations[ r ].description == rgAudioAdaptations[ r ].language )
-							display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName );
+							display = '{0} (Alternate)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[ r ].language ) );
 						else
 							display = rgAudioAdaptations[ r ].description;
 						break;
 
 					case 'supplementary':
 						if ( rgAudioAdaptations[ r ].description == rgAudioAdaptations[ r ].language )
-							display = '{0} (Supplementary)'.format( CVTTCaptionLoader.LanguageCountryCodes[ rgAudioAdaptations[ r ].language ].displayName );
+							display = '{0} (Supplementary)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[ r ].language ) );
 						else
 							display = rgAudioAdaptations[ r ].description;
 						break;
@@ -3730,9 +3743,12 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 						break;
 
 					default:
-						display = rgVideoAdaptations[r].description;
+						display = rgVideoAdaptations[ r ].description;
 						break;
 				}
+
+				if ( rgAudioAdaptations[ r ].forceSub )
+					display = '{0} with {1} Subtitle'.format( display, CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[ r ].forceSub ) );
 
 				$J( '#representation_select_audio_track' ).append( '<option value="' + val + '">' + display + '</option>' );
 			}
@@ -3742,7 +3758,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 			$J( '#representation_select_audio_track' ).on( 'change', function ()
 			{
 				// adjust which adaptation set it being played
-				_ui.m_player.UpdateAudioAdaptationSet( this.value );
+				_ui.SwitchAudioTrackSelectedInPlayer( this.value );
 				_ui.SetupAudioRepresentationsInUI();
 			} );
 		}
@@ -3899,12 +3915,12 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 			{
 				case 'main':
 				case 'dub':
-					display = CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName;
+					display = CVTTCaptionLoader.GetDisplayNameFromCode( rgVideoAdaptations[r].language );
 					break;
 
 				case 'alternate':
 					if ( rgVideoAdaptations[r].description == rgVideoAdaptations[r].language )
-						display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgVideoAdaptations[r].language].displayName );
+						display = '{0} (Alternate)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgVideoAdaptations[r].language ) );
 					else
 						display = rgVideoAdaptations[r].description;
 					break;
@@ -3952,19 +3968,19 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 			{
 				case 'main':
 				case 'dub':
-					display = CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName;
+					display = CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[r].language );
 					break;
 
 				case 'alternate':
 					if ( rgAudioAdaptations[r].description == rgAudioAdaptations[r].language )
-						display = '{0} (Alternate)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName );
+						display = '{0} (Alternate)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[r].language ) );
 					else
 						display = rgAudioAdaptations[r].description;
 					break;
 
 				case 'supplementary':
 					if ( rgAudioAdaptations[r].description == rgAudioAdaptations[r].language )
-						display = '{0} (Supplementary)'.format( CVTTCaptionLoader.LanguageCountryCodes[rgAudioAdaptations[r].language].displayName );
+						display = '{0} (Supplementary)'.format( CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[r].language ) );
 					else
 						display = rgAudioAdaptations[r].description;
 					break;
@@ -3976,6 +3992,9 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 				default:
 					break;
 			}
+
+			if ( rgAudioAdaptations[r].forceSub )
+				display = '{0} with {1} Subtitle'.format( display, CVTTCaptionLoader.GetDisplayNameFromCode( rgAudioAdaptations[ r ].forceSub ) );
 
 			if ( r == 0 )
 				$J( '#representation_audio_track #representation_select' ).append('<div data-value="' + val + '" class="selected">' + display + '</div>');
@@ -4664,6 +4683,27 @@ CDASHPlayerUI.prototype.PanelSelectGetValue = function ( elSelect )
 	return elSelect.find( '.selected' ).attr( 'data-value' );
 }
 
+CDASHPlayerUI.prototype.PanelSelectDisable = function( elSelect, bDisable, strSelectText )
+{
+	var elPanel = elSelect.find( '.panel_select' );
+
+	if ( bDisable )
+	{
+		elPanel.addClass( 'disabled' );
+		elPanel.find( '.left_arrow' ).css( 'visibility', 'hidden' );
+		elPanel.find( '.right_arrow' ).css( 'visibility', 'hidden' );
+	}
+	else
+	{
+		elPanel.removeClass( 'disabled' );
+		elPanel.find( '.left_arrow' ).css( 'visibility', 'visible' );
+		elPanel.find( '.right_arrow' ).css( 'visibility', 'visible' );
+	}
+
+	if ( strSelectText )
+		elPanel.find( '.selected' ).text( strSelectText );
+}
+
 CDASHPlayerUI.prototype.OnKeyDown = function( e )
 {
 	var keycode;
@@ -4696,7 +4736,7 @@ CDASHPlayerUI.prototype.OnKeyDown = function( e )
 
 		// VOD desktop shortcut keys
 		if ( !bHandled && !this.m_player.BIsLiveContent() )
-		{ 
+		{
 			var bHandled = true;
 			switch (keycode)
 			{
@@ -4838,6 +4878,9 @@ CDASHPlayerUI.prototype.ClickUIElementOnKeyDown = function ( element )
 {
 	if ( this.BInTenFoot() )
 	{
+		if ( element.hasClass( 'disabled' ) || element.parent().hasClass( 'disabled' ) )
+			return;
+
 		element.trigger( 'click' );
 
 		var _ui = this;
@@ -5006,7 +5049,7 @@ CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFoc
 		value = this.PanelSelectGetValue( $J( '#representation_audio_track #representation_select' ) );
 		if ( value )
 		{
-			this.m_player.UpdateAudioAdaptationSet( value );
+			this.SwitchAudioTrackSelectedInPlayer( value );
 			this.SaveAudioTrackSelected();
 		}
 
@@ -5793,15 +5836,38 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanelTenFoot = function()
 
 CDASHPlayerUI.prototype.SetClosedCaptionLanguageInUI = function( strCode )
 {
+	var adaptation = this.m_player.GetCurrentAudioAdaptation();
+
 	if ( this.BInTenFoot() )
 	{
 		this.PanelSelectByValue( $J( '#representation_captions_language', this.m_elClosedCaptionsPanel ), strCode );
+		if ( adaptation && adaptation.forceSub )
+		{
+			this.PanelSelectDisable( $J( '#representation_captions_language', this.m_elClosedCaptionsPanel ), true,
+				"{0} (Set by Audio Track)".format( CVTTCaptionLoader.GetDisplayNameFromCode( adaptation.forceSub ) ) );
+		}
+		else
+		{
+			var strRestoreLang = 'None';
+			if ( strCode.toUpperCase() != CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
+				strRestoreLang = CVTTCaptionLoader.GetDisplayNameFromCode( strCode );
+
+			this.PanelSelectDisable( $J( '#representation_captions_language', this.m_elClosedCaptionsPanel ), false, strRestoreLang );
+		}
 	}
 	else
 	{
-		var uiCaptionLanguage = $J("#representation_select_captions");
-		if ( uiCaptionLanguage.length )
-			uiCaptionLanguage.val( strCode );
+		$J( "#representation_select_captions" ).val( strCode );
+		if ( adaptation && adaptation.forceSub )
+		{
+			$J( "#representation_select_captions" ).hide();
+			$J( "#select_captions_force_sub_msg" ).text( "{0} (Set by Audio Track)".format( CVTTCaptionLoader.GetDisplayNameFromCode( adaptation.forceSub ) ) ).show();
+		}
+		else
+		{
+			$J( "#representation_select_captions" ).show();
+			$J( "#select_captions_force_sub_msg" ).hide();
+		}
 	}
 }
 
@@ -5984,6 +6050,12 @@ CDASHPlayerUI.GetSavedAudioTrackSelected = function( strUniqueSettingsID )
 CDASHPlayerUI.prototype.SwitchAudioTrackSelectedInPlayer = function( strAudioAdaptationID )
 {
 	this.m_player.UpdateAudioAdaptationSet( strAudioAdaptationID );
+
+	var adaptation = this.m_player.GetAdaptationByTrackID( strAudioAdaptationID );
+	if ( adaptation && adaptation.forceSub )
+	{
+		WebStorage.SetLocal( "closed_caption_language_setting_" + this.m_strUniqueSettingsID, adaptation.forceSub );
+	}
 }
 
 CDASHPlayerUI.prototype.LoadAudioTrackSelected = function()
@@ -6142,12 +6214,12 @@ CDASHPlayerUI.SortAdaptationsByDescription = function(a,b)
 	// sort by description / language
 	var aDescription, bDescription;
 	if ( a.language == a.description )
-		aDescription = CVTTCaptionLoader.LanguageCountryCodes[ a.language ].displayName;
+		aDescription = CVTTCaptionLoader.GetDisplayNameFromCode( a.language );
 	else
 		aDescription = a.description;
 
 	if ( a.language == a.description )
-		bDescription = CVTTCaptionLoader.LanguageCountryCodes[ b.language ].displayName;
+		bDescription = CVTTCaptionLoader.GetDisplayNameFromCode( b.language );
 	else
 		bDescription = b.description;
 
@@ -6575,6 +6647,18 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 		return 1;
 
 	return 0;
+}
+
+CVTTCaptionLoader.GetDisplayNameFromCode = function( strCode )
+{
+	if( typeof CVTTCaptionLoader.LanguageCountryCodes[ strCode ] !== 'undefined' )
+	{
+		return CVTTCaptionLoader.LanguageCountryCodes[ strCode ].displayName;
+	}
+	else
+	{
+		return strCode;
+	}
 }
 
 CVTTCaptionLoader.LanguageCountryCodes = {

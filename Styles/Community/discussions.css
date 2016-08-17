@@ -118,8 +118,10 @@
 
 .discussions_frame_header h1 {
 	color: #fffffa;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
 	font-size: 26px;
 	margin: 0;
 }

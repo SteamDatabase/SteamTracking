@@ -406,8 +406,10 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	min-width: 300px;
 	color: white;
 	font-size: 14px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .editGuideTOCSectionControls
 {

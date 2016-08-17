@@ -195,8 +195,10 @@ padding-top:3px;
 color: #ffffff;
 font-size: 14px;
 font-weight: normal;
-font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-padding: 0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		padding: 0px;
 margin: 0;
 }
 
@@ -667,8 +669,10 @@ input.wishlist_rank {
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: normal;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #ffffff;
 	padding-top: 14px;
 }
 
