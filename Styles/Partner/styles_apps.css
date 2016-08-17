@@ -268,7 +268,8 @@ textarea#leaderboard_blob {
 	width: 200px;
 }
 
-#addSeason #addSeasonEpisodeCount {
+#addSeason #addSeasonEpisodeCount,
+#addNewEpisodes #addNewEpisodeCount {
 	width: 30px;
 }
 
@@ -285,4 +286,9 @@ textarea#leaderboard_blob {
 .season .edit_actions .iconLink {
 	padding-left: 20px;
 	margin-right: 5px;
+}
+
+#episode_add_from_depot_range
+{
+	margin-top: 15px;
 }
