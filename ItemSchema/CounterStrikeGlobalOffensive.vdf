@@ -588,6 +588,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_deagle_aq_deserteagle_kumichodragon_heavy"
 			}
+			"67948"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_desert_eagle_constable_light"
+			}
+			"67949"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_desert_eagle_constable_medium"
+			}
+			"67950"
+			{
+				"icon_path"		"econ/default_generated/weapon_deagle_aq_desert_eagle_constable_heavy"
+			}
 			"131184"
 			{
 				"icon_path"		"econ/default_generated/weapon_elite_an_navy_light"
@@ -1044,6 +1056,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_five_seven_daimyo_heavy"
 			}
+			"199028"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_aq_five_seven_scumbria_light"
+			}
+			"199029"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_aq_five_seven_scumbria_medium"
+			}
+			"199030"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_aq_five_seven_scumbria_heavy"
+			}
 			"262152"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_so_olive_light"
@@ -1271,6 +1295,18 @@
 			"264490"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_cu_glock_wasteland_rebel_heavy"
+			}
+			"264572"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock18_weasel_light"
+			}
+			"264573"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock18_weasel_medium"
+			}
+			"264574"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_cu_glock18_weasel_heavy"
 			}
 			"458808"
 			{
@@ -1536,6 +1572,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak47_supercharged_heavy"
 			}
+			"461152"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_anarchy_light"
+			}
+			"461153"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_anarchy_medium"
+			}
+			"461154"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_anarchy_heavy"
+			}
 			"524324"
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_hy_tiger_light"
@@ -1739,6 +1787,18 @@
 			"526622"
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_aristocrat_heavy"
+			}
+			"526692"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_syd_mead_light"
+			}
+			"526693"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_syd_mead_medium"
+			}
+			"526694"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_syd_mead_heavy"
 			}
 			"589944"
 			{
@@ -2148,6 +2208,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_aq_famas_contour_heavy"
 			}
+			"657776"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_gs_famas_rally_light"
+			}
+			"657777"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_gs_famas_rally_medium"
+			}
+			"657778"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_gs_famas_rally_heavy"
+			}
 			"720920"
 			{
 				"icon_path"		"econ/default_generated/weapon_g3sg1_hy_arctic_light"
@@ -2339,6 +2411,18 @@
 			"723078"
 			{
 				"icon_path"		"econ/default_generated/weapon_g3sg1_sp_g3sg1_militiaorange_heavy"
+			}
+			"723320"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_ventilator_light"
+			}
+			"723321"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_ventilator_medium"
+			}
+			"723322"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_ventilator_heavy"
 			}
 			"852272"
 			{
@@ -3408,6 +3492,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_gs_p90_full_throttle_heavy"
 			}
+			"1247628"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_grimm_light"
+			}
+			"1247629"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_grimm_medium"
+			}
+			"1247630"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_grimm_heavy"
+			}
 			"1572924"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_hy_gelpen_light"
@@ -3599,6 +3695,18 @@
 			"1575090"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_primalsaber_heavy"
+			}
+			"1575324"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_metritera_light"
+			}
+			"1575325"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_metritera_medium"
+			}
+			"1575326"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_metritera_heavy"
 			}
 			"1638568"
 			{
@@ -3815,6 +3923,18 @@
 			"1640630"
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_spectrum_heavy"
+			}
+			"1640864"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_hy_xm1014_fractal_blue_light"
+			}
+			"1640865"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_hy_xm1014_fractal_blue_medium"
+			}
+			"1640866"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_hy_xm1014_fractal_blue_heavy"
 			}
 			"1703988"
 			{
@@ -4236,6 +4356,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_gs_mag7_praetorian_heavy"
 			}
+			"1771904"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_tribal_light"
+			}
+			"1771905"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_tribal_medium"
+			}
+			"1771906"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_tribal_heavy"
+			}
 			"1835120"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_light"
@@ -4367,6 +4499,18 @@
 			"1837066"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_cu_negev_impact_heavy"
+			}
+			"1837448"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_hy_negev_dazzle_light"
+			}
+			"1837449"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_hy_negev_dazzle_medium"
+			}
+			"1837450"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_hy_negev_dazzle_heavy"
 			}
 			"1900564"
 			{
@@ -4847,6 +4991,18 @@
 			"1968478"
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_am_tec_9_sea_salt_heavy"
+			}
+			"1968536"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_supercharged_light"
+			}
+			"1968537"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_supercharged_medium"
+			}
+			"1968538"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_supercharged_heavy"
 			}
 			"2097236"
 			{
@@ -5471,6 +5627,18 @@
 			"2230422"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp9_am_mp9_bioleak_heavy"
+			}
+			"2230660"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_narcis_light"
+			}
+			"2230661"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_narcis_medium"
+			}
+			"2230662"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_narcis_heavy"
 			}
 			"2293772"
 			{
@@ -6204,6 +6372,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_bloodsport_heavy"
 			}
+			"2492816"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_powercore_light"
+			}
+			"2492817"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_powercore_medium"
+			}
+			"2492818"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_powercore_heavy"
+			}
 			"2556016"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_an_navy_light"
@@ -6395,6 +6575,18 @@
 			"2558298"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_aerial_heavy"
+			}
+			"2558356"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg556_triarch_light"
+			}
+			"2558357"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg556_triarch_medium"
+			}
+			"2558358"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg556_triarch_heavy"
 			}
 			"2621544"
 			{
@@ -7187,6 +7379,18 @@
 			"4130942"
 			{
 				"icon_path"		"econ/default_generated/weapon_cz75a_gs_cz75a_redastor_heavy"
+			}
+			"4131176"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_gs_cz75_tread_light"
+			}
+			"4131177"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_gs_cz75_tread_medium"
+			}
+			"4131178"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_gs_cz75_tread_heavy"
 			}
 			"4194352"
 			{
@@ -10945,6 +11149,11 @@
 					"outer_cone"		"0.500000"
 				}
 			}
+			"attributes"
+			{
+				"recovery time crouch final"		"-1.000000"
+				"recovery time stand final"		"-1.000000"
+			}
 		}
 		"equipment"
 		{
@@ -11089,6 +11298,8 @@
 			{
 				"flinch velocity modifier large"		"0.560000"
 				"flinch velocity modifier small"		"0.050000"
+				"recovery transition start bullet"		"3"
+				"recovery transition end bullet"		"10"
 			}
 		}
 		"primary"
@@ -11104,6 +11315,8 @@
 			"attributes"
 			{
 				"stattrak model"		"models/weapons/stattrack.mdl"
+				"recovery transition start bullet"		"2"
+				"recovery transition end bullet"		"5"
 			}
 		}
 		"smg"
@@ -11475,6 +11688,7 @@
 				"cycletime when in burst mode"		"0.500000"
 				"time between burst shots"		"0.050000"
 				"primary reserve ammo max"		"120"
+				"tracer frequency alt"		"1"
 				"magazine model"		"models/weapons/w_pist_glock18_mag.mdl"
 			}
 			"paint_data"
@@ -12325,6 +12539,10 @@
 			{
 				"magazine model"		"models/weapons/w_rif_ak47_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"recovery time crouch"		"0.305257"
+				"recovery time crouch final"		"0.419728"
+				"recovery time stand"		"0.368000"
+				"recovery time stand final"		"0.506000"
 			}
 			"inventory_image_data"
 			{
@@ -12404,6 +12622,7 @@
 				"aimsight pivot forward"		"10"
 				"aimsight lens mask"		"models/weapons/v_rif_aug_scopelensmask.mdl"
 				"primary reserve ammo max"		"90"
+				"tracer frequency alt"		"3"
 			}
 			"inventory_image_data"
 			{
@@ -12486,6 +12705,7 @@
 			{
 				"magazine model"		"models/weapons/w_rif_famas_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"tracer frequency alt"		"3"
 			}
 			"inventory_image_data"
 			{
@@ -12626,6 +12846,11 @@
 			{
 				"magazine model"		"models/weapons/w_rif_m4a1_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"recovery time crouch"		"0.242100"
+				"recovery time crouch final"		"0.332888"
+				"recovery time stand"		"0.338941"
+				"recovery time stand final"		"0.466044"
+				"inaccuracy crouch"		"4.100000"
 			}
 			"inventory_image_data"
 			{
@@ -12709,6 +12934,7 @@
 				"aimsight pivot forward"		"8"
 				"aimsight lens mask"		"models/weapons/v_rif_sg556_scopelensmask.mdl"
 				"primary reserve ammo max"		"90"
+				"tracer frequency alt"		"3"
 			}
 			"inventory_image_data"
 			{
@@ -12803,6 +13029,7 @@
 			}
 			"attributes"
 			{
+				"magazine model"		"models/weapons/w_snip_awp_mag.mdl"
 				"unzoom after shot"		"1"
 				"primary reserve ammo max"		"30"
 				"icon display model"		"models/weapons/w_snip_awp_icon.mdl"
@@ -13019,6 +13246,7 @@
 			}
 			"attributes"
 			{
+				"magazine model"		"models/weapons/w_snip_ssg08_mag.mdl"
 				"unzoom after shot"		"1"
 				"primary reserve ammo max"		"90"
 			}
@@ -13090,6 +13318,7 @@
 			{
 				"magazine model"		"models/weapons/w_shot_mag7_mag.mdl"
 				"primary reserve ammo max"		"32"
+				"is full auto"		"0"
 			}
 			"inventory_image_data"
 			{
@@ -13168,6 +13397,7 @@
 			"attributes"
 			{
 				"primary reserve ammo max"		"32"
+				"is full auto"		"0"
 			}
 			"inventory_image_data"
 			{
@@ -13253,6 +13483,7 @@
 			"attributes"
 			{
 				"primary reserve ammo max"		"32"
+				"is full auto"		"0"
 			}
 			"inventory_image_data"
 			{
@@ -13331,6 +13562,7 @@
 			"attributes"
 			{
 				"primary reserve ammo max"		"32"
+				"is full auto"		"1"
 			}
 			"inventory_image_data"
 			{
@@ -13715,6 +13947,12 @@
 				"recoil magnitude variance"		"3"
 				"recoil magnitude alt"		"21"
 				"recoil magnitude variance alt"		"0"
+				"recovery time crouch"		"0.242100"
+				"recovery time crouch final"		"0.332888"
+				"recovery time stand"		"0.338941"
+				"recovery time stand final"		"0.466044"
+				"inaccuracy crouch"		"4.100000"
+				"inaccuracy crouch alt"		"4.100000"
 			}
 			"paint_data"
 			{
@@ -13936,6 +14174,7 @@
 				"recoil angle variance alt"		"50"
 				"recoil magnitude alt"		"45"
 				"recoil magnitude variance alt"		"6"
+				"tracer frequency alt"		"1"
 			}
 			"paint_data"
 			{
@@ -25257,6 +25496,42 @@
 		{
 			"name"		"campaign 8 last completed quest"
 			"attribute_class"		"campaign_last_completed_quest"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"228"
+		{
+			"name"		"recovery time crouch final"
+			"attribute_class"		"recovery_time_crouch_final"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"attribute_type"		"float"
+		}
+		"229"
+		{
+			"name"		"recovery time stand final"
+			"attribute_class"		"recovery_time_stand_final"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"attribute_type"		"float"
+		}
+		"230"
+		{
+			"name"		"recovery transition start bullet"
+			"attribute_class"		"recovery_transition_start_bullet"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"231"
+		{
+			"name"		"recovery transition end bullet"
+			"attribute_class"		"recovery_transition_end_bullet"
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"neutral"
@@ -79045,5 +79320,559 @@
 		"gs_scar20_bloodsport"		"legendary"
 		"cu_sg553_aerial"		"rare"
 		"am_tec_9_sea_salt"		"rare"
+	}
+	"paint_kits"
+	{
+		"600"
+		{
+			"name"		"cu_ak47_anarchy"
+			"description_string"		"#PaintKit_cu_AK47_Anarchy"
+			"description_tag"		"#PaintKit_cu_AK47_Anarchy_Tag"
+			"style"		"7"
+			"pattern"		"workshop/anarchy_ak47"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"140"
+			"phongintensity"		"255"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"601"
+		{
+			"name"		"gs_aug_syd_mead"
+			"description_string"		"#PaintKit_gs_AUG_Syd_Mead"
+			"description_tag"		"#PaintKit_gs_AUG_Syd_Mead_Tag"
+			"style"		"9"
+			"pattern"		"workshop/syd_mead_aug_texture"
+			"color0"		"131 145 149"
+			"color1"		"255 255 255"
+			"color2"		"111 94 78"
+			"color3"		"130 89 59"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"150"
+			"phongalbedoboost"		"15"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"602"
+		{
+			"name"		"gs_cz75_tread"
+			"description_string"		"#PaintKit_gs_CZ75_Tread"
+			"description_tag"		"#PaintKit_gs_CZ75_Tread_Tag"
+			"style"		"9"
+			"pattern"		"workshop/cz75_tread"
+			"color0"		"128 128 128 255"
+			"color1"		"226 226 226"
+			"color2"		"136 136 136"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"20"
+			"phongalbedoboost"		"15"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"603"
+		{
+			"name"		"aq_desert_eagle_constable"
+			"description_string"		"#PaintKit_aq_Desert_Eagle_Constable"
+			"description_tag"		"#PaintKit_aq_Desert_Eagle_Constable_Tag"
+			"style"		"8"
+			"pattern"		"workshop/de_constable"
+			"color0"		"255 251 246"
+			"color1"		"98 98 98"
+			"color2"		"123 123 123"
+			"color3"		"215 176 153"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"64"
+			"phongalbedoboost"		"16"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.060000"
+			"wear_remap_max"		"1.000000"
+		}
+		"604"
+		{
+			"name"		"gs_famas_rally"
+			"description_string"		"#PaintKit_gs_FAMAS_Rally"
+			"description_tag"		"#PaintKit_gs_FAMAS_Rally_Tag"
+			"style"		"9"
+			"pattern"		"workshop/famas_rally"
+			"color0"		"100 58 35"
+			"color1"		"255 255 255"
+			"color2"		"228 207 192"
+			"color3"		"144 126 91"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"50"
+			"phongintensity"		"5"
+			"phongalbedoboost"		"5"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"605"
+		{
+			"name"		"aq_five_seven_scumbria"
+			"description_string"		"#PaintKit_aq_Five_Seven_Scumbria"
+			"description_tag"		"#PaintKit_aq_Five_Seven_Scumbria_Tag"
+			"style"		"8"
+			"pattern"		"workshop/fivesevenscumbria2"
+			"color0"		"193 208 214"
+			"color1"		"163 163 163"
+			"color2"		"168 189 189"
+			"color3"		"151 161 157"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"140"
+			"phongalbedoboost"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"606"
+		{
+			"name"		"gs_g3sg1_ventilator"
+			"description_string"		"#PaintKit_gs_G3SG1_Ventilator"
+			"description_tag"		"#PaintKit_gs_G3SG1_Ventilator_Tag"
+			"style"		"9"
+			"pattern"		"workshop/g3sg1_ventilator"
+			"color0"		"128 128 128 255"
+			"color1"		"229 229 229"
+			"color2"		"34 42 42"
+			"color3"		"67 59 59"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"12"
+			"phongalbedoboost"		"16"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.450000"
+		}
+		"607"
+		{
+			"name"		"cu_glock18_weasel"
+			"description_string"		"#PaintKit_cu_Glock18_Weasel"
+			"description_tag"		"#PaintKit_cu_Glock18_Weasel_Tag"
+			"style"		"7"
+			"pattern"		"workshop/glock18_weasel1j"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"220"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"608"
+		{
+			"name"		"cu_mag7_tribal"
+			"description_string"		"#PaintKit_cu_MAG7_Tribal"
+			"description_tag"		"#PaintKit_cu_MAG7_Tribal_Tag"
+			"style"		"7"
+			"pattern"		"workshop/mag7_tribal03"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"128"
+			"phongintensity"		"7"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.440000"
+		}
+		"609"
+		{
+			"name"		"cu_mp9_narcis"
+			"description_string"		"#PaintKit_cu_MP9_Narcis"
+			"description_tag"		"#PaintKit_cu_MP9_Narcis_Tag"
+			"style"		"7"
+			"pattern"		"workshop/mp9_narcis"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"128"
+			"phongintensity"		"32"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"610"
+		{
+			"name"		"hy_negev_dazzle"
+			"description_string"		"#PaintKit_hy_Negev_Dazzle"
+			"description_tag"		"#PaintKit_hy_Negev_Dazzle_Tag"
+			"style"		"2"
+			"pattern"		"workshop/negev_dazzle"
+			"color0"		"239 0 0"
+			"color1"		"58 199 204"
+			"color2"		"209 209 209"
+			"color3"		"2 36 73"
+			"pattern_scale"		"5.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.100000"
+			"wear_remap_max"		"0.650000"
+		}
+		"611"
+		{
+			"name"		"cu_p90_grimm"
+			"description_string"		"#PaintKit_cu_P90_Grimm"
+			"description_tag"		"#PaintKit_cu_P90_Grimm_Tag"
+			"style"		"7"
+			"pattern"		"workshop/p90_grimm"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"48"
+			"ignore_weapon_size_scale"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"612"
+		{
+			"name"		"gs_scar20_powercore"
+			"description_string"		"#PaintKit_gs_SCAR20_Powercore"
+			"description_tag"		"#PaintKit_gs_SCAR20_Powercore_Tag"
+			"style"		"9"
+			"pattern"		"workshop/scar_powercore"
+			"color0"		"211 211 211"
+			"color1"		"208 208 208"
+			"color2"		"159 159 159"
+			"color3"		"168 168 168"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"5"
+			"phongalbedoboost"		"1"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"613"
+		{
+			"name"		"cu_sg556_triarch"
+			"description_string"		"#PaintKit_cu_SG556_Triarch"
+			"description_tag"		"#PaintKit_cu_SG556_Triarch_Tag"
+			"style"		"7"
+			"pattern"		"workshop/sg553_triarch"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"90"
+			"phongintensity"		"125"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"614"
+		{
+			"name"		"gs_tec9_supercharged"
+			"description_string"		"#PaintKit_gs_TEC9_Supercharged"
+			"description_tag"		"#PaintKit_gs_TEC9_Supercharged_Tag"
+			"style"		"9"
+			"pattern"		"workshop/tec9_supercharged"
+			"color0"		"178 174 159"
+			"color1"		"255 255 255"
+			"color2"		"136 115 95"
+			"color3"		"129 123 113"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"150"
+			"phongintensity"		"50"
+			"phongalbedoboost"		"3"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"615"
+		{
+			"name"		"cu_ump45_metritera"
+			"description_string"		"#PaintKit_cu_UMP45_Metritera"
+			"description_tag"		"#PaintKit_cu_UMP45_Metritera_Tag"
+			"style"		"7"
+			"pattern"		"workshop/ump_metritera"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"9"
+			"phongintensity"		"3"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"616"
+		{
+			"name"		"hy_xm1014_fractal_blue"
+			"description_string"		"#PaintKit_hy_XM1014_Fractal_Blue"
+			"description_tag"		"#PaintKit_hy_XM1014_Fractal_Blue_Tag"
+			"style"		"2"
+			"pattern"		"workshop/fractal_blue"
+			"color0"		"26 26 26"
+			"color1"		"83 97 98"
+			"color2"		"52 173 199"
+			"color3"		"26 26 26"
+			"pattern_scale"		"5.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"12"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+	}
+	"items"
+	{
+		"1351"
+		{
+			"name"		"gamma_2 Key"
+			"item_name"		"#CSGO_crate_key_gamma_2"
+			"item_description"		"#CSGO_crate_key_gamma_2_desc"
+			"first_sale_date"		"2016-08-08"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_gamma_2"
+			"tool"
+			{
+				"restriction"		"crate_gamma_2"
+			}
+		}
+		"4281"
+		{
+			"item_name"		"#CSGO_crate_gamma_2"
+			"item_description"		"#CSGO_crate_gamma_2_desc"
+			"name"		"crate_gamma_2"
+			"image_inventory"		"econ/weapon_cases/crate_gamma_2"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1351"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"crate_gamma_2"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"172"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_gamma_2"
+					"tag_text"		"#CSGO_set_gamma_2"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"172"		"crate_gamma_2"
+	}
+	"client_loot_lists"
+	{
+		"crate_gamma_2_rare"
+		{
+			"[gs_cz75_tread]weapon_cz75a"		"1"
+			"[aq_five_seven_scumbria]weapon_fiveseven"		"1"
+			"[gs_g3sg1_ventilator]weapon_g3sg1"		"1"
+			"[hy_negev_dazzle]weapon_negev"		"1"
+			"[cu_p90_grimm]weapon_p90"		"1"
+			"[cu_ump45_metritera]weapon_ump45"		"1"
+			"[hy_xm1014_fractal_blue]weapon_xm1014"		"1"
+		}
+		"crate_gamma_2_mythical"
+		{
+			"[aq_desert_eagle_constable]weapon_deagle"		"1"
+			"[cu_glock18_weasel]weapon_glock"		"1"
+			"[cu_mag7_tribal]weapon_mag7"		"1"
+			"[gs_scar20_powercore]weapon_scar20"		"1"
+			"[cu_sg556_triarch]weapon_sg556"		"1"
+		}
+		"crate_gamma_2_legendary"
+		{
+			"[gs_aug_syd_mead]weapon_aug"		"1"
+			"[cu_mp9_narcis]weapon_mp9"		"1"
+			"[gs_tec9_supercharged]weapon_tec9"		"1"
+		}
+		"crate_gamma_2_ancient"
+		{
+			"[cu_ak47_anarchy]weapon_ak47"		"1"
+			"[gs_famas_rally]weapon_famas"		"1"
+		}
+		"crate_gamma_2"
+		{
+			"crate_gamma_2_rare"		"1"
+			"crate_gamma_2_mythical"		"1"
+			"crate_gamma_2_legendary"		"1"
+			"crate_gamma_2_ancient"		"1"
+			"community_case_13_unusual"		"1"
+		}
+	}
+	"item_sets"
+	{
+		"set_gamma_2"
+		{
+			"name"		"#CSGO_set_gamma_2"
+			"set_description"		"#CSGO_set_gamma_2_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[gs_cz75_tread]weapon_cz75a"		"1"
+				"[aq_five_seven_scumbria]weapon_fiveseven"		"1"
+				"[gs_g3sg1_ventilator]weapon_g3sg1"		"1"
+				"[hy_negev_dazzle]weapon_negev"		"1"
+				"[cu_p90_grimm]weapon_p90"		"1"
+				"[cu_ump45_metritera]weapon_ump45"		"1"
+				"[hy_xm1014_fractal_blue]weapon_xm1014"		"1"
+				"[aq_desert_eagle_constable]weapon_deagle"		"1"
+				"[cu_glock18_weasel]weapon_glock"		"1"
+				"[cu_mag7_tribal]weapon_mag7"		"1"
+				"[gs_scar20_powercore]weapon_scar20"		"1"
+				"[cu_sg556_triarch]weapon_sg556"		"1"
+				"[gs_aug_syd_mead]weapon_aug"		"1"
+				"[cu_mp9_narcis]weapon_mp9"		"1"
+				"[gs_tec9_supercharged]weapon_tec9"		"1"
+				"[cu_ak47_anarchy]weapon_ak47"		"1"
+				"[gs_famas_rally]weapon_famas"		"1"
+			}
+		}
+	}
+	"paint_kits_rarity"
+	{
+		"cu_ak47_anarchy"		"legendary"
+		"gs_aug_syd_mead"		"legendary"
+		"gs_cz75_tread"		"rare"
+		"aq_desert_eagle_constable"		"rare"
+		"gs_famas_rally"		"ancient"
+		"aq_five_seven_scumbria"		"rare"
+		"gs_g3sg1_ventilator"		"rare"
+		"cu_glock18_weasel"		"rare"
+		"cu_mag7_tribal"		"mythical"
+		"cu_mp9_narcis"		"legendary"
+		"hy_negev_dazzle"		"rare"
+		"cu_p90_grimm"		"rare"
+		"gs_scar20_powercore"		"mythical"
+		"cu_sg556_triarch"		"mythical"
+		"gs_tec9_supercharged"		"legendary"
+		"cu_ump45_metritera"		"rare"
+		"hy_xm1014_fractal_blue"		"rare"
 	}
 }

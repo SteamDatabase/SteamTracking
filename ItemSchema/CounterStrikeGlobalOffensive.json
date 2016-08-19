@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.a431791a4829512d47f6b70a511d9bf8b7b78da3.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.164938e11d8ffa662c593dd51dd4974276ce011b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7155,6 +7155,31 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "crate_community_13",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "gamma_2 Key",
+				"defindex": 1351,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Gamma 2 Case Key",
+				"item_description": "This key only opens Gamma 2 cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_gamma_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_gamma_2.e82ffcea6be229d0d163d84725cced587d22b666.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_gamma_2",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -16995,6 +17020,40 @@
 				
 			},
 			{
+				"name": "crate_gamma_2",
+				"defindex": 4281,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Gamma 2 Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_gamma_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_gamma_2.ab916b78e7093039642cc7538466bf87cf314363.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_gamma_2",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 172
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -24925,6 +24984,30 @@
 					"weapon_hkp2000",
 					"weapon_m4a1",
 					"weapon_ak47"
+				]
+				
+			},
+			{
+				"item_set": "set_gamma_2",
+				"name": "The Gamma 2 Collection",
+				"items": [
+					"weapon_cz75a",
+					"weapon_fiveseven",
+					"weapon_g3sg1",
+					"weapon_negev",
+					"weapon_p90",
+					"weapon_ump45",
+					"weapon_xm1014",
+					"weapon_deagle",
+					"weapon_glock",
+					"weapon_mag7",
+					"weapon_scar20",
+					"weapon_sg556",
+					"weapon_aug",
+					"weapon_mp9",
+					"weapon_tec9",
+					"weapon_ak47",
+					"weapon_famas"
 				]
 				
 			},
