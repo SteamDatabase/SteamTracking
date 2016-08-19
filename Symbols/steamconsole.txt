@@ -1,4 +1,3 @@
-
  AssertMsgImplementation
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
@@ -328,7 +327,6 @@
  T CAppContentBuilder::CAppContentBuilder()
  T CAppDepotBuilderHttp::BInit(char const*, KeyValues*)
  T CAppDepotBuilderHttp::BRunBuild()
- T CAppDepotBuilderHttp::CAppDepotBuilderHttp()
  T CAppDepotsUpdater::BRunUpdate(unsigned int)
  T CAppDepotsUpdater::CAppDepotsUpdater()
  T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::Run(void*)
@@ -1026,7 +1024,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
- T KeyValuesTextParser::KeyValuesTextParser(bool)
+ T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
