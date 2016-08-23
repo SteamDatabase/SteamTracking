@@ -19,7 +19,7 @@
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
 		"LocalCostToLeaveChina"							6.5
-		"LocalCostCanadaToUS"					2.5
+		"LocalCostCanadaToUS"					1
 		"LocalCostIndiaToDubai"					2
 		"InwardCost"	0.2
 	}
@@ -511,6 +511,21 @@
 					"dest"	25 
 					"cost"	LocalCostOneWayCellEdge 
 				}
+				2 
+				{ 
+					"dest"	118 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+				3 
+				{ 
+					"dest"	119
+					"cost"	LocalCostOneWayCellEdge 
+				}
+				4 
+				{ 
+					"dest"	162
+					"cost"	LocalCostOneWayCellEdge 
+				}
 			}
 		}
 
@@ -622,6 +637,7 @@
 			"edges"
 			{
 				0 { "dest"	41  	"cost"	InwardCost }
+				1 { "dest"	4  	"cost"	InwardCost }
 			}
 		}
 
@@ -1797,7 +1813,7 @@
 					"dest"	31 
 					"cost"	LocalCostCanadaToUS
 				}
-				1 { "dest"	20	"cost"	InwardCost }
+				1 { "dest"	20	"cost"	1 }
 				2 { "dest"	134 }
 			}
 		}
@@ -2158,16 +2174,19 @@
 			{
 				0 { "dest"	117 }
 				1 { "dest"	23 }
+				2 { "dest"	119 }
+				3 { "dest"	163 }
+				4 { "dest"	164 }
 			}
 		}
-		// #119 Venezuela
+		// #119 Colombia
 		119
 		{
-			"name" "Colombia and Venezuela"
-			"countrycode"	"VE"
+			"name" "Colombia"
+			"countrycode"	"CO"
 			"region"	"south america"
-			"latitude"	"8.716343"
-			"longitude"	"-73.786382"
+			"latitude"	"4.698312"
+			"longitude"	"-74.141953"
 			"edges"
 			{
 				0 { "dest"	23 }
@@ -2737,6 +2756,42 @@
 				1 { "dest"	46 }
 			}		
 		}
+		162
+		{
+			"name" "Venezuela"
+			"countrycode"	"VE"
+			"region"	"south america"
+			"latitude"	"10.489325"
+			"longitude"	"-66.910082"
+			"edges"
+			{
+				0 { "dest"	23 }
+			}		
+		}
+		163
+		{
+			"name" "Ecuador"
+			"countrycode"	"EC"
+			"region"	"south america"
+			"latitude"	"-0.186704"
+			"longitude"	"-78.486193"
+			"edges"
+			{
+				0 { "dest"	118	"cost"	InwardCost  }
+			}		
+		}
+		164
+		{
+			"name" "Bolivia"
+			"countrycode"	"BO"
+			"region"	"south america"
+			"latitude"	"-16.499480"
+			"longitude"	"-68.124283"
+			"edges"
+			{
+				0 { "dest"	118	"cost"	InwardCost  }
+			}		
+		}
 	}
 	"countries"
 	{
@@ -2819,7 +2874,7 @@
 		"BT"	145
 		
 		//"Bolivia"		
-		"BO"	118
+		"BO"	164
 		
 		//"Bosnia and Herzegovina"	
 		"BA"	92
@@ -2927,7 +2982,7 @@
 		"DO"	140
 		
 		//"Ecuador"						
-		"EC"	118
+		"EC"	163
 		
 		//"Egypt"							
 		"EG"	125
@@ -3446,7 +3501,7 @@
 		"VU"	0
 		
 		//"Venezuela"						
-		"VE"	119
+		"VE"	162
 		
 		//"Viet Nam"						
 		"VN"	71
