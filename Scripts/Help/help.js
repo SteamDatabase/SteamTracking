@@ -2055,7 +2055,7 @@ HelpRequestPage = {
 			}
 			else
 			{
-				HelpWizard.LoadPageFromHash( false, 'HelpRequest/' + data.reference_code, true );
+				HelpWizard.LoadPageFromHash( false, data.next_page, true );
 				//HelpRequestPage.DismissCreateHelpRequestForm();
 			}
 		}).always( function() {

@@ -435,6 +435,41 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 	} );
 }
 
+function ToggleReviewSummaryDetails( appid, languages )
+{
+	var $parent = $J( "#Reviewssummary0" );
+	var $details = $J( "#ReviewSummaryDetails" );
+	var $detailsBtn = $J( "#ReviewSummaryDetailsBtn" );
+
+	if ( $parent.hasClass( "summary_details_visible" ) )
+	{
+		$parent.removeClass( "summary_details_visible" );
+		$detailsBtn.html( 'More details' );
+	}
+	else
+	{
+		$parent.addClass( "summary_details_visible" );
+		$detailsBtn.html( 'Fewer details' );
+
+		if ( !$details.hasClass( "retrieving_languages" ) )
+		{
+			$details.addClass("retrieving_languages");
+			$J.get(
+				'https://store.steampowered.com//appreviewlanguages/' + appid,
+				{
+					languages : languages
+				}
+			).done(function (data) {
+				if (data.success == 1 ) {
+					$details.addClass("retrieved_languages");
+					$J( '#ReviewSummaryDetailsLanguages' ).html( data.html );
+					BindStoreTooltip( $J('#ReviewSummaryDetailsLanguages [data-store-tooltip]' ) );
+				}
+			});
+		}
+	}
+}
+
 function SelectReviews( appid, context, reviewDayRange, language )
 {
 	$J( "#ReviewsTab_summary" ).removeClass( "active" );

@@ -298,6 +298,16 @@
 	color: #b0aeac;
 }
 
+.redeem_wallet_code_upsell a
+{
+	color: #67C1F5;
+}
+
+.redeem_wallet_code_upsell a:hover
+{
+	color: #ffffff;
+}
+
 .redeem_wallet_code_upsell div b
 {
 	color: #ffffff;

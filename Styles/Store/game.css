@@ -472,7 +472,7 @@ img.game_header_image_full {
 
 
     font-size: 12px;
-	color: #8f98a0;
+	color: #7092a5;
 
 	padding: 16px;
 	padding-bottom: 26px;
@@ -480,6 +480,20 @@ img.game_header_image_full {
 	margin-bottom: 28px;
 
 	z-index: 1;
+}
+
+.game_area_purchase_game.free_weekend {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#acdbf5+0,ffffff+100&0.5+0,0.5+100 */
+	background: -moz-linear-gradient(-45deg,  rgba(172,219,245,0.5) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80acdbf5', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	color: #eeeeee;
+
+	margin-bottom: 50px;
+
+	box-shadow: 0 0 8px 0 rgba( 0, 0, 0, 0.5 );
 }
 
 .game_area_purchase_game_dropdown_description

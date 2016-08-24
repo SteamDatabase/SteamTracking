@@ -70,6 +70,71 @@ input[type=text] {
 	padding: 4px;
 }
 
+input.custom_form_text
+{
+	width: calc( 100% - 10px );
+	clear: left;
+}
+
+.custom_form_label
+{
+	padding-bottom: 4px;
+}
+
+.create_request_form_row
+{
+	padding-bottom: 20px;
+	clear: both;
+}
+
+.create_request_form_row .hint_text
+{
+	padding-top: 2px;
+	font-size: 12px;
+	color: #8c96a0;
+}
+
+.create_request_form_colset_1
+{
+	float: left;
+	width: calc( 100% - 16px );
+	margin-right: 16px;
+}
+
+
+.create_request_form_colset_2
+{
+	float: left;
+	width: calc( 50% - 16px );
+	margin-right: 16px;
+}
+
+.create_request_form_colset_3
+{
+	float: left;
+	width: calc( 33% - 16px );
+	margin-right: 16px;
+}
+
+@media screen and (max-width: 580px)
+{
+	.create_request_form_colset_2, .create_request_form_colset_3
+	{
+		width: calc( 100% - 16px );
+		clear: left;
+		padding-top: 20px;
+	}
+
+	.create_request_form_colset_2:first-child,
+	.create_request_form_colset_3:first-child
+	{
+		padding-top: 0px;
+	}
+
+
+}
+	
+
 .help_site_button {
 	display: inline-block;
 	padding: 6px 10px 6px 10px;
@@ -3110,6 +3175,17 @@ input.unlockcode_entry_input
 	resize: none;
 	font-size: 16px;
 }
+
+.help_request_textarea_ctn textarea.short {
+	padding: 8px;
+	width: calc( 100% - 2px - 16px );
+	min-height: 40px;
+	height: 10vh;
+	resize: none;
+	font-size: 16px;
+}
+
+
 
 .help_request_create_action {
 	padding-top: 8px;

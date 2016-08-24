@@ -1640,7 +1640,7 @@ span.bb_spoiler:hover > span {
 }
 
 blockquote.bb_blockquote, .bb_wysiwyg blockquote {
-	border: 1px solid #535354;
+	border: 1px solid #56707f;
 	border-radius: 3px;
 	padding: 12px;
 	margin: 8px;
@@ -1687,7 +1687,7 @@ div.bb_code, .bb_wysiwyg pre {
 }
 
 span.bb_removedlink {
-	color: #535354;
+	color: #56707f;
 	font-weight: normal;
 	font-size: 80%;
 }

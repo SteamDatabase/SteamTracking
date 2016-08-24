@@ -1005,7 +1005,7 @@ h3 {
 	font-size: 11px;
 	margin-top: 4px;
 }
-.browseOption.reported a, .browseOption.curatedadmin a, .browseOption.admin_forsale_pendingapproval a {
+.browseOption.reported a, .browseOption.curatedadmin a, .browseOption.admin_forsale_pendingapproval a, .browseOption.readytousemoderationadmin a {
 	color: #ca5029;
 }
 

@@ -539,6 +539,18 @@ div#headerSearch {
 	border: none;
 }
 
+#abuseDescriptionArea::-webkit-input-placeholder {
+	color: #fff;
+}
+
+#abuseDescriptionArea::-moz-placeholder {  /* Firefox 19+ */
+	color: #fff;
+}
+
+#abuseDescriptionArea:-ms-input-placeholder {
+	color: #fff;
+}
+
 .abuseDescriptionCtn {
 	margin-bottom: 10px;
 	padding: 4px 6px;

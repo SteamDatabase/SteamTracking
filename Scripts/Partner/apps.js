@@ -2866,7 +2866,7 @@ function GetCEGPropStatus( versionset, appid, uniqueid )
 
 function AddGameAndChallengeGroup( appid, groupname )
 {
-    $('addgameandchallengegroupoutput').innerHTML = "Talking to Vac Server..."
+    $('addgameandchallengegroupoutput').innerHTML = "Talking to Anti-Cheat servers...";
 	AppsAjaxRequest( g_szBaseURL + '/apps/addgameandchallengegroup/' + appid,
 					{ groupname: groupname },
 					function(results )
@@ -2878,7 +2878,7 @@ function AddGameAndChallengeGroup( appid, groupname )
 
 function AddChallengeForChallengeGroup( appid, groupid, challengetype )
 {
-    $('addchallengeforchallengegroupoutput').innerHTML = "Talking to Vac Server..."
+    $('addchallengeforchallengegroupoutput').innerHTML = "Talking to Anti-Cheat servers...";
 	AppsAjaxRequest( g_szBaseURL + '/apps/addchallengeforchallengegroup/' + appid,
 					{ groupid: groupid, challengetype: challengetype },
 					function(results )
@@ -2890,7 +2890,7 @@ function AddChallengeForChallengeGroup( appid, groupid, challengetype )
 
 function AddModuleForChallengeGroup( appid, groupid, modulename )
 {
-    $('addmoduleforchallengegroupoutput').innerHTML = "Talking to Vac Server..."
+    $('addmoduleforchallengegroupoutput').innerHTML = "Talking to Anti-Cheat servers...";
 	AppsAjaxRequest( g_szBaseURL + '/apps/addmoduleforchallengegroup/' + appid,
 					{ groupid: groupid, modulename: modulename },
 					function(results )

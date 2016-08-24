@@ -128,6 +128,12 @@
                     "description": "(Optional) If true, only return the total number of files that satisfy this query."
                 },
                 {
+                    "name": "ids_only",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "(Optional) If true, only return the published file ids of files that satisfy this query."
+                },
+                {
                     "name": "return_vote_data",
                     "type": "bool",
                     "optional": false,

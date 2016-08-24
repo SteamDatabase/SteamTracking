@@ -1,0 +1,11 @@
+{
+    "name": "ISteamNodwin",
+    "methods": [
+        {
+            "name": "NodwinPaymentNotification",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        }
+    ]
+}
