@@ -678,7 +678,6 @@
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
  T CCryptoKeyBase::EnsureCapacity(unsigned int)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
- T CCryptoKeyBase::~CCryptoKeyBase()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
@@ -2048,6 +2047,7 @@
  T GetNoEscCharConversion()
  T GetOSType
  T GetPchTempTextBuffer_Harmful()
+ T GetProcessorBrand()
  T GetProcessorDetailBlob(int*)
  T HKeyGet(ERegKeyRoot)
  T HMAC_CTX_cleanup
@@ -2876,6 +2876,7 @@
  b GetMinidumpsWritten()::MinidumpsWritten
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
+ b GetProcessorBrand()::CPUBrand
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
  b KeyValuesSystem()::s_KeyValuesSystem

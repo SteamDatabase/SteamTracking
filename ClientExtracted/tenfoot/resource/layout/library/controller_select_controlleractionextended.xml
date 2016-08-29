@@ -1,0 +1,43 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+	</styles>
+
+	<EditShortcutName class="TenfootMsgBox">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+			<Label id="Title" class="StdTitle" text="#Library_SelectControllerActionOption_Title" />
+    	<Label class="SubTitle" text="#Library_SelectControllerActionOption_CodeLabel" />
+			<Panel id="SelectPowerOptionPanel" class="SelectPowerOptionContainer">
+				<DropDown id="PowerOptionDropdown" class="ControllerActionOptionDropdown">
+					<Label id="controller_poweroff" text="#Library_Details_ControllerAction_Controller_Off" />
+					<Label id="host_suspend" text="#Library_Details_ControllerAction_Host_Suspend" />
+					<Label id="host_poweroff" text="#Library_Details_ControllerAction_Host_Off" />
+					<Label id="host_restart" text="#Library_Details_ControllerAction_Host_Restart" />	
+				</DropDown>
+			</Panel>
+			<Panel id="SelectMusicOptionPanel" class="SelectMusicOptionContainer">
+				<DropDown id="MusicOptionDropdown" class="ControllerActionOptionDropdown">
+					<Label id="steammusic_playpause" text="#Library_Details_ControllerAction_SteamMusic_PlayPause" />
+					<Label id="steammusic_next" text="#Library_Details_ControllerAction_SteamMusic_Next" />
+					<Label id="steammusic_prev" text="#Library_Details_ControllerAction_SteamMusic_Prev" />
+					<Label id="steammusic_volup" text="#Library_Details_ControllerAction_SteamMusic_VolUp" />	
+					<Label id="steammusic_voldown" text="#Library_Details_ControllerAction_SteamMusic_VolDown" />
+					<Label id="steammusic_volmute" text="#Library_Details_ControllerAction_SteamMusic_VolMute" />					
+				</DropDown>
+			</Panel>			
+				<Panel id="" class="HorizontalSpace" />
+				<Panel id="" class="HorizontalSpace" />
+            <Panel id="MsgBoxButtons">
+                <Button id="OkButton" class="Button" onactivate="SelectControllerActionExtended();">
+                    <Label text="#UI_OK" />
+                </Button>
+                <Button class="Button" onactivate="ButtonCancel();">
+                    <Label text="#UI_Cancel" />
+                </Button>
+            </Panel>        
+        </Panel>
+	</EditShortcutName>
+</root>

@@ -239,6 +239,7 @@
  T GetCPUInformation()
  T GetMemAlloc
  T GetOSType
+ T GetProcessorBrand()
  T GetProcessorDetailBlob(int*)
  T InitStackWalk()
  T IsSpewActive
@@ -365,6 +366,7 @@
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
+ b GetProcessorBrand()::CPUBrand
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
  b SetWritingMiniDump(bool)::fAsserted

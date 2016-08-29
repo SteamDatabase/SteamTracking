@@ -5,34 +5,35 @@
 		
 	</styles>
 
-	<SettingsPanel_ControllerConfigs class="SettingsSection" defaultfocus="Continents">
+	<SettingsPanel_ControllerConfigs class="SettingsSection" defaultfocus="ConfigDesktop">
     <Panel class="SettingsBottomPanel">
 		  <!-- main panel -->
 		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="VertContainer">	
 					<Label text="#SettingsControllerCfg_Intro" />
-					<Label class="PaddedLabel" text="#SettingsControllerCfg_DesktopNote" />
-					
-					<Panel class="SettingsContent">	
+
+
+					<Panel class="SettingsContent">
 						<Button id="ConfigDesktop" class="Button" selectionpos="auto" onactivate="OpenConfig( 413080 );">
 							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigDesktop" />
 						</Button>
 					</Panel>
+					<Label class="PaddedLabel" text="#SettingsControllerCfg_DesktopNote" />
 					
 					<Panel class="SettingsContent">	
 						<Button id="ConfigBigPicture" class="Button" selectionpos="auto" onactivate="OpenConfig( 413090 );">
 							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigBP" />
 						</Button>
-						<Label class="CfgComingSoon" text="#SettingsControllerCfg_ComingSoon" />
 					</Panel>
+				<Label class="PaddedLabel" text="#SettingsControllerCfg_BigPictureNote" />
 					
 					<Panel class="SettingsContent">	
-						<Button id="ConfigBigPictureBrowser" class="Button" selectionpos="auto" onactivate="OpenConfig( 413100 );">
-							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigBPBrowser" />
+						<Button id="ConfigGuideChord" class="Button" selectionpos="auto" onactivate="OpenConfig( 443510 );">
+							<Label class="LongDesc" text="#SettingsControllerCfg_ConfigGuideChord" />
 						</Button>
-						<Label class="CfgComingSoon" text="#SettingsControllerCfg_ComingSoon" />
 					</Panel>
+					<Label class="PaddedLabel" text="#SettingsControllerCfg_ChordNote" />
 										
 				</Panel>
       </Panel>

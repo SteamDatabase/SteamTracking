@@ -21,6 +21,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/data/imageloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/data/panoramavideoplayer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/mousecursor.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/steamcontroller_new.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/input/uiinput.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/../renderer/styles.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/backgroundimage.cpp

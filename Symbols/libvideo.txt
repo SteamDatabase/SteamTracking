@@ -3842,6 +3842,7 @@
  T GetMessageList()
  T GetNetErrorName(unsigned int)
  T GetPchTempTextBuffer_Harmful()
+ T GetProcessorBrand()
  T GetProcessorDetailBlob(int*)
  T GetTimelineSegment(VideoAdaptationSet_t*, int)
  T GetVideoLibData()
@@ -5385,6 +5386,7 @@
  b GetMinidumpsWritten()::MinidumpsWritten
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
+ b GetProcessorBrand()::CPUBrand
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
  b GetVideoLibData()::data

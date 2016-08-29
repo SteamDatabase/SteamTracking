@@ -2601,6 +2601,7 @@
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>
+ R typeinfo name for CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >
  R typeinfo name for CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >
  R typeinfo name for CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >
  R typeinfo name for CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >
@@ -2757,6 +2758,7 @@
  R typeinfo name for CUtlVector<CUtlDelegate<void (EVideoPlayerEvent)>, CUtlMemory<CUtlDelegate<void (EVideoPlayerEvent)> > >
  R typeinfo name for CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >
  R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::HashBucket_t, CUtlMemory<CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::HashBucket_t> >
@@ -2929,7 +2931,7 @@
  R typeinfo name for panorama::CRenderMsg<CMsgRenderTextRegion>
  R typeinfo name for panorama::CRenderMsg<CMsgRenderTexturedRect>
  R typeinfo name for panorama::CRenderMsg<CMsgRequestRenderCallback>
- R typeinfo name for panorama::CSteamGameController
+ R typeinfo name for panorama::CSteamGameControllerNew
  R typeinfo name for panorama::CStyleAnimation
  R typeinfo name for panorama::CStyleFactoryWrapper
  R typeinfo name for panorama::CStyleFile
@@ -6694,6 +6696,17 @@
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAt(int)
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, panorama::CSteamGameControllerNew::ActionSetData_t const&)
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Validate(CValidator&, char const*)
+ T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::EnsureCapacity(int)
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::FindInBucket(int, char const* const&) const
@@ -7793,6 +7806,11 @@
  T CUtlVector<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -8662,7 +8680,6 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T NormalizeLinearGradientBrushes(CMsgFillBrush*, CMsgFillBrush*)
  T NormalizeRadialGradientBrushes(CMsgFillBrush*, CMsgFillBrush*)
- T NormalizeStickValue_Cross(int, int, float)
  T OSXHelpers::BGetGPUInformation(char*, unsigned int, unsigned long long*, unsigned long long*, unsigned long long*)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
@@ -9604,7 +9621,7 @@
  T panorama::COpenGLSurface::DrawInsetShadowLayer(panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, float, float, float, float, unsigned int)
  T panorama::COpenGLSurface::DrawMouseCursor(unsigned int, Vector2D const&)
  T panorama::COpenGLSurface::DrawOuterShadowLayer(panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, bool, float, float, float, float, unsigned int)
- T panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, int, int)
+ T panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, float, float)
  T panorama::COpenGLSurface::DrawTextRegion(panorama::CRenderMsg<CMsgRenderTextRegion> const&)
  T panorama::COpenGLSurface::DrawTextRegionRange(panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, float, float, float, float, panorama::UITextOpacityMaskDataRange_t&, CMsgRenderFillBrushCollection const&)
  T panorama::COpenGLSurface::DrawTexturedQuadInternal(panorama::CLazyShaderProgram const&, unsigned int, panorama::VertexTextured_t*, float, float, float, float, float)
@@ -10012,18 +10029,21 @@
  T panorama::CSSHelpers::BSkipRightParen(char const*, char const**)
  T panorama::CSSHelpers::EatCSSIgnorables(CUtlBuffer&)
  T panorama::CSSHelpers::SkipSpaces(char const*)
- T panorama::CSteamGameController::CSteamGameController(panorama::IUIInput*)
- T panorama::CSteamGameController::GetNumGamepadsConnected() const
- T panorama::CSteamGameController::GotWindowFocus()
- T panorama::CSteamGameController::HandleDeviceAxis(int, int, panorama::GamePadCode, panorama::GamePadCode, panorama::CSteamGameController::EStickAxis)
- T panorama::CSteamGameController::PostKeyEvent(int, panorama::GamePadCode, int)
- T panorama::CSteamGameController::PulseHapticOnActiveController(ESteamControllerPad, unsigned short)
- T panorama::CSteamGameController::ReadSteamController(int, SteamControllerStateInternal_t&)
- T panorama::CSteamGameController::RunFrame()
- T panorama::CSteamGameController::TurnOffActiveController()
- T panorama::CSteamGameController::Validate(CValidator&, char const*)
- T panorama::CSteamGameController::xdevice_t::xdevice_t()
- T panorama::CSteamGameController::~CSteamGameController()
+ T panorama::CSteamGameControllerNew::BIsFingerDownAnalog(panorama::GamePadCode) const
+ T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerLeftPad() const
+ T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerRightPad() const
+ T panorama::CSteamGameControllerNew::CSteamGameControllerNew(panorama::IUIInput*)
+ T panorama::CSteamGameControllerNew::GetCurrentActionSet() const
+ T panorama::CSteamGameControllerNew::GetNumGamepadsConnected() const
+ T panorama::CSteamGameControllerNew::GotWindowFocus()
+ T panorama::CSteamGameControllerNew::InsertEmptyActionSet(char const*)
+ T panorama::CSteamGameControllerNew::PulseHapticOnActiveController(ESteamControllerPad, unsigned short)
+ T panorama::CSteamGameControllerNew::RunFrame()
+ T panorama::CSteamGameControllerNew::SetActiveActionSet(char const*)
+ T panorama::CSteamGameControllerNew::Shutdown()
+ T panorama::CSteamGameControllerNew::TurnOffActiveController()
+ T panorama::CSteamGameControllerNew::Validate(CValidator&, char const*)
+ T panorama::CSteamGameControllerNew::~CSteamGameControllerNew()
  T panorama::CStyleAnimation::InsertFrame(panorama::CStyleKeyFrame*)
  T panorama::CStyleAnimation::Validate(CValidator&, char const*)
  T panorama::CStyleAnimation::~CStyleAnimation()
@@ -11434,6 +11454,7 @@
  T panorama::CUIInputEngine::GetActiveControllerType() const
  T panorama::CUIInputEngine::GetAttachedHardwareDevices() const
  T panorama::CUIInputEngine::GetConnectGamePadPowerLevel(int)
+ T panorama::CUIInputEngine::GetCurrentActionSet() const
  T panorama::CUIInputEngine::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CUIInputEngine::GetGamePadBindForEvent(char const*, panorama::IUIPanel const*)
  T panorama::CUIInputEngine::GetHapticFeedbackPositionForInteraction()
@@ -11461,6 +11482,7 @@
  T panorama::CUIInputEngine::RemoteGamepadAttached(int)
  T panorama::CUIInputEngine::RemoteGamepadDetached(int)
  T panorama::CUIInputEngine::RunFrame()
+ T panorama::CUIInputEngine::SetActiveActionSet(char const*)
  T panorama::CUIInputEngine::SetControllerExclusiveEnabledIndex(int)
  T panorama::CUIInputEngine::SetInputCapture(panorama::IInputCapture*)
  T panorama::CUIInputEngine::SetRemoteGamepadAxis(int, int, int)
@@ -14772,7 +14794,7 @@
  b mIdentifier
  b netadrNone
  b panorama::COpenGLSurface::DrawMouseCursor(unsigned int, Vector2D const&)::fAsserted
- b panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, int, int)::fAsserted
+ b panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, float, float)::fAsserted
  b panorama::COpenGLSurface::EndFrame(panorama::CRenderMsg<CMsgEndFrame> const&)::fAsserted
  b panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePos
  b panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePosVar
@@ -15082,6 +15104,8 @@
  d TRxmlDecl
  d TRxmlTok
  d g_bCatchExceptionsInCallbacks
+ d k_analogToAction
+ d k_buttonToAction
  d panorama::CUISoundSystem::PlaySound(char const*, panorama::ESoundType, float, float, float)::s_arrSuffixes
  d panorama::CUITextLayoutPango::MarkColorRangeForMeasurement(unsigned int, unsigned int, int)::klass
  d panorama::s_EAnimationTimingFunction
@@ -15620,7 +15644,6 @@
  r protobuf_AssignDesc_uifontfile_5fformat_2eproto()::CUIFontFilePackagePB_offsets_
  r rand8
  r s_nSDLJoyButtonMapping
- r s_nSteamPadDeadZoneTable
  r s_rgCRCTable_Standard
  r s_tdefl_packed_code_size_syms_swizzle
  r select_ncolors.RGB_order
@@ -15893,7 +15916,7 @@
  t noop_upsample
  t null_convert
  t output_message
- t panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, int, int)::Identity::I(float, bool)
+ t panorama::COpenGLSurface::DrawSteamPadPointer(panorama::SteamPadPointer_t*, float, float)::Identity::I(float, bool)
  t panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::$_0::__invoke(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)
  t panorama::Create_CStylePropertyAlign()
  t panorama::Create_CStylePropertyAnimationProperties()

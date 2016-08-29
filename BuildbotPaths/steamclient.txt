@@ -78,7 +78,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udpconnection.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udphost.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udpsocket.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(vaccom.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(vrapi.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(workthreadpool.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(zip_external_unity.o)
@@ -192,7 +191,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/locallibrarycrawlerthread.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/localmusicdatabase.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/logfile.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/machimage.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/masterserverupdater.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/matchmaking.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/mediacontroller.o
@@ -275,8 +273,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userscreenshots.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/usershortcuts.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/userstats.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vac.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vacmodule_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valveelfsignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valvemachosignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/valvepesignature.o
@@ -380,7 +376,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/locallibrarycrawlerthread.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/localmusicdatabase.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/logfile.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/machimage.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/masterserverupdater.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/matchmaking.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/mediacontroller.o
@@ -463,8 +458,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userscreenshots.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/usershortcuts.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/userstats.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vac.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vacmodule_osx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valveelfsignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valvemachosignature.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/valvepesignature.o
@@ -665,9 +658,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/usershortcuts.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userstats.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/userstats.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vac.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vacmodule_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/virtualdevices_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.h
@@ -901,7 +891,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udphost.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/urlhelper.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vaccom.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/valvemachosignature.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/valvesignature.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
@@ -1400,6 +1389,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmaplru.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utliterator.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
@@ -1437,4 +1427,3 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vac2/common/machimage.cpp

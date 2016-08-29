@@ -198,6 +198,7 @@
  T GetNumberOfSpewAndLogGroups
  T GetNumberOfStackTrackingFilters
  T GetPortableSystemInformation
+ T GetProcessorBrand()
  T GetProcessorDetailBlob(int*)
  T GetSpewAndLogLevel
  T GetSpewAndLogLevelByGroupIndex
@@ -547,6 +548,7 @@
  b GetLocalHostname::rgchHostname
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
+ b GetProcessorBrand()::CPUBrand
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
  b Plat_IsSteamConsoleMode::bInited

@@ -1937,9 +1937,10 @@ DropDownMenu.DropDownMenuVisible
 	font-family: platformfont;
 	vertical-align: center;
     horizontal-align: right;
-	margin-right: 12px;
-    padding-left: 60px;
+	margin-right: 4px;
+    padding-left: 16px;
     visibility: collapse;
+    width: 80px;
 }
 
 #SelectBindingIconHeaderGA
@@ -3008,6 +3009,13 @@ ChooseBinding #mouse_forward_button
 	height: 84px;
 	//background-color: #ff000080;
 	flow-children: right;
+}
+
+#VirtualGamepad #GamepadLeftStickDirections, #GamepadRightStickDirections
+{
+    width: 0;
+    height: 0;
+	flow-children: none;
 }
 
 #VirtualGamepad #GamepadBottomRow
