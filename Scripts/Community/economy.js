@@ -2909,7 +2909,7 @@ function PopulateMarketActions( elActions, item )
 						var strInfo = '';
 						if ( transport.responseJSON.lowest_price )
 						{
-							strInfo += '起跳價格： ' + transport.responseJSON.lowest_price + '<br>'
+							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
 						}
 						else
 						{
