@@ -113,8 +113,9 @@
 {
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.3);
-	margin-top: 15px;
-	padding: 25px 15px 15px 25px;
+	margin: 15px auto;
+	max-width: 656px;
+	padding: 25px 25px 25px 25px;
 }
 
 .parental_settings_content
@@ -131,16 +132,25 @@
 
 .parental_settings_subinstructions
 {
-	font-size: 12px;
+	font-size: 13px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	color: #c6d4df;
 }
 
 .parental_settings_instructions
 {
-	font-size: 14px;
-	font-weight: normal;
-	margin-top: 4px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	color: #67c1f5;
+}
+
+.parental_settings_instructions2
+{
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 4px;
 }
 
 .parental_settings_form
@@ -172,10 +182,9 @@
 	border-radius: 3px;
 	box-shadow: 1px 1px 0 #45556c;
 	color: #fff;
-	height: 20px;
-	width: 253px;
-	height: 24px;
+	height: 26px;
 	padding-left: 5px;
+	width: 150px;
 }
 
 .parental_settings_form .feature_row input
@@ -232,7 +241,6 @@
 {
 	vertical-align: middle;
 	margin-right: 4px;
-	width: 10px;
 }
 
 .feature_row label
@@ -349,6 +357,7 @@
 {
 	margin: auto;
 	width: 100px;
+}
 
 #parental_setrecoveryemail_entries
 {
@@ -365,7 +374,7 @@
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 300px 50%;
-	height: 400px;
+	min-height: 300px;
 	position: relative;
 }
 
@@ -389,24 +398,24 @@
 
 #parental_setenablecode_entries input
 {
-	background-color:#4d4b49;
+
 }
 
 #parental_setcomplete_box
 {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/familybg.png' );
-	background-repeat: no-repeat;
-	background-position: 50% 80px;
+
 }
 
 #parental_setcomplete_box .parental_settings_subinstructions
 {
-	margin-top: 0px;
+
 }
 
-#parental_button_instructions
-{
-	margin-top: 120px;
+.parental_settings_followsteps {
+	margin-top:6px;
+	margin-bottom:24px;
+	font-size:12px;
+	color: #c6d4df;
 }
 
 #parental_button_instructions .parental_settings_header
@@ -432,7 +441,7 @@
 
 #parental_communications_instruction #email
 {
-	color: darkolivegreen;
+	color: #67c1f5;
 	font-weight: bold;
 }
 
@@ -449,9 +458,19 @@
 
 .parental_settings_current_status
 {
-	color: #67c1f5;
-	font-size: 14px;
 	margin-bottom: 20px;
+}
+
+.parental_status_title1
+{
+	font-size: 16px;
+}
+
+
+.parental_status_title2
+{
+	color: #67c1f5;
+	font-size: 16px;
 }
 
 .account .page_header_ctn {
@@ -462,3 +481,6 @@
 	padding-top: 24px;
 }
 
+.inner_rule {
+	border-bottom: 1px solid #3a6e8b;
+}

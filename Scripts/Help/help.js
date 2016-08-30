@@ -2053,6 +2053,29 @@ HelpRequestPage = {
 			{
 				ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
 			}
+			else if ( data.requires_validation )
+			{
+				var $DialogContents = $J( '#help_request_email_verification' ).clone();
+				if ( data.validation_failed )
+				{
+					$DialogContents.find( '#validate_email_error_contents' ).text( 'Whoops!  Sorry that code wasn\'t quite right, please try again!' );
+					$J( 'input[name="validation_code"]' ).val( '' );
+				}
+
+				if ( data.validation_id )
+					$J( 'input[name="validation_id"]' ).val( data.validation_id );
+
+				var $Dialog = ShowConfirmDialog( 'Contact Steam Support', $DialogContents.show(), 'Send' )
+				.done( function( innerData )
+				{
+					$J( 'input[name="validation_code"]' ).val( $DialogContents.find( 'input[name="validation_code"]' ).val() );
+					HelpRequestPage.SubmitCreateHelpRequestForm( form );
+				})
+				.fail( function( xhr )
+				{
+					$J( 'input[name="validation_id"]' ).val( '' );
+				});
+			}
 			else
 			{
 				HelpWizard.LoadPageFromHash( false, data.next_page, true );

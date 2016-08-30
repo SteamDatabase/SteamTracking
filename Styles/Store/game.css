@@ -4043,6 +4043,7 @@ div.agegate_text_container > h2 {
 	overflow: auto;
 	height: auto !important;
 	width: 100%;
+	position: relative; /* for ds_flag display */
 
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */

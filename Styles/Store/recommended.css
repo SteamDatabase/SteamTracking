@@ -1564,7 +1564,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background-color: #23384b;
 	/*
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#23384b), color-stop(95%,#374655));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23384b', endColorstr='#374655',GradientType=0 );background: -moz-linear-gradient( top, #23384b 5%, #374655 95%);background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: -o-linear-gradient( top, #23384b 5%, #374655 95%);background: -ms-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
-
+}
+.user_reviews_summary_bar.new {
+	margin-bottom: 2px;
 }
 .user_reviews_summary_bar .summary_section {
 	display: inline-block;
@@ -1590,8 +1592,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	height: 20px;
 	line-height: 20px;
 	cursor: pointer;
-	color: #537ca6;
-	font-size: 10px;
+	color: #66c0f4;
+	font-size: 12px;
 	padding-right: 12px;
 	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpiDK5Z5sjAwFAJxAFrmiO/MUBBSO3yDCBlwAQkjgLxdyDeDBTkQpKsAuJuxv///4ME2ICc1UDMA1IIxEVA7Ag08S4j0ApmIEcOiJ9CFRkBsQMQPwZicRYgYQmVcAXiUCAWA+JXULEXTEBjjgAZxUC8G4jVkCRBIBfsBqjDooBULxBfhjo6FKj5F1wBkqIQII4ASYLEAAIMAPrDNy1EYNLFAAAAAElFTkSuQmCC' ) right center no-repeat;
 	cursor: pointer;
@@ -1723,6 +1725,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	float: right;
 	margin-right: 5px;
 	margin-top: 4px;
+	opacity: 0.5;
 }
 
 .review_box .shortcol .content {
@@ -1897,6 +1900,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	float: right;
 	margin-right: 5px;
 	margin-top: 12px;
+	opacity: 0.5;
 }
 
 
@@ -2145,6 +2149,48 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	padding-right: 10px;
 	float: left;
 	padding-left: 10px;
+}
+
+.user_reviews_filter_options
+{
+	font-size: 12px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: #2a475e;
+}
+
+.user_reviews_filter_section {
+	float: left;
+	margin-right: 20px;
+	min-width: 150px;
+}
+.user_reviews_filter_section .title {
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-bottom: 5px;
+	color: #7193a6;
+}
+
+.user_reviews_filter_section input[type="checkbox"] {
+	vertical-align: bottom;
+	margin-right: 5px;
+}
+
+.user_reviews_filter_score {
+	display: none;
+	border-top: 1px solid #67c1f5;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+.user_reviews_filter_score.visible {
+	display: block;
+}
+.user_reviews_filter_score .title {
+	float: left;
+	margin-right: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #67c1f5;
 }
 
 .user_reviews_tab

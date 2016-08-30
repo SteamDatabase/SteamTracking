@@ -2440,6 +2440,14 @@ CSegmentLoader.prototype.ScheduleNextDownload = function( nAtTime )
 		return;
 	}
 
+	// if the VOD buffers are close to running out of space, wait to sechedule download of the next segment
+	var nMaxBufferAvailable = ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_MS;
+	if ( unAmountBuffered > nMaxBufferAvailable )
+	{
+		this.m_schWaitForBuffer = setTimeout( function () { _loader.ScheduleNextDownload() }, CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS );
+		return;
+	}
+
 	// if there are downloaded segments not currently in the sourcebuffer,
 	// try adding those instead of downloading new ones
 	if ( this.m_bufSegments.length > 0 )

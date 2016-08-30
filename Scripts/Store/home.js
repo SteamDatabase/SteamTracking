@@ -103,6 +103,7 @@ GHomepage = {
 	{
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
+			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -289,6 +290,9 @@ GHomepage = {
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
 			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
+
+		if ( GHomepage.bShuffleInMainLegacy )
+			rgMainCaps = v_shuffle( rgMainCaps );
 
 		for ( var i = 0; i < rgMainCaps.length; i++ )
 		{

@@ -60,7 +60,9 @@ input[type=submit]:hover {
 	color: #ffffff;
 }
 
-input[type=text] {
+input[type=text],
+input[type=date],
+input[type=time] {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
@@ -1148,6 +1150,11 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 }
 
+.purchase_totals .refund_value
+{
+	text-align: right;
+}
+
 .refund_value {
 	color: #67c1f5;
 }
@@ -1690,7 +1697,15 @@ a.guide_row {
 .help_microtxn_info.price_strikeout .refund_value
 {
 	text-decoration: line-through;
+	color: #9cacba;	
 }
+
+.help_purchase_package.price_strikeout .refund_value span,
+.help_microtxn_info.price_strikeout .refund_value span
+{
+	color: #67c1f5;	
+}
+
 
 .help_microtxn_info .warning
 {
@@ -1822,6 +1837,12 @@ a.guide_row {
 .purchase_totals {
 	color: #82909a;
 	line-height: 14px;
+}
+
+.purchase_totals .line_break
+{
+	border-top: 1px solid #8faec7;
+	padding-top: 3px;
 }
 
 .purchase_totals td {
@@ -3369,6 +3390,16 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 
+.help_request_page .ticket_msg_category
+{
+	padding: 0px 20px 0px 20px;
+}
+
+.help_request_page .ticket_msg_category .ticket_category_header
+{
+	color: #9eb3cc;
+}
+
 .help_request_message.from_steam {
 	background: #253040;
 	color: #9eb3cc;
@@ -3743,4 +3774,8 @@ ul.attached_file_list {
 .btn_link:hover {
 	text-decoration: none;
 	color: #66c0f4;
+}
+
+#validate_email_error_contents {
+	color: red;
 }

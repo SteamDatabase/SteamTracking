@@ -383,7 +383,7 @@ function UserReviewShowMore( id, context )
 	$J('#ReviewContent'+context+id).parent().addClass('expanded');
 }
 
-function LoadMoreReviews( appid, startOffset, dayRange, context, language )
+function LoadMoreReviews( appid, startOffset, dayRange, context )
 {
 	$J( "#ViewAllReviews" + context ).remove();
 	$J( "#LoadMoreReviews" + context ).remove();
@@ -391,14 +391,34 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 
 	var container = $J( "#Reviews_" + context );
 
+	var reviewTypes = $J('input:checkbox[name="review_types[]"]:checked').map(function() { return $J(this).val() }).get().join(",");
+	var purchaseTypes = $J('input:checkbox[name="purchase_types[]"]:checked').map(function() { return $J(this).val() }).get().join(",");
+	var language = $J('input[name="review_language"]:checked').val();
+
 	$J.get( 'http://store.steampowered.com//appreviews/' + appid,{
 		'start_offset' : startOffset,
 		'day_range' : dayRange,
 		'filter' : context,
-		'language' : language
+		'language' : language,
+		'review_types[]' : reviewTypes,
+		'purchase_types[]' : purchaseTypes
 	}).done( function( data ) {
 		if ( data.success == 1 )
 		{
+			if ( startOffset == 0 )
+			{
+				var filteredReviewScore = $J( "#user_reviews_filter_score" );
+				if ( data.review_score )
+				{
+					filteredReviewScore.addClass( "visible" );
+					filteredReviewScore.html( data.review_score );
+					BindStoreTooltip( $J('#user_reviews_filter_score [data-store-tooltip]' ) );
+				}
+				else
+				{
+					filteredReviewScore.removeClass( "visible" );
+				}
+			}
 			$J( "#LoadingMoreReviews" + context ).remove();
 
 			// remove duplicates
@@ -424,7 +444,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 			// all dupes, request more
 			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 )
 			{
-				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, context, language );
+				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, context );
 			}
 			else
 			{
@@ -435,42 +455,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 	} );
 }
 
-function ToggleReviewSummaryDetails( appid, languages )
-{
-	var $parent = $J( "#Reviewssummary0" );
-	var $details = $J( "#ReviewSummaryDetails" );
-	var $detailsBtn = $J( "#ReviewSummaryDetailsBtn" );
-
-	if ( $parent.hasClass( "summary_details_visible" ) )
-	{
-		$parent.removeClass( "summary_details_visible" );
-		$detailsBtn.html( 'More details' );
-	}
-	else
-	{
-		$parent.addClass( "summary_details_visible" );
-		$detailsBtn.html( 'Fewer details' );
-
-		if ( !$details.hasClass( "retrieving_languages" ) )
-		{
-			$details.addClass("retrieving_languages");
-			$J.get(
-				'https://store.steampowered.com//appreviewlanguages/' + appid,
-				{
-					languages : languages
-				}
-			).done(function (data) {
-				if (data.success == 1 ) {
-					$details.addClass("retrieved_languages");
-					$J( '#ReviewSummaryDetailsLanguages' ).html( data.html );
-					BindStoreTooltip( $J('#ReviewSummaryDetailsLanguages [data-store-tooltip]' ) );
-				}
-			});
-		}
-	}
-}
-
-function SelectReviews( appid, context, reviewDayRange, language )
+function SelectReviews( appid, context, reviewDayRange, forceClear )
 {
 	$J( "#ReviewsTab_summary" ).removeClass( "active" );
 	$J( "#ReviewsTab_all" ).removeClass( "active" );
@@ -489,10 +474,22 @@ function SelectReviews( appid, context, reviewDayRange, language )
 	$J( "#Reviews_" + context ).show();
 
 	var container = $J( "#Reviews_" + context );
+	if ( forceClear )
+	{
+		container.empty()
+	}
 	if ( container.children().length == 0 )
 	{
-		LoadMoreReviews( appid, 0, reviewDayRange, context, language );
+		LoadMoreReviews( appid, 0, reviewDayRange, context );
 	}
+}
+
+function ShowFilteredReviews()
+{
+	var appid = $J( "#review_appid" ).val();
+	var context = $J( "#review_context" ).val();
+	var defaultDayRange = $J( "#review_default_day_range" ).val();
+	SelectReviews( appid, context, defaultDayRange, true );
 }
 
 function CollapseLongReviews()
