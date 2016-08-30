@@ -10363,7 +10363,7 @@
 		"mvm_robits"
 		{
 			"item_class"	"craft_item"
-			"item_type_name"	"#TF_Robits_Type"
+			"item_type_name"	"#TF_RobotPart_Type"
 			"show_in_armory"	"0"
 			"image_inventory"	"backpack/crafting/mvm_robits_01"
 			"image_inventory_size_w"		"128"
@@ -13268,6 +13268,11 @@
 				"mod sentry killed revenge"
 				{
 					"attribute_class"	"sentry_killed_revenge"
+					"value"	"1"
+				}
+				"lose revenge crits on death DISPLAY ONLY"
+				{
+					"attribute_class"	"lose_revenge_crits_on_death_DISPLAY_ONLY"
 					"value"	"1"
 				}
 				"crit mod disabled"
@@ -19718,7 +19723,7 @@
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name" "#TF_Wearable_Hat"
+			"item_type_name" "#TF_Wearable_Mask"
 			"item_name"	"#TF_MedicMask"
 			"item_description"	"#TF_MedicMask_Desc"
 			"item_slot"	"misc"
@@ -23058,6 +23063,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_extinguish"			"1"
 			}
 			"item_logname"	"sydney_sleeper"
 			"item_iconname"	"sydney_sleeper"
@@ -38347,6 +38353,10 @@
 			}
 			"visuals"
 			{
+				"player_bodygroups"
+				{
+					"headphones"	"1"
+				}
 				"styles"
 				{
 					"0"
@@ -43085,10 +43095,10 @@
 			"max_ilevel"	"10"
 			"show_in_armory"	"1"
 			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_pep_pistol/c_pep_pistol"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_pep_pistol/c_pep_pistol.mdl"
+			"model_player"	"models/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol.mdl"
 			"capabilities"
 			{
 				"can_collect" "1"
@@ -58421,7 +58431,7 @@
 			"item_name"		"#TF_robo_medic_physician_mask"
 			"item_description"		"#TF_robo_medic_physician_mask_Desc"
 			"equip_region"		"beard"
-			"item_type_name"		"#TF_Wearable_GenPractitioner"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_physician_mask/robo_medic_physician_mask"
 			"model_player"		"models/workshop/player/items/medic/robo_medic_physician_mask/robo_medic_physician_mask.mdl"
 			"used_by_classes"
@@ -93262,12 +93272,51 @@
 			"name"	"Florida LAN Medal 2016"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
-			"item_name"			"#TF_TournamentMedal_Florida_LAN"
-			"item_description"	"#TF_TournamentMedal_2016"
+			"item_name"			"#TF_TournamentMedal_Florida_LAN_2016"
+			"item_description"	"#TF_TournamentMedal_Florida_LAN_2016_Desc"
 			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan/florida_lan"
 			"model_player_per_class"
 			{
 				"basename"	"models/workshop/player/items/all_class/florida_lan/florida_lan_%s.mdl"
+			}
+		}
+ 		"9231"
+		{	
+			"name"	"Jaunty Camper 2016"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"				"#TF_Medal_TipOfTheHatsTier1"
+			"item_description"		"#TF_Medal_TipOfTheHats2016_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/toth2016_t1/toth2016_t1"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/toth2016_t1/toth2016_t1_%s.mdl"
+			}
+		}
+  		"9232"
+		{	
+			"name"	"Jaunty Benefactor 2016"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"				"#TF_Medal_TipOfTheHatsTier2"
+			"item_description"		"#TF_Medal_TipOfTheHats2016_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/toth2016_t2/toth2016_t2"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/toth2016_t2/toth2016_t2_%s.mdl"
+			}
+		}
+  		"9233"
+		{
+			"name"	"Jaunty Trailblazer 2016"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"				"#TF_Medal_TipOfTheHatsTier3"
+			"item_description"		"#TF_Medal_TipOfTheHats2016_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/toth2016_t3/toth2016_t3"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/toth2016_t3/toth2016_t3_%s.mdl"
 			}
 		}
 
@@ -102432,7 +102481,7 @@
 			"craft_class"			""
 			"show_in_armory"		"1"
 			"item_quality"			"unique"
-			"item_type_name"	"#TF_Item_GlitchedCircuitBoard_Type"
+			"item_type_name"	"#TF_CircuitBoard_Type"
 			"item_name"	"#TF_Item_GlitchedCircuitBoard"
 			"item_description"	"#TF_Item_GlitchedCircuitBoard_Desc"
 			"image_inventory"	"backpack/crafting/glitched_circuit_board"
@@ -115995,6 +116044,16 @@
 			"attribute_class"	"energy_buff_dmg_taken_multiplier"
 			"description_format"	"value_is_percentage"
 			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"799"
+		{
+			"name"	"lose revenge crits on death DISPLAY ONLY"
+			"attribute_class"	"lose_revenge_crits_on_death_DISPLAY_ONLY"
+			"description_string"	"#Attrib_LoseRevengeCritsOnDeath"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
