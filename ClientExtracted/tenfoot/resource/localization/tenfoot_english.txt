@@ -2036,6 +2036,8 @@
 	"Library_Details_ControllerAction_SteamMusic_VolDown"	"STEAM MUSIC VOLUME DOWN"
 	"Library_Details_ControllerAction_SteamMusic_VolMute"	"STEAM MUSIC MUTE"
 	"Library_Details_ControllerAction_Controller_Off"	"TURN OFF CONTROLLER"
+	"Library_Details_ControllerAction_BigPicture_Minimize" "MINIMIZE BIG PICTURE"
+	"Library_Details_ControllerAction_BigPicture_Quit" "QUIT BIG PICTURE"
 	"Library_Details_ControllerAction_Host_Off"		"SHUTDOWN HOST PC"
 	"Library_Details_ControllerAction_Host_Suspend"	"SUSPEND HOST PC"
 	"Library_Details_ControllerAction_Host_Restart"	"RESTART HOST PC"

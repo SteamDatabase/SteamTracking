@@ -13,6 +13,8 @@
 			<Panel id="SelectPowerOptionPanel" class="SelectPowerOptionContainer">
 				<DropDown id="PowerOptionDropdown" class="ControllerActionOptionDropdown">
 					<Label id="controller_poweroff" text="#Library_Details_ControllerAction_Controller_Off" />
+					<Label id="bigpicture_minimize" text="#Library_Details_ControllerAction_Bigpicture_Minimize" />
+					<Label id="bigpicture_quit" text="#Library_Details_ControllerAction_Bigpicture_Quit" />
 					<Label id="host_suspend" text="#Library_Details_ControllerAction_Host_Suspend" />
 					<Label id="host_poweroff" text="#Library_Details_ControllerAction_Host_Off" />
 					<Label id="host_restart" text="#Library_Details_ControllerAction_Host_Restart" />	
