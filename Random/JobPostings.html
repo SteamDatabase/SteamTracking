@@ -4,9 +4,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Valve</title>
 	<link rel="shortcut icon" href="../images/favicon.ico" />
-	<script type="text/javascript" src="http://www.valvesoftware.com/javascript/prototype-1.6.0.2.js"></script>
+	
+
+<script type="text/javascript" src="http://www.valvesoftware.com/javascript/prototype-1.6.0.2.js"></script>
 <script type="text/javascript" src="http://www.valvesoftware.com/javascript/scriptaculous/scriptaculous.js?load=effects"></script>
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/valvesoftware.js"></script>	<link rel="stylesheet" type="text/css" href="../main_v2.css" />
+<script type="text/javascript" src="http://www.valvesoftware.com/javascript/valvesoftware.js"></script>
+<script type="text/javascript" src="http://www.valvesoftware.com/javascript/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">$J = jQuery.noConflict();
+if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "<scr" + "ipt type=\"text\/javascript\" src=\"javascript\/json2.js\"><\/script>" ); };
+</script>
+	<link rel="stylesheet" type="text/css" href="../main_v2.css" />
 
 	<script type="text/javascript">
 		function ShowApplication( reqname, reqid, postreq )
@@ -228,7 +235,7 @@
 	
 	<div class='content_div' id='copy_intro_p'>
 		<h3>We’re always growing.</h3>
-		<p>Most people think of Valve as a company that makes video games&#151;<br/>and we are.  But we also built the software that powers those games and the platform that lets millions of fans play, share, modify, and build communities around more than 1,800 titles.  That makes us a full-spectrum entertainment studio.  As such, our search for talent has taken us beyond the game industry and into the fields of architecture, economics, psychology, and industrial design.  We’re not just growing.  We’re diversifying.  Where to next?  You tell us.  We’re after talented people with original ideas and the passion to realize them.</p>
+		<p>Most people think of Valve as a company that makes video games&#151;<br/>and we are.  But we also built the software that powers those games and the platform that lets millions of fans play, share, modify, and build communities around more than 5,000 titles.  That makes us a full-spectrum entertainment studio.  As such, our search for talent has taken us beyond the game industry and into the fields of architecture, economics, psychology, and industrial design.  We’re not just growing.  We’re diversifying.  Where to next?  You tell us.  We’re after talented people with original ideas and the passion to realize them.</p>
 	    <p/>
 	</div>
 	
@@ -423,7 +430,7 @@
 				<div id="emailFailed"></div>
 				<div id="fix_errors"></div>
 				<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
-				<form id="email_form" name="email_form" action="email_handler_new.php?posted=1" method="post" enctype="multipart/form-data" target="form_iframe">
+				<form id="email_form" name="email_form" action="email_handler_new.php?posted=1" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="process" id="process" value=1 />
 					<input type="hidden" name="reqid" id="reqid" />
 
@@ -455,32 +462,30 @@
 				</div>
 			</div>
 					
-			<iframe id="form_iframe" sandbox="allow-same-origin allow-scripts" name="form_iframe"  style="display:none; height: 600px; width: 400px; background: green; position: absolute; top: 200px; left: -420px;"></iframe>
-
 			<script>
+
 				// js for form submission
+				$J('#email_form').submit( function(event) {
+					event.preventDefault();
 
-				// check on submit, wait for iframe to load then check contents
-				var iframe = document.getElementById("form_iframe");
-				var submitButton = document.getElementById("submit");
-				Event.observe(submitButton, 'click', function(){
-					Event.observe(iframe, 'load', function() {
-						var result = '';
-						var errors = '';
+					var form = $J(event.target);
+					var fd = new FormData( form[0] );
 
-						// clear old errors
-						if ( document.getElementById('error_container') != "" )
-						{
-							document.getElementById('error_container').innerHTML = "";
-						}
-						document.getElementById('fix_errors').innerHTML = "";
+					var oParams = {
+						type: form.attr( 'method' ),
+						url: form.attr( 'action' )
+					};
 
-						temp = iframe.contentDocument || iframe.contentWindow.document;
-						result = temp.getElementById('response').innerHTML;
-						errors = temp.getElementById('errors').innerHTML;
+					oParams['data'] = fd;
+					oParams['processData'] = false;
+					oParams['contentType'] = false;
 
-
-						if ( result == 1 )
+					$J.ajax(
+						oParams
+					).done( function(response)
+					{
+						var json = response;
+						if ( json.success )
 						{
 							// hide form
 							$('email_form_container').fade( {duration: .3, to: 0});
@@ -488,13 +493,8 @@
 							// show success message!
 							$('email_success_message').appear( {duration: .3, to: 1});
 
-							// clear fields & possible
+							// clear fields
 							$('email_form').reset();
-						}
-						else if ( result == 2 )
-						{
-							// append error message
-							document.getElementById('emailFailed').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailFailed'>*Email failed.  Please try again later.</div>";
 						}
 						else
 						{
@@ -502,14 +502,35 @@
 							document.getElementById('emailFailed').innerHTML = "";
 							document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>*Please make sure all fields are filled out correctly.</div>";
 
-							if ( errors )
-							{
-								document.getElementById('error_container').innerHTML = errors;
-							}
-						}
 
-					});
-				});
+							var errorContainer = document.getElementById("error_container");
+							while (errorContainer.firstChild) {
+								errorContainer.removeChild(errorContainer.firstChild);
+							}
+							json.rgErrors.forEach( function( x ) {
+								var div = document.createElement( 'div' );
+								div.className = 'error_message';
+								div.innerHTML = x;
+								errorContainer.appendChild( div );
+							} );
+						}
+					} )
+					.fail( function( response )
+					{
+						document.getElementById('emailFailed').innerHTML = "";
+						document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>We were unable to submit your resume at this time. Please try again later.</div>";
+
+						var errorContainer = document.getElementById("error_container");
+						while (errorContainer.firstChild) {
+							errorContainer.removeChild(errorContainer.firstChild);
+						}
+						var div = document.createElement( 'div' );
+						div.className = 'error_message';
+						div.innerHTML = response.status + " " + response.statusText;
+						errorContainer.appendChild( div );
+
+					} );
+				} );
 
 			</script>
 
