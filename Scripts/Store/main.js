@@ -1020,20 +1020,43 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVers
 			$J(elemTerm).focus();
 	});
 
-	// handle make our delayed request
+	// how long we wait after the first keypress after a search or page load
+	var k_nStartSearchTimeoutMS = 350;
+
+	// how long we extend the wait after each keypress.  We always time out at 3x the base search timeout ms
+	var k_nSearchKeypressTimeoutExtensionMS = 125;
+
 	var sLastVal = $Term.val();
 	var nTermTimer = 0;
+	var tsScheduledTimer = 0;
+	var tsLastSearch = 0;
 	$Term.on( 'keyup paste', function( event ) {
 		var sNewVal = $Term.val();
 		if ( sNewVal != sLastVal )
 		{
-			sLastVal = sNewVal;
-			if ( nTermTimer )
-				window.clearTimeout( nTermTimer );
+			var tsChange = $J.now();
+			var msDelayBeforeTimeout = k_nStartSearchTimeoutMS;
+			if ( !tsLastSearch )
+				tsLastSearch = tsChange;
 
-			nTermTimer = window.setTimeout( function() {
-				SearchTimeout( $Term, $Term.val(), $SuggestionsCtn, $Suggestions );
-			}, 200);
+			if ( nTermTimer && tsScheduledTimer - tsChange < k_nSearchKeypressTimeoutExtensionMS && tsChange - tsLastSearch < 3 * k_nStartSearchTimeoutMS )
+			{
+				// we have one scheduled within 50ms, just bump it out a little
+				msDelayBeforeTimeout = k_nSearchKeypressTimeoutExtensionMS;
+				window.clearTimeout( nTermTimer );
+				nTermTimer = 0;
+			}
+
+			if ( !nTermTimer )
+			{
+				tsScheduledTimer = $J.now() + msDelayBeforeTimeout;
+				nTermTimer = window.setTimeout( function() {
+					nTermTimer = 0;
+					tsLastSearch = 0;
+					sLastVal = $Term.val();
+					SearchTimeout( $Term, v_trim( sLastVal ), $SuggestionsCtn, $Suggestions );
+				}, msDelayBeforeTimeout);
+			}
 		}
 	});
 
