@@ -464,9 +464,18 @@ if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.writ
 					
 			<script>
 
+				var submitInProgress = false;
 				// js for form submission
 				$J('#email_form').submit( function(event) {
 					event.preventDefault();
+
+					if ( submitInProgress )
+					{
+						console.log( "Submit in progress" );
+						return;
+					}
+
+					submitInProgress = true;
 
 					var form = $J(event.target);
 					var fd = new FormData( form[0] );
@@ -529,6 +538,10 @@ if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.writ
 						div.innerHTML = response.status + " " + response.statusText;
 						errorContainer.appendChild( div );
 
+					} )
+					.always( function( response )
+					{
+						submitInProgress = false;
 					} );
 				} );
 
