@@ -4061,12 +4061,11 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_DeviceAuth_StoppedSharedGame_Text" "Steam terminated \"%game%\" because %owner% is currently using this game library."
 
 "Steam_Settings_Family_Sharing_Title" "Family Library Sharing"
-"Steam_Settings_Family_Sharing_ManageSharing" "Manage other computers..."
-"Steam_Settings_Family_Sharing_StateAuthorized" "Family Library Sharing enables you to share your Steam library with others. Once authorized, Steam users on shared computers may access, download and play your available library of Steam games.\n\nThis computer is currently authorized to share your games. Selected accounts may use your available game library while logged in here."
-"Steam_Settings_Family_Sharing_StateNotAuthorized" "Family Library Sharing enables you to share your Steam library with others. Once authorized, Steam users on shared computers may access, download and play your library of Steam games.\n\nYou may authorize up to ten computers to allow selected accounts to use your Steam library while you are not playing."
-"Steam_Settings_Family_Sharing_StateNoSteamGuard" "To access Family Library Sharing, first enable Steam Guard account security in Account settings."
-"Steam_Settings_Family_Sharing_AuthorizeDevice" "Authorize this computer"
-"Steam_Settings_Family_Sharing_DeauthorizeDevice" "Deauthorize this computer"
+"Steam_Settings_Family_Sharing_ManageSharing" "Manage other computers"
+"Steam_Settings_Family_Sharing_Info" "Family Library Sharing enables you to share your Steam library with others on this computer. Once authorized, Steam users on shared computers may access, download and play your available library of Steam games while you are not playing."
+"Steam_Settings_Family_Sharing_AuthorizedDevice" "Authorize Library Sharing on this computer"
+"Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "You may authorize up to ten computers"
+
 "Steam_Settings_Family_Sharing_AuthorizeError" "Failed to authorized computer (%reason%)"
 "Steam_Settings_Family_Sharing_DeauthorizeError" "Failed to deauthorized computer (%reason%)"
 "Steam_Settings_Family_Sharing_UpdateBorrowers" "Update borrowers"
@@ -4125,7 +4124,7 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_ParentalControl_Tip_Locked"	"You are in Family View. Select to change."
 "SteamUI_ParentalControl_Tip_Unlocked"	"You are not in Family View. Select to change."
 
-"Steam_Parental_Manage"					"Manage Family View..."
+"Steam_Parental_Manage"					"Manage Family View"
 
 "steam_inbox_asyncgame"			"1 new turn waiting"
 "steam_inbox_asyncgames"		"%count% new turns waiting"

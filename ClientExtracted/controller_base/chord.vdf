@@ -39,113 +39,6 @@
 		"mode"		"dpad"
 		"inputs"
 		{
-			"dpad_north"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_up"
-						}
-					}
-				}
-			}
-			"dpad_south"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_down"
-						}
-					}
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_right"
-						}
-					}
-				}
-			}
-			"dpad_west"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button dpad_left"
-						}
-					}
-				}
-			}
-			"edge"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press P, test1"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"2"
-		"mode"		"mouse_joystick"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
-						}
-					}
-				}
-			}
-		}
-	}
-	"group"
-	{
-		"id"		"3"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_LEFT"
-						}
-					}
-				}
-			}
 		}
 	}
 	"group"
@@ -174,7 +67,7 @@
 		}
 		"settings"
 		{
-			"output_trigger"		"1"
+			"output_trigger"		"0"
 		}
 	}
 	"group"
@@ -203,36 +96,7 @@
 		}
 		"settings"
 		{
-			"output_trigger"		"2"
-		}
-	}
-	"group"
-	{
-		"id"		"6"
-		"mode"		"joystick_move"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"output_joystick"		"1"
+			"output_trigger"		"0"
 		}
 	}
 	"group"
@@ -465,11 +329,7 @@
 		{
 			"7"		"switch active"
 			"0"		"button_diamond active"
-			"1"		"left_trackpad inactive"
-			"2"		"right_trackpad inactive"
-			"6"		"right_trackpad inactive"
 			"8"		"right_trackpad active"
-			"3"		"joystick inactive"
 			"9"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"

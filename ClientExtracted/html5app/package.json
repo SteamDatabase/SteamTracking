@@ -10,5 +10,6 @@
         "toast_x_inset": 0,
         "toast_y_inset": 0
     },
-    "keybinds" : "keybinds.cfg"
+    "keybinds": "keybinds.cfg",
+    "icon":  "html5app\\html5app_steam_video.bmp"
 }
