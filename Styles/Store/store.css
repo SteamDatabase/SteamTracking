@@ -838,8 +838,8 @@ a#store_search_link img {
 
 .store_horizontal_autoslider_ctn {
 	overflow: hidden;
-	margin-bottom: 1px;
-	padding-bottom: 1px;
+	margin-bottom: 2px;
+	/* DO NOT set padding on this element! It will bork the horizontal scrollbar calculations. Use margin instead. */
 }
 
 .store_horizontal_minislider_ctn {
@@ -2522,6 +2522,112 @@ a.cluster_capsule:hover {
 .main_cluster_ctn .home_btn.home_customize_btn.active {
 	box-shadow: none;
 }
+
+
+/*
+ * Generic capsules
+ */
+.store_capsule {
+	display: inline-block;
+	position: relative;
+	vertical-align: top; /* Because browsers cannot be trusted to align things. */
+
+	width: 202px; /* Base width. Override with your own selector later */
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(35,61,79,1)), color-stop(95%,rgba(42,72,94,1)));background: -moz-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: -webkit-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: -o-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: -ms-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: linear-gradient( to right, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);}
+
+.store_capsule:hover {
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(56,107,135,1)), color-stop(95%,rgba(68,130,163,1)));background: -moz-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: -o-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: -ms-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+	text-decoration: none;
+}
+
+.store_capsule > img { /* 	Select the immediate decendent so we only target the capsule image, not contents further down
+							the tree. If your image is being affected, wrap it in a div! */
+	width: 100%;
+	height: auto;
+	vertical-align: top; /* This fixes the browser aligning the capsule above the base line (which adds an undefined amount of "margin" below the image */
+}
+
+.store_capsule .title {
+	color: #c7d5e0;
+	font-size: 13px;
+	padding: 3px;
+}
+
+.store_capsule .discount_block {
+	margin: 0;
+	text-align: right;
+	padding: 5px;
+	height: 16px;
+	font-size: 12px;
+}
+
+.store_capsule .discount_block > .discount_prices {
+	display: inline-block;
+	padding: 0 3px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+/* Add more padding when we have no discount */
+.store_capsule .discount_block.no_discount .discount_final_price {
+	padding: 0 6px;
+}
+
+.store_capsule .discount_block .discount_final_price {
+	color: #66c0f4;
+}
+
+.store_capsule .discount_block .discount_original_price {
+	color: #577180;
+}
+
+.store_capsule .discount_block .discount_pct {
+	font-size: 11px;
+}
+
+
+.store_capsule .ds_flag { /* May need further adjustment for your particular capsule style */
+	left: 0px;
+}
+
+.store_capsule.ds_flagged:not(.ds_wishlist) > img {
+	opacity: 0.3;
+}
+
+.store_capsule:not(:last-child) {
+	margin-right: 6px; /* Again, a default. Adjust to fit your container. */
+}
+
+.store_capsule_container_scrolling {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.store_capsule_frame {
+	padding: 13px;
+	margin: 0 -14px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(22,33,46,1.0)), color-stop(95%,rgba(22,33,46,0)));background: -moz-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: -o-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: -ms-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
+	border-bottom: none; /* Fixes a weird artifact where the bottom border is 0,0,0,0.1 or something? */
+	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
+}
+
+.store_capsule_frame .vspacer {
+	width: 0px;
+	border-left: 1px solid;
+	border-image: linear-gradient(to bottom, rgba(46,57,70,1.0) 5%, rgba(46,57,70,0) 95% );
+	padding: 0 20px;
+}
+
+body.v6 .store_capsule_frame > h2, body.v6 .store_capsule_frame > h2 > a {
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0 0 10px;
+	font-size: 17px;
+	letter-spacing: 3px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive div.main_cluster_content {

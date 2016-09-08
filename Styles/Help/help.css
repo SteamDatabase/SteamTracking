@@ -199,6 +199,26 @@ input.custom_form_text
 	font-size: 12px;
 }
 
+.dselect_container.day_picker
+{
+	float: left;
+	width: 64px;
+}
+
+.dselect_container.month_picker
+{
+	float: left;
+	padding-left: 6px;
+	width: 120px;
+}
+
+.dselect_container.year_picker
+{
+	float: left;
+	padding-left: 6px;
+	width: 72px;
+}
+
 .dselect_container {
 	position: relative;
 
@@ -1666,6 +1686,15 @@ a.guide_row {
 	margin: 30px 0px;
 }
 
+.help_itempurchase_detail_box {
+	background-color: #1c2837;
+	padding: 20px 8px 8px;
+	line-height: 20px;
+	color: #82909a;
+	max-width: 924px;
+	min-height: 150px;
+}
+
 .help_purchase_content {
 	white-space: nowrap;
 	overflow: hidden;
@@ -1706,6 +1735,9 @@ a.guide_row {
 	color: #67c1f5;	
 }
 
+.help_microtxn_info{
+	min-height: 150px;
+}
 
 .help_microtxn_info .warning
 {
@@ -2233,6 +2265,11 @@ a.guide_row {
 	padding-bottom: 16px;
 	font-size: 16px;
 	color: #5eafde;
+}
+
+.help_subsection_header {
+	font-size: 13px;
+	color: #c6d4df;
 }
 
 .help_section_mediumwhite_header {
@@ -3612,19 +3649,19 @@ ul.attached_file_list {
 }
 
 .market_image {
-    background: #071215;
-
+  background: rgba(0, 0, 0, 0.2);
+ /*
     -webkit-box-shadow: 0 0 14px #030303 inset;
     -moz-box-shadow: 0 0 14px #030303 inset;
     box-shadow: 0 0 14px #030303 inset;
 
     border-radius: 3px;
     -moz-border-radius: 3px;
-
+	*/
     width: 150px;
     height: 150px;
     padding: 0 40px;
-    margin-right: 15px;
+    margin: 0 15px 0 6px;
     float: left;
     text-align: center;
 }
@@ -3637,8 +3674,7 @@ ul.attached_file_list {
 }
 
 .item_name {
-
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .vac_ban_header {
@@ -3778,4 +3814,102 @@ ul.attached_file_list {
 
 #validate_email_error_contents {
 	color: red;
+}
+
+#help_request_email_verification p {
+	padding-bottom: 8px;
+	font-size: 13px;
+	color: #c6d4df;
+}
+
+.help_request_email_verification_note {
+	font-size: 12px;
+	padding-top: 20px;
+	font-family: Arial;
+}
+
+.help_request_email_validation_hightlight {
+	color: #5eafde;
+}
+
+.abuse_report_textarea {
+	width: 460px;
+	height: 70px;
+	resize: none;
+
+}
+
+.scam_form{
+	display:inline-block;
+	position:relative;
+
+}
+
+.scam_report_button{
+	position: absolute;
+	bottom:2px;
+	right:2px;
+}
+
+.abuse_report_profile > div {
+	display: inline-block;
+	padding: 15px;
+}
+.scam_report_trade.odd {
+	background-color: #1a1a1a;
+}
+.scam_report_trade.even {
+	background-color: #1f1f1f;
+}
+
+.scam_report_trade_separator {
+	height: 2px;
+	line-height: 2px;
+	background-color: #000000;
+	color: #959595;
+	padding: 0px 8px;
+	font-size: 12px;
+
+	margin-bottom: 3px;
+	border-bottom: 1px solid #4D4D4E;
+}
+
+.scam_report_trade {
+	position: relative;
+	background-color: #1f1f1f;
+	padding-left: 0;
+	padding-top: 19px;
+	padding-bottom: 7px;
+	min-height: 36px;
+	margin-bottom: 2px;
+}
+
+.scam_report_date {
+	float: left;
+	width: 116px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 11px;
+	color: #8a8a8a;
+	max-width: 20%;
+	margin-right: 2%;
+}
+
+.scam_report_content{
+	overflow: hidden;
+}
+
+.scam_trade_container {
+	max-width: 80%;
+}
+
+.item_image{
+	display:inline-block;
+}
+
+.item_description{
+	position: absolute;
+	display:inline-block;
+	padding-top: 50px;
+	padding-left: 20px;
 }

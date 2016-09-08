@@ -391,17 +391,20 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 
 	var container = $J( "#Reviews_" + context );
 
-	var reviewTypes = $J('input:checkbox[name="review_types[]"]:checked').map(function() { return $J(this).val() }).get().join(",");
-	var purchaseTypes = $J('input:checkbox[name="purchase_types[]"]:checked').map(function() { return $J(this).val() }).get().join(",");
+	var reviewType = $J('input[name="review_type"]:checked').val();
+	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	var language = $J('input[name="review_language"]:checked').val();
+
+	var filteredReviewScore = $J( "#user_reviews_filter_score" );
+	filteredReviewScore.removeClass( "visible" );
 
 	$J.get( 'http://store.steampowered.com//appreviews/' + appid,{
 		'start_offset' : startOffset,
 		'day_range' : dayRange,
 		'filter' : context,
 		'language' : language,
-		'review_types[]' : reviewTypes,
-		'purchase_types[]' : purchaseTypes
+		'review_type' : reviewType,
+		'purchase_type' : purchaseType
 	}).done( function( data ) {
 		if ( data.success == 1 )
 		{

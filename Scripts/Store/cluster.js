@@ -324,7 +324,9 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 		var rgData =  oItem.appid ? GStoreItemData.rgAppData[ oItem.appid] : GStoreItemData.rgPackageData[ oItem.packageid ];
 
 		var strStatus = '';
-		if ( oItem.recommended )
+		if ( oItem.recommended_by_curator )
+			strStatus = 'Recommended By Your Curators';
+		else if ( oItem.recommended )
 			strStatus = 'Recommended For You';
 		else if ( oItem.status_string )
 			strStatus = oItem.status_string;

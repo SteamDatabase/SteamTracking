@@ -14,23 +14,24 @@ function BMediaSourceExtensionsSupported()
 }
 
 
-var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId, bEMECapable, strVideoTitle )
+var CVideoWatch = function( options )
 {
-	this.m_eClientType = eClientType;
+	this.m_eClientType = options.clientType;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
-	this.m_nAppId = appId;
-	this.m_strVideoId = strVideoId;
-	this.m_strVideoTitle = strVideoTitle;
+	this.m_nAppId = options.appID;
+	this.m_strVideoId = options.videoID;
+	this.m_strVideoTitle = options.videoTitle;
 	this.m_DASHPlayerStats = null;
-	this.m_rtRestartTime = rtRestartTime;
-	this.m_strLanguage = strLanguage;
+	this.m_rtRestartTime = options.startAt;
+	this.m_strLanguage = options.language;
 	this.m_nVideoRestarts = 0;
-	this.m_nViewerSteamID = viewerSteamID;
+	this.m_nViewerSteamID = options.steamID;
 	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
 	this.m_bHDCPErrorReported = false;
-	this.m_bEMECapableHost = bEMECapable;
+	this.m_bEMECapableHost = options.emeCapable;
 	this.m_bEnabledAudioDubTrack = false;
 	this.n_LastPlaybackTime = 0;
+	this.m_bSupportsVideoSuggest = true;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -63,7 +64,7 @@ CVideoWatch.prototype.ShowVideoError = function( strError )
 		$J( '#page_loading_text' ).html( strError );
 		$J( '#page_loading_text' ).addClass( 'error' );
 		$J( '#loading_content' ).addClass( 'hide_throbber' );
-		$J( '#loading_content' ).css( 'z-index', '2' );
+		$J( '#loading_content' ).css( 'z-index', '10' );
 	}
 }
 
@@ -145,6 +146,7 @@ CVideoWatch.prototype.Start = function()
 	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
 	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
+	this.m_playerUI.SetUseSDLFullscreen( this.m_eClientType != CVideoWatch.k_InBrowser );
    	this.m_playerUI.Init();
 
 	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
@@ -162,12 +164,39 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
 	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { } );
 	$J( this.m_elVideoPlayer ).on( 'togglestats.VideoWatchEvents', function() { _watch.ToggleStats(); } );
+	$J( this.m_elVideoPlayer ).on( 'videosuggest.VideoWatchEvents', function( event, oData ) { _watch.OnVideoSuggestClick( oData ); } );
 
+	this.EnforceAppID();
 	this.GetVideoDetails();
+}
+
+CVideoWatch.prototype.EnforceAppID = function()
+{
+	if ( this.m_eClientType != CVideoWatch.k_InBrowser )
+	{
+		try
+		{
+			var nAppID = SteamAPI.SteamUtils.GetAppID();
+			if ( nAppID != this.m_nAppId )
+			{
+				SteamAPI.SteamUtils.SetAppID( this.m_nAppId );
+				this.m_bSupportsVideoSuggest = true;
+			}
+		}
+		catch( e )
+		{
+			// temp while client is in beta, use the API check to determine
+			// if we can even show suggestions
+			this.m_bSupportsVideoSuggest = false;
+		}
+	}
+
+	document.body.style.cursor = 'default';
 }
 
 CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 {
+	$J( '#loading_content' ).css( 'z-index', '-1' );
 	$J( '#page_contents' ).removeClass( 'loading_video' );
 	$J( '#page_contents' ).addClass( 'show_player' );
 
@@ -277,7 +306,7 @@ CVideoWatch.prototype.OnLogEventToServer = function( strEventName, strEventDesc 
 CVideoWatch.prototype.GetVideoDetails = function()
 {
 	$J( '#page_contents' ).addClass( 'loading_video' );
-	$J( '#loading_content' ).css( 'z-index', '0' );
+	$J( '#loading_content' ).css( 'z-index', '10' );
 
 	var _watch = this;
 
@@ -345,6 +374,8 @@ CVideoWatch.prototype.LoadVideoMPD = function( url )
 
 
 	this.m_player.PlayMPD( url, bUseMpdRelativePathForSegments );
+
+	this.GetSuggestedVideo();
 }
 
 CVideoWatch.prototype.SetResumeTimeForAppID = function()
@@ -459,6 +490,45 @@ CVideoWatch.prototype.SetVideoTrack = function()
 		this.m_playerUI.SetVideoTrackSelectedInUI( strVideoTrackID );
 		this.m_playerUI.SwitchVideoTrackSelectedInPlayer( strVideoTrackID );
 		this.m_playerUI.SaveVideoTrackSelected();
+	}
+}
+
+CVideoWatch.prototype.GetSuggestedVideo = function()
+{
+	if ( !this.m_bSupportsVideoSuggest )
+		return;
+
+	var _watch = this;
+	$J.ajax( {
+		url: 'https://store.steampowered.com/video/suggest/' + _watch.m_nAppId,
+		type: 'GET'
+	})
+		.done( function( data )
+		{
+			if ( data.length != 0 )
+			{
+				var strSuggestTitle = data.owns_app ? 'Next' : 'Next (Not Owned)';
+				var strGroupTitle = data.grouptitle;
+				var strVideoTitle = data.videotitle;
+				var oData = { 'appid': data.appid };
+				_watch.m_playerUI.SetVideoSuggestData( strSuggestTitle, strGroupTitle, strVideoTitle, oData );
+			}
+		})
+		.fail( function()
+		{
+
+		});
+}
+
+CVideoWatch.prototype.OnVideoSuggestClick = function( oData )
+{
+	if ( oData.appid.length > 0 )
+	{
+		this.ShowVideoError('');
+		document.body.style.cursor = 'wait';
+		var nAppID = parseInt( oData.appid );
+		this.OnLogEventToServer( 'Video Suggest Click', nAppID );
+		window.location = 'http://store.steampowered.com/video/watch/' + nAppID;
 	}
 }
 

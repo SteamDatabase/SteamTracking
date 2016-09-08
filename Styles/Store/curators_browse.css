@@ -14,6 +14,11 @@
 
 		}
 
+/* recommended */
+.home_smallcaps.medium .store_capsule {
+	width: 230px;
+}
+
 /* tabs */
 .tabbar {
 	margin-bottom: 10px;
@@ -296,8 +301,6 @@ a.steam_curator_row:hover
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	margin-right: 4px;
 	border: solid 1px rgba( 0, 0, 0, 0 );
-	width: 34px;
-	height: 34px;
 }
 .steam_curator_for_app:hover {
 	border: solid 1px #67C1F5;

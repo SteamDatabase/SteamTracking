@@ -1872,7 +1872,7 @@ function InitHorizontalAutoSliders()
 			$Slider.append( $J('<div/>', {'class': 'handle'} ) )
 		);
 		$Wrapper.after( $SliderCtn );
-		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].scrollHeight - 1 ); };
+		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].clientHeight ); };
 
 		$Wrapper.on('v_contentschanged.AutoSlider', function() {
 			fnFixHeight();
@@ -1892,7 +1892,11 @@ function InitHorizontalAutoSliders()
 					$TryChild = $TryChild.children().first();
 					if ( $TryChild.width() && $TryChild.outerWidth() < $Scroll.width() )
 					{
-						return $TryChild.outerWidth();
+						// optional param determines whether or not we include margin
+						// As a note, if you use selective margin make sure you're using
+						// :not(:last-child) as it'll peek the first and you want to ensure
+						// that element has the expected margin.
+						return $TryChild.outerWidth( true );
 					}
 				} while ( $TryChild.length );
 
@@ -1950,5 +1954,121 @@ function InitHorizontalAutoSliders()
 
 		window.setTimeout( fnShowHideButtons, 1 );
 	});
+}
+
+// Common glue logic for a carousel of some kind
+var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb )
+{
+	this.$elContainer = $elContainer;
+	this.$elThumbs = $J('.carousel_thumbs', $elContainer).children();
+	this.$elItems = $J('.carousel_items', $elContainer).children();
+	this.nItems = this.$elThumbs.length;
+	this.nSpeed = nSpeed;
+	this.fnOnFocus = fnOnFocus;
+	this.fnOnBlur = fnOnBlur;
+	this.fnMouseOverThumb = fnMouseOverThumb;
+
+	this.nIndex = 0;
+	this.fnOnFocus( this.nIndex );
+
+	var instance = this;
+
+	this.fnMouseOver = function(){
+		clearInterval( instance.timerAdvance );
+	};
+
+	this.fnMouseOut = function(){
+		instance.timerAdvance = setInterval( function() { instance.Advance(); }, nSpeed * 1000 );
+	};
+
+	this.fnMouseOut();
+
+	$elContainer.bind('mouseover', function() { instance.fnMouseOver() } );
+	$elContainer.bind('mouseout', function() { instance.fnMouseOut() }  );
+
+	// Only bind a mouseover thumb event if we have one.
+	if( fnMouseOverThumb ) {
+
+		this.$elThumbs.each(function (i, j)
+		{
+
+			$J(j).bind('mouseover', (function( index, ele ) {
+				return function() {
+					instance.fnMouseOverThumb( index, ele );
+				};}(i, j) )
+			);
+		});
+	}
+
+
+};
+
+// Advances the carousel by one. Optionally pass in a specific index to advance to.
+CGenericCarousel.prototype.Advance = function( nNewIndex )
+{
+	if( nNewIndex !== undefined )
+	{
+		if( this.nIndex == nNewIndex )
+			return
+
+		this.fnOnBlur( this.nIndex );
+		this.nIndex = nNewIndex;
+		this.fnOnFocus( this.nIndex );
+	}
+	else
+	{
+		this.fnOnBlur(this.nIndex);
+		this.nIndex = ( this.nIndex + 1 ) % this.nItems;
+		this.fnOnFocus(this.nIndex);
+	}
+}
+
+// Scrolls a target element into view. You can specify the number of parents to traverse if your carousel has an
+// abnormally deep structure
+CGenericCarousel.prototype.ScrollIntoView = function( elTarget, nParents )
+{
+	var nScrollDepth = ( nParents > 0 ) ? nParents : 1;
+	var elContainer = elTarget;
+	while( nScrollDepth-- > 0 )
+		elContainer = elContainer.parentNode;
+
+	var nScrollSpeed = 800;
+
+	var nScrollLeft = elTarget.offsetLeft - elContainer.scrollLeft;
+	var nScrollRight = ( elContainer.scrollLeft + elContainer.offsetWidth ) - ( elTarget.offsetLeft + elTarget.scrollWidth ) ;
+
+	if( nScrollLeft < 0 )
+	{
+		$J( elContainer ).stop().animate({scrollLeft: elTarget.offsetLeft}, nScrollSpeed);
+	}
+	else if( nScrollRight < 0 )
+	{
+		$J( elContainer ).stop().animate({scrollLeft: elTarget.offsetLeft + elTarget.scrollWidth - elContainer.offsetWidth }, nScrollSpeed);
+	}
+}
+
+// Carousel which adds the 'focus' class to the active element. Can be used for fading carousels
+function CreateFadingCarousel( $elContainer, nSpeed )
+{
+
+	var fnOnFocus = function(  nIndex )
+	{
+		this.$elThumbs.removeClass('focus');
+		this.$elItems.removeClass('focus');
+
+		$J( this.$elThumbs[nIndex] ).addClass('focus');
+		this.ScrollIntoView( this.$elThumbs[nIndex] );
+		$J( this.$elItems[nIndex] ).addClass('focus');
+	}
+
+	var fnMouseOverThumb = function( index, element )
+	{
+		this.Advance(index);
+	};
+
+	var fnOnBlur = function(){};
+
+	return new CGenericCarousel( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb );
+
 }
 

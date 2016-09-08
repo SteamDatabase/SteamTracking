@@ -362,13 +362,46 @@ HelpWizard = {
 	m_sSearchResultDisplayed: null,
 	m_nLastKeyPressTimeMS: null,
 	m_sHashStringParse: null,
+	m_sSearchForMethod: null,
 
-	SearchBoxKeyUp: function( e ) {
+	UserSearchKeyUp: function( e, appid )
+	{
+		var time_now_ms = $J.now();
+		this.m_nLastKeyPressTimeMS = time_now_ms;
+		if ( e.which == 13 )
+			HelpWizard.DoUserSearch( time_now_ms, appid );	// ENTER key triggers immediately
+		else
+			setTimeout( function() { HelpWizard.DoUserSearch( time_now_ms, appid ); }, 400 );
+
+	},
+	DoUserSearch: function( time_last_keyup, appid )
+    	{
+    		if ( time_last_keyup == this.m_nLastKeyPressTimeMS )
+    		{
+    			var text = $J( '#help_search_support_input' ).val();
+    			$J.ajax({
+                			type: "GET",
+                			url: "https://help.steampowered.com/wizard/ScamUserSearch/",
+                			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+                				text: text,
+                				appid: appid
+                			} )
+                		}).done( function( data ) {
+                			$J('#user_search_results').html( data.html );
+                		}).fail( function() {
+                			$J('#user_search_results').html( '' );
+                		}).always( function() {
+
+                		} );
+    		}
+    	},
+	SearchBoxKeyUp: function( e, sMethod ) {
 		this.MoveUpSearchBox();
 
 		// set a timer
 		var time_now_ms = $J.now();
 		this.m_nLastKeyPressTimeMS = time_now_ms;
+		this.m_sSearchForMethod = sMethod;
 
 		if ( e.which == 13 )
 			this.CheckForSearchStart( time_now_ms );	// ENTER key triggers immediately
@@ -493,6 +526,7 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxSearchResults/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				text: text,
+				method: this.m_sSearchForMethod,
 				l: g_strLanguage
 			} )
 		}).done( function( data ) {
@@ -1234,7 +1268,7 @@ HelpWizard = {
 		});
 	},
 
-	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, bLostEmail, bLostPhone, bNoSelfPOP ) {
+	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, unIssueID, bLostEmail, bLostPhone, bNoSelfPOP ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
@@ -1242,6 +1276,7 @@ HelpWizard = {
 				s: strSessionID,
 				code: strCode,
 				nav: strNav,
+				issueid: unIssueID,
 				lostemail: bLostEmail ? 1 : 0,
 				lostphone: bLostPhone ? 1 : 0,
 				noselfpop: bNoSelfPOP ? 1 : 0,
@@ -1346,6 +1381,43 @@ HelpWizard = {
 			if ( data.html )
 				$J('#global_header').replaceWith( data.html );
 		});
+	},
+	SubmitScamReportForm: function( form )
+	{
+		var $Form = $J( form );
+		$Form.find( 'button' ).addClass( 'btn_disabled' ).prop( 'disabled', true );
+
+		$J.ajax({
+			type: $Form.attr( 'method' ),
+			url: $Form.attr( 'action' ),
+			data: $Form.serialize()
+		})
+		.fail( function( xhr )
+		{
+			ShowAlertDialog( 'Steam Support', 'There was an error submitting the form.' );
+			$Form.find( 'button' ).removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		})
+		.done( function( data )
+		{
+			ShowAlertDialog( 'Steam Support', 'Thank you for your report. You will be notified if any action is taken against this user.' )
+			.done( function()
+			{
+				HelpWizard.LoadPageFromHash( false, data.redirect );
+			}
+			);
+		} );
+	},
+	CheckScamReportLength: function( event, element )
+	{
+		if ( $J(element).val().length > 5 )
+		{
+			$J('.scam_report_button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		}
+		else
+		{
+			$J('.scam_report_button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+		}
+
 	}
 };
 
@@ -1953,6 +2025,14 @@ ChangePasswordWizard = {
 
 HelpRequestPage = {
 
+	ShowCreateHelpRequestFormOnPageLoad: function()
+	{
+		$J( document ).ready( function() {
+			$J( '#cancel_create_help_request' ).remove();
+			HelpRequestPage.ShowCreateHelpRequestForm();
+		});
+	},
+
 	ShowCreateHelpRequestForm: function()
 	{
 		if ( !HelpWizard.m_steamid && !$J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
@@ -2056,6 +2136,7 @@ HelpRequestPage = {
 			else if ( data.requires_validation )
 			{
 				var $DialogContents = $J( '#help_request_email_verification' ).clone();
+				$DialogContents.find( '#validate_email_instructions' ).append( '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#create_help_request_email_address' ).val() + '</span>' );
 				if ( data.validation_failed )
 				{
 					$DialogContents.find( '#validate_email_error_contents' ).text( 'Whoops!  Sorry that code wasn\'t quite right, please try again!' );
@@ -2075,6 +2156,7 @@ HelpRequestPage = {
 				{
 					$J( 'input[name="validation_id"]' ).val( '' );
 				});
+				$Dialog.SetDismissOnBackgroundClick(false);
 			}
 			else
 			{

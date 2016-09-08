@@ -127,6 +127,8 @@ a.gutter_item:hover {
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
 
 	padding-bottom: 22px;
+	z-index: 1;
+	position: relative;
 }
 
 

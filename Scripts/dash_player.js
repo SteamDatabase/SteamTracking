@@ -703,7 +703,7 @@ CDASHPlayer.prototype.OnMediaSourceEnded = function( e )
 CDASHPlayer.prototype.OnMediaSourceClose = function( e )
 {
 		PlayerLog( 'Media source closed' );
-	this.CloseWithError( 'playbackerror', 'Media Source Closed Unexpectedly' );
+	this.Close();
 }
 
 CDASHPlayer.prototype.SetVODResumeTime = function( nTime )
@@ -3375,6 +3375,10 @@ function CDASHPlayerUI( player, eUIMode )
 
 	this.m_fPlaybackRate = 1.0;
 	this.m_bEndOfVODShown = false;
+
+	this.m_elVideoSuggest = null;
+	this.m_oVideoSuggestData = {};
+	this.m_bUseSDLFullScreen = false;
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
@@ -3387,6 +3391,7 @@ CDASHPlayerUI.SKIP_LEFT_PAD_SECS = 60;
 CDASHPlayerUI.VOLUME_STEP_SIZE = 0.025;
 CDASHPlayerUI.TENFOOT_KEYDOWN_DELAY = 200;
 CDASHPlayerUI.TENFOOT_UI_FADE_MS = 100;
+CDASHPlayerUI.DESKTOP_UI_FADE_MS = 200;
 
 CDASHPlayerUI.eUIModeDesktop = 0;
 CDASHPlayerUI.eUIModeTenFoot = 1;
@@ -3428,9 +3433,10 @@ CDASHPlayerUI.STOP_INDEX = 2;
 CDASHPlayerUI.PLAY_PAUSE_INDEX = 3;
 CDASHPlayerUI.SKIP_FORWARD_INDEX = 4;
 CDASHPlayerUI.PROGRESS_BAR_INDEX = 11;
-CDASHPlayerUI.CLOSED_CAPTION_INDEX = 21;
-CDASHPlayerUI.SETTINGS_INDEX = 22;
-CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 23;
+CDASHPlayerUI.NEXT_VIDEO_INDEX = 21;
+CDASHPlayerUI.CLOSED_CAPTION_INDEX = 22;
+CDASHPlayerUI.SETTINGS_INDEX = 23;
+CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 24;
 CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX = 31;
 CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX = 35;
 CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX = 41;
@@ -3481,6 +3487,9 @@ CDASHPlayerUI.prototype.Init = function()
 	$J( '.progress_bar_container', _overlay ).on( 'mouseleave', function(e) { _ui.OnProgressLeave( e, this ); });
 	$J( '.skip_back', _overlay ).on( 'click', function(e) { _ui.OnSkipTime( -CDASHPlayerUI.SKIP_SHORT_TIME_SECS ); });
 	$J( '.skip_fwd', _overlay ).on( 'click', function(e) { _ui.OnSkipTime( CDASHPlayerUI.SKIP_SHORT_TIME_SECS ); });
+
+	$J( '.next_video', _overlay ).on( 'mouseenter', function(e) { _ui.ShowVideoSuggestion( true ) });
+	$J( '.next_video', _overlay ).on( 'mouseleave', function(e) { _ui.ShowVideoSuggestion( false ) });
 
 	this.m_elSettingsPanel = $J( '#' + this.m_strStylePrefix + 'settings_panel_wrapper' );
 	this.m_elContainer.append( this.m_elSettingsPanel );
@@ -3542,6 +3551,12 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 	{
 		this.m_elVideoTitle = $J( '#dash_video_title_banner' );
 		this.m_elContainer.append( this.m_elVideoTitle );
+	}
+
+	if ( !this.BInTenFoot() && !this.m_elVideoSuggest )
+	{
+		this.m_elVideoSuggest = $J( '#dash_video_suggest' );
+		this.m_elContainer.append( this.m_elVideoSuggest );
 	}
 
 	if ( !this.BInTenFoot() && !this.m_elBigPlayPauseIndicator )
@@ -3656,7 +3671,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 		$J( '#settings_done' ).on( 'click', function ()
 		{
-			_ui.m_elSettingsPanel.hide();
+			_ui.m_elSettingsPanel.fadeOut( CDASHPlayerUI.DESKTOP_UI_FADE_MS );
 			_ui.SaveAudioTrackSelected();
 			_ui.SaveVideoTrackSelected();
 			_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
@@ -4186,7 +4201,7 @@ CDASHPlayerUI.prototype.Hide = function( nTime )
 	{
 		anonHideMainUI();
 	}
-	else if ( !this.m_player.m_elVideoPlayer.paused )
+	else if ( this.BCanHideMenu() )
 	{
 		this.m_timeoutHide = setTimeout( function() { anonHideMainUI(); }, runTime );
 	}
@@ -4199,6 +4214,11 @@ CDASHPlayerUI.prototype.Hide = function( nTime )
 		_ui.m_elLiveResSelectorPanel.fadeOut(100);
 		_ui.OnProgressLeave();
 	}
+}
+
+CDASHPlayerUI.prototype.BCanHideMenu = function()
+{
+	return !this.m_player.m_elVideoPlayer.paused && !this.BTenFootVideoSuggestionVisible();
 }
 
 CDASHPlayerUI.prototype.OnMouseMovePlayer = function()
@@ -4248,18 +4268,11 @@ CDASHPlayerUI.prototype.GetTimelineData = function()
 	return rgRet;
 }
 
-CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
+CDASHPlayerUI.prototype.ShowMainUIOnVODEnd = function()
 {
-	// buffering should show/hide no matter if the UI is on screen
-	this.UpdateBufferingProgress();
-
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
 	var rgData = this.GetTimelineData();
 
-	var nProgressPct = (( elVideoPlayer.currentTime - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
-	var nLoadedPct = (( rgData.nBufferedEnd - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
-
-	// check for end of VOD playback and show UI if within the last second
 	if ( !this.m_player.BIsLiveContent() && !this.m_bEndOfVODShown )
 	{
 		if ( elVideoPlayer.currentTime >= ( rgData.nTimeEnd - rgData.nTimeStart ) - 1 )
@@ -4269,61 +4282,28 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 				this.m_bHidden = false;
 				clearTimeout( this.m_timeoutHide );
 				$J( this.m_elContainer ).addClass( 'dash_show_player_ui' );
-				this.SwitchElementFocus( CDASHPlayerUI.STOP_INDEX );
+
+				if ( this.BInTenFoot() )
+				{
+					if ( this.BTenFootOptionButtonVisible( '.next_video' ) )
+					{
+						this.SwitchElementFocus( CDASHPlayerUI.NEXT_VIDEO_INDEX );
+						this.ShowVideoSuggestion( true );
+					}
+					else
+					{
+						this.SwitchElementFocus( CDASHPlayerUI.STOP_INDEX );
+					}
+				}
+
 				this.m_bEndOfVODShown = true;
 			}
 		}
 	}
+}
 
-	if ( this.m_bHidden )
-		return;
-
-	//PlayerLog( 'bstart: ' + nBufferedStart + ', bend: ' + nBufferedEnd + ', tstart: ' + nTimeStart + ', tend: ' + nTimeEnd + ', progpct: ' + nProgressPct + ', loadpct: ' + nLoadedPct );
-
-	if ( this.m_player.BIsLiveContent() )
-	{
-		$J( '.live_button' ).show();
-
-		if ( this.m_bPlayingLiveEdge )
-		{
-			$J( this.m_elContainer ).addClass( 'dash_live_edge' );
-			nProgressPct = nLoadedPct;
-		}
-		else
-		{
-			$J( this.m_elContainer ).removeClass( 'dash_live_edge' );
-		}
-	}
-	else
-	{
-		$J( '.live_button' ).hide();
-	}
-
-	//PlayerLog( 'bstart: ' + nBufferedStart + ', bend: ' + nBufferedEnd + ', tstart: ' + nTimeStart + ', tend: ' + nTimeEnd + ', progpct: ' + nProgressPct + ', loadpct: ' + nLoadedPct );
-
-	$J( '.progress_bar', this.m_elOverlay ).stop().css( {'width': nProgressPct + '%'}, 200 );
-	$J( '.progress_bar_background', this.m_elOverlay ).stop().css({'width': nLoadedPct + '%'}, 200);
-
-	var strCurrentTime = SecondsToTime( elVideoPlayer.currentTime );
-	var strTotalTime = SecondsToTime( rgData.nTimeEnd - rgData.nTimeStart );
-
-	if ( this.m_player.BIsLiveContent() )
-	{
-		$J('.right_time', this.m_elOverlay).text( strCurrentTime );
-	}
-	else
-	{
-		if ( this.BInTenFoot() )
-		{
-			$J('.left_time', this.m_elOverlay).text( strCurrentTime );
-			$J('.right_time', this.m_elOverlay).text( strTotalTime );
-		}
-		else
-		{
-			$J( '.right_time', this.m_elOverlay ).text( strCurrentTime + " / " + strTotalTime );
-		}
-	}
-
+CDASHPlayerUI.prototype.UpdateQualityDetailsInUI = function()
+{
 	// let the user know what resolution they are in now
 	if ( !this.BInTenFoot() )
 	{
@@ -4367,7 +4347,7 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 		}
 
 		if ( this.m_player.m_nPlaybackHeight != 0 )
-			repVideoQualityLabel.text( this.m_player.m_nPlaybackHeight + "p" + strChannelInfo );
+			repVideoQualityLabel.text( this.m_player.m_nPlaybackHeight + 'p' + strChannelInfo );
 	}
 
 	if ( !this.BInTenFoot() )
@@ -4383,6 +4363,70 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 			$J( '.video_quality_label' ).removeClass( 'changing' );
 		}
 	}
+}
+
+CDASHPlayerUI.prototype.UpdateCurrentTimeProgressInUI = function()
+{
+	var elVideoPlayer = this.m_player.m_elVideoPlayer;
+	var rgData = this.GetTimelineData();
+
+	var nProgressPct = (( elVideoPlayer.currentTime - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
+	var nLoadedPct = (( rgData.nBufferedEnd - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
+
+	if ( this.m_player.BIsLiveContent() )
+	{
+		$J( '.live_button' ).show();
+
+		if ( this.m_bPlayingLiveEdge )
+		{
+			$J( this.m_elContainer ).addClass( 'dash_live_edge' );
+			nProgressPct = nLoadedPct;
+		}
+		else
+		{
+			$J( this.m_elContainer ).removeClass( 'dash_live_edge' );
+		}
+	}
+	else
+	{
+		$J( '.live_button' ).hide();
+	}
+
+	$J( '.progress_bar', this.m_elOverlay ).stop().css( { 'width': nProgressPct + '%' }, 200 );
+	$J( '.progress_bar_background', this.m_elOverlay ).stop().css( { 'width': nLoadedPct + '%' }, 200 );
+
+	var strCurrentTime = SecondsToTime( elVideoPlayer.currentTime );
+	var strTotalTime = SecondsToTime( rgData.nTimeEnd - rgData.nTimeStart );
+
+	if ( this.m_player.BIsLiveContent() )
+	{
+		$J( '.right_time', this.m_elOverlay ).text( strCurrentTime );
+	}
+	else
+	{
+		if ( this.BInTenFoot() )
+		{
+			$J( '.left_time', this.m_elOverlay ).text( strCurrentTime );
+			$J( '.right_time', this.m_elOverlay ).text( strTotalTime );
+		}
+		else
+		{
+			$J( '.right_time', this.m_elOverlay ).text( strCurrentTime + " / " + strTotalTime );
+		}
+	}
+}
+
+CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
+{
+	// buffering should show/hide no matter if the UI is on screen
+	this.UpdateBufferingProgress();
+	this.ShowMainUIOnVODEnd();
+
+	if ( this.m_bHidden )
+		return;
+
+	this.UpdateCurrentTimeProgressInUI();
+	this.UpdateQualityDetailsInUI();
 }
 
 CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
@@ -4413,13 +4457,6 @@ CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
 			}
 		}
 	}
-}
-
-CDASHPlayerUI.prototype.SetVideoTitle = function( strTitle )
-{
-	$J( '#dash_video_title_banner' ).attr( 'title', strTitle );
-	$J( '#dash_video_title_banner' ).text( strTitle );
-
 }
 
 CDASHPlayerUI.prototype.JumpToLive = function()
@@ -4737,6 +4774,9 @@ CDASHPlayerUI.prototype.OnKeyDown = function( e )
 			case 39:	// right arrow - skip forward
 				$J( '.skip_fwd' ).click();
 				break;
+			case 34: 	// page down
+				$J( '.next_video' ).click();
+				break;
 			default:
 				bHandled = false;
 				break;
@@ -4934,6 +4974,10 @@ CDASHPlayerUI.prototype.OnPressButtonA = function ()
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 				break;
 
+			case CDASHPlayerUI.NEXT_VIDEO_INDEX:
+				$J( '.next_video' ).click();
+				break;
+
 			default:
 				$J( "div[data-index='" + this.m_nFocusedUIElementIndex + "']" ).click();
 				break;
@@ -5022,7 +5066,7 @@ CDASHPlayerUI.prototype.ShowSettingsPanel = function()
 		{
 			this.LoadAudioTrackSelected();
 			this.LoadVideoTrackSelected();
-			this.m_elSettingsPanel.show();
+			this.m_elSettingsPanel.fadeIn( CDASHPlayerUI.DESKTOP_UI_FADE_MS );
 			this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelSettings;
 		}
 	}
@@ -5030,7 +5074,7 @@ CDASHPlayerUI.prototype.ShowSettingsPanel = function()
 
 CDASHPlayerUI.prototype.CloseSettingsPanelTenFoot = function( bRestoreElementFocus, bSaveChanges )
 {
-	this.m_elSettingsPanel.fadeOut(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
+	this.m_elSettingsPanel.fadeOut( CDASHPlayerUI.TENFOOT_UI_FADE_MS );
 	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 
 	if ( bRestoreElementFocus )
@@ -5093,7 +5137,7 @@ CDASHPlayerUI.prototype.CloseCaptionsPanelTenFoot = function( bRestoreElementFoc
 		this.LoadClosedCaptionOptions();
 	}
 
-	this.m_elClosedCaptionsPanel.fadeOut(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
+	this.m_elClosedCaptionsPanel.fadeOut( CDASHPlayerUI.TENFOOT_UI_FADE_MS );
 	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 
 	if ( bRestoreElementFocus )
@@ -5140,6 +5184,59 @@ CDASHPlayerUI.prototype.ShowMainPanelUI = function()
 	return false;
 }
 
+CDASHPlayerUI.prototype.SetTenFootOptionButtonVisible = function( elButton, bVisible )
+{
+	if ( !this.BInTenFoot() )
+		return;
+	
+	if ( bVisible )
+		$J( elButton ).css( 'visibility', 'visible' );
+	else
+		$J( elButton ).css( 'visibility', 'hidden' );
+}
+
+CDASHPlayerUI.prototype.BTenFootOptionButtonVisible = function( elButton )
+{
+	if ( this.BInTenFoot() )
+		return ( ( $J( elButton ).css( 'visibility' ) != 'hidden' ) );
+	else
+		return false;
+}
+
+CDASHPlayerUI.prototype.FindNextEnabledOptionButton = function( nButtonIndex, bGoRight )
+{
+	if ( !this.BInTenFoot() )
+		return;
+
+	var rgButtons = [ '.next_video', '.customize_captions', '.settings_icon', '.volume_icon' ];
+	if ( bGoRight )
+	{
+		for ( var i = nButtonIndex - CDASHPlayerUI.NEXT_VIDEO_INDEX; i < rgButtons.length; i++ )
+		{
+			if ( this.BTenFootOptionButtonVisible( rgButtons[ i ] ) )
+			{
+				return nButtonIndex;
+			}
+			else
+				nButtonIndex++;
+		}
+	}
+	else
+	{
+		for ( var i = nButtonIndex - CDASHPlayerUI.NEXT_VIDEO_INDEX; i >= 0; i-- )
+		{
+			if ( this.BTenFootOptionButtonVisible( rgButtons[ i ] ) )
+			{
+				return nButtonIndex;
+			}
+			else
+				nButtonIndex--;
+		}
+	}
+
+	return nButtonIndex;
+}
+
 CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 {
 	if ( !this.BInTenFoot() )
@@ -5148,9 +5245,6 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 	// handle switch through the map of UI elements
 	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelMain )
 	{
-		if ( this.ShowMainPanelUI() )
-			return;
-
 		// remove the previous "focus" state
 		$J( "div[data-index='" + this.m_nFocusedUIElementIndex + "']" ).removeClass( 'tenfoot_focus' );
 
@@ -5159,11 +5253,10 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 			this.HideVolumeBar();
 		else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
 			this.OnProgressLeave();
+		else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.NEXT_VIDEO_INDEX )
+			this.ShowVideoSuggestion( false );
 
-		// handle captions not being there
-		var nTopRowIndex = CDASHPlayerUI.CLOSED_CAPTION_INDEX;
-		if ( $J( '.customize_captions' ).css( 'visibility' ) == 'hidden' )
-			nTopRowIndex++;
+		var nTopRowIndex = this.FindNextEnabledOptionButton( CDASHPlayerUI.NEXT_VIDEO_INDEX, true );
 
 		switch ( nKeyDirection )
 		{
@@ -5171,14 +5264,14 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 				if ( this.m_nFocusedUIElementIndex == nTopRowIndex )
 					this.m_nFocusedUIElementIndex = nTopRowIndex;
 				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.SKIP_BACK_INDEX )
-					this.m_nFocusedUIElementIndex--;
+					this.m_nFocusedUIElementIndex = this.FindNextEnabledOptionButton( --this.m_nFocusedUIElementIndex, false );
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_RIGHT:
 				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SKIP_FORWARD_INDEX )
 					this.m_nFocusedUIElementIndex = CDASHPlayerUI.SKIP_FORWARD_INDEX;
 				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
-					this.m_nFocusedUIElementIndex++;
+					this.m_nFocusedUIElementIndex = this.FindNextEnabledOptionButton( ++this.m_nFocusedUIElementIndex, true );
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_UP:
@@ -5207,7 +5300,11 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 			this.ShowVolumeBar();
 		else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
 			this.SetProgressBarPreview( -1 );
+		else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.NEXT_VIDEO_INDEX )
+			this.ShowVideoSuggestion( true );
 
+		if ( this.ShowMainPanelUI() )
+			return;
 	}
 	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
 	{
@@ -5420,33 +5517,43 @@ CDASHPlayerUI.prototype.ToggleStats = function()
 
 CDASHPlayerUI.prototype.ToggleFullscreen = function()
 {
-	var elContainer = this.m_elOverlay[0].parentNode;
+	if ( this.m_bUseSDLFullScreen )
+	{
+		try
+		{
+			SteamAPI.SteamUtils.ToggleFullScreen();
+			return;
+		}
+		catch ( e ) { }
+	}
+
+	var elContainer = this.m_elOverlay[ 0 ].parentNode;
 	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
 
-	if( !bFullscreen )
+	if ( !bFullscreen )
 	{
-		if( elContainer.requestFullscreen )
+		if ( elContainer.requestFullscreen )
 			elContainer.requestFullscreen();
-		else if( elContainer.webkitRequestFullScreen && this.m_bIsSafariBrowser )
+		else if ( elContainer.webkitRequestFullScreen && this.m_bIsSafariBrowser )
 			elContainer.webkitRequestFullScreen();
-		else if( elContainer.webkitRequestFullScreen )
+		else if ( elContainer.webkitRequestFullScreen )
 			elContainer.webkitRequestFullScreen( Element.ALLOW_KEYBOARD_INPUT );
-		else if( elContainer.mozRequestFullScreen )
+		else if ( elContainer.mozRequestFullScreen )
 			elContainer.mozRequestFullScreen();
-		else if( elContainer.msRequestFullscreen )
+		else if ( elContainer.msRequestFullscreen )
 			elContainer.msRequestFullscreen();
 
 		$J( elContainer ).addClass( 'fullscreen' );
 	}
 	else
 	{
-		if( document.cancelFullscreen )
+		if ( document.cancelFullscreen )
 			document.cancelFullscreen();
-		else if( document.webkitCancelFullScreen )
+		else if ( document.webkitCancelFullScreen )
 			document.webkitCancelFullScreen();
-		else if( document.mozCancelFullScreen )
+		else if ( document.mozCancelFullScreen )
 			document.mozCancelFullScreen();
-		else if( document.msExitFullscreen )
+		else if ( document.msExitFullscreen )
 			document.msExitFullscreen();
 
 		$J( elContainer ).removeClass( 'fullscreen' );
@@ -5739,7 +5846,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 	{
 		_ui.LoadClosedCaptionLanguage();
 		_ui.LoadClosedCaptionOptions();
-		_ui.m_elClosedCaptionsPanel.hide();
+		_ui.m_elClosedCaptionsPanel.fadeOut( CDASHPlayerUI.DESKTOP_UI_FADE_MS );
 		_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
 
@@ -5747,7 +5854,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 	{
 		_ui.SaveClosedCaptionLanguage();
 		_ui.SaveClosedCaptionOptions();
-		_ui.m_elClosedCaptionsPanel.hide();
+		_ui.m_elClosedCaptionsPanel.fadeOut( CDASHPlayerUI.DESKTOP_UI_FADE_MS );
 		_ui.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
 
@@ -5812,7 +5919,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanelTenFoot = function()
 	}
 	else
 	{
-		$J( '.customize_captions' ).css( 'visibility', 'hidden' );
+		this.SetTenFootOptionButtonVisible( '.customize_captions', false );
 	}
 
 
@@ -5886,7 +5993,7 @@ CDASHPlayerUI.prototype.ShowClosedCaptionsPanel = function()
 		this.LoadClosedCaptionLanguage();
 		this.LoadClosedCaptionOptions();
 		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelCaptions;
-		this.m_elClosedCaptionsPanel.fadeIn(CDASHPlayerUI.TENFOOT_UI_FADE_MS);
+		this.m_elClosedCaptionsPanel.fadeIn( CDASHPlayerUI.TENFOOT_UI_FADE_MS );
 		this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 	}
 	else
@@ -5900,7 +6007,7 @@ CDASHPlayerUI.prototype.ShowClosedCaptionsPanel = function()
 			this.LoadClosedCaptionLanguage();
 			this.LoadClosedCaptionOptions();
 			this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelCaptions;
-			this.m_elClosedCaptionsPanel.show();
+			this.m_elClosedCaptionsPanel.fadeIn( CDASHPlayerUI.DESKTOP_UI_FADE_MS );
 			this.NavigateUIOnKeyDown( CDASHPlayerUI.NAVIGATE_INIT );
 		}
 	}
@@ -6215,6 +6322,99 @@ CDASHPlayerUI.prototype.CloseNotification = function()
 	});
 
 	elNotification.addClass( 'close_notification' );
+}
+
+CDASHPlayerUI.prototype.SetVideoTitle = function( strTitle )
+{
+	$J( '#dash_video_title_banner' ).attr( 'title', strTitle );
+	$J( '#dash_video_title_banner' ).text( strTitle );
+
+}
+
+CDASHPlayerUI.prototype.SetVideoSuggestData = function( strDialogTitle, strGroupTitle, strVideoTitle, oData )
+{
+	this.m_oVideoSuggestData = oData;
+	var _ui = this;
+	
+	$J( '#dash_video_suggest_dialog_title' ).html( strDialogTitle );
+	$J( '#dash_video_suggest_group_title' ).html( strGroupTitle );
+	$J( '#dash_video_suggest' ).show();
+
+	if ( this.BInTenFoot() )
+	{
+		$J( '#dash_video_suggest_video_title' ).html( '<div class="tenfoot_video_title_marquee" data-length="' + strVideoTitle.length + '">' + strVideoTitle + '</div>' );
+		this.SetVideoSuggestMarquee();
+
+		if ( this.m_player.GetClosedCaptionsArray().length == 0 )
+		{
+			$J( '.next_video' ).css( 'right', $J( '.customize_captions' ).css( 'right' ) );
+		}
+
+		this.SetTenFootOptionButtonVisible( '.next_video', true );
+	}
+	else
+	{
+		$J( '#dash_video_suggest_video_title' ).html( strVideoTitle );
+		$J( '.next_video' ).show();
+	}
+
+	$J( '.next_video' ).on('click', function() {
+		$J( _ui.m_player.m_elVideoPlayer ).trigger( 'videosuggest', [ _ui.m_oVideoSuggestData ] );
+	} );
+}
+
+CDASHPlayerUI.prototype.SetVideoSuggestMarquee = function ( nWidthPixels )
+{
+	if ( !this.BInTenFoot() )
+		return;
+
+	var nVideoTitleWidth = $J( '.tenfoot_video_title_marquee' ).outerWidth();
+	var nSuggestBoxWidth = $J( '.tenfoot_dash_overlay #dash_video_suggest' ).outerWidth();
+	var nVideoTitleMargin = parseInt( $J( '.tenfoot_dash_overlay #dash_video_suggest_video_title' ).css( 'margin-left' ) ) + parseInt( $J( '.tenfoot_dash_overlay #dash_video_suggest_video_title' ).css( 'margin-right' ) );
+	if ( nVideoTitleWidth > nSuggestBoxWidth - nVideoTitleMargin )
+	{
+		var nScrollEnd = nSuggestBoxWidth - nVideoTitleWidth - nVideoTitleMargin;
+
+		var style = document.documentElement.appendChild( document.createElement( "style" ) ),
+			rule = " marquee {\
+			0%   { transform: translate3d(0, 0, 0); } \
+			100% { transform: translate3d( " + nScrollEnd + "px, 0, 0); } \
+		}";
+
+		if ( CSSRule.KEYFRAMES_RULE )
+		{
+			style.sheet.insertRule( "@keyframes" + rule, 0 );
+		}
+
+		$J( '.tenfoot_video_title_marquee' ).css( 'animation-duration', ( Math.abs( nScrollEnd / 60 ) ) + 's' );
+	}
+}
+
+CDASHPlayerUI.prototype.ShowVideoSuggestion = function( bShow )
+{
+	if ( bShow )
+	{
+		$J( '#dash_video_suggest' ).addClass( 'active' )
+		$J( '.tenfoot_video_title_marquee' ).addClass( 'active' )
+	}
+	else
+	{
+		$J( '#dash_video_suggest' ).removeClass( 'active' );
+		$J( '.tenfoot_video_title_marquee' ).removeClass( 'active' );
+	}
+}
+
+CDASHPlayerUI.prototype.BTenFootVideoSuggestionVisible = function()
+{
+	if ( this.BInTenFoot() )
+		return $J( '.tenfoot_video_title_marquee' ).hasClass( 'active' );
+	else
+		return false;
+}
+
+CDASHPlayerUI.prototype.SetUseSDLFullscreen = function( bUseSDL )
+{
+	this.m_bUseSDLFullScreen = bUseSDL;
 }
 
 CDASHPlayerUI.SortAdaptationsByDescription = function(a,b)

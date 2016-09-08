@@ -1991,6 +1991,20 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 	})
 }
 
+function Forum_OnSearchSortSelect( elSelect, rgSearchParams )
+{
+	if ( !rgSearchParams || typeof( rgSearchParams.length ) != 'undefined' )
+		rgSearchParams = {};
+
+	var opt = $J(elSelect).val();
+	if ( opt == 'relevance' )
+		delete rgSearchParams['sort'];
+	else
+		rgSearchParams['sort'] = opt;
+
+	window.location.search = $J.param( rgSearchParams );
+}
+
 $J( function($) {
 	$(document ).on( 'click.ForumCommentActions', 'div.forum_comment_action_trigger', function(e) {
 		var $Comment = $( e.currentTarget ).parents( '.forum_op, .commentthread_comment');

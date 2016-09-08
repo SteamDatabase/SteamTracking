@@ -1553,8 +1553,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 		font-weight: 300; /* light */
 
 			font-weight: normal;
-	font-size: 18px;
-	color: #5188b5;
+	font-size: 14px;
+	color: #c6d4df;
+	text-transform: uppercase;
 	padding-bottom: 5px;
 }
 
@@ -1572,7 +1573,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	display: inline-block;
 	margin-right: 15px;
 	color: #7193a6;
-	cursor: pointer;
 	min-width: 320px;
 }
 .user_reviews_summary_bar .title {
@@ -1581,11 +1581,16 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	margin-bottom: 5px;
 }
 .user_reviews_summary_bar .game_review_summary {
+	cursor: help;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
 			font-size: 19px;
 	line-height: 9px;
+}
+
+.user_reviews_summary_bar .game_review_summary.no_reviews {
+	color: #7092a5;
 }
 
 .user_reviews_summary_details_btn {
@@ -1685,7 +1690,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .short_header {
 	height: 24px;
-	padding: 2px;
 	color: #819db8;
 	background-color: rgba( 0, 0, 0, 0.3 );
 	margin-bottom: 6px;
@@ -1712,7 +1716,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 .review_box .short_header .persona_name,
 .review_box .short_header .hours {
-	margin-top: 6px;
+	margin-top: 5px;
 	margin-left: 6px;
 }
 .review_box .short_header .persona_name {
@@ -1749,7 +1753,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_most_helpful_days {
 	text-transform: uppercase;
 	font-size: 14px;
-	color: #a0a08b;
+	color: #56707f;
 }
 
 .user_reviews_header.no_bottom_margin
@@ -1837,9 +1841,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .header, .recommendation_row .header {
 	padding: 8px 9px;
 	font-size: 12px;
-	color: #898a8c;
-	background-color: rgba( 0, 0, 0, 0.2 );
+	color: #647580;
+	/* background-color: rgba( 0, 0, 0, 0.2 ); */
 	min-height: 16px;
+	border-bottom: 1px solid #1b2838;
 }
 
 .review_box .header .commentCount, .recommendation_row .header .commentCount {
@@ -1848,6 +1853,18 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .review_box .header .commentCount a {
 	text-decoration: none;
+	color: #66c0f4;
+	background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/comment_quoteicon_blue.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	display: inline-block;
+	height: 16px;
+
+}
+.review_box .header .commentCount a:hover {
+	color: #ffffff;
+	background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/comment_quoteicon_bright.png);
 }
 
 .review_box .leftcol {
@@ -1870,7 +1887,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	margin: 8px 0 13px;
 	display: block;
 	background: rgba( 0, 0, 0, 0.2 );
-	padding: 2px;
+	height: 40px;
 }
 .review_box a.vote_header:hover {
 	background: rgba( 255, 255, 255, 0.2 );
@@ -1892,7 +1909,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			padding: 3px 0;
+			padding: 3px 0px 0px 0px;
 	line-height: 19px;
 }
 
@@ -1910,7 +1927,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 			font-size: 11px;
 	line-height: 15px;
-	opacity: 0.5;
+	color: #8091a2;
+	opacity: 0.6;
 }
 
 .review_box .vote_header .thumb {
@@ -1920,7 +1938,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .review_box .avatar {
 	float: left;
-	padding-right: 10px;
+	padding-right: 8px;
 	display: block;
 }
 
@@ -1930,7 +1948,16 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	overflow: hidden;
 	margin-top: 0px;
 	display: block;
+	margin-top: -4px;
+	margin-bottom: -1px;
 }
+.review_box .persona_name a, .recommendation_row .persona_name a {
+	color: #c1dbf4;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
 
 .review_box .num_owned_games, .recommendation_row .posted_date {
 	font-size: 11px;
@@ -2081,6 +2108,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #67c1f5;
 	text-align: center;
 	padding-top: 30px;
+	margin-bottom: 20px;
 }
 .review_box .noReviewsYetSub {
 	font-size: 14px;
@@ -2168,7 +2196,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	text-transform: uppercase;
 	font-size: 10px;
 	margin-bottom: 5px;
-	color: #7193a6;
+	color: #4582a5;
 }
 
 .user_reviews_filter_section input[type="checkbox"] {
@@ -2176,9 +2204,35 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	margin-right: 5px;
 }
 
+.user_reviews_filter_section input[type="radio"] {
+	vertical-align: middle;
+	margin-right: 2px;
+	height: 23px;
+	margin-top: -2px;
+}
+
+.user_reviews_filter_section label {
+	margin-right: 50px;
+	color: #8faab9;
+}
+.user_reviews_filter_section input[type="radio"]:checked+label {
+	color: #fff;
+}
+
+.user_reviews_filter_section img {
+	margin-bottom: -1px;
+	margin-left: 2px;
+}
+
+.user_reviews_customize_language a {
+	text-transform: uppercase;
+	color: #67c1f5;
+	font-size: 10px;
+}
+
 .user_reviews_filter_score {
 	display: none;
-	border-top: 1px solid #67c1f5;
+	border-top: 1px solid #3a6e8b;
 	margin-top: 10px;
 	padding-top: 10px;
 }
@@ -2188,9 +2242,19 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_filter_score .title {
 	float: left;
 	margin-right: 5px;
-	font-size: 12px;
+	font-size: 10px;
+	line-height: 16px;
 	text-transform: uppercase;
-	color: #67c1f5;
+	color: #7193a6;
+}
+.user_reviews_filter_score .game_review_summary {
+	cursor: help;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+.user_reviews_filter_score .game_review_summary.no_reviews {
+	color: #7092a5;
 }
 
 .user_reviews_tab
@@ -2250,6 +2314,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	height: 32px;
 	line-height: 32px;
 	text-align: center;
+	padding: 20px 0px;
 }
 
 .loading_more_reviews_throbber

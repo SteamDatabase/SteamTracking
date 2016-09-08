@@ -1074,6 +1074,48 @@ input.discussionSearchText:-moz-placeholder {
 	cursor: pointer;
 }
 
+.discussion_search_authorBlocks_label {
+	margin-bottom: 4px;
+}
+
+.discussion_search_authorBlock {
+	width: 32%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	float: left;
+	background-color: rgba( 117, 204, 255, 0.3);
+}
+
+.discussion_search_authorBlock .playerAvatar {
+	float: left;
+	margin: 4px;
+}
+
+.discussion_search_authorBlock .content {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 4px 4px 4px 0;
+	min-height: 36px;
+}
+
+.discussion_search_authorBlock .moderator_ban_notice {
+	float: right;
+	line-height: 36px;
+	padding: 4px 4px 4px 0;
+}
+
+.discussions_searchSort {
+	float: right;
+	line-height: 32px;	/* to match searchedForTerm */
+}
+
+@media screen and (max-width: 540px) {
+	html.responsive .discussion_search_authorBlock {
+		width: 49%;
+	}
+}
+
 .discussions_searchedTermsContainer {
 	margin-bottom: 10px;
 }
