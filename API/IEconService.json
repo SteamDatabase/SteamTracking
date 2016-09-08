@@ -4,7 +4,7 @@
         {
             "name": "GetTradeHistory",
             "version": 1,
-            "httpmethod": "POST",
+            "httpmethod": "GET",
             "description": "Gets a history of trades",
             "parameters": [
                 {

@@ -269,7 +269,8 @@ textarea#leaderboard_blob {
 }
 
 #addSeason #addSeasonEpisodeCount,
-#addNewEpisodes #addNewEpisodeCount {
+#addNewEpisodes #addNewEpisodeCount,
+#addSeason #addSeasonNumber {
 	width: 30px;
 }
 
