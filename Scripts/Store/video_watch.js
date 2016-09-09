@@ -501,7 +501,8 @@ CVideoWatch.prototype.GetSuggestedVideo = function()
 	var _watch = this;
 	$J.ajax( {
 		url: 'https://store.steampowered.com/video/suggest/' + _watch.m_nAppId,
-		type: 'GET'
+		type: 'GET',
+		cache: false
 	})
 		.done( function( data )
 		{
