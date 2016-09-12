@@ -1562,8 +1562,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_summary_bar {
 	padding: 10px 15px;
 	margin-bottom: 20px;
-	background-color: #23384b;
-	/*
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 255, 255, 255, 0.67)), color-stop(95%,rgba( 255, 255, 255, 0.75)));background: -moz-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -webkit-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -o-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -ms-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: linear-gradient( to bottom, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);	/*
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#23384b), color-stop(95%,#374655));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23384b', endColorstr='#374655',GradientType=0 );background: -moz-linear-gradient( top, #23384b 5%, #374655 95%);background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: -o-linear-gradient( top, #23384b 5%, #374655 95%);background: -ms-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
 }
 .user_reviews_summary_bar.new {
@@ -1572,7 +1571,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_summary_bar .summary_section {
 	display: inline-block;
 	margin-right: 15px;
-	color: #7193a6;
+	color: #5d7a87;
 	min-width: 320px;
 }
 .user_reviews_summary_bar .title {
@@ -1587,10 +1586,17 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 			font-size: 19px;
 	line-height: 9px;
+	text-shadow: 1px 1px rgba( 255, 255, 255, 0.2 );
+}
+.user_reviews_summary_bar .game_review_summary.positive {
+	color: #4191bf;
 }
 
 .user_reviews_summary_bar .game_review_summary.no_reviews {
 	color: #7092a5;
+}
+.user_reviews_sections {
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .user_reviews_summary_details_btn {
@@ -1787,14 +1793,14 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 /* ==== Updates headline ==== */
 .user_reviews_header .user_reviews_updated {
-	color: #A3CF06;
+	color: #ffd43a;
 	font-size: 13px;
 	float: right;
 }
 .user_reviews_header .user_reviews_updated a {
 	text-decoration: underline;
 	font-size: 13px;
-	color: #A3CF06;
+	color: #ffd43a;
 }
 .user_reviews_header .user_reviews_updated a:hover {
 	color: #fff;
@@ -2187,6 +2193,12 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background-color: #2a475e;
 }
 
+.user_reviews_filter_title {
+	border-bottom: 1px solid #3a6e8b;
+	margin-bottom: 8px;
+	padding-bottom: 2px;
+
+}
 .user_reviews_filter_section {
 	float: left;
 	margin-right: 20px;
@@ -2206,14 +2218,19 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .user_reviews_filter_section input[type="radio"] {
 	vertical-align: middle;
-	margin-right: 2px;
 	height: 23px;
 	margin-top: -2px;
 }
 
 .user_reviews_filter_section label {
 	margin-right: 50px;
-	color: #8faab9;
+	color: #7193a6;
+	margin-left: -4px;
+	padding-left: 4px;
+}
+.user_reviews_filter_section label:hover,
+.user_reviews_filter_section input[type="radio"]:hover+label {
+	color: #fff;
 }
 .user_reviews_filter_section input[type="radio"]:checked+label {
 	color: #fff;
