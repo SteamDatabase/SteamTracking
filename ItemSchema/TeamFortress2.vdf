@@ -93215,6 +93215,10 @@
 		{		
 			"name"				"TF2Maps 72hr TF2Jam Summer Participant"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_72hr_summer_jimijam"
 			"item_description"	"#TF_TournamentMedal_2016"
