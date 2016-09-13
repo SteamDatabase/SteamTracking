@@ -270,7 +270,9 @@ textarea#leaderboard_blob {
 
 #addSeason #addSeasonEpisodeCount,
 #addNewEpisodes #addNewEpisodeCount,
-#addSeason #addSeasonNumber {
+#addSeason #addSeasonNumber,
+#addExtraContent #addExtraContentEpisodeCount
+{
 	width: 30px;
 }
 
