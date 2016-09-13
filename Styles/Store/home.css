@@ -542,7 +542,7 @@ a.home_headercap:hover {
 	box-shadow: 0 0 12px #000000;
 
 	background: rgb(227,234,239); /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e3eaef), color-stop(95%,#c7d5e0));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3eaef', endColorstr='#c7d5e0',GradientType=0 );background: -moz-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -o-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -ms-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);}
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);}
 
 .home_viewsettings_instructions {
 	margin-bottom: 12px;
@@ -724,6 +724,60 @@ a.home_headercap:hover {
 		opacity: 1;
 	}
 
+/* Make a smaller version */
+	.small .dq_static_pos_2 {
+		width: 386px;
+		height: 180px;
+	}
+	.small .dq_static_pos_2 .dq_item_overlay {
+		background: rgba( 0, 0, 0, 0.0 );
+	  }
+	.small .dq_static_pos_2 {
+		top: 0px;
+		left: 0px;
+		z-index: 5;
+		opacity: 1;
+}
+	.small .dq_static_pos_3 {
+		width: 345px;
+		height: 162px;
+	}
+	.small .dq_static_pos_3 .dq_item_overlay {
+		background: rgba( 20, 26, 36, 0.4 );
+	  }
+	.small .dq_static_pos_3 {
+		top: 11px;
+		left: 110.5px;
+		z-index: 4;
+		opacity: 1;
+}
+	.small .dq_static_pos_4 {
+		width: 306px;
+		height: 144px;
+	}
+	.small .dq_static_pos_4 .dq_item_overlay {
+		background: rgba( 20, 26, 36, 0.6 );
+	  }
+	.small .dq_static_pos_4 {
+		top: 20px;
+		left: 215.5px;
+		z-index: 3;
+		opacity: 1;
+}
+	.small .dq_static_pos_5 {
+		width: 267px;
+		height: 125px;
+	}
+	.small .dq_static_pos_5 .dq_item_overlay {
+		background: rgba( 20, 26, 36, 0.8 );
+	  }
+	.small .dq_static_pos_5 {
+		top: 28px;
+		left: 320.5px;
+		z-index: 2;
+		opacity: 1;
+}
+
 @media screen and (max-width: 910px)
 {
 			html.responsive .dq_static_pos_2 {
@@ -757,6 +811,7 @@ a.home_headercap:hover {
 {
 
 }
+
 .steam_curators_ctn
 {
 	margin-top: 0px;
@@ -899,7 +954,7 @@ a.home_headercap:hover {
 /* STEAM APPS RECOMMENDED BY CURATORS */
 #apps_recommended_by_curators
 {
-
+	white-space: nowrap;
 }
 
 .apps_recommended_by_curators_ctn
@@ -999,7 +1054,7 @@ a.curated_app_link img {
 	height: 152px;
 	margin-bottom: 2px;
 	background-color: rgba( 64, 120, 152, 0.4 );
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 64, 120, 152, 0.4 )), color-stop(95%,rgba(0,0,0,0.2)));background: -moz-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -webkit-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -o-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: -ms-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);	padding: 16px;
+	background: -webkit-linear-gradient( top, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 120, 152, 0.4 ) 5%, rgba(0,0,0,0.2) 95%);	padding: 16px;
 
 	color: #8f98a0;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1019,7 +1074,7 @@ a.recommended_spotlight {
 }
 
 #home_recommended_more {
-	background: background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -moz-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);}
+	background: background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);}
 
 .recommended_spotlight_cap img {
 	width: 276px;

@@ -197,7 +197,7 @@ body.steamguard_body.steamguard_body_black {
 
 .steamguard_next_button {
 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e7c07c), color-stop(95%,#bf9f67));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7c07c', endColorstr='#bf9f67',GradientType=0 );background: -moz-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -webkit-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -o-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -ms-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: linear-gradient( to bottom, #e7c07c 5%, #bf9f67 95%);		
+	background: -webkit-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: linear-gradient( to bottom, #e7c07c 5%, #bf9f67 95%);		
 	background-color: #866f48;
 	border-radius: 3px;
 	border: 1px solid #1c232c;
@@ -276,7 +276,7 @@ input#sms_code {
 
 .steamguard_email_button, .steamguard_anotherPhone_button {
 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#808080), color-stop(95%,#404040));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#404040',GradientType=0 );background: -moz-linear-gradient( top, #808080 5%, #404040 95%);background: -webkit-linear-gradient( top, #808080 5%, #404040 95%);background: -o-linear-gradient( top, #808080 5%, #404040 95%);background: -ms-linear-gradient( top, #808080 5%, #404040 95%);background: linear-gradient( to bottom, #808080 5%, #404040 95%);
+	background: -webkit-linear-gradient( top, #808080 5%, #404040 95%);background: linear-gradient( to bottom, #808080 5%, #404040 95%);
 	background-color: #866f48;
 	border-radius: 3px;
 	border: 1px solid #1c232c;

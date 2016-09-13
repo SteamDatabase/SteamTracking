@@ -1278,7 +1278,7 @@ a#postLink, a#blotterLink {
 	vertical-align: top;
 
 	border-radius: 2px;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#313131), color-stop(95%,#202020));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#202020',GradientType=0 );background: -moz-linear-gradient( top, #313131 5%, #202020 95%);background: -webkit-linear-gradient( top, #313131 5%, #202020 95%);background: -o-linear-gradient( top, #313131 5%, #202020 95%);background: -ms-linear-gradient( top, #313131 5%, #202020 95%);background: linear-gradient( to bottom, #313131 5%, #202020 95%);	box-shadow: none;
+	background: -webkit-linear-gradient( top, #313131 5%, #202020 95%);background: linear-gradient( to bottom, #313131 5%, #202020 95%);	box-shadow: none;
 	border: 1px solid #2C2C2C;
 
 	user-select: none;

@@ -882,7 +882,7 @@ body.migrated_profile_page #wishlist_comic {
 	padding: 8px 12px;
 
 	background: #5e5c5c;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5e5c5c), color-stop(95%,#403f40));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5c5c', endColorstr='#403f40',GradientType=0 );background: -moz-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: -webkit-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: -o-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: -ms-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: linear-gradient( to bottom, #5e5c5c 5%, #403f40 95%);}
+	background: -webkit-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: linear-gradient( to bottom, #5e5c5c 5%, #403f40 95%);}
 
 .clientConnArea #fullstretch {
     width: 100%;

@@ -297,6 +297,10 @@ select {
 	border-color: #534436;
 }
 
+.review_box .notification {
+	margin-right: 0px;
+}
+
 /* view reports */
 .review_reports
 {

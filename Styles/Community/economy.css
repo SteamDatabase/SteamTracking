@@ -604,7 +604,7 @@ input.filter_search_box:-moz-placeholder {
 	color: #ffffff;
 	line-height: 1em;
 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#262626));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#262626',GradientType=0 );background: -moz-linear-gradient( top, #484848 5%, #262626 95%);background: -webkit-linear-gradient( top, #484848 5%, #262626 95%);background: -o-linear-gradient( top, #484848 5%, #262626 95%);background: -ms-linear-gradient( top, #484848 5%, #262626 95%);background: linear-gradient( to bottom, #484848 5%, #262626 95%);	border: 1px solid #797272;
+	background: -webkit-linear-gradient( top, #484848 5%, #262626 95%);background: linear-gradient( to bottom, #484848 5%, #262626 95%);	border: 1px solid #797272;
 	border-bottom: none;
 
 	border-top-left-radius: 3px;

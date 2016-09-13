@@ -197,7 +197,7 @@ a.auction_nav_header_readcomic {
 
 .home_active_bid.high_bid .highbid_footer, .home_active_bid.win
 {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff19), color-stop(100%,#fabf10));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff19', endColorstr='#fabf10',GradientType=0 );background: -moz-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -webkit-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -o-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -ms-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: linear-gradient( to bottom, #ffff19 0%, #fabf10 100%);;
+	background: -webkit-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: linear-gradient( to bottom, #ffff19 0%, #fabf10 100%);;
 }
 
 .home_active_bid.win, .home_active_bid.win .active_bid_mybid {
@@ -210,7 +210,7 @@ a.home_active_bid:hover {
 }
 
 a.home_active_bid.win:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffBB), color-stop(100%,#fef417));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffBB', endColorstr='#fef417',GradientType=0 );background: -moz-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -webkit-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -o-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -ms-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: linear-gradient( to bottom, #ffffBB 0%, #fef417 100%);;
+	background: -webkit-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: linear-gradient( to bottom, #ffffBB 0%, #fef417 100%);;
 }
 
 .home_active_bid .active_bid_logo, .home_active_bid .active_bid_logo img {
@@ -453,7 +453,7 @@ a.home_active_bid.win:hover {
 	width: 100%;
 	height: 1px;
 	top: 11px;
-	background: background: -moz-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -webkit-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -o-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -ms-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: linear-gradient( to right, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);}
+	background: background: -webkit-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: linear-gradient( to right, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);}
 
 .auction_block_separator .sep_text {
 	position: relative;
@@ -467,7 +467,7 @@ a.home_active_bid.win:hover {
 }
 
 .auction_block_separator.sep_grey .sep_line {
-	background: background: -moz-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -webkit-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -o-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -ms-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: linear-gradient( to right, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);}
+	background: background: -webkit-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: linear-gradient( to right, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);}
 
 .auction_game_name {
 	color: white;
@@ -536,7 +536,7 @@ a.home_active_bid.win:hover {
 	border-radius: 2px;
 	margin-right: 15px;
 	padding: 0 10px;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fabf10), color-stop(95%,#ffff19));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fabf10', endColorstr='#ffff19',GradientType=0 );background: -moz-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -webkit-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -o-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -ms-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: linear-gradient( to bottom, #fabf10 5%, #ffff19 95%);	font-size: 22px;
+	background: -webkit-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: linear-gradient( to bottom, #fabf10 5%, #ffff19 95%);	font-size: 22px;
 	color: #0d131c;
 	text-align: center;
 	white-space: nowrap;

@@ -17,7 +17,7 @@ body.sale_page_background {
 	padding: 15px;
 	position: relative;
 
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.5)), color-stop(95%,rgba(226,244,255,0.5)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
+	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
 
 .sale_page_block {
 	margin-bottom: 28px;
@@ -303,10 +303,10 @@ body.sale_page_background {
 .sale_page_package_contents .tab_item {
 	margin-bottom: 2px;
 	padding-left: 213px;
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.3)), color-stop(95%,rgba(226,244,255,0.3)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););}
+	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););}
 
 .sale_page_package_contents .tab_item:hover {
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.5)), color-stop(95%,rgba(226,244,255,0.5)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
+	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
 
 .sale_page_package_contents .tab_item .tab_item_cap {
 	padding-left: 15px;

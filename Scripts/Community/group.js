@@ -387,6 +387,43 @@ function ConfirmLeaveGroup( groupName )
 }
 
 
+function Curator_CreateOrEditReview( groupid, create_only )
+{
+	// create the review
+	$J.ajax({
+		url: 'https://steamcommunity.com/groups/' + groupid + '/createrecommendation/',
+		type: 'POST',
+		data: {
+			sessionID: g_sessionID,
+			appid: $J('#curationAppIDInput').val(),
+			appname: $J('#curationAppInput').val(),
+			blurb: $J('#curationBlurbInput').val(),
+			link_url: $J('#curationURLInput').val(),
+			recommendation_state: $J('input[name=recommendation_state]:checked').val(),
+			create_only: create_only?1:0
+		},
+		success: function( data, textStatus, jqXHR ) {
+			if ( data.success == 1 )
+			{
+				// great, go back to the front page
+				window.location = 'https://steamcommunity.com/groups/' + groupid + '/curation';
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Could not create review', data.error );
+			}
+			else
+			{
+				ShowAlertDialog( 'Could not create review', 'The Steam Servers are currently too busy to create your review. Please try again later.' );
+			}
+		},
+		error: function( jqXHR, textStatus, errorThrown ) {
+			// uh oh
+			ShowAlertDialog( 'Could not create review', 'The Steam Servers are currently too busy to create your review. Please try again later.' );
+		}
+	});
+}
+
 function Curator_CreateOrEditRecommendation( groupid, create_only )
 {
 	// create the recommendation
@@ -471,6 +508,41 @@ function Curator_Follow( groupid, bFollow )
 			// uh oh
 			ShowAlertDialog( 'Could not change follow state', 'Sorry! There was an error with the servers and you\'ll have to try to do this again later.' );
 		}
+	});
+}
+
+function Curator_DeleteReview( groupid, appid, appname )
+{
+	var prompt_text = 'Do you want to delete your review of %s?';
+	prompt_text = prompt_text.replace( '%s', appname );
+	var dialog = ShowConfirmDialog( 'Delete review', prompt_text, 'Delete review' );
+	dialog.done( function( reason ) {
+		$J.ajax({
+			url: 'https://steamcommunity.com/groups/' + groupid + '/deleterecommendation/',
+			type: 'POST',
+			data: {
+				sessionID: g_sessionID,
+				appid: appid
+			},
+			success: function( data, textStatus, jqXHR ) {
+				dialog = null;
+				if ( data.success == 1 )
+					dialog = ShowAlertDialog( 'Review deleted', data.message );
+				else if ( data.error )
+					dialog = ShowAlertDialog( 'Could not deleted review', data.error );
+				else
+					dialog = ShowAlertDialog( 'Could not deleted review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
+
+				// reload
+				dialog.done( function( reason ) {
+					window.location = 'https://steamcommunity.com/groups/' + groupid + '/curation';
+				});
+			},
+			error: function( jqXHR, textStatus, errorThrown ) {
+				// uh oh
+				ShowAlertDialog( 'Could not deleted review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
+			}
+		});
 	});
 }
 

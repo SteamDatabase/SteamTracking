@@ -1495,7 +1495,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #ffffff;
 	border-radius: 1px;
 	background: #67c1f5; /* Old browsers */
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#67c1f5), color-stop(95%,#417a9b));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 );background: -moz-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: -webkit-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: -o-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: -ms-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););}
+	background: -webkit-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););}
 
 #review_create .content .controls .dselect_container {
 	color: #acb2b8;
@@ -1562,8 +1562,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_summary_bar {
 	padding: 10px 15px;
 	margin-bottom: 20px;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 255, 255, 255, 0.67)), color-stop(95%,rgba( 255, 255, 255, 0.75)));background: -moz-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -webkit-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -o-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: -ms-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: linear-gradient( to bottom, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);	/*
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#23384b), color-stop(95%,#374655));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23384b', endColorstr='#374655',GradientType=0 );background: -moz-linear-gradient( top, #23384b 5%, #374655 95%);background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: -o-linear-gradient( top, #23384b 5%, #374655 95%);background: -ms-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
+	background: -webkit-linear-gradient( top, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);background: linear-gradient( to bottom, rgba( 255, 255, 255, 0.67) 5%, rgba( 255, 255, 255, 0.75) 95%);	/*
+	background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
 }
 .user_reviews_summary_bar.new {
 	margin-bottom: 2px;

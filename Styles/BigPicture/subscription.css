@@ -512,3 +512,10 @@ VerticalScrollBar
 	margin: 14px 0px 14px 0px;
 	background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #4e5d6b00 ), color-stop( 0.5, #4e5d6bff ), color-stop( 1.0, #4e5d6b00 ) );
 }
+
+.VideoExtrasMessage
+{
+	color: white;
+	font-size: 22px;
+	margin-bottom: 20px;
+}

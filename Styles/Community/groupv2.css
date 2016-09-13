@@ -207,7 +207,7 @@ a.group_tab:hover {
 	border: none;
 
 	background: #57749e; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
 	.group_tab.active > span {
 		height: 35px;
 		line-height: 36px;
@@ -219,7 +219,7 @@ a.group_tab:hover {
 
 		display: block;
 		background: #417B9C; /* Old browsers */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);	}
+		background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);	}
 
 .grouppage_content_area {
 
@@ -256,7 +256,7 @@ a.group_tab:hover {
 	text-align: center;
 	padding: 20px 0px 20px 0px;
 	color: #5089bd;;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#474745), color-stop(95%,#39393a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474745', endColorstr='#39393a',GradientType=0 );background: -moz-linear-gradient( top, #474745 5%, #39393a 95%);background: -webkit-linear-gradient( top, #474745 5%, #39393a 95%);background: -o-linear-gradient( top, #474745 5%, #39393a 95%);background: -ms-linear-gradient( top, #474745 5%, #39393a 95%);background: linear-gradient( to bottom, #474745 5%, #39393a 95%);}
+	background: -webkit-linear-gradient( top, #474745 5%, #39393a 95%);background: linear-gradient( to bottom, #474745 5%, #39393a 95%);}
 
 .leftcol {
 	float: left;
@@ -1298,7 +1298,7 @@ a.headlineLink:hover {
 }
 
 
-.curation_app_form input {
+.curation_app_form input[type=text] {
 	max-width: 630px;
 	width: 95%;
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -1412,6 +1412,25 @@ a.headlineLink:hover {
 }
 
 .curation_app_details_body {
+}
+
+.curation_app_details_header {
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+
+.curation_app_details_header .title {
+	font-size: 16px;
+	color: #d6d7d8;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 5px 0 0 0;
+}
+
+.curation_app_details_header .thumb {
+	float: left;
+	margin-right: 10px;
 }
 
 .curation_app_commentthread .commentthread_entry {
@@ -1590,7 +1609,7 @@ a.headlineLink:hover {
 .grouppage_resp_header {
 	padding: 8px 1% 0 1%;
 	/* background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1') bottom left no-repeat, url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat; */
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#2b3b4c), color-stop(95%,#111923));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3b4c', endColorstr='#111923',GradientType=1 );background: -moz-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -webkit-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -o-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -ms-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););}
+	background: -webkit-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););}
 
 .grouppage_resp_logo {
 	float: left;

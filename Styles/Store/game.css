@@ -749,7 +749,7 @@ img.game_header_image_full {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #acb5be;
 	text-align: right;
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(226,244,255,0.2)), color-stop(100%,rgba(97,100,101,0.2)));background: -moz-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -o-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -ms-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););}
+	background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););}
 
 .game_area_purchase_not_refundable a {
 	font-size: 12px;
@@ -1485,7 +1485,7 @@ a.friend_block_holder:hover {
 }
 
 .got_steam_ctn {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	padding: 3px;
+	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	padding: 3px;
 	width:650px;
 }
 .got_steam_box {
@@ -1529,13 +1529,13 @@ a.friend_block_holder:hover {
 
 	.gotsteam_buttons a.btn_blue {
 		float: left;
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -moz-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -o-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);		width: 271px;
+		background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);		width: 271px;
 		padding: 12px 12px 15px 12px;
 		border-radius: 2px;
 	}
 
 	.gotsteam_buttons a.btn_blue:hover {
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	}
+		background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	}
 
 	.gotsteam_buttons a.btn_blue.leftbtn {
 		margin-right: 16px;
@@ -2105,7 +2105,7 @@ img.package_header {
 	color: #ffcc6a;
 	font-size: 12px;
 	padding: 6px; 16px;
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba( 196, 158, 82, 0.6 )), color-stop(60%,rgba( 196, 158, 82, 0.0 )));background: -moz-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -o-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -ms-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);}
+	background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);}
 
 .queue_control_button {
 	display: inline-block;
@@ -3576,7 +3576,7 @@ select.gray_bevel {
 	padding: 10px;
 	border-radius: 3px;
 
-background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480), color-stop(95%,#1a303d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356480', endColorstr='#1a303d',GradientType=1 );background: -moz-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -o-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -ms-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: linear-gradient( 135deg, #356480 5%,#1a303d 95%););}
+background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: linear-gradient( 135deg, #356480 5%,#1a303d 95%););}
 
 .screenshot_popup_modal_title {
 	height: 20px;
@@ -4031,6 +4031,14 @@ div.agegate_text_container > h2 {
 
 .series_seasons .season_episode_list_wrapper {
 	margin-top: 10px;
+}
+
+.series_seasons.extra_content_spacer {
+	margin-top: 30px;
+}
+
+.season_video_extras_note {
+	margin-top: 5px;
 }
 
 .series_episode {

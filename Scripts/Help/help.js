@@ -1418,6 +1418,34 @@ HelpWizard = {
 			$J('.scam_report_button').addClass( 'btn_disabled' ).prop( 'disabled', true );
 		}
 
+	},
+	ResetTaxForm: function( set, sessionid )
+	{
+		ShowConfirmDialog( 'Resubmit Tax Information',
+		 	'Are you sure you want to resubmit your tax information?',
+		  	'Yes, let me resubmit',
+			'No, don\'t do anything')
+			.done( function()
+			{
+				$J.ajax(
+				{
+					type: "POST",
+					data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+							form_set: set,
+							sessionid: sessionid
+							} ),
+					url: 'https://help.steampowered.com/wizard/AjaxResetTaxForm/'
+				})
+				.done( function( data )
+				{
+					window.location = 'http://store.steampowered.com/account/forms/6050w/';
+				})
+				.fail( function( xhr )
+				{
+					ShowAlertDialog(  'Unexpected Error',
+						'Sorry! An unexpected error has occurred while processing your request. Please try again. If the error continues to happen, please feel free to contact Steam Support.' );
+				});
+			});
 	}
 };
 

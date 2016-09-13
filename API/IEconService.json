@@ -53,6 +53,12 @@
                     "name": "include_failed",
                     "type": "bool",
                     "optional": false
+                },
+                {
+                    "name": "include_total",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If set, the total number of trades the account has participated in will be included in the response"
                 }
             ]
         },

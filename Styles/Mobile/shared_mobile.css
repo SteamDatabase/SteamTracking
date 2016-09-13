@@ -335,7 +335,7 @@ div#global_actions_pageoverlay .globaloverlayactionval {
 
 .tableViewTopShadow {
 	height: 15px;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 0, 0, 0, 0.55)), color-stop(95%,rgba( 0, 0, 0, 0 )));background: -moz-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -o-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -ms-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);}
+	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);}
 
 .tableViewCell {
 	display: block;
@@ -506,7 +506,7 @@ div.smallCapIcon img {
 
 .iconHolder_golden {
 	background-color: #e4ca63;
-	background: -moz-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -o-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -ms-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);	border-radius: 4px;
+	background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);	border-radius: 4px;
 }
 
 div.avatarIcon {
