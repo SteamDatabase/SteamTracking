@@ -53,12 +53,13 @@
 .IconsList
 {
 	border-radius: 3px;
-	width: 528px;
+	width: 1554px;
     height: 560px;
 	flow-children: right-wrap;
     overflow: scroll;
     vertical-align: center;
-    margin-left: 680px;
+    horizontal-align: center;
+    margin-left: 180px;
     border: 8px solid #20304088;
 	background-color: #000000ff;
 }

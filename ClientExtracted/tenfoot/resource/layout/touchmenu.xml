@@ -8,7 +8,12 @@
 		<Label id="TouchMenuHoverKeyDescription" />
 		<Panel id="TouchMenuPad">
 			<Panel id="Pointer">
-				<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+				<Panel id="TouchMenuPointer">
+					<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+				</Panel>
+				<Panel id="RadialMenuPointer">
+					<Image src="file://{images}/library/radial_menu_pointer.png" />
+				</Panel>
 			</Panel>
 		</Panel>
 	</TouchMenu>

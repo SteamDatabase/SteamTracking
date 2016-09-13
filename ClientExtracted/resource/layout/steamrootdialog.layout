@@ -16,8 +16,8 @@
 		{
 			"ControlName"		"Button"
 			style="VRButton"
-      			command="url steam://run/250820"
-     			tooltiptext="#tooltip_view_vr_start" 
+      command="startvr"
+     	tooltiptext="#tooltip_view_vr_start" 
 		}
     
 		"exitvr"

@@ -303,7 +303,52 @@
 					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton8" />
 					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="TouchMenuButton8" />
 				</Panel>
+
+				<!-- Radial Menu Mode -->
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButtonType" />
+					<DropDown id="RadialMenuButtonType" />
+				</Panel>				
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuPosX" />
+					<Slider id="RadialMenuPosX" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuPosY" />
+					<Slider id="RadialMenuPosY" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuOpacity" />
+					<Slider id="RadialMenuOpacity" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuScale" />
+					<Slider id="RadialMenuScale" direction="horizontal" />
+				</Panel>				
+	
 				
+				<!-- Radial Menu Mode Advanced -->
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton5" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton6" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton6" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton7" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton7" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton8" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton8" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton9" />
+				</Panel>				
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton9" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton10" />
+				</Panel>
+						
 				<!-- Relative Mouse Mode -->
 				<Panel class="FieldWrapper" modes="relmouse" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
@@ -757,6 +802,51 @@
 					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton13" />
 					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="TouchMenuButton13" />
 				</Panel>
+
+
+				<!-- Radial Menu Mode -->
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton0" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton1" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton1" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton2" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton2" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton3" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton3" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton4" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton4" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton5" />
+				</Panel>	
+						
+				<!-- Radial Menu Mode Advanced -->
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton10" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton11" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton11" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton12" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton12" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton13" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton13" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton14" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="radialmenu" advanced="on" >
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton14" />
+					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton15" />
+				</Panel>
 				
 				<!-- Relative Mouse Mode -->
 				<Panel id="CenterImageRelMouse" class="CenterImage" modes="relmouse" advanced="off"/>
@@ -1048,6 +1138,41 @@
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton15" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="TouchMenuButton15" />
 					</Panel>
+
+					<!-- Radial Menu Mode -->
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_ShowLabels" />
+						<DropDown id="RadialMenuShowLabels" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_RadialMenuButtonCenter" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton0" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_RadialClick" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialClick" />
+					</Panel>				
+					<!-- Radial Menu Mode Advanced -->
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton15" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton16" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton16" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton17" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton17" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton18" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton18" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton19" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton19" />
+						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton20" />
+					</Panel>				
 					
 					<!-- Relative Mouse Mode -->
 					<Panel class="FieldWrapper" modes="relmouse" advanced="off">
