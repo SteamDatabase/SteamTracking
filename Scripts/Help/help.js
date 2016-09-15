@@ -2186,10 +2186,14 @@ HelpRequestPage = {
 				});
 				$Dialog.SetDismissOnBackgroundClick(false);
 			}
-			else
+			else if ( data.next_page )
 			{
 				HelpWizard.LoadPageFromHash( false, data.next_page, true );
 				//HelpRequestPage.DismissCreateHelpRequestForm();
+			}
+			else if ( data.redirect )
+			{
+				window.location = data.redirect;
 			}
 		}).always( function() {
 			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );

@@ -1779,6 +1779,11 @@ a.guide_row {
 	margin-top: 0px;
 }
 
+
+.help_issue_details.help_section_body.steam_feature {
+	max-width: 940px;
+}
+
 .help_missingrefund_details b
 {
 	font-weight: normal;
@@ -3912,4 +3917,52 @@ ul.attached_file_list {
 	display:inline-block;
 	padding-top: 50px;
 	padding-left: 20px;
+}
+
+.feature_banner {
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 180px;
+	margin-bottom: 8px;
+}
+@media screen and (max-width: 580px)
+{
+	html.responsive	.feature_bannerH1
+	{
+		font-size: 24px;
+	}
+
+	html.responsive	.feature_bannerH2
+	{
+		font-size: 16px;
+	}
+
+	html.responsive	.feature_banner_text
+	{
+		padding-top: 58px;
+	}
+}
+
+.feature_banner_text{
+	padding-top: 36px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.feature_bannerH1 {
+	color: #ffffff;
+	font-size: 42px;
+	font-weight: 900;
+}
+
+.feature_bannerH2 {
+	color: #67c5f1;
+	font-size: 24px;
+}
+
+.feature_title {
+	color: #ffffff;
+	font-size: 20px;
+	margin-bottom: 10px;
 }
