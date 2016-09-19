@@ -2640,7 +2640,8 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_LaunchOption_SafeMode"					"Launch %game% in Safe Mode"
 "Steam_LaunchOption_Multiplayer"			"Launch %game% in Multiplayer Mode"
 "Steam_LaunchOption_VR"								"Launch %game% in Steam VR Mode"
-"Steam_LaunchOption_othervr"						"Launch %game% in Other VR Mode"
+"Steam_LaunchOption_othervr"						"Launch %game% in Oculus VR Mode"
+"Steam_LaunchOption_osvr"						"Launch %game% in OSVR Mode"
 "Steam_LaunchOption_openvroverlay"					"Launch %game% as Steam VR Overlay"
 "Steam_LaunchOption_Server"						"Launch Dedicated Server"
 "Steam_LaunchOption_Editor"						"Launch Game Editor"
@@ -2837,6 +2838,8 @@ Make one now by emailing a gift to someone you know."
 
 "Steam_GamesDialog_RightClick_AddToFavorites"			"Add to Favorites"
 "Steam_GamesDialog_RightClick_RemoveFromFavorites"	"Remove from Favorites"
+
+"Steam_GamesDialog_RightClick_RemoveFromHidden"	"Remove from Hidden"
 
 "Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Add to Family Games"
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Remove from Family Games"

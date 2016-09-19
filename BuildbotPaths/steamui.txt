@@ -375,6 +375,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/oobe/oobewizard.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/actionsetindicatorpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayasyncnotification.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaybasepanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaybasepanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.h
