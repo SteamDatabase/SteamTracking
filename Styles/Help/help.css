@@ -715,7 +715,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	border: solid 1px;
 	border-color: #66778b #323f51 #323f51 #66778b;
 
-	font-size: 16px;
+	font-size: 15px;
 	color: white;
 
 	background-color: #445468;
@@ -1799,7 +1799,8 @@ a.guide_row {
 
 .help_permanentlyremove_details .bold
 {
-	color: white;
+	color: #67c5f1;
+	font-weight: 500;
 }
 
 .help_vacorgameban_details,
@@ -3526,6 +3527,10 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 	.help_request_footerbox.update_options a {
 	}
+}
+
+.attachment_upload_legacy{
+	margin-bottom: 6px;
 }
 
 .help_request_attachment_upload.formdata .attachment_upload_legacy {
