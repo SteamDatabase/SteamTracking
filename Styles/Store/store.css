@@ -294,7 +294,7 @@ body.v6.explore .page_header_ctn {
 }
 
 .breadcrumbs {
-    color: #61686d;
+    color: #56707f;
     font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -2533,7 +2533,7 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-	background: -webkit-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: linear-gradient( to right, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);}
+	background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););background: linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););}
 
 .store_capsule:not(:last-child) {
 	margin-right: 8px; /* Again, a default. Adjust to fit your container. */
@@ -2561,14 +2561,15 @@ a.cluster_capsule:hover {
 	margin: 0;
 	text-align: right;
 	padding: 5px;
-	height: 16px;
+	line-height: 17px;
 	font-size: 12px;
 }
 
 .store_capsule .discount_block > .discount_prices {
 	display: inline-block;
 	padding: 0 3px;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(20,31,44,0.4);
+	border-radius: 1px;
 }
 
 /* Add more padding when we have no discount */
@@ -2605,9 +2606,11 @@ a.cluster_capsule:hover {
 }
 
 .store_capsule_frame {
-	padding: 13px;
+	//padding: 11px 16px;
+	//margin: 20px -21px;
+	padding: 11px 13px;
 	margin: 20px -14px;
-	background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
+background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
 	border-bottom: none; /* Fixes a weird artifact where the bottom border is 0,0,0,0.1 or something? */
 	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
 }
@@ -2615,20 +2618,41 @@ a.cluster_capsule:hover {
 
 
 
-body.v6 .store_capsule_frame h2 {
+body.v6 .store_capsule_frame h2, body.v6 .store_capsule_frame h3 {
 	text-transform: uppercase;
 	color: #fff;
 	margin: 0 0 10px;
 	font-size: 17px;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 		}
+
+body.v6 .store_capsule_frame h2 span.right {
+	float: right;
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+body.v6 .store_capsule_frame h3 {
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
 body.v6 .store_capsule_frame h2 > a {
 	color: inherit;
 }
 
+body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
+	color: #abdaf4;
+	margin: 0 0 10px;
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-top: -6px;
+}
 
 @media screen and (max-width: 910px)
 {

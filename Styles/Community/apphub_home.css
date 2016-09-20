@@ -775,6 +775,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	bottom: 0px;
 }
 
+.reported_review_quality_dropdown {
+	width: 100px;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .leftcol,

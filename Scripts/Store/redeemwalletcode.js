@@ -177,7 +177,7 @@ function OnValidateWalletCodeFailure( detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
 			
 		switch ( detail )
 		{
@@ -198,7 +198,7 @@ function OnValidateWalletCodeFailure( detail )
 				break;
 
 			default:
-				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
 				break;
 		}
 		
@@ -507,12 +507,12 @@ function OnRedeemWalletCodeFailure( success, detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
 				break;
 
 			default:
@@ -535,7 +535,7 @@ function OnRedeemWalletCodeFailure( success, detail )
 						break;
 				
 					default:
-						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://support.steampowered.com/newticket.php?category=339">Steam Support</a> for further assistance.';
+						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
 						break;
 				}
 				break;

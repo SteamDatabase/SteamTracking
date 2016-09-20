@@ -2000,13 +2000,27 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 		});
 	}
 
+	// Bind arrows (if we have them)
+	$J('.arrow.left', this.$elContainer).click(function(){ instance.Advance(-1) });
+	$J('.arrow.right', this.$elContainer).click(function(){ instance.Advance() });
 
 };
 
 // Advances the carousel by one. Optionally pass in a specific index to advance to.
 CGenericCarousel.prototype.Advance = function( nNewIndex )
 {
-	if( nNewIndex !== undefined )
+	if( nNewIndex < 0 ) // Allow index of -1 to go backwards.
+	{
+		this.fnOnBlur(this.nIndex);
+		this.nIndex = ( this.nIndex + nNewIndex ) % this.nItems;
+
+		// JS doesn't wrap, so we need to fix it...
+		if( this.nIndex < 0 )
+			this.nIndex += this.nItems;
+
+		this.fnOnFocus(this.nIndex);
+	}
+	else if( nNewIndex !== undefined )
 	{
 		if( this.nIndex == nNewIndex )
 			return

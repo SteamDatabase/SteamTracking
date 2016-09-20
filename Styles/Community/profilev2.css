@@ -1595,6 +1595,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	line-height: 22px;
 }
 
+.currentTradeBan {
+	color: #95423a;
+}
+
 .profile_ban .profile_ban_info {
 	color: #828282;
 }

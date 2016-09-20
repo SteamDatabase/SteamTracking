@@ -377,6 +377,15 @@ function UserReviewVoteTag( id, tagID, elemID )
 	);
 }
 
+function UserReviewSetQuality( id )
+{
+	var quality = $J( "#ReviewQuality" + id ).val();
+	UserReview_Moderate_SetQuality( id, quality, 'https://store.steampowered.com/',
+		function( rgResults ) {
+		}
+	);
+}
+
 function UserReviewShowMore( id, context )
 {
 	$J('#ReviewContent'+context+id).parent().removeClass('partial');
@@ -493,6 +502,13 @@ function ShowFilteredReviews()
 	var context = $J( "#review_context" ).val();
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
 	SelectReviews( appid, context, defaultDayRange, true );
+}
+
+function ChangeReviewPurchaseTypeFilter()
+{
+	var purchaseType = $J('input[name="purchase_type"]:checked').val();
+	V_SetCookie( "review_purchase_type_filter", purchaseType, purchaseType == 'all' ? 1 : 14, "app/" );
+	ShowFilteredReviews();
 }
 
 function CollapseLongReviews()

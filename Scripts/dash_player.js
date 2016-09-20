@@ -5965,7 +5965,17 @@ CDASHPlayerUI.prototype.SetClosedCaptionLanguageInUI = function( strCode )
 		{
 			var strRestoreLang = 'None';
 			if ( strCode.toUpperCase() != CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
+			{
+				var ccRole = endsWith( strCode, CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
+				var strCode = strCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' );
+
 				strRestoreLang = CVTTCaptionLoader.GetDisplayNameFromCode( strCode );
+
+				if ( ccRole == CVTTCaptionLoader.s_Caption )
+				{
+					strRestoreLang += ' (CC)';
+				}
+			}
 
 			this.PanelSelectDisable( $J( '#representation_captions_language', this.m_elClosedCaptionsPanel ), false, strRestoreLang );
 		}

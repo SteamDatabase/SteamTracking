@@ -4,6 +4,9 @@
 	padding-top: 12px;
 	margin-bottom: 20px;
 }
+.header_area.curators {
+	padding-top: 7px;
+}
 
 .page_desc
 {
@@ -78,6 +81,46 @@
 	box-shadow: none;
 }
 
+/* tabs V7 */
+.tabarea_v7 {
+	height: 30px;
+}
+.tabarea_v7 .tabbar {
+	margin-bottom: 0px;
+	white-space: nowrap;
+}
+.tabarea_v7 .tab {
+	display: inline-block;
+	margin-right: 30px;
+	margin-top: 3px;
+	padding: 1px;
+	height: 28px;
+}
+.tabarea_v7 .tab .tab_content {
+	font-size: 12px;
+	color: #67c1f5;
+	line-height: 25px;
+	padding: 0;
+	cursor: pointer;
+	vertical-align: top;
+}
+.tabarea_v7 .tab .tab_content:hover {
+	color: #ffffff;
+}
+
+.tabarea_v7 .tab.active {
+	background: rgba( 102, 192, 244, 0.2 );
+	margin-top: 0;
+	box-shadow: none;
+	margin-right: 15px;
+	margin-left: -15px;
+	padding: 1px 15px;
+}
+.tabarea_v7 .tab.active:first-child {
+	margin-left: 0px;
+}
+
+
 /* filters */
 .tab_filter_ctn {
 	color: #779abd;
@@ -94,15 +137,7 @@
 	padding: 0 9px;
 	line-height: 24px;
 	margin: 0 4px 4px 0;
-	background: #67c1f5; /* Old browsers */
-	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	color: #ffffff;
+	background: -webkit-linear-gradient( top, #8aaf05 5%, #6a8704 95%);background: linear-gradient( to bottom, #8aaf05 5%, #6a8704 95%);	color: #ffffff;
 }
 .tab_filter_remove {
 	display: inline-block;
@@ -111,6 +146,13 @@
 	width: 12px;
 	height: 24px;
 	margin-left: 8px;
+}
+
+/* lists background */
+.curator_list_ctn {
+	background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);background: linear-gradient( to bottom, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);	margin-left: -13px;
+	margin-right: -13px;
+	padding: 14px;
 }
 
 /* right column */
@@ -125,10 +167,11 @@
 
 .curators_searchbox
 {
-	background-color: #222d3d;
+	background-color: rgba( 0, 0, 0, 0.4);
 	border-radius: 4px;
 	border: 1px solid black;
 	color: #9099a1;
+	box-shadow: 1px 1px 0px rgba( 103, 121, 147, 0.5 );
 	height: 30px;
 	position: relative;
 }
@@ -161,18 +204,19 @@
 
 			padding: 15px;
 	border-radius: 4px;
-	border: 1px solid #223a4e;
+	background: rgba( 0, 0, 0, 0.3 );
 }
 .explanation_title
 {
-	font-size: 18px;
-	color: #ffffff;
+	font-size: 15px;
+	color: #abdaf4;
 }
 
 .explanation_box p
 {
 	font-size: 13px;
 	padding-top: 10px;
+	color: #8f98a0;
 }
 .explanation_box .question
 {
@@ -258,9 +302,11 @@ a.steam_curator_row:hover
 .steam_curator_name
 {
 	padding-top: 10px;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 17px;
-    color: #c6d4df;
+    color: #fff;
+	padding-bottom: 4px;
+	letter-spacing: 1px;
 }
 .steam_curator_recommending
 {
@@ -273,7 +319,10 @@ a.steam_curator_row:hover
 .steam_curator_desc
 {
     font-size: 13px;
-	line-height: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			line-height: 16px;
     color: #8F98A0;
     overflow: hidden;
     max-width: 390px;
@@ -296,9 +345,7 @@ a.steam_curator_row:hover
 {
 	cursor: pointer;
 	float: left;
-	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: none;
 	margin-right: 4px;
 	border: solid 1px rgba( 0, 0, 0, 0 );
 }
@@ -313,6 +360,7 @@ a.steam_curator_row:hover
 	line-height: 35px;
 	color: #898989;
 	background-color: #545454;
+	box-shadow: none;
 }
 
 /* paging controls */
@@ -389,13 +437,20 @@ a.steam_curator_row:hover
 }
 
 .pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
-	border: 1px solid #333333;
+	border: 1px solid #263646;
 	background-color: transparent;
-	color: #333333;
+	color: #263646;
 	cursor: default;
 }
 
 a.pagelink:hover {
 	text-decoration: underline;
 	color: #ffffff;
+}
+
+.store_capsule_frame.recently_recommended {
+	margin-bottom: 30px;
+}
+body.v6 .page_content.curators.header {
+	margin-bottom: 35px;
 }
