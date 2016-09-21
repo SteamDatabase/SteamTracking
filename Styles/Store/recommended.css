@@ -2112,17 +2112,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.6;
 }
 
-
-.review_box .admin_controls_title {
-	color: red;
-	padding-bottom: 5px;
-}
-.review_box .admin_controls {
-	border: 1px solid white;
-	margin-top: 5px;
-	padding: 10px;
-}
-
 .review_box .noReviewsYetTitle {
 	font-size: 16px;
 	color: #67c1f5;
