@@ -342,6 +342,9 @@ CVideoWatch.prototype.GetVideoDetails = function()
 				case 27:
 					_watch.ShowVideoError( 'The viewing period for this video rental has expired.' );
 					break;
+				case 40:
+					_watch.ShowVideoError( 'Sorry, this video is not yet available to watch.' );
+					break;
 				case 82:
 					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
