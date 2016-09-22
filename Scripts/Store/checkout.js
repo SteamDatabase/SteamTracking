@@ -579,7 +579,7 @@ function InitializeTransaction()
 	 		paymentGID = $('stored_paypal_id').value;
 	 	}
 		
-		var bSaveBillingAddress = false;
+		var bSaveBillingAddress = g_bIsUpdateBillingInfoForm;
 		if ( $('save_my_address').checked && !BIsStoredCreditCard() && method.value != 'storedpaypal' )
 		{
 			if ( method.value == 'paypal' || method.value == 'updatepaypal' )
@@ -2579,13 +2579,13 @@ function UpdatePaymentInfoForm()
 						bShowAddressForm = true;
 			bShowCreditCardNumberExp = true;
 									bShowCVV = method.value != 'jcb' && !card_is_stored; 
-			bShowSaveMyAddress = true;
+			bShowSaveMyAddress = !g_bIsUpdateBillingInfoForm;
 		}
 		else if ( method.value == 'paypal' )
 		{
 						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
-			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials;
+			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials && !g_bIsUpdateBillingInfoForm;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 		}
@@ -3771,8 +3771,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 
 		if ( g_bRequiresShipping )
 		{
-			$('review_shipping_address_body').innerText = $('shipping_first_name').value+' '+$('shipping_last_name').value;
-			$('review_shipping_address_body').innerHTML += ' (<a href="javascript:SetTabEnabled(\'shipping_info\');">Change</a>)';
+			$('shipping_review_name').innerText = $('shipping_first_name').value+' '+$('shipping_last_name').value;
 			$('review_shipping_address_body').innerHTML += '<br>';
 			$('review_shipping_address_body').innerText += $('shipping_address').value;
 			if ( $('shipping_address_two').value.length > 0 )
