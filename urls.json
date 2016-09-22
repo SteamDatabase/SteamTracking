@@ -378,5 +378,6 @@
 "Random/People.html"                             : "http://www.valvesoftware.com/company/people.html",
 "Random/Security.html"                           : "http://valvesoftware.com/security/",
 "Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml?xml=1",
-"Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1"
+"Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1",
+"Random/SteamDevs.json"                          : "https://steamcommunity.com/groups/steam/memberslistxml?xml=1"
 }

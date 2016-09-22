@@ -204,7 +204,7 @@
 				unset( $Test, $Archive, $Hash, $Index );
 			}
 			// Convert group members to JSON
-			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' )
+			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' || $File === 'Random/SteamDevs.json' )
 			{
 				LibXML_Use_Internal_Errors( true );
 				
