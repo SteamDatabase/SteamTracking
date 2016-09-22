@@ -2805,12 +2805,35 @@ var g_bAutoSubmitPaymentInfo = false;
 function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 {
 	g_bAutoSubmitPaymentInfo = bAutoSubmitPaymentInfo;
+		var errorString = '';
+
+	
+
+	var rgBadFields = {};	// Shipping_VerifyAddressFields will fill this in, but it doesn't look like we use it anywhere
+
+	try
+	{
+		errorString = Shipping_VerifyAddressFields( rgBadFields );
+
+	} 
+	catch( e ) 
+	{
+		ReportCheckoutJSError( 'Failed validating shipping info form', e );
+	}
+
 	try 
 	{
-				$('error_display').innerHTML = '';
-		$('error_display').style.display = 'none';
-		
-		VerifyShippingAddress();
+				if ( errorString != '' )
+		{
+			DisplayErrorMessage( errorString );
+		}
+		else
+		{
+						$('error_display').innerHTML = '';
+			$('error_display').style.display = 'none';
+			
+			VerifyShippingAddress();
+		}
 	}
 	catch(e) 
 	{
@@ -2865,32 +2888,7 @@ function OnVerifyShippingAddressSuccess( result )
 {
 	try 
 	{
-				if ( result.eShippingAddressVerificationDetail != 0 )
-		{
-						SetTabEnabled( 'shipping_info' );
-			var error_text = 'We can not ship your order to the address that you\'ve provided.';
-			switch ( result.eShippingAddressVerificationDetail )
-			{
-				case 4:
-					error_text = 'We can not ship to the address you\'ve provided because parts of your address is missing or look invalid.';
-					break;
-
-				case 3:
-					error_text = 'We can not ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
-					break;
-
-				case 1:
-				case 5:
-					error_text = 'We can not ship your order to P.O. Boxes, APO, FPO, or DPO address that you\'ve provided.';
-					break;
-
-				case 2:
-					error_text = 'We can not ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
-					break;
-			}
-			DisplayErrorMessage( error_text );		
-		}
-		else if ( result.bValidAddress || result.bSuggestedAddressMatches )
+				if ( result.bValidAddress || result.bSuggestedAddressMatches )
 		{
 			ShippingAddressVerified( false );
 		}
