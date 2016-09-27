@@ -478,11 +478,15 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 CModal.prototype.SetMaxWidth = function ( nMaxWidth )
 {
 	this.m_nMaxWidth = nMaxWidth;
+	if ( this.m_bVisible )
+		this.AdjustSizing();
 };
 
 CModal.prototype.SetMaxHeight = function ( nMaxHeight )
 {
 	this.m_nMaxHeight = nMaxHeight;
+	if ( this.m_bVisible )
+		this.AdjustSizing();
 };
 
 CModal.prototype.AdjustSizing = function( duration )

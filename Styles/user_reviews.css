@@ -224,6 +224,12 @@ select {
 	display: none;
 }
 
+.rightcol .review_developer_response_container .rightcol,
+.rightcol .review_developer_response_container.multiple_listing.store .rightcol
+{
+	width: auto;
+}
+
 .review_developer_response_title
 {
 	padding-bottom: 5px;

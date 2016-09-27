@@ -2,13 +2,17 @@
 div.profile_page {
 	position: relative;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_bg.jpg' );
-	background-repeat: repeat-x;
-	background-color: #262627;
-
 	min-width: 950px;
 }
 
+body.profile_page,
+div.profile_page {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_bg.jpg' );
+	background-repeat: repeat-x;
+	background-color: #262627;
+}
+
+body.profile_page.private_profile,
 div.profile_page.private_profile {
 	background-image: none;
 }
@@ -17,6 +21,14 @@ div.profile_page.has_profile_background {
 	background-color: #000000;
 	background-position: center top;
 	background-repeat: no-repeat;
+}
+
+body.profile_page.has_profile_background {
+	background-color: #000000;
+}
+
+body.profile_page.flat_page #footer_spacer {
+	margin-top: 0;
 }
 
 /* this is a workaround for webkit centering bug with backgrounds that are larger than the window */
@@ -1593,6 +1605,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	margin-bottom: 32px;
 	color: #a94847;
 	line-height: 22px;
+}
+
+.ban_status_header {
+	text-align: center;
+	font-size: 16px;
 }
 
 .currentTradeBan {

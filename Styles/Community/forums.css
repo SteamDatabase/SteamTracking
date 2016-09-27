@@ -1156,9 +1156,14 @@ input.discussionSearchText:-moz-placeholder {
 	border: 2px solid #8ac33e;
 }
 
+.forum_pagesize_options,
+.forum_search_notice {
+
+	padding: 0 6px;
+}
+
 .forum_pagesize_options {
 	color: #828282;
-	padding: 0px 6px;
 	margin-top: 1px;
 	font-size: 12px;
 	margin-bottom: 15px;

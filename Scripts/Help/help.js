@@ -2159,7 +2159,8 @@ HelpRequestPage = {
 			}
 			else if ( data.error )
 			{
-				ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+				var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+				Modal.SetMaxWidth( 400 );
 			}
 			else if ( data.requires_validation )
 			{

@@ -150,16 +150,22 @@ function UserReview_Moderate( recommendationID, params, baseURL, callback )
 	params['sessionid'] = g_sessionID;
 	$J.post( baseURL + '/userreviews/moderate/' + recommendationID, params )
 		.done( function( results ) {
-			if ( results.success == 1 )
+			if ( results.success != 1 )
+			{
+				var dialog = ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+				dialog.done( function() {
+					if ( callback )
+					{
+						callback( results );
+					}
+				} );
+			}
+			else
 			{
 				if ( callback )
 				{
 					callback( results );
 				}
-			}
-			else
-			{
-				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
 			}
 		} );
 }

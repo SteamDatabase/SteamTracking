@@ -421,7 +421,10 @@ var CForum = Class.create( {
 				if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
 					$(strPagePrefix + 'btn_next').removeClassName('disabled');
 				else
+				{
 					$(strPagePrefix + 'btn_next').addClassName('disabled');
+					$J('#' + strPrefix + '_searchformore').show();
+				}
 
 				var elPageLinks = $(strPagePrefix + 'links');
 				elPageLinks.update('');

@@ -406,7 +406,7 @@ body.v6 h2 {
 	color: #67c1f5;
 }
 body.v6 h2 a {
-    color: #67c1f5;
+    color: #ffffff;
     text-decoration: none;
 }
 body.v6 h2 a:hover {
@@ -690,6 +690,12 @@ body.v6 .page_content_ctn.dark:last-child {
 	max-width: 712px;
 }
 
+.help_page_inside_title {
+	color: #5eafde;
+	font-size: 18px;
+	padding: 0px 0px 10px 0px;
+}
+
 #payment_header_title{
 	padding-top: 30px;
 }
@@ -789,6 +795,10 @@ body.v6 .page_content_ctn.dark:last-child {
 	color: darkgray;
 	font-size: 12px;
 	margin: 1px 0px 1px 0px;
+}
+
+.help_game_other_issues {
+	margin-top: 30px;
 }
 
 .help_wizard_product_info {
@@ -1811,6 +1821,14 @@ a.guide_row {
 	padding: 20px;
 	max-width: 712px;
 	margin-bottom: 20px;
+}
+
+.help_cdkey_issue_details.no_start_issue{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 20px;
+	max-width: 712px;
+	margin-bottom: 20px;
+	margin-top: 15px;
 }
 
 .help_tradeban_details
@@ -3140,8 +3158,9 @@ input.unlockcode_entry_input
 	border-radius: 5px;
 	margin: 7px 0;
 
+	overflow: hidden;
+
 	box-shadow: inset 1px 1px 3px #353535;
-	-webkit-box-shadow: inset 1px 1px 3px #353535;
 }
 
 .help_limiteduser_spend_progress_bar {
@@ -3188,6 +3207,7 @@ input.unlockcode_entry_input
 .show_create_help_request_form .create_help_request_form {
 	display: block;
 	opacity: 1.0;
+	margin-top: 20px;
 }
 
 .help_hide_for_create_request {
