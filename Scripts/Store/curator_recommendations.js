@@ -44,11 +44,9 @@ function FollowCurator( clanID, bFollow )
 
 function InitSearchFilters()
 {
-	var g_rgTabs = {};
-	var g_rgTabBaseParams = {
-	};
+	var g_rgTabs = [];
 	var g_rgTabParams = {};
-	var g_strActiveTab = null;
+	var g_activeSort = 'recent';
 
 	var fnOnFilterChange = function()
 	{
@@ -65,6 +63,8 @@ function InitSearchFilters()
 				}
 			}
 		}
+
+		rgParams['sort'] = g_activeSort;
 
 		$J('#' + g_oRecommendations.m_strElementPrefix + 'Rows').empty();
 
@@ -131,6 +131,33 @@ function InitSearchFilters()
 			{
 				fnRemoveFilter( strParam, value, $Control );
 			}
+		});
+	});
+
+	$J('.tab').each( function() {
+		var $Control = $J(this);
+		var value = $Control.data('value');
+
+		g_rgTabs.push( $Control );
+
+		$Control.click( function() {
+			if ( !$Control.hasClass( 'active' ) )
+			{
+				g_activeSort = value;
+				$Control.addClass('active');
+
+				for (var i = 0; i < g_rgTabs.length; ++i)
+				{
+					var $OtherTab = g_rgTabs[i];
+					if ( $OtherTab != $Control )
+					{
+						$OtherTab.removeClass('active');
+					}
+				}
+
+				fnOnFilterChange();
+			}
+
 		});
 	});
 }

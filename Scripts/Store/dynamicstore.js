@@ -625,6 +625,11 @@ GDynamicStore = {
 		return GDynamicStore.s_rgOwnedApps[appid] ? true : false;
 	},
 
+	BIsPackageOwned: function( packageid )
+	{
+		return GDynamicStore.s_rgOwnedPackages[packageid] ? true : false;
+	},
+
 	BIsAppIgnored: function( appid )
 	{
 		return GDynamicStore.s_rgIgnoredApps[appid] ? true: false;

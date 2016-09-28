@@ -1957,9 +1957,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	white-space: nowrap;
 	overflow: hidden;
 	margin-top: 0px;
-	display: block;
 	margin-top: -4px;
 	margin-bottom: -1px;
+	display: inline-block;
 }
 .review_box .persona_name a, .recommendation_row .persona_name a {
 	color: #c1dbf4;
@@ -2165,6 +2165,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .rightcol .review_box.short {
 	opacity: 0.9;
+}
+
+.review_box .valve_only_stats {
+	color: red;
 }
 
 /* filter */

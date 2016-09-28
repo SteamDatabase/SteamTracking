@@ -765,7 +765,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1868,6 +1868,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the BitPay website.  After completing payment, please click the "Continue to Valve" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the bitpay window before the process is complete.';
 					}
 				}	
+				else if ( method.value == 'nodwin_cod' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash on delivery transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Start your payment through the Novaplay website by signing in and filling out the payment form.<br/><br/>Once you have completed that step, a representative from Novaplay will follow up with you to complete your purchase.';
+					}
+				}	
 			}
 			else
 			{
@@ -2625,7 +2635,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
 			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' || method.value == 'tenpay'
-			|| method.value == 'wechat' )
+			|| method.value == 'wechat' || method.value == 'nodwin_cod' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2868,24 +2878,24 @@ function OnVerifyShippingAddressSuccess( result )
 				if ( result.eShippingAddressVerificationDetail != 0 )
 		{
 						SetTabEnabled( 'shipping_info' );
-			var error_text = 'We can not ship your order to the address that you\'ve provided.';
+			var error_text = 'We cannot ship your order to the address that you\'ve provided.';
 			switch ( result.eShippingAddressVerificationDetail )
 			{
 				case 4:
-					error_text = 'We can not ship to the address you\'ve provided because parts of your address is missing or look invalid.';
+					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is missing or look invalid.';
 					break;
 
 				case 3:
-					error_text = 'We can not ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
+					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
 					break;
 
 				case 1:
 				case 5:
-					error_text = 'We can not ship your order to P.O. Boxes, APO, FPO, or DPO address that you\'ve provided.';
+					error_text = 'We cannot ship your order to P.O. Box, APO, FPO, or DPO address that you\'ve provided.';
 					break;
 
 				case 2:
-					error_text = 'We can not ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
+					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
 					break;
 			}
 			DisplayErrorMessage( error_text );		
@@ -3744,6 +3754,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Bitcoin';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}			
+			else if ( method.value == 'nodwin_cod' && providerPaymentMethod == 86 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cash on Delivery';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 		}
 		
 		$('review_address_body').innerText = $('first_name').value+' '+$('last_name').value;

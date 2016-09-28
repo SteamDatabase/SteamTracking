@@ -116,8 +116,9 @@ body
 .loading_throbber
 {
     margin: 0px auto -20px auto;
-    width: 62px;
+    width: 54px;
     height: 62px;
+    padding-left: 6px;
 }
 
 .loading_throbber .bar

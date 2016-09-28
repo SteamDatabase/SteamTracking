@@ -1063,11 +1063,11 @@ a#store_search_link img {
 
 
 .spotlight_weeklong_ctn {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/spotlight_weeklong_deals.jpg?v=1' ) top center no-repeat;
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/spotlight_weeklong_deals.jpg?v=2' ) top center no-repeat;
 	width: 304px;
 	height: 350px;
 	text-align: center;
-	margin: 1px;
+	margin: 0px;
 	border: 1px solid rgba(0, 0, 0, 0);
 	position: relative;
 	z-index: 1;
@@ -2533,7 +2533,8 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-	background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););background: linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););}
+background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););
+}
 
 .store_capsule:not(:last-child) {
 	margin-right: 8px; /* Again, a default. Adjust to fit your container. */
@@ -2606,11 +2607,9 @@ a.cluster_capsule:hover {
 }
 
 .store_capsule_frame {
-	//padding: 11px 16px;
-	//margin: 20px -21px;
-	padding: 11px 13px;
-	margin: 20px -14px;
-background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
+	padding: 11px 16px;
+	margin: 20px -17px;
+	background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
 	border-bottom: none; /* Fixes a weird artifact where the bottom border is 0,0,0,0.1 or something? */
 	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
 }

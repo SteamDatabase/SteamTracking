@@ -6,13 +6,13 @@
 .curator_avatar_image
 {
 	padding-top: 5px;
-	width: 90px;
-	margin-right: 2.1%;
+	width: 124px;
 	float: left;
 }
 .curator_avatar
 {
-	width: 90px;
+	width: 124px;
+	box-shadow: 0 0 3px #000000;
 }
 .curator_details
 {
@@ -22,9 +22,18 @@
 body.v6 h2.curator_name
 {
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
-		}
+			font-size: 36px;
+	background: rgba( 0, 0, 0, 0.3 );
+	margin-top: 5px;
+}
+
+body.v6 h2.curator_name a {
+	color: #fff;
+	text-shadow: none;
+	padding-left: 14px;
+}
 
 .page_desc {
     font-size: 16px;
@@ -32,7 +41,8 @@ body.v6 h2.curator_name
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-top: 5px;
+			margin-top: 8px;
+	padding-left: 14px;
 }
 .curator_desc
 {
@@ -41,12 +51,17 @@ body.v6 h2.curator_name
 		font-weight: 300; /* light */
 
 			font-style: italic;
+	line-height: 23px;
+	max-width: 600px;
+	display: inline-block;
 }
 
 .follow_controls
 {
 	float: right;
 	text-align: right;
+	padding-top: 11px;
+	padding-right: 5px;
 }
 
 .follow_btn
@@ -57,6 +72,9 @@ body.v6 h2.curator_name
 
 .follow_btn_stats {
 	overflow: hidden;
+	padding-top: 2px;
+	width: 110px;
+	float: right;
 }
 .following_img
 {
@@ -69,7 +87,7 @@ body.v6 h2.curator_name
 .num_followers
 {
 	font-size: 15px;
-	color: #407899;
+	color: #fff;
 }
 .num_followers_text
 {
@@ -179,6 +197,21 @@ body.v6 h2.curator_name
 
 /* recommendations list */
 
+.color_recommended b {
+	color: #66c0f4;
+	padding-right: 8px;
+}
+
+.color_not_recommended b {
+	color: #f49866;
+	padding-right: 8px;
+}
+
+.color_informational b {
+	color: #f5e8a3;
+	padding-right: 8px;
+}
+
 .recommendation_page
 {
 	padding: 5px;
@@ -190,19 +223,20 @@ body.v6 h2.curator_name
 
 .recommendation
 {
-	background-color: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 5px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	margin-bottom: 20px;
 	position: relative;
+	box-shadow: 0 0 3px #000000;
 }
 .recommendation .ds_flag
 {
-	top: 92px;
-	left: 16px;
+	top: 49px;
+	left: 0px;
 }
 .recommendation.no_stats .ds_flag
 {
-	top: 68px;
-	left: 16px;
+	top: 49px;
+	left: 0px;
 }
 
 @media screen and (max-width: 600px)
@@ -224,9 +258,7 @@ body.v6 h2.curator_name
 
 .recommendation_stats
 {
-	background-color: rgba( 0, 0, 0, 0.5 );
-	padding: 5px;
-	padding-left: 10px;
+	padding: 14px 14px 0px 14px;
 	color: #62696e;
     font-size: 11px;
 }
@@ -235,11 +267,16 @@ body.v6 h2.curator_name
 	padding-left: 10px;
 	float: right;
 }
+
+.recommendation_type_ctn img {
+	padding-right: 5px;
+}
+
 .recommendation_details
 {
 	position: relative;
-	padding: 16px;
 	overflow: hidden;
+
 }
 .recommendation_leftcol
 {
@@ -247,12 +284,13 @@ body.v6 h2.curator_name
 	height: auto;
 	width: 231px;
 	max-width: 40%;
-	padding-right: 10px;
-}
+background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););background: linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,1) 95%););}
 .recommendation_rightcol
 {
 	position: relative;
 	overflow: hidden;
+	height: 134px;
+
 }
 
 @media screen and (max-width: 440px)
@@ -272,6 +310,17 @@ body.v6 h2.curator_name
 .recommendation_app_price
 {
 	float: right;
+	padding: 2px 5px 5px;
+}
+
+.recommendation_app_price .discount_block > .discount_prices {
+	display: inline-block;
+	padding: 0 3px;
+	background-color: rgba(20,31,44,0.4);
+	border-radius: 1px;
+}
+.recommendation_app_price .discount_block .discount_final_price {
+	color: 	#acdbf5;
 }
 .recommendation_name
 {
@@ -281,19 +330,26 @@ body.v6 h2.curator_name
 
 			padding-bottom: 2px;
 }
+.recommendation_name img {
+	padding-right: 4px;
+}
 .recommendation_desc
 {
-	font-size: 13px;
-    color: #8f98a0;
+	font-size: 14px;
+	line-height: 17px;
+    color: #c6d4df;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 			font-style: italic;
+	padding: 14px;
 }
 .recommendation_readmore
 {
-	padding-top: 20px;
-	bottom: 20px;
+	padding: 0px 0px 7px 14px;
+	bottom: 0px;
+	position: absolute;
+	font-size: 11px;
 }
 
 /* filters */

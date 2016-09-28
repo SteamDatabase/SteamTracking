@@ -196,7 +196,12 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 
 	CDiscoveryQueue.sm_bCustomizeDialogVisible = true;
 
-	$J.get( 'https://store.steampowered.com/explore/discoveryqueuesettings' )
+	// pass the queue type if it's set so we guarentee which queue to get the settings from
+	var strSettingsURL = 'https://store.steampowered.com/explore/discoveryqueuesettings/';
+	if ( typeof g_eDiscoveryQueueType !== "undefined" )
+		strSettingsURL += g_eDiscoveryQueueType;
+
+	$J.get( strSettingsURL )
 	.done( function(data) {
 		var rgGlobalPopularTags = data.popular_tags;
 
@@ -287,6 +292,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 			var oSettings = {};
 			oSettings.exclude_early_access = !$SettingsContent.find('#dqs_exclude_early_access_inverted').prop('checked');
 			oSettings.exclude_software = !$SettingsContent.find('#dqs_exclude_software_inverted').prop('checked');
+			oSettings.exclude_videos = !$SettingsContent.find('#dqs_exclude_videos_inverted').prop('checked');
 			oSettings.include_coming_soon = $SettingsContent.find('#dqs_include_comingsoon').prop('checked');
 
 			oSettings.excluded_tagids = [];
@@ -294,10 +300,16 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 				oSettings.excluded_tagids.push( $J(this).data('tagid') );
 			});
 
+			// assume discovery queue unless it's been set
+			var nQueueType = 0;
+			if ( typeof g_eDiscoveryQueueType !== "undefined" )
+				nQueueType = g_eDiscoveryQueueType;
+
 			$J.post( 'https://store.steampowered.com/explore/updatediscoveryqueuesettings',{
 				sessionid: g_sessionID,
 				settings: V_ToJSON(oSettings),
-				queuetype: 0			} ).done( function( data ) {
+				queuetype: nQueueType,
+			} ).done( function( data ) {
 				fnOnSettingsChanged( data );
 			}).fail( function() {
 				ShowAlertDialog( 'Customize Your Discovery Queue', 'There was a problem saving your preferences.  Please try again later.' );

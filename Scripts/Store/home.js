@@ -6,7 +6,7 @@ function OnHomepageException(e)
 
 GHomepage = {
 	oSettings: {},
-	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null}},
+	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"home":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":null,"software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":null,"video":true,"localized":null,"virtual_reality":true,"recommended_by_curators":null,"hidden":null}},
 
 	oDisplayListsRaw: {},
 	oDisplayLists: {},
@@ -23,6 +23,7 @@ GHomepage = {
 
 	bUserDataReady: false,
 	bStaticDataReady: false,
+	bLoadedActiveData: false,
 
 	MainCapCluster: null,
 
@@ -60,6 +61,8 @@ GHomepage = {
 		}
 
 		InitHorizontalAutoSliders();
+
+		
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -121,11 +124,51 @@ GHomepage = {
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
+			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
 		if ( GHomepage.bUserDataReady )
 			GHomepage.OnHomeDataReady();
+	},
+
+	// Call this when we think the user is "active" (ie more than just loading the page as a bookmark/defauly or
+	// clicking straight out)
+	OnHomeActivate: function()
+	{
+		if( this.bLoadedActiveData )
+			return;
+
+		this.bLoadedActiveData = true;
+
+		try {
+			if ( g_AccountID != 0 )
+			{
+				$J.ajax( {
+					url: "http:\/\/store.steampowered.com\/default\/home_additional\/",
+					data: {
+
+					},
+					dataType: 'json',
+					type: 'GET'
+				}).done(function( data ) {
+
+					GStoreItemData.AddStoreItemData( data.item_data, {} )
+
+					GHomepage.oAdditionalData = data;
+					GHomepage.OnAdditionalDataReady();
+
+				});
+			}
+
+		} catch(e) { OnHomepageException(e); }
+	},
+
+	OnAdditionalDataReady: function()
+	{
+		try {
+			GHomepage.RenderRecentlyUpdatedV2();
+		} catch( e ) { OnHomepageException(e); }
 	},
 
 	OnHomeDataReady: function()
@@ -172,6 +215,11 @@ GHomepage = {
 
 		// MAIN CLUSTER
 		try {
+			GHomepage.RenderRecentApps();
+		} catch( e ) { OnHomepageException(e); }
+
+		// MAIN CLUSTER
+		try {
 			if ( bHaveUser )
 			{
 				HomeSettings = new CHomeSettings( 'main_cluster', GHomepage.RenderMainCluster );
@@ -200,6 +248,11 @@ GHomepage = {
 			GHomepage.RenderPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
+		// Recommended
+		try {
+			GHomepage.RenderRecommendedBlock();
+		} catch( e ) { OnHomepageException(e); }
+
 
 		// RECENTLY UPDATED
 		try {
@@ -213,12 +266,17 @@ GHomepage = {
 				GHomepage.oDisplayListsRaw.other_update_round, false
 			);
 			GHomepage.RenderRecentlyUpdated();
-			GHomepage.RenderRecentlyUpdatedV2();
+
 		} catch( e ) { OnHomepageException(e); }
 
 		// Top sellers (Not logged in)
 		try {
 			GHomepage.RenderTopSellersArea();
+		} catch( e ) { OnHomepageException(e); }
+
+		// Marketing Messages
+		try {
+			GHomepage.RenderMarketingMessages();
 		} catch( e ) { OnHomepageException(e); }
 
 		// CURATORS
@@ -273,6 +331,41 @@ GHomepage = {
 		return rgItem.appid ? 'a' + rgItem.appid : 'p' + rgItem.packageid;
 	},
 
+	RenderRecentApps: function()
+	{
+		var strRecentApps = WebStorage.GetCookie('recentapps');
+		if( !strRecentApps )
+			return;
+
+		var rgApps = Object.keys( strRecentApps );
+
+		if( rgApps && rgApps.length > 0)
+		{
+			for( var i=0; i<rgApps.length; i++ )
+			{
+				var unAppID = rgApps[i];
+
+				var params = {'class': 'gutter_item'};
+				var rgItemData = GStoreItemData.GetCapParams( 'gutter_recent', unAppID, 0, params );
+
+				if( !rgItemData || !rgItemData.name )
+					continue;
+
+				var eleRow = $J('<a/>', params ).text( rgItemData.name );
+
+				$J('#home_gutter_recentlyviewed .gutter_items').append(eleRow);
+			}
+		}
+
+		if( $J('#home_gutter_recentlyviewed .gutter_items').children().length > 0 )
+		{
+			var eleContainer = $J('#home_gutter_recentlyviewed');
+			eleContainer.show();
+			eleContainer.InstrumentLinks();
+			//GDynamicStore.DecorateDynamicItems( eleContainer );
+		}
+	},
+
 	RenderMainCluster: function()
 	{
 		for ( var i = 0; i < GHomepage.oDisplayLists.popular_new.length; i++ )
@@ -320,7 +413,7 @@ GHomepage = {
 		);
 
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'main_cluster', 2, 15
+			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false }
 		);
 
 		if ( GHomepage.bShuffleInMainLegacy )
@@ -350,6 +443,7 @@ GHomepage = {
 			} );
 	},
 
+	// Unused
 	RenderNewOnSteam: function()
 	{
 		var rgNewOnSteamNoMainCap = [];
@@ -389,21 +483,23 @@ GHomepage = {
 
 	RenderFriendsRecentlyPurchased: function()
 	{
-		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
+		var $RecentlyUpdated =  $J('.home_smallcap_area.friends_recently_purchased .home_smallcaps' ).empty();
+
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false }
 		);
 
-		var $RecentlyUpdated =  $J('.home_smallcap_area.friends_recently_purchased .home_smallcaps' ).empty();
-		for( var j=0; j<GHomepage.rgUserNewsFriendsPurchased.length; j++ )
+		for( var j=0; j<rgCapsules.length; j++ )
 		{
 
-			var oItem = GHomepage.rgUserNewsFriendsPurchased[ j ];
+			var oItem = rgCapsules[ j ];
 			var nAppId = oItem.appid;
 			var $CapCtn = GHomepage.BuildHomePageGenericCap( 'friends_recently_purchased', nAppId, 0 );
 			var $FriendsCtn = $J('<div class="friends_container" />');
 			$CapCtn.append($FriendsCtn);
 
-			var nAdditionalFriends = 0
+			var nAdditionalFriends = 0;
 
 			var $AvatarsCtn = $J('<div class="avatars" />');
 			$FriendsCtn.append($AvatarsCtn);
@@ -428,7 +524,8 @@ GHomepage = {
 		}
 		$RecentlyUpdated.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 
-		if ( rgFeaturedUpdateTitles.length > 3 )
+
+		if ( $RecentlyUpdated.children().length > 3 )
 		{
 			$J('.friends_recently_purchased').show();
 			$RecentlyUpdated.InstrumentLinks();
@@ -441,6 +538,7 @@ GHomepage = {
 		}
 	},
 
+	// Unused
 	RenderPopularNewOnSteam: function()
 	{
 		var rgNewOnSteamNoMainCap = [];
@@ -452,7 +550,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 3, 3
+			rgNewOnSteamNoMainCap, 'home', 3, 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_headercaps' );
@@ -479,6 +577,7 @@ GHomepage = {
 	},
 
 
+	// Unused
 	RenderRecentlyUpdated: function()
 	{
 		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
@@ -522,14 +621,15 @@ GHomepage = {
 
 	RenderRecentlyUpdatedV2: function()
 	{
-		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated_v2', 3, 9
+		var $RecentlyUpdated =  $J('.recently_updated .store_capsule_container' ).empty();
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.oAdditionalData.recent_updates, 'home', 4, 8
 		);
 
-		var $RecentlyUpdated =  $J('.recently_updated .store_capsule_container' ).empty();
-		for( var i = 0; i < rgFeaturedUpdateTitles.length; i++ )
+		for( var i = 0; i < rgCapsules.length; i++ )
 		{
-			var oItem = rgFeaturedUpdateTitles[i];
+			var oItem = rgCapsules[i];
 
 			var $CapCtn = GHomepage.BuildHomePageGenericCap( 'recently_updated', oItem.appid, 0 );
 			$CapCtn.append( $J('<div/>', {'class': 'recently_updated_desc' }).text( oItem.description ) );
@@ -546,17 +646,39 @@ GHomepage = {
 			$RecentlyUpdated.append( $CapCtn );
 		}
 
-		$RecentlyUpdated.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-
-		if ( rgFeaturedUpdateTitles.length )
+		if ( $RecentlyUpdated.children().length > 3 )
 		{
-			$J('.recently_updated .store_capsule_container').show();
+			$J('.recently_updated_block').show();
 			$RecentlyUpdated.InstrumentLinks();
 			GDynamicStore.DecorateDynamicItems( $RecentlyUpdated );
+			$RecentlyUpdated.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 		}
-		else
+
+	},
+
+	RenderRecommendedBlock: function()
+	{
+		var $Recommended =  $J('.home_specials_ctn.recommended' );
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false }
+		);
+
+		for( var i = 0; i < rgCapsules.length; i++ )
 		{
-			$J('.home_smallcap_area.recently_updated').hide();
+			var oItem = rgCapsules[i];
+			var $CapCtn = GHomepage.BuildHomePageGenericCap( 'home_recommended', oItem.appid, 0 );
+
+			$Recommended.append( $CapCtn );
+		}
+
+		if ( $Recommended.children().length == 5 ) // 4 caps + h2
+		{
+			$J('.home_specials_ctn.specials').hide();
+			$Recommended.show();
+			$Recommended.InstrumentLinks();
+			GDynamicStore.DecorateDynamicItems( $Recommended );
+			$Recommended.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 		}
 
 	},
@@ -564,7 +686,7 @@ GHomepage = {
 	RenderTopSellersArea: function()
 	{
 		var rgTopSellers = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_sellers, 'top_sellers_nologin', 2, 2
+			GHomepage.oDisplayLists.top_sellers, 'home', 2, 2
 		);
 
 		var $TopSellersCtn =  $J('.home_top_sellers_area .store_capsule_container' ).empty();
@@ -724,11 +846,25 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay )
+	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
 	{
 
 		var Settings = GHomepage.oSettings[strSettingsName] || {};
 		var ApplicableSettings = GHomepage.oApplicableSettings[strSettingsName] || {};
+
+		// Allow sections to have additional, section-specific settings. We'll use jQuery to shallow copy the settings
+		// object so we don't pollute future calls.
+		if( rgAdditionalSettings )
+		{
+			Settings = jQuery.extend({}, Settings, rgAdditionalSettings);
+
+			// Ensure our feature is turned on as an applicable setting
+			for( var strKey in rgAdditionalSettings )
+				rgAdditionalSettings[strKey] = true;
+
+			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
+
+		}
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = cMinItemsToDisplay;
@@ -905,6 +1041,84 @@ GHomepage = {
 			$Spotlight
 		);
 		return $SpotlightCtn;
+	},
+
+	RenderMarketingMessages: function(  )
+	{
+		var rgMessages = GHomepage.rgMarketingMessages;
+		var rgFilteredMessages = [];
+
+		if( !rgMessages || !rgMessages.length )
+			return;
+
+
+		var $MessagesContainer = $J('.marketingmessage_area .home_page_content');
+
+		// Filter messages
+		for( var i=0; i<rgMessages.length; i++)
+		{
+			var message = rgMessages[i];
+
+			if( message.must_own_appid && !GDynamicStore.BIsAppOwned( message.must_own_appid ) )
+				continue;
+
+			if( message.must_not_own_appid && GDynamicStore.BIsAppOwned( message.must_own_appid ) )
+				continue;
+
+			if( message.must_own_packageid && !GDynamicStore.BIsPackageOwned( message.must_own_packageid ) )
+				continue;
+
+			if( message.must_not_own_packageid && GDynamicStore.BIsPackageOwned( message.must_not_own_packageid ) )
+				continue;
+
+			// We don't have this data handy so fall back to ownership for now
+			if( message.must_have_launched_appid && !GDynamicStore.BIsAppOwned( message.must_have_launched_appid ) )
+				continue;
+
+
+			rgFilteredMessages.push(message);
+		}
+
+		var rgLayout = [ '',''];
+
+		//if( rgFilteredMessages.length > 6 )
+			rgLayout = [ '','small','small','small'
+						  ,'small','small','small'];
+		//else if ( rgFilteredMessages.length > 3 )
+		//	rgLayout = [ 'medium','medium','small','small' ];
+
+
+		for( var i=0; i<rgFilteredMessages.length; i++)
+		{
+			var message = rgFilteredMessages[i];
+			var params = {};
+
+			if( i >= rgLayout.length )
+				break;
+
+			var rgItemData = GStoreItemData.GetCapParams( 'marketingmessage', message.appid, message.packageid, params );
+
+
+
+			var $MessageCtn = $J('<a/>', {'class': 'home_marketing_message'}).attr('href', message.url);
+			$MessageCtn.addClass(rgLayout[i]);
+
+			var $MessageImg = $J('<span/>').css({'background-image': 'url('+message.image+')' });
+
+
+			$MessageCtn.append( $MessageImg );
+			if( rgItemData )
+				$MessageCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
+			else
+				$MessageCtn.append( $J('<div/>').addClass('discount_block discount_block_inline').append( $J('<div/>').addClass('discount_final_price').html( message.title ? message.title : '&nbsp;' ) ) );
+
+			$MessagesContainer.append( $MessageCtn );
+
+
+		}
+
+		$J('.marketingmessage_area').show();
+
 	}
 };
 
@@ -1195,7 +1409,7 @@ GSteamCurators = {
 		// app image anchor
 		var $ImageCapsule= $J ('<div/>'  );
 		$ImageCapsule.addClass('capsule');
-		var $Image = $J('<img/>', { src: rgItemExtemdedData.maincap } );
+		var $Image = $J('<img/>', { src: rgItemExtemdedData.maincap ? rgItemExtemdedData.maincap : rgItemExtemdedData.header  } );
 		$ImageCapsule.append( $Image );
 		$Item.append( $ImageCapsule );
 
@@ -1228,7 +1442,7 @@ GSteamCurators = {
 
 			// Now the text blurb
 			var $CuratorTextCtn = $J('<div/>',{class:'blurb'});
-			var $CuratorText = $J('<span/>').text( curator.curator_description );
+			var $CuratorText = $J('<span/>').text( rgItemExtemdedData.blurb  );
 
 			$CuratorTextCtn.append( $CuratorText );
 
@@ -1249,7 +1463,6 @@ GSteamCurators = {
 		$Item.append( $J('<div/>', {'class': 'steam_curator_name' } ).text( curator.name ) );
 		if ( curator.curator_description )
 		{
-			$Item.append( $J('<div/>', {'class': 'steam_curator_featuring_desc' } ).text( 'Featuring:' ) );
 			$Item.append( $J('<div/>', {'class': 'steam_curator_desc' } ).text( curator.curator_description ) );
 		}
 		$Item.append( $J('<div/>', {'style': 'clear: left;' } ) );
@@ -1273,7 +1486,7 @@ GSteamCurators = {
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
 			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'curators', 9
+				apps, 'curators', 5, 9, { games_already_in_library: false }
 			);
 
 			if ( rgRecommendedApps.length >= 5 )

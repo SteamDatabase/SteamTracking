@@ -511,7 +511,12 @@ CVideoWatch.prototype.GetSuggestedVideo = function()
 		{
 			if ( data.length != 0 )
 			{
-				var strSuggestTitle = data.owns_app ? 'Next' : 'Next (Not Owned)';
+				var strSuggestTitle = 'Next (Not Owned)';
+				if ( data.owns_app == 1 )
+					strSuggestTitle = 'Next';
+				else if ( data.owns_app == 40 )
+					strSuggestTitle = 'Next (Not Yet Available)';
+
 				var strGroupTitle = data.grouptitle;
 				var strVideoTitle = data.videotitle;
 				var oData = { 'appid': data.appid };

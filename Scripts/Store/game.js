@@ -403,6 +403,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 	var reviewType = $J('input[name="review_type"]:checked').val();
 	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	var language = $J('input[name="review_language"]:checked').val();
+	var reviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -413,7 +414,8 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 		'filter' : context,
 		'language' : language,
 		'review_type' : reviewType,
-		'purchase_type' : purchaseType
+		'purchase_type' : purchaseType,
+		'review_beta_enabled' : reviewBetaEnabled
 	}).done( function( data ) {
 		if ( data.success == 1 )
 		{
@@ -508,6 +510,13 @@ function ChangeReviewPurchaseTypeFilter()
 {
 	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	V_SetCookie( "review_purchase_type_filter", purchaseType, purchaseType == 'all' ? 1 : 14, "app/" );
+	ShowFilteredReviews();
+}
+
+function ChangeReviewBetaFilter()
+{
+	var bReviewBetaEnabled = $J('#ReviewBetaCheckbox').is(':checked') ? 1 : 0;
+	V_SetCookie( "review_beta_enabled", bReviewBetaEnabled, 7, "app/" );
 	ShowFilteredReviews();
 }
 
