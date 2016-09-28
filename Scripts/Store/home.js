@@ -253,6 +253,11 @@ GHomepage = {
 			GHomepage.RenderRecommendedBlock();
 		} catch( e ) { OnHomepageException(e); }
 
+		// Popular new
+		try {
+			GHomepage.FilterPopularNewOnSteam();
+		} catch( e ) { OnHomepageException(e); }
+
 
 		// RECENTLY UPDATED
 		try {
@@ -412,10 +417,10 @@ GHomepage = {
 			rgDisplayListCombined, false
 		);
 
-		var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false }
+				var rgMainCaps = GHomepage.FilterItemsForDisplay(
+			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
-
+		
 		if ( GHomepage.bShuffleInMainLegacy )
 			rgMainCaps = v_shuffle( rgMainCaps );
 
@@ -680,6 +685,23 @@ GHomepage = {
 			GDynamicStore.DecorateDynamicItems( $Recommended );
 			$Recommended.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 		}
+
+	},
+	FilterPopularNewOnSteam: function()
+	{
+		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
+
+		console.log($PopularNewCapsules.children());
+
+		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		{
+			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			var nAppId = $capsule.data('ds-appid');
+
+			if( GDynamicStore.BIsAppIgnored(nAppId) )
+				$capsule.hide();
+		}
+
 
 	},
 
@@ -1409,7 +1431,11 @@ GSteamCurators = {
 		// app image anchor
 		var $ImageCapsule= $J ('<div/>'  );
 		$ImageCapsule.addClass('capsule');
-		var $Image = $J('<img/>', { src: rgItemExtemdedData.maincap ? rgItemExtemdedData.maincap : rgItemExtemdedData.header  } );
+		var $Image = $J('<img/>', { src: rgItemExtemdedData.maincap } );
+		$Image.bind('error', function(){
+			$Image.attr('src', rgItemData.headerv5  );
+			$Image.css({'width': '470px'  });
+		});
 		$ImageCapsule.append( $Image );
 		$Item.append( $ImageCapsule );
 
@@ -1474,6 +1500,9 @@ GSteamCurators = {
 	{
 		$J('.steam_curators_ctn').hide();
 		$J('.apps_recommended_by_curators_ctn').hide();
+
+		if( $J('#apps_recommended_by_curators').children().length > 0 )
+			return;
 
 		$J('#apps_recommended_by_curators').empty();
 		$J('#steam_curators').children('.steam_curator' ).remove();
