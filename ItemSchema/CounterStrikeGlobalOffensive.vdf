@@ -11300,6 +11300,9 @@
 				"flinch velocity modifier small"		"0.050000"
 				"recovery transition start bullet"		"3"
 				"recovery transition end bullet"		"10"
+				"inaccuracy jump initial"		"250.000000"
+				"inaccuracy jump"		"500.000000"
+				"inaccuracy jump alt"		"500.000000"
 			}
 		}
 		"primary"
@@ -11317,6 +11320,9 @@
 				"stattrak model"		"models/weapons/stattrack.mdl"
 				"recovery transition start bullet"		"2"
 				"recovery transition end bullet"		"5"
+				"inaccuracy jump initial"		"250.000000"
+				"inaccuracy jump"		"500.000000"
+				"inaccuracy jump alt"		"500.000000"
 			}
 		}
 		"smg"
@@ -11451,6 +11457,8 @@
 			{
 				"magazine model"		"models/weapons/w_pist_deagle_mag.mdl"
 				"primary reserve ammo max"		"35"
+				"inaccuracy jump initial"		"217.270004"
+				"inaccuracy jump"		"371.549988"
 			}
 			"inventory_image_data"
 			{
@@ -11529,6 +11537,9 @@
 			{
 				"icon display model"		"models/weapons/w_pist_elite_icon.mdl"
 				"buymenu display model"		"models/weapons/w_pist_elite_buymenu.mdl"
+				"inaccuracy jump initial"		"95.860001"
+				"inaccuracy jump"		"158.419998"
+				"inaccuracy jump alt"		"158.419998"
 				"primary reserve ammo max"		"120"
 				"magazine model"		"models/weapons/w_pist_elite_mag.mdl"
 			}
@@ -11601,6 +11612,8 @@
 			{
 				"magazine model"		"models/weapons/w_pist_fiveseven_mag.mdl"
 				"primary reserve ammo max"		"100"
+				"inaccuracy jump initial"		"99.879997"
+				"inaccuracy jump"		"89.699997"
 			}
 			"inventory_image_data"
 			{
@@ -11690,6 +11703,9 @@
 				"primary reserve ammo max"		"120"
 				"tracer frequency alt"		"1"
 				"magazine model"		"models/weapons/w_pist_glock18_mag.mdl"
+				"inaccuracy jump initial"		"96.620003"
+				"inaccuracy jump"		"87.870003"
+				"inaccuracy jump alt"		"87.870003"
 			}
 			"paint_data"
 			{
@@ -11755,6 +11771,9 @@
 				"magazine model"		"models/weapons/w_pist_hkp2000_mag.mdl"
 				"uid model"		"models/weapons/uid_small.mdl"
 				"primary reserve ammo max"		"52"
+				"inaccuracy jump initial"		"96.599998"
+				"inaccuracy jump"		"94.480003"
+				"inaccuracy jump alt"		"94.480003"
 			}
 			"inventory_image_data"
 			{
@@ -11844,6 +11863,8 @@
 			{
 				"magazine model"		"models/weapons/w_pist_p250_mag.mdl"
 				"primary reserve ammo max"		"26"
+				"inaccuracy jump initial"		"96.620003"
+				"inaccuracy jump"		"92.959999"
 			}
 			"inventory_image_data"
 			{
@@ -11898,6 +11919,8 @@
 				"inaccuracy stand"		"10.430000"
 				"inaccuracy fire"		"25.000000"
 				"inaccuracy crouch"		"7.600000"
+				"inaccuracy jump initial"		"96.620003"
+				"inaccuracy jump"		"92.959999"
 				"kill award"		"100"
 				"primary reserve ammo max"		"12"
 			}
@@ -12043,6 +12066,8 @@
 			{
 				"primary reserve ammo max"		"120"
 				"magazine model"		"models/weapons/w_pist_tec9_mag.mdl"
+				"inaccuracy jump initial"		"71.169998"
+				"inaccuracy jump"		"79.779999"
 			}
 		}
 		"weapon_bizon_prefab"
@@ -12091,6 +12116,8 @@
 			{
 				"primary reserve ammo max"		"120"
 				"magazine model"		"models/weapons/w_smg_bizon_mag.mdl"
+				"inaccuracy jump initial"		"45.900002"
+				"inaccuracy jump"		"33.470001"
 			}
 			"inventory_image_data"
 			{
@@ -12161,6 +12188,8 @@
 			{
 				"magazine model"		"models/weapons/w_smg_mac10_mag.mdl"
 				"primary reserve ammo max"		"100"
+				"inaccuracy jump initial"		"34.990002"
+				"inaccuracy jump"		"33.299999"
 			}
 			"inventory_image_data"
 			{
@@ -12232,6 +12261,8 @@
 			{
 				"magazine model"		"models/weapons/w_smg_mp7_mag.mdl"
 				"primary reserve ammo max"		"120"
+				"inaccuracy jump initial"		"55.410000"
+				"inaccuracy jump"		"59.599998"
 			}
 			"inventory_image_data"
 			{
@@ -12301,6 +12332,8 @@
 			{
 				"magazine model"		"models/weapons/w_smg_mp9_mag.mdl"
 				"primary reserve ammo max"		"120"
+				"inaccuracy jump initial"		"37.279999"
+				"inaccuracy jump"		"18.430000"
 			}
 			"inventory_image_data"
 			{
@@ -12379,6 +12412,8 @@
 			{
 				"magazine model"		"models/weapons/w_smg_p90_mag.mdl"
 				"primary reserve ammo max"		"100"
+				"inaccuracy jump initial"		"104.599998"
+				"inaccuracy jump"		"90.080002"
 			}
 			"inventory_image_data"
 			{
@@ -12465,6 +12500,8 @@
 			{
 				"magazine model"		"models/weapons/w_smg_ump45_mag.mdl"
 				"primary reserve ammo max"		"100"
+				"inaccuracy jump initial"		"47.209999"
+				"inaccuracy jump"		"37.250000"
 			}
 			"inventory_image_data"
 			{
@@ -12543,6 +12580,8 @@
 				"recovery time crouch final"		"0.419728"
 				"recovery time stand"		"0.368000"
 				"recovery time stand final"		"0.506000"
+				"inaccuracy jump initial"		"100.940002"
+				"inaccuracy jump"		"140.759995"
 			}
 			"inventory_image_data"
 			{
@@ -12623,6 +12662,9 @@
 				"aimsight lens mask"		"models/weapons/v_rif_aug_scopelensmask.mdl"
 				"primary reserve ammo max"		"90"
 				"tracer frequency alt"		"3"
+				"inaccuracy jump initial"		"101.559998"
+				"inaccuracy jump"		"105.989998"
+				"inaccuracy jump alt"		"105.989998"
 			}
 			"inventory_image_data"
 			{
@@ -12706,6 +12748,9 @@
 				"magazine model"		"models/weapons/w_rif_famas_mag.mdl"
 				"primary reserve ammo max"		"90"
 				"tracer frequency alt"		"3"
+				"inaccuracy jump initial"		"94.769997"
+				"inaccuracy jump"		"110.389999"
+				"inaccuracy jump alt"		"110.389999"
 			}
 			"inventory_image_data"
 			{
@@ -12777,6 +12822,9 @@
 			{
 				"magazine model"		"models/weapons/w_rif_galilar_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"inaccuracy jump initial"		"105.389999"
+				"inaccuracy jump"		"149.779999"
+				"inaccuracy jump alt"		"149.779999"
 			}
 			"inventory_image_data"
 			{
@@ -12851,6 +12899,9 @@
 				"recovery time stand"		"0.338941"
 				"recovery time stand final"		"0.466044"
 				"inaccuracy crouch"		"4.100000"
+				"inaccuracy jump initial"		"94.410004"
+				"inaccuracy jump"		"97.269997"
+				"inaccuracy jump alt"		"97.269997"
 			}
 			"inventory_image_data"
 			{
@@ -12935,6 +12986,9 @@
 				"aimsight lens mask"		"models/weapons/v_rif_sg556_scopelensmask.mdl"
 				"primary reserve ammo max"		"90"
 				"tracer frequency alt"		"3"
+				"inaccuracy jump initial"		"78.790001"
+				"inaccuracy jump"		"109.000000"
+				"inaccuracy jump alt"		"109.000000"
 			}
 			"inventory_image_data"
 			{
@@ -13033,6 +13087,9 @@
 				"unzoom after shot"		"1"
 				"primary reserve ammo max"		"30"
 				"icon display model"		"models/weapons/w_snip_awp_icon.mdl"
+				"inaccuracy jump initial"		"172.860001"
+				"inaccuracy jump"		"133.830002"
+				"inaccuracy jump alt"		"133.830002"
 			}
 			"paint_data"
 			{
@@ -13100,6 +13157,9 @@
 			{
 				"magazine model"		"models/weapons/w_snip_g3sg1_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"inaccuracy jump initial"		"107.690002"
+				"inaccuracy jump"		"153.770004"
+				"inaccuracy jump alt"		"153.770004"
 			}
 			"inventory_image_data"
 			{
@@ -13169,6 +13229,9 @@
 			{
 				"magazine model"		"models/weapons/w_snip_scar20_mag.mdl"
 				"primary reserve ammo max"		"90"
+				"inaccuracy jump initial"		"107.690002"
+				"inaccuracy jump"		"153.770004"
+				"inaccuracy jump alt"		"153.770004"
 			}
 			"inventory_image_data"
 			{
@@ -13249,6 +13312,9 @@
 				"magazine model"		"models/weapons/w_snip_ssg08_mag.mdl"
 				"unzoom after shot"		"1"
 				"primary reserve ammo max"		"90"
+				"inaccuracy jump initial"		"208.720001"
+				"inaccuracy jump"		"5.720000"
+				"inaccuracy jump alt"		"5.720000"
 			}
 			"paint_data"
 			{
@@ -13319,6 +13385,8 @@
 				"magazine model"		"models/weapons/w_shot_mag7_mag.mdl"
 				"primary reserve ammo max"		"32"
 				"is full auto"		"0"
+				"inaccuracy jump initial"		"52.639999"
+				"inaccuracy jump"		"50.090000"
 			}
 			"inventory_image_data"
 			{
@@ -13398,6 +13466,8 @@
 			{
 				"primary reserve ammo max"		"32"
 				"is full auto"		"0"
+				"inaccuracy jump initial"		"109.699997"
+				"inaccuracy jump"		"126.309998"
 			}
 			"inventory_image_data"
 			{
@@ -13484,6 +13554,8 @@
 			{
 				"primary reserve ammo max"		"32"
 				"is full auto"		"0"
+				"inaccuracy jump initial"		"50.119999"
+				"inaccuracy jump"		"57.700001"
 			}
 			"inventory_image_data"
 			{
@@ -13563,6 +13635,8 @@
 			{
 				"primary reserve ammo max"		"32"
 				"is full auto"		"1"
+				"inaccuracy jump initial"		"100.379997"
+				"inaccuracy jump"		"130.830002"
 			}
 			"inventory_image_data"
 			{
@@ -13649,6 +13723,8 @@
 			"attributes"
 			{
 				"primary reserve ammo max"		"200"
+				"inaccuracy jump initial"		"118.269997"
+				"inaccuracy jump"		"279.470001"
 			}
 			"inventory_image_data"
 			{
@@ -13719,6 +13795,8 @@
 			"attributes"
 			{
 				"primary reserve ammo max"		"200"
+				"inaccuracy jump initial"		"116.290001"
+				"inaccuracy jump"		"292.230011"
 			}
 			"inventory_image_data"
 			{
@@ -13923,7 +14001,8 @@
 				"spread"		"0.600000"
 				"inaccuracy crouch"		"3.680000"
 				"inaccuracy stand"		"4.900000"
-				"inaccuracy jump"		"0.656000"
+				"inaccuracy jump initial"		"96.769997"
+				"inaccuracy jump"		"99.699997"
 				"inaccuracy land"		"0.197000"
 				"inaccuracy ladder"		"110.994003"
 				"inaccuracy fire"		"12.000000"
@@ -13931,7 +14010,7 @@
 				"spread alt"		"0.500000"
 				"inaccuracy crouch alt"		"3.680000"
 				"inaccuracy stand alt"		"4.900000"
-				"inaccuracy jump alt"		"0.656000"
+				"inaccuracy jump alt"		"99.699997"
 				"inaccuracy land alt"		"0.197000"
 				"inaccuracy ladder alt"		"113.671997"
 				"inaccuracy fire alt"		"7.000000"
@@ -14041,6 +14120,9 @@
 				"inaccuracy fire"		"71.000000"
 				"inaccuracy fire alt"		"52.000000"
 				"inaccuracy move"		"13.870000"
+				"inaccuracy jump initial"		"96.599998"
+				"inaccuracy jump"		"94.480003"
+				"inaccuracy jump alt"		"94.480003"
 				"recoil magnitude"		"29"
 				"recoil magnitude alt"		"23"
 				"tracer frequency"		"1"
@@ -14146,7 +14228,8 @@
 				"spread"		"0.520000"
 				"inaccuracy crouch"		"1.000000"
 				"inaccuracy stand"		"2.000000"
-				"inaccuracy jump"		"0.240000"
+				"inaccuracy jump initial"		"18.650000"
+				"inaccuracy jump"		"53.230000"
 				"inaccuracy land"		"0.130000"
 				"inaccuracy ladder"		"12.000000"
 				"inaccuracy fire"		"50.000000"
@@ -14156,7 +14239,7 @@
 				"spread alt"		"68.000000"
 				"inaccuracy crouch alt"		"5.000000"
 				"inaccuracy stand alt"		"12.000000"
-				"inaccuracy jump alt"		"0.320000"
+				"inaccuracy jump alt"		"53.230000"
 				"inaccuracy land alt"		"0.150000"
 				"inaccuracy ladder alt"		"35.000000"
 				"inaccuracy fire alt"		"55.000000"
@@ -14195,6 +14278,28 @@
 				"muzzle_flash_effect_1st_person"		"weapon_muzzle_flash_assaultrifle"
 				"muzzle_flash_effect_3rd_person"		"weapon_muzzle_flash_assaultrifle"
 				"heat_effect"		"weapon_muzzle_smoke"
+			}
+		}
+		"weapon_taser_prefab"
+		{
+			"prefab"		"equipment"
+			"item_class"		"weapon_taser"
+			"item_name"		"#SFUI_WPNHUD_Taser"
+			"item_description"		"#CSGO_Item_Desc_Taser"
+			"image_inventory"		"econ/weapons/base_weapons/weapon_taser"
+			"icon_default_image"		"materials/icons/inventory_icon_weapon_taser.vtf"
+			"model_player"		"models/weapons/v_eq_taser.mdl"
+			"model_world"		"models/weapons/w_eq_taser.mdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"attributes"
+			{
+				"inaccuracy jump initial"		"96.620003"
+				"inaccuracy jump"		"92.959999"
+				"inaccuracy jump alt"		"92.959999"
 			}
 		}
 		"coupon_prefab"
@@ -14236,6 +14341,14 @@
 			"prefab"		"coupon_prefab"
 		}
 		"coupon_team_roles_capsule_prefab"
+		{
+			"prefab"		"coupon_prefab"
+		}
+		"coupon_sugarface_capsule_prefab"
+		{
+			"prefab"		"coupon_prefab"
+		}
+		"coupon_bestiary_capsule_prefab"
 		{
 			"prefab"		"coupon_prefab"
 		}
@@ -14535,23 +14648,11 @@
 		"31"
 		{
 			"name"		"weapon_taser"
-			"prefab"		"equipment"
-			"item_class"		"weapon_taser"
-			"item_name"		"#SFUI_WPNHUD_Taser"
-			"item_description"		"#CSGO_Item_Desc_Taser"
+			"prefab"		"weapon_taser_prefab"
 			"item_quality"		"normal"
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"equipment2"
-			"image_inventory"		"econ/weapons/base_weapons/weapon_taser"
-			"icon_default_image"		"materials/icons/inventory_icon_weapon_taser.vtf"
-			"model_player"		"models/weapons/v_eq_taser.mdl"
-			"model_world"		"models/weapons/w_eq_taser.mdl"
-			"used_by_classes"
-			{
-				"terrorists"		"1"
-				"counter-terrorists"		"1"
-			}
 		}
 		"32"
 		{
@@ -22027,6 +22128,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_guardian_2.mdl"
 			}
 		}
+		"6112"
+		{
+			"name"		"Commodity Pin - Guardian 2"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_guardian_2"
+			"item_description"		"#CSGO_Collectible_Pin_guardian_2_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_guardian_2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_guardian_2.mdl"
+				"upgrade threshold"		"6012"
+			}
+		}
 		"6013"
 		{
 			"name"		"Collectible Pin - Bravo"
@@ -22038,6 +22153,20 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_bravo.mdl"
+			}
+		}
+		"6113"
+		{
+			"name"		"Commodity Pin - Bravo"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_bravo"
+			"item_description"		"#CSGO_Collectible_Pin_bravo_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_bravo"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_bravo.mdl"
+				"upgrade threshold"		"6013"
 			}
 		}
 		"6014"
@@ -22053,6 +22182,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_baggage.mdl"
 			}
 		}
+		"6114"
+		{
+			"name"		"Commodity Pin - Baggage"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_baggage"
+			"item_description"		"#CSGO_Collectible_Pin_baggage_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_baggage"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_baggage.mdl"
+				"upgrade threshold"		"6014"
+			}
+		}
 		"6015"
 		{
 			"name"		"Collectible Pin - Phoenix"
@@ -22064,6 +22207,20 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_phoenix.mdl"
+			}
+		}
+		"6115"
+		{
+			"name"		"Commodity Pin - Phoenix"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"rare"
+			"item_name"		"#CSGO_Collectible_Pin_phoenix"
+			"item_description"		"#CSGO_Collectible_Pin_phoenix_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_phoenix"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_phoenix.mdl"
+				"upgrade threshold"		"6015"
 			}
 		}
 		"6016"
@@ -22079,6 +22236,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_office.mdl"
 			}
 		}
+		"6116"
+		{
+			"name"		"Commodity Pin - Office"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_office"
+			"item_description"		"#CSGO_Collectible_Pin_office_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_office"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_office.mdl"
+				"upgrade threshold"		"6016"
+			}
+		}
 		"6017"
 		{
 			"name"		"Collectible Pin - Cobblestone"
@@ -22090,6 +22261,20 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_cobblestone.mdl"
+			}
+		}
+		"6117"
+		{
+			"name"		"Commodity Pin - Cobblestone"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_cobblestone"
+			"item_description"		"#CSGO_Collectible_Pin_cobblestone_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_cobblestone"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_cobblestone.mdl"
+				"upgrade threshold"		"6017"
 			}
 		}
 		"6018"
@@ -22105,6 +22290,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_overpass.mdl"
 			}
 		}
+		"6118"
+		{
+			"name"		"Commodity Pin - Overpass"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"mythical"
+			"item_name"		"#CSGO_Collectible_Pin_overpass"
+			"item_description"		"#CSGO_Collectible_Pin_overpass_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_overpass"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_overpass.mdl"
+				"upgrade threshold"		"6018"
+			}
+		}
 		"6019"
 		{
 			"name"		"Collectible Pin - Bloodhound"
@@ -22116,6 +22315,20 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_bloodhound.mdl"
+			}
+		}
+		"6119"
+		{
+			"name"		"Commodity Pin - Bloodhound"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_bloodhound"
+			"item_description"		"#CSGO_Collectible_Pin_bloodhound_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_bloodhound"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_bloodhound.mdl"
+				"upgrade threshold"		"6019"
 			}
 		}
 		"6020"
@@ -22131,6 +22344,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_cache.mdl"
 			}
 		}
+		"6120"
+		{
+			"name"		"Commodity Pin - Cache"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"legendary"
+			"item_name"		"#CSGO_Collectible_Pin_cache"
+			"item_description"		"#CSGO_Collectible_Pin_cache_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_cache"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_cache.mdl"
+				"upgrade threshold"		"6020"
+			}
+		}
 		"6021"
 		{
 			"name"		"Collectible Pin - Valeria"
@@ -22144,6 +22371,20 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_valeria.mdl"
 			}
 		}
+		"6121"
+		{
+			"name"		"Commodity Pin - Valeria"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_valeria"
+			"item_description"		"#CSGO_Collectible_Pin_valeria_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_valeria"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_valeria.mdl"
+				"upgrade threshold"		"6021"
+			}
+		}
 		"6022"
 		{
 			"name"		"Collectible Pin - Chroma"
@@ -22155,6 +22396,20 @@
 			"attributes"
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_chroma.mdl"
+			}
+		}
+		"6122"
+		{
+			"name"		"Commodity Pin - Chroma"
+			"prefab"		"commodity_pin"
+			"item_rarity"		"ancient"
+			"item_name"		"#CSGO_Collectible_Pin_chroma"
+			"item_description"		"#CSGO_Collectible_Pin_chroma_desc"
+			"image_inventory"		"econ/status_icons/collectible_pin_chroma"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/collectible_pin_chroma.mdl"
+				"upgrade threshold"		"6022"
 			}
 		}
 		"6023"
@@ -23739,6 +23994,30 @@
 			"item_name"		"#coupon_pins_series_1"
 			"item_description"		"#coupon_desc"
 			"loot_list_name"		"coupon loot list - pins_series_1"
+			"prefab"		"valve coupon_prefab"
+		}
+		"20127"
+		{
+			"name"		"coupon - sugarface_sticker_capsule"
+			"item_name"		"#coupon_sugarface_sticker_capsule"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - sugarface_sticker_capsule"
+			"prefab"		"coupon_sugarface_capsule_prefab"
+		}
+		"20128"
+		{
+			"name"		"coupon - bestiary_sticker_capsule"
+			"item_name"		"#coupon_bestiary_sticker_capsule"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - bestiary_sticker_capsule"
+			"prefab"		"coupon_bestiary_capsule_prefab"
+		}
+		"20131"
+		{
+			"name"		"coupon - pins_series_2"
+			"item_name"		"#coupon_pins_series_2"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - pins_series_2"
 			"prefab"		"valve coupon_prefab"
 		}
 	}
@@ -25536,6 +25815,15 @@
 			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
+		}
+		"234"
+		{
+			"name"		"inaccuracy jump initial"
+			"attribute_class"		"inaccuracy_jump_initial"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"attribute_type"		"float"
 		}
 	}
 	"sticker_kits"
@@ -50594,6 +50882,21 @@
 		{
 			"public_list_contents"		"1"
 			"crate_pins_series_1"		"1"
+		}
+		"coupon loot list - sugarface_sticker_capsule"
+		{
+			"public_list_contents"		"1"
+			"crate_sticker_pack_sugarface_capsule"		"1"
+		}
+		"coupon loot list - bestiary_sticker_capsule"
+		{
+			"public_list_contents"		"1"
+			"crate_sticker_pack_bestiary_capsule"		"1"
+		}
+		"coupon loot list - pins_series_2"
+		{
+			"public_list_contents"		"1"
+			"crate_pins_series_2"		"1"
 		}
 	}
 	"revolving_loot_lists"
@@ -77543,6 +77846,63 @@
 			"crate_pins_series_1_ancient"		"1"
 		}
 	}
+	"items"
+	{
+		"4284"
+		{
+			"item_name"		"#CSGO_crate_pins_series_2"
+			"name"		"crate_pins_series_2"
+			"item_description"		"#CSGO_crate_pins_series_2_desc"
+			"image_inventory"		"econ/weapon_cases/crate_pins_series_2"
+			"first_sale_date"		"2016/09/28"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"175"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"175"		"crate_pins_series_2"
+	}
+	"client_loot_lists"
+	{
+		"crate_pins_series_2_rare"
+		{
+			"Commodity Pin - Guardian 2"		"1"
+			"Commodity Pin - Bravo"		"1"
+			"Commodity Pin - Baggage"		"1"
+			"Commodity Pin - Phoenix"		"1"
+		}
+		"crate_pins_series_2_mythical"
+		{
+			"Commodity Pin - Office"		"1"
+			"Commodity Pin - Cobblestone"		"1"
+			"Commodity Pin - Overpass"		"1"
+		}
+		"crate_pins_series_2_legendary"
+		{
+			"Commodity Pin - Bloodhound"		"1"
+			"Commodity Pin - Cache"		"1"
+		}
+		"crate_pins_series_2_ancient"
+		{
+			"Commodity Pin - Chroma"		"1"
+			"Commodity Pin - Valeria"		"1"
+		}
+		"crate_pins_series_2"
+		{
+			"crate_pins_series_2_rare"		"1"
+			"crate_pins_series_2_mythical"		"1"
+			"crate_pins_series_2_legendary"		"1"
+			"crate_pins_series_2_ancient"		"1"
+		}
+	}
 	"paint_kits"
 	{
 		"541"
@@ -79874,5 +80234,363 @@
 		"gs_tec9_supercharged"		"legendary"
 		"cu_ump45_metritera"		"rare"
 		"hy_xm1014_fractal_blue"		"rare"
+	}
+	"sticker_kits"
+	{
+		"1625"
+		{
+			"name"		"sugarface_boris"
+			"item_name"		"#StickerKit_sugarface_boris"
+			"description_string"		"#StickerKit_desc_sugarface_boris"
+			"sticker_material"		"sugarface_capsule/boris"
+			"item_rarity"		"rare"
+		}
+		"1626"
+		{
+			"name"		"sugarface_max"
+			"item_name"		"#StickerKit_sugarface_max"
+			"description_string"		"#StickerKit_desc_sugarface_max"
+			"sticker_material"		"sugarface_capsule/max"
+			"item_rarity"		"rare"
+		}
+		"1627"
+		{
+			"name"		"sugarface_stan"
+			"item_name"		"#StickerKit_sugarface_stan"
+			"description_string"		"#StickerKit_desc_sugarface_stan"
+			"sticker_material"		"sugarface_capsule/stan"
+			"item_rarity"		"rare"
+		}
+		"1628"
+		{
+			"name"		"sugarface_jack"
+			"item_name"		"#StickerKit_sugarface_jack"
+			"description_string"		"#StickerKit_desc_sugarface_jack"
+			"sticker_material"		"sugarface_capsule/jack"
+			"item_rarity"		"rare"
+		}
+		"1629"
+		{
+			"name"		"sugarface_perry"
+			"item_name"		"#StickerKit_sugarface_perry"
+			"description_string"		"#StickerKit_desc_sugarface_perry"
+			"sticker_material"		"sugarface_capsule/perry"
+			"item_rarity"		"rare"
+		}
+		"1630"
+		{
+			"name"		"sugarface_viggo"
+			"item_name"		"#StickerKit_sugarface_viggo"
+			"description_string"		"#StickerKit_desc_sugarface_viggo"
+			"sticker_material"		"sugarface_capsule/viggo"
+			"item_rarity"		"rare"
+		}
+		"1631"
+		{
+			"name"		"sugarface_joan"
+			"item_name"		"#StickerKit_sugarface_joan"
+			"description_string"		"#StickerKit_desc_sugarface_joan"
+			"sticker_material"		"sugarface_capsule/joan"
+			"item_rarity"		"rare"
+		}
+		"1632"
+		{
+			"name"		"sugarface_boris_holo"
+			"item_name"		"#StickerKit_sugarface_boris_holo"
+			"description_string"		"#StickerKit_desc_sugarface_boris_holo"
+			"sticker_material"		"sugarface_capsule/boris_holo"
+			"item_rarity"		"mythical"
+		}
+		"1633"
+		{
+			"name"		"sugarface_max_holo"
+			"item_name"		"#StickerKit_sugarface_max_holo"
+			"description_string"		"#StickerKit_desc_sugarface_max_holo"
+			"sticker_material"		"sugarface_capsule/max_holo"
+			"item_rarity"		"mythical"
+		}
+		"1634"
+		{
+			"name"		"sugarface_stan_holo"
+			"item_name"		"#StickerKit_sugarface_stan_holo"
+			"description_string"		"#StickerKit_desc_sugarface_stan_holo"
+			"sticker_material"		"sugarface_capsule/stan_holo"
+			"item_rarity"		"mythical"
+		}
+		"1635"
+		{
+			"name"		"sugarface_jack_holo"
+			"item_name"		"#StickerKit_sugarface_jack_holo"
+			"description_string"		"#StickerKit_sugarface_jack_holo"
+			"sticker_material"		"sugarface_capsule/jack_holo"
+			"item_rarity"		"mythical"
+		}
+		"1636"
+		{
+			"name"		"sugarface_perry_holo"
+			"item_name"		"#StickerKit_sugarface_perry_holo"
+			"description_string"		"#StickerKit_desc_sugarface_perry_holo"
+			"sticker_material"		"sugarface_capsule/perry_holo"
+			"item_rarity"		"mythical"
+		}
+		"1637"
+		{
+			"name"		"sugarface_viggo_holo"
+			"item_name"		"#StickerKit_sugarface_viggo_holo"
+			"description_string"		"#StickerKit_desc_sugarface_viggo_holo"
+			"sticker_material"		"sugarface_capsule/viggo_holo"
+			"item_rarity"		"mythical"
+		}
+		"1638"
+		{
+			"name"		"sugarface_joan_holo"
+			"item_name"		"#StickerKit_sugarface_joan_holo"
+			"description_string"		"#StickerKit_desc_sugarface_joan_holo"
+			"sticker_material"		"sugarface_capsule/joan_holo"
+			"item_rarity"		"mythical"
+		}
+	}
+	"items"
+	{
+		"4282"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_sugarface_capsule"
+			"name"		"crate_sticker_pack_sugarface_capsule"
+			"item_description"		"#CSGO_crate_sticker_pack_sugarface_capsule_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_sugarface_capsule"
+			"first_sale_date"		"2016/08/16"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"173"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_sugarface_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_sugarface_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"173"		"crate_sticker_pack_sugarface_capsule_lootlist"
+	}
+	"client_loot_lists"
+	{
+		"crate_sticker_pack_sugarface_capsule_rare"
+		{
+			"[sugarface_boris]sticker"		"1"
+			"[sugarface_max]sticker"		"1"
+			"[sugarface_stan]sticker"		"1"
+			"[sugarface_jack]sticker"		"1"
+			"[sugarface_perry]sticker"		"1"
+			"[sugarface_viggo]sticker"		"1"
+			"[sugarface_joan]sticker"		"1"
+		}
+		"crate_sticker_pack_sugarface_capsule_mythical"
+		{
+			"[sugarface_boris_holo]sticker"		"1"
+			"[sugarface_max_holo]sticker"		"1"
+			"[sugarface_stan_holo]sticker"		"1"
+			"[sugarface_jack_holo]sticker"		"1"
+			"[sugarface_perry_holo]sticker"		"1"
+			"[sugarface_viggo_holo]sticker"		"1"
+			"[sugarface_joan_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_sugarface_capsule_lootlist"
+		{
+			"crate_sticker_pack_sugarface_capsule_rare"		"1"
+			"crate_sticker_pack_sugarface_capsule_mythical"		"1"
+		}
+	}
+	"sticker_kits"
+	{
+		"1639"
+		{
+			"name"		"bestiary_basilisk"
+			"item_name"		"#StickerKit_bestiary_basilisk"
+			"description_string"		"#StickerKit_desc_bestiary_basilisk"
+			"sticker_material"		"bestiary_capsule/basilisk"
+			"item_rarity"		"rare"
+		}
+		"1640"
+		{
+			"name"		"bestiary_dragon"
+			"item_name"		"#StickerKit_bestiary_dragon"
+			"description_string"		"#StickerKit_desc_bestiary_dragon"
+			"sticker_material"		"bestiary_capsule/dragon"
+			"item_rarity"		"rare"
+		}
+		"1641"
+		{
+			"name"		"bestiary_hippocamp"
+			"item_name"		"#StickerKit_bestiary_hippocamp"
+			"description_string"		"#StickerKit_desc_bestiary_hippocamp"
+			"sticker_material"		"bestiary_capsule/hippocamp"
+			"item_rarity"		"rare"
+		}
+		"1642"
+		{
+			"name"		"bestiary_manticore"
+			"item_name"		"#StickerKit_bestiary_manticore"
+			"description_string"		"#StickerKit_desc_bestiary_manticore"
+			"sticker_material"		"bestiary_capsule/manticore"
+			"item_rarity"		"rare"
+		}
+		"1643"
+		{
+			"name"		"bestiary_pegasus"
+			"item_name"		"#StickerKit_bestiary_pegasus"
+			"description_string"		"#StickerKit_desc_bestiary_pegasus"
+			"sticker_material"		"bestiary_capsule/pegasus"
+			"item_rarity"		"rare"
+		}
+		"1644"
+		{
+			"name"		"bestiary_phoenix"
+			"item_name"		"#StickerKit_bestiary_phoenix"
+			"description_string"		"#StickerKit_desc_bestiary_phoenix"
+			"sticker_material"		"bestiary_capsule/phoenix"
+			"item_rarity"		"rare"
+		}
+		"1645"
+		{
+			"name"		"bestiary_sphinx"
+			"item_name"		"#StickerKit_bestiary_sphinx"
+			"description_string"		"#StickerKit_desc_bestiary_sphinx"
+			"sticker_material"		"bestiary_capsule/sphinx"
+			"item_rarity"		"rare"
+		}
+		"1646"
+		{
+			"name"		"bestiary_hippocamp_holo"
+			"item_name"		"#StickerKit_bestiary_hippocamp_holo"
+			"description_string"		"#StickerKit_desc_bestiary_hippocamp_holo"
+			"sticker_material"		"bestiary_capsule/hippocamp_holo"
+			"item_rarity"		"mythical"
+		}
+		"1647"
+		{
+			"name"		"bestiary_manticore_holo"
+			"item_name"		"#StickerKit_bestiary_manticore_holo"
+			"description_string"		"#StickerKit_desc_bestiary_manticore_holo"
+			"sticker_material"		"bestiary_capsule/manticore_holo"
+			"item_rarity"		"mythical"
+		}
+		"1648"
+		{
+			"name"		"bestiary_pegasus_holo"
+			"item_name"		"#StickerKit_bestiary_pegasus_holo"
+			"description_string"		"#StickerKit_desc_bestiary_pegasus_holo"
+			"sticker_material"		"bestiary_capsule/pegasus_holo"
+			"item_rarity"		"mythical"
+		}
+		"1649"
+		{
+			"name"		"bestiary_sphinx_holo"
+			"item_name"		"#StickerKit_bestiary_sphinx_holo"
+			"description_string"		"#StickerKit_bestiary_sphinx_holo"
+			"sticker_material"		"bestiary_capsule/sphinx_holo"
+			"item_rarity"		"mythical"
+		}
+		"1650"
+		{
+			"name"		"bestiary_basilisk_foil"
+			"item_name"		"#StickerKit_bestiary_basilisk_foil"
+			"description_string"		"#StickerKit_desc_bestiary_basilisk_foil"
+			"sticker_material"		"bestiary_capsule/basilisk_foil"
+			"item_rarity"		"legendary"
+		}
+		"1651"
+		{
+			"name"		"bestiary_dragon_foil"
+			"item_name"		"#StickerKit_bestiary_dragon_foil"
+			"description_string"		"#StickerKit_desc_bestiary_dragon_foil"
+			"sticker_material"		"bestiary_capsule/dragon_foil"
+			"item_rarity"		"legendary"
+		}
+		"1652"
+		{
+			"name"		"bestiary_phoenix_foil"
+			"item_name"		"#StickerKit_bestiary_phoenix_foil"
+			"description_string"		"#StickerKit_desc_bestiary_phoenix_foil"
+			"sticker_material"		"bestiary_capsule/phoenix_foil"
+			"item_rarity"		"legendary"
+		}
+	}
+	"items"
+	{
+		"4283"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_bestiary_capsule"
+			"name"		"crate_sticker_pack_bestiary_capsule"
+			"item_description"		"#CSGO_crate_sticker_pack_bestiary_capsule_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_bestiary_capsule"
+			"first_sale_date"		"2016/08/16"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"174"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_bestiary_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_bestiary_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"174"		"crate_sticker_pack_bestiary_capsule_lootlist"
+	}
+	"client_loot_lists"
+	{
+		"crate_sticker_pack_bestiary_capsule_rare"
+		{
+			"[bestiary_basilisk]sticker"		"1"
+			"[bestiary_dragon]sticker"		"1"
+			"[bestiary_hippocamp]sticker"		"1"
+			"[bestiary_manticore]sticker"		"1"
+			"[bestiary_pegasus]sticker"		"1"
+			"[bestiary_phoenix]sticker"		"1"
+			"[bestiary_sphinx]sticker"		"1"
+		}
+		"crate_sticker_pack_bestiary_capsule_mythical"
+		{
+			"[bestiary_hippocamp_holo]sticker"		"1"
+			"[bestiary_manticore_holo]sticker"		"1"
+			"[bestiary_pegasus_holo]sticker"		"1"
+			"[bestiary_sphinx_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_bestiary_capsule_legendary"
+		{
+			"[bestiary_basilisk_foil]sticker"		"1"
+			"[bestiary_dragon_foil]sticker"		"1"
+			"[bestiary_phoenix_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_bestiary_capsule_lootlist"
+		{
+			"crate_sticker_pack_bestiary_capsule_rare"		"1"
+			"crate_sticker_pack_bestiary_capsule_mythical"		"1"
+			"crate_sticker_pack_bestiary_capsule_legendary"		"1"
+		}
 	}
 }

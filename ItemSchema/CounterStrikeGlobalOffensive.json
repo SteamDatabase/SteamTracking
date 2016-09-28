@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.164938e11d8ffa662c593dd51dd4974276ce011b.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5905962738d68079f8c546c29e5f860438ae951b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -17054,6 +17054,102 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack_sugarface_capsule",
+				"defindex": 4282,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sugarface Capsule",
+				"item_description": "This capsule contains a variety of stickers from the community artist Guardian Gear.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_sugarface_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_sugarface_capsule.94a05b6108f486cd9eb402cd40a681e23ef975bc.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 173
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_bestiary_capsule",
+				"defindex": 4283,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Bestiary Capsule",
+				"item_description": "This capsule contains a variety of stickers from the community artist apёl7.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_bestiary_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_bestiary_capsule.17c4fe765ea206e52789bcb1b9941a0c429adae3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 174
+					}
+				]
+				
+			},
+			{
+				"name": "crate_pins_series_2",
+				"defindex": 4284,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 2",
+				"item_description": "This capsule contains a single Series 2 collectible pin. Collectible pins can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_pins_series_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_pins_series_2.96ecd6ea95f24366ca9b41f185cd2bff3a00ab00.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 175
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -19059,6 +19155,237 @@
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics.fc68bc1c1ad538846b975d4b118398c9cc4abe79.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.d90bab9e7a60906d447d8b6663a52cde989a7047.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Guardian 2",
+				"defindex": 6112,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Guardian 2 Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_guardian_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_2.4c44a8f0cd4c3b4f7d4a50db1f1f172b34d92b72.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_2_large.975176792f130495cdcd7f43e01bc8b4a75c96b6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Bravo",
+				"defindex": 6113,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bravo Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_bravo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_bravo.5a81b7204c62282881c33c02bf7922459d95dc20.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_bravo_large.29a85b644318ff1f36f07159d8c933ac49bdbcdd.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Baggage",
+				"defindex": 6114,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Baggage Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_baggage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_baggage.53d1c74ca084e6c36d3790e78b11e25e4c8226aa.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_baggage_large.af148c0aa24af8722ff7bf87031ff7418541fd10.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Phoenix",
+				"defindex": 6115,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Phoenix Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_phoenix",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_phoenix.360df009154fac490797974b914065d901f61b4e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_phoenix_large.7b2e845e2299be8d4287a4b0082b0b55d206e80f.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Office",
+				"defindex": 6116,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Office Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_office",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_office.e3fea0d329fab9e57290135a47b608a8d0ad54dc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_office_large.9ab3200bac986bf5bcb548d428dc6f7768474ebd.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Cobblestone",
+				"defindex": 6117,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Cobblestone Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_cobblestone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_cobblestone.489986643b521d0214ccfd762be19bbb18118b02.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_cobblestone_large.2a8f37ee4d3000fe3646c27682ef55fa5e42efd1.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Overpass",
+				"defindex": 6118,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Overpass Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_overpass.885df0abba233c96d8b74fc3fad4666545af54a8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_overpass_large.495d2ffee9e506f9ad4d494de711dbd3971525ff.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Bloodhound",
+				"defindex": 6119,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bloodhound Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_bloodhound",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_bloodhound.1998fe883080ba180d869907afa7e18cb27b12be.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_bloodhound_large.330aeb89c80b499fb85c09431935e50a42b9ed15.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Cache",
+				"defindex": 6120,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Cache Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_cache.e128797e67d3b39b0d98e82ab24eb46701f01445.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_cache_large.d56aa816fea6822bdc63c4ea00f53a00939efa23.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Valeria",
+				"defindex": 6121,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Valeria Phoenix Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_valeria",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_valeria.402a1dd3e10019a4851db64ab1bd93e61e18fb52.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_valeria_large.4f554818949e92e874881d747b5732dda4b0c075.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Chroma",
+				"defindex": 6122,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Chroma Pin",
+				"item_description": "This is a Series 2 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_chroma",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_chroma.9e16923b899abe445404979aa27e3bb0c16b605a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_chroma_large.dc3201036a8d97e593612d3821f0ebaaff25c5b4.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23090,6 +23417,102 @@
 					}
 				]
 				
+			},
+			{
+				"name": "coupon - sugarface_sticker_capsule",
+				"defindex": 20127,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sugarface Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - bestiary_sticker_capsule",
+				"defindex": 20128,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Bestiary Sticker Capsule",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - pins_series_2",
+				"defindex": 20131,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 2",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
 			}
 		]
 		,
@@ -24410,6 +24833,14 @@
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "inaccuracy jump initial",
+				"defindex": 234,
+				"attribute_class": "inaccuracy_jump_initial",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
 			}
 		]
 		,
