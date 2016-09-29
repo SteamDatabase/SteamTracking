@@ -4695,7 +4695,7 @@ function SSAPopup()
 
 function HardwareAgreementPopup()
 {
-		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/hardware_terms','steam_hardwareterms' );
+		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/hardware_order_terms','steam_hardwareterms' );
 	win.focus();
 }
 
