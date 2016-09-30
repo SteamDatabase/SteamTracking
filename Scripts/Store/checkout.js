@@ -3787,8 +3787,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 		if ( g_bRequiresShipping )
 		{
 			$('shipping_review_name').innerText = $('shipping_first_name').value+' '+$('shipping_last_name').value;
-			$('review_shipping_address_body').innerHTML += '<br>';
-			$('review_shipping_address_body').innerText += $('shipping_address').value;
+			$('review_shipping_address_body').innerText = $('shipping_address').value;
 			if ( $('shipping_address_two').value.length > 0 )
 			{
 				$('review_shipping_address_body').innerHTML += '<br>';
