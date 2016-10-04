@@ -400,6 +400,8 @@ function Curator_CreateOrEditReview( groupid, create_only )
 			blurb: $J('#curationBlurbInput').val(),
 			link_url: $J('#curationURLInput').val(),
 			recommendation_state: $J('input[name=recommendation_state]:checked').val(),
+			received_compensation: $J('#curationReceivedCompensation').is(':checked') ? 1 : 0,
+			received_for_free: $J('#curationReceivedForFree').is(':checked') ? 1 : 0,
 			create_only: create_only?1:0
 		},
 		success: function( data, textStatus, jqXHR ) {

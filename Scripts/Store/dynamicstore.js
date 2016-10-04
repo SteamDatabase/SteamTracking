@@ -406,12 +406,172 @@ GDynamicStore = {
 					$El.addClass( 'ds_flagged ds_incart' );
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 				}
+
+				
 			}
 		});
 
 
 		// make sure that the elements are registered as "appearing" if necessary
 		$J.force_appear();
+	},
+
+	CapsuleSettingsMenu: function( elSource )
+	{
+		var $El = $J(this);
+		var $elSource = $J(elSource.parentNode);
+		$El.empty();
+
+		var strAppIDs = $elSource.data('dsAppid');
+
+		// AppID specific controls
+		if( strAppIDs )
+		{
+
+			var rgAppIds = [];
+
+			if (strAppIDs && typeof strAppIDs == 'string' && strAppIDs.indexOf(',') >= 0) {
+				rgAppIds = strAppIDs.split(',');
+			}
+			else if (parseInt(strAppIDs)) {
+				rgAppIds = [parseInt(strAppIDs)];
+			}
+
+			var bIgnored = false;
+			var bOnWishlist = false;
+
+			for( var i = 0; i < rgAppIds.length; i++ )
+			{
+				bIgnored |= GDynamicStore.BIsAppIgnored( rgAppIds[i] );
+				bOnWishlist |= GDynamicStore.BIsAppOnWishlist( rgAppIds[i] );
+			}
+
+
+			if (!bOnWishlist)
+			{
+				var fnClick = function ()
+				{
+					$elSource.addClass( 'ds_flagged ds_wishlist' );
+					$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
+
+					for( var i=0; i<rgAppIds.length; i++ )
+						GDynamicStore.ModifyWishlist ( rgAppIds[ i ], false, false, function(){
+							// Remove the flag if we failed.
+							$elSource.removeClass( 'ds_wishlist ds_flagged' );
+							$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
+						} );
+				};
+				var strText = "Add to your wishlist";
+
+			}
+			else
+			{
+				var fnClick = function ()
+				{
+					$elSource.removeClass( 'ds_wishlist ds_flagged' );
+					$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
+
+					for( var i=0; i<rgAppIds.length; i++ )
+						GDynamicStore.ModifyWishlist ( rgAppIds[ i ], true, false, function(){
+							// Add the flag back if we failed for some reason
+							$elSource.addClass( 'ds_flagged ds_wishlist' );
+							$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
+
+						} );
+				};
+				var strText = "On Wishlist";
+			}
+
+			var $elAddToWishlist = $J ( '<div/>' ).click ( fnClick ).text ( strText );
+			$El.append($elAddToWishlist);
+
+			if (!bIgnored)
+			{
+				var fnClick = function ()
+				{
+					$elSource.addClass('ds_ignored');
+					for( var i=0; i<rgAppIds.length; i++ )
+						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], false );
+				};
+				var strText = "Not Interested";
+
+			}
+			else
+			{
+
+				var fnClick = function ()
+				{
+					$elSource.removeClass('ds_ignored');
+					for( var i=0; i<rgAppIds.length; i++ )
+						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], true );
+				};
+				var strText = "Not Interested";
+			}
+
+
+			var $elNotInterested = $J ( '<div/>' ).click ( fnClick ).text ( strText );
+			$El.append($elNotInterested);
+
+
+		}
+	},
+
+	ModifyWishlist: function( appid, bRemove, fnOnSuccess, fnOnFail )
+	{
+		var url = 'https://store.steampowered.com/api/addtowishlist';
+		GDynamicStore.s_rgWishlist[appid] = !bRemove;
+
+		if( bRemove )
+			url = 'https://store.steampowered.com/api/removefromwishlist';
+
+
+		$J.post( url, {sessionid: g_sessionID, appid: appid} )
+			.done( function( data ) {
+				if( fnOnSuccess )
+					fnOnSuccess( appid );
+				GDynamicStore.InvalidateCache();
+			}).fail( function() {
+				if( fnOnFail )
+					fnOnFail( appid );
+			GDynamicStore.s_rgWishlist[appid] = false;
+		});
+	},
+
+	ModifyIgnoredApp: function( appid, bRemove, fnOnSuccess, fnOnFail )
+	{
+		GDynamicStore.s_rgIgnoredApps[appid] = !bRemove;
+
+		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+			sessionid: g_sessionID,
+			appid: appid,
+			remove: bRemove ? 1 : 0
+		}).done( function() {
+			if( fnOnSuccess )
+				fnOnSuccess( appid );
+			GDynamicStore.InvalidateCache();
+		}).fail( function() {
+			if( fnOnFail )
+				fnOnFail( appid );
+			GDynamicStore.s_rgIgnoredApps[appid] = false;
+		});
+	},
+
+	ModifyIgnoredPackage: function( packageid, bRemove, fnOnSuccess, fnOnFail )
+	{
+		GDynamicStore.s_rgIgnoredPackages[appid] = !bRemove;
+		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+			sessionid: g_sessionID,
+			subid: packageid,
+			remove: bRemove
+		}).done( function() {
+			if( fnOnSuccess )
+				fnOnSuccess( appid );
+			GDynamicStore.InvalidateCache();
+		}).fail( function() {
+			if( fnOnFail )
+				fnOnFail( appid );
+			GDynamicStore.s_rgIgnoredPackages[appid] = false;
+		});
 	},
 
 	GetPersonalizedBundleData: function( unBundleID, rgPageBundleData )
@@ -633,6 +793,11 @@ GDynamicStore = {
 	BIsAppIgnored: function( appid )
 	{
 		return GDynamicStore.s_rgIgnoredApps[appid] ? true: false;
+	},
+
+	BIsAppOnWishlist: function( appid )
+	{
+		return GDynamicStore.s_rgWishlist[appid] ? true: false;
 	},
 
 	BIsPackageIgnored: function( packageid )

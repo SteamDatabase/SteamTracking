@@ -3568,6 +3568,11 @@ select.gray_bevel {
     width: 34px;
 }
 
+.no_curators_followed {
+	padding: 20px;
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
 .release_notice {
 	background-color: #3d4136;
 	border: 1px solid #ff9900;

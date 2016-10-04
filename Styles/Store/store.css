@@ -1132,6 +1132,7 @@ a#store_search_link img {
 
 .tab_item {
 	position: relative;
+	display: block;
 	background: #202d39;
 	background: rgba( 0, 0, 0, 0.2 );
 
@@ -2614,7 +2615,50 @@ background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89
 	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
 }
 
+/* ds_options defines the per-app prefernces dropdown */
+.ds_options {
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	right: 0px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.2s, right 0.2s;
+	background-color: rgba(54,97,125,1);
+	background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/icon_expand.png');
+	background-position: 4px 4px;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 3px #000;
+}
 
+*:hover > .ds_options, .ds_hover.ds_options {
+	opacity: 1;
+	right: 5px;
+}
+
+.ds_options_tooltip {
+	background-color: rgba(54,97,125,1);
+	padding: 2px 8px;
+	color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #000;
+}
+
+.ds_options_tooltip > div {
+	margin: 5px 0;
+	cursor: pointer;
+}
+.ds_options_tooltip > div:hover {
+	color: #acdbf5;
+}
+
+/* Temporary state for when we want to hide something but don't want to force a reload or risk breaking the layout */
+.ds_ignored {
+	opacity: 0.3;
+}
 
 
 body.v6 .store_capsule_frame h2, body.v6 .store_capsule_frame h3 {

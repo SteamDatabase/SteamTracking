@@ -771,7 +771,7 @@
 
 #dash_video_buffering_message .loading_throbber
 {
-	margin: -20px 17px 0px auto;
+	margin: -20px auto 0px auto;
 }
 
 .dash_video_live_banner
@@ -1872,7 +1872,7 @@
 
 #tenfoot_dash_video_buffering_message .loading_throbber
 {
-	margin: -20px 17px 70px auto;
+	margin: -20px auto 70px auto;
 }
 
 #tenfoot_dash_video_buffering_message .loading_throbber .bar

@@ -1312,6 +1312,10 @@ a.headlineLink:hover {
 	padding: 14px 0px 4px 0px;
 }
 
+.curation_app_form_section_header {
+	color: white;
+}
+
 #curationAppInput {
 	height: 20px;
 }
@@ -1386,6 +1390,7 @@ a.headlineLink:hover {
 	font-style: normal;
 	padding-top: 4px;
 	font-size: 13px;
+	color: white;
 }
 
 .curation_app_block_link {
@@ -1428,9 +1433,19 @@ a.headlineLink:hover {
 			padding: 5px 0 0 0;
 }
 
+.curation_app_details_blurb {
+	color: white;
+}
+
 .curation_app_details_header .thumb {
 	float: left;
 	margin-right: 10px;
+}
+
+.curation_app_disclosures {
+	padding-top: 5px;
+	font-size: 10px;
+	font-style: italic;;
 }
 
 .curation_app_commentthread .commentthread_entry {

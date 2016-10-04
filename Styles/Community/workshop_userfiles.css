@@ -1545,6 +1545,8 @@ textarea {
 .workshopItemCollection .workshopItemShortDesc
 {
 	padding-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .workshopItemCollection .workshopItemAuthorLine
@@ -2909,6 +2911,7 @@ div.hover {
 {
 	line-height: 0px;
 	visibility: hidden;
+	overflow: hidden;
 }
 
 .followOption.selected

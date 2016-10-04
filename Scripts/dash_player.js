@@ -2328,12 +2328,11 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 			// repeat the evict and append process to catch up
 			if ( e.name === 'QuotaExceededError' )
 			{
-				$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ e.name, this.ContainsVideo() ? "Video" : "Audio" ] );
 				this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateNone;
 			}
 			else
 			{
-				$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'UpdateBuffer AppendBuffer Exception: ' + e.name, e.message ] );
+				$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'UAException_' + e.name, e.message ] );
 			}
 		}
 

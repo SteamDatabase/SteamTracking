@@ -32,7 +32,8 @@ function UserReviewVoteUp( id )
 	UserReview_Rate( id, true, 'https://steamcommunity.com',
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).addClass( "btn_active" );
-			$J( "#RecommendationVoteDownBtn" +id ).removeClass( "btn_active" );
+			$J( "#RecommendationVoteDownBtn" + id ).removeClass( "btn_active" );
+			$J( "#RecommendationVoteTagBtn" + id + "_" + 1 ).removeClass( "btn_active" );
 		}
 	);
 }
@@ -43,6 +44,7 @@ function UserReviewVoteDown( id )
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).removeClass( "btn_active" );
 			$J( "#RecommendationVoteDownBtn" + id ).addClass( "btn_active" );
+			$J( "#RecommendationVoteTagBtn" + id + "_" + 1 ).removeClass( "btn_active" );
 		}
 	);
 }
@@ -56,6 +58,8 @@ function UserReviewVoteTag( id, tagID, elemID )
 			if ( bRateUp )
 			{
 				$J( "#RecommendationVoteTagBtn" + id + "_" + tagID ).addClass( "btn_active" );
+				$J( "#RecommendationVoteUpBtn" + id ).removeClass( "btn_active" );
+				$J( "#RecommendationVoteDownBtn" + id ).removeClass( "btn_active" );
 			}
 			else
 			{

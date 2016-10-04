@@ -1727,6 +1727,12 @@ div.slider div.handle:hover {
 	font-size: 12px;
 }
 
+.blotter_recommendation_disclosures {
+	padding-top: 5px;
+	font-size: 10px;
+	font-style: italic;
+	color: #8F98A0;
+}
 
 .blotter_block .UserReviewCardContent_Footer .content {
 

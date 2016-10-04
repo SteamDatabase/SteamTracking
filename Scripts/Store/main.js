@@ -2012,11 +2012,18 @@ CGenericCarousel.prototype.Advance = function( nNewIndex )
 	if( nNewIndex < 0 ) // Allow index of -1 to go backwards.
 	{
 		this.fnOnBlur(this.nIndex);
-		this.nIndex = ( this.nIndex + nNewIndex ) % this.nItems;
 
-		// JS doesn't wrap, so we need to fix it...
-		if( this.nIndex < 0 )
-			this.nIndex += this.nItems;
+		// Skip hidden thumbs
+		do
+		{
+			this.nIndex = ( this.nIndex + nNewIndex ) % this.nItems;
+
+			// JS doesn't wrap, so we need to fix it...
+			if( this.nIndex < 0 )
+				this.nIndex += this.nItems;
+
+		}
+		while( !$J( this.$elThumbs[ this.nIndex ] ).is( ":visible" ) );
 
 		this.fnOnFocus(this.nIndex);
 	}
@@ -2032,7 +2039,14 @@ CGenericCarousel.prototype.Advance = function( nNewIndex )
 	else
 	{
 		this.fnOnBlur(this.nIndex);
-		this.nIndex = ( this.nIndex + 1 ) % this.nItems;
+
+		// Skip hidden thumbs
+		do
+		{
+			this.nIndex = ( this.nIndex + 1 ) % this.nItems;
+		}
+		while( !$J( this.$elThumbs[ this.nIndex ] ).is( ":visible" ) );
+
 		this.fnOnFocus(this.nIndex);
 	}
 }
@@ -2067,8 +2081,8 @@ function CreateFadingCarousel( $elContainer, nSpeed )
 
 	var fnOnFocus = function(  nIndex )
 	{
-		this.$elThumbs.removeClass('focus');
-		this.$elItems.removeClass('focus');
+		this.$elThumbs.removeClass( 'focus' );
+		this.$elItems.removeClass( 'focus' );
 
 		$J( this.$elThumbs[nIndex] ).addClass('focus');
 		this.ScrollIntoView( this.$elThumbs[nIndex] );

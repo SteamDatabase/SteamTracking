@@ -101,24 +101,88 @@ body.v6 h2.curator_name a {
 	padding-top: 10px;
 }
 
+/* giant capsule */
+
+.curator_giant_capsule {
+	position: relative;
+	display: block;
+
+	overflow: hidden; /* Crops subpixels we get from percentage scaled screenshots */
+}
+
+.curator_giant_capsule .screenshots, .curator_giant_capsule .capsule {
+	width: 50%;
+	display:table-cell; /* Inline-block won't work here because we have inline-block children (screenshots) which need a percentage height. Hence filthy hacks. */
+	vertical-align: top;
+	font-size: 0;
+}
+
+.curator_giant_capsule .capsule img {
+	width: 100%;
+	height: auto;
+}
+
+.curator_giant_capsule .curator_block {
+	background-color: #000;
+	position: absolute;
+	right: 10%;
+	top: 33%;
+	width: 45%;
+	height: 33%;
+
+	box-shadow: 0 0 10px 1px #000;
+}
+
+.curator_giant_capsule .curator_block img {
+	height: 100%;
+	width: auto;
+	float: left;
+
+}
+
+.curator_giant_capsule .curator_block .blurb {
+	padding: 8px;
+	height: 100%;
+	display: table;
+}
+
+.curator_giant_capsule .curator_block .blurb > span, .curator_giant_capsule .curator_block .blurb > span:hover {
+
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #c7d5e0;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-style: italic;
+}
+
+.curator_giant_capsule .curator_block .blurb > span:before, .curator_giant_capsule .curator_block .blurb > span:after {
+	content: '"';
+}
+
+.giant_curator_capsule .curator_disclosures {
+	padding-top: 5px;
+	font-size: 10px;
+	color: #8F98A0;
+}
+
+.curator_giant_capsule .screenshots .screenshot {
+	width: 50%;
+	height: 50%;
+	background-size: cover;
+	display: inline-block;
+	vertical-align: top;
+}
+
 /* highlighted recommendation */
 .highlighted_recommendation
 {
-	margin-top: 40px;
-	background-color: rgba( 0, 0, 0, 0.2 );
 }
-.highlighted_recommendation_header
-{
-	position: relative;
-	float: left;
-	width: 460px;
-	max-width: 50%;
-}
-.highlighted_recommendation_header img {
-	width: 100%;
-	display: block;
-}
-.highlighted_recommendation_header .ds_flag
+.highlighted_recommendation .ds_flag
 {
 	top: 108px;
 }
@@ -127,51 +191,15 @@ body.v6 h2.curator_name a {
 	background-color: #1d2a3a;
 	padding: 5px;
 	padding-left: 10px;
+	height: 20px;
+	line-height: 20px;
 	color: #61686D;
-    font-size: 11px;
+	font-size: 11px;
 }
 .highlighted_recommendation_stat
 {
 	padding-left: 10px;
 	float: right;
-}
-.highlighted_recommendation_details_ctn
-{
-	overflow: hidden;
-	min-height: 215px;
-}
-.highlighted_recommendation_details
-{
-	position: relative;
-	padding: 20px 20px 35px 20px;
-	height: 130px;
-}
-.highlighted_recommendation_app_price
-{
-	float: right;
-}
-.highlighted_recommendation_name
-{
-	color: white;
-	font-size: 18px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: bold; /* bold */
-
-		}
-.highlighted_recommendation_desc
-{
-	padding-top: 10px;
-	color: #c6d4df;
-	font-size: 13px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			font-style: italic;
-}
-.highlighted_recommendation_link
-{
-	position: absolute;
-	bottom: 10px;
 }
 
 @media screen and (max-width: 910px)
@@ -289,7 +317,7 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 {
 	position: relative;
 	overflow: hidden;
-	height: 134px;
+	height: 155px;
 
 }
 
@@ -344,6 +372,13 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 			font-style: italic;
 	padding: 14px;
 }
+.recommendation_disclosures {
+	padding-top: 5px;
+	padding-left: 14px;
+	font-size: 10px;
+	color: #8F98A0;
+}
+
 .recommendation_readmore
 {
 	padding: 0px 0px 7px 14px;

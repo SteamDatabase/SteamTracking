@@ -359,7 +359,7 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 			strFeature = strFeatureOverride;
 		}
 
-		var $CapCtn = Cluster.BuildClusterCapsule( oItem.appid, oItem.packageid, strStatus, strFeature, i );
+		var $CapCtn = Cluster.BuildClusterCapsule( oItem.appid, oItem.packageid, strStatus, strFeature, i, oItem );
 		if ( $CapCtn )
 		{
 			$ClusterCtn.append( $CapCtn );
@@ -381,7 +381,9 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 	return cMainCaps;
 };
 
-Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeature, nDepth )
+
+
+Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeature, nDepth, rgItemInfo )
 {
 	var params = { 'class': 'cluster_capsule' };
 	var rgItemData = GStoreItemData.GetCapParams( strFeature, unAppID, unPackageID, params, nDepth );
@@ -413,13 +415,17 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 			return null;
 		}
 	}
-
+	var $elWhyButton;
+	
 	if ( rgItemData.discount_block )
 		$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_large main_cap_discount' ) );
 	$CapCtn.append( $J('<div/>', {'class': 'main_cap_desc'})
 			.append( $J('<div/>', {'class': 'main_cap_content'})
 				.append( $J('<div/>', {'class': 'main_cap_platform_area platform_area'}).html( GStoreItemData.BuildSupportedPlatformIcon( rgItemData ) ) )
-				.append( $J('<div/>', {'class': 'main_cap_status ellipsis'}).text( strStatus ) )
+				.append( $J('<div/>', {'class': 'main_cap_status ellipsis'}).text( strStatus )
+					.append( $elWhyButton ? $elWhyButton : ''  )
+				)
+
 		)
 	);
 

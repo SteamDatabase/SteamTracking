@@ -2053,12 +2053,24 @@ ChangePasswordWizard = {
 
 HelpRequestPage = {
 
+	m_strSystemReport: "",
+
 	ShowCreateHelpRequestFormOnPageLoad: function()
 	{
 		$J( document ).ready( function() {
 			$J( '#cancel_create_help_request' ).remove();
 			HelpRequestPage.ShowCreateHelpRequestForm();
 		});
+	},
+
+	SystemReportCallback: function( strReport )
+	{
+		HelpRequestPage.m_strSystemReport = strReport;
+	},
+
+	CollectSystemReport: function()
+	{
+		SteamClient.RequestSupportSystemReport( HelpRequestPage.SystemReportCallback );
 	},
 
 	ShowCreateHelpRequestForm: function()
@@ -2076,6 +2088,7 @@ HelpRequestPage = {
 
 		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
 		$J('#create_help_request_issue_text').focus();
+		$J('#create_help_request_form_ctn').get(0).scrollIntoView();
 	},
 
 	ShowPendingPurchaseHelpRequestForm: function( strPendingElementID )
@@ -2110,12 +2123,25 @@ HelpRequestPage = {
 			url: $Form.attr( 'action' )
 		};
 
+				if( $J('#system_report_agreed').length > 0 )
+		{
+			if( $J('#system_report_agreed:checked').length < 1 )
+			{
+				var Modal = ShowAlertDialog( 'Contact Steam Support', 'You must agree to include the required system information.' );
+				$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+				return false;
+			}
+		}
+
 		if ( typeof FormData != 'undefined' )
 		{
 			var fd = new FormData( $Form[0] );
 
 			for ( var key in g_rgDefaultWizardPageParams )
 				fd.append( key, g_rgDefaultWizardPageParams[key] );
+
+			if ( HelpRequestPage.m_strSystemReport.length > 0 )
+				fd.append( 'system_report', Blob( HelpRequestPage.m_strSystemReport ) );
 
 			// do we have files to upload?
 			var $FileList = $Form.find('ul.attached_file_list').children();
@@ -2146,7 +2172,10 @@ HelpRequestPage = {
 		else
 		{
 			//TODO: should just submit the page as normal?
-			oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
+			if ( HelpRequestPage.m_strSystemReport.length > 0 )
+				oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams ) + "&system_report=" + HelpRequestPage.m_strSystemReport;
+			else
+				oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
 		}
 
 

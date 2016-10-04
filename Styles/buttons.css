@@ -438,7 +438,7 @@ button::-moz-focus-inner
 	border: 2px solid #172030;
 }
 
-btn_border_2px > span {
+.btn_border_2px > span {
 	border-radius: 3px;
 }
 
@@ -447,7 +447,7 @@ btn_border_2px > span {
 	border: 2px solid #17202f;
 }
 
-btnv6_border_2px > span {
+.btnv6_border_2px > span {
 	border-radius: 3px;
 }
 

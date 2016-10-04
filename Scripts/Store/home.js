@@ -91,6 +91,7 @@ GHomepage = {
 				$J('.home_top_sellers_area').show();
 				$J('.home_logged_in').hide();
 				$J('.home_friends_purchased_area').hide();
+				$J('.home_btn.home_customize_btn').hide();
 			}
 			else
 			{
@@ -220,12 +221,13 @@ GHomepage = {
 
 		// MAIN CLUSTER
 		try {
-			if ( bHaveUser )
+						if ( bHaveUser )
 			{
 				HomeSettings = new CHomeSettings( 'main_cluster', GHomepage.RenderMainCluster );
 				$J('.main_cluster_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
-			GHomepage.RenderMainCluster();
+						GHomepage.RenderMainCluster();
+
 		} catch( e ) { OnHomepageException(e); }
 
 		// NEW ON STEAM
@@ -371,8 +373,10 @@ GHomepage = {
 		}
 	},
 
+
 	RenderMainCluster: function()
 	{
+
 		for ( var i = 0; i < GHomepage.oDisplayLists.popular_new.length; i++ )
 		{
 			GHomepage.oDisplayLists.popular_new[i].new_on_steam = true;
@@ -380,6 +384,12 @@ GHomepage = {
 		for ( var i = 0; i < GHomepage.oDisplayLists.top_sellers.length; i++ )
 		{
 			GHomepage.oDisplayLists.top_sellers[i].top_seller = true;
+		}
+		if ( GHomepage.rgCuratedAppsData.apps )
+		{
+			for (var i = 0; i < GHomepage.rgCuratedAppsData.apps.length; i++) {
+				GHomepage.rgCuratedAppsData.apps[i].recommended_by_curator = true;
+			}
 		}
 
 		var rgTopSellers = [];
@@ -403,7 +413,16 @@ GHomepage = {
 		}
 		var bZippedCurators = false;
 
-		
+		if ( GHomepage.rgCuratedAppsData.apps && GHomepage.rgCuratedAppsData.apps.length > 0 )
+		{
+			rgDisplayListCombined = GHomepage.ZipLists(
+				rgDisplayListCombined, true,
+				GHomepage.rgCuratedAppsData.apps, true
+			);
+			bZippedCurators = true;
+		}
+
+
 		if( !bZippedCurators )
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
@@ -417,8 +436,9 @@ GHomepage = {
 			rgDisplayListCombined, false
 		);
 
+
 				var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'main_cluster', 2, 15
+			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false, localized: true }
 		);
 		
 		if ( GHomepage.bShuffleInMainLegacy )
@@ -446,6 +466,7 @@ GHomepage = {
 				rgImageURLs: {},
 				onChangeCB: GDynamicStore.HandleClusterChange
 			} );
+
 	},
 
 	// Unused
@@ -492,8 +513,14 @@ GHomepage = {
 
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false }
+			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true }
 		);
+		if( rgCapsules.length < 4 )
+		{
+			rgCapsules = GHomepage.FilterItemsForDisplay(
+				GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, localized: true }
+			);
+		}
 
 		for( var j=0; j<rgCapsules.length; j++ )
 		{
@@ -555,7 +582,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'home', 3, 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 3, 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_headercaps' );
@@ -666,7 +693,7 @@ GHomepage = {
 		var $Recommended =  $J('.home_specials_ctn.recommended' );
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false }
+			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false, localized: true }
 		);
 
 		for( var i = 0; i < rgCapsules.length; i++ )
@@ -691,16 +718,59 @@ GHomepage = {
 	{
 		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
 
-		console.log($PopularNewCapsules.children());
 
+		var nCapsules = $PopularNewCapsules.children().length;
+
+		// Remove ignored stuff first
 		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
 		{
 			var $capsule = $J( $PopularNewCapsules.children()[i] );
 			var nAppId = $capsule.data('ds-appid');
 
 			if( GDynamicStore.BIsAppIgnored(nAppId) )
+			{
 				$capsule.hide();
+				nCapsules--;
+			}
 		}
+
+		// Now follow filters as long we we can keep 4 items in the capsule
+		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		{
+			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			var nAppId = $capsule.data('ds-appid');
+
+			var rgFilterTest = GHomepage.FilterItemsForDisplay(
+				[{'appid': nAppId}], 'home', 0, 1, { games_already_in_library: false, localized: true }
+			);
+
+			if(  rgFilterTest.length == 0 )
+			{
+				$capsule.hide();
+				nCapsules--;
+			}
+			if( nCapsules == 4 )
+				break;
+		}
+
+		// Cap number of capsules to 8
+
+		var nVisible = 0;
+		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		{
+			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			if(!$capsule.is(':visible'))
+				continue;
+
+			if( nVisible++ >= 10)
+				$capsule.hide();
+
+		}
+
+
+
+		if( nCapsules < 4 )
+			$J('.recent_top_sellers ').hide();
 
 
 	},
@@ -708,7 +778,7 @@ GHomepage = {
 	RenderTopSellersArea: function()
 	{
 		var rgTopSellers = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_sellers, 'home', 2, 2
+			GHomepage.oDisplayLists.top_sellers, 'home', 2, 2, { games_already_in_library: false, localized: true }
 		);
 
 		var $TopSellersCtn =  $J('.home_top_sellers_area .store_capsule_container' ).empty();
@@ -1074,17 +1144,16 @@ GHomepage = {
 			return;
 
 
-		var $MessagesContainer = $J('.marketingmessage_area .home_page_content');
+		var $MessagesContainer = $J('.marketingmessage_area .marketingmessage_container');
 
 		// Filter messages
 		for( var i=0; i<rgMessages.length; i++)
 		{
 			var message = rgMessages[i];
-
 			if( message.must_own_appid && !GDynamicStore.BIsAppOwned( message.must_own_appid ) )
 				continue;
 
-			if( message.must_not_own_appid && GDynamicStore.BIsAppOwned( message.must_own_appid ) )
+			if( message.must_not_own_appid && GDynamicStore.BIsAppOwned( message.must_not_own_appid ) )
 				continue;
 
 			if( message.must_own_packageid && !GDynamicStore.BIsPackageOwned( message.must_own_packageid ) )
@@ -1097,46 +1166,73 @@ GHomepage = {
 			if( message.must_have_launched_appid && !GDynamicStore.BIsAppOwned( message.must_have_launched_appid ) )
 				continue;
 
-
 			rgFilteredMessages.push(message);
 		}
 
-		var rgLayout = [ '',''];
 
-		//if( rgFilteredMessages.length > 6 )
-			rgLayout = [ '','small','small','small'
-						  ,'small','small','small'];
-		//else if ( rgFilteredMessages.length > 3 )
-		//	rgLayout = [ 'medium','medium','small','small' ];
+		var rgLayout = [ 'big','2small', '2small', '2small'];
 
 
+		if( rgFilteredMessages.length < 5 )
+			rgLayout = [ 'big', 'big','2small'];
+
+
+		var j=0;
 		for( var i=0; i<rgFilteredMessages.length; i++)
 		{
-			var message = rgFilteredMessages[i];
 			var params = {};
 
-			if( i >= rgLayout.length )
+			if( j >= rgLayout.length )
 				break;
 
-			var rgItemData = GStoreItemData.GetCapParams( 'marketingmessage', message.appid, message.packageid, params );
+			if( rgLayout[j] == 'big' )
+			{
+				var message = rgFilteredMessages[i];
+
+				var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, params );
+
+				var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message' } ).attr ( 'href', message.url );
+
+				var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
 
 
+				$MessageCtn.append ( $MessageImg );
+				if ( rgItemData )
+					$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
+				else
+					$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
 
-			var $MessageCtn = $J('<a/>', {'class': 'home_marketing_message'}).attr('href', message.url);
-			$MessageCtn.addClass(rgLayout[i]);
+				$MessagesContainer.append($MessageCtn);
 
-			var $MessageImg = $J('<span/>').css({'background-image': 'url('+message.image+')' });
+			} else if( rgLayout[j] == '2small')
+			{
+				var k = i+2;
+				for( ; i < k && i < rgFilteredMessages.length; i++)
+				{
+					var message = rgFilteredMessages[i];
+
+					var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, params );
+
+					var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message small' } ).attr ( 'href', message.url );
+
+					var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
 
 
-			$MessageCtn.append( $MessageImg );
-			if( rgItemData )
-				$MessageCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
-			else
-				$MessageCtn.append( $J('<div/>').addClass('discount_block discount_block_inline').append( $J('<div/>').addClass('discount_final_price').html( message.title ? message.title : '&nbsp;' ) ) );
+					$MessageCtn.append ( $MessageImg );
+					if ( rgItemData )
+						$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
+					else
+						$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
 
-			$MessagesContainer.append( $MessageCtn );
+					$MessagesContainer.append ( $MessageCtn );
+				}
+				// Loop will increment one more time than we want it to, so decrement to fix the outer loop.
+				i--;
 
 
+			}
+
+			j++;
 		}
 
 		$J('.marketingmessage_area').show();
@@ -1437,6 +1533,8 @@ GSteamCurators = {
 			$Image.css({'width': '470px'  });
 		});
 		$ImageCapsule.append( $Image );
+		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
+
 		$Item.append( $ImageCapsule );
 
 		var $ScreenshotCtn = $J('<div/>',{'class':'screenshots'});
@@ -1514,10 +1612,10 @@ GSteamCurators = {
 		{
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
-			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'curators', 5, 9, { games_already_in_library: false }
+						var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
+				apps, 'curators', 4, 8
 			);
-
+			
 			if ( rgRecommendedApps.length >= 5 )
 			{
 				// v1
@@ -1541,10 +1639,16 @@ GSteamCurators = {
 				$J('.apps_recommended_by_curators_ctn').show();
 				var $RecommendedApps = $J('#apps_recommended_by_curators_v2');
 
+				if( $RecommendedApps.children().length > 0 )
+					return;
+
 				// First show the giant cap
 				var nGiantCapAppId = 0;
-				for( var appid in GHomepage.rgCuratorExtendedAppData )
+				for( var j=0; j<rgRecommendedApps.length; j++ in rgRecommendedApps )
 				{
+					var appid = rgRecommendedApps[j].appid;
+					if( !GHomepage.rgCuratorExtendedAppData[appid] )
+						continue;
 					// Find the item info in the unfiltered apps list
 					var oItem = false;
 					for( var i=0; i < apps.length; i++ )
@@ -1564,15 +1668,29 @@ GSteamCurators = {
 					var $Item = GSteamCurators.BuildHomePageGiantCap( 'curated_main_app', oItem );
 					$J('.giant_curator_capsule').empty().append($Item);
 
-					var $elButtonWishlist = $J('<a />').text("Add to Wishlist").attr('href','#').click(function(){
-						AddToWishlist( appid );
-					});
-					var $elButtonFollow= $J('<a />').text("Follow");
-					var $elButtonNotInterested = $J('<a />').text("Not Interested");
+					var $elButtonWishlist = $J('<span />').text("Add to Wishlist");
 
-					$J('.giant_curator_controls').append( $elButtonWishlist );
-					$J('.giant_curator_controls').append( $elButtonFollow );
-					$J('.giant_curator_controls').append( $elButtonNotInterested );
+					$elButtonWishlist.click(function(){
+						GDynamicStore.ModifyWishlist( appid, false, function(){ $elButtonWishlist.hide(); return false; } );
+					});
+
+					//var $elButtonFollow = $J('<a />').text("Follow");
+
+					var $elButtonNotInterested = $J('<span />').text("Not Interested");
+
+					$elButtonNotInterested.click(function(){
+						$J('.giant_curator_capsule').css({'opacity': 0.3});
+						GDynamicStore.ModifyIgnoredApp( appid, false, function(){ $elButtonNotInterested.hide();  return false; } );
+					});
+
+					if( !GDynamicStore.BIsAppOnWishlist(appid) )
+						$J('.giant_curator_controls').append( $elButtonWishlist );
+
+					//if( !GDynamicStore.BisAp(appid)
+					//	$J('.giant_curator_controls').append( $elButtonFollow );
+
+					if( !GDynamicStore.BIsAppIgnored(appid ) ) // Shouldn't ever need to check this here, but sure why not?
+						$J('.giant_curator_controls').append( $elButtonNotInterested );
 
 					break;
 				}

@@ -978,6 +978,16 @@ td.wht_total {
 	color: #808891;
 }
 
+.account_setting_sub_block_full {
+	width: 100%;
+	padding: 1em;
+	color: #808891;
+}
+
+.account_setting_parenthetical {
+	color: #537ca6;
+}
+
 .account_manage_link {
 	line-height: 24px;
 	color: #67c1f5;
