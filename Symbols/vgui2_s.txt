@@ -47,12 +47,10 @@
  AcquireRootMenu
  ActiveNonFloatingWindow
  AssertMsgImplementation
- AudioDeviceGetProperty
- AudioDeviceGetPropertyInfo
  AudioHardwareAddPropertyListener
- AudioHardwareGetProperty
- AudioHardwareGetPropertyInfo
  AudioHardwareRemovePropertyListener
+ AudioObjectGetPropertyData
+ AudioObjectGetPropertyDataSize
  AudioObjectSetPropertyData
  AudioServicesAddSystemSoundCompletion
  AudioServicesCreateSystemSoundID

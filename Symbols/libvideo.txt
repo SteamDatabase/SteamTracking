@@ -700,7 +700,7 @@
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
- R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
+ R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
  R typeinfo name for CUtlLinkedList<AVPacket, int>
  R typeinfo name for CUtlLinkedList<CBaseScheduledFunction*, int>
  R typeinfo name for CUtlLinkedList<CCoroutine, int>
@@ -747,7 +747,7 @@
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
  R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
- R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >
  R typeinfo name for CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >
@@ -1146,22 +1146,22 @@
  T CAudioResampler::GetMaxConvertSamples(int)
  T CAudioResampler::SampleRateOut()
  T CAudioResampler::~CAudioResampler()
- T CAutoRelease<CCookieContainer, CRefCountAccessor>::Reset(CCookieContainer*)
- T CAutoRelease<CCookieContainer, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<CHTTPClientRequest, CRefCountAccessor>::Reset(CHTTPClientRequest*)
- T CAutoRelease<CHTTPClientRequest, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<CHTTPClientResponse, CRefCountAccessor>::Reset(CHTTPClientResponse*)
- T CAutoRelease<CHTTPClientResponse, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<CHTTPRequestHandle, CRefCountAccessor>::Reset(CHTTPRequestHandle*)
- T CAutoRelease<CHTTPRequestHandle, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<COpenSSLCachedSession, CRefCountAccessor>::Reset(COpenSSLCachedSession*)
- T CAutoRelease<COpenSSLCachedSession, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<IHTTPRedirectHandler, CRefCountAccessor>::Reset(IHTTPRedirectHandler*)
- T CAutoRelease<IHTTPRedirectHandler, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<IHTTPResponseHandler, CRefCountAccessor>::Reset(IHTTPResponseHandler*)
- T CAutoRelease<IHTTPResponseHandler, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<IHTTPStreamingResponseHandler, CRefCountAccessor>::Reset(IHTTPStreamingResponseHandler*)
- T CAutoRelease<IHTTPStreamingResponseHandler, CRefCountAccessor>::~CAutoRelease()
+ T CAutoRelease<CCookieContainer>::Reset(CCookieContainer*)
+ T CAutoRelease<CCookieContainer>::~CAutoRelease()
+ T CAutoRelease<CHTTPClientRequest>::Reset(CHTTPClientRequest*)
+ T CAutoRelease<CHTTPClientRequest>::~CAutoRelease()
+ T CAutoRelease<CHTTPClientResponse>::Reset(CHTTPClientResponse*)
+ T CAutoRelease<CHTTPClientResponse>::~CAutoRelease()
+ T CAutoRelease<CHTTPRequestHandle>::Reset(CHTTPRequestHandle*)
+ T CAutoRelease<CHTTPRequestHandle>::~CAutoRelease()
+ T CAutoRelease<COpenSSLCachedSession>::Reset(COpenSSLCachedSession*)
+ T CAutoRelease<COpenSSLCachedSession>::~CAutoRelease()
+ T CAutoRelease<IHTTPRedirectHandler>::Reset(IHTTPRedirectHandler*)
+ T CAutoRelease<IHTTPRedirectHandler>::~CAutoRelease()
+ T CAutoRelease<IHTTPResponseHandler>::Reset(IHTTPResponseHandler*)
+ T CAutoRelease<IHTTPResponseHandler>::~CAutoRelease()
+ T CAutoRelease<IHTTPStreamingResponseHandler>::Reset(IHTTPStreamingResponseHandler*)
+ T CAutoRelease<IHTTPStreamingResponseHandler>::~CAutoRelease()
  T CBIOCallbacksBase::FnCreate(bio_st*)
  T CBIOCallbacksBase::FnCtrl(bio_st*, int, long, void*)
  T CBIOCallbacksBase::FnDestroy(bio_st*)
@@ -1981,11 +1981,11 @@
  T CSharedUDPSocketPollHelper::OnDataStateChanged(int, int, bool, bool)
  T CSharedUDPSocketPollHelper::Register(unsigned long)
  T CSharedUDPSocketPollHelper::~CSharedUDPSocketPollHelper()
- T CSmartPtr<CCookieContainer, CRefCountAccessor>::operator=(CSmartPtr<CCookieContainer, CRefCountAccessor> const&)
- T CSmartPtr<CHTTPClientRequest, CRefCountAccessor>::CSmartPtr(ESmartPtrNoAddRef, CHTTPClientRequest*)
- T CSmartPtr<CHTTPClientResponse, CRefCountAccessor>::operator=(CSmartPtr<CHTTPClientResponse, CRefCountAccessor> const&)
- T CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>::CSmartPtr(CSmartPtr<COpenSSLCachedSession, CRefCountAccessor> const&)
- T CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>::CSmartPtr(ESmartPtrAddRef, COpenSSLCachedSession*)
+ T CSmartPtr<CCookieContainer>::operator=(CSmartPtr<CCookieContainer> const&)
+ T CSmartPtr<CHTTPClientRequest>::CSmartPtr(ESmartPtrNoAddRef, CHTTPClientRequest*)
+ T CSmartPtr<CHTTPClientResponse>::operator=(CSmartPtr<CHTTPClientResponse> const&)
+ T CSmartPtr<COpenSSLCachedSession>::CSmartPtr(CSmartPtr<COpenSSLCachedSession> const&)
+ T CSmartPtr<COpenSSLCachedSession>::CSmartPtr(ESmartPtrAddRef, COpenSSLCachedSession*)
  T CStatT<SteamThreadTools::CThreadMutex>::AgeGracefully()
  T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadMutex>::Clear()
@@ -2353,23 +2353,23 @@
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMap()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::AllocNode()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMap()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Find(netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindInBucket(int, netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::IncrementalRehash()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertUnconstructed(netadr_t const&, int*, bool)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t const&)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::NextSameKey(int) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Purge()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RehashNodesInBucket(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAll()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAt(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMap()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::AllocNode()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMap()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Find(netadr_t const&) const
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindInBucket(int, netadr_t const&) const
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::IncrementalRehash()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertUnconstructed(netadr_t const&, int*, bool)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t const&)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::NextSameKey(int) const
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Purge()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RehashNodesInBucket(int)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAll()
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAt(int)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMap()
  T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
  T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
  T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
@@ -2439,10 +2439,10 @@
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertOrReplace(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU()
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor> const&)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU()
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CSmartPtr<COpenSSLCachedSession> const&)
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
  T CUtlLinkedList<AVPacket, int>::AllocInternal(bool)
  T CUtlLinkedList<AVPacket, int>::Free(int)
  T CUtlLinkedList<AVPacket, int>::InsertBefore(int, AVPacket const&)
@@ -2864,11 +2864,11 @@
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)

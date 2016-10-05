@@ -1949,7 +1949,10 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
  D typeinfo for CHTMLProtoBufMsg<CMsgHidePopup>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyChar>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -2095,6 +2098,7 @@
  D typeinfo for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
  D typeinfo for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D typeinfo for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
+ D typeinfo for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
  D typeinfo for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D typeinfo for CMusicLibraryPanel
  D typeinfo for CMusicPage_Details_Album
@@ -2194,6 +2198,8 @@
  D typeinfo for CPlaylistItemPanel
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
+ D typeinfo for CRefCountServiceBase<true, CRefMT>
+ D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CRefreshLoginDialog
  D typeinfo for CRefreshLoginDialog::CCallback_OnLogonFailure
  D typeinfo for CRefreshLoginDialog::CCallback_OnLogonSuccess
@@ -2273,6 +2279,8 @@
  D typeinfo for vgui::Button
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
+ D typeinfo for vgui::CJSCallbackFunc
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
@@ -2311,6 +2319,7 @@
  D typeinfo for vgui::IDebugOverlayPainter
  D typeinfo for vgui::IHostOfflineMode
  D typeinfo for vgui::IImage
+ D typeinfo for vgui::IJSMethodCallHandler
  D typeinfo for vgui::IPanelAnimationPropertyConverter
  D typeinfo for vgui::IPanelInputForwarding
  D typeinfo for vgui::IToolWindowFactory
@@ -3148,7 +3157,10 @@
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
  D vtable for CHTMLProtoBufMsg<CMsgHidePopup>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
+ D vtable for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D vtable for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D vtable for CHTMLProtoBufMsg<CMsgKeyChar>
  D vtable for CHTMLProtoBufMsg<CMsgKeyDown>
  D vtable for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -3294,6 +3306,7 @@
  D vtable for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
  D vtable for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D vtable for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
+ D vtable for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
  D vtable for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D vtable for CMusicLibraryPanel
  D vtable for CMusicPage_Details_Album
@@ -3458,6 +3471,8 @@
  D vtable for vgui::Button
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
+ D vtable for vgui::CJSCallbackFunc
+ D vtable for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
@@ -3772,7 +3787,10 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHidePopup>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyChar>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -3918,6 +3936,7 @@
  R typeinfo name for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
  R typeinfo name for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  R typeinfo name for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
+ R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
  R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  R typeinfo name for CMusicLibraryPanel
  R typeinfo name for CMusicPage_Details_Album
@@ -4017,6 +4036,8 @@
  R typeinfo name for CPlaylistItemPanel
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
+ R typeinfo name for CRefCountServiceBase<true, CRefMT>
+ R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CRefreshLoginDialog
  R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonFailure
  R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonSuccess
@@ -4175,6 +4196,8 @@
  R typeinfo name for vgui::CBitmapImagePanel
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
+ R typeinfo name for vgui::CJSCallbackFunc
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
@@ -4213,6 +4236,7 @@
  R typeinfo name for vgui::IDebugOverlayPainter
  R typeinfo name for vgui::IHostOfflineMode
  R typeinfo name for vgui::IImage
+ R typeinfo name for vgui::IJSMethodCallHandler
  R typeinfo name for vgui::IPanelAnimationPropertyConverter
  R typeinfo name for vgui::IPanelInputForwarding
  R typeinfo name for vgui::IToolWindowFactory
@@ -4396,6 +4420,8 @@
  T CAchievementInfoPanel::KB_ChainToMap()
  T CAchievementInfoPanel::SetAchievement(CGameID, char const*)
  T CAchievementInfoPanel::~CAchievementInfoPanel()
+ T CAutoRelease<vgui::CJSCallbackFunc>::Reset(vgui::CJSCallbackFunc*)
+ T CAutoRelease<vgui::CJSCallbackFunc>::~CAutoRelease()
  T CBaseDashboardPanel::CBaseDashboardPanel(vgui::Panel*, char const*)
  T CBaseDashboardPanel::ChainToAnimationMap()
  T CBaseDashboardPanel::ChainToMap()
@@ -5168,8 +5194,14 @@
  T CHTMLProtoBufMsg<CMsgHidePopup>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyChar>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgKeyChar>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyDown>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -6665,6 +6697,12 @@
  T CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::CMultipleCallResults(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(SupportSystemReportReady_t*, bool))
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Run(void*)
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::~CMultipleCallResults()
  T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::CMultipleCallResults(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*, bool))
  T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::Run(void*)
@@ -7588,6 +7626,8 @@
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
  T CRTime::UpdateRealTime()
+ T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
+ T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefreshLoginDialog::Activate(EResult)
  T CRefreshLoginDialog::CCallback_OnLogonFailure::Run(void*)
  T CRefreshLoginDialog::CCallback_OnLogonSuccess::Run(void*)
@@ -7912,6 +7952,8 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
+ T CSmartPtr<vgui::CJSCallbackFunc>::CSmartPtr(CSmartPtr<vgui::CJSCallbackFunc> const&)
+ T CSmartPtr<vgui::CJSCallbackFunc>::operator=(CSmartPtr<vgui::CJSCallbackFunc> const&)
  T CSoundSystemSelect::CSoundSystemSelect(vgui::Panel*)
  T CSoundSystemSelect::ChainToAnimationMap()
  T CSoundSystemSelect::ChainToMap()
@@ -7942,10 +7984,12 @@
  T CSteamAuthedHTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
  T CSteamAuthedHTML::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
+ T CSteamAuthedHTML::OnSupportSystemReportReady(SupportSystemReportReady_t*, bool)
  T CSteamAuthedHTML::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
  T CSteamAuthedHTML::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
  T CSteamAuthedHTML::OpenURL(char const*, char const*, bool, bool)
  T CSteamAuthedHTML::RequestCookieAuthIfNecessary(char const*)
+ T CSteamAuthedHTML::RequestSupportSystemReport(CSmartPtr<vgui::CJSCallbackFunc>)
  T CSteamAuthedHTML::SetAuthCookie(char const*, char const*)
  T CSteamAuthedHTML::SetParentalUnlockCookie(char const*, char const*)
  T CSteamAuthedHTML::Validate(CValidator&, char const*)
@@ -8131,9 +8175,14 @@
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
  T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
  T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::IJSMethodCallHandler* const&)
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
@@ -8597,6 +8646,9 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
@@ -8765,6 +8817,10 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
+ T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::GrowVector(int)
+ T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::InsertBefore(int, vgui::CJSCallbackFunc* const&)
+ T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
@@ -9240,6 +9296,7 @@
  T KeyValues::~KeyValues()
  T KeyValuesAD::KeyValuesAD(char const*)
  T KeyValuesAD::operator KeyValues*()
+ T KeyValuesAD::operator*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
@@ -9484,6 +9541,7 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T bool vgui::BConvertMsgJSValue<CSmartPtr<vgui::CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<vgui::CJSCallbackFunc>*)
  T delete_JSON_parser
  T gcm_ghash_4bit_mmx
  T gcm_ghash_4bit_x86
@@ -10129,6 +10187,8 @@
  T vgui::CFileOpenListPanel::~CFileOpenListPanel()
  T vgui::CFontWidthCache::GetCharWidth(unsigned long, wchar_t, wchar_t, wchar_t)
  T vgui::CFontWidthCache::Validate(CValidator&, char const*)
+ T vgui::CJSCallbackFunc::OnFinalRelease()
+ T vgui::CJSCallbackFunc::~CJSCallbackFunc()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -10734,6 +10794,7 @@
  T vgui::FrameTitle::PerformLayout()
  T vgui::FrameTitle::SetDisabledLook(bool)
  T vgui::FrameTitle::~FrameTitle()
+ T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >&, bool*)
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
  T vgui::GetINotificationManager()
@@ -10756,6 +10817,7 @@
  T vgui::GraphPanel::~GraphPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
  T vgui::HTML::AddHeader(char const*, char const*)
+ T vgui::HTML::AddJSCallback(vgui::CJSCallbackFunc*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -10912,6 +10974,8 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
+ T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*)
+ T vgui::HTML::ReleaseJSCallback(vgui::CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::RunJavascript(char const*)
  T vgui::HTML::SendPendingHTMLMessages()
@@ -11709,6 +11773,7 @@
  T vgui::MessageBox::MessageBox(char const*, char const*, vgui::Panel*, bool)
  T vgui::MessageBox::MessageBox(wchar_t const*, wchar_t const*, vgui::Panel*, bool)
  T vgui::MessageBox::OnClose()
+ T vgui::MessageBox::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::MessageBox::PerformLayout()
  T vgui::MessageBox::SetCommand(KeyValues*)
  T vgui::MessageBox::SetCommand(char const*)
@@ -13173,6 +13238,7 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamAuthedHTML, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >, CSmartPtr<vgui::CJSCallbackFunc>, 0>(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(CSmartPtr<vgui::CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -13195,6 +13261,7 @@
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FixDoubleSlashes
@@ -13213,6 +13280,7 @@
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace
  V_StripTrailingSlash
+ V_URLContainsDomain
  V_URLCracker
  V_URLDecodeRaw
  V_URLEncode

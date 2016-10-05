@@ -2628,7 +2628,7 @@
  R typeinfo name for CUtlLinkedList<panorama::CUIPanel*, int>
  R typeinfo name for CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>
  R typeinfo name for CUtlLinkedList<unsigned int, int>
- R typeinfo name for CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >
+ R typeinfo name for CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >
  R typeinfo name for CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >
@@ -2648,8 +2648,8 @@
  R typeinfo name for CUtlMap<panorama::AnimationParticleSystemKey_t, panorama::CAnimationParticleSystem*, int, CDefLess<panorama::AnimationParticleSystemKey_t> >
  R typeinfo name for CUtlMap<panorama::CImageResourceManager::UrlImageKey_t, panorama::CImageProxySource*, int, CDefLess<panorama::CImageResourceManager::UrlImageKey_t> >
  R typeinfo name for CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >
- R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >
- R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >
+ R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >
+ R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >
@@ -2686,7 +2686,7 @@
  R typeinfo name for CUtlPtr<panorama::CStyleFileKey>
  R typeinfo name for CUtlQueue<Vector2D>
  R typeinfo name for CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2706,8 +2706,8 @@
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::AnimationParticleSystemKey_t, panorama::CAnimationParticleSystem*, int, CDefLess<panorama::AnimationParticleSystemKey_t> >::Node_t, int, CUtlMap<panorama::AnimationParticleSystemKey_t, panorama::CAnimationParticleSystem*, int, CDefLess<panorama::AnimationParticleSystemKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CImageResourceManager::UrlImageKey_t, panorama::CImageProxySource*, int, CDefLess<panorama::CImageResourceManager::UrlImageKey_t> >::Node_t, int, CUtlMap<panorama::CImageResourceManager::UrlImageKey_t, panorama::CImageProxySource*, int, CDefLess<panorama::CImageResourceManager::UrlImageKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::Node_t, int, CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >
@@ -2753,7 +2753,7 @@
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CMsgPushClipLayer, CUtlMemory<CMsgPushClipLayer> >
- R typeinfo name for CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >
+ R typeinfo name for CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >
  R typeinfo name for CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >
  R typeinfo name for CUtlVector<CUtlDelegate<void (EVideoPlayerEvent)>, CUtlMemory<CUtlDelegate<void (EVideoPlayerEvent)> > >
  R typeinfo name for CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >
@@ -3350,14 +3350,14 @@
  T BufferedIStream_Peek
  T BufferedIStream_ResetBuf
  T BuildGammaTable(float, float, float, int)
- T CAutoRelease<panorama::CJSFile, CRefCountAccessor>::Reset(panorama::CJSFile*)
- T CAutoRelease<panorama::CJSFile, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<panorama::CLayoutFile, CRefCountAccessor>::Reset(panorama::CLayoutFile*)
- T CAutoRelease<panorama::CLayoutFile, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::Reset(panorama::CPanoramaVideoPlayer*)
- T CAutoRelease<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::~CAutoRelease()
- T CAutoRelease<panorama::CStyleFile, CRefCountAccessor>::Reset(panorama::CStyleFile*)
- T CAutoRelease<panorama::CStyleFile, CRefCountAccessor>::~CAutoRelease()
+ T CAutoRelease<panorama::CJSFile>::Reset(panorama::CJSFile*)
+ T CAutoRelease<panorama::CJSFile>::~CAutoRelease()
+ T CAutoRelease<panorama::CLayoutFile>::Reset(panorama::CLayoutFile*)
+ T CAutoRelease<panorama::CLayoutFile>::~CAutoRelease()
+ T CAutoRelease<panorama::CPanoramaVideoPlayer>::Reset(panorama::CPanoramaVideoPlayer*)
+ T CAutoRelease<panorama::CPanoramaVideoPlayer>::~CAutoRelease()
+ T CAutoRelease<panorama::CStyleFile>::Reset(panorama::CStyleFile*)
+ T CAutoRelease<panorama::CStyleFile>::~CAutoRelease()
  T CBezierCurve<Vector2D, 3>::SetControlPoints(Vector2D const*)
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
@@ -6280,16 +6280,16 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
- T CSmartPtr<panorama::CJSFile, CRefCountAccessor>::CSmartPtr(CSmartPtr<panorama::CJSFile, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CJSFile, CRefCountAccessor>::CSmartPtr(ESmartPtrNoAddRef, panorama::CJSFile*)
- T CSmartPtr<panorama::CJSFile, CRefCountAccessor>::operator=(CSmartPtr<panorama::CJSFile, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>::CSmartPtr(CSmartPtr<panorama::CLayoutFile, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>::CSmartPtr(ESmartPtrNoAddRef, panorama::CLayoutFile*)
- T CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>::operator=(CSmartPtr<panorama::CLayoutFile, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::CSmartPtr(CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CStyleFile, CRefCountAccessor>::CSmartPtr(CSmartPtr<panorama::CStyleFile, CRefCountAccessor> const&)
- T CSmartPtr<panorama::CStyleFile, CRefCountAccessor>::CSmartPtr(ESmartPtrNoAddRef, panorama::CStyleFile*)
- T CSmartPtr<panorama::CStyleFile, CRefCountAccessor>::operator=(CSmartPtr<panorama::CStyleFile, CRefCountAccessor> const&)
+ T CSmartPtr<panorama::CJSFile>::CSmartPtr(CSmartPtr<panorama::CJSFile> const&)
+ T CSmartPtr<panorama::CJSFile>::CSmartPtr(ESmartPtrNoAddRef, panorama::CJSFile*)
+ T CSmartPtr<panorama::CJSFile>::operator=(CSmartPtr<panorama::CJSFile> const&)
+ T CSmartPtr<panorama::CLayoutFile>::CSmartPtr(CSmartPtr<panorama::CLayoutFile> const&)
+ T CSmartPtr<panorama::CLayoutFile>::CSmartPtr(ESmartPtrNoAddRef, panorama::CLayoutFile*)
+ T CSmartPtr<panorama::CLayoutFile>::operator=(CSmartPtr<panorama::CLayoutFile> const&)
+ T CSmartPtr<panorama::CPanoramaVideoPlayer>::CSmartPtr(CSmartPtr<panorama::CPanoramaVideoPlayer> const&)
+ T CSmartPtr<panorama::CStyleFile>::CSmartPtr(CSmartPtr<panorama::CStyleFile> const&)
+ T CSmartPtr<panorama::CStyleFile>::CSmartPtr(ESmartPtrNoAddRef, panorama::CStyleFile*)
+ T CSmartPtr<panorama::CStyleFile>::operator=(CSmartPtr<panorama::CStyleFile> const&)
  T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadMutex>::Clear()
  T CStatT<SteamThreadTools::CThreadMutex>::SetHistoryMax(int)
@@ -6987,9 +6987,9 @@
  T CUtlLinkedList<unsigned int, int>::RemoveAll()
  T CUtlLinkedList<unsigned int, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<unsigned int, int>::~CUtlLinkedList()
- T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Find(CUtlKeyPtr<panorama::CStyleFileKey> const&) const
- T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Insert(CUtlKeyPtr<panorama::CStyleFileKey> const&, CSmartPtr<panorama::CStyleFile, CRefCountAccessor> const&)
- T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Find(CUtlKeyPtr<panorama::CStyleFileKey> const&) const
+ T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Insert(CUtlKeyPtr<panorama::CStyleFileKey> const&, CSmartPtr<panorama::CStyleFile> const&)
+ T CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Find(CUtlString const&) const
  T CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Insert(CUtlString const&)
  T CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
@@ -7041,12 +7041,12 @@
  T CUtlMap<panorama::CImageResourceManager::UrlImageKey_t, panorama::CImageProxySource*, int, CDefLess<panorama::CImageResourceManager::UrlImageKey_t> >::Insert(panorama::CImageResourceManager::UrlImageKey_t const&, panorama::CImageProxySource* const&)
  T CUtlMap<panorama::CImageResourceManager::UrlImageKey_t, panorama::CImageProxySource*, int, CDefLess<panorama::CImageResourceManager::UrlImageKey_t> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::Validate(CValidator&, char const*)
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::FindElement(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CJSFile, CRefCountAccessor> const&) const
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CJSFile, CRefCountAccessor> const&)
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::FindElement(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor> const&) const
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor> const&)
- T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::FindElement(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CJSFile> const&) const
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CJSFile> const&)
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::FindElement(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CLayoutFile> const&) const
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CSmartPtr<panorama::CLayoutFile> const&)
+ T CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CUtlString const&)
@@ -7172,14 +7172,14 @@
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&) const
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t const&, bool)
@@ -7297,20 +7297,20 @@
  T CUtlRBTree<CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::Node_t, int, CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::Node_t, int, CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::Node_t, int, CUtlMap<panorama::COpenGLSurface::ShadowLayerKey_t, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::Layer_t, int, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CJSFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CSmartPtr<panorama::CLayoutFile>, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
@@ -7752,12 +7752,12 @@
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::InsertMultipleBefore(int, int, CRefCounted<CRefCountServiceBase<true, CRefMT> >* const*)
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::ShiftElementsRight(int, int)
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::~CUtlVector()
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::GrowVector(int)
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::InsertBefore(int, CSmartPtr<panorama::CStyleFile, CRefCountAccessor> const&)
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::RemoveAll()
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::ShiftElementsRight(int, int)
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::Validate(CValidator&, char const*)
- T CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > >::~CUtlVector()
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::GrowVector(int)
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::InsertBefore(int, CSmartPtr<panorama::CStyleFile> const&)
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::RemoveAll()
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::ShiftElementsRight(int, int)
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::Validate(CValidator&, char const*)
+ T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::~CUtlVector()
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
@@ -7908,6 +7908,9 @@
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<EAttachedHardwareDevice, CUtlMemory<EAttachedHardwareDevice> >::AddToTail(EAttachedHardwareDevice&&)
+ T CUtlVector<EAttachedHardwareDevice, CUtlMemory<EAttachedHardwareDevice> >::GrowVector(int)
+ T CUtlVector<EAttachedHardwareDevice, CUtlMemory<EAttachedHardwareDevice> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::GrowVector(int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::InsertBefore(int)
@@ -8250,9 +8253,6 @@
  T CUtlVector<panorama::EAnimationTimingFunction, CUtlMemory<panorama::EAnimationTimingFunction> >::InsertBefore(int, panorama::EAnimationTimingFunction const&)
  T CUtlVector<panorama::EAnimationTimingFunction, CUtlMemory<panorama::EAnimationTimingFunction> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::EAnimationTimingFunction, CUtlMemory<panorama::EAnimationTimingFunction> >::~CUtlVector()
- T CUtlVector<panorama::EAttachedHardwareDevice, CUtlMemory<panorama::EAttachedHardwareDevice> >::AddToTail(panorama::EAttachedHardwareDevice&&)
- T CUtlVector<panorama::EAttachedHardwareDevice, CUtlMemory<panorama::EAttachedHardwareDevice> >::GrowVector(int)
- T CUtlVector<panorama::EAttachedHardwareDevice, CUtlMemory<panorama::EAttachedHardwareDevice> >::~CUtlVector()
  T CUtlVector<panorama::EContextUIPosition, CUtlMemory<panorama::EContextUIPosition> >::CopyArray(panorama::EContextUIPosition const*, int)
  T CUtlVector<panorama::EContextUIPosition, CUtlMemory<panorama::EContextUIPosition> >::FastRemove(int)
  T CUtlVector<panorama::EContextUIPosition, CUtlMemory<panorama::EContextUIPosition> >::FindAndFastRemove(panorama::EContextUIPosition const&)
@@ -8464,7 +8464,6 @@
  T ClientController()
  T ClientControllerLocal()
  T ClientHTTP()
- T ClientRemoteClientManager()
  T ClientUtils()
  T ClientVR()
  T ClosePlatformSocket(int)
@@ -9128,8 +9127,8 @@
  T panorama::AsyncPanoramaSurfaceReturned::FormatEventArgs(char const*)
  T panorama::AsyncPanoramaSurfaceReturned::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::BIsGamePadCodeEquivalentIgnoringVendor(panorama::GamePadCode, panorama::GamePadCode)
- T panorama::BParseStyleBody(CUtlBuffer&, CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >*, panorama::CPanoramaSymbol, panorama::CStyleFile const*, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&, bool)
- T panorama::BReplaceDefines(char*, unsigned int, panorama::CStyleFile const*, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
+ T panorama::BParseStyleBody(CUtlBuffer&, CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >*, panorama::CPanoramaSymbol, panorama::CStyleFile const*, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&, bool)
+ T panorama::BReplaceDefines(char*, unsigned int, panorama::CStyleFile const*, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
  T panorama::BeginDebuggerInspect::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::BeginDebuggerInspect::FormatEventArgs(char const*)
  T panorama::BeginDebuggerInspect::MakeEvent(panorama::IUIPanelClient const*)
@@ -9667,6 +9666,7 @@
  T panorama::COpenGLSurface::SetOverlayTextureFormat(int)
  T panorama::COpenGLSurface::SetTexture(int, int)
  T panorama::COpenGLSurface::SetUIScaleFactor(float)
+ T panorama::COpenGLSurface::SetVROverlayHandle(unsigned long long)
  T panorama::COpenGLSurface::ShadowLayerKey_t::operator<(panorama::COpenGLSurface::ShadowLayerKey_t const&) const
  T panorama::COpenGLSurface::StartUpdateFontGlyphTexture(void*)
  T panorama::COpenGLSurface::UpdateFancyQuadGradientTexture(panorama::FancyQuadBrush_t const&)
@@ -10055,13 +10055,13 @@
  T panorama::CStyleFactoryWrapper::GetSortedPropertyAndAliasNames()
  T panorama::CStyleFile::AddDefine(char const*, char const*)
  T panorama::CStyleFile::BCreateStylesForSelectors(CUtlVector<panorama::StyleFromFile_t*, CUtlMemory<panorama::StyleFromFile_t*> >*, char const*, CUtlBuffer&)
- T panorama::CStyleFile::BLoadFromBuffer(CUtlBuffer&, panorama::CPanoramaSymbol, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
- T panorama::CStyleFile::BParseCSSAtRule(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
- T panorama::CStyleFile::BParseCSSDefine(char const*, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
- T panorama::CStyleFile::BParseCSSKeyframes(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
- T panorama::CStyleFile::BParseCSSStyle(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
+ T panorama::CStyleFile::BLoadFromBuffer(CUtlBuffer&, panorama::CPanoramaSymbol, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
+ T panorama::CStyleFile::BParseCSSAtRule(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
+ T panorama::CStyleFile::BParseCSSDefine(char const*, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
+ T panorama::CStyleFile::BParseCSSKeyframes(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
+ T panorama::CStyleFile::BParseCSSStyle(char const*, unsigned int, CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
  T panorama::CStyleFile::BParseSelector(char const*, CUtlBuffer&, panorama::StyleFromFile_t*)
- T panorama::CStyleFile::BReloadLoadFromBuffer(CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
+ T panorama::CStyleFile::BReloadLoadFromBuffer(CUtlBuffer&, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
  T panorama::CStyleFile::BReplaceDefinedValues(char*, unsigned int) const
  T panorama::CStyleFile::CStyleFile()
  T panorama::CStyleFile::Clear()
@@ -10069,8 +10069,8 @@
  T panorama::CStyleFile::GetStylesForClass(panorama::CPanoramaSymbol)
  T panorama::CStyleFile::GetStylesForJustID(char const*)
  T panorama::CStyleFile::GetStylesForPanelTypeNoClass(panorama::CPanoramaSymbol)
- T panorama::CStyleFile::LoadFromFile(char const*, CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
- T panorama::CStyleFile::Reload(CUtlVector<CSmartPtr<panorama::CStyleFile, CRefCountAccessor>, CUtlMemory<CSmartPtr<panorama::CStyleFile, CRefCountAccessor> > > const&)
+ T panorama::CStyleFile::LoadFromFile(char const*, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
+ T panorama::CStyleFile::Reload(CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > > const&)
  T panorama::CStyleFile::Validate(CValidator&, char const*)
  T panorama::CStyleFile::~CStyleFile()
  T panorama::CStyleFileKey::Append(panorama::CPanoramaSymbol)
@@ -10082,7 +10082,7 @@
  T panorama::CStyleFileKey::Validate(CValidator&, char const*)
  T panorama::CStyleFileKey::operator<(panorama::CStyleFileKey const&) const
  T panorama::CStyleFileKey::~CStyleFileKey()
- T panorama::CStyleFileSet::AddStyleFile(CSmartPtr<panorama::CStyleFile, CRefCountAccessor>)
+ T panorama::CStyleFileSet::AddStyleFile(CSmartPtr<panorama::CStyleFile>)
  T panorama::CStyleFileSet::ApplyMatchedStylesToPanelStyle(panorama::CPanelStyle*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> > const&, panorama::EStyleRepaint&, bool&)
  T panorama::CStyleFileSet::BContainsStyleFile(panorama::CPanoramaSymbol) const
  T panorama::CStyleFileSet::BSelectorMatchesPanel(panorama::StyleFromFile_t const*, panorama::CPanelIdentifiers const&)
@@ -11521,7 +11521,7 @@
  T panorama::CUIPanel::ApplyStyles(bool)
  T panorama::CUIPanel::BAcceptsFocus() const
  T panorama::CUIPanel::BAcceptsInput()
- T panorama::CUIPanel::BApplyLayoutFile(CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
+ T panorama::CUIPanel::BApplyLayoutFile(CSmartPtr<panorama::CLayoutFile>, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T panorama::CUIPanel::BApplyPanelDescription(panorama::CPanoramaSymbol, panorama::PanelDescription_t*, CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T panorama::CUIPanel::BAscendantHasClass(char const*)
  T panorama::CUIPanel::BAscendantHasClass(panorama::CPanoramaSymbol)
@@ -11708,9 +11708,9 @@
  T panorama::CUIPanel::OnCheckChildrenScrolledIntoViewRecursive(float, float, float, float)
  T panorama::CUIPanel::OnChildLayoutTransitionFlagsCleared(unsigned int)
  T panorama::CUIPanel::OnContentSizeTraverse(float*, float*, float, float, bool)
- T panorama::CUIPanel::OnGetLayoutFileAsyncComplete(CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, panorama::ELoadLayoutAsyncDetails, bool)
+ T panorama::CUIPanel::OnGetLayoutFileAsyncComplete(CSmartPtr<panorama::CLayoutFile>, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CUIPanel::OnLayoutTraverse(float, float)
- T panorama::CUIPanel::OnLoadLayoutAsyncCompleteInternal(CSmartPtr<panorama::CLayoutFile, CRefCountAccessor>, panorama::ELoadLayoutAsyncDetails, bool)
+ T panorama::CUIPanel::OnLoadLayoutAsyncCompleteInternal(CSmartPtr<panorama::CLayoutFile>, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CUIPanel::OnScrollPositionChanged()
  T panorama::CUIPanel::OnStyleTransitionsCleanup()
  T panorama::CUIPanel::OnStylesChangedInternal()

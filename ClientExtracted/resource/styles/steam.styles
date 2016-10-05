@@ -2884,6 +2884,8 @@ steam.styles
     {
       font-family="Lucida Console"
       font-size=9
+      font-family="DejaVu Sans Mono" [$LINUX]
+      font-size=12 [$LINUX]
       font-family="Menlo" [$OSX]
       font-size=14 [$OSX]
       textcolor="label"
@@ -3265,6 +3267,8 @@ steam.styles
 	{
 		textcolor="Highlight3"
 		font-size=14
+		font-family="DejaVu Sans Mono" [$LINUX]
+		font-size=12 [$LINUX]
 		font-family="Menlo" [$OSX]
       	font-size=16 [$OSX]
 		selectedtextcolor="TextSelected"
@@ -3273,11 +3277,13 @@ steam.styles
 	
 	console_text
 	{
- 		font-family="Lucida Console"
+		font-family="Lucida Console"
 		font-size=9
+		font-family="DejaVu Sans Mono" [$LINUX]
+		font-size=12 [$LINUX]
 		font-family="Menlo" [$OSX]
-      	font-size=14 [$OSX]
-	    textcolor="text"
+		font-size=14 [$OSX]
+		textcolor="text"
 		selectedtextcolor="TextSelected"	
 		selectedbgcolor="Focus"
 	}

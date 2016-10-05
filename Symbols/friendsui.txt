@@ -11494,6 +11494,7 @@
  T vgui::MessageBox::KB_ChainToMap()
  T vgui::MessageBox::MessageBox(char const*, char const*, vgui::Panel*, bool)
  T vgui::MessageBox::OnClose()
+ T vgui::MessageBox::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::MessageBox::PerformLayout()
  T vgui::MessageBox::SetCommand(KeyValues*)
  T vgui::MessageBox::SetCommand(char const*)

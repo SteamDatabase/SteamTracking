@@ -1365,6 +1365,14 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 }
 
 
+CheckoutShippingInfo .AddressValidationError
+{
+	font-size: 24px;
+	color: warningnotecolor;
+	margin-left: 80px;
+}
+
+
 .BillingInfoHeader
 {
 	margin: 34px 0px 4px 0px;

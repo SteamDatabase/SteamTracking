@@ -32,6 +32,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h

@@ -156,8 +156,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/InstallAppWizard.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/Main.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/PlatformMainPanel.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SSADialog.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SSASubPanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamApp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamDoc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamDoc.h
@@ -182,6 +180,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_settings.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_cloud.cpp

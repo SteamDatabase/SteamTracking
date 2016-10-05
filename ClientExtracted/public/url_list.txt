@@ -907,7 +907,7 @@ GameHubBroadcasts
 
 WatchVideo
 {
-	url			"%store%/video/watch/%p1%/"
+	url			"%storehttps%/video/watch/%p1%/"
 	method	"internal"
 }
 ManageSteamGuard

@@ -1398,14 +1398,20 @@
 	"Checkout_ShippingInfo_Title"				"Shipping address"
 	"Checkout_ShippingInfo_Address1"				"Shipping address"
 	"Checkout_ShippingInfo_Address2"				"Shipping address, line 2"
-	"Checkout_ShippingInfo_ShippingRestrictions"	"Shipment of any physical items cannot be delivered to P.O. Boxes and can only be delivered to {s:country}."
-	"Checkout_ShippingInfo_ShippingRestrictions_US"	"Shipment of any physical items cannot be delivered to P.O. Boxes and can only be delivered to the 48 continental United States."
+	"Checkout_ShippingInfo_ShippingRestrictions"	"Shipment of any physical items cannot be delivered to APO/FPO/DPO/P.O. Boxes and can only be delivered to {s:country}. Please ensure that your address contains only latin-based characters."
+	"Checkout_ShippingInfo_ShippingRestrictions_US"	"Shipment of any physical items cannot be delivered to APO/FPO/DPO/P.O. Boxes and can only be delivered to the 48 continental United States. Please ensure that your address contains only latin-based characters."
 	"Checkout_VerifyShippingInfo_Title" "Shipping address suggestion"
 	"Checkout_ShippingInfo_ShippingAddressSuggestion" "We've found a suggestion for your shipping address"
 	"Checkout_ShippingInfo_OurSuggestion" "Our suggestion:"
 	"Checkout_ShippingInfo_YouEntered" "You entered:"
 	"Checkout_ShippingInfo_OurSuggestionButton" "Use our suggestion"
 	"Checkout_ShippingInfo_YouEnteredButton" "Use what you entered"
+	"Checkout_ShippingInfo_cannot_ship" "We cannot ship your order to the address that you've provided."
+	"Checkout_ShippingInfo_cannot_ship_fields_too_long" "We cannot ship to the address you've provided because parts of your address are too long.  Your combined name and each of the address fields can only be up to 35 characters long."
+	"Checkout_ShippingInfo_cannot_ship_missing_fields" "We cannot ship to the address you've provided because parts of your address are missing or look invalid."
+	"Checkout_ShippingInfo_cannot_ship_no_apo_fpo_po" "We cannot ship your order to P.O. Boxes, APO, FPO, or DPO addresses."
+	"Checkout_ShippingInfo_cannot_ship_invalid_characters" "We cannot ship your order to the address that you've provided because it contains characters that are not latin-based."
+
 
 	"Checkout_Review_Title"						"Review & Purchase"
 	"Checkout_Review_Purchase"					"Purchase"
@@ -1682,6 +1688,9 @@
 	"Library_Details_2DLaunchWarning_Desc"				"{s:gamename} does not support VR. It will appear on your desktop and may affect VR performance."
 	"Library_Details_2DLaunchWarning_Desc_VRGame"				"{s:gamename} has native VR support, but you are launching the desktop version. Do you want to continue?"
 
+	"Library_Details_StreamingLaunchVR_Title"				"WARNING"
+	"Library_Details_StreamingLaunchVR_Desc"				"{s:gamename} runs in VR. Would you like to launch it and start spectating from {s:streamingclient}?"
+	
 	"Library_Details_OculusOnlyGameWarning_Title"				"WARNING"
 	"Library_Details_OculusOnlyGameWarning_Desc" "{s:gamename} will launch outside of the SteamVR environment. You may need to remove your headset in order to return to Steam."
 
@@ -4676,7 +4685,7 @@
 	"SettingsController_ModifiedByOfficial" "Modified by you, based on the official game configuration."
 	"ControllerNameOnAccount"		"{s:controllername} on account {s:accountname}"
 
-	"ControllerBindingVotes"		"Users:{i:upvotes}"
+	"ControllerBindingVotes"		""
 
 	"ControllerBinding_ModeDropDown_InGameAction"				"In-Game Action"
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Select this option to make the stick or pad perform the specified In-Game Action."
@@ -6065,6 +6074,10 @@
 	"SteamUI_AppTypeMusicInitialCaps"	"Music"
 	"SteamUI_AppTypeMusicPlural"		"music"
 	"SteamUI_AppTypeMusicInitialCapsPlural"	"Music"
+	"SteamUI_AppTypeSeries"			"series"
+	"SteamUI_AppTypeSeriesInitialCaps"	"Series"
+	"SteamUI_AppTypeSeriesPlural"		"series"
+	"SteamUI_AppTypeSeriesInitialCapsPlural"	"Series"
 	"SteamUI_OpenVRApp"						"OpenVR Application"
 	"SteamUI_VRShortcut"					"VR Shortcut"
 	"SteamUI_SteamControllerActionsBlockOutdatedTitle" "Controller Configuration Outdated"
