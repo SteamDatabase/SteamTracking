@@ -278,7 +278,6 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'safetypay':
 				case 'pagoefectivo':
 				case 'trustly':
-				case 'nodwin_cod':
 					displayPendingReceipt = true;
 					break;
 						
@@ -766,7 +765,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -956,7 +955,6 @@ function OnPayPalSuccess( gidTransID )
 					case 'safetypay':
 					case 'pagoefectivo':
 					case 'trustly':
-					case 'nodwin_cod':
 						DisplayPendingReceiptPage();
 						break;
 
@@ -1880,56 +1878,6 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Start your payment through the Novaplay website by signing in and filling out the payment form.<br/><br/>Once you have completed that step, a representative from Novaplay will follow up with you to complete your purchase.';
 					}
 				}	
-				else if ( method.value == 'credit_card_india' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic credit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}	
-				else if ( method.value == 'debit_card_india' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Debit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}	
-				else if ( method.value == 'net_banking_india' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Net Banking transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}	
-				else if ( method.value == 'cash_card_india' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash Card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}	
-				else if ( method.value == 'wallet_india' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Wallet transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}	
 			}
 			else
 			{
@@ -2544,7 +2492,6 @@ g_rgPaymentMethodsToToggle[42] = 'bbvacontinental';
 g_rgPaymentMethodsToToggle[43] = 'safetypay';
 g_rgPaymentMethodsToToggle[44] = 'pagoefectivo';
 g_rgPaymentMethodsToToggle[45] = 'trustly';
-g_rgPaymentMethodsToToggle[46] = 'nodwin_cod';
 
 function UpdatePaymentMethodList( bIsSplitTransaction )
 {
@@ -2688,8 +2635,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
 			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' || method.value == 'tenpay'
-			|| method.value == 'wechat' || method.value == 'nodwin_cod' || method.value == 'credit_card_india' || method.value == 'debit_card_india' 
-			|| method.value == 'net_banking_india' || method.value == 'cash_card_india' || method.value == 'wallet_india' )
+			|| method.value == 'wechat' || method.value == 'nodwin_cod' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -3811,31 +3757,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'nodwin_cod' && providerPaymentMethod == 86 )
 			{
 				$('payment_method_review_text').innerHTML = 'Cash on Delivery';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'credit_card_india' && providerPaymentMethod == 87 )
-			{
-				$('payment_method_review_text').innerHTML = 'Credit Card (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'debit_card_india' && providerPaymentMethod == 88 )
-			{
-				$('payment_method_review_text').innerHTML = 'Debit Card';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'net_banking_india' && providerPaymentMethod == 89 )
-			{
-				$('payment_method_review_text').innerHTML = 'Net Banking';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'cash_card_india' && providerPaymentMethod == 90 )
-			{
-				$('payment_method_review_text').innerHTML = 'Cash Card';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'wallet_india' && providerPaymentMethod == 91 )
-			{
-				$('payment_method_review_text').innerHTML = 'Wallet (Domestic)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 		}
