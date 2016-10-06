@@ -2140,12 +2140,16 @@ HelpRequestPage = {
 			for ( var key in g_rgDefaultWizardPageParams )
 				fd.append( key, g_rgDefaultWizardPageParams[key] );
 
-			if ( HelpRequestPage.m_strSystemReport.length > 0 )
-				fd.append( 'system_report', Blob( HelpRequestPage.m_strSystemReport ) );
+			var cAttachments = 0;
+			if ( HelpRequestPage.m_strSystemReport.length > 0 ) {
+				fd.append('attachments[]', new Blob([HelpRequestPage.m_strSystemReport], {type: "text/plain"}));
+				++cAttachments;
+			}
 
 			// do we have files to upload?
 			var $FileList = $Form.find('ul.attached_file_list').children();
 			$FileList.each( function() {
+				++cAttachments;
 				fd.append( 'attachments[]', $J(this).data('file') );
 			});
 
@@ -2153,7 +2157,7 @@ HelpRequestPage = {
 			oParams['processData'] = false;
 			oParams['contentType'] = false;
 
-			if ( $Form.data('require-attachments') == 1 && fd.getAll( 'attachments[]' ).length == 0 )
+			if ( $Form.data('require-attachments') == 1 && cAttachments == 0 )
 			{
 				var dialog = ShowConfirmDialog( 'Contact Steam Support', $Form.data('attachment-dialog-contents'), 'Yes', 'No' );
 				dialog.GetContent().css( 'max-width', '40%' );
