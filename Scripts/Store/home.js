@@ -413,15 +413,7 @@ GHomepage = {
 		}
 		var bZippedCurators = false;
 
-		if ( GHomepage.rgCuratedAppsData.apps && GHomepage.rgCuratedAppsData.apps.length > 0 )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				rgDisplayListCombined, true,
-				GHomepage.rgCuratedAppsData.apps, true
-			);
-			bZippedCurators = true;
-		}
-
+		
 
 		if( !bZippedCurators )
 		{
@@ -438,7 +430,7 @@ GHomepage = {
 
 
 				var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false, localized: true }
+			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
 		
 		if ( GHomepage.bShuffleInMainLegacy )
