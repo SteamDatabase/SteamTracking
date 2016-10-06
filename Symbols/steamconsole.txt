@@ -288,6 +288,8 @@
  R typeinfo name for SteamClientConVarAccessor
  SpewAndLogActivate
  SpewOutputFunc
+ SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+ SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetThreadProc()
@@ -879,6 +881,7 @@
  T CallbackMgr_RunCallbacks(int, bool)
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
+ T ClientAPI_InitGlobalInstance()
  T ClientAPI_InitLocalInstance(EAccountType)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
@@ -1294,6 +1297,7 @@
  b run_app_build_command
  b run_app_build_http_command
  b runscript_command
+ b s_CmdLineParamGlobalUser
  b s_CurrentRoutingIDPtr
  b s_bCallbackManagerInitialized
  b s_bHWAccelCRC32
