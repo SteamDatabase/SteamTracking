@@ -171,6 +171,25 @@
             ]
         },
         {
+            "name": "GetTopWeekendTourneyGames",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "partner",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Which partner's games to use."
+                },
+                {
+                    "name": "home_division",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "Prefer matches from this division."
+                }
+            ]
+        },
+        {
             "name": "GetTournamentPlayerStats",
             "version": 2,
             "httpmethod": "GET",
