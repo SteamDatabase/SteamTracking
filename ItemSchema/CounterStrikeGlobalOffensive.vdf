@@ -273,6 +273,104 @@
 			"hex_color"		"#ffd700"
 		}
 	}
+	"graffiti_tints"
+	{
+		"brick_red"
+		{
+			"id"		"1"
+			"hex_color"		"#874444"
+		}
+		"blood_red"
+		{
+			"id"		"2"
+			"hex_color"		"#b14d4d"
+		}
+		"tiger_orange"
+		{
+			"id"		"3"
+			"hex_color"		"#b87148"
+		}
+		"dust_brown"
+		{
+			"id"		"4"
+			"hex_color"		"#8f7d5d"
+		}
+		"desert_amber"
+		{
+			"id"		"5"
+			"hex_color"		"#ae833d"
+		}
+		"tracer_yellow"
+		{
+			"id"		"6"
+			"hex_color"		"#d4c95b"
+		}
+		"battle_green"
+		{
+			"id"		"7"
+			"hex_color"		"#789d53"
+		}
+		"jungle_green"
+		{
+			"id"		"8"
+			"hex_color"		"#417a4a"
+		}
+		"frog_green"
+		{
+			"id"		"9"
+			"hex_color"		"#488f80"
+		}
+		"cash_green"
+		{
+			"id"		"10"
+			"hex_color"		"#a6c4a5"
+		}
+		"wire_blue"
+		{
+			"id"		"11"
+			"hex_color"		"#6ba5b2"
+		}
+		"monarch_blue"
+		{
+			"id"		"12"
+			"hex_color"		"#4e7fa9"
+		}
+		"swat_blue"
+		{
+			"id"		"13"
+			"hex_color"		"#4c5b98"
+		}
+		"violent_violet"
+		{
+			"id"		"14"
+			"hex_color"		"#af92df"
+		}
+		"monster_purple"
+		{
+			"id"		"15"
+			"hex_color"		"#6e4f9f"
+		}
+		"bazooka_pink"
+		{
+			"id"		"16"
+			"hex_color"		"#ba68b2"
+		}
+		"princess_pink"
+		{
+			"id"		"17"
+			"hex_color"		"#9d567a"
+		}
+		"war_pig_pink"
+		{
+			"id"		"18"
+			"hex_color"		"#e4ccd5"
+		}
+		"shark_white"
+		{
+			"id"		"19"
+			"hex_color"		"#c1c1c1"
+		}
+	}
 	"player_loadout_slots"
 	{
 		"0"		"LOADOUT_POSITION_MELEE"
@@ -14408,6 +14506,10 @@
 				}
 			}
 		}
+		"coupon_sprays_capsule_community_1"
+		{
+			"prefab"		"coupon_prefab"
+		}
 		"campaign_prefab"
 		{
 			"image_inventory"		"econ/tools/campaign"
@@ -17982,6 +18084,48 @@
 			{
 				"prestige year"		"2016"
 				"pedestal display model"		"models/inventory_items/service_medal_2016_lvl6.mdl"
+			}
+		}
+		"1348"
+		{
+			"name"		"spray"
+			"first_sale_date"		"2014/06/20"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Tool_Spray"
+			"item_type_name"		"#CSGO_Type_Spray"
+			"item_description"		"#CSGO_Tool_Spray_Desc"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"tool"
+			{
+				"type"		"spray"
+				"use_string"		"#ConsumeItem"
+			}
+		}
+		"1349"
+		{
+			"name"		"spraypaint"
+			"first_sale_date"		"2014/06/20"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Tool_SprayPaint"
+			"item_type_name"		"#CSGO_Type_Spray"
+			"item_description"		"#CSGO_Tool_SprayPaint_Desc"
+			"tool"
+			{
+				"type"		"spraypaint"
+			}
+			"item_slot"		"spray"
+			"item_sub_position"		"spray0"
+			"used_by_classes"
+			{
+				"noteam"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"		"1"
 			}
 		}
 		"4001"
@@ -24012,6 +24156,22 @@
 			"loot_list_name"		"coupon loot list - bestiary_sticker_capsule"
 			"prefab"		"coupon_bestiary_capsule_prefab"
 		}
+		"20129"
+		{
+			"name"		"coupon - crate_sprays_vcap1"
+			"item_name"		"#coupon_crate_sprays_vcap1"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - crate_sprays_vcap1"
+			"prefab"		"valve coupon_prefab"
+		}
+		"20130"
+		{
+			"name"		"coupon - crate_sprays_community_1"
+			"item_name"		"#coupon_crate_sprays_community_1"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - crate_sprays_community_1"
+			"prefab"		"coupon_sprays_capsule_community_1"
+		}
 		"20131"
 		{
 			"name"		"coupon - pins_series_2"
@@ -25815,6 +25975,28 @@
 			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
+		}
+		"232"
+		{
+			"name"		"sprays remaining"
+			"attribute_class"		"sprays_remaining"
+			"description_format"		"value_is_additive"
+			"description_string"		"#Attrib_SpraysRemaining"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+			"score"		"8500"
+		}
+		"233"
+		{
+			"name"		"spray tint id"
+			"attribute_class"		"spray_tint_id"
+			"description_format"		"value_is_additive"
+			"description_string"		"#Attrib_SprayTintID"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+			"score"		"8500"
 		}
 		"234"
 		{
@@ -47330,6 +47512,337 @@
 			}
 		}
 	}
+	"sticker_kits"
+	{
+		"1697"
+		{
+			"name"		"spray_std_axes_crossed"
+			"item_name"		"#SprayKit_std_axes_crossed"
+			"description_string"		"#SprayKit_desc_std_axes_crossed"
+			"sticker_material"		"default/axes_crossed"
+			"item_rarity"		"common"
+		}
+		"1698"
+		{
+			"name"		"spray_std_bubble_dead"
+			"item_name"		"#SprayKit_std_bubble_dead"
+			"description_string"		"#SprayKit_desc_std_bubble_dead"
+			"sticker_material"		"default/bubble_dead"
+			"item_rarity"		"common"
+		}
+		"1699"
+		{
+			"name"		"spray_std_chess_king"
+			"item_name"		"#SprayKit_std_chess_king"
+			"description_string"		"#SprayKit_desc_std_chess_king"
+			"sticker_material"		"default/chess_king"
+			"item_rarity"		"common"
+		}
+		"1700"
+		{
+			"name"		"spray_std_crown"
+			"item_name"		"#SprayKit_std_crown"
+			"description_string"		"#SprayKit_desc_std_crown"
+			"sticker_material"		"default/crown"
+			"item_rarity"		"common"
+		}
+		"1701"
+		{
+			"name"		"spray_std_dollar"
+			"item_name"		"#SprayKit_std_dollar"
+			"description_string"		"#SprayKit_desc_std_dollar"
+			"sticker_material"		"default/dollar"
+			"item_rarity"		"common"
+		}
+		"1702"
+		{
+			"name"		"spray_std_double_kill"
+			"item_name"		"#SprayKit_std_double_kill"
+			"description_string"		"#SprayKit_desc_std_double_kill"
+			"sticker_material"		"default/double_kill"
+			"item_rarity"		"common"
+		}
+		"1703"
+		{
+			"name"		"spray_std_eco_pistol"
+			"item_name"		"#SprayKit_std_eco_pistol"
+			"description_string"		"#SprayKit_desc_std_eco_pistol"
+			"sticker_material"		"default/eco_pistol"
+			"item_rarity"		"common"
+		}
+		"1704"
+		{
+			"name"		"spray_std_emo_angry"
+			"item_name"		"#SprayKit_std_emo_angry"
+			"description_string"		"#SprayKit_desc_std_emo_angry"
+			"sticker_material"		"default/emo_angry"
+			"item_rarity"		"common"
+		}
+		"1705"
+		{
+			"name"		"spray_std_emo_brainless"
+			"item_name"		"#SprayKit_std_emo_brainless"
+			"description_string"		"#SprayKit_desc_std_emo_brainless"
+			"sticker_material"		"default/emo_brainless"
+			"item_rarity"		"common"
+		}
+		"1706"
+		{
+			"name"		"spray_std_emo_despair"
+			"item_name"		"#SprayKit_std_emo_despair"
+			"description_string"		"#SprayKit_desc_std_emo_despair"
+			"sticker_material"		"default/emo_despair"
+			"item_rarity"		"common"
+		}
+		"1707"
+		{
+			"name"		"spray_std_emo_happy"
+			"item_name"		"#SprayKit_std_emo_happy"
+			"description_string"		"#SprayKit_desc_std_emo_happy"
+			"sticker_material"		"default/emo_happy"
+			"item_rarity"		"common"
+		}
+		"1708"
+		{
+			"name"		"spray_std_emo_ninja"
+			"item_name"		"#SprayKit_std_emo_ninja"
+			"description_string"		"#SprayKit_desc_std_emo_ninja"
+			"sticker_material"		"default/emo_ninja"
+			"item_rarity"		"common"
+		}
+		"1709"
+		{
+			"name"		"spray_std_emo_worry"
+			"item_name"		"#SprayKit_std_emo_worry"
+			"description_string"		"#SprayKit_desc_std_emo_worry"
+			"sticker_material"		"default/emo_worry"
+			"item_rarity"		"common"
+		}
+		"1710"
+		{
+			"name"		"spray_std_evil_eye"
+			"item_name"		"#SprayKit_std_evil_eye"
+			"description_string"		"#SprayKit_desc_std_evil_eye"
+			"sticker_material"		"default/evil_eye"
+			"item_rarity"		"common"
+		}
+		"1711"
+		{
+			"name"		"spray_std_eyeball"
+			"item_name"		"#SprayKit_std_eyeball"
+			"description_string"		"#SprayKit_desc_std_eyeball"
+			"sticker_material"		"default/eyeball"
+			"item_rarity"		"common"
+		}
+		"1712"
+		{
+			"name"		"spray_std_gg_01"
+			"item_name"		"#SprayKit_std_gg_01"
+			"description_string"		"#SprayKit_desc_std_gg_01"
+			"sticker_material"		"default/gg_01"
+			"item_rarity"		"common"
+		}
+		"1713"
+		{
+			"name"		"spray_std_gg_02"
+			"item_name"		"#SprayKit_std_gg_02"
+			"description_string"		"#SprayKit_desc_std_gg_02"
+			"sticker_material"		"default/gg_02"
+			"item_rarity"		"common"
+		}
+		"1714"
+		{
+			"name"		"spray_std_glhf"
+			"item_name"		"#SprayKit_std_glhf"
+			"description_string"		"#SprayKit_desc_std_glhf"
+			"sticker_material"		"default/glhf"
+			"item_rarity"		"common"
+		}
+		"1715"
+		{
+			"name"		"spray_std_gunsmoke"
+			"item_name"		"#SprayKit_std_gunsmoke"
+			"description_string"		"#SprayKit_desc_std_gunsmoke"
+			"sticker_material"		"default/gunsmoke"
+			"item_rarity"		"common"
+		}
+		"1716"
+		{
+			"name"		"spray_std_hand_butterfly"
+			"item_name"		"#SprayKit_std_hand_butterfly"
+			"description_string"		"#SprayKit_desc_std_hand_butterfly"
+			"sticker_material"		"default/hand_butterfly"
+			"item_rarity"		"common"
+		}
+		"1717"
+		{
+			"name"		"spray_std_hand_loser"
+			"item_name"		"#SprayKit_std_hand_loser"
+			"description_string"		"#SprayKit_desc_std_hand_loser"
+			"sticker_material"		"default/hand_loser"
+			"item_rarity"		"common"
+		}
+		"1718"
+		{
+			"name"		"spray_std_hat_sherif"
+			"item_name"		"#SprayKit_std_hat_sherif"
+			"description_string"		"#SprayKit_desc_std_hat_sherif"
+			"sticker_material"		"default/hat_sherif"
+			"item_rarity"		"common"
+		}
+		"1719"
+		{
+			"name"		"spray_std_headstone_rip"
+			"item_name"		"#SprayKit_std_headstone_rip"
+			"description_string"		"#SprayKit_desc_std_headstone_rip"
+			"sticker_material"		"default/headstone_rip"
+			"item_rarity"		"common"
+		}
+		"1720"
+		{
+			"name"		"spray_std_heart"
+			"item_name"		"#SprayKit_std_heart"
+			"description_string"		"#SprayKit_desc_std_heart"
+			"sticker_material"		"default/heart"
+			"item_rarity"		"common"
+		}
+		"1721"
+		{
+			"name"		"spray_std_hl_eightball"
+			"item_name"		"#SprayKit_std_hl_eightball"
+			"description_string"		"#SprayKit_desc_std_hl_eightball"
+			"sticker_material"		"default/hl_eightball"
+			"item_rarity"		"common"
+		}
+		"1722"
+		{
+			"name"		"spray_std_hl_lambda"
+			"item_name"		"#SprayKit_std_hl_lambda"
+			"description_string"		"#SprayKit_desc_std_hl_lambda"
+			"sticker_material"		"default/hl_lambda"
+			"item_rarity"		"common"
+		}
+		"1723"
+		{
+			"name"		"spray_std_hl_smiley"
+			"item_name"		"#SprayKit_std_hl_smiley"
+			"description_string"		"#SprayKit_desc_std_hl_smiley"
+			"sticker_material"		"default/hl_smiley"
+			"item_rarity"		"common"
+		}
+		"1724"
+		{
+			"name"		"spray_std_jump_shot"
+			"item_name"		"#SprayKit_std_jump_shot"
+			"description_string"		"#SprayKit_desc_std_jump_shot"
+			"sticker_material"		"default/jump_shot"
+			"item_rarity"		"common"
+		}
+		"1725"
+		{
+			"name"		"spray_std_karambit"
+			"item_name"		"#SprayKit_std_karambit"
+			"description_string"		"#SprayKit_desc_std_karambit"
+			"sticker_material"		"default/karambit"
+			"item_rarity"		"common"
+		}
+		"1726"
+		{
+			"name"		"spray_std_knives_crossed"
+			"item_name"		"#SprayKit_std_knives_crossed"
+			"description_string"		"#SprayKit_desc_std_knives_crossed"
+			"sticker_material"		"default/knives_crossed"
+			"item_rarity"		"common"
+		}
+		"1727"
+		{
+			"name"		"spray_std_moly"
+			"item_name"		"#SprayKit_std_moly"
+			"description_string"		"#SprayKit_desc_std_moly"
+			"sticker_material"		"default/moly"
+			"item_rarity"		"common"
+		}
+		"1728"
+		{
+			"name"		"spray_std_necklace_dollar"
+			"item_name"		"#SprayKit_std_necklace_dollar"
+			"description_string"		"#SprayKit_desc_std_necklace_dollar"
+			"sticker_material"		"default/necklace_dollar"
+			"item_rarity"		"common"
+		}
+		"1729"
+		{
+			"name"		"spray_std_no_scope"
+			"item_name"		"#SprayKit_std_no_scope"
+			"description_string"		"#SprayKit_desc_std_no_scope"
+			"sticker_material"		"default/no_scope"
+			"item_rarity"		"common"
+		}
+		"1730"
+		{
+			"name"		"spray_std_piggles"
+			"item_name"		"#SprayKit_std_piggles"
+			"description_string"		"#SprayKit_desc_std_piggles"
+			"sticker_material"		"default/piggles"
+			"item_rarity"		"common"
+		}
+		"1731"
+		{
+			"name"		"spray_std_popdog"
+			"item_name"		"#SprayKit_std_popdog"
+			"description_string"		"#SprayKit_desc_std_popdog"
+			"sticker_material"		"default/popdog"
+			"item_rarity"		"common"
+		}
+		"1732"
+		{
+			"name"		"spray_std_rooster"
+			"item_name"		"#SprayKit_std_rooster"
+			"description_string"		"#SprayKit_desc_std_rooster"
+			"sticker_material"		"default/rooster"
+			"item_rarity"		"common"
+		}
+		"1733"
+		{
+			"name"		"spray_std_salty"
+			"item_name"		"#SprayKit_std_salty"
+			"description_string"		"#SprayKit_desc_std_salty"
+			"sticker_material"		"default/salty"
+			"item_rarity"		"common"
+		}
+		"1734"
+		{
+			"name"		"spray_std_sorry"
+			"item_name"		"#SprayKit_std_sorry"
+			"description_string"		"#SprayKit_desc_std_sorry"
+			"sticker_material"		"default/sorry"
+			"item_rarity"		"common"
+		}
+		"1735"
+		{
+			"name"		"spray_std_tongue"
+			"item_name"		"#SprayKit_std_tongue"
+			"description_string"		"#SprayKit_desc_std_tongue"
+			"sticker_material"		"default/tongue"
+			"item_rarity"		"common"
+		}
+		"1736"
+		{
+			"name"		"spray_std_wings"
+			"item_name"		"#SprayKit_std_wings"
+			"description_string"		"#SprayKit_desc_std_wings"
+			"sticker_material"		"default/wings"
+			"item_rarity"		"common"
+		}
+		"1737"
+		{
+			"name"		"spray_std_gtg"
+			"item_name"		"#SprayKit_std_gtg"
+			"description_string"		"#SprayKit_desc_std_gtg"
+			"sticker_material"		"default/gtg"
+			"item_rarity"		"common"
+		}
+	}
 	"client_loot_lists"
 	{
 		"crate_community_11_rare"
@@ -50892,6 +51405,16 @@
 		{
 			"public_list_contents"		"1"
 			"crate_sticker_pack_bestiary_capsule"		"1"
+		}
+		"coupon loot list - crate_sprays_vcap1"
+		{
+			"public_list_contents"		"1"
+			"crate_sprays_vcap1"		"1"
+		}
+		"coupon loot list - crate_sprays_community_1"
+		{
+			"public_list_contents"		"1"
+			"crate_sprays_community_1"		"1"
 		}
 		"coupon loot list - pins_series_2"
 		{
@@ -80234,6 +80757,440 @@
 		"gs_tec9_supercharged"		"legendary"
 		"cu_ump45_metritera"		"rare"
 		"hy_xm1014_fractal_blue"		"rare"
+	}
+	"sticker_kits"
+	{
+		"1653"
+		{
+			"name"		"spray_blood_boiler"
+			"item_name"		"#StickerKit_comm02_blood_broiler"
+			"description_string"		"#StickerKit_desc_comm02_blood_broiler"
+			"sticker_material"		"community_mix01/blood_boiler"
+			"item_rarity"		"legendary"
+		}
+		"1654"
+		{
+			"name"		"spray_chicken"
+			"item_name"		"#StickerKit_enfu_chicken"
+			"description_string"		"#StickerKit_desc_enfu_chicken"
+			"sticker_material"		"community_mix01/chicken"
+			"item_rarity"		"rare"
+		}
+		"1655"
+		{
+			"name"		"spray_drugwarveteran"
+			"item_name"		"#StickerKit_comm02_drugwarveteran"
+			"description_string"		"#StickerKit_desc_comm02_drugwarveteran"
+			"sticker_material"		"community_mix01/drugwarveteran"
+			"item_rarity"		"legendary"
+		}
+		"1656"
+		{
+			"name"		"spray_flickshot"
+			"item_name"		"#StickerKit_comm02_flickshot"
+			"description_string"		"#StickerKit_desc_comm02_flickshot"
+			"sticker_material"		"community_mix01/flickshot"
+			"item_rarity"		"rare"
+		}
+		"1657"
+		{
+			"name"		"spray_hamster_hawk"
+			"item_name"		"#StickerKit_comm02_hamster_hawk"
+			"description_string"		"#StickerKit_desc_comm02_hamster_hawk"
+			"sticker_material"		"community_mix01/hamster_hawk"
+			"item_rarity"		"mythical"
+		}
+		"1658"
+		{
+			"name"		"spray_ivette"
+			"item_name"		"#StickerKit_pinups_ivette"
+			"description_string"		"#StickerKit_desc_pinups_ivette"
+			"sticker_material"		"community_mix01/ivette"
+			"item_rarity"		"rare"
+		}
+		"1659"
+		{
+			"name"		"spray_kawaiikiller_ct"
+			"item_name"		"#StickerKit_comm02_kawaiikiller"
+			"description_string"		"#StickerKit_desc_comm02_kawaiikiller"
+			"sticker_material"		"community_mix01/kawaiikiller"
+			"item_rarity"		"mythical"
+		}
+		"1660"
+		{
+			"name"		"spray_kawaiikiller_t"
+			"item_name"		"#StickerKit_comm02_kawaiikiller_t"
+			"description_string"		"#StickerKit_desc_comm02_kawaiikiller_t"
+			"sticker_material"		"community_mix01/kawaiikiller_t"
+			"item_rarity"		"mythical"
+		}
+		"1661"
+		{
+			"name"		"spray_martha"
+			"item_name"		"#StickerKit_pinups_martha"
+			"description_string"		"#StickerKit_desc_pinups_martha"
+			"sticker_material"		"community_mix01/martha"
+			"item_rarity"		"mythical"
+		}
+		"1662"
+		{
+			"name"		"spray_oldschool"
+			"item_name"		"#StickerKit_OldSchool"
+			"description_string"		"#StickerKit_desc_OldSchool"
+			"sticker_material"		"community_mix01/oldschool"
+			"item_rarity"		"rare"
+		}
+		"1663"
+		{
+			"name"		"spray_pocket_bbq"
+			"item_name"		"#StickerKit_comm01_pocket_bbq"
+			"description_string"		"#StickerKit_desc_comm01_pocket_bbq"
+			"sticker_material"		"community_mix01/pocket_bbq"
+			"item_rarity"		"rare"
+		}
+		"1664"
+		{
+			"name"		"spray_rekt"
+			"item_name"		"#StickerKit_comm01_rekt"
+			"description_string"		"#StickerKit_desc_comm01_rekt"
+			"sticker_material"		"community_mix01/rekt"
+			"item_rarity"		"legendary"
+		}
+		"1665"
+		{
+			"name"		"spray_shave_master"
+			"item_name"		"#StickerKit_comm01_shavemaster"
+			"description_string"		"#StickerKit_desc_comm01_shavemaster"
+			"sticker_material"		"community_mix01/shave_master"
+			"item_rarity"		"rare"
+		}
+		"1666"
+		{
+			"name"		"spray_shootingstar"
+			"item_name"		"#StickerKit_comm02_shootingstar"
+			"description_string"		"#StickerKit_desc_comm02_shootingstar"
+			"sticker_material"		"community_mix01/shootingstar"
+			"item_rarity"		"rare"
+		}
+		"1667"
+		{
+			"name"		"spray_skull"
+			"item_name"		"#StickerKit_comm01_skull"
+			"description_string"		"#StickerKit_desc_comm01_skull"
+			"sticker_material"		"community_mix01/skull"
+			"item_rarity"		"mythical"
+		}
+		"1668"
+		{
+			"name"		"spray_tamara"
+			"item_name"		"#StickerKit_pinups_tamara"
+			"description_string"		"#StickerKit_desc__pinups_tamara"
+			"sticker_material"		"community_mix01/tamara"
+			"item_rarity"		"mythical"
+		}
+		"1669"
+		{
+			"name"		"spray_unicorn"
+			"item_name"		"#StickerKit_enfu_unicorn"
+			"description_string"		"#StickerKit_desc_enfu_unicorn"
+			"sticker_material"		"community_mix01/unicorn"
+			"item_rarity"		"rare"
+		}
+		"1670"
+		{
+			"name"		"spray_winged_defuser"
+			"item_name"		"#StickerKit_comm01_winged_defuser"
+			"description_string"		"#StickerKit_desc_comm01_winged_defuser"
+			"sticker_material"		"community_mix01/winged_defuser"
+			"item_rarity"		"rare"
+		}
+	}
+	"items"
+	{
+		"4234"
+		{
+			"item_name"		"#CSGO_crate_sprays_community_1"
+			"name"		"crate_sprays_community_1"
+			"item_description"		"#CSGO_crate_sprays_community_1_desc"
+			"image_inventory"		"econ/weapon_cases/crate_spray_pack_community_1"
+			"first_sale_date"		"2016/06/20"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"142"
+				}
+			}
+			"tags"
+			{
+				"SprayCapsule"
+				{
+					"tag_value"		"crate_sprays_community_1_lootlist"
+					"tag_text"		"#CSGO_crate_sprays_community_1"
+					"tag_group"		"SprayCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_SprayCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"142"		"crate_sprays_community_1_lootlist"
+	}
+	"client_loot_lists"
+	{
+		"crate_sprays_community_1_rare"
+		{
+			"[spray_chicken]spray"		"1"
+			"[spray_flickshot]spray"		"1"
+			"[spray_shootingstar]spray"		"1"
+			"[spray_oldschool]spray"		"1"
+			"[spray_pocket_bbq]spray"		"1"
+			"[spray_shave_master]spray"		"1"
+			"[spray_ivette]spray"		"1"
+			"[spray_unicorn]spray"		"1"
+			"[spray_winged_defuser]spray"		"1"
+		}
+		"crate_sprays_community_1_mythical"
+		{
+			"[spray_hamster_hawk]spray"		"1"
+			"[spray_kawaiikiller_ct]spray"		"1"
+			"[spray_kawaiikiller_t]spray"		"1"
+			"[spray_martha]spray"		"1"
+			"[spray_tamara]spray"		"1"
+			"[spray_skull]spray"		"1"
+		}
+		"crate_sprays_community_1_legendary"
+		{
+			"[spray_drugwarveteran]spray"		"1"
+			"[spray_blood_boiler]spray"		"1"
+			"[spray_rekt]spray"		"1"
+		}
+		"crate_sprays_community_1_lootlist"
+		{
+			"crate_sprays_community_1_rare"		"1"
+			"crate_sprays_community_1_mythical"		"1"
+			"crate_sprays_community_1_legendary"		"1"
+		}
+	}
+	"sticker_kits"
+	{
+		"1671"
+		{
+			"name"		"spray_vcap1_ace_01"
+			"item_name"		"#SprayKit_vcap1_ace_01"
+			"description_string"		"#SprayKit_desc_vcap1_ace_01"
+			"sticker_material"		"valve_sprays/ace_01"
+			"item_rarity"		"rare"
+		}
+		"1672"
+		{
+			"name"		"spray_vcap1_banana"
+			"item_name"		"#SprayKit_vcap1_banana"
+			"description_string"		"#SprayKit_desc_vcap1_banana"
+			"sticker_material"		"valve_sprays/banana"
+			"item_rarity"		"rare"
+		}
+		"1673"
+		{
+			"name"		"spray_vcap1_cerberus"
+			"item_name"		"#SprayKit_vcap1_cerberus"
+			"description_string"		"#SprayKit_desc_vcap1_cerberus"
+			"sticker_material"		"valve_sprays/cerberus"
+			"item_rarity"		"mythical"
+		}
+		"1674"
+		{
+			"name"		"spray_vcap1_clutch_01"
+			"item_name"		"#SprayKit_vcap1_clutch_01"
+			"description_string"		"#SprayKit_desc_vcap1_clutch_01"
+			"sticker_material"		"valve_sprays/clutch_01"
+			"item_rarity"		"legendary"
+		}
+		"1675"
+		{
+			"name"		"spray_vcap1_crown"
+			"item_name"		"#SprayKit_vcap1_crown"
+			"description_string"		"#SprayKit_desc_vcap1_crown"
+			"sticker_material"		"valve_sprays/crown"
+			"item_rarity"		"mythical"
+		}
+		"1676"
+		{
+			"name"		"spray_vcap1_ct"
+			"item_name"		"#SprayKit_vcap1_ct"
+			"description_string"		"#SprayKit_desc_vcap1_ct"
+			"sticker_material"		"valve_sprays/ct"
+			"item_rarity"		"rare"
+		}
+		"1677"
+		{
+			"name"		"spray_vcap1_ez_02"
+			"item_name"		"#SprayKit_vcap1_ez_02"
+			"description_string"		"#SprayKit_desc_vcap1_ez_02"
+			"sticker_material"		"valve_sprays/ez_02"
+			"item_rarity"		"mythical"
+		}
+		"1678"
+		{
+			"name"		"spray_vcap1_fireserpent"
+			"item_name"		"#SprayKit_vcap1_fireserpent"
+			"description_string"		"#SprayKit_desc_vcap1_fireserpent"
+			"sticker_material"		"valve_sprays/fireserpent"
+			"item_rarity"		"legendary"
+		}
+		"1679"
+		{
+			"name"		"spray_vcap1_howling_dawn"
+			"item_name"		"#SprayKit_vcap1_howling_dawn"
+			"description_string"		"#SprayKit_desc_vcap1_howling_dawn"
+			"sticker_material"		"valve_sprays/howling_dawn"
+			"item_rarity"		"legendary"
+		}
+		"1680"
+		{
+			"name"		"spray_vcap1_kisses"
+			"item_name"		"#SprayKit_vcap1_kisses"
+			"description_string"		"#SprayKit_desc_vcap1_kisses"
+			"sticker_material"		"valve_sprays/kisses"
+			"item_rarity"		"mythical"
+		}
+		"1681"
+		{
+			"name"		"spray_vcap1_lemon_squeeze"
+			"item_name"		"#SprayKit_vcap1_lemon_squeeze"
+			"description_string"		"#SprayKit_desc_vcap1_lemon_squeeze"
+			"sticker_material"		"valve_sprays/lemon_squeeze"
+			"item_rarity"		"rare"
+		}
+		"1682"
+		{
+			"name"		"spray_vcap1_nice_shot_color"
+			"item_name"		"#SprayKit_vcap1_nice_shot_color"
+			"description_string"		"#SprayKit_desc_vcap1_nice_shot_color"
+			"sticker_material"		"valve_sprays/nice_shot_color"
+			"item_rarity"		"rare"
+		}
+		"1683"
+		{
+			"name"		"spray_vcap1_phoenix"
+			"item_name"		"#SprayKit_vcap1_phoenix"
+			"description_string"		"#SprayKit_desc_vcap1_phoenix"
+			"sticker_material"		"valve_sprays/phoenix"
+			"item_rarity"		"rare"
+		}
+		"1684"
+		{
+			"name"		"spray_vcap1_realmvp_02"
+			"item_name"		"#SprayKit_vcap1_realmvp_02"
+			"description_string"		"#SprayKit_desc_vcap1_realmvp_02"
+			"sticker_material"		"valve_sprays/realmvp_02"
+			"item_rarity"		"mythical"
+		}
+		"1685"
+		{
+			"name"		"spray_vcap1_ripip"
+			"item_name"		"#SprayKit_vcap1_ripip"
+			"description_string"		"#SprayKit_desc_vcap1_ripip"
+			"sticker_material"		"valve_sprays/ripip"
+			"item_rarity"		"mythical"
+		}
+		"1686"
+		{
+			"name"		"spray_vcap1_target_02"
+			"item_name"		"#SprayKit_vcap1_target_02"
+			"description_string"		"#SprayKit_desc_vcap1_target_02"
+			"sticker_material"		"valve_sprays/target_02"
+			"item_rarity"		"rare"
+		}
+		"1687"
+		{
+			"name"		"spray_vcap1_welcome_clutch"
+			"item_name"		"#SprayKit_vcap1_welcome_clutch"
+			"description_string"		"#SprayKit_desc_vcap1_welcome_clutch"
+			"sticker_material"		"valve_sprays/welcome_clutch"
+			"item_rarity"		"rare"
+		}
+		"1688"
+		{
+			"name"		"spray_vcap1_wings"
+			"item_name"		"#SprayKit_vcap1_wings"
+			"description_string"		"#SprayKit_desc_vcap1_wings"
+			"sticker_material"		"valve_sprays/wings"
+			"item_rarity"		"rare"
+		}
+	}
+	"items"
+	{
+		"4285"
+		{
+			"item_name"		"#CSGO_crate_sprays_vcap1"
+			"name"		"crate_sprays_vcap1"
+			"item_description"		"#CSGO_crate_sprays_vcap1_desc"
+			"image_inventory"		"econ/weapon_cases/crate_spray_pack_valve_1"
+			"first_sale_date"		"2016/08/24"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"176"
+				}
+			}
+			"tags"
+			{
+				"SprayCapsule"
+				{
+					"tag_value"		"crate_sprays_vcap1_lootlist"
+					"tag_text"		"#CSGO_crate_sprays_vcap1"
+					"tag_group"		"SprayCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_SprayCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"176"		"crate_sprays_vcap1_lootlist"
+	}
+	"client_loot_lists"
+	{
+		"crate_sprays_vcap1_lootlist_rare"
+		{
+			"[spray_vcap1_ct]spray"		"1"
+			"[spray_vcap1_banana]spray"		"1"
+			"[spray_vcap1_ace_01]spray"		"1"
+			"[spray_vcap1_target_02]spray"		"1"
+			"[spray_vcap1_nice_shot_color]spray"		"1"
+			"[spray_vcap1_wings]spray"		"1"
+			"[spray_vcap1_phoenix]spray"		"1"
+			"[spray_vcap1_welcome_clutch]spray"		"1"
+			"[spray_vcap1_lemon_squeeze]spray"		"1"
+		}
+		"crate_sprays_vcap1_lootlist_mythical"
+		{
+			"[spray_vcap1_ez_02]spray"		"1"
+			"[spray_vcap1_cerberus]spray"		"1"
+			"[spray_vcap1_kisses]spray"		"1"
+			"[spray_vcap1_crown]spray"		"1"
+			"[spray_vcap1_realmvp_02]spray"		"1"
+			"[spray_vcap1_ripip]spray"		"1"
+		}
+		"crate_sprays_vcap1_lootlist_legendary"
+		{
+			"[spray_vcap1_howling_dawn]spray"		"1"
+			"[spray_vcap1_fireserpent]spray"		"1"
+			"[spray_vcap1_clutch_01]spray"		"1"
+		}
+		"crate_sprays_vcap1_lootlist"
+		{
+			"crate_sprays_vcap1_lootlist_rare"		"1"
+			"crate_sprays_vcap1_lootlist_mythical"		"1"
+			"crate_sprays_vcap1_lootlist_legendary"		"1"
+		}
 	}
 	"sticker_kits"
 	{

@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5905962738d68079f8c546c29e5f860438ae951b.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.a56099c5c6a6b4fd713151443278c1d2f82c86de.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7135,6 +7135,55 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "spray",
+				"defindex": 1348,
+				"item_class": "tool",
+				"item_type_name": "Graffiti",
+				"item_name": "Sealed Graffiti",
+				"item_description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "spray",
+					"use_string": "USE"
+				}
+			},
+			{
+				"name": "spraypaint",
+				"defindex": 1349,
+				"item_class": "tool",
+				"item_type_name": "Graffiti",
+				"item_name": "Graffiti",
+				"item_description": "This graffiti can be applied to the in-game world. You can apply it until you run out of charges.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "spraypaint"
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "community_13 Key",
@@ -15338,6 +15387,38 @@
 				
 			},
 			{
+				"name": "crate_sprays_community_1",
+				"defindex": 4234,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Community Graffiti Box 1",
+				"item_description": "This box contains a single community-designed graffiti pattern. A portion of the proceeds is shared equally among the included creators.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_spray_pack_community_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_spray_pack_community_1.9901d4df438f7ab1df3b493a063d80ca82711550.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 142
+					}
+				]
+				
+			},
+			{
 				"name": "crate_pins_series_1",
 				"defindex": 4235,
 				"item_class": "supply_crate",
@@ -17145,6 +17226,38 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 175
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sprays_vcap1",
+				"defindex": 4285,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "CS:GO Graffiti Box",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_spray_pack_valve_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_spray_pack_valve_1.631e40631e3129ac3dd15adf2eeccd964b531498.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 176
 					}
 				]
 				
@@ -23483,6 +23596,70 @@
 				
 			},
 			{
+				"name": "coupon - crate_sprays_vcap1",
+				"defindex": 20129,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "CS:GO Graffiti Box",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - crate_sprays_community_1",
+				"defindex": 20130,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Community Graffiti Box 1",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
 				"name": "coupon - pins_series_2",
 				"defindex": 20131,
 				"item_class": "supply_crate",
@@ -24831,6 +25008,14 @@
 				"defindex": 231,
 				"attribute_class": "recovery_transition_end_bullet",
 				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "spray tint id",
+				"defindex": 233,
+				"attribute_class": "spray_tint_id",
+				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
 			},
