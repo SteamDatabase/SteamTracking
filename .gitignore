@@ -19,6 +19,7 @@ ClientExtracted/ThirdPartyLegalNotices.doc
 ClientExtracted/Frameworks/
 
 # Ignore all translations
+ClientExtracted/**/*_arabic*.[ht]*
 ClientExtracted/**/*_brazilian*.[ht]*
 ClientExtracted/**/*_finnish*.[ht]*
 ClientExtracted/**/*_japanese*.[ht]*
