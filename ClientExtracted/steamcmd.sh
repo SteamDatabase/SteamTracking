@@ -9,7 +9,10 @@ if [ "$UNAME" == "Linux" ]; then
   PLATFORM="linux32"
   export LD_LIBRARY_PATH="$STEAMROOT/$PLATFORM:$LD_LIBRARY_PATH"
 else # if [ "$UNAME" == "Darwin" ]; then
-  STEAMEXE="${STEAMROOT}/Steam.AppBundle/Steam/Contents/MacOS/${STEAMCMD}"
+  STEAMEXE="${STEAMROOT}/${STEAMCMD}"
+  if [ ! -x ${STEAMEXE} ]; then
+    STEAMEXE="${STEAMROOT}/Steam.AppBundle/Steam/Contents/MacOS/${STEAMCMD}"
+  fi
   export DYLD_LIBRARY_PATH="$STEAMROOT:$DYLD_LIBRARY_PATH"
   export DYLD_FRAMEWORK_PATH="$STEAMROOT:$DYLD_FRAMEWORK_PATH"
 fi
