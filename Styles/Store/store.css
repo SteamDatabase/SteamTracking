@@ -46,7 +46,7 @@ body.v6.in_client {
 }
 
 body.v6 {
-	 background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
+	 background: url( '/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
 	 /* background: #1b2838; */
 }
 
@@ -59,13 +59,13 @@ body.v6 > div#global_header {
 }
 
 .v6_bg {
-	/* background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top; */
+	/* background: url( '/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top; */
 }
 
 body.blue .v6_bg {
 	background:
-		url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_top_center.png' ) center top no-repeat,
-		url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_top_repeat.png' ) center top repeat-x
+		url( '/public/images/v6/blue_top_center.png' ) center top no-repeat,
+		url( '/public/images/v6/blue_top_repeat.png' ) center top repeat-x
 ;
 
 	min-height: 370px;
@@ -268,7 +268,7 @@ body.v6 .page_content {
 }
 
 .page_header_ctn {
-    background: url('https://steamstore-a.akamaihd.net/public/images//v6/temp/cluster_bg.png' ) bottom center no-repeat;
+    background: url('/public/images//v6/temp/cluster_bg.png' ) bottom center no-repeat;
     padding-bottom: 64px;
     margin-bottom: -30px;
 }
@@ -468,7 +468,7 @@ a#store_search_link img {
 
 .searchbox {
 
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/store_header_search.png?v=1' );
+	background-image: url( '/public/images/v6/store_header_search.png?v=1' );
 
 	color: #a6a5a2;
 	width: 216px;
@@ -479,7 +479,7 @@ a#store_search_link img {
 	cursor: text;
 }
 .searchbox:hover {
-    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/store_header_search_hover.png' );
+    background-image: url( '/public/images/v6/store_header_search_hover.png' );
 }
 
 
@@ -635,7 +635,7 @@ a#store_search_link img {
 	height: 12px;
 	padding: 0;
 	display: inline-block;
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/btn_arrow_down_padded.png' );
+	background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
 	background-position: center;
 	background-repeat: no-repeat;
 	cursor: pointer;
@@ -643,7 +643,7 @@ a#store_search_link img {
 }
 
 .store_nav .tab:hover > span.pulldown > span {
-    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/btn_arrow_down_padded_white.png' );
+    background-image: url( '/public/images/v6/btn_arrow_down_padded_white.png' );
 }
 
 .store_nav .tab img.foryou_avatar {
@@ -808,7 +808,7 @@ a#store_search_link img {
     display: inline-block;
     background-position: -9px 0px;
     background-repeat: no-repeat;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images//v6/icon_cluster_controls.png');
+    background-image: url('/public/images//v6/icon_cluster_controls.png');
     width: 9px;
     height: 7px;
     margin-left: 15px;
@@ -818,7 +818,7 @@ a#store_search_link img {
     display: inline-block;
     background-position: -18px 0px;
     background-repeat: no-repeat;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images//v6/icon_cluster_controls.png');
+    background-image: url('/public/images//v6/icon_cluster_controls.png');
     width: 9px;
     height: 7px;
     margin-left: 13px;
@@ -1058,12 +1058,12 @@ a#store_search_link img {
 	width: 274px;
 	margin: 1px;
 
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/spotlight_background.jpg?v=1' ) bottom center no-repeat;
+	background: url( '/public/images/v6/spotlight_background.jpg?v=1' ) bottom center no-repeat;
 }
 
 
 .spotlight_weeklong_ctn {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/spotlight_weeklong_deals.jpg?v=2' ) top center no-repeat;
+	background: url( '/public/images/v6/temp/spotlight_weeklong_deals.jpg?v=2' ) top center no-repeat;
 	width: 304px;
 	height: 350px;
 	text-align: center;
@@ -1447,34 +1447,34 @@ span.platform_img {
 
 span.platform_img.steamplay {
 	width: 64px;
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_steamplay.png' );
+	background-image: url( '/public/images/v6/icon_steamplay.png' );
 	padding-right: 5px;
 }
 
 span.platform_img.win {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_win.png' );
+	background-image: url( '/public/images/v6/icon_platform_win.png' );
 }
 
 span.platform_img.mac {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_mac.png' );
+	background-image: url( '/public/images/v6/icon_platform_mac.png' );
 }
 
 span.platform_img.linux {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_linux.png' );
+	background-image: url( '/public/images/v6/icon_platform_linux.png' );
 }
 
 span.platform_img.streamingvideo {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_streamingvideo_v6.png' );
+	background-image: url( '/public/images/v6/icon_streamingvideo_v6.png' );
 	background-position-y: 3px;
 	background-position-x: 2px;
 }
 
 span.platform_img.htcvive {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_htcvive.png' );
+	background-image: url( '/public/images/v6/icon_platform_htcvive.png' );
 }
 
 span.platform_img.oculusrift {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_oculusrift.png' );
+	background-image: url( '/public/images/v6/icon_platform_oculusrift.png' );
 }
 
 span.platform_img.hmd_separator {
@@ -1696,15 +1696,15 @@ div.game_hover {
 }
 
 .friend_status_offline .friend_block_avatar {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_offline.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_offline.jpg' );
 }
 
 .friend_status_online .friend_block_avatar {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_online.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_online.jpg' );
 }
 
 .friend_status_in-game .friend_block_avatar {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_ingame.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_ingame.jpg' );
 }
 
 
@@ -2012,13 +2012,13 @@ body.v6 .discover_queue_empty>h3 {
 	top: 9px;
 	right: 9px;
 	z-index: 25;
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/close_btn.png' );
+	background-image: url( '/public/images/v6/close_btn.png' );
 	background-repeat: no-repeat;
 	height: 18px;
 	width: 18px;
 }
 #v6takeover.closed .close {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/expand_btn.png?v=1' );
+	background-image: url( '/public/images/v6/expand_btn.png?v=1' );
 }
 
 #v6takeover.closed .avatar, #v6takeover.closed .title, #v6takeover.closed .desc, #v6takeover.closed .btn_medium {
@@ -2127,7 +2127,7 @@ body.v6 .discover_queue_empty>h3 {
 	top: 0;
 	bottom: 0;
 	width: 20px;
-	background: url('https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat left center;
+	background: url('/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat left center;
 	content: '';
 }
 
@@ -2627,7 +2627,7 @@ background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89
 	opacity: 0;
 	transition: opacity 0.2s, right 0.2s;
 	background-color: rgba(54,97,125,1);
-	background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/icon_expand.png');
+	background-image: url('/public/images/v6/icon_expand.png');
 	background-position: 4px 4px;
 	border-radius: 3px;
 	background-repeat: no-repeat;

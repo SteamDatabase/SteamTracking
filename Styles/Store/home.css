@@ -124,7 +124,7 @@ a.gutter_item:hover {
 }
 
 .home_cluster_ctn {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
+	background: url( '/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
 
 	padding-bottom: 22px;
 	z-index: 1;
@@ -178,7 +178,7 @@ a.home_block_footer_btn:hover {
 }
 
 .home_tab_bg {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/home/tab_bg.png') no-repeat;
+	background: url( '/public/images/v6/home/tab_bg.png') no-repeat;
 	position: absolute;
 	width: 664px;
 	height: 127px;
@@ -579,7 +579,7 @@ a.home_headercap:hover {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/customize_checkboxes.png' );
+    background-image: url( '/public/images/v6/customize_checkboxes.png' );
     background-position: 0px 0px;
 }
 
@@ -638,7 +638,7 @@ a.home_headercap:hover {
 	top: 0;
 	width: 810px;
 	max-width: 100%;
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
+	background: url( '/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
 
 	height: 92px;
 }

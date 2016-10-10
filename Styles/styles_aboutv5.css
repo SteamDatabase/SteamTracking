@@ -1,7 +1,7 @@
 /* CSS Document */
 
 div#main.quiltbg {
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/about/background.jpg);
+	background-image: url(/public/images/about/background.jpg);
 	background-position: center top;
 	background-repeat: repeat-x;
 }
@@ -13,7 +13,7 @@ div#main.quiltbg {
 
 #about_header_area {
 	height: 350px;
-    background-image: url(https://steamstore-a.akamaihd.net/public/images/about/header.png);
+    background-image: url(/public/images/about/header.png);
     background-repeat: repeat-x;
     margin-bottom: -8px;
 }
@@ -53,7 +53,7 @@ div#main.quiltbg {
 }
 
 #about_install_steam {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/about/btn_download.png );
+	background-image: url( /public/images/v5/about/btn_download.png );
 	width: 276px;
 	height: 68px;
 	
@@ -112,7 +112,7 @@ a#about_install_steam_link:hover {
 
 .about_rule {
 	height: 1px;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/maincol_gradient_rule.png );
+	background-image: url( /public/images/v5/maincol_gradient_rule.png );
 	background-align: top left;
 	background-repeat: no-repeat;
 	margin: 16px 0px;
@@ -133,7 +133,7 @@ img.about_features_img_right {
 
 
 #mac_banner {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/about/HiMacBanner.png );
+	background-image: url( /public/images/v5/about/HiMacBanner.png );
 	width: 940px;
 	height: 195px;
 }
@@ -159,7 +159,7 @@ img.about_features_img_right {
 }
 
 #mac_portal_callout {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/about/MacBeta_Portal.jpg );
+	background-image: url( /public/images/v5/about/MacBeta_Portal.jpg );
 	width: 276px;
 	height: 209px;
 }
@@ -173,7 +173,7 @@ img.about_features_img_right {
 
 a.mac_portal_btn {
 	display: block;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/about/MacBeta_PortalBtn.png );
+	background-image: url( /public/images/v5/about/MacBeta_PortalBtn.png );
 	margin: 0px auto;
 	width: 247px;
 	height: 41px;
@@ -269,12 +269,12 @@ a.mac_portal_btn {
 .about_boxes_box_top {
     width: 470px;
     height: 13px;
-    background: url(https://steamstore-a.akamaihd.net/public/images//about/contentbg_top.png) -2px 0px;
+    background: url(/public/images//about/contentbg_top.png) -2px 0px;
 }
 
 .about_boxes_box_mid {
     width: 470px;
-    background: url(https://steamstore-a.akamaihd.net/public/images//about/contentbg_middle.png) -3px 0px;
+    background: url(/public/images//about/contentbg_middle.png) -3px 0px;
 }
 
 .about_boxes_box_mid_ws {
@@ -292,7 +292,7 @@ a.mac_portal_btn {
 .about_boxes_box_header_bg {
     width: 425px;
     height: 49px;
-    background: url(https://steamstore-a.akamaihd.net/public/images//about/banner.png);
+    background: url(/public/images//about/banner.png);
     margin-left: 23px;
     position: relative;
     top: 16px;
@@ -331,7 +331,7 @@ a.mac_portal_btn {
 .about_boxes_box_bottom {
     width: 470px;
     height: 13px;
-    background: url(https://steamstore-a.akamaihd.net/public/images//about/contentbg_bottom.png) -2px 0px;
+    background: url(/public/images//about/contentbg_bottom.png) -2px 0px;
 }
 
 .about_boxes_box_ws_top {

@@ -79,7 +79,7 @@ a.download_btn {
 	line-height: 37px;
 	position: relative;
 	
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_download_repeat.png );
+	background-image: url( /public/images/v5/btn_download_repeat.png );
 	background-repeat: repeat-x;
 	
 	padding-left: 40px;
@@ -95,7 +95,7 @@ a.download_btn .download_btn_left, a.download_btn .download_btn_right {
 	height: 37px;
 	top: 0px;
 	
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_download_corners.png );
+	background-image: url( /public/images/v5/btn_download_corners.png );
 	background-repeat: no-repeat;
 }
 

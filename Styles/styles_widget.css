@@ -16,7 +16,7 @@ a, a:hover {
 	padding: 10px 15px;
 	position: relative;
 	margin: 0 auto;
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/SteamPistonForWidget.png);
+	background-image: url(/public/images/v5/SteamPistonForWidget.png);
 	background-repeat: no-repeat;
 	background-position: top right;
 }

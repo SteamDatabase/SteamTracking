@@ -11,7 +11,7 @@
 	padding: 20px;
 	margin: 20px auto;
 
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-image: url( '/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -328,7 +328,7 @@
 
 #parental_setpin_box
 {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-image: url( '/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 300px 50%;
 	min-height: 300px;
@@ -370,7 +370,7 @@
 
 #parental_setenablecode_box
 {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-image: url( '/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 300px 50%;
 	min-height: 300px;
@@ -473,7 +473,7 @@
 }
 
 .account .page_header_ctn {
-	background: rgba(0, 0, 0, 0) url( 'https://steamstore-a.akamaihd.net/public/images//v6/temp/cluster_bg_40.png') no-repeat scroll center bottom;
+	background: rgba(0, 0, 0, 0) url( '/public/images//v6/temp/cluster_bg_40.png') no-repeat scroll center bottom;
 }
 
 .account .breadcrumbs {

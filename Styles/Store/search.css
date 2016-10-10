@@ -28,14 +28,14 @@
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/v6/deleteSearchTerm.png);
+	background-image: url(/public/images/v6/deleteSearchTerm.png);
 	vertical-align: top;
 	margin-top: 1px;
 }
 
 .page_header_ctn.search {
 	padding-bottom: 70px;
-	background: url('https://steamstore-a.akamaihd.net/public/images//v6/search/cluster_bg.png' ) bottom center no-repeat;
+	background: url('/public/images//v6/search/cluster_bg.png' ) bottom center no-repeat;
 }
 .page_header_ctn.search.salebg {
 	padding-bottom: 30px;
@@ -178,15 +178,15 @@
 }
 
 .search_review_summary.positive {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_positive.png' );
+	background-image: url( '/public/images/v6/user_reviews_positive.png' );
 }
 
 .search_review_summary.mixed {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_mixed.png' );
+	background-image: url( '/public/images/v6/user_reviews_mixed.png' );
 }
 
 .search_review_summary.negative {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_negative.png' );
+	background-image: url( '/public/images/v6/user_reviews_negative.png' );
 }
 
 .game_review_summary {

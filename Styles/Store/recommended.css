@@ -15,7 +15,7 @@
 
 .recommended_bodygradient
 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/recommended_bodygradient.png );
+	background-image: url( /public/images/recommended/recommended_bodygradient.png );
 	background-position: bottom;
 	background-repeat: repeat-x;
 	padding: 60px 18px 22px 18px;
@@ -129,7 +129,7 @@
 }
 
 .more_like_arrow {
-    background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/recommended/morelikethis_borderbottom.png );
+    background-image: url( /public/images/v6/recommended/morelikethis_borderbottom.png );
     background-position: top left;
     background-repeat: no-repeat;
     height: 19px;
@@ -250,21 +250,21 @@
 .recommendation_carousel .scroll_btn.left {
 	left: 0px;
 	border-right: 1px solid #66c0f4;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_left.png );
+	background-image: url( /public/images/recommended/carousel_scroll_left.png );
 }
 
 .recommendation_carousel .scroll_btn.right {
 	right: 0px;
 	border-left: 1px solid #66c0f4;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_right.png );
+	background-image: url( /public/images/recommended/carousel_scroll_right.png );
 }
 
 .recommendation_carousel .scroll_btn.left.disabled {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_left_disabled.png );
+	background-image: url( /public/images/recommended/carousel_scroll_left_disabled.png );
 }
 
 .recommendation_carousel .scroll_btn.right.disabled {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_right_disabled.png );
+	background-image: url( /public/images/recommended/carousel_scroll_right_disabled.png );
 }
 
 .recommendation_area_ctn
@@ -280,7 +280,7 @@
 
 .recommendation_detail {
 	min-height: 168px;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/recommended_highlight_gradient.png );
+	background-image: url( /public/images/recommended/recommended_highlight_gradient.png );
 	background-repeat: repeat-x;
 	background-position: top;
 	background-color: #262626;
@@ -387,7 +387,7 @@
 	width: 17px;
 	height: 18px;
 	background-repeat: no-repeat;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/quotearrow_graybg.png);
+	background-image: url( /public/images/recommended/quotearrow_graybg.png);
 }
 
 .recommendation_detail .quote_arrow
@@ -409,13 +409,13 @@
 .game_page_recommendation .quote_arrow {
 	left: 40px;
 	top: 12px;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/quotearrow_gamepage.png );
+	background-image: url( /public/images/recommended/quotearrow_gamepage.png );
 }
 
 .recommendation_makeyourown .quote_arrow {
 	left: 100px;
 	top: 13px;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/quotearrow_white.png );
+	background-image: url( /public/images/recommended/quotearrow_white.png );
 }
 
 .recommendation_row .quote_arrow {
@@ -506,15 +506,15 @@
 }
 
 .friend_status_offline .friend_block_avatar_92 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_92_offline.gif );
+	background-image: url( /public/images/communitylink/iconholder_92_offline.gif );
 }
 
 .friend_status_online .friend_block_avatar_92 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_92_online.gif );
+	background-image: url( /public/images/communitylink/iconholder_92_online.gif );
 }
 
 .friend_status_in-game .friend_block_avatar_92 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/communitylink/iconholder_92_ingame.gif );
+	background-image: url( /public/images/communitylink/iconholder_92_ingame.gif );
 }
 
 .friend_block_avatar_92 img {
@@ -623,7 +623,7 @@
 	left: 57px;
 	top: 13px;
 	background-repeat: no-repeat;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/quotearrow_blackbg.png);
+	background-image: url( /public/images/recommended/quotearrow_blackbg.png);
 }
 
 .comment_btn {
@@ -660,7 +660,7 @@ textarea.comment_input
 	min-height: 102px;
 	position: relative;
     margin-bottom: 16px;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -1180,7 +1180,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_button .leftcap, .recommended_login_button .rightcap, .recommended_login_button .content
 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/recommended_login_btns.png );
+	background-image: url( /public/images/recommended/recommended_login_btns.png );
 }
 
 .recommended_login_button .leftcap {
@@ -1543,7 +1543,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 	margin-bottom: 15px;
     margin-top: 40px;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
 }
@@ -1842,7 +1842,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box {
     background-color: rgba( 0, 0, 0, 0.2 );
 	margin-bottom: 26px;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -1864,7 +1864,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .header .commentCount a {
 	text-decoration: none;
 	color: #66c0f4;
-	background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/comment_quoteicon_blue.png);
+	background-image: url(/public/shared/images/comment_quoteicon_blue.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 20px;
@@ -1874,7 +1874,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 .review_box .header .commentCount a:hover {
 	color: #ffffff;
-	background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/comment_quoteicon_bright.png);
+	background-image: url(/public/shared/images/comment_quoteicon_bright.png);
 }
 
 .review_box .leftcol {

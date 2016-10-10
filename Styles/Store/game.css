@@ -15,7 +15,7 @@
 	top: 0px;
 	width: 32px;
 	height: 32px;
-	background: url( https://steamstore-a.akamaihd.net/public/images/v5/game_ico_overlay.png );
+	background: url( /public/images/v5/game_ico_overlay.png );
 	background-repeat: no-repeat;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .game_background_glow {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png?v=2' );
+	background: url( '/public/images/v6/app/game_page_background_shadow.png?v=2' );
 	background-position: bottom;
 	padding-bottom: 1px;
 	background-repeat: no-repeat;
@@ -160,7 +160,7 @@
 	width: 32px;
 	height: 32px;
 
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/ico_game_highlight_video.png );
+	background-image: url( /public/images/v5/ico_game_highlight_video.png );
 
 }
 /*
@@ -190,7 +190,7 @@
 
 .highlight_selector {
 	position: absolute;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/game_highlight_activethumb.png );
+	background-image: url( /public/images/v5/game_highlight_activethumb.png );
 	width: 116px;
 	height: 77px;
 	z-index: 50;
@@ -580,7 +580,7 @@ img.game_header_image_full {
 {
 	background-position: right;
 	background-repeat: repeat-y;
-	background-image: url('https://steamstore-a.akamaihd.net/public/images//v5/subscription_savings_bg.png');
+	background-image: url('/public/images//v5/subscription_savings_bg.png');
 }
 
 .game_area_purchase_game_dropdown_menu_item_no_discount
@@ -771,19 +771,19 @@ img.game_header_image_full {
 	height: 34px;
 	top: 0px;
 
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_addtocart_corners.gif );
+	background-image: url( /public/images/v5/btn_addtocart_corners.gif );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_packageinfo_corners.gif );
+	background-image: url( /public/images/v5/btn_packageinfo_corners.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_addtocart_blue_corners.jpg );
+	background-image: url( /public/images/v5/btn_addtocart_blue_corners.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_clickfordetails_corners.gif );
+	background-image: url( /public/images/v5/btn_clickfordetails_corners.gif );
 }
 
 
@@ -808,7 +808,7 @@ img.game_header_image_full {
 	padding: 0px 11px;
 	line-height: 34px;
 
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_addtocart_repeat.gif );
+	background-image: url( /public/images/v5/btn_addtocart_repeat.gif );
 	background-repeat: repeat-x;
 
 	text-transform: uppercase;
@@ -820,15 +820,15 @@ img.game_header_image_full {
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content, .btn_addtocart.btn_packageinfo span.btn_addtocart_content {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_packageinfo_repeat.gif );
+	background-image: url( /public/images/v5/btn_packageinfo_repeat.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_addtocart_blue_repeat.jpg );
+	background-image: url( /public/images/v5/btn_addtocart_blue_repeat.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_clickfordetails_repeat.gif );
+	background-image: url( /public/images/v5/btn_clickfordetails_repeat.gif );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -921,7 +921,7 @@ img.game_header_image_full {
 
 	color: #FFFFFF;
 
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png );
+	background-image: url( /public/images/v6/maincol_gradient_rule.png );
 	background-repeat: no-repeat;
 	background-position: bottom left;
 
@@ -969,7 +969,7 @@ img.game_header_image_full {
     font-size: 18px;
     color: #67c1f5;
     margin-bottom: 8px;
-    background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
 }
@@ -1231,7 +1231,7 @@ img.game_header_image_full {
 }
 
 #game_area_metascore {
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/v6/mc_logo_inverted_small.png);
+	background-image: url(/public/images/v6/mc_logo_inverted_small.png);
     background-repeat: no-repeat;
 	height: 35px;
 	width: 270px;
@@ -1482,7 +1482,7 @@ a.friend_block_holder:hover {
 	border:solid #82807c 1px;
 	padding:2px 8px 2px 8px;
 	height:24px;
-	background-image:url(https://steamstore-a.akamaihd.net/public/images/save_button_bg.gif);
+	background-image:url(/public/images/save_button_bg.gif);
 	background-color:#4f6f23;
 	background-repeat:repeat-x;
 	color:#ffffff;
@@ -1982,7 +1982,7 @@ img.package_header {
     float: right;
     font-size: 14px;
     padding: 8px;
-    background: url('https://steamstore-a.akamaihd.net/public/images/v6/package_arrow.png') top left no-repeat;
+    background: url('/public/images/v6/package_arrow.png') top left no-repeat;
 	max-width: 30%;
 }
 #package_savings_bar > .message {
@@ -2031,7 +2031,7 @@ img.package_header {
 }
 
 .btn_next_in_queue {
-	background: url('https://steamstore-a.akamaihd.net/public/images/v6/app/queue_next_btn.png') top left no-repeat;
+	background: url('/public/images/v6/app/queue_next_btn.png') top left no-repeat;
 	width: 205px;
 	height: 75px;
 	cursor: pointer;
@@ -2385,7 +2385,7 @@ div.early_access_banner p {
 
 div.early_access_banner > .img {
 	position: absolute;
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/earlyaccess_bug.png);
+	background-image: url(/public/images/v5/earlyaccess_bug.png);
 	width: 63px;
 	height: 61px;
 	left: 0px;
@@ -2981,14 +2981,14 @@ h2.bb_tag + br {
     }
 
 .app_tag.previous_tag {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_yours_addbg.png' );
+	background-image: url( '/public/images/v6/tag_yours_addbg.png' );
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding-left: 19px;
 }
 
 .app_tag.previous_tag:hover {
-    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_yours_addbg_hover.png' );
+    background-image: url( '/public/images/v6/tag_yours_addbg_hover.png' );
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 19px;
@@ -3015,7 +3015,7 @@ h2.bb_tag + br {
 }
 
 .app_tag_checkbox {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_check.png' ) bottom center no-repeat;
+	background: url( '/public/images/v6/tag_check.png' ) bottom center no-repeat;
 	margin-left: 4px;
 }
 
@@ -3024,15 +3024,15 @@ h2.bb_tag + br {
 }
 
 .app_tag_control:hover .app_tag_report {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_report.png' ) bottom center no-repeat;
+	background: url( '/public/images/v6/tag_report.png' ) bottom center no-repeat;
 }
 
 .app_tag_control .app_tag_report.reported {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_report.png' ) top center no-repeat;
+	background: url( '/public/images/v6/tag_report.png' ) top center no-repeat;
 }
 
 .app_tag_control:hover .app_tag_ban {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_report.png' ) bottom center no-repeat;
+	background: url( '/public/images/v6/tag_report.png' ) bottom center no-repeat;
 }
 
 .app_report_dialog
@@ -3563,7 +3563,7 @@ select.gray_bevel {
     bottom: -1px;
     right: -1px;
     float: none;
-    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/group_border_32.png' );
+    background-image: url( '/public/images/v6/group_border_32.png' );
     height: 34px;
     width: 34px;
 }

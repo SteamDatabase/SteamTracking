@@ -43,7 +43,7 @@
 .tab_filter_remove {
 	display: inline-block;
 	cursor: pointer;
-	background: no-repeat center center url('https://steamstore-a.akamaihd.net/public/images/v6/delete_search_term.png');
+	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
 	margin-left: 8px;

@@ -626,7 +626,7 @@ RemotePanel
 	flow-children: right;
 	margin-left: 5%;
 
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/bigpicture/queue_banner.png );
+	background-image: url( /public/images/bigpicture/queue_banner.png );
 	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: 100%;

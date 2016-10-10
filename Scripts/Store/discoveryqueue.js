@@ -86,7 +86,7 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 
 	if ( !this.m_bStatic )
 	{
-		this.m_$ActiveLink = $J('<a/>').append( $J('<img/>', {'class': 'dq_item_cap', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/header_placeholder_460x215.gif' } ) );
+		this.m_$ActiveLink = $J('<a/>').append( $J('<img/>', {'class': 'dq_item_cap', src: '/public/images/v6/home/header_placeholder_460x215.gif' } ) );
 		var activeItem = this.m_rgItems[ this.m_iActiveItem ];
 		this.m_$ActiveLink.attr( 'href', activeItem.data('href') );
 

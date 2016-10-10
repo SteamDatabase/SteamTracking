@@ -273,7 +273,7 @@ body.tag_page h3 {
 	position: absolute;
 	left: -79px;
 	top: 0;
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_betabug.png' );
+	background: url( '/public/images/v6/tag_betabug.png' );
 }
 
 .tag_beta_bug, .tag_beta_bug img {
@@ -485,7 +485,7 @@ body.tag_page.tag_announce_page h3 {
 .tab_filter_remove {
     display: inline-block;
     cursor: pointer;
-    background: no-repeat center center url('https://steamstore-a.akamaihd.net/public/images/v6/delete_search_term.png');
+    background: no-repeat center center url('/public/images/v6/delete_search_term.png');
     width: 12px;
     height: 24px;
     margin-left: 8px;

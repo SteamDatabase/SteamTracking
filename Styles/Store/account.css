@@ -374,7 +374,7 @@ body.redeemwalletcode .page_content_ctn .page_content {
 
 .redeem_wallet_background
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background.jpg');
+	background-image:url('/public/images/account/redeem_code_background.jpg');
 	background-repeat:no-repeat;
 	background-position: center 220px;
 	background-origin: content-box;
@@ -382,42 +382,42 @@ body.redeemwalletcode .page_content_ctn .page_content {
 
 .redeem_wallet_background_DE
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_de.jpg');
+	background-image:url('/public/images/account/redeem_code_background_de.jpg');
 }
 
 .redeem_wallet_background_ES
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_es.jpg');
+	background-image:url('/public/images/account/redeem_code_background_es.jpg');
 }
 
 .redeem_wallet_background_FR
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_fr.jpg');
+	background-image:url('/public/images/account/redeem_code_background_fr.jpg');
 }
 
 .redeem_wallet_background_IE
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_ie.jpg');
+	background-image:url('/public/images/account/redeem_code_background_ie.jpg');
 }
 
 .redeem_wallet_background_PT
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_pt.jpg');
+	background-image:url('/public/images/account/redeem_code_background_pt.jpg');
 }
 
 .redeem_wallet_background_eur
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_eur.jpg');
+	background-image:url('/public/images/account/redeem_code_background_eur.jpg');
 }
 
 .redeem_wallet_background_gbp
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_gbp.jpg');
+	background-image:url('/public/images/account/redeem_code_background_gbp.jpg');
 }
 
 .redeem_wallet_receipt
 {
-	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_complete.jpg');
+	background-image:url('/public/images/account/redeem_code_complete.jpg');
 	background-repeat:no-repeat;
 	background-position: 0px 0px;
 	min-height:350px;
@@ -436,7 +436,7 @@ body.redeemwalletcode .page_content_ctn .page_content {
 }
 
 .modal_top_band {
-	background-image:url( 'https://steamstore-a.akamaihd.net/public/images/got_steam_top.jpg' );
+	background-image:url( '/public/images/got_steam_top.jpg' );
 	background-repeat:no-repeat;
 	width:508px;
 	height:25px;
@@ -619,7 +619,7 @@ div.youraccount_history_home>div.account_wallet {
 	background-repeat: repeat-x;
 
 	background-color: #e5e2df;
-	background-image: url('https://steamstore-a.akamaihd.net/public/images/v5/client_btn.png');
+	background-image: url('/public/images/v5/client_btn.png');
 	background-position: top;
 }
 
@@ -1051,7 +1051,7 @@ td.wht_total {
 }
 
 .account .page_header_ctn {
-	background: rgba(0, 0, 0, 0) url("https://steamstore-a.akamaihd.net/public/images/v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
+	background: rgba(0, 0, 0, 0) url("/public/images/v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
 }
 
 .phone_header_description img{

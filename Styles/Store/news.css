@@ -236,7 +236,7 @@ div#news_search {
 	width: 100%;
 	clear: left;
 
-    background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png );
+    background-image: url( /public/images/v6/maincol_gradient_rule.png );
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -396,7 +396,7 @@ div#news_search {
 .newsPostBlock .body li {
 	margin-left: 32px;
 	margin-top:8px;
-	list-style-image: url('https://steamstore-a.akamaihd.net/public/images/v5/dash1.gif');
+	list-style-image: url('/public/images/v5/dash1.gif');
 	color: #acb2b8;
 }
 

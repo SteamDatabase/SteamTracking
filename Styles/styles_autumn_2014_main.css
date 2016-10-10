@@ -734,8 +734,8 @@ body.v6 #store_header {
 }
 
 body.v6.globalmenu {
- background: url('https://steamstore-a.akamaihd.net/public/images/v6/blue_body_top.jpg?v=2' ) center 105px no-repeat,
-url('https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
+ background: url('/public/images/v6/blue_body_top.jpg?v=2' ) center 105px no-repeat,
+url('/public/images/v6/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
 }
 
 body.v6.explore {
@@ -753,7 +753,7 @@ body.v6.explore {
 	width: 100%;
 	left: -186px;
 	padding-right: 186px;
-	background: url('https://steamstore-a.akamaihd.net/public/images/v6/blue_body_top.jpg?v=2' ) top center no-repeat, url('https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=2' ) center repeat-y;
+	background: url('/public/images/v6/blue_body_top.jpg?v=2' ) top center no-repeat, url('/public/images/v6/blue_body_repeat.jpg?v=2' ) center repeat-y;
 }
 
 .FeaturedBlock .WideBlock.MorePadding:not(last-child) > div {

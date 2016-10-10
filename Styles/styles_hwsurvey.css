@@ -73,7 +73,7 @@ p.blurb2 {
 
 .graph_title {
 	width:298px;
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/rightcol_bg_blue.png);
+	background-image: url(/public/images/v5/rightcol_bg_blue.png);
 	padding:5px 0px 5px 8px;
 	margin-bottom:1px;
 }
@@ -84,7 +84,7 @@ p.blurb2 {
 	padding:5px 0px 5px 15px;
 	margin:2px 0px;
 	margin-top:10px;
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/hws_headbar.png);
+	background-image: url(/public/images/hws_headbar.png);
 	background-repeat:repeat-y;
 	background-color:#68788b;
 }
@@ -297,7 +297,7 @@ p.blurb2 {
 }
 
 .stats_row_details {
-	background-image: url(https://steamstore-a.akamaihd.net/public/images/hws_expand.png);
+	background-image: url(/public/images/hws_expand.png);
 	background-repeat:no-repeat;
 	background-color:#1f1f1f;
 	display:none;

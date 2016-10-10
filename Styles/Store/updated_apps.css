@@ -33,7 +33,7 @@ a:hover {
 {
 	position: relative;
 	padding-bottom: 30px;
-    background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png );
+    background-image: url( /public/images/v6/maincol_gradient_rule.png );
     background-repeat: no-repeat;
     background-position: top left;
 }
