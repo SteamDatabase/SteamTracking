@@ -531,9 +531,9 @@ function Curator_DeleteReview( groupid, appid, appname )
 				if ( data.success == 1 )
 					dialog = ShowAlertDialog( 'Review deleted', data.message );
 				else if ( data.error )
-					dialog = ShowAlertDialog( 'Could not deleted review', data.error );
+					dialog = ShowAlertDialog( 'Could not delete review', data.error );
 				else
-					dialog = ShowAlertDialog( 'Could not deleted review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
+					dialog = ShowAlertDialog( 'Could not delete review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
 
 				// reload
 				dialog.done( function( reason ) {
@@ -542,7 +542,7 @@ function Curator_DeleteReview( groupid, appid, appname )
 			},
 			error: function( jqXHR, textStatus, errorThrown ) {
 				// uh oh
-				ShowAlertDialog( 'Could not deleted review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
+				ShowAlertDialog( 'Could not delete review', 'Sorry! There was an issue with the Steam servers and the review could not be deleted. Please try again later.' );
 			}
 		});
 	});
@@ -605,12 +605,12 @@ function Curator_SetTagline( groupid, tagline )
 			}
 			else
 			{
-				ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
+				ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talk to the Steam Servers to set your tagline. Please try again later.' );
 			}
 		},
 		error: function( jqXHR, textStatus, errorThrown ) {
 			// uh oh
-			ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
+			ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talk to the Steam Servers to set your tagline. Please try again later.' );
 		}
 	});
 }

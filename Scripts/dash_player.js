@@ -6704,17 +6704,42 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 				{
 					try
 					{
-						// percentage screen attributes require snapToLines off
-						if (newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1)
+						// due to crbug https://bugs.chromium.org/p/chromium/issues/detail?id=652745
+						// percentages on line attributes are causing position and size percentage attributes
+						// to be misaligned. Adding this temporary and simple fix until CEF is updated with the real fix
+						if ( rgKeyVal[0] === "line" && rgKeyVal[1].indexOf('%') != -1 )
 						{
-							newCue.snapToLines = false;
+							// translate the line percentage to one of 5 locations
+							// +ve numbers are at top of screen going down
+							// -ve numbers are from bottom of screen going up
+							var nLineNo = -1;
+							var nLinePerc = parseFloat( rgKeyVal[1] );
+							if ( nLinePerc < 20 )
+								nLineNo = 1;
+							else if ( nLinePerc < 40 )
+								nLineNo = 2;
+							else if ( nLinePerc < 60 )
+								nLineNo = -4;
+							else if ( nLinePerc < 80 )
+								nLineNo = -3;
+							else if ( nLinePerc < 100 )
+								nLineNo = -2;
+
+							rgKeyVal[1] = nLineNo;
 						}
 
+						// return this code when crbug is fixed
+						// percentage screen attributes require snapToLines off
+						// if ( rgKeyVal[0] === "line" && newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1 )
+						// {
+						// 	newCue.snapToLines = false;
+						// }
+
 						// if the value is a number, then make sure the cue knows it's a number
-						if (!isNaN(parseFloat(rgKeyVal[1])))
-							newCue[rgKeyVal[0]] = parseFloat(rgKeyVal[1]);
+						if ( !isNaN( parseFloat( rgKeyVal[1] ) ) )
+							newCue[rgKeyVal[0]] = parseFloat( rgKeyVal[1] );
 						else
-							newCue[rgKeyVal[0]] = String(rgKeyVal[1]);
+							newCue[rgKeyVal[0]] = String( rgKeyVal[1] );
 					}
 					catch (e)
 					{
