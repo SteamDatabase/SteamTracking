@@ -2066,11 +2066,26 @@ HelpRequestPage = {
 	SystemReportCallback: function( strReport )
 	{
 		HelpRequestPage.m_strSystemReport = strReport;
+		var $Form = $J('#create_help_request_form');
+		$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		$J('#system_report_throbber').removeClass( 'working' );
 	},
 
 	CollectSystemReport: function()
 	{
-		SteamClient.RequestSupportSystemReport( HelpRequestPage.SystemReportCallback );
+		// If we haven't already gathered it and the checkbox is now checked, then gather now
+		if( $J('#system_report_agreed:checked').length > 0 && HelpRequestPage.m_strSystemReport.length == 0 )
+		{
+			var $Form = $J('#create_help_request_form');
+			$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
+			$J('#system_report_throbber').addClass( 'working' );
+			SteamClient.RequestSupportSystemReport(HelpRequestPage.SystemReportCallback);
+		}
+	},
+
+	ShowSystemReportDetails: function()
+	{
+		var Modal = ShowAlertDialog( 'About System Reports', $J( '#system_report_details' ).html() );
 	},
 
 	ShowCreateHelpRequestForm: function()
@@ -2142,8 +2157,7 @@ HelpRequestPage = {
 
 			var cAttachments = 0;
 			if ( HelpRequestPage.m_strSystemReport.length > 0 ) {
-				fd.append('attachments[]', new Blob([HelpRequestPage.m_strSystemReport], {type: "text/plain"}));
-				++cAttachments;
+				fd.append('system_report', new Blob([HelpRequestPage.m_strSystemReport], {type: "text/plain"}));
 			}
 
 			// do we have files to upload?

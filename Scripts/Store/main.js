@@ -778,8 +778,9 @@ var g_iActiveSpotlight = 0;
 
 function AnimateSpotlightTransition( iCurSpotlight, iNextSpotlight )
 {
-	var $Spotlight = $JFromIDOrElement('spotlight_' + iCurSpotlight );
-	var $NextSpotlight = $JFromIDOrElement('spotlight_' + iNextSpotlight );
+	var $elSpotlights = $J('#spotlight_scroll').children();
+	var $Spotlight = $J( $elSpotlights[iCurSpotlight] );
+	var $NextSpotlight = $J( $elSpotlights[iNextSpotlight] );
 	
 	var $Scroll = $JFromIDOrElement('spotlight_scroll');
 	$Scroll.stop();
@@ -1009,7 +1010,7 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 
 var g_oSuggestParams;
 
-function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
+function EnableSearchSuggestions( elemTerm, navcontext, cc, l, hide_adult_content_violence, hide_adult_content_sex, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
 	var $Term = $JFromIDOrElement(elemTerm);
 	var $SuggestionsCtn = elemSuggestionCtn ? $JFromIDOrElement(elemSuggestionCtn) : $J('#searchterm_options');
@@ -1066,6 +1067,8 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVers
 	g_oSuggestParams = {
 		cc: cc,
 		l:l,
+		no_violence:hide_adult_content_violence,
+		no_sex:hide_adult_content_sex,
 		v: strPackageXMLVersion
 	}
 }

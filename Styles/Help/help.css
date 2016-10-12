@@ -594,7 +594,46 @@ body.v6 .page_content_ctn.dark:last-child {
     transition:  opacity 0.3s linear;
     -webkit-transition-delay: 1s;
     transition-delay: 1s;
+}
 
+#system_report_label
+{
+	float: left;
+}
+
+#system_report_throbber
+{
+	transition-delay: 0.1s;
+	transition:  opacity 0.3s linear;
+	opacity: 0.0;
+	float: left;
+	margin-top: -12px;
+	margin-left: 12px;
+	transform: scale( 0.75 );
+	-webkit-transform: scale( 0.75 );
+}
+
+#system_report_throbber.working
+{
+	opacity: 1.0;
+}
+
+#system_report_details
+{
+	display: none;
+	visibility: collapse;
+}
+
+#system_report_details_inner .header
+{
+	margin: 10px;
+	font-size: 14px;
+}
+
+#system_report_details_inner .details
+{
+	margin: 20px;
+	line-height: 20px;
 }
 
 #wizard_contents, #error_contents

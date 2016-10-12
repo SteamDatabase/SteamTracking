@@ -43,6 +43,8 @@ GDynamicStore = {
 
 	s_rgfnOnReadyCallbacks: [],
 
+	s_rgDisplayedApps: [],
+
 	s_bUserOnMacOS: false,
 	s_bUserOnLinux: false,
 
@@ -214,6 +216,14 @@ GDynamicStore = {
 			rgImpressions.push( strImpressionData );
 			V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
 		}
+	},
+
+	MarkAppDisplayed: function( rgDisplayList )
+	{
+		for( var key in rgDisplayList )
+			if( rgDisplayList[key].appid )
+				GDynamicStore.s_rgDisplayedApps.push( rgDisplayList[key].appid )
+
 	},
 
 	HandleClusterChange: function( cluster ) {
@@ -449,8 +459,10 @@ GDynamicStore = {
 
 			if (!bOnWishlist)
 			{
-				var fnClick = function ()
+				var fnClick = function ( event )
 				{
+					event.preventDefault();
+
 					$elSource.addClass( 'ds_flagged ds_wishlist' );
 					$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 
@@ -460,14 +472,18 @@ GDynamicStore = {
 							$elSource.removeClass( 'ds_wishlist ds_flagged' );
 							$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
 						} );
+
+					return false;
 				};
 				var strText = "Add to your wishlist";
 
 			}
 			else
 			{
-				var fnClick = function ()
+				var fnClick = function ( event )
 				{
+					event.preventDefault();
+
 					$elSource.removeClass( 'ds_wishlist ds_flagged' );
 					$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
 
@@ -478,8 +494,12 @@ GDynamicStore = {
 							$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 
 						} );
+
+					return false;
 				};
 				var strText = "On Wishlist";
+
+
 			}
 
 			var $elAddToWishlist = $J ( '<div/>' ).click ( fnClick ).text ( strText );
@@ -492,6 +512,8 @@ GDynamicStore = {
 					$elSource.addClass('ds_ignored');
 					for( var i=0; i<rgAppIds.length; i++ )
 						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], false );
+
+					return false;
 				};
 				var strText = "Not Interested";
 
@@ -504,6 +526,8 @@ GDynamicStore = {
 					$elSource.removeClass('ds_ignored');
 					for( var i=0; i<rgAppIds.length; i++ )
 						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], true );
+
+					return false;
 				};
 				var strText = "Not Interested";
 			}
@@ -794,6 +818,12 @@ GDynamicStore = {
 	{
 		return GDynamicStore.s_rgIgnoredApps[appid] ? true: false;
 	},
+
+	GetIgnoredAppCount: function( )
+	{
+		return Object.keys(GDynamicStore.s_rgIgnoredApps).length;
+	},
+
 
 	BIsAppOnWishlist: function( appid )
 	{
@@ -1215,6 +1245,9 @@ GStoreItemData = {
 			return false;
 
 		if ( bStrict && !rgAppData.localized && ApplicableSettings.localized && Settings.localized )
+			return false;
+
+		if ( bStrict && ApplicableSettings.displayed_elsewhere && !Settings.displayed_elsewhere && GDynamicStore.s_rgDisplayedApps.indexOf( appid ) !== -1 )
 			return false;
 
 		if ( rgAppData.virtual_reality && ApplicableSettings.virtual_reality && !Settings.virtual_reality )

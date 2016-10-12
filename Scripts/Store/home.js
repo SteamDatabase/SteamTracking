@@ -6,7 +6,7 @@ function OnHomepageException(e)
 
 GHomepage = {
 	oSettings: {},
-	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"home":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":null,"software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":null,"video":true,"localized":null,"virtual_reality":true,"recommended_by_curators":null,"hidden":null}},
+	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"home":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":true,"games":null,"software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":null,"video":true,"localized":null,"virtual_reality":true,"recommended_by_curators":null,"hidden":null}},
 
 	oDisplayListsRaw: {},
 	oDisplayLists: {},
@@ -214,9 +214,29 @@ GHomepage = {
 			GHomepage.oDisplayLists.popular_new, true
 		);
 
-		// MAIN CLUSTER
+		// Recently viewed apps (Side bar)
 		try {
 			GHomepage.RenderRecentApps();
+		} catch( e ) { OnHomepageException(e); }
+
+				// Prefer spotlights for games we don't own
+		try {
+			GHomepage.SetDefaultSpotlight();
+		} catch( e ) { OnHomepageException(e); }
+		
+		// Recommended
+		try {
+			GHomepage.RenderRecommendedBlock();
+		} catch( e ) { OnHomepageException(e); }
+
+		// CURATORS
+		try {
+			if ( bHaveUser )
+			{
+				HomeSettings = new CHomeSettings( 'curators', GSteamCurators.Render );
+				$J('.apps_recommended_by_curators_ctn .home_page_content .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
+			}
+			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
 		} catch( e ) { OnHomepageException(e); }
 
 		// MAIN CLUSTER
@@ -250,14 +270,15 @@ GHomepage = {
 			GHomepage.RenderPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
-		// Recommended
-		try {
-			GHomepage.RenderRecommendedBlock();
-		} catch( e ) { OnHomepageException(e); }
 
 		// Popular new
 		try {
 			GHomepage.FilterPopularNewOnSteam();
+		} catch( e ) { OnHomepageException(e); }
+
+		// under10
+		try {
+			GHomepage.FilterUnder10();
 		} catch( e ) { OnHomepageException(e); }
 
 
@@ -284,16 +305,6 @@ GHomepage = {
 		// Marketing Messages
 		try {
 			GHomepage.RenderMarketingMessages();
-		} catch( e ) { OnHomepageException(e); }
-
-		// CURATORS
-		try {
-			if ( bHaveUser )
-			{
-				HomeSettings = new CHomeSettings( 'curators', GSteamCurators.Render );
-				$J('.apps_recommended_by_curators_ctn .home_page_content .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
-			}
-			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
 		} catch( e ) { OnHomepageException(e); }
 
 		// FRIENDS RECENTLY PURCHASED
@@ -373,6 +384,36 @@ GHomepage = {
 		}
 	},
 
+	SetDefaultSpotlight: function()
+	{
+		var $elSpotlightContainer = $J('#spotlight_scroll');
+		var elBestTarget = false;
+		var rgSpotlights = $elSpotlightContainer.children();
+
+		// Find the first spotlight in the stack that we don't own
+		for( var i=0; i<rgSpotlights.length; i++)
+		{
+			var unAppId = rgSpotlights[i].dataset.dsAppid;
+			if( unAppId && !GDynamicStore.BIsAppOwned( unAppId ) )
+			{
+				// Found an ideal spotlight, but it's position 0, so just early out
+				if( i == 0 )
+					return;
+
+				elBestTarget = rgSpotlights[i];
+				break;
+
+			}
+		}
+
+		if( elBestTarget )
+			$elSpotlightContainer.prepend ( elBestTarget );
+
+		$elSpotlightContainer.children().hide();
+		$J(elBestTarget).show();
+
+	},
+
 
 	RenderMainCluster: function()
 	{
@@ -433,6 +474,8 @@ GHomepage = {
 			rgDisplayListCombined, 'main_cluster', 2, 15
 		);
 		
+		GDynamicStore.MarkAppDisplayed( rgMainCaps );
+
 		if ( GHomepage.bShuffleInMainLegacy )
 			rgMainCaps = v_shuffle( rgMainCaps );
 
@@ -505,7 +548,7 @@ GHomepage = {
 
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true }
+			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 		if( rgCapsules.length < 4 )
 		{
@@ -541,7 +584,7 @@ GHomepage = {
 				$AvatarsCtn.append( $AvatarCap );
 			}
 
-			var $FriendsTotal = $J('<div class="friends_total" />').text( oItem.friends.length );
+			var $FriendsTotal = $J('<div class="friends_total" ></div>').html( oItem.friends.length + '<span> </span>' );
 			$FriendsCtn.append( $FriendsTotal );
 
 			$RecentlyUpdated.append( $CapCtn );
@@ -685,8 +728,10 @@ GHomepage = {
 		var $Recommended =  $J('.home_specials_ctn.recommended' );
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false, localized: true }
+			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
 		);
+
+		GDynamicStore.MarkAppDisplayed( rgCapsules );
 
 		for( var i = 0; i < rgCapsules.length; i++ )
 		{
@@ -706,34 +751,32 @@ GHomepage = {
 		}
 
 	},
-	FilterPopularNewOnSteam: function()
+	FilterCapsules: function( nMin, nMax, $elElements, $elContainer)
 	{
-		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
-
-
-		var nCapsules = $PopularNewCapsules.children().length;
+		var nCapsules = $elElements.length;
 
 		// Remove ignored stuff first
-		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		for( var i = 0; i < $elElements.length; i++ )
 		{
-			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			var $capsule = $J( $elElements[i] );
 			var nAppId = $capsule.data('ds-appid');
 
 			if( GDynamicStore.BIsAppIgnored(nAppId) )
 			{
 				$capsule.hide();
 				nCapsules--;
-			}
+			} else
+				$capsule.removeClass('hidden'); // Force show here since we might have hidden it for other reasons
 		}
 
 		// Now follow filters as long we we can keep 4 items in the capsule
-		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		for( var i = 0; i < $elElements.length; i++ )
 		{
-			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			var $capsule = $J( $elElements[i] );
 			var nAppId = $capsule.data('ds-appid');
 
 			var rgFilterTest = GHomepage.FilterItemsForDisplay(
-				[{'appid': nAppId}], 'home', 0, 1, { games_already_in_library: false, localized: true }
+				[{'appid': nAppId}], 'home', 0, 1, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
 			);
 
 			if(  rgFilterTest.length == 0 )
@@ -741,29 +784,43 @@ GHomepage = {
 				$capsule.hide();
 				nCapsules--;
 			}
-			if( nCapsules == 4 )
+			if( nCapsules == nMin )
 				break;
 		}
 
 		// Cap number of capsules to 8
 
 		var nVisible = 0;
-		for( var i = 0; i < $PopularNewCapsules.children().length; i++ )
+		for( var i = 0; i < $elElements.length; i++ )
 		{
-			var $capsule = $J( $PopularNewCapsules.children()[i] );
+			var $capsule = $J( $elElements[i] );
 			if(!$capsule.is(':visible'))
 				continue;
 
-			if( nVisible++ >= 10)
+			if( nVisible++ >= nMax)
 				$capsule.hide();
 
 		}
 
+		$elElements.parent().trigger('v_contentschanged');
 
+		if( nCapsules < nMin && $elContainer )
+			$elContainer.hide();
+	},
 
-		if( nCapsules < 4 )
-			$J('.recent_top_sellers ').hide();
+	FilterPopularNewOnSteam: function()
+	{
+		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
 
+		this.FilterCapsules( 4, 10, $PopularNewCapsules.children(), $J('.recent_top_sellers ') )
+
+	},
+
+	FilterUnder10: function()
+	{
+		var $UnderTenCapsules =  $J('.home_specials_ctn.underten .home_specials_grid' );
+
+		this.FilterCapsules( 4, 6, $UnderTenCapsules.children() )
 
 	},
 
@@ -772,6 +829,8 @@ GHomepage = {
 		var rgTopSellers = GHomepage.FilterItemsForDisplay(
 			GHomepage.oDisplayLists.top_sellers, 'home', 2, 2, { games_already_in_library: false, localized: true }
 		);
+
+		GDynamicStore.MarkAppDisplayed( rgTopSellers );
 
 		var $TopSellersCtn =  $J('.home_top_sellers_area .store_capsule_container' ).empty();
 		for( var i = 0; i < rgTopSellers.length; i++ )
@@ -922,7 +981,10 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
 
-		$CapCtn.append( $J('<img/>', { src: rgItemData[rgOptions.capsule_size] } ) );
+		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
+
+		$ImgCtn.append( $J('<img/>', { src: rgItemData[rgOptions.capsule_size] } ) );
+		$CapCtn.append( $ImgCtn );
 		if( rgOptions.include_title )
 			$CapCtn.append( $J('<div/>', {'class': 'title ellipsis' } ).html( rgItemData.name ) );
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
@@ -1469,8 +1531,16 @@ GSteamCurators = {
 
 		// app image
 		// app image anchor
-		var $Image = $J('<img/>', { src: rgItemData.headerv5 } );
-		$Item.append( $Image );
+
+		var $CapCtn = $J('<a/>', params );
+		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+
+		var $ImgCtn = $J('<div class="capsule headerv5"/>');
+
+		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5 } ) );
+		$CapCtn.append( $ImgCtn );
+
+		$Item.append( $CapCtn );
 
 		// show up to 3 curators per app
 		var curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
@@ -1608,6 +1678,8 @@ GSteamCurators = {
 				apps, 'curators', 4, 8
 			);
 			
+			GDynamicStore.MarkAppDisplayed( rgRecommendedApps );
+
 			if ( rgRecommendedApps.length >= 5 )
 			{
 				// v1

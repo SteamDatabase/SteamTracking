@@ -958,10 +958,11 @@ td.wht_total {
 }
 
 .account_setting_sub_block {
-	width: 30%;
+	width: 33%;
 	padding: 1em;
 	float: left;
 	color: #808891;
+	box-sizing: border-box;
 }
 
 .account_setting_sub_block_1-2 {

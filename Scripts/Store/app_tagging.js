@@ -14,7 +14,6 @@ function TagLink( tag, language )
 
 function AppTaggingMatchTags( rgTerms, rgTags, rgSuggestions )
 {
-	var regexNormalize = new RegExp( /\W/g );
 	if ( rgTags && rgTags.length )
 	{
 		for ( var i = 0; i < rgTags.length; i++ )
@@ -22,7 +21,7 @@ function AppTaggingMatchTags( rgTerms, rgTags, rgSuggestions )
 			var strNameNormalized = rgTags[i].name_normalized;
 			if ( !strNameNormalized )
 			{
-				strNameNormalized = rgTags[i].name_normalized = rgTags[i].name.replace( regexNormalize, '').toLowerCase();
+				strNameNormalized = rgTags[i].name_normalized = rgTags[i].name.toLowerCase(); 	// @todo: We should use .normalize() when browsers actually support it.																			// For now just return the normal value as \W actually just removes entire tags.
 			}
 
 			var bMatch = true;
@@ -1035,12 +1034,14 @@ function InitBannedTagModal( appid, $BanModal )
 }
 
 var g_rgPagingControls = {};
-function InitPagingControls( rgPagingData, cc, rgInitialParams )
+function InitPagingControls( rgPagingData, cc, hide_adult_content_violence, hide_adult_content_sex, rgInitialParams )
 {
 	var g_rgTabs = {};
 	var g_rgTabBaseParams = {
 		cc: cc,
 		l: 'english',
+		no_violence:hide_adult_content_violence,
+		no_sex:hide_adult_content_sex,
 		v: "4"
 	};
 	var g_rgTabParams = {};
@@ -1334,4 +1335,67 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 	// not ready yet
 	// fnHandleHashChange( true );
 }
+
+var g_rgGlobalPopularTags = [];
+
+// A modular tag auto-complete widget.
+var CTagAutoComplete = function( $elContainer, fnOnTagSelected )
+{
+	var $AppTagForm = $elContainer;
+	var $AppTagInput = $AppTagForm.find('input[name=tag]');
+	var $AppTagButton = $AppTagForm.find('button');
+
+	var TextSuggest;
+
+	if ( $AppTagForm.length )
+	{
+		var fnOnSubmit = function(event) {
+			if ( event )
+				event.preventDefault();
+
+			if ( $AppTagInput.val().length == 0 )
+				return;
+
+			fnOnTagSelected( $AppTagInput.val() );
+			$AppTagInput.val('').change().focus();
+		};
+
+		var fnUpdateTagButtonState = function() {
+			if ( $AppTagInput.val().length > 0 )
+				$AppTagButton.removeClass( 'btn_disabled' );
+			else
+				$AppTagButton.addClass( 'btn_disabled' );
+		};
+
+		$AppTagInput.val('');
+		$AppTagInput.change( fnUpdateTagButtonState );
+		$AppTagInput.keyup( fnUpdateTagButtonState );
+		fnUpdateTagButtonState();
+		$AppTagInput.focus();
+
+		$AppTagForm.submit( fnOnSubmit );
+		$AppTagForm.keyup( function( event ) { if ( event.which == 13 ) event.stopPropagation() } );
+
+		TextSuggest = new CTextInputSuggest( $AppTagInput, GetTagSuggestFunc( g_rgGlobalPopularTags ), function( suggestion ) { fnOnSubmit(); } );
+
+		// hack to size the input control correctly
+		//$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );
+
+		this.LoadPopularTags();
+	}
+}
+
+//
+CTagAutoComplete.prototype.LoadPopularTags = function( bForce )
+{
+	if( !bForce && g_rgGlobalPopularTags.length > 0 )
+		return;
+
+	$J.get( 'https://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
+		for ( var i = 0; i < data.length; i++ )
+			g_rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy
+
+	});
+}
+
 

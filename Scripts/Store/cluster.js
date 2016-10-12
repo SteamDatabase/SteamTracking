@@ -3,7 +3,7 @@ function Cluster( args )
 {
 	this.nCurCap = 0;
 	this.bInScroll = false;
-	this.bSuppressScrolling = true;
+	this.bSuppressScrolling = false;
 	this.bUseActiveClass = false;
 	this.rgCapsToLoad = [];
 	this.onChangeCB = null;
@@ -29,6 +29,9 @@ function Cluster( args )
 	var _this = this;
 	this.elScrollLeftBtn.on( 'click', function( event ) { _this.scrollLeft( event ); } );
 	this.elScrollRightBtn.on( 'click', function( event ) { _this.scrollRight( event, false ); } );
+
+	this.elScrollLeftBtn.on( 'touchend', function( event ) { _this.mouseOut( event ); } );
+	this.elScrollRightBtn.on( 'touchend', function( event ) { _this.mouseOut( event ); } );
 
 	this.elClusterArea.on( 'mouseenter', function( event ) { _this.mouseOver( event ); } );
 	this.elClusterArea.on( 'mouseleave', function( event ) { _this.mouseOut( event ); } );
@@ -104,8 +107,6 @@ function Cluster( args )
 			_this.nCurCap = Math.round( value / _this.nCapWidth );
 			_this.ensureImagesLoaded();
 
-			_this.bSuppressScrolling = false;
-			_this.startTimer();
 
 			// if no mouse down, then we don't know when to finish up the scroll so schedule now.
 			//	this function is called after animations end as well, but they should always be on a cap so

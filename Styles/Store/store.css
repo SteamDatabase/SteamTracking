@@ -2534,8 +2534,7 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););
-}
+	background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););}
 
 .store_capsule:not(:last-child) {
 	margin-right: 8px; /* Again, a default. Adjust to fit your container. */
@@ -2546,11 +2545,17 @@ background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89
 	text-decoration: none;
 }
 
-.store_capsule > img { /* 	Select the immediate decendent so we only target the capsule image, not contents further down
-							the tree. If your image is being affected, wrap it in a div! */
+.store_capsule .capsule {
+	vertical-align: top;
+}
+
+.store_capsule .capsule > img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: auto;
-	vertical-align: top; /* This fixes the browser aligning the capsule above the base line (which adds an undefined amount of "margin" below the image */
+	vertical-align: top;
 }
 
 .store_capsule .title {
@@ -2596,7 +2601,7 @@ background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89
 	left: 0px;
 }
 
-.store_capsule.ds_flagged:not(.ds_wishlist) > img {
+.store_capsule.ds_flagged:not(.ds_wishlist) .capsule > img {
 	opacity: 0.3;
 }
 
@@ -2614,6 +2619,16 @@ background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89
 	border-bottom: none; /* Fixes a weird artifact where the bottom border is 0,0,0,0.1 or something? */
 	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
 }
+
+/* Aspect ratios */
+.store_capsule > .capsule.header, .store_capsule > .capsule.headerv5, .store_capsule > .capsule.headerratio {
+	padding-top: 46.57534246575342%;
+}
+
+.store_capsule > .capsule.smallv5 {
+	padding-top: 37.5%
+}
+
 
 /* ds_options defines the per-app prefernces dropdown */
 .ds_options {
