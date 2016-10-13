@@ -1188,8 +1188,10 @@ HelpWizard = {
 	LoginInfoSearch: function( form ) {
 		var form = $J( form );
 		var elError = $J( '#form_submit_error' );
+		var elSearchError = $J( '#form_submit_search_error' );
 		form.addClass( 'loading' );
 		elError.hide();
+		elSearchError.hide();
 
 		$J.ajax({
 			type: form.attr( 'method' ),
@@ -1208,7 +1210,11 @@ HelpWizard = {
 			}
 			else
 			{
-				elError.text( data.errorMsg ).slideDown();
+				if ( data.searchError )
+					elSearchError.html( data.errorMsg ).slideDown();
+				else
+					elError.text( data.errorMsg ).slideDown();
+
 				if ( data.needCaptcha )
 					HelpWizard.RefreshCaptcha();
 				else

@@ -2054,6 +2054,23 @@ a.guide_row {
 	display: inline-block;
 }
 
+#form_submit_search_error {
+	color: #ffffff;
+	border: 1px solid #3e75a3;
+	background-color: #24445f;
+	margin: 30px 8px 8px 0px;
+	padding: 8px;
+	display: inline-block;
+}
+
+#form_submit_search_error a {
+	color: #66c0f4;
+}
+
+#form_submit_search_error a:hover {
+	color: #ffffff;
+}
+
 #recovery_code_resent {
 	color: #ffffff;
 	border: 1px solid #00adee;
