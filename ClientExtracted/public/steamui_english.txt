@@ -3978,7 +3978,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_21"		"content servers unreachable"
 "Steam_AppUpdateError_22"		"invalid app configuration"
 "Steam_AppUpdateError_23"		"invalid depot configuration"
-"Steam_AppUpdateError_24"		"manifest unavilable"
+"Steam_AppUpdateError_24"		"manifest unavailable"
 "Steam_AppUpdateError_25"		"app not released"
 "Steam_AppUpdateError_26"		"region restricted"
 "Steam_AppUpdateError_27"		"corrupt content cache"
