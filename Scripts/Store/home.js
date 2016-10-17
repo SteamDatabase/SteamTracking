@@ -219,10 +219,6 @@ GHomepage = {
 			GHomepage.RenderRecentApps();
 		} catch( e ) { OnHomepageException(e); }
 
-				// Prefer spotlights for games we don't own
-		try {
-			GHomepage.SetDefaultSpotlight();
-		} catch( e ) { OnHomepageException(e); }
 		
 		// Recommended
 		try {
@@ -390,27 +386,49 @@ GHomepage = {
 		var elBestTarget = false;
 		var rgSpotlights = $elSpotlightContainer.children();
 
-		// Find the first spotlight in the stack that we don't own
+		// Build a list of appids so we can run through our normal filter code.
+		var rgAppIds = [];
 		for( var i=0; i<rgSpotlights.length; i++)
 		{
 			var unAppId = rgSpotlights[i].dataset.dsAppid;
-			if( unAppId && !GDynamicStore.BIsAppOwned( unAppId ) )
+			rgAppIds.push({ appid: unAppId })
+		}
+
+		// Now filter...
+		rgAppIds = GHomepage.FilterItemsForDisplay(
+			rgAppIds, 'home', 0, 10, { games_already_in_library: false, localized: true }
+		);
+
+		// Find the spotlight for our appid
+		if( rgAppIds.length > 0 )
+		{
+			for ( var i = 0; i < rgSpotlights.length; i++ )
 			{
-				// Found an ideal spotlight, but it's position 0, so just early out
-				if( i == 0 )
-					return;
+				var unAppId = rgSpotlights[ i ].dataset.dsAppid;
 
-				elBestTarget = rgSpotlights[i];
-				break;
+				// Now run over our "good" spotlights
+				for ( var j = 0; j < rgAppIds.length; j++ )
+				{
+					if ( unAppId && unAppId == rgAppIds[ j ].appid )
+					{
+						// Found an ideal spotlight, but it's position 0, so just early out
+						if ( i == 0 )
+							return;
 
+						elBestTarget = rgSpotlights[ i ];
+
+					}
+				}
 			}
 		}
 
-		if( elBestTarget )
-			$elSpotlightContainer.prepend ( elBestTarget );
 
-		$elSpotlightContainer.children().hide();
-		$J(elBestTarget).show();
+		if( elBestTarget )
+		{
+			$elSpotlightContainer.prepend ( elBestTarget );
+			$elSpotlightContainer.children ().hide ();
+			$J ( elBestTarget ).show ();
+		}
 
 	},
 
