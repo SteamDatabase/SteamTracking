@@ -336,6 +336,10 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		{
 			_watch.ShowVideoError( _watch.AddBroadcasterName( '%s is currently unable to maintain a stable broadcast connection to Steam.' ) );
 		}
+		else if ( data.success == 'missing_subscription' )
+		{
+			_watch.ShowVideoError( _watch.AddBroadcasterName( 'Missing subscription to watch %s\'s broadcast' ) );
+		}
 		else if ( data.success == 'request_failed' )
 		{
 			_watch.ShowVideoError( 'Failed to load this broadcast' );
