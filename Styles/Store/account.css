@@ -930,11 +930,13 @@ td.wht_total {
 }
 
 .account_header_line {
-	background-color: #2c405b;
-	padding: 0 0 2px 4px;
-	color: #c7d5e0;
-	font-size: 16px;
-	line-height: 30px;
+	background-color: #0197cf;
+	padding: 0 0 0px 4px;
+	color: #ffffff;
+	font-size: 17px;
+	line-height: 31px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 .account_header_line.noicon {
 	padding-left: 8px;
@@ -986,7 +988,11 @@ td.wht_total {
 }
 
 .account_setting_parenthetical {
-	color: #537ca6;
+	color: #97a0ab;
+	display: block;
+	margin-left: 21px;
+	margin-top: -6px;
+	font-size: 12px;
 }
 
 .account_manage_link {
@@ -1206,4 +1212,17 @@ td.wht_total {
 
 .minispacer {
 	height: 15px;
+}
+
+.account_preferences .breadcrumbs {
+	padding-top: 28px;
+}
+.account_preferences .page_header_ctn {
+	background: none;
+	border-bottom: 1px solid rgba( 103, 192, 244, 0.2 );
+	padding-bottom: 11px;
+	margin-bottom: 20px;
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
 }

@@ -136,7 +136,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
 
 	// discovery queue settings dialog
 	var bQueueIsValid = true;
-	var $NextInQueueBtn = $J('.btn_next_in_queue');
+	var $NextInQueueBtn = $J('.btn_next_in_queue_trigger');
 
 	$NextInQueueBtn.click( function() {
 		if ( bQueueIsValid )

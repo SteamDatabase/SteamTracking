@@ -4048,6 +4048,11 @@ div.agegate_text_container > h2 {
 .agegate_text_container.btns {
 	margin-top: 7%;
 }
+
+.agegate_text_container.checkbox {
+	margin-top: 2%;
+}
+
 #app_agegate {
 	margin-top: 3%;
 	margin-bottom: 150px;

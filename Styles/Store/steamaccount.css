@@ -198,7 +198,7 @@ p.currency_change_confirm_dialog_footer {
 	display: inline-block;
 	vertical-align: top;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 200; /* thin */
 
 		}
 
@@ -220,21 +220,25 @@ p.currency_change_confirm_dialog_footer {
 	font-size: 14px;
 	display: block;
 }
-.two_column .nav_item:hover, .two_column .nav_item.active {
-	background-color: #345c75;
+.two_column .nav_item.active {
+	background-color: rgba( 255, 255, 255, 0.12 );
+}
+.two_column .nav_item:hover {
+	background-color: rgba( 255, 255, 255, 0.3 );
 }
 
 .account_settings_container {
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.2);
 	margin-bottom: 15px;
 	padding: 8px 25px 25px 25px;
 	font-size: 14px;
+	line-height: 18px;
 }
 
 body.v6 .account_settings_container h2 {
 	text-transform: uppercase;
 	color: #fff;
-	margin: 5px 0;
+	margin: 5px 0 0px;
 	font-size: 17px;
 	letter-spacing: 2px;
 
@@ -250,7 +254,8 @@ body.v6 .account_settings_container h2 {
 
 .account_settings_container p.info {
 	color: #abdaf4;
-	font-size: 14px;
+	font-size: 16px;
+	margin-top: 9px;
 }
 
 .account_settings_container blockquote {
@@ -258,9 +263,14 @@ body.v6 .account_settings_container h2 {
 }
 
 .account_settings_container label {
-	font-size: 12px;
+	font-size: 13px;
 	color: #c5d1df;
-	line-height: 20px;
+	line-height: 23px;
+}
+
+.account_settings_container blockquote.tag_form {
+	margin-top: 12px;
+	width: 300px;
 }
 
 .app_tag_form_ctn button {
@@ -269,7 +279,7 @@ body.v6 .account_settings_container h2 {
 }
 .account_settings_container .half {
 	display: inline-block;
-	width: 50%;
+	margin-right: 25px;
 }
 
 .app_tag_form_ctn .gray_bevel.for_text_input {
@@ -284,18 +294,33 @@ body.v6 .account_settings_container h2 {
 
 }
 
-input.gray_bevel, textarea.gray_bevel, .gray_bevel {
-	background-color: #565658;
+.account_preferences input.gray_bevel,
+.account_preferences textarea.gray_bevel,
+.account_preferences .gray_bevel {
+	background-color: rgba( 0, 0, 0, 0.4 );
 	border-radius: 3px;
-	border: 1px solid #262627;
-	box-shadow: 1px 1px 0px #39393a;
-	color: #BFBFBF;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0px #45556c;
+	color: #fff;
 
 	margin-bottom: 6px;
 	outline: none;
 
 
 	padding: 4px 6px;
+}
+.account_preferences .gray_bevel input,
+.account_preferences .gray_bevel textarea {
+	background-color: transparent;
+	color: #476474;
+}
+
+.account_preferences input.gray_bevel::-webkit-input-placeholder,
+.account_preferences textarea.gray_bevel::-webkit-input-placeholder,
+.account_preferences .gray_bevel textarea::-webkit-input-placeholder,
+.account_preferences .gray_bevel input::-webkit-input-placeholder {
+	font-style: italic;
+	color: #476474;
 }
 
 .tag_downvoted {
@@ -339,6 +364,9 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel {
 	color: #63c1f5;
 	cursor: pointer;
 }
+.queue_customize:hover {
+	color: #ffffff;
+}
 
 .not_interested_container {
 	display: inline-block;
@@ -365,4 +393,7 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel {
 	text-align: right;
 	width: 100px;
 	padding-right: 5px;
+}
+#primary_language {
+	margin-left: 25px;
 }

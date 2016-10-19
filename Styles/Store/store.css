@@ -2649,25 +2649,38 @@ a.cluster_capsule:hover {
 	box-shadow: 0 0 3px #000;
 }
 
+.ds_options:hover {
+	background-color: #67c1f5;
+	color: #fff;
+	background-image: url('/public/images/v6/icon_expand_white.png');
+}
+
 *:hover > .ds_options, .ds_hover.ds_options {
 	opacity: 1;
 	right: 5px;
 }
 
 .ds_options_tooltip {
-	background-color: rgba(54,97,125,1);
-	padding: 2px 8px;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 2px 8px;
 	color: #fff;
 	border-radius: 3px;
 	box-shadow: 0 0 3px #000;
 }
 
-.ds_options_tooltip > div {
+.ds_options_tooltip > .option  {
 	margin: 5px 0;
+	display: block;
 	cursor: pointer;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 2px;
+	padding: 4px 8px;
+	line-height: normal;
+	font-size: 11px;
+	color: #407898;
 }
-.ds_options_tooltip > div:hover {
-	color: #acdbf5;
+.ds_options_tooltip > .option:hover {
+	color: #ffffff;
+	background-color: #67c1f5;
 }
 
 /* Temporary state for when we want to hide something but don't want to force a reload or risk breaking the layout */
@@ -2751,6 +2764,16 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	background-position: center top;
 	background-repeat: no-repeat;
 	min-width: 972px;
+}
+
+.mature_content_filtered {
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
+.mature_content_filtered a {
+	text-decoration: underline;
+	color: #2f89bc;
 }
 
 @media screen and (max-width: 910px )

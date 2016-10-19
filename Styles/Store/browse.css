@@ -137,9 +137,9 @@
 }
 
 .block .block_header {
-    background: #2a3f5a;
+	background: rgba( 255, 255, 255, 0.1);
     padding: 4px 4px 4px 6px;
-    color: #8f98a0;
+    color: #c7d5e0;
     font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -147,7 +147,7 @@
 		}
 
 .block_content {
-    border: 1px solid #28394d;
+    border: 1px solid rgba( 255, 255, 255, 0.1);
     border-radius: 2px;
 
 }
@@ -214,7 +214,7 @@ a.linkbar .rightblock {
 }
 .tab_filter_control:hover {
     color: #ffffff;
-    background: rgba( 42, 63, 90, 0.5);
+    background: rgba( 255, 255, 255, 0.1);
 }
 
 .tab_filter_control.checked {

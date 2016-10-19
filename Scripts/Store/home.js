@@ -266,8 +266,7 @@ GHomepage = {
 			GHomepage.RenderPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
-
-		// Popular new
+				// Popular new
 		try {
 			GHomepage.FilterPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
@@ -277,7 +276,11 @@ GHomepage = {
 			GHomepage.FilterUnder10();
 		} catch( e ) { OnHomepageException(e); }
 
-
+		// Tabs
+		try {
+			GHomepage.FilterTabs();
+		} catch( e ) { OnHomepageException(e); }
+		
 		// RECENTLY UPDATED
 		try {
 			if ( bHaveUser )
@@ -598,7 +601,7 @@ GHomepage = {
 				}
 
 				var friend = oItem.friends[i];
-				var $AvatarCap = $J('<a href="%1$s" ds-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.profile_url).replace(/\%2\$s/g, friend.avatar).replace(/\%3\$s/g, friend.accountid) );
+				var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.profile_url).replace(/\%2\$s/g, friend.avatar).replace(/\%3\$s/g, friend.accountid) );
 				$AvatarsCtn.append( $AvatarCap );
 			}
 
@@ -769,23 +772,22 @@ GHomepage = {
 		}
 
 	},
-	FilterCapsules: function( nMin, nMax, $elElements, $elContainer)
+	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
 	{
 		var nCapsules = $elElements.length;
 
-		// Remove ignored stuff first
+		// Get a list of appids to filter
+		var rgApps = [];
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			var nAppId = $capsule.data('ds-appid');
-
-			if( GDynamicStore.BIsAppIgnored(nAppId) )
-			{
-				$capsule.hide();
-				nCapsules--;
-			} else
-				$capsule.removeClass('hidden'); // Force show here since we might have hidden it for other reasons
+			rgApps.push( { appid: $capsule.data('ds-appid') } );
 		}
+
+		// Filter
+		var rgFilteredApps = GHomepage.FilterItemsForDisplay(
+			rgApps, 'home', 10, 10, rgFilterParams
+		);
 
 		// Now follow filters as long we we can keep 4 items in the capsule
 		for( var i = 0; i < $elElements.length; i++ )
@@ -793,44 +795,51 @@ GHomepage = {
 			var $capsule = $J( $elElements[i] );
 			var nAppId = $capsule.data('ds-appid');
 
-			var rgFilterTest = GHomepage.FilterItemsForDisplay(
-				[{'appid': nAppId}], 'home', 0, 1, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
-			);
-
-			if(  rgFilterTest.length == 0 )
+			// Test our filtered list
+			var bVisible = false;
+			for( var j=0; j<rgFilteredApps.length; j++)
 			{
-				$capsule.hide();
-				nCapsules--;
+				if( rgFilteredApps[j].appid == nAppId )
+				{
+					bVisible = true;
+					break;
+				}
 			}
-			if( nCapsules == nMin )
-				break;
+
+			if( bVisible )
+				$capsule.removeClass('hidden');
+			else
+				$capsule.addClass('hidden');
 		}
 
-		// Cap number of capsules to 8
-
-		var nVisible = 0;
-		for( var i = 0; i < $elElements.length; i++ )
-		{
-			var $capsule = $J( $elElements[i] );
-			if(!$capsule.is(':visible'))
-				continue;
-
-			if( nVisible++ >= nMax)
-				$capsule.hide();
-
-		}
 
 		$elElements.parent().trigger('v_contentschanged');
 
-		if( nCapsules < nMin && $elContainer )
-			$elContainer.hide();
+		//if( nCapsules < nMin && $elContainer )
+		//	$elContainer.hide();
 	},
 
 	FilterPopularNewOnSteam: function()
 	{
 		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
 
-		this.FilterCapsules( 4, 10, $PopularNewCapsules.children(), $J('.recent_top_sellers ') )
+		this.FilterCapsules( 4, 10, $PopularNewCapsules.children(), $J('.recent_top_sellers '), { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
+
+	},
+
+	FilterTabs: function()
+	{
+		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_specials_content'];
+
+		for( var i=0; i<rgTabSections.length; i++)
+		{
+			var $elTabSection = $J( rgTabSections[i] );
+
+			this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false } )
+		}
+
+
+
 
 	},
 
@@ -838,7 +847,7 @@ GHomepage = {
 	{
 		var $UnderTenCapsules =  $J('.home_specials_ctn.underten .home_specials_grid' );
 
-		this.FilterCapsules( 4, 6, $UnderTenCapsules.children() )
+		this.FilterCapsules( 4, 6, $UnderTenCapsules.children(), { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
 
 	},
 

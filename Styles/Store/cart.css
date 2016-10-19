@@ -83,7 +83,7 @@ body.v6.login .rightcol .spotlight_block {
 .checkout_content_box textarea,
 .checkout_main .dselect_container a.trigger
 {
-	background-color: #2a3f5a;
+	background-color: rgba( 0, 0, 0, 0.4);
 	color: #fff;
 	border: 1px solid #000;
 	border-radius: 3px;
@@ -1529,7 +1529,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 
 .checkout_main .dselect_container a.trigger {
 	color: #ffffff;
-	background: #2a3f5a;
+	background: rgba( 0, 0, 0, 0.4);
 }
 
 .dselect_container a.trigger:hover

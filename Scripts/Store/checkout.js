@@ -3820,7 +3820,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'debit_card_india' && providerPaymentMethod == 88 )
 			{
-				$('payment_method_review_text').innerHTML = 'Debit Card';
+				$('payment_method_review_text').innerHTML = 'Debit Card (Domestic)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'net_banking_india' && providerPaymentMethod == 89 )

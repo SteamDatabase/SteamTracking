@@ -502,7 +502,7 @@ GDynamicStore = {
 
 			}
 
-			var $elAddToWishlist = $J ( '<div/>' ).click ( fnClick ).text ( strText );
+			var $elAddToWishlist = $J ( '<div/>' ).click ( fnClick ).text ( strText ).addClass( 'option' );
 			$El.append($elAddToWishlist);
 
 			if (!bIgnored)
@@ -533,8 +533,12 @@ GDynamicStore = {
 			}
 
 
-			var $elNotInterested = $J ( '<div/>' ).click ( fnClick ).text ( strText );
+			var $elNotInterested = $J ( '<div/>' ).click ( fnClick ).text ( strText ).addClass( 'option' );
 			$El.append($elNotInterested);
+
+
+			var $elPreferences = $J ( '<a/>' ).attr('href', 'http://store.steampowered.com/account/preferences' ).text ( "Preferences" ).addClass( 'option' );
+			$El.append($elPreferences);
 
 
 		}

@@ -537,7 +537,7 @@ CVideoWatch.prototype.OnVideoSuggestClick = function( oData )
 		document.body.style.cursor = 'wait';
 		var nAppID = parseInt( oData.appid );
 		this.OnLogEventToServer( 'Video Suggest Click', nAppID );
-		window.location = 'http://store.steampowered.com/video/watch/' + nAppID;
+		window.location = 'https://store.steampowered.com/video/watch/' + nAppID;
 	}
 }
 
