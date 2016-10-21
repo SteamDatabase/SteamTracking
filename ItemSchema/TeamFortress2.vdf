@@ -10315,7 +10315,6 @@
 				}
 				"legendary"
 				{
-					"Improv Coonskin Cap"					"10"
 					"Burly Beast"							"10"
 					"Pestering Jester"						"10"
 					"Mo'Horn"								"10"
@@ -75419,24 +75418,8 @@
 				"engineer"		"1"
 			}
 		}
-		"30802"
-		{
-			"name"		"Improv Coonskin Cap"
-			"prefab"		"no_craft hat marketable"
-			"item_name"		"#TF_hwn2016_improv_coonskin_cap"
-			"item_description"		"#TF_hwn2016_improv_coonskin_cap_Desc"
-			"equip_region"		"hat"
-			"image_inventory"		"backpack/workshop/player/items/soldier/hwn2016_improv_coonskin_cap/hwn2016_improv_coonskin_cap"
-			"capabilities"
-			{
-				"can_craft_count"		"1"
-			}
-			"model_player"		"models/workshop/player/items/soldier/hwn2016_improv_coonskin_cap/hwn2016_improv_coonskin_cap.mdl"
-			"used_by_classes"
-			{
-				"soldier"		"1"
-			}
-		}
+
+
 		"30803"
 		{
 			"name"		"Heavy Tourism"
