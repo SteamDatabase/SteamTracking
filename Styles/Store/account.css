@@ -960,7 +960,7 @@ td.wht_total {
 }
 
 .account_setting_sub_block {
-	width: 33%;
+	width: 50%;
 	padding: 1em;
 	float: left;
 	color: #808891;
@@ -996,7 +996,8 @@ td.wht_total {
 }
 
 .account_manage_link {
-	line-height: 24px;
+	margin: 5px 0;
+	display: inline-block;
 	color: #67c1f5;
 }
 

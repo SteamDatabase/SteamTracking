@@ -198,7 +198,7 @@ p.currency_change_confirm_dialog_footer {
 	display: inline-block;
 	vertical-align: top;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 200; /* thin */
+		font-weight: 300; /* light */
 
 		}
 
@@ -226,6 +226,25 @@ p.currency_change_confirm_dialog_footer {
 .two_column .nav_item:hover {
 	background-color: rgba( 255, 255, 255, 0.3 );
 }
+
+@media screen and (max-width: 910px)
+{
+	.two_column.left {
+		width: auto;
+		margin-bottom: 25px;
+
+	}
+
+	.two_column .nav_item {
+		display: inline-block;
+	}
+
+	.two_column.right {
+		width: auto;
+		margin-left: 0;
+	}
+}
+
 
 .account_settings_container {
 	background-color: rgba(0,0,0,0.2);
