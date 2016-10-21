@@ -9436,6 +9436,260 @@
 			}
 		}
 	}
+	"188"
+	{
+		"name"		"Collect souls on Maple Ridge Event"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"halloween_soul_collected"
+			"score_key_name"		"soul_count"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"koth_maple_ridge_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"collecting_player"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"189"
+	{
+		"name"		"Collect crumpkins on Maple Ridge"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"halloween_pumpkin_grab"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"koth_maple_ridge_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"190"
+	{
+		"name"		"Kill with pumpkin bomb on Maple Ridge"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"player_death"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"koth_maple_ridge_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"0"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"attacker"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+				"0"
+				{
+					"type"		"custom_damage"
+					"custom_damage_key"		"customkill"
+					"value"		"TF_DMG_CUSTOM_PUMPKIN_BOMB"
+				}
+			}
+		}
+	}
+	"191"
+	{
+		"name"		"Collect souls on Brimstone"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"halloween_soul_collected"
+			"score_key_name"		"soul_count"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pl_fifthcurve_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"collecting_player"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"192"
+	{
+		"name"		"Collect crumpkins on Brimstone"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"halloween_pumpkin_grab"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pl_fifthcurve_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"193"
+	{
+		"name"		"Kill with pumpkin bomb on Brimstone"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"player_death"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pl_fifthcurve_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"userid"
+					"get_player"		"by_id"
+					"is_owner"		"0"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"attacker"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+				"0"
+				{
+					"type"		"custom_damage"
+					"custom_damage_key"		"customkill"
+					"value"		"TF_DMG_CUSTOM_PUMPKIN_BOMB"
+				}
+			}
+		}
+	}
+	"194"
+	{
+		"name"		"Collect souls on Pit of Death"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"halloween_soul_collected"
+			"score_key_name"		"soul_count"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pd_pit_of_death_event"
+				}
+				"0"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"collecting_player"
+					"get_player"		"by_id"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"195"
+	{
+		"name"		"Collect lost souls on Pit of Death"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"teamplay_flag_event"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pd_pit_of_death_event"
+				}
+				"1"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"player"
+					"get_player"		"by_entindex"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
+	"196"
+	{
+		"name"		"Deposit lost souls on Pit of Death"
+		"condition_logic"
+		{
+			"type"		"event_listener"
+			"event_name"		"special_score"
+			"0"
+			{
+				"type"		"AND"
+				"0"
+				{
+					"type"		"map"
+					"value"		"pd_pit_of_death_event"
+				}
+				"1"
+				{
+					"type"		"player_is_owner"
+					"player_key"		"player"
+					"get_player"		"by_entindex"
+					"is_owner"		"1"
+				}
+			}
+		}
+	}
 }
 	"item_series_types"
 	{
@@ -9650,6 +9904,18 @@
 			}
 		}
 
+		"Halloween_master_collection"
+		{
+			"name"				"#Halloween_master_collection"
+			"description"		"#Halloween_master_collection_desc"
+			"is_reference_collection"	"1"
+			"items"
+			{
+				"Halloween 2015 Collection Dummy"		"10"
+				"Halloween 2016 Collection Dummy"		"10"
+			}
+		}
+
 		"invasion_master_collection"
 		{
 			"name"				"#invasion_master_collection"
@@ -9728,7 +9994,7 @@
 		"halloween2015_collection_lootlist"
 		{
 			"name"				"#halloween2015_collection_name"
-			"description"		"#halloween2015_collection_desc"
+			"description"		"#halloween2015_collection_name_desc"
 			"items"
 			{
 				"rare"
@@ -10035,6 +10301,49 @@
 				}
 			}
 		}
+
+		"halloween2016_collection_lootlist"
+		{
+			"name"				"#halloween2016_collection_name"
+			"description"		"#halloween2016_collection_name_desc"
+			"items"
+			{
+				"ancient"
+				{
+					"Combustible Cutie"						"10"
+					"Class Crown"							"10"
+				}
+				"legendary"
+				{
+					"Improv Coonskin Cap"					"10"
+					"Burly Beast"							"10"
+					"Pestering Jester"						"10"
+					"Mo'Horn"								"10"
+				}
+				"mythical"
+				{
+					"The Toadstool Topper"					"10"
+					"Big Topper"							"10"
+					"Heavy Tourism"							"10"
+					"The Corpus Christi Cranium"			"10"
+					"Spirit of the Bombing Past"			"10"
+					"Lil' Bitey"							"10"
+				}
+				"rare"
+				{
+					"Colossal Cranium"						"10"
+					"Showstopper"							"10"
+					"The Cranial Carcharodon"				"10"
+					"Spooktacles"							"10"
+					"The El Paso Poncho"					"10"
+					"The Wide-Brimmed Bandito"				"10"
+					"Nasty Norsemann"						"10"
+					"The Surgeon's Sidearms"				"10"
+					"Mad Mask"								"10"
+					"The Wing Mann"							"10"
+				}
+			}
+		}
 	} 
 	"operations"
 	{
@@ -10083,15 +10392,16 @@
 
 		"3"
 		{
-			"name"								"operation_halloween2015"
-			"required_item_name"				"Activated Halloween 2015 Pass"
-			"operation_start_date"				"2015-10-28 00:00:00" 
-			"stop_adding_to_queue_date"			"2015-11-10 00:00:00" 
-			"stop_giving_to_player_date"		"2015-11-12 00:00:00" 
+			"name"								"operation_halloween"
+			"required_item_name"				"Activated Halloween Pass"
+			"operation_start_date"				"2016-10-19 00:00:00" 
+			"stop_adding_to_queue_date"			"2016-11-07 00:00:00" 
+			"stop_giving_to_player_date"		"2016-11-09 00:00:00" 
 			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
 			"operation_lootlist"				"halloween_quest_drop"
 			"is_campaign"						"1"
+			"max_drop_count"					"21"
 		}
 
 		"4"
@@ -10255,6 +10565,7 @@
 				"nameable"		"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
+				"can_unusualify"	"1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc"		"action tauntenabler"
@@ -10493,7 +10804,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"inspect_panel_dist" "31"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"#TF_Weapon_Pistol"
@@ -10502,6 +10812,7 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
 			"image_inventory"	"backpack/weapons/c_models/c_pistol"
 			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
 			"used_by_classes"
@@ -10531,7 +10842,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"inspect_panel_dist" "88"
 			"item_class"	"tf_weapon_minigun"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -10547,6 +10857,7 @@
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_minigun/c_minigun.mdl"
 			"attach_to_hands" "1"
+			"inspect_panel_dist" "88"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -11085,7 +11396,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"inspect_panel_dist" "35"
 			"item_class"	"tf_weapon_scattergun"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -11100,6 +11410,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "35"
 			"model_player"	"models/weapons/c_models/c_scattergun.mdl"
 			"used_by_classes"
 			{
@@ -11205,7 +11516,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"inspect_panel_dist" "40"
 			"item_class"	"tf_weapon_shotgun"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -11216,6 +11526,7 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -11297,7 +11608,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"inspect_panel_dist" "31"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_Weapon_Revolver"
@@ -11308,6 +11618,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
 			"model_player"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -11425,7 +11736,7 @@
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"					"10 0 -6"	
+				"min_viewmodel_offset"					"8 0 -6"	
 			}
 			"attributes"
 			{
@@ -12176,6 +12487,7 @@
 			"static_attrs"
 			{
 				"is commodity"			"1"
+				"tool_target_item_icon_offset" "0.285 0.43 0.35"
 			}
 			"show_in_armory"	"0"
 			"item_type_name"	"#TF_StrangifierTool"
@@ -12189,6 +12501,52 @@
 			"max_ilevel"		"5"
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"			"ui/item_bottle_drop.wav"
+		}
+		"unusualifier_base"
+		{
+			"item_class"	"tool"
+			"tool"
+			{
+				"type"	"unusualifier"
+				"usage"
+				{
+					"item_desc_tool_target"	"#ItemDescUnusualify"
+				}
+				"usage_capabilities"
+				{
+					"can_unusualify" "1"
+				}
+			}
+			"static_attrs"
+			{
+				"tool_target_item_icon_offset" "0.35 0.5 0.4"
+			}
+			"attributes"
+			{
+				"never craftable"
+				{
+					"attribute_class"	"never_craftable"
+					"value"				"1"
+				}
+				"cannot restore"
+				{
+					"attribute_class"	"cannot_restore"
+					"value"				"1"
+				}
+			}
+			"show_in_armory"	"0"
+			"item_name"			"#TF_Unusualifier"
+			"item_description"	"#TF_Unusualifier_Desc"
+			"item_type_name"	"#TF_Unusualifier"
+			"image_inventory"	"backpack/crafting/unusualifier"
+			"image_inventory_size_w" "128"
+			"image_inventory_size_h" "96"
+			"item_quality"		"unique"
+			"min_ilevel"		"5"
+			"max_ilevel"		"5"
+			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
+			"drop_sound"			"ui/item_bottle_drop.wav"
+			"event_desc_footer"			"#halloween2016_event_footer"	
 		}
 		"killstreakifier_base"
 		{
@@ -12204,6 +12562,10 @@
 				{
 					"can_killstreakify" "1"
 				}
+			}
+			"static_attrs"
+			{
+				"tool_target_item_icon_offset" "0.285 0.43 0.35"
 			}
 			"attributes"
 			{
@@ -12290,12 +12652,7 @@
 		"quest_prefab_halloween"
 		{
 			"prefab"		"dynamic_quest_base"
-			"expiration_date"	"2015-11-12 23:59:59" 
-		}
-
-		"quest_prefab_halloween_2015"
-		{
-			"prefab"		"quest_prefab_halloween"
+			"expiration_date"	"2016-11-09 23:59:59" 
 		}
 
 		"dynamic_quest_base"
@@ -13408,7 +13765,7 @@
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"		"10 0 -6"				
+				"min_viewmodel_offset"		"10 0 -6"
 			}
 			"attributes"
 			{
@@ -13456,7 +13813,6 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"inspect_panel_dist" "55"
 			"item_class"	"tf_weapon_grenadelauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -13473,6 +13829,7 @@
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher.mdl"
 			"attach_to_hands"	"1"
+			"inspect_panel_dist" "55"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -13642,11 +13999,11 @@
 			{
 				"is commodity"			"1"
 			}
+			"event_desc_footer"			"#halloween2016_event_footer"	
 		}
-		"keylesscrate"
+		"keylesscrate_base"
 		{
 			"item_class"	"tf_wearable"
-			"first_sale_date"	"2016/06/15"
 			"tool"
 			{
 				"type"	"gift"
@@ -13671,37 +14028,20 @@
 			"max_ilevel"	"1"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
+			"event_desc_footer"			"#halloween2016_event_footer"	
 		}
-		
+		"keylesscrate"
+		{
+			"prefab"	"keylesscrate_base"
+			"first_sale_date"	"2016/06/15"
+		}
 		"halloween2014keylesscrate"
 		{
-			"item_class"	"tf_wearable"
+			"prefab"	"keylesscrate_base"
 			"first_sale_date"	"2014/10/31"
 			"holiday_restriction"	"halloween_or_fullmoon"
-			"tool"
-			{
-				"type"	"gift"
-				"usage"
-				{
-					"num_items"		"1"
-					"max_recipients"	"1"
-					"target_rule"	"only_self"
-				}
-			}
-			"capabilities"
-			{
-				"usable_gc"				"1"
-				"usable_out_of_game"	"1"
-			}
-			"show_in_armory"	"1"
 			"item_type_name"	"#TF_UnlockedCrate_Type"
 			"item_description"	"#TF_Halloween2014Crate_Desc"
-			"item_slot"	"action"
-			"image_inventory_size_w"	"128"
-			"image_inventory_size_h"	"82"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -13714,8 +14054,6 @@
 				"engineer" "1"
 				"pyro" "1"
 			}
-			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
-			"drop_sound"		"ui/item_cardboard_drop.wav"
 		}
 		"eventcrate"
 		{
@@ -17539,7 +17877,7 @@
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"					"10 0 -6"	
+				"min_viewmodel_offset"					"8 0 -6"	
 			}
 			"attributes"
 			{
@@ -17613,7 +17951,7 @@
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"					"10 0 -6"	
+				"min_viewmodel_offset"					"8 0 -6"	
 			}
 			"attributes"
 			{
@@ -21109,7 +21447,7 @@
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"		"10 0 -12"				
+				"min_viewmodel_offset"		"10 0 -12"
 			}
 			"attributes"
 			{
@@ -55741,6 +56079,123 @@
 			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
 			"drop_sound"		"ui/item_metal_tiny_drop.wav"
 		}
+		"1172"
+		{
+			"name"	"Taunt: The Victory Lap"
+			"prefab"	"valve taunt"
+			"first_sale_date"		"2016/10/19"
+			"item_name"	"#TF_TauntAllClassKart"
+			"item_description"	"#TF_TauntAllClassKart_Desc"
+			"image_inventory"	"backpack/player/items/all_class/taunt_bumpercar"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"attributes"
+			{
+				"taunt is press and hold"
+				{
+					"attribute_class"	"enable_misc2_holdtaunt"
+					"value"				"1"
+				}
+				"taunt move speed"
+				{
+					"attribute_class"		"taunt_move_speed"
+					"value"		"200"
+				}
+				"taunt move acceleration time"
+				{
+					"attribute_class"		"taunt_move_acceleration_time"
+					"value"		"0.300000"
+				}
+				"taunt turn speed"
+				{
+					"attribute_class"		"taunt_turn_speed"
+					"value"		"60"
+				}
+				"taunt turn acceleration time"
+				{
+					"attribute_class"		"taunt_turn_acceleration_time"
+					"value"		"0.200000"
+				}
+				"taunt success sound"
+				{
+					"attribute_class"		"taunt_success_sound"
+					"value"		"Taunt.BumperCarGoLoop"
+				}
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"sniper"	"scenes\player\sniper\low\taunt_vehicle_allclass.vcd"
+					"soldier"	"scenes\player\soldier\low\taunt_vehicle_allclass.vcd"
+					"medic"		"scenes\player\medic\low\taunt_vehicle_allclass.vcd"
+					"heavy"		"scenes\player\heavy\low\taunt_vehicle_allclass.vcd"
+					"spy"		"scenes\player\spy\low\taunt_vehicle_allclass.vcd"
+					"engineer"	"scenes\player\engineer\low\taunt_vehicle_allclass.vcd"
+					"pyro"		"scenes\player\pyro\low\taunt_vehicle_allclass.vcd"
+					"scout"		"scenes\player\scout\low\taunt_vehicle_allclass.vcd"
+					"demoman"	"scenes\player\demoman\low\taunt_vehicle_allclass.vcd"
+				}
+				"custom_taunt_outro_scene_per_class"
+				{
+					"sniper"	"scenes\player\sniper\low\taunt_vehicle_end_allclass.vcd"
+					"soldier"	"scenes\player\soldier\low\taunt_vehicle_end_allclass.vcd"
+					"medic"		"scenes\player\medic\low\taunt_vehicle_end_allclass.vcd"
+					"heavy"		"scenes\player\heavy\low\taunt_vehicle_end_allclass.vcd"
+					"spy"		"scenes\player\spy\low\taunt_vehicle_end_allclass.vcd"
+					"engineer"	"scenes\player\engineer\low\taunt_vehicle_end_allclass.vcd"
+					"pyro"		"scenes\player\pyro\low\taunt_vehicle_end_allclass.vcd"
+					"scout"		"scenes\player\scout\low\taunt_vehicle_end_allclass.vcd"
+					"demoman"	"scenes\player\demoman\low\taunt_vehicle_end_allclass.vcd"
+				}
+				"custom_taunt_input_remap"
+				{
+					"IN_ATTACK"
+					{
+						"pressed"
+						{
+							"sniper"	"scenes\player\sniper\low\taunt_vehicle_honk_allclass.vcd"
+							"soldier"	"scenes\player\soldier\low\taunt_vehicle_honk_allclass.vcd"
+							"medic"		"scenes\player\medic\low\taunt_vehicle_honk_allclass.vcd"
+							"heavy"		"scenes\player\heavy\low\taunt_vehicle_honk_allclass.vcd"
+							"spy"		"scenes\player\spy\low\taunt_vehicle_honk_allclass.vcd"
+							"engineer"	"scenes\player\engineer\low\taunt_vehicle_honk_allclass.vcd"
+							"pyro"		"scenes\player\pyro\low\taunt_vehicle_honk_allclass.vcd"
+							"scout"		"scenes\player\scout\low\taunt_vehicle_honk_allclass.vcd"
+							"demoman"	"scenes\player\demoman\low\taunt_vehicle_honk_allclass.vcd"
+						}
+					}
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"sniper"	"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"soldier"	"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"medic"		"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"heavy"		"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"spy"		"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"engineer"	"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"pyro"		"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"scout"		"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+					"demoman"	"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
+				}
+			}
+		}
+
 
 
 
@@ -74216,15 +74671,15 @@
 			"anim_slot"		"MELEE_ALLCLASS"
 			"used_by_classes"
 			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"Demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-				"engineer" "1"
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 			"static_attrs"
 			{
@@ -74232,9 +74687,9 @@
 			}
 			"visuals"
 			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_melee_hit_world"		"Weapon_Machete.HitWorld"
+				"sound_melee_miss"		"Weapon_Machete.Miss"
+				"sound_melee_hit"		"Weapon_Machete.HitFlesh"
 				"sound_burst"		"Weapon_Machete.MissCrit"
 			}
 			"mouse_pressed_sound"		"ui/item_knife_large_pickup.wav"
@@ -74377,7 +74832,7 @@
 				{
 					"pyro"		"scenes/workshop/player/items/spring_rider/spring_rider_outro_prop.vcd"
 				}
-				"stop_taunt_if_moved"	"1"
+				"stop_taunt_if_moved"		"1"
 			}
 		}
 		"30767"
@@ -74718,7 +75173,674 @@
 				"sniper"		"1"
 			}
 		}
-
+		"30792"
+		{
+			"name"		"Colossal Cranium"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_colossal_cranium_2"
+			"item_description"		"#TF_hwn2016_colossal_cranium_2_Desc"
+			"equip_region"		"glasses"
+			"image_inventory"		"backpack/workshop/player/items/medic/hwn2016_colossal_cranium_2/hwn2016_colossal_cranium_2"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/hwn2016_colossal_cranium_2/hwn2016_colossal_cranium_2.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30793"
+		{
+			"name"		"Aerobatics Demonstrator"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_aerobatics_demonstrator"
+			"item_description"		"#TF_hwn2016_aerobatics_demonstrator_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_region"		"demo_belt"
+			"image_inventory"		"backpack/workshop/player/items/demo/hwn2016_aerobatics_demonstrator/hwn2016_aerobatics_demonstrator"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/hwn2016_aerobatics_demonstrator/hwn2016_aerobatics_demonstrator.mdl"
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"used_by_classes"
+			{
+				"Demoman"		"1"
+			}
+		}
+		"30794"
+		{
+			"name"		"Final Frontier Freighter"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_final_frontiersman"
+			"item_description"		"#TF_hwn2016_final_frontiersman_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_region"		"belt_misc"
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2016_final_frontiersman/hwn2016_final_frontiersman"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2016_final_frontiersman/hwn2016_final_frontiersman.mdl"
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30795"
+		{
+			"name"		"Hovering Hotshot"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_hovering_hotshot"
+			"item_description"		"#TF_hwn2016_hovering_hotshot_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_region"		"Back"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/hwn2016_hovering_hotshot/hwn2016_hovering_hotshot"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/hwn2016_hovering_hotshot/hwn2016_hovering_hotshot.mdl"
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30796"
+		{
+			"name"		"The Toadstool Topper"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_toadstool_topper"
+			"item_description"		"#TF_hwn2016_toadstool_topper_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_toadstool_topper/hwn2016_toadstool_topper"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/hwn2016_toadstool_topper/hwn2016_toadstool_topper_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30797"
+		{
+			"name"		"Showstopper"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_showstopper"
+			"item_description"		"#TF_hwn2016_showstopper_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/spy/hwn2016_showstopper/hwn2016_showstopper"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/hwn2016_showstopper/hwn2016_showstopper.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30798"
+		{
+			"name"		"Big Topper"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_big_topper"
+			"item_description"		"#TF_hwn2016_big_topper_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/spy/hwn2016_big_topper/hwn2016_big_topper"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/hwn2016_big_topper/hwn2016_big_topper.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30799"
+		{
+			"name"		"Combustible Cutie"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_combustible_cutie"
+			"item_description"		"#TF_hwn2016_combustible_cutie_Desc"
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/hwn2016_combustible_cutie/hwn2016_combustible_cutie"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/hwn2016_combustible_cutie/hwn2016_combustible_cutie.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30800"
+		{
+			"name"		"The Cranial Carcharodon"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_pyro_shark"
+			"item_description"		"#TF_hwn2016_pyro_shark_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/pyro/hwn2016_pyro_shark/hwn2016_pyro_shark"
+			"propername"		"1"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/hwn2016_pyro_shark/hwn2016_pyro_shark.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30801"
+		{
+			"name"		"Spooktacles"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_spooktacles"
+			"item_description"		"#TF_hwn2016_spooktacles_Desc"
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"glasses"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_spooktacles/hwn2016_spooktacles"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/hwn2016_spooktacles/hwn2016_spooktacles_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30802"
+		{
+			"name"		"Improv Coonskin Cap"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_improv_coonskin_cap"
+			"item_description"		"#TF_hwn2016_improv_coonskin_cap_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/hwn2016_improv_coonskin_cap/hwn2016_improv_coonskin_cap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/hwn2016_improv_coonskin_cap/hwn2016_improv_coonskin_cap.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30803"
+		{
+			"name"		"Heavy Tourism"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_heavy_tourism"
+			"item_description"		"#TF_hwn2016_heavy_tourism_Desc"
+			"item_type_name"		"#TF_Wearable_Shirt"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/hwn2016_heavy_tourism/hwn2016_heavy_tourism"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/hwn2016_heavy_tourism/hwn2016_heavy_tourism.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30804"
+		{
+			"name"		"The El Paso Poncho"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_el_paso_poncho"
+			"item_description"		"#TF_hwn2016_el_paso_poncho_Desc"
+			"item_type_name"		"#TF_Wearable_Poncho"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2016_el_paso_poncho/hwn2016_el_paso_poncho"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2016_el_paso_poncho/hwn2016_el_paso_poncho.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30805"
+		{
+			"name"		"The Wide-Brimmed Bandito"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_wide_brimmed_bandito"
+			"item_description"		"#TF_hwn2016_wide_brimmed_bandito_Desc"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2016_wide_brimmed_bandito/hwn2016_wide_brimmed_bandito"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2016_wide_brimmed_bandito/hwn2016_wide_brimmed_bandito.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30806"
+		{
+			"name"		"The Corpus Christi Cranium"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_corpus_christi_cranium"
+			"item_description"		"#TF_hwn2016_corpus_christi_cranium_Desc"
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"head_skin"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2016_corpus_christi_cranium/hwn2016_corpus_christi_cranium"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2016_corpus_christi_cranium/hwn2016_corpus_christi_cranium.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30807"
+		{
+			"name"		"Spirit of the Bombing Past"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_spirit_of_the_bombing_past"
+			"item_description"		"#TF_hwn2016_spirit_of_the_bombing_past_Desc"
+			"image_inventory"		"backpack/workshop/player/items/demo/hwn2016_spirit_of_the_bombing_past/hwn2016_spirit_of_the_bombing_past"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/hwn2016_spirit_of_the_bombing_past/hwn2016_spirit_of_the_bombing_past.mdl"
+			"used_by_classes"
+			{
+				"Demoman"		"1"
+			}
+		}
+		"30808"
+		{
+			"name"		"Class Crown"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_class_crown"
+			"item_description"		"#TF_hwn2016_class_crown_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_class_crown/hwn2016_class_crown"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/hwn2016_class_crown/hwn2016_class_crown_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30809"
+		{
+			"name"		"The Wing Mann"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_wing_mann"
+			"item_description"		"#TF_hwn2016_wing_mann_Desc"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/hwn2016_wing_mann/hwn2016_wing_mann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/hwn2016_wing_mann/hwn2016_wing_mann.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30810"
+		{
+			"name"		"Nasty Norsemann"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_nasty_norsemann"
+			"item_description"		"#TF_hwn2016_nasty_norsemann_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_nasty_norsemann/hwn2016_nasty_norsemann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/hwn2016_nasty_norsemann/hwn2016_nasty_norsemann_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30811"
+		{
+			"name"		"Pestering Jester"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_pestering_jester"
+			"item_description"		"#TF_hwn2016_pestering_jester_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_pestering_jester/hwn2016_pestering_jester"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hwn2016_pestering_jester/hwn2016_pestering_jester_scout.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hwn2016_pestering_jester/hwn2016_pestering_jester_soldier.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hwn2016_pestering_jester/hwn2016_pestering_jester_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hwn2016_pestering_jester/hwn2016_pestering_jester_pyro.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"soldier"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+			}
+		}
+		"30812"
+		{
+			"name"		"Mo'Horn"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_mo_horn"
+			"item_description"		"#TF_hwn2016_mo_horn_Desc"
+			"image_inventory"		"backpack/workshop/player/items/heavy/hwn2016_mo_horn/hwn2016_mo_horn"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/hwn2016_mo_horn/hwn2016_mo_horn.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30813"
+		{
+			"name"		"The Surgeon's Sidearms"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_surgeons_sidearms"
+			"item_description"		"#TF_hwn2016_surgeons_sidearms_Desc"
+			"item_type_name"		"#TF_Wearable_Tools"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/hwn2016_surgeons_sidearms/hwn2016_surgeons_sidearms"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/hwn2016_surgeons_sidearms/hwn2016_surgeons_sidearms.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30814"
+		{
+			"name"		"Lil' Bitey"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_lil_bitey"
+			"item_description"		"#TF_hwn2016_lil_bitey_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hwn2016_lil_bitey/hwn2016_lil_bitey"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/hwn2016_lil_bitey/hwn2016_lil_bitey_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30815"
+		{
+			"name"		"Mad Mask"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_mad_mask"
+			"item_description"		"#TF_hwn2016_mad_mask_Desc"
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"face"
+			"image_inventory"		"backpack/workshop/player/items/heavy/hwn2016_mad_mask/hwn2016_mad_mask"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/hwn2016_mad_mask/hwn2016_mad_mask.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30816"
+		{
+			"name"		"Taunt: Second Rate Sorcery"
+			"prefab"		"no_craft taunt marketable"
+			"first_sale_date"		"2016/10/18"
+			"item_name"		"#TF_secondrate_sorcery"
+			"item_description"		"#TF_secondrate_sorcery_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"Demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"scout"		"scenes/workshop/player/scout/low/secondrate_sorcery.vcd"
+					"sniper"		"scenes/workshop/player/sniper/low/secondrate_sorcery.vcd"
+					"soldier"		"scenes/workshop/player/soldier/low/secondrate_sorcery.vcd"
+					"Demoman"		"scenes/workshop/player/demoman/low/secondrate_sorcery.vcd"
+					"medic"		"scenes/workshop/player/medic/low/secondrate_sorcery.vcd"
+					"heavy"		"scenes/workshop/player/heavy/low/secondrate_sorcery.vcd"
+					"pyro"		"scenes/workshop/player/pyro/low/secondrate_sorcery.vcd"
+					"spy"		"scenes/workshop/player/spy/low/secondrate_sorcery.vcd"
+					"engineer"		"scenes/workshop/player/engineer/low/secondrate_sorcery.vcd"
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"scout"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_scout.mdl"
+					"sniper"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_sniper.mdl"
+					"soldier"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_soldier.mdl"
+					"Demoman"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_demo.mdl"
+					"medic"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_medic.mdl"
+					"heavy"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_heavy.mdl"
+					"pyro"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_pyro.mdl"
+					"spy"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_spy.mdl"
+					"engineer"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_engineer.mdl"
+				}
+			}
+		}
+		"30817"
+		{
+			"name"		"Burly Beast"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2016_burly_beast"
+			"item_description"		"#TF_hwn2016_burly_beast_Desc"
+			"item_type_name"		"#TF_Wearable_Shirt"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/hwn2016_burly_beast/hwn2016_burly_beast"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/hwn2016_burly_beast/hwn2016_burly_beast.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
 
 
 
@@ -76393,7 +77515,7 @@
 {
 	"name"		"quest25015"
 	"item_name"		"#quest25015name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76405,10 +77527,10 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"20"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
 		"theme"		"merasmus_hhh"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76645,7 +77767,7 @@
 {
 	"name"		"quest25016"
 	"item_name"		"#quest25016name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76657,11 +77779,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
-		"quickplay_map"		"koth_lakeside_event"
+		"mm_map"		"koth_lakeside_event"
 		"theme"		"merasmus_merasmus"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76696,7 +77818,7 @@
 {
 	"name"		"quest25017"
 	"item_name"		"#quest25017name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76708,11 +77830,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
-		"quickplay_map"		"koth_viaduct_event"
+		"mm_map"		"koth_viaduct_event"
 		"theme"		"merasmus_monoculus"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76739,7 +77861,7 @@
 {
 	"name"		"quest25018"
 	"item_name"		"#quest25018name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76751,11 +77873,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
-		"quickplay_map"		"cp_manor_event"
+		"mm_map"		"cp_manor_event"
 		"theme"		"merasmus_hhh"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76786,7 +77908,7 @@
 {
 	"name"		"quest25019"
 	"item_name"		"#quest25019name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76798,11 +77920,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
-		"quickplay_map"		"koth_viaduct_event"
+		"mm_map"		"koth_viaduct_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76853,7 +77975,7 @@
 {
 	"name"		"quest25020"
 	"item_name"		"#quest25020name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76865,11 +77987,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"4"
-		"quickplay_map"		"koth_lakeside_event"
+		"mm_map"		"koth_lakeside_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -76930,7 +78052,7 @@
 {
 	"name"		"quest25021"
 	"item_name"		"#quest25021name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -76942,11 +78064,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"5"
-		"quickplay_map"		"plr_hightower_event"
+		"mm_map"		"plr_hightower_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77017,7 +78139,7 @@
 {
 	"name"		"quest25022"
 	"item_name"		"#quest25022name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77029,11 +78151,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"5"
-		"quickplay_map"		"sd_doomsday_event"
+		"mm_map"		"sd_doomsday_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77104,7 +78226,7 @@
 {
 	"name"		"quest25023"
 	"item_name"		"#quest25023name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77116,11 +78238,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
-		"quickplay_map"		"cp_manor_event"
+		"mm_map"		"cp_manor_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77171,7 +78293,7 @@
 {
 	"name"		"quest25024"
 	"item_name"		"#quest25024name1632016"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77183,11 +78305,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
-		"quickplay_map"		"koth_harvest_event"
+		"mm_map"		"koth_harvest_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77244,7 +78366,7 @@
 {
 	"name"		"quest25025"
 	"item_name"		"#quest25025name0"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77256,11 +78378,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
-		"quickplay_map"		"cp_gorge_event"
+		"mm_map"		"cp_gorge_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77307,7 +78429,7 @@
 {
 	"name"		"quest25026"
 	"item_name"		"#quest25026name0"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77319,11 +78441,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
-		"quickplay_map"		"koth_moonshine_event"
+		"mm_map"		"koth_moonshine_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77370,7 +78492,7 @@
 {
 	"name"		"quest25027"
 	"item_name"		"#quest25027name0"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77382,11 +78504,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
-		"quickplay_map"		"pl_millstone_event"
+		"mm_map"		"pl_millstone_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -77433,7 +78555,7 @@
 {
 	"name"		"quest25028"
 	"item_name"		"#quest25028name0"
-	"prefab"		"quest_prefab_halloween_2015"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -77445,11 +78567,11 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"halloween_2015_contract_rewards"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
-		"quickplay_map"		"cp_sunshine_event"
+		"mm_map"		"cp_sunshine_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween2015"
+		"operation"		"operation_halloween"
 		"descriptions"
 		{
 			"1"
@@ -79228,6 +80350,186 @@
 				"advanced"		"1"
 				"points"		"15"
 				"conditions_def_index"		"183"
+			}
+		}
+	}
+}
+"25053"
+{
+	"name"		"quest25053"
+	"item_name"		"#quest25053name0"
+	"prefab"		"quest_prefab_1st_operation_pauling"
+	"quest"
+	{
+		"names"
+		{
+			"1"
+			{
+				"token"		"#quest25053name1"
+			}
+		}
+		"max_standard_points"		"100"
+		"max_bonus_points"		"0"
+		"reward"		"contract_lootlist_1"
+		"objectives_to_roll"		"3"
+		"mm_map"		"koth_maple_ridge_event"
+		"theme"		"merasmus_general"
+		"operation"		"operation_halloween"
+		"descriptions"
+		{
+			"1"
+			{
+				"token"		"#quest25053desc1"
+			}
+		}
+		"objectives"
+		{
+			"1"
+			{
+				"description_string"		"#quest25053objectivedesc1"
+				"DefIndex"		"5401"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"1"
+				"conditions_def_index"		"188"
+			}
+			"2"
+			{
+				"description_string"		"#quest25053objectivedesc2"
+				"DefIndex"		"5402"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"3"
+				"conditions_def_index"		"189"
+			}
+			"3"
+			{
+				"description_string"		"#quest25053objectivedesc3"
+				"DefIndex"		"5403"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"5"
+				"conditions_def_index"		"190"
+			}
+		}
+	}
+}
+"25054"
+{
+	"name"		"quest25054"
+	"item_name"		"#quest25054name0"
+	"prefab"		"quest_prefab_1st_operation_pauling"
+	"quest"
+	{
+		"names"
+		{
+			"1"
+			{
+				"token"		"#quest25054name1"
+			}
+		}
+		"max_standard_points"		"100"
+		"max_bonus_points"		"0"
+		"reward"		"contract_lootlist_1"
+		"objectives_to_roll"		"3"
+		"mm_map"		"pl_fifthcurve_event"
+		"theme"		"merasmus_general"
+		"operation"		"operation_halloween"
+		"descriptions"
+		{
+			"1"
+			{
+				"token"		"#quest25054desc1"
+			}
+		}
+		"objectives"
+		{
+			"1"
+			{
+				"description_string"		"#quest25054objectivedesc1"
+				"DefIndex"		"5501"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"1"
+				"conditions_def_index"		"191"
+			}
+			"2"
+			{
+				"description_string"		"#quest25054objectivedesc2"
+				"DefIndex"		"5502"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"3"
+				"conditions_def_index"		"192"
+			}
+			"3"
+			{
+				"description_string"		"#quest25054objectivedesc3"
+				"DefIndex"		"5503"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"5"
+				"conditions_def_index"		"193"
+			}
+		}
+	}
+}
+"25055"
+{
+	"name"		"quest25055"
+	"item_name"		"#quest25055name0"
+	"prefab"		"quest_prefab_1st_operation_pauling"
+	"quest"
+	{
+		"names"
+		{
+			"1"
+			{
+				"token"		"#quest25055name1"
+			}
+		}
+		"max_standard_points"		"100"
+		"max_bonus_points"		"0"
+		"reward"		"contract_lootlist_1"
+		"objectives_to_roll"		"3"
+		"mm_map"		"pd_pit_of_death_event"
+		"theme"		"merasmus_general"
+		"operation"		"operation_halloween"
+		"descriptions"
+		{
+			"1"
+			{
+				"token"		"#quest25055desc1"
+			}
+		}
+		"objectives"
+		{
+			"1"
+			{
+				"description_string"		"#quest25055objectivedesc1"
+				"DefIndex"		"5601"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"1"
+				"conditions_def_index"		"194"
+			}
+			"2"
+			{
+				"description_string"		"#quest25055objectivedesc2"
+				"DefIndex"		"5602"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"2"
+				"conditions_def_index"		"195"
+			}
+			"3"
+			{
+				"description_string"		"#quest25055objectivedesc3"
+				"DefIndex"		"5603"
+				"optional"		"0"
+				"advanced"		"0"
+				"points"		"3"
+				"conditions_def_index"		"196"
 			}
 		}
 	}
@@ -93541,6 +94843,326 @@
 		}
 
 
+ 		"9260"
+		{
+			"name"	"LBTF2 6v6 Elite 1st Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_1st"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9261"
+		{
+			"name"	"LBTF2 6v6 Elite 2nd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_2nd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9262"
+		{
+			"name"	"LBTF2 6v6 Elite 3rd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_3rd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9263"
+		{
+			"name"	"LBTF2 6v6 Elite Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_Participant"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9264"
+		{
+			"name"	"LBTF2 6v6 Central 1st Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_1st"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9265"
+		{
+			"name"	"LBTF2 6v6 Central 2nd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_2nd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9266"
+		{
+			"name"	"LBTF2 6v6 Central 3rd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_3rd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9267"
+		{
+			"name"	"LBTF2 6v6 Central Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_Participant"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9268"
+		{
+			"name"	"LBTF2 6v6 Access 1st Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_1st"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9269"
+		{
+			"name"	"LBTF2 6v6 Access 2nd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_2nd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9270"
+		{
+			"name"	"LBTF2 6v6 Access 3rd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_3rd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9271"
+		{
+			"name"	"LBTF2 6v6 Access Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_Participant"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9272"
+		{
+			"name"	"LBTF2 6v6 Open 1st Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_1st"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9273"
+		{
+			"name"	"LBTF2 6v6 Open 2nd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_2nd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9274"
+		{
+			"name"	"LBTF2 6v6 Open 3rd Place Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_3rd"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9275"
+		{
+			"name"	"LBTF2 6v6 Open Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+		"9276"
+		{		
+			"name"				"AsiaFortress Cup Division 1 1st Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_1st"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"9277"
+		{		
+			"name"				"AsiaFortress Cup Division 1 2nd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_2nd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"9278"
+		{		
+			"name"				"AsiaFortress Cup Division 1 3rd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_3rd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"9279"
+		{		
+			"name"				"AsiaFortress Cup Division 1 Participant Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_Participant"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9280"
+		{		
+			"name"				"AsiaFortress Cup Division 2 1st Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_1st"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_gold/asiafortress_cup_division2_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_gold/asiafortress_cup_division2_gold_%s.mdl"
+			}
+		}
+		"9281"
+		{		
+			"name"				"AsiaFortress Cup Division 2 2nd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_2nd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_silver/asiafortress_cup_division2_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_silver/asiafortress_cup_division2_silver_%s.mdl"
+			}
+		}
+		"9282"
+		{		
+			"name"				"AsiaFortress Cup Division 2 3rd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_3rd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_bronze/asiafortress_cup_division2_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_bronze/asiafortress_cup_division2_bronze_%s.mdl"
+			}
+		}
+		"9283"
+		{		
+			"name"				"AsiaFortress Cup Division 2 Participant Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_Participant"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9284"
+		{		
+			"name"				"AsiaFortress Cup Division 3 1st Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_1st"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold_%s.mdl"
+			}
+		}
+		"9285"
+		{		
+			"name"				"AsiaFortress Cup Division 3 2nd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_2nd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver_%s.mdl"
+			}
+		}
+		"9286"
+		{		
+			"name"				"AsiaFortress Cup Division 3 3rd Place Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_3rd"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze_%s.mdl"
+			}
+		}
+		"9287"
+		{		
+			"name"				"AsiaFortress Cup Division 3 Participant Season 10"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_Participant"
+			"item_description"	"#TF_TournamentMedal_Season10"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+
+
 
 
 		"1899"
@@ -94033,6 +95655,40 @@
 			"ad_text"			"#TF_MapToken_Swiftwater_AdText"
 			"image_inventory"	"backpack/player/items/all_class/stamp_swiftwater"
 		}
+ 		"1940"
+		{
+			"name" "Map Token Maple Ridge Event"
+			"first_sale_date"	"2016/10/19"
+			"prefab"		"map_token"
+			"item_name"		"#TF_MapToken_MapleRidgeEvent"
+			"item_description"	"#TF_MapToken_MapleRidgeEvent_Desc"
+			"map_name"		"#TF_Map_MapleRidgeEvent"
+			"ad_text"			"#TF_MapToken_MapleRidgeEvent_AdText"
+			"image_inventory"	"backpack/player/items/all_class/stamp_maple_ridge_event"
+		}
+ 		"1941"
+		{
+			"name" "Map Token Fifth Curve Event"
+			"first_sale_date"	"2016/10/19"
+			"prefab"		"map_token"
+			"item_name"		"#TF_MapToken_FifthCurveEvent"
+			"item_description"	"#TF_MapToken_FifthCurveEvent_Desc"
+			"map_name"		"#TF_Map_FifthCurveEvent"
+			"ad_text"			"#TF_MapToken_FifthCurveEvent_AdText"
+			"image_inventory"	"backpack/player/items/all_class/stamp_fifth_curve_event"
+		}
+		"1942"
+		{
+			"name" "Map Token Pit Of Death"
+			"first_sale_date"	"2016/10/19"
+			"prefab"		"map_token"
+			"item_name"		"#TF_MapToken_PitOfDeath"
+			"item_description"	"#TF_MapToken_PitOfDeath_Desc"
+			"map_name"		"#TF_Map_PitOfDeath"
+			"ad_text"			"#TF_MapToken_PitOfDeath_AdText"
+			"image_inventory"	"backpack/player/items/all_class/stamp_pit_of_death"
+		}
+
 
 
 
@@ -99530,18 +101186,18 @@
 		
 		"5826"
 		{
-			"name"	"Activated Halloween 2015 Pass"
+			"name"	"Activated Halloween Pass"
 			"item_class"	"craft_item"		
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
-			"item_name"			"#TF_Halloween2015Pass"			
-			"item_description"	"#TF_Halloween2015Pass_Desc"	
+			"item_name"			"#TF_HalloweenPass"			
+			"item_description"	"#TF_HalloweenPass_Desc"	
 			"model_player"		"models/props_halloween/gargoyle_backpack.mdl"
 			"image_inventory"	"backpack/player/items/crafting/hwn2015_gargoyle_stone"
 			"item_quality"		"unique"
 			"is_tool"			"1"
 			"inspect_panel_dist" "65"
-			"collection_reference"		"halloween2015_collection_lootlist"
+			"collection_reference"		"Halloween_master_collection"
 			"visuals"
 			{
 				"styles"
@@ -99607,7 +101263,7 @@
 				"allow_halloween_offering"			"1"
 				"never craftable"					"1"
 				
-				"deactive date"					"1447358400"	
+				"deactive date"					"1478786400"	
 				
 				"kill eater score type"			"106"			
 				"kill eater score type 2"		"107"			
@@ -99650,8 +101306,8 @@
 				"restriction"	"halloween2015"
 			}
 			"item_name"			"#halloween2015_collection_case"
-			"item_description"	"#halloween2015_collection_desc"
-			"ad_text"			"#halloween2015_collection_adtext"
+			"item_description"	"#halloween2015_collection_case_desc"
+			"ad_text"			"#halloween2015_collection_case_adtext"
 			"image_inventory"	"backpack/player/items/crafting/halloween2015_case"
 			"model_player"		"models/player/items/crafting/halloween2015_case.mdl"
 			"static_attrs"
@@ -99661,7 +101317,7 @@
 				"decoded by itemdefindex"		"5827"
 				"weapon_allow_inspect"			"1"
 			}
-			"event_desc_footer"			"#halloween2015_collection_case_footer"			
+			"event_desc_footer"			"#halloween2016_collection_case_footer"
 			"collection_reference"		"halloween2015_collection_lootlist"
 		}
 
@@ -100001,7 +101657,7 @@
 				"decoded by itemdefindex"		"5841"
 				"weapon_allow_inspect"			"1"
 			}
-			"event_desc_footer"			"#Footer_ToughBreakCosmetics"
+			"event_desc_footer"			"#halloween2016_collection_case_footer"
 			"collection_reference"		"ToughBreakCosmetics_collection"
 		}
 
@@ -100144,7 +101800,7 @@
 				"decoded by itemdefindex"		"5848"
 				"weapon_allow_inspect"			"1"
 			}
-			"event_desc_footer"			"#Footer_MayflowerCosmetics"
+			"event_desc_footer"			"#halloween2016_collection_case_footer"
 			"collection_reference"		"MayflowerCosmetics_collection"
 		}	
 		"5850"
@@ -100340,6 +101996,67 @@
 			"item_name"					"#TF_KeylessCosmetic_Crate_MultiClass"
 			"item_description"	"#TF_KeylessCosmetic_Crate_Multiclass_desc"
 			"image_inventory"		"backpack/player/items/crafting/keyless_cosmetic_crate_allclass"
+		}
+
+		"5861" 
+		{
+			"name"	"Halloween 2016 Case"
+			"first_sale_date"	"2016/10/19"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"halloween2016"
+			}
+			"item_name"			"#halloween2016_collection_case"
+			"item_description"	"#halloween2016_collection_case_desc"
+			"ad_text"			"#halloween2016_collection_case_adtext"
+			"image_inventory"	"backpack/player/items/crafting/halloween2016_case"
+			"model_player"		"models/player/items/crafting/halloween_case.mdl"
+			"inspect_panel_dist" "100"
+			"static_attrs"
+			{
+				"set supply crate series"		"104"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5862"
+				"weapon_allow_inspect"			"1"
+			}
+			"event_desc_footer"			"#halloween2016_collection_case_footer"			
+			"collection_reference"		"halloween2016_collection_lootlist"
+		}
+		"5862"
+		{
+			"name"	"Halloween 2016 Key" 
+			"first_sale_date"	"2016/10/19"
+			"prefab" 			"eventkey"
+			"item_name"			"#halloween2016_collection_key"					
+			"item_description"	"#halloween2016_collection_key_desc"						
+			"ad_text"			"#halloween2016_collection_key_adtext"
+			"image_inventory"	"backpack/crafting/halloween2016_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"halloween2016"
+			}
+		}
+		"5863"
+		{
+			"name"	"Halloween 2015 Collection Dummy"
+			"prefab" "dummy_item"
+			"item_name"	"#halloween2015_collection_name"
+			"collection_reference"		"halloween2015_collection_lootlist"
+			"item_rarity"	"rare"
+		}
+		"5864"
+		{
+			"name"	"Halloween 2016 Collection Dummy"
+			"prefab" "dummy_item"
+			"item_name"	"#halloween2016_collection_name"
+			"collection_reference"		"halloween2016_collection_lootlist"
+			"item_rarity"	"rare"
 		}
 		
 		"5999"				
@@ -102509,6 +104226,61 @@
 			"item_description"	"#TF_StrangeFilter_CommunityMapSwiftwater_Desc"
 			"ad_text"			"#TF_MapToken_Swiftwater_AdText"
 		}
+ 		"6547"
+		{
+			"name"	"Strange Filter: Maple Ridge Event (Community)"
+			"first_sale_date"	"2016/10/19"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"koth_maple_ridge_event"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_maple_ridge_event"
+			"item_name"	"#TF_StrangeFilter_CommunityMapMapleRidgeEvent"
+			"item_description"	"#TF_StrangeFilter_CommunityMapMapleRidgeEvent_Desc"
+			"ad_text"			"#TF_MapToken_MapleRidgeEvent_AdText"
+		}
+ 		"6548"
+		{
+			"name"	"Strange Filter: Fifth Curve Event (Community)"
+			"first_sale_date"	"2016/10/19"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"pl_fifthcurve_event"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_curve_event"
+			"item_name"	"#TF_StrangeFilter_CommunityMapFifthCurveEvent"
+			"item_description"	"#TF_StrangeFilter_CommunityMapFifthCurveEvent_Desc"
+			"ad_text"			"#TF_MapToken_FifthCurveEvent_AdText"
+		}
+  		"6549"
+		{
+			"name"	"Strange Filter: Pit of Death (Community)"
+			"first_sale_date"	"2016/10/19"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"pd_pit_of_death_event"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_pit_of_death"
+			"item_name"	"#TF_StrangeFilter_CommunityMapPitOfDeath"
+			"item_description"	"#TF_StrangeFilter_CommunityMapPitOfDeath_Desc"
+			"ad_text"			"#TF_MapToken_PitOfDeath_AdText"
+		}
+
 		
 		"8926"
 		{
@@ -102728,6 +104500,17 @@
 		}
 
 		
+		"9258"
+		{
+			"name"		"Taunt Unusualifier"
+			"prefab"	"unusualifier_base"
+			"static_attrs"
+			{
+				"unusualifier_attribute_template_name"	"unusual_taunt_chance_halloween2016"
+			}
+		}
+
+
 
 
 
@@ -108403,7 +110186,75 @@
 			"max_ilevel"	"50"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
-		}				
+		}
+		"2156"
+		{
+			"name" "Map Token Bundle 12"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2016/10/19"
+			"item_class"	"bundle"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"bundle"
+			{
+				"Map Token Egypt"		"1"
+				"Map Token Coldfront"	"1"
+				"Map Token Fastlane"	"1"
+				"Map Token Turbine"		"1"
+				"Map Token Steel"		"1"
+				"Map Token Junction"	"1"
+				"Map Token Watchtower"	"1"
+				"Map Token Hoodoo"		"1"
+				"Map Token Offblast"	"1"
+				"Map Token Yukon"		"1"
+				"Map Token Harvest"		"1"
+				"Map Token Freight"		"1"
+				"Map Token Mountain Lab"		"1"
+				"Map Token Manor Event"			"1"
+				"Map Token Nightfall"			"1"
+				"Map Token Frontier"			"1"
+				"Map Token Lakeside"			"1"
+				"Map Token Gullywash"			"1"
+				"Map Token Kong King"			"1"
+				"Map Token Process"				"1"
+				"Map Token Standin"				"1"
+				"Map Token Snakewater"			"1"
+				"Map Token Snowplow"			"1"
+				"Map Token Borneo"				"1"
+				"Map Token Suijin"				"1"
+				"Map Token 2Fort Invasion"		"1"
+				"Map Token Probed"				"1"
+				"Map Token Watergate"			"1"
+				"Map Token Byre"				"1"
+				"Map Token Gorge Event"			"1"
+				"Map Token Sunshine Event"		"1"
+				"Map Token Moonshine Event"		"1"
+				"Map Token Millstone Event"		"1"
+				"Map Token Snowycoast"			"1"
+				"Map Token Vanguard"			"1"
+				"Map Token Landfall"			"1"
+				"Map Token Highpass"			"1"
+				"Map Token Sunshine"			"1"
+				"Map Token Metalworks"			"1"
+				"Map Token Swiftwater"			"1"
+				"Map Token Maple Ridge Event"	"1"
+				"Map Token Fifth Curve Event"	"1"
+				"Map Token Pit Of Death"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_MapTokens"
+			"item_description"	"#TF_Bundle_MapTokens_Desc"
+			"image_inventory"	"backpack/player/items/all_class/stamp_collection"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}						
 
 
 
@@ -116277,6 +118128,22 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
+		"805"
+		{
+			"name"	"unusualifier_attribute_template_name"
+			"attribute_class"	"unusualifier_attribute_template_name"
+			"attribute_type"	"string"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
+		"806"
+		{
+			"name"	"tool_target_item_icon_offset"
+			"attribute_class"	"tool_target_item_icon_offset"
+			"attribute_type"	"string"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
 
 		"1000"
 		{
@@ -118956,6 +120823,9 @@
 			"quest25026"		"1"
 			"quest25027"		"1"
 			"quest25028"		"1"
+			"quest25053"		"1"
+			"quest25054"		"1"
+			"quest25055"		"1"
 		}
 		"operation_2_quest_drop"
 		{
@@ -119038,6 +120908,17 @@
 			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Item"
 			"supply_crate_loot_list_103_weapons"		"1"
 			"supply_crate_loot_list_103_parts"		"1"
+		}
+		"halloween_2016_bonus_items"
+		{
+			"Aerobatics Demonstrator"		"1"
+			"Final Frontier Freighter"		"1"
+			"Hovering Hotshot"		"1"
+		}
+		"halloween2016_case01_loot_list_104"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"halloween2016_collection_lootlist"
 		}
 	}
 	"revolving_loot_lists"
@@ -119142,6 +121023,7 @@
 		"tough_break_cosmetic_loot_list_101"			"101"	
 		"mayflower_cosmetic_loot_list_102"	"102"	
 		"supply_crate_loot_list_103"	"103"	
+		"halloween2016_case01_loot_list_104"	"104"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -128533,6 +130415,30 @@
 				"attach_to_rootbone"	"1"
 				"attachment"		"unusual"
 			}
+			"107"
+			{
+				"system"			"unusual_universe"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"108"
+			{
+				"system"			"unusual_tesla_flash"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"109"
+			{
+				"system"			"unusual_star_green_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
+			"110"
+			{
+				"system"			"unusual_star_purple_parent"
+				"attach_to_rootbone"	"1"
+				"attachment"		"unusual"
+			}
 		}
 		
 		"weapon_unusual_effects"
@@ -128716,7 +130622,23 @@
 			"3012"
 			{
 				"system"			"utaunt_souls_purple_parent"
-			}	
+			}
+			"3013"
+			{
+				"system"			"utaunt_hellpit_parent"
+			}
+			"3014"
+			{
+				"system"			"utaunt_hellswirl"
+			}
+			"3015"
+			{
+				"system"			"utaunt_headless"
+			}
+			"3016"
+			{
+				"system"			"utaunt_merasmus"
+			}
 		}
 	}
 	"armory_data"
@@ -130426,6 +132348,16 @@
 	}
 	"matchmaking_categories"
 	{
+		"special_events"
+		{
+			"localized_name"	"#TF_MMCat_SpecialEvents"
+			"max_excludes"	"100"
+
+			"valid_match_groups"
+			{
+				"MatchGroup_Casual_12v12"	"1"
+			}
+		}
 		"core"
 		{
 			"localized_name"	"#TF_MMCat_Core"
@@ -130466,79 +132398,82 @@
 			"localized_desc"	"#Gametype_AttackDefense_Desc"
 			"list_image"		"casual/gametype_ad"
 
-			"0"
+			"maplist"
 			{
-				"name"					"cp_dustbowl"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_dustbowl"
-			}
-			"1"
-			{
-				"name"					"cp_egypt_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Egypt"
-				"strangeprefixtoken"	"#TF_Egypt_StrangePrefix"
-				"maptoken"				"Map Token Egypt"
-				"authors"				"#cp_egypt_final_authors"
-			}
-			"2"
-			{
-				"name"					"cp_gorge"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_gorge"
-			}
-			"3"
-			{
-				"name"					"cp_gravelpit"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_gravelpit"
-			}
-			"4"
-			{
-				"name"					"cp_junction_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Junction"
-				"strangeprefixtoken"	"#TF_Junction_StrangePrefix"
-				"maptoken"				"Map Token Junction"
-				"authors"				"#cp_junction_final_authors"
-			}
-			"5"
-			{
-				"name"					"cp_mountainlab"
-				"enabled"				"1"
-				"localizedname"			"#TF_MountainLab"
-				"strangeprefixtoken"	"#TF_MountainLab_StrangePrefix"
-				"maptoken"				"Map Token Mountain Lab"
-				"authors"				"#cp_mountainlab_authors"
-			}
-			"6"
-			{
-				"name"					"cp_steel"
-				"enabled"				"1"
-				"localizedname"			"#TF_Steel"
-				"strangeprefixtoken"	"#TF_Steel_StrangePrefix"
-				"maptoken"				"Map Token Steel"
-				"authors"				"#cp_steel_authors"
-			}
-			"7"
-			{
-				"name"					"cp_gullywash_final1"
-				"enabled"				"0"
-				"localizedname"			"#TF_Gullywash"
-				"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
-				"maptoken"				"Map Token Gullywash"
-				"authors"				"#cp_gullywash_final1_authors"
-				"quickplay_type"		"disabled"
-			}
-			"8"
-			{
-				"name"					"cp_snowplow"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_Snowplow"
-				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
-				"maptoken"				"Map Token Snowplow"
-				"authors"				"#cp_snowplow_authors"
-				"quickplay_type"		"disabled"
+				"0"
+				{
+					"name"					"cp_dustbowl"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_dustbowl"
+				}
+				"1"
+				{
+					"name"					"cp_egypt_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Egypt"
+					"strangeprefixtoken"	"#TF_Egypt_StrangePrefix"
+					"maptoken"				"Map Token Egypt"
+					"authors"				"#cp_egypt_final_authors"
+				}
+				"2"
+				{
+					"name"					"cp_gorge"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_gorge"
+				}
+				"3"
+				{
+					"name"					"cp_gravelpit"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_gravelpit"
+				}
+				"4"
+				{
+					"name"					"cp_junction_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Junction"
+					"strangeprefixtoken"	"#TF_Junction_StrangePrefix"
+					"maptoken"				"Map Token Junction"
+					"authors"				"#cp_junction_final_authors"
+				}
+				"5"
+				{
+					"name"					"cp_mountainlab"
+					"enabled"				"1"
+					"localizedname"			"#TF_MountainLab"
+					"strangeprefixtoken"	"#TF_MountainLab_StrangePrefix"
+					"maptoken"				"Map Token Mountain Lab"
+					"authors"				"#cp_mountainlab_authors"
+				}
+				"6"
+				{
+					"name"					"cp_steel"
+					"enabled"				"1"
+					"localizedname"			"#TF_Steel"
+					"strangeprefixtoken"	"#TF_Steel_StrangePrefix"
+					"maptoken"				"Map Token Steel"
+					"authors"				"#cp_steel_authors"
+				}
+				"7"
+				{
+					"name"					"cp_gullywash_final1"
+					"enabled"				"0"
+					"localizedname"			"#TF_Gullywash"
+					"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
+					"maptoken"				"Map Token Gullywash"
+					"authors"				"#cp_gullywash_final1_authors"
+					"quickplay_type"		"disabled"
+				}
+				"8"
+				{
+					"name"					"cp_snowplow"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_Snowplow"
+					"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+					"maptoken"				"Map Token Snowplow"
+					"authors"				"#cp_snowplow_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 		"ctf"
@@ -130548,76 +132483,79 @@
 			"localized_desc"	"#Gametype_CTF_Desc"
 			"list_image"		"casual/gametype_ctf"
 
-			"0"
+			"maplist"
 			{
-				"name"					"ctf_2fort"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_ctf_2fort"
-				"quickplay_type"		"all_users"
-				"enabled"				"1"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"ctf_2fort"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_ctf_2fort"
+					"quickplay_type"		"all_users"
+					"enabled"				"1"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
 				}
-			}
-			"1"
-			{
-				"name"					"ctf_doublecross"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_ctf_doublecross"
-			}
-			"2"
-			{
-				"name"					"ctf_sawmill"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_ctf_sawmill"
-				"tags"
+				"1"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"ctf_doublecross"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_ctf_doublecross"
 				}
-			}
-			"3"
-			{
-				"name"					"ctf_turbine"
-				"enabled"				"1"
-				"localizedname"			"#TF_Turbine"
-				"strangeprefixtoken"	"#TF_Turbine_StrangePrefix"
-				"maptoken"				"Map Token Turbine"
-				"authors"				"#ctf_turbine_authors"
-			}
-			"4"
-			{
-				"name"					"ctf_well"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_ctf_well"
-				"tags"
+				"2"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"ctf_sawmill"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_ctf_sawmill"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
 				}
-			}
-			"5"
-			{
-				"name"					"ctf_2fort_invasion"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_2FortInv"
-				"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
-				"maptoken"				"Map Token 2Fort Invasion"
-				"authors"				"#ctf_2fort_invasion_authors"
-				"quickplay_type"		"all_users"
-				"tags"
+				"3"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"ctf_turbine"
+					"enabled"				"1"
+					"localizedname"			"#TF_Turbine"
+					"strangeprefixtoken"	"#TF_Turbine_StrangePrefix"
+					"maptoken"				"Map Token Turbine"
+					"authors"				"#ctf_turbine_authors"
 				}
-			}
-			"6"
-			{
-				"name"					"ctf_landfall"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Landfall"
-				"strangeprefixtoken"	"#TF_Map_Landfall_StrangePrefix"
-				"maptoken"				"Map Token Landfall"
-				"authors"				"#ctf_landfall_authors"
-				"quickplay_type"		"all_users"
+				"4"
+				{
+					"name"					"ctf_well"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_ctf_well"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"5"
+				{
+					"name"					"ctf_2fort_invasion"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_2FortInv"
+					"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
+					"maptoken"				"Map Token 2Fort Invasion"
+					"authors"				"#ctf_2fort_invasion_authors"
+					"quickplay_type"		"all_users"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"6"
+				{
+					"name"					"ctf_landfall"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Landfall"
+					"strangeprefixtoken"	"#TF_Map_Landfall_StrangePrefix"
+					"maptoken"				"Map Token Landfall"
+					"authors"				"#ctf_landfall_authors"
+					"quickplay_type"		"all_users"
+				}
 			}
 		}
 		"capture_point"
@@ -130628,155 +132566,158 @@
 			"localized_desc"	"#Gametype_CP_Desc"
 			"list_image"		"casual/gametype_cp"
 
-			"0"
+			"maplist"
 			{
-				"name"					"cp_5gorge"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_cp_5gorge"
-			}
-			"1"
-			{
-				"name"					"cp_badlands"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_badlands"
-			}
-			"2"
-			{
-				"name"					"cp_coldfront"
-				"enabled"				"1"
-				"localizedname"			"#TF_Coldfront"
-				"strangeprefixtoken"	"#TF_Coldfront_StrangePrefix"
-				"maptoken"				"Map Token Coldfront"
-				"authors"				"#cp_coldfront_authors"
-			}
-			"3"
-			{
-				"name"					"cp_fastlane"
-				"enabled"				"1"
-				"localizedname"			"#TF_Fastlane"
-				"strangeprefixtoken"	"#TF_Fastlane_StrangePrefix"
-				"maptoken"				"Map Token Fastlane"
-				"authors"				"#cp_fastlane_authors"
-			}
-			"4"
-			{
-				"name"					"cp_freight_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Freight"
-				"strangeprefixtoken"	"#TF_Freight_StrangePrefix"
-				"maptoken"				"Map Token Freight"
-				"authors"				"#cp_freight_final1_authors"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"cp_5gorge"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_cp_5gorge"
 				}
-			}
-			"5"
-			{
-				"name"					"cp_granary"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_granary"
-				"quickplay_type"		"all_users"
-			}
-			"6"
-			{
-				"name"					"cp_well"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_well"
-				"tags"
+				"1"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"cp_badlands"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_badlands"
 				}
-			}
-			"7"
-			{
-				"name"					"cp_yukon_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Yukon"
-				"strangeprefixtoken"	"#TF_Yukon_StrangePrefix"
-				"maptoken"				"Map Token Yukon"
-				"authors"				"#cp_yukon_final_authors"
-			}
-			"8"
-			{
-				"name"					"cp_foundry"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_foundry"
-			}
-			"9"
-			{
-				"name"					"cp_gullywash_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Gullywash"
-				"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
-				"maptoken"				"Map Token Gullywash"
-				"authors"				"#cp_gullywash_final1_authors"
-			}
-			"10"
-			{
-				"name"					"cp_process_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Process"
-				"strangeprefixtoken"	"#TF_Map_Process_StrangePrefix"
-				"maptoken"				"Map Token Process"
-				"authors"				"#cp_process_final_authors"
-			}
-			"11"
-			{
-				"name"					"cp_standin_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Standin"
-				"strangeprefixtoken"	"#TF_Map_Standin_StrangePrefix"
-				"maptoken"				"Map Token Standin"
-				"authors"				"#cp_standin_final_authors"
-			}
-			"12"
-			{
-				"name"					"cp_snakewater_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snakewater"
-				"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
-				"maptoken"				"Map Token Snakewater"
-				"authors"				"#cp_snakewater_final1_authors"
-			}
-			"13"
-			{
-				"name"					"cp_powerhouse"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_powerhouse"
-				"quickplay_type"		"all_users"
-				"tags"
+				"2"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"cp_coldfront"
+					"enabled"				"1"
+					"localizedname"			"#TF_Coldfront"
+					"strangeprefixtoken"	"#TF_Coldfront_StrangePrefix"
+					"maptoken"				"Map Token Coldfront"
+					"authors"				"#cp_coldfront_authors"
 				}
-			}
-			"14"
-			{
-				"name"					"cp_vanguard"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Vanguard"
-				"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
-				"maptoken"				"Map Token Vanguard"
-				"authors"				"#cp_vanguard_authors"
-				"quickplay_type"		"all_users"
-			}
-			"15"
-			{
-				"name"					"cp_sunshine"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Sunshine"
-				"strangeprefixtoken"	"#TF_Map_Sunshine_StrangePrefix"
-				"maptoken"				"Map Token Sunshine"
-				"authors"				"#cp_sunshine_authors"
-			}
-			"16"
-			{
-				"name"					"cp_metalworks"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Metalworks"
-				"strangeprefixtoken"	"#TF_Map_Metalworks_StrangePrefix"
-				"maptoken"				"Map Token Metalworks"
-				"authors"				"#cp_metalworks_authors"
+				"3"
+				{
+					"name"					"cp_fastlane"
+					"enabled"				"1"
+					"localizedname"			"#TF_Fastlane"
+					"strangeprefixtoken"	"#TF_Fastlane_StrangePrefix"
+					"maptoken"				"Map Token Fastlane"
+					"authors"				"#cp_fastlane_authors"
+				}
+				"4"
+				{
+					"name"					"cp_freight_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Freight"
+					"strangeprefixtoken"	"#TF_Freight_StrangePrefix"
+					"maptoken"				"Map Token Freight"
+					"authors"				"#cp_freight_final1_authors"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"5"
+				{
+					"name"					"cp_granary"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_granary"
+					"quickplay_type"		"all_users"
+				}
+				"6"
+				{
+					"name"					"cp_well"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_well"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"7"
+				{
+					"name"					"cp_yukon_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Yukon"
+					"strangeprefixtoken"	"#TF_Yukon_StrangePrefix"
+					"maptoken"				"Map Token Yukon"
+					"authors"				"#cp_yukon_final_authors"
+				}
+				"8"
+				{
+					"name"					"cp_foundry"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_foundry"
+				}
+				"9"
+				{
+					"name"					"cp_gullywash_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Gullywash"
+					"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
+					"maptoken"				"Map Token Gullywash"
+					"authors"				"#cp_gullywash_final1_authors"
+				}
+				"10"
+				{
+					"name"					"cp_process_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Process"
+					"strangeprefixtoken"	"#TF_Map_Process_StrangePrefix"
+					"maptoken"				"Map Token Process"
+					"authors"				"#cp_process_final_authors"
+				}
+				"11"
+				{
+					"name"					"cp_standin_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Standin"
+					"strangeprefixtoken"	"#TF_Map_Standin_StrangePrefix"
+					"maptoken"				"Map Token Standin"
+					"authors"				"#cp_standin_final_authors"
+				}
+				"12"
+				{
+					"name"					"cp_snakewater_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snakewater"
+					"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
+					"maptoken"				"Map Token Snakewater"
+					"authors"				"#cp_snakewater_final1_authors"
+				}
+				"13"
+				{
+					"name"					"cp_powerhouse"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_powerhouse"
+					"quickplay_type"		"all_users"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"14"
+				{
+					"name"					"cp_vanguard"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Vanguard"
+					"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
+					"maptoken"				"Map Token Vanguard"
+					"authors"				"#cp_vanguard_authors"
+					"quickplay_type"		"all_users"
+				}
+				"15"
+				{
+					"name"					"cp_sunshine"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Sunshine"
+					"strangeprefixtoken"	"#TF_Map_Sunshine_StrangePrefix"
+					"maptoken"				"Map Token Sunshine"
+					"authors"				"#cp_sunshine_authors"
+				}
+				"16"
+				{
+					"name"					"cp_metalworks"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Metalworks"
+					"strangeprefixtoken"	"#TF_Map_Metalworks_StrangePrefix"
+					"maptoken"				"Map Token Metalworks"
+					"authors"				"#cp_metalworks_authors"
+				}
 			}
 		}
 		"koth"
@@ -130787,93 +132728,96 @@
 			"localized_desc"	"#Gametype_KOTH_Desc"
 			"list_image"		"casual/gametype_koth"
 
-			"0"
+			"maplist"
 			{
-				"name"					"koth_badlands"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_badlands"
-			}
-			"1"
-			{
-				"name"					"koth_harvest_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Harvest"
-				"strangeprefixtoken"	"#TF_Harvest_StrangePrefix"
-				"maptoken"				"Map Token Harvest"
-				"authors"				"#koth_harvest_final_authors"
-			}
-			"2"
-			{
-				"name"					"koth_lakeside_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Lakeside"
-				"strangeprefixtoken"	"#TF_Lakeside_StrangePrefix"
-				"maptoken"				"Map Token Lakeside"
-				"authors"				"#koth_lakeside_authors"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"koth_badlands"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_badlands"
 				}
-			}
-			"3"
-			{
-				"name"					"koth_nucleus"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_nucleus"
-			}
-			"4"
-			{
-				"name"					"koth_sawmill"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_sawmill"
-				"tags"
+				"1"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"koth_harvest_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Harvest"
+					"strangeprefixtoken"	"#TF_Harvest_StrangePrefix"
+					"maptoken"				"Map Token Harvest"
+					"authors"				"#koth_harvest_final_authors"
 				}
-			}
-			"5"
-			{
-				"name"					"koth_viaduct"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_viaduct"
-			}
-			"6"
-			{
-				"name"					"koth_king"
-				"enabled"				"1"
-				"localizedname"			"#TF_KongKing"
-				"strangeprefixtoken"	"#TF_KongKing_StrangePrefix"
-				"maptoken"				"Map Token Kong King"
-				"authors"				"#koth_king_authors"
-			}
-			"7"
-			{
-				"name"					"koth_suijin"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Suijin"
-				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
-				"maptoken"				"Map Token Suijin"
-				"authors"				"#koth_suijin_authors"
-			}
-			"8"
-			{
-				"name"					"koth_probed"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_Probed"
-				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
-				"maptoken"				"Map Token Probed"
-				"authors"				"#koth_probed_authors"
-				"quickplay_type"		"all_users"
-			}
-			"9"
-			{
-				"name"					"koth_highpass"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Highpass"
-				"strangeprefixtoken"	"#TF_Map_Highpass_StrangePrefix"
-				"maptoken"				"Map Token Highpass"
-				"authors"				"#koth_highpass_authors"
-				"quickplay_type"		"all_users"
+				"2"
+				{
+					"name"					"koth_lakeside_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Lakeside"
+					"strangeprefixtoken"	"#TF_Lakeside_StrangePrefix"
+					"maptoken"				"Map Token Lakeside"
+					"authors"				"#koth_lakeside_authors"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"3"
+				{
+					"name"					"koth_nucleus"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_nucleus"
+				}
+				"4"
+				{
+					"name"					"koth_sawmill"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_sawmill"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"5"
+				{
+					"name"					"koth_viaduct"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_viaduct"
+				}
+				"6"
+				{
+					"name"					"koth_king"
+					"enabled"				"1"
+					"localizedname"			"#TF_KongKing"
+					"strangeprefixtoken"	"#TF_KongKing_StrangePrefix"
+					"maptoken"				"Map Token Kong King"
+					"authors"				"#koth_king_authors"
+				}
+				"7"
+				{
+					"name"					"koth_suijin"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Suijin"
+					"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
+					"maptoken"				"Map Token Suijin"
+					"authors"				"#koth_suijin_authors"
+				}
+				"8"
+				{
+					"name"					"koth_probed"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_Probed"
+					"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+					"maptoken"				"Map Token Probed"
+					"authors"				"#koth_probed_authors"
+					"quickplay_type"		"all_users"
+				}
+				"9"
+				{
+					"name"					"koth_highpass"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Highpass"
+					"strangeprefixtoken"	"#TF_Map_Highpass_StrangePrefix"
+					"maptoken"				"Map Token Highpass"
+					"authors"				"#koth_highpass_authors"
+					"quickplay_type"		"all_users"
+				}
 			}
 		}
 		"payload"
@@ -130883,96 +132827,99 @@
 			"localized_desc"	"#Gametype_Escort_Desc"
 			"list_image"		"casual/gametype_payload"
 
-			"0"
+			"maplist"
 			{
-				"name"					"pl_badwater"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pl_badwater"
-			}
-			"1"
-			{
-				"name"					"pl_frontier_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Frontier"
-				"strangeprefixtoken"	"#TF_Frontier_StrangePrefix"
-				"maptoken"				"Map Token Frontier"
-				"authors"				"#pl_frontier_authors"
-			}
-			"2"
-			{
-				"name"					"pl_goldrush"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pl_goldrush"
-			}
-			"3"
-			{
-				"name"					"pl_hoodoo_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Hoodoo"
-				"strangeprefixtoken"	"#TF_Hoodoo_StrangePrefix"
-				"maptoken"				"Map Token Hoodoo"
-				"authors"				"#pl_hoodoo_final_authors"
-			}
-			"4"
-			{
-				"name"					"pl_thundermountain"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pl_thundermountain"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"pl_badwater"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_badwater"
 				}
-			}
-			"5"
-			{
-				"name"					"pl_upward"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pl_upward"
-			}
-			"6"
-			{
-				"name"					"pl_barnblitz"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pl_barnblitz"
-			}
-			"7"
-			{
-				"name"					"pl_cactuscanyon"
-				"enabled"				"0"
-				"localizedname"			"TF_Map_pl_cactuscanyon"
-				"tags"
+				"1"
 				{
-					"beta"				"1"
+					"name"					"pl_frontier_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Frontier"
+					"strangeprefixtoken"	"#TF_Frontier_StrangePrefix"
+					"maptoken"				"Map Token Frontier"
+					"authors"				"#pl_frontier_authors"
 				}
-			}
-			"8"
-			{
-				"name"					"pl_borneo"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Borneo"
-				"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
-				"maptoken"				"Map Token Borneo"
-				"authors"				"#pl_borneo_authors"
-			}
-			"9"
-			{
-				"name"					"pl_snowycoast"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snowycoast"
-				"strangeprefixtoken"	"#TF_Map_Snowycoast_StrangePrefix"
-				"maptoken"				"Map Token Snowycoast"
-				"authors"				"#pl_snowycoast_authors"
-				"quickplay_type"		"all_users"
-			}
-			"10"
-			{
-				"name"					"pl_swiftwater_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Swiftwater"
-				"strangeprefixtoken"	"#TF_Map_Swiftwater_StrangePrefix"
-				"maptoken"				"Map Token Swiftwater"
-				"authors"				"#pl_swiftwater_final1_authors"
-				"quickplay_type"		"all_users"
+				"2"
+				{
+					"name"					"pl_goldrush"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_goldrush"
+				}
+				"3"
+				{
+					"name"					"pl_hoodoo_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Hoodoo"
+					"strangeprefixtoken"	"#TF_Hoodoo_StrangePrefix"
+					"maptoken"				"Map Token Hoodoo"
+					"authors"				"#pl_hoodoo_final_authors"
+				}
+				"4"
+				{
+					"name"					"pl_thundermountain"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_thundermountain"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"5"
+				{
+					"name"					"pl_upward"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_upward"
+				}
+				"6"
+				{
+					"name"					"pl_barnblitz"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_barnblitz"
+				}
+				"7"
+				{
+					"name"					"pl_cactuscanyon"
+					"enabled"				"0"
+					"localizedname"			"TF_Map_pl_cactuscanyon"
+					"tags"
+					{
+						"beta"				"1"
+					}
+				}
+				"8"
+				{
+					"name"					"pl_borneo"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Borneo"
+					"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
+					"maptoken"				"Map Token Borneo"
+					"authors"				"#pl_borneo_authors"
+				}
+				"9"
+				{
+					"name"					"pl_snowycoast"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snowycoast"
+					"strangeprefixtoken"	"#TF_Map_Snowycoast_StrangePrefix"
+					"maptoken"				"Map Token Snowycoast"
+					"authors"				"#pl_snowycoast_authors"
+					"quickplay_type"		"all_users"
+				}
+				"10"
+				{
+					"name"					"pl_swiftwater_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Swiftwater"
+					"strangeprefixtoken"	"#TF_Map_Swiftwater_StrangePrefix"
+					"maptoken"				"Map Token Swiftwater"
+					"authors"				"#pl_swiftwater_final1_authors"
+					"quickplay_type"		"all_users"
+				}
 			}
 		}
 		"payload_race"
@@ -130982,30 +132929,33 @@
 			"localized_desc"	"#Gametype_EscortRace_Desc"
 			"list_image"		"casual/gametype_plr"
 
-			"0"
+			"maplist"
 			{
-				"name"					"plr_hightower"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_plr_hightower"
-			}
-			"1"
-			{
-				"name"					"plr_pipeline"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_plr_pipeline"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"plr_hightower"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_plr_hightower"
 				}
-			}
-			"2"
-			{
-				"name"					"plr_nightfall_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Nightfall"
-				"strangeprefixtoken"	"#TF_Nightfall_StrangePrefix"
-				"maptoken"				"Map Token Nightfall"
-				"authors"				"#plr_nightfall_authors"
+				"1"
+				{
+					"name"					"plr_pipeline"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_plr_pipeline"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"2"
+				{
+					"name"					"plr_nightfall_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Nightfall"
+					"strangeprefixtoken"	"#TF_Nightfall_StrangePrefix"
+					"maptoken"				"Map Token Nightfall"
+					"authors"				"#plr_nightfall_authors"
+				}
 			}
 		}
 		"other"
@@ -131015,265 +132965,313 @@
 			"localized_desc"	"#GameType_Misc_Desc"
 			"list_image"		"casual/gametype_arena"
 
-			"0"
+			"maplist"
 			{
-				"name"					"sd_doomsday"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_sd_doomsday"
-				"quickplay_type"		"disabled"
-				"tags"
+				"0"
 				{
+					"name"					"sd_doomsday"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_sd_doomsday"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+					}
 				}
-			}
-			"1"
-			{
-				"name"					"pd_watergate"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Watergate"
-				"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
-				"maptoken"				"Map Token Watergate"
-				"authors"				"#pd_watergate_authors"
-				"quickplay_type"		"disabled"
-			}
-			"2"
-			{
-				"name"					"tc_hydro"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_tc_hydro"
-				"quickplay_type"		"disabled"
-				"tags"
+				"1"
 				{
+					"name"					"pd_watergate"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Watergate"
+					"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
+					"maptoken"				"Map Token Watergate"
+					"authors"				"#pd_watergate_authors"
+					"quickplay_type"		"disabled"
 				}
-			}
-			"3"
-			{
-				"name"					"cp_degrootkeep"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_degrootkeep"
-				"quickplay_type"		"disabled"
-			}
-			"4"
-			{
-				"name"					"cp_snowplow"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snowplow"
-				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
-				"maptoken"				"Map Token Snowplow"
-				"authors"				"#cp_snowplow_authors"
-				"quickplay_type"		"disabled"
-			}
-			"5"
-			{
-				"name"					"koth_probed"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Probed"
-				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
-				"maptoken"				"Map Token Probed"
-				"authors"				"#koth_probed_authors"
-				"quickplay_type"		"disabled"
+				"2"
+				{
+					"name"					"tc_hydro"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_tc_hydro"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+					}
+				}
+				"3"
+				{
+					"name"					"cp_degrootkeep"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_degrootkeep"
+					"quickplay_type"		"disabled"
+				}
+				"4"
+				{
+					"name"					"cp_snowplow"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snowplow"
+					"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+					"maptoken"				"Map Token Snowplow"
+					"authors"				"#cp_snowplow_authors"
+					"quickplay_type"		"disabled"
+				}
+				"5"
+				{
+					"name"					"koth_probed"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Probed"
+					"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+					"maptoken"				"Map Token Probed"
+					"authors"				"#koth_probed_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 		"arena"
 		{
-			"0"
+			"maplist"
 			{
-				"name"					"arena_watchtower"
-				"enabled"				"1"
-				"quickplay_type"		"disabled"
-				"localizedname"			"#TF_WatchTower"
-				"strangeprefixtoken"	"#TF_WatchTower_StrangePrefix"
-				"maptoken"				"Map Token Watchtower"
-				"authors"				"#arena_watchtower_authors"
-			}
-			"1"
-			{
-				"name"					"arena_offblast_final"
-				"enabled"				"1"
-				"quickplay_type"		"disabled"
-				"localizedname"			"#TF_Offblast"
-				"strangeprefixtoken"	"#TF_Offblast_StrangePrefix"
-				"maptoken"				"Map Token Offblast"
-				"authors"				"#arena_offblast_final_authors"
-			}
-			"2"
-			{
-				"name"					"arena_badlands"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_arena_badlands"
-				"quickplay_type"		"disabled"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"arena_watchtower"
+					"enabled"				"1"
+					"quickplay_type"		"disabled"
+					"localizedname"			"#TF_WatchTower"
+					"strangeprefixtoken"	"#TF_WatchTower_StrangePrefix"
+					"maptoken"				"Map Token Watchtower"
+					"authors"				"#arena_watchtower_authors"
 				}
-			}
-			"3"
-			{
-				"name"					"arena_granary"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_arena_granary"
-				"quickplay_type"		"disabled"
-			}
-			"4"
-			{
-				"name"					"arena_lumberyard"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_arena_lumberyard"
-				"quickplay_type"		"disabled"
-			}
-			"5"
-			{
-				"name"					"arena_nucleus"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_arena_nucleus"
-				"quickplay_type"		"disabled"
-			}
-			"6"
-			{
-				"name"					"arena_ravine"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_arena_ravine"
-				"quickplay_type"		"disabled"
-				"tags"
+				"1"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"arena_offblast_final"
+					"enabled"				"1"
+					"quickplay_type"		"disabled"
+					"localizedname"			"#TF_Offblast"
+					"strangeprefixtoken"	"#TF_Offblast_StrangePrefix"
+					"maptoken"				"Map Token Offblast"
+					"authors"				"#arena_offblast_final_authors"
 				}
-			}
-			"7"
-			{
-				"name"					"arena_sawmill"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_arena_sawmill"
-				"quickplay_type"		"disabled"
-				"tags"
+				"2"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"arena_badlands"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_arena_badlands"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
 				}
-			}
-			"8"
-			{
-				"name"					"arena_well"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_arena_well"
-				"quickplay_type"		"disabled"
-				"tags"
+				"3"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"arena_granary"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_arena_granary"
+					"quickplay_type"		"disabled"
 				}
-			}
-  			"9"
-			{
-				"name"					"arena_byre"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Byre"
-				"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
-				"maptoken"				"Map Token Byre"
-				"authors"				"#arena_byre_authors"
-				"quickplay_type"		"disabled"
+				"4"
+				{
+					"name"					"arena_lumberyard"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_arena_lumberyard"
+					"quickplay_type"		"disabled"
+				}
+				"5"
+				{
+					"name"					"arena_nucleus"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_arena_nucleus"
+					"quickplay_type"		"disabled"
+				}
+				"6"
+				{
+					"name"					"arena_ravine"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_arena_ravine"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"7"
+				{
+					"name"					"arena_sawmill"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_arena_sawmill"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"8"
+				{
+					"name"					"arena_well"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_arena_well"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+  				"9"
+				{
+					"name"					"arena_byre"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Byre"
+					"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
+					"maptoken"				"Map Token Byre"
+					"authors"				"#arena_byre_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
+		"halloween"
+		{
+			"mm_type"	"special_events"
+			"localized_name"	"#Gametype_Halloween"
+			"localized_desc"	"#Gametype_Halloween_Desc"
+			"list_image"		"casual/gametype_halloween"
 
-		"event_24_7" 
-		{
-			"0"
+			"restrictions"
 			{
-				"name"					"cp_gorge_event"
-				"enabled"				"1"
-				"quickplay_type"		"all_users"
-				"localizedname"			"#TF_Map_GorgeEvent"
-				"strangeprefixtoken"	"#TF_Map_GorgeEvent_StrangePrefix"
-				"maptoken"				"Map Token Gorge Event"
-				"authors"				"#cp_gorge_event_authors"
+				"holiday"		"halloween"
 			}
-			"1"
+
+			"maplist"
 			{
-				"name"					"cp_sunshine_event"
-				"enabled"				"1"
-				"quickplay_type"		"all_users"
-				"localizedname"			"#TF_Map_SunshineEvent"
-				"strangeprefixtoken"	"#TF_Map_SunshineEvent_StrangePrefix"
-				"maptoken"				"Map Token Sunshine Event"
-				"authors"				"#cp_sunshine_event_authors"				
-			}
-			"2"
-			{
-				"name"					"koth_moonshine_event"
-				"enabled"				"1"
-				"quickplay_type"		"all_users"
-				"localizedname"			"#TF_Map_MoonshineEvent"
-				"strangeprefixtoken"	"#TF_Map_MoonshineEvent_StrangePrefix"
- 				"maptoken"				"Map Token Moonshine Event"
-				"authors"				"#koth_moonshine_event_authors"
-			}
-			"3"
-			{
-				"name"					"pl_millstone_event"
-				"enabled"				"1"
-				"quickplay_type"		"all_users"
-				"localizedname"			"#TF_Map_MillstoneEvent"
-				"strangeprefixtoken"	"#TF_Map_MillstoneEvent_StrangePrefix"
- 				"maptoken"				"Map Token Millstone Event"
-				"authors"				"#pl_millstone_event_authors"
-			}
-		}
-		"event_mix"
-		{
-			"0"
-			{
-				"name"					"koth_viaduct_event"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_viaduct_event"
-				"quickplay_type"		"all_users"
-			}
-			"1"
-			{
-				"name"					"cp_manor_event"
-				"enabled"				"1"
-				"quickplay_type"		"all_users"
-				"localizedname"			"#TF_ManorEvent"
-				"strangeprefixtoken"	"#TF_ManorEvent_StrangePrefix"
-				"maptoken"				"Map Token Manor Event"
-				"authors"				"#cp_manor_event_authors"
-			}
-			"2"
-			{
-				"name"					"koth_harvest_event"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_harvest_event"
-				"quickplay_type"		"all_users"
-			}
-			"3"
-			{
-				"name"					"koth_lakeside_event"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_lakeside_event"
-				"quickplay_type"		"all_users"
-			}
-			"4"
-			{
-				"name"					"plr_hightower_event"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_plr_hightower_event"
-				"quickplay_type"		"all_users"
-			}
-			"5"
-			{
-				"name"					"sd_doomsday_event"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_sd_doomsday_event"
-				"quickplay_type"		"all_users"
+				"0"
+				{
+					"name"					"koth_harvest_event"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_harvest_event"
+					"quickplay_type"		"all_users"
+				}
+				"1"
+				{
+					"name"					"cp_manor_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_ManorEvent"
+					"strangeprefixtoken"	"#TF_ManorEvent_StrangePrefix"
+					"maptoken"				"Map Token Manor Event"
+					"authors"				"#cp_manor_event_authors"
+				}
+				"2"
+				{
+					"name"					"koth_viaduct_event"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_viaduct_event"
+					"quickplay_type"		"all_users"
+				}
+				"3"
+				{
+					"name"					"koth_lakeside_event"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_lakeside_event"
+					"quickplay_type"		"all_users"
+				}
+				"4"
+				{
+					"name"					"plr_hightower_event"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_plr_hightower_event"
+					"quickplay_type"		"all_users"
+				}
+				"5"
+				{
+					"name"					"sd_doomsday_event"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_sd_doomsday_event"
+					"quickplay_type"		"all_users"
+				}
+				"6"
+				{
+					"name"					"cp_gorge_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_GorgeEvent"
+					"strangeprefixtoken"	"#TF_Map_GorgeEvent_StrangePrefix"
+					"maptoken"				"Map Token Gorge Event"
+					"authors"				"#cp_gorge_event_authors"
+				}
+				"7"
+				{
+					"name"					"cp_sunshine_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_SunshineEvent"
+					"strangeprefixtoken"	"#TF_Map_SunshineEvent_StrangePrefix"
+					"maptoken"				"Map Token Sunshine Event"
+					"authors"				"#cp_sunshine_event_authors"				
+				}
+				"8"
+				{
+					"name"					"koth_moonshine_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_MoonshineEvent"
+					"strangeprefixtoken"	"#TF_Map_MoonshineEvent_StrangePrefix"
+ 					"maptoken"				"Map Token Moonshine Event"
+					"authors"				"#koth_moonshine_event_authors"
+				}
+				"9"
+				{
+					"name"					"pl_millstone_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_MillstoneEvent"
+					"strangeprefixtoken"	"#TF_Map_MillstoneEvent_StrangePrefix"
+ 					"maptoken"				"Map Token Millstone Event"
+					"authors"				"#pl_millstone_event_authors"
+				}
+				"10"
+				{
+					"name"					"koth_maple_ridge_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_MapleRidgeEvent"
+					"strangeprefixtoken"	"#TF_Map_MapleRidgeEvent_StrangePrefix"
+ 					"maptoken"				"Map Token Maple Ridge Event"
+					"authors"				"#koth_maple_ridge_event_authors"
+				}
+				"11"
+				{
+					"name"					"pl_fifthcurve_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_FifthCurveEvent"
+					"strangeprefixtoken"	"#TF_Map_FifthCurveEvent_StrangePrefix"
+ 					"maptoken"				"Map Token Fifth Curve Event"
+					"authors"				"#pl_fifthcurve_event_authors"
+				}
+				"12"
+				{
+					"name"					"pd_pit_of_death_event"
+					"enabled"				"1"
+					"quickplay_type"		"all_users"
+					"localizedname"			"#TF_Map_PitOfDeath"
+					"strangeprefixtoken"	"#TF_Map_PitOfDeath_StrangePrefix"
+ 					"maptoken"				"Map Token Pit Of Death"
+					"authors"				"#pd_pit_of_death_authors"
+				}
 			}
 		}
 
 		"robot_destruction"
 		{
-			"0"
+			"maplist"
 			{
-				"name"					"rd_asteroid"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_rd_asteroid"
-				"tags"
+				"0"
 				{
-					"beta"				"1"
+					"name"					"rd_asteroid"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_rd_asteroid"
+					"tags"
+					{
+						"beta"				"1"
+					}
 				}
 			}
 		}
@@ -131285,114 +133283,120 @@
 			"localized_desc"	"#Gametype_Powerup_Desc"
 			"list_image"		"casual/gametype_mannpower"
 
-			"0"
+			"maplist"
 			{
-				"name"					"ctf_foundry"
-				"enabled"				"0"
-				"localizedname"			"#TF_Map_powerup_ctf_foundry"
-			}
-			"1"
-			{
-				"name"					"ctf_gorge"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_powerup_ctf_gorge"
-			}
-			"2"
-			{
-				"name"					"ctf_thundermountain"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_powerup_ctf_thundermountain"
-			}
-			"3"
-			{
-				"name"					"ctf_hellfire"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_powerup_ctf_hellfire"
+				"0"
+				{
+					"name"					"ctf_foundry"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_powerup_ctf_foundry"
+				}
+				"1"
+				{
+					"name"					"ctf_gorge"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_powerup_ctf_gorge"
+				}
+				"2"
+				{
+					"name"					"ctf_thundermountain"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_powerup_ctf_thundermountain"
+				}
+				"3"
+				{
+					"name"					"ctf_hellfire"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_powerup_ctf_hellfire"
+				}
 			}
 		}
 
 		"featured"
 		{
-			"0"
+			"maplist"
 			{
-				"name"					"cp_snowplow"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snowplow"
-				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
-				"maptoken"				"Map Token Snowplow"
-				"authors"				"#cp_snowplow_authors"
-				"quickplay_type"		"disabled"
-			}
- 			"1"
-			{
-				"name"					"pl_borneo"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Borneo"
-				"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
-				"maptoken"				"Map Token Borneo"
-				"authors"				"#pl_borneo_authors"
-				"quickplay_type"		"disabled"
-			}
-  			"2"
-			{
-				"name"					"koth_suijin"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Suijin"
-				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
-				"maptoken"				"Map Token Suijin"
-				"authors"				"#koth_suijin_authors"
-				"quickplay_type"		"disabled"
-			}
-			"3"
-			{
-				"name"					"cp_powerhouse"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_powerhouse"
-				"quickplay_type"		"disabled"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"cp_snowplow"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snowplow"
+					"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+					"maptoken"				"Map Token Snowplow"
+					"authors"				"#cp_snowplow_authors"
+					"quickplay_type"		"disabled"
 				}
-			}
-			"4"
-			{
-				"name"					"pl_snowycoast"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snowycoast"
-				"strangeprefixtoken"	"#TF_Map_Snowycoast_StrangePrefix"
-				"maptoken"				"Map Token Snowycoast"
-				"authors"				"#pl_snowycoast_authors"
-				"quickplay_type"		"disabled"
-			}
- 			"5"
-			{
-				"name"					"cp_vanguard"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Vanguard"
-				"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
-				"maptoken"				"Map Token Vanguard"
-				"authors"				"#cp_vanguard_authors"
-				"quickplay_type"		"disabled"
-			}
-  			"6"
-			{
-				"name"					"ctf_landfall"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Landfall"
-				"strangeprefixtoken"	"#TF_Map_Landfall_StrangePrefix"
-				"maptoken"				"Map Token Landfall"
-				"authors"				"#ctf_landfall_authors"
-				"quickplay_type"		"disabled"
-			}
-			"7"
-			{
-				"name"					"koth_highpass"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Highpass"
-				"strangeprefixtoken"	"#TF_Map_Highpass_StrangePrefix"
-				"maptoken"				"Map Token Highpass"
-				"authors"				"#koth_highpass_authors"
-				"quickplay_type"		"disabled"
+ 				"1"
+				{
+					"name"					"pl_borneo"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Borneo"
+					"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
+					"maptoken"				"Map Token Borneo"
+					"authors"				"#pl_borneo_authors"
+					"quickplay_type"		"disabled"
+				}
+  				"2"
+				{
+					"name"					"koth_suijin"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Suijin"
+					"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
+					"maptoken"				"Map Token Suijin"
+					"authors"				"#koth_suijin_authors"
+					"quickplay_type"		"disabled"
+				}
+				"3"
+				{
+					"name"					"cp_powerhouse"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_powerhouse"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
+				}
+				"4"
+				{
+					"name"					"pl_snowycoast"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snowycoast"
+					"strangeprefixtoken"	"#TF_Map_Snowycoast_StrangePrefix"
+					"maptoken"				"Map Token Snowycoast"
+					"authors"				"#pl_snowycoast_authors"
+					"quickplay_type"		"disabled"
+				}
+ 				"5"
+				{
+					"name"					"cp_vanguard"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Vanguard"
+					"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
+					"maptoken"				"Map Token Vanguard"
+					"authors"				"#cp_vanguard_authors"
+					"quickplay_type"		"disabled"
+				}
+  				"6"
+				{
+					"name"					"ctf_landfall"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Landfall"
+					"strangeprefixtoken"	"#TF_Map_Landfall_StrangePrefix"
+					"maptoken"				"Map Token Landfall"
+					"authors"				"#ctf_landfall_authors"
+					"quickplay_type"		"disabled"
+				}
+				"7"
+				{
+					"name"					"koth_highpass"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Highpass"
+					"strangeprefixtoken"	"#TF_Map_Highpass_StrangePrefix"
+					"maptoken"				"Map Token Highpass"
+					"authors"				"#koth_highpass_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 
@@ -131403,121 +133407,130 @@
 			"localized_desc"	"#Gametype_Passtime_Desc"
 			"list_image"		"casual/gametype_passtime"
 
-			"0"
+			"maplist"
 			{
-				"name"					"pass_brickyard"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pass_brickyard"
-			}
-			"1"
-			{
-				"name"					"pass_timbertown"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pass_timbertown"
-			}
-			"2"
-			{
-				"name"					"pass_district"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_pass_district"
+				"0"
+				{
+					"name"					"pass_brickyard"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pass_brickyard"
+				}
+				"1"
+				{
+					"name"					"pass_timbertown"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pass_timbertown"
+				}
+				"2"
+				{
+					"name"					"pass_district"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pass_district"
+				}
 			}
 		}
 
 		"community_update"
 		{
-			"0"
+			"maplist"
 			{
-				"name"					"ctf_2fort_invasion"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_2FortInv"
-				"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
-				"maptoken"				"Map Token 2Fort Invasion"
-				"authors"				"#ctf_2fort_invasion_authors"
-				"quickplay_type"		"disabled"
-				"tags"
+				"0"
 				{
-					"map_has_deep_water"			"1"
+					"name"					"ctf_2fort_invasion"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_2FortInv"
+					"strangeprefixtoken"	"#TF_Map_2FortInv_StrangePrefix"
+					"maptoken"				"Map Token 2Fort Invasion"
+					"authors"				"#ctf_2fort_invasion_authors"
+					"quickplay_type"		"disabled"
+					"tags"
+					{
+						"map_has_deep_water"			"1"
+					}
 				}
-			}
- 			"1"
-			{
-				"name"					"pd_watergate"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Watergate"
-				"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
-				"maptoken"				"Map Token Watergate"
-				"authors"				"#pd_watergate_authors"
-				"quickplay_type"		"disabled"
-			}
-  			"2"
-			{
-				"name"					"arena_byre"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Byre"
-				"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
-				"maptoken"				"Map Token Byre"
-				"authors"				"#arena_byre_authors"
-				"quickplay_type"		"disabled"
-			}
-			"3"
-			{
-				"name"					"koth_probed"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Probed"
-				"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
-				"maptoken"				"Map Token Probed"
-				"authors"				"#koth_probed_authors"
-				"quickplay_type"		"disabled"
+ 				"1"
+				{
+					"name"					"pd_watergate"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Watergate"
+					"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
+					"maptoken"				"Map Token Watergate"
+					"authors"				"#pd_watergate_authors"
+					"quickplay_type"		"disabled"
+				}
+  				"2"
+				{
+					"name"					"arena_byre"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Byre"
+					"strangeprefixtoken"	"#TF_Map_Byre_StrangePrefix"
+					"maptoken"				"Map Token Byre"
+					"authors"				"#arena_byre_authors"
+					"quickplay_type"		"disabled"
+				}
+				"3"
+				{
+					"name"					"koth_probed"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Probed"
+					"strangeprefixtoken"	"#TF_Map_Probed_StrangePrefix"
+					"maptoken"				"Map Token Probed"
+					"authors"				"#koth_probed_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 		"misc"
 		{
-			"0"
+			"maplist"
 			{
-				"name"					"sd_doomsday"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_sd_doomsday"
-				"quickplay_type"		"all_users"
-				"tags"
+				"0"
 				{
+					"name"					"sd_doomsday"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_sd_doomsday"
+					"quickplay_type"		"all_users"
+					"tags"
+					{
+					}
 				}
-			}
- 			"1"
-			{
-				"name"					"pd_watergate"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Watergate"
-				"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
-				"maptoken"				"Map Token Watergate"
-				"authors"				"#pd_watergate_authors"
-				"quickplay_type"		"advanced_only"
-			}
-			"2"
-			{
-				"name"					"tc_hydro"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_tc_hydro"
-				"quickplay_type"		"all_users"
-				"tags"
+ 				"1"
 				{
+					"name"					"pd_watergate"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Watergate"
+					"strangeprefixtoken"	"#TF_Map_Watergate_StrangePrefix"
+					"maptoken"				"Map Token Watergate"
+					"authors"				"#pd_watergate_authors"
+					"quickplay_type"		"advanced_only"
 				}
-			}
-			"3"
-			{
-				"name"					"cp_degrootkeep"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_degrootkeep"
-				"quickplay_type"		"all_users"
-			}
-			"4"
-			{
-				"name"					"cp_snowplow"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snowplow"
-				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
-				"maptoken"				"Map Token Snowplow"
-				"authors"				"#cp_snowplow_authors"
-				"quickplay_type"		"disabled"
+				"2"
+				{
+					"name"					"tc_hydro"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_tc_hydro"
+					"quickplay_type"		"all_users"
+					"tags"
+					{
+					}
+				}
+				"3"
+				{
+					"name"					"cp_degrootkeep"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_degrootkeep"
+					"quickplay_type"		"all_users"
+				}
+				"4"
+				{
+					"name"					"cp_snowplow"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snowplow"
+					"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+					"maptoken"				"Map Token Snowplow"
+					"authors"				"#cp_snowplow_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 		"competitive_6v6"
@@ -131526,111 +133539,131 @@
 			"localized_name"	"#GameType_Competitive_6v6"
 			"localized_desc"	"#Gametype_Competitive_6v6_Desc"
 			"list_image"		"gametype_competitive_6v6"
-			
-			"0"
+
+			"maplist"
 			{
-				"name"					"cp_process_final"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Process"
-				"strangeprefixtoken"	"#TF_Map_Process_StrangePrefix"
-				"maptoken"				"Map Token Process"
-				"authors"				"#cp_process_final_authors"
-				"quickplay_type"		"disabled"
-			}
-			"1"
-			{
-				"name"					"cp_gorge"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_gorge"
-				"quickplay_type"		"disabled"
-			}
-			"2"
-			{
-				"name"					"cp_badlands"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_badlands"
-				"quickplay_type"		"disabled"
-			}
-			"3"
-			{
-				"name"					"cp_vanguard"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Vanguard"
-				"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
-				"maptoken"				"Map Token Vanguard"
-				"authors"				"#cp_vanguard_authors"
-				"quickplay_type"		"disabled"
-			}
-			"4"
-			{
-				"name"					"cp_granary"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_granary"
-				"quickplay_type"		"disabled"
-			}
-			"5"
-			{
-				"name"					"cp_foundry"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_cp_foundry"
-				"quickplay_type"		"disabled"
-			}
-			"6"
-			{
-				"name"					"cp_gullywash_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Gullywash"
-				"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
-				"maptoken"				"Map Token Gullywash"
-				"authors"				"#cp_gullywash_final1_authors"
-				"quickplay_type"		"disabled"
-			}
-			"7"
-			{
-				"name"					"cp_snakewater_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Snakewater"
-				"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
-				"maptoken"				"Map Token Snakewater"
-				"authors"				"#cp_snakewater_final1_authors"
-				"quickplay_type"		"disabled"
-			}
-			"8"
-			{
-				"name"					"koth_viaduct"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_koth_viaduct"
-				"quickplay_type"		"disabled"
-			}
-			"9"
-			{
-				"name"					"cp_sunshine"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Sunshine"
-				"strangeprefixtoken"	"#TF_Map_Sunshine_StrangePrefix"
-				"maptoken"				"Map Token Sunshine"
-				"authors"				"#cp_sunshine_authors"
-				"quickplay_type"		"disabled"
-			}
-			"10"
-			{
-				"name"					"cp_metalworks"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Metalworks"
-				"strangeprefixtoken"	"#TF_Map_Metalworks_StrangePrefix"
-				"maptoken"				"Map Token Metalworks"
-				"authors"				"#cp_metalworks_authors"
-				"quickplay_type"		"disabled"
-			}
-			"11"
-			{
-				"name"					"pl_swiftwater_final1"
-				"enabled"				"1"
-				"localizedname"			"#TF_Map_Swiftwater"
-				"strangeprefixtoken"	"#TF_Map_Swiftwater_StrangePrefix"
-				"maptoken"				"Map Token Swiftwater"
-				"authors"				"#pl_swiftwater_final1_authors"
-				"quickplay_type"		"disabled"
+				"0"
+				{
+					"name"					"cp_process_final"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Process"
+					"strangeprefixtoken"	"#TF_Map_Process_StrangePrefix"
+					"maptoken"				"Map Token Process"
+					"authors"				"#cp_process_final_authors"
+					"quickplay_type"		"disabled"
+				}
+				"1"
+				{
+					"name"					"cp_gorge"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_gorge"
+					"quickplay_type"		"disabled"
+				}
+				"2"
+				{
+					"name"					"cp_badlands"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_cp_badlands"
+					"quickplay_type"		"disabled"
+				}
+				"3"
+				{
+					"name"					"cp_vanguard"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Vanguard"
+					"strangeprefixtoken"	"#TF_Map_Vanguard_StrangePrefix"
+					"maptoken"				"Map Token Vanguard"
+					"authors"				"#cp_vanguard_authors"
+					"quickplay_type"		"disabled"
+				}
+				"4"
+				{
+					"name"					"cp_granary"
+					"enabled"				"0"
+					"localizedname"			"#TF_Map_cp_granary"
+					"quickplay_type"		"disabled"
+				}
+				"5"
+				{
+					"name"					"cp_foundry"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_cp_foundry"
+					"quickplay_type"		"disabled"
+				}
+				"6"
+				{
+					"name"					"cp_gullywash_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Gullywash"
+					"strangeprefixtoken"	"#TF_Gullywash_StrangePrefix"
+					"maptoken"				"Map Token Gullywash"
+					"authors"				"#cp_gullywash_final1_authors"
+					"quickplay_type"		"disabled"
+				}
+				"7"
+				{
+					"name"					"cp_snakewater_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Snakewater"
+					"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
+					"maptoken"				"Map Token Snakewater"
+					"authors"				"#cp_snakewater_final1_authors"
+					"quickplay_type"		"disabled"
+				}
+				"8"
+				{
+					"name"					"koth_viaduct"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_koth_viaduct"
+					"quickplay_type"		"disabled"
+				}
+				"9"
+				{
+					"name"					"cp_sunshine"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Sunshine"
+					"strangeprefixtoken"	"#TF_Map_Sunshine_StrangePrefix"
+					"maptoken"				"Map Token Sunshine"
+					"authors"				"#cp_sunshine_authors"
+					"quickplay_type"		"disabled"
+				}
+				"10"
+				{
+					"name"					"cp_metalworks"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Metalworks"
+					"strangeprefixtoken"	"#TF_Map_Metalworks_StrangePrefix"
+					"maptoken"				"Map Token Metalworks"
+					"authors"				"#cp_metalworks_authors"
+					"quickplay_type"		"disabled"
+				}
+				"11"
+				{
+					"name"					"pl_swiftwater_final1"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_Swiftwater"
+					"strangeprefixtoken"	"#TF_Map_Swiftwater_StrangePrefix"
+					"maptoken"				"Map Token Swiftwater"
+					"authors"				"#pl_swiftwater_final1_authors"
+					"quickplay_type"		"disabled"
+				}
+				"12"
+				{
+					"name"					"pl_badwater"
+					"enabled"				"1"
+					"localizedname"			"#TF_Map_pl_badwater"
+					"quickplay_type"		"disabled"
+				}
+				"13"
+				{
+					"name"					"ctf_turbine"
+					"enabled"				"1"
+					"localizedname"			"#TF_Turbine"
+					"strangeprefixtoken"	"#TF_Turbine_StrangePrefix"
+					"maptoken"				"Map Token Turbine"
+					"authors"				"#ctf_turbine_authors"
+					"quickplay_type"		"disabled"
+				}
 			}
 		}
 	}
@@ -132125,6 +134158,21 @@
 		{
 			"name"			"tr_target"
 			"localizedname"	"#TF_Map_tr_target"
+		}
+		"98"
+		{
+			"name"			"koth_maple_ridge_event"
+			"localizedname"	"#TF_Map_MapleRidgeEvent"
+		}
+		"99"
+		{
+			"name"			"pl_fifthcurve_event"
+			"localizedname"	"#TF_Map_FifthCurveEvent"
+		}
+		"100"
+		{
+			"name"			"pd_pit_of_death_event"
+			"localizedname"	"#TF_Map_PitOfDeath"
 		}
 	}
 	"steam_packages"
