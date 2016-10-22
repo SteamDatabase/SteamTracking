@@ -97,6 +97,7 @@ This should take less than a minute."
 "Steam_ErrorPasswordsDontMatch" "The passwords you entered do not match.\nPlease enter the same password in each field."
 "Steam_ErrorCantStartGame" "This game is currently unavailable.\nPlease try again at another time."
 "Steam_ErrorCantStartGameDetailed" "Failed to start game (%error%)."
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"The game failed to start because you are running a 32bit version of Windows and a 64bit version is required.\n\nIf the game has a 32 bit launch option please select it, otherwise you will need a PC with a 64 bit version of Windows.\nIf you don't have such a PC available click below to learn about requesting a refund.\n"
 "Steam_ErrorCantStartGameDependency" "Failed to start game with shared content. Please update these games first:\n\n  %dependencies%"
 "Steam_ErrorUsernameTooShort" "You must enter a name at least 3 characters long."
 "Steam_ErrorPasswordTooShort2" "Your password must be at least 8 characters long."
@@ -3995,6 +3996,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_38"		"missing file privileges"
 "Steam_AppUpdateError_39"		"content file locked"
 "Steam_AppUpdateError_40"		"content unavilable"
+"Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
 
 
 "steam_subnav_featured"		"Featured"
