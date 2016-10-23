@@ -80341,7 +80341,7 @@
 {
 	"name"		"quest25053"
 	"item_name"		"#quest25053name0"
-	"prefab"		"quest_prefab_1st_operation_pauling"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -80353,7 +80353,7 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"contract_lootlist_1"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
 		"mm_map"		"koth_maple_ridge_event"
 		"theme"		"merasmus_general"
@@ -80401,7 +80401,7 @@
 {
 	"name"		"quest25054"
 	"item_name"		"#quest25054name0"
-	"prefab"		"quest_prefab_1st_operation_pauling"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -80413,7 +80413,7 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"contract_lootlist_1"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
 		"mm_map"		"pl_fifthcurve_event"
 		"theme"		"merasmus_general"
@@ -80461,7 +80461,7 @@
 {
 	"name"		"quest25055"
 	"item_name"		"#quest25055name0"
-	"prefab"		"quest_prefab_1st_operation_pauling"
+	"prefab"		"quest_prefab_halloween"
 	"quest"
 	{
 		"names"
@@ -80473,7 +80473,7 @@
 		}
 		"max_standard_points"		"100"
 		"max_bonus_points"		"0"
-		"reward"		"contract_lootlist_1"
+		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"3"
 		"mm_map"		"pd_pit_of_death_event"
 		"theme"		"merasmus_general"
