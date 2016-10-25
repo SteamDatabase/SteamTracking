@@ -10391,16 +10391,15 @@
 
 		"3"
 		{
-			"name"								"operation_halloween"
+			"name"								"operation_halloween2015"
 			"required_item_name"				"Activated Halloween Pass"
-			"operation_start_date"				"2016-10-19 00:00:00" 
-			"stop_adding_to_queue_date"			"2016-11-07 00:00:00" 
-			"stop_giving_to_player_date"		"2016-11-09 00:00:00" 
+			"operation_start_date"				"2015-10-28 00:00:00" 
+			"stop_adding_to_queue_date"			"2015-11-10 00:00:00" 
+			"stop_giving_to_player_date"		"2015-11-12 00:00:00" 
 			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
 			"operation_lootlist"				"halloween_quest_drop"
 			"is_campaign"						"1"
-			"max_drop_count"					"21"
 		}
 
 		"4"
@@ -10413,6 +10412,20 @@
 			"stop_giving_to_player_date"		"2016-04-05 00:00:00" 
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_ToughBreak.res"
 			"operation_lootlist"				"operation_2_quest_drop"
+			"is_campaign"						"1"
+			"max_drop_count"					"26"
+		}
+
+		"5"
+		{
+			"name"								"operation_halloween2016"
+			"required_item_name"				"Activated Halloween Pass"
+			"operation_start_date"				"2016-10-19 00:00:00" 
+			"stop_adding_to_queue_date"			"2016-11-15 00:00:00" 
+			"stop_giving_to_player_date"		"2016-11-16 00:00:00" 
+			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
+			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
+			"operation_lootlist"				"halloween_quest_drop"
 			"is_campaign"						"1"
 			"max_drop_count"					"26"
 		}
@@ -12651,7 +12664,7 @@
 		"quest_prefab_halloween"
 		{
 			"prefab"		"dynamic_quest_base"
-			"expiration_date"	"2016-11-09 23:59:59" 
+			"expiration_date"	"2016-11-16 23:59:59"
 		}
 
 		"dynamic_quest_base"
@@ -77513,7 +77526,7 @@
 		"reward"		"halloween_contract_rewards"
 		"objectives_to_roll"		"1"
 		"theme"		"merasmus_hhh"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -77766,7 +77779,7 @@
 		"objectives_to_roll"		"1"
 		"mm_map"		"koth_lakeside_event"
 		"theme"		"merasmus_merasmus"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -77817,7 +77830,7 @@
 		"objectives_to_roll"		"1"
 		"mm_map"		"koth_viaduct_event"
 		"theme"		"merasmus_monoculus"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -77860,7 +77873,7 @@
 		"objectives_to_roll"		"1"
 		"mm_map"		"cp_manor_event"
 		"theme"		"merasmus_hhh"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -77907,7 +77920,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"koth_viaduct_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -77974,7 +77987,7 @@
 		"objectives_to_roll"		"4"
 		"mm_map"		"koth_lakeside_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78051,7 +78064,7 @@
 		"objectives_to_roll"		"5"
 		"mm_map"		"plr_hightower_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78138,7 +78151,7 @@
 		"objectives_to_roll"		"5"
 		"mm_map"		"sd_doomsday_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78225,7 +78238,7 @@
 		"objectives_to_roll"		"1"
 		"mm_map"		"cp_manor_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78292,7 +78305,7 @@
 		"objectives_to_roll"		"1"
 		"mm_map"		"koth_harvest_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78365,7 +78378,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"cp_gorge_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78428,7 +78441,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"koth_moonshine_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78491,7 +78504,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"pl_millstone_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -78554,7 +78567,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"cp_sunshine_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -80357,7 +80370,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"koth_maple_ridge_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -80417,7 +80430,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"pl_fifthcurve_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -80477,7 +80490,7 @@
 		"objectives_to_roll"		"3"
 		"mm_map"		"pd_pit_of_death_event"
 		"theme"		"merasmus_general"
-		"operation"		"operation_halloween"
+		"operation"		"operation_halloween2016"
 		"descriptions"
 		{
 			"1"
@@ -101246,7 +101259,7 @@
 				"allow_halloween_offering"			"1"
 				"never craftable"					"1"
 				
-				"deactive date"					"1478786400"	
+				"deactive date"					"1479391200"	
 				
 				"kill eater score type"			"106"			
 				"kill eater score type 2"		"107"			
@@ -131580,8 +131593,76 @@
 			}                 
 			"3"               
 			{                 
-				"score"		"2000"
-			}                  
+				"score"		"4000"
+			}
+			"4"               
+			{                 
+				"score"		"6000"
+			}  			                  
+			"5"               
+			{                 
+				"score"		"8000"
+			}  			                  
+			"6"               
+			{                 
+				"score"		"10000"
+			}  			                  
+			"7"               
+			{                 
+				"score"		"12000"
+			}  			                  
+			"8"               
+			{                 
+				"score"		"14000"
+			}  			                  
+			"9"               
+			{                 
+				"score"		"16000"
+			}  			                  
+			"10"               
+			{                 
+				"score"		"18000"
+			}  			                  
+			"11"               
+			{                 
+				"score"		"20000"
+			}  			                  
+			"12"               
+			{                 
+				"score"		"22000"
+			}  			                  
+			"13"               
+			{                 
+				"score"		"24000"
+			}  			                  
+			"14"               
+			{                 
+				"score"		"26000"
+			}  			                  
+			"15"               
+			{                 
+				"score"		"28000"
+			}  			                  
+			"16"               
+			{                 
+				"score"		"30000"
+			}  			                  
+			"17"               
+			{                 
+				"score"		"32000"
+			}  			                  
+			"18"               
+			{                 
+				"score"		"34000"
+			}  			                  
+			"19"               
+			{                 
+				"score"		"36000"
+			}  			       
+			"20"               
+			{                 
+				"score"		"38000"
+			}  			       
 		}
 		
 
