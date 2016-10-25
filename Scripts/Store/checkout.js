@@ -2611,8 +2611,8 @@ function UpdatePaymentInfoForm()
 		
 		if ( g_bIsUpdateBillingInfoForm )
 		{
-						$('submit_payment_info_btn').href = "javascript:InitializeTransaction();";
-			$( 'payment_info_form' ).onsubmit = function() { InitializeTransaction(); return false; };
+						$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
+			$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Save' );
 			$('payment_header').innerHTML = 'Update cached payment method';
 			$('payment_info_method_label').innerHTML = 'Select your existing cached payment method or enter a new payment method for future purchases and subscription renewals.';
