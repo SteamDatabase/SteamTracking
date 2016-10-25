@@ -1178,7 +1178,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 .home_content.fourwide a.home_content_item {
 	width: 222px;
 	float: left;
-	padding-right: 17px;
+	margin-right: 17px;
 	position: relative;
 }
 
@@ -1186,6 +1186,12 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	top: 50px;
 }
 .home_content .ds_flag {
+	z-index: 10;
+}
+
+.home_content.single .gamelink .ds_options {
+	left: 270px;
+	right: auto;
 	z-index: 10;
 }
 
@@ -1197,12 +1203,12 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 .home_content.twowide a.home_content_item {
 	width: 460px;
 	float: left;
-	padding-right: 20px;
+	margin-right: 20px;
 	position: relative;
 }
 
 .home_content_items a.home_content_item:last-child  {
-	padding-right: 0;
+	margin-right: 0;
 }
 
 

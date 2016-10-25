@@ -1227,3 +1227,8 @@ td.wht_total {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.ignoredapps a {
+	display: block;
+	padding: 5px 0;
+}

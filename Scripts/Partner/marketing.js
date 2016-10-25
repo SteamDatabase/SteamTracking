@@ -132,6 +132,9 @@ function TabSelect( tab, bNoXFade, bSubTab )
 		content.show();
 	}
 	
+	var page_url = location.protocol + '//' + location.host + location.pathname; // Build the current URL w/o query string
+	history.pushState( null, '', page_url + '?activetab=' + id ); // Update URL to this tab
+	
 }
 
 var TAB_XFADE_DURATION = 0.2;

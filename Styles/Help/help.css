@@ -165,6 +165,8 @@ input.custom_form_text
 
 	box-shadow: 0 0 5px 0 #000000;
 	background: #417A9B;
+
+	max-height: 300px;
 }
 .dropdownhidden{
 	display: none;
@@ -2001,6 +2003,10 @@ a.guide_row {
 	font-size: 12px;
 }
 
+.account_recovery_loggedin p {
+
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .account_recovery_box {
@@ -2388,6 +2394,10 @@ a.guide_row {
 .help_section_body li {
 	margin-bottom: 4px;
 	line-height: 20px;
+}
+
+.help_section_body_small {
+	max-width: 712px;
 }
 
 .help_step_container {

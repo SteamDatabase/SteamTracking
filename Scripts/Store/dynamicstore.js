@@ -48,6 +48,8 @@ GDynamicStore = {
 	s_bUserOnMacOS: false,
 	s_bUserOnLinux: false,
 
+	s_ImpressionTracker: false,
+
 	Init: function( accountid, bForceRefresh, strOS )
 	{
 
@@ -67,6 +69,36 @@ GDynamicStore = {
 				GDynamicStore.s_rgfnOnReadyCallbacks[i]();
 			GDynamicStore.s_rgfnOnReadyCallbacks = null;
 		};
+
+		// Create a new monitor to track impressions
+		this.s_ImpressionTracker = new CAppearMonitor(
+			function( elElement ){
+
+				var $Elem = $J(elElement);
+
+				if ( $Elem.data( 'trackedForImpressions' ) )
+				{
+					return;
+				}
+				$Elem.data( 'trackedForImpressions', true );
+
+				// must have appids
+				var strAppIDs = $Elem.data('dsAppid');
+				if ( strAppIDs.length == 0 )
+				{
+					return;
+				}
+
+				var snr = GetElemSNR( $Elem );
+				if ( !snr )
+				{
+					return;
+				}
+
+				GDynamicStore.AddImpressionFromDynamicItem( $Elem );
+			}
+		);
+
 
 		if ( accountid )
 		{
@@ -121,47 +153,26 @@ GDynamicStore = {
 
 	InitAppearHandler: function()
 	{
-		$J(document.body).on( 'appear', GDynamicStore.s_strAppearSelector, function(event) {
-			var $Elem = $J( this );
+		$J(GDynamicStore.s_strAppearSelector).each(function(i, elTarget ){
 
-			// scriptaculous adds Effect.Appear as appear() to the HTMLElement prototype.  jquery's trigger
-			//	behavior will call this method if we don't stop it with preventDefault
-			event.preventDefault();
-
-			// check if we are already tracking this element
-			if ( $Elem.data( 'trackedForImpressions' ) )
-			{
-				return;
-			}
-			$Elem.data( 'trackedForImpressions', true );
-
-			// must have appids
-			var strAppIDs = $Elem.data('dsAppid');
-			if ( strAppIDs.length == 0 )
-			{
-				return;
-			}
-
-			var snr = GetElemSNR( $Elem );
-			if ( !snr )
-			{
-				return;
-			}
-
+			var $Elem = $J(elTarget);
 			// these are handled manually, so don't add the impression here
 			if ( $Elem.hasClass( 'cluster_capsule' ) || $Elem.hasClass( 'carousel_cap') )
 			{
 				return;
 			}
 
-			GDynamicStore.AddImpressionFromDynamicItem( $Elem );
-		} );
-
+			GDynamicStore.s_ImpressionTracker.RegisterElement( elTarget )
+		});
+		
 		// find our horizontal scrollers and add tracking to them
-		$J.force_appear_on_scroll( '.store_horizontal_autoslider' );
 
+		$J('.store_horizontal_autoslider' ).each(function(i, elTarget ){
+			GDynamicStore.s_ImpressionTracker.RegisterScrollEvent( elTarget );
+		});
 
-		$J.force_appear();
+		GDynamicStore.s_ImpressionTracker.CheckVisibility();
+
 	},
 
 	AddImpressionFromDynamicItem: function( $Elem )
@@ -227,18 +238,11 @@ GDynamicStore = {
 	},
 
 	HandleClusterChange: function( cluster ) {
-		$J.force_appear();
+		GDynamicStore.s_ImpressionTracker.CheckVisibility();
 		var $ScrollingContainer = $J( cluster.elScrollArea );
 		var $RealContainer = $ScrollingContainer.parent();
 		var capsules = $ScrollingContainer.find( '.cluster_capsule' );
-		if ( capsules.length != 0 && cluster.nCurCap < capsules.length )
-		{
-			var $element = $J( capsules[cluster.nCurCap] );
-			if ( $element.is(':appeared') )
-			{
-				GDynamicStore.AddImpressionFromDynamicItem( $element );
-			}
-		}
+		GDynamicStore.s_ImpressionTracker.ForceAppear( capsules[cluster.nCurCap] );
 	},
 
 	HandleCarouselChange: function( targetid, curPos, pageSize ) {
@@ -247,14 +251,7 @@ GDynamicStore = {
 		var idx = (curPos * pageSize);
 		if ( capsules.length != 0 && idx < capsules.length )
 		{
-			for ( var i = idx; i < capsules.length && i < ( idx + pageSize); ++i )
-			{
-				var $element = $J( capsules[i] );
-				//if ( $element.is(':appeared') )
-				{
-					GDynamicStore.AddImpressionFromDynamicItem( $element );
-				}
-			}
+			GDynamicStore.s_ImpressionTracker.ForceAppear( capsules[idx] );
 		}
 	},
 
@@ -380,7 +377,7 @@ GDynamicStore = {
 					else if ( bAllWanted )
 						bWanted = bAllWanted;
 
-					$El.appear();
+					GDynamicStore.s_ImpressionTracker.RegisterElement( this );
 				}
 			}
 			else if ( parseInt( strAppIDs ) )
@@ -394,7 +391,7 @@ GDynamicStore = {
 				else if ( GDynamicStore.s_rgWishlist[unAppID] )
 					bWanted = true;
 
-				$El.appear();
+				GDynamicStore.s_ImpressionTracker.RegisterElement( this );
 			}
 
 			if ( !$El.hasClass('ds_no_flags') )
@@ -423,7 +420,7 @@ GDynamicStore = {
 
 
 		// make sure that the elements are registered as "appearing" if necessary
-		$J.force_appear();
+		GDynamicStore.s_ImpressionTracker.CheckVisibility();
 	},
 
 	CapsuleSettingsMenu: function( elSource )

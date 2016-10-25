@@ -137,15 +137,16 @@
 .steam_curator_row_ctn
 {
 	position: relative;
+	padding-right: 20px;
+	border: 1px solid transparent;
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 4px;
 }
 
 a.steam_curator_row
 {
 	display: block;
-	padding-right: 20px;
-	border: 1px solid transparent;
-	background: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 4px;
+	position: relative;
 	height: 110px;
 	overflow: hidden;
 	text-decoration: none;
@@ -225,6 +226,12 @@ a.steam_curator_row:hover
     overflow: hidden;
     max-width: 390px;
 	margin-right: 95px;
+}
+.steam_curator_recommended_game_names {
+	padding-top: 10px;
+	max-width: 400px;
+	color: #8F98A0;
+	font-size: 11px;
 }
 
 .steam_curators_recommending_text

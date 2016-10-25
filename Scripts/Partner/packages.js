@@ -536,7 +536,7 @@ var templ_DiscountDiv = new Template( ''
 		+ '				<div style="clear: both;"></div>'
 		+ '			</div>'
 		+ '		<input type="hidden" name="sessionid" value="#{SessionId}" />'
-		+ '		<input id="packageDiscount#{DiscountId}Submit" style="float: right;" type="submit" value="Save Discount" onclick="SetPackageCost( #{PackageId}, \'packageDiscount#{DiscountId}Form\', \'packageDiscount#{DiscountId}Submit\' ); return false;" />'
+		+ '		<input id="packageDiscount#{DiscountId}Submit" style="float: right;" type="submit" value="Save Discount" onclick="SetPackageCost( #{PackageId}, \'packageDiscount#{DiscountId}Form\', \'packageDiscount#{DiscountId}Submit\', true ); return false;" />'
 		+ '		</div>'
 		+ '	</div>'
 		+ '	</form>'
@@ -1096,7 +1096,7 @@ function CreateAjaxRequest( requestUrl, hashParms, successClosure, requestMethod
 		} );
 }
 
-function SetPackageCost( packageid, formName, submitName )
+function SetPackageCost( packageid, formName, submitName, isDiscount )
 {
 	// disable submit button if passed
 	submitButton = $(submitName);
@@ -1115,11 +1115,19 @@ function SetPackageCost( packageid, formName, submitName )
 			$('resultsErrorDiv').hide();
 			if ( results['success'] )
 			{
-				target = $('resultsSuccessDiv');
-				target.innerHTML = "";
-				AddText( target, "Package cost successfully updated!" );
-				target.show();
-				new Effect.Highlight(target, {startcolor: '#00adee', endcolor: '#003f57'});
+				if ( isDiscount )
+				{
+					target = $('resultsSuccessDiv');
+					target.innerHTML = "";
+					AddText(target, "Package discount successfully updated!");
+					target.show();
+					new Effect.Highlight(target, {startcolor: '#00adee', endcolor: '#003f57'});
+				}
+				else
+				{
+					// page reload because all discounts might have changed
+					window.location.reload();
+				}
 			}
 			else
 			{

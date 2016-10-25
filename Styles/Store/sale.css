@@ -240,16 +240,17 @@ body.sale_page_background {
 	cursor: pointer;
 }
 
+
 .sale_page_browse_more_button
 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			font-size: 16px;
+			color: #ffffff;
+	font-size: 16px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
 	text-align: center;
-	text-transform: capitalize;
 
 	background: #2f87ba;
 	background-image: -webkit-linear-gradient(top, #2f87ba, #17435c);
@@ -275,12 +276,7 @@ body.sale_page_background {
 
 .sale_page_browse_more_button a
 {
-	color: #A4D7F5;
-}
-
-.sale_page_browse_more_button:hover a
-{
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .sale_page_release_date {
@@ -528,12 +524,12 @@ body.sale_page_background {
 	-moz-border-radius: 3px 3px 3px 3px;
 	-webkit-border-radius: 3px 3px 3px 3px;
 
-	background: #6CA8E2;
+	background: #365d7e;
 }
 
 .sale_page_three_section_button:hover {
 
-	background: #365d7e;
+	background: #66c0f4;
 	text-decoration: none;
 }
 

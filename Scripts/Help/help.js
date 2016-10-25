@@ -5,7 +5,7 @@ HelpWizard = {
 	m_bUseHistoryAPI: false,
 	m_bInSearch: false,
 
-	LoadPageFromHash: function( fresh_page_load, url, link_click, search_query ) {
+	LoadPageFromHash: function( fresh_page_load, url, link_click, search_text ) {
 		var wizard_url = url;
 		if ( !wizard_url )
 		{
@@ -15,47 +15,30 @@ HelpWizard = {
 				wizard_url = window.location.hash.replace( /^#!?/,'');
 		}
 
-		var hash_params = $J.deparam( wizard_url );
-		var bWasInSearch = this.m_bInSearch;
-		var search_active = (hash_params && (typeof hash_params.text !== 'undefined')) || search_query;
-		var search_text = null;
-		if ( search_active )
+		var page_url = wizard_url;
+		var iQueryString = wizard_url.indexOf( '?' );
+		if ( iQueryString >= 0 )
 		{
-			HelpWizard.m_bInSearch = true;
+			// strip search term out of wizard_url
+			var rgQueryParams = iQueryString >= 0 ? $J.deparam( wizard_url.substr( iQueryString + 1 ) ) : {};
 
-			search_text = hash_params.text;
-			if ( fresh_page_load || search_text.length == 0 || $J('#help_search_support_input').length == 0 )
+			if ( rgQueryParams.text )
 			{
-				wizard_url = hash_params.home;
-				this.m_sHashStringParse = null;
-			}
-			else
-			{
-				// update search string
-				this.SearchParseHashParameters( !link_click );
-				if ( HelpWizard.m_bUseHistoryAPI && link_click )
-				{
-					if ( !bWasInSearch )
-					{
-						history.pushState( { wizard_url: wizard_url, in_search: true }, '', '#' + wizard_url );
-					}
-					else
-					{
-						history.replaceState( { wizard_url: wizard_url, in_search: true }, '', '#' + wizard_url );
-					}
-				}
-				return;
+				page_url = wizard_url.substr( 0, iQueryString );
+				search_text = rgQueryParams.text;
+				delete rgQueryParams.text;
+				var strQuery = $J.param( rgQueryParams );
+				if ( strQuery )
+					page_url += '?' + strQuery;
 			}
 		}
-		else
-		{
-			HelpWizard.m_bInSearch = false;
-			this.m_sHashStringParse = null;
-		}
 
-		if ( wizard_url == this.m_sCurrentPage && bWasInSearch == HelpWizard.m_bInSearch )
+		if ( page_url == this.m_sCurrentPage )
+		{
+			$J('#help_search_support_input').val( search_text ).change();
 			return;
-		this.m_sCurrentPage = wizard_url;
+		}
+		this.m_sCurrentPage = page_url;
 
 		// hide any tooltips that were visible
 		$J('#wizard_contents [data-help-tooltip]' ).each( function() { $J(this ).v_tooltip('hide'); } );
@@ -70,7 +53,7 @@ HelpWizard = {
 			if ( link_click )
 				history.pushState( {wizard_url: wizard_url}, '', wizard_url == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url );
 			else
-				history.replaceState( {wizard_url: wizard_url}, '', wizard_url == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url );
+				history.replaceState( {wizard_url: wizard_url, search_term: search_text }, '', wizard_url == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url );
 		}
 
 		try
@@ -126,74 +109,104 @@ HelpWizard = {
 			if ( !HelpWizard.m_bUseHistoryAPI || link_click )
 				$J(window ).scrollTop( 0 );
 
-			if ( search_active && search_text.length > 0 )
-			{
-				$J('#help_home_block').hide();
-				$J('#search_breadcrumbs').show();
-			}
-
 		} ).always( function() {
 			HelpWizard.m_bSearchBoxMoved = false;
-			HelpWizard.m_sSearchResultDisplayed = false;
-            		$J( '#loading_throbber' ).addClass( 'page_loaded' );
-			if ( search_active && search_text.length > 0 )
+
+			if ( search_text )
 			{
-				$J('#help_search_support_input').val( search_text );
-				HelpWizard.SearchSupportFAQs( search_text );
+				$J('#help_search_support_input').val( search_text ).change();
 			}
+
+       		$J( '#loading_throbber' ).addClass( 'page_loaded' );
 		} );
 	},
 
 	FinishPageLoad: function() {
 		$J( '#page_content' ).addClass( 'page_loaded' );
 
+		this.BindSearchInputs();
+
 		BindHelpTooltip($J('#wizard_contents [data-help-tooltip]'));
 	},
 
+	InitStaticPage: function()
+	{
+		this.FinishPageLoad();
+
+		var wizard_url = this.GetWizardURL( window.location.href );
+		var page_url = wizard_url;
+		var search_text = null;
+
+		var iQueryString = wizard_url.indexOf( '?' );
+		if ( iQueryString >= 0 )
+		{
+			// strip search term out of wizard_url
+			var rgQueryParams = iQueryString >= 0 ? $J.deparam( wizard_url.substr( iQueryString + 1 ) ) : {};
+
+			if ( rgQueryParams.text )
+			{
+				page_url = wizard_url.substr( 0, iQueryString );
+				search_text = rgQueryParams.text;
+				delete rgQueryParams.text;
+				var strQuery = $J.param( rgQueryParams );
+				if ( strQuery )
+					page_url += '?' + strQuery;
+			}
+		}
+
+		this.m_sCurrentPage = page_url;
+		if ( search_text )
+			$J('#help_search_support_input').val( search_text ).change();
+	},
+
+	GetWizardURL: function( href ) {
+		var base = 'https://help.steampowered.com/';
+		// chop off base url if it's prefixed on the link
+		if ( href.substr( 0, base.length ) == base )
+		{
+			// help site url
+			href = href.substr( base.length );
+		}
+
+		var matches = href.match( /^\/*(?:#!?|wizard)\/*/ );
+		if ( matches )
+		{
+			href = href.substr( matches[0].length );
+
+			// does this wizard url have a hash component in it?  This happens when things use the old
+			//	hash change method of navigation
+			var iHash = href.indexOf( '#' );
+			if ( iHash > 0 && iHash + 1 < href.length )
+			{
+				href = href.substr( iHash + 1 );
+			}
+
+			return href;
+		}
+		else if ( href.length == 0 || href[0] == '?' )
+		{
+			return 'Home' + href;
+		}
+		else
+		{
+			return null;
+		}
+	},
+
+	// cludgy global to use because browsers seem to take a while to actually update window.history ?
+	m_bInPopState: false,
+
 	HookOnHashChange: function() {
 		HelpWizard.m_bUseHistoryAPI = !!(window.history && window.history.pushState);
+		this.m_sCurrentPage = HelpWizard.GetWizardURL( window.location.href );
 
 		// used to avoid redundant calls to LoadPageFromHash when navigating through hash URLs (still used for search)
 		var strPoppedStateHash;
 
 		if ( HelpWizard.m_bUseHistoryAPI )
 		{
-			var fnGetWizardURL = function( href ) {
-				var base = 'https://help.steampowered.com/';
-				// chop off base url if it's prefixed on the link
-				if ( href.substr( 0, base.length ) == base )
-				{
-					// help site url
-					href = href.substr( base.length );
-				}
-
-				var matches = href.match( /^\/*(?:#!?|wizard)\/*/ );
-				if ( matches )
-				{
-					href = href.substr( matches[0].length );
-
-					// does this wizard url have a hash component in it?  This happens when things use the old
-					//	hash change method of navigation
-					var iHash = href.indexOf( '#' );
-					if ( iHash > 0 && iHash + 1 < href.length )
-					{
-						href = href.substr( iHash + 1 );
-					}
-
-					return href;
-				}
-				else if ( href.length == 0 )
-				{
-					return 'Home';
-				}
-				else
-				{
-					return null;
-				}
-			};
-
 			$J(document).on('click', 'a', function(e) {
-				var wizard_url = fnGetWizardURL( $J(this).attr('href') );
+				var wizard_url = HelpWizard.GetWizardURL( $J(this).attr('href') );
 
 				if ( wizard_url !== null )
 				{
@@ -203,14 +216,16 @@ HelpWizard = {
 
 			});
 			$J(window).on('popstate', function( e ) {
+				HelpWizard.m_bInPopState = true;
 				var oState = e.originalEvent.state;
 
 				var wizard_url = oState && oState.wizard_url;
 				if ( !wizard_url )
-					wizard_url = fnGetWizardURL( window.location.href );
-				HelpWizard.LoadPageFromHash( false, wizard_url, false, oState && oState.in_search );
+					wizard_url = HelpWizard.GetWizardURL( window.location.href );
+				HelpWizard.LoadPageFromHash( false, wizard_url, false, oState && oState.search_text );
 
 				strPoppedStateHash = window.location.hash;
+				HelpWizard.m_bInPopState = false;
 			});
 		}
 
@@ -354,15 +369,113 @@ HelpWizard = {
 		} );
 	},
 
-	// search data
-	m_bSearchUpdatingHash: false,
-	m_bSearchRunning: false,
-	m_sSearchTextLoading: null,
-	m_sSearchTextQueued: null,
-	m_sSearchResultDisplayed: null,
-	m_nLastKeyPressTimeMS: null,
-	m_sHashStringParse: null,
-	m_sSearchForMethod: null,
+	BindSearchInputs: function()
+	{
+		var _this = this;
+		$J( '#help_search_support_input' ).each( function() {
+			var $Term = $J(this);
+			if ( $Term.data('searchBound') )
+				return;
+
+			$Term.data( 'searchBound', true );
+
+			var method = $Term.data('method') || 'Home';
+
+			// how long we wait after the first keypress after a search or page load
+			var k_nStartSearchTimeoutMS = 400;
+
+			// how long we extend the wait after each keypress.  We always time out at 3x the base search timeout ms
+			var k_nSearchKeypressTimeoutExtensionMS = 125;
+
+			var sLastVal = $Term.val();
+			var nTermTimer = 0;
+			var tsScheduledTimer = 0;
+			var tsLastSearch = 0;
+
+			var bPushedSearchState = false;
+
+			var strSearchBaseURL = null;
+			var rgSearchBaseURLParams = {};
+
+			$Term.on( 'keyup paste change', function( event ) {
+				var sNewVal = $Term.val();
+				if ( sNewVal != sLastVal )
+				{
+					if ( HelpWizard.m_bUseHistoryAPI )
+					{
+						if ( !bPushedSearchState )
+						{
+							strSearchBaseURL = HelpWizard.GetWizardURL( window.location.href );
+							var iQueryString = strSearchBaseURL.indexOf( '?' );
+							if ( iQueryString >= 0 )
+							{
+								rgSearchBaseURLParams = iQueryString >= 0 ? $J.deparam( strSearchBaseURL.substr( iQueryString + 1 ) ) : {};
+								strSearchBaseURL = strSearchBaseURL.substr( 0, iQueryString );
+							}
+
+							// if we already have the search text in the url, we have already pushed state
+							if ( rgSearchBaseURLParams.text && rgSearchBaseURLParams.text == sNewVal )
+							{
+								bPushedSearchState = true;
+							}
+						}
+
+						rgSearchBaseURLParams.text = sNewVal;
+						var strQuery = '?' + $J.param( rgSearchBaseURLParams );
+						var strWizardURL = strSearchBaseURL + strQuery;
+						var strFullURL = ( strSearchBaseURL == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url ) + strQuery;
+
+						if ( !bPushedSearchState && sNewVal )
+						{
+							history.pushState( {wizard_url: strWizardURL, search_text: sNewVal }, '', strFullURL );
+							bPushedSearchState = true;
+						}
+						else if ( bPushedSearchState && sNewVal )
+						{
+							history.replaceState( { wizard_url: strWizardURL, search_text: sNewVal }, '', strFullURL );
+						}
+						else if ( bPushedSearchState && !sNewVal )
+						{
+							bPushedSearchState = false;
+
+							// user erased search text, go back (otherwise blank new val might mean they hit the back button)
+							if ( history.state && history.state.search_text && !HelpWizard.m_bInPopState )
+							{
+								history.back();
+							}
+						}
+					}
+
+					_this.MoveUpSearchBox();
+
+					var tsChange = $J.now();
+					var msDelayBeforeTimeout = k_nStartSearchTimeoutMS;
+					if ( !tsLastSearch )
+						tsLastSearch = tsChange;
+
+					if ( nTermTimer && tsScheduledTimer - tsChange < k_nSearchKeypressTimeoutExtensionMS && tsChange - tsLastSearch < 3 * k_nStartSearchTimeoutMS )
+					{
+						// we have one scheduled within 50ms, just bump it out a little
+						msDelayBeforeTimeout = k_nSearchKeypressTimeoutExtensionMS;
+						window.clearTimeout( nTermTimer );
+						nTermTimer = 0;
+					}
+
+					if ( !nTermTimer )
+					{
+						tsScheduledTimer = $J.now() + msDelayBeforeTimeout;
+						nTermTimer = window.setTimeout( function() {
+							nTermTimer = 0;
+							tsLastSearch = 0;
+							sLastVal = $Term.val();
+							_this.SearchSupportFAQs( v_trim( sLastVal ), method );
+						}, msDelayBeforeTimeout);
+					}
+				}
+			});
+
+		});
+	},
 
 	UserSearchKeyUp: function( e, appid )
 	{
@@ -378,7 +491,7 @@ HelpWizard = {
     	{
     		if ( time_last_keyup == this.m_nLastKeyPressTimeMS )
     		{
-    			var text = $J( '#help_search_support_input' ).val();
+    			var text = $J( '#help_usersearch_input' ).val();
     			$J.ajax({
                 			type: "GET",
                 			url: "https://help.steampowered.com/wizard/ScamUserSearch/",
@@ -395,77 +508,7 @@ HelpWizard = {
                 		} );
     		}
     	},
-	SearchBoxKeyUp: function( e, sMethod ) {
-		this.MoveUpSearchBox();
 
-		// set a timer
-		var time_now_ms = $J.now();
-		this.m_nLastKeyPressTimeMS = time_now_ms;
-		this.m_sSearchForMethod = sMethod;
-
-		if ( e.which == 13 )
-			this.CheckForSearchStart( time_now_ms );	// ENTER key triggers immediately
-		else
-			setTimeout( function() { HelpWizard.CheckForSearchStart( time_now_ms ); }, 400 );
-	},
-
-	CheckForSearchStart: function( time_last_keyup ) {
-		if ( time_last_keyup == this.m_nLastKeyPressTimeMS ) {
-			this.UpdateSearchHashURL();
-		}
-	},
-
-	UpdateSearchHashURL: function() {
-		var hash_params = {};
-		hash_params.text = $J('#help_search_support_input').val().trim();
-		hash_params.home = this.m_sCurrentPage;
-
-		var new_hash = $J.param( hash_params );
-		if ( HelpWizard.m_bUseHistoryAPI )
-		{
-			HelpWizard.LoadPageFromHash( false, new_hash, true, true );
-		}
-		else
-		{
-			if ( window.location.hash != new_hash )
-			{
-				// the change of the hash will trigger the actual start
-				this.m_bSearchUpdatingHash = true;
-				window.location.hash = new_hash;
-			}
-		}
-	},
-
-	SearchParseHashParameters: function( from_navigation )
-	{
-
-		var hash_string = window.location.hash.replace( /^#!?/, '' );
-		if ( hash_string === this.m_sHashStringParse )
-			return;	// we've handled this string already
-
-		this.m_sHashStringParse = hash_string;
-
-		var hash_params = $J.deparam( hash_string );
-		if ( hash_params.text && from_navigation )
-		{
-			if ( hash_params.text !== $J('#help_search_support_input').val().trim() )
-				$J('#help_search_support_input').val( hash_params.text );
-
-			HelpWizard.MoveUpSearchBox();
-		}
-
-		if ( this.m_bUpdatingHash )
-			this.m_nTransitionSpeed = 500;	// we updated it, do it slow
-		else
-			this.m_nTransitionSpeed = 0;	// browser updated it, do it fast
-		this.m_bUpdatingHash = false;
-
-		// if there is text in the box, go
-		if ( $J('#help_search_support_input').val().trim().length > 0 || fresh_page_load )
-		{
-			this.StartSearch();
-		}
-	},
 
 	m_bSearchBoxMoved: false,
 	MoveUpSearchBox: function() {
@@ -473,8 +516,13 @@ HelpWizard = {
 		{
 			if ( !this.m_bSearchBoxMoved )
 			{
-				$J('#help_home_block').slideUp( 200 );
-				$J('#help_home_block').hide( 200 );
+				if ( this.m_bInPopState )
+					$J('#help_home_block').hide();
+				else
+				{
+					$J('#help_home_block').slideUp( 200 );
+					$J('#help_home_block').hide( 200 );
+				}
 				$J('#search_breadcrumbs').show();
 			}
 			this.m_bSearchBoxMoved = true;
@@ -483,7 +531,11 @@ HelpWizard = {
 		{
 			if ( this.m_bSearchBoxMoved )
 			{
-				$J('#help_home_block').show( 100 );
+				if ( this.m_bInPopState )
+					$J('#help_home_block').show();
+				else
+					$J('#help_home_block').show( 100 );
+
 				$J('#faqs_search_results').html( '' );
 				$J('#search_breadcrumbs').hide();
 				this.m_bSearchBoxMoved = false;
@@ -492,41 +544,29 @@ HelpWizard = {
 		}
 	},
 
-	StartSearch: function() {
-		var search_text = $J('#help_search_support_input').val().trim();
-
-		if ( search_text == this.m_sSearchTextLoading )
+	SearchSupportFAQs: function( text, method )
+	{
+		if ( !text )
 		{
-			// do nothing, we're already searching for the same text
+			$J('#faqs_search_results').empty();
+			return;
 		}
-		else if ( this.m_bSearchRunning )
-		{
-			this.m_sSearchTextQueued = search_text;
-		}
-		else if ( search_text != this.m_sSearchResultDisplayed )
-		{
-			this.SearchSupportFAQs( search_text );
-		}
-	},
-
-	SearchSupportFAQs: function( text ) {
-		this.m_bSearchRunning = true;
-		this.m_sSearchTextLoading = text;
 
 		try
 		{
-			ga( 'send', 'pageview', '/wizard/AjaxSearchResults/?l=' + g_strLanguage + '&text=' + encodeURIComponent(text) );
+			ga( 'send', 'pageview', '/wizard/AjaxSearchResults/?text=' + encodeURIComponent(text) );
 		}
 		catch ( e )
 		{
 		}
-	        $J( '#loading_throbber' ).removeClass('page_loaded');
+
+		$J( '#loading_throbber' ).removeClass('page_loaded');
 		$J.ajax({
 			type: "GET",
 			url: "https://help.steampowered.com/wizard/AjaxSearchResults/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				text: text,
-				method: this.m_sSearchForMethod,
+				method: method,
 				l: g_strLanguage
 			} )
 		}).done( function( data ) {
@@ -534,23 +574,10 @@ HelpWizard = {
 				Valve_OnHelpWizardNavigate( data );
 
 			// update the text if the search term hasn't changed since we got the result
-			if ( HelpWizard.m_sSearchTextQueued == null )
-			{
-				HelpWizard.m_sSearchResultDisplayed = data.search_text;
-				$J('#faqs_search_results').html( data.html );
-				$J('#faqs_search_results').fadeTo( 0, 1 );
-			}
+			$J('#faqs_search_results').html( data.html );
+			$J('#faqs_search_results').fadeTo( 0, 1 );
 		}).always( function() {
-			HelpWizard.m_bSearchRunning = false;
-			HelpWizard.m_sSearchTextLoading = null;
-            		$J( '#loading_throbber').addClass('page_loaded');
-
-			// start the search we have queued
-			if ( HelpWizard.m_sSearchTextQueued )
-			{
-				HelpWizard.SearchSupportFAQs( HelpWizard.m_sSearchTextQueued );
-				HelpWizard.m_sSearchTextQueued = null;
-			}
+			$J( '#loading_throbber').addClass('page_loaded');
 		} );
 	},
 
@@ -1461,6 +1488,23 @@ function Logout()
 	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
 	$Form.appendTo( 'body' );
 	$Form.submit();
+}
+
+function LogoutToAccountRecovery()
+{
+	$J.ajax({
+		type: 'POST',
+		url: 'https://help.steampowered.com/login/logout/',
+		data: { 'sessionid': g_sessionID, }
+	})
+	.fail( function( xhr )
+	{
+		ShowAlertDialog( 'Steam Support', 'Failed to log out' );
+	})
+	.done( function( data )
+	{
+		document.location = 'https://help.steampowered.com/wizard/HelpWithLogin/';
+	});
 }
 
 // taken from the store
@@ -2539,7 +2583,7 @@ HelpRequestPage = {
 				help_request_page: 1
 			} )
 		} ).fail( function( jqxhr ) {
-			ShowAlertDialog( 'Click here to close this ticket', 'There was a problem canceling your request. Please try again.' );
+			ShowAlertDialog( 'Click here if you no longer need help', 'There was a problem canceling your request. Please try again.' );
 		} ).done( function( data ) {
 			if ( data.need_login )
 			{
@@ -2547,7 +2591,7 @@ HelpRequestPage = {
 			}
 			else if ( data.error )
 			{
-				ShowAlertDialog( 'Click here to close this ticket', data.error );
+				ShowAlertDialog( 'Click here if you no longer need help', data.error );
 			}
 			else
 			{
@@ -2558,6 +2602,19 @@ HelpRequestPage = {
 				}
 			}
 		} );
+	},
+	ConfirmAndCloseHelpRequest: function( reference_code )
+	{
+		ShowConfirmDialog(
+			'Close and cancel your help request?',
+			'<div class="help_page_title">This means you will not receive a response from Steam Support.</div>' +
+				'<br><p>We haven\'t had a chance to respond to your request for help yet.</p><br>' +
+				'<p>If you still need help, select cancel below and we\'ll respond to your request as soon as we can.</p><br><br>',
+			'Yes, I no longer need help.',
+			'Cancel, I still need help!'
+		).done( function() {
+			HelpRequestPage.CloseHelpRequest( reference_code );
+		});
 	}
 };
 

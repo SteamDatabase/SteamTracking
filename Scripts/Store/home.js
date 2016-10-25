@@ -266,20 +266,6 @@ GHomepage = {
 			GHomepage.RenderPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
-				// Popular new
-		try {
-			GHomepage.FilterPopularNewOnSteam();
-		} catch( e ) { OnHomepageException(e); }
-
-		// under10
-		try {
-			GHomepage.FilterUnder10();
-		} catch( e ) { OnHomepageException(e); }
-
-		// Tabs
-		try {
-			GHomepage.FilterTabs();
-		} catch( e ) { OnHomepageException(e); }
 		
 		// RECENTLY UPDATED
 		try {
@@ -786,7 +772,7 @@ GHomepage = {
 
 		// Filter
 		var rgFilteredApps = GHomepage.FilterItemsForDisplay(
-			rgApps, 'home', 10, 10, rgFilterParams
+			rgApps, 'home', nMin, nMax, rgFilterParams
 		);
 
 		// Now follow filters as long we we can keep 4 items in the capsule
@@ -809,7 +795,7 @@ GHomepage = {
 			if( bVisible )
 				$capsule.removeClass('hidden');
 			else
-				$capsule.addClass('hidden');
+				$capsule.remove();
 		}
 
 
@@ -846,10 +832,17 @@ GHomepage = {
 	FilterUnder10: function()
 	{
 		var $UnderTenCapsules =  $J('.home_specials_ctn.underten .home_specials_grid' );
-
-		this.FilterCapsules( 4, 6, $UnderTenCapsules.children(), { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
+		this.FilterCapsules( 4, 4, $UnderTenCapsules.children(), $UnderTenCapsules, { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
 
 	},
+
+	FilterSpecials: function()
+	{
+		var $UnderTenCapsules =  $J('.home_specials_ctn.rightcol_specials .home_specials_grid' );
+		this.FilterCapsules( 4, 4, $UnderTenCapsules.children(), $UnderTenCapsules, { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
+
+	},
+
 
 	RenderTopSellersArea: function()
 	{
@@ -1245,6 +1238,10 @@ GHomepage = {
 
 			// We don't have this data handy so fall back to ownership for now
 			if( message.must_have_launched_appid && !GDynamicStore.BIsAppOwned( message.must_have_launched_appid ) )
+				continue;
+
+			// Skip apps the user has ignored even if they otherwise match filtering criteria
+			if( message.appid && GDynamicStore.BIsAppIgnored( message.appid ) )
 				continue;
 
 			rgFilteredMessages.push(message);
@@ -2246,12 +2243,12 @@ var g_bDisableAutoloader = false;
 				if ( g_bDisableAutoloader )
 					return;
 
-				if( bAutoLoaderReady )
-					WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
-
 				var nCurrentScroll = $(window).scrollTop() + $(window).height();
 				if(nCurrentScroll > this.nNextTrigger)
 				{
+					if( bAutoLoaderReady )
+						WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
+
 					loadFunc.apply(this);
 				}
 			};

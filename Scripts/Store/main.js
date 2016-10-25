@@ -130,9 +130,10 @@ function TabSelect( elem, target )
 	$Content.siblings().hide();
 	$Content.show();
 
+	// Re-compute impression tracking visibility
 	if ( typeof GDynamicStore != 'undefined' )
 	{
-		$J.force_appear();
+		GDynamicStore.s_ImpressionTracker.CheckVisibility();
 	}
 }
 
@@ -254,7 +255,7 @@ function ScrollCarouselSmallCaps( targetid, delta, pageSize, totalCount )
 		elem.effect = false;
 		if ( typeof GDynamicStore != 'undefined' )
 		{
-			$J.force_appear();
+			GDynamicStore.s_ImpressionTracker.CheckVisibility();
 			GDynamicStore.HandleCarouselChange( targetid, elem.curPos, pageSize );
 		}
 	};
@@ -2102,4 +2103,91 @@ function CreateFadingCarousel( $elContainer, nSpeed )
 	return new CGenericCarousel( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb );
 
 }
+
+
+// Element appearance montior. Designed to replace jQuery.appear
+
+var CAppearMonitor = function( fnOnAppear ){
+	this.rgMonitoredElements = [];
+	this.bRunning = false;
+	this.unTimerFrequency = 500;
+	this.bRegisteredWindowEvent = false;
+	this.fnOnAppear = fnOnAppear;
+};
+
+CAppearMonitor.prototype.RegisterScrollEvent = function( elTarget )
+{
+	var instance = this;
+
+	$J(elTarget).on('scroll', function()
+	{
+		if( instance.bRunning || instance.rgMonitoredElements.length == 0 )
+			return;
+
+		instance.bRunning = true;
+		setTimeout( instance.CheckVisibility.bind(instance), instance.unTimerFrequency );
+
+	});
+}
+
+CAppearMonitor.prototype.CheckVisibility = function()
+{
+	// Walk backwards so we can slice while we iterate
+	for( var i=this.rgMonitoredElements.length-1; i>=0; i--)
+	{
+		var rgMonitored = this.rgMonitoredElements[i];
+		if( this.bIsElementVisible( rgMonitored.element ) )
+		{
+			this.rgMonitoredElements.splice(i,1);
+			this.fnOnAppear( rgMonitored.element );
+		} else if( !document.body.contains( rgMonitored.element ) )
+		{
+			this.rgMonitoredElements.splice(i,1);
+		}
+	}
+
+	this.bRunning = false;
+};
+
+CAppearMonitor.prototype.bIsElementVisible = function( elElement )
+{
+	// Check physical position vs viewport. This is likely the fastest early-out.
+	var rectElement = elElement.getBoundingClientRect();
+	if( !( rectElement.top >= 0 && rectElement.left >= 0
+		&& rectElement.bottom <= window.innerHeight && rectElement.right <= window.innerWidth ) )
+			return false;
+
+	// Ask jQuery to compute visibility, since it knows all the edge cases.
+	if( !$J(elElement).is(':visible'))
+		return false;
+
+	return true;
+
+};
+
+CAppearMonitor.prototype.RegisterElement = function( elTarget )
+{
+	this.rgMonitoredElements.push({
+		element: elTarget
+	});
+
+	// Register the window scroll event ONLY after we have something to monitor
+	if( !this.bRegisteredWindowEvent)
+		this.RegisterScrollEvent( window );
+};
+
+CAppearMonitor.prototype.ForceAppear = function( elTarget )
+{
+	// Find our element, splice it out if we were tracking it
+	for( var i=this.rgMonitoredElements.length-1; i>=0; i--)
+	{
+		var rgMonitored = this.rgMonitoredElements[i];
+		if(  rgMonitored.element === elTarget )
+		{
+			this.rgMonitoredElements.splice(i,1);
+		}
+	}
+	// Trigger it, even if we weren't actually tracking it
+	this.fnOnAppear( elTarget );
+};
 
