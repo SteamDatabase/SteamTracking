@@ -204,7 +204,6 @@ p.currency_change_confirm_dialog_footer {
 
 .two_column.left {
 	width: 220px;
-
 }
 
 .two_column.right {
@@ -212,6 +211,22 @@ p.currency_change_confirm_dialog_footer {
 
 	margin-left: 15px;
 	width: 705px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .two_column.left,
+	html.responsive .two_column.right {
+		width: auto;
+		display: block;
+		margin-left: 0;
+		margin-bottom: 8px;
+	}
+
+	html.responsive .two_column .nav_item {
+		display: inline-block;
+		min-width: 30%;
+	}
 }
 
 .two_column .nav_item {
