@@ -133721,7 +133721,7 @@
 				"13"
 				{
 					"name"					"ctf_turbine"
-					"enabled"				"1"
+					"enabled"				"0"
 					"localizedname"			"#TF_Turbine"
 					"strangeprefixtoken"	"#TF_Turbine_StrangePrefix"
 					"maptoken"				"Map Token Turbine"
