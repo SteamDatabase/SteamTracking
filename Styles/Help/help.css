@@ -4057,3 +4057,12 @@ ul.attached_file_list {
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+
+.help_report_scam {
+	width: 742px;
+	max-width: 742px;
+}
+
+#help_usersearch_input {
+	width: calc( 742px - 10px );
+}
