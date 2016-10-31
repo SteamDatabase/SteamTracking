@@ -84,7 +84,7 @@ GDynamicStore = {
 
 				// must have appids
 				var strAppIDs = $Elem.data('dsAppid');
-				if ( strAppIDs.length == 0 )
+				if ( !strAppIDs || strAppIDs.length == 0 )
 				{
 					return;
 				}
