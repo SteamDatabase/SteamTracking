@@ -2762,6 +2762,13 @@ function UpdatePaymentInfoForm()
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
+		else if ( method.value == 'disabled_for_wallet' )
+		{
+			bShowAddressForm = false;
+			bShowPaymentSpecificNote = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_specific_note').innerHTML = '* Note: This payment method cannot be used for purchasing wallet credit.';
+		}
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
