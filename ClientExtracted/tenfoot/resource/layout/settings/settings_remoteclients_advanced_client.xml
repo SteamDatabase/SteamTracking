@@ -20,6 +20,7 @@
 							<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
 							<Label id="25000" text="#Settings_RemoteClients_Bandwidth25000" />
 							<Label id="30000" text="#Settings_RemoteClients_Bandwidth30000" />
+              <Label id="50000" text="#Settings_RemoteClients_Bandwidth50000" />
 							<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
 						</DropDown>
 					</Panel>	

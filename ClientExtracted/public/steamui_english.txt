@@ -1139,7 +1139,7 @@ This should take less than a minute."
 "Steam_Subscription_Rejected_Cdkey" "The product code you've entered has already been activated by a different Steam account. This code cannot be used again. Please contact the retailer or online seller where the code was purchased for assistance."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Too Many Activation Attempts"
-"Steam_Subscription_RateLimitedCDKey" "There have been too many recent unsuccessful activation attempts from this account. Please wait and try your product code again later."
+"Steam_Subscription_RateLimitedCDKey" "There have been too many recent activation attempts from this account or Internet address. Please wait and try your product code again later."
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Invalid Product Code"
 "Steam_SubscriptionCancelled_InvalidCDKey" "The product code you've entered is not valid. \n\nPlease double check to see if you've mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O."
@@ -1685,6 +1685,7 @@ You'll need to log out of OS X for the change to take effect."
 "steam_menu_view_workshop" "My Workshop"
 "steam_menu_account_details" "Account Details"
 "steam_menu_account_view_profile" "View Profile"
+"steam_menu_account_preferences" "Preferences"
 
 "steam_store"		"Store"
 "steam_mygames"		"Games"
@@ -2217,6 +2218,7 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"You can access these games again at any time, from any computer, by logging into your Steam account '%account%'."
 "Steam_Install_AutoLaunchGamesList"		"View Steam Library"
 "Steam_Install_AutoLaunchGameStart"		"Launch now"
+"Steam_Install_DontShowPageAgain"		"Don't show this page again"
 
 "Steam_InstallComplete_DownloadInfo"		"Steam is now downloading %game%. You can track the progress of this download in the Steam Downloads view.\n\nYou can safely exit and restart Steam, and the download will automatically resume."
 "Steam_InstallComplete_DownloadInfo_Queued"		"Steam has queued %game% for download. It will begin the download when the other downloads in front of it in the queue have completed. You can manage the queue in the Steam Downloads view."
@@ -2779,10 +2781,11 @@ Make one now by emailing a gift to someone you know."
 "SteamUI_ValveSurvey_MicrophoneNo"		"No, I do not have a microphone."
 "SteamUI_ValveSurvey_Summary_Microphone"	"Microphone:  %s1"
 
-"SteamUI_ValveSurvey_ControllerCradleLabel"		"Do you use the Dongle Base to improve your Steam Controller's wireless connection (as shown below)?"
-"SteamUI_ValveSurvey_ControllerCradleDontKnow"	"I do not have a Steam Controller"
-"SteamUI_ValveSurvey_ControllerCradleYes"		"Yes, I use the cable and base with my Steam Controller."
-"SteamUI_ValveSurvey_ControllerCradleNo"		"No, I do not use the cable and base with my Steam Controller."
+"SteamUI_ValveSurvey_ControllerCradleLabel"		"Do you use the Wireless Extender Base to improve your Steam Controller's wireless connection (as shown below)?"
+"SteamUI_ValveSurvey_ControllerCradleDontHave"	"I do not have a wireless extender."
+"SteamUI_ValveSurvey_ControllerCradleYes"		"Yes, I use the wireless extender as shown."
+"SteamUI_ValveSurvey_ControllerCradleNo"		"No, I plug the wireless receiver directly into a USB port."
+"SteamUI_ValveSurvey_ControllerNoReceiver"		"No Wireless Receiver."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Steam Controller Cable and Base:  %s1"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Steam server is unavailable"
@@ -3318,9 +3321,10 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "SteamUI_JoinDialog_Ready_Title"	"Ready - %game%"
 "SteamUI_JoinDialog_InstallScriptInfo"	"Performing first time setup...\n\nInstalling: %stepname% (step %step% of %steptotal%)"
 
-"SteamUI_Game_Requires_NTFS"		"Game requires NTFS"
+
 "SteamUI_GameRequires_NTFS_Detail"	"The game you are installing requires a drive with the NTFS file system and\ncannot be installed on a FAT32 filesystem. For more information see the\nsupport article linked below."
-"SteamUI_NTFS_Required_SupportArticle"	"Filesystem Support Article"
+"SteamUI_GameRequires_64BitOS_Detail"	"The game you are installing requires a 64bit version of Windows. If you don't\nhave such a PC available click below to learn about requesting a refund."
+
 
 "SteamUI_OSXAccessibilityTitle"			"Steam - Game Overlay Access"
 "SteamUI_OSXAccessibilityText"			"The in-game Steam overlay requires access for assistive devices to be enabled.
@@ -3591,6 +3595,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_details_lastpurchased$apptype=game"	"Game purchased"
 "steam_details_lastpurchased$apptype=application"	"Application purchased"
 "steam_details_lastpurchased$apptype=video"	"Video purchased"
+"steam_details_lastpurchased$apptype=tool"	"Tool purchased"
 "steam_details_addedtoaccount"	"Added to account"
 "steam_details_totalplaytime_minutes" "%minutes% minutes"
 "steam_details_totalplaytime_hours" "%hours% hours"
@@ -3643,6 +3648,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_welcome$apptype=application"			"Application Info"
 "steam_welcome$apptype=video"			"Video Info"
 "steam_welcome$apptype=shortcut"			"Shortcut Info"
+"steam_welcome$apptype=tool"			"Tool Info"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"Manage DLC"
 "steam_finddlcinstore"		"Find More DLC In Store"
@@ -3668,8 +3674,9 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 
 "steam_welcomeaction_launch$apptype=game" "To launch %gamename%, click the Play button above."
 "steam_welcomeaction_launch$apptype=application" "To launch %gamename%, click the Play button above."
-"steam_welcomeaction_launch$apptype=video" "To watch %gamename%, click the watch button above."
+"steam_welcomeaction_launch$apptype=video" "To watch %gamename%, click the Watch button above."
 "steam_welcomeaction_launch$apptype=shortcut" "To launch %gamename%, click the Play button above."
+"steam_welcomeaction_launch$apptype=tool" "To launch %gamename%, click the Play button above."
 "steam_welcomeaction_install" "To install %gamename%, click the Install button above."
 "steam_welcomeaction_preload" "To pre-load %gamename% so you'll be ready to play it the moment it's released, click the Pre-load button above."
 "steam_welcomeaction_comingsoon" "%gamename% is coming soon."
@@ -3677,11 +3684,13 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 
 "steam_welcomemessage_nofriends$apptype=game" "To find others who play %gamename%, join <a href=steam://url/CommunityGroupSearch/%encodedsearch%>a related Steam Community group</a>. To see what games your friends are playing, <a href=steam://friends/add/>Add a Friend</a> to your Steam Friends list."
 "steam_welcomemessage_nofriends$apptype=application" "To find others who use %gamename%, join <a href=steam://url/CommunityGroupSearch/%encodedsearch%>a related Steam Community group</a>. To see what applications your friends are using, <a href=steam://friends/add/>Add a Friend</a> to your Steam Friends list."
+"steam_welcomemessage_nofriends$apptype=tool" "To find others who use %gamename%, join <a href=steam://url/CommunityGroupSearch/%encodedsearch%>a related Steam Community group</a>. To see what tools your friends are using, <a href=steam://friends/add/>Add a Friend</a> to your Steam Friends list."
 "steam_welcomemessage_nofriends$apptype=video" "To find others who watch %gamename%, join <a href=steam://url/CommunityGroupSearch/%encodedsearch%>a related Steam Community group</a>. To see what videos your friends are watching, <a href=steam://friends/add/>Add a Friend</a> to your Steam Friends list."
 
 "steam_welcomemessage_help$apptype=game"	"If you need technical support with this game, check out the <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forums</a> or visit <a href=http://support.steampowered.com/>Steam Support</a>."
 "steam_welcomemessage_help$apptype=application"	"If you need technical support with this application, check out the <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forums</a> or visit <a href=http://support.steampowered.com/>Steam Support</a>."
 "steam_welcomemessage_help$apptype=video"	"If you need technical support with this video, check out the <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forums</a> or visit <a href=http://support.steampowered.com/>Steam Support</a>."
+"steam_welcomemessage_help$apptype=tool"	"If you need technical support with this tool, check out the <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forums</a> or visit <a href=http://support.steampowered.com/>Steam Support</a>."
 
 "steam_welcomemessage_help_nostore"	"If you need technical support with this game, visit <a href=http://support.steampowered.com/>Steam Support</a>."
 
@@ -3997,6 +4006,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_39"		"content file locked"
 "Steam_AppUpdateError_40"		"content unavilable"
 "Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
+"Steam_AppUpdateError_42"		"library folder not writable"
 
 
 "steam_subnav_featured"		"Featured"
@@ -4358,6 +4368,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_Bandwidth20000" 	"20 MBit/s"
 "Steam_Settings_Streaming_Bandwidth25000" 	"25 MBit/s"
 "Steam_Settings_Streaming_Bandwidth30000" 	"30 MBit/s"
+"Steam_Settings_Streaming_Bandwidth50000" 	"50 MBit/s"
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Unlimited (increases latency)"
 "Steam_Settings_Streaming_Resolution"	"Limit resolution to"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Display resolution"
@@ -4477,18 +4488,23 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_TurnNotifications_TakeYourTurn" "Take your turn"
 "Steam_TurnNotifications_ViewGame" "View game"
 
-"Steam_WindowsCompat_Title" "Windows Compatibility"
+"Steam_WindowsCompat_Title" "Steam Error"
 "Steam_WindowsCompat_Description" "Windows is currently running Steam in Windows Compatibility Mode which can cause issues with some Steam features and running games. Please follow the instructions below to remove compatibility mode."
 "Steam_WindowsCompat_DoNotShowAgain" "Do not show again"
 "Steam_WindowsCompat_SupportLinkDesc" "How do I disable Compatibility Mode?"
 "Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Close Steam"
+"Steam_WindowsCompat_RestartSteam" "Restart Steam"
 "Steam_WindowsCompat_Continue" "Continue"
 
 "Steam_WindowsCompat_BigPicture" "Steam is currently running in Windows compatibility mode. This may prevent Big Picture from launching as Steam may be told that you are running Windows XP or below."
-
 "Steam_WindowsCompat_Webhelper" "Windows is currently running the Steam Web Browser in Windows Compatibility Mode. This may prevent Steam from correctly displaying Web content. \n\nSteam will repair the problem and restart.  \n\nIf you continue to see this message, please follow the instructions below to remove compatibility mode."
-"Steam_WindowsCompat_RestartSteam" "Restart Steam"
+
+"Steam_InstallIssue_FolderReadOnly"	"The Steam install folder is currently not writable which can cause issues with some Steam features and running games. \n\nSteam needs to repair this problem and then restart."
+"Steam_InstallIssue_WindowsRegistry" 	"The Steam registry path is currently not writable which can cause issues with some Steam features and running games. \n\nSteam needs to repair this problem and then restart."
+"Steam_InstallIssue_Repair" "Repair"
+"Steam_InstallIssue_Ignore" "Ignore"
+
 
 "Steam_VGUIControllerWarning_Title" "Steam Controller"
 "Steam_VGUIControllerWarning" "Please run Steam in Big Picture mode to make full use of your controller."

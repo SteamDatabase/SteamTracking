@@ -474,6 +474,7 @@
  R typeinfo name for ISurfaceHelper
  R typeinfo name for IVGuiModuleLoader
  R typeinfo name for IValidate
+ R typeinfo name for KeyValuesAD
  R typeinfo name for VPanelWrapper
  R typeinfo name for style_t
  R typeinfo name for vgui::Bitmap

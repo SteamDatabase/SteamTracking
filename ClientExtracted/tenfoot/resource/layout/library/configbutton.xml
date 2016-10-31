@@ -9,6 +9,7 @@
 		<Image id="ConfigButtonSaveIcon" src="file://{images}/library/controller/binding_icons/ghost_075_utility_020.png" />
 		<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />
 		<Label id="Votes" text="#ControllerBindingVotes" />
+		<Label id="ControllerType" />
 		<Panel id="ConfigContentWrapper">
 				<Label id="Title" />
 				<Label id="Author" />

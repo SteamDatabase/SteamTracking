@@ -20,19 +20,31 @@
 					</Panel>
 					<Panel id="ABXY_Footer_Wrapper">
 						<Panel id="A_Wrapper">
-							<Label id="A_btn" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+							<Panel id="A_btn">
+								<Label id="A_btn_std" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+								<Label id="A_btn_ps4" class="LegendButtonBox CrossButtonBox" text="#UI_CrossButton" />
+							</Panel>
 							<FooterLabelButton id="A_txt" class="LegendText AButtonText" padevent="pad_a" />
 						</Panel>
 						<Panel id="X_Wrapper">
-							<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+							<Panel id="X_btn">
+								<Label id="X_btn_std" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+								<Label id="X_btn_ps4" class="LegendButtonBox SquareButtonBox" text="#UI_SquareButton" />
+							</Panel>
 							<FooterLabelButton id="X_txt" class="LegendText XButtonText" padevent="pad_x" />
 						</Panel>
 						<Panel id="Y_Wrapper">
-							<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+							<Panel id="Y_btn">
+								<Label id="Y_btn_std" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+								<Label id="X_btn_ps4" class="LegendButtonBox TriangleButtonBox" text="#UI_TriangleButton" />
+							</Panel>
 							<FooterLabelButton id="Y_txt" class="LegendText YButtonText" padevent="pad_y" />
 						</Panel>
 						<Panel id="B_Wrapper">
-							<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+							<Panel id="B_btn">
+								<Label id="B_btn_std" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+								<Label id="B_btn_ps4" class="LegendButtonBox CircleButtonBox" text="#UI_CircleButton" />
+							</Panel>
 							<FooterLabelButton id="B_txt" class="LegendText BButtonText" padevent="pad_b" />
 						</Panel>
 					</Panel>

@@ -5938,6 +5938,37 @@ ControllerConfigSelectController #ButtonCancel
 	visibility: visible;
 }
 
+#SelectControllerButton
+{
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+    background-position: 99% 5%;
+    wash-color: #ffffffff;
+}
+
+#SelectControllerButton.Button.controller_steamcontroller_gordon
+{
+	background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
+}
+
+#SelectControllerButton.Button.controller_ps4
+{
+	background-image: url( "file://{images}/controller_icon_ps4.png" );
+}
+
+#SelectControllerOwnerLabel
+{
+    font-size: 24px;
+    font-weight: medium;
+}
+
+#SelectControllerSharedLabel
+{
+    font-size: 18px;
+    horizontal-align: right;
+    padding-right: 50px;
+}
+
 #MusicExplore
 {
 	visibility: collapse;

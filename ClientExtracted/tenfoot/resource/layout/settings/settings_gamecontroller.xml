@@ -16,48 +16,49 @@
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
 
-				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused();" />				
-				
+				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused();" />
+				<ToggleButton class="CheckBox" id="SettingsController_PS4Support" text="#SettingsController_PS4Support" selectionpos="auto" onactivate="ControllerSetting_PS4Support()" onfocus="OnNonControllerButtonFocused();" />
+
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
 
 				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController1" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController2" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController3" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController4" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController5" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController6" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 
 				<Panel id="DetectedController7" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
-					<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
 			</Panel>
 				
@@ -76,17 +77,18 @@
 						<Button id="IdentifyButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="IdentifyButton();">
 							<Label class="LongDesc" text="#SettingsController_Identify" />
 						</Button>
-						<Button id="SupportButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerSupport();">
+						<Button id="SupportButton" class="Button ControllerDetailsButton SteamControllerDetails" selectionpos="auto" onactivate="ControllerSupport();">
 							<Label class="LongDesc" text="#SettingsController_Support" />
 						</Button>
 						<Button id="CalibrateButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerCalibrate();">
 							<Label class="LongDesc" text="#SettingsController_Calibrate" />
 						</Button>
 					</Panel>
-				  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerVersion_Title" />
-				  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
-				  <Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamDongleVersion_Title" />
-				  <Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
+					<Label class="SettingsCallout SettingsControllerNameTitle" text="" />	
+					<Label class="SettingsCallout SettingsControllerNameTitle SteamControllerDetails" text="#SettingsController_SteamControllerVersion_Title" />
+					<Label class="SettingsCallout SettingsControllerName SteamControllerDetails" text="#SettingsController_SteamControllerVersion" />
+					<Label class="SettingsCallout SettingsControllerNameTitle SteamControllerDetails" text="#SettingsController_SteamDongleVersion_Title" />
+					<Label class="SettingsCallout SettingsControllerName SteamControllerDetails" text="#SettingsController_SteamDongleVersion" />
 				</Panel>
 			</Panel>
 

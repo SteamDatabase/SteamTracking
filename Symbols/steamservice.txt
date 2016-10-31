@@ -759,6 +759,7 @@
  T CJobMgr::UpdateTimeoutPosition(int)
  T CJobMgr::~CJobMgr()
  T CKeyErrorContext::~CKeyErrorContext()
+ T CKeySymbol::CKeySymbol(char const*)
  T CKeyValuesSystem::AddKeyToLeakTrack(void*, unsigned int)
  T CKeyValuesSystem::AddStringToPool(char const*, int)
  T CKeyValuesSystem::CKeyValuesSystem()
@@ -2291,8 +2292,8 @@
  T SteamThreadTools::CThread::GetPriority() const
  T SteamThreadTools::CThread::GetThreadProc()
  T SteamThreadTools::CThread::Init()
- T SteamThreadTools::CThread::IsAlive()
- T SteamThreadTools::CThread::IsThreadRunning()
+ T SteamThreadTools::CThread::IsAlive() const
+ T SteamThreadTools::CThread::IsThreadRunning() const
  T SteamThreadTools::CThread::Join(unsigned int)
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::SetName(char const*)
@@ -2969,6 +2970,8 @@
  b guard variable for SteamStdLib::CommandLine()::g_CmdLine
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
+ b hksKVNameRequestHeaders
+ b hksSetCookie
  b id_callback
  b impl
  b initialized

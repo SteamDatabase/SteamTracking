@@ -276,7 +276,7 @@
  T SpewAndLogChangeIfStillDefault
  T SpewChangeIfStillDefault
  T SpewOutputFunc
- T SteamThreadTools::CThread::BHasValidThreadID()
+ T SteamThreadTools::CThread::BHasValidThreadID() const
  T SteamThreadTools::CThread::CThread()
  T SteamThreadTools::CThread::GetCurrentCThread()
  T SteamThreadTools::CThread::GetName()
@@ -284,8 +284,8 @@
  T SteamThreadTools::CThread::GetResult() const
  T SteamThreadTools::CThread::GetThreadProc()
  T SteamThreadTools::CThread::Init()
- T SteamThreadTools::CThread::IsAlive()
- T SteamThreadTools::CThread::IsThreadRunning()
+ T SteamThreadTools::CThread::IsAlive() const
+ T SteamThreadTools::CThread::IsThreadRunning() const
  T SteamThreadTools::CThread::Join(unsigned int)
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::Resume()
@@ -427,6 +427,7 @@
  T ThreadGetCurrentRunningRef
  T ThreadGetPriority
  T ThreadGetProcessExitCode
+ T ThreadGetProcessId
  T ThreadGetProcessListInfo
  T ThreadImplOneTimeInit
  T ThreadInMainThread

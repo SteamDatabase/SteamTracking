@@ -206,6 +206,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageh264base.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagex264.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageyv12.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/vrstreamthread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/x264wrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/joingamecontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/modmanager.cpp

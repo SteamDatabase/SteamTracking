@@ -485,9 +485,7 @@
  D CFriendsDialog::PanelMessageFunc_ClearFriendFilter::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_CopySteamIDToClipboard::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_IgnoreAllFriendsInvites::InitVar()::bAdded
- D CFriendsDialog::PanelMessageFunc_IgnoreAllSuggestedFriends::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_IgnoreGroupInvite::InitVar()::bAdded
- D CFriendsDialog::PanelMessageFunc_InviteAllSuggestedFriends::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_InviteToChatRoom::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_InviteToGroup::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_InviteToTrade::InitVar()::bAdded
@@ -543,7 +541,6 @@
  D CFriendsDialog::PanelMessageFunc_OpenSteamIDControlPage::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OpenSteamIDInvitesPage::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_SetStatusOnline::InitVar()::bAdded
- D CFriendsDialog::PanelMessageFunc_ShowFacebookIDPage::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_ShowInventory::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_ShowSteamIDPage::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_ToggleSortByName::InitVar()::bAdded
@@ -3721,6 +3718,8 @@
  R typeinfo name for CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
+ R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CFriendListItemBase*, int, bool (*)(CFriendListItemBase* const&, CFriendListItemBase* const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>::Node_t, int, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -3806,6 +3805,7 @@
  R typeinfo name for IHTMLResponses
  R typeinfo name for IVGuiModule
  R typeinfo name for IValidate
+ R typeinfo name for KeyValuesAD
  R typeinfo name for ListPanelColumnSelectButton
  R typeinfo name for ListPanelDragger
  R typeinfo name for SharedLibraryNotification
@@ -5205,10 +5205,6 @@
  T CFriendPanel::GetFriendRelationship()
  T CFriendPanel::GetKBMap()
  T CFriendPanel::GetMessageMap()
- T CFriendPanel::GetOrCreateSuggestedIgnore()
- T CFriendPanel::GetOrCreateSuggestedImage()
- T CFriendPanel::GetOrCreateSuggestedInvite()
- T CFriendPanel::GetOrCreateSuggestedName()
  T CFriendPanel::GetPanelClassName()
  T CFriendPanel::GetPanelTopClassName() const
  T CFriendPanel::GetPersonaState()
@@ -5364,10 +5360,8 @@
  T CFriendsDialog::GetStatusImage(CSteamID const&, CSteamID const&, CUtlString&)
  T CFriendsDialog::GetVoiceImage(CSteamID const&, bool*)
  T CFriendsDialog::IgnoreAllFriendsInvites()
- T CFriendsDialog::IgnoreAllSuggestedFriends()
  T CFriendsDialog::IgnoreGroupInvite(unsigned long long)
  T CFriendsDialog::InitPanels()
- T CFriendsDialog::InviteAllSuggestedFriends()
  T CFriendsDialog::InviteToChatRoom(unsigned long long, unsigned long long)
  T CFriendsDialog::InviteToGroup(unsigned long long, unsigned long long)
  T CFriendsDialog::InviteToTrade(unsigned long long)
@@ -5467,9 +5461,7 @@
  T CFriendsDialog::PanelMessageFunc_ClearFriendFilter::InitVar()
  T CFriendsDialog::PanelMessageFunc_CopySteamIDToClipboard::InitVar()
  T CFriendsDialog::PanelMessageFunc_IgnoreAllFriendsInvites::InitVar()
- T CFriendsDialog::PanelMessageFunc_IgnoreAllSuggestedFriends::InitVar()
  T CFriendsDialog::PanelMessageFunc_IgnoreGroupInvite::InitVar()
- T CFriendsDialog::PanelMessageFunc_InviteAllSuggestedFriends::InitVar()
  T CFriendsDialog::PanelMessageFunc_InviteToChatRoom::InitVar()
  T CFriendsDialog::PanelMessageFunc_InviteToGroup::InitVar()
  T CFriendsDialog::PanelMessageFunc_InviteToTrade::InitVar()
@@ -5525,7 +5517,6 @@
  T CFriendsDialog::PanelMessageFunc_OpenSteamIDControlPage::InitVar()
  T CFriendsDialog::PanelMessageFunc_OpenSteamIDInvitesPage::InitVar()
  T CFriendsDialog::PanelMessageFunc_SetStatusOnline::InitVar()
- T CFriendsDialog::PanelMessageFunc_ShowFacebookIDPage::InitVar()
  T CFriendsDialog::PanelMessageFunc_ShowInventory::InitVar()
  T CFriendsDialog::PanelMessageFunc_ShowSteamIDPage::InitVar()
  T CFriendsDialog::PanelMessageFunc_ToggleSortByName::InitVar()
@@ -5539,12 +5530,10 @@
  T CFriendsDialog::ReloadVoiceStatusImages(vgui::IScheme*)
  T CFriendsDialog::RemoveFriends(EFriendFlags)
  T CFriendsDialog::RemoveFriendsNameCollisionObserver(CSteamID const&, vgui::Panel*)
- T CFriendsDialog::RetrieveFriendFacebookInfo(CSteamID const&, CUtlString&, unsigned long long&)
  T CFriendsDialog::SaveUserConfig()
  T CFriendsDialog::SetStatusOnline()
  T CFriendsDialog::SetVisible(bool)
  T CFriendsDialog::ShowAddFriendResultDialog(CSteamID const&, EResult)
- T CFriendsDialog::ShowFacebookIDPage(unsigned long long)
  T CFriendsDialog::ShowFriendResultDialogFailed(CSteamID const&, char const*, char const*)
  T CFriendsDialog::ShowIgnoreFriendResultDialog(CSteamID const&, bool, EResult)
  T CFriendsDialog::ShowInventory(unsigned long long)
@@ -5588,7 +5577,6 @@
  T CFriendsImageManager::CreateCompositeVGuiImageForAvatar(CSteamID const&)
  T CFriendsImageManager::CreateCompositeVGuiImageForAvatar(int, EPersonaState, bool, int)
  T CFriendsImageManager::GetColorForPersonaState(EPersonaState, bool, int)
- T CFriendsImageManager::GetFacebookLogoImage()
  T CFriendsImageManager::GetOverlayImageForPersonaStateRelationship(EPersonaState, bool, EFriendRelationship, int)
  T CFriendsImageManager::GetVGuiImageForSteamImage(int)
  T CFriendsImageManager::LoadSchemeColors()
@@ -5619,7 +5607,6 @@
  T CFriendsListSectionHeader::ChainToMap()
  T CFriendsListSectionHeader::CreateContextMenu()
  T CFriendsListSectionHeader::CreateInvitesReceivedContextMenu()
- T CFriendsListSectionHeader::CreateSuggestedInvitesContextMenu()
  T CFriendsListSectionHeader::GetAnimMap()
  T CFriendsListSectionHeader::GetClassSize() const
  T CFriendsListSectionHeader::GetDesiredHeight()

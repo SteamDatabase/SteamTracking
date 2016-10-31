@@ -223,6 +223,8 @@ TenfootFooterPanel.WebFooter
 	font-family: "Motiva Sans";
 }
 
+
+
 #LegendRow Label.LegendButtonBox.AButtonBox {
 	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
 	background-color: legendbuttongreen;
@@ -238,6 +240,71 @@ TenfootFooterPanel.WebFooter
 #LegendRow Label.LegendButtonBox.YButtonBox {
 	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
 	background-color: legendbuttonyellow;
+}
+
+#RB_btn_ps4,
+#LB_btn_ps4
+{
+    visibility: collapse;
+}
+
+.PS4Origin #LegendRow Label.LegendButtonBox.AButtonBox,  
+.PS4Origin #LegendRow Label.LegendButtonBox.BButtonBox,
+.PS4Origin #LegendRow Label.LegendButtonBox.XButtonBox,
+.PS4Origin #LegendRow Label.LegendButtonBox.YButtonBox,
+.PS4Origin #RB_btn_std,
+.PS4Origin #LB_btn_std,
+{
+    visibility: collapse;
+}
+
+.PS4Origin #LegendRow Label.LegendButtonBox.CrossButtonBox,  
+.PS4Origin #LegendRow Label.LegendButtonBox.CircleButtonBox,
+.PS4Origin #LegendRow Label.LegendButtonBox.SquareButtonBox,
+.PS4Origin #LegendRow Label.LegendButtonBox.TriangleButtonBox,
+.PS4Origin #RB_btn_ps4,
+.PS4Origin #LB_btn_ps4,
+{
+    visibility: visible;
+}
+
+#LegendRow Label.LegendButtonBox.CrossButtonBox,  
+#LegendRow Label.LegendButtonBox.CircleButtonBox,
+#LegendRow Label.LegendButtonBox.SquareButtonBox,
+#LegendRow Label.LegendButtonBox.TriangleButtonBox
+{
+	background-color: #111111;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: -3px;
+    color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+    visibility: collapse;
+    padding-left: 0.5px;
+}
+
+
+#LegendRow Label.LegendButtonBox.CrossButtonBox {
+    border: 2px solid #4ca2ff95;
+ //   border: 2px solid #a2b9ef77;
+    color: #a2b9efee;
+}
+#LegendRow Label.LegendButtonBox.CircleButtonBox {
+    border: 2px solid #4ca2ff95;
+ //   border: 2px solid #f8738277;
+    color: #f87382ee;
+    font-size: 32px;
+    padding-top: -6.5px;
+}
+#LegendRow Label.LegendButtonBox.SquareButtonBox {
+    border: 2px solid #4ca2ff95;
+//    border: 2px solid #eba1e677;
+    color: #eba1e6ee;
+}
+#LegendRow Label.LegendButtonBox.TriangleButtonBox {
+    border: 2px solid #4ca2ff95;
+ //   border: 2px solid #30ffff77;
+    color: #30ffffee;
+    padding-top: -5px;
 }
 
 #LegendRow .TriggerButtonBox
@@ -328,6 +395,11 @@ TenfootFooterPanel.WebFooter
 	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
+.PS4Origin #LegendRow .RBButtonBox
+{
+    border-top-left-radius: 20px 12px;
+}
+
 #LegendRow .LBButtonBox,
 {
 	border-radius: 4px;
@@ -346,10 +418,19 @@ TenfootFooterPanel.WebFooter
 	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
+.PS4Origin #LegendRow .LBButtonBox
+{
+    border-top-right-radius: 20px 12px;
+}
+
 #LegendRow .AButtonBox,
 #LegendRow .BButtonBox,
 #LegendRow .XButtonBox,
 #LegendRow .YButtonBox,
+#LegendRow .CrossButtonBox,
+#LegendRow .CircleButtonBox,
+#LegendRow .SquareButtonBox,
+#LegendRow .TriangleButtonBox,
 {
 	border-radius: 50%;
 	border: 2px solid #00000000;
@@ -367,6 +448,10 @@ TenfootFooterPanel.WebFooter
 .OSX #LegendRow .BButtonBox,
 .OSX #LegendRow .XButtonBox,
 .OSX #LegendRow .YButtonBox,
+.OSX #LegendRow .CrossButtonBox,
+.OSX #LegendRow .CircleButtonBox,
+.OSX #LegendRow .SquareButtonBox,
+.OSX #LegendRow .TriangleButtonBox,
 .OSX #LegendRow .LBButtonBox,
 .OSX #LegendRow .RBButtonText,
 .OSX #LegendRow .TriggerButtonBox,
@@ -374,6 +459,10 @@ TenfootFooterPanel.WebFooter
 .Linux #LegendRow .BButtonBox,
 .Linux #LegendRow .XButtonBox,
 .Linux #LegendRow .YButtonBox,
+.Linux #LegendRow .CrossButtonBox,
+.Linux #LegendRow .CircleButtonBox,
+.Linux #LegendRow .SquareButtonBox,
+.Linux #LegendRow .TriangleButtonBox,
 .Linux #LegendRow .LBButtonBox,
 .Linux #LegendRow .RBButtonText,
 .Linux #LegendRow .TriggerButtonBox
@@ -384,25 +473,34 @@ TenfootFooterPanel.WebFooter
 #LegendRow .STARTButtonBox,
 #LegendRow .BACKButtonBox
 {
-	border-radius: 44%;
-	border: 2px solid #00000000;
-	width: 50px;
+	border-radius: 16px;
+	border: 2px solid #EEEEEEf0;
+	width: 56px;
 	height: 32px;
 	text-align: center;
 	wash-color: #878c8eff;
 	margin: 6px;
 	margin-left: 16px;
 	margin-right: 2px;
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
 
 	background-repeat: no-repeat;
-	background-position: 45% 50%;
+	background-position: 55% 50%;
 	padding: 0px;
+   
 	background-image: url( "file://{images}/footer/start.png" );
 }
 
+.PS4Origin #LegendRow .STARTButtonBox,
+.PS4Origin #LegendRow .BACKButtonBox
+{
+	width: 20px;
+	height: 34px;
+    border-radius: 8px;
+    background-size: 14px;
+}
 #LegendRow .BACKButtonBox
 {
+	background-position: 40% 50%;
 	background-image: url( "file://{images}/footer/back_xinput.png" );
 }
 
@@ -437,7 +535,7 @@ TenfootFooterPanel.WebFooter
 	margin-left: 8px;
 	margin-right: 8px;
 	vertical-align: center;
-	font-size: 24;
+	font-size: 20;
 	font-family: "Motiva Sans";
 	color: tclegendlabel; 
 }
@@ -494,6 +592,14 @@ TenfootFooterPanel.WebFooter
 .CursorVisible #LegendRow .BButtonBox,
 .CursorVisible #LegendRow .XButtonBox,
 .CursorVisible #LegendRow .YButtonBox,
+.CursorVisible #LegendRow .CrossButtonBox,
+.CursorVisible #LegendRow .CircleButtonBox,
+.CursorVisible #LegendRow .SquareButtonBox,
+.CursorVisible #LegendRow .TriangleButtonBox,
+.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CrossButtonBox,
+.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CircleButtonBox,
+.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.SquareButtonBox,
+.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.TriangleButtonBox,
 .CursorVisible #LegendRow .STARTButtonBox,
 .CursorVisible #LegendRow .BACKButtonBox,
 {

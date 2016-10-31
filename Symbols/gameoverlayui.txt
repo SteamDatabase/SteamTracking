@@ -4100,6 +4100,8 @@
  R typeinfo name for CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
+ R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -4328,8 +4330,8 @@
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
- SteamThreadTools::CThread::IsAlive()
- SteamThreadTools::CThread::IsThreadRunning()
+ SteamThreadTools::CThread::IsAlive() const
+ SteamThreadTools::CThread::IsThreadRunning() const
  SteamThreadTools::CThread::Join(unsigned int)
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::SetName(char const*)

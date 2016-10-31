@@ -688,8 +688,8 @@
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
- SteamThreadTools::CThread::IsAlive()
- SteamThreadTools::CThread::IsThreadRunning()
+ SteamThreadTools::CThread::IsAlive() const
+ SteamThreadTools::CThread::IsThreadRunning() const
  SteamThreadTools::CThread::Join(unsigned int)
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::SetName(char const*)

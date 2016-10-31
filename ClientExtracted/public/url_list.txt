@@ -341,7 +341,7 @@ StoreExplore
 
 StoreChildPage
 {
-	url	"%store%/%p1%/"
+	url		"%store%/%p1%/"
 	method	"internal"
 	filter	"store"
 }
@@ -362,14 +362,14 @@ StoreExplorePage
 
 StorePublisherPage
 {
-	url		"%store%/publisher/%p1%/"
+	url			"%store%/publisher/%p1%/"
 	method		"internal"
 	filter		"store"
 }
 
 StoreAppPage
 {
-	url		"%store%/app/%p1%/"
+	url			"%store%/app/%p1%/"
 	method		"internal"
 	filter		"store"
 }
@@ -377,58 +377,78 @@ StoreAppPage
 // StoreAppPage is used in few places directly, create a custom URL
 StoreAppPageAddToCart
 {
-	url		"%store%/app/%p1%/?addtocart=%p2%"
+	url			"%store%/app/%p1%/?addtocart=%p2%"
 	method		"internal"
 	filter		"store"
 }
 
 StoreDlcPage
 {
-	url		"%store%/dlc/%p1%/"
+	url			"%store%/dlc/%p1%/"
 	method		"internal"
 	filter		"store"
 }
 
 StoreSubPage
 {
-	url		"%store%/sub/%p1%/"
+	url			"%store%/sub/%p1%/"
 	method		"internal"
 	filter		"store"
 }
 
+ItemStorePage
+{
+	url			"%store%/itemstore/%p1%/"
+	method	"internal"
+	filter	"store"
+}
+
+ItemStoreDetailPage
+{
+	url			"%store%/itemstore/%p1%/detail/%p2%"
+	method	"internal"
+	filter	"store"
+}
+
 StoreMediaSearchPage
 {
-	url		"%store%/search/?category1=999"
+	url			"%store%/search/?category1=999"
 	method		"internal"
 	filter		"store"
 }
 
 StoreGameSearchPage
 {
-	url		"%store%/search/"
+	url			"%store%/search/"
 	method		"internal"
 	filter		"store"
 }
 
 StoreAddFundsPage
 {
-	url		"%store%/steamaccount/addfunds/"
+	url			"%store%/steamaccount/addfunds/"
 	method		"internal"
 	filter		"store"
 }
 
 StoreAddFundsMicroTxnPage
 {
-	url		"%store%/steamaccount/addfunds/?microtxn=%p1%"
+	url			"%store%/steamaccount/addfunds/?microtxn=%p1%"
 	method		"internal"
 	filter		"store"
 }
 
 StoreAddCachedPmtMethodPage
 {
-	url		"%store%/checkout/?purchasetype=updatebillinginfo&microtxn=%p1%"
+	url			"%store%/checkout/?purchasetype=updatebillinginfo&microtxn=%p1%"
 	method		"internal"
 	filter		"store"
+}
+
+StoreJoinPage
+{
+	url			"%store%join/?l=%language%"
+	method		"internal"
 }
 
 GiftActivationPage
@@ -513,6 +533,14 @@ CommunitySearchForFriend
 	url		"%community%/search/users/?text=%p1%"
 	method	"internal"
 	filter	"friends"
+}
+
+SteamPreferences
+{
+	//link from client chrome to user's store preferences
+	url		"%storehttps%/account/preferences"
+	method	"internal"
+	filter	"profile"
 }
 
 StoreAccount

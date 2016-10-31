@@ -53,10 +53,10 @@
 		"scaleImage"		"1"
 		"image"				"resource/controller_cradle"
 	}
-	"SurveyControllerCradleDontKnow"
+	"SurveyControllerCradleNo"
 	{
 		"ControlName"		"RadioButton"
-		"fieldName"		"SurveyControllerCradleDontKnow"
+		"fieldName"		"SurveyControllerCradleNo"
 		"xpos"		"42"
 		"ypos"		"263"
 		"wide"		"350"
@@ -67,7 +67,7 @@
 		"enabled"		"1"
 		"tabPosition"		"1"
 		"paintbackground"		"1"
-		"labelText"		"#SteamUI_ValveSurvey_ControllerCradleDontKnow"
+		"labelText"		"#SteamUI_ValveSurvey_ControllerCradleNo"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
@@ -95,10 +95,10 @@
 		"selected"		"0"
 		"SubTabPosition"		"2"
 	}
-	"SurveyControllerCradleNo"
+	"SurveyControllerCradleDontHave"
 	{
 		"ControlName"		"RadioButton"
-		"fieldName"		"SurveyControllerCradleNo"
+		"fieldName"		"SurveyControllerCradleDontHave"
 		"xpos"		"42"
 		"ypos"		"311"
 		"wide"		"350"
@@ -109,7 +109,7 @@
 		"enabled"		"1"
 		"tabPosition"		"1"
 		"paintbackground"		"1"
-		"labelText"		"#SteamUI_ValveSurvey_ControllerCradleNo"
+		"labelText"		"#SteamUI_ValveSurvey_ControllerCradleDontHave"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"

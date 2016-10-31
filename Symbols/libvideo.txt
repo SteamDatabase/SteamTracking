@@ -1,6 +1,5 @@
 
  B CCDDBAppDetailCommon::default_instance_
- B CCompletionPortManager::s_bHasVistaIOCP
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
@@ -701,6 +700,8 @@
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
  R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
+ R typeinfo name for CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
+ R typeinfo name for CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
  R typeinfo name for CUtlLinkedList<AVPacket, int>
  R typeinfo name for CUtlLinkedList<CBaseScheduledFunction*, int>
  R typeinfo name for CUtlLinkedList<CCoroutine, int>
@@ -729,6 +730,7 @@
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlPriorityQueue<CVideoPlayer*>
  R typeinfo name for CUtlQueue<WSABUF_S>
+ R typeinfo name for CUtlQueueDeprecated<NetPacketToDelete_t>
  R typeinfo name for CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -1234,6 +1236,7 @@
  T CClientStructNetPacket::~CClientStructNetPacket()
  T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)
+ T CCompletionPortManager::BHasVistaIOCP()
  T CCompletionPortManager::CCompletionPortManager()
  T CCompletionPortManager::FreeCompletionData(CompletionData_t*)
  T CCompletionPortManager::PostIOCPMessage(CompletionData_t*)
@@ -1299,7 +1302,7 @@
  T CDummyCnxCallback::ConnectionDisconnected(unsigned int, EResult)
  T CDummyCnxCallback::RecvPkt(CNetPacket*)
  T CFileReader::BIsOpen() const
- T CFileReader::BOpenFile(char const*)
+ T CFileReader::BOpenFile(char const*, int)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::GetSize() const
  T CFileReader::Read(void*, unsigned int, unsigned int*)
@@ -1467,13 +1470,12 @@
  T CHTTPResponse::SetStatusCode(EHTTPStatusCode)
  T CHTTPResponse::Validate(CValidator&, char const*)
  T CHTTPResponse::~CHTTPResponse()
- T CHTTPUtil::BFindNextHeader(CHTTPRequestHandle*, CUtlBuffer*, unsigned int*, KeyValues*, bool*)
+ T CHTTPUtil::BFindNextHeader(CHTTPRequestHandle*, CUtlBuffer*, unsigned int*, KeyValues*, bool*, CUtlBuffer*)
  T CHTTPUtil::BStatusCodeAllowsBody(EHTTPStatusCode)
  T CHTTPUtil::BStatusCodeIsRedirect(EHTTPStatusCode)
  T CHTTPUtil::FindNextNonSpaceOrTabStringSection(unsigned char*, int, int, int*, int*)
  T CHTTPUtil::FindStringUntilCRLFStripLWS(unsigned char*, int, int, int*, int*)
  T CHTTPUtil::ResolveRelativeURL(char const*, char const*, char const*, bool)
- T CHTTPUtil::SetOrAppendHeader(KeyValues*, char const*, char const*)
  T CIMsgNetPacketAutoRelease::~CIMsgNetPacketAutoRelease()
  T CJob::BYieldingWaitForWorkItem(char const*, char const*)
  T CJob::Continue()
@@ -1484,6 +1486,7 @@
  T CJobMgr::GetPJob(unsigned long long, EJobPauseReason, bool)
  T CJobMgr::PauseJob(CJob&, EJobPauseReason)
  T CJobMgr::UpdateTimeoutPosition(int)
+ T CKeySymbol::CKeySymbol(char const*)
  T CKeyValuesSystem::AddKeyToLeakTrack(void*, unsigned int)
  T CKeyValuesSystem::AddStringToPool(char const*, int)
  T CKeyValuesSystem::CKeyValuesSystem()
@@ -2438,10 +2441,12 @@
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertOrReplace(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
+ T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU()
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CSmartPtr<COpenSSLCachedSession> const&)
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
  T CUtlLinkedList<AVPacket, int>::AllocInternal(bool)
  T CUtlLinkedList<AVPacket, int>::Free(int)
@@ -3879,6 +3884,8 @@
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::FindKey(char const*) const
  T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(unsigned int) const
+ T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
  T KeyValues::GetFirstSubKey() const
  T KeyValues::GetName() const
@@ -4184,8 +4191,8 @@
  T SteamThreadTools::CThread::GetPriority() const
  T SteamThreadTools::CThread::GetThreadProc()
  T SteamThreadTools::CThread::Init()
- T SteamThreadTools::CThread::IsAlive()
- T SteamThreadTools::CThread::IsThreadRunning()
+ T SteamThreadTools::CThread::IsAlive() const
+ T SteamThreadTools::CThread::IsThreadRunning() const
  T SteamThreadTools::CThread::Join(unsigned int)
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::Resume()
@@ -5356,6 +5363,7 @@
  b BUF_str_reasons
  b BVideoLibLoadX264()::s_bLoaded
  b CCrypto::GenerateRandomBlock(unsigned char*, int)::s_dev_urandom_fd
+ b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
@@ -5471,6 +5479,8 @@
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for StaticFileWriterThread()::s_pFileWriterThread
  b guard variable for _SpewMessageType::autoMutex__
+ b hksKVNameRequestHeaders
+ b hksSetCookie
  b id_callback
  b impl
  b initialized

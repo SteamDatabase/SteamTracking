@@ -371,6 +371,14 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
 }
 
+.ControllerTypePS4 #BackgroundController
+{
+	background-position: 500px 95px;
+    background-size: 725px 421px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_ps4.png");
+    wash-color: #102f4b72;
+}
+
 .BackgroundLines
 {
 	background-position: -96px -80px;
@@ -379,9 +387,31 @@ SelectMousePosition
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-#BackgroundBaseLines
+.ControllerTypePS4 #BackgroundBaseLinesLeft 
 {
-	background-image: url("file://{images}/library/controller/cropped_controller_config_lines.png");
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-position: 190px -74px;
+}
+
+.ControllerTypePS4 #BackgroundBaseLinesRight
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-position: 190px -70px;
+    transform: scalex( -1 );
+}
+
+#BackgroundBaseLinesLeft 
+{
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_steam.png");
+    background-position: 210px -78px;
+}
+
+
+#BackgroundBaseLinesRight
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_steam.png");
+    background-position: 230px -82px;
+    transform: scalex( -1 );
 }
 
 #BackgroundLines.LeftTriggerSelected
@@ -389,10 +419,29 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_1.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.LeftTriggerSelected
+{
+    background-position: -125px -73px;
+}
 
 #BackgroundLines.LeftBumperSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
+}
+
+.ControllerTypePS4 #BackgroundLines.LeftBumperSelected
+{
+    background-position: -125px -73px;
+}
+
+.ControllerTypePS4 #BackgroundLines.LeftGripSelected
+{
+    visibility: collapse;
+}
+
+.ControllerTypePS4 #BackgroundLines.RightGripSelected
+{
+    visibility: collapse;
 }
 
 
@@ -406,10 +455,20 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.RightTriggerSelected
+{
+    background-position: -62px -70px;
+}
+
 #BackgroundLines.RightBumperSelected
 
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_6.png");
+}
+
+.ControllerTypePS4 #BackgroundLines.RightBumperSelected
+{
+    background-position: -62px -70px;
 }
 
 #BackgroundLines.RightGripSelected
@@ -427,9 +486,19 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.SlotOneSelected
+{
+    background-position: -120px -73px;
+} 
+
 #BackgroundLines.SlotTwoSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
+}
+
+.ControllerTypePS4 #BackgroundLines.SlotTwoSelected
+{
+    background-position: -120px -73px;
 }
 
 #BackgroundLines.SlotThreeSelected
@@ -437,9 +506,30 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.SlotThreeSelected
+{
+    background-position: -62px -73px;
+}
+
+#BackgroundLines.SlotABXYSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
+}
+
+.ControllerTypePS4 #BackgroundLines.SlotABXYSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
+    background-position: -62px -73px;
+}
+
 #BackgroundLines.SlotFourSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
+}
+
+.ControllerTypePS4 #BackgroundLines.SlotFourSelected
+{
+    background-position: -62px -73px;
 }
 
 #BackgroundLines.BackButtonSelected
@@ -447,11 +537,20 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.BackButtonSelected
+{
+    background-position: -175px -130px;
+}
+
 #BackgroundLines.StartButtonSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_13.png");
 }
 
+.ControllerTypePS4 #BackgroundLines.StartButtonSelected
+{
+    background-position: -7px -130px;
+}
 
 .HasMultipleActionSets #BackgroundController
 {
@@ -473,6 +572,22 @@ SelectMousePosition
 	margin-bottom: 120px;
 }
 
+#PS4TrackpadContainer
+{
+	horizontal-align: center;
+	vertical-align: top;
+	margin-bottom: 0px;
+	width: 256px;
+	height: 128px;
+	flow-children: down;
+    visibility: collapse;
+}
+
+.ControllerTypePS4 #PS4TrackpadContainer
+{
+    visibility: visible;
+}
+
 #GyroModeContainer
 {
 	horizontal-align: center;
@@ -483,13 +598,14 @@ SelectMousePosition
 	flow-children: down;
 }
 
+
 .HasMultipleActionSets #GyroModeContainer
 {
 	margin-bottom: 85px;
     margin-right: 20px;
 }
 
-.BottomPanelVisible #GyroModeContainer
+.BottomPanelVisible #GyroModeContainer, .BottomPanelVisible #PS4TrackpadContainer
 {
 	visibility: collapse;
 }
@@ -506,7 +622,21 @@ SelectMousePosition
 	vertical-align: bottom;
 }
 
-#Gyro
+.ModeWrapper.Small
+{
+	background-color: #00000000;
+	height: 128px;
+	border: 0px;
+	align: center center;
+   	pre-transform-scale2d: 0.85;
+
+	border-radius: 16px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc44;
+}
+
+.Small
 {
 	width: 100%;
 	background-color: #00000000;
@@ -516,7 +646,98 @@ SelectMousePosition
    	pre-transform-scale2d: 0.85;
 }
 
-#Gyro:focus
+#PS4TrackpadHalfContainer
+{
+   flow-children: right;
+   align: center;
+}
+
+.CenterTrackpad
+{
+	height: 96px;
+}
+
+.CenterPadSplit .CenterTrackpad 
+{
+    visibility: collapse;
+}
+
+.CenterTrackpadHalf
+{
+	height: 96px;
+    width: 120px;
+    visibility: collapse;
+}
+
+.CenterPadSplit .CenterTrackpadHalf 
+{
+    visibility: visible;
+}
+
+
+.SwapCenterPadMode
+{
+	width: 100%;
+	height: 32px;
+	border: 0px;
+	align: center center;
+   	pre-transform-scale2d: 0.85;
+	wash-color: #00d4ffff;
+    background-size: 48px 24px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+
+	border-radius: 8px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc44;
+}
+
+.SwapCenterPadMode Label
+{
+	font-size: 16px;
+	font-family: platformfont;
+	color: #00ccff;
+    align: left center;
+    margin-left: 16px;
+}
+
+#SwapCenterPadModeToUnified
+{
+    visibility: collapse;
+    background-image: url("file://{images}/library/controller/centerpad_unified.png");
+}
+
+.CenterPadSplit #SwapCenterPadModeToUnified
+{
+    visibility: visible;
+}
+
+#SwapCenterPadModeToSplit 
+{
+    visibility: visible;
+    background-image: url("file://{images}/library/controller/centerpad_split.png");
+}
+
+.CenterPadSplit #SwapCenterPadModeToSplit
+{
+    visibility: collapse;
+}
+
+.SwapCenterPadMode:focus
+{
+	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
+	border-color: white;
+	
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.Small:focus
 {
 	background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
 }
@@ -538,6 +759,28 @@ SelectMousePosition
 {
 	margin-right: 24px;
 }
+
+.ModeWrapper.SteamController
+{
+	visibility: visible;
+}
+
+.ControllerTypePS4 .ModeWrapper.SteamController
+{
+	visibility: collapse;
+}
+
+.ControllerTypePS4 .ModeWrapper.TraditionalController
+{
+	visibility: visible;
+}
+
+.ModeWrapper.TraditionalController
+{
+	visibility: collapse;
+}
+
+
 
 .ModeWrapper.Trigger
 {
@@ -579,8 +822,6 @@ ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 
 
 
-
-
 .ControllerMode
 {
 	width: 100%;
@@ -606,12 +847,13 @@ Label.ModeTitle
 	visibility: collapse;
 }
 
-#Gyro Label.ModeTitle
+.Small Label.ModeTitle
 {
     horizontal-align: center;
 	margin-left: 0px;
 	margin-right: 0px;
     font-size: 22px;
+    visibility: visible;
 }
 
 .NeedsTitle Label.ModeTitle
@@ -628,12 +870,12 @@ Label.ModeTitle
 	margin-top: 12px;
 }
 
-#Gyro ControllerBindingButton
+.Small ControllerBindingButton
 {
     horizontal-align: left;
 }
 
-#Gyro #BindingSlotContainer
+.Small #BindingSlotContainer
 {
 	width: 100%;
 }
@@ -658,7 +900,7 @@ Label.ModeTitle
 	background-image: url("file://{images}/library/controller/api/gyro.png");
 	//background-color: #00000000;
 	background-size: 60px 60px;
-	background-position: 50% 5%;
+	background-position: 50% 50%;
 }
 
 #SourceModeLines
@@ -677,9 +919,29 @@ Label.ModeTitle
 	margin-top: 23px;
 }
 
-#Right.BindingSlotStrip
+.Right.BindingSlotStrip
 {
 	horizontal-align: right;
+}
+
+.BindingButton.Steam
+{
+    visibility: visible;
+}
+
+.ControllerTypePS4 .BindingButton.Steam
+{
+    visibility: collapse;
+}
+
+.BindingButton.Playstation
+{
+    visibility: collapse;
+}
+
+.ControllerTypePS4 .BindingButton.Playstation
+{
+    visibility: visible;
 }
 
 ControllerBindingButton.BindingButton
@@ -799,7 +1061,7 @@ ControllerBindingButton.BindingButton.Right
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.BottomPanelVisible #Right.BindingSlotStrip
+.BottomPanelVisible .Right.BindingSlotStrip
 {
 	transform: translatex( bindingbuttonwidth );
 	opacity: 0.0;
@@ -856,6 +1118,7 @@ ControllerPropertiesMode, ControllerPropertiesActivator
 	opacity: 0.0;
 }
 
+
 .ControllerMode ControllerBindingButton
 {
 	horizontal-align: left;
@@ -908,6 +1171,12 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-bottom: 4px;
 }
 
+
+.ControllerTypePS4 #ModeContainer #ABXYButtonA
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_x.png");
+}
+
 #ModeContainer #ABXYButtonA
 {
 	background-image: url("file://{images}/library/controller/api/button_a.png");
@@ -916,6 +1185,11 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	color: #42ff00;
 	margin-left: 65px;
+}
+
+.ControllerTypePS4 #ModeContainer #ABXYButtonB
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_circle.png");
 }
 
 #ModeContainer #ABXYButtonB
@@ -928,6 +1202,11 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
+.ControllerTypePS4 #ModeContainer #ABXYButtonX
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_square.png");
+}
+
 #ModeContainer #ABXYButtonX
 {
 	background-image: url("file://{images}/library/controller/api/button_x.png");
@@ -936,6 +1215,11 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	color: #01c4f5;
 	margin-left: 65px;
+}
+
+.ControllerTypePS4 #ModeContainer #ABXYButtonY
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_triangle.png");
 }
 
 #ModeContainer #ABXYButtonY
@@ -978,20 +1262,31 @@ ControllerSourceModeJoystickMove.ControllerMode ControllerBindingButton
 	margin-bottom: 6px;
 }
 
-#Gyro.ControllerMode ControllerBindingButton
+ControllerSourceModeJoystickMouse.ControllerMode ControllerBindingButton
+{
+    height: 48px;
+	margin-bottom: 6px;
+}
+
+.Small.ControllerMode ControllerBindingButton
 {
     height: 24px;
 	margin-bottom: 6px;
 }
 
-#Gyro ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
+.Small ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
 {
     height: 24px;
 }
 
-#Gyro ControllerSourceModeMouseJoystick.ControllerMode ControllerBindingButton
+.Small ControllerSourceModeMouseJoystick.ControllerMode ControllerBindingButton
 {
     height: 24px;
+}
+
+.CenterTrackpad .ControllerMode ControllerBindingButton, .CenterTrackpadHalf .ControllerMode ControllerBindingButton
+{
+    visibility: collapse;
 }
 
 #GyroModeContainer #GyroLeanLeft
@@ -2556,13 +2851,13 @@ ChooseBinding.RStickRightBound #GamepadBoundLayer
 
 ChooseBinding.RStickUpBound #GamepadBoundLayer
 {
-	background-position: 285px 177px;
+	background-position: 285px 147px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_up.png" ); 
 }
 
 ChooseBinding.RStickDownBound #GamepadBoundLayer
 {
-	background-position: 285px 147px;
+	background-position: 285px 177px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs_down.png" ); 
 }
 
@@ -3434,6 +3729,10 @@ ControllerConfigButton #Author
 }
 
 
+
+
+
+
 ControllerConfigButton #Description
 {
 	margin-top: 8px;
@@ -3442,6 +3741,26 @@ ControllerConfigButton #Description
 	font-family: platformfont;
 	font-weight: thin;
 	color: #75c7fdff;
+}
+
+ControllerConfigButton #ControllerType
+{
+	font-size: 16px;
+	font-family: platformfont;
+	align: right bottom;
+	color: white;
+	width: 400px;	
+	margin-bottom: 10px;
+	margin-right: 15px;
+	visibility: collapse;
+	font-weight: bold;
+	text-align: right;
+	z-index: 2;
+}
+
+ControllerConfigButton.ShowAllControllerTypes #ControllerType
+{
+    visibility: visible;
 }
 
 ControllerConfigButton #Votes
@@ -3464,6 +3783,7 @@ ControllerConfigBrowser.SelectCommunityBindings #Votes
 	visibility: visible;
 }
 
+
 ControllerConfigButton.SaveButton #Votes
 {
 	visibility: collapse;
@@ -3474,14 +3794,45 @@ ControllerConfigBrowser.SelectPersonalBindings .PersonalBinding
 	visibility: visible;
 }
 
+ControllerConfigButton.ShowAllControllerTypes.SelectPersonalBindings .PersonalBinding
+{
+    visibility: visible;
+}
+
 ControllerConfigBrowser.SelectCommunityBindings .CommunityBinding
 {
 	visibility: visible;
 }
 
-ControllerConfigBrowser.SelectTemplateBindings .TemplateBinding
+ControllerConfigBrowser.SelectTemplateBindings .ConfigMatchesCotrollerType.TemplateBinding
 {
-	visibility: visible;
+    visibility: visible;
+}
+
+ControllerConfigBrowser.SelectTemplateBindings .SaveButton.TemplateBinding
+{
+    visibility: visible;
+}
+
+ControllerConfigBrowser.SelectTemplateBindings.HideSaveButtons .SaveButton.TemplateBinding
+{
+	visibility: collapse;
+}
+
+
+ControllerConfigBrowser.SelectTemplateBindings .ShowAllControllerTypes.TemplateBinding
+{
+    visibility: visible;
+}
+
+ControllerConfigButton.ConfigMatchesCotrollerType.SelectTemplateBindings .TemplateBinding
+{
+    visibility: visible;
+}
+
+ControllerConfigButton.ShowAllControllerTypes.SelectTemplateBindings .TemplateBinding
+{
+    visibility: visible;
 }
 
 ControllerConfigBrowser.SelectRecommendedBindings .RecommendedBinding

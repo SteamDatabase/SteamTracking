@@ -162,6 +162,12 @@ SettingsPanel
 	font-size: 24px;
 }
 
+.LongDesc.Small
+{
+    font-size: 22px;
+    font-weight: light;
+}
+
 .NetworkSettingsButtonLabel
 {
 	padding-right: 10px;
@@ -1378,6 +1384,26 @@ KeyboardShortcut,.KeyboardShortcut
 	margin-bottom: 0px;
 }
 
+#InGameControllerScreenshotGamepad
+{
+    visibility: visible;
+}
+
+.SteamControllerPresent #InGameControllerScreenshotGamepad
+{
+	visibility: collapse;
+}
+
+#InGameControllerScreenshotSteamController
+{
+	visibility: collapse;
+}
+
+.SteamControllerPresent #InGameControllerScreenshotSteamController
+{
+	visibility: visible;
+}
+
 #OverlayKey
 {
 	width: 475px;
@@ -1541,6 +1567,11 @@ KeyboardShortcut .Graphic
 
 	height: 100%;
 	visibility: visible;
+}
+
+.NonSteamControllerDetails .SteamControllerDetails
+{
+    visibility: collapse;
 }
 
 .SettingsControllerName

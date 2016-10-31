@@ -2104,6 +2104,8 @@
  R typeinfo name for CUtlMap<unsigned long long, int, int, bool (*)(unsigned long long const&, unsigned long long const&)>
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
+ R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >

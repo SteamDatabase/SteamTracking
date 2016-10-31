@@ -2685,6 +2685,7 @@
  R typeinfo name for CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>
  R typeinfo name for CUtlPtr<panorama::CStyleFileKey>
  R typeinfo name for CUtlQueue<Vector2D>
+ R typeinfo name for CUtlQueueDeprecated<NetPacketToDelete_t>
  R typeinfo name for CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -3225,6 +3226,7 @@
  SDL_GameControllerGetJoystick
  SDL_GameControllerMapping
  SDL_GameControllerName
+ SDL_GameControllerNameForIndex
  SDL_GameControllerOpen
  SDL_GetClipboardText
  SDL_GetDisplayBounds
@@ -3254,6 +3256,7 @@
  SDL_JoystickGetGUIDString
  SDL_JoystickInstanceID
  SDL_JoystickName
+ SDL_JoystickNameForIndex
  SDL_JoystickNumAxes
  SDL_JoystickNumButtons
  SDL_JoystickOpen
@@ -3282,7 +3285,7 @@
  SteamThreadTools::CThread::GetPriority() const
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
- SteamThreadTools::CThread::IsThreadRunning()
+ SteamThreadTools::CThread::IsThreadRunning() const
  SteamThreadTools::CThread::Join(unsigned int)
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::Resume()
@@ -10809,6 +10812,7 @@
  T panorama::CTopLevelWindow::BOnMoveEdge(panorama::EFocusMoveDirection)
  T panorama::CTopLevelWindow::BWasGamepadConnectedThisSession()
  T panorama::CTopLevelWindow::BWasGamepadUsedThisSession()
+ T panorama::CTopLevelWindow::BWasPS4ControllerConnectedThisSession()
  T panorama::CTopLevelWindow::BWasSteamControllerConnectedThisSession()
  T panorama::CTopLevelWindow::BWasSteamControllerUsedThisSession()
  T panorama::CTopLevelWindow::CTopLevelWindow(panorama::CUIEngine*)
@@ -12551,6 +12555,7 @@
  T panorama::CUIWindowInput::BWasMouseLastInputSource()
  T panorama::CUIWindowInput::BWasMouseMoving()
  T panorama::CUIWindowInput::BWasMouseOrKeyboardUsedThisSession() const
+ T panorama::CUIWindowInput::BWasPS4ControllerConnectedThisSession()
  T panorama::CUIWindowInput::BWasSteamControllerConnectedThisSession()
  T panorama::CUIWindowInput::BWasSteamControllerUsedThisSession()
  T panorama::CUIWindowInput::CUIWindowInput(panorama::CTopLevelWindow*, panorama::CUIInputEngine*)
