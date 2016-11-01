@@ -101,6 +101,11 @@ body.v6 h2.curator_name a {
 	padding-top: 10px;
 }
 
+.curator_recommendations .page_header_ctn {
+	padding-bottom: 80px;
+	margin-bottom: -48px;
+}
+
 /* giant capsule */
 
 .curator_giant_capsule {
@@ -179,6 +184,11 @@ body.v6 h2.curator_name a {
 }
 
 /* highlighted recommendation */
+.store_capsule_frame.initial_recommendation {
+	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);	margin-top: 50px;
+}
+
+
 .highlighted_recommendation
 {
 	margin-top: 5px;

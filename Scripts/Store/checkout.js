@@ -878,6 +878,9 @@ function OnInitializeTransactionFailure( detail, result )
 				case 53:
 					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
 					break;
+				case 13:
+					error_text = 'Your purchase could not be completed because there are items in your cart that are restricted in your country.';
+					break;
 				default:
 					break;
 			}

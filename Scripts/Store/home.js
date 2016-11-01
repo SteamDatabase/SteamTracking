@@ -113,6 +113,8 @@ GHomepage = {
 			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
 			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
 			GHomepage.rgCuratorExtendedAppData = rgParams.rgCuratorExtendedAppData || {};
+			GHomepage.bHideAdultContentViolence = rgParams.bHideAdultContentViolence || false;
+			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || {};
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -204,6 +206,7 @@ GHomepage = {
 		GHomepage.oDisplayLists.main_cluster = GHomepage.oDisplayListsRaw.main_cluster || [];
 		GHomepage.oDisplayLists.top_sellers = GHomepage.oDisplayListsRaw.top_sellers || [];
 		GHomepage.oDisplayLists.popular_new = GHomepage.oDisplayListsRaw.popular_new_releases || [];
+		GHomepage.oDisplayLists.specials = GHomepage.oDisplayListsRaw.specials || [];
 		GHomepage.oDisplayLists.new_on_steam = GHomepage.MergeLists(
 			GHomepage.oDisplayListsRaw.featured_items, true,
 			GHomepage.oDisplayLists.popular_new, false
@@ -242,7 +245,9 @@ GHomepage = {
 				HomeSettings = new CHomeSettings( 'main_cluster', GHomepage.RenderMainCluster );
 				$J('.main_cluster_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
-						GHomepage.RenderMainCluster();
+			GHomepage.RenderMainCluster();
+			
+
 
 		} catch( e ) { OnHomepageException(e); }
 
@@ -264,6 +269,11 @@ GHomepage = {
 				$J('.home_smallcap_area.popular_new_on_steam .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
 			}
 			GHomepage.RenderPopularNewOnSteam();
+		} catch( e ) { OnHomepageException(e); }
+
+		// Spotlight/specials section
+		try {
+			GHomepage.RenderSpotlightSection();
 		} catch( e ) { OnHomepageException(e); }
 
 		
@@ -419,6 +429,283 @@ GHomepage = {
 			$J ( elBestTarget ).show ();
 		}
 
+	},
+
+	RenderMainClusterV2: function()
+	{
+		var rgDisplayListCombined = false;
+		if ( g_AccountID == 0 )
+		{
+			rgDisplayListCombined = GHomepage.ZipLists(
+				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
+				GHomepage.oDisplayLists.top_sellers, true,
+				GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true,
+				GHomepage.oDisplayLists.main_cluster, true // Legacy
+
+			);
+		}
+		else
+		{
+			rgDisplayListCombined = GHomepage.ZipLists(
+				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
+				GHomepage.rgRecommendedGames, true,
+				GHomepage.rgCuratedAppsData.apps, true,
+				GHomepage.rgFriendRecommendations, true,
+				GHomepage.oDisplayLists.main_cluster, true // Legacy
+
+			);
+		}
+
+		var rgMainCaps = GHomepage.FilterItemsForDisplay(
+			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
+		);
+
+		GDynamicStore.MarkAppDisplayed( rgMainCaps );
+
+		if ( GHomepage.bShuffleInMainLegacy )
+			rgMainCaps = v_shuffle( rgMainCaps );
+
+		var $CapTarget = $J('#home_maincap_v7 .carousel_items');
+		var $CapThumbs = $J('#home_maincap_v7 .carousel_thumbs');
+
+		for ( var i = 0; i < rgMainCaps.length && i < 12; i++ )
+		{
+			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgMainCaps[i] ) ] = true;
+
+			var $MainCap =  GHomepage.BuildMainCapsuleItem( 'maincap', rgMainCaps[i].appid, rgMainCaps[i].packageid );
+			if( !$MainCap )
+				continue;
+			var $Thumb = $J('<div />');
+
+
+			$CapTarget.append( $MainCap );
+			$CapThumbs.append( $Thumb );
+		}
+
+		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
+	},
+
+	GetAppFromList: function( unAppId, rgList )
+	{
+		if( rgList )
+		{
+
+			for ( var i = 0; i < rgList.length; i++ )
+			{
+				if ( rgList[i].appid == unAppId )
+				{
+					return rgList[i];
+				}
+			}
+		}
+
+		return null;
+	},
+
+	GetRecommendationReasons: function( unAppId )
+	{
+		if( !unAppId )
+			return false;
+
+		return {
+			recommended: GHomepage.GetAppFromList( unAppId, GHomepage.rgRecommendedGames ),
+			recommended_by_curator: GHomepage.GetAppFromList( unAppId, GSteamCurators.rgAppsRecommendedByCurators.apps ),
+			recommended_by_friend: GHomepage.GetAppFromList( unAppId, GHomepage.rgFriendRecommendations ),
+			top_seller: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.top_sellers ),
+			new_release: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.popular_new ),
+		};
+
+	},
+
+	BuildMainCapsuleItem: function( strFeatureContext, unAppID, unPackageID )
+	{
+		var rgOptions = $J.extend({
+			'class': 'store_main_capsule',
+		}, rgOptions ? rgOptions : {} );
+
+		var params = { 'class': rgOptions.class };
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		if ( !rgItemData )
+			return null;
+
+		var $CapCtn = $J('<a/>', params );
+		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+
+		var $ImgCtn = $J('<div class="capsule"/>').addClass( 'main_capsule' ).css({ 'background-image': 'url(' + rgItemData.main_capsule + ')' });
+
+		//var $ImgCap = $J('<img/>', { src: rgItemData.main_capsule } );
+		$ImgCtn.data('capsule', rgItemData.main_capsule  );
+		//$ImgCtn.append( $ImgCap );
+		$CapCtn.append( $ImgCtn );
+
+		var fnScreenshotMouseOver = function( $elMainCap, strScreenshotURL ){
+			return function(){
+				$elMainCap.css({ 'background-image': 'url(' + strScreenshotURL + ')' });
+			};
+		};
+
+		var fnScreenshotMouseOut = function( $elMainCap ){
+			return function(){
+				$elMainCap.css({ 'background-image': 'url(' + $elMainCap.data('capsule') + ')' });
+			};
+		};
+
+
+
+
+		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
+
+		var rgScreenshots = rgItemData.screenshots;
+		var unScreenshotAppId = unAppID;
+		if( !rgScreenshots && rgItemData.appids )
+		{
+			for( var i=0; i<rgItemData.appids.length; i++)
+			{
+				var rgAppInfo = GStoreItemData.rgAppData[ rgItemData.appids[i] ];
+				if( rgAppInfo && rgAppInfo.screenshots )
+				{
+					rgScreenshots = rgAppInfo.screenshots;
+					unScreenshotAppId = rgItemData.appids[i];
+					console.log("FOUND ONE with appid %s", rgItemData.appids[i]);
+					console.log( rgAppInfo );
+					break;
+				}
+			}
+		}
+
+		for( var i=0; i < 4 && i < rgScreenshots.length; i++ )
+		{
+
+			var $ImgScreenshot = $J('<div/>').css({'background-image': 'url(' + GetScreenshotURL( unScreenshotAppId, rgScreenshots[i].filename, '.600x338' ) + ')' });
+
+			$ImgScreenshot.on('mouseover', fnScreenshotMouseOver( $ImgCtn, GetScreenshotURL( unScreenshotAppId, rgScreenshots[i].filename, '.600x338' ) ));
+			$ImgScreenshot.on('mouseout', fnScreenshotMouseOut( $ImgCtn ));
+
+
+			$ScreenshotCtn.append( $ImgScreenshot );
+		}
+
+		if( $ScreenshotCtn.children().length > 0 )
+			$CapCtn.append($ScreenshotCtn);
+		else
+			$CapCtn.addClass('no_screenshots');
+
+		// Recommendation reason block
+		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( unAppID );
+		var $RecommendedReason = $J('<div/>').addClass('reason');
+
+
+
+		// Show the "main" reason
+		if( rgRecommendationReasons.recommended_by_friend )
+		{
+			var reason = rgRecommendationReasons.recommended_by_friend;
+			rgRecommendationReasons.recommended_by_friend = false;
+			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] )
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).data('ds-miniprofile', friend.accountid );
+
+			$RecommendedReason.append( $ReasonAvatar );
+			$RecommendedReason.append( $ReasonMain );
+
+		}
+		else if( rgRecommendationReasons.recommended_by_curator )
+		{
+			var reason = rgRecommendationReasons.recommended_by_curator;
+			rgRecommendationReasons.recommended_by_curator = false;
+			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 )
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended by <span>%1$s<\/span>".replace("%1$s", curator.name ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar, '_medium' ) ) );
+
+			$RecommendedReason.append( $ReasonAvatar );
+			$RecommendedReason.append( $ReasonMain );
+		}
+		else if( rgRecommendationReasons.recommended && GDynamicStore.s_rgRecommendedTags )
+		{
+			var reason = rgRecommendationReasons.recommended;
+			rgRecommendationReasons.recommended = false;
+			var rgMatchedTags = [];
+
+			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length <= 3; i++ )
+			{
+				if( rgItemData.tags.indexOf( GDynamicStore.s_rgRecommendedTags[i].name ) !== -1 )
+					rgMatchedTags.push( GDynamicStore.s_rgRecommendedTags[i].name );
+
+			}
+
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended because you played games tagged with <span>%1$s<\/span>".replace("%1$s", rgMatchedTags.join(', ') ) );
+			$RecommendedReason.append( $ReasonMain );
+
+		}
+		else {
+			// Fall back to old logic
+			var rgData =  unAppID ? GStoreItemData.rgAppData[ unAppID ] : GStoreItemData.rgPackageData[ unPackageID ];
+
+			var strStatus = '';
+			if ( rgItemData.status_string )
+				strStatus = rgItemData.status_string;
+			else if ( rgData && rgData.early_access )
+				strStatus = 'Early Access Now Available';
+			else if ( rgItemData.new_on_steam )
+				strStatus = 'New On Steam';
+			else if ( rgItemData.top_seller )
+			{
+				strStatus = 'Top Seller';
+				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
+			}
+			else if ( rgData && rgData.coming_soon )
+				strStatus = 'Pre-Purchase Now';
+			else if ( rgData && rgData.video )
+				strStatus = 'Now Available to Watch';
+			else
+				strStatus = 'Now Available';
+			var $ReasonMain = $J('<div/>').addClass('main').text( strStatus );
+			$RecommendedReason.append( $ReasonMain );
+		}
+
+		// Now show any additional reasons we might have to show it
+		var $ReasonAdditional = $J('<div/>').addClass('additional');
+
+		for( var key in rgRecommendationReasons )
+		{
+			var reason = rgRecommendationReasons[key];
+			if( !reason )
+				continue;
+
+			var strReason = '';
+
+			if( key == 'top_seller' )
+				strReason = "Top Seller";
+
+			if( key == 'new_release' )
+				strReason = "New Release";
+
+			if( key == 'recommended')
+				strReason = "Similar to games you play";
+
+			$ReasonAdditional.append($J('<div/>').html( strReason ) );
+
+		}
+
+		$RecommendedReason.append($ReasonAdditional);
+		$CapCtn.append($RecommendedReason);
+
+
+		// Discount block
+		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
+
+		// Platform icons
+		var $PlatformContainer  = $J('<div/>').addClass('platforms');
+		if( rgItemData.os_windows)
+			$PlatformContainer.append($J('<span>').addClass('platform_img').addClass('win'));
+		if( rgItemData.os_macos)
+			$PlatformContainer.append($J('<span>').addClass('platform_img').addClass('mac'));
+		if( rgItemData.os_linux)
+			$PlatformContainer.append($J('<span>').addClass('platform_img').addClass('linux'));
+
+		$CapCtn.append($PlatformContainer);
+
+		return $CapCtn;
 	},
 
 
@@ -610,6 +897,39 @@ GHomepage = {
 			$J('.home_friends_purchased_area').hide();
 			$J('.home_top_sellers_area').show();
 		}
+	},
+	RenderSpotlightSection: function()
+	{
+
+		$J('.specials_target').each(function(i,j){
+			var rgCapsules = GHomepage.FilterItemsForDisplay(
+				GHomepage.oDisplayLists.specials, 'home', 1, 1, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			);
+			if( !rgCapsules )
+				return;
+
+			GDynamicStore.MarkAppDisplayed ( rgCapsules );
+
+
+			oItem = rgCapsules[ 0 ];
+			var strHTMLID = oItem.appid + '_special_timer';
+
+			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, {
+					'discount_class': 'daily_deal_discount discount_block_large',
+				//'additional_classes': array( $strClass ),
+				'html_before_price': '<div class="dailydeal_desc">' +
+					'	<div>Limited Time Offer</div>' +
+					'	<div id="'+strHTMLID+'" class="dailydeal_countdown"></div>' +
+					'</div>'
+			} ) );
+
+			$J( function() {
+				InitDailyDealTimer( $J('#'+strHTMLID),oItem.discount_end);
+			});
+
+
+		});
+
 	},
 
 	// Unused
@@ -887,7 +1207,7 @@ GHomepage = {
 		var rgLists = [];
 		for ( var iArg = 0; iArg < args.length; iArg++ )
 		{
-			var rgList = args[iArg];
+			var rgList = args[iArg] || [];
 			if ( iArg + 1 < args.length && args[++iArg] )
 				rgList = v_shuffle( rgList );
 			rgLists.push( rgList );
@@ -990,7 +1310,8 @@ GHomepage = {
 			'class': 'store_capsule',
 			'include_title': false,
 			'discount_class': 'discount_block_inline',
-			'capsule_size': 'header'
+			'capsule_size': 'header',
+			'html_before_price': ''
 		}, rgOptions ? rgOptions : {} );
 
 		var params = { 'class': rgOptions.class };
@@ -1007,6 +1328,10 @@ GHomepage = {
 		$CapCtn.append( $ImgCtn );
 		if( rgOptions.include_title )
 			$CapCtn.append( $J('<div/>', {'class': 'title ellipsis' } ).html( rgItemData.name ) );
+
+		if( rgOptions.html_before_price )
+			$CapCtn.append( rgOptions.html_before_price );
+
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
 
 		return $CapCtn;
@@ -1031,6 +1356,12 @@ GHomepage = {
 			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
 
 		}
+
+		if ( GHomepage.bHideAdultContentViolence )
+			Settings = jQuery.extend({}, Settings, {hide_adult_content_violence: true});
+
+		if ( GHomepage.bHideAdultContentSex )
+			Settings = jQuery.extend({}, Settings, {hide_adult_content_sex: true});
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = cMinItemsToDisplay;
@@ -1474,8 +1805,11 @@ function GetAvatarURL( strAvatarHash, sizeStr )
 	return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + sizeStr + '.jpg';
 }
 
-function GetScreenshotURL( appid, filename )
+function GetScreenshotURL( appid, filename, sizeStr )
 {
+	if( sizeStr )
+		return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+
 	return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename;
 }
 
@@ -1601,7 +1935,7 @@ GSteamCurators = {
 		var params = { 'class': 'curator_giant_capsule' };
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 		var rgItemExtemdedData = GHomepage.rgCuratorExtendedAppData[ unAppID ];
-		if ( !rgItemData || !rgItemExtemdedData )
+		if ( !rgItemData || !rgItemExtemdedData || !rgItemData.screenshots || rgItemData.screenshots.length < 4 )
 			return null;
 
 		var $Item = $J('<a/>', params );
@@ -1613,7 +1947,8 @@ GSteamCurators = {
 		// app image anchor
 		var $ImageCapsule= $J ('<div/>'  );
 		$ImageCapsule.addClass('capsule');
-		var $Image = $J('<img/>', { src: rgItemExtemdedData.maincap } );
+
+		var $Image = $J('<img/>', { src: rgItemData.main_capsule } );
 		$Image.bind('error', function(){
 			$Image.attr('src', rgItemData.headerv5  );
 			$Image.css({'width': '470px'  });
@@ -1628,7 +1963,7 @@ GSteamCurators = {
 		// Add four screenshots
 		for( var i=0; i<4; i++)
 		{
-			var screenshot = rgItemExtemdedData.screenshots[i];
+			var screenshot = rgItemData.screenshots[i];
 
 			$ScreenshotCtn.append( $J('<div>', {'class': 'screenshot'}).css({'background-image': 'url(' + GetScreenshotURL( unAppID, screenshot.filename ) + ')' } ) );
 		}
@@ -1735,7 +2070,7 @@ GSteamCurators = {
 				for( var j=0; j<rgRecommendedApps.length; j++ in rgRecommendedApps )
 				{
 					var appid = rgRecommendedApps[j].appid;
-					if( !GHomepage.rgCuratorExtendedAppData[appid] )
+					if( !GHomepage.rgCuratorExtendedAppData || !GHomepage.rgCuratorExtendedAppData[appid] )
 						continue;
 					// Find the item info in the unfiltered apps list
 					var oItem = false;
@@ -1748,13 +2083,16 @@ GSteamCurators = {
 						}
 					}
 
-					if( !oItem )
+					var $Item = GSteamCurators.BuildHomePageGiantCap( 'curated_main_app', oItem );
+					if( !$Item )
 						continue;
 
 					nGiantCapAppId = appid;
-					$J('.giant_curator_capsule').show();
-					var $Item = GSteamCurators.BuildHomePageGiantCap( 'curated_main_app', oItem );
 					$J('.giant_curator_capsule').empty().append($Item);
+					$J('.giant_curator_capsule').show();
+					$J('.giant_curator_controls').show();
+					$J('.giant_curator_title').show();
+
 
 					var $elButtonWishlist = $J('<span />').text("Add to Wishlist");
 

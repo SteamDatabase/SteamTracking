@@ -1275,6 +1275,34 @@ a.headlineLink:hover {
 .announcement_TagWorkshopText {
 }
 
+
+/* ===== CURATOR STUFF ======== */
+
+#group_tab_content_curation {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+#group_tab_content_curation h1 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 28px;
+}
+
+.curation_ctn .subtext {
+	margin-top: 0px;
+}
+
+.curation_admin_title {
+	color: #ffffff;
+	font-size: 17px;
+	line-height: 31px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
 #group_tab_content_curation.grouppage_content_area h2 {
     font-size: 17px;
 }
@@ -1312,8 +1340,30 @@ a.headlineLink:hover {
 	padding: 14px 0px 4px 0px;
 }
 
+.curation_app_form div.type_option {
+	padding-top: 0px;
+}
+.curation_app_form div.type_option input {
+	vertical-align: bottom;
+}
+.curation_app_form div.subheader {
+	padding-top: 0px;
+}
+
 .curation_app_form_section_header {
 	color: white;
+}
+.curation_app_form_section_header.existing_curation {
+	padding-top: 0px;
+}
+
+.curation_app_form_section_header .new {
+	background-color: #a3cf06;
+	color: #1b2838;
+	font-size: 11px;
+	margin-right: 4px;
+	padding: 2px;
+	font-weight: bold;
 }
 
 #curationAppInput {
@@ -1387,10 +1437,10 @@ a.headlineLink:hover {
 		font-weight: 300; /* light */
 
 			font-style: italic;
-	font-style: normal;
 	padding-top: 4px;
-	font-size: 13px;
-	color: white;
+	font-size: 14px;
+	color: #cccccc;
+	line-height: 17px;
 }
 
 .curation_app_block_link {
@@ -1595,10 +1645,9 @@ a.headlineLink:hover {
 }
 .panel .hr {
     position: relative;
-    left: -10px;
     height: 1px;
-    background-color: #000;
-    border-bottom: 1px solid #333;
+	background-color: #1e323f;
+	border-top: 1px solid #000000;
     width: 290px;
 }
 .panel .hr.padded {

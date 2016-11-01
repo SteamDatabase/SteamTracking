@@ -2592,7 +2592,11 @@ a.cluster_capsule:hover {
 	color: #577180;
 }
 
-.store_capsule .discount_block .discount_pct {
+.store_capsule .discount_block.discount_block_large .discount_prices {
+	padding: 4px 10px 4px 7px
+}
+
+.store_capsule .discount_block:not(.discount_block_large) .discount_pct {
 	font-size: 11px;
 }
 

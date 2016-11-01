@@ -235,15 +235,14 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 
 		var fnAddExcludedTag = function( strUserTag ) {
 			// find the tag
-			var regexNormalize = new RegExp( /\W/g );
-			var strNormalizedUserTag = strUserTag.replace( regexNormalize, '').toLowerCase();
+			var strNormalizedUserTag = strUserTag.toLowerCase();
 			for ( var i = 0; i < rgGlobalPopularTags.length; i++ )
 			{
 				var globalTag = rgGlobalPopularTags[i];
 				var strNameNormalized = globalTag.name_normalized;
 				if ( !strNameNormalized )
 				{
-					strNameNormalized = globalTag.name_normalized = globalTag.name.replace( regexNormalize, '').toLowerCase();
+					strNameNormalized = globalTag.name_normalized = globalTag.name.toLowerCase();
 				}
 
 				if ( strNormalizedUserTag == strNameNormalized )

@@ -947,6 +947,7 @@ GStoreItemData = {
 	rgAppData: {},
 	rgPackageData: {},
 	rgBundleData: {},
+	rgAccountData: {},
 	rgNavParams: {},
 	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
 	nCurrencyMinPriceIncrement : 1,
@@ -985,6 +986,37 @@ GStoreItemData = {
 				GStoreItemData.rgBundleData[bundleid] = rgBundles[bundleid];
 			}
 		}
+	},
+
+	AddStoreAccountData: function( rgAccounts )
+	{
+		if ( rgAccounts && typeof rgAccounts.length == 'undefined' )
+		{
+			for ( var steamid in rgAccounts )
+			{
+				GStoreItemData.rgAccountData[steamid] = rgAccounts[steamid];
+			}
+		}
+	},
+
+	GetAccountData: function( steamid, accountid, type )
+	{
+		if( steamid && GStoreItemData.rgAccountData[steamid] )
+			return GStoreItemData.rgAccountData[steamid];
+
+		// Assume individual account unless otherwise specified.
+		if( !type )
+			type = 1;
+
+		// Search for an accountid instead
+		for( var steamid in GStoreItemData.rgAccountData )
+		{
+			var account = GStoreItemData.rgAccountData[steamid];
+
+			if( account.accountid == accountid && account.type == type )
+				return account;
+		}
+
 	},
 
 	SetCurrencyFormatter: function( fn )
@@ -1210,6 +1242,12 @@ GStoreItemData = {
 		if ( rgItemData.coming_soon && ApplicableSettings.prepurchase && !Settings.prepurchase )
 			return false;
 
+		if ( rgItemData.has_adult_content_violence && Settings.hide_adult_content_violence )
+			return false;
+
+		if ( rgItemData.has_adult_content_sex && Settings.hide_adult_content_sex )
+			return false;
+
 		return true;
 	},
 
@@ -1286,5 +1324,10 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 			ShowAlertDialog( 'How does this work?', data );
 		}
 	);
+}
+
+function GetAvatarURL( strHash, strSize )
+{
+	return "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/" + strHash.substring( 0, 2 ) + '/' + strHash + strSize + '.jpg';
 }
 

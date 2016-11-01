@@ -991,8 +991,10 @@ td.wht_total {
 	color: #97a0ab;
 	display: block;
 	margin-left: 21px;
-	margin-top: -6px;
+	margin-top: -1px;
+	margin-bottom: 10px;
 	font-size: 12px;
+	line-height: 16px;
 }
 
 .account_manage_link {

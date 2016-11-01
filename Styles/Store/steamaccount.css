@@ -304,7 +304,13 @@ body.v6 .account_settings_container h2 {
 
 .account_settings_container blockquote.tag_form {
 	margin-top: 12px;
+}
+.tag_form > form#app_tag_form {
 	width: 300px;
+	margin-bottom: 0px;
+}
+.tag_form .sub_text {
+	font-size: 12px;
 }
 
 .app_tag_form_ctn button {
@@ -393,12 +399,14 @@ body.v6 .account_settings_container h2 {
 	margin-left: 5px;
 }
 
-.queue_customize {
+.queue_customize,
+.preferences_link {
 	padding: 5px 0;
 	color: #63c1f5;
 	cursor: pointer;
 }
-.queue_customize:hover {
+.queue_customize:hover,
+.preferences_link:hover {
 	color: #ffffff;
 }
 

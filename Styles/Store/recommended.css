@@ -3,6 +3,11 @@
 {
 }
 
+.recommended_home .page_header_ctn {
+	background-position: top center;
+	background-position-y: -95px;
+}
+
 .recommendation_bodytext
 {
 	font-size: 14px;
@@ -15,10 +20,9 @@
 
 .recommended_bodygradient
 {
-	background-image: url( /public/images/recommended/recommended_bodygradient.png );
-	background-position: bottom;
-	background-repeat: repeat-x;
 	padding: 60px 18px 22px 18px;
+	color: #c6d4df;
+	line-height: 19px;
 }
 
 .recommendation_section {
@@ -280,10 +284,8 @@
 
 .recommendation_detail {
 	min-height: 168px;
-	background-image: url( /public/images/recommended/recommended_highlight_gradient.png );
-	background-repeat: repeat-x;
-	background-position: top;
-	background-color: #262626;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
 }
 
 .recommendation_detail .quote {
@@ -778,7 +780,6 @@ textarea.comment_input
 }
 
 .friendplaytime_ctn {
-	background-color: #262626;
 	padding: 18px 0px 18px 15px;
 }
 
@@ -1134,7 +1135,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 
 .recommended_login_message {
-	padding-top: 16px;
+	padding-top: 32px;
 	padding-left: 16px;
 	padding-right: 16px;
 	height: 108px;
@@ -1165,7 +1166,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .recommended_login_message_signup, .recommended_login_message_signup a {
-	color: #8f98a0;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -1244,7 +1244,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .genre_highlight_buttons .price {
 	float: right;
-	line-height: 22px;
+	line-height: 15px;
 }
 
 .genre_highlight_footer {

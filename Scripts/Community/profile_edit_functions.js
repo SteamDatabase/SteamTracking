@@ -514,14 +514,52 @@ function GetBackgroundURL( strBackgroundImage, strSize )
 
 var g_rgBackgroundData;
 var g_rgBackgroundAppNames;
-function InitBackgrounds( rgBackgroundData, rgBackgroundAppData )
+function PresentBackgroundSelectDialog()
 {
-	g_rgBackgroundData = rgBackgroundData;
-	g_rgBackgroundData.unshift( { name: 'Default blank background', is_blank_background: true } );
-	g_rgBackgroundAppNames = rgBackgroundAppData;
+	if ( $J.isEmptyObject( g_rgBackgroundData ) )
+	{
+		$J.post( g_rgProfileData['url'] + 'ajaxgetplayerbackgrounds', { 'sessionid' : g_sessionID }, function( rgResults )
+		{
+			if ( $J.isEmptyObject( rgResults.data ) || $J.isEmptyObject( rgResults.data.profilebackgroundsowned ) )
+			{
+				ShowAlertDialog( 'Error', 'An error was encountered while processing your request:');
+			}
+			else
+			{
+				g_rgBackgroundData = rgResults.data.profilebackgroundsowned;
+				g_rgBackgroundAppNames = rgResults.data.backgroundappnames;
+				g_rgBackgroundData.unshift( { name: 'Default blank background', is_blank_background: true } );
+
+				RenderProfileBackgroundSelectDialog();
+			}
+
+		} )
+		.fail( function( jqXHR )
+		{
+			switch ( jqXHR.responseJSON.success )
+			{
+				case 21:
+					ShowAlertDialog( 'Error', 'Missing or invalid form session key');
+					break;
+
+				case 2:
+					ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.');
+					break;
+
+				default:
+					ShowAlertDialog( 'Error', 'An error was encountered while processing your request:');
+
+			}
+
+		} );
+	}
+	else
+	{
+		RenderProfileBackgroundSelectDialog();
+	}
 }
 
-function PresentBackgroundSelectDialog()
+function RenderProfileBackgroundSelectDialog()
 {
 	var $Content = $J('<div/>', {'class': 'profile_background_select_area'} );
 	var $Row = null;
@@ -576,7 +614,7 @@ function SelectBackground( Modal, Background )
 	SetCurrentBackground( Background );
 }
 
-function SetCurrentBackground( Background )
+function SetCurrentBackground( Background, strAppName )
 {
 	if ( Background.is_blank_background )
 	{
@@ -587,7 +625,16 @@ function SetCurrentBackground( Background )
 	{
 		$J('#profile_background_current_image').attr( 'src', GetBackgroundURL( Background.image_large, '140x90' ) );
 		$J('#profile_background_current_name').text( Background.name );
-		$J('#profile_background_current_game').text( g_rgBackgroundAppNames[Background.appid] );
+
+		if ( g_rgBackgroundAppNames && typeof( g_rgBackgroundAppNames[ Background.appid ] ) !== 'undefined' )
+		{
+			$J('#profile_background_current_game').text( g_rgBackgroundAppNames[ Background.appid ] );
+		}
+		else if ( strAppName )
+		{
+			$J('#profile_background_current_game').text( strAppName );
+		}
+
 		$J('#profile_background').val( Background.communityitemid );
 
 		$J('#profile_background_current').show();

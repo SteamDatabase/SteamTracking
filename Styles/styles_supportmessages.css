@@ -163,3 +163,9 @@ a.btn_contact_support > span {
 .chargeback_expiration {
 	color:#67c1f5;
 }
+
+.public_note {
+	background-color: rgba( 0, 0, 0, .2);
+	padding: 15px;
+	margin: 10px 20px 15px 20px;
+}
