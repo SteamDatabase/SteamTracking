@@ -1299,6 +1299,18 @@ div.image_hover_preview {
 	border: 0px;
 	height: 24px;
 }
+.newformrow.spotlight_body {
+}
+
+.newformrow.spotlight_body textarea {
+	float: left;
+}
+
+.newformrow.spotlight_body .suggested_tokens {
+	float: left;
+	padding-left: 8px;
+	font-size: 11px;
+}
 
 .spotlight_preview_tab {
 	position: relative;
@@ -2458,6 +2470,12 @@ html, body { height:100%; }
 .add_dlc_error_msg
 {
 	color: red;
+	font-weight: bold;
+}
+
+.add_dlc_warning_msg
+{
+	color: orange;
 	font-weight: bold;
 }
 

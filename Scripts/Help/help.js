@@ -300,6 +300,13 @@ HelpWizard = {
 		} ).fail( function( jqxhr ) {
 			$J('#help_refund_request_dialog').html( 'failed to load' );
 		} ).done( function( data ) {
+			
+			if ( data.ref )
+			{
+				HelpWizard.LoadPageFromHash( false, 'HelpRequest/' + data.ref, false );
+				return;
+			}
+			
 			if ( !data.html )
 			{
 				HelpWizard.ShowPageError();
