@@ -430,7 +430,7 @@ HelpWizard = {
 						rgSearchBaseURLParams.text = sNewVal;
 						var strQuery = '?' + $J.param( rgSearchBaseURLParams );
 						var strWizardURL = strSearchBaseURL + strQuery;
-						var strFullURL = ( strSearchBaseURL == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + wizard_url ) + strQuery;
+						var strFullURL = ( strSearchBaseURL == 'Home' ? 'https://help.steampowered.com/' : 'https://help.steampowered.com/wizard/' + strSearchBaseURL ) + strQuery;
 
 						if ( !bPushedSearchState && sNewVal )
 						{
