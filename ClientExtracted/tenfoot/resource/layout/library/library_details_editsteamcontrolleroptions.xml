@@ -12,17 +12,22 @@
 			<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />
-			<ToggleButton class="CheckBox" id="EnableRumble" text="#Library_Details_EnableRumble" selectionpos="auto" onactivate="ToggleEnableRumble()"/>
+			<ToggleButton class="CheckBox" id="EnableConfigurator" text="#Library_Details_EnableConfigurator" selectionpos="auto" onactivate="ToggleEnableConfigurator()"/>
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />
-			<Panel id="Rumble">
-
+			<Panel id="RumbleOn">
+				<Label class="SubTitle" text="#Library_Details_EnableRumble" />
+				<DropDown id="RumbleEnable" class="AppControllerSettingsDropdown"/>
+			</Panel>
+			<Panel id="" class="HorizontalSpace" />
+			<Panel id="" class="HorizontalSpace" />			
+			<Panel id="RumbleSCIntensity">
 				<Label class="SubTitle" text="#Library_SetAppRumbleFrequency_Label" />
 				<DropDown id="RumbleFrequency" class="AppControllerSettingsDropdown"/>
 			</Panel>
 
-			
-            <Panel id="MsgBoxButtons">
+
+			<Panel id="MsgBoxButtons">
                 <Button class="Button" onactivate="SetAppSteamControllerSettings();">
                     <Label text="#UI_OK" />
                 </Button>

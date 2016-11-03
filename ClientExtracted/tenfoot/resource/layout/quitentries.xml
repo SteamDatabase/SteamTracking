@@ -25,11 +25,11 @@
 			<Button id="QuitExitGame" class="SystemButton Button" onactivate="AskAboutAppKill()" selectionpos="0,2">
 				<Label text="#Quit_ExitGame" />
 			</Button>
-			<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons Button" onactivate="SwitchToHDMIInput()" selectionpos="0,3">
+			<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); SwitchToHDMIInput()" selectionpos="0,3">
 				<Label text="#Quit_SwitchToHDMIInput" />
 			</Button>
 			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
-			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="MinimizeApp()" selectionpos="0,4">
+			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); MinimizeApp()" selectionpos="0,4">
 				<Label id="MinimizeBigPictureLabel" text="#Quit_MinimizeBigPicture" />
 			</Button>
 			<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="QuitApp()" selectionpos="0,5">
@@ -48,7 +48,7 @@
 			</Button>
 			
 			<Panel class="HorizontalSpace ControllerActiveVisible" />
-			<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton Button" onactivate="TurnOffActiveController()" selectionpos="0,9">
+			<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton Button" onactivate="CloseModalDialog(); TurnOffActiveController()" selectionpos="0,9">
 				<Label text="#Quit_TurnOffController" />
 			</Button>
 

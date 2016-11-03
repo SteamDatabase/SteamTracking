@@ -3825,6 +3825,7 @@
  T FioRegisterAsyncFinalize(void (*)(int, unsigned int))
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FioWrite(int, void const*, int, int*)
+ T FioWrite(int, void const*, unsigned long, unsigned long*)
  T FreeCircularBuffer(CCircularBuffer*)
  T FreeDeletedPackets()
  T FreeEncodedFrame

@@ -48,6 +48,10 @@
 									<Panel id="TurnOffSoundContainer" class="SoundDropdownContainer">
 										<Label text="#Controller_Registration_TurnOffSound" />
 										<DropDown id="TurnOffSoundDropdown" class="SoundDropdown"/>
+									</Panel>
+									<Panel id="RumbleSettingContainer" class="SoundDropdownContainer">
+										<Label id="RumbleLabel" text="#Controller_Registration_Rumble" />
+										<DropDown id="RumbleDropdown" class="SoundDropdown"/>
 									</Panel>									
 									<Panel id="GuideBrightnessContainer">
 										<Label text="#Controller_Registration_GuideBrightness" />

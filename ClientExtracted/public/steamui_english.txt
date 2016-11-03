@@ -245,9 +245,6 @@ This should take less than a minute."
 "SteamUI_JoinDialog_ReadyToPlay"	"Ready to launch"
 "SteamUI_JoinDialog_ContineLaunch" "Contine launch"
 "SteamUI_JoinDialog_KeyRequestFailed_Title" "Steam - Error"
-"SteamUI_JoinDialog_KeyRequestFailed_Text" "Failed to contact key server"
-"SteamUI_JoinDialog_KeyRequestPending_Text" "Product key request pending"
-
 
 "SteamUI_JoinDialog_DataRequest_Text" "Completing installation... %progress%%%"
 "SteamUI_JoinDialog_DataRequestFailed_Title" "Steam - Error"
@@ -1242,7 +1239,7 @@ This should take less than a minute."
 "Steam_ValidateAppStatus"	"Discovering existing files for %s1..."
 
 "Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
-"Steam_CDKeyCafe"			"You are unable to register product keys on this account."
+"Steam_CDKeyCafe"			"You are unable to register product codes on this account."
 
 "Steam_BrowseGames"		"Browse games..."
 "Steam_Storefront_Title"	"Steam - Browse Games"
@@ -1278,7 +1275,13 @@ This should take less than a minute."
 "Steam_App_Install_Failed_Text_Long"	"An error occurred while installing %game% (%reason%) :\n\n%location%"
 
 "Steam_App_LegacyKey_Denied_Title" "Steam - Warning"
-"Steam_App_LegacyKey_Denied_Text" "Some or all content of %game% is only avaliable by connecting to a third-party service.\nThe original owner must have registered with this service to access this content."
+
+"Steam_App_LegacyKey_Failed_Text"  "Product key request failed. Please try again in a few minutes."
+"Steam_App_LegacyKey_NoResponse_Text" "Failed to contact the Steam product key server. Verify your Internet connection and try again."
+"Steam_App_LegacyKey_Denied_Text"  "Steam was unable to verify ownership in order to request a product key. Please contact Steam Support."
+"Steam_App_LegacyKey_Denied_Borrowed_Text" "Some or all content of %game% is only available by connecting to a third-party service, for example UPlay or Origin.\nThe original owner must have registered with this service to access this content."
+"Steam_App_LegacyKey_Pending_Text" "Product key request is pending approval by Steam Support. Please try again in a few hours."
+"Steam_App_LegacyKey_OutOfKeys_Text" "Steam is temporarily out of unused product keys required by %game%.\n\nWe will be able to issue you a product key once we received more keys from the publisher.\nPlease try again later or you can request a refund now."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text"	"An error occurred while updating %game% (%reason%)"
@@ -1610,7 +1613,7 @@ You'll need to log out of OS X for the change to take effect."
 
 "SteamUI_SSA_Agree"				"Please read this agreement in its entirety. You must agree with the terms of the Steam Subscriber Agreement to continue."
 "SteamUI_SSA_CybercafeAgree"		"I am a Licensed Cybercafe Operator and agree to these terms"
-"SteamUI_SSA_ActivateProduct"		"To register your product with Steam and add it to your Steam library, enter the product code distributed with a retail CD/DVD or other Steam product key here. Click 'Next' to continue."
+"SteamUI_SSA_ActivateProduct"		"To register your product with Steam and add it to your Steam library, enter the product code distributed with a retail CD/DVD or other Steam product code here. Click 'Next' to continue."
 "SteamUI_ActivateProductLockedDown"		"Your account is currently self-locked or has been locked by Steam Support.  You cannot activate any new products on this account until the issue is resolved."
 "SteamUI_ActivateProduct_ViewSupportMessage" "View active alerts from Steam Support"
 
