@@ -7591,6 +7591,13 @@
 					"type"		"custom_damage"
 					"value"		"TF_DMG_CUSTOM_PUMPKIN_BOMB"
 				}
+				"3"
+				{
+					"get_player"		"by_id"
+					"is_owner"		"0"					
+					"player_key"		"userid"					
+					"type"		"player_is_owner"
+				}
 				"type"		"AND"
 			}
 			"event_name"		"player_death"
@@ -13190,6 +13197,7 @@
   		"cannonball"
 		{
 			"first_sale_date"	"2012/08/02"
+			"prefab"				"base_hat"
 			"item_class"			"tf_wearable"
 			"craft_class"			"hat"
 			"craft_material_type"	"hat"
@@ -17513,7 +17521,7 @@
 		"49"	
 		{
 			"name"	"Football Helmet"
-			"prefab"	"valve"
+			"prefab"	"valve base_hat"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_wearable"
 			"loadondemand" "1"
@@ -36888,11 +36896,7 @@
 			"item_name"	"#TF_Halloween_Skullcap2011"
 			"item_description"	"#TF_Halloween_Skullcap2011_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"31"
 			"max_ilevel"	"31"
@@ -58136,6 +58140,14 @@
 			"item_description"		"#TF_robo_all_mvm_canteen_Desc"
 			"image_inventory"		"backpack/workshop/player/items/scout/robo_all_mvm_canteen/robo_all_mvm_canteen"
 			"model_player"		"models/workshop/player/items/scout/robo_all_mvm_canteen/robo_all_mvm_canteen.mdl"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"109"			
+				}
+			}
 		}
 		"30016"
 		{
@@ -70079,6 +70091,14 @@
 			"item_description"		"#TF_kritz_or_treat_canteen_Desc"
 			"image_inventory"		"backpack/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen"
 			"model_player"		"models/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen.mdl"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"109"			
+				}
+			}
 		}
 		"30536"
 		{
@@ -95157,6 +95177,66 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
 			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
 		}
+		"9288"
+		{
+			"name"	"GAlloween Gold Medal 2016"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Gold"
+			"item_description"	"#TF_TournamentMedal_2016"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_%s.mdl"
+			}
+		}
+ 		"9289"
+		{
+			"name"	"GAlloween Silver Medal 2016"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Silver"
+			"item_description"	"#TF_TournamentMedal_2016"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_%s.mdl"
+			}
+		}
+		"9290"
+		{
+			"name"	"GAlloween Bronze Medal 2016"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Bronze"
+			"item_description"	"#TF_TournamentMedal_2016"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_%s.mdl"
+			}
+		}
+ 		"9291"
+		{
+			"name"	"GAlloween Participant Badge 2016"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Participant"
+			"item_description"	"#TF_TournamentMedal_2016"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_%s.mdl"
+			}
+		}
 
 
 
@@ -95165,6 +95245,7 @@
 		{
 			"name"	"World Traveler"
 			"loadondemand"	"1"
+			"prefab"	"base_hat"
 			"item_class"	"tf_wearable"
 			"capabilities"
 			{
@@ -132060,6 +132141,10 @@
 		"108"
 		{
 			"type_name"			"KillEaterEvent_HalloweenOfferings"
+		}
+		"109"
+		{
+			"type_name"			"KillEaterEvent_PowerupBottlesUsed"
 		}
 
 
