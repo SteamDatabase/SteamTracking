@@ -602,7 +602,7 @@ GHomepage = {
 			var reason = rgRecommendationReasons.recommended_by_friend;
 			rgRecommendationReasons.recommended_by_friend = false;
 			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] )
-			var $ReasonMain = $J('<div/>').addClass('main').html( "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
 			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).data('ds-miniprofile', friend.accountid );
 
 			$RecommendedReason.append( $ReasonAvatar );
@@ -614,7 +614,7 @@ GHomepage = {
 			var reason = rgRecommendationReasons.recommended_by_curator;
 			rgRecommendationReasons.recommended_by_curator = false;
 			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 )
-			var $ReasonMain = $J('<div/>').addClass('main').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", curator.name ) );
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended by <span>%1$s<\/span>".replace("%1$s", curator.name ) );
 			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar, '_medium' ) ) );
 
 			$RecommendedReason.append( $ReasonAvatar );
@@ -633,7 +633,7 @@ GHomepage = {
 
 			}
 
-			var $ReasonMain = $J('<div/>').addClass('main').html( "<strong>Recommended<\/strong> because you played games tagged with".replace("%1$s", rgMatchedTags.join(', ') ) );
+			var $ReasonMain = $J('<div/>').addClass('main').html( "Recommended because you played games tagged with <span>%1$s<\/span>".replace("%1$s", rgMatchedTags.join(', ') ) );
 			$RecommendedReason.append( $ReasonMain );
 
 		}
