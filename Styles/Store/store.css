@@ -1065,7 +1065,7 @@ a#store_search_link img {
 .spotlight_weeklong_ctn {
 	background: url( '/public/images/v6/temp/spotlight_weeklong_deals.jpg?v=2' ) top center no-repeat;
 	width: 304px;
-	height: 350px;
+	height: 343px;
 	text-align: center;
 	margin: 0px;
 	border: 1px solid rgba(0, 0, 0, 0);
@@ -2579,6 +2579,10 @@ a.cluster_capsule:hover {
 	border-radius: 1px;
 }
 
+.store_capsule .discount_block.daily_deal_discount  > .discount_prices {
+	background-color: rgba(20,31,44,0.8);
+}
+
 /* Add more padding when we have no discount */
 .store_capsule .discount_block.no_discount .discount_final_price {
 	padding: 0 6px;
@@ -2638,13 +2642,20 @@ a.cluster_capsule:hover {
 .ds_options {
 	display: block;
 	position: absolute;
-	width: 15px;
-	height: 15px;
-	top: 5px;
-	right: 0px;
+
+	top: 0px;
+	right: -5px;
 	cursor: pointer;
 	opacity: 0;
+	padding: 5px 5px 0 0;
 	transition: opacity 0.2s, right 0.2s;
+
+}
+
+.ds_options > div {
+	width: 15px;
+	height: 15px;
+
 	background-color: rgba(54,97,125,1);
 	background-image: url('/public/images/v6/icon_expand.png');
 	background-position: 4px 4px;
@@ -2653,7 +2664,7 @@ a.cluster_capsule:hover {
 	box-shadow: 0 0 3px #000;
 }
 
-.ds_options:hover {
+.ds_options:hover > div {
 	background-color: #67c1f5;
 	color: #fff;
 	background-image: url('/public/images/v6/icon_expand_white.png');
@@ -2661,7 +2672,7 @@ a.cluster_capsule:hover {
 
 *:hover > .ds_options, .ds_hover.ds_options {
 	opacity: 1;
-	right: 5px;
+	right: 0px;
 }
 
 .ds_options_tooltip {
@@ -2773,11 +2784,17 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 .mature_content_filtered {
 	padding: 10px;
 	margin-bottom: 10px;
-	background-color: rgba( 0, 0, 0, 0.5 );
+	background-color: rgba( 0, 0, 0, 0.2 );
+
 }
 .mature_content_filtered a {
 	text-decoration: underline;
 	color: #2f89bc;
+}
+
+.mature_content_filtered.search {
+	float: right;
+	display: inline-block;
 }
 
 @media screen and (max-width: 910px )

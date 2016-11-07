@@ -1960,6 +1960,21 @@ function InitHorizontalAutoSliders()
 	});
 }
 
+function PreloadImages( elElement )
+{
+	$J(elElement).find("*[data-background-image-url]").each(function(i, j){
+		var $elTarget = $J(j);
+		$elTarget.css({'background-image': 'url(' + $elTarget.data('background-image-url') + ')' });
+	});
+
+	$J(elElement).find("img[data-image-url]").each(function(i, j){
+		var $elTarget = $J(j);
+		$elTarget.attr('src', $elTarget.data('image-url') );
+	});
+
+}
+
+
 // Common glue logic for a carousel of some kind
 var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb, bNoWrap )
 {
@@ -1985,8 +2000,18 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 	};
 
 	this.fnMouseOut = function(){
+
+		if( instance.timerAdvance )
+			clearInterval( instance.timerAdvance );
+
 		if( instance.nSpeed > 0 )
-			instance.timerAdvance = setInterval( function() { instance.Advance(); }, nSpeed * 1000 );
+		{
+			instance.timerAdvance = setInterval ( function ()
+			{
+				if( !instance.bIsResponsive() )
+					instance.Advance ();
+			}, nSpeed * 1000 );
+		}
 	};
 
 	this.fnMouseOut();
@@ -2034,94 +2059,133 @@ CGenericCarousel.prototype.UpdateControls = function( )
 
 };
 
+// Start loading images further down the rotation.
+CGenericCarousel.prototype.HintNearbyCapsules = function( )
+{
+	var nNextIndex = this.GetNextValidIndex();
+	var elNextElement = this.$elItems[ nNextIndex ];
+
+	PreloadImages( this.$elItems[ this.nIndex ] );
+
+	// If we're going to auto-scroll, hint the next item.
+	if( this.nSpeed > 0 )
+		PreloadImages( elNextElement );
+};
+
+
 CGenericCarousel.prototype.UpdateItems = function()
 {
 	this.$elThumbs = $J('.carousel_thumbs', this.$elContainer).children();
 	this.$elItems = $J('.carousel_items', this.$elContainer).children();
 	this.nItems = this.$elItems.length;
+	this.HintNearbyCapsules();
 }
 
-
-CGenericCarousel.prototype.Advance = function( nNewIndex )
+CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 {
 	if( this.nItems == 0 )
-		return;
+		return false;
 
-	var rgTargets = this.$elThumbs && this.$elThumbs.length ? this.$elThumbs : this.$elItems;
+	var nIndex = this.nIndex;
+
+	var rgTargets = this.$elItems;
 
 	if( nNewIndex < 0 ) // Allow index of -1 to go backwards.
 	{
-		this.fnOnBlur(this.nIndex);
-
-		// Skip hidden thumbs
+		// Skip hidden items
 		do
 		{
-			this.nIndex = ( this.nIndex + nNewIndex ) % this.nItems;
+			nIndex = ( nIndex + nNewIndex ) % this.nItems;
 
-			// JS doesn't wrap, so we need to fix it...
-			if( this.nIndex < 0 )
-				this.nIndex += this.nItems;
+			// JS's % operator doesn't wrap, so we need to fix it...
+			if( nIndex < 0 )
+				nIndex += this.nItems;
 
 		}
-		while( !$J( rgTargets[ this.nIndex ] ).is( ":visible" ) );
-
-		this.fnOnFocus(this.nIndex);
+		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) );
 	}
 	else if( nNewIndex !== undefined )
 	{
-		if( this.nIndex == nNewIndex )
-			return
-
-		this.fnOnBlur( this.nIndex );
-		this.nIndex = nNewIndex;
-		this.fnOnFocus( this.nIndex );
+		if( nIndex == nNewIndex )
+			return false
+		return nNewIndex;
 	}
 	else
 	{
-		this.fnOnBlur(this.nIndex);
-
-		// Skip hidden thumbs
+		// Skip hidden items
 		do
 		{
-			this.nIndex = ( this.nIndex + 1 ) % this.nItems;
+			nIndex = ( nIndex + 1 ) % this.nItems;
 		}
-		while( !$J( rgTargets[ this.nIndex ] ).is( ":visible" ) );
+		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) );
 
-		this.fnOnFocus(this.nIndex);
 	}
 
-	this.UpdateControls();
+	return nIndex;
 }
 
-// Scrolls a target element into view. You can specify the number of parents to traverse if your carousel has an
-// abnormally deep structure
-CGenericCarousel.prototype.ScrollIntoView = function( elTarget, nParents )
+CGenericCarousel.prototype.bIsResponsive = function( )
 {
-	// Not all carousels have thumbs, early out.
-	if( !this.$elThumbs || !this.$elThumbs.length )
+	return this.$elItems.css('position') != 'absolute';
+}
+
+CGenericCarousel.prototype.Advance = function( nNewIndex )
+{
+	if( this.bIsResponsive() )
+		return this.ResponsiveAdvance(nNewIndex);
+
+	if( this.nItems == 0 )
 		return;
 
-	var nScrollDepth = ( nParents > 0 ) ? nParents : 1;
-	var elContainer = elTarget;
-	while( nScrollDepth-- > 0 )
-		elContainer = elContainer.parentNode;
+	var nNextIndex = this.GetNextValidIndex( nNewIndex );
+	if( nNextIndex == this.nIndex || nNextIndex === false )
+		return;
 
-	var nScrollSpeed = 800;
+	this.fnOnBlur( this.nIndex );
+	this.fnOnFocus( nNextIndex );
+	this.nIndex = nNextIndex;
 
-	var nScrollLeft = elTarget.offsetLeft - elContainer.scrollLeft;
-	var nScrollRight = ( elContainer.scrollLeft + elContainer.offsetWidth ) - ( elTarget.offsetLeft + elTarget.scrollWidth ) ;
+	this.UpdateControls();
+	this.HintNearbyCapsules();
+}
 
-	if( nScrollLeft < 0 )
-	{
-		$J( elContainer ).stop().animate({scrollLeft: elTarget.offsetLeft}, nScrollSpeed);
-	}
-	else if( nScrollRight < 0 )
-	{
-		$J( elContainer ).stop().animate({scrollLeft: elTarget.offsetLeft + elTarget.scrollWidth - elContainer.offsetWidth }, nScrollSpeed);
-	}
+// Advance function may be (totally is) different in responsive mode
+CGenericCarousel.prototype.ResponsiveAdvance = function( nNewIndex )
+{
+	var $elTarget = this.$elItems.parent();
+	var nMaxScroll = this.$elItems.outerWidth( true ) * this.nItems - $elTarget.innerWidth();
+	var nCurrentScroll = $elTarget.scrollLeft();
+	var nScrollRate = this.$elItems.outerWidth( true );
+	if( nScrollRate > $elTarget.innerWidth() * 1.1 )
+		nScrollRate = $elTarget.innerWidth();
+
+	var nTargetScroll = nCurrentScroll + ( nNewIndex < 0 ? -1 : 1 ) * nScrollRate;
+
+	if( nCurrentScroll == nMaxScroll && nCurrentScroll > nCurrentScroll)
+		nTargetScroll = 0;
+
+	if( nTargetScroll > nMaxScroll )
+		nTargetScroll = nMaxScroll;
+
+	if( nTargetScroll < 0 )
+		nTargetScroll = 0;
+
+	// Hintload capsules we're about to show
+	this.$elItems.each( function(i, j) {
+		var $el = $J(j);
+		var rgOffset = $el.offset();
+		if( rgOffset.left < nScrollRate * 2 )
+		{
+			PreloadImages( $el );
+		}
+	});
+
+	$J( $elTarget ).stop().animate({scrollLeft: nTargetScroll}, 800);
+
 }
 
 // Carousel which adds the 'focus' class to the active element. Can be used for fading carousels
+// @todo: This needs to be detangled from CGenericCarousel a bit more to be useful in other applications.....
 function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap )
 {
 
@@ -2131,8 +2195,8 @@ function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap )
 		this.$elItems.removeClass( 'focus' );
 
 		$J( this.$elThumbs[nIndex] ).addClass('focus');
-		this.ScrollIntoView( this.$elThumbs[nIndex] );
 		$J( this.$elItems[nIndex] ).addClass('focus');
+		GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible( this.$elItems[ nIndex ] );
 	}
 
 	var fnMouseOverThumb = function( index, element )
@@ -2193,6 +2257,9 @@ CAppearMonitor.prototype.CheckVisibility = function()
 
 CAppearMonitor.prototype.bIsElementVisible = function( elElement )
 {
+	if( !elElement )
+		return;
+
 	// Check physical position vs viewport. This is likely the fastest early-out.
 	var rectElement = elElement.getBoundingClientRect();
 	if( !( rectElement.top >= 0 && rectElement.left >= 0
@@ -2209,6 +2276,9 @@ CAppearMonitor.prototype.bIsElementVisible = function( elElement )
 
 CAppearMonitor.prototype.RegisterElement = function( elTarget )
 {
+	if( $J(elTarget).data('manual-tracking' ) )
+		return;
+
 	this.rgMonitoredElements.push({
 		element: elTarget
 	});
@@ -2218,8 +2288,12 @@ CAppearMonitor.prototype.RegisterElement = function( elTarget )
 		this.RegisterScrollEvent( window );
 };
 
-CAppearMonitor.prototype.ForceAppear = function( elTarget )
+CAppearMonitor.prototype.TrackAppearanceIfVisible = function( elTarget )
 {
+	// Ensure we're actually in the viewport (Carousel may be scrolling out of view and calling this)
+	if( !this.bIsElementVisible( elTarget ) )
+		return;
+
 	// Find our element, splice it out if we were tracking it
 	for( var i=this.rgMonitoredElements.length-1; i>=0; i--)
 	{

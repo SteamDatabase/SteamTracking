@@ -417,7 +417,66 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 		}
 	}
 	var $elWhyButton;
-	
+
+	if ( rgItemInfo.recommended || rgItemInfo.recommended_by_curator )
+	{
+		var $elWhyButton = $J ( '<span />' ).text ( rgItemInfo.recommended ? "See Why" : "See Who");
+		$elWhyButton.click ( function ( event )
+		{
+			event.stopPropagation ();
+			$J.ajax ( {
+				url: "http:\/\/store.steampowered.com\/explore\/recommendedreason\/",
+				data: {
+					appid: unAppID
+				},
+				dataType: 'json',
+				type: 'GET'
+			} ).done ( function ( data )
+			{
+
+				$elWhyButton.off ( 'click' );
+
+				var strTooltipContent = '';
+
+				if ( data.curators )
+				{
+					strTooltipContent += '<div class="reasonheader">' +"Recommended by curators you follow:" +'</div>';
+					for ( var i = 0; i < data.curators.length; i++ )
+					{
+						strTooltipContent += '<a href="' + data.curators[ i ].link +'">' + data.curators[ i ].name + '</a>';
+					}
+				}
+
+				if ( data.tags )
+				{
+					strTooltipContent += '<div class="reasonheader">' + "Similar tags to games you play:" +'</div>';
+					for ( var i = 0; i < data.tags.length; i++ )
+					{
+						strTooltipContent += '<a href="http://store.steampowered.com/tag/en/'+data.tags[ i ].name+'/">' + data.tags[ i ].name + '</a>';
+					}
+				}
+
+				if ( !strTooltipContent )
+					strTooltipContent = '<div class="reasonheader">' + "Not enough data" + '</div>'
+						+ '<div>' + "Play more games to receive better recommendations!" + '</div>';
+
+				$elWhyButton.data ( 'tooltipContent', '<div>' + strTooltipContent + '</div>' );
+
+				$elWhyButton.v_tooltip ( {
+					'tooltipClass': 'maincap_why',
+					'location': 'top',
+					'tooltipParent': $CapCtn,
+					'offsetY': 0,
+					'useClickEvent': true,
+				} );
+
+				$elWhyButton.trigger ( 'click' );
+			} );
+
+			return false;
+		} );
+	}
+
 	if ( rgItemData.discount_block )
 		$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_large main_cap_discount' ) );
 	$CapCtn.append( $J('<div/>', {'class': 'main_cap_desc'})

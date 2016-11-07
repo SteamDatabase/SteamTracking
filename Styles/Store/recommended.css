@@ -30,6 +30,10 @@
     margin-top: 24px;
 }
 
+.recommendation_section.recommended_by_friends {
+	margin-top: 50px;
+}
+
 
 .recommendation_rule {
 	border-top: 2px solid #262626;
@@ -1534,14 +1538,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 
 .user_reviews_header {
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-		    font-weight: normal;
-    font-size: 18px;
-    color: #67c1f5;
-
-	margin-bottom: 15px;
+	padding-bottom: 4px;
     margin-top: 40px;
     background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
@@ -1800,6 +1797,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #ffd43a;
 	font-size: 13px;
 	float: right;
+	text-transform: none;
+	letter-spacing: 0;
 }
 .user_reviews_header .user_reviews_updated a {
 	text-decoration: underline;

@@ -74,28 +74,42 @@ GDynamicStore = {
 		this.s_ImpressionTracker = new CAppearMonitor(
 			function( elElement ){
 
-				var $Elem = $J(elElement);
-
-				if ( $Elem.data( 'trackedForImpressions' ) )
+				var fnTrack = function( el )
 				{
-					return;
-				}
-				$Elem.data( 'trackedForImpressions', true );
 
-				// must have appids
-				var strAppIDs = $Elem.data('dsAppid');
-				if ( !strAppIDs || strAppIDs.length == 0 )
-				{
-					return;
-				}
+					var $Elem = $J(el);
 
-				var snr = GetElemSNR( $Elem );
-				if ( !snr )
-				{
-					return;
-				}
+					if ( $Elem.data( 'trackedForImpressions' ) )
+					{
+						return;
+					}
+					$Elem.data( 'trackedForImpressions', true );
 
-				GDynamicStore.AddImpressionFromDynamicItem( $Elem );
+					// must have appids
+					var strAppIDs = $Elem.data('dsAppid');
+					if ( !strAppIDs || strAppIDs.length == 0 )
+					{
+						return;
+					}
+
+					var snr = GetElemSNR( $Elem );
+					if ( !snr )
+					{
+						return;
+					}
+
+					GDynamicStore.AddImpressionFromDynamicItem( $Elem );
+				};
+
+				fnTrack( elElement );
+
+				// Also track sub-elements, which may exist inside our container. This is useful for nested clusters etc.
+				$J(elElement).find("*[data-ds-appid]").each(function(i, j){
+					fnTrack(j);
+
+				});
+
+
 			}
 		);
 
@@ -242,7 +256,7 @@ GDynamicStore = {
 		var $ScrollingContainer = $J( cluster.elScrollArea );
 		var $RealContainer = $ScrollingContainer.parent();
 		var capsules = $ScrollingContainer.find( '.cluster_capsule' );
-		GDynamicStore.s_ImpressionTracker.ForceAppear( capsules[cluster.nCurCap] );
+		GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible( capsules[cluster.nCurCap] );
 	},
 
 	HandleCarouselChange: function( targetid, curPos, pageSize ) {
@@ -251,7 +265,7 @@ GDynamicStore = {
 		var idx = (curPos * pageSize);
 		if ( capsules.length != 0 && idx < capsules.length )
 		{
-			GDynamicStore.s_ImpressionTracker.ForceAppear( capsules[idx] );
+			GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible( capsules[idx] );
 		}
 	},
 
@@ -414,7 +428,20 @@ GDynamicStore = {
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 				}
 
-				
+				if( g_AccountID && unAppID ) // Only add if we have an appid
+				{
+					var $elMenu = $J ( '<div></div>', { 'class': 'ds_options' } ).append($J('<div>'));
+					$elMenu.v_tooltip ( {
+						'tooltipClass': 'ds_options_tooltip',
+						'location': 'bottom left',
+						'offsetY': -20,
+						'useClickEvent': true,
+						func: GDynamicStore.CapsuleSettingsMenu
+					} );
+
+					$El.append ( $elMenu );
+				}
+
 			}
 		});
 
@@ -947,7 +974,7 @@ GStoreItemData = {
 	rgAppData: {},
 	rgPackageData: {},
 	rgBundleData: {},
-	rgAccountData: {},
+	rgAccountData: [],
 	rgNavParams: {},
 	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
 	nCurrencyMinPriceIncrement : 1,
@@ -990,28 +1017,26 @@ GStoreItemData = {
 
 	AddStoreAccountData: function( rgAccounts )
 	{
-		if ( rgAccounts && typeof rgAccounts.length == 'undefined' )
+		if ( rgAccounts && rgAccounts.length > 0 )
 		{
-			for ( var steamid in rgAccounts )
+			for ( var i = 0; i < rgAccounts.length; i++ )
 			{
-				GStoreItemData.rgAccountData[steamid] = rgAccounts[steamid];
+				GStoreItemData.rgAccountData.push( rgAccounts[i] );
 			}
 		}
 	},
 
 	GetAccountData: function( steamid, accountid, type )
 	{
-		if( steamid && GStoreItemData.rgAccountData[steamid] )
-			return GStoreItemData.rgAccountData[steamid];
 
 		// Assume individual account unless otherwise specified.
 		if( !type )
 			type = 1;
 
 		// Search for an accountid instead
-		for( var steamid in GStoreItemData.rgAccountData )
+		for( var i = 0; i < GStoreItemData.rgAccountData.length; i++ )
 		{
-			var account = GStoreItemData.rgAccountData[steamid];
+			var account = GStoreItemData.rgAccountData[i];
 
 			if( account.accountid == accountid && account.type == type )
 				return account;
@@ -1114,6 +1139,7 @@ GStoreItemData = {
 		{
 			params['data-ds-appid'] = unAppID;
 			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
+
 		}
 		else
 		{

@@ -83,6 +83,11 @@
 
 	max-width: calc( 100% - 80px - 2px );
 }
+#term.blur {
+	font-style: italic;
+	color: #7092a5;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.4);
+}
 
 .sortbox .dselect_container {
 	display: inline-block;
@@ -324,18 +329,20 @@ div.autocomplete ul li {
 }
 
 #TagSuggest {
-	background-color: #2a3f5a;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	color: #fff;
-	border: 1px solid #000;
 	border-radius: 3px;
-	box-shadow: 1px 1px 0px #45556c;
+	border: 1px solid rgba( 0, 0, 0, 0.3);
+	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
 	width: 200px;
 	padding: 5px;
 	margin: 5px;
 }
 
 #TagSuggest.blur {
-	color:#62696e;
+	font-style: italic;
+	color: #7092a5;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 910px)

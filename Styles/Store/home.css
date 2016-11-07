@@ -100,7 +100,7 @@ a.gutter_item:hover {
 
 @media all and (min-width: 1208px) {
 	body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
-		padding-left: 204px;
+		padding-left: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_gutter {
 		display: block;

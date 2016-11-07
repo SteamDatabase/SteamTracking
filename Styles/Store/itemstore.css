@@ -94,11 +94,11 @@ body.v6 h2.pageheader.itemtitle
 }
 .searchbox
 {
-	background-image: url( /public/images/v6/itemstore_header_search.png?v=1 );
+	background-color: transparent;
 }
 .searchbox:hover
 {
-	background-image: url( /public/images/v6/itemstore_header_search_hover.png?v=1 );
+
 }
 .searchbox input.default
 {

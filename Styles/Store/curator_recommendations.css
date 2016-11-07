@@ -277,6 +277,10 @@ body.v6 h2.curator_name a {
 	top: 49px;
 	left: 0px;
 }
+.recommendation .ds_options {
+	right: auto;
+	left: 211px;
+}
 
 @media screen and (max-width: 600px)
 {
