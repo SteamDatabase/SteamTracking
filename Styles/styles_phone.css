@@ -6,6 +6,10 @@
 
 }
 
+.dark_background {
+	background: rgba( 0, 0, 0, 0.3 );
+}
+
 input.phone_input_number {
 	background-color: #2a3f5a;
 	color: #fff;
@@ -37,7 +41,7 @@ input.phone_input_number {
 }
 
 .current_phone_box {
-	background: rgba(42, 63, 90, 0.5 );
+	background: rgba(42, 63, 90, 0.8 );
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -217,7 +221,6 @@ input.phone_input_number {
 
 .phone_change_description {
 	font-size: 14px;
-	line-height: 35px;
 	margin-bottom: 15px;
 }
 
@@ -248,4 +251,44 @@ input.phone_input_number {
 	float: left;
 	font-size: 18px;
 	margin-top: 5px;
+}
+
+.phone_modal_text {
+	font-size: 14px;
+	max-width: 1000px;
+}
+
+.phone_subheader_description_largetext{
+	font-size: 14px;
+}
+
+.phone_no_access_link {
+	font-size: 14px;
+	margin-top: 25px;
+	float: left;
+}
+
+.phone_manage_box {
+	padding: 15px 3%;
+	margin: 10px 0;
+}
+
+.phone_manage_divider {
+	background-color: #3b718d;
+	height: 1px;
+	margin: 0 20px;
+}
+
+.phone_manage_description {
+	font-size: 14px;
+	margin: 10px 0 10px;
+}
+
+.phone_manage_warning {
+	color: #67c1f5;
+}
+
+.phone_remove_warning {
+	font-size: 14px;
+	margin: 20px 0 25px;
 }

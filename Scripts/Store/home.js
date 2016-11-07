@@ -685,8 +685,10 @@ GHomepage = {
 					rgMatchedTags.push( '<span>' + GDynamicStore.s_rgRecommendedTags[i].name + '</span>' );
 
 			}
-
-			var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
+			if( rgMatchedTags.length == 0 )
+				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you play similar games" );
+			else
+				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
 			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
