@@ -644,6 +644,7 @@ GHomepage = {
 		var $RecommendedReason = $J('<div/>').addClass('reason');
 
 
+		var bShowAdditionalReasons = true;
 
 		// Show the "main" reason
 		if( rgRecommendationReasons.recommended_by_friend )
@@ -678,6 +679,7 @@ GHomepage = {
 			var reason = rgRecommendationReasons.recommended;
 			rgRecommendationReasons.recommended = false;
 			var rgMatchedTags = [];
+			bShowAdditionalReasons = false;
 
 			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length <= 3; i++ )
 			{
@@ -751,7 +753,9 @@ GHomepage = {
 
 		}
 
-		$RecommendedReason.append($ReasonAdditional);
+		if( bShowAdditionalReasons )
+			$RecommendedReason.append($ReasonAdditional);
+
 		$CapCtn.append($RecommendedReason);
 
 
@@ -1028,19 +1032,23 @@ GHomepage = {
 
 		});
 
-		GDynamicStore.MarkAppDisplayed(rgFeaturedApps)
+		GDynamicStore.MarkAppDisplayed(rgFeaturedApps);
+
+		var nSpecials = $J('.specials_target').length;
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.oDisplayLists.specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+		);
+
+		if( !rgCapsules || rgCapsules.length < 1 )
+			return;
+
+		GDynamicStore.MarkAppDisplayed ( rgCapsules );
+
 
 		$J('.specials_target').each(function(i,j){
-			var rgCapsules = GHomepage.FilterItemsForDisplay(
-				GHomepage.oDisplayLists.specials, 'home', 1, 1, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
-			);
-			if( !rgCapsules || rgCapsules.length < 1 )
-				return;
 
-			GDynamicStore.MarkAppDisplayed ( rgCapsules );
-
-
-			oItem = rgCapsules[ 0 ];
+			oItem = rgCapsules[ i % nSpecials ];
 			var strHTMLID = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_special_timer';
 
 			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, {

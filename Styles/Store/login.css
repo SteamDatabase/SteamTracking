@@ -23,7 +23,7 @@
 }
 
 .text_input, .checkout_content_box input[type=text], .checkout_content_box input[type=password] {
-	background-color: #2a3f5a;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	color: #fff;
 	border: 1px solid #000;
 	border-radius: 3px;

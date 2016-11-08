@@ -2018,6 +2018,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 
 	$elContainer.bind('mouseover', function(e) { instance.fnMouseOver(); } );
 	$elContainer.bind('mouseout', function(e) { instance.fnMouseOut(); }  );
+	// If we get a scroll event, and we're in respondive, hint all remaining images
+	this.$elItems.parent().bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); }   );
 
 	// Only bind a mouseover thumb event if we have one.
 	if( fnMouseOverThumb ) {
