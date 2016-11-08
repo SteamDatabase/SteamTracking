@@ -50,7 +50,7 @@
     border-top-right-radius: 3px;
     font-size: 13px;
     color: #4f94bc;
-    line-height: 24px;
+    line-height: 25px;
     padding: 0 10px;
     cursor: pointer;
     vertical-align: top;
@@ -84,7 +84,7 @@
     line-height: 29px;
     font-size: 14px;
     color: #ffffff;
-    background: #1c2b40;
+    background: #214b6b;
     text-shadow: -1px -1px rgba( 0, 0, 0, 0.25 );
     cursor: default;
     box-shadow: none;

@@ -21,9 +21,9 @@
 }
 
 .newsrightcol .block .block_header {
-    background: #2a3f5a;
+    background: rgba( 255, 255, 255, 0.1);
     padding: 4px;
-    color: #8f98a0;
+    color: #c7d5e0;
     font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -155,7 +155,7 @@ a.view_active:hover {
 }
 
 .block_content {
-    border: 1px solid #28394d;
+    border: 1px solid rgba( 255, 255, 255, 0.1);
     border-radius: 2px;
 
 }
@@ -187,7 +187,7 @@ a.view_active:hover {
 
 .block_sub_header_channels {
 	font-size: 11px;
-	color: #666465;
+	color: #56707f;
 	margin-bottom: 4px;
 	text-transform: uppercase;
 	margin-top: 14px;
@@ -292,19 +292,19 @@ div#news_search {
 	margin-top: 2px;
 	clear: left;
 	float: left;
-	color: #61686d;
+	color: #56707f;
 	height: 14px;
 }
 
 .newsPostBlock .headline {
-	margin-bottom: 1px;
+	margin-bottom: 15px;
 }
 
 .newsPostBlock .headline .date {
 	margin-left: 15px;
 	float: right;
 	clear: right;
-	color: #61686d;
+	color: #56707f;
 }
 
 .newsPostBlock .headline .posttitle {
@@ -328,14 +328,14 @@ div#news_search {
 
 
 .newsPostBlock .body {
-	color: #acb2b8;
+	color: #fff;
 	margin-top: 10px;
 	line-height: 19px;
 	clear: left;
 	margin-bottom: 10px;
     font-size: 14px;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
 		}
 .newsPostBlock .body a {
@@ -377,7 +377,7 @@ div#news_search {
 .share {
 	color: #c6d4df;
 	margin-top: 5px;
-	margin-bottom: 18px;
+	margin-bottom: 60px;
 	font-size: 12px;
 	clear: both;
 	line-height: 14px;
