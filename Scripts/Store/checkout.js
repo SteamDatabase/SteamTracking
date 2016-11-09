@@ -2014,6 +2014,10 @@ function OnGetFinalPriceFailure( eErrorDetail )
 					case 'beeline':
 						error_text = 'This purchase cannot be completed because the amount charged through mobile carriers must be at least 10 RUB.  Please select another payment method for your purchase and try again.';
 						break;
+						
+					case 'nodwin_cod':
+					error_text = 'This purchase cannot be completed because the amount charged through Cash on Delivery must be at least 500 INR.  Please select another payment method for your purchase and try again.';
+					break;
 
 					default:
 						error_text = 'This purchase cannot be completed because the amount is not allowed by the payment method.  Please select another payment method for your purchase and try again.';

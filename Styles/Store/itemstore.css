@@ -98,12 +98,28 @@ body.v6 h2.pageheader.itemtitle
 }
 .searchbox:hover
 {
-
+	border: 1px solid #888;
 }
+.searchbox input {
+	color: #fff;
+}
+
 .searchbox input.default
 {
-	color: #aaaaaa;
+	color: #777;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.3);
 }
+
+a#store_search_link img {
+	background-image: url('/public/images/v6/search_icon_btn_gray.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+a#store_search_link img:hover {
+	background-image: url('/public/images/v6/search_icon_btn_gray.png');
+	background-position-y: -25px;
+}
+
 
 .itemstore_tabarea
 {

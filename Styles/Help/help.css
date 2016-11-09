@@ -3540,6 +3540,10 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	padding-top: 0;
 }
 
+.qt_preview .help_request_message.from_steam {
+	margin-bottom: 4px;
+}
+
 .help_request_author_bar .playerAvatar {
 	float: left;
 	margin-right: 8px;

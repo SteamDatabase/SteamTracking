@@ -243,7 +243,10 @@ body.v6 h2 .header_inline a:hover {
 body.v6 h2.pageheader {
 	color: #ffffff;
 	font-size: 34px;
-	text-shadow: 1px 1px 0 #000000;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
 	margin-top: -4px;
 }
 
@@ -1142,6 +1145,10 @@ a#store_search_link img {
 	padding-left: 198px;
 }
 
+.tab_item.episode {
+	padding-left: 158px;
+}
+
 .large .tab_item {
     position: relative;
     background: #202d39;
@@ -1195,7 +1202,6 @@ a#store_search_link img {
 .tab_item_overlay img:hover, .large .tab_item_overlay img:hover {
     border: 1px solid rgba( 139, 185, 224, 0.2 );
 }
-
 
 .tab_item_cap {
 	position: absolute;
@@ -1663,6 +1669,22 @@ div.game_hover {
 	padding-top: 4px;
 	padding-left: 8px;
 	background-color: #6a8caa;
+}
+
+.hover_body .hover_review_summary {
+	padding-bottom: 10px;
+}
+.hover_body .game_review_summary {
+	color: #A34C25;
+}
+.hover_body .game_review_summary.mixed {
+	color: #B9A074;
+}
+.hover_body .game_review_summary.positive {
+	color: #66C0F4;
+}
+.hover_body .game_review_summary.none {
+	color: #626366;
 }
 
 .friend_blocks_row {
@@ -2936,7 +2958,8 @@ a#store_search_link img:hover {
 	margin-bottom: -76px;
 }
 
-body.v6 .recommendation_section h2 {
+body.v6 .recommendation_section h2,
+body.v6 .recommendation_mainsection h2 {
 	text-transform: uppercase;
 	color: #fff;
 	margin: 0 0 10px;
@@ -2948,7 +2971,8 @@ body.v6 .recommendation_section h2 {
 }
 
 body.v6 .home_page_content h2 span.right,
-body.v6 .recommendation_section h2 span.right {
+body.v6 .recommendation_section h2 span.right,
+body.v6 .recommendation_mainsection h2 span.right {
 	float: right;
 	text-transform: none;
 	letter-spacing: normal;

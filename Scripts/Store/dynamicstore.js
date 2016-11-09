@@ -428,7 +428,7 @@ GDynamicStore = {
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 				}
 
-				if( g_AccountID && unAppID ) // Only add if we have an appid
+				if( g_AccountID && unAppID && $El.data('ds-options') !== 0 ) // Only add if we have an appid
 				{
 					var $elMenu = $J ( '<div></div>', { 'class': 'ds_options' } ).append($J('<div>'));
 					$elMenu.v_tooltip ( {

@@ -452,10 +452,7 @@ div.hover {
 }
 
 .popup_block2 .popup_body2 {
-	background-color: #3b3938;
-	background-image:url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/gamelist_popup_bg.gif);
-	background-repeat:repeat-x;
-	border: 1px solid #82807c;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	box-shadow: 0 0 5px #000;
 	position: relative;
 	z-index:900;
 }
@@ -481,7 +478,7 @@ div.hover {
 .popup_body2 h5 {
 	font-size: 10px;
 	font-weight: bold;
-	color: #ffffff;
+	color: #212d3d;
 	z-index:999;
 	white-space: nowrap;
 }
@@ -495,10 +492,9 @@ a.popup_menu_item2:hover h5 {
 .pullup_item {
 	display: inline-block;
 	background-color: rgba( 0, 0, 0, 0.4 );
-	padding:3px 8px 3px 0px;
+	padding:3px 8px 0px 0px;
 	border-radius: 2px;
 	margin-right:6px;
-	margin-bottom: 6px;
 	cursor: pointer;
 	line-height: 18px;
 }
@@ -614,7 +610,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .wishlistRow {
 	position: relative;
-	min-height: 85px;
+	min-height: 70px;
 	margin-bottom: 15px;
 	padding: 8px 1%;
 
@@ -635,7 +631,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	min-height: 50px;
 	margin-right: 8px;
 	overflow: hidden;
-	padding-top: 10px;
+	padding-top: 4px;
 }
 
 div.wishlist_rank_ro, input.wishlist_rank {
@@ -654,7 +650,10 @@ div.wishlist_rank_ro, input.wishlist_rank {
 
 input.wishlist_rank {
 	border: none;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/gameList_wishlist_rank.png');
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid rgba( 0, 0, 0, 0.3);
+	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
 	padding-top: 0px;
 }
 
@@ -673,7 +672,7 @@ input.wishlist_rank {
 		font-weight: 300; /* light */
 
 			color: #ffffff;
-	padding-top: 14px;
+	padding-top: 4px;
 }
 
 .wishlist_rank.userEdited {

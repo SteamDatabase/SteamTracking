@@ -1308,7 +1308,7 @@ HelpWizard = {
 		});
 	},
 
-	LostAccessToPhoneOrEmail: function( strSessionID, strCode, strNav, unIssueID, bLostEmail, bLostPhone, bNoSelfPOP ) {
+	UserLostAccess: function( strSessionID, strCode, strNav, unIssueID, bLostEmail, bLostPhone, bLostPayment ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
@@ -1319,7 +1319,7 @@ HelpWizard = {
 				issueid: unIssueID,
 				lostemail: bLostEmail ? 1 : 0,
 				lostphone: bLostPhone ? 1 : 0,
-				noselfpop: bNoSelfPOP ? 1 : 0,
+				lostpayment: bLostPayment ? 1 : 0,
 			} )
 		}).fail( function( xhr ) {
 

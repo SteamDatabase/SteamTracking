@@ -461,6 +461,11 @@ input:not([type="radio"]):not(.authcode_placeholder), select , textarea, button,
 	padding: 3px;
 }
 
+input:not([type="radio"]):not(.authcode_placeholder).xtra_padding {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
 input[type=submit]:not(.btn_green_white_innerfade),
 input[type=reset]:not(.btn_green_white_innerfade),
 button {

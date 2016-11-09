@@ -136,6 +136,22 @@
 	display: block;
 }
 
+.games_list_tab_failed {
+	width: 24px;
+	line-height: 54px;
+	padding-left: 8px;
+	float: right;
+	display: block;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.games_list_tab_failed img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
 .games_list_tab_separator {
 	display: block;
 	float: left;

@@ -47,7 +47,7 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 		if ( !rgApp )
 			continue;
 
-		var $Item = $J('<div/>', {'class': 'dq_item'} );
+		var $Item = $J('<div/>', {'class': 'dq_item', 'data-ds-options': 0} );
 		var $ColorOverlay = $J('<div/>', {'class': 'dq_item_overlay'} );
 		var $Img = $J('<img/>', {'class': 'dq_item_cap', 'src': rgApp.header });
 		var $Price = $J(rgApp.discount_block).addClass( 'dq_item_price discount_block_large' );

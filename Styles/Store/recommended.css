@@ -16,6 +16,7 @@
 		font-weight: 300; /* light */
 
 			margin-bottom: 8px;
+	margin-left: 8px;
 }
 
 .recommended_bodygradient
@@ -28,6 +29,11 @@
 .recommendation_section {
 	margin-bottom: 17px;
     margin-top: 24px;
+}
+
+.recommendation_mainsection.friends_favs,
+.recommendation_mainsection.recently_viewed {
+	margin-top: 50px;
 }
 
 .recommendation_section.recommended_by_friends {
@@ -257,13 +263,13 @@
 
 .recommendation_carousel .scroll_btn.left {
 	left: 0px;
-	border-right: 1px solid #66c0f4;
+	border-right: 1px solid #1a4058;
 	background-image: url( /public/images/recommended/carousel_scroll_left.png );
 }
 
 .recommendation_carousel .scroll_btn.right {
 	right: 0px;
-	border-left: 1px solid #66c0f4;
+	border-left: 1px solid #1a4058;
 	background-image: url( /public/images/recommended/carousel_scroll_right.png );
 }
 
@@ -293,7 +299,6 @@
 }
 
 .recommendation_detail .quote {
-	max-height: 450px;
 	overflow: auto;
 	overflow-x: hidden;
 	word-wrap: break-word;
@@ -374,9 +379,9 @@
 
 .quote
 {
-	padding: 13px 13px;
+	padding: 0px 13px 13px 0px;
 	color: #acb2b8;
-	font-size: 13px;
+	font-size: 15px;
 	font-style: normal;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -400,6 +405,7 @@
 {
 	left: 100px;
 	top: 13px;
+	display: none;
 }
 
 .comment_row_quote .quote_arrow {
@@ -783,18 +789,21 @@ textarea.comment_input
 	color: #9e9995;
 }
 
-.friendplaytime_ctn {
-	padding: 18px 0px 18px 15px;
-}
+
 
 .friendplaytime_game {
 	float: left;
 	width: 294px;
 	margin-right: 14px;
+	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-position-y: 50px;
+	box-shadow: 0 0 5px #000;
 }
 
 .friendplaytime_game .friendplaytime_buttons {
 	visibility: hidden;
+	margin-left: 8px;
+	margin-bottom: 4px;
 }
 
 .friendplaytime_game:hover .friendplaytime_buttons {
@@ -815,6 +824,8 @@ textarea.comment_input
 
 .friendplaytime_game .friend_blocks_row {
 	margin-bottom: 5px;
+	margin-left: 8px;
+	margin-top: 8px;
 }
 
 .friendplaytime_plusmore .friend_block_avatar a {
@@ -955,10 +966,6 @@ textarea.comment_input
 .game_page_recommendation .comment_timestamp a {
 	color: #4f5051;
 	text-decoration: underline;
-}
-
-.page_content_ctn.friend_activity .tabarea .tab.active .tab_content {
-    background: #1c2b40;
 }
 
 .page_content_ctn h4 {
@@ -2355,7 +2362,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommendation_highlight.morelikethis_border {
 	margin-bottom: 0px;
-	background-image: url(http://chrisk.valvesoftware.com/store/public/images/v6/recommended/morelikethis_borderbottom.png );
+	background-image: url( /public/images//v6/recommended/morelikethis_borderbottom.png );
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	padding-bottom: 22px;

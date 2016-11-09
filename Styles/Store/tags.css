@@ -25,8 +25,7 @@ body.tag_page h2.pageheader {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			font-weight: normal;
-	text-shadow: 1px 1px 0 #000000;
+			text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
 	margin-top: -4px;
 }
 
@@ -40,9 +39,15 @@ body.tag_page h3 {
 }
 
 .tag_browse_header_desc {
-	color: #8f98a0;
-	font-size: 15px;
+	color: #c6d4df;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
 	text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.25 );
+}
+#tag_browse_description_recommended {
+	color: #c6d4df;
 }
 
 .tag_browse_header_desc a {

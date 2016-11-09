@@ -415,7 +415,36 @@
 	.btnv6_grey_black.btn_active > span, btnv6_grey_black.active > span {
 		background: transparent;			}
 
-	
+	.btnv6_white_transparent {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #fff !important;
+
+	background: #transparent;	}
+
+	.btnv6_white_transparent > span {
+		border-radius: 2px;
+		display: block;
+
+
+		background: transparent;		border: 1px solid rgba(255,255,255,0.4);
+border-radius: 2px;	}
+
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+	text-decoration: none !important;
+	color: #fff !important;
+
+	background: #transparent;	}
+
+	.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+		background: transparent;		border: 1px solid rgba(255,255,255,1);
+border-radius: 2px;	}
+
+
 /* This class must be applied to anything you want to use buttons in to enable hover states. */
 .btn_hover {}
 
