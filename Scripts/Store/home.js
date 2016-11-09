@@ -502,7 +502,7 @@ GHomepage = {
 		{
 			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgMainCaps[i] ) ] = true;
 
-			var $MainCap =  GHomepage.BuildMainCapsuleItem( 'main_cluster', rgMainCaps[i].appid, rgMainCaps[i].packageid );
+			var $MainCap =  GHomepage.BuildMainCapsuleItem( rgMainCaps[i], 'main_cluster' );
 			if( !$MainCap )
 				continue;
 			var $Thumb = $J('<div />');
@@ -549,11 +549,14 @@ GHomepage = {
 
 	},
 
-	BuildMainCapsuleItem: function( strFeatureContext, unAppID, unPackageID )
+	BuildMainCapsuleItem: function( rgItem, strFeatureContext )
 	{
 		var rgOptions = $J.extend({
 			'class': 'store_main_capsule',
 		}, rgOptions ? rgOptions : {} );
+
+		var unAppID = rgItem.appid;
+		var unPackageID = rgItem.packageid;
 
 		var params = { 'class': rgOptions.class, 'data-manual-tracking': 1 };
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
@@ -696,14 +699,13 @@ GHomepage = {
 			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
 
 		}
-		else {
-			// Fall back to old logic
-			var rgData =  unAppID ? GStoreItemData.rgAppData[ unAppID ] : GStoreItemData.rgPackageData[ unPackageID ];
+		else
+		{
 
 			var strStatus = '';
-			if ( rgItemData.status_string )
-				strStatus = rgItemData.status_string;
-			else if ( rgData && rgData.early_access )
+			if ( rgItem.status_string )
+				strStatus = rgItem.status_string;
+			else if ( rgItemData.early_access )
 			{
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 				strStatus = 'Early Access Now Available';
@@ -719,9 +721,9 @@ GHomepage = {
 				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 			}
-			else if ( rgData && rgData.coming_soon )
+			else if ( rgItemData && rgItemData.coming_soon )
 				strStatus = 'Pre-Purchase Now';
-			else if ( rgData && rgData.video )
+			else if ( rgItemData && rgItemData.video )
 				strStatus = 'Now Available to Watch';
 			else
 				strStatus = 'Now Available';
