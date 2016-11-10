@@ -680,6 +680,9 @@ a#store_search_link img {
 	border-top: 1px solid #13242e;
 }
 
+.search_suggest .match.focus {
+	background-color: #212d3d;
+}
 
 .search_suggest .match:hover {
 	text-decoration: none;
@@ -3000,7 +3003,6 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 .search_area .popup_body .match:hover,
 .search_area .popup_body .match:hover .match_name {
 	color: #fff;
-	background-color: #212d3d;
 }
 body.v6 .store_nav .popup_menu .hr, body.v6 #footer_nav .popup_menu .hr {
 	margin: 5px 10px 5px 10px;
