@@ -4430,40 +4430,40 @@ function DisplayPendingReceiptPage()
 		case 'efecty':
 		case 'baloto':
 		case 'pagoefectivo':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://go4gold.uol.com.br/pt-br/categoria-faq/STEAM">BoaCompra</a>.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_boacompra_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 
 		case 'molpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.mol.com">MOL</a>.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_mol_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'konbini':
 		case 'bank_transfer_japan':
 		case 'payeasy':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_degica_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'eclubpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub Store</a>.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_eclub_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'bitcoin':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for settlement on the bitcoin network.  This settlement requires at least one blockchain confirmation and can take several minutes to a few hours.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a target="_blank" href="https://help.bitpay.com/8450-Disputes-/">BitPay</a>.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_bitcoin_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_bitcoin_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'unionpay':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for a successful notification from Unionpay.  Normally, this process can take several minutes.  In extreme cases, it may take up to a few days.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Note: If your purchase fails, Steam will email you a link that will let you try your purchase (with the discount) again for up to 72 hours.';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_unionpay_long';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_unionpay_text';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 						

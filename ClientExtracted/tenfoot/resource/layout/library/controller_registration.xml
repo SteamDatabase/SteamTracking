@@ -52,10 +52,18 @@
 									<Panel id="RumbleSettingContainer" class="SoundDropdownContainer">
 										<Label id="RumbleLabel" text="#Controller_Registration_Rumble" />
 										<DropDown id="RumbleDropdown" class="SoundDropdown"/>
+									</Panel>
+									<Panel id="LEDColorContainer">
+										<Label text="#Controller_Registration_LEDHue" />
+										<Slider id="LEDColorSlider" direction="horizontal" />
 									</Panel>									
 									<Panel id="GuideBrightnessContainer">
 										<Label text="#Controller_Registration_GuideBrightness" />
 										<Slider id="GuideBrightnessSlider" direction="horizontal" />
+									</Panel>
+									<Panel id="LEDSaturationContainer">
+										<Label text="#Controller_Registration_LEDSaturation" />
+										<Slider id="LEDSaturationSlider" direction="horizontal" />
 									</Panel>
 									<Label id="RegistrationSubDescription" text="#Controller_Registration_SubDesc" />
 								</Panel>

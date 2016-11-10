@@ -1627,7 +1627,9 @@
 	"Controller_Registration_Cancel"	"Wait, this isn't my account"
 	"Controller_Registration_Guest"		"Use a Guest account"
 	"Controller_Registration_SubDesc"	"You can update these at any time in the Big Picture Settings."
-	"Controller_Registration_GuideBrightness"	"Steam Button Brightness:"
+	"Controller_Registration_GuideBrightness"	"Controller Light Brightness:"
+	"Controller_Registration_LEDHue"			"Controller Light Color:"
+	"Controller_Registration_LEDSaturation"			"Controller Light Saturation:"
 	"Controller_Registration_AbortTitle"	"Registration Aborted"
 	"Controller_Registration_AbortDesc"		"For now, we'll just use configurations from {s:accountname}. Next time you log into your own account, we'll get your controller setup."
 	"Controller_Registration_MigrateFail"		"Migration Failed"
@@ -2071,6 +2073,7 @@
 	"Library_Details_ControllerAction_Host_Suspend"	"SUSPEND HOST PC"
 	"Library_Details_ControllerAction_Host_Restart"	"RESTART HOST PC"
 	"Library_Details_ControllerAction_Toggle_HUD"	"TOGGLE SC HUD"
+	"Library_Details_ControllerAction_Set_LED"		"SET LIGHT"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -4907,7 +4910,7 @@
 	"ControllerBinding_ButtonDistanceFourButtons" "Button Distance"
 	"ControllerBinding_ButtonDistanceFourButtons_Description" "When used on a trackpad, this determines the separation between the virtual buttons on the trackpad.  Depending on the radius and distance between buttons, multiple buttons may be pressed simultaneously when pushing or rolling across the trackpad."
 	//Joystick Move
-	"ControllerBinding_ModeDrmopDown_Move" "Style of Input - Joystick Move"
+	"ControllerBinding_ModeDropDown_Move" "Style of Input - Joystick Move"
 	"ControllerBinding_ModeDropDown_Move_Description" "This input will operate as a simple Joystick.  This is intended for traditional joystick applications.  Joystick will only work with X-Input compatible gamepad games."
 	"ControllerBinding_OutputJoystick_joystick_move" "Output Joystick"
 	"ControllerBinding_OutputJoystick_joystick_move_Description" "When sending analog joystick commands to the game, should those commands be a left or right joystick as seen by the game?"
@@ -5008,8 +5011,8 @@
 	"ControllerBinding_MouseSensitivity_joystick_move" "Mouse Sensitivity"
 	"ControllerBinding_MouseSensitivity_joystick_move_Description" "Sensitivity of the mouse cursor when the virtual joystick's output is set to Mouse."
 	//Joystick Mouse
-	"ControllerBinding_ModeDropDown_Move" "Style of Input - Joystick Mouse"
-	"ControllerBinding_ModeDropDown_Move_Description" "This input controls a mouse with a joystick.  This is intended for using a joystick with mouse based applications.  As the output is a mouse, the application must support mouse based output."
+	"ControllerBinding_ModeDropDown_Joystick_Mouse" "Style of Input - Joystick Mouse"
+	"ControllerBinding_ModeDropDown_Joystick_Mouse_Description" "This input controls a mouse with a joystick.  This is intended for using a joystick with mouse based applications.  As the output is a mouse, the application must support mouse based output."
 	"ControllerBinding_OutputJoystick_joystick_mouse" "Output Joystick"
 	"ControllerBinding_OutputJoystick_joystick_mouse_Description" "When sending analog joystick commands to the game, should those commands be a left or right joystick as seen by the game?"
 	"ControllerBinding_OutputJoystick_joystick_mouse_LeftJoystick" "Output Joystick - Left"
@@ -6043,6 +6046,14 @@
 	"ControllerBinding_ActivatorButton12_Description"	"Select this Activator."
 
 	"Library_PresetToCopyToActionSet_CodeLabel"	"Action Set to Copy into New Action Set"
+
+	"Controller_SetLEDColor_Title"						"SET LIGHT OPTIONS"
+	"Controller_SetLEDColor_Description"				"Select the settings for this Light Binding."
+	"Controller_Light_Setting"							"Light Setting:"
+	"Controller_Light_Setting_Custom"					"Custom Setting"
+	"Controller_Light_Setting_Default"					"Default User Setting"
+	"Controller_SelectLEDColor_OK"						"OK"
+	"Controller_SelectLEDColor_Cancel"					"CANCEL"
 
 	"Library_EditBigPicture_Warning_Title"				"Warning"
 	"Library_EditBigPicture_Warning_Description"		"We highly recommended against altering these controls.\n \nRemoval of movement or selection actions will result in an inability to use the Steam Controller within the Big Picture interface, including these editing controls."
