@@ -1082,6 +1082,7 @@ function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 		$J.get( 'http://store.steampowered.com/search/suggest', parameters).done( function( html ) {
 			$Suggestions.html( html );
 			$Suggestions.InstrumentLinks();
+			$Suggestions.find('.match').attr('data-ds-options', 0);
 			GDynamicStore.DecorateDynamicItems( $Suggestions );
 			$Suggestions.find('a.match').each( function () {
 				var el = this;
