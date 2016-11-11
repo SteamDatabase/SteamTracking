@@ -2764,6 +2764,17 @@ ChooseBinding #VirtualGamepad
 	visibility: visible;
 }
 
+.HideGamepad #VirtualGamepad
+{
+    visibility: collapse;
+}
+
+
+.HideGamepad #VirtualMouse
+{
+    margin-left: 185px;
+}
+
 ChooseBinding #GamepadBoundLayer, ChooseBinding #GamepadFocusLayer,
 ChooseBinding #GamepadBoundLayerLT, ChooseBinding #GamepadBoundLayerRT, ChooseBinding #GamepadBoundLayerLB, ChooseBinding #GamepadBoundLayerRB,
 ChooseBinding #GamepadBoundLayerLS, ChooseBinding #GamepadBoundLayerRS, ChooseBinding #GamepadBoundLayerBK, ChooseBinding #GamepadBoundLayerST,

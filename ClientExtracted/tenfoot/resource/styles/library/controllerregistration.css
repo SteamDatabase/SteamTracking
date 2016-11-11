@@ -113,12 +113,17 @@ DropDownMenu.DropDownMenuVisible
     z-index: msgbox_contextmenu_zindex;
 }
 
-#TurnOnSoundContainer, #TurnOffSoundContainer
+#TurnOnSoundContainer, #TurnOffSoundContainer, #HapticsSettingContainer
 {
     visibility: collapse;
 }
 
 .SupportsSound #TurnOnSoundContainer,.SupportsSound #TurnOffSoundContainer
+{
+    visibility: visible;
+}
+
+.SupportsHaptics #HapticsSettingContainer
 {
     visibility: visible;
 }

@@ -49,6 +49,10 @@
 										<Label text="#Controller_Registration_TurnOffSound" />
 										<DropDown id="TurnOffSoundDropdown" class="SoundDropdown"/>
 									</Panel>
+									<Panel id="HapticsSettingContainer" class="SoundDropdownContainer">
+										<Label id="HapticsLabel" text="#Controller_Registration_Haptics" />
+										<DropDown id="HapticsDropdown" class="SoundDropdown"/>
+									</Panel>
 									<Panel id="RumbleSettingContainer" class="SoundDropdownContainer">
 										<Label id="RumbleLabel" text="#Controller_Registration_Rumble" />
 										<DropDown id="RumbleDropdown" class="SoundDropdown"/>

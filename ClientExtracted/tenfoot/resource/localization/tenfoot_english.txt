@@ -1066,8 +1066,9 @@
 	"SettingController_HapticSound_11"					"Discovery"
 	"SettingController_HapticSound_12"					"Triumph"
 	"SettingController_HapticSound_13"					"The Mann"
-	"Controller_Registration_Rumble"					"Rumble Preference"
-	"Controller_Registration_RumbleSC"					"[Experimental] Rumble Emulation"
+	"Controller_Registration_Rumble"					"Rumble Preference:"
+	"Controller_Registration_RumbleSC"					"[Experimental] Rumble Emulation:"
+	"Controller_Registration_Haptics"					"Haptics Preference:"
 
 
 	"Settings_SteamControllerSupport"					"Steam controller support"
@@ -2273,7 +2274,7 @@
 	"Library_Details_EnableActionSetBeep"		"Beep on Change"
 
 	"Library_Details_ControllerSupportToggle_Title"		"Controller Configuration Support"
-	"Library_Details_ControllerSupportToggle_Desc"		"This will enable/disable controller configurator support.  You must disconnect and reconnect any applicable controllers after changing this setting to access configurations.  If this controller is connected via a wireless receiver, it should to be disconnected and reconnected as well."
+	"Library_Details_ControllerSupportToggle_Desc"		"This will enable/disable controller configurator support.  You must disconnect and reconnect any applicable controllers after changing this setting to access configurations.  If this controller is connected via a wireless receiver, it should be disconnected and reconnected as well."
 
 	"Library_Controller_Property_Value_Rumble_Frequency_ExtraLow"	"Extra Low"
 	"Library_Controller_Property_Value_Rumble_Frequency_Low"		"Low"
@@ -2310,6 +2311,7 @@
 	"Library_Controller_Property_Value_TriggerOff"		"Analog Off"
 	"Library_Controller_Property_Value_TriggerLeft"		"Left Trigger"
 	"Library_Controller_Property_Value_TriggerRight"	"Right Trigger"
+	"Library_Controller_Property_Value_ApplicationPreference"	"Configuration Preference"
 
 	"Library_Controller_Property_Value_LeftStickRight"	"Left Stick Push Right"
 	"Library_Controller_Property_Value_LeftStickLeft"	"Left Stick Push Left"

@@ -1279,7 +1279,7 @@ This should take less than a minute."
 "Steam_App_LegacyKey_Failed_Text"  "Product key request failed. Please try again in a few minutes."
 "Steam_App_LegacyKey_NoResponse_Text" "Failed to contact the Steam product key server. Verify your Internet connection and try again."
 "Steam_App_LegacyKey_Denied_Text"  "Steam was unable to verify ownership in order to request a product key. Please contact Steam Support."
-"Steam_App_LegacyKey_Denied_Borrowed_Text" "Some or all content of %game% is only available by connecting to a third-party service, for example UPlay or Origin.\nThe original owner must have registered with this service to access this content."
+"Steam_App_LegacyKey_Denied_Borrowed_Text" "Some or all content of %game% is only available by connecting to a third-party service, for example Uplay or Origin.\nThe original owner must have registered with this service to access this content."
 "Steam_App_LegacyKey_Pending_Text" "Product key request is pending approval by Steam Support. Please try again in a few hours."
 "Steam_App_LegacyKey_OutOfKeys_Text" "Steam is temporarily out of unused product keys required by %game%.\n\nWe will be able to issue you a product key once we received more keys from the publisher.\nPlease try again later or you can request a refund now."
 
