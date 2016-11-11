@@ -25979,11 +25979,7 @@
 			"item_name"	"#TF_Halloween_Skullcap"
 			"item_description"	"#TF_Halloween_Skullcap_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"31"
 			"max_ilevel"	"31"
@@ -37045,11 +37041,7 @@
 			"item_name"	"#TF_Halloween_Skullcap2011_Style1"
 			"item_description"	"#TF_Halloween_Skullcap2011_Style1_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"31"
 			"max_ilevel"	"31"
@@ -37113,11 +37105,7 @@
 			"item_name"	"#TF_Halloween_Skullcap2011_Style2"
 			"item_description"	"#TF_Halloween_Skullcap2011_Style2_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"31"
 			"max_ilevel"	"31"
@@ -37181,11 +37169,7 @@
 			"item_name"	"#TF_Halloween_Skullcap2011_Style3"
 			"item_description"	"#TF_Halloween_Skullcap2011_Style3_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"31"
 			"max_ilevel"	"31"
@@ -56210,6 +56194,73 @@
 					"demoman"	"models/player/items/taunts/bumpercar/parts/bumpercar.mdl"
 				}
 			}
+		}
+		"1173"
+		{
+			"name"	"Unusual Cap"
+			"prefab"	"valve base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	""		
+			"craft_material_type"	""		
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_UnusualCap"
+			"item_description"	"#TF_UnusualCap_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"image_inventory"	"backpack/player/items/all_class/up_hat_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"basename"	"models/player/items/all_class/up_hat_%s.mdl"
+			}
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+				"never craftable"
+				{
+					"attribute_class"	"never_craftable"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
 		}
 
 
@@ -95237,7 +95288,42 @@
 				"basename"	"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_%s.mdl"
 			}
 		}
-
+		"9292"
+		{
+			"name"	"Chapelaria 6v6 1st Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_1st"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place.mdl"
+		}
+		"9293"
+		{
+			"name"	"Chapelaria 6v6 2nd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_2nd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place.mdl"
+		}
+		"9294"
+		{
+			"name"	"Chapelaria 6v6 3rd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_3rd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place.mdl"
+		}
+		"9295"
+		{
+			"name"	"Chapelaria 6v6 Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
+		}
 
 
 
