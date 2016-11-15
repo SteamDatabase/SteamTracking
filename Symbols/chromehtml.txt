@@ -696,6 +696,7 @@
  SteamThreadTools::CThread::Start(unsigned long)
  SteamThreadTools::CThread::~CThread()
  SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ SteamThreadTools::CThreadEvent::Reset()
  SteamThreadTools::CThreadEvent::Set()
  SteamThreadTools::CThreadLocalBase::Get() const
  SteamThreadTools::CThreadLocalBase::Set(void*)
@@ -731,7 +732,7 @@
  T CChromeIPCClient::GetFreeCommandBuffer(EHTMLCommands, int)
  T CChromeIPCClient::GetMainThreadCommand(HTMLCommandBuffer_t**)
  T CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)
- T CChromeIPCClient::Init(unsigned int)
+ T CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)
  T CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)
  T CChromeIPCClient::ReadShMemFD()
  T CChromeIPCClient::ReleaseCommandBuffer(HTMLCommandBuffer_t*)
@@ -799,6 +800,7 @@
  T CHTMLController::Shutdown()
  T CHTMLController::UnlockH264()
  T CHTMLController::Validate(CValidator&, char const*)
+ T CHTMLController::WaitForIPCTaskThreadSleep()
  T CHTMLController::~CHTMLController()
  T CHTMLHeader::ByteSize() const
  T CHTMLHeader::CHTMLHeader()
@@ -2744,7 +2746,7 @@
  b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableSandbox
  b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamDisableWinH264
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
- b CChromeIPCClient::Init(unsigned int)::fAsserted
+ b CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser

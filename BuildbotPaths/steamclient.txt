@@ -1389,6 +1389,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/tsmempool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlconsistenthash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldelegateimpl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldualhashmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhash.h
