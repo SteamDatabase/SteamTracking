@@ -2280,3 +2280,8 @@ p.optionalChecks {
 .landingRightCol .panel.bundle .grayRule {
 	margin-top: 25px;
 }
+
+/* Anti-Cheat tab */
+input#enablevac:disabled {
+	opacity: 0.2;
+}
