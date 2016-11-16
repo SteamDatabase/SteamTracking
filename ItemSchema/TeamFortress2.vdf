@@ -10429,7 +10429,7 @@
 			"required_item_name"				"Activated Halloween Pass"
 			"operation_start_date"				"2016-10-19 00:00:00" 
 			"stop_adding_to_queue_date"			"2016-11-15 00:00:00" 
-			"stop_giving_to_player_date"		"2016-11-16 00:00:00" 
+			"stop_giving_to_player_date"		"2016-11-17 00:00:00" 
 			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
 			"operation_lootlist"				"halloween_quest_drop"
