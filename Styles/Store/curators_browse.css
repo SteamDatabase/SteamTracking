@@ -177,11 +177,16 @@ a.steam_curator_row:hover
 	margin-right: 10px;
 	width: 110px;
 }
-.curator_info_ctn {
+.curator_info_ctn.tagline {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 124px;
+}
+.curator_info_ctn.has_review {
+	position: absolute;
+	top: 30px;
+	left: 120px;
 }
 .steam_curator_name
 {
@@ -208,6 +213,17 @@ a.steam_curator_row:hover
     color: #8F98A0;
     overflow: hidden;
     max-width: 390px;
+	margin-right: 95px;
+}
+.recommendation_desc {
+	font-size: 13px;
+	line-height: 16px;
+	color: #c6d4df;
+	font-family: "Motiva Sans", Sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	padding-top: 5px;
+	max-width: 390px;
 	margin-right: 95px;
 }
 .steam_curator_recommended_game_names {
@@ -358,4 +374,29 @@ body.v6 .page_content.curators.header {
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: 300;
 	margin-top: -6px;
+}
+
+/* for curators reviewing a product */
+.recommendation_stats
+{
+	padding: 14px 14px 0px 14px;
+	color: #62696e;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+.recommendation_stat
+{
+	padding-left: 10px;
+	float: right;
+}
+
+.recommendation_type_ctn img {
+	padding-right: 5px;
+}
+
+.recommendation_readmore {
+	padding: 0px 0px 7px 14px;
+	bottom: 0px;
+	position: absolute;
+	font-size: 11px;
 }

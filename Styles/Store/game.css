@@ -297,22 +297,6 @@ img.game_header_image_full {
 	font-size: 15px;
 }
 
-.game_review_summary {
-	color: #A34C25;
-}
-
-.game_review_summary.mixed {
-	color: #B9A074;
-}
-
-.game_review_summary.positive {
-	color: #66C0F4;
-}
-
-.game_review_summary.none {
-	color: #626366;
-}
-
 .glance_details p {
 	line-height: 20px;
 	padding-right: 12px;

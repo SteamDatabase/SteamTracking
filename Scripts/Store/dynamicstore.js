@@ -47,17 +47,26 @@ GDynamicStore = {
 
 	s_bUserOnMacOS: false,
 	s_bUserOnLinux: false,
+	s_bUserOnWindows: false,
+
 
 	s_ImpressionTracker: false,
 
 	Init: function( accountid, bForceRefresh, strOS )
 	{
 
-		/* 'windows', 'macos', 'linux', or 'unknown' */
-		if ( strOS == 'mac' )
-			GDynamicStore.s_bUserOnMacOS = true;
-		else if ( strOS == 'linux' )
-			GDynamicStore.s_bUserOnLinux = true;
+		var rgDesiredOSTypes = strOS ? strOS.split(',') : 'any';
+
+		for( var i=0; i < rgDesiredOSTypes.length; i++ )
+		{
+			switch( rgDesiredOSTypes[i] )
+			{
+				case 'mac': GDynamicStore.s_bUserOnMacOS = true; break;
+				case 'linux': GDynamicStore.s_bUserOnLinux = true; break;
+				default:
+				case 'win': GDynamicStore.s_bUserOnWindows = true; break;
+			}
+		}
 
 		var fnRunOnLoadCallbacks = function() {
 			GDynamicStore.m_bLoadComplete = true;
@@ -1258,11 +1267,13 @@ GStoreItemData = {
 	{
 		if ( ApplicableSettings.only_current_platform && Settings.only_current_platform )
 		{
-			if ( GDynamicStore.s_bUserOnMacOS && !rgItemData.os_macos )
-				return false;
 
-			if ( GDynamicStore.s_bUserOnLinux && !rgItemData.os_linux )
-				return false;
+			if (	( !GDynamicStore.s_bUserOnMacOS || ( GDynamicStore.s_bUserOnMacOS && !rgItemData.os_macos ) ) &&
+					( !GDynamicStore.s_bUserOnLinux || ( GDynamicStore.s_bUserOnLinux && !rgItemData.os_linux ) ) &&
+					( !GDynamicStore.s_bUserOnWindows || ( GDynamicStore.s_bUserOnWindows && !rgItemData.os_windows ) &&
+					( GDynamicStore.s_bUserOnWindows || GDynamicStore.s_bUserOnMacOS || GDynamicStore.s_bUserOnLinux ) )
+				)
+			return false;
 		}
 
 		if ( rgItemData.coming_soon && ApplicableSettings.prepurchase && !Settings.prepurchase )

@@ -463,8 +463,14 @@ span.membersOnline {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
+
 .friendPlayerLevel.lvl_1200 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+
+.friendPlayerLevel.lvl_1300 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 

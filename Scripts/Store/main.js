@@ -1447,7 +1447,9 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 			Modal.Dismiss();
 		else
 		{
-			if ( window.location.href.match( /[?&]l=/ ) )
+						if( g_AccountID )
+				window.location = 'http://store.steampowered.com/account/languagepreferences/';
+			else if ( window.location.href.match( /[?&]l=/ ) )
 				window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );
 			else
 				window.location.reload();
@@ -2092,6 +2094,7 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 	var nIndex = this.nIndex;
 
 	var rgTargets = this.$elItems;
+	var nSearched = 0;
 
 	if( nNewIndex < 0 ) // Allow index of -1 to go backwards.
 	{
@@ -2105,7 +2108,7 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 				nIndex += this.nItems;
 
 		}
-		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) );
+		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) && nSearched++ < this.nItems );
 	}
 	else if( nNewIndex !== undefined )
 	{
@@ -2120,7 +2123,7 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 		{
 			nIndex = ( nIndex + 1 ) % this.nItems;
 		}
-		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) );
+		while( !$J( rgTargets[ nIndex ] ).is( ":visible" ) && nSearched++ < this.nItems );
 
 	}
 

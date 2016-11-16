@@ -439,3 +439,69 @@ body.v6 .account_settings_container h2 {
 #primary_language {
 	margin-left: 25px;
 }
+
+input[type=date] {
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+	padding: 4px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.vat_date_selector::-webkit-inner-spin-button {
+	display: none;
+	margin: 0;
+}
+.vat_date_selector::-webkit-calendar-picker-indicator {
+	background: #324965;
+}
+
+.address_input_box {
+	border: 1px solid #233c51;
+	border-radius: 3px;
+
+	max-width: 800px;
+	background-color: #324965;
+	color: #d6d7d8;
+	padding: 10px 11px;
+	font-size: 13px;
+	font-family: "Motiva Sans", Sans-serif;
+	font-weight: normal;
+	-webkit-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+	-moz-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+	box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+
+}
+
+.account_vat_setup_content {
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 24px;
+	min-height: 324px;
+	float: left;
+	color: #c6d4df;
+	width: inherit;
+	font-size: 12px;
+}
+
+.account_vat_setup_header {
+	padding-top: 20px;
+}
+
+.account_vat_setup_action {
+	color: #64ABD5;
+}
+
+.account_vat_setup_example {
+	padding-left: 15px;
+}
+
+.account_vat_form_error {
+	color: #ff7b00;
+}
+
+.account_vat_setup_padding {
+	padding-bottom: 5px;
+}
+

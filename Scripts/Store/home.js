@@ -207,74 +207,19 @@ GHomepage = {
 		GHomepage.oDisplayLists.popular_new = GHomepage.oDisplayListsRaw.popular_new_releases || [];
 		GHomepage.oDisplayLists.specials = GHomepage.oDisplayListsRaw.specials || [];
 		GHomepage.oDisplayLists.under10 = GHomepage.oDisplayListsRaw.under10 || [];
-		GHomepage.oDisplayLists.new_on_steam = GHomepage.MergeLists(
-			GHomepage.oDisplayListsRaw.featured_items, true,
-			GHomepage.oDisplayLists.popular_new, false
-		);
 
-		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.MergeLists(
-			GHomepage.oDisplayListsRaw.popular_featured_items, true,
-			GHomepage.oDisplayLists.popular_new, true
-		);
+		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
-		// Recently viewed apps (Side bar)
-		try {
-			GHomepage.RenderRecentApps();
-		} catch( e ) { OnHomepageException(e); }
-
-		// Prefer spotlights for games we don't own
-		try {
-			GHomepage.SetDefaultSpotlight();
-		} catch( e ) { OnHomepageException(e); }
-
-		// Recommended
-		try {
-			GHomepage.RenderRecommendedBlock();
-		} catch( e ) { OnHomepageException(e); }
-
-		// CURATORS
-		try {
-			if ( bHaveUser )
-			{
-				HomeSettings = new CHomeSettings( 'curators', GSteamCurators.Render );
-				$J('.apps_recommended_by_curators_ctn .home_page_content .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
-			}
-			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
-		} catch( e ) { OnHomepageException(e); }
 
 		// MAIN CLUSTER
 		try {
 			GHomepage.RenderMainClusterV2()
 		} catch( e ) { OnHomepageException(e); }
 
-		// NEW ON STEAM
-		try {
-			if ( bHaveUser )
-			{
-				HomeSettings = new CHomeSettings( 'new_on_steam', GHomepage.RenderNewOnSteam );
-				$J('.home_smallcap_area.new_on_steam .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
-			}
-			GHomepage.RenderNewOnSteam();
-		} catch( e ) { OnHomepageException(e); }
-
-		// POPULAR NEW ON STEAM
-		try {
-			if ( bHaveUser )
-			{
-				HomeSettings = new CHomeSettings( 'new_on_steam', GHomepage.RenderPopularNewOnSteam );
-				$J('.home_smallcap_area.popular_new_on_steam .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
-			}
-			GHomepage.RenderPopularNewOnSteam();
-		} catch( e ) { OnHomepageException(e); }
 
 		// Spotlight/specials section
 		try {
 			GHomepage.RenderSpotlightSection();
-		} catch( e ) { OnHomepageException(e); }
-
-		// Popular new
-		try {
-			GHomepage.FilterPopularNewOnSteam();
 		} catch( e ) { OnHomepageException(e); }
 
 		// under10
@@ -282,34 +227,9 @@ GHomepage = {
 			GHomepage.RenderUnder10();
 		} catch( e ) { OnHomepageException(e); }
 
-		// specials
-		try {
-			GHomepage.FilterSpecials();
-		} catch( e ) { OnHomepageException(e); }
-
 		// Tabs
 		try {
 			GHomepage.FilterTabs();
-		} catch( e ) { OnHomepageException(e); }
-
-		// RECENTLY UPDATED
-		try {
-			if ( bHaveUser )
-			{
-				HomeSettings = new CHomeSettings( 'recently_updated', GHomepage.RenderRecentlyUpdated );
-				$J('.home_smallcap_area.recently_updated .home_actions_ctn').append( HomeSettings.RenderCustomizeButton() );
-			}
-			GHomepage.oDisplayLists.recently_updated = GHomepage.MergeLists(
-				GHomepage.oDisplayListsRaw.featured_update_round, true,
-				GHomepage.oDisplayListsRaw.other_update_round, false
-			);
-			GHomepage.RenderRecentlyUpdated();
-
-		} catch( e ) { OnHomepageException(e); }
-
-		// Top sellers (Not logged in)
-		try {
-			GHomepage.RenderTopSellersArea();
 		} catch( e ) { OnHomepageException(e); }
 
 		// Marketing Messages
@@ -317,18 +237,32 @@ GHomepage = {
 			GHomepage.RenderMarketingMessages();
 		} catch( e ) { OnHomepageException(e); }
 
+		// Logged in
 		// FRIENDS RECENTLY PURCHASED
 		try {
 			GHomepage.RenderFriendsRecentlyPurchased();
 		} catch( e ) { OnHomepageException(e); }
 
+		// CURATORS
+		try {
 
-		// RECOMMENDED TAGS
+			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
+		} catch( e ) { OnHomepageException(e); }
+
+
+
+		// Sidebar
+		// Recommended tags
 		try {
 			if ( bHaveUser && GDynamicStore.s_rgRecommendedTags.length )
 			{
 				GHomepage.RenderRecommendedTags();
 			}
+		} catch( e ) { OnHomepageException(e); }
+
+		// Recently viewed apps
+		try {
+			GHomepage.RenderRecentApps();
 		} catch( e ) { OnHomepageException(e); }
 
 		// Tabbed section
@@ -401,57 +335,6 @@ GHomepage = {
 		}
 	},
 
-	SetDefaultSpotlight: function()
-	{
-		var $elSpotlightContainer = $J('#spotlight_scroll');
-		var elBestTarget = false;
-		var rgSpotlights = $elSpotlightContainer.children();
-
-		// Build a list of appids so we can run through our normal filter code.
-		var rgAppIds = [];
-		for( var i=0; i<rgSpotlights.length; i++)
-		{
-			var unAppId = rgSpotlights[i].dataset.dsAppid;
-			rgAppIds.push({ appid: unAppId })
-		}
-
-		// Now filter...
-		rgAppIds = GHomepage.FilterItemsForDisplay(
-			rgAppIds, 'home', 0, 10, { games_already_in_library: false, localized: true }
-		);
-
-		// Find the spotlight for our appid
-		if( rgAppIds.length > 0 )
-		{
-			for ( var i = 0; i < rgSpotlights.length; i++ )
-			{
-				var unAppId = rgSpotlights[ i ].dataset.dsAppid;
-
-				// Now run over our "good" spotlights
-				for ( var j = 0; j < rgAppIds.length; j++ )
-				{
-					if ( unAppId && unAppId == rgAppIds[ j ].appid )
-					{
-						// Found an ideal spotlight, but it's position 0, so just early out
-						if ( i == 0 )
-							return;
-
-						elBestTarget = rgSpotlights[ i ];
-
-					}
-				}
-			}
-		}
-
-
-		if( elBestTarget )
-		{
-			$elSpotlightContainer.prepend ( elBestTarget );
-			$elSpotlightContainer.children ().hide ();
-			$J ( elBestTarget ).show ();
-		}
-
-	},
 
 	RenderMainClusterV2: function()
 	{
@@ -485,7 +368,7 @@ GHomepage = {
 		}
 
 		rgDisplayListCombined = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
+			rgDisplayListCombined, 'home', 6, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		var rgMainCaps = rgDisplayListCombined.slice(0,12);
@@ -597,8 +480,10 @@ GHomepage = {
 		//$ImgCtn.append( $ImgCap );
 		$CapCtn.append( $ImgCtn );
 
+		var $AppName = $J('<div/>', { html: rgItemData['name'] } )
+		var $AppNameCtn = $J('<div/>' ).addClass( 'app_name' );
 
-		var $AppNameCtn = $J('<div/>', { html: rgItemData['name'] } ).addClass( 'app_name' );
+		$AppNameCtn.append( $AppName );
 		$CapCtn.append( $AppNameCtn );
 
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
@@ -710,7 +595,7 @@ GHomepage = {
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 				strStatus = 'Early Access Now Available';
 			}
-			else if ( rgItemData.new_on_steam )
+			else if ( rgItemData.popular_new_on_steam )
 			{
 				strStatus = 'New On Steam';
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
@@ -774,102 +659,6 @@ GHomepage = {
 	},
 
 
-	RenderMainCluster: function()
-	{
-
-		for ( var i = 0; i < GHomepage.oDisplayLists.popular_new.length; i++ )
-		{
-			GHomepage.oDisplayLists.popular_new[i].new_on_steam = true;
-		}
-		for ( var i = 0; i < GHomepage.oDisplayLists.top_sellers.length; i++ )
-		{
-			GHomepage.oDisplayLists.top_sellers[i].top_seller = true;
-		}
-		if ( GHomepage.rgCuratedAppsData.apps )
-		{
-			for (var i = 0; i < GHomepage.rgCuratedAppsData.apps.length; i++) {
-				GHomepage.rgCuratedAppsData.apps[i].recommended_by_curator = true;
-			}
-		}
-
-		var rgTopSellers = [];
-		if ( oSettings && oSettings.top_sellers )
-			rgTopSellers = GHomepage.oDisplayLists.top_sellers;
-
-		var rgDisplayListCombined = GHomepage.MergeLists(
-			GHomepage.oDisplayLists.main_cluster, true,
-			rgTopSellers, false
-		);
-		var oSettings = GHomepage.oSettings.main_cluster;
-
-		GHomepage.oFeaturedMainCapItems = {};
-
-		if ( oSettings && oSettings.recommended_for_you )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				rgDisplayListCombined, false,
-				GHomepage.rgRecommendedGames, true
-			);
-		}
-		var bZippedCurators = false;
-
-		if ( GHomepage.rgCuratedAppsData.apps && GHomepage.rgCuratedAppsData.apps.length > 0 )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				rgDisplayListCombined, true,
-				GHomepage.rgCuratedAppsData.apps, true
-			);
-			bZippedCurators = true;
-		}
-
-		if( !bZippedCurators )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				rgDisplayListCombined, false,
-				GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true
-			);
-		}
-
-		rgDisplayListCombined = GHomepage.MergeLists(
-			GHomepage.oDisplayLists.main_cluster_legacy, false,
-			rgDisplayListCombined, false
-		);
-
-
-		var rgMainCaps = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'home', 2, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
-		);
-
-		GDynamicStore.MarkAppDisplayed( rgMainCaps );
-
-		if ( GHomepage.bShuffleInMainLegacy )
-			rgMainCaps = v_shuffle( rgMainCaps );
-
-		for ( var i = 0; i < rgMainCaps.length; i++ )
-		{
-			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgMainCaps[i] ) ] = true;
-		}
-
-		var cMainCaps = Cluster.BuildClusterElements( $J('#main_cluster_scroll'), rgMainCaps );
-
-		// global
-		if ( GHomepage.MainCapCluster )
-			GHomepage.MainCapCluster.setCaps( cMainCaps );
-		else
-			GHomepage.MainCapCluster = new Cluster( {
-				cCapCount: cMainCaps,
-				nCapWidth: 616 + 4,
-				elClusterArea: $J('#home_main_cluster'),
-				elSlider: $J('#main_cluster_control'),
-				elScrollLeftBtn: $J('#main_cluster_control_previous'),
-				elScrollRightBtn: $J('#main_cluster_control_next'),
-				bUseActiveClass: true,
-				rgImageURLs: {},
-				onChangeCB: GDynamicStore.HandleClusterChange
-			} );
-
-	},
-
 	InstrumentTabbedSection: function()
 	{
 		var $elTarget = $J('#tab_preview_container');
@@ -884,6 +673,21 @@ GHomepage = {
 				var $elInfoDiv = $J('<div>',{'class': 'tab_preview'});
 
 				$elInfoDiv.append($J('<h2>').text( rgData.name ));
+
+				if ( rgData['review_summary'] )
+				{
+					var reviewSummary = rgData['review_summary'];
+					var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-content": reviewSummary['sReviewScoreTooltip'] } );
+					$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall user reviews:') );
+					$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
+					if ( reviewSummary['cReviews'] > 0 )
+					{
+						$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+					}
+					$elReviewData.v_tooltip();
+
+					$elInfoDiv.append( $elReviewData );
+				}
 
 				if( rgData.tags )
 				{
@@ -930,44 +734,6 @@ GHomepage = {
 
 	},
 
-	// Unused
-	RenderNewOnSteam: function()
-	{
-		var rgNewOnSteamNoMainCap = [];
-		for( var i = 0; i < GHomepage.oDisplayLists.new_on_steam.length; i++ )
-		{
-			var rgItem = GHomepage.oDisplayLists.new_on_steam[i];
-			if ( !GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgItem ) ] )
-				rgNewOnSteamNoMainCap.push( rgItem );
-		}
-
-		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 4, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 4
-		);
-
-		var $NewOnSteam = $J('.home_smallcap_area.new_on_steam .home_smallcaps' ).empty();
-		for( var i = 0; i < rgFeaturedLaunchTitles.length; i++ )
-		{
-			var oItem = rgFeaturedLaunchTitles[i];
-
-			var $CapCtn = GHomepage.BuildHomePageHeaderCap( 'new_on_steam', oItem.appid, oItem.packageid );
-			$NewOnSteam.append( $CapCtn );
-		}
-		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
-		$NewOnSteam.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-
-		if ( rgFeaturedLaunchTitles.length )
-		{
-			$J('.home_smallcap_area.new_on_steam').show();
-			$NewOnSteam.InstrumentLinks();
-			GDynamicStore.DecorateDynamicItems( $NewOnSteam );
-		}
-		else
-		{
-			$J('.home_smallcap_area.new_on_steam').hide();
-		}
-	},
-
 	RenderFriendsRecentlyPurchased: function()
 	{
 
@@ -975,12 +741,12 @@ GHomepage = {
 
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 		if( rgCapsules.length < 4 )
 		{
 			rgCapsules = GHomepage.FilterItemsForDisplay(
-				GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, localized: true }
+				GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
 			);
 		}
 
@@ -1017,6 +783,7 @@ GHomepage = {
 
 
 	},
+
 	RenderSpotlightSection: function()
 	{
 		var rgFeaturedApps = {};
@@ -1039,7 +806,7 @@ GHomepage = {
 		var nSpecials = $J('.specials_target').length;
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			GHomepage.oDisplayLists.specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		if( !rgCapsules || rgCapsules.length < 1 )
@@ -1067,88 +834,6 @@ GHomepage = {
 		});
 
 		GDynamicStore.DecorateDynamicItems( $J('.specials_target') );
-
-	},
-
-
-	// Unused
-	RenderPopularNewOnSteam: function()
-	{
-		var rgNewOnSteamNoMainCap = [];
-		for( var i = 0; i < GHomepage.oDisplayLists.popular_new_on_steam.length; i++ )
-		{
-			var rgItem = GHomepage.oDisplayLists.popular_new_on_steam[i];
-			if ( !GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgItem ) ] )
-				rgNewOnSteamNoMainCap.push( rgItem );
-		}
-
-		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 3, 3
-		);
-
-		var $NewOnSteam = $J('.home_smallcap_area.popular_new_on_steam .home_headercaps' );
-		for( var i = 0; i < rgFeaturedLaunchTitles.length; i++ )
-		{
-			var oItem = rgFeaturedLaunchTitles[i];
-
-			var $CapCtn = GHomepage.BuildHomePageHeaderCap( 'popular_new_on_steam', oItem.appid, oItem.packageid );
-			$NewOnSteam.prepend( $CapCtn );
-		}
-		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
-		$NewOnSteam.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-
-		if ( rgFeaturedLaunchTitles.length )
-		{
-			$J('.home_smallcap_area.popular_new_on_steam').show();
-			$NewOnSteam.InstrumentLinks();
-			GDynamicStore.DecorateDynamicItems( $NewOnSteam );
-		}
-		else
-		{
-			$J('.home_smallcap_area.popular_new_on_steam').hide();
-		}
-	},
-
-
-	// Unused
-	RenderRecentlyUpdated: function()
-	{
-		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 3, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
-		);
-
-		var $RecentlyUpdated =  $J('.home_smallcap_area.recently_updated .home_smallcaps' ).empty();
-		for( var i = 0; i < rgFeaturedUpdateTitles.length; i++ )
-		{
-			var oItem = rgFeaturedUpdateTitles[i];
-
-			var $CapCtn = GHomepage.BuildHomePageSmallCap( 'recently_updated', oItem.appid, 0 );
-			$CapCtn.append( $J('<div/>', {'class': 'recently_updated_desc' }).text( oItem.description ) );
-			if ( oItem.announcementid.length != 0 )
-			{
-				var strAnnouncementLink = 'http://steamcommunity.com/ogg/' + oItem.appid + '/announcements/detail/' + oItem.announcementid + '/';
-				var $AnnouncementLink = $J('<div/>', {'class': 'recently_updated_announcement_link', 'text' : 'View Update Details', 'data-ds-link' : strAnnouncementLink } );
-				$AnnouncementLink.click(function(e) {
-					top.location.href = $J( this).attr( 'data-ds-link' );
-					return false;
-				} );
-				$CapCtn.append( $AnnouncementLink );
-			}
-			$RecentlyUpdated.append( $CapCtn );
-		}
-		$RecentlyUpdated.append( $J('<div/>', {'style': 'clear: left;' } ) );
-		$RecentlyUpdated.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-
-		if ( rgFeaturedUpdateTitles.length )
-		{
-			$J('.home_smallcap_area.recently_updated').show();
-			$RecentlyUpdated.InstrumentLinks();
-			GDynamicStore.DecorateDynamicItems( $RecentlyUpdated );
-		}
-		else
-		{
-			$J('.home_smallcap_area.recently_updated').hide();
-		}
 
 	},
 
@@ -1188,35 +873,6 @@ GHomepage = {
 
 	},
 
-	// Unused?
-	RenderRecommendedBlock: function()
-	{
-		var $Recommended =  $J('.home_specials_ctn.recommended' );
-
-		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgRecommendedGames, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false }
-		);
-
-		GDynamicStore.MarkAppDisplayed( rgCapsules );
-
-		for( var i = 0; i < rgCapsules.length; i++ )
-		{
-			var oItem = rgCapsules[i];
-			var $CapCtn = GHomepage.BuildHomePageGenericCap( 'home_recommended', oItem.appid, 0 );
-
-			$Recommended.append( $CapCtn );
-		}
-
-		if ( $Recommended.children().length == 5 ) // 4 caps + h2
-		{
-			$J('.home_specials_ctn.specials').hide();
-			$Recommended.show();
-			$Recommended.InstrumentLinks();
-			GDynamicStore.DecorateDynamicItems( $Recommended );
-			$Recommended.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-		}
-
-	},
 
 	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
 	{
@@ -1267,14 +923,6 @@ GHomepage = {
 		//	$elContainer.hide();
 	},
 
-	FilterPopularNewOnSteam: function()
-	{
-		var $PopularNewCapsules =  $J('.screenshots_capsule  .carousel_thumbs' );
-
-		this.FilterCapsules( 4, 10, $PopularNewCapsules.children(), $J('.recent_top_sellers '), { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
-
-	},
-
 	FilterTabs: function()
 	{
 		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_specials_content'];
@@ -1283,11 +931,8 @@ GHomepage = {
 		{
 			var $elTabSection = $J( rgTabSections[i] );
 
-			this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false } )
+			this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
 		}
-
-
-
 
 	},
 
@@ -1337,13 +982,13 @@ GHomepage = {
 	{
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		if( rgCapsules.length < 4 )
 		{
 			rgCapsules = GHomepage.FilterItemsForDisplay(
-				GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, localized: true }
+				GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
 			);
 		}
 
@@ -1354,41 +999,6 @@ GHomepage = {
 
 	},
 
-	FilterSpecials: function()
-	{
-		var $UnderTenCapsules =  $J('.home_specials_ctn.rightcol_specials .home_specials_grid' );
-		this.FilterCapsules( 4, 4, $UnderTenCapsules.children(), $UnderTenCapsules, { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
-
-	},
-
-
-	RenderTopSellersArea: function()
-	{
-		var rgTopSellers = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_sellers, 'home', 2, 2, { games_already_in_library: false, localized: true }
-		);
-
-		GDynamicStore.MarkAppDisplayed( rgTopSellers );
-
-		var $TopSellersCtn =  $J('.home_top_sellers_area .store_capsule_container' ).empty();
-		for( var i = 0; i < rgTopSellers.length; i++ )
-		{
-			var oItem = rgTopSellers[i];
-
-			var $CapCtn = GHomepage.BuildHomePageGenericCap( 'top_sellers_nologin', oItem.appid, 0 );
-			$TopSellersCtn.append( $CapCtn );
-		}
-
-		$TopSellersCtn.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-
-		$TopSellersCtn.InstrumentLinks();
-		GDynamicStore.DecorateDynamicItems( $TopSellersCtn );
-
-
-
-	},
-
-
 
 	MergeLists: function( /* rgList1, bShuffle1, rgList2, bShuffleList2, rgList3, bShuffleList3, etc... */ )
 	{
@@ -1398,29 +1008,6 @@ GHomepage = {
 	ZipLists: function( /* rgList1, bShuffle1, rgList2, bShuffleList2, rgList3, bShuffleList3, etc... */ )
 	{
 		return GHomepage.MergeListsInternal( arguments, true );
-	},
-
-	InterleaveLists: function( /* rgList1, rgList2, rgList3, etc... */ )
-	{
-		var rgInterleaved = [];
-		var bHasMoreItems = true;
-		var j = 0;
-		while( bHasMoreItems )
-		{
-			bHasMoreItems = false;
-			for ( var i = 0; i < arguments.length; i++ )
-			{
-				var rgList = arguments[ i ];
-				if ( rgList.length < j || !rgList[j] )
-					continue;
-
-				rgInterleaved.push( rgList[j] );
-				bHasMoreItems = true;
-			}
-
-			j++;
-		}
-		return rgInterleaved;
 	},
 
 	MergeListsInternal: function( args, bZip )
@@ -1484,28 +1071,6 @@ GHomepage = {
 		}
 
 		return rgOutput;
-	},
-
-	GetStoreItemData: function( rgItem )
-	{
-		return rgItem.appid ? GStoreItemData.rgAppData[ rgItem.appid] : GStoreItemData.rgPackageData[ rgItem.packageid ];
-	},
-
-	BuildHomePageSmallCap: function( strFeatureContext, unAppID, unPackageID )
-	{
-		var params = { 'class': 'home_smallcap' };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
-		if ( !rgItemData )
-			return null;
-
-		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
-
-		$CapCtn.append( $J('<img/>', { src: rgItemData.small_capsulev5 } ) );
-		$CapCtn.append( $J('<div/>', {'class': 'home_smallcap_title ellipsis' } ).html( rgItemData.name ) );
-		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
-
-		return $CapCtn;
 	},
 
 	BuildHomePageHeaderCap: function( strFeatureContext, unAppID, unPackageID )
@@ -1826,7 +1391,9 @@ GHomepage = {
 
 				var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, params );
 
-				var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message' } ).attr ( 'href', message.url );
+				var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
+
+				var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message' } ).attr ( 'href', strUrl );
 
 				var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
 
@@ -1836,6 +1403,8 @@ GHomepage = {
 					$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
 				else
 					$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
+
+				GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
 
 				$MessagesContainer.append($MessageCtn);
 
@@ -1858,6 +1427,8 @@ GHomepage = {
 						$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
 					else
 						$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
+
+					GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
 
 					$MessagesContainer.append ( $MessageCtn );
 				}
@@ -2263,7 +1834,7 @@ GSteamCurators = {
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
 			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'home', 5, 9, { games_already_in_library: false, displayed_elsewhere: false }
+				apps, 'home', 5, 9, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
 			);
 
 			GDynamicStore.MarkAppDisplayed( rgRecommendedApps );

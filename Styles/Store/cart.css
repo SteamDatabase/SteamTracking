@@ -152,6 +152,26 @@ img.payment_method_logo {
 	margin-bottom: 60px;
 }
 
+.purchase_pending_area {
+	display: -webkit-box; /* Very Old webkit */
+	display: -ms-flexbox; /* IE 10 */
+	display: -webkit-flex; /* Old webkit */
+	display:flex;	
+}
+
+.pending_purchase_summary_retry_note {
+	color: #67c1f5;
+}
+
+.purchase_summary_area_pending_text {
+	padding-left: 20px;
+}
+
+.checkout_pending_purchase_subtitle {
+	font-size: 13px;
+	color: #ff9900;
+}
+
 .checkout_payment_method_specific_note {
 	font-size: 12px;
 	color: #ff9900;

@@ -700,6 +700,7 @@ ProfilePanel #UpperRow
 	text-align: center;
 	color: #FFFFFF99;
 	transform: translatex( 0px );
+
 }
 
 .friendPlayerLevel
@@ -943,6 +944,21 @@ ProfilePanel #UpperRow
 	padding-right: 0px;
 	padding-top: 18px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_waterelement_bp.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_1300
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_fireelement_bp.png' );
 	background-repeat: no-repeat;
 	background-position: 10px 0px;
 }

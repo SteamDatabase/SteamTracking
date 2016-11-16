@@ -294,7 +294,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			}
 			else
 			{
-				PollForTransactionStatus( $('transaction_id').value, 120, 15 ); 
+				PollForTransactionStatus( $('transaction_id').value, 40, 15 ); 
 			}
 		}
 		else
@@ -4430,45 +4430,48 @@ function DisplayPendingReceiptPage()
 		case 'efecty':
 		case 'baloto':
 		case 'pagoefectivo':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_boacompra_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 
 		case 'molpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_mol_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase.';
 			break;
 			
 		case 'konbini':
 		case 'bank_transfer_japan':
 		case 'payeasy':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_degica_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
 			break;
 			
 		case 'eclubpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_eclub_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub Store</a>.';
 			break;
 			
 		case 'bitcoin':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_bitcoin_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_bitcoin_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for settlement on the bitcoin network.  This settlement requires at least one blockchain confirmation and can take several minutes to a few hours.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a target="_blank" href="https://help.bitpay.com/8450-Disputes-/">BitPay</a>.';
 			break;
 			
 		case 'unionpay':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_unionpay_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_unionpay_text';
-			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from our payment processor.  This process normally takes several minutes.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'In extreme cases, this can take up to several days. Steam will email you a receipt when payment is received and your purchase is completed.';
 			break;
+			
+		case 'wechat':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from WeChat. This process normally takes several minutes.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'In extreme cases, this can take up to several hours. Steam will email you a receipt when payment is received from WeChat and your purchase is completed.';
+			break;			
+
+		case 'tenpay':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from Tenpay. This process normally takes several minutes.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'In extreme cases, this can take up to several hours. Steam will email you a receipt when payment is received from Tenpay and your purchase is completed.';
+			break;			
 						
 		default:
-			$('pending_purchase_summary_payment_method_notes').style.display = 'none';
 			break;
 	}
 
@@ -4536,7 +4539,7 @@ function HandlePollForTransactionStatusFailure()
 	{
 		var method = $('payment_method');
 
-		if ( method.value == 'unionpay' )
+		if ( method.value == 'unionpay' || method.value == 'wechat' || method.value == 'tenpay' )
 		{
 			DisplayPendingReceiptPage();
 			return;

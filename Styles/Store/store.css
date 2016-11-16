@@ -1671,17 +1671,18 @@ div.game_hover {
 .hover_body .hover_review_summary {
 	padding-bottom: 10px;
 }
-.hover_body .game_review_summary {
+
+.game_review_summary {
 	color: #A34C25;
 }
-.hover_body .game_review_summary.mixed {
+.game_review_summary.mixed {
 	color: #B9A074;
 }
-.hover_body .game_review_summary.positive {
+.game_review_summary.positive {
 	color: #66C0F4;
 }
-.hover_body .game_review_summary.none {
-	color: #626366;
+.game_review_summary.no_reviews {
+	color: #929396;
 }
 
 .friend_blocks_row {
@@ -1935,6 +1936,15 @@ body.v6 .discover_queue_empty>h3 {
 
 .dq_item_price.no_discount {
 	bottom: -26px;
+}
+
+.dq_item_reason {
+	opacity: 0;
+	font-size: 17px;
+	font-family: "Motiva Sans", Sans-serif;
+	margin-top: 4px;
+	color: #fff;
+	width: 350px;
 }
 
 .dq_item.dq_active_link {

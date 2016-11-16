@@ -50,8 +50,9 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 		var $Item = $J('<div/>', {'class': 'dq_item', 'data-ds-options': 0} );
 		var $ColorOverlay = $J('<div/>', {'class': 'dq_item_overlay'} );
 		var $Img = $J('<img/>', {'class': 'dq_item_cap', 'src': rgApp.header });
+		var $Reason = $J('<div/>', {'class': 'dq_item_reason' } ).text( this.GetStatusString( rgDiscoveryQueue[i], rgApp ) );
 		var $Price = $J(rgApp.discount_block).addClass( 'dq_item_price discount_block_large' );
-		$Item.append( $ColorOverlay, $Img );
+		$Item.append( $ColorOverlay, $Img, $Reason );
 
 		if ( !this.m_bStatic )
 			$Item.append( $Price );
@@ -338,6 +339,31 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
 	} );
 };
+
+CDiscoveryQueue.prototype.GetStatusString = function ( oItem, rgData )
+{
+	var strStatus = '';
+	if ( oItem.recommended_by_curator )
+		strStatus = 'Recommended By Your Curators';
+	else if ( oItem.recommended )
+		strStatus = 'Recommended For You';
+	else if ( rgData && rgData.status_string )
+		strStatus = rgData.status_string;
+	else if ( rgData && rgData.early_access )
+		strStatus = 'Early Access Now Available';
+	else if ( oItem.new_on_steam )
+		strStatus = 'New On Steam';
+	else if ( oItem.top_seller )
+		strStatus = 'Top Seller';
+	else if ( rgData && rgData.coming_soon )
+		strStatus = 'Pre-Purchase Now';
+	else if ( rgData && rgData.video )
+		strStatus = 'Now Available to Watch';
+	else
+		strStatus = 'Now Available';
+
+	return strStatus;
+}
 
 //
 // Purpose: Sets the queue type cookie for the queue we're entering then redirects
