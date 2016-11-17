@@ -3016,6 +3016,10 @@ input.unlockcode_entry_input
     margin: 16px 16px 16px 16px;
 }
 
+.hardware_support_serial_section {
+	color: #c6d4df;
+}
+
 #hardware_serial_entry {
 	width: 400px;
 	font-style: normal;
