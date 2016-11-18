@@ -4473,7 +4473,7 @@ function DisplayPendingReceiptPage()
 						
 		case 'nodwin_cod':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from NovaPlay once you have completed the cash on delivery process.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'You will shortly receive an email from NovaPlay confirming your order and next steps.  Steam will email you a receipt when payment is received from NovaPlay and your purchase is completed. For questions regarding your payment processing status, please contact <a href=';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'You will shortly receive an email from NovaPlay confirming your order and next steps.  Steam will email you a receipt when payment is received from NovaPlay and your purchase is completed. For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 			break;			
 						
 		default:
