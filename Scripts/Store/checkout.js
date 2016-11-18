@@ -1885,7 +1885,7 @@ function OnGetFinalPriceSuccess( result )
 				}	
 				else if ( method.value == 'credit_card_india' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic credit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic credit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.  This process may take up to 5 minutes to complete.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -1895,7 +1895,7 @@ function OnGetFinalPriceSuccess( result )
 				}	
 				else if ( method.value == 'debit_card_india' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Debit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Debit card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.  This process may take up to 5 minutes to complete.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -1905,7 +1905,7 @@ function OnGetFinalPriceSuccess( result )
 				}	
 				else if ( method.value == 'net_banking_india' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Net Banking transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Net Banking transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.  This process may take up to 5 minutes to complete.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -1915,7 +1915,7 @@ function OnGetFinalPriceSuccess( result )
 				}	
 				else if ( method.value == 'cash_card_india' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash Card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cash Card transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.  This process may take up to 5 minutes to complete.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -1925,7 +1925,7 @@ function OnGetFinalPriceSuccess( result )
 				}	
 				else if ( method.value == 'wallet_india' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Wallet transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Prepaid Wallet transactions are initiated through the Novaplay website.  Click the button below to open a new web browser to initiate the transaction.  This process may take up to 5 minutes to complete.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Novaplay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -3856,7 +3856,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'wallet_india' && providerPaymentMethod == 91 )
 			{
-				$('payment_method_review_text').innerHTML = 'Wallet (Domestic)';
+				$('payment_method_review_text').innerHTML = 'Prepaid Wallet (Domestic)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 		}
@@ -4469,6 +4469,11 @@ function DisplayPendingReceiptPage()
 		case 'tenpay':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from Tenpay. This process normally takes several minutes.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'In extreme cases, this can take up to several hours. Steam will email you a receipt when payment is received from Tenpay and your purchase is completed.';
+			break;			
+						
+		case 'nodwin_cod':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from NovaPlay once you have completed the cash on delivery process.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'You will shortly receive an email from NovaPlay confirming your order and next steps.  Steam will email you a receipt when payment is received from NovaPlay and your purchase is completed. For questions regarding your payment processing status, please contact <a href=';
 			break;			
 						
 		default:

@@ -955,6 +955,8 @@ GHomepage = {
 				if( j > 0 )
 					rgOptions.lazy = true;
 				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions );
+				if( !$CapCtn )
+					continue;
 
 				// Don't try to do automatic visibilty tracking on non-visible clusters.
 				if( j > 0 )

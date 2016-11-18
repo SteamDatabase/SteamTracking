@@ -2168,6 +2168,9 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);background: l
 	padding: 7px 7px 4px 7px;
 }
 
+.home_specials_ctn.sidebar_wide {
+	width: 308px;
+}
 .home_specials_ctn {
 	width: 291px;
 }
