@@ -1326,8 +1326,8 @@ transform: none;
 .GameButton Image
 {
 	horizontal-align: center;
+	width: 470px;
 	height: 100%;
-	width: fit-children;
 	border-radius: 3px;
 }
 

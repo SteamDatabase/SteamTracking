@@ -767,6 +767,13 @@
  D CSettingsSubInGame::GetMessageMap()::s_pMap
  D CSettingsSubInGame::KB_ChainToMap()::chained
  D CSettingsSubInGame::PanelMessageFunc_OnDirectorySelected::InitVar()::bAdded
+ D CSettingsSubMusic::ChainToAnimationMap()::chained
+ D CSettingsSubMusic::ChainToMap()::chained
+ D CSettingsSubMusic::GetKBMap()::s_pMap
+ D CSettingsSubMusic::GetMessageMap()::s_pMap
+ D CSettingsSubMusic::KB_ChainToMap()::chained
+ D CSettingsSubMusic::PanelMessageFunc_OnDirectorySelected::InitVar()::bAdded
+ D CSettingsSubMusic::PanelMessageFunc_OnSliderMoved::InitVar()::bAdded
  D CSettingsSubVoice::ChainToAnimationMap()::chained
  D CSettingsSubVoice::ChainToMap()::chained
  D CSettingsSubVoice::GetKBMap()::s_pMap
@@ -918,6 +925,7 @@
  D VTT for CSettingsSubBrowser
  D VTT for CSettingsSubFriends
  D VTT for CSettingsSubInGame
+ D VTT for CSettingsSubMusic
  D VTT for CSettingsSubVoice
  D VTT for CSoundSystemSelect
  D VTT for CSteamAuthedHTML
@@ -1120,6 +1128,7 @@
  D construction vtable for vgui::EditablePanel-in-CSettingsSubBrowser
  D construction vtable for vgui::EditablePanel-in-CSettingsSubFriends
  D construction vtable for vgui::EditablePanel-in-CSettingsSubInGame
+ D construction vtable for vgui::EditablePanel-in-CSettingsSubMusic
  D construction vtable for vgui::EditablePanel-in-CSettingsSubVoice
  D construction vtable for vgui::EditablePanel-in-CSoundSystemSelect
  D construction vtable for vgui::EditablePanel-in-CTrackItemPanel
@@ -1314,6 +1323,7 @@
  D construction vtable for vgui::Panel-in-CSettingsSubBrowser
  D construction vtable for vgui::Panel-in-CSettingsSubFriends
  D construction vtable for vgui::Panel-in-CSettingsSubInGame
+ D construction vtable for vgui::Panel-in-CSettingsSubMusic
  D construction vtable for vgui::Panel-in-CSettingsSubVoice
  D construction vtable for vgui::Panel-in-CSoundSystemSelect
  D construction vtable for vgui::Panel-in-CSteamAuthedHTML
@@ -1421,6 +1431,7 @@
  D construction vtable for vgui::PropertyPage-in-CSettingsSubBrowser
  D construction vtable for vgui::PropertyPage-in-CSettingsSubFriends
  D construction vtable for vgui::PropertyPage-in-CSettingsSubInGame
+ D construction vtable for vgui::PropertyPage-in-CSettingsSubMusic
  D construction vtable for vgui::PropertyPage-in-CSettingsSubVoice
  D construction vtable for vgui::PropertyPage-in-ZooDialog::ZooPropertyPage
  D construction vtable for vgui::QueryBox-in-AppModalQueryBox
@@ -1566,6 +1577,8 @@
  D guard variable for CSettingsSubFriends::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubInGame::GetKBMap()::s_pMap
  D guard variable for CSettingsSubInGame::GetMessageMap()::s_pMap
+ D guard variable for CSettingsSubMusic::GetKBMap()::s_pMap
+ D guard variable for CSettingsSubMusic::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubVoice::GetKBMap()::s_pMap
  D guard variable for CSettingsSubVoice::GetMessageMap()::s_pMap
  D guard variable for CSoundSystemSelect::GetKBMap()::s_pMap
@@ -1898,6 +1911,11 @@
  D typeinfo for CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>
  D typeinfo for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  D typeinfo for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
+ D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
+ D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>
+ D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>
+ D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
+ D typeinfo for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  D typeinfo for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
@@ -2220,6 +2238,12 @@
  D typeinfo for CSettingsSubFriends
  D typeinfo for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D typeinfo for CSettingsSubInGame
+ D typeinfo for CSettingsSubMusic
+ D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
+ D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
+ D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingWillStart
+ D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ D typeinfo for CSettingsSubMusic::CCallback_OnVolumeHasChanged
  D typeinfo for CSettingsSubVoice
  D typeinfo for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  D typeinfo for CSharedMemStream
@@ -3108,6 +3132,11 @@
  D vtable for CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>
  D vtable for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  D vtable for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
+ D vtable for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
+ D vtable for CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>
+ D vtable for CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>
+ D vtable for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
+ D vtable for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  D vtable for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
@@ -3426,6 +3455,12 @@
  D vtable for CSettingsSubFriends
  D vtable for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D vtable for CSettingsSubInGame
+ D vtable for CSettingsSubMusic
+ D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
+ D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
+ D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingWillStart
+ D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ D vtable for CSettingsSubMusic::CCallback_OnVolumeHasChanged
  D vtable for CSettingsSubVoice
  D vtable for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  D vtable for CSharedMemStream
@@ -3736,6 +3771,11 @@
  R typeinfo name for CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>
  R typeinfo name for CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>
  R typeinfo name for CCallback<CSettingsSubFriends, PersonaStateChange_t, false>
+ R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>
+ R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>
+ R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>
+ R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
+ R typeinfo name for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  R typeinfo name for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
@@ -4058,6 +4098,12 @@
  R typeinfo name for CSettingsSubFriends
  R typeinfo name for CSettingsSubFriends::CCallback_OnPersonaStateChange
  R typeinfo name for CSettingsSubInGame
+ R typeinfo name for CSettingsSubMusic
+ R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
+ R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
+ R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingWillStart
+ R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ R typeinfo name for CSettingsSubMusic::CCallback_OnVolumeHasChanged
  R typeinfo name for CSettingsSubVoice
  R typeinfo name for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  R typeinfo name for CSharedMemStream
@@ -4957,6 +5003,21 @@
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::CCallback(CSettingsSubFriends*, void (CSettingsSubFriends::*)(PersonaStateChange_t*))
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::Register(CSettingsSubFriends*, void (CSettingsSubFriends::*)(PersonaStateChange_t*))
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::Run(void*)
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>::CCallback(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingFinished_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>::Register(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingFinished_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingFinished_t, false>::Run(void*)
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>::CCallback(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingInterrupted_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>::Register(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingInterrupted_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingInterrupted_t, false>::Run(void*)
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>::CCallback(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingWillStart_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>::Register(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryCrawlingWillStart_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryCrawlingWillStart_t, false>::Run(void*)
+ T CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>::CCallback(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryDatabaseHasBeenReset_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>::Register(CSettingsSubMusic*, void (CSettingsSubMusic::*)(LocalLibraryDatabaseHasBeenReset_t*))
+ T CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>::Run(void*)
+ T CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>::CCallback(CSettingsSubMusic*, void (CSettingsSubMusic::*)(VolumeHasChanged_t*))
+ T CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>::Register(CSettingsSubMusic*, void (CSettingsSubMusic::*)(VolumeHasChanged_t*))
+ T CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>::Run(void*)
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::CCallback(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Register(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Run(void*)
@@ -7904,6 +7965,45 @@
  T CSettingsSubInGame::PanelMessageFunc_OnDirectorySelected::InitVar()
  T CSettingsSubInGame::WriteDefaultPingRateText()
  T CSettingsSubInGame::~CSettingsSubInGame()
+ T CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished::Run(void*)
+ T CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted::Run(void*)
+ T CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingWillStart::Run(void*)
+ T CSettingsSubMusic::CCallback_OnLocalLibraryDatabaseHasBeenReset::Run(void*)
+ T CSettingsSubMusic::CCallback_OnVolumeHasChanged::Run(void*)
+ T CSettingsSubMusic::CSettingsSubMusic(vgui::Panel*)
+ T CSettingsSubMusic::ChainToAnimationMap()
+ T CSettingsSubMusic::ChainToMap()
+ T CSettingsSubMusic::GetAnimMap()
+ T CSettingsSubMusic::GetClassSize() const
+ T CSettingsSubMusic::GetKBMap()
+ T CSettingsSubMusic::GetMessageMap()
+ T CSettingsSubMusic::GetPanelClassName()
+ T CSettingsSubMusic::GetPanelTopClassName() const
+ T CSettingsSubMusic::KB_ChainToMap()
+ T CSettingsSubMusic::OnAddEntryToLibrary()
+ T CSettingsSubMusic::OnApplyChanges()
+ T CSettingsSubMusic::OnCommand(char const*)
+ T CSettingsSubMusic::OnDirectorySelected(char const*)
+ T CSettingsSubMusic::OnLocalLibraryCrawlingFinished(LocalLibraryCrawlingFinished_t*)
+ T CSettingsSubMusic::OnLocalLibraryCrawlingInterrupted(LocalLibraryCrawlingInterrupted_t*)
+ T CSettingsSubMusic::OnLocalLibraryCrawlingWillStart(LocalLibraryCrawlingWillStart_t*)
+ T CSettingsSubMusic::OnLocalLibraryDatabaseHasBeenReset(LocalLibraryDatabaseHasBeenReset_t*)
+ T CSettingsSubMusic::OnPageShow()
+ T CSettingsSubMusic::OnReallyResetDatabase()
+ T CSettingsSubMusic::OnRemoveSelectedEntryFromLibraryList()
+ T CSettingsSubMusic::OnResetData()
+ T CSettingsSubMusic::OnResetDatabaseAction()
+ T CSettingsSubMusic::OnSliderMoved(int)
+ T CSettingsSubMusic::OnStartCrawlingAction()
+ T CSettingsSubMusic::OnVolumeHasChanged(VolumeHasChanged_t*)
+ T CSettingsSubMusic::PanelMessageFunc_OnDirectorySelected::InitVar()
+ T CSettingsSubMusic::PanelMessageFunc_OnSliderMoved::InitVar()
+ T CSettingsSubMusic::SetCheckboxValueToConfigStore(char const*, vgui::CheckButton*, bool)
+ T CSettingsSubMusic::UpdateDatabaseValues()
+ T CSettingsSubMusic::UpdateLocalLibraryValues()
+ T CSettingsSubMusic::UpdateUIOnCrawling()
+ T CSettingsSubMusic::UpdateVolumeSliderValue()
+ T CSettingsSubMusic::~CSettingsSubMusic()
  T CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged::Run(void*)
  T CSettingsSubVoice::CSettingsSubVoice(vgui::Panel*, CSettingsSubVoice::EControls)
  T CSettingsSubVoice::ChainToAnimationMap()
@@ -8674,6 +8774,8 @@
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
@@ -13222,7 +13324,6 @@
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
- T void Destruct<CUtlString>(CUtlString*)
  T void std::__1::__insertion_sort_3<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)

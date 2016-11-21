@@ -167,7 +167,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_FriendsArePlaying" />
 						</Panel>
 						<Button id="FriendsArePlayingGame" class="GameButton" tabindex="0"  selectionpos="0,0" >
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			
@@ -188,7 +188,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_RecentPlaying" />
 						</Panel>
 						<Button id="ResumePlayingGame" class="GameButton" tabindex="1" selectionpos="0,0">
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			
@@ -209,7 +209,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_UnplayedPlaying" />
 						</Panel>
 						<Button id="UnplayedPlayingGame" class="GameButton" tabindex="2" selectionpos="0,0" >
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			

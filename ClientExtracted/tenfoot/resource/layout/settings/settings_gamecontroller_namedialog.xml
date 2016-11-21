@@ -1,8 +1,8 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
 	</styles>
 
 	<SettingsPanelGameController_NameAndCommitBinding defaultfocus="SettingsController_ControllerName" tabindex="auto" selectionpos="auto">
@@ -22,11 +22,11 @@
 				 <Label class="MsgBoxContents" text="#SettingsController_ShareExample" />
 			
 				<Panel class="ControllerNameButtons">	
-					<Button id="ButtonOK" class="ButtonOK MsgBoxButton" onactivate="ButtonOK();">
+					<Button id="ButtonOK" class="ButtonOK MsgBoxButton Button" onactivate="ButtonOK();">
 						<Label id="OKButtonText" text="#SettingsController_CommitUpload" />
 					</Button>
 
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="ButtonCancel();">
 						<Label id="CancelButtonText" text="#SettingsController_CommitCancel" />
 					</Button>
 				</Panel>
