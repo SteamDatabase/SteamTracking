@@ -104666,7 +104666,7 @@
 			"prefab"	"unusualifier_base"
 			"static_attrs"
 			{
-				"unusualifier_attribute_template_name"	"unusual_taunt_chance_halloween2016"
+				"unusualifier_attribute_template_name"	"taunt_unusualifier_effects"
 			}
 		}
 
