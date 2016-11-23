@@ -1111,7 +1111,7 @@ HelpWizard = {
 	},
 
 
-	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin )
+	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin, nLost )
 	{
 		$J( '#reset_twofactor_submit' ).addClass( 'loading' );
 		$J( '#form_submit_error' ).hide();
@@ -1126,11 +1126,11 @@ HelpWizard = {
 			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
 			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
 		}).done( function( data ) {
-			HelpWizard.ResetTwoFactorRSA( strSessionID, strCode, nAccountID, data );
+			HelpWizard.ResetTwoFactorRSA( strSessionID, strCode, nAccountID, data, nLost );
 		});
 	},
 
-	ResetTwoFactorRSA: function( strSessionID, strCode, nAccountID, rsa )
+	ResetTwoFactorRSA: function( strSessionID, strCode, nAccountID, rsa, nLost )
 	{
 		var elError = $J( '#form_submit_error' );
 		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
@@ -1140,11 +1140,15 @@ HelpWizard = {
 			return;
 		}
 
-		var strPassword = $J( '#twofactor_password' ).val();
+		var strPassword = $J( '#twofactor_password' ).val(); // may be empty
 		var strTwoFactorCode = $J( '#twofactor_resetcode' ).val(); // may be empty
+		var strPasswordEncrypted = '';
 
-		var pubKey = RSA.getPublicKey( rsa.publickey_mod, rsa.publickey_exp );
-		var strPasswordEncrypted = RSA.encrypt( strPassword, pubKey );
+		if ( strPassword )
+		{
+			var pubKey = RSA.getPublicKey(rsa.publickey_mod, rsa.publickey_exp);
+			strPasswordEncrypted = RSA.encrypt(strPassword, pubKey);
+		}
 
 		try
 		{
@@ -1162,6 +1166,7 @@ HelpWizard = {
 				s: strSessionID,
 				code: strCode,
 				accountid: nAccountID,
+				lost: nLost,
 				password: strPasswordEncrypted,
 				rsatimestamp: rsa.timestamp,
 				twofactor: strTwoFactorCode
