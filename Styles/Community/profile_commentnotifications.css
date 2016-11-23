@@ -350,6 +350,10 @@
 	margin-bottom: 12px;
 }
 
+.expired_ban {
+	opacity: .5;
+}
+
 .ban_row .group_avatar {
 	float: left;
 	margin-right: 12px;

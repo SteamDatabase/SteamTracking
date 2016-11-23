@@ -2008,6 +2008,33 @@ function Forum_OnSearchSortSelect( elSelect, rgSearchParams )
 	window.location.search = $J.param( rgSearchParams );
 }
 
+function IssueCommunityWarning( steamid )
+{
+	$J.get( 'https://steamcommunity.com/actions/modwarningdialog', { 'sessionID' : g_sessionID, 'steamID' : steamid } )
+		.done( function( data )
+		{
+			var $Content = $J(data);
+			var Modal = ShowConfirmDialog( "Issue Warning", $Content, 'Issue Warning'
+			).done(	function( ) {
+
+				var $Form = $Content.find( 'form#modWarning_Form' );
+
+				$J.post( "https://steamcommunity.com/actions/issuemodwarning", $Form.serialize() )
+					.done( function( data ) {
+						ShowAlertDialog( 'Success', 'Warning issued successfully! You can <a href=https://steamcommunity.com/profiles/' + steamid + '/moderatormessages/' + data.messageid + ' target="_blank" >view it here</a>.' );
+					}).fail( function( jqxhr ) {
+					// jquery doesn't parse json on fail
+					var data = V_ParseJSON( jqxhr.responseText );
+					ShowAlertDialog( 'Issue Warning', 'Failed with error message: ' + data.success );
+				});
+			} );
+
+		}).fail( function( data )
+	{
+		ShowAlertDialog( 'ERROR', 'You do not have permissions to view this or you are not logged in.' );
+	});
+}
+
 $J( function($) {
 	$(document ).on( 'click.ForumCommentActions', 'div.forum_comment_action_trigger', function(e) {
 		var $Comment = $( e.currentTarget ).parents( '.forum_op, .commentthread_comment');

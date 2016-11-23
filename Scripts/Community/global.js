@@ -410,7 +410,7 @@ function StandardCommunityBan( steamid, elemLink )
 
 			var $Form = $Content.find( 'form#community_ban_form' );
 
-			$J.post( 'https://steamcommunity.com/actions/StandardCommunityBan', $Form.serialize() )
+			$J.post( "https://steamcommunity.com/actions/StandardCommunityBan", $Form.serialize() )
 			.done( function( data ) {
 				$J(elemLink).replaceWith( '<span style="color: red;">Banned</span>' );
 			}).fail( function( jqxhr ) {
@@ -426,8 +426,6 @@ function StandardCommunityBan( steamid, elemLink )
 	});
 
 }
-
-
 
 function CEmoticonPopup( $EmoticonButton, $Textarea )
 {

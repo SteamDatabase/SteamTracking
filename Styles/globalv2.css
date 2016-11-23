@@ -1330,3 +1330,13 @@ img.emoticon {
 		display: none;
 	}
 }
+
+img.badge_icon {
+	width: 80px;
+	height: 80px;
+}
+
+img.badge_icon.small {
+	width: 54px;
+	height: 54px;
+}

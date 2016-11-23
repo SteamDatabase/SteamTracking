@@ -70,7 +70,7 @@ GHomepage = {
 
 		InitHorizontalAutoSliders();
 
-		$J(window).on('scroll', GHomepage.OnHomeActivate.bind(this) );
+		$J(window).one('scroll', GHomepage.OnHomeActivate.bind(this) );
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -134,6 +134,7 @@ GHomepage = {
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
+			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 		} catch( e ) { OnHomepageException(e); }
 
@@ -150,6 +151,9 @@ GHomepage = {
 			return;
 
 		this.bLoadedActiveData = true;
+
+		if ( GHomepage.bAutumnSaleMainCap )
+			return;
 
 		try {
 			if ( g_AccountID != 0 )
@@ -376,7 +380,13 @@ GHomepage = {
 			rgDisplayListCombined, 'home', 6, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
-		var rgMainCaps = rgDisplayListCombined.slice(0,12);
+		var rgMainCaps = rgDisplayListCombined.slice( 0, GHomepage.bAutumnSaleMainCap ? 8 : 12 );
+
+		if ( GHomepage.bAutumnSaleMainCap && rgMainCaps.length < 5 )
+		{
+			$J('.home_cluster_ctn').hide();
+			return;
+		}
 
 		GDynamicStore.MarkAppDisplayed( rgMainCaps );
 
@@ -388,21 +398,46 @@ GHomepage = {
 
 		for ( var i = 0; i < rgMainCaps.length && i < 12; i++ )
 		{
-			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgMainCaps[i] ) ] = true;
-
-			var $MainCap =  GHomepage.BuildMainCapsuleItem( rgMainCaps[i], 'main_cluster' );
-			if( !$MainCap )
-				continue;
-			var $Thumb = $J('<div />');
+			var oItem = rgMainCaps[i];
+			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( oItem ) ] = true;
 
 
-			$CapTarget.append( $MainCap );
-			$CapThumbs.append( $Thumb );
+			if ( GHomepage.bAutumnSaleMainCap )
+			{
+				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster' );
+				if( !$MainCap )
+					continue;
+
+				$CapTarget.append( $MainCap );
+
+				var $SmallCap = GHomepage.BuildHomePageGenericCap( 'main_cluster_list', oItem.appid, oItem.packageid, {capsule_size: 'header', no_hover: true} );
+				$SmallCap.on('mouseenter', (function(index) { return function() {
+					GHomepage.MainCapCarousel.Advance( index );
+				}; })(i));
+
+				$J('.maincap_list .carousel_items').append(
+					$SmallCap
+				);
+			}
+			else
+			{
+
+				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster' );
+				if( !$MainCap )
+					continue;
+
+				$CapTarget.append( $MainCap );
+
+				var $Thumb = $J('<div />');
+				$CapThumbs.append( $Thumb );
+			}
 		}
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
+		if ( GHomepage.bAutumnSaleMainCap )
+			GDynamicStore.DecorateDynamicItems( $J('.maincap_list .carousel_items') );
 
-		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
+		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), GHomepage.bAutumnSaleMainCap ? 0 : 5 );
 	},
 
 	GetAppFromList: function( unAppId, rgList )
@@ -1134,7 +1169,9 @@ GHomepage = {
 			return null;
 
 		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+
+		if ( !rgOptions.no_hover )
+			GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
 
 		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
 

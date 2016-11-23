@@ -805,6 +805,20 @@ img.gamecard {
 	float: left;
 }
 
+.badge_detail_tasks.twocol .badge_task {
+	width: 45%;
+	margin-right: 5%;
+}
+
+@media screen and (max-width: 910px) {
+
+	html.responsive	.badge_detail_tasks .badge_task,
+	html.responsive	.badge_detail_tasks.twocol .badge_task {
+		width: 292px;
+		margin-right: 16px;
+	}
+}
+
 .badge_detail_tasks .badge_task img.quest_icon {
 	float: left;
 	margin-right: 15px;
