@@ -224,7 +224,7 @@ background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: l
 	top: 7px;
 	left: 4px;
 }
-.miniprofile_favorite_badge .favorite_badge_icon img {
+.miniprofile_favorite_badge .favorite_badge_icon img.badge_icon.small {
 	width: 34px;
 	height: 34px;
 }

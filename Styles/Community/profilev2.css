@@ -1415,7 +1415,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	left: 7px;
 }
 
-.game_info_badge_icon img {
+.game_info_badge_icon img.badge_icon.small {
 	width: 36px;
 	height: 36px;
 }
