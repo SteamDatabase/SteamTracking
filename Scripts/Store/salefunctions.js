@@ -246,6 +246,12 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 			var categoryid = $Form.find( 'input[name=nomination_category]:checked' ).val();
 			var writein = $Form.find('#category' + categoryid + '_writein').val();
 
+			if ( categoryid == 9 && v_trim( writein || '' ).length < 5 )
+			{
+				ShowAlertDialog( 'Error', 'Please enter a category suggestion' );
+				return;
+			}
+
 			$J.post( 'https://store.steampowered.com/promotion/nominategame', {
 				sessionid: g_sessionID,
 				appid: appid,

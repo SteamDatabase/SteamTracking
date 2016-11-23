@@ -2727,6 +2727,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 .gutter_item .icon.upcoming { background-position: -128px 0px; }
 .gutter_item .icon.discounts { background-position: -144px 0px; }
 .gutter_item .icon.vr { background-position: -160px 0px; }
+.gutter_item .icon.controller { background-position: -176px 0px; }
 
 .tab_item.hidden {
 	display: none;
