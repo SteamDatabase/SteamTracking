@@ -54333,7 +54333,7 @@
 				{
 					"engineer"	"scenes/player/items/taunts/engys_new_chair_outro.vcd"
 				}
-				"particle_offset"		"5 11 0"
+				"particle_attachment"		"taunt_effect"
 				"min_taunt_time"		"5"
 				"stop_taunt_if_moved"	"1"
 			}
@@ -70900,7 +70900,7 @@
 				{
 					"pyro"		"scenes/workshop/player/items/pool_party/taunt_pool_party_outro.vcd"
 				}
-				"particle_offset"		"10 10 0"
+				"particle_attachment"		"taunt_effect"
 				"min_taunt_time"		"5"
 				"stop_taunt_if_moved"		"1"
 				"camera_dist_up"		"-10"
@@ -74913,6 +74913,7 @@
 					"pyro"		"scenes/workshop/player/items/spring_rider/spring_rider_outro_prop.vcd"
 				}
 				"stop_taunt_if_moved"		"1"
+				"particle_attachment"		"taunt_effect"
 			}
 		}
 		"30767"
@@ -75905,6 +75906,7 @@
 				"medic"		"1"
 			}
 		}
+
 
 
 
@@ -92344,10 +92346,14 @@
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_Medal_JingleJam2015_Xephos"
 			"item_description"	"#TF_Medal_JingleJam2015_Xephos_Desc"
-			"image_inventory"	"backpack/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_xephos"
 			"model_player_per_class"
 			{
-				"basename"	"models/workshop/player/items/all_class/jj2015_xephos/jj2015_xephos_%s.mdl"
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"2"
 			}
 		}
 		"9046"
@@ -92363,10 +92369,14 @@
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_Medal_JingleJam2015_Honeydew"
 			"item_description"	"#TF_Medal_JingleJam2015_Honeydew_Desc"
-			"image_inventory"		"backpack/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew"
+			"image_inventory"		"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_honeydew"
 			"model_player_per_class"
 			{
-				"basename"	"models/workshop/player/items/all_class/jj2015_honeydew/jj2015_honeydew_%s.mdl"
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"1"
 			}
 		}
 		"9047"
@@ -95321,6 +95331,99 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
 		}
+		"9296"
+		{
+			"name"		"Hannah's Altruistic Aspect"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2016_Hannah"
+			"item_description"	"#TF_Medal_JingleJam2016_Hannah_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_hannah"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"9297"
+		{
+			"name"		"Duncan's Kindhearted Kisser"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2016_Duncan"
+			"item_description"	"#TF_Medal_JingleJam2016_Duncan_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_duncan"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"4"
+			}
+		}
+		"9298"
+		{
+			"name"		"Sips' Selfless Simulacrum"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2016_Sips"
+			"item_description"	"#TF_Medal_JingleJam2016_Sips_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_sips"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"5"
+			}
+		}
+		"9299"
+		{
+			"name"		"Sjin's Generous Guise"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2016_Sjin"
+			"item_description"	"#TF_Medal_JingleJam2016_Sjin_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_sjin"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"6"
+			}
+		}
+
 
 
 
@@ -110415,6 +110518,49 @@
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}						
+		"2157"
+		{
+			"name" "Yogscast Jingle Jam 2016 Promo"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Hannah's Altruistic Aspect"		"1"
+				"Duncan's Kindhearted Kisser"		"1"
+				"Sips' Selfless Simulacrum"			"1"
+				"Sjin's Generous Guise"				"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_JingleJam_Community_Event_2016_Promo"
+			"item_description"	"#TF_JingleJam_Community_Event_2016_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}								
 
 
 
