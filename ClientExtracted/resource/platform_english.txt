@@ -28,6 +28,7 @@
 "app_task_console"	"Console"
 "app_task_musicplayer"	"Music Player"
 "app_task_steamvr"	"SteamVR"
+"app_task_stop_streaming"	"Stop Streaming"
 
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"Your account '%account%' is currently in use at another machine.\nYou'll need to shut down Steam on your other computer in order to log in here."
 "Steam_AccountAlreadyLoggedInNeedPassword"		"This account is currently logged in elsewhere.\nRe-enter your password to login on this computer."

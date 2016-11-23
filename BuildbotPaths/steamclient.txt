@@ -171,6 +171,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/gameserver.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hashprefixjob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hid.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevicelocal.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevicepipesteam.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddeviceremote.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevices.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlmessages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlprotobuf.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlsurface.o
@@ -236,6 +240,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_econ.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gamenotifications.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gameservers.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_hiddevices.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_inventory.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_linkfilter.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_offline.steamclient.pb.o
@@ -358,6 +363,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/gameserver.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hashprefixjob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hid.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevicelocal.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevicepipesteam.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddeviceremote.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevices.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlmessages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlprotobuf.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlsurface.o
@@ -423,6 +432,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_econ.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gamenotifications.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gameservers.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_hiddevices.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_inventory.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_linkfilter.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_offline.steamclient.pb.o
@@ -675,6 +685,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/lzma-9.20/C/LzmaDec.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/lzma-9.20/C/LzmaEnc.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/miniz/miniz.c
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../overlay/common/shmemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/RateLimiter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/accountutils.cpp
@@ -728,6 +739,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/globals.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hardware_osx.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicelocal.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicepipe.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicepipesteam.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddeviceremote.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddeviceremote.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevices.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/../../overlay/common/shmemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
@@ -846,6 +863,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenotifications.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gameservers.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gameservers.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_hiddevices.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_hiddevices.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_inventory.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_inventory.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_linkfilter.steamclient.pb.cc
@@ -904,7 +923,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/hidapi-0.7.0/mac/hid.c
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/hidapi/mac/hid.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/base/bytebuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/base/criticalsection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/base/network.h

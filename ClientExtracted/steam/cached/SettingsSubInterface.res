@@ -325,7 +325,7 @@
 		"wrap"		"0"
 	}
 	
-	"SetJumplistOptionsButton" [!$OSX]
+	"SetJumplistOptionsButton"
 	{
 		"ControlName"		"Button"
 		"fieldName"		"SetJumpListOptionsButton"

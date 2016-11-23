@@ -78,6 +78,13 @@ input.custom_form_text
 	clear: left;
 }
 
+input.custom_form_text.right_hint
+{
+	width: calc( 50% - 16px );
+	margin-right: 16px;
+}
+
+
 .custom_form_label
 {
 	padding-bottom: 4px;
@@ -95,6 +102,16 @@ input.custom_form_text
 	font-size: 12px;
 	color: #8c96a0;
 }
+
+.create_request_form_row .hint_text.right_hint
+{
+	width: calc( 50% - 16px );
+	display: inline-block;
+	color: #5eafde;
+	vertical-align: top;
+	padding-top: 0px;
+}
+
 
 .create_request_form_colset_1
 {
@@ -4064,6 +4081,7 @@ ul.attached_file_list {
 	color: #ffffff;
 	font-size: 20px;
 	margin-bottom: 10px;
+	
 }
 
 .help_report_scam {
@@ -4074,3 +4092,51 @@ ul.attached_file_list {
 #help_usersearch_input {
 	width: calc( 742px - 10px );
 }
+
+.help_recoveraccount_header {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+.help_recoveraccount_header_title {
+	margin-bottom: 5px;
+}
+
+.help_recoveraccount_header_subheader {
+	font-size: 14px;
+	color: #5eafde;
+}
+
+.help_section_divider hr {
+	border-color: #5eafde;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.help_section_divider_dim hr {
+	border-color: #5eafde;
+	opacity: 0.2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.help_provide_pop_header {
+	font-size: 16px;
+	margin-top: 30px;
+	max-width: 672px;
+}
+
+.help_provide_pop_subheader {
+	margin-top: 5px;
+	color: #5eafde;
+	max-width: 672px;
+}
+
+#extended_field_credit_card_last4 {
+	width: 25%;
+}
+
+#extended_field_message textarea {
+	background-color: #324965;
+}
+

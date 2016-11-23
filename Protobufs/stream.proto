@@ -73,6 +73,7 @@ enum EStreamControlMessage {
 	k_EStreamControlVirtualHereReady = 103;
 	k_EStreamControlVirtualHereShareDevice = 104;
 	k_EStreamControlSetSpectatorMode = 105;
+	k_EStreamControlRemoteHID = 106;
 }
 
 enum EStreamVersion {
@@ -356,12 +357,14 @@ message CNegotiatedConfig {
 	optional .EStreamAudioCodec selected_audio_codec = 2 [default = k_EStreamAudioCodecNone];
 	optional .EStreamVideoCodec selected_video_codec = 3 [default = k_EStreamVideoCodecNone];
 	repeated .CStreamVideoMode available_video_modes = 4;
+	optional bool enable_remote_hid = 5;
 }
 
 message CNegotiationInitMsg {
 	optional bool reliable_data = 1;
 	repeated .EStreamAudioCodec supported_audio_codecs = 2;
 	repeated .EStreamVideoCodec supported_video_codecs = 3;
+	optional bool supports_remote_hid = 4;
 }
 
 message CNegotiationSetConfigMsg {
@@ -640,6 +643,10 @@ message CVirtualHereShareDeviceMsg {
 
 message CSetSpectatorModeMsg {
 	optional bool enabled = 1;
+}
+
+message CRemoteHIDMsg {
+	optional bytes data = 1;
 }
 
 message CStreamDataLostMsg {

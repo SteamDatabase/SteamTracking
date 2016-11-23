@@ -2110,11 +2110,11 @@ HelpRequestPage = {
 
 	m_strSystemReport: "",
 
-	ShowCreateHelpRequestFormOnPageLoad: function()
+	ShowCreateHelpRequestFormOnPageLoad: function( bScrollIntoView = true )
 	{
 		$J( document ).ready( function() {
 			$J( '#cancel_create_help_request' ).remove();
-			HelpRequestPage.ShowCreateHelpRequestForm();
+			HelpRequestPage.ShowCreateHelpRequestForm( bScrollIntoView );
 		});
 	},
 
@@ -2143,7 +2143,7 @@ HelpRequestPage = {
 		var Modal = ShowAlertDialog( 'About System Reports', $J( '#system_report_details' ).html() );
 	},
 
-	ShowCreateHelpRequestForm: function()
+	ShowCreateHelpRequestForm: function( bScrollIntoView = true )
 	{
 		if ( !HelpWizard.m_steamid && !$J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
 		{
@@ -2158,7 +2158,10 @@ HelpRequestPage = {
 
 		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
 		$J('#create_help_request_issue_text').focus();
-		$J('#create_help_request_form_ctn').get(0).scrollIntoView();
+		if ( bScrollIntoView )
+		{
+			$J('#create_help_request_form_ctn').get(0).scrollIntoView();
+		}
 	},
 
 	ShowPendingPurchaseHelpRequestForm: function( strPendingElementID )

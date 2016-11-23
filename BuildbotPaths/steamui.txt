@@ -25,6 +25,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_hiddevices.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamservice.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/SettingsSubFriends.cpp
