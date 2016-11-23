@@ -49,9 +49,7 @@
 	position: absolute;
 	left: 0;
 	top: 31px;
-	width: 187px;
-	height: 200px;
-	display: none;
+	width: 0;
 	z-index: 2;
 }
 
@@ -98,15 +96,39 @@ a.gutter_item:hover {
 	margin: 7px 0;
 }
 
+body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
+	transition: padding 0.25s;
+}
+
+body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+	transition: right 0.25s;
+}
+
+body:not(.no_home_gutter) .home_page_gutter {
+	width: 0;
+	overflow: hidden;
+	transition: width 0.25s;
+}
+
 @media all and (min-width: 1208px) {
 	body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
 		padding-left: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_gutter {
 		display: block;
+		width: 187px;
 	}
 	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
-		right: -187px;
+		right: -218px;
+	}
+}
+
+@media all and (min-width: 1442px) {
+	body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
+		padding-right: 234px;
+	}
+	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+		right: 0;
 	}
 }
 
@@ -1908,7 +1930,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		line-height: 18px;
 	}
 
-	html.responsive ..home_viewsettings_checkbox {
+	html.responsive .home_viewsettings_checkbox {
 		margin-top: 2px;
 	}
 
@@ -1922,7 +1944,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		line-height: 18px;
 	}
 
-	html.responsive.touch ..home_viewsettings_checkbox {
+	html.responsive.touch .home_viewsettings_checkbox {
 		margin-top: 2px;
 	}
 
@@ -2724,7 +2746,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	clear: both;
 }
 
-.carousel_items > * {
+.carousel_items:not(.no_paging) > * {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2734,11 +2756,23 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	position: relative;
 }
 
-.carousel_container .carousel_items > * {
+.carousel_container .carousel_items:not(.no_paging) > * {
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 400ms;
 	width: 940px;
+}
+
+.carousel_items.no_paging .store_capsule {
+	margin: 0 6px 6px 0;
+	max-width: calc( 50% - 6px );
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .carousel_items.no_paging {
+		text-align: center;
+	}
 }
 
 .carousel_container .carousel_items > *.focus {
@@ -3067,6 +3101,10 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);background: l
 	background-image: url( '/public/images/v6/icon_platform_oculusrift_dark.png' );
 }
 
+.tab_item.focus .tab_item_details span.platform_img.razerosvr {
+	background-image: url( '/public/images/v6/icon_platform_razerosvr_dark.png' );
+}
+
 .tab_item.focus .discount_block .discount_final_price {
 	color: #263645;
 }
@@ -3258,11 +3296,13 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	top: 30%
 }
 
-.specials_under10 .carousel_items {
+.specials_under10 .carousel_items:not(.no_paging),
+.wishlist_on_sale .carousel_items:not(.no_paging) {
 	height: 134px;
 }
 
-.specials_under10 .arrow {
+.specials_under10 .arrow,
+.wishlist_on_sale .arrow {
 	top: 22%;
 }
 
@@ -3576,7 +3616,8 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	}
 
 
-	.carousel_container .carousel_items, .carousel_container.maincap .carousel_items {
+	.carousel_container .carousel_items:not(.no_paging),
+	.carousel_container.maincap .carousel_items:not(.no_paging) {
 		overflow-x: scroll;
 		overflow-y: hidden;
 		box-sizing:content-box;
@@ -3692,6 +3733,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 	.big_buttons .btn_wrapper {
 		margin: 5px;
+		max-width: calc( 100% - 10px );
 	}
 
 	/* Takeover (Temp/new store, can clean up later */

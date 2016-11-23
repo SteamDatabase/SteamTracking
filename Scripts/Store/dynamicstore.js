@@ -260,6 +260,12 @@ GDynamicStore = {
 
 	},
 
+	MarkAppIDsAsDisplayed: function( rgAppIDs )
+	{
+		for ( var i = 0; i < rgAppIDs.length; i++ )
+			GDynamicStore.s_rgDisplayedApps.push( rgAppIDs[i] );
+	},
+
 	HandleClusterChange: function( cluster ) {
 		GDynamicStore.s_ImpressionTracker.CheckVisibility();
 		var $ScrollingContainer = $J( cluster.elScrollArea );
@@ -1187,12 +1193,7 @@ GStoreItemData = {
 			nPlatforms++;
 		}
 
-		if ( nPlatforms > 1 )
-		{
-			strHTML += '<span class="platform_img steamplay"></span>';
-		}
-
-		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift )
+		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift || rgItemData.vr_razerosvr )
 		{
 			strHTML += '<span class="platform_img hmd_separator"></span>';
 
@@ -1203,6 +1204,10 @@ GStoreItemData = {
 			if ( rgItemData.vr_oculusrift )
 			{
 				strHTML += '<span class="platform_img oculusrift"></span>';
+			}
+			if ( rgItemData.vr_razerosvr )
+			{
+				strHTML += '<span class="platform_img razerosvr"></span>';
 			}
 		}
 

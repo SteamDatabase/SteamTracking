@@ -1480,6 +1480,10 @@ span.platform_img.oculusrift {
 	background-image: url( '/public/images/v6/icon_platform_oculusrift.png' );
 }
 
+span.platform_img.razerosvr {
+	background-image: url( '/public/images/v6/icon_platform_razerosvr.png' );
+}
+
 span.platform_img.hmd_separator {
 	border-left: 1px solid #CCC;
 	width: 1px;
@@ -1944,7 +1948,7 @@ body.v6 .discover_queue_empty>h3 {
 	font-family: "Motiva Sans", Sans-serif;
 	margin-top: 4px;
 	color: #fff;
-	width: 350px;
+	width: 330px;
 }
 
 .dq_item.dq_active_link {
@@ -2598,6 +2602,7 @@ a.cluster_capsule:hover {
 	text-align: right;
 	padding: 5px;
 	line-height: 17px;
+	min-height: 17px;
 	font-size: 12px;
 }
 

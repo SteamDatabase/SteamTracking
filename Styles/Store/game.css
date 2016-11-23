@@ -1223,30 +1223,68 @@ body.v6 .game_description_column h2.gradientbg {
 }
 
 #game_area_metascore {
-	background-image: url(/public/images/v6/mc_logo_inverted_small.png);
-    background-repeat: no-repeat;
+
+}
+
+/* to spec from Metacritic, please don't change - SeanJ */
+#game_area_metascore .score {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 25px;
+	text-align: center;
+	float: left;
+}
+
+#game_area_metascore .score.high {
+	background-color: #66CC33;
+}
+
+#game_area_metascore .score.medium {
+	background-color: #FFCC33;
+}
+
+#game_area_metascore .score.low {
+	background-color: #FF0000;
+}
+
+#game_area_metascore .logo {
+	background-image: url(/public/images/v6/mc_logo_no_text.png);
+	background-repeat: no-repeat;
 	height: 35px;
-	width: 270px;
+	width: 35px;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+#game_area_metascore .wordmark {
+	float: left;
+	width: 180px;
+}
+
+#game_area_metascore .metacritic {
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: bold; /* bold */
 
-			font-size: 24px;
-	color: #8BC53F;
-	text-align: right;
-	padding-right: 43px;
-	padding-top: 5px;
+			color: #FFFFFF;
+	margin-left: 2px;
+	font-size: 26px;
+	line-height: 26px;
+	margin-top: 4px;
+	float: left;
+}
 
-}
-#game_area_metascore .ms_slash {
-    color: #61686d;
-    font-size: 25px;
-}
-#game_area_metascore .ms_base {
-    color: #61686d;
-    font-size: 11px;
-}
 #game_area_metalink {
-	padding:0px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 0px;
+	position: relative;
+	left: 2px;
+	clear: left;
 }
 
 .game_rating_area {

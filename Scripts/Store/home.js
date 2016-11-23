@@ -35,6 +35,13 @@ GHomepage = {
 			var $Background = $Ctn.children( '.page_background_holder' );
 			var $Menu = $J('#store_header');
 
+			var k_nContentWidth = 940 + 32;
+			var k_nMenuHeight = 66;
+
+			var nTakeoverWidth = $Background.data( 'backgroundWidth' ) || 1880;
+			var flTakeoverRatio = nTakeoverWidth / k_nContentWidth;
+			var flTopAdjustment = ( 100 * k_nMenuHeight / k_nContentWidth ) / flTakeoverRatio;
+
 			var $TakeoverLink = $J('.home_page_takeover_link' ).children().first();
 			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
 
@@ -43,17 +50,18 @@ GHomepage = {
 				{
 					// the -5vw here accounts for the bit that would normally be overlapped by the menu, we use
 					//	viewport-relative units because the background is being scaled relative to the viewport.
-					$Background.css( 'background-position', 'center -3.5vw' );
+					$Background.css( 'background-position', 'center -' + flTopAdjustment + 'vw' );
+					$Background.css( 'background-size', Math.floor( 100 * flTakeoverRatio ) + '% auto' );
 
 					// this is the link, which also allocates the space for the takeover to be visible above the cluster rotation.
 					//	we scale it based on the viewport width, assuming the initial width was 940px
 					if ( nInitialTakeoverLinkHeight )
-						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / 940 * 100 ) + 'vw' );
+						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / k_nContentWidth * 100 ) + 'vw' );
 
 				}
 				else
 				{
-					$Background.css( 'top', '' ).css('background-position', '');
+					$Background.css( 'top', '' ).css('background-position', '').css('background-size', '' );
 					if ( nInitialTakeoverLinkHeight )
 						$TakeoverLink.css( 'height', nInitialTakeoverLinkHeight + 'px' );
 				}
@@ -275,10 +283,7 @@ GHomepage = {
 		GHomepage.oDisplayListsRaw = null;
 
 		$J(window ).on('Responsive_SmallScreenModeToggled.StoreHome', function() {
-			// re-render the guys that adjust # of items in responsive mode
-			GHomepage.RenderNewOnSteam();
-			GHomepage.RenderRecentlyUpdated();
-			GSteamCurators.Render();
+			// TODO: this was never updated for discovery update 2
 		});
 
 		// More Content
@@ -672,7 +677,7 @@ GHomepage = {
 
 				var $elInfoDiv = $J('<div>',{'class': 'tab_preview'});
 
-				$elInfoDiv.append($J('<h2>').text( rgData.name ));
+				$elInfoDiv.append($J('<h2>').html( rgData.name ));
 
 				if ( rgData['review_summary'] )
 				{
@@ -730,7 +735,7 @@ GHomepage = {
 			}
 		});
 
-		$J('.tab_item').first().trigger('mouseenter');
+		$J('.tab_item:visible').first().trigger('mouseenter');
 
 	},
 
@@ -941,10 +946,15 @@ GHomepage = {
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
 
+		var bPaginated = !$elCapsuleTarget.hasClass('no_paging');
+
+		if ( !bPaginated )
+			nCapsules = rgCapsules.length;
+
 		for( var j=0; j<rgCapsules.length; j+=nCapsules )
 		{
 			// Try to avoid half-filling a page
-			if( j > 0 && j+nCapsules > rgCapsules.length )
+			if( j > 0 && j+nCapsules > rgCapsules.length && bPaginated )
 				break;
 
 			var $elPageContainer = $J('<div>');
@@ -967,7 +977,11 @@ GHomepage = {
 			}
 
 			$elCapsuleTarget.append($elPageContainer);
-			$elThumbTarget.append($J('<div/>'));
+
+			if ( bPaginated )
+			{
+				$elThumbTarget.append($J('<div/>'));
+			}
 		}
 
 		if ( $elCapsuleTarget.children().length > 0 )
@@ -977,7 +991,8 @@ GHomepage = {
 			$elTarget.show();
 		}
 
-		CreateFadingCarousel( $elTarget, 0 );
+		if ( bPaginated )
+			CreateFadingCarousel( $elTarget, 0 );
 	},
 
 	RenderUnder10: function()
@@ -997,8 +1012,18 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $J('.specials_under10'), function( oItem, strFeature, rgOptions ) {
 			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
 		} , 'under10', 4 );
+	},
 
+	RenderWishlistOnSale: function( rgItems )
+	{
+				if ( !rgItems || !rgItems.length )
+			return;
 
+		GHomepage.FillPagedCapsuleCarousel( rgItems, $J('.wishlist_on_sale'), function( oItem, strFeature, rgOptions ) {
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+		} , 'sale_fromyourwishlist', 4 );
+
+		GDynamicStore.MarkAppDisplayed ( rgItems.slice( 0, 4 ) );
 	},
 
 

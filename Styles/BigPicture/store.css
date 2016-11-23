@@ -68,6 +68,11 @@
 	background-image: url( "file://{images}/store/icon_platform_oculusriftlogo.png" );
 }
 
+.RazerOSVRLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_razerosvrlogo.png" );
+}
+
 .HMDSeparator
 {
 	border-left: 1px solid #CCCCCC;
