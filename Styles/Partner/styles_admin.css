@@ -41,6 +41,10 @@ ul li {
 	list-style-type: none;
 }
 
+ul.bullets li {
+	list-style-type: square;
+}
+
 .grayRule {
 	border-top: 1px solid gray;
 }
