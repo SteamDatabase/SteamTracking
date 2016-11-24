@@ -2708,7 +2708,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .gutter_item .icon {
-	background-image: url( '/public/images/v6/store_menu_icons.png' );
+	background-image: url( '/public/images/v6/store_menu_icons.png?v=2' );
 	width: 16px;
 	height: 16px;
 	display: inline-block;

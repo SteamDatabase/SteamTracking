@@ -1028,10 +1028,9 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 function SecondsToTime( seconds )
 {
-
 	var hours = Math.floor(seconds / (60 * 60) );
-	var minutes = Math.floor(seconds / 60 ) % 59;
-	var seconds = Math.floor( seconds ) % 59;
+	var minutes = Math.floor(seconds / 60 ) % 60;
+	var seconds = Math.floor( seconds ) % 60;
 	if( seconds < 10 )
 		seconds = "0" + seconds;
 	var out = (hours > 0 ) ? hours + ":" : "";
