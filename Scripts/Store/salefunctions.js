@@ -239,7 +239,7 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 		var $Dialog = $J('<div/>');
 		$Dialog.append( $J('<p/>', {'class': 'steamawards_nomination_intro'}).html( 'Which award would you like to nominate %s for?'.replace( /%s/, appname ) ) );
 		$Dialog.append( $Form );
-		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'http://store.steampowered.com/faq'}).text( 'Learn more about the Steam Awards' ) ) );
+		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'http://store.steampowered.com/SteamAwardNominations/'}).text( 'Learn more about the Steam Awards' ) ) );
 
 		var fnSubmit = function()
 		{
