@@ -1695,12 +1695,12 @@ function OnGetFinalPriceSuccess( result )
 				}				
 				else if ( method.value == 'culturevoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Culture Voucher customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your cultureland account details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'bookvoucher' )
