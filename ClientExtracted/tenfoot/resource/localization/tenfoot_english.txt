@@ -1041,6 +1041,8 @@
 	"SettingsController_ResetButtons"						"RESET"
 	"SettingsController_TurnOffOnQuit"					"Turn off on Big Picture Exit"
 	"SettingsController_PS4Support"						"PS4 Configuration Support"
+	"SettingsController_XBoxSupport"					"XBox Configuration Support"
+	"SettingsController_GenericGamepadSupport"			"Generic Gamepad Configuration Support"
 
 	"SettingsController_Support"						"SUPPORT"
 	"SettingsController_Calibrate"						"CALIBRATE"

@@ -3226,7 +3226,6 @@
  SDL_GameControllerGetJoystick
  SDL_GameControllerMapping
  SDL_GameControllerName
- SDL_GameControllerNameForIndex
  SDL_GameControllerOpen
  SDL_GetClipboardText
  SDL_GetDisplayBounds
@@ -3248,15 +3247,17 @@
  SDL_HideWindow
  SDL_Init
  SDL_InitSubSystem
+ SDL_IsGameController
  SDL_JoystickClose
  SDL_JoystickCurrentPowerLevel
  SDL_JoystickGetAxis
  SDL_JoystickGetButton
  SDL_JoystickGetDeviceGUID
+ SDL_JoystickGetDeviceProduct
+ SDL_JoystickGetDeviceVendor
  SDL_JoystickGetGUIDString
  SDL_JoystickInstanceID
  SDL_JoystickName
- SDL_JoystickNameForIndex
  SDL_JoystickNumAxes
  SDL_JoystickNumButtons
  SDL_JoystickOpen
@@ -10812,7 +10813,6 @@
  T panorama::CTopLevelWindow::BOnMoveEdge(panorama::EFocusMoveDirection)
  T panorama::CTopLevelWindow::BWasGamepadConnectedThisSession()
  T panorama::CTopLevelWindow::BWasGamepadUsedThisSession()
- T panorama::CTopLevelWindow::BWasPS4ControllerConnectedThisSession()
  T panorama::CTopLevelWindow::BWasSteamControllerConnectedThisSession()
  T panorama::CTopLevelWindow::BWasSteamControllerUsedThisSession()
  T panorama::CTopLevelWindow::CTopLevelWindow(panorama::CUIEngine*)
@@ -12555,7 +12555,6 @@
  T panorama::CUIWindowInput::BWasMouseLastInputSource()
  T panorama::CUIWindowInput::BWasMouseMoving()
  T panorama::CUIWindowInput::BWasMouseOrKeyboardUsedThisSession() const
- T panorama::CUIWindowInput::BWasPS4ControllerConnectedThisSession()
  T panorama::CUIWindowInput::BWasSteamControllerConnectedThisSession()
  T panorama::CUIWindowInput::BWasSteamControllerUsedThisSession()
  T panorama::CUIWindowInput::CUIWindowInput(panorama::CTopLevelWindow*, panorama::CUIInputEngine*)

@@ -175,6 +175,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevicepipesteam.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddeviceremote.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevices.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/hiddevicesdl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlmessages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlprotobuf.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/htmlsurface.o
@@ -367,6 +368,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevicepipesteam.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddeviceremote.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevices.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/hiddevicesdl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlmessages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlprotobuf.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/htmlsurface.o
@@ -745,6 +747,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddeviceremote.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddeviceremote.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevices.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicesdl.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicesdl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/../../overlay/common/shmemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
