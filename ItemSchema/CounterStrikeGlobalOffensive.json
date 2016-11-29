@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.a56099c5c6a6b4fd713151443278c1d2f82c86de.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.274628a4a1651ea6253265229ec3e8449e0338aa.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7229,6 +7229,31 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "crate_gamma_2",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "community_15 Key",
+				"defindex": 1356,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Glove Case Key",
+				"item_description": "This key only opens Glove cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_15",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_15.39e77f7c6d1140f7b2cb65011f0edc1e861176d1.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_15",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -17263,6 +17288,242 @@
 				
 			},
 			{
+				"name": "crate_musickit_radicals_stattrak_capsule",
+				"defindex": 4287,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "StatTrak™ Radicals Box",
+				"item_description": "This box contains a variety of StatTrak™ music kits from \"Radicals\" artists.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_musickit_radicals_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_musickit_radicals_capsule.862fad702656aa677a0a02fc56b032f300fcd48a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 178
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_15",
+				"defindex": 4288,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Glove Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_15",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_15.7dfa18f8f7ce3bc4e55aac0c566fe068e741bddf.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_15",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 179
+					}
+				]
+				
+			},
+			{
+				"name": "studded_bloodhound_gloves",
+				"defindex": 5027,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Bloodhound Gloves",
+				"item_description": "These fingerless gloves have been decorated with metal studs and the Operation Bloodhound logo.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "t_gloves",
+				"defindex": 5028,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Default T Gloves",
+				"item_description": "<i>Never be afraid to get blood on your hands. – Valeria Jenner, Revolutionary</i>",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/t_gloves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/t_gloves.08d6a3cb45d6e7cb98064c2025510ce8e5eba9c3.png",
+				"image_url_large": "",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "ct_gloves",
+				"defindex": 5029,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Default CT Gloves",
+				"item_description": "General-purpose tactical combat gloves designed for military or security personnel.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/ct_gloves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/ct_gloves.47b3fecbc1a2de3e1480c2ecd3fff0ed7b9e20ad.png",
+				"image_url_large": "",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "sporty_gloves",
+				"defindex": 5030,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Sport Gloves",
+				"item_description": "Synthetic fabrics make these athletic gloves durable and eye-catching.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "slick_gloves",
+				"defindex": 5031,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Driver Gloves",
+				"item_description": "These driving gloves offer protection from the elements while still maintaining tactile sensation.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "leather_handwraps",
+				"defindex": 5032,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Hand Wraps",
+				"item_description": "Preferred by hand-to-hand fighters, these wraps protect the knuckles and stabilize the wrist when punching.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "motorcycle_gloves",
+				"defindex": 5033,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Moto Gloves",
+				"item_description": "These bulky hard knuckled gloves can protect the wearers hands from road rash at 60 mph.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "specialist_gloves",
+				"defindex": 5034,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Specialist Gloves",
+				"item_description": "Durable, breathable, and stylish; these gloves are designed to take (and give) a beating.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -23690,6 +23951,38 @@
 					}
 				]
 				
+			},
+			{
+				"name": "coupon - radicals_stattrak_musickit_capsule",
+				"defindex": 20133,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "StatTrak™ Radicals Music Kit Box",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
 			}
 		]
 		,
@@ -25324,6 +25617,30 @@
 					"weapon_scar20",
 					"weapon_glock",
 					"weapon_m4a1_silencer"
+				]
+				
+			},
+			{
+				"item_set": "set_community_15",
+				"name": "The Glove Collection",
+				"items": [
+					"weapon_cz75a",
+					"weapon_glock",
+					"weapon_mp7",
+					"weapon_galilar",
+					"weapon_mp9",
+					"weapon_mag7",
+					"weapon_hkp2000",
+					"weapon_elite",
+					"weapon_g3sg1",
+					"weapon_m4a1_silencer",
+					"weapon_nova",
+					"weapon_usp_silencer",
+					"weapon_famas",
+					"weapon_p90",
+					"weapon_sawedoff",
+					"weapon_ssg08",
+					"weapon_m4a1"
 				]
 				
 			},
