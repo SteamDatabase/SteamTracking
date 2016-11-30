@@ -868,7 +868,7 @@ body.iframe #ChatDragHandle
 	position: relative;
 }
 
-.BroadcastRowShadow
+body:not(.iframe) .BroadcastRowShadow
 {
 	position: absolute;
 	top: 0px;

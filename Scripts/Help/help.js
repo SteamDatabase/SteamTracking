@@ -882,7 +882,7 @@ HelpWizard = {
 			HelpWizard.SetPasswordTag( '#reenter_tag', '', '' );
 	},
 
-	SubmitPasswordChange: function( strSessionID, strCode, nAccountID, strLogin ) {
+	SubmitPasswordChange: function( strSessionID, nAccountID, strLogin ) {
 		var elError = $J( '#changepw_error_msg' );
 		var strPassword = $J( '#password_reset' ).val();
 		var strTwoFactor = $J( '#password_twofactor' ).length ? $J( '#password_twofactor' ).val() : '';
@@ -910,11 +910,11 @@ HelpWizard = {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
 			$J( '#change_password_form' ).removeClass( 'loading' );
 		}).done( function( data ) {
-			HelpWizard.SubmitPasswordChangeRSA( strSessionID, strCode, nAccountID, data );
+			HelpWizard.SubmitPasswordChangeRSA( strSessionID, nAccountID, data );
 		});
 	},
 
-	SubmitPasswordChangeRSA: function( strSessionID, strCode, nAccountID, rsa ) {
+	SubmitPasswordChangeRSA: function( strSessionID, nAccountID, rsa ) {
 		var elError = $J( '#changepw_error_msg' );
 		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
 		{
@@ -942,8 +942,7 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryChangePassword/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				code: strCode,
-				accountid: nAccountID,
+				account: nAccountID,
 				password: strPasswordEncrypted,
 				rsatimestamp: rsa.timestamp,
 				twofactor: strTwoFactor
@@ -969,7 +968,7 @@ HelpWizard = {
 		});
 	},
 
-	SubmitEmailChange: function( strSessionID, strCode ) {
+	SubmitEmailChange: function( strSessionID, nAccountID ) {
 		var elError = $J( '#changepw_error_msg' );
 		var strEmail = $J( '#email_reset' ).val();
 		elError.hide();
@@ -990,7 +989,7 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryChangeEmail/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				code: strCode,
+				account: nAccountID,
 				email: strEmail
 			} )
 		}).fail( function( xhr ) {
@@ -1021,7 +1020,7 @@ HelpWizard = {
 		});
 	},
 
-	ConfirmEmailChange: function( strSessionID, strCode ) {
+	ConfirmEmailChange: function( strSessionID, nAccountID ) {
 		var elError = $J( '#changepw_error_msg' );
 		var strEmail = $J( '#email_reset' ).val();
 		var strEmailChangeCode = v_trim( $J( '#email_change_code' ).val() );
@@ -1042,7 +1041,7 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryConfirmChangeEmail/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				code: strCode,
+				account: nAccountID,
 				email: strEmail,
 				email_change_code: strEmailChangeCode
 			} )
@@ -1067,7 +1066,7 @@ HelpWizard = {
 		});
 	},
 
-	ResetPhoneNumber: function( strSessionID, strCode ) {
+	ResetPhoneNumber: function( strSessionID, nAccountID ) {
 
 		$J( '#reset_phonenumber_form' ).addClass( 'loading' );
 
@@ -1087,7 +1086,7 @@ HelpWizard = {
 			data: {
 				sessionid: g_sessionID,
 				s: strSessionID,
-				code: strCode
+				account: nAccountID
 			}
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
@@ -1111,7 +1110,7 @@ HelpWizard = {
 	},
 
 
-	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin, nLost )
+	ResetTwoFactor: function( strSessionID, nAccountID, strLogin, nLost )
 	{
 		$J( '#reset_twofactor_submit' ).addClass( 'loading' );
 		$J( '#form_submit_error' ).hide();
@@ -1126,11 +1125,11 @@ HelpWizard = {
 			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
 			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
 		}).done( function( data ) {
-			HelpWizard.ResetTwoFactorRSA( strSessionID, strCode, nAccountID, data, nLost );
+			HelpWizard.ResetTwoFactorRSA( strSessionID, nAccountID, data, nLost );
 		});
 	},
 
-	ResetTwoFactorRSA: function( strSessionID, strCode, nAccountID, rsa, nLost )
+	ResetTwoFactorRSA: function( strSessionID, nAccountID, rsa, nLost )
 	{
 		var elError = $J( '#form_submit_error' );
 		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
@@ -1164,8 +1163,7 @@ HelpWizard = {
 			data: {
 				sessionid: g_sessionID,
 				s: strSessionID,
-				code: strCode,
-				accountid: nAccountID,
+				account: nAccountID,
 				lost: nLost,
 				password: strPasswordEncrypted,
 				rsatimestamp: rsa.timestamp,
@@ -1313,13 +1311,13 @@ HelpWizard = {
 		});
 	},
 
-	UserLostAccess: function( strSessionID, strCode, strNav, unIssueID, unLost ) {
+	UserLostAccess: function( strSessionID, nAccountID, strNav, unIssueID, unLost ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				code: strCode,
+				account: nAccountID,
 				nav: strNav,
 				issueid: unIssueID,
 				lost: unLost,
@@ -1331,7 +1329,7 @@ HelpWizard = {
 		});
 	},
 
-	SubmitProofOfPurchase: function( strSessionID, strCode, strNav ) {
+	SubmitProofOfPurchase: function( strSessionID, strNav ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
 			'Verifying payment information' );
@@ -1343,7 +1341,6 @@ HelpWizard = {
 			dataType: "json",
 			data: {
 				s: strSessionID,
-				code : strCode,
 				CardNumber: $J('#card_number').val(),
 				CardExpirationYear: $J('#expiration_year').val(),
 				CardExpirationMonth: $J('#expiration_month').val(),
@@ -1365,7 +1362,7 @@ HelpWizard = {
 			if ( data.success )
 			{
 				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID +
-					"&code=" + data.code + "&account=" + data.accountid + "&nav=" + strNav;
+					"&account=" + data.accountid + "&nav=" + strNav;
 			}
 			else 
 			{

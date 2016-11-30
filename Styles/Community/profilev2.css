@@ -2022,6 +2022,11 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	float: right;
 }
 
+.add_friends_btn_ctn {
+	float: right;
+	margin-top: 10px;
+}
+
 .bulk_action_ctn {
 	white-space: nowrap;
 }
