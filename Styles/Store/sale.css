@@ -550,10 +550,11 @@ body.sale_page_background {
 }
 
 .sale_page_three_section .broadcastwrapper .EmbeddedChat {
-	border: none;
-	width: 940px;
-	height: 200px;
-	float: right;
+    border: none;
+    width: 938px;
+    height: 205px;
+    float: right;
+    border: 1px rgba(255, 255, 255, .1) solid;
 }
 
 .sale_page_three_section .broadcastwrapper .ViewerCount {
