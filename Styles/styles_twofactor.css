@@ -34,69 +34,6 @@
 	margin-top: 35px;
 }
 
-.twofactor_settings_optionsheader
-{
-	color: #ffffff;
-	font-size: 14px;
-	margin-top: 20px;
-}
-
-.twofactor_settings_button
-{
-	display: block;
-	max-width: 714px;
-	
-	margin-top: 10px;
-	padding-right: 28px;
-	border: solid 1px;
-	border-color: #66778b #323f51 #323f51 #66778b;
-
-	font-size: 15px;
-	color: white;
-
-	background-color: #445468;
-
-	box-sizing: border-box;
-
-	background-image: url("/public/images/v6/ico_navArrow_right.png");
-	background-repeat: no-repeat;
-	background-position: right 14px center;
-	background-size: auto 16px;
-
-	text-align: left;
-	
-	/* additional padding so contents do not render over arrow */
-	padding-right: 28px;
-	width: 712px;
-
-	cursor: pointer;
-}
-
-}
-
-.twofactor_settings_button.disabled {
-	opacity: 0.5;
-	cursor: default;
-}
-
-.twofactor_settings_button:hover {
-	background-color: #4581a5;
-	color: white;
-}
-
-.twofactor_settings_button > span {
-	margin: 10px 14px 10px 14px;
-	display: block;
-	overflow: hidden;
-}
-
-.twofactor_settings_phonepic
-{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .twofactor_settings_form
 {
 }
