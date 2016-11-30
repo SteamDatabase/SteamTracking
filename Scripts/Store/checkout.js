@@ -2969,6 +2969,10 @@ function OnVerifyShippingAddressSuccess( result )
 					error_text = 'We cannot ship your order to P.O. Box, APO, FPO, or DPO address that you\'ve provided.';
 					break;
 
+				case 6:
+					error_text = 'The postal code your provided belongs to a US territory.  We cannot ship your order outside of the 48 continental United States.';
+					break;
+
 				case 2:
 					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
 					break;

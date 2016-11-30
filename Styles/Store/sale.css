@@ -538,6 +538,37 @@ body.sale_page_background {
 	color: #ffffff;
 }
 
+.sale_page_three_section .broadcastwrapper {
+	margin: 0 auto;
+}
+
+.sale_page_three_section .broadcastwrapper .EmbeddedPlayer {
+	border: none;
+	width: 940px;
+	height: 532px;
+	float: left;
+}
+
+.sale_page_three_section .broadcastwrapper .EmbeddedChat {
+	border: none;
+	width: 940px;
+	height: 200px;
+	float: right;
+}
+
+.sale_page_three_section .broadcastwrapper .ViewerCount {
+	text-align: right;
+}
+
+.sale_page_three_section .broadcastwrapper .ViewerCount #viewers {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-size: 13px;
+	line-height: 29px;
+}
+
 /* page admin block ended up with a bunch of random styles that are now copied/pasted everywhere- undo some of the damage here */
 html.responsive .btnv6_blue_blue_innerfade {
 	float: none;
@@ -634,6 +665,18 @@ html.responsive .btnv6_blue_blue_innerfade {
 		height: 136px;
 	}
 
+	html.responsive .sale_page_three_section .broadcastwrapper {
+		width: 100%;
+	}
+
+	html.responsive .sale_page_three_section .broadcastwrapper .EmbeddedPlayer {
+		width: 100%;
+		height: 490px;
+	}
+
+	html.responsive .sale_page_three_section .broadcastwrapper .EmbeddedChat {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 640px)
@@ -672,6 +715,10 @@ html.responsive .btnv6_blue_blue_innerfade {
 	{
 		width: 223px;
 		height: 104px;
+	}
+
+	html.responsive .sale_page_three_section .broadcastwrapper .EmbeddedPlayer {
+		height: 340px;
 	}
 }
 

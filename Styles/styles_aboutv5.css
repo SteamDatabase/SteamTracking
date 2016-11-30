@@ -9,6 +9,9 @@ div#main.quiltbg {
 
 #main_content {
 	position: relative;
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #about_header_area {
