@@ -1329,7 +1329,7 @@ HelpWizard = {
 		});
 	},
 
-	SubmitProofOfPurchase: function( strSessionID, strNav ) {
+	SubmitProofOfPurchase: function( strSessionID, strNav, nLost ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
 			'Verifying payment information' );
@@ -1341,19 +1341,19 @@ HelpWizard = {
 			dataType: "json",
 			data: {
 				s: strSessionID,
-				CardNumber: $J('#card_number').val(),
+				CardNumber: $J('#card_number').val().trim(),
 				CardExpirationYear: $J('#expiration_year').val(),
 				CardExpirationMonth: $J('#expiration_month').val(),
 				CardSecurityCode: $J('#security_code').val(),
 				CardType: $J('#payment_method').val(),
-				FirstName: $J('#first_name').val(),
-				LastName: $J('#last_name').val(),
+				FirstName: $J('#first_name').val().trim(),
+				LastName: $J('#last_name').val().trim(),
 				Address: $J('#billing_address').val(),
 				AddressTwo: $J('#billing_address_two').val(),
 				Country: $J('#billing_country').val(),
 				City: $J('#billing_city').val(),
 				State: ($J('#billing_country').val() == 'US' ? $J('#billing_state_select').val() : $J('#billing_state_text').val() ),
-				PostalCode: $J('#billing_postal_code').val(),
+				PostalCode: $J('#billing_postal_code').val().trim() ,
 				Phone: $J('#billing_phone').val()
 			}
 		}).fail(function (xhr) {
@@ -1362,7 +1362,7 @@ HelpWizard = {
 			if ( data.success )
 			{
 				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID +
-					"&account=" + data.accountid + "&nav=" + strNav;
+					"&account=" + data.accountid + "&nav=" + strNav + "&lost=" + nLost;
 			}
 			else 
 			{
