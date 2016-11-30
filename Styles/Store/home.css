@@ -3390,6 +3390,7 @@ body.v6 h2 {
 
 body.v6 h2 .header_inline {
 	text-transform: none;
+	letter-spacing: 0px;
 }
 
 .spotlight_content {
