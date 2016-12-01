@@ -2341,6 +2341,71 @@ HelpRequestPage = {
 		return strOutput;
 	},
 
+	ResizeImageForUpload: function( file, fnCallback ) {
+		var img = document.createElement( 'img' );
+		img.src = window.URL.createObjectURL( file );
+
+		img.onerror = function()
+		{
+			fnCallback( null );
+		};
+
+		img.onload = function()
+		{
+			var nMaxWidth = 4096;
+			var nMaxHeight = 2160;
+			var nWidth = img.width;
+			var nHeight = img.height;
+			if ( nWidth > nMaxWidth )
+			{
+				nHeight *= nMaxWidth / nWidth;
+				nWidth = nMaxWidth;
+			}
+
+			if ( nHeight > nMaxHeight )
+			{
+				nWidth *= nMaxHeight / nHeight;
+				nHeight = nMaxHeight;
+			}
+
+						if ( nWidth == img.width && nHeight == img.height && (file.type == 'image/jpeg' || file.type == 'image/jpg') )
+			{
+				fnCallback( file );
+				return;
+			}
+
+			var canvas = document.createElement( 'canvas' );
+			canvas.width = nWidth;
+			canvas.height = nHeight;
+			var ctx = canvas.getContext( '2d' );
+			ctx.drawImage( img, 0, 0, nWidth, nHeight );
+
+			var fnUploadBlob = function( blob )
+			{
+				if ( blob )
+				{
+					var strName = file.name;
+					var iExt = strName.lastIndexOf( '.' );
+					if ( iExt > 0 )
+						strName = strName.substr( 0, iExt ) + '.jpg';
+					else
+						strName = strName + '.jpg';
+
+					// callback expects a file
+					var newFile = new File( [blob], strName, {type: blob.type } );
+					fnCallback( newFile );
+				}
+				else
+				{
+					fnCallback( null );
+				}
+
+			};
+			
+			canvas.toBlob( fnUploadBlob, 'image/jpeg', 0.95 );
+		};
+	},
+
 	InitHelpRequestAttachmentUpload: function( $Form ) {
 		var $AttachmentUpload = $Form.find( '.help_request_attachment_upload' );
 
@@ -2377,7 +2442,13 @@ HelpRequestPage = {
 			});
 
 			var $List = $AttachmentUpload.find( '.attached_file_list' );
-			var fnAddFileToUploadList = function( file ){
+			var fnAddFileToUploadListInternal = function( file )
+			{
+				if ( !file )
+				{
+					ShowAlertDialog( 'Contact Steam Support', 'Contact Steam Support' );
+					return;
+				}
 
 								var cubAttached = 0;
 				var $FileList = $Form.find( 'ul.attached_file_list' ).children();
@@ -2405,6 +2476,17 @@ HelpRequestPage = {
 				$List.append( $Item );
 
 				$List.parent().show();
+			};
+
+			var fnAddFileToUploadList = function( file )
+			{
+				if ( file.type.match( /image.*/ ) )
+				{
+					file = HelpRequestPage.ResizeImageForUpload( file, fnAddFileToUploadListInternal );
+					return;
+				}
+
+				fnAddFileToUploadListInternal( file );
 			};
 
 			$Overlay.on('dragover', function(e) {
