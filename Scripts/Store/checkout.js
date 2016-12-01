@@ -1890,7 +1890,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.<br/><br/>For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 					}
 				}	
 				else if ( method.value == 'debit_card_india' )
@@ -1900,7 +1900,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.<br/><br/>For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 					}
 				}	
 				else if ( method.value == 'net_banking_india' )
@@ -1910,7 +1910,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.<br/><br/>For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 					}
 				}	
 				else if ( method.value == 'cash_card_india' )
@@ -1920,7 +1920,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.<br/><br/>For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 					}
 				}	
 				else if ( method.value == 'wallet_india' )
@@ -1930,7 +1930,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Novaplay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Novaplay website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.<br/><br/>For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 					}
 				}	
 			}
