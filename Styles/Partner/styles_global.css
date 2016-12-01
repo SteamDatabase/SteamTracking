@@ -970,4 +970,5 @@ a.tab, .tab a {
 
 .newlines {
 	white-space: pre-wrap;
+	word-break: break-all;
 }
