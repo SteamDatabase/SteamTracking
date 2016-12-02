@@ -311,6 +311,25 @@ HelpVacBans
 	method		"internal"
 }
 
+HelpChangePasswordForgotPassword
+{
+	url			"%help%wizard/HelpChangePassword?lost=1"
+	method		"internal"
+}
+
+HelpChangePasswordLostEmail
+{
+	url			"%help%wizard/HelpChangePassword?lost=2"
+	method		"internal"
+}
+
+HelpChangePasswordLostTwoFactor
+{
+	url			"%help%wizard/HelpChangePassword?lost=8"
+	method		"internal"
+}
+
+
 StoreFrontPage
 {
 	url			"%store%"

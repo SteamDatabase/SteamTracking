@@ -49,13 +49,14 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
-		"labelText"		"#Steam_ChangeCredEnterPassword"
+		"labelText"		"#Steam_ChangeCred_EnterPassword"
 		"textAlignment"		"west"
 		"associate"		"PasswordEntry"
 		"dulltext"		"0"
 		"brighttext"		"0"
 		"wrap"		"0"
 	}
+	
 	"EmailProgress"
 	{
 		"ControlName"		"Label"
@@ -71,9 +72,67 @@
 		"tabPosition"		"0"
 		"labelText"		"#Steam_ChangeCred_EmailCodeForPassword"
 		"textAlignment"		"west"
-		"dulltext"		"0"
-		"brighttext"		"0"
 		"wrap"		"1"
 	}
+	
+	"EmailAddress"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"EmailAddress"
+		"xpos"		"24"
+		"ypos"		"160"
+		"wide"		"340"
+		"tall"		"24"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"textAlignment"		"west"
+		"brighttext"		"1"
+		"wrap"		"1"
+	}
+	
+	"ForgotPasswordURL"
+	{
+		"ControlName"		"URLLabel"
+		"fieldName"		"ForgotPasswordURL"
+		"labelText"		"#Steam_ChangeCred_ForgotPassword"
+		"URLText"		"Steam://url/HelpChangePasswordForgotPassword/"
+		"xpos"		"24"
+		"ypos"		"200"
+		"wide"		"240"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"east"
+		"wrap"		"1"
+	}
+	
+	"LostEmailURL"
+	{
+		"ControlName"		"URLLabel"
+		"fieldName"		"LostEmailURL"
+		"labelText"		"#Steam_ChangeCred_LostEmail"
+		"URLText"		"Steam://url/HelpChangePasswordLostEmail"
+		"xpos"		"24"
+		"ypos"		"216"
+		"wide"		"240"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"east"
+		"wrap"		"1"
+	}
+	
+	
 }
  

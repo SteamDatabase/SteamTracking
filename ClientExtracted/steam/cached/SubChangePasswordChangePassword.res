@@ -167,6 +167,26 @@
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 		"Progress"		"0.000000"
+	}
+
+	"LostTwoFactorURL"
+	{
+		"ControlName"		"URLLabel"
+		"fieldName"		"LostTwoFactorURL"
+		"labelText"		"#Steam_ChangeCred_LostTwoFactor"
+		"URLText"		"Steam://url/HelpChangePasswordLostTwoFactor"
+		"xpos"		"24"
+		"ypos"		"272"
+		"wide"		"370"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"east"
+		"wrap"		"1"
 	}	
 }
  
