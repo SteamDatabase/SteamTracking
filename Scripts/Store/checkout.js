@@ -215,19 +215,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 
 		var method = $('payment_method');
 
-				if ( g_bIsInClientOrOverlay && method.value == 'alipay' )
-		{
-
-
-			var iframe = $(document.createElement("iframe"));
-			iframe.width = 0;
-			iframe.height = 0;
-			iframe.style.display = 'none';
-			iframe.src = 'steam://openurl_external/https://store.steampowered.com//login/?redir=' + encodeURIComponent( 'paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl );
-
-			document.body.appendChild(iframe);
-		}
-		else if( useExternalRedirect )
+		if( useExternalRedirect )
 		{
 			var displayPendingReceipt = false;
 			switch ( method.value )
