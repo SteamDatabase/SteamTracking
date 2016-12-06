@@ -329,6 +329,24 @@ HelpChangePasswordLostTwoFactor
 	method		"internal"
 }
 
+HelpChangeEmailForgotPassword
+{
+	url			"%help%wizard/HelpChangeEmail?lost=1"
+	method		"internal"
+}
+
+HelpChangeEmailLostPhone
+{
+	url			"%help%wizard/HelpChangeEmail?lost=4"
+	method		"internal"
+}
+
+HelpChangeEmailLostTwoFactor
+{
+	url			"%help%wizard/HelpChangeEmail?lost=8"
+	method		"internal"
+}
+
 
 StoreFrontPage
 {

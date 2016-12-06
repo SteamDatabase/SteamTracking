@@ -77,6 +77,26 @@
 		"brighttext"		"0"
 		"wrap"		"1"
 	}
+	
+	"TwoFactorCodeHelpUrl"
+	{
+		"ControlName"		"URLLabel"
+		"fieldName"		"TwoFactorCodeHelpUrl" 
+		"labelText"		"#Steam_ChangeCred_LostTwoFactor"
+		"URLText"		"Steam://url/HelpChangeEmailLostTwoFactor/"
+		"xpos"		"24"
+		"ypos"		"260"
+		"wide"		"320"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"north-west"
+		"wrap"		"0"
+	}
 
 	"SMSCodeEntry"
 	{
@@ -115,5 +135,25 @@
 		"dulltext"		"1"
 		"brighttext"		"0"
 		"wrap"		"1"
+	}
+	
+	"SMSCodeHelpUrl"
+	{
+		"ControlName"		"URLLabel"
+		"fieldName"		"SMSCodeHelpUrl" 
+		"labelText"		"#Steam_ChangeCred_LostPhone"
+		"URLText"		"Steam://url/HelpChangeEmailLostPhone/"
+		"xpos"		"24"
+		"ypos"		"260"
+		"wide"		"320"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"north-west"
+		"wrap"		"0"
 	}
 }

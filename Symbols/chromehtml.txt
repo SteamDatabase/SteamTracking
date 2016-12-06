@@ -2745,15 +2745,19 @@
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
+ b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamCommunityURL
  b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamDisableSandbox
  b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamDisableWinH264
+ b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamStoreURL
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
  b CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
+ b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamCommunityURL
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamDisableSandbox
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamDisableWinH264
+ b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse)::s_CmdLineParamStoreURL
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_HTMLController
