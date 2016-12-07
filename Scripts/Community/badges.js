@@ -536,10 +536,12 @@ CGameGooExchangeDialog = {
 		this.m_nSourceDenomination = nSourceDenomination;
 		this.m_nTargetDenomination = nTargetDenomination;
 
+		var description = currency.description || currency;
+
 		this.m_slider.SetIncrement( nTargetDenomination );
 		$J('#goo_exchange_dialog_title').text( strAction );
 
-		$J('.goo_exchange_dialog_currencyname').text( currency.name );
+		$J('.goo_exchange_dialog_currencyname').text( description.name );
 
 		var amount = currency.amount > 0 ? currency.amount : 1;
 
@@ -552,12 +554,12 @@ CGameGooExchangeDialog = {
 
 		$J('#goo_exchange_input').val( amount );
 
-		var iconUrl = ImageURL( currency.icon_url, 42, '42f' );
+		var iconUrl = ImageURL( description.icon_url, 42, '42f' );
 		$J('#goo_exchange_dialog_symbol1').attr( 'src', iconUrl );
 		$J('#goo_exchange_dialog_symbol2').attr( 'src', iconUrl );
 
-		$J('#goo_exchange_input').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
-		$J('#goo_exchange_dialog_remaining_display').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
+		$J('#goo_exchange_input').css( 'color', description.name_color ? '#' + description.name_color : '' );
+		$J('#goo_exchange_dialog_remaining_display').css( 'color', description.name_color ? '#' + description.name_color : '' );
 
 		$J('#goo_exchange_dialog_error').text('');
 
@@ -651,7 +653,7 @@ CGameGooExchangeDialog = {
 		var rgAJAXParams = {
 			sessionid: g_sessionID,
 			appid: this.m_appid,
-			assetid: currency.id,
+			assetid: currency.assetid || currency.id,
 			goo_denomination_in: nSourceDenomination,
 			goo_amount_in: xferAmount,
 			goo_denomination_out: nTargetDenomination,

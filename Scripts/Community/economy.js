@@ -2616,7 +2616,7 @@ function BuildHover( prefix, item, owner )
 	var elActions = $(prefix+'_item_actions');
 	if ( elActions )
 	{
-		PopulateActions( elActions, item.actions, item, owner );
+		PopulateActions( prefix, elActions, item.actions, item, owner );
 	}
 
 	var elOwnerDescriptors = $(prefix+'_item_owner_descriptors');
@@ -2628,7 +2628,7 @@ function BuildHover( prefix, item, owner )
 	var elOwnerActions = $(prefix+'_item_owner_actions');
 	if ( elOwnerActions )
 	{
-		PopulateActions( elOwnerActions, item.owner_actions, item, owner );
+		PopulateActions( prefix, elOwnerActions, item.owner_actions, item, owner );
 	}
 
 	var elCurrencyInTradeDescriptor = $(prefix+'_currency_in_trade' );
@@ -2731,7 +2731,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 	}
 }
 
-function PopulateActions( elActions, rgActions, item, owner )
+function PopulateActions( prefix, elActions, rgActions, item, owner )
 {
 	elActions.update('');
 	if ( !rgActions )
@@ -2755,6 +2755,13 @@ function PopulateActions( elActions, rgActions, item, owner )
 				strLink = strLink.replace( "%owner_steamid%", owner.GetSteamId() );
 		}
 
+		// hack to handle "grind into goo" action
+		if ( strLink.match( /^javascript:GetGooValue/ ) )
+		{
+			HandleGetGooValueAction( prefix, item, strLink );
+			continue;
+		}
+
 		var elAction = new Element(
 			'a',
 			{
@@ -2768,6 +2775,22 @@ function PopulateActions( elActions, rgActions, item, owner )
 		elActions.appendChild( elAction );
 	}
 	elActions.show();
+}
+
+function HandleGetGooValueAction( prefix, item, action )
+{
+	var elScrapActions = $(prefix+'_item_scrap_actions');
+	var elScrapAmount = $(prefix+'_item_scrap_value');
+	var elScrapLink = $(prefix+'_item_scrap_link');
+	if ( elScrapActions && elScrapAmount && elScrapLink )
+	{
+		var rgMatches = action.match( /GetGooValue\( *'?([0-9]+)'? *, *'?([0-9]+)'? *, *'?([0-9]+)'? *, *'?([0-9]+)'? *, *'?([0-9]+)'?/ );
+
+		if ( rgMatches )
+		{
+			PopulateScrapAction( elScrapActions, elScrapAmount, elScrapLink, item, rgMatches[3], rgMatches[4], rgMatches[5] );
+		}
+	}
 }
 
 function PopulateTags( elTags, elTagsContent, rgTags )
@@ -2821,9 +2844,9 @@ function CreateMarketActionButton( color, href, text )
 	return elButton;
 }
 
-function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item )
+function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item, appid, item_type, border_color )
 {
-	if ( item.appid != 753 || item.contextid != 6 || !item.app_data || !item.app_data.appid )
+	if ( item.appid != 753 || item.contextid != 6 || !appid || !item_type )
 	{
 		elActions.hide();
 		return;
@@ -2838,9 +2861,9 @@ function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item )
 		url: 'https://steamcommunity.com' + '/auction/ajaxgetgoovalueforitemtype/',
 		type: 'GET',
 		data: {
-			appid: item.app_data.appid,
-			item_type: item.app_data.item_type,
-			border_color: item.app_data.border_color,
+			appid: appid,
+			item_type: item_type,
+			border_color: border_color
 		},
 		error: function() {
 			elActions.hide();
@@ -2849,8 +2872,8 @@ function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item )
 		{
 			if ( response.goo_value && parseInt(response.goo_value) > 0 )
 			{
-				elScrapAmount.update( response.goo_value + ' Gems' );
-				elScrapLink.setAttribute( 'href', 'javascript:GrindIntoGoo( ' + item.app_data.appid + ',' + item.contextid + ',\'' + item.id + '\' )' );
+				elScrapAmount.update( '%s Gems'.replace( /%s/, response.goo_value  ) );
+				elScrapLink.setAttribute( 'href', 'javascript:GrindIntoGoo( ' + appid + ',' + item.contextid + ',\'' + item.id + '\' )' );
 				elActions.show();
 			}
 			else
