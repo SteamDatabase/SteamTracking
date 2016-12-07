@@ -15407,6 +15407,7 @@
  r panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)::k_rgchCover
  r panorama::CStylePropertyContextUIPosition::ResolveDefaultPositions(panorama::EContextUIPosition (&) [4])::arrAllPositions
  r panorama::CStylePropertyTransitionProperties::BParseAndRemoveImmediate(bool*, char*)::k_rgchImmediate
+ r panorama::CTopLevelWindowOpenVROverlay::ProcessVROverlayEvents(unsigned long long)::eJoystickDirectionCodes
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchIfAnyParentFocused
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchIfFocused
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchIfParentFocused
