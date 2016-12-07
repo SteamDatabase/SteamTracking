@@ -2364,11 +2364,24 @@ a.guide_row {
 	color: #5eafde;
 }
 
+.help_section_smallbody_header {
+	margin-top: 16px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
 .help_section_medium_header {
 	padding-bottom: 16px;
 	font-size: 16px;
 	color: #5eafde;
 }
+
+.help_section_mediumsteps_header {
+	margin-top: 16px;
+	font-size: 16px;
+	color: #5eafde;
+}
+
 
 .help_subsection_header {
 	font-size: 13px;
@@ -3272,7 +3285,7 @@ input.unlockcode_entry_input
 }
 
 .help_login_nag_forgot_password {
-	font-size: 10px;
+	font-size: 15px;
 	margin-top: 8px;
 }
 
@@ -4140,3 +4153,6 @@ ul.attached_file_list {
 	background-color: #324965;
 }
 
+#Help_AccountStolen_Steps {
+	padding: 0 10px 10px 10px;
+}

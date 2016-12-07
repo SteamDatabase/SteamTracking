@@ -1055,7 +1055,7 @@ body.v6 .game_description_column h2.gradientbg {
 	margin-bottom: 6px;
 }
 
-.game_area_description h2.bb_tag {
+body.v6 .game_area_description h2.bb_tag {
 	margin-top: 18px;
     margin-bottom: 0px;
     background-image: none;
@@ -1065,7 +1065,7 @@ body.v6 .game_description_column h2.gradientbg {
 	letter-spacing: 0px;
 }
 
-.game_area_description h2.bb_tag strong {
+body.v6 .game_area_description h2.bb_tag strong {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 500; /* medium */
 
@@ -2598,6 +2598,8 @@ h2 span.note:hover {
 h2 span.note a, h2 span.note a:hover, h2 span.note a:visited {
 	color: inherit;
 	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0;
 }
 
 h2 .note em {

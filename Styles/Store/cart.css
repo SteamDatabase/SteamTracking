@@ -77,6 +77,10 @@ body.v6.login .rightcol .spotlight_block {
 	color: #67c1f5;
 }
 
+.checkout_content_box .package_contents a {
+	color: #7092a5;
+}
+
 .checkout_content_box input[type="text"],
 .checkout_content_box input[type="password"],
 .checkout_content_box select,
@@ -285,7 +289,7 @@ img.payment_method_logo {
 }
 
 .checkout_notes {
-	color: #8F98A0;
+	color: #7092a5;
 	line-height: 20px;
 }
 
@@ -670,7 +674,7 @@ img.payment_method_logo {
 	color: #ffffff;
 	font-weight: bold;
 	line-height: 29px;
-	background-color: #557dab;
+	background-color: #758e9d;
 	margin: 0px 2px;
 	padding: 0px 14px;
 }
@@ -685,7 +689,7 @@ img.payment_method_logo {
 }
 
 .cart_status_message_arrow {
-	background-image: url( /public/images/v5/cart_statusmessage_arrow.png );
+	background-image: url( /public/images/v5/cart_statusmessage_arrow_light.png );
 	height: 9px;
 	width: 18px;
 	margin: 0px auto;
@@ -828,12 +832,12 @@ img.payment_method_logo {
 
 .cart_item_price .price.original_price {
 	text-decoration: line-through;
-	color: #626366;
+	color: #56707f;
 	font-size: 12px;
 }
 
 .cart_item_price .remove_link {
-	color: #626366;
+	color: #56707f;
 	text-decoration: underline;
 }
 .checkout_content.txn_totals {

@@ -1329,6 +1329,23 @@ HelpWizard = {
 		});
 	},
 
+	BindRelated: function( strSessionID, nAccountID, strNav, unIssueID ) {
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryBindRelated",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				account: nAccountID,
+				nav: strNav,
+				issueid: unIssueID,
+			} )
+		}).fail( function( xhr ) {
+
+		}).done( function( data ) {
+			window.location = data.redirect;
+		});
+	},
+
 	SubmitProofOfPurchase: function( strSessionID, strNav, nLost ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
@@ -2309,6 +2326,8 @@ HelpRequestPage = {
 			{
 				window.location = data.redirect;
 			}
+		}).fail( function( xhr ) {
+			ShowAlertDialog( 'Contact Steam Support', 'There was a problem submitting your help request to Steam Support. Please wait a few minutes and try again.<br><br>If you are attempting to add large attachments please try to submit without them and add them to your request after submitting.' );
 		}).always( function() {
 			$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
 		});

@@ -5,9 +5,11 @@ var TRADE_UPDATE_INTEVRAL = 1000;
 var MESSAGE_TRADE_PARTNER_ABSENSE_TIME = 5;
 var g_bWalletBalanceWouldBeOverMax = false;
 var g_nItemsFromContextWithNoPermissionToReceive = 0;
+var g_rgnItemsExpiringBeforeEscrow = [0,0];
 var GTradeStateManager = null;
 var Tutorial = null;
 var g_bWarnOnReady = false;
+var g_dateEscrowEnd = null;
 
 function BeginTrading( bShowTutorial )
 {
@@ -1262,6 +1264,10 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 			rgTradeStatusForSlots = g_rgLastFullTradeStatus;
 		}
 
+		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets ) + rgTradeStatusForSlots.me.currency.length;
+		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets ) + rgTradeStatusForSlots.them.currency.length;
+		RefreshTradeEscrowDisplay();
+
 		UpdateSlots( rgTradeStatusForSlots.me.assets, rgTradeStatusForSlots.me.currency, true, UserYou, rgTradeStatusForSlots.version );
 
 		UpdateSlots( rgTradeStatusForSlots.them.assets, rgTradeStatusForSlots.them.currency, false, UserThem, rgTradeStatusForSlots.version );
@@ -1269,12 +1275,9 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 
-		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets ) + rgTradeStatusForSlots.me.currency.length;
-		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets ) + rgTradeStatusForSlots.them.currency.length;
 		g_cCurrenciesInTrade = rgTradeStatusForSlots.me.currency.length + rgTradeStatusForSlots.them.currency.length;
 		if ( g_cMyItemsInTrade + g_cTheirItemsInTrade > 0 )
 			Tutorial.OnUserAddedItemsToTrade( g_cMyItemsInTrade, g_cTheirItemsInTrade );
-		RefreshTradeEscrowDisplay();
 	}
 	if ( rgTradeStatus.me.ready && !UserYou.bReady || !rgTradeStatus.me.ready && UserYou.bReady )
 	{
@@ -1378,6 +1381,8 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 
 	var nNumBadItems = 0;
 	var firstBadItem = null;
+	var nNumExpiringItems = 0;
+	var firstExpiringItem = null;
 	var nFullInventoryAppId = false;
 	for ( var slot = 0; slot < elSlotContainer.childElements().length; slot++ )
 	{
@@ -1416,6 +1421,21 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 				}
 			}
 
+			var elItem = user.findAssetElement( appid, contextid, itemid );;
+			if ( g_dateEscrowEnd != null && typeof elItem.rgItem.item_expiration == 'string' )
+			{
+				var dateExpiration = new Date( elItem.rgItem.item_expiration );
+				if ( g_dateEscrowEnd >= dateExpiration )
+				{
+					if ( nNumExpiringItems == 0 )
+					{
+						firstExpiringItem = rgSlotItems[slot];
+					}
+
+					nNumExpiringItems++;
+				}
+			}
+
 			if ( elCurItem && elCurItem.rgItem && elCurItem.rgItem.appid == appid && elCurItem.rgItem.contextid == contextid
 					&& elCurItem.rgItem.id == itemid && !elCurItem.rgItem.unknown )
 			{
@@ -1432,7 +1452,7 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			else
 			{
 				// it's new to the trade
-				elNewItem = user.findAssetElement( appid, contextid, itemid );
+				elNewItem = elItem;
 				var item = elNewItem.rgItem;
 
 				if ( !item.unknown )
@@ -1537,6 +1557,45 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 						.replace( '%1$s', rgAppData.name.escapeHTML() );
 
 				strEvent = strEvent + ' ' + strEventAppend;
+			}
+
+			var elEvent = new Element( 'div', {'class': 'logevent' } );
+			elEvent.update( strEvent );
+			$('log').appendChild( elEvent );
+		}
+	}
+
+	if ( nNumExpiringItems != g_rgnItemsExpiringBeforeEscrow[bYourSlots ? 0 : 1] )
+	{
+		g_rgnItemsExpiringBeforeEscrow[bYourSlots ? 0 : 1] = nNumExpiringItems;
+
+		if ( nNumExpiringItems > 0 )
+		{
+			var strEvent = "";
+			var item = user.findAsset( firstExpiringItem.appid, firstExpiringItem.contextid, firstExpiringItem.assetid );
+			if ( item )
+			{
+				if ( nNumExpiringItems == 1 )
+				{
+					strEvent = 'The item "%1$s" cannot be included in this trade because it will expire before the trade hold period is over.'
+						.replace( '%1$s', item.name.escapeHTML() );
+				}
+				else
+				{
+					strEvent = 'Some items, including "%1$s," cannot be included in this trade because they will expire before the trade hold period is over.'
+						.replace( '%1$s', item.name.escapeHTML() );
+				}
+			}
+			else
+			{
+				if ( nNumExpiringItems == 1 )
+				{
+					strEvent = 'One item cannot be included in this trade because it will expire before the trade hold period is over.';
+				}
+				else
+				{
+					strEvent = 'Some items cannot be included in this trade because they will expire before the trade hold period is over.';
+				}
 			}
 
 			var elEvent = new Element( 'div', {'class': 'logevent' } );
@@ -1898,7 +1957,7 @@ function UpdateReadyButtons()
 	}
 	else
 	{
-		var badOffer = g_bWalletBalanceWouldBeOverMax || g_nItemsFromContextWithNoPermissionToReceive > 0;
+		var badOffer = g_bWalletBalanceWouldBeOverMax || g_nItemsFromContextWithNoPermissionToReceive > 0 || g_rgnItemsExpiringBeforeEscrow[0] > 0 || g_rgnItemsExpiringBeforeEscrow[1] > 0;
 		if ( !badOffer && ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 ) )
 		{
 			$('you_cantready').hide();
@@ -3006,6 +3065,8 @@ function RefreshTradeEscrowDisplay()
 
 	if ( cEscrowDays == 0 )
 	{
+		g_dateEscrowEnd = null;
+
 		if ( $elHeader.is( ":visible" ) )
 		{
 			$elHeader.slideUp();
@@ -3018,6 +3079,8 @@ function RefreshTradeEscrowDisplay()
 	}
 	else
 	{
+		g_dateEscrowEnd = new Date( Date.now() + (cEscrowDays * 86400 * 1000) );
+
 		$J('#trade_escrow_hours').text( ( cEscrowDays ) + ( ( cEscrowDays != 1 ) ? ' days' : ' day') );
 		$J('#trade_escrow_hours2').text( ( cEscrowDays ) + ( ( cEscrowDays != 1 ) ? ' days' : ' day') );
 

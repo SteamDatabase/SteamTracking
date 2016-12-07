@@ -2682,7 +2682,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints'
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
-			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' || method.value == 'tenpay'
+			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' 
 			|| method.value == 'nodwin_cod' || method.value == 'credit_card_india' || method.value == 'debit_card_india' 
 			|| method.value == 'net_banking_india' || method.value == 'cash_card_india' || method.value == 'wallet_india' )
 		{
@@ -2737,6 +2737,13 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = '* Note: WeChat payments can only be made from WeChat accounts that have been linked to a valid Chinese bank issued card regardless of your location.  Please visit this <a href=\'http://kf.qq.com/faq/130807me2YZf140909yumYFb.html\' target=\'_blank\'>link</a> for more details.';
+		}
+		else if ( method.value == 'tenpay' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = '* Note: Tenpay payments can only be made from Tenpay accounts that have been linked to a verified phone number.';
 		}
 		else if ( method.value == 'steamaccount' )
 		{

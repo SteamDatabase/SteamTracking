@@ -452,7 +452,6 @@ input.filter_search_box:-moz-placeholder {
 	border: 1px solid #292929;
 	padding: 12px;
 	padding-bottom: 0;
-	display: inline-block;
 }
 
 .filter_tag_show {
@@ -1460,4 +1459,18 @@ html.responsive .newmodal.economy_modal_ctn {
 
 .sendgift_actions {
 	margin-top: 12px;
+}
+
+.inventory_loading_indicator {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+body.inventory_loading .inventory_loading_indicator {
+	opacity: 1.0;
+}
+
+.app_tags_container .inventory_loading_indicator {
+	text-align: center;
+	padding: 40px 0;
 }
