@@ -2112,8 +2112,11 @@ HelpRequestPage = {
 
 	m_strSystemReport: "",
 
-	ShowCreateHelpRequestFormOnPageLoad: function( bScrollIntoView = true )
+	ShowCreateHelpRequestFormOnPageLoad: function( bScrollIntoView )
 	{
+		if ( typeof bScrollIntoView == 'undefined' )
+			bScrollIntoView = true;
+
 		$J( document ).ready( function() {
 			$J( '#cancel_create_help_request' ).remove();
 			HelpRequestPage.ShowCreateHelpRequestForm( bScrollIntoView );
@@ -2145,8 +2148,11 @@ HelpRequestPage = {
 		var Modal = ShowAlertDialog( 'About System Reports', $J( '#system_report_details' ).html() );
 	},
 
-	ShowCreateHelpRequestForm: function( bScrollIntoView = true )
+	ShowCreateHelpRequestForm: function( bScrollIntoView )
 	{
+		if ( typeof bScrollIntoView == 'undefined' )
+			bScrollIntoView = true;
+
 		if ( !HelpWizard.m_steamid && !$J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
 		{
 			HelpWizard.PromptLogin();
