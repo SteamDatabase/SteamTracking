@@ -2965,7 +2965,7 @@ function OnVerifyShippingAddressSuccess( result )
 					break;
 
 				case 6:
-					error_text = 'The postal code your provided belongs to a US territory.  We cannot ship your order outside of the 48 continental United States.';
+					error_text = 'We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States.';
 					break;
 
 				case 2:
