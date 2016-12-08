@@ -1472,3 +1472,21 @@ body.inventory_loading .inventory_loading_indicator {
 	text-align: center;
 	padding: 40px 0;
 }
+
+
+.inventory_load_error {
+	margin: 12px;
+	padding: 12px;
+	background-color: #2B2E34;
+	margin-top: 20px;
+	border: 1px solid #632929;
+}
+
+.inventory_load_error_header {
+	line-height: 38px;
+}
+
+.inventory_load_error_header img,
+.inventory_load_error .inventory_loading_indicator {
+	vertical-align: middle;
+}
