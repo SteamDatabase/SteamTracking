@@ -18687,6 +18687,97 @@
 				"cannot trade"		"1"
 			}
 		}
+		"1357"
+		{
+			"name"		"prestige coin 2017"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl1"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl1.mdl"
+			}
+		}
+		"1358"
+		{
+			"name"		"prestige coin 2017 level 2"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl2"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl2.mdl"
+			}
+		}
+		"1359"
+		{
+			"name"		"prestige coin 2017 level 3"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl3"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl3.mdl"
+			}
+		}
+		"1360"
+		{
+			"name"		"prestige coin 2017 level 4"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl4"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl4.mdl"
+			}
+		}
+		"1361"
+		{
+			"name"		"prestige coin 2017 level 5"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl5"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl5.mdl"
+			}
+		}
+		"1362"
+		{
+			"name"		"prestige coin 2017 level 6"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl6"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl6.mdl"
+			}
+		}
+		"1363"
+		{
+			"name"		"prestige coin 2017 level 7"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2017"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2017"
+			"image_inventory"		"econ/status_icons/service_medal_2017_lvl7"
+			"attributes"
+			{
+				"prestige year"		"2017"
+				"pedestal display model"		"models/inventory_items/service_medal_2017_lvl7.mdl"
+			}
+		}
 		"4001"
 		{
 			"item_name"		"#CSGO_crate_valve_1"

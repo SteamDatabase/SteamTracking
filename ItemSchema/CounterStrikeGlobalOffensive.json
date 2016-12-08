@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.274628a4a1651ea6253265229ec3e8449e0338aa.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ce20a6f586aba0274bc0be57374e0602d9af635f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7259,6 +7259,153 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "prestige coin 2017",
+				"defindex": 1357,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl1.abeafe76a6a5573580fac9b96303691074b9d2bd.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl1_large.a857870b68c9e1ad98b38b8b7311db377928f2c6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 2",
+				"defindex": 1358,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl2.4ee26ba545540c1cc0f13f4a6aa2364f991217e8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl2_large.1b4e9254286bb10937bb92b8f25d9acaaf44be60.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 3",
+				"defindex": 1359,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl3.728bdc4a5dee0638c4484ae42b656ad1c65c7d5b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl3_large.5bc164fc0237c90012ed0cade13580a04b5d5bfe.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 4",
+				"defindex": 1360,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl4.86eb1e7a604e2e7b88aa0746d1323f36e530879b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl4_large.a304e00bb3ac29d43b8b03fe987ad652f3e01628.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 5",
+				"defindex": 1361,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl5.e2ea3e770fc4d3cbef82060bf40ca1eb60adff23.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl5_large.3f3b089312b67944edc5f0bc08514377e6c50ba4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 6",
+				"defindex": 1362,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl6.ca2ab400e3390e002e37f45829d7dd012a881403.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl6_large.119dd398088b2159598c15dee6245e68d9fa4157.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2017 level 7",
+				"defindex": 1363,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2017 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2017.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2017_lvl7",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl7.8fcae8b788696daedd6bb616449489f6c9cb5ac2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2017_lvl7_large.d4b2714d10d6bf20537906644ca0c2e0ca23f58e.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "crate_valve_1",
@@ -17387,7 +17534,7 @@
 				"image_inventory": "econ/weapons/base_weapons/t_gloves",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/t_gloves.08d6a3cb45d6e7cb98064c2025510ce8e5eba9c3.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/t_gloves.5f14eea783ae4af8925568511ce39eb76463b489.png",
 				"image_url_large": "",
 				"attributes": [
 
@@ -17406,7 +17553,7 @@
 				"image_inventory": "econ/weapons/base_weapons/ct_gloves",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/ct_gloves.47b3fecbc1a2de3e1480c2ecd3fff0ed7b9e20ad.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/ct_gloves.eb914fd56263553f7684f564432e61f2fe9dd52a.png",
 				"image_url_large": "",
 				"attributes": [
 
