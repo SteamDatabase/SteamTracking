@@ -4321,7 +4321,7 @@ function SelectItemDialogOnSelect()
 
 function DisableMarketButtons()
 {
-	$J('a.item_market_action_button, a.market_commodity_buy_button').each( function() {
+	$J('a.item_market_action_button, a.market_commodity_buy_button, a.market_noncommodity_buyorder_button').each( function() {
 		if ( !$J(this).hasClass( 'nodisable' ) && !$J(this).hasClass( 'item_market_action_button_disabled' ) )
 		{
 			$J(this).attr( 'onclick', '' );

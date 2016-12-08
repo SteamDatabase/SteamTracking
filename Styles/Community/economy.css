@@ -874,8 +874,6 @@ input.market_dialog_input:focus {
 .item_market_action_button {
 	display: inline-block;
 	font-size: 12px;
-	height: 24px;
-	line-height: 24px;
 }
 
 .item_market_action_button_left {
