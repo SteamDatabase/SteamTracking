@@ -191,6 +191,49 @@
         },
         {
             "name": "GetTournamentPlayerStats",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "account_id",
+                    "type": "string",
+                    "optional": false,
+                    "description": ""
+                },
+                {
+                    "name": "league_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "hero_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "time_frame",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "match_id",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "phase_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentPlayerStats",
             "version": 2,
             "httpmethod": "GET",
             "parameters": [
