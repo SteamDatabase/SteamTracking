@@ -3538,7 +3538,7 @@ SellItemDialog = {
 			method: 'get',
 			parameters: {
 				appid: this.m_item.appid,
-				market_hash_name: GetMarketHashName( this.m_item )
+				market_hash_name: GetMarketHashName( description )
 			},
 			onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
 			onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
@@ -4702,7 +4702,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 
 	if ( item.description.marketable )
 	{
-		var sMarketHashName = GetMarketHashName( item );
+		var sMarketHashName = GetMarketHashName( item.description );
 		$J('#trade_action_viewinmarket').attr( 'href', strLinkPrefix + 'https://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
 		$J('#trade_action_viewinmarket').show();
 	}
