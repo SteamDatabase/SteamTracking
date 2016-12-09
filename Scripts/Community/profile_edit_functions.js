@@ -309,13 +309,14 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 		
 		// save the showcase config
 		SetShowcaseConfig(
-			eShowcase, iSlot, {appid: item.appid, item_contextid: item.contextid, item_assetid: item.id }
+			eShowcase, iSlot, {appid: item.appid, item_contextid: item.contextid, item_assetid: item.assetid || item.id }
 		).done( function() {
+			var description = item.description || item;
 
 			// we successfully set the item, so update the display
-			var strImageURL = ( item.icon_url ? 'https://steamcommunity-a.akamaihd.net/economy/image/' + v_trim( item.icon_url ) + '/96fx96f' : 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' );
-			var strBorderColor = '#' + ( item.name_color ? item.name_color : '3a3a3a' );
-			var strBackgroundColor = '#' + ( item.background_color ? item.background_color : '292929' );
+			var strImageURL = ( description.icon_url ? 'https://steamcommunity-a.akamaihd.net/economy/image/' + v_trim( description.icon_url ) + '/96fx96f' : 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' );
+			var strBorderColor = '#' + ( description.name_color ? description.name_color : '3a3a3a' );
+			var strBackgroundColor = '#' + ( description.background_color ? description.background_color : '292929' );
 
 			$J(elSlot).find('img').attr( 'src', strImageURL );
 			$J(elSlot).css( 'border-color', strBorderColor );
