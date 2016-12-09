@@ -204,6 +204,7 @@
 "Scripts/Community/discussions.js"               : "https://steamcommunity.com/public/javascript/discussions.js?__TIME__&l=english",
 "Scripts/Community/dmca.js"                      : "https://steamcommunity.com/public/javascript/dmca.js?__TIME__&l=english",
 "Scripts/Community/economy.js"                   : "https://steamcommunity.com/public/javascript/economy.js?__TIME__&l=english",
+"Scripts/Community/economy_v2.js"                : "https://steamcommunity.com/public/javascript/economy_v2.js?__TIME__&l=english",
 "Scripts/Community/economy_trade.js"             : "https://steamcommunity.com/public/javascript/economy_trade.js?__TIME__&l=english",
 "Scripts/Community/economy_tradeoffer.js"        : "https://steamcommunity.com/public/javascript/economy_tradeoffer.js?__TIME__&l=english",
 "Scripts/Community/forums.js"                    : "https://steamcommunity.com/public/javascript/forums.js?__TIME__&l=english",
