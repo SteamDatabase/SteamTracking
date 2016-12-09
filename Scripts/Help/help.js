@@ -1190,6 +1190,91 @@ HelpWizard = {
 		});
 	},
 
+	VerifyPassword: function( strSessionID, strLogin, eReset, nLost )
+	{
+		$J( '#verify_password_submit' ).addClass( 'loading' );
+		$J( '#form_submit_error' ).hide();
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/login/getrsakey/",
+			data: {
+				sessionid: g_sessionID,
+				username: strLogin
+			}
+		}).fail( function( xhr ) {
+			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			$J( '#verify_password_submit' ).removeClass( 'loading' );
+		}).done( function( data ) {
+			HelpWizard.VerifyPasswordRSA( strSessionID, nAccountID, data, nLost );
+		});
+	},
+
+	VerifyPasswordRSA: function( strSessionID, rsa, eReset, nLost )
+	{
+		var elError = $J( '#form_submit_error' );
+		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
+		{
+			$J( '#verify_password_submit' ).removeClass( 'loading' );
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			return;
+		}
+
+		var strPassword = $J( '#verify_password' ).val();
+		var strPasswordEncrypted = '';
+
+		if ( strPassword )
+		{
+			var pubKey = RSA.getPublicKey(rsa.publickey_mod, rsa.publickey_exp);
+			strPasswordEncrypted = RSA.encrypt(strPassword, pubKey);
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryVerifyPassword/",
+			data: {
+				sessionid: g_sessionID,
+				s: strSessionID,
+				lost: nLost,
+				reset: eReset,
+				password: strPasswordEncrypted,
+				rsatimestamp: rsa.timestamp
+			}
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function( data ) {
+			$J( '#verify_password_submit' ).removeClass( 'loading' );
+		});
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	FormRequestAndRedirect: function( form ) {
 		var form = $J( form );
 		var elError = $J( '#form_submit_error' );
@@ -1311,14 +1396,14 @@ HelpWizard = {
 		});
 	},
 
-	UserLostAccess: function( strSessionID, nAccountID, strNav, unIssueID, unLost ) {
+	GetNextStep: function( strSessionID, nAccountID, eReset, unIssueID, unLost ) {
 		$J.ajax({
 			type: "POST",
-			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUserLostAccess",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryGetNextStep",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
 				account: nAccountID,
-				nav: strNav,
+				reset: eReset,
 				issueid: unIssueID,
 				lost: unLost,
 			} )
@@ -1329,14 +1414,14 @@ HelpWizard = {
 		});
 	},
 
-	BindRelated: function( strSessionID, nAccountID, strNav, unIssueID ) {
+	BindRelated: function( strSessionID, nAccountID, eReset, unIssueID ) {
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryBindRelated",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
 				account: nAccountID,
-				nav: strNav,
+				reset: eReset,
 				issueid: unIssueID,
 			} )
 		}).fail( function( xhr ) {
@@ -1346,7 +1431,7 @@ HelpWizard = {
 		});
 	},
 
-	SubmitProofOfPurchase: function( strSessionID, strNav, nLost ) {
+	SubmitProofOfPurchase: function( strSessionID, eReset, nLost ) {
 		var $WaitDialog = ShowBlockingWaitDialog(
 			'Proof of Purchase',
 			'Verifying payment information' );
@@ -1379,7 +1464,7 @@ HelpWizard = {
 			if ( data.success )
 			{
 				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID +
-					"&account=" + data.accountid + "&nav=" + strNav + "&lost=" + nLost;
+					"&account=" + data.accountid + "&reset=" + eReset + "&lost=" + nLost;
 			}
 			else 
 			{
