@@ -2,6 +2,38 @@
     "name": "IDOTA2Ticket_205790",
     "methods": [
         {
+            "name": "ClaimBadgeReward",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "eventid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Event ID"
+                },
+                {
+                    "name": "BadgeID",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The badge ID"
+                }
+            ]
+        },
+        {
+            "name": "GetSteamIDForBadgeID",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "BadgeID",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The badge ID"
+                }
+            ]
+        },
+        {
             "name": "SetSteamAccountPurchased",
             "version": 1,
             "httpmethod": "POST",

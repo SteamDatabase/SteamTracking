@@ -2,6 +2,25 @@
     "name": "IEconItems_205790",
     "methods": [
         {
+            "name": "GetEquippedPlayerItems",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The Steam ID to fetch items for"
+                },
+                {
+                    "name": "class_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Return items equipped for this class id"
+                }
+            ]
+        },
+        {
             "name": "GetPlayerItems",
             "version": 1,
             "httpmethod": "GET",
