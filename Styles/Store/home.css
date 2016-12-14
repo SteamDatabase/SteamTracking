@@ -3640,6 +3640,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	/* Main cap */
 	.carousel_container .carousel_items:not(.no_paging) > * {
 		opacity: 1;
+		pointer-events: auto;
 	}
 
 	.store_main_capsule .capsule {
