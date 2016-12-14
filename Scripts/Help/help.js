@@ -885,7 +885,6 @@ HelpWizard = {
 	SubmitPasswordChange: function( strSessionID, nAccountID, strLogin ) {
 		var elError = $J( '#changepw_error_msg' );
 		var strPassword = $J( '#password_reset' ).val();
-		var strTwoFactor = $J( '#password_twofactor' ).length ? $J( '#password_twofactor' ).val() : '';
 		elError.hide();
 		if ( strPassword != $J( '#password_reset_confirm' ).val() )
 		{
@@ -924,7 +923,6 @@ HelpWizard = {
 		}
 
 		var strPassword = $J( '#password_reset' ).val();
-		var strTwoFactor = $J( '#password_twofactor' ).length ? $J( '#password_twofactor' ).val() : '';
 
 		var pubKey = RSA.getPublicKey( rsa.publickey_mod, rsa.publickey_exp );
 		var strPasswordEncrypted = RSA.encrypt( strPassword, pubKey );
@@ -944,8 +942,7 @@ HelpWizard = {
 				s: strSessionID,
 				account: nAccountID,
 				password: strPasswordEncrypted,
-				rsatimestamp: rsa.timestamp,
-				twofactor: strTwoFactor
+				rsatimestamp: rsa.timestamp
 			} )
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
@@ -1205,7 +1202,7 @@ HelpWizard = {
 			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
 			$J( '#verify_password_submit' ).removeClass( 'loading' );
 		}).done( function( data ) {
-			HelpWizard.VerifyPasswordRSA( strSessionID, nAccountID, data, nLost );
+			HelpWizard.VerifyPasswordRSA( strSessionID, data, eReset, nLost );
 		});
 	},
 
@@ -2808,12 +2805,12 @@ HelpRequestPage = {
 	ConfirmAndCloseHelpRequest: function( reference_code )
 	{
 		ShowConfirmDialog(
-			'Close and cancel your help request?',
+			'Do you want to close your help request?',
 			'<div class="help_page_title">This means you will not receive a response from Steam Support.</div>' +
 				'<br><p>We haven\'t had a chance to respond to your request for help yet.</p><br>' +
-				'<p>If you still need help, select cancel below and we\'ll respond to your request as soon as we can.</p><br><br>',
-			'Yes, I no longer need help.',
-			'Cancel, I still need help!'
+				'<p>If you still need help, tell us below and we\'ll respond to your request as soon as we can.</p><br><br>',
+			'I no longer need help.',
+			'I still need help!'
 		).done( function() {
 			HelpRequestPage.CloseHelpRequest( reference_code );
 		});

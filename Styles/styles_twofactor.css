@@ -97,6 +97,12 @@
 	margin-right: auto;
 }
 
+.twofactor_settings_removalsteps
+{
+	display: block;
+	padding-bottom: 30px;
+}
+
 .twofactor_settings_form
 {
 }

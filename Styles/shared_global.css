@@ -1851,6 +1851,113 @@ body.v6 #footer_nav .popup_menu .hr{
 	width: 24px;
 }
 
+
+.LoadingWrapper
+{
+	position: relative;
+	max-width: 450px;
+	margin: auto auto;
+	vertical-align: middle;
+}
+
+.LoadingWrapper .LoadingThrobber
+{
+	margin: 0px auto 40px auto;
+	width: 62px;
+	height: 62px;
+}
+
+.LoadingWrapper .LoadingText
+{
+	color: #60acde;
+	font-size: 22px;
+	text-align: center;
+}
+
+@keyframes loading_throbber_bar
+{
+	0%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+
+	30%
+	{
+		transform: scale( 1.0, 1.0 );
+		background-color: #67c1f5;
+	}
+
+	55%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+
+	100%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+}
+
+
+@-webkit-keyframes loading_throbber_bar
+{
+	0%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+
+	30%
+	{
+		-webkit-transform: scale( 1.0, 1.0 );
+		background-color: #67c1f5;
+	}
+
+	55%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+
+	100%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+}
+
+.LoadingWrapper .LoadingThrobber .Bar
+{
+	-webkit-animation: test 2s infinite;
+	float: left;
+	margin-right: 6px;
+	width: 12px;
+	height: 68px;
+	background-color: #67c1f5;
+
+	animation: loading_throbber_bar 1s ease-in-out infinite;
+	-webkit-animation: loading_throbber_bar 1s ease-in-out infinite;
+}
+
+.LoadingWrapper .LoadingThrobber .Bar1
+{
+}
+
+.LoadingWrapper .LoadingThrobber .Bar2
+{
+	animation-delay: 0.16s;
+	-webkit-animation-delay: 0.16s;
+}
+
+.LoadingWrapper .LoadingThrobber .Bar3
+{
+	animation-delay: 0.32s;
+	-webkit-animation-delay: 0.32s;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .newmodal {

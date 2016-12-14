@@ -484,6 +484,7 @@ p {
 	color: #b2b2b2;
 }
 
+
 	.landingTable.nowrap .td, .landingTable.nowrap .th, .landingTable.nowrap a, .landingTable.nowrap td, .landingTable.nowrap th
 	{
 		white-space: nowrap;
@@ -648,6 +649,38 @@ p {
 	.landingTable .capsule {
 		max-height: 28px;
 	}
+
+.landingTable.testRequests {
+	table-layout: fixed;
+}
+.landingTable.testRequests .td {
+	vertical-align: top;
+}
+.landingTable.testRequests .td a {
+	font-size: 12px;
+}
+.th.appid_header {
+	width: 57px;
+
+}
+.th.app_name_header {
+	width: 177px;
+}
+.th.app_purchase_header {
+	width: 53px;
+}
+.td.app_release_date {
+
+}
+.th.app_release_date_header {
+	width: 75px;
+}
+.th.app_test_date_header {
+	width: 80px;
+}
+.th.app_options_header {
+	width: 132px;
+}
 
 .landingInfoTable {
 	width: 500px;
@@ -1555,6 +1588,7 @@ span.icon_actual_authority { display: inline-block;}
 
 .ttip {
 	cursor: pointer;
+	color: #b6c5ca;
 }
 
 tr .faded, .tr.faded {

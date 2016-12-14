@@ -449,6 +449,27 @@ a {
 a.contentsLink:hover {
 	color:#ffffff;
 }
+
+a.contentsLink.new::after {
+	content: "NEW";
+	color: #8bc53F;
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 3px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a.contentsLink.updated::after {
+	content: "UPDATED";
+	color: #8bc53F;
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 3px;
+	text-decoration: none;
+	display: inline-block;
+}
+
 /* Do not use :not() on this selector, It will end up more specific than other selectors. */
 input, select , textarea, button, .likeButton {
 	background-color:#565658;
@@ -972,3 +993,23 @@ a.tab, .tab a {
 	white-space: pre-wrap;
 	word-break: break-all;
 }
+
+
+/* styles to use when deprecating features */
+.deprecated.bar {
+	border-left: 3px solid lightcoral;
+	padding-left: 5px;
+	margin-left: 10px;
+}
+
+.deprecated.star {
+	margin-left: 10px;
+}
+
+p.deprecated.star::before {
+	content: "*";
+	color: lightcoral;
+	padding-right: 3px;
+	font-size: 16px;
+}
+

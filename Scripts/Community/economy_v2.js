@@ -2943,7 +2943,7 @@ function BuildHover( prefix, item, owner )
 
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
-	$J(prefix).trigger('v_contentschanged');
+	$J(elHoverContent).trigger('v_contentschanged');
 }
 
 function PopulateDescriptions( elDescriptions, rgDescriptions )

@@ -423,6 +423,9 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 	}).done( function( data ) {
 		if ( data.success == 1 )
 		{
+			$J( "#Reviews_loading" ).hide();
+			$J( "#Reviews_" + context ).show();
+
 			if ( startOffset == 0 )
 			{
 				var filteredReviewScore = $J( "#user_reviews_filter_score" );
@@ -489,7 +492,7 @@ function SelectReviews( appid, context, reviewDayRange, forceClear )
 	$J( "#Reviews_positive" ).hide();
 	$J( "#Reviews_negative" ).hide();
 	$J( "#Reviews_funny" ).hide();
-	$J( "#Reviews_" + context ).show();
+	$J( "#Reviews_loading" ).show();
 
 	var container = $J( "#Reviews_" + context );
 	if ( forceClear )
