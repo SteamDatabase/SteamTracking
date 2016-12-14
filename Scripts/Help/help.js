@@ -2808,8 +2808,8 @@ HelpRequestPage = {
 			'Do you want to close your help request?',
 			'<div class="help_page_title">This means you will not receive a response from Steam Support.</div>' +
 				'<br><p>We haven\'t had a chance to respond to your request for help yet.</p><br>' +
-				'<p>If you still need help, tell us below and we\'ll respond to your request as soon as we can.</p><br><br>',
-			'I no longer need help.',
+				'<p>Do not close the ticket if you still need help. We will respond to your request as soon as possible.</p><br><br>',
+			'I no longer need help, close my request.',
 			'I still need help!'
 		).done( function() {
 			HelpRequestPage.CloseHelpRequest( reference_code );
