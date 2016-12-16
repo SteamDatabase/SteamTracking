@@ -190,7 +190,6 @@
  CreateNewWindow
  CreateRootControl
  CreateVProfile
- D .objc_class_name_VGUIApplication
  D .objc_class_name_VGUIApplicationDelegate
  D .objc_class_name_VGUITranslatorResponder
  D CFontTextureCache::s_pStringPageSize
@@ -2769,23 +2768,24 @@
  b vgui::COpenGLSurface::SetCornerRounding(unsigned int, int)::fAsserted
  b vgui::InitKeyTranslation()::threadonce_487_17
  ceilf
+ class_getInstanceMethod
  closedir$UNIX2003
  crc32
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
- d __block_descriptor_tmp525
- d __block_descriptor_tmp527
- d __block_descriptor_tmp538
- d __block_descriptor_tmp540
- d __block_descriptor_tmp542
+ d __block_descriptor_tmp528
+ d __block_descriptor_tmp530
+ d __block_descriptor_tmp541
+ d __block_descriptor_tmp543
+ d __block_descriptor_tmp545
  d __block_literal_global
- d __block_literal_global526
- d __block_literal_global528
- d __block_literal_global539
- d __block_literal_global541
- d __block_literal_global543
+ d __block_literal_global529
+ d __block_literal_global531
+ d __block_literal_global542
+ d __block_literal_global544
+ d __block_literal_global546
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2873,6 +2873,7 @@
  memcpy
  memmove
  memset
+ method_exchangeImplementations
  mkdir
  objc_enumerationMutation
  objc_msgSend
@@ -2928,7 +2929,8 @@
  swprintf
  system$UNIX2003
  t (anonymous namespace)::CLEANUP::~CLEANUP()
- t -[VGUIApplication sendEvent:]
+ t +[NSApplication(VGUIApplication) load]
+ t -[NSApplication(VGUIApplication) _swizzled_sendEvent:]
  t -[VGUIApplicationDelegate .cxx_construct]
  t -[VGUIApplicationDelegate .cxx_destruct]
  t -[VGUIApplicationDelegate applicationDidChangeOcclusionState:]
