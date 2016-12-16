@@ -1,5 +1,11 @@
 
 var iAjaxCalls = 0;
+var g_sBaseURL = "";
+
+function InitJoinSteamJS( sBaseURL )
+{
+    g_sBaseURL = sBaseURL;
+}
 
  
 function CreateAccount()
@@ -12,7 +18,7 @@ function CreateAccount()
 	}
 
 	++iAjaxCalls;
-	new Ajax.Request('https://store.steampowered.com/join/verifycaptcha/',
+	new Ajax.Request( g_sBaseURL + 'join/verifycaptcha/',
 	  {
 	    method:'get',
 	    parameters: { captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value,
@@ -210,7 +216,7 @@ function ReallyCreateAccount()
 	var bPSNAccountSetup = (typeof g_bPSNAccountSetup != 'undefined' && g_bPSNAccountSetup);
 			
 	++iAjaxCalls;
-		new Ajax.Request('https://store.steampowered.com/join/createaccount/',
+		new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
 	    method:'post', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
@@ -219,7 +225,8 @@ function ReallyCreateAccount()
 	    			  captcha_text : $('captcha_text').value,
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  ticket : $('ticket').value,
-	    			  count : iAjaxCalls }, 
+	    			  count : iAjaxCalls,
+	    			  lt : $('lt').value },
 		onSuccess: function(transport) {
 			var bSuccess = false;
 			if (transport.responseText) {
@@ -246,14 +253,17 @@ function ReallyCreateAccount()
 					window.location = result.redirect;
 			}
 			else if (bPSNAccountSetup) {
-				window.location = 'http://store.steampowered.com/psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
+				window.location = g_sBaseURL + 'psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
 			}
 			else {
 				
-												if ( typeof g_strRedirectURL != 'undefined' )
+												if ( result && result.redirect ) {
+					window.location = result.redirect;
+				} else if ( typeof g_strRedirectURL != 'undefined' ) {
 					window.location = g_strRedirectURL;
-				else
-					window.location = 'http://store.steampowered.com/';
+				} else {
+					window.location = g_sBaseURL;
+				}
 			}
 
 		},
@@ -284,7 +294,7 @@ function CheckAccountNameAvailability()
 		return;
 	g_strLastAccountNameCheck = strName;
 	++iAjaxCalls;
-	new Ajax.Request('https://store.steampowered.com/join/checkavail/',
+	new Ajax.Request( g_sBaseURL + 'join/checkavail/',
 	  {
 	    method:'get',
 	    parameters: { accountname: strName, count : iAjaxCalls },
@@ -422,7 +432,7 @@ function CheckPasswordAvail()
 	}
 
 	    ++iAjaxCalls;
-	new Ajax.Request('https://store.steampowered.com/join/checkpasswordavail/',
+	new Ajax.Request( g_sBaseURL + 'join/checkpasswordavail/',
 	{
 		method:'get',
 		parameters: { password: document.getElementById('password').value, accountname: strAccountName, count : iAjaxCalls },
@@ -503,7 +513,7 @@ function RefreshCaptcha()
 {
 	++iAjaxCalls;
 	
-	new Ajax.Request('https://store.steampowered.com/join/refreshcaptcha/',
+	new Ajax.Request( g_sBaseURL + 'join/refreshcaptcha/',
 	  {
 	    method:'get',
 	    parameters: { count : iAjaxCalls },
@@ -520,7 +530,7 @@ function RefreshCaptcha()
 	      	var gid = result.gid;
 			if ( gid != -1 ) 
 			{
-				$('captchaImg').src = 'https://store.steampowered.com/public/captcha.php?gid='+gid;
+				$('captchaImg').src = g_sBaseURL + 'public/captcha.php?gid='+gid;
 			}
 			document.getElementById('captchagid').value = gid;
 		  }

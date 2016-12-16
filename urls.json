@@ -177,7 +177,7 @@
 "Scripts/Store/gamehighlightplayer.js"           : "https://store.steampowered.com/public/javascript/gamehighlightplayer.js?__TIME__&l=english",
 "Scripts/Store/home.js"                          : "https://store.steampowered.com/public/javascript/home.js?__TIME__&l=english",
 "Scripts/Store/itemstore.js"                     : "https://store.steampowered.com/public/javascript/itemstore.js?__TIME__&l=english",
-"Scripts/Store/joinsteam.js"                     : "https://store.steampowered.com/public/javascript/joinsteam.js?__TIME__&l=english",
+"Scripts/Store/joinsteam.js"                     : "https://store.steampowered.com/public/shared/javascript/joinsteam.js?__TIME__&l=english",
 "Scripts/Store/main.js"                          : "https://store.steampowered.com/public/javascript/main.js?__TIME__&l=english",
 "Scripts/Store/modal.js"                         : "https://store.steampowered.com/public/javascript/modal.js?__TIME__&l=english",
 "Scripts/Store/news.js"                          : "https://store.steampowered.com/public/javascript/news.js?__TIME__&l=english",
