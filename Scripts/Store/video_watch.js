@@ -64,8 +64,17 @@ CVideoWatch.prototype.ShowVideoError = function( strError )
 		$J( '#page_loading_text' ).html( strError );
 		$J( '#page_loading_text' ).addClass( 'error' );
 		$J( '#loading_content' ).addClass( 'hide_throbber' );
-		$J( '#loading_content' ).css( 'z-index', '10' );
+		this.ShowLoadingContentDiv( true );
+
 	}
+}
+
+CVideoWatch.prototype.ShowLoadingContentDiv = function( bShow )
+{
+	if ( bShow )
+		$J( '#loading_content' ).css( 'z-index', '10' );
+	else
+		$J( '#loading_content' ).css( 'z-index', '-1' );
 }
 
 CVideoWatch.prototype.SetVideoLoadingText = function( strText )
@@ -196,7 +205,7 @@ CVideoWatch.prototype.EnforceAppID = function()
 
 CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 {
-	$J( '#loading_content' ).css( 'z-index', '-1' );
+	this.ShowLoadingContentDiv( false );
 	$J( '#page_contents' ).removeClass( 'loading_video' );
 	$J( '#page_contents' ).addClass( 'show_player' );
 
@@ -306,7 +315,7 @@ CVideoWatch.prototype.OnLogEventToServer = function( strEventName, strEventDesc 
 CVideoWatch.prototype.GetVideoDetails = function()
 {
 	$J( '#page_contents' ).addClass( 'loading_video' );
-	$J( '#loading_content' ).css( 'z-index', '10' );
+	this.ShowLoadingContentDiv( true );
 
 	var _watch = this;
 
@@ -318,6 +327,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	{
 		if ( data.success == 'ready' )
 		{
+			_watch.ShowLoadingContentDiv( false );
 			_watch.LoadVideoMPD( data.video_url );
 		}
 		else if ( data.success == 'error' )
