@@ -2329,7 +2329,10 @@ HelpRequestPage = {
 			var $FileList = $Form.find('ul.attached_file_list').children();
 			$FileList.each( function() {
 				++cAttachments;
-				fd.append( 'attachments[]', $J(this).data('file') );
+				if ( $J(this).data('file') instanceof File )
+					fd.append( 'attachments[]', $J(this).data('file') );
+				else if ( $J(this).data('file') instanceof Blob )
+					fd.append( 'attachments[]', $J(this).data('file'), $J(this).data('file').name );
 			});
 
 			oParams['data'] = fd;
@@ -2508,8 +2511,28 @@ HelpRequestPage = {
 				}
 
 			};
-			
-			canvas.toBlob( fnUploadBlob, 'image/jpeg', 0.95 );
+
+			if ( typeof canvas.toBlob === "function" )
+			{
+				canvas.toBlob( fnUploadBlob, 'image/jpeg', 0.95 );
+			}
+			else if ( typeof canvas.msToBlob === "function" )
+			{
+				var pngBlob = canvas.msToBlob();
+				var strName = file.name;
+				var iExt = strName.lastIndexOf( '.' );
+				if ( iExt > 0 )
+					strName = strName.substr( 0, iExt ) + '.png';
+				else
+					strName = strName + '.png';
+
+				pngBlob.name = strName;
+				fnCallback( pngBlob );
+			}
+			else
+			{
+				ShowAlertDialog( 'Contact Steam Support', 'There was a problem submitting your help request to Steam Support. Please wait a few minutes and try again.<br><br>If you are attempting to add large attachments please try to submit without them and add them to your request after submitting.' );
+			}
 		};
 	},
 
