@@ -576,7 +576,7 @@ GDynamicStore = {
 			$El.append($elNotInterested);
 
 
-			var $elPreferences = $J ( '<a/>' ).attr('href', 'http://store.steampowered.com/account/preferences' ).text ( "Preferences" ).addClass( 'option' );
+			var $elPreferences = $J ( '<a/>' ).attr('href', 'https://store.steampowered.com/account/preferences' ).text ( "Preferences" ).addClass( 'option' );
 			$El.append($elPreferences);
 
 

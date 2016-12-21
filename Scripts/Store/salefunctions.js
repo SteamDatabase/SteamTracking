@@ -279,3 +279,135 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 	});
 }
 
+function HomeRenderFeaturedItems( rgDisplayLists )
+{
+	var rgTier1 = GHomepage.FilterItemsForDisplay(
+		rgDisplayLists.sale_tier1, 'home', 9, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+	);
+	var rgTier2 = GHomepage.FilterItemsForDisplay(
+		rgDisplayLists.sale_tier2, 'home', 9, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+	);
+
+	HomeSaleBlock( rgTier1, $J('#tier1_target' ) );
+	HomeSaleBlock( rgTier2, $J('#tier2_target' ) );
+
+	// capsule rows
+	//HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel') )
+	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('#hardware_carousel') )
+}
+
+function HomeSaleBlock( rgItems, $Parent )
+{
+	var rgRemainingItems = rgItems;
+	var bTwoThirdsRow = true;
+
+	while( rgRemainingItems.length )
+	{
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bTwoThirdsRow, 'sale_dailydeals' );
+		bTwoThirdsRow = !bTwoThirdsRow;
+	}
+	BindSaleCapAutoSizeEvents( $Parent );
+	GDynamicStore.DecorateDynamicItems( $Parent );
+	$Parent.css('height','');
+}
+
+function HomeSaleCapsuleCategory( rgItems, $Target )
+{
+	var rgCapsules = GHomepage.FilterItemsForDisplay(
+		rgItems, 'home', 4, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+	);
+
+	if ( rgCapsules.length < 4 )
+	{
+		rgCapsules = GHomepage.FilterItemsForDisplay(
+			rgItems, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
+		);
+	}
+
+	GHomepage.FillPagedCapsuleCarousel( rgCapsules, $Target, function( oItem, strFeature, rgOptions ) {
+		return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+	} , 'sale_categories', 4 );
+}
+
+var g_bRightSide = true;
+function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
+{
+	var rgItemsThisRow = rgItems.slice( 0, 3 );
+
+	if ( bTwoThirdsRow && rgItemsThisRow.length == 3 )
+	{
+		g_bRightSide = !g_bRightSide;
+		var $Row = $J('<div/>', {'class': 'twothird_split ' + ( g_bRightSide ? 'right' : 'left' ) } );
+
+		$Row.append( $J('<div/>', {'class': 'large_sale_caps' } ).append(
+			SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_large' )
+		) );
+
+		$Row.append( $J('<div/>', {'class': 'small_sale_caps' } ).append(
+			SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
+			SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
+		) );
+
+		$Row.append( $J('<div/>', {'style': 'clear: both;' } ) );
+		$Parent.append( $Row );
+	}
+	else
+	{
+		var $Row = $J('<div/>', {'class': 'three_row small_sale_caps' } );
+		for ( var i = 0; i < rgItemsThisRow.length; i++ )
+			$Row.append( SaleCap( rgItemsThisRow[i], strFeatureContext, 'discount_block_inline'	 ) );
+		$Parent.append( $Row );
+	}
+
+	return rgItems.slice( rgItemsThisRow.length );
+}
+
+function SaleCap( item, strFeatureContext, strDiscountClass )
+{
+	var params = { 'class': 'sale_capsule' };
+	var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, item.appid, item.packageid, params );
+
+	var $CapCtn = $J('<a/>', params );
+	GStoreItemData.BindHoverEvents( $CapCtn, item.appid, item.packageid );
+
+	var $Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': '/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+	$Img.data('src-maincap', rgItemData['main_capsule'] );
+	$Img.data('src-smallcap', rgItemData['small_capsule'] );
+
+	$CapCtn.append( $Img );
+	$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
+
+	return $CapCtn;
+}
+
+function BindSaleCapAutoSizeEvents( $Container )
+{
+	var $AutosizeImages = $Container.find('img.sale_capsule_image.autosize');
+	var mqSwitchToSmall = window.matchMedia ? window.matchMedia("(max-width: 580px)") : {matches: false};
+
+	if ( !$AutosizeImages.length )
+		return;
+
+	$J(window ).on('resize.AdjustSaleCaps', function() {
+		var rgSwitchToMain = [], rgSwitchToSmall = [];
+		$AutosizeImages.each( function() {
+			var $Img = $J(this);
+			if ( mqSwitchToSmall.matches && $Img.width() <= 176 )
+			{
+				if ( $Img.data('src-smallcap') != $Img.attr('src') )
+					rgSwitchToSmall.push( $Img );
+			}
+			else
+			{
+				if ( $Img.data('src-maincap') != $Img.attr('src') )
+					rgSwitchToMain.push( $Img );
+			}
+		});
+
+		for ( var i =0; i < rgSwitchToMain.length; i++ )
+			rgSwitchToMain[i].attr( 'src', rgSwitchToMain[i].data('src-maincap') );
+		for ( var i =0; i < rgSwitchToSmall.length; i++ )
+			rgSwitchToSmall[i].attr( 'src', rgSwitchToSmall[i].data('src-smallcap') );
+	} ).trigger('resize.AdjustSaleCaps');
+}
+

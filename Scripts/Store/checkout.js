@@ -2967,6 +2967,10 @@ function OnVerifyShippingAddressSuccess( result )
 				case 6:
 					error_text = 'We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States.';
 					break;
+					
+				case 7:
+					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
+					break;					
 
 				case 2:
 					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';

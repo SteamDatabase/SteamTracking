@@ -752,15 +752,21 @@ img.payment_method_logo {
 
 .cart_item_img {
 	float: left;
-	padding-top: 16px;
+	margin-top: 16px;
 	width: 120px;
-
+	height: 45px;
+	background: rgba( 0, 0, 0, 0.5 );
+	text-align: center;
 }
 
 .cart_item_img img {
-	width: 100%;
+	width: auto;
 	height: 45px;
 	background-color: #000000;
+}
+
+.cart_item_img.mtx {
+	width: auto;
 }
 
 .cart_item_desc {

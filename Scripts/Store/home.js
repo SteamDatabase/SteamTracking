@@ -21,6 +21,8 @@ GHomepage = {
 	rgUserNewsFriendsPurchased: {},
 	rgTopSteamCurators: [],
 
+	rgfnCustomRenders: [],
+
 	bUserDataReady: false,
 	bStaticDataReady: false,
 	bLoadedActiveData: false,
@@ -76,6 +78,11 @@ GHomepage = {
 		{
 			window.Responsive_ReparentItemsInResponsiveMode( '.spotlight_block', $J('#home_responsive_spotlight_ctn') );
 		}
+	},
+
+	AddCustomRender: function( fnRender )
+	{
+		GHomepage.rgfnCustomRenders.push( fnRender );
 	},
 
 	InitUserData: function( rgParams )
@@ -283,6 +290,13 @@ GHomepage = {
 			GHomepage.InstrumentTabbedSection();
 
 		} catch( e ) { OnHomepageException(e); }
+
+		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
+		{
+			try {
+				GHomepage.rgfnCustomRenders[i]( GHomepage.oDisplayListsRaw );
+			} catch( e ) { OnHomepageException(e); }
+		}
 
 		GHomepage.oDisplayListsRaw = null;
 
@@ -812,8 +826,8 @@ GHomepage = {
 						break;
 					}
 
-					var friend = oItem.friends[i];
-					var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.profile_url).replace(/\%2\$s/g, friend.avatar).replace(/\%3\$s/g, friend.accountid) );
+					var friend = GStoreItemData.GetAccountData( null, oItem.friends[i] );
+					var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.url).replace(/\%2\$s/g, GetAvatarURL( friend.avatar ) ).replace(/\%3\$s/g, friend.accountid) );
 					$AvatarsCtn.append( $AvatarCap );
 				}
 				return $CapCtn;
@@ -1665,7 +1679,7 @@ CHomeSettings.prototype.DismissPopup = function()
 
 function GetAvatarURL( strAvatarHash, sizeStr )
 {
-	return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + sizeStr + '.jpg';
+	return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )

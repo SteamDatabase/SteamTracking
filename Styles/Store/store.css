@@ -2880,6 +2880,9 @@ div.store_header_btn {
 	background-color: rgba( 164, 208, 7, 0.4 );
 	background-position: -34px 20px;
 }
+#cart_status_data .store_header_btn_green {
+	background-position: -34px 30px;
+}
 
 #store_nav_area .store_nav_bg,
 .home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {

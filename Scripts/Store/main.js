@@ -2132,7 +2132,7 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 
 CGenericCarousel.prototype.bIsResponsive = function( )
 {
-	return this.$elItems.css('position') != 'absolute';
+	return window.UseSmallScreenMode && window.UseSmallScreenMode();
 }
 
 CGenericCarousel.prototype.Advance = function( nNewIndex )
