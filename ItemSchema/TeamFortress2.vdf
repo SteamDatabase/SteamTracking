@@ -76303,7 +76303,7 @@
 		"30818"
 		{
 			"name"		"Socked and Loaded"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_stocking"
 			"item_description"		"#TF_dec16_stocking_Desc"
@@ -76331,7 +76331,7 @@
 		"30819"
 		{
 			"name"		"Flammable Favor"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_flammable_favor"
 			"item_description"		"#TF_dec16_flammable_favor_Desc"
@@ -76359,7 +76359,7 @@
 		"30820"
 		{
 			"name"		"Snowwing"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_snowwing"
 			"item_description"		"#TF_dec16_snowwing_Desc"
@@ -76380,7 +76380,7 @@
 		"30821"
 		{
 			"name"		"Packable Provisions"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_packable_provisions"
 			"item_description"		"#TF_dec16_packable_provisions_Desc"
@@ -76400,7 +76400,7 @@
 		"30822"
 		{
 			"name"		"Handy Canes"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_handy_canes"
 			"item_description"		"#TF_dec16_handy_canes_Desc"
@@ -76434,7 +76434,7 @@
 		"30823"
 		{
 			"name"		"Bomb Beanie"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_bomb_beanie"
 			"item_description"		"#TF_dec16_bomb_beanie_Desc"
@@ -76454,7 +76454,7 @@
 		"30824"
 		{
 			"name"		"The Electric Twanger"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_electric_twanger"
 			"item_description"		"#TF_dec16_electric_twanger_Desc"
@@ -76476,7 +76476,7 @@
 		"30825"
 		{
 			"name"		"Santarchimedes"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_santarchimedes"
 			"item_description"		"#TF_dec16_santarchimedes_Desc"
@@ -76497,7 +76497,7 @@
 		"30826"
 		{
 			"name"		"Sweet Smissmas Sweater"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_smissmas_sweater"
 			"item_description"		"#TF_dec16_smissmas_sweater_Desc"
@@ -76524,7 +76524,7 @@
 		"30827"
 		{
 			"name"		"Brain-Warming Wear"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_brain_warming_wear"
 			"item_description"		"#TF_dec16_brain_warming_wear_Desc"
@@ -76551,7 +76551,7 @@
 		"30829"
 		{
 			"name"		"The Snowmann"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_snowmann"
 			"item_description"		"#TF_dec16_snowmann_Desc"
@@ -76591,7 +76591,7 @@
 		"30830"
 		{
 			"name"		"The Bomber Knight"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_bomber_knight"
 			"item_description"		"#TF_dec16_bomber_knight_Desc"
@@ -76620,7 +76620,7 @@
 		"30831"
 		{
 			"name"		"Reader's Choice"
-			"prefab"		"no_craft misc"
+			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_readers_choice"
 			"item_description"		"#TF_dec16_readers_choice_Desc"
@@ -76656,7 +76656,7 @@
 		"30833"
 		{
 			"name"		"Woolen Warmer"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_woolen_warmer"
 			"item_description"		"#TF_dec16_woolen_warmer_Desc"
@@ -76703,7 +76703,7 @@
 		"30835"
 		{
 			"name"		"Pyro the Flamedeer"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_pyro_the_flamedeer"
 			"item_description"		"#TF_dec16_pyro_the_flamedeer_Desc"
@@ -76730,7 +76730,7 @@
 		"30836"
 		{
 			"name"		"Elf Esteem"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_elf_esteem"
 			"item_description"		"#TF_dec16_elf_esteem_Desc"
@@ -76750,7 +76750,7 @@
 		"30838"
 		{
 			"name"		"The Head Prize"
-			"prefab"		"no_craft hat"
+			"prefab"		"no_craft hat marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_head_prize"
 			"item_description"		"#TF_dec16_head_prize_Desc"
