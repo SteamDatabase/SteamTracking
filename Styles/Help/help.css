@@ -772,10 +772,12 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button {
 	display: block;
-	max-width: 714px;
+	max-width: 712px;
+
+		box-sizing: border-box;
 
 	margin-top: 10px;
-	padding-right: 28px;
+	padding-right: 30px;
 	border: solid 1px;
 	border-color: #66778b #323f51 #323f51 #66778b;
 
@@ -812,7 +814,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button > img {
 	float: left;
-	margin: 4px 4px 4px 6px;
+	margin: 3px 8px 4px 6px;
 }
 
 .help_wizard_button > img + span {
@@ -834,10 +836,6 @@ body.v6 .page_content_ctn.dark:last-child {
 	background-repeat: no-repeat;
 	background-position: right 14px center;
 	background-size: auto 16px;
-
-	/* additional padding so contents do not render over arrow */
-	padding-right: 28px;
-	max-width: 712px;
 }
 
 .help_wizard_button_dark {
@@ -891,11 +889,6 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_arrow_right.help_wizard_button_highpri {
 	background-image: url("https://help.steampowered.com/public/images/arrow_right_white.png");
-}
-
-.help_wizard_button.help_wizard_arrow_right {
-	padding: 0px;
-	padding-right: 30px;
 }
 
 .login_page {
@@ -1097,8 +1090,8 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_divider {
 	background-color: #3b718d;
 	height: 1px;
-	max-width: 714px;
-	margin: 14px 0 8px 0;
+	max-width: 672px;
+	margin: 14px 15px 8px 15px;
 }
 
 .help_divider.full {
@@ -1107,7 +1100,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 #help_search_support_input {
 	height: 44px;
-	width: 714px;
+	width: 712px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -1832,6 +1825,10 @@ a.guide_row {
 	box-sizing: border-box;
 }
 
+.help_issue_details .HighlightedText {
+	color: white;
+}
+
 .help_issue_details p,
 .help_notinlibrary_details p,
 .help_missingrefund_details p
@@ -1858,30 +1855,13 @@ a.guide_row {
 	color: white;
 }
 
-.help_vacorgameban_details .HighlightedText,
-.help_permanentlyremove_details .HighlightedText,
-.help_tradeban_details .HighlightedText
-{
-	color: white;
-}
-
-.help_permanentlyremove_details .bold
+.help_issue_details .bold
 {
 	color: #67c5f1;
 	font-weight: 500;
 }
 
-.help_vacorgameban_details,
-.help_permanentlyremove_details,
-.help_cdkey_issue_details
-{
-	background-color: rgba( 0, 0, 0, 0.2 );
-	padding: 20px;
-	max-width: 712px;
-	margin-bottom: 20px;
-}
-
-.help_cdkey_issue_details.no_start_issue{
+.help_issue_details.no_start_issue{
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 20px;
 	max-width: 712px;
@@ -1889,16 +1869,7 @@ a.guide_row {
 	margin-top: 15px;
 }
 
-.help_tradeban_details
-{
-	background-color: rgba( 0, 0, 0, 0.2 );
-	padding: 20px;
-	max-width: 712px;
-	margin-bottom: 20px;
-	box-sizing: border-box;
-}
-
-.help_tradeban_details .info_box
+.help_issue_details .info_box
 {
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -1911,33 +1882,19 @@ a.guide_row {
     margin-bottom: 20px;
 }
 
-.help_cdkey_issue_details p,
-.help_vacorgameban_details p,
-.help_permanentlyremove_details p
-{
-	margin-bottom: 20px;
-	line-height: 16px;
-}
 
-.help_tradeban_details p
-{
-	line-height: 16px;
+
+.help_vacorgameban_account {
+	padding: 10px;
 	margin-bottom: 10px;
-}
-
-
-.help_vacorgameban_details p:first-child,
-.help_permanentlyremove_details p:first-child,
-.help_tradeban_details p:first-child,
-{
-	margin-top: 0px;
-}
-
-.help_vacorgameban_details .HighlightedText,
-.help_permanentlyremove_details .HighlightedText,
-.help_tradeban_details .HighlightedText,
-{
 	color: white;
+	background-color: #243040;
+	line-height: 16px;
+}
+
+.help_vacorgameban_accountheader {
+	color: #5eafde;
+	margin-bottom: 4px;
 }
 
 .microtxn_purchase_date {
@@ -2630,8 +2587,8 @@ img.category_icon {
 		max-width: 950px;
 	}
 	html.responsive #help_search_support_input {
-		max-width: 720px;
-		width: calc( 100% - 20px - 2px );	/* 20px padding 2px border */
+		max-width: 712px;
+		width: 100%;
 	}
 }
 
@@ -3749,12 +3706,7 @@ ul.attached_file_list {
     color: #c6d4df;
     font-size: 18px;
 }
-
-
-.vac_body .help_tradeban_details {
-	margin-top: 15px;
-}
-
+	
 .no_vac_bans_header {
 	color: #8fca1d;
 	font-size: 16px;
@@ -4080,4 +4032,26 @@ ul.attached_file_list {
 
 #Help_AccountStolen_Steps {
 	padding: 0 10px 10px 10px;
+}
+
+.vac_or_game_ban_body p {
+	margin-bottom: 10px;
+}
+
+.help_install_steam_btn_text {
+	color: #ffffff;
+	font-size: 16px;
+	padding: 8px 24px 8px 12px;
+	line-height: 28px;
+}
+
+.help_install_steam_image {
+	height: 26px;
+	margin-right: 8px;
+	vertical-align: top;
+}
+
+.help_install_steam_ctn {
+	display:inline-block;
+	vertical-align:middle
 }

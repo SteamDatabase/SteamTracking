@@ -455,38 +455,37 @@ function ShowBoosterEligibility()
 		});
 }
 
+function GrindIntoGoo( appid, contextid, itemid )
+{
+	var rgAJAXParams = {
+		sessionid: g_sessionID,
+		appid: appid,
+		assetid: itemid,
+		contextid: contextid
+	};
+	var strActionURL = g_strProfileURL + "/ajaxgetgoovalue/";
 
-	function GrindIntoGoo( appid, contextid, itemid )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			contextid: contextid
-		};
-		var strActionURL = g_strProfileURL + "/ajaxgetgoovalue/";
+	$J.get( strActionURL, rgAJAXParams ).done( function( data ) {
+		var $Content = $J(data.strHTML);
+		var strDialogTitle = data.strTitle;
+		ShowConfirmDialog( strDialogTitle, $Content ).done( function() {
+			strActionURL = g_strProfileURL + "/ajaxgrindintogoo/";
+			rgAJAXParams.goo_value_expected = data.goo_value;
 
-		$J.get( strActionURL, rgAJAXParams ).done( function( data ) {
-			var $Content = $J(data.strHTML);
-			var strDialogTitle = data.strTitle;
-			ShowConfirmDialog( strDialogTitle, $Content ).done( function() {
-				strActionURL = g_strProfileURL + "/ajaxgrindintogoo/";
-				rgAJAXParams.goo_value_expected = data.goo_value;
-
-				$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-					ShowAlertDialog( strDialogTitle, data.strHTML );
-					ReloadCommunityInventory();
-				}).fail( function() {
-					ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
-				});
+			$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+				ShowAlertDialog( strDialogTitle, data.strHTML );
+				ReloadCommunityInventory();
+			}).fail( function() {
+				ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
 			});
 		});
-	}
+	});
+}
 
-	function ViewBoosterPackStore()
-	{
-		window.location = 'http://steamcommunity.com/' + '/tradingcards/boostercreator/';
-	}
+function ViewBoosterPackStore()
+{
+	window.location = 'http://steamcommunity.com/' + '/tradingcards/boostercreator/';
+}
 
 CGameGooExchangeDialog = {
 

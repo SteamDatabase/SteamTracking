@@ -225,7 +225,7 @@ a.badge_row:hover .badge_view_details {
 
 .card_drop_info_subarea {
 	background-color: #262627;
-	border: 1px solid #4a4943;
+	border: 1px solid #5491cf;
 	padding: 19px 17px;
 
 	margin-top: 24px;
@@ -237,7 +237,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .card_drop_info_progress {
-	color: #5c5c5c;
+	color: #5491cf;
 }
 
 .card_drop_info_progress_bar_ctn {
@@ -254,23 +254,23 @@ a.badge_row:hover .badge_view_details {
 	border: 1px solid #000000;
 	border-radius: 4px;
 	height: 8px;
-	background: -webkit-linear-gradient( top, #848080 5%, #5c5c5c 95%);background: linear-gradient( to bottom, #848080 5%, #5c5c5c 95%);}
+	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);}
 
 .salespend_card_drop_info .card_drop_info_header, .salespend_card_drop_info .card_drop_info_progress {
 	color: #b6b2a3;
 }
 
 .salespend_card_drop_info .card_drop_info_subarea {
-	border-color: #ff9f37;
+	border-color: #ac5999;
 
 }
 
 .salespend_card_drop_info .card_drop_info_progress_bar {
 	border-color: #27282b;
-	background: -webkit-linear-gradient( top, #ff9f37 5%, #664503 95%);background: linear-gradient( to bottom, #ff9f37 5%, #664503 95%);}
+	background: -webkit-linear-gradient( top, #ac5999 5%, #664503 95%);background: linear-gradient( to bottom, #ac5999 5%, #664503 95%);}
 
 .salespend_card_drop_info .card_drop_info_totalspending {
-	color: #ff9f37;
+	color: #ac5999;
 	font-size: 15px;
 }
 

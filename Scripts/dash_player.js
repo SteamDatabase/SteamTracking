@@ -903,11 +903,10 @@ CDASHPlayer.prototype.OnSegmentDownloaded = function()
 	this.OnVideoBufferProgress();
 }
 
-CDASHPlayer.prototype.OnSegmentDownloadFailed = function()
+CDASHPlayer.prototype.OnSegmentDownloadFailed = function( strReason )
 {
 		this.StopDownloads();
-
-	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed', 'Timeout' );
+	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed', strReason );
 }
 
 CDASHPlayer.prototype.BIsBuffering = function()
@@ -2194,14 +2193,32 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 
 				if ( xhr.status != 200 || !xhr.response )
 				{
+					PlayerLog( 'HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms): ' + url );
+
 					// Check if next segment will end VOD and if so, stop now
 					if ( xhr.status == 404 && _loader.BIsEndVOD( false ) )
 						return;
 
+					// Send 5% of VOD failures back to better track status codes
+					if ( !_loader.m_player.BIsLiveContent() )
+					{
+						var bSendStatus = ( ( Math.floor( Math.random() * 20 ) ) == 1 );
+						if ( bSendStatus )
+							$J( _loader.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'FailedSegDLStatus', xhr.status ] );
+					}
+
+					// if VOD and a 403, then the user is no longer auth'd so attempt playback restart
+					if ( !_loader.m_player.BIsLiveContent() && xhr.status == 403 )
+					{
+						_loader.DownloadFailed( xhr.status );
+						return;
+					}
+
 					_loader.m_nFailedSegmentDownloads++;
 
-					PlayerLog( 'HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms): ' + url );
+					// determine retry for other status code issues
 					var nTimeToRetry = CDASHPlayer.DOWNLOAD_RETRY_MS;
+
 					if ( _loader.m_player.BIsLiveContent() )
 						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_MS;
 					else
@@ -2209,7 +2226,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 
 					if ( now - tsAttemptStarted > nTimeToRetry )
 					{
-						_loader.DownloadFailed();
+						_loader.DownloadFailed( 'Timeout' );
 						return;
 					}
 
@@ -2401,9 +2418,9 @@ CSegmentLoader.prototype.OnSourceBufferAbort = function( e )
 	PlayerLog( 'Source buffer update aborted' );
 }
 
-CSegmentLoader.prototype.DownloadFailed = function()
+CSegmentLoader.prototype.DownloadFailed = function( strReason )
 {
-	this.m_player.OnSegmentDownloadFailed();
+	this.m_player.OnSegmentDownloadFailed( strReason );
 }
 
 CSegmentLoader.prototype.ScheduleNextDownload = function( nAtTime )
@@ -3309,7 +3326,8 @@ CMPDParser.prototype.GetSegmentAvailableFromNow = function( adaptationSet, nSegm
 CMPDParser.GetSegmentDuration = function( adaptationSet )
 {
 	// currently only support all segments having the same duration
-	return (adaptationSet.segmentTemplate.duration / adaptationSet.segmentTemplate.timescale) * 1000;
+	if ( adaptationSet )
+		return (adaptationSet.segmentTemplate.duration / adaptationSet.segmentTemplate.timescale) * 1000;
 }
 
 CMPDParser.GetSegmentForTime = function( adaptationSet, unTime )

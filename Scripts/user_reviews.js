@@ -276,9 +276,9 @@ function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback 
 	});
 }
 
-function UserReview_Moderate_SetBanStatus( recommendationID, force_hidden, baseURL, callback )
+function UserReview_Moderate_SetBanStatus( recommendationID, force_hidden, baseURL, callback, strModerationNote )
 {
-	UserReview_Moderate( recommendationID, { 'force_hidden' : force_hidden }, baseURL, callback );
+	UserReview_Moderate( recommendationID, { 'force_hidden' : force_hidden, 'moderation_note' : strModerationNote }, baseURL, callback );
 }
 
 function UserReview_Moderate_SetDeveloperFlag( recommendationID, flagged_by_developer, baseURL, callback )

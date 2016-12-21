@@ -926,7 +926,7 @@ CForumTopic = Class.create( {
 
 	OnReportPostSuccess: function()
 	{
-		ShowForumSuccessDialogWithDetailTitle( ' #Discussions_Report_Button', 'Thank you for your report', 'Your report has been sent to the moderators for review.' );
+		ShowForumSuccessDialogWithDetailTitle( 'Report', 'Thank you for your report', 'Your report has been sent to the moderators for review.' );
 	},
 
 	MoveTopic: function()
