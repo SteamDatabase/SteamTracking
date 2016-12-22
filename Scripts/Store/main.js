@@ -334,7 +334,8 @@ function GameHover( elem, event, divHover, rgHoverData )
 	else if ( ( !$Hover.is(':visible') || g_HoverState.target != $Elem[0] ) && !oElemState.timer )
 	{
 		oElemState.bWantsHover = true;
-		var bPublic = rgHoverData['public'];
+		var accountId = ( typeof g_AccountID !== 'undefined' ) && !rgHoverData['public'] ? g_AccountID : 0;
+		var bPublic = rgHoverData['public'] || accountId == 0;
 		var strTargetPrefix = '';
 		var strUrlTarget = '';
 		if ( rgHoverData['type'] == 'app' )
@@ -359,7 +360,6 @@ function GameHover( elem, event, divHover, rgHoverData )
 			
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );
-		var accountId = ( typeof g_AccountID !== 'undefined' ) ? g_AccountID : 0;
 		var params = rgHoverData['params'] || {};
 		var nStartHoverTime = new Date().getTime();
 		var fnComputeHoverDelay = bNewHoverSpeed ?
