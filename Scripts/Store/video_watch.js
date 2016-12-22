@@ -287,7 +287,7 @@ CVideoWatch.prototype.OnPlayerDRMDownloadError = function( description )
 {
 	if ( this.m_bEMECapableHost )
 	{
-		this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br>Please restart the video to try again.' );
+		this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871#15">Visit the FAQ</a> for help on installing these components manually.' );
 		this.OnLogEventToServer( 'DRM Download Error', description );
 	}
 	else

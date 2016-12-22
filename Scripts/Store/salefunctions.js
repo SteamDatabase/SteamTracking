@@ -76,10 +76,10 @@ function AddItemsIfNotPresent( rgItemsToDisplay, rgItemsFound, cMaxItems )
 				bAlreadyPresent = true;
 				break;
 			}
-
-			if ( !bAlreadyPresent )
-				rgItemsToDisplay.push( rgItemsFound[i] );
 		}
+
+		if ( !bAlreadyPresent )
+			rgItemsToDisplay.push( rgItemsFound[i] );
 	}
 }
 
