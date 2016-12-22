@@ -1954,7 +1954,7 @@ a.guide_row {
 /*******************************************/
 /* Help with login info
 /*******************************************/
-#forgot_login_search, #forgot_login_code {
+#forgot_login_search, #forgot_login_code, #verify_cdkey {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;

@@ -1106,45 +1106,13 @@ HelpWizard = {
 		});
 	},
 
-
-	ResetTwoFactor: function( strSessionID, nAccountID, strLogin, nLost )
+	ResetTwoFactor: function( strSessionID, nAccountID, nLost )
 	{
 		$J( '#reset_twofactor_submit' ).addClass( 'loading' );
 		$J( '#form_submit_error' ).hide();
-		$J.ajax({
-			type: "POST",
-			url: "https://help.steampowered.com/login/getrsakey/",
-			data: {
-				sessionid: g_sessionID,
-				username: strLogin
-			}
-		}).fail( function( xhr ) {
-			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
-			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
-		}).done( function( data ) {
-			HelpWizard.ResetTwoFactorRSA( strSessionID, nAccountID, data, nLost );
-		});
-	},
 
-	ResetTwoFactorRSA: function( strSessionID, nAccountID, rsa, nLost )
-	{
 		var elError = $J( '#form_submit_error' );
-		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
-		{
-			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
-			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
-			return;
-		}
-
-		var strPassword = $J( '#twofactor_password' ).val(); // may be empty
 		var strTwoFactorCode = $J( '#twofactor_resetcode' ).val(); // may be empty
-		var strPasswordEncrypted = '';
-
-		if ( strPassword )
-		{
-			var pubKey = RSA.getPublicKey(rsa.publickey_mod, rsa.publickey_exp);
-			strPasswordEncrypted = RSA.encrypt(strPassword, pubKey);
-		}
 
 		try
 		{
@@ -1162,8 +1130,6 @@ HelpWizard = {
 				s: strSessionID,
 				account: nAccountID,
 				lost: nLost,
-				password: strPasswordEncrypted,
-				rsatimestamp: rsa.timestamp,
 				twofactor: strTwoFactorCode
 			}
 		}).fail( function( xhr ) {
@@ -1257,20 +1223,45 @@ HelpWizard = {
 		});
 	},
 
+	VerifyCDKey: function( strSessionID, eReset, nLost )
+	{
+		$J( '#verify_cdkey_submit' ).addClass( 'loading' );
+		$J( '#form_submit_error' ).hide();
+		
+		var elError = $J( '#form_submit_error' );
+		var strCDKey = $J( '#verify_cdkey' ).val();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxVerifyAccountRecoveryCode/",
+			data: {
+				sessionid: g_sessionID,
+				s: strSessionID,
+				lost: nLost,
+				reset: eReset,
+				method: 64, // k_EAccountRecoveryMethodCDKey
+				code: strCDKey,
+			}
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function( data ) {
+			$J( '#verify_cdkey_submit' ).removeClass( 'loading' );
+		});
+	},
 
 	FormRequestAndRedirect: function( form ) {
 		var form = $J( form );
