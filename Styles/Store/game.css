@@ -2,6 +2,10 @@
 body.v6 .early_access_announcements h2,
 body.v6 .sys_req h2,
 body.v6 .game_area_description h2,
+body.v6 .item_store_items_block h2,
+body.v6 .game_area_dlc_section h2,
+body.v6 .steam_curators_block h2,
+body.v6 #game_area_purchase h2.package_group,
 .game_description_column .block .block_header h4,
 .user_reviews_header {
 	text-transform: uppercase;
@@ -12,6 +16,9 @@ body.v6 .game_area_description h2,
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: normal;
 	padding-top: 2px;
+}
+body.v6 #game_area_purchase h2.package_group {
+	margin-bottom: 0px;
 }
 
 .game_icon {
@@ -36,9 +43,12 @@ body.v6 .game_area_description h2,
 
 .game_name {
 	position: relative;
-	font-size: 30px;
-	color: #d6d7d8;
-	margin-bottom: 16px;
+	font-size: 26px;
+	color: white;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin-bottom: 16px;
 	overflow: hidden;
 }
 
@@ -1880,6 +1890,11 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	opacity: 0.3;
 }
 
+.dlc_page_purchase_description {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
 
 
 .dlc_page_purchase_header {
@@ -1906,11 +1921,14 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 .dlc_page_name_link {
-	font-size: 14px;
-}
+	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 
 .dlc_page_release_date {
-	color: #626366;
+	color: #7092a5;
 }
 
 /* package page */
@@ -3789,7 +3807,10 @@ background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););backgroun
 }
 .item_store_overlay_link a
 {
-	margin-top: 60px;
+	padding-top: 60px;
+	width: 616px;
+	height: 99px;
+	display: block;
 }
 
 .item_def_grid_item
@@ -3847,7 +3868,7 @@ background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););backgroun
 		height: auto;
 	}
 
-	html.responsive #game_highlights a {
+	html.responsive #game_highlights a:not(.app_tag) {
 		height: 100%;
 		position: relative;
 	}

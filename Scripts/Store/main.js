@@ -495,11 +495,10 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 		$HoverArrowRight.hide();
 	}
 
-	var nTopAdjustment = 0;
-
-			if ( $Elem.height() < 98 )
-		nTopAdjustment =  Math.floor( $Elem.height() ) / 2 - 49;
-	nHoverPositionTop = offset.top - 13 + nTopAdjustment;
+	var nTopAdjustment = -13;	
+				if ( $Elem.height() < 63 )
+		nTopAdjustment =  Math.floor( $Elem.height() ) / 2 - 56;
+	nHoverPositionTop = offset.top + nTopAdjustment;
 	$Hover.offset( {top: nHoverPositionTop, left: nHoverPositionLeft} );
 
 	var nTargetTopViewport = ( offset.top - nWindowScrollTop ) + nTopAdjustment;
