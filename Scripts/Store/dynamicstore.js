@@ -1166,6 +1166,10 @@ GStoreItemData = {
 			}
 		}
 
+		// override with item-specific URL
+		if ( rgItemData.url )
+			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth )
+
 		return rgItemData;
 	},
 

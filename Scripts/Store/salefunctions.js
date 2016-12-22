@@ -57,6 +57,32 @@ function HighlightSelectedVote( voteid, appid )
 	});
 }
 
+function BIsSameItem( rgItem1, rgItem2 )
+{
+	return ( rgItem1.appid && rgItem1.appid == rgItem2.appid ) ||
+		( rgItem1.packageid && rgItem1.packageid == rgItem2.packageid ) ||
+		( rgItem1.bundleid && rgItem1.bundleid == rgItem2.bundleid );
+}
+
+function AddItemsIfNotPresent( rgItemsToDisplay, rgItemsFound, cMaxItems )
+{
+	for ( var i = 0; i < rgItemsFound.length && rgItemsToDisplay.length < cMaxItems; i++ )
+	{
+		var bAlreadyPresent = false;
+		for ( var j = 0; j < rgItemsToDisplay.length; j++ )
+		{
+			if ( BIsSameItem( rgItemsToDisplay[j], rgItemsFound[i] ) )
+			{
+				bAlreadyPresent = true;
+				break;
+			}
+
+			if ( !bAlreadyPresent )
+				rgItemsToDisplay.push( rgItemsFound[i] );
+		}
+	}
+}
+
 
 function HomeRenderFeaturedItems( rgDisplayLists )
 {
@@ -64,8 +90,40 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		rgDisplayLists.sale_tier1, 'home', 9, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 	);
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier2, 'home', 9, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		rgDisplayLists.sale_tier2, 'home', 9, 12, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 	);
+
+	var rgItemsPromotedToTier1 = [];
+	if ( rgTier1.length < 9 )
+	{
+		// promote capsules until we're full
+		while ( rgTier2.length && rgTier1.length < 9 )
+		{
+			var item = rgTier2.shift();
+			rgItemsPromotedToTier1.push( item );
+			rgTier1.push( item );
+		}
+
+		TryPopulateSaleItems( rgTier1, rgDisplayLists.sale_tier1, 9 );
+	}
+
+	if ( rgTier2.length < 9 )
+	{
+		var rgRemainingDisplayList = rgDisplayLists.sale_tier2.slice();
+		for ( var i = 0; i < rgItemsPromotedToTier1.length; i++ )
+		{
+			for ( var j = 0; j < rgRemainingDisplayList.length; j++ )
+			{
+				if ( BIsSameItem( rgItemsPromotedToTier1[i], rgRemainingDisplayList[j] ) )
+				{
+					rgRemainingDisplayList.splice( j, 1 );
+					break;
+				}
+			}
+		}
+
+		TryPopulateSaleItems( rgTier2, rgRemainingDisplayList, 9 );
+	}
 
 	HomeSaleBlock( rgTier1, $J('#tier1_target' ) );
 	HomeSaleBlock( rgTier2, $J('#tier2_target' ) );
@@ -78,10 +136,29 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleCapsuleCategory( rgDisplayLists.moddable, $J('.category_caps_moddable') );
 }
 
+function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )
+{
+	if ( rgDisplayedItems.length < cMinItems )
+	{
+		// fill with items that the user might already own
+		AddItemsIfNotPresent( rgDisplayedItems, GHomepage.FilterItemsForDisplay(
+			rgOriginalItemList, 'home', cMinItems, 15, { games_already_in_library: true, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		), cMinItems );
+	}
+
+	if ( rgDisplayedItems.length < 9 )
+	{
+		AddItemsIfNotPresent( rgDisplayedItems, rgOriginalItemList, 9 );
+	}
+}
+
 function HomeSaleBlock( rgItems, $Parent )
 {
 	var rgRemainingItems = rgItems;
 	var bTwoThirdsRow = true;
+
+	if ( rgRemainingItems.length > 9 && rgRemainingItems.length % 3 != 0 )
+		rgRemainingItems = rgRemainingItems.slice( 0, rgRemainingItems.length - rgRemainingItems.length % 3 );
 
 	while( rgRemainingItems.length )
 	{
