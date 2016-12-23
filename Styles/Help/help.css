@@ -3380,6 +3380,18 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	}
 }
 
+.help_request_recent_submit {
+	padding: 10px;
+	margin: 50px 0px 8px 0px;
+	border: 1px solid #67c1f5;
+	background-color: #2e6484;
+	color: white;
+}
+
+.help_request_recent_submit b {
+	font-weight: 500;
+}
+
 .help_request_page {
 	font-size: 13px;
 	max-width: 940px;
