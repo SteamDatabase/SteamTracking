@@ -1,108 +1,113 @@
 
-.updated_apps {
+a:hover {
+	text-decoration: none;
 }
 
-#tab_preview_container {
-	height: 500px;
-}
-
-.tab_preview {
-	display: none;
-
-	padding: 10px;
-	height: 100%;
-	width: 466px;
-	overflow-y: auto;
-	background: #a5b5c2;
-}
-.tab_preview.focus {
-	display: block;
-}
-
-.tab_item.focus {
-	background: #a5b5c2;
-	position: relative;
-}
-.tab_item.focus::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin-right: -16px;
-	height: 100%;
-	width: 16px;
-	background: #a5b5c2;
-}
-
-.tab_item.focus .tab_item_name {
-	color: #000000;
-}
-
-.can_play_container {
-	background-color: #00aced;
-	color: white;
-	padding: 10px;
-	margin-bottom: 25px;
-	position: relative;
-}
-.can_play_container .playtime_text {
-	float: left;
-	font-size: 14px;
-	line-height: 22px;
-	margin-left: 10px;
-}
-.can_play_container .ds_flag {
-	position: relative;
-	margin-left: -14px;
-	top: 2px;
-	float: left;
-}
-
-.updated_app_announcement_text a {
-	color: #5aa9d6;
-}
-
-.updated_app_date
+.updated_apps_tabs
 {
-	color: #000000;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #779abd;
+	margin-bottom: 20px;
 }
 
-.updated_app_name {
-	font-size: 24px;
-	color: black;
+.updated_app_tab
+{
+	float: left;
+	padding-top: 10px;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.updated_app_tab a
+{
+	text-decoration: none;
+	color: #bbbbbb;
+}
+
+.updated_app_tab.active a
+{
+	color: white;
+}
+
+.updated_app
+{
+	position: relative;
+	padding-bottom: 30px;
+    background-image: url( /public/images/v6/maincol_gradient_rule.png );
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.updated_app a
+{
+	color: #dddddd;
+}
+
+.updated_app .updated_app_announcement_text a {
+    color: #9fbbcb;
+    text-decoration: underline;
+}
+.updated_app a:hover
+{
+	color: #ffffff;
+}
+
+.updated_app .ds_flag
+{
+	top: 50px;
+}
+
+.updated_app_logo
+{
+	float: left;
+	width: 184px;
+	padding: 13px 8px 8px 0px;
+}
+
+.updated_app_details
+{
+	float: left;
+	padding: 8px;
+	width: 550px;
+}
+
+.updated_app_name
+{
+	font-size: 12px;
+	padding-right: 5px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-bottom: 10px;
+		}
+
+.updated_app_date
+{
+	color: #898a8c;
 }
 
 .updated_app_announcement_headline
 {
-	font-size: 20px;
-	color: black;
+	font-size: 24px;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: bold; /* bold */
+		font-weight: 300; /* light */
 
-			margin-bottom: 10px;
+			margin-top: 3px;
 }
-
 .updated_app_announcement_headline a {
-    color: #000000;
+    color: #ffffff;
 }
 
-.comment_count
+.updated_app_announcement_headline .comment_count
 {
 	font-size: 12px;
 	font-family: arial, tahoma, sans-serif;
 	float: right;
-	padding-top: 4px;
 	padding-right: 5px;
-	color: #ffffff;
 }
 
 .updated_app_announcement_text
 {
-	color: #000000;
+	color: #acb2b8;
 	font-size: 14px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -119,17 +124,27 @@
 
 		}
 
+.updated_app.expanded .updated_app_announcement_text
+{
+	height: auto;
+}
+
+.updated_app.partial .updated_app_announcement_text
+{
+	max-height: 400px;
+}
+
 .updated_app_announcement_text ul {
 	margin-left: 18px;
 }
 
 .updated_app_announcement_text img {
-	max-width: 100%;
+	max-width: 550px;
 }
 
 .updated_app_play_now_btn
 {
-	float: right;
+	padding-top: 10px;
 }
 
 .updated_app_footer
@@ -162,17 +177,17 @@
 	font-family: arial, tahoma, sans-serif;
 }
 
-.tab_preview iframe
+.updated_app iframe
 {
-	max-width: 450px;
+	max-width: 545px;
 }
 
 .updated_app_vote_details
 {
 	position: relative;
-	margin-top: 10px;
+	margin-top: 20px;
 	padding: 6px;
-	background-color: rgba( 0, 0, 0, 0.6 );
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 .updated_app_vote_details .rateUpCount
@@ -192,25 +207,4 @@
 	padding-top: 50px;
 	font-size: 16px;
 	text-align: center;
-}
-
-.fixed_in_scroll
-{
-	position: fixed;
-}
-
-.updated_apps.myapps .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_cap {
-	opacity: 1;
-}
-
-.updated_apps.myapps .tab_item.ds_flagged .ds_owned_flag {
-	display: none;
-}
-
-
-@media screen and (max-width: 910px)
-{
-	html.responsive #tab_preview_container {
-		display: none;
-	}
 }
