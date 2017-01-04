@@ -319,6 +319,9 @@ div.leftcol {
 div.leftcol.large {
     width: 686px;
 }
+div.leftcol.small {
+	width: 458px;
+}
 
 div.rightcol {
 	width: 308px;
@@ -326,9 +329,11 @@ div.rightcol {
 	float: right;
 }
 div.rightcol.small {
-    width: 238px;
+	width: 238px;
 }
-
+div.rightcol.large {
+	width: 466px;
+}
 
 
 

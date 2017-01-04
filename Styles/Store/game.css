@@ -6,6 +6,7 @@ body.v6 .item_store_items_block h2,
 body.v6 .game_area_dlc_section h2,
 body.v6 .steam_curators_block h2,
 body.v6 #game_area_purchase h2.package_group,
+body.v6 .extra_content_spacer h2,
 .game_description_column .block .block_header h4,
 .user_reviews_header {
 	text-transform: uppercase;
@@ -4136,10 +4137,10 @@ div.agegate_text_container > h2 {
 .season_video_extras_summary {
 	float: right;
 	position: relative;
-	top: -18px;
+	top: -27px;
 	text-transform: uppercase;
 	font-size: 12px;
-	color: #4582A5;
+	color: #c6d4df;
 	display: inline-block;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
