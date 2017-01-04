@@ -3163,6 +3163,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	line-height: 16px;
 	font-size: 14px;
 	line-height: 20px;
+	overflow: hidden;
 }
 
 /* preview images from BBCode */
@@ -3225,6 +3226,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	overflow: hidden;
 }
 
 .sharedFilePreviewYouTubeVideo img {

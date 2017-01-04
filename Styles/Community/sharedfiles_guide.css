@@ -33,6 +33,7 @@
 	line-height: 22px;
 	padding-bottom: 16px;
 	padding-right: 8px;
+	overflow: hidden;
 }
 
 .guideAuthors

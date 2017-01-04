@@ -332,7 +332,7 @@ function ReportItem()
 
 	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
 	var explanation = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	explanation.html( 'Please enter the reason why you are reporting this item for violating the Steam Terms of Service. This cannot be undone.' );
+	explanation.html( 'Please describe the way in which this item is in violation of the Steam Terms of Service. Please include any relevant information or links. Filing this report cannot be undone.' );
 
 	var dmcaLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
 	dmcaLink.html( 'If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="https://steamcommunity.com/dmca/create/" target="_blank">here</a>.' );

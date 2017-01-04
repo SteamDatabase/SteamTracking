@@ -2470,19 +2470,9 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			contextid = APPWIDE_CONTEXT;
 	}
 
-	var inventory = g_ActiveUser.getInventory( appid, contextid );
-	var bAlreadyInitialized = inventory.initialized;
-	var bSellNow = g_bSellItemOnInventoryLoad;
-	g_bSellItemOnInventoryLoad = false;
-
-
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
 	var lastContextID = g_ActiveInventory ? g_ActiveInventory.contextid : null;
 	var lastPageCurrent = g_ActiveInventory ? g_ActiveInventory.m_iCurrentPage : 0;
-	if ( lastAppId != appid || contextid != lastContextID )
-	{
-		Filter.ClearFilter();
-	}
 
 	// if we're in the appwide context and looking for a specific asset, just scroll
 	//	to the asset in the appwide context rather than switching to the specific
@@ -2490,6 +2480,16 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	if ( assetid && lastAppId == appid && lastContextID == APPWIDE_CONTEXT )
 	{
 		contextid = APPWIDE_CONTEXT;
+	}
+
+	var inventory = g_ActiveUser.getInventory( appid, contextid );
+	var bAlreadyInitialized = inventory.initialized;
+	var bSellNow = g_bSellItemOnInventoryLoad;
+	g_bSellItemOnInventoryLoad = false;
+
+	if ( lastAppId != appid || contextid != lastContextID )
+	{
+		Filter.ClearFilter();
 	}
 
 	if ( SelectInventoryFromUser( g_ActiveUser, appid, contextid, bLoadCompleted ) )

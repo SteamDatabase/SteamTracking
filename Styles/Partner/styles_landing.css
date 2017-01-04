@@ -681,6 +681,9 @@ p {
 .th.app_options_header {
 	width: 132px;
 }
+.landingTable.itemdefs .td.workshop img {
+	vertical-align: middle;
+}
 
 .landingInfoTable {
 	width: 500px;

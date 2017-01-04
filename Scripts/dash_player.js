@@ -190,6 +190,7 @@ CDASHPlayer.prototype.Close = function()
 			this.m_oActiveMediaKeysSession.close();
 		}
 		this.m_oActiveMediaKeysSession = null;
+		this.m_nLicenseRenewalCount = 0;
 	}
 }
 
@@ -450,9 +451,31 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 						_player.CloseWithError( errType, 'Invalid Encryption Key' );
 					}
 				});
+
+				_player.m_nLicenseRenewalCount = 0;
+
 			},function( reason ) {
-				PlayerLog( 'Failed to update DRM session', reason );
-				_player.CloseWithError( 'drmerror', [ 'Update DRM Session Failure: ' + reason ] );
+
+				var msg = 'Update DRM Session Failure: ' + reason + ' [HTTP:' + xhr.status + ']';
+				if ( xhr.status == 500 )
+				{
+					var jsonResult = JSON.parse( String.fromCharCode.apply( null, new Uint8Array( xhr.response ) ) );
+					msg += ' [EResult:' + jsonResult.result +']';
+				}
+
+				PlayerLog( 'Failed to update DRM session: ', msg );
+
+				// only stop playback if it's an initial license request
+				if ( event.messageType == 'license-request' )
+					_player.CloseWithError( 'drmerror', [ msg ] );
+
+				// otherwise give the EME a few attempts to try to renew
+				if ( event.messageType == 'license-renewal' )
+				{
+					_player.m_nLicenseRenewalCount++;
+					if ( _player.m_nLicenseRenewalCount > 12 )
+						_player.CloseWithError( 'drmerror', [ msg + ' [Renewal Failure]' ] );
+				}
 			});
 		}
 	});
@@ -2210,7 +2233,21 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					// if VOD and a 403, then the user is no longer auth'd so attempt playback restart
 					if ( !_loader.m_player.BIsLiveContent() && xhr.status == 403 )
 					{
-						_loader.DownloadFailed( xhr.status );
+						var strResponse = '';
+						if ( xhr.response )
+						{
+							var textResponse = String.fromCharCode.apply( null, new Uint8Array( xhr.response ) );
+							if ( textResponse.length > 0 )
+							{
+								var rgResponse = textResponse.split( '\n' );
+								if ( rgResponse.length > 3 )
+								{
+									strResponse = $J( '<div/>' ).html( rgResponse[ 2 ] ).text();
+								}
+							}
+						}
+
+						_loader.DownloadFailed( xhr.status + ' [' + url + ' | ' + strResponse + ']' );
 						return;
 					}
 

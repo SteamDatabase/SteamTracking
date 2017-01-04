@@ -115,6 +115,7 @@
 
 .games_list_tab_icon img {
 	vertical-align: middle;
+	border-radius: 3px;
 }
 
 .games_list_tab_name {
@@ -199,6 +200,7 @@ a.games_list_tab:hover {
 .view_inventory_logo {
 	width: 904px;
 	height: 69px;
+	overflow: hidden;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-left: -6px;
@@ -236,7 +238,6 @@ a.games_list_tab:hover {
 	float: right;
 	width: 350px;
 	position: relative;
-	margin-top: 7px;
 }
 
 .view_inventory_page.inventory_msg_ctn {
@@ -507,8 +508,11 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .pending_gifts_header span {
-	background-color: #252525;
+	background-color: #1b2838;
 	padding-right: 6px;
+}
+#tabcontent_pendinggifts.no_pending_gifts .pending_gifts_header span {
+	background-color: #1F1F1F;
 }
 
 .pending_gift {
@@ -567,8 +571,10 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 .pending_gift .gift_message {
 	color: #d7d7d7;
 	font-size: 16px;
-	font-weight: bold;
-	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAChCAIAAACJa0IwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpiMDI0ZGJgYCAL/ydW7f//1DOPgFmUmEGu3v+khBuS/v/khDtU/38y44xqZmAxk0zzAAIMABL1Grxx35GEAAAAAElFTkSuQmCC' );
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAChCAIAAACJa0IwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpiMDI0ZGJgYCAL/ydW7f//1DOPgFmUmEGu3v+khBuS/v/khDtU/38y44xqZmAxk0zzAAIMABL1Grxx35GEAAAAAElFTkSuQmCC' );
 	background-repeat: repeat-x;
 	background-position: top;
 }
@@ -906,11 +912,15 @@ body.migrated_profile_page .inventory_rightnav {
 		display: none;
 	}
 
-	html.responsive .view_inventory_page .inventory_page_left,
-	html.responsive .view_inventory_logo
+	html.responsive .view_inventory_page .inventory_page_left
 	{
 		width: auto;
 		height: auto;
+	}
+	html.responsive .view_inventory_logo
+	{
+		width: auto;
+		max-height: 69px;
 	}
 
 	html.responsive #contextselect,

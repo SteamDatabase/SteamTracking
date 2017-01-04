@@ -7,13 +7,12 @@
 .inventory_history_pagingrow {
 	height: 30px;
 	line-height: 30px;
-	background-color: #000000;
+	background-color: rgba( 0, 0, 0, 0.3);
 	color: #959595;
 	padding: 0px 8px;
 	font-size: 12px;
 
 	margin-bottom: 3px;
-	border-bottom: 1px solid #4D4D4E;
 }
 
 .inventory_history_nextbtn {
@@ -22,8 +21,8 @@
 
 .tradehistoryrow {
 	position: relative;
-	
-	background-color: #1f1f1f;
+
+	background-color: rgba( 0, 0, 0, 0.3);
 
 	padding-left: 0;
 	padding-top: 19px;
@@ -35,7 +34,7 @@
 }
 
 .tradehistoryrow.even {
-	background-color: #1a1a1a;
+	background-color: rgba( 0, 0, 0, 0.5);
 }
 
 .tradehistoryrow a,.tradehistoryrow a:hover,.tradehistoryrow a:visited {

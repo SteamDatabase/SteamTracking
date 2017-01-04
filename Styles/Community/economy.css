@@ -356,6 +356,10 @@ a.item_action:hover {
 	top: 0;
 }
 
+.item_desc_game_info .item_desc_game_icon > img {
+	border-radius: 3px;
+}
+
 
 
 /* inventory paging */
@@ -418,6 +422,11 @@ a.item_action:hover {
 
 .filter_ctn.inventory_filters #filter_control {
 	width: 416px;
+	border-radius: 3px;
+	border: 1px solid rgba( 0, 0, 0, 0.3);
+	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
+	padding-bottom: 1px;
+	background-color: rgba( 0, 0, 0, 0.2);
 }
 
 .filter_ctn {

@@ -642,7 +642,7 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 
 	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
 	var explanation = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	explanation.html( 'Please enter the reason why you are reporting this item for violating the Steam Terms of Service. This cannot be undone.' );
+	explanation.html( 'Please describe the way in which this item is in violation of the Steam Terms of Service. Please include any relevant information or links. Filing this report cannot be undone.' );
 
 	var textArea = dialog.m_$Content.find( 'textarea' );
 	textArea.addClass( "report_dialog_text_area" );

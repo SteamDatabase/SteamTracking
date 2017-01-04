@@ -63,13 +63,13 @@ h5 {
 	margin:0;
 	padding-top:2px;
 	padding-bottom:2px;
-	color:#898989;
+	color:#56707f;
 	font-weight:normal;
 	font-size: 12px;
 }
 
 h6 {
-	color:#898989;
+	color:#56707f;
 	font-weight:normal;
 	font-size:12px;
 	margin:0;
@@ -126,6 +126,7 @@ a.games_list_tab:hover {
 
 .gameListRow {
 	min-height: 69px;
+	height: auto;
 	margin-bottom: 4px;
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 8px;
@@ -167,9 +168,9 @@ a.games_list_tab:hover {
 
 .gameListRowItem {
 	font-size: 11px;
-	color: #939393;
+	color: #7092a5;
 	position: relative;
-	overflow: hidden;
+	padding: 5px 0px 0px 0px;
 }
 
 .gameListItemActive {
@@ -183,7 +184,8 @@ a.games_list_tab:hover {
 
 .recentAchievements
 {
-float:right;
+	float:right;
+	line-height: 14px;
 }
 
 .recentAchievementsImg {
@@ -220,7 +222,7 @@ float: right;
 
 .sort_message {
 	white-space: nowrap;
-	color: #67c1f5;
+	color: #8F98A0;
 }
 
 #wishlist_sort_options {
@@ -229,17 +231,17 @@ text-align: right;
 }
 
 .sort_options {
-color: #939393;
+color: #8F98A0;
 margin-bottom: 8px;
 }
 
 .sort_options .selected_sort {
-color: #B0AEAC;
+color: #fff;
 }
 
 .sort_options a {
 text-decoration: underline;
-color: #B0AEAC;
+color: #67c1f5;
 }
 
 .sort_options a:hover {
@@ -255,7 +257,7 @@ color: #EBEBEB;
 .price, .match_price {
 	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
 	font-size: 11px;
-	color: #b0aeac;
+	color: #fff;
 }
 
 .discount_block {
@@ -491,12 +493,13 @@ a.popup_menu_item2:hover h5 {
 
 .pullup_item {
 	display: inline-block;
-	background-color: rgba( 0, 0, 0, 0.4 );
+	background-color: rgba( 103, 193, 245, 0.2 );
 	padding:3px 8px 0px 0px;
 	border-radius: 2px;
 	margin-right:6px;
 	cursor: pointer;
 	line-height: 18px;
+	color: #66c0f4;
 }
 .pullup_item:hover, a.pullup_item:hover {
 	background-color: rgba( 102, 192, 244, 0.4 );
@@ -504,7 +507,7 @@ a.popup_menu_item2:hover h5 {
 }
 
 a.pullup_item {
-	color: #939393;
+	color: #66c0f4;
 }
 
 .menu_ico {
@@ -615,7 +618,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	padding: 8px 1%;
 
 	font-size: 11px;
-	color: #939393;
+	color: #56707f;
 	background-color: rgba( 84, 133, 183, 0.2);
 }
 .wishlistRow:hover {
@@ -880,7 +883,7 @@ body.migrated_profile_page #wishlist_comic {
 	padding: 8px 12px;
 
 	background: #5e5c5c;
-	background: -webkit-linear-gradient( top, #5e5c5c 5%, #403f40 95%);background: linear-gradient( to bottom, #5e5c5c 5%, #403f40 95%);}
+	background: -webkit-linear-gradient( top, #374858 5%, #263646 95%);background: linear-gradient( to bottom, #374858 5%, #263646 95%);}
 
 .clientConnArea #fullstretch {
     width: 100%;
@@ -923,7 +926,7 @@ body.migrated_profile_page #wishlist_comic {
     text-transform: uppercase;
     font-size: 12px;
     margin: 0;
-    color: #A0A0A0;
+    color: #ffffff;
 }
 
 .clientConnMachineText {
@@ -956,6 +959,10 @@ body.migrated_profile_page #wishlist_comic {
     margin-top: 4px;
 }
 
+h5.hours_played {
+	height: 15px;
+}
+
 .clientConnStatusBlock {
     text-align: center;
     margin-top: 12px;
@@ -975,8 +982,6 @@ body.migrated_profile_page #wishlist_comic {
 
 .clientConnItemBlock {
     float: right;
-	margin-top: 12px;
-	margin-right: 5%;
 	white-space: nowrap;
 }
 
@@ -995,8 +1000,18 @@ body.migrated_profile_page #wishlist_comic {
 .clientConnItemIcon {
     display: inline-block;
     width: 40px;
-    height: 32px;
+    height: 26px;
 	padding-top: 6px;
+	background-size: 40px 64px;
+	background-position: center top;
+	background-repeat: no-repeat
+}
+
+.clientConnItemIcon:hover {
+	background-size: 40px 64px;
+	background-position: center bottom ;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 #uninstallConfirm {
@@ -1121,6 +1136,7 @@ body.migrated_profile_page #wishlist_comic {
 
 	html.responsive .gameListRowItem, html.responsive .wishlistRowItem {
 		overflow: visible;
+		height: auto;
 	}
 
 	html.responsive .gameListRow {
