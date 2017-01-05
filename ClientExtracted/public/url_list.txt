@@ -294,6 +294,7 @@ SupportAppPage
 	url			"https://support.steampowered.com/kb_article.php?appid=%p1%"
 	method		"external"
 }
+
 HelpAppPage
 {
 	url			"%help%wizard/HelpWithGame/?appid=%p1%"
@@ -305,9 +306,29 @@ HelpWithLogin
 	url			"%help%wizard/HelpWithLogin?redir=clientlogin"
 	Method		"internal"
 }
+
 HelpVacBans
 {
 	url			"%help%wizard/VacBans"
+	method		"internal"
+}
+
+HelpChangePassword
+{
+	url			"%help%wizard/HelpChangePassword?redir=clientlogin"
+	method		"internal"
+}
+
+HelpChangeEmail
+{
+	url			"%help%wizard/HelpChangeEmail?redir=clientlogin"
+	method		"internal"
+}
+
+
+HelpAppErrorPage
+{
+	url			"%help%wizard/HelpWithAppError/?appid=%p1%&error=%p2%"
 	method		"internal"
 }
 

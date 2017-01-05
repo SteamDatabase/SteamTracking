@@ -553,6 +553,7 @@
  T V_binarytohex
  T V_hextobinary
  T V_isbreakablewspace
+ T V_isbreakablewspace32
  T V_isnumeric
  T V_isstrlower
  T V_isvalidhex

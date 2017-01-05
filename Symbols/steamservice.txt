@@ -1064,6 +1064,10 @@
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
  T CStdMemAlloc::CubLogicalAllocated()
+ T CStdMemAlloc::CubSBHAllocated()
+ T CStdMemAlloc::CubSBHCommitted()
+ T CStdMemAlloc::CubSBHFree()
+ T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
@@ -3278,6 +3282,7 @@
  fcntl$UNIX2003
  fflush
  fgetc
+ fileno
  fopen$UNIX2003
  fprintf
  fread

@@ -4,6 +4,7 @@ ControllerRegistration
 	vertical-align: center;
 	width: 100%;
 	height: 100%;
+    font-size: 20px;
 }
 
 .Step_RegisteringCurrentAccount,
@@ -57,7 +58,7 @@ ControllerRegistration
 {
 	margin-top: 8px;
 	margin-bottom: 16px;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .FirmwareUpdateDescription
@@ -175,7 +176,8 @@ DropDownMenu.DropDownMenuVisible
     height: 128px;
 }
 
-#LEDSaturationContainer
+#LEDSaturationContainer,
+#GuideBrightnessContainer
 {
     visibility: collapse;
 }
@@ -192,7 +194,9 @@ DropDownMenu.DropDownMenuVisible
 	color: #ffffff99;
 }
 
-.SupportsLEDColor #LEDColorContainer,.SupportsLEDColor #LEDSaturationContainer 
+.SupportsLEDColor #LEDColorContainer,
+.SupportsLEDColor #LEDSaturationContainer,
+.SupportsLEDBrightness #GuideBrightnessContainer
 {
     visibility: visible;
 }
@@ -252,8 +256,8 @@ DropDownMenu.DropDownMenuVisible
 
 #RegistrationSubDescription
 {
-	font-size: 24px;
-	margin-bottom: 32px;
+	font-size: 20px;
+	margin-bottom: 16px;
 }
 
 #ControllerNameEntry

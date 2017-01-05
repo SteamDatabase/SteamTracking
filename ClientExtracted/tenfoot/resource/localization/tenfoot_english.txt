@@ -1043,6 +1043,7 @@
 	"SettingsController_PS4Support"						"PS4 Configuration Support"
 	"SettingsController_XBoxSupport"					"Xbox Configuration Support"
 	"SettingsController_GenericGamepadSupport"			"Generic Gamepad Configuration Support"
+	"SettingsController_CheckGuideButton"				"Guide Button Focuses Steam"
 
 	"SettingsController_Support"						"SUPPORT"
 	"SettingsController_Calibrate"						"CALIBRATE"
@@ -1428,6 +1429,8 @@
 	"Checkout_ShippingInfo_cannot_ship_missing_fields" "We cannot ship to the address you've provided because parts of your address are missing or look invalid."
 	"Checkout_ShippingInfo_cannot_ship_no_apo_fpo_po" "We cannot ship your order to P.O. Boxes, APO, FPO, or DPO addresses."
 	"Checkout_ShippingInfo_cannot_ship_invalid_characters" "We cannot ship your order to the address that you've provided because it contains characters that are not latin-based."
+	"Checkout_ShippingInfo_cannot_ship_us_territories" "We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States."
+	"Checkout_ShippingInfo_cannot_ship_unsupported_postal_code" "We cannot ship to the address you've provided because it appears that your postal code is in a special region that we cannot ship to."
 
 
 	"Checkout_Review_Title"						"Review & Purchase"
@@ -1642,6 +1645,7 @@
 	"Controller_Registration_ProgressTitle"	"Registering..."
 	"Controller_Registration_Personalize_Title" "PERSONALIZE YOUR CONTROLLER"
 	"Controller_Registration_Personalize_Submit" "Submit"
+	"Controller_Registration_Personalize_Cancel" "Cancel"
 	"Controller_Registration_Migrating_Title" "MIGRATING CONFIGURATIONS..."
 	"Controller_Registration_Selecting_Title" "SELECT CONTROLLER ACCOUNT"
 	"Controller_Registration_Selecting_Desc" "We haven't seen your controller on this account before. Would you like to register it, or use the configurations from another account?"
@@ -1988,6 +1992,7 @@
 	"Library_Details_SourceMode_MouseJoystick_Title"	"MOUSE-LIKE JOYSTICK"
 	"Library_Details_SourceMode_MouseRegion_Title"		"MOUSE REGION"
 	"Library_Details_SourceMode_RadialMenu_Title"		"RADIAL MENU"
+	"Library_Details_SourceMode_SingleButton_Title"		"SINGLE BUTTON"
 
 	"Library_Details_Source_Title_none"			"UNASSIGNED"
 	"Library_Details_Source_Title_left_trackpad"		"L Pad"
@@ -2213,6 +2218,8 @@
 	"Library_Details_FieldLabel_TestHapticRepeat"	"Test Haptic Repeat Count"
 	"Library_Details_FieldLabel_TestHapticOn"		"Test Haptic On Duration"
 	"Library_Details_FieldLabel_TestHapticOff"		"Test Haptic Off Duration"
+	"Library_Details_FieldLabel_ButtonClick"			"Button Click"
+	"Library_Details_FieldLabel_ButtonTouch"			"Button Touch"
 
 	"Library_Details_FieldLabel_MouseRegion_Scale"	"Region Size"
 	"Library_Details_FieldLabel_MouseRegion_PositionX"	"Horizontal Position"
@@ -2251,6 +2258,7 @@
 	"Library_Details_SourceMode_Title_MouseJoystick"		"Mouse Joystick"
 	"Library_Details_SourceMode_Title_MouseRegion"		"Mouse Region"
 	"Library_Details_SourceMode_Title_RadialMenu"		"Radial Menu"
+	"Library_Details_SourceMode_Title_SingleButton"		"Single Button"
 
 	"Library_Details_ModeShift_Title_None"				"None"
 	"Library_Details_ModeShift_Title_LeftTrigger"		"Left Trigger Full Pull"
@@ -2274,7 +2282,7 @@
 	"Library_AppControllerSettings_Title"	"Controller Application Options"
 	"Library_Details_EnableRumble"			"[Experimental] Rumble Emulation"
 	"Library_SetAppRumbleFrequency_Label"	"Rumble Emulation Frequency Setting"
-	"Library_Details_EnableConfigurator"		"Use Steam Configuration for PS4 Controllers"
+	"Library_Details_EnableConfigurator"		"Use Steam Configuration for Non-Steam Controllers"
 	"Library_Details_EnableActionSetDisplay"	"Display Action Set on Change"
 	"Library_Details_EnableActionSetBeep"		"Beep on Change"
 
@@ -2384,6 +2392,7 @@
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Circle"	"Circular"
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Horizontal"	"Horizontal"
 	"Library_Controller_Property_Value_Scroll_Wheel_Type_Vertical"	"Vertical"
+
 
 	"Library_Details_Controller_Personal"				"Personal"
 	"Library_Details_Controller_Community"				"Community"
@@ -4073,7 +4082,6 @@
 	"SteamUI_UpdateControllerFirmware_Failure_platform"			"Firmware update failed: your platform is currently unsupported."
 	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
 	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Your controller requires a one-time wired update.\n\nConnect the controller with the USB cable, and the update will start automatically.\n"
-	"SteamUI_UpdateControllerFirmware_NotFromLink"	"There is new firmware available for your Steam Controller.\n\nThis will require you to connect the included USB cable from your controller to the host PC running Steam. You can't update by connecting to the Steam Link directly."
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
 	"SteamUI_UpdateControllerFirmware_HardFailure" "Warning: One of your Steam controllers has been disabled and will not be reconfigured or programmed for games because its firmware is out of date and Steam was unable to fetch updated firmware information."
 	"SteamUI_UpdateDongleFirmware_OutofDate"	"ERROR: You're using a Controller Dongle that is too old. Come get a new one from the Controller Team."
@@ -4723,6 +4731,9 @@
 	"SettingsController_ModifiedByOfficial" "Modified by you, based on the official game configuration."
 	"SettingsController_SwapToUnifiedPad"	"Swap To Unified Pad"
 	"SettingsController_SwapToSplitPad"	"Swap To Split Pad"
+	"SettingsController_GenericJoystickSetupText"	"Generic Gamepad Detected.  This controller can be set up as a generic x-input style controller by selecting Configure Buttons here.  It will then function within Big Picture as an x-input controller.  If Steam Controller Generic Gamepad Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
+	"SettingsController_PS4SetupText"	"Playstation Gamepad Detected.  If Steam Controller PS4 Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
+	"SettingsController_XBoxSetupText"	"XBox Gamepad Detected.  If Steam Controller XBox Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
 	"ControllerNameOnAccount"		"{s:controllername}"
 	"ControllerTypeOnAccount"		"{s:accountname}'s {s:controllertype}"
 	"ControllersOnAccount"			"{s:accountname}'s Controllers"
@@ -5017,6 +5028,10 @@
 	"ControllerBinding_GyroButtonInvert_joystick_move_Off_Description" "If set, gyro will turn off when the button is pressed."
 	"ControllerBinding_MouseSensitivity_joystick_move" "Mouse Sensitivity"
 	"ControllerBinding_MouseSensitivity_joystick_move_Description" "Sensitivity of the mouse cursor when the virtual joystick's output is set to Mouse."
+	"ControllerBinding_HorizontalSensitivity_joystick_move" "Horizontal Scale"
+	"ControllerBinding_HorizontalSensitivity_joystick_move_Description" "Scale the horizontal sensitivity.  This will change the motion of the horizontal axis relative to the vertical."
+	"ControllerBinding_VerticalSensitivity_joystick_move" "Vertical Scale"
+	"ControllerBinding_VerticalSensitivity_joystick_move_Description" "Scale the vertical sensitivity. This will change the motion of the vertical axis relative to the horizontal."
 	//Joystick Mouse
 	"ControllerBinding_ModeDropDown_Joystick_Mouse" "Style of Input - Joystick Mouse"
 	"ControllerBinding_ModeDropDown_Joystick_Mouse_Description" "This input controls a mouse with a joystick.  This is intended for using a joystick with mouse based applications.  As the output is a mouse, the application must support mouse based output."
@@ -5503,6 +5518,10 @@
 	"ControllerBinding_GyroButtonInvertMouseJoystick_On_Description" "If set, gyro will turn on when the button is pressed."
 	"ControllerBinding_GyroButtonInvertMouseJoystick_Off" "Gyro Button Behavior - Off"
 	"ControllerBinding_GyroButtonInvertMouseJoystick_Off_Description" "If set, gyro will turn off when the button is pressed."
+	"ControllerBinding_HorizontalSensitivity_joystick_mouse" "Horizontal Scale"
+	"ControllerBinding_HorizontalSensitivity_joystick_mouse_Description" "Scale the horizontal sensitivity.  This will change the motion of the horizontal axis relative to the vertical."
+	"ControllerBinding_VerticalSensitivity_joystick_mouse" "Vertical Scale"
+	"ControllerBinding_VerticalSensitivity_joystick_mouse_Description" "Scale the vertical sensitivity. This will change the motion of the vertical axis relative to the horizontal."
 	// Mouse Region
 	"ControllerBinding_HapticIntensityMouseRegion" "Haptic Intensity"
 	"ControllerBinding_HapticIntensityMouseRegion_Description" "This sets the intensity of the haptics."

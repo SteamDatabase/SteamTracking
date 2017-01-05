@@ -371,11 +371,44 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
 }
 
-.ControllerTypePS4 #BackgroundController
+.controller_ps4 #BackgroundController
 {
 	background-position: 500px 95px;
     background-size: 725px 421px;
 	background-image: url("file://{images}/library/controller/controller_config_controller_ps4.png");
+    wash-color: #102f4b72;
+}
+
+.controller_ps3 #BackgroundController
+{
+	background-position: 500px 54px;
+    background-size: 725px 421px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_ps3.png");
+    wash-color: #102f4b72;
+}
+
+
+.controller_xboxone #BackgroundController
+{
+	background-position: 500px 95px;
+    background-size: 725px 421px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_xboxone.png");
+    wash-color: #102f4b72;
+}
+
+.controller_xbox360 #BackgroundController
+{
+	background-position: 434px 60px;
+    background-size: 850px 494px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_x360.png");
+    wash-color: #102f4b72;
+}
+
+.controller_generic #BackgroundController
+{
+	background-position: 434px 60px;
+    background-size: 850px 494px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_generic.png");
     wash-color: #102f4b72;
 }
 
@@ -387,13 +420,21 @@ SelectMousePosition
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.ControllerTypePS4 #BackgroundBaseLinesLeft 
+.controller_ps4 #BackgroundBaseLinesLeft,
+.controller_ps3 #BackgroundBaseLinesLeft,
+.controller_xboxone #BackgroundBaseLinesLeft,
+.controller_xbox360 #BackgroundBaseLinesLeft,
+.controller_generic #BackgroundBaseLinesLeft
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
     background-position: 190px -74px;
 }
 
-.ControllerTypePS4 #BackgroundBaseLinesRight
+.controller_ps4 #BackgroundBaseLinesRight,
+.controller_ps3 #BackgroundBaseLinesRight,
+.controller_xboxone #BackgroundBaseLinesRight,
+.controller_xbox360 #BackgroundBaseLinesRight,
+.controller_generic #BackgroundBaseLinesRight
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
     background-position: 190px -70px;
@@ -419,7 +460,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_1.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.LeftTriggerSelected
+.controller_ps4 #BackgroundLines.LeftTriggerSelected,
+.controller_ps3 #BackgroundLines.LeftTriggerSelected,
+.controller_xboxone #BackgroundLines.LeftTriggerSelected,
+.controller_xbox360 #BackgroundLines.LeftTriggerSelected,
+.controller_generic #BackgroundLines.LeftTriggerSelected
 {
     background-position: -125px -73px;
 }
@@ -429,17 +474,30 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.LeftBumperSelected
+.controller_ps4 #BackgroundLines.LeftBumperSelected,
+.controller_ps3 #BackgroundLines.LeftBumperSelected,
+.controller_xboxone #BackgroundLines.LeftBumperSelected,
+.controller_xbox360 #BackgroundLines.LeftBumperSelected,
+.controller_generic #BackgroundLines.LeftBumperSelected
+
 {
     background-position: -125px -73px;
 }
 
-.ControllerTypePS4 #BackgroundLines.LeftGripSelected
+.controller_ps4 #BackgroundLines.LeftGripSelected, 
+.controller_ps3 #BackgroundLines.LeftGripSelected,
+.controller_xboxone #BackgroundLines.LeftGripSelected,
+.controller_xbox360 #BackgroundLines.LeftGripSelected,
+.controller_generic #BackgroundLines.LeftGripSelected
 {
     visibility: collapse;
 }
 
-.ControllerTypePS4 #BackgroundLines.RightGripSelected
+.controller_ps4 #BackgroundLines.RightGripSelected,
+.controller_ps3 #BackgroundLines.RightGripSelected,
+.controller_xboxone #BackgroundLines.RightGripSelected,
+.controller_xbox360 #BackgroundLines.RightGripSelected,
+.controller_generic #BackgroundLines.RightGripSelected
 {
     visibility: collapse;
 }
@@ -455,7 +513,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.RightTriggerSelected
+.controller_ps4 #BackgroundLines.RightTriggerSelected,
+.controller_ps3 #BackgroundLines.RightTriggerSelected,
+.controller_xboxone #BackgroundLines.RightTriggerSelected,
+.controller_xbox360 #BackgroundLines.RightTriggerSelected,
+.controller_generic #BackgroundLines.RightTriggerSelected
 {
     background-position: -62px -70px;
 }
@@ -466,7 +528,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_6.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.RightBumperSelected
+.controller_ps4 #BackgroundLines.RightBumperSelected,
+.controller_ps3 #BackgroundLines.RightBumperSelected,
+.controller_xboxone #BackgroundLines.RightBumperSelected,
+.controller_xbox360 #BackgroundLines.RightBumperSelected,
+.controller_generic #BackgroundLines.RightBumperSelected
 {
     background-position: -62px -70px;
 }
@@ -486,18 +552,28 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.SlotOneSelected
+.controller_ps4 #BackgroundLines.DPadSelected,
+.controller_ps3 #BackgroundLines.DPadSelected,
+.controller_xboxone #BackgroundLines.LeftJoystickSelected,
+.controller_xbox360 #BackgroundLines.LeftJoystickSelected,
+.controller_generic #BackgroundLines.LeftJoystickSelected
 {
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
     background-position: -120px -73px;
-} 
+}
 
 #BackgroundLines.SlotTwoSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.SlotTwoSelected
+.controller_ps4 #BackgroundLines.LeftJoystickSelected,
+.controller_ps3 #BackgroundLines.LeftJoystickSelected,
+.controller_xboxone #BackgroundLines.DPadSelected,
+.controller_xbox360 #BackgroundLines.DPadSelected,
+.controller_generic #BackgroundLines.DPadSelected
 {
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
     background-position: -120px -73px;
 }
 
@@ -506,7 +582,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.SlotThreeSelected
+.controller_ps4 #BackgroundLines.SlotThreeSelected,
+.controller_ps3 #BackgroundLines.SlotThreeSelected,
+.controller_xboxone #BackgroundLines.SlotThreeSelected,
+.controller_xbox360 #BackgroundLines.SlotThreeSelected,
+.controller_generic #BackgroundLines.SlotThreeSelected
 {
     background-position: -62px -73px;
 }
@@ -516,7 +596,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_10.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.SlotABXYSelected
+.controller_ps4 #BackgroundLines.SlotABXYSelected,
+.controller_ps3 #BackgroundLines.SlotABXYSelected,
+.controller_xboxone #BackgroundLines.SlotABXYSelected,
+.controller_xbox360 #BackgroundLines.SlotABXYSelected,
+.controller_generic #BackgroundLines.SlotABXYSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
     background-position: -62px -73px;
@@ -527,7 +611,11 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.SlotFourSelected
+.controller_ps4 #BackgroundLines.SlotFourSelected,
+.controller_ps3 #BackgroundLines.SlotFourSelected,
+.controller_xboxone #BackgroundLines.SlotFourSelected,
+.controller_xbox360 #BackgroundLines.SlotFourSelected,
+.controller_generic #BackgroundLines.SlotFourSelected
 {
     background-position: -62px -73px;
 }
@@ -537,9 +625,23 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.BackButtonSelected
+.controller_ps4 #BackgroundLines.BackButtonSelected
 {
     background-position: -175px -130px;
+}
+
+.controller_xboxone #BackgroundLines.BackButtonSelected
+{
+    background-position: 200px 20px;
+    background-size: 75%;
+}
+
+.controller_ps3 #BackgroundLines.BackButtonSelected,
+.controller_xbox360 #BackgroundLines.BackButtonSelected,
+.controller_generic #BackgroundLines.BackButtonSelected
+{
+    background-position: 180px 15px;
+    background-size: 75%;
 }
 
 #BackgroundLines.StartButtonSelected
@@ -547,9 +649,23 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_13.png");
 }
 
-.ControllerTypePS4 #BackgroundLines.StartButtonSelected
+.controller_ps4 #BackgroundLines.StartButtonSelected
 {
     background-position: -7px -130px;
+}
+
+.controller_xboxone #BackgroundLines.StartButtonSelected
+{
+    background-position: 225px 20px;
+    background-size: 75%;
+}
+
+.controller_ps3 #BackgroundLines.StartButtonSelected,
+.controller_xbox360 #BackgroundLines.StartButtonSelected,
+.controller_generic #BackgroundLines.StartButtonSelected
+{
+    background-position: 245px 15px;
+    background-size: 75%;
 }
 
 .HasMultipleActionSets #BackgroundController
@@ -583,7 +699,7 @@ SelectMousePosition
     visibility: collapse;
 }
 
-.ControllerTypePS4 #PS4TrackpadContainer
+.controller_ps4 #PS4TrackpadContainer
 {
     visibility: visible;
 }
@@ -760,22 +876,43 @@ SelectMousePosition
 	margin-right: 24px;
 }
 
-.ModeWrapper.SteamController
+.ModeWrapper.SteamController,
+.ModeWrapper.LJoyCenter
 {
 	visibility: visible;
 }
 
-.ControllerTypePS4 .ModeWrapper.SteamController
+.controller_ps4 .ModeWrapper.SteamController,
+.controller_ps3 .ModeWrapper.SteamController,
+.controller_xboxone .ModeWrapper.SteamController,
+.controller_xbox360 .ModeWrapper.SteamController,
+.controller_generic .ModeWrapper.SteamController,
+.controller_xboxone .ModeWrapper.LJoyCenter,
+.controller_xbox360 .ModeWrapper.LJoyCenter,
+.controller_generic .ModeWrapper.LJoyCenter,
+.controller_ps4 .ModeWrapper.LJoyLeft
+.controller_ps3 .ModeWrapper.LJoyLeft
 {
 	visibility: collapse;
 }
 
-.ControllerTypePS4 .ModeWrapper.TraditionalController
+
+.controller_ps4 .ModeWrapper.TraditionalController,
+.controller_ps4 .ModeWrapper.LJoyCenter,
+.controller_ps3 .ModeWrapper.TraditionalController,
+.controller_ps3 .ModeWrapper.LJoyCenter,
+.controller_xboxone .ModeWrapper.TraditionalController,
+.controller_xbox360 .ModeWrapper.TraditionalController,
+.controller_generic .ModeWrapper.TraditionalController,
+.controller_xboxone .ModeWrapper.LJoyLeft,
+.controller_xbox360 .ModeWrapper.LJoyLeft,
+.controller_generic .ModeWrapper.LJoyLeft
 {
 	visibility: visible;
 }
 
-.ModeWrapper.TraditionalController
+.ModeWrapper.TraditionalController,
+.ModeWrapper.LJoyLeft
 {
 	visibility: collapse;
 }
@@ -929,17 +1066,26 @@ Label.ModeTitle
     visibility: visible;
 }
 
-.ControllerTypePS4 .BindingButton.Steam
+.controller_ps4 .BindingButton.Steam,
+.controller_ps3 .BindingButton.Steam,
+.controller_xboxone .BindingButton.Steam,
+.controller_xbox360 .BindingButton.Steam,
+.controller_generic .BindingButton.Steam
 {
     visibility: collapse;
 }
 
-.BindingButton.Playstation
+.BindingButton.Playstation,
+.BindingButton.Xbox
 {
     visibility: collapse;
 }
 
-.ControllerTypePS4 .BindingButton.Playstation
+.controller_ps4 .BindingButton.Playstation,
+.controller_ps3 .BindingButton.Playstation,
+.controller_xboxone .BindingButton.Xbox,
+.controller_xbox360 .BindingButton.Xbox,
+.controller_generic .BindingButton.Xbox
 {
     visibility: visible;
 }
@@ -1105,6 +1251,13 @@ ControllerPropertiesMode, ControllerPropertiesActivator
 	transform: translatey( 0px );
 }
 
+.controller_xboxone #GyroModeContainer,
+.controller_xbox360 #GyroModeContainer,
+.controller_generic #GyroModeContainer
+{
+    visibility: collapse;
+}
+
 #ModeContainer, #GyroModeContainer
 {
 	transition-property: opacity;
@@ -1172,7 +1325,8 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 }
 
 
-.ControllerTypePS4 #ModeContainer #ABXYButtonA
+.controller_ps4 #ModeContainer #ABXYButtonA,
+.controller_ps3 #ModeContainer #ABXYButtonA
 {
     background-image: url("file://{images}/library/controller/api/ps4_button_x.png");
 }
@@ -1187,7 +1341,8 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
-.ControllerTypePS4 #ModeContainer #ABXYButtonB
+.controller_ps4 #ModeContainer #ABXYButtonB,
+.controller_ps3 #ModeContainer #ABXYButtonB
 {
     background-image: url("file://{images}/library/controller/api/ps4_button_circle.png");
 }
@@ -1202,7 +1357,8 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
-.ControllerTypePS4 #ModeContainer #ABXYButtonX
+.controller_ps4 #ModeContainer #ABXYButtonX,
+.controller_ps3 #ModeContainer #ABXYButtonX
 {
     background-image: url("file://{images}/library/controller/api/ps4_button_square.png");
 }
@@ -1217,7 +1373,8 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
-.ControllerTypePS4 #ModeContainer #ABXYButtonY
+.controller_ps4 #ModeContainer #ABXYButtonY,
+.controller_ps3 #ModeContainer #ABXYButtonY
 {
     background-image: url("file://{images}/library/controller/api/ps4_button_triangle.png");
 }
@@ -1371,6 +1528,17 @@ ControllerSourceModeAbsoluteMouse.ControllerMode ControllerBindingButton
 	height: 48px;
 	margin-bottom: 8px;
 }
+
+#ModeContainer #ButtonClick
+{
+	background-image: url("file://{images}/library/controller/api/click_once.png");
+}
+
+#ModeContainer #ButtonTouch
+{
+	background-image: url("file://{images}/library/controller/api/touch.png");
+}
+
 
 #ModeContainer #AbsMouseClick
 {
@@ -3846,7 +4014,14 @@ ControllerConfigButton.ShowAllControllerTypes.SelectTemplateBindings .TemplateBi
     visibility: visible;
 }
 
-ControllerConfigBrowser.SelectRecommendedBindings .RecommendedBinding
+ControllerConfigButton.ShowAllControllerTypes.SelectRecommendedBindings .RecommendedBinding
+{
+    visibility: visible;
+}
+
+ControllerConfigBrowser.SelectRecommendedBindings .ShowAllRecommendedControllerTypes.RecommendedBinding,
+ControllerConfigBrowser.SelectRecommendedBindings .ShowAllControllerTypes.RecommendedBinding,
+ControllerConfigBrowser.SelectRecommendedBindings .MatchingControllerType.RecommendedBinding 
 {
 	visibility: visible;
 }

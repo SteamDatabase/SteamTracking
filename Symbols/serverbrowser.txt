@@ -8535,6 +8535,7 @@
  dlsym
  dup
  dyld_stub_binder
+ fcntl$UNIX2003
  fflush
  floor
  floorf

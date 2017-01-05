@@ -1,0 +1,49 @@
+/* styles for the simple text tooltip */
+
+.TextContents
+{
+    min-width: 80px;
+    max-width: 350px;
+    flow-children: down;
+}
+
+#TextLabel
+{
+    font-size: 18px;
+    color: white;
+    vertical-align: middle;
+}
+
+.GameModeTooltip #TextLabel
+{
+    font-size: 20px;
+	color: white;
+	horizontal-align: left;
+	vertical-align: middle;
+}
+
+.BindingsTooltip #TextLabel
+{
+    font-weight: thin;
+    color: #dddddd;
+    font-size: 17px;
+}
+
+.ShortTextTooltip #TextLabel
+{
+	font-size: 20px;
+	color: #c8c8c8;
+	horizontal-align: left;
+	vertical-align: middle;
+	max-width: 400px;
+}
+
+.LeaverConsequencesTooltip #TextLabel
+{
+	text-shadow: 0px 0px 6px 1.0 #ff000088;
+}
+
+.RecommendedUpgradeTooltip #TextLabel
+{
+	color: #FF9900;
+}

@@ -1335,7 +1335,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/ipcposix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemdrop.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/p2pengine/p2pjinglewrapper/p2pjinglewrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/p2pengine/p2pjinglewrapper/socketclient.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/p2pengine/p2pjinglewrapper/socketclient.h

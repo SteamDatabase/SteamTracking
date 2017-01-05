@@ -43,6 +43,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoutils.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/stat.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h

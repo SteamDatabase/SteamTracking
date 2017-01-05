@@ -1,0 +1,21 @@
+/* styles for the simple text tooltip */
+
+.TitleTextContents
+{
+    //width: 350px;
+    flow-children: down;
+}
+
+#TitleLabel
+{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    //text-transform: uppercase;
+}
+
+#TextLabel
+{
+    font-size: 18px;
+    color: #bbbbbb;
+}

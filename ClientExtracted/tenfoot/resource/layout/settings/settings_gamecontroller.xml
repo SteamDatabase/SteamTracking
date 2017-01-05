@@ -6,7 +6,7 @@
 
 	<SettingsPanel_GameController class="SettingsSection" defaultfocus="AddController" >
 		<Panel class="SettingsBottomPanel" >
-			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto" defaultfocus="AddController" rememberchildfocus="true" >
+			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent SettingsController" tabindex="auto" selectionpos="auto" defaultfocus="AddController" rememberchildfocus="true" >
 				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused();">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
@@ -16,12 +16,12 @@
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
 
+				<ToggleButton class="CheckBox" id="SettingsController_GuideButton" text="#SettingsController_CheckGuideButton" selectionpos="auto" onactivate="ControllerSetting_CheckGuideButton()" onfocus="OnNonControllerButtonFocused();" />				
 				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused();" />
 				<ToggleButton class="CheckBox" id="SettingsController_PS4Support" text="#SettingsController_PS4Support" selectionpos="auto" onactivate="ControllerSetting_PS4Support()" onfocus="OnNonControllerButtonFocused();" />
-<!--
-        <ToggleButton class="CheckBox" id="SettingsController_XBoxSupport" text="#SettingsController_XBoxSupport" selectionpos="auto" onactivate="ControllerSetting_XBoxSupport()" onfocus="OnNonControllerButtonFocused();" />
-        <ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused();" />
--->
+				<ToggleButton class="CheckBox" id="SettingsController_XBoxSupport" text="#SettingsController_XBoxSupport" selectionpos="auto" onactivate="ControllerSetting_XBoxSupport()" onfocus="OnNonControllerButtonFocused();" />
+				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused();" />
+
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
 
 				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" >
@@ -98,7 +98,9 @@
 			<Panel id="NoControllersFoundPanel" class="SettingsContent SettingsRightContent">
 					<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_NoControllersDetected" />
 			</Panel>
-				
+			<Panel id="GenericJoystick" class="SettingsContent SettingsRightContent">
+				<Label id="JoystickSetup" class="SettingsCallout" text="#SettingsController_GenericJoystickSetupText" />	
+			</Panel>
         </Panel>
 	</SettingsPanel_GameController>
 

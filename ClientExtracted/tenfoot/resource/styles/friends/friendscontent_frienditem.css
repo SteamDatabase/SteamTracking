@@ -128,9 +128,11 @@ FriendsContent_FriendItem.Offline:focus .FriendPersonaStatus
 	color: friendsonline_solid;
 }
 
+@define FriendNameInGame: #b3d92bff;
+
 .InGame .FriendName
 {
-	color: friendsingame_darkbg;
+	color: FriendNameInGame;
 }
 
 .FriendPersonaStatus
@@ -147,7 +149,7 @@ FriendsContent_FriendItem.Offline:focus .FriendPersonaStatus
 .InGame .FriendPersonaStatus
 {	
 	font-size: 20px;
-	color: friendsingame_darkbg;
+	color: FriendNameInGame;
 }
 
 .FriendPersonaStatusDetail
@@ -158,7 +160,7 @@ FriendsContent_FriendItem.Offline:focus .FriendPersonaStatus
 
 .InGame .FriendPersonaStatusDetail
 {
-	color: friendsingame_darkbg;
+	color: FriendNameInGame;
 }
 
 .FriendUnreadMessages

@@ -1,0 +1,10 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/reborn/rebornstyles.css" />
+	</styles>
+
+	<PopupContainer>
+		<Label text="Friends List" />
+	</PopupContainer>
+
+</root>

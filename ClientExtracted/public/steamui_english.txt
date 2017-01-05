@@ -2281,8 +2281,9 @@ You'll need to log out of OS X for the change to take effect."
 "SteamUI_SecuROM_Revoke_Error_Text"		"Uninstalling this application requires an internet connection."
 
 "Steam_status_installing"			"Installing"
-"steam_status_decrypting"			"Decrypting: "
+"Steam_status_decrypting"			"Decrypting: "
 "Steam_status_validating"			"Validating: "
+"Steam_status_verifying"			"Verifying: "
 
 "steam_status_launching"				"Launching"
 "steam_status_launching_progress"		"Launching: "
@@ -3555,6 +3556,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_downloads_installing"	"Installing"
 "steam_downloads_starting"	"Starting"
 "steam_downloads_validating"	"Validating"
+"steam_downloads_verifying"	"Verifying"
 "steam_downloads_preallocating" "Preallocating"
 "steam_downloads_uninstalling"	"Uninstalling"
 "steam_downloads_running"	"Running"
@@ -3984,7 +3986,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_9"		"app configuration unvailable"
 "Steam_AppUpdateError_10"		"disk read error"
 "Steam_AppUpdateError_11"		"disk write error"
-"Steam_AppUpdateError_12"		"not enough disk space"
+"Steam_AppUpdateError_12"		"not enough free disk space"
 "Steam_AppUpdateError_13"		"corrupt content files"
 "Steam_AppUpdateError_14"		"waiting for install disc"
 "Steam_AppUpdateError_15"		"invalid install path"
@@ -4015,6 +4017,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_40"		"content unavilable"
 "Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
 "Steam_AppUpdateError_42"		"library folder not writable"
+"Steam_AppUpdateError_43"		"not enough disk space free for user - check OS disk quota settings"
 
 
 "steam_subnav_featured"		"Featured"
@@ -4346,6 +4349,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_DeviceName" "DEVICE NAME"
 "Steam_Settings_Streaming_Status" "STATUS"
 "Steam_Settings_Streaming_EnableStreaming" "Enable streaming"
+"Steam_Settings_Streaming_SetPIN" "Set Steam Link PIN Code"
 "Steam_Settings_Streaming_UnsupportedPlatform" "Hosting is not currently supported on this platform"
 "Steam_Settings_Streaming_HostLabel" "Host options:"
 "Steam_Settings_Streaming_ClientLabel" "Client options:"
@@ -4414,6 +4418,9 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_Unsupported" "Connected"
 "Steam_Settings_Streaming_Self" "Logged in as me"
 "Steam_Settings_Streaming_Other" "Logged in as different user"
+
+"Steam_Settings_Streaming_PIN_Title" "Set Steam Link PIN Code"
+"Steam_Settings_Streaming_PIN_Text" "Set a numeric PIN code that must be entered on the Steam Link to stream from this computer:"
 
 "SteamUI_StreamingIntro_Title"		"Welcome to In-Home Streaming"
 "SteamUI_StreamingIntro"			"You are about to run this game on another computer and play it here using In-Home Streaming."

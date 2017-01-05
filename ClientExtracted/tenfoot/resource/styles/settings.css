@@ -313,6 +313,11 @@ Label.SettingsStatic
 	height: fit-children;
 }
 
+.SettingsLeftContent.SettingsController
+{
+	width: 800px;
+}
+
 .SettingsContentColumnv2
 {
 	horizontal-align: left;
@@ -1572,6 +1577,27 @@ KeyboardShortcut .Graphic
 .NonSteamControllerDetails .SteamControllerDetails
 {
     visibility: collapse;
+}
+
+#CalibrateButton,
+#GenericJoystick
+{
+    visibility: collapse;
+}
+
+.GenericJoystickSelected #GenericJoystick 
+{
+    visibility: visible;
+}
+
+.SettingsBindingsVisibile #GenericJoystick
+{
+    visibility: collapse;
+}
+
+.CanBeCalibrated #CalibrateButton
+{
+    visibility: visible;
 }
 
 .SettingsControllerName

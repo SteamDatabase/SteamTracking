@@ -43,7 +43,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styles.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine_new.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/textlayoutdrawcache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/texttexturecache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
@@ -58,6 +60,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowopenvroverlay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
@@ -68,6 +71,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/fillbrush.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/uilength.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/parseuieventparam.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/renderer/rendercommands.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/renderer/styleproperties.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uievent.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uievents.h

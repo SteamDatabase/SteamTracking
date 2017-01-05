@@ -534,7 +534,7 @@
  T CMilesLibrary::CloseDriver(_DIG_DRIVER*)
  T CMilesLibrary::GetContextOfDriver(_DIG_DRIVER*)
  T CMilesLibrary::GetSingleton()
- T CMilesLibrary::OpenDriver(int, int, int, int)
+ T CMilesLibrary::OpenDriver(int, int, int, void*)
  T CMilesLibrary::Shutdown()
  T CMilesLibrary::Startup()
  T CMilesLibrary::Unload()

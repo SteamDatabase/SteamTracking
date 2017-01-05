@@ -1,0 +1,96 @@
+/* styles for the generic text entry popup */
+
+.MessagePanel
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.MessageLabel
+{
+    font-size: 24px;
+    color: #FFFFFF;
+    horizontal-align: center;
+    vertical-align: center;
+    max-width: 400px;
+    text-align: center;
+}
+
+.PopupPanel.EconItemIconEnabled .MessageLabel
+{
+	text-align: left;
+}
+
+.ImageContainer
+{
+    flow-children:down;
+    vertical-align: center;
+    width: fit-children;
+    height: fit-children;
+}
+
+#TextEntry
+{
+    width: 100%;
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    horizontal-align: center;
+}
+
+.PopupPanel.Multiline #TextEntry
+{
+    height: 128px;
+    white-space: normal;
+}
+
+#EconItemImage
+{
+    width: 80px;
+    margin-right: 15px;
+    visibility: collapse;
+}
+
+.PopupPanel.EconItemIconEnabled #EconItemImage
+{
+    visibility: visible;
+}
+
+#HeroImage
+{
+    width: 80px;
+    margin-right: 15px;
+    visibility: collapse;
+}
+
+ .PopupPanel.HeroIconEnabled #HeroImage
+{
+    visibility: visible;
+}
+
+@keyframes 'DelayedFadeOpacityIn'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	80%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+
+.DelayedButtons #ButtonContainer
+{
+	animation-name: DelayedFadeOpacityIn;
+	animation-duration: 2.5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+}

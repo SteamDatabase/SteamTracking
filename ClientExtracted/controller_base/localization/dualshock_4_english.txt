@@ -1,4 +1,4 @@
-"SteamController"
+"DualShock4"
 {
 	"origin_ps4_button_x"						"X Button"
 	"origin_ps4_button_circle"					"Circle Button"

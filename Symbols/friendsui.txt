@@ -13901,6 +13901,7 @@
  dup
  dyld_stub_binder
  exit
+ fcntl$UNIX2003
  fflush
  floor
  floorf

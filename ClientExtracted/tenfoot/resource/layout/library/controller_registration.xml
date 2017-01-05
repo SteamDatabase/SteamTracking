@@ -95,6 +95,9 @@
 									<Button id="ButtonNext" class="ButtonNext MsgBoxButton Button" onactivate="FinishPersonalization();">
 										<Label id="NextButtonText" text="#Controller_Registration_Personalize_Submit" />
 									</Button>
+								<Button id="ButtonCancelSelecting" class="ButtonCancel MsgBoxButton Button" onactivate="AbortRegistration( false );">
+									<Label id="CancelButtonText" text="#Controller_Registration_Personalize_Cancel" />
+								</Button>
 								</Panel>
 								
 								<Panel class="Step_SelectingAccount StepButtons">

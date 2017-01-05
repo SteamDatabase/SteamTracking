@@ -5,6 +5,6 @@
 	
 	<DebugIndividualStyle>
 		<DebugStyleBlock id="StyleBlock" tabindex="0" />
-		<Label id="StyleLink" class="StyleLink" text="" />
+		<Label id="StyleLink" class="StyleLink" text="" html="true" />
 	</DebugIndividualStyle>	
 </root>

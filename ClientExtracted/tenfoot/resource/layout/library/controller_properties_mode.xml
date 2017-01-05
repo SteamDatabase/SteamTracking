@@ -91,6 +91,16 @@
 					<Slider id="ButtonDistanceFourButtons" direction="horizontal" />
 				</Panel>
 				
+				<!-- Single Button Mode -->
+				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonClick" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="SingleButtonClick" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad" advanced="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonTouch" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="SingleButtonTouch" />
+				</Panel>				
+				
 				<!-- Joystick Move Mode -->
 				<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
@@ -109,6 +119,10 @@
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBinding_joystick_move" />
 				</Panel>
 				<!-- Joystick Move Mode Advanced -->
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="trackpad" visualization="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
+					<DropDown id="AdaptiveCentering_joystick_move" />
+				</Panel>				
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
 					<DropDown id="CurveExponent_joystick_move" />
@@ -527,10 +541,6 @@
 
         <!-- Joystick Move Mode -->
         <!-- Joystick Move Mode Advanced -->
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="trackpad joystick ABXY button trigger" visualization="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
-					<DropDown id="AdaptiveCentering_joystick_move" />
-				</Panel>
 				<!-- 	Yaw for joystick requires a default 'center' - this is currently set at poweron.
 				since this value is unreliable, it means that yaw could be anything.
 				Roll uses gravity from the accelerometer to calibrate center, so it works regardless.
@@ -562,11 +572,18 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertY_joystick_move" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off">
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off" dependency="MouseOutput" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
 					<Slider id="MouseSensitivity_joystick_move" direction="horizontal" />
 				</Panel>
-
+				<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" visualization="off" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityHorizScale" />
+					<Slider id="HorizontalSensitivity_joystick_move" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" visualization="off" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
+					<Slider id="VerticalSensitivity_joystick_move" direction="horizontal" />
+				</Panel>
 
 				<!-- Joystick Mouse Mode -->
 				<!-- Joystick Mouse Mode Advanced -->
@@ -582,7 +599,14 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertY_joystick_mouse" />
 				</Panel>
-
+				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityHorizScale" />
+					<Slider id="HorizontalSensitivity_joystick_mouse" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
+					<Slider id="VerticalSensitivity_joystick_mouse" direction="horizontal" />
+				</Panel>
 
 				<!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">

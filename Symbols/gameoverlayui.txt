@@ -13992,7 +13992,9 @@
  dyld_stub_binder
  exit
  fclose
+ fcntl$UNIX2003
  fflush
+ fileno
  floor
  floorf
  fmod

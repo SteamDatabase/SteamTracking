@@ -1,6 +1,7 @@
 
  .objc_class_name_NSApplication
  .objc_class_name_NSCursor
+ .objc_class_name_NSOpenGLView
  .objc_class_name_NSView
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
@@ -109,6 +110,7 @@
  CGLEnable
  CGLFlushDrawable
  CGLGetCurrentContext
+ CGLGetParameter
  CGLGetSurface
  CGLSetParameter
  CGMainDisplayID
@@ -119,6 +121,7 @@
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
  D g_IdentityMatrix
+ D g_bCheckForRetina
  D g_iNotificationPosition
  D g_loggingMutex
  D typeinfo for CBaseOverlayRenderer
@@ -168,6 +171,7 @@
  NSApp
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSOpenGLView
  OBJC_CLASS_$_NSView
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
@@ -566,6 +570,7 @@
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastPositionUpdateTime
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastHorizontalInset
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastVerticalInset
+ b COverlayGLRenderer::ValveSetDesiredRenderState()::s_dwLastRetinaCheck
  b GetGLProcAddress(char*)::m_pLibGL
  b Log(char const*, ...)::bCheckedLogEnabled
  b SendOneTimeInputPid()::s_bOneTimeInitializationDone
@@ -728,6 +733,7 @@
  strstr
  strtoull
  t -[NSCursor(OverrideNSCursor) hooked_set]
+ t -[NSOpenGLView(OverrideNSOpenGLView) hooked_setWantsBestResolutionOpenGLSurface:]
  t -[NSView(OverrideNSView) hooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
  t ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)

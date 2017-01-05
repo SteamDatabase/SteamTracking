@@ -48,27 +48,27 @@ enum EStreamControlMessage {
 	k_EStreamControlInputLatencyTest = 70;
 	k_EStreamControlGamepadRumble = 71;
 	k_EStreamControlOverlayEnabled = 74;
-	k_EStreamControlInputControllerAttached = 75;
-	k_EStreamControlInputControllerState = 76;
-	k_EStreamControlTriggerHapticPulse = 77;
-	k_EStreamControlInputControllerDetached = 78;
+	k_EStreamControlInputControllerAttached_OBSOLETE = 75;
+	k_EStreamControlInputControllerState_OBSOLETE = 76;
+	k_EStreamControlTriggerHapticPulse_OBSOLETE = 77;
+	k_EStreamControlInputControllerDetached_OBSOLETE = 78;
 	k_EStreamControlVideoDecoderInfo = 80;
 	k_EStreamControlSetTitle = 81;
 	k_EStreamControlSetIcon = 82;
 	k_EStreamControlQuitRequest = 83;
 	k_EStreamControlSetQoS = 87;
-	k_EStreamControlInputControllerWirelessPresence = 88;
+	k_EStreamControlInputControllerWirelessPresence_OBSOLETE = 88;
 	k_EStreamControlSetGammaRamp = 89;
 	k_EStreamControlVideoEncoderInfo = 90;
-	k_EStreamControlInputControllerStateHID = 93;
+	k_EStreamControlInputControllerStateHID_OBSOLETE = 93;
 	k_EStreamControlSetTargetBitrate = 94;
-	k_EStreamControlSetControllerPairingEnabled = 95;
-	k_EStreamControlSetControllerPairingResult = 96;
-	k_EStreamControlTriggerControllerDisconnect = 97;
+	k_EStreamControlSetControllerPairingEnabled_OBSOLETE = 95;
+	k_EStreamControlSetControllerPairingResult_OBSOLETE = 96;
+	k_EStreamControlTriggerControllerDisconnect_OBSOLETE = 97;
 	k_EStreamControlSetActivity = 98;
 	k_EStreamControlSetStreamingClientConfig = 99;
 	k_EStreamControlSystemSuspend = 100;
-	k_EStreamControlSetControllerSettings = 101;
+	k_EStreamControlSetControllerSettings_OBSOLETE = 101;
 	k_EStreamControlVirtualHereRequest = 102;
 	k_EStreamControlVirtualHereReady = 103;
 	k_EStreamControlVirtualHereShareDevice = 104;
@@ -531,91 +531,6 @@ message CSetTargetBitrateMsg {
 
 message COverlayEnabledMsg {
 	required bool enabled = 1;
-}
-
-message CInputControllerAttachedMsg {
-	required int32 controller_index = 1;
-	optional bool wireless = 2;
-	optional bool pairing_in_progress = 3;
-	optional uint32 bootloader_version = 4;
-	optional uint32 firmware_version = 5;
-	optional string serial_number = 6;
-	optional string chip_id = 7;
-	repeated uint32 attributes = 8;
-	optional uint32 dongle_version = 9;
-	optional uint32 controller_type = 10;
-}
-
-message CInputControllerStateMsg {
-	optional uint32 input_mark = 1;
-	required int32 controller_index = 2;
-	optional uint64 buttons = 3;
-	optional sint32 left_pad_x = 4;
-	optional sint32 left_pad_y = 5;
-	optional sint32 right_pad_x = 6;
-	optional sint32 right_pad_y = 7;
-	optional sint32 left_stick_x = 8;
-	optional sint32 left_stick_y = 9;
-	optional uint32 left_analog = 10;
-	optional uint32 right_analog = 11;
-	optional sint32 accel_x = 12;
-	optional sint32 accel_y = 13;
-	optional sint32 accel_z = 14;
-	optional sint32 gyro_x = 15;
-	optional sint32 gyro_y = 16;
-	optional sint32 gyro_z = 17;
-	optional sint32 gyroquat_w = 18;
-	optional sint32 gyroquat_x = 19;
-	optional sint32 gyroquat_y = 20;
-	optional sint32 gyroquat_z = 21;
-	optional sint32 gyrosteeringangle = 22;
-	optional uint32 batterylevel = 23;
-}
-
-message CInputControllerStateHIDMsg {
-	optional uint32 input_mark = 1;
-	optional int32 controller_index = 2;
-	optional uint32 capabilities = 3;
-	optional bytes state_payload = 4;
-	optional bytes status_payload = 5;
-	optional bytes report_bytes = 6;
-}
-
-message CInputControllerWirelessPresenceMsg {
-	optional bool wireless_present = 1;
-	optional bool wireless_available = 2;
-}
-
-message CInputControllerDetachedMsg {
-	required int32 controller_index = 1;
-}
-
-message CTriggerHapticPulseMsg {
-	required int32 controller_index = 1;
-	required int32 pad_index = 2;
-	required uint32 duration_microsec = 3;
-	optional uint32 interval_microsec = 4;
-	optional uint32 repeat_count = 5;
-	optional uint32 flags = 6;
-}
-
-message CSetControllerPairingEnabledMsg {
-	optional bool enabled = 1;
-	optional int32 timeout = 2;
-}
-
-message CSetControllerPairingResultMsg {
-	required int32 controller_index = 1;
-	optional bool commit_pairing = 2;
-}
-
-message CTriggerControllerDisconnectMsg {
-	required int32 controller_index = 1;
-}
-
-message CSetControllerSettingsMsg {
-	required int32 controller_index = 1;
-	optional bytes raw_settings = 2;
 }
 
 message CSetGammaRampMsg {

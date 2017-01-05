@@ -245,6 +245,7 @@ AlbumGridItem #AlbumImage
 
 #NowPlayingContainer
 {
+	width: 800px;
 	margin-left: 24px;
 	padding-left: 16px;
 	flow-children: right;
