@@ -96471,6 +96471,10 @@
 		{
 			"name"		"ESA Rewind 1st Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"		"#TF_rewind_lan_gold"
 			"item_description"		"#TF_TournamentMedal_2017"
 			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_lan_gold/rewind_lan_gold"
@@ -96483,6 +96487,10 @@
 		{
 			"name"		"ESA Rewind 2nd Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"		"#TF_rewind_lan_silver"
 			"item_description"		"#TF_TournamentMedal_2017"
 			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_lan_silver/rewind_lan_silver"
@@ -96495,6 +96503,10 @@
 		{
 			"name"		"ESA Rewind 3rd Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"		"#TF_rewind_lan_bronze"
 			"item_description"		"#TF_TournamentMedal_2017"
 			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_lan_bronze/rewind_lan_bronze"
@@ -96507,6 +96519,10 @@
 		{
 			"name"		"ESA Rewind Participant 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"		"#TF_rewind_lan_participant"
 			"item_description"		"#TF_TournamentMedal_2017"
 			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_lan_participant/rewind_lan_participant"
