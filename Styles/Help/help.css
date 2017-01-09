@@ -2455,7 +2455,12 @@ img.category_icon {
 	 white-space: normal;
 	 box-shadow: 0 0 3px #000000;
 	 word-wrap: break-word;
- }
+}
+
+.quicktext_usage .help_tooltip
+{
+	max-width: 600px;
+}
 
 .LoadingWrapper
 {
