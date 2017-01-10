@@ -583,7 +583,6 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
- b g_TickLastReturned
  b g_bKeyEnabledMovieCapture
  b g_bMicDuckingDisabled
  b g_bScreenshotsHooked

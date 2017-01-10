@@ -52,6 +52,7 @@
  Msg
  Plat_GetCommandLine
  Plat_OutputDebugString
+ Plat_RelativeTicks
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CDefaultCvar
  R typeinfo name for CKeyValuesSystem

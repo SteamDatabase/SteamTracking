@@ -4,7 +4,6 @@
  B SteamThreadTools::g_pCurThread
  B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
- B g_CpuTimeUnreliable
  B g_StackDumpMutex
  B g_TestHarness
  B g_VProfManager
@@ -25,7 +24,6 @@
  D g_ClockSpeedMicrosecondsMultiplier
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
- D g_dwClockSpeed
  D g_pMemAllocSteam
  D typeinfo for CStdMemAlloc
  D typeinfo for IMemAlloc
@@ -575,7 +573,6 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
- b g_TickLastReturned
  b g_bBreak
  b g_bDumpWritten
  b g_bWriteFullMemOnCrash

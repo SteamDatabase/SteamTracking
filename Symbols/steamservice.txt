@@ -100,7 +100,6 @@
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
- B g_CpuTimeUnreliable
  B g_DebugSpewFile
  B g_DebugSpewPipe
  B g_ServiceEngine
@@ -191,7 +190,6 @@
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
  D g_DebugSpewProc
- D g_dwClockSpeed
  D hmac_asn1_meth
  D hmac_pkey_meth
  D k_rgchCodeSignaturePublicKeys
@@ -1624,7 +1622,6 @@
  T CWorkThreadPool::~CWorkThreadPool()
  T CWorkThreadPoolSignal::Signal()
  T CWorkThreadPoolSignal::~CWorkThreadPoolSignal()
- T CalculateCPUFreq()
  T CallFlushLogFunc
  T Camellia_DecryptBlock
  T Camellia_DecryptBlock_Rounds
@@ -1645,7 +1642,6 @@
  T CatchAndWriteMiniDumpForVoidPtrFn
  T CatchAndWriteMiniDump_Impl(CatchAndWriteContext_t&)
  T CheckKeyValueSignature(KeyValues*, CRSAPublicKey const*)
- T CheckSSE4aTechnology()
  T ClearWritingMiniDump
  T ClientProcessMonitor::CClientProcessMonitor::BGetCachedProcessData(unsigned int, VacProcessMonitor::ActiveProcessData_t const**) const
  T ClientProcessMonitor::CClientProcessMonitor::CClientProcessMonitor()
@@ -2044,7 +2040,6 @@
  T FioRegisterAsyncFinalize(void (*)(int, unsigned int))
  T GCoroutineMgr()
  T GScheduledFunctionMgr()
- T GetCPUInformation()
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
  T GetFileTimestamp(char const*)
@@ -2052,8 +2047,6 @@
  T GetNoEscCharConversion()
  T GetOSType
  T GetPchTempTextBuffer_Harmful()
- T GetProcessorBrand()
- T GetProcessorDetailBlob(int*)
  T HKeyGet(ERegKeyRoot)
  T HMAC_CTX_cleanup
  T HMAC_CTX_copy
@@ -2875,15 +2868,11 @@
  b DebugStatsSystem::g_DebugStatsSystem
  b ERR_get_state.fallback
  b GScheduledFunctionMgr()::g_ScheduledFunctionMgr
- b GetCPUInformation()::pi
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
- b GetProcessorBrand()::CPUBrand
- b GetProcessorDetailBlob(int*)::DetailBlob
- b GetProcessorVendorId()::VendorID
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
@@ -2948,7 +2937,6 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
- b g_TickLastReturned
  b g_bBreak
  b g_bDumpWritten
  b g_bScheduledFunctionMgrConstructed
@@ -3296,7 +3284,6 @@
  getpid
  getpwuid
  getsockname$UNIX2003
- gettimeofday
  getuid
  kevent
  kill$UNIX2003
@@ -3518,7 +3505,6 @@
  strtoul
  strtoull
  sysctl
- sysctlnametomib
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BN_from_montgomery_word

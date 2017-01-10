@@ -124,7 +124,6 @@
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
- B g_CpuTimeUnreliable
  B g_StackDumpMutex
  B g_TestHarness
  B g_ThreadLocalCoroutineMgr
@@ -308,7 +307,6 @@
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
  D g_UDPConnectionRouter
- D g_dwClockSpeed
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
@@ -5461,7 +5459,6 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
- b g_TickLastReturned
  b g_bBreak
  b g_bDumpWritten
  b g_bScheduledFunctionMgrConstructed

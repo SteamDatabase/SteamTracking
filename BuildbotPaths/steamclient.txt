@@ -157,6 +157,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_mapping.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_source.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_utils.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_vmouse.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controllerabstraction.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controllervirtualsocket.o
@@ -350,6 +351,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_mapping.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_source.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_utils.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_vmouse.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controllerabstraction.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controllervirtualsocket.o
@@ -719,6 +721,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/content_manifest.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/contentmanifest.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/contentmanifest.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/controller_utils.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_kalman.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_kalman.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/controller/trackpad_weightedfilter.h
@@ -1366,7 +1369,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vmatrix.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_securezeromemory_impl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/nattypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/ip2pjinglewrapper.h

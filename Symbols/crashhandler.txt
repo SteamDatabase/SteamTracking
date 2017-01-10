@@ -31,7 +31,6 @@
  D g_ClockSpeedMicrosecondsMultiplier
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
- D g_dwClockSpeed
  D typeinfo for CBreakpadFactory
  D typeinfo for CCrashHandler
  D typeinfo for CPathString
@@ -238,9 +237,7 @@
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::Pop()
  T CValidator::Push(char const*, void*, char const*)
- T CalculateCPUFreq()
  T CallFlushLogFunc
- T CheckSSE4aTechnology()
  T ClearWritingMiniDump
  T CrashOnPurpose()
  T CreateInterface
@@ -251,11 +248,8 @@
  T Error
  T FillDataStruct(_finddata_t*)
  T FindSpewGroup(char const*, int*)
- T GetCPUInformation()
  T GetMemAlloc
  T GetOSType
- T GetProcessorBrand()
- T GetProcessorDetailBlob(int*)
  T InitStackWalk()
  T IsSpewActive
  T MiniDumpUnlock
@@ -264,6 +258,8 @@
  T Plat_GetExecutablePath
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
+ T Plat_RelativeTickFrequency
+ T Plat_RelativeTicks
  T RealGetCallStack
  T RealPrintCallStack
  T SetInAssert
@@ -359,7 +355,6 @@
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
- __divdi3
  __error
  __fixunsdfdi
  __gxx_personality_v0
@@ -378,13 +373,9 @@
  b AssertMsgImplementation::s_bDisableDebuggerBreak
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b ClearWritingMiniDump::fAsserted
- b GetCPUInformation()::pi
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
- b GetProcessorBrand()::CPUBrand
- b GetProcessorDetailBlob(int*)::DetailBlob
- b GetProcessorVendorId()::VendorID
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::g_ThreadMainThreadID
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
@@ -396,6 +387,9 @@
  b _ZL6g_Info.2
  b g_CmdLine
  b g_DumpHelper
+ b g_TickBase
+ b g_TickFrequency
+ b g_TickFrequencyDouble
  b g_bBreak
  b g_bDumpWritten
  b g_bWritingFatalMinidump
@@ -450,7 +444,6 @@
  getcwd
  getenv
  getpid
- gettimeofday
  kCFAllocatorDefault
  kCFTypeDictionaryKeyCallBacks
  kCFTypeDictionaryValueCallBacks
@@ -462,10 +455,12 @@
  launch_data_new_string
  launch_msg
  lstat$INODE64
+ mach_absolute_time
  mach_msg
  mach_port_allocate
  mach_port_deallocate
  mach_task_self_
+ mach_timebase_info
  malloc
  malloc_size
  memcpy
@@ -519,12 +514,12 @@
  strrchr
  strstr
  sysctl
- sysctlnametomib
  system
  system$UNIX2003
  t FileSelect(dirent const*)
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()
+ t InitTicks()
  t ProcessRawStack(void**, int, int, CStack&)
  t SteamThreadTools::ThreadProcConvert(void*)
  t WriteMiniDumpThread(void*)

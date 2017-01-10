@@ -2720,6 +2720,7 @@
  b PosixRegistryManager()::s_PosixRegMgr
  b PosixRegistryManager()::s_bGetEUniverse
  b PosixRegistryManager()::s_pfnGetEUniverse
+ b PromoteImageToLayer(CGContext*, vgui::Texture*)::fAsserted
  b ResetTextureParams_GL_TEXTURE_2D()::bHasAnisotropy
  b ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
  b _ZL13g_ScissorRect.0
@@ -2771,7 +2772,6 @@
  b vec2_invalid
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
- b vgui::COSXSurface::DrawTexturedRect(int, int, int, int)::fAsserted
  b vgui::COpenGLSurface::SetCornerRounding(unsigned int, int)::fAsserted
  b vgui::InitKeyTranslation()::threadonce_487_17
  ceilf
@@ -2781,23 +2781,23 @@
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
- d __block_descriptor_tmp534
- d __block_descriptor_tmp549
- d __block_descriptor_tmp554
- d __block_descriptor_tmp556
+ d __block_descriptor_tmp533
+ d __block_descriptor_tmp548
+ d __block_descriptor_tmp553
+ d __block_descriptor_tmp555
+ d __block_descriptor_tmp568
  d __block_descriptor_tmp569
- d __block_descriptor_tmp570
- d __block_descriptor_tmp573
- d __block_descriptor_tmp576
- d __block_descriptor_tmp578
+ d __block_descriptor_tmp572
+ d __block_descriptor_tmp575
+ d __block_descriptor_tmp577
  d __block_literal_global
- d __block_literal_global550
- d __block_literal_global555
- d __block_literal_global557
- d __block_literal_global571
- d __block_literal_global574
- d __block_literal_global577
- d __block_literal_global579
+ d __block_literal_global549
+ d __block_literal_global554
+ d __block_literal_global556
+ d __block_literal_global570
+ d __block_literal_global573
+ d __block_literal_global576
+ d __block_literal_global578
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2974,7 +2974,10 @@
  t -[VGUITranslatorResponder setMarkedText:selectedRange:]
  t -[VGUITranslatorResponder unmarkText]
  t -[VGUITranslatorResponder validAttributesForMarkedText]
+ t BlitCGImageToCGContextWithVFlip(CGContext*, CGImage*, int, int, int, int)
  t BlitToCGContextWithVFlip(CGContext*, unsigned char const*, int, int, int, int, int, vgui::ISurface::ETextureFormat, bool*)
+ t BuildCGImageFromBits(bool, unsigned char const*, int, int, int, vgui::ISurface::ETextureFormat, bool*)
+ t BuildCGImageFromBits(bool, unsigned char const*, int, int, int, vgui::ISurface::ETextureFormat, bool*)::$_0::__invoke(void*, void const*, unsigned long)
  t CBaseSurface::RecomputeTraversalOrder(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >&, unsigned int, int, bool)::LocalZSort::Fn(CBaseSurface::TraversalEntry_t const* const*, CBaseSurface::TraversalEntry_t const* const*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::AddToTail((anonymous namespace)::BadTextureData_t const&)
@@ -2989,23 +2992,24 @@
  t MakeTerm(ExprNode*&)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
+ t PromoteBitsToImage(vgui::Texture*)
  t ResetTextureParams_GL_TEXTURE_2D()
  t SimplifyNode(ExprNode*&)
  t UpdateApplicationWindowMenuItem(unsigned int)
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke572
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke571
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2575
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2574
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke547
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke546
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2553
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2552
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_567
+ t __copy_helper_block_566
  t __destroy_helper_block_
- t __destroy_helper_block_568
+ t __destroy_helper_block_567
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6

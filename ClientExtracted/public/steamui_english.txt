@@ -3923,7 +3923,7 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_ContentMgr_NotWritableFolder" "New Steam library folder must be writeable"
 "SteamUI_ContentMgr_NotExecutableFolder" "New Steam library folder must be on a filesystem mounted with execute permissions"
 "SteamUI_ContentMgr_NotWhileDownloading" "New Steam library folder can't be added while downloading"
-"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "Selected drive already has a Steam library folder"
+"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "Selected drive already has a Steam library folder. Steam will manage multiple game installs in a single folder for you."
 "SteamUI_ContentMgr_FailedToAdd" "Failed to add new Steam library folder"
 "SteamUI_ContentMgr_UninstallApp" "Uninstall Application"
 "SteamUI_ContentMgr_Refresh" "Refresh"

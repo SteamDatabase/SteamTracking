@@ -15971,7 +15971,6 @@
  fwrite$UNIX2003
  g_ClockSpeed
  g_ClockSpeedMillisecondsMultiplier
- g_CpuTimeUnreliable
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
