@@ -2318,6 +2318,14 @@ p.optionalChecks {
 	margin-top: 25px;
 }
 
+.admin_email_mismatch {
+	color: goldenrod;
+}
+
+a.iconLink.admin_email_mismatch:hover {
+	color: #00adee;
+}
+
 /* Anti-Cheat tab */
 input#enablevac:disabled {
 	opacity: 0.2;

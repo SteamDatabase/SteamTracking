@@ -13,14 +13,14 @@
 	height: 100%;
 	width: 466px;
 	overflow-y: auto;
-	background: #a5b5c2;
+	background: #c6d4df;
 }
 .tab_preview.focus {
 	display: block;
 }
 
 .tab_item.focus {
-	background: #a5b5c2;
+	background: #c6d4df;
 	position: relative;
 }
 .tab_item.focus::after {
@@ -31,11 +31,16 @@
 	margin-right: -16px;
 	height: 100%;
 	width: 16px;
-	background: #a5b5c2;
+	background: #c6d4df;
 }
 
 .tab_item.focus .tab_item_name {
 	color: #000000;
+}
+
+.myapps .tab_item.ds_flagged:not(.ds_wishlist):not(:hover):not(.focus) .tab_item_content .tab_item_name {
+	color: #c7d5e0;
+
 }
 
 .can_play_container {
@@ -44,6 +49,10 @@
 	padding: 10px;
 	margin-bottom: 25px;
 	position: relative;
+}
+
+.can_play_container .ds_flag.ds_owned_flag {
+	background-color: #66c0f4;
 }
 .can_play_container .playtime_text {
 	float: left;
@@ -59,7 +68,13 @@
 }
 
 .updated_app_announcement_text a {
-	color: #5aa9d6;
+	color: #3a6e8b;
+	text-decoration: underline;
+}
+
+div.bb_h1 {
+	color: #000;
+	font-weight: 500;
 }
 
 .updated_app_date
@@ -68,7 +83,7 @@
 }
 
 .updated_app_name {
-	font-size: 24px;
+	font-size: 25px;
 	color: black;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -167,17 +182,25 @@
 	max-width: 450px;
 }
 
+.title_underline {
+	width: 100%;
+	height: 1px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.7 );
+	margin-bottom: 10px;
+}
+
 .updated_app_vote_details
 {
 	position: relative;
 	margin-top: 10px;
 	padding: 6px;
-	background-color: rgba( 0, 0, 0, 0.6 );
+	background-color: rgba( 0, 0, 0, 0.1 );
 }
 
 .updated_app_vote_details .rateUpCount
 {
-	color: #7CC5FB;
+	color: #000;
 	padding-right: 10px;
 }
 

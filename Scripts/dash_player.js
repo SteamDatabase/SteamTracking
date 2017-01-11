@@ -459,8 +459,11 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 				var msg = 'Update DRM Session Failure: ' + reason + ' [HTTP:' + xhr.status + ']';
 				if ( xhr.status == 500 )
 				{
-					var jsonResult = JSON.parse( String.fromCharCode.apply( null, new Uint8Array( xhr.response ) ) );
-					msg += ' [EResult:' + jsonResult.result +']';
+					try {
+						var jsonResult = JSON.parse( String.fromCharCode.apply( null, new Uint8Array( xhr.response ) ) );
+						msg += ' [EResult:' + jsonResult.result + ']';
+					}
+					catch ( e ) { }
 				}
 
 				PlayerLog( 'Failed to update DRM session: ', msg );
@@ -2221,6 +2224,10 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					// Check if next segment will end VOD and if so, stop now
 					if ( xhr.status == 404 && _loader.BIsEndVOD( false ) )
 						return;
+
+					// Keep track of this failure as part of bandwidth/representations stats
+					// as we've used time but got nothing for it
+					_loader.LogDownload( xhr, tsDownloadStart, 0 );
 
 					// Send 5% of VOD failures back to better track status codes
 					if ( !_loader.m_player.BIsLiveContent() )

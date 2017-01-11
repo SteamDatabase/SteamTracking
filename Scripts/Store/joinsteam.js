@@ -166,12 +166,15 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		
 				RefreshCaptcha();
 	}
-	
-	var ssa_check = $('i_agree_check');
-	if ( !ssa_check.checked )
+
+		if ( !( $('lt').value == 1 || $('lt').value == 4 ) )
 	{
-		errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
-		rgBadFields.ssa_body = true;
+		var ssa_check = $('i_agree_check');
+		if ( !ssa_check.checked )
+		{
+			errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
+			rgBadFields.ssa_body = true;
+		}
 	}
 
 		for ( var key in rgBadFields )

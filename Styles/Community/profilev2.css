@@ -2027,6 +2027,16 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	margin-top: 10px;
 }
 
+@media screen and (max-width: 540px)
+{
+	html.responsive .add_friends_btn_ctn {
+		float: none;
+		margin-top: 0;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+}
+
 .bulk_action_ctn {
 	white-space: nowrap;
 }
