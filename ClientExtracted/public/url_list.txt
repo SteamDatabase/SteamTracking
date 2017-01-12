@@ -268,11 +268,6 @@ HelpFrontPage
 	url			"%help%"
 	method		"internal"
 }
-ChangePassword
-{
-	url			"%help%change_password/?option=%p1%"
-	method		"internal"
-}
 MyHelpRequests
 {
 	url			"%help%wizard/HelpRequests"
@@ -315,13 +310,13 @@ HelpVacBans
 
 HelpChangePassword
 {
-	url			"%help%wizard/HelpChangePassword?redir=clientlogin"
+	url			"%help%wizard/HelpChangePassword?redir=clientlogin&clientid=%p1%"
 	method		"internal"
 }
 
 HelpChangeEmail
 {
-	url			"%help%wizard/HelpChangeEmail?redir=clientlogin"
+	url			"%help%wizard/HelpChangeEmail?redir=clientlogin&clientid=%p1%"
 	method		"internal"
 }
 

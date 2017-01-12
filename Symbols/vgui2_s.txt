@@ -129,7 +129,6 @@
  CFURLCreateFromFSRef
  CFURLCreateWithFileSystemPath
  CGBitmapContextCreate
- CGBitmapContextCreateImage
  CGBitmapContextGetData
  CGColorCreate
  CGColorSpaceCreateWithName
@@ -361,7 +360,6 @@
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
  NSZeroPoint
- NSZeroSize
  NewPtr
  NewRgn
  PasteboardClear
@@ -2781,23 +2779,23 @@
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
- d __block_descriptor_tmp533
- d __block_descriptor_tmp548
+ d __block_descriptor_tmp531
+ d __block_descriptor_tmp546
+ d __block_descriptor_tmp551
  d __block_descriptor_tmp553
- d __block_descriptor_tmp555
- d __block_descriptor_tmp568
- d __block_descriptor_tmp569
- d __block_descriptor_tmp572
+ d __block_descriptor_tmp566
+ d __block_descriptor_tmp567
+ d __block_descriptor_tmp570
+ d __block_descriptor_tmp573
  d __block_descriptor_tmp575
- d __block_descriptor_tmp577
  d __block_literal_global
- d __block_literal_global549
+ d __block_literal_global547
+ d __block_literal_global552
  d __block_literal_global554
- d __block_literal_global556
- d __block_literal_global570
- d __block_literal_global573
+ d __block_literal_global568
+ d __block_literal_global571
+ d __block_literal_global574
  d __block_literal_global576
- d __block_literal_global578
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2997,19 +2995,19 @@
  t SimplifyNode(ExprNode*&)
  t UpdateApplicationWindowMenuItem(unsigned int)
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke571
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke569
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2574
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2572
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke546
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke544
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2552
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2550
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_566
+ t __copy_helper_block_564
  t __destroy_helper_block_
- t __destroy_helper_block_567
+ t __destroy_helper_block_565
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6

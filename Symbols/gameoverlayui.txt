@@ -5132,6 +5132,8 @@
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
+ T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDefOps<CScreenshotImageClickPanel*>::LessFuncCtx(CScreenshotImageClickPanel* const&, CScreenshotImageClickPanel* const&, void*)
  T CDefOps<CUtlString>::LessFunc(CUtlString const&, CUtlString const&)

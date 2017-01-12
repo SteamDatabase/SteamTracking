@@ -1277,7 +1277,7 @@ This should take less than a minute."
 
 "Steam_App_Install_Failed_Title"	"Steam - Error"
 "Steam_App_Install_Failed_Text"		"An error occurred while installing %game% (%reason%)"
-"Steam_App_Install_Failed_Text_Long"	"An error occurred while installing %game% (%reason%) :\n\n%location%"
+"Steam_App_Install_Failed_Text_Long"	"An error occurred while installing %game% (%reason%) :\n\n%detail%"
 
 "Steam_App_LegacyKey_Denied_Title" "Steam - Warning"
 
@@ -1290,8 +1290,9 @@ This should take less than a minute."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text"	"An error occurred while updating %game% (%reason%)"
-"Steam_App_Update_Failed_Text_Long"	"An error occurred while updating %game% (%reason%) :\n\n%location%"
-
+"Steam_App_Update_Failed_Text_Long"	"An error occurred while updating %game% (%reason%) :\n\n%detail%"
+"Steam_App_Update_NotEnoughDiskSpace"	"Not enought disk space available to update %game% (%detail% required)"
+"Steam_App_Update_NotEnoughDiskSpaceUser" "Not enought user disk quota available to update %game% (%detail% required)"
 
 "Steam_PreloadCompleteNoPreorderAvailable" "A locked copy of %game% is now on your computer."
 
