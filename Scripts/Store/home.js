@@ -128,7 +128,7 @@ GHomepage = {
 			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
 			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
 			GHomepage.bHideAdultContentViolence = rgParams.bHideAdultContentViolence || false;
-			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || {};
+			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || false;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
