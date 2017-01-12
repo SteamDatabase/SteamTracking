@@ -2201,6 +2201,7 @@ ChangePasswordWizard = {
 HelpRequestPage = {
 
 	m_strSystemReport: "",
+	m_abLogsAndDumps : undefined,
 
 	ShowCreateHelpRequestFormOnPageLoad: function( bScrollIntoView )
 	{
@@ -2213,9 +2214,19 @@ HelpRequestPage = {
 		});
 	},
 
-	SystemReportCallback: function( strReport )
+	SystemReportCallback: function( systemReport )
 	{
-		HelpRequestPage.m_strSystemReport = strReport;
+		// Newer clients give us an object with multiple values in it
+		if ( typeof systemReport  === 'object' )
+		{
+			HelpRequestPage.m_strSystemReport = systemReport.vdf;
+			HelpRequestPage.m_abLogsAndDumps = Base64Binary.decodeArrayBuffer( systemReport.zipped_content_base64 );
+		}
+		else if ( typeof systemReport === 'string' )
+		{
+			HelpRequestPage.m_strSystemReport = systemReport;
+		}
+
 		var $Form = $J('#create_help_request_form');
 		$Form.find('button').removeClass( 'btn_disabled' ).prop( 'disabled', false );
 		$J('#system_report_throbber').removeClass( 'working' );
@@ -2316,6 +2327,13 @@ HelpRequestPage = {
 				fd.append('system_report', new Blob([HelpRequestPage.m_strSystemReport], {type: "text/plain"}));
 			}
 
+			if ( HelpRequestPage.m_abLogsAndDumps != undefined )
+			{
+				fd.append( 'dumps_and_logs_zip', new Blob([HelpRequestPage.m_abLogsAndDumps], {type: "application/zip"}));
+			}
+
+			// Add logs/dumps zip as well if present
+
 			// do we have files to upload?
 			var $FileList = $Form.find('ul.attached_file_list').children();
 			$FileList.each( function() {
@@ -2353,6 +2371,8 @@ HelpRequestPage = {
 				oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams ) + "&system_report=" + HelpRequestPage.m_strSystemReport;
 			else
 				oParams['data'] = $Form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams );
+
+			// Can't include zipped logs/dumps, should never hit this else in the client anyway
 		}
 
 
