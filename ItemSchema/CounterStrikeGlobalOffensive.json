@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ce20a6f586aba0274bc0be57374e0602d9af635f.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5dfa6b7990aa6bdad1680fbeb8c877952b884105.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3225,6 +3225,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Atlanta 2017 CS:GO Champion",
+				"defindex": 941,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at ELEAGUE Atlanta 2017",
+				"item_description": "This championship trophy was awarded to the Champion at the ELEAGUE Atlanta 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.c9a3fae5bb67ed2328a4c4932d96924e4e51cd8d.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Atlanta 2017 CS:GO Finalist",
+				"defindex": 942,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at ELEAGUE Atlanta 2017",
+				"item_description": "This championship trophy was awarded to the Finalist at the ELEAGUE Atlanta 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Atlanta 2017 CS:GO Semifinalist",
+				"defindex": 943,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at ELEAGUE Atlanta 2017",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the ELEAGUE Atlanta 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Atlanta 2017 CS:GO Quarterfinalist",
+				"defindex": 944,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at ELEAGUE Atlanta 2017",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the ELEAGUE Atlanta 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "Atlanta 2017 Pick 'Em Challenge Bronze",
+				"defindex": 945,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Atlanta 2017 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the ELEAGUE Atlanta 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/atlanta_pickem_2017_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_bronze.97062a512181cbdc54db74abfd86f4d8d61ff986.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_bronze_large.4f6af5a63c0dcab71f563fc8590ea1454077a449.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "Atlanta 2017 Pick 'Em Challenge Silver",
+				"defindex": 946,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Atlanta 2017 Pick'Em Trophy",
+				"item_description": "This silver trophy was awarded during the ELEAGUE Atlanta 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/atlanta_pickem_2017_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_silver.e96f5c64dc5a63569813b66e4e160bec5ef4c09d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_silver_large.b84a2b475161b673003723f3913176c3b9dc0ce2.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "Atlanta 2017 Pick 'Em Challenge Gold",
+				"defindex": 947,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Atlanta 2017 Pick'Em Trophy",
+				"item_description": "This gold trophy was awarded during the ELEAGUE Atlanta 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/atlanta_pickem_2017_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_gold.288d419fb2ee7fc2928bed83e40769c94027fa7c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/atlanta_pickem_2017_gold_large.f26017250aba27128f7ef34443832d41261f8f3a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
 					}
 				]
 				
@@ -17496,6 +17671,2198 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 179
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_astr",
+				"defindex": 4289,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Astralis | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/astr.930104157790935ec95447f28feb85b0978f9ec2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/astr_large.b6e4c54dc6d6ddc6dfcd61af4fafd24e8aab5d50.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_nv",
+				"defindex": 4290,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Team EnVyUs | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nv.ef513c6cc3f1b234eaae5c25478174134f4a4043.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nv_large.17f841b7a988cd434d5465aa6fce5759efce7df9.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_faze",
+				"defindex": 4291,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | FaZe Clan | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/faze.2069a3bdf2e940d0ae73fcdcf6c946280502b90a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/faze_large.229044c7179e4b3e4be481427b7b577cba199be4.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_flip",
+				"defindex": 4292,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Flipsid3 Tactics | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/flip.9266c05ccfaa72e2067b3d907e496faacdc83620.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/flip_large.02680669ddae1b321b1306b6c128ac70c5179c95.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_fntc",
+				"defindex": 4293,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Fnatic | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/fntc.0f3a50e79a17027e7944a9799ace266b509142e0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/fntc_large.6a36c7f91925ce76d30334c7552859abd860284c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_g2",
+				"defindex": 4294,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | G2 Esports | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/g2.de31e74fdd95d71be31ec84bfc01d7dcd343819a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/g2_large.069a3904eac68b00c4cc9bb40351f7038cf2d3bd.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_gamb",
+				"defindex": 4295,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Gambit Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/gamb.280ce4ae2889e86b90596ac8b3516177ddecd467.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/gamb_large.b83655cc4114bbc18f659161258b601be37f1d21.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_god",
+				"defindex": 4296,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | GODSENT | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/god",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/god.e30d3601b1adb00bab624a034c1ab2945fb86c20.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/god_large.588064b42c2b47b3dbdca497fc136d1ba40c1fa9.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_hlr",
+				"defindex": 4297,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | HellRaisers | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/hlr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/hlr.d3ba669e5d00dba577eed5c92f6b10197aabe2ee.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/hlr_large.389cb3f3b08a3a66f2a2d3921d0292f585347975.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_mss",
+				"defindex": 4298,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | mousesports | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/mss.263ab8d579da5b0ac8210bfe0e1a95a3306c33c0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/mss_large.7003da843031dee02443409b38008b808775e4c6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_navi",
+				"defindex": 4299,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Natus Vincere | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/navi.bea23483b027ed211fd2cb131bd4eef465950b43.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/navi_large.30191c8b177e78767056eee44474a3c5af1e363d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_nor",
+				"defindex": 4300,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | North | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/nor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nor.7586044f39ecf401378191203b1682d29473e897.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nor_large.c7e29a367aa048474a04a5c9294379ea62486904.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_optc",
+				"defindex": 4301,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | OpTic Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/optc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/optc.ca35bf12d4a50e4b1b82293f8981ab2f8251984d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/optc_large.3f3e4ff62f6d279407ac35081add1163a5947077.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_sk",
+				"defindex": 4302,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | SK Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/sk.8aea97f9f5d185d249ddee95a6ab7cab5754e06f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/sk_large.96fc7e7a0b4ce1f94186f1ac1a48ed144e3fdf64.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_liq",
+				"defindex": 4303,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Team Liquid | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/liq.32dd73a8bbe0a3e2929fa310c7532f5894d5113d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/liq_large.449a8e58dc322cbbddfaa1d161906c99680a8524.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_vp",
+				"defindex": 4304,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Virtus.Pro | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp.4cc5e6800c1d8f08d0465ad37f1a46ad85051aef.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp_large.5c25c19149fb7ba5f0077cc08e122ac65c3325b4.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_eleague",
+				"defindex": 4305,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | ELEAGUE | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/eleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/eleague.c6e6ae5e23e9a630b19809d6147ac6dc81f6d849.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/eleague_large.6db7d808a843cf524ec0348677816f3d07974670.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_astr",
+				"defindex": 4306,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Astralis | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/astr_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/astr_graffiti.8462403df3fc71681a35a2a5f1cdddde350e104a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/astr_graffiti_large.a5f7aa2421ac49f911a946c040f77b5735830c3e.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_nv",
+				"defindex": 4307,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Team EnVyUs | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/nv_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nv_graffiti.84e0a126e6a706421cf9da00fda2d53b580f677c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nv_graffiti_large.1894dabd6ddd60151145b3001c6cbc2ad9061de5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_faze",
+				"defindex": 4308,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | FaZe Clan | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/faze_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/faze_graffiti.e4f2dcb0bb7899b31bda39b124d9711f67c4f746.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/faze_graffiti_large.b3a6dc79c8c31dd905fd587a941b0cf0d459dec1.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_flip",
+				"defindex": 4309,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Flipsid3 Tactics | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/flip_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/flip_graffiti.45967a306f266c65c4da3ed39aefed9154d4e312.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/flip_graffiti_large.c3b5e7840d5cf19a7ed0ad4ba99b701355c6f570.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_fntc",
+				"defindex": 4310,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Fnatic | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/fntc_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/fntc_graffiti.c3d8a880e63271f9c1a53cbf1ea037399871ccf5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/fntc_graffiti_large.b109cfc4c0a56b0f35cde1f1b5e1b5cd7bb57eec.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_g2",
+				"defindex": 4311,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | G2 Esports | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/g2_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/g2_graffiti.24cf532f42ea4b46570f4afcb5905376a39f31f2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/g2_graffiti_large.3026d27c6f962ea0d8f3b14d20ea760b45c0fc06.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_gamb",
+				"defindex": 4312,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Gambit Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/gamb_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/gamb_graffiti.b6e3ceb35e370e0658b7aaf735e6c395dc0701d2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/gamb_graffiti_large.71d8916a0f899cda7600a8faa2f01e4d73086089.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_god",
+				"defindex": 4313,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | GODSENT | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/god_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/god_graffiti.58aababca6beab006c53e704c9fdddf2f696a275.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/god_graffiti_large.ef5caf56522fe5653c5c440520e7783f341ade56.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_hlr",
+				"defindex": 4314,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | HellRaisers | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/hlr_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/hlr_graffiti.a7b4955398a07d0faf3097f76326c616d5b35d3a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/hlr_graffiti_large.3dbeccb9a7e8f09e845a308971a24d4922f14fdb.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_mss",
+				"defindex": 4315,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | mousesports | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/mss_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/mss_graffiti.45e5bd7fbfcde61e28d3235e7d1123eed91aa381.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/mss_graffiti_large.3371ad544e6ee2b069994e0aeb1a1c0d83348412.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_navi",
+				"defindex": 4316,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Natus Vincere | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/navi_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/navi_graffiti.5970dc58ab5afd633ec380f41db244c5cd8bc327.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/navi_graffiti_large.447dcd121ecb93fe284c141387c73991fa71251d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_nor",
+				"defindex": 4317,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | North | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/nor_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nor_graffiti.33bd60851c8c35c051a48321d12fa1829c655669.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/nor_graffiti_large.a3316fc34bd3093d83a5ba2c06b8db4e9481c8d2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_optc",
+				"defindex": 4318,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | OpTic Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/optc_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/optc_graffiti.74c48e5822763bf5346dea5360c11b8c50544569.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/optc_graffiti_large.0bf781248eb85b8cdd08e3859364ffd58baea37c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_sk",
+				"defindex": 4319,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | SK Gaming | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/sk_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/sk_graffiti.9bc3d906deda602128f331021b902bad7d1448f4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/sk_graffiti_large.b4ca7d3c5ddc72b9a3742d1976cdaf0df3a76259.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_liq",
+				"defindex": 4320,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Team Liquid | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/liq_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/liq_graffiti.f16fb0eaa5255a42c3292e8def7458e3687cda42.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/liq_graffiti_large.f9e63efa37d518b05ef9cb669f455d105f54f8e4.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_vp",
+				"defindex": 4321,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Virtus.Pro | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/vp_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp_graffiti.941bf15c0a86e27effc2ec8dc9220997478699bd.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp_graffiti_large.b50e799e4518c5df7fff0bdb5767cedf49b83dac.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_atlanta2017_eleague",
+				"defindex": 4322,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | ELEAGUE | Atlanta 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/atlanta2017/eleague_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/eleague_graffiti.f3681a14c8296c819e0c1a95ce0ba2d133b17dcc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/eleague_graffiti_large.4098b132c971a28340f964da2ff1b5a427f23297.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_legends",
+				"defindex": 4323,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single Atlanta 2017 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_atlanta2017_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_atlanta2017_01.14a2f83cc56fb41c5ebcdeb18e26e8f6aa2c1743.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 180
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_atlanta2017_challengers",
+				"defindex": 4324,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single Atlanta 2017 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_atlanta2017_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_atlanta2017_02.e2e18e8dc0cbde9dddd5e59142013ed18fa18774.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 181
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_group_1",
+				"defindex": 4325,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Challengers (Foil) | Atlanta 2017",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Challengers teams at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_atlanta2017_group_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_atlanta2017_group_1.84141099188776461673333c1f16ff3c0ad5b58d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 182
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_group_2",
+				"defindex": 4326,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Legends (Foil) | Atlanta 2017",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Legends teams at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_atlanta2017_group_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_atlanta2017_group_2.d551499c2c71556543a8e91db710ccc68fdd7d95.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 183
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_astr",
+				"defindex": 4327,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Astralis | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Astralis at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_astr.bd41de184fab6aff4cadb47216e3935bfa0d930b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 184
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 60
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_nv",
+				"defindex": 4328,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team EnVyUs | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team EnVyUs at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_nv.95c966a1562c5a017e7ed2c52a40576ab8c4d5f9.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 185
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 46
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_faze",
+				"defindex": 4329,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | FaZe Clan | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from FaZe Clan at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_faze.4084f544fbb6201356945008d956e80a3374e45b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 186
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 61
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_flip",
+				"defindex": 4330,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Flipsid3 Tactics | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Flipsid3 Tactics at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_flip.a6ecf623037def62f941e6ae88308d42cf8c2a13.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 187
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 43
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_fntc",
+				"defindex": 4331,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Fnatic | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Fnatic at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_fntc.b7d3f634e0f279eb3daeeba50f65d68639b7ec43.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 188
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_g2",
+				"defindex": 4332,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | G2 Esports | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from G2 Esports at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_g2.c97eae96487fb35e73a66e40a2367f73b5911e62.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 189
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 59
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_gamb",
+				"defindex": 4333,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Gambit Gaming | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Gambit Gaming at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_gamb.fea5aaf5b7d32af687c90957c5c11eadf18c2c1f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 190
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 63
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_god",
+				"defindex": 4334,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | GODSENT | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from GODSENT at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_god",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_god.fedf3b0e675bce2346331f7491ec5f2836a3ddb7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 191
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 67
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_hlr",
+				"defindex": 4335,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | HellRaisers | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from HellRaisers at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_hlr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_hlr.641a0e5506d0aa0164330276a2294a702cd99673.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 192
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 25
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_mss",
+				"defindex": 4336,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | mousesports | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from mousesports at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_mss.b6268ba3978a902ec85e7d5af1edfcac97e458c0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 193
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 29
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_navi",
+				"defindex": 4337,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Natus Vincere | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Natus Vincere at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_navi.507a836451db57852eebce66c2750db8e190de64.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 194
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_nor",
+				"defindex": 4338,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | North | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from North at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_nor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_nor.e2a3763aafb068fd8589edce115b8009f12a753b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 195
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 68
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_optc",
+				"defindex": 4339,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | OpTic Gaming | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from OpTic Gaming at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_optc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_optc.c5c6218f2edea852e45d4090e94abc2809d9cbb6.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 196
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 66
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_sk",
+				"defindex": 4340,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | SK Gaming | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from SK Gaming at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_sk.41575fa2f025f387044f4716e0d0feb6588c79fa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 197
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 14
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_liq",
+				"defindex": 4341,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Liquid | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Liquid at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_liq.82cdc922b6c62fcd70c4a6b6c0dccc4bd4b77332.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 198
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 48
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_atlanta2017_vp",
+				"defindex": 4342,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Virtus.Pro | Atlanta 2017",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Virtus.Pro at Atlanta 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_vp.99cbe3bb60c1012036c2e2e3027706f2c73ce7c3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 199
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 31
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_bundle_of_all",
+				"defindex": 4343,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Mega Bundle",
+				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE Atlanta 2017 CS:GO Major Championship:\n ● One sticker for each of the 16 participating teams.\n ● One graffiti for each of the 16 participating teams.\n ● One player autograph capsule for each of the 16 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include Legends/Challengers holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/atlanta2017_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/atlanta2017_bundleofall.49534e4fd80ab0aa07ceb9331c51ff4bb745ebe5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_dust2",
+				"defindex": 4344,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_dust2.81f02d867347bef8e3b3148b212fa449f1ba135c.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 200
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_mirage",
+				"defindex": 4345,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_mirage.e4743d9aff1ac76c8bd57c24706eb9bb7684e5ec.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 201
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_cbble",
+				"defindex": 4346,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_cbble.01be0f6fe6487065bc77a8f032920cc192d3348d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 202
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_overpass",
+				"defindex": 4347,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_overpass.59427cdda056ed154d4c29df6417a852f56a7a4b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 203
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_cache",
+				"defindex": 4348,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_cache.6ec62b0923e3347faef891d0acff28ae37b1c1ae.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 204
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_train",
+				"defindex": 4349,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_train.094d87e1e59c1186ce31cc361215e93dbac5d68d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 205
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "crate_atlanta2017_promo_de_nuke",
+				"defindex": 4350,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Atlanta 2017 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_atlanta2017_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_atlanta2017_promo_de_nuke.f9c3a5c9125a951181c52d43b6b123e21d867440.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 206
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 11
 					}
 				]
 				
