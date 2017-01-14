@@ -1293,6 +1293,7 @@ This should take less than a minute."
 "Steam_App_Update_Failed_Text_Long"	"An error occurred while updating %game% (%reason%) :\n\n%detail%"
 "Steam_App_Update_NotEnoughDiskSpace"	"Not enought disk space available to update %game% (%detail% required)"
 "Steam_App_Update_NotEnoughDiskSpaceUser" "Not enought user disk quota available to update %game% (%detail% required)"
+"Steam_App_Update_LockedByProcess" "A file of %game% is locked by %program% and can't be updated. Please close this program and try again. \n\n Program: %executable%\n File: %detail%"
 
 "Steam_PreloadCompleteNoPreorderAvailable" "A locked copy of %game% is now on your computer."
 
@@ -3914,6 +3915,7 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_ContentMgr_DiskFree" "Free Space"
 "SteamUI_ContentMgr_InstalledAppName" "Application"
 "SteamUI_ContentMgr_AddInstallFolder" "Add Library Folder"
+"SteamUI_ContentMgr_RepairInstallFolder" "Repair Library Folder"
 "SteamUI_ContentMgr_RemoveInstallFolder" "Remove Library Folder"
 "SteamUI_ContentMgr_MakeDefaultFolder" "Make Default Folder"
 "SteamUI_ContentMgr_DefaultFolder" "Default"
@@ -3936,6 +3938,12 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_ContentMgr_FlushDownloadConfig" "Clear Download Cache"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Clearing the download cache might resolve issues downloading or starting apps"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "This will not affect your already installed games or saved games"
+
+"SteamUI_ContentMgr_Repair_Title" "Steam Library Repair"
+"SteamUI_ContentMgr_Repair_Starting" "Stopping downloads..."
+"SteamUI_ContentMgr_Repair_Running" "Repairing library folder..."
+"SteamUI_ContentMgr_Repair_Finished" "Folder repair finished"
+"SteamUI_ContentMgr_Repair_Failed" "Folder repair failed"
 
 "SteamUI_InstallUnder" "Install under %s1"
 "SteamUI_CreateNewDrive" "Create new Steam library on drive %s1"
