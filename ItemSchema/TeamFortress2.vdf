@@ -96571,6 +96571,182 @@
 				"basename"	"models/workshop/player/items/all_class/w2016_gift_of_giving/w2016_gift_of_giving_%s.mdl"
 			}
 		}
+ 		"9309"
+		{
+			"name"	"LBTF2 6v6 Elite 1st Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_1st"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9310"
+		{
+			"name"	"LBTF2 6v6 Elite 2nd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_2nd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9311"
+		{
+			"name"	"LBTF2 6v6 Elite 3rd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_3rd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9312"
+		{
+			"name"	"LBTF2 6v6 Elite Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_Participant"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+  		"9313"
+		{
+			"name"	"LBTF2 6v6 Access 1st Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_1st"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9314"
+		{
+			"name"	"LBTF2 6v6 Access 2nd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_2nd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9315"
+		{
+			"name"	"LBTF2 6v6 Access 3rd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_3rd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9316"
+		{
+			"name"	"LBTF2 6v6 Access Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_Participant"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9317"
+		{
+			"name"	"LBTF2 6v6 Open 1st Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_1st"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9318"
+		{
+			"name"	"LBTF2 6v6 Open 2nd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_2nd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9319"
+		{
+			"name"	"LBTF2 6v6 Open 3rd Place Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_3rd"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9320"
+		{
+			"name"	"LBTF2 6v6 Open Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9321"
+		{
+			"name"	"LBTF2 6v6 Central Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_Participant"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
