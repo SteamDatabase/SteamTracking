@@ -2079,6 +2079,7 @@
 	"Library_Details_ControllerAction_SteamMusic_VolMute"	"STEAM MUSIC MUTE"
 	"Library_Details_ControllerAction_Controller_Off"	"TURN OFF CONTROLLER"
 	"Library_Details_ControllerAction_BigPicture_Minimize" "MINIMIZE BIG PICTURE"
+	"Library_Details_ControllerAction_BigPicture_Open" "OPEN BIG PICTURE"
 	"Library_Details_ControllerAction_BigPicture_Quit" "QUIT BIG PICTURE"
 	"Library_Details_ControllerAction_Host_Off"		"SHUTDOWN HOST PC"
 	"Library_Details_ControllerAction_Host_Suspend"	"SUSPEND HOST PC"
@@ -5821,9 +5822,9 @@
 
 	"ControllerBinding_RecommendedTemplate" "Recommended"
 	"ControllerBinding_SavedCopyPasta_Title" "Custom Controller Config Uploaded!"
-	"ControllerBinding_SavedCopyPasta" "Your controller configuration has been uploaded succesfully.\nID: {s:fileid}"
+	"ControllerBinding_SavedCopyPasta" "Your controller configuration has been uploaded successfully.\nID: {s:fileid}"
 	"ControllerBinding_PrivateUploadSuccess" "Success!"
-	"ControllerBinding_PrivateUploadSuccess_Description" "Your controller configuration has been uploaded succesfully."
+	"ControllerBinding_PrivateUploadSuccess_Description" "Your controller configuration has been uploaded successfully."
 
 	"ControllerBinding_Official" "Official Developer Config"
 	"ControllerBinding_OfficialDescription" "This config was created by the developers of this game."
