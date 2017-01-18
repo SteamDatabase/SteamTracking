@@ -3120,6 +3120,11 @@ input.unlockcode_entry_input
 	border: 1px solid #e4ba00;
 	padding: 8px;
 	max-width: 720px;
+	margin-top: 20px;
+}
+
+.limited_user_list {
+	margin: 16px;
 }
 
 .help_event_limiteduser_spend {

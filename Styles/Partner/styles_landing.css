@@ -2319,7 +2319,7 @@ p.optionalChecks {
 }
 
 .admin_email_mismatch {
-	color: goldenrod;
+	color: goldenrod !important;
 }
 
 a.iconLink.admin_email_mismatch:hover {
