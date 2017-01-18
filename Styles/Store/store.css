@@ -1328,9 +1328,7 @@ a#store_search_link img {
 
 .dailydeal_ctn {
 	padding: 16px;
-	background: #39536e;
-	background: rgba( 85, 125, 171, 0.4 );
-	position: relative;
+	background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);background: linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);	position: relative;
 
 	margin-bottom: 2px;
 }
@@ -2992,7 +2990,8 @@ body.v6 .recommendation_mainsection h2 {
 
 body.v6 .home_page_content h2 span.right,
 body.v6 .recommendation_section h2 span.right,
-body.v6 .recommendation_mainsection h2 span.right {
+body.v6 .recommendation_mainsection h2 span.right,
+body.v6 .user_reviews_header span.right {
 	float: right;
 	text-transform: none;
 	letter-spacing: normal;

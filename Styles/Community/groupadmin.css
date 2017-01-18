@@ -509,8 +509,18 @@ a.chat_ban_admin {
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 	margin-right: 8px;
+	white-space: nowrap;
 
 	background-color: #434343
+}
+
+.group_associated_game_name
+{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 380px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .group_associated_game_remove {
