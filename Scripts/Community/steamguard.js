@@ -656,52 +656,14 @@ function HandleSmsResend( near, bForTwoFactor )
 	);
 }
 
-function ReportSteamguardError( op, err )
-{
-	$J.ajax( {
-		url: 'https://steamcommunity.com/steamguard/reporterror',
-		type: 'POST',
-		data: {
-			op: op,
-			e: err,
-			sessionid: g_sessionID
-		}
-	} );
-}
-
 
 function SetRevocationCode( id )
 {
-	try
-	{
-		GetValueFromLocalURL( 'steammobile://steamguardgetrevocation', 5,
-			function ( data )
-			{
-				$J( id ).text( data );
-			},
-			function ( value, code )
-			{
-				ReportSteamguardError( "SetRevocationCode", "error" );
-			},
-			function ( value, code )
-			{
-				ReportSteamguardError( "SetRevocationCode", "fatal" );
-			}
-		);
-	}
-	catch( err )
-	{
-		ReportSteamguardError( "SetRevocationCode", "Exception: " + err.toString() );
-	}
-
-	setTimeout(
-		function()
+	GetValueFromLocalURL( 'steammobile://steamguardgetrevocation', 5,
+		function( data )
 		{
-			if ( !$J( id ).text() )
-			{
-				ReportSteamguardError( "SetRevocationCode", "Revocation code still empty after five seconds" );
-			}
-		}, 5100
+			$J(id).text( data );
+		}
 	);
 }
 
