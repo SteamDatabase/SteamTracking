@@ -101,16 +101,8 @@ function PhoneAjax( op, arg, success, error )
 	});
 }
 
-var g_alreadyLoaded = false;
-
 function HandleChangePageLoad( needGid )
 {
-	if ( g_alreadyLoaded )
-	{
-		return;
-	}
-	g_alreadyLoaded = true;
-
 	var processGidFunc = function( haveGid )
 	{
 		if ( needGid && haveGid != needGid )
@@ -125,14 +117,27 @@ function HandleChangePageLoad( needGid )
 				$J('#steamguard_prechange').hide();
 			}
 
+			if ( $J('#steamguard_remove_confirm') )
+			{
+				$J('#steamguard_remove_confirm').hide();
+			}
+
 			if ( $J('#steamguard_cannot_change') )
 			{
 				$J('#steamguard_cannot_change').show();
 			}
 		}
-		else if ( ! needGid && haveGid )
+		else
 		{
-			GetValueFromLocalURL( "steammobile://steamguardsuppresstwofactorgid?gid=" + haveGid );
+			if ( $J('#steamguard_remove_confirm') )
+			{
+				$J('#steamguard_remove_confirm').show();
+			}
+
+			if ( !needGid && haveGid )
+			{
+				GetValueFromLocalURL( "steammobile://steamguardsuppresstwofactorgid?gid=" + haveGid );
+			}
 		}
 	};
 
@@ -153,17 +158,11 @@ function HandleChangePageLoad( needGid )
 
 function HandleSplashettePageLoad( needGid )
 {
-	if ( g_alreadyLoaded )
-	{
-		return;
-	}
-	g_alreadyLoaded = true;
-
 	var processGidFunc = function( haveGid )
 	{
-		if ( needGid && haveGid != needGid )
+		if ( needGid && haveGid == needGid )
 		{
-			$J('#splashette_rcode_wrapper').hide();
+			$J('#splashette_rcode_wrapper').show();
 		}
 	};
 

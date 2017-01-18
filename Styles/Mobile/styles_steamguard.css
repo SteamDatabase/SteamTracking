@@ -8,9 +8,14 @@ body.steamguard_body.steamguard_body_black {
 	background-color: #060f16;
 }
 
+.steamguard_body .responsive_page_template_content {
+	padding-bottom: 0 !important;
+}
+
 .steamguard_bodybg {
 	background:  url(https://steamcommunity-a.akamaihd.net/public/images/mobile/blue_glow.png) center top no-repeat #060f16;
 	padding-top: 20px;
+	padding-bottom: 120px;
 }
 
 .steamguard_choice_list {
