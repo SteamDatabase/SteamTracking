@@ -3922,10 +3922,12 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_MoveAppFolder_Title" "Move Install Folder"
 "Steam_MoveAppFolder_SelectFolder" "Select Steam library folder to move files to:"
 "Steam_MoveAppFolder_Move" "Move Folder"
-"Steam_MoveAppFolder_Cancel" "Close"
+"Steam_MoveAppFolder_Cancel" "Cancel"
+"Steam_MoveAppFolder_Close" "Close"
 "Steam_MoveAppFolder_Info" "%game% is installed under library folder \"%folder%\". "
 "Steam_MoveAppFolder_Success" "Sucess, moved %numfiles% files to new library folder."
 "Steam_MoveAppFolder_Failure" "Failed to move all files to new library folder (%error%)."
+"Steam_MoveAppFolder_FolderExists" "Game install folder already exists in selected Steam library"
 "Steam_MoveAppFolder_NoStart" "Files can't be moved to new library folder (%error%)."
 
 "Steam_HelpUsTranslate" "Fluent in another language? Help us translate Steam."

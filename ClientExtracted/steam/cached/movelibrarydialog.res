@@ -126,10 +126,10 @@
 		"Default"		"0"
 	}
 	
-	"CancelButton"
+	"CloseButton"
 	{
 		"ControlName"		"Button"
-		"fieldName"		"CancelButton"
+		"fieldName"		"CloseButton"
 		"xpos"		"340"
 		"ypos"		"160"
 		"wide"		"96"
@@ -140,7 +140,7 @@
 		"enabled"		"1"
 		"tabPosition"		"4"
 		"paintbackground"		"1"
-		"labelText"		"#Steam_MoveAppFolder_Cancel"
+		"labelText"		"#Steam_MoveAppFolder_Close"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Command"		"Close"
