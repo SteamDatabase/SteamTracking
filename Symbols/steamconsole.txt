@@ -218,6 +218,7 @@
  Plat_GetCommandLine
  Plat_GetExecutablePath
  Plat_MSTime
+ Plat_RelativeTicks
  Plat_SetCommandLineArgs
  Plat_ctime
  Plat_localtime
@@ -294,8 +295,8 @@
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
- SteamThreadTools::CThread::IsAlive()
- SteamThreadTools::CThread::IsThreadRunning()
+ SteamThreadTools::CThread::IsAlive() const
+ SteamThreadTools::CThread::IsThreadRunning() const
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::SetName(char const*)
  SteamThreadTools::CThread::Start(unsigned long)
@@ -446,7 +447,7 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
- T CFileReader::BOpenFile(char const*)
+ T CFileReader::BOpenFile(char const*, int)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -974,6 +975,7 @@
  T FioRead(int, void*, int, int*)
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FioWrite(int, void const*, int, int*)
+ T FioWrite(int, void const*, unsigned long, unsigned long*)
  T GCallbackMgr()
  T GetBuildFlagsFromCommandLine(KeyValues const*)
  T GetCStringCharConversion()
@@ -1202,6 +1204,7 @@
  atoll
  b (anonymous namespace)::_CLEANUP
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
+ b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::fAsserted
@@ -1330,6 +1333,7 @@
  fcntl$UNIX2003
  fflush
  fgets
+ fileno
  fopen$UNIX2003
  fread
  free
