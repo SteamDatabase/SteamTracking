@@ -10,11 +10,14 @@
 			labelText="#Steam_Settings_Streaming_AdvancedHostOptions_Description"
 		}
 		
+		"ChangeDesktopResolution" { ControlName="CheckButton" fieldName="ChangeDesktopResolution" labelText="#Steam_Settings_Streaming_ChangeDesktopResolution" }
+		
 		"DynamicallyAdjustResolution" { ControlName="CheckButton" fieldName="DynamicallyAdjustResolution" labelText="#Steam_Settings_Streaming_DynamicallyAdjustResolution" }
+
+		"EnableCaptureNVFBC" { ControlName="CheckButton" fieldName="EnableCaptureNVFBC" labelText="#Steam_Settings_Streaming_EnableCaptureNVFBC" }
 
 		"EnableHardwareEncoding" { ControlName="CheckButton" fieldName="EnableHardwareEncoding" labelText="#Steam_Settings_Streaming_EnableHardwareEncoding" }
 		"EnableHardwareEncodingNVIDIA" { ControlName="CheckButton" fieldName="EnableHardwareEncodingNVIDIA" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" }
-		"EnableHardwareEncodingNVFBCH264" { ControlName="CheckButton" fieldName="EnableHardwareEncodingNVFBCH264" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingNVFBCH264" }
 		"EnableHardwareEncodingAMD" { ControlName="CheckButton" fieldName="EnableHardwareEncodingAMD" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingAMD" }
 		"EnableHardwareEncodingIntel" { ControlName="CheckButton" fieldName="EnableHardwareEncodingIntel" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingIntel" }
 		
@@ -57,7 +60,7 @@
 	
 		place
 		{
-			control="DescriptionLabel,DynamicallyAdjustResolution,EnableHardwareEncoding"
+			control="DescriptionLabel,ChangeDesktopResolution,DynamicallyAdjustResolution,EnableCaptureNVFBC,EnableHardwareEncoding"
 			dir=down
 			align=top
 			width=max
@@ -68,46 +71,13 @@
 		}
 		place
 		{
-			control="EnableHardwareEncoding"
-			dir=down
-			align=top
-			width=max
-			margin-left=20
-			margin-right=20
-			margin-top=100
-			spacing=0
-		}
-		place
-		{
-			control="EnableHardwareEncodingNVIDIA"
+			control="EnableHardwareEncodingNVIDIA,EnableHardwareEncodingAMD,EnableHardwareEncodingIntel,EnableTrafficPriorityLabel,EnableTrafficPriority"
 			dir=down
 			align=top
 			width=max
 			margin-left=45
 			margin-right=20
-			margin-top=125
-			spacing=0
-		}
-		place
-		{
-			control="EnableHardwareEncodingNVFBCH264"
-			dir=down
-			align=top
-			width=max
-			margin-left=70
-			margin-right=20
-			margin-top=150
-			spacing=0
-		}
-		place
-		{
-			control="EnableHardwareEncodingAMD,EnableHardwareEncodingIntel,EnableTrafficPriorityLabel,EnableTrafficPriority"
-			dir=down
-			align=top
-			width=max
-			margin-left=45
-			margin-right=20
-			margin-top=175
+			margin-top=205
 			spacing=0
 		}
 		place
@@ -118,7 +88,7 @@
 			width=max
 			margin-left=20
 			margin-right=20
-			margin-top=245
+			margin-top=305
 			spacing=0
 		}
 		place
@@ -129,7 +99,7 @@
 			width=max
 			margin-left=20
 			margin-right=20
-			margin-top=295
+			margin-top=365
 			spacing=0
 		}
 		

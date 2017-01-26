@@ -13,15 +13,15 @@
 			
 			  <Panel class="FlowDown">
 					<Panel class="Spacer" />
+					<ToggleButton class="CheckBox" id="ChangeDesktopResolution" onactivate="ToggleChangeDesktopResolution()" text="#Settings_RemoteClients_ChangeDesktopResolution" />
+					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="DynamicallyAdjustResolution" onactivate="ToggleDynamicallyAdjustResolution()" text="#Settings_RemoteClients_DynamicallyAdjustResolution" />
-
+					<Panel class="Spacer" />
+					<ToggleButton class="CheckBox" id="EnableCaptureNVFBC" onactivate="ToggleCaptureNVFBC()" text="#Settings_RemoteClients_EnableCaptureNVFBC" />
 					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableHardwareEncoding" onactivate="ToggleHardwareEncoding()" text="#Settings_RemoteClients_EnableHardwareEncoding" />
 					<Panel class="FlowDown SettingsSubcheckboxes">
 						<ToggleButton class="CheckBox" id="EnableHardwareEncodingNVIDIA" onactivate="ToggleHardwareEncodingNVIDIA()" text="#Settings_RemoteClients_EnableHardwareEncodingNVIDIA" />
-						<Panel class="FlowDown SettingsSubcheckboxes">
-							<ToggleButton class="CheckBox" id="EnableHardwareEncodingNVFBCH264" onactivate="ToggleHardwareEncodingNVFBCH264()" text="#Settings_RemoteClients_EnableHardwareEncodingNVFBCH264" />
-						</Panel>
 						<ToggleButton class="CheckBox" id="EnableHardwareEncodingAMD" onactivate="ToggleHardwareEncodingAMD()" text="#Settings_RemoteClients_EnableHardwareEncodingAMD" />
 						<ToggleButton class="CheckBox" id="EnableHardwareEncodingIntel" onactivate="ToggleHardwareEncodingIntel()" text="#Settings_RemoteClients_EnableHardwareEncodingIntel" />
 					</Panel>

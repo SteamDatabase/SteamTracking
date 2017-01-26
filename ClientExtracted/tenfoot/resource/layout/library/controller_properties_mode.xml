@@ -1087,7 +1087,10 @@
 						<DropDown id="GyroButtonInvert_joystick_move" />
 					</Panel>	
           <!-- Joystick Move Mode Advanced -->
-					
+					<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroLockExtents" />
+						<DropDown id="GyroLockExtents_joystick_move" />
+					</Panel>					
           <Panel class="FieldWrapper" modes="joystickmove" advanced="on">
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
             <Slider id="EdgeBindingRadius_joystick_move" direction="horizontal" />
