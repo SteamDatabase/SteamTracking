@@ -787,7 +787,7 @@ textarea.fullwidth, select.fullwidth {
 
 /* autocomplete */
 
-div.autocomplete, div.popup_block_new {
+div.autocomplete {
 	margin: 0px;  
 	padding: 0px;  
 	width: 250px;
@@ -800,7 +800,22 @@ div.autocomplete, div.popup_block_new {
 	z-index: 10;
 }
 
-div.popup_block_new div.popup_body {
+div.popup_block_new {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	color: #ACACAC;
+	max-height: 288px;
+	overflow-y: auto;
+	z-index: 10;
+}
+
+#appHeaderFindSuggestions {
+	background: #000000;
+	border: 1px solid #ACACAC;
+}
+
+#appHeaderFindSuggestions div.popup_body {
 	background: #000000;
 }
 
