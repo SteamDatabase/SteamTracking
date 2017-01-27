@@ -3572,3 +3572,188 @@ FixedElementOnScrollWrapper.prototype.handleScroll = function( bForceRecalc )
 	}
 }
 
+// general text suggestion control
+
+// fnSuggestForTerm will be called with two values, the current string to get suggestions for,
+//	and the callback to invoke with the new values.  You should always invoke the callback per call
+//	to fnSuggestForTerm, but can delay due to ajax if needed.
+function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest )
+{
+	this.m_bHaveSuggestions = false;
+	this.m_$Input = $InputElement;
+	this.m_fnSuggestForTerm = fnSuggestForTerm;
+	this.m_fnOnSuggest = fnOnSuggest || function( term ) {};
+	this.m_strLastVal = '';
+	this.m_align = 'left';
+	this.m_valign = 'bottom';
+
+	this.m_$Focus = $J();
+	this.m_strLastFocusVal = null;
+
+
+	this.m_$SuggestionsCtn = $J('<div/>', {'class': 'popup_block_new', style: 'display: none;' } );
+	this.m_$Suggestions = $J('<div/>', {'class': 'popup_body popup_menu' } );
+	this.m_$SuggestionsCtn.append( this.m_$Suggestions );
+
+	this.m_$SuggestionsCtn.hide();
+	$J(document.body).append( this.m_$SuggestionsCtn );
+
+	var zIndex = 200;	//normal popup zindex
+	this.m_$Input.parents().each( function() {
+		var zIndexParent = $J(this).css('zIndex');
+		if ( zIndexParent != 'auto' && zIndexParent != 0 )
+		{
+			zIndex = zIndexParent;
+		}
+	});
+	this.m_$SuggestionsCtn.css( 'zIndex', zIndex + 20 );
+
+	var _this = this;
+	this.m_$Input.on( 'keyup.CTextInputSuggest click.CTextInputSuggest', function( event ) { _this.OnTextChanged( event ) } );
+	this.m_$Input.on( 'paste.CTextInputSuggest cut.CTextInputSuggest', function() { window.setTimeout( function() { _this.OnTextChanged() }, 1 ); } );
+	this.m_$Input.on( 'keydown.CTextInputSuggest', function( event ) { _this.OnKeyDown( event ) } );
+	this.m_$Input.on( 'focus.CTextInputSuggest', function() { _this.ShowSuggestions() } );
+	this.m_$Input.on( 'blur.CTextInputSuggest', function() { _this.HideSuggestions() } );
+}
+
+CTextInputSuggest.prototype.SetAlignment = function( align, valign )
+{
+	this.m_align = align || 'left';
+	this.m_valign = valign || 'bottom';
+};
+
+CTextInputSuggest.prototype.SetSuggestionsContainerId = function( strSuggestionsCtnId )
+{
+	this.m_$SuggestionsCtn.attr( 'id', strSuggestionsCtnId );
+};
+
+CTextInputSuggest.prototype.ShowSuggestions = function()
+{
+	if ( !this.m_$SuggestionsCtn.find(':visible').length && this.m_bHaveSuggestions )
+	{
+		AlignMenu( this.m_$Input[0], this.m_$SuggestionsCtn[0], this.m_align, this.m_valign, true );
+		this.m_$SuggestionsCtn.fadeIn( 'fast' );
+	}
+};
+
+CTextInputSuggest.prototype.HideSuggestions = function()
+{
+	if ( this.m_bHaveSuggestions )
+		this.m_$SuggestionsCtn.fadeOut( 'fast' );
+	else
+		this.m_$SuggestionsCtn.hide();
+};
+
+CTextInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
+{
+	this.m_$Input.val( $Suggestion.text() );
+
+	this.m_bHaveSuggestions = false;
+	this.m_$Focus = $J();
+	this.HideSuggestions();
+
+	this.m_fnOnSuggest( $Suggestion.text() );
+};
+
+CTextInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
+{
+	var strLastFocus = this.m_strLastFocusVal;
+
+	this.m_$Suggestions.empty();
+
+	this.m_$Focus = $J();
+	this.m_strLastFocus = null;
+
+	if ( rgSuggestions && rgSuggestions.length )
+	{
+		var _this = this;
+		for ( var i = 0; i < rgSuggestions.length; i++ )
+		{
+			var $Suggestion = $J('<div/>', {'class': 'suggestion_item popup_menu_item' } );
+			$Suggestion.text( rgSuggestions[i] );
+			$Suggestion.click( $J.proxy( this.OnSuggestionSelected, this, $Suggestion ) );
+			$Suggestion.mouseenter( $J.proxy( this.SetFocus, this, $Suggestion ) );
+
+			this.m_$Suggestions.append( $Suggestion );
+
+			if ( rgSuggestions[i] == strLastFocus )
+				this.SetFocus( $Suggestion );
+		}
+		this.m_bHaveSuggestions = true;
+		this.ShowSuggestions();
+	}
+	else
+	{
+		this.m_bHaveSuggestions = false;
+		this.HideSuggestions();
+	}
+};
+
+CTextInputSuggest.prototype.OnTextChanged = function( event )
+{
+	if ( event && ( event.which == 13 || event.which == 27 ) )
+		return;
+
+	var value = this.m_$Input.val();
+	if ( value != this.m_strLastVal )
+	{
+		var _this = this;
+		this.m_fnSuggestForTerm( value, function( rgSuggestions ) { _this.SetSuggestions( rgSuggestions ); } );
+		this.m_strLastVal = value;
+	}
+};
+
+CTextInputSuggest.prototype.OnKeyDown = function( event )
+{
+	if ( event.which == 27 )
+	{
+		this.HideSuggestions();
+	}
+	else if ( this.m_bHaveSuggestions )
+	{
+		var $NewSuggestion = null;
+		if ( event.which == 13 )
+		{
+			if ( this.m_$Focus.length && this.m_bHaveSuggestions )
+			{
+				this.OnSuggestionSelected( this.m_$Focus );
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		}
+		else if ( event.which == 38 /* up arrow */ )
+		{
+			event.preventDefault();
+			if ( this.m_$Focus.length )
+				$NewSuggestion = this.m_$Focus.prev();
+			if ( !$NewSuggestion )
+				$NewSuggestion = this.m_$Suggestions.children().last();
+		}
+		else if ( event.which == 40 /* down arrow */ )
+			{
+				event.preventDefault();
+				if ( this.m_$Focus.length )
+					$NewSuggestion = this.m_$Focus.next();
+				if ( !$NewSuggestion )
+					$NewSuggestion = this.m_$Suggestions.children().first();
+			}
+
+		if ( $NewSuggestion )
+			this.SetFocus( $NewSuggestion );
+	}
+};
+
+CTextInputSuggest.prototype.SetFocus = function( $Suggestion )
+{
+	this.m_$Focus.removeClass( 'focus' );
+	this.m_$Focus = $Suggestion;
+	this.m_$Focus.addClass( 'focus' );
+	this.m_strLastFocusVal = $Suggestion.text();
+};
+
+CTextInputSuggest.prototype.Destroy = function()
+{
+	this.m_$SuggestionsCtn.remove();
+	this.m_$Input.off( '.CTextInputSuggest' );
+};
+
