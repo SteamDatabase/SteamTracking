@@ -2098,6 +2098,11 @@ div#appAutoHeader_list
     top: 32px !important;
 }
 
+div#appHeaderFindSuggestions
+{
+	width: 455px !important;
+}
+
 #global_action_menu {
 	float: right;
 	text-align: right;

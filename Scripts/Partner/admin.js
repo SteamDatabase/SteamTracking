@@ -1059,7 +1059,7 @@ function UpdateAllowedCountries()
 // called when a localized text area selection box has changed
 function OnLocLanguageSelect( id )
 {
-	var select = $( id + '_select' );
+	var select = document.getElementById( id + '_select' );
 	LocChangeLanguage( select.value );
 }
 
@@ -1089,16 +1089,16 @@ function LocListenForEvents( id )
 // sets up text area for specific language
 function LocLanguageSelect( id, language )
 {
-	var select = $( id + '_select' );
+	var select = document.getElementById( id + '_select' );
 	if ( select )
 		select.value = language;
 
-	var currentLang = $( id + '_currentlanguage' );
+	var currentLang = document.getElementById( id + '_currentlanguage' );
 	if ( currentLang )
 		currentLang.value = language;
 
-	var textArea = $( id + '_textarea' );
-	var hiddenInput = $( id + language + '__hidden' );
+	var textArea = document.getElementById( id + '_textarea' );
+	var hiddenInput = document.getElementById( id + language + '__hidden' );
 	if ( textArea && hiddenInput )
 		textArea.value = hiddenInput.value;
 }
@@ -1106,19 +1106,19 @@ function LocLanguageSelect( id, language )
 // called when localized text input changes. Updates hidden inputs
 function OnLocTextChanged( id )
 {
-	var currentLanguage = $( id + '_currentlanguage' ).value;
+	var currentLanguage = document.getElementById( id + '_currentlanguage' ).value;
 	if ( currentLanguage.length <= 0 )
 		return;
 
-	var textArea = $( id + '_textarea' );
-	var hiddenInput = $( id + currentLanguage + '__hidden' );
+	var textArea = document.getElementById( id + '_textarea' );
+	var hiddenInput = document.getElementById( id + currentLanguage + '__hidden' );
 	hiddenInput.value = textArea.value;
 }
 
 // called to set styles on text area select
 function LocUpdateLangThatHaveText( id )
 {
-	var hiddenInputs = $$( '#' + id + '_area input' );
+	var hiddenInputs = document.querySelectorAll( '#' + id + '_area input' );
 	for ( var i = 0; i < hiddenInputs.length; i++ )
 	{
 		if ( hiddenInputs[i].id.indexOf( "_hidden" ) == -1 )
@@ -1126,12 +1126,12 @@ function LocUpdateLangThatHaveText( id )
 
 		var idLanguage = hiddenInputs[i].id.slice( id.length );
 		idLanguage = idLanguage.slice( 0, idLanguage.indexOf( "_" ) );
-		var option = $( id + idLanguage + '__option' );
+		var option = document.getElementById( id + idLanguage + '__option' );
 
 		if ( hiddenInputs[i].value.length > 0 )
-			option.addClassName( 'HasText' );
+			option.classList.add( 'HasText' );
 		else
-			option.removeClassName( 'HasText' );
+			option.classList.remove( 'HasText' );
 	}
 }
 

@@ -787,7 +787,7 @@ textarea.fullwidth, select.fullwidth {
 
 /* autocomplete */
 
-div.autocomplete {
+div.autocomplete, div.popup_block_new {
 	margin: 0px;  
 	padding: 0px;  
 	width: 250px;
@@ -800,13 +800,17 @@ div.autocomplete {
 	z-index: 10;
 }
 
+div.popup_block_new div.popup_body {
+	background: #000000;
+}
+
 div.autocomplete ul {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
 
-div.autocomplete ul li.selected, option:checked {
+div.autocomplete ul li.selected, option:checked, div.popup_block_new div.popup_menu_item.focus {
 	color: white;
 	
 	background-image:url('../images/bg_tab_inactive.png');
@@ -815,7 +819,7 @@ div.autocomplete ul li.selected, option:checked {
 	background-position: bottom;
 }
 
-div.autocomplete ul li {
+div.autocomplete ul li, div.popup_block_new div.popup_menu_item {
 	margin: 0px;
 	padding: 2px;
 	display: block;
