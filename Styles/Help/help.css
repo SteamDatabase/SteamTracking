@@ -774,12 +774,13 @@ body.v6 .page_content_ctn.dark:last-child {
 	display: block;
 	max-width: 712px;
 
-		box-sizing: border-box;
+	/* buttons may have different padding, but want them to always be max 712 wide to match everything else */
+	box-sizing: border-box;
 
 	margin-top: 10px;
 	padding-right: 30px;
 	border: solid 1px;
-	border-color: #66778b #323f51 #323f51 #66778b;
+	border-color: #445468;
 
 	font-size: 15px;
 	color: white;
@@ -828,7 +829,7 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_wizard_button:not(.disabled):not(.nohover):hover,
 .help_wizard_button.opened {
 	background-color: #4581a5;
-	border-color: #8faec7 #4e5d6f #4e5d6f #8faec7;
+	border-color: #4581a5;
 }
 
 .help_wizard_arrow_right {
@@ -878,12 +879,12 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 .help_wizard_button.help_wizard_button_highpri {
-	border-color: #9fb462 #627c2e #566e2c #798d53;
+	border-color: #6d892f;
 	background-color: #6d892f;
 	}
 
 .help_wizard_button.help_wizard_button_highpri:not(.disabled):not(.nohover):hover {
-	border-color: #abc16a #718d34 #627e30 #87a341;
+	border-color: #7c9b35;
 	background-color: #7c9b35;
 }
 
@@ -1090,8 +1091,8 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_divider {
 	background-color: #3b718d;
 	height: 1px;
-	max-width: 672px;
-	margin: 14px 15px 8px 15px;
+	max-width: 712px;
+	margin: 14px 0px;
 }
 
 .help_divider.full {
@@ -1099,7 +1100,7 @@ body.v6 .page_content_ctn.dark:last-child {
 }
 
 #help_search_support_input {
-	height: 44px;
+	height: 54px;
 	width: 712px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -3162,31 +3163,48 @@ input.unlockcode_entry_input
 	background: -webkit-linear-gradient( top, #6a7787 5%, #182636 95%);background: linear-gradient( to bottom, #6a7787 5%, #182636 95%);}
 
 .help_login_nag {
-	margin: 30px 0;
-	max-width: 712px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	max-width: 684px;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 14px;
+}
+
+.help_login_nag_intro {
+	margin-bottom: 15px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.help_login_nag_buttons{
+	margin: auto;
+	text-align: center;
 }
 
 .help_login_nag_left {
-	float: left;
+	min-width: 40%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.help_login_nag a.btn_medium > span {
+	min-width: 200px;
 	text-align: center;
-	margin-right: 32px;
-}
-
-.help_login_nag_left a.btn_medium > span {
-	min-width: 152px;
-}
-
-.help_login_nag_forgot_password {
-	font-size: 15px;
-	margin-top: 8px;
 }
 
 .help_login_nag_right {
-	overflow: hidden;
+	min-width: 40%;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 
-.btn_login_nag.btnv6_blue_hoverfade {
+.btn_login_nag_left.btnv6_blue_hoverfade {
 	background: #67c1f5;
+	color: #ffffff !important;	/* buttons.css uses !important, so the war has begun */
+}
+
+.btn_login_nag_right.btnv6_blue_hoverfade {
+	background: #2d3d50;
 	color: #ffffff !important;	/* buttons.css uses !important, so the war has begun */
 }
 
@@ -3333,7 +3351,7 @@ a.help_request_row.closed {
 }
 
 a.help_request_row.closed, a.help_request_row.closed .help_request_name {
-	color: #515d6a;
+	color: #718192;
 }
 
 .help_request_state_msg {
@@ -3388,6 +3406,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 		float: none;
 		margin-bottom: 12px;
 	}
+
 }
 
 .help_request_recent_submit {
@@ -3396,6 +3415,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	border: 1px solid #67c1f5;
 	background-color: #2e6484;
 	color: white;
+	line-height:18px;
 }
 
 .help_request_recent_submit b {
@@ -3404,9 +3424,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 .help_request_page {
 	font-size: 13px;
-	max-width: 940px;
-
-
+	max-width: 950px;
 	background: url( 'https://help.steampowered.com/public/images/helprequests/footer_gradient.png' ) bottom center no-repeat;
 	padding-bottom: 48px;
 }
@@ -3418,10 +3436,14 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	margin-right: 12px;
 }
 
+.help_request_title_container {
+	margin-top: 32px;
+	margin-bottom: 12px;
+}
+
 .help_request_title {
 	font-size: 14px;
 	color: #67c1f5;
-	margin-top: 32px;
 	line-height: 20px;
 }
 
@@ -3433,7 +3455,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 .help_request_message {
 	background: #131d28;
-	color: #6a798a;
+	color: #8193a7;
 	margin-bottom: 16px;
 }
 
@@ -3444,18 +3466,17 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 }
 
 .help_request_message .help_request_text {
-	padding: 20px;
+	padding: 14px 30px 30px 60px;
 }
 
 .help_request_author_bar {
-	padding: 20px 20px 0 20px;
+	padding: 14px 20px 0 14px;
 	min-height: 36px;
 }
 
 .help_request_author_bar .author_bar_text {
 	padding: 8px 0;
 }
-
 
 .help_request_page .ticket_msg_category
 {
@@ -3475,7 +3496,7 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 .help_request_message.from_steam .help_request_author_bar {
 	background: #4a8db4;
 	color: #c2d2e4;
-	padding-top: 0;
+	padding: 14px;
 }
 
 .qt_preview .help_request_message.from_steam {
@@ -3486,6 +3507,10 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	float: left;
 	margin-right: 8px;
 	vertical-align: middle;
+}
+
+.help_request_author_bar .steamAvatar {
+	background: url('https://help.steampowered.com/public/images//thumbnail_hwaccessories.png') no-repeat left;
 }
 
 .help_request_text ol,
@@ -3499,7 +3524,6 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 
 	background: rgba( 15, 22, 31, 0.42 );
 	padding: 20px 20px 4px 20px;
-	color: #67c1f5;
 }
 
 .help_request_footerbox.update_options, .help_request_footerbox.add_reply {
@@ -4077,3 +4101,10 @@ ul.attached_file_list {
 	display:inline-block;
 	vertical-align:middle
 }
+
+table {
+
+	font-size: 13px;
+
+}
+

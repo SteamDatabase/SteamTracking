@@ -2391,7 +2391,13 @@ HelpRequestPage = {
 			else if ( data.requires_validation )
 			{
 				var $DialogContents = $J( '#help_request_email_verification' ).clone();
-				$DialogContents.find( '#validate_email_instructions' ).append( '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#create_help_request_email_address' ).val() + '</span>' );
+
+				var strEmailInstructions = '';
+				if ( $J( form ).find( '#create_help_request_email_address' ).length )
+					strEmailInstructions = 'We just need to make sure you will receive our emails when we respond to your request.  We\'ve sent an email to:' + '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#create_help_request_email_address' ).val() + '</span>';
+				else
+					strEmailInstructions = 'We just need to validate you have access to the new email address you want to use.  We\'ve sent an email to:' + '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#extended_string_new_email' ).val() + '</span>';
+				$DialogContents.find( '#validate_email_instructions' ).append( strEmailInstructions );
 				if ( data.validation_failed )
 				{
 					$DialogContents.find( '#validate_email_error_contents' ).text( 'Whoops!  Sorry that code wasn\'t quite right, please try again!' );
@@ -2842,12 +2848,25 @@ HelpRequestPage = {
 			'Do you want to close your help request?',
 			'<div class="help_page_title">This means you will not receive a response from Steam Support.</div>' +
 				'<br><p>We haven\'t had a chance to respond to your request for help yet.</p><br>' +
-				'<p>Do not close the ticket if you still need help. We will respond to your request as soon as possible.</p><br><br>',
+				'<p>Do not close the request if you still need help. We will respond to your request as soon as possible.</p><br><br>',
 			'I no longer need help, close my request.',
 			'I still need help!'
 		).done( function() {
 			HelpRequestPage.CloseHelpRequest( reference_code );
 		});
+	},
+	
+	ConfirmIssueResolvedHelpRequest: function( reference_code )
+	{
+		ShowConfirmDialog(
+			'Do you want to close your help request?',
+			'<div class="help_page_title">If you no longer need help from Steam, please close your request.</div>' +
+				'<br><p>If you still need to give us more information or you have more questions, please leave the request open and message us again.</p><br>',
+			'Yes, issue is resolved',
+			'No, I need more help'
+		).done( function() {
+		HelpRequestPage.CloseHelpRequest( reference_code );
+	});
 	}
 };
 
