@@ -2534,7 +2534,7 @@ body.v6 .home_rightcol.recommended .home_specials_ctn h2 {
 	margin: 0;
 }
 
-.gutter_header:not(:first-child)
+.gutter_header.pad
 {
 	margin-top: 15px;
 }
