@@ -1130,6 +1130,7 @@
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CCallbackBase
  D typeinfo for CCallbackImpl<16>
+ D typeinfo for CCallbackImpl<4>
  D typeinfo for CCookie
  D typeinfo for CDragStartCallbacks
  D typeinfo for CDynamicFunc<bool (*)()>
@@ -1485,6 +1486,7 @@
  D typeinfo for panorama::CRenderMsg<CMsgRenderTextRegion>
  D typeinfo for panorama::CRenderMsg<CMsgRenderTexturedRect>
  D typeinfo for panorama::CRenderMsg<CMsgRequestRenderCallback>
+ D typeinfo for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  D typeinfo for panorama::CStyleFactoryWrapper
  D typeinfo for panorama::CStyleFile
  D typeinfo for panorama::CStyleProperty
@@ -1767,6 +1769,7 @@
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CCallbackImpl<16>
+ D vtable for CCallbackImpl<4>
  D vtable for CCookie
  D vtable for CDragStartCallbacks
  D vtable for CDynamicFunc<bool (*)()>
@@ -2100,6 +2103,7 @@
  D vtable for panorama::CRenderMsg<CMsgRenderTextRegion>
  D vtable for panorama::CRenderMsg<CMsgRenderTexturedRect>
  D vtable for panorama::CRenderMsg<CMsgRequestRenderCallback>
+ D vtable for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  D vtable for panorama::CStyleFactoryWrapper
  D vtable for panorama::CStyleFile
  D vtable for panorama::CStylePropertyAlign
@@ -2388,6 +2392,7 @@
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CCallbackBase
  R typeinfo name for CCallbackImpl<16>
+ R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCookie
  R typeinfo name for CDirWatcher
  R typeinfo name for CDragStartCallbacks
@@ -2987,6 +2992,7 @@
  R typeinfo name for panorama::CRenderMsg<CMsgRenderTexturedRect>
  R typeinfo name for panorama::CRenderMsg<CMsgRequestRenderCallback>
  R typeinfo name for panorama::CSteamGameControllerNew
+ R typeinfo name for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  R typeinfo name for panorama::CStyleAnimation
  R typeinfo name for panorama::CStyleDefine
  R typeinfo name for panorama::CStyleFactoryWrapper
@@ -3510,6 +3516,9 @@
  T CCallbackImpl<16>::GetCallbackSizeBytes()
  T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<16>::~CCallbackImpl()
+ T CCallbackImpl<4>::GetCallbackSizeBytes()
+ T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -10468,6 +10477,8 @@
  T panorama::CSteamGameControllerNew::BIsFingerDownAnalog(panorama::GamePadCode) const
  T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerLeftPad() const
  T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerRightPad() const
+ T panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization::CCallbackInternal_OnReceivedControllerPersonalization()
+ T panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization::Run(void*)
  T panorama::CSteamGameControllerNew::CSteamGameControllerNew(panorama::IUIInput*)
  T panorama::CSteamGameControllerNew::GetCurrentActionSet() const
  T panorama::CSteamGameControllerNew::GetNumGamepadsConnected() const

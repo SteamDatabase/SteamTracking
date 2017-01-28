@@ -6,6 +6,7 @@
  .objc_class_name_NSBitmapImageRep
  .objc_class_name_NSBundle
  .objc_class_name_NSColor
+ .objc_class_name_NSColorSpace
  .objc_class_name_NSCursor
  .objc_class_name_NSDate
  .objc_class_name_NSEvent
@@ -131,8 +132,7 @@
  CGBitmapContextCreate
  CGBitmapContextGetData
  CGColorCreate
- CGColorSpaceCreateWithName
- CGColorSpaceCreateWithPlatformColorSpace
+ CGColorSpaceRetain
  CGContextAddLineToPoint
  CGContextClipToRect
  CGContextDrawLayerAtPoint
@@ -164,6 +164,7 @@
  CGDataProviderCreateWithData
  CGDataProviderRelease
  CGDisplayBounds
+ CGDisplayCopyColorSpace
  CGDisplayRegisterReconfigurationCallback
  CGDisplayRemoveReconfigurationCallback
  CGGetActiveDisplayList
@@ -177,9 +178,6 @@
  CGLayerRelease
  CGMainDisplayID
  CGWindowLevelForKey
- CMCloseProfile
- CMGetProfileByAVID
- CMGetSystemProfile
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -356,6 +354,7 @@
  NMRemove
  NSApp
  NSDefaultRunLoopMode
+ NSSelectorFromString
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
@@ -1906,8 +1905,8 @@
  T FontManager()
  T GLContextGrabAndRelease::~GLContextGrabAndRelease()
  T GLSetup(int, int)
+ T GetAppropriateSRGBColorSpace()
  T GetCStringCharConversion()
- T GetDeviceColorSpace()
  T GetFileTimestamp(char const*)
  T GetIMENullImpl()
  T GetLanguageICUName(ELanguage)
@@ -2709,7 +2708,7 @@
  b CVGui::DispatchMessageInternal(MessageItem_t*, char const*)::s_bCurrentlyProfilingMsg
  b CVGui::PanelCreated(vgui::VPanel*)::bAsserted
  b CVGuiSystemModuleLoader::ShutdownPlatformModules()::runningFunction
- b GetDeviceColorSpace()::colorspace
+ b GetAppropriateSRGBColorSpace()::colorspace
  b HandleFlagsChanged(NSEvent*)::s_priorFlags
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b OPENSSL_cpuid_setup.trigger
@@ -2779,23 +2778,23 @@
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
- d __block_descriptor_tmp531
- d __block_descriptor_tmp546
- d __block_descriptor_tmp551
- d __block_descriptor_tmp553
- d __block_descriptor_tmp566
- d __block_descriptor_tmp567
- d __block_descriptor_tmp570
- d __block_descriptor_tmp573
- d __block_descriptor_tmp575
+ d __block_descriptor_tmp543
+ d __block_descriptor_tmp558
+ d __block_descriptor_tmp563
+ d __block_descriptor_tmp565
+ d __block_descriptor_tmp578
+ d __block_descriptor_tmp579
+ d __block_descriptor_tmp582
+ d __block_descriptor_tmp585
+ d __block_descriptor_tmp587
  d __block_literal_global
- d __block_literal_global547
- d __block_literal_global552
- d __block_literal_global554
- d __block_literal_global568
- d __block_literal_global571
- d __block_literal_global574
- d __block_literal_global576
+ d __block_literal_global559
+ d __block_literal_global564
+ d __block_literal_global566
+ d __block_literal_global580
+ d __block_literal_global583
+ d __block_literal_global586
+ d __block_literal_global588
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2874,7 +2873,6 @@
  kCFAllocatorDefault
  kCFAllocatorNull
  kCFRunLoopDefaultMode
- kCGColorSpaceSRGB
  kHIViewWindowContentID
  localtime
  longjmp
@@ -2995,19 +2993,19 @@
  t SimplifyNode(ExprNode*&)
  t UpdateApplicationWindowMenuItem(unsigned int)
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke569
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke581
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2572
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2584
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke544
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke556
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2550
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2562
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_564
+ t __copy_helper_block_576
  t __destroy_helper_block_
- t __destroy_helper_block_565
+ t __destroy_helper_block_577
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6

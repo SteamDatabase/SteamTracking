@@ -343,13 +343,14 @@ message CStreamingClientConfig {
 }
 
 message CStreamingServerConfig {
-	optional bool enable_hardware_encoding_nvidia = 1;
-	optional bool enable_hardware_encoding_nvfbc_h264 = 2;
-	optional bool enable_hardware_encoding_amd = 3;
-	optional bool enable_hardware_encoding_intel = 4;
-	optional int32 software_encoding_threads = 5;
-	optional bool dynamically_adjust_resolution = 6;
-	optional bool enable_traffic_priority = 7;
+	optional bool change_desktop_resolution = 1;
+	optional bool dynamically_adjust_resolution = 2;
+	optional bool enable_capture_nvfbc = 3;
+	optional bool enable_hardware_encoding_nvidia = 4;
+	optional bool enable_hardware_encoding_amd = 5;
+	optional bool enable_hardware_encoding_intel = 6;
+	optional int32 software_encoding_threads = 7;
+	optional bool enable_traffic_priority = 8;
 }
 
 message CNegotiatedConfig {
