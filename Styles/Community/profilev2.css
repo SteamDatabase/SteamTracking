@@ -1607,14 +1607,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	line-height: 22px;
 }
 
-.profile_country_restriction {
-	border: 1px solid #c1a643;
-	text-align: center;
-	font-size: 16px;
-	margin-bottom: 32px;
-	padding: 10px;
-}
-
 .ban_status_header {
 	text-align: center;
 	font-size: 16px;
