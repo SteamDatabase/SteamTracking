@@ -326,11 +326,14 @@
 // Steamworks JS
 //
 "Scripts/Partner/admin.js"                       : "https://partner.steamgames.com/public/javascript/admin.js?__TIME__&l=english",
+"Scripts/Partner/admin_publisher.js"             : "https://partner.steamgames.com/public/javascript/admin_publisher.js?__TIME__&l=english",
 "Scripts/Partner/apps.js"                        : "https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english",
+"Scripts/Partner/game_admin.js"                  : "https://partner.steamgames.com/public/javascript/game_admin.js?__TIME__&l=english",
 "Scripts/Partner/marketing.js"                   : "https://partner.steamgames.com/public/javascript/marketing.js?__TIME__&l=english",
 "Scripts/Partner/newsadmin.js"                   : "https://partner.steamgames.com/public/javascript/newsadmin.js?__TIME__&l=english",
 "Scripts/Partner/packages.js"                    : "https://partner.steamgames.com/public/javascript/packages.js?__TIME__&l=english",
 "Scripts/Partner/storeadmin.js"                  : "https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english",
+"Scripts/Partner/useradmin.js"                   : "https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english",
 
 //
 // Dota 2 CSS
