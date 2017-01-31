@@ -1741,6 +1741,10 @@ table.bb_table td img.sharedFilePreviewImage
 	margin: 0px;
 }
 
+video.bb_video {
+	width: 100%;
+}
+
 /* V6 */
 
 body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_block_new .popup_body {
