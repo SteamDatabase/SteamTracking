@@ -3757,3 +3757,49 @@ CTextInputSuggest.prototype.Destroy = function()
 	this.m_$Input.off( '.CTextInputSuggest' );
 };
 
+function InitBBCodeVideos( bAllowAutoPlay )
+{
+	var videos = $J( "video" );
+	if ( videos.length != 0 )
+	{
+		for ( var i = 0; i < videos.length; ++i )
+		{
+			var video = videos[i];
+			var $video = $J( video );
+
+			if ( $video.hasClass("bb_video_loop") )
+			{
+				video.setAttribute('loop', 'loop');
+			}
+
+			if ( $video.hasClass("bb_video_controls") )
+			{
+				video.setAttribute( 'controls', 'controls' );
+			}
+
+			if ( bAllowAutoPlay )
+			{
+				$video.unbind('mouseenter mouseleave');
+
+				video.preload = $video.hasClass("bb_video_preload") ? 'auto' : 'metadata';
+
+				if ( $video.hasClass("bb_video_autoplay") )
+				{
+					video.autoplay = 'autoplay';
+				}
+			}
+			else
+			{
+				video.preload = 'metadata';
+				$video.hover( function toggleControls() {
+					if ( this.hasAttribute("controls") ) {
+						this.removeAttribute("controls")
+					} else {
+						this.setAttribute("controls", "controls")
+					}
+				} );
+			}
+		}
+	}
+}
+

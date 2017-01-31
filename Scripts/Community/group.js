@@ -882,6 +882,8 @@ jQuery( function($) {
 			});
 		}
 	}
+
+	InitBBCodeVideos( false );
 });
 
 
