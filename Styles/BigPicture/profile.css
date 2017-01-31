@@ -677,7 +677,7 @@ ProfilePanel #UpperRow
 	font-size: 28px;
 	vertical-align: center;
 	margin-right: 8px;
-	color: #FFFFFF99;
+	color: #FFFFFF;
 }
 
 #SteamLevelRow Image
@@ -908,7 +908,7 @@ ProfilePanel #UpperRow
 	border-style: none;
 	border-radius: 0px;
 
-	width: 68px;
+	width: 100px;
 	height: 58px;
 	padding-left: 10px;
 	padding-right: 0px;
@@ -923,7 +923,7 @@ ProfilePanel #UpperRow
 	border-style: none;
 	border-radius: 0px;
 
-	width: 68px;
+	width: 100px;
 	height: 58px;
 	padding-left: 10px;
 	padding-right: 0px;
@@ -938,7 +938,7 @@ ProfilePanel #UpperRow
 	border-style: none;
 	border-radius: 0px;
 
-	width: 68px;
+	width: 100px;
 	height: 58px;
 	padding-left: 10px;
 	padding-right: 0px;
@@ -953,12 +953,27 @@ ProfilePanel #UpperRow
 	border-style: none;
 	border-radius: 0px;
 
-	width: 68px;
+	width: 100px;
 	height: 58px;
 	padding-left: 10px;
 	padding-right: 0px;
 	padding-top: 18px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_fireelement_bp.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_1400
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 100px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_earthelement_bp.png' );
 	background-repeat: no-repeat;
 	background-position: 10px 0px;
 }
