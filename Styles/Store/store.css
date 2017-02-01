@@ -2826,16 +2826,12 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 }
 .mature_content_filtered a {
 	text-decoration: underline;
-	color: #66c0f4;
+	color: #2f89bc;
 }
 
 .mature_content_filtered.search {
 	float: right;
 	display: inline-block;
-}
-
-.no_results_filtered a {
-	text-decoration: underline;
 }
 
 @media screen and (max-width: 910px )
