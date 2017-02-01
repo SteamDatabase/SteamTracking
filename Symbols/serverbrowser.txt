@@ -2724,6 +2724,9 @@
  T CHistoryGames::ServerResponded(void*, int)
  T CHistoryGames::SupportsItem(IGameList::InterfaceItem_e)
  T CHistoryGames::~CHistoryGames()
+ T CIPCToolMachClient::DoKillCommand(char const*)
+ T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
+ T CIPCToolMachClient::Init()
  T CIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -4189,6 +4192,11 @@
  T CServerContextMenu::CServerContextMenu(vgui::Panel*)
  T CServerContextMenu::ShowMenu(vgui::Panel*, unsigned int, bool, bool, bool, bool)
  T CServerContextMenu::~CServerContextMenu()
+ T CSimpleMachClient::DoVersionCommand()
+ T CSimpleMachClient::Init(char const*, unsigned int, bool)
+ T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::~CSimpleMachClient()
  T CSpectateGames::CSpectateGames(vgui::Panel*)
  T CSpectateGames::GetNewServerList()
  T CSpectateGames::~CSpectateGames()
@@ -4872,7 +4880,7 @@
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::CreateKey(char const*)
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FindKey(unsigned int) const
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
@@ -5013,6 +5021,7 @@
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
+ T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::SetFromString(char const*)
@@ -6068,7 +6077,7 @@
  T vgui::HTMLPopup::GetMessageMap()
  T vgui::HTMLPopup::GetPanelClassName()
  T vgui::HTMLPopup::GetPanelTopClassName() const
- T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
+ T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, unsigned int)
  T vgui::HTMLPopup::KB_ChainToMap()
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
@@ -8049,6 +8058,7 @@
  V_tolower
  V_towlower32
  V_towupper32
+ V_vsnprintf
  V_vsnprintfRet
  V_wcsncpy
  V_wcstoui64
@@ -8499,6 +8509,8 @@
  b vgui::s_pSurfaceInterface
  b vgui::s_pSystemInterface
  b vgui::s_pVGuiInterface
+ bootstrap_look_up
+ bootstrap_port
  ceilf
  close$UNIX2003
  cos
@@ -8541,7 +8553,9 @@
  floorf
  fmod
  fprintf
+ fputs$UNIX2003
  free
+ fwrite$UNIX2003
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
@@ -8549,6 +8563,7 @@
  getcwd
  getenv
  gethostbyname
+ getpid
  glBegin
  glBindTexture
  glClear
@@ -8570,7 +8585,17 @@
  glVertex2f
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
+ kill$UNIX2003
+ launch_data_alloc
+ launch_data_dict_insert
+ launch_data_free
+ launch_data_new_string
+ launch_msg
  lstat$INODE64
+ mach_msg
+ mach_port_allocate
+ mach_port_deallocate
+ mach_task_self_
  malloc
  memcmp
  memcpy
@@ -8705,6 +8730,7 @@
  r typeinfo name for (anonymous namespace)::CaptionGripPanel
  r typeinfo name for (anonymous namespace)::GripPanel
  r typeinfo name for (anonymous namespace)::ScrollBarButton
+ rindex
  scandir$INODE64
  sched_yield
  setlocale
@@ -8852,15 +8878,88 @@
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
  t SimplifyNode(ExprNode*&)
+ t _GLOBAL__sub_I_AnimatingImagePanel.cpp
+ t _GLOBAL__sub_I_AnimationController.cpp
+ t _GLOBAL__sub_I_BaseGamesPage.cpp
+ t _GLOBAL__sub_I_BitmapImagePanel.cpp
+ t _GLOBAL__sub_I_BuildFactoryHelper.cpp
+ t _GLOBAL__sub_I_BuildGroup.cpp
+ t _GLOBAL__sub_I_Button.cpp
+ t _GLOBAL__sub_I_CheckButton.cpp
+ t _GLOBAL__sub_I_ComboBox.cpp
+ t _GLOBAL__sub_I_DialogAddServer.cpp
+ t _GLOBAL__sub_I_DialogGameInfo.cpp
+ t _GLOBAL__sub_I_DialogServerPassword.cpp
+ t _GLOBAL__sub_I_Divider.cpp
+ t _GLOBAL__sub_I_EditablePanel.cpp
+ t _GLOBAL__sub_I_FavoriteGames.cpp
+ t _GLOBAL__sub_I_FileOpenDialog.cpp
+ t _GLOBAL__sub_I_FocusNavGroup.cpp
+ t _GLOBAL__sub_I_Frame.cpp
+ t _GLOBAL__sub_I_FriendsGames.cpp
+ t _GLOBAL__sub_I_GraphPanel.cpp
+ t _GLOBAL__sub_I_HTML.cpp
+ t _GLOBAL__sub_I_HistoryGames.cpp
+ t _GLOBAL__sub_I_Image.cpp
+ t _GLOBAL__sub_I_ImageList.cpp
+ t _GLOBAL__sub_I_ImagePanel.cpp
+ t _GLOBAL__sub_I_InputDialog.cpp
+ t _GLOBAL__sub_I_InternetGames.cpp
+ t _GLOBAL__sub_I_Label.cpp
+ t _GLOBAL__sub_I_LanGames.cpp
+ t _GLOBAL__sub_I_ListPanel.cpp
+ t _GLOBAL__sub_I_ListPanelShared.cpp
+ t _GLOBAL__sub_I_ListViewPanel.cpp
+ t _GLOBAL__sub_I_Menu.cpp
+ t _GLOBAL__sub_I_MenuBar.cpp
+ t _GLOBAL__sub_I_MenuButton.cpp
+ t _GLOBAL__sub_I_MenuItem.cpp
+ t _GLOBAL__sub_I_MessageBox.cpp
+ t _GLOBAL__sub_I_ModList.cpp
+ t _GLOBAL__sub_I_Panel.cpp
+ t _GLOBAL__sub_I_ProgressBar.cpp
+ t _GLOBAL__sub_I_PropertyPage.cpp
+ t _GLOBAL__sub_I_PropertySheet.cpp
+ t _GLOBAL__sub_I_QueryBox.cpp
+ t _GLOBAL__sub_I_RadioButton.cpp
+ t _GLOBAL__sub_I_RichText.cpp
+ t _GLOBAL__sub_I_ScrollBar.cpp
+ t _GLOBAL__sub_I_ScrollBarSlider.cpp
+ t _GLOBAL__sub_I_ServerBrowser.cpp
+ t _GLOBAL__sub_I_ServerBrowserDialog.cpp
+ t _GLOBAL__sub_I_ServerContextMenu.cpp
+ t _GLOBAL__sub_I_ServerListCompare.cpp
+ t _GLOBAL__sub_I_SpectateGames.cpp
+ t _GLOBAL__sub_I_TextEntry.cpp
+ t _GLOBAL__sub_I_TextImage.cpp
+ t _GLOBAL__sub_I_ToggleButton.cpp
+ t _GLOBAL__sub_I_ToolWindow.cpp
+ t _GLOBAL__sub_I_Tooltip.cpp
+ t _GLOBAL__sub_I_TreeView.cpp
+ t _GLOBAL__sub_I_TreeViewListControl.cpp
+ t _GLOBAL__sub_I_URLLabel.cpp
+ t _GLOBAL__sub_I_VACBannedConnRefusedDialog.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_client_api.cpp
+ t _GLOBAL__sub_I_controls.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_htmlmessages.pb.cc
+ t _GLOBAL__sub_I_htmlpopup.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_typingjump.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_validate_globals.cpp
+ t _GLOBAL__sub_I_vgui_controls.cpp
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
  t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
  t void std::__1::__stable_sort_move<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*)
  time
  typeinfo for std::exception
+ usleep$UNIX2003
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp

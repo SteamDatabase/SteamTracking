@@ -3559,6 +3559,11 @@ DropDown Label
 	color: applabel;
 }
 
+#ChangeXInputOrderButton
+{
+    width: 100%;
+}
+
 .AppControllerSettingsDropdown
 {
 	width: 100%;
@@ -5922,6 +5927,68 @@ ParentalButton #ParentalLockImageLocked
 	opacity: 0.0;
 }
 
+.ControllerOrderContainer
+{
+	height: 52px;
+	flow-children: right;
+	margin-bottom: 12px;
+    padding: 4px 4px 4px 20px;
+	width: 95%;
+    color: detailsdatalabel;
+	background-color: #30708c77;
+    horizontal-align: center;
+
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+    background-position: 80% 5%;
+    wash-color: #ffffffff;
+
+}
+
+.ControllerOrderContainer.controller_steamcontroller_gordon
+{
+	background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
+}
+
+.ControllerOrderContainer.controller_ps4
+{
+	background-image: url( "file://{images}/controller_icon_ps4.png" );
+}
+
+.ControllerOrderContainer.controller_xbox360
+{
+	background-image: url( "file://{images}/controller_icon_xbox_360.png" );
+}
+
+.ControllerOrderContainer.controller_xboxone
+{
+	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
+}
+
+.ControllerOrderContainer.controller_generic
+{
+	background-image: url( "file://{images}/controller_generic_nobattery.png" );
+}
+
+.ControllerOrderContainer:descendantfocus
+{
+	background-color: button_focus_color;
+}
+
+.ControllerOrderButtonContainer
+{
+    width: 112px;
+    height: 52px;
+    horizontal-align: right;
+    padding: 0px;
+    margin: 0px;
+}
+
+ChangeControllerXInputOrder #ButtonCancel
+{
+	visibility: visible;
+}
+
 #ControllerListContainer
 {
 	height: fit-children;
@@ -5929,10 +5996,40 @@ ParentalButton #ParentalLockImageLocked
 	margin-bottom: 20px;
 	width: 100%;
 }
+
 #ControllerListContainer .Button
 {
 	width: 100%;
 }
+
+#ControllerListContainer .ControllerOrderButton.Button
+{
+    width: 50%;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+}
+
+#ControllerListContainer .ControllerOrderButtonDown
+{
+    background-image: url( "file://{images}/library/controller/binding_icons/ghost_045_move_0403.png" );
+    horizontal-align: left;
+}
+
+#ControllerListContainer .ControllerOrderButtonUp.Button
+{
+    background-image: url( "file://{images}/library/controller/binding_icons/ghost_045_move_0407.png" );
+    horizontal-align: right;
+}
+
+#ControllerListContainer .ControllerOrderButton.Button.Disabled
+{
+    wash-color: #666699ff;
+    opacity: 0.45;
+}
+
 ControllerConfigSelectController #ButtonCancel
 {
 	visibility: visible;
@@ -5954,6 +6051,21 @@ ControllerConfigSelectController #ButtonCancel
 #SelectControllerButton.Button.controller_ps4
 {
 	background-image: url( "file://{images}/controller_icon_ps4.png" );
+}
+
+#SelectControllerButton.Button.controller_xbox360
+{
+	background-image: url( "file://{images}/controller_icon_xbox_360.png" );
+}
+
+#SelectControllerButton.Button.controller_xboxone
+{
+	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
+}
+
+#SelectControllerButton.Button.controller_generic
+{
+	background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }
 
 #SelectControllerOwnerLabel

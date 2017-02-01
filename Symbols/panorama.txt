@@ -1,9 +1,12 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
+ .objc_class_name_NSColorSpace
+ .objc_class_name_NSLocale
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
+ .objc_class_name_NSWindow
  .objc_class_name_NSWorkspace
  AES_decrypt
  AssertMsgImplementation
@@ -15,6 +18,7 @@
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
+ B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CJSMethodArgument::default_instance_
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
@@ -321,6 +325,7 @@
  B CUIFontFilePackagePB::default_instance_
  B CUIFontFilePackagePB_CUIEncryptedFontFilePB::default_instance_
  B CUtlSymbol::s_pSymbolTable
+ B CWebSocketConnection::sm_THashPWebSocketConnection
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
  B ConCommandBaseMgr::g_bReplicatedReadOnly
@@ -1371,6 +1376,7 @@
  D typeinfo for CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
+ D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
  D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CTextShadowData
@@ -2007,6 +2013,7 @@
  D vtable for CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
+ D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
  D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CTextShadowData
@@ -2364,6 +2371,7 @@
  Log
  Msg
  NSApp
+ NSSelectorFromString
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
  Plat_FloatTime
@@ -2635,6 +2643,7 @@
  R typeinfo name for CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
+ R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
  R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CTextShadowData
@@ -3298,13 +3307,11 @@
  RealGetCallStack
  RealPrintCallStack
  SDL_AddEventWatch
- SDL_CreateRGBSurfaceFrom
  SDL_CreateSystemCursor
  SDL_CreateWindow
  SDL_DelEventWatch
  SDL_DestroyWindow
  SDL_FreeCursor
- SDL_FreeSurface
  SDL_GL_CreateContext
  SDL_GL_DeleteContext
  SDL_GL_GetDrawableSize
@@ -3347,6 +3354,7 @@
  SDL_JoystickGetButton
  SDL_JoystickGetDeviceGUID
  SDL_JoystickGetDeviceProduct
+ SDL_JoystickGetDeviceType
  SDL_JoystickGetDeviceVendor
  SDL_JoystickGetGUIDString
  SDL_JoystickInstanceID
@@ -3365,7 +3373,6 @@
  SDL_SetCursor
  SDL_SetHint
  SDL_SetWindowFullscreen
- SDL_SetWindowIcon
  SDL_SetWindowPosition
  SDL_ShowCursor
  SDL_ShowWindow
@@ -3742,6 +3749,7 @@
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
  T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
  T CIPCToolMachClient::DoKillCommand(char const*)
+ T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
  T CIPCToolMachClient::~CIPCToolMachClient()
  T CJSMethodArgument::ByteSize() const
@@ -3764,6 +3772,7 @@
  T CJpegSourceMgr::imp_skip_input_data(jpeg_decompress_struct*, long)
  T CJpegSourceMgr::imp_term_source(jpeg_decompress_struct*)
  T CKeyErrorContext::~CKeyErrorContext()
+ T CKeySymbol::CKeySymbol(char const*)
  T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
@@ -6531,6 +6540,11 @@
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
  T CTHash<CUDPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::~CTHash()
+ T CTHash<CWebSocketConnection*, unsigned int>::Purge()
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
+ T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
  T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
  T CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordFind(unsigned int) const
  T CTHash<ISocketOwnerCallback*, unsigned int>::Remove(unsigned int)
@@ -8097,6 +8111,9 @@
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::ShiftElementsRight(int, int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::GrowVector(int)
  T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::InsertBefore(int, LayoutIncludeFile_t const&)
  T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::RemoveAll()
@@ -8658,6 +8675,7 @@
  T CWSASendToHelper::~CWSASendToHelper()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
+ T CWebSocketConnection::ValidateGlobals(CValidator&)
  T CWorkThreadPool::BDispatchCompletedWorkItems(CReliableTimer&, CJobMgr*)
  T CWorkThreadPool::BTryDeleteExitedWorkerThreads()
  T CWorkThreadPool::GetCompletedWorkItemCount() const
@@ -8809,7 +8827,6 @@
  T IPC::PosixSharedMemory::IsValid() const
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
- T IPC::crc32(unsigned int, void*, unsigned int)
  T ImageUnreferenced::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ImageUnreferenced::FormatEventArgs(char const*)
  T ImageUnreferenced::GetEventType()
@@ -8861,7 +8878,7 @@
  T KeyValues::CreateKey(char const*)
  T KeyValues::CreatePeerKey(char const*)
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FreeBuffers()
  T KeyValues::GetFirstSubKey() const
  T KeyValues::GetFirstValue() const
@@ -8913,6 +8930,7 @@
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
  T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
  T OSXHelpers::ForceActivateThisAppAndRaiseNSWindow(void*)
+ T OSXHelpers::ForceSRGBColorSpaceForNSWindow(void*)
  T OSXHelpers::RaiseNSWindow(void*)
  T PanelLessFunc(panorama::IUIPanel* const&, panorama::IUIPanel* const&)
  T ParseClassSymbols(CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, char const*)
@@ -9226,6 +9244,7 @@
  T init_JSON_config
  T int CUtlSortVector<panorama::CUIEngine::QueuedEvent_t>::FindGreater<panorama::CUIEngine::QueuedEvent_t>(panorama::CUIEngine::QueuedEvent_t const&) const
  T int V_sprintf_safe<1000ul>(char (&) [1000ul], char const*, ...)
+ T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T jcopy_block_row
  T jcopy_sample_rows
  T jdiv_round_up
@@ -11414,7 +11433,6 @@
  T panorama::CTopLevelWindowSDL::Minimize()
  T panorama::CTopLevelWindowSDL::OnWindowResize(unsigned int, unsigned int)
  T panorama::CTopLevelWindowSDL::PumpMessageLoop()
- T panorama::CTopLevelWindowSDL::SetIcon()
  T panorama::CTopLevelWindowSDL::SetMouseCursor(panorama::EMouseCursors)
  T panorama::CTopLevelWindowSDL::SetPreventForceWindowOnTop(bool)
  T panorama::CTopLevelWindowSDL::SetTopMost(bool)
@@ -15610,6 +15628,8 @@
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWhiteSpace()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWidth()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyZIndex()::s_pool
+ b hksKVNameRequestHeaders
+ b hksSetCookie
  b k_InvalidClientID
  b lineartoscreen
  b lineartotexture
@@ -15975,6 +15995,7 @@
  fopen$UNIX2003
  fprintf
  fputc
+ fputs$UNIX2003
  fread
  free
  fseeko
@@ -16062,6 +16083,7 @@
  kCFAllocatorNull
  kCFRunLoopDefaultMode
  kevent
+ kill$UNIX2003
  kqueue
  launch_data_alloc
  launch_data_dict_insert
@@ -16199,7 +16221,7 @@
  r BValveDomain(char const*)::k_pchSteamPowered
  r BValveDomain(char const*)::k_pchValveSoftware
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
- r IPC::gTable
+ r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r ascii_class
  r base_dither_matrix
  r bmask
@@ -16505,6 +16527,7 @@
  realpath$DARWIN_EXTSN
  remove
  rename
+ rindex
  roundf
  scandir$INODE64
  sched_yield
@@ -16616,6 +16639,7 @@
  t FreeTree(ExprNode*&)
  t GetEntityDecl
  t GetStyleSymbolMap()
+ t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)
@@ -16657,9 +16681,124 @@
  t TrieTok
  t TryTok
  t WindowInputPriorityOrder(panorama::CUIWindowInput* const&, panorama::CUIWindowInput* const&, void*)
+ t _GLOBAL__sub_I_amount.cpp
+ t _GLOBAL__sub_I_backgroundimage.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_client_api.cpp
+ t _GLOBAL__sub_I_color_conversion.cpp
+ t _GLOBAL__sub_I_completionportmanager.cpp
+ t _GLOBAL__sub_I_completionportmanager_posix.cpp
+ t _GLOBAL__sub_I_constants.cpp
+ t _GLOBAL__sub_I_controller.cpp
+ t _GLOBAL__sub_I_cookiecontainer.cpp
+ t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_csshelpers.cpp
+ t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
+ t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_fillbrush.cpp
+ t _GLOBAL__sub_I_framefunction.cpp
+ t _GLOBAL__sub_I_globals.cpp
+ t _GLOBAL__sub_I_htmlmessages.pb.cc
+ t _GLOBAL__sub_I_http.cpp
+ t _GLOBAL__sub_I_httpclient.cpp
+ t _GLOBAL__sub_I_httpclientmgr.cpp
+ t _GLOBAL__sub_I_imageloader.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_job.cpp
+ t _GLOBAL__sub_I_jobmgr.cpp
+ t _GLOBAL__sub_I_jpegloader.cpp
+ t _GLOBAL__sub_I_language.cpp
+ t _GLOBAL__sub_I_layoutfile.cpp
+ t _GLOBAL__sub_I_localize.cpp
+ t _GLOBAL__sub_I_logger.cpp
+ t _GLOBAL__sub_I_mathlib_base.cpp
+ t _GLOBAL__sub_I_mousecursor.cpp
+ t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_net.cpp
+ t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netconnection.cpp
+ t _GLOBAL__sub_I_netfilter.cpp
+ t _GLOBAL__sub_I_nethost.cpp
+ t _GLOBAL__sub_I_netpacket.cpp
+ t _GLOBAL__sub_I_opengllazyshaders.cpp
+ t _GLOBAL__sub_I_opensslconnection.cpp
+ t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_panel2dfactory.cpp
+ t _GLOBAL__sub_I_panoramasymbol.cpp
+ t _GLOBAL__sub_I_panoramavideoplayer.cpp
+ t _GLOBAL__sub_I_platform_sockets_posix.cpp
+ t _GLOBAL__sub_I_pngloader.cpp
+ t _GLOBAL__sub_I_randsse.cpp
+ t _GLOBAL__sub_I_reliabletimer.cpp
+ t _GLOBAL__sub_I_rendercommands.cpp
+ t _GLOBAL__sub_I_rendermessages.cpp
+ t _GLOBAL__sub_I_rendermessages.pb.cc
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_scheduledfunction.cpp
+ t _GLOBAL__sub_I_scheduler.cpp
+ t _GLOBAL__sub_I_sdlopenglsurface.cpp
+ t _GLOBAL__sub_I_sseconst.cpp
+ t _GLOBAL__sub_I_stat.cpp
+ t _GLOBAL__sub_I_stdafx.cpp
+ t _GLOBAL__sub_I_steamcontroller.cpp
+ t _GLOBAL__sub_I_steamcontroller_new.cpp
+ t _GLOBAL__sub_I_steamid.cpp
+ t _GLOBAL__sub_I_steammessages_base.pb.cc
+ t _GLOBAL__sub_I_stime.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_stylefile.cpp
+ t _GLOBAL__sub_I_styleproperties.cpp
+ t _GLOBAL__sub_I_stylepropertyfactory.cpp
+ t _GLOBAL__sub_I_styles.cpp
+ t _GLOBAL__sub_I_tcpconnection.cpp
+ t _GLOBAL__sub_I_tcphost.cpp
+ t _GLOBAL__sub_I_textlayoutdrawcache.cpp
+ t _GLOBAL__sub_I_texttexturecache.cpp
+ t _GLOBAL__sub_I_tgaloader.cpp
+ t _GLOBAL__sub_I_timeutils.cpp
+ t _GLOBAL__sub_I_trackpad_kalman.cpp
+ t _GLOBAL__sub_I_transformations.cpp
+ t _GLOBAL__sub_I_udpconnection.cpp
+ t _GLOBAL__sub_I_udphost.cpp
+ t _GLOBAL__sub_I_udpsocket.cpp
+ t _GLOBAL__sub_I_uianimationengine.cpp
+ t _GLOBAL__sub_I_uianimationengine_new.cpp
+ t _GLOBAL__sub_I_uicommands.cpp
+ t _GLOBAL__sub_I_uiengine.cpp
+ t _GLOBAL__sub_I_uienginesdl.cpp
+ t _GLOBAL__sub_I_uievent.cpp
+ t _GLOBAL__sub_I_uievents.cpp
+ t _GLOBAL__sub_I_uifileresource.cpp
+ t _GLOBAL__sub_I_uifontfile.cpp
+ t _GLOBAL__sub_I_uifontfile_format.pb.cc
+ t _GLOBAL__sub_I_uiinput.cpp
+ t _GLOBAL__sub_I_uijsregistration.cpp
+ t _GLOBAL__sub_I_uilength.cpp
+ t _GLOBAL__sub_I_uipanel.cpp
+ t _GLOBAL__sub_I_uipbmsgbase.cpp
+ t _GLOBAL__sub_I_uirenderengine.cpp
+ t _GLOBAL__sub_I_uischeduleddel.cpp
+ t _GLOBAL__sub_I_uisoundsystem.cpp
+ t _GLOBAL__sub_I_uitextlayoutpango.cpp
+ t _GLOBAL__sub_I_uitextservicespango.cpp
+ t _GLOBAL__sub_I_uitoplevelwindow.cpp
+ t _GLOBAL__sub_I_uitoplevelwindowopenvroverlay.cpp
+ t _GLOBAL__sub_I_uitoplevelwindowoverlay.cpp
+ t _GLOBAL__sub_I_uitoplevelwindowsdl.cpp
+ t _GLOBAL__sub_I_uiwebapiclient.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_vmatrix.cpp
+ t _GLOBAL__sub_I_vrapi.cpp
+ t _GLOBAL__sub_I_vrevents.cpp
+ t _GLOBAL__sub_I_websocket.cpp
+ t _GLOBAL__sub_I_workthreadpool.cpp
+ t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
  t access_virt_barray
  t access_virt_sarray

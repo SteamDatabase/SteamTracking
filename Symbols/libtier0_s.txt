@@ -685,7 +685,7 @@
  pthread_self
  pthread_setspecific
  r SteamVProf::g_ColorLookup
- r crc32(unsigned long, void const*, unsigned long)::crcTable
+ r crc32(unsigned int, void const*, unsigned long)::s_crc32
  realloc
  sched_yield
  semctl
@@ -732,6 +732,14 @@
  t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
  t V_pretifymem(float, int, bool)
  t WriteMiniDumpThread(void*)
+ t _GLOBAL__sub_I_fasttimer.cpp
+ t _GLOBAL__sub_I_memstd.cpp
+ t _GLOBAL__sub_I_minidump.cpp
+ t _GLOBAL__sub_I_platformtime.cpp
+ t _GLOBAL__sub_I_testthread.cpp
+ t _GLOBAL__sub_I_threadtools.cpp
+ t _GLOBAL__sub_I_vprof.cpp
+ t crc32(unsigned int, void const*, unsigned long)
  t global constructors keyed to 000101
  t global constructors keyed to 000200
  time

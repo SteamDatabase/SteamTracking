@@ -770,6 +770,17 @@
  t GetStackPtr()
  t KeyValuesSystem()
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_coroutine.cpp
+ t _GLOBAL__sub_I_cvar.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_random.cpp
+ t _GLOBAL__sub_I_stringnormalize.cpp
+ t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_urlutils.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_validate_vstdlib.cpp
  t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
  t int (anonymous namespace)::UnicodeConvertT<false, wchar_t, unsigned short, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16> >(wchar_t const*, int, unsigned short*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF16Len>&, (anonymous namespace)::EncodeFuncAdapter<unsigned short, V_UChar32ToUTF16>&)
  t int (anonymous namespace)::UnicodeConvertT<true, char, char, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(char const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)

@@ -2361,7 +2361,6 @@
  T IPC::PosixSharedMemory::IsValid() const
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
- T IPC::crc32(unsigned int, void*, unsigned int)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T MakeFileWriteable(char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
@@ -2809,7 +2808,7 @@
  pthread_mutex_lock
  pthread_mutex_unlock
  pthread_self
- r IPC::gTable
+ r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r k_szWebHelperExe
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
@@ -2984,9 +2983,16 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
  t FileSelect(dirent const*)
+ t IPC::crc32(unsigned int, void const*, unsigned long)
+ t _GLOBAL__sub_I_chrome_ipc_client.cpp
+ t _GLOBAL__sub_I_chromewrapper.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_htmlmessages.pb.cc
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception
  unlink

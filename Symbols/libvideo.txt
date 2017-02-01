@@ -90,6 +90,8 @@
  B CUDPSocket::sm_ThreadSafeQueueIncoming
  B CUDPSocket::sm_cOutstandingWSASentToCmds
  B CUtlSymbol::s_pSymbolTable
+ B CWebSocketConnection::sm_THashPWebSocketConnection
+ B CWebSocketConnection::sm_bInit
  B CWorkItemThreadedWriteResponseToDisk::s_unBytesPendingWrite
  B CWorkThreadPool::sm_pWorkItemsCompletedSignal
  B ConCommandBase::s_pAccessor
@@ -209,16 +211,23 @@
  D BIGNUM_it
  D CBIGNUM_it
  D CERTIFICATEPOLICIES_it
- D CNet::sm_nNextConnectionHandle
+ D CMS_SharedInfo_it
+ D CNet::sm_nNextTCPConnectionHandle
+ D CNet::sm_nNextUDPConnectionHandle
+ D CNet::sm_nNextWebSocketConnectionHandle
  D CNet::sm_pSteam3Parser
  D CRL_DIST_POINTS_it
  D CTCPConnection::sm_cMaxAllowedOutstandingSendBytesAllConnections
  D CTHash<CTCPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CTCPConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CTHash<CUDPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CUDPConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
+ D CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CWebSocketConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordInsertInternal(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CUDPConnection::sm_hSocketSharedClient
  D CUDPConnection::sm_hSocketSharedClientIOCP
+ D CWebSocketConnection::sm_sslDummyConnectionCallback
  D DHparams_it
+ D DHvparams_it
+ D DHxparams_it
  D DIRECTORYSTRING_it
  D DISPLAYTEXT_it
  D DIST_POINT_NAME_it
@@ -227,6 +236,8 @@
  D DSAPublicKey_it
  D DSA_SIG_it
  D DSAparams_it
+ D DTLSv1_2_enc_data
+ D DTLSv1_enc_data
  D ECDSA_SIG_it
  D ECPARAMETERS_it
  D ECPKPARAMETERS_it
@@ -258,10 +269,13 @@
  D PROXY_POLICY_it
  D RSAPrivateKey_it
  D RSAPublicKey_it
+ D RSA_OAEP_PARAMS_it
  D RSA_PSS_PARAMS_it
  D SSLv3_enc_data
  D SXNETID_it
  D SXNET_it
+ D TLSv1_1_enc_data
+ D TLSv1_2_enc_data
  D TLSv1_enc_data
  D TRexternalID
  D USERNOTICE_it
@@ -296,6 +310,8 @@
  D cpu_info_
  D dh_asn1_meth
  D dh_pkey_meth
+ D dhx_asn1_meth
+ D dhx_pkey_meth
  D dsa_asn1_meths
  D dsa_pkey_meth
  D dsa_pub_internal_it
@@ -339,7 +355,6 @@
  D rsa_pkey_meth
  D s_LogWatchesAllWithType
  D ssl3_ciphers
- D ssl3_undef_enc_method
  D typeinfo for CAlignedBufferBase
  D typeinfo for CAlignedYUV420Buffer
  D typeinfo for CAudioFileDecoder
@@ -404,6 +419,7 @@
  D typeinfo for CScheduledFunction<CNetConnection>
  D typeinfo for CScheduledFunction<COpenSSLConnection>
  D typeinfo for CScheduledFunction<CUDPConnection>
+ D typeinfo for CScheduledFunction<CWebSocketConnection>
  D typeinfo for CSharedUDPSocketPollHelper
  D typeinfo for CStaticFrameFunction
  D typeinfo for CStdMemAlloc
@@ -412,6 +428,7 @@
  D typeinfo for CTCPConnection
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
+ D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
  D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CUDPConnection
@@ -431,6 +448,9 @@
  D typeinfo for CVideoPlayer
  D typeinfo for CVideoPlayerManager::CVideoThread
  D typeinfo for CVideoWebMCuesParser
+ D typeinfo for CWebSocketConnection
+ D typeinfo for CWebSocketConnection::CDummySSLConnectionCallback
+ D typeinfo for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D typeinfo for CWorkItem
  D typeinfo for CWorkItemHTTPClientRequest
  D typeinfo for CWorkItemNetEncryptionHandshakeEncrypt
@@ -454,6 +474,7 @@
  D typeinfo for IKeyValuesSystem
  D typeinfo for IMemAlloc
  D typeinfo for IMsgNetPacket
+ D typeinfo for INetSSLConnectionCallback
  D typeinfo for ISSLCertificate
  D typeinfo for ISSLConnection
  D typeinfo for ISSLConnectionCallback
@@ -479,6 +500,7 @@
  D v3_crl_num
  D v3_crl_reason
  D v3_crld
+ D v3_ct_scts
  D v3_delta_crl
  D v3_ext_ku
  D v3_freshest_crl
@@ -560,6 +582,7 @@
  D vtable for CScheduledFunction<CNetConnection>
  D vtable for CScheduledFunction<COpenSSLConnection>
  D vtable for CScheduledFunction<CUDPConnection>
+ D vtable for CScheduledFunction<CWebSocketConnection>
  D vtable for CSharedUDPSocketPollHelper
  D vtable for CStaticFrameFunction
  D vtable for CStdMemAlloc
@@ -568,6 +591,7 @@
  D vtable for CTCPConnection
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
+ D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
  D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CUDPConnection
@@ -587,6 +611,9 @@
  D vtable for CVideoPlayer
  D vtable for CVideoPlayerManager::CVideoThread
  D vtable for CVideoWebMCuesParser
+ D vtable for CWebSocketConnection
+ D vtable for CWebSocketConnection::CDummySSLConnectionCallback
+ D vtable for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D vtable for CWorkItem
  D vtable for CWorkItemHTTPClientRequest
  D vtable for CWorkItemNetEncryptionHandshakeEncrypt
@@ -679,6 +706,7 @@
  R typeinfo name for CScheduledFunction<CNetConnection>
  R typeinfo name for CScheduledFunction<COpenSSLConnection>
  R typeinfo name for CScheduledFunction<CUDPConnection>
+ R typeinfo name for CScheduledFunction<CWebSocketConnection>
  R typeinfo name for CSharedUDPSocketPollHelper
  R typeinfo name for CStatT<SteamThreadTools::CThreadMutex>
  R typeinfo name for CStaticFrameFunction
@@ -688,6 +716,7 @@
  R typeinfo name for CTCPConnection
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
+ R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
  R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CThreadSafeMemoryPool
@@ -777,6 +806,9 @@
  R typeinfo name for CVideoPlayerManager::CVideoThread
  R typeinfo name for CVideoWebMCuesParser
  R typeinfo name for CWSASendToHelper
+ R typeinfo name for CWebSocketConnection
+ R typeinfo name for CWebSocketConnection::CDummySSLConnectionCallback
+ R typeinfo name for CWebSocketConnectionDelayedCloseConnectionWorkItem
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemHTTPClientRequest
  R typeinfo name for CWorkItemNetEncryptionHandshakeEncrypt
@@ -800,6 +832,7 @@
  R typeinfo name for IKeyValuesSystem
  R typeinfo name for IMemAlloc
  R typeinfo name for IMsgNetPacket
+ R typeinfo name for INetSSLConnectionCallback
  R typeinfo name for ISSLCertificate
  R typeinfo name for ISSLConnection
  R typeinfo name for ISSLConnectionCallback
@@ -848,7 +881,10 @@
  T ASN1_ENUMERATED_to_BN
  T ASN1_GENERALIZEDTIME_adj
  T ASN1_GENERALIZEDTIME_check
+ T ASN1_GENERALIZEDTIME_free
+ T ASN1_GENERALIZEDTIME_new
  T ASN1_GENERALIZEDTIME_print
+ T ASN1_GENERALIZEDTIME_set_string
  T ASN1_INTEGER_cmp
  T ASN1_INTEGER_free
  T ASN1_INTEGER_get
@@ -874,12 +910,14 @@
  T ASN1_STRING_new
  T ASN1_STRING_print
  T ASN1_STRING_set
+ T ASN1_STRING_set0
  T ASN1_STRING_set_by_NID
  T ASN1_STRING_to_UTF8
  T ASN1_STRING_type
  T ASN1_STRING_type_new
  T ASN1_TIME_adj
  T ASN1_TIME_check
+ T ASN1_TIME_diff
  T ASN1_TYPE_cmp
  T ASN1_TYPE_free
  T ASN1_TYPE_get
@@ -954,6 +992,7 @@
  T BIO_free_all
  T BIO_get_retry_reason
  T BIO_gets
+ T BIO_hex_string
  T BIO_indent
  T BIO_int_ctrl
  T BIO_new
@@ -1053,17 +1092,18 @@
  T BN_mod_mul_reciprocal
  T BN_mod_sqr
  T BN_mod_sqrt
+ T BN_mod_sub
  T BN_mod_sub_quick
  T BN_mod_word
  T BN_mul
  T BN_mul_word
  T BN_new
  T BN_nist_mod_224
- T BN_nist_mod_256
  T BN_nist_mod_521
  T BN_nnmod
  T BN_num_bits
  T BN_num_bits_word
+ T BN_print
  T BN_pseudo_rand
  T BN_pseudo_rand_range
  T BN_rand
@@ -1097,6 +1137,7 @@
  T BUF_MEM_grow_clean
  T BUF_MEM_new
  T BUF_memdup
+ T BUF_reverse
  T BUF_strdup
  T BUF_strlcat
  T BUF_strlcpy
@@ -1254,8 +1295,12 @@
  T CCoroutineMgr::CCoroutineMgr()
  T CCoroutineMgr::PopCoroutineStack()
  T CCrashHandlerScope::~CCrashHandlerScope()
+ T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateHMAC(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [20])
  T CCrypto::GenerateRandomBlock(unsigned char*, int)
+ T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::GetSymmetricEncryptedSize(unsigned int)
  T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
@@ -1389,6 +1434,7 @@
  T CHTTPClientConnection::RecvHTTPResponseData(unsigned char*, unsigned int)
  T CHTTPClientConnection::RecvPkt(CNetPacket*)
  T CHTTPClientConnection::RecvPlaintext(unsigned char*, unsigned int)
+ T CHTTPClientConnection::ReleaseConnectionToWebSocketHandler(IConnectionCallback*, unsigned int)
  T CHTTPClientConnection::SSLHandshakeCompleted()
  T CHTTPClientConnection::SSLShutdownCompleted()
  T CHTTPClientConnection::SendEncryptedData(unsigned char*, unsigned int)
@@ -1453,6 +1499,7 @@
  T CHTTPRequestCache::UnlinkCacheFile(char const*)
  T CHTTPRequestCache::Validate(CValidator&, char const*)
  T CHTTPRequestCache::~CHTTPRequestCache()
+ T CHTTPRequestHandle::BHandleWebSocketConnectCompletion(CHTTPClientConnection*)
  T CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)
  T CHTTPRequestHandle::DispatchRequest()
  T CHTTPRequestHandle::FinishRequest()
@@ -1540,8 +1587,14 @@
  T CMAC_Final
  T CMAC_Init
  T CMAC_Update
+ T CMS_RecipientInfo_get0_pkey_ctx
+ T CMS_RecipientInfo_kari_get0_alg
+ T CMS_RecipientInfo_kari_get0_ctx
+ T CMS_RecipientInfo_kari_get0_orig_id
  T CMS_RecipientInfo_ktri_get0_algs
+ T CMS_SharedInfo_encode
  T CMS_SignerInfo_get0_algs
+ T CMS_SignerInfo_get0_pkey_ctx
  T CMemoryPool::AddNewBlob()
  T CMemoryPool::Alloc()
  T CMemoryPool::Alloc(unsigned int)
@@ -1638,6 +1691,7 @@
  T CNet::AllocNetPacket()
  T CNet::AsyncConnect(EConnectionType, IConnectionCallback*, netadr_t const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, netadr_t const&, ENetQOSLevel)
  T CNet::BAsyncDisconnect(unsigned int)
+ T CNet::BAsyncSend(EMsg, unsigned int, CUtlBuffer&)
  T CNet::BAsyncSend(EMsg, unsigned int, unsigned char const*, int)
  T CNet::BClose(unsigned int)
  T CNet::BDeregisterSocketOwnerCallback(unsigned int)
@@ -1660,6 +1714,8 @@
  T CNet::DestroyRecvThrottleGroup(int)
  T CNet::FreeGlobals()
  T CNet::FreeNetPacket(CNetPacket*)
+ T CNet::GetConnectionMode(unsigned int)
+ T CNet::GetLocalAddr(unsigned int)
  T CNet::GetRemoteAddr(unsigned int)
  T CNet::GetSocketOwnerCallback(unsigned int)
  T CNet::GlobalInit(EScale, CFrameFunctionMgr*)
@@ -1668,6 +1724,7 @@
  T CNet::RemoveFromPollingList(unsigned int, int)
  T CNet::RequestWakeup(unsigned int, CSTime)
  T CNet::RequeueAtBackOfPollingList(unsigned int, int)
+ T CNet::SetConnectionCallback(unsigned int, IConnectionCallback*)
  T CNet::SetConnectionPostedBufferSize(unsigned int, int)
  T CNet::SetConnectionRecvThrottleGroup(unsigned int, int)
  T CNet::SetDefaultSocketOptions(int, EConnectionType, unsigned int)
@@ -1676,6 +1733,7 @@
  T CNet::ValidateGlobals(CValidator&)
  T CNetConnection::AddNetFilterToChain(CNetFilter*)
  T CNetConnection::BAsyncDisconnect()
+ T CNetConnection::BAsyncSend(CUtlBuffer&, bool)
  T CNetConnection::BAsyncSend(unsigned char const*, int, bool)
  T CNetConnection::BAsyncUnbufferedSend(unsigned char const*, int, IUnbufferedSendCallback*)
  T CNetConnection::BInternalQueryRecvThrottle()
@@ -1693,7 +1751,7 @@
  T CNetConnection::GetDisconnectLogText()
  T CNetConnection::GetPingResults(CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >&)
  T CNetConnection::HandleSSLFailure(EResult)
- T CNetConnection::InternalInit(unsigned int, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
+ T CNetConnection::InternalInit(unsigned int, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*, COpenSSLConnection*)
  T CNetConnection::OnConnectFailure(EResult, unsigned long long)
  T CNetConnection::OnConnectionSucceeded()
  T CNetConnection::OnDisconnect(EResult)
@@ -1777,6 +1835,8 @@
  T CNetPacket::ReplaceData(unsigned char*, unsigned int)
  T CNetPacket::~CNetPacket()
  T CNumStr::CNumStr(double)
+ T CNumStr::CNumStr(unsigned char)
+ T CNumStr::CNumStr(unsigned short)
  T CONF_parse_list
  T COpenSSLAD<bio_st, &(BIO_free_void(bio_st*))>::~COpenSSLAD()
  T COpenSSLCachedSession::BApplyToSSLConnection(ssl_st*) const
@@ -1810,6 +1870,7 @@
  T COpenSSLConnection::QueueRunSSL()
  T COpenSSLConnection::RecvPkt(CNetPacket*)
  T COpenSSLConnection::RemoveSSLConnectionCallback(ISSLConnectionCallback*)
+ T COpenSSLConnection::SetSSLConnectionCallback(ISSLConnectionCallback*)
  T COpenSSLConnection::ShutdownConnection()
  T COpenSSLConnection::ThreadedHandleError(int)
  T COpenSSLConnection::ThreadedPerformInitialHandshake()
@@ -1888,12 +1949,23 @@
  T CRTime::RTime32FromRFC3339UTCString(char const*)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
+ T CRYPTO_128_unwrap
+ T CRYPTO_128_wrap
  T CRYPTO_THREADID_cmp
  T CRYPTO_THREADID_cpy
  T CRYPTO_THREADID_current
  T CRYPTO_THREADID_hash
  T CRYPTO_add_lock
+ T CRYPTO_cbc128_decrypt
  T CRYPTO_cbc128_encrypt
+ T CRYPTO_ccm128_aad
+ T CRYPTO_ccm128_decrypt
+ T CRYPTO_ccm128_decrypt_ccm64
+ T CRYPTO_ccm128_encrypt
+ T CRYPTO_ccm128_encrypt_ccm64
+ T CRYPTO_ccm128_init
+ T CRYPTO_ccm128_setiv
+ T CRYPTO_ccm128_tag
  T CRYPTO_cfb128_1_encrypt
  T CRYPTO_cfb128_8_encrypt
  T CRYPTO_cfb128_encrypt
@@ -1934,6 +2006,7 @@
  T CRYPTO_set_id_callback
  T CRYPTO_set_locking_callback
  T CRYPTO_set_mem_ex_functions
+ T CRYPTO_strdup
  T CRYPTO_xts128_encrypt
  T CReceivedPkt::Init(int, netadr_t const&, unsigned char*, int, void*, unsigned int)
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
@@ -1965,6 +2038,9 @@
  T CScheduledFunction<CUDPConnection>::CScheduledFunction(CUDPConnection*, void (CUDPConnection::*)())
  T CScheduledFunction<CUDPConnection>::Run()
  T CScheduledFunction<CUDPConnection>::~CScheduledFunction()
+ T CScheduledFunction<CWebSocketConnection>::CScheduledFunction(CWebSocketConnection*, void (CWebSocketConnection::*)())
+ T CScheduledFunction<CWebSocketConnection>::Run()
+ T CScheduledFunction<CWebSocketConnection>::~CScheduledFunction()
  T CScheduledFunctionMgr::BFrameFuncRun(CReliableTimer&)
  T CScheduledFunctionMgr::CScheduledFunctionMgr()
  T CScheduledFunctionMgr::RemoveScheduledItem(int)
@@ -2166,6 +2242,17 @@
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
  T CTHash<CUDPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::~CTHash()
+ T CTHash<CWebSocketConnection*, unsigned int>::Init(int, int)
+ T CTHash<CWebSocketConnection*, unsigned int>::InsertIntoHash(CTHash<CWebSocketConnection*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<CWebSocketConnection*, unsigned int>::Purge()
+ T CTHash<CWebSocketConnection*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsert(unsigned int)
+ T CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CWebSocketConnection*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<CWebSocketConnection*, unsigned int>::Remove(unsigned int)
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
+ T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
  T CTHash<ISocketOwnerCallback*, unsigned int>::Init(int, int)
  T CTHash<ISocketOwnerCallback*, unsigned int>::InsertIntoHash(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)
  T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
@@ -2300,6 +2387,7 @@
  T CUtlAllocation::~CUtlAllocation()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
+ T CUtlBuffer::CUtlBuffer(void const*, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
  T CUtlBuffer::CheckGet(int)
  T CUtlBuffer::CheckPut(int)
@@ -2323,8 +2411,10 @@
  T CUtlBuffer::PutInt(int)
  T CUtlBuffer::PutOverflow(int)
  T CUtlBuffer::PutString(char const*)
+ T CUtlBuffer::PutUint8(unsigned char)
  T CUtlBuffer::PutUnsignedInt(unsigned int)
  T CUtlBuffer::PutUnsignedInt64(unsigned long long)
+ T CUtlBuffer::PutUnsignedShort(unsigned short)
  T CUtlBuffer::Scanf(char const*, ...)
  T CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
@@ -2592,6 +2682,7 @@
  T CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
+ T CUtlMemoryBase::CUtlMemoryBase(int, void*, int)
  T CUtlMemoryBase::ConvertToGrowableMemory(int)
  T CUtlMemoryBase::Count() const
  T CUtlMemoryBase::EnsureCapacity(int)
@@ -2961,6 +3052,9 @@
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::GrowVector(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::InsertBefore(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::ShiftElementsRight(int, int)
@@ -3263,6 +3357,49 @@
  T CWSASendToHelper::~CWSASendToHelper()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
+ T CWebSocketConnection::AddToConnectionTable(CWebSocketConnection*)
+ T CWebSocketConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T CWebSocketConnection::BAsyncDisconnect()
+ T CWebSocketConnection::BBuildAndAsyncSendFrame(EWebSocketOpCode, unsigned char const*, int)
+ T CWebSocketConnection::BCloseConnection(EWebSocketStatusCode, char const*)
+ T CWebSocketConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
+ T CWebSocketConnection::BInternalAsyncDisconnect()
+ T CWebSocketConnection::BInternalAsyncSend(unsigned char const*, int, bool)
+ T CWebSocketConnection::BInternalAsyncSendEncodedFrame(CUtlBuffer&)
+ T CWebSocketConnection::BIsSendBlocked(int)
+ T CWebSocketConnection::BPollConnection()
+ T CWebSocketConnection::CDummySSLConnectionCallback::BVerifyCertificate(CNetConnection*, COpenSSLConnection*, COpenSSLCertificate const&)
+ T CWebSocketConnection::CDummySSLConnectionCallback::GetSSLContext()
+ T CWebSocketConnection::CWebSocketConnection()
+ T CWebSocketConnection::CloseSocket()
+ T CWebSocketConnection::ConnectCompleted(unsigned int)
+ T CWebSocketConnection::ConnectFailed(unsigned int, EResult, unsigned long long)
+ T CWebSocketConnection::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T CWebSocketConnection::ConnectionDisconnected(unsigned int, EResult)
+ T CWebSocketConnection::DecodePktAndDispatch(unsigned char*, unsigned int)
+ T CWebSocketConnection::Destroy()
+ T CWebSocketConnection::DispatchCurrentFrame()
+ T CWebSocketConnection::GetComputedWebSocketAcceptKey(char const*)
+ T CWebSocketConnection::GetConnectionType()
+ T CWebSocketConnection::GetPingResults(CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >&)
+ T CWebSocketConnection::GlobalInit(EScale, CFrameFunctionMgr*)
+ T CWebSocketConnection::InternalGetWebSocketConnection(unsigned int)
+ T CWebSocketConnection::IsIntraProcessConnection()
+ T CWebSocketConnection::RecvPkt(CNetPacket*)
+ T CWebSocketConnection::RecvPlaintext(unsigned char*, unsigned int)
+ T CWebSocketConnection::ResetCurrentFrame()
+ T CWebSocketConnection::ScheduledTimeoutClientCloseAck()
+ T CWebSocketConnection::SendEncryptedData(unsigned char*, unsigned int)
+ T CWebSocketConnection::SetIncoming(int, netadr_t const&)
+ T CWebSocketConnection::UpgradeTCPConnectionToWebSocket(unsigned int, IConnectionCallback*, COpenSSLConnection*, unsigned int)
+ T CWebSocketConnection::Validate(CValidator&, char const*)
+ T CWebSocketConnection::ValidateGlobals(CValidator&)
+ T CWebSocketConnection::~CWebSocketConnection()
+ T CWebSocketConnectionDelayedCloseConnectionWorkItem::DispatchCompletedWorkItem(CJobMgr*)
+ T CWebSocketConnectionDelayedCloseConnectionWorkItem::GetThreadProcessName() const
+ T CWebSocketConnectionDelayedCloseConnectionWorkItem::GetWorkItemName() const
+ T CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess(CWorkThread*)
+ T CWebSocketConnectionDelayedCloseConnectionWorkItem::~CWebSocketConnectionDelayedCloseConnectionWorkItem()
  T CWorkItem::CWorkItem()
  T CWorkItem::CWorkItem(unsigned long long)
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
@@ -3360,13 +3497,8 @@
  T Camellia_EncryptBlock
  T Camellia_EncryptBlock_Rounds
  T Camellia_cbc_encrypt
- T Camellia_cfb128_encrypt
- T Camellia_cfb1_encrypt
- T Camellia_cfb8_encrypt
  T Camellia_decrypt
- T Camellia_ecb_encrypt
  T Camellia_encrypt
- T Camellia_ofb128_encrypt
  T Camellia_set_key
  T CatchAndWriteContext_t::Invoke()
  T CatchAndWriteMiniDumpExForVoidPtrFn
@@ -3450,15 +3582,21 @@
  T DES_set_key_unchecked
  T DES_set_odd_parity
  T DES_xcbc_encrypt
+ T DH_KDF_X9_42
  T DH_OpenSSL
  T DH_check_pub_key
  T DH_compute_key
+ T DH_compute_key_padded
  T DH_free
  T DH_generate_key
  T DH_generate_parameters_ex
+ T DH_get_1024_160
+ T DH_get_2048_224
+ T DH_get_2048_256
  T DH_new
  T DH_new_method
  T DH_size
+ T DH_up_ref
  T DHparams_dup
  T DIST_POINT_free
  T DIST_POINT_set_dpname
@@ -3467,6 +3605,7 @@
  T DSA_SIG_new
  T DSA_do_sign
  T DSA_do_verify
+ T DSA_dup_DH
  T DSA_free
  T DSA_generate_key
  T DSA_new
@@ -3475,6 +3614,11 @@
  T DSA_sign_setup
  T DSA_size
  T DSA_verify
+ T DTLS_method
+ T DTLSv1_2_client_method
+ T DTLSv1_2_server_method
+ T DTLSv1_client_method
+ T DTLSv1_server_method
  T DebugStatsSystem
  T DefaultSpewFunc(SpewType_t, char const*)
  T DeleteAudioFileDecoder
@@ -3490,6 +3634,7 @@
  T DynBind_SCDynamicStoreCreate(__CFAllocator const*, __CFString const*, void (*)(__SCDynamicStore const*, __CFArray const*, void*), SCDynamicStoreContext*)
  T DynBind_SCDynamicStoreCreateRunLoopSource(__CFAllocator const*, __SCDynamicStore const*, long)
  T DynBind_SCDynamicStoreSetNotificationKeys(__SCDynamicStore const*, __CFArray const*, __CFArray const*)
+ T ECDH_KDF_X9_62
  T ECDH_OpenSSL
  T ECDH_compute_key
  T ECDSA_OpenSSL
@@ -3507,8 +3652,8 @@
  T EC_GF2m_simple_method
  T EC_GFp_mont_method
  T EC_GFp_nistp224_method
- T EC_GFp_nistp256_method
  T EC_GFp_nistp521_method
+ T EC_GFp_nistz256_method
  T EC_GROUP_clear_free
  T EC_GROUP_cmp
  T EC_GROUP_copy
@@ -3523,6 +3668,7 @@
  T EC_GROUP_get_curve_GFp
  T EC_GROUP_get_curve_name
  T EC_GROUP_get_degree
+ T EC_GROUP_get_mont_data
  T EC_GROUP_get_order
  T EC_GROUP_get_point_conversion_form
  T EC_GROUP_get_seed_len
@@ -3539,6 +3685,7 @@
  T EC_GROUP_set_generator
  T EC_GROUP_set_point_conversion_form
  T EC_GROUP_set_seed
+ T EC_KEY_clear_flags
  T EC_KEY_copy
  T EC_KEY_dup
  T EC_KEY_free
@@ -3548,11 +3695,13 @@
  T EC_KEY_get0_public_key
  T EC_KEY_get_conv_form
  T EC_KEY_get_enc_flags
+ T EC_KEY_get_flags
  T EC_KEY_get_key_method_data
  T EC_KEY_insert_key_method_data
  T EC_KEY_new
  T EC_KEY_new_by_curve_name
  T EC_KEY_set_enc_flags
+ T EC_KEY_set_flags
  T EC_KEY_set_group
  T EC_KEY_set_private_key
  T EC_KEY_set_public_key
@@ -3583,6 +3732,8 @@
  T EC_POINT_set_compressed_coordinates_GFp
  T EC_POINT_set_to_infinity
  T EC_POINTs_make_affine
+ T EC_curve_nid2nist
+ T EC_curve_nist2nid
  T ERR_add_error_data
  T ERR_add_error_vdata
  T ERR_clear_error
@@ -3633,6 +3784,7 @@
  T EVP_CIPHER_CTX_copy
  T EVP_CIPHER_CTX_ctrl
  T EVP_CIPHER_CTX_flags
+ T EVP_CIPHER_CTX_free
  T EVP_CIPHER_CTX_init
  T EVP_CIPHER_CTX_iv_length
  T EVP_CIPHER_CTX_key_length
@@ -3644,7 +3796,9 @@
  T EVP_CIPHER_get_asn1_iv
  T EVP_CIPHER_iv_length
  T EVP_CIPHER_key_length
+ T EVP_CIPHER_param_to_asn1
  T EVP_CIPHER_set_asn1_iv
+ T EVP_CIPHER_type
  T EVP_Cipher
  T EVP_CipherFinal_ex
  T EVP_CipherInit_ex
@@ -3691,6 +3845,7 @@
  T EVP_PKEY_CTX_ctrl
  T EVP_PKEY_CTX_dup
  T EVP_PKEY_CTX_free
+ T EVP_PKEY_CTX_get0_peerkey
  T EVP_PKEY_CTX_get0_pkey
  T EVP_PKEY_CTX_new
  T EVP_PKEY_CTX_new_id
@@ -3708,6 +3863,7 @@
  T EVP_PKEY_encrypt
  T EVP_PKEY_encrypt_init
  T EVP_PKEY_free
+ T EVP_PKEY_get1_DH
  T EVP_PKEY_get1_RSA
  T EVP_PKEY_get_default_digest_nid
  T EVP_PKEY_id
@@ -3715,6 +3871,9 @@
  T EVP_PKEY_missing_parameters
  T EVP_PKEY_new
  T EVP_PKEY_new_mac_key
+ T EVP_PKEY_set1_DH
+ T EVP_PKEY_set1_EC_KEY
+ T EVP_PKEY_set1_RSA
  T EVP_PKEY_set_type
  T EVP_PKEY_sign
  T EVP_PKEY_sign_init
@@ -3728,6 +3887,8 @@
  T EVP_add_digest
  T EVP_aes_128_cbc
  T EVP_aes_128_cbc_hmac_sha1
+ T EVP_aes_128_cbc_hmac_sha256
+ T EVP_aes_128_ccm
  T EVP_aes_128_cfb1
  T EVP_aes_128_cfb128
  T EVP_aes_128_cfb8
@@ -3735,8 +3896,10 @@
  T EVP_aes_128_ecb
  T EVP_aes_128_gcm
  T EVP_aes_128_ofb
+ T EVP_aes_128_wrap
  T EVP_aes_128_xts
  T EVP_aes_192_cbc
+ T EVP_aes_192_ccm
  T EVP_aes_192_cfb1
  T EVP_aes_192_cfb128
  T EVP_aes_192_cfb8
@@ -3744,8 +3907,11 @@
  T EVP_aes_192_ecb
  T EVP_aes_192_gcm
  T EVP_aes_192_ofb
+ T EVP_aes_192_wrap
  T EVP_aes_256_cbc
  T EVP_aes_256_cbc_hmac_sha1
+ T EVP_aes_256_cbc_hmac_sha256
+ T EVP_aes_256_ccm
  T EVP_aes_256_cfb1
  T EVP_aes_256_cfb128
  T EVP_aes_256_cfb8
@@ -3753,6 +3919,7 @@
  T EVP_aes_256_ecb
  T EVP_aes_256_gcm
  T EVP_aes_256_ofb
+ T EVP_aes_256_wrap
  T EVP_aes_256_xts
  T EVP_bf_cbc
  T EVP_bf_cfb64
@@ -3789,6 +3956,7 @@
  T EVP_des_ede3_cfb64
  T EVP_des_ede3_cfb8
  T EVP_des_ede3_ofb
+ T EVP_des_ede3_wrap
  T EVP_des_ede_cbc
  T EVP_des_ede_cfb64
  T EVP_des_ede_ofb
@@ -3887,7 +4055,7 @@
  T IsSpewActive
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FindKey(unsigned int) const
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
@@ -3956,8 +4124,10 @@
  T OPENSSL_far_spin
  T OPENSSL_gmtime
  T OPENSSL_gmtime_adj
+ T OPENSSL_gmtime_diff
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
+ T OPENSSL_ia32_rdseed
  T OPENSSL_indirect_call
  T OPENSSL_init
  T OPENSSL_instrument_halt
@@ -4045,6 +4215,10 @@
  T RC4_options
  T RC4_set_key
  T RSAPrivateKey_dup
+ T RSAZ_1024_mod_exp_avx2
+ T RSAZ_512_mod_exp
+ T RSA_OAEP_PARAMS_free
+ T RSA_OAEP_PARAMS_new
  T RSA_PKCS1_SSLeay
  T RSA_PSS_PARAMS_free
  T RSA_PSS_PARAMS_new
@@ -4055,6 +4229,7 @@
  T RSA_new
  T RSA_new_method
  T RSA_padding_add_PKCS1_OAEP
+ T RSA_padding_add_PKCS1_OAEP_mgf1
  T RSA_padding_add_PKCS1_PSS_mgf1
  T RSA_padding_add_PKCS1_type_1
  T RSA_padding_add_PKCS1_type_2
@@ -4062,6 +4237,7 @@
  T RSA_padding_add_X931
  T RSA_padding_add_none
  T RSA_padding_check_PKCS1_OAEP
+ T RSA_padding_check_PKCS1_OAEP_mgf1
  T RSA_padding_check_PKCS1_type_1
  T RSA_padding_check_PKCS1_type_2
  T RSA_padding_check_SSLv23
@@ -4082,6 +4258,7 @@
  T RealGetCallStack
  T RealPrintCallStack
  T RescaleBase
+ T SHA1
  T SHA1_Final
  T SHA1_Init
  T SHA1_Transform
@@ -4146,6 +4323,7 @@
  T SSL_get_srtp_profiles
  T SSL_get_verify_mode
  T SSL_get_verify_result
+ T SSL_get_wbio
  T SSL_has_matching_session_id
  T SSL_library_init
  T SSL_load_error_strings
@@ -4164,7 +4342,6 @@
  T SSL_state_string_long
  T SSL_use_PrivateKey
  T SSL_use_certificate
- T SSL_version
  T SSL_want
  T SSL_write
  T SSLv23_method
@@ -4436,6 +4613,7 @@
  T X509_ALGOR_set_md
  T X509_ATTRIBUTE_free
  T X509_CERT_AUX_free
+ T X509_CRL_check_suiteb
  T X509_CRL_cmp
  T X509_CRL_digest
  T X509_CRL_free
@@ -4485,6 +4663,7 @@
  T X509_SIG_free
  T X509_STORE_CTX_cleanup
  T X509_STORE_CTX_get0_param
+ T X509_STORE_CTX_get1_chain
  T X509_STORE_CTX_get1_issuer
  T X509_STORE_CTX_get_current_cert
  T X509_STORE_CTX_get_error
@@ -4495,6 +4674,7 @@
  T X509_STORE_CTX_set_default
  T X509_STORE_CTX_set_error
  T X509_STORE_CTX_set_ex_data
+ T X509_STORE_CTX_set_flags
  T X509_STORE_CTX_set_verify_cb
  T X509_STORE_add_cert
  T X509_STORE_add_crl
@@ -4512,9 +4692,15 @@
  T X509_VERIFY_PARAM_set1
  T X509_VERIFY_PARAM_set1_policies
  T X509_VERIFY_PARAM_set_depth
+ T X509_VERIFY_PARAM_set_flags
  T X509_certificate_type
+ T X509_chain_check_suiteb
+ T X509_chain_up_ref
  T X509_check_akid
  T X509_check_ca
+ T X509_check_email
+ T X509_check_host
+ T X509_check_ip
  T X509_check_issued
  T X509_check_private_key
  T X509_check_purpose
@@ -4535,6 +4721,7 @@
  T X509_get_pubkey
  T X509_get_pubkey_parameters
  T X509_get_serialNumber
+ T X509_get_signature_nid
  T X509_get_subject_name
  T X509_issuer_name_hash
  T X509_load_cert_crl_file
@@ -4594,12 +4781,17 @@
  T a2i_ipadd
  T aesni_cbc_encrypt
  T aesni_cbc_sha1_enc
+ T aesni_cbc_sha256_enc
  T aesni_ccm64_decrypt_blocks
  T aesni_ccm64_encrypt_blocks
  T aesni_ctr32_encrypt_blocks
  T aesni_decrypt
  T aesni_ecb_encrypt
  T aesni_encrypt
+ T aesni_gcm_decrypt
+ T aesni_gcm_encrypt
+ T aesni_multi_cbc_decrypt
+ T aesni_multi_cbc_encrypt
  T aesni_set_decrypt_key
  T aesni_set_encrypt_key
  T aesni_xts_decrypt
@@ -4618,9 +4810,11 @@
  T asn1_enc_save
  T asn1_ex_c2i
  T asn1_ex_i2c
+ T asn1_generalizedtime_to_tm
  T asn1_get_choice_selector
  T asn1_get_field_ptr
  T asn1_set_choice_selector
+ T asn1_utctime_to_tm
  T bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)
  T bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)
  T bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)
@@ -4630,7 +4824,9 @@
  T bn_cmp_words
  T bn_div_words
  T bn_expand2
+ T bn_from_montgomery
  T bn_gather5
+ T bn_get_bits5
  T bn_mul_add_words
  T bn_mul_comba4
  T bn_mul_comba8
@@ -4640,12 +4836,15 @@
  T bn_mul_part_recursive
  T bn_mul_recursive
  T bn_mul_words
+ T bn_power5
  T bn_scatter5
+ T bn_sqr8x_internal
  T bn_sqr_comba4
  T bn_sqr_comba8
  T bn_sqr_normal
  T bn_sqr_recursive
  T bn_sqr_words
+ T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
@@ -4661,6 +4860,11 @@
  T c2i_ASN1_OBJECT
  T cIntToHexDigit(int)
  T check_defer
+ T custom_ext_add
+ T custom_ext_init
+ T custom_ext_parse
+ T custom_exts_copy
+ T custom_exts_free
  T d2i_ASN1_INTEGER
  T d2i_ASN1_OBJECT
  T d2i_ASN1_OCTET_STRING
@@ -4669,6 +4873,7 @@
  T d2i_ASN1_UINTEGER
  T d2i_AutoPrivateKey
  T d2i_DHparams
+ T d2i_DHxparams
  T d2i_DSAPrivateKey
  T d2i_DSA_SIG
  T d2i_DSAparams
@@ -4685,6 +4890,7 @@
  T d2i_PrivateKey_bio
  T d2i_RSAPrivateKey
  T d2i_RSAPublicKey
+ T d2i_RSA_OAEP_PARAMS
  T d2i_RSA_PSS_PARAMS
  T d2i_RSA_PUBKEY
  T d2i_SSL_SESSION
@@ -4700,8 +4906,43 @@
  T d2i_X509_bio
  T do_dtls1_write
  T dsa_builtin_paramgen
+ T dsa_builtin_paramgen2
+ T dtls1_accept
+ T dtls1_buffer_message
+ T dtls1_check_timeout_num
+ T dtls1_clear
+ T dtls1_clear_received_buffer
+ T dtls1_clear_sent_buffer
+ T dtls1_connect
+ T dtls1_ctrl
+ T dtls1_default_timeout
+ T dtls1_dispatch_alert
+ T dtls1_do_write
+ T dtls1_free
+ T dtls1_get_ccs_header
+ T dtls1_get_cipher
+ T dtls1_get_message
+ T dtls1_get_message_header
+ T dtls1_get_record
+ T dtls1_get_timeout
+ T dtls1_handle_timeout
  T dtls1_heartbeat
+ T dtls1_hm_fragment_free
+ T dtls1_is_timer_expired
+ T dtls1_link_min_mtu
+ T dtls1_new
+ T dtls1_process_heartbeat
+ T dtls1_read_bytes
+ T dtls1_read_failed
+ T dtls1_reset_seq_numbers
+ T dtls1_retransmit_buffered_messages
+ T dtls1_retransmit_message
+ T dtls1_send_change_cipher_spec
+ T dtls1_set_message_header
+ T dtls1_shutdown
  T dtls1_start_timer
+ T dtls1_stop_timer
+ T dtls1_write_app_data_bytes
  T dtls1_write_bytes
  T ec_GF2m_have_precompute_mult
  T ec_GF2m_precompute_mult
@@ -4754,12 +4995,6 @@
  T ec_GFp_nistp224_point_get_affine_coordinates
  T ec_GFp_nistp224_points_mul
  T ec_GFp_nistp224_precompute_mult
- T ec_GFp_nistp256_group_init
- T ec_GFp_nistp256_group_set_curve
- T ec_GFp_nistp256_have_precompute_mult
- T ec_GFp_nistp256_point_get_affine_coordinates
- T ec_GFp_nistp256_points_mul
- T ec_GFp_nistp256_precompute_mult
  T ec_GFp_nistp521_group_init
  T ec_GFp_nistp521_group_set_curve
  T ec_GFp_nistp521_have_precompute_mult
@@ -4796,20 +5031,40 @@
  T ec_GFp_simple_points_make_affine
  T ec_GFp_simple_set_Jprojective_coordinates_GFp
  T ec_GFp_simple_set_compressed_coordinates
+ T ec_precompute_mont_data
  T ec_wNAF_have_precompute_mult
  T ec_wNAF_mul
  T ec_wNAF_precompute_mult
  T ecdh_check
  T ecdsa_check
+ T ecp_nistz256_add
+ T ecp_nistz256_avx2_select_w7
+ T ecp_nistz256_div_by_2
+ T ecp_nistz256_from_mont
+ T ecp_nistz256_mul_by_2
+ T ecp_nistz256_mul_by_3
+ T ecp_nistz256_mul_mont
+ T ecp_nistz256_neg
+ T ecp_nistz256_point_add
+ T ecp_nistz256_point_add_affine
+ T ecp_nistz256_point_double
+ T ecp_nistz256_select_w5
+ T ecp_nistz256_select_w7
+ T ecp_nistz256_sqr_mont
+ T ecp_nistz256_sub
+ T ecp_nistz256_to_mont
  T evp_pkey_set_cb_translate
  T gcm_ghash_4bit
  T gcm_ghash_4bit_mmx
  T gcm_ghash_4bit_x86
+ T gcm_ghash_avx
  T gcm_ghash_clmul
  T gcm_gmult_4bit
  T gcm_gmult_4bit_mmx
  T gcm_gmult_4bit_x86
+ T gcm_gmult_avx
  T gcm_gmult_clmul
+ T gcm_init_avx
  T gcm_init_clmul
  T hex_to_string
  T i2a_ASN1_INTEGER
@@ -4823,6 +5078,7 @@
  T i2d_ASN1_SET_ANY
  T i2d_ASN1_TYPE
  T i2d_DHparams
+ T i2d_DHxparams
  T i2d_DSAPrivateKey
  T i2d_DSAPublicKey
  T i2d_DSAparams
@@ -4835,6 +5091,7 @@
  T i2d_RSAPublicKey
  T i2d_SSL_SESSION
  T i2d_X509
+ T i2d_X509_ALGOR
  T i2d_X509_EXTENSIONS
  T i2d_X509_NAME
  T i2d_X509_SIG
@@ -4882,12 +5139,21 @@
  T non-virtual thunk to COpenSSLConnection::GetPeerCertificate()
  T non-virtual thunk to COpenSSLConnection::RecvPkt(CNetPacket*)
  T non-virtual thunk to COpenSSLConnection::RemoveSSLConnectionCallback(ISSLConnectionCallback*)
+ T non-virtual thunk to COpenSSLConnection::SetSSLConnectionCallback(ISSLConnectionCallback*)
  T non-virtual thunk to COpenSSLConnection::ShutdownConnection()
  T non-virtual thunk to CUDPConnection::OnUDPFatalError(int, unsigned int)
  T non-virtual thunk to CUDPConnection::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
  T non-virtual thunk to CVideoFileStream::~CVideoFileStream()
+ T non-virtual thunk to CWebSocketConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T non-virtual thunk to CWebSocketConnection::ConnectCompleted(unsigned int)
+ T non-virtual thunk to CWebSocketConnection::ConnectFailed(unsigned int, EResult, unsigned long long)
+ T non-virtual thunk to CWebSocketConnection::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T non-virtual thunk to CWebSocketConnection::ConnectionDisconnected(unsigned int, EResult)
+ T non-virtual thunk to CWebSocketConnection::RecvPkt(CNetPacket*)
  T o2i_ECPublicKey
  T pem_check_suffix
+ T pitem_free
+ T pitem_new
  T policy_cache_find_data
  T policy_cache_free
  T policy_cache_set
@@ -4897,6 +5163,15 @@
  T policy_node_cmp_new
  T policy_node_free
  T policy_node_match
+ T pqueue_find
+ T pqueue_free
+ T pqueue_insert
+ T pqueue_iterator
+ T pqueue_new
+ T pqueue_next
+ T pqueue_peek
+ T pqueue_pop
+ T pqueue_size
  T private_AES_set_decrypt_key
  T private_AES_set_encrypt_key
  T private_Camellia_set_key
@@ -4904,10 +5179,27 @@
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
  T protobuf_AssignDesc_steammessages_5fbase_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
+ T rsaz_1024_gather5_avx2
+ T rsaz_1024_mul_avx2
+ T rsaz_1024_norm2red_avx2
+ T rsaz_1024_red2norm_avx2
+ T rsaz_1024_scatter5_avx2
+ T rsaz_1024_sqr_avx2
+ T rsaz_512_gather4
+ T rsaz_512_mul
+ T rsaz_512_mul_by_one
+ T rsaz_512_mul_gather4
+ T rsaz_512_mul_scatter4
+ T rsaz_512_scatter4
+ T rsaz_512_sqr
+ T rsaz_avx2_eligible
  T s2i_ASN1_INTEGER
  T sha1_block_data_order
+ T sha1_multi_block
  T sha256_block_data_order
+ T sha256_multi_block
  T sha512_block_data_order
+ T sk_deep_copy
  T sk_delete
  T sk_delete_ptr
  T sk_dup
@@ -4950,7 +5242,6 @@
  T ssl3_cert_verify_mac
  T ssl3_change_cipher_state
  T ssl3_check_cert_and_algorithm
- T ssl3_check_client_hello
  T ssl3_choose_cipher
  T ssl3_cleanup_key_block
  T ssl3_clear
@@ -4964,6 +5255,7 @@
  T ssl3_dispatch_alert
  T ssl3_do_change_cipher_spec
  T ssl3_do_compress
+ T ssl3_do_uncompress
  T ssl3_do_write
  T ssl3_enc
  T ssl3_final_finish_mac
@@ -4986,7 +5278,9 @@
  T ssl3_get_next_proto
  T ssl3_get_req_cert_type
  T ssl3_get_server_certificate
+ T ssl3_get_server_done
  T ssl3_get_server_hello
+ T ssl3_handshake_write
  T ssl3_init_finished_mac
  T ssl3_new
  T ssl3_num_ciphers
@@ -5010,11 +5304,14 @@
  T ssl3_send_client_key_exchange
  T ssl3_send_client_verify
  T ssl3_send_finished
+ T ssl3_send_hello_request
  T ssl3_send_newsession_ticket
  T ssl3_send_next_proto
  T ssl3_send_server_certificate
+ T ssl3_send_server_done
  T ssl3_send_server_hello
  T ssl3_send_server_key_exchange
+ T ssl3_set_handshake_header
  T ssl3_setup_buffers
  T ssl3_setup_key_block
  T ssl3_setup_read_buffer
@@ -5023,22 +5320,33 @@
  T ssl3_write
  T ssl3_write_bytes
  T ssl3_write_pending
+ T ssl_add_cert_chain
  T ssl_add_clienthello_renegotiate_ext
  T ssl_add_clienthello_tlsext
  T ssl_add_clienthello_use_srtp_ext
  T ssl_add_serverhello_renegotiate_ext
  T ssl_add_serverhello_tlsext
  T ssl_add_serverhello_use_srtp_ext
+ T ssl_build_cert_chain
  T ssl_bytes_to_cipher_list
+ T ssl_cert_add0_chain_cert
+ T ssl_cert_add1_chain_cert
+ T ssl_cert_clear_certs
  T ssl_cert_dup
  T ssl_cert_free
  T ssl_cert_inst
  T ssl_cert_new
+ T ssl_cert_select_current
+ T ssl_cert_set0_chain
+ T ssl_cert_set1_chain
+ T ssl_cert_set_cert_store
+ T ssl_cert_set_current
+ T ssl_cert_set_default_md
  T ssl_cert_type
- T ssl_check_clienthello_tlsext_early
  T ssl_check_clienthello_tlsext_late
  T ssl_check_serverhello_tlsext
  T ssl_check_srvr_ecc_cert_and_alg
+ T ssl_cipher_get_cert_index
  T ssl_cipher_get_evp
  T ssl_cipher_list_to_bytes
  T ssl_cipher_ptr_id_cmp
@@ -5047,11 +5355,11 @@
  T ssl_fill_hello_random
  T ssl_free_wbio_buffer
  T ssl_get_algorithm2
+ T ssl_get_cipher_by_char
  T ssl_get_ciphers_by_id
  T ssl_get_handshake_digest
  T ssl_get_new_session
  T ssl_get_prev_session
- T ssl_get_server_send_cert
  T ssl_get_server_send_pkey
  T ssl_get_sign_pkey
  T ssl_init_wbio_buffer
@@ -5070,6 +5378,7 @@
  T ssl_sess_cert_new
  T ssl_session_dup
  T ssl_set_cert_masks
+ T ssl_set_client_disabled
  T ssl_undefined_const_function
  T ssl_undefined_function
  T ssl_undefined_void_function
@@ -5187,14 +5496,16 @@
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
  T string_to_hex
  T tinfl_decompress
- T tls12_get_hash
- T tls12_get_req_sig_algs
+ T tls12_check_peer_sigalg
+ T tls12_get_psigalgs
  T tls12_get_sigandhash
- T tls12_get_sigid
  T tls1_alert_code
  T tls1_cbc_remove_padding
  T tls1_cert_verify_mac
  T tls1_change_cipher_state
+ T tls1_check_chain
+ T tls1_check_curve
+ T tls1_check_ec_tmp_key
  T tls1_clear
  T tls1_default_timeout
  T tls1_ec_curve_id2nid
@@ -5210,7 +5521,15 @@
  T tls1_process_heartbeat
  T tls1_process_sigalgs
  T tls1_process_ticket
+ T tls1_save_sigalgs
+ T tls1_set_cert_validity
+ T tls1_set_curves
+ T tls1_set_curves_list
+ T tls1_set_server_sigalgs
+ T tls1_set_sigalgs
+ T tls1_set_sigalgs_list
  T tls1_setup_key_block
+ T tls1_shared_curve
  T tree_find_sk
  T unsigned int std::__1::__sort3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T unsigned int std::__1::__sort3<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
@@ -5378,6 +5697,7 @@
  b CLogger::FlushEventQueue(bool)::cFailedToRemove
  b CLogger::FlushEventQueue(bool)::fAsserted
  b CMAC_Init.zero_iv
+ b CNetConnection::BAsyncSend(CUtlBuffer&, bool)::fAsserted
  b CNetConnection::BAsyncSend(unsigned char const*, int, bool)::fAsserted
  b COpenSSLConnection::BAsyncSend(CUtlBuffer&)::fAsserted
  b COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)::fAsserted
@@ -5407,6 +5727,7 @@
  b OPENSSL_init.done
  b OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)::fAsserted
  b OneTimeCryptoInitOpenSSL()::threadonce_86_19
+ b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
  b StaticFileWriterThread()::s_pFileWriterThread
@@ -5420,6 +5741,7 @@
  b __SCDynamicStoreCreate
  b __SCDynamicStoreCreateRunLoopSource
  b __SCDynamicStoreSetNotificationKeys
+ b _empty_id
  b add_lock_callback
  b added
  b allow_customize
@@ -5573,7 +5895,6 @@
  d BIO_str_functs
  d BIO_str_reasons
  d BN_nist_mod_224._bignum_nist_p_224_sqr
- d BN_nist_mod_256._bignum_nist_p_256_sqr
  d BN_nist_mod_521._bignum_nist_p_521_sqr
  d BN_str_functs
  d BN_str_reasons
@@ -5581,6 +5902,7 @@
  d BUF_str_functs
  d CERTIFICATEPOLICIES_item_tt
  d CHTTPRequestCache::BWriteResponseToDiskCache(CHTTPRequestHandle*)::k_rgpchSeps
+ d CMS_SharedInfo_seq_tt
  d CMS_str_functs
  d CMS_str_reasons
  d CONF_str_functs
@@ -5589,10 +5911,21 @@
  d CRYPTO_str_functs
  d CRYPTO_str_reasons
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
+ d DH_get_1024_160._bignum_dh1024_160_g
+ d DH_get_1024_160._bignum_dh1024_160_p
+ d DH_get_1024_160._bignum_dh1024_160_q
+ d DH_get_2048_224._bignum_dh2048_224_g
+ d DH_get_2048_224._bignum_dh2048_224_p
+ d DH_get_2048_224._bignum_dh2048_224_q
+ d DH_get_2048_256._bignum_dh2048_256_g
+ d DH_get_2048_256._bignum_dh2048_256_p
+ d DH_get_2048_256._bignum_dh2048_256_q
  d DH_str_functs
  d DH_str_reasons
  d DHparams_aux
  d DHparams_seq_tt
+ d DHvparams_seq_tt
+ d DHxparams_seq_tt
  d DIST_POINT_NAME_aux
  d DIST_POINT_NAME_ch_tt
  d DIST_POINT_seq_tt
@@ -5608,6 +5941,15 @@
  d DSAparams_seq_tt
  d DSO_str_functs
  d DSO_str_reasons
+ d DTLS_client_method.DTLS_client_method_data
+ d DTLS_method.DTLS_method_data
+ d DTLS_server_method.DTLS_server_method_data
+ d DTLSv1_2_client_method.DTLSv1_2_client_method_data
+ d DTLSv1_2_method.DTLSv1_2_method_data
+ d DTLSv1_2_server_method.DTLSv1_2_server_method_data
+ d DTLSv1_client_method.DTLSv1_client_method_data
+ d DTLSv1_method.DTLSv1_method_data
+ d DTLSv1_server_method.DTLSv1_server_method_data
  d ECDH_str_functs
  d ECDH_str_reasons
  d ECDSA_SIG_seq_tt
@@ -5618,8 +5960,8 @@
  d EC_GF2m_simple_method.ret
  d EC_GFp_mont_method.ret
  d EC_GFp_nistp224_method.ret
- d EC_GFp_nistp256_method.ret
  d EC_GFp_nistp521_method.ret
+ d EC_GFp_nistz256_method.ret
  d EC_PRIVATEKEY_seq_tt
  d EC_str_functs
  d EC_str_reasons
@@ -5674,6 +6016,7 @@
  d RSAPrivateKey_seq_tt
  d RSAPublicKey_aux
  d RSAPublicKey_seq_tt
+ d RSA_OAEP_PARAMS_seq_tt
  d RSA_PSS_PARAMS_seq_tt
  d RSA_str_functs
  d RSA_str_reasons
@@ -5741,9 +6084,9 @@
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
  d _bignum_nist_p_224
- d _bignum_nist_p_256
  d _bignum_nist_p_521
  d aes_128_cbc
+ d aes_128_ccm
  d aes_128_cfb
  d aes_128_cfb1
  d aes_128_cfb8
@@ -5751,8 +6094,10 @@
  d aes_128_ecb
  d aes_128_gcm
  d aes_128_ofb
+ d aes_128_wrap
  d aes_128_xts
  d aes_192_cbc
+ d aes_192_ccm
  d aes_192_cfb
  d aes_192_cfb1
  d aes_192_cfb8
@@ -5760,7 +6105,9 @@
  d aes_192_ecb
  d aes_192_gcm
  d aes_192_ofb
+ d aes_192_wrap
  d aes_256_cbc
+ d aes_256_ccm
  d aes_256_cfb
  d aes_256_cfb1
  d aes_256_cfb8
@@ -5768,9 +6115,12 @@
  d aes_256_ecb
  d aes_256_gcm
  d aes_256_ofb
+ d aes_256_wrap
  d aes_256_xts
  d aesni_128_cbc
  d aesni_128_cbc_hmac_sha1_cipher
+ d aesni_128_cbc_hmac_sha256_cipher
+ d aesni_128_ccm
  d aesni_128_cfb
  d aesni_128_cfb1
  d aesni_128_cfb8
@@ -5780,6 +6130,7 @@
  d aesni_128_ofb
  d aesni_128_xts
  d aesni_192_cbc
+ d aesni_192_ccm
  d aesni_192_cfb
  d aesni_192_cfb1
  d aesni_192_cfb8
@@ -5789,6 +6140,8 @@
  d aesni_192_ofb
  d aesni_256_cbc
  d aesni_256_cbc_hmac_sha1_cipher
+ d aesni_256_cbc_hmac_sha256_cipher
+ d aesni_256_ccm
  d aesni_256_cfb
  d aesni_256_cfb1
  d aesni_256_cfb8
@@ -5805,20 +6158,20 @@
  d bignum_pf
  d builtin_pbe
  d camellia_128_cbc
+ d camellia_128_cfb
  d camellia_128_cfb1
- d camellia_128_cfb128
  d camellia_128_cfb8
  d camellia_128_ecb
  d camellia_128_ofb
  d camellia_192_cbc
+ d camellia_192_cfb
  d camellia_192_cfb1
- d camellia_192_cfb128
  d camellia_192_cfb8
  d camellia_192_ecb
  d camellia_192_ofb
  d camellia_256_cbc
+ d camellia_256_cfb
  d camellia_256_cfb1
- d camellia_256_cfb128
  d camellia_256_cfb8
  d camellia_256_ecb
  d camellia_256_ofb
@@ -5830,6 +6183,7 @@
  d default_crl_method
  d default_table
  d default_trust
+ d des3_wrap
  d des_cbc
  d des_cfb1
  d des_cfb64
@@ -5847,6 +6201,7 @@
  d des_ede_ofb
  d des_ofb
  d dh_ossl
+ d dh_sharedinfo_encode.ctr
  d dsa_md
  d dsa_pub_internal_seq_tt
  d dss1_md
@@ -5877,6 +6232,7 @@
  d mon
  d n_cipher
  d nid_objs
+ d nist_curves
  d ns_cert_type_table
  d openssl_dsa_meth
  d openssl_ecdh_meth
@@ -5913,6 +6269,7 @@
  d standard_exts
  d standard_methods
  d steam3Parser
+ d suiteb_sigalgs
  d tls12_md
  d tls12_sig
  d tls12_sigalgs
@@ -6032,13 +6389,10 @@
  pthread_self
  pthread_setspecific
  qsort
- r ASN1_GENERALIZEDTIME_check.max
- r ASN1_GENERALIZEDTIME_check.min
- r ASN1_UTCTIME_check.max
- r ASN1_UTCTIME_check.min
  r BN_kronecker.tab
  r BN_num_bits_word.bits
  r BN_value_one.data_one
+ r Hex
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
  r X509_CINF_aux
@@ -6104,17 +6458,50 @@
  r _EC_X9_62_PRIME_239V2
  r _EC_X9_62_PRIME_239V3
  r _EC_X9_62_PRIME_256V1
+ r _EC_brainpoolP160r1
+ r _EC_brainpoolP160t1
+ r _EC_brainpoolP192r1
+ r _EC_brainpoolP192t1
+ r _EC_brainpoolP224r1
+ r _EC_brainpoolP224t1
+ r _EC_brainpoolP256r1
+ r _EC_brainpoolP256t1
+ r _EC_brainpoolP320r1
+ r _EC_brainpoolP320t1
+ r _EC_brainpoolP384r1
+ r _EC_brainpoolP384t1
+ r _EC_brainpoolP512r1
+ r _EC_brainpoolP512t1
  r _nist_p_224
  r _nist_p_224_sqr
- r _nist_p_256
- r _nist_p_256_sqr
  r _nist_p_521
  r _nist_p_521_sqr
+ r asn1_generalizedtime_to_tm.max
+ r asn1_generalizedtime_to_tm.min
+ r asn1_utctime_to_tm.max
+ r asn1_utctime_to_tm.min
  r bf_init
+ r bitmask_end_values
+ r bitmask_start_values
  r char_type
  r data_ascii2bin
+ r default_iv
  r des_skb
+ r dh1024_160_g
+ r dh1024_160_p
+ r dh1024_160_q
+ r dh2048_224_g
+ r dh2048_224_p
+ r dh2048_224_q
+ r dh2048_256_g
+ r dh2048_256_p
+ r dh2048_256_q
  r do_hex_dump.hexdig
+ r dsa_builtin_paramgen2.ggen
+ r eccurves_all
+ r eccurves_auto
+ r ecformats_default
+ r ecp_nistz256_precomputed
  r gmul
  r hex_to_string.hexdig
  r illByte
@@ -6127,12 +6514,11 @@
  r namingBitmap
  r nid_list
  r nistp224_curve_params
- r nistp256_curve_params
  r nistp521_curve_params
  r nmstrtPages
  r obj_objs
  r odd_parity
- r pref_list
+ r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
@@ -6149,6 +6535,7 @@
  r ssl_check_for_safari.kSafariExtensionsBlock
  r ssl_check_for_safari.kSafariTLS12ExtensionsBlock
  r ssl_handshake_digest_flag
+ r suiteb_curves
  r tag2bit
  r tag2nbyte
  r tbl_standard
@@ -6158,6 +6545,7 @@
  r tinfl_decompress::s_length_extra
  r tinfl_decompress::s_min_table_sizes
  r tls1_change_cipher_state.empty
+ r two80
  r whitespace
  r zeroes
  read
@@ -6274,6 +6662,7 @@
  t Helper_PEMEncryptionPasswordCallback(char*, int, int, void*)
  t InitTicks()
  t K256
+ t K256_shaext
  t K512
  t K_XX_XX
  t KeyValuesSystem()
@@ -6309,6 +6698,8 @@
  t RequireCh
  t ResolveExternalDTD
  t RestoreReaderPeRef
+ t SCT_LIST_free
+ t SCT_free
  t SanitizeHostNameForSSL(char const*)
  t SetEncoding
  t SpewOutputFunc(SpewType_t, char const*)
@@ -6334,20 +6725,117 @@
  t VerifyPeerCallback(int, x509_store_ctx_st*)
  t WriteMiniDumpThread(void*)
  t X509_REVOKED_cmp
+ t _GLOBAL__sub_I_audiodecoder.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_completionportmanager.cpp
+ t _GLOBAL__sub_I_completionportmanager_posix.cpp
+ t _GLOBAL__sub_I_constants.cpp
+ t _GLOBAL__sub_I_cookiecontainer.cpp
+ t _GLOBAL__sub_I_coroutine.cpp
+ t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
+ t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_fasttimer.cpp
+ t _GLOBAL__sub_I_framefunction.cpp
+ t _GLOBAL__sub_I_globals.cpp
+ t _GLOBAL__sub_I_http.cpp
+ t _GLOBAL__sub_I_httpclient.cpp
+ t _GLOBAL__sub_I_httpclientmgr.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_job.cpp
+ t _GLOBAL__sub_I_jobmgr.cpp
+ t _GLOBAL__sub_I_logger.cpp
+ t _GLOBAL__sub_I_minidump.cpp
+ t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_net.cpp
+ t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netconnection.cpp
+ t _GLOBAL__sub_I_netfilter.cpp
+ t _GLOBAL__sub_I_nethost.cpp
+ t _GLOBAL__sub_I_netpacket.cpp
+ t _GLOBAL__sub_I_opensslconnection.cpp
+ t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_platform_sockets_posix.cpp
+ t _GLOBAL__sub_I_platformtime.cpp
+ t _GLOBAL__sub_I_random.cpp
+ t _GLOBAL__sub_I_reliabletimer.cpp
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_scheduledfunction.cpp
+ t _GLOBAL__sub_I_scheduler.cpp
+ t _GLOBAL__sub_I_stat.cpp
+ t _GLOBAL__sub_I_stdafx.cpp
+ t _GLOBAL__sub_I_steamid.cpp
+ t _GLOBAL__sub_I_steammessages_base.pb.cc
+ t _GLOBAL__sub_I_stime.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_tcpconnection.cpp
+ t _GLOBAL__sub_I_tcphost.cpp
+ t _GLOBAL__sub_I_testthread.cpp
+ t _GLOBAL__sub_I_threadtools.cpp
+ t _GLOBAL__sub_I_udpconnection.cpp
+ t _GLOBAL__sub_I_udphost.cpp
+ t _GLOBAL__sub_I_udpsocket.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_videoalignedbuffer.cpp
+ t _GLOBAL__sub_I_videodecode.cpp
+ t _GLOBAL__sub_I_videodecoderlibav.cpp
+ t _GLOBAL__sub_I_videoencode.cpp
+ t _GLOBAL__sub_I_videofilestream.cpp
+ t _GLOBAL__sub_I_videolib.cpp
+ t _GLOBAL__sub_I_videomanifest.cpp
+ t _GLOBAL__sub_I_videompdparser.cpp
+ t _GLOBAL__sub_I_videoplayer.cpp
+ t _GLOBAL__sub_I_videoplayermanager.cpp
+ t _GLOBAL__sub_I_videoutils.cpp
+ t _GLOBAL__sub_I_videowebmcuesparser.cpp
+ t _GLOBAL__sub_I_vprof.cpp
+ t _GLOBAL__sub_I_websocket.cpp
+ t _GLOBAL__sub_I_workthreadpool.cpp
+ t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
+ t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6
+ t _aesni_encrypt2
  t _aesni_encrypt3
  t _aesni_encrypt4
  t _aesni_encrypt6
  t _aesni_set_encrypt_key
+ t _bn_post4x_internal
+ t _bn_postx4x_internal
+ t _bn_sqr8x_internal
+ t _bn_sqr8x_reduction
+ t _bn_sqrx8x_internal
+ t _bn_sqrx8x_reduction
  t _dopr
+ t _ecp_nistz256_add_toq
+ t _ecp_nistz256_add_tox
+ t _ecp_nistz256_mul_by_2q
+ t _ecp_nistz256_mul_by_2x
+ t _ecp_nistz256_mul_montq
+ t _ecp_nistz256_mul_montx
+ t _ecp_nistz256_sqr_montq
+ t _ecp_nistz256_sqr_montx
+ t _ecp_nistz256_sub_fromq
+ t _ecp_nistz256_sub_fromx
+ t _ecp_nistz256_subq
+ t _ecp_nistz256_subx
  t _mul_1x1_ialu
  t _mul_1x1_mmx
+ t _rsaz_512_mul
+ t _rsaz_512_mulx
+ t _rsaz_512_reduce
+ t _rsaz_512_reducex
+ t _rsaz_512_subtract
+ t _sha1_block_data_order_avx
+ t _sha1_block_data_order_shaext
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact
@@ -6370,6 +6858,9 @@
  t _x86_DES_encrypt
  t add_cert_dir
  t aes_cbc_cipher
+ t aes_ccm_cipher
+ t aes_ccm_ctrl
+ t aes_ccm_init_key
  t aes_cfb1_cipher
  t aes_cfb8_cipher
  t aes_cfb_cipher
@@ -6381,6 +6872,8 @@
  t aes_gcm_init_key
  t aes_init_key
  t aes_ofb_cipher
+ t aes_wrap_cipher
+ t aes_wrap_init_key
  t aes_xts_cipher
  t aes_xts_ctrl
  t aes_xts_init_key
@@ -6388,18 +6881,34 @@
  t aesni_cbc_hmac_sha1_cipher
  t aesni_cbc_hmac_sha1_ctrl
  t aesni_cbc_hmac_sha1_init_key
+ t aesni_cbc_hmac_sha256_cipher
+ t aesni_cbc_hmac_sha256_ctrl
+ t aesni_cbc_hmac_sha256_init_key
+ t aesni_cbc_sha1_enc_avx
+ t aesni_cbc_sha1_enc_shaext
  t aesni_cbc_sha1_enc_ssse3
+ t aesni_cbc_sha256_enc_avx
+ t aesni_cbc_sha256_enc_avx2
+ t aesni_cbc_sha256_enc_shaext
+ t aesni_cbc_sha256_enc_xop
+ t aesni_ccm_init_key
+ t aesni_ctr32_6x
+ t aesni_ctr32_ghash_6x
+ t aesni_decrypt2
  t aesni_decrypt3
  t aesni_decrypt4
  t aesni_decrypt6
  t aesni_decrypt8
  t aesni_ecb_cipher
+ t aesni_encrypt2
  t aesni_encrypt3
  t aesni_encrypt4
  t aesni_encrypt6
  t aesni_encrypt8
  t aesni_gcm_init_key
  t aesni_init_key
+ t aesni_multi_cbc_decrypt_avx
+ t aesni_multi_cbc_encrypt_avx
  t aesni_xts_init_key
  t ameth_cmp_BSEARCH_CMP_FN
  t app_info_LHASH_COMP
@@ -6416,6 +6925,10 @@
  t asn1_template_ex_d2i
  t asn1_template_ex_i2d
  t asn1_template_noexp_d2i
+ t avx2_shortcut
+ t avx_cbc_dec_shortcut
+ t avx_cbc_enc_shortcut
+ t avx_shortcut
  t batch_mul
  t bf_cbc_cipher
  t bf_cfb64_cipher
@@ -6426,12 +6939,17 @@
  t bn_c2i
  t bn_expand_internal
  t bn_free
+ t bn_from_mont8x
  t bn_i2c
  t bn_mul4x_mont
  t bn_mul4x_mont_gather5
+ t bn_mulx4x_mont
+ t bn_mulx4x_mont_gather5
  t bn_new
+ t bn_powerx5
+ t bn_print
  t bn_rand_range
- t bn_sqr4x_mont
+ t bn_sqr8x_mont
  t bnrand
  t bsaes_const
  t bsaes_decrypt8
@@ -6451,25 +6969,13 @@
  t by_dir_hash_free
  t by_file_ctrl
  t ca_dn_cmp
- t camellia_128_cbc_cipher
- t camellia_128_cfb128_cipher
- t camellia_128_cfb1_cipher
- t camellia_128_cfb8_cipher
- t camellia_128_ecb_cipher
- t camellia_128_ofb_cipher
- t camellia_192_cbc_cipher
- t camellia_192_cfb128_cipher
- t camellia_192_cfb1_cipher
- t camellia_192_cfb8_cipher
- t camellia_192_ecb_cipher
- t camellia_192_ofb_cipher
- t camellia_256_cbc_cipher
- t camellia_256_cfb128_cipher
- t camellia_256_cfb1_cipher
- t camellia_256_cfb8_cipher
- t camellia_256_ecb_cipher
- t camellia_256_ofb_cipher
+ t camellia_cbc_cipher
+ t camellia_cfb1_cipher
+ t camellia_cfb8_cipher
+ t camellia_cfb_cipher
+ t camellia_ecb_cipher
  t camellia_init_key
+ t camellia_ofb_cipher
  t cert_crl
  t check_crl
  t check_issued
@@ -6502,6 +7008,7 @@
  t crl_extension_match
  t crl_inf_cb
  t cstream(unsigned char*, int, int*, void*)
+ t d2i_SCT_LIST
  t d2i_ocsp_nonce
  t def_cleanup_cb
  t def_cleanup_util_cb
@@ -6523,6 +7030,7 @@
  t des_ede3_cfb1_cipher
  t des_ede3_cfb8_cipher
  t des_ede3_init_key
+ t des_ede3_wrap_cipher
  t des_ede_cbc_cipher
  t des_ede_cfb64_cipher
  t des_ede_ecb_cipher
@@ -6543,6 +7051,7 @@
  t dh_param_decode
  t dh_param_encode
  t dh_param_print
+ t dh_pkey_ctrl
  t dh_priv_decode
  t dh_priv_encode
  t dh_private_print
@@ -6562,6 +7071,7 @@
  t do_rsa_print
  t do_sigver_init
  t do_ssl3_write
+ t do_x509_check
  t doapr_outch
  t dpn_cb
  t dsa_bits
@@ -6586,6 +7096,18 @@
  t dsa_pub_print
  t dsa_sig_print
  t dsa_sign_setup
+ t dtls1_buffer_record
+ t dtls1_clear_queues
+ t dtls1_get_client_method
+ t dtls1_get_method
+ t dtls1_get_server_method
+ t dtls1_handshake_write
+ t dtls1_hm_fragment_new
+ t dtls1_preprocess_fragment
+ t dtls1_process_record
+ t dtls1_query_mtu
+ t dtls1_reassemble_fragment
+ t dtls1_set_handshake_header
  t ec_GF2m_montgomery_point_multiply
  t ec_asn1_group2pkparameters
  t ec_asn1_pkparameters2group
@@ -6617,6 +7139,21 @@
  t eckey_pub_encode
  t eckey_pub_print
  t eckey_type2param
+ t ecp_nistz256_avx2_select_w5
+ t ecp_nistz256_get_affine
+ t ecp_nistz256_mult_precompute
+ t ecp_nistz256_point_add_affinex
+ t ecp_nistz256_point_addx
+ t ecp_nistz256_point_doublex
+ t ecp_nistz256_points_mul
+ t ecp_nistz256_pre_comp_clear_free
+ t ecp_nistz256_pre_comp_dup
+ t ecp_nistz256_pre_comp_free
+ t ecp_nistz256_window_have_precompute_mult
+ t equal_case
+ t equal_email
+ t equal_nocase
+ t equal_wildcard
  t err_state_LHASH_COMP
  t err_state_LHASH_HASH
  t err_string_data_LHASH_COMP
@@ -6667,6 +7204,7 @@
  t i2d_ocsp_nonce
  t i2r_NAME_CONSTRAINTS
  t i2r_PKEY_USAGE_PERIOD
+ t i2r_SCT_LIST
  t i2r_certpol
  t i2r_crldp
  t i2r_idp
@@ -6694,6 +7232,7 @@
  t int_cleanup
  t int_ctx_new
  t int_dh_free
+ t int_dh_param_copy
  t int_dh_size
  t int_dsa_free
  t int_dsa_size
@@ -6799,19 +7338,19 @@
  t mem_puts
  t mem_read
  t mem_write
+ t mul4x_internal
  t mul_1x1
+ t mulx4x_internal
  t name_funcs_free
  t names_lh_free_LHASH_DOALL
  t nc_match
  t nc_match_single
  t new_dir
+ t nid_cb
  t nid_cmp_BSEARCH_CMP_FN
  t nistp224_pre_comp_clear_free
  t nistp224_pre_comp_dup
  t nistp224_pre_comp_free
- t nistp256_pre_comp_clear_free
- t nistp256_pre_comp_dup
- t nistp256_pre_comp_free
  t nistp521_pre_comp_clear_free
  t nistp521_pre_comp_dup
  t nistp521_pre_comp_free
@@ -6867,6 +7406,7 @@
  t pkey_ec_ctrl_str
  t pkey_ec_derive
  t pkey_ec_init
+ t pkey_ec_kdf_derive
  t pkey_ec_keygen
  t pkey_ec_paramgen
  t pkey_ec_sign
@@ -6910,14 +7450,17 @@
  t remove_session_lock
  t rsa_bits
  t rsa_cb
+ t rsa_ctx_to_pss
  t rsa_get_blinding
  t rsa_item_sign
  t rsa_item_verify
+ t rsa_md_to_mgf1
+ t rsa_mgf1_to_md
  t rsa_pkey_ctrl
  t rsa_priv_decode
  t rsa_priv_encode
  t rsa_priv_print
- t rsa_pss_decode
+ t rsa_pss_to_ctx
  t rsa_pub_cmp
  t rsa_pub_decode
  t rsa_pub_encode
@@ -6931,26 +7474,38 @@
  t send_bio_chars
  t set_dist_point_name
  t set_reasons
+ t sha1_block_data_order_avx
+ t sha1_block_data_order_avx2
+ t sha1_block_data_order_shaext
  t sha1_block_data_order_ssse3
+ t sha1_multi_block_avx
+ t sha1_multi_block_avx2
+ t sha1_multi_block_shaext
  t sha1_update
+ t sha256_block_data_order_avx
+ t sha256_block_data_order_avx2
+ t sha256_block_data_order_shaext
+ t sha256_block_data_order_ssse3
+ t sha256_multi_block_avx
+ t sha256_multi_block_avx2
+ t sha256_multi_block_shaext
+ t sha256_update
+ t sha512_block_data_order_avx
+ t sha512_block_data_order_avx2
+ t sha512_block_data_order_xop
  t sha_block_data_order
+ t shaext_shortcut
  t sid_free
  t sig_cb
  t sig_cmp_BSEARCH_CMP_FN
  t sigx_cmp_BSEARCH_CMP_FN
- t smallfelem_assign
- t smallfelem_inv_contract
- t smallfelem_is_zero_int
- t smallfelem_mul
- t smallfelem_mul_contract
- t smallfelem_one
- t smallfelem_square_contract
  t ssl23_get_method
- t ssl3_add_cert_to_buf
+ t ssl3_check_client_certificate
  t ssl3_get_client_method
  t ssl3_get_method
  t ssl3_get_server_method
  t ssl3_handshake_mac
+ t ssl_add_cert_to_buf
  t ssl_cipher_apply_rule
  t ssl_cipher_id_cmp_BSEARCH_CMP_FN
  t ssl_cipher_process_rulestr
@@ -6966,15 +7521,19 @@
  t ssleay_rand_seed
  t ssleay_rand_status
  t ssse3_shortcut
+ t str_copy
+ t str_free
  t sxnet_i2r
  t sxnet_v2i
  t table_cmp_BSEARCH_CMP_FN
  t timeout_LHASH_DOALL_ARG
  t tls1_PRF
+ t tls1_check_ec_key
  t tls1_get_client_method
  t tls1_get_method
  t tls1_get_server_method
  t tls1_md5_final_raw
+ t tls1_set_ec_id
  t tls1_sha1_final_raw
  t tls1_sha256_final_raw
  t tls1_sha512_final_raw
@@ -7020,6 +7579,7 @@
  t x509_name_ex_print
  t x509_object_cmp
  t x509_object_idx_cnt
+ t x509_verify_param_zero
  t x509v3_cache_extensions
  t x86_64_AES_decrypt
  t x86_64_AES_decrypt_compact

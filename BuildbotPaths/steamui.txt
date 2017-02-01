@@ -1,5 +1,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
@@ -166,7 +167,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/PlatformMainPanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamApp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamDoc.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamDoc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamPurchaseReceipt.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamRootDialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamStartup.cpp
@@ -227,6 +227,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/settingscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/shutdowncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamstartuphandlers.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h

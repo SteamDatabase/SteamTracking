@@ -7,6 +7,12 @@ enum EHIDDeviceLocation {
 	k_EDeviceLocationAny = 3;
 }
 
+enum EHIDDeviceDisconnectMethod {
+	k_EDeviceDisconnectMethodUnknown = 0;
+	k_EDeviceDisconnectMethodBluetooth = 1;
+	k_EDeviceDisconnectMethodFeatureReport = 2;
+}
+
 message CHIDDeviceInfo {
 	optional .EHIDDeviceLocation location = 1 [default = k_EDeviceLocationLocal];
 	optional string path = 2;
@@ -83,6 +89,12 @@ message CHIDMessageToRemote {
 		optional uint32 device = 1;
 	}
 
+	message DeviceDisconnect {
+		optional uint32 device = 1;
+		optional .EHIDDeviceDisconnectMethod disconnectMethod = 2 [default = k_EDeviceDisconnectMethodUnknown];
+		optional bytes data = 3;
+	}
+
 	optional uint32 request_id = 1;
 	oneof command {
 		.CHIDMessageToRemote.DeviceOpen device_open = 2;
@@ -96,6 +108,7 @@ message CHIDMessageToRemote {
 		.CHIDMessageToRemote.DeviceGetSerialNumberString device_get_serial_number_string = 10;
 		.CHIDMessageToRemote.DeviceStartInputReports device_start_input_reports = 11;
 		.CHIDMessageToRemote.DeviceRequestFullReport device_request_full_report = 12;
+		.CHIDMessageToRemote.DeviceDisconnect device_disconnect = 13;
 	}
 }
 

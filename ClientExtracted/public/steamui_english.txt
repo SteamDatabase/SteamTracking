@@ -1270,10 +1270,10 @@ This should take less than a minute."
 "Steam_App_LegacyKey_OutOfKeys_Text" "Steam is temporarily out of unused product keys required by %game%.\n\nWe will be able to issue you a product key once we received more keys from the publisher.\nPlease try again later or you can request a refund now."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
-"Steam_App_Update_Failed_Text"	"An error occurred while updating %game% (%reason%)"
-"Steam_App_Update_Failed_Text_Long"	"An error occurred while updating %game% (%reason%) :\n\n%detail%"
-"Steam_App_Update_NotEnoughDiskSpace"	"Not enought disk space available to update %game% (%detail% required)"
-"Steam_App_Update_NotEnoughDiskSpaceUser" "Not enought user disk quota available to update %game% (%detail% required)"
+"Steam_App_Update_Failed_Text" "An error occurred while updating %game% (%reason%)"
+"Steam_App_Update_Failed_Text_Long" "An error occurred while updating %game% (%reason%) :\n\n%detail%"
+"Steam_App_Update_NotEnoughDiskSpace" "Not enought disk space available to update %game% (%detail% required)"
+"Steam_App_Update_NotEnoughDiskQuota" "Not enought user disk quota available to update %game% (%detail% required)"
 "Steam_App_Update_LockedByProcess" "A file of %game% is locked by %program% and can't be updated. Please close this program and try again. \n\n Program: %executable%\n File: %detail%"
 
 "Steam_PreloadCompleteNoPreorderAvailable" "A locked copy of %game% is now on your computer."
@@ -3992,7 +3992,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_28"		"missing executable"
 "Steam_AppUpdateError_29"		"invalid platform"
 "Steam_AppUpdateError_30"		"unsupported file system"
-"Steam_AppUpdateError_31"		"missing update files"
+"Steam_AppUpdateError_31"		"corrupt update files"
 "Steam_AppUpdateError_32"		"downloads disabled"
 "Steam_AppUpdateError_33"		"shared library locked"
 "Steam_AppUpdateError_34"		"purchase pending"
@@ -4003,7 +4003,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_39"		"content file locked"
 "Steam_AppUpdateError_40"		"content unavailable"
 "Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
-"Steam_AppUpdateError_42"		"library folder not writable"
+"Steam_AppUpdateError_42"		"missing update files"
 "Steam_AppUpdateError_43"		"not enough disk space free for user - check OS disk quota settings"
 
 

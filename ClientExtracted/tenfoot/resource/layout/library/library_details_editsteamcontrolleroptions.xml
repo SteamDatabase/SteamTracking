@@ -8,7 +8,9 @@
 	<EditAppLaunchOptions class="TenfootMsgBox" defaultfocus="Rumble">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
     		<Label class="StdTitle" text="#Library_AppControllerSettings_Title" />
-
+			<Button class="Button" id="ChangeXInputOrderButton" selectionpos="auto" onactivate="ChangeXInputOrder()" >
+				<Label text="#Library_Details_ChangeXInputOrderButton" />
+			</Button>
 			<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />

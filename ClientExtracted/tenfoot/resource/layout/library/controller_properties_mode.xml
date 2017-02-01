@@ -1148,7 +1148,15 @@
 					
 
 					<!-- Mouse Region Mode Advanced -->
-
+					<Panel class="FieldWrapper" modes="mouseregion" advanced="on" sources="trackpad joystick">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+						<DropDown id="MouseRegionTriggerClamp" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="mouseregion" advanced="on" sources="trackpad joystick">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+						<Slider id="MouseRegionTriggerClampAmount" direction="horizontal" />
+					</Panel>
+					
           <!-- Joystick Camera Mode -->
 					<Panel class="FieldWrapper" modes="joystickcamera" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />

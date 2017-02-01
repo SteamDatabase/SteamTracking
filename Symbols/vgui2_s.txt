@@ -12,6 +12,7 @@
  .objc_class_name_NSEvent
  .objc_class_name_NSGraphicsContext
  .objc_class_name_NSImage
+ .objc_class_name_NSLocale
  .objc_class_name_NSMenu
  .objc_class_name_NSMenuItem
  .objc_class_name_NSObject
@@ -1711,6 +1712,9 @@
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::InsertBefore(int, KeyValues const* const&)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::ShiftElementsRight(int, int)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::FastRemove(int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::GrowVector(int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::InsertBefore(int)
@@ -1926,7 +1930,7 @@
  T KeyValues::CreateKey(char const*)
  T KeyValues::CreatePeerKey(char const*)
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FindKey(unsigned int) const
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
@@ -2000,6 +2004,7 @@
  T OPENSSL_far_spin
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
+ T OPENSSL_ia32_rdseed
  T OPENSSL_indirect_call
  T OPENSSL_instrument_halt
  T OPENSSL_rdtsc
@@ -2992,6 +2997,43 @@
  t ResetTextureParams_GL_TEXTURE_2D()
  t SimplifyNode(ExprNode*&)
  t UpdateApplicationWindowMenuItem(unsigned int)
+ t _GLOBAL__sub_I_Bitmap.cpp
+ t _GLOBAL__sub_I_FontManager.cpp
+ t _GLOBAL__sub_I_LocalizedStringTable.cpp
+ t _GLOBAL__sub_I_MemoryBitmap.cpp
+ t _GLOBAL__sub_I_NotificationManager.cpp
+ t _GLOBAL__sub_I_Scheme.cpp
+ t _GLOBAL__sub_I_SerializedSurface.cpp
+ t _GLOBAL__sub_I_VPanel.cpp
+ t _GLOBAL__sub_I_VPanelWrapper.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_clip2d.cpp
+ t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_enum_names.cpp
+ t _GLOBAL__sub_I_fonttexturecache.cpp
+ t _GLOBAL__sub_I_inputbase.cpp
+ t _GLOBAL__sub_I_inputosx.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_language.cpp
+ t _GLOBAL__sub_I_layoutfile.cpp
+ t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_osxfont.cpp
+ t _GLOBAL__sub_I_pngloader.cpp
+ t _GLOBAL__sub_I_registry.cpp
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_surface_base.cpp
+ t _GLOBAL__sub_I_surface_opengl.cpp
+ t _GLOBAL__sub_I_surface_osx.mm
+ t _GLOBAL__sub_I_system_posix.cpp
+ t _GLOBAL__sub_I_tgaloader.cpp
+ t _GLOBAL__sub_I_timeutils.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_vgui.cpp
+ t _GLOBAL__sub_I_vgui_internal.cpp
+ t _GLOBAL__sub_I_vguisetup.cpp
+ t _GLOBAL__sub_I_vguisystemmoduleloader.cpp
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke581
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
@@ -3006,15 +3048,19 @@
  t __copy_helper_block_576
  t __destroy_helper_block_
  t __destroy_helper_block_577
+ t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6
+ t _aesni_encrypt2
  t _aesni_encrypt3
  t _aesni_encrypt4
  t _aesni_encrypt6
  t _aesni_set_encrypt_key
  t _mul_1x1_ialu
  t _mul_1x1_mmx
+ t _sha1_block_data_order_avx
+ t _sha1_block_data_order_shaext
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact

@@ -523,6 +523,16 @@
  t ProcessRawStack(void**, int, int, CStack&)
  t SteamThreadTools::ThreadProcConvert(void*)
  t WriteMiniDumpThread(void*)
+ t _GLOBAL__sub_I_breakpad.mm
+ t _GLOBAL__sub_I_fasttimer.cpp
+ t _GLOBAL__sub_I_minidump.cpp
+ t _GLOBAL__sub_I_platformtime.cpp
+ t _GLOBAL__sub_I_random.cpp
+ t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_testthread.cpp
+ t _GLOBAL__sub_I_threadtools.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_vprof.cpp
  t global constructors keyed to 000200
  time
  usleep

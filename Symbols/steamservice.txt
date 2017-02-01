@@ -66,6 +66,7 @@
  B CUDPHost::sm_THashUDPHConnection
  B CUDPSocket::sm_ThreadSafeQueueIncoming
  B CUDPSocket::sm_cOutstandingWSASentToCmds
+ B CWebSocketConnection::sm_THashPWebSocketConnection
  B CWorkThreadPool::sm_pWorkItemsCompletedSignal
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
@@ -152,7 +153,10 @@
  D ASN1_SEQUENCE_ANY_it
  D BIGNUM_it
  D CBIGNUM_it
+ D CMS_SharedInfo_it
  D DHparams_it
+ D DHvparams_it
+ D DHxparams_it
  D DSAPrivateKey_it
  D DSAPublicKey_it
  D DSA_SIG_it
@@ -164,6 +168,7 @@
  D LONG_it
  D RSAPrivateKey_it
  D RSAPublicKey_it
+ D RSA_OAEP_PARAMS_it
  D RSA_PSS_PARAMS_it
  D X509_ALGOR_it
  D X509_ATTRIBUTE_SET_it
@@ -179,6 +184,8 @@
  D cmac_pkey_meth
  D dh_asn1_meth
  D dh_pkey_meth
+ D dhx_asn1_meth
+ D dhx_pkey_meth
  D dsa_asn1_meths
  D dsa_pkey_meth
  D dsa_pub_internal_it
@@ -233,6 +240,7 @@
  D typeinfo for CStdMemAlloc
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
+ D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
  D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CUniformRandomStream
@@ -298,6 +306,7 @@
  D vtable for CStdMemAlloc
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
+ D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
  D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CUniformRandomStream
@@ -355,6 +364,7 @@
  R typeinfo name for CStdMemAlloc
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
+ R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
  R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CUniformRandomStream
@@ -413,15 +423,19 @@
  T ASN1_INTEGER_to_BN
  T ASN1_NULL_new
  T ASN1_OBJECT_free
+ T ASN1_OBJECT_new
  T ASN1_OCTET_STRING_dup
  T ASN1_OCTET_STRING_free
  T ASN1_OCTET_STRING_new
  T ASN1_OCTET_STRING_set
  T ASN1_STRING_clear_free
+ T ASN1_STRING_data
  T ASN1_STRING_dup
  T ASN1_STRING_free
+ T ASN1_STRING_length
  T ASN1_STRING_new
  T ASN1_STRING_set
+ T ASN1_STRING_set0
  T ASN1_STRING_type_new
  T ASN1_TYPE_free
  T ASN1_TYPE_get
@@ -550,6 +564,7 @@
  T BN_mod_mul_reciprocal
  T BN_mod_sqr
  T BN_mod_sqrt
+ T BN_mod_sub
  T BN_mod_sub_quick
  T BN_mod_word
  T BN_mul
@@ -558,6 +573,7 @@
  T BN_nnmod
  T BN_num_bits
  T BN_num_bits_word
+ T BN_print
  T BN_pseudo_rand
  T BN_pseudo_rand_range
  T BN_rand
@@ -580,6 +596,8 @@
  T BSetRegistryValueStr(ERegKeyRoot, char const*, char const*, char const*)
  T BSetRegistryValueUint(ERegKeyRoot, char const*, char const*, unsigned int)
  T BUF_MEM_grow_clean
+ T BUF_memdup
+ T BUF_reverse
  T BUF_strlcat
  T BUF_strlcpy
  T BWritingMiniDump
@@ -809,8 +827,14 @@
  T CMAC_Final
  T CMAC_Init
  T CMAC_Update
+ T CMS_RecipientInfo_get0_pkey_ctx
+ T CMS_RecipientInfo_kari_get0_alg
+ T CMS_RecipientInfo_kari_get0_ctx
+ T CMS_RecipientInfo_kari_get0_orig_id
  T CMS_RecipientInfo_ktri_get0_algs
+ T CMS_SharedInfo_encode
  T CMS_SignerInfo_get0_algs
+ T CMS_SignerInfo_get0_pkey_ctx
  T CMemoryPool::AddNewBlob()
  T CMemoryPool::Alloc(unsigned int)
  T CMemoryPool::CMemoryPool(int, int, int)
@@ -918,12 +942,23 @@
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
+ T CRYPTO_128_unwrap
+ T CRYPTO_128_wrap
  T CRYPTO_THREADID_cmp
  T CRYPTO_THREADID_cpy
  T CRYPTO_THREADID_current
  T CRYPTO_THREADID_hash
  T CRYPTO_add_lock
+ T CRYPTO_cbc128_decrypt
  T CRYPTO_cbc128_encrypt
+ T CRYPTO_ccm128_aad
+ T CRYPTO_ccm128_decrypt
+ T CRYPTO_ccm128_decrypt_ccm64
+ T CRYPTO_ccm128_encrypt
+ T CRYPTO_ccm128_encrypt_ccm64
+ T CRYPTO_ccm128_init
+ T CRYPTO_ccm128_setiv
+ T CRYPTO_ccm128_tag
  T CRYPTO_cfb128_1_encrypt
  T CRYPTO_cfb128_8_encrypt
  T CRYPTO_cfb128_encrypt
@@ -1130,6 +1165,11 @@
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
  T CTHash<CUDPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::~CTHash()
+ T CTHash<CWebSocketConnection*, unsigned int>::Purge()
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
+ T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
+ T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
  T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
  T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveAll()
  T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
@@ -1547,6 +1587,9 @@
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::GrowVector(int)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
@@ -1629,13 +1672,8 @@
  T Camellia_EncryptBlock
  T Camellia_EncryptBlock_Rounds
  T Camellia_cbc_encrypt
- T Camellia_cfb128_encrypt
- T Camellia_cfb1_encrypt
- T Camellia_cfb8_encrypt
  T Camellia_decrypt
- T Camellia_ecb_encrypt
  T Camellia_encrypt
- T Camellia_ofb128_encrypt
  T Camellia_set_key
  T CatchAndWriteContext_t::Invoke()
  T CatchAndWriteMiniDumpExForVoidPtrFn
@@ -1731,12 +1769,17 @@
  T DES_set_key_unchecked
  T DES_set_odd_parity
  T DES_xcbc_encrypt
+ T DH_KDF_X9_42
  T DH_OpenSSL
  T DH_check_pub_key
  T DH_compute_key
+ T DH_compute_key_padded
  T DH_free
  T DH_generate_key
  T DH_generate_parameters_ex
+ T DH_get_1024_160
+ T DH_get_2048_224
+ T DH_get_2048_256
  T DH_new
  T DH_new_method
  T DH_size
@@ -1745,6 +1788,7 @@
  T DSA_SIG_new
  T DSA_do_sign
  T DSA_do_verify
+ T DSA_dup_DH
  T DSA_free
  T DSA_generate_key
  T DSA_new
@@ -1760,6 +1804,7 @@
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DispatchOpenSSLErrors(char const*)
  T DoNewAssertDialog
+ T ECDH_KDF_X9_62
  T ECDH_OpenSSL
  T ECDH_compute_key
  T ECDSA_OpenSSL
@@ -1790,6 +1835,7 @@
  T EC_GROUP_get_curve_GFp
  T EC_GROUP_get_curve_name
  T EC_GROUP_get_degree
+ T EC_GROUP_get_mont_data
  T EC_GROUP_get_order
  T EC_GROUP_get_point_conversion_form
  T EC_GROUP_get_seed_len
@@ -1806,6 +1852,9 @@
  T EC_GROUP_set_generator
  T EC_GROUP_set_point_conversion_form
  T EC_GROUP_set_seed
+ T EC_KEY_clear_flags
+ T EC_KEY_copy
+ T EC_KEY_dup
  T EC_KEY_free
  T EC_KEY_generate_key
  T EC_KEY_get0_group
@@ -1813,12 +1862,15 @@
  T EC_KEY_get0_public_key
  T EC_KEY_get_conv_form
  T EC_KEY_get_enc_flags
+ T EC_KEY_get_flags
  T EC_KEY_get_key_method_data
  T EC_KEY_insert_key_method_data
  T EC_KEY_new
  T EC_KEY_set_enc_flags
+ T EC_KEY_set_flags
  T EC_KEY_set_group
  T EC_KEY_set_public_key
+ T EC_KEY_up_ref
  T EC_METHOD_get_field_type
  T EC_POINT_add
  T EC_POINT_clear_free
@@ -1845,6 +1897,8 @@
  T EC_POINT_set_compressed_coordinates_GFp
  T EC_POINT_set_to_infinity
  T EC_POINTs_make_affine
+ T EC_curve_nid2nist
+ T EC_curve_nist2nid
  T ERR_add_error_data
  T ERR_add_error_vdata
  T ERR_clear_error
@@ -1903,11 +1957,16 @@
  T EVP_CIPHER_CTX_iv_length
  T EVP_CIPHER_CTX_key_length
  T EVP_CIPHER_CTX_set_key_length
+ T EVP_CIPHER_asn1_to_param
+ T EVP_CIPHER_flags
  T EVP_CIPHER_get_asn1_iv
+ T EVP_CIPHER_param_to_asn1
  T EVP_CIPHER_set_asn1_iv
+ T EVP_CIPHER_type
  T EVP_Cipher
  T EVP_CipherInit_ex
  T EVP_Digest
+ T EVP_DigestFinal
  T EVP_DigestFinal_ex
  T EVP_DigestInit_ex
  T EVP_DigestUpdate
@@ -1928,6 +1987,7 @@
  T EVP_PKEY_CTX_ctrl
  T EVP_PKEY_CTX_dup
  T EVP_PKEY_CTX_free
+ T EVP_PKEY_CTX_get0_peerkey
  T EVP_PKEY_CTX_get0_pkey
  T EVP_PKEY_CTX_new
  T EVP_PKEY_asn1_find
@@ -1935,12 +1995,16 @@
  T EVP_PKEY_asn1_get0_info
  T EVP_PKEY_assign
  T EVP_PKEY_bits
+ T EVP_PKEY_cmp_parameters
  T EVP_PKEY_copy_parameters
+ T EVP_PKEY_derive_set_peer
  T EVP_PKEY_free
  T EVP_PKEY_get1_RSA
  T EVP_PKEY_get_default_digest_nid
  T EVP_PKEY_id
+ T EVP_PKEY_missing_parameters
  T EVP_PKEY_new
+ T EVP_PKEY_set1_EC_KEY
  T EVP_PKEY_set_type
  T EVP_PKEY_sign_init
  T EVP_PKEY_size
@@ -1949,6 +2013,8 @@
  T EVP_add_digest
  T EVP_aes_128_cbc
  T EVP_aes_128_cbc_hmac_sha1
+ T EVP_aes_128_cbc_hmac_sha256
+ T EVP_aes_128_ccm
  T EVP_aes_128_cfb1
  T EVP_aes_128_cfb128
  T EVP_aes_128_cfb8
@@ -1956,8 +2022,10 @@
  T EVP_aes_128_ecb
  T EVP_aes_128_gcm
  T EVP_aes_128_ofb
+ T EVP_aes_128_wrap
  T EVP_aes_128_xts
  T EVP_aes_192_cbc
+ T EVP_aes_192_ccm
  T EVP_aes_192_cfb1
  T EVP_aes_192_cfb128
  T EVP_aes_192_cfb8
@@ -1965,8 +2033,11 @@
  T EVP_aes_192_ecb
  T EVP_aes_192_gcm
  T EVP_aes_192_ofb
+ T EVP_aes_192_wrap
  T EVP_aes_256_cbc
  T EVP_aes_256_cbc_hmac_sha1
+ T EVP_aes_256_cbc_hmac_sha256
+ T EVP_aes_256_ccm
  T EVP_aes_256_cfb1
  T EVP_aes_256_cfb128
  T EVP_aes_256_cfb8
@@ -1974,6 +2045,7 @@
  T EVP_aes_256_ecb
  T EVP_aes_256_gcm
  T EVP_aes_256_ofb
+ T EVP_aes_256_wrap
  T EVP_aes_256_xts
  T EVP_bf_cbc
  T EVP_bf_cfb64
@@ -2010,6 +2082,7 @@
  T EVP_des_ede3_cfb64
  T EVP_des_ede3_cfb8
  T EVP_des_ede3_ofb
+ T EVP_des_ede3_wrap
  T EVP_des_ede_cbc
  T EVP_des_ede_cfb64
  T EVP_des_ede_ofb
@@ -2070,7 +2143,7 @@
  T KeyValues::CreateKey(char const*)
  T KeyValues::CreatePeerKey(char const*)
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FreeBuffers()
  T KeyValues::GetFirstSubKey() const
  T KeyValues::GetName() const
@@ -2119,6 +2192,8 @@
  T OBJ_bsearch_
  T OBJ_bsearch_ex_
  T OBJ_cleanup
+ T OBJ_dup
+ T OBJ_find_sigid_algs
  T OBJ_find_sigid_by_algs
  T OBJ_ln2nid
  T OBJ_nid2ln
@@ -2135,6 +2210,7 @@
  T OPENSSL_far_spin
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
+ T OPENSSL_ia32_rdseed
  T OPENSSL_indirect_call
  T OPENSSL_init
  T OPENSSL_instrument_halt
@@ -2191,6 +2267,8 @@
  T RC4
  T RC4_options
  T RC4_set_key
+ T RSA_OAEP_PARAMS_free
+ T RSA_OAEP_PARAMS_new
  T RSA_PKCS1_SSLeay
  T RSA_PSS_PARAMS_free
  T RSA_PSS_PARAMS_new
@@ -2200,6 +2278,7 @@
  T RSA_new
  T RSA_new_method
  T RSA_padding_add_PKCS1_OAEP
+ T RSA_padding_add_PKCS1_OAEP_mgf1
  T RSA_padding_add_PKCS1_PSS_mgf1
  T RSA_padding_add_PKCS1_type_1
  T RSA_padding_add_PKCS1_type_2
@@ -2207,6 +2286,7 @@
  T RSA_padding_add_X931
  T RSA_padding_add_none
  T RSA_padding_check_PKCS1_OAEP
+ T RSA_padding_check_PKCS1_OAEP_mgf1
  T RSA_padding_check_PKCS1_type_1
  T RSA_padding_check_PKCS1_type_2
  T RSA_padding_check_SSLv23
@@ -2225,6 +2305,7 @@
  T RSA_verify_PKCS1_PSS_mgf1
  T RealGetCallStack
  T RealPrintCallStack
+ T SHA1
  T SHA1_Final
  T SHA1_Init
  T SHA1_Update
@@ -2512,6 +2593,7 @@
  T d2i_ASN1_SEQUENCE_ANY
  T d2i_ASN1_UINTEGER
  T d2i_DHparams
+ T d2i_DHxparams
  T d2i_DSAPrivateKey
  T d2i_DSA_SIG
  T d2i_DSAparams
@@ -2521,11 +2603,13 @@
  T d2i_ECPrivateKey
  T d2i_RSAPrivateKey
  T d2i_RSAPublicKey
+ T d2i_RSA_OAEP_PARAMS
  T d2i_RSA_PSS_PARAMS
  T d2i_RSA_PUBKEY
  T d2i_X509_ALGOR
  T d2i_X509_SIG
  T dsa_builtin_paramgen
+ T dsa_builtin_paramgen2
  T ec_GF2m_have_precompute_mult
  T ec_GF2m_precompute_mult
  T ec_GF2m_simple_add
@@ -2596,6 +2680,7 @@
  T ec_GFp_simple_points_make_affine
  T ec_GFp_simple_set_Jprojective_coordinates_GFp
  T ec_GFp_simple_set_compressed_coordinates
+ T ec_precompute_mont_data
  T ec_wNAF_have_precompute_mult
  T ec_wNAF_mul
  T ec_wNAF_precompute_mult
@@ -2616,6 +2701,7 @@
  T i2d_ASN1_INTEGER
  T i2d_ASN1_OCTET_STRING
  T i2d_DHparams
+ T i2d_DHxparams
  T i2d_DSAPrivateKey
  T i2d_DSAPublicKey
  T i2d_DSAparams
@@ -2625,6 +2711,7 @@
  T i2d_ECPrivateKey
  T i2d_RSAPrivateKey
  T i2d_RSAPublicKey
+ T i2d_X509_ALGOR
  T i2d_X509_SIG
  T i2o_ECPublicKey
  T int_rsa_verify
@@ -2882,6 +2969,7 @@
  b PosixRegistryManager()::s_PosixRegMgr
  b PosixRegistryManager()::s_bGetEUniverse
  b PosixRegistryManager()::s_pfnGetEUniverse
+ b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
  b SteamStdLib::CCommandLine::CheckParm(int, char const**) const::sz
@@ -3036,6 +3124,7 @@
  d BN_str_reasons
  d BN_value_one.const_one
  d BUF_str_functs
+ d CMS_SharedInfo_seq_tt
  d CMS_str_functs
  d CMS_str_reasons
  d CONF_str_functs
@@ -3043,10 +3132,21 @@
  d CRYPTO_str_functs
  d CRYPTO_str_reasons
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
+ d DH_get_1024_160._bignum_dh1024_160_g
+ d DH_get_1024_160._bignum_dh1024_160_p
+ d DH_get_1024_160._bignum_dh1024_160_q
+ d DH_get_2048_224._bignum_dh2048_224_g
+ d DH_get_2048_224._bignum_dh2048_224_p
+ d DH_get_2048_224._bignum_dh2048_224_q
+ d DH_get_2048_256._bignum_dh2048_256_g
+ d DH_get_2048_256._bignum_dh2048_256_p
+ d DH_get_2048_256._bignum_dh2048_256_q
  d DH_str_functs
  d DH_str_reasons
  d DHparams_aux
  d DHparams_seq_tt
+ d DHvparams_seq_tt
+ d DHxparams_seq_tt
  d DSAPrivateKey_aux
  d DSAPrivateKey_seq_tt
  d DSAPublicKey_aux
@@ -3096,6 +3196,7 @@
  d RSAPrivateKey_seq_tt
  d RSAPublicKey_aux
  d RSAPublicKey_seq_tt
+ d RSA_OAEP_PARAMS_seq_tt
  d RSA_PSS_PARAMS_seq_tt
  d RSA_str_functs
  d RSA_str_reasons
@@ -3125,6 +3226,7 @@
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
  d aes_128_cbc
+ d aes_128_ccm
  d aes_128_cfb
  d aes_128_cfb1
  d aes_128_cfb8
@@ -3132,8 +3234,10 @@
  d aes_128_ecb
  d aes_128_gcm
  d aes_128_ofb
+ d aes_128_wrap
  d aes_128_xts
  d aes_192_cbc
+ d aes_192_ccm
  d aes_192_cfb
  d aes_192_cfb1
  d aes_192_cfb8
@@ -3141,7 +3245,9 @@
  d aes_192_ecb
  d aes_192_gcm
  d aes_192_ofb
+ d aes_192_wrap
  d aes_256_cbc
+ d aes_256_ccm
  d aes_256_cfb
  d aes_256_cfb1
  d aes_256_cfb8
@@ -3149,8 +3255,10 @@
  d aes_256_ecb
  d aes_256_gcm
  d aes_256_ofb
+ d aes_256_wrap
  d aes_256_xts
  d aesni_128_cbc
+ d aesni_128_ccm
  d aesni_128_cfb
  d aesni_128_cfb1
  d aesni_128_cfb8
@@ -3160,6 +3268,7 @@
  d aesni_128_ofb
  d aesni_128_xts
  d aesni_192_cbc
+ d aesni_192_ccm
  d aesni_192_cfb
  d aesni_192_cfb1
  d aesni_192_cfb8
@@ -3168,6 +3277,7 @@
  d aesni_192_gcm
  d aesni_192_ofb
  d aesni_256_cbc
+ d aesni_256_ccm
  d aesni_256_cfb
  d aesni_256_cfb1
  d aesni_256_cfb8
@@ -3182,26 +3292,27 @@
  d bf_ofb
  d bignum_pf
  d camellia_128_cbc
+ d camellia_128_cfb
  d camellia_128_cfb1
- d camellia_128_cfb128
  d camellia_128_cfb8
  d camellia_128_ecb
  d camellia_128_ofb
  d camellia_192_cbc
+ d camellia_192_cfb
  d camellia_192_cfb1
- d camellia_192_cfb128
  d camellia_192_cfb8
  d camellia_192_ecb
  d camellia_192_ofb
  d camellia_256_cbc
+ d camellia_256_cfb
  d camellia_256_cfb1
- d camellia_256_cfb128
  d camellia_256_cfb8
  d camellia_256_ecb
  d camellia_256_ofb
  d char_two_def_tt
  d curve_list
  d d_xcbc_cipher
+ d des3_wrap
  d des_cbc
  d des_cfb1
  d des_cfb64
@@ -3219,6 +3330,7 @@
  d des_ede_ofb
  d des_ofb
  d dh_ossl
+ d dh_sharedinfo_encode.ctr
  d dsa_md
  d dsa_pub_internal_seq_tt
  d dss1_md
@@ -3238,6 +3350,7 @@
  d malloc_locked_func
  d md5_md
  d nid_objs
+ d nist_curves
  d openssl_dsa_meth
  d openssl_ecdh_meth
  d openssl_ecdsa_meth
@@ -3277,7 +3390,6 @@
  free
  fseeko
  fstat$INODE64
- fwrite
  fwrite$UNIX2003
  getcwd
  getenv
@@ -3353,6 +3465,7 @@
  r BN_num_bits_word.bits
  r BN_value_one.data_one
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
+ r Hex
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
  r _EC_IPSEC_155_ID3
@@ -3415,8 +3528,33 @@
  r _EC_X9_62_PRIME_239V2
  r _EC_X9_62_PRIME_239V3
  r _EC_X9_62_PRIME_256V1
+ r _EC_brainpoolP160r1
+ r _EC_brainpoolP160t1
+ r _EC_brainpoolP192r1
+ r _EC_brainpoolP192t1
+ r _EC_brainpoolP224r1
+ r _EC_brainpoolP224t1
+ r _EC_brainpoolP256r1
+ r _EC_brainpoolP256t1
+ r _EC_brainpoolP320r1
+ r _EC_brainpoolP320t1
+ r _EC_brainpoolP384r1
+ r _EC_brainpoolP384t1
+ r _EC_brainpoolP512r1
+ r _EC_brainpoolP512t1
  r bf_init
+ r default_iv
  r des_skb
+ r dh1024_160_g
+ r dh1024_160_p
+ r dh1024_160_q
+ r dh2048_224_g
+ r dh2048_224_p
+ r dh2048_224_q
+ r dh2048_256_g
+ r dh2048_256_p
+ r dh2048_256_q
+ r dsa_builtin_paramgen2.ggen
  r ln_objs
  r lvalues
  r obj_objs
@@ -3542,13 +3680,91 @@
  t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned int*)
  t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
  t WriteMiniDumpThread(void*)
+ t _GLOBAL__sub_I_SteamServiceClient.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_completionportmanager.cpp
+ t _GLOBAL__sub_I_completionportmanager_posix.cpp
+ t _GLOBAL__sub_I_constants.cpp
+ t _GLOBAL__sub_I_cookiecontainer.cpp
+ t _GLOBAL__sub_I_coroutine.cpp
+ t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
+ t _GLOBAL__sub_I_enum_names.cpp
+ t _GLOBAL__sub_I_etwwin32.cpp
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_fasttimer.cpp
+ t _GLOBAL__sub_I_framefunction.cpp
+ t _GLOBAL__sub_I_globals.cpp
+ t _GLOBAL__sub_I_http.cpp
+ t _GLOBAL__sub_I_httpclient.cpp
+ t _GLOBAL__sub_I_httpclientmgr.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_interfacemap.cpp
+ t _GLOBAL__sub_I_ipcserver.cpp
+ t _GLOBAL__sub_I_job.cpp
+ t _GLOBAL__sub_I_jobmgr.cpp
+ t _GLOBAL__sub_I_keyvaluesignature.cpp
+ t _GLOBAL__sub_I_logger.cpp
+ t _GLOBAL__sub_I_minidump.cpp
+ t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_net.cpp
+ t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netconnection.cpp
+ t _GLOBAL__sub_I_netfilter.cpp
+ t _GLOBAL__sub_I_nethost.cpp
+ t _GLOBAL__sub_I_netpacket.cpp
+ t _GLOBAL__sub_I_opensslconnection.cpp
+ t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_pipes.cpp
+ t _GLOBAL__sub_I_platform_sockets_posix.cpp
+ t _GLOBAL__sub_I_platformtime.cpp
+ t _GLOBAL__sub_I_processpipe_posix.cpp
+ t _GLOBAL__sub_I_random.cpp
+ t _GLOBAL__sub_I_registry.cpp
+ t _GLOBAL__sub_I_reliabletimer.cpp
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_scheduledfunction.cpp
+ t _GLOBAL__sub_I_scheduler.cpp
+ t _GLOBAL__sub_I_serviceengine.cpp
+ t _GLOBAL__sub_I_servicemodulemanager_osx.cpp
+ t _GLOBAL__sub_I_servicemodulemanagerasync.cpp
+ t _GLOBAL__sub_I_servicemodulemanagerbase.cpp
+ t _GLOBAL__sub_I_serviceprocessmonitor.cpp
+ t _GLOBAL__sub_I_serviceregistry.cpp
+ t _GLOBAL__sub_I_serviceutils_osx.cpp
+ t _GLOBAL__sub_I_singleprocesspipe_any.cpp
+ t _GLOBAL__sub_I_stat.cpp
+ t _GLOBAL__sub_I_stdafx.cpp
+ t _GLOBAL__sub_I_steamid.cpp
+ t _GLOBAL__sub_I_steammessages_base.pb.cc
+ t _GLOBAL__sub_I_stime.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_tcpconnection.cpp
+ t _GLOBAL__sub_I_tcphost.cpp
+ t _GLOBAL__sub_I_testthread.cpp
+ t _GLOBAL__sub_I_threadtools.cpp
+ t _GLOBAL__sub_I_udpconnection.cpp
+ t _GLOBAL__sub_I_udphost.cpp
+ t _GLOBAL__sub_I_udpsocket.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_valveelfsignature.cpp
+ t _GLOBAL__sub_I_valvemachosignature.cpp
+ t _GLOBAL__sub_I_valvepesignature.cpp
+ t _GLOBAL__sub_I_valvesignature.cpp
+ t _GLOBAL__sub_I_vprof.cpp
+ t _GLOBAL__sub_I_websocket.cpp
+ t _GLOBAL__sub_I_workthreadpool.cpp
+ t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
+ t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6
+ t _aesni_encrypt2
  t _aesni_encrypt3
  t _aesni_encrypt4
  t _aesni_encrypt6
@@ -3556,6 +3772,8 @@
  t _dopr
  t _mul_1x1_ialu
  t _mul_1x1_mmx
+ t _sha1_block_data_order_avx
+ t _sha1_block_data_order_shaext
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact
@@ -3577,6 +3795,9 @@
  t _x86_DES_decrypt
  t _x86_DES_encrypt
  t aes_cbc_cipher
+ t aes_ccm_cipher
+ t aes_ccm_ctrl
+ t aes_ccm_init_key
  t aes_cfb1_cipher
  t aes_cfb8_cipher
  t aes_cfb_cipher
@@ -3588,10 +3809,13 @@
  t aes_gcm_init_key
  t aes_init_key
  t aes_ofb_cipher
+ t aes_wrap_cipher
+ t aes_wrap_init_key
  t aes_xts_cipher
  t aes_xts_ctrl
  t aes_xts_init_key
  t aesni_cbc_cipher
+ t aesni_ccm_init_key
  t aesni_ecb_cipher
  t aesni_gcm_init_key
  t aesni_init_key
@@ -3619,27 +3843,16 @@
  t bn_free
  t bn_i2c
  t bn_new
+ t bn_print
  t bn_rand_range
  t bnrand
- t camellia_128_cbc_cipher
- t camellia_128_cfb128_cipher
- t camellia_128_cfb1_cipher
- t camellia_128_cfb8_cipher
- t camellia_128_ecb_cipher
- t camellia_128_ofb_cipher
- t camellia_192_cbc_cipher
- t camellia_192_cfb128_cipher
- t camellia_192_cfb1_cipher
- t camellia_192_cfb8_cipher
- t camellia_192_ecb_cipher
- t camellia_192_ofb_cipher
- t camellia_256_cbc_cipher
- t camellia_256_cfb128_cipher
- t camellia_256_cfb1_cipher
- t camellia_256_cfb8_cipher
- t camellia_256_ecb_cipher
- t camellia_256_ofb_cipher
+ t camellia_cbc_cipher
+ t camellia_cfb1_cipher
+ t camellia_cfb8_cipher
+ t camellia_cfb_cipher
+ t camellia_ecb_cipher
  t camellia_init_key
+ t camellia_ofb_cipher
  t cleanup1_LHASH_DOALL
  t cleanup2_LHASH_DOALL
  t cleanup3_LHASH_DOALL
@@ -3666,6 +3879,7 @@
  t des_ede3_cfb1_cipher
  t des_ede3_cfb8_cipher
  t des_ede3_init_key
+ t des_ede3_wrap_cipher
  t des_ede_cbc_cipher
  t des_ede_cfb64_cipher
  t des_ede_ecb_cipher
@@ -3686,6 +3900,7 @@
  t dh_param_decode
  t dh_param_encode
  t dh_param_print
+ t dh_pkey_ctrl
  t dh_priv_decode
  t dh_priv_encode
  t dh_private_print
@@ -3779,6 +3994,7 @@
  t int_cleanup
  t int_ctx_new
  t int_dh_free
+ t int_dh_param_copy
  t int_dh_size
  t int_dsa_free
  t int_dsa_size
@@ -3849,6 +4065,7 @@
  t pkey_ec_ctrl_str
  t pkey_ec_derive
  t pkey_ec_init
+ t pkey_ec_kdf_derive
  t pkey_ec_keygen
  t pkey_ec_paramgen
  t pkey_ec_sign
@@ -3879,14 +4096,17 @@
  t rc4_init_key
  t rsa_bits
  t rsa_cb
+ t rsa_ctx_to_pss
  t rsa_get_blinding
  t rsa_item_sign
  t rsa_item_verify
+ t rsa_md_to_mgf1
+ t rsa_mgf1_to_md
  t rsa_pkey_ctrl
  t rsa_priv_decode
  t rsa_priv_encode
  t rsa_priv_print
- t rsa_pss_decode
+ t rsa_pss_to_ctx
  t rsa_pub_cmp
  t rsa_pub_decode
  t rsa_pub_encode
@@ -3895,6 +4115,7 @@
  t sha_block_data_order
  t sid_free
  t sig_cb
+ t sig_cmp_BSEARCH_CMP_FN
  t sigx_cmp_BSEARCH_CMP_FN
  t ssleay_rand_add
  t ssleay_rand_cleanup

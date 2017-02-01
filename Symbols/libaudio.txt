@@ -437,6 +437,7 @@
  T CIAudioSinkListNull::DetermineBestDefaultDevice()
  T CIAudioSinkListNull::GetActiveCodecPassthruForSink(int, bool*, bool*, bool*)
  T CIAudioSinkListNull::GetActiveSink() const
+ T CIAudioSinkListNull::GetActiveSinkVolume(int)
  T CIAudioSinkListNull::GetActiveVoiceSink() const
  T CIAudioSinkListNull::GetSink(int) const
  T CIAudioSinkListNull::GetSinkActivePort(int) const
@@ -798,6 +799,13 @@
  t MilesIO_Read(unsigned long long, void*, unsigned int)
  t MilesIO_Seek(unsigned int, int, unsigned int)
  t MilesIO_Seek(unsigned long long, int, unsigned int)
+ t _GLOBAL__sub_I_audiocontroller.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_milesaudiodevice.cpp
+ t _GLOBAL__sub_I_milesaudiosound.cpp
+ t _GLOBAL__sub_I_mileswrapper.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
  unlink
  vasprintf
  vsnprintf

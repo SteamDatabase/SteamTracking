@@ -1,0 +1,473 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"title"		"clientui"
+	"description"		"Your modified configuration for this game."
+	"creator"		"76561197960265733"
+	"controller_type"		"controller_steamcontroller_gordon"
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press E"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press R"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press F"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press W"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press S"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press D"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press A"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press UP_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DOWN_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT, Right Mouse"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, Left Mouse"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
+	"group"
+	{
+		"id"		"7"
+		"mode"		"mouse_region"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"output_joystick"		"3"
+		}
+	}
+	"group"
+	{
+		"id"		"8"
+		"mode"		"scrollwheel"
+		"inputs"
+		{
+			"scroll_clockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+			"scroll_counterclockwise"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_DOWN"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"scroll_type"		"2"
+		}
+	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press ESCAPE, Menu"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press TAB, Tab"
+						}
+					}
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_DOWN, Mouse Scroll Down"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP, Mouse Scroll Up"
+						}
+					}
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button MIDDLE, Middle Mouse"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_CONTROL, Left Control"
+						}
+					}
+				}
+			}
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"6"		"switch active"
+			"0"		"button_diamond active"
+			"1"		"joystick active"
+			"2"		"left_trackpad inactive"
+			"8"		"left_trackpad active"
+			"3"		"right_trackpad inactive"
+			"7"		"right_trackpad active"
+			"4"		"left_trigger active"
+			"5"		"right_trigger active"
+		}
+	}
+	"settings"
+	{
+		"left_trackpad_mode"		"0"
+		"right_trackpad_mode"		"0"
+	}
+}

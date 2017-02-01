@@ -68,14 +68,12 @@
  B g_OpenGLRenderer
  B g_bIgnoreChildProcesses
  B g_bOverlayEnabled
- B g_bVRModeActive
  B g_iNotificationHorizontalInset
  B g_iNotificationVerticalInset
  B g_lifetime
  B g_loggingMutexCreated
  B g_machClient
  B g_nGameID
- B g_pCurrentVRHmd
  B g_pGameExitingEvent
  B g_pInGameRenderingEvent
  B g_pInputStreamOutOfGame
@@ -400,13 +398,10 @@
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::PurgeCurrentProcess()
- T IPC::crc32(unsigned int, void*, unsigned int)
  T InitializeGameStream()
  T InvalidateNSViewCursorRects()
  T IsOverlayEnabled
  T Log(char const*, ...)
- T NotifyVRCleanup
- T NotifyVRInit
  T Plat_FloatTime
  T Plat_MSTime
  T Plat_RelativeTickFrequency
@@ -451,7 +446,6 @@
  T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedCompareExchange
- T UpdateVRState(int, int)
  T ValveHookScreenshots
  T __clang_call_terminate
  T __cxa_allocate_exception
@@ -705,7 +699,7 @@
  pthread_mutexattr_settype
  pthread_self
  pthread_setspecific
- r IPC::gTable
+ r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  realloc
  rename
  sem_close
@@ -736,8 +730,15 @@
  t -[NSView(OverrideNSView) hooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
  t ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)
+ t IPC::crc32(unsigned int, void const*, unsigned long)
  t Init()
  t InitTicks()
+ t _GLOBAL__sub_I_glinterface.cpp
+ t _GLOBAL__sub_I_input_osx.cpp
+ t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_main.cpp
+ t _GLOBAL__sub_I_platformtime.cpp
+ t _GLOBAL__sub_I_threadtools.cpp
  t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0

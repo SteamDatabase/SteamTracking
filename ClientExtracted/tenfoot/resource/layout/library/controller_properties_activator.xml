@@ -79,6 +79,7 @@
 				<Panel class="FieldWrapper" activators="softpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SoftPressThreshold" />
 					<Slider id="SoftPress_Threshold" direction="horizontal" />
+					<Slider id="Pressure_Visualization" direction="horizontal" />
 				</Panel>
 		
 			</Panel>

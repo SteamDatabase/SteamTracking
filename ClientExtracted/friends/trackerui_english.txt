@@ -377,6 +377,7 @@
 "Friends_WhenFriendJoinsGame"			"When any Friend joins a game"
 "Friends_WhenFriendComesOnline"		"When any Friend comes online"
 "Friends_WhenReceiveMessage"			"When I receive a message"
+"Friends_WhenGroupEventsOrAnnouncementsHappen"	"For Group events and announcements"
 "Friends_DisplayNotification"			"Display a notification"
 "Friends_PlayASound"					"Play a sound"
 "Friends_FlashWindow"			"Flash window when I receive a message"

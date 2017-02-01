@@ -1,9 +1,12 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
+ .objc_class_name_NSColorSpace
+ .objc_class_name_NSLocale
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
+ .objc_class_name_NSWindow
  .objc_class_name_NSWorkspace
  AXAPIEnabled
  AssertMsgImplementation
@@ -5322,6 +5325,7 @@
  T CHostOfflineMode::IsOfflineMode()
  T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
  T CIPCToolMachClient::DoKillCommand(char const*)
+ T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
  T CIPCToolMachClient::~CIPCToolMachClient()
  T CIngameFPSBanner::CIngameFPSBanner(vgui::Panel*)
@@ -8186,6 +8190,7 @@
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetFloat()
  T CUtlBuffer::GetInt()
+ T CUtlBuffer::GetInt64()
  T CUtlBuffer::GetOverflow(int)
  T CUtlBuffer::GetString(char*, int)
  T CUtlBuffer::GetStringFast()
@@ -8201,6 +8206,7 @@
  T CUtlBuffer::PutDouble(double)
  T CUtlBuffer::PutFloat(float)
  T CUtlBuffer::PutInt(int)
+ T CUtlBuffer::PutInt64(long long)
  T CUtlBuffer::PutOverflow(int)
  T CUtlBuffer::PutString(char const*)
  T CUtlBuffer::PutUint8(unsigned char)
@@ -9319,7 +9325,6 @@
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::WaitMultiple(unsigned int, unsigned int, IPC::ISyncObject*, ...)
- T IPC::crc32(unsigned int, void*, unsigned int)
  T InitializeSpewConfig()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
@@ -9338,7 +9343,7 @@
  T KeyValues::CreatePeerKey(char const*)
  T KeyValues::Dump(bool, bool) const
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FindKey(unsigned int) const
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
@@ -9487,6 +9492,7 @@
  T OPENSSL_far_spin
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
+ T OPENSSL_ia32_rdseed
  T OPENSSL_indirect_call
  T OPENSSL_instrument_halt
  T OPENSSL_rdtsc
@@ -9658,6 +9664,7 @@
  T gcm_init_clmul
  T init_JSON_config
  T int RoundToIntegerType<int>(double, ERoundingMethod)
+ T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T jcopy_block_row
  T jcopy_sample_rows
@@ -11103,7 +11110,7 @@
  T vgui::HTMLPopup::GetMessageMap()
  T vgui::HTMLPopup::GetPanelClassName()
  T vgui::HTMLPopup::GetPanelTopClassName() const
- T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
+ T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, unsigned int)
  T vgui::HTMLPopup::KB_ChainToMap()
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
@@ -14003,6 +14010,7 @@
  fopen$UNIX2003
  fprintf
  fputc
+ fputs$UNIX2003
  fread
  free
  fseeko
@@ -14087,7 +14095,7 @@
  qsort
  r .memset_pattern
  r .memset_pattern1
- r IPC::gTable
+ r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
  r ascii_class
  r autoposstab
@@ -14256,6 +14264,7 @@
  r verbs
  remove
  rename
+ rindex
  scandir$INODE64
  sched_yield
  sem_close
@@ -14434,6 +14443,7 @@
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
+ t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)
@@ -14454,20 +14464,152 @@
  t PNGWarningFunction(png_struct_def*, char const*)
  t SimplifyNode(ExprNode*&)
  t SuppressNotificationsForVideoCallback(unsigned int)
+ t _GLOBAL__sub_I_AnimatingImagePanel.cpp
+ t _GLOBAL__sub_I_AnimationController.cpp
+ t _GLOBAL__sub_I_BasePanel.cpp
+ t _GLOBAL__sub_I_BitmapImagePanel.cpp
+ t _GLOBAL__sub_I_BuildFactoryHelper.cpp
+ t _GLOBAL__sub_I_BuildGroup.cpp
+ t _GLOBAL__sub_I_Button.cpp
+ t _GLOBAL__sub_I_CheckButton.cpp
+ t _GLOBAL__sub_I_CheckButtonList.cpp
+ t _GLOBAL__sub_I_ComboBox.cpp
+ t _GLOBAL__sub_I_DirectorySelectDialog.cpp
+ t _GLOBAL__sub_I_Divider.cpp
+ t _GLOBAL__sub_I_EditablePanel.cpp
+ t _GLOBAL__sub_I_FileOpenDialog.cpp
+ t _GLOBAL__sub_I_FocusNavGroup.cpp
+ t _GLOBAL__sub_I_Frame.cpp
+ t _GLOBAL__sub_I_FriendsImageManager.cpp
+ t _GLOBAL__sub_I_GraphPanel.cpp
+ t _GLOBAL__sub_I_HTML.cpp
+ t _GLOBAL__sub_I_HTML_js.cpp
+ t _GLOBAL__sub_I_HotKeyEntry.cpp
+ t _GLOBAL__sub_I_Image.cpp
+ t _GLOBAL__sub_I_ImageList.cpp
+ t _GLOBAL__sub_I_ImagePanel.cpp
+ t _GLOBAL__sub_I_InputDialog.cpp
+ t _GLOBAL__sub_I_Label.cpp
+ t _GLOBAL__sub_I_ListPanel.cpp
+ t _GLOBAL__sub_I_ListPanelShared.cpp
+ t _GLOBAL__sub_I_ListViewPanel.cpp
+ t _GLOBAL__sub_I_Menu.cpp
+ t _GLOBAL__sub_I_MenuBar.cpp
+ t _GLOBAL__sub_I_MenuButton.cpp
+ t _GLOBAL__sub_I_MenuItem.cpp
+ t _GLOBAL__sub_I_MessageBox.cpp
+ t _GLOBAL__sub_I_OverlaySettingsDialog.cpp
+ t _GLOBAL__sub_I_OverlayWebBrowser.cpp
+ t _GLOBAL__sub_I_Panel.cpp
+ t _GLOBAL__sub_I_ProgressBar.cpp
+ t _GLOBAL__sub_I_PropertyDialog.cpp
+ t _GLOBAL__sub_I_PropertyPage.cpp
+ t _GLOBAL__sub_I_PropertySheet.cpp
+ t _GLOBAL__sub_I_QueryBox.cpp
+ t _GLOBAL__sub_I_RadioButton.cpp
+ t _GLOBAL__sub_I_RichText.cpp
+ t _GLOBAL__sub_I_RunGameEngine.cpp
+ t _GLOBAL__sub_I_ScrollBar.cpp
+ t _GLOBAL__sub_I_ScrollBarSlider.cpp
+ t _GLOBAL__sub_I_SerializedInput.cpp
+ t _GLOBAL__sub_I_SettingsSubFriends.cpp
+ t _GLOBAL__sub_I_SettingsSubInGame.cpp
+ t _GLOBAL__sub_I_SettingsSubVoice.cpp
+ t _GLOBAL__sub_I_Slider.cpp
+ t _GLOBAL__sub_I_TextEntry.cpp
+ t _GLOBAL__sub_I_TextImage.cpp
+ t _GLOBAL__sub_I_ToggleButton.cpp
+ t _GLOBAL__sub_I_ToolWindow.cpp
+ t _GLOBAL__sub_I_Tooltip.cpp
+ t _GLOBAL__sub_I_TreeView.cpp
+ t _GLOBAL__sub_I_TreeViewListControl.cpp
+ t _GLOBAL__sub_I_URLLabel.cpp
+ t _GLOBAL__sub_I_amount.cpp
+ t _GLOBAL__sub_I_approotpanel.cpp
+ t _GLOBAL__sub_I_broadcast_firsttime.cpp
+ t _GLOBAL__sub_I_broadcastlivebanner.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_client_api.cpp
+ t _GLOBAL__sub_I_constants.cpp
+ t _GLOBAL__sub_I_controls.cpp
+ t _GLOBAL__sub_I_crypto.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
+ t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_globals.cpp
+ t _GLOBAL__sub_I_htmlmessages.pb.cc
+ t _GLOBAL__sub_I_htmlpopup.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_itemimagemanager.cpp
+ t _GLOBAL__sub_I_jpegloader.cpp
+ t _GLOBAL__sub_I_language.cpp
+ t _GLOBAL__sub_I_logfile.cpp
+ t _GLOBAL__sub_I_logger.cpp
+ t _GLOBAL__sub_I_main.cpp
+ t _GLOBAL__sub_I_main_serialized.cpp
+ t _GLOBAL__sub_I_microtxnauthdialog.cpp
+ t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_musichelper.cpp
+ t _GLOBAL__sub_I_musiclibrarypanel.cpp
+ t _GLOBAL__sub_I_musicpage_details_album.cpp
+ t _GLOBAL__sub_I_musicpage_details_content.cpp
+ t _GLOBAL__sub_I_musicpage_details_playlist.cpp
+ t _GLOBAL__sub_I_musicplayerpanel.cpp
+ t _GLOBAL__sub_I_musicplayervolumepanel.cpp
+ t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_overlayachievements.cpp
+ t _GLOBAL__sub_I_overlaybroadcastpanel.cpp
+ t _GLOBAL__sub_I_overlaycommunitydiscussionspanel.cpp
+ t _GLOBAL__sub_I_overlaycommunityhubpanel.cpp
+ t _GLOBAL__sub_I_overlayfriends.cpp
+ t _GLOBAL__sub_I_overlayguidespanel.cpp
+ t _GLOBAL__sub_I_overlaynews.cpp
+ t _GLOBAL__sub_I_overlayscreenshotspanel.cpp
+ t _GLOBAL__sub_I_overlayvrstate.cpp
+ t _GLOBAL__sub_I_parentalcache.cpp
+ t _GLOBAL__sub_I_parentalinterpreter.cpp
  t _GLOBAL__sub_I_pcrecpp.cc
+ t _GLOBAL__sub_I_pngloader.cpp
+ t _GLOBAL__sub_I_processinput_osx.cpp
+ t _GLOBAL__sub_I_refreshlogindialog.cpp
+ t _GLOBAL__sub_I_reliabletimer.cpp
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_screenshotmanager.cpp
+ t _GLOBAL__sub_I_screenshotthread.cpp
+ t _GLOBAL__sub_I_settingssubbroadcast.cpp
+ t _GLOBAL__sub_I_settingssubbrowser.cpp
+ t _GLOBAL__sub_I_settingssubmusic.cpp
+ t _GLOBAL__sub_I_stdafx.cpp
+ t _GLOBAL__sub_I_steamauthedhtml.cpp
+ t _GLOBAL__sub_I_steamid.cpp
+ t _GLOBAL__sub_I_stime.cpp
+ t _GLOBAL__sub_I_storejavascript.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_tgaloader.cpp
+ t _GLOBAL__sub_I_tradedialog.cpp
+ t _GLOBAL__sub_I_typingjump.cpp
+ t _GLOBAL__sub_I_urlhelper.cpp
+ t _GLOBAL__sub_I_urlmanager.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_vgui_controls.cpp
+ t _GLOBAL__sub_I_wrappanel.cpp
  t __cxx_global_array_dtor
+ t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4
  t _aesni_decrypt6
+ t _aesni_encrypt2
  t _aesni_encrypt3
  t _aesni_encrypt4
  t _aesni_encrypt6
  t _aesni_set_encrypt_key
  t _mul_1x1_ialu
  t _mul_1x1_mmx
+ t _sha1_block_data_order_avx
+ t _sha1_block_data_order_shaext
  t _sha1_block_data_order_ssse3
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact
