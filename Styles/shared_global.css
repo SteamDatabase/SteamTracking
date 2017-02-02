@@ -540,10 +540,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	.friendPlayerLevel.lvl_700, .friendPlayerLevel.lvl_800,
 	.friendPlayerLevel.lvl_900, .friendPlayerLevel.lvl_1000,
 	.friendPlayerLevel.lvl_1100, .friendPlayerLevel.lvl_1200,
-	.friendPlayerLevel.lvl_1300, .friendPlayerLevel.lvl_1400,
-	.friendPlayerLevel.lvl_1500, .friendPlayerLevel.lvl_1600,
-	.friendPlayerLevel.lvl_1700, .friendPlayerLevel.lvl_1800,
-	.friendPlayerLevel.lvl_1900, .friendPlayerLevel.lvl_2000
+	.friendPlayerLevel.lvl_1300, .friendPlayerLevel.lvl_1400
 {
 	border: none;
 	border-radius: 0;
@@ -624,31 +621,6 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 .friendPlayerLevel.lvl_1400 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png' );
-	text-shadow: 1px 1px #1a1a1a;
-}
-
-.friendPlayerLevel.lvl_1500 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png' );
-	text-shadow: 1px 1px #1a1a1a;
-}
-
-.friendPlayerLevel.lvl_1600 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png' );
-	text-shadow: 1px 1px #1a1a1a;
-}
-
-.friendPlayerLevel.lvl_1700 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png' );
-	text-shadow: 1px 1px #1a1a1a;
-}
-
-.friendPlayerLevel.lvl_1800 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png' );
-	text-shadow: 1px 1px #1a1a1a;
-}
-
-.friendPlayerLevel.lvl_1900 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
