@@ -352,11 +352,19 @@ $J( function() {
 				} );
 			} );
 		},
-		function() {
-			ReportMobileconfError( "appapi error" );
+		function( calldata ) {
+			if ( calldata )
+			{
+				ReportMobileconfError( "appapi error: " + calldata );
+			}
+			else
+			{
+				ReportMobileconfError( "appapi error: no data" );
+			}
+
 			ShowAlertDialog(
 				'Confirmation Error',
-				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If your are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
+				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If you are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
 				'OK'
 			).always( function() {
 				window.history.back();
@@ -366,7 +374,7 @@ $J( function() {
 			ReportMobileconfError( "appapi fatal" );
 			ShowAlertDialog(
 				'Confirmation Error' + ' (fatal)',
-				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If your are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
+				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If you are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
 				'OK'
 			).always( function() {
 				window.history.back();
