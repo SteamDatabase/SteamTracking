@@ -711,7 +711,7 @@ function DeleteImage(strClanURL, strFileName)
 				if ( json && json.hasOwnProperty( "success" ) )
 					error = json.success;
 
-				ShowDialog( "Error deleting image", "An error has occured. Please try again later. (%1$s)".replace('%1$s', error ) );
+				ShowDialog( "Error deleting image", "An error has occurred. Please try again later. (%1$s)".replace('%1$s', error ) );
 			},
 			success: function( response )
 			{
@@ -759,7 +759,7 @@ function ProcessNextImage(nImageCurrent, nImagesTotal, rgImages, dialog, strClan
 				error = json.success;
 
 			dialog.Dismiss();
-			ShowDialog( "Error uploading image", "An error has occured. Please try again later. (%1$s)".replace('%1$s', error ) );
+			ShowDialog( "Error uploading image", "An error has occurred. Please try again later. (%1$s)".replace('%1$s', error ) );
 		},
 		success: function( response )
 		{

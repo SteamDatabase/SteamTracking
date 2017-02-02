@@ -1,57 +1,4 @@
 
-function runLocalUrl(url)
-{
-	var iframe = document.createElement("IFRAME");
-	iframe.setAttribute("src", url);
-	document.documentElement.appendChild(iframe);
-	iframe.parentNode.removeChild(iframe);
-	iframe = null;
-}
-
-
-var g_interval = null;
-var g_callInProgress = false;
-
-
-
-
-//	[status, data], status='ok' / 'error' / 'fatal'
-function GetValueFromLocalURL( url, timeout, success, error, fatal )
-{
-					
-	
-	g_callInProgress = true;
-	runLocalUrl( url );
-
-	if ( ! timeout )
-	{
-		timeout = 5;
-	}
-
-	var timeoutTime = Date.now() + 1000 * timeout;
-
-	if ( g_interval != null )
-	{
-		window.clearInterval( g_interval );
-		g_interval = null;
-	}
-
-	g_interval = window.setInterval( function() {
-
-		
-		if ( Date.now() > timeoutTime )
-		{
-			g_callInProgress = false;
-			if ( g_interval )
-				window.clearInterval( g_interval );
-
-			fatal( 'timeout', -1 );
-		}
-
-	}, 100 );
-	}
-
-
 function SendMobileConfirmationOp( op, confirmationID, confirmationKey, success, error )
 {
 	GetValueFromLocalURL( 'steammobile://steamguard?op=conftag&arg1=' + op, 5,
@@ -278,6 +225,19 @@ function ActionForAllSelected( op )
 	);
 }
 
+function ReportMobileconfError( err )
+{
+	$J.ajax( {
+		url: 'https://steamcommunity.com/steamguard/reporterror',
+		type: 'POST',
+		data: {
+			op: 'MobileConfDetails',
+			e: err,
+			sessionid: g_sessionID
+		}
+	} );
+}
+
 var g_bClickInProgress = false;
 var g_bShowingDetails = false;
 var g_strClickedId = null;
@@ -361,7 +321,15 @@ $J( function() {
 							} ).done( function ( responseData ) {
 				if ( responseData.success )
 				{
-					$elDetails.html( responseData.html );
+					if ( responseData.html )
+					{
+						$elDetails.html( responseData.html );
+					}
+					else
+					{
+												$elDetails.text( '' );
+						ReportMobileconfError( "missing html" );
+					}
 				}
 				else
 				{
@@ -374,6 +342,7 @@ $J( function() {
 					} );
 				}
 			} ).fail( function() {
+				ReportMobileconfError( "ajax failed" );
 				ShowAlertDialog(
 						'Confirmation Error',
 						'There was a problem loading details for that confirmation. Please try your request again later.',
@@ -381,6 +350,26 @@ $J( function() {
 				).always( function() {
 					window.history.back();
 				} );
+			} );
+		},
+		function() {
+			ReportMobileconfError( "appapi error" );
+			ShowAlertDialog(
+				'Confirmation Error',
+				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If your are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
+				'OK'
+			).always( function() {
+				window.history.back();
+			} );
+		},
+		function() {
+			ReportMobileconfError( "appapi fatal" );
+			ShowAlertDialog(
+				'Confirmation Error' + ' (fatal)',
+				'The mobile app is unable to load details for that confirmation. Please reboot your device and try your request again later. If your are still encountering a problem, it could be that a different device has been set up to provide the Steam Guard codes for your account, which means the authenticator on this device is no longer valid.',
+				'OK'
+			).always( function() {
+				window.history.back();
 			} );
 		} );
 
