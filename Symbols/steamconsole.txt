@@ -473,6 +473,9 @@
  T CFmtStrN<256, true, true>::Format(char const*, ...)
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
+ T CIPCToolMachClient::DoKillCommand(char const*)
+ T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
+ T CIPCToolMachClient::Init()
  T CKeyErrorContext::~CKeyErrorContext()
  T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
@@ -574,6 +577,11 @@
  T CRTime::UpdateRealTime()
  T CSTime::CSTime()
  T CSTime::SetCurrentServerTime(unsigned long long)
+ T CSimpleMachClient::DoVersionCommand()
+ T CSimpleMachClient::Init(char const*, unsigned int, bool)
+ T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::~CSimpleMachClient()
  T CSteamID::Render() const
  T CSteamUser::AnonymousLogonBlocking()
  T CSteamUser::CCallback_OnLicensesUpdated::Run(void*)
@@ -610,6 +618,7 @@
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetFloat()
  T CUtlBuffer::GetInt()
+ T CUtlBuffer::GetInt64()
  T CUtlBuffer::GetLine(char*, int)
  T CUtlBuffer::GetOverflow(int)
  T CUtlBuffer::GetString(char*, int)
@@ -818,6 +827,9 @@
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
@@ -842,7 +854,6 @@
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsLeft(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsLeft(int, int)
@@ -991,7 +1002,7 @@
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::CreateKey(char const*)
  T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool)
+ T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FreeBuffers()
  T KeyValues::GetDataType(char const*) const
  T KeyValues::GetFirstSubKey() const
@@ -1095,6 +1106,7 @@
  T bool BWaitGetAPICallResult<RemoteStoragePublishFileResult_t>(unsigned long long, RemoteStoragePublishFileResult_t*, int)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
@@ -1195,6 +1207,7 @@
  __moddi3
  __stack_chk_fail
  __stack_chk_guard
+ __stderrp
  __stdinp
  __stdoutp
  __toupper
@@ -1315,6 +1328,8 @@
  b workshop_build_item_command
  b workshop_create_legacy_item_command
  b workshop_download_item_command
+ bootstrap_look_up
+ bootstrap_port
  chmod$UNIX2003
  close$UNIX2003
  d g_bCatchExceptionsInCallbacks
@@ -1335,6 +1350,8 @@
  fgets
  fileno
  fopen$UNIX2003
+ fprintf
+ fputs$UNIX2003
  fread
  free
  fseek
@@ -1348,8 +1365,19 @@
  g_VProfile
  g_pMemAllocSteam
  getcwd
+ getpid
+ kill$UNIX2003
+ launch_data_alloc
+ launch_data_dict_insert
+ launch_data_free
+ launch_data_new_string
+ launch_msg
  lseek
  lstat$INODE64
+ mach_msg
+ mach_port_allocate
+ mach_port_deallocate
+ mach_task_self_
  malloc
  memcmp
  memcpy
@@ -1371,6 +1399,7 @@
  read$UNIX2003
  remove
  rename
+ rindex
  scandir$INODE64
  snprintf
  sprintf
@@ -1400,6 +1429,28 @@
  t SimplifyNode(ExprNode*&)
  t SkipFile(char const*&)
  t SpewFunc(SpewType_t, char const*)
+ t _GLOBAL__sub_I_appupdater.cpp
+ t _GLOBAL__sub_I_checksum_crc.cpp
+ t _GLOBAL__sub_I_client_api.cpp
+ t _GLOBAL__sub_I_clientuser.cpp
+ t _GLOBAL__sub_I_constants.cpp
+ t _GLOBAL__sub_I_controllerconfig.cpp
+ t _GLOBAL__sub_I_depotbuilder.cpp
+ t _GLOBAL__sub_I_enum_names.cpp
+ t _GLOBAL__sub_I_globals.cpp
+ t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_logger.cpp
+ t _GLOBAL__sub_I_main.cpp
+ t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_predepot.cpp
+ t _GLOBAL__sub_I_reliabletimer.cpp
+ t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_steamid.cpp
+ t _GLOBAL__sub_I_stime.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_utlbuffer.cpp
+ t _GLOBAL__sub_I_utlsymbol.cpp
+ t _GLOBAL__sub_I_workshopbuilder.cpp
  t __cxx_global_array_dtor
  t api_logging(void*, ConParams&, ConCommand&)
  t app_build_all_depots(void*, ConParams&, ConCommand&)
