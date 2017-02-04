@@ -4108,3 +4108,26 @@ table {
 
 }
 
+.help_game_highlight_details {
+	background-color: #1c2837;
+	color: #ffffff;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.help_game_cooldown_expirationtime {
+	margin-left: 10px;
+	color: #ef5e30;
+}
+
+.help_game_cooldown_description_text {
+	margin-bottom: 15px;
+}
+
+.help_game_cooldown_description_text ol {
+	padding-left: 40px;
+}
+
+.help_game_cooldown_reason {
+	margin: 5px 0 15px 0;
+}
