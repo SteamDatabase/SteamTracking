@@ -216,7 +216,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	this.m_playerUI.SetPlayerPlaybackRate();
 
 	$J( this.m_elVideoPlayer ).off( 'bufferingcomplete.VideoWatchEvents' );
-	var strLogUI = ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop ) ? "desktop" : "tenfoot";
+	var strLogUI = ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop ) ? "desktop" : ( this.m_eUIMode == CDASHPlayerUI.eUIModeMobile) ? "mobile" : "tenfoot";
 	this.OnLogEventToServer( 'Video Player UI', strLogUI );
 }
 
@@ -225,7 +225,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function( description )
 	this.m_nVideoRestarts++;
 	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
 	{
-		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop || this.m_eUIMode == CDASHPlayerUI.eUIModeMobile )
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press the Back or Home controller button to exit the video.' );
@@ -244,7 +244,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function( description )
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function( description )
 {
-	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop || this.m_eUIMode == CDASHPlayerUI.eUIModeMobile )
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 	else
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
@@ -359,7 +359,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
 				default:
-					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop || _watch.m_eUIMode == CDASHPlayerUI.eUIModeMobile )
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 					else
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' + '<br><br>Error Code: ' + data.error_code );
@@ -369,7 +369,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	})
 	.fail( function()
 	{
-		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop || _watch.m_eUIMode == CDASHPlayerUI.eUIModeMobile )
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );

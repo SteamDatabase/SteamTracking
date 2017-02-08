@@ -396,11 +396,18 @@ a#store_search_link img:hover {
 	position: relative;
 	background: -webkit-linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););background: linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%););	text-align: center;
 	box-shadow: 0 0 5px 0 #000000;
+	height: 515px;
+}
+.item_def_image_helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 .item_def_image
 {
 	width: 512px;
-	height: 512px;
+	max-height: 512px;
+	vertical-align: middle;
 }
 .item_def_name
 {

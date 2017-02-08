@@ -119,6 +119,11 @@
 	background: rgba( 0, 0, 0, 0.4 );
 }
 
+.search_result_row .ds_options {
+	right: auto;
+	left: 100px;
+}
+
 #search_result_container {
 	max-width: 686px;
 }

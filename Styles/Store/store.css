@@ -1162,6 +1162,12 @@ a#store_search_link img {
     padding-left: 244px;
 }
 
+.large .tab_item .ds_options {
+	right: auto;
+	left: 210px;
+	z-index: 4;
+}
+
 .tab_item:hover,
 .large .tab_item:hover {
 	background: rgba( 0, 0, 0, 0.4 );
