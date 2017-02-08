@@ -342,7 +342,6 @@ $J( function() {
 					} );
 				}
 			} ).fail( function() {
-				ReportMobileconfError( "ajax failed" );
 				ShowAlertDialog(
 						'Confirmation Error',
 						'There was a problem loading details for that confirmation. Please try your request again later.',
