@@ -3121,7 +3121,7 @@ input.unlockcode_entry_input
 	border: 1px solid #e4ba00;
 	padding: 8px;
 	max-width: 720px;
-	margin-top: 20px;
+	margin: 15px 0;
 }
 
 .limited_user_list {
@@ -4130,4 +4130,9 @@ table {
 
 .help_game_cooldown_reason {
 	margin: 5px 0 15px 0;
+}
+
+.help_game_cooldown_levelup {
+	margin: 15px 0 0 0;
+	color: #b0b6c0;
 }
