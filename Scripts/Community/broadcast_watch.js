@@ -1,4 +1,17 @@
 
+function BMediaSourceExtensionsSupported()
+{
+	var bSupported = false;
+	try
+	{
+		bSupported = MediaSource.isTypeSupported( 'video/mp4;codecs="avc1.4d4032,mp4a.40.2"' );
+	}
+	catch (e)
+	{
+	}
+
+	return bSupported;
+}
 
 // called by steam client when going into minimized broadcast view
 function SteamClientMinimize()
@@ -135,28 +148,6 @@ CBroadcastWatch.prototype.WaitUnlockH264 = function( rtStart )
 	window.setTimeout( function() { _watch.WaitUnlockH264( rtStart ); }, 5000 );
 };
 
-CBroadcastWatch.prototype.BCanPlayDashMpeg = function() {
-	var bSupported = false;
-	try
-	{
-		bSupported = MediaSource.isTypeSupported( 'video/mp4;codecs="avc1.4d4032,mp4a.40.2"' );
-	}
-	catch (e)
-	{
-	}
-
-	return bSupported;
-};
-
-CBroadcastWatch.prototype.BCanPlayPlayHLS = function() {
-	var result = this.m_elVideoPlayer.canPlayType( 'application/vnd.apple.mpegurl;codecs="avc1.64001f,mp4a.40.02"');
-	return result === "probably" || result === "maybe";
-};
-
-CBroadcastWatch.prototype.BCanPlayMedia = function() {
-	return this.BCanPlayDashMpeg() || this.BCanPlayPlayHLS();
-};
-
 CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 {
 	var _watch = this;
@@ -164,7 +155,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 	this.m_bVideoEnabled = bEnableVideo;
 	this.m_bChatEnabled = bEnableChat;
 
-	if ( bEnableVideo && !this.BCanPlayMedia() )
+	if ( bEnableVideo && !BMediaSourceExtensionsSupported() )
 	{
 		if ( this.m_eClientType != CBroadcastWatch.k_InBrowser )
 		{
@@ -183,33 +174,19 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 
 	if ( bEnableVideo )
 	{
-		// Choose DASH ahead of HLS as we have more customization for it.  We only expect at this time
-		// to choose HLS for iOS devices and tvOS devices.
-		var bUseDASH = this.BCanPlayDashMpeg();
-		var bUseHLSManifest = !bUseDASH && this.BCanPlayPlayHLS();
-		var bIsMobile = bUseHLSManifest; // Adding feature for iOS first, and then going to investigate on android later
-
 		this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
-		this.m_player.SetUseHLSManifest( bUseHLSManifest );
-		this.m_playerUI = new CDASHPlayerUI( this.m_player, bIsMobile ? CDASHPlayerUI.eUIModeMobile : CDASHPlayerUI.eUIModeDesktop );
-		this.m_playerUI.Init( );
+		this.m_playerUI = new CDASHPlayerUI( this.m_player, CDASHPlayerUI.eUIModeDesktop );
+		this.m_playerUI.Init();
 
 		this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );
 
-		// For HLS playback we depend on the HTML Video Element for playback and events. Map those here to the broadcast events.
-		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'bufferingcomplete.BroadcastWatchEvents' : 'canplay', function() { _watch.OnPlayerBufferingComplete(); } );
-		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'downloadfailed.BroadcastWatchEvents' : 'stalled', function() { _watch.OnPlayerDownloadFailed(); } );
-		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'playbackerror.BroadcastWatchEvents' : 'error' , function() { _watch.OnPlayerPlaybackError(); } );
+		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
+		$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
+		$J( this.m_elVideoPlayer ).on( 'playbackerror.BroadcastWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 
 		$J( this.m_elVideoPlayer ).on( 'gamedataupdate', function( e, pts, Data ) { _watch.OnGameFrameReceived( pts, Data ); } );
 
-		// Add air-play support for iOS
-		if( bUseHLSManifest )
-		{
-			this.m_elVideoPlayer.setAttribute( 'x-webkit-airplay', 'allow');
-		}
-
-		this.GetBroadcastManifest();
+		this.GetBroadcastMPD();
 	}
 };
 
@@ -234,7 +211,7 @@ CBroadcastWatch.prototype.OnPlayerBufferingComplete = function()
 CBroadcastWatch.prototype.OnPlayerDownloadFailed = function()
 {
 	this.SetVideoLoadingText( 'Loading...' );
-	this.GetBroadcastManifest();
+	this.GetBroadcastMPD();
 };
 
 CBroadcastWatch.prototype.OnPlayerPlaybackError = function()
@@ -261,7 +238,7 @@ function LocalizeCount( strSingular, strPlural, nValue )
 	return strPlural.replace( /%s/, v_numberformat( nValue ) );
 }
 
-CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
+CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 {
 	if ( !this.m_bVideoEnabled )
 		return;
@@ -295,17 +272,17 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 		 	}
 
 		 	var timeout = ( rtWait > 30 * 1000 ) ? data.retry : 5000;
-			setTimeout( function() { _watch.GetBroadcastManifest( rtStartRequest ) }, timeout );
+			setTimeout( function() { _watch.GetBroadcastMPD( rtStartRequest ) }, timeout );
 		}
 		else if ( data.success == 'waiting_for_start' )
 		{
 			_watch.SetVideoLoadingText( _watch.AddBroadcasterName( 'Waiting for %s\'s broadcast to start' ) );
-			setTimeout( function() { _watch.GetBroadcastManifest() }, data.retry );
+			setTimeout( function() { _watch.GetBroadcastMPD() }, data.retry );
 		}
 		else if ( data.success == 'waiting_for_reconnect' )
 		{
 			_watch.SetVideoLoadingText( _watch.AddBroadcasterName( 'Waiting for %s to reconnect to Steam' ) );
-			setTimeout( function() { _watch.GetBroadcastManifest() }, data.retry );
+			setTimeout( function() { _watch.GetBroadcastMPD() }, data.retry );
         	}
 		else if ( data.success == 'ready' )
 		{
@@ -317,15 +294,8 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 				WebStorage.SetLocal( "broadcastViewerToken", _watch.m_ulViewerToken );
 			}
 
-			// We prefer DASHMPEG playback ahead of HLS support. For DASH we have a lot more control and features.
-			if( _watch.BCanPlayDashMpeg() )
-			{
-				_watch.LoadBroadcastMPD(data.url);
-			}
-			else
-			{
-				_watch.LoadBroadcastHLSMasterManifest( data.url, data.hls_url );
-			}
+			_watch.LoadBroadcastMPD( data.url );
+
 			_watch.UpdateBroadcastInfo();
 
 			if ( _watch.m_chat && _watch.m_bChatEnabled )
@@ -393,21 +363,6 @@ CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 	this.m_player.Close();
 	this.m_DASHPlayerStats.Reset();
 	this.m_player.PlayMPD( url );
-};
-
-// For HLS, we depend on the native iOS playback support for the default HTML5 <video> tag.
-// This leaves all the ABR choices to Safari.  However, we need to read the MPD from time-to-time
-// to determine if the broadcast representations have change, which will cause us to reload the
-// the master manifest in the video element.
-CBroadcastWatch.prototype.LoadBroadcastHLSMasterManifest = function( mpdURL, hlsURL )
-{
-	this.m_elVideoPlayer.src = hlsURL;
-	this.m_elVideoPlayer.load();
-	this.m_elVideoPlayer.play();
-
-	// Now we call the regular DASH Player initialization. The override will prevent a double
-	// playback. We need the DASH player to check the Dash MPD every so often for updates.
-	this.m_player.PlayMPD( mpdURL );
 };
 
 CBroadcastWatch.prototype.OnVideoIFrameBroadcastIDChanged = function( ulBroadcastID )
