@@ -318,7 +318,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			var strBorderColor = '#' + ( description.name_color ? description.name_color : '3a3a3a' );
 			var strBackgroundColor = '#' + ( description.background_color ? description.background_color : '292929' );
 
-			$J(elSlot).find('img').attr( 'src', strImageURL );
+			$J(elSlot).find('img').attr( 'src', strImageURL ).attr( 'srcset', '' );
 			$J(elSlot).css( 'border-color', strBorderColor );
 			if ( eShowcase == 4 )
 			{

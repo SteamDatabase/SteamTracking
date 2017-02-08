@@ -82,6 +82,9 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_bDroppingFrames = false;
 	this.m_tsDropFramesDetected = 0;
 	this.m_tsLastWindowResize = 0;
+
+	// Playback from reading HLS Manifest.
+	this.m_bUseHLSManifest = false;
 }
 
 CDASHPlayer.TRACK_BUFFER_MS = 8000;
@@ -250,6 +253,17 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 			PlayerLog( 'server time: ' + strServerTime );
 		}
 
+		// HLS override: We only want the initial MPD loading, and the scheduling of future MPD readings.
+		// This scheduled MPD reading will keep the viewer id fresh and will be use to determine if we need
+		// to re-read the HLS master manifest if the servers to alter the bitrates it creates.
+		//
+		// Indicate the player is initialized and bail for the rest of the logic.
+		if( _player.m_bUseHLSManifest )
+		{
+			_player.SetVideoPlayerInitialized();
+			return;
+		}
+
 		// Initialize DRM if neccessary
 		if ( _player.m_mpd.hasProtectedRepresentations )
 		{
@@ -290,6 +304,13 @@ CDASHPlayer.prototype.SetEMECapableHost = function ( bCapable )
 {
 	this.m_bEMECapableHost = bCapable;
 }
+
+//The DashPlayer is deeply intertwined with UI used for broadcast. However, most of the
+// broadcast UI works for HLS playback. If this is set to true, we strategically skip out of certain
+// Dash specific code.
+CDASHPlayer.prototype.SetUseHLSManifest = function ( bUseHLSManifest ) {
+	this.m_bUseHLSManifest = bUseHLSManifest;
+};
 
 CDASHPlayer.prototype.InitializeEME = function()
 {
@@ -503,12 +524,26 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		if ( _player.m_bExiting )
 			return;
 
+		var numRepresentations = _player.m_mpd.GetMPDRepresentationCount();
+
 		// parse MPD file
 		if ( !_player.m_mpd.BUpdate( data ) )
 		{
 			PlayerLog( 'Failed to update MPD file' );
 			_player.CloseWithError( 'playbackerror', 'Update MPD File Failure' );
 			return;
+		}
+
+		// If the number of representation changes, then we need to reload the HLS player, which
+		// cause it to re-fetch the master manifest updating its versions of representations.
+		//
+		// The difference in count is sufficient, because we don't tinker with their bitrates unless if 
+		// we are adding or remove. We don't alter in-flight representations in anyway for broadcast. This is only
+		// for live playback.
+		if( _player.m_bUseHLSManifest && (numRepresentations !== _player.m_mpd.GetMPDRepresentationCount() ) && _player.BIsLiveContent() )
+		{
+			_player.m_elVideoPlayer.load();
+			_player.m_elVideoPlayer.play();
 		}
 
 		// if dynamic, schedule mpd reload
@@ -759,8 +794,13 @@ CDASHPlayer.prototype.BeginPlayback = function()
 		this.m_loaders[i].BeginPlayback( unStartTime );
 	}
 
-	$J( this.m_elVideoPlayer ).trigger( 'initialized' );
+	this.SetVideoPlayerInitialized();
 	this.m_nLastDecodedFrameTime = performance.now();
+}
+
+CDASHPlayer.prototype.SetVideoPlayerInitialized = function()
+{
+	$J( this.m_elVideoPlayer ).trigger( 'dash_player_initialized' );
 }
 
 CDASHPlayer.prototype.OnVideoBufferProgress = function()
@@ -2882,6 +2922,18 @@ CMPDParser.GetEventLogLink = function()
 	return CMPDParser.strEventLogLink;
 }
 
+// Counts the number of representation found in the DASH MPD. Different from the other methods that use the
+// representation built in the Loaders.
+CMPDParser.prototype.GetMPDRepresentationCount = function()
+{
+	var count = 0;
+	for ( var i = 0; i < this.periods[0].adaptationSets.length; i++ )
+	{
+		count += this.periods[0].adaptationSets[i].representations.length;
+	}
+	return count;
+};
+
 CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, strURL )
 {
 	var _mpd = this;
@@ -3456,6 +3508,7 @@ CDASHPlayerUI.DESKTOP_UI_FADE_MS = 200;
 
 CDASHPlayerUI.eUIModeDesktop = 0;
 CDASHPlayerUI.eUIModeTenFoot = 1;
+CDASHPlayerUI.eUIModeMobile = 2;
 
 CDASHPlayerUI.eUIPanelMain = 0;
 CDASHPlayerUI.eUIPanelSettings = 1;
@@ -3520,16 +3573,22 @@ CDASHPlayerUI.prototype.Init = function()
 	this.m_elContainer.on( 'msfullscreenchange', function() { _ui.OnFullScreenChange(); } );
 
 	var elVideoPlayer = $J( this.m_player.m_elVideoPlayer );
-	elVideoPlayer.on( 'mousemove', function() { _ui.OnMouseMovePlayer() } );
 	elVideoPlayer.on( 'timeupdate', function() { _ui.OnTimeUpdatePlayer() } );
 	elVideoPlayer.on( 'bufferedupdate', function() { _ui.OnTimeUpdatePlayer() } );
 	elVideoPlayer.on( 'playing', function() { _ui.OnPlaying() } );
-	elVideoPlayer.on( 'click', function() { _ui.TogglePlayPause() } );
 	elVideoPlayer.on( 'pause', function() { _ui.OnPause() } );
-	elVideoPlayer.on( 'initialized', function() { _ui.OnVideoInitialized(); } );
+	elVideoPlayer.on( 'dash_player_initialized', function() { _ui.OnVideoInitialized(); } );
+	elVideoPlayer.on( 'click', function() { _ui.TogglePlayPause() } );
 
-	this.m_elOverlay.on( 'mouseenter', function() { _ui.OnMouseEnterOverlay() } );
-	this.m_elOverlay.on( 'mouseleave', function( e ) { _ui.OnMouseLeaveOverlay( e ) } );
+	// Mobile devices you don't exactly track a mouse pointer. We will depend on touch events (clicks) to drive
+	// the showing of the playback UI and then let it disappear on timeout.
+	if( this.m_eUIMode !== CDASHPlayerUI.eUIModeMobile )
+	{
+		elVideoPlayer.on( 'mousemove', function() { _ui.OnMouseMovePlayer(); } );
+
+		this.m_elOverlay.on( 'mouseenter', function() { _ui.OnMouseEnterOverlay() } );
+		this.m_elOverlay.on( 'mouseleave', function( e ) { _ui.OnMouseLeaveOverlay( e ) } );
+	}
 
 	$J( '.live_button', _overlay ).on('click', function() { _ui.JumpToLive(); } );
 	$J( '.play_button', _overlay ).on('click', function() { _ui.TogglePlayPause(); } );
@@ -3568,7 +3627,6 @@ CDASHPlayerUI.prototype.Init = function()
 	{
 		$J( window ).on( 'keydown', function ( e ) { _ui.OnKeyDown( e ); } );
 	}
-
 	this.m_fPlaybackRate = this.m_player.GetPlaybackRate();
 }
 
@@ -3674,6 +3732,13 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		return;
 
 	var _ui = this;
+
+	// If we are actually playing back HLS, we do not actually have any control of the adaptive bit rates
+	// therefore hide the setting icons on the player's UI.
+	if( this.m_player.m_bUseHLSManifest )
+	{
+		$J('.settings_icon').css('display', 'none');
+	}
 
 	// resolution selector for live
 	if ( this.m_player.BIsLiveContent() )
@@ -4492,7 +4557,7 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 
 CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
 {
-	if ( this.m_player.BIsLiveContent() )
+	if ( this.m_player.BIsLiveContent() || !this.m_elBufferingMessage )
 		return;
 
 	var elLoadingText = this.m_elBufferingMessage.find( '.loading_text' );
@@ -4551,6 +4616,14 @@ CDASHPlayerUI.prototype.OnPause = function()
 
 CDASHPlayerUI.prototype.TogglePlayPause = function()
 {
+	// On mobile devices, there isn't a "mouse enter" to bring up the playback controls. Instead its the first
+	// click with the finger / pointer. We don't want that first click to disable playback just bring up the UI.
+	if( (this.m_eUIMode == CDASHPlayerUI.eUIModeMobile) && this.m_bHidden )
+	{
+		this.OnMouseMovePlayer();
+		return;
+	}
+
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
 	if( elVideoPlayer.paused )
 	{
@@ -5589,7 +5662,7 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 	}
 
 	var elContainer = this.m_elOverlay[ 0 ].parentNode;
-	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
+	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || this.m_player.m_elVideoPlayer.webkitDisplayingFullscreen;
 
 	if ( !bFullscreen )
 	{
@@ -5603,6 +5676,8 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 			elContainer.mozRequestFullScreen();
 		else if ( elContainer.msRequestFullscreen )
 			elContainer.msRequestFullscreen();
+		else if ( this.m_player.m_elVideoPlayer.webkitDisplayingFullscreen !== undefined ) // iOS / Safari
+			this.m_player.m_elVideoPlayer.webkitEnterFullscreen();
 
 		$J( elContainer ).addClass( 'fullscreen' );
 	}

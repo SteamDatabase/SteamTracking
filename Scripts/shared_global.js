@@ -2824,8 +2824,8 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 
 	$Popup.offset( {
-		top: offsetLink.top + offsetTop,
-		left: offsetLink.left + offsetLeft
+		top: Math.max( offsetLink.top + offsetTop, 0 ),
+		left: Math.max( offsetLink.left + offsetLeft, 0 )
 	});
 
 	if ( bPopupHidden )
