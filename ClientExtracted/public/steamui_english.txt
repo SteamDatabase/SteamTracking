@@ -1583,21 +1583,6 @@ You'll need to log out of OS X for the change to take effect."
 
 "SteamUI_NetworkTroubleshootingTips"	"Network troubleshooting tips"
 
-"SteamUI_PerfWarningTitle"	"Performance Warning"
-"SteamUI_PerfWarning"		"Your system does not meet one or more of %game%'s system recommendations for CPU, Memory or Video Card."
-"SteamUI_PerfWarningLostCoast"	"Lost Coast is a free update for owners of Half-Life 2 which has been built to showcase the latest in real-time graphics, including HighDynamic Range lighting. As such, it has unusually high system requirements."
-"SteamUI_PerfWarningRecommended"	"RECOMMENDED:"
-"SteamUI_PerfWarningYourSystem"	"YOUR SYSTEM:"
-"SteamUI_PerfWarningBuyStuff"	"A link to high-performance video cards is below. For the other items, please consult your favorite computer store."
-"SteamUI_PerfWarningLink"	"Click here to shop for an HDR-capable video card at Amazon.com"
-"Steam_InstallGameAnyway"	"Install %game%"
-"Steam_RunGameAnyway"		"Launch %game%"
-"Steam_PurchaseAnyway" 		"Purchase %game%"
-"SteamUI_PerfWarningVideo"	"Watch the Lost Coast video"
-"SteamUI_OSWarningTitle"	"System Requirements failed"
-"SteamUI_OSWarning"		"You must be running %os% or later to run this game"
-"SteamUI_OSWarningContinueAnyway" "Continue Anyway"
-"SteamUI_OSWarningOkay"		"OK"
 
 "SteamUI_SSA_Agree"				"Please read this agreement in its entirety. You must agree with the terms of the Steam Subscriber Agreement to continue."
 "SteamUI_SSA_CybercafeAgree"		"I am a Licensed Cybercafe Operator and agree to these terms"
@@ -4171,6 +4156,10 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_OtherSessionPlaying_Title" "Error - Steam"
 "Steam_OtherSessionPlaying_Text" "You are logged in on another computer already playing \"%existing_app%\".\nLaunching \"%launching_app%\" here will disconnect the other session from Steam."
 "SteamUI_JoinDialog_KickSessions_Text" "You are logged in on another computer already playing \"%existing_app%\".\nLaunching \"%launching_app%\" here will disconnect the other session from Steam."
+
+"Steam_SystemRequirementWarning_Title" "Performance Warning"
+"Steam_SystemRequirementWarning_Text" "Your system does not meet %game%'s minimum system requirements recommended for this game."
+"Steam_SystemRequirementWarning_Link" "Show system requirements"
 
 "Notification_RemoteClientTitle"	"In-Home Streaming"
 "Notification_RemoteClientConnected"	"%machine% is available for streaming"

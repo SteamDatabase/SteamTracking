@@ -13,13 +13,7 @@
 		
 	    // check for updates appears in the system-managed "steam" menu on the mac
 		CheckForUpdates		[!$OSX]		{	text="#steam_menu_checkforupdates"		command="CheckForUpdates" }
-
-		// one of these will be invisible
-		UpdateVideoDrivers	[$WINDOWS||$LINUX]	{	text="#steam_menu_updatevendorgraphicscard"		command="UpdateVideoDrivers" }
-		Divider				[$WINDOWS||$LINUX]	{}
-
-		CheckForVideoDriverUpdates	[$WINDOWS||$LINUX]	{	text="#steam_menu_checkforvideodriverupdates"	command="CheckForVideoDriverUpdates" }
-		Divider				[$WINDOWS||$LINUX]	{}
+		Divider				[!$OSX]	{}
 
 		BackupGames						{	text="#steam_menu_backupgames"			command="backupgames" }
 		Divider				[!$OSX]		{}

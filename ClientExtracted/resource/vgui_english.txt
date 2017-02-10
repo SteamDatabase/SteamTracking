@@ -33,6 +33,7 @@
 "vgui_close"			"Close"
 "vgui_Cancel"			"Cancel"
 "vgui_select"			"Select"
+"vgui_continue"			"Continue"
 "vgui_createfolder"		"New Folder..."
 "vgui_next"			"Next >"
 "vgui_back"			"< Back"

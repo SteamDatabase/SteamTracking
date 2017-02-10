@@ -224,6 +224,7 @@
  T Plat_AbsoluteTimeToFloat
  T Plat_Alloc
  T Plat_AttachDebuggerToProcess
+ T Plat_CommandLineParamExists
  T Plat_DefaultAllocErrorFn
  T Plat_FloatTime
  T Plat_Free

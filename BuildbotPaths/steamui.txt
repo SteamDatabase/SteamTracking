@@ -160,7 +160,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/CloudManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/CloudManager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/DialogController.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/DriverUpdatePageDialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/GamePropertiesDialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/InstallAppWizard.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/Main.cpp
@@ -177,7 +176,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveySubSummarize.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveyVGuiModule.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveyWizard.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/VideoDriverManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/appfilter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.h
