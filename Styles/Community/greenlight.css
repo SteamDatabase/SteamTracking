@@ -63,3 +63,23 @@
 {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_friendfav.png');
 }
+
+.greenlight_notice {
+	background: -moz-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%, rgba(102,192,244,0.4) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(64,120,152,0.4)), color-stop(100%,rgba(102,192,244,0.4))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66407898', endColorstr='#6667c1f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	color: #66C0F4;
+	padding: 8px;
+	width: 932px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.greenlight_notice a {
+	text-decoration: underline;
+}
