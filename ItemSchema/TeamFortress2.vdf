@@ -35775,9 +35775,9 @@
 			}
 			"attributes"
 			{
-				"damage bonus vs sentry target"
+				"damage bonus bullet vs sentry target"
 				{
-					"attribute_class"	"mult_dmg_vs_sentry_target"
+					"attribute_class"	"mult_dmg_bullet_vs_sentry_target"
 					"value"	"1.1"
 				}
 				"mod ammo per shot"
@@ -67107,6 +67107,10 @@
 			}
 			"visuals"
 			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
 				"styles"
 				{
 					"0"
@@ -67147,6 +67151,7 @@
 				"player_bodygroups"
 				{
 					"shoes"		"1"
+					"shoes_socks"		"1"
 				}
 			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/sbox2014_armor_shoes/sbox2014_armor_shoes"
@@ -95585,7 +95590,7 @@
 		}
 		"9228"
 		{		
-			"name"				"TF2Maps 72hr TF2Jam Summer Participant"
+			"name"				"TF2Maps 72hr TF2Jam Summer Participant 2016"
 			"prefab"			"tournament_medal"
 			"capabilities"
 			{
@@ -96730,25 +96735,225 @@
 				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		"9322"
+		{		
+			"name"				"TF2Maps 72hr TF2Jam Winter Participant 2017"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_72hr_winter_jimijam"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam_%s.mdl"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style0"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_2/72hr_jimijam_2_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+		"9323"
+		{
+			"name"	"Rally Call 2017 - 1st place Medal"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_TournamentMedal_RallyCall_Charity_2017_Gold"
+			"item_description"	"#TF_TournamentMedal_RallyCall_Charity_2017_Gold_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rally_call_2017/rally_call_2017_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rally_call_2017/rally_call_2017_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"9324"
+		{
+			"name"	"Rally Call 2017 - 2nd Place Medal"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_TournamentMedal_RallyCall_Charity_2017_Silver"
+			"item_description"	"#TF_TournamentMedal_RallyCall_Charity_2017_Silver_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rally_call_2017/rally_call_2017_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rally_call_2017/rally_call_2017_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+ 		"9325"
+		{
+			"name"	"Rally Call 2017 Participant/Helper Medal"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_TournamentMedal_RallyCall_Charity_2017_White"
+			"item_description"	"#TF_TournamentMedal_RallyCall_Charity_2017_White_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rally_call_2017/rally_call_2017_white"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rally_call_2017/rally_call_2017_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"9326"
+		{
+			"name"	"Rally Call 2017 Donator Medal"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_TournamentMedal_RallyCall_Charity_2017_Purple"
+			"item_description"	"#TF_TournamentMedal_RallyCall_Charity_2017_Purple_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rally_call_2017/rally_call_2017_purple"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rally_call_2017/rally_call_2017_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"9327"
+		{		
+			"name"				"ozfortress Premier 1st Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+		}
+		"9328"
+		{		
+			"name"				"ozfortress Premier 2nd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+		}
+		"9329"
+		{		
+			"name"				"ozfortress Premier 3rd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+		}
+		"9330"
+		{		
+			"name"				"ozfortress Premier Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+		}
+		"9331"
+		{		
+			"name"				"ozfortress Intermediate 1st Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9332"
+		{		
+			"name"				"ozfortress Intermediate 2nd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9333"
+		{		
+			"name"				"ozfortress Intermediate 3rd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9334"
+		{		
+			"name"				"ozfortress Intermediate Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"9335"
+		{		
+			"name"				"ozfortress Open 1st Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9336"
+		{		
+			"name"				"ozfortress Open 2nd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9337"
+		{		
+			"name"				"ozfortress Open 3rd Place Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9338"
+		{		
+			"name"				"ozfortress Open Participant Season 18"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season18"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
 
 
 
@@ -102680,7 +102885,6 @@
 				"cannot trade"		"1"
 				"is_operation_pass"	"1"
 				"weapon_allow_inspect"				"1"
-				"cannot delete"						"1"
 				"cannot restore"					"1"
 				"always_transmit_so"				"1"			
 				"deactive date"					"1447099200"	
@@ -103024,7 +103228,6 @@
 				"weapon_allow_inspect"				"1"
 				"style changes on strange level"	"3"		
 				"cannot restore"					"1"			
-				"cannot delete"						"1"			
 				"always_transmit_so"				"1"
 				"never craftable"					"1"
 				
@@ -113614,16 +113817,6 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
-		"29"
-		{
-			"name"	"alt-fire is vampire"
-			"attribute_class"	"set_altfire_mode"
-			"description_string"	"#Attrib_AltFire_Is_Vampire"
-			"description_format"	"value_is_additive"
-			"hidden"	"0"
-			"effect_type"	"positive"
-			"stored_as_integer"	"0"
-		}
 		"30"
 		{
 			"name"	"fists have radial buff"
@@ -119770,8 +119963,8 @@
 		}
 		"789"
 		{
-			"name"	"damage bonus vs sentry target"
-			"attribute_class"	"mult_dmg_vs_sentry_target"
+			"name"	"damage bonus bullet vs sentry target"
+			"attribute_class"	"mult_dmg_bullet_vs_sentry_target"
 			"description_string"	"#Attrib_DamageBonusAgainstSentryTarget"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
@@ -134893,12 +135086,32 @@
 		"name"		"cp_gorge"
 		"localizedname"		"#TF_Map_cp_gorge"
 		"statsidentifier"		"1114113"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"2"
 	{
 		"name"		"cp_badlands"
 		"localizedname"		"#TF_Map_cp_badlands"
 		"statsidentifier"		"1114114"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"3"
 	{
@@ -134908,18 +135121,48 @@
 		"strangeprefixtoken"		"#TF_Map_Vanguard_StrangePrefix"
 		"maptoken"		"Map Token Vanguard"
 		"authors"		"#cp_vanguard_authors"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"4"
 	{
 		"name"		"cp_granary"
 		"localizedname"		"#TF_Map_cp_granary"
 		"statsidentifier"		"1114116"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"5"
 	{
 		"name"		"cp_foundry"
 		"localizedname"		"#TF_Map_cp_foundry"
 		"statsidentifier"		"1114117"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"6"
 	{
@@ -134929,6 +135172,16 @@
 		"strangeprefixtoken"		"#TF_Gullywash_StrangePrefix"
 		"maptoken"		"Map Token Gullywash"
 		"authors"		"#cp_gullywash_final1_authors"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"7"
 	{
@@ -134938,24 +135191,64 @@
 		"strangeprefixtoken"		"#TF_Map_Snakewater_StrangePrefix"
 		"maptoken"		"Map Token Snakewater"
 		"authors"		"#cp_snakewater_final1_authors"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"8"
 	{
 		"name"		"koth_viaduct"
 		"localizedname"		"#TF_Map_koth_viaduct"
 		"statsidentifier"		"1114120"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"9"
 	{
 		"name"		"cp_gravelpit"
 		"localizedname"		"#TF_Map_cp_gravelpit"
 		"statsidentifier"		"131075"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"10"
 	{
 		"name"		"cp_dustbowl"
 		"localizedname"		"#TF_Map_cp_dustbowl"
 		"statsidentifier"		"131072"
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"11"
 	{
@@ -134965,6 +135258,16 @@
 		"tags"
 		{
 			"map_has_deep_water"		"1"
+		}
+		"rolling_match_tags"
+		{
+			"core"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
 		}
 	}
 	"12"
@@ -134976,12 +135279,32 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"13"
 	{
 		"name"		"tc_hydro"
 		"localizedname"		"#TF_Map_tc_hydro"
 		"statsidentifier"		"1048578"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"misc"		"1"
+			"core"		"0.2"
+		}
 	}
 	"14"
 	{
@@ -134998,6 +135321,16 @@
 		"name"		"pl_goldrush"
 		"localizedname"		"#TF_Map_pl_goldrush"
 		"statsidentifier"		"2"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"16"
 	{
@@ -135007,6 +135340,16 @@
 		"strangeprefixtoken"		"#TF_Fastlane_StrangePrefix"
 		"maptoken"		"Map Token Fastlane"
 		"authors"		"#cp_fastlane_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"17"
 	{
@@ -135016,12 +135359,34 @@
 		"strangeprefixtoken"		"#TF_Turbine_StrangePrefix"
 		"maptoken"		"Map Token Turbine"
 		"authors"		"#ctf_turbine_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"18"
 	{
 		"name"		"pl_badwater"
 		"localizedname"		"#TF_Map_pl_badwater"
 		"statsidentifier"		"1114124"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"19"
 	{
@@ -135031,6 +135396,16 @@
 		"strangeprefixtoken"		"#TF_Steel_StrangePrefix"
 		"maptoken"		"Map Token Steel"
 		"authors"		"#cp_steel_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"20"
 	{
@@ -135040,6 +135415,16 @@
 		"strangeprefixtoken"		"#TF_Egypt_StrangePrefix"
 		"maptoken"		"Map Token Egypt"
 		"authors"		"#cp_egypt_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"21"
 	{
@@ -135049,6 +135434,16 @@
 		"strangeprefixtoken"		"#TF_Junction_StrangePrefix"
 		"maptoken"		"Map Token Junction"
 		"authors"		"#cp_junction_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"22"
 	{
@@ -135059,6 +135454,16 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"23"
 	{
@@ -135068,6 +135473,17 @@
 		"strangeprefixtoken"		"#TF_Hoodoo_StrangePrefix"
 		"maptoken"		"Map Token Hoodoo"
 		"authors"		"#pl_hoodoo_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"24"
 	{
@@ -135078,12 +135494,32 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"25"
 	{
 		"name"		"koth_nucleus"
 		"localizedname"		"#TF_Map_koth_nucleus"
 		"statsidentifier"		"196611"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"26"
 	{
@@ -135103,6 +135539,16 @@
 		"strangeprefixtoken"		"#TF_Yukon_StrangePrefix"
 		"maptoken"		"Map Token Yukon"
 		"authors"		"#cp_yukon_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"28"
 	{
@@ -135112,12 +135558,32 @@
 		"strangeprefixtoken"		"#TF_Harvest_StrangePrefix"
 		"maptoken"		"Map Token Harvest"
 		"authors"		"#koth_harvest_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"29"
 	{
 		"name"		"ctf_doublecross"
 		"localizedname"		"#TF_Map_ctf_doublecross"
 		"statsidentifier"		"65537"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"30"
 	{
@@ -135131,18 +135597,50 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"31"
 	{
 		"name"		"pl_upward"
 		"localizedname"		"#TF_Map_pl_upward"
 		"statsidentifier"		"5"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"32"
 	{
 		"name"		"plr_hightower"
 		"localizedname"		"#TF_Map_plr_hightower"
 		"statsidentifier"		"327680"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"33"
 	{
@@ -135153,6 +135651,16 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"34"
 	{
@@ -135162,6 +135670,16 @@
 		"strangeprefixtoken"		"#TF_Coldfront_StrangePrefix"
 		"maptoken"		"Map Token Coldfront"
 		"authors"		"#cp_coldfront_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"35"
 	{
@@ -135171,18 +135689,49 @@
 		"strangeprefixtoken"		"#TF_MountainLab_StrangePrefix"
 		"maptoken"		"Map Token Mountain Lab"
 		"authors"		"#cp_mountainlab_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"36"
 	{
 		"name"		"cp_degrootkeep"
 		"localizedname"		"#TF_Map_cp_degrootkeep"
 		"statsidentifier"		"1048579"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"0.2"
+			"popular"	"0.2"
+			"misc"		"1"
+		}
 	}
 	"37"
 	{
 		"name"		"cp_5gorge"
 		"localizedname"		"#TF_Map_cp_5gorge"
 		"statsidentifier"		"262144"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"38"
 	{
@@ -135192,6 +135741,17 @@
 		"strangeprefixtoken"		"#TF_Frontier_StrangePrefix"
 		"maptoken"		"Map Token Frontier"
 		"authors"		"#pl_frontier_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"39"
 	{
@@ -135201,6 +135761,16 @@
 		"strangeprefixtoken"		"#TF_Nightfall_StrangePrefix"
 		"maptoken"		"Map Token Nightfall"
 		"authors"		"#plr_nightfall_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"40"
 	{
@@ -135214,24 +135784,64 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"41"
 	{
 		"name"		"koth_badlands"
 		"localizedname"		"#TF_Map_koth_badlands"
 		"statsidentifier"		"196608"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"42"
 	{
 		"name"		"pl_barnblitz"
 		"localizedname"		"#TF_Map_pl_barnblitz"
 		"statsidentifier"		"6"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"43"
 	{
 		"name"		"sd_doomsday"
 		"localizedname"		"#TF_Map_sd_doomsday"
 		"statsidentifier"		"1048576"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"0.2"
+			"popular"	"0.2"
+			"misc"		"1"
+		}
 	}
 	"44"
 	{
@@ -135241,6 +135851,16 @@
 		"strangeprefixtoken"		"#TF_KongKing_StrangePrefix"
 		"maptoken"		"Map Token Kong King"
 		"authors"		"#koth_king_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"45"
 	{
@@ -135250,6 +135870,16 @@
 		"strangeprefixtoken"		"#TF_Map_Standin_StrangePrefix"
 		"maptoken"		"Map Token Standin"
 		"authors"		"#cp_standin_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"46"
 	{
@@ -135259,6 +135889,16 @@
 		"strangeprefixtoken"		"#TF_Map_Process_StrangePrefix"
 		"maptoken"		"Map Token Process"
 		"authors"		"#cp_process_final_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"47"
 	{
@@ -135268,6 +135908,16 @@
 		"strangeprefixtoken"		"#TF_Map_Sunshine_StrangePrefix"
 		"maptoken"		"Map Token Sunshine"
 		"authors"		"#cp_sunshine_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"48"
 	{
@@ -135277,6 +135927,16 @@
 		"strangeprefixtoken"		"#TF_Map_Metalworks_StrangePrefix"
 		"maptoken"		"Map Token Metalworks"
 		"authors"		"#cp_metalworks_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"49"
 	{
@@ -135286,24 +135946,58 @@
 		"strangeprefixtoken"		"#TF_Map_Swiftwater_StrangePrefix"
 		"maptoken"		"Map Token Swiftwater"
 		"authors"		"#pl_swiftwater_final1_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"50"
 	{
 		"name"		"pass_brickyard"
 		"localizedname"		"#TF_Map_pass_brickyard"
 		"statsidentifier"		"917504"
+		"rolling_match_tags"
+		{
+			"passtime"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"passtime"	"1"
+		}
 	}
 	"51"
 	{
 		"name"		"pass_timbertown"
 		"localizedname"		"#TF_Map_pass_timbertown"
 		"statsidentifier"		"917505"
+		"rolling_match_tags"
+		{
+			"passtime"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"passtime"	"1"
+		}
 	}
 	"52"
 	{
 		"name"		"pass_district"
 		"localizedname"		"#TF_Map_pass_district"
 		"statsidentifier"		"917506"
+		"rolling_match_tags"
+		{
+			"passtime"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"passtime"	"1"
+		}
 	}
 	"53"
 	{
@@ -135313,6 +136007,16 @@
 		"strangeprefixtoken"		"#TF_Map_Landfall_StrangePrefix"
 		"maptoken"		"Map Token Landfall"
 		"authors"		"#ctf_landfall_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"54"
 	{
@@ -135322,6 +136026,16 @@
 		"strangeprefixtoken"		"#TF_Map_Snowplow_StrangePrefix"
 		"maptoken"		"Map Token Snowplow"
 		"authors"		"#cp_snowplow_authors"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"0.2"
+			"popular"	"0.2"
+			"misc"		"1"
+		}
 	}
 	"55"
 	{
@@ -135345,6 +136059,16 @@
 		{
 			"map_has_deep_water"		"1"
 		}
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"57"
 	{
@@ -135354,6 +136078,17 @@
 		"strangeprefixtoken"		"#TF_Map_Suijin_StrangePrefix"
 		"maptoken"		"Map Token Suijin"
 		"authors"		"#koth_suijin_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+			"popular"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"58"
 	{
@@ -135363,6 +136098,16 @@
 		"strangeprefixtoken"		"#TF_Map_Probed_StrangePrefix"
 		"maptoken"		"Map Token Probed"
 		"authors"		"#koth_probed_authors"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"0.2"
+			"popular"	"0.2"
+			"misc"		"1"
+		}
 	}
 	"59"
 	{
@@ -135372,6 +136117,16 @@
 		"strangeprefixtoken"		"#TF_Map_Highpass_StrangePrefix"
 		"maptoken"		"Map Token Highpass"
 		"authors"		"#koth_highpass_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"60"
 	{
@@ -135391,6 +136146,16 @@
 		"strangeprefixtoken"		"#TF_Map_Borneo_StrangePrefix"
 		"maptoken"		"Map Token Borneo"
 		"authors"		"#pl_borneo_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"62"
 	{
@@ -135400,6 +136165,16 @@
 		"strangeprefixtoken"		"#TF_Map_Snowycoast_StrangePrefix"
 		"maptoken"		"Map Token Snowycoast"
 		"authors"		"#pl_snowycoast_authors"
+		"rolling_match_tags"
+		{
+			"core"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"1"
+			"popular"	"0.2"
+			"misc"		"0.2"
+		}
 	}
 	"63"
 	{
@@ -135409,6 +136184,16 @@
 		"strangeprefixtoken"		"#TF_Map_Watergate_StrangePrefix"
 		"maptoken"		"Map Token Watergate"
 		"authors"		"#pd_watergate_authors"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"core"		"0.2"
+			"popular"	"0.2"
+			"misc"		"1"
+		}
 	}
 	"64"
 	{
@@ -135503,6 +136288,14 @@
 		"strangeprefixtoken"		"#TF_Map_GorgeEvent_StrangePrefix"
 		"maptoken"		"Map Token Gorge Event"
 		"authors"		"#cp_gorge_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"75"
 	{
@@ -135512,6 +136305,14 @@
 		"strangeprefixtoken"		"#TF_Map_SunshineEvent_StrangePrefix"
 		"maptoken"		"Map Token Sunshine Event"
 		"authors"		"#cp_sunshine_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"76"
 	{
@@ -135521,6 +136322,14 @@
 		"strangeprefixtoken"		"#TF_Map_MoonshineEvent_StrangePrefix"
 		"maptoken"		"Map Token Moonshine Event"
 		"authors"		"#koth_moonshine_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"77"
 	{
@@ -135530,12 +136339,28 @@
 		"strangeprefixtoken"		"#TF_Map_MillstoneEvent_StrangePrefix"
 		"maptoken"		"Map Token Millstone Event"
 		"authors"		"#pl_millstone_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"78"
 	{
 		"name"		"koth_viaduct_event"
 		"localizedname"		"#TF_Map_koth_viaduct_event"
 		"statsidentifier"		"1245186"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"79"
 	{
@@ -135545,30 +136370,70 @@
 		"strangeprefixtoken"		"#TF_ManorEvent_StrangePrefix"
 		"maptoken"		"Map Token Manor Event"
 		"authors"		"#cp_manor_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"80"
 	{
 		"name"		"koth_harvest_event"
 		"localizedname"		"#TF_Map_koth_harvest_event"
 		"statsidentifier"		"1245184"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"81"
 	{
 		"name"		"koth_lakeside_event"
 		"localizedname"		"#TF_Map_koth_lakeside_event"
 		"statsidentifier"		"1245187"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"82"
 	{
 		"name"		"plr_hightower_event"
 		"localizedname"		"#TF_Map_plr_hightower_event"
 		"statsidentifier"		"1245188"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"83"
 	{
 		"name"		"sd_doomsday_event"
 		"localizedname"		"#TF_Map_sd_doomsday_event"
 		"statsidentifier"		"1245189"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"84"
 	{
@@ -135585,24 +136450,56 @@
 		"name"		"ctf_foundry"
 		"localizedname"		"#TF_Map_powerup_ctf_foundry"
 		"statsidentifier"		"786432"
+		"rolling_match_tags"
+		{
+			"mannpower"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"mannpower"	"1"
+		}
 	}
 	"86"
 	{
 		"name"		"ctf_gorge"
 		"localizedname"		"#TF_Map_powerup_ctf_gorge"
 		"statsidentifier"		"786433"
+		"rolling_match_tags"
+		{
+			"mannpower"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"mannpower"	"1"
+		}
 	}
 	"87"
 	{
 		"name"		"ctf_thundermountain"
 		"localizedname"		"#TF_Map_powerup_ctf_thundermountain"
 		"statsidentifier"		"786434"
+		"rolling_match_tags"
+		{
+			"mannpower"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"mannpower"	"1"
+		}
 	}
 	"88"
 	{
 		"name"		"ctf_hellfire"
 		"localizedname"		"#TF_Map_powerup_ctf_hellfire"
 		"statsidentifier"		"786435"
+		"rolling_match_tags"
+		{
+			"mannpower"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"mannpower"	"1"
+		}
 	}
 	"89"
 	{
@@ -135666,6 +136563,14 @@
 		"strangeprefixtoken"		"#TF_Map_MapleRidgeEvent_StrangePrefix"
 		"maptoken"		"Map Token Maple Ridge Event"
 		"authors"		"#koth_maple_ridge_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"99"
 	{
@@ -135675,6 +136580,14 @@
 		"strangeprefixtoken"		"#TF_Map_FifthCurveEvent_StrangePrefix"
 		"maptoken"		"Map Token Fifth Curve Event"
 		"authors"		"#pl_fifthcurve_event_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 	"100"
 	{
@@ -135684,6 +136597,14 @@
 		"strangeprefixtoken"		"#TF_Map_PitOfDeath_StrangePrefix"
 		"maptoken"		"Map Token Pit Of Death"
 		"authors"		"#pd_pit_of_death_authors"
+		"rolling_match_tags"
+		{
+			"halloween"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"halloween"	"1"
+		}
 	}
 }
 	"steam_packages"
