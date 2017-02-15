@@ -271,10 +271,13 @@ function DelayAddNewListing( nLoadNumber, listing, oGrid )
 			var fee = listing.converted_fee == undefined ? listing.fee : listing.converted_fee;
 			var currencyid = listing.converted_currencyid == undefined ? listing.currencyid : listing.converted_currencyid;
 
-			if ( price == 0 || price == undefined )
+			if ( price == 0 || typeof( price ) == 'undefined' )
 			{
 				return;
 			}
+
+			price = parseInt( price );
+			fee = parseInt( fee );
 
 			var oItem = $.CreatePanel( 'Button', oGrid, 'Listing_' + listing.listingid );
 			oItem.AddClass( 'MarketGridItem' );
