@@ -934,10 +934,43 @@ GHomepage = {
 
 		// Get a list of appids to filter
 		var rgApps = [];
+		var rgAllAppIds = [];
+		var rgAppIds = [];
+
+		// Build a list of all apps for mapping dlc
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			rgApps.push( { appid: $capsule.data('ds-appid') } );
+			var unAppId = $capsule.data('ds-appid');
+
+			rgAllAppIds.push( unAppId );
+		}
+
+		// Remove duplicates or DLC from the list
+		for( var i = 0; i < $elElements.length; i++ )
+		{
+			var $capsule = $J( $elElements[i] );
+			var unAppId = $capsule.data('ds-appid');
+
+			if( !unAppId )
+				continue;
+
+			if( rgAppIds.indexOf( unAppId ) !== -1 )
+			{
+				$capsule.remove();
+				continue;
+			}
+
+			var rgAppData = GStoreItemData.rgAppData[unAppId];
+
+			if( rgAppData && rgAppData.dlc_for_app && rgAllAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+			{
+				$capsule.remove();
+				continue;
+			}
+
+			rgAppIds.push( unAppId );
+			rgApps.push( { appid: unAppId } );
 		}
 
 		// Filter

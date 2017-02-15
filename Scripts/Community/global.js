@@ -405,14 +405,21 @@ function StandardCommunityBan( steamid, elemLink )
 	.done( function( data )
 	{
 		var $Content = $J(data);
-		var Modal = ShowConfirmDialog( "Community Ban & Delete Comments", $Content, 'Ban'
+		var Modal = ShowConfirmDialog( "Community Ban & Content Removal", $Content, 'Submit'
 		).done(	function( ) {
 
 			var $Form = $Content.find( 'form#community_ban_form' );
 
 			$J.post( "https://steamcommunity.com/actions/StandardCommunityBan", $Form.serialize() )
 			.done( function( data ) {
-				$J(elemLink).replaceWith( '<span style="color: red;">Banned</span>' );
+				if ( !$J.isEmptyObject( elemLink ) )
+				{
+                    $J(elemLink).replaceWith( '<span style="color: red;">Banned</span>' );
+				}
+				else {
+                    location.reload();
+				}
+
 			}).fail( function( jqxhr ) {
 				// jquery doesn't parse json on fail
 				var data = V_ParseJSON( jqxhr.responseText );
