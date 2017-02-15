@@ -180,6 +180,12 @@
                     "type": "bool",
                     "optional": true,
                     "description": "Populate the metadata"
+                },
+                {
+                    "name": "return_playtime_stats",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Return playtime stats for the specified number of days before today."
                 }
             ]
         }
