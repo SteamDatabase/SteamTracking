@@ -2958,6 +2958,7 @@
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b KeyValuesSystem()::s_KeyValuesSystem
@@ -3044,6 +3045,7 @@
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
@@ -3094,6 +3096,7 @@
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
  b s_bSetSigHandler
+ b s_netadrResolveCacheMutexEnforceConstruction
  b s_pFileName
  b s_pSpewGroups
  b selectBuf
@@ -3653,6 +3656,7 @@
  t FreeTree(ExprNode*&)
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()
+ t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t InitTicks()
  t KeyValuesSystem()
@@ -3712,6 +3716,7 @@
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_netconnection.cpp
  t _GLOBAL__sub_I_netfilter.cpp
  t _GLOBAL__sub_I_nethost.cpp

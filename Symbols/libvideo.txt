@@ -5716,6 +5716,7 @@
  b GetMessageList()::g_theMessageList
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b GetProcessorBrand()::CPUBrand
@@ -5799,6 +5800,7 @@
  b guard variable for GetMessageList()::g_theMessageList
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetVideoLibData()::data
@@ -5848,6 +5850,9 @@
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
  b s_bSetSigHandler
+ b s_netadrResolveCache
+ b s_netadrResolveCacheCounter
+ b s_netadrResolveCacheMutexEnforceConstruction
  b s_pFileName
  b s_pManager
  b s_pSpewGroups
@@ -6658,6 +6663,7 @@
  t GetEntityDecl
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()
+ t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t Helper_PEMEncryptionPasswordCallback(char*, int, int, void*)
  t InitTicks()
@@ -6753,6 +6759,7 @@
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_netconnection.cpp
  t _GLOBAL__sub_I_netfilter.cpp
  t _GLOBAL__sub_I_nethost.cpp

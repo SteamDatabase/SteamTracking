@@ -6001,6 +6001,7 @@
  T vgui::HTML::GetKBMap()
  T vgui::HTML::GetLinkAtPosition(int, int)
  T vgui::HTML::GetMessageMap()
+ T vgui::HTML::GetNewTab(char const*, unsigned int)
  T vgui::HTML::GetPanelClassName()
  T vgui::HTML::GetPanelTopClassName() const
  T vgui::HTML::GoBack()
@@ -6077,8 +6078,10 @@
  T vgui::HTMLPopup::GetMessageMap()
  T vgui::HTMLPopup::GetPanelClassName()
  T vgui::HTMLPopup::GetPanelTopClassName() const
- T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, unsigned int)
+ T vgui::HTMLPopup::HTMLPopup()
+ T vgui::HTMLPopup::Initialize(vgui::Panel*, char const*, char const*, unsigned int)
  T vgui::HTMLPopup::KB_ChainToMap()
+ T vgui::HTMLPopup::NewPopupHTML(bool)
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
  T vgui::HTMLPopup::OnCustomURL(KeyValues*)
@@ -8344,6 +8347,7 @@
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
  b GetFileTimestampString(long long)::s_rgchOut
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPanelAnimationDictionary()::dictionary
  b GetPanelKeyBindingMapDictionary()::dictionary
  b GetPanelMessageMapDictionary()::dictionary
@@ -8424,6 +8428,7 @@
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b guard variable for GCallbackMgr()::s_CallbackMgr
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPanelAnimationDictionary()::dictionary
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
@@ -8463,6 +8468,9 @@
  b s_bDebugVGUI2Messages
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
+ b s_netadrResolveCache
+ b s_netadrResolveCacheCounter
+ b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b vec2_invalid
  b vec2_origin
@@ -8768,6 +8776,7 @@
  std::exception::~exception()
  std::nothrow
  std::terminate()
+ strcasecmp
  strcat
  strchr
  strcmp
@@ -8866,6 +8875,7 @@
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
+ t GetNetAdrResolveCacheMutex()
  t ListBaseInteger64SortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListBaseStringSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListFileAttributesSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
@@ -8948,6 +8958,7 @@
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
  t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_typingjump.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  t _GLOBAL__sub_I_utlsymbol.cpp

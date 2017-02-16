@@ -798,6 +798,11 @@
  D CSteamAuthedHTML::GetKBMap()::s_pMap
  D CSteamAuthedHTML::GetMessageMap()::s_pMap
  D CSteamAuthedHTML::KB_ChainToMap()::chained
+ D CSteamAuthedHTMLPopup::ChainToAnimationMap()::chained
+ D CSteamAuthedHTMLPopup::ChainToMap()::chained
+ D CSteamAuthedHTMLPopup::GetKBMap()::s_pMap
+ D CSteamAuthedHTMLPopup::GetMessageMap()::s_pMap
+ D CSteamAuthedHTMLPopup::KB_ChainToMap()::chained
  D CTrackItemPanel::ChainToAnimationMap()::chained
  D CTrackItemPanel::ChainToMap()::chained
  D CTrackItemPanel::GetKBMap()::s_pMap
@@ -932,6 +937,7 @@
  D VTT for CSettingsSubVoice
  D VTT for CSoundSystemSelect
  D VTT for CSteamAuthedHTML
+ D VTT for CSteamAuthedHTMLPopup
  D VTT for CTrackItemPanel
  D VTT for CTrackLabel
  D VTT for CTradeDialog
@@ -1134,6 +1140,7 @@
  D construction vtable for vgui::EditablePanel-in-CSettingsSubMusic
  D construction vtable for vgui::EditablePanel-in-CSettingsSubVoice
  D construction vtable for vgui::EditablePanel-in-CSoundSystemSelect
+ D construction vtable for vgui::EditablePanel-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::EditablePanel-in-CTrackItemPanel
  D construction vtable for vgui::EditablePanel-in-CTradeDialog
  D construction vtable for vgui::EditablePanel-in-CreateDirectoryDialog
@@ -1182,6 +1189,7 @@
  D construction vtable for vgui::Frame-in-CScreenshotManager
  D construction vtable for vgui::Frame-in-CScreenshotUploadDialog
  D construction vtable for vgui::Frame-in-CSoundSystemSelect
+ D construction vtable for vgui::Frame-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::Frame-in-CTradeDialog
  D construction vtable for vgui::Frame-in-CreateDirectoryDialog
  D construction vtable for vgui::Frame-in-LayoutDebugDialog
@@ -1202,6 +1210,7 @@
  D construction vtable for vgui::HTML-in-COverlayWebBrowserHTML
  D construction vtable for vgui::HTML-in-CSteamAuthedHTML
  D construction vtable for vgui::HTML-in-vgui::HTMLPopup::PopupHTML
+ D construction vtable for vgui::HTMLPopup-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::ImagePanel-in-CPanelHideWrapper<vgui::ImagePanel>
  D construction vtable for vgui::ImagePanel-in-vgui::HotkeyEntryClearButton
  D construction vtable for vgui::ImagePanel-in-vgui::TextEntryClearButton
@@ -1330,6 +1339,7 @@
  D construction vtable for vgui::Panel-in-CSettingsSubVoice
  D construction vtable for vgui::Panel-in-CSoundSystemSelect
  D construction vtable for vgui::Panel-in-CSteamAuthedHTML
+ D construction vtable for vgui::Panel-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::Panel-in-CTrackItemPanel
  D construction vtable for vgui::Panel-in-CTrackLabel
  D construction vtable for vgui::Panel-in-CTradeDialog
@@ -1588,6 +1598,8 @@
  D guard variable for CSoundSystemSelect::GetMessageMap()::s_pMap
  D guard variable for CSteamAuthedHTML::GetKBMap()::s_pMap
  D guard variable for CSteamAuthedHTML::GetMessageMap()::s_pMap
+ D guard variable for CSteamAuthedHTMLPopup::GetKBMap()::s_pMap
+ D guard variable for CSteamAuthedHTMLPopup::GetMessageMap()::s_pMap
  D guard variable for CTrackItemPanel::GetKBMap()::s_pMap
  D guard variable for CTrackItemPanel::GetMessageMap()::s_pMap
  D guard variable for CTrackLabel::GetKBMap()::s_pMap
@@ -2255,6 +2267,7 @@
  D typeinfo for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  D typeinfo for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  D typeinfo for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
+ D typeinfo for CSteamAuthedHTMLPopup
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTrackItemPanel
@@ -3472,6 +3485,7 @@
  D vtable for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  D vtable for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  D vtable for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
+ D vtable for CSteamAuthedHTMLPopup
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTrackItemPanel
@@ -4115,6 +4129,7 @@
  R typeinfo name for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  R typeinfo name for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  R typeinfo name for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
+ R typeinfo name for CSteamAuthedHTMLPopup
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTrackItemPanel
@@ -5442,6 +5457,7 @@
  T CMicroTxnAuthorizeDialog::ChainToMap()
  T CMicroTxnAuthorizeDialog::CloseBrowser()
  T CMicroTxnAuthorizeDialog::CompleteTxn(unsigned long long)
+ T CMicroTxnAuthorizeDialog::FormatCurrencyForTransactionUTF8(CAmount_t<int> const&, char*, unsigned int) const
  T CMicroTxnAuthorizeDialog::GetAnimMap()
  T CMicroTxnAuthorizeDialog::GetClassSize() const
  T CMicroTxnAuthorizeDialog::GetKBMap()
@@ -8077,7 +8093,7 @@
  T CSteamAuthedHTML::CCallback_OnCredentialsChanged::Run(void*)
  T CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged::Run(void*)
  T CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync::Run(void*)
- T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool)
+ T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool, bool)
  T CSteamAuthedHTML::ChainToAnimationMap()
  T CSteamAuthedHTML::ChainToMap()
  T CSteamAuthedHTML::ClearWGAuthentication()
@@ -8085,12 +8101,14 @@
  T CSteamAuthedHTML::GetClassSize() const
  T CSteamAuthedHTML::GetKBMap()
  T CSteamAuthedHTML::GetMessageMap()
+ T CSteamAuthedHTML::GetNewTab(char const*, unsigned int)
  T CSteamAuthedHTML::GetPanelClassName()
  T CSteamAuthedHTML::GetPanelTopClassName() const
  T CSteamAuthedHTML::KB_ChainToMap()
  T CSteamAuthedHTML::OnCredentialsChanged(LogOnCredentialsChanged_t*)
  T CSteamAuthedHTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
  T CSteamAuthedHTML::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
+ T CSteamAuthedHTML::OnSetHTMLTitle(char const*)
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
  T CSteamAuthedHTML::OnSupportSystemReportReady(SupportSystemReportReady_t*, bool)
  T CSteamAuthedHTML::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
@@ -8102,6 +8120,18 @@
  T CSteamAuthedHTML::SetParentalUnlockCookie(char const*, char const*)
  T CSteamAuthedHTML::Validate(CValidator&, char const*)
  T CSteamAuthedHTML::~CSteamAuthedHTML()
+ T CSteamAuthedHTMLPopup::CSteamAuthedHTMLPopup()
+ T CSteamAuthedHTMLPopup::ChainToAnimationMap()
+ T CSteamAuthedHTMLPopup::ChainToMap()
+ T CSteamAuthedHTMLPopup::GetAnimMap()
+ T CSteamAuthedHTMLPopup::GetClassSize() const
+ T CSteamAuthedHTMLPopup::GetKBMap()
+ T CSteamAuthedHTMLPopup::GetMessageMap()
+ T CSteamAuthedHTMLPopup::GetPanelClassName()
+ T CSteamAuthedHTMLPopup::GetPanelTopClassName() const
+ T CSteamAuthedHTMLPopup::KB_ChainToMap()
+ T CSteamAuthedHTMLPopup::NewPopupHTML(bool)
+ T CSteamAuthedHTMLPopup::~CSteamAuthedHTMLPopup()
  T CSteamID::Render() const
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
@@ -11029,6 +11059,7 @@
  T vgui::HTML::GetKBMap()
  T vgui::HTML::GetLinkAtPosition(int, int)
  T vgui::HTML::GetMessageMap()
+ T vgui::HTML::GetNewTab(char const*, unsigned int)
  T vgui::HTML::GetPanelClassName()
  T vgui::HTML::GetPanelTopClassName() const
  T vgui::HTML::GoBack()
@@ -11110,8 +11141,10 @@
  T vgui::HTMLPopup::GetMessageMap()
  T vgui::HTMLPopup::GetPanelClassName()
  T vgui::HTMLPopup::GetPanelTopClassName() const
- T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, unsigned int)
+ T vgui::HTMLPopup::HTMLPopup()
+ T vgui::HTMLPopup::Initialize(vgui::Panel*, char const*, char const*, unsigned int)
  T vgui::HTMLPopup::KB_ChainToMap()
+ T vgui::HTMLPopup::NewPopupHTML(bool)
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
  T vgui::HTMLPopup::OnCustomURL(KeyValues*)
@@ -13729,6 +13762,7 @@
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
  b GetFileTimestampString(long long)::s_rgchOut
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPanelAnimationDictionary()::dictionary
  b GetPanelKeyBindingMapDictionary()::dictionary
  b GetPanelMessageMapDictionary()::dictionary
@@ -13833,6 +13867,7 @@
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b guard variable for GCallbackMgr()::s_CallbackMgr
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPanelAnimationDictionary()::dictionary
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
@@ -13889,6 +13924,9 @@
  b s_bFirstLogEntry
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
+ b s_netadrResolveCache
+ b s_netadrResolveCacheCounter
+ b s_netadrResolveCacheMutexEnforceConstruction
  b s_pSortContext
  b s_pWrapPanelSorting
  b selectBuf
@@ -14334,6 +14372,7 @@
  std::exception::~exception()
  std::nothrow
  std::terminate()
+ strcasecmp
  strcat
  strchr
  strcmp
@@ -14443,6 +14482,7 @@
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
+ t GetNetAdrResolveCacheMutex()
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
@@ -14558,6 +14598,7 @@
  t _GLOBAL__sub_I_musicpage_details_playlist.cpp
  t _GLOBAL__sub_I_musicplayerpanel.cpp
  t _GLOBAL__sub_I_musicplayervolumepanel.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_opensslwrapper.cpp
  t _GLOBAL__sub_I_overlayachievements.cpp
  t _GLOBAL__sub_I_overlaybroadcastpanel.cpp

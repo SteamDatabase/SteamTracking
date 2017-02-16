@@ -15440,6 +15440,7 @@
  b GCallbackMgr()::s_CallbackMgr
  b GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b GetMemAlloc::s_StdMemAlloc
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
@@ -15514,6 +15515,7 @@
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b guard variable for GetMemAlloc::s_StdMemAlloc
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
@@ -15912,6 +15914,7 @@
  b s_bHWAccelCRC32
  b s_bInitializedKeyMap
  b s_bMathlibInitializedGlobalConstructorOnly
+ b s_netadrResolveCacheMutexEnforceConstruction
  b s_pWSASendToHelper
  b s_unKeyCodeToKey
  b s_unVirtualKeyToKeyCode
@@ -16638,6 +16641,7 @@
  t FileSelect(dirent const*)
  t FreeTree(ExprNode*&)
  t GetEntityDecl
+ t GetNetAdrResolveCacheMutex()
  t GetStyleSymbolMap()
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
@@ -16721,6 +16725,7 @@
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_netconnection.cpp
  t _GLOBAL__sub_I_netfilter.cpp
  t _GLOBAL__sub_I_nethost.cpp

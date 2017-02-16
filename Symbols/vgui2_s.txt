@@ -2714,6 +2714,7 @@
  b CVGui::PanelCreated(vgui::VPanel*)::bAsserted
  b CVGuiSystemModuleLoader::ShutdownPlatformModules()::runningFunction
  b GetAppropriateSRGBColorSpace()::colorspace
+ b GetNetAdrResolveCacheMutex()::mutex
  b HandleFlagsChanged(NSEvent*)::s_priorFlags
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b OPENSSL_cpuid_setup.trigger
@@ -2742,6 +2743,7 @@
  b g_treeValidStyleKeySymbols
  b guard variable for CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRender
  b guard variable for CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRenderBG
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for PosixRegistryManager()::s_PosixRegMgr
  b guard variable for ResetTextureParams_GL_TEXTURE_2D()::bHasAnisotropy
  b guard variable for ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
@@ -2767,6 +2769,7 @@
  b s_bShuttingDown
  b s_bWhiteTextureCreated
  b s_nWhiteTextureID
+ b s_netadrResolveCacheMutexEnforceConstruction
  b s_pApplicationDockMenu
  b s_pFontManager
  b s_pVGUIToVirtualKey
@@ -2986,6 +2989,7 @@
  t FixCarbonCocoaMiniatureWindowMadness()
  t FreeTree(ExprNode*&)
  t GetKeyFocusedPopup()
+ t GetNetAdrResolveCacheMutex()
  t HandleFlagsChanged(NSEvent*)
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
@@ -3016,6 +3020,7 @@
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_layoutfile.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_opensslwrapper.cpp
  t _GLOBAL__sub_I_osxfont.cpp
  t _GLOBAL__sub_I_pngloader.cpp

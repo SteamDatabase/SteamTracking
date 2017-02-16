@@ -648,6 +648,7 @@
  b CStringNormalization::Test_BValidateStructures()::fAsserted
  b CURLUtils::IsTLD(char const*)::threadonce_118_21
  b DebugStatsSystem::g_DebugStatsSystem
+ b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem
  b SteamStdLib::CCommandLine::CheckParm(int, char const**) const::sz
  b SteamStdLib::CommandLine()::bInitialized
@@ -663,6 +664,7 @@
  b g_mapPairs
  b g_pCustomICvarIF
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for SteamStdLib::CommandLine()::g_CmdLine
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
@@ -671,6 +673,7 @@
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
+ b s_netadrResolveCacheMutexEnforceConstruction
  chdir
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
  d GetOSType::eOSVersion
@@ -767,6 +770,7 @@
  t (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])
  t (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&), V_towupper32>::operator()(wchar_t const*, wchar_t&, bool&)
  t CopyToMaxChars(char*, int, char const*, int)
+ t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t KeyValuesSystem()
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
@@ -774,6 +778,7 @@
  t _GLOBAL__sub_I_coroutine.cpp
  t _GLOBAL__sub_I_cvar.cpp
  t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_random.cpp
  t _GLOBAL__sub_I_stringnormalize.cpp
  t _GLOBAL__sub_I_strtools.cpp

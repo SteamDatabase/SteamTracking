@@ -4338,7 +4338,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_AdvancedClientOptions" "Advanced Client Options"
 "Steam_Settings_Streaming_AdvancedClientOptions_Title" "Advanced Client Options"
 "Steam_Settings_Streaming_AdvancedClientOptions_Description" "To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
-"Steam_Settings_Streaming_EnableCaptureNVFBC" "Use ShadowPlay capture on NVIDIA GPU"
+"Steam_Settings_Streaming_EnableCaptureNVFBC" "Use NVFBC capture on NVIDIA GPU"
 "Steam_Settings_Streaming_EnableHardwareEncoding" "Enable hardware encoding"
 "Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "Enable hardware encoding on NVIDIA GPU"
 "Steam_Settings_Streaming_EnableHardwareEncodingAMD" "Enable hardware encoding on AMD GPU"
