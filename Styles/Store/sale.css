@@ -397,8 +397,9 @@ body.sale_page_background {
 
 .vr_launch .promo_item_list .item.wide2
 {
-	margin-right: 13px;
+	margin-right: 16px;
 	margin-bottom: 20px;
+	height: 234px;
 }
 
 .vr_launch .promo_item_list .item.wide2 img
@@ -409,8 +410,9 @@ body.sale_page_background {
 
 .vr_launch .promo_item_list .item.wide3
 {
-	margin-right: 13px;
+	margin-right: 16px;
 	margin-bottom: 20px;
+	height: 162px;
 }
 
 .vr_launch .promo_item_list .item.wide3 img
@@ -421,7 +423,7 @@ body.sale_page_background {
 
 .vr_launch .promo_item_list .item.wide4
 {
-	margin-right: 3px;
+	margin-right: 6px;
 	margin-bottom: 20px;
 }
 
@@ -656,6 +658,7 @@ html.responsive .btnv6_blue_blue_innerfade {
 	html.responsive .vr_launch .promo_item_list .item.wide4
 	{
 		margin: 0px 15px 20px 0px;
+		height: 160px;
 	}
 
 	html.responsive .vr_launch .promo_item_list .item.wide2 img,
@@ -708,6 +711,7 @@ html.responsive .btnv6_blue_blue_innerfade {
 	html.responsive .vr_launch .promo_item_list .item.wide4
 	{
 		margin: 0px 10px 20px 0px;
+		height: 130px;
 	}
 
 	html.responsive .vr_launch .promo_item_list .item.wide2 img,
