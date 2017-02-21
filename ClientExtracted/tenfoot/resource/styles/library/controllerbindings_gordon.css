@@ -65,6 +65,106 @@ ControllerBindingsGordon.ScreenSaverMode
 	transition-timing-function: linear;
 }
 
+.Preview #PreviewHeader
+{
+	transition-property: opacity;
+	transition-duration: 0.25s, 0.4s !immediate;
+	transition-timing-function: bigpicture-ease-in-out;
+    opacity: 1.0;
+
+}
+
+#PreviewHeader
+{
+	color: #75c7fdff;
+	font-size: 24px;
+	font-family: platformfont;
+    margin-left: 24px;
+    margin-top: 6px;
+    opacity: 0.0;
+    width: 100%;
+}
+
+#PreviewApp
+{
+    margin-top: 28px;
+}
+
+#PreviewContributorContainer
+{
+    margin-top: 4px;
+    width: 100%;
+    horizontal-align: center;
+    flow-children: down;
+}
+
+#PreviewTitle
+{
+	font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#PreviewAuthor
+{
+	font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#PreviewDescription
+{
+	margin-top: 80px;
+	font-size: 21px;
+	height: 120px;
+	font-family: platformfont;
+	font-weight: thin;
+	color: #75c7fdff;
+    padding-left: 8px;
+    padding-right: 32px;
+}
+
+#BindingPreviewContainer.Preview
+{
+	width: 100%;
+	height: 100%;
+    transform: scalex( 0.95 ) scaley( 0.95 );
+    transform-origin: 50% 100% parent-relative;
+    horizontal-align: right;
+    vertical-align: bottom;
+    wash-color: #00ccff15;
+	transition-property: transform;
+	transition-duration: 0.25s, 0.4s !immediate;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#BindingPreviewContainer.PreviewFadeout 
+{
+    opacity: 0.0;
+}
+
+#BindingPreviewContainer
+{
+	width: 100%;
+	height: 100%;
+}
+
+.Preview #BindingsTitle,
+.Preview #ControllerTitle,
+.Preview #BindingsCreator
+{
+    visibility: collapse;
+}
+
+ControllerConfigBrowser.Preview 
+{
+    transform: scalex( 1.0 ) scaley( 1.0 );
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+}
+
 #VDFDump
 {
 	width: 20px;
@@ -508,6 +608,17 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
 }
 
+.controller_steamcontroller_headcrab #BackgroundLines.LeftGripSelected 
+{
+    background-position: 0px 20px;
+    z-index: -10;
+}
+
+#BackgroundLines.LeftUpperGripSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
+}
+
 #BackgroundLines.RightTriggerSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
@@ -542,6 +653,18 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
 }
 
+.controller_steamcontroller_headcrab #BackgroundLines.RightGripSelected
+{
+    background-position: -100px 20px;
+    z-index: -10;
+}
+
+#BackgroundLines.RightUpperGripSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
+}
+
+
 #BackgroundLines.GyroSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_14.png");
@@ -563,6 +686,11 @@ SelectMousePosition
 }
 
 #BackgroundLines.SlotTwoSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
+}
+
+#BackgroundLines.LeftJoystickSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
 }
@@ -644,6 +772,12 @@ SelectMousePosition
     background-size: 75%;
 }
 
+.controller_steamcontroller_headcrab #BackgroundLines.BackButtonSelected
+{
+    background-position: -100px -205px;
+    background-size: 110% 160%;
+}
+
 #BackgroundLines.StartButtonSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_13.png");
@@ -658,6 +792,12 @@ SelectMousePosition
 {
     background-position: 225px 20px;
     background-size: 75%;
+}
+
+.controller_steamcontroller_headcrab #BackgroundLines.StartButtonSelected
+{
+    background-position: -100px -205px;
+    background-size: 110% 160%;
 }
 
 .controller_ps3 #BackgroundLines.StartButtonSelected,
@@ -1075,6 +1215,17 @@ Label.ModeTitle
     visibility: collapse;
 }
 
+.BindingButton.SteamV2
+{
+    visibility: collapse;
+}
+
+.controller_steamcontroller_headcrab .BindingButton.SteamV2
+{
+    visibility: visible;
+}
+
+
 .BindingButton.Playstation,
 .BindingButton.Xbox
 {
@@ -1097,6 +1248,13 @@ ControllerBindingButton.BindingButton
 	margin-bottom: 9px;
 	background-color: none;
 }
+
+.controller_steamcontroller_headcrab ControllerBindingButton.BindingButton
+{
+	height: 92px;
+	margin-bottom: 9px;
+}
+
 
 ControllerBindingButton.BindingButtonPropertiesMode
 {
@@ -1277,7 +1435,7 @@ ControllerPropertiesMode, ControllerPropertiesActivator
 	horizontal-align: left;
 	margin-left: 6px;
 	margin-bottom: 8px;
-height: 44px;
+    height: 44px;
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
 	background-repeat: no-repeat;
 	background-size: 48px 48px;
@@ -1647,7 +1805,7 @@ ControllerBindingButton.Glyph.GamepadShape #BindingShape
 
 ControllerBindingButton Label
 {
-	font-size: 28px;
+	font-size: 24px;
 	font-family: platformfont;
 	font-weight: light;
 	text-overflow: ellipsis;
@@ -4204,7 +4362,7 @@ ControllerConfigBrowser.SelectCommunityBindings.RequiresMoreTimeForPublic #Requi
 	width: 100%;
 	height: 100%;
 	visibility: collapse;
-	background-color: #00000077;
+	background-color: #00000047;
 }
 
 #BindingsContainer,

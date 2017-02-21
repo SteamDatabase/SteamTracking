@@ -1911,7 +1911,11 @@
 	"Library_Details_ControllerBindingsGordon_ShowActivator"	"SHOW ACTIVATORS"
 	"Library_Details_ControllerBindingsGordon_NextActionSet"	"NEXT SET"
 	"Library_Details_ControllerBindingsGordon_PreviousActionSet"	"PREV SET"
+	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APPLY CONFIGURATION"
+	"Library_Details_ControllerBindingsGordon_Share"	"SHARE CONFIGURATION"	
 	
+	"Library_Details_CopyToClipboard_Title"				"Share Configuration"
+	"Library_Details_CopyToClipboard_Desc"				"A Link to this configuration has been copied to your clipboard."
 
 	"Library_SelectControllerActionOption_Title"				"Select Action Option"
 	"Library_SelectControllerActionOption_CodeLabel"			"Select the desired option for this binding."
@@ -4742,6 +4746,7 @@
 	"SettingsController_BindingTitle_ForController" "({s:controllername})"
 	"SettingsController_BindingTitle_Guest" "Guest"
 	"SettingsController_BindingCreator" "By {s:bindingcreator}"
+	"SettingsController_Binding_Preview" "Previewing Configuration"
 	"SettingsController_AutosaveName"	"Controller Configuration"
 	"SettingsController_AutosaveDescription"	"Your modified configuration for this game."
 	"SettingsController_ModifiedBy"	"Modified by you, based on {s:bindingcreator}'s configuration."

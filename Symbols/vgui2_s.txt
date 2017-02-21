@@ -686,6 +686,7 @@
  T CBaseSurface::SetTopLevelFocus(unsigned int)
  T CBaseSurface::SetTranslateExtendedKeys(bool)
  T CBaseSurface::SetWebCookie(char const*, char const*, char const*, char const*, unsigned int, bool, bool)
+ T CBaseSurface::SetWebkitHTMLUserAgentStringSuffix(char const*)
  T CBaseSurface::SetWindowMaximized(unsigned int, bool)
  T CBaseSurface::SetWorkspaceInsets(int, int, int, int)
  T CBaseSurface::ShouldPaintChildPanel(unsigned int)
