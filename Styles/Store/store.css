@@ -1571,6 +1571,50 @@ div.game_hover {
 	color: #82807C;
 }
 
+.hover_screenshots {
+	position: relative;
+	width: 274px;
+	height: 153px;
+	margin: 5px 0;
+}
+
+.hover_screenshots .screenshot {
+	position: absolute;
+	width: 100%; /* Redundant ?? */
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	opacity: 0;
+	transition: opacity 300ms;
+	animation: screenshot_hover_fadein 4s linear;
+	animation-iteration-count:infinite;
+}
+
+.hover_screenshots .screenshot:nth-child(1) { animation-delay: 0s }
+.hover_screenshots .screenshot:nth-child(2) { animation-delay: 1s }
+.hover_screenshots .screenshot:nth-child(3) { animation-delay: 2s }
+.hover_screenshots .screenshot:nth-child(4) { animation-delay: 3s }
+
+@keyframes screenshot_hover_fadein {
+	0% {
+		opacity: 0;
+	}
+	3% {
+		opacity: 1;
+	}
+	28% {
+		opacity: 1;
+	}
+
+	31% {
+		opacity: 0;
+	}
+}
+
+#hover_screenshots .screenshot.active {
+	opacity: 1;
+}
+
 .game_hover_box h4 {
 	color: #222d3d;
 	font-weight: normal;
@@ -1636,6 +1680,7 @@ div.game_hover {
 .hover_category_icon {
 	display: inline-block;
 	line-height: 20px;
+	height: 20px;
 	vertical-align: middle;
 }
 
@@ -1682,8 +1727,25 @@ div.game_hover {
 }
 
 .hover_body .hover_review_summary {
-	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	padding: 4px;
+	color: #c6d4df;
+	background-color: rgba( 38, 54, 69, 0.6);
 }
+
+.review_score_icon.positive {
+	background-image: url( '/public/images/v6/user_reviews_positive.png' );
+}
+
+.review_score_icon.mixed {
+	background-image: url( '/public/images/v6/user_reviews_mixed.png' );
+}
+
+.review_score_icon.negative {
+	background-image: url( '/public/images/v6/user_reviews_negative.png' );
+}
+
 
 .game_review_summary {
 	color: #A34C25;

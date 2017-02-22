@@ -550,7 +550,7 @@ GDynamicStore = {
 				{
 					$elSource.addClass('ds_ignored');
 					for( var i=0; i<rgAppIds.length; i++ )
-						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], false );
+						GDynamicStore.ModifyIgnoredApp ( $elSource, rgAppIds[ i ], false );
 
 					return false;
 				};
@@ -564,7 +564,7 @@ GDynamicStore = {
 				{
 					$elSource.removeClass('ds_ignored');
 					for( var i=0; i<rgAppIds.length; i++ )
-						GDynamicStore.ModifyIgnoredApp ( rgAppIds[ i ], true );
+						GDynamicStore.ModifyIgnoredApp ( $elSource, rgAppIds[ i ], true );
 
 					return false;
 				};
@@ -604,19 +604,20 @@ GDynamicStore = {
 		});
 	},
 
-	ModifyIgnoredApp: function( appid, bRemove, fnOnSuccess, fnOnFail )
+	ModifyIgnoredApp: function( $elSource, appid, bRemove, fnOnSuccess, fnOnFail )
 	{
 		GDynamicStore.s_rgIgnoredApps[appid] = !bRemove;
 
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: appid,
-			remove: bRemove ? 1 : 0
+			remove: bRemove ? 1 : 0,
+			snr: $elSource.data( 'snr' )
 		}).done( function() {
 			if( fnOnSuccess )
 				fnOnSuccess( appid );
 			GDynamicStore.InvalidateCache();
-		}).fail( function() {
+		}).fail( function( jqXHR ) {
 			if( fnOnFail )
 				fnOnFail( appid );
 			GDynamicStore.s_rgIgnoredApps[appid] = false;

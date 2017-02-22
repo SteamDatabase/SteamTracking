@@ -2014,7 +2014,7 @@ GSteamCurators = {
 
 					$elButtonNotInterested.click(function(){
 						$J('.giant_curator_capsule').css({'opacity': 0.3});
-						GDynamicStore.ModifyIgnoredApp( appid, false, function(){ $elButtonNotInterested.hide();  return false; } );
+						GDynamicStore.ModifyIgnoredApp( $Item, appid, false, function(){ $elButtonNotInterested.hide();  return false; } );
 					});
 
 					if( !GDynamicStore.BIsAppOnWishlist(appid) )

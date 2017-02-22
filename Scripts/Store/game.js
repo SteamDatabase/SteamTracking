@@ -75,7 +75,7 @@ function CreateWidget( nAppId )
 	$J('#widget_finished').show();
 }
 
-function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
+function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, snr )
 {
 	var $FollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_inactive');
 	var $UnFollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_active');
@@ -85,12 +85,13 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid )
 	$IgnoreBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
-			appid: store_appid
+			appid: store_appid,
+			snr: snr
 		}).done( function() {
 			$IgnoreBtn.hide();
 			$UnIgnoreBtn.show();
 			GDynamicStore.InvalidateCache();
-		}).fail( function() {
+		}).fail( function( jqXHR ) {
 			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
