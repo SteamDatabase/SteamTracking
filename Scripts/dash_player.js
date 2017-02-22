@@ -6175,7 +6175,7 @@ CDASHPlayerUI.prototype.SwitchClosedCaptionLanguageInPlayer = function( strCapti
 
 CDASHPlayerUI.ChangeClosedCaptionDisplay = function( cueKey, cueValue )
 {
-	if ( window.VTTCue )
+	if ( window.VTTCue && document.styleSheets[document.styleSheets.length-1].addRule )
 		document.styleSheets[document.styleSheets.length-1].addRule( '::cue', cueKey + ":" + cueValue );
 }
 

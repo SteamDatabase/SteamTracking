@@ -276,9 +276,6 @@ function DelayAddNewListing( nLoadNumber, listing, oGrid )
 				return;
 			}
 
-			price = parseInt( price );
-			fee = parseInt( fee );
-
 			var oItem = $.CreatePanel( 'Button', oGrid, 'Listing_' + listing.listingid );
 			oItem.AddClass( 'MarketGridItem' );
 

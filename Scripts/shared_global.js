@@ -3806,26 +3806,5 @@ function InitBBCodeVideos( bAllowAutoPlay )
 
 function LoginUsingSteamClient( $baseURL )
 {
-	if ('withCredentials' in new XMLHttpRequest()) { // make sure the browser respects CORS
-		$J.ajax({
-			type: "GET",
-			url: 'https://localhost:27061/auth/?u=public',
-			dataType: "json",
-			success: function (data) {
-				$J.ajax({
-					type: "POST",
-					url: $baseURL + '/login/checkclientautologin',
-					data: {'steamid': data['steamid'],
-						'sessionkey': data['sessionkey'],
-						'encrypted_loginkey' : data['encrypted_loginkey'],
-						'redirectURL' : window.location.href },
-					dataType: "json",
-					success: function (data) {
-						location.reload();
-					}
-				});
-			}
-		});
-	}
 }
 
