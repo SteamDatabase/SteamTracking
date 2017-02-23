@@ -1892,6 +1892,10 @@
 	"Library_Details_ControllerBindingsGordon_Save"		"EXPORT CONFIG"
 	"Library_Details_ControllerBindingsGordon_ToggleFilterOn"	"HIDE OTHER CONTROLLER TYPES"
 	"Library_Details_ControllerBindingsGordon_ToggleFilterOff"	"SHOW OTHER CONTROLLER TYPES"
+	"Library_Details_ControllerBindingsGordon_Vote" "UPVOTE"
+	"Library_Details_ControllerBindingsGordon_UnVote" "REMOVE UPVOTE"
+	"Library_Details_ControllerBindingsGordon_SortVote" "SORT BY VOTES"
+	"Library_Details_ControllerBindingsGordon_SortTime" "SORT BY PLAY TIME"
 	"Library_Details_ControllerBindingsGordon_Done"		"DONE"
 	"Library_Details_ControllerBindingsGordon_Back"		"BACK"
 	"Library_Details_ControllerBindingsGordon_Remove"	"REMOVE"
@@ -4765,7 +4769,7 @@
 	"ControllerConfigChangeToShared"		"Unique - Switch to using Shared Configuration"
 	"ControllerConfigChangeToUnique"		"Shared - Switch to using Unique Configuration"
 
-	"ControllerBindingVotes"		""
+	"ControllerBindingVotes"		"Recent playtime: {i:hoursplayed}h{i:minutesplayed}m\nVotes : {i:upvotes}\n"
 
 	"ControllerBinding_ModeDropDown_InGameAction"				"In-Game Action"
 	"ControllerBinding_ModeDropDown_InGameAction_Description"	"Select this option to make the stick or pad perform the specified In-Game Action."

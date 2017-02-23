@@ -152,6 +152,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .Preview #BindingsTitle,
 .Preview #ControllerTitle,
+.Preview.MultipleControllers #ControllerTitle,
 .Preview #BindingsCreator
 {
     visibility: collapse;
@@ -4215,6 +4216,24 @@ ControllerConfigButton #ConfigButtonSaveIcon
 }
 
 ControllerConfigButton.SaveButton #ConfigButtonSaveIcon
+{
+    visibility: visible;
+}
+
+ControllerConfigButton #VoteUpIcon
+{
+	align: left bottom;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	width: 40px;
+    height: 40px;	
+    visibility: collapse;
+    opacity: 1.0;
+	color: white;
+
+}
+
+ControllerConfigButton.VoteUpIcon #VoteUpIcon
 {
     visibility: visible;
 }
