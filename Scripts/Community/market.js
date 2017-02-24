@@ -601,12 +601,12 @@ BuyItemDialog = {
 		var rgListing = g_rgListingInfo[listingid];
 		if ( rgListing['converted_fee_per_unit'] > 0 )
 		{
-			this.m_nSubtotal = rgListing['converted_price_per_unit'];
-			this.m_nFeeAmount = rgListing['converted_fee_per_unit'];
-			this.m_nTotal = rgListing['converted_price_per_unit'] + rgListing['converted_fee_per_unit'];
+			this.m_nSubtotal = parseInt( rgListing['converted_price_per_unit'] );
+			this.m_nFeeAmount = parseInt( rgListing['converted_fee_per_unit'] );
+			this.m_nTotal = parseInt( rgListing['converted_price_per_unit'] ) + parseInt( rgListing['converted_fee_per_unit'] );
 
-			var nFeePublisher = rgListing['converted_publisher_fee_per_unit'];
-			var nFeeSteam = rgListing['converted_steam_fee_per_unit'];
+			var nFeePublisher = parseInt( rgListing['converted_publisher_fee_per_unit'] );
+			var nFeeSteam = parseInt( rgListing['converted_steam_fee_per_unit'] );
 
 			if ( this.m_nFeeAmount != nFeePublisher + nFeeSteam || this.m_nTotal != this.m_nSubtotal + nFeePublisher + nFeeSteam )
 			{
@@ -641,9 +641,9 @@ BuyItemDialog = {
 		}
 		else
 		{
-			this.m_nSubtotal = rgListing['converted_price_per_unit'];
+			this.m_nSubtotal = parseInt( rgListing['converted_price_per_unit'] );
 			this.m_nFeeAmount = 0;
-			this.m_nTotal = rgListing['converted_price_per_unit'];
+			this.m_nTotal = parseInt( rgListing['converted_price_per_unit'] );
 			$('market_buynow_dialog_totals').hide();
 		}
 
