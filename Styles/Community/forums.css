@@ -1590,7 +1590,6 @@ select.subforum_select_control {
 }
 .commenthistory_comment .comment_item_desc {
 	font-size: 11px;
-	color: #555555;
 }
 .commenthistory_comment .comment_text {
 	padding-left: 20px;
@@ -1598,10 +1597,10 @@ select.subforum_select_control {
 	overflow-x: hidden;
 }
 .commenthistory_comment.deleted, .commenthistory_comment.deleted .comment_item_title a {
-	color: #555555;
+	opacity: .5;
 }
 .commenthistory_comment.deleted .comment_item_desc {
-	color: #333333;
+	opacity: .5;
 }
 
 .commenthistory_author {

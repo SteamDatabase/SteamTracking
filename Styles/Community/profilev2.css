@@ -210,11 +210,6 @@ body.profile_page.flat_page #footer_spacer {
 	line-height: 40px;
 	font-size: 24px;
 	color: #ffffff;
-
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
