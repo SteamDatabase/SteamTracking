@@ -10429,8 +10429,8 @@
 			"gateway_item_name"					"Unused Operation Tough Break Pass"
 			"required_item_name"				"Activated Operation Tough Break Pass"
 			"operation_start_date"				"2015-10-16 00:00:00" 
-			"stop_adding_to_queue_date"			"2030-01-01 00:00:00" 
-			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2017-02-01 00:00:00"
+			"stop_giving_to_player_date"		"2017-02-01 00:00:00"
 			"operation_lootlist"				"timed_reward_operation_drop"
 		}
 
@@ -56658,6 +56658,25 @@
 					"heavy"	"scenes/player/items/taunts/taunt_table_flip_prop_outro.vcd"
 				}
 			}
+		}
+		"1176"
+		{
+			"name"	"Team Fortress 2 Soundtrack Promo Package"
+			"item_class"	"craft_item"
+			"craft_material_type"	""
+			"show_in_armory"	"0"
+			"image_inventory"	"backpack/crafting/gift_mystery"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"item_quality"	"unique"
+			"propername" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"item_type_name"	"#TF_Package_Type"
+			"item_name"	"#TF_TeamFortress2_Soundtrack_Promo_Package"
+			"item_description"	"#TF_TeamFortress2_Soundtrack_Promo_Package_Desc"
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
 
 
@@ -112205,6 +112224,39 @@
 				}
 			}
 		}								
+		"2159"
+		{
+			"name" "Team Fortress 2 Soundtrack Promo"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Team Fortress 2 Soundtrack Promo Package"		"1"
+				"Store Purchase Promotion Package"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_TeamFortress2_Soundtrack_Promo"
+			"item_description"	"#TF_TeamFortress2_Soundtrack_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+		}
 
 
 
