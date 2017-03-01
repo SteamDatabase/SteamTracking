@@ -2127,6 +2127,11 @@ CAppearMonitor.prototype.TrackAppearanceIfVisible = function( elTarget )
 	if( !this.bIsElementVisible( elTarget ) )
 		return;
 
+	this.TrackAppearance( elTarget );
+};
+
+CAppearMonitor.prototype.TrackAppearance = function( elTarget )
+{
 	// Find our element, splice it out if we were tracking it
 	for( var i=this.rgMonitoredElements.length-1; i>=0; i--)
 	{

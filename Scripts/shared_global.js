@@ -3804,7 +3804,36 @@ function InitBBCodeVideos( bAllowAutoPlay )
 }
 
 
-function LoginUsingSteamClient( $baseURL )
+function LoginUsingSteamClient( baseURL )
 {
+	var lastLogin = V_GetCookie('lastAutoLogin');
+	if ( !lastLogin )
+	{
+		V_SetCookie('lastAutoLogin', '1', 1 / 24); // only try auto login once an hour
+		if ('withCredentials' in new XMLHttpRequest()) { // make sure the browser respects CORS
+			$J.ajax({
+				type: "GET",
+				url: 'http://localhost:27060/auth/?u=public',
+				dataType: "json",
+				success: function (data) {
+					$J.ajax({
+						type: "POST",
+						url: baseURL + '/login/checkclientautologin',
+						data: {
+							'steamid': data['steamid'],
+							'sessionkey': data['sessionkey'],
+							'encrypted_loginkey': data['encrypted_loginkey'],
+							'digest': data['digest'],
+							'redirectURL': window.location.href
+						},
+						dataType: "json",
+						success: function (data) {
+							location.reload();
+						}
+					});
+				}
+			});
+		}
+	}
 }
 

@@ -193,6 +193,11 @@ body{
 	#landingWelcome .appName {
 		margin-top: 5px;
 	}
+
+	#landingWelcome .appNameRetired {
+		margin-top: 5px;
+		color: #ca5029;
+	}
 	
 		#landingWelcome .appName .adminSection {
 			color: #00adee;

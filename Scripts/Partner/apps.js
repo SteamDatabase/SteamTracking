@@ -3309,7 +3309,7 @@ function OnChangeTagCategoryType( htmlID )
 	}
 }
 
-function UpdateReleaseRequest( nAppId, rgChanges )
+function UpdateReleaseRequest( nAppId, rgChanges, bReload = true )
 {
 	// ensure session ID is present
 	if ( !( 'sessionid' in rgChanges ) ) {
@@ -3327,7 +3327,9 @@ function UpdateReleaseRequest( nAppId, rgChanges )
 		success: function( response )
 		{
 			if( response.success == 1 ) {
-				location.reload();
+				if ( bReload ) {
+					location.reload();
+				}
 			} else {
 				alert("Update failed (Error code: " + response.success);
 			}

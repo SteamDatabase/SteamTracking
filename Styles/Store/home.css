@@ -2565,6 +2565,7 @@ a.gutter_item {
 
 .home_ctn.tab_container {
 background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);	padding-top: 1px; /* Crappy hack to turn off margin collapsing */
+	margin-top: 60px;
 }
 
 
@@ -3324,7 +3325,7 @@ body.v6 h2 .header_inline {
 }
 
 .hardware_ctn.double .hardware_content {
-	margin-bottom: 75px;
+	margin-bottom: 45px;
 	margin-top: 30px;
 }
 

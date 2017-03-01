@@ -47,6 +47,18 @@ GHomepage = {
 			var $TakeoverLink = $J('.home_page_takeover_link' ).children().first();
 			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
 
+			if( $TakeoverLink && $TakeoverLink.attr('href') )
+			{
+				var strURL = $TakeoverLink.attr('href');
+				var matches = /\/app\/([0-9]+)/.exec(strURL);
+				if( matches[1] )
+				{
+					var appid = matches[1];
+					$TakeoverLink.data('dsAppid', appid);
+					GDynamicStore.s_ImpressionTracker.TrackAppearance( $TakeoverLink );
+				}
+			}
+
 			$J(window ).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function() {
 				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
 				{
