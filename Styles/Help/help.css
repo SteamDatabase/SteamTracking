@@ -4117,6 +4117,7 @@ table {
 
 .help_game_cooldown_expirationtime {
 	color: #ef5e30;
+	margin-left: 8px;
 }
 
 .help_game_cooldown_description_text {
