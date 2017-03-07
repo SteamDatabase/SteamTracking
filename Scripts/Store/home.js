@@ -621,7 +621,7 @@ GHomepage = {
 			rgRecommendationReasons.recommended_by_curator = false;
 			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 );
 
-			var $ReasonMain = $J('<div/>').addClass('main').addClass('curator').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", curator.name ) );
+			var $ReasonMain = $J('<div/>').addClass('main').addClass('curator').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", V_EscapeHTML( curator.name ) ) );
 			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar, '_medium' ) ) );
 
 			$RecommendedReason.append( $ReasonAvatar );
@@ -1777,7 +1777,7 @@ GSteamCurators = {
 			if ( curatorsCache.hasOwnProperty( clanID ) )
 			{
 				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<div/>', {'class': 'steam_curator_for_app tooltip', 'onclick': "top.location.href='" + curator.link + "'", "data-tooltip-content": curator.name } );
+				var $Curator =  $J('<div/>', {'class': 'steam_curator_for_app tooltip', 'onclick': "top.location.href='" + curator.link + "'", "data-tooltip-content": V_EscapeHTML( curator.name ) } );
 				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
 				$Curator.append( $CuratorImg );
 				$Curator.v_tooltip();
@@ -1832,7 +1832,7 @@ GSteamCurators = {
 			if ( curatorsCache.hasOwnProperty( clanID ) )
 			{
 				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-content": curator.name } );
+				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-content": V_EscapeHTML( curator.name ) } );
 				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
 				$Curator.append( $CuratorImg );
 				$Curator.v_tooltip();
@@ -1903,7 +1903,7 @@ GSteamCurators = {
 
 
 		// Add the image
-		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-content": curator.name } );
+		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-content": V_EscapeHTML( curator.name ) } );
 		var $CuratorImg = $J('<img/>', {'class': '', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ) });
 		$Curator.append( $CuratorImg );
 		$Curator.v_tooltip();
