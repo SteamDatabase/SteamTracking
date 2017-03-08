@@ -596,7 +596,9 @@
  bootstrap_look_up
  bootstrap_port
  ceilf
+ class_addMethod
  class_getInstanceMethod
+ class_replaceMethod
  close
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
@@ -677,6 +679,8 @@
  memcpy
  memset
  method_exchangeImplementations
+ method_getImplementation
+ method_getTypeEncoding
  mmap
  mmap$UNIX2003
  munmap
