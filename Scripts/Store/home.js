@@ -241,6 +241,11 @@ GHomepage = {
 
 		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
+		// CURATORS ( Must be initialized before the main cluster)
+		try {
+			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
+		} catch( e ) { OnHomepageException(e); }
+
 
 		// MAIN CLUSTER
 		try {
@@ -273,14 +278,6 @@ GHomepage = {
 		try {
 			GHomepage.RenderFriendsRecentlyPurchased();
 		} catch( e ) { OnHomepageException(e); }
-
-		// CURATORS
-		try {
-
-			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
-		} catch( e ) { OnHomepageException(e); }
-
-
 
 		// Sidebar
 		// Recommended tags
@@ -374,6 +371,8 @@ GHomepage = {
 	RenderMainClusterV2: function()
 	{
 		var rgDisplayListCombined = false;
+		GDynamicStore.s_rgDisplayedApps = [];
+
 		if ( g_AccountID == 0 )
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
@@ -622,7 +621,7 @@ GHomepage = {
 			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 );
 
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('curator').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", V_EscapeHTML( curator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar, '_medium' ) ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar != '0000000000000000000000000000000000000000' ? curator.avatar : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );

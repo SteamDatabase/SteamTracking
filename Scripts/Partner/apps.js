@@ -3309,11 +3309,16 @@ function OnChangeTagCategoryType( htmlID )
 	}
 }
 
-function UpdateReleaseRequest( nAppId, rgChanges, bReload = true )
+function UpdateReleaseRequest( nAppId, rgChanges, bReload )
 {
 	// ensure session ID is present
 	if ( !( 'sessionid' in rgChanges ) ) {
 		rgChanges[ 'sessionid' ] = g_sessionID;
+	}
+
+	if ( bReload == undefined )
+	{
+		bReload = true;
 	}
 
 	$J.ajax({
