@@ -286,6 +286,10 @@ select.hourselect,  select.minuteselect {
 	width: 210px;
 }
 
+.formrow_large {
+	position: relative;
+}
+
 .newformrow {
 	position: relative;
 	padding-bottom: 5px;
