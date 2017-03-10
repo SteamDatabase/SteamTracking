@@ -605,37 +605,44 @@ function ShowAddToCollection( id, appID )
 			'publishedfileid' : id
 		};
 
-		var $inputs = $J( '.add_to_collection_dialog_checkbox' );
-		for ( var i = 0; i < $inputs.length; ++i )
+		var inputs = $J( '.add_to_collection_dialog_checkbox' );
+		for ( var i = 0; i < inputs.length; ++i )
 		{
-			var $input = $inputs[i];
-			var publishedFileID = $input.id;
+			var input = inputs[i];
+			var publishedFileID = input.id;
 			if ( set_parent_collections[publishedFileID] === "in_collection" )
 			{
-				if ( !$input.checked )
+				if ( !input.checked )
 				{
 					params['collections[' + publishedFileID + '][remove]'] = true;
+					params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
 				}
 			}
 			else
 			{
-				if ( $input.checked )
+				if ( input.checked )
 				{
 					params['collections[' + publishedFileID + '][add]'] = true;
+					params['collections[' + publishedFileID + '][title]'] = $J( input ).data( 'title' );
 				}
 			}
 		}
 
 		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxaddtocollections',
 			params
-		).done( function( data ) {
-				dialog.Dismiss();
-			}).fail( function( jqxhr ) {
-				dialog.Dismiss();
-				ShowAlertDialog( 'Add to Collection', 'Failed! Message: ' + data.success );
-			});
-		}
-	);
+		).done( function( data ){
+			dialog.Dismiss();
+		}).fail( function( jqxhr ) {
+			dialog.Dismiss();
+			var errorText = 'There was a problem adding this item to the following collections:<br><br>';
+			for ( var i = 0; i < jqxhr.responseJSON.results.length; ++i )
+			{
+				var title = jqxhr.responseJSON.results[i].error;
+				errorText += title + '<br>';
+			}
+			ShowAlertDialog( 'Add to Collection', errorText );
+		});
+	} );
 
 	// ajax request to get the user's collections
 	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections', {
@@ -683,7 +690,7 @@ function ShowAddToCollection( id, appID )
 					continue;
 				}
 				var $container = $J('<div/>', {'class': 'add_to_collection_dialog_container'} );
-				var $input = $J('<input/>', {'type' : 'checkbox', 'class': 'add_to_collection_dialog_checkbox', 'name' : 'collections[' + publishedFileID + ']', 'id' : publishedFileID } );
+				var $input = $J('<input/>', {'type' : 'checkbox', 'class': 'add_to_collection_dialog_checkbox', 'name' : 'collections[' + publishedFileID + ']', 'id' : publishedFileID, 'data-title' : details['title'] } );
 				if ( set_parent_collections[publishedFileID] === "in_collection" )
 				{
 					$input.prop( 'checked', true );
