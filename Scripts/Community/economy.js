@@ -3999,13 +3999,10 @@ var Filter = {
 		}
 
 		// adjust page controls.  If the active page no longer has any items, dump the user on the first (0th) page
-		var cNewMaxPages = Math.floor( (cElementsDisplayed + INVENTORY_PAGE_ITEMS - 1 ) / INVENTORY_PAGE_ITEMS );
-		if ( cNewMaxPages <= 1 )
-			cNewMaxPages = 1;
+		var cNewMaxPages = Math.ceil( (cElementsDisplayed > 1 ? cElementsDisplayed - 1 : 1 ) / INVENTORY_PAGE_ITEMS );
 		g_ActiveInventory.pageTotal = cNewMaxPages;
 		if ( g_ActiveInventory.pageCurrent >= cNewMaxPages )
 		{
-			g_ActiveInventory.pageList[g_ActiveInventory.pageCurrent].hide();
 			g_ActiveInventory.SetActivePage(0);
 		}
 		g_ActiveInventory.UpdatePageCounts();
