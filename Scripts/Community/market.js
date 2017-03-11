@@ -1081,7 +1081,7 @@ function LoadRecentCompletedListings( )
 }
 
 var g_bBusyLoadingMyMarketListings = false;
-var g_oMyListings = null;
+var g_oMyHistory = null;
 function RefreshMyMarketListings()
 {
 	if ( g_bBusyLoadingMyMarketListings )
@@ -1105,25 +1105,6 @@ function RefreshMyMarketListings()
 
 				MergeWithAssetArray( response.assets );
 				eval( response.hovers );
-
-				if ( response.total_count > response.pagesize )
-				{
-					g_oMyListings = new CAjaxPagingControls(
-						{
-							query: '',
-							total_count: response.total_count,
-							pagesize: response.pagesize,
-							prefix: 'tabContentsMyActiveMarketListings',
-							class_prefix: 'market'
-						}, 'https://steamcommunity.com/market/mylistings/'
-					);
-
-					g_oMyListings.SetResponseHandler( function ( response )
-					{
-						MergeWithAssetArray( response.assets );
-						eval( response.hovers );
-					} );
-				}
 			}
 		},
 		onComplete: function() { g_bBusyLoadingMyMarketListings = false; }
