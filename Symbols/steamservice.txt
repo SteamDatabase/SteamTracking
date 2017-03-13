@@ -3091,6 +3091,7 @@
  b s_LastMiniDumpTime
  b s_Line
  b s_SharedUDPSocketPollHelper
+ b s_SingleProcessHangupMutex
  b s_SpewType
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB

@@ -629,6 +629,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamclientogs.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamengine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamengine.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamp2pvoice.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamp2pvoice.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/streamingfeature.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/subscribedfilelistcache.cpp
@@ -680,7 +681,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/asyncfileiohandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkfinder.cpp
