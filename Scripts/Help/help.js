@@ -1780,7 +1780,7 @@ HardwareRMA = {
 
 					HardwareRMA.VerifySerialThenAdvance( HardwareRMA.m_sSerialNumber );
 				}
-				else if ( data.need_login )
+				else if ( data.need_login )	
 				{
 					HelpWizard.PromptLogin();
 				}
@@ -1806,8 +1806,46 @@ HardwareRMA = {
 		else
 			$J('#hardware_serial_next').hide();
 	},
-
+	
 	VerifySerialThenAdvance: function( serial_number ) {
+		var input_valid = ( serial_number.length >= 10 && (serial_number[0] == 'f' || serial_number[0] == 'F') );
+		if ( input_valid )
+		{
+			$J.ajax({
+				type: "POST",
+				url: "https://help.steampowered.com/wizard/AjaxVerifySerialNumber",
+				data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+					serial_number: serial_number
+					} )
+			}).fail( function() {
+				$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>');
+			}).done( function( data ) {
+				switch ( data.availability_reason )
+				{
+					case 0:
+						HardwareRMA.OnVerifySerialThenAdvanceComplete( serial_number );
+					break;
+
+					case 1:
+						$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">The serial number you\'ve provided does is not valid for any Steam hardware product.  Please verify the serial number and try again.</div></div>');
+					break;
+
+					case 2:
+						$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">This hardware product is not available for replacement or return in your country through Steam.  Please contact your retailer for return and replacement options.</div></div>');
+					break;
+
+					default:
+						$J('#help_hardware_return_form').html('<div class="error_bg"><div id="error_description">There was an error processing this request. This product cannot be returned or replaced through Steam at this time.</div></div>');
+					break;
+				}
+			}).always( function() {
+				HardwareRMA.m_bDoingAjax = false;
+			} );
+		}
+	},
+	
+
+	OnVerifySerialThenAdvanceComplete: function( serial_number ) {
 		var input_valid = ( serial_number.length >= 10 && (serial_number[0] == 'f' || serial_number[0] == 'F') );
 		if ( input_valid )
 		{
