@@ -1082,7 +1082,7 @@ function LoadRecentCompletedListings( )
 
 var g_bBusyLoadingMyMarketListings = false;
 var g_oMyListings = null;
-function RefreshMyMarketListings()
+function RefreshMyMarketListings( bScrollIntoView )
 {
 	if ( g_bBusyLoadingMyMarketListings )
 	{
@@ -1094,6 +1094,7 @@ function RefreshMyMarketListings()
 	new Ajax.Request( 'https://steamcommunity.com/market/mylistings', {
 		method: 'get',
 		parameters: {
+			count: g_nMySellListingsPageSize
 		},
 		onSuccess: function( transport ) {
 			if ( transport.responseJSON )
@@ -1123,6 +1124,21 @@ function RefreshMyMarketListings()
 						MergeWithAssetArray( response.assets );
 						eval( response.hovers );
 					} );
+
+					g_nMySellListingsPageSize = response.pagesize;
+					$J( '#my_listing_pagesize_10' ).addClass( 'whiteLink' ).removeClass( 'disabled' );
+					$J( '#my_listing_pagesize_30' ).addClass( 'whiteLink' ).removeClass( 'disabled' );
+					$J( '#my_listing_pagesize_100' ).addClass( 'whiteLink' ).removeClass( 'disabled' );
+					$J( '#my_listing_pagesize_' + g_nMySellListingsPageSize ).removeClass( 'whiteLink' ).addClass( 'disabled' );
+
+					if ( bScrollIntoView )
+					{
+						var elTable = $J( '#tabContentsMyActiveMarketListingsTable' ).get(0);
+						if ( typeof elTable.scrollIntoView !== 'undefined' )
+						{
+							elTable.scrollIntoView();
+						}
+					}
 				}
 			}
 		},
@@ -2018,6 +2034,14 @@ ItemActivityTicker = {
 		setTimeout( function() { ItemActivityTicker.AdvanceTicker(); }, this.m_nTickerAdvanceRate );
 	}
 };
+
+function Market_SetActiveLisitingsPerPage( cListings )
+{
+	var bDecreasing = g_nMySellListingsPageSize > cListings;
+	g_nMySellListingsPageSize = cListings;
+	SetCookie( 'ActListPageSize', cListings, 365, '/market' );
+	RefreshMyMarketListings( bDecreasing );
+}
 
 $J(function() {
 	$$('a.tooltip').each( function( elem ) {
