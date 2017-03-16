@@ -745,7 +745,7 @@ GHomepage = {
 					var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-content": reviewSummary['sReviewScoreTooltip'] } );
 					$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall user reviews:') );
 					$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
-					if ( reviewSummary['cReviews'] > 0 )
+					if ( reviewSummary['reviewScore'] > 0 )
 					{
 						$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
 					}

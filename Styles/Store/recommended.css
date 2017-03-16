@@ -1600,7 +1600,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #a8926a;
 }
 
-.user_reviews_summary_bar .game_review_summary.no_reviews {
+.user_reviews_summary_bar .game_review_summary.no_reviews, .user_reviews_summary_bar .game_review_summary.not_enough_reviews {
 	color: #7092a5;
 }
 .user_reviews_sections {
@@ -2283,7 +2283,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 		font-weight: bold; /* bold */
 
 		}
-.user_reviews_filter_score .game_review_summary.no_reviews {
+.user_reviews_filter_score .game_review_summary.no_reviews, .user_reviews_filter_score .game_review_summary.not_enough_reviews {
 	color: #7092a5;
 }
 

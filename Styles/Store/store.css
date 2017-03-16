@@ -1756,7 +1756,7 @@ div.game_hover {
 .game_review_summary.positive {
 	color: #66C0F4;
 }
-.game_review_summary.no_reviews {
+.game_review_summary.no_reviews, .game_review_summary.not_enough_reviews {
 	color: #929396;
 }
 
