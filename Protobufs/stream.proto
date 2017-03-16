@@ -74,6 +74,8 @@ enum EStreamControlMessage {
 	k_EStreamControlVirtualHereShareDevice = 104;
 	k_EStreamControlSetSpectatorMode = 105;
 	k_EStreamControlRemoteHID = 106;
+	k_EStreamControlStartMicrophoneData = 107;
+	k_EStreamControlStopMicrophoneData = 108;
 }
 
 enum EStreamVersion {
@@ -115,6 +117,7 @@ enum EStreamBitrate {
 enum EStreamingDataType {
 	k_EStreamingAudioData = 0;
 	k_EStreamingVideoData = 1;
+	k_EStreamingMicrophoneData = 2;
 }
 
 enum EStreamMouseButton {
