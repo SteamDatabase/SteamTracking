@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5dfa6b7990aa6bdad1680fbeb8c877952b884105.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.0ce869efdbf01a3ed625356f42b74188bb4cd993.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7581,6 +7581,31 @@
 
 				]
 				
+			},
+			{
+				"name": "community_16 Key",
+				"defindex": 1364,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Spectrum Case Key",
+				"item_description": "This key only opens Spectrum cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_16",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_16.42f16533e06837b72df3b8a467f544c3e0670a95.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_16",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -19868,6 +19893,40 @@
 				
 			},
 			{
+				"name": "crate_community_16",
+				"defindex": 4351,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Spectrum Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_16",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_16.a2ec6a235e52612fa82e5858af3751b6e77f4ec2.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_16",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 207
+					}
+				]
+				
+			},
+			{
 				"name": "studded_bloodhound_gloves",
 				"defindex": 5027,
 				"item_class": "wearable_item",
@@ -28155,6 +28214,30 @@
 					"weapon_sawedoff",
 					"weapon_ssg08",
 					"weapon_m4a1"
+				]
+				
+			},
+			{
+				"item_set": "set_community_16",
+				"name": "The Spectrum Collection",
+				"items": [
+					"weapon_bizon",
+					"weapon_scar20",
+					"weapon_deagle",
+					"weapon_fiveseven",
+					"weapon_mp7",
+					"weapon_p250",
+					"weapon_sawedoff",
+					"weapon_galilar",
+					"weapon_m249",
+					"weapon_mac10",
+					"weapon_ump45",
+					"weapon_xm1014",
+					"weapon_awp",
+					"weapon_cz75a",
+					"weapon_m4a1_silencer",
+					"weapon_ak47",
+					"weapon_usp_silencer"
 				]
 				
 			},
