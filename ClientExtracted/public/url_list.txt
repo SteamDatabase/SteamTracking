@@ -500,7 +500,13 @@ StoreAddCachedPmtMethodPage
 
 StoreJoinPage
 {
-	url			"%store%join/?l=%language%"
+	url			"%store%/join/?l=%language%"
+	method		"internal"
+}
+
+CSGOAccountLinkPage
+{
+	url			"%store%/join/pwlink_csgo/?l=%language%"
 	method		"internal"
 }
 
