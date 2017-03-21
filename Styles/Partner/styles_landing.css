@@ -2356,3 +2356,15 @@ a.iconLink.admin_email_mismatch:hover {
 input#enablevac:disabled {
 	opacity: 0.2;
 }
+
+.landing_pending_apptransfer {
+	color: #ffffff;
+	padding: 10px;
+	background-color: #81a5d6;
+	border: 1px solid #a9cdff;
+	font-size: 14px;
+}
+
+.landing_pending_apptransfer div {
+	margin-left: 10px;
+}
