@@ -1045,11 +1045,13 @@
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
+ T LoadConVarsFromFile(char const*)
  T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
  T LogMsg(char const*, ...)
  T MakeFileWriteable(char const*)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T ParseBuildCommandLine(ConParams const&, KeyValues*, CUtlString&)
+ T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseUpdateCommandLine(ConParams const&, KeyValues*)
  T PchAppUpdateDetailString(int)
  T PchNameFromEAppUpdateError(int)
@@ -1228,8 +1230,10 @@
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
  b GCallbackMgr()::s_CallbackMgr
+ b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
+ b InitializeCharacterSets()::s_CharacterSetInitialized
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b LogMsg(char const*, ...)::autoMutex__
  b PchWrapText(char const*, int)::s_rgchTextBuf
@@ -1249,6 +1253,8 @@
  b exit_command
  b find_command
  b force_install_dir_command
+ b g_BreakSet
+ b g_BreakSetIncludingColons
  b g_CleanupSymbolTable
  b g_hSteamPipe
  b g_hSteamUser
@@ -1292,6 +1298,7 @@
  b g_pSysModuleSteam
  b guard variable for CPackedStore::GetFileHandle(int)::invalid
  b guard variable for GCallbackMgr()::s_CallbackMgr
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for LogMsg(char const*, ...)::autoMutex__
@@ -1317,6 +1324,7 @@
  b s_CurrentRoutingIDPtr
  b s_bCallbackManagerInitialized
  b s_bHWAccelCRC32
+ b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b set_spew_command
  b set_spew_level_command
@@ -1422,6 +1430,7 @@
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
  t FreeTree(ExprNode*&)
+ t GetNetAdrResolveCacheMutex()
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
@@ -1442,6 +1451,7 @@
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_main.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_predepot.cpp
  t _GLOBAL__sub_I_reliabletimer.cpp
  t _GLOBAL__sub_I_rtime.cpp
