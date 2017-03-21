@@ -492,7 +492,7 @@
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
  Plat_FloatTime
- Plat_GetExecutablePath
+ Plat_GetExecutablePathUTF8
  Plat_MSTime
  Plat_MSTime64
  Plat_RelativeTicks
@@ -2479,10 +2479,9 @@
  ThreadSleep
  ThreadTerminateProcessCode
  ThreadWaitForProcessExit
- V_ComposeFileName
+ V_AppendSlash
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes
- V_FixSlashes
  V_MakeAbsolutePath
  V_RemoveDotSlashes
  V_StripFilename

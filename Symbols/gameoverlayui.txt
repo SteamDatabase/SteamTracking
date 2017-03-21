@@ -9,6 +9,7 @@
  .objc_class_name_NSWindow
  .objc_class_name_NSWorkspace
  AXAPIEnabled
+ AXIsProcessTrustedWithOptions
  AssertMsgImplementation
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_
