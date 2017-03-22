@@ -470,13 +470,20 @@ body.sale_page_background {
 	color: #ffffff;
 }
 
-.sale_page_three_section_first_block
+.sale_page_three_section_top_block
 {
-	padding: 35px 0px 25px 15px;
+	padding: 15px 0px 25px 15px;
 	background-color: #365d7e;
 }
 
-.sale_page_three_section_lower_blocks
+.sale_page_three_section_middle_block
+{
+	margin-top: 25px;
+	padding: 15px 0px 25px 15px;
+	background-color: #365d7e;
+}
+
+.sale_page_three_section_bottom_block
 {
 	margin-top: 25px;
 	padding: 35px 0px 25px 15px;
@@ -493,7 +500,9 @@ body.sale_page_background {
 	text-transform: uppercase;
 }
 
-.sale_page_three_section_lower_blocks_promo_header {
+.sale_page_three_section_middle_blocks_promo_header,
+.sale_page_three_section_bottom_blocks_promo_header
+{
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 500; /* medium */
 
@@ -570,6 +579,13 @@ body.sale_page_background {
 		;
 	font-size: 13px;
 	line-height: 29px;
+}
+
+.sale_page_three_section_promo_header_image_top,
+.sale_page_three_section_promo_header_image_middle,
+.sale_page_three_section_promo_header_image_bottom {
+	left: -15px;
+	position: relative;
 }
 
 /* page admin block ended up with a bunch of random styles that are now copied/pasted everywhere- undo some of the damage here */
