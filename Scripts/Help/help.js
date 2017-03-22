@@ -1958,20 +1958,47 @@ HardwareRMA = {
 	},
 
 	OnVerifyShippingAddressSuccess: function( result ) {
-				if ( result.bValidAddress && result.bSuggestedAddressMatches )
+				if ( result.eShippingAddressVerificationDetail != 0 )
+		{
+						var error_text = 'We cannot ship your order to the address that you\'ve provided.';
+			switch ( result.eShippingAddressVerificationDetail )
+			{
+				case 4:
+					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is missing or look invalid.';
+					break;
+
+				case 3:
+					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
+					break;
+
+				case 1:
+				case 5:
+					error_text = 'We cannot ship your order to P.O. Box, APO, FPO, or DPO address that you\'ve provided.';
+					break;
+
+				case 6:
+					error_text = 'We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States.';
+					break;
+					
+				case 7:
+					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
+					break;					
+
+				case 2:
+					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
+					break;
+			}
+			this.DisplayShippingErrorMessage( error_text );	
+		}
+		else if ( result.bValidAddress && result.bSuggestedAddressMatches )
 		{
 			HardwareRMA.SubmitReplacementRMA();
 		}
-		else if ( !result.bSuggestedAddressMatches )
-		{
-						Shipping_UpdateFieldsFromVerificationCall( result );
-			this.ShowShippingCorrectionsForm();
-		}
 		else
 		{
-			var error_text = 'This does not appear to be a valid address. Please check your city, state and postal code entries and try again.';
-			this.DisplayShippingErrorMessage( error_text );
-		}
+			Shipping_UpdateFieldsFromVerificationCall( result );
+			this.ShowShippingCorrectionsForm();
+		}		
 	},
 
 	OnVerifyShippingAddressFailure: function() {
