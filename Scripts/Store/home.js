@@ -672,7 +672,7 @@ GHomepage = {
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 			}
 			else if ( rgItemData && rgItemData.coming_soon )
-				strStatus = 'Forudkøb nu';
+				strStatus = 'Pre-Purchase Now';
 			else if ( rgItemData && rgItemData.video )
 				strStatus = 'Now Available to Watch';
 			else
