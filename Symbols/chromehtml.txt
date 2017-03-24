@@ -116,6 +116,8 @@
  B __g_CreateCHTMLControllerIHTMLChromeController_reg
  B g_VecLoadedModules
  B g_machClient
+ B g_mutexTempTextBuffer
+ B g_vecTempTextBuffer
  B s_NoEscConversion
  B s_StringCharConversion
  CValidator::ClaimArrayMemory(void*)
@@ -125,6 +127,8 @@
  CValidator::Push(char const*, void*, char const*)
  CreateSimpleProcess
  CreateVProfile
+ D Steam_GetBaseUserFolder(EUniverse)::nCanary
+ D Steam_GetBaseUserFolder(EUniverse)::rgchFolder
  D typeinfo for CCookie
  D typeinfo for CHTMLBaseProtoBufMsg
  D typeinfo for CHTMLController
@@ -491,8 +495,10 @@
  Msg
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
+ Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePathUTF8
+ Plat_IsInDebugSession
  Plat_MSTime
  Plat_MSTime64
  Plat_RelativeTicks
@@ -695,6 +701,7 @@
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::SetName(char const*)
  SteamThreadTools::CThread::Start(unsigned long)
+ SteamThreadTools::CThread::Yield()
  SteamThreadTools::CThread::~CThread()
  SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  SteamThreadTools::CThreadEvent::Reset()
@@ -2234,7 +2241,9 @@
  T COSXChromeIPCWakeThread::~COSXChromeIPCWakeThread()
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
+ T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
+ T CPathString::~CPathString()
  T CSharedMemStream::BWaitForDataToGet()
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
@@ -2325,6 +2334,7 @@
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<int, CUtlMemory<int> >::AddToTail(int&&)
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
@@ -2363,6 +2373,7 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T MakeFileWriteable(char const*)
+ T PchNameFromEUniverse(int)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
@@ -2471,7 +2482,9 @@
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
+ ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
+ ThreadInterlockedExchange
  ThreadInterlockedIncrement
  ThreadIsProcessActive
  ThreadIsProcessIdActive
@@ -2487,6 +2500,7 @@
  V_StripFilename
  V_StripLastDir
  V_UnqualifiedFileName
+ V_atoi
  V_snprintf
  V_strncpy
  V_vsnprintf
@@ -2742,24 +2756,26 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
+ b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamCommunityURL
- b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamDisableSandbox
- b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamDisableWinH264
  b CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamStoreURL
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
  b CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
+ b GetNetAdrResolveCacheMutex()::mutex
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamCommunityURL
- b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamDisableSandbox
- b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamDisableWinH264
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, bool)::s_CmdLineParamStoreURL
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
+ b s_CmdLineParamDisableSandbox
+ b s_CmdLineParamDisableWinH264
  b s_HTMLController
+ b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  bootstrap_look_up
  bootstrap_port
@@ -2767,8 +2783,10 @@
  chmod$UNIX2003
  close$UNIX2003
  connect$UNIX2003
+ d s_EUniverse
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ dlsym
  dyld_stub_binder
  fflush
  fprintf
@@ -2781,6 +2799,7 @@
  g_pMemAllocSteam
  getenv
  getpid
+ getpwuid
  getuid
  launch_data_alloc
  launch_data_dict_insert
@@ -2979,18 +2998,23 @@
  strtoll
  strtoul
  strtoull
+ t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
  t FileSelect(dirent const*)
+ t GetNetAdrResolveCacheMutex()
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t _GLOBAL__sub_I_chrome_ipc_client.cpp
  t _GLOBAL__sub_I_chromewrapper.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
+ t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_extension_set.cc
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_netadr.cpp
+ t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception

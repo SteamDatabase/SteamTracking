@@ -663,6 +663,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../common/clientdirectories.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/lzma-9.20/C/LzFind.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/lzma-9.20/C/LzmaDec.c

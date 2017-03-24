@@ -102,7 +102,7 @@
 		4
 		{
 			"name" "UK - London"
-			"region"	"europe"
+			"region"	"uk"
 			"countrycode"	"GB"
 			"latitude"	"51.500710"
 			"longitude"	"-0.124569"
@@ -354,6 +354,7 @@
 				3 { "dest"	14  }
 				4 { "dest"	86  }
 				5 { "dest"	87  }
+				6 { "dest"	29  "cost"	InwardCost }
 			}
 		}
 
@@ -637,7 +638,8 @@
 			"edges"
 			{
 				0 { "dest"	41  	"cost"	InwardCost }
-				1 { "dest"	4  	"cost"	InwardCost }
+				1 { "dest"	4 }
+				2 { "dest"	15	"cost"	InwardCost }
 			}
 		}
 
@@ -1017,6 +1019,11 @@
 			{
 				0 { "dest"	47 	"cost"	InwardCost }
 				1 { "dest"	160 }
+				2
+				{ 
+					"dest"	161
+					"cost"	LocalCostOneWayCellEdge
+				}	
 			}
 		}
 
@@ -1672,7 +1679,7 @@
 		85
 		{
 			"name" "UK - Manchester"
-			"region"	"europe"
+			"region"	"uk"
 			"countrycode"	"GB"
 			"latitude"	"53.474199"
 			"longitude"	"-2.248119"
@@ -2190,6 +2197,7 @@
 			"edges"
 			{
 				0 { "dest"	23 }
+				1 { "dest"	118 }
 			}
 		}
 		// #120 Australia - WAIX
@@ -2403,7 +2411,7 @@
 			{
 				0 { "dest"	94	"cost"	InwardCost }
 				1 { "dest"	133 }
-				2 { "dest"	20	"cost"	InwardCost }
+				2 { "dest"	20	"cost"	1 }
 			}
 		}				
 		135
@@ -2701,6 +2709,11 @@
 			{
 				0 { "dest"	62	"cost"	InwardCost }
 				1 { "dest"	152 }
+				2
+				{ 
+					"dest"	161
+					"cost"	LocalCostOneWayCellEdge
+				}	
 			}		
 		}		
 		158
