@@ -3934,6 +3934,9 @@
 	"Steam_VideoPlayer_Title"	"Error - Video Player"
 	"Steam_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
 
+	"Steam_Video360Player_Title"	"Error - Steam 360 Video Player"
+	"Steam_Video360Player_LaunchError"	"Playback of Steam 360 video requires the Steam 360 Video Player tool to be installed."
+
 	"Settings_SteamController"		"Steam Controller"
 	"SettingsSteamController_ResetSettings"		"Reset to Defaults"
 	"SettingsSteamController_ResetSettingsTitle" "Reset Steam Controller Settings"

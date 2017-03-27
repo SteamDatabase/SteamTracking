@@ -3439,6 +3439,9 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "SteamUI_VideoPlayer_Title"	"Steam - Video Player"
 "SteamUI_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
 
+"SteamUI_Video360Player_Title"	"Error - Steam 360 Video Player"
+"SteamUI_Video360Player_LaunchError"	"Playback of Steam 360 video requires the Steam 360 Video Player tool to be installed."
+
 "steam_community"	"Community"
 "steam_library"		"Library"
 
