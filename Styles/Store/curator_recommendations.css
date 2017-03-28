@@ -278,10 +278,11 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 		font-weight: 300; /* light */
 
 			font-style: italic;
-	padding: 14px 14px 0px 14px;
+	padding: 14px 14px 5px 14px;
 }
 .recommendation_disclosures {
 	padding-top: 5px;
+	padding-bottom: 9px;
 	padding-left: 14px;
 	font-size: 10px;
 	color: #8F98A0;
@@ -290,8 +291,6 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 .recommendation_readmore
 {
 	padding: 0px 0px 7px 14px;
-	bottom: 0px;
-	position: absolute;
 	font-size: 11px;
 }
 

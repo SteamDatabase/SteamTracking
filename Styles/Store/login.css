@@ -10,6 +10,9 @@
 	background-color: #000;
 	background-color: rgba(0,0,0,0.2)
 }
+.checkout_content_box.free_game {
+	background-color: rgba(0,0,0,0);
+}
 .checkout_content_box {
 	line-height:
 }

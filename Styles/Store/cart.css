@@ -480,11 +480,18 @@ body.v6 .cart_rightcol h2 {
 	float: right;
 	padding-top: 20px;
 	text-align: right;
+	display: inline-block;
+	overflow: auto;
 }
 
-.checkout_review_item_price.price {
+.checkout_review_item_price .price {
 	color: #c6d4df;
 	font-size: 14px;
+}
+
+.checkout_review_item_price .quantity {
+	color: #8F98A0;
+	font-size: 11px;
 }
 
 .checkout_review_prepurchase_notice {
@@ -887,6 +894,46 @@ body.v6 .cart_rightcol h2 {
 	color: #56707f;
 	text-decoration: underline;
 }
+
+.cart_item_qty {
+	position: relative;
+	display: inline-block;
+
+	float: right;
+	padding-top: 20px;
+	padding-left: 10px;
+	text-align: right;
+}
+
+.cart_item_qty .quantity
+{
+	font-size: 14px;
+	width: 45px;
+	background-color: rgba(0,0,0,0.2);
+	border-color: #000000;
+	border: none;
+	color: #b0aeac;
+}
+
+.cart_item_qty .btn_quantity_update
+{
+	font-size: 12px;
+	width: 45px;
+	background-color: #3c3d3e;
+	border-color: #000000;
+	border: none;
+	border-radius: 2px;
+	color: #D2E885;
+	cursor: pointer;
+	background: linear-gradient( to bottom, rgba(121,153,5,1) 5%, rgba(83,105,4,1) 95%);
+	padding: 1px;
+	display: none;
+
+	position: absolute;
+	bottom: -20px;
+	right: 0px;
+}
+
 .checkout_content.txn_totals {
 	padding: 14px;
 }
@@ -1965,7 +2012,7 @@ background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););backgroun
 	color: #ffffff;
 }
 .checkout_gotsteam_area p {
-	color: #8F98A0;
+	color: #c6d4df;
 	font-size: 15px;
 	font-weight: normal;
 }

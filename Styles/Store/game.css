@@ -718,7 +718,7 @@ img.game_header_image_full {
 	right: 16px;
 	bottom: -17px;
 	left: 16px;
-	overflow-x: auto;
+/*	overflow-x: auto; */
 	white-space: nowrap;
 	text-align: right;
 }
@@ -742,7 +742,69 @@ img.game_header_image_full {
 	vertical-align: middle;
 }
 
+.game_purchase_action_qty {
+	height: 32px;
+	display: inline-block;
+	background-color: #000000;
+	padding: 2px 2px 2px 0px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.game_purchase_action_qty > * {
+	font-size: 12px;
+	display: inline-block;
+	margin-left: 2px;
+	vertical-align: middle;
+}
+
+.game_purchase_qty_val
+{
+	position: relative;
+	display: inline-block;
+}
+
+.game_purchase_action_qty .quantity
+{
+	font-size: 12px;
+	width: 45px;
+	background-color: #3c3d3e;
+	border-color: #000000;
+	border: none;
+	color: #b0aeac;
+}
+
+.game_purchase_action_qty .btn_quantity_update
+{
+	font-size: 12px;
+	width: 45px;
+	background-color: #3c3d3e;
+	border-color: #000000;
+	border: none;
+	border-radius: 2px;
+	color: #D2E885;
+	cursor: pointer;
+	background: linear-gradient( to bottom, rgba(121,153,5,1) 5%, rgba(83,105,4,1) 95%);
+	padding: 1px;
+	display: none;
+
+	position: absolute;
+	bottom: -22px;
+	left: 0px;
+}
+
 .game_purchase_action .game_purchase_price {
+	background-color: #000000;
+	font-size: 13px;
+	padding-top: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	height: 24px;
+}
+
+.game_purchase_action .game_purchase_qty {
 	background-color: #000000;
 	font-size: 13px;
 	padding-top: 8px;

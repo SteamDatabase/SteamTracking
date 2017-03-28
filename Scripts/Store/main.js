@@ -1327,6 +1327,20 @@ function addToCart( subid, dedupe )
 		// within the set of all buttons, get the index of the one that we are dealing with!
 		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
 		var allButtons = jQuery( filterAllButtons );
+
+		// Check for quantity
+		var idx = ( dedupe !== undefined ) ? dedupe : 0;
+		var quantity = jQuery( '#quantity_update_'+subid+'_'+idx ).val();
+		if ( quantity !== undefined )
+		{
+			var filterStringForm = 'form[name=add_to_cart_'+subid+']';
+			var formSelector = jQuery( filterStringForm );
+			if ( formSelector.length === 1 )
+			{
+				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo(formSelector);
+			}
+		}
+
 		// do we have anything to examine?
 		if ( allButtons.length > 0 )
 		{
@@ -1401,6 +1415,39 @@ function addToCart( subid, dedupe )
 	try
 	{
 		document.forms['add_to_cart_'+subid].submit();
+	}
+	catch( e )
+	{
+		// swallow exceptions !
+	}
+
+}
+
+// Function to add a package to a cart, assumes form setup on the page
+function updateQtyCart( formName, id )
+{
+	try
+	{
+		// Check for quantity
+		var quantity = jQuery( '#'+id ).val();
+		if ( quantity !== undefined )
+		{
+			var filterStringForm = 'form[name='+formName+']';
+			var formSelector = jQuery( filterStringForm );
+			if ( formSelector.length === 1 )
+			{
+				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo(formSelector);
+			}
+		}
+	}
+	catch( e )
+	{
+		//console.log( e );
+		}
+	// Regardless of instrumentation failures, try to submit the form for the user.
+	try
+	{
+		document.forms[formName].submit();
 	}
 	catch( e )
 	{
