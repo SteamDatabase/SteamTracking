@@ -97450,7 +97450,66 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
 			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
 		}
-
+		"9396"
+		{
+			"name"	"Gamers Assembly Gold Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Gold"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_%s.mdl"
+			}
+		}
+ 		"9397"
+		{
+			"name"	"Gamers Assembly Silver Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Silver"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_%s.mdl"
+			}
+		}
+		"9398"
+		{
+			"name"	"Gamers Assembly Bronze Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Bronze"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_%s.mdl"
+			}
+		}
+ 		"9399"
+		{
+			"name"	"Gamers Assembly Participant Badge 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Participant"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_%s.mdl"
+			}
+		}
 
 
 
