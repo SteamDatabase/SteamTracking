@@ -97245,12 +97245,12 @@
 		}
 		"9369"
 		{
-			"name"				"UGC Highlander 3rd Place Platinum Season 20"
+			"name"				"UGC Highlander Steel Participant Season 20"
 			"prefab"			"tournament_medal"
-			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
 			"item_description"	"#TF_TournamentMedal_Season20"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
-			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
 		}
 		"9370"
 		{
@@ -97335,12 +97335,12 @@
 		}
 		"9379"
 		{
-			"name"				"UGC Highlander Steel Participant Season 20"
+			"name"				"UGC Highlander 3rd Place Platinum Season 20"
 			"prefab"			"tournament_medal"
-			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
 			"item_description"	"#TF_TournamentMedal_Season20"
-			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
-			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third_demo.mdl"
 		}
 		"9380"
 		{
