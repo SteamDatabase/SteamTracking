@@ -15308,9 +15308,23 @@
 			}
 			"attributes"
 			{
-				"primary reserve ammo max"		"200"
+				"primary reserve ammo max"		"300"
 				"inaccuracy jump initial"		"116.290001"
 				"inaccuracy jump"		"292.230011"
+				"recovery time stand"		"3.000000"
+				"recovery time stand final"		"0.100000"
+				"recovery time crouch"		"2.600000"
+				"recovery time crouch final"		"0.080000"
+				"inaccuracy fire"		"30.000000"
+				"recovery transition start bullet"		"1"
+				"recovery transition end bullet"		"15"
+				"max player speed"		"150"
+				"in game price"		"2000"
+				"recoil angle variance"		"20"
+				"cycletime"		"0.075000"
+				"recoil angle"		"0"
+				"recoil angle variance"		"0"
+				"recoil magnitude"		"20"
 			}
 			"inventory_image_data"
 			{
@@ -15726,7 +15740,7 @@
 				"icon display model"		"models/weapons/w_pist_revolver_icon.mdl"
 				"is revolver"		"1"
 				"is full auto"		"1"
-				"in game price"		"850"
+				"in game price"		"700"
 				"primary clip size"		"8"
 				"primary reserve ammo max"		"8"
 				"crosshair min distance"		"4"
