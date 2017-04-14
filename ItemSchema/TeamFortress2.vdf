@@ -55270,12 +55270,12 @@
 
 		"1138"
 		{
-			"name"					"Powerup Warlock"
+			"name"					"Powerup Reflect"
 			"item_class"			"saxxy"
 			"craft_material_type"	""
-			"item_name"				"#TF_Powerup_Warlock"
-			"item_description"		"#TF_Powerup_Warlock_Desc"
-			"image_inventory"		"Effects/powerup_warlock_hud"
+			"item_name"				"#TF_Powerup_Reflect"
+			"item_description"		"#TF_Powerup_Reflect_Desc"
+			"image_inventory"		"Effects/powerup_reflect_hud"
 		}
 
 		"1139"
@@ -58192,7 +58192,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58231,7 +58231,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58300,7 +58300,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58394,7 +58394,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58454,7 +58454,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58499,7 +58499,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_pupil/robo_demo_pupil.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30011"
@@ -58520,7 +58520,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_beard_bombardier/robo_demo_beard_bombardier.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30012"
@@ -58633,7 +58633,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_fro/robo_demo_fro.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30017"
@@ -58697,7 +58697,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -58781,7 +58781,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_capotain/robo_demo_capotain.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30022"
@@ -58851,7 +58851,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_stuntman/robo_demo_stuntman.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30025"
@@ -58989,7 +58989,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_glengarry_botnet/robo_demo_glengarry_botnet.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30030"
@@ -59123,7 +59123,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_buccaneer_bicorne/robo_demo_buccaneer_bicorne.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30035"
@@ -59194,7 +59194,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_scotsmans_stovepipe/robo_demo_scotsmans_stovepipe.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30038"
@@ -59584,7 +59584,7 @@
 			"model_player"		"models/workshop/player/items/demo/robo_demo_chest/robo_demo_chest.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30056"
@@ -59659,7 +59659,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -59769,7 +59769,7 @@
 			"model_player"		"models/workshop/player/items/demo/tw2_demo_pants/tw2_demo_pants.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30062"
@@ -59839,7 +59839,7 @@
 			"model_player"		"models/workshop/player/items/demo/tw2_demo_hood/tw2_demo_hood.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30065"
@@ -59873,7 +59873,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -59925,7 +59925,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -59957,7 +59957,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -59989,7 +59989,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -60140,7 +60140,7 @@
 			"model_player"		"models/workshop/player/items/demo/mail_bomber/mail_bomber.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30074"
@@ -60377,7 +60377,7 @@
 			"propername"		"1"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30083"
@@ -60476,7 +60476,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"spy"		"1"
@@ -60897,7 +60897,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -60954,7 +60954,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_blam_o_shanter/jul13_blam_o_shanter.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30106"
@@ -60976,7 +60976,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_trojan_helmet/jul13_trojan_helmet.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30107"
@@ -60998,7 +60998,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_scotsmans_golfbag/jul13_scotsmans_golfbag.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30108"
@@ -61066,7 +61066,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_gallant_gael/jul13_gallant_gael.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30112"
@@ -61088,7 +61088,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_stormn_normn/jul13_stormn_normn.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30113"
@@ -61275,7 +61275,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -61406,7 +61406,7 @@
 			"model_player"		"models/workshop/player/items/demo/jul13_gaelic_garb/jul13_gaelic_garb.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30125"
@@ -61778,7 +61778,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -61842,7 +61842,7 @@
 			"model_player"		"models/workshop/player/items/demo/tw_demobot_armor/tw_demobot_armor.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"vision_filter_flags"		"4"
 		}
@@ -61858,7 +61858,7 @@
 			"model_player"		"models/workshop/player/items/demo/tw_demobot_helmet/tw_demobot_helmet.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"vision_filter_flags"		"4"
 		}
@@ -62138,7 +62138,7 @@
 			"model_player"		"models/workshop/player/items/demo/tw_sentrybuster/tw_sentrybuster.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"vision_filter_flags"		"4"
 		}
@@ -62495,7 +62495,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -62587,7 +62587,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -62624,7 +62624,7 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"heavy"		"1"
 			}
 		}
@@ -62647,7 +62647,7 @@
 			"model_player"		"models/workshop/player/items/demo/fall2013_eod_suit/fall2013_eod_suit.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30180"
@@ -62667,7 +62667,7 @@
 			"model_player"		"models/workshop/player/items/demo/fall2013_pirate_bandana/fall2013_pirate_bandana.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30181"
@@ -62985,7 +62985,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_octo_face/hw2013_octo_face.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30194"
@@ -63033,12 +63033,12 @@
 			}
 			"model_player_per_class"
 			{
-				"Demoman"		"models/workshop/player/items/all_class/hw2013_ethereal_hood/hw2013_ethereal_hood_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hw2013_ethereal_hood/hw2013_ethereal_hood_demo.mdl"
 				"spy"		"models/workshop/player/items/all_class/hw2013_ethereal_hood/hw2013_ethereal_hood_spy.mdl"
 			}
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 				"spy"		"1"
 			}
 		}
@@ -63112,7 +63112,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -63173,7 +63173,7 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30203"
@@ -63267,7 +63267,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -63462,7 +63462,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -63501,7 +63501,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -63614,7 +63614,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_blackguards_bicorn/hw2013_blackguards_bicorn.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30220"
@@ -63791,7 +63791,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_zombie_parrot/hw2013_zombie_parrot.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"attributes"
 			{
@@ -63966,7 +63966,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -64134,7 +64134,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_demo_executioner_hood/hw2013_demo_executioner_hood.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30241"
@@ -64150,7 +64150,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_demon_fro/hw2013_demon_fro.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30242"
@@ -64181,7 +64181,7 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"pyro"		"1"
 			}
 		}
@@ -64198,7 +64198,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_demo_cape/hw2013_demo_cape.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30245"
@@ -64283,7 +64283,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_the_ghoulic_extension/hw2013_the_ghoulic_extension.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30251"
@@ -64342,7 +64342,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -64419,7 +64419,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -64464,7 +64464,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -64869,7 +64869,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -64988,7 +64988,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65089,7 +65089,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_manbird_of_aberdeen/hw2013_manbird_of_aberdeen.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30283"
@@ -65282,7 +65282,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65348,7 +65348,7 @@
 			"model_player"		"models/workshop/player/items/demo/hw2013_the_parasight/hw2013_the_parasight.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30293"
@@ -65442,7 +65442,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65507,7 +65507,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65589,7 +65589,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65654,7 +65654,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65727,12 +65727,12 @@
 			}
 			"model_player_per_class"
 			{
-				"Demoman"		"models/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit_demo.mdl"
 				"pyro"		"models/workshop/player/items/all_class/xms2013_arctic_suit/xms2013_arctic_suit_pyro.mdl"
 			}
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 				"pyro"		"1"
 			}
 		}
@@ -65760,7 +65760,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65799,7 +65799,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -65854,7 +65854,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -66010,7 +66010,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -66397,7 +66397,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -66498,7 +66498,7 @@
 			"model_player"		"models/workshop/player/items/demo/xms2013_demo_plaid_boots/xms2013_demo_plaid_boots.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30334"
@@ -66525,7 +66525,7 @@
 			"model_player"		"models/workshop/player/items/demo/xms2013_demo_plaid_hat/xms2013_demo_plaid_hat.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30335"
@@ -66702,7 +66702,7 @@
 			"model_player"		"models/workshop/player/items/demo/sbox2014_stylish_degroot/sbox2014_stylish_degroot.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30341"
@@ -66876,7 +66876,7 @@
 			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_samurai_armour/sbox2014_demo_samurai_armour.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30349"
@@ -66969,7 +66969,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -67117,7 +67117,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -67185,7 +67185,7 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30359"
@@ -67287,7 +67287,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -67321,7 +67321,7 @@
 			"model_player"		"models/workshop/player/items/demo/sbox2014_juggernaut_jacket/sbox2014_juggernaut_jacket.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30364"
@@ -67386,7 +67386,7 @@
 			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30367"
@@ -67571,7 +67571,7 @@
 			"used_by_classes"
 			{
 				"sniper"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"visuals"
 			{
@@ -67896,7 +67896,7 @@
 			"model_player"		"models/workshop/player/items/demo/short2014_demo_mohawk/short2014_demo_mohawk.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30394"
@@ -68022,7 +68022,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -68474,7 +68474,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -68508,7 +68508,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -68679,7 +68679,7 @@
 			"model_player"		"models/workshop/player/items/demo/short2014_badlands_wanderer/short2014_badlands_wanderer.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30422"
@@ -68718,7 +68718,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -68803,7 +68803,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -68896,7 +68896,7 @@
 			"valid_for_shuffle"		"1"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30430"
@@ -68913,7 +68913,7 @@
 			"valid_for_shuffle"		"1"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30431"
@@ -68929,7 +68929,7 @@
 			"valid_for_shuffle"		"1"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30467"
@@ -68983,7 +68983,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -69111,7 +69111,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -69323,7 +69323,7 @@
 			"model_player"		"models/workshop/player/items/demo/sept2014_mann_of_the_seven_sees/sept2014_mann_of_the_seven_sees.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"static_attrs"
 			{
@@ -69442,7 +69442,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -69736,7 +69736,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -69767,7 +69767,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -70153,7 +70153,7 @@
 			"model_player"		"models/workshop/player/items/demo/sf14_deadking_head/sf14_deadking_head.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30517"
@@ -70172,7 +70172,7 @@
 			"model_player"		"models/workshop/player/items/demo/sf14_deadking_pauldrons/sf14_deadking_pauldrons.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30518"
@@ -70192,7 +70192,7 @@
 			"model_player"		"models/workshop/player/items/demo/sf14_demo_cyborg/sf14_demo_cyborg.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30519"
@@ -70211,7 +70211,7 @@
 			"model_player"		"models/workshop/player/items/demo/sf14_explosive_mind/sf14_explosive_mind.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30520"
@@ -70593,7 +70593,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -70700,7 +70700,7 @@
 			"model_player"		"models/workshop/player/items/demo/demo_dynamite/demo_dynamite.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30542"
@@ -70732,7 +70732,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -70827,7 +70827,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -70850,7 +70850,7 @@
 			"model_player"		"models/workshop/player/items/demo/eotl_summerhat/eotl_summerhat.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30548"
@@ -70900,7 +70900,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -70929,7 +70929,7 @@
 			"used_by_classes"
 			{
 				"sniper"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"heavy"		"1"
 			}
 		}
@@ -70963,7 +70963,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71045,7 +71045,7 @@
 			"model_player"		"models/workshop/player/items/demo/eotl_demopants/eotl_demopants.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30556"
@@ -71129,7 +71129,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71235,7 +71235,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71268,7 +71268,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71351,7 +71351,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71535,7 +71535,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -71711,7 +71711,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec2014_viking_helmet/dec2014_viking_helmet.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"static_attrs"
 			{
@@ -71741,7 +71741,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec2014_viking_boots/dec2014_viking_boots.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"static_attrs"
 			{
@@ -72118,7 +72118,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec2014_comforter/dec2014_comforter.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"static_attrs"
 			{
@@ -72206,7 +72206,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -72490,7 +72490,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -72504,7 +72504,7 @@
 					"scout"		"scenes/workshop/player/scout/low/taunt_burstchester.vcd"
 					"sniper"		"scenes/workshop/player/sniper/low/taunt_burstchester.vcd"
 					"soldier"		"scenes/workshop/player/soldier/low/taunt_burstchester.vcd"
-					"Demoman"		"scenes/workshop/player/demoman/low/taunt_burstchester.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/taunt_burstchester.vcd"
 					"medic"		"scenes/workshop/player/medic/low/taunt_burstchester.vcd"
 					"heavy"		"scenes/workshop/player/heavy/low/taunt_burstchester.vcd"
 					"pyro"		"scenes/workshop/player/pyro/low/taunt_burstchester.vcd"
@@ -72516,7 +72516,7 @@
 					"scout"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_scout.mdl"
 					"sniper"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_sniper.mdl"
 					"soldier"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_soldier.mdl"
-					"Demoman"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_demo.mdl"
+					"demoman"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_demo.mdl"
 					"medic"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_medic.mdl"
 					"heavy"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_heavy.mdl"
 					"pyro"		"models/workshop/player/items/all_class/taunt_burstchester/taunt_burstchester_pyro.mdl"
@@ -72556,7 +72556,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -72645,7 +72645,7 @@
 			"model_player"		"models/workshop/player/items/demo/cc_summer2015_bruces_bonnet/cc_summer2015_bruces_bonnet.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30628"
@@ -72664,7 +72664,7 @@
 			"model_player"		"models/workshop/player/items/demo/cc_summer2015_outta_sight/cc_summer2015_outta_sight.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30629"
@@ -72888,7 +72888,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -72925,7 +72925,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73002,7 +73002,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73040,7 +73040,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73248,7 +73248,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73530,7 +73530,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73563,7 +73563,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73585,17 +73585,17 @@
 			}
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"taunt"
 			{
 				"custom_taunt_scene_per_class"
 				{
-					"Demoman"		"scenes/workshop/player/demoman/low/true_scotsmans_call.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/true_scotsmans_call.vcd"
 				}
 				"custom_taunt_prop_per_class"
 				{
-					"Demoman"		"models/workshop/player/items/demo/bagpipes/bagpipes.mdl"
+					"demoman"		"models/workshop/player/items/demo/bagpipes/bagpipes.mdl"
 				}
 			}
 		}
@@ -73617,7 +73617,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -73664,7 +73664,7 @@
 					"scout"		"scenes/workshop/player/scout/low/zoomin_broom.vcd"
 					"sniper"		"scenes/workshop/player/sniper/low/zoomin_broom.vcd"
 					"soldier"		"scenes/workshop/player/soldier/low/zoomin_broom.vcd"
-					"Demoman"		"scenes/workshop/player/demoman/low/zoomin_broom.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/zoomin_broom.vcd"
 					"medic"		"scenes/workshop/player/medic/low/zoomin_broom.vcd"
 					"heavy"		"scenes/workshop/player/heavy/low/zoomin_broom.vcd"
 					"pyro"		"scenes/workshop/player/pyro/low/zoomin_broom.vcd"
@@ -73676,7 +73676,7 @@
 					"scout"		"scenes/workshop/player/scout/low/zoomin_broom_exit.vcd"
 					"sniper"		"scenes/workshop/player/sniper/low/zoomin_broom_exit.vcd"
 					"soldier"		"scenes/workshop/player/soldier/low/zoomin_broom_exit.vcd"
-					"Demoman"		"scenes/workshop/player/demoman/low/zoomin_broom_exit.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/zoomin_broom_exit.vcd"
 					"medic"		"scenes/workshop/player/medic/low/zoomin_broom_exit.vcd"
 					"heavy"		"scenes/workshop/player/heavy/low/zoomin_broom_exit.vcd"
 					"pyro"		"scenes/workshop/player/pyro/low/zoomin_broom_exit.vcd"
@@ -73688,7 +73688,7 @@
 					"scout"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_scout.mdl"
 					"sniper"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_sniper.mdl"
 					"soldier"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_soldier.mdl"
-					"Demoman"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_demo.mdl"
+					"demoman"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_demo.mdl"
 					"medic"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_medic.mdl"
 					"heavy"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_heavy.mdl"
 					"pyro"		"models/workshop/player/items/all_class/zoomin_broom/zoomin_broom_pyro.mdl"
@@ -73949,7 +73949,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74022,7 +74022,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74060,7 +74060,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74091,7 +74091,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74302,7 +74302,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74328,7 +74328,7 @@
 			"model_player"		"models/workshop/player/items/demo/bak_hood_of_sorrows/bak_hood_of_sorrows.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30724"
@@ -74370,7 +74370,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74475,7 +74475,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"spy"		"1"
@@ -74627,7 +74627,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74685,7 +74685,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec15_shin_shredders/dec15_shin_shredders.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30743"
@@ -74710,7 +74710,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74809,7 +74809,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -74904,7 +74904,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75127,7 +75127,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75177,7 +75177,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75229,7 +75229,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75397,7 +75397,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75552,7 +75552,7 @@
 			"model_player"		"models/workshop/player/items/demo/vampire_shades/vampire_shades.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30780"
@@ -75656,7 +75656,7 @@
 			"model_player"		"models/workshop/player/items/demo/demolitionists_dustcatcher/demolitionists_dustcatcher.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30789"
@@ -75714,7 +75714,7 @@
 			"holiday_restriction"		"halloween_or_fullmoon"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30794"
@@ -75798,7 +75798,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -75915,7 +75915,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76026,7 +76026,7 @@
 			"model_player"		"models/workshop/player/items/demo/hwn2016_spirit_of_the_bombing_past/hwn2016_spirit_of_the_bombing_past.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30808"
@@ -76057,7 +76057,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76119,7 +76119,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76228,7 +76228,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76273,7 +76273,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76287,7 +76287,7 @@
 					"scout"		"scenes/workshop/player/scout/low/secondrate_sorcery.vcd"
 					"sniper"		"scenes/workshop/player/sniper/low/secondrate_sorcery.vcd"
 					"soldier"		"scenes/workshop/player/soldier/low/secondrate_sorcery.vcd"
-					"Demoman"		"scenes/workshop/player/demoman/low/secondrate_sorcery.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/secondrate_sorcery.vcd"
 					"medic"		"scenes/workshop/player/medic/low/secondrate_sorcery.vcd"
 					"heavy"		"scenes/workshop/player/heavy/low/secondrate_sorcery.vcd"
 					"pyro"		"scenes/workshop/player/pyro/low/secondrate_sorcery.vcd"
@@ -76299,7 +76299,7 @@
 					"scout"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_scout.mdl"
 					"sniper"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_sniper.mdl"
 					"soldier"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_soldier.mdl"
-					"Demoman"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_demo.mdl"
+					"demoman"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_demo.mdl"
 					"medic"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_medic.mdl"
 					"heavy"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_heavy.mdl"
 					"pyro"		"models/workshop/player/items/all_class/secondrate_sorcery/secondrate_sorcery_pyro.mdl"
@@ -76345,13 +76345,13 @@
 			"model_player_per_class"
 			{
 				"soldier"		"models/workshop/player/items/all_class/dec16_stocking/dec16_stocking_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_stocking/dec16_stocking_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_stocking/dec16_stocking_demo.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_stocking/dec16_stocking_pyro.mdl"
 			}
 			"used_by_classes"
 			{
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"pyro"		"1"
 			}
 		}
@@ -76448,13 +76448,13 @@
 			"model_player_per_class"
 			{
 				"soldier"		"models/workshop/player/items/all_class/dec16_handy_canes/dec16_handy_canes_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_handy_canes/dec16_handy_canes_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_handy_canes/dec16_handy_canes_demo.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_handy_canes/dec16_handy_canes_pyro.mdl"
 			}
 			"used_by_classes"
 			{
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"pyro"		"1"
 			}
 		}
@@ -76475,7 +76475,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec16_bomb_beanie/dec16_bomb_beanie.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30824"
@@ -76595,7 +76595,7 @@
 				"scout"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann_pyro.mdl"
@@ -76607,7 +76607,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76633,7 +76633,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec16_bomber_knight/dec16_bomber_knight.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"attributes"
 			{
@@ -76663,7 +76663,7 @@
 			{
 				"scout"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_scout.mdl"
 				"soldier"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_demo.mdl"
 				"heavy"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_pyro.mdl"
 				"spy"		"models/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice_spy.mdl"
@@ -76673,7 +76673,7 @@
 			{
 				"scout"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
 				"spy"		"1"
@@ -76707,7 +76707,7 @@
 				"scout"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_woolen_warmer/dec16_woolen_warmer_pyro.mdl"
@@ -76719,7 +76719,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76771,7 +76771,7 @@
 			"model_player"		"models/workshop/player/items/demo/dec16_elf_esteem/dec16_elf_esteem.mdl"
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 		}
 		"30838"
@@ -76803,7 +76803,7 @@
 				"scout"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_scout.mdl"
 				"sniper"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_sniper.mdl"
 				"soldier"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_soldier.mdl"
-				"Demoman"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_demo.mdl"
+				"demoman"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_demo.mdl"
 				"medic"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_heavy.mdl"
 				"pyro"		"models/workshop/player/items/all_class/dec16_head_prize/dec16_head_prize_pyro.mdl"
@@ -76815,7 +76815,7 @@
 				"scout"		"1"
 				"sniper"		"1"
 				"soldier"		"1"
-				"Demoman"		"1"
+				"demoman"		"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
@@ -76912,17 +76912,17 @@
 			}
 			"used_by_classes"
 			{
-				"Demoman"		"1"
+				"demoman"		"1"
 			}
 			"taunt"
 			{
 				"custom_taunt_scene_per_class"
 				{
-					"Demoman"		"scenes/workshop/player/demoman/low/taunt_scotsmans_stagger.vcd"
+					"demoman"		"scenes/workshop/player/demoman/low/taunt_scotsmans_stagger.vcd"
 				}
 				"custom_taunt_prop_per_class"
 				{
-					"Demoman"		"models/workshop/player/items/demo/taunt_scotsmans_stagger/taunt_scotsmans_stagger.mdl"
+					"demoman"		"models/workshop/player/items/demo/taunt_scotsmans_stagger/taunt_scotsmans_stagger.mdl"
 				}
 			}
 		}
@@ -96977,6 +96977,10 @@
 		{
 			"name"				"UGC Highlander 1st Place Platinum Season 19"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
 			"item_description"	"#TF_TournamentMedal_Season19"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first"
@@ -96986,6 +96990,10 @@
 		{
 			"name"				"UGC Highlander 2nd Place Platinum Season 19"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
 			"item_description"	"#TF_TournamentMedal_Season19"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second"
@@ -96995,6 +97003,10 @@
 		{
 			"name"				"UGC Highlander 3rd Place Platinum Season 19"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
 			"item_description"	"#TF_TournamentMedal_Season19"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
@@ -97004,6 +97016,10 @@
 		{
 			"name"				"UGC Highlander Platinum Participant Season 19"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
 			"item_description"	"#TF_TournamentMedal_Season19"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant"
@@ -97229,6 +97245,10 @@
 		{
 			"name"				"UGC Highlander 1st Place Platinum Season 20"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
 			"item_description"	"#TF_TournamentMedal_Season20"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first"
@@ -97238,6 +97258,10 @@
 		{
 			"name"				"UGC Highlander 2nd Place Platinum Season 20"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
 			"item_description"	"#TF_TournamentMedal_Season20"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second"
@@ -97256,6 +97280,10 @@
 		{
 			"name"				"UGC Highlander Platinum Participant Season 20"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
 			"item_description"	"#TF_TournamentMedal_Season20"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant"
@@ -97337,6 +97365,10 @@
 		{
 			"name"				"UGC Highlander 3rd Place Platinum Season 20"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
 			"item_description"	"#TF_TournamentMedal_Season20"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
@@ -97346,6 +97378,10 @@
 		{
 			"name"				"UGC 6vs6 1st Place Platinum Season 22"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_1st"
 			"item_description"	"#TF_TournamentMedal_Season22"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first"
@@ -97355,6 +97391,10 @@
 		{
 			"name"				"UGC 6vs6 2nd Place Platinum Season 22"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_2nd"
 			"item_description"	"#TF_TournamentMedal_Season22"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second"
@@ -97364,6 +97404,10 @@
 		{
 			"name"				"UGC 6vs6 3rd Place Platinum Season 22"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_3rd"
 			"item_description"	"#TF_TournamentMedal_Season22"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
@@ -97373,6 +97417,10 @@
 		{
 			"name"				"UGC 6vs6 Platinum Participant Season 22"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_Participant"
 			"item_description"	"#TF_TournamentMedal_Season22"
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant"
@@ -97450,6 +97498,54 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
 			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
 		}
+		"9392"
+		{		
+			"name"				"RGB LAN 1st Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGB_LAN_Gold"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rgb_lan_gold/rgb_lan_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rgb_lan_gold/rgb_lan_gold_%s.mdl"
+			}
+		}
+ 		"9393"
+		{		
+			"name"				"RGB LAN 2nd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGB_LAN_Silver"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rgb_lan_silver/rgb_lan_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rgb_lan_silver/rgb_lan_silver_%s.mdl"
+			}
+		}
+ 		"9394"
+		{		
+			"name"				"RGB LAN 3rd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGB_LAN_Bronze"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rgb_lan_bronze/rgb_lan_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rgb_lan_bronze/rgb_lan_bronze_%s.mdl"
+			}
+		}
+  		"9395"
+		{		
+			"name"				"RGB LAN Participant 2017"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGB_LAN_Participant"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rgb_lan_participant/rgb_lan_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rgb_lan_participant/rgb_lan_participant_%s.mdl"
+			}
+		}
 		"9396"
 		{
 			"name"	"Gamers Assembly Gold Medal 2017"
@@ -97510,6 +97606,1301 @@
 				"basename"	"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_%s.mdl"
 			}
 		}
+		"9400"
+		{
+			"name"	"Chapelaria 6v6 Legatus 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_1st"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place.mdl"
+		}
+		"9401"
+		{
+			"name"	"Chapelaria 6v6 Legatus 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_2nd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place.mdl"
+		}
+		"9402"
+		{
+			"name"	"Chapelaria 6v6 Legatus 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_3rd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place.mdl"
+		}
+		"9403"
+		{
+			"name"	"Chapelaria 6v6 Legatus Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
+		}
+		"9404"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_1st"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place.mdl"
+		}
+		"9405"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_2nd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place.mdl"
+		}
+		"9406"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_3rd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place.mdl"
+		}
+		"9407"
+		{
+			"name"	"Chapelaria 6v6 Gladiator Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
+		}
+		"9408"
+		{
+			"name"	"Chapelaria Ultiduo 1st Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_1st"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold.mdl"
+		}
+		"9409"
+		{
+			"name"	"Chapelaria Ultiduo 2nd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_2nd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver.mdl"
+		}
+		"9410"
+		{
+			"name"	"Chapelaria Ultiduo 3rd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_3rd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze.mdl"
+		}
+		"9411"
+		{
+			"name"	"Chapelaria Ultiduo Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant.mdl"
+		}
+		"9412"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9413"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9414"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9415"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9416"
+		{		
+			"name"				"ETF2L 6v6 High Gold Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9417"
+		{		
+			"name"				"ETF2L 6v6 High Silver Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9418"
+		{		
+			"name"				"ETF2L 6v6 High Bronze Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9419"
+		{		
+			"name"				"ETF2L 6v6 High Playoff Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9420"
+		{		
+			"name"				"ETF2L 6v6 High Participation Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9421"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9422"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9423"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9424"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9425"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9426"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9427"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9428"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9429"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9430"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 24"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season24"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9431"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9432"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9433"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9434"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9435"
+		{		
+			"name"				"ETF2L 6v6 High Gold Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9436"
+		{		
+			"name"				"ETF2L 6v6 High Silver Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9437"
+		{		
+			"name"				"ETF2L 6v6 High Bronze Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9438"
+		{		
+			"name"				"ETF2L 6v6 High Playoff Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9439"
+		{		
+			"name"				"ETF2L 6v6 High Participation Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9440"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9441"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9442"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9443"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9444"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9445"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9446"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9447"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9448"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9449"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 25"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season25"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9450"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9451"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9452"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9453"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9454"
+		{		
+			"name"				"ETF2L 6v6 High Gold Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9455"
+		{		
+			"name"				"ETF2L 6v6 High Silver Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9456"
+		{		
+			"name"				"ETF2L 6v6 High Bronze Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9457"
+		{		
+			"name"				"ETF2L 6v6 High Playoff Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9458"
+		{		
+			"name"				"ETF2L 6v6 High Participation Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9459"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9460"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9461"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9462"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9463"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9464"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9465"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9466"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9467"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9468"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 26"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season26"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9469"
+		{		
+			"name"				"ETF2L Highlander Premiership Gold Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9470"
+		{		
+			"name"				"ETF2L Highlander Premiership Silver Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9471"
+		{		
+			"name"				"ETF2L Highlander Premiership Bronze Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9472"
+		{		
+			"name"				"ETF2L Highlander Premiership Participation Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9473"
+		{		
+			"name"				"ETF2L Highlander High/Mid Gold Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_HighMid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9474"
+		{		
+			"name"				"ETF2L Highlander High/Mid Silver Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_HighMid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9475"
+		{		
+			"name"				"ETF2L Highlander High/Mid Bronze Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_HighMid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9476"
+		{		
+			"name"				"ETF2L Highlander High/Mid Playoff Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_HighMid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9477"
+		{		
+			"name"				"ETF2L Highlander High/Mid Participation Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_HighMid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9478"
+		{		
+			"name"				"ETF2L Highlander Open Gold Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9479"
+		{		
+			"name"				"ETF2L Highlander Open Silver Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9480"
+		{		
+			"name"				"ETF2L Highlander Open Bronze Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9481"
+		{		
+			"name"				"ETF2L Highlander Open Playoff Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9482"
+		{		
+			"name"				"ETF2L Highlander Open Participation Medal Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+		"9483"
+		{		
+			"name"				"ETF2L Highlander Premiership Gold Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9484"
+		{		
+			"name"				"ETF2L Highlander Premiership Silver Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9485"
+		{		
+			"name"				"ETF2L Highlander Premiership Bronze Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9486"
+		{		
+			"name"				"ETF2L Highlander Premiership Participation Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9487"
+		{		
+			"name"				"ETF2L Highlander High Gold Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9488"
+		{		
+			"name"				"ETF2L Highlander High Silver Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9489"
+		{		
+			"name"				"ETF2L Highlander High Bronze Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9490"
+		{		
+			"name"				"ETF2L Highlander High Playoff Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9491"
+		{		
+			"name"				"ETF2L Highlander High Participation Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9492"
+		{		
+			"name"				"ETF2L Highlander Mid Gold Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9493"
+		{		
+			"name"				"ETF2L Highlander Mid Silver Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9494"
+		{		
+			"name"				"ETF2L Highlander Mid Bronze Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9495"
+		{		
+			"name"				"ETF2L Highlander Mid Playoff Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9496"
+		{		
+			"name"				"ETF2L Highlander Mid Participation Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9497"
+		{		
+			"name"				"ETF2L Highlander Open Gold Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9498"
+		{		
+			"name"				"ETF2L Highlander Open Silver Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9499"
+		{		
+			"name"				"ETF2L Highlander Open Bronze Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9500"
+		{		
+			"name"				"ETF2L Highlander Open Playoff Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9501"
+		{		
+			"name"				"ETF2L Highlander Open Participation Medal Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+		"9502"
+		{		
+			"name"				"ETF2L Ultiduo 6 Gold Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Ultiduo6_Gold_Medal"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_ultiduo_2012"
+			"model_player"		"models/player/items/all_class/etf2l_ultiduo_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"9503"
+		{		
+			"name"				"ETF2L Ultiduo 6 Silver Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Ultiduo6_Silver_Medal"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_ultiduo_2012"
+			"model_player"		"models/player/items/all_class/etf2l_ultiduo_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"9504"
+		{		
+			"name"				"ETF2L Ultiduo 6 Bronze Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Ultiduo6_Bronze_Medal"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_ultiduo_2012"
+			"model_player"		"models/player/items/all_class/etf2l_ultiduo_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"9505"
+		{		
+			"name"				"ETF2L Ultiduo 6 Participation Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Ultiduo6_Participation_Medal"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_ultiduo_2012"
+			"model_player"		"models/player/items/all_class/etf2l_ultiduo_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"9506"
+		{		
+			"name"				"ETF2L Highlander Open 2 Gold Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open2_Gold"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_highlander_open_1st_place/etf2l_highlander_open_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_highlander_open_1st_place/etf2l_highlander_open_1st_place_%s.mdl"
+			}
+		}
+		"9507"
+		{		
+			"name"				"ETF2L Highlander Open 2 Silver Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open2_Silver"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_highlander_open_2nd_place/etf2l_highlander_open_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_highlander_open_2nd_place/etf2l_highlander_open_2nd_place_%s.mdl"
+			}
+		}
+ 		"9508"
+		{		
+			"name"				"ETF2L Highlander Open 2 Bronze Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open2_Bronze"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_highlander_open_3rd_place/etf2l_highlander_open_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_highlander_open_3rd_place/etf2l_highlander_open_3rd_place_%s.mdl"
+			}
+		}
+  		"9509"
+		{		
+			"name"				"ETF2L Highlander Open 2 Participation Medal"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open2_Participation"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_highlander_open_participant/etf2l_highlander_open_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_highlander_open_participant/etf2l_highlander_open_participant_%s.mdl"
+			}
+		}
+		"9510"
+		{
+			"name"	"Mappers vs. Machines Participant Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_TournamentMedal_MappersVsMachines_2017"
+			"item_description"	"#TF_TournamentMedal_MappersVsMachines_2017_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/mappers_vs_machines_medal/mappers_vs_machines_medal"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/mappers_vs_machines_medal/mappers_vs_machines_medal_%s.mdl"
+			}
+		}
+
+
 
 
 
