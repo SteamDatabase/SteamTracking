@@ -1044,6 +1044,9 @@ GHomepage = {
 		if ( !bPaginated )
 			nCapsules = rgCapsules.length;
 
+				if( rgCapsules.length < nCapsules )
+			return;
+
 		for( var j=0; j<rgCapsules.length; j+=nCapsules )
 		{
 			// Try to avoid half-filling a page
@@ -1051,7 +1054,7 @@ GHomepage = {
 				break;
 
 			var $elPageContainer = $J('<div>');
-			for( var k=0; k < nCapsules && k + j <= rgCapsules.length; k++ )
+			for( var k=0; k < nCapsules && k + j < rgCapsules.length; k++ )
 			{
 				var oItem = rgCapsules[ k + j ];
 				var rgOptions = {};
