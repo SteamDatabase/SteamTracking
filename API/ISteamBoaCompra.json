@@ -1,0 +1,11 @@
+{
+    "name": "ISteamBoaCompra",
+    "methods": [
+        {
+            "name": "BoaCompraCheckTransactionStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        }
+    ]
+}
