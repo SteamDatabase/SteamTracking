@@ -511,7 +511,7 @@ a.chat_ban_admin {
 	margin-right: 8px;
 	white-space: nowrap;
 
-	background-color: #434343
+	background-color: rgba( 102, 192, 244, 0.5);
 }
 
 .group_associated_game_name
@@ -528,6 +528,12 @@ a.chat_ban_admin {
 	margin-left: 8px;
 
 	cursor: pointer;
+	opacity: 0.5;
+	background: #444;
+	border-radius: 10px;
+}
+.group_associated_game_remove:hover {
+	opacity: 1.0;
 }
 
 #game_select_suggestions_ctn {

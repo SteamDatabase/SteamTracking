@@ -198,6 +198,7 @@ textarea.forumtopic_reply_textarea {
 .forum_topic_reply_count {
 	font-size: 14px;
 	float: right;
+	color: #c6d4df;
 }
 
 .forum_topic_reply_count img {
@@ -268,7 +269,7 @@ textarea.forumtopic_reply_textarea {
 	height: 25px;
 	background-color: rgba( 21, 31, 44, 0.7 );
 	border-radius: 3px;
-	color: #61696d;
+	color: #56707f;
 	padding: 0px 6px;
 	margin: 2px 0px;
 }
@@ -302,7 +303,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_paging_pagelink.active, .forum_paging_controls .commentthread_pagelink.active {
-	color: #747474;
+	color: #56707f;
 	cursor: default;
 }
 
