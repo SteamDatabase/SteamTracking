@@ -1796,7 +1796,7 @@
 	"Library_ControllerSaveBindingTitle"		"Save Bindings"
 	"Library_ControllerSetTitle"			"Set Title"
 	"Library_ControllerAddDescription"		"Add Description"
-	"Library_ControllerSaveReqUseTime"		"Please play with your configuration for at least fifteen minutes before publishing it."
+	"Library_ControllerSaveReqUseTime"		"Please play with your configuration for at least five minutes before publishing it."
 	"Library_ControllerSaveConfirm"			"SAVE"
 	"Library_ControllerPublishConfirm"	"PUBLISH"
 	"Library_ControllerSaveCancel"			"CANCEL"
@@ -5880,7 +5880,7 @@
 
 	"ControllerBinding_RecommendedTemplate" "Recommended"
 	"ControllerBinding_SavedCopyPasta_Title" "Custom Controller Config Uploaded!"
-	"ControllerBinding_SavedCopyPasta" "Your controller configuration has been uploaded successfully.\nID: {s:fileid}"
+	"ControllerBinding_SavedCopyPasta" "Your controller configuration has been uploaded successfully and a link has been copied to your clipboard.\nID: {s:fileid}"
 	"ControllerBinding_PrivateUploadSuccess" "Success!"
 	"ControllerBinding_PrivateUploadSuccess_Description" "Your controller configuration has been uploaded successfully."
 
