@@ -266,6 +266,7 @@ TenfootFooterPanel.WebFooter
 .PS4Origin #LB_btn_ps4,
 {
     visibility: visible;
+	font-family: "Noto Sans CJK JP Regular";
 }
 
 #LegendRow Label.LegendButtonBox.CrossButtonBox,  
@@ -286,25 +287,30 @@ TenfootFooterPanel.WebFooter
 #LegendRow Label.LegendButtonBox.CrossButtonBox {
     border: 2px solid #4ca2ff95;
  //   border: 2px solid #a2b9ef77;
+    font-size: 21px;
     color: #a2b9efee;
+    padding-top: -0.5px;
 }
 #LegendRow Label.LegendButtonBox.CircleButtonBox {
     border: 2px solid #4ca2ff95;
  //   border: 2px solid #f8738277;
     color: #f87382ee;
     font-size: 32px;
-    padding-top: -6.5px;
+    padding-top: -6.75px;
 }
 #LegendRow Label.LegendButtonBox.SquareButtonBox {
     border: 2px solid #4ca2ff95;
 //    border: 2px solid #eba1e677;
+    font-size: 44px;
     color: #eba1e6ee;
+    padding-top: -20.5px;
 }
 #LegendRow Label.LegendButtonBox.TriangleButtonBox {
     border: 2px solid #4ca2ff95;
  //   border: 2px solid #30ffff77;
     color: #30ffffee;
-    padding-top: -5px;
+    font-size: 30px;
+    padding-top: -7.5px;
 }
 
 #LegendRow .TriggerButtonBox
