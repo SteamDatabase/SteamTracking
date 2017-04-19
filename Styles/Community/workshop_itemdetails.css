@@ -1513,6 +1513,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		background-color: white;
 	}
 
+	.mediaTop.mediaOnly .actualmediactn.youtube_wrapper {
+		max-height: none;
+	}
+
 	.mediaTop .workshopItemControls
 	{
 		background-color: transparent;
