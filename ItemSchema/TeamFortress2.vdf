@@ -56662,9 +56662,25 @@
 		"1176"
 		{
 			"name"	"Team Fortress 2 Soundtrack Promo Package"
-			"item_class"	"craft_item"
-			"craft_material_type"	""
+			"item_class"	"tf_wearable"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"tf2_soundtrack_promo_package_loot_list"
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
 			"show_in_armory"	"0"
+			"item_slot"	"action"
 			"image_inventory"	"backpack/crafting/gift_mystery"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -56678,6 +56694,43 @@
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
+		"1177"
+		{
+			"name"	"The Audio File"
+			"prefab"			"no_craft hat"
+			"first_sale_date"	"2017/04/20"
+			"item_name"	"#TF_AudioFile"
+			"item_description"	"#TF_AudioFile_Desc"
+			"item_type_name"		"#TF_Wearable_Turntable"
+			"propername"		"1"
+			"drop_type"	"drop"
+			"image_inventory"	"backpack/player/items/all_class/soundtrack_hat"
+			"model_player_per_class"
+			{
+				"basename"	"models/player/items/all_class/soundtrack_hat_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"	"1"
+				}
+			}
+		}
+
+
 
 
 
@@ -98899,7 +98952,54 @@
 				"basename"	"models/workshop/player/items/all_class/mappers_vs_machines_medal/mappers_vs_machines_medal_%s.mdl"
 			}
 		}
-
+		"9511"
+		{
+			"name"	"CappingTV Ultiduo Summer Brawl 1st Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_CappingTV_Gold"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/cptv_ultiduo_gold/cptv_ultiduo_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/cptv_ultiduo_gold/cptv_ultiduo_gold_%s.mdl"
+			}
+		}
+		"9512"
+		{
+			"name"	"CappingTV Ultiduo Summer Brawl 2nd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_CappingTV_Silver"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/cptv_ultiduo_silver/cptv_ultiduo_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/cptv_ultiduo_silver/cptv_ultiduo_silver_%s.mdl"
+			}
+		}
+		"9513"
+		{
+			"name"	"CappingTV Ultiduo Summer Brawl 3rd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_CappingTV_Bronze"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/cptv_ultiduo_bronze/cptv_ultiduo_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/cptv_ultiduo_bronze/cptv_ultiduo_bronze_%s.mdl"
+			}
+		}
+		"9514"
+		{
+			"name"	"CappingTV Ultiduo Summer Brawl Participant 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_CappingTV_Participant"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/cptv_ultiduo_participant/cptv_ultiduo_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/cptv_ultiduo_participant/cptv_ultiduo_participant_%s.mdl"
+			}
+		}
 
 
 
