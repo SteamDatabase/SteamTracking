@@ -114,6 +114,7 @@ message CMsgClientLogonResponse {
 	optional int32 count_disconnects_to_migrate = 25;
 	optional int32 ogs_data_report_time_window = 26;
 	optional uint64 client_instance_id = 27;
+	optional bool force_client_update_check = 28;
 }
 
 message CMsgClientRequestWebAPIAuthenticateUserNonce {
