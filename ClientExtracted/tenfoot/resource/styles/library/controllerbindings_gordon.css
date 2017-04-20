@@ -4026,6 +4026,28 @@ ControllerConfigButton.Recommended #RecommendedConfig
 	visibility: visible;
 }
 
+ControllerConfigButton #TimeStamp
+{
+	font-size: 15px;
+	font-family: platformfont;
+	
+	align: right top;
+	color: white;
+	width: 200px;	
+	margin-top: 10px;
+	margin-right: 15px;
+	visibility: collapse;
+	font-weight: bold;
+	text-align: right;
+	z-index: 2;
+    visibility: collapse;
+}
+
+ControllerConfigButton.ShowTimestamp #TimeStamp
+{
+	visibility: visible;
+}
+
 ControllerConfigButton #ConfigContentWrapper
 {
 	flow-children: down;

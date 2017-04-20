@@ -313,6 +313,27 @@ TenfootFooterPanel.WebFooter
     padding-top: -7.5px;
 }
 
+.Linux #LegendRow Label.LegendButtonBox.CrossButtonBox {
+	font-size: 21px;
+	padding-top: .5px;
+	padding-left: -0.5px;
+}
+.Linux #LegendRow Label.LegendButtonBox.CircleButtonBox {
+	font-size: 26px;
+	padding-top: -2px;
+	padding-left: -0.3px;
+}
+.Linux #LegendRow Label.LegendButtonBox.SquareButtonBox {
+	font-size: 24px;
+	padding-top: -0.8px;
+	padding-left: -0.3px;
+}
+.Linux #LegendRow Label.LegendButtonBox.TriangleButtonBox {
+	font-size: 26px;
+	padding-top: -4px;
+	padding-left: -0.3px;
+}
+
 #LegendRow .TriggerButtonBox
 {
 	border-radius: 6px;
@@ -465,10 +486,6 @@ TenfootFooterPanel.WebFooter
 .Linux #LegendRow .BButtonBox,
 .Linux #LegendRow .XButtonBox,
 .Linux #LegendRow .YButtonBox,
-.Linux #LegendRow .CrossButtonBox,
-.Linux #LegendRow .CircleButtonBox,
-.Linux #LegendRow .SquareButtonBox,
-.Linux #LegendRow .TriangleButtonBox,
 .Linux #LegendRow .LBButtonBox,
 .Linux #LegendRow .RBButtonText,
 .Linux #LegendRow .TriggerButtonBox

@@ -11,6 +11,7 @@
 		<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />
 		<Label id="Votes" text="#ControllerBindingVotes" />
 		<Label id="ControllerType" />
+		<Label id="TimeStamp"/>
 		<Panel id="ConfigContentWrapper">
 				<Label id="Title" />
 				<Label id="Author" />

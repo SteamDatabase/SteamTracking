@@ -3710,6 +3710,7 @@ Set a category for these games to help you find them quickly and organize your L
 "steam_cdkeylink"		"CD Key"
 "steam_guide"			"Guide"
 "steam_guides"			"Community Guides"
+"steam_editcontroller"	"Controller Configuration"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Tools"
 "steam_menu_downloads" "Downloads"
