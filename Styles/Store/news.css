@@ -180,7 +180,7 @@ a.view_active:hover {
 
 .block_sub_header {
 	font-size: 11px;
-	color: #56707f;
+	color: #666465;
 	margin-bottom: 4px;
 	text-transform: uppercase;
 }
@@ -282,21 +282,22 @@ div#news_search {
 }
 
 .newsPostBlock {
-	margin-top: 10px;
-
+	margin-top: 2px;
+	margin-bottom: 24px;
 	clear: left;
 	vertical-align: top;
 }
 
 .newsPostBlock .feed {
 	margin-top: 2px;
-
+	clear: left;
+	float: left;
 	color: #56707f;
 	height: 14px;
 }
 
 .newsPostBlock .headline {
-	margin-bottom: 2px;
+	margin-bottom: 15px;
 }
 
 .newsPostBlock .headline .date {
@@ -306,18 +307,11 @@ div#news_search {
 	color: #56707f;
 }
 
-.newsPostBlock .capsule {
-	float: left;
-	margin-right: 8px;
-	width: 120px;
-}
-
 .newsPostBlock .headline .posttitle {
+	float: left;
 	font-weight: normal;
 	font-size: 24px;
 	max-width: 562px;
-	margin-top: -3px;
-	line-height: 25px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -334,7 +328,7 @@ div#news_search {
 
 
 .newsPostBlock .body {
-	color: #c6d4df;
+	color: #fff;
 	margin-top: 10px;
 	line-height: 19px;
 	clear: left;
@@ -345,11 +339,11 @@ div#news_search {
 
 		}
 .newsPostBlock .body a {
-    color: #c6d4df;
+    color: #9fbbcb;
     text-decoration: underline;
 }
 .newsPostBlock .body a:hover {
-    color: #66c0f4;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -379,25 +373,20 @@ div#news_search {
 	border-style: none;
 	width: 224px;
 }
-.steam_community_announcements .body img {
-	float: none;
-	width: 100%;
-	margin-right: 0px;
-}
 
 .share {
-	color: #56707f;
+	color: #c6d4df;
 	margin-top: 5px;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	font-size: 12px;
 	clear: both;
 	line-height: 14px;
     background: rgba( 0, 0, 0, 0.2 );
-    padding: 6px 8px 6px 8px;
+    padding: 6px 8px 2px 8px;
 }
 
 .share img {
-	vertical-align: bottom;
+	vertical-align: baseline;
 }
 
 .share a{
@@ -408,7 +397,7 @@ div#news_search {
 	margin-left: 18px;
 	margin-top:8px;
 	list-style-type: square;
-	color: #c6d4df;
+	color: #fff;
 }
 
 div.autocomplete {
