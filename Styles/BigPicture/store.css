@@ -58,6 +58,11 @@
 	background-image: url( "file://{images}/store/icon_platform_streamingvideo.png" );
 }
 
+.Streaming360VideoLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_streaming360video.png" );
+}
+
 .HTCViveLogo
 {
 	background-image: url( "file://{images}/store/icon_platform_htcvivelogo.png" );
@@ -70,7 +75,7 @@
 
 .RazerOSVRLogo
 {
-	background-image: url( "file://{images}/store/icon_platform_razerosvrlogo.png" );
+	background-image: url( "file://{images}/store/icon_platform_razerosvr.png" );
 }
 
 .HMDSeparator
@@ -646,7 +651,7 @@
 
 	background-color: none;
 
-	background-image: url( "/public/images/bigpicture/icon_in_library.png" );
+	background-image: url( "file://{images}/store/icon_in_library.png" );
    	background-repeat: no-repeat;
    	background-size: 64px 64px;
    	background-position: 6px center;
