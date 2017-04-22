@@ -100,3 +100,45 @@ function RemoveFilter( paramName )
 	$J( "#FilterForm").submit();
 }
 
+
+// All recommendations by your curators
+var g_oRecommendations = null;
+function InitCombinedRecommendationsPagingControls( oPagingData )
+{
+	g_oRecommendations = new CAjaxPagingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcombinedrecommendations/' );
+	g_oRecommendations.SetResponseHandler( function( response ) {
+		$J('.tooltip').v_tooltip();
+		GDynamicStore.DecorateDynamicItems();
+		$J( "#" + this.m_strElementPrefix + "Rows").InstrumentLinks();
+	});
+	g_oRecommendations.SetPageChangingHandler( function( nPage ) {
+		if ( !g_bInHashChange )
+		{
+			window.location.hash = 'p' + ( nPage + 1 );
+		}
+	} );
+
+	HandleHashChangeRecommendations( true );
+
+	GDynamicStore.DecorateDynamicItems();
+}
+
+function HandleHashChangeRecommendations( bClearResults )
+{
+	if ( window.location.hash.length > 2 && window.location.hash.substr(0,2) == "#p" )
+	{
+		var nPage = parseInt( window.location.hash.substr(2) );
+
+		if ( nPage - 1 != g_oRecommendations.m_iCurrentPage )
+		{
+			if ( bClearResults )
+			{
+				$J('.tab_item').remove()
+			}
+
+			g_oRecommendations.GoToPage( nPage - 1, false );
+		}
+	}
+}
+
+
