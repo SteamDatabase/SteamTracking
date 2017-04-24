@@ -2890,24 +2890,8 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	padding: 10px;
 	margin-bottom: 10px;
 	background-color: rgba( 0, 0, 0, 0.2 );
-}
 
-.mature_content_filtered.header {
-	font-size: 12px;
-	display: inline-block;
-	float: right;
-	background-color: transparent;
-	padding: 0;
-	margin: 0 15px 0 0;
 }
-
-.mature_content_filtered.sale {
-	position: absolute;
-	right: 0px;
-	top: -25px;
-	background-color: rgba( 0, 0, 0, 0.5 );
-}
-
 .mature_content_filtered a {
 	text-decoration: underline;
 	color: #66c0f4;

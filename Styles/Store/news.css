@@ -180,7 +180,7 @@ a.view_active:hover {
 
 .block_sub_header {
 	font-size: 11px;
-	color: #666465;
+	color: #56707f;
 	margin-bottom: 4px;
 	text-transform: uppercase;
 }
@@ -282,22 +282,21 @@ div#news_search {
 }
 
 .newsPostBlock {
-	margin-top: 2px;
-	margin-bottom: 24px;
+	margin-top: 10px;
+
 	clear: left;
 	vertical-align: top;
 }
 
 .newsPostBlock .feed {
 	margin-top: 2px;
-	clear: left;
-	float: left;
+
 	color: #56707f;
 	height: 14px;
 }
 
 .newsPostBlock .headline {
-	margin-bottom: 15px;
+	margin-bottom: 2px;
 }
 
 .newsPostBlock .headline .date {
@@ -307,11 +306,18 @@ div#news_search {
 	color: #56707f;
 }
 
-.newsPostBlock .headline .posttitle {
+.newsPostBlock .capsule {
 	float: left;
+	margin-right: 8px;
+	width: 120px;
+}
+
+.newsPostBlock .headline .posttitle {
 	font-weight: normal;
 	font-size: 24px;
 	max-width: 562px;
+	margin-top: -3px;
+	line-height: 25px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -328,7 +334,7 @@ div#news_search {
 
 
 .newsPostBlock .body {
-	color: #fff;
+	color: #c6d4df;
 	margin-top: 10px;
 	line-height: 19px;
 	clear: left;
@@ -339,11 +345,11 @@ div#news_search {
 
 		}
 .newsPostBlock .body a {
-    color: #9fbbcb;
+    color: #c6d4df;
     text-decoration: underline;
 }
 .newsPostBlock .body a:hover {
-    color: #ffffff;
+    color: #66c0f4;
     text-decoration: underline;
 }
 
@@ -373,20 +379,25 @@ div#news_search {
 	border-style: none;
 	width: 224px;
 }
+.steam_community_announcements .body img {
+	float: none;
+	width: 100%;
+	margin-right: 0px;
+}
 
 .share {
-	color: #c6d4df;
+	color: #56707f;
 	margin-top: 5px;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 	font-size: 12px;
 	clear: both;
 	line-height: 14px;
     background: rgba( 0, 0, 0, 0.2 );
-    padding: 6px 8px 2px 8px;
+    padding: 6px 8px 6px 8px;
 }
 
 .share img {
-	vertical-align: baseline;
+	vertical-align: bottom;
 }
 
 .share a{
@@ -397,7 +408,7 @@ div#news_search {
 	margin-left: 18px;
 	margin-top:8px;
 	list-style-type: square;
-	color: #fff;
+	color: #c6d4df;
 }
 
 div.autocomplete {
