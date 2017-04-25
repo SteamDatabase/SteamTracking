@@ -1252,11 +1252,13 @@ function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
 {
 	var el = $J(elem);
 	var youtubeurl = location.protocol + '//www.youtube.com/embed/' + videoid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct&autoplay=1';
-	var wrapper = $J( '<div/>', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
-	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', src: youtubeurl } );
+	var wrapper = $J( '<div/>', { 'class': 'dynamiclink_youtubeviewvideo' } );
+	var embed_wrapper = $J( '<div/>', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
+	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', src: youtubeurl, 'allowfullscreen': '' } );
 	if ( el.length )
 	{
-		wrapper.append( iframeContent );
+		embed_wrapper.append( iframeContent );
+		wrapper.append( embed_wrapper );
 		el.after( wrapper );
 		el.remove();
 	}
