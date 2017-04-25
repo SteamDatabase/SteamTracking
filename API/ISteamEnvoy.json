@@ -2,12 +2,6 @@
     "name": "ISteamEnvoy",
     "methods": [
         {
-            "name": "PaymentOutNotification",
-            "version": 1,
-            "httpmethod": "POST",
-            "parameters": []
-        },
-        {
             "name": "PaymentOutReversalNotification",
             "version": 1,
             "httpmethod": "POST",
