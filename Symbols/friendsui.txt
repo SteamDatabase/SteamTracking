@@ -8892,6 +8892,7 @@
  T FindTextTruncationPosition(unsigned long, wchar_t*, int, int, bool)
  T FriendAlias_t::IsLess(void*, FriendAlias_t const*, FriendAlias_t const*)
  T FriendsDialog()
+ T FriendsUIGetLauncherType()
  T FriendsUI_RunFrame()
  T GCallbackMgr()
  T GetAttributesAsString(CDirIterator const&)
@@ -9199,6 +9200,7 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T StringLessThan(char const* const&, char const* const&)
  T Sys_GetFactory(CSysModule*)
+ T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadInterface(char const*, char const*, CSysModule**, void**)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -13483,10 +13485,12 @@
  b CFriendsDialog::PerformLayout()::s_bOfflineMode
  b CFriendsListSubPanel::ISectionFromMemberAndSource(CSteamID const&, CSteamID const&)::fAsserted
  b CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
+ b CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b ERR_get_state.fallback
+ b FriendsUIGetLauncherType()::s_eLauncherType
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
  b GetFileTimestampString(long long)::fAsserted
@@ -13609,6 +13613,8 @@
  b guard variable for CFriendPanel::UpdateContents()::bInOfflineMode
  b guard variable for CFriendsDialog::PerformLayout()::s_bOfflineMode
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
+ b guard variable for CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
+ b guard variable for FriendsUIGetLauncherType()::s_eLauncherType
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPanelAnimationDictionary()::dictionary
