@@ -2372,8 +2372,8 @@ input#enablevac:disabled {
 
 .cdkey_requests_header {
 	display: inline-block;
-	font-size: 2px;
-	text-align: vertical;
+	font-size: 11px;
+	text-align: left;
 	padding: 6px;
 }
 
@@ -2535,7 +2535,7 @@ div .cdkey_request_details_row
 
 .cdkey_request_details_row .small_header_row
 {
-	font-size: 4px;
+	font-size: 11px;
 	float: left;
 	clear: left;
 	margin: 4px 0 4px 0;
