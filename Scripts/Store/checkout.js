@@ -514,10 +514,10 @@ function InitializeTransaction()
 	
 	try 
 	{
-				if ( $( 'send_via_email' ) )
+				if ( $( 'send_via_email' ) || $('send_via_friends') )
 		{
 			bIsGift = true;
-			if ( $( 'send_via_email' ).checked )
+			if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
 			{
 				giftee_email = $( 'email_input' ).value;
 			}
@@ -868,6 +868,15 @@ function OnInitializeTransactionFailure( detail, result )
 					break;
 				case 13:
 					error_text = 'Your purchase could not be completed because there are items in your cart that are restricted in your country.';
+					break;
+				case 70:
+					error_text = 'The friend you\'ve selected to recieve this gift already owns it.';
+					break;
+				case 71:
+					error_text = 'The gift you are trying to purchase is not available in the recipient\'s region.';
+					break;
+				case 72:
+					error_text = 'Due to regional price differences, the gift you are trying to send cannot be sent to the recipient\'s region.';
 					break;
 				default:
 					break;
@@ -2086,14 +2095,17 @@ function CheckFriendDisplay()
 {
 	try
 	{
-		if ( IsRadioButtonChecked( 'send_via_email' ) )
+		if ( $('send_via_email') )
 		{
-			$( 'email_input' ).disabled = false;
-		}
-		else
-		{
-			$( 'email_input' ).disabled = true;
-			$( 'email_input' ).value = '';
+			if ( IsRadioButtonChecked( 'send_via_email' ) )
+			{
+				$( 'email_input' ).disabled = false;
+			}
+			else
+			{
+				$( 'email_input' ).disabled = true;
+				$( 'email_input' ).value = '';
+			}
 		}
 
 		if ( IsRadioButtonChecked('send_via_friends') )
@@ -2159,10 +2171,27 @@ function SubmitGiftDeliveryForm()
 				rgBadFields.schedule_send_time = true;
 				errorString += 'The time of day specified is not valid.<br/>';
 			}
+			else
+			{
+				var rtTime = GatherScheduledSendFields();
+
+				if ( rtTime && rtTime <= $J.now() / 1000 )
+				{
+					ShowConfirmDialog( 'Schedule delivery...', 
+								'The time you\'ve selected to send your gift is in the past.  Would you like to send your gift immediately?', 
+								'Send Immediately'
+					).done( function() {
+						$J('#cart_send_schedule_options').removeClass( 'schedule_selected' );
+						SubmitGiftDeliveryForm();
+					});
+					return;
+					
+				}
+			}
 		}
 		
 
-		if ( $( 'send_via_email' ).checked )
+		if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
 		{
 			var email = $('email_input').value;
 			var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
@@ -3908,19 +3937,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 		}
 
 		$J('#review_phone_body').text( $('billing_phone').value );
-		
-		var $giftee_name_review = $J('#giftee_name_review');
-		if ( $giftee_name_review.length )
-		{
-			if ( $( 'send_via_email' ).checked )
-			{
-				$giftee_name_review.text( $( 'email_input' ).value );
-			}
-			else
-			{
-				$giftee_name_review.text( currently_selected_friend_name );
-			}
-		}
+
 
 				if( $('checkout_review_gift_willbesent') && $('checkout_review_gift_willbekept') )
 		{
@@ -3931,8 +3948,43 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else
 			{
+				var rtFutureDate = GatherScheduledSendFields();
+				if ( rtFutureDate )
+				{
+					$('checkout_review_gift_willbesent').update( 'Your gift purchase for %1$s will be sent on %2$s.'.replace( /%1\$s/, currently_selected_friend_name ).replace( /%2\$s/, new Date( rtFutureDate * 1000 ).toLocaleString() ) );
+				}
+				else
+				{
+					$('checkout_review_gift_willbesent').update( 'Your gift purchase for&nbsp;<span id="giftee_name_review"></span>&nbsp;will be sent upon completion of your purchase.' );
+				}
 				$('checkout_review_gift_willbesent').show();
 				$('checkout_review_gift_willbekept').hide();
+			}
+		}
+
+		var $giftee_name_review = $J('#giftee_name_review');
+		if ( $giftee_name_review.length )
+		{
+			if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
+			{
+				$giftee_name_review.text( $( 'email_input' ).value );
+			}
+			else
+			{
+				// this value is already escaped
+				$giftee_name_review.html( currently_selected_friend_name );
+			}
+		}
+		
+		if ( $('checkout_review_gift_refundnote_wallet') )
+		{
+			if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
+			{
+				$('checkout_review_gift_refundnote_wallet').hide();
+			}
+			else
+			{
+				$('checkout_review_gift_refundnote_wallet').show();
 			}
 		}
 		
@@ -4835,7 +4887,7 @@ function UpdateWillBeSentToNote()
 	var elSentToNote = $('sendgift_willbesentto');
 	if ( elSentToNote )
 	{
-		if ( $( 'send_via_email' ).checked )
+		if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
 		{
 			$('sendto_email').show();
 			$('sendto_steamaccount').hide();
@@ -4899,7 +4951,7 @@ function SendGift()
 
 	try
 	{
-				if ( $( 'send_via_email' ).checked )
+				if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
 		{
 			giftee_email = $( 'email_input' ).value;
 		}

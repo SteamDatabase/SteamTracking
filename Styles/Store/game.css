@@ -655,6 +655,9 @@ img.game_header_image_full {
 .game_area_purchase_game_wrapper .game_area_purchase_game {
 	margin-bottom: 0px;
 }
+.game_area_purchase_game_wrapper .game_area_purchase_game p {
+	margin-bottom: 8px;
+}
 .game_area_purchase_game_wrapper.bundle .bundleTag,
 .game_area_purchase_game.bundle .bundleTag {
 	color: #a4d7f5;
@@ -764,6 +767,7 @@ img.game_header_image_full {
 {
 	position: relative;
 	display: inline-block;
+	padding-right: 12px;
 }
 
 .game_purchase_action_qty .quantity
@@ -814,6 +818,10 @@ img.game_header_image_full {
 }
 
 .game_purchase_discount_countdown {
+	color: #7cb8e4;
+}
+
+.game_purchase_discount_quantity {
 	color: #7cb8e4;
 }
 
@@ -4456,3 +4464,6 @@ div.agegate_text_container > h2 {
 	overflow: hidden;
 }
 
+.age_queue_btn_ctn {
+	margin-left: 16px;
+}

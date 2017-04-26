@@ -493,6 +493,12 @@ var templ_DiscountDiv = new Template( ''
 		+ '					<input maxlength="2" style="width: 50px" class="Description" id="#{DiscountId}_discount_percent" name="#{DiscountId}[discount_percent]" value="#{DiscountPercentage}"> *A non-zero value will automatically update the discount when approving new prices through the new tool'
 		+ '				</div>'
 		+ '			</div>'		+ '			<div class="formrow">'
+		+ '			<div class="formrow">'
+		+ '				<div class="formlabel">Minimum Quantity: </div>'
+		+ '				<div class="formdata">'
+		+ '					<input maxlength="2" style="width: 50px" class="Description" id="#{DiscountId}_discount_quantity" name="#{DiscountId}[quantity]" value="#{DiscountQuantity}">'
+		+ '				</div>'
+		+ '			</div>'		+ '			<div class="formrow">'
 		+ '				<div class="formlabel">Discount amounts:</div>'
 		+ '				<div class="formdata">'
 		+ '					<div style="margin-left: 100px;float:left">Discount in cents:</div>'
@@ -577,12 +583,13 @@ function CreateDiscount( target, id, discount, packageid )
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
 	var group = (discount['group'] == null) ? '' : discount['group'];
 	var discount_percent = (discount['discount_percent'] == null ) ? 0 : discount['discount_percent'];
+	var discount_quantity = (discount['quantity'] == null ) ? 1 : discount['quantity'];
 	var discount_number = (discount['discount_id'] == null) ? '' : discount['discount_id']; // the actual discountID used by the rack, not the HTML elementID
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountQuantity: discount_quantity, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 	
 	// set up start & end dates
@@ -1121,7 +1128,7 @@ function SetPackageCost( packageid, formName, submitName, isDiscount )
 					target.innerHTML = "";
 					AddText(target, "Package discount successfully updated!");
 					target.show();
-					new Effect.Highlight(target, {startcolor: '#00adee', endcolor: '#003f57'});
+					new Effect.Highlight(target, {startcolor: '#67c1f5', endcolor: '#003f57'});
 				}
 				else
 				{

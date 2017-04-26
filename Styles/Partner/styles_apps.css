@@ -259,7 +259,8 @@ textarea#leaderboard_blob {
 }
 
 #addSeason #addSeasonName,
-#addSeason #appEpisodeType {
+#addSeason #appEpisodeType,
+#addSeason #addSeasonVideoFormat {
 	width: 208px;
 }
 

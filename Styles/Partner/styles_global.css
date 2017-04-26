@@ -6,21 +6,21 @@ body {
 	font-size: 0.7em; 
 	line-height:1.5; 
 	font-family: Verdana, Arial, Helvetica, sans-serif; 
-	background-color:#262626;
+	background-color:#1a1a1a;
 	background-position:center;
 	background-repeat:repeat-y;
 }
 
 h1 {
 	font-weight:bold;
-	color:#00adee;
+	color:#67c1f5;
 	font-family:TrebuchetMS,Tahoma,Arial,Sans-serif;
 	font-size:24px;
 	margin:0px;
 }
 
 h2, .title2 {
-	color:#00adee;
+	color:#67c1f5;
 	font-family:Tahoma,Arial,Sans-serif;
 	font-weight: normal;
 	font-size: 20px;
@@ -69,7 +69,7 @@ h3 {
 }
 
 h4 {
-	color:#00adee;
+	color:#67c1f5;
 	font-family:Tahoma,Arial,Sans-serif;
 	font-weight: normal;
 	font-size: 12px;
@@ -384,7 +384,7 @@ div.hr-grey hr {
 }
 
 .copyHead {
-	color:#00adee;
+	color:#67c1f5;
 	font-family:Tahoma,Arial,Sans-serif;
 	font-weight:bold;
 	font-size:12px;
@@ -424,7 +424,7 @@ div.hr-grey hr {
 
 
 .newsHead {
-	color:#00adee;
+	color:#67c1f5;
 	font-weight:bold;
 }
 

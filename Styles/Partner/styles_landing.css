@@ -95,8 +95,8 @@ body{
 
 		#landingNav > a.active
 		{
-			background-color: #262626;
-			color: #666666;
+			background-color: #1a1a1a;
+			color: #808285;
 			margin-top: 3px;
 			vertical-align: top;
 			border: none;
@@ -144,7 +144,7 @@ body{
 			}
 		
 		.navContent a:hover {
-			color: #00adee;
+			color: #67c1f5;
 		}
 		
 		.navContent > hr {
@@ -157,7 +157,7 @@ body{
 		}
 
 #landingWelcome {
-	border-bottom: 2px solid #00adee;
+	border-bottom: 2px solid #67c1f5;
 	font-size: 25px;
 	line-height: 26px;
 	color: #fff;
@@ -200,7 +200,7 @@ body{
 	}
 	
 		#landingWelcome .appName .adminSection {
-			color: #00adee;
+			color: #67c1f5;
 		}
 		#landingWelcome .appName .TypeDark {
 			color: #666666;
@@ -384,7 +384,7 @@ body{
 }
 
 .iconLink:hover {
-	color: #00adee;
+	color: #67c1f5;
 }
 
 	.iconLink.disabled {
@@ -496,7 +496,7 @@ p {
 	}
 
 	.landingTable .td.blue, .landingTable td.blue {
-		color: #00adee;
+		color: #67c1f5;
 	}
 
 	.landingTable .td.editable, td.editable
@@ -648,7 +648,7 @@ p {
 	}
 
 	.landingTable .blueTitle {
-		color: #00adee;
+		color: #67c1f5;
 	}
 
 	.landingTable .capsule {
@@ -660,6 +660,7 @@ p {
 }
 .landingTable.testRequests .td {
 	vertical-align: top;
+	border-bottom: 1px solid #262626;
 }
 .landingTable.testRequests .td a {
 	font-size: 12px;
@@ -1255,7 +1256,7 @@ span.icon_actual_authority { display: inline-block;}
 
 .permissionLegend:hover
 {
-	color: #00adee;
+	color: #67c1f5;
 }
 
 .permissionLegendItem li
@@ -2349,7 +2350,7 @@ p.optionalChecks {
 }
 
 a.iconLink.admin_email_mismatch:hover {
-	color: #00adee;
+	color: #67c1f5;
 }
 
 /* Anti-Cheat tab */
@@ -2367,4 +2368,211 @@ input#enablevac:disabled {
 
 .landing_pending_apptransfer div {
 	margin-left: 10px;
+}
+
+.cdkey_requests_header {
+	display: inline-block;
+	font-size: 2px;
+	text-align: vertical;
+	padding: 6px;
+}
+
+.cdkey_requests_headers {
+	padding: 10px 0px 10px 0px;
+	display: table;
+	background-color: #1f1f1f;
+	color: #808285;
+	text-decoration: none;
+	width: 100%;
+}
+
+.cdkey_request_packageid {
+	width: 220px;
+	padding: 4px 0px 0px 8px;
+	display: inline-block;
+}
+
+.cdkey_request_territory_name {
+	width: 45px;
+	padding: 4px 0px 0px 8px;
+	display: inline-block;
+}
+
+.cdkey_request_numreq {
+	width: 90px;
+	padding: 2px 0px 0px 4px;
+	text-align: right;
+	display: inline-block;
+}
+
+.cdkey_request_date {
+	width: 120px;
+	padding: 2px 0px 0px 4px;
+	text-align: right;
+	display: inline-block;
+}
+
+.cdkey_request_account {
+	width: 210px;
+	padding: 2px 0px 0px 64px;
+	display: inline-block;
+}
+
+.cdkey_request {
+	padding: 10px 0px 10px 0px;
+	cursor: pointer;
+	background-color: #333333;
+	border: 2px solid #262626;
+	border-bottom-style: hidden;
+}
+
+.cdkey_request.default {
+	background-color: #333333;
+}
+
+.cdkey_request.beta_comp {
+	background-color: #886A08;
+}
+
+.cdkey_request.dev_comp {
+	background-color: #600000;
+}
+
+.cdkey_request:hover {
+	background-color: #4d4d4d;
+}
+
+.cdkey_request.beta_comp:hover {
+	background-color: #a58208;
+}
+
+.cdkey_request.dev_comp:hover {
+	background-color: #730000;
+}
+
+.cdkey_request.alt {
+	background-color: #383838;
+}
+
+.cdkey_request.alt:hover {
+	background-color: #626262;
+}
+
+.cdkey_request_details {
+	padding: 0px 0px 0px 0px;
+}
+
+.cdkey_request_details.alt {
+	padding: 0px 0px 20px 0px;
+	background-color: #383838;
+}
+
+.cdkey_request_checkbox {
+	display: inline-block;
+	padding: 0px 20px 0px 20px;
+}
+
+.cdkey_request_details_data
+{
+	background-color: #2c3849;
+	width: calc( 100% );
+}
+
+div .cdkey_request_details_row
+{
+	float: right;
+	width: 99.6%;
+	border-spacing: 0px 10px;
+	padding: 0px 0px 5px 0px;
+	background-color: #2c3849;
+	border: 2px solid #262626;
+	border-top-style: hidden;
+}
+
+.cdkey_request_details_row .button_row
+{
+	margin-top: 20px;
+	clear: both;
+	padding: 0 30px;
+
+	height: 60px;
+	background-color: #2c3849;
+}
+
+.cdkey_request_details_row .package_details
+{
+	float: left;
+	width: 200px;
+	clear: left;
+	padding: 12px;
+}
+
+.cdkey_request_details_row .request_history
+{
+	float: left;
+	width: calc( 100% - 78px - 12px - 500px - 24px );
+	clear: none;
+	padding: 12px;
+}
+
+.cdkey_request_details_row .partner_details
+{
+	float: left;
+	width: calc( 100% - 78px - 12px - 560px - 24px );
+	clear: none;
+	padding: 12px;
+}
+
+.cdkey_request_details_row .header_row
+{
+	float: left;
+	clear: both;
+	margin: 3px 0 3px 0;
+	width: 330px;
+
+	display: inline-block;
+}
+
+.cdkey_request_details_row .small_header_row
+{
+	font-size: 4px;
+	float: left;
+	clear: left;
+	margin: 4px 0 4px 0;
+}
+
+.cdkey_request_details_row .header_row .title
+{
+	float: left;
+	color: #67c1f5;
+	padding-right: 6px;
+	width: 106px;
+}
+
+.cdkey_request_details_row .header_row .value
+{
+	float: left;
+	clear: none;
+	width: 210px;
+	display: inline-block;
+}
+
+.cdkey_request_details_row .title.dim
+{
+	color: #818588;
+}
+
+.cdkey_request_details_row .value.warning
+{
+	color: #fbb963;
+}
+
+.cdkey_request_details_row .value.critical_warning
+{
+	color: #e24044;
+}
+
+.cdkey_request_details_row .value.approve
+{
+	color: #A4D007;
 }

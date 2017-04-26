@@ -1269,7 +1269,7 @@ label.send_choice_txt {
 #friends_chooser {
 	max-width: 560px;
 	min-height: 189px;
-	height: 189px;
+	max-height: 50vh;
 	border: 1px solid #4d4b49;
 	overflow: auto;
 	overflow-x: hidden;

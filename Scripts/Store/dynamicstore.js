@@ -70,7 +70,8 @@ GDynamicStore = {
 
 		var fnRunOnLoadCallbacks = function() {
 			GDynamicStore.m_bLoadComplete = true;
-			GDynamicStore.DecorateDynamicItems();
+			var rel = $J( "link[rel='canonical']" );
+						GDynamicStore.DecorateDynamicItems();
 			GDynamicStore.PopulateRecommendedTagList();
 			GDynamicStore.InitAppearHandler();
 
@@ -1115,7 +1116,7 @@ GStoreItemData = {
 
 	GetAppURL: function( unAppID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth )
 	},
 
 	GetPackageURL: function( unPackageID, strFeatureContext, nDepth )
@@ -1180,22 +1181,30 @@ GStoreItemData = {
 		var nPlatforms = 0;
 
 		if ( rgItemData.video )
-			return '<span class="platform_img streamingvideo"></span>';
-
-		if ( rgItemData.os_windows )
 		{
-			strHTML += '<span class="platform_img win"></span>';
-			nPlatforms++;
+			strHTML += '<span class="platform_img streamingvideo"></span>';
 		}
-		if ( rgItemData.os_macos )
+		else if ( rgItemData.video360 )
 		{
-			strHTML += '<span class="platform_img mac"></span>';
-			nPlatforms++;
+			strHTML += '<span class="platform_img streaming360video"></span>';
 		}
-		if ( rgItemData.os_linux )
+		else
 		{
-			strHTML += '<span class="platform_img linux"></span>';
-			nPlatforms++;
+			if ( rgItemData.os_windows )
+			{
+				strHTML += '<span class="platform_img win"></span>';
+				nPlatforms++;
+			}
+			if ( rgItemData.os_macos )
+			{
+				strHTML += '<span class="platform_img mac"></span>';
+				nPlatforms++;
+			}
+			if ( rgItemData.os_linux )
+			{
+				strHTML += '<span class="platform_img linux"></span>';
+				nPlatforms++;
+			}
 		}
 
 		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift || rgItemData.vr_razerosvr )

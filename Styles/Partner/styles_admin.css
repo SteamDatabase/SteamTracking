@@ -92,7 +92,7 @@ ul.bullets li {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	color: #fff;
-	border: 1px solid #00adee;
+	border: 1px solid #67c1f5;
 	background-color: #003f57;
 }
 
@@ -113,6 +113,7 @@ ul.bullets li {
 h1 span.titletext, h2 span.titletext {
 	font-weight: normal;
 	color: #FFFFFF;
+	font-size: 20px;
 }
 
 .marketing {
@@ -327,11 +328,15 @@ select.hourselect,  select.minuteselect {
 	margin-left: 270px;
 }
 
-	.specialannouncementarea {
-		background-color: #2f2f2f;
-		padding: 12px;
-		margin-bottom: 10px;
-	}
+.boxlist_content:has( > .specialannouncementarea ) {
+	background-color: #1c2022;
+}
+
+.specialannouncementarea {
+	background-color: #1c2022;
+	padding: 12px;
+	margin-bottom: 10px;
+}
 
 .widetoolbtn {
 	background-image:url('../images/admin_btn_default.jpg');
@@ -1998,7 +2003,10 @@ html, body { height:100%; }
 	color: white;
 	text-shadow: 1px 1px 0 black;
 }
-
+.card_list_return {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 .profilebackground_preview_background {
 	background-color: #000000;
@@ -2134,7 +2142,7 @@ html, body { height:100%; }
 {
 	margin-bottom: 20px;
 	background-color: #333333;
-	border: 2px dashed #00adee;
+	border: 2px dashed #67c1f5;
 	padding: 8px;
 	text-align: center;
 	padding-top: 40px;
@@ -2220,7 +2228,7 @@ html, body { height:100%; }
 {
 	width: 0px;
 	height: 100%;
-	background-color: #00adee;
+	background-color: #67c1f5;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -2404,7 +2412,7 @@ html, body { height:100%; }
 .movie_create_label
 {
 	margin-bottom: 4px;
-	color: #00adee;
+	color: #67c1f5;
 	font-family: Tahoma,Arial,Sans-serif;
 	font-weight: bold;
 	font-size: 14px;
@@ -2557,7 +2565,7 @@ html, body { height:100%; }
 }
 
 .launchOptionArea {
-	background-color: #2f2f2f;
+	background-color: #1c2022;
 	padding: 12px;
 }
 
@@ -2611,7 +2619,7 @@ html, body { height:100%; }
 .option_header {
 	font-weight: normal;
 	font-size: 14px;
-	color: #00adee;
+	color: #67c1f5;
 	margin-top: 10px;
 }
 .admin_new .option_header {
@@ -2778,7 +2786,7 @@ html, body { height:100%; }
 	margin-bottom:20px;
 	padding:12px;
 	background-color:#333;
-	border:1px solid #00adee;
+	border:1px solid #67c1f5;
 }
 
 .new_tool_label {
@@ -2799,4 +2807,8 @@ input.new_tool_ds {
 }
 h2.bundleFilter_titleArea {
 	margin-top: 20px;
+}
+
+#free_game_settings input {
+	width: 500px;
 }

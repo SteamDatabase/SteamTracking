@@ -1476,9 +1476,11 @@ span.platform_img.linux {
 }
 
 span.platform_img.streamingvideo {
-	background-image: url( '/public/images/v6/icon_streamingvideo_v6.png' );
-	background-position-y: 3px;
-	background-position-x: 2px;
+	background-image: url('/public/images/v6/icon_streamingvideo_v6.png');
+}
+
+span.platform_img.streaming360video {
+	background-image: url('/public/images/v6/icon_streaming360video_v6.png');
 }
 
 span.platform_img.htcvive {
