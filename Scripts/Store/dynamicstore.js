@@ -1130,7 +1130,11 @@ GStoreItemData = {
 
 	GetAppURL: function( unAppID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth )
+		if ( typeof GStoreItemData.rgAppData[ unAppID ] == 'object' && 'url_name' in GStoreItemData.rgAppData[ unAppID ] ) {
+			return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth )
+		}
+
+		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth )
 	},
 
 	GetPackageURL: function( unPackageID, strFeatureContext, nDepth )
