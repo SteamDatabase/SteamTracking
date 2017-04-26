@@ -70,8 +70,7 @@ GDynamicStore = {
 
 		var fnRunOnLoadCallbacks = function() {
 			GDynamicStore.m_bLoadComplete = true;
-			var rel = $J( "link[rel='canonical']" );
-						GDynamicStore.DecorateDynamicItems();
+			GDynamicStore.DecorateDynamicItems();
 			GDynamicStore.PopulateRecommendedTagList();
 			GDynamicStore.InitAppearHandler();
 
@@ -170,6 +169,21 @@ GDynamicStore = {
 		{
 			// no data to load, just run the callbacks now
 			$J( fnRunOnLoadCallbacks );
+		}
+	},
+
+	// Fixup name portion of URL via history API, if support and if name portion is incorrect
+	FixupNamePortion: function() {
+		var rel = $J( "link[rel='canonical']" );
+		if ( rel.length && window.history ) {
+			// have rel=canonical URL and access to history API.
+			// parse out href portion of navigated URL and see if it's OK
+			var detachedAnchor = document.createElement( 'a' );
+			detachedAnchor.href = rel.attr( "href" );
+			if ( window.location.pathname != detachedAnchor.pathname ) {
+				// URL portion does not match canonical URL; rewrite it, preserving query params and hash
+				window.history.replaceState( null, null, rel[0].href + window.location.search + window.location.hash );
+			}
 		}
 	},
 
