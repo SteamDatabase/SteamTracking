@@ -19,7 +19,7 @@ function OnSelectGame( GameSelector, rgAppData )
 function OnCommunityHomeLoad()
 {
 	gSearchField_Apps = new SearchFieldWithText( 'appHubsSearchText', "Search for products", ShowAppSuggestions, null );
-	gSearchField_Players = new SearchFieldWithText( 'SearchPlayers', "Search players and groups", null, null );
+	gSearchField_Players = new SearchFieldWithText( 'SearchPlayers', "Search for friends", null, null );
 
 	CheckForMoreContent();
 	ScrollToLast();

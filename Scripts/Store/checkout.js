@@ -2107,16 +2107,6 @@ function CheckFriendDisplay()
 				$( 'email_input' ).value = '';
 			}
 		}
-
-		if ( IsRadioButtonChecked('send_via_friends') )
-		{			
-			for ( var accountid in g_MapFriendsAvatars )
-			{
-				var img = $('friend_avatar_img_'+accountid);
-				if ( img && img.src != g_MapFriendsAvatars[accountid] )
-					img.src = g_MapFriendsAvatars[accountid];
-			}
-		}
 	} 
 	catch(e)
 	{

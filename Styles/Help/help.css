@@ -4136,3 +4136,11 @@ table {
 	margin: 15px 0 0 0;
 	color: #b0b6c0;
 }
+
+#help_publisher_chooser_dselect_container {
+	max-width: 150px;
+}
+
+.help_publisher_chooser {
+	float:right;
+}

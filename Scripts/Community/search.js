@@ -5,10 +5,8 @@ var CommunitySearch = {
 	m_sSearchTextLoading: null,
 	m_sSearchTextQueued: null,
 	m_sSearchResultDisplayed: null,
-	m_sSearchResultFilter: null,
 	m_nSearchResultPage: null,
 	m_nLastKeyPressTimeMS: null,
-	m_sFilter: 'none',
 	m_nPage: 1,
 	m_sHashStringParse: null,
 	m_bUpdatingHash: false,
@@ -32,24 +30,6 @@ var CommunitySearch = {
 			{
 				this.UpdateHashURL();
 			}
-		}
-	},
-
-	SetFilter: function( filter ) {
-		if ( !filter || ['users','groups','games'].lastIndexOf( filter ) == -1 )
-			filter = 'none';
-
-		this.m_sFilter = filter;
-		// update the links
-		$J('.search_filters a').removeClass( 'selected' );
-		$J('#search_filter_' + filter).addClass( 'selected' );
-	},
-
-	ChangeFilter: function( filter ) {
-		if ( this.m_sFilter != filter )
-		{
-			this.SetFilter( filter );
-			this.UpdateHashURL();
 		}
 	},
 
@@ -77,9 +57,6 @@ var CommunitySearch = {
 
 		var hash_params = $J.deparam( hash_string );
 
-		if ( hash_params.filter || reset )
-			this.SetFilter( hash_params.filter );
-
 		if ( hash_params.page || reset )
 			this.m_nPage = hash_params.page;
 
@@ -106,7 +83,6 @@ var CommunitySearch = {
 		var hash_params = {};
 		if ( this.m_nPage > 1 )
 			hash_params.page = this.m_nPage;
-		hash_params.filter = this.m_sFilter;
 		hash_params.text = $J('#search_text_box').val().trim();
 
 		var new_hash = $J.param( hash_params );
@@ -120,9 +96,9 @@ var CommunitySearch = {
 
 	Start: function() {
 		var search_text = $J('#search_text_box').val().trim();
+		var search_filter = $J('#search_filter').val().trim();
 
 		if ( search_text == this.m_sSearchTextLoading
-			&& this.m_sFilter == this.m_sSearchResultFilter
 			&& this.m_nPage == this.m_nSearchResultPage )
 		{
 			// do nothing, we're already searching for the same text
@@ -131,22 +107,30 @@ var CommunitySearch = {
 		{
 			this.m_sSearchTextQueued = search_text;
 		}
-		else if ( search_text != this.m_sSearchResultDisplayed || this.m_sFilter != this.m_sSearchResultFilter || this.m_nPage != this.m_nSearchResultPage )
+		else if ( search_text != this.m_sSearchResultDisplayed || this.m_nPage != this.m_nSearchResultPage )
 		{
-			this.Load( search_text );
+			this.Load( search_filter, search_text );
 		}
 	},
 
-	Load: function( search_text ) {
+	Load: function( search_filter, search_text ) {
+		if ( this.m_sSearchTextLoading )
+		{
+			$J('#search_results').fadeTo( 500, 0.2 );	// fade out any existing results while we search
+		}
+		else
+		{
+		    // display throbber if no search results were displayed previously
+			$J('#search_results').html( $J( '#community_loading_throbber' ).html() );
+		}
 		this.m_bSearchRunning = true;
 		this.m_sSearchTextLoading = search_text;
-		$J('#search_results').fadeTo( 500, 0.2 );	// fade out any existing results while we search
 		$J.ajax( {
 			url: 'https://steamcommunity.com/search/SearchCommunityAjax',
 			type: 'GET',
 			data: {
 				text: search_text,
-				filter: this.m_sFilter,
+				filter: search_filter,
 				sessionid: g_sessionID,
 				steamid_user: g_steamID,
 				page: this.m_nPage
@@ -162,7 +146,6 @@ var CommunitySearch = {
 				if ( CommunitySearch.m_sSearchTextQueued == null )
 				{
 					CommunitySearch.m_sSearchResultDisplayed = data.search_text;
-					CommunitySearch.m_sSearchResultFilter = data.search_filter;
 					CommunitySearch.m_nSearchResultPage = parseInt( data.search_page );
 					$J('#search_results').stop( true, true );
 					$J('#search_results').html( data.html );
@@ -181,7 +164,7 @@ var CommunitySearch = {
 			// start the search we have queued
 			if ( CommunitySearch.m_sSearchTextQueued )
 			{
-				CommunitySearch.Load( CommunitySearch.m_sSearchTextQueued );
+				CommunitySearch.Load( search_filter, CommunitySearch.m_sSearchTextQueued );
 				CommunitySearch.m_sSearchTextQueued = null;
 			}
 		} );
