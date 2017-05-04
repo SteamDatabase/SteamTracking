@@ -99000,6 +99000,21 @@
 				"basename"	"models/workshop/player/items/all_class/cptv_ultiduo_participant/cptv_ultiduo_participant_%s.mdl"
 			}
 		}
+		"9515"
+		{
+			"name"	"The Heartfelt Hug"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_Medal_HugsTF_2017"
+			"item_description"	"#TF_Medal_HugsTF_2017_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hugs_tf_medal/hugs_tf_medal"
+			"propername"	"1"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hugs_tf_medal/hugs_tf_medal_%s.mdl"
+			}
+		}
+
 
 
 
