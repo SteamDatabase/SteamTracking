@@ -18,6 +18,7 @@ enum ERemoteClientService {
 	k_ERemoteClientServiceNone = 0;
 	k_ERemoteClientServiceRemoteControl = 1;
 	k_ERemoteClientServiceGameStreaming = 2;
+	k_ERemoteClientServiceSiteLicense = 4;
 }
 
 enum ERemoteDeviceAuthorizationResult {

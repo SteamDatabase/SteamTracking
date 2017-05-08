@@ -1,6 +1,7 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSColorSpace
+ .objc_class_name_NSEvent
  .objc_class_name_NSLocale
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
@@ -46,8 +47,10 @@
  B CLogger::sm_msgSpewThrottle
  B CLogger::sm_pLogInstance
  B CLogger::sm_vecLogListeners
+ B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
  B CMsgAddHeader::default_instance_
+ B CMsgAuthedSteamDomains::default_instance_
  B CMsgBrowserCreate::default_instance_
  B CMsgBrowserCreateResponse::default_instance_
  B CMsgBrowserErrorStrings::default_instance_
@@ -63,6 +66,7 @@
  B CMsgCloseFullScreenFlashIfOpen::default_instance_
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
+ B CMsgEnableSteamClientAPI::default_instance_
  B CMsgExecuteJavaScript::default_instance_
  B CMsgExitFullScreen::default_instance_
  B CMsgFileLoadDialog::default_instance_
@@ -92,6 +96,7 @@
  B CMsgJSReleaseCallback::default_instance_
  B CMsgJSValue::default_instance_
  B CMsgJSValue_JSObjectProperty::default_instance_
+ B CMsgJumpListLink::default_instance_
  B CMsgKeyChar::default_instance_
  B CMsgKeyDown::default_instance_
  B CMsgKeyUp::default_instance_
@@ -133,6 +138,7 @@
  B CMsgSetFocus::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
+ B CMsgSetJumpList::default_instance_
  B CMsgSetLocalFileRequestMapping::default_instance_
  B CMsgSetLocalFileRequestMapping_AdditionalRoute::default_instance_
  B CMsgSetSharedPaintBuffers::default_instance_
@@ -145,6 +151,8 @@
  B CMsgStartRequest::default_instance_
  B CMsgStartRequestResponse::default_instance_
  B CMsgStatusText::default_instance_
+ B CMsgSteamAuthCookiesSet::default_instance_
+ B CMsgSteamAuthNeeded::default_instance_
  B CMsgStopFind::default_instance_
  B CMsgStopLoad::default_instance_
  B CMsgURLChanged::default_instance_
@@ -1933,12 +1941,9 @@
  D typeinfo for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
  D typeinfo for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  D typeinfo for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
- D typeinfo for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D typeinfo for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D typeinfo for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  D typeinfo for CCallbackBase
- D typeinfo for CCallbackImpl<1025>
  D typeinfo for CCallbackImpl<1028>
  D typeinfo for CCallbackImpl<12>
  D typeinfo for CCallbackImpl<144>
@@ -2016,10 +2021,12 @@
  D typeinfo for CIntProperty
  D typeinfo for CItemImageManager
  D typeinfo for CJSMethodArgument
+ D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
  D typeinfo for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  D typeinfo for CMsgAddHeader
+ D typeinfo for CMsgAuthedSteamDomains
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
  D typeinfo for CMsgBrowserErrorStrings
@@ -2035,6 +2042,7 @@
  D typeinfo for CMsgCloseFullScreenFlashIfOpen
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
+ D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgExecuteJavaScript
  D typeinfo for CMsgExitFullScreen
  D typeinfo for CMsgFileLoadDialog
@@ -2064,6 +2072,7 @@
  D typeinfo for CMsgJSReleaseCallback
  D typeinfo for CMsgJSValue
  D typeinfo for CMsgJSValue_JSObjectProperty
+ D typeinfo for CMsgJumpListLink
  D typeinfo for CMsgKeyChar
  D typeinfo for CMsgKeyDown
  D typeinfo for CMsgKeyUp
@@ -2105,6 +2114,7 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
+ D typeinfo for CMsgSetJumpList
  D typeinfo for CMsgSetLocalFileRequestMapping
  D typeinfo for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D typeinfo for CMsgSetSharedPaintBuffers
@@ -2117,6 +2127,8 @@
  D typeinfo for CMsgStartRequest
  D typeinfo for CMsgStartRequestResponse
  D typeinfo for CMsgStatusText
+ D typeinfo for CMsgSteamAuthCookiesSet
+ D typeinfo for CMsgSteamAuthNeeded
  D typeinfo for CMsgStopFind
  D typeinfo for CMsgStopLoad
  D typeinfo for CMsgURLChanged
@@ -2133,7 +2145,6 @@
  D typeinfo for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D typeinfo for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D typeinfo for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
- D typeinfo for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D typeinfo for CMusicLibraryPanel
  D typeinfo for CMusicPage_Details_Album
  D typeinfo for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -2265,9 +2276,7 @@
  D typeinfo for CSharedMemStream
  D typeinfo for CSoundSystemSelect
  D typeinfo for CSteamAuthedHTML
- D typeinfo for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  D typeinfo for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
- D typeinfo for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  D typeinfo for CSteamAuthedHTMLPopup
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
@@ -3155,11 +3164,8 @@
  D vtable for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
  D vtable for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  D vtable for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
- D vtable for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D vtable for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D vtable for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
- D vtable for CCallbackImpl<1025>
  D vtable for CCallbackImpl<1028>
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<144>
@@ -3236,10 +3242,12 @@
  D vtable for CIntProperty
  D vtable for CItemImageManager
  D vtable for CJSMethodArgument
+ D vtable for CMSgJumpListMRUApp
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
  D vtable for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  D vtable for CMsgAddHeader
+ D vtable for CMsgAuthedSteamDomains
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
  D vtable for CMsgBrowserErrorStrings
@@ -3255,6 +3263,7 @@
  D vtable for CMsgCloseFullScreenFlashIfOpen
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
+ D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgExecuteJavaScript
  D vtable for CMsgExitFullScreen
  D vtable for CMsgFileLoadDialog
@@ -3284,6 +3293,7 @@
  D vtable for CMsgJSReleaseCallback
  D vtable for CMsgJSValue
  D vtable for CMsgJSValue_JSObjectProperty
+ D vtable for CMsgJumpListLink
  D vtable for CMsgKeyChar
  D vtable for CMsgKeyDown
  D vtable for CMsgKeyUp
@@ -3325,6 +3335,7 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
+ D vtable for CMsgSetJumpList
  D vtable for CMsgSetLocalFileRequestMapping
  D vtable for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D vtable for CMsgSetSharedPaintBuffers
@@ -3337,6 +3348,8 @@
  D vtable for CMsgStartRequest
  D vtable for CMsgStartRequestResponse
  D vtable for CMsgStatusText
+ D vtable for CMsgSteamAuthCookiesSet
+ D vtable for CMsgSteamAuthNeeded
  D vtable for CMsgStopFind
  D vtable for CMsgStopLoad
  D vtable for CMsgURLChanged
@@ -3353,7 +3366,6 @@
  D vtable for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D vtable for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D vtable for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
- D vtable for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D vtable for CMusicLibraryPanel
  D vtable for CMusicPage_Details_Album
  D vtable for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -3483,9 +3495,7 @@
  D vtable for CSharedMemStream
  D vtable for CSoundSystemSelect
  D vtable for CSteamAuthedHTML
- D vtable for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  D vtable for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
- D vtable for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  D vtable for CSteamAuthedHTMLPopup
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
@@ -3633,6 +3643,7 @@
  NSSearchPathForDirectoriesInDomains
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
+ Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
@@ -3641,7 +3652,6 @@
  Plat_OutputDebugStringRaw
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
- Plat_SetCommandLineArgs
  Plat_ctime
  Plat_gmtime
  Plat_localtime
@@ -3795,12 +3805,9 @@
  R typeinfo name for CCallback<CSettingsSubMusic, LocalLibraryDatabaseHasBeenReset_t, false>
  R typeinfo name for CCallback<CSettingsSubMusic, VolumeHasChanged_t, false>
  R typeinfo name for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
- R typeinfo name for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- R typeinfo name for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  R typeinfo name for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  R typeinfo name for CCallbackBase
- R typeinfo name for CCallbackImpl<1025>
  R typeinfo name for CCallbackImpl<1028>
  R typeinfo name for CCallbackImpl<12>
  R typeinfo name for CCallbackImpl<144>
@@ -3878,10 +3885,12 @@
  R typeinfo name for CIntProperty
  R typeinfo name for CItemImageManager
  R typeinfo name for CJSMethodArgument
+ R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
  R typeinfo name for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  R typeinfo name for CMsgAddHeader
+ R typeinfo name for CMsgAuthedSteamDomains
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
  R typeinfo name for CMsgBrowserErrorStrings
@@ -3897,6 +3906,7 @@
  R typeinfo name for CMsgCloseFullScreenFlashIfOpen
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
+ R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgExecuteJavaScript
  R typeinfo name for CMsgExitFullScreen
  R typeinfo name for CMsgFileLoadDialog
@@ -3926,6 +3936,7 @@
  R typeinfo name for CMsgJSReleaseCallback
  R typeinfo name for CMsgJSValue
  R typeinfo name for CMsgJSValue_JSObjectProperty
+ R typeinfo name for CMsgJumpListLink
  R typeinfo name for CMsgKeyChar
  R typeinfo name for CMsgKeyDown
  R typeinfo name for CMsgKeyUp
@@ -3967,6 +3978,7 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
+ R typeinfo name for CMsgSetJumpList
  R typeinfo name for CMsgSetLocalFileRequestMapping
  R typeinfo name for CMsgSetLocalFileRequestMapping_AdditionalRoute
  R typeinfo name for CMsgSetSharedPaintBuffers
@@ -3979,6 +3991,8 @@
  R typeinfo name for CMsgStartRequest
  R typeinfo name for CMsgStartRequestResponse
  R typeinfo name for CMsgStatusText
+ R typeinfo name for CMsgSteamAuthCookiesSet
+ R typeinfo name for CMsgSteamAuthNeeded
  R typeinfo name for CMsgStopFind
  R typeinfo name for CMsgStopLoad
  R typeinfo name for CMsgURLChanged
@@ -3995,7 +4009,6 @@
  R typeinfo name for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  R typeinfo name for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
- R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  R typeinfo name for CMusicLibraryPanel
  R typeinfo name for CMusicPage_Details_Album
  R typeinfo name for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -4127,9 +4140,7 @@
  R typeinfo name for CSharedMemStream
  R typeinfo name for CSoundSystemSelect
  R typeinfo name for CSteamAuthedHTML
- R typeinfo name for CSteamAuthedHTML::CCallback_OnCredentialsChanged
  R typeinfo name for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
- R typeinfo name for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  R typeinfo name for CSteamAuthedHTMLPopup
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
@@ -5040,21 +5051,12 @@
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::CCallback(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Register(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(LogOnCredentialsChanged_t*))
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(LogOnCredentialsChanged_t*))
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::Run(void*)
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(ParentalWebTokenChanged_t*))
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(ParentalWebTokenChanged_t*))
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Run(void*)
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::CCallback(SerializedOverlayPumps*, void (SerializedOverlayPumps::*)(ScreenshotTriggered_t*))
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::Register(SerializedOverlayPumps*, void (SerializedOverlayPumps::*)(ScreenshotTriggered_t*))
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::Run(void*)
- T CCallbackImpl<1025>::GetCallbackSizeBytes()
- T CCallbackImpl<1025>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<1025>::~CCallbackImpl()
  T CCallbackImpl<1028>::GetCallbackSizeBytes()
  T CCallbackImpl<1028>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<1028>::~CCallbackImpl()
@@ -5361,6 +5363,7 @@
  T CIngameFPSBanner::SetCorner(int, bool)
  T CIngameFPSBanner::UpdateLayout()
  T CIngameFPSBanner::~CIngameFPSBanner()
+ T CInitializationCheck::~CInitializationCheck()
  T CIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -5432,6 +5435,19 @@
  T CLogger::PublishLogEvent(CLogEvent*, char const*)
  T CLogger::ReleaseSafe(CLogInstance*)
  T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool)
+ T CMSgJumpListMRUApp::ByteSize() const
+ T CMSgJumpListMRUApp::CMSgJumpListMRUApp()
+ T CMSgJumpListMRUApp::Clear()
+ T CMSgJumpListMRUApp::GetCachedSize() const
+ T CMSgJumpListMRUApp::GetMetadata() const
+ T CMSgJumpListMRUApp::IsInitialized() const
+ T CMSgJumpListMRUApp::MergeFrom(CMSgJumpListMRUApp const&)
+ T CMSgJumpListMRUApp::New() const
+ T CMSgJumpListMRUApp::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMSgJumpListMRUApp::SetCachedSize(int) const
+ T CMSgJumpListMRUApp::SharedCtor()
+ T CMSgJumpListMRUApp::SharedDtor()
+ T CMSgJumpListMRUApp::~CMSgJumpListMRUApp()
  T CMainOverlay::BInitialize()
  T CMainOverlay::BInitializeVGui(char const*, vgui::IVGuiSetup*)
  T CMainOverlay::BRunSingleFrame()
@@ -5490,6 +5506,18 @@
  T CMsgAddHeader::SharedCtor()
  T CMsgAddHeader::SharedDtor()
  T CMsgAddHeader::~CMsgAddHeader()
+ T CMsgAuthedSteamDomains::ByteSize() const
+ T CMsgAuthedSteamDomains::CMsgAuthedSteamDomains()
+ T CMsgAuthedSteamDomains::Clear()
+ T CMsgAuthedSteamDomains::GetCachedSize() const
+ T CMsgAuthedSteamDomains::GetMetadata() const
+ T CMsgAuthedSteamDomains::IsInitialized() const
+ T CMsgAuthedSteamDomains::MergeFrom(CMsgAuthedSteamDomains const&)
+ T CMsgAuthedSteamDomains::New() const
+ T CMsgAuthedSteamDomains::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAuthedSteamDomains::SetCachedSize(int) const
+ T CMsgAuthedSteamDomains::SharedCtor()
+ T CMsgAuthedSteamDomains::~CMsgAuthedSteamDomains()
  T CMsgBrowserCreate::ByteSize() const
  T CMsgBrowserCreate::CMsgBrowserCreate()
  T CMsgBrowserCreate::Clear()
@@ -5537,6 +5565,8 @@
  T CMsgBrowserReady::New() const
  T CMsgBrowserReady::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserReady::SetCachedSize(int) const
+ T CMsgBrowserReady::SharedCtor()
+ T CMsgBrowserReady::SharedDtor()
  T CMsgBrowserReady::~CMsgBrowserReady()
  T CMsgBrowserRemove::ByteSize() const
  T CMsgBrowserRemove::CMsgBrowserRemove()
@@ -5659,6 +5689,17 @@
  T CMsgCopy::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCopy::SetCachedSize(int) const
  T CMsgCopy::~CMsgCopy()
+ T CMsgEnableSteamClientAPI::ByteSize() const
+ T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
+ T CMsgEnableSteamClientAPI::Clear()
+ T CMsgEnableSteamClientAPI::GetCachedSize() const
+ T CMsgEnableSteamClientAPI::GetMetadata() const
+ T CMsgEnableSteamClientAPI::IsInitialized() const
+ T CMsgEnableSteamClientAPI::MergeFrom(CMsgEnableSteamClientAPI const&)
+ T CMsgEnableSteamClientAPI::New() const
+ T CMsgEnableSteamClientAPI::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgEnableSteamClientAPI::SetCachedSize(int) const
+ T CMsgEnableSteamClientAPI::~CMsgEnableSteamClientAPI()
  T CMsgExecuteJavaScript::ByteSize() const
  T CMsgExecuteJavaScript::CMsgExecuteJavaScript()
  T CMsgExecuteJavaScript::Clear()
@@ -6007,6 +6048,19 @@
  T CMsgJSValue_JSObjectProperty::SharedCtor()
  T CMsgJSValue_JSObjectProperty::SharedDtor()
  T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
+ T CMsgJumpListLink::ByteSize() const
+ T CMsgJumpListLink::CMsgJumpListLink()
+ T CMsgJumpListLink::Clear()
+ T CMsgJumpListLink::GetCachedSize() const
+ T CMsgJumpListLink::GetMetadata() const
+ T CMsgJumpListLink::IsInitialized() const
+ T CMsgJumpListLink::MergeFrom(CMsgJumpListLink const&)
+ T CMsgJumpListLink::New() const
+ T CMsgJumpListLink::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJumpListLink::SetCachedSize(int) const
+ T CMsgJumpListLink::SharedCtor()
+ T CMsgJumpListLink::SharedDtor()
+ T CMsgJumpListLink::~CMsgJumpListLink()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
  T CMsgKeyChar::Clear()
@@ -6488,6 +6542,19 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
+ T CMsgSetJumpList::ByteSize() const
+ T CMsgSetJumpList::CMsgSetJumpList()
+ T CMsgSetJumpList::Clear()
+ T CMsgSetJumpList::GetCachedSize() const
+ T CMsgSetJumpList::GetMetadata() const
+ T CMsgSetJumpList::IsInitialized() const
+ T CMsgSetJumpList::MergeFrom(CMsgSetJumpList const&)
+ T CMsgSetJumpList::New() const
+ T CMsgSetJumpList::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetJumpList::SetCachedSize(int) const
+ T CMsgSetJumpList::SharedCtor()
+ T CMsgSetJumpList::SharedDtor()
+ T CMsgSetJumpList::~CMsgSetJumpList()
  T CMsgSetLocalFileRequestMapping::ByteSize() const
  T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
  T CMsgSetLocalFileRequestMapping::Clear()
@@ -6632,6 +6699,28 @@
  T CMsgStatusText::SharedCtor()
  T CMsgStatusText::SharedDtor()
  T CMsgStatusText::~CMsgStatusText()
+ T CMsgSteamAuthCookiesSet::ByteSize() const
+ T CMsgSteamAuthCookiesSet::CMsgSteamAuthCookiesSet()
+ T CMsgSteamAuthCookiesSet::Clear()
+ T CMsgSteamAuthCookiesSet::GetCachedSize() const
+ T CMsgSteamAuthCookiesSet::GetMetadata() const
+ T CMsgSteamAuthCookiesSet::IsInitialized() const
+ T CMsgSteamAuthCookiesSet::MergeFrom(CMsgSteamAuthCookiesSet const&)
+ T CMsgSteamAuthCookiesSet::New() const
+ T CMsgSteamAuthCookiesSet::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSteamAuthCookiesSet::SetCachedSize(int) const
+ T CMsgSteamAuthCookiesSet::~CMsgSteamAuthCookiesSet()
+ T CMsgSteamAuthNeeded::ByteSize() const
+ T CMsgSteamAuthNeeded::CMsgSteamAuthNeeded()
+ T CMsgSteamAuthNeeded::Clear()
+ T CMsgSteamAuthNeeded::GetCachedSize() const
+ T CMsgSteamAuthNeeded::GetMetadata() const
+ T CMsgSteamAuthNeeded::IsInitialized() const
+ T CMsgSteamAuthNeeded::MergeFrom(CMsgSteamAuthNeeded const&)
+ T CMsgSteamAuthNeeded::New() const
+ T CMsgSteamAuthNeeded::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSteamAuthNeeded::SetCachedSize(int) const
+ T CMsgSteamAuthNeeded::~CMsgSteamAuthNeeded()
  T CMsgStopFind::ByteSize() const
  T CMsgStopFind::CMsgStopFind()
  T CMsgStopFind::Clear()
@@ -6789,12 +6878,6 @@
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::~CMultipleCallResults()
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::CMultipleCallResults(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*, bool))
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::GetCallbackSizeBytes()
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::Run(void*)
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::Run(void*, bool, unsigned long long)
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::Validate(CValidator&, char const*)
- T CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>::~CMultipleCallResults()
  T CMusicHelper::BGetFilenameFromTrackURI(char const*, char*, int)
  T CMusicHelper::GetIndexForDefaultCover(char const*, char const*)
  T CMusicHelper::MillisecondsToString(int)
@@ -7707,7 +7790,6 @@
  T CProportionalIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
- T CRTime::CSecsPassed() const
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
@@ -8091,13 +8173,10 @@
  T CSoundSystemSelect::KB_ChainToMap()
  T CSoundSystemSelect::OnCommand(char const*)
  T CSoundSystemSelect::~CSoundSystemSelect()
- T CSteamAuthedHTML::CCallback_OnCredentialsChanged::Run(void*)
  T CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged::Run(void*)
- T CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync::Run(void*)
  T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool, bool)
  T CSteamAuthedHTML::ChainToAnimationMap()
  T CSteamAuthedHTML::ChainToMap()
- T CSteamAuthedHTML::ClearWGAuthentication()
  T CSteamAuthedHTML::GetAnimMap()
  T CSteamAuthedHTML::GetClassSize() const
  T CSteamAuthedHTML::GetKBMap()
@@ -8106,18 +8185,13 @@
  T CSteamAuthedHTML::GetPanelClassName()
  T CSteamAuthedHTML::GetPanelTopClassName() const
  T CSteamAuthedHTML::KB_ChainToMap()
- T CSteamAuthedHTML::OnCredentialsChanged(LogOnCredentialsChanged_t*)
  T CSteamAuthedHTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
  T CSteamAuthedHTML::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
  T CSteamAuthedHTML::OnSetHTMLTitle(char const*)
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
  T CSteamAuthedHTML::OnSupportSystemReportReady(SupportSystemReportReady_t*, bool)
- T CSteamAuthedHTML::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
- T CSteamAuthedHTML::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
- T CSteamAuthedHTML::OpenURL(char const*, char const*, bool, bool)
- T CSteamAuthedHTML::RequestCookieAuthIfNecessary(char const*)
+ T CSteamAuthedHTML::OpenURL(char const*, char const*, bool)
  T CSteamAuthedHTML::RequestSupportSystemReport(CSmartPtr<vgui::CJSCallbackFunc>)
- T CSteamAuthedHTML::SetAuthCookie(char const*, char const*)
  T CSteamAuthedHTML::SetParentalUnlockCookie(char const*, char const*)
  T CSteamAuthedHTML::Validate(CValidator&, char const*)
  T CSteamAuthedHTML::~CSteamAuthedHTML()
@@ -8202,7 +8276,7 @@
  T CURLManager::GetAllWGAuthedURLs()
  T CURLManager::GetURLFeature(int)
  T CURLManager::GetURLNav(int)
- T CURLManager::LoadURLFile(char const*, IBaseFileSystem*)
+ T CURLManager::LoadURLFile(char const*)
  T CURLManager::SetURLVar(char const*, char const*)
  T CURLManager::Validate(CValidator&, char const*)
  T CURLManager::~CURLManager()
@@ -8454,7 +8528,6 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
  T CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Validate(CValidator&, char const*)
- T CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::HasElement(CUtlString const&) const
  T CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlString const&)
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
@@ -8528,7 +8601,6 @@
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -9372,6 +9444,7 @@
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::CreateKey(char const*)
  T KeyValues::CreatePeerKey(char const*)
+ T KeyValues::DebugDump() const
  T KeyValues::Dump(bool, bool) const
  T KeyValues::FindKey(char const*) const
  T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
@@ -9806,6 +9879,7 @@
  T non-virtual thunk to vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T non-virtual thunk to vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
  T non-virtual thunk to vgui::HTML::BrowserJSMethodCall(CMsgJSMethodCall const*)
+ T non-virtual thunk to vgui::HTML::BrowserJSReleaseCallback(CMsgJSReleaseCallback const*)
  T non-virtual thunk to vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
@@ -10982,6 +11056,7 @@
  T vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
  T vgui::HTML::BrowserJSMethodCall(CMsgJSMethodCall const*)
+ T vgui::HTML::BrowserJSReleaseCallback(CMsgJSReleaseCallback const*)
  T vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
@@ -13509,8 +13584,12 @@
  b (anonymous namespace)::CHTMLPageSecurityInfo_reflection_
  b (anonymous namespace)::CJSMethodArgument_descriptor_
  b (anonymous namespace)::CJSMethodArgument_reflection_
+ b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
+ b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
+ b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
+ b (anonymous namespace)::CMsgAuthedSteamDomains_reflection_
  b (anonymous namespace)::CMsgBrowserCreateResponse_descriptor_
  b (anonymous namespace)::CMsgBrowserCreateResponse_reflection_
  b (anonymous namespace)::CMsgBrowserCreate_descriptor_
@@ -13541,6 +13620,8 @@
  b (anonymous namespace)::CMsgComboNeedsPaint_reflection_
  b (anonymous namespace)::CMsgCopy_descriptor_
  b (anonymous namespace)::CMsgCopy_reflection_
+ b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
+ b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgExecuteJavaScript_descriptor_
  b (anonymous namespace)::CMsgExecuteJavaScript_reflection_
  b (anonymous namespace)::CMsgExitFullScreen_descriptor_
@@ -13599,6 +13680,8 @@
  b (anonymous namespace)::CMsgJSValue_JSObjectProperty_reflection_
  b (anonymous namespace)::CMsgJSValue_descriptor_
  b (anonymous namespace)::CMsgJSValue_reflection_
+ b (anonymous namespace)::CMsgJumpListLink_descriptor_
+ b (anonymous namespace)::CMsgJumpListLink_reflection_
  b (anonymous namespace)::CMsgKeyChar_descriptor_
  b (anonymous namespace)::CMsgKeyChar_reflection_
  b (anonymous namespace)::CMsgKeyDown_descriptor_
@@ -13681,6 +13764,8 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
+ b (anonymous namespace)::CMsgSetJumpList_descriptor_
+ b (anonymous namespace)::CMsgSetJumpList_reflection_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_descriptor_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_reflection_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_descriptor_
@@ -13705,6 +13790,10 @@
  b (anonymous namespace)::CMsgStartRequest_reflection_
  b (anonymous namespace)::CMsgStatusText_descriptor_
  b (anonymous namespace)::CMsgStatusText_reflection_
+ b (anonymous namespace)::CMsgSteamAuthCookiesSet_descriptor_
+ b (anonymous namespace)::CMsgSteamAuthCookiesSet_reflection_
+ b (anonymous namespace)::CMsgSteamAuthNeeded_descriptor_
+ b (anonymous namespace)::CMsgSteamAuthNeeded_reflection_
  b (anonymous namespace)::CMsgStopFind_descriptor_
  b (anonymous namespace)::CMsgStopFind_reflection_
  b (anonymous namespace)::CMsgStopLoad_descriptor_
@@ -13732,6 +13821,7 @@
  b (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
  b (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
  b (anonymous namespace)::CaptionGripPanel::KB_ChainToMap()::chained
+ b (anonymous namespace)::EJSRegisterMethodType_descriptor_
  b (anonymous namespace)::GripPanel::ChainToAnimationMap()::chained
  b (anonymous namespace)::GripPanel::ChainToMap()::chained
  b (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
@@ -13848,6 +13938,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient
  b g_pClientUGC
@@ -13921,6 +14012,9 @@
  b s_BlankImage
  b s_BuildGroupFileCache
  b s_CurrentRoutingIDPtr
+ b s_ListLogFilesMutex
+ b s_ListLogMutexInitialized
+ b s_MutexAvailabilityCheck
  b s_StartDirContexts
  b s_bCallbackManagerInitialized
  b s_bDebugVGUI2Messages
@@ -14011,6 +14105,7 @@
  d intconverter
  d p_floatconverter
  d p_intconverter
+ d s_DebugDumpPtr
  d s_EAppReleaseState
  d s_ECurrencyCode
  d s_EParentalFeature
@@ -14179,7 +14274,9 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
@@ -14195,6 +14292,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFileLoadDialogResponse_offsets_
@@ -14224,6 +14322,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSReleaseCallback_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_JSObjectProperty_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJumpListLink_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyChar_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyUp_offsets_
@@ -14265,6 +14364,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_AdditionalRoute_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
@@ -14277,6 +14377,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequestResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStatusText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSteamAuthCookiesSet_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSteamAuthNeeded_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStopFind_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStopLoad_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgURLChanged_offsets_

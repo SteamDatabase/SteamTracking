@@ -1253,6 +1253,17 @@ steam.styles
     	selectedtextcolor="highlight1"
     }
     
+    "GameItem_LockedSiteLicense"
+    {
+      textcolor="labeldisabled"
+      selectedtextcolor="label"
+    }
+    "GameItem_LockedSiteLicense:hover"
+    {
+      textcolor="label"
+      selectedtextcolor="label"
+    }
+ 
     "GameColumn_BigText"
 		{
 		font-family=basefont

@@ -225,12 +225,13 @@
  T Plat_Alloc
  T Plat_AttachDebuggerToProcess
  T Plat_CommandLineParamExists
+ T Plat_CommandLineParamValue
  T Plat_DefaultAllocErrorFn
  T Plat_FloatTime
  T Plat_Free
- T Plat_GetCommandLine
  T Plat_GetExecutablePath
  T Plat_GetExecutablePathUTF8
+ T Plat_GetProcessArgv
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
  T Plat_IsSteamConsoleMode
@@ -243,8 +244,6 @@
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
  T Plat_SetAllocErrorFn
- T Plat_SetCommandLine
- T Plat_SetCommandLineArgs
  T Plat_TickDiffMicroSec
  T Plat_TickDiffMilliSec
  T Plat_VirtualAccessFlags
@@ -517,6 +516,8 @@
  T void std::__1::vector<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::__push_back_slow_path<SteamVProf::TimeSums_t const&>(SteamVProf::TimeSums_t const&)
  T vtune
  _DefaultRuneLocale
+ _NSGetArgc
+ _NSGetArgv
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
@@ -569,7 +570,6 @@
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
- b g_CmdLine
  b g_DumpHelper
  b g_TickBase
  b g_TickFrequency
@@ -636,6 +636,7 @@
  mach_timebase_info
  malloc
  malloc_size
+ memcmp
  memcpy
  memmove
  mmap
@@ -709,7 +710,6 @@
  strerror$UNIX2003
  strlen
  strncasecmp
- strncat
  strncpy
  strrchr
  strstr

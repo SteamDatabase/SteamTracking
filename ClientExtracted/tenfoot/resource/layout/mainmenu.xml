@@ -35,7 +35,7 @@
                         </Panel>
 
 					</Button>
-					<Button id="ControllerBatteryButton" class="Button TopRowButton" onactivate="ShowSettings( GameController );" selectionpos="auto" tabindex="auto" >
+					<Button id="ControllerBatteryButton" class="Button TopRowButton" onactivate="ControllerSendLowBatteryIndication();" selectionpos="auto" tabindex="auto" >
                         <Panel class="background_box" />
                         <Panel id="BatteryImages" >
 							<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />

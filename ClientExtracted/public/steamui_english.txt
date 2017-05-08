@@ -98,7 +98,7 @@ This should take less than a minute."
 "Steam_ErrorCantStartGame" "This game is currently unavailable.\nPlease try again at another time."
 "Steam_ErrorCantStartGameDetailed" "Failed to start game (%error%)."
 "Steam_ErrorCantRunBecauseRequires64bitOS"	"The game failed to start because you are running a 32bit version of Windows and a 64bit version is required.\n\nIf the game has a 32 bit launch option please select it, otherwise you will need a PC with a 64 bit version of Windows.\nIf you don't have such a PC available click below to learn about requesting a refund.\n"
-"Steam_ErrorCantStartGameDependency" "Failed to start game with shared content. Please update these games first:\n\n  %dependencies%"
+"Steam_ErrorCantStartGameDependency" "Failed to start game with shared content. Please update these games first:\n\n  %detail%"
 "Steam_ErrorUsernameTooShort" "You must enter a name at least 3 characters long."
 "Steam_ErrorPasswordTooShort2" "Your password must be at least 8 characters long."
 "Steam_ErrorAnswerTooShort" "The answer to the secret question\nmust be at least 3 characters long."
@@ -221,6 +221,8 @@ This should take less than a minute."
 
 "SteamUI_JoinDialog_KickSessions_Text" "Disconnecting other session already playing..."
 "SteamUI_JoinDialog_KickSessions_Error" "Failed to disconnect other session playing %game%"
+
+"SteamUI_JoinDialog_VerifyingFiles_Error" "Failed to verify signed files for %game%, content validation is required."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit..."
@@ -437,9 +439,9 @@ This should take less than a minute."
 "Steam_DeleteCacheConfirmation_Text"		"This will delete all %s1 game content\nfrom this computer.\n\nThe game will remain in your Games Library, but\nto play it in the future you'll have to first\nre-download its content."
 "Steam_DeleteCacheConfirmationMulti_Text"	"This will delete all content for these games\nfrom this computer.\n\nThe games will remain in your Games Library, but\nto play them in the future you'll have to first\nre-download their content."
 "Steam_DeleteFreeCacheConfirmation_Text"		"This will delete all %s1 game content\nfrom this computer."
-"Steam_CantDeleteCache_Title"			"Steam - Cannot delete %s1"
-"Steam_CantDeleteCache_Info"			"Cannot delete %s1, since its data is used by the following games: %s2"
-"Steam_CantDeleteAppItsRunning_Info"		"Cannot delete %s1, since it's currently running.  Please close %s1 before attempting to delete it."
+"Steam_UninstallAppError_Title"			"Steam - Error"
+"Steam_UninstallAppError_Text"			"Failed to uninstall %game% (%reason%)"
+
 "Steam_DeleteCache_Button"			"Delete"
 "Steam_DiskUsageNone"				"Disk usage: none"
 "Steam_DiskUsageMBOnDrive"			"Disk usage: %diskusagemb% MB on drive %drivename%"
@@ -1272,8 +1274,8 @@ This should take less than a minute."
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text" "An error occurred while updating %game% (%reason%)"
 "Steam_App_Update_Failed_Text_Long" "An error occurred while updating %game% (%reason%) :\n\n%detail%"
-"Steam_App_Update_NotEnoughDiskSpace" "Not enought disk space available to update %game% (%detail% required)"
-"Steam_App_Update_NotEnoughDiskQuota" "Not enought user disk quota available to update %game% (%detail% required)"
+"Steam_App_Update_NotEnoughDiskSpace" "Not enough disk space available to update %game% (%detail% required)"
+"Steam_App_Update_NotEnoughDiskQuota" "Not enough user disk quota available to update %game% (%detail% required)"
 "Steam_App_Update_LockedByProcess" "A file of %game% is locked by %program% and can't be updated. Please close this program and try again. \n\n Program: %executable%\n File: %detail%"
 
 "Steam_PreloadCompleteNoPreorderAvailable" "A locked copy of %game% is now on your computer."
@@ -1712,6 +1714,7 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_CloudSyncConflict"	"Sync conflict"
 "Steam_GameDownloadWaitingForComponentInUse"	"Download waiting"
 "Steam_VideoReady"	"Ready to watch"
+"Steam_SiteLicenseGameUnavailable"		"No licenses available"
 
 
 "Steam_BackupRequiresFullyDownloadedGames_Title"	"Steam - Backup"
@@ -2801,6 +2804,7 @@ Make one now by emailing a gift to someone you know."
 "Steam_GamesSection_NotInstalled"		"NOT INSTALLED"
 "Steam_GamesSection_NotAvailable"		"NOT AVAILABLE"
 "Steam_GamesSection_SteamVR"			"VR"
+"Steam_GamesSection_SiteGranted"		"From this location"
 
 "Steam_FavoritesColumn"				"Favorites"
 "Steam_LogoColumn"						"Images"
@@ -3288,6 +3292,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "SteamUI_GameRequires_NTFS_Detail"	"The game you are installing requires a drive with the NTFS file system and\ncannot be installed on a FAT32 filesystem. For more information see the\nsupport article linked below."
 "SteamUI_GameRequires_64BitOS_Detail"	"The game you are installing requires a 64bit version of Windows. If you don't\nhave such a PC available click below to learn about requesting a refund."
 
+"SteamUI_SiteLicense_LockedDetail"	"There are currently no licenses available for this product. Check back later\nfor availability or notify the local administrator."
 
 "SteamUI_OSXAccessibilityTitle"			"Steam - Game Overlay Access"
 "SteamUI_OSXAccessibilityText"			"The in-game Steam overlay requires access for assistive devices to be enabled.
@@ -3475,6 +3480,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_library_filter_screenshots"	"Screenshots"
 "steam_library_filter_uncategorized"	"Uncategorized"
 "steam_library_filter_hidden"	"Hidden"
+"steam_library_filter_site" "From %site%"
 
 "steam_library_section_menu_expandall"	"Expand All"
 "steam_library_section_menu_collapseall"	"Collapse All"
@@ -3547,6 +3553,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_downloads_auto_update_high_priority" "High Priority"
 "steam_downloads_auto_update_default" "Auto-Updates Enabled"
 "steam_downloads_auto_update_disabled" "Auto-Updates Disabled"
+"steam_downloads_locked"	"All licenses are in use for this product"
 
 "steam_client_add_game" "Add a Game..."
 "steam_addgame_addshortcut"	"Add a Non-Steam Game..."
@@ -3576,6 +3583,8 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "You've watched"
 "steam_details_lastplayedheader_video" "Last watched"
+"steam_details_lockedheader" "No Licenses"
+"steam_details_lockedreason" "All license are currently in use. Please check back later."
 
 "steam_details_achievementsheader" "%achieved_achievements%/%available_achievements% achievements"
 "steam_friendsplayingnow"	"You have %friendsplayingnow% Friends playing %gamename% right now!"
@@ -3966,7 +3975,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_13"		"corrupt content files"
 "Steam_AppUpdateError_14"		"waiting for install disc"
 "Steam_AppUpdateError_15"		"invalid install path"
-"Steam_AppUpdateError_16"		"app already running"
+"Steam_AppUpdateError_16"		"app running"
 "Steam_AppUpdateError_17"		"missing shared content"
 "Steam_AppUpdateError_18"		"not installed"
 "Steam_AppUpdateError_19"		"update required"
@@ -4159,7 +4168,6 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_OtherSessionPlaying_Title" "Error - Steam"
 "Steam_OtherSessionPlaying_Text" "You are logged in on another computer already playing \"%existing_app%\".\nLaunching \"%launching_app%\" here will disconnect the other session from Steam."
-"SteamUI_JoinDialog_KickSessions_Text" "You are logged in on another computer already playing \"%existing_app%\".\nLaunching \"%launching_app%\" here will disconnect the other session from Steam."
 
 "Steam_SystemRequirementWarning_Title" "Performance Warning"
 "Steam_SystemRequirementWarning_Text" "Your system does not meet %game%'s minimum system requirements recommended for this game."
@@ -4518,7 +4526,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_ViewSSAInBrowser" "You must read and agree to the Steam Subscriber Agreement.\n<a href=\"%url%\">Click Here</a> to open the agreement in your browser.  Return to this window to continue."
 
 "Steam_VR2DGameWarning_Title" "Warning"
-"Steam_VR2DGameWarning_Desc" "%launching_app% will launch into an environment in your VR HMD as well as on your desktop.\nPerformance may not be acceptable in this mode, to launch this game only on your desktop please exit SteamVR before launching the game."
+"Steam_VR2DGameWarning_Desc" "%launching_app% will launch into an environment in your VR HMD as well as on your desktop.\nPerformance may not be acceptable in this mode. To launch this game only on your desktop please exit SteamVR before launching the game."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app% does not support VR. It will appear on your desktop and may affect VR performance."
 "Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% supports VR natively but you have chosen the desktop version, do you want to continue?"
 
@@ -4530,4 +4538,6 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_VacBanOnAccount"		"VAC Ban(s) on Account"
 "Steam_NoVacBanOnAccount"	"No VAC Bans on Account"
+
+"Steam_ClientBrowserAuth_AllowBrowserAuth" "Allow desktop Web browsers to automatically log into Steam sites\n  (requires restart for changes to apply)"
 }

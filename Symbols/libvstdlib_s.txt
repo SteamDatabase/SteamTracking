@@ -4,7 +4,6 @@
  B CUtlSymbol::s_pSymbolTable
  B ConCommandBase::s_pConCommandBases
  B InterfaceReg::s_pInterfaceRegs
- B SteamStdLib::s_pCommandLine
  B __g_CreateCDefaultCvarICvar_reg
  B __g_CreateCVStdLibDLLValidateIValidate_reg
  B gCURLUtils_hashTLDs
@@ -15,6 +14,7 @@
  B g_bPreventCoroutineContinue
  B s_NoEscConversion
  B s_StringCharConversion
+ CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
@@ -25,6 +25,7 @@
  D typeinfo for CDebugStatsSystem
  D typeinfo for CDefaultCvar
  D typeinfo for CKeyValuesSystem
+ D typeinfo for CPathString
  D typeinfo for CUniformRandomStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -40,6 +41,7 @@
  D vtable for CDebugStatsSystem
  D vtable for CDefaultCvar
  D vtable for CKeyValuesSystem
+ D vtable for CPathString
  D vtable for CUniformRandomStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -50,12 +52,13 @@
  Gestalt
  Is64BitOS
  Msg
- Plat_GetCommandLine
+ Plat_GetProcessArgv
  Plat_OutputDebugString
  Plat_RelativeTicks
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CDefaultCvar
  R typeinfo name for CKeyValuesSystem
+ R typeinfo name for CPathString
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -70,8 +73,10 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >
  R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<int, CUtlMemory<int> >
  R typeinfo name for CVStdLibDLLValidate
  R typeinfo name for ICvar
@@ -156,6 +161,9 @@
  T CParseURL::Parse(char const*, int, URLParts_t&)
  T CParseURL::ParseURLImpl(char const*, int, URLParts_t&)
  T CParseURL::SetURLPart(char const*, char const*, CUtlString&)
+ T CPathString::CPathString(char const*, char const*)
+ T CPathString::Clear()
+ T CPathString::Validate(CValidator&, char const*)
  T CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
  T CStringNormalization::Initialize()
  T CStringNormalization::Normalize(bool, char const*, char*, int)
@@ -173,13 +181,21 @@
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
  T CUtlBuffer::AddNullTermination()
+ T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckPut(int)
+ T CUtlBuffer::EnsureCapacity(int)
+ T CUtlBuffer::GetOverflow(int)
  T CUtlBuffer::Put(void const*, int)
  T CUtlBuffer::PutChar(char)
+ T CUtlBuffer::PutOverflow(int)
+ T CUtlBuffer::PutString(char const*)
+ T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
+ T CUtlBuffer::SetBufferType(bool, bool)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::AllocNode()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::CUtlHashMap()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::EnsureCapacity(int)
@@ -213,9 +229,11 @@
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Validate(CValidator&, char const*)
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::~CUtlMap()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
+ T CUtlMemoryBase::ConvertToGrowableMemory(int)
  T CUtlMemoryBase::Count() const
  T CUtlMemoryBase::EnsureCapacity(int)
  T CUtlMemoryBase::Grow(int)
+ T CUtlMemoryBase::IsExternallyAllocated() const
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Swap(CUtlMemoryBase&)
@@ -275,6 +293,7 @@
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
+ T CUtlStringBuilder::DetachString()
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Swap(CUtlString&)
@@ -294,10 +313,18 @@
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsLeft(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const*&&)
@@ -377,34 +404,32 @@
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T Internal_Coroutine_Continue(int, bool, char const*)
  T KeyValuesSystemSteam
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T OSTypesAreCompatible
  T ReplaceBadFilenameCharacters(char*, char, char const*)
- T SteamStdLib::CCommandLine::AddArgument(char const*, char const*)
- T SteamStdLib::CCommandLine::AppendParm(int, char const*)
- T SteamStdLib::CCommandLine::CheckParm(int, char const**) const
- T SteamStdLib::CCommandLine::CleanUpParms()
- T SteamStdLib::CCommandLine::CreateCmdLine(char const*)
+ T SteamStdLib::CCommandLine::AppendParm(SteamStdLib::OpaqueHParamType*, char const*)
+ T SteamStdLib::CCommandLine::AutoCreateCmdLine()
+ T SteamStdLib::CCommandLine::CCommandLine()
+ T SteamStdLib::CCommandLine::CheckParm(SteamStdLib::OpaqueHParamType*, char const**) const
  T SteamStdLib::CCommandLine::CreateCmdLine(int, char**)
- T SteamStdLib::CCommandLine::FindParm(int) const
+ T SteamStdLib::CCommandLine::FindParm(SteamStdLib::OpaqueHParamType*) const
  T SteamStdLib::CCommandLine::GetCmdLine() const
- T SteamStdLib::CCommandLine::GetCommandString(int) const
+ T SteamStdLib::CCommandLine::GetCommandString(SteamStdLib::OpaqueHParamType*) const
  T SteamStdLib::CCommandLine::GetFirstRegisteredCmd()
- T SteamStdLib::CCommandLine::GetNextRegisteredCmd(int)
+ T SteamStdLib::CCommandLine::GetNextRegisteredCmd(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::GetParm(int) const
- T SteamStdLib::CCommandLine::GetRegisteredCmd(int)
- T SteamStdLib::CCommandLine::GetRegisteredCmdHelp(int)
- T SteamStdLib::CCommandLine::LoadParametersFromFile(char const*&, char*&, int, bool)
+ T SteamStdLib::CCommandLine::GetRegisteredCmd(SteamStdLib::OpaqueHParamType*)
+ T SteamStdLib::CCommandLine::GetRegisteredCmdHelp(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::ParmCount() const
- T SteamStdLib::CCommandLine::ParmValue(int, char const*) const
- T SteamStdLib::CCommandLine::ParmValue(int, float) const
- T SteamStdLib::CCommandLine::ParmValue(int, int) const
- T SteamStdLib::CCommandLine::ParseCommandLine()
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, char const*) const
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, float) const
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, int) const
+ T SteamStdLib::CCommandLine::ParseIncludeFiles()
  T SteamStdLib::CCommandLine::PrintCommandHelp()
  T SteamStdLib::CCommandLine::RegisterParam(char const*, char const*)
- T SteamStdLib::CCommandLine::RemoveParm(int)
- T SteamStdLib::CCommandLine::RemoveParmInternal(char const*)
- T SteamStdLib::CCommandLine::UnregisterParam(int)
+ T SteamStdLib::CCommandLine::RemoveParm(SteamStdLib::OpaqueHParamType*)
+ T SteamStdLib::CCommandLine::UnregisterParam(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::Validate(CValidator&, char const*)
  T SteamStdLib::CCommandLine::~CCommandLine()
  T SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -426,6 +451,7 @@
  T V_AppendParamToURL
  T V_AppendSlash
  T V_BasicHtmlEntityEncode
+ T V_BasicHtmlEntityEncodeBuffer
  T V_CP437CharsToUTF8
  T V_CbMakeAbsolutePath
  T V_ComposeFileName
@@ -611,6 +637,7 @@
  T cIntToHexDigit(int)
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
+ T void Destruct<CUtlString>(CUtlString*)
  T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)
  T vstdlib_wcsicmp
@@ -641,7 +668,6 @@
  __stack_chk_guard
  __tolower
  __toupper
- atoi
  b CStringNormalization::Initialize()::threadonce_1175_24
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
@@ -650,9 +676,8 @@
  b DebugStatsSystem::g_DebugStatsSystem
  b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem
- b SteamStdLib::CCommandLine::CheckParm(int, char const**) const::sz
- b SteamStdLib::CommandLine()::bInitialized
  b SteamStdLib::CommandLine()::g_CmdLine
+ b SteamStdLib::s_pCommandLine
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
  b TestForAppleGraphicsUpdateInstalled()::bLoaded
  b TestForAppleGraphicsUpdateInstalled()::handle
@@ -691,10 +716,11 @@
  dlsym
  dyld_stub_binder
  fclose
- fgetc
  fopen
  fopen$UNIX2003
+ fread
  free
+ fseeko
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
@@ -711,7 +737,6 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
- printf
  pthread_mutex_lock
  pthread_mutex_unlock
  r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup1
@@ -745,11 +770,10 @@
  snprintf
  sprintf
  sscanf
+ stat$INODE64
  std::terminate()
- strcat
  strchr
  strcmp
- strcpy
  strlen
  strncat
  strpbrk
@@ -773,6 +797,7 @@
  t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t KeyValuesSystem()
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
  t _GLOBAL__sub_I_checksum_crc.cpp
  t _GLOBAL__sub_I_coroutine.cpp

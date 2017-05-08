@@ -38,6 +38,7 @@
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
  B CMsgProtobufWrapped::default_instance_
+ B CNet::s_FrameFuncPollConnections
  B CNet::sm_EScale
  B CNet::sm_ListHConnectionToPoll
  B CNet::sm_ListHConnectionToWakeUp
@@ -118,11 +119,13 @@
  B gZeroNetAdr
  B g_CompletionPortManager
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPGetCompletionBatchSize
+ B g_ConVarIOCPBatchSize
+ B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
  B g_ConVarNetEncryptionHandshakeWorkMax_MedPri
+ B g_ConVarSpewFrameFuncOverageWarnings
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
@@ -157,6 +160,7 @@
  B msgpool_hard_limit
  B msgpool_soft_limit
  B obj_cleanup_defer
+ B php_output_always_number
  B s_NoEscConversion
  B s_SpewConfig
  B s_StringCharConversion
@@ -224,7 +228,6 @@
  D CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordInsertInternal(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CUDPConnection::sm_hSocketSharedClient
  D CUDPConnection::sm_hSocketSharedClientIOCP
- D CWebSocketConnection::sm_sslDummyConnectionCallback
  D DHparams_it
  D DHvparams_it
  D DHxparams_it
@@ -449,7 +452,6 @@
  D typeinfo for CVideoPlayerManager::CVideoThread
  D typeinfo for CVideoWebMCuesParser
  D typeinfo for CWebSocketConnection
- D typeinfo for CWebSocketConnection::CDummySSLConnectionCallback
  D typeinfo for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D typeinfo for CWorkItem
  D typeinfo for CWorkItemHTTPClientRequest
@@ -612,7 +614,6 @@
  D vtable for CVideoPlayerManager::CVideoThread
  D vtable for CVideoWebMCuesParser
  D vtable for CWebSocketConnection
- D vtable for CWebSocketConnection::CDummySSLConnectionCallback
  D vtable for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D vtable for CWorkItem
  D vtable for CWorkItemHTTPClientRequest
@@ -807,7 +808,6 @@
  R typeinfo name for CVideoWebMCuesParser
  R typeinfo name for CWSASendToHelper
  R typeinfo name for CWebSocketConnection
- R typeinfo name for CWebSocketConnection::CDummySSLConnectionCallback
  R typeinfo name for CWebSocketConnectionDelayedCloseConnectionWorkItem
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemHTTPClientRequest
@@ -1197,6 +1197,7 @@
  T CAutoRelease<CHTTPRequestHandle>::~CAutoRelease()
  T CAutoRelease<COpenSSLCachedSession>::Reset(COpenSSLCachedSession*)
  T CAutoRelease<COpenSSLCachedSession>::~CAutoRelease()
+ T CAutoRelease<COpenSSLContext>::~CAutoRelease()
  T CAutoRelease<IHTTPRedirectHandler>::Reset(IHTTPRedirectHandler*)
  T CAutoRelease<IHTTPRedirectHandler>::~CAutoRelease()
  T CAutoRelease<IHTTPResponseHandler>::Reset(IHTTPResponseHandler*)
@@ -1211,6 +1212,7 @@
  T CBIOUtlBufferSinkCallbacks::FnWrite(bio_st*, char const*, int)
  T CBaseFrameFunction::AddToRunTimeHistory(unsigned int)
  T CBaseFrameFunction::CBaseFrameFunction(char const*, EFrameType)
+ T CBaseFrameFunction::SetFrameType(EFrameType)
  T CBaseFrameFunction::SetName(char const*)
  T CBaseFrameFunction::~CBaseFrameFunction()
  T CBaseScheduledFunction::CBaseScheduledFunction()
@@ -1240,7 +1242,6 @@
  T CCircularBuffer::GetWriteAvailable()
  T CCircularBuffer::Peek(char*, int)
  T CCircularBuffer::Read(void*, int)
- T CCircularBuffer::SetSize(int)
  T CCircularBuffer::Write(void const*, int)
  T CClassMemoryPool<CNetPacket>::Alloc()
  T CClassMemoryPool<CNetPacket>::Free(CNetPacket*)
@@ -1758,7 +1759,7 @@
  T CNetConnection::OnDisconnectDispatch(EResult)
  T CNetConnection::OnMessageComplete(unsigned char const*, unsigned int)
  T CNetConnection::OnNetQOSLevelChanged(ENetQOSLevel, ENetQOSLevel)
- T CNetConnection::RecvPkt(CNetPacket*)
+ T CNetConnection::RecvPkt(CNetPacket*, bool)
  T CNetConnection::RecvPlaintext(unsigned char*, unsigned int)
  T CNetConnection::RequestPolling()
  T CNetConnection::RequestWakeup(CSTime)
@@ -2187,10 +2188,11 @@
  T CTCPConnection::BFrameFuncRunConnections(CReliableTimer&)
  T CTCPConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
  T CTCPConnection::BInternalAsyncDisconnect()
- T CTCPConnection::BInternalAsyncSend(unsigned char const*, int, bool)
+ T CTCPConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CTCPConnection::BIsSendBlocked(int)
  T CTCPConnection::BPollConnection()
  T CTCPConnection::BProcessPendingSends()
+ T CTCPConnection::BUseDirectLoopbackSend()
  T CTCPConnection::CTCPConnection()
  T CTCPConnection::CloseSocket()
  T CTCPConnection::CreateTCPConnection(unsigned int, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
@@ -2208,7 +2210,7 @@
  T CTCPConnection::IncrementOutstandingSends(CTCPConnection*, int)
  T CTCPConnection::InternalGetTCPConnection(unsigned int)
  T CTCPConnection::IsIntraProcessConnection()
- T CTCPConnection::NotifyOwnerOfRecv(unsigned char*, int, unsigned char*)
+ T CTCPConnection::NotifyOwnerOfRecv(unsigned char*, int, unsigned char*, bool)
  T CTCPConnection::OnConnectFailure(EResult, unsigned long long)
  T CTCPConnection::OnConnectionSucceeded()
  T CTCPConnection::OnDataArrived(unsigned char*, int, bool&)
@@ -2318,7 +2320,7 @@
  T CUDPConnection::BAddReceivedPktToList(CReceivedPkt*)
  T CUDPConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
  T CUDPConnection::BInternalAsyncDisconnect()
- T CUDPConnection::BInternalAsyncSend(unsigned char const*, int, bool)
+ T CUDPConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CUDPConnection::BIsSendBlocked(int)
  T CUDPConnection::BPktValidForConnectionState(EUDPPktType)
  T CUDPConnection::BPollConnection()
@@ -2411,6 +2413,7 @@
  T CUtlBuffer::PutInt(int)
  T CUtlBuffer::PutOverflow(int)
  T CUtlBuffer::PutString(char const*)
+ T CUtlBuffer::PutStringWithoutNull(char const*)
  T CUtlBuffer::PutUint8(unsigned char)
  T CUtlBuffer::PutUnsignedInt(unsigned int)
  T CUtlBuffer::PutUnsignedInt64(unsigned long long)
@@ -2878,6 +2881,7 @@
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::AddToTail(CWorkItemHTTPClientRequest* const&)
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::BRemoveAtHead(CWorkItemHTTPClientRequest**)
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
+ T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::Count() const
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::OnItemAdded()
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::InsertBefore(int, CBaseFrameFunction* const&)
@@ -3364,12 +3368,10 @@
  T CWebSocketConnection::BCloseConnection(EWebSocketStatusCode, char const*)
  T CWebSocketConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
  T CWebSocketConnection::BInternalAsyncDisconnect()
- T CWebSocketConnection::BInternalAsyncSend(unsigned char const*, int, bool)
+ T CWebSocketConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CWebSocketConnection::BInternalAsyncSendEncodedFrame(CUtlBuffer&)
  T CWebSocketConnection::BIsSendBlocked(int)
  T CWebSocketConnection::BPollConnection()
- T CWebSocketConnection::CDummySSLConnectionCallback::BVerifyCertificate(CNetConnection*, COpenSSLConnection*, COpenSSLCertificate const&)
- T CWebSocketConnection::CDummySSLConnectionCallback::GetSSLContext()
  T CWebSocketConnection::CWebSocketConnection()
  T CWebSocketConnection::CloseSocket()
  T CWebSocketConnection::ConnectCompleted(unsigned int)
@@ -3390,6 +3392,7 @@
  T CWebSocketConnection::ResetCurrentFrame()
  T CWebSocketConnection::ScheduledTimeoutClientCloseAck()
  T CWebSocketConnection::SendEncryptedData(unsigned char*, unsigned int)
+ T CWebSocketConnection::SetConnectionBlackHoled()
  T CWebSocketConnection::SetIncoming(int, netadr_t const&)
  T CWebSocketConnection::UpgradeTCPConnectionToWebSocket(unsigned int, IConnectionCallback*, COpenSSLConnection*, unsigned int)
  T CWebSocketConnection::Validate(CValidator&, char const*)
@@ -3523,6 +3526,7 @@
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
  T ConVar::ConVar(char const*, char const*, unsigned long long)
+ T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
@@ -4190,8 +4194,8 @@
  T PchNameFromEResult(int)
  T PchNameFromEUniverse(int)
  T PchSpewGroupName(ESpewGroup)
+ T Plat_CommandLineParamExists
  T Plat_FloatTime
- T Plat_GetCommandLine
  T Plat_GetExecutablePath
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
@@ -4591,6 +4595,7 @@
  T VideoValidate
  T VideoValidateStatics
  T WeakRandomInt
+ T WeakRandomUint32
  T WriteMiniDump
  T X509V3_EXT_d2i
  T X509V3_NAME_from_section
@@ -5576,6 +5581,8 @@
  T vpaes_set_encrypt_key
  T xmlMemdup
  _DefaultRuneLocale
+ _NSGetArgc
+ _NSGetArgv
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
@@ -5618,6 +5625,7 @@
  accept
  accept$UNIX2003
  alphasort$INODE64
+ arc4random_stir
  atexit
  atoi
  atoll
@@ -5703,7 +5711,7 @@
  b COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)::fAsserted
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
- b CTCPConnection::BInternalAsyncSend(unsigned char const*, int, bool)::fAsserted
+ b CTCPConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)::fAsserted
  b CUDPSocket::ContinueRecv(int, unsigned int, void*)::fAsserted
  b CUDPSocket::ContinueRecv(int, unsigned int, void*)::stimeLastSpew
  b ClearWritingMiniDump::fAsserted
@@ -5772,7 +5780,6 @@
  b free_debug_func
  b free_type
  b g_CleanupSymbolTable
- b g_CmdLine
  b g_ConVarMaxOutstandingSendThreadItem
  b g_ConVarNetBacklogBytesAllowed
  b g_ConVarNetBacklogTimeAllowedSec
@@ -5888,6 +5895,7 @@
  close$UNIX2003
  connect
  connect$UNIX2003
+ d (anonymous namespace)::s_sslDummyConnectionCallback
  d ACCESS_DESCRIPTION_seq_tt
  d ASN1_SEQUENCE_ANY_item_tt
  d ASN1_SET_ANY_item_tt
@@ -6279,7 +6287,9 @@
  d tls12_sig
  d tls12_sigalgs
  d trstandard
+ d typeinfo for (anonymous namespace)::CDummySSLConnectionCallback
  d ui_openssl
+ d vtable for (anonymous namespace)::CDummySSLConnectionCallback
  d xstandard
  dladdr
  dlclose
@@ -6362,6 +6372,7 @@
  operator new(unsigned long)
  operator new[](unsigned long)
  printf
+ pthread_atfork
  pthread_attr_init
  pthread_attr_setstacksize
  pthread_cond_broadcast
@@ -6551,6 +6562,7 @@
  r tinfl_decompress::s_min_table_sizes
  r tls1_change_cipher_state.empty
  r two80
+ r typeinfo name for (anonymous namespace)::CDummySSLConnectionCallback
  r whitespace
  r zeroes
  read
@@ -6642,6 +6654,8 @@
  sws_scale
  sysctl
  sysctlnametomib
+ t (anonymous namespace)::CDummySSLConnectionCallback::BVerifyCertificate(CNetConnection*, COpenSSLConnection*, COpenSSLCertificate const&)
+ t (anonymous namespace)::CDummySSLConnectionCallback::GetSSLContextForNewConnection(CNetConnection*)
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t AVFreeCustom(void*)
@@ -6652,6 +6666,7 @@
  t BN_from_montgomery_word
  t BN_to_felem
  t BPlayerScheduledBefore(CVideoPlayer* const&, CVideoPlayer* const&)
+ t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CopyUriTableProc
  t DestroyDeclAttTableProc

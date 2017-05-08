@@ -227,6 +227,27 @@
 			}	
 		}
 				
+		DetailsLaunchButton:Disabled
+		{
+			inset="23 2 0 1"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor=TextDisabled
+			font-style=uppercase
+			bgcolor=none  
+			render
+			{
+				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
+			}
+			
+			render_bg
+			{
+       				 // background fill
+				0="gradient( x0, y0+1, x1, y1-1, buttonfacedisabled, buttonfacedisabled )"
+			}	
+		}
+				
 		DetailsInstallButton
 		{  
 			

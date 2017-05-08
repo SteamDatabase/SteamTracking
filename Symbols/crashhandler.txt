@@ -254,7 +254,7 @@
  T IsSpewActive
  T MiniDumpUnlock
  T Msg
- T Plat_GetCommandLine
+ T Plat_CommandLineParamExists
  T Plat_GetExecutablePath
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
@@ -346,6 +346,8 @@
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ _NSGetArgc
+ _NSGetArgv
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
@@ -385,7 +387,6 @@
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
- b g_CmdLine
  b g_DumpHelper
  b g_TickBase
  b g_TickFrequency
@@ -463,6 +464,7 @@
  mach_timebase_info
  malloc
  malloc_size
+ memcmp
  memcpy
  memmove
  mkdir
@@ -512,7 +514,6 @@
  strncat
  strncpy
  strrchr
- strstr
  sysctl
  system
  system$UNIX2003

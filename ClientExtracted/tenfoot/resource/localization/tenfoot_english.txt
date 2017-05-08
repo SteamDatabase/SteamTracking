@@ -35,6 +35,7 @@
 	"UI_Always"	"ALWAYS"
 	"UI_Select_Footer"	"SELECT"
 	"UI_Cancel_Footer"	"CANCEL"
+	"UI_Start"	"START"
 	"UI_Back_Footer" "BACK"
 	"UI_Alert"		"Alert"
 	"UI_Shift"		"CAPITALS"
@@ -1094,7 +1095,10 @@
 	"SettingsControllerSupport_LeftHapticsTesting"			"Pulsing the left haptics (Press A button to continue):"
 	"SettingsControllerSupport_RightHapticsTesting"			"Pulsing the right haptics (Press A button to continue):"
 	"SettingsControllerSupport_TestingComplete"				"Test completed!"
-
+	"SettingsController_FirmwareRecovery_Title"		"Firmware Recovery Process Steps"
+	"SettingsController_FirmwareRecovery_Body"		"1) Unplug all Steam Controllers from your computer.\n2) Remove the batteries from the device to be recovered.\n3) Hold the right trigger down until the dual-stage button is pressed and plug your device in. \nThis may generate a pop window.\n4) Press the START button"
+	"SettingsController_FirmwareRecoveryWarning_Title"	"Firmware Recovery Process"
+	"SettingsController_FirmwareRecoveryWarning_Body"	"This process is only for recovering devices that have failed to update or be enumerated by Steam. If your device is shown in Steam and does not trigger a firmware update prompt, it is using the latest firmware."
 	"Settings_Store"				"Store"
 	"SettingsStore_FilterToggle"	"Let me view all content, regardless of my current setup"
 	"SettingsStore_Description1"	"Your view of the Steam Store is designed to display the titles you can play on this machine."
@@ -1603,7 +1607,7 @@
 	"Library_Details_RemoveIcon_Cancel"	"CANCEL"
 	"Library_Details_Settings_Title"		"{s:appname} Settings"
 	"Library_Details_StorePage"		"View Store Page"
-
+	"Library_Details_FirmwareRecover" 	"Recover Steam Controller Firmware"
 
 	"Library_Details_CommunityContent_All"				 "All"
 	"Library_Details_CommunityContent_Screenshots"		 "Screenshots"
@@ -1660,7 +1664,7 @@
 	"Controller_Registration_Firmware_Submit"	"OK"
 
 	"Controller_OptOut_Title"			"Configuration Support Disabled"
-	"Controller_OptOut_Desc"			"Configuration support for the {s:controllertype} is disabled for this game.  To enable, change the setting in Controller Options for this game."
+	"Controller_OptOut_Desc"			"Configuration support for the {s:controllertype} is disabled.  {s:controllertype} Configuration support must be enabled in Steam's main Controller Settings and Support for this Game must be enabled under this game's Controller Options."
 
 	"Controller_Config_Offline_Title"	"Offline Configuration Editing"
 	"Controller_Config_Offline_Desc"	"You are currently offline.  Your last loaded configuration is available and can be edited, but changes will be lost when returning online.  A local save will be created for these changes."
@@ -2322,6 +2326,8 @@
 	"Library_Controller_Property_Value_CrossGate"		"Cross Gate"
 	"Library_Controller_Property_Value_RadialWithOverlap"				"Radial With Overlap"
 	"Library_Controller_Property_Value_RadialNoOverlap"				"Radial Without Overlap"
+	"Library_Controller_Property_Value_FourWayDpad"		"Four Way"
+	"Library_Controller_Property_Value_EightWayDpad"	"Eight Way"
 	"Library_Controller_Property_Value_Low"				"Low"
 	"Library_Controller_Property_Value_Medium"			"Medium"
 	"Library_Controller_Property_Value_High"			"High"
@@ -2459,6 +2465,9 @@
 	"Library_DownloadsTitle_Detail"		"{d:downloads}"
 	"Library_VRGames"			"VR"
 	"Library_VRGames_Detail" "{d:vrgames}"
+	"Library_SiteDefaultName"		"From this location"
+	"Library_SiteRealName"	"From {s:site}"
+	"Library_SiteGames_Detail"	"{d:sitegames}"
 
 	"Library_FilterActive"		"(FILTERED)"
 
@@ -2883,6 +2892,7 @@
 	"Steam_AppUpdateError_34"		"pending license"
 	"Steam_AppUpdateError_35"		"other session playing"
 	"Steam_AppUpdateError_36"		"corrupt download"
+	"Steam_AppUpdateError_44"		"no licenses available"
 
 
 	"Friends_Tab_Friends"		"FRIENDS"
@@ -3243,6 +3253,8 @@
 	"Downloads_Status_preloaded"	"Pre-load complete"
 	"Downloads_Status_finished"	"Download finished at {t:t:downloadfinished}"
 	"Downloads_Status_deferred"	"Download scheduled at {t:t:downloadstart}"
+	"Downloads_Status_locked"	"All licenses are in use for this product"
+
 
 	"Quit_LabelStreamingClient"	"{s:streamingclient}"
 	"Quit_LabelStreamingServer"	"{s:streamingserver}"
@@ -3930,6 +3942,8 @@
 
 	"Steam_OtherSessionPlaying_Title" "Error - Steam"
 	"Steam_OtherSessionPlaying_Text" "Your are logged in on another computer already playing \"{s:existing_app}\".\nLaunching \"{s:launching_app}\" here will disconnect the other session from Steam."
+	
+	"SteamUI_JoinDialog_KickSessions_Error" "Failed to disconnect other session playing \"{s:existing_app}\"."
 
 	"Steam_VideoPlayer_Title"	"Error - Video Player"
 	"Steam_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
@@ -4087,18 +4101,21 @@
 	"SteamUI_UpdateControllerFirmware_Cancel"	"NOT NOW"
 	"SteamUI_UpdateControllerFirmware_Continue"	"UPDATE"
 	"SteamUI_UpdateControllerFirmware_Done"		"OK"
-	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
+	"SteamUI_UpdateControllerFirmware_Title"	"Firmware Update"
+	"SteamUI_UpdateControllerFirmwareComplete_Title"	"Firmware Update Complete"
 	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller. The update will take up to a minute."
 	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller.\nThe update can take up to a minute."
 	"SteamUI_UpdateControllerFirmware_InstallW"	"New firmware is being installed on the controller.\nPlease do not power off the controller.\nThe update can take up to a minute."
 	"SteamUI_UpdateControllerFirmware_InstallAuto"	"Retrying firmware update...\nIf problems persist, try moving the controller closer to its receiver or connect it with a USB cable."
 	"SteamUI_UpdateControllerFirmware_Finished"	"Your Steam Controller firmware has been updated."
 	"SteamUI_UpdateControllerFirmware_Fallback"	"Initiating firmware update."
+	"SteamUI_UpdateControllerFirmware_SearchForVolume"	"Searching for Mass Storage Bootloader. This can take up to a minute on some systems."
 	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated. Please unplug the USB cable to continue."
 	"SteamUI_UpdateControllerFirmware_Failure_fiowrite"			"Firmware update failed: ERROR-fiowrite. Please contact Steam support."
 	"SteamUI_UpdateControllerFirmware_Failure_bin"				"Firmware update failed: ERROR-bin. Please contact Steam support."
 	"SteamUI_UpdateControllerFirmware_Failure_empty"			"Firmware update failed: ERROR-empty. Please contact Steam support."
 	"SteamUI_UpdateControllerFirmware_Failure_platform"			"Firmware update failed: your platform is currently unsupported."
+	"SteamUI_UpdateControllerFirmware_Failure_NoVolume"			"Couldn't find Mass Storage bootloader. Please check your device's usb connection"
 	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
 	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Your controller requires a one-time wired update.\n\nConnect the controller with the USB cable, and the update will start automatically.\n"
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
@@ -4760,9 +4777,13 @@
 	"SettingsController_ModifiedByOfficial" "Modified by you, based on the official game configuration."
 	"SettingsController_SwapToUnifiedPad"	"Swap To Unified Pad"
 	"SettingsController_SwapToSplitPad"	"Swap To Split Pad"
-	"SettingsController_GenericJoystickSetupText"	"Generic Gamepad Detected.  This controller can be set up as a generic x-input style controller by selecting Configure Buttons here.  It will then function within Big Picture as an x-input controller.  If Steam Controller Generic Gamepad Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
-	"SettingsController_PS4SetupText"	"Playstation Gamepad Detected.  If Steam Controller PS4 Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
-	"SettingsController_XBoxSetupText"	"XBox Gamepad Detected.  If Steam Controller XBox Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
+	"SettingsController_GenericJoystickSetupText"	"If Steam Controller Generic Gamepad Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers."
+	"SettingsController_PS4SetupText"	"If Steam Controller PS4 Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers. \n\nNote: When connected over Bluetooth the controller must be power cycled after opting out."
+	"SettingsController_XBoxSetupText"	"If Steam Controller XBox Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers.\n\nNote: On Windows you may need to adjust your Xbox DVR application settings in order for the Guide Button to register"
+	"SettingsController_GuideButtonSetupText" "Note: On Windows you may need to adjust your Xbox DVR application settings in order for the Guide Button to register"
+	"SettingsController_TurnOffSetupText" "If ''Turn off on Big Picture Exit'' is enabled Steam will turn off wirelessly connected controllers when shutting down"
+	"SettingsController_IdleTurnOffSetupText" "Steam will turn off your controller after it has been idle for this amount of time"
+
 	"ControllerNameOnAccount"		"{s:controllername}"
 	"ControllerTypeOnAccount"		"{s:accountname}'s {s:controllertype}"
 	"ControllersOnAccount"			"{s:accountname}'s Controllers"

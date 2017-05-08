@@ -30,6 +30,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamservice.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/SettingsSubFriends.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vgui/chartpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vgui/vgui_console.cpp
@@ -158,10 +159,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/AccountPage.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/CloudManager.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/CloudManager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/DialogController.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/GamePropertiesDialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/InstallAppWizard.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/InstallSubConvertApps.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/JoinGameDialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/Main.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/PlatformMainPanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamApp.cpp
@@ -180,13 +182,15 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerfirmwareupdater.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/convertappscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/credentialutils.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_rootdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_settings.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioninstallapps.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionrungame.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_cloud.cpp
@@ -214,7 +218,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageyv12.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/vrstreamthread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/x264wrapper.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/joingamecontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.cpp
@@ -227,10 +230,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamstartuphandlers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuibetacontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
@@ -285,7 +289,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/controllerregistration.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/iconpickerpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_deviceauth.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_eula.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_eula.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_filtergames.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/library_filtergames.h
@@ -491,6 +494,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ui/ui_tooltip_manager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uninstallgamesdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/vr2dgameoverlay.cpp

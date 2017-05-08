@@ -4,26 +4,25 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_GameController class="SettingsSection" defaultfocus="AddController" >
+	<SettingsPanel_GameController class="SettingsSection" defaultfocus="SettingsController_GuideButton" >
 		<Panel class="SettingsBottomPanel" >
-			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent SettingsController" tabindex="auto" selectionpos="auto" defaultfocus="AddController" rememberchildfocus="true" >
-				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused();">
+			<Panel id="GameControllerContent" class="SettingsContent SettingsLeftContent SettingsController" tabindex="auto" selectionpos="auto" defaultfocus="SettingsController_GuideButton" rememberchildfocus="true" >
+				<ToggleButton class="CheckBox" id="SettingsController_GuideButton" text="#SettingsController_CheckGuideButton" selectionpos="auto" onactivate="ControllerSetting_CheckGuideButton()" onfocus="OnNonControllerButtonFocused(0);" />				
+				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused(1);" />
+				<ToggleButton class="CheckBox" id="SettingsController_PS4Support" text="#SettingsController_PS4Support" selectionpos="auto" onactivate="ControllerSetting_PS4Support()" onfocus="OnNonControllerButtonFocused(2);" />
+				<ToggleButton class="CheckBox" id="SettingsController_XBoxSupport" text="#SettingsController_XBoxSupport" selectionpos="auto" onactivate="ControllerSetting_XBoxSupport()" onfocus="OnNonControllerButtonFocused(3);" />
+				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused(4);" />
+				<Button id="RecoverFirmware" class="Button" selectionpos="auto" onactivate="ControllerFirmwareRecovery();" onfocus="OnNonControllerButtonFocused(5);">
+					<Label class="LongDesc" text="#Library_Details_FirmwareRecover" />
+				</Button>
+				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused(6);">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
-
-				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown" ondescendantfocus="OnNonControllerButtonFocused();">
+				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown" ondescendantfocus="OnNonControllerButtonFocused(7);">
 					<Label class="SettingsLabel" text="#SettingsController_ShutdowntimeHeader" />
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
-
-				<ToggleButton class="CheckBox" id="SettingsController_GuideButton" text="#SettingsController_CheckGuideButton" selectionpos="auto" onactivate="ControllerSetting_CheckGuideButton()" onfocus="OnNonControllerButtonFocused();" />				
-				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused();" />
-				<ToggleButton class="CheckBox" id="SettingsController_PS4Support" text="#SettingsController_PS4Support" selectionpos="auto" onactivate="ControllerSetting_PS4Support()" onfocus="OnNonControllerButtonFocused();" />
-				<ToggleButton class="CheckBox" id="SettingsController_XBoxSupport" text="#SettingsController_XBoxSupport" selectionpos="auto" onactivate="ControllerSetting_XBoxSupport()" onfocus="OnNonControllerButtonFocused();" />
-				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused();" />
-
 				<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
-
 				<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" >
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
@@ -63,6 +62,9 @@
 					<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
 					<Label id="ControllerName" class="LongDesc Small" text="#SettingsController_SteamController" />
 				</Panel>
+				<Panel id="NoControllersFoundPanel" class=" ControllerSettingsButton">
+					<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_NoControllersDetected" />
+			</Panel>
 			</Panel>
 				
 			<Panel id="SteamControllerVersion"  class="SettingsContent SettingsRightContent" selectionpos="auto" oncancel="SetInputFocus(GameControllerContent);">
@@ -95,11 +97,18 @@
 				</Panel>
 			</Panel>
 
-			<Panel id="NoControllersFoundPanel" class="SettingsContent SettingsRightContent">
-					<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_NoControllersDetected" />
-			</Panel>
-			<Panel id="GenericJoystick" class="SettingsContent SettingsRightContent">
-				<Label id="JoystickSetup" class="SettingsCallout" text="#SettingsController_GenericJoystickSetupText" />	
+			<Panel id="OptOutButtonHelpTextPanel" class="SettingsContent SettingsRightContent">
+				<Label text="#SettingsController_GuideButtonSetupText" />
+				<Label class="TurnOffHelpText" text="#SettingsController_TurnOffSetupText" />
+				<Label class="PS4HelpText" text="#SettingsController_PS4SetupText" />	
+				<Label class="XboxHelpText" text="#SettingsController_XBoxSetupText" />	
+				<Label class="GenericHelpText" text="#SettingsController_GenericJoystickSetupText" />
+				<Label class="FirmwareRecovery" text="#SettingsController_FirmwareRecoveryWarning_Body" />
+				<Label class="AddAController" />
+				<Label class="IdleTurnoffHelpText" text="#SettingsController_IdleTurnOffSetupText" />
+				<Panel id="GenericJoystick" class="SettingsContent SettingsRightContent">
+					<Label id="JoystickSetup" class="SettingsCallout" text="#SettingsController_GenericJoystickSetupText" />	
+				</Panel>
 			</Panel>
         </Panel>
 	</SettingsPanel_GameController>

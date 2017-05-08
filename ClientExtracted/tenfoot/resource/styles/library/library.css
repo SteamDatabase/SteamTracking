@@ -5870,7 +5870,10 @@ LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeybo
 	padding-bottom: 20px;
 }
 
-
+.HideSiteFilter #SiteGamesFilter
+{
+	visibility: collapse;
+}
 
 .Parental .HideIfParental
 {

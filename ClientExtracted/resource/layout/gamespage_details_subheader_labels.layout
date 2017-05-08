@@ -13,6 +13,9 @@
 
 		streamheader { controlname="Label" style="headertext" labeltext="#steam_details_streamfromheader" zpos="2" }
 		streamvalue { controlname="Label" style="valuetext" labeltext="" zpos="2" }
+
+		lockedheader { controlname="Label" style="headertext" labeltext="#steam_details_lockedheader" zpos="2" }
+		lockedvalue { controlname="Label" style="valuetext" labeltext="#steam_details_lockedreason" zpos="2" }
 	}
 
 	styles

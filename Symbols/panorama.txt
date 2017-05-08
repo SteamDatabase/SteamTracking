@@ -1,6 +1,7 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSColorSpace
+ .objc_class_name_NSEvent
  .objc_class_name_NSLocale
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
@@ -51,6 +52,7 @@
  B CLogger::sm_msgSpewThrottle
  B CLogger::sm_pLogInstance
  B CLogger::sm_vecLogListeners
+ B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
  B CMsg3DTransformMatrix::animation_frame_data
  B CMsg3DTransformMatrix::default_instance_
@@ -69,6 +71,7 @@
  B CMsgAnimationFrameData::default_instance_
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
+ B CMsgAuthedSteamDomains::default_instance_
  B CMsgBeginFrame::default_instance_
  B CMsgBeginPaintBackground::default_instance_
  B CMsgBeginPaintLast::default_instance_
@@ -117,6 +120,7 @@
  B CMsgDrawFilledRect::default_instance_
  B CMsgDrawTextRegion::default_instance_
  B CMsgDrawTexturedRect::default_instance_
+ B CMsgEnableSteamClientAPI::default_instance_
  B CMsgEndFrame::default_instance_
  B CMsgEndPaintBackground::default_instance_
  B CMsgEndPaintLast::default_instance_
@@ -161,6 +165,7 @@
  B CMsgJSReleaseCallback::default_instance_
  B CMsgJSValue::default_instance_
  B CMsgJSValue_JSObjectProperty::default_instance_
+ B CMsgJumpListLink::default_instance_
  B CMsgKeyChar::default_instance_
  B CMsgKeyDown::default_instance_
  B CMsgKeyUp::default_instance_
@@ -250,6 +255,7 @@
  B CMsgSetFocus::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
+ B CMsgSetJumpList::default_instance_
  B CMsgSetLocalFileRequestMapping::default_instance_
  B CMsgSetLocalFileRequestMapping_AdditionalRoute::default_instance_
  B CMsgSetSharedPaintBuffers::default_instance_
@@ -262,6 +268,8 @@
  B CMsgStartRequest::default_instance_
  B CMsgStartRequestResponse::default_instance_
  B CMsgStatusText::default_instance_
+ B CMsgSteamAuthCookiesSet::default_instance_
+ B CMsgSteamAuthNeeded::default_instance_
  B CMsgStopFind::default_instance_
  B CMsgStopLoad::default_instance_
  B CMsgTextFormat::default_instance_
@@ -355,7 +363,8 @@
  B g_ConVarDragScrollVelocityMultiplier
  B g_ConVarDragScrollVelocityMultiplierVR
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPGetCompletionBatchSize
+ B g_ConVarIOCPBatchSize
+ B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
@@ -369,6 +378,7 @@
  B g_ConVarPanoramaSteampadButtonRepeatCurveTime
  B g_ConVarPanoramaSteampadButtonRepeatIntervalEnd
  B g_ConVarPanoramaSteampadButtonRepeatIntervalStart
+ B g_ConVarSpewFrameFuncOverageWarnings
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
@@ -764,6 +774,7 @@
  B panorama::s_convarVolumeEffects
  B panorama::s_convarVolumeMaster
  B panorama::s_convarVolumeMovies
+ B php_output_always_number
  B quat_identity
  B s_NoEscConversion
  B s_SpewConfig
@@ -1147,6 +1158,7 @@
  D typeinfo for CHTMLHeader
  D typeinfo for CHTMLPageSecurityInfo
  D typeinfo for CJSMethodArgument
+ D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMsg3DTransformMatrix
  D typeinfo for CMsg3DTransformMatrix_AnimationFrameData
  D typeinfo for CMsg3DTransformOrigin
@@ -1160,6 +1172,7 @@
  D typeinfo for CMsgAnimationFrameData
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
+ D typeinfo for CMsgAuthedSteamDomains
  D typeinfo for CMsgBeginFrame
  D typeinfo for CMsgBeginPaintBackground
  D typeinfo for CMsgBeginPaintLast
@@ -1201,6 +1214,7 @@
  D typeinfo for CMsgDrawFilledRect
  D typeinfo for CMsgDrawTextRegion
  D typeinfo for CMsgDrawTexturedRect
+ D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgEndFrame
  D typeinfo for CMsgEndPaintBackground
  D typeinfo for CMsgEndPaintLast
@@ -1242,6 +1256,7 @@
  D typeinfo for CMsgJSReleaseCallback
  D typeinfo for CMsgJSValue
  D typeinfo for CMsgJSValue_JSObjectProperty
+ D typeinfo for CMsgJumpListLink
  D typeinfo for CMsgKeyChar
  D typeinfo for CMsgKeyDown
  D typeinfo for CMsgKeyUp
@@ -1324,6 +1339,7 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
+ D typeinfo for CMsgSetJumpList
  D typeinfo for CMsgSetLocalFileRequestMapping
  D typeinfo for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D typeinfo for CMsgSetSharedPaintBuffers
@@ -1336,6 +1352,8 @@
  D typeinfo for CMsgStartRequest
  D typeinfo for CMsgStartRequestResponse
  D typeinfo for CMsgStatusText
+ D typeinfo for CMsgSteamAuthCookiesSet
+ D typeinfo for CMsgSteamAuthNeeded
  D typeinfo for CMsgStopFind
  D typeinfo for CMsgStopLoad
  D typeinfo for CMsgTextFormat
@@ -1787,6 +1805,7 @@
  D vtable for CHTMLHeader
  D vtable for CHTMLPageSecurityInfo
  D vtable for CJSMethodArgument
+ D vtable for CMSgJumpListMRUApp
  D vtable for CMsg3DTransformMatrix
  D vtable for CMsg3DTransformMatrix_AnimationFrameData
  D vtable for CMsg3DTransformOrigin
@@ -1800,6 +1819,7 @@
  D vtable for CMsgAnimationFrameData
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
+ D vtable for CMsgAuthedSteamDomains
  D vtable for CMsgBeginFrame
  D vtable for CMsgBeginPaintBackground
  D vtable for CMsgBeginPaintLast
@@ -1841,6 +1861,7 @@
  D vtable for CMsgDrawFilledRect
  D vtable for CMsgDrawTextRegion
  D vtable for CMsgDrawTexturedRect
+ D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgEndFrame
  D vtable for CMsgEndPaintBackground
  D vtable for CMsgEndPaintLast
@@ -1882,6 +1903,7 @@
  D vtable for CMsgJSReleaseCallback
  D vtable for CMsgJSValue
  D vtable for CMsgJSValue_JSObjectProperty
+ D vtable for CMsgJumpListLink
  D vtable for CMsgKeyChar
  D vtable for CMsgKeyDown
  D vtable for CMsgKeyUp
@@ -1964,6 +1986,7 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
+ D vtable for CMsgSetJumpList
  D vtable for CMsgSetLocalFileRequestMapping
  D vtable for CMsgSetLocalFileRequestMapping_AdditionalRoute
  D vtable for CMsgSetSharedPaintBuffers
@@ -1976,6 +1999,8 @@
  D vtable for CMsgStartRequest
  D vtable for CMsgStartRequestResponse
  D vtable for CMsgStatusText
+ D vtable for CMsgSteamAuthCookiesSet
+ D vtable for CMsgSteamAuthNeeded
  D vtable for CMsgStopFind
  D vtable for CMsgStopLoad
  D vtable for CMsgTextFormat
@@ -2413,6 +2438,7 @@
  R typeinfo name for CHTMLHeader
  R typeinfo name for CHTMLPageSecurityInfo
  R typeinfo name for CJSMethodArgument
+ R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMsg3DTransformMatrix
  R typeinfo name for CMsg3DTransformMatrix_AnimationFrameData
  R typeinfo name for CMsg3DTransformOrigin
@@ -2426,6 +2452,7 @@
  R typeinfo name for CMsgAnimationFrameData
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
+ R typeinfo name for CMsgAuthedSteamDomains
  R typeinfo name for CMsgBeginFrame
  R typeinfo name for CMsgBeginPaintBackground
  R typeinfo name for CMsgBeginPaintLast
@@ -2467,6 +2494,7 @@
  R typeinfo name for CMsgDrawFilledRect
  R typeinfo name for CMsgDrawTextRegion
  R typeinfo name for CMsgDrawTexturedRect
+ R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgEndFrame
  R typeinfo name for CMsgEndPaintBackground
  R typeinfo name for CMsgEndPaintLast
@@ -2508,6 +2536,7 @@
  R typeinfo name for CMsgJSReleaseCallback
  R typeinfo name for CMsgJSValue
  R typeinfo name for CMsgJSValue_JSObjectProperty
+ R typeinfo name for CMsgJumpListLink
  R typeinfo name for CMsgKeyChar
  R typeinfo name for CMsgKeyDown
  R typeinfo name for CMsgKeyUp
@@ -2590,6 +2619,7 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
+ R typeinfo name for CMsgSetJumpList
  R typeinfo name for CMsgSetLocalFileRequestMapping
  R typeinfo name for CMsgSetLocalFileRequestMapping_AdditionalRoute
  R typeinfo name for CMsgSetSharedPaintBuffers
@@ -2602,6 +2632,8 @@
  R typeinfo name for CMsgStartRequest
  R typeinfo name for CMsgStartRequestResponse
  R typeinfo name for CMsgStatusText
+ R typeinfo name for CMsgSteamAuthCookiesSet
+ R typeinfo name for CMsgSteamAuthNeeded
  R typeinfo name for CMsgStopFind
  R typeinfo name for CMsgStopLoad
  R typeinfo name for CMsgTextFormat
@@ -3800,6 +3832,19 @@
  T CLogger::PublishLogEvent(CLogEvent*, char const*)
  T CLogger::ReleaseSafe(CLogInstance*)
  T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool)
+ T CMSgJumpListMRUApp::ByteSize() const
+ T CMSgJumpListMRUApp::CMSgJumpListMRUApp()
+ T CMSgJumpListMRUApp::Clear()
+ T CMSgJumpListMRUApp::GetCachedSize() const
+ T CMSgJumpListMRUApp::GetMetadata() const
+ T CMSgJumpListMRUApp::IsInitialized() const
+ T CMSgJumpListMRUApp::MergeFrom(CMSgJumpListMRUApp const&)
+ T CMSgJumpListMRUApp::New() const
+ T CMSgJumpListMRUApp::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMSgJumpListMRUApp::SetCachedSize(int) const
+ T CMSgJumpListMRUApp::SharedCtor()
+ T CMSgJumpListMRUApp::SharedDtor()
+ T CMSgJumpListMRUApp::~CMSgJumpListMRUApp()
  T CMemoryPool::AddNewBlob()
  T CMemoryPool::Alloc()
  T CMemoryPool::Alloc(unsigned int)
@@ -3965,6 +4010,18 @@
  T CMsgAuthTicket::SharedCtor()
  T CMsgAuthTicket::SharedDtor()
  T CMsgAuthTicket::~CMsgAuthTicket()
+ T CMsgAuthedSteamDomains::ByteSize() const
+ T CMsgAuthedSteamDomains::CMsgAuthedSteamDomains()
+ T CMsgAuthedSteamDomains::Clear()
+ T CMsgAuthedSteamDomains::GetCachedSize() const
+ T CMsgAuthedSteamDomains::GetMetadata() const
+ T CMsgAuthedSteamDomains::IsInitialized() const
+ T CMsgAuthedSteamDomains::MergeFrom(CMsgAuthedSteamDomains const&)
+ T CMsgAuthedSteamDomains::New() const
+ T CMsgAuthedSteamDomains::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAuthedSteamDomains::SetCachedSize(int) const
+ T CMsgAuthedSteamDomains::SharedCtor()
+ T CMsgAuthedSteamDomains::~CMsgAuthedSteamDomains()
  T CMsgBeginFrame::ByteSize() const
  T CMsgBeginFrame::CMsgBeginFrame()
  T CMsgBeginFrame::Clear()
@@ -4146,6 +4203,8 @@
  T CMsgBrowserReady::New() const
  T CMsgBrowserReady::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserReady::SetCachedSize(int) const
+ T CMsgBrowserReady::SharedCtor()
+ T CMsgBrowserReady::SharedDtor()
  T CMsgBrowserReady::~CMsgBrowserReady()
  T CMsgBrowserRemove::ByteSize() const
  T CMsgBrowserRemove::CMsgBrowserRemove()
@@ -4453,6 +4512,17 @@
  T CMsgDrawTexturedRect::SharedDtor()
  T CMsgDrawTexturedRect::default_instance()
  T CMsgDrawTexturedRect::~CMsgDrawTexturedRect()
+ T CMsgEnableSteamClientAPI::ByteSize() const
+ T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
+ T CMsgEnableSteamClientAPI::Clear()
+ T CMsgEnableSteamClientAPI::GetCachedSize() const
+ T CMsgEnableSteamClientAPI::GetMetadata() const
+ T CMsgEnableSteamClientAPI::IsInitialized() const
+ T CMsgEnableSteamClientAPI::MergeFrom(CMsgEnableSteamClientAPI const&)
+ T CMsgEnableSteamClientAPI::New() const
+ T CMsgEnableSteamClientAPI::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgEnableSteamClientAPI::SetCachedSize(int) const
+ T CMsgEnableSteamClientAPI::~CMsgEnableSteamClientAPI()
  T CMsgEndFrame::ByteSize() const
  T CMsgEndFrame::CMsgEndFrame()
  T CMsgEndFrame::Clear()
@@ -4948,6 +5018,19 @@
  T CMsgJSValue_JSObjectProperty::SharedCtor()
  T CMsgJSValue_JSObjectProperty::SharedDtor()
  T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
+ T CMsgJumpListLink::ByteSize() const
+ T CMsgJumpListLink::CMsgJumpListLink()
+ T CMsgJumpListLink::Clear()
+ T CMsgJumpListLink::GetCachedSize() const
+ T CMsgJumpListLink::GetMetadata() const
+ T CMsgJumpListLink::IsInitialized() const
+ T CMsgJumpListLink::MergeFrom(CMsgJumpListLink const&)
+ T CMsgJumpListLink::New() const
+ T CMsgJumpListLink::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgJumpListLink::SetCachedSize(int) const
+ T CMsgJumpListLink::SharedCtor()
+ T CMsgJumpListLink::SharedDtor()
+ T CMsgJumpListLink::~CMsgJumpListLink()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
  T CMsgKeyChar::Clear()
@@ -5945,6 +6028,19 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
+ T CMsgSetJumpList::ByteSize() const
+ T CMsgSetJumpList::CMsgSetJumpList()
+ T CMsgSetJumpList::Clear()
+ T CMsgSetJumpList::GetCachedSize() const
+ T CMsgSetJumpList::GetMetadata() const
+ T CMsgSetJumpList::IsInitialized() const
+ T CMsgSetJumpList::MergeFrom(CMsgSetJumpList const&)
+ T CMsgSetJumpList::New() const
+ T CMsgSetJumpList::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetJumpList::SetCachedSize(int) const
+ T CMsgSetJumpList::SharedCtor()
+ T CMsgSetJumpList::SharedDtor()
+ T CMsgSetJumpList::~CMsgSetJumpList()
  T CMsgSetLocalFileRequestMapping::ByteSize() const
  T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
  T CMsgSetLocalFileRequestMapping::Clear()
@@ -6089,6 +6185,28 @@
  T CMsgStatusText::SharedCtor()
  T CMsgStatusText::SharedDtor()
  T CMsgStatusText::~CMsgStatusText()
+ T CMsgSteamAuthCookiesSet::ByteSize() const
+ T CMsgSteamAuthCookiesSet::CMsgSteamAuthCookiesSet()
+ T CMsgSteamAuthCookiesSet::Clear()
+ T CMsgSteamAuthCookiesSet::GetCachedSize() const
+ T CMsgSteamAuthCookiesSet::GetMetadata() const
+ T CMsgSteamAuthCookiesSet::IsInitialized() const
+ T CMsgSteamAuthCookiesSet::MergeFrom(CMsgSteamAuthCookiesSet const&)
+ T CMsgSteamAuthCookiesSet::New() const
+ T CMsgSteamAuthCookiesSet::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSteamAuthCookiesSet::SetCachedSize(int) const
+ T CMsgSteamAuthCookiesSet::~CMsgSteamAuthCookiesSet()
+ T CMsgSteamAuthNeeded::ByteSize() const
+ T CMsgSteamAuthNeeded::CMsgSteamAuthNeeded()
+ T CMsgSteamAuthNeeded::Clear()
+ T CMsgSteamAuthNeeded::GetCachedSize() const
+ T CMsgSteamAuthNeeded::GetMetadata() const
+ T CMsgSteamAuthNeeded::IsInitialized() const
+ T CMsgSteamAuthNeeded::MergeFrom(CMsgSteamAuthNeeded const&)
+ T CMsgSteamAuthNeeded::New() const
+ T CMsgSteamAuthNeeded::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSteamAuthNeeded::SetCachedSize(int) const
+ T CMsgSteamAuthNeeded::~CMsgSteamAuthNeeded()
  T CMsgStopFind::ByteSize() const
  T CMsgStopFind::CMsgStopFind()
  T CMsgStopFind::Clear()
@@ -8683,6 +8801,7 @@
  T CWorkThreadPool::HasWorkItemsToProcess() const
  T CWorkThreadPool::StopWorkThreads()
  T CWorkThreadPool::Validate(CValidator&, char const*)
+ T CalcBufferLine(CUtlBuffer&)
  T CalculateIndividualSelectorSpecificity(panorama::CStyleSelector const&)
  T CalculateSelectorSpecificity(panorama::StyleFromFile_t const*)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
@@ -13242,7 +13361,6 @@
  T panorama::CVideoPlayerVideoRenderer::Validate(CValidator&, char const*)
  T panorama::CVideoPlayerVideoRenderer::~CVideoPlayerVideoRenderer()
  T panorama::CWaitForMovieLoaded::OnVideoPlayerEvent(EVideoPlayerEvent)
- T panorama::CalcBufferLine(CUtlBuffer&)
  T panorama::Cancelled::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::Cancelled::FormatEventArgs(char const*)
  T panorama::Cancelled::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
@@ -14996,6 +15114,8 @@
  b (anonymous namespace)::CHTMLPageSecurityInfo_reflection_
  b (anonymous namespace)::CJSMethodArgument_descriptor_
  b (anonymous namespace)::CJSMethodArgument_reflection_
+ b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
+ b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
  b (anonymous namespace)::CMsg3DTransformMatrix_AnimationFrameData_descriptor_
  b (anonymous namespace)::CMsg3DTransformMatrix_AnimationFrameData_reflection_
  b (anonymous namespace)::CMsg3DTransformMatrix_descriptor_
@@ -15022,6 +15142,8 @@
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
  b (anonymous namespace)::CMsgAuthTicket_reflection_
+ b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
+ b (anonymous namespace)::CMsgAuthedSteamDomains_reflection_
  b (anonymous namespace)::CMsgBeginFrame_descriptor_
  b (anonymous namespace)::CMsgBeginFrame_reflection_
  b (anonymous namespace)::CMsgBeginPaintBackground_descriptor_
@@ -15104,6 +15226,8 @@
  b (anonymous namespace)::CMsgDrawTextRegion_reflection_
  b (anonymous namespace)::CMsgDrawTexturedRect_descriptor_
  b (anonymous namespace)::CMsgDrawTexturedRect_reflection_
+ b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
+ b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgEndFrame_descriptor_
  b (anonymous namespace)::CMsgEndFrame_reflection_
  b (anonymous namespace)::CMsgEndPaintBackground_descriptor_
@@ -15186,6 +15310,8 @@
  b (anonymous namespace)::CMsgJSValue_JSObjectProperty_reflection_
  b (anonymous namespace)::CMsgJSValue_descriptor_
  b (anonymous namespace)::CMsgJSValue_reflection_
+ b (anonymous namespace)::CMsgJumpListLink_descriptor_
+ b (anonymous namespace)::CMsgJumpListLink_reflection_
  b (anonymous namespace)::CMsgKeyChar_descriptor_
  b (anonymous namespace)::CMsgKeyChar_reflection_
  b (anonymous namespace)::CMsgKeyDown_descriptor_
@@ -15350,6 +15476,8 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
+ b (anonymous namespace)::CMsgSetJumpList_descriptor_
+ b (anonymous namespace)::CMsgSetJumpList_reflection_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_descriptor_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_reflection_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_descriptor_
@@ -15374,6 +15502,10 @@
  b (anonymous namespace)::CMsgStartRequest_reflection_
  b (anonymous namespace)::CMsgStatusText_descriptor_
  b (anonymous namespace)::CMsgStatusText_reflection_
+ b (anonymous namespace)::CMsgSteamAuthCookiesSet_descriptor_
+ b (anonymous namespace)::CMsgSteamAuthCookiesSet_reflection_
+ b (anonymous namespace)::CMsgSteamAuthNeeded_descriptor_
+ b (anonymous namespace)::CMsgSteamAuthNeeded_reflection_
  b (anonymous namespace)::CMsgStopFind_descriptor_
  b (anonymous namespace)::CMsgStopFind_reflection_
  b (anonymous namespace)::CMsgStopLoad_descriptor_
@@ -15424,6 +15556,7 @@
  b (anonymous namespace)::CUIFontFilePackagePB_CUIEncryptedFontFilePB_reflection_
  b (anonymous namespace)::CUIFontFilePackagePB_descriptor_
  b (anonymous namespace)::CUIFontFilePackagePB_reflection_
+ b (anonymous namespace)::EJSRegisterMethodType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
@@ -15493,6 +15626,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient
  b g_pClientUGC
@@ -16223,6 +16357,7 @@
  r .memset_pattern
  r .memset_pattern1
  r BValveDomain(char const*)::k_pchSteamPowered
+ r BValveDomain(char const*)::k_pchValveOrg
  r BValveDomain(char const*)::k_pchValveSoftware
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
@@ -16291,7 +16426,9 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
@@ -16307,6 +16444,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFileLoadDialogResponse_offsets_
@@ -16336,6 +16474,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSReleaseCallback_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_JSObjectProperty_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSValue_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJumpListLink_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyChar_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgKeyUp_offsets_
@@ -16377,6 +16516,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_AdditionalRoute_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
@@ -16389,6 +16529,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequestResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStatusText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSteamAuthCookiesSet_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSteamAuthNeeded_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStopFind_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStopLoad_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgURLChanged_offsets_

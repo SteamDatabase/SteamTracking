@@ -75,7 +75,6 @@
  B KeyValues::sm_pchKeyNameBase
  B OPENSSL_ia32cap_P
  B OSXHelpers::CIOPollingHelper::s_pPollingHelperSingleton
- B SteamStdLib::s_pCommandLine
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -93,11 +92,13 @@
  B gZeroNetAdr
  B g_CompletionPortManager
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPGetCompletionBatchSize
+ B g_ConVarIOCPBatchSize
+ B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
  B g_ConVarNetEncryptionHandshakeWorkMax_MedPri
+ B g_ConVarSpewFrameFuncOverageWarnings
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
@@ -131,6 +132,7 @@
  B msgpool_hard_limit
  B msgpool_soft_limit
  B obj_cleanup_defer
+ B php_output_always_number
  B s_NoEscConversion
  B s_SpewConfig
  B s_StringCharConversion
@@ -379,7 +381,9 @@
  R typeinfo name for CUtlLinkedList<TimeDilationRecord_t, int>
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
+ R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemFunctionCall
  R typeinfo name for CWorkThread
@@ -603,6 +607,7 @@
  T BWritingMiniDump
  T CBaseFrameFunction::AddToRunTimeHistory(unsigned int)
  T CBaseFrameFunction::CBaseFrameFunction(char const*, EFrameType)
+ T CBaseFrameFunction::SetFrameType(EFrameType)
  T CBaseFrameFunction::SetName(char const*)
  T CBaseFrameFunction::~CBaseFrameFunction()
  T CBaseScheduledFunction::CBaseScheduledFunction()
@@ -678,7 +683,7 @@
  T CCrossProcessPipe::CCrossProcessPipe(IIPCServer*)
  T CCrossProcessPipe::CCrossProcessPipe(IIPCServer*, int)
  T CCrossProcessPipe::GetRecvSyncObject()
- T CCrossProcessPipe::HangupPipe()
+ T CCrossProcessPipe::HangupPipe(bool)
  T CCrossProcessPipe::Reset()
  T CCrossProcessPipe::Shutdown()
  T CCrossProcessPipe::Validate(CValidator&, char const*)
@@ -753,7 +758,7 @@
  T CIPCServer::Run()
  T CIPCServer::SetThreaded(bool)
  T CIPCServer::ShutdownIPC()
- T CIPCServer::TerminatePipe(int)
+ T CIPCServer::TerminatePipe(int, bool)
  T CIPCServer::Thread_Init()
  T CIPCServer::Thread_MainLoop()
  T CIPCServer::Thread_Shutdown()
@@ -764,7 +769,6 @@
  T CJob::Heartbeat()
  T CJobMgr::BFrameFuncRunSleepingJobs(CReliableTimer&)
  T CJobMgr::BFrameFuncRunYieldingJobs(CReliableTimer&)
- T CJobMgr::BFrameFuncRunYieldingJobsLowPri(CReliableTimer&)
  T CJobMgr::BResumeSleepingJobs(CReliableTimer&)
  T CJobMgr::BResumeYieldingJobsFromList(CUtlLinkedList<CJobMgr::JobYielding_t, int>&, unsigned int, CReliableTimer&)
  T CJobMgr::BRouteWorkItemCompletedInternal(unsigned long long, bool, bool, bool)
@@ -933,7 +937,7 @@
  T CPipeWaiter::Count()
  T CPipeWaiter::Validate(CValidator&, char const*)
  T CPipeWaiter::~CPipeWaiter()
- T CPosixRegistryManager::CPosixRegistryManager(EUniverse)
+ T CPosixRegistryManager::CPosixRegistryManager()
  T CPosixRegistryManager::LoadRegistryVDF()
  T CPosixRegistryManager::SaveRegistryVDF()
  T CPosixRegistryManager::~CPosixRegistryManager()
@@ -1027,7 +1031,7 @@
  T CServerPipe::BAcceptConnection()
  T CServerPipe::CServerPipe(IIPCServer*, int)
  T CServerPipe::FreeLastCallback()
- T CServerPipe::HangupPipe()
+ T CServerPipe::HangupPipe(bool)
  T CServerPipe::Init(char const*, bool, unsigned int, unsigned int, unsigned int)
  T CServerPipe::Read(CUtlBuffer&)
  T CServerPipe::SerializeCallbacks()
@@ -1384,6 +1388,7 @@
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::SetExternalBuffer(void*, int)
+ T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
@@ -1494,12 +1499,16 @@
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlStringBuilder::AppendChar(char)
+ T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
  T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
+ T CUtlStringBuilder::DetachString()
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::Swap(CUtlString&)
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
@@ -1560,6 +1569,17 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::~CUtlVector()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::InsertBefore(int, CWorkItem* const&)
@@ -1721,6 +1741,7 @@
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
  T ConVar::ConVar(char const*, char const*, unsigned long long)
+ T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
@@ -2244,9 +2265,10 @@
  T PipeDebugParam(void*)
  T PipeDebugSpew(char const*)
  T PipeDebugStart(char const*, char const*)
+ T Plat_CommandLineParamExists
  T Plat_FloatTime
- T Plat_GetCommandLine
  T Plat_GetExecutablePath
+ T Plat_GetProcessArgv
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
  T Plat_MSTime
@@ -2334,30 +2356,27 @@
  T SteamService_Shutdown
  T SteamService_StartThread
  T SteamService_Stop
- T SteamStdLib::CCommandLine::AddArgument(char const*, char const*)
- T SteamStdLib::CCommandLine::AppendParm(int, char const*)
- T SteamStdLib::CCommandLine::CheckParm(int, char const**) const
- T SteamStdLib::CCommandLine::CleanUpParms()
- T SteamStdLib::CCommandLine::CreateCmdLine(char const*)
+ T SteamStdLib::CCommandLine::AppendParm(SteamStdLib::OpaqueHParamType*, char const*)
+ T SteamStdLib::CCommandLine::AutoCreateCmdLine()
+ T SteamStdLib::CCommandLine::CCommandLine()
+ T SteamStdLib::CCommandLine::CheckParm(SteamStdLib::OpaqueHParamType*, char const**) const
  T SteamStdLib::CCommandLine::CreateCmdLine(int, char**)
- T SteamStdLib::CCommandLine::FindParm(int) const
+ T SteamStdLib::CCommandLine::FindParm(SteamStdLib::OpaqueHParamType*) const
  T SteamStdLib::CCommandLine::GetCmdLine() const
  T SteamStdLib::CCommandLine::GetFirstRegisteredCmd()
- T SteamStdLib::CCommandLine::GetNextRegisteredCmd(int)
+ T SteamStdLib::CCommandLine::GetNextRegisteredCmd(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::GetParm(int) const
- T SteamStdLib::CCommandLine::GetRegisteredCmd(int)
- T SteamStdLib::CCommandLine::GetRegisteredCmdHelp(int)
- T SteamStdLib::CCommandLine::LoadParametersFromFile(char const*&, char*&, int, bool)
+ T SteamStdLib::CCommandLine::GetRegisteredCmd(SteamStdLib::OpaqueHParamType*)
+ T SteamStdLib::CCommandLine::GetRegisteredCmdHelp(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::ParmCount() const
- T SteamStdLib::CCommandLine::ParmValue(int, char const*) const
- T SteamStdLib::CCommandLine::ParmValue(int, float) const
- T SteamStdLib::CCommandLine::ParmValue(int, int) const
- T SteamStdLib::CCommandLine::ParseCommandLine()
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, char const*) const
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, float) const
+ T SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, int) const
+ T SteamStdLib::CCommandLine::ParseIncludeFiles()
  T SteamStdLib::CCommandLine::PrintCommandHelp()
  T SteamStdLib::CCommandLine::RegisterParam(char const*, char const*)
- T SteamStdLib::CCommandLine::RemoveParm(int)
- T SteamStdLib::CCommandLine::RemoveParmInternal(char const*)
- T SteamStdLib::CCommandLine::UnregisterParam(int)
+ T SteamStdLib::CCommandLine::RemoveParm(SteamStdLib::OpaqueHParamType*)
+ T SteamStdLib::CCommandLine::UnregisterParam(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::Validate(CValidator&, char const*)
  T SteamStdLib::CCommandLine::~CCommandLine()
  T SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -2446,6 +2465,8 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
  T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
+ T StringAfterPrefix
+ T StringFindSuffix
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -2487,11 +2508,16 @@
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
  T V_AppendSlash
  T V_CopyAndFixSlashes
+ T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_FixDoubleSlashes
  T V_FixSlashes
  T V_IsAbsolutePath
  T V_MakeAbsolutePath
+ T V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_RemoveDotSlashes
+ T V_StrReplaceChar
  T V_StripFilename
  T V_UChar32ToUTF8
  T V_UTF32ToUTF8
@@ -2881,6 +2907,8 @@
  T vpaes_set_encrypt_key
  T wrap_blocking_send(int, char const*, int, int)
  _DefaultRuneLocale
+ _NSGetArgc
+ _NSGetArgv
  _NSGetExecutablePath
  _Unwind_Resume
  __assert_rtn
@@ -2918,6 +2946,7 @@
  abort
  accept$UNIX2003
  alphasort$INODE64
+ arc4random_stir
  atexit
  atoi
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
@@ -2968,14 +2997,11 @@
  b OneTimeCryptoInitOpenSSL()::threadonce_86_19
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
- b PosixRegistryManager()::s_bGetEUniverse
- b PosixRegistryManager()::s_pfnGetEUniverse
  b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
- b SteamStdLib::CCommandLine::CheckParm(int, char const**) const::sz
- b SteamStdLib::CommandLine()::bInitialized
  b SteamStdLib::CommandLine()::g_CmdLine
+ b SteamStdLib::s_pCommandLine
  b SteamThreadTools::g_ThreadMainThreadID
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
  b TestForAppleGraphicsUpdateInstalled()::bLoaded
@@ -3009,7 +3035,6 @@
  b ex_data
  b free_debug_func
  b free_type
- b g_CmdLine
  b g_ConVarMaxOutstandingSendThreadItem
  b g_ConVarNetBacklogBytesAllowed
  b g_ConVarNetBacklogTimeAllowedSec
@@ -3191,7 +3216,6 @@
  d PKCS12_str_reasons
  d PKCS7_str_functs
  d PKCS7_str_reasons
- d PosixRegistryManager()::eUniverse
  d RAND_poll.egdsockets
  d RAND_poll.randomfiles
  d RAND_str_functs
@@ -3386,7 +3410,6 @@
  fclose
  fcntl$UNIX2003
  fflush
- fgetc
  fileno
  fopen$UNIX2003
  fprintf
@@ -3437,6 +3460,7 @@
  pipe
  poll$UNIX2003
  printf
+ pthread_atfork
  pthread_attr_init
  pthread_attr_setstacksize
  pthread_cond_broadcast
@@ -3628,7 +3652,6 @@
  std::exception::~exception()
  std::terminate()
  strcasecmp
- strcat
  strchr
  strcmp
  strcpy
@@ -3639,7 +3662,6 @@
  strncat
  strncpy
  strrchr
- strstr
  strtod$UNIX2003
  strtof$UNIX2003
  strtol
@@ -3651,6 +3673,7 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BN_from_montgomery_word
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
+ t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
  t FindSignaturePeer(KeyValues*, char const*, bool)

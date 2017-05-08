@@ -28,11 +28,15 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="DPad" sources="ABXY button" advanced="off" gameactions="off">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
+					<DropDown id="ButtonDPadLayout" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 				</Panel>
@@ -55,11 +59,11 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
           <Slider id="HoldRepeatIntervalDpad" direction="horizontal" />
         </Panel> -->
-        <Panel class="FieldWrapper" modes="DPad" advanced="on">
+        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick trigger" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationPeriod" />
           <Slider id="AnalogEmulationPeriod" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="DPad" advanced="on">
+        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick trigger" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationDutyCyclePct" />
           <Slider id="AnalogEmulationDutyCyclePct" direction="horizontal" />
         </Panel>
@@ -1015,7 +1019,7 @@
 						<DropDown id="HapticIntensityDpad" />
 					</Panel>
 					-->
-					<Panel class="FieldWrapper" modes="dpad" gameactions="off" advanced="off">
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
 						<Slider id="Deadzone" direction="horizontal" />
 					</Panel>
@@ -1035,17 +1039,20 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
 						<Slider id="GyroNeutralAngleDpad" direction="horizontal" />
 					</Panel>					
-
-					<!-- Dpad Mode Advanced -->
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick ABXY button trigger" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
-						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick ABXY button trigger" advanced="on">
+					<Panel class="FieldWrapper" modes="dpad" sources="ABXY" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick ABXY button trigger" advanced="on">
+					<!-- Dpad Mode Advanced -->
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertDpad" />
 					</Panel>
@@ -1274,23 +1281,23 @@
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialClick" />
 					</Panel>				
 					<!-- Radial Menu Mode Advanced -->
-					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Panel class="FieldWrapper" modes="radialmenu" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton15" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton16" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Panel class="FieldWrapper" modes="radialmenu" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton16" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton17" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Panel class="FieldWrapper" modes="radialmenu" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton17" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton18" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Panel class="FieldWrapper" modes="radialmenu" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton18" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton19" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="radialmenu" advanced="on">
+					<Panel class="FieldWrapper" modes="radialmenu" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton19" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="RadialMenuButton20" />
 					</Panel>				

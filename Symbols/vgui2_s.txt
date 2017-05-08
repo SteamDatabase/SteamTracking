@@ -369,8 +369,8 @@
  PasteboardGetItemIdentifier
  PasteboardPutItemFlavor
  PasteboardSynchronize
+ Plat_CommandLineParamExists
  Plat_FloatTime
- Plat_GetCommandLine
  Plat_MSTime
  Plat_localtime
  R typeinfo name for CBaseSurface
@@ -963,7 +963,7 @@
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
- T CPosixRegistryManager::CPosixRegistryManager(EUniverse)
+ T CPosixRegistryManager::CPosixRegistryManager()
  T CPosixRegistryManager::LoadRegistryVDF()
  T CPosixRegistryManager::SaveRegistryVDF()
  T CPosixRegistryManager::~CPosixRegistryManager()
@@ -1219,7 +1219,6 @@
  T CStyleSet::~CStyleSet()
  T CSystem::BGetSoundSystemDeviceNames(vgui::ISystem::ESoundType, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T CSystem::BSetSoundSystemDevice(vgui::ISystem::ESoundType, char const*)
- T CSystem::CommandLineParamExists(char const*)
  T CSystem::CreateShortcut(char const*, char const*, char const*, char const*, char const*)
  T CSystem::DeleteRegistryKey(char const*)
  T CSystem::GetAllUserDesktopFolderPath()
@@ -1228,13 +1227,11 @@
  T CSystem::GetClipboardText(int, char*, int)
  T CSystem::GetClipboardText(int, wchar_t*, int)
  T CSystem::GetClipboardTextCount()
- T CSystem::GetCommandLineParamValue(char const*, char*, int)
  T CSystem::GetCurrentTime()
  T CSystem::GetCurrentTimeAndDate(int*, int*, int*, int*, int*, int*, int*)
  T CSystem::GetDesktopFolderPath()
  T CSystem::GetFrameTime()
  T CSystem::GetFreeDiskSpace(char const*)
- T CSystem::GetFullCommandLine()
  T CSystem::GetRegistryInteger(char const*, int&)
  T CSystem::GetRegistryString(char const*, char*, int)
  T CSystem::GetShortcutTarget(char const*, char*, char*, int)
@@ -2724,8 +2721,6 @@
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
- b PosixRegistryManager()::s_bGetEUniverse
- b PosixRegistryManager()::s_pfnGetEUniverse
  b PromoteImageToLayer(CGContext*, vgui::Texture*)::fAsserted
  b ResetTextureParams_GL_TEXTURE_2D()::bHasAnisotropy
  b ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
@@ -2787,7 +2782,6 @@
  crc32
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
- d PosixRegistryManager()::eUniverse
  d __block_descriptor_tmp
  d __block_descriptor_tmp543
  d __block_descriptor_tmp558
