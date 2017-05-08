@@ -658,5 +658,11 @@ function ChangeSeason( el, season )
 	});
 }
 
+function ShowRecommendedMoreInfoModal()
+{
+	var strTemplate = "<div class=\"recommended_more_info_modal\">\r\n\t\t\t\t\t\t\t\t<p class=\"intro\">You've found a game that doesn't look like other things you've played in the past. Steam will learn about your preferences from the game you play and the game you indicate you aren't interested in.<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Like this game?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>If you like this game and go on to purchase and play it, we'll take that into account when making future recommendations<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Not interested in games like this?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>You can also configure your store preferences to tell Steam about tags or types of products that you aren't interested in. <a href=\"https:\/\/store.steampowered.com\/account\/preferences\/\">Visit store preferences<\/a>.<\/p>\r\n\t\t\t\t\t\t\t<\/div>";
+	ShowAlertDialog( "More about recommendations", strTemplate);
 
+
+}
 

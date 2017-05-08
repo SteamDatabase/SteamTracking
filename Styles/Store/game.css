@@ -4467,3 +4467,126 @@ div.agegate_text_container > h2 {
 .age_queue_btn_ctn {
 	margin-left: 16px;
 }
+
+.rightcol.game_meta_data .block.recommendation_reasons {
+	padding-left: 28px;
+}
+
+.rightcol.game_meta_data .block.recommendation_noinfo {
+	color: #969696;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.rightcol.game_meta_data .block.recommendation_noinfo p:not(:first-child) {
+	margin-top: 16px;
+}
+
+.rightcol.game_meta_data .block.heading {
+	margin-bottom: 0;
+	background-color: rgba(0,0,0,0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 18px;
+}
+
+.block.recommendation_reasons, .block.recommendation_reasons p {
+	color: #969696;
+	font-size: 14px;
+}
+
+.block.recommendation_reasons a {
+	color: #67c1f5;
+}
+
+
+.block.recommendation_reasons hr {
+	height: 1px;
+	margin: 10px 0;
+	border: none;
+	background-color: #273747;
+}
+
+.block.recommendation_reasons hr:last-child {
+	display: none;
+}
+
+.similar_recent_apps_container {
+	display: flex;
+	margin-top: 3px;
+}
+
+.block.recommendation_reasons .similar_recent_apps_container > a {
+	display: block;
+	color: #626a6e;
+	font-size: 12px;
+}
+
+.similar_recent_apps_container > a > img {
+	width: 130px;
+	margin-right: 1px;
+}
+
+p.reason {
+	line-height: 16px;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+
+p.reason.for:before {
+	content: ' ';
+	margin-left: -20px;
+	position: absolute;
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	background-image: url(/public/images/v6/app/game_reasons_for.png);
+
+}
+
+p.reason.against:before {
+	content: ' ';
+	margin-left: -20px;
+	position: absolute;
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	background-image: url(/public/images/v6/app/game_reasons_not.png);
+
+}
+
+p.reason.info:before {
+	content: ' ';
+	margin-left: -20px;
+	position: absolute;
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	background-image: url(/public/images/v6/app/game_reasons_info.png);
+
+}
+
+
+.recommended_more_info_modal {
+	width: 500px;
+}
+
+.recommended_more_info_modal p.intro {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.recommended_more_info_modal p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.recommended_more_info_modal h2 {
+	margin: 20px 0 3px 0;
+	color: #fff;
+	font-size: 16px;
+}
+
