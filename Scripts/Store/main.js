@@ -1913,8 +1913,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 	}
 
 	// Bind arrows (if we have them)
-	this.$elArrowLeft.click(function(e){ instance.Advance(-1); e.preventDefault(); return false;  });
-	this.$elArrowRight.click(function(e){ instance.Advance(); e.preventDefault(); return false;  });
+	this.$elArrowLeft.click( function(e){ instance.Advance(-1); e.preventDefault(); return true; });
+	this.$elArrowRight.click( function(e){ instance.Advance(); e.preventDefault(); return true; });
 
 	this.UpdateControls();
 

@@ -1576,6 +1576,11 @@ HelpWizard = {
 						'Sorry! An unexpected error has occurred while processing your request. Please try again. If the error continues to happen, please feel free to contact Steam Support.' );
 				});
 			});
+	},
+	SetPublisherAccount: function( element, accountid )
+	{
+		V_SetCookie( 'steamPublisherAccount' + accountid, $J( element ).val(), 0, '/' );
+        window.location.reload();
 	}
 };
 

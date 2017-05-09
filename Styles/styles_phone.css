@@ -41,7 +41,7 @@ input.phone_input_number {
 }
 
 .current_phone_box {
-	background: rgba(42, 63, 90, 0.8 );
+	background: rgba(255, 255, 255, 0.2 );
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -60,7 +60,7 @@ input.phone_input_number {
 
 .phone_box_subtext {
 	font-size: 14px;
-	color: #61686d;
+	color: #7092a5;
 	margin: 5px;
 }
 
@@ -155,7 +155,7 @@ input.phone_input_number {
 }
 
 .phone_sms_warning {
-	color: #61686d;
+	color: #7092a5;
 	text-align: left;
 	margin-top:20px;
 	font-size: 14px;

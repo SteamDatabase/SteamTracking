@@ -28,6 +28,7 @@ GHomepage = {
 	bLoadedActiveData: false,
 
 	MainCapCluster: null,
+	usabilityTracker: null,
 
 	InitLayout: function()
 	{
@@ -90,6 +91,9 @@ GHomepage = {
 		{
 			window.Responsive_ReparentItemsInResponsiveMode( '.spotlight_block', $J('#home_responsive_spotlight_ctn') );
 		}
+
+		this.usabilityTracker = new CUsabilityTracker();
+		this.usabilityTracker.Init();
 	},
 
 	AddCustomRender: function( fnRender )
@@ -760,7 +764,8 @@ GHomepage = {
 
 					for( var i=0; i<rgData.tags.length; i++)
 					{
-						$elTagContainer.append($J('<span>').text( rgData.tags[i] ));
+						var url = GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/tag/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
+						$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
 					}
 					$elInfoDiv.append($elTagContainer);
 				}
@@ -1925,9 +1930,10 @@ GSteamCurators = {
 		return $Item;
 	},
 
-	BuildCuratorItem: function( curator )
+	BuildCuratorItem: function( curator, nDepth )
 	{
-		var $Item = $J('<div/>', {'class': 'steam_curator', 'onclick': "top.location.href='" + curator.link + "'" } );
+		var strLink = GStoreItemData.AddNavEventParamsToURL( curator.link, 'curator_recommended', nDepth )
+		var $Item = $J('<div/>', {'class': 'steam_curator', 'onclick': "top.location.href='" + strLink + "'" } );
 		var $Img = $J('<img/>', {'class': 'steam_curator_img', 'src': GetAvatarURL( curator.strAvatarHash, '_medium' ) });
 		$Item.append( $Img );
 		$Item.append( $J('<div/>', {'class': 'steam_curator_name' } ).text( curator.name ) );
@@ -2060,8 +2066,7 @@ GSteamCurators = {
 			for ( var i = 0; i < GSteamCurators.rgSteamCurators.length; i++ )
 			{
 				var curator = GSteamCurators.rgSteamCurators[i];
-
-				var $Item = GSteamCurators.BuildCuratorItem( curator );
+				var $Item = GSteamCurators.BuildCuratorItem( curator, i );
 				$Curators.append( $Item );
 			}
 		}
@@ -2532,6 +2537,157 @@ function BeginDiscoveryQueue( eQueueType, eleAnchorTarget )
 {
 	WebStorage.SetCookie( 'queue_type', eQueueType );
 	window.location = eleAnchorTarget.href;
+}
+
+var CUsabilityTracker = function()
+{
+	this.m_schUpload = null;
+	this.m_tsLoaded = performance.now();
+	this.m_stats = {
+		maxScroll: 0,
+		windowWidth: 0,
+		windowHeight: 0,
+		events: []
+	}
+}
+
+CUsabilityTracker.prototype.Init = function()
+{
+	this.ResetStats();
+
+	var _this = this;
+	$Window = $J( window );
+	$Window.unload( function()
+	{
+		_this.OnWindowUnload();
+	});
+
+	$Window.on( 'scroll', function()
+	{
+		_this.SetScrollPosition();
+	});
+
+	$Window.on( 'click', function( e )
+	{
+		_this.HandleWindowClick( e );
+	});
+}
+
+CUsabilityTracker.prototype.ResetStats = function()
+{
+	this.m_stats.windowWidth = window.innerWidth;
+	this.m_stats.windowHeight = window.innerHeight;
+	this.m_stats.events = [];
+	this.m_stats.maxScroll = this.GetScrollPosition();
+}
+
+CUsabilityTracker.prototype.ScheduleUpload = function()
+{
+	this.CancelScheduledUpload();
+
+	var _this = this;
+	this.m_schUpload = setTimeout( function() { _this.PostStats() }, 3 * 60 * 1000 );
+}
+
+CUsabilityTracker.prototype.CancelScheduledUpload = function()
+{
+	if ( this.m_schUpload === null )
+		return;
+
+	clearTimeout( this.m_schUpload );
+	this.m_schUpload = null;
+}
+
+CUsabilityTracker.prototype.GetScrollPosition = function()
+{
+	var nCurrent = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+	return nCurrent + window.innerHeight;
+}
+
+CUsabilityTracker.prototype.SetScrollPosition = function()
+{
+	// ignore scrolling for 1/2 second after page load
+	if ( (performance.now() - this.m_tsLoaded) < 500.0 )
+		return;
+
+	var nCurrent = this.GetScrollPosition();
+
+	// always skip updating and scheduling a new scroll if previous matches, including across page reloads that automatically scroll down
+	if ( nCurrent <= this.m_stats.maxScroll )
+		return;
+
+	this.m_stats.maxScroll = nCurrent;
+	this.ScheduleUpload();
+}
+
+CUsabilityTracker.prototype.OnWindowUnload = function ()
+{
+	this.PostStats();
+}
+
+CUsabilityTracker.prototype.HandleWindowClick = function( e )
+{
+	var $Target = $J( e.target );
+	if ( !$Target )
+		return;
+
+	var $Tracked = $Target.closest( '[data-usability]');
+	if ( !$Tracked || $Tracked.length == 0 )
+		return;
+
+	this.AddEvent( $Tracked.data( 'usability' ) );
+}
+
+CUsabilityTracker.prototype.AddEvent = function( eEvent )
+{
+	for ( var i = 0; i < this.m_stats.events.length; i++ )
+	{
+		if ( this.m_stats.events[i] == eEvent )
+			return;
+	}
+
+	this.m_stats.events.push( eEvent );
+	this.ScheduleUpload();
+}
+
+CUsabilityTracker.prototype.PostStats = function()
+{
+	// if no scheduled upload, stats aren't dirty
+	if ( this.m_schUpload === null )
+		return;
+
+	this.CancelScheduledUpload();
+
+	var strStats = JSON.stringify( this.m_stats );
+	var strURL = "http:\/\/store.steampowered.com\/default\/usabilitytracking\/";
+	var bSupportsBeacon = typeof navigator.sendBeacon != 'undefined';
+	if ( bSupportsBeacon )
+	{
+		var fdParams = new FormData();
+		fdParams.append( 'stats', strStats );
+		navigator.sendBeacon( strURL, fdParams );
+	}
+	else
+	{
+		$J.ajax(
+		{
+			url: strURL,
+			data: { stats: strStats },
+			dataType: 'json',
+			type: 'POST'
+		})
+		.done( function( data )
+		{
+		});
+
+		// if we couldn't send a beacon, we try to busy wait for a bit so the AJAX request has time
+		// to reach the servers.
+		var iters = 0;
+		var start = new Date().getMilliseconds();
+		while ( iters < 10000000 && ( new Date().getMilliseconds() - start ) < 30 ) { iters++; }
+	}
+
+	this.ResetStats();
 }
 
 jQuery( document ).ready(function( $ ) {

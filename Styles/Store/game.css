@@ -1492,6 +1492,12 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     margin-right: 4px;
 }
 
+.friend_block_holder.curator img {
+	width: 36px;
+	height: 36px;
+
+}
+
 .friend_blocks_twoxtwo .friend_block_holder:hover {
     text-decoration: none;
     background: rgba( 103, 193, 245, 0.1 );
@@ -3497,7 +3503,7 @@ select.gray_bevel {
 }
 
 .breadcrumbs {
-    color: #61686d;
+    color: #56707f;
     font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */

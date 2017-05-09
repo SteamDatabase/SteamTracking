@@ -743,6 +743,12 @@ body.v6 .page_content_ctn.dark:last-child {
 	margin-top: 15px;
 }
 
+.help_page_title.steamworks {
+	border-top: 2px solid #67c1f5;
+	margin-top: 14px;
+	padding-top: 12px;
+}
+
 .help_page_text{
 	line-height: 18px;
 	max-width: 712px;
@@ -1548,6 +1554,12 @@ div.help_official_support_row {
 	font-size: 14px;
 	margin-bottom: 16px;
 	padding-top: 10px;
+}
+
+.help_your_issue_start.steamworks {
+	border-bottom: 2px solid #67c1f5;
+	margin-bottom: 14px;
+	padding-bottom: 12px;
 }
 
 .help_game_guides_box {
@@ -4137,10 +4149,25 @@ table {
 	color: #b0b6c0;
 }
 
-#help_publisher_chooser_dselect_container {
+#help_publisher_chooser_dselect_container, #publisherid_selected_dselect_container {
 	max-width: 150px;
 }
 
 .help_publisher_chooser {
 	float:right;
+}
+
+.steamworks_ctn {
+	background-image: url(https://help.steampowered.com/public/images//steamworks_bg.png);
+	background-repeat: no-repeat;
+	background-position-y: -16px;
+	margin-left: -40px;
+	padding-left: 40px;
+}
+.steamworks_ctn.tree {
+	margin-top: -26px;
+	padding-top: 26px;
+}
+.steamworks_ctn p.indent {
+	padding-left: 30px;
 }
