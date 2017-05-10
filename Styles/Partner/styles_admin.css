@@ -2812,3 +2812,25 @@ h2.bundleFilter_titleArea {
 #free_game_settings input {
 	width: 500px;
 }
+
+.contact_new_ctn {
+	background: #252525;
+	border-left: 2px solid #a3cf06;
+	padding: 8px 16px 16px 16px;
+}
+
+.contact_new_ctn .contact_new_highlight {
+	color: #a3cf06;
+}
+.contact_new_btn span strong {
+	font-size: 20px;
+	color: #fff;
+	display: block;
+	height: 20px;
+	line-height: 46px;
+}
+.contact_new_btn span {
+	line-height: 20px;
+	padding-bottom: 10px;
+	color: #93d5ff;
+}

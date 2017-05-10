@@ -1099,8 +1099,12 @@ function LocLanguageSelect( id, language )
 
 	var textArea = document.getElementById( id + '_textarea' );
 	var hiddenInput = document.getElementById( id + language + '__hidden' );
-	if ( textArea && hiddenInput )
-		textArea.value = hiddenInput.value;
+	// The values used here are almost always going to be stored HTML-escaped, so unescape them here to make sure they don't get double-escaped
+	if ( textArea && hiddenInput ) {
+		var e = document.createElement('div');
+		e.innerHTML = hiddenInput.value;
+		textArea.value = e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+	}
 }
 
 // called when localized text input changes. Updates hidden inputs
