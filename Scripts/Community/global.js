@@ -2494,13 +2494,24 @@ function ShareOnSteam()
 	$( 'ShareOnSteamDialogContents' ).hide();
 	new Ajax.Updater( "ShareOnSteamDialogContents", gShareRequestURL, { evalScripts: true, onLoaded: function() { ShowWithFade( $( 'ShareOnSteamDialogContents') ); } } );
 	$( 'ShareOnSteamDialog' ).show();
-	gShareOnSteamDialog = ShowDialog( 'Share', $( 'ShareOnSteamDialog' ) );
+
+	var deferred = new jQuery.Deferred();
+	var fnCancel = function() { CloseShareOnSteamDialog(); deferred.resolve(); };
+
+	gShareOnSteamDialog = _BuildDialog(  'Share', $( 'ShareOnSteamDialog' ), [], fnCancel, null );
+	deferred.always( function() { gShareOnSteamDialog.Dismiss(); } );
+	gShareOnSteamDialog.Show();
+
+	// attach the deferred's events to the modal
+	deferred.promise( gShareOnSteamDialog );
+
 	gShareOnSteamDialog.SetRemoveContentOnDismissal( false );
 }
 
+
 function CloseShareOnSteamDialog()
 {
-	gShareOnSteamDialog.Dismiss();
+		gShareOnSteamDialog.Dismiss();
 }
 
 function ShareContentToUserStatus( text, urlToShare, appID, posturl )
@@ -2511,7 +2522,7 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 		method: 'post',
 		parameters: { sessionid: g_sessionID, status_text: text, appid: appID },
 		onSuccess: function(transport) {
-			gShareOnSteamDialog.Dismiss();
+			CloseShareOnSteamDialog();
 			ShowAlertDialog( 'Share', 'The status update has been posted to your Friends Activity.' );
 		},
 		onFailure: function(transport) {

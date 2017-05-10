@@ -430,7 +430,28 @@ CreateBuyOrderDialog = {
 	},
 
 	OnAddFunds: function() {
-		window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=' + this.m_ulListingId + '&returnurl=' + window.location;
+		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
+		var price = Math.round( currency * quantity );
+
+		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] >= price )
+		{
+			window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=' + window.location;
+		}
+		else
+		{
+			if ( price > g_rgWalletInfo['wallet_max_balance'] && price > g_rgWalletInfo['wallet_balance'] )
+			{
+				this.DisplayError(
+					'The total order amount exceeds the maximum wallet balance of %1$s.'
+						.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) )
+				);
+			}
+			else
+			{
+				window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=' + (price - g_rgWalletInfo['wallet_balance']) + '&returnurl=' + window.location;
+			}
+		}
 	},
 
 	PollForBuyOrderCompletion: function( buy_orderid ) {

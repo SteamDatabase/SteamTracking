@@ -1109,6 +1109,8 @@ input.discussionSearchText:-moz-placeholder {
 .discussions_searchSort {
 	float: right;
 	line-height: 32px;	/* to match searchedForTerm */
+	width: 100%;
+	text-align: right;
 }
 
 @media screen and (max-width: 540px) {
