@@ -223,6 +223,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_KickSessions_Error" "Failed to disconnect other session playing %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Failed to verify signed files for %game%, content validation is required."
+"SteamUI_JoinDialog_CreateProcess_Error" "Failed to start process for %game% :\n\n%detail%""
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit..."
@@ -4003,6 +4004,9 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
 "Steam_AppUpdateError_42"		"missing update files"
 "Steam_AppUpdateError_43"		"not enough disk space free for user - check OS disk quota settings"
+"Steam_AppUpdateError_44"		"site license locked"
+"Steam_AppUpdateError_45"		"parental control blocked"
+"Steam_AppUpdateError_46"		"create process failed"
 
 
 "steam_subnav_featured"		"Featured"

@@ -28,13 +28,9 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" gameactions="off">
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcecountoverride="DPadLayout 2 DPad ABXY">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="ABXY button" advanced="off" gameactions="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
-					<DropDown id="ButtonDPadLayout" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
