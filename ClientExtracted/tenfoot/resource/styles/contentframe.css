@@ -352,6 +352,11 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	margin-top: 11px;
 }
 
+.TwoFootSettings .ContentMouseBackButton
+{
+    visibility: collapse;
+}
+
 .ContentMouseBackButton
 {
 	opacity: 0.0;

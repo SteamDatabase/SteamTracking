@@ -223,7 +223,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_KickSessions_Error" "Failed to disconnect other session playing %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Failed to verify signed files for %game%, content validation is required."
-"SteamUI_JoinDialog_CreateProcess_Error" "Failed to start process for %game% :\n\n%detail%""
+"SteamUI_JoinDialog_CreateProcess_Error" "Failed to start process for %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit..."
@@ -4334,6 +4334,15 @@ Set a category for these games to help you find them quickly and organize your L
 "Music_Queue_Menu_AppendPlaylist" "Add to Playlist"
 "Music_Queue_AddPlaylist_Dialog_Title" "Add Playlist"
 "Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
+"Steam_Settings_Controller"					"Controller"
+"Steam_SettingsControllerTitle"				"Controller Configuration"
+"Steam_SettingsControllerDescription"		"Controller General Settings allow setting of Opting In/Out for Configuration Support, Personalization, and other Options."
+"Steam_SettingsControllerGeneralSettings"	"General Controller Settings"
+"Steam_SettingsControllerBindingDescription"		"Controller Configurations allow a controller to have certain settings in specific contexts outside of game."
+"Steam_SettingsControllerBigPictureConfig"	"Big Picture Configuration"
+"Steam_SettingsControllerDesktopConfig"		"Desktop Configuration"
+"Steam_SettingsControllerGuideConfig"		"Guide Button Chord Configuration"
 
 "Steam_Settings_StreamingTitle" "In-Home Streaming"
 
