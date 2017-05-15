@@ -10388,6 +10388,47 @@
 				}
 			}
 		}
+
+		"RainyDayCosmetics_collection"
+		{
+			"name"				"RainyDayCosmetics_collection"
+			"description"		"RainyDayCosmetics_collection_desc"
+			"items"
+			{
+				"ancient"
+				{
+					"Flash of Inspiration"					"10"
+					"The Lightning Lid"						"10"
+				}
+				"legendary"
+				{
+					"Plumber's Cap"							"10"
+					"Legendary Lid"							"10"
+					"Guilden Guardian"						"10"
+				}
+				"mythical"
+				{
+					"Archer's Sterling"						"10"
+					"Pocket Pauling"						"10"
+					"Messenger's Mail Bag"					"10"
+					"Hawk Eyed Hunter"						"10"
+					"Down Under Duster"						"10"
+				}
+				"rare"
+				{
+					"Speedster's Spandex"					"10"
+					"The Upgrade"							"10"
+					"Blast Defense"							"10"
+					"Head Mounted Double Observatory"		"10"
+					"Field Practice"						"10"
+					"Warhood"								"10"
+					"Airborne Attire"						"10"
+					"Flakcatcher"							"10"
+					"Airtight Arsonist"						"10"
+				}
+			}
+		}
+
 	} 
 	"operations"
 	{
@@ -69414,6 +69455,14 @@
 			{
 				"limited quantity item"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30482"
 		{
@@ -69462,6 +69511,14 @@
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
 			}
 		}
 		"30484"
@@ -72266,6 +72323,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 			"visuals"
 			{
 				"styles"
@@ -74430,6 +74495,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30727"
 		{
@@ -76560,7 +76633,7 @@
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_santarchimedes"
 			"item_description"		"#TF_dec16_santarchimedes_Desc"
-			"item_type_name"	"#TF_Wearable_Mascot"
+			"item_type_name"		"#TF_Wearable_Mascot"
 			"equip_region"		"left_shoulder"
 			"image_inventory"		"backpack/workshop/player/items/medic/dec16_santarchimedes/dec16_santarchimedes"
 			"capabilities"
@@ -76581,7 +76654,7 @@
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_smissmas_sweater"
 			"item_description"		"#TF_dec16_smissmas_sweater_Desc"
-			"item_type_name"	"#TF_Wearable_Sweater"
+			"item_type_name"		"#TF_Wearable_Sweater"
 			"equip_region"		"shirt"
 			"visuals"
 			{
@@ -76692,8 +76765,8 @@
 			{
 				"attach particle effect static"
 				{
-					"attribute_class"	"set_attached_particle_static"
-					"value"	"28"
+					"attribute_class"		"set_attached_particle_static"
+					"value"		"28"
 				}
 			}
 		}
@@ -76704,7 +76777,7 @@
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_readers_choice"
 			"item_description"		"#TF_dec16_readers_choice_Desc"
-			"item_type_name"	"#TF_Wearable_Glasses"
+			"item_type_name"		"#TF_Wearable_Glasses"
 			"equip_region"		"glasses"
 			"image_inventory"		"backpack/workshop/player/items/all_class/dec16_readers_choice/dec16_readers_choice"
 			"capabilities"
@@ -76883,7 +76956,7 @@
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_taunt_didgeridrongo"
 			"item_description"		"#TF_taunt_didgeridrongo_Desc"
-			"ad_text"			"#TF_taunt_didgeridrongo_AdText"
+			"ad_text"		"#TF_taunt_didgeridrongo_AdText"
 			"image_inventory"		"backpack/workshop/player/items/sniper/taunt_didgeridrongo/taunt_didgeridrongo"
 			"capabilities"
 			{
@@ -76924,7 +76997,7 @@
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_taunt_scotsmans_stagger"
 			"item_description"		"#TF_taunt_scotsmans_stagger_Desc"
-			"ad_text"			"#TF_taunt_scotsmans_stagger_AdText"
+			"ad_text"		"#TF_taunt_scotsmans_stagger_AdText"
 			"attributes"
 			{
 				"taunt is press and hold"
@@ -76977,6 +77050,447 @@
 				{
 					"demoman"		"models/workshop/player/items/demo/taunt_scotsmans_stagger/taunt_scotsmans_stagger.mdl"
 				}
+			}
+		}
+		"30846"
+		{
+			"name"		"Plumber's Cap"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_plumbers_cap"
+			"item_description"		"#TF_spr17_plumbers_cap_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/engineer/spr17_plumbers_cap/spr17_plumbers_cap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/spr17_plumbers_cap/spr17_plumbers_cap.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30848"
+		{
+			"name"		"The Upgrade"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_the_upgrade"
+			"item_description"		"#TF_spr17_the_upgrade_Desc"
+			"equip_region"		"face"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/spr17_the_upgrade/spr17_the_upgrade"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/spr17_the_upgrade/spr17_the_upgrade.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30849"
+		{
+			"name"		"Pocket Pauling"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_pocket_pauling"
+			"item_description"		"#TF_spr17_pocket_pauling_Desc"
+			"item_type_name"		"#TF_Wearable_PocketBuddy"
+			"equip_region"		"scout_backpack"
+			"image_inventory"		"backpack/workshop/player/items/scout/spr17_pocket_pauling/spr17_pocket_pauling"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr17_pocket_pauling/spr17_pocket_pauling.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
+		}
+		"30853"
+		{
+			"name"		"Flakcatcher"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_flakcatcher"
+			"item_description"		"#TF_spr17_flakcatcher_Desc"
+			"item_type_name"		"#TF_Wearable_Jacket"
+			"equip_region"		"grenades"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30856"
+		{
+			"name"		"Down Under Duster"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_down_under_duster"
+			"item_description"		"#TF_spr17_down_under_duster_Desc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"equip_region"		"sniper_vest"
+			"image_inventory"		"backpack/workshop/player/items/sniper/spr17_down_under_duster/spr17_down_under_duster"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/spr17_down_under_duster/spr17_down_under_duster.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30857"
+		{
+			"name"		"Guilden Guardian"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_guilden_guardian"
+			"item_description"		"#TF_spr17_guilden_guardian_Desc"
+			"item_type_name"		"#TF_Wearable_Shirt"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/sniper/spr17_guilden_guardian/spr17_guilden_guardian"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/spr17_guilden_guardian/spr17_guilden_guardian.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30858"
+		{
+			"name"		"Hawk Eyed Hunter"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_hawk_eyed_hunter"
+			"item_description"		"#TF_spr17_hawk_eyed_hunter_Desc"
+			"equip_region"		"head_skin"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/sniper/spr17_hawk_eyed_hunter/spr17_hawk_eyed_hunter"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/spr17_hawk_eyed_hunter/spr17_hawk_eyed_hunter.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30859"
+		{
+			"name"		"Airtight Arsonist"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_airtight_arsonist"
+			"item_description"		"#TF_spr17_airtight_arsonist_Desc"
+			"item_type_name"		"#TF_Wearable_Mask"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/spr17_airtight_arsonist/spr17_airtight_arsonist"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/spr17_airtight_arsonist/spr17_airtight_arsonist.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30862"
+		{
+			"name"		"Field Practice"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_field_practice"
+			"item_description"		"#TF_spr17_field_practice_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/medic/spr17_field_practice/spr17_field_practice"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/spr17_field_practice/spr17_field_practice.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30863"
+		{
+			"name"		"Blast Defense"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_blast_defense"
+			"item_description"		"#TF_spr17_blast_defense_Desc"
+			"equip_region"		"whole_head"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/demo/spr17_blast_defense/spr17_blast_defense"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/spr17_blast_defense/spr17_blast_defense.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30866"
+		{
+			"name"		"Warhood"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_warhood"
+			"item_description"		"#TF_spr17_warhood_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/spr17_warhood/spr17_warhood"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/spr17_warhood/spr17_warhood.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30867"
+		{
+			"name"		"The Lightning Lid"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_the_lightning_lid"
+			"item_description"		"#TF_spr17_the_lightning_lid_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/spr17_the_lightning_lid/spr17_the_lightning_lid"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr17_the_lightning_lid/spr17_the_lightning_lid.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30868"
+		{
+			"name"		"Legendary Lid"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_legendary_lid"
+			"item_description"		"#TF_spr17_legendary_lid_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr17_legendary_lid/spr17_legendary_lid"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/spr17_legendary_lid/spr17_legendary_lid_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30869"
+		{
+			"name"		"Messenger's Mail Bag"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_messengers_mail_bag"
+			"item_description"		"#TF_spr17_messengers_mail_bag_Desc"
+			"item_type_name"		"#TF_Wearable_MailBag"
+			"equip_region"		"scout_backpack"
+			"image_inventory"		"backpack/workshop/player/items/scout/spr17_messengers_mail_bag/spr17_messengers_mail_bag"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr17_messengers_mail_bag/spr17_messengers_mail_bag.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30871"
+		{
+			"name"		"Flash of Inspiration"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_flash_of_inspiration"
+			"item_description"		"#TF_spr17_flash_of_inspiration_Desc"
+			"item_type_name"		"#TF_Wearable_Hair"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/engineer/spr17_flash_of_inspiration/spr17_flash_of_inspiration"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/spr17_flash_of_inspiration/spr17_flash_of_inspiration.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30872"
+		{
+			"name"		"Head Mounted Double Observatory"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_double_observatory"
+			"item_description"		"#TF_spr17_double_observatory_Desc"
+			"item_type_name"		"#TF_Wearable_Augmentation"
+			"equip_region"		"glasses"
+			"image_inventory"		"backpack/workshop/player/items/engineer/spr17_double_observatory/spr17_double_observatory"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/spr17_double_observatory/spr17_double_observatory.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30873"
+		{
+			"name"		"Airborne Attire"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_wingman"
+			"item_description"		"#TF_spr17_wingman_Desc"
+			"item_type_name"		"#TF_Wearable_Jacket"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr17_wingman/spr17_wingman"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/spr17_wingman/spr17_wingman_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/spr17_wingman/spr17_wingman_sniper.mdl"
+				"heavy"		"models/workshop/player/items/all_class/spr17_wingman/spr17_wingman_heavy.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"heavy"		"1"
+			}
+		}
+		"30874"
+		{
+			"name"		"Archer's Sterling"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr17_archers_sterling"
+			"item_description"		"#TF_spr17_archers_sterling_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/sniper/spr17_archers_sterling/spr17_archers_sterling"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/spr17_archers_sterling/spr17_archers_sterling.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30875"
+		{
+			"name"		"Speedster's Spandex"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr17_speedsters_spandex"
+			"item_description"		"#TF_spr17_speedsters_spandex_Desc"
+			"item_type_name"		"#TF_Wearable_Shirt"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/scout/spr17_speedsters_spandex/spr17_speedsters_spandex"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr17_speedsters_spandex/spr17_speedsters_spandex.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
 			}
 		}
 
@@ -99014,8 +99528,54 @@
 				"basename"	"models/workshop/player/items/all_class/hugs_tf_medal/hugs_tf_medal_%s.mdl"
 			}
 		}
-
-
+		"9516"
+		{
+			"name"	"Snack's Summery Ultiduo Siesta Gold Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_SnacksSummeryUltiduo_Gold"
+			"item_description"	"#TF_TournamentMedal_Summer2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/snacks_summery_ultiduo_gold/snacks_summery_ultiduo_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/snacks_summery_ultiduo_gold/snacks_summery_ultiduo_gold_%s.mdl"
+			}
+		}
+		"9517"
+		{
+			"name"	"Snack's Summery Ultiduo Siesta Silver Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_SnacksSummeryUltiduo_Silver"
+			"item_description"	"#TF_TournamentMedal_Summer2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/snacks_summery_ultiduo_silver/snacks_summery_ultiduo_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/snacks_summery_ultiduo_silver/snacks_summery_ultiduo_silver_%s.mdl"
+			}
+		}
+		"9518"
+		{
+			"name"	"Snack's Summery Ultiduo Siesta Bronze Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_SnacksSummeryUltiduo_Bronze"
+			"item_description"	"#TF_TournamentMedal_Summer2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/snacks_summery_ultiduo_bronze/snacks_summery_ultiduo_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/snacks_summery_ultiduo_bronze/snacks_summery_ultiduo_bronze_%s.mdl"
+			}
+		}
+		"9519"
+		{
+			"name"	"Snack's Summery Ultiduo Siesta Participation Medal 2017"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_SnacksSummeryUltiduo_Participant"
+			"item_description"	"#TF_TournamentMedal_Summer2017"
+			"image_inventory"		"backpack/workshop/player/items/all_class/snacks_summery_ultiduo_participant/snacks_summery_ultiduo_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/snacks_summery_ultiduo_participant/snacks_summery_ultiduo_participant_%s.mdl"
+			}
+		}
 
 
 
@@ -105989,6 +106549,66 @@
 						{
 							"name"				"ribbon"
 							"submodel_index"	"1"
+						}
+					}
+				}
+			}
+		}
+		"5866"
+		{
+			"name"	"Rainy Day Cosmetic Key" 
+			"first_sale_date"	"2017/05/10"
+			"prefab" "eventkey"
+			"item_name"			"#TF_Tool_RainyDayCosmeticKey"					
+			"item_description"	"#TF_Tool_RainyDayCosmeticKey_Desc"						
+			"ad_text"			"#TF_Tool_RainyDayCosmeticKey_AdText" 
+			"image_inventory"	"backpack/crafting/community_cosmetic_rainyday_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"rainydaycosmetic2017"
+			}
+		}
+		"5867" 
+		{
+			"name"	"Rainy Day Cosmetic Case"
+			"first_sale_date"	"2017/05/10"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"rainydaycosmetic2017"
+			}
+			"item_name"		"#TF_RainyDayCosmeticCase"
+			"item_description"	"#TF_RainyDayCosmeticCase_desc"
+			"ad_text"			"#TF_RainyDayCosmeticCase_AdText"
+			"image_inventory"	"backpack/player/items/crafting/community_cosmetic_case_rainyday"
+			"model_player"		"models/player/items/crafting/community_cosmetic_case.mdl"
+			"default_skin"		"0"
+			"static_attrs"
+			{
+				"set supply crate series"		"106"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5866"
+				"weapon_allow_inspect"			"1"
+				"use_model_cache_icon"			"1"
+			}
+			"event_desc_footer"			"#Footer_RainyDayCosmetics"
+			"collection_reference"		"RainyDayCosmetics_collection"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin" "0"
+						"bodygroup"
+						{
+							"name"				"ribbon"
+							"submodel_index"	"0"
 						}
 					}
 				}
@@ -124967,6 +125587,11 @@
 			"hide_lootlist"		"1"
 			"loot_list_collection"		"Winter2016_Cosmetics_collection"
 		}
+		"rainyday_cosmetic_loot_list_106"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"RainyDayCosmetics_collection"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -125072,6 +125697,7 @@
 		"supply_crate_loot_list_103"	"103"	
 		"halloween2016_case01_loot_list_104"	"104"	
 		"winter2016_cosmetic_case_loot_list_105"	"105"	
+		"rainyday_cosmetic_loot_list_106"	"106"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
