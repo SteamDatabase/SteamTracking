@@ -108,7 +108,7 @@
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
  D typeinfo for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
- D typeinfo for CCallback<CSteamUser, LicensesUpdated_t, false>
+ D typeinfo for CCallback<CSteamUser, PostLogonState_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServersConnected_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServersDisconnected_t, false>
@@ -122,6 +122,7 @@
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<6>
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CConsoleInputThread
@@ -138,9 +139,9 @@
  D typeinfo for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D typeinfo for CPathString
  D typeinfo for CSteamUser
- D typeinfo for CSteamUser::CCallback_OnLicensesUpdated
  D typeinfo for CSteamUser::CCallback_OnLoggedOff
  D typeinfo for CSteamUser::CCallback_OnLogonFailure
+ D typeinfo for CSteamUser::CCallback_OnPostLogonState
  D typeinfo for CSteamUser::CCallback_OnSteamLogon
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -166,7 +167,7 @@
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
  D vtable for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
- D vtable for CCallback<CSteamUser, LicensesUpdated_t, false>
+ D vtable for CCallback<CSteamUser, PostLogonState_t, false>
  D vtable for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CSteamUser, SteamServersConnected_t, false>
  D vtable for CCallback<CSteamUser, SteamServersDisconnected_t, false>
@@ -179,6 +180,7 @@
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<6>
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<8>
  D vtable for CConsoleInputThread
@@ -195,9 +197,9 @@
  D vtable for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D vtable for CPathString
  D vtable for CSteamUser
- D vtable for CSteamUser::CCallback_OnLicensesUpdated
  D vtable for CSteamUser::CCallback_OnLoggedOff
  D vtable for CSteamUser::CCallback_OnLogonFailure
+ D vtable for CSteamUser::CCallback_OnPostLogonState
  D vtable for CSteamUser::CCallback_OnSteamLogon
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -214,12 +216,11 @@
  GetSpewOutputFunc
  KeyValuesSystemSteam
  Msg
+ Plat_CommandLineParamExists
  Plat_FloatTime
- Plat_GetCommandLine
  Plat_GetExecutablePath
  Plat_MSTime
  Plat_RelativeTicks
- Plat_SetCommandLineArgs
  Plat_ctime
  Plat_localtime
  R k_rgchAnonymousUser
@@ -237,7 +238,7 @@
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
  R typeinfo name for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
- R typeinfo name for CCallback<CSteamUser, LicensesUpdated_t, false>
+ R typeinfo name for CCallback<CSteamUser, PostLogonState_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServersDisconnected_t, false>
@@ -251,6 +252,7 @@
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<6>
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CConsoleInputThread
@@ -267,9 +269,9 @@
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  R typeinfo name for CPathString
  R typeinfo name for CSteamUser
- R typeinfo name for CSteamUser::CCallback_OnLicensesUpdated
  R typeinfo name for CSteamUser::CCallback_OnLoggedOff
  R typeinfo name for CSteamUser::CCallback_OnLogonFailure
+ R typeinfo name for CSteamUser::CCallback_OnPostLogonState
  R typeinfo name for CSteamUser::CCallback_OnSteamLogon
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -372,9 +374,9 @@
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*)
- T CCallback<CSteamUser, LicensesUpdated_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
- T CCallback<CSteamUser, LicensesUpdated_t, false>::Register(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
- T CCallback<CSteamUser, LicensesUpdated_t, false>::Run(void*)
+ T CCallback<CSteamUser, PostLogonState_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(PostLogonState_t*))
+ T CCallback<CSteamUser, PostLogonState_t, false>::Register(CSteamUser*, void (CSteamUser::*)(PostLogonState_t*))
+ T CCallback<CSteamUser, PostLogonState_t, false>::Run(void*)
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Run(void*)
@@ -411,6 +413,9 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<6>::GetCallbackSizeBytes()
+ T CCallbackImpl<6>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<6>::~CCallbackImpl()
  T CCallbackImpl<72>::GetCallbackSizeBytes()
  T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<72>::~CCallbackImpl()
@@ -584,19 +589,19 @@
  T CSimpleMachClient::~CSimpleMachClient()
  T CSteamID::Render() const
  T CSteamUser::AnonymousLogonBlocking()
- T CSteamUser::CCallback_OnLicensesUpdated::Run(void*)
  T CSteamUser::CCallback_OnLoggedOff::Run(void*)
  T CSteamUser::CCallback_OnLogonFailure::Run(void*)
+ T CSteamUser::CCallback_OnPostLogonState::Run(void*)
  T CSteamUser::CCallback_OnSteamLogon::Run(void*)
  T CSteamUser::CSteamUser()
  T CSteamUser::LogonBlocking(char const*, char const*, char const*)
- T CSteamUser::OnLicensesUpdated(LicensesUpdated_t*)
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
  T CSteamUser::OnLogonFailure(SteamServerConnectFailure_t*)
+ T CSteamUser::OnPostLogonState(PostLogonState_t*)
  T CSteamUser::OnSteamLogon(SteamServersConnected_t*)
  T CSteamUser::PromptForAndSetPassword(char const*)
  T CSteamUser::Validate(CValidator&, char const*)
- T CSteamUser::WaitForLicencesBlocking()
+ T CSteamUser::WaitForLogonCompleteBlocking()
  T CSteamUser::~CSteamUser()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::AllocNode()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Pop()
@@ -1091,7 +1096,6 @@
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
- T Sys_GetFactory(CSysModule*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T TSLNodeBase_t::operator delete(void*)
@@ -1285,6 +1289,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient
  b g_pClientUGC
