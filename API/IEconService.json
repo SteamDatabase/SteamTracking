@@ -63,6 +63,37 @@
             ]
         },
         {
+            "name": "GetTradeStatus",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets status for a specific trade",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "tradeid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "get_descriptions",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If set, the item display data for the items included in the returned trades will also be returned"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The language to use when loading item display data"
+                }
+            ]
+        },
+        {
             "name": "GetTradeOffers",
             "version": 1,
             "httpmethod": "GET",
