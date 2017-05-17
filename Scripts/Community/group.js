@@ -862,6 +862,41 @@ function SaveAnnouncement()
 	$('post_announcement_form').submit();
 }
 
+function UpdateRecommendations( newState )
+{
+
+	if ( !( $J ( "input[name='appids']:checked" ).length > 0 ) )
+	{
+		ShowAlertDialog( "Cannot update recommendations", "Please select one or more recommendations to update." );
+		return;
+	}
+
+	ShowConfirmDialog( "Update selected curations?", "Are you sure you want to update these curations? " ).done(
+		function()
+		{
+			var data = {};
+
+			data.sessionID = g_sessionID;
+			data.recommendation_state = newState;
+			data.appids = [];
+
+			$J.each( $J("input[name='appids']:checked"), function(i, j){
+				data.appids.push( j.value );
+			} );
+
+			$J.ajax( {
+				url: g_strGroupURL + '/updatecurations/',
+				type: 'POST',
+				data: data,
+			} ).done( function ( data ) {
+				window.location.reload();
+			} ).fail( function( jqxhr ) {
+				ShowAlertDialog( "Oops, an error has occurred", "An error has occurred. Please try again later." );
+			} );
+		}
+	);
+}
+
 jQuery( function($) {
 	var $MemberTiles = $('.grouppage_member_tiles');
 	if ( $MemberTiles.length )

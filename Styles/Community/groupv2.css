@@ -1940,3 +1940,55 @@ a.headlineLink:hover {
 	max-height: 490px; /* I am impressed this works. GOOD JOB CSS! */
 }
 
+.curation_manage_table {
+	margin: 25px 0 0 0;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.curation_manage_table div.curation_row {
+	display: flex;
+	flex-direction: row;
+}
+.curation_manage_table div.curation_row:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+.curation_row div {
+	padding: 3px;
+}
+
+.curation_manage_table .curation_row div:nth-child(1) {
+	align-items: center;
+	display: flex;
+	width: 26px;
+}
+
+
+.curation_manage_table  .curation_row div:nth-child(2) {
+	width: 40px;
+	align-items: center;
+	display: flex;
+}
+
+.curation_row .header {
+	font-size: 18px;
+	color: #fff;
+}
+
+.curation_row p {
+	margin: 3px 0;
+}
+
+
+.selectall {
+	color: #cccccc;
+	line-height: 25px;
+	margin-top: 6px;
+}
+
+.selectall input {
+	vertical-align: middle;
+}
