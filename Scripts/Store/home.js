@@ -2543,10 +2543,12 @@ var CUsabilityTracker = function()
 {
 	this.m_schUpload = null;
 	this.m_tsLoaded = performance.now();
+	this.m_rgScrollToElements = null;
 	this.m_stats = {
 		maxScroll: 0,
 		windowWidth: 0,
 		windowHeight: 0,
+		scrolledToSection: 0,
 		events: []
 	}
 }
@@ -2579,6 +2581,7 @@ CUsabilityTracker.prototype.ResetStats = function()
 	this.m_stats.windowHeight = window.innerHeight;
 	this.m_stats.events = [];
 	this.m_stats.maxScroll = this.GetScrollPosition();
+	this.m_stats.scrolledToSection = 0;
 }
 
 CUsabilityTracker.prototype.ScheduleUpload = function()
@@ -2617,6 +2620,7 @@ CUsabilityTracker.prototype.SetScrollPosition = function()
 		return;
 
 	this.m_stats.maxScroll = nCurrent;
+	this.CheckScrollToElements();
 	this.ScheduleUpload();
 }
 
@@ -2648,6 +2652,35 @@ CUsabilityTracker.prototype.AddEvent = function( eEvent )
 
 	this.m_stats.events.push( eEvent );
 	this.ScheduleUpload();
+}
+
+CUsabilityTracker.prototype.CheckScrollToElements = function()
+{
+	if ( this.m_rgScrollToElements === null )
+		this.m_rgScrollToElements = $J( '[data-usability-scroll]' );
+
+	var nBottomOfScreen = this.GetScrollPosition();
+	for ( var i = this.m_rgScrollToElements.length - 1; i >= 0; i-- )
+	{
+		var $element = $J( this.m_rgScrollToElements[i] );
+		if ( !$element.is(':visible') )
+			continue;
+
+		var nOffset = $element.offset().top;
+		if ( nOffset > nBottomOfScreen )
+			continue;
+
+		this.SetScrollToSection( $element.data( 'usability-scroll' ) );
+	}
+}
+
+CUsabilityTracker.prototype.SetScrollToSection = function( eEvent )
+{
+	if ( this.m_stats.scrolledToSection < eEvent )
+	{
+		this.m_stats.scrolledToSection = eEvent;
+		this.ScheduleUpload();
+	}
 }
 
 CUsabilityTracker.prototype.PostStats = function()

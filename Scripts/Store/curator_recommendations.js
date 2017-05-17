@@ -15,6 +15,13 @@ function OnRecommendationsRendered()
 
 function FollowCurator( clanID, bFollow )
 {
+	var bHaveUser = ( g_AccountID != 0 );
+	if ( !bHaveUser )
+	{
+		ShowAlertDialog("Please log in", "You must be logged in to follow a curator");
+		return;
+	}
+
 	$J.post(
 		'http://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'follow' : bFollow ? 1 : 0 },

@@ -2152,7 +2152,7 @@ body.v6 .discover_queue_empty>h3 {
 	top:0;
 	left: 0;
 	right: 0;
-	z-index: 90;
+	z-index: 900;
 
 	overflow: auto;
 	overflow-x: hidden;

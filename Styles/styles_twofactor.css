@@ -370,6 +370,56 @@ a.twofactor_contactsupport:hover {
 }
 
 
+.twofactor_external_table {
+	border-collapse: collapse;
+	margin: 15px 20px 20px 20px;
+	width: -moz-calc(100% - 30px);
+	width: -webkit-calc(100% - 30px);
+	width: -o-calc(100% - 30px);
+	width: calc(100% - 30px);
+}
+
+.twofactor_external_table th {
+	text-align: left;
+	text-transform: uppercase;
+	background-color: #2a3f5a;
+	color: #8f98a0;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+	font-weight: normal;
+}
+
+.twofactor_external_table tr {
+	border-bottom: 1px solid #000000;
+	line-height: 18px;
+}
+
+.twofactor_external_table td {
+	padding: 5px 14px;
+}
+
+.twofactor_external_table tr > *:last-child {
+	text-align: right;
+}
+
+.twofactor_external_table a:hover {
+	color: #fff;
+}
+
+.twofactor_external_table tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.2);
+}
+.twofactor_external_table tr:nth-child(odd) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.twofactor_manage_label {
+	color: #808891;
+    line-height: 20px;
+    padding: 0 6px 0 0;
+}
+
 
 .get_app_content {
 	margin: 0 auto;
@@ -418,7 +468,7 @@ a.img_link {
 		}
 
 .phone_left_col{
-	max-width: 616px;
+	max-width: 720px;
 	margin-bottom: 60px;
 }
 

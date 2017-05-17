@@ -253,15 +253,12 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 					rgYourPopularTags = [];
 					fnBuildTagDisplay( Modal );
 					Modal.AdjustSizing();
-				}).always( function() {
-					fnRemoveYourTagsFromGlobalTags();
 				});
 
 				// also load the global popular tags, to populate the autocomplete with
 				$J.get( 'http://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
 					for ( var i = 0; i < data.length; i++ )
 						rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy
-					fnRemoveYourTagsFromGlobalTags();
 				});
 			}
 		}
@@ -470,10 +467,6 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		fnApplyTag( $AppTagInput.val(), false );
 		$AppTagInput.val('').change().focus();
 	};
-
-	var fnRemoveYourTagsFromGlobalTags = function()
-	{
-			};
 
 	window.ShowAppTagModal = function( appid )
 	{

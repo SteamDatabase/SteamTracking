@@ -79,6 +79,8 @@ GDynamicStore = {
 			GDynamicStore.s_rgfnOnReadyCallbacks = null;
 		};
 
+		this.RemoveSNRFromURL();
+
 		// Create a new monitor to track impressions
 		this.s_ImpressionTracker = new CAppearMonitor(
 			function( elElement ){
@@ -169,6 +171,57 @@ GDynamicStore = {
 		{
 			// no data to load, just run the callbacks now
 			$J( fnRunOnLoadCallbacks );
+		}
+	},
+
+	RemoveSNRFromURL: function()
+	{
+		if ( !window.history || !window.history.replaceState || !window.location.search )
+			return;
+
+		// find snr param
+		var strSearch = window.location.search;
+		if ( strSearch.indexOf( '?' ) == 0 )
+			strSearch = strSearch.slice( 1 );
+
+		var rgParams = strSearch.split( '&' );
+		var iParam = -1;
+		for ( var i = 0; i < rgParams.length; i++ )
+		{
+			var strParam = rgParams[i];
+			if (strParam.indexOf('snr=') == 0)
+			{
+				iParam = i;
+				break;
+			}
+		}
+
+		if ( iParam < 0 )
+			return;
+
+		var strRemove = '';
+		console.log( rgParams );
+		console.log( rgParams[1].length );
+		if ( rgParams.length == 1 || (rgParams.length == 2 && rgParams[1].length == 0) )
+		{
+			// remove the entire search.. just SNR
+			strRemove = '?' + strSearch;
+		}
+		else if ( iParam == 0 )
+		{
+			// first param of multiple. Remove snr and trailing &
+			strRemove = rgParams[iParam] + '&';
+		}
+		else
+		{
+			// 2nd+ param of multiple. Remove snr and preceeding &
+			strRemove = '&' + rgParams[iParam];
+		}
+
+		if ( strRemove.length > 0 )
+		{
+			var strNewURL = window.location.href.replace( strRemove, '' );
+			window.history.replaceState( history.state, null, strNewURL );
 		}
 	},
 
