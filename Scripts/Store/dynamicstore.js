@@ -79,7 +79,11 @@ GDynamicStore = {
 			GDynamicStore.s_rgfnOnReadyCallbacks = null;
 		};
 
-		this.RemoveSNRFromURL();
+		try {
+			this.RemoveSNRFromURL();
+		} catch ( e )
+		{
+		}
 
 		// Create a new monitor to track impressions
 		this.s_ImpressionTracker = new CAppearMonitor(
@@ -200,8 +204,6 @@ GDynamicStore = {
 			return;
 
 		var strRemove = '';
-		console.log( rgParams );
-		console.log( rgParams[1].length );
 		if ( rgParams.length == 1 || (rgParams.length == 2 && rgParams[1].length == 0) )
 		{
 			// remove the entire search.. just SNR
@@ -771,16 +773,25 @@ GDynamicStore = {
 
 		if ( !Bundle.m_rgBundleItems.length || ( Bundle.m_bMustPurchaseAsSet && Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle ) )
 		{
-			$DiscountBlocks.hide();
 
 			var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
 
 			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
-			if ( Bundle.m_bMustPurchaseAsSet )
-				strTooltip ='This offer is only available when buying all %s items at the same time.'.replace( /%s/, Bundle.m_cTotalItemsInBundle );
 
-			$CartBtn.addClass('btn_disabled' ).attr( 'href', 'javascript:void(0)' ).data('store-tooltip', strTooltip );
-			$CartBtn.parent().css( 'background', '#000000' );
+			if ( Bundle.m_bMustPurchaseAsSet )
+			{
+				strTooltip = 'This offer is only available when buying all %s items at the same time.  You may still purchase the bundle as a gift for a friend.'.replace(/%s/, Bundle.m_cTotalItemsInBundle);
+				$CartBtn.find('span').text( 'Purchase as a gift' );
+			}
+			else
+			{
+				// completely owned "complete the set" bundle
+				$DiscountBlocks.hide();
+				$CartBtn.addClass('btn_disabled' ).attr( 'href', 'javascript:void(0)' );
+				$CartBtn.parent().css( 'background', '#000000' );
+			}
+
+			$CartBtn.data('store-tooltip', strTooltip );
 			BindStoreTooltip( $CartBtn );
 		}
 		else if ( !Bundle.m_bMustPurchaseAsSet )
