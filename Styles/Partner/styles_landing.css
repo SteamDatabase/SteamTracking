@@ -165,7 +165,10 @@ body{
 	margin-top: 28px;
 	padding-bottom: 5px;
 }
-	#landingWelcome .breadcrumbs, #landingWelcome .breadcrumbs a {
+	#landingWelcome .breadcrumbs,
+	#landingWelcome .breadcrumbs a,
+	.landingBreadcrumbs,
+	.landingBreadcrumbs a {
 		color: #808285;
 		font-size: 13px;
 		line-height: 14px;
