@@ -1477,6 +1477,22 @@ ControllerSourceModeTrigger #BindingSlotContainer
 	margin-top: 0px;
 }
 
+.ABXYLabels,
+.controller_ps3 .ABXYLabelsPS4,
+.controller_ps4 .ABXYLabelsPS4
+{
+    visibility: visible;
+}
+
+.ABXYLabelsPS4,
+.controller_ps3 .ABXYLabels,
+.controller_ps4 .ABXYLabels
+
+{
+    visibility: collapse;
+}
+
+
 ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	height: 48px;
@@ -1500,6 +1516,12 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
+.controller_ps3 #ModeContainer #ABXYButtonA Label,
+.controller_ps4 #ModeContainer #ABXYButtonA Label
+{
+	color: #a2b9efee;
+}
+
 .controller_ps4 #ModeContainer #ABXYButtonB,
 .controller_ps3 #ModeContainer #ABXYButtonB
 {
@@ -1514,6 +1536,12 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	color: #ff0000;
 	margin-left: 65px;
+}
+
+.controller_ps3 #ModeContainer #ABXYButtonB Label,
+.controller_ps4 #ModeContainer #ABXYButtonB Label
+{
+	color: #f87382ee;
 }
 
 .controller_ps4 #ModeContainer #ABXYButtonX,
@@ -1532,6 +1560,12 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 	margin-left: 65px;
 }
 
+.controller_ps3 #ModeContainer #ABXYButtonX Label,
+.controller_ps4 #ModeContainer #ABXYButtonX Label
+{
+	color: #eba1e6ee;
+}
+
 .controller_ps4 #ModeContainer #ABXYButtonY,
 .controller_ps3 #ModeContainer #ABXYButtonY
 {
@@ -1546,6 +1580,12 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	color: #ffde00;
 	margin-left: 65px;
+}
+
+.controller_ps3 #ModeContainer #ABXYButtonY Label,
+.controller_ps4 #ModeContainer #ABXYButtonY Label
+{
+	color: #30ffffee;
 }
 
 ControllerSourceModeDpad.ControllerMode ControllerBindingButton
@@ -2415,6 +2455,12 @@ Slider:Selected
 .CenterImageABXYPanel.CenterImage
 {
 	background-image: url("file://{images}/library/controller/controller_config_inspector_bpad_bg.png");
+}
+
+.controller_ps3 .CenterImageABXYPanel.CenterImage,
+.controller_ps4 .CenterImageABXYPanel.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_bpad_bg_ps4.png");
 }
 
 #CenterImageMouse.CenterImage
@@ -4304,9 +4350,54 @@ ControllerConfigBrowser.SelectCommunityBindings.RequiresMoreTimeForPublic #Requi
 	height: 100%;
 
 	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad.png");
+    background-size: 66px;
 	background-position: 3px 3px;
 	background-repeat: no-repeat;
 	border-radius: 10px;
+}
+
+#FakeABXYButtonA
+{
+    background-image: url("file://{images}/library/controller/api/button_a.png");
+}
+
+.controller_ps3 #FakeABXYButtonA,
+.controller_ps4 #FakeABXYButtonA
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_x.png");
+}
+
+#FakeABXYButtonB
+{
+    background-image: url("file://{images}/library/controller/api/button_b.png");
+}
+
+.controller_ps3 #FakeABXYButtonB,
+.controller_ps4 #FakeABXYButtonB
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_circle.png");
+}
+
+#FakeABXYButtonX
+{
+    background-image: url("file://{images}/library/controller/api/button_x.png");
+}
+
+.controller_ps3 #FakeABXYButtonX,
+.controller_ps4 #FakeABXYButtonX
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_square.png");
+}
+
+#FakeABXYButtonY
+{
+    background-image: url("file://{images}/library/controller/api/button_y.png");
+}
+
+.controller_ps3 #FakeABXYButtonY,
+.controller_ps4 #FakeABXYButtonY
+{
+    background-image: url("file://{images}/library/controller/api/ps4_button_triangle.png");
 }
 
 .FakeABXYButtonPanel Label
@@ -4322,6 +4413,7 @@ ControllerConfigBrowser.SelectCommunityBindings.RequiresMoreTimeForPublic #Requi
 	horizontal-align: center;
 	vertical-align: center;
 }
+
 
 .FakeDpadButtonPanel
 {

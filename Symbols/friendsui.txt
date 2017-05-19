@@ -200,6 +200,7 @@
  B g_URLLabelLinkerHack
  B g_URLLabelPullInModule
  B g_VecLoadedModules
+ B g_convarEnableTradeInviteBarInLaunchers
  B g_nYou_Must_Add_Public_Vgui_Controls_Vgui_ControlsCpp_To_Your_Project
  B g_pIServerBrowser
  B g_pRunGameEngine

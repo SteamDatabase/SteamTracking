@@ -75,11 +75,13 @@
 					<Slider id="HoldRepeatIntervalFourButtons" direction="horizontal" />
 				</Panel> -->
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" gameactions="on">
-						<Label class="FieldLabel" text="Y" />
+						<Label class="FieldLabel ABXYLabels" text="Y" />
+						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Triangle" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="YButtonGA" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" gameactions="on">
-					<Label class="FieldLabel" text="X" />
+					<Label class="FieldLabel ABXYLabels" text="X" />
+					<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Square" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="XButtonGA" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" sources="trackpad joystick">
@@ -519,22 +521,18 @@
 				<Panel id="CenterImageABXY_GA" class="CenterImageABXYPanel CenterImage" modes="ABXY" advanced="off" gameactions="on">
 					<Panel id="DpadButtonContainer" class="FlowDown">
 						<Panel id="YButton" class="FakeABXYButtonPanel" >
-							<Label class="FakeABXYButton" text="#Gamepad_Y" />
-							<Panel class="FakeABXYShape" />
+							<Panel id="FakeABXYButtonY" class="FakeABXYShape" />
 						</Panel>
 						<Panel id="ABXYButtonContainer" class="FlowRight">
 							<Panel id="XButton" class="FakeABXYButtonPanel" >
-								<Label class="FakeABXYButton" text="#Gamepad_X" />
-								<Panel class="FakeABXYShape" />
+								<Panel id="FakeABXYButtonX" class="FakeABXYShape" />
 							</Panel>
 							<Panel id="BButton" class="FakeABXYButtonPanel" >
-								<Label class="FakeABXYButton" text="#Gamepad_B" />
-								<Panel class="FakeABXYShape" />
+								<Panel id="FakeABXYButtonB" class="FakeABXYShape" />
 							</Panel>
 						</Panel>
 						<Panel id="AButton" class="FakeABXYButtonPanel" >
-							<Label class="FakeABXYButton" text="#Gamepad_A" />
-							<Panel class="FakeABXYShape" />
+							<Panel id="FakeABXYButtonA" class="FakeABXYShape" />
 						</Panel>
 					</Panel>
 				</Panel>
@@ -1035,20 +1033,16 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
 						<Slider id="GyroNeutralAngleDpad" direction="horizontal" />
 					</Panel>					
-					<Panel class="FieldWrapper" modes="dpad" sources="ABXY" gameactions="off" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
-						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
-					</Panel>
 					<!-- Dpad Mode Advanced -->
 					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
 						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertDpad" />
 					</Panel>
@@ -1068,11 +1062,13 @@
 						<DropDown id="RequiresClickFourButtons" />
 					</Panel>
 					<Panel class="FieldWrapper" modes="ABXY" gameactions="on" advanced="off">
-						<Label class="FieldLabel" text="#Gamepad_B" />
+						<Label class="FieldLabel ABXYLabels" text="#Gamepad_B" />
+						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Circle" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="BButtonGA" />
 					</Panel>
 					<Panel class="FieldWrapper" modes="ABXY" gameactions="on" advanced="off">
-						<Label class="FieldLabel" text="#Gamepad_A" />
+						<Label class="FieldLabel ABXYLabels" text="#Gamepad_A" />
+						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_X" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGA" />
 					</Panel>
 

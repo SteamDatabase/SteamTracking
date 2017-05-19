@@ -3126,6 +3126,10 @@
 	"Steampad_Touch2"				"BUTTON3"
 	"Steampad_Touch3"				"BUTTON4"
 
+	"Gamepad_Square"				"Square"
+	"Gamepad_Circle"				"Circle"
+	"Gamepad_Triangle"				"Triangle"
+
 	"Web_Favorite_Name" "Favorite Name"
 	"Web_Back" "Back"
 	"Web_Forward" "Forward"
@@ -3947,7 +3951,7 @@
 	"Steam_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
 
 	"Steam_Video360Player_Title"	"Error - Steam 360 Video Player"
-	"Steam_Video360Player_LaunchError"	"Playback of Steam 360 video requires the Steam 360 Video Player tool to be installed."
+	"Steam_Video360Player_LaunchError"	"Playback of a 360 video requires installation of the Steam 360 Video Player.\n\nYou will need to Exit Big Picture, then from the Tools section of your Steam Library, double-click the Steam 360 Video Player to begin the installation."
 
 	"Settings_SteamController"		"Steam Controller"
 	"SettingsSteamController_ResetSettings"		"Reset to Defaults"

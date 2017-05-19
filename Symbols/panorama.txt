@@ -11798,6 +11798,7 @@
  T panorama::CUIEngine::GetLocalPathForRelativePath(char const*, char const*, CUtlString&)
  T panorama::CUIEngine::GetMouseCanActivateParent(panorama::IUIPanel*)
  T panorama::CUIEngine::GetNumRegisterJSScopes()
+ T panorama::CUIEngine::GetOverlayWindow()
  T panorama::CUIEngine::GetPaintCountTrackingEnabled()
  T panorama::CUIEngine::GetPanelBaseClassSymbol(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::GetPanelForJavaScriptContext(v8::Context*)
