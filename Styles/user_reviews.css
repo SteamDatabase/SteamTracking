@@ -146,6 +146,13 @@ select {
 	height: 200px;
 }
 
+.review_edit_received_compensation {
+	margin-bottom: 10px;
+}
+.review_edit_received_compensation input[type=checkbox] {
+	margin-left: 0px;
+}
+
 .recommendation_date {
 	font-size: 11px;
 	color: #a0a08b;

@@ -2455,8 +2455,16 @@ HelpRequestPage = {
 			}
 			else if ( data.error )
 			{
-				var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
-				Modal.SetMaxWidth( 400 );
+				if ( data.next_page )
+				{
+					var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { HelpWizard.LoadPageFromHash( false, data.next_page, true ); } );
+					Modal.SetMaxWidth( 400 );
+				}
+				else
+				{
+					var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $J('#create_help_request_issue_text').focus(); } );
+					Modal.SetMaxWidth( 400 );
+				}
 			}
 			else if ( data.requires_validation )
 			{

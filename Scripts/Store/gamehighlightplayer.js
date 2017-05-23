@@ -967,7 +967,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			function toggleFullscreen()
 			{
 				var eleContainer = videoControl.parentNode;
-				var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
+				var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || videoControl.webkitDisplayingFullscreen || document.msFullscreenElement;
 
 				if( !isFullscreen )
 				{
@@ -977,6 +977,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 						eleContainer.webkitRequestFullScreen();
 					else if( eleContainer.mozRequestFullScreen )
 						eleContainer.mozRequestFullScreen();
+					else if ( videoControl.webkitSupportsFullscreen )
+						videoControl.webkitEnterFullscreen();
+					else if ( eleContainer.msRequestFullscreen )
+						eleContainer.msRequestFullscreen();
 
 					if( !bIsHD )
 					{
@@ -1004,6 +1008,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 						document.webkitCancelFullScreen();
 					else if( document.mozCancelFullScreen )
 						document.mozCancelFullScreen();
+					else if ( videoControl.webkitExitFullscreen )
+						videoControl.webkitExitFullscreen();
+					else if ( document.msExitFullscreen )
+						document.msExitFullscreen();
 				}
 			}
 
@@ -1048,6 +1056,14 @@ function BCanPlayWebm()
 	var ele = document.createElement('video');
 
 	return ele.canPlayType('video/webm; codecs="vp8, vorbis"') == "probably"; // Eh, I dunno, probably.
+
+}
+
+function BCanPlayMPEG4()
+{
+	var ele = document.createElement('video');
+
+	return ele.canPlayType('video/mp4; codecs="avc1.4D401E, mp4a.40.2"') == "probably"; 
 
 }
 
