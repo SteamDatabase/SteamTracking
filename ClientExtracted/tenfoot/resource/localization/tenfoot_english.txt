@@ -3859,10 +3859,10 @@
 	"Library_EditShortcutName_Title" "Rename Shortcut for {s:gamename}"
 
 	"Library_AddActionSet_Title"	"Add Action Set"
-	"Library_AddActionSet_CodeLabel" "This will add a new set of actions that can be switched to."
+	"Library_AddActionSet_CodeLabel" "This will add a new set of actions that can be switched to. \nAll action sets must have a non-empty name."
 
 	"Library_ManageActionSet_Title"	"Manage Action Sets"
-	"Library_RenameActionSet_CodeLabel" "Rename this Action Set to a new title."
+	"Library_RenameActionSet_CodeLabel" "Rename this Action Set to a new title. All action sets must have a non-empty name."
 
 	"Library_CursorOnActionSet_CodeLabel"	"Action Set to switch to when cursor is shown"
 	"Library_CursorOffActionSet_CodeLabel"	"Action Set to switch to when cursor is hidden"

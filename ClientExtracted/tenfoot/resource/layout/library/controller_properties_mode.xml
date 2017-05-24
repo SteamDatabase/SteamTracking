@@ -28,7 +28,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcecountoverride="DPadLayout 2 DPad ABXY">
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcedropdownoverride="DPadLayout DPad ABXY" sourcedropdownentries="0 1 3">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
