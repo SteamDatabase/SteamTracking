@@ -862,7 +862,7 @@ function SaveAnnouncement()
 	$('post_announcement_form').submit();
 }
 
-function UpdateRecommendations( newState, bToggleFree, bTogglePaid )
+function UpdateRecommendations( newState )
 {
 
 	if ( !( $J ( "input[name='appids']:checked" ).length > 0 ) )
@@ -877,17 +877,8 @@ function UpdateRecommendations( newState, bToggleFree, bTogglePaid )
 			var data = {};
 
 			data.sessionID = g_sessionID;
+			data.recommendation_state = newState;
 			data.appids = [];
-
-			if( newState !== null )
-				data.recommendation_state = newState;
-
-			if( bToggleFree )
-				data.toggle_free = 1;
-
-			if( bTogglePaid )
-				data.toggle_paid = 1;
-
 
 			$J.each( $J("input[name='appids']:checked"), function(i, j){
 				data.appids.push( j.value );
