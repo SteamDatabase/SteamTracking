@@ -938,6 +938,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_elite_gs_dual_berettas_golden_venice_heavy"
 			}
+			"133704"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_gs_dualberettas_cobra_light"
+			}
+			"133705"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_gs_dualberettas_cobra_medium"
+			}
+			"133706"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_gs_dualberettas_cobra_heavy"
+			}
 			"196620"
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_so_red_light"
@@ -1201,6 +1213,18 @@
 			"199194"
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_vein_heavy"
+			}
+			"199248"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_hyperbeast_light"
+			}
+			"199249"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_hyperbeast_medium"
+			}
+			"199250"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_hyperbeast_heavy"
 			}
 			"262152"
 			{
@@ -1742,6 +1766,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak47_bloodsport_heavy"
 			}
+			"461376"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak_colony01_red_light"
+			}
+			"461377"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak_colony01_red_medium"
+			}
+			"461378"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_gs_ak_colony01_red_heavy"
+			}
 			"524324"
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_hy_tiger_light"
@@ -2198,6 +2234,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_psychopath_heavy"
 			}
+			"592472"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_hannya_light"
+			}
+			"592473"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_hannya_medium"
+			}
+			"592474"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_hannya_heavy"
+			}
 			"655448"
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_sp_spray_light"
@@ -2401,6 +2449,18 @@
 			"657866"
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_gs_famas_mecha_heavy"
+			}
+			"657996"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_sp_famas_macabre_light"
+			}
+			"657997"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_sp_famas_macabre_medium"
+			}
+			"657998"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_sp_famas_macabre_heavy"
 			}
 			"720920"
 			{
@@ -2858,6 +2918,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_galilar_sp_galil_wave_heavy"
 			}
+			"854612"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_cu_galil_candychaos_light"
+			}
+			"854613"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_cu_galil_candychaos_medium"
+			}
+			"854614"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_cu_galil_candychaos_heavy"
+			}
 			"917592"
 			{
 				"icon_path"		"econ/default_generated/weapon_m249_sp_spray_light"
@@ -3254,6 +3326,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_gs_m4a4_sector_heavy"
 			}
+			"1051232"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_hellfire_light"
+			}
+			"1051233"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_hellfire_medium"
+			}
+			"1051234"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_hellfire_heavy"
+			}
 			"1114124"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_so_red_light"
@@ -3505,6 +3589,18 @@
 			"1116718"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_aa_mac10_the_last_dive_heavy"
+			}
+			"1116772"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_aloha_light"
+			}
+			"1116773"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_aloha_medium"
+			}
+			"1116774"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_am_mac10_aloha_heavy"
 			}
 			"1245264"
 			{
@@ -3770,6 +3866,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_gs_p90_shallow_grave_heavy"
 			}
+			"1247860"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_hy_p90_barebones_blue_light"
+			}
+			"1247861"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_hy_p90_barebones_blue_medium"
+			}
+			"1247862"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_hy_p90_barebones_blue_heavy"
+			}
 			"1572924"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_hy_gelpen_light"
@@ -3985,6 +4093,18 @@
 			"1575474"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_gs_ump_abyss_heavy"
+			}
+			"1575552"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_aq_ump45_flameflower_light"
+			}
+			"1575553"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_aq_ump45_flameflower_medium"
+			}
+			"1575554"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_aq_ump45_flameflower_heavy"
 			}
 			"1638568"
 			{
@@ -4682,6 +4802,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_am_mag7_malform_heavy"
 			}
+			"1772136"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_am_mag7_caustic_light"
+			}
+			"1772137"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_am_mag7_caustic_medium"
+			}
+			"1772138"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_am_mag7_caustic_heavy"
+			}
 			"1835120"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_light"
@@ -5342,6 +5474,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_gs_tec9_supercharged_heavy"
 			}
+			"1968764"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_aq_tec9_chalk_pattern_light"
+			}
+			"1968765"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_aq_tec9_chalk_pattern_medium"
+			}
+			"1968766"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_aq_tec9_chalk_pattern_heavy"
+			}
 			"2097236"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_granite_light"
@@ -5581,6 +5725,18 @@
 			"2099694"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_gs_p2000-sport_heavy"
+			}
+			"2099820"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_hunter_light"
+			}
+			"2099821"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_hunter_medium"
+			}
+			"2099822"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_hunter_heavy"
 			}
 			"2162708"
 			{
@@ -6602,6 +6758,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_am_p250_sputnik_heavy"
 			}
+			"2361968"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_cu_p250_axiom_light"
+			}
+			"2361969"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_cu_p250_axiom_medium"
+			}
+			"2361970"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_cu_p250_axiom_heavy"
+			}
 			"2490552"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_so_pmc_light"
@@ -7190,6 +7358,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_dragonfire_scope_heavy"
 			}
+			"2624120"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_deathshead_light"
+			}
+			"2624121"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_deathshead_medium"
+			}
+			"2624122"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_deathshead_heavy"
+			}
 			"3932400"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_am_zebra_dark_light"
@@ -7430,6 +7610,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1_decimator_heavy"
 			}
+			"3934812"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_metritera_light"
+			}
+			"3934813"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_metritera_medium"
+			}
+			"3934814"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_metritera_heavy"
+			}
 			"3997796"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_sp_leaves_light"
@@ -7657,6 +7849,18 @@
 			"4000310"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usps_noir_heavy"
+			}
+			"4000324"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usps_blueprint_light"
+			}
+			"4000325"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usps_blueprint_medium"
+			}
+			"4000326"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usps_blueprint_heavy"
 			}
 			"4128816"
 			{
@@ -12614,6 +12818,163 @@
 				}
 			}
 		}
+		"season8_coin"
+		{
+			"prefab"		"operation_coin"
+			"attributes"
+			{
+				"season access"		"7"
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+				}
+				"operation minutes played"
+				{
+					"attribute_class"		"operation_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation wins"
+				{
+					"attribute_class"		"operation_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation kills"
+				{
+					"attribute_class"		"operation_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 3k"
+				{
+					"attribute_class"		"operation_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 4k"
+				{
+					"attribute_class"		"operation_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 5k"
+				{
+					"attribute_class"		"operation_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation hsp"
+				{
+					"attribute_class"		"operation_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation mvps"
+				{
+					"attribute_class"		"operation_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive minutes played"
+				{
+					"attribute_class"		"competitive_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive wins"
+				{
+					"attribute_class"		"competitive_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive kills"
+				{
+					"attribute_class"		"competitive_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 3k"
+				{
+					"attribute_class"		"competitive_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 4k"
+				{
+					"attribute_class"		"competitive_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 5k"
+				{
+					"attribute_class"		"competitive_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive hsp"
+				{
+					"attribute_class"		"competitive_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive mvps"
+				{
+					"attribute_class"		"competitive_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"quests complete"
+				{
+					"attribute_class"		"quests_complete"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation points"
+				{
+					"attribute_class"		"operation_points"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation xp awarded 0"
+				{
+					"attribute_class"		"operation_xp_awarded"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation xp awarded 1"
+				{
+					"attribute_class"		"operation_xp_awarded"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation drops awarded 0"
+				{
+					"attribute_class"		"operation_drops_awarded"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation drops awarded 1"
+				{
+					"attribute_class"		"operation_drops_awarded"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 9 completion bitfield"
+				{
+					"attribute_class"		"campaign_completion_bitfield"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"campaign 9 last completed quest"
+				{
+					"attribute_class"		"campaign_last_completed_quest"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
 		"map_token"
 		{
 			"prefab"		"collectible"
@@ -12632,6 +12993,7 @@
 		{
 			"craft_class"		"weapon"
 			"craft_material_type"		"weapon"
+			"item_type_name"		"#CSGO_Type_Weapon"
 			"item_quality"		"unique"
 			"item_rarity"		"common"
 			"min_ilevel"		"1"
@@ -15818,6 +16180,7 @@
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_taser.vtf"
 			"model_player"		"models/weapons/v_eq_taser.mdl"
 			"model_world"		"models/weapons/w_eq_taser.mdl"
+			"model_dropped"		"models/weapons/w_eq_taser.mdl"
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -19742,6 +20105,88 @@
 			"attributes"
 			{
 				"cannot trade"		"1"
+			}
+		}
+		"1352"
+		{
+			"name"		"CommunitySeasonEight2017"
+			"first_sale_date"		"2017/05/23"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Ticket_CommunitySeasonEight2017"
+			"item_description"		"#CSGO_Ticket_CommunitySeasonEight2017_Desc"
+			"image_inventory"		"econ/status_icons/operation_8_pass"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"tool"
+			{
+				"type"		"season_pass"
+				"use_string"		"#ConsumeItem"
+			}
+			"attributes"
+			{
+				"season access"		"7"
+			}
+		}
+		"4353"
+		{
+			"name"		"CommunitySeasonEight2017 Coin 1"
+			"prefab"		"season8_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin1"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin1_Desc"
+			"image_inventory"		"econ/status_icons/operation_8_bronze"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_8_bronze.mdl"
+				"upgrade threshold"		"5"
+			}
+		}
+		"4354"
+		{
+			"name"		"CommunitySeasonEight2017 Coin 2"
+			"prefab"		"season8_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin2"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin2_Desc"
+			"image_inventory"		"econ/status_icons/operation_8_silver"
+			"min_ilevel"		"2"
+			"max_ilevel"		"2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_8_silver.mdl"
+				"upgrade threshold"		"18"
+			}
+		}
+		"4355"
+		{
+			"name"		"CommunitySeasonEight2017 Coin 3"
+			"prefab"		"season8_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin3"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin3_Desc"
+			"image_inventory"		"econ/status_icons/operation_8_gold"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_8_gold.mdl"
+				"upgrade threshold"		"25"
+			}
+		}
+		"4356"
+		{
+			"name"		"CommunitySeasonEight2017 Coin 4"
+			"prefab"		"season8_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin4"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonEight2017_Coin4_Desc"
+			"image_inventory"		"econ/status_icons/operation_8_platinum"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/operation_8_platinum.mdl"
 			}
 		}
 		"1357"
@@ -27976,6 +28421,60 @@
 			"hidden"		"1"
 			"effect_type"		"neutral"
 			"attribute_type"		"float"
+		}
+		"235"
+		{
+			"name"		"campaign 9 completion bitfield"
+			"attribute_class"		"campaign_completion_bitfield"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"236"
+		{
+			"name"		"campaign 9 last completed quest"
+			"attribute_class"		"campaign_last_completed_quest"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"237"
+		{
+			"name"		"operation drops awarded 1"
+			"attribute_class"		"operation_drops_awarded"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"238"
+		{
+			"name"		"operation xp awarded 0"
+			"attribute_class"		"operation_xp_awarded"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"239"
+		{
+			"name"		"operation xp awarded 1"
+			"attribute_class"		"operation_xp_awarded"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"240"
+		{
+			"name"		"operation drops awarded 0"
+			"attribute_class"		"operation_drops_awarded"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
 		}
 	}
 	"sticker_kits"
@@ -56696,7 +57195,7 @@
 			"gamemode"		"casual"
 			"mapgroup"		"mg_op_op06"
 			"expression"		" %act_kill_human% && %cond_damage_headshot% "
-			"expr_bonus"		" %act_kill_human% && %cond_damage_headshot% && %set_community_2 "
+			"expr_bonus"		" %act_kill_human% && %cond_damage_headshot% && %set_community_2% "
 			"points"		"10"
 			"xp_bonus_percent"		"200"
 			"operational_points"		"1"
@@ -56904,204 +57403,6 @@
 			"loc_description"		"#Quest_Defend_Bomb_Mapgroup_desc"
 			"loc_bonus"		"#quest_bonus_set_bravo_ii"
 			"quest_icon"		"bomb"
-		}
-		"124"
-		{
-			"name"		"comp coast"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_coast"
-			"map"		"de_coast"
-			"expression"		"%act_win_round%"
-		}
-		"125"
-		{
-			"name"		"comp empire"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_empire"
-			"map"		"de_empire"
-			"expression"		"%act_win_round%"
-		}
-		"126"
-		{
-			"name"		"comp mikla"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_mikla"
-			"map"		"de_mikla"
-			"expression"		"%act_win_round%"
-		}
-		"127"
-		{
-			"name"		"comp royal"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_royal"
-			"map"		"de_royal"
-			"expression"		"%act_win_round%"
-		}
-		"128"
-		{
-			"name"		"comp santorini"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_santorini"
-			"map"		"de_santorini"
-			"expression"		"%act_win_round%"
-		}
-		"129"
-		{
-			"name"		"comp tulip"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_tulip"
-			"map"		"de_tulip"
-			"expression"		"%act_win_round%"
-		}
-		"130"
-		{
-			"name"		"comp cruise"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_cs_cruise"
-			"map"		"cs_cruise"
-			"expression"		"%act_win_round%"
-		}
-		"131"
-		{
-			"name"		"comp nuke"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_nuke"
-			"map"		"de_nuke"
-			"expression"		"%act_win_round%"
-		}
-		"132"
-		{
-			"name"		"comp dust2"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_dust2"
-			"map"		"de_dust2"
-			"expression"		"%act_win_round%"
-		}
-		"133"
-		{
-			"name"		"comp train"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_train"
-			"map"		"de_train"
-			"expression"		"%act_win_round%"
-		}
-		"134"
-		{
-			"name"		"comp mirage"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_mirage"
-			"map"		"de_mirage"
-			"expression"		"%act_win_round%"
-		}
-		"135"
-		{
-			"name"		"comp inferno"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_inferno"
-			"map"		"de_inferno"
-			"expression"		"%act_win_round%"
-		}
-		"136"
-		{
-			"name"		"comp cbble"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_cbble"
-			"map"		"de_cbble"
-			"expression"		"%act_win_round%"
-		}
-		"137"
-		{
-			"name"		"comp overpass"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_overpass"
-			"map"		"de_overpass"
-			"expression"		"%act_win_round%"
-		}
-		"138"
-		{
-			"name"		"comp cache"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_cache"
-			"map"		"de_cache"
-			"expression"		"%act_win_round%"
-		}
-		"139"
-		{
-			"name"		"comp aztec"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_aztec"
-			"map"		"de_aztec"
-			"expression"		"%act_win_round%"
-		}
-		"140"
-		{
-			"name"		"comp dust"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_dust"
-			"map"		"de_dust"
-			"expression"		"%act_win_round%"
-		}
-		"141"
-		{
-			"name"		"comp vertigo"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_de_vertigo"
-			"map"		"de_vertigo"
-			"expression"		"%act_win_round%"
-		}
-		"142"
-		{
-			"name"		"comp office"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_cs_office"
-			"map"		"cs_office"
-			"expression"		"%act_win_round%"
-		}
-		"143"
-		{
-			"name"		"comp italy"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_cs_italy"
-			"map"		"cs_italy"
-			"expression"		"%act_win_round%"
-		}
-		"144"
-		{
-			"name"		"comp assault"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_cs_assault"
-			"map"		"cs_assault"
-			"expression"		"%act_win_round%"
-		}
-		"145"
-		{
-			"name"		"comp militia"
-			"is_an_event"		"1"
-			"gamemode"		"competitive"
-			"mapgroup"		"mg_cs_militia"
-			"map"		"cs_militia"
-			"expression"		"%act_win_round%"
 		}
 		"701"
 		{
@@ -58132,6 +58433,1206 @@
 				"team"		"#quest_team_ct"
 				"extradetails"		"#quest_guardian_empty"
 			}
+		}
+		"901"
+		{
+			"name"		"placeholder_901"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_austria"
+			"map"		"de_austria"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_901"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy01.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_austria"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_P90"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"902"
+		{
+			"name"		"placeholder_902"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_shipped"
+			"map"		"de_shipped"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_902"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy02.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_shipped"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_xm1014"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"903"
+		{
+			"name"		"placeholder_903"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_903"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy03.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_UMP45"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"904"
+		{
+			"name"		"placeholder_904"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_thrill"
+			"map"		"de_thrill"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_904"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy04.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_thrill"
+				"kills"		"quest_guardian_kills_10"
+				"weapon"		"#quest_weapon_m4"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_headshot"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"905"
+		{
+			"name"		"placeholder_905"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_inferno"
+			"map"		"de_inferno"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_905"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy05.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_inferno"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_MP9"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"906"
+		{
+			"name"		"placeholder_906"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_906"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy06.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_Bizon"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"907"
+		{
+			"name"		"placeholder_907"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_mirage"
+			"map"		"de_mirage"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_907"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy07.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_mirage"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_MP7"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"908"
+		{
+			"name"		"placeholder_908"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_blackgold"
+			"map"		"de_blackgold"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_908"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy08.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_blackgold"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Mag7"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"909"
+		{
+			"name"		"placeholder_909"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_canals"
+			"map"		"de_canals"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_909"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy09.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_canals"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_Aug"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"910"
+		{
+			"name"		"placeholder_910"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_gd_rialto"
+			"map"		"gd_rialto"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_910"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy10.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_gd_rialto"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_Famas"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"911"
+		{
+			"name"		"placeholder_911"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_shipped"
+			"map"		"de_shipped"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_911"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy11.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_shipped"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Negev"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"912"
+		{
+			"name"		"placeholder_912"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_austria"
+			"map"		"de_austria"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"1"
+			"xp_reward"		"350"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_912"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_easy12.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_austria"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Elites"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"913"
+		{
+			"name"		"placeholder_913"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_blackgold"
+			"map"		"de_blackgold"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_913"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium01.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_blackgold"
+				"kills"		"quest_guardian_kills_10"
+				"weapon"		"#SFUI_WPNHUD_DesertEagle"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_headshot"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"914"
+		{
+			"name"		"placeholder_914"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_inferno"
+			"map"		"de_inferno"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_914"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium02.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_inferno"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_AK47"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_cantbuy"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"915"
+		{
+			"name"		"placeholder_915"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_915"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium03.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_10"
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_headshot"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"916"
+		{
+			"name"		"placeholder_916"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_shipped"
+			"map"		"de_shipped"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_916"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium04.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_shipped"
+				"kills"		"quest_guardian_kills_5"
+				"weapon"		"#SFUI_Inferno"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"917"
+		{
+			"name"		"placeholder_917"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_917"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium05.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_SCAR20"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"918"
+		{
+			"name"		"placeholder_918"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_canals"
+			"map"		"de_canals"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_918"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium06.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_canals"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"919"
+		{
+			"name"		"placeholder_919"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_919"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium07.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_REVOLVER"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"920"
+		{
+			"name"		"placeholder_920"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_thrill"
+			"map"		"de_thrill"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_920"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium08.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_thrill"
+				"kills"		"quest_guardian_kills_25"
+				"weapon"		"#SFUI_WPNHUD_Aug"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"921"
+		{
+			"name"		"placeholder_921"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_blackgold"
+			"map"		"de_blackgold"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_921"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium09.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_blackgold"
+				"kills"		"quest_guardian_kills_25"
+				"weapon"		"#quest_weapon_starter_ct"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"922"
+		{
+			"name"		"placeholder_922"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_austria"
+			"map"		"de_austria"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"2"
+			"xp_reward"		"525"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_922"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_medium10.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_austria"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_CZ75"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_empty"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"923"
+		{
+			"name"		"placeholder_923"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_923"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard01.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_train"
+				"kills"		"quest_guardian_kills_20"
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_heavyarmor"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"924"
+		{
+			"name"		"placeholder_924"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_shipped"
+			"map"		"de_shipped"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_924"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard02.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_shipped"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_Mag7"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_blind"
+				"extradetails"		"#quest_guardian_heavyarmor"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"925"
+		{
+			"name"		"placeholder_925"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_gd_rialto"
+			"map"		"gd_rialto"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_925"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard03.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_gd_rialto"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_heavyarmor"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"926"
+		{
+			"name"		"placeholder_926"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_926"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard04.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_train"
+				"kills"		"quest_guardian_kills_10"
+				"weapon"		"#SFUI_WPNHUD_Taser"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_heavyarmorresetmoney"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"927"
+		{
+			"name"		"placeholder_927"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_mirage"
+			"map"		"de_mirage"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_927"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard05.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_mirage"
+				"kills"		"quest_guardian_kills_25"
+				"weapon"		"#quest_weapon_any_pistol"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_noarmor"
+				"presence"		"#quest_presence_empty"
+			}
+		}
+		"928"
+		{
+			"name"		"placeholder_928"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_lite"
+			"map"		"de_lite"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_928"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard06.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_lite"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#quest_weapon_any_weapon"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_normal"
+				"extradetails"		"#quest_guardian_cantbuy"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"929"
+		{
+			"name"		"placeholder_929"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_de_thrill"
+			"map"		"de_thrill"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_929"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard07.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_de_thrill"
+				"kills"		"quest_guardian_kills_15"
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_headshot"
+				"extradetails"		"#quest_guardian_heavyarmor"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"930"
+		{
+			"name"		"placeholder_930"
+			"gamemode"		"cooperative"
+			"mapgroup"		"mg_gd_rialto"
+			"map"		"gd_rialto"
+			"points"		"1"
+			"expression"		"%act_win_match%"
+			"difficulty"		"3"
+			"xp_reward"		"700"
+			"operational_points"		"0"
+			"loc_name"		"op08_quest_name_930"
+			"loc_description"		"#Quest_Guardian_Desc_op08"
+			"server_exec"		"execwithwhitelist guardian_op08_hard08.cfg */maps"
+			"string_tokens"
+			{
+				"map"		"#SFUI_Map_gd_rialto"
+				"kills"		"quest_guardian_kills_30"
+				"weapon"		"#quest_weapon_any_pistol"
+				"team"		"#quest_team_ct"
+				"killtype"		"#quest_killtype_headshot"
+				"extradetails"		"#quest_guardian_heavyarmor"
+				"presence"		"#quest_presence_heavy"
+			}
+		}
+		"124"
+		{
+			"name"		"comp coast"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_coast"
+			"map"		"de_coast"
+			"expression"		"%act_win_round%"
+		}
+		"125"
+		{
+			"name"		"comp empire"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_empire"
+			"map"		"de_empire"
+			"expression"		"%act_win_round%"
+		}
+		"126"
+		{
+			"name"		"comp mikla"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mikla"
+			"map"		"de_mikla"
+			"expression"		"%act_win_round%"
+		}
+		"127"
+		{
+			"name"		"comp royal"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_royal"
+			"map"		"de_royal"
+			"expression"		"%act_win_round%"
+		}
+		"128"
+		{
+			"name"		"comp santorini"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_santorini"
+			"map"		"de_santorini"
+			"expression"		"%act_win_round%"
+		}
+		"129"
+		{
+			"name"		"comp tulip"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_tulip"
+			"map"		"de_tulip"
+			"expression"		"%act_win_round%"
+		}
+		"130"
+		{
+			"name"		"comp cruise"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_cruise"
+			"map"		"cs_cruise"
+			"expression"		"%act_win_round%"
+		}
+		"131"
+		{
+			"name"		"comp nuke"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_nuke"
+			"map"		"de_nuke"
+			"expression"		"%act_win_round%"
+		}
+		"132"
+		{
+			"name"		"comp dust2"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust2"
+			"map"		"de_dust2"
+			"expression"		"%act_win_round%"
+		}
+		"133"
+		{
+			"name"		"comp train"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_train"
+			"map"		"de_train"
+			"expression"		"%act_win_round%"
+		}
+		"134"
+		{
+			"name"		"comp mirage"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mirage"
+			"map"		"de_mirage"
+			"expression"		"%act_win_round%"
+		}
+		"135"
+		{
+			"name"		"comp inferno"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_inferno"
+			"map"		"de_inferno"
+			"expression"		"%act_win_round%"
+		}
+		"136"
+		{
+			"name"		"comp cbble"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cbble"
+			"map"		"de_cbble"
+			"expression"		"%act_win_round%"
+		}
+		"137"
+		{
+			"name"		"comp overpass"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_overpass"
+			"map"		"de_overpass"
+			"expression"		"%act_win_round%"
+		}
+		"138"
+		{
+			"name"		"comp cache"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cache"
+			"map"		"de_cache"
+			"expression"		"%act_win_round%"
+		}
+		"139"
+		{
+			"name"		"comp aztec"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_aztec"
+			"map"		"de_aztec"
+			"expression"		"%act_win_round%"
+		}
+		"140"
+		{
+			"name"		"comp dust"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust"
+			"map"		"de_dust"
+			"expression"		"%act_win_round%"
+		}
+		"141"
+		{
+			"name"		"comp vertigo"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_vertigo"
+			"map"		"de_vertigo"
+			"expression"		"%act_win_round%"
+		}
+		"142"
+		{
+			"name"		"comp office"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_office"
+			"map"		"cs_office"
+			"expression"		"%act_win_round%"
+		}
+		"143"
+		{
+			"name"		"comp italy"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_italy"
+			"map"		"cs_italy"
+			"expression"		"%act_win_round%"
+		}
+		"144"
+		{
+			"name"		"comp assault"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_assault"
+			"map"		"cs_assault"
+			"expression"		"%act_win_round%"
+		}
+		"145"
+		{
+			"name"		"comp militia"
+			"is_an_event"		"1"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_militia"
+			"map"		"cs_militia"
+			"expression"		"%act_win_round%"
+		}
+		"10001"
+		{
+			"name"		"event_op08_tandem_bank"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_bank"
+		}
+		"10002"
+		{
+			"name"		"event_op08_tandem_lake"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_lake"
+		}
+		"10003"
+		{
+			"name"		"event_op08_tandem_safehouse"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_safehouse"
+		}
+		"10004"
+		{
+			"name"		"event_op08_tandem_stmarc"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_stmarc"
+		}
+		"10005"
+		{
+			"name"		"event_op08_tandem_shortdust"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_shortdust"
+		}
+		"10006"
+		{
+			"name"		"event_op08_tandem_shorttrain"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_shorttrain"
+		}
+		"10007"
+		{
+			"name"		"event_op08_tandem_rialto"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_gd_rialto"
+		}
+		"10008"
+		{
+			"name"		"event_op08_we_austria"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_dust2"
+		}
+		"10009"
+		{
+			"name"		"event_op08_we_lite"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_lite"
+		}
+		"10010"
+		{
+			"name"		"event_op08_we_shipped"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_shipped"
+		}
+		"10011"
+		{
+			"name"		"event_op08_we_thrill"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_thrill"
+		}
+		"10012"
+		{
+			"name"		"event_op08_we_blackgold"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_blackgold"
+		}
+		"10013"
+		{
+			"name"		"event_op08_we_agency"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_agency"
+		}
+		"10014"
+		{
+			"name"		"event_op08_we_insertion"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_insertion"
+		}
+		"10015"
+		{
+			"name"		"event_op08_we_inferno"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_inferno"
+		}
+		"10016"
+		{
+			"name"		"event_op08_we_train"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_train"
+		}
+		"10017"
+		{
+			"name"		"event_op08_we_mirage"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_mirage"
+		}
+		"10018"
+		{
+			"name"		"event_op08_we_nuke"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_nuke"
+		}
+		"10019"
+		{
+			"name"		"event_op08_we_cbble"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_cbble"
+		}
+		"10020"
+		{
+			"name"		"event_op08_we_overpass"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_overpass"
+		}
+		"10021"
+		{
+			"name"		"event_op08_we_cache"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_cache"
+		}
+		"10022"
+		{
+			"name"		"event_op08_we_dust2"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_dust2"
+		}
+		"10023"
+		{
+			"name"		"event_op08_we_aztec"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_aztec"
+		}
+		"10024"
+		{
+			"name"		"event_op08_we_dust"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_dust"
+		}
+		"10025"
+		{
+			"name"		"event_op08_we_vertigo"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_vertigo"
+		}
+		"10026"
+		{
+			"name"		"event_op08_we_office"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_office"
+		}
+		"10027"
+		{
+			"name"		"event_op08_we_italy"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_italy"
+		}
+		"10028"
+		{
+			"name"		"event_op08_we_assault"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_assault"
+		}
+		"10029"
+		{
+			"name"		"event_op08_we_militia"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_cs_militia"
+		}
+		"10030"
+		{
+			"name"		"event_op08_we_canals"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp5v5"
+			"mapgroup"		"mg_de_canals"
+		}
+		"10031"
+		{
+			"name"		"event_op08_skirmish_1"
+			"is_an_event"		"1"
+			"gamemode"		"skirmish"
+			"mapgroup"		"mg_skirmish_1"
+		}
+		"10032"
+		{
+			"name"		"event_op08_skirmish_2"
+			"is_an_event"		"1"
+			"gamemode"		"skirmish"
+			"mapgroup"		"mg_skirmish_2"
+		}
+		"10033"
+		{
+			"name"		"event_op08_skirmish_3"
+			"is_an_event"		"1"
+			"gamemode"		"skirmish"
+			"mapgroup"		"mg_skirmish_3"
+		}
+		"10034"
+		{
+			"name"		"event_op08_skirmish_test"
+			"is_an_event"		"1"
+			"gamemode"		"skirmish"
+			"mapgroup"		"mg_skirmish_test"
+		}
+		"10035"
+		{
+			"name"		"event_op08_tandem_1"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_stmarc,mg_de_lake,mg_de_shortdust"
+		}
+		"10036"
+		{
+			"name"		"event_op08_tandem_2"
+			"is_an_event"		"1"
+			"gamemode"		"scrimcomp2v2"
+			"mapgroup"		"mg_de_safehouse,mg_de_bank,mg_gd_rialto"
 		}
 	}
 	"campaign_definitions"
@@ -60131,32 +61632,528 @@
 				}
 			}
 		}
+		"9"
+		{
+			"loc_name"		"#csgo_campaign_9"
+			"loc_description"		"#csgo_campaign_9_desc"
+			"season_number"		"7"
+			"1"
+			{
+				"quest_index"		"901"
+				"->"		"2"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_901"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_901.mp3"
+				}
+			}
+			"2"
+			{
+				"quest_index"		"902"
+				"->"		"3"
+				"->"		"13"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_902"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_902.mp3"
+				}
+			}
+			"3"
+			{
+				"quest_index"		"903"
+				"->"		"4"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_903"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_903.mp3"
+				}
+			}
+			"4"
+			{
+				"quest_index"		"904"
+				"->"		"5"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_904"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_904.mp3"
+				}
+			}
+			"5"
+			{
+				"quest_index"		"905"
+				"->"		"6"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_905"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_905.mp3"
+				}
+			}
+			"6"
+			{
+				"quest_index"		"906"
+				"->"		"7"
+				"->"		"17"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_906"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_906.mp3"
+				}
+			}
+			"7"
+			{
+				"quest_index"		"907"
+				"->"		"8"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_907"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_907.mp3"
+				}
+			}
+			"8"
+			{
+				"quest_index"		"908"
+				"->"		"9"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_908"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_908.mp3"
+				}
+			}
+			"9"
+			{
+				"quest_index"		"909"
+				"->"		"10"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_909"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_909.mp3"
+				}
+			}
+			"10"
+			{
+				"quest_index"		"910"
+				"->"		"11"
+				"->"		"21"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_910"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_910.mp3"
+				}
+			}
+			"11"
+			{
+				"quest_index"		"911"
+				"->"		"12"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_911"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_911.mp3"
+				}
+			}
+			"12"
+			{
+				"quest_index"		"912"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_912"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_912.mp3"
+				}
+			}
+			"13"
+			{
+				"quest_index"		"913"
+				"->"		"14"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_913"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_913.mp3"
+				}
+			}
+			"14"
+			{
+				"quest_index"		"914"
+				"->"		"15"
+				"->"		"23"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_914"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_914.mp3"
+				}
+			}
+			"15"
+			{
+				"quest_index"		"915"
+				"->"		"16"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_915"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_915.mp3"
+				}
+			}
+			"16"
+			{
+				"quest_index"		"916"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_916"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_916.mp3"
+				}
+			}
+			"17"
+			{
+				"quest_index"		"917"
+				"->"		"18"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_917"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_917.mp3"
+				}
+			}
+			"18"
+			{
+				"quest_index"		"918"
+				"->"		"19"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_918"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_918.mp3"
+				}
+			}
+			"19"
+			{
+				"quest_index"		"919"
+				"->"		"20"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_919"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_919.mp3"
+				}
+			}
+			"20"
+			{
+				"quest_index"		"920"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_920"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_920.mp3"
+				}
+			}
+			"21"
+			{
+				"quest_index"		"921"
+				"->"		"22"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_921"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_921.mp3"
+				}
+			}
+			"22"
+			{
+				"quest_index"		"922"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_922"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_922.mp3"
+				}
+			}
+			"23"
+			{
+				"quest_index"		"923"
+				"->"		"24"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_923"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_923.mp3"
+				}
+			}
+			"24"
+			{
+				"quest_index"		"924"
+				"->"		"25"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_924"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_924.mp3"
+				}
+			}
+			"25"
+			{
+				"quest_index"		"925"
+				"->"		"26"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_925"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_925.mp3"
+				}
+			}
+			"26"
+			{
+				"quest_index"		"926"
+				"->"		"21"
+				"->"		"27"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_926"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_926.mp3"
+				}
+			}
+			"27"
+			{
+				"quest_index"		"927"
+				"->"		"28"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_927"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_927.mp3"
+				}
+			}
+			"28"
+			{
+				"quest_index"		"928"
+				"->"		"29"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_928"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_928.mp3"
+				}
+			}
+			"29"
+			{
+				"quest_index"		"929"
+				"->"		"30"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_929"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_929.mp3"
+				}
+			}
+			"30"
+			{
+				"quest_index"		"930"
+				"story_block"
+				{
+					"character_name"		"Rona"
+					"description"		"op08_subtitle_930"
+					"content_file"		"type:audio,file:campaign/hydra/hydra_mission_intro_930.mp3"
+				}
+			}
+		}
 	}
 	"quest_schedule"
 	{
-		"timezones"		"-1400,+0000,+1600"
-		"16 13:22 120"		"comp coast"
-		"17 15:05 120"		"comp empire"
-		"18 16:05 120"		"comp mikla"
-		"19 13:05 120"		"comp royal"
-		"20 14:05 120"		"comp santorini"
-		"21 15:05 120"		"comp tulip"
-		"22 16:05 120"		"comp cruise"
-		"23 13:05 120"		"comp coast"
-		"24 14:05 120"		"comp nuke"
-		"25 15:05 120"		"comp train"
-		"26 16:05 120"		"comp mirage"
-		"27 13:05 120"		"comp inferno"
-		"28 14:05 120"		"comp cache"
-		"29 15:05 120"		"comp overpass"
-		"30 16:05 120"		"comp dust2"
-		"01 13:05 120"		"comp cbble"
-		"02 14:05 120"		"comp coast"
-		"11 15:05 120"		"comp vertigo"
-		"12 16:05 120"		"comp office"
-		"13 13:05 120"		"comp italy"
-		"14 14:05 120"		"comp assault"
-		"15 15:05 120"		"comp militia"
+		"start"		"1495558800"
+		"length"		"P9W"
+		"slack"		"P3W"
+		"0"		"event_op08_skirmish_1 P0D P7D"
+		"7"		"event_op08_tandem_1 P7D P1D"
+		"8"		"event_op08_tandem_2 P8D P1D"
+		"9"		"event_op08_tandem_1 P9D P1D"
+		"10"		"event_op08_tandem_2 P10D P1D"
+		"11"		"event_op08_tandem_1 P11D P1D"
+		"12"		"event_op08_tandem_2 P12D P1D"
+		"13"		"event_op08_tandem_1 P13D P1D"
+		"14"		"event_op08_we_inferno P14D P1D"
+		"15"		"event_op08_we_overpass P15D P1D"
+		"16"		"event_op08_we_cbble P16D P1D"
+		"17"		"event_op08_we_cache P17D P1D"
+		"18"		"event_op08_we_dust2 P18D P1D"
+		"19"		"event_op08_we_mirage P19D P1D"
+		"20"		"event_op08_we_agency P20D P1D"
+		"21"		"event_op08_skirmish_2 P21D P7D"
+		"28"		"event_op08_tandem_1 P28D P1D"
+		"29"		"event_op08_tandem_2 P29D P1D"
+		"30"		"event_op08_tandem_1 P30D P1D"
+		"31"		"event_op08_tandem_2 P31D P1D"
+		"32"		"event_op08_tandem_1 P32D P1D"
+		"33"		"event_op08_tandem_2 P33D P1D"
+		"34"		"event_op08_tandem_1 P34D P1D"
+		"35"		"event_op08_we_cache P35D P1D"
+		"36"		"event_op08_we_mirage P36D P1D"
+		"37"		"event_op08_we_canals P37D P1D"
+		"38"		"event_op08_we_dust2 P38D P1D"
+		"39"		"event_op08_we_inferno P39D P1D"
+		"40"		"event_op08_we_mirage P40D P1D"
+		"41"		"event_op08_we_office P41D P1D"
+		"42"		"event_op08_skirmish_3 P42D P7D"
+		"49"		"event_op08_tandem_1 P49D P1D"
+		"50"		"event_op08_tandem_2 P50D P1D"
+		"51"		"event_op08_tandem_1 P51D P1D"
+		"52"		"event_op08_tandem_2 P52D P1D"
+		"53"		"event_op08_tandem_1 P53D P1D"
+		"54"		"event_op08_tandem_2 P54D P1D"
+		"55"		"event_op08_tandem_1 P55D P1D"
+		"56"		"event_op08_we_train P56D P1D"
+		"57"		"event_op08_we_nuke P57D P1D"
+		"58"		"event_op08_we_inferno P58D P1D"
+		"59"		"event_op08_we_mirage P59D P1D"
+		"60"		"event_op08_we_cache P60D P1D"
+		"61"		"event_op08_we_dust2 P61D P1D"
+		"62"		"event_op08_we_insertion P62D P1D"
+	}
+	"skirmish_modes"
+	{
+		"1"
+		{
+			"name"		"stab stab zap"
+			"loc_name"		"Skirmish_CC_SSZ_name"
+			"loc_rules"		"Skirmish_CC_SSZ_rules"
+			"loc_description"		"Skirmish_CC_SSZ_desc"
+			"loc_details"		"Skirmish_CC_SSZ_details"
+			"icon"		"icon-skirmish-ssz"
+			"gamemode"		"casual"
+			"server_exec"		"execwithwhitelist op08_stab_stab_zap.cfg"
+		}
+		"3"
+		{
+			"name"		"flying scoutsman"
+			"loc_name"		"Skirmish_CC_FS_name"
+			"loc_rules"		"Skirmish_CC_FS_rules"
+			"loc_description"		"Skirmish_CC_FS_desc"
+			"loc_details"		"Skirmish_CC_FS_details"
+			"icon"		"icon-skirmish-fs"
+			"gamemode"		"casual"
+			"server_exec"		"execwithwhitelist op08_flying_scoutsman.cfg"
+		}
+		"4"
+		{
+			"name"		"trigger discipline"
+			"loc_name"		"Skirmish_CC_TD_name"
+			"loc_rules"		"Skirmish_CC_TD_rules"
+			"loc_description"		"Skirmish_CC_TD_desc"
+			"loc_details"		"Skirmish_CC_TD_details"
+			"icon"		"icon-skirmish-td"
+			"gamemode"		"casual"
+			"server_exec"		"execwithwhitelist op08_trigger_discipline.cfg"
+		}
+		"6"
+		{
+			"name"		"headshots"
+			"loc_name"		"Skirmish_DM_HS_name"
+			"loc_rules"		"Skirmish_DM_HS_rules"
+			"loc_description"		"Skirmish_DM_HS_desc"
+			"loc_details"		"Skirmish_DM_HS_details"
+			"icon"		"icon-skirmish-hs"
+			"gamemode"		"deathmatch"
+			"server_exec"		"execwithwhitelist op08_headshots.cfg"
+		}
+		"7"
+		{
+			"name"		"hunter gatherers"
+			"loc_name"		"Skirmish_TDM_HG_name"
+			"loc_rules"		"Skirmish_TDM_HG_rules"
+			"loc_description"		"Skirmish_TDM_HG_desc"
+			"loc_details"		"Skirmish_TDM_HG_details"
+			"icon"		"icon-skirmish-hg"
+			"gamemode"		"deathmatch"
+			"server_exec"		"execwithwhitelist op08_hunter_gatherers.cfg"
+		}
+		"8"
+		{
+			"name"		"heavy assault suit"
+			"loc_name"		"Skirmish_CC_HAS_name"
+			"loc_rules"		"Skirmish_CC_HAS_rules"
+			"loc_description"		"Skirmish_CC_HAS_desc"
+			"loc_details"		"Skirmish_CC_HAS_details"
+			"icon"		"icon-skirmish-has"
+			"gamemode"		"casual"
+			"server_exec"		"execwithwhitelist op08_heavy_assault_suit.cfg"
+		}
+	}
+	"skirmish_rank_info"
+	{
+		"1"
+		{
+			"pips"		"2"
+			"winstreak"		"3"
+			"loss"		"0"
+		}
+		"3"
+		{
+			"pips"		"3"
+		}
+		"5"
+		{
+			"loss"		"1"
+		}
+		"7"
+		{
+			"pips"		"4"
+		}
+		"11"
+		{
+			"pips"		"5"
+		}
+		"15"
+		{
+			"pips"		"6"
+			"winstreak"		"-1"
+		}
+		"16"
+		{
+			"pips"		"7"
+		}
+		"17"
+		{
+			"pips"		"8"
+		}
+		"18"
+		{
+			"pips"		"9"
+		}
+		"19"
+		{
+			"pips"		"10"
+		}
+		"20"
+		{
+			"pips"		"11"
+		}
+		"21"
+		{
+			"pips"		"12"
+		}
+		"22"
+		{
+			"pips"		"13"
+		}
+		"23"
+		{
+			"pips"		"14"
+		}
+		"24"
+		{
+			"pips"		"15"
+		}
 	}
 	"recipes"
 	{
@@ -94202,5 +96199,548 @@
 		"cu_usps_noir"		"legendary"
 		"aq_xm_leaf_fade"		"mythical"
 		"aq_sawedoff_zander2"		"rare"
+	}
+	"paint_kits"
+	{
+		"656"
+		{
+			"name"		"gs_ak_colony01_red"
+			"description_string"		"#PaintKit_gs_ak_colony01_red"
+			"description_tag"		"#PaintKit_gs_ak_colony01_red_Tag"
+			"style"		"9"
+			"pattern"		"workshop/ak_colony01_red"
+			"color0"		"128 128 128 255"
+			"color1"		"234 234 234"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"9"
+			"phongalbedoboost"		"4"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.550000"
+		}
+		"657"
+		{
+			"name"		"cu_usps_blueprint"
+			"description_string"		"#PaintKit_cu_usps_blueprint"
+			"description_tag"		"#PaintKit_cu_usps_blueprint_Tag"
+			"style"		"7"
+			"pattern"		"workshop/usps_blueprint"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"45"
+			"phongintensity"		"9"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.860000"
+		}
+		"658"
+		{
+			"name"		"gs_dualberettas_cobra"
+			"description_string"		"#PaintKit_gs_dualberettas_cobra"
+			"description_tag"		"#PaintKit_gs_dualberettas_cobra_Tag"
+			"style"		"9"
+			"pattern"		"workshop/dualberettas_cobra"
+			"color0"		"202 230 157"
+			"color1"		"213 211 211"
+			"color2"		"48 38 32"
+			"color3"		"27 57 62"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"12"
+			"phongalbedoboost"		"7"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"659"
+		{
+			"name"		"sp_famas_macabre"
+			"description_string"		"#PaintKit_sp_famas_macabre"
+			"description_tag"		"#PaintKit_sp_famas_macabre_Tag"
+			"style"		"3"
+			"pattern"		"workshop/famas_macabre"
+			"color0"		"162 126 15"
+			"color1"		"31 44 12"
+			"color2"		"158 155 129"
+			"color3"		"30 35 33"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"180"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"1.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"660"
+		{
+			"name"		"cu_fiveseven_hyperbeast"
+			"description_string"		"#PaintKit_cu_fiveseven_hyperbeast"
+			"description_tag"		"#PaintKit_cu_fiveseven_hyperbeast_Tag"
+			"style"		"7"
+			"pattern"		"workshop/fiveseven_hyperbeast"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"55"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"661"
+		{
+			"name"		"cu_galil_candychaos"
+			"description_string"		"#PaintKit_cu_galil_candychaos"
+			"description_tag"		"#PaintKit_cu_galil_candychaos_Tag"
+			"style"		"7"
+			"pattern"		"workshop/galil_candychaos"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"12"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.550000"
+		}
+		"662"
+		{
+			"name"		"cu_awp_hannya"
+			"description_string"		"#PaintKit_cu_awp_hannya"
+			"description_tag"		"#PaintKit_cu_awp_hannya_Tag"
+			"style"		"7"
+			"pattern"		"workshop/awp_hannya"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"160"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"663"
+		{
+			"name"		"cu_m4a1s_metritera"
+			"description_string"		"#PaintKit_cu_m4a1s_metritera"
+			"description_tag"		"#PaintKit_cu_m4a1s_metritera_Tag"
+			"style"		"7"
+			"pattern"		"workshop/m4a1s_metritera"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"4"
+			"phongintensity"		"9"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"664"
+		{
+			"name"		"cu_m4a4_hellfire"
+			"description_string"		"#PaintKit_cu_m4a4_hellfire"
+			"description_tag"		"#PaintKit_cu_m4a4_hellfire_Tag"
+			"style"		"7"
+			"pattern"		"workshop/m4a4_hellfire"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"100"
+			"phongintensity"		"35"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"665"
+		{
+			"name"		"am_mac10_aloha"
+			"description_string"		"#PaintKit_am_mac10_aloha"
+			"description_tag"		"#PaintKit_am_mac10_aloha_Tag"
+			"style"		"5"
+			"pattern"		"workshop/mac10_aloha"
+			"color0"		"82 75 66"
+			"color1"		"47 35 29"
+			"color2"		"168 67 53"
+			"color3"		"75 57 50"
+			"pattern_scale"		"3.000000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"-1"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"25.000000"
+			"pattern_rotate_end"		"300.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"666"
+		{
+			"name"		"am_mag7_caustic"
+			"description_string"		"#PaintKit_am_mag7_caustic"
+			"description_tag"		"#PaintKit_am_mag7_caustic_Tag"
+			"style"		"5"
+			"pattern"		"workshop/mag7_caustic"
+			"color0"		"0 0 0"
+			"color1"		"57 66 64"
+			"color2"		"24 33 36"
+			"color3"		"6 58 95"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"4"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.450000"
+		}
+		"667"
+		{
+			"name"		"cu_p2000_hunter"
+			"description_string"		"#PaintKit_cu_p2000_hunter"
+			"description_tag"		"#PaintKit_cu_p2000_hunter_Tag"
+			"style"		"7"
+			"pattern"		"workshop/p2000_hunter"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"668"
+		{
+			"name"		"cu_p250_axiom"
+			"description_string"		"#PaintKit_cu_p250_axiom"
+			"description_tag"		"#PaintKit_cu_p250_axiom_Tag"
+			"style"		"7"
+			"pattern"		"workshop/p250_axiom"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"0"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"669"
+		{
+			"name"		"hy_p90_barebones_blue"
+			"description_string"		"#PaintKit_hy_p90_barebones_blue"
+			"description_tag"		"#PaintKit_hy_p90_barebones_blue_Tag"
+			"style"		"2"
+			"pattern"		"workshop/p90_barebones_blue"
+			"color0"		"77 110 126"
+			"color1"		"55 47 47"
+			"color2"		"47 47 47"
+			"color3"		"190 190 190"
+			"pattern_scale"		"2.500000"
+			"phongexponent"		"60"
+			"phongintensity"		"0"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"670"
+		{
+			"name"		"cu_ssg08_deathshead"
+			"description_string"		"#PaintKit_cu_ssg08_deathshead"
+			"description_tag"		"#PaintKit_cu_ssg08_deathshead_Tag"
+			"style"		"7"
+			"pattern"		"workshop/ssg08_deathshead"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"115"
+			"phongintensity"		"38"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.510000"
+		}
+		"671"
+		{
+			"name"		"aq_tec9_chalk_pattern"
+			"description_string"		"#PaintKit_aq_tec9_chalk_pattern"
+			"description_tag"		"#PaintKit_aq_tec9_chalk_pattern_Tag"
+			"style"		"8"
+			"pattern"		"workshop/tec9_chalk_pattern"
+			"color0"		"128 128 128 255"
+			"color1"		"178 178 178"
+			"color2"		"136 136 136"
+			"color3"		"176 176 176"
+			"pattern_scale"		"2.800000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"672"
+		{
+			"name"		"aq_ump45_flameflower"
+			"description_string"		"#PaintKit_aq_ump45_flameflower"
+			"description_tag"		"#PaintKit_aq_ump45_flameflower_Tag"
+			"style"		"8"
+			"pattern"		"workshop/ump45_flameflower"
+			"color0"		"160 172 176"
+			"color1"		"242 234 218"
+			"color2"		"221 212 198"
+			"color3"		"99 59 12"
+			"pattern_scale"		"4.000000"
+			"phongexponent"		"170"
+			"phongalbedoboost"		"70"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.700000"
+		}
+	}
+	"items"
+	{
+		"1365"
+		{
+			"name"		"community_17 Key"
+			"item_name"		"#CSGO_crate_key_community_17"
+			"item_description"		"#CSGO_crate_key_community_17_desc"
+			"first_sale_date"		"2017-04-21"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_17"
+			"tool"
+			{
+				"restriction"		"crate_community_17"
+			}
+		}
+		"4352"
+		{
+			"item_name"		"#CSGO_crate_community_17"
+			"item_description"		"#CSGO_crate_community_17_desc"
+			"name"		"crate_community_17"
+			"image_inventory"		"econ/weapon_cases/crate_community_17"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1365"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"crate_community_17"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"208"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_17"
+					"tag_text"		"#CSGO_set_community_17"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+			"loot_list_rare_item_footer"		"#crate_community_15_unusual_lootlist"
+			"loot_list_rare_item_name"		"#crate_community_15_unusual_itemname"
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"208"		"crate_community_17"
+	}
+	"client_loot_lists"
+	{
+		"crate_community_17_rare"
+		{
+			"[cu_usps_blueprint]weapon_usp_silencer"		"1"
+			"[sp_famas_macabre]weapon_famas"		"1"
+			"[cu_m4a1s_metritera]weapon_m4a1_silencer"		"1"
+			"[am_mac10_aloha]weapon_mac10"		"1"
+			"[am_mag7_caustic]weapon_mag7"		"1"
+			"[aq_tec9_chalk_pattern]weapon_tec9"		"1"
+			"[aq_ump45_flameflower]weapon_ump45"		"1"
+		}
+		"crate_community_17_mythical"
+		{
+			"[gs_ak_colony01_red]weapon_ak47"		"1"
+			"[cu_p2000_hunter]weapon_hkp2000"		"1"
+			"[cu_p250_axiom]weapon_p250"		"1"
+			"[hy_p90_barebones_blue]weapon_p90"		"1"
+			"[cu_ssg08_deathshead]weapon_ssg08"		"1"
+		}
+		"crate_community_17_legendary"
+		{
+			"[gs_dualberettas_cobra]weapon_elite"		"1"
+			"[cu_galil_candychaos]weapon_galilar"		"1"
+			"[cu_m4a4_hellfire]weapon_m4a1"		"1"
+		}
+		"crate_community_17_ancient"
+		{
+			"[cu_fiveseven_hyperbeast]weapon_fiveseven"		"1"
+			"[cu_awp_hannya]weapon_awp"		"1"
+		}
+		"crate_community_17"
+		{
+			"crate_community_17_rare"		"1"
+			"crate_community_17_mythical"		"1"
+			"crate_community_17_legendary"		"1"
+			"crate_community_17_ancient"		"1"
+			"community_case_15_unusual"		"1"
+		}
+	}
+	"item_sets"
+	{
+		"set_community_17"
+		{
+			"name"		"#CSGO_set_community_17"
+			"set_description"		"#CSGO_set_community_17_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[cu_usps_blueprint]weapon_usp_silencer"		"1"
+				"[sp_famas_macabre]weapon_famas"		"1"
+				"[cu_m4a1s_metritera]weapon_m4a1_silencer"		"1"
+				"[am_mac10_aloha]weapon_mac10"		"1"
+				"[am_mag7_caustic]weapon_mag7"		"1"
+				"[aq_tec9_chalk_pattern]weapon_tec9"		"1"
+				"[aq_ump45_flameflower]weapon_ump45"		"1"
+				"[gs_ak_colony01_red]weapon_ak47"		"1"
+				"[cu_p2000_hunter]weapon_hkp2000"		"1"
+				"[cu_p250_axiom]weapon_p250"		"1"
+				"[hy_p90_barebones_blue]weapon_p90"		"1"
+				"[cu_ssg08_deathshead]weapon_ssg08"		"1"
+				"[gs_dualberettas_cobra]weapon_elite"		"1"
+				"[cu_galil_candychaos]weapon_galilar"		"1"
+				"[cu_m4a4_hellfire]weapon_m4a1"		"1"
+				"[cu_fiveseven_hyperbeast]weapon_fiveseven"		"1"
+				"[cu_awp_hannya]weapon_awp"		"1"
+			}
+		}
+	}
+	"paint_kits_rarity"
+	{
+		"cu_fiveseven_hyperbeast"		"ancient"
+		"hy_p90_barebones_blue"		"mythical"
+		"aq_ump45_flameflower"		"rare"
+		"cu_usps_blueprint"		"uncommon"
+		"gs_ak_colony01_red"		"rare"
+		"gs_dualberettas_cobra"		"legendary"
+		"sp_famas_macabre"		"rare"
+		"cu_galil_candychaos"		"legendary"
+		"cu_awp_hannya"		"legendary"
+		"cu_m4a1s_metritera"		"uncommon"
+		"cu_m4a4_hellfire"		"mythical"
+		"am_mac10_aloha"		"rare"
+		"am_mag7_caustic"		"rare"
+		"cu_p2000_hunter"		"rare"
+		"cu_p250_axiom"		"mythical"
+		"cu_ssg08_deathshead"		"mythical"
+		"aq_tec9_chalk_pattern"		"rare"
 	}
 }

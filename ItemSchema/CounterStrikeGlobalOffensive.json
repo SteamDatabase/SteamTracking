@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.2659dfb04b3a6fb4114c8711718ce6fe4d960972.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.653fe1cd3cb6551cbe74a1cdc9a029a777209886.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7411,6 +7411,35 @@
 				}
 			},
 			{
+				"name": "CommunitySeasonEight2017",
+				"defindex": 1352,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Operation Hydra Access Pass",
+				"item_description": "Grants access to Operation Hydra, which consists of an upgradeable Challenge Coin, a Guardian Campaign, additional XP for participating in Skirmishes, Operation Hydra Case and weapon drops, as well as a Campaign Journal that contains Campaign Overviews, an Active Duty Scorecard, an Operation Scorecard, and a Friends Leaderboard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_8_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_pass.618082f7f809d4e09d021d535bc2aac25c58cffd.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "community_15 Key",
 				"defindex": 1356,
 				"item_class": "tool",
@@ -7601,6 +7630,31 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "crate_community_16",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "community_17 Key",
+				"defindex": 1365,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Operation Hydra Case Key",
+				"item_description": "This key only opens Operation Hydra cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_17",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_17.17e2ff687cea9d51d46b5deaf6ea1e3a598e82f6.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_17",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -19927,6 +19981,620 @@
 				
 			},
 			{
+				"name": "crate_community_17",
+				"defindex": 4352,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Operation Hydra Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_17",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_17.8d4528eca229d65d0c19929ae2078aab38df1369.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_17",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 208
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonEight2017 Coin 1",
+				"defindex": 4353,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Hydra Challenge Coin",
+				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_8_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_bronze.4666168ad1de99009e62342d3d9fe7cc015be885.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_bronze_large.48b39774867299771186e907b52d07627231d56a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 0",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 1",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 0",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 1",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonEight2017 Coin 2",
+				"defindex": 4354,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Hydra Coin",
+				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_8_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_silver.d5b58650cce99f5cc4db468bbc0f4df56b70eb4e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_silver_large.0745a5448eef484c8a63b568f586d578e3a0a28e.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 0",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 1",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 0",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 1",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonEight2017 Coin 3",
+				"defindex": 4355,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Hydra Coin",
+				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_8_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_gold.ce36f2573b26ef0b4dbba9e5375c9854a3d16b13.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_gold_large.3fc3df385dd5404ef56f6468fda45a96a24c7b33.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 0",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 1",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 0",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 1",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "CommunitySeasonEight2017 Coin 4",
+				"defindex": 4356,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Diamond Operation Hydra Coin",
+				"item_description": "Completed Operation Hydra.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_8_platinum",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_platinum.2cccf62013f2d3ab01f72c4339da4fb2e957b5ce.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/operation_8_platinum_large.bc4e1c9cc18c999b6e73b99bb4724854f7200565.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 0",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation xp awarded 1",
+						"class": "operation_xp_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 0",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "operation drops awarded 1",
+						"class": "operation_drops_awarded",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 9 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
 				"name": "studded_bloodhound_gloves",
 				"defindex": 5027,
 				"item_class": "wearable_item",
@@ -27712,7 +28380,7 @@
 				"name": "quests complete",
 				"defindex": 171,
 				"attribute_class": "quests_complete",
-				"description_string": "Operation Missions Fulfilled: %s1",
+				"description_string": "Operation Campaign Missions Fulfilled: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -28238,6 +28906,30 @@
 					"weapon_m4a1_silencer",
 					"weapon_ak47",
 					"weapon_usp_silencer"
+				]
+				
+			},
+			{
+				"item_set": "set_community_17",
+				"name": "The Operation Hydra Collection",
+				"items": [
+					"weapon_usp_silencer",
+					"weapon_famas",
+					"weapon_m4a1_silencer",
+					"weapon_mac10",
+					"weapon_mag7",
+					"weapon_tec9",
+					"weapon_ump45",
+					"weapon_ak47",
+					"weapon_hkp2000",
+					"weapon_p250",
+					"weapon_p90",
+					"weapon_ssg08",
+					"weapon_elite",
+					"weapon_galilar",
+					"weapon_m4a1",
+					"weapon_fiveseven",
+					"weapon_awp"
 				]
 				
 			},
