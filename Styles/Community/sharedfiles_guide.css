@@ -639,16 +639,16 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	line-height: 27px;
 }
 
-input[type=text].editGuideSubSectionTitleField
+.editGuideSubSectionTitleField
 {
 	font-size: 22px;
 	line-height: 27px;
 	height: 27px;
 	width: 930px;
 	top: 0px;
-	background-color: rgba( 0, 0, 0, 0.2);
-	border: solid 1px #000;
-	box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+	background-color:#565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
 	padding: 4px 5px 6px 8px;
 	color: #BFBFBF;
@@ -661,9 +661,9 @@ input[type=text].editGuideSubSectionTitleField
 	line-height: 20px;
 	height: 614px;
 	width: 628px;
-	background-color: rgba( 0, 0, 0, 0.2);
-	border: solid 1px #000;
-	box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+	background-color:#565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
 	padding: 10px;
 	color: #BFBFBF;
@@ -673,7 +673,7 @@ input[type=text].editGuideSubSectionTitleField
 {
 	position: absolute;
 	width: 278px;
-	top: 146px;
+	top: 115px;
 	right: 10px;
 }
 
@@ -697,8 +697,10 @@ input[type=text].editGuideSubSectionTitleField
 {
 	position: relative;
 	top: -2px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #23252A;
+	border: 1px solid #1F1F20;
 	border-radius: 3px;
+	border-right-color: #333437;
 	border-top: none;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
@@ -722,7 +724,7 @@ input[type=text].editGuideSubSectionTitleField
 	padding-left: 2px;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	background-color: rgba( 255, 255, 255, 0.1);
+	background-color: #202020;
 	height: 600px;
 	overflow-y: auto;
 }
@@ -901,9 +903,6 @@ input[type=text].editGuideSubSectionTitleField
 	margin-bottom: 5px;
 	padding: 2px;
 	top: 0px;
-}
-input[type=text].inputYouTubeVideo {
-	color: #fff;
 }
 
 .guide .bb_ul
