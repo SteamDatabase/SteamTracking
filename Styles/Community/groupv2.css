@@ -1643,15 +1643,7 @@ a.headlineLink:hover {
     margin: 3px 0 2px 0;
     color: #494947;
 }
-.panel.admin {
-	border: 1px solid #a55b13;
-}
-.panel.admin .title {
-	color: #a55b13;
-	padding: 8px 14px;
-}
-.panel .hr,
-div.rule {
+.panel .hr {
     position: relative;
     height: 1px;
 	background-color: #1e323f;
@@ -1660,9 +1652,6 @@ div.rule {
 }
 .panel .hr.padded {
     margin: 10px 0 10px;
-}
-.panel .content h2 {
-	padding-top: 0px;
 }
 
 .responsive_group_stats {
@@ -1958,25 +1947,14 @@ div.rule {
 }
 
 
-.curation_manage_table .curation_row {
+.curation_manage_table div.curation_row {
 	display: flex;
 	flex-direction: row;
-	background-color: rgba(0,0,0,0.1);
-	margin-bottom: 5px;
 }
-
-.curation_manage_table .note {
-	font-style: italic;
-	color: #61686d;
-	font-size: 12px;
-}
-
 .curation_manage_table div.curation_row:nth-child(even) {
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.1);
 }
-.curation_manage_table .curation_row .header {
-	font-size: 14px;
-}
+
 
 .curation_row div {
 	padding: 3px;
@@ -1985,10 +1963,15 @@ div.rule {
 .curation_manage_table .curation_row div:nth-child(1) {
 	align-items: center;
 	display: flex;
-	width: 20px;
+	width: 26px;
 }
 
 
+.curation_manage_table  .curation_row div:nth-child(2) {
+	width: 40px;
+	align-items: center;
+	display: flex;
+}
 
 .curation_row .header {
 	font-size: 18px;
