@@ -1705,7 +1705,7 @@ function EditStat( appid, stat )
 		// onchange closure for item type; hides/shows the windowsize edit control
 		// and fills in a value if necessary.
 		var itemType = item;
-		item.onchange = function()
+		item.change( function()
 		{
 			fn = DirtyRowClosure( row );
 			fn();
@@ -1729,7 +1729,7 @@ function EditStat( appid, stat )
 				}
 			};
 
-			bAvgRate = itemType.value == 'AVGRATE';
+			bAvgRate = itemType.val() == 'AVGRATE';
 			fSetEnabledState( $( id + '_windowsize' ), bAvgRate );
 			fSetEnabledState( $( id + '_incrementonly' ), !bAvgRate );
 			fSetEnabledState( $( id + '_maxchange' ), !bAvgRate );
@@ -1744,7 +1744,7 @@ function EditStat( appid, stat )
 					subItem.value = '10.0';
 				}
 			}
-		};
+		});
 
 		addCell( row, item );
 
@@ -1851,7 +1851,7 @@ function EditStat( appid, stat )
 		btnCell.append( btn );
 
 		// Apply initial visibility
-		itemType.onchange();
+		itemType.change();
 
 		return id;
 	}
