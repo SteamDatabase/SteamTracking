@@ -3048,7 +3048,7 @@ function RefreshTradeEscrowDisplay()
 
 	if ( bWeAreSendingItems && bTheyAreSendingItems )
 	{
-		cEscrowDays = Math.max( g_daysMyEscrow, g_daysTheirEscrow );
+		cEscrowDays = g_daysBothEscrow;
 	}
 	else if ( bWeAreSendingItems )
 	{

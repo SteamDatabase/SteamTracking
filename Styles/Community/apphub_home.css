@@ -1,7 +1,6 @@
 
 /* override the background for now */
 
-
 .apphub_HomeHeader
 {
 	margin: 0 auto 8px auto;
@@ -751,6 +750,47 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 }
 
 /* reported content */
+.reported_item {
+	display: inline-block;
+	padding: 10px;
+	text-align: left;
+	width: 283px;
+	margin: 5px;
+	background-color: rgba(0,0,0,0.3);
+	outline: 1px solid rgba( 255, 255, 255, 0.3);
+}
+
+.reported_item hr {
+	background: transparent;
+	color: transparent;
+	border: none;
+	border-top: 1px solid #212c3d;
+}
+
+.reported_item a:hover {
+	color: #67c1f5;
+}
+
+.reported_item .small_text {
+	text-transform: uppercase;
+	font-size: 10px;
+}
+.reported_item .small_text.mature {
+	margin-bottom: 5px;
+	color: #ffcc6a;
+}
+
+.reported_item .small_link{
+	font-size: 10px;
+}
+
+.reported_item .user_links {
+	margin-top: 5px;
+}
+
+.reported_item.app_has_adult_content {
+	outline: 1px solid #ffcc6a;
+}
 .reported_content_gradient {
 
 	background: -moz-linear-gradient(top,  rgba(27,27,27,0) 0%, rgba(27,27,27,1) 100%); /* FF3.6+ */
@@ -769,8 +809,8 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .reported_item_checkbox
 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	right: 0px;
 	bottom: 0px;
 }
