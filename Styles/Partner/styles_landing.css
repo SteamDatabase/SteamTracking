@@ -450,9 +450,6 @@ p.notice {
 	font-size: 14px;
 	margin-left: 0;
 }
-.bank_info p.notice {
-	font-size: 12px;
-}
 
 #UANotice {
 	background-color: #6b8705;
@@ -695,19 +692,61 @@ p {
 }
 
 .landingInfoTable {
-	width: 500px;
+	width: 100%;
 }
 	.landingInfoTable td, .landingInfoTable .td {
 		background-color: transparent;
 		padding: 2px 7px;
 	}
-    .landingInfoTable p {
-        color: #888888;
-    }
-.landingInfoTable.dark {
-    background: #151515;
-    padding: 8px;
+	.landingInfoTable p {
+		color: #888888;
+	}
+	.landingInfoTable.dark {
+		background: #151515;
+		padding: 8px;
+	}
+	.landingInfoTable.dark.none {
+		border: 1px solid #ffcc6a;
+	}
+	.landingInfoTable.dark.none p {
+		color: #ffcc6a;
+		font-size: 14px;
+	}
+	.landingInfoTable.dark.success {
+		border: 1px solid #a3cf06;
+	}
+
+.landingInfoTableLeft {
+	width: 500px;
+	float: left;
 }
+	.landingInfoTableLeft td, .landingInfoTableLeft .td {
+		background-color: transparent;
+		padding: 2px 7px;
+	}
+	.landingInfoTableLeft p {
+		color: #888888;
+	}
+	.landingInfoTableLeft.dark {
+		background: #151515;
+		padding: 8px;
+	}
+
+.landingInfoTableRight {
+	width: 220px;
+	float: right;
+}
+	.landingInfoTableRight td, .landingInfoTableRight .td {
+		background-color: transparent;
+		padding: 2px 7px;
+	}
+	.landingInfoTableRight p {
+		color: #888888;
+	}
+	.landingInfoTableRight.dark {
+		background: #151515;
+		padding: 8px;
+	}
 
 .tax_button_ctn {
     margin-top: 15px;

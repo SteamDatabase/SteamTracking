@@ -230,6 +230,32 @@
                     "optional": false
                 }
             ]
+        },
+        {
+            "name": "GetTradeHoldDurations",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Returns the estimated hold duration and end date that a trade with a user would have",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid_target",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "User you are trading with"
+                },
+                {
+                    "name": "trade_offer_access_token",
+                    "type": "string",
+                    "optional": false,
+                    "description": "A special token that allows for trade offers from non-friends."
+                }
+            ]
         }
     ]
 }

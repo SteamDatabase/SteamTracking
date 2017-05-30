@@ -1042,7 +1042,11 @@ function SecondsToTime( seconds )
 	if( seconds < 10 )
 		seconds = "0" + seconds;
 	var out = (hours > 0 ) ? hours + ":" : "";
-	return out + minutes + ":" + seconds;
+
+	if ( isNaN( hours ) || isNaN( minutes ) || isNaN( seconds ) )
+		return "0:00";
+	else
+		return out + minutes + ":" + seconds;
 }
 
 function BDoesUserPreferHTML5()

@@ -2834,3 +2834,18 @@ h2.bundleFilter_titleArea {
 	padding-bottom: 10px;
 	color: #93d5ff;
 }
+
+.advisory_header {
+	background: #c6d4df;
+	padding: 16px;
+	color: #bb4c16;
+}
+.advisory_header h2 {
+	color: #bb4c16;
+}
+.advisory_header p {
+	color: #444;
+}
+.advisory_header p.notice {
+	color: #bb4c16;
+}
