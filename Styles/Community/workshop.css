@@ -146,7 +146,12 @@ a:hover {
     margin-top: 80px;
 }
 
-.appid_373030 .customBrowseTitle, .appid_477220 .customBrowseTitle
+.appid_647770 .customBrowseDesc
+{
+	margin-top: 65px;
+}
+
+.appid_373030 .customBrowseTitle, .appid_477220 .customBrowseTitle, .appid_647770 .customBrowseTitle
 {
     display: none;
 }
