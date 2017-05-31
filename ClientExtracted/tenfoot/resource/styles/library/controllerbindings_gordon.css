@@ -4190,6 +4190,16 @@ ControllerConfigBrowser.SelectCommunityBindings #Votes
 }
 
 
+ControllerConfigBrowser.SelectPersonalBindings.OfflineMode #PersonalBinding,
+ControllerConfigBrowser.SelectTemplateBindings.OfflineMode #TemplateBinding,
+ControllerConfigBrowser.SelectCommunityBindings.OfflineMode #CommunityBinding,
+ControllerConfigBrowser.OfflineMode #CommunityCategory,
+ControllerConfigBrowser.OfflineMode.ShowSaveButtons #TemplateCategory,
+ControllerConfigBrowser.OfflineMode.ShowSaveButtons #EntireLibraryCategory
+{
+	visibility: collapse;
+}
+
 ControllerConfigButton.SaveButton #Votes
 {
 	visibility: collapse;
