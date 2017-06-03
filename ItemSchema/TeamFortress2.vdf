@@ -92212,7 +92212,7 @@
 		}
 		"8831"
 		{		
-			"name"				"Arms Race I 1st Place"
+			"name"				"Arms Race 1 1st Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_first"
@@ -92225,7 +92225,7 @@
 		}
 		"8832"
 		{		
-			"name"				"Arms Race I 2nd Place"
+			"name"				"Arms Race 1 2nd Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_second"
@@ -92238,7 +92238,7 @@
 		}
 		"8833"
 		{		
-			"name"				"Arms Race I 3rd Place"
+			"name"				"Arms Race 1 3rd Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_third"
@@ -92251,7 +92251,7 @@
 		}
   		"8834"
 		{		
-			"name"				"Arms Race I Participant"
+			"name"				"Arms Race 1 Participant"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_participant"
@@ -92264,7 +92264,7 @@
 		}
 		"8835"
 		{		
-			"name"				"Arms Race II 1st Place"
+			"name"				"Arms Race 2 1st Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_first"
@@ -92277,7 +92277,7 @@
 		}
 		"8836"
 		{		
-			"name"				"Arms Race II 2nd Place"
+			"name"				"Arms Race 2 2nd Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_second"
@@ -92290,7 +92290,7 @@
 		}
 		"8837"
 		{		
-			"name"				"Arms Race II 3rd Place"
+			"name"				"Arms Race 2 3rd Place"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_third"
@@ -92303,7 +92303,7 @@
 		}
   		"8838"
 		{		
-			"name"				"Arms Race II Participant"
+			"name"				"Arms Race 2 Participant"
 			"prefab"			"tournament_medal"
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_participant"
@@ -99574,6 +99574,202 @@
 			"model_player_per_class"
 			{
 				"basename"	"models/workshop/player/items/all_class/snacks_summery_ultiduo_participant/snacks_summery_ultiduo_participant_%s.mdl"
+			}
+		}
+ 		"9520"
+		{
+			"name"	"FBTF Cup 6v6 Wastex Miller 1st Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Wastex_Miller_1st"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9521"
+		{
+			"name"	"FBTF Cup 6v6 Wastex Miller 2nd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Wastex_Miller_2nd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9522"
+		{
+			"name"	"FBTF Cup 6v6 Wastex Miller 3rd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Wastex_Miller_3rd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9523"
+		{
+			"name"	"FBTF Cup 6v6 Wastex Miller Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Wastex_Miller_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+ 		"9524"
+		{
+			"name"	"FBTF Cup 6v6 Barts Rimet 1st Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Barts_Rimet_1st"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9525"
+		{
+			"name"	"FBTF Cup 6v6 Barts Rimet 2nd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Barts_Rimet_2nd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9526"
+		{
+			"name"	"FBTF Cup 6v6 Barts Rimet 3rd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Barts_Rimet_3rd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9527"
+		{
+			"name"	"FBTF Cup 6v6 Barts Rimet Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Barts_Rimet_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+  		"9528"
+		{
+			"name"	"FBTF Cup 6v6 Vic Basten 1st Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Vic_Basten_1st"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_%s.mdl"
+			}
+		}
+  		"9529"
+		{
+			"name"	"FBTF Cup 6v6 Vic Basten 2nd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Vic_Basten_2nd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_%s.mdl"
+			}
+		}
+   		"9530"
+		{
+			"name"	"FBTF Cup 6v6 Vic Basten 3rd Place Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Vic_Basten_3rd"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_%s.mdl"
+			}
+		}
+ 		"9531"
+		{
+			"name"	"FBTF Cup 6v6 Vic Basten Participant Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_FBTF_Cup_6v6_Vic_Basten_Participant"
+			"item_description"	"#TF_TournamentMedal_Season4"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_%s.mdl"
+			}
+		}
+		"9532"
+		{		
+			"name"				"Arms Race 3 1st Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_first"
+			"item_description"	"#TF_TournamentMedal_armsrace3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_%s.mdl"
+			}
+		}
+		"9533"
+		{		
+			"name"				"Arms Race 3 2nd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_second"
+			"item_description"	"#TF_TournamentMedal_armsrace3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_%s.mdl"
+			}
+		}
+		"9534"
+		{		
+			"name"				"Arms Race 3 3rd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_third"
+			"item_description"	"#TF_TournamentMedal_armsrace3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_%s.mdl"
+			}
+		}
+  		"9535"
+		{		
+			"name"				"Arms Race 3 Participant"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_participant"
+			"item_description"	"#TF_TournamentMedal_armsrace3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_%s.mdl"
 			}
 		}
 
