@@ -89,7 +89,7 @@ function CDASHPlayer( elVideoPlayer )
 
 CDASHPlayer.TRACK_BUFFER_MS = 8000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
-CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 2 * 60 * 1000;
+CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 3 * 60 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
@@ -429,15 +429,50 @@ CDASHPlayer.prototype.OnEncrypted = function( event )
 	_player.m_tsLastEncryptedEvent = event.timestamp;
 
 	PlayerLog( 'Found encrypted content.' );
-	var session = this.m_elVideoPlayer.mediaKeys.createSession();
-	_player.m_oActiveMediaKeysSession = session;
-	session.addEventListener('message', function( event ) { _player.OnMessage ( session, event ) }, false);
-	session.generateRequest( event.initDataType, event.initData ).catch(
-		function(error) {
-			PlayerLog('Failed to generate a license request', error);
-			_player.CloseWithError( 'drmerror', [ 'Generate License Request Failure: ' + error.message ] );
-		}
-	);
+
+	try
+	{
+		// From CEF/Chrome 59 on, we need to pass in the Widevine License Server Cert for Validated Media Path to work.
+		// setServerCertificate is valid from Chrome 42, so this will function just fine for older Steam Clients.
+		// This needs to happen before mediaKeys.createSession, but after the mediaKeys have been created.
+		var xhrWidevineCert = new XMLHttpRequest();
+		xhrWidevineCert.open( 'GET', 'https://store.steampowered.com/public/data/widevine/cert_license_widevine_com.bin' );
+		xhrWidevineCert.timeout = 15000;
+		xhrWidevineCert.send();
+		xhrWidevineCert.responseType = 'arraybuffer';
+		xhrWidevineCert.addEventListener( 'readystatechange', function ()
+		{
+			if ( xhrWidevineCert.readyState == xhrWidevineCert.DONE )
+			{
+				_player.m_elVideoPlayer.mediaKeys.setServerCertificate( xhrWidevineCert.response ).then(
+					function()
+					{
+						var session = _player.m_elVideoPlayer.mediaKeys.createSession();
+						_player.m_oActiveMediaKeysSession = session;
+						session.addEventListener( 'message', function ( event ) { _player.OnMessage( session, event ) }, false );
+						session.generateRequest( event.initDataType, event.initData ).catch(
+							function ( error )
+							{
+								PlayerLog( 'Failed to generate a license request', error );
+								_player.CloseWithError( 'drmerror', [ 'Generate License Request Failure: ' + error.message ] );
+							}
+						);
+					}
+				).catch(
+					function(error)
+					{
+						PlayerLog( 'Failed to set the Widevine Server Certificate', error );
+						_player.CloseWithError( 'drmerror', [ 'Widevine Server Certificate Failure: ' + error.message ] );
+					}
+				);
+			}
+		}, false );
+	}
+	catch ( e )
+	{
+		PlayerLog( 'Failed to download the Widevine Server Certificate', e );
+		_player.CloseWithError( 'drmerror', [ 'Widevine Server Certificate Download Failure: ' + e ] );
+	}
 }
 
 CDASHPlayer.prototype.OnMessage = function( session, event )

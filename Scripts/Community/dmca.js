@@ -50,6 +50,51 @@ function HasRequiredField( fieldName )
 	return true;
 }
 
+var gValidFieldAlphaNumericRegex = /^[A-Za-z0-9 &.,#'\/\-]+$/
+
+function IsValidRequiredField( fieldName, regex )
+{
+	var field = $J( fieldName );
+	var value = field.val();
+	value = v_trim( value );
+	if ( value.length == 0 )
+	{
+		field.addClass( "errorRequiredField" );
+		return false;
+	}
+
+	if ( !regex.test( value ) )
+	{
+		field.addClass( "errorRequiredField" );
+		return false;
+	}
+
+	field.removeClass( "errorRequiredField" );
+	field.val( value );
+	return true;
+}
+
+function IsValidOptionalField( fieldName, regex )
+{
+	var field = $J( fieldName );
+	var value = field.val();
+	value = v_trim( value );
+	if ( value.length == 0 )
+	{
+		return true;
+	}
+
+	if ( !regex.test( value ) )
+	{
+		field.addClass( "errorRequiredField" );
+		return false;
+	}
+
+	field.removeClass( "errorRequiredField" );
+	field.val( value );
+	return true;
+}
+
 function SaveTakeDownNotice()
 {
 	var frm = $J( "#CreateDMCATakeDownNoticeForm" );
@@ -101,6 +146,22 @@ function SaveTakeDownNotice()
 	if ( !bHasRequiredFields )
 	{
 		ShowAlertDialog( 'Error', 'Please fill in the required fields highlighted in red.' );
+		return false;
+	}
+
+	// validate address fields
+	var bHasValidFields = true;
+	bHasValidFields &= IsValidRequiredField( "#address1", gValidFieldAlphaNumericRegex );
+	bHasValidFields &= IsValidOptionalField( "#address2", gValidFieldAlphaNumericRegex );
+	bHasValidFields &= IsValidRequiredField( "#city", gValidFieldAlphaNumericRegex );
+	if ( $('country_code').value != 'US' )
+	{
+		bHasValidFields &= IsValidRequiredField( "#state_input", gValidFieldAlphaNumericRegex );
+	}
+	bHasValidFields &= IsValidRequiredField( "#postal_code", gValidFieldAlphaNumericRegex );
+	if ( !bHasValidFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
 		return false;
 	}
 

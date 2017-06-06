@@ -748,6 +748,14 @@ p {
 		padding: 8px;
 	}
 
+@media screen and (max-width: 1150px) {
+	.landingInfoTableRight {
+		width: 220px;
+		float: left;
+		margin: 15px 0 0 0;
+	}
+}
+
 .tax_button_ctn {
     margin-top: 15px;
 }
