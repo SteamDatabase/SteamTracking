@@ -4971,6 +4971,35 @@ a.readmore_link
 	margin-right: 10px;
 }
 
+#greenlight_retired_modal  {
+	text-align: left;
+}
+#greenlight_retired_modal .greenlight_home_vote_box {
+	margin: 0;
+	background: -webkit-linear-gradient( 160deg, #5b6713 5%,#24281c 95%););background: linear-gradient( 160deg, #5b6713 5%,#24281c 95%););}
+#greenlight_retired_modal .button_container {
+	text-align: center;
+}
+#greenlight_retired_modal .mainblock {
+	background: -webkit-linear-gradient( top, #5b6813 5%, #25291c 95%);background: linear-gradient( to bottom, #5b6813 5%, #25291c 95%);	color: #e7e7e7;
+	padding: 25px 45px;
+	width: 550px;
+	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+#greenlight_retired_modal .mainblock .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		;
+	font-size: 27px;
+	padding: 5px 0;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive #profileBlock {
