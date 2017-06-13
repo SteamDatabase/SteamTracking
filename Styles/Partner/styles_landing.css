@@ -1441,48 +1441,37 @@ span.icon_actual_authority { display: inline-block;}
 	}
 
 .nonDevActionSection {
+    float: left;
     margin-right: 10px;
+    width: 45%;
     padding: 12px;
-	background: -webkit-linear-gradient( 125deg, #407999 5%,#2f4d69 95%););background: linear-gradient( 125deg, #407999 5%,#2f4d69 95%););			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			border-radius: 3px;
-	border: 1px solid black;
-	color: #A4DAF9;
-	font-size: 14px;
-	box-shadow: 0 0 50px rgba(103,193,245,0.3);
+    margin-top: 16px;
+    background: #333333;
     }
     .nonDevActionSection>img {
         margin-right: 6px;
     }
 
     .nonDevActionSection>.title {
-        font-size: 18px;
-        color: #66C0F4;
+        font-size: 17px;
+        color: #e6e7e8;
         margin-top: 8px;
     }
 
     .nonDevActionSection>.title.continue {
-        font-size: 18px;
-        color: #fff;
+        font-size: 17px;
+        color: #a3cf06;
         margin-top: 8px;
     }
     .nonDevActionSection>.text {
         font-size: 14px;
-		color: #A4DAF9;
+        color: #999999;
         margin-bottom: 20px;
-		margin-top: 12px;
     }
 
 	.nonDevActionSection .signupitem {
 		font-size: 14px;
-		color: #A4DAF9;
-	}
-
-	.nonDevActionSection .signupitem_title {
-		font-size: 16px;
-		font-weight: normal;
-		color: #BFE8FF;
+		color: #999999;
 	}
 
 	.nonDevActionSection .signupitembutton {
@@ -1491,19 +1480,13 @@ span.icon_actual_authority { display: inline-block;}
 		padding: 4px;
 	}
 
+	.nonDevActionSection .td {
+		vertical-align: top;
+	}
+
     .nonDevActionSection>.link {
         margin-top: 8px;
     }
-	.nonDevActionSection>.landingTable .td {
-		vertical-align: middle;
-		background-color: rgba( 0, 0, 0, 0.2 );
-		color: #A4DAF9;
-		padding: 10px;
-	}
-	.nonDevActionSection>.landingTable .td.fixed {
-		width: 170px;
-		text-align: right;
-	}
 .notice {
 	color: #D0434B;
 	margin-top: 8px;
@@ -2642,89 +2625,4 @@ div .cdkey_request_details_row
 .cdkey_request_details_row .value.approve
 {
 	color: #A4D007;
-}
-
-#login_btn_signin {
-	white-space: nowrap;
-}
-
-.getSDK_ctn {
-	background: rgba( 0, 0, 0, 0.3 );
-	border-radius: 3px;
-	padding: 16px;
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			color: #91A5BC;
-	font-size: 15px;
-	margin-bottom: 16px;
-}
-.getSDK_ctn .title {
-	color: #66C0F4;
-	font-size: 18px;
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			margin-bottom: 10px;
-}
-.getSDK_ctn .link {
-	margin-top: 16px;
-}
-
-#landingWelcome.unaffiliated {
-	background: #000;
-	padding: 16px;
-	border-bottom: none;
-	margin-bottom: 16px;
-}
-#landingWelcome.unaffiliated p {
-	color: #91A5BC;
-	font-size: 16px;
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-		}
-#landingWelcome.unaffiliated .avatar {
-	width: 64px;
-	height: 64px;
-}
-#landingWelcome.unaffiliated .landingName {
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			font-size: 26px;
-	margin-top: 12px;
-	margin-left: 4px;
-}
-#landingWelcome.unaffiliated .landingName span {
-	color: #8F98A0;
-}
-.AdminPageContent.narrow {
-	max-width: 940px;
-}
-.releaseStep .note {
-	font-size: 12px;
-	font-style: italic;
-}
-
-.StepList {
-	color: #acacac;
-	font-size: 12px;
-	margin: 0 0 10px 0;
-	list-style-type: none;
-}
-
-.StepList > li {
-	text-indent: -5px;
-}
-.StepList > li:before {
-	content: "-";
-	text-indent: -5px;
-}
-
-.newmodal_content .newapptitle {
-	font-size: 15px;
-}
-.newmodal_content .newapptitle b {
-	color: #fff;
 }

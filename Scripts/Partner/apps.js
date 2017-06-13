@@ -3441,11 +3441,11 @@ function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartner
 
 function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bAddToFreeSub )
 {
-	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
+	var progressDialog = ShowProgressDialog( "Create New App", "Creating New App" );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
-	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID For: ' + appName + '</div>' );
+	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID for ' + appName + '</div>' );
 
 	// add initial one to create the range
 	$J.post( 'https://partner.steamgames.com/apps/ajaxcreatenewapp/',
@@ -3465,7 +3465,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			if ( response.success == 1 )
 			{
 				var divDone = $J('<div/>', { 'style' : 'font-weight: bold; color: white;' } );
-				divDone.append( 'Done creating new app!' );
+				divDone.append( "Done creating new app!" );
 				$J( "#WaitingContainer" ).html( divDone );
 
 				if ( response.messages )
@@ -3501,75 +3501,9 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 	).fail(
 		function( jqxhr ) {
 			progressDialog.Dismiss();
-			ShowAlertDialog( 'Failed to create new app', jqxhr.responseText );
+			ShowAlertDialog( "Failed to create new app", jqxhr.responseText );
 		}
 	);
-}
-
-function CreateNewVideoApp( pubId, strVideoName, strVideoType, bF2P, b360Video, bAssociatedApp )
-{
-	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
-	progressDialog.done( function() { top.location.reload(); } );
-
-	var progressMessages = $J( '#ProgressMessagesContainer' );
-	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID For: ' + strVideoName + '</div>' );
-
-	$J.ajax({
-		type: "POST",
-		url: "https://partner.steamgames.com/apps/ajaxcreatevideoseries//",
-		dataType: "json",
-		data: {
-			'SeriesName': strVideoName,
-			'CreateFreePackage' : bF2P,
-			'CreateFilesApp' : bAssociatedApp,
-			'Set360VideoFormat' : b360Video,
-			'VideoType' : strVideoType,
-			'Publisherid' : pubId,
-			'sessionid' : g_sessionID,
-		},
-		success: function( response )
-		{
-			if ( response.result == 1 )
-			{
-				var divDone = $J('<div/>', { 'style' : 'font-weight: bold; color: white;' } );
-				divDone.append( 'Done creating new app!' );
-				$J( "#WaitingContainer" ).html( divDone );
-
-				if ( response.messages )
-				{
-					for ( var i = 0; i < response.messages.length; ++i )
-					{
-						progressMessages.append( '<div class="add_dlc_msg">' + response.messages[i] + '</div>' );
-					}
-				}
-				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
-
-				progressMessages.append( '<div class="add_dlc_msg parent">Done!</div>' );
-				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
-				return;
-			}
-			else
-			{
-				if ( !response.messages )
-				{
-					progressMessages.append( '<div class="add_dlc_error_msg">' + response + '</div>' );
-					return;
-				}
-				if ( response.messages )
-				{
-					for ( var i = 0; i < response.messages.length; ++i )
-					{
-						progressMessages.append( '<div class="add_dlc_error_msg">' + response.messages[i] + '</div>' );
-					}
-				}
-				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
-			}
-		},
-		error: function ( response )
-		{
-			ShowAlertDialog( 'Failed to create new app', response.responseText );
-		}
-	});
 }
 
 function ShowProgressDialog( strTitle, strDescription )

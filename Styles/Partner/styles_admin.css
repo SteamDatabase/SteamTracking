@@ -2081,7 +2081,7 @@ html, body { height:100%; }
 .recent_app_name
 {
 	float: left;
-	width: 500px;
+	width: 600px;
 }
 
 .recent_app_type
@@ -2849,4 +2849,3 @@ h2.bundleFilter_titleArea {
 .advisory_header p.notice {
 	color: #bb4c16;
 }
-
