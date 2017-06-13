@@ -1679,6 +1679,10 @@ background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););backgroun
 	width: 250px;
 }
 
+#bank_name_dselect_container
+{
+	width: 250px;
+}
 
 
 #gift_sentiment_droplist
@@ -1986,7 +1990,8 @@ background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););backgroun
 }
 
 .purchase_summary_area,
-.add_free_content_success_area {
+.add_free_content_success_area,
+.checkout_steam_direct_area {
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 16px;
 }

@@ -82,7 +82,7 @@ function CloseSupportMessageWindow()
 					}
 					else
 					{
-						window.close();
+											window.close();
 					}
 				}
 				else if ( transport.responseText )

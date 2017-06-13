@@ -210,8 +210,7 @@ p.currency_change_confirm_dialog_footer {
 
 .two_column.right {
 	vertical-align: top;
-
-	margin-left: 15px;
+	margin-left: 11px;
 	width: 705px;
 }
 
@@ -506,4 +505,3 @@ input[type=date] {
 .account_vat_setup_padding {
 	padding-bottom: 5px;
 }
-

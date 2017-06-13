@@ -496,8 +496,8 @@ CModal.prototype.AdjustSizing = function( duration )
 
 	var bResponsiveScreen = window.UseTouchFriendlyMode && UseTouchFriendlyMode();
 
-	var nViewportWidth = $J(window).width();
-	var nViewportHeight = $J(window).height();
+	var nViewportWidth = document.compatMode === 'BackCompat' ? document.body.clientWidth : $J(window).width();
+	var nViewportHeight = document.compatMode === 'BackCompat' ? document.body.clientHeight : $J(window).height();
 
 	var nMaxWidth = Math.max( nViewportWidth - ( bResponsiveScreen? 24 : 80 ), bResponsiveScreen ? 200 : 500 );
 	var nMaxHeight = Math.floor( nViewportHeight - 120 );

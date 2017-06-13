@@ -791,6 +791,35 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .reported_item.app_has_adult_content {
 	outline: 1px solid #ffcc6a;
 }
+
+.reported_item_details_hover_row {
+	position: relative;
+}
+
+.reported_item_details_hover_row .reported_items_details {
+	position: absolute;
+	visibility: hidden;
+	margin-top: 8px;
+	padding: 6px;
+
+	color: white;
+	background-color: rgba( 33, 101, 138, 1 );
+	border: 1px solid #67c1f5;
+	z-index: 1000;
+}
+
+.reported_item_details_hover_row:hover .reported_items_details {
+	visibility: visible;
+}
+
+.reported_items_details_group {
+	margin-bottom: 10px;
+}
+
+.reported_items_details_header {
+	font-weight: bold;
+}
+
 .reported_content_gradient {
 
 	background: -moz-linear-gradient(top,  rgba(27,27,27,0) 0%, rgba(27,27,27,1) 100%); /* FF3.6+ */

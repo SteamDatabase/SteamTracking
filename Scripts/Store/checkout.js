@@ -669,6 +669,7 @@ function InitializeTransaction()
 				'BankCode' : $('bank_code').value,
 				'BankIBAN' : $('bank_iban').value,
 				'BankBIC' : $('bank_bic').value,
+                'TPBankID' : $('bank_name').value,
 				
 								'bSaveBillingAddress' : bSaveBillingAddress ? 1 : 0,
 				'gidPaymentID' : paymentGID,
@@ -711,6 +712,10 @@ function InitializeTransaction()
 	}
 }
 
+function BIsBankChoiceMethod( method )
+{
+    return method == 'ideal';
+}
 
 function OnInitializeTransactionSuccess( result )
 {
@@ -729,6 +734,7 @@ function OnInitializeTransactionSuccess( result )
 			$J('#payment_row_address, #payment_header_title' ).hide();
 			$J('#payment_header_title').hide();
 			$J('#payment_row_save_my_address').hide();
+			$J('#payment_row_bank_name').hide();
 			$J('#payment_row_country_verification').hide();
 			$J('#payment_method_specific_note').hide();
 			$J('#payment_row_eight').show();
@@ -2620,6 +2626,7 @@ function UpdatePaymentInfoForm()
 		var bShowSaveMyAddress = false;
 		var bShowStoredPayPalDetails = false;
 		var bDisabledPaymentMethod = false;
+		var bShowBankSelection = false;
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
 		
@@ -2687,8 +2694,13 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowBankAccountForm = true;
 		}
-		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
-			|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex'
+		else if ( BIsBankChoiceMethod( method.value ) )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+		bShowBankSelection = true;
+		}
+		else if ( method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'	|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex'
 			|| method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
@@ -2859,6 +2871,7 @@ function UpdatePaymentInfoForm()
 		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'black' : 'none';
 		$('youll_get_to_review').style.display = strAllowPaymentMethod;
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
+		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
 	} 
 	catch( e ) 
 	{

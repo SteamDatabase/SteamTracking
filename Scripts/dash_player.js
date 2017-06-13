@@ -6900,6 +6900,14 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 							rgKeyVal[1] = nLineNo;
 						}
 
+						// the align tag has changed from middle to center but we have a bunch of VTTs using middle
+						// so convert it as needed.
+						// see https://bugs.chromium.org/p/chromium/issues/detail?id=663797#c12
+						if ( rgKeyVal[0] === "align" && rgKeyVal[1] === "middle" )
+						{
+							rgKeyVal[1] = "center";
+						}
+
 						// return this code when crbug is fixed
 						// percentage screen attributes require snapToLines off
 						// if ( rgKeyVal[0] === "line" && newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1 )
@@ -7011,7 +7019,7 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 			break;
 		case "{\\an2}":
 			rgLayoutInfo.push("line:" + CVTTCaptionLoader.s_DefaultLinePosition + "%");
-			rgLayoutInfo.push("align:middle");
+			rgLayoutInfo.push("align:center");
 			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an3}":
@@ -7026,7 +7034,7 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 			break;
 		case "{\\an5}":
 			rgLayoutInfo.push("line:50%");
-			rgLayoutInfo.push("align:middle");
+			rgLayoutInfo.push("align:center");
 			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an6}":
@@ -7041,7 +7049,7 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 			break;
 		case "{\\an8}":
 			rgLayoutInfo.push("line:10%");
-			rgLayoutInfo.push("align:middle");
+			rgLayoutInfo.push("align:center");
 			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an9}":
