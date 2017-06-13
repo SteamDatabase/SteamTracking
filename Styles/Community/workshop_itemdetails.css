@@ -2109,6 +2109,22 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 			font-weight: bold;
 		}
 
+	#ig_top_workshop.retired {
+		color: #fff;
+		background-color: rgba( 255, 255, 255, 0.2 );
+		border: 1px solid;
+		}
+
+		#ig_top_workshop.retired > div {
+			padding: 22px 20px 0 20px;
+		}
+
+
+		#ig_top_workshop.retired p {
+			color: #ddd;
+			width: 100%;
+		}
+
 #ig_top_workshop_submitBox {
 	background-color: #769605;
 	/*height: 66px;*/
