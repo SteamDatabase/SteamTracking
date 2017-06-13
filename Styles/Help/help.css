@@ -4171,3 +4171,7 @@ table {
 .steamworks_ctn p.indent {
 	padding-left: 30px;
 }
+
+#report_abuse_container {
+	max-width: 712px;
+}
