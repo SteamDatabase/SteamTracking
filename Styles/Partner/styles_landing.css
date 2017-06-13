@@ -2721,3 +2721,10 @@ div .cdkey_request_details_row
 	content: "-";
 	text-indent: -5px;
 }
+
+.newmodal_content .newapptitle {
+	font-size: 15px;
+}
+.newmodal_content .newapptitle b {
+	color: #fff;
+}
