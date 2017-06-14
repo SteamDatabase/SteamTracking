@@ -2,6 +2,51 @@
     "name": "ISteamApps",
     "methods": [
         {
+            "name": "GetAppBetas",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                }
+            ]
+        },
+        {
+            "name": "GetAppBuilds",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "# of builds to retrieve (default 10)"
+                }
+            ]
+        },
+        {
+            "name": "GetAppDepotVersions",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of depot"
+                }
+            ]
+        },
+        {
             "name": "GetAppList",
             "version": 1,
             "httpmethod": "GET",
@@ -14,6 +59,81 @@
             "parameters": []
         },
         {
+            "name": "GetCheatingReports",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "timebegin",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Time range begin"
+                },
+                {
+                    "name": "timeend",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Time range end"
+                },
+                {
+                    "name": "includereports",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "include reports that were not bans"
+                },
+                {
+                    "name": "includebans",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "include reports that were bans"
+                },
+                {
+                    "name": "reportidmin",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "minimum report id"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayersBanned",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                }
+            ]
+        },
+        {
+            "name": "GetServerList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "filter",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Query filter string"
+                },
+                {
+                    "name": "limit",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Limit number of servers in the response"
+                }
+            ]
+        },
+        {
             "name": "GetServersAtAddress",
             "version": 1,
             "httpmethod": "GET",
@@ -23,6 +143,37 @@
                     "type": "string",
                     "optional": false,
                     "description": "IP or IP:queryport to list"
+                }
+            ]
+        },
+        {
+            "name": "SetAppBuildLive",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "buildid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "BuildID"
+                },
+                {
+                    "name": "betakey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "beta key, required. Use public for default branch"
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "optional": true,
+                    "description": "optional description for this build"
                 }
             ]
         },

@@ -1,0 +1,36 @@
+{
+    "name": "ISteamVideo",
+    "methods": [
+        {
+            "name": "AddVideo",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of the video"
+                },
+                {
+                    "name": "videoid",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ID of the video on the provider's site"
+                },
+                {
+                    "name": "accountname",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Account name of the video's owner on the provider's site"
+                }
+            ]
+        }
+    ]
+}

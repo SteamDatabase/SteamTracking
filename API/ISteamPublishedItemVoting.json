@@ -1,0 +1,61 @@
+{
+    "name": "ISteamPublishedItemVoting",
+    "methods": [
+        {
+            "name": "ItemVoteSummary",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Count of how many items we are querying"
+                },
+                {
+                    "name": "publishedfileid[0]",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "The Published File ID who's vote details are required"
+                }
+            ]
+        },
+        {
+            "name": "UserVoteSummary",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID of user"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Count of how many items we are querying"
+                },
+                {
+                    "name": "publishedfileid[0]",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "A Specific Published Item"
+                }
+            ]
+        }
+    ]
+}

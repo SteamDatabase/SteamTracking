@@ -94,6 +94,76 @@
             ]
         },
         {
+            "name": "FlushInventoryCache",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Flushes the cache for a user's inventory in a specific app context",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "User to clear cache for."
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "App to clear cache for."
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Context to clear cache for."
+                }
+            ]
+        },
+        {
+            "name": "FlushAssetAppearanceCache",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Flushes the display cache for assets.  This will result in calls to GetAssetClassInfo for each asset class the next time it is displayed.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "FlushContextCache",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Flushes the cache of inventory contents. This will result in calls to GetContexts and GetContextContents to get fresh data for each user next time Steam needs their inventory.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetTradeOffers",
             "version": 1,
             "httpmethod": "GET",

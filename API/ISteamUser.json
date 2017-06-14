@@ -2,6 +2,81 @@
     "name": "ISteamUser",
     "methods": [
         {
+            "name": "CheckAppOwnership",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to check for ownership"
+                }
+            ]
+        },
+        {
+            "name": "CheckAppOwnership",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to check for ownership"
+                }
+            ]
+        },
+        {
+            "name": "GetAppPriceInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appids",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Comma-delimited list of appids (max: 100)"
+                }
+            ]
+        },
+        {
             "name": "GetFriendList",
             "version": 1,
             "httpmethod": "GET",
@@ -84,6 +159,69 @@
             ]
         },
         {
+            "name": "GetPublisherAppOwnership",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                }
+            ]
+        },
+        {
+            "name": "GetPublisherAppOwnership",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                }
+            ]
+        },
+        {
+            "name": "GetPublisherAppOwnershipChanges",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "packagerowversion",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The unsigned 64-bit row version to read package changes from. The row version of data read up to will be returned for use in future calls."
+                },
+                {
+                    "name": "cdkeyrowversion",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The unsigned 64-bit row version to read CD Key changes from. The row version of data read up to will be returned for use in future calls."
+                }
+            ]
+        },
+        {
             "name": "GetUserGroupList",
             "version": 1,
             "httpmethod": "GET",
@@ -99,6 +237,49 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "SteamID of user"
+                }
+            ]
+        },
+        {
+            "name": "GrantPackage",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "packageid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "PackageID to grant"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx)."
+                },
+                {
+                    "name": "thirdpartykey",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optionally associate third party key during grant. 'thirdpartyappid' will have to be set."
+                },
+                {
+                    "name": "thirdpartyappid",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Has to be set if 'thirdpartykey' is set. The appid associated with the 'thirdpartykey'."
                 }
             ]
         },

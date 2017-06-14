@@ -1,0 +1,36 @@
+{
+    "name": "ITestExternalPrivilegeService",
+    "methods": [
+        {
+            "name": "CallPublisherKey",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                }
+            ]
+        },
+        {
+            "name": "CallPublisherKeyOwnsApp",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

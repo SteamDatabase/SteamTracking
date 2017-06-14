@@ -2,6 +2,62 @@
     "name": "ISteamEconomy",
     "methods": [
         {
+            "name": "CanTrade",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "That the key is associated with. Must be a steam economy app."
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user attempting to initiate a trade"
+                },
+                {
+                    "name": "targetid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user that is the target of the trade invitation"
+                }
+            ]
+        },
+        {
+            "name": "FinalizeAssetTransaction",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app ID the user is buying assets for"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of the user making a purchase"
+                },
+                {
+                    "name": "txnid",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The transaction ID"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The local language for the user"
+                }
+            ]
+        },
+        {
             "name": "GetAssetClassInfo",
             "version": 1,
             "httpmethod": "GET",
@@ -60,6 +116,130 @@
                     "type": "string",
                     "optional": true,
                     "description": "The user's local language"
+                }
+            ]
+        },
+        {
+            "name": "GetExportedAssetsForUser",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app to get exported items from."
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The context in the app to get exported items from."
+                }
+            ]
+        },
+        {
+            "name": "GetMarketPrices",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Must be a steam economy app."
+                }
+            ]
+        },
+        {
+            "name": "StartAssetTransaction",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app ID the user is buying assets for"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making a purchase"
+                },
+                {
+                    "name": "assetid0",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The ID of the first asset the user is buying - there must be at least one"
+                },
+                {
+                    "name": "assetquantity0",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The quantity of assetid0's the the user is buying"
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The local currency for the user"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The local language for the user"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The user's IP address"
+                },
+                {
+                    "name": "referrer",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The referring URL"
+                },
+                {
+                    "name": "clientauth",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If true (default is false), the authorization will appear in the user's steam client overlay, rather than as a web page - useful for stores that are embedded in products."
+                }
+            ]
+        },
+        {
+            "name": "StartTrade",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "That the key is associated with. Must be a steam economy app."
+                },
+                {
+                    "name": "partya",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of first user in the trade"
+                },
+                {
+                    "name": "partyb",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of second user in the trade"
                 }
             ]
         }

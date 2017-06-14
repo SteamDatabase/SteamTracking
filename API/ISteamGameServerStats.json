@@ -1,0 +1,48 @@
+{
+    "name": "ISteamGameServerStats",
+    "methods": [
+        {
+            "name": "GetGameServerPlayerStatsForGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "gameid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "game id to get stats for, if not a mod, it's safe to use appid here"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of the game"
+                },
+                {
+                    "name": "rangestart",
+                    "type": "string",
+                    "optional": false,
+                    "description": "range start date/time (Format: YYYY-MM-DD HH:MM:SS, seattle local time"
+                },
+                {
+                    "name": "rangeend",
+                    "type": "string",
+                    "optional": false,
+                    "description": "range end date/time (Format: YYYY-MM-DD HH:MM:SS, seattle local time"
+                },
+                {
+                    "name": "maxresults",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of results to return (up to 1000)"
+                }
+            ]
+        }
+    ]
+}

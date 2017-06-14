@@ -2,6 +2,50 @@
     "name": "ISteamRemoteStorage",
     "methods": [
         {
+            "name": "EnumerateUserPublishedFiles",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                }
+            ]
+        },
+        {
+            "name": "EnumerateUserSubscribedFiles",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "listtype",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "EUCMListType"
+                }
+            ]
+        },
+        {
             "name": "GetCollectionDetails",
             "version": 1,
             "httpmethod": "POST",
@@ -61,6 +105,87 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "appID of product"
+                }
+            ]
+        },
+        {
+            "name": "SetUGCUsedByGC",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "ugcid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ID of UGC file whose bits are being fiddled with"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product to change updating state for"
+                },
+                {
+                    "name": "used",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "New state of flag"
+                }
+            ]
+        },
+        {
+            "name": "SubscribePublishedFile",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "published file id to subscribe to"
+                }
+            ]
+        },
+        {
+            "name": "UnsubscribePublishedFile",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "published file id to unsubscribe from"
                 }
             ]
         }

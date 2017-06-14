@@ -1,0 +1,127 @@
+{
+    "name": "IEconMarketService",
+    "methods": [
+        {
+            "name": "GetMarketEligibility",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Checks whether or not an account is allowed to use the market",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user to check"
+                }
+            ]
+        },
+        {
+            "name": "CancelAppListingsForUser",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Cancels all of a user's listings for a specific app ID.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app making the request"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user whose listings should be canceled"
+                },
+                {
+                    "name": "synchronous",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Whether or not to wait until all listings have been canceled before returning the response"
+                }
+            ]
+        },
+        {
+            "name": "GetAssetID",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Returns the asset ID of the item sold in a listing",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app that's asking. Must match the app of the listing and must belong to the publisher group that owns the API key making the request"
+                },
+                {
+                    "name": "listingid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The identifier of the listing to get information for"
+                }
+            ]
+        },
+        {
+            "name": "GetPopular",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets the most popular items",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The language to use in item descriptions"
+                },
+                {
+                    "name": "rows",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of rows per page"
+                },
+                {
+                    "name": "start",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The result number to start at"
+                },
+                {
+                    "name": "filter_appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "If present, the app ID to limit results to"
+                },
+                {
+                    "name": "ecurrency",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "If present, prices returned will be represented in this currency"
+                }
+            ]
+        }
+    ]
+}

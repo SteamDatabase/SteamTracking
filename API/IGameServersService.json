@@ -148,6 +148,35 @@
             ]
         },
         {
+            "name": "SetBanStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "performs a GSLT ban/unban of GSLT associated with a GS. If banning, also bans associated users' GSLTs.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "banned",
+                    "type": "bool",
+                    "optional": false
+                },
+                {
+                    "name": "ban_seconds",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetServerSteamIDsByIP",
             "version": 1,
             "httpmethod": "GET",

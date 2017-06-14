@@ -1,0 +1,61 @@
+{
+    "name": "ISteamWorkshop",
+    "methods": [
+        {
+            "name": "AssociateWorkshopItems",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "itemcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of items to associate"
+                },
+                {
+                    "name": "publishedfileid[0]",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "the workshop published file id"
+                },
+                {
+                    "name": "gameitemid[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "3rd party ID for item"
+                },
+                {
+                    "name": "revenuepercentage[0]",
+                    "type": "float",
+                    "optional": true,
+                    "description": "Percentage of revenue the owners of the workshop item will get from the sale of the item [0.0, 100.0].  For bundle-like items, send over an entry for each item in the bundle (gameitemid = bundle id) with different publishedfileids and with the revenue percentage pre-split amongst the items in the bundle (i.e. 30% / 10 items in the bundle)"
+                },
+                {
+                    "name": "gameitemdescription[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Game's description of the game item"
+                }
+            ]
+        },
+        {
+            "name": "GetContributors",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                }
+            ]
+        }
+    ]
+}

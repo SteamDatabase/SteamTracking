@@ -207,6 +207,49 @@
                     "description": "appid of game"
                 }
             ]
+        },
+        {
+            "name": "SetUserStatsForGame",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of stats and achievements to set a value for (name/value param pairs)"
+                },
+                {
+                    "name": "name[0]",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Name of stat or achievement to set"
+                },
+                {
+                    "name": "value[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Value to set"
+                }
+            ]
         }
     ]
 }

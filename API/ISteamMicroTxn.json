@@ -1,0 +1,851 @@
+{
+    "name": "ISteamMicroTxn",
+    "methods": [
+        {
+            "name": "AdjustAgreement",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user with the agreement"
+                },
+                {
+                    "name": "agreementid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ID of agreement"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "nextprocessdate",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Date for next process"
+                }
+            ]
+        },
+        {
+            "name": "CancelAgreement",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user with the agreement"
+                },
+                {
+                    "name": "agreementid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ID of agreement"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                }
+            ]
+        },
+        {
+            "name": "FinalizeTxn",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                }
+            ]
+        },
+        {
+            "name": "FinalizeTxn",
+            "version": 2,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                }
+            ]
+        },
+        {
+            "name": "GetReport",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Report type (GAMESALES, STEAMSTORE, SETTLEMENT)"
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Beginning time to start report from (RFC 3339 UTC format)"
+                },
+                {
+                    "name": "maxresults",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of results to return (up to 1000)"
+                }
+            ]
+        },
+        {
+            "name": "GetReport",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Report type (GAMESALES, STEAMSTORE, SETTLEMENT)"
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Beginning time to start report from (RFC 3339 UTC format)"
+                },
+                {
+                    "name": "maxresults",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of results to return (up to 1000)"
+                }
+            ]
+        },
+        {
+            "name": "GetReport",
+            "version": 3,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Report type (GAMESALES, STEAMSTORE, SETTLEMENT)"
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Beginning time to start report from (RFC 3339 UTC format)"
+                },
+                {
+                    "name": "maxresults",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of results to return (up to 1000)"
+                }
+            ]
+        },
+        {
+            "name": "GetUserAgreementInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                }
+            ]
+        },
+        {
+            "name": "GetUserInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                }
+            ]
+        },
+        {
+            "name": "GetUserInfo",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                }
+            ]
+        },
+        {
+            "name": "InitTxn",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "itemcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of items in cart"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 639-1 language code of description"
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 4217 currency code"
+                },
+                {
+                    "name": "usersession",
+                    "type": "string",
+                    "optional": true,
+                    "description": "session where user will authorize the transaction. client or web (defaults to client)"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                },
+                {
+                    "name": "itemid[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "3rd party ID for item"
+                },
+                {
+                    "name": "qty[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Quantity of this item"
+                },
+                {
+                    "name": "amount[0]",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Total cost (in cents) of item(s)"
+                },
+                {
+                    "name": "description[0]",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Description of item"
+                },
+                {
+                    "name": "category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for item"
+                },
+                {
+                    "name": "associated_bundle[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional bundleid of associated bundle"
+                },
+                {
+                    "name": "billingtype[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing type"
+                },
+                {
+                    "name": "startdate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional start date for recurring billing"
+                },
+                {
+                    "name": "enddate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional end date for recurring billing"
+                },
+                {
+                    "name": "period[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional period for recurring billing"
+                },
+                {
+                    "name": "frequency[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional frequency for recurring billing"
+                },
+                {
+                    "name": "recurringamt[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing amount"
+                },
+                {
+                    "name": "bundlecount",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of bundles in cart"
+                },
+                {
+                    "name": "bundleid[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "3rd party ID of the bundle. This shares the same ID space as 3rd party items."
+                },
+                {
+                    "name": "bundle_qty[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Quantity of this bundle"
+                },
+                {
+                    "name": "bundle_desc[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Description of bundle"
+                },
+                {
+                    "name": "bundle_category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for bundle"
+                }
+            ]
+        },
+        {
+            "name": "InitTxn",
+            "version": 2,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "itemcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of items in cart"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 639-1 language code of description"
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 4217 currency code"
+                },
+                {
+                    "name": "usersession",
+                    "type": "string",
+                    "optional": true,
+                    "description": "session where user will authorize the transaction. client or web (defaults to client)"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                },
+                {
+                    "name": "itemid[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "3rd party ID for item"
+                },
+                {
+                    "name": "qty[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Quantity of this item"
+                },
+                {
+                    "name": "amount[0]",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Total cost (in cents) of item(s)"
+                },
+                {
+                    "name": "description[0]",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Description of item"
+                },
+                {
+                    "name": "category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for item"
+                },
+                {
+                    "name": "associated_bundle[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional bundleid of associated bundle"
+                },
+                {
+                    "name": "billingtype[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing type"
+                },
+                {
+                    "name": "startdate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional start date for recurring billing"
+                },
+                {
+                    "name": "enddate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional end date for recurring billing"
+                },
+                {
+                    "name": "period[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional period for recurring billing"
+                },
+                {
+                    "name": "frequency[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional frequency for recurring billing"
+                },
+                {
+                    "name": "recurringamt[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing amount"
+                },
+                {
+                    "name": "bundlecount",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of bundles in cart"
+                },
+                {
+                    "name": "bundleid[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "3rd party ID of the bundle. This shares the same ID space as 3rd party items."
+                },
+                {
+                    "name": "bundle_qty[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Quantity of this bundle"
+                },
+                {
+                    "name": "bundle_desc[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Description of bundle"
+                },
+                {
+                    "name": "bundle_category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for bundle"
+                }
+            ]
+        },
+        {
+            "name": "InitTxn",
+            "version": 3,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "itemcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of items in cart"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 639-1 language code of description"
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 4217 currency code"
+                },
+                {
+                    "name": "usersession",
+                    "type": "string",
+                    "optional": true,
+                    "description": "session where user will authorize the transaction. client or web (defaults to client)"
+                },
+                {
+                    "name": "ipaddress",
+                    "type": "string",
+                    "optional": true,
+                    "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                },
+                {
+                    "name": "itemid[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "3rd party ID for item"
+                },
+                {
+                    "name": "qty[0]",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Quantity of this item"
+                },
+                {
+                    "name": "amount[0]",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Total cost (in cents) of item(s)"
+                },
+                {
+                    "name": "description[0]",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Description of item"
+                },
+                {
+                    "name": "category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for item"
+                },
+                {
+                    "name": "associated_bundle[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional bundleid of associated bundle"
+                },
+                {
+                    "name": "billingtype[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing type"
+                },
+                {
+                    "name": "startdate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional start date for recurring billing"
+                },
+                {
+                    "name": "enddate[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional end date for recurring billing"
+                },
+                {
+                    "name": "period[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional period for recurring billing"
+                },
+                {
+                    "name": "frequency[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Optional frequency for recurring billing"
+                },
+                {
+                    "name": "recurringamt[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional recurring billing amount"
+                },
+                {
+                    "name": "bundlecount",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of bundles in cart"
+                },
+                {
+                    "name": "bundleid[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "3rd party ID of the bundle. This shares the same ID space as 3rd party items."
+                },
+                {
+                    "name": "bundle_qty[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Quantity of this bundle"
+                },
+                {
+                    "name": "bundle_desc[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Description of bundle"
+                },
+                {
+                    "name": "bundle_category[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Optional category grouping for bundle"
+                }
+            ]
+        },
+        {
+            "name": "ProcessAgreement",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user with the agreement"
+                },
+                {
+                    "name": "agreementid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "ID of agreement"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "amount",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Total cost (in cents) to charge"
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": false,
+                    "description": "ISO 4217 currency code"
+                }
+            ]
+        },
+        {
+            "name": "QueryTxn",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "transid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "Steam transaction ID"
+                }
+            ]
+        },
+        {
+            "name": "QueryTxn",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "transid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "Steam transaction ID"
+                }
+            ]
+        },
+        {
+            "name": "RefundTxn",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                }
+            ]
+        },
+        {
+            "name": "RefundTxn",
+            "version": 2,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                }
+            ]
+        }
+    ]
+}

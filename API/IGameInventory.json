@@ -1,0 +1,135 @@
+{
+    "name": "IGameInventory",
+    "methods": [
+        {
+            "name": "GetHistoryCommandDetails",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The steam ID of the account to operate on"
+                },
+                {
+                    "name": "command",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The command to run on that asset"
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The context to fetch history for"
+                },
+                {
+                    "name": "arguments",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The arguments that were provided with the command in the first place"
+                }
+            ]
+        },
+        {
+            "name": "GetUserHistory",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The Steam ID to fetch history for"
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The context to fetch history for"
+                },
+                {
+                    "name": "starttime",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Start time of the history range to collect"
+                },
+                {
+                    "name": "endtime",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "End time of the history range to collect"
+                }
+            ]
+        },
+        {
+            "name": "HistoryExecuteCommands",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The asset ID to operate on"
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The context to fetch history for"
+                },
+                {
+                    "name": "actorid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "A unique 32 bit ID for the support person executing the command"
+                }
+            ]
+        },
+        {
+            "name": "SupportGetAssetHistory",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "assetid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The asset ID to operate on"
+                },
+                {
+                    "name": "contextid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The context to fetch history for"
+                }
+            ]
+        }
+    ]
+}

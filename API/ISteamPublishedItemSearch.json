@@ -1,0 +1,267 @@
+{
+    "name": "ISteamPublishedItemSearch",
+    "methods": [
+        {
+            "name": "RankedByPublicationOrder",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "startidx",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Starting index in the result set (0 based)"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number Requested"
+                },
+                {
+                    "name": "tagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of Tags Specified"
+                },
+                {
+                    "name": "usertagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of User specific tags requested"
+                },
+                {
+                    "name": "hasappadminaccess",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Whether the user making the request is an admin for the app and can see private files"
+                },
+                {
+                    "name": "fileType",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "EPublishedFileInfoMatchingFileType, defaults to k_PFI_MatchingFileType_Items"
+                },
+                {
+                    "name": "tag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Tag to filter result set"
+                },
+                {
+                    "name": "usertag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "A user specific tag"
+                }
+            ]
+        },
+        {
+            "name": "RankedByTrend",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "startidx",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Starting index in the result set (0 based)"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number Requested"
+                },
+                {
+                    "name": "tagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of Tags Specified"
+                },
+                {
+                    "name": "usertagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of User specific tags requested"
+                },
+                {
+                    "name": "hasappadminaccess",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Whether the user making the request is an admin for the app and can see private files"
+                },
+                {
+                    "name": "fileType",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "EPublishedFileInfoMatchingFileType, defaults to k_PFI_MatchingFileType_Items"
+                },
+                {
+                    "name": "days",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "[1,7] number of days for the trend period, including today"
+                },
+                {
+                    "name": "tag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Tag to filter result set"
+                },
+                {
+                    "name": "usertag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "A user specific tag"
+                }
+            ]
+        },
+        {
+            "name": "RankedByVote",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appID of product"
+                },
+                {
+                    "name": "startidx",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Starting index in the result set (0 based)"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number Requested"
+                },
+                {
+                    "name": "tagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of Tags Specified"
+                },
+                {
+                    "name": "usertagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of User specific tags requested"
+                },
+                {
+                    "name": "hasappadminaccess",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Whether the user making the request is an admin for the app and can see private files"
+                },
+                {
+                    "name": "fileType",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "EPublishedFileInfoMatchingFileType, defaults to k_PFI_MatchingFileType_Items"
+                },
+                {
+                    "name": "tag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Tag to filter result set"
+                },
+                {
+                    "name": "usertag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "A user specific tag"
+                }
+            ]
+        },
+        {
+            "name": "ResultSetSummary",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "appID relevant to all subsequent tags"
+                },
+                {
+                    "name": "tagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of Tags Specified"
+                },
+                {
+                    "name": "usertagcount",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of User specific tags requested"
+                },
+                {
+                    "name": "hasappadminaccess",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Whether the user making the request is an admin for the app and can see private files"
+                },
+                {
+                    "name": "fileType",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "EPublishedFileInfoMatchingFileType, defaults to k_PFI_MatchingFileType_Items"
+                },
+                {
+                    "name": "tag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Tag to filter result set"
+                },
+                {
+                    "name": "usertag[0]",
+                    "type": "string",
+                    "optional": true,
+                    "description": "A user specific tag"
+                }
+            ]
+        }
+    ]
+}

@@ -68,6 +68,86 @@
                     "description": "Comma-seperated list of feed names to return news for"
                 }
             ]
+        },
+        {
+            "name": "GetNewsForAppAuthed",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to retrieve news for"
+                },
+                {
+                    "name": "maxlength",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."
+                },
+                {
+                    "name": "enddate",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Retrieve posts earlier than this date (unix epoch timestamp)"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "# of posts to retrieve (default 20)"
+                }
+            ]
+        },
+        {
+            "name": "GetNewsForAppAuthed",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to retrieve news for"
+                },
+                {
+                    "name": "maxlength",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."
+                },
+                {
+                    "name": "enddate",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Retrieve posts earlier than this date (unix epoch timestamp)"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "# of posts to retrieve (default 20)"
+                },
+                {
+                    "name": "feeds",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Comma-seperated list of feed names to return news for"
+                }
+            ]
         }
     ]
 }

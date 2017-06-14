@@ -2,6 +2,199 @@
     "name": "IInventoryService",
     "methods": [
         {
+            "name": "AddItem",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Adds an item to a user's inventory",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "itemdefid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "itempropsjson",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "notify",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Should notify the user that the item was added to their Steam Inventory."
+                },
+                {
+                    "name": "requestid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "AddPromoItem",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Adds a promo item to a user's inventory",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "itemdefid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "itempropsjson",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "notify",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Should notify the user that the item was added to their Steam Inventory."
+                },
+                {
+                    "name": "requestid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "ExchangeItem",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Craft an item in a user's inventory",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "materialsitemid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "materialsquantity",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "outputitemdefid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetInventory",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Retrieves a users inventory as a big JSON blob",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetItemDefs",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get item definitions",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "modifiedsince",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "itemdefids",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "workshopids",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "cache_max_age_seconds",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Allow stale data to be returned for the specified number of seconds."
+                }
+            ]
+        },
+        {
             "name": "GetPriceSheet",
             "version": 1,
             "httpmethod": "GET",
@@ -17,6 +210,74 @@
                     "name": "ecurrency",
                     "type": "int32",
                     "optional": false
+                }
+            ]
+        },
+        {
+            "name": "Consolidate",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Consolidate items of the given type within an user's inventory",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "itemdefid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "force",
+                    "type": "bool",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "name": "GetQuantity",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the total number of available items of the given type",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "itemdefid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "force",
+                    "type": "bool",
+                    "optional": true
                 }
             ]
         }

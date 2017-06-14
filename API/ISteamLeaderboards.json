@@ -1,0 +1,271 @@
+{
+    "name": "ISteamLeaderboards",
+    "methods": [
+        {
+            "name": "DeleteLeaderboard",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "name of the leaderboard to delete"
+                }
+            ]
+        },
+        {
+            "name": "FindOrCreateLeaderboard",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "name of the leaderboard to create"
+                },
+                {
+                    "name": "sortmethod",
+                    "type": "string",
+                    "optional": true,
+                    "description": "sort method to use for this leaderboard (defaults to Ascending)"
+                },
+                {
+                    "name": "displaytype",
+                    "type": "string",
+                    "optional": true,
+                    "description": "display type for this leaderboard (defaults to Numeric)"
+                },
+                {
+                    "name": "createifnotfound",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard will be created if it doesn't exist. Defaults to true."
+                },
+                {
+                    "name": "onlytrustedwrites",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores cannot be set by clients, and can only be set by publisher via SetLeaderboardScore WebAPI. Defaults to false."
+                },
+                {
+                    "name": "onlyfriendsreads",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores can only be read for friends by clients, scores can always be read by publisher. Defaults to false."
+                }
+            ]
+        },
+        {
+            "name": "FindOrCreateLeaderboard",
+            "version": 2,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "name of the leaderboard to create"
+                },
+                {
+                    "name": "sortmethod",
+                    "type": "string",
+                    "optional": true,
+                    "description": "sort method to use for this leaderboard (defaults to Ascending)"
+                },
+                {
+                    "name": "displaytype",
+                    "type": "string",
+                    "optional": true,
+                    "description": "display type for this leaderboard (defaults to Numeric)"
+                },
+                {
+                    "name": "createifnotfound",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard will be created if it doesn't exist. Defaults to true."
+                },
+                {
+                    "name": "onlytrustedwrites",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores cannot be set by clients, and can only be set by publisher via SetLeaderboardScore WebAPI. Defaults to false."
+                },
+                {
+                    "name": "onlyfriendsreads",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores can only be read for friends by clients, scores can always be read by publisher. Defaults to false."
+                }
+            ]
+        },
+        {
+            "name": "GetLeaderboardEntries",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "rangestart",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "range start or 0"
+                },
+                {
+                    "name": "rangeend",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "range end or max LB entries"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "SteamID used for friend & around user requests"
+                },
+                {
+                    "name": "leaderboardid",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "ID of the leaderboard to view"
+                },
+                {
+                    "name": "datarequest",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "type of request: RequestGlobal, RequestAroundUser, RequestFriends"
+                }
+            ]
+        },
+        {
+            "name": "GetLeaderboardsForGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                }
+            ]
+        },
+        {
+            "name": "GetLeaderboardsForGame",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                }
+            ]
+        },
+        {
+            "name": "ResetLeaderboard",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "leaderboardid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "numeric ID of the target leaderboard. Can be retrieved from GetLeaderboardsForGame"
+                }
+            ]
+        },
+        {
+            "name": "SetLeaderboardScore",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "leaderboardid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "numeric ID of the target leaderboard. Can be retrieved from GetLeaderboardsForGame"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "steamID to set the score for"
+                },
+                {
+                    "name": "score",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "the score to set for this user"
+                },
+                {
+                    "name": "scoremethod",
+                    "type": "string",
+                    "optional": false,
+                    "description": "update method to use. Can be \"KeepBest\" or \"ForceUpdate\""
+                },
+                {
+                    "name": "details",
+                    "type": "rawbinary",
+                    "optional": true,
+                    "description": "game-specific details for how the score was earned. Up to 256 bytes."
+                }
+            ]
+        }
+    ]
+}

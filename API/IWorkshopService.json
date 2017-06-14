@@ -1,0 +1,132 @@
+{
+    "name": "IWorkshopService",
+    "methods": [
+        {
+            "name": "SetItemPaymentRules",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Set item payment rules.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "gameitemid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "associated_workshop_files",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "partner_accounts",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "validate_only",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Only validates the rules and does not persist them."
+                },
+                {
+                    "name": "make_workshop_files_subscribable",
+                    "type": "bool",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetFinalizedContributors",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get a list of contributors for a specific gameitemid/app combination.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "gameitemid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetItemDailyRevenue",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get item revenue for a specific app/item definition for a date range.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "item_id",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "date_start",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "date_end",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "PopulateItemDescriptions",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Populate block of item descriptions.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "languages",
+                    "type": "{message}",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

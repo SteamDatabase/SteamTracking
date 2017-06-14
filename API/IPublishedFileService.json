@@ -188,6 +188,69 @@
                     "description": "Return playtime stats for the specified number of days before today."
                 }
             ]
+        },
+        {
+            "name": "SetDeveloperMetadata",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Sets the metadata for a developer on the published file",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "metadata",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "UpdateTags",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Updates tags on the published file",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "add_tags",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "remove_tags",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
         }
     ]
 }

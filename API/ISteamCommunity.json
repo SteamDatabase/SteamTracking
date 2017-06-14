@@ -1,0 +1,60 @@
+{
+    "name": "ISteamCommunity",
+    "methods": [
+        {
+            "name": "ReportAbuse",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamidActor",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user doing the reporting"
+                },
+                {
+                    "name": "steamidTarget",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of the entity being accused of abuse"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to check for ownership"
+                },
+                {
+                    "name": "abuseType",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Abuse type code (see EAbuseReportType enum)"
+                },
+                {
+                    "name": "contentType",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Content type code (see ECommunityContentType enum)"
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Narrative from user"
+                },
+                {
+                    "name": "gid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "GID of related record (depends on content type)"
+                }
+            ]
+        }
+    ]
+}

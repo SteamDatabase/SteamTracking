@@ -1,0 +1,39 @@
+{
+    "name": "IBroadcastService",
+    "methods": [
+        {
+            "name": "PostGameDataFrame",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Add a game meta data frame to broadcast",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "broadcast_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "frame_data",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}
