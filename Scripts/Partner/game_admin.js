@@ -861,7 +861,7 @@ function CheckMovieConvertStatus( movieContainer )
 	.done( function( data ) {
 		if ( data.success )
 		{
-			SetMovieConvertState( movieContainer, data.state );
+			SetMovieConvertState( movieContainer, data.state, data.queue_pos );
 			if ( data.screenshot )
 			{
 				var screenshot = movieContainer.find( '.movie_screenshot' )[0];
@@ -882,7 +882,7 @@ function CheckMovieConvertStatus( movieContainer )
 	} );
 }
 
-function SetMovieConvertState( movieContainer, state )
+function SetMovieConvertState( movieContainer, state, queue_pos )
 {
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	var movieUploadUI = movieContainer.find( '.movie_upload_ui' )[0];
@@ -900,7 +900,24 @@ function SetMovieConvertState( movieContainer, state )
 	}
 	else if ( state == 'converting' || state == 'publishing' )
 	{
-		$J( status ).text( state == 'converting' ? 'Converting...' : 'Publishing...' );
+		var k_SimProcessing = 2;
+		var statusMsg = '';
+		if ( state == 'converting' )
+		{
+			if ( queue_pos === undefined || queue_pos < k_SimProcessing )
+				statusMsg = 'Converting...';
+			else {
+				if ( queue_pos > k_SimProcessing )
+					statusMsg = 'Please wait... There are ' + queue_pos + ' trailers ahead in the queue.';
+				else
+					statusMsg = 'Please wait... This trailer is next in the queue for processing.';
+			}
+		}
+		else {
+			statusMsg = 'Publishing...';
+		}
+
+		$J( status ).text( statusMsg );
 		bSchedule = true;
 
 		movieUploadedUI.hide();
