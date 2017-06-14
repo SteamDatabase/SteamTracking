@@ -2,6 +2,31 @@
     "name": "ICSGOServers_730",
     "methods": [
         {
+            "name": "GetGameMapsPlaytime",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "interval",
+                    "type": "string",
+                    "optional": false,
+                    "description": "What recent interval is requested, possible values: day, week, month"
+                },
+                {
+                    "name": "gamemode",
+                    "type": "string",
+                    "optional": false,
+                    "description": "What game mode is requested, possible values: competitive, casual"
+                },
+                {
+                    "name": "mapgroup",
+                    "type": "string",
+                    "optional": false,
+                    "description": "What maps are requested, possible values: operation"
+                }
+            ]
+        },
+        {
             "name": "GetGameServersStatus",
             "version": 1,
             "httpmethod": "GET",
