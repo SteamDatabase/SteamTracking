@@ -1,0 +1,904 @@
+
+#pageContainer, #mainbody, body, html {
+	min-height:100%;
+}
+
+body {
+	background-color: #161920;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+body h4 {
+	font-size: 14px;
+	margin-top: 15px;
+	margin-bottom: 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+table {
+	width: 100%;
+	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+table strong {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+th {
+	background: #4e5155;
+	padding: 5px 8px;
+	color: #e5e5e5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+tr {
+	border-collapse: collapse;
+	background: #1d2027;
+}
+tr:nth-child(odd) {
+	background: #22252b;
+}
+tr:hover {
+	outline: rgba( 255, 255, 255, 0.4) 1px solid;
+}
+td {
+	padding: 5px 8px;
+}
+
+#pageContainer.docNavFrame ~ .perf_timing_area {
+	width: auto;
+	position: absolute;
+	top: 120px;
+	right: 8px;
+	font-size: 11px;
+}
+
+#docPinnedContainer {
+	display: flex;
+	width: auto;
+	position: absolute;
+	top: 134px;
+	right: 0;
+	color: #e88346;
+}
+
+#docPinnedContainer > * {
+	margin-right: 8px;
+}
+
+#docPinnedContainer .docSearchArea input[type=text] {
+	min-width: 240px;
+}
+
+#adminControlsLanguage {
+	padding: 0 3px;
+}
+
+.btnv6_white_transparent.editorOnly > span {
+	border-color: #ca5029;
+}
+
+.AdminPageContent {
+	padding: 0 0 113px;
+	margin: 0;
+	max-width: initial;
+	width: 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+#landingWelcome  {
+	padding: 15px 46px 12px 15px;
+	margin-top: 0;
+	background-color: #096295;
+}
+
+#landingNav > a.active {
+	background-color: #096295;
+	color: #bababa;
+}
+
+#docContentArea {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+}
+
+.landingRightCol {
+	width: 360px;
+}
+
+.adminPanel {
+	padding: 6px;
+	border: solid 1px #ca5029;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.adminPanelCenterer {
+	text-align: center;
+}
+
+.floatingAdminPanel {
+	float: right;
+	margin-left: 10px;
+	border-right: none;
+	border-top: none;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-top: 2px;
+	padding-right: 6px;
+	background-color: #1a1a1a;
+}
+
+.landingLeftCol {
+	margin-right: 380px;
+}
+
+#pageContainer, #mainbody, body, html {
+	min-height:100%;
+}
+
+#articleSummary table {
+	margin-bottom: 12px;
+}
+
+#articleSummaryCapabilityList {
+	margin-left: 10px;
+}
+
+.adminSummaryControlHolder {
+	display: flex;
+	align-items: center;
+}
+
+.adminSummaryControlHolder > *:last-child {
+	flex-grow: 1;
+}
+
+.docPageTitle {
+	font-size: 25px;
+	color: #67c1f5;
+}
+
+.docPageTitle + .landingBreadcrumbs,
+.docPageTitle + .landingBreadcrumbs a,
+.docPageTitle + .searchCommunityLink {
+	margin: 2px 0px 5px 0px;
+}
+
+.docPageTitle + .searchCommunityLink a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+
+.docPageTitle + .searchCommunityLink a:hover {
+	color: #67c1f5;
+}
+
+.docPageTitle + .landingBreadcrumbs + .grayRule,
+.docPageTitle + .searchCommunityLink + .grayRule {
+	margin-bottom: 12px;
+}
+
+.documentation_bbcode {
+	line-height: 1.3em;
+}
+
+.documentation_bbcode img {
+	max-width: 100%;
+	box-shadow: 0 0 10px 3px rgba(54, 73, 99, 0.7);
+}
+
+.documentation_bbcode h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 1.5em;
+}
+
+.documentation_bbcode h3 {
+	color: #67c1f5;
+	text-transform: none;
+	font-weight: normal;
+}
+
+.documentation_bbcode h2 {
+	margin-bottom: 0;
+}
+
+.documentation_bbcode h2.bb_section {
+	margin-top: 40px;
+	margin-bottom: 6px;
+
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+.documentation_bbcode h2.bb_section:not(:first-child) {
+	border-top: 2px solid #2e3037;
+}
+
+.documentation_bbcode h2.bb_subsection {
+	font-size: 18px;
+	margin-bottom: 4px;
+	padding-top: 5px;
+	border-top: 2px solid #2e3037;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.documentation_bbcode h2:first-child {
+	margin-top: 0;
+}
+
+.documentation_bbcode h2.bb_section > a, .documentation_bbcode h2.bb_subsection > a {
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
+}
+
+#hashLocationHighlight {
+	position: absolute;
+	z-index: -100;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 5px solid #535B62;
+	border-radius: 5px;
+	animation-name: highlightHash;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	overflow-y: hidden;
+}
+
+@keyframes highlightHash {
+	0% {
+		background-color: #535B62;
+	}
+
+	100% {
+		background-color: #27333a;
+	}
+}
+
+.landingRightCol h2, .adminPanel h2 {
+	font-size: 18px;
+	color: #acacac;
+}
+
+.documentation_bbcode ul, .documentation_bbcode ol {
+	padding-left: 40px;
+}
+
+.documentation_bbcode ul li {
+	list-style-type: square;
+}
+
+.documentation_bbcode ul.bb_circle > li, .documentation_bbcode li.bb_circle  > li {
+	list-style-type: disc;
+}
+
+.documentation_bbcode ul.bb_none > li, .documentation_bbcode li.bb_none > li {
+	list-style-type: none;
+}
+
+.documentation_bbcode ol li, .documentation_bbcode ul li {
+	margin-top: 8px;
+	line-height: 1.4em;
+}
+
+.documentation_bbcode .bb_code.nohighlight, .documentation_bbcode .bb_code_inline.nohighlight {
+	color: white;
+}
+
+.documentation_bbcode .bb_code, .documentation_bbcode .bb_code_inline {
+	background-color: rgba( 35, 35, 35, 0.6 );
+}
+
+.documentation_bbcode .bb_code_inline {
+	display: inline;
+	padding: 0;
+	background-color: transparent;
+}
+
+.documentation_bbcode .bb_callout {
+	background: #94b7ca;
+	border-left: #486B7E 5px solid;
+	padding: 16px;
+	color: #222222;
+	margin: 8px 16px;
+	display: flex;
+}
+
+.documentation_bbcode .bb_callout > div {
+	flex-grow: 1;
+}
+
+.documentation_bbcode .bb_callout > div strong {
+	color: inherit;
+}
+
+.documentation_bbcode .bb_callout > div h3 {
+	color: inherit;
+	margin-top: 0;
+	margin-bottom: .65em;
+	text-transform: none;
+}
+
+.documentation_bbcode .bb_callout.bb_fixed {
+	font-family: Consolas,monospace;
+}
+
+.documentation_bbcode .bb_callout.bb_lightblue {
+	background: #e8f4ff;
+	border-color: #bed1e6;
+}
+
+.documentation_bbcode .bb_callout.bb_green {
+	background: #e5fadc;
+	border-color: #bbdaaf;
+}
+
+.documentation_bbcode .bb_callout.bb_red {
+	background: #fde8e8;
+	border-color: #e7aaaa;
+}
+
+.documentation_bbcode .bb_callout.bb_yellow {
+	background: #fffcd5;
+	border-color: #e7dca4;
+}
+
+.documentation_bbcode .bb_callout.bb_gray, .documentation_bbcode .bb_callout.bb_grey {
+	background: #f1f1f1;
+	border-color: #cfcfcf;
+}
+
+.documentation_bbcode .bb_callout a {
+	color: #eeeeee;
+}
+
+.documentation_bbcode .bb_callout.bb_lightblue a,
+.documentation_bbcode .bb_callout.bb_green a,
+.documentation_bbcode .bb_callout.bb_red a,
+.documentation_bbcode .bb_callout.bb_yellow a,
+.documentation_bbcode .bb_callout.bb_gray a,
+.documentation_bbcode .bb_callout.bb_grey a
+{
+	color: #808285;
+}
+
+.documentation_bbcode div.bb_linkblocks {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 16px auto 0;
+}
+
+.documentation_bbcode div.bb_linkblocks > a.bb_linkblock {
+	min-height: 128px;
+	width: 480px;
+	display: block;
+	margin: 0 auto 20px;
+	padding: 30px 20px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 15px;
+
+	background-color: #1d5e81;
+	background-image: url('https://partner.steamgames.com/public/images/Documentation/capsule_03.jpg');
+	border: 1px solid rgba(0, 0, 0, 0);
+	color: #d2d2d2;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 3px rgba(54, 73, 99, 0.7);
+}
+
+.documentation_bbcode div.bb_linkblocks > a.bb_linkblock:hover {
+	background-image: url('https://partner.steamgames.com/public/images/Documentation/capsule_03_over.jpg');
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.documentation_bbcode div.bb_linkblocks > a.bb_linkblock > * {
+	max-width: 75%;
+	margin: 20px auto;
+	font-size: 28px;
+	color: #fff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.documentation_bbcode .dynamiclink_box {
+	max-width: 1000px;
+}
+
+.documentation_bbcode .dynamiclink_youtubeviewvideo {
+	max-width: 1280px;
+}
+
+h2.editorOnly {
+	color: #ca5029;
+}
+
+#docToc {
+	min-width: 360px;
+	width: 360px;
+	background-color: #2b3647;
+	padding-left: 16px;
+	line-height: 1.3em;
+}
+
+#docToc.closed {
+	display: none;
+}
+
+#docTocArea {
+	transition-property: margin;
+	transition-duration: 60ms;
+	transition-timing-function: ease-in-out;
+}
+
+.docScrollColumn {
+	flex: 1 1 auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 100%;
+}
+
+.docSearchArea {
+	display: flex;
+	align-items: center;
+	background-color: #171b22;
+	padding: 0 4px;
+	border: 1px solid rgba(103, 193, 245, 0.7);
+	border-radius: 2px;
+	box-shadow: 0 0 20px rgba(147, 211, 245, 0.50);
+}
+
+.docSearchArea.centered {
+	justify-content: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.docSearchArea.big {
+	margin-bottom: 40px;
+	margin-top: 20px;
+	box-shadow: 0 0 50px rgba(147, 211, 245, 0.50);
+	border: 1px solid rgba(103, 193, 245, 0.7);
+	border-radius: 2px;
+	padding: 5px 8px;
+}
+
+.docSearchArea > input[type=text] {
+	flex-grow: 1;
+	padding: 0;
+}
+
+.docSearchArea > input[type=text]:placeholder-shown {
+	font-style: italic;
+	color: #fff;
+}
+.docSearchArea > input[type=text]::placeholder {
+	color: #8195a1;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.docSearchArea > input[type=image] {
+	height: 18px;
+}
+
+.docSearchArea > input {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.docSearchArea.big > input[type=text] {
+	font-size: 20px;
+}
+
+#docTocSearchArea {
+	padding-right: 16px;
+	margin-bottom: 8px;
+}
+
+#docTocHideContainer {
+	min-width: 16px;
+	background-color: #354257;
+}
+#docTocHideContainer:hover {
+	min-width: 16px;
+	background-color: #41516b;
+	cursor: pointer;
+}
+
+#docContentArea > * {
+	padding-top: 16px;
+	margin-bottom: 15px;
+}
+
+#docTocHideControl {
+	height: 100%;
+	width: 100%;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAFQCAYAAAC23P65AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAAK9SURBVHhepdJLbsJAEEBBcg/uf6IssshdyDSykB3XgodHKhk/Zlrmc3s8HpcwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMheNa6/o1nje7td83TmEzh7+Xn+W+nX2u7f2XU9jMgDk863d5DVmvD05h577M4VmvIet6cAo78xT7IfNE0w77Djf/XB5w6SNc/hJnwOc/47Zxhnz8R3obY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPBWDAWjAVjwVgwFowFY8FYMBaMBWPB+L7H7Q+4k5ebbiK0iAAAAABJRU5ErkJggg==);
+	background-size: contain;
+	background-repeat: space;
+	transform: rotateY(180deg);
+	transition-property: all;
+	transition-duration: .5s;
+}
+
+#docTocHideControl.closed {
+	transform: rotateY(0deg);
+}
+
+#docMainContentArea {
+	width: 100%;
+	padding: 12px 24px;
+}
+
+#docNavigation > ul {
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+#docNavigation li>span, #docNavigation li>a {
+	color: #acacac;
+	display: flex;
+	/*word-break: break-all;*/
+	margin-right: 8px;
+}
+#docNavigation li>span, #docNavigation li>a:hover {
+	color: #e5e5e5;
+}
+
+#docNavigation li>span>span:nth-child(2), #docNavigation li>a>span:nth-child(2) {
+	padding-left: 16px;
+	text-indent: -16px;
+}
+
+#docNavigation li.currentpath > span, #docNavigation li.currentpath > a {
+	color: white;
+}
+
+#docNavigation li {
+	margin: 3px 0;
+	color: #acacac;
+}
+
+#docNavigation a {
+	text-decoration: none;
+}
+
+#docNavigation .icon {
+	cursor: pointer;
+	min-width: 16px;
+	margin-right: 2px;
+}
+
+.collapse_toggle {
+	transform: rotate(90deg);
+}
+
+.collapse_toggle.collapse_toggle_transition {
+	transition-property: all;
+	transition-duration: .2s;
+}
+
+.collapse_toggle.closed {
+	transform: rotate(0deg);
+}
+
+#adminNonVisibleWarning {
+	border-width: 3px;
+}
+
+#docNavigationLegend {
+	margin: 10px 0;
+}
+
+#docNavigation .priority, #docNavigationLegend .priority {
+	padding-left: 4px;
+	color: goldenrod;
+}
+
+#docNavigation .betaonly, #docNavigationLegend .betaonly {
+	padding-left: 4px;
+	color: yellow;
+}
+
+#docNavigation .requirescapability, #docNavigationLegend .requirescapability {
+	padding-left: 4px;
+	color: orange;
+}
+
+.docSearchResults .docSearchResult {
+	margin: 4px 0;
+}
+
+.docSearchResults .docSearchResult:first-child {
+	margin-top: 0;
+}
+
+.docSearchResults a.docSearchResultLink {
+	font-family: Tahoma,Arial,sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1.5em;
+	text-decoration: none;
+	color: white;
+}
+
+.docSearchResults .docSearchEnglishTitle {
+	font-size: 12px;
+	line-height: 1.3em;
+}
+
+.docSearchResults a.docSearchResultLink:hover {
+	color: #67c1f5;
+}
+
+.docSearchResults .docSearchHighlight {
+	line-height: 1.3em;
+}
+
+.docSearchResults em {
+	background-color: #6a8704;
+}
+
+.docSearchResults .docSearchHighlight em {
+	color: white;
+}
+
+.docSearchPagination {
+	display: flex;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.docSearchPagination a {
+	color: white;
+	text-decoration: none;
+}
+
+.docSearchPagination > div {
+	font-size: 16px;
+	color: white;
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.docSearchPagination > div:nth-child(2) {
+	text-align: center;
+}
+
+.docSearchPagination > div:nth-child(3) {
+	text-align: right;
+}
+
+#landingWelcome .breadcrumbs,
+#landingWelcome .breadcrumbs a {
+	color: #cccccc;
+}
+
+#filePreviewArea, #fileSelectionArea {
+	background: rgba( 0, 0, 0, 0.8);
+	padding: 12px 0px;
+}
+
+.filePreview .filename {
+	font-size: 11px;
+}
+
+
+.filetype_icon__blank {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/_blank.png);
+}
+.filetype_icon__page {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/_page.png);
+}
+.filetype_icon_aac {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/aac.png);
+}
+.filetype_icon_ai {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ai.png);
+}
+.filetype_icon_aiff {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/aiff.png);
+}
+.filetype_icon_avi {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/avi.png);
+}
+.filetype_icon_bmp {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/bmp.png);
+}
+.filetype_icon_c {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/c.png);
+}
+.filetype_icon_cpp {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/cpp.png);
+}
+.filetype_icon_css {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/css.png);
+}
+.filetype_icon_dat {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/dat.png);
+}
+.filetype_icon_dmg {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/dmg.png);
+}
+.filetype_icon_doc {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/doc.png);
+}
+.filetype_icon_dotx {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/dotx.png);
+}
+.filetype_icon_dwg {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/dwg.png);
+}
+.filetype_icon_dxf {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/dxf.png);
+}
+.filetype_icon_eps {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/eps.png);
+}
+.filetype_icon_exe {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/exe.png);
+}
+.filetype_icon_flv {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/flv.png);
+}
+.filetype_icon_gif {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/gif.png);
+}
+.filetype_icon_h {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/h.png);
+}
+.filetype_icon_hpp {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/hpp.png);
+}
+.filetype_icon_html {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/html.png);
+}
+.filetype_icon_ics {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ics.png);
+}
+.filetype_icon_iso {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/iso.png);
+}
+.filetype_icon_java {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/java.png);
+}
+.filetype_icon_jpg {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/jpg.png);
+}
+.filetype_icon_js {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/js.png);
+}
+.filetype_icon_key {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/key.png);
+}
+.filetype_icon_less {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/less.png);
+}
+.filetype_icon_mid {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/mid.png);
+}
+.filetype_icon_mp3 {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/mp3.png);
+}
+.filetype_icon_mp4 {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/mp4.png);
+}
+.filetype_icon_mpg {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/mpg.png);
+}
+.filetype_icon_odf {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/odf.png);
+}
+.filetype_icon_ods {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ods.png);
+}
+.filetype_icon_odt {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/odt.png);
+}
+.filetype_icon_otp {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/otp.png);
+}
+.filetype_icon_ots {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ots.png);
+}
+.filetype_icon_ott {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ott.png);
+}
+.filetype_icon_pdf {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/pdf.png);
+}
+.filetype_icon_php {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/php.png);
+}
+.filetype_icon_png {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/png.png);
+}
+.filetype_icon_ppt {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/ppt.png);
+}
+.filetype_icon_psd {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/psd.png);
+}
+.filetype_icon_py {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/py.png);
+}
+.filetype_icon_qt {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/qt.png);
+}
+.filetype_icon_rar {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/rar.png);
+}
+.filetype_icon_rb {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/rb.png);
+}
+.filetype_icon_rtf {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/rtf.png);
+}
+.filetype_icon_sass {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/sass.png);
+}
+.filetype_icon_scss {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/scss.png);
+}
+.filetype_icon_sql {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/sql.png);
+}
+.filetype_icon_tga {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/tga.png);
+}
+.filetype_icon_tgz {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/tgz.png);
+}
+.filetype_icon_tiff {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/tiff.png);
+}
+.filetype_icon_txt {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/txt.png);
+}
+.filetype_icon_wav {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/wav.png);
+}
+.filetype_icon_xls {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/xls.png);
+}
+.filetype_icon_xlsx {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/xlsx.png);
+}
+.filetype_icon_xml {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/xml.png);
+}
+.filetype_icon_yml {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/yml.png);
+}
+.filetype_icon_zip {
+	background-image: url(https://partner.steamgames.com/public/images/free-file-icons/512px/zip.png);
+}
