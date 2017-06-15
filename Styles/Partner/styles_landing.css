@@ -775,6 +775,15 @@ p {
 .noInfo.large {
     font-size: 18px;
 }
+.noInfo_ctn {
+	border: 1px solid #e1c48a;
+	padding: 12px;
+}
+
+.infoValid_ctn {
+	border: 1px solid #a3cf06;
+	padding: 12px;
+}
 
 .buttonRow {
 	display: block;
