@@ -99772,6 +99772,390 @@
 				"basename"	"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_%s.mdl"
 			}
 		}
+		"9537"
+		{		
+			"name"				"ozfortress Premier 1st Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+		}
+		"9538"
+		{		
+			"name"				"ozfortress Premier 2nd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+		}
+		"9539"
+		{		
+			"name"				"ozfortress Premier 3rd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+		}
+		"9540"
+		{		
+			"name"				"ozfortress Premier Participant Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Participant"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+		}
+		"9541"
+		{		
+			"name"				"ozfortress Intermediate 1st Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9542"
+		{		
+			"name"				"ozfortress Intermediate 2nd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9543"
+		{		
+			"name"				"ozfortress Intermediate 3rd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9544"
+		{		
+			"name"				"ozfortress Intermediate Participant Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Participant"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"9545"
+		{		
+			"name"				"ozfortress Open 1st Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9546"
+		{		
+			"name"				"ozfortress Open 2nd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9547"
+		{		
+			"name"				"ozfortress Open 3rd Place Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9548"
+		{		
+			"name"				"ozfortress Open Participant Season 19"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season19"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"9549"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9550"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9551"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9552"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9553"
+		{		
+			"name"				"ETF2L 6v6 High Gold Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9554"
+		{		
+			"name"				"ETF2L 6v6 High Silver Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9555"
+		{		
+			"name"				"ETF2L 6v6 High Bronze Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9556"
+		{		
+			"name"				"ETF2L 6v6 High Playoff Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9557"
+		{		
+			"name"				"ETF2L 6v6 High Participation Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9558"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9559"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9560"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9561"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9562"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9563"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9564"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9565"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9566"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9567"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 27"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season27"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9568"
+		{		
+			"name"				"ETF2L Fresh Meat Challenge Gold Medal Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Meat_Challenge_Gold"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/etf2l_fresh_meat_gold/etf2l_fresh_meat_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_fresh_meat_gold/etf2l_fresh_meat_gold_%s.mdl"
+			}
+		}
+		"9569"
+		{		
+			"name"				"ETF2L Fresh Meat Challenge Silver Medal Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Meat_Challenge_Silver"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/etf2l_fresh_meat_silver/etf2l_fresh_meat_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_fresh_meat_silver/etf2l_fresh_meat_silver_%s.mdl"
+			}
+		}
+		"9570"
+		{		
+			"name"				"ETF2L Fresh Meat Challenge Bronze Medal Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Meat_Challenge_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/etf2l_fresh_meat_bronze/etf2l_fresh_meat_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_fresh_meat_bronze/etf2l_fresh_meat_bronze_%s.mdl"
+			}
+		}
+		"9571"
+		{		
+			"name"				"ETF2L Fresh Meat Challenge Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Meat_Challenge_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/etf2l_fresh_meat_participant/etf2l_fresh_meat_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_fresh_meat_participant/etf2l_fresh_meat_participant_%s.mdl"
+			}
+		}
 
 
 
