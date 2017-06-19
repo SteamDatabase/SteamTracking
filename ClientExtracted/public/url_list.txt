@@ -610,6 +610,13 @@ StoreAccount
 	filter	"profile"
 }
 
+SteamLanguage
+{
+	url		"%storehttps%/account/languagepreferences/"
+	method	"internal"
+	filter	"profile"
+}
+
 StoreWallet
 {
 	//link from client chrome to user's store account info

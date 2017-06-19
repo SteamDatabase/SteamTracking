@@ -2,12 +2,14 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/ipcclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
@@ -18,6 +20,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/parentalinterpreter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/powermanagement.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
@@ -176,7 +179,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/UpdateManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/UpdateManager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveySubSummarize.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveyVGuiModule.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ValveSurveyWizard.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/appfilter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
@@ -232,8 +234,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuibetacontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuilanguagecontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuivrcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
@@ -461,6 +466,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/streaming/streamingoverlay.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_bluetoothupgrade.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_calibration.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootfileselector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootgameactions.cpp

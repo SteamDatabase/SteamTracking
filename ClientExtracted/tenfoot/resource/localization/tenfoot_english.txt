@@ -1403,6 +1403,7 @@
 	"Checkout_PaymentMethod_VerifyCountry"		"I verify that I live in {s:country}"
 	"Checkout_PaymentMethod_WalletLow"			"Your Steam Wallet balance is too low to cover this transaction!\n\nPlease select a payment method for the remaining {s:purchase_balance}."
 	"Checkout_PaymentMethod_ClickandBuy"		"ClickandBuy"
+	"Checkout_PaymentMethod_BankName"           "Select a bank:"
 
 	"Checkout_BillingInfo_Title"				"Billing address"
 	"Checkout_BillingInfo_FirstName"			"First name"
@@ -2134,6 +2135,7 @@
 	"Library_Details_FieldLabel_DpadClick"			"Click Action"
 	"Library_Details_FieldLabel_AbsMouseClick"		"Click Action"
 	"Library_Details_FieldLabel_RadialClick"		"Click Action"
+	"Library_Details_FieldLabel_OverlapRegion"		"Overlap Region"
 	"Library_Details_FieldLabel_Sensitivity"		"Sensitivity"
 	"Library_Details_FieldLabel_Sensitivity_Mouse_Joystick_Warning" "Adjust sensitivity in-game."
 	"Library_Details_FieldLabel_MouseSensitivity"	"Mouse Sensitivity"
@@ -3435,6 +3437,9 @@
 
 	"Steam_AllowGameLaunch_Info"	"{s:gamename} is attempting to launch with the optional parameters  shown below.\n<br><br><span class=\"GameLaunchWarningColor\">\"{s:arguments}\"</span><br><br>If you did not request this launch or do not understand these options, select Cancel."
 	"Steam_AllowGameLaunch_Title"	"Allow game launch?"
+
+	"Steam_SiteLicense_LockedDetail_Title"	"Site License Error"
+	"Steam_SiteLicense_LockedDetail"		"There are currently no licenses available for this product. Check back later for availability or notify the local administrator."
 
 	"Steam_Parental_GameBlocked_Title"		"Family View"
 	"Steam_Parental_GameBlocked"			"This game is unavailable in Family View"
@@ -4876,6 +4881,8 @@
 	"ControllerBinding_DPadLayout_CrossGate_Description" "A cross-shaped pad layout that prioritizes horizontal and vertical movement over the diagonals."
 	"ControllerBinding_DpadClick" "Click Action"
 	"ControllerBinding_DpadClick_Description" "This action will be performed when you click the pad/stick. If the 'Requires Click' option is also set, clicking a pad direction will send the corresponding direction action as well as this action to the game."
+	"ControllerBinding_OverlapRegion" "Overlap Region"
+	"ControllerBinding_OverlapRegion_Description" "Overlap Region defines how much space in the diagonals applies to both directions.  At it's lowest setting, overlap is nearly removed, acting almost like a 4-way control, at its highest, overlap is almost always applied unless precisely on a cardinal direction."	
 	"ControllerBinding_HapticIntensityDpad" "Haptic Intensity"
 	"ControllerBinding_HapticIntensityDpad_Description" "This sets the intensity of the haptics.  Haptics are sent when the input turns on or off."
 	"ControllerBinding_HapticIntensityDpad_Off" "Haptic Intensity - Off"

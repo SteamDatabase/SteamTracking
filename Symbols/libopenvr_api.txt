@@ -1,13 +1,16 @@
 
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
+ .objc_class_name_NSFileManager
  .objc_class_name_NSString
- B g_SuspendResumeLock
- B g_nCurThreadSuspendCount
- B g_pCurThread
+ B vr::g_pLiquidVR
+ B vr::g_pVRCompositorSystemInternal
  B vr::g_pVRControlPanel
  B vr::g_pVRDashboardManager
+ B vr::g_pVROculusDirect
+ B vr::g_pVRRenderModelsInternal
  B vr::g_pVRTrackedCameraInternal
+ B vr::g_pVRVirtualDisplay
  D VTT for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D VTT for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -24,8 +27,9 @@
  D vtable for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D vtable for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- NSHomeDirectory
+ NSSearchPathForDirectoriesInDomains
  OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSString
  R Json::Value::maxInt
  R Json::Value::maxLargestInt
@@ -37,18 +41,13 @@
  R typeinfo name for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- T CVRLog::LogDirect(LogLevel, bool, char const*, __va_list_tag (&) [1])
- T CVRLog::LogDirect(LogLevel, bool, char const*, char*&)
- T CVRLog::~CVRLog()
- T CVRPathRegistry::BLoadFromFile()
- T CVRPathRegistry::GetOpenVRConfigPath()
- T CVRPathRegistry::GetPaths(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, char const*, char const*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*)
- T CVRPathRegistry::GetVRPathRegistryFilename()
+ T CVRPathRegistry_Public::BLoadFromFile()
+ T CVRPathRegistry_Public::GetOpenVRConfigPath()
+ T CVRPathRegistry_Public::GetPaths(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, char const*, char const*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*)
+ T CVRPathRegistry_Public::GetVRPathRegistryFilename()
  T GetEnglishStringForHmdError(vr::EVRInitError)
  T GetEnvironmentVariable(char const*)
- T GetHomeDir()
  T GetIDForVRInitError(vr::EVRInitError)
- T GetVRLogTimeString(bool)
  T Json::Exception::what() const
  T Json::Exception::~Exception()
  T Json::LogicError::~LogicError()
@@ -106,22 +105,22 @@
  T Json::valueToString(double, bool, unsigned int)
  T Json::valueToString(long long)
  T Json::valueToString(unsigned long long)
- T Log(char const*, ...)
+ T LiquidVR
  T Path_FixSlashes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char)
  T Path_IsDirectory(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T Path_Join(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char)
  T Path_ReadBinaryFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int*)
  T Path_ReadTextFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T Plat_IsInDebugSession()
  T SharedLib_GetFunction(void*, char const*)
  T SharedLib_Load(char const*)
  T SharedLib_Unload(void*)
- T SteamThreadTools::CThreadLocalInt<long>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadMutex::~CThreadMutex()
+ T VRCompositorSystemInternal
  T VRControlPanel
  T VRDashboardManager
+ T VROculusDirect
+ T VRRenderModelsInternal
  T VRTrackedCameraInternal
+ T VRVirtualDisplay
  T VR_GetGenericInterface
  T VR_GetInitToken
  T VR_GetStringForHmdError
@@ -184,6 +183,7 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T vr::VR_LoadHmdSystemInternal()
  _Unwind_Resume
+ __CFConstantStringClassReference
  __bzero
  __cxa_allocate_exception
  __cxa_atexit
@@ -203,9 +203,6 @@
  __umoddi3
  b GetEnglishStringForHmdError(vr::EVRInitError)::buf
  b GetIDForVRInitError(vr::EVRInitError)::buf
- b g_ThreadMainThreadID
- b g_VRLog
- b g_pLoggingMutex
  b guard variable for vr::VR_RuntimePath::sRuntimePath
  b stackDepth_g
  b vr::VR_RuntimePath::sRuntimePath
@@ -217,11 +214,9 @@
  dlsym
  dyld_stub_binder
  fclose
- fflush
  fopen
  fopen$UNIX2003
- fputs
- fputs$UNIX2003
+ fprintf
  fread
  free
  fseek
@@ -229,10 +224,6 @@
  fwrite
  fwrite$UNIX2003
  getenv
- getpid
- gettimeofday
- localtime
- mach_thread_self
  malloc
  memcmp
  memcpy
@@ -244,14 +235,6 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
- pthread_key_create
- pthread_key_delete
- pthread_mutex_destroy
- pthread_mutex_init
- pthread_mutex_lock
- pthread_mutex_unlock
- pthread_mutexattr_init
- pthread_mutexattr_settype
  r Json::kNull
  snprintf
  sprintf
@@ -302,23 +285,15 @@
  std::__1::to_string(int)
  std::exception::~exception()
  std::terminate()
- strftime
- strftime$UNIX2003
  strlen
- sysctl
  t Json::codePointToUTF8(unsigned int)
  t Json::duplicateAndPrefixStringValue(char const*, unsigned int)
  t Json::normalizeEOL(char const*, char const*)
  t ParseStringListFromJson(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, Json::Value const&, char const*)
- t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11678.ii
- t _GLOBAL__sub_I_threadtool.tmp.steamvr_rel_osx_builder.11784.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.30837.ii
- t _GLOBAL__sub_I_vrlog.tmp.steamvr_rel_osx_builder.30987.ii
  typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
  typeinfo for std::exception
  virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()
  virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
- vsnprintf
  vtable for __cxxabiv1::__si_class_type_info

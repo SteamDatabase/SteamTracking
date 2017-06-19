@@ -1,0 +1,209 @@
+"controller_mappings"
+{
+    "version" "2"
+	"title"			"#SettingsControllerCfg_ConfigDesktop"
+	"description"	"#SettingsControllerCfg_ConfigDesktop_Desc"
+    "game"			"Steam Desktop"
+
+    "group"
+    {
+        "id" "0"
+        "mode" "four_buttons"
+
+        "bindings"
+        {
+			"button_A" "key_press ENTER"
+			"button_B" "key_press ESCAPE"
+			"button_X" "key_press PAGE_UP"
+			"button_Y" "key_press PAGE_DOWN"
+        }
+    }
+
+    "group"
+    {
+        "id"    1
+        "mode" "dpad"
+
+        "bindings"
+        {
+            "dpad_north"    "key_press UP_ARROW"
+            "dpad_south"    "key_press DOWN_ARROW"
+            "dpad_east"     "key_press RIGHT_ARROW"
+            "dpad_west"     "key_press LEFT_ARROW"
+			"click"		"controller_action SHOW_KEYBOARD"
+        }
+		"settings"
+		{
+			"requires_click" "0"
+
+			"overlap" "true"
+		}
+    }
+
+    "group"
+    {
+        "id"    "2"
+        "mode" "dpad"
+
+        "bindings"
+        {
+            "dpad_north"    "key_press UP_ARROW"
+            "dpad_south"    "key_press DOWN_ARROW"
+            "dpad_east"     "key_press RIGHT_ARROW"
+            "dpad_west"     "key_press LEFT_ARROW"
+        }
+
+		"settings"
+		{
+			"requires_click" "0"
+			"deadzone" "2000"
+			"overlap" "false"
+		}
+    }
+
+    "group"
+    {
+        "id" "3"
+        "mode" "absolute_mouse"
+		"bindings"
+		{
+			"click"		"key_press LEFT_SHIFT"
+		}
+    }
+
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button RIGHT"
+		}
+		"settings"
+		{
+			"output_trigger"		"0"
+		}
+	}
+
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button LEFT"
+		}
+		"settings"
+		{
+			"output_trigger"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"scrollwheel"
+		"bindings"
+		{
+			"scroll_clockwise"				"mouse_wheel SCROLL_DOWN"
+			"scroll_counterclockwise"		"mouse_wheel SCROLL_UP"
+			"click"							"mouse_button MIDDLE"
+		}
+		"settings"
+		{
+			"scroll_angle"		"160"
+		}
+	}
+    "group"
+    {
+        "id" "7"
+        "mode" "joystick_mouse"
+		"bindings"
+		{
+			"click"		"key_press LEFT_SHIFT"
+		}
+    }
+	"group"
+	{
+		"id"		"8"
+        "mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP"
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_DOWN"
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+		}
+		"gameactions"
+		{
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"0" "button_diamond"
+			"1" "dpad"
+			"8" "joystick"
+			"3" "right_trackpad"
+			"4"	"left_trigger active"
+			"5"	"right_trigger active"
+			"7" "right_joystick"
+			
+		}
+		"switch_bindings"
+		{
+			"bindings"
+			{
+    			"right_bumper"			"key_press LEFT_ALT"
+    			"left_bumper"			"key_press LEFT_CONTROL"
+    			"button_escape"			"key_press ESCAPE"
+    			"button_menu"			"key_press TAB"
+				"button_back_left"		"mouse_button BACK"
+				"button_back_right"		"mouse_button FORWARD"
+			}
+		}
+		"settings"
+		{
+			"left_trackpad_mode"						"none"
+			"right_trackpad_mode"						"none"
+		}
+	}
+}
+

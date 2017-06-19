@@ -38,7 +38,10 @@
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
  B CMsgProtobufWrapped::default_instance_
+ B CNet::s_FrameFuncHandleCompletedWorkItems
  B CNet::s_FrameFuncPollConnections
+ B CNet::s_FrameFuncRunHosts
+ B CNet::s_FrameFuncWakeUpConnections
  B CNet::sm_EScale
  B CNet::sm_ListHConnectionToPoll
  B CNet::sm_ListHConnectionToWakeUp
@@ -67,6 +70,7 @@
  B CTCPConnection::sm_MostBackloggedBytes
  B CTCPConnection::sm_StatsNet
  B CTCPConnection::sm_THashPTCPConnection
+ B CTCPConnection::sm_ThreadSafeQueueIncoming
  B CTCPConnection::sm_bInit
  B CTCPConnection::sm_cIntraProcessRecvsAllConnections
  B CTCPConnection::sm_cIntraProcessSendsAllConnections
@@ -76,7 +80,8 @@
  B CTCPConnection::sm_cOutgoingConnectionsFailed
  B CTCPConnection::sm_cOutstandingSendBytesAllConnections
  B CTCPConnection::sm_cOutstandingSendsAllConnections
- B CTCPHost::sm_treeHosts
+ B CTCPConnection::sm_pJobMgr
+ B CTCPHost::sm_ThreadSafeQueueIncoming
  B CUDPConnection::sm_SchedulerACK
  B CUDPConnection::sm_SchedulerResend
  B CUDPConnection::sm_StatMicroSecLatency
@@ -101,7 +106,6 @@
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
  B OPENSSL_ia32cap_P
- B OSXHelpers::CIOPollingHelper::s_pPollingHelperSingleton
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -119,7 +123,6 @@
  B gZeroNetAdr
  B g_CompletionPortManager
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPBatchSize
  B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
@@ -156,6 +159,7 @@
  B g_pThreadLocalHashMapTxnIDWatches
  B g_rgunIPThisBox
  B g_vecTempTextBuffer
+ B k_SysIDNil
  B k_netadrNull
  B msgpool_hard_limit
  B msgpool_soft_limit
@@ -326,6 +330,7 @@
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
  D g_UDPConnectionRouter
+ D g_rgchIOType
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
@@ -429,6 +434,7 @@
  D typeinfo for CSteam3StreamParser
  D typeinfo for CStructNetPacket
  D typeinfo for CTCPConnection
+ D typeinfo for CTCPConnection::RecvState_t
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
@@ -451,6 +457,7 @@
  D typeinfo for CVideoPlayer
  D typeinfo for CVideoPlayerManager::CVideoThread
  D typeinfo for CVideoWebMCuesParser
+ D typeinfo for CWSASendThread
  D typeinfo for CWebSocketConnection
  D typeinfo for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D typeinfo for CWorkItem
@@ -483,6 +490,7 @@
  D typeinfo for ISocketOwnerCallback
  D typeinfo for IStreamParser
  D typeinfo for IStreamParserMessageCallback
+ D typeinfo for ITCPHostCallback
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
  D typeinfo for IVideoDecoder
@@ -490,7 +498,6 @@
  D typeinfo for IVideoPlayer
  D typeinfo for IVideoYUVFrame
  D typeinfo for IWorkThreadFactory
- D typeinfo for OSXHelpers::CIOPollingHelper
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CThread
  D v3_akey_id
@@ -591,6 +598,7 @@
  D vtable for CSteam3StreamParser
  D vtable for CStructNetPacket
  D vtable for CTCPConnection
+ D vtable for CTCPConnection::RecvState_t
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
@@ -613,6 +621,7 @@
  D vtable for CVideoPlayer
  D vtable for CVideoPlayerManager::CVideoThread
  D vtable for CVideoWebMCuesParser
+ D vtable for CWSASendThread
  D vtable for CWebSocketConnection
  D vtable for CWebSocketConnectionDelayedCloseConnectionWorkItem
  D vtable for CWorkItem
@@ -629,7 +638,6 @@
  D vtable for CWorkThreadPool
  D vtable for ConVar
  D vtable for IVideoYUVFrame
- D vtable for OSXHelpers::CIOPollingHelper
  D vtable for SteamThreadTools::CThread
  D x509_dir_lookup
  D x509_file_lookup
@@ -715,6 +723,7 @@
  R typeinfo name for CSteam3StreamParser
  R typeinfo name for CStructNetPacket
  R typeinfo name for CTCPConnection
+ R typeinfo name for CTCPConnection::RecvState_t
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
@@ -726,6 +735,7 @@
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >
  R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
  R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
  R typeinfo name for CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
@@ -756,11 +766,10 @@
  R typeinfo name for CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlPriorityQueue<CVideoPlayer*>
+ R typeinfo name for CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >
  R typeinfo name for CUtlQueue<WSABUF_S>
  R typeinfo name for CUtlQueueDeprecated<NetPacketToDelete_t>
  R typeinfo name for CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -776,6 +785,7 @@
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
+ R typeinfo name for CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
@@ -806,7 +816,7 @@
  R typeinfo name for CVideoPlayerManager
  R typeinfo name for CVideoPlayerManager::CVideoThread
  R typeinfo name for CVideoWebMCuesParser
- R typeinfo name for CWSASendToHelper
+ R typeinfo name for CWSASendThread
  R typeinfo name for CWebSocketConnection
  R typeinfo name for CWebSocketConnectionDelayedCloseConnectionWorkItem
  R typeinfo name for CWorkItem
@@ -839,6 +849,7 @@
  R typeinfo name for ISocketOwnerCallback
  R typeinfo name for IStreamParser
  R typeinfo name for IStreamParserMessageCallback
+ R typeinfo name for ITCPHostCallback
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
  R typeinfo name for IVideoDecoder
@@ -846,7 +857,6 @@
  R typeinfo name for IVideoPlayer
  R typeinfo name for IVideoYUVFrame
  R typeinfo name for IWorkThreadFactory
- R typeinfo name for OSXHelpers::CIOPollingHelper
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for VideoAdaptationSet_t
@@ -961,7 +971,11 @@
  T AllocateCircularBuffer(int)
  T AppendPath(CUtlStringBuilder*, char const*, bool)
  T AssertMsgImplementation
+ T AsyncSocketAcceptExComplete(CompletionData_t*, int*, void*, unsigned int, unsigned int, unsigned int, sockaddr**, unsigned int*, sockaddr**, unsigned int*)
+ T AsyncSocketConnect(int, sockaddr const*, unsigned int, CompletionData_t*)
+ T AsyncSocketRead(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
  T AsyncSocketReadFrom(int, WSABUF_S const*, unsigned int, sockaddr*, unsigned int*, unsigned int*, CompletionData_t*)
+ T AsyncSocketWrite(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
  T AvLockOpCallback(void**, AVLockOp)
  T AvLogDefaultCallback(void*, int, char const*, __va_list_tag*)
  T AvLogDefaultCallback(void*, int, char const*, char*)
@@ -1276,10 +1290,16 @@
  T CClientStructNetPacket::~CClientStructNetPacket()
  T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)
+ T CCompletionPortManager::AsyncDispatchHandler(void*)
+ T CCompletionPortManager::AsyncDispatchHandlerWrapper(void*)
  T CCompletionPortManager::BHasVistaIOCP()
  T CCompletionPortManager::CCompletionPortManager()
+ T CCompletionPortManager::CompletePendingIo(int, CompletionData_t*, int*, int*)
+ T CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)
+ T CCompletionPortManager::FinalizePendingIo(int, unsigned int)
  T CCompletionPortManager::FreeCompletionData(CompletionData_t*)
  T CCompletionPortManager::PostIOCPMessage(CompletionData_t*)
+ T CCompletionPortManager::QueuePendingIo(int, CompletionData_t*)
  T CCompletionPortManager::Validate(CValidator&, char const*)
  T CCompletionPortManager::~CCompletionPortManager()
  T CCookieContainer::BIsDomainAccepted(char const*, char const*)
@@ -1300,7 +1320,7 @@
  T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateHMAC(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [20])
- T CCrypto::GenerateRandomBlock(unsigned char*, int)
+ T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::GetSymmetricEncryptedSize(unsigned int)
  T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
@@ -1708,7 +1728,6 @@
  T CNet::BRegisterSocketOwnerCallback(unsigned int, ISocketOwnerCallback*)
  T CNet::BRemoveConnectionCallback(unsigned int, IConnectionCallback*)
  T CNet::CancelWakeup(unsigned int)
- T CNet::CreateIncoming(EConnectionType, int, IConnectionCallback*, INetFilterKeyCallback*, INetSSLConnectionCallback*, netadr_t const&, unsigned int, IStreamParser*, int)
  T CNet::CreateNetConnection(EConnectionType, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
  T CNet::CreateSocket(EConnectionType, netadr_t const&, unsigned int, netadr_t*, bool)
  T CNet::DestroyNetConnection(CNetConnection*)
@@ -1717,6 +1736,7 @@
  T CNet::FreeNetPacket(CNetPacket*)
  T CNet::GetConnectionMode(unsigned int)
  T CNet::GetLocalAddr(unsigned int)
+ T CNet::GetNetFlags(unsigned int)
  T CNet::GetRemoteAddr(unsigned int)
  T CNet::GetSocketOwnerCallback(unsigned int)
  T CNet::GlobalInit(EScale, CFrameFunctionMgr*)
@@ -1830,7 +1850,7 @@
  T CNetIOHelperCallback::~CNetIOHelperCallback()
  T CNetPacket::AddRef()
  T CNetPacket::CNetPacket()
- T CNetPacket::Init(unsigned int, unsigned char*, int, unsigned char*)
+ T CNetPacket::Init(unsigned int, unsigned char*, int, unsigned char*, bool)
  T CNetPacket::ReallyRelease()
  T CNetPacket::Release()
  T CNetPacket::ReplaceData(unsigned char*, unsigned int)
@@ -1928,7 +1948,6 @@
  T CProtoBufNetPacket::GetSteamID() const
  T CProtoBufNetPacket::GetTargetJobID() const
  T CProtoBufNetPacket::GetTargetJobName() const
- T CProtoBufNetPacket::InitWithoutAddRef(CNetPacket*)
  T CProtoBufNetPacket::PubData() const
  T CProtoBufNetPacket::RebuildPacket()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
@@ -2193,12 +2212,14 @@
  T CTCPConnection::BPollConnection()
  T CTCPConnection::BProcessPendingSends()
  T CTCPConnection::BUseDirectLoopbackSend()
+ T CTCPConnection::BeginAsyncRecv()
  T CTCPConnection::CTCPConnection()
  T CTCPConnection::CloseSocket()
  T CTCPConnection::CreateTCPConnection(unsigned int, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
  T CTCPConnection::DecrementAllSends(CTCPConnection*, int)
  T CTCPConnection::DecrementOutstandingSends(CTCPConnection*, int)
  T CTCPConnection::Destroy()
+ T CTCPConnection::DispatchWorkItemToJob(CWorkItem*)
  T CTCPConnection::EmitSpewOnDisconnect(CTCPConnection*, int, char const*, char const*, netadr_t const&)
  T CTCPConnection::FreeGlobals()
  T CTCPConnection::GetConnectionPostedBufferSize()
@@ -2215,9 +2236,16 @@
  T CTCPConnection::OnConnectionSucceeded()
  T CTCPConnection::OnDataArrived(unsigned char*, int, bool&)
  T CTCPConnection::OnDisconnect(EResult)
+ T CTCPConnection::OnReceiveFileCompletion(CompletionData_t*)
+ T CTCPConnection::OnTransmitFileCompletion(CompletionData_t*)
+ T CTCPConnection::RecvState_t::OnMessageComplete(unsigned char const*, unsigned int)
+ T CTCPConnection::ReleaseIOCPRecvState(CTCPConnection::RecvState_t*)
  T CTCPConnection::SetConnectionBlackHoled()
  T CTCPConnection::SetConnectionPostedBufferSize(int)
  T CTCPConnection::SetIncoming(int, netadr_t const&)
+ T CTCPConnection::ThreadedCompletionFunc(CompletionData_t*)
+ T CTCPConnection::ThreadedDataArrived(CompletionData_t*)
+ T CTCPConnection::ThreadedPostAsyncRecv(CompletionData_t*)
  T CTCPConnection::Validate(CValidator&, char const*)
  T CTCPConnection::ValidateGlobals(CValidator&)
  T CTCPConnection::~CTCPConnection()
@@ -2291,6 +2319,12 @@
  T CTSQueue<CUtlBuffer*, false>::Purge()
  T CTSQueue<CUtlBuffer*, false>::Validate(CValidator&, char const*)
  T CTSQueue<CUtlBuffer*, false>::~CTSQueue()
+ T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*, false>::Pop()
+ T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*, false>::Purge()
+ T CTSQueue<CWSASendThread::send_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
  T CTSQueue<CWorkItem*, false>::AllocNode()
  T CTSQueue<CWorkItem*, false>::Pop()
  T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
@@ -2301,6 +2335,7 @@
  T CTSQueue<CWorkItem*, false>::~CTSQueue()
  T CTSQueue<CompletionData_t*, false>::AllocNode()
  T CTSQueue<CompletionData_t*, false>::Pop()
+ T CTSQueue<CompletionData_t*, false>::PopItem(CompletionData_t**)
  T CTSQueue<CompletionData_t*, false>::Purge()
  T CTSQueue<CompletionData_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
  T CTSQueue<CompletionData_t*, false>::~CTSQueue()
@@ -2371,12 +2406,9 @@
  T CUDPConnectionRouter::OnUDPFatalError(int, unsigned int)
  T CUDPConnectionRouter::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
  T CUDPHost::ValidateGlobals(CValidator&)
- T CUDPSocket::BSend(int, bool, netadr_t const&, unsigned char*, int)
+ T CUDPSocket::BSendAndFreeMsgBuf(int, bool, netadr_t const&, unsigned char*, int)
  T CUDPSocket::BeginRecv(int, unsigned int, bool, void*)
  T CUDPSocket::ContinueRecv(int, unsigned int, void*)
- T CUDPSocket::FreeGlobals()
- T CUDPSocket::GlobalInit()
- T CUDPSocket::RunFrameFuncs(CReliableTimer&)
  T CUDPSocket::ThreadedFunc_RecvUDP(CompletionData_t*)
  T CUDPSocket::ValidateGlobals(CValidator&)
  T CUniformRandomStream::GenerateRandomNumber()
@@ -2437,6 +2469,18 @@
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::AllocNode()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::EnsureCapacity(int)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Find(int const&) const
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::FindOrInsert(int const&)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::IncrementalRehash()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::InsertUnconstructed(int const&, int*, bool)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Purge()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::RehashNodesInBucket(int)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Validate(CValidator&, char const*)
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::AllocNode()
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMap(int)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
@@ -2699,12 +2743,13 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t>::Insert(CScheduledFunctionMgr::ScheduledItem_t const&)
- T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t>::RemoveAtHead()
- T CUtlPriorityQueue<CVideoPlayer*>::Insert(CVideoPlayer* const&)
- T CUtlPriorityQueue<CVideoPlayer*>::RemoveAt(int)
- T CUtlPriorityQueue<CVideoPlayer*>::RemoveAtHead()
- T CUtlPriorityQueue<CVideoPlayer*>::Validate(CValidator&, char const*)
+ T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateDown(int)
+ T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateUp(int)
+ T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::PercolateDown(int)
+ T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::PercolateUp(int)
+ T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::RemoveAt(int)
+ T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::RevaluateElement(int)
+ T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::Validate(CValidator&, char const*)
  T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
@@ -2731,9 +2776,6 @@
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool)
@@ -2962,6 +3004,11 @@
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -3357,8 +3404,13 @@
  T CVideoWebMCuesParser::Clear()
  T CVideoWebMCuesParser::GetCuePointsForFirstTrack()
  T CVideoWebMCuesParser::~CVideoWebMCuesParser()
- T CWSASendToHelper::Validate(CValidator&, char const*)
- T CWSASendToHelper::~CWSASendToHelper()
+ T CWSASendThread::AddCloseSocket(int)
+ T CWSASendThread::AddItem(int, unsigned int, void*, int, int, netadr_t, unsigned int, bool, IUnbufferedSendCallback*)
+ T CWSASendThread::AddShutdownSocket(int)
+ T CWSASendThread::CWSASendThread()
+ T CWSASendThread::Run()
+ T CWSASendThread::Shutdown()
+ T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
  T CWebSocketConnection::AddToConnectionTable(CWebSocketConnection*)
@@ -3384,7 +3436,7 @@
  T CWebSocketConnection::GetComputedWebSocketAcceptKey(char const*)
  T CWebSocketConnection::GetConnectionType()
  T CWebSocketConnection::GetPingResults(CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >&)
- T CWebSocketConnection::GlobalInit(EScale, CFrameFunctionMgr*)
+ T CWebSocketConnection::GlobalInit(EScale)
  T CWebSocketConnection::InternalGetWebSocketConnection(unsigned int)
  T CWebSocketConnection::IsIntraProcessConnection()
  T CWebSocketConnection::RecvPkt(CNetPacket*)
@@ -3633,6 +3685,7 @@
  T DeleteVideoPlayer
  T DeleteVideoPlayerManager()
  T DeserializeVaArgs(char const*, char const*, char*, int)
+ T DisconnectPlatformSocket(int)
  T DispatchOpenSSLErrors(char const*)
  T DoNewAssertDialog
  T DynBind_SCDynamicStoreCreate(__CFAllocator const*, __CFString const*, void (*)(__SCDynamicStore const*, __CFArray const*, void*), SCDynamicStoreContext*)
@@ -4139,14 +4192,11 @@
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
- T OSXHelpers::CIOPollingHelper::RealRun()
+ T OSXHelpers::CIOPollingHelper::OnKQueueActive()
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
- T OSXHelpers::CIOPollingHelper::Run()
  T OSXHelpers::CIOPollingHelper::Shutdown()
  T OSXHelpers::CIOPollingHelper::Singleton()
- T OSXHelpers::CIOPollingHelper::ThreadExceptionWrapper(void*)
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
- T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
  T OTHERNAME_new
  T OneTimeCryptoInitOpenSSL()
  T OpenSSLDie
@@ -4207,6 +4257,7 @@
  T Plat_localtime
  T Plat_timegm
  T PlatformSocketsInit()
+ T PushFdHigh(int)
  T RAND_SSLeay
  T RAND_add
  T RAND_bytes
@@ -4373,7 +4424,6 @@
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThread::CThread()
  T SteamThreadTools::CThread::GetName()
- T SteamThreadTools::CThread::GetPriority() const
  T SteamThreadTools::CThread::GetThreadProc()
  T SteamThreadTools::CThread::Init()
  T SteamThreadTools::CThread::IsAlive() const
@@ -4382,7 +4432,6 @@
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::Resume()
  T SteamThreadTools::CThread::SetName(char const*)
- T SteamThreadTools::CThread::SetPriority(int)
  T SteamThreadTools::CThread::Start(unsigned long)
  T SteamThreadTools::CThread::Suspend()
  T SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
@@ -4407,6 +4456,7 @@
  T SteamThreadTools::CThreadLocalPtr<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<ThreadMsgBuffer_t>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
  T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
@@ -4474,6 +4524,7 @@
  T TSLNodeTemplate_t<CFileWriterThread::FileWriterItem_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CNetPacket*>::operator delete(void*)
  T TSLNodeTemplate_t<CUtlBuffer*>::operator delete(void*)
+ T TSLNodeTemplate_t<CWSASendThread::send_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CWorkItem*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
  T TSListBase_Init
@@ -4505,7 +4556,6 @@
  T ThreadInterlockedIncrement64
  T ThreadIsThreadRunning
  T ThreadSetBackgroundPriority
- T ThreadSetDebugName
  T ThreadSleep
  T ThreadSpinWaitForValue
  T TimeCompare(unsigned int const*, unsigned int const*)
@@ -5620,6 +5670,8 @@
  __udivdi3
  __umoddi3
  __vsnprintf_chk
+ _dispatch_source_type_read
+ _dispatch_source_type_write
  _exit
  abort
  accept
@@ -5693,7 +5745,8 @@
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
  b BUF_str_reasons
  b BVideoLibLoadX264()::s_bLoaded
- b CCrypto::GenerateRandomBlock(unsigned char*, int)::s_dev_urandom_fd
+ b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
+ b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
@@ -5734,8 +5787,9 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)::fAsserted
- b OneTimeCryptoInitOpenSSL()::threadonce_86_19
+ b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_37_19
+ b OSXHelpers::s_pPollingHelperSingleton
+ b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
@@ -5785,6 +5839,7 @@
  b g_ConVarNetBacklogTimeAllowedSec
  b g_ConVarNetLoopback
  b g_DumpHelper
+ b g_TLSSendBuffer
  b g_ThreadNetMainThreadID
  b g_TickBase
  b g_TickFrequency
@@ -5799,7 +5854,7 @@
  b g_pCrashMemoryReserve
  b g_queuePacketsToDelete
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b guard variable for CCrypto::GenerateRandomBlock(unsigned char*, int)::s_dev_urandom_fd
+ b guard variable for CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b guard variable for CUDPSocket::ContinueRecv(int, unsigned int, void*)::stimeLastSpew
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
@@ -5854,16 +5909,19 @@
  b s_SharedUDPSocketPollHelper
  b s_SpewType
  b s_UniformStream
+ b s_WSASendThread
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
  b s_bSetSigHandler
  b s_netadrResolveCache
  b s_netadrResolveCacheCounter
  b s_netadrResolveCacheMutexEnforceConstruction
+ b s_objCloseSocket
+ b s_objDisconnect
+ b s_objNullSendOp
  b s_pFileName
  b s_pManager
  b s_pSpewGroups
- b s_pWSASendToHelper
  b savsig
  b selectBuf
  b sm_bAssertDumpStack
@@ -6291,6 +6349,18 @@
  d ui_openssl
  d vtable for (anonymous namespace)::CDummySSLConnectionCallback
  d xstandard
+ dispatch_get_context
+ dispatch_get_global_queue
+ dispatch_group_async_f
+ dispatch_group_create
+ dispatch_release
+ dispatch_resume
+ dispatch_set_context
+ dispatch_source_cancel
+ dispatch_source_create
+ dispatch_source_set_cancel_handler_f
+ dispatch_source_set_event_handler_f
+ dispatch_suspend
  dladdr
  dlclose
  dlopen
@@ -6326,6 +6396,7 @@
  getpid
  getsockname
  getsockname$UNIX2003
+ getsockopt
  gettimeofday
  getuid
  gmtime
@@ -6371,6 +6442,8 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ poll
+ poll$UNIX2003
  printf
  pthread_atfork
  pthread_attr_init
@@ -6570,6 +6643,8 @@
  realloc
  recv
  recv$UNIX2003
+ recvmsg
+ recvmsg$UNIX2003
  remove
  rename
  rmdir
@@ -6582,6 +6657,8 @@
  semop
  send
  send$UNIX2003
+ sendmsg
+ sendmsg$UNIX2003
  sendto
  sendto$UNIX2003
  setjmp
@@ -6666,8 +6743,14 @@
  t BN_from_montgomery_word
  t BN_to_felem
  t BPlayerScheduledBefore(CVideoPlayer* const&, CVideoPlayer* const&)
+ t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_0::__invoke(void*)
+ t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_1::__invoke(void*)
+ t CCompletionPortManager::AsyncDispatchHandlerWrapper(void*)::$_3::__invoke(void*)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
+ t CScopeGuardLambdaImpl<CCompletionPortManager::AsyncDispatchHandler(void*)::$_4>::~CScopeGuardLambdaImpl()
  t CopyUriTableProc
  t DestroyDeclAttTableProc
  t DestroyUriTableProc
@@ -6690,6 +6773,9 @@
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MemInputsrc
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::Shutdown()::$_1::__invoke(void*)
  t ParseChildren
  t ParseComment
  t ParseCp
@@ -6771,6 +6857,7 @@
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_minidump.cpp
  t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgprotobuf.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
@@ -6795,6 +6882,7 @@
  t _GLOBAL__sub_I_stime.cpp
  t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_sysid.cpp
  t _GLOBAL__sub_I_tcpconnection.cpp
  t _GLOBAL__sub_I_tcphost.cpp
  t _GLOBAL__sub_I_testthread.cpp

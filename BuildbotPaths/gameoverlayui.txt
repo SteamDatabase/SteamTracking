@@ -4,6 +4,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp

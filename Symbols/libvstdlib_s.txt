@@ -527,6 +527,7 @@
  T V_StripPrecedingAndTrailingWhitespace
  T V_StripPrecedingAndTrailingWhitespaceW
  T V_StripTrailingSlash
+ T V_StripTrailingWhitespaceASCII
  T V_StripUnprintable
  T V_StripUnprintableW
  T V_TruncateAbsolutePathToDiskIdentity
@@ -577,6 +578,7 @@
  T V_Windows1252CharsToUTF8
  T V_atof
  T V_atoi
+ T V_atoui64
  T V_binarytohex
  T V_hextobinary
  T V_isbreakablewspace

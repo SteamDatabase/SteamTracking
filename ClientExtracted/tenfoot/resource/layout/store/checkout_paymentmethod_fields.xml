@@ -61,6 +61,10 @@
 		<Panel id="SteamAccountFields">
 			<Label id="WalletLow" text="#Checkout_PaymentMethod_WalletLow" />
 		</Panel>
+		<Panel id="UpdateBankNameFields">
+			<Label class="PaymentMethodHeader" text="#Checkout_PaymentMethod_BankName" />
+			<DropDown id="BankName" oninputsubmit="NavigateToNextField();"/>
+		</Panel>			
 		<Panel id="NoPaymentDataFields">
 			<ToggleButton id="LiveInCountryNoBilling" class="CheckBox" text="#Checkout_PaymentMethod_VerifyCountry" />
 		</Panel>

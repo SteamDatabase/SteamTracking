@@ -54,11 +54,12 @@
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
  B CTCPConnection::sm_THashPTCPConnection
+ B CTCPConnection::sm_ThreadSafeQueueIncoming
  B CTCPConnection::sm_cIntraProcessRecvsAllConnections
  B CTCPConnection::sm_cIntraProcessSendsAllConnections
  B CTCPConnection::sm_cOutstandingSendBytesAllConnections
  B CTCPConnection::sm_cOutstandingSendsAllConnections
- B CTCPHost::sm_treeHosts
+ B CTCPHost::sm_ThreadSafeQueueIncoming
  B CUDPConnection::sm_SchedulerACK
  B CUDPConnection::sm_SchedulerResend
  B CUDPConnection::sm_StatMicroSecLatency
@@ -74,7 +75,6 @@
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
  B OPENSSL_ia32cap_P
- B OSXHelpers::CIOPollingHelper::s_pPollingHelperSingleton
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -92,7 +92,6 @@
  B gZeroNetAdr
  B g_CompletionPortManager
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPBatchSize
  B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
@@ -128,6 +127,7 @@
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
  B g_vecTempTextBuffer
+ B k_SysIDNil
  B k_netadrNull
  B msgpool_hard_limit
  B msgpool_soft_limit
@@ -249,6 +249,7 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
+ D typeinfo for CWSASendThread
  D typeinfo for CWorkItem
  D typeinfo for CWorkItemFunctionCall
  D typeinfo for CWorkThread
@@ -270,7 +271,6 @@
  D typeinfo for IRegistryInterface
  D typeinfo for IUniformRandomStream
  D typeinfo for IWorkThreadPoolSignal
- D typeinfo for OSXHelpers::CIOPollingHelper
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamStdLib::CCommandLine
  D typeinfo for SteamStdLib::ICommandLine
@@ -315,6 +315,7 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
+ D vtable for CWSASendThread
  D vtable for CWorkItem
  D vtable for CWorkItemFunctionCall
  D vtable for CWorkThread
@@ -324,7 +325,6 @@
  D vtable for ClientProcessMonitor::CMonitoredProcess
  D vtable for ConVar
  D vtable for IWorkThreadPoolSignal
- D vtable for OSXHelpers::CIOPollingHelper
  D vtable for SteamStdLib::CCommandLine
  D vtable for SteamThreadTools::CThread
  Gestalt
@@ -384,6 +384,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
+ R typeinfo name for CWSASendThread
  R typeinfo name for CWorkItem
  R typeinfo name for CWorkItemFunctionCall
  R typeinfo name for CWorkThread
@@ -405,7 +406,6 @@
  R typeinfo name for IRegistryInterface
  R typeinfo name for IUniformRandomStream
  R typeinfo name for IWorkThreadPoolSignal
- R typeinfo name for OSXHelpers::CIOPollingHelper
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamStdLib::CCommandLine
  R typeinfo name for SteamStdLib::ICommandLine
@@ -465,6 +465,7 @@
  T ASN1_put_object
  T ASN1_template_free
  T AssertMsgImplementation
+ T AsyncSocketWrite(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
  T BBlockingGetMiniDumpLock
  T BCreateDirectory(char const*)
  T BDeleteFileIfExists(char const*)
@@ -662,8 +663,13 @@
  T CClientModuleManagerBase::UnloadModule(unsigned int)
  T CClientModuleManagerBase::UnloadModuleInternal(DynamicModule_s*)
  T CClientModuleManagerBase::~CClientModuleManagerBase()
+ T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::CCompletionPortManager()
+ T CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)
+ T CCompletionPortManager::FinalizePendingIo(int, unsigned int)
+ T CCompletionPortManager::FreeCompletionData(CompletionData_t*)
  T CCompletionPortManager::PostIOCPMessage(CompletionData_t*)
+ T CCompletionPortManager::QueuePendingIo(int, CompletionData_t*)
  T CCompletionPortManager::~CCompletionPortManager()
  T CCoroutine::RestoreStack()
  T CCoroutine::~CCoroutine()
@@ -693,7 +699,7 @@
  T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
  T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
- T CCrypto::GenerateRandomBlock(unsigned char*, int)
+ T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
@@ -775,7 +781,6 @@
  T CJobMgr::CJobMgr()
  T CJobMgr::CheckForJobTimeouts(CReliableTimer&)
  T CJobMgr::GetPJob(unsigned long long, EJobPauseReason, bool)
- T CJobMgr::JobSleepingLessFunc(CJobMgr::JobSleeping_t const&, CJobMgr::JobSleeping_t const&)
  T CJobMgr::UpdateTimeoutPosition(int)
  T CJobMgr::~CJobMgr()
  T CKeyErrorContext::~CKeyErrorContext()
@@ -911,6 +916,7 @@
  T CMsgProtobufWrapped::~CMsgProtobufWrapped()
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
+ T CNet::SetSocketNonBlocking(int)
  T CNumStr::CNumStr(double)
  T CNumStr::CNumStr(unsigned char)
  T COpenSSLWrapper::Initialize()
@@ -1159,6 +1165,7 @@
  T CSteam3DumpHelper::Shutdown()
  T CSteam3DumpHelper::~CSteam3DumpHelper()
  T CSteamID::Render() const
+ T CTCPConnection::ThreadedCompletionFunc(CompletionData_t*)
  T CTHash<CTCPConnection*, unsigned int>::Purge()
  T CTHash<CTCPConnection*, unsigned int>::RemoveAll()
  T CTHash<CTCPConnection*, unsigned int>::RemoveFromHash(CTCPConnection**)
@@ -1185,6 +1192,11 @@
  T CTHash<unsigned int, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<unsigned int, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
+ T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*, false>::Pop()
+ T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*, false>::Purge()
+ T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
  T CTSQueue<CWorkItem*, false>::AllocNode()
  T CTSQueue<CWorkItem*, false>::Pop()
  T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
@@ -1197,7 +1209,15 @@
  T CTSQueue<CompletionData_t*, false>::Purge()
  T CTSQueue<CompletionData_t*, false>::~CTSQueue()
  T CTestHarness::~CTestHarness()
+ T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
+ T CThreadSafeMemoryPool::Alloc()
+ T CThreadSafeMemoryPool::Alloc(unsigned int)
  T CThreadSafeMemoryPool::CThreadSafeMemoryPool(int, int, int)
+ T CThreadSafeMemoryPool::ClearNoLock()
+ T CThreadSafeMemoryPool::Free(void*)
+ T CThreadSafeMemoryPool::Free(void*, int)
+ T CThreadSafeMemoryPool::PopNextEntry()
+ T CThreadSafeMemoryPool::PurgeIfNotInUse()
  T CThreadSafeMemoryPool::~CThreadSafeMemoryPool()
  T CUniformRandomStream::GenerateRandomNumber()
  T CUniformRandomStream::RandomChar()
@@ -1254,6 +1274,10 @@
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Find(int const&) const
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Purge()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
@@ -1392,12 +1416,13 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlPriorityQueue<CJobMgr::JobSleeping_t>::RemoveAtHead()
- T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t>::Insert(CScheduledFunctionMgr::ScheduledItem_t const&)
- T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t>::RemoveAtHead()
- T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*>::Insert(ClientProcessMonitor::CMonitoredProcess* const&)
- T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*>::RemoveAt(int)
- T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*>::RemoveAtHead()
+ T CUtlPriorityQueue<CJobMgr::JobSleeping_t, CDefLess<CJobMgr::JobSleeping_t>, CDefUtlPriorityQueueSetIndexFunc<CJobMgr::JobSleeping_t> >::PercolateDown(int)
+ T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateDown(int)
+ T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateUp(int)
+ T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*, bool (*)(ClientProcessMonitor::CMonitoredProcess* const&, ClientProcessMonitor::CMonitoredProcess* const&), CDefUtlPriorityQueueSetIndexFunc<ClientProcessMonitor::CMonitoredProcess*> >::PercolateDown(int)
+ T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*, bool (*)(ClientProcessMonitor::CMonitoredProcess* const&, ClientProcessMonitor::CMonitoredProcess* const&), CDefUtlPriorityQueueSetIndexFunc<ClientProcessMonitor::CMonitoredProcess*> >::PercolateUp(int)
+ T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*, bool (*)(ClientProcessMonitor::CMonitoredProcess* const&, ClientProcessMonitor::CMonitoredProcess* const&), CDefUtlPriorityQueueSetIndexFunc<ClientProcessMonitor::CMonitoredProcess*> >::RemoveAt(int)
+ T CUtlPriorityQueue<ClientProcessMonitor::CMonitoredProcess*, bool (*)(ClientProcessMonitor::CMonitoredProcess* const&, ClientProcessMonitor::CMonitoredProcess* const&), CDefUtlPriorityQueueSetIndexFunc<ClientProcessMonitor::CMonitoredProcess*> >::RevaluateElement(int)
  T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
@@ -1412,8 +1437,6 @@
  T CUtlRBTree<CIPCLogCounts::IPCLogCounts_t, int, CDefLess<CIPCLogCounts::IPCLogCounts_t>, CDefRBTreeBalanceListener<int> >::Insert(CIPCLogCounts::IPCLogCounts_t const&, bool)
  T CUtlRBTree<CIPCLogCounts::IPCLogCounts_t, int, CDefLess<CIPCLogCounts::IPCLogCounts_t>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CIPCLogCounts::IPCLogCounts_t, int, CDefLess<CIPCLogCounts::IPCLogCounts_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool)
@@ -1543,10 +1566,14 @@
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::InsertBefore(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t, CUtlMemory<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -1647,6 +1674,10 @@
  T CVariableBitStringBase::FreeInts()
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
+ T CWSASendThread::CWSASendThread()
+ T CWSASendThread::Run()
+ T CWSASendThread::Shutdown()
+ T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
  T CWorkItem::CWorkItem()
@@ -1823,6 +1854,7 @@
  T Deserialize(CUtlBuffer&, char const**)
  T Deserialize(CUtlBuffer&, void*, int)
  T DeserializeVaArgs(char const*, char const*, char*, int)
+ T DisconnectPlatformSocket(int)
  T DispatchOpenSSLErrors(char const*)
  T DoNewAssertDialog
  T ECDH_KDF_X9_62
@@ -2137,7 +2169,9 @@
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
  T GetFileTimestamp(char const*)
+ T GetLastNetError()
  T GetMemAlloc
+ T GetNetErrorName(unsigned int)
  T GetNoEscCharConversion()
  T GetOSType
  T GetPchTempTextBuffer_Harmful()
@@ -2239,13 +2273,10 @@
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
- T OSXHelpers::CIOPollingHelper::RealRun()
+ T OSXHelpers::CIOPollingHelper::OnKQueueActive()
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
- T OSXHelpers::CIOPollingHelper::Run()
  T OSXHelpers::CIOPollingHelper::Singleton()
- T OSXHelpers::CIOPollingHelper::ThreadExceptionWrapper(void*)
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
- T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
  T OneTimeCryptoInitOpenSSL()
  T OpenSSLDie
  T OpenSSL_add_all_ciphers
@@ -2351,6 +2382,7 @@
  T SetInAssert
  T SetWritingMiniDump(bool)
  T ShouldUseNewAssertDialog
+ T ShutdownPlatformSocket(int, int)
  T SteamService_GetIPCServer
  T SteamService_RunMainLoop
  T SteamService_Shutdown
@@ -2386,7 +2418,6 @@
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThread::CThread()
  T SteamThreadTools::CThread::GetName()
- T SteamThreadTools::CThread::GetPriority() const
  T SteamThreadTools::CThread::GetThreadProc()
  T SteamThreadTools::CThread::Init()
  T SteamThreadTools::CThread::IsAlive() const
@@ -2394,7 +2425,6 @@
  T SteamThreadTools::CThread::Join(unsigned int)
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::SetName(char const*)
- T SteamThreadTools::CThread::SetPriority(int)
  T SteamThreadTools::CThread::Start(unsigned long)
  T SteamThreadTools::CThread::Terminate(int)
  T SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
@@ -2402,6 +2432,7 @@
  T SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
  T SteamThreadTools::CThread::~CThread()
  T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ T SteamThreadTools::CThreadEvent::Reset()
  T SteamThreadTools::CThreadEvent::Set()
  T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
  T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
@@ -2416,6 +2447,7 @@
  T SteamThreadTools::CThreadLocalPtr<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<ThreadMsgBuffer_t>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
  T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
@@ -2432,6 +2464,7 @@
  T SteamThreadTools::CThreadSyncObject::AssertUseable()
  T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
  T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+ T SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
  T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
  T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
  T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
@@ -2471,10 +2504,13 @@
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T TSLNodeBase_t::operator delete(void*)
+ T TSLNodeTemplate_t<CWSASendThread::send_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CWorkItem*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
  T TSListBase_Init
  T TSListBase_Pop
+ T TSListBase_Push
+ T TSListBase_SwapList
  T TSQueueBase_Init
  T TSQueueBase_Pop
  T TSQueueBase_Push
@@ -2942,6 +2978,7 @@
  __toupper
  __udivdi3
  __umoddi3
+ _dispatch_source_type_read
  _exit
  abort
  accept$UNIX2003
@@ -2966,8 +3003,9 @@
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b AssertMsgImplementation::s_bDisableDebuggerBreak
  b BUF_str_reasons
+ b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
  b CCrossProcessPipe::BAcceptConnection(IProcessPipe**)::fAsserted
- b CCrypto::GenerateRandomBlock(unsigned char*, int)::s_dev_urandom_fd
+ b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b CIPCServer::Thread_MainLoop()::fAsserted
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
@@ -2993,8 +3031,9 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)::fAsserted
- b OneTimeCryptoInitOpenSSL()::threadonce_86_19
+ b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_37_19
+ b OSXHelpers::s_pPollingHelperSingleton
+ b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
  b SHA1.m
@@ -3047,6 +3086,7 @@
  b g_DebugStartTime
  b g_DumpHelper
  b g_IPCLogCounts
+ b g_TLSSendBuffer
  b g_ThreadNetMainThreadID
  b g_TickBase
  b g_TickFrequency
@@ -3064,7 +3104,7 @@
  b g_queuePacketsToDelete
  b g_szLineCache
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b guard variable for CCrypto::GenerateRandomBlock(unsigned char*, int)::s_dev_urandom_fd
+ b guard variable for CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b guard variable for GetMemAlloc::s_StdMemAlloc
@@ -3119,10 +3159,14 @@
  b s_SingleProcessHangupMutex
  b s_SpewType
  b s_UniformStream
+ b s_WSASendThread
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
  b s_bSetSigHandler
  b s_netadrResolveCacheMutexEnforceConstruction
+ b s_objCloseSocket
+ b s_objDisconnect
+ b s_objNullSendOp
  b s_pFileName
  b s_pSpewGroups
  b selectBuf
@@ -3402,6 +3446,16 @@
  d sigoid_srt_xref
  d ssl_mac_pkey_id
  d standard_methods
+ dispatch_get_context
+ dispatch_get_global_queue
+ dispatch_group_async_f
+ dispatch_group_create
+ dispatch_release
+ dispatch_resume
+ dispatch_set_context
+ dispatch_source_cancel
+ dispatch_source_create
+ dispatch_source_set_event_handler_f
  dladdr
  dlclose
  dlopen
@@ -3424,6 +3478,7 @@
  getpwuid
  getsockname$UNIX2003
  getuid
+ ioctl
  kevent
  kill$UNIX2003
  kqueue
@@ -3615,6 +3670,7 @@
  setenv$UNIX2003
  setjmp
  setsockopt
+ shutdown
  signal
  snprintf
  socket
@@ -3673,6 +3729,8 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BN_from_montgomery_word
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
@@ -3689,6 +3747,8 @@
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t ProcessRawStack(void**, int, int, CStack&)
  t RSA_eay_finish
  t RSA_eay_init
@@ -3737,6 +3797,7 @@
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_minidump.cpp
  t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgprotobuf.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
@@ -3772,6 +3833,7 @@
  t _GLOBAL__sub_I_stime.cpp
  t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_strtools.cpp
+ t _GLOBAL__sub_I_sysid.cpp
  t _GLOBAL__sub_I_tcpconnection.cpp
  t _GLOBAL__sub_I_tcphost.cpp
  t _GLOBAL__sub_I_testthread.cpp

@@ -246,6 +246,7 @@
  T Plat_SetAllocErrorFn
  T Plat_TickDiffMicroSec
  T Plat_TickDiffMilliSec
+ T Plat_USTime
  T Plat_VirtualAccessFlags
  T Plat_VirtualAlloc
  T Plat_VirtualFree

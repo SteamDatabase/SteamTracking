@@ -159,6 +159,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/contentupdatecontext.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_activator.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_firmware_update.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_mapping.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/controller_source.o
@@ -230,6 +231,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/singleprocesspipe_any.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/sitelicenseclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/spotifycontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/sqlitecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/stdafx.o
@@ -260,6 +262,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_remoteclient_discovery.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_secrets.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_site_license.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_sitelicenseclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_twofactor.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_unified_base.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_unified_test.steamclient.pb.o
@@ -357,6 +360,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/contentupdatecontext.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_activator.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_firmware_update.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_mapping.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_mode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/controller_source.o
@@ -428,6 +432,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/singleprocesspipe_any.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/sitelicenseclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/spotifycontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/sqlitecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/stdafx.o
@@ -458,6 +463,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_remoteclient_discovery.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_secrets.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_site_license.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_sitelicenseclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_twofactor.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_unified_base.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_unified_test.steamclient.pb.o
@@ -565,6 +571,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_activator.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_activator.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_firmware_update.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mapping.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mapping.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mode.cpp
@@ -607,6 +614,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/matchmaking.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/matchmaking.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/albumcovercontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/albumcovercontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/clientmusic.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/clientmusic.h
@@ -618,6 +626,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/mediacontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/musicdecoder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/musicdecoder.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/musicqueue.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/playbackcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/playbackcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/spotifycontroller.cpp
@@ -634,6 +643,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientstream.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/stdafx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamclient.h
@@ -747,6 +758,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpclientmgr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpserver.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/httpserver.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_send.h
@@ -879,6 +891,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_secrets.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_site_license.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_site_license.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_sitelicenseclient.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_sitelicenseclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_twofactor.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_twofactor.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_unified_base.steamclient.pb.cc

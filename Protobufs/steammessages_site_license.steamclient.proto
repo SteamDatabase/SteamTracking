@@ -3,9 +3,9 @@ import "steammessages_unified_base.steamclient.proto";
 option cc_generic_services = true;
 
 message CSiteManagerClient_IncomingClient_Request {
-	optional fixed64 client_steamid = 1;
-	optional fixed32 client_local_ip = 2;
-	optional fixed32 site_local_ip = 3;
+	optional fixed64 site_instanceid = 1;
+	optional fixed64 client_steamid = 2;
+	optional fixed32 client_local_ip = 3;
 	optional bytes connection_key = 4;
 }
 
@@ -14,7 +14,7 @@ message CSiteManagerClient_IncomingClient_Response {
 
 message CSiteLicense_InitiateAssociation_Request {
 	optional fixed64 site_steamid = 1;
-	optional fixed32 site_local_ip = 2;
+	optional fixed64 site_instanceid = 2;
 	optional fixed32 client_local_ip = 3;
 }
 
@@ -22,33 +22,20 @@ message CSiteLicense_InitiateAssociation_Response {
 	optional bytes connection_key = 1;
 }
 
-message CSiteLicense_ClientSiteAssociation_Request {
-	optional uint64 site_id = 1;
-}
-
-message CSiteLicense_ClientSiteAssociation_Response {
-	optional string site_name = 1;
-}
-
-message CSiteLicense_ClientSiteLicenseSeatCheckout_Request {
-	optional uint32 packageid = 1 [(description) = "Package ID that client wants to check out"];
-	optional uint32 appid = 2 [(description) = "App ID that client wants to play"];
-}
-
-message CSiteLicense_ClientSiteLicenseSeatCheckout_Response {
-}
-
 message CSiteLicense_LCSAuthenticate_Request {
+	optional fixed64 instanceid = 1;
 }
 
 message CSiteLicense_LCSAuthenticate_Response {
-	optional string site_name = 1;
+	optional uint64 site_id = 1;
+	optional string site_name = 2;
+	optional bool new_session = 3;
 }
 
 message CSiteLicense_LCSAssociateUser_Request {
 	optional fixed64 steamid = 1;
-	optional uint32 sessionid = 2;
-	optional fixed32 local_ip = 3;
+	optional fixed32 local_ip = 2;
+	optional fixed64 instanceid = 3;
 }
 
 message CSiteLicense_LCSAssociateUser_Response {
@@ -56,7 +43,7 @@ message CSiteLicense_LCSAssociateUser_Response {
 
 message CSiteLicense_ClientSeatCheckout_Request {
 	optional fixed64 steamid = 1;
-	optional int32 sessionid = 2;
+	optional fixed64 instanceid = 2;
 	optional uint32 packageid = 3;
 	optional uint32 appid = 4;
 }
@@ -64,10 +51,18 @@ message CSiteLicense_ClientSeatCheckout_Request {
 message CSiteLicense_ClientSeatCheckout_Response {
 }
 
+message CSiteLicense_ClientGetAvailableSeats_Request {
+	optional uint32 packageid = 1;
+}
+
+message CSiteLicense_ClientGetAvailableSeats_Response {
+	optional uint32 available_seats = 1;
+}
+
 service SiteManagerClient {
 	option (service_description) = "Local site manager client service";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
-	rpc ExpectIncomingClient (.CSiteManagerClient_IncomingClient_Request) returns (.CSiteManagerClient_IncomingClient_Response) {
+	rpc IncomingClient (.CSiteManagerClient_IncomingClient_Request) returns (.CSiteManagerClient_IncomingClient_Response) {
 		option (method_description) = "Rack informing site manager of new inbound client PSK connection";
 	}
 }
@@ -75,12 +70,6 @@ service SiteLicense {
 	option (service_description) = "Site License service";
 	rpc InitiateAssociation (.CSiteLicense_InitiateAssociation_Request) returns (.CSiteLicense_InitiateAssociation_Response) {
 		option (method_description) = "Client is requesting connetion info for local site";
-	}
-	rpc ClientSiteAssociation (.CSiteLicense_ClientSiteAssociation_Request) returns (.CSiteLicense_ClientSiteAssociation_Response) {
-		option (method_description) = "Client is sending up site association info";
-	}
-	rpc ClientSiteLicenseSeatCheckout (.CSiteLicense_ClientSiteLicenseSeatCheckout_Request) returns (.CSiteLicense_ClientSiteLicenseSeatCheckout_Response) {
-		option (method_description) = "Client is requesting use of a site license seat";
 	}
 	rpc LCSAuthenticate (.CSiteLicense_LCSAuthenticate_Request) returns (.CSiteLicense_LCSAuthenticate_Response) {
 		option (method_description) = "Local cafe server authentication";
@@ -90,5 +79,8 @@ service SiteLicense {
 	}
 	rpc ClientSeatCheckout (.CSiteLicense_ClientSeatCheckout_Request) returns (.CSiteLicense_ClientSeatCheckout_Response) {
 		option (method_description) = "Client is requesting use of a site license seat";
+	}
+	rpc ClientGetAvailableSeats (.CSiteLicense_ClientGetAvailableSeats_Request) returns (.CSiteLicense_ClientGetAvailableSeats_Response) {
+		option (method_description) = "Client is requesting the number of currently available seats";
 	}
 }

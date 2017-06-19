@@ -88,6 +88,9 @@
 						<Button id="CalibrateButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerCalibrate();">
 							<Label class="LongDesc" text="#SettingsController_Calibrate" />
 						</Button>
+						<Button id="ExperimentalUpgradeButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade();">
+							<Label class="LongDesc" text="EXPERIMENTAL FW" />
+						</Button>
 					</Panel>
 					<Label class="SettingsCallout SettingsControllerNameTitle" text="" />	
 					<Label class="SettingsCallout SettingsControllerNameTitle SteamControllerDetails" text="#SettingsController_SteamControllerVersion_Title" />

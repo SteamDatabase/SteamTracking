@@ -112,6 +112,7 @@ message CMsgClientUCMUpdatePublishedFileResponse {
 
 message CMsgClientUCMDeletePublishedFile {
 	optional fixed64 published_file_id = 1;
+	optional uint32 app_id = 2;
 }
 
 message CMsgClientUCMDeletePublishedFileResponse {

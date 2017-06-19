@@ -124,11 +124,8 @@
  CFStringCreateWithCString
  CFStringCreateWithCStringNoCopy
  CFStringGetBytes
- CFStringGetFileSystemRepresentation
  CFStringGetLength
  CFStringGetSystemEncoding
- CFURLCopyFileSystemPath
- CFURLCreateFromFSRef
  CFURLCreateWithFileSystemPath
  CGBitmapContextCreate
  CGBitmapContextGetData
@@ -302,7 +299,6 @@
  FSEventStreamScheduleWithRunLoop
  FSEventStreamStart
  FSEventStreamStop
- FSGetVolumeInfo
  FSPathMakeRef
  FSRefMakePath
  Fix2X
@@ -413,7 +409,7 @@
  R typeinfo name for CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlPriorityQueue<MessageItem_t>
+ R typeinfo name for CUtlPriorityQueue<MessageItem_t, bool (*)(MessageItem_t const&, MessageItem_t const&), CDefUtlPriorityQueueSetIndexFunc<MessageItem_t> >
  R typeinfo name for CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >
@@ -1223,7 +1219,6 @@
  T CSystem::DeleteRegistryKey(char const*)
  T CSystem::GetAllUserDesktopFolderPath()
  T CSystem::GetAllUserStartMenuFolderPath()
- T CSystem::GetAvailableDrives(char*, int)
  T CSystem::GetClipboardText(int, char*, int)
  T CSystem::GetClipboardText(int, wchar_t*, int)
  T CSystem::GetClipboardTextCount()
@@ -1231,7 +1226,6 @@
  T CSystem::GetCurrentTimeAndDate(int*, int*, int*, int*, int*, int*, int*)
  T CSystem::GetDesktopFolderPath()
  T CSystem::GetFrameTime()
- T CSystem::GetFreeDiskSpace(char const*)
  T CSystem::GetRegistryInteger(char const*, int&)
  T CSystem::GetRegistryString(char const*, char*, int)
  T CSystem::GetShortcutTarget(char const*, char*, char*, int)
@@ -1407,9 +1401,9 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlPriorityQueue<MessageItem_t>::Insert(MessageItem_t const&)
- T CUtlPriorityQueue<MessageItem_t>::RemoveAtHead()
- T CUtlPriorityQueue<MessageItem_t>::Validate(CValidator&, char const*)
+ T CUtlPriorityQueue<MessageItem_t, bool (*)(MessageItem_t const&, MessageItem_t const&), CDefUtlPriorityQueueSetIndexFunc<MessageItem_t> >::PercolateDown(int)
+ T CUtlPriorityQueue<MessageItem_t, bool (*)(MessageItem_t const&, MessageItem_t const&), CDefUtlPriorityQueueSetIndexFunc<MessageItem_t> >::PercolateUp(int)
+ T CUtlPriorityQueue<MessageItem_t, bool (*)(MessageItem_t const&, MessageItem_t const&), CDefUtlPriorityQueueSetIndexFunc<MessageItem_t> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::Find(CFontTextureCache::CacheStringEntry_t const&) const
  T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CFontTextureCache::CacheStringEntry_t const&, bool, unsigned short&, bool&, bool&)
  T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::Insert(CFontTextureCache::CacheStringEntry_t const&, bool)
@@ -2926,7 +2920,6 @@
  snprintf
  sscanf
  stat$INODE64
- statfs$INODE64
  std::terminate()
  strchr
  strcmp

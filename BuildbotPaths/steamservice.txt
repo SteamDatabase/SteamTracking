@@ -3,6 +3,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
@@ -14,6 +15,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp

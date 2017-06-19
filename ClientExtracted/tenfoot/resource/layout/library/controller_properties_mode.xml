@@ -43,6 +43,10 @@
 				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="on">
 					<Label class="FieldLabel" text="#Gamepad_Left" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGA" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" dependency="OverlapRegion">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OverlapRegion" />
+					<Slider id="OverlapRegion" direction="horizontal" />
 				</Panel>				
 
 				<!-- Dpad Mode Advanced -->

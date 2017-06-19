@@ -69,10 +69,10 @@
 		"Command"		"ForceQuit"
 		"Default"		"0"
 	}	
-	"HideDialogButton"
+	"CancelQuitButton"
 	{
 		"ControlName"		"Button"
-		"fieldName"		"HideDialogButton"
+		"fieldName"		"CancelQuitButton"
 		"xpos"		"180"
 		"ypos"		"84"
 		"wide"		"128"
@@ -83,10 +83,10 @@
 		"enabled"		"1"
 		"tabPosition"		"2"
 		"paintbackground"		"1"
-		"labelText"		"#vgui_OK"
+		"labelText"		"#vgui_Cancel"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"Command"		"HideDialog"
+		"Command"		"CancelQuit"
 		"Default"		"0"
 	}	
 }

@@ -289,6 +289,10 @@
  B CMsgZoomToElementAtPosition::default_instance_
  B CMsgZoomToElementAtPositionResponse::default_instance_
  B CMsgZoomToFocusedElement::default_instance_
+ B CNet::s_FrameFuncHandleCompletedWorkItems
+ B CNet::s_FrameFuncPollConnections
+ B CNet::s_FrameFuncRunHosts
+ B CNet::s_FrameFuncWakeUpConnections
  B CNet::sm_ListHConnectionToPoll
  B CNet::sm_ListHConnectionToWakeUp
  B CNet::sm_ListRecvThrottleGroup
@@ -296,6 +300,7 @@
  B CNet::sm_THashSocketOwnerCallback
  B CNet::sm_bInit
  B CNet::sm_bShuttingDown
+ B CNet::sm_pFrameFunctionMgr
  B CNet::sm_pResolverJobMgr
  B CNet::sm_pResolverThreadPool
  B CNet::sm_pWorkThreadPool
@@ -310,12 +315,13 @@
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
  B CTCPConnection::sm_THashPTCPConnection
+ B CTCPConnection::sm_ThreadSafeQueueIncoming
  B CTCPConnection::sm_bInit
  B CTCPConnection::sm_cIntraProcessRecvsAllConnections
  B CTCPConnection::sm_cIntraProcessSendsAllConnections
  B CTCPConnection::sm_cOutstandingSendBytesAllConnections
  B CTCPConnection::sm_cOutstandingSendsAllConnections
- B CTCPHost::sm_treeHosts
+ B CTCPHost::sm_ThreadSafeQueueIncoming
  B CTextShadowData::default_instance_
  B CUDPConnection::sm_SchedulerACK
  B CUDPConnection::sm_SchedulerResend
@@ -341,7 +347,6 @@
  B ImageUnreferenced::symbol
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
- B OSXHelpers::CIOPollingHelper::s_pPollingHelperSingleton
  B SinCosTable
  B VideoPlayerFreeAudio::symbol
  B VideoPlayerInitAudio::symbol
@@ -363,7 +368,6 @@
  B g_ConVarDragScrollVelocityMultiplier
  B g_ConVarDragScrollVelocityMultiplierVR
  B g_ConVarEnableUDPHistory
- B g_ConVarIOCPBatchSize
  B g_ConVarIOCPThreadCount
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
@@ -403,6 +407,7 @@
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
  B g_vecTempTextBuffer
+ B k_SysIDNil
  B k_netadrNull
  B lineartolightmap
  B lineartovertex
@@ -1413,6 +1418,7 @@
  D typeinfo for CUtlVectorFixedGrowable<char const*, 4>
  D typeinfo for CUtlVectorFixedGrowable<panorama::CRenderCommandMemoryStack*, 4>
  D typeinfo for CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>
+ D typeinfo for CWSASendThread
  D typeinfo for ConCommand
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
@@ -1432,7 +1438,6 @@
  D typeinfo for IVideoPlayerAudioCallback
  D typeinfo for IVideoPlayerEventCallback
  D typeinfo for IVideoPlayerVideoCallback
- D typeinfo for OSXHelpers::CIOPollingHelper
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CValidatableThread
  D typeinfo for WeightedMovingAverageFilter
@@ -1447,7 +1452,6 @@
  D typeinfo for panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>
  D typeinfo for panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>
  D typeinfo for panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>
- D typeinfo for panorama::CFillBrush
  D typeinfo for panorama::CFragmentShader
  D typeinfo for panorama::CImageData
  D typeinfo for panorama::CImageDecodeThread
@@ -1459,7 +1463,6 @@
  D typeinfo for panorama::CJSFile
  D typeinfo for panorama::CLayoutFile
  D typeinfo for panorama::CLayoutManager
- D typeinfo for panorama::CLinearGradient
  D typeinfo for panorama::CLoadFileLocalTask
  D typeinfo for panorama::CLoadFileURLTask
  D typeinfo for panorama::CLoadInMemoryImageTask
@@ -1471,16 +1474,14 @@
  D typeinfo for panorama::CMouseCursorRender
  D typeinfo for panorama::CMouseCursorTexture
  D typeinfo for panorama::CMsgLiteRefCount
- D typeinfo for panorama::COpenGLDoubleBufferedTexture
  D typeinfo for panorama::COpenGLDoubleBufferedYUV420Texture
  D typeinfo for panorama::COpenGLSurface
  D typeinfo for panorama::COpenGLTexture
+ D typeinfo for panorama::COpenGLWriteableTexture
  D typeinfo for panorama::COverlayInterface
  D typeinfo for panorama::CPanelKeyValue
  D typeinfo for panorama::CPanelStyle
  D typeinfo for panorama::CPanoramaVideoPlayer
- D typeinfo for panorama::CParticleSystem
- D typeinfo for panorama::CRadialGradient
  D typeinfo for panorama::CReloadStyleFile
  D typeinfo for panorama::CRenderCommandList
  D typeinfo for panorama::CRenderMsg<CMsgBeginFrame>
@@ -1738,7 +1739,6 @@
  D typeinfo for panorama::IOGLUITexture
  D typeinfo for panorama::IProtoBufMsgMemoryPool
  D typeinfo for panorama::IUI3DSurface
- D typeinfo for panorama::IUIDoubleBufferedTexture
  D typeinfo for panorama::IUIDoubleBufferedYUV420Texture
  D typeinfo for panorama::IUIEngine
  D typeinfo for panorama::IUIEvent
@@ -1765,6 +1765,7 @@
  D typeinfo for panorama::IUITexture
  D typeinfo for panorama::IUIWindow
  D typeinfo for panorama::IUIWindowInput
+ D typeinfo for panorama::IUIWritableTexture
  D typeinfo for panorama::LockTextureRenderCommand_t
  D typeinfo for panorama::NestedRenderCommand_t
  D typeinfo for panorama::PopAAndTContextRenderCommand_t
@@ -2053,13 +2054,13 @@
  D vtable for CUtlVectorFixedGrowable<char const*, 4>
  D vtable for CUtlVectorFixedGrowable<panorama::CRenderCommandMemoryStack*, 4>
  D vtable for CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>
+ D vtable for CWSASendThread
  D vtable for ConCommand
  D vtable for ConVar
  D vtable for IPC::BinarySemaphore
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
  D vtable for IPC::PosixSharedMemory
- D vtable for OSXHelpers::CIOPollingHelper
  D vtable for WeightedMovingAverageFilter
  D vtable for panorama::BeginFrameRenderCommand_t
  D vtable for panorama::BeginPaintBackgroundRenderCommand_t
@@ -2072,7 +2073,6 @@
  D vtable for panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>
  D vtable for panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>
  D vtable for panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>
- D vtable for panorama::CFillBrush
  D vtable for panorama::CFragmentShader
  D vtable for panorama::CImageData
  D vtable for panorama::CImageDecodeThread
@@ -2084,7 +2084,6 @@
  D vtable for panorama::CJSFile
  D vtable for panorama::CLayoutFile
  D vtable for panorama::CLayoutManager
- D vtable for panorama::CLinearGradient
  D vtable for panorama::CLoadFileLocalTask
  D vtable for panorama::CLoadFileURLTask
  D vtable for panorama::CLoadInMemoryImageTask
@@ -2096,16 +2095,14 @@
  D vtable for panorama::CMouseCursorRender
  D vtable for panorama::CMouseCursorTexture
  D vtable for panorama::CMsgLiteRefCount
- D vtable for panorama::COpenGLDoubleBufferedTexture
  D vtable for panorama::COpenGLDoubleBufferedYUV420Texture
  D vtable for panorama::COpenGLSurface
  D vtable for panorama::COpenGLTexture
+ D vtable for panorama::COpenGLWriteableTexture
  D vtable for panorama::COverlayInterface
  D vtable for panorama::CPanelKeyValue
  D vtable for panorama::CPanelStyle
  D vtable for panorama::CPanoramaVideoPlayer
- D vtable for panorama::CParticleSystem
- D vtable for panorama::CRadialGradient
  D vtable for panorama::CReloadStyleFile
  D vtable for panorama::CRenderCommandList
  D vtable for panorama::CRenderMsg<CMsgBeginFrame>
@@ -2679,6 +2676,7 @@
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
  R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CTextShadowData
+ R typeinfo name for CThreadSafeMemoryPool
  R typeinfo name for CUIFontFilePB
  R typeinfo name for CUIFontFilePackagePB
  R typeinfo name for CUIFontFilePackagePB_CUIEncryptedFontFilePB
@@ -2770,11 +2768,10 @@
  R typeinfo name for CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>
+ R typeinfo name for CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >
  R typeinfo name for CUtlPtr<panorama::CStyleFileKey>
  R typeinfo name for CUtlQueue<Vector2D>
  R typeinfo name for CUtlQueueDeprecated<NetPacketToDelete_t>
- R typeinfo name for CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, CSmartPtr<panorama::CStyleFile>, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2845,6 +2842,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CMsgPushClipLayer, CUtlMemory<CMsgPushClipLayer> >
  R typeinfo name for CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >
+ R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >
  R typeinfo name for CUtlVector<CUtlDelegate<void (EVideoPlayerEvent)>, CUtlMemory<CUtlDelegate<void (EVideoPlayerEvent)> > >
  R typeinfo name for CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >
@@ -2924,7 +2922,7 @@
  R typeinfo name for CUtlVectorFixedGrowable<char const*, 4>
  R typeinfo name for CUtlVectorFixedGrowable<panorama::CRenderCommandMemoryStack*, 4>
  R typeinfo name for CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>
- R typeinfo name for CWSASendToHelper
+ R typeinfo name for CWSASendThread
  R typeinfo name for ConCommand
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
@@ -2947,7 +2945,6 @@
  R typeinfo name for IVideoPlayerEventCallback
  R typeinfo name for IVideoPlayerVideoCallback
  R typeinfo name for KeyValues*
- R typeinfo name for OSXHelpers::CIOPollingHelper
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamThreadTools::CValidatableThread
  R typeinfo name for WeightedMovingAverageFilter
@@ -2990,10 +2987,10 @@
  R typeinfo name for panorama::CMouseCursorRender
  R typeinfo name for panorama::CMouseCursorTexture
  R typeinfo name for panorama::CMsgLiteRefCount
- R typeinfo name for panorama::COpenGLDoubleBufferedTexture
  R typeinfo name for panorama::COpenGLDoubleBufferedYUV420Texture
  R typeinfo name for panorama::COpenGLSurface
  R typeinfo name for panorama::COpenGLTexture
+ R typeinfo name for panorama::COpenGLWriteableTexture
  R typeinfo name for panorama::COverlayInterface
  R typeinfo name for panorama::CPanelKeyValue
  R typeinfo name for panorama::CPanelPtr<panorama::IUIPanel>
@@ -3278,7 +3275,6 @@
  R typeinfo name for panorama::IProtoBufMsgMemoryPool
  R typeinfo name for panorama::IUI3DSurface
  R typeinfo name for panorama::IUI3DSurface*
- R typeinfo name for panorama::IUIDoubleBufferedTexture
  R typeinfo name for panorama::IUIDoubleBufferedYUV420Texture
  R typeinfo name for panorama::IUIEngine
  R typeinfo name for panorama::IUIEvent
@@ -3307,6 +3303,7 @@
  R typeinfo name for panorama::IUIWindow
  R typeinfo name for panorama::IUIWindow*
  R typeinfo name for panorama::IUIWindowInput
+ R typeinfo name for panorama::IUIWritableTexture
  R typeinfo name for panorama::InputMessage_t*
  R typeinfo name for panorama::LockTextureRenderCommand_t
  R typeinfo name for panorama::NestedRenderCommand_t
@@ -3415,7 +3412,6 @@
  SteamStdLib::CommandLine()
  SteamThreadTools::CThread::CThread()
  SteamThreadTools::CThread::GetName()
- SteamThreadTools::CThread::GetPriority() const
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
  SteamThreadTools::CThread::IsThreadRunning() const
@@ -3423,7 +3419,6 @@
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::Resume()
  SteamThreadTools::CThread::SetName(char const*)
- SteamThreadTools::CThread::SetPriority(int)
  SteamThreadTools::CThread::Start(unsigned long)
  SteamThreadTools::CThread::Suspend()
  SteamThreadTools::CThread::~CThread()
@@ -3454,6 +3449,7 @@
  T AES_set_encrypt_key
  T AngleQuaternion(QAngle const&, Quaternion&)
  T AppendStyleFlagsToString(CFmtStrN<1024, true, true>*, unsigned int)
+ T AsyncSocketWrite(int, WSABUF_S const*, unsigned int, unsigned int*, CompletionData_t*)
  T AudioSinkList()
  T AutoReloadFailedLayoutReloads::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AutoReloadFailedLayoutReloads::FormatEventArgs(char const*)
@@ -3663,8 +3659,13 @@
  T CClassMemoryPool<panorama::CUIAnimationEngineNew::RenderOperation_t>::Free(panorama::CUIAnimationEngineNew::RenderOperation_t*)
  T CClassMemoryPool<panorama::UITextLayoutProperties_t>::Free(panorama::UITextLayoutProperties_t*)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
+ T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::CCompletionPortManager()
+ T CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)
+ T CCompletionPortManager::FinalizePendingIo(int, unsigned int)
+ T CCompletionPortManager::FreeCompletionData(CompletionData_t*)
  T CCompletionPortManager::PostIOCPMessage(CompletionData_t*)
+ T CCompletionPortManager::QueuePendingIo(int, CompletionData_t*)
  T CCompletionPortManager::~CCompletionPortManager()
  T CCookie::ByteSize() const
  T CCookie::CCookie()
@@ -3753,6 +3754,7 @@
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
  T CFmtStrN<512, true, true>::CFmtStrN(char const*, ...)
+ T CFrameFunctionMgr::Deregister(CBaseFrameFunction*)
  T CHTMLHeader::ByteSize() const
  T CHTMLHeader::CHTMLHeader()
  T CHTMLHeader::Clear()
@@ -6512,6 +6514,7 @@
  T CSHA1::Transform(unsigned int*, unsigned char const*)
  T CSHA1::Update(unsigned char const*, unsigned int)
  T CSTime::CSTime()
+ T CSTime::SetToServerTime()
  T CSTime::UpdateServerTime(int)
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
@@ -6646,6 +6649,7 @@
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF8()
  T CTCPConnection::FreeGlobals()
+ T CTCPConnection::ThreadedCompletionFunc(CompletionData_t*)
  T CTCPConnection::ValidateGlobals(CValidator&)
  T CTCPHost::ValidateGlobals(CValidator&)
  T CTHash<CTCPConnection*, unsigned int>::Purge()
@@ -6782,6 +6786,12 @@
  T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::Purge()
  T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::ValidateDataStructureOnly(CValidator&, char const*)
  T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::~CTSQueue()
+ T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*, false>::Pop()
+ T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*, false>::Purge()
+ T CTSQueue<CWSASendThread::send_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
  T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
  T CTSQueue<CWorkItem*, false>::Validate(CValidator&, char const*)
  T CTSQueue<CompletionData_t*, false>::AllocNode()
@@ -6818,6 +6828,7 @@
  T CTextShadowData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CTextShadowData::SetCachedSize(int) const
  T CTextShadowData::~CTextShadowData()
+ T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
  T CThreadSafeClassMemoryPool<panorama::CUITextLayoutPango>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
  T CThreadSafeMemoryPool::Alloc(unsigned int)
@@ -6827,12 +6838,11 @@
  T CThreadSafeMemoryPool::Free(void*, int)
  T CThreadSafeMemoryPool::PopNextEntry()
  T CThreadSafeMemoryPool::PurgeIfNotInUse()
+ T CThreadSafeMemoryPool::Validate(CValidator&, char const*)
  T CThreadSafeMemoryPool::~CThreadSafeMemoryPool()
  T CUDPConnection::FreeGlobals()
  T CUDPConnection::ValidateGlobals(CValidator&, char const*)
  T CUDPHost::ValidateGlobals(CValidator&)
- T CUDPSocket::FreeGlobals()
- T CUDPSocket::RunFrameFuncs(CReliableTimer&)
  T CUDPSocket::ValidateGlobals(CValidator&)
  T CUIFontFilePB::ByteSize() const
  T CUIFontFilePB::CUIFontFilePB()
@@ -6997,6 +7007,10 @@
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::CUtlHashMap()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Find(int const&) const
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Purge()
+ T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::CUtlHashMap()
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::EnsureCapacity(int)
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::Find(panorama::ActionInput_t const&) const
@@ -7404,10 +7418,11 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::Insert(panorama::CUIEngine::ScheduledItem_t const&)
- T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::RemoveAtHead()
- T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::Swap(int, int)
- T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t>::Validate(CValidator&, char const*)
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::Insert(panorama::CUIEngine::ScheduledItem_t const&)
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::PercolateDown(int)
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::PercolateUp(int)
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::Swap(int, int)
+ T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::Validate(CValidator&, char const*)
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::Release()
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::SetPtr(CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T CUtlPtr<panorama::CStyleFileKey>::Release()
@@ -7437,9 +7452,6 @@
  T CUtlQueueBaseImpl::ImplGrow(int, unsigned char**)
  T CUtlQueueDeprecated<NetPacketToDelete_t>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<NetPacketToDelete_t>::~CUtlQueueDeprecated()
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CTCPHost*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool)
@@ -8052,6 +8064,7 @@
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
+ T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::GrowVector(int)
  T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::InsertBefore(int, CCubicBezierCurve<Vector2D> const&)
  T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::ShiftElementsRight(int, int)
@@ -8073,6 +8086,7 @@
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
  T CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >::Find(CUtlAbstractDelegate const&) const
  T CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >::FindAndRemove(CUtlAbstractDelegate const&)
@@ -8129,6 +8143,7 @@
  T CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -8393,12 +8408,6 @@
  T CUtlVector<panorama::CLocalization::PanelLocEntry_t*, CUtlMemory<panorama::CLocalization::PanelLocEntry_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CLocalization::PanelLocEntry_t*, CUtlMemory<panorama::CLocalization::PanelLocEntry_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CLocalization::PanelLocEntry_t*, CUtlMemory<panorama::CLocalization::PanelLocEntry_t*> >::~CUtlVector()
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::FindAndRemove(panorama::COpenGLDoubleBufferedTexture* const&)
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::GrowVector(int)
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::InsertBefore(int, panorama::COpenGLDoubleBufferedTexture* const&)
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::ShiftElementsLeft(int, int)
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::ShiftElementsRight(int, int)
- T CUtlVector<panorama::COpenGLDoubleBufferedTexture*, CUtlMemory<panorama::COpenGLDoubleBufferedTexture*> >::~CUtlVector()
  T CUtlVector<panorama::COpenGLDoubleBufferedYUV420Texture*, CUtlMemory<panorama::COpenGLDoubleBufferedYUV420Texture*> >::FindAndRemove(panorama::COpenGLDoubleBufferedYUV420Texture* const&)
  T CUtlVector<panorama::COpenGLDoubleBufferedYUV420Texture*, CUtlMemory<panorama::COpenGLDoubleBufferedYUV420Texture*> >::GrowVector(int)
  T CUtlVector<panorama::COpenGLDoubleBufferedYUV420Texture*, CUtlMemory<panorama::COpenGLDoubleBufferedYUV420Texture*> >::InsertBefore(int, panorama::COpenGLDoubleBufferedYUV420Texture* const&)
@@ -8414,6 +8423,15 @@
  T CUtlVector<panorama::COpenGLTexture*, CUtlMemory<panorama::COpenGLTexture*> >::ShiftElementsLeft(int, int)
  T CUtlVector<panorama::COpenGLTexture*, CUtlMemory<panorama::COpenGLTexture*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::COpenGLTexture*, CUtlMemory<panorama::COpenGLTexture*> >::~CUtlVector()
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::FindAndRemove(panorama::COpenGLWriteableTexture* const&)
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::GrowVector(int)
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::InsertBefore(int, panorama::COpenGLWriteableTexture* const&)
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::ShiftElementsRight(int, int)
+ T CUtlVector<panorama::COpenGLWriteableTexture*, CUtlMemory<panorama::COpenGLWriteableTexture*> >::~CUtlVector()
+ T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::AddToTail(panorama::COpenGLWriteableTexture::PendingTextureUpdate_t&&)
+ T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::GrowVector(int)
+ T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::~CUtlVector()
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::CopyArray(panorama::CPanelKeyValue const*, int)
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::Find(panorama::CPanelKeyValue const&) const
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::GrowVector(int)
@@ -8789,8 +8807,10 @@
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
- T CWSASendToHelper::Validate(CValidator&, char const*)
- T CWSASendToHelper::~CWSASendToHelper()
+ T CWSASendThread::CWSASendThread()
+ T CWSASendThread::Run()
+ T CWSASendThread::Shutdown()
+ T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
  T CWebSocketConnection::ValidateGlobals(CValidator&)
@@ -8885,6 +8905,7 @@
  T CreateSoundAudioDevice(int, int, int)
  T DefaultCompletionFunc(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T DeserializeVaArgs(char const*, char const*, char*, int)
+ T DisconnectPlatformSocket(int)
  T DispatchVideoPlayerEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DispatchVideoPlayerEvent::FormatEventArgs(char const*)
  T DispatchVideoPlayerEvent::GetEventType()
@@ -8913,6 +8934,7 @@
  T GetLanguageShortName(ELanguage)
  T GetMapLocalPanel2DFactory()
  T GetMemAlloc
+ T GetNetErrorName(unsigned int)
  T GetNoEscCharConversion()
  T GetNumBytesForFormat(unsigned int)
  T GetPchTempTextBuffer_Harmful()
@@ -9041,13 +9063,10 @@
  T OSXHelpers::BGetGPUInformation(char*, unsigned int, unsigned long long*, unsigned long long*, unsigned long long*)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
- T OSXHelpers::CIOPollingHelper::RealRun()
- T OSXHelpers::CIOPollingHelper::Run()
+ T OSXHelpers::CIOPollingHelper::OnKQueueActive()
  T OSXHelpers::CIOPollingHelper::Shutdown()
  T OSXHelpers::CIOPollingHelper::Singleton()
- T OSXHelpers::CIOPollingHelper::ThreadExceptionWrapper(void*)
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
- T OSXHelpers::CIOPollingHelper::~CIOPollingHelper()
  T OSXHelpers::ForceActivateThisAppAndRaiseNSWindow(void*)
  T OSXHelpers::ForceSRGBColorSpaceForNSWindow(void*)
  T OSXHelpers::RaiseNSWindow(void*)
@@ -9079,6 +9098,7 @@
  T SetIdentityMatrix(matrix3x4_t&)
  T SetJSWebRequestParams(v8::FunctionCallbackInfo<v8::Value> const&, unsigned int, v8::Handle<v8::Value>, char const*)
  T SetupMatrixTranslation(Vector const&)
+ T ShutdownPlatformSocket(int, int)
  T SkipCombinatorAndSpaces(char const*, char*)
  T SortSelectors(panorama::CStyleSelector const&, panorama::CStyleSelector const&)
  T SortStylesInFile(panorama::StyleFromFile_t* const&, panorama::StyleFromFile_t* const&)
@@ -9092,6 +9112,7 @@
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> > >::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<ThreadMsgBuffer_t>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
  T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
@@ -9140,6 +9161,7 @@
  T TSLNodeTemplate_t<CMsgRenderTexturedRect*>::operator delete(void*)
  T TSLNodeTemplate_t<CMsgRequestRenderCallback*>::operator delete(void*)
  T TSLNodeTemplate_t<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::operator delete(void*)
+ T TSLNodeTemplate_t<CWSASendThread::send_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
  T TSLNodeTemplate_t<TempGlyphBuffer_t>::operator delete(void*)
  T TSLNodeTemplate_t<panorama::CGamepadController::RemoteGamepadInput_t>::operator delete(void*)
@@ -9450,10 +9472,6 @@
  T non-virtual thunk to panorama::CLayoutFile::GetDefine(char const*)
  T non-virtual thunk to panorama::CLayoutFile::GetLayoutFileSymbol() const
  T non-virtual thunk to panorama::CLayoutFile::GetStyleFileSymbols(unsigned int, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >&) const
- T non-virtual thunk to panorama::COpenGLDoubleBufferedTexture::LockAndGetCurrentTexture(int&, int, panorama::COpenGLSurface*)
- T non-virtual thunk to panorama::COpenGLDoubleBufferedTexture::Unlock(int)
- T non-virtual thunk to panorama::COpenGLDoubleBufferedTexture::Validate(CValidator&, char const*)
- T non-virtual thunk to panorama::COpenGLDoubleBufferedTexture::~COpenGLDoubleBufferedTexture()
  T non-virtual thunk to panorama::COpenGLSurface::AllocAlphaTexture(int, int)
  T non-virtual thunk to panorama::COpenGLSurface::EndUpdateFontGlyphTexture(void*)
  T non-virtual thunk to panorama::COpenGLSurface::FreeTexture(void*)
@@ -9467,6 +9485,10 @@
  T non-virtual thunk to panorama::COpenGLTexture::Unlock(int)
  T non-virtual thunk to panorama::COpenGLTexture::Validate(CValidator&, char const*)
  T non-virtual thunk to panorama::COpenGLTexture::~COpenGLTexture()
+ T non-virtual thunk to panorama::COpenGLWriteableTexture::LockAndGetCurrentTexture(int&, int, panorama::COpenGLSurface*)
+ T non-virtual thunk to panorama::COpenGLWriteableTexture::Unlock(int)
+ T non-virtual thunk to panorama::COpenGLWriteableTexture::Validate(CValidator&, char const*)
+ T non-virtual thunk to panorama::COpenGLWriteableTexture::~COpenGLWriteableTexture()
  T non-virtual thunk to panorama::CPanoramaVideoPlayer::~CPanoramaVideoPlayer()
  T non-virtual thunk to panorama::CUISoundSystem::AudioSinkAvailabilityChanged(bool)
  T non-virtual thunk to panorama::CUISoundSystem::SinkAdded(int)
@@ -9911,7 +9933,7 @@
  T panorama::CLocalization::RemoveCustomDialogVariableHandler(char const*)
  T panorama::CLocalization::RemoveDialogVariablesToPanel(panorama::IUIPanel const*, panorama::ILocalizationString*)
  T panorama::CLocalization::ResolveDialogVariable(panorama::EPanelKeyType, char const*, unsigned int, char const*, panorama::IUIPanel const*)
- T panorama::CLocalization::SetDialogVariable(panorama::IUIPanel const*, char const*, CAmount_t<int>)
+ T panorama::CLocalization::SetDialogVariable(panorama::IUIPanel const*, char const*, CAmount)
  T panorama::CLocalization::SetDialogVariable(panorama::IUIPanel const*, char const*, CRTime)
  T panorama::CLocalization::SetDialogVariable(panorama::IUIPanel const*, char const*, char const*)
  T panorama::CLocalization::SetDialogVariable(panorama::IUIPanel const*, char const*, int)
@@ -9974,21 +9996,6 @@
  T panorama::CMouseVelocityTracker::UpdateVelocitySamples(bool)
  T panorama::CMsgLiteRefCount::Release()
  T panorama::CMsgLiteRefCount::Validate(CValidator&, char const*)
- T panorama::COpenGLDoubleBufferedTexture::BIsReady()
- T panorama::COpenGLDoubleBufferedTexture::COpenGLDoubleBufferedTexture(unsigned int, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType, bool)
- T panorama::COpenGLDoubleBufferedTexture::CreateOGLTextureIDIfNeeded(panorama::COpenGLSurface*)
- T panorama::COpenGLDoubleBufferedTexture::GetAlphaChannelType()
- T panorama::COpenGLDoubleBufferedTexture::GetFormat()
- T panorama::COpenGLDoubleBufferedTexture::GetStride()
- T panorama::COpenGLDoubleBufferedTexture::GetTextureHeight()
- T panorama::COpenGLDoubleBufferedTexture::GetTextureID()
- T panorama::COpenGLDoubleBufferedTexture::GetTextureWidth()
- T panorama::COpenGLDoubleBufferedTexture::LockAndGetCurrentTexture(int&, int, panorama::COpenGLSurface*)
- T panorama::COpenGLDoubleBufferedTexture::Unlock(int)
- T panorama::COpenGLDoubleBufferedTexture::UpdateTextureData(void*)
- T panorama::COpenGLDoubleBufferedTexture::UploadOGLTextureIfNeeded(panorama::COpenGLSurface*)
- T panorama::COpenGLDoubleBufferedTexture::Validate(CValidator&, char const*)
- T panorama::COpenGLDoubleBufferedTexture::~COpenGLDoubleBufferedTexture()
  T panorama::COpenGLDoubleBufferedYUV420Texture::BIsReady()
  T panorama::COpenGLDoubleBufferedYUV420Texture::BUpdateTextureData(void*, void*, void*, unsigned int, unsigned int, unsigned int)
  T panorama::COpenGLDoubleBufferedYUV420Texture::CreateOGLTextureIDIfNeeded(panorama::COpenGLSurface*)
@@ -10005,10 +10012,10 @@
  T panorama::COpenGLDoubleBufferedYUV420Texture::~COpenGLDoubleBufferedYUV420Texture()
  T panorama::COpenGLSurface::ActivateRenderTarget()
  T panorama::COpenGLSurface::AllocAlphaTexture(int, int)
- T panorama::COpenGLSurface::BCreateDoubleBufferedTexture(panorama::IUIDoubleBufferedTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType, bool)
  T panorama::COpenGLSurface::BCreateDoubleBufferedYUV420Texture(panorama::IUIDoubleBufferedYUV420Texture**, unsigned int, unsigned int)
  T panorama::COpenGLSurface::BCreateOpenGLDeviceResources()
  T panorama::COpenGLSurface::BCreateTexture(panorama::IUITexture**, void*, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
+ T panorama::COpenGLSurface::BCreateWritableTexture(panorama::IUIWritableTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::COpenGLSurface::BCursorVisible()
  T panorama::COpenGLSurface::BDeleteTexture(panorama::IUITexture*)
  T panorama::COpenGLSurface::BInitialize(SDL_Window*, void*, int, int, int, int, panorama::IUIEngine::ERenderTarget, bool, bool, panorama::CMouseCursorRender*)
@@ -10123,6 +10130,21 @@
  T panorama::COpenGLTexture::Unlock(int)
  T panorama::COpenGLTexture::Validate(CValidator&, char const*)
  T panorama::COpenGLTexture::~COpenGLTexture()
+ T panorama::COpenGLWriteableTexture::BIsReady()
+ T panorama::COpenGLWriteableTexture::COpenGLWriteableTexture(unsigned int, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
+ T panorama::COpenGLWriteableTexture::CreateOGLTextureIDIfNeeded(panorama::COpenGLSurface*)
+ T panorama::COpenGLWriteableTexture::GetAlphaChannelType()
+ T panorama::COpenGLWriteableTexture::GetFormat()
+ T panorama::COpenGLWriteableTexture::GetStride()
+ T panorama::COpenGLWriteableTexture::GetTextureData()
+ T panorama::COpenGLWriteableTexture::GetTextureHeight()
+ T panorama::COpenGLWriteableTexture::GetTextureID()
+ T panorama::COpenGLWriteableTexture::GetTextureWidth()
+ T panorama::COpenGLWriteableTexture::LockAndGetCurrentTexture(int&, int, panorama::COpenGLSurface*)
+ T panorama::COpenGLWriteableTexture::Unlock(int)
+ T panorama::COpenGLWriteableTexture::UpdateSubTextureData(void*, unsigned int, unsigned int, unsigned int, unsigned int)
+ T panorama::COpenGLWriteableTexture::Validate(CValidator&, char const*)
+ T panorama::COpenGLWriteableTexture::~COpenGLWriteableTexture()
  T panorama::COverlayInterface::OnMouseEnter()
  T panorama::COverlayInterface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned long, float, panorama::EOverlayWindowAlignment)
  T panorama::COverlayInterface::SetFixedSurfaceSize(unsigned int, unsigned int)
@@ -10135,7 +10157,7 @@
  T panorama::CPanelIdentifiers::CPanelIdentifiers(panorama::IUIPanel*)
  T panorama::CPanelKeyValue::BCompareValues(panorama::CPanelKeyValue const&) const
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*)
- T panorama::CPanelKeyValue::CPanelKeyValue(char const*, CAmount_t<int>)
+ T panorama::CPanelKeyValue::CPanelKeyValue(char const*, CAmount)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, char const*)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, int)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, long)
@@ -10412,7 +10434,6 @@
  T panorama::CPanoramaVideoPlayer::~CPanoramaVideoPlayer()
  T panorama::CParticleSystem::Interpolate(float, panorama::CParticleSystem&)
  T panorama::CParticleSystem::ScaleLengthValues(float)
- T panorama::CParticleSystem::Validate(CValidator&, char const*)
  T panorama::CParticleSystem::operator==(panorama::CParticleSystem const&) const
  T panorama::CQuad2DWarper::CQuad2DWarper(Vector2D, Vector2D, Vector2D, Vector2D, Vector2D, Vector2D, Vector2D, Vector2D)
  T panorama::CQuad2DWarper::ComputeQuadToSquare(Vector2D, Vector2D, Vector2D, Vector2D, VMatrix&)
@@ -13120,9 +13141,9 @@
  T panorama::CUIProtoBufMsgMemoryPoolMgr::DumpPoolInfo()
  T panorama::CUIProtoBufMsgMemoryPoolMgr::Validate(CValidator&, char const*)
  T panorama::CUIProtoBufMsgMemoryPoolMgr::~CUIProtoBufMsgMemoryPoolMgr()
- T panorama::CUIRenderEngine::BCreateDoubleBufferedTexture(panorama::IUIDoubleBufferedTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType, bool)
  T panorama::CUIRenderEngine::BCreateDoubleBufferedYUV420Texture(panorama::IUIDoubleBufferedYUV420Texture**, unsigned int, unsigned int)
  T panorama::CUIRenderEngine::BCreateTexture(panorama::IUITexture**, void*, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
+ T panorama::CUIRenderEngine::BCreateWritableTexture(panorama::IUIWritableTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::CUIRenderEngine::BUseClientRenderCommands() const
  T panorama::CUIRenderEngine::BeginFrame(unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, Color, float, bool, bool)
  T panorama::CUIRenderEngine::BeginPaintBackground()
@@ -14992,6 +15013,7 @@
  Test_SetFailed
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
+ ThreadImplOneTimeInit
  ThreadInMainThread
  ThreadInterlockedAssignIf
  ThreadInterlockedDecrement
@@ -15000,7 +15022,6 @@
  ThreadInterlockedIncrement
  ThreadIsProcessIdActive
  ThreadIsThreadRunning
- ThreadSetDebugName
  ThreadShellExecute
  ThreadSleep
  V_ExtractDomainFromURL
@@ -15093,6 +15114,7 @@
  __toupper
  __udivdi3
  __vsnprintf_chk
+ _dispatch_source_type_read
  _exit
  abort
  acos
@@ -15562,6 +15584,7 @@
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
+ b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::fAsserted
@@ -15582,6 +15605,8 @@
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
+ b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_37_19
+ b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
  b dump_panorama_css_properties_command
  b g_AllLanguagesCmdLine
@@ -15596,6 +15621,7 @@
  b g_Mathlib_GammaToLinear
  b g_Mathlib_LinearToGamma
  b g_StylePropertyRegistrations
+ b g_TLSSendBuffer
  b g_ThreadNetMainThreadID
  b g_WebBrowserOS
  b g_hAudioDll
@@ -16045,13 +16071,16 @@
  b s_SIMDRandContexts
  b s_SharedUDPSocketPollHelper
  b s_TempGlyphBuffers
+ b s_WSASendThread
  b s_bCallbackManagerInitialized
  b s_bCreatedAudioSinkObject
  b s_bHWAccelCRC32
  b s_bInitializedKeyMap
  b s_bMathlibInitializedGlobalConstructorOnly
  b s_netadrResolveCacheMutexEnforceConstruction
- b s_pWSASendToHelper
+ b s_objCloseSocket
+ b s_objDisconnect
+ b s_objNullSendOp
  b s_unKeyCodeToKey
  b s_unVirtualKeyToKeyCode
  b sc_kalman_a_vel
@@ -16118,6 +16147,17 @@
  d s_flMatrixIdentity
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ dispatch_get_context
+ dispatch_get_global_queue
+ dispatch_group_async_f
+ dispatch_group_create
+ dispatch_release
+ dispatch_resume
+ dispatch_set_context
+ dispatch_source_cancel
+ dispatch_source_create
+ dispatch_source_set_cancel_handler_f
+ dispatch_source_set_event_handler_f
  dlclose
  dlopen
  dlsym
@@ -16690,6 +16730,7 @@
  semaphore_wait
  setjmp
  shm_open
+ shutdown
  sin
  snprintf
  sprintf
@@ -16772,6 +16813,8 @@
  t BDecryptAESUsingOpenSSL(unsigned char const*, unsigned int, unsigned char*, unsigned int*, aes_key_st*, unsigned char const*, bool)
  t BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)
  t BlockingWait(int*, unsigned int, int*)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
+ t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::~CUtlVector()
  t ConstructStyleFileIndex(unsigned int, unsigned int, unsigned int)
@@ -16799,6 +16842,9 @@
  t MarkColorRangeAttrCopy(_PangoAttribute const*)
  t MarkColorRangeAttrDestroy(_PangoAttribute*)
  t MemInputsrc
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::Shutdown()::$_1::__invoke(void*)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
  t ParseChildren
@@ -16866,6 +16912,7 @@
  t _GLOBAL__sub_I_mathlib_base.cpp
  t _GLOBAL__sub_I_mousecursor.cpp
  t _GLOBAL__sub_I_msg.cpp
+ t _GLOBAL__sub_I_msgprotobuf.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_net.cpp
  t _GLOBAL__sub_I_net_misc.cpp
@@ -16904,6 +16951,7 @@
  t _GLOBAL__sub_I_styleproperties.cpp
  t _GLOBAL__sub_I_stylepropertyfactory.cpp
  t _GLOBAL__sub_I_styles.cpp
+ t _GLOBAL__sub_I_sysid.cpp
  t _GLOBAL__sub_I_tcpconnection.cpp
  t _GLOBAL__sub_I_tcphost.cpp
  t _GLOBAL__sub_I_textlayoutdrawcache.cpp

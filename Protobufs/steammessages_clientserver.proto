@@ -42,6 +42,8 @@ message CMsgClientTicketAuthComplete {
 message CMsgClientCMList {
 	repeated uint32 cm_addresses = 1;
 	repeated uint32 cm_ports = 2;
+	repeated string cm_websocket_addresses = 3;
+	optional uint32 percent_default_to_websocket = 4;
 }
 
 message CMsgClientP2PConnectionInfo {
@@ -679,6 +681,7 @@ message CMsgClientGetClientAppList {
 	optional bool games = 3;
 	optional bool only_installed = 4;
 	optional bool only_changing = 5;
+	optional bool comics = 6;
 }
 
 message CMsgClientGetClientAppListResponse {

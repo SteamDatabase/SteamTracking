@@ -16,6 +16,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msgbase.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msgprotobuf.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/net.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/netconnection.cpp
@@ -31,6 +32,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcpconnection.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcphost.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpconnection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp

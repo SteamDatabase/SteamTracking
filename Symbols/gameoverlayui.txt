@@ -314,7 +314,10 @@
  CFRunLoopRun
  CFStringCreateWithCString
  CFStringGetCString
+ CFStringGetFileSystemRepresentation
+ CFURLCopyFileSystemPath
  CFURLCreateDataAndPropertiesFromResource
+ CFURLCreateFromFSRef
  CFURLCreateWithFileSystemPath
  CGEventGetFlags
  CGEventGetIntegerValueField
@@ -3630,6 +3633,7 @@
  D vtable for vgui::URLLabel
  D vtable for vgui::WrapPanel
  Error
+ FSGetVolumeInfo
  GetCrashHandlerFactory
  GetCurrentKeyModifiers
  GetFrontProcess
@@ -5474,7 +5478,7 @@
  T CMicroTxnAuthorizeDialog::ChainToMap()
  T CMicroTxnAuthorizeDialog::CloseBrowser()
  T CMicroTxnAuthorizeDialog::CompleteTxn(unsigned long long)
- T CMicroTxnAuthorizeDialog::FormatCurrencyForTransactionUTF8(CAmount_t<int> const&, char*, unsigned int) const
+ T CMicroTxnAuthorizeDialog::FormatCurrencyForTransactionUTF8(CAmount const&, char*, unsigned int) const
  T CMicroTxnAuthorizeDialog::GetAnimMap()
  T CMicroTxnAuthorizeDialog::GetClassSize() const
  T CMicroTxnAuthorizeDialog::GetKBMap()
@@ -9354,6 +9358,7 @@
  T GenerateJavascriptForCheckoutReturn(char const*, CUtlString*)
  T GetAppInfoSection(unsigned int, EAppInfoSection, KeyValues*)
  T GetAttributesAsString(CDirIterator const&)
+ T GetAvailableDrives(char*, int)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&)
@@ -9370,6 +9375,8 @@
  T GetPanelMessageMapDictionary()
  T GetPchTempTextBuffer_Harmful()
  T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
+ T GetServerBrowserPingRate(int)
+ T GetShowFPSCornerOption(int)
  T GetTGADimensions(int, char*, int*, int*)
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()
@@ -14000,7 +14007,6 @@
  b k_rgEncoderSettings
  b k_rgPermissions
  b k_rgShowChatCorner
- b k_rgShowFPSCorner
  b mCurPosition
  b mCurToken
  b mExprTree
@@ -14087,6 +14093,7 @@
  cos
  crc32
  d .memset_pattern
+ d GetShowFPSCornerOption(int)::k_rgShowFPSCorner
  d VTT for (anonymous namespace)::CaptionGripPanel
  d VTT for (anonymous namespace)::GripPanel
  d VTT for (anonymous namespace)::ScrollBarButton
@@ -14231,6 +14238,7 @@
  qsort
  r .memset_pattern
  r .memset_pattern1
+ r GetServerBrowserPingRate(int)::nServerBrowserPingRates
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
  r ascii_class
@@ -14243,7 +14251,6 @@
  r extra_pool_slop
  r first_pool_slop
  r fourbppswaptable
- r g_PingRates
  r g_rgubValidatedEmoticonDelimiter
  r jpeg_zigzag_order
  r jpeg_zigzag_order2
@@ -14423,6 +14430,7 @@
  sprintf
  sscanf
  stat$INODE64
+ statfs$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const

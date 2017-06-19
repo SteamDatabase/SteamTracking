@@ -160,7 +160,7 @@
 		"dutch"
 		{
 			"Title" "Gamepad met zeer precieze camera/vizier"
-			"Description" "Deze template werkt het beste voor spellen die zijn ontworpen met ondersteuning voor een gamepad, maar die ook een desktopmuis ondersteunen voor camerabesturing of om te richten. Hiermee profiteer je het meeste van de rechter-pad van je controller voor nauwkeurig richten en camerabesturing."
+			"Description" "Het sjabloon werkt het beste met spellen die zijn ontworpen met ondersteuning voor een gamepad, maar die ook een desktopmuis ondersteunen voor camerabesturing of om te richten. Hiermee profiteer je het meeste van de rechterpad van je controller voor nauwkeurig richten en camerabesturing."
 		}
 		"finnish"
 		{
@@ -182,6 +182,11 @@
 			"Title" "Gamepad nagy pontosságú kamerával/célzással"
 			"Description" "Ez a sablon gamepadhez tervezett játékokkal működik a legjobban, de támogat egeret is a kamerairányításhoz vagy célzáshoz. Ez használja ki a legjobban játékvezérlőd jobb oldali felületét pontos célzáshoz és kamerairányításhoz."
 		}
+		"italian"
+		{
+			"Title" "Controller con telecamera/mirino ad alta precisione"
+			"Description" "Il template si applica idealmente ai giochi progettati per l'utilizzo del controller, ma supporta anche un mouse da desktop per le funzioni di mirino e controllo della telecamera. Grazie a questo template potrete sfruttare il lato destro del trackpad per prendere la mira con precisione e controllare la telecamera."
+		}
 		"japanese"
 		{
 			"Title" "高精度のカメラ/エイム機能を持つゲームパッド"
@@ -195,7 +200,7 @@
 		"polish"
 		{
 			"Title" "Kontroler, wysoka precyzja poruszania kamerą / celowania"
-			"Description" "Ten szablon będzie działać najlepiej dla gier, które zostały zaprojektowane z myślą o kontrolerze, ale wspierają także myszkę do poruszania kamerą lub celowania. Wykorzysta to w najlepszy sposób prawą stronę pada na twoim kontrolerze do precyzyjnego celowania i sterowania kamerą."
+			"Description" "Ten szablon będzie działać najlepiej dla gier, które zostały zaprojektowane z myślą o kontrolerze, ale wspierają także myszkę do poruszania kamerą lub celowania. Wykorzysta to w najlepszy sposób prawy panel dotykowy twojego kontrolera do precyzyjnego celowania i sterowania kamerą."
 		}
 		"portuguese"
 		{
@@ -215,7 +220,7 @@
 		"spanish"
 		{
 			"Title" "Mando con cámara/apuntado de alta precisión"
-			"Description" "La plantilla funciona mejor con juegos que han sido diseñados con un mando en mente, pero también es compatible con un ratón de escritorio para controlar la cámara y apuntar. En concreto, sacará el mejor partido aprovechando el pad de la derecha de tu controlador para apuntar con precisión y controlar la cámara."
+			"Description" "La plantilla funciona mejor con juegos que han sido diseñados con un mando en mente, pero también es compatible con un ratón de escritorio para controlar la cámara y apuntar. En concreto, sacará el mejor partido aprovechando el pad derecho del mando para apuntar con precisión y controlar la cámara."
 		}
 		"swedish"
 		{
@@ -226,6 +231,11 @@
 		{
 			"Title" "高精度视角/瞄准手柄"
 			"Description" "此模板在那些为手柄设计，但也支持鼠标控制视角和瞄准的游戏上最为合适。此模板将最大化限度利用您控制器上的右侧十字键，将其用于精确瞄准以及视角控制。"
+		}
+		"thai"
+		{
+			"Title" "เกมแพดพร้อมมุมกล้องหรือการเล็งแบบความแม่นยำสูง"
+			"Description" "แม่แบบนี้ทำงานได้ดีที่สุดสำหรับเกมที่ออกแบบมาสำหรับเกมแพดเป็นหลัก แต่ยังคงรองรับเมาส์ของเดสก์ทอปสำหรับการควมคุมกล้องหรือการเล็งยิงด้วย นี่จะทำงานได้ดีที่สุดจากการใช้ประโยชน์จากแพดขวาบนคอนโทรลเลอร์ของคุณโดยเฉพาะ สำหรับการเล็งยิงและการควบคุมกล้องอย่างแม่นยำ"
 		}
 		"brazilian"
 		{

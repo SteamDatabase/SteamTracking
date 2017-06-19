@@ -13,7 +13,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendsUI.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/friendsdialog.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/steamfriends_test.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h

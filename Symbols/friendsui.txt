@@ -189,8 +189,6 @@
  B g_ScrollBar_VerticalLinkerHack
  B g_ScrollBar_VerticalPullInModule
  B g_SharedLibraryManager
- B g_SteamFriendsTest
- B g_TestFriends
  B g_TextEntryLinkerHack
  B g_TextEntryPullInModule
  B g_ToggleButtonLinkerHack
@@ -206,7 +204,6 @@
  B g_pRunGameEngine
  B g_pSteamUI
  B g_pSteamVGuiModule
- B g_pTestHelper
  B obj_cleanup_defer
  B s_NoEscConversion
  B s_StringCharConversion
@@ -1996,7 +1993,6 @@
  D typeinfo for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  D typeinfo for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D typeinfo for CSharedLibraryNotifications::CCallback_OnStopPlaying
- D typeinfo for CSteamFriends_Test
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTradeInviteBar
@@ -2019,7 +2015,6 @@
  D typeinfo for IBaseInterface
  D typeinfo for IClientParentalSettings
  D typeinfo for IFriendPanelContainer
- D typeinfo for IFriendsTestHelper
  D typeinfo for IFriendsUI
  D typeinfo for IHTMLResponses
  D typeinfo for IVGuiModule
@@ -3144,7 +3139,6 @@
  D vtable for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  D vtable for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D vtable for CSharedLibraryNotifications::CCallback_OnStopPlaying
- D vtable for CSteamFriends_Test
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTradeInviteBar
@@ -3711,7 +3705,6 @@
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnStopPlaying
- R typeinfo name for CSteamFriends_Test
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTradeInviteBar
@@ -3839,7 +3832,6 @@
  R typeinfo name for IBaseInterface
  R typeinfo name for IClientParentalSettings
  R typeinfo name for IFriendPanelContainer
- R typeinfo name for IFriendsTestHelper
  R typeinfo name for IFriendsUI
  R typeinfo name for IHTMLResponses
  R typeinfo name for IVGuiModule
@@ -7632,11 +7624,6 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
- T CSteamFriends_Test::Friend_ChangeState(int, EPersonaState)
- T CSteamFriends_Test::Friend_SendMessage(int, EChatEntryType, char const*)
- T CSteamFriends_Test::GetITestClient(CSteamID&)
- T CSteamFriends_Test::GetSteamID(int)
- T CSteamFriends_Test::Init()
  T CSteamID::SetFromStringStrict(char const*, EUniverse)
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
@@ -9321,7 +9308,6 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T StringLessThan(char const* const&, char const* const&)
  T Sys_GetProcAddress(CSysModule*, char const*)
- T Sys_LoadInterface(char const*, char const*, CSysModule**, void**)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
@@ -13262,7 +13248,6 @@
  ThreadInterlockedDecrement
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
- ThreadSleep
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
  V_ExtractDomainFromURL
@@ -13642,7 +13627,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_86_19
+ b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback

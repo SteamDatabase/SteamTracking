@@ -1,0 +1,21 @@
+<root>
+	<styles>		
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/tenfootcontroller_calibration.css"  /> 
+	</styles> 
+  <Panel class="TenfootMsgBox TenfootControllerPadCalibrationPopup" tabindex="auto" selectionpos="auto">
+	  <Panel class="TenfootControllerPadCalibrationPopupBody" tabindex="auto">
+		  <Label class="TitleFont" text="Controller Bluetooth Upgrade" />
+      <Label class="TextFont" text="This upgrades the Steam Controller to support Bluetooth.  This feature is for development purposes only and is currently not reversible in Steam i.e. Your controller will only support Bluetooth connections.  Upgrading can take several minutes!" />
+      <Panel id="ButtonPanel">
+        <Button id="UpgradeButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="ControllerBluetoothUpgradeStart()">
+          <Label id="UpgradeStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
+        </Button>
+        <Button  id="CancelButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="ControllerBluetoothUpgradeCancelButton()">
+          <Label id="CancelButtonText" class="CalibrationButtonText" text="#UI_Cancel" />
+        </Button>
+      </Panel>
+    </Panel>
+  </Panel>
+</root>

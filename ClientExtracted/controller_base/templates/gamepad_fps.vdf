@@ -124,7 +124,7 @@
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
 	}
-	"Localization"
+		"Localization"
 	{
 		"english"
 		{
@@ -135,6 +135,11 @@
 		{
 			"Title" "Gamepad s ovládáním kamery"
 			"Description" "Tato šablona je pro většinu her podporujících gamepad a disponujících kamerou z pohledu první nebo třetí osoby. Mezi takové hry patří například akční hry z pohledu první nebo třetí osoby."
+		}
+		"danish"
+		{
+			"Title" "Gamepad med kamerastyring"
+			"Description" "Denne skabelon er til de fleste spil, der allerede har indbygget gamepad-understøttelse og har et første- eller tredjepersonskontrolleret kamera. FPS eller tredjepersons adventure-spil osv."
 		}
 		"dutch"
 		{
@@ -161,9 +166,20 @@
 			"Title" "Gamepad kamerairányítással"
 			"Description" "Ez a sablon a legtöbb olyan játékhoz való, melyek már rendelkeznek beépített gamepad-támogatással, és van első vagy harmadik személyű kezelésű kamerájuk. Ilyenek az FPS vagy harmadik személyű kalandjátékok stb."
 		}
+		"italian"
+		{
+			"Title" "Gamepad con controlli della telecamera"
+			"Description" "Questo template è pensato per la maggior parte dei giochi che hanno già il supporto per gamepad integrato e hanno la visuale controllata in prima o terza persona. Giochi d'avventura in terza persona, FPS ecc."
+		}
+		"japanese"
+		{
+			"Title" "カメラコントロール機能を持つゲームパッド"
+			"Description" "FPS や、アドベンチャーゲームのような、一人称または三人称のカメラ操作を行うゲームパッドに標準対応したゲーム用のテンプレートです。"
+		}
 		"koreana"
 		{
 			"Title" "카메라 조작 기능이 있는 게임패드"
+			"Description" "이 템플릿은 이미 게임패드 지원이 내장되어 있으며 1인칭 또는 3인칭 시점 카메라 조작을 지원하는 대부분의 게임을 위한 것입니다. FPS, 3인칭 어드벤쳐 게임 및 기타."
 		}
 		"polish"
 		{
@@ -202,7 +218,8 @@
 		}
 		"thai"
 		{
-			"Title" "เกมแพดพร้อมการควบคุมกล้อง"
+			"Title" "เกมแพดพร้อมการควบคุมมุมกล้อง"
+			"Description" "แม่แบบนี้ใช้สำหรับเกมส่วนมากที่มีการรองรับเกมแพดมาในตัวอยู่แล้ว และมีการควบคุมมุมกล้องในมุมมองบุคคลที่หนึ่งหรือสาม เช่น เกมยิงมุมมองบุคคลที่หนึ่ง หรือเกมผจญภัยมุมมองบุคคลที่สาม ฯลฯ"
 		}
 		"brazilian"
 		{

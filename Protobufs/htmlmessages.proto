@@ -74,6 +74,8 @@ message CMsgBrowserCreate {
 	optional bool borderless = 12 [default = false];
 	optional string vroverlay_key = 13;
 	optional uint32 browser_type = 14 [default = 0];
+	optional int32 initial_top = 15 [default = -1];
+	optional int32 initial_left = 16 [default = -1];
 }
 
 message CMsgBrowserCreateResponse {

@@ -385,7 +385,6 @@ RemoteContent ShoppingCart .CheckoutTitleRow
 }
 
 
-
 //
 // General Checkout Panel Styles
 //
@@ -1231,6 +1230,19 @@ CheckoutPaymentMethodFields
 	overflow: squish scroll;
 }
 
+#BankName
+{
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#BankNameDropDownMenu
+{
+	width: 400px;
+	height: 294px;
+	overflow: squish scroll;
+}
+
 #SavePaymentInfo
 {
 	margin-top: 34px;
@@ -1300,6 +1312,13 @@ CheckoutPaymentMethodFields
 #UpdatePayPalFields
 {
 	visibility: collapse;
+	color: #cfb53fff;
+}
+
+#UpdateBankNameFields
+{
+	visibility: collapse;
+	flow-children: down;
 	color: #cfb53fff;
 }
 
