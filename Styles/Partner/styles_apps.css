@@ -186,8 +186,22 @@ textarea#leaderboard_blob {
 	margin-top: 6px;
 }
 
+#episode_list_wrapper .episode .store_edit_col .episode_number {
+	width: 30px;
+	text-align: right;
+}
+
+#episode_list_wrapper .episode .store_edit_col input.episode_number[disabled] {
+	color: #777;
+}
+
 #episode_list_wrapper .episode .store_edit_col .episode_name {
-	width: 400px;
+	width: 358px;
+}
+
+#episode_list_wrapper .episode .store_edit_col .episodeRunningTime {
+	text-align: right;
+	width: 30px;
 }
 
 #episode_list_wrapper .episode .store_edit_col .LocTextArea {
