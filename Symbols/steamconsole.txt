@@ -1247,6 +1247,7 @@
  b app_build_all_depots_command
  b app_info_request_command
  b app_license_request_command
+ b app_run_command
  b app_set_config_command
  b app_uninstall_command
  b app_update_command
@@ -1471,6 +1472,7 @@
  t app_build_all_depots(void*, ConParams&, ConCommand&)
  t app_info_request(void*, ConParams&, ConCommand&)
  t app_license_request(void*, ConParams&, ConCommand&)
+ t app_run(void*, ConParams&, ConCommand&)
  t app_set_config(void*, ConParams&, ConCommand&)
  t app_uninstall(void*, ConParams&, ConCommand&)
  t app_update(void*, ConParams&, ConCommand&)
