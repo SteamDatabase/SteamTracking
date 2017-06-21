@@ -261,7 +261,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .salespend_card_drop_info .card_drop_info_subarea {
-	border-color: #ac5999;
+	border-color: #5491cf;
 
 }
 
@@ -270,7 +270,7 @@ a.badge_row:hover .badge_view_details {
 	background: -webkit-linear-gradient( top, #ac5999 5%, #664503 95%);background: linear-gradient( to bottom, #ac5999 5%, #664503 95%);}
 
 .salespend_card_drop_info .card_drop_info_totalspending {
-	color: #ac5999;
+	color: #5491cf;
 	font-size: 15px;
 }
 

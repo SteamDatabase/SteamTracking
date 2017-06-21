@@ -1339,3 +1339,8 @@ function LinkFacebook( from_page )
 	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/', {from_page: from_page } );
 }
 
+function SteamUniversalOpenAvatarUpload()
+{
+	window.parent.postMessage( "openavataruploaddialog", 'http://steamloopback.host' );
+}
+

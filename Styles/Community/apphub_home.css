@@ -816,6 +816,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	margin-bottom: 10px;
 }
 
+.reported_items_details_group > div {
+	white-space: nowrap;
+}
+
 .reported_items_details_header {
 	font-weight: bold;
 }

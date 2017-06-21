@@ -531,10 +531,15 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 		$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			$JFromIDOrElement(divToHide).hide();
-			if ( data && data.success )
+			if ( data && data.success ) {
 				$JFromIDOrElement(divToShowSuccess).show();
-			else
-				$JFromIDOrElement(divToShowError).show();
+				if ( data.saleTaskCompleted ) {
+					NewStickerPackModal();
+				}
+			}
+			else {
+                $JFromIDOrElement(divToShowError).show();
+            }
 
 			if ( typeof GDynamicStore != 'undefined' )
 				GDynamicStore.InvalidateCache();
