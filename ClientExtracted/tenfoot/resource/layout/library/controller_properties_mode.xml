@@ -32,10 +32,6 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
-				</Panel>
 				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="on"> 
 					<Label class="FieldLabel" text="#Gamepad_Up" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGA" />
@@ -1036,7 +1032,11 @@
 					<Panel class="FieldWrapper" modes="dpad" advanced="on" sources="gyro">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
 						<Slider id="GyroNeutralAngleDpad" direction="horizontal" />
-					</Panel>					
+					</Panel>
+					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
+					</Panel>
 					<!-- Dpad Mode Advanced -->
 					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />

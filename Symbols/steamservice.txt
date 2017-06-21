@@ -2273,7 +2273,7 @@
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
- T OSXHelpers::CIOPollingHelper::OnKQueueActive()
+ T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
  T OSXHelpers::CIOPollingHelper::Singleton()
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
@@ -3031,7 +3031,7 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_37_19
+ b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_44_19
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
@@ -3455,6 +3455,7 @@
  dispatch_set_context
  dispatch_source_cancel
  dispatch_source_create
+ dispatch_source_set_cancel_handler_f
  dispatch_source_set_event_handler_f
  dladdr
  dlclose
@@ -3749,6 +3750,8 @@
  t MakeTerm(ExprNode*&)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t ProcessRawStack(void**, int, int, CStack&)
  t RSA_eay_finish
  t RSA_eay_init

@@ -3414,6 +3414,7 @@
  SteamThreadTools::CThread::GetName()
  SteamThreadTools::CThread::GetThreadProc()
  SteamThreadTools::CThread::Init()
+ SteamThreadTools::CThread::IsAlive() const
  SteamThreadTools::CThread::IsThreadRunning() const
  SteamThreadTools::CThread::Join(unsigned int)
  SteamThreadTools::CThread::OnExit()
@@ -7148,6 +7149,7 @@
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::CUtlHashMap()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::Find(unsigned long const&) const
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::Purge()
+ T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAll()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAt(int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::~CUtlHashMap()
@@ -9063,7 +9065,7 @@
  T OSXHelpers::BGetGPUInformation(char*, unsigned int, unsigned long long*, unsigned long long*, unsigned long long*)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
- T OSXHelpers::CIOPollingHelper::OnKQueueActive()
+ T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Shutdown()
  T OSXHelpers::CIOPollingHelper::Singleton()
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
@@ -15605,7 +15607,7 @@
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
- b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_37_19
+ b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_44_19
  b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
  b dump_panorama_css_properties_command
@@ -16844,7 +16846,8 @@
  t MemInputsrc
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
- t OSXHelpers::CIOPollingHelper::Shutdown()::$_1::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::__invoke(void*)
+ t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
  t ParseChildren
