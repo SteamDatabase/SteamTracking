@@ -92,8 +92,8 @@ GHomepage = {
 			window.Responsive_ReparentItemsInResponsiveMode( '.spotlight_block', $J('#home_responsive_spotlight_ctn') );
 		}
 
-		this.usabilityTracker = new CUsabilityTracker();
-		this.usabilityTracker.Init();
+		//this.usabilityTracker = new CUsabilityTracker();
+		//this.usabilityTracker.Init();
 	},
 
 	AddCustomRender: function( fnRender )
