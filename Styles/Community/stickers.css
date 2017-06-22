@@ -1,0 +1,367 @@
+
+#sticker_container {
+	position: absolute;
+	transform-origin: top left;
+	overflow: hidden;
+}
+
+.sticker_padder {
+	padding: 2% 3%;
+	overflow: hidden;
+}
+
+#edit_box {
+	display: none;
+	position: absolute;
+}
+
+#edit_box > .box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border: 1px dashed #EDEDED;
+	z-index: 1;
+	pointer-events: none;
+}
+
+#edit_box.active {
+	display: block;
+}
+
+#d_handle {
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	height: 20px;
+	width: 20px;
+
+	z-index: 30;
+}
+
+
+#r_handle {
+	position: absolute;
+	left: -10px;
+	bottom: -10px;
+	width: 20px;
+	height: 20px;
+
+	z-index: 2;
+}
+
+#s_handle {
+	position: absolute;
+	right: -10px;
+	bottom: -10px;
+	width: 20px;
+	height: 20px;
+
+	z-index: 2;
+}
+
+#d_handle > img, #r_handle > img, #s_handle > img {
+	 width: 100%;
+}
+
+#d_handle > img:last-child, #r_handle > img:last-child, #s_handle > img:last-child {
+	display:none;
+}
+
+#d_handle.active > img:last-child, #r_handle.active > img:last-child, #s_handle.active > img:last-child {
+	display:block;
+}
+
+#d_handle.active > img:first-child, #r_handle.active > img:first-child, #s_handle.active > img:first-child {
+	display:none;
+}
+
+.sticker {
+	position: absolute;
+	transform-origin: top left;
+}
+
+.background_selection_container {
+
+	z-index: 20;
+
+	margin: 15px 0;
+	padding: 10px 28px 10px 15px;
+		overflow: hidden;
+
+	position: relative;
+	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas_strip.png ) top center no-repeat;
+	background-size: contain;
+
+}
+
+.background_selection_container > div {
+	position: relative;
+}
+
+.background_selection_container > div > div {
+	width: 210px;
+
+	margin: 10px 5px;
+
+
+}
+
+.background_selection_container .item {
+	width: 107px;
+
+
+	flex-shrink: 0;
+}
+
+.background_selection_container .item > img {
+
+	width: 101px;
+	border: 3px solid #88c3d3;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.background_selection_container .item.selected > img {
+	border-color: #fff
+}
+
+.background_selection_container .item > div {
+	color: #b2b2b2;
+	font-size: 10px;
+	text-align: center;
+}
+
+
+
+.scrollable_container {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	overflow-x: auto;
+
+
+}
+
+.sticker_selection_container {
+	padding: 10px 25px 10px 15px;
+
+	margin: 37px 0 15px 0;
+	overflow: hidden;
+
+	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas.png ) top center no-repeat;
+	background-size: 100% auto;
+	border-radius: 6px;
+}
+
+.sticker_selection_container  .scrollable_container {
+	height: 350px;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+
+
+
+	position: relative;
+
+}
+
+.sticker_item {
+	width: 140px;
+	height: 100px;
+	margin: 5px 10px;
+
+	flex-shrink: 0;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+
+.sticker_item > img {
+	height: 100%;
+	max-height: max-content;
+}
+
+.sticker_item > div {
+
+//transform-origin: top left;
+	flex-shrink: 0;
+}
+
+
+.book_holder {
+
+	position: relative;
+	max-width: 940px;
+	width: 100%;
+
+}
+
+.book_holder .background
+{
+	position: absolute;
+	top: -1.1%;
+	left: -3%;
+	width: 107%;
+
+	z-index: 10;
+	pointer-events: none;
+
+}
+
+.sticker_logo {
+	text-align: center;
+	color: #fff;
+}
+
+.get_stickers {
+	height: 150px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #fff;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.get_stickers p {
+	margin-top: 10px;
+}
+
+.get_stickers a {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.get_stickers h1 {
+	padding-top: 30px;
+	color: #fff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.get_stickers > img {
+	float: left;
+	margin-right: 15px;
+}
+
+.task_list {
+	color: #fff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.task_list h2 {
+	font-size: 18px;
+	margin: 0;
+	font-weight: inherit;
+}
+
+.task_list p {
+	margin: 5px 0 0 0;
+}
+
+.task:not(:last-child) {
+	border-bottom: 1px solid #313944;
+}
+.task {
+	padding: 15px;
+
+}
+
+.completed_tasks {
+	margin-top: 20px;
+	color: #5a5a5a;
+}
+
+#sticker_background {
+	width: 891px; /* !!DONOTCHANGE!! */
+	z-index: -50;
+	position: relative;
+}
+
+/* Force aspect ratio (scaleing transforms don't behave as expected in layout) */
+.book_sizer {
+	width: 100%;
+	padding-bottom: 71.383%;
+}
+
+.sticker_logo > img {
+	width: 100%;
+	max-width: 739px;
+}
+
+.newmodal_content .sticker_container {
+	display: flex;
+	justify-content: center;
+
+}
+
+.openpack_container {
+	max-width: 600px;
+}
+
+.unlock_container {
+	margin-top: 15px;
+}
+
+.unlock_container h2 {
+	color: #FDFDFD;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: ; /* regular */
+
+		;
+}
+
+.unlock_container img {
+	float: left;
+	max-width: 200px;
+	margin-right: 15px;
+
+	border: 3px solid white;
+	border-radius: 2px;
+
+}
+
+.profile_leftcol .book_holder {
+
+}
+
+.faq {
+	margin: 35px 0 25px;
+
+}
+
+.faq_list h2  {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: ; /* regular */
+
+			color: #fff;
+	font-size: 16px;
+}
+
+.faq_list p  {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.sticker_button_container {
+	text-align: right;
+}
+
+
+/* mobile */
+@media screen and (max-width: 910px)
+{
+
+	.background_selection_container {
+		position: relative;
+	}
+}
