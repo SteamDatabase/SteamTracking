@@ -251,7 +251,6 @@
 }
 
 .task_list {
-	color: #fff;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -261,6 +260,7 @@
 	font-size: 18px;
 	margin: 0;
 	font-weight: inherit;
+	color: #fff;
 }
 
 .task_list p {

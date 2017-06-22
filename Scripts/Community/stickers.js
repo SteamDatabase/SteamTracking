@@ -30,8 +30,8 @@ var CStickerManager = function( elContainer, bEditMode ){
 	for( var i=0; i<this.rgSceneToIdMap.length; i++ )
 	{
 
-		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png';
-		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg';
+		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png?v=13';
+		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg?v=13';
 	}
 
 
@@ -237,11 +237,23 @@ CStickerManager.prototype.CreateScaledSticker = function( key, unMaxWidth, unMax
 	elSticker.appendChild( elImage );
 
 	if( this.BOwnsSticker( key ) )
-		elSticker.addEventListener('click', this.AddSticker.bind(this, key ) );
+	{
+		elSticker.addEventListener ( 'click', this.AddSticker.bind ( this, key ) );
+		elSticker.draggable = true;
+		elSticker.addEventListener ( 'dragstart', this.DragStart.bind ( this, key ) );
+	}
 
 	return elSticker;
 }
 
+CStickerManager.prototype.DragStart = function( key, event )
+{
+
+	event.dataTransfer.setData("key", key);
+	event.dataTransfer.dropEffect = "copy";
+	console.log(event);
+
+}
 CStickerManager.prototype.PopulateSelectors = function( )
 {
 
@@ -561,6 +573,23 @@ CStickerManager.prototype.ShowEditHandles = function()
 	this.elContainer.addEventListener('touchend', this.StickerDragStop.bind(this) );
 	this.elContainer.addEventListener('touchcancel', this.StickerDragStop.bind(this) );
 
+	this.elContainer.addEventListener('drop', this.StickerDragDrop.bind(this) );
+	this.elContainer.addEventListener('dragover', this.StickerDrag.bind(this) );
+
+}
+
+CStickerManager.prototype.StickerDragDrop = function( event )
+{
+	if( event.dataTransfer.getData('key') )
+		this.AddSticker( event.dataTransfer.getData('key') );
+
+
+}
+
+CStickerManager.prototype.StickerDrag = function( event )
+{
+
+	event.preventDefault();
 }
 
 CStickerManager.prototype.StickerDelete = function(  )
@@ -793,40 +822,41 @@ CStickerManager.prototype.OpenPack = function()
 
 	}).done(function( data ) {
 
-		if( data && data.success == 1 )
+		if( data && data.success == 1 && data.stickers.length > 0 )
 		{
-			var elContainer = document.createElement('div');
-			elContainer.classList.add('openpack_container');
+			var elContainer = document.createElement ( 'div' );
+			elContainer.classList.add ( 'openpack_container' );
 
-			var elDesc = document.createElement('p');
-			elDesc.textContent  = "%1$s new stickers have been added to your collection.".replace(/%1\$s/,data.stickers.length);
+			var elDesc = document.createElement ( 'p' );
+			elDesc.textContent = "%1$s new stickers have been added to your collection.".
+			replace ( /%1\$s/, data.stickers.length );
 
-			elContainer.appendChild(elDesc);
-
-
-			var elStickerContainer = document.createElement('div');
-			elStickerContainer.classList.add('sticker_container');
+			elContainer.appendChild ( elDesc );
 
 
-			while( data.stickers.length )
+			var elStickerContainer = document.createElement ( 'div' );
+			elStickerContainer.classList.add ( 'sticker_container' );
+
+
+			while ( data.stickers.length )
 			{
 
-				var nStickerId = data.stickers.pop();
+				var nStickerId = data.stickers.pop ();
 
-				var elSticker = _this.CreateScaledSticker( _this.rgStickerToIdMap[nStickerId], 140, 100, false  );
-				elStickerContainer.appendChild(elSticker);
+				var elSticker = _this.CreateScaledSticker ( _this.rgStickerToIdMap[ nStickerId ], 140, 100, false );
+				elStickerContainer.appendChild ( elSticker );
 				_this.rgOwnership.stickers[ nStickerId ] = 1;
 			}
 
-			elContainer.appendChild(elStickerContainer);
+			elContainer.appendChild ( elStickerContainer );
 
 			// Did we unlock any scenes?
 			var strUnlockTexture = false;
-			for( var i=0; i < data.stickers.length; i++ )
+			for ( var i = 0; i < data.stickers.length; i++ )
 			{
-				var stickerDef = _this.rgStickerDefinitions[ _this.rgStickerToIdMap[i] ];
+				var stickerDef = _this.rgStickerDefinitions[ _this.rgStickerToIdMap[ i ] ];
 				var strScene = stickerDef.texture;
-				if( _this.BSceneUnlocked( strScene ) )
+				if ( _this.BSceneUnlocked ( strScene ) )
 				{
 
 					strUnlockTexture = _this.rgBackgroundTextures[ strScene ];
@@ -834,34 +864,39 @@ CStickerManager.prototype.OpenPack = function()
 
 			}
 
-			if( strUnlockTexture )
+			if ( strUnlockTexture )
 			{
-				var elUnlockContainer = document.createElement('div');
-				elUnlockContainer.classList.add('unlock_container');
+				var elUnlockContainer = document.createElement ( 'div' );
+				elUnlockContainer.classList.add ( 'unlock_container' );
 
-				var elUnlockTitle = document.createElement('h2');
+				var elUnlockTitle = document.createElement ( 'h2' );
 				elUnlockTitle.textContent = "Scene unlocked!";
 
-				var elUnlockSceneImg = document.createElement('img');
+				var elUnlockSceneImg = document.createElement ( 'img' );
 				elUnlockSceneImg.src = strUnlockTexture;
 
-				var elUnlockDesc = document.createElement('p');
+				var elUnlockDesc = document.createElement ( 'p' );
 				elUnlockDesc.textContent = "You can now move, rotate, and scale stickers on this scene, as well as add stickers from other scenes and feature it on your profile!";
 
-				elUnlockContainer.appendChild( elUnlockSceneImg );
-				elUnlockContainer.appendChild( elUnlockTitle );
-				elUnlockContainer.appendChild( elUnlockDesc );
-				elContainer.appendChild( elUnlockContainer );
+				elUnlockContainer.appendChild ( elUnlockSceneImg );
+				elUnlockContainer.appendChild ( elUnlockTitle );
+				elUnlockContainer.appendChild ( elUnlockDesc );
+				elContainer.appendChild ( elUnlockContainer );
 			}
 
 
-			var Modal = ShowAlertDialog( "New stickers have been added to your collection!", elContainer );
-
-			_this.unStickerPacks--;
-			_this.PopulateStickerList();
-
-
+			var Modal = ShowAlertDialog ( "New stickers have been added to your collection!", elContainer );
 		}
+		_this.unStickerPacks--;
+		_this.PopulateStickerList();
+		_this.PopulateSelectors();
+
+		var elTarget  = document.getElementById(_this.strScene  + "_select_icon");
+		if( elTarget )
+			elTarget.classList.add('selected');
+
+
+
 
 	});
 }
