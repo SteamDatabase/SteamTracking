@@ -205,6 +205,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 	$J.get( strSettingsURL )
 	.done( function(data) {
 		var rgGlobalPopularTags = data.popular_tags;
+		var nSaleTaskCompleted = data.nSaleTaskCompleted;
 
 		var Modal = ShowConfirmDialog( 'Customize Your Discovery Queue', data.html );
 		Modal.GetContent().css( 'width', '720px' );
@@ -311,6 +312,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 				queuetype: nQueueType,
 			} ).done( function( data ) {
 				fnOnSettingsChanged( data );
+
 			}).fail( function() {
 				ShowAlertDialog( 'Customize Your Discovery Queue', 'There was a problem saving your preferences.  Please try again later.' );
 			});
@@ -319,6 +321,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 		Modal.always( function() {
 			CDiscoveryQueue.sm_bCustomizeDialogVisible = false;
 			TextSuggest.Destroy();
+			if ( nSaleTaskCompleted ) { NewStickerPackModal( 'Customize your Discovery Queue' ); }
 		});
 	})
 	.fail( function() {

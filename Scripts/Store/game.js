@@ -87,10 +87,11 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 			sessionid: g_sessionID,
 			appid: store_appid,
 			snr: snr
-		}).done( function() {
+		}).done( function( data ) {
 			$IgnoreBtn.hide();
 			$UnIgnoreBtn.show();
 			GDynamicStore.InvalidateCache();
+			if ( data && data.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark something Not Interested' ); } // SummerSale2017
 		}).fail( function( jqXHR ) {
 			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
@@ -100,6 +101,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: store_appid,
+			snr: snr,
 			remove: 1
 		}).done( function() {
 			$IgnoreBtn.show();
@@ -357,6 +359,7 @@ function UserReviewVoteUp( id )
 {
 	UserReview_Rate( id, true, 'http://store.steampowered.com/',
 		function( rgResults ) {
+			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedUp( id );
 		}
 	);
@@ -366,6 +369,7 @@ function UserReviewVoteDown( id )
 {
 	UserReview_Rate( id, false, 'http://store.steampowered.com/',
 		function( rgResults ) {
+			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedDown( id );
 		}
 	);

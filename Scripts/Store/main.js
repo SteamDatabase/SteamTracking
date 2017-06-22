@@ -527,14 +527,17 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 {
 	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
+	{
 		MakeNavCookie( navref, url );
-		$J.post( url, {sessionid: g_sessionID, appid: appid} )
+	}
+
+	$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			$JFromIDOrElement(divToHide).hide();
 			if ( data && data.success ) {
 				$JFromIDOrElement(divToShowSuccess).show();
 				if ( data.saleTaskCompleted ) {
-					NewStickerPackModal();
+					NewStickerPackModal( 'Add to your wishlist' );
 				}
 			}
 			else {
@@ -552,8 +555,11 @@ function AddToWishlistButton( button, appid, navref )
 {
 	var url = 'http://store.steampowered.com/api/addtowishlist';
 	if ( navref )
+	{
 		MakeNavCookie( navref, url );
-		$J.post( url, {sessionid: g_sessionID, appid: appid} )
+	}
+
+	$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			if ( data && data.success )
 			{

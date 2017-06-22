@@ -129,11 +129,10 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleBlock( rgTier2, $J('#tier2_target' ) );
 
 	// capsule rows
-	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
-	HomeSaleCapsuleCategory( rgDisplayLists.oldschool, $J('.category_caps_oldschool') );
-	HomeSaleCapsuleCategory( rgDisplayLists.niche, $J('.category_caps_niche') );
-	HomeSaleCapsuleCategory( rgDisplayLists.moddable, $J('.category_caps_moddable') );
+	HomeSaleCapsuleCategory( rgDisplayLists.video, $J('.category_caps_video') );
+	HomeSaleCapsuleCategory( rgDisplayLists.freetoplay, $J('.category_caps_freetoplay') );
+
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )

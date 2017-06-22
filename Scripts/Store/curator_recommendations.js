@@ -32,6 +32,7 @@ function FollowCurator( clanID, bFollow )
 				UpdateFormattedNumber( $J( "#CuratorNumFollowers_" + clanID ), 1 );
 				$J( "#CuratorFollowBtn_" + clanID).hide();
 				$J( "#CuratorUnFollowBtn_" + clanID).show();
+                		if ( data && data.nSaleTaskCompleted ) { NewStickerPackModal( 'Follow a Curator' ); }
 			}
 			else
 			{

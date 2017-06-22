@@ -40,6 +40,7 @@ function FollowCurator( clanID )
 			$J( "#CuratorFollowing_" + clanID).show();
 			$J( "#CuratorFollowBtn_" + clanID).hide();
 			gFollowedCuratorIDs[clanID] = clanID;
+			if ( data && data.nSaleTaskCompleted ) { NewStickerPackModal( 'Follow a Curator' ); }
 		},
 		'json'
 	).fail( function()
