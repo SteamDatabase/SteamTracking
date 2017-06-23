@@ -10,6 +10,7 @@ var CStickerManager = function( elContainer, bEditMode ){
 	this.elContainer = elContainer;
 	this.rgOwnedStickers = [];
 	this.bEditMode = bEditMode || false;
+	this.rgNewStickersCount = {};
 
 	if( this.bEditMode )
 		this.ShowEditHandles();
@@ -30,8 +31,8 @@ var CStickerManager = function( elContainer, bEditMode ){
 	for( var i=0; i<this.rgSceneToIdMap.length; i++ )
 	{
 
-		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png?v=13';
-		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg?v=13';
+		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png?v=22';
+		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg?v=22';
 	}
 
 
@@ -287,7 +288,24 @@ CStickerManager.prototype.PopulateSelectors = function( )
 
 		elContainer.appendChild(elImage);
 		elContainer.appendChild(elText);
-		elTarget.appendChild(elContainer);
+
+
+		// New counts
+		var nNewStickers = this.rgNewStickersCount[key];
+		if( nNewStickers )
+		{
+			var elNew = document.createElement('div');
+			elNew.classList.add('new');
+			elNew.textContent = nNewStickers;
+
+			elContainer.appendChild(elNew);
+		}
+
+
+		if( nNewStickers )
+			elTarget.insertBefore(elContainer, elTarget.firstChild);
+		else
+			elTarget.appendChild(elContainer);
 	}
 
 }
@@ -846,6 +864,17 @@ CStickerManager.prototype.OpenPack = function()
 				var elSticker = _this.CreateScaledSticker ( _this.rgStickerToIdMap[ nStickerId ], 140, 100, false );
 				elStickerContainer.appendChild ( elSticker );
 				_this.rgOwnership.stickers[ nStickerId ] = 1;
+
+				var strStickerKey = _this.rgStickerToIdMap[ nStickerId ];
+				var rgStickerDef = _this.rgStickerDefinitions[ strStickerKey ];
+				var strScene = rgStickerDef.texture;
+
+				if( _this.rgNewStickersCount[strScene] )
+					_this.rgNewStickersCount[strScene]++;
+				else
+					_this.rgNewStickersCount[strScene] = 1;
+
+
 			}
 
 			elContainer.appendChild ( elStickerContainer );
@@ -969,7 +998,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskPersonalizeDiscoveryQueue = 15;
 	{
 		name: "Customize your Discovery Queue",
-		desc: "Make sure your personalized Discovery Queue is personal \u2013 your <a href=\"http:\/\/store.steampowered.com\/\/account\/preferences\">Discovery Queue settings<\/a> should match what you want to see on Steam."	},
+		desc: "Make sure your personalized Discovery Queue is personal \u2013 your <a href=\"http:\/\/store.steampowered.com\/\/account\/preferences?discoveryqueue=1\">Discovery Queue settings<\/a> should match what you want to see on Steam."	},
 ];
 
 CTaskManager.prototype.RenderTaskList = function( rgProgress )

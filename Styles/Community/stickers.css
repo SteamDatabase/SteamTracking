@@ -110,9 +110,22 @@
 
 .background_selection_container .item {
 	width: 107px;
-
+	position: relative;
 
 	flex-shrink: 0;
+}
+
+.background_selection_container .item .new {
+	position: absolute;
+	background-color: red;
+	border-radius: 4px;
+	color: #fff;
+	top: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
 }
 
 .background_selection_container .item > img {
@@ -226,6 +239,7 @@
 			color: #fff;
 	font-size: 20px;
 	line-height: 30px;
+	margin-top: 75px;
 }
 
 .get_stickers p {
@@ -334,9 +348,14 @@
 }
 
 .faq {
-	margin: 35px 0 25px;
+	margin: 35px 0 25px 18px;
 
 }
+
+.faq_list {
+	margin-left: 18px;
+}
+
 
 .faq_list h2  {
 			font-family: "Motiva Sans", Sans-serif;
@@ -344,6 +363,7 @@
 
 			color: #fff;
 	font-size: 16px;
+	margin-top: 40px;
 }
 
 .faq_list p  {
@@ -351,6 +371,15 @@
 		font-weight: 300; /* light */
 
 		}
+
+.faq_list h3  {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: ; /* regular */
+
+			color: #fff;
+	font-size: 16px;
+	margin-top: 20px;
+}
 
 .sticker_button_container {
 	text-align: right;
