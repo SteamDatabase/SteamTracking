@@ -3050,6 +3050,10 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 
 		}
 
+.searchbox input::placeholder {
+	color: #0e1c25;
+}
+
 a#store_search_link img {
 	width: 25px;
 	height: 25px;
