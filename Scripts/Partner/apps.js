@@ -3516,7 +3516,7 @@ function CreateNewVideoApp( pubId, strVideoName, strVideoType, bF2P, b360Video, 
 
 	$J.ajax({
 		type: "POST",
-		url: "https://partner.steamgames.com/apps/ajaxcreatevideoseries//",
+		url: "https://partner.steamgames.com/apps/ajaxcreatevideoseries",
 		dataType: "json",
 		data: {
 			'SeriesName': strVideoName,
