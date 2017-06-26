@@ -938,7 +938,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskUseDiscoveryQueue = 0;
 	{
 		name: "Explore your Discovery Queue",
-		desc: "Visit your <a href=\"http:\/\/store.steampowered.com\/\/explore\">personal Discovery Queue<\/a> and click through to the end. You can complete this quest once per day."	},
+		desc: "Visit your <a href=\"http:\/\/store.steampowered.com\/explore\">personal Discovery Queue<\/a> and click through to the end. You can complete this quest once per day."	},
 	//k_ESummerSaleTaskPlayAGame = 1;
 	{
 		name: "Play a game from your library",
@@ -954,15 +954,15 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskReviewStorePreferences = 4;
 	{
 		name: "Review your Preferences",
-		desc: "You can help the Steam store show you the best stuff by making sure your <a href=\"http:\/\/store.steampowered.com\/\/account\/preferences\/\">Store Preferences<\/a> match your interests."	},
+		desc: "You can help the Steam store show you the best stuff by making sure your <a href=\"http:\/\/store.steampowered.com\/account\/preferences\/\">Store Preferences<\/a> match your interests."	},
 	//k_ESummerSaleTaskEarnAchievement = 5;
 	{
 		name: "Earn an Achievement",
-		desc: "Play any Steam game in your library, and earn an Achievement. You can check your Achievement progress for any game you own <a href=\"%s\/my\/games\">on your Games page<\/a>."	},
+		desc: "Play any Steam game in your library, and earn an Achievement. You can check your Achievement progress for any game you own <a href=\"http:\/\/steamcommunity.com\/my\/games\">on your Games page<\/a>."	},
 	//k_ESummerSaleTaskVisitBroadcastPage = 6;
 	{
 		name: "Visit the Broadcasts page",
-		desc: "Take a look at the <a href=\"http:\/\/steamcommunity.com\/?subsection=broadcasts\">Broadcasts<\/a> currently running on the Community."	},
+		desc: "Take a look at the <a href=\"http:\/\/steamcommunity.com?subsection=broadcasts\">Broadcasts<\/a> currently running on the Community."	},
 	//k_ESummerSaleTaskMarkReviewHelpful = 7;
 	{
 		name: "Mark a Review as Helpful ... or not",
@@ -970,7 +970,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskFollowCurator = 8;
 	{
 		name: "Follow a Curator",
-		desc: "Look through the <a href=\"http:\/\/store.steampowered.com\/\/curators\">Steam Curators<\/a> and follow someone that will help you find the best games on Steam."	},
+		desc: "Look through the <a href=\"http:\/\/store.steampowered.com\/curators\">Steam Curators<\/a> and follow someone that will help you find the best games on Steam."	},
 	//k_ESummerSaleTaskViewAProfile = 9;
 	{
 		name: "View a Profile",
@@ -978,7 +978,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskViewATagPage = 10;
 	{
 		name: "Explore popular tags",
-		desc: "Choose something interesting from <a href=\"http:\/\/store.steampowered.com\/\/tag\/browse\">the recommended tags for you<\/a>. Try a few!"	},
+		desc: "Choose something interesting from <a href=\"http:\/\/store.steampowered.com\/tag\/browse\">the recommended tags for you<\/a>. Try a few!"	},
 	//k_ESummerSaleTaskMarkNotInterested = 11;
 	{
 		name: "Mark something Not Interested",
@@ -986,7 +986,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskViewVideosPage = 12;
 	{
 		name: "Browse the Videos on Steam",
-		desc: "Visit the <a href=\"http:\/\/store.steampowered.com\/\/videos\">Video Hub<\/a> on Steam."	},
+		desc: "Visit the <a href=\"http:\/\/store.steampowered.com\/videos\">Video Hub<\/a> on Steam."	},
 	//k_ESummerSaleTaskUploadAScreenshot = 13;
 	{
 		name: "Visit your screenshot library",
@@ -994,11 +994,11 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskPersonalizeProfile = 14;
 	{
 		name: "Personalize your Steam Community Profile",
-		desc: "There are a lot of ways you can customize <a href=\"%s\/my\/profile\">your profile<\/a> - click the attractive Edit Profile button, and personalize!"	},
+		desc: "There are a lot of ways you can customize <a href=\"http:\/\/steamcommunity.com\/my\/profile\">your profile<\/a> - click the attractive Edit Profile button, and personalize!"	},
 	//k_ESummerSaleTaskPersonalizeDiscoveryQueue = 15;
 	{
 		name: "Customize your Discovery Queue",
-		desc: "Make sure your personalized Discovery Queue is personal \u2013 your <a href=\"http:\/\/store.steampowered.com\/\/account\/preferences?discoveryqueue=1\">Discovery Queue settings<\/a> should match what you want to see on Steam."	},
+		desc: "Make sure your personalized Discovery Queue is personal \u2013 your <a href=\"http:\/\/store.steampowered.com\/account\/preferences?discoveryqueue=1\">Discovery Queue settings<\/a> should match what you want to see on Steam."	},
 ];
 
 CTaskManager.prototype.RenderTaskList = function( rgProgress )
