@@ -54,12 +54,10 @@ CStickerManager.prototype.HandleResize = function() {
 
 	// Now do the logo animation
 
-    if ( document.getElementById('logo_anim') )
-    {
-        document.getElementById('logo_anim').style.transform = "scale( "+fScaleFactor+", "+fScaleFactor+" )";
-    }
-
-
+	if ( document.getElementById('logo_anim') )
+	{
+		document.getElementById('logo_anim').style.transform = "scale( "+fScaleFactor+", "+fScaleFactor+" )";
+	}
 }
 
 CStickerManager.prototype.rgStickerTextures = {
