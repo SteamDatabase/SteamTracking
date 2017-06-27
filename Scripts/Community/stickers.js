@@ -52,6 +52,12 @@ CStickerManager.prototype.HandleResize = function() {
 	document.getElementById('sticker_container').style.width = this.unWidthActual + "px";
 	document.getElementById('sticker_background').style.width = this.unWidthActual + "px";
 
+	// Now do the logo animation
+
+	document.getElementById('logo_anim').style.transform = "scale( "+fScaleFactor+", "+fScaleFactor+" )";
+
+
+
 }
 
 CStickerManager.prototype.rgStickerTextures = {

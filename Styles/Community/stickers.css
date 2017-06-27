@@ -77,6 +77,44 @@
 	display:none;
 }
 
+.rocket_anim {
+	position: absolute;
+	width: 718px;
+	height: 155px;
+
+	z-index:2;
+	top: -2%;
+	right: 4%;
+	background: transparent url('https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/rocket_sprite.png') 0 0 no-repeat;
+	animation: rocket 1s steps(31) infinite;
+	transform-origin: top right;
+
+}
+
+@keyframes rocket {
+    100% { background-position: 0 -4805px; }
+}
+
+.sticker_logo {
+	text-align: center;
+	color: #fff;
+	padding-top: 6px;
+}
+
+.sticker_logo > div {
+	max-width: 741px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+body.stickers .responsive_page_template_content {
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/cloudtile.png);
+
+	background-repeat: repeat-x;
+	background-position: top left;	
+}	
+	
 .sticker {
 	position: absolute;
 	transform-origin: top left;
@@ -95,6 +133,8 @@
 	background-size: contain;
 
 }
+
+
 
 .background_selection_container > div {
 	position: relative;
@@ -226,11 +266,6 @@
 
 }
 
-.sticker_logo {
-	text-align: center;
-	color: #fff;
-}
-
 .get_stickers {
 	height: 150px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -306,9 +341,10 @@
 	padding-bottom: 71.383%;
 }
 
-.sticker_logo > img {
+.sticker_logo > div > img {
 	width: 100%;
 	max-width: 739px;
+	position: relative;
 }
 
 .newmodal_content .sticker_container {
@@ -392,5 +428,15 @@
 
 	.background_selection_container {
 		position: relative;
+	}
+
+	.background_selection_container, .sticker_selection_container {
+		background-size: cover;
+	}
+
+
+	.rocket_anim {
+		top: 6%;
+		right: 8%;
 	}
 }
