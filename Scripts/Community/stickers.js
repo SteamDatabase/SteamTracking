@@ -54,8 +54,10 @@ CStickerManager.prototype.HandleResize = function() {
 
 	// Now do the logo animation
 
-	document.getElementById('logo_anim').style.transform = "scale( "+fScaleFactor+", "+fScaleFactor+" )";
-
+    if ( document.getElementById('logo_anim') )
+    {
+        document.getElementById('logo_anim').style.transform = "scale( "+fScaleFactor+", "+fScaleFactor+" )";
+    }
 
 
 }
