@@ -1240,7 +1240,7 @@ HelpWizard = {
 				lost: nLost,
 				reset: eReset,
 				method: 64, // k_EAccountRecoveryMethodCDKey
-				code: strCDKey,
+				code: strCDKey
 			}
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
@@ -1393,7 +1393,7 @@ HelpWizard = {
 				account: nAccountID,
 				reset: eReset,
 				issueid: unIssueID,
-				lost: unLost,
+				lost: unLost
 			} )
 		}).fail( function( xhr ) {
 
@@ -1410,7 +1410,7 @@ HelpWizard = {
 				s: strSessionID,
 				account: nAccountID,
 				reset: eReset,
-				issueid: unIssueID,
+				issueid: unIssueID
 			} )
 		}).fail( function( xhr ) {
 
@@ -1597,7 +1597,7 @@ function LogoutToAccountRecovery()
 	$J.ajax({
 		type: 'POST',
 		url: 'https://help.steampowered.com/login/logout/',
-		data: { 'sessionid': g_sessionID, }
+		data: { 'sessionid': g_sessionID }
 	})
 	.fail( function( xhr )
 	{
