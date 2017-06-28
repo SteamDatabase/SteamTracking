@@ -91,6 +91,9 @@
 						<Button id="ExperimentalUpgradeButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade();">
 							<Label class="LongDesc" text="EXPERIMENTAL FW" />
 						</Button>
+            			<Button id="BindControllerButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ShowBindingScreen();">
+             	 			<Label class="LongDesc" text="#SettingsController_EnableBindingMode" />
+            			</Button>
 					</Panel>
 					<Label class="SettingsCallout SettingsControllerNameTitle" text="" />	
 					<Label class="SettingsCallout SettingsControllerNameTitle SteamControllerDetails" text="#SettingsController_SteamControllerVersion_Title" />

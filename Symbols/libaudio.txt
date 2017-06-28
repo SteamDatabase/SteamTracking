@@ -667,7 +667,7 @@
  T CreateMilesSoundAudioDevice
  T CreateMilesVoiceAudioDevice
  T FioClose(int)
- T FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioGetSize(int, unsigned long long*)
  T FioRead(int, void*, int, int*)
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)

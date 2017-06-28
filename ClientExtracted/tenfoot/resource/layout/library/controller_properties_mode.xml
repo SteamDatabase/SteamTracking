@@ -184,7 +184,7 @@
 				<Panel class="FieldWrapper" modes="joystickmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
 					<Slider id="DeadZoneOuterRadius_joystick_mouse" direction="horizontal" />
-				</Panel>
+				</Panel>		
 				
 				<!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
@@ -305,14 +305,6 @@
 				</Panel>
 
 				<!-- Mouse Joystick Mode Advanced -->
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad gyro">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
-					<DropDown id="MouseTriggerClampMouseJoystick" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad gyro">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
-					<Slider id="MouseTriggerClampAmountMouseJoystick" direction="horizontal" />
-				</Panel>
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadzoneX" />
 					<Slider id="DeadzoneXJoystickMouse" direction="horizontal" />
@@ -320,8 +312,15 @@
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadzoneY" />
 					<Slider id="DeadzoneYJoystickMouse" direction="horizontal" />
+				</Panel>			
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseJoystickPrecision" />
+					<Slider id="DeadzonePrecisionJoystickMouse" direction="horizontal" />
 				</Panel>				
-
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CustomCurveExponent" />
+					<Slider id="CustomCurveExponent_mouse_joystick" direction="horizontal" />
+				</Panel>								
 						
 				<!-- Touch Menu Mode -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
@@ -645,8 +644,8 @@
 					<Panel id="CenterImageJoystick" class="CenterImage" />
 					<Panel id="CenterImageJoystickOuterDeadzone" class ="CenterImageRingOuter"/>
 				</Panel>
-				<Panel id="CenterImageJoystickCurve" class="CenterImage" modes="joystickmove absmouse trigger joystickmouse" visualization="curve" >
-					<Panel class="CenterGraph" id="CenterImageGraphContainer" modes="joystickmove absmouse trigger joystickmouse" >
+				<Panel id="CenterImageJoystickCurve" class="CenterImage" modes="joystickmove absmouse trigger joystickmouse mousejoystick" visualization="curve" >
+					<Panel class="CenterGraph" id="CenterImageGraphContainer" modes="joystickmove absmouse trigger joystickmouse mousejoystick" >
 						<Panel class="GraphBar"/>
 						<Panel class="GraphBar"/>
 						<Panel class="GraphBar"/>
@@ -808,29 +807,29 @@
 				<Panel class="FieldWrapper" modes="MouseJoystick" sources="gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroRight" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickGyroRight" />
-				</Panel>
-				<Panel class="FieldWrapper" modes="MouseJoystick" gameactions="off" sources="gyro" advanced="on">
+				</Panel>			
+				<!-- Mouse Joystick Mode Advanced -->
+				<Panel class="FieldWrapper" modes="MouseJoystick" gameactions="off" sources="gyro" advanced="on" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
 					<DropDown id="GyroButtonInvertMouseJoystick" />
-				</Panel>				
-				<!-- Mouse Joystick Mode Advanced -->
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger">
+				</Panel>					
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTap" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DoubleTapMouseJoystick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger">
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapDuration" />
 					<Slider id="DoubleTapDurationMouseJoystick" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger">
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapBeep" />
 					<DropDown id="DoubleTapBeepMouseJoystick" />
 				</Panel>		
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="gyro">
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="gyro" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisMouseJoystick" />
 				</Panel>	
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="gyro">
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="gyro" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_LeanSensitivity" />
 					<Slider id="LeanSensitivityMouseJoystick" direction="horizontal" />
 				</Panel>						
@@ -1223,6 +1222,14 @@
 					</Panel>
 
 					<!-- Mouse Joystick Mode Advanced -->
+					<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad gyro">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+						<DropDown id="MouseTriggerClampMouseJoystick" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad gyro">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
+						<Slider id="MouseTriggerClampAmountMouseJoystick" direction="horizontal" />
+					</Panel>					
 					<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeSpinRadius" />
 						<Slider id="EdgeSpinRadiusMouseJoystick" direction="horizontal" />
