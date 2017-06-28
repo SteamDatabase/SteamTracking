@@ -1181,29 +1181,33 @@ function SearchSuggestOnMouseOver( event, $Suggestion )
 function SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )
 {
 	ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
-	var text = $Term.val();
-	if ( text == 'search the store' )
-	{
-		$Term.val( '' );
-		$Term.removeClass( 'default' );
-	}
+	SearchSuggestClearFixStyles($Term);
 }
+
+function SearchSuggestClearFixStyles($Term)
+{
+	$Term.removeClass( 'default' );
+}
+
 function SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )
 {
 	ShowSuggestionsAsNecessary( true, $SuggestionsCtn, $Suggestions );
+	SearchSuggestSetFixStyles($Term);
+}
+
+function SearchSuggestSetFixStyles($Term)
+{
 	var text = $Term.val();
-	if ( text == '' )
+	if (text == '')
 	{
-		$Term.val( 'search the store' );
 		$Term.addClass( 'default' );
 	}
 }
+
 function SearchSuggestCheckTerm( theform )
 {
-	if ( theform.term.value == 'search the store' )
-	{
-		theform.term.value = '';
-	}
+	// no longer need to check for #text_search_the_store, but leaving here
+	// in case we have other things we want to block in the future.
 	return true;
 }
 

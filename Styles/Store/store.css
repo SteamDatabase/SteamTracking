@@ -507,6 +507,10 @@ a#store_search_link img {
     color: #305d8a;
 }
 
+.searchbox input:focus::placeholder {
+	color: transparent;
+}
+
 #store_nav_area {
 	position: absolute;
 	left: 0;
