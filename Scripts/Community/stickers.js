@@ -128,7 +128,7 @@ CStickerManager.prototype.AddSticker = function( nStickerId )
 	var rgData = this.GetSceneData();
 	if( rgData.length > 50 )
 	{
-		ShowAlertDialog("Too many stickers!", "Woa there! You're trying to put more than 50 stickers on this page. If you want to add more, you'll need to peel a few off first.");
+		ShowAlertDialog("Too many stickers!", "Whoa there! You're trying to put more than 50 stickers on this page. If you want to add more, you'll need to peel a few off first.");
 		return;
 	}
 
@@ -919,10 +919,10 @@ CStickerManager.prototype.OpenPack = function()
 				elContainer.appendChild ( elUnlockContainer );
 			}
 
+			_this.unStickerPacks = data.stickerpacks;
 
 			var Modal = ShowAlertDialog ( "New stickers have been added to your collection!", elContainer );
 		}
-		_this.unStickerPacks--;
 		_this.PopulateStickerList();
 		_this.PopulateSelectors();
 
