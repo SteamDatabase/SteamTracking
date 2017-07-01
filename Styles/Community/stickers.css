@@ -1,5 +1,5 @@
 
-#sticker_container {
+#sticker_container, .sticker_scene_container {
 	position: absolute;
 	transform-origin: top left;
 	overflow: hidden;
@@ -93,6 +93,31 @@
 
 @keyframes rocket {
     100% { background-position: 0 -4805px; }
+}
+
+.creditsblock {
+	margin-top: 15px;
+}
+
+.creditsblock h1 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #fff;
+}
+
+.credits_intro {
+	margin: 30px 0 40px 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-align: center;
+
+}
+
+.credits_intro h1 {
+	font-weight: 200;
+	color: #fff;
 }
 
 .sticker_logo {
@@ -329,10 +354,20 @@ body.stickers .responsive_page_template_content {
 	color: #5a5a5a;
 }
 
-#sticker_background {
+.sticker_background {
 	width: 891px; /* !!DONOTCHANGE!! */
 	z-index: -50;
 	position: relative;
+}
+
+.stickerscene_sizer {
+	width: 350px;
+	height: 250px;
+	margin: 15px auto;
+}
+
+.stickerscene_sizer > div {
+
 }
 
 /* Force aspect ratio (scaleing transforms don't behave as expected in layout) */
@@ -419,6 +454,79 @@ body.stickers .responsive_page_template_content {
 
 .sticker_button_container {
 	text-align: right;
+}
+
+.sticker_credits {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+.sticker_credits > div {
+	width: 50%;
+
+	display: flex;
+}
+
+.sticker_credits .sticker_container {
+	width: 128px;
+	height: 128px;
+	padding: 10px;
+	position: relative;
+	flex-shrink: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+
+.sticker_credits .credit_item {
+
+	position: absolute;
+
+}
+
+.sticker_info {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			display: flex;
+	align-items: center;
+}
+
+.sticker_info a {
+	color: #000;
+}
+
+.sticker_info a:hover {
+	text-decoration: underline;
+}
+
+.gamename {
+	font-size: 24px;
+
+	margin-bottom: 5px;
+}
+
+.pubname {
+	color: #DEDEDE;
+}
+.sticker_credits
+{
+	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas.png ) top center no-repeat;
+	background-size: 100% auto;
+	border-radius: 6px;
+	background-size: cover;
+	padding: 10px;
+	margin-top: 25px;
+}
+
+.stickercredits_container > div {
+	margin: 50px 0;
 }
 
 

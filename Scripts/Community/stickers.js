@@ -49,8 +49,10 @@ CStickerManager.prototype.HandleResize = function() {
 
 	this.fLocalScale = fScaleFactor;
 
-	document.getElementById('sticker_container').style.width = this.unWidthActual + "px";
-	document.getElementById('sticker_background').style.width = this.unWidthActual + "px";
+	this.elContainer.style.width = this.unWidthActual + "px";
+
+	var rgBackgrounds = this.elContainer.getElementsByClassName('sticker_background');
+	rgBackgrounds[0].style.width = this.unWidthActual + "px";
 
 	// Now do the logo animation
 
@@ -385,11 +387,11 @@ CStickerManager.prototype.ResetScene = function()
 CStickerManager.prototype.GetDefaultScene = function( strScene )
 {
 	var rgScene = [];
-	return rgScene;
+
 	for( var key in this.rgStickerDefinitions )
 	{
 		var sticker = this.rgStickerDefinitions[key];
-		if( sticker.texture == strScene && this.BOwnsSticker( key ) )
+		if( sticker.texture == strScene )
 		{
 			rgScene.push({
 				id: key,
@@ -398,7 +400,7 @@ CStickerManager.prototype.GetDefaultScene = function( strScene )
 				sx: 1.0,
 				sy: 1.0,
 				r: 0,
-				z: sticker.dz
+				z: sticker.z
 			});
 		}
 	}
@@ -482,8 +484,9 @@ CStickerManager.prototype.SetScene = function( nSceneId )
 
 	this.strScene = this.rgSceneToIdMap[ nSceneId ];
 
-	//this.elContainer.style.backgroundImage = 'url(' +  + ')';
-	document.getElementById('sticker_background').src =this.rgBackgroundTextures[this.strScene];
+	var rgBackgrounds = this.elContainer.getElementsByClassName('sticker_background');
+	rgBackgrounds[0].src =this.rgBackgroundTextures[this.strScene];
+
 	this.Render( this.rgSceneData[ nSceneId ] );
 
 	// Update handles
@@ -500,16 +503,21 @@ CStickerManager.prototype.SetScene = function( nSceneId )
 
 	this.PopulateStickerList();
 
-	if( !this.BSceneUnlocked( this.strScene ) )
+	if( this.bEditMode )
 	{
-		document.getElementById('r_handle').style.display = "none";
-		document.getElementById('s_handle').style.display = "none";
-		document.getElementById('feature_on_profile').style.display = "none";
+		if ( !this.BSceneUnlocked ( this.strScene ) )
+		{
+			document.getElementById ( 'r_handle' ).style.display = "none";
+			document.getElementById ( 's_handle' ).style.display = "none";
+			document.getElementById ( 'feature_on_profile' ).style.display = "none";
 
-	} else {
-		document.getElementById('r_handle').style.display = "block";
-		document.getElementById('s_handle').style.display = "block";
-		document.getElementById('feature_on_profile').style.display = "inline-block";
+		}
+		else
+		{
+			document.getElementById ( 'r_handle' ).style.display = "block";
+			document.getElementById ( 's_handle' ).style.display = "block";
+			document.getElementById ( 'feature_on_profile' ).style.display = "inline-block";
+		}
 	}
 
 };

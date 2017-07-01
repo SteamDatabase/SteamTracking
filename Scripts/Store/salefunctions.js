@@ -87,10 +87,10 @@ function AddItemsIfNotPresent( rgItemsToDisplay, rgItemsFound, cMaxItems )
 function HomeRenderFeaturedItems( rgDisplayLists )
 {
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier1, 'home', 9, 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		rgDisplayLists.sale_tier1, 'home', 9, g_bIsEncore ? 27 : 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 	);
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier2, 'home', 9, 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		rgDisplayLists.sale_tier2, 'home', 9, g_bIsEncore ? 24 : 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 	);
 
 	var rgItemsPromotedToTier1 = [];
