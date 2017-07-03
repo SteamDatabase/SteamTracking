@@ -309,6 +309,16 @@ CStickerManager.prototype.PopulateSelectors = function( )
 			elContainer.appendChild(elNew);
 		}
 
+		if( this.rgOwnership.scenes[nSceneId] )
+		{
+			var elNew = document.createElement('div');
+			elNew.classList.add('new');
+			elNew.classList.add('unlocked');
+			elNew.textContent = '✔';
+
+			elContainer.appendChild(elNew);
+		}
+
 
 		if( nNewStickers )
 			elTarget.insertBefore(elContainer, elTarget.firstChild);

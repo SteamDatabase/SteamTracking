@@ -192,6 +192,9 @@ body.stickers .responsive_page_template_content {
 	line-height: 20px;
 	text-align: center;
 }
+.background_selection_container .item .new.unlocked {
+	background-color: #56dc53;
+}
 
 .background_selection_container .item > img {
 
