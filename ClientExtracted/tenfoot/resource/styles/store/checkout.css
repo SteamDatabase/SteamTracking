@@ -533,7 +533,7 @@ Button:focus StorePrice #FinalPrice
 	flow-children: down;
 	width: 100%;
 	overflow: squish scroll;
-	height: fill-parent-flow( 1.0 );
+	height: fit-children;
 	padding: 12px 20px 12px 12px;
 }
 
@@ -1609,6 +1609,11 @@ CheckoutReviewLineItem
 	text-align: right;
 	width: 100%;
 	text-align: right;
+}
+
+#SubscriptionText
+{
+	padding-top: 50px;
 }
 
 .ReviewTotal

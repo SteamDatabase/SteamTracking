@@ -128,6 +128,9 @@
 
 "Overlay_MicroTxnAuth_Title"		"Steam Transaction"
 "Overlay_MicroTxnAuth_Authorize"	"Authorize"
+"Overlay_MicroTxnAuth_PayWithWallet"	"Renew With Steam Wallet"
+"Overlay_MicroTxnAuth_UpdateBillingInformation" "Update Billing Info"
+"Overlay_MicroTxnAuth_SubscriptionText"	"Steam will automatically bill your stored payment method when your subscription renews. If you do not have billing information on file, Steam will attempt to use any funds in your wallet."
 "Overlay_MicroTxnAuth_AddFunds"		"Add Funds"
 "Overlay_MicroTxnAuth_Cancel"		"Cancel"
 "Overlay_MicroTxnAuth_Description"	"%game% has requested authorization for the following:"
@@ -143,7 +146,7 @@
 "Overlay_MicroTxnCancelDlgOK"		"Cancel Transaction"
 "Overlay_MicroTxnCancelDlgCancel"	"Continue Transaction"
 "Overlay_MicroTxnSubscription"			"You will be charged %cost% every %time%"
-"Overlay_MicroTxnSubscriptionGame"			"You authorize this game to make further charges up to %cost% every %time%"
+"Overlay_MicroTxnSubscriptionGame"			"*Billed %cost% every %time%"
 "Overlay_MicroTxnSubscriptionYears"		"year(s)"
 "Overlay_MicroTxnSubscriptionMonths"	"month(s)"
 "Overlay_MicroTxnSubscriptionWeeks"		"week(s)"

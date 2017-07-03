@@ -3,6 +3,7 @@
 	controls
 	{
 		ItemList { controlname="ListPanel" style="ItemListStyle" }
+		UpdateBillingInfoButton { controlname="Button" Style="AuthBtnStyle" labeltext="#Overlay_MicroTxnAuth_UpdateBillingInformation" }
 		AuthorizeButton { controlname="Button" Style="AuthBtnStyle" labeltext="#Overlay_MicroTxnAuth_Authorize" }
 		CancelButton { controlname="Button" Style="AuthBtnStyle" labeltext="#Overlay_MicroTxnAuth_Cancel" }
 
@@ -14,6 +15,7 @@
 		BalanceLabel { controlname="Label" style="BalanceStyle" labeltext="#Overlay_MicroTxnAuth_Balance" }
 		BalanceDescLabel { controlname="Label" labeltext="#Overlay_MicroTxnAuth_BalanceLabel" }
 		RefundText { controlname="RichText" style="RefundTextStyle" scrollbar=0 }
+		SubscriptionText { controlname="RichText" style="RefundTextStyle" scrollbar=0 }
 		Separator { controlname="Panel" style="SeparatorStyle" }
 	}
 
@@ -73,13 +75,14 @@
 
 		place { control=BalanceDescLabel,BalanceLabel dir=left x=200 y=0 margin-right=35 margin-top=6 align=right spacing=10 }
 
-		place { control=AuthorizeButton,CancelButton region=buttons dir=left align=right spacing=10 }
+		place { control=UpdateBillingInfoButton,AuthorizeButton,CancelButton region=buttons dir=left align=right spacing=10 }
 
 		place { control=ReasonLabel,ItemList region=main dir=down spacing=15 width=max }
 		place { control=TotalLabel,TotalAmtLabel region=total dir=left align=right spacing=15 margin-top=0 }
 		place { control=ConvertedTotalLabel,ConvertedTotalAmtLabel region=total dir=left align=right spacing=15 margin-top=12 }
 		
-		place { control=RefundText start=Separator dir=down spacing=0 margin-left=-8 width=max height=50 }
 		place { control=Separator start=total dir=down spacing=0 margin-left=10 width=max margin-right=10 height=1 }
+		place { control=RefundText start=Separator dir=down spacing=0 margin-left=-8 width=max height=50 }
+		place { control=SubscriptionText start=RefundText dir=down spacing=0 margin-left=0 width=max height=70 }
 	}
 }

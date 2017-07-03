@@ -3448,6 +3448,9 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "SteamUI_Video360Player_Title"	"Error - Steam 360 Video Player"
 "SteamUI_Video360Player_LaunchError"	"Playback of a 360 video requires installation of the Steam 360 Video Player.\n\nFrom the Tools section of your Steam Library, double-click the Steam 360 Video Player to begin the installation."
 
+"SteamUI_Video360PlayerInstall_Title"	"Steam 360 Video Player Auto-Installation"
+"SteamUI_Video360PlayerInstall_Message"	"Playback of a 360 video requires a one-time installation of the Steam 360 Video Player.\n\nComplete the installation then click Watch on a 360 video to begin playback."
+
 "steam_community"	"Community"
 "steam_library"		"Library"
 

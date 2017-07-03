@@ -1492,10 +1492,13 @@
 	"Checkout_MicroTxnAuth_UpdateBillingInfo"	"Update Billing Info"
 	"Checkout_MicroTxnAuth_Approve"				"Approve transaction"
 	"Checkout_MicroTxnAuth_Cancel"				"Cancel transaction"
+	"Checkout_MicroTxnAuth_PayWithWallet"	"Renew With Steam Wallet"
+	"Checkout_MicroTxnAuth_SubscriptionText"	"Steam will automatically bill your stored payment method when your subscription renews. If you do not have billing information on file, Steam will attempt to use any funds in your wallet."
+
 	"Checkout_MicroTxnAuth_Error"				"An error occurred while loading the Steam transaction information for this game. Please try again."
 	"Checkout_MicroTxnAuth_Quantity"			"QTY {i:quantity}"
 	"Checkout_MicroTxnSubscription"                                                          "You will be charged {m:cost} every {d:frequency} {s:time}"
-	"Checkout_MicroTxnSubscriptionGame"                                                      "You authorize this game to make further charges up to {m:cost} every {d:frequency} {s:time}"
+	"Checkout_MicroTxnSubscriptionGame"                                                      "Billed {m:cost} every {d:frequency} {s:time}"
 	"Checkout_MicroTxnSubscriptionYears"                               "year(s)"
 	"Checkout_MicroTxnSubscriptionMonths"                          "month(s)"
 	"Checkout_MicroTxnSubscriptionWeeks"                            "week(s)"
@@ -3963,6 +3966,9 @@
 
 	"Steam_Video360Player_Title"	"Error - Steam 360 Video Player"
 	"Steam_Video360Player_LaunchError"	"Playback of a 360 video requires installation of the Steam 360 Video Player.\n\nYou will need to Exit Big Picture, then from the Tools section of your Steam Library, double-click the Steam 360 Video Player to begin the installation."
+
+	"Steam_Video360PlayerInstall_Title"	"Steam 360 Video Player"
+	"Steam_Video360PlayerInstall_Message"	"Playback of a 360 video requires a one-time installation of the Steam 360 Video Player.\n\nComplete the installation then click Watch on a 360 video to begin playback."
 
 	"Settings_SteamController"		"Steam Controller"
 	"SettingsSteamController_ResetSettings"		"Reset to Defaults"

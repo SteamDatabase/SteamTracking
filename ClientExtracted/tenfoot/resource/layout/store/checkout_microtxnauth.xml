@@ -43,9 +43,16 @@
 						</Panel>
 						<Label id="IncludesVat" text="#Checkout_Review_VAT" />
 					</Panel>
+					<Panel id="SubscriptionText">
+						<Label text="#Checkout_MicroTxnAuth_SubscriptionText" />
+					</Panel>
 				</Panel>
 				<Panel class="VerticalRule" />
 				<Panel class="CheckoutBodyRightColumn">
+					<Panel class="HorizontalRule" />
+					<Button id="MicroTxnUpdateBillingInfoBtn" onactivate="MicroTxnUpdateBillingInfo()" >
+						<Label id="MicroTxnUpdateBillingInfoText" text="#Checkout_MicroTxnAuth_UpdateBillingInfo" />
+					</Button>
 					<Panel class="HorizontalRule" />
 					<Button id="MicroTxnContinueBtn" onactivate="MicroTxnContinue()" >
 						<Label id="MicroTxnContinueText" />
