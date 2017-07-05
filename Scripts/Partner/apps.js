@@ -3434,19 +3434,19 @@ function CreateTool( parentId, strName, bAddToFreeSub )
 	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, bAddToFreeSub );
 }
 
-function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
+function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
 {
-	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting );
+	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, false, bF2PText );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bAddToFreeSub )
+function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bAddToFreeSub, bF2PText )
 {
 	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
 	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID For: ' + appName + '</div>' );
-
+	
 	// add initial one to create the range
 	$J.post( 'https://partner.steamgames.com/apps/ajaxcreatenewapp/',
 		{
@@ -3458,6 +3458,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'parentid' : parentId,
 			'f2p' : bF2P ? 1 : 0,
 			'add_to_free_sub' : bAddToFreeSub ? 1 : 0,
+			'f2ptext' : bF2PText,
 			'sessionid' : g_sessionID
 		}
 	).done(
