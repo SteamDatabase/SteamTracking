@@ -428,7 +428,7 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 	{
 		if ( !this.m_bEnabledAudioDubTrack )
 		{
-			for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+			for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
 			{
 				if ( CVTTCaptionLoader.LanguageCountryCodes[ strCode ].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 				{
@@ -462,7 +462,7 @@ CVideoWatch.prototype.SetAudioTrack = function()
 	if ( !strAudioTrackID )
 	{
 		// determine the best main or dub audio track for the user
-		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
 		{
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{
@@ -488,7 +488,7 @@ CVideoWatch.prototype.SetVideoTrack = function()
 	if ( !strVideoTrackID )
 	{
 		// determine the best main or dub audio track for the user
-		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
 		{
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{

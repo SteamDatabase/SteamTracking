@@ -1759,6 +1759,10 @@ GSteamCurators = {
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
 		var params = { 'class': 'curated_app_link' };
+		if ( oItem.rgCurators.length > 0 )
+		{
+			params['curator_clanid'] = oItem.rgCurators[0];
+		}
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 		if ( !rgItemData )
 			return null;
@@ -1808,6 +1812,10 @@ GSteamCurators = {
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
 		var params = { 'class': 'store_capsule' };
+		if ( oItem.rgCurators.length > 0 )
+		{
+			params['curator_clanid'] = oItem.rgCurators[0];
+		}
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 		if ( !rgItemData )
 			return null;
@@ -1859,12 +1867,13 @@ GSteamCurators = {
 
 	BuildHomePageGiantCap: function( strFeatureContext, oItem )
 	{
+		var unClanId = Object.keys( oItem.rgRecommendationByCurator )[0] || false;
+
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
-		var params = { 'class': 'curator_giant_capsule' };
+		var params = { 'class': 'curator_giant_capsule', 'curator_clanid' : unClanId };
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 
-		var unClanId = Object.keys( oItem.rgRecommendationByCurator )[0] || false;
 		var rgRecommendation = oItem.rgRecommendationByCurator[ unClanId ] || '';
 
 		var curator = GHomepage.rgCuratedAppsData.curators[ unClanId ] || false;
@@ -1932,7 +1941,7 @@ GSteamCurators = {
 
 	BuildCuratorItem: function( curator, nDepth )
 	{
-		var strLink = GStoreItemData.AddNavEventParamsToURL( curator.link, 'curator_recommended', nDepth )
+		var strLink = GStoreItemData.AddNavEventParamsToURL( curator.link, 'curator_recommended', nDepth );
 		var $Item = $J('<div/>', {'class': 'steam_curator', 'onclick': "top.location.href='" + strLink + "'" } );
 		var $Img = $J('<img/>', {'class': 'steam_curator_img', 'src': GetAvatarURL( curator.strAvatarHash, '_medium' ) });
 		$Item.append( $Img );

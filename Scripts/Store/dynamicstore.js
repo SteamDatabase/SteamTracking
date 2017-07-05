@@ -1252,7 +1252,10 @@ GStoreItemData = {
 
 		// override with item-specific URL
 		if ( rgItemData.url )
-			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth )
+			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth );
+		
+		if ( params['curator_clanid'] )
+			params['href'] += "&curator_clanid=" + params['curator_clanid'];
 
 		return rgItemData;
 	},

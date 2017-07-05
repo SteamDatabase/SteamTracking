@@ -682,3 +682,13 @@ a.recent_game_discussion.quasi_official_group
 		width: auto;
 	}
 }
+
+.report_search_form_box {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 15px;
+}
+
+.report_search_form_input {
+	float:left;
+	margin-right: 10px;
+}

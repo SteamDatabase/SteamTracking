@@ -1345,6 +1345,16 @@ CDASHPlayer.prototype.UpdateAudioAdaptationSet = function ( strAdaptationID )
 		{
 			this.UpdateClosedCaption( adaptation.forceSub, CVTTCaptionLoader.s_Subtitle );
 		}
+		else
+		{
+			// if the current caption is not set or FN, call update to see if the FN lang should change
+			var vttCurInfo = this.m_VTTCaptionLoader.GetCurrentVTTInfo();
+			if ( vttCurInfo.role == null || vttCurInfo.role == CVTTCaptionLoader.s_ForcedNarrative )
+			{
+				this.UpdateClosedCaption( CDASHPlayerUI.CLOSED_CAPTIONS_NONE, CVTTCaptionLoader.s_ForcedNarrative );
+			}
+		}
+
 	}
 }
 
@@ -1515,6 +1525,32 @@ CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode, ccRole
 
 	if ( typeof ccRole === 'undefined' || ccRole == '' )
 		ccRole = CVTTCaptionLoader.s_Subtitle;
+
+	// forced narrative check: uses NONE/Subtitle if it exists or Audio Track + FN sub.
+	if ( closedCaptionCode == CDASHPlayerUI.CLOSED_CAPTIONS_NONE )
+	{
+		var rgCaps = this.GetClosedCaptionsArray();
+		var bNoneSubtitleFound = false;
+		for ( var i = 0; i < rgCaps.length; i++ )
+		{
+			if ( rgCaps[i].code == CDASHPlayerUI.CLOSED_CAPTIONS_NONE &&
+				 rgCaps[i].roles == CVTTCaptionLoader.s_Subtitle )
+			{
+				bNoneSubtitleFound = true;
+				break;
+			}
+		}
+
+		if ( !bNoneSubtitleFound )
+		{
+			var adapSet = this.GetAdaptationByTrackID( this.m_strAudioAdaptationID );
+			if ( adapSet )
+			{
+				closedCaptionCode = adapSet.language;
+				ccRole = CVTTCaptionLoader.s_ForcedNarrative;
+			}
+		}
+	}
 
 	this.m_VTTCaptionLoader.SwitchToTextTrack( closedCaptionCode, ccRole );
 }
@@ -5955,6 +5991,9 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		{
 			if ( rgRepresentation[r].code.toUpperCase() != CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
 			{
+				if ( rgRepresentation[r].roles[0] == CVTTCaptionLoader.s_ForcedNarrative )
+					continue;
+
 				var strClosedCaptionValue = '';
 				var strClosedCaptionLabel = '';
 				if ( rgRepresentation[r].roles[0] == CVTTCaptionLoader.s_Caption )
@@ -6050,6 +6089,9 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanelTenFoot = function()
 		{
 			if ( rgRepresentation[r].code.toUpperCase() != CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
 			{
+				if ( rgRepresentation[r].roles[0] == CVTTCaptionLoader.s_ForcedNarrative )
+					continue;
+
 				var strClosedCaptionValue = '';
 				var strClosedCaptionLabel = '';
 				if ( rgRepresentation[r].roles[0] == CVTTCaptionLoader.s_Caption )
@@ -6733,6 +6775,8 @@ function CVTTCaptionLoader( elVideoPlayer, closedCaptions )
 	this.m_elVideoPlayer = elVideoPlayer;
 	this.m_rgClosedCaptions = closedCaptions;
 	this.m_xhrDownloadVTT = null;
+	this.m_strCurrentLangCode = null;
+	this.m_strCurrentRole = null;
 }
 
 CVTTCaptionLoader.s_TrackOff = "disabled";
@@ -6740,6 +6784,7 @@ CVTTCaptionLoader.s_TrackHidden = "hidden";
 CVTTCaptionLoader.s_TrackShowing = "showing";
 CVTTCaptionLoader.s_Caption = "caption";
 CVTTCaptionLoader.s_Subtitle = "subtitle";
+CVTTCaptionLoader.s_ForcedNarrative = "forcednar";
 CVTTCaptionLoader.s_DefaultLinePosition = 95;
 
 CVTTCaptionLoader.prototype.Close = function()
@@ -6775,13 +6820,33 @@ CVTTCaptionLoader.prototype.SetAllTextTracksDisplay = function( trackState )
 	{
 		this.m_elVideoPlayer.textTracks[i].mode = trackState;
 	}
+
+	this.m_strCurrentLangCode = null;
+	this.m_strCurrentRole = null;
+}
+
+CVTTCaptionLoader.prototype.GetTextTrackLabelAndKind = function( closedCaptionCode, role )
+{
+	var oLabelAndKind = {
+		'kind': role + 's',
+		'label': closedCaptionCode
+	};
+
+	if ( role == CVTTCaptionLoader.s_ForcedNarrative )
+	{
+		oLabelAndKind.kind =  CVTTCaptionLoader.s_Subtitle + 's';
+		oLabelAndKind.label = closedCaptionCode + CVTTCaptionLoader.s_ForcedNarrative;
+	}
+
+	return oLabelAndKind;
 }
 
 CVTTCaptionLoader.prototype.GetTextTrackByCode = function( closedCaptionCode, role )
 {
+	var oLabelAndKind = this.GetTextTrackLabelAndKind( closedCaptionCode, role );
 	for (var i = 0; i < this.m_elVideoPlayer.textTracks.length; i++ )
 	{
-		if ( this.m_elVideoPlayer.textTracks[i].label == closedCaptionCode && ( this.m_elVideoPlayer.textTracks[i].kind + 's' ) == role )
+		if ( this.m_elVideoPlayer.textTracks[i].label == oLabelAndKind.label && this.m_elVideoPlayer.textTracks[i].kind == oLabelAndKind.kind )
 			return this.m_elVideoPlayer.textTracks[i];
 	}
 
@@ -6799,6 +6864,16 @@ CVTTCaptionLoader.prototype.GetClosedCaptionUrl = function( closedCaptionCode, r
 	return null;
 }
 
+CVTTCaptionLoader.prototype.GetCurrentVTTInfo = function()
+{
+	var current = {
+		'code' : this.m_strCurrentLangCode,
+		'role' : this.m_strCurrentRole
+	};
+
+	return current;
+}
+
 CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode, role )
 {
 	// turn off any current track
@@ -6811,7 +6886,11 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode, rol
 		// .cues seems to only be filled in now after showing the track?
 		ccTextTrack.mode = CVTTCaptionLoader.s_TrackShowing;
 		if ( ccTextTrack.cues && ccTextTrack.cues.length )
+		{
+			this.m_strCurrentLangCode = closedCaptionCode;
+			this.m_strCurrentRole = role;
 			return true;
+		}
 		else
 			ccTextTrack.mode = CVTTCaptionLoader.s_TrackHidden;
 	}
@@ -6839,6 +6918,8 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode, rol
 
 			// show the text track
 			newTextTrack.mode = CVTTCaptionLoader.s_TrackShowing;
+			_loader.m_strCurrentLangCode = closedCaptionCode;
+			_loader.m_strCurrentRole = role;
 
 		})
 		.fail( function()
@@ -6855,8 +6936,11 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 
 	// there may be a track but the cues are empty, so try to get it first and then create if needed
 	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode, role );
-	if ( !newTextTrack )
-		newTextTrack = this.m_elVideoPlayer.addTextTrack( role + 's', closedCaptionCode, closedCaptionCode );
+	if ( !newTextTrack ) 
+	{
+		var oLabelAndKind = this.GetTextTrackLabelAndKind( closedCaptionCode, role );
+		newTextTrack = this.m_elVideoPlayer.addTextTrack(oLabelAndKind.kind, oLabelAndKind.label, closedCaptionCode);
+	}
 
 	var rgCuesFromVTT = this.ParseVTTForCues( data );
 	if (rgCuesFromVTT.length == 0)

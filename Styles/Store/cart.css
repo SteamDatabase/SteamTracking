@@ -938,6 +938,12 @@ body.v6 .cart_rightcol h2 {
 	padding: 14px;
 }
 
+.checkout_cache_text
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 .cart_totals_area {
 	width: 234px;
 	margin-left: auto;
@@ -949,8 +955,6 @@ body.v6 .cart_rightcol h2 {
 	text-align: right;
 	margin-top: 3px;
 }
-
-
 
 .cart_coupon_ctn {
 	padding: 0px 0px 12px 150px;

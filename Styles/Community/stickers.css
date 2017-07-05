@@ -402,7 +402,7 @@ body.stickers .responsive_page_template_content {
 .unlock_container h2 {
 	color: #FDFDFD;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: ; /* regular */
+		font-weight: normal; /* normal */
 
 		;
 }
@@ -433,7 +433,7 @@ body.stickers .responsive_page_template_content {
 
 .faq_list h2  {
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: ; /* regular */
+		font-weight: normal; /* normal */
 
 			color: #fff;
 	font-size: 16px;
@@ -448,7 +448,7 @@ body.stickers .responsive_page_template_content {
 
 .faq_list h3  {
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: ; /* regular */
+		font-weight: normal; /* normal */
 
 			color: #fff;
 	font-size: 16px;
