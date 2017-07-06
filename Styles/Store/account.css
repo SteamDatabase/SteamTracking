@@ -1230,7 +1230,19 @@ td.wht_total {
 	margin-left: auto;
 }
 
-.ignoredapps a {
+.ignoredapps > div {
 	display: block;
 	padding: 5px 0;
+}
+
+.ignoredapps .remove {
+	font-size: 12px;
+	color: #dedede;
+	display: none;
+	margin-left: 5px;
+}
+
+.ignoredapps > div:hover .remove {
+	display: inline-block;
+	line-height: 16px;
 }

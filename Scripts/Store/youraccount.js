@@ -262,3 +262,18 @@ function ShowConfirmRemovePaymentMethodDialog()
 	new Effect.Highlight( 'confirm_remove_card', { endcolor : '#000000', startcolor : '#ff9900' } );	
 }
 
+function UnIgnoreApp( element, unAppId, snr )
+{
+	$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+		sessionid: g_sessionID,
+		appid: unAppId,
+		snr: snr,
+		remove: 1
+	}).done( function() {
+		$J(element.parentNode).hide();
+		GDynamicStore.InvalidateCache();
+	}).fail( function() {
+		ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+	});
+}
+
