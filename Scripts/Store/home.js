@@ -953,15 +953,6 @@ GHomepage = {
 		var rgAllAppIds = [];
 		var rgAppIds = [];
 
-		// Build a list of all apps for mapping dlc
-		for( var i = 0; i < $elElements.length; i++ )
-		{
-			var $capsule = $J( $elElements[i] );
-			var unAppId = $capsule.data('ds-appid');
-
-			rgAllAppIds.push( unAppId );
-		}
-
 		// Remove duplicates or DLC from the list
 		for( var i = 0; i < $elElements.length; i++ )
 		{
@@ -979,11 +970,19 @@ GHomepage = {
 
 			var rgAppData = GStoreItemData.rgAppData[unAppId];
 
-			if( rgAppData && rgAppData.dlc_for_app && rgAllAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+			// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
+			// If the user owns the base game already, only show the DLC
+			if( rgAppData && rgAppData.dlc_for_app )
 			{
-				$capsule.remove();
-				continue;
+				if( !GDynamicStore.BIsAppOwned(rgAppData.dlc_for_app) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+				{
+					$capsule.remove();
+					continue;
+				}
+
+				rgAppIds.push( rgAppData.dlc_for_app );
 			}
+
 
 			rgAppIds.push( unAppId );
 			rgApps.push( { appid: unAppId } );
