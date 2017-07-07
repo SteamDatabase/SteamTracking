@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.e4e71fe5303757dec5e95e078aaa66346505a6dc.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.786e33ce2ac5318fc08b8d2ce11e338fe10c7073.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3400,6 +3400,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 11
+					}
+				]
+				
+			},
+			{
+				"name": "PGL Krakow 2017 CS:GO Champion",
+				"defindex": 948,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at PGL Krakow 2017",
+				"item_description": "This championship trophy was awarded to the Champion at the PGL Krakow 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.c9a3fae5bb67ed2328a4c4932d96924e4e51cd8d.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "PGL Krakow 2017 CS:GO Finalist",
+				"defindex": 949,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at PGL Krakow 2017",
+				"item_description": "This championship trophy was awarded to the Finalist at the PGL Krakow 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "PGL Krakow 2017 CS:GO Semifinalist",
+				"defindex": 950,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at PGL Krakow 2017",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the PGL Krakow 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "PGL Krakow 2017 CS:GO Quarterfinalist",
+				"defindex": 951,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at PGL Krakow 2017",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the PGL Krakow 2017 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.c80cc1ed5939dc53fbc460f082519a45c9f47ac9.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "Krakow 2017 Pick 'Em Challenge Bronze",
+				"defindex": 952,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Krakow 2017 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the PGL Krakow 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/krakow_pickem_2017_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_bronze.ebdf4daca182fe857de8c82e6f2d96c9b890767b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_bronze_large.ac762a6769060b0f55d7f185bde38bff8c2794aa.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "Krakow 2017 Pick 'Em Challenge Silver",
+				"defindex": 953,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Krakow 2017 Pick'Em Trophy",
+				"item_description": "This silver trophy was awarded during the PGL Krakow 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/krakow_pickem_2017_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_silver.6566503648526c112f76a37f780f74908dd709c1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_silver_large.ec84269be17ddeba801dfa664e4d9fa55176c74d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "Krakow 2017 Pick 'Em Challenge Gold",
+				"defindex": 954,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Krakow 2017 Pick'Em Trophy",
+				"item_description": "This gold trophy was awarded during the PGL Krakow 2017 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/krakow_pickem_2017_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_gold.f7728ea814bb9c4ba3c3f8d1569eb91579833eae.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/krakow_pickem_2017_gold_large.a56437b73cb64b3bfc7cd25d9283181e85f4803c.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
 					}
 				]
 				
@@ -20590,6 +20765,1526 @@
 						"name": "campaign 9 last completed quest",
 						"class": "campaign_last_completed_quest",
 						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_astr",
+				"defindex": 4357,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Astralis | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/astr.98ec07973aaf462f628ff3fa9af9105fd73eed20.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/astr_large.d29be644cd381c6fa19f20fec025eb73ac07f5d4.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_vp",
+				"defindex": 4358,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Virtus.Pro | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp.6bc351d3499a175482ce1e3443a66415f0d859dc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_large.1c886178722f551467621f514c38d7ba85207aa5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_fntc",
+				"defindex": 4359,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Fnatic | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/fntc.133e796501f9f8588aaf21bd7db995982161590f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/fntc_large.abb6b18ba9075f321bb23c8b6760e6ac30cac243.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_sk",
+				"defindex": 4360,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | SK Gaming | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/sk.e69f8d383ffdc82a1f5d3ad4521b285a88cffcc5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/sk_large.e5c95d7c22067a29fe231d4e852ee980c23310c2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_navi",
+				"defindex": 4361,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Natus Vincere | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/navi.b49cc542efd0ff039ead975d55f5ecc3779728a0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/navi_large.b173092f8c0552174eebf86d7871180ca68d3f68.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_gamb",
+				"defindex": 4362,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Gambit | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/gamb.afd43be782c451eadc7ae2d0d950877d4d8a9371.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/gamb_large.af6e04d2d91732fa54dd5d4de6bf590b74f5c489.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_nor",
+				"defindex": 4363,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | North | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/nor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/nor.80e06b818641fb0b7289f63fd0a77433f0b44bf2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/nor_large.81ea7c0cd7a53906789891df717209204e38d216.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_faze",
+				"defindex": 4364,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | FaZe Clan | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/faze.3e447b71c9db56991508b4253c23e2e43a02168a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/faze_large.ffefc690da3329959055f71669ae789ce482820f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_mss",
+				"defindex": 4365,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | mousesports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/mss.c3d2c832a0f23fe0070bb0d91b41a053bbaedb72.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/mss_large.e2cfa498f4a774119f49c2ec9051b74e74a01695.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_g2",
+				"defindex": 4366,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | G2 Esports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/g2.3cb9f7378814832db2e14d0c905f8ad253368e46.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/g2_large.d52c719a57008aa42d0b5b0e495754f88e5b9b19.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_big",
+				"defindex": 4367,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | BIG | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/big",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/big.26b5474a9fd89069abb915bd38f47b2335525d19.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/big_large.a51b441608946152edfb112e3f3ab8bf3bcd07ad.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_c9",
+				"defindex": 4368,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Cloud9 | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/c9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/c9.c47eac322b1d14bda99cbd52a6fc99f7993e9baf.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/c9_large.32ec80c3911e35d9777d134a46017568e28b066f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_penta",
+				"defindex": 4369,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | PENTA Sports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/penta",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/penta.b0ee93cff19295beb05a826ddd03787682122bcd.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/penta_large.c1bfc45cd3e036d837c691ffea47a564a61dedaa.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_flip",
+				"defindex": 4370,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Flipsid3 Tactics | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/flip.91eff3677b212d87bf4f74c9aef5cf457a34e6f4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/flip_large.f2a5e24240687a9066f59bdb617ada356a4e07d6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_imt",
+				"defindex": 4371,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Immortals | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/imt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/imt.92b40da5cc81e3fbf66189f8ae31f461cc5e866d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/imt_large.8690707cce10e8a9220d856ab1b4a3781f369023.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_vega",
+				"defindex": 4372,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Vega Squadron | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/vega",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vega.a3e31cd66fc75fca55985291c9c7ab55bed9d026.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vega_large.5e1c86d33a170edc23763d504b9816fa7425e901.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_pgl",
+				"defindex": 4373,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | PGL | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/pgl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/pgl.f3455f141f89d0e3d682e78c3f964c36e31cb7a4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/pgl_large.ac4ea580e67e1eeb05f35bec66a7c3c66d37d606.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_astr",
+				"defindex": 4374,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Astralis | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/astr_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/astr_graffiti.ad3e31fe42cbac009eab60680770f09a2bf5bb88.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/astr_graffiti_large.80350007a4b0e938f349721bf520136011d41762.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_vp",
+				"defindex": 4375,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Virtus.Pro | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/vp_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_graffiti.34778f27130ec2a9ff10f373f49aed46a9ff50c4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_graffiti_large.ddfce6a38e20c480ca012589b7479473c00c21ac.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_fntc",
+				"defindex": 4376,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Fnatic | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/fntc_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/fntc_graffiti.42d99a5de03b0c462a09579876247d6f379a3009.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/fntc_graffiti_large.0ede0c168a27411a2523a15b65dc7dc459ca7aa1.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_sk",
+				"defindex": 4377,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | SK Gaming | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/sk_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/sk_graffiti.f32c1fb8ef605db0d69902f9bd4e1bf2c08931f2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/sk_graffiti_large.332c4d376b9c55204000d2a5428121d434aaf35a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_navi",
+				"defindex": 4378,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Natus Vincere | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/navi_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/navi_graffiti.24ca29c06b65b7c136ae6e608a3ad8f9931c23a3.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/navi_graffiti_large.308f927e4033128b02300de8e36f2bf327871589.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_gamb",
+				"defindex": 4379,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Gambit | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/gamb_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/gamb_graffiti.3771520aff5ba203ecb549c717c0b4e2d971dc9f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/gamb_graffiti_large.b74017bc7c5aa54c62733d6aee248860edb5e817.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_nor",
+				"defindex": 4380,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | North | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/nor_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/nor_graffiti.f59dcf4a3a02b6c8859964630270f101b40c2699.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/nor_graffiti_large.51a90c1ed785382e4a408d48402f32149668da5f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_faze",
+				"defindex": 4381,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | FaZe Clan | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/faze_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/faze_graffiti.2bb9da7513bff7b3674149e9782bc6fbdd64b2ad.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/faze_graffiti_large.ac4f474c4a9a3511acdb9ec03747613a9d240eec.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_mss",
+				"defindex": 4382,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | mousesports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/mss_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/mss_graffiti.8c7ff03e6f17a083fa98059e80dd881537206452.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/mss_graffiti_large.1ca8fd5cf47beae672e50a8fb0316f019bd0f109.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_g2",
+				"defindex": 4383,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | G2 Esports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/g2_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/g2_graffiti.0db813bb8c27a500d1b77560b7623bb009fd1627.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/g2_graffiti_large.6f1e9a9f5eab2bdf6f3a9f8e849c8f4ce01dd507.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_big",
+				"defindex": 4384,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | BIG | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/big_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/big_graffiti.d46b0a3217530eee9652f499a3a83aca155b2f62.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/big_graffiti_large.e1f5048789c6864d9ec1d3df877622da421c24c9.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_c9",
+				"defindex": 4385,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Cloud9 | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/c9_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/c9_graffiti.594bb96d4ba06c0c92c6e825a2d01333d5274102.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/c9_graffiti_large.aae03b4e2aa2f316102bf108e76a009f37740d04.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_penta",
+				"defindex": 4386,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | PENTA Sports | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/penta_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/penta_graffiti.457bbfbfe1870e7fb8e4d3d3f2415d6ad02f0477.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/penta_graffiti_large.a6db3d94c8527a3fb606e4ca446794ae5d07ddb8.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_flip",
+				"defindex": 4387,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Flipsid3 Tactics | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/flip_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/flip_graffiti.06175326630633de1d7035e720ca45270691ca3e.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/flip_graffiti_large.d555e2e99c231372fd3add480b79d6cea4459bb2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_imt",
+				"defindex": 4388,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Immortals | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/imt_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/imt_graffiti.b3b3e5ab3e2065bb12159b52935a256f1648fd5f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/imt_graffiti_large.20754472c90ac4bcb1ed04fe5c390eb3ea72f04f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_vega",
+				"defindex": 4389,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Vega Squadron | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/vega_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vega_graffiti.d6b182c4fc178e973ce6f73a956b25add9668abb.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vega_graffiti_large.d89cc07d0823434c0b4b180239e437e7016cd587.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_krakow2017_pgl",
+				"defindex": 4390,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | PGL | Krakow 2017",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/krakow2017/pgl_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/pgl_graffiti.087df4702c9ff127761fd6ec84f49ab7a9bddacc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/pgl_graffiti_large.e0268e53af491b4f1fa5ab059feaf9c05e10f14c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_legends",
+				"defindex": 4391,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single Krakow 2017 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_krakow2017_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_krakow2017_01.d34bb806f9d310176f53b6be1d16ea1e8f6c479c.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 209
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_krakow2017_challengers",
+				"defindex": 4392,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single Krakow 2017 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_krakow2017_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_krakow2017_02.a5145e5c333ca9b735d8a0705b13a7bce1639338.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 210
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_krakow2017_group_1",
+				"defindex": 4393,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Challengers Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Challengers teams at Krakow 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_krakow2017_group_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_krakow2017_group_1.cda4d9140412eff2a01339e500373dba54eb3e99.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 211
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_krakow2017_group_2",
+				"defindex": 4394,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Legends Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Legends teams at Krakow 2017.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_krakow2017_group_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_krakow2017_group_2.ed07ffcf72927ffbf05b5cb72c9f4eedddf17c6d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 212
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_bundle_of_all",
+				"defindex": 4395,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Mega Bundle",
+				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the PGL 2017 Krakow CS:GO Major Championship:\n ● One sticker for each of the 16 participating teams.\n ● One graffiti for each of the 16 participating teams.\n ● 8 Legends player autograph capsules.\n ● 8 Challengers player autograph capsules.\n ● One PGL sticker.\n ● One PGL graffiti.\n   (Does not include Legends/Challengers holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/krakow2017_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/krakow2017_bundleofall.cc38b44d2b567bd41c2e402683d6ca0ed6967b03.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_inferno",
+				"defindex": 4396,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_inferno.740191615458fa81ee37a4f374220e5dd3ad91ea.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 213
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_mirage",
+				"defindex": 4397,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_mirage.ce90364134b366b08ec65f0048ba32f354a89f07.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 214
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_cbble",
+				"defindex": 4398,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_cbble.6bc507231c3886467a928b363a029483daf6066e.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 215
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_overpass",
+				"defindex": 4399,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_overpass.e4a6cab0326599c25b29135013c3b22aabe2e8b0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 216
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_cache",
+				"defindex": 4400,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_cache.d2e97ade896a42adbb7f16920cdeb9ce71281022.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 217
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_train",
+				"defindex": 4401,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_train.218a403b03c551d7b4b33e9a921f705710959c4d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 218
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_krakow2017_promo_de_nuke",
+				"defindex": 4402,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Krakow 2017 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_krakow2017_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_krakow2017_promo_de_nuke.e65a7276a2c7120a936a28fd620c8ad293b8d715.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 219
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 12
 					}
 				]
 				
