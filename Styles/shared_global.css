@@ -651,6 +651,46 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
+.friendPlayerLevel.lvl_2000 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2100 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2200 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2300 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2400 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2500 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2600 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2700 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2800 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_2900 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png' );
+	text-shadow: 1px 1px #1a1a1a;
+}
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 0 -32px;
