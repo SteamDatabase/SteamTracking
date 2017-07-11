@@ -1102,7 +1102,7 @@ function LocLanguageSelect( id, language )
 
 	if ( textArea && hiddenInput ) {
 		// Do a little dance to un-escape HTML entities in the hidden input (notably &amp;)
-		var parsedVal = $J.parseHTML( hiddenInput.value );
+		var parsedVal = $J.parseHTML( hiddenInput.value.replace( /</g, '&lt;' ) );
 		textArea.value = ( parsedVal === null ? '' : parsedVal[ 0 ].data );
 	}
 }
