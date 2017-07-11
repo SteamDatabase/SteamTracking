@@ -15015,9 +15015,9 @@
  Test_SetFailed
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
- ThreadImplOneTimeInit
  ThreadInMainThread
  ThreadInterlockedAssignIf
+ ThreadInterlockedAssignPointerIf
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
  ThreadInterlockedExchangeAdd64
@@ -15607,7 +15607,6 @@
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
- b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_44_19
  b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
  b dump_panorama_css_properties_command

@@ -4548,6 +4548,7 @@
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
  T ThreadInterlockedAssignIf64
+ T ThreadInterlockedAssignPointerIf
  T ThreadInterlockedDecrement
  T ThreadInterlockedExchange
  T ThreadInterlockedExchange64
@@ -5788,7 +5789,6 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_44_19
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b SHA1.m

@@ -581,6 +581,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerabstraction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllervirtualsocket.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerxinput_osx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotbuild.cpp

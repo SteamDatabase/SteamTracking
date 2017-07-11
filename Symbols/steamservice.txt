@@ -1326,6 +1326,7 @@
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::InsertUnconstructed(unsigned long const&, int*, bool)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::Purge()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAll()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAt(int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::~CUtlHashMap()
@@ -2275,6 +2276,7 @@
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
+ T OSXHelpers::CIOPollingHelper::Shutdown()
  T OSXHelpers::CIOPollingHelper::Singleton()
  T OSXHelpers::CIOPollingHelper::UnRegister(unsigned long)
  T OneTimeCryptoInitOpenSSL()
@@ -2525,6 +2527,7 @@
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
  T ThreadInterlockedAssignIf64
+ T ThreadInterlockedAssignPointerIf
  T ThreadInterlockedDecrement
  T ThreadInterlockedExchange
  T ThreadInterlockedExchangeAdd64
@@ -3031,7 +3034,6 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OSXHelpers::CIOPollingHelper::Singleton()::threadonce_44_19
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation

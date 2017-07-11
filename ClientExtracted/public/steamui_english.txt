@@ -4556,4 +4556,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_NoVacBanOnAccount"	"No VAC Bans on Account"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Allow desktop Web browsers to automatically log into Steam sites\n  (requires restart for changes to apply)"
+
+"SteamUI_RunningConflictingSoftware" "Conflicting Software Detected"
+"SteamUI_RunningLavasoftTcpService" "It looks like a version of LavasoftTcpService.dll that is known to cause crashes \nwith recent versions of Steam and some games is currently loaded into the \nSteam process.\n\nWe suggest updating your Lavasoft Web Companion or uninstalling it if you experience \ncrashes or network connection failures while running Steam or games."
 }
