@@ -584,14 +584,15 @@ function Curator_DeleteRecommendation( groupid, appid, appname )
 }
 
 
-function Curator_SetTagline( groupid, tagline )
+function Curator_SetDetails( groupid, tagline, gaTrackingID )
 {
 	$J.ajax({
-		url: 'https://steamcommunity.com/groups/' + groupid + '/settagline/',
+		url: 'https://steamcommunity.com/groups/' + groupid + '/setcuratordetails/',
 		type: 'POST',
 		data: {
 			sessionID: g_sessionID,
-			tagline: tagline
+			tagline: tagline,
+			google_analytics_trackingid: gaTrackingID
 		},
 		success: function( data, textStatus, jqXHR ) {
 			if ( data.success == 1 )

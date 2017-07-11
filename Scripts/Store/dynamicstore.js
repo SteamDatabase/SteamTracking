@@ -818,7 +818,7 @@ GDynamicStore = {
 		if ( $Description.length && $El.hasClass('dynamic_bundle_description') && !Bundle.m_bMustPurchaseAsSet )
 			GDynamicStore.BuildBundleDescription( Bundle, $Description );
 
-		if ( $El.is( '.package_totals_area' ) )
+		if ( $El.is( '.package_totals_area' ) && !Bundle.m_bMustPurchaseAsSet )
 		{
 			if ( !Bundle.m_rgBundleItems.length )
 			{

@@ -2010,7 +2010,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 
 /* package page */
 
-.bundle_package_item .tab_item.ds_owned .discount_final_price {
+.bundle_package_item.complete_the_set .tab_item.ds_owned .discount_final_price {
 	text-decoration: line-through;
 	color: #626366;
 }

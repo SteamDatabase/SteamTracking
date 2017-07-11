@@ -223,6 +223,10 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	line-height:16px;
 }
 
+.groupBlock img {
+	border-radius: 3px;
+}
+
 /* ironically on the right */
 .groupLeftBlock {
 	margin:0;
