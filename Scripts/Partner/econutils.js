@@ -707,7 +707,7 @@ function OpenContextList( unAppID, sContextID, rSelectedContexts )
 			for( kContext in data )
 			{
 				var oContext = data[kContext];
-				var rgValveIDs = [730,440,570,753,754];
+				var rgValveIDs = [730,440,570,753,754,250820];
 				if ( 'appid' in oContext )
 				{
 					if ( rgValveIDs.indexOf( oContext.appid ) !== -1 )
