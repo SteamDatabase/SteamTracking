@@ -1275,11 +1275,9 @@
  T CUtlBuffer::PutInt16(short)
  T CUtlBuffer::PutOverflow(int)
  T CUtlBuffer::PutString(char const*)
- T CUtlBuffer::Scanf(char const*, ...)
  T CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
- T CUtlBuffer::VaScanf(char const*, char*)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -2929,7 +2927,6 @@
  strncpy
  strrchr
  strstr
- strtod$UNIX2003
  strtol
  strtoul
  swprintf
