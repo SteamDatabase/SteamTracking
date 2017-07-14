@@ -1,6 +1,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc

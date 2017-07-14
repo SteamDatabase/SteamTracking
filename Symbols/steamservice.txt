@@ -64,7 +64,6 @@
  B CUDPConnection::sm_SchedulerResend
  B CUDPConnection::sm_StatMicroSecLatency
  B CUDPConnection::sm_THashPUDPConnection
- B CUDPHost::sm_THashUDPHConnection
  B CUDPSocket::sm_ThreadSafeQueueIncoming
  B CUDPSocket::sm_cOutstandingWSASentToCmds
  B CWebSocketConnection::sm_THashPWebSocketConnection
@@ -244,7 +243,6 @@
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
- D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CUniformRandomStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -310,7 +308,6 @@
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
- D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CUniformRandomStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -368,7 +365,6 @@
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
- R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -1186,11 +1182,6 @@
  T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
  T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
- T CTHash<unsigned int, unsigned int>::Purge()
- T CTHash<unsigned int, unsigned int>::RemoveAll()
- T CTHash<unsigned int, unsigned int>::RemoveFromHash(unsigned int*)
- T CTHash<unsigned int, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<unsigned int, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
  T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
  T CTSQueue<CWSASendThread::send_t*, false>::Pop()

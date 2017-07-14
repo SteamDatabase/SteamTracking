@@ -332,7 +332,6 @@
  B CUDPConnection::sm_hSocketOwnerSharedClientIOCP
  B CUDPConnection::sm_pMemPoolPendingMsg
  B CUDPConnection::sm_pMemPoolReceivedPkt
- B CUDPHost::sm_THashUDPHConnection
  B CUDPSocket::sm_ThreadSafeQueueIncoming
  B CUDPSocket::sm_cOutstandingWSASentToCmds
  B CUIFontFilePB::default_instance_
@@ -1401,7 +1400,6 @@
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
- D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CTextShadowData
  D typeinfo for CUIFontFilePB
  D typeinfo for CUIFontFilePackagePB
@@ -2041,7 +2039,6 @@
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
- D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CTextShadowData
  D vtable for CUIFontFilePB
  D vtable for CUIFontFilePackagePB
@@ -2674,7 +2671,6 @@
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
- R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CTextShadowData
  R typeinfo name for CThreadSafeMemoryPool
  R typeinfo name for CUIFontFilePB
@@ -6675,11 +6671,6 @@
  T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
  T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
- T CTHash<unsigned int, unsigned int>::Purge()
- T CTHash<unsigned int, unsigned int>::RemoveAll()
- T CTHash<unsigned int, unsigned int>::RemoveFromHash(unsigned int*)
- T CTHash<unsigned int, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<unsigned int, unsigned int>::~CTHash()
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::PopItem(panorama::CRenderCommandMemoryStack**)
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::Purge()
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::PushItem(panorama::CRenderCommandMemoryStack* const&)

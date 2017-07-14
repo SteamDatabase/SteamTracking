@@ -92,7 +92,6 @@
  B CUDPConnection::sm_hSocketOwnerSharedClientIOCP
  B CUDPConnection::sm_pMemPoolPendingMsg
  B CUDPConnection::sm_pMemPoolReceivedPkt
- B CUDPHost::sm_THashUDPHConnection
  B CUDPSocket::sm_ThreadSafeQueueIncoming
  B CUDPSocket::sm_cOutstandingWSASentToCmds
  B CUtlSymbol::s_pSymbolTable
@@ -439,7 +438,6 @@
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
  D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
- D typeinfo for CTHash<unsigned int, unsigned int>
  D typeinfo for CUDPConnection
  D typeinfo for CUDPConnectionRouter
  D typeinfo for CUniformRandomStream
@@ -603,7 +601,6 @@
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
  D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
- D vtable for CTHash<unsigned int, unsigned int>
  D vtable for CUDPConnection
  D vtable for CUDPConnectionRouter
  D vtable for CUniformRandomStream
@@ -728,7 +725,6 @@
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
  R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
- R typeinfo name for CTHash<unsigned int, unsigned int>
  R typeinfo name for CThreadSafeMemoryPool
  R typeinfo name for CUDPConnection
  R typeinfo name for CUDPConnectionRouter
@@ -2294,12 +2290,6 @@
  T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
  T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
- T CTHash<unsigned int, unsigned int>::Init(int, int)
- T CTHash<unsigned int, unsigned int>::Purge()
- T CTHash<unsigned int, unsigned int>::RemoveAll()
- T CTHash<unsigned int, unsigned int>::RemoveFromHash(unsigned int*)
- T CTHash<unsigned int, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<unsigned int, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
  T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::AllocNode()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Pop()

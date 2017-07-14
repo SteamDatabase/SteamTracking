@@ -760,7 +760,7 @@
  T CChromeIPCClient::BClearCacheAndRestartCEFProcess()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
- T CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, EUIMode)
+ T CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
  T CChromeIPCClient::BWaitForPendingData()
  T CChromeIPCClient::BWaitForResponse(EHTMLCommands, unsigned int)
  T CChromeIPCClient::CChromeIPCClient()
@@ -808,7 +808,7 @@
  T CHTMLController::BExitMasterCEFProcess()
  T CHTMLController::BInitialized()
  T CHTMLController::BIsBrowserEnabled()
- T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, EUIMode)
+ T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(CHTMLController::BrowserDetails_t const&)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, unsigned int, unsigned int, char const*, char const*)
  T CHTMLController::BrowserDetails_t::operator=(CHTMLController::BrowserDetails_t const&)
@@ -2467,6 +2467,7 @@
  T CreateInterfaceInternal(char const*, int*)
  T FillDataStruct(_finddata_t*)
  T GetCEFWebHelperExePath()
+ T GetLanguageICUName(ELanguage)
  T HTMLCommandBuffer_t::Validate(CValidator&, char const*)
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -2904,6 +2905,7 @@
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_CmdLineParamClientUI
  b s_CmdLineParamCommunityURL
+ b s_CmdLineParamDisableHighDPI
  b s_CmdLineParamDisableSandbox
  b s_CmdLineParamDisableWinH264
  b s_CmdLineParamStoreURL
@@ -2915,6 +2917,7 @@
  chmod$UNIX2003
  close$UNIX2003
  connect$UNIX2003
+ d s_LanguageNames
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  dlsym
@@ -3147,6 +3150,7 @@
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
+ t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception
