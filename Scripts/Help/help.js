@@ -643,6 +643,9 @@ HelpWizard = {
 				if ( $J('#refund_gift_request_button') )
 					$J('#refund_gift_request_button').show();
 				$J('#help_refund_request_form').html( data.html );
+
+				if ( data.perf_data )
+					$J('#help_refund_request_form').append( data.perf_data );
 			}
 			else if ( data.need_login )
 			{
