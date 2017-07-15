@@ -455,11 +455,18 @@ function PerformNewAchievement( appid )
 		},
 		function( results )
 		{
-			$('max_statid_used').innerHTML = results[ 'maxstatid' ];
-			$('max_bitid_used').innerHTML = results[ 'maxbitid' ];
-			NewAchievement( appid, results[ 'achievement' ] );
-			var id = EditAchievement( appid, results[ 'achievement' ] );
-			location.hash = id + "_edit";
+			if ( results['success'] == 1 )
+			{
+				$('max_statid_used').innerHTML = results[ 'maxstatid' ];
+				$('max_bitid_used').innerHTML = results[ 'maxbitid' ];
+				NewAchievement( appid, results[ 'achievement' ] );
+				var id = EditAchievement( appid, results[ 'achievement' ] );
+				location.hash = id + "_edit";
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', results['error'] );
+			}
 		}
 		);
 }
@@ -692,6 +699,11 @@ function SaveAchievementClosure( appid, statid, bitid )
 			},
 			function( results )
 			{
+				if ( results['success'] != 1 )
+				{
+					ShowAlertDialog( 'Error', results['error'] );
+					return;
+				}
 				if ( results[ 'saved' ] )
 				{
 					ReplaceAchievement( appid, results[ 'achievement' ] );
