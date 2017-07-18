@@ -1488,8 +1488,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/p2pengine/p2pvoice/voiceencoder_opus.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/p2pengine/p2pvoice/voiceencoder_silk.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/../common/mach_helpers.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/color.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/crashhandler/icrashhandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/

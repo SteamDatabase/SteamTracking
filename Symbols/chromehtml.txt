@@ -2399,7 +2399,6 @@
  T CUtlBuffer::CheckPut(int)
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
- T CUtlBuffer::GetChar()
  T CUtlBuffer::GetOverflow(int)
  T CUtlBuffer::GetString(char*, int)
  T CUtlBuffer::GetUnsignedInt()

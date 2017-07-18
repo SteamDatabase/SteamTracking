@@ -8297,7 +8297,6 @@
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
  T CUtlBuffer::Get(void*, int)
- T CUtlBuffer::GetChar()
  T CUtlBuffer::GetDelimitedCharInternal(CUtlCharConversion*)
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetFloat()
