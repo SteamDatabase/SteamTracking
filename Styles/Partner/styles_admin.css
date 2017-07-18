@@ -2488,6 +2488,15 @@ html, body { height:100%; }
 	margin-top: 10px;
 }
 
+.movie_link_to_store_item
+{
+	float: right;
+	position: relative;
+	right: -60px;
+	z-index: 10;
+	top: -137px;
+}
+
 .progress_container
 {
 	min-height: 100px;

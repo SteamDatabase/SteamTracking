@@ -230,8 +230,15 @@ textarea#leaderboard_blob {
 
 #episode_list_wrapper .titleDrag {
 	position: relative;
-	top: 1px;
+	top: 2px;
 	left: 10px;
+	height: 21px;
+}
+
+#episode_list_wrapper .boxlist_controls {
+	position: relative;
+	top: -20px;
+	right: 1px;
 }
 
 #episode_list_wrapper .episode_processing {

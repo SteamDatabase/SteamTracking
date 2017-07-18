@@ -1264,6 +1264,22 @@ function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
 	}
 }
 
+function DynamicLink_PlayVimeoVideoInline( elem, videoid )
+{
+	var el = $J(elem);
+	var videourl = 'https://player.vimeo.com/video/' + videoid + '?badge=0&autopause=0&autoplay=1&player_id=0';
+	var wrapper = $J( '<div/>', { 'class': 'dynamiclink_youtubeviewvideo' } );
+	var embed_wrapper = $J( '<div/>', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
+	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', src: videourl, webkitallowfullscreen : '', mozallowfullscreen : '', allowfullscreen : '' } );
+	if ( el.length )
+	{
+		embed_wrapper.append( iframeContent );
+		wrapper.append( embed_wrapper );
+		el.after( wrapper );
+		el.remove();
+	}
+}
+
 function DynamicLink_ShowSketchfabModelInline( elem, details )
 {
 	var url = "https://sketchfab.com/models/" + details.modelid + "/embed?autostart=1";

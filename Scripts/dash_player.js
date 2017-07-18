@@ -2344,9 +2344,22 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					if ( !_loader.m_player.BIsLiveContent() )
 					{
 						var bSendStatus = ( ( Math.floor( Math.random() * 20 ) ) == 1 );
+						var nStatus = xhr.status;
+
+						// determine if the failure was an XHR timeout...
+						if ( xhr.status == 0 )
+						{
+							if ( nDownloadMS >= ( xhr.timeout - 500 ) ) // roughly the timeout window
+							{
+								nStatus = 408;
+							}
+						}
+
 						if ( bSendStatus )
-							$J( _loader.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'FailedSegDLStatus', xhr.status ] );
+							$J( _loader.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'FailedSegDLStatus', nStatus ] );
 					}
+
+
 
 					// if VOD and a 403, then the user is no longer auth'd so attempt playback restart
 					if ( !_loader.m_player.BIsLiveContent() && xhr.status == 403 )
@@ -5722,17 +5735,28 @@ CDASHPlayerUI.prototype.ToggleStats = function()
 
 CDASHPlayerUI.prototype.ToggleFullscreen = function()
 {
+	var elContainer = this.m_elOverlay[ 0 ].parentNode;
+
 	if ( this.m_bUseSDLFullScreen )
 	{
 		try
 		{
 			SteamAPI.SteamUtils.ToggleFullScreen();
+			if ( $J( elContainer).hasClass('fullscreen') )
+			{
+				$J(elContainer).removeClass('fullscreen');
+			}
+			else
+			{
+				$J(elContainer).addClass('fullscreen');
+			}
+
 			return;
+
 		}
 		catch ( e ) { }
 	}
-
-	var elContainer = this.m_elOverlay[ 0 ].parentNode;
+	
 	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || this.m_player.m_elVideoPlayer.webkitDisplayingFullscreen;
 
 	if ( !bFullscreen )
@@ -6041,7 +6065,7 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 	{
 		$J( '.cc_select_wrapper > select' ).each( function ( index, selectid )
 		{
-			$J( selectid ).on(' change', function()
+			$J( selectid ).on( 'change', function()
 			{
 				CDASHPlayerUI.ChangeClosedCaptionDisplay( this.id.replace("cc-",""), this.value );
 			} );
