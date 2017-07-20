@@ -2492,9 +2492,9 @@ html, body { height:100%; }
 {
 	float: right;
 	position: relative;
-	right: -60px;
+	right: -70px;
 	z-index: 10;
-	top: -137px;
+	top: -93px;
 }
 
 .progress_container
