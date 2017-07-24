@@ -78,6 +78,7 @@
  B s_convarDepotBuilderNoReslist
  B s_convarDepotBuilderOutputRoot
  B s_convarDepotBuilderProgressTimeout
+ B s_convarLogFileFolderName
  B s_convarNoPromptForPasswordOnLogin
  B s_convarShutdownOnFailedCommand
  CValidator::ClaimArrayMemory(void*)
@@ -457,7 +458,7 @@
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
  T CFileReader::~CFileReader()
- T CFileWriter::BOpenFile(char const*, bool)
+ T CFileWriter::BOpenFile(char const*, bool, bool)
  T CFileWriter::CFileWriter(bool)
  T CFileWriter::Close(bool)
  T CFileWriter::Flush()
@@ -603,12 +604,12 @@
  T CSteamUser::Validate(CValidator&, char const*)
  T CSteamUser::WaitForLogonCompleteBlocking()
  T CSteamUser::~CSteamUser()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::AllocNode()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Pop()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::PopItem(CFileWriterThread::FileWriterItem_t**)
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Purge()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Validate(CValidator&, char const*)
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::~CTSQueue()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::AllocNode()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Pop()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::PopItem(CFileWriterThread::FileWriterItem_t**)
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Purge()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Validate(CValidator&, char const*)
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::~CTSQueue()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
@@ -618,7 +619,6 @@
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
  T CUtlBuffer::Get(void*, int)
- T CUtlBuffer::GetChar()
  T CUtlBuffer::GetDelimitedCharInternal(CUtlCharConversion*)
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetFloat()
@@ -909,7 +909,6 @@
  T ClientDepotBuilder()
  T ClientFriends()
  T ClientProductBuilder()
- T ClientRemoteClientManager()
  T ClientRemoteStorage()
  T ClientUGC()
  T ClientUser()
@@ -985,7 +984,7 @@
  T FileHandleTracker_t::~FileHandleTracker_t()
  T FillDataStruct(_finddata_t*)
  T FioClose(int)
- T FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioFlush(int)
  T FioGetSize(int, unsigned long long*)
  T FioRead(int, void*, int, int*)
@@ -1161,6 +1160,7 @@
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
  ThreadSleep
+ V_CbMakeAbsolutePath
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FileBase
@@ -1290,6 +1290,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientShader
  b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient
@@ -1415,6 +1416,7 @@
  rename
  rindex
  scandir$INODE64
+ setenv$UNIX2003
  snprintf
  sprintf
  sscanf
