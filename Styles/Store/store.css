@@ -2748,6 +2748,15 @@ a.cluster_capsule:hover {
 	padding-top: 37.5%
 }
 
+.store_capsule.price_inline .discount_block .discount_prices {
+	background-color: rgba(0,0,0,0.8);
+}
+.store_capsule.price_inline .discount_block {
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+}
+
 
 /* ds_options defines the per-app prefernces dropdown */
 .ds_options {

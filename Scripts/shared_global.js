@@ -3855,3 +3855,103 @@ function LoginUsingSteamClient( baseURL )
 	}
 }
 
+
+
+/**
+ * Generic interface for handling ajax-driven sub-pages.
+ *
+ * @param elTarget Element to dump content into
+ * @param strBaseURL Base URL to attach nav params
+ * @param strInstanceId Unique flag to look for when scanning for state change events. also determines our data selector
+ * 						Only needed if you're using more than one CAjaxSubPageController on the same page.
+ * @constructor
+ */
+var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId )
+{
+	this.elTarget = elTarget;
+	this.strBaseURL = strBaseURL;
+	this.strStateID = strInstanceId || 'navid';
+
+	this.rgOriginalEvent = {'html':this.elTarget.innerHTML,'title':document.title, 'id': this.strStateID};
+
+	window.addEventListener('popstate', this.OnWindowPopState.bind(this));
+
+	this.InstrumentLinks( document );
+
+
+};
+
+/**
+ * Register click handlers. This also sets the href for browser link preview and fallback for non-click navigation
+ * events, such as opening in a new tab/window via middle click.
+ * @param elTarget Element to query from.
+ * @constructor
+ */
+CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
+{
+	var rgLinks = elTarget.querySelectorAll('[data-'+this.strStateID+']');
+	for( var i=0; i<rgLinks.length; i++)
+	{
+		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
+		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
+	}
+}
+
+/**
+ * Call to navigate the sub-frame.
+ *
+ * @param strLocation Assumed to be strBaseURL + strLocation. Trailing slash should be on strBaseURL already.
+ * @param strpageTitle Optional: Replace page title with this new value.
+ * @constructor
+ */
+CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle )
+{
+	// @todo chrisk show throbber
+	var _this = this;
+	var strURL = this.strBaseURL + strLocation;
+
+	$J.ajax({
+		url: strURL,
+		dataType: "html",
+		cache: true, /* Let the browser decide caching rules */
+		data: { 'ajax': 1 }
+	}).done(function( result ) {
+		_this.elTarget.innerHTML = result;
+		_this.InstrumentLinks( _this.elTarget );
+		if( strPageTitle )
+			document.title = strPageTitle;
+
+		window.history.pushState({'html':result,'title':strPageTitle, 'id': _this.strStateID}, '', strURL );
+	});
+
+	event.preventDefault();
+
+};
+
+/**
+ * Internal event handler for the "back" button.
+ * @param Event event
+ * @constructor
+ */
+CAjaxSubPageController.prototype.OnWindowPopState = function( event )
+{
+	// Revert to our original state if there's nothing in the stack.
+
+	if(event.state == null)
+	{
+		event.state = 5;
+		console.log(event.state);
+	}
+
+	var state = event.state || this.rgOriginalEvent;
+
+	if( state && state.id == this.strStateID)
+	{
+
+		this.elTarget.innerHTML = state.html;
+		if( state.title )
+			document.title = state.title;
+	}
+};
+
+

@@ -522,6 +522,19 @@ input.filter_search_box:-moz-placeholder {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/inventory_hover_background.png')
 }
 
+/* Overrides for launcher specific trade UI */
+body.compact_trading_ui .item_desc_content {
+	padding: 11px;
+	background-image: none;
+}
+
+body.compact_trading_ui .item_desc_icon {
+	display: none;
+}
+
+body.compact_trading_ui .appselect {
+	display: none;
+}
 
 #iteminfo0, #iteminfo1 {
 	width: 346px;

@@ -28,11 +28,24 @@ function BindAvatarUploadControls()
 			else
 			{
 				if ( rgJSON.images && rgJSON.images[0] )
+				{
+					// upper-right corner block
+					$J('.user_avatar.playerAvatar img').attr( 'src', rgJSON.images[0] );
+					// avatar edit block
 					$J('#avatar_icon_img' ).attr( 'src', rgJSON.images[0] );
+				}
 				if ( rgJSON.images && rgJSON.images['medium'] )
+				{
+					// upper-left corner block
+					$J('.profile_small_header_avatar .playerAvatar img').attr( 'src', rgJSON.images['medium'] );
+					// avatar edit block
 					$J('#avatar_medium_img' ).attr( 'src', rgJSON.images['medium'] );
+				}
 				if ( rgJSON.images && rgJSON.images['full'] )
+				{
+					// avatar edit block
 					$J('#avatar_full_img' ).attr( 'src', rgJSON.images['full'] );
+				}
 			}
 		});
 
@@ -325,12 +338,20 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 				$J(elSlot).css( 'background-color', strBackgroundColor );
 			}
 
-			//$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
 			$J(elSlot).removeClass( 'openslot' );
 		}).fail( function() {
 			ShowAlertDialog( 'Select an item to feature on your profile', 'There was an error saving the featured item configuration.  Please try again later.' );
 		});
 	}
+}
+
+function ShowcaseClearItem( elSlot, eShowcase, iSlot )
+{
+	SetShowcaseConfig( eShowcase, iSlot, {appid: 0, item_contextid: 0, item_assetid: 0} );
+	$J(elSlot).find('img').attr( 'src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' ).attr( 'srcset', '' );
+	$J(elSlot).css( 'border-color', '' );
+	$J(elSlot).css( 'background-color', '' );
+	$J(elSlot).addClass( 'openslot' );
 }
 
 function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, strType )

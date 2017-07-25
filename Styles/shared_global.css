@@ -491,7 +491,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 
 .friendPlayerLevel .friendPlayerLevelNum {
-	color: #9b9b9b;
+	color: #e5e5e5;
 }
 
 .friendPlayerLevel.lvl_0 {
@@ -543,7 +543,12 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	.friendPlayerLevel.lvl_1300, .friendPlayerLevel.lvl_1400,
 	.friendPlayerLevel.lvl_1500, .friendPlayerLevel.lvl_1600,
 	.friendPlayerLevel.lvl_1700, .friendPlayerLevel.lvl_1800,
-	.friendPlayerLevel.lvl_1900, .friendPlayerLevel.lvl_2000
+	.friendPlayerLevel.lvl_1900, .friendPlayerLevel.lvl_2000,
+	.friendPlayerLevel.lvl_2100, .friendPlayerLevel.lvl_2200,
+	.friendPlayerLevel.lvl_2300, .friendPlayerLevel.lvl_2400,
+	.friendPlayerLevel.lvl_2500, .friendPlayerLevel.lvl_2600,
+	.friendPlayerLevel.lvl_2700, .friendPlayerLevel.lvl_2800,
+	.friendPlayerLevel.lvl_2900, .friendPlayerLevel.lvl_3000
 {
 	border: none;
 	border-radius: 0;

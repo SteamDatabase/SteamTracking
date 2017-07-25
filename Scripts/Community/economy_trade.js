@@ -74,10 +74,29 @@ function BeginTrading( bShowTutorial )
 		RequestTradeStatusUpdate();
 	}
 
-	// default to the last used inventory
-	var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
-	if ( BValidateHashParams( oCookieParams ) )
-		TradePageSelectInventory( UserYou, oCookieParams.appid, oCookieParams.contextid );
+
+	var appid = 0;
+	var contextid = 0;
+
+	// If the document says to use a specific inventory, do so
+	if ( typeof( force_appid ) !== 'undefined' ) {
+		appid = force_appid[ 'appid' ];
+		contextid = force_appid[ 'contextid' ];
+	}
+	
+	// Otherwise default to the last used inventory
+	if ( appid == 0 ) {
+		var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
+		if ( BValidateHashParams( oCookieParams ) ) {
+			appid = oCookieParams.appid;
+			contextid = oCookieParams.contextid;
+		}
+	}
+
+	// Select an app's inventory if we know which one to pick
+	if ( appid != 0 ) {
+		TradePageSelectInventory( UserYou, appid, contextid );
+	}
 }
 
 function InitResponsiveTradeControls()
