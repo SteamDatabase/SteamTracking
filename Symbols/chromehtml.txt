@@ -760,6 +760,7 @@
  T CChromeIPCClient::BClearCacheAndRestartCEFProcess()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
+ T CChromeIPCClient::BRestartMasterCEFProcess()
  T CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
  T CChromeIPCClient::BWaitForPendingData()
  T CChromeIPCClient::BWaitForResponse(EHTMLCommands, unsigned int)
@@ -2386,12 +2387,12 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
- T CTSQueue<HTMLCommandBuffer_t*, false>::AllocNode()
- T CTSQueue<HTMLCommandBuffer_t*, false>::Pop()
- T CTSQueue<HTMLCommandBuffer_t*, false>::PopItem(HTMLCommandBuffer_t**)
- T CTSQueue<HTMLCommandBuffer_t*, false>::Purge()
- T CTSQueue<HTMLCommandBuffer_t*, false>::Validate(CValidator&, char const*)
- T CTSQueue<HTMLCommandBuffer_t*, false>::~CTSQueue()
+ T CTSQueue<HTMLCommandBuffer_t*>::AllocNode()
+ T CTSQueue<HTMLCommandBuffer_t*>::Pop()
+ T CTSQueue<HTMLCommandBuffer_t*>::PopItem(HTMLCommandBuffer_t**)
+ T CTSQueue<HTMLCommandBuffer_t*>::Purge()
+ T CTSQueue<HTMLCommandBuffer_t*>::Validate(CValidator&, char const*)
+ T CTSQueue<HTMLCommandBuffer_t*>::~CTSQueue()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
@@ -2616,6 +2617,7 @@
  ThreadTerminateProcessCode
  ThreadWaitForProcessExit
  V_AppendSlash
+ V_CbMakeAbsolutePath
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes
  V_MakeAbsolutePath

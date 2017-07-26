@@ -1,7 +1,14 @@
 
+ .objc_class_name_MTLRenderPassDescriptor
+ .objc_class_name_MTLRenderPipelineDescriptor
+ .objc_class_name_MTLTextureDescriptor
  .objc_class_name_NSApplication
  .objc_class_name_NSCursor
+ .objc_class_name_NSMapTable
+ .objc_class_name_NSNumber
+ .objc_class_name_NSObject
  .objc_class_name_NSOpenGLView
+ .objc_class_name_NSString
  .objc_class_name_NSView
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
@@ -65,6 +72,7 @@
  B fn_glVertexAttribPointer
  B g_ActiveRenderInstance
  B g_InputHandler
+ B g_MetalRenderer
  B g_OpenGLRenderer
  B g_bIgnoreChildProcesses
  B g_bOverlayEnabled
@@ -116,6 +124,15 @@
  CGSGetSurfaceBounds
  CGSGetWindowBounds
  CGWarpMouseCursorPosition
+ D .objc_class_name_CMetalDeviceCache
+ D OBJC_CLASS_$_CMetalDeviceCache
+ D OBJC_IVAR_$_CMetalDeviceCache._bufferScreenQuad
+ D OBJC_IVAR_$_CMetalDeviceCache._device
+ D OBJC_IVAR_$_CMetalDeviceCache._metalLibrary
+ D OBJC_IVAR_$_CMetalDeviceCache._overlayPipeline
+ D OBJC_IVAR_$_CMetalDeviceCache._overlayTexture
+ D OBJC_IVAR_$_CMetalDeviceCache._updatePipeline
+ D OBJC_METACLASS_$_CMetalDeviceCache
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
  D g_IdentityMatrix
@@ -126,6 +143,7 @@
  D typeinfo for CGameStreamBaseMemStream
  D typeinfo for CGameStreamGameMemStream
  D typeinfo for CIMENullImpl
+ D typeinfo for CMetalRenderer
  D typeinfo for COverlayGLRenderer
  D typeinfo for CSavedMemStream
  D typeinfo for CSharedMemStream
@@ -151,6 +169,7 @@
  D vtable for CGameStreamBaseMemStream
  D vtable for CGameStreamGameMemStream
  D vtable for CIMENullImpl
+ D vtable for CMetalRenderer
  D vtable for COverlayGLRenderer
  D vtable for CSavedMemStream
  D vtable for CSharedMemStream
@@ -166,15 +185,29 @@
  D vtable for std::exception
  HideCursor
  InitCursor
+ MTLCopyAllDevices
+ MTLCreateSystemDefaultDevice
  NSApp
+ NSClassFromString
+ NSSelectorFromString
+ NSStringFromSelector
+ OBJC_CLASS_$_MTLRenderPassDescriptor
+ OBJC_CLASS_$_MTLRenderPipelineDescriptor
+ OBJC_CLASS_$_MTLTextureDescriptor
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSMapTable
+ OBJC_CLASS_$_NSNumber
+ OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSOpenGLView
+ OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSView
+ OBJC_METACLASS_$_NSObject
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
  R typeinfo name for CGameStreamGameMemStream
  R typeinfo name for CIMENullImpl
+ R typeinfo name for CMetalRenderer
  R typeinfo name for COverlayGLRenderer
  R typeinfo name for CSavedMemStream
  R typeinfo name for CSharedMemStream
@@ -286,6 +319,33 @@
  T CInputHandler::ValveSetCursor(unsigned long)
  T CInputHandler::ValveShowCursor(int)
  T CInputHandler::~CInputHandler()
+ T CMetalRenderer::CMetalRenderer()
+ T CMetalRenderer::FindOrCreateDeviceCacheEntry(objc_object objcproto9MTLDevice*)
+ T CMetalRenderer::HookMetalProtocols()
+ T CMetalRenderer::UpdateBounds()
+ T CMetalRenderer::ValveCheckAsyncCapture()
+ T CMetalRenderer::ValveDeleteAllTextures()
+ T CMetalRenderer::ValveDeleteTexture(int)
+ T CMetalRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
+ T CMetalRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
+ T CMetalRenderer::ValveGetFullscreenMonitor()
+ T CMetalRenderer::ValveGetPreferredTextureFormat()
+ T CMetalRenderer::ValveGetRendererType()
+ T CMetalRenderer::ValveGetRendererWindow()
+ T CMetalRenderer::ValveGetScreenSize(int&, int&)
+ T CMetalRenderer::ValveGetSharedD3DTextureSupport()
+ T CMetalRenderer::ValveGetTargetSize(int&, int&)
+ T CMetalRenderer::ValveGetWindowOrigin(int*, int*)
+ T CMetalRenderer::ValveIsFullScreen()
+ T CMetalRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
+ T CMetalRenderer::ValveLockRenderResources()
+ T CMetalRenderer::ValveRestoreRenderState()
+ T CMetalRenderer::ValveSetDesiredRenderState()
+ T CMetalRenderer::ValveStopAsyncCapture()
+ T CMetalRenderer::ValveTakeScreenshot(bool, unsigned int)
+ T CMetalRenderer::ValveUnlockRenderResources()
+ T CMetalRenderer::ValveUpdateAndDrawSharedTexture(int, int, int, int, float, float, float, float, float, float, int, char*, unsigned int, unsigned int, unsigned int, ETextureFormat, bool*)
+ T CMetalRenderer::~CMetalRenderer()
  T CMyGlobal::~CMyGlobal()
  T COpenGLFrameCapture::BBeginCapture(_CGLContextObject*, int, int, CVideoMemStreamWriter*, unsigned int)
  T COpenGLFrameCapture::BCreatePlaneData(COpenGLFrameCapture::PlaneData_t*, int, int, int, unsigned int, unsigned int, int, char const*)
@@ -364,6 +424,7 @@
  T CocoaRestoreSystemCursor()
  T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
  T CreateShader(char const*, char const*)
+ T ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)
  T Exiting()
  T GetEnvBool(char const*)
  T GetGLProcAddress(char*)
@@ -489,6 +550,8 @@
  T __gnu_cxx::__throw_concurrence_unlock_error()
  T __gnu_cxx::__verbose_terminate_handler()
  T __gxx_personality_v0
+ T class_exchangeProtocolMethods(objc_class*, Protocol*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...))
+ T class_implementsSelector(objc_class*, objc_selector*)
  T operator delete(void*)
  T operator delete[](void*)
  T operator new(unsigned long)
@@ -533,6 +596,8 @@
  T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::vector<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::__push_back_slow_path<IPC::IEvent* const&>(IPC::IEvent* const&)
  _CGSDefaultConnection
+ _NSConcreteGlobalBlock
+ _NSConcreteStackBlock
  _Unwind_DeleteException
  _Unwind_GetDataRelBase
  _Unwind_GetIP
@@ -544,6 +609,7 @@
  _Unwind_Resume_or_Rethrow
  _Unwind_SetGR
  _Unwind_SetIP
+ __CFConstantStringClassReference
  __bzero
  __cxa_atexit
  __error
@@ -554,6 +620,8 @@
  __udivdi3
  __umoddi3
  _dyld_get_image_name
+ _objc_empty_cache
+ _objc_empty_vtable
  abort
  atoi
  b (anonymous namespace)::emergency_mutex
@@ -564,6 +632,7 @@
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastPositionUpdateTime
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastHorizontalInset
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastVerticalInset
+ b CMetalRenderer::HookMetalProtocols()::s_bHooked
  b COverlayGLRenderer::ValveSetDesiredRenderState()::s_dwLastRetinaCheck
  b GetGLProcAddress(char*)::m_pLibGL
  b Log(char const*, ...)::bCheckedLogEnabled
@@ -577,6 +646,7 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
+ b g_TicksToUS
  b g_bKeyEnabledMovieCapture
  b g_bMicDuckingDisabled
  b g_bScreenshotsHooked
@@ -597,11 +667,31 @@
  bootstrap_port
  ceilf
  class_addMethod
+ class_copyMethodList
+ class_getClassMethod
  class_getInstanceMethod
+ class_getName
+ class_getSuperclass
  class_replaceMethod
  close
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
+ d __block_descriptor_tmp
+ d __block_descriptor_tmp127
+ d __block_descriptor_tmp130
+ d __block_descriptor_tmp55
+ d __block_descriptor_tmp57
+ d __block_descriptor_tmp62
+ d __block_descriptor_tmp64
+ d __block_descriptor_tmp67
+ d __block_descriptor_tmp69
+ d __block_literal_global
+ d __block_literal_global56
+ d __block_literal_global58
+ d __block_literal_global63
+ d __block_literal_global65
+ d __block_literal_global68
+ d __block_literal_global70
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -662,6 +752,7 @@
  glVertex2f
  glViewport
  gmtime_r
+ imp_implementationWithBlock
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -680,6 +771,7 @@
  memset
  method_exchangeImplementations
  method_getImplementation
+ method_getName
  method_getTypeEncoding
  mmap
  mmap$UNIX2003
@@ -687,10 +779,13 @@
  munmap$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ objc_enumerationMutation
  objc_msgSend
  objc_msgSend_stret
+ objc_setProperty
  open
  open$UNIX2003
+ protocol_getName
  pthread_getspecific
  pthread_key_create
  pthread_key_delete
@@ -704,6 +799,7 @@
  pthread_self
  pthread_setspecific
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
+ r screenQuad
  realloc
  rename
  sem_close
@@ -729,11 +825,22 @@
  strncpy
  strstr
  strtoull
+ t -[CMetalDeviceCache bufferScreenQuad]
+ t -[CMetalDeviceCache device]
+ t -[CMetalDeviceCache metalLibrary]
+ t -[CMetalDeviceCache overlayPipeline]
+ t -[CMetalDeviceCache overlayTexture]
+ t -[CMetalDeviceCache setBufferScreenQuad:]
+ t -[CMetalDeviceCache setDevice:]
+ t -[CMetalDeviceCache setMetalLibrary:]
+ t -[CMetalDeviceCache setOverlayPipeline:]
+ t -[CMetalDeviceCache setOverlayTexture:]
+ t -[CMetalDeviceCache setUpdatePipeline:]
+ t -[CMetalDeviceCache updatePipeline]
  t -[NSCursor(OverrideNSCursor) hooked_set]
  t -[NSOpenGLView(OverrideNSOpenGLView) hooked_setWantsBestResolutionOpenGLSurface:]
  t -[NSView(OverrideNSView) hooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
- t ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t Init()
  t InitTicks()
@@ -741,8 +848,14 @@
  t _GLOBAL__sub_I_input_osx.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_main.cpp
+ t _GLOBAL__sub_I_metalinterface.mm
  t _GLOBAL__sub_I_platformtime.cpp
  t _GLOBAL__sub_I_threadtools.cpp
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_2
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_3
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_4
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_7
  t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0

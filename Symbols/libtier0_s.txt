@@ -575,6 +575,7 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
+ b g_TicksToUS
  b g_bBreak
  b g_bDumpWritten
  b g_bWriteFullMemOnCrash

@@ -9613,7 +9613,6 @@
  T OSOverlay()
  T OSXHelpers::GetDefaultDocumentFolderForPlatform()
  T OSXHelpers::GetDefaultFolderForPlatform(NSSearchPathDirectory)
- T OSXHelpers::IsMinimizeOnTitleDblClickEnabled()
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
  T PchNameFromECurrencyCode(int)
@@ -13490,6 +13489,7 @@
  ThreadSleep
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
+ V_CbMakeAbsolutePath
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_ExtractDomainFromURL
  V_ExtractFileExtension
@@ -13947,6 +13947,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientShader
  b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient

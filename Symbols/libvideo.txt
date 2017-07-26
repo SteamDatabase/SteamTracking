@@ -468,6 +468,7 @@
  D typeinfo for CWorkItemThreadedDeleteCacheFile
  D typeinfo for CWorkItemThreadedGetCachedResponse
  D typeinfo for CWorkItemThreadedWriteResponseToDisk
+ D typeinfo for CWorkItemZeroAndFreeBuffer
  D typeinfo for CWorkThread
  D typeinfo for CWorkThreadPool
  D typeinfo for ConCommandBase
@@ -631,6 +632,7 @@
  D vtable for CWorkItemThreadedDeleteCacheFile
  D vtable for CWorkItemThreadedGetCachedResponse
  D vtable for CWorkItemThreadedWriteResponseToDisk
+ D vtable for CWorkItemZeroAndFreeBuffer
  D vtable for CWorkThread
  D vtable for CWorkThreadPool
  D vtable for ConVar
@@ -745,9 +747,9 @@
  R typeinfo name for CUtlLinkedList<CJobMgr::JobYielding_t, int>
  R typeinfo name for CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>
  R typeinfo name for CUtlLinkedList<CNetPacket*, int>
+ R typeinfo name for CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>
  R typeinfo name for CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>
  R typeinfo name for CUtlLinkedList<CScheduledItem, int>
- R typeinfo name for CUtlLinkedList<CUtlBuffer*, int>
  R typeinfo name for CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>
  R typeinfo name for CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>
  R typeinfo name for CUtlLinkedList<NetPacketToDelete_t, int>
@@ -825,6 +827,7 @@
  R typeinfo name for CWorkItemThreadedDeleteCacheFile
  R typeinfo name for CWorkItemThreadedGetCachedResponse
  R typeinfo name for CWorkItemThreadedWriteResponseToDisk
+ R typeinfo name for CWorkItemZeroAndFreeBuffer
  R typeinfo name for CWorkThread
  R typeinfo name for CWorkThreadPool
  R typeinfo name for ConCommandBase
@@ -1411,7 +1414,7 @@
  T CHTTPCacheInitializeThread::~CHTTPCacheInitializeThread()
  T CHTTPClient::AddClientConnectionBackToPool(CHTTPClientConnection*)
  T CHTTPClient::BFrameFuncHandleCompletedWorkItems(CReliableTimer&)
- T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*)
+ T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*, unsigned int)
  T CHTTPClient::CancelRequest(CHTTPRequestHandle*)
  T CHTTPClient::CreateWorkerThread(CWorkThreadPool*)
  T CHTTPClient::GetSSLContextForClientCert(char const*, char const*)
@@ -1874,6 +1877,7 @@
  T COpenSSLCertificate::~COpenSSLCertificate()
  T COpenSSLConnection::BAsyncSend(CUtlBuffer&)
  T COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)
+ T COpenSSLConnection::BAsyncUnbufferedSend(unsigned char const*, unsigned int, IUnbufferedSendCallback*, unsigned int)
  T COpenSSLConnection::BCheckServerNameCompatibility(char const*) const
  T COpenSSLConnection::BYieldingWaitForSendsCompleted(CJobMgr*, unsigned long long)
  T COpenSSLConnection::BeginHandshake()
@@ -2198,6 +2202,7 @@
  T CStructNetPacket::SetTargetJobID(unsigned long long)
  T CStructNetPacket::~CStructNetPacket()
  T CTCPConnection::AddToConnectionTable(CTCPConnection*)
+ T CTCPConnection::AllocIncomingMsgBuffer(int)
  T CTCPConnection::AppendToIncomingMessage(int, bool&)
  T CTCPConnection::BAsyncUnbufferedSend(unsigned char const*, int, IUnbufferedSendCallback*)
  T CTCPConnection::BFrameFuncRunConnections(CReliableTimer&)
@@ -2291,44 +2296,44 @@
  T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::AllocNode()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Pop()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::PopItem(CFileWriterThread::FileWriterItem_t**)
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Purge()
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::Validate(CValidator&, char const*)
- T CTSQueue<CFileWriterThread::FileWriterItem_t*, false>::~CTSQueue()
- T CTSQueue<CNetPacket*, false>::AllocNode()
- T CTSQueue<CNetPacket*, false>::Pop()
- T CTSQueue<CNetPacket*, false>::PopItem(CNetPacket**)
- T CTSQueue<CNetPacket*, false>::Purge()
- T CTSQueue<CNetPacket*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CNetPacket*, false>::~CTSQueue()
- T CTSQueue<CUtlBuffer*, false>::AllocNode()
- T CTSQueue<CUtlBuffer*, false>::Pop()
- T CTSQueue<CUtlBuffer*, false>::PopItem(CUtlBuffer**)
- T CTSQueue<CUtlBuffer*, false>::Purge()
- T CTSQueue<CUtlBuffer*, false>::Validate(CValidator&, char const*)
- T CTSQueue<CUtlBuffer*, false>::~CTSQueue()
- T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
- T CTSQueue<CWSASendThread::send_t*, false>::Pop()
- T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
- T CTSQueue<CWSASendThread::send_t*, false>::Purge()
- T CTSQueue<CWSASendThread::send_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
- T CTSQueue<CWorkItem*, false>::AllocNode()
- T CTSQueue<CWorkItem*, false>::Pop()
- T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
- T CTSQueue<CWorkItem*, false>::Purge()
- T CTSQueue<CWorkItem*, false>::Validate(CValidator&, char const*)
- T CTSQueue<CWorkItem*, false>::operator delete(void*)
- T CTSQueue<CWorkItem*, false>::operator new(unsigned long)
- T CTSQueue<CWorkItem*, false>::~CTSQueue()
- T CTSQueue<CompletionData_t*, false>::AllocNode()
- T CTSQueue<CompletionData_t*, false>::Pop()
- T CTSQueue<CompletionData_t*, false>::PopItem(CompletionData_t**)
- T CTSQueue<CompletionData_t*, false>::Purge()
- T CTSQueue<CompletionData_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CompletionData_t*, false>::~CTSQueue()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::AllocNode()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Pop()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::PopItem(CFileWriterThread::FileWriterItem_t**)
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Purge()
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Validate(CValidator&, char const*)
+ T CTSQueue<CFileWriterThread::FileWriterItem_t*>::~CTSQueue()
+ T CTSQueue<CNetPacket*>::AllocNode()
+ T CTSQueue<CNetPacket*>::Pop()
+ T CTSQueue<CNetPacket*>::PopItem(CNetPacket**)
+ T CTSQueue<CNetPacket*>::Purge()
+ T CTSQueue<CNetPacket*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CNetPacket*>::~CTSQueue()
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::AllocNode()
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::Pop()
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::PopItem(COpenSSLConnection::COutgoingBuffer**)
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::Purge()
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::Validate(CValidator&, char const*)
+ T CTSQueue<COpenSSLConnection::COutgoingBuffer*>::~CTSQueue()
+ T CTSQueue<CWSASendThread::send_t*>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*>::Pop()
+ T CTSQueue<CWSASendThread::send_t*>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*>::Purge()
+ T CTSQueue<CWSASendThread::send_t*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CWSASendThread::send_t*>::~CTSQueue()
+ T CTSQueue<CWorkItem*>::AllocNode()
+ T CTSQueue<CWorkItem*>::Pop()
+ T CTSQueue<CWorkItem*>::PopItem(CWorkItem**)
+ T CTSQueue<CWorkItem*>::Purge()
+ T CTSQueue<CWorkItem*>::Validate(CValidator&, char const*)
+ T CTSQueue<CWorkItem*>::operator delete(void*)
+ T CTSQueue<CWorkItem*>::operator new(unsigned long)
+ T CTSQueue<CWorkItem*>::~CTSQueue()
+ T CTSQueue<CompletionData_t*>::AllocNode()
+ T CTSQueue<CompletionData_t*>::Pop()
+ T CTSQueue<CompletionData_t*>::PopItem(CompletionData_t**)
+ T CTSQueue<CompletionData_t*>::Purge()
+ T CTSQueue<CompletionData_t*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CompletionData_t*>::~CTSQueue()
  T CTestHarness::~CTestHarness()
  T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
@@ -2444,6 +2449,7 @@
  T CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
+ T CUtlBuffer::SetReadOnlyBuffer(void*, int)
  T CUtlBuffer::Swap(CUtlBuffer&)
  T CUtlBuffer::VaScanf(char const*, __va_list_tag*)
  T CUtlBuffer::VaScanf(char const*, char*)
@@ -2642,6 +2648,13 @@
  T CUtlLinkedList<CNetPacket*, int>::RemoveAll()
  T CUtlLinkedList<CNetPacket*, int>::Unlink(int)
  T CUtlLinkedList<CNetPacket*, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::AllocInternal(bool)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::Free(int)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::InsertBefore(int, COpenSSLConnection::COutgoingBuffer* const&)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::RemoveAll()
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::Unlink(int)
+ T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::AllocInternal(bool)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Free(int)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::InsertBefore(int, COpenSSLConnection::JobWakeData_t const&)
@@ -2655,13 +2668,6 @@
  T CUtlLinkedList<CScheduledItem, int>::RemoveAll()
  T CUtlLinkedList<CScheduledItem, int>::Unlink(int)
  T CUtlLinkedList<CScheduledItem, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<CUtlBuffer*, int>::AllocInternal(bool)
- T CUtlLinkedList<CUtlBuffer*, int>::Free(int)
- T CUtlLinkedList<CUtlBuffer*, int>::InsertBefore(int, CUtlBuffer* const&)
- T CUtlLinkedList<CUtlBuffer*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CUtlBuffer*, int>::RemoveAll()
- T CUtlLinkedList<CUtlBuffer*, int>::Unlink(int)
- T CUtlLinkedList<CUtlBuffer*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::AllocInternal(bool)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Free(int)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::InsertBefore(int, CVideoPlayer::QueuedSegment_t* const&)
@@ -2730,6 +2736,7 @@
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Purge(int, bool)
+ T CUtlMemoryBase::SetExternalBuffer(void*, int)
  T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
@@ -3425,6 +3432,7 @@
  T CWebSocketConnection::Destroy()
  T CWebSocketConnection::DispatchCurrentFrame()
  T CWebSocketConnection::GetComputedWebSocketAcceptKey(char const*)
+ T CWebSocketConnection::GetConnectionPostedBufferSize()
  T CWebSocketConnection::GetConnectionType()
  T CWebSocketConnection::GetPingResults(CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >&)
  T CWebSocketConnection::GlobalInit(EScale)
@@ -3436,6 +3444,7 @@
  T CWebSocketConnection::ScheduledTimeoutClientCloseAck()
  T CWebSocketConnection::SendEncryptedData(unsigned char*, unsigned int)
  T CWebSocketConnection::SetConnectionBlackHoled()
+ T CWebSocketConnection::SetConnectionPostedBufferSize(int)
  T CWebSocketConnection::SetIncoming(int, netadr_t const&)
  T CWebSocketConnection::UpgradeTCPConnectionToWebSocket(unsigned int, IConnectionCallback*, COpenSSLConnection*, unsigned int)
  T CWebSocketConnection::Validate(CValidator&, char const*)
@@ -3508,6 +3517,12 @@
  T CWorkItemThreadedWriteResponseToDisk::GetWorkItemName() const
  T CWorkItemThreadedWriteResponseToDisk::ThreadProcess(CWorkThread*)
  T CWorkItemThreadedWriteResponseToDisk::~CWorkItemThreadedWriteResponseToDisk()
+ T CWorkItemZeroAndFreeBuffer::DispatchCompletedWorkItem(CJobMgr*)
+ T CWorkItemZeroAndFreeBuffer::GetThreadProcessName() const
+ T CWorkItemZeroAndFreeBuffer::GetWorkItemName() const
+ T CWorkItemZeroAndFreeBuffer::ThreadProcess(CWorkThread*)
+ T CWorkItemZeroAndFreeBuffer::Validate(CValidator&, char const*)
+ T CWorkItemZeroAndFreeBuffer::~CWorkItemZeroAndFreeBuffer()
  T CWorkThread::CWorkThread(CWorkThreadPool*, char const*)
  T CWorkThread::Cancel()
  T CWorkThread::OnExit()
@@ -4514,7 +4529,7 @@
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<CFileWriterThread::FileWriterItem_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CNetPacket*>::operator delete(void*)
- T TSLNodeTemplate_t<CUtlBuffer*>::operator delete(void*)
+ T TSLNodeTemplate_t<COpenSSLConnection::COutgoingBuffer*>::operator delete(void*)
  T TSLNodeTemplate_t<CWSASendThread::send_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CWorkItem*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
@@ -4573,6 +4588,7 @@
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
  T V_AppendSlash
+ T V_CbMakeAbsolutePath
  T V_ExtractDomainFromURL
  T V_FixDoubleSlashes
  T V_FixSlashes
@@ -4605,6 +4621,7 @@
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
  T V_strlower_fast
+ T V_strnappend_strlen
  T V_strncat
  T V_strncmp
  T V_strncpy
@@ -5181,6 +5198,7 @@
  T non-virtual thunk to CNetConnection::OnMessageComplete(unsigned char const*, unsigned int)
  T non-virtual thunk to COpenSSLConnection::BAsyncSend(CUtlBuffer&)
  T non-virtual thunk to COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)
+ T non-virtual thunk to COpenSSLConnection::BAsyncUnbufferedSend(unsigned char const*, unsigned int, IUnbufferedSendCallback*, unsigned int)
  T non-virtual thunk to COpenSSLConnection::BYieldingWaitForSendsCompleted(CJobMgr*, unsigned long long)
  T non-virtual thunk to COpenSSLConnection::BeginHandshake()
  T non-virtual thunk to COpenSSLConnection::GetPeerCertificate()
@@ -5835,6 +5853,7 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
+ b g_TicksToUS
  b g_bBreak
  b g_bDumpWritten
  b g_bScheduledFunctionMgrConstructed
@@ -6844,6 +6863,7 @@
  t _GLOBAL__sub_I_httpclient.cpp
  t _GLOBAL__sub_I_httpclientmgr.cpp
  t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_iopollinghelpers_osx.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
  t _GLOBAL__sub_I_logger.cpp
@@ -6868,7 +6888,6 @@
  t _GLOBAL__sub_I_scheduledfunction.cpp
  t _GLOBAL__sub_I_scheduler.cpp
  t _GLOBAL__sub_I_stat.cpp
- t _GLOBAL__sub_I_stdafx.cpp
  t _GLOBAL__sub_I_steamid.cpp
  t _GLOBAL__sub_I_steammessages_base.pb.cc
  t _GLOBAL__sub_I_stime.cpp
@@ -7329,8 +7348,8 @@
  t init256
  t init384
  t init512
- t int (anonymous namespace)::UnicodeConvertT<true, char, wchar_t, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)> >(char const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<(anonymous namespace)::V_UChar32ToUTF32Len(wchar_t)>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, (anonymous namespace)::V_UChar32ToUTF32(wchar_t, wchar_t*)>&)
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, char, wchar_t, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(char const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
  t int_cleanup
  t int_ctx_new
  t int_dh_free

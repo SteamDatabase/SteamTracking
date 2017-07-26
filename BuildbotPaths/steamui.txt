@@ -1,6 +1,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cellmap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
@@ -18,6 +19,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logfile.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/osxhelpers.mm
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/parentalinterpreter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
@@ -241,7 +243,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuivrcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/tenfootconfirmpassworddialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/avatarimage.cpp

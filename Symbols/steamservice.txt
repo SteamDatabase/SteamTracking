@@ -228,6 +228,7 @@
  D typeinfo for CMsgProtobufWrapped
  D typeinfo for CPathString
  D typeinfo for CPipeEvent
+ D typeinfo for CPipeEventCallbackHelper
  D typeinfo for CPipeWaiter
  D typeinfo for CRefCountServiceBase<false, CRefST>
  D typeinfo for CRefCountServiceBase<true, CRefMT>
@@ -296,7 +297,7 @@
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
  D vtable for CPathString
- D vtable for CPipeEvent
+ D vtable for CPipeEventCallbackHelper
  D vtable for CPipeWaiter
  D vtable for CScheduledFunction<CIPCServer>
  D vtable for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
@@ -350,6 +351,7 @@
  R typeinfo name for CMsgProtobufWrapped
  R typeinfo name for CPathString
  R typeinfo name for CPipeEvent
+ R typeinfo name for CPipeEventCallbackHelper
  R typeinfo name for CPipeWaiter
  R typeinfo name for CRefCountServiceBase<false, CRefST>
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
@@ -765,8 +767,6 @@
  T CIPCServer::Thread_MainLoop()
  T CIPCServer::Thread_Shutdown()
  T CIPCServer::~CIPCServer()
- T CIPCToolMachClient::DoKillCommand(char const*)
- T CIPCToolMachClient::Init()
  T CJob::Continue()
  T CJob::Heartbeat()
  T CJobMgr::BFrameFuncRunSleepingJobs(CReliableTimer&)
@@ -925,12 +925,14 @@
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
+ T CPipeEvent::CPipeEvent(CPipeEvent::ESocketWrapperType, int)
  T CPipeEvent::CPipeEvent(bool)
- T CPipeEvent::OnDataStateChanged(int, int, bool, bool)
  T CPipeEvent::Reset()
  T CPipeEvent::Set()
  T CPipeEvent::Wait(unsigned int)
  T CPipeEvent::~CPipeEvent()
+ T CPipeEventCallbackHelper::OnDataStateChanged(int, int, bool, bool)
+ T CPipeEventCallbackHelper::~CPipeEventCallbackHelper()
  T CPipeWaiter::BAdd(CPipeEvent*)
  T CPipeWaiter::BRemove(CPipeEvent*)
  T CPipeWaiter::BRemoveAll()
@@ -1041,11 +1043,9 @@
  T CServerPipe::SetInternalPipePtr(IProcessPipe*)
  T CServerPipe::WriteResult(CUtlBuffer&)
  T CServerPipe::~CServerPipe()
- T CServiceEngine::BInitAsService()
  T CServiceEngine::BMainLoop(CCycleCount*, CCycleCount*)
  T CServiceEngine::CServiceEngine()
  T CServiceEngine::GetIPCServerMap()
- T CServiceEngine::RunIPCMainLoop()
  T CServiceEngine::RunInterface(CUtlBuffer&, CUtlBuffer&)
  T CServiceEngine::ShutdownIPC()
  T CServiceEngine::~CServiceEngine()
@@ -1068,11 +1068,6 @@
  T CServiceRegistry::~CServiceRegistry()
  T CSharedUDPSocketPollHelper::OnDataStateChanged(int, int, bool, bool)
  T CSharedUDPSocketPollHelper::~CSharedUDPSocketPollHelper()
- T CSimpleMachClient::DoVersionCommand()
- T CSimpleMachClient::Init(char const*, unsigned int, bool)
- T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
- T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
- T CSimpleMachClient::~CSimpleMachClient()
  T CStatT<SteamThreadTools::CThreadMutex>::AgeGracefully()
  T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadMutex>::Clear()
@@ -1183,22 +1178,22 @@
  T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
- T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
- T CTSQueue<CWSASendThread::send_t*, false>::Pop()
- T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
- T CTSQueue<CWSASendThread::send_t*, false>::Purge()
- T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
- T CTSQueue<CWorkItem*, false>::AllocNode()
- T CTSQueue<CWorkItem*, false>::Pop()
- T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
- T CTSQueue<CWorkItem*, false>::Purge()
- T CTSQueue<CWorkItem*, false>::operator delete(void*)
- T CTSQueue<CWorkItem*, false>::operator new(unsigned long)
- T CTSQueue<CWorkItem*, false>::~CTSQueue()
- T CTSQueue<CompletionData_t*, false>::AllocNode()
- T CTSQueue<CompletionData_t*, false>::Pop()
- T CTSQueue<CompletionData_t*, false>::Purge()
- T CTSQueue<CompletionData_t*, false>::~CTSQueue()
+ T CTSQueue<CWSASendThread::send_t*>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*>::Pop()
+ T CTSQueue<CWSASendThread::send_t*>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*>::Purge()
+ T CTSQueue<CWSASendThread::send_t*>::~CTSQueue()
+ T CTSQueue<CWorkItem*>::AllocNode()
+ T CTSQueue<CWorkItem*>::Pop()
+ T CTSQueue<CWorkItem*>::PopItem(CWorkItem**)
+ T CTSQueue<CWorkItem*>::Purge()
+ T CTSQueue<CWorkItem*>::operator delete(void*)
+ T CTSQueue<CWorkItem*>::operator new(unsigned long)
+ T CTSQueue<CWorkItem*>::~CTSQueue()
+ T CTSQueue<CompletionData_t*>::AllocNode()
+ T CTSQueue<CompletionData_t*>::Pop()
+ T CTSQueue<CompletionData_t*>::Purge()
+ T CTSQueue<CompletionData_t*>::~CTSQueue()
  T CTestHarness::~CTestHarness()
  T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
@@ -1706,7 +1701,6 @@
  T CWorkThreadPool::StopWorkThreads()
  T CWorkThreadPool::~CWorkThreadPool()
  T CWorkThreadPoolSignal::Signal()
- T CWorkThreadPoolSignal::~CWorkThreadPoolSignal()
  T CallFlushLogFunc
  T Camellia_DecryptBlock
  T Camellia_DecryptBlock_Rounds
@@ -2370,13 +2364,11 @@
  T SSL_load_error_strings
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
  T SerializeVaArgs(char const*, char*, CUtlBuffer&)
- T ServiceEngineThreadProxy(void*)
  T SetInAssert
  T SetWritingMiniDump(bool)
  T ShouldUseNewAssertDialog
  T ShutdownPlatformSocket(int, int)
  T SteamService_GetIPCServer
- T SteamService_RunMainLoop
  T SteamService_Shutdown
  T SteamService_StartThread
  T SteamService_Stop
@@ -2536,6 +2528,7 @@
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
  T V_AppendSlash
+ T V_CbMakeAbsolutePath
  T V_CopyAndFixSlashes
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
@@ -2559,6 +2552,7 @@
  T V_strcat
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
+ T V_strnappend_strlen
  T V_strncat
  T V_strnchr
  T V_strncmp
@@ -2783,7 +2777,6 @@
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToSockadr(sockaddr*) const
  T netadr_t::ToString(char*, unsigned int, bool) const
- T non-virtual thunk to CWorkThreadPoolSignal::~CWorkThreadPoolSignal()
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::BGetCachedProcessData(unsigned int, VacProcessMonitor::ActiveProcessData_t const**) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::NGetNewEvents(unsigned int, EventHeader_t const* const**, unsigned int, void*, unsigned long) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::NGetProcessCount() const
@@ -3083,6 +3076,7 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
+ b g_TicksToUS
  b g_bBreak
  b g_bDumpWritten
  b g_bScheduledFunctionMgrConstructed
@@ -3174,8 +3168,6 @@
  backtrace
  backtrace_symbols
  bind$UNIX2003
- bootstrap_look_up
- bootstrap_port
  ceilf
  chmod$UNIX2003
  close$UNIX2003
@@ -3475,20 +3467,11 @@
  kevent
  kill$UNIX2003
  kqueue
- launch_data_alloc
- launch_data_dict_insert
- launch_data_free
- launch_data_new_string
- launch_msg
  listen$UNIX2003
  localtime_r
  longjmp
  lstat$INODE64
  mach_absolute_time
- mach_msg
- mach_port_allocate
- mach_port_deallocate
- mach_task_self_
  mach_timebase_info
  malloc
  malloc_size
@@ -3785,6 +3768,7 @@
  t _GLOBAL__sub_I_httpclientmgr.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_interfacemap.cpp
+ t _GLOBAL__sub_I_iopollinghelpers_osx.cpp
  t _GLOBAL__sub_I_ipcserver.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
@@ -4076,7 +4060,7 @@
  t init256
  t init384
  t init512
- t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, (anonymous namespace)::V_UTF32ToUChar32(wchar_t const*, wchar_t&, bool&)>&, (anonymous namespace)::EncodeLenFuncAdapter<V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, V_UChar32ToUTF8>&)
+ t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, char, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8> >(wchar_t const*, int, char*, int, EStringConvertErrorPolicy, (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>&, (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>&)
  t int_cleanup
  t int_ctx_new
  t int_dh_free

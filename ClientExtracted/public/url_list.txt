@@ -190,6 +190,12 @@ SteamIDEditPage
 	method		"internal"
 	filter		"profile"
 }
+SteamIDEditPrivacyPage
+{
+	url			"%community%/%mystuff%/edit/settings"
+	method		"internal"
+	filter		"profile"
+}
 MinimalProfileEdit
 {
 	url			"%community%/%mystuff%/minimaledit"
@@ -932,6 +938,11 @@ ParentalSetupComplete
 ParentalRecovery
 {
 	url		"%store%/parental/requestrecovery"
+	method	"internal"
+}
+ParentalRecoveryRequested
+{
+	url		"%store%/parental/recoveryrequested"
 	method	"internal"
 }
 AsyncGames

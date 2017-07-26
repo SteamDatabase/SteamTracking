@@ -38,7 +38,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/uilength.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/localization/localize.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/iui3dsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/opengllazyshaders.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/rendermessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.cpp
@@ -46,10 +45,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styleproperties.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styles.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine_new.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/textlayoutdrawcache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/texttexturecache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
@@ -70,6 +67,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/iui3dsurface.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uianimationengine.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/iuiinput.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/fillbrush.h

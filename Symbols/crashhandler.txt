@@ -313,6 +313,7 @@
  T ThreadWaitForProcessExit
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T V_AppendSlash
+ T V_CbMakeAbsolutePath
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_FixDoubleSlashes
@@ -322,6 +323,7 @@
  T V_StripTrailingSlash
  T V_UnqualifiedFileName
  T V_snprintf
+ T V_strnappend_strlen
  T V_strncat
  T V_strncpy
  T WriteMiniDump
@@ -391,6 +393,7 @@
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
+ b g_TicksToUS
  b g_bBreak
  b g_bDumpWritten
  b g_bWritingFatalMinidump

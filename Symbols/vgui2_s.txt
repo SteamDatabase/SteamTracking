@@ -2003,6 +2003,7 @@
  T OSXHelpers::GetMainBundle()
  T OSXHelpers::GetScreenResolution(int&, int&, char const*)
  T OSXHelpers::OSX_MyAudioServicesSystemSoundCompletionProc(unsigned long, void*)
+ T OSXHelpers::PlaySoundFile(char const*)
  T OSXHelpers::_internalBGetSteamBundleOrPath(char*, int)
  T OSX_GetIconImageForFullPath(char const*, bool, bool)
  T OnQuit(AEDesc const*, AEDesc*, long)
@@ -2607,6 +2608,7 @@
  ThreadImplOneTimeInit
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
+ V_CbMakeAbsolutePath
  V_CopyAndFixSlashes
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes

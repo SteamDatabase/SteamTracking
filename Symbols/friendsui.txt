@@ -9202,7 +9202,6 @@
  T OPENSSL_rdtsc
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
- T OSXHelpers::IsMinimizeOnTitleDblClickEnabled()
  T OneTimeCryptoInitOpenSSL()
  T OpenSSLDie
  T OpenSSL_add_all_ciphers
@@ -13249,6 +13248,7 @@
  ThreadIsThreadRunning
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
+ V_CbMakeAbsolutePath
  V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath
@@ -13713,6 +13713,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientShader
  b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient

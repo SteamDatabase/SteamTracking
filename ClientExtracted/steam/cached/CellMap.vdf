@@ -4,24 +4,28 @@
 	{
 		// These are multipliers, to make an edge cost 50% more than
 		// usual, set the multiplier to 1.5
-		"LocalCostForCrossingAtlantic"				5
-		"LocalCostForCrossingPacific"				5
-		"LocalCostBetweenEuropeAndAfrica"			4
-		"LocalCostBetweenNorthAndSouthAmerica"		4
-		"LocalCostBetweenAustraliaAndAsia"			9
-		"LocalCostJapanToKorea"			14
-		"LocalCostBetweenAustraliaAndNewZealand"	4
-		"LocalCostBetweenIsraelAndEurope"			8
-		"LocalCostIndiaToSingapore"			4
-		"LocalCostSingaporeToIndia"			8
-		"LocalCostOneWayCellEdge"					25
-		"LocalCostAUSBetweenRegions"				1
-		"LocalCostAUSFromRegionToISP"				1
-		"LocalCostAUSFromISPToRegion"				2
-		"LocalCostToLeaveChina"							6.5
-		"LocalCostCanadaToUS"					1
-		"LocalCostIndiaToDubai"					2
-		"InwardCost"	0.2
+		"CostForCrossingAtlantic"				5
+		"CostForCrossingPacific"				5
+		"EuropeAndAfrica"			4
+		"NorthAndSouthAmerica"		4
+		"AustraliaAndAsia"			9
+		"JapanToKorea"			14
+		"AustraliaAndNewZealand"	4
+		"IsraelToEurope"			8
+		"IndiaToSingapore"			4
+		"SingaporeToIndia"			8
+		"OneWayCellEdge"					25
+		"CostToLeaveChina"							6.5
+		"CanadaToUS"					1
+		"USToCanada"					4
+		"IndiaToDubai"					2
+		"LocalBackbone"					1
+		"RegionalBackbone"			2
+		"GlobalBackbone"				25
+		"Default"	1
+		"InwardCost"	1
+		"ZeroCost"		0
+		"AggregatorCost"	0
 	}
 	"cells"
 	{
@@ -30,15 +34,16 @@
 		0
 		{
 			"name"	"default"
+			"deprecated"	1
 			"region"	"global"
 			"countrycode"	"--"
 			"edges"
 			{
-				0 { "dest"	31	"cost"	InwardCost }
+				31 { "dest"	31	"cost"	ZeroCost }
 			}
 		}
 
-		// #1 IL
+		// #1 ORD
 		1
 		{
 			"name" "US - Chicago"
@@ -48,18 +53,21 @@
 			"longitude"	"-87.623321"
 			"edges"
 			{
-				0 { "dest"	79  }
-				1 { "dest"	80  }
-				3 { "dest"	63	"cost"	InwardCost }
-				4 { "dest"	95  }
-				5 { "dest"	77  }
-				6 { "dest"	49  }
-				7 { "dest"	76  }
-				8 
-				{ 
-					"dest"	20  
-					"cost"	LocalCostOneWayCellEdge
-				}
+				// Spokes
+				79 { "dest"	79  }
+				80 { "dest"	80  }
+				95 { "dest"	95  }
+				77 { "dest"	77  }
+				49 { "dest"	49  }
+				76 { "dest"	76  }
+				// Backbones
+				63 { "dest"	63	"cost"	LocalBackbone }
+				31 { "dest"	31	"cost"	LocalBackbone }
+				65 { "dest"	65	"cost"	LocalBackbone }
+				50 { "dest"	50	"cost"	LocalBackbone }
+				64 { "dest"	64	"cost"	LocalBackbone }
+				// high-cost
+				20  				{  					"dest"	20   					"cost"	USToCanada 				}
 			}
 		}
 
@@ -73,10 +81,7 @@
 			"longitude"	"-73.990949"
 			"edges"
 			{
-				0 { "dest"	63	"cost"	InwardCost }
-				1 { "dest"	83  }
-				2 { "dest"	82  }
-				5 { "dest"	 3  }
+				63 { "dest"	63	"cost"	InwardCost }
 			}
 		}
 
@@ -89,12 +94,8 @@
 			"countrycode"	"--"
 			"edges"
 			{
-				0 { "dest"	 63  }
-				1 
-				{ 
-					"dest"	13 
-					"cost"	LocalCostForCrossingAtlantic
-				}
+				63 { "dest"	 63  }
+				13 	{ "dest"	13 "cost"	CostForCrossingAtlantic }
 			}
 		}
 		
@@ -108,16 +109,23 @@
 			"longitude"	"-0.124569"
 			"edges"
 			{
-				0 { "dest"	85 }
-				1 { "dest"	69 }
-				2 { "dest"	14 }
-				3 { "dest"	15 }
-				4 { "dest"	13 }
-				5
-				{ 
-					"dest"	24 
-					"cost"	LocalCostOneWayCellEdge
-				}				
+				// Spokes
+				85 { "dest"	85 }
+				69 { "dest"	69 }
+				14 { "dest"	14 }
+				96 { "dest"	96 }
+				13 { "dest"	13 }
+				// Backbones
+				63 { "dest"	63	"cost"	GlobalBackbone }
+				26 { "dest"	26	"cost"	GlobalBackbone }
+				66 { "dest"	66	"cost"	RegionalBackbone }
+				5 { "dest"	5	"cost"	RegionalBackbone }
+				129 { "dest"	129	"cost"	OneWayCellEdge }
+				40 { "dest"	40	"cost"	RegionalBackbone }
+				15 { "dest"	15	"cost"	LocalBackbone }	// Doesn't actually exist as a backbone
+				
+				// back to aggregators
+				24 				{  					"dest"	24  					"cost"	OneWayCellEdge 				}				
 			}
 		}
 
@@ -131,45 +139,54 @@
 			"longitude"	"8.662188"
 			"edges"
 			{
-	
+				// Spokes
 				87 { "dest"	87 }
 				89 { "dest"	89 }
-				41 { "dest"	41 }
-				66 { "dest"	66 }
 				90 { "dest"	90 }
 				91 { "dest"	91 }
+				93 { "dest"	93 }
 				42 { "dest"	42 }
-				92 { "dest"	92 }				
-				15 { "dest"	15	"cost"	InwardCost }
-				14 { "dest"	14 }
 				88 { "dest"	88 }
-				129 { "dest"	129 }
-				37
+				37 { "dest"	37 }
+				165 { "cost"	Default } // Belarus
+				// Backbones
+				66 { "dest"	66	"cost"	1 }
+				129 { "dest"	129	"cost"	1 }
+				15 { "dest"	15	"cost"	LocalBackbone }
+				92 { "dest"	92	"cost"	RegionalBackbone }
+				38 { "dest"	38	"cost"	RegionalBackbone }
+				// High Cost
+				43
 				{ 
-					"dest"	37 
-					"cost"	LocalCostOneWayCellEdge
+					"dest"	43 
+					"cost"	OneWayCellEdge
 				}	
-				38
+				73
 				{ 
-					"dest"	38 
-					"cost"	LocalCostOneWayCellEdge
-				}					
+					"dest"	73 
+					"cost"	4
+				}	
+				27
+				{ 
+					"dest"	27 
+					"cost"	OneWayCellEdge
+				}																
 			}
 		}
 
-		// #6 DEPRECATED - was Israel/Iceland.
-		// For obvious reasons this just now points clients
-		// to those new cells.
+		// W. Canada to US
 		6
 		{
-			"name" "6 - Deprecated"
-			"deprecated" 1
-			"region"	"europe"
+			"name" "W. Canada to US"
+			"transit"	"1"
+			"region"	"usa"
 			"countrycode"	"--"
 			"edges"
 			{
-				0 { "dest"	 29 }
-				1 { "dest"	 30 }
+				31 { "dest"	 31 "cost"	CanadaToUS }
+				94 { "dest"	 94	"cost"	OneWayCellEdge }
+				134 { "dest"	 134	"cost"	OneWayCellEdge }
+				133 { "dest"	 133	"cost"	OneWayCellEdge }
 			}
 		}
 
@@ -183,10 +200,10 @@
 			"longitude"	"37.616969"
 			"edges"
 			{
-				0 { "dest"	66 }
-				1 { "dest"	149	"cost"	InwardCost }
-				2 { "dest"	150 }
-				3 { "dest"	151 }
+				27 { "dest"	27	"cost"	AggregatorCost }
+				149 { "dest"	149 }
+				150 { "dest"	150 }
+				151 { "dest"	151 }
 			}
 		}
 
@@ -200,18 +217,8 @@
 			"longitude"	"126.970543"
 			"edges"
 			{
-				0
-				{ 
-					"dest"	46 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				1
-				{ 
-					"dest"	47 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				2 { "dest"	17 }
-				3 { "dest"	32 	"cost"	2 }
+				17 { "dest"	17 "cost"	AggregatorCost }
+				32 { "dest"	32 	"cost"	2 }
 			}
 		}
 
@@ -225,13 +232,14 @@
 			"longitude"	"120.992002"
 			"edges"
 			{
-				0 { "dest"	32 	"cost"	InwardCost }
-				1 { "dest"	33 	"cost"	InwardCost }
-				2 { "dest"	35 	"cost"	InwardCost }
+				32 { "dest"	32 	"cost"	InwardCost }
+				33 { "dest"	33 	"cost"	InwardCost }
+				35 { "dest"	35 	"cost"	InwardCost }
+				17 { "dest"	17 "cost"	AggregatorCost }
 			}
 		}
 
-		// #10 CA
+		// #10 SJC
 		10
 		{
 			"name" "US - San Jose"
@@ -241,16 +249,7 @@
 			"longitude"	"-122.218863"
 			"edges"
 			{
-				0 { "dest"	75 }
-				1 { "dest"	64 	"cost"	InwardCost }
-				2 { "dest"	31 }
-				3 { "dest"	18 }
-				4 { "dest"	49 }
-				5
-				{ 
-					"dest"	146 
-					"cost"	LocalCostOneWayCellEdge
-				}				
+				64 { "dest"	64 	"cost"	InwardCost }			
 			}
 		}
 
@@ -264,8 +263,8 @@
 			"longitude"	"-112.068850"
 			"edges"
 			{
-				0 { "dest"	64 	"cost"	InwardCost}
-				1 { "dest"	65 	"cost"	InwardCost}
+				64 { "dest"	64 	"cost"	InwardCost}
+				65 { "dest"	65 	"cost"	InwardCost}
 			}
 		}
 
@@ -279,22 +278,7 @@
 			"longitude"	"-80.186072"
 			"edges"
 			{
-				0 { "dest"	50  	"cost"	InwardCost }
-				1 
-				{ 
-					"dest"	23 
-					"cost"	LocalCostOneWayCellEdge
-				}	
-				2 
-				{ 
-					"dest"	139
-					"cost"	LocalCostOneWayCellEdge
-				}	
-				3 
-				{ 
-					"dest"	140
-					"cost"	LocalCostOneWayCellEdge
-				}												
+				50 { "dest"	50  	"cost"	InwardCost }											
 			}
 		}
 
@@ -307,12 +291,8 @@
 			"region"	"global"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	 3 
-					"cost"	0
-				}
-				1 { "dest"	 4  }
+				3  {  "dest"	 3  "cost"	0 }
+				4 { "dest"	 4  }
 			}
 		}
 
@@ -326,15 +306,8 @@
 			"longitude"	"2.326540"
 			"edges"
 			{
-				0 { "dest"	 4  	"cost"	0.5 }
-				1 { "dest"	 5  	"cost"	InwardCost}
-				2 { "dest"	15  	"cost"	InwardCost}
-				3 { "dest"	129  	"cost"	InwardCost}
-				4 { "dest"	86  }
-				5 { "dest"	88  }
-				6 { "dest"	37  }
-				7 { "dest"	40  }
-				8 { "dest"	96  }
+				4 { "dest"	 4  	"cost"	InwardCost }
+				129 { "dest"	129  	"cost"	InwardCost}
 			}
 		}
 
@@ -348,13 +321,16 @@
 			"longitude"	"4.900231"
 			"edges"
 			{
-				0 { "dest"	4  	"cost"	0.5 }
-				1 { "dest"	5  	"cost"	InwardCost}
-				2 { "dest"	129  	"cost"	1}
-				3 { "dest"	14  }
-				4 { "dest"	86  }
-				5 { "dest"	87  }
-				6 { "dest"	29  "cost"	InwardCost }
+				// Spokes
+				14 { "dest"	14  }
+				86 { "dest"	86  }
+				87 { "dest"	87  }
+				// Backbones
+				4 { "dest"	4  	"cost"	LocalBackbone }
+				5 { "dest"	5  	"cost"	LocalBackbone }
+				129 { "dest"	129  	"cost"	RegionalBackbone }
+				// High-Cost
+				29 { "dest"	29  "cost"	OneWayCellEdge4 }
 			}
 		}
 
@@ -368,8 +344,8 @@
 			"longitude"	"26.097164"
 			"edges"
 			{
-				0 { "dest"	93  	"cost"	InwardCost}
-				1 { "dest"	43  }
+				92 { "dest"	92  	"cost"	InwardCost}
+				5 { "dest"	5  	"cost"	InwardCost}
 			}
 		}
 
@@ -382,26 +358,13 @@
 			"countrycode"	"--"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	18 
-					"cost"	LocalCostForCrossingPacific  
-				}
-				1 
-				{ 
-					"dest"	32 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				2 
-				{ 
-					"dest"	35 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				3 
-				{ 
-					"dest"	52
-					"cost"	LocalCostOneWayCellEdge 
-				}
+				18 {  "dest"	18  "cost"	CostForCrossingPacific  }
+				32 { "dest"	32 "cost"	OneWayCellEdge }
+				35 { "dest"	35 "cost"	OneWayCellEdge }
+				52 { "dest"	52	"cost"	OneWayCellEdge }
+				9 { "dest"	9	"cost"	OneWayCellEdge }
+				45 { "dest"	45	"cost"	OneWayCellEdge }
+				22 { "dest"	22	"cost"	OneWayCellEdge }
 			}
 		}
 
@@ -414,12 +377,8 @@
 			"countrycode"	"--"
 			"edges"
 			{
-				0 { "dest"	10  }
-				1 
-				{ 
-					"dest"	17 
-					"cost"	LocalCostForCrossingPacific 
-				}
+				64 { "dest"	64  }
+				17 {  "dest"	17  "cost"	CostForCrossingPacific  }
 			}
 		}
 
@@ -432,9 +391,8 @@
 			"countrycode"	"--"
 			"edges"
 			{
-				0 { "dest"	52  }
-				1 { "dest"	55  }
-				2 { "dest"	35  }
+				52 { "dest"	52	"cost"	AustraliaAndAsia }
+				35 { "dest"	35 	"cost"	AustraliaAndAsia }
 			}
 		}
 
@@ -448,30 +406,28 @@
 			"longitude"	"-79.387030"
 			"edges"
 			{
-				0 { "dest"	 135  }
-				1 
-				{ 
-					"dest"	1 
-					"cost"	LocalCostCanadaToUS
-				}
-				2 { "dest"	 136  }
-				3 { "dest"	 134  }
-				4 { "dest"	 81  }
-				5 { "dest"	 94  }
+				21 { "dest"	 21	"cost"	AggregatorCost  }
+				136 { "dest"	 136  }
+				135 { "dest"	 135  }
+				81 { "dest"	 81  }
+				134 { "dest" 134 }
 			}
 		}
 
-		// #21 .. Australia DEPRECATED
-		// For old clients in cell 21 "cost"	push them to 27/28
-		// One-way: they have no edges pointing back to this cell.
+		// E. Canada to US
 		21
 		{
-			"name" "Australia deprecated"
-			"deprecated"	1
-			"region"	"australasia"
+			"name" "E. Canada to US"
+			"transit"	1
+			"region"	"usa"
 			"edges"
 			{
-				0 { "dest"	52  }
+				1  {  "dest"	1  "cost"	CanadaToUS }
+				63 {  "dest"	63 "cost"	CanadaToUS }
+				135 { "dest"	 135  "cost" OneWayCellEdge }			
+				20 { "dest"	 20  "cost" OneWayCellEdge }			
+				136 { "dest"	 136  "cost" OneWayCellEdge }			
+				81 { "dest"	 81  "cost" OneWayCellEdge }			
 			}
 		}
 
@@ -485,12 +441,8 @@
 			"longitude"	"174.768791"
 			"edges"
 			{
-				7 { "dest"	17  }
-				8 
-				{ 
-					"dest"	52 
-					"cost"	LocalCostBetweenAustraliaAndNewZealand 
-				}
+				17 { "dest"	17 "cost"	AggregatorCost }
+				52 {  "dest"	52  "cost"	AustraliaAndNewZealand  }
 			}
 		}
 
@@ -502,31 +454,12 @@
 			"region"	"global"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	12 
-					"cost"	LocalCostBetweenNorthAndSouthAmerica 
-				}
-				1 
-				{ 
-					"dest"	25 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				2 
-				{ 
-					"dest"	118 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				3 
-				{ 
-					"dest"	119
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				4 
-				{ 
-					"dest"	162
-					"cost"	LocalCostOneWayCellEdge 
-				}
+				50{ "dest"	50 "cost"	NorthAndSouthAmerica }
+				64 { "dest"	64  "cost"	NorthAndSouthAmerica }				
+				25 {  "dest"	25 "cost"	OneWayCellEdge }
+				118  { "dest"	118 "cost"	OneWayCellEdge }
+				119 { "dest"	119 "cost"	OneWayCellEdge }
+				162 { "dest"	162 "cost"	OneWayCellEdge }
 			}
 		}
 
@@ -538,26 +471,9 @@
 			"region"	"global"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	4  
-					"cost"  LocalCostBetweenEuropeAndAfrica
-				}
-				1 
-				{ 
-					"dest"	97 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				2 
-				{ 
-					"dest"	131 
-					"cost"	LocalCostOneWayCellEdge 
-				}
-				3 
-				{ 
-					"dest"	132 
-					"cost"	LocalCostOneWayCellEdge 
-				}								
+				4 { "dest"	4  "cost"  EuropeAndAfrica}
+				130 { "dest"	130 "cost"	OneWayCellEdge }
+				132 {  "dest"	132 "cost"	OneWayCellEdge }								
 			}
 		}
 
@@ -571,12 +487,16 @@
 			"longitude"	"-46.62941"
 			"edges"
 			{
-				0 { "dest"	23 }
-				1 { "dest"	116	"cost"	2 }
-				2 { "dest"	153 }
-				3 { "dest"	154 }
-				4 { "dest"	155 }
-				5 { "dest"	156 }
+				// Spokes
+				23 { "dest"	23	"cost"	AggregatorCost }
+				116 { "dest"	116	"cost"	2 }
+				153 { "dest"	153 }
+				154 { "dest"	154 }
+				155 { "dest"	155 }
+				156 { "dest"	156 }
+				// Backbones
+				50	{ "dest"	50	"cost"	GlobalBackbone }
+				117	{ "dest"	117	"cost"	GlobalBackbone }
 			}
 		}
 
@@ -590,24 +510,34 @@
 			"longitude"	"28.046379"
 			"edges"
 			{
-				0 { "dest"	97 }
-				3 { "dest"	123 }
+				97 { "dest"	97 }
+				123 { "dest"	123 }
+				24 { "dest"	24 }
+				// Backbones
+				4	{ "dest"	4	"cost"	GlobalBackbone }				
 			}
 		}
 
-		// #27 .. Australia NSW TELSTRA
+		// Russia to Europe
 		27
 		{
-			"name" "Australia - NSW (Telstra)"
-			"region"	"australasia"
-			"deprecated" 1
+			"name" "Russia to Europe"
+			"region"	"europe"
+			"transit" 1
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				66 { "dest"	66 }
+				38 { "dest"	38 }
+				5 { "dest"	5 }
+				7	{ "dest"	7	"cost"	OneWayCellEdge }				
+				149	{ "dest"	149	"cost"	OneWayCellEdge }				
+				150	{ "dest"	150	"cost"	OneWayCellEdge }				
+				151	{ "dest"	151	"cost"	OneWayCellEdge }				
+				39	{ "dest"	39	"cost"	OneWayCellEdge }				
+				62	{ "dest"	62	"cost"	OneWayCellEdge }				
+				158	{ "dest"	158	"cost"	OneWayCellEdge }				
+				157	{ "dest"	157	"cost"	OneWayCellEdge }				
+				152	{ "dest"	152	"cost"	OneWayCellEdge }				
 			}
 		}
 
@@ -619,11 +549,7 @@
 			"deprecated" 1
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52{ "dest"	52  "cost"	ZeroCost}
 			}
 		}
 
@@ -637,9 +563,8 @@
 			"longitude"	"-21.933007"
 			"edges"
 			{
-				0 { "dest"	41  	"cost"	InwardCost }
-				1 { "dest"	4 }
-				2 { "dest"	15	"cost"	InwardCost }
+				4 { "dest" 4	"cost"	2 }
+				15 { "dest"	15	"cost"	InwardCost }
 			}
 		}
 
@@ -653,7 +578,7 @@
 			"longitude"	"34.789736"
 			"edges"
 			{
-				0 { "dest"	 123	"cost"	InwardCost  }
+				123 { "dest"	 123	"cost"	AggregatorCost  }
 			}
 		}
 
@@ -667,34 +592,23 @@
 			"longitude"	"-122.336395"
 			"edges"
 			{
-				0 { "dest"	10 	"cost"	InwardCost }		
-				2
-				{ 
-					"dest"	94
-					"cost"	LocalCostOneWayCellEdge
-				}	
+				// Spokes
+				49 { "dest"	49 }		
+				94 { "dest" 94 	"cost" USToCanada }
+				// Backbones
+				64 { "dest"	64  	"cost"	RegionalBackbone }
+				1 { "dest"	1  	"cost"	RegionalBackbone }
+				65 { "dest"	65  	"cost"	RegionalBackbone }
+				66 { "dest"	66  	"cost"	GlobalBackbone }
+				32 { "dest"	32  	"cost"	GlobalBackbone }
+				// High-Cost
+				6 				{  					"dest"	6 					"cost"	OneWayCellEdge 				}	
+				147 				{  					"dest"	147  					"cost"	OneWayCellEdge 				}						
 				// LAN Event cells - we need edges to these somewhere so they show
 				// up in the list. 	
-				3
-				{ 
-					"dest"	102
-					"cost"	LocalCostOneWayCellEdge
-				}				
-				4
-				{ 
-					"dest"	103
-					"cost"	LocalCostOneWayCellEdge
-				}				
-				5
-				{ 
-					"dest"	104
-					"cost"	LocalCostOneWayCellEdge
-				}	
-				6
-				{ 
-					"dest"	147 
-					"cost"	LocalCostOneWayCellEdge
-				}										
+				102 				{  					"dest"	102 					"cost"	OneWayCellEdge 				}				
+				103 				{  					"dest"	103 					"cost"	OneWayCellEdge 				}				
+				104 				{  					"dest"	104 					"cost"	OneWayCellEdge 				}					
 			}
 		}
 
@@ -708,32 +622,15 @@
 			"longitude"	"139.699326"
 			"edges"
 			{
-				0
-				{ 
-					"dest"	8
-					"cost"	LocalCostJapanToKorea
-				}				
-				1 { "dest"	17  }
-				2
-				{ 
-					"dest"	9 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				3
-				{ 
-					"dest"	33 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				4
-				{ 
-					"dest"	47 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				5 
-				{ 
-					"dest"	152
-					"cost"	LocalCostOneWayCellEdge
-				}
+				// Spokes
+				8 {  "dest"	8 "cost"	JapanToKorea }								
+				9 {  "dest"	9  "cost"	OneWayCellEdge }			
+				17 { "dest"	17 "cost"	AggregatorCost }
+				// Backbones
+				31 {  "dest"	31  "cost"	GlobalBackbone }				
+				33 {  "dest"	33  "cost"	GlobalBackbone }
+				// High Cost
+				152  {  "dest"	152 "cost"	OneWayCellEdge }
 			}
 		}
 
@@ -747,12 +644,14 @@
 			"longitude"	"114.212151"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	35
-				}
-				1 { "dest"	47 "cost"	LocalCostOneWayCellEdge }
-				2 { "dest"	148 "cost"	LocalCostOneWayCellEdge }
+				// Spokes
+				9 { "dest"	9 }
+				// Backbones
+				32 { "dest" 32 "cost"	GlobalBackbone }
+				45 { "dest" 45 "cost"	GlobalBackbone }
+				35 { "dest" 35 "cost"	RegionalBackbone }
+				// High-Cost
+				47 { "dest"	47 "cost"	OneWayCellEdge }
 			}
 		}
 
@@ -766,7 +665,7 @@
 			"longitude"	"100.539940"
 			"edges"
 			{
-				0 { "dest"	35 	"cost"	InwardCost }
+				35 { "dest"	35 	"cost"	InwardCost }
 			}
 		}
 
@@ -780,60 +679,24 @@
 			"longitude"	"103.852982"
 			"edges"
 			{
-				0 { "dest"	17  }
-				1 
-				{ 
-					"dest"	19  
-					"cost"	LocalCostBetweenAustraliaAndAsia
-				}
-				2
-				{ 
-					"dest"	33 
-				}
-				3
-				{ 
-					"dest"	44 
-					"cost"	LocalCostOneWayCellEdge
-				}
-				4
-				{ 
-					"dest"	141 
-					"cost"	LocalCostSingaporeToIndia
-				}
-				5
-				{
-					"dest"	9
-					"cost"	LocalCostOneWayCellEdge
-				}		
-				6
-				{
-					"dest"	70
-					"cost"	LocalCostOneWayCellEdge
-				}	
-				7
-				{
-					"dest"	34
-					"cost"	LocalCostOneWayCellEdge
-				}		
-				8
-				{
-					"dest"	45
-					"cost"	LocalCostOneWayCellEdge
-				}												
-				10
-				{
-					"dest"	71
-					"cost"	LocalCostOneWayCellEdge
-				}												
-				11
-				{
-					"dest"	72
-					"cost"	LocalCostOneWayCellEdge
-				}					
+				// Spokes
+				44 { "dest"	44 }
+				72 { "dest"	72 }
+				34 { "dest"	34 }
+				70 { "dest"	70 }
+				71 { "dest"	71 }
+				// Backbones
+				33 { "dest" 33 "cost"	RegionalBackbone }
+				141 { "dest" 141 "cost"	SingaporeToIndia }
+				45 { "dest" 45 "cost"	GlobalBackbone }
+				// Other
+				17 { "dest"	17  "cost" AggregatorCost }
+				19  {  "dest"	19  "cost"		AggregatorCost}
+				9 { "dest"	9 "cost"	OneWayCellEdge }					
 			}
 		}
 
-		// #36 India
+		// #36 Mumbai
 		36
 		{
 			"name" "India - Mumbai"
@@ -843,21 +706,18 @@
 			"longitude"	"72.867469"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	35  
-					"cost"	LocalCostIndiaToSingapore
-				}
-				1 { "dest"	141 	"cost"	InwardCost }
-				2 { "dest"	142 	"cost"	InwardCost }
-				3 { "dest"	143 	"cost"	InwardCost }
-				4 { "dest"	144 	"cost"	InwardCost }
-				5 { "dest"	145 	"cost"	InwardCost }
-				6 { "dest"	128  }
-				7 
+				// Backbone
+				141 { "dest"	141 	"cost"	LocalBackbone }
+				// Spokes
+				142 { "dest"	142 }
+				143 { "dest"	143 }
+				144 { "dest"	144 }
+				145 { "dest"	145 }
+				128 { "dest"	128  }
+				127 
 				{
 					 "dest"	127  
-					"cost"	LocalCostIndiaToDubai
+					"cost"	IndiaToDubai
 				}
 			}
 		}
@@ -872,8 +732,7 @@
 			"longitude"	"12.492346"
 			"edges"
 			{
-				0 { "dest"	5 	"cost"	InwardCost }
-				1 { "dest"	14 	"cost"	InwardCost }			
+				5 { "dest"	5 	"cost"	InwardCost }
 			}
 		}
 
@@ -887,12 +746,14 @@
 			"longitude"	"21.005001"
 			"edges"
 			{
-				0 { "dest"	5 	"cost"	InwardCost }
-				1
-				{ 
-					"dest"	73
-					"cost"	LocalCostOneWayCellEdge
-				}				
+				// Spokes
+				165 { "cost"	Default } // Belarus
+				// Backbone
+				5 { "dest"	5 	"cost"	RegionalBackbone }
+				66 { "dest"	66 	"cost"	RegionalBackbone }
+				92 { "dest"	92 	"cost"	RegionalBackbone }
+				// High-cost
+				27 { "dest" 27	"cost"	OneWayCellEdge }
 			}
 		}
 
@@ -906,8 +767,9 @@
 			"longitude"	"60.597659"
 			"edges"
 			{
-				0 { "dest"	151 	"cost"	InwardCost }
-				1 { "dest"	62  }
+				27 { "dest"	27 	"cost"	AggregatorCost }
+				151 { "dest"	151 }
+				62 { "dest"	62  }
 			}
 		}
 
@@ -921,8 +783,9 @@
 			"longitude"	"-3.707378"
 			"edges"
 			{
-				0 { "dest"	14 	"cost"	InwardCost }
-				1 { "dest"	96 	"cost"	InwardCost }
+				// Backbone
+				4 { "dest"	4 	"cost"	RegionalBackbone }
+				92 { "dest"	92 	"cost"	GlobalBackbone }
 			}
 		}
 
@@ -937,13 +800,6 @@
 			"edges"
 			{
 				66 { "dest"	66 	"cost"	InwardCost }
-				5 { "dest"	5 	"cost"	InwardCost }
-				67 { "dest"	67 }
-				29
-				{ 
-					"dest"	29
-					"cost"	2
-				}					
 			}
 		}
 		
@@ -957,9 +813,8 @@
 			"longitude"	"14.411409"
 			"edges"
 			{
-				0 { "dest"	5 	"cost"	InwardCost }
-				1 { "dest"	92 	"cost"	InwardCost   }
-				2 { "dest"	93  }
+				5 { "dest"	5 	"cost"	InwardCost }
+				92 { "dest"	92 	"cost"	InwardCost   }
 			}
 		}
 
@@ -973,8 +828,8 @@
 			"longitude"	"23.717766"
 			"edges"
 			{
-				0 { "dest"	16 	"cost"	InwardCost }
-				1 { "dest"	37 	"cost"	InwardCost }
+				5 { "dest"	5 	"cost"	InwardCost }
+				92 { "dest"	92 	"cost"	InwardCost }
 			}
 		}
 
@@ -988,7 +843,7 @@
 			"longitude"	"106.827621"
 			"edges"
 			{
-				0 { "dest"	35 	"cost"	InwardCost }
+				35 { "dest"	35 	"cost"	InwardCost }
 			}
 		}
 
@@ -1002,8 +857,11 @@
 			"longitude"	"120.979080"
 			"edges"
 			{
-				0 { "dest"	35 	"cost"	InwardCost }
-				1 { "dest"	33 }
+				// Backbone
+				35 { "dest"	35 	"cost"	RegionalBackbone }
+				33 { "dest"	33 	"cost"	RegionalBackbone }
+				// Other
+				17 { "dest"	17 "cost"	AggregatorCost }
 			}
 		}
 
@@ -1017,13 +875,7 @@
 			"longitude"	"116.397689"
 			"edges"
 			{
-				0 { "dest"	47 	"cost"	InwardCost }
-				1 { "dest"	160 }
-				2
-				{ 
-					"dest"	161
-					"cost"	LocalCostOneWayCellEdge
-				}	
+				47 { "dest"	47 	"cost"	InwardCost }
 			}
 		}
 
@@ -1037,24 +889,20 @@
 			"longitude"	"121.474113"
 			"edges"
 			{
-				0
-				{ 
-					"dest"	33
-					"cost"	LocalCostToLeaveChina
-				}
-				1 { "dest"	46 	"cost"	InwardCost }
-				2 { "dest"	159 }
-				3 { "dest"	148 	"cost"	InwardCost }
-				4 
-				{ 
-					"dest"	137  
-					"cost"	LocalCostOneWayCellEdge
-				}
-				5 
-				{ 
-					"dest"	138  
-					"cost"	LocalCostOneWayCellEdge
-				}								
+				// spokes
+				46 { "dest"	46  }
+				159 { "dest"	159 }
+				160 { "dest"	160 }
+				148 { "dest"	148 }
+				48 { "dest"	48 }
+				// Backbone-ish
+				33 				{  					"dest"	33 					"cost"	CostToLeaveChina 				}
+				// Special PerfectWorld cells
+				137  				{  					"dest"	137   					"cost"	OneWayCellEdge 				}
+				138 				{  					"dest"	138   					"cost"	OneWayCellEdge 				}
+				// Mongolia					
+				161 				{  					"dest"	161 					"cost"	OneWayCellEdge 				}	
+
 			}
 		}
 
@@ -1068,9 +916,7 @@
 			"longitude"	"104.049797"
 			"edges"
 			{
-				0 { "dest"	160 	"cost"	InwardCost }
-				1 { "dest"	159 	"cost"	InwardCost }	
-				2 { "dest"	148 	"cost"	InwardCost }	
+				47 { "dest"	47 	"cost"	InwardCost }
 			}
 		}
 
@@ -1084,8 +930,10 @@
 			"longitude"	"-104.996910"
 			"edges"
 			{
-				0 { "dest"	1 	"cost"	InwardCost }
-				1 { "dest"	10 	"cost"	InwardCost }
+				1 { "dest"	1 	"cost"	InwardCost }
+				64 { "dest"	64 	"cost"	InwardCost }
+				31 { "dest"	31 	"cost"	InwardCost }
+				65 { "dest"	65 	"cost"	InwardCost }
 			}
 		}
 
@@ -1099,11 +947,19 @@
 			"longitude"	"-84.373447"
 			"edges"
 			{
-				0 { "dest"	63 	"cost"	InwardCost }
-				1 { "dest"	84 }
-				2 { "dest"	65  }
-				3 { "dest"	78  }
-				4 { "dest"	12  }
+				// Backbone
+				63 { "dest"	63 }
+				1 { "dest"	1 }
+				65 { "dest"	65 }
+				25 { "dest"	25 "cost"	GlobalBackbone }
+				// Spokes
+				84 { "dest"	84 }
+				78 { "dest"	78  }
+				12 { "dest"	12  }
+				// Other
+				23  				{  					"dest"	23  					"cost"	OneWayCellEdge 				}	
+				139 				{  					"dest"	139 					"cost"	OneWayCellEdge 				}	
+				140 				{  					"dest"	140 					"cost"	OneWayCellEdge 				}					
 			}
 		}
 		// #51 AUS Queensland
@@ -1116,11 +972,7 @@
 			"longitude"	"153.030153"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	InwardCost
-				}
+				52 				{  					"dest"	52   					"cost"	InwardCost 				}
 			}
 		}
 		// #52 AUS NSW
@@ -1133,32 +985,13 @@
 			"longitude"	"151.210770"
 			"edges"
 			{
-				0 { "dest"	17  }
-				1 
-				{ 
-					"dest"	19 
-					"cost"	LocalCostBetweenAustraliaAndAsia 
-				}
-				2 
-				{ 
-					"dest"	22 
-					"cost"	LocalCostBetweenAustraliaAndNewZealand 
-				}
-				3 
-				{ 
-					"dest"	53  
-					"cost"	LocalCostAUSBetweenRegions
-				}
-				4 
-				{ 
-					"dest"	54  
-					"cost"	LocalCostAUSBetweenRegions
-				}
-				8 
-				{ 
-					"dest"	51  
-					"cost"	LocalCostAUSBetweenRegions
-				}
+				17 { "dest"	17  }
+				19  {  "dest"	19  "cost"	AggregatorCost  }
+				22  {  "dest"	22  "cost"	AustraliaAndNewZealand  }
+				53  { "dest"	53 }
+				54  {  "dest"	54 }
+				51  { "dest"	51 }
+				55 {  "dest"	55 }				
 			}
 		}
 		// #53 AUS VIC
@@ -1171,16 +1004,7 @@
 			"longitude"	"144.967007"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	InwardCost
-				}
-				1 
-				{ 
-					"dest"	54  
-					"cost"	LocalCostAUSBetweenRegions
-				}
+				52  {  "dest"	52   	"cost"	InwardCost }
 			}
 		}
 		// #54 AUS SA
@@ -1193,21 +1017,7 @@
 			"longitude"	"138.599958"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	InwardCost
-				}
-				1 
-				{ 
-					"dest"	53  
-					"cost"	LocalCostAUSBetweenRegions
-				}
-				2 
-				{ 
-					"dest"	55  
-					"cost"	LocalCostAUSBetweenRegions
-				}
+				52  {  "dest"	52  "cost"	InwardCost }
 			}
 		}
 		// #55 AUS WA
@@ -1220,16 +1030,7 @@
 			"longitude"	"115.849972"
 			"edges"
 			{
-				0
-				{ 
-					"dest"	19 
-					"cost"	LocalCostBetweenAustraliaAndAsia 
-				}
-				1 
-				{ 
-					"dest"	54  
-						"cost"	InwardCost
-				}
+				52 {  "dest"	52   "cost"	InwardCost }
 			}
 		}
 		// #56 AUS NSW (3FL)
@@ -1240,11 +1041,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	52  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52 {  					"dest"	52   					"cost"	ZeroCost 				}
 			}
 		}
 		// #57 AUS VIC (Gamespace)
@@ -1255,11 +1052,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	53  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52 				{  					"dest"	52   					"cost"	ZeroCost 				}
 			}
 		}
 		// #58 AUS SA (Adam Internet)
@@ -1270,11 +1063,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	54  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52 				{  					"dest"	52   					"cost"	ZeroCost 				}
 			}
 		}
 		// #59 AUS SA (Internode)
@@ -1285,11 +1074,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	54  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52  				{  					"dest"	52   					"cost"	ZeroCost 				}
 			}
 		}
 		// #60 AUS WA (3FL)
@@ -1300,11 +1085,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	55  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52 				{  					"dest"	52 					"cost"	ZeroCost 				}
 			}
 		}
 		// #61 AUS WA (EGN)
@@ -1315,11 +1096,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	55  
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				52 				{  					"dest"	52 					"cost"	ZeroCost 				}
 			}
 		}
 		// #62 Russia - Siberia
@@ -1332,9 +1109,11 @@
 			"longitude"	"82.923088"
 			"edges"
 			{
-				0 { "dest"	39 	"cost"	InwardCost }
-				1 { "dest"	157 }
-				1 { "dest"	158 }
+				27 { "dest"	27 "cost"	AggregatorCost }
+				39 { "dest"	39 }
+				157 { "dest"	157 }
+				158 { "dest"	158 }
+				161 { "dest"	161	"cost"	OneWayCellEdge }
 			}
 		}
 		// #63 US - Washington, DC
@@ -1347,14 +1126,22 @@
 			"longitude"	"-77.036531"
 			"edges"
 			{
-				0 { "dest"	2  }
-				1 { "dest"	83 }
-				2 { "dest"	84 }
-				3 { "dest"	50 }
-				4
+				// Backbone
+				1 { "dest"	1  }
+				50 { "dest"	50  }
+				4 { "dest"	4	"cost"	GlobalBackbone  }
+				5 { "dest"	5	"cost"	GlobalBackbone  }
+				// Spokes
+				2 { "dest"	2  }
+				82 { "dest"	82  }
+				83 { "dest"	83 }
+				84 { "dest"	84 }
+				// Hop
+				3 { "dest"	3 }
+				21
 				{ 
-					"dest"	81 
-					"cost"	LocalCostOneWayCellEdge
+					"dest"	21 
+					"cost"	OneWayCellEdge
 				}								
 			}
 		}
@@ -1368,14 +1155,24 @@
 			"longitude"	"-118.228077"
 			"edges"
 			{
-				0 { "dest"	10	"cost"	InwardCost }
-				1 { "dest"	74 }
-				2 { "dest"	65 }
-				3 { "dest"	11 }
-				4
+				// Backbone
+				1 { "dest"	1  }
+				31 { "dest"	31  }
+				65 { "dest"	65  }
+				50 { "dest"	50	"cost"	RegionalBackbone  }
+				33 { "dest"	33	"cost"	GlobalBackbone  }
+				// Spokes
+				10 { "dest"	10 }
+				74 { "dest"	74 }
+				75 { "dest"	75 }
+				11 { "dest"	11 }
+				49 { "dest"	49 }
+				146 { "dest"	146 }
+				18 { "dest"	18 }
+				114
 				{ 
 					"dest"	114
-					"cost"	LocalCostOneWayCellEdge
+					"cost"	OneWayCellEdge
 				}					
 			}
 		}
@@ -1389,11 +1186,14 @@
 			"longitude"	"-96.800752"
 			"edges"
 			{
-				0 { "dest"	78 }
-				1 { "dest"	49	"cost"	InwardCost }
-				2 { "dest"	50	"cost"	InwardCost }
-				3 { "dest"	64	"cost"	InwardCost }
-				4 { "dest"	11 }
+				// Backbone
+				1 { "dest"	1  }
+				50 { "dest"	50  }
+				64 { "dest"	64  }
+				// Spokes
+				78 { "dest"	78 }
+				49 { "dest"	49 }
+				11 { "dest"	11 }
 			}
 		}
 		// #66 Sweden
@@ -1406,20 +1206,16 @@
 			"longitude"	"18.070793"
 			"edges"
 			{
-				0 { "dest"	5	"cost"	InwardCost }
-				15 { "dest"	15 	"cost"	InwardCost }
-				1
-				{ 
-					"dest"	68
-					"cost"	LocalCostOneWayCellEdge
-				}	
-				2
-				{ 
-					"dest"	7
-					"cost"	LocalCostOneWayCellEdge
-				}		
-				3 { "dest"	67 }							
-				4 { "dest"	41 }
+				// Backbone
+				5 { "dest"	5	"cost"	RegionalBackbone }
+				4 { "dest"	4	"cost"	RegionalBackbone }
+				31 { "dest"	31	"cost"	GlobalBackbone }
+				38 { "dest"	38	"cost"	GlobalBackbone }
+				// Spokes
+				68 { "dest"	68 }
+				67 { "dest"	67 }							
+				41 { "dest"	41 }
+				27 { "dest"	27	"cost"	OneWayCellEdge }
 			}
 		}
 		// #67 Norway
@@ -1432,8 +1228,7 @@
 			"longitude"	"10.754294"
 			"edges"
 			{
-				0 { "dest"	66	"cost"	InwardCost }
-				0 { "dest"	41	"cost"	InwardCost }
+				66 { "dest"	66	"cost"	InwardCost }
 			}
 		}
 		// #68 Finland
@@ -1446,7 +1241,7 @@
 			"longitude"	"24.937248"
 			"edges"
 			{
-				0 { "dest"	66	"cost"	InwardCost }
+				66 { "dest"	66	"cost"	InwardCost }
 			}
 		}
 		// #69 Ireland
@@ -1459,7 +1254,7 @@
 			"longitude"	"-6.27491"
 			"edges"
 			{
-				0 { "dest"	4	"cost"	InwardCost }
+				4 { "dest"	4	"cost"	InwardCost }
 			}
 		}
 		// #70 Cambodia
@@ -1472,7 +1267,7 @@
 			"longitude"	"104.937973"
 			"edges"
 			{
-				0 { "dest"	35	"cost"	InwardCost }
+				35 { "dest"	35	"cost"	InwardCost }
 			}
 		}
 		// #71 Vietnam
@@ -1485,7 +1280,7 @@
 			"longitude"	"106.631584"
 			"edges"
 			{
-				0 { "dest"	35	"cost"	InwardCost }
+				35 { "dest"	35	"cost"	InwardCost }
 			}
 		}
 		// #72 Malaysia
@@ -1498,7 +1293,7 @@
 			"longitude"	"101.703790"
 			"edges"
 			{
-				0 { "dest"	35	"cost"	InwardCost }
+				35 { "dest"	35	"cost"	InwardCost }
 			}
 		}		
 		// #73 Ukraine
@@ -1511,9 +1306,8 @@
 			"longitude"	"30.521386"
 			"edges"
 			{
-				0 { "dest"	7 }
-				1 { "dest"	93 }
-				2 { "dest"	5}
+				7 { "dest"	7 }
+				5 { "dest"	5 }
 			}
 		}		
 		// #74 San Diego
@@ -1526,8 +1320,7 @@
 			"longitude"	"-117.117219"
 			"edges"
 			{
-				0 { "dest"	64	"cost"	InwardCost }
-				1 { "dest"	23 }
+				64 { "dest"	64	"cost"	InwardCost }
 			}
 		}			
 		// #75 Sacramento
@@ -1540,7 +1333,7 @@
 			"longitude"	"-121.510506"
 			"edges"
 			{
-				0 { "dest"	10	"cost"	InwardCost }
+				64 { "dest"	64	"cost"	InwardCost }
 			}
 		}			
 		// #76 Minneapolis
@@ -1553,7 +1346,7 @@
 			"longitude"	"-93.267274"
 			"edges"
 			{
-				0 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #77 US - St. Lous
@@ -1566,7 +1359,7 @@
 			"longitude"	"-90.181704"
 			"edges"
 			{
-				0 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #78 Houston
@@ -1579,13 +1372,8 @@
 			"longitude"	"-95.367036"
 			"edges"
 			{
-				0 { "dest"	65	"cost"	InwardCost }
-				1 { "dest"	50	"cost"	InwardCost }
-				2 
-				{ 
-					"dest"	23
-					"cost"	LocalCostOneWayCellEdge
-				}					
+				65 { "dest"	65	"cost"	InwardCost }
+				50 { "dest"	50	"cost"	InwardCost }				
 			}
 		}			
 		// #79 Detroit
@@ -1598,7 +1386,7 @@
 			"longitude"	"-83.04883"
 			"edges"
 			{
-				0 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #80 Pittsburgh
@@ -1611,8 +1399,8 @@
 			"longitude"	"-80.005617"
 			"edges"
 			{
-				1 { "dest"	63	"cost"	InwardCost }
-				2 { "dest"	1	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #81 Montreal
@@ -1625,13 +1413,8 @@
 			"longitude"	"-73.555183"
 			"edges"
 			{
-				0 { "dest"	20	"cost"	InwardCost}
-				1 { "dest"	136 }
-				1 
-				{ 
-					"dest"	2
-					"cost"	LocalCostCanadaToUS
-				}
+				21 { "dest"	21	"cost"	AggregatorCost}
+				136 { "dest"	136 }
 			}
 		}			
 		// #82 Boston
@@ -1644,7 +1427,7 @@
 			"longitude"	"-71.039314"
 			"edges"
 			{
-				0 { "dest"	2	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	InwardCost }
 			}
 		}			
 		// #83 Philly
@@ -1657,8 +1440,7 @@
 			"longitude"	"-75.1579"
 			"edges"
 			{
-				0 { "dest"	2 }
-				1 { "dest"	63	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	InwardCost }
 			}
 		}			
 		// #84 Charlotte, VA
@@ -1671,8 +1453,8 @@
 			"longitude"	"-80.848818"
 			"edges"
 			{
-				0 { "dest"	63	"cost"	InwardCost }
-				1 { "dest"	50	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	InwardCost }
+				50 { "dest"	50	"cost"	InwardCost }
 			}
 		}			
 		// #85 Manchester
@@ -1685,7 +1467,7 @@
 			"longitude"	"-2.248119"
 			"edges"
 			{
-				0 { "dest"	4	"cost"	InwardCost }
+				4 { "dest"	4	"cost"	InwardCost }
 			}
 		}			
 		// #86 Brussels
@@ -1698,8 +1480,7 @@
 			"longitude"	"4.348869"
 			"edges"
 			{
-				0 { "dest"	15	"cost"	InwardCost }
-				1 { "dest"	14	"cost"	InwardCost }
+				15 { "dest"	15	"cost"	InwardCost }
 			}
 		}			
 		// #87 Dusseldorf
@@ -1712,8 +1493,8 @@
 			"longitude"	"6.794386"
 			"edges"
 			{
-				1 { "dest"	5	"cost"	InwardCost }
-				2 { "dest"	15	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
+				15 { "dest"	15	"cost"	InwardCost }
 			}
 		}			
 		// #88 Zurich
@@ -1726,8 +1507,7 @@
 			"longitude"	"8.541189"
 			"edges"
 			{
-				0 { "dest"	5	"cost"	InwardCost }
-				1 { "dest"	14	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
 			}
 		}			
 		// #89 Hamburg
@@ -1740,7 +1520,7 @@
 			"longitude"	"9.991207"
 			"edges"
 			{
-				0 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
 			}
 		}			
 		// #90 Berlin
@@ -1753,8 +1533,7 @@
 			"longitude"	"13.377734"
 			"edges"
 			{
-				1 { "dest"	91 }
-				2 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
 			}
 		}			
 		// #91 Munich
@@ -1767,8 +1546,7 @@
 			"longitude"	"11.577873"
 			"edges"
 			{
-				0 { "dest"	90 }
-				1 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
 			}
 		}			
 		// #92 Vienna
@@ -1781,9 +1559,16 @@
 			"longitude"	"16.361858"
 			"edges"
 			{
-				0 { "dest"	5	"cost"	InwardCost }
-				1 { "dest"	42 }
-				2 { "dest"	93 }
+				// Backbone
+				5 { "dest"	5	"cost"	LocalBackbone }
+				40 { "dest"	40	"cost"	GlobalBackbone	}
+				38 { "dest"	38	"cost"	RegionalBackbone	}
+				// Spokes	
+				42 { "dest"	42 }
+				16 { "dest"	16 }
+				43 { "dest"	43 }
+				93 { "dest"	93 }
+				124 { "dest"	124 "cost"	OneWayCellEdge }
 			}
 		}			
 		// #93 Budapest
@@ -1796,13 +1581,8 @@
 			"longitude"	"19.040453"
 			"edges"
 			{
-				0 { "dest"	92	"cost"	InwardCost }
-				1 { "dest"	16 }
-				2 
-				{ 
-					"dest"	73 
-					"cost"	LocalCostOneWayCellEdge
-				}					
+				92 { "dest"	92	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	InwardCost }
 			}
 		}		
 		// #94 Vancouver
@@ -1815,13 +1595,8 @@
 			"longitude"	"-123.140552"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	31 
-					"cost"	LocalCostCanadaToUS
-				}
-				1 { "dest"	20	"cost"	1 }
-				2 { "dest"	134 }
+				6 { "dest"	6 }
+				134 { "dest"	134 }
 			}
 		}
 		// #95 Columbus
@@ -1834,7 +1609,7 @@
 			"longitude"	"-83.018618"
 			"edges"
 			{
-				0 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	InwardCost }
 			}
 		}
 		// #96 Marseille
@@ -1847,14 +1622,8 @@
 			"longitude"	"5.359612"
 			"edges"
 			{
-				0 { "dest"	40 }
-				1 { "dest"	14	"cost"	InwardCost }
-				2 { "dest"	37 }
-				3 
-				{ 
-					"dest"	123 
-					"cost"	LocalCostOneWayCellEdge
-				}								
+				4 { "dest"	4	"cost"	InwardCost }
+				129 { "dest"	129	"cost"	InwardCost }
 			}
 		}			
 		// #97 ZA Cape Town
@@ -1867,8 +1636,7 @@
 			"longitude"	"18.428065"
 			"edges"
 			{
-				0 { "dest"	26 }
-				3 { "dest"	24 }
+				26 { "dest"	26 "cost"	InwardCost }
 			}
 		}						
 		// #98 ZA CPT MWEB
@@ -1879,9 +1647,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				0 { "dest"	97 
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				97 { "dest"	97 	"cost"	ZeroCost	}
 			}
 		}						
 		// #99 ZA JHB MWEB
@@ -1892,9 +1658,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				1 { "dest"	26 
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				26 { "dest"	26 "cost"	ZeroCost		}
 			}
 		}						
 		// #100 ZA CPT WebAfrica
@@ -1905,11 +1669,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	97 
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				97 				{  					"dest"	97  					"cost"	ZeroCost 				}
 			}
 		}						
 		// #101 ZA JHB IS Gaming
@@ -1920,9 +1680,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				0 { "dest"	26 
-					"cost"	LocalCostAUSFromISPToRegion
-				}
+				26 { "dest"	26  					"cost"	ZeroCost 				}
 			}
 		}	
 		// #102 LAN Event - US
@@ -1933,11 +1691,7 @@
 			"countrycode"	"US"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	2
-					"cost"	LocalCostOneWayCellEdge
-				}
+				65 				{  					"dest"	65 					"cost"	OneWayCellEdge 				}
 			}
 		}
 		
@@ -1946,14 +1700,10 @@
 		{
 			"name" "LAN Event (Europe)"
 			"region"	"europe"
-			"countrycode"	"GB"
+			"countrycode"	"DE"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	4
-					"cost"	LocalCostOneWayCellEdge
-				}
+				5  				{  					"dest"	5 					"cost"	OneWayCellEdge 				}
 			}
 		}
 				
@@ -1965,11 +1715,7 @@
 			"countrycode"	"SG"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	32
-					"cost"	LocalCostOneWayCellEdge
-				}
+				32  				{  					"dest"	32 					"cost"	OneWayCellEdge 				}
 			}
 		}
 		// #105 US Virginia - Comcast
@@ -1980,11 +1726,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	63
-						"cost"	InwardCost
-				}
+				63 				{  					"dest"	63 						"cost"	ZeroCost 				}
 			}
 		}	
 		// #106 US Seattle - Comcast		
@@ -1995,11 +1737,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	31
-						"cost"	InwardCost
-				}
+				31 				{  					"dest"	31 						"cost"	ZeroCost 				}
 			}
 		}	
 		// #107 New Zealand - Helix	
@@ -2010,11 +1748,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22  				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}				
 		// #108 New Zealand - Orcon
@@ -2025,11 +1759,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22 				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}			
 		// #109 New Zealand - Slingshot	
@@ -2040,11 +1770,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22  				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}			
 		// #110 New Zealand - Snap
@@ -2055,11 +1781,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22 				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}			
 		// #111 New Zealand - TelstraClear
@@ -2070,11 +1792,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22 				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}			
 		// #112 New Zealand - InSPire.net.nz
@@ -2086,11 +1804,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22 				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}		
 		// #113 New Zealand - Xnet
@@ -2101,11 +1815,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	22
-					"cost"	"LocalCostAUSFromISPToRegion"
-				}
+				22  				{  					"dest"	22 					"cost"	"ZeroCost" 				}
 			}
 		}		
 		// #114 hop from MX to US
@@ -2116,16 +1826,8 @@
 			"region"	"global"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	64
-					"cost"	"LocalCostBetweenNorthAndSouthAmerica"
-				}
-				1 
-				{ 
-					"dest"	115
-					"cost"	"LocalCostOneWayCellEdge"
-				}
+				64  				{  					"dest"	64 					"cost"	"NorthAndSouthAmerica" 				}
+				115  				{  					"dest"	115 					"cost"	"OneWayCellEdge" 				}
 			}
 		}
 		// #115 mexico
@@ -2138,7 +1840,7 @@
 			"longitude"	"-99.142342"
 			"edges"
 			{
-				0 { "dest"	114 }
+				114 { "dest"	114 }
 			}
 		}
 		// #116 Argentina
@@ -2151,8 +1853,8 @@
 			"longitude"	"-58.381608"
 			"edges"
 			{
-				0 { "dest"	25 }
-				1 { "dest"	117 }
+				25 { "dest"	25 }
+				117 { "dest"	117 }
 			}
 		}
 		// #117 Chile
@@ -2165,8 +1867,12 @@
 			"longitude"	"-70.659992"
 			"edges"
 			{
-				0 { "dest"	116 }
-				1 { "dest"	118 }
+				// Backbone
+				25 { "dest" 25	"cost"	RegionalBackbone }
+				118 { "dest" 118	"cost"	RegionalBackbone }
+				// Spokes
+				164 { "dest"	164 }
+				116 { "dest"	116 }
 			}
 		}
 		// #118 Peru
@@ -2179,11 +1885,14 @@
 			"longitude"	"-77.042791"
 			"edges"
 			{
-				0 { "dest"	117 }
-				1 { "dest"	23 }
-				2 { "dest"	119 }
-				3 { "dest"	163 }
-				4 { "dest"	164 }
+				// Backbone
+				64 { "dest" 64	"cost"	GlobalBackbone }
+				117 { "dest" 117	"cost"	RegionalBackbone }
+				// Spokes
+				23 { "dest"	23	"cost"	AggregatorCost }
+				119 { "dest"	119 }
+				163 { "dest"	163 }
+				164 { "dest"	164 }
 			}
 		}
 		// #119 Colombia
@@ -2196,8 +1905,8 @@
 			"longitude"	"-74.141953"
 			"edges"
 			{
-				0 { "dest"	23 }
-				1 { "dest"	118 }
+				23 { "dest"	23	"cost"	AggregatorCost }
+				118 { "dest"	118 }
 			}
 		}
 		// #120 Australia - WAIX
@@ -2208,7 +1917,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 { "dest"	55 }
+				55 { "dest"	55 }
 			}
 		}
 		// #121 AUS VIC-IX
@@ -2219,7 +1928,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 { "dest"	53 }
+				53 { "dest"	53 }
 			}
 		}
 		// #122 
@@ -2230,46 +1939,24 @@
 			"region"	"australasia"
 			"edges"
 			{
-				0 { "dest"	51 }
+				51 { "dest"	51 }
 			}
 		}
 		123
 		{
-			"name" "Europe to Middle East"
+			"name" "Middle East to Europe"
 			"region"	"global"
 			"transit"	"1"
 			"edges"
 			{
-				0 
-				{ 
-					"dest"	96  
-					"cost"  LocalCostBetweenEuropeAndAfrica
-				}
-				1 
-				{ 
-					"dest"	124
-					"cost"	LocalCostOneWayCellEdge
-				}
-				2 
-				{ 
-					"dest"	30
-					"cost"	LocalCostOneWayCellEdge
-				}
-				3 
-				{ 
-					"dest"	125
-					"cost"	LocalCostOneWayCellEdge
-				}
-				4 
-				{ 
-					"dest"	130
-					"cost"	LocalCostOneWayCellEdge
-				}
-				5 
-				{ 
-					"dest"	26
-					"cost"	LocalCostOneWayCellEdge
-				}								
+				4  				{  					"dest"	4   					"cost"  EuropeAndAfrica 				}			 				
+				5  				{  					"dest"	5   					"cost"  EuropeAndAfrica 				}
+				125  				{  					"dest"	125 					"cost"	OneWayCellEdge 				}
+				30  				{  					"dest"	30 					"cost"	OneWayCellEdge 				}
+				126  				{  					"dest"	126 					"cost"	OneWayCellEdge 				}
+				131  				{  					"dest"	131 					"cost"	OneWayCellEdge 				}
+				26  				{  					"dest"	26 					"cost"	OneWayCellEdge 				}					
+				127  				{  					"dest"	127 					"cost"	OneWayCellEdge 				}				
 			}
 		}		
 		124
@@ -2281,8 +1968,7 @@
 			"longitude"	"28.997054"
 			"edges"
 			{
-				0 { "dest"	92 	"cost"	InwardCost  }
-				1 { "dest"	123 }
+				92 { "dest"	92 	"cost"	InwardCost  }
 			}
 		}
 		125
@@ -2294,8 +1980,8 @@
 			"longitude"	"31.221428"
 			"edges"
 			{
-				0 { "dest"	123	"cost"	InwardCost }
-				1 { "dest"	126 }
+				123 { "dest"	123	"cost"	AggregatorCost }
+				127 { "dest"	127 }
 			}
 		}
 		126
@@ -2307,9 +1993,8 @@
 			"longitude"	"46.672031"
 			"edges"
 			{
-				0 { "dest"	127 }
-				1 { "dest"	125 }
-				2 { "dest"	30	"cost"	InwardCost }
+				127 { "dest"	127 }
+				123 { "dest"	123	"cost"	AggregatorCost }
 			}
 		}
 		127
@@ -2321,8 +2006,12 @@
 			"longitude"	"55.274589"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	126	"cost"	InwardCost }
+				// Spokes
+				36 { "dest"	36 }
+				125 { "dest"	125 }
+				126 { "dest"	126 }
+				123 { "dest"	123	"cost"	AggregatorCost }
+				// Backbones
 			}
 		}
 		128
@@ -2334,7 +2023,7 @@
 			"longitude"	"66.992161"
 			"edges"
 			{
-				0 { "dest"	36 }
+				36 { "dest"	36	"cost"	InwardCost }
 			}
 		}
 		129
@@ -2346,9 +2035,13 @@
 			"longitude"	"6.134500"
 			"edges"
 			{
-				0 { "dest"	15	"cost"	InwardCost }
-				1 { "dest"	5	"cost"	InwardCost }
-				2 { "dest"	14 }
+				// Backbone
+				15 { "dest"	15	"cost"	LocalBackbone }
+				5 { "dest"	5	"cost"	LocalBackbone }
+				4 { "dest"	4	"cost"	RegionalBackbone }
+				// Spokes
+				14 { "dest"	14 }
+				96 { "dest"	96 }
 			}
 		}
 		130
@@ -2360,7 +2053,7 @@
 			"longitude"	"3.420868"
 			"edges"
 			{
-				0 { "dest"	24 }
+				24 { "dest"	24	"cost"	AggregatorCost }
 			}
 		}	
 		131
@@ -2372,7 +2065,7 @@
 			"longitude"	"36.835442"
 			"edges"
 			{
-				0 { "dest"	123 }
+				123 { "dest"	123	"cost"	AggregatorCost }
 			}
 		}			
 		132
@@ -2384,8 +2077,7 @@
 			"longitude"	"-7.618794"
 			"edges"
 			{
-				0 { "dest"	24 }
-				1 { "dest"	123 }
+				24 { "dest"	24	"cost"	AggregatorCost }
 			}
 		}		
 		133
@@ -2397,7 +2089,8 @@
 			"longitude"	"-113.489628"
 			"edges"
 			{
-				1 { "dest"	134	"cost"	InwardCost }
+				134 { "dest"	134 }
+				6 { "dest"	6	"cost"	AggregatorCost }
 			}
 		}
 		134
@@ -2409,9 +2102,10 @@
 			"longitude"	"-114.055424"
 			"edges"
 			{
-				0 { "dest"	94	"cost"	InwardCost }
-				1 { "dest"	133 }
-				2 { "dest"	20	"cost"	1 }
+				6 { "dest"	6	"cost"	AggregatorCost }
+				20 { "dest" 20 }				
+				94 { "dest"	94 }
+				133 { "dest"	133 }
 			}
 		}				
 		135
@@ -2423,7 +2117,8 @@
 			"longitude"	"-97.141972"
 			"edges"
 			{
-				0 { "dest"	20	"cost"	InwardCost }
+				21 { "dest"	21	"cost"	AggregatorCost }
+				20 { "dest"	20 }
 			}
 		}	
 		136
@@ -2435,8 +2130,9 @@
 			"longitude"	"-75.696659"
 			"edges"
 			{
-				0 { "dest"	20	"cost"	InwardCost }
-				1 { "dest"	81 }
+				21 { "dest"	21	"cost"	AggregatorCost }
+				81 { "dest"	81 }
+				20 { "dest"	20 }
 			}
 		}									
 		137
@@ -2449,7 +2145,7 @@
 			"longitude"	"121.474113"
 			"edges"
 			{
-				0 { "dest"	47	"cost"	InwardCost }
+				47 { "dest"	47	"cost"	InwardCost }
 			}
 		}
 		138
@@ -2462,7 +2158,7 @@
 			"longitude"	"121.474113"
 			"edges"
 			{
-				0 { "dest"	47	"cost"	InwardCost }
+				47 { "dest"	47	"cost"	InwardCost }
 			}
 		}
 		139
@@ -2474,7 +2170,7 @@
 			"longitude"	"-85.633793"
 			"edges"
 			{
-				0 { "dest"	12 }
+				50 { "dest"	50 }
 			}
 		}		
 		140
@@ -2486,7 +2182,7 @@
 			"longitude"	"-72.335701"
 			"edges"
 			{
-				0 { "dest"	12 }
+				50 { "dest"	50 }
 			}		
 		}
 		141
@@ -2498,16 +2194,14 @@
 			"longitude"	"80.240707"
 			"edges"
 			{
-				0 { "dest"	36	"cost"	InwardCost }
-				1 { "dest"	142	"cost"	InwardCost }
-				2 { "dest"	143	"cost"	InwardCost }
-				3 { "dest"	144	"cost"	InwardCost }
-				4 { "dest"	145	"cost"	InwardCost }
-				5 
-				{ 
-					"dest"	35  
-					"cost"	LocalCostIndiaToSingapore
-				}
+				// Backbone
+				36 { "dest"	36	"cost"	LocalBackbone }
+				35 { "dest"	35	"cost"	IndiaToSingapore }
+				// Spokes
+				142 { "dest"	142 }
+				143 { "dest"	143 }
+				144 { "dest"	144 }
+				145 { "dest"	145 }
 			}		
 		}
 		142
@@ -2519,8 +2213,8 @@
 			"longitude"	"77.201825"
 			"edges"
 			{
-				0 { "dest"	36	"cost"	InwardCost }
-				1 { "dest"	141	"cost"	InwardCost }
+				36 { "dest"	36	"cost"	InwardCost }
+				141 { "dest"	141	"cost"	InwardCost }
 			}		
 		}
 		143
@@ -2532,8 +2226,8 @@
 			"longitude"	"77.593371"
 			"edges"
 			{
-				0 { "dest"	36	"cost"	InwardCost }
-				1 { "dest"	141	"cost"	InwardCost }
+				36 { "dest"	36	"cost"	InwardCost }
+				141 { "dest"	141	"cost"	InwardCost }
 			}		
 		}
 		144
@@ -2545,8 +2239,8 @@
 			"longitude"	"78.483646"
 			"edges"
 			{
-				0 { "dest"	36	"cost"	InwardCost }
-				1 { "dest"	141	"cost"	InwardCost }
+				36 { "dest"	36	"cost"	InwardCost }
+				141 { "dest"	141	"cost"	InwardCost }
 			}		
 		}		
 		145
@@ -2558,8 +2252,8 @@
 			"longitude"	"88.346783"
 			"edges"
 			{
-				0 { "dest"	36	"cost"	InwardCost }
-				1 { "dest"	141	"cost"	InwardCost }
+				36 { "dest"	36	"cost"	InwardCost }
+				141 { "dest"	141	"cost"	InwardCost }
 			}		
 		}		
 		146
@@ -2571,7 +2265,7 @@
 			"longitude"	"-157.858567"
 			"edges"
 			{
-				0 { "dest"	10	"cost"	InwardCost }
+				64 { "dest"	64	"cost"	InwardCost }
 			}		
 		}			
 		147
@@ -2583,7 +2277,7 @@
 			"longitude"	"-150.042759"
 			"edges"
 			{
-				0 { "dest"	31	"cost"	InwardCost }
+				31 { "dest"	31	"cost"	InwardCost }
 			}		
 		}			
 		148
@@ -2595,9 +2289,7 @@
 			"longitude"	"113.257198"
 			"edges"
 			{
-				0 { "dest"	47	"cost"	InwardCost }
-				1 { "dest"	48 }
-				2 { "dest"	33	"cost"	LocalCostToLeaveChina }
+				47 { "dest"	47	"cost"	InwardCost }
 			}		
 		}	
 		149
@@ -2609,7 +2301,8 @@
 			"longitude"	"30.320451"
 			"edges"
 			{
-				0 { "dest"	7	"cost"	InwardCost }
+				7 { "dest"	7 }
+				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}
 		150
@@ -2621,7 +2314,8 @@
 			"longitude"	"39.699560"
 			"edges"
 			{
-				0 { "dest"	7	"cost"	InwardCost }
+				7 { "dest"	7 }
+				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}
 		151
@@ -2633,8 +2327,9 @@
 			"longitude"	"49.098977"
 			"edges"
 			{
-				0 { "dest"	7	"cost"	InwardCost }
-				1 { "dest"	39 }
+				7 { "dest"	7 }
+				9 { "dest"	9 }
+				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}
 		152
@@ -2646,8 +2341,10 @@
 			"longitude"	"131.9"
 			"edges"
 			{
-				0 { "dest"	157	"cost"	InwardCost }
-				1 { "dest"	32	"cost"	3 }
+				157 { "dest"	157 }
+				27 { "dest"	27	"cost"	AggregatorCost }
+				7 { "dest"	7 }
+				32 { "dest"	32	"cost"	3 }
 			}		
 		}
 		153
@@ -2659,7 +2356,7 @@
 			"longitude"	"-34.881475"
 			"edges"
 			{
-				0 { "dest"	25	"cost"	InwardCost }
+				25 { "dest"	25	"cost"	InwardCost }
 			}		
 		}
 		154
@@ -2671,7 +2368,7 @@
 			"longitude"	"-47.88"
 			"edges"
 			{
-				0 { "dest"	25	"cost"	InwardCost }
+				25 { "dest"	25	"cost"	InwardCost }
 			}		
 		}
 		155
@@ -2683,7 +2380,7 @@
 			"longitude"	"-43.191672"
 			"edges"
 			{
-				0 { "dest"	25	"cost"	InwardCost }
+				25 { "dest"	25	"cost"	InwardCost }
 			}		
 		}
 		156
@@ -2695,7 +2392,7 @@
 			"longitude"	"-51.233240"
 			"edges"
 			{
-				0 { "dest"	25	"cost"	InwardCost }
+				25 { "dest"	25	"cost"	InwardCost }
 			}		
 		}
 		157
@@ -2707,13 +2404,9 @@
 			"longitude"	"104.296581"
 			"edges"
 			{
-				0 { "dest"	62	"cost"	InwardCost }
-				1 { "dest"	152 }
-				2
-				{ 
-					"dest"	161
-					"cost"	LocalCostOneWayCellEdge
-				}	
+				62 { "dest"	62 }
+				152 { "dest"	152 }
+				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}		
 		158
@@ -2725,8 +2418,9 @@
 			"longitude"	"71.446104"
 			"edges"
 			{
-				0 { "dest"	62	"cost"	InwardCost }
-				1 { "dest"	39	"cost"	InwardCost }
+				62 { "dest"	62 }
+				39 { "dest"	39 }
+				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}			
 		159
@@ -2738,8 +2432,7 @@
 			"longitude"	"114.282076"
 			"edges"
 			{
-				0 { "dest"	48 }
-				1 { "dest"	47	"cost"	InwardCost }
+				47 { "dest"	47	"cost"	InwardCost }
 			}		
 		}
 		160
@@ -2751,9 +2444,7 @@
 			"longitude"	"108.964354"
 			"edges"
 			{
-				0 { "dest"	48 }
-				1 { "dest"	46	"cost"	InwardCost }
-				2 { "dest"	47	"cost"	InwardCost }
+				47 { "dest"	47	"cost"	InwardCost }
 			}		
 		}
 		161
@@ -2765,8 +2456,8 @@
 			"longitude"	"106.917608"
 			"edges"
 			{
-				0 { "dest"	157 }
-				1 { "dest"	46 }
+				62 { "dest"	62 }
+				47 { "dest"	47 }
 			}		
 		}
 		162
@@ -2778,7 +2469,7 @@
 			"longitude"	"-66.910082"
 			"edges"
 			{
-				0 { "dest"	23 }
+				23 { "dest"	23	"cost"	AggregatorCost }
 			}		
 		}
 		163
@@ -2790,7 +2481,7 @@
 			"longitude"	"-78.486193"
 			"edges"
 			{
-				0 { "dest"	118	"cost"	InwardCost  }
+				118 { "dest"	118	"cost"	InwardCost  }
 			}		
 		}
 		164
@@ -2802,9 +2493,23 @@
 			"longitude"	"-68.124283"
 			"edges"
 			{
-				0 { "dest"	118	"cost"	InwardCost  }
+				118 { "dest"	118	"cost"	InwardCost  }
+				117 { "dest"	117	"cost"	InwardCost  }
 			}		
 		}
+		165
+		{
+			"name" "Belarus"
+			"countrycode"	"BY"
+			"region"	"europe"
+			"latitude"	"53.904426"
+			"longitude"	"27.573423"
+			"edges"
+			{
+				5 { "cost"	InwardCost  }
+				38 { "cost"	InwardCost  }
+			}		
+		}		
 	}
 	"countries"
 	{

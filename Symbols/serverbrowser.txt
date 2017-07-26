@@ -5100,7 +5100,6 @@
  T MessageBox_Factory()
  T ModList()
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
- T OSXHelpers::IsMinimizeOnTitleDblClickEnabled()
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
  T PasswordCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
@@ -8141,6 +8140,7 @@
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
  V_AppendSlash
+ V_CbMakeAbsolutePath
  V_ComposeFileName
  V_ExtractFileExtension
  V_ExtractFilePath
@@ -8543,6 +8543,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientShader
  b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient

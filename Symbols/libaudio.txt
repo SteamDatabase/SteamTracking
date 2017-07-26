@@ -680,6 +680,7 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
+ V_CbMakeAbsolutePath
  V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath

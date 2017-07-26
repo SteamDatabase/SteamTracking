@@ -3384,6 +3384,7 @@
  SDL_JoystickGetGUIDString
  SDL_JoystickInstanceID
  SDL_JoystickName
+ SDL_JoystickNameForIndex
  SDL_JoystickNumAxes
  SDL_JoystickNumButtons
  SDL_JoystickOpen
@@ -6772,43 +6773,43 @@
  T CTSPool<TempGlyphBuffer_t>::GetObject()
  T CTSPool<TempGlyphBuffer_t>::Purge()
  T CTSPool<TempGlyphBuffer_t>::~CTSPool()
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::AllocNode()
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::Pop()
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::PopItem(CRefCounted<CRefCountServiceBase<true, CRefMT> >**)
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::Purge()
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, false>::~CTSQueue()
- T CTSQueue<CWSASendThread::send_t*, false>::AllocNode()
- T CTSQueue<CWSASendThread::send_t*, false>::Pop()
- T CTSQueue<CWSASendThread::send_t*, false>::PopItem(CWSASendThread::send_t**)
- T CTSQueue<CWSASendThread::send_t*, false>::Purge()
- T CTSQueue<CWSASendThread::send_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CWSASendThread::send_t*, false>::~CTSQueue()
- T CTSQueue<CWorkItem*, false>::PopItem(CWorkItem**)
- T CTSQueue<CWorkItem*, false>::Validate(CValidator&, char const*)
- T CTSQueue<CompletionData_t*, false>::AllocNode()
- T CTSQueue<CompletionData_t*, false>::Pop()
- T CTSQueue<CompletionData_t*, false>::Purge()
- T CTSQueue<CompletionData_t*, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<CompletionData_t*, false>::~CTSQueue()
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::AllocNode()
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::Pop()
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::PopItem(panorama::CGamepadController::RemoteGamepadInput_t*)
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::Purge()
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::~CTSQueue()
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::AllocNode()
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::Pop()
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::PopItem(panorama::CUIEngine::QueuedEvent_t*)
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::Purge()
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::~CTSQueue()
- T CTSQueue<unsigned int, false>::AllocNode()
- T CTSQueue<unsigned int, false>::Pop()
- T CTSQueue<unsigned int, false>::PopItem(unsigned int*)
- T CTSQueue<unsigned int, false>::Purge()
- T CTSQueue<unsigned int, false>::ValidateDataStructureOnly(CValidator&, char const*)
- T CTSQueue<unsigned int, false>::~CTSQueue()
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::AllocNode()
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::Pop()
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::PopItem(CRefCounted<CRefCountServiceBase<true, CRefMT> >**)
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::Purge()
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> >*>::~CTSQueue()
+ T CTSQueue<CWSASendThread::send_t*>::AllocNode()
+ T CTSQueue<CWSASendThread::send_t*>::Pop()
+ T CTSQueue<CWSASendThread::send_t*>::PopItem(CWSASendThread::send_t**)
+ T CTSQueue<CWSASendThread::send_t*>::Purge()
+ T CTSQueue<CWSASendThread::send_t*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CWSASendThread::send_t*>::~CTSQueue()
+ T CTSQueue<CWorkItem*>::PopItem(CWorkItem**)
+ T CTSQueue<CWorkItem*>::Validate(CValidator&, char const*)
+ T CTSQueue<CompletionData_t*>::AllocNode()
+ T CTSQueue<CompletionData_t*>::Pop()
+ T CTSQueue<CompletionData_t*>::Purge()
+ T CTSQueue<CompletionData_t*>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<CompletionData_t*>::~CTSQueue()
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::AllocNode()
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::Pop()
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::PopItem(panorama::CGamepadController::RemoteGamepadInput_t*)
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::Purge()
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t>::~CTSQueue()
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::AllocNode()
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::Pop()
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::PopItem(panorama::CUIEngine::QueuedEvent_t*)
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::Purge()
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<panorama::CUIEngine::QueuedEvent_t>::~CTSQueue()
+ T CTSQueue<unsigned int>::AllocNode()
+ T CTSQueue<unsigned int>::Pop()
+ T CTSQueue<unsigned int>::PopItem(unsigned int*)
+ T CTSQueue<unsigned int>::Purge()
+ T CTSQueue<unsigned int>::ValidateDataStructureOnly(CValidator&, char const*)
+ T CTSQueue<unsigned int>::~CTSQueue()
  T CTextShadowData::ByteSize() const
  T CTextShadowData::CTextShadowData()
  T CTextShadowData::Clear()
@@ -15016,6 +15017,7 @@
  ThreadIsThreadRunning
  ThreadShellExecute
  ThreadSleep
+ V_CbMakeAbsolutePath
  V_ExtractDomainFromURL
  V_FixDoubleSlashes
  V_FixSlashes
@@ -15644,6 +15646,7 @@
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
+ b g_pClientShader
  b g_pClientSharedConnection
  b g_pClientShortcuts
  b g_pClientStreamClient
@@ -16893,6 +16896,7 @@
  t _GLOBAL__sub_I_httpclientmgr.cpp
  t _GLOBAL__sub_I_imageloader.cpp
  t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_iopollinghelpers_osx.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
@@ -16916,6 +16920,7 @@
  t _GLOBAL__sub_I_opengllazyshaders.cpp
  t _GLOBAL__sub_I_opensslconnection.cpp
  t _GLOBAL__sub_I_opensslwrapper.cpp
+ t _GLOBAL__sub_I_osxhelpers.mm
  t _GLOBAL__sub_I_panel2dfactory.cpp
  t _GLOBAL__sub_I_panoramasymbol.cpp
  t _GLOBAL__sub_I_panoramavideoplayer.cpp

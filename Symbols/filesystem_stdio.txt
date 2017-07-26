@@ -367,6 +367,7 @@
  ThreadGetCurrentRunningRef
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
+ V_CbMakeAbsolutePath
  V_ExtractFilePath
  V_FixDoubleSlashes
  V_FixSlashes
