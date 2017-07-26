@@ -331,7 +331,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			var strBorderColor = '#' + ( description.name_color ? description.name_color : '3a3a3a' );
 			var strBackgroundColor = '#' + ( description.background_color ? description.background_color : '292929' );
 
-			$J(elSlot).find('img').attr( 'src', strImageURL ).attr( 'srcset', '' );
+			$J(elSlot).find('img.item_image').attr( 'src', strImageURL ).attr( 'srcset', '' );
 			$J(elSlot).css( 'border-color', strBorderColor );
 			if ( eShowcase == 4 )
 			{
@@ -348,7 +348,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 function ShowcaseClearItem( elSlot, eShowcase, iSlot )
 {
 	SetShowcaseConfig( eShowcase, iSlot, {appid: 0, item_contextid: 0, item_assetid: 0} );
-	$J(elSlot).find('img').attr( 'src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' ).attr( 'srcset', '' );
+	$J(elSlot).find('img.item_image').attr( 'src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' ).attr( 'srcset', '' );
 	$J(elSlot).css( 'border-color', '' );
 	$J(elSlot).css( 'background-color', '' );
 	$J(elSlot).addClass( 'openslot' );
