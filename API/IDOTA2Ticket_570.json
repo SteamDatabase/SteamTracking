@@ -7,16 +7,22 @@
             "httpmethod": "GET",
             "parameters": [
                 {
-                    "name": "eventid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "Event ID"
-                },
-                {
                     "name": "BadgeID",
                     "type": "string",
                     "optional": false,
-                    "description": "The badge ID"
+                    "description": "The Badge ID"
+                },
+                {
+                    "name": "ValidBadgeType1",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Valid Badge Type 1"
+                },
+                {
+                    "name": "ValidBadgeType2",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Valid Badge Type 2"
                 }
             ]
         },
@@ -39,35 +45,47 @@
             "httpmethod": "POST",
             "parameters": [
                 {
-                    "name": "eventid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "Event ID"
-                },
-                {
                     "name": "steamid",
                     "type": "uint64",
                     "optional": false,
                     "description": "The 64-bit Steam ID"
+                },
+                {
+                    "name": "BadgeType",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Badge Type"
                 }
             ]
         },
         {
-            "name": "SteamAccountValidForEvent",
+            "name": "SteamAccountValidForBadgeType",
             "version": 1,
             "httpmethod": "GET",
             "parameters": [
-                {
-                    "name": "eventid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "Event ID"
-                },
                 {
                     "name": "steamid",
                     "type": "uint64",
                     "optional": false,
                     "description": "The 64-bit Steam ID"
+                },
+                {
+                    "name": "ValidBadgeType1",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Valid Badge Type 1"
+                },
+                {
+                    "name": "ValidBadgeType2",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Valid Badge Type 2"
+                },
+                {
+                    "name": "ValidBadgeType3",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Valid Badge Type 3"
                 }
             ]
         }
