@@ -2629,6 +2629,7 @@
  V_strncpy
  V_vsnprintf
  V_vsnprintfRet
+ WeakRandomInt
  _DefaultRuneLocale
  _Unwind_Resume
  __assert_rtn
