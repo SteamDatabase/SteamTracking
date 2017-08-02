@@ -33234,6 +33234,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_deal_critical_damage"	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Scattergun"
@@ -98247,36 +98248,36 @@
 		}
 		"9408"
 		{
-			"name"	"Chapelaria Ultiduo 1st Place Season 1"
+			"name"	"Chapelaria Ultiduo Gladiator 1st Place Season 1"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_1st"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Gladiator_1st"
 			"item_description"	"#TF_TournamentMedal_Season1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold.mdl"
 		}
 		"9409"
 		{
-			"name"	"Chapelaria Ultiduo 2nd Place Season 1"
+			"name"	"Chapelaria Ultiduo Gladiator 2nd Place Season 1"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_2nd"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Gladiator_2nd"
 			"item_description"	"#TF_TournamentMedal_Season1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver.mdl"
 		}
 		"9410"
 		{
-			"name"	"Chapelaria Ultiduo 3rd Place Season 1"
+			"name"	"Chapelaria Ultiduo Gladiator 3rd Place Season 1"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_3rd"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Gladiator_3rd"
 			"item_description"	"#TF_TournamentMedal_Season1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze.mdl"
 		}
 		"9411"
 		{
-			"name"	"Chapelaria Ultiduo Participant Season 1"
+			"name"	"Chapelaria Ultiduo Gladiator Participant Season 1"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Participant"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Gladiator_Participant"
 			"item_description"	"#TF_TournamentMedal_Season1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant.mdl"
@@ -100154,6 +100155,492 @@
 			"model_player_per_class"
 			{
 				"basename"	"models/workshop/player/items/all_class/etf2l_fresh_meat_participant/etf2l_fresh_meat_participant_%s.mdl"
+			}
+		}
+		"9572"
+		{		
+			"name"				"AsiaFortress Cup Division 1 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+		}
+		"9573"
+		{		
+			"name"				"AsiaFortress Cup Division 1 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+		}
+		"9574"
+		{		
+			"name"				"AsiaFortress Cup Division 1 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+		}
+		"9575"
+		{		
+			"name"				"AsiaFortress Cup Division 1 Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div1_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9576"
+		{		
+			"name"				"AsiaFortress Cup Division 2 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_gold/asiafortress_cup_division2_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_gold/asiafortress_cup_division2_gold_%s.mdl"
+			}
+		}
+		"9577"
+		{		
+			"name"				"AsiaFortress Cup Division 2 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_silver/asiafortress_cup_division2_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_silver/asiafortress_cup_division2_silver_%s.mdl"
+			}
+		}
+		"9578"
+		{		
+			"name"				"AsiaFortress Cup Division 2 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division2_bronze/asiafortress_cup_division2_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division2_bronze/asiafortress_cup_division2_bronze_%s.mdl"
+			}
+		}
+		"9579"
+		{		
+			"name"				"AsiaFortress Cup Division 2 Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div2_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9580"
+		{		
+			"name"				"AsiaFortress Cup Division 3 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_gold/asiafortress_cup_division3_gold_%s.mdl"
+			}
+		}
+		"9581"
+		{		
+			"name"				"AsiaFortress Cup Division 3 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_silver/asiafortress_cup_division3_silver_%s.mdl"
+			}
+		}
+		"9582"
+		{		
+			"name"				"AsiaFortress Cup Division 3 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/asiafortress_cup_division3_bronze/asiafortress_cup_division3_bronze_%s.mdl"
+			}
+		}
+		"9583"
+		{		
+			"name"				"AsiaFortress Cup Division 3 Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_AFC_Div3_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9584"
+		{
+			"name"	"Chapelaria Ultiduo Brazuca Winner Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Brazuca_Winner"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold.mdl"
+		}
+		"9585"
+		{
+			"name"	"Chapelaria Ultiduo Brazuca Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Brazuca_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant.mdl"
+		}
+		"9586"
+		{
+			"name"	"Chapelaria Ultiduo Hermanos Winner Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Hermanos_Winner"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold.mdl"
+		}
+		"9587"
+		{
+			"name"	"Chapelaria Ultiduo Hermanos Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Hermanos_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_participant/chapelaria_ultiduo_participant.mdl"
+		}
+
+		"9588"
+		{
+			"name"	"Chapelaria Ultiduo Legatus 1st Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Legatus_1st"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_gold/chapelaria_ultiduo_gold.mdl"
+		}
+		"9589"
+		{
+			"name"	"Chapelaria Ultiduo Legatus 2nd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Legatus_2nd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_silver/chapelaria_ultiduo_silver.mdl"
+		}
+		"9590"
+		{
+			"name"	"Chapelaria Ultiduo Legatus 3rd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_Ultiduo_Legatus_3rd"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_ultiduo_bronze/chapelaria_ultiduo_bronze.mdl"
+		}
+  		"9591"
+		{		
+			"name"				"Blapature Co. Contributor 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Blapature2017"
+			"item_description"	"#TF_TournamentMedal_Blapature2017_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tf_medal_blapature/tf_medal_blapature"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tf_medal_blapature/tf_medal_blapature_%s.mdl"
+			}
+		}
+		"9592"
+		{		
+			"name"				"TF2Maps 72hr TF2Jam Summer Participant 2017"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_72hr_summer_jimijam"
+			"item_description"	"#TF_TournamentMedal_2017"
+			"image_inventory"	"backpack/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style0"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style1/72hr_jimijam_sum17_style1_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+  		"9593"
+		{		
+			"name"				"TFCL 6v6 Alpha"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Alpha"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha_%s.mdl"
+			}
+		}
+  		"9594"
+		{		
+			"name"				"TFCL 6v6 1st Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Gold"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold_%s.mdl"
+			}
+		}
+  		"9595"
+		{		
+			"name"				"TFCL 6v6 2nd Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Silver"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver_%s.mdl"
+			}
+		}
+  		"9596"
+		{		
+			"name"				"TFCL 6v6 3rd Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Bronze"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze_%s.mdl"
+			}
+		}
+  		"9597"
+		{		
+			"name"				"TFCL 6v6 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Gold"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold_%s.mdl"
+			}
+		}
+  		"9598"
+		{		
+			"name"				"TFCL 6v6 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Silver"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver_%s.mdl"
+			}
+		}
+  		"9599"
+		{		
+			"name"				"TFCL 6v6 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze_%s.mdl"
+			}
+		}
+  		"9600"
+		{		
+			"name"				"TFCL 6v6 Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_6v6_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant_%s.mdl"
+			}
+		}
+  		"9601"
+		{		
+			"name"				"TFCL Ultiduo Alpha"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Alpha"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha_%s.mdl"
+			}
+		}
+  		"9602"
+		{		
+			"name"				"TFCL Ultiduo 1st Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Gold"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold_%s.mdl"
+			}
+		}
+  		"9603"
+		{		
+			"name"				"TFCL Ultiduo 2nd Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Silver"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver_%s.mdl"
+			}
+		}
+  		"9604"
+		{		
+			"name"				"TFCL Ultiduo 3rd Place Alpha Season"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Bronze"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_Season"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze_%s.mdl"
+			}
+		}
+  		"9605"
+		{		
+			"name"				"TFCL Ultiduo 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Gold"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold_%s.mdl"
+			}
+		}
+  		"9606"
+		{		
+			"name"				"TFCL Ultiduo 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Silver"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver_%s.mdl"
+			}
+		}
+  		"9607"
+		{		
+			"name"				"TFCL Ultiduo 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze_%s.mdl"
+			}
+		}
+  		"9608"
+		{		
+			"name"				"TFCL Ultiduo Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant_%s.mdl"
+			}
+		}
+  		"9609"
+		{		
+			"name"				"TFCL Ultiduo 1st Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Gold"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_gold/tfcl_medal_gold_%s.mdl"
+			}
+		}
+  		"9610"
+		{		
+			"name"				"TFCL Ultiduo 2nd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Silver"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_silver/tfcl_medal_silver_%s.mdl"
+			}
+		}
+  		"9611"
+		{		
+			"name"				"TFCL Ultiduo 3rd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_bronze/tfcl_medal_bronze_%s.mdl"
+			}
+		}
+  		"9612"
+		{		
+			"name"				"TFCL Ultiduo Participant Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TFCL_Ultiduo_Participant"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant_%s.mdl"
 			}
 		}
 
