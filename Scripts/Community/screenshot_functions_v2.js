@@ -97,7 +97,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "Deselect all";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "Deselect All";
 			$('ScreenshotManagementButtonSelectAll').onclick = DeselectAllScreenshots;
 		}
 	}
@@ -105,7 +105,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "Select all";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "Select All";
 			$('ScreenshotManagementButtonSelectAll').onclick = SelectAllScreenshots;
 		}
 	}

@@ -349,7 +349,8 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 
 .report_row {
 	padding: 3px 2px;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
+	background: rgba(0, 0, 0, 0.2);
 }
 
 .report_row.checked {
@@ -361,6 +362,7 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 	padding: 8px 8px;
 	font-size: 16px;
 	line-height: 20px;
+	width: 73px;
 }
 .report_row .report_icons img {
 	vertical-align: middle;

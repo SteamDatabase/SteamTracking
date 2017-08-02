@@ -542,6 +542,10 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	overflow: hidden;
 }
 
+.formatted_gift_amount {
+	font-size:24px;
+}
+
 @media screen and (max-width: 540px)
 {
 	html.responsive .pending_gift_leftcol {

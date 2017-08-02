@@ -443,6 +443,10 @@ html.responsive .formRowFields .gray_bevel {
 	margin: 7px 0px;
 }
 
+.disablePrivateSettingRow {
+	opacity: .4;
+}
+
 .permissionRow .permissionCol {
 	float: right;
 	width: 58px;
@@ -632,4 +636,38 @@ a.chat_ban_admin {
 
 .has_localization {
 	color: #799905 ;
+}
+
+.joinRequestBulkTools {
+	background: #c9c9c9;
+	padding: 10px 25px 10px 10px;
+}
+
+.joinRequestBulkTools a {
+	margin-right: 10px;
+}
+
+.joinRequestBulkTools div {
+	margin-bottom: 10px;
+	color: black;
+}
+
+.joinRequestsBulkManage {
+	margin-bottom: 15px;
+}
+
+.joinRequestBanner {
+	background: rgba( 255, 255, 255, .1 );
+	padding: 5px 10px 5px 10px;
+}
+
+.joinRequestManageButtons {
+	float: right;
+	margin-top: 13px;
+}
+
+.joinRequestManageCount {
+	color: #66C0F4;
+	font-size: 42px;
+	font-weight: bold;
 }

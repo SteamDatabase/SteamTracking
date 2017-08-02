@@ -1987,7 +1987,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .profile_customization.customization_edit.none_selected {
 
-	background: #383838;
+	background: #2F4459;
 	border: 1px dashed #5491CF;
 }
 .profile_customization_area .profile_customization.customization_edit.none_selected {
@@ -2727,4 +2727,22 @@ body.flat_page .sectionTabsHR {
 
 .manage_friends_max_block_ctn > a {
 	margin-top: 30px;
+}
+
+.group_invite_menu_option_disabled {
+	opacity: .3;
+}
+
+.clanInviteErrorTable td {
+	padding: 5px;
+}
+
+.clanInviteErrorTable th {
+	padding: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.clanInviteErrorTable {
+	margin-top: 15px;
 }

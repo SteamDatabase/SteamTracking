@@ -76,16 +76,27 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		type: 'POST'
 	} ).done( function( data ) {
 		Modal && Modal.Dismiss();
-		var strMessage = 'Invitation Sent!';
-		if ( data.duplicate )
-		{
-			strMessage += '<br>Some invites were not sent because the recipients are already in the group or have already received invites.';
-		}
-		ShowAlertDialog( 'Invite to Join Your Group', strMessage );
 
+		var strMessage = 'Invitation Sent!';
+		ShowAlertDialog( 'Invite to Join Your Group', strMessage );
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();
-		ShowAlertDialog( 'Error', data.responseJSON.results ? data.responseJSON.results : 'Error processing your request. Please try again.' );
+
+		var rgResults = data.responseJSON;
+
+        var strAccountListTable = '';
+		if ( rgResults.rgAccounts )
+		{
+            strAccountListTable = '<table class="clanInviteErrorTable" ><thead><tr><th class="inviteTablePersona" >Invited Player</th><th class="inviteTableError">Error</th></tr></thead><tbody>';
+			$J.each( rgResults.rgAccounts, function( accountid, rgError ){
+                strAccountListTable += '<tr>';
+                strAccountListTable += '<td class="inviteTablePersona">' + rgError.persona + '</td>';
+                strAccountListTable += '<td class="inviteTableError">' +rgError.strError + "</td>";
+                strAccountListTable += '</tr>';
+			} );
+            strAccountListTable += '</tbody></table>';
+		}
+		ShowAlertDialog( 'Error', rgResults.results ? rgResults.results + strAccountListTable : 'Error processing your request. Please try again.' );
 	});
 }
 

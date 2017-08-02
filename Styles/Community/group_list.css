@@ -124,7 +124,7 @@
 }
 
 .groupBlock.darkBG {
-	background-color:#2c2c2c;
+	background-color: rgba( 0, 0, 0, 0.7 );
 }
 
 .resultIcon {

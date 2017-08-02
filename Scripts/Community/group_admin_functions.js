@@ -956,3 +956,70 @@ function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
 	$HTMLTextarea.focus();
 }
 
+function JoinRequests_ApproveDenyUser( accountID, bApprove )
+{
+	$J.post( g_strProcessURL, { 'rgAccounts' : [ accountID ], 'bapprove' : bApprove, "json"  : 1, 'sessionID': g_sessionID } )
+		.done( function( eResult ) {
+
+			if ( eResult == 1 )
+			{
+            	document.location.href = g_strProcessURL;
+			}
+			else
+			{
+				ShowAlertDialog( "Error", "There was a problem responding to membership requests. Result: " + eResult);
+			}
+		} );
+}
+
+function JoinRequests_ToggleBulkManageJoinRequests()
+{
+	$J( '.joinRequestBulkTools' ).slideToggle();
+    $J( '.rank_icon > a' ).toggle();
+    $J( 'input[type=checkbox]' ).toggle();
+
+    var elArrow = $J( '.btn_details_arrow' );
+    if ( elArrow.hasClass( 'down' ) )
+	{
+        elArrow.removeClass( 'down' );
+        elArrow.addClass( 'up' );
+	}
+	else
+	{
+        elArrow.removeClass( 'up' );
+        elArrow.addClass( 'down' );
+	}
+}
+
+function JoinRequests_RespondToAllJoinRequests( bApprove )
+{
+    $J.post( g_strProcessURL, { 'bapprove' : bApprove, "action" : "bulkrespond", "json"  : 1, 'sessionID': g_sessionID } )
+        .done( function( eResult ) {
+
+            if ( eResult == 1 )
+            {
+                document.location.href = g_strProcessURL;
+            }
+            else
+            {
+                ShowAlertDialog( "Error", "There was a problem responding to membership requests. Result: " + eResult );
+            }
+        } );
+}
+
+function JoinRequests_ToggleSelectAll( el )
+{
+    if ( el.data( "selected" ) == 1 )
+	{
+        el.children('span').text( "Select All" );
+        $J( 'input[type=checkbox]' ).prop( 'checked', false );
+        el.data( "selected", 0 );
+	}
+	else
+	{
+        el.children('span').text( "Deselect All" );
+        $J( 'input[type=checkbox]' ).prop( 'checked', true );
+        el.data( "selected", 1 );
+	}
+}
+

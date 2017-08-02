@@ -263,6 +263,7 @@ a.general_btn:hover {
 
 #leftContents {
 	width: 648px;
+	margin-bottom: 100px;
 }
 
 .toolsRightSectionHeader {
@@ -2999,40 +3000,7 @@ div.hover {
 	z-index: 10;
 }
 
-.sectionTab, a.sectionTab
-{
-	margin-top: 7px;
-	display: block;
-	float: left;
-	color: #dadada;
-	background-color: #3A3A3A;
-	line-height: 29px;
-	height: 29px;
-	padding: 0px 12px;
-	margin-left: 5px;
-	text-decoration: none;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius: 2px;
-	-moz-border-radius-bottomleft: 0px;
-	-moz-border-radius-bottomright: 0px;
-}
 
-.sectionTab:hover
-{
-	background-color: #454545;
-}
-
-.sectionTabActive
-{
-	position: relative;
-	margin-top: 0px;
-	margin-left: 5px;
-	font-size: 14px;
-	color: white;
-	float: left;
-}
 
 .sectionTabActive .sectionTabActive_leftcap, .sectionTabActive .sectionTabActive_rightcap, .sectionTabActive .sectionTabActive_content
 {

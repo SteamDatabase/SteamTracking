@@ -386,6 +386,15 @@ function ConfirmLeaveGroup( groupName )
 	}
 }
 
+function ConfirmCancelJoinRequest( groupName )
+{
+
+	ShowConfirmDialog( 'Cancel Request', 'You are about to cancel your pending membership request. Are you sure?', 'Yes' )
+		.done( function() {
+            $J('#leave_group_form').submit();
+		} );
+}
+
 
 function Curator_CreateOrEditReview( groupid, create_only )
 {

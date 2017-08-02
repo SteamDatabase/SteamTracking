@@ -281,10 +281,10 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 
 function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 {
-	var Modal = ShowDialog( 'Select a Game You\'ve Reviewed', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
-	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames', function(html) {
+	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames?public_only=1', function(html) {
 		Modal.GetContent().find( '.newmodal_content').html('');	// erase the throbber
 		Modal.GetContent().find( '.newmodal_content').append( $ListElement );
 		$ListElement.html( html );
