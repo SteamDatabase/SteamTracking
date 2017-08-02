@@ -59523,10 +59523,10 @@
 		}
 		"10001"
 		{
-			"name"		"event_op08_tandem_bank"
+			"name"		"event_op08_tandem_overpass"
 			"is_an_event"		"1"
 			"gamemode"		"scrimcomp2v2"
-			"mapgroup"		"mg_de_bank"
+			"mapgroup"		"mg_de_overpass"
 		}
 		"10002"
 		{
@@ -59778,7 +59778,7 @@
 			"name"		"event_op08_wingman_3"
 			"is_an_event"		"1"
 			"gamemode"		"scrimcomp2v2"
-			"mapgroup"		"mg_de_shortdust,mg_de_bank,mg_de_cbble"
+			"mapgroup"		"mg_de_shortdust,mg_de_overpass,mg_de_cbble"
 		}
 		"10038"
 		{
@@ -59813,7 +59813,7 @@
 			"name"		"event_op08_wingman_8"
 			"is_an_event"		"1"
 			"gamemode"		"scrimcomp2v2"
-			"mapgroup"		"mg_de_cbble,mg_de_bank,mg_de_shorttrain"
+			"mapgroup"		"mg_de_cbble,mg_de_overpass,mg_de_shorttrain"
 		}
 		"10043"
 		{
@@ -59848,7 +59848,7 @@
 			"name"		"event_op08_wingman_13"
 			"is_an_event"		"1"
 			"gamemode"		"scrimcomp2v2"
-			"mapgroup"		"mg_de_shorttrain,mg_de_bank,mg_de_inferno"
+			"mapgroup"		"mg_de_shorttrain,mg_de_overpass,mg_de_inferno"
 		}
 		"10048"
 		{
@@ -59883,7 +59883,7 @@
 			"name"		"event_op08_wingman_18"
 			"is_an_event"		"1"
 			"gamemode"		"scrimcomp2v2"
-			"mapgroup"		"mg_de_inferno,mg_de_bank,mg_de_shortdust"
+			"mapgroup"		"mg_de_inferno,mg_de_overpass,mg_de_shortdust"
 		}
 		"10053"
 		{
