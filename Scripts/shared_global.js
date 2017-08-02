@@ -3904,11 +3904,20 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
  * @param strpageTitle Optional: Replace page title with this new value.
  * @constructor
  */
-CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle )
+CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle, bSkipRequest )
 {
 	// @todo chrisk show throbber
 	var _this = this;
 	var strURL = this.strBaseURL + strLocation;
+
+	if( bSkipRequest )
+	{
+		if( strPageTitle )
+			document.title = strPageTitle;
+
+		window.history.pushState({'html':this.elTarget.innerHTML,'title':strPageTitle, 'id': this.strStateID}, '', strURL );
+		return;
+	}
 
 	$J.ajax({
 		url: strURL,
@@ -3940,7 +3949,6 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 	if(event.state == null)
 	{
 		event.state = 5;
-		console.log(event.state);
 	}
 
 	var state = event.state || this.rgOriginalEvent;
