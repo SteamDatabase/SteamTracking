@@ -1787,34 +1787,39 @@ span.bb_removedlink {
 	font-size: 80%;
 }
 
-table.bb_table
+div.bb_table
 {
-	border-spacing: 0px;
+	display: table;
 	font-size: 12px;
 }
 
-table.bb_table th
+div.bb_table div.bb_table_th
 {
+	display: table-cell;
+	font-weight: bold;
 	border: 1px solid #4d4d4d;
 	padding: 4px;
 }
 
-table.bb_table th img.sharedFilePreviewImage
+div.bb_table div.bb_table_th img.sharedFilePreviewImage
 {
 	margin: 0px;
 }
 
-table.bb_table tr
+div.bb_table div.bb_table_tr
 {
+	display: table-row;
 }
 
-table.bb_table td
+div.bb_table div.bb_table_td
 {
+	display: table-cell;
+	vertical-align: middle;
 	border: 1px solid #4d4d4d;
 	padding: 4px;
 }
 
-table.bb_table td img.sharedFilePreviewImage
+div.bb_table div.bb_table_td img.sharedFilePreviewImage
 {
 	margin: 0px;
 }
