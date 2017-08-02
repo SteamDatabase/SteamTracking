@@ -306,6 +306,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	background-blend-mode: overlay;
 	display: flex;
 	width: 100%;
+	max-width: 230px;
 	padding-bottom: 25%;
 	height: 0px;
 	background-size: cover;
