@@ -100371,10 +100371,10 @@
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_72hr_summer_jimijam"
 			"item_description"	"#TF_TournamentMedal_2017"
-			"image_inventory"	"backpack/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0"
+			"image_inventory"	"backpack/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam"
 			"model_player_per_class"
 			{
-				"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+				"basename"		"models/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam_%s.mdl"
 			}
 			"visuals"
 			{
@@ -100384,7 +100384,7 @@
 					{
 						"model_player_per_class"
 						{
-							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam/72hr_jimijam_%s.mdl"
 						}
 						"name"		"#TF_TournamentMedal_72hr_jimijam_style0"
 						"skin_red"		"0"
@@ -100394,7 +100394,7 @@
 					{
 						"model_player_per_class"
 						{
-							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style1/72hr_jimijam_sum17_style1_%s.mdl"
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_2/72hr_jimijam_2_%s.mdl"
 						}
 						"name"		"#TF_TournamentMedal_72hr_jimijam_style1"
 						"skin_red"		"0"
@@ -100641,6 +100641,49 @@
 			"model_player_per_class"
 			{
 				"basename"	"models/workshop/player/items/all_class/tfcl_medal_participant/tfcl_medal_participant_%s.mdl"
+			}
+		}
+		"9613"
+		{		
+			"name"				"TF2Maps Charitable Heart 2017"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF2MapsCharitableHeart"
+			"item_description"	"#TF2MapsCharitableHeart2017_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style0/72hr_jimijam_sum17_style0_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style0"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+					"1"
+					{
+						"model_player_per_class"
+						{
+							"basename"		"models/workshop/player/items/all_class/72hr_jimijam_sum17_style1/72hr_jimijam_sum17_style1_%s.mdl"
+						}
+						"name"		"#TF_TournamentMedal_72hr_jimijam_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
 			}
 		}
 
