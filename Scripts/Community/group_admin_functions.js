@@ -956,22 +956,6 @@ function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
 	$HTMLTextarea.focus();
 }
 
-function JoinRequests_ApproveDenyUser( accountID, bApprove )
-{
-	$J.post( g_strProcessURL, { 'rgAccounts' : [ accountID ], 'bapprove' : bApprove, "json"  : 1, 'sessionID': g_sessionID } )
-		.done( function( eResult ) {
-
-			if ( eResult == 1 )
-			{
-            	document.location.href = g_strProcessURL;
-			}
-			else
-			{
-				ShowAlertDialog( "Error", "There was a problem responding to membership requests. Result: " + eResult);
-			}
-		} );
-}
-
 function JoinRequests_ToggleBulkManageJoinRequests()
 {
 	$J( '.joinRequestBulkTools' ).slideToggle();
@@ -991,20 +975,40 @@ function JoinRequests_ToggleBulkManageJoinRequests()
 	}
 }
 
+function JoinRequests_ApproveDenyUser( accountID, bApprove )
+{
+    $J.post( g_strProcessURL, { 'rgAccounts' : [ accountID ], 'bapprove' : bApprove, 'sessionID': g_sessionID } )
+        .done( function( eResult ) {
+            JoinRquests_HandleResponse( eResult );
+        } );
+}
+
 function JoinRequests_RespondToAllJoinRequests( bApprove )
 {
-    $J.post( g_strProcessURL, { 'bapprove' : bApprove, "action" : "bulkrespond", "json"  : 1, 'sessionID': g_sessionID } )
+    $J.post( g_strProcessURL, { 'bapprove' : bApprove, "action" : "bulkrespond", 'sessionID': g_sessionID } )
         .done( function( eResult ) {
-
-            if ( eResult == 1 )
-            {
-                document.location.href = g_strProcessURL;
-            }
-            else
-            {
-                ShowAlertDialog( "Error", "There was a problem responding to membership requests. Result: " + eResult );
-            }
+            JoinRquests_HandleResponse( eResult );
         } );
+}
+
+function JoinRequests_RespondToSelectedJoinRequests( bApprove )
+{
+    $J.post( g_strProcessURL, $J( "#joinRequestForm" ).serialize() + "&bapprove=" + bApprove )
+        .done( function( eResult ) {
+            JoinRquests_HandleResponse( eResult );
+        } );
+}
+
+function JoinRquests_HandleResponse( eResult )
+{
+    if ( eResult == 1 )
+    {
+        document.location.href = g_strProcessURL;
+    }
+    else
+    {
+        ShowAlertDialog( "Error", "There was a problem responding to membership requests. Result: " + eResult );
+    }
 }
 
 function JoinRequests_ToggleSelectAll( el )
