@@ -84,7 +84,11 @@ function HighlightPlayer( args )
 	this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
 	this.m_rgDefaultMovieFlashvars = args.rgDefaultMovieFlashvars || {};
 	this.m_bVideoOnlyMode = args.bVideoOnlyMode;
-	this.m_bUseHTMLPlayer = args.bUseHTMLPlayer;
+
+	// sniff support
+	this.m_bSupportsWebM = BCanPlayWebm() || BDoesUserPreferHTML5();
+	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
+	this.m_bSupportsFlash = swfobject.hasFlashPlayerVersion(strRequiredVersion);
 
 	//make all the strip items clickable
 	var thisClosure = this;
@@ -199,13 +203,7 @@ HighlightPlayer.prototype.HighlightMovie = function( id, bUserAction )
 			&& this.GetMovieId( this.m_activeItem ) == id )
 		return;
 
-	if( this.m_bUseHTMLPlayer )
-		this.LoadHTML5Movie( id, bUserAction );
-	else
-		this.LoadMovie( id, bUserAction );
-
-
-	this.TransitionTo( $JFromIDOrElement('highlight_movie_' + id ) );
+	this.TransitionTo( $JFromIDOrElement('highlight_movie_' + id ), false, bUserAction );
 	this.HighlightStripItem( 'thumb_movie_' + id );
  }
 
@@ -221,51 +219,109 @@ HighlightPlayer.prototype.HighlightScreenshot = function( id, bSkipAnimation )
 	this.StartTimer();
 }
 
-HighlightPlayer.prototype.LoadHTML5Movie = function( id, bUserAction )
+
+HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 {
-	var strTarget = 'movie_' + id;
-	var $Target = $JFromIDOrElement( strTarget );
-
-	// use the global to tell the player that it should unmute this video
-	g_bUserSelectedTrailer = bUserAction;
-
-	if( $Target.length > 0 && $Target[0].play )
-	{
-		$Target[0].load();
-		$Target[0].play();
-
-		$Target.on( 'ended', $J.proxy( this.Transition, this) );
-	}
-}
-
-HighlightPlayer.prototype.LoadMovie = function( id, bUserAction )
-{
+	var id = this.GetMovieId( $Container );
 	var strTarget = 'movie_' + id;
 	var $Target = $JFromIDOrElement(strTarget);
-	var rgFlashVars = $J.extend( {}, this.m_rgDefaultMovieFlashvars, this.m_rgMovieFlashvars[ 'movie_' + id ] );
 
-	if ( !this.m_bVideoOnlyMode )
+	if ( $Target.length )
+		return;
+
+	var bSupportsWebM = this.m_bSupportsWebM && !$Container.data('webm-failed');
+	var bSupportsMP4 = this.m_bSupportsMPEG4 && !$Container.data('mp4-failed');
+
+	// try HTML5 first
+	if ( bSupportsWebM || bSupportsMP4 )
 	{
-		if ( BIsUserGameHighlightAutoplayEnabled() )
-			rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
-		if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
-			rgFlashVars.START_MUTE = 'true';
-		var flVolume = GetGameHighlightPlayerVolume();
-		if ( flVolume != -1 )
-			rgFlashVars.SAVED_VOLUME = flVolume;
-	}
-
-	if ( $Target.length && $Target[0].tagName == 'DIV' )
-	{
-		var strRequiredVersion = "9";
-		if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
-		swfobject.embedSWF( "/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
-
-		// is the element still around?
-		$Target = $JFromIDOrElement(strTarget);
-		if ( $Target.length && $Target[0].tagName == 'DIV' )
+		let rgAttributes = {
+			playsinline: true,
+			'class': 'highlight_player_item highlight_movie',
+			poster: $Container.data('poster'),
+			preload: 'none'
+		};
+		if ( bSupportsWebM )
 		{
-			//looks like the user doesn't have flash, show this message
+			rgAttributes['src'] = $Container.data('webm-source');
+			rgAttributes['data-hd-src'] = $Container.data('webm-hd-source');
+		}
+		else
+		{
+			rgAttributes['src'] = $Container.data('mp4-source');
+			rgAttributes['data-hd-src'] = $Container.data('mp4-hd-source');
+		}
+
+		var $Video = $J( '<video/>', rgAttributes );
+		var _this = this;
+		$Video.on( 'error', function() {
+			if ( bSupportsWebM )
+				$Container.data('webm-failed', true );
+			else if ( bSupportsMP4 )
+				$Container.data('mp4-failed', true );
+
+			// try again, with the next fallback
+			$Container.empty();
+			_this.LoadMovie( $Container, bUserAction );
+		});
+
+		// use the global to tell the player that it should unmute this video
+		g_bUserSelectedTrailer = bUserAction;
+
+		$Container.append( $Video );
+		$Video.videoControls();
+
+		$Video[0].load();
+		$Video[0].play();
+
+		$Video.on( 'ended', function() {
+			_this.Transition();
+		} );
+	}
+	else
+	{
+		$Target = $J('<div/>', {id: 'movie_' + id, 'class': 'highlight_flash_player_notice', style: 'display: none;'})
+
+		var strMessage = 'You will need to <a href="http://www.adobe.com/go/getflashplayer" target="_blank">Install</a> the latest Flash plugin to view this page properly.';
+		if ( Steam.BIsUserInSteamClient() )
+		{
+			strMessage = strMessage.replace( /http:\/\//g, 'steam://openurl/' );
+		}
+		$Target.html( '<p>' + strMessage + '</p>' );
+		$Container.append( $Target );
+
+		if ( this.m_bSupportsFlash )
+		{
+			var rgFlashVars = $J.extend( {}, this.m_rgDefaultMovieFlashvars, this.m_rgMovieFlashvars[ 'movie_' + id ] );
+
+			if ( !this.m_bVideoOnlyMode )
+			{
+				if ( BIsUserGameHighlightAutoplayEnabled() )
+					rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
+				if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
+					rgFlashVars.START_MUTE = 'true';
+				var flVolume = GetGameHighlightPlayerVolume();
+				if ( flVolume != -1 )
+					rgFlashVars.SAVED_VOLUME = flVolume;
+			}
+
+			if ( $Target.length && $Target.is('div') )
+			{
+				var strRequiredVersion = "9";
+				if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
+				swfobject.embedSWF( "/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
+
+				// is the element still around?
+				$Target = $JFromIDOrElement(strTarget);
+				if ( $Target.length && $Target.is( 'div' ) )
+				{
+					//looks like the user doesn't have flash, show this message
+					$Target.show();
+				}
+			}
+		}
+		else
+		{
 			$Target.show();
 		}
 	}
@@ -289,7 +345,7 @@ HighlightPlayer.prototype.GetScreenshotURL = function( id, size )
 	return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/g, size ? '.' + size : '' );
  }
 
-HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
+HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation, bUserAction )
 {
 	var $Elem = $JFromIDOrElement( elem );
 	if ( this.m_activeItem )
@@ -300,18 +356,12 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
 			var movieid = this.GetMovieId( this.m_activeItem );
 			var $Container = $JFromIDOrElement('highlight_movie_' + movieid);
 
-			if( this.m_bUseHTMLPlayer)
-			{
-				var $Video = $JFromIDOrElement('movie_' + movieid);
-				$Video.trigger( 'pause' );
-			}
-			else
-			{
-				if ( $Container.find('.flash_ctn').length )
-					$Container = $Container.find('.flash_ctn');
-				var strTarget = 'movie_' + movieid;
-				$Container.html( '<div id="' + strTarget + '"></div>' );
-			}
+			// html5 video
+			$J('video#movie_' + movieid).trigger('pause');
+
+			//flash
+			$Container.find('.flash_ctn').remove();
+
 			this.m_activeItem.hide();
 
 		}
@@ -329,6 +379,7 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
 
 	if ( this.BIsMovie( $Elem ) )
 	{
+		this.LoadMovie( $Elem, bUserAction );
 		$Elem.show();
 		this.bScreenshotsOnly = false;
 	}
@@ -505,7 +556,7 @@ HighlightPlayer.prototype.OnWebPanelHidden = function()
 	{
 		var id = this.GetMovieId( this.m_activeItem );
 		var $Movie = $JFromIDOrElement('movie_' + id);
-		if(this.m_bUseHTMLPlayer)
+		if( $Movie.is('video') )
 			$Movie.trigger( 'pause' );
 		else
 			$Movie.trigger( 'callPauseVideo' );
