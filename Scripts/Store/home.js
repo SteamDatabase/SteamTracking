@@ -2699,6 +2699,9 @@ CUsabilityTracker.prototype.PostStats = function()
 
 	this.CancelScheduledUpload();
 
+		this.m_stats.windowWidth = window.innerWidth;
+	this.m_stats.windowHeight = window.innerHeight;
+
 	var strStats = JSON.stringify( this.m_stats );
 	var strURL = "http:\/\/store.steampowered.com\/default\/usabilitytracking\/";
 	var bSupportsBeacon = typeof navigator.sendBeacon != 'undefined';
