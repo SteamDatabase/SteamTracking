@@ -4104,6 +4104,9 @@ Label.AchievementPercent,
 	height: 100%;
 }
 
+.ProfileContentSection {
+	flow-children: down;
+}
 
 .AchievementsContainer, .StatsContainer, .GamesContainer, .ContentGrid {
 
@@ -4175,6 +4178,14 @@ Label.AchievementPercent,
 {
 	vertical-align: top;
 	height: 650px;
+}
+
+.ProfileContentFilteredToApp
+{
+	color: #ffffff;
+	padding-top: 20px;
+	padding-left: 10px;
+	font-size: 30px;
 }
 
 .FullscreenImagePopup {
