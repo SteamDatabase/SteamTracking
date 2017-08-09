@@ -227,7 +227,10 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 	var $Target = $JFromIDOrElement(strTarget);
 
 	if ( $Target.length )
+	{
+		$Target.trigger('play');
 		return;
+	}
 
 	var bSupportsWebM = this.m_bSupportsWebM && !$Container.data('webm-failed');
 	var bSupportsMP4 = this.m_bSupportsMPEG4 && !$Container.data('mp4-failed');
@@ -236,6 +239,7 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 	if ( bSupportsWebM || bSupportsMP4 )
 	{
 		let rgAttributes = {
+			id: strTarget,
 			playsinline: true,
 			'class': 'highlight_player_item highlight_movie',
 			poster: $Container.data('poster'),
@@ -362,36 +366,28 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation, bUserAc
 			//flash
 			$Container.find('.flash_ctn').remove();
 
+		}
+
+		this.m_activeItem.stop();
+
+		if ( bSkipAnimation )
 			this.m_activeItem.hide();
-
-		}
 		else
-		{
-			//(cross) fade screenshots
-			this.m_activeItem.stop();
-
-			if ( bSkipAnimation )
-				this.m_activeItem.hide();
-			else
-				this.m_activeItem.fadeOut( 400 );
-		}
+			this.m_activeItem.fadeOut( 400 );
 	}
 
 	if ( this.BIsMovie( $Elem ) )
 	{
 		this.LoadMovie( $Elem, bUserAction );
-		$Elem.show();
 		this.bScreenshotsOnly = false;
 	}
-	else
-	{
-		$Elem.stop();
+	
+	$Elem.stop();
 
-		if ( bSkipAnimation )
-			$Elem.show();
-		else
-			$Elem.fadeTo( 400, 1.0 );
-	}
+	if ( bSkipAnimation )
+		$Elem.show();
+	else
+		$Elem.fadeTo( 400, 1.0 );
 
 	this.m_activeItem = $Elem;
  }
