@@ -18,7 +18,6 @@
 						<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 						<Label id="InGameControllerScreenshot" text="#SettingsInGame_Home" />
 						<Label class="Plus" text="+" />
-						<KeyboardShortcut id="GamepadBtn" type="gamepad" disabled="true"/>
                         <Image class="TriggerButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 					</Panel>
 				</Panel>

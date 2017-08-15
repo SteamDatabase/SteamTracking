@@ -1685,6 +1685,7 @@
 	"Library_Details_NewsByline"	"{s:feed}"
 	"Library_Details_ViewNewsPost"	"VIEW NEWS POST"
 	"Library_Details_ScreenshotHowTo1"	"In-game shortcut Assigned via Controller Guide Chord Setting"
+	"Library_Details_ScreenshotHowTo2"	"In-Game Screenshot Shortcut"
 	"Library_Details_ManageScreenshots"	"MANAGE SCREENSHOTS"
 	"Library_Details_ViewGameBadge"	"VIEW BADGE"
 	"Library_Details_ViewAllScreenshots"	"View all screenshots ({s:sscount})"

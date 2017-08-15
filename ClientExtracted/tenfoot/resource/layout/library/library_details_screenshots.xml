@@ -18,7 +18,14 @@
 							<Image id="ScreenshotThumb3" class="ScreenshotsSmallThumb" scaling="stretch-to-fit-x-preserve-aspect" horizontalalign="center" verticalalign="center" />
 						</Panel>
 						<Panel id="HowToWrapper">
+							<Panel class="ScreenshotLegendButtons">
+								<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
+								<Label class="Plus" text="+" />
+								<KeyboardShortcut class="TriggerButtonBox" id="RT_btn" type="gamepad" />
+								<Image class="TriggerButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
+							</Panel>
 							<Label id="ScreenshotHowToLabel1" class="HowToLabel" text="#Library_Details_ScreenshotHowTo1" />
+							<Label id="ScreenshotHowToLabel2" class="HowToLabel" text="#Library_Details_ScreenshotHowTo2" />
 						</Panel>
 					</Panel>
 				</Panel>

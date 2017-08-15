@@ -2088,7 +2088,7 @@ LibraryRecentNews .LargeNewsByline
 
 .VR #ScreenshotThumbs
 {
-	height: 220px;
+	height: 180px;
 }
 
 .ScreenshotsSmallThumb {
@@ -2449,12 +2449,42 @@ LibraryRecentNews .LargeNewsByline
 	margin-top: 55px;	
 }
 
+
+// Turn shortcut hint on for VR controllers
+.ScreenshotLegendButtons,
+#ScreenshotHowToLabel2,
+.VR #ScreenshotHowToLabel1 
+{
+	visibility: collapse;
+}
+
+#ScreenshotHowToLabel1,
+.VR #ScreenshotHowToLabel2,
+.VR .ScreenshotLegendButtons 
+{
+	visibility: visible;
+}
+
+// Turn shortcut hint off for VR + Gamepad
+.VR.ControllerPresent #ScreenshotHowToLabel2,
+.VR.ControllerPresent .ScreenshotLegendButtons,
+{
+	visibility: collapse;
+}
+
+.VR.ControllerPresent #ScreenshotHowToLabel1,
+{
+	visibility: visible;
+}
+
+
 #HowToWrapper .ScreenshotLegendButtons {
 	horizontal-align: center;
 	flow-children: right;
 	margin-left: 6px;
 	margin-right: 6px;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
+	pre-transform-scale2d: 1.1;
 	font-size: 21px;
 	font-family: "Motiva Sans";
 	font-weight: normal;

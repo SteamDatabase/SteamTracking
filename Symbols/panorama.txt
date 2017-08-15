@@ -9675,7 +9675,6 @@
  T panorama::CGamepadController::GetConnectGamePadPowerLevel(int)
  T panorama::CGamepadController::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CGamepadController::GetNumGamepadsConnected() const
- T panorama::CGamepadController::GetSDLGameControllerMappings(CUtlString*)
  T panorama::CGamepadController::GotWindowFocus()
  T panorama::CGamepadController::HandleXDeviceAxis(panorama::CGamepadController::xdevice_t*, int, panorama::GamePadCode, panorama::GamePadCode, int)
  T panorama::CGamepadController::Initialize(panorama::IUISettings*)

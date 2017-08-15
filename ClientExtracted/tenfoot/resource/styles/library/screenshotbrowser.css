@@ -251,11 +251,24 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 	visibility: collapse;
 }
 
+// Show screenshot shortcut when in VR with motion controllers
+.VR #GamepadHotkeySection
+{
+	visibility: visible;
+}
+
+// Don't show screenshot shortcut when in VR with gamepad
+.VR.ControllerPresent #GamepadHotkeySection
+{
+	visibility: collapse;
+}
+
 .GamepadHotkeyRow
 {
 	flow-children: right;
 	horizontal-align: center;
 }
+
 
 .GamepadHotkeyRow Label, .GamepadHotkeyRow KeyboardShortcut
 {
