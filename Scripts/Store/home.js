@@ -531,9 +531,9 @@ GHomepage = {
 			{
 				$ImgCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
 					.append(
-						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: '/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
-						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: '/public/images/blank.gif', 'data-image-url': strImageURL } ),
-						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: '/public/images/blank.gif', 'data-image-url': strImageURL } )
+						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
+						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
+						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
 					)
 				);
 			}

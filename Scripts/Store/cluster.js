@@ -395,7 +395,7 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 
 	if ( rgItemData.main_capsule )
 	{
-		$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: '/public/images/v6/home/maincap_placeholder_616x353.gif', 'data-image-url': rgItemData.main_capsule } ) );
+		$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif', 'data-image-url': rgItemData.main_capsule } ) );
 	}
 	else
 	{
@@ -404,9 +404,9 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 		{
 			$CapCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
 					.append(
-					$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: '/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
-					$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: '/public/images/blank.gif', 'data-image-url': strImageURL } ),
-					$J('<img/>', {'class': 'cluster_maincap_fill_header', src: '/public/images/blank.gif', 'data-image-url': strImageURL } )
+					$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
+					$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
+					$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
 				)
 			);
 		}

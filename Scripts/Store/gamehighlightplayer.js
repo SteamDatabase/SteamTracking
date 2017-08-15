@@ -313,7 +313,7 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 			{
 				var strRequiredVersion = "9";
 				if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
-				swfobject.embedSWF( "/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
+				swfobject.embedSWF( "https://steamstore-a.akamaihd.net/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
 
 				// is the element still around?
 				$Target = $JFromIDOrElement(strTarget);
@@ -627,12 +627,12 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 		$Title.text( 'View full-size version in browser' );
 	else
 		$Title.text( 'Download full-size version' );
-	$Title.append( ' ', $J('<img/>', {src: '/public/images/v5/ico_external_link.gif' } ) );
+	$Title.append( ' ', $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } ) );
 
 	var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
 
 	var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
-	var $ImgPreload = $J('<img/>', {'src': '/public/images/blank.gif', 'style': 'display: none;' } );
+	var $ImgPreload = $J('<img/>', {'src': 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'style': 'display: none;' } );
 	var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img, $ImgPreload );
 
 	var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );

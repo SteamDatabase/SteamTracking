@@ -236,7 +236,7 @@ function SaleCap( item, strFeatureContext, strDiscountClass )
 	var $CapCtn = $J('<a/>', params );
 	GStoreItemData.BindHoverEvents( $CapCtn, item.appid, item.packageid );
 
-	var $Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': '/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+	var $Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } );
 	$Img.data('src-maincap', rgItemData['main_capsule'] );
 	$Img.data('src-smallcap', rgItemData['small_capsule'] );
 

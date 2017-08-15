@@ -120,7 +120,7 @@ function GetMarketPriceOverview( container, params )
 	elPriceInfo.append( elPriceInfoHeader );
 
 	var elPriceInfoContent = $J( '<div/>', { 'style': 'min-height: 3em; margin-left: 1em;' } );
-	elPriceInfoContent.html( '<img src="/public/images/login/throbber.gif" alt="#Economy_Market_BuyDialog_WaitThrobber_AltText">' );
+	elPriceInfoContent.html( '<img src="https://steamstore-a.akamaihd.net/public/images/login/throbber.gif" alt="#Economy_Market_BuyDialog_WaitThrobber_AltText">' );
 	elPriceInfo.append( elPriceInfoContent );
 
 	container.append( elPriceInfo );
