@@ -5,6 +5,10 @@ body.v6 {
 
 		}
 
+.browse_content {
+	width: 100%;
+}
+
 .header_area {
 	display: flex;
 	margin-bottom: 40px;
@@ -377,4 +381,30 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 
 .browse_filters a:hover {
 	background-color: rgba(255,255,255,0.1);
+}
+
+.browse_filters a.selected {
+	background-color: #67c1f5;
+}
+
+.browse_filters a.selected:hover {
+	color: #000;
+}
+/* Recommendations */
+.browse_content > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.browse_content .recommendation {
+	display: flex;
+	padding: 5px;
+	border-bottom: 1px solid #1e3243;
+	margin: 5px;
+
+}
+
+.browse_content .recommendation .recommendation_midcol {
+	flex-grow: 1;
+	padding: 0 10px;
 }

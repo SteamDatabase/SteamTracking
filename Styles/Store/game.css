@@ -1784,6 +1784,9 @@ a.friend_block_holder:hover {
 	html.responsive .rightcol.game_meta_data .block {
 		padding: 12px;
 	}
+	html.responsive .rightcol.game_meta_data .block.recommendation_reasons {
+		padding-left: 30px;
+	}
 }
 
 @media screen and ( max-width: 625px )
@@ -2647,17 +2650,20 @@ div.early_access_header .devnotes h1 {
 div.early_access_header .devnotes .morebutton {
 	position: absolute;
 	display: block;
-	right: 15px;
-	bottom: 11px;
+	right: 0px;
+	padding-right: 15px;
+	padding-top: 3px;
+	height: 15px;
+	bottom: 10px;
 	background: #182130;
 	padding-left: 30px;
 
-	background: -moz-linear-gradient(left,  rgba(24,33,48,0) 0%, rgba(24,33,48,1) 15%, rgba(24,33,48,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(24,33,48,0)), color-stop(15%,rgba(24,33,48,1)), color-stop(100%,rgba(24,33,48,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(24,33,48,0) 0%,rgba(24,33,48,1) 15%,rgba(24,33,48,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(24,33,48,0) 0%,rgba(24,33,48,1) 15%,rgba(24,33,48,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(24,33,48,0) 0%,rgba(24,33,48,1) 15%,rgba(24,33,48,1) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(24,33,48,0) 0%,rgba(24,33,48,1) 15%,rgba(24,33,48,1) 100%); /* W3C */
+	background: -moz-linear-gradient(left,  rgba(27,40,56,0) 0%, rgba(27,40,56,1) 15%, rgba(27,40,56,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(27,40,56,0)), color-stop(15%,rgba(27,40,56,1)), color-stop(100%,rgba(27,40,56,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(27,40,56,0) 0%,rgba(27,40,56,1) 15%,rgba(27,40,56,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(27,40,56,0) 0%,rgba(27,40,56,1) 15%,rgba(27,40,56,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(27,40,56,0) 0%,rgba(27,40,56,1) 15%,rgba(27,40,56,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(27,40,56,0) 0%,rgba(27,40,56,1) 15%,rgba(27,40,56,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18213000', endColorstr='#182130',GradientType=1 ); /* IE6-9 */
 
 	text-transform: uppercase;
@@ -2757,7 +2763,7 @@ div.early_access_announcements .post a {
 }
 
 div.early_access_announcements .post h2 {
-	color: #61686d;
+	color: #56707F;
 	font-size: 11px;
 	font-weight: normal;
 	font-style: normal;
@@ -2792,7 +2798,7 @@ div.early_access_announcements .post .container {
 }
 
 div.early_access_announcements .post img {
-	max-width: 293px;
+	max-width: 100%;
 }
 
 div.early_access_announcements .post p a {
@@ -2806,7 +2812,7 @@ div.early_access_announcements .post .hr {
 }
 
 div.early_access_announcements .post .more {
-	color: #527ba5;
+	color: #67c1f5;
 	text-transform: uppercase;
 	font-size: 11px;
 }
@@ -2815,7 +2821,7 @@ div.early_access_announcements .post .more:hover {
 }
 
 div.early_access_announcements .post .comments {
-	color: #5e5e61;
+	color: #56707F;
 	font-size: 11px;
 	float: right;
 	display: block;

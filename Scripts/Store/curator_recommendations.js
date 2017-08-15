@@ -178,3 +178,56 @@ function InitPagingControls( oPagingData )
 	InitSearchFilters();
 }
 
+function CuratorFieldToggle( elNode, strValue )
+{
+	var elInput = elNode.querySelector('input');
+	if( elInput.value == strValue )
+	{
+		elNode.classList.remove('selected');
+		elInput.value = '';
+	}
+	else
+	{
+		elNode.classList.add('selected');
+		elInput.value = strValue;
+	}
+
+	UpdateCurationList();
+}
+
+
+function UpdateCurationList( )
+{
+	var elForm = document.getElementById('filter_box');
+	var elTarget = document.getElementById('RecommendationsTable');
+
+	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
+
+	var rgValues = [];
+	for( var j=0; j<rgTags.length; j++ )
+	{
+		if ( rgTags[ j ].value )
+		{
+			rgValues.push ( rgTags[ j ].value );
+		}
+	}
+
+	var strSort = elForm.querySelector('*[name="sortby"]').value;
+	var strFilter = elForm.querySelector('*[name="filter"]').value;
+
+	$J.ajax ( {
+		url: g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/',
+		data: {
+			tagids: rgValues,
+			sort: strSort,
+			filter: strFilter
+		},
+		type: 'GET',
+		cache: true
+	} ).done( function ( data )
+	{
+		elTarget.innerHTML = data;
+	});
+
+}
+

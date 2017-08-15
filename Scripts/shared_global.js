@@ -3904,20 +3904,13 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
  * @param strpageTitle Optional: Replace page title with this new value.
  * @constructor
  */
-CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle, bSkipRequest )
+CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle, event )
 {
 	// @todo chrisk show throbber
 	var _this = this;
 	var strURL = this.strBaseURL + strLocation;
 
-	if( bSkipRequest )
-	{
-		if( strPageTitle )
-			document.title = strPageTitle;
-
-		window.history.pushState({'html':this.elTarget.innerHTML,'title':strPageTitle, 'id': this.strStateID}, '', strURL );
-		return;
-	}
+	this.elTarget.classList.add('loading');
 
 	$J.ajax({
 		url: strURL,
@@ -3925,7 +3918,8 @@ CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle,
 		cache: true, /* Let the browser decide caching rules */
 		data: { 'ajax': 1 }
 	}).done(function( result ) {
-		_this.elTarget.innerHTML = result;
+		$J(_this.elTarget).html( result );
+		_this.elTarget.classList.remove('loading');
 		_this.InstrumentLinks( _this.elTarget );
 		if( strPageTitle )
 			document.title = strPageTitle;
@@ -3933,7 +3927,8 @@ CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle,
 		window.history.pushState({'html':result,'title':strPageTitle, 'id': _this.strStateID}, '', strURL );
 	});
 
-	event.preventDefault();
+	if( event )
+		event.preventDefault();
 
 };
 
