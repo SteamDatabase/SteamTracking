@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.4626b6a84774504ad4e0b43cb524d4cd92b72a02.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.28a0d9b295ef6ea35904f5e2e4d20fc2b94f71d7.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -941,6 +941,31 @@
 				
 			},
 			{
+				"name": "weapon_knifegg",
+				"defindex": 41,
+				"item_class": "weapon_knifegg",
+				"item_type_name": "Knife",
+				"item_name": "Knife",
+				"item_description": "Quiet and always available, the knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/weapon_knife",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_knife.a07b900d79ea768eae1a217a2839c5727f760396.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_stattrack_swap": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "weapon_knife",
 				"defindex": 42,
 				"item_class": "weapon_knife",
@@ -1110,6 +1135,147 @@
 				"capabilities": {
 					"nameable": true
 				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_kevlar",
+				"defindex": 50,
+				"item_class": "item_kevlar",
+				"item_type_name": "Equipment",
+				"item_name": "Kevlar Vest",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_assaultsuit",
+				"defindex": 51,
+				"item_class": "item_assaultsuit",
+				"item_type_name": "Equipment",
+				"item_name": "Kevlar + Helmet",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_heavyassaultsuit",
+				"defindex": 52,
+				"item_class": "item_heavyassaultsuit",
+				"item_type_name": "Equipment",
+				"item_name": "Heavy Assault Suit",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_nvg",
+				"defindex": 54,
+				"item_class": "item_nvgs",
+				"item_type_name": "Equipment",
+				"item_name": "",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_defuser",
+				"defindex": 55,
+				"item_class": "item_defuser",
+				"item_type_name": "Equipment",
+				"item_name": "Defuse Kit",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "item_cutters",
+				"defindex": 56,
+				"item_class": "item_defuser",
+				"item_type_name": "Equipment",
+				"item_name": "Rescue Kit",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_healthshot",
+				"defindex": 57,
+				"item_class": "weapon_healthshot",
+				"item_type_name": "Equipment",
+				"item_name": "Medi-Shot",
+				"item_description": "Medi-Shot",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/weapon_healthshot",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
 				"attributes": [
 
 				]
@@ -1293,6 +1459,27 @@
 					"can_sticker": true,
 					"can_stattrack_swap": true
 				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_tagrenade",
+				"defindex": 68,
+				"item_class": "weapon_tagrenade",
+				"item_type_name": "Grenade",
+				"item_name": "Tactical Awareness Grenade",
+				"item_description": "Tactical Awareness Grenade",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ/weapons/base_weapons/weapon_tagrenade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
 				"attributes": [
 
 				]
@@ -7609,6 +7796,27 @@
 					"type": "season_pass",
 					"use_string": "USE"
 				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Game License",
+				"defindex": 1353,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Counter-Strike: Global Offensive Game License",
+				"item_description": "This is a purchased game license for Counter-Strike: Global Offensive",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_tactics",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics.fc68bc1c1ad538846b975d4b118398c9cc4abe79.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.d90bab9e7a60906d447d8b6663a52cde989a7047.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
 				"attributes": [
 
 				]
@@ -30148,6 +30356,62 @@
 				"stored_as_integer": true
 			},
 			{
+				"name": "zoom time 0",
+				"defindex": 190,
+				"attribute_class": "zoom_time_0",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "zoom time 1",
+				"defindex": 191,
+				"attribute_class": "zoom_time_1",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "zoom time 2",
+				"defindex": 192,
+				"attribute_class": "zoom_time_2",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "zoom fov 1",
+				"defindex": 193,
+				"attribute_class": "zoom_fov_1",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "zoom fov 2",
+				"defindex": 194,
+				"attribute_class": "zoom_fov_2",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "hide view model zoomed",
+				"defindex": 195,
+				"attribute_class": "zoom_fov_1",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "zoom levels",
+				"defindex": 196,
+				"attribute_class": "zoom_levels",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
 				"name": "kill award",
 				"defindex": 197,
 				"attribute_class": "kill_award",
@@ -30253,6 +30517,174 @@
 				"defindex": 234,
 				"attribute_class": "inaccuracy_jump_initial",
 				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "attack movespeed factor",
+				"defindex": 242,
+				"attribute_class": "attack_movespeed_factor",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "allow hand flipping",
+				"defindex": 243,
+				"attribute_class": "allow_hand_flipping",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "is melee weapon",
+				"defindex": 245,
+				"attribute_class": "is_melee_weapon",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "model right handed",
+				"defindex": 246,
+				"attribute_class": "model_right_handed",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "weapon weight",
+				"defindex": 247,
+				"attribute_class": "weapon_weight",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "wrong team msg",
+				"defindex": 248,
+				"attribute_class": "wrong_team_msg",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "itemflag select on empty",
+				"defindex": 249,
+				"attribute_class": "itemflag_select_on_empty",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag no auto reload",
+				"defindex": 250,
+				"attribute_class": "itemflag_no_auto_reload",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag no auto switch empty",
+				"defindex": 251,
+				"attribute_class": "itemflag_no_auto_switch_empty",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag limit in world",
+				"defindex": 252,
+				"attribute_class": "itemflag_limit_in_world",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag exhaustible",
+				"defindex": 253,
+				"attribute_class": "itemflag_exhaustible",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag do hit location dmg",
+				"defindex": 254,
+				"attribute_class": "itemflag_do_hit_location_dmg",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag no ammo pickups",
+				"defindex": 255,
+				"attribute_class": "itemflag_no_ammo_pickups",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "itemflag no item pickup",
+				"defindex": 256,
+				"attribute_class": "itemflag_no_item_pickup",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "inaccuracy reload",
+				"defindex": 257,
+				"attribute_class": "inaccuracy_reload",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "throw velocity",
+				"defindex": 259,
+				"attribute_class": "throw_velocity",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "bot audible range",
+				"defindex": 261,
+				"attribute_class": "bot_audible_range",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "rumble effect",
+				"defindex": 262,
+				"attribute_class": "rumble_effect",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "inaccuracy pitch shift",
+				"defindex": 263,
+				"attribute_class": "inaccuracy_pitch_shift",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "inaccuracy alt sound threshold",
+				"defindex": 264,
+				"attribute_class": "inaccuracy_alt_sound_threshold",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "silencer model",
+				"defindex": 265,
+				"attribute_class": "silencer_model",
+				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
 			}
