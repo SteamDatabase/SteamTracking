@@ -560,38 +560,6 @@ function EnterTaxDetails()
 	);
 }
 
-function PayAppSubmissionFee()
-{
-	var waitingDialog = ShowBlockingWaitDialog( 'Please Wait', 'Starting transaction...' );
-	$J.ajax(
-		{
-			type: "POST",
-			url: 'https://partner.steamgames.com/newpartner/ajaxpayfee/',
-			data: {'sessionid': g_sessionID},
-			success: function ( response ) {
-				if ( response.success == 1 )
-				{
-					top.location.href = response.redirect_url;
-				}
-				else
-				{
-					waitingDialog.Dismiss();
-					var errorString = 'An error was encountered while processing your request: ';
-					if ( typeof response.error !== 'undefined' )
-					{
-						errorString += response.error.errordesc + ' (' + response.error.errorcode + ')';
-					}
-					else
-					{
-						errorString += response.success;
-					}
-					ShowAlertDialog( 'Error', errorString );
-				}
-			}
-		}
-	);
-}
-
 function Abandon()
 {
 	var confirmDialog = ShowConfirmDialog( 'Are You Sure You Want to Start Over?', 'Clicking \'OK\' will erase any information you have already entered and force you to start the process over.<br><br>Are you sure you want to continue?' );
