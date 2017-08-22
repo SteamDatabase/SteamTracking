@@ -78,6 +78,18 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "(Optional) level of severity of bad action being reported"
+                },
+                {
+                    "name": "matchid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) matchid to identify the game instance"
+                },
+                {
+                    "name": "cheating_type",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) app specific data about the type of cheating"
                 }
             ]
         },
