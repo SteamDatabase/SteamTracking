@@ -2526,6 +2526,14 @@ input#enablevac:disabled {
 	background-color: #730000;
 }
 
+.cdkey_request.app_credit_partner {
+	background-color: #385a88;
+}
+
+.cdkey_request.app_credit_partner:hover {
+	background-color: #243c5b;
+}
+
 .cdkey_request.alt {
 	background-color: #383838;
 }

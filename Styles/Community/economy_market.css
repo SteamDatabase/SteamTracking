@@ -2033,7 +2033,7 @@ input.filter_search_box:focus {
 		border: none;
 	}
 
-	html.responsive .mar_listing_largeimage {
+	html.responsive .market_listing_largeimage {
 		height: auto;
 		max-width: 45%;
 		padding: 0 5%;

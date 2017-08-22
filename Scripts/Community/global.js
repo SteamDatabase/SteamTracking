@@ -118,7 +118,6 @@ var g_whiteListedDomains = [
 	"aperturescience.com",
 	"dayofdefeat.com",
 	"dota2.com",
-	"steamtranslation.ru",
 	"playdota.com",
 	"kickstarter.com",
 	"gamingheads.com",

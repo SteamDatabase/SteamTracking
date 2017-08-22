@@ -671,7 +671,7 @@ function AddCountryOffsitePurchasePriceOverride( country, currency, min, max )
 	newRow += '<td><input type="hidden" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][currency]" value="' + currency.toLowerCase() + '">' + currency.toUpperCase() + '</td>';
 	newRow += '<td><input type="text" onkeypress="return IsNumberKey( event )" size="20" maxlength="20" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][min]" value="' + min + '"></td>';
 	newRow += '<td><input type="text" onkeypress="return IsNumberKey( event )" size="20" maxlength="20" name="app[content][offsite_purchase][countries][' + country + '][pricingoverride][max]" value="' + max + '"></td>';
-	newRow += '<td><span tabindex="0" style="cursor: pointer;" class="icon icon_delete" onkeypress="if (event.keyCode==13) $J( this ).click();" onclick="$J( \'#offsite_purchase_country_price_override_' + country + '\' ).remove();"></span></td>';
+	newRow += '<td><span tabindex="0" style="cursor: pointer;" class="icon icon_delete" onkeypress="if (event.keyCode==13) $J( this ).click();" onclick="SubmitQuickMessageUpdate({ \'app[content][offsite_purchase][countries][' + country + '][pricingoverride]\': \'\' });"></span></td>';
 	newRow += '</tr>';
 	$J( '#offsite_purchase_country_price_override_addnew' ).before( newRow );
 }

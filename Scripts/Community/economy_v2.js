@@ -2978,9 +2978,9 @@ var iActiveSelectView = 0;
 
 var HoverCurrencyFromTemplate = new Template( '<span style="#{currencystyle}">#{amount}</span> from #{contextname}');
 
-function GetNameForItem( item )
+function GetEscapedNameForItem( item )
 {
-	var strName = item.description.name;
+	var strName = item.description.name.escapeHTML();
 	if ( CurrencyIsWalletFunds( item ) )
 		strName = v_currencyformat( item.amount, item.description.name ) + ' <span class="hover_item_name_small">' + strName + '</span>';
 	else if ( item.is_stackable )
@@ -3010,8 +3010,8 @@ function BuildHover( prefix, item, owner )
 	$(prefix+'_item_icon').src = url;
 	$(prefix+'_item_icon').alt = description.name;
 
-	var strName = GetNameForItem( item );
-	$(prefix+'_item_name').update( strName.escapeHTML() );
+	var htmlName = GetEscapedNameForItem( item );
+	$(prefix+'_item_name').update( htmlName );
 
 	var elArrowLeft = $(prefix+'_arrow_left');
 	var elArrowRight = $(prefix+'_arrow_right');
@@ -3625,7 +3625,7 @@ SellItemDialog = {
 		else
 			elItemImage.src = ImageURL( description.icon_url, '96f', '96f' );
 
-		this.m_strEscapedName = GetNameForItem( item ).escapeHTML();
+		this.m_strEscapedName = GetEscapedNameForItem( item );
 		$('market_sell_dialog_item_name').update( description.name.escapeHTML() );
 		$('market_sell_quantity_available_amt').update( item.amount );
 
