@@ -2526,7 +2526,6 @@ function SelectPaymentMethod( method )
 	UpdatePaymentInfoForm();
 }
 
-// this is a list of payment methods that are not allowed to be used in a split
 var g_rgPaymentMethodsToToggle = new Array();
 g_rgPaymentMethodsToToggle[0] = 'steamaccount';
 g_rgPaymentMethodsToToggle[1] = 'boleto';
@@ -2637,6 +2636,8 @@ function UpdatePaymentInfoForm()
 		var bShowStoredPayPalDetails = false;
 		var bDisabledPaymentMethod = false;
 		var bShowBankSelection = false;
+		var bPaymentMethodRefundable = rgPaymentMethodProperties[ method.value ].refundable;
+		
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
 		
@@ -2878,10 +2879,13 @@ function UpdatePaymentInfoForm()
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
 		
-		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'black' : 'none';
+		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'block' : 'none';
 		$('youll_get_to_review').style.display = strAllowPaymentMethod;
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
+		
+		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'block' : 'none';
+		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
 	} 
 	catch( e ) 
 	{
@@ -4859,6 +4863,12 @@ function FinalizeTransaction()
 function SSAPopup()
 {
 		var win = window.open( 'https://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
+	win.focus();
+}
+
+function RefundPaymentMethodsPopup()
+{
+		var win = window.open( 'https://store.steampowered.com/steam_refunds_methods','steam_refund_details','width=1024,height=768');
 	win.focus();
 }
 
