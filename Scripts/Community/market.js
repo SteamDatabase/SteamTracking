@@ -1904,6 +1904,16 @@ function Market_LoadOrderSpread( item_nameid )
 				$elOrdersHistogram.show();
 				var line1 = data.sell_order_graph;
 				var line2 = data.buy_order_graph;
+				var numXAxisTicks = null;
+				if ( $J(window).width() < 400 )
+				{
+					numXAxisTicks = 3;
+				}
+				else if ( $J(window).width() < 600 )
+				{
+					numXAxisTicks = 4;
+				}
+
 				var numYAxisTicks = 11;
 				var strFormatPrefix = data.price_prefix;
 				var strFormatSuffix = data.price_suffix;
@@ -1918,6 +1928,7 @@ function Market_LoadOrderSpread( item_nameid )
 					axes:{
 						xaxis:{
 							tickOptions:{formatString:strFormatPrefix + '%0.2f' + strFormatSuffix, labelPosition:'start', showMark: false},
+							numberTicks: numXAxisTicks,
 							min: data.graph_min_x,
 							max: data.graph_max_x
 						},

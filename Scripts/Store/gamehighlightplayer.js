@@ -259,14 +259,33 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 		var $Video = $J( '<video/>', rgAttributes );
 		var _this = this;
 		$Video.on( 'error', function() {
-			if ( bSupportsWebM )
-				$Container.data('webm-failed', true );
-			else if ( bSupportsMP4 )
-				$Container.data('mp4-failed', true );
 
-			// try again, with the next fallback
-			$Container.empty();
-			_this.LoadMovie( $Container, bUserAction );
+			// make sure it's the video, not the poster that is failing
+			var img = new Image();
+			img.onload = function()
+			{
+				// if the poster is ok, then a video failed
+				if (bSupportsWebM)
+					$Container.data('webm-failed', true);
+				else if (bSupportsMP4)
+					$Container.data('mp4-failed', true);
+
+				// try again, with the next fallback
+				$Container.empty();
+				_this.LoadMovie( $Container, bUserAction );
+			};
+
+			img.onerror = function()
+			{
+				// if the poster failed, remove it and try again
+				$Container.data('poster', '');
+
+				// try playing the videos again
+				$Container.empty();
+				_this.LoadMovie( $Container, bUserAction );
+			}
+
+			img.src = $Container.data('poster');
 		});
 
 		// use the global to tell the player that it should unmute this video

@@ -1938,18 +1938,39 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 // Advances the carousel by one. Optionally pass in a specific index to advance to.
 CGenericCarousel.prototype.UpdateControls = function( )
 {
-	if( !this.bNoWrap )
-		return;
 
-	if( this.nIndex == 0 )
+	console.log(this.nItems);
+
+	// Only one item, so hide the arrows since they're not useful.
+	if( this.nItems == 1 )
+	{
 		this.$elArrowLeft.hide();
-	else
-		this.$elArrowLeft.show();
-
-	if( this.nIndex == this.nItems-1 )
 		this.$elArrowRight.hide();
+		return;
+	}
+
+	// Our carousel does not wrap, so conditionally show/hider arrows
+	if( this.bNoWrap )
+	{
+		if( this.nIndex == 0 )
+			this.$elArrowLeft.hide();
+		else
+			this.$elArrowLeft.show();
+
+		if( this.nIndex == this.nItems-1 )
+			this.$elArrowRight.hide();
+		else
+			this.$elArrowRight.show();
+
+	}
 	else
+	{
+		this.$elArrowLeft.show();
 		this.$elArrowRight.show();
+		return;
+	}
+
+
 
 };
 
