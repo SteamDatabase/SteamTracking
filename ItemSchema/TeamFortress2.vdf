@@ -92215,6 +92215,10 @@
 		{		
 			"name"				"Arms Race 1 1st Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_first"
 			"item_description"	"#TF_TournamentMedal_armsrace1"
@@ -92228,6 +92232,10 @@
 		{		
 			"name"				"Arms Race 1 2nd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_second"
 			"item_description"	"#TF_TournamentMedal_armsrace1"
@@ -92241,6 +92249,10 @@
 		{		
 			"name"				"Arms Race 1 3rd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_third"
 			"item_description"	"#TF_TournamentMedal_armsrace1"
@@ -92254,6 +92266,10 @@
 		{		
 			"name"				"Arms Race 1 Participant"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_participant"
 			"item_description"	"#TF_TournamentMedal_armsrace1"
@@ -92267,6 +92283,10 @@
 		{		
 			"name"				"Arms Race 2 1st Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_first"
 			"item_description"	"#TF_TournamentMedal_armsrace2"
@@ -92280,6 +92300,10 @@
 		{		
 			"name"				"Arms Race 2 2nd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_second"
 			"item_description"	"#TF_TournamentMedal_armsrace2"
@@ -92293,6 +92317,10 @@
 		{		
 			"name"				"Arms Race 2 3rd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_third"
 			"item_description"	"#TF_TournamentMedal_armsrace2"
@@ -92306,6 +92334,10 @@
 		{		
 			"name"				"Arms Race 2 Participant"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_participant"
 			"item_description"	"#TF_TournamentMedal_armsrace2"
@@ -99725,6 +99757,10 @@
 		{		
 			"name"				"Arms Race 3 1st Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_first"
 			"item_description"	"#TF_TournamentMedal_armsrace3"
@@ -99738,6 +99774,10 @@
 		{		
 			"name"				"Arms Race 3 2nd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_second"
 			"item_description"	"#TF_TournamentMedal_armsrace3"
@@ -99751,6 +99791,10 @@
 		{		
 			"name"				"Arms Race 3 3rd Place"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_third"
 			"item_description"	"#TF_TournamentMedal_armsrace3"
@@ -99764,6 +99808,10 @@
 		{		
 			"name"				"Arms Race 3 Participant"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_armsrace_participant"
 			"item_description"	"#TF_TournamentMedal_armsrace3"
