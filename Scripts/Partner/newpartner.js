@@ -169,6 +169,7 @@ function ValidateCompanyInfo( bTransition, nextSection )
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[city]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[state]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[postal_code]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );
 
 
 	if ( !bHasRequiredFields )

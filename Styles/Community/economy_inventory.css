@@ -980,3 +980,11 @@ html.responsive .responsive_inventory_fixed_ctn {
 	background: #000000;
 	top: 62px;
 }
+
+.giftcard_billing_required {
+	margin-bottom: 10px;
+}
+
+.redeem_form_row {
+	margin-bottom: 10px;
+}

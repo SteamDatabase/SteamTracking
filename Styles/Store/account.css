@@ -15,8 +15,8 @@
 }
 
 .licenseLegend, .transactionLegend {
-	background: #2a3f5a;
-	color: #8f98a0;
+	background: #0197cf;
+	color: #fff;
 	font-size: 11px;
 	text-transform: uppercase;
 	padding: 2px 14px;
@@ -237,7 +237,8 @@
 	cursor: pointer;
 }
 
-.redeem_wallet_code_form
+.redeem_wallet_code_form,
+.registerkey_form
 {
 	padding-left: 14px;
 	padding-right: 14px;
@@ -285,7 +286,8 @@
 	line-height: 18px;
 }
 
-.redeem_wallet_code_upsell_header
+.redeem_wallet_code_upsell_header,
+.registerkey_instructions_header
 {
 	font-size: 15px;
 	color: #FFFFFF !important;
@@ -370,6 +372,39 @@ body.redeemwalletcode .page_content_ctn .page_content {
 .redeem_input_box_text
 {
 	width: 200px;
+}
+
+#product_key
+{
+	width: 450px;
+}
+
+.block.registerkey_productlist
+{
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.registerkey_form #purchase_confirm_ssa
+{
+	float: left;
+	margin-top: 10px;
+}
+
+.registerkey_keyexamples
+{
+	margin-top: 10px;
+}
+
+.registerkey_keyexample_header
+{
+	font-size: 15px;
+}
+
+.registerkey_keyexample
+{
+	margin-left: 10px;
 }
 
 .redeem_wallet_background
@@ -671,8 +706,8 @@ div.youraccount_history_home>div.account_wallet {
 	padding: 5px 14px;
 }
 
-th.license_date_col,
-td.license_date_col {
+.account_table th.license_date_col,
+.account_table td.license_date_col {
 	text-align: right;
 }
 
@@ -702,11 +737,15 @@ td.license_date_col {
 	border-collapse: collapse;
 }
 
+.block_content.account_table_ctn {
+	margin-bottom: 80px;
+}
+
 .account_table th {
 	text-align: left;
 	text-transform: uppercase;
-	background-color: #2a3f5a;
-	color: #8f98a0;
+	background-color: #0197cf;
+	color: #fff;
 	font-size: 11px;
 	text-transform: uppercase;
 	padding: 2px 14px;
@@ -788,15 +827,15 @@ td.license_date_col {
 }
 
 .wallet_history_table tr:nth-child(odd) {
-	background-color: #161e2b;
+	background-color: rgba( 0, 0, 0, 0.2);
 }
 
 .wallet_history_table tr:hover {
-	background-color: #2a445a;
+	background-color: rgba( 255, 255, 255, 0.2);
 }
 
 .wallet_history_table th {
-	background-color: #2c405b;
+	background-color: #0197cf;
 }
 
 .wallet_table_row {
@@ -809,7 +848,7 @@ td.wht_date {
 	min-width: 66px;
 	width: 10%;
 	font-size: 10px;
-	color: #717c84;
+	color: #7092A5;
 }
 
 .wht_items {
@@ -842,12 +881,12 @@ th.wht_wallet_balance {
 }
 
 .wth_item_refunded {
-	color: #808080;
+	color: #7092A5;
 	font-size: 80%;
 }
 
 td.wht_wallet_change {
-	color: #9f9f9f;
+	color: #7092A5;
 	text-align: right;
 	width: 5%;
 	white-space: nowrap;
@@ -855,7 +894,7 @@ td.wht_wallet_change {
 }
 
 td.wht_wallet_balance {
-	color: #9f9f9f;
+	color: #7092A5;
 	text-align: right;
 	width: 5%;
 	padding-right: 20px;
@@ -869,7 +908,7 @@ td.wht_wallet_pending {
 }
 
 .wallet_entry_highlight {
-	background-color: #234667;
+	background-color: rgba( 255, 255, 255, 0.2);
 }
 
 td.wht_wallet_balance.wallet_entry_highlight {
@@ -881,7 +920,7 @@ td.wht_wallet_change.wallet_entry_highlight {
 }
 
 .wth_payment {
-	color: #808080;
+	color: #7092A5;
 	font-size: 80%;
 }
 
@@ -1075,8 +1114,9 @@ td.wht_total {
 }
 
 .subscription_header_info {
+	font-size: 14px;
 	margin: 4px 0 8px 0;
-	color: #808891;
+	color: #C6D4DF;
 }
 
 .account_change_country_content {

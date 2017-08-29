@@ -1484,6 +1484,20 @@ function addBundleToCart( bundleid, dedupe )
 		// within the set of all buttons, get the index of the one that we are dealing with!
 		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
 		var allButtons = jQuery( filterAllButtons );
+
+		// Check for quantity
+		var idx = ( dedupe !== undefined ) ? dedupe : 0;
+		var quantity = jQuery( '#quantity_update_'+bundleid+'_'+idx ).val();
+		if ( quantity !== undefined )
+		{
+			var filterStringForm = 'form[name=add_bundle_to_cart_'+bundleid+']';
+			var formSelector = jQuery( filterStringForm );
+			if ( formSelector.length === 1 )
+			{
+				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo(formSelector);
+			}
+		}
+
 		// do we have anything to examine?
 		if ( allButtons.length > 0 )
 		{

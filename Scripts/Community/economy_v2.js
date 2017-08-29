@@ -42,7 +42,8 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 	g_bAllowHighDPIItemImages = $J('html').hasClass('responsive');
 
 	// set up the filter control
-	Filter.InitFilter( $('filter_control') );
+	if ( $( 'filter_control' ) )
+		Filter.InitFilter( $('filter_control') );
 
 	// decide what page we're going to start with
 	// 	priority: hash params > cookie > first non-empty inventory > first inventory

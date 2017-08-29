@@ -734,7 +734,8 @@ GDynamicStore = {
 				m_nPackageBasePriceInCents: 0,
 				m_nFinalPriceInCents: 0,
 				m_nFinalPriceInCentsWithBundleDiscount: 0,
-				m_rgBundleItems: []
+				m_rgBundleItems: [],
+				m_bIsCommercial: Bundle.m_bIsCommercial
 			};
 
 			for ( var i = 0; i < Bundle.m_rgItems.length; i++ )
@@ -771,7 +772,7 @@ GDynamicStore = {
 
 		var $DiscountBlocks = $El.find('.discount_block');
 
-		if ( !Bundle.m_rgBundleItems.length || ( Bundle.m_bMustPurchaseAsSet && Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle ) )
+		if ( !Bundle.m_bIsCommercial && ( !Bundle.m_rgBundleItems.length || ( Bundle.m_bMustPurchaseAsSet && Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle ) ) )
 		{
 
 			var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
