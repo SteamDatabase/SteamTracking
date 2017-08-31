@@ -1361,6 +1361,7 @@
  dyld_stub_binder
  fclose
  fcntl$UNIX2003
+ feof
  fflush
  fgets
  fileno
