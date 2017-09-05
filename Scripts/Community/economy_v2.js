@@ -5261,9 +5261,9 @@ function ShowEscrowExplanationDialog( bAddSteamGuardLink )
 	description.append( '<div class="escrow_explanation_a">If a user trading away or selling items hasn\'t had their account protected by a Mobile Authenticator for the past 7 days: <br><span style="color: #5aa9d6">Trades:</span> item delivery from completed trades will be delayed by Steam for up to 15 days <br><span style="color: #5aa9d6">Market:</span> sell listings will be held by Steam before they are posted for up to 15 days <br><br>This provides the user time to cancel any pending transactions they didn\'t authorize. <br><br>Cancelling trades that are pending or in a trade hold will begin a trading cooldown on your account to prevent any further unauthorized attempts to trade away items. There is no cooldown for cancelling market listings.</div>' );
 
 	description.append( '<div class="escrow_explanation_q">Remove the need for item holds</div>' );
-	description.append( '<div class="escrow_explanation_a">Using a Mobile Authenticator ensures that you and only you can trade or sell your items quickly and securely, so holds are no longer necessary. Increase your account security by getting the <a href="http://store.steampowered.com/mobile/">Steam Guard Mobile Authenticator</a> for iOS and Android devices. </div>' );
+	description.append( '<div class="escrow_explanation_a">Using a Mobile Authenticator ensures that you and only you can trade or sell your items quickly and securely, so holds are no longer necessary. Increase your account security by getting the <a href="http://store.steampowered.com/mobile/" target="_blank">Steam Guard Mobile Authenticator</a> for iOS and Android devices. </div>' );
 
-	description.append( '<div class="escrow_explanation_a"><a href="http://store.steampowered.com/news/20631/">Read the Steam blog post about account security</a> for a detailed explanation on why we implemented holds.</div>' );
+	description.append( '<div class="escrow_explanation_a"><a href="http://store.steampowered.com/news/20631/" target="_blank">Read the Steam blog post about account security</a> for a detailed explanation on why we implemented holds.</div>' );
 
 	if ( bAddSteamGuardLink )
 	{

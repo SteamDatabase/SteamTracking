@@ -2,39 +2,6 @@
 
 /* login page */
 
-.block {
-	margin: 0px;
-	background: none;
-}
-.checkout_content_box, .block_content_inner {
-	background-color: #000;
-	background-color: rgba(0,0,0,0.2)
-}
-.checkout_content_box.free_game {
-	background-color: rgba(0,0,0,0);
-}
-.checkout_content_box {
-	line-height:
-}
-.block_content {
-    border: none;
-}
-
-.block_content_inner
-{
-    padding: 16px 2px 4px 16px;
-}
-
-.text_input, .checkout_content_box input[type=text], .checkout_content_box input[type=password] {
-	background-color: rgba( 0, 0, 0, 0.2 );
-	color: #fff;
-	border: 1px solid #000;
-	border-radius: 3px;
-	box-shadow: 1px 1px 0px #45556c;
-	width: 500px;
-	padding: 5px;
-	margin: 4px 0;
-}
 .loginbox {
     min-height: 352px;
     padding: 16px;
@@ -99,164 +66,6 @@
 .loginbox #captchaRefresh {
 	margin-left: 220px;
 	padding-top: 8px;
-}
-
-#join_sys_req_title {
-	display: block;
-}
-
-#join_sys_req br, #join_sys_req_title  {
-	margin-bottom: 12px;
-}
-
-ul#why_list {
-	list-style-position: inside;
-	list-style-type: square;
-	line-height: 22px;
-}
-
-ul#why_list li {
-}
-
-/* register */
-
-.joinsteam_page a {
-	color: #B0AEAC;
-	text-decoration: underline;
-}
-
-.joinsteam_page a:hover {
-	color: #ffffff;
-}
-
-.join_form {
-	padding: 20px 16px;
-	position: relative;
-}
-
-.join_form .rule {
-	border-top: 1px solid #38444e;
-	margin: 15px 0px;
-}
-
-.form_row {
-
-}
-
-.form_area {
-	float: left;
-	width: 212px;
-}
-
-.form_notes {
-	float: left;
-	margin-left: 21px;
-	width: 346px;
-	padding-top: 6px;
-}
-
-.form_notes p {
-	line-height: 14px;
-}
-
-.form_area_password {
-	width: 580px;
-}
-
-.reenter_row {
-	display: inline-block;
-	margin-top: 10px;
-}
-
-.password_tag {
-	opacity: 0.0;
-	background-color: #a0382b;
-	color: white;
-	padding: 8px;
-	border-radius: 4px;
-	margin-left: 6px;
-	max-width: 330px;
-
-	display: inline-block;
-	position: relative;
-	transition-property: opacity;
-	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
-	-webkit-transition-property: opacity;
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 0.3s;
-}
-
-.password_tag:before {
-	display: inline-block;
-	content: "";
-	position: absolute;
-	right: 100%;
-	top: 5px;
-	width: 0px;
-	height: 0px;
-	border-top: 10px solid transparent;
-	border-right: 11px solid #a0382b;
-	border-bottom: 10px solid transparent;
-}
-
-.password_tag.visible {
-	opacity: 1.0;
-}
-
-.password_tag.error {
-	background-color: #a0382b;
-}
-
-.password_tag.error:before {
-	border-right: 11px solid #a0382b;
-}
-
-.password_tag.warning {
-	background-color: #b78124;
-}
-
-.password_tag.warning:before {
-	border-right: 11px solid #b78124;
-}
-
-.join_form input[type="text"], .join_form input[type="password"], .join_form select {
-	width: 212px;
-	padding: 2px 4px 3px 4px;
-}
-
-.join_form input[type="text"], .join_form input[type="password"] {
-	height: 18px;
-}
-
-.joinsteam_page .btn_checkout_large {
-	position: absolute;
-	bottom: -20px;
-	right: 19px;
-}
-
-.ssa_box {
-	height: 337px;
-	overflow: auto;
-	border: 1px solid #4d4b49;
-	padding: 9px;
-	line-height: 15px;
-}
-
-.ssa_box p {
-	margin: 9px 0px;
-}
-
-#ssa_agree {
-	margin-top: 8px;
-}
-
-#label_agree {
-	margin-left: 4px;
-}
-
-#captchaRefreshImg {
-	vertical-align: middle;
 }
 
 .psn_accountname_title {
@@ -324,25 +133,9 @@ ul#why_list {
     margin-bottom: -94px;
 }
 
-.game_name .blockbg {
-	height: 40px;
-	line-height: 40px;
-}
-.game_name {
-	position: relative;
-	font-size: 30px;
-	color: #d6d7d8;
-	margin-bottom: 16px;
-	overflow: hidden;
-}
-
 #challenge_question_dselect_container {
 	margin-top: 5px;
 	width: 264px;
-}
-
-#privacy_link {
-	padding-top: 12px;
 }
 
 .email_used_actions {

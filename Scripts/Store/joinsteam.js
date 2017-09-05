@@ -5,6 +5,11 @@ var g_sBaseURL = "";
 function InitJoinSteamJS( sBaseURL )
 {
     g_sBaseURL = sBaseURL;
+    // ensure terminal slash
+    if ( g_sBaseURL.slice( -1 ) != '/' )
+    {
+        g_sBaseURL = g_sBaseURL + '/';
+    }
 }
 
  

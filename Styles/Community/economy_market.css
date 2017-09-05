@@ -979,6 +979,17 @@ a.market_tab_well_tab_inactive:hover {
 
 }
 
+.market_show_more_games {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.market_more_games {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s;
+}
+
 .market_search_box_container {
 	position: relative;
 	margin-top: 10px;

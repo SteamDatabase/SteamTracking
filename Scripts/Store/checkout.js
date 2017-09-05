@@ -2187,8 +2187,16 @@ function SubmitGiftDeliveryForm()
 								'The time you\'ve selected to send your gift is in the past.  Would you like to send your gift immediately?', 
 								'Send Immediately'
 					).done( function() {
-						$J('#cart_send_schedule_options').removeClass( 'schedule_selected' );
-						SubmitGiftDeliveryForm();
+						if ( $J('#reschedule_send_now').length )
+						{
+							$J('#reschedule_send_now').prop('checked', true ).change();
+							SubmitGiftDeliveryForm();
+						}
+						else
+						{
+							$J('#cart_send_schedule_options').removeClass( 'schedule_selected' );
+							SubmitGiftDeliveryForm();
+						}
 					});
 					return;
 					
@@ -2224,6 +2232,15 @@ function SubmitGiftDeliveryForm()
 			}
 			else
 				rgBadFields.internal_giftee_accountid = false;
+		}
+		else if ( $J('#reschedule_send_scheduled').is(':checked') || $J('#reschedule_send_now').is(':checked') )
+		{
+			// nothing to validate (date was validated above)
+		}
+		else if ( $J('#reschedule_send_cancel').is(':checked') )
+		{
+			ConfirmRescheduleCancel();
+			return;
 		}
 		else
 		{
@@ -4926,6 +4943,7 @@ function UpdateWillBeSentToNote()
 			$('sendto_email').hide();
 			$('sendto_steamaccount').show();
 			$('sendto_steamaccount_value').update( currently_selected_friend_name );
+			$J('#sendto_steamaccount_value').attr('data-miniprofile', currently_selected_friend_id || '' );
 		}
 		elSentToNote.show();
 	}
@@ -4976,6 +4994,7 @@ function SendGift()
 	var gift_sentiment = '';
 	var gift_signature = '';
 	var gift_scheduled_send = 0;
+	var gift_is_reschedule = typeof g_bIsReschedule != 'undefined' && g_bIsReschedule;
 
 	try
 	{
@@ -4993,6 +5012,9 @@ function SendGift()
 		gift_signature = $('gift_signature').value;
 		gift_scheduled_send = GatherScheduledSendFields();
 
+		if ( $J('#reschedule_send_now').is(':checked') )
+			gift_scheduled_send = 0;
+
 				g_bSendGiftCallRunning = true;
 
 		new Ajax.Request('https://store.steampowered.com/checkout/sendgiftsubmit/',
@@ -5008,7 +5030,8 @@ function SendGift()
 				'GiftSignature' : gift_signature,
 				'ScheduledSendOnDate': gift_scheduled_send,
 				'GiftGID':		g_gidGift,
-				'SessionID':	g_sessionID
+				'SessionID':	g_sessionID,
+				'IsReschedule':	gift_is_reschedule
 			},
 		    onSuccess: function(transport){
 		    	g_bSendGiftCallRunning = false;
@@ -5125,6 +5148,18 @@ function UnsendGift()
 	{
 		ReportCheckoutJSError( 'Failed gathering form data and calling DoSendGift', e );
 	}
+}
+
+function ConfirmRescheduleCancel()
+{
+	ShowConfirmDialog(
+		'Cancel sending this gift',
+		'Are you sure you want to cancel sending this gift?  If you do cancel, you\'ll receive a full refund.',
+		'Yes, cancel and refund',
+		'No, don\'t cancel'
+	).done( function () {
+		UnsendGift();
+	});
 }
 
 

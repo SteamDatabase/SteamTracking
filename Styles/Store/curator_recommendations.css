@@ -44,7 +44,7 @@ body.v6 {
 }
 
 .light_container {
-	background: -webkit-linear-gradient( top, #273d52 5%, #1b2838 95%);background: linear-gradient( to bottom, #273d52 5%, #1b2838 95%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
+	background: -webkit-linear-gradient( top, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);background: linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
 	padding: 5px 0;
 }
 
@@ -61,7 +61,6 @@ body.v6 h2 {
 .dark_container {
 
 	background-color: #101822;
-	padding: 5px 0;
 }
 
 body.v6 .dark_container h2 {
@@ -98,9 +97,10 @@ body.v6 .dark_container h4 {
 .navigation_bar > a {
 	padding: 8px 20px;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 13px;
 	color: #fff;
 	margin: 7px 0 7px 30px;
+	letter-spacing: 1px;
 }
 
 .navigation_bar > a.selected {
@@ -202,7 +202,7 @@ body.v6 h2.curator_name a {
 }
 
 .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child) {
-	margin-right: 11px;
+	margin-right: 15px;
 }
 
 .featured_list_container .carousel_items {
@@ -261,10 +261,12 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 }
 
 .curator_featured > div {
-	background: -webkit-linear-gradient( left, #33566b 5%,#273b52 95%);background: linear-gradient( to right, #33566b 5%,#273b52 95%);;
+	background: -webkit-linear-gradient( top, #141a24 5%, #1b2838 95%);background: linear-gradient( to bottom, #141a24 5%, #1b2838 95%);	border: 1px solid rgb(40, 52, 72);
 	box-shadow: 0 0 15px 1px rgba(0,0,0,0.7);
 	padding: 15px;
 	display: flex;
+	max-height: 100%;
+	height: 100%;
 }
 
 .curator_featured .capsule {
@@ -275,12 +277,22 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 
 .curator_featured .contents {
 
-	flex-shrink: 3;
+	flex-shrink: 3.1;
 	flex-basis: 100%;
+	max-height: 100%;
+
+	background: rgba(0, 0, 0, 0.1);
 }
 
-.curator_featured .capsule img {
+.curator_featured .capsule .capimg {
 	width: 100%;
+}
+
+.curator_featured .capsule p {
+	margin: 10px 0;
+	font-size: 14px;
+	color: #abdaf4;
+	
 }
 
 .curator_featured .screenshots {
@@ -288,10 +300,17 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	flex-direction: row;
 	flex-wrap: wrap;
 	font-size: 0;
+	height: 100%;
+
 }
 
 .curator_featured .screenshots > div {
 	width: 50%;
+	height: 50%;
+
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .curator_featured .screenshots img {
@@ -302,7 +321,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	position: relative;
 	width: 100%;
 	height: 0;
-	padding-bottom: 56.25%; /* typical aspect ratio */
+	padding-bottom: 56.2%; /* typical aspect ratio */
 }
 
 .video_container > iframe {
@@ -395,10 +414,12 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	margin-left: 10px;
 	position: relative;
 	color: #fff;
+	overflow: hidden;
 }
 
 .lists_more_container .item:hover {
 	color: #fff;
+	overflow: hidden;
 }
 
 .lists_more_container .item:first-child {
@@ -419,18 +440,31 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 .lists_more_container .item .bg {
 	filter: contrast(150%) grayscale(1);
 	background-position: center;
+	transition: filter 0.5s ease, transform 0.5s ease;
+	transform: scale(0.9);
+	top: -20px;
+	left: -20px;
+	right: -20px;
+	bottom: -20px;
+	-webkit-backface-visibility: hidden;
+}
+.lists_more_container .item:hover .bg {
+	transform: scale(1);
+	filter: contrast(100%) grayscale(0);
+
 }
 
 .lists_more_container .item .overlay {
-	background-color: #2e739c ;
+	background: -webkit-linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););background: linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););
 	opacity: 0.6;
-	border: 1px solid rgba(255,255,255,0.3);
+	border-top: 1px solid rgba(255,255,255,0.3);
+	border-left: 1px solid rgba(255,255,255,0.3);
 }
 
 .lists_more_container .item > div div {
-	background-color: #000;
-	padding: 5px;
-	font-size: 16px;
+background-color: #000;
+padding: 5px;
+font-size: 16px;
 
 }
 
@@ -497,6 +531,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	position: relative;
 	display: flex;
 	padding: 5px;
+	padding-left: 0px;
 	border-bottom: 1px solid #1e3243;
 	margin: 5px;
 
@@ -507,5 +542,116 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	padding: 0 10px;
 }
 .browse_content .recommendation .recommendation_app_small_cap {
-	width: 233px;
+	width: 231px;
+}
+
+.page_section  {
+	position: relative;
+	padding: 15px 0;
+}
+
+.page_section.empty:not(.editing) {
+	padding: 0;
+}
+
+.page_section.editing {
+	min-height: 150px;
+}
+
+.page_section input[type=text], .page_section select, .control select {
+	background-color: #0f161f;
+	box-shadow: 1px 1px 1px  rgba( 103, 193, 245, 0.1 );
+	border: none;
+	padding: 4px;
+	border-radius: 3px;
+	margin: 5px 0;
+	color: #fff;
+}
+
+.page_section .edit_handle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: skyblue;
+}
+
+.page_section .edit_overlay {
+	position: absolute;
+	z-index: 10;
+	top: -5px;
+	left: -5px;;
+	right: -5px;;
+	bottom: -5px;
+
+	border: 2px dashed rgba(255,255,255,0.4);
+	border-radius: 8px;
+
+	background-color: rgba(0,0,0,0.4);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(1px);
+
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+.page_section .edit_overlay.visible {
+	opacity: 1;
+}
+
+
+.page_section .edit_button {
+	width: 16px;
+	height: 16px;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: skyblue;
+	box-shadow: 0 0 5px #000;
+
+	cursor: pointer;
+}
+
+.page_section .edit_button img {
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
+	filter:         drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
+}
+
+.page_section .edit_options {
+	position: absolute;
+	z-index: 10;
+	top: calc(50% - 70px);
+	left: 25%;
+	width: 50%;
+	height: 120px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid rgba(255,255,255,0.1);
+	background-color: rgba( 27, 40, 56, 0.9 );
+	box-shadow: 0 0 10px 2px #000;
+}
+
+.page_section .edit_options > div {
+	display: flex;
+	padding: 5px 0;
+	width: 100%;
+}
+
+.page_section .edit_options > div.hidden {
+	display: none;
+}
+
+.page_section .edit_options > div .label {
+	width: 30%;
+	padding: 10px 0;
+	font-weight: bold;
 }

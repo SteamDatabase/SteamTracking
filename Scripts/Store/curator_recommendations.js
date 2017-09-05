@@ -1,6 +1,7 @@
 
 var g_bInHashChange = false;
 var g_oRecommendations = null;
+var g_rgListData = [];
 
 function OnRecommendationsRendered()
 {
@@ -230,4 +231,206 @@ function UpdateCurationList( )
 	});
 
 }
+
+function ShowEditHandles()
+{
+	$J('.page_section:not(.editing)').each(function( i, j ){
+
+		var $container = $J(j);
+		$container.addClass('editing');
+
+		var elOverlay = $J('<div class="edit_overlay"></div>')
+
+		var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+
+		var rgNodeData = $container.data('sectionConfig');
+
+
+
+		elButton.click( function(){
+			elOptions.show();
+		});
+
+		elOverlay.append( elButton );
+		$container.append( elOverlay );
+
+
+		var elOptions = $J('<form class="edit_options"></form>');
+
+		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t<\/select>");
+
+		elTypeSelect.val( rgNodeData.type );
+
+		var elSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent curations<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+
+		elSortSelect.val( rgNodeData.sort );
+
+
+		var elListId = $J('<input autocomplete="off" type="text" name="listid_label">').val( rgNodeData.listid_label );
+		var elTagId = $J('<input autocomplete="off" type="text" name="tagid_label">').val( rgNodeData.tagid_label );
+
+		var elListIdVal = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
+		var elTagIdVal = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
+
+		var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
+
+		elTypeSelect.on('change',function(){
+			switch( elTypeSelect.val() )
+			{
+				case 'featured_recommendations':
+					elSortSelect.parent().removeClass('hidden');
+					elListId.parent().addClass('hidden');
+					elTagId.parent().addClass('hidden');
+					break;
+				case 'featured_list':
+					elSortSelect.parent().addClass('hidden');
+					elListId.parent().removeClass('hidden');
+					elTagId.parent().addClass('hidden');
+					break;
+				case 'featured_tag':
+					elSortSelect.parent().addClass('hidden');
+					elListId.parent().addClass('hidden');
+					elTagId.parent().removeClass('hidden');
+					break;
+				default:
+					elSortSelect.parent().addClass('hidden');
+					elListId.parent().addClass('hidden');
+					elTagId.parent().addClass('hidden');
+					break;
+			}
+		});
+
+		elSave.click( function(){
+			var elForm = elOptions[0];
+
+			$J.ajax ( {
+				url: g_strCuratorBaseURL + 'ajaxrenderpagesection/',
+				data: {
+					sessionid: g_sessionID,
+					type: elForm.querySelector('*[name="type"]').value,
+					listid: elForm.querySelector('*[name="listid"]').value,
+					tagid: elForm.querySelector('*[name="tagid"]').value,
+					sort: elForm.querySelector('*[name="sort"]').value,
+					tagid_label: elForm.querySelector('*[name="tagid_label"]').value,
+					listid_label: elForm.querySelector('*[name="listid_label"]').value,
+					index: elForm.parentNode.dataset.index
+				},
+				type: 'POST',
+				cache: true
+			} ).done( function ( data )
+			{
+				$container.replaceWith( data );
+				ShowEditHandles();
+			});
+
+			return false;
+
+		});
+
+
+		new CTextInputSuggest( elListId ,
+			function(term, fnResponse)
+			{
+				var localeTerm = term.toLocaleLowerCase();
+				var rgMatches = [];
+				for( var i=0; i<g_rgListData.length && rgMatches.length < 5; i++)
+				{
+					if( g_rgListData[i].title.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+					{
+						rgMatches.push(g_rgListData[i].title);
+					}
+				}
+				fnResponse( rgMatches );
+			},
+			function( suggestion )
+			{
+
+				for( var i=0; i<g_rgListData.length; i++)
+				{
+					if( g_rgListData[i].title == suggestion )
+					{
+						elListIdVal.val(g_rgListData[i].listid);
+						return;
+					}
+				}
+			}
+		);
+
+		new CTextInputSuggest( elTagId ,
+			GetTagSuggestFunc( g_rgGlobalPopularTags ),
+			function( suggestion )
+			{
+				for( var i=0; i<g_rgGlobalPopularTags.length; i++)
+				{
+					if( g_rgGlobalPopularTags[i].name == suggestion )
+					{
+						elTagIdVal.val(g_rgGlobalPopularTags[i].tagid);
+						return;
+					}
+				}
+
+			}
+		);
+
+
+		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Featured list", elListId ) );
+		elOptions.append( WrapFormFieldWithLabel( "Featured tag", elTagId ) );
+		elOptions.append( WrapFormFieldWithLabel( '', elSave ) );
+		elOptions.append( elListIdVal );
+		elOptions.append( elTagIdVal );
+		elOptions.hide();
+
+		elTypeSelect.trigger('change');
+
+		$container.append(elOptions);
+
+
+		// Force style recalc
+		var foo = elOverlay[0].offsetWidth;
+		elOverlay.addClass('visible');
+
+	});
+
+	LoadListData();
+	CTagAutoComplete.prototype.LoadPopularTags(false);
+}
+
+function WrapFormFieldWithLabel( strLabel, elFormField )
+{
+	var elContainer = $J('<div></div>');
+	var elLabel = $J('<div class="label">'+strLabel+'</div>');
+
+	elContainer.append(elLabel);
+	elContainer.append(elFormField);
+
+	return elContainer
+}
+
+function LoadListData()
+{
+	if( this.bLoading )
+		return;
+	this.bLoading = true;
+
+	$J.ajax ( {
+		url: g_strCuratorBaseURL + 'ajaxgetlists/',
+		data: {
+			sessionid: g_sessionID,
+		},
+		type: 'POST'
+	} ).done( function ( data )
+	{
+		g_rgListData = data.list_details;
+	});
+
+}
+
+$J(function() {
+	if( location.hash == "#edit")
+		ShowEditHandles();
+});
+
+
 

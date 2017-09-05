@@ -1882,13 +1882,13 @@ function PreloadImages( elElement )
 
 
 // Common glue logic for a carousel of some kind
-var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb, bNoWrap )
+var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnClickThumb, bNoWrap )
 {
 	this.$elContainer = $elContainer;
 	this.nSpeed = nSpeed;
 	this.fnOnFocus = fnOnFocus;
 	this.fnOnBlur = fnOnBlur;
-	this.fnMouseOverThumb = fnMouseOverThumb;
+	this.fnClickThumb = fnClickThumb;
 	this.bNoWrap = bNoWrap;
 	this.nIndex = 0;
 
@@ -1928,14 +1928,14 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 	this.$elItems.parent().bind('scroll', function(e) { if( instance.bIsResponsive() ) PreloadImages( $elContainer ); }   );
 
 	// Only bind a mouseover thumb event if we have one.
-	if( fnMouseOverThumb ) {
+	if( fnClickThumb ) {
 
 		this.$elThumbs.each(function (i, j)
 		{
 
-			$J(j).bind('mouseover', (function( index, ele ) {
+			$J(j).bind('click touchstart', (function( index, ele ) {
 				return function() {
-					instance.fnMouseOverThumb( index, ele );
+					instance.fnClickThumb( index, ele );
 				};}(i, j) )
 			);
 		});
@@ -1952,9 +1952,6 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMo
 // Advances the carousel by one. Optionally pass in a specific index to advance to.
 CGenericCarousel.prototype.UpdateControls = function( )
 {
-
-	console.log(this.nItems);
-
 	// Only one item, so hide the arrows since they're not useful.
 	if( this.nItems == 1 )
 	{
@@ -2116,7 +2113,7 @@ CGenericCarousel.prototype.ResponsiveAdvance = function( nNewIndex )
 
 // Carousel which adds the 'focus' class to the active element. Can be used for fading carousels
 // @todo: This needs to be detangled from CGenericCarousel a bit more to be useful in other applications.....
-function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap )
+function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur )
 {
 
 	var fnOnFocus = function(  nIndex )
@@ -2133,8 +2130,8 @@ function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap )
 	{
 		this.Advance(index);
 	};
-
-	var fnOnBlur = function(){};
+	if( !fnOnBlur )
+		fnOnBlur = function(){};
 
 	return new CGenericCarousel( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb, bNoWrap );
 

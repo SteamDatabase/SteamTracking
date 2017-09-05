@@ -479,6 +479,11 @@ function GrindIntoGoo( appid, contextid, itemid )
 				ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
 			});
 		});
+	}).fail( function( xhr ) {
+		if ( xhr.responseJSON && xhr.responseJSON.message )
+		{
+			ShowAlertDialog( 'Action Failed', xhr.responseJSON.message );
+		}
 	});
 }
 

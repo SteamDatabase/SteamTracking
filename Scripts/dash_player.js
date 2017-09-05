@@ -358,7 +358,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 	}
 	
 	var nTimeBetweenRetriesMs = 500;
-	var nMaxRetries = 360;
+	var nMaxRetries = 10;
 	var nRetries = 0;
 	var _init = function() {
 		// Attempt to initialize systems

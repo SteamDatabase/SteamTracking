@@ -1853,6 +1853,17 @@ function UpdateFrontPage()
 	} );
 }
 
+function ShowAllGames()
+{
+	var $elMoreGames = $J('.market_more_games');
+	$elMoreGames.css( 'height', $elMoreGames.prop( 'scrollHeight' ) );
+	setTimeout(
+		function() {
+			$J('.market_show_more_games').hide();
+		}, 300
+	);
+}
+
 RegisterSteamOnWebPanelShownHandler( function() { g_bMarketWindowHidden = false; } );
 RegisterSteamOnWebPanelHiddenHandler( function() { g_bMarketWindowHidden = true; } );
 

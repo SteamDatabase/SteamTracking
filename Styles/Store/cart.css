@@ -1188,7 +1188,7 @@ body.v6 .cart_rightcol h2 {
 	color: #8F98A0;
 }
 
-.cart_send_choice:not(.selected) .cart_send_selected_only {
+.cart_send_choice:not(.selected):not(.force_selected_display) .cart_send_selected_only {
 	display: none;
 }
 
