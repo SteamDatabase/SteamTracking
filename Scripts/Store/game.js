@@ -510,6 +510,144 @@ function SelectReviews( appid, context, reviewDayRange, forceClear )
 	}
 }
 
+function BuildReviewHistogram()
+{
+	if( $J( "#review_histograms_container" ).length == 0 )
+		return;
+
+	var appid = $J( "#review_appid" ).val();
+
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, {}
+	).done( function( data ) {
+
+		// language
+		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
+
+		if ( data.results.weeks.length < 4 )
+		{
+			$J( "#review_histograms_container" ).hide();
+			return;
+		}
+
+		$J( "#review_histograms_container" ).show();
+		$J( "#review_historgram_week_title" ).text( data.title );
+		
+		var chartDataPositive = [];
+		var chartDataNegative = [];
+
+		for ( var i = 0; i < data.results.weeks.length; ++i )
+		{
+			var week = data.results.weeks[i];
+			var barDataUp = [ week.date * 1000, week.recommendations_up ];
+			var barDataDown = [ week.date * 1000, -week.recommendations_down ];
+			chartDataPositive.push( barDataUp );
+			chartDataNegative.push( barDataDown );
+		}
+		var seriesWeek = [ { label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive }, { label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative } ];
+
+		chartDataPositive = [];
+		chartDataNegative = [];
+		for ( var i = 0; i < data.results.recent.length; ++i )
+		{
+			var recentDay = data.results.recent[i];
+			var barDataUp = [ recentDay.date * 1000, recentDay.recommendations_up ];
+			var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
+			chartDataPositive.push( barDataUp );
+			chartDataNegative.push( barDataDown );
+		}
+		var seriesRecent = [ { color: "#66c0f4", label: "Positive", data: chartDataPositive }, { color: "#A34C25", label: "Negative", data: chartDataNegative } ];
+
+		var options = {
+			series: {
+				stack: 0,
+				bars: {
+					show: 1,
+					fill: 1,
+					lineWidth: 0,
+					align: "right"
+				},
+				lines: {
+					show: 0
+				},
+				highlightColor: 'rgb(255,255,255)'
+			},
+			legend: {
+				show: 0
+			},
+			xaxis: {
+				mode: "time",
+				timeformat: data.results.weeks.length > 52 ? "%b %Y": "%b",
+				tickLength: 0,
+			},
+			yaxis: {
+				tickFormatter : function( val, axis ) {
+					return ( val < 0 ) ? -val : val;
+				},
+				tickLength: 0,
+			},
+			grid: {
+				hoverable: true,
+				clickable: false,
+				borderWidth: 0,
+				margin: 0,
+				mouseActiveRadius: 10,
+				autoHighlight: true,
+				markings: [ { yaxis: { from: 0, to: 0 }, color: "#4582A5" } ]
+			},
+		};
+
+		// week
+		var weekOptions = $J.extend( {}, options );
+		weekOptions.series.bars.barWidth = 86400*1000 * 7 * 0.5;
+		var graphWeek =  $J( "#review_histogram_week" );
+		$J.plot( graphWeek, seriesWeek, weekOptions );
+
+		// recent
+		var recentOptions = $J.extend( {}, options );
+		recentOptions.series.bars.barWidth = 86400*1000 * 0.5;
+		recentOptions.xaxis.timeformat = "%b %d";
+		var graphRecent =  $J( "#review_histogram_recent" );
+		$J.plot( graphRecent, seriesRecent, recentOptions );
+
+		// tooltip
+		$J("<div id='review_histogram_week_tooltip'></div>").appendTo("body");
+		var funcTooltip = function (event, pos, item) {
+			var tooltip = $J("#review_histogram_week_tooltip");
+			if ( item )
+			{
+				var x = item.datapoint[0].toFixed(2);
+				var y = item.datapoint[1].toFixed(2);
+				var numReviews = parseInt( y );
+				var bNegativeReviews = numReviews < 0;
+				var yDelta = bNegativeReviews ? 10 : ( -20 - tooltip.height() );
+				var xDelta = 5;
+				numReviews = Math.abs( numReviews );
+
+				var date = new Date( parseInt(x) );
+
+				var strDate = ( date.getMonth() + 1 ) + "/" + ( date.getDate() ) + "/" + date.getFullYear();
+				tooltip.html( numReviews + " " + item.series.label + " (" + strDate + ")" );
+				tooltip.css( {top: item.pageY+yDelta, left: item.pageX+xDelta} );
+				tooltip.fadeIn( 10 );
+
+				tooltip.toggleClass( "negative", bNegativeReviews );
+			}
+			else
+			{
+				tooltip.hide();
+			}
+		};
+		graphWeek.bind("plothover", funcTooltip);
+		graphRecent.bind("plothover", funcTooltip);
+	} );
+}
+
+function OnLoadReviews()
+{
+	BuildReviewHistogram();
+	ShowFilteredReviews();
+}
+
 function ShowFilteredReviews()
 {
 	var appid = $J( "#review_appid" ).val();

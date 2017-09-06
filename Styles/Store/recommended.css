@@ -2374,6 +2374,67 @@ body.recommendgame #review_create h1  {
 	padding-top: 0;
 }
 
+/* review histogram */
+#review_histograms_container {
+	padding: 10px 15px;
+	background-color: #2a475e;
+	box-shadow: 0 0 5px #000;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: none;
+}
+.histogram_title {
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	color: #66c0f4;
+	font-size: 12px;
+}
+.review_histogram_section {
+	display: inline-block;
+}
+#review_histogram_week_section {
+	width: 570px;
+}
+#review_histogram_recent_section {
+	width: 335px;
+}
+#review_histogram_week {
+	width: 100%;
+	height: 250px;
+}
+#review_histogram_recent {
+	width: 100%;
+	height: 250px;
+}
+.review_histogram {
+}
+
+.review_histogram .flot-x-axis {
+	color: #66c0f4;
+}
+.review_histogram .flot-y-axis {
+	color: #ffffff;
+}
+#review_histogram_week_tooltip {
+	position: absolute;
+	display: none;
+	padding: 5px;
+	box-shadow: 0 0 5px #000;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	color: #4191bf;
+	font-weight: bold;
+}
+#review_histogram_week_tooltip.negative {
+	color: #A34C25;
+}
+
+/* language breakdown */
+.language_breakdown {
+	display: none;
+	border-top: 1px solid #3a6e8b;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
 @media screen and (max-width: 910px )
 {
 	html.responsive #review_create .content {
