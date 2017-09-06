@@ -2392,13 +2392,13 @@ body.recommendgame #review_create h1  {
 .review_histogram_section {
 	display: inline-block;
 }
-#review_histogram_week_section {
+#review_histogram_rollup_section {
 	width: 570px;
 }
 #review_histogram_recent_section {
 	width: 335px;
 }
-#review_histogram_week {
+#review_histogram_rollup {
 	width: 100%;
 	height: 250px;
 }
@@ -2415,7 +2415,7 @@ body.recommendgame #review_create h1  {
 .review_histogram .flot-y-axis {
 	color: #ffffff;
 }
-#review_histogram_week_tooltip {
+#review_histogram_tooltip {
 	position: absolute;
 	display: none;
 	padding: 5px;
@@ -2423,7 +2423,7 @@ body.recommendgame #review_create h1  {
 	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	color: #4191bf;
 	font-weight: bold;
 }
-#review_histogram_week_tooltip.negative {
+#review_histogram_tooltip.negative {
 	color: #A34C25;
 }
 

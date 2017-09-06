@@ -523,27 +523,27 @@ function BuildReviewHistogram()
 		// language
 		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
 
-		if ( data.results.weeks.length < 4 )
+		if ( data.results.recent.length < 14 )
 		{
 			$J( "#review_histograms_container" ).hide();
 			return;
 		}
 
 		$J( "#review_histograms_container" ).show();
-		$J( "#review_historgram_week_title" ).text( data.title );
+		$J( "#review_historgram_rollup_title" ).text( data.title );
 		
 		var chartDataPositive = [];
 		var chartDataNegative = [];
 
-		for ( var i = 0; i < data.results.weeks.length; ++i )
+		for ( var i = 0; i < data.results.rollups.length; ++i )
 		{
-			var week = data.results.weeks[i];
-			var barDataUp = [ week.date * 1000, week.recommendations_up ];
-			var barDataDown = [ week.date * 1000, -week.recommendations_down ];
+			var rollup = data.results.rollups[i];
+			var barDataUp = [ rollup.date * 1000, rollup.recommendations_up ];
+			var barDataDown = [ rollup.date * 1000, -rollup.recommendations_down ];
 			chartDataPositive.push( barDataUp );
 			chartDataNegative.push( barDataDown );
 		}
-		var seriesWeek = [ { label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive }, { label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative } ];
+		var seriesRollup = [ { label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive }, { label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative } ];
 
 		chartDataPositive = [];
 		chartDataNegative = [];
@@ -557,6 +557,7 @@ function BuildReviewHistogram()
 		}
 		var seriesRecent = [ { color: "#66c0f4", label: "Positive", data: chartDataPositive }, { color: "#A34C25", label: "Negative", data: chartDataNegative } ];
 
+		var numTotalDays = ( data.results.end_date - data.results.start_date ) / 86400;
 		var options = {
 			series: {
 				stack: 0,
@@ -576,7 +577,8 @@ function BuildReviewHistogram()
 			},
 			xaxis: {
 				mode: "time",
-				timeformat: data.results.weeks.length > 52 ? "%b %Y": "%b",
+				timeformat: numTotalDays > 365 ? "%b %Y": "%b",
+				timezone: "utc",
 				tickLength: 0,
 			},
 			yaxis: {
@@ -596,11 +598,11 @@ function BuildReviewHistogram()
 			},
 		};
 
-		// week
-		var weekOptions = $J.extend( {}, options );
-		weekOptions.series.bars.barWidth = 86400*1000 * 7 * 0.5;
-		var graphWeek =  $J( "#review_histogram_week" );
-		$J.plot( graphWeek, seriesWeek, weekOptions );
+		// week/month rollup
+		var rollupOptions = $J.extend( {}, options );
+		rollupOptions.series.bars.barWidth = data.results.rollup_type == 'week' ? 86400*1000 * 7 * 0.5 : 86400*1000 * 30 * 0.5;
+		var graphRollup =  $J( "#review_histogram_rollup" );
+		$J.plot( graphRollup, seriesRollup, rollupOptions );
 
 		// recent
 		var recentOptions = $J.extend( {}, options );
@@ -610,9 +612,9 @@ function BuildReviewHistogram()
 		$J.plot( graphRecent, seriesRecent, recentOptions );
 
 		// tooltip
-		$J("<div id='review_histogram_week_tooltip'></div>").appendTo("body");
+		$J("<div id='review_histogram_tooltip'></div>").appendTo("body");
 		var funcTooltip = function (event, pos, item) {
-			var tooltip = $J("#review_histogram_week_tooltip");
+			var tooltip = $J("#review_histogram_tooltip");
 			if ( item )
 			{
 				var x = item.datapoint[0].toFixed(2);
@@ -625,7 +627,7 @@ function BuildReviewHistogram()
 
 				var date = new Date( parseInt(x) );
 
-				var strDate = ( date.getMonth() + 1 ) + "/" + ( date.getDate() ) + "/" + date.getFullYear();
+				var strDate = ( date.getUTCMonth() + 1 ) + "/" + ( date.getUTCDate() ) + "/" + date.getUTCFullYear();
 				tooltip.html( numReviews + " " + item.series.label + " (" + strDate + ")" );
 				tooltip.css( {top: item.pageY+yDelta, left: item.pageX+xDelta} );
 				tooltip.fadeIn( 10 );
@@ -637,7 +639,7 @@ function BuildReviewHistogram()
 				tooltip.hide();
 			}
 		};
-		graphWeek.bind("plothover", funcTooltip);
+		graphRollup.bind("plothover", funcTooltip);
 		graphRecent.bind("plothover", funcTooltip);
 	} );
 }
