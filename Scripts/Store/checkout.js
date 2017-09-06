@@ -876,7 +876,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your purchase could not be completed because there are items in your cart that are restricted in your country.';
 					break;
 				case 70:
-					error_text = 'The friend you\'ve selected to recieve this gift already owns it.';
+					error_text = 'The friend you\'ve selected to receive this gift already owns it.';
 					break;
 				case 71:
 					error_text = 'The gift you are trying to purchase is not available in the recipient\'s region.';
