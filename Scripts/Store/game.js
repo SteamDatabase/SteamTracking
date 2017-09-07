@@ -401,7 +401,7 @@ function UserReviewShowMore( id, context )
 	$J('#ReviewContent'+context+id).parent().addClass('expanded');
 }
 
-function LoadMoreReviews( appid, startOffset, dayRange, context )
+function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, context )
 {
 	$J( "#ViewAllReviews" + context ).remove();
 	$J( "#LoadMoreReviews" + context ).remove();
@@ -420,6 +420,8 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 	$J.get( 'http://store.steampowered.com//appreviews/' + appid,{
 		'start_offset' : startOffset,
 		'day_range' : dayRange,
+		'start_date' : startDate,
+		'end_date' : endDate,
 		'filter' : context,
 		'language' : language,
 		'review_type' : reviewType,
@@ -467,10 +469,17 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 
 			container.append( temp.children() );
 
+			if ( data.date_filter_text )
+			{
+				var dateFilterText = $J( "#review_selected_histogram_date_range_text" );
+				dateFilterText.text( data.date_filter_text );
+				dateFilterText.show();
+			}
+
 			// all dupes, request more
 			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 )
 			{
-				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, context );
+				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, data.start_date, data.end_date, context );
 			}
 			else
 			{
@@ -481,7 +490,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context )
 	} );
 }
 
-function SelectReviews( appid, context, reviewDayRange, forceClear )
+function SelectReviews( appid, context, reviewDayRange, startDate, endDate, forceClear )
 {
 	$J( "#ReviewsTab_summary" ).removeClass( "active" );
 	$J( "#ReviewsTab_all" ).removeClass( "active" );
@@ -506,7 +515,7 @@ function SelectReviews( appid, context, reviewDayRange, forceClear )
 	}
 	if ( container.children().length == 0 )
 	{
-		LoadMoreReviews( appid, 0, reviewDayRange, context );
+		LoadMoreReviews( appid, 0, reviewDayRange, startDate, endDate, context );
 	}
 }
 
@@ -519,17 +528,34 @@ function BuildReviewHistogram()
 
 	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, {}
 	).done( function( data ) {
+		$J( "#review_histograms_container" ).show();
 
+		var bCountAllReviews = data.count_all_reviews;
 		// language
 		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
 
-		if ( data.results.recent.length < 14 )
+		var numTotalDays = ( data.results.end_date - data.results.start_date ) / 86400;
+
+		if ( numTotalDays < 7 )
 		{
-			$J( "#review_histograms_container" ).hide();
+			$J( "#review_historgram_rollup_title" ).hide();
+			$J( "#review_histogram_rollup_container" ).hide();
+			$J( "#review_histogram_rollup_section" ).addClass( "recent" );
+			$J( "#review_histogram_rollup_section" ).addClass( "hidden" );
+			$J( "#review_histogram_recent_section" ).hide();
 			return;
 		}
+		else if ( numTotalDays < 30 )
+		{
+			$J( "#review_histogram_rollup_section" ).addClass( "recent" );
+			$J( "#review_histogram_recent_section" ).hide();
 
-		$J( "#review_histograms_container" ).show();
+			data.results.rollups = data.results.recent;
+			data.results.recent = null;
+			data.results.rollup_type = 'day';
+			data.title = 'Recent Review Volume';
+		}
+
 		$J( "#review_historgram_rollup_title" ).text( data.title );
 		
 		var chartDataPositive = [];
@@ -545,19 +571,22 @@ function BuildReviewHistogram()
 		}
 		var seriesRollup = [ { label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive }, { label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative } ];
 
-		chartDataPositive = [];
-		chartDataNegative = [];
-		for ( var i = 0; i < data.results.recent.length; ++i )
+		var seriesRecent = null;
+		if ( data.results.recent )
 		{
-			var recentDay = data.results.recent[i];
-			var barDataUp = [ recentDay.date * 1000, recentDay.recommendations_up ];
-			var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
-			chartDataPositive.push( barDataUp );
-			chartDataNegative.push( barDataDown );
+			chartDataPositive = [];
+			chartDataNegative = [];
+			for ( var i = 0; i < data.results.recent.length; ++i )
+			{
+				var recentDay = data.results.recent[i];
+				var barDataUp = [ recentDay.date * 1000, recentDay.recommendations_up ];
+				var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
+				chartDataPositive.push( barDataUp );
+				chartDataNegative.push( barDataDown );
+			}
+			seriesRecent = [ { color: "#66c0f4", label: "Positive", data: chartDataPositive }, { color: "#A34C25", label: "Negative", data: chartDataNegative } ];
 		}
-		var seriesRecent = [ { color: "#66c0f4", label: "Positive", data: chartDataPositive }, { color: "#A34C25", label: "Negative", data: chartDataNegative } ];
 
-		var numTotalDays = ( data.results.end_date - data.results.start_date ) / 86400;
 		var options = {
 			series: {
 				stack: 0,
@@ -565,6 +594,7 @@ function BuildReviewHistogram()
 					show: 1,
 					fill: 1,
 					lineWidth: 0,
+					barWidth: 86400*1000 * 0.5,
 					align: "right"
 				},
 				lines: {
@@ -577,7 +607,7 @@ function BuildReviewHistogram()
 			},
 			xaxis: {
 				mode: "time",
-				timeformat: numTotalDays > 365 ? "%b %Y": "%b",
+				timeformat: "%b %d",
 				timezone: "utc",
 				tickLength: 0,
 			},
@@ -589,7 +619,7 @@ function BuildReviewHistogram()
 			},
 			grid: {
 				hoverable: true,
-				clickable: false,
+				clickable: true,
 				borderWidth: 0,
 				margin: 0,
 				mouseActiveRadius: 10,
@@ -600,16 +630,90 @@ function BuildReviewHistogram()
 
 		// week/month rollup
 		var rollupOptions = $J.extend( {}, options );
-		rollupOptions.series.bars.barWidth = data.results.rollup_type == 'week' ? 86400*1000 * 7 * 0.5 : 86400*1000 * 30 * 0.5;
+		if ( data.results.rollup_type == 'week' )
+		{
+			rollupOptions.xaxis.timeformat = "%b";
+			rollupOptions.series.bars.barWidth = 86400*1000 * 7 * 0.5;
+		}
+		else if ( data.results.rollup_type == 'month' )
+		{
+			rollupOptions.xaxis.timeformat = numTotalDays > 365 ? "%b %Y": "%b";
+			rollupOptions.series.bars.barWidth = 86400*1000 * 30 * 0.5;
+		}
 		var graphRollup =  $J( "#review_histogram_rollup" );
-		$J.plot( graphRollup, seriesRollup, rollupOptions );
+		var flotRollup = $J.plot( graphRollup, seriesRollup, rollupOptions );
 
 		// recent
-		var recentOptions = $J.extend( {}, options );
-		recentOptions.series.bars.barWidth = 86400*1000 * 0.5;
-		recentOptions.xaxis.timeformat = "%b %d";
-		var graphRecent =  $J( "#review_histogram_recent" );
-		$J.plot( graphRecent, seriesRecent, recentOptions );
+		var graphRecent = null;
+		if ( seriesRecent )
+		{
+			var recentOptions = $J.extend( {}, options );
+			recentOptions.series.bars.barWidth = 86400*1000 * 0.5;
+			recentOptions.xaxis.timeformat = "%b %d";
+			var graphRecent =  $J( "#review_histogram_recent" );
+			var flotRecent = $J.plot( graphRecent, seriesRecent, recentOptions );
+
+			// highlight area that would be the "recent" graph
+			var ctx = flotRollup.getCanvas().getContext('2d');
+			var offsets = flotRollup.getPlotOffset();
+
+			var rollupPoints = flotRollup.getData();
+
+			var recentGraphStartDate = data.results.recent[0].date * 1000;
+
+			// find the coordinate of the newest data point >= to the recent date range
+			var seriesPositive = rollupPoints[0];
+			for ( var i = seriesPositive.data.length - 1; i >= 0; --i )
+			{
+				var point = seriesPositive.data[i];
+				var x = point[0].toFixed(2);
+				var date = new Date( parseInt(x) );
+				if ( date.getTime() <= recentGraphStartDate )
+				{
+					var startX = seriesPositive.xaxis.p2c( point[0] );
+					startX += 2;
+					point = seriesPositive.data[seriesPositive.data.length-1];
+					var endX = seriesPositive.xaxis.p2c( point[0] );
+					var highlightWidth = endX - startX;
+
+					// get min/max of the yaxis
+					var axes = flotRollup.getAxes();
+					var startY = seriesPositive.yaxis.p2c( axes.yaxis.max );
+					var endY = seriesPositive.yaxis.p2c( axes.yaxis.min );
+					var highlightHeight = endY - startY;
+
+					// draw the rect on the graph
+					ctx.fillStyle = 'rgba(255,255,255,0.1)';
+					ctx.fillRect( offsets.left + startX, offsets.top + startY, highlightWidth, highlightHeight );
+
+					// now draw the "pop-out" on our other canvas
+					var c = document.getElementById( "review_graph_canvas" );
+					ctx = c.getContext( "2d" );
+					// resize the canvas to the same size as the element, so our drawing doesn't look blurry
+					c.width = $J( c ).width();
+					c.height = $J( c ).height();
+					ctx.fillStyle = 'rgba(0,0,0,0.25)';
+					// these should be 1-to-1 now, but for correctness, we need to
+					var scaleX = c.width / c.offsetWidth;
+					var scaleY = c.height / c.offsetHeight;
+
+					var offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
+					var offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
+					var offsetBottom = ( offsets.top + endY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
+					var recentSection = $J( "#review_histogram_recent_section" );
+
+					ctx.beginPath();
+					ctx.moveTo( offsetLeft * scaleX, offsetTop * scaleY );
+					ctx.lineTo( recentSection.position().left * scaleX, recentSection.position().top * scaleY );
+					ctx.lineTo( recentSection.position().left * scaleX, ( recentSection.position().top + recentSection.height() ) * scaleY );
+					ctx.lineTo( offsetLeft * scaleX, offsetBottom * scaleY );
+					ctx.lineTo( offsetLeft * scaleX, offsetTop * scaleY );
+					ctx.fill();
+
+					break;
+				}
+			}
+		}
 
 		// tooltip
 		$J("<div id='review_histogram_tooltip'></div>").appendTo("body");
@@ -639,9 +743,63 @@ function BuildReviewHistogram()
 				tooltip.hide();
 			}
 		};
+
+		// click
+		var funcClick = function( rollupType ) {
+			return function (event, pos, item) {
+				if ( item )
+				{
+					var x = item.datapoint[0].toFixed(2);
+					var y = item.datapoint[1].toFixed(2);
+
+					var date = new Date( parseInt(x) );
+					var startDate = date.getTime() / 1000;
+					var endDate = startDate + 86400;
+					if ( rollupType == 'week' )
+					{
+						endDate = startDate + 86400 * 7;
+					}
+					else if ( rollupType == 'month' )
+					{
+						var lastDayOfMonth = new Date( date.getUTCFullYear(), date.getUTCMonth() + 1, 0 );
+						endDate = lastDayOfMonth.getTime() / 1000;
+					}
+
+					$J('#review_type_all').attr( 'checked', true );
+					$J('#purchase_type_all').attr( 'checked', bCountAllReviews );
+					$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
+					$J('#review_language_all').attr( 'checked', true );
+					$J('#review_context').val( "all" );
+					$J('#review_start_date').val( startDate );
+					$J('#review_end_date').val( endDate );
+					$J('#review_date_range_histogram').attr( 'checked', true );
+					$J('#review_date_range_histogram').attr( 'disabled', false );
+					ShowFilteredReviews();
+				}
+				else
+				{
+					tooltip.hide();
+				}
+			}
+		};
+
 		graphRollup.bind("plothover", funcTooltip);
-		graphRecent.bind("plothover", funcTooltip);
+		graphRollup.bind("plotclick", funcClick( data.results.rollup_type ) );
+		if ( graphRecent )
+		{
+			graphRecent.bind("plothover", funcTooltip);
+			graphRecent.bind("plotclick", funcClick( 'day' ) );
+		}
 	} );
+}
+
+function ClearReviewDateFilter()
+{
+	$J('#review_start_date').val( -1 );
+	$J('#review_end_date').val( -1 );
+	$J('#review_date_range_histogram').attr( 'disabled', true );
+	$J( "#review_selected_histogram_date_range_text" ).hide();
+	ShowFilteredReviews();
 }
 
 function OnLoadReviews()
@@ -655,7 +813,9 @@ function ShowFilteredReviews()
 	var appid = $J( "#review_appid" ).val();
 	var context = $J( "#review_context" ).val();
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
-	SelectReviews( appid, context, defaultDayRange, true );
+	var startDate = $J( "#review_start_date" ).val();
+	var endDate = $J( "#review_end_date" ).val();
+	SelectReviews( appid, context, defaultDayRange, startDate, endDate, true );
 }
 
 function ChangeReviewPurchaseTypeFilter()

@@ -2210,14 +2210,29 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 .user_reviews_filter_section {
 	float: left;
-	margin-right: 20px;
+	margin-right: 5px;
 	min-width: 150px;
+}
+.user_reviews_filter_section.right {
+	margin-top: 20px;
+	margin-right: 0px;
+	float: right;
+	text-align: right;
 }
 .user_reviews_filter_section .title {
 	text-transform: uppercase;
 	font-size: 10px;
 	margin-bottom: 5px;
 	color: #4582a5;
+}
+.user_reviews_filter_section.right .title {
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-right: 5px;
+}
+.user_reviews_filter_section.right select {
+	width: 100px;
 }
 
 .user_reviews_filter_section input[type="checkbox"] {
@@ -2232,7 +2247,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .user_reviews_filter_section label {
-	margin-right: 50px;
+	margin-right: 40px;
 	color: #7193a6;
 	margin-left: -4px;
 	padding-left: 4px;
@@ -2281,6 +2296,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 		}
 .user_reviews_filter_score .game_review_summary.no_reviews, .user_reviews_filter_score .game_review_summary.not_enough_reviews {
 	color: #7092a5;
+}
+
+#review_selected_histogram_date_range_text {
+	display: none;
 }
 
 .user_reviews_tab
@@ -2376,27 +2395,55 @@ body.recommendgame #review_create h1  {
 
 /* review histogram */
 #review_histograms_container {
-	padding: 10px 15px;
 	background-color: #2a475e;
 	box-shadow: 0 0 5px #000;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	display: none;
+	position: relative;
 }
+
+#review_graph_canvas {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events:none;
+}
+
 .histogram_title {
 	text-transform: uppercase;
+	padding-left: 10px;
 	padding-bottom: 10px;
 	color: #66c0f4;
-	font-size: 12px;
+	font-size: 10px;
 }
 .review_histogram_section {
 	display: inline-block;
 }
+.review_histogram_section.recent {
+	box-shadow: 0 0 5px #000;
+}
+.review_histogram_section .user_reviews_summary_bar {
+	border-bottom: 1px solid #000000;
+	padding: 10px;
+	margin-bottom: 10px;
+	background: none;
+	min-height: 33px;
+}
 #review_histogram_rollup_section {
-	width: 570px;
+	width: 605px;
+}
+#review_histogram_rollup_section.recent {
+	width: 100%;
+}
+#review_histogram_rollup_section.hidden .user_reviews_summary_bar {
+	border: none;
+	margin-bottom: 0px;
 }
 #review_histogram_recent_section {
 	width: 335px;
+	background: rgba( 255, 255, 255, 0.1 );
 }
 #review_histogram_rollup {
 	width: 100%;
@@ -2407,6 +2454,9 @@ body.recommendgame #review_create h1  {
 	height: 250px;
 }
 .review_histogram {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
 
 .review_histogram .flot-x-axis {
