@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.28a0d9b295ef6ea35904f5e2e4d20fc2b94f71d7.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.9229f2bbb561be9094a2c921e6bf0fdb7ff0f1d0.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -24963,7 +24963,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -24995,7 +24995,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25027,7 +25027,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25059,7 +25059,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25091,7 +25091,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25123,7 +25123,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25155,7 +25155,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25187,7 +25187,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25219,7 +25219,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25251,7 +25251,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25283,7 +25283,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25315,7 +25315,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25347,7 +25347,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25379,7 +25379,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25411,7 +25411,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25443,7 +25443,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25475,7 +25475,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25507,7 +25507,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25539,7 +25539,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25571,7 +25571,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25603,7 +25603,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25635,7 +25635,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25667,7 +25667,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25699,7 +25699,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25731,7 +25731,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25763,7 +25763,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25795,7 +25795,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25827,7 +25827,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25859,7 +25859,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25891,7 +25891,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25923,7 +25923,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25955,7 +25955,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -25987,7 +25987,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26019,7 +26019,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26051,7 +26051,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26083,7 +26083,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26115,7 +26115,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26147,7 +26147,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26179,7 +26179,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26211,7 +26211,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26243,7 +26243,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26275,7 +26275,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26307,7 +26307,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26339,7 +26339,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26371,7 +26371,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26403,7 +26403,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26435,7 +26435,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26467,7 +26467,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26499,7 +26499,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26531,7 +26531,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26563,7 +26563,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26595,7 +26595,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26627,7 +26627,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26659,7 +26659,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26691,7 +26691,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26723,7 +26723,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26755,7 +26755,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26787,7 +26787,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26819,7 +26819,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26851,7 +26851,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26883,7 +26883,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26915,7 +26915,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26947,7 +26947,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -26979,7 +26979,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27011,7 +27011,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27043,7 +27043,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27075,7 +27075,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27107,7 +27107,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27139,7 +27139,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27171,7 +27171,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27203,7 +27203,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27235,7 +27235,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27267,7 +27267,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27299,7 +27299,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27331,7 +27331,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27363,7 +27363,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27395,7 +27395,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27427,7 +27427,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27459,7 +27459,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27491,7 +27491,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27523,7 +27523,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27555,7 +27555,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27587,7 +27587,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27619,7 +27619,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27651,7 +27651,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27683,7 +27683,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27715,7 +27715,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27747,7 +27747,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27779,7 +27779,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27811,7 +27811,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27843,7 +27843,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27875,7 +27875,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27907,7 +27907,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27939,7 +27939,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -27971,7 +27971,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28003,7 +28003,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28035,7 +28035,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28067,7 +28067,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28099,7 +28099,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28131,7 +28131,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28163,7 +28163,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28195,7 +28195,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28227,7 +28227,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28259,7 +28259,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28291,7 +28291,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28323,7 +28323,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28355,7 +28355,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28387,7 +28387,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28419,7 +28419,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28451,7 +28451,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28483,7 +28483,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28515,7 +28515,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28547,7 +28547,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28579,7 +28579,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28611,7 +28611,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28643,7 +28643,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28675,7 +28675,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28707,7 +28707,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28739,7 +28739,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28771,7 +28771,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28803,7 +28803,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28835,7 +28835,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28867,7 +28867,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28899,7 +28899,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28931,7 +28931,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28963,7 +28963,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -28995,7 +28995,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -29027,7 +29027,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -29059,7 +29059,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -29091,7 +29091,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -29123,7 +29123,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 2
+						"value": 60
 					}
 				]
 				
@@ -30254,14 +30254,6 @@
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
-			},
-			{
-				"name": "gifter account id",
-				"defindex": 162,
-				"attribute_class": "gifter_account_id",
-				"effect_type": "positive",
-				"hidden": true,
-				"stored_as_integer": true
 			},
 			{
 				"name": "aimsight lens mask",
