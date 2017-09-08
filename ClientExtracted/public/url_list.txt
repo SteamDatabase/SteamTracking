@@ -512,7 +512,7 @@ StoreJoinPage
 
 CSGOAccountLinkPage
 {
-	url			"%store%/join/pwlink_csgo/?l=%language%"
+	url			"%community%/join/pwlink_csgo/?l=%language%"
 	method		"internal"
 }
 

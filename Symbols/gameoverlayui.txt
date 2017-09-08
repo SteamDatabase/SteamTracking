@@ -9363,7 +9363,7 @@
  T GetAvailableDrives(char*, int)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
- T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&)
+ T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetFileTimestampString(long long)
  T GetGameOverlayUIBasePanel()

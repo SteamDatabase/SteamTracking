@@ -9004,7 +9004,7 @@
  T GCallbackMgr()
  T GetAttributesAsString(CDirIterator const&)
  T GetCStringCharConversion()
- T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&)
+ T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetCommunityImagesURLForUniverse(EUniverse, bool)
  T GetFileTimestampString(long long)
