@@ -19,6 +19,25 @@
                     "description": "Max number of servers to return"
                 }
             ]
+        },
+        {
+            "name": "GetCSList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "cellid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Client's Steam cell ID"
+                },
+                {
+                    "name": "maxcount",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of servers to return"
+                }
+            ]
         }
     ]
 }
