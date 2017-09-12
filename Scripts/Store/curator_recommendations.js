@@ -179,6 +179,19 @@ function InitPagingControls( oPagingData )
 	InitSearchFilters();
 }
 
+function CuratorFieldReset()
+{
+	$J('#filtertags_container input').each(function(i, j){
+		$J(j).val('');
+	});
+
+	$J('#filtertags_container a').each(function(i, j){
+		$J(j).removeClass('selected');
+	});
+
+	UpdateCurationList();
+}
+
 function CuratorFieldToggle( elNode, strValue )
 {
 	var elInput = elNode.querySelector('input');
@@ -266,11 +279,14 @@ function ShowEditHandles()
 		elSortSelect.val( rgNodeData.sort );
 
 
-		var elListId = $J('<input autocomplete="off" type="text" name="listid_label">').val( rgNodeData.listid_label );
-		var elTagId = $J('<input autocomplete="off" type="text" name="tagid_label">').val( rgNodeData.tagid_label );
+		var elListName = $J('<span class="fieldvalue"></span>').text( rgNodeData.listid_label ? rgNodeData.listid_label : "Select..." );
+		var elListEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
 
-		var elListIdVal = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
-		var elTagIdVal = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
+		var elTagName = $J('<span class="fieldvalue"></span>').text( rgNodeData.tagid_label ? rgNodeData.tagid_label : "Select..." );
+		var elTagEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
+
+		var elListId = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
+		var elTagId = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
 
 		var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
 
@@ -279,23 +295,23 @@ function ShowEditHandles()
 			{
 				case 'featured_recommendations':
 					elSortSelect.parent().removeClass('hidden');
-					elListId.parent().addClass('hidden');
-					elTagId.parent().addClass('hidden');
+					elListContainer.addClass('hidden');
+					elTagContainer.addClass('hidden');
 					break;
 				case 'featured_list':
 					elSortSelect.parent().addClass('hidden');
-					elListId.parent().removeClass('hidden');
-					elTagId.parent().addClass('hidden');
+					elListContainer.removeClass('hidden');
+					elTagContainer.addClass('hidden');
 					break;
 				case 'featured_tag':
 					elSortSelect.parent().addClass('hidden');
-					elListId.parent().addClass('hidden');
-					elTagId.parent().removeClass('hidden');
+					elListContainer.addClass('hidden');
+					elTagContainer.removeClass('hidden');
 					break;
 				default:
 					elSortSelect.parent().addClass('hidden');
-					elListId.parent().addClass('hidden');
-					elTagId.parent().addClass('hidden');
+					elListContainer.addClass('hidden');
+					elTagContainer.addClass('hidden');
 					break;
 			}
 		});
@@ -304,15 +320,15 @@ function ShowEditHandles()
 			var elForm = elOptions[0];
 
 			$J.ajax ( {
-				url: g_strCuratorBaseURL + 'ajaxrenderpagesection/',
+				url: g_strCuratorBaseURL + 'ajaxupdatepagesection/',
 				data: {
 					sessionid: g_sessionID,
-					type: elForm.querySelector('*[name="type"]').value,
-					listid: elForm.querySelector('*[name="listid"]').value,
-					tagid: elForm.querySelector('*[name="tagid"]').value,
-					sort: elForm.querySelector('*[name="sort"]').value,
-					tagid_label: elForm.querySelector('*[name="tagid_label"]').value,
-					listid_label: elForm.querySelector('*[name="listid_label"]').value,
+					type: elTypeSelect.val(),
+					listid: elListId.val(),
+					tagid: elTagId.val(),
+					sort: elSortSelect.val(),
+					tagid_label: elTagName.text(),
+					listid_label: elListName.text(),
 					index: elForm.parentNode.dataset.index
 				},
 				type: 'POST',
@@ -327,59 +343,102 @@ function ShowEditHandles()
 
 		});
 
+		elListEditButton.on('click', function(){
+			var unListId = false;
+			var strListName = false;
 
-		new CTextInputSuggest( elListId ,
-			function(term, fnResponse)
-			{
-				var localeTerm = term.toLocaleLowerCase();
-				var rgMatches = [];
-				for( var i=0; i<g_rgListData.length && rgMatches.length < 5; i++)
+			var modal = ShowAutocompleteDialog( "Select list", "Type below to select the list you wish to feature in this section",
+				function(term, fnResponse)
 				{
-					if( g_rgListData[i].title.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+					var localeTerm = term.toLocaleLowerCase();
+					var rgMatches = [];
+					for( var i=0; i<g_rgListData.length && rgMatches.length < 5; i++)
 					{
-						rgMatches.push(g_rgListData[i].title);
+						if( g_rgListData[i].title.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+						{
+							rgMatches.push(g_rgListData[i].title);
+						}
 					}
-				}
-				fnResponse( rgMatches );
-			},
-			function( suggestion )
-			{
-
-				for( var i=0; i<g_rgListData.length; i++)
+					fnResponse( rgMatches );
+				},
+				function( suggestion )
 				{
-					if( g_rgListData[i].title == suggestion )
+
+					for( var i=0; i<g_rgListData.length; i++)
 					{
-						elListIdVal.val(g_rgListData[i].listid);
+						if( g_rgListData[i].title == suggestion )
+						{
+							unListId = g_rgListData[i].listid;
+							strListName = g_rgListData[i].title;
+							modal.EnableInput();
+							return;
+						}
+					}
+				},
+				function(){
+					if( !unListId )
 						return;
-					}
-				}
-			}
-		);
 
-		new CTextInputSuggest( elTagId ,
-			GetTagSuggestFunc( g_rgGlobalPopularTags ),
-			function( suggestion )
-			{
-				for( var i=0; i<g_rgGlobalPopularTags.length; i++)
+					elListId.val( unListId );
+					elListName.text( strListName );
+					modal.Dismiss();
+				},
+				function( )
 				{
-					if( g_rgGlobalPopularTags[i].name == suggestion )
-					{
-						elTagIdVal.val(g_rgGlobalPopularTags[i].tagid);
-						return;
-					}
+					unListId = false;
 				}
+			);
 
-			}
-		);
+			LoadListData();
 
+		});
+
+		elTagEditButton.on('click', function(){
+			var unTagId = false;
+			var strTagName = false;
+
+			var modal = ShowAutocompleteDialog( "Select tag", "Type below to select the tag you wish to feature in this section",
+				GetTagSuggestFunc( g_rgGlobalPopularTags ),
+				function( suggestion )
+				{
+					for( var i=0; i<g_rgGlobalPopularTags.length; i++)
+					{
+						if( g_rgGlobalPopularTags[i].name == suggestion )
+						{
+							unTagId = g_rgGlobalPopularTags[i].tagid;
+							strTagName = suggestion;
+							modal.EnableInput();
+							return;
+						}
+					}
+				},
+				function(){
+					if( !unTagId )
+						return;
+
+					elTagId.val(unTagId);
+					elTagName.text(strTagName);
+					modal.Dismiss();
+				},
+				function( )
+				{
+					unTagId = false;
+				}
+			);
+
+			CTagAutoComplete.prototype.LoadPopularTags(false);
+		});
+
+		var elListContainer = WrapFormFieldWithLabel( "Featured list", $J('<div></div>').append(elListName, elListEditButton) );
+		var elTagContainer = WrapFormFieldWithLabel( "Featured tag", $J('<div></div>').append(elTagName, elTagEditButton) );
 
 		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
-		elOptions.append( WrapFormFieldWithLabel( "Featured list", elListId ) );
-		elOptions.append( WrapFormFieldWithLabel( "Featured tag", elTagId ) );
+		elOptions.append( elListContainer );
+		elOptions.append( elTagContainer );
 		elOptions.append( WrapFormFieldWithLabel( '', elSave ) );
-		elOptions.append( elListIdVal );
-		elOptions.append( elTagIdVal );
+		elOptions.append( elListId );
+		elOptions.append( elTagId );
 		elOptions.hide();
 
 		elTypeSelect.trigger('change');
@@ -393,9 +452,10 @@ function ShowEditHandles()
 
 	});
 
-	LoadListData();
+
 	CTagAutoComplete.prototype.LoadPopularTags(false);
 }
+
 
 function WrapFormFieldWithLabel( strLabel, elFormField )
 {
@@ -427,9 +487,117 @@ function LoadListData()
 
 }
 
+function ShowAutocompleteDialog( strTitle, strDesc, fnSuggest, fnSelect, fnDone, fnFieldModified )
+{
+	var modal = ShowPromptDialog( strTitle, strDesc, "OK", "Cancel", { 'bNoPromiseDismiss': true } );
+	modal.done( fnDone );
+
+	modal.fail( function(){
+		modal.Dismiss();
+	});
+
+	var $btnOk = $J($J('.newmodal_buttons button', modal.GetContent())[0]);
+
+	modal.DisableInput = function(){
+		fnFieldModified( );
+		$btnOk.addClass('btn_disabled');
+	};
+
+	modal.EnableInput = function(){
+		$btnOk.removeClass('btn_disabled');
+	};
+
+
+	var $elDialogContent = $J('input', modal.m_$Content);
+	$elDialogContent.on('input', function(){
+		modal.DisableInput();
+	});
+
+	new CTextInputSuggest( $elDialogContent ,
+		fnSuggest,
+		fnSelect
+	);
+
+	modal.DisableInput();
+	modal.Show();
+
+	return modal;
+}
+
+
+function ShowAddFeaturedTagModal()
+{
+	var unTagId = false;
+
+	var modal = ShowAutocompleteDialog( "Add to list", "Type the name of the item you'd like to add to this list.",
+		GetTagSuggestFunc( g_rgGlobalPopularTags ),
+		function( suggestion )
+		{
+			for( var i=0; i<g_rgGlobalPopularTags.length; i++)
+			{
+				if( g_rgGlobalPopularTags[i].name == suggestion )
+				{
+					unTagId = g_rgGlobalPopularTags[i].tagid;
+					modal.EnableInput();
+					return;
+				}
+			}
+		},
+		function()
+		{
+			$J.ajax ( {
+				url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
+				data: {
+					sessionid: g_sessionID,
+					add_tagid: unTagId
+				},
+				type: 'POST',
+				cache: true
+			} ).done( function ( data )
+			{
+				document.getElementById('filtertags_container').parentNode.innerHTML = data;
+				$J('.tag_edit_control').show();
+				modal.Dismiss();
+			});
+		},
+		function()
+		{
+			unTagId = false;
+		}
+	);
+
+	CTagAutoComplete.prototype.LoadPopularTags(false);
+}
+
+
+function DeleteFeaturedTag( unTagId, strTagName )
+{
+	var modal = ShowConfirmDialog("Remove this tag?", "Are you sure you want to remove '%1$s' from your tag list?".replace(/%1\$s/, strTagName ) );
+	modal.done(function(){
+		$J.ajax ( {
+			url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
+			data: {
+				sessionid: g_sessionID,
+				remove_tagid: unTagId
+			},
+			type: 'POST',
+			cache: true
+		} ).done( function ( data )
+		{
+			document.getElementById('filtertags_container').parentNode.innerHTML = data;
+			$J('.tag_edit_control').show();
+			modal.Dismiss();
+		});
+	});
+
+}
+
 $J(function() {
 	if( location.hash == "#edit")
-		ShowEditHandles();
+	{
+		ShowEditHandles ();
+		$J('.tag_edit_control').show();
+	}
 });
 
 

@@ -287,7 +287,7 @@ CVideoWatch.prototype.OnPlayerDRMDownloadError = function( description )
 {
 	if ( this.m_bEMECapableHost )
 	{
-		this.ShowVideoError( '<p>Sorry!</p><p>There is an issue with Steam Video at the present time where some additional components required for playback can\'t be downloaded automatically. We are actively working on a fix.</p><p>Until that time, you can manually install these components to get your video playback working.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871#15">Visit the FAQ</a> for help on installing these components.</p>' );
+		this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871#15">Visit the FAQ</a> for help on installing these components manually.' );
 		this.OnLogEventToServer( 'DRM Download Error', description );
 	}
 	else

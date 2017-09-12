@@ -1575,25 +1575,29 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_summary_bar .summary_section {
 	display: inline-block;
 	margin-right: 15px;
-	color: #5d7a87;
+	color: #8ba6b6;
 	min-width: 320px;
 }
 .user_reviews_summary_bar .title {
-	text-transform: uppercase;
-	font-size: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 15px;
 	margin-bottom: 5px;
+	color: #e5e5e5;
 }
 .user_reviews_summary_bar .game_review_summary {
 	cursor: help;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
-			font-size: 19px;
+			font-size: 17px;
 	line-height: 9px;
-	text-shadow: 1px 1px rgba( 255, 255, 255, 0.2 );
+	text-shadow: 1px 1px rgba( 0, 0, 0, 0.2 );
+	color: #c35c2c;
 }
 .user_reviews_summary_bar .game_review_summary.positive {
-	color: #4191bf;
+	color: #66C0F4;
 }
 
 .user_reviews_summary_bar .game_review_summary.mixed {
@@ -2199,7 +2203,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	font-size: 12px;
 	padding: 10px;
 	margin-bottom: 20px;
-	background-color: #2a475e;
+	background-color: #1f2f42;
 }
 
 .user_reviews_filter_title {
@@ -2247,7 +2251,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .user_reviews_filter_section label {
-	margin-right: 40px;
+	margin-right: 37px;
 	color: #7193a6;
 	margin-left: -4px;
 	padding-left: 4px;
@@ -2272,10 +2276,14 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .user_reviews_filter_score {
-	display: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			display: none;
 	border-top: 1px solid #3a6e8b;
 	margin-top: 10px;
 	padding-top: 10px;
+	font-size: 15px;
 }
 .user_reviews_filter_score.visible {
 	display: block;
@@ -2397,8 +2405,6 @@ body.recommendgame #review_create h1  {
 #review_histograms_container {
 	background-color: #2a475e;
 	box-shadow: 0 0 5px #000;
-	margin-top: 5px;
-	margin-bottom: 5px;
 	display: none;
 	position: relative;
 }
@@ -2417,6 +2423,7 @@ body.recommendgame #review_create h1  {
 	padding-bottom: 10px;
 	color: #66c0f4;
 	font-size: 10px;
+	visibility: hidden;
 }
 .review_histogram_section {
 	display: inline-block;
@@ -2429,7 +2436,7 @@ body.recommendgame #review_create h1  {
 	padding: 10px;
 	margin-bottom: 10px;
 	background: none;
-	min-height: 33px;
+	min-height: 38px;
 }
 #review_histogram_rollup_section {
 	width: 605px;
@@ -2443,7 +2450,8 @@ body.recommendgame #review_create h1  {
 }
 #review_histogram_recent_section {
 	width: 335px;
-	background: rgba( 255, 255, 255, 0.1 );
+	background: rgba( 148, 217, 255, 0.2 );
+	min-height: 350px;
 }
 #review_histogram_rollup {
 	width: 100%;

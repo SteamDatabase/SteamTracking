@@ -760,7 +760,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -883,6 +883,15 @@ function OnInitializeTransactionFailure( detail, result )
 					break;
 				case 72:
 					error_text = 'Due to regional price differences, the gift you are trying to send cannot be sent to the recipient\'s region.';
+					break;
+				case 69:
+					error_text = 'Your order cannot be completed because your cart contains items that are reserved for commercial use only.';
+					break;
+				case 74:
+					error_text = 'Your order cannot be completed because your cart contains items that are not allowed for use on commercial accounts.';
+					break;
+				case 75:
+					error_text = 'Your current country does not match up with the country of your registered business.';
 					break;
 				default:
 					break;
@@ -1946,6 +1955,286 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}								
+				else if ( method.value == 'naranja' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Naranja transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Naranja customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'cencosud' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cencosud transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cencosud customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'cabal' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cabal transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cabal customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'pagofacil' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PagoFacil transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PagoFacil customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'rapipago' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Rapipago transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Rapipago customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'banconacionaldecostarica' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Nacional de Costa Rica transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Nacional de Costa Rica customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'bancopoplar' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Poplar transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Poplar customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'redpagos' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'RedPagos transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for RedPagos customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'spe' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SPE transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SPE customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'multicaja' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Multicaja transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Multicaja customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'redcompra' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'RedCompra transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for RedCompra customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'ziraatbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'ZiraatBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for ZiraatBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'vakiflarbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'VakiflarBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for VakiflarBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'kuveytturkbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'KuveytTurkBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for KuveytTurkBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'ekonomibank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'EkonomiBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for EkonomiBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'pichincha' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pichincha transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pichincha customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'pichinchacash' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PichinchaCash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PichinchaCash customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'przelewy24' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Przelewy24 transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Przelewy24 customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'trustpay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Trustpay transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Trustpay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'poli' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'POLi transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for POLi customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'mercadopago' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MercadoPago transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MercadoPago customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'payu' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PayU transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayU customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'vtcpaywallet' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'VTC Pay e-Wallet transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for VTC Pay e-Wallet customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'vtcpaycards' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Local credit card transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for local credit card customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'vtcpayonlinebanking' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Online banking transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for online banking customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'mrcash' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MrCash transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MrCash customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'eps' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'EPS transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for EPS customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
+				else if ( method.value == 'interac' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Interac transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Interac customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
 			}
 			else
 			{
@@ -2743,7 +3032,15 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
 			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' 
 			|| method.value == 'nodwin_cod' || method.value == 'credit_card_india' || method.value == 'debit_card_india' 
-			|| method.value == 'net_banking_india' || method.value == 'cash_card_india' || method.value == 'wallet_india' )
+			|| method.value == 'net_banking_india' || method.value == 'cash_card_india' || method.value == 'wallet_india' 
+			|| method.value == 'naranja' || method.value == 'cencosud' || method.value == 'cabal' || method.value == 'pagofacil' 
+			|| method.value == 'rapipago' || method.value == 'banconacionaldecostarica' || method.value == 'bancopoplar' || method.value == 'redpagos' 
+			|| method.value == 'spe' || method.value == 'multicaja' || method.value == 'redcompra' || method.value == 'ziraatbank' || method.value == 'vakiflarbank' 
+			|| method.value == 'kuveytturkbank' || method.value == 'ekonomibank' || method.value == 'pichincha' || method.value == 'pichinchacash' 
+			|| method.value == 'przelewy24' || method.value == 'trustpay' || method.value == 'poli' || method.value == 'mercadopago' || method.value == 'payu' 
+			|| method.value == 'vtcpaywallet' || method.value == 'vtcpaycards' || method.value == 'vtcpayonlinebanking' || method.value == 'mrcash' 
+			|| method.value == 'eps' || method.value == 'interac' 
+		)
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2761,7 +3058,7 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 		}
-		else if ( method.value == 'culturevoucher' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher' || method.value == 'gamevoucher' || method.value == 'korean_mobile' )
+		else if ( method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher' || method.value == 'gamevoucher' || method.value == 'korean_mobile' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2778,7 +3075,7 @@ function UpdatePaymentInfoForm()
 			bShowMobileForm = true;
 		}
 		else if ( method.value == 'konbini' || method.value == 'credit_card_japan' || method.value == 'bank_transfer_japan' || method.value == 'payeasy' 
-			|| method.value == 'webmoney_japan' || method.value == 'bitcash' || method.value == 'netcash' || method.value == 'nanaco' )
+			|| method.value == 'webmoney_japan' || method.value == 'bitcash' || method.value == 'netcash' || method.value == 'nanaco'  || method.value == 'culturevoucher' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -3928,6 +4225,146 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'korean_mobile' && providerPaymentMethod == 92 )
 			{
 				$('payment_method_review_text').innerHTML = 'Mobile Payments';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'naranja' && providerPaymentMethod == 93 )
+			{
+				$('payment_method_review_text').innerHTML = 'Naranja';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'cencosud' && providerPaymentMethod == 94 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cencosud';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'cabal' && providerPaymentMethod == 95 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cabal';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'pagofacil' && providerPaymentMethod == 96 )
+			{
+				$('payment_method_review_text').innerHTML = 'PagoFacil';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'rapipago' && providerPaymentMethod == 97 )
+			{
+				$('payment_method_review_text').innerHTML = 'Rapipago';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'banconacionaldecostarica' && providerPaymentMethod == 98 )
+			{
+				$('payment_method_review_text').innerHTML = 'Banco Nacional De Costa Rica';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'bancopoplar' && providerPaymentMethod == 99 )
+			{
+				$('payment_method_review_text').innerHTML = 'BancoPoplar';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'redpagos' && providerPaymentMethod == 100 )
+			{
+				$('payment_method_review_text').innerHTML = 'RedPagos';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'spe' && providerPaymentMethod == 101 )
+			{
+				$('payment_method_review_text').innerHTML = 'SPE';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'multicaja' && providerPaymentMethod == 102 )
+			{
+				$('payment_method_review_text').innerHTML = 'Multicaja';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'redcompra' && providerPaymentMethod == 103 )
+			{
+				$('payment_method_review_text').innerHTML = 'RedCompra';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'ziraatbank' && providerPaymentMethod == 104 )
+			{
+				$('payment_method_review_text').innerHTML = 'ZiraatBank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'vakiflarbank' && providerPaymentMethod == 105 )
+			{
+				$('payment_method_review_text').innerHTML = 'VakiflarBank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'kuveytturkbank' && providerPaymentMethod == 106 )
+			{
+				$('payment_method_review_text').innerHTML = 'KuveytTurkBank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'ekonomibank' && providerPaymentMethod == 107 )
+			{
+				$('payment_method_review_text').innerHTML = 'EkonomiBank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'pichincha' && providerPaymentMethod == 108 )
+			{
+				$('payment_method_review_text').innerHTML = 'Pichincha';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'pichinchacash' && providerPaymentMethod == 109 )
+			{
+				$('payment_method_review_text').innerHTML = 'PichinchaCash';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'przelewy24' && providerPaymentMethod == 110 )
+			{
+				$('payment_method_review_text').innerHTML = 'Przelewy24';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'trustpay' && providerPaymentMethod == 111 )
+			{
+				$('payment_method_review_text').innerHTML = 'Trustpay';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'poli' && providerPaymentMethod == 112 )
+			{
+				$('payment_method_review_text').innerHTML = 'POLi';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'mercadopago' && providerPaymentMethod == 113 )
+			{
+				$('payment_method_review_text').innerHTML = 'MercadoPago';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'payu' && providerPaymentMethod == 114 )
+			{
+				$('payment_method_review_text').innerHTML = 'PayU';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'vtcpaywallet' && providerPaymentMethod == 115 )
+			{
+				$('payment_method_review_text').innerHTML = 'VTC Pay e-Wallet';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'vtcpaycards' && providerPaymentMethod == 119 )
+			{
+				$('payment_method_review_text').innerHTML = 'Local Credit Cards';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'vtcpayonlinebanking' && providerPaymentMethod == 120 )
+			{
+				$('payment_method_review_text').innerHTML = 'Online Banking';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'mrcash' && providerPaymentMethod == 116 )
+			{
+				$('payment_method_review_text').innerHTML = 'MrCash';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'eps' && providerPaymentMethod == 117 )
+			{
+				$('payment_method_review_text').innerHTML = 'EPS';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'interac' && providerPaymentMethod == 118 )
+			{
+				$('payment_method_review_text').innerHTML = 'Interac';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 		}

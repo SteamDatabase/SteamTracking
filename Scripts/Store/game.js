@@ -413,6 +413,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	var language = $J('input[name="review_language"]:checked').val();
 	var reviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
+	var dateRangeType = $J('input[name="review_date_range"]:checked').val();
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -422,6 +423,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 		'day_range' : dayRange,
 		'start_date' : startDate,
 		'end_date' : endDate,
+		'date_range_type' : dateRangeType,
 		'filter' : context,
 		'language' : language,
 		'review_type' : reviewType,
@@ -519,6 +521,23 @@ function SelectReviews( appid, context, reviewDayRange, startDate, endDate, forc
 	}
 }
 
+function FilterReviewsToGraph( bCountAllReviews, startDate, endDate )
+{
+	$J('#purchase_type_all').attr( 'checked', bCountAllReviews );
+	$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
+	$J('#review_language_all').attr( 'checked', true );
+	$J('#review_context').val( "all" );
+	$J('#review_start_date').val( startDate );
+	$J('#review_end_date').val( endDate );
+	if ( !$J('#review_date_range_histogram').attr( 'checked' ) && !$J('#review_date_range_exclude_histogram').attr( 'checked') )
+	{
+		$J('#review_date_range_histogram').attr('checked', true);
+	}
+	$J('#review_date_range_histogram').attr( 'disabled', false );
+	$J('#review_date_range_exclude_histogram').attr( 'disabled', false );
+	ShowFilteredReviews();
+}
+
 function BuildReviewHistogram()
 {
 	if( $J( "#review_histograms_container" ).length == 0 )
@@ -535,6 +554,12 @@ function BuildReviewHistogram()
 		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
 
 		var numTotalDays = ( data.results.end_date - data.results.start_date ) / 86400;
+		var numReviewsRecent = 0;
+		for ( var i = 0; i < data.results.recent.length; ++i )
+		{
+			var recentDay = data.results.recent[i];
+			numReviewsRecent += recentDay.recommendations_up + recentDay.recommendations_down;
+		}
 
 		if ( numTotalDays < 7 )
 		{
@@ -544,6 +569,12 @@ function BuildReviewHistogram()
 			$J( "#review_histogram_rollup_section" ).addClass( "hidden" );
 			$J( "#review_histogram_recent_section" ).hide();
 			return;
+		}
+		else if ( numReviewsRecent == 0 )
+		{
+			data.results.recent = null;
+			$J( "#review_histogram_rollup_section" ).addClass( "recent" );
+			$J( "#review_histogram_recent_section" ).hide();
 		}
 		else if ( numTotalDays < 30 )
 		{
@@ -595,7 +626,7 @@ function BuildReviewHistogram()
 					fill: 1,
 					lineWidth: 0,
 					barWidth: 86400*1000 * 0.5,
-					align: "right"
+					align: "left"
 				},
 				lines: {
 					show: 0
@@ -626,13 +657,24 @@ function BuildReviewHistogram()
 				autoHighlight: true,
 				markings: [ { yaxis: { from: 0, to: 0 }, color: "#4582A5" } ]
 			},
+			selection: {
+				mode: "x",
+				color: "#ffffff",
+			}
 		};
 
 		// week/month rollup
-		var rollupOptions = $J.extend( {}, options );
+		var rollupOptions = $J.extend( true, {}, options );
 		if ( data.results.rollup_type == 'week' )
 		{
-			rollupOptions.xaxis.timeformat = "%b";
+			if ( numTotalDays > 365 / 2 )
+			{
+				rollupOptions.xaxis.timeformat = "%b";
+			}
+			else
+			{
+				rollupOptions.xaxis.timeformat = "%b %d";
+			}
 			rollupOptions.series.bars.barWidth = 86400*1000 * 7 * 0.5;
 		}
 		else if ( data.results.rollup_type == 'month' )
@@ -647,7 +689,7 @@ function BuildReviewHistogram()
 		var graphRecent = null;
 		if ( seriesRecent )
 		{
-			var recentOptions = $J.extend( {}, options );
+			var recentOptions = $J.extend( true, {}, options );
 			recentOptions.series.bars.barWidth = 86400*1000 * 0.5;
 			recentOptions.xaxis.timeformat = "%b %d";
 			var graphRecent =  $J( "#review_histogram_recent" );
@@ -656,62 +698,50 @@ function BuildReviewHistogram()
 			// highlight area that would be the "recent" graph
 			var ctx = flotRollup.getCanvas().getContext('2d');
 			var offsets = flotRollup.getPlotOffset();
-
-			var rollupPoints = flotRollup.getData();
-
+			
 			var recentGraphStartDate = data.results.recent[0].date * 1000;
 
-			// find the coordinate of the newest data point >= to the recent date range
+			var rollupPoints = flotRollup.getData();
 			var seriesPositive = rollupPoints[0];
-			for ( var i = seriesPositive.data.length - 1; i >= 0; --i )
 			{
-				var point = seriesPositive.data[i];
-				var x = point[0].toFixed(2);
-				var date = new Date( parseInt(x) );
-				if ( date.getTime() <= recentGraphStartDate )
-				{
-					var startX = seriesPositive.xaxis.p2c( point[0] );
-					startX += 2;
-					point = seriesPositive.data[seriesPositive.data.length-1];
-					var endX = seriesPositive.xaxis.p2c( point[0] );
-					var highlightWidth = endX - startX;
+				var startX = seriesPositive.xaxis.p2c( recentGraphStartDate );
+				var endPoint = seriesPositive.data[seriesPositive.data.length-1];
+				var endX = seriesPositive.xaxis.p2c( endPoint[0] + rollupOptions.series.bars.barWidth );
+				var highlightWidth = endX - startX;
 
-					// get min/max of the yaxis
-					var axes = flotRollup.getAxes();
-					var startY = seriesPositive.yaxis.p2c( axes.yaxis.max );
-					var endY = seriesPositive.yaxis.p2c( axes.yaxis.min );
-					var highlightHeight = endY - startY;
+				// get min/max of the yaxis
+				var axes = flotRollup.getAxes();
+				var startY = seriesPositive.yaxis.p2c( axes.yaxis.max );
+				var endY = seriesPositive.yaxis.p2c( axes.yaxis.min );
+				var highlightHeight = endY - startY;
 
-					// draw the rect on the graph
-					ctx.fillStyle = 'rgba(255,255,255,0.1)';
-					ctx.fillRect( offsets.left + startX, offsets.top + startY, highlightWidth, highlightHeight );
+				// draw the rect on the graph
+				ctx.fillStyle = 'rgba(148,217,255,0.2)';
+				ctx.fillRect( offsets.left + startX, offsets.top + startY, highlightWidth, highlightHeight );
 
-					// now draw the "pop-out" on our other canvas
-					var c = document.getElementById( "review_graph_canvas" );
-					ctx = c.getContext( "2d" );
-					// resize the canvas to the same size as the element, so our drawing doesn't look blurry
-					c.width = $J( c ).width();
-					c.height = $J( c ).height();
-					ctx.fillStyle = 'rgba(0,0,0,0.25)';
-					// these should be 1-to-1 now, but for correctness, we need to
-					var scaleX = c.width / c.offsetWidth;
-					var scaleY = c.height / c.offsetHeight;
+				// now draw the "pop-out" on our other canvas
+				var c = document.getElementById( "review_graph_canvas" );
+				ctx = c.getContext( "2d" );
+				// resize the canvas to the same size as the element, so our drawing doesn't look blurry
+				c.width = $J( c ).width();
+				c.height = $J( c ).height();
+				ctx.fillStyle = 'rgba(33,44,61,1)';
+				// these should be 1-to-1 now, but for correctness, we need to
+				var scaleX = c.width / c.offsetWidth;
+				var scaleY = c.height / c.offsetHeight;
 
-					var offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
-					var offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
-					var offsetBottom = ( offsets.top + endY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
-					var recentSection = $J( "#review_histogram_recent_section" );
+				var offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
+				var offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
+				var offsetBottom = ( offsets.top + endY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
+				var recentSection = $J( "#review_histogram_recent_section" );
 
-					ctx.beginPath();
-					ctx.moveTo( offsetLeft * scaleX, offsetTop * scaleY );
-					ctx.lineTo( recentSection.position().left * scaleX, recentSection.position().top * scaleY );
-					ctx.lineTo( recentSection.position().left * scaleX, ( recentSection.position().top + recentSection.height() ) * scaleY );
-					ctx.lineTo( offsetLeft * scaleX, offsetBottom * scaleY );
-					ctx.lineTo( offsetLeft * scaleX, offsetTop * scaleY );
-					ctx.fill();
-
-					break;
-				}
+				ctx.beginPath();
+				ctx.moveTo( offsetLeft * scaleX, offsetTop * scaleY );
+				ctx.lineTo( recentSection.position().left * scaleX, recentSection.position().top * scaleY );
+				ctx.lineTo( recentSection.position().left * scaleX, ( recentSection.position().top + recentSection.height() ) * scaleY );
+				ctx.lineTo( offsetLeft * scaleX, offsetBottom * scaleY );
+				ctx.lineTo( offsetLeft * scaleX, offsetTop * scaleY );
+				ctx.fill();
 			}
 		}
 
@@ -745,12 +775,20 @@ function BuildReviewHistogram()
 		};
 
 		// click
-		var funcClick = function( rollupType ) {
+		var funcClick = function( plot, rollupType ) {
 			return function (event, pos, item) {
+				// ignore for selection
+				if ( plot.getSelection() )
+				{
+					return;
+				}
+
 				if ( item )
 				{
 					var x = item.datapoint[0].toFixed(2);
 					var y = item.datapoint[1].toFixed(2);
+					var numReviews = parseInt( y );
+					var bNegativeReviews = numReviews < 0;
 
 					var date = new Date( parseInt(x) );
 					var startDate = date.getTime() / 1000;
@@ -765,30 +803,51 @@ function BuildReviewHistogram()
 						endDate = lastDayOfMonth.getTime() / 1000;
 					}
 
-					$J('#review_type_all').attr( 'checked', true );
-					$J('#purchase_type_all').attr( 'checked', bCountAllReviews );
-					$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
-					$J('#review_language_all').attr( 'checked', true );
-					$J('#review_context').val( "all" );
-					$J('#review_start_date').val( startDate );
-					$J('#review_end_date').val( endDate );
-					$J('#review_date_range_histogram').attr( 'checked', true );
-					$J('#review_date_range_histogram').attr( 'disabled', false );
-					ShowFilteredReviews();
-				}
-				else
-				{
-					tooltip.hide();
+					$J( bNegativeReviews ? '#review_type_negative' : '#review_type_positive').attr( 'checked', true );
+					FilterReviewsToGraph( bCountAllReviews, startDate, endDate );
+
+					flotRollup.clearSelection();
+					if ( flotRecent )
+					{
+						flotRecent.clearSelection();
+					}
 				}
 			}
 		};
 
+		var funcSelected = function( plot ) {
+			return function (event, ranges) {
+
+				var startDate = ranges.xaxis.from.toFixed(1) / 1000;
+				var endDate = ranges.xaxis.to.toFixed(1) / 1000;
+
+				$J( '#review_type_all' ).attr( 'checked', true );
+				FilterReviewsToGraph( bCountAllReviews, startDate, endDate );
+				if ( plot == flotRollup && flotRecent )
+				{
+					flotRecent.clearSelection();
+				}
+				else if ( plot == flotRecent )
+				{
+					flotRollup.clearSelection();
+				}
+			};
+		};
+
+		var funcUnSelected = function ( event ) {
+			
+		};
+
 		graphRollup.bind("plothover", funcTooltip);
-		graphRollup.bind("plotclick", funcClick( data.results.rollup_type ) );
+		graphRollup.bind("plotclick", funcClick( flotRollup, data.results.rollup_type ) );
+		graphRollup.bind("plotselected", funcSelected( flotRollup ));
+		graphRollup.bind("plotunselected", funcUnSelected );
 		if ( graphRecent )
 		{
 			graphRecent.bind("plothover", funcTooltip);
-			graphRecent.bind("plotclick", funcClick( 'day' ) );
+			graphRecent.bind("plotclick", funcClick( flotRecent, 'day' ) );
+			graphRecent.bind("plotselected", funcSelected( flotRecent ) );
+			graphRecent.bind("plotunselected", funcUnSelected );
 		}
 	} );
 }
@@ -798,6 +857,7 @@ function ClearReviewDateFilter()
 	$J('#review_start_date').val( -1 );
 	$J('#review_end_date').val( -1 );
 	$J('#review_date_range_histogram').attr( 'disabled', true );
+	$J('#review_date_range_exclude_histogram').attr( 'disabled', true );
 	$J( "#review_selected_histogram_date_range_text" ).hide();
 	ShowFilteredReviews();
 }

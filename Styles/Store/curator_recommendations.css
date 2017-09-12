@@ -209,9 +209,6 @@ body.v6 h2.curator_name a {
 	padding-bottom: 24%;
 }
 
-.tags_list_container {
-	margin: 30px 0 10px 0;
-}
 
 .tags_list_container .carousel_items {
 	padding-bottom: 11%;
@@ -488,7 +485,9 @@ font-size: 16px;
 
 .browse_sorts > div {
 	display: flex;
+	align-items: center;
 	color: #529ac4;
+	margin-right: 15px;
 }
 
 .browse_sorts > div > div {
@@ -510,8 +509,14 @@ font-size: 16px;
 
 .browse_filters a {
 	display: block;
+	position: relative;
 	padding: 10px 10px;
 	color: #9fbbcb;
+}
+
+.browse_filters .delete {
+	position: absolute;
+	right: 5px;
 }
 
 .browse_filters a:hover, .browse_filters a.selected {
@@ -521,7 +526,17 @@ font-size: 16px;
 .browse_filters a.selected:hover {
 	color: #fff;
 }
-/* Recommendations */
+
+.tag_edit_control a, .tag_edit_control img {
+	line-height: 16px;
+	vertical-align: top;
+}
+
+.tag_edit_control img {
+	margin-right: 5px;
+}
+
+	/* Recommendations */
 .browse_content > div {
 	display: flex;
 	flex-direction: column;
@@ -580,10 +595,10 @@ font-size: 16px;
 .page_section .edit_overlay {
 	position: absolute;
 	z-index: 10;
-	top: -5px;
+	top: 5px;
 	left: -5px;;
 	right: -5px;;
-	bottom: -5px;
+	bottom: 5px;
 
 	border: 2px dashed rgba(255,255,255,0.4);
 	border-radius: 8px;
@@ -654,4 +669,37 @@ font-size: 16px;
 	width: 30%;
 	padding: 10px 0;
 	font-weight: bold;
+}
+
+.page_section .edit_options .fieldvalue {
+	background-color: #0f161f;
+	box-shadow: 1px 1px 1px rgba( 103, 193, 245, 0.1 );
+	border: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	color: #fff;
+	vertical-align: top;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 279px;
+	display: inline-block;
+}
+
+.page_section .edit_options img {
+	cursor: pointer;
+	vertical-align: top;
+	margin-left: 10px;
+	margin-top: 4px;
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
+	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
+
+}
+
+.tag_edit_control {
+	display: none;
+}
+.newmodal_buttons .btn_disabled {
+	pointer-events: none;
 }

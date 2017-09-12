@@ -200,7 +200,7 @@ function ShowDialog( strTitle, strDescription, rgModalParams )
 /**
  * @returns CModal
  */
-function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton )
+function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton, rgModalParams )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -226,7 +226,9 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 	$CancelButton.click( fnCancel );
 
 	var Modal = _BuildDialog( strTitle, $Body, [ $OKButton, $CancelButton ], fnCancel );
-	deferred.always( function() { Modal.Dismiss(); } );
+	if( !rgModalParams || !rgModalParams.bNoPromiseDismiss )
+		deferred.always( function() { Modal.Dismiss(); } );
+
 	Modal.Show();
 
 	$Input.focus();
