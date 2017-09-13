@@ -3050,7 +3050,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
+			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'mopay' )
 		{
@@ -3080,7 +3080,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
+			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'bitcoin' )
 		{
@@ -3092,14 +3092,14 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: WeChat payments can only be made from WeChat accounts that have been linked to a valid Chinese bank issued card regardless of your location.  Please visit this <a href=\'http://kf.qq.com/faq/130807me2YZf140909yumYFb.html\' target=\'_blank\'>link</a> for more details.';
+			$('payment_method_specific_note').innerHTML = 'WeChat payments can only be made from WeChat accounts that have been linked to a valid Chinese bank issued card regardless of your location.  Please visit this <a href=\'http://kf.qq.com/faq/130807me2YZf140909yumYFb.html\' target=\'_blank\'>link</a> for more details.';
 		}
 		else if ( method.value == 'tenpay' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Tenpay payments can only be made from Tenpay accounts that have been linked to a verified phone number.';
+			$('payment_method_specific_note').innerHTML = 'Tenpay payments can only be made from Tenpay accounts that have been linked to a verified phone number.';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
@@ -3118,14 +3118,14 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowPaymentSpecificNote = true;
 			bDisabledPaymentMethod = true;
-			$('payment_method_specific_note').innerHTML = '* Note: We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
+			$('payment_method_specific_note').innerHTML = 'We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
 		else if ( method.value == 'disabled_for_wallet' )
 		{
 			bShowAddressForm = false;
 			bShowPaymentSpecificNote = true;
 			bDisabledPaymentMethod = true;
-			$('payment_method_specific_note').innerHTML = '* Note: This payment method cannot be used for purchasing wallet credit.';
+			$('payment_method_specific_note').innerHTML = 'This payment method cannot be used for purchasing wallet credit.';
 		}
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
