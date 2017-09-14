@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.9229f2bbb561be9094a2c921e6bf0fdb7ff0f1d0.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ac1700edbfff0c024bef9712b8b1bc3ab8a3c96a.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1272,7 +1272,7 @@
 				"image_inventory": "econ/weapons/base_weapons/weapon_healthshot",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_healthshot.0f12f3adaf050df14c9f261714852d8e04956639.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -1476,7 +1476,7 @@
 				"image_inventory": "econ/weapons/base_weapons/weapon_tagrenade",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_tagrenade.cedfbe74bfa1942c338bfadd0ef6695382005edc.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -8038,6 +8038,31 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "crate_community_17",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "community_18 Key",
+				"defindex": 1366,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Spectrum 2 Case Key",
+				"item_description": "This key only opens Spectrum 2 cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_18",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_18.0d08136cd38dca412e831d79252e196748bbe3ad.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_18",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -18072,6 +18097,38 @@
 				
 			},
 			{
+				"name": "crate_sprays_illuminate1",
+				"defindex": 4286,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Perfect World Graffiti Box",
+				"item_description": "This capsule contains a variety of graffiti from Perfect World to commemorate the launch of Counter-Strike: Global Offensive in mainland China.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_spray_pack_illuminate_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_spray_pack_illuminate_1.fa3f92860ca0a6c2b23a1301a289bf683ba5ddee.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 223
+					}
+				]
+				
+			},
+			{
 				"name": "crate_musickit_radicals_stattrak_capsule",
 				"defindex": 4287,
 				"item_class": "supply_crate",
@@ -22493,6 +22550,104 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_18",
+				"defindex": 4403,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Spectrum 2 Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_18",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_18.261447c0deb63ab05b14a4881219e7290f00cfcc.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_18",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 220
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_illuminate_capsule_01",
+				"defindex": 4404,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Perfect World Sticker Capsule 1",
+				"item_description": "This capsule contains a variety of stickers from Perfect World to commemorate the launch of Counter-Strike: Global Offensive in mainland China.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_illuminate_capsule_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_illuminate_capsule_01.f186588acd1673f228defe7b64e4bd20aec2a082.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 221
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_illuminate_capsule_02",
+				"defindex": 4405,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Perfect World Sticker Capsule 2",
+				"item_description": "This capsule contains a variety of stickers from Perfect World to commemorate the launch of Counter-Strike: Global Offensive in mainland China.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_illuminate_capsule_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_illuminate_capsule_02.92206b56b9a1e1ca72e5028011621bbba3cc006a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 222
 					}
 				]
 				
@@ -31049,6 +31204,30 @@
 					"weapon_m4a1",
 					"weapon_fiveseven",
 					"weapon_awp"
+				]
+				
+			},
+			{
+				"item_set": "set_community_18",
+				"name": "The Spectrum 2 Collection",
+				"items": [
+					"weapon_sawedoff",
+					"weapon_aug",
+					"weapon_g3sg1",
+					"weapon_glock",
+					"weapon_mac10",
+					"weapon_tec9",
+					"weapon_scar20",
+					"weapon_mp9",
+					"weapon_sg556",
+					"weapon_cz75a",
+					"weapon_ump45",
+					"weapon_xm1014",
+					"weapon_bizon",
+					"weapon_m4a1_silencer",
+					"weapon_revolver",
+					"weapon_ak47",
+					"weapon_p250"
 				]
 				
 			},
