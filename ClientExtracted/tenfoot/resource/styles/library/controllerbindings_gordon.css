@@ -239,27 +239,37 @@ SelectMousePosition
 	margin-top: 44px;
 }
 
-.HasMultipleActionSets #GameActionSets
+.HasMultipleActionSets #GameActionSets,
+.HasMultipleActionSets #GameActionSetLayers
 {
 	visibility: visible;
 }
 
-.HasMultipleActionSets.ShowBackgroundHelper #GameActionSets
+.HasMultipleActionSets.ShowBackgroundHelper #GameActionSets,
+.HasMultipleActionSets.ShowBackgroundHelper #GameActionSetLayers
 {
 	visibility: collapse;
 }
 
-.HasMultipleActionSets.BottomPanelVisible #GameActionSets
+.HasMultipleActionSets.BottomPanelVisible #GameActionSets,
+.HasMultipleActionSets.BottomPanelVisible #GameActionSetLayers
 {
 	visibility: collapse;
 }
 
-#GameActionSets
+#GameActionSets,
+#GameActionSetLayers
 {
 	visibility: collapse;
 	flow-children: right;
 	horizontal-align: middle;
     overflow: scroll;
+}
+
+#SetLayerContainer
+{
+	flow-children: down;
+	horizontal-align: middle;
 }
 
 #ActivatorCoontainer
@@ -283,14 +293,35 @@ SelectMousePosition
 	height: 50px;
 }
 
-.GameActionButton Label, 
+.ActionSetButton, 
+.ActionLayerButton 
+{
+	height: 38px;
+    min-height: 38px;
+    width: 300px;
+    padding: 0px 10px 0px 10px;
+    margin: 6px 6px;
+}
+
+.GameActionButton Label,
 .ActivatorButton Label
 {
 	horizontal-align: middle;
 	text-transform: uppercase;
 }
 
+.ActionSetButton Label, 
+.ActionLayerButton Label
+{
+	horizontal-align: middle;
+    vertical-align: middle;
+    font-size: 21px;
+	text-transform: uppercase;
+}
+
 .GameActionButton:focus, 
+.ActionSetButton:focus, 
+.ActionLayerButton:focus,
 .ActivatorButton:focus
 {
 	padding-top: 5px;
@@ -298,12 +329,16 @@ SelectMousePosition
 }
 
 .GameActionButton:hover Label,
+.ActionSetButton:hover Label,
+.ActionLayerButton:hover Label,
 .ActivatorButton:hover Label
 {
 	color: #f2f2f2ff;
 }
 
 .GameActionButton:focus Label,
+.ActionSetButton:focus Label,
+.ActionLayerButton:focus Label,
 .ActivatorButton:focus Label
 {
 	color: #f2f2f2ff;
@@ -311,12 +346,16 @@ SelectMousePosition
 }
 
 .GameActionButton:selected,
+.ActionSetButton:selected,
+.ActionLayerButton:selected,
 .ActivatorButton:selected
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
 }
 
 .GameActionButton:selected Label,
+.ActionSetButton:selected Label,
+.ActionLayerButton:selected Label,
 .ActivatorButton:selected Label
 {
 	color: white;
@@ -328,13 +367,13 @@ SelectMousePosition
 	flow-children: right;
 	vertical-align: top;
 	width: fit-children;
-	height: 6.5%;
+	height: 5.0%;
 }
 
 #BindingsTitle,
 #ControllerTitle
 {
-	font-size: 60px;
+	font-size: 50px;
 	font-family: platformfont;
 	color: #01caef;
 	//margin-top: 20px;
@@ -2084,6 +2123,11 @@ Slider:Selected
 	margin-bottom: 0px;
 }
 
+.LayerDefault
+{
+    wash-color: #11000088;
+}
+
 .NoneMode
 {
 	visibility: collapse;
@@ -2788,17 +2832,31 @@ ChooseBinding .ControllerActionButton
     margin-left: 116px;
 }
 
-ChooseBinding #change_preset 
+ChooseBinding #actionset_options 
 {
-    visibility: collapse;
+    visibility: visible;
 }
     
-.LegacyBinding #change_preset 
+.LegacyBinding #actionset_options 
 {
     visibility: visible;
 }
 
-.LegacyBinding #show_keyboard
+.SelectPresetDropDownContainer
+{
+	margin: 16px 16px;
+}
+
+.NativeActionSets #CursorOnPresetDropDownPanel,
+.NativeActionSets #CursorOffPresetDropDownPanel,
+.NativeActionSets .HorizontalSpace,
+.NativeActionSets .SelectPresetDropDownContainer
+{
+    visibiity: collapse;
+}
+
+
+#show_keyboard
 {
     margin-left: 0px;
 }

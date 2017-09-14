@@ -138,6 +138,8 @@
  B CMsgFocusedNodeTextResponse::default_instance_
  B CMsgFreeCompositingLayer::default_instance_
  B CMsgFullRepaint::default_instance_
+ B CMsgGameOverlayTargetTextureID::default_instance_
+ B CMsgGameOverlayTexturePaint::default_instance_
  B CMsgGaussianBlur::animation_frame_data
  B CMsgGaussianBlur::default_instance_
  B CMsgGaussianBlur_AnimationFrameData::default_instance_
@@ -189,6 +191,7 @@
  B CMsgMouseWheel::default_instance_
  B CMsgMulti::default_instance_
  B CMsgNeedsPaint::default_instance_
+ B CMsgNeedsSharedTexturePaint::default_instance_
  B CMsgNodeHasFocus::default_instance_
  B CMsgOpacity::animation_frame_data
  B CMsgOpacity::default_instance_
@@ -253,6 +256,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
  B CMsgSetJumpList::default_instance_
@@ -305,6 +309,8 @@
  B CNet::sm_pResolverThreadPool
  B CNet::sm_pWorkThreadPool
  B CNetConnection::sm_cSSLConnections
+ B COpenSSLConnection::s_cSSLHandshakesPending
+ B COpenSSLWrapper::s_uOpenSSLMemoryUsage
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -314,6 +320,7 @@
  B CRadiusData_CCornerRadius::default_instance_
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
+ B CTCPConnection::m_cRecvStateStructCount
  B CTCPConnection::sm_THashPTCPConnection
  B CTCPConnection::sm_ThreadSafeQueueIncoming
  B CTCPConnection::sm_bInit
@@ -359,6 +366,7 @@
  B gConVarSpewThrottleUnconditionalResumeMs
  B gConVarSpewThrottleUnconditionalTriggerCount
  B gZeroNetAdr
+ B g_AllocTrackMutex
  B g_CompletionPortManager
  B g_ConVarDragScrollAffordance
  B g_ConVarDragScrollAffordanceVR
@@ -397,6 +405,7 @@
  B g_glProgramBinary
  B g_glProgramParameteri
  B g_machClient
+ B g_mapAllocations
  B g_mutexTempTextBuffer
  B g_nInFullscreenSwitch
  B g_pFioAsyncEnqueue
@@ -849,12 +858,6 @@
  CGLQueryRendererInfo
  CGLSetParameter
  CGOpenGLDisplayMaskToDisplayID
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::ClaimMemory_Aligned(void*)
- CValidator::IsClaimed(void*)
- CValidator::Pop()
- CValidator::Push(char const*, void*, char const*)
  CatchAndWriteMiniDumpForVoidPtrFn
  CreateVProfile
  CreateVideoPlayer
@@ -874,6 +877,7 @@
  D VideoPlayerInitAudio::pchEvent
  D construction vtable for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >-in-std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D g_BitStringEndMasks
+ D g_pszUnknown
  D guard variable for VMatrix::GetIdentityMatrix()::identityMatrix
  D guard variable for panorama::CStylePropertyAnimationProperties::BSetFromString(panorama::CStyleSymbol, char const*)::k_symNone
  D jpeg_std_message_table
@@ -1235,6 +1239,8 @@
  D typeinfo for CMsgFocusedNodeTextResponse
  D typeinfo for CMsgFreeCompositingLayer
  D typeinfo for CMsgFullRepaint
+ D typeinfo for CMsgGameOverlayTargetTextureID
+ D typeinfo for CMsgGameOverlayTexturePaint
  D typeinfo for CMsgGaussianBlur
  D typeinfo for CMsgGaussianBlur_AnimationFrameData
  D typeinfo for CMsgGaussianValues
@@ -1283,6 +1289,7 @@
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgMulti
  D typeinfo for CMsgNeedsPaint
+ D typeinfo for CMsgNeedsSharedTexturePaint
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpacity
  D typeinfo for CMsgOpacityMask
@@ -1341,6 +1348,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
  D typeinfo for CMsgSetJumpList
@@ -1877,6 +1885,8 @@
  D vtable for CMsgFocusedNodeTextResponse
  D vtable for CMsgFreeCompositingLayer
  D vtable for CMsgFullRepaint
+ D vtable for CMsgGameOverlayTargetTextureID
+ D vtable for CMsgGameOverlayTexturePaint
  D vtable for CMsgGaussianBlur
  D vtable for CMsgGaussianBlur_AnimationFrameData
  D vtable for CMsgGaussianValues
@@ -1925,6 +1935,7 @@
  D vtable for CMsgMouseWheel
  D vtable for CMsgMulti
  D vtable for CMsgNeedsPaint
+ D vtable for CMsgNeedsSharedTexturePaint
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpacity
  D vtable for CMsgOpacityMask
@@ -1983,6 +1994,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
  D vtable for CMsgSetJumpList
@@ -2505,6 +2517,8 @@
  R typeinfo name for CMsgFocusedNodeTextResponse
  R typeinfo name for CMsgFreeCompositingLayer
  R typeinfo name for CMsgFullRepaint
+ R typeinfo name for CMsgGameOverlayTargetTextureID
+ R typeinfo name for CMsgGameOverlayTexturePaint
  R typeinfo name for CMsgGaussianBlur
  R typeinfo name for CMsgGaussianBlur_AnimationFrameData
  R typeinfo name for CMsgGaussianValues
@@ -2553,6 +2567,7 @@
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgNeedsPaint
+ R typeinfo name for CMsgNeedsSharedTexturePaint
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpacity
  R typeinfo name for CMsgOpacityMask
@@ -2611,6 +2626,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
  R typeinfo name for CMsgSetJumpList
@@ -2660,6 +2676,7 @@
  R typeinfo name for CSharedMemStream
  R typeinfo name for CSharedUDPSocketPollHelper
  R typeinfo name for CStatT<SteamThreadTools::CThreadMutex>
+ R typeinfo name for CStatT<SteamThreadTools::CThreadNullMutex>
  R typeinfo name for CStdMemAlloc
  R typeinfo name for CSteamAsyncIoThread
  R typeinfo name for CSteamPanoramaFileSystem
@@ -3746,6 +3763,8 @@
  T CDynamicFunctionList::InitFunctions(char const*)
  T CDynamicFunctionList::Shutdown()
  T CDynamicFunctionListUnloadOnDestruct::~CDynamicFunctionListUnloadOnDestruct()
+ T CFilenamesCache::FindOrCreateFilename(char const*)
+ T CFilenamesCache::~CFilenamesCache()
  T CFmtStrN<1024, true, true>::Append(char const*)
  T CFmtStrN<1024, true, true>::AppendFormat(char const*, ...)
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
@@ -4721,6 +4740,28 @@
  T CMsgFullRepaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgFullRepaint::SetCachedSize(int) const
  T CMsgFullRepaint::~CMsgFullRepaint()
+ T CMsgGameOverlayTargetTextureID::ByteSize() const
+ T CMsgGameOverlayTargetTextureID::CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTargetTextureID::Clear()
+ T CMsgGameOverlayTargetTextureID::GetCachedSize() const
+ T CMsgGameOverlayTargetTextureID::GetMetadata() const
+ T CMsgGameOverlayTargetTextureID::IsInitialized() const
+ T CMsgGameOverlayTargetTextureID::MergeFrom(CMsgGameOverlayTargetTextureID const&)
+ T CMsgGameOverlayTargetTextureID::New() const
+ T CMsgGameOverlayTargetTextureID::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTargetTextureID::SetCachedSize(int) const
+ T CMsgGameOverlayTargetTextureID::~CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTexturePaint::ByteSize() const
+ T CMsgGameOverlayTexturePaint::CMsgGameOverlayTexturePaint()
+ T CMsgGameOverlayTexturePaint::Clear()
+ T CMsgGameOverlayTexturePaint::GetCachedSize() const
+ T CMsgGameOverlayTexturePaint::GetMetadata() const
+ T CMsgGameOverlayTexturePaint::IsInitialized() const
+ T CMsgGameOverlayTexturePaint::MergeFrom(CMsgGameOverlayTexturePaint const&)
+ T CMsgGameOverlayTexturePaint::New() const
+ T CMsgGameOverlayTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTexturePaint::SetCachedSize(int) const
+ T CMsgGameOverlayTexturePaint::~CMsgGameOverlayTexturePaint()
  T CMsgGaussianBlur::ByteSize() const
  T CMsgGaussianBlur::CMsgGaussianBlur()
  T CMsgGaussianBlur::Clear()
@@ -5289,6 +5330,17 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
+ T CMsgNeedsSharedTexturePaint::ByteSize() const
+ T CMsgNeedsSharedTexturePaint::CMsgNeedsSharedTexturePaint()
+ T CMsgNeedsSharedTexturePaint::Clear()
+ T CMsgNeedsSharedTexturePaint::GetCachedSize() const
+ T CMsgNeedsSharedTexturePaint::GetMetadata() const
+ T CMsgNeedsSharedTexturePaint::IsInitialized() const
+ T CMsgNeedsSharedTexturePaint::MergeFrom(CMsgNeedsSharedTexturePaint const&)
+ T CMsgNeedsSharedTexturePaint::New() const
+ T CMsgNeedsSharedTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgNeedsSharedTexturePaint::SetCachedSize(int) const
+ T CMsgNeedsSharedTexturePaint::~CMsgNeedsSharedTexturePaint()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -6004,6 +6056,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetGameOverlayTargetPIDs::ByteSize() const
+ T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
+ T CMsgSetGameOverlayTargetPIDs::Clear()
+ T CMsgSetGameOverlayTargetPIDs::GetCachedSize() const
+ T CMsgSetGameOverlayTargetPIDs::GetMetadata() const
+ T CMsgSetGameOverlayTargetPIDs::IsInitialized() const
+ T CMsgSetGameOverlayTargetPIDs::MergeFrom(CMsgSetGameOverlayTargetPIDs const&)
+ T CMsgSetGameOverlayTargetPIDs::New() const
+ T CMsgSetGameOverlayTargetPIDs::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetGameOverlayTargetPIDs::SetCachedSize(int) const
+ T CMsgSetGameOverlayTargetPIDs::~CMsgSetGameOverlayTargetPIDs()
  T CMsgSetHTMLTitle::ByteSize() const
  T CMsgSetHTMLTitle::CMsgSetHTMLTitle()
  T CMsgSetHTMLTitle::Clear()
@@ -6517,7 +6580,7 @@
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
  T CScheduler::~CScheduler()
- T CSharedMemStream::BWaitForDataToGet()
+ T CSharedMemStream::BWaitForDataToGet(bool)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)
@@ -6545,17 +6608,19 @@
  T CSmartPtr<panorama::CStyleFile>::CSmartPtr(CSmartPtr<panorama::CStyleFile> const&)
  T CSmartPtr<panorama::CStyleFile>::CSmartPtr(ESmartPtrNoAddRef, panorama::CStyleFile*)
  T CSmartPtr<panorama::CStyleFile>::operator=(CSmartPtr<panorama::CStyleFile> const&)
- T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
- T CStatT<SteamThreadTools::CThreadMutex>::Clear()
- T CStatT<SteamThreadTools::CThreadMutex>::SetHistoryMax(int)
  T CStatT<SteamThreadTools::CThreadMutex>::Validate(CValidator&, char const*)
- T CStatT<SteamThreadTools::CThreadMutex>::~CStatT()
+ T CStatT<SteamThreadTools::CThreadNullMutex>::CStatT(int, unsigned long long)
+ T CStatT<SteamThreadTools::CThreadNullMutex>::Clear()
+ T CStatT<SteamThreadTools::CThreadNullMutex>::SetHistoryMax(int)
+ T CStatT<SteamThreadTools::CThreadNullMutex>::Validate(CValidator&, char const*)
+ T CStatT<SteamThreadTools::CThreadNullMutex>::~CStatT()
  T CStdMemAlloc::Alloc(unsigned long)
  T CStdMemAlloc::Alloc(unsigned long, char const*, int, bool, bool)
  T CStdMemAlloc::AllocCanFail(unsigned long)
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
+ T CStdMemAlloc::ClearMemTrackingStats()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
  T CStdMemAlloc::ComputeMemoryUsedBy(char const*)
@@ -6578,6 +6643,7 @@
  T CStdMemAlloc::CubSBHFree()
  T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
+ T CStdMemAlloc::DumpMemTrackingStats(int)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
@@ -6619,6 +6685,7 @@
  T CStdMemAlloc::SetLowFragmentationHeap()
  T CStdMemAlloc::SetMemLeakReported(void*)
  T CStdMemAlloc::SetMemUntracked(void*)
+ T CStdMemAlloc::SetReleaseMemTrackingOn(int)
  T CStdMemAlloc::WalkAndAuditHeap()
  T CStdMemAlloc::heapchk()
  T CStdMemAlloc::~CStdMemAlloc()
@@ -8794,7 +8861,15 @@
  T CUtlVectorFixedGrowable<panorama::CRenderCommandMemoryStack*, 4>::~CUtlVectorFixedGrowable()
  T CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>::CUtlVectorFixedGrowable()
  T CUtlVectorFixedGrowable<panorama::CUIPanel*, 256>::~CUtlVectorFixedGrowable()
+ T CValObject::ClaimMemoryBlock(void*, unsigned long)
+ T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidateAutoPushPop::~CValidateAutoPushPop()
+ T CValidator::ClaimArrayMemory(void*)
+ T CValidator::ClaimMemory(void*)
+ T CValidator::ClaimMemory_Aligned(void*)
+ T CValidator::IsClaimed(void*)
+ T CValidator::Pop()
+ T CValidator::Push(char const*, void*, char const*)
  T CVariableBitStringBase::AllocInts(int)
  T CVariableBitStringBase::FreeInts()
  T CVariableBitStringBase::ReallocInts(int)
@@ -9080,6 +9155,9 @@
  T QuaternionMatrix(Quaternion const&, matrix3x4_t&)
  T QuaternionSlerp(Quaternion const&, Quaternion const&, float, Quaternion&)
  T QuaternionSlerpNoAlign(Quaternion const&, Quaternion const&, float, Quaternion&)
+ T RTAClearData()
+ T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)
+ T RTANoteFree(void*, char const*)
  T RawInflateToBuffer(void const*, unsigned int, CUtlBuffer&, unsigned int)
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
  T RendererInfoSortFunction
@@ -9177,6 +9255,7 @@
  T VMatrix::operator*(VMatrix const&) const
  T VMatrix::operator=(VMatrix const&)
  T VRButtonPressToGamepadButton(vr::EVRButtonId, unsigned int)
+ T V_pretifymem(float, int, bool)
  T V_strstr(char const*, char const*)
  T ValidateAudio(CValidator&)
  T ValidateNetPacketGlobals(CValidator&)
@@ -10006,6 +10085,7 @@
  T panorama::COpenGLSurface::AllocAlphaTexture(int, int)
  T panorama::COpenGLSurface::BCreateDoubleBufferedYUV420Texture(panorama::IUIDoubleBufferedYUV420Texture**, unsigned int, unsigned int)
  T panorama::COpenGLSurface::BCreateOpenGLDeviceResources()
+ T panorama::COpenGLSurface::BCreateSharedTexture(panorama::IUISharedTexture**)
  T panorama::COpenGLSurface::BCreateTexture(panorama::IUITexture**, void*, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::COpenGLSurface::BCreateWritableTexture(panorama::IUIWritableTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::COpenGLSurface::BCursorVisible()
@@ -10082,7 +10162,7 @@
  T panorama::COpenGLSurface::PushClipLayer(panorama::PushClipLayerRenderCommand_t const&)
  T panorama::COpenGLSurface::PushCompositingLayer(panorama::CRenderMsg<CMsgPushCompositingLayer> const&)
  T panorama::COpenGLSurface::PushCompositingLayer(panorama::PushCompositingLayerRenderCommand_t const&)
- T panorama::COpenGLSurface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned int, float, unsigned int, unsigned int, panorama::EOverlayWindowAlignment)
+ T panorama::COpenGLSurface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned int, float, unsigned int, unsigned int, EOverlayWindowAlignment)
  T panorama::COpenGLSurface::PushPanelContextInLayer(panorama::CRenderMsg<CMsgPushPanelContextInLayer> const&)
  T panorama::COpenGLSurface::PushPanelContextInLayer(panorama::PushPanelContextInLayerRenderCommand_t const&)
  T panorama::COpenGLSurface::ReloadChangedFile(char const*)
@@ -10138,7 +10218,7 @@
  T panorama::COpenGLWriteableTexture::Validate(CValidator&, char const*)
  T panorama::COpenGLWriteableTexture::~COpenGLWriteableTexture()
  T panorama::COverlayInterface::OnMouseEnter()
- T panorama::COverlayInterface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned long, float, panorama::EOverlayWindowAlignment)
+ T panorama::COverlayInterface::PushOverlayRenderCmdStream(CSharedMemStream*, unsigned long, float, EOverlayWindowAlignment)
  T panorama::COverlayInterface::SetFixedSurfaceSize(unsigned int, unsigned int)
  T panorama::COverlayInterface::SetFocus(bool)
  T panorama::COverlayInterface::SetGameProcessInfo(unsigned int, bool, int)
@@ -13134,6 +13214,7 @@
  T panorama::CUIProtoBufMsgMemoryPoolMgr::Validate(CValidator&, char const*)
  T panorama::CUIProtoBufMsgMemoryPoolMgr::~CUIProtoBufMsgMemoryPoolMgr()
  T panorama::CUIRenderEngine::BCreateDoubleBufferedYUV420Texture(panorama::IUIDoubleBufferedYUV420Texture**, unsigned int, unsigned int)
+ T panorama::CUIRenderEngine::BCreateSharedTexture(panorama::IUISharedTexture**)
  T panorama::CUIRenderEngine::BCreateTexture(panorama::IUITexture**, void*, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::CUIRenderEngine::BCreateWritableTexture(panorama::IUIWritableTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
  T panorama::CUIRenderEngine::BUseClientRenderCommands() const
@@ -14486,6 +14567,25 @@
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::end()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::~__deque_base()
+ T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::find<AllocTracking_t>(AllocTracking_t const&)
+ T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
+ T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
+ T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*)
+ T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::~__hash_table()
+ T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
+ T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::~__hash_table()
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::clear()
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::erase(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
+ T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::~__split_buffer()
@@ -14581,6 +14681,7 @@
  T std::__1::map<v8::Isolate*, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > >, std::__1::less<v8::Isolate*>, std::__1::allocator<std::__1::pair<v8::Isolate* const, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > > > > >::~map()
  T std::__1::pair<panorama::CUIAnimationEngine::RenderOperation_t**, int> std::__1::get_temporary_buffer<panorama::CUIAnimationEngine::RenderOperation_t*>(int)
  T std::__1::pair<panorama::CUIAnimationEngineNew::RenderOperation_t**, int> std::__1::get_temporary_buffer<panorama::CUIAnimationEngineNew::RenderOperation_t*>(int)
+ T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
@@ -14594,6 +14695,9 @@
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*> > > > std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
+ T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
+ T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
  T std::__1::vector<char const*, std::__1::allocator<char const*> >::__append(unsigned long)
  T std::__1::vector<char const*, std::__1::allocator<char const*> >::resize(unsigned long)
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::__append(unsigned long)
@@ -15276,6 +15380,10 @@
  b (anonymous namespace)::CMsgFreeCompositingLayer_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_reflection_
  b (anonymous namespace)::CMsgGaussianBlur_AnimationFrameData_descriptor_
  b (anonymous namespace)::CMsgGaussianBlur_AnimationFrameData_reflection_
  b (anonymous namespace)::CMsgGaussianBlur_descriptor_
@@ -15372,6 +15480,8 @@
  b (anonymous namespace)::CMsgMulti_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
  b (anonymous namespace)::CMsgNodeHasFocus_reflection_
  b (anonymous namespace)::CMsgOpacityMaskData_descriptor_
@@ -15488,6 +15598,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
@@ -15578,6 +15690,7 @@
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
+ b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::fAsserted
@@ -15600,6 +15713,9 @@
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
  b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
+ b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b V_pretifymem(float, int, bool)::current
+ b V_pretifymem(float, int, bool)::output
  b dump_panorama_css_properties_command
  b g_AllLanguagesCmdLine
  b g_BreakSet
@@ -15630,6 +15746,7 @@
  b g_pClientController
  b g_pClientControllerSerialized
  b g_pClientDepotBuilder
+ b g_pClientDeviceAuth
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
@@ -15667,6 +15784,7 @@
  b g_pfnSoundDeviceFactory
  b g_pfnVoiceDeviceFactory
  b g_queuePacketsToDelete
+ b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b guard variable for GetMemAlloc::s_StdMemAlloc
@@ -15675,6 +15793,7 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
  b guard variable for MapLocalRegisteredEvents()::s_mapRegisteredEvents
+ b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePos
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePosVar
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymEndColor
@@ -16395,6 +16514,7 @@
  r BValveDomain(char const*)::k_pchValveSoftware
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
+ r arrControllers
  r ascii_class
  r base_dither_matrix
  r bmask
@@ -16488,6 +16608,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURLResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURL_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetZoomResponse_offsets_
@@ -16524,6 +16646,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsSharedTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenNewTab_offsets_
@@ -16548,6 +16671,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_
@@ -16905,6 +17029,7 @@
  t _GLOBAL__sub_I_localize.cpp
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_mathlib_base.cpp
+ t _GLOBAL__sub_I_memstd.cpp
  t _GLOBAL__sub_I_mousecursor.cpp
  t _GLOBAL__sub_I_msg.cpp
  t _GLOBAL__sub_I_msgprotobuf.cpp
@@ -17003,6 +17128,7 @@
  t bool std::__1::__insertion_sort_incomplete<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t bool std::__1::__insertion_sort_incomplete<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t bool std::__1::__insertion_sort_incomplete<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
+ t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t color_quantize
  t color_quantize3
  t consume_data
@@ -17331,15 +17457,19 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
+ t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&>::~__split_buffer()
  t unsigned int std::__1::__sort3<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort3<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort3<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
+ t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t unsigned int std::__1::__sort4<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort4<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort4<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
+ t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t unsigned int std::__1::__sort5<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort5<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort5<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
+ t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t update_box
  t use_merged_upsample
  t v8::base::DestroyNativeHandle(_opaque_pthread_mutex_t*)
@@ -17351,6 +17481,7 @@
  t void std::__1::__sort<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t void std::__1::__sort<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t void std::__1::__sort<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
+ t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t ycc_rgb_convert
  t ycck_cmyk_convert
  time

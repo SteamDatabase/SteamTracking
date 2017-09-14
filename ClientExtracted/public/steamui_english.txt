@@ -3297,16 +3297,6 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 
 "SteamUI_SiteLicense_LockedDetail"	"There are currently no licenses available for this product. Check back later\nfor availability or notify the local administrator."
 
-"SteamUI_OSXAccessibilityTitle"			"Steam - Game Overlay Access"
-"SteamUI_OSXAccessibilityText"			"The in-game Steam overlay requires access for assistive devices to be enabled.
-
-To enable to the in-game overlay, open the Universal Access preference pane and check 'Enable access for assistive devices'"
-"SteamUI_OSXAccessibilityText109"			"The in-game Steam overlay requires access for assistive devices to be enabled.
-
-To enable to the in-game overlay, open the Security and Privacy > Privacy preference pane, select Accessibility from the left list and allow access for Steam."
-
-"SteamUI_OSXAccessibilityLinkText"	"Click here to open the Universal Access preference pane."
-
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam Hard Disk Usage:  %s1 Mb"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"Gathering system information..."
 

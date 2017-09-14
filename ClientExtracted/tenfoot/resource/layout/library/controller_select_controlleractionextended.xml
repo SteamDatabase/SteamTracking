@@ -30,7 +30,15 @@
 					<Label id="steammusic_voldown" text="#Library_Details_ControllerAction_SteamMusic_VolDown" />
 					<Label id="steammusic_volmute" text="#Library_Details_ControllerAction_SteamMusic_VolMute" />					
 				</DropDown>
-			</Panel>			
+			</Panel>		
+			<Panel id="SelectActionSetOptionPanel" class="SelectActionSetOptionContainer">
+				<DropDown id="ActionSetOptionDropdown" class="ControllerActionOptionDropdown">
+					<Label id="change_preset" text="#Library_Details_ControllerAction_ChangePreset" />
+					<Label id="hold_layer" text="#Library_Details_ControllerAction_HoldLayer" />
+					<Label id="add_layer" text="#Library_Details_ControllerAction_AddLayer" />
+					<Label id="remove_layer" text="#Library_Details_ControllerAction_RemoveLayer" />			
+				</DropDown>
+			</Panel>					
 				<Panel id="" class="HorizontalSpace" />
 				<Panel id="" class="HorizontalSpace" />
             <Panel id="MsgBoxButtons">

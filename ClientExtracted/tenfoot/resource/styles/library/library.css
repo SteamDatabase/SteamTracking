@@ -6107,6 +6107,38 @@ ControllerConfigSelectController #ButtonCancel
     font-weight: medium;
 }
 
+.ActionSetLayer #PresetToCopyDropDownPanel 
+{
+    visibility: collapse;
+}
+
+#ActionSetDecription
+{
+    visibility: visible;
+    flow-children: down;
+}
+
+.ActionSetLayer #ActionSetDecription
+{
+    visibility: collapse;
+}
+
+#ActionSetLayerDecription
+{
+    visibility: collapse;
+    flow-children: down;
+}
+
+.ActionSetLayer #ActionSetLayerDecription
+{
+    visibility: visible;
+}
+
+.OneActionSet #DeleteActionSet
+{
+    visibility: collapse;
+}
+
 #SelectControllerSharedLabel
 {
     font-size: 18px;

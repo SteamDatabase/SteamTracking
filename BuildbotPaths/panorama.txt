@@ -102,6 +102,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp

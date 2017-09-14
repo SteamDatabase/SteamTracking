@@ -61,6 +61,7 @@
  AudioServicesPlaySystemSound
  B CLayoutFile::sm_nIncludeDepth
  B CLocalizedStringTable::s_pTable
+ B COpenSSLWrapper::s_uOpenSSLMemoryUsage
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -722,9 +723,12 @@
  T CFontAmalgam::GetFlags(int)
  T CFontAmalgam::GetFontForChar(wchar_t, bool)
  T CFontAmalgam::GetFontSpans(wchar_t const*, int, COSXFont**, CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >*, bool)
+ T CFontAmalgam::GetProps(int&, int&, int&, int&, int&)
  T CFontAmalgam::GetUnderlined()
+ T CFontAmalgam::Name()
  T CFontAmalgam::RemoveAll()
  T CFontAmalgam::RequireFont(int)
+ T CFontAmalgam::SetName(char const*)
  T CFontAmalgam::SetProps(int, int, int, int, int)
  T CFontAmalgam::Validate(CValidator&, char const*)
  T CFontAmalgam::~CFontAmalgam()
@@ -742,6 +746,7 @@
  T CFontManager::GetFontAscent(unsigned long, wchar_t)
  T CFontManager::GetFontFlags(unsigned long, wchar_t)
  T CFontManager::GetFontForChar(unsigned long, wchar_t)
+ T CFontManager::GetFontInfo(unsigned long, CUtlString&, int&, int&, int&, int&, int&)
  T CFontManager::GetFontSpans(unsigned long, wchar_t const*, int, COSXFont**, CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >*)
  T CFontManager::GetFontTall(unsigned long)
  T CFontManager::GetFontUnderlined(unsigned long)
@@ -1158,6 +1163,7 @@
  T CSerializedSurface::SetNotifyIcon(unsigned int, unsigned long, unsigned int, wchar_t const*)
  T CSerializedSurface::SetPanelVisible(unsigned int, bool)
  T CSerializedSurface::SetPrimaryPopupParent(unsigned int)
+ T CSerializedSurface::SetRenderingSizeInPixels(int, int)
  T CSerializedSurface::SetScreenSize(int, int)
  T CSerializedSurface::SetSurfaceFocus(bool)
  T CSerializedSurface::SetTaskbarBounds(int, int, int, int)
@@ -2163,6 +2169,7 @@
  T non-virtual thunk to CSerializedSurface::MarkTextureUnserialized(int)
  T non-virtual thunk to CSerializedSurface::SetMaximumSurfaceAlpha(float)
  T non-virtual thunk to CSerializedSurface::SetPrimaryPopupParent(unsigned int)
+ T non-virtual thunk to CSerializedSurface::SetRenderingSizeInPixels(int, int)
  T non-virtual thunk to CSerializedSurface::SetScreenSize(int, int)
  T non-virtual thunk to CSerializedSurface::SetSurfaceFocus(bool)
  T non-virtual thunk to CSerializedSurface::SetTaskbarBounds(int, int, int, int)
@@ -2769,7 +2776,7 @@
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
  b vgui::COpenGLSurface::SetCornerRounding(unsigned int, int)::fAsserted
- b vgui::InitKeyTranslation()::threadonce_487_17
+ b vgui::InitKeyTranslation()::threadonce_487_18
  ceilf
  closedir$UNIX2003
  crc32

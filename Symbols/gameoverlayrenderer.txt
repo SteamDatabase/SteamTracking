@@ -2,18 +2,16 @@
  .objc_class_name_MTLRenderPassDescriptor
  .objc_class_name_MTLRenderPipelineDescriptor
  .objc_class_name_MTLTextureDescriptor
- .objc_class_name_NSApplication
+ .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSCursor
+ .objc_class_name_NSEvent
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
- .objc_class_name_NSOpenGLView
  .objc_class_name_NSString
- .objc_class_name_NSView
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
- B cgl_ctx
  B dwLastScreenshotTime
  B fn_glActiveTextureARB
  B fn_glAttachShader
@@ -75,6 +73,7 @@
  B g_MetalRenderer
  B g_OpenGLRenderer
  B g_bIgnoreChildProcesses
+ B g_bIsVRMonitor
  B g_bOverlayEnabled
  B g_iNotificationHorizontalInset
  B g_iNotificationVerticalInset
@@ -90,13 +89,16 @@
  B g_pScreenshotStream
  B g_pSerializedWorkQueuedEvent
  B g_pVGUIPaintEvent
+ B g_szExecutablePath
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
+ CFRetain
  CFRunLoopRun
  CFRunLoopRunInMode
  CGAssociateMouseAndMouseCursorPosition
  CGCursorIsVisible
+ CGDisplayBounds
  CGDisplayHideCursor
  CGDisplayIsCaptured
  CGDisplayMoveCursorToPoint
@@ -105,20 +107,25 @@
  CGDisplayShowCursor
  CGEventCreate
  CGEventCreateKeyboardEvent
+ CGEventCreateNextEvent
+ CGEventGetFlags
+ CGEventGetIntegerValueField
  CGEventGetLocation
+ CGEventGetType
+ CGEventKeyboardGetUnicodeString
  CGEventKeyboardSetUnicodeString
  CGEventPost
+ CGEventSetFlags
  CGGetActiveDisplayList
  CGGetDisplaysWithPoint
  CGGetLastMouseDelta
  CGLChoosePixelFormat
- CGLDisable
- CGLEnable
  CGLFlushDrawable
  CGLGetCurrentContext
  CGLGetParameter
  CGLGetSurface
- CGLSetParameter
+ CGLIsEnabled
+ CGLSetCurrentContext
  CGMainDisplayID
  CGSForceShowCursor
  CGSGetSurfaceBounds
@@ -136,7 +143,6 @@
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
  D g_IdentityMatrix
- D g_bCheckForRetina
  D g_iNotificationPosition
  D g_loggingMutex
  D typeinfo for CBaseOverlayRenderer
@@ -196,10 +202,10 @@
  OBJC_CLASS_$_MTLTextureDescriptor
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
- OBJC_CLASS_$_NSOpenGLView
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSView
  OBJC_METACLASS_$_NSObject
@@ -232,6 +238,33 @@
  ShowCursor
  T AlignPitch16(unsigned int)
  T BOverlayNeedsPresent
+ T CBaseInputHandler::AllHotKeysPressedBase()
+ T CBaseInputHandler::AllMovieHotKeysPressedBase()
+ T CBaseInputHandler::AllScreenshotHotKeysPressedBase()
+ T CBaseInputHandler::BAllowKeyUpPassthrough(int)
+ T CBaseInputHandler::BAllowMessagePassthrough(InputEvent_t*)
+ T CBaseInputHandler::BAllowMouseUpPassthrough(EMouseButton)
+ T CBaseInputHandler::BHandleKeyPresses(int, bool, bool*)
+ T CBaseInputHandler::BIsAltPressed()
+ T CBaseInputHandler::BIsControlPressed()
+ T CBaseInputHandler::BIsShiftPressed()
+ T CBaseInputHandler::CBaseInputHandler()
+ T CBaseInputHandler::ConvertGlobalCoordsToOverlay(int&, int&)
+ T CBaseInputHandler::DetectAndSetGameID()
+ T CBaseInputHandler::GetCustomCursorData(unsigned long)
+ T CBaseInputHandler::HandleMouseClicks(EMouseButton, bool)
+ T CBaseInputHandler::IsKeyPartOfHotKey(int)
+ T CBaseInputHandler::IsKeyPressed(int)
+ T CBaseInputHandler::MarkEndOfInputFrame()
+ T CBaseInputHandler::SetHotKey(int, int)
+ T CBaseInputHandler::SetMovieHotKey(int, int)
+ T CBaseInputHandler::SetRenderOutputBounds(int, int, int, int)
+ T CBaseInputHandler::SetRenderTargetSize(int, int)
+ T CBaseInputHandler::SetScreenshotHotKey(int, int)
+ T CBaseInputHandler::SetTreatEscAsHotkey(bool)
+ T CBaseInputHandler::UpdateAtToggleState()
+ T CBaseInputHandler::UpdateDblClick(MouseDblClickData*, int, int)
+ T CBaseInputHandler::~CBaseInputHandler()
  T CBaseOverlayRenderer::CBaseOverlayRenderer()
  T CBaseOverlayRenderer::CleanupMovieStream()
  T CBaseOverlayRenderer::CreateMovieStream()
@@ -244,7 +277,6 @@
  T CBaseOverlayRenderer::UpdateNotificationToastPosition()
  T CBaseOverlayRenderer::ValveCheckAsyncCapture()
  T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
- T CBaseOverlayRenderer::ValveGetInputClipRegion(int&, int&, int&, int&)
  T CBaseOverlayRenderer::ValveGetRendererWindow()
  T CBaseOverlayRenderer::ValveGetSharedD3DTextureSupport()
  T CBaseOverlayRenderer::ValveLockRenderResources()
@@ -292,50 +324,34 @@
  T CIPCToolMachClient::Init()
  T CIPCToolMachClient::~CIPCToolMachClient()
  T CInputHandler::CInputHandler()
- T CInputHandler::CursorIsVisible()
- T CInputHandler::DetectAndSetGameID()
+ T CInputHandler::ComputeKeyModifierFlagsForGame(int)
  T CInputHandler::DisplayMoveCursorToPoint(unsigned int, CGPoint)
  T CInputHandler::FakeTabPressIfNeeded()
  T CInputHandler::ForceDisableVisibility()
  T CInputHandler::ForceEnableVisibility()
- T CInputHandler::GetCustomCursorData(unsigned long)
  T CInputHandler::GetLastMouseDelta(int*, int*)
- T CInputHandler::HideCursor(unsigned int)
  T CInputHandler::InputAttach()
- T CInputHandler::MarkEndOfInputFrame()
  T CInputHandler::SendTextToGame(wchar_t const*)
- T CInputHandler::SetHotKey(int, int)
- T CInputHandler::SetInputClipRegion(int, int, int, int)
- T CInputHandler::SetMovieHotKey(int, int)
- T CInputHandler::SetOrigin(int, int)
- T CInputHandler::SetScreenPos(int, int, int, int)
- T CInputHandler::SetScreenSize(int, int, int, int, bool)
- T CInputHandler::SetScreenshotHotKey(int, int)
- T CInputHandler::SetSize(int, int)
- T CInputHandler::SetTreatEscAsHotkey(bool)
  T CInputHandler::ShowCursor(unsigned int)
  T CInputHandler::ValveDeleteCursor(unsigned long)
- T CInputHandler::ValveGetWindowOrigin(int*, int*)
  T CInputHandler::ValveSetCursor(unsigned long)
  T CInputHandler::ValveShowCursor(int)
  T CInputHandler::~CInputHandler()
  T CMetalRenderer::CMetalRenderer()
  T CMetalRenderer::FindOrCreateDeviceCacheEntry(objc_object objcproto9MTLDevice*)
  T CMetalRenderer::HookMetalProtocols()
- T CMetalRenderer::UpdateBounds()
  T CMetalRenderer::ValveCheckAsyncCapture()
  T CMetalRenderer::ValveDeleteAllTextures()
  T CMetalRenderer::ValveDeleteTexture(int)
  T CMetalRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
  T CMetalRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
  T CMetalRenderer::ValveGetFullscreenMonitor()
+ T CMetalRenderer::ValveGetOutputBounds(int&, int&, int&, int&)
  T CMetalRenderer::ValveGetPreferredTextureFormat()
  T CMetalRenderer::ValveGetRendererType()
  T CMetalRenderer::ValveGetRendererWindow()
  T CMetalRenderer::ValveGetScreenSize(int&, int&)
  T CMetalRenderer::ValveGetSharedD3DTextureSupport()
- T CMetalRenderer::ValveGetTargetSize(int&, int&)
- T CMetalRenderer::ValveGetWindowOrigin(int*, int*)
  T CMetalRenderer::ValveIsFullScreen()
  T CMetalRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T CMetalRenderer::ValveLockRenderResources()
@@ -368,15 +384,17 @@
  T COverlayGLRenderer::ValveCheckForNewContext()
  T COverlayGLRenderer::ValveDeleteAllTextures()
  T COverlayGLRenderer::ValveDeleteTexture(int)
+ T COverlayGLRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
  T COverlayGLRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
  T COverlayGLRenderer::ValveForgetAllTextures()
+ T COverlayGLRenderer::ValveFreeSharedTextures()
  T COverlayGLRenderer::ValveGetFullscreenMonitor()
+ T COverlayGLRenderer::ValveGetOutputBounds(int&, int&, int&, int&)
  T COverlayGLRenderer::ValveGetPreferredTextureFormat()
  T COverlayGLRenderer::ValveGetRendererType()
  T COverlayGLRenderer::ValveGetRendererWindow()
  T COverlayGLRenderer::ValveGetScreenSize(int&, int&)
- T COverlayGLRenderer::ValveGetTargetSize(int&, int&)
- T COverlayGLRenderer::ValveGetWindowOrigin(int*, int*)
+ T COverlayGLRenderer::ValveGetSharedD3DTextureSupport()
  T COverlayGLRenderer::ValveIsFullScreen()
  T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T COverlayGLRenderer::ValveRestoreRenderState()
@@ -386,7 +404,7 @@
  T COverlayGLRenderer::ValveTakeScreenshot(bool, unsigned int)
  T COverlayGLRenderer::ValveUpdateAndDrawSharedTexture(int, int, int, int, float, float, float, float, float, float, int, char*, unsigned int, unsigned int, unsigned int, ETextureFormat, bool*)
  T COverlayGLRenderer::~COverlayGLRenderer()
- T CSavedMemStream::BWaitForDataToGet()
+ T CSavedMemStream::BWaitForDataToGet(bool)
  T CSavedMemStream::CSavedMemStream(unsigned int)
  T CSavedMemStream::Clear(unsigned int)
  T CSavedMemStream::Get(void*, unsigned int)
@@ -395,7 +413,7 @@
  T CSavedMemStream::Put(void const*, unsigned int)
  T CSavedMemStream::ResetReadCursor()
  T CSavedMemStream::~CSavedMemStream()
- T CSharedMemStream::BWaitForDataToGet()
+ T CSharedMemStream::BWaitForDataToGet(bool)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)
@@ -460,6 +478,10 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::PurgeCurrentProcess()
  T InitializeGameStream()
+ T InputOSX_SetCocoaCursorHideShowImpl(void (*)(bool))
+ T InputOSX_SetCocoaInputEventHook(EInputOSXHookResult (*)(__CGEvent*))
+ T InputOSX_SetCocoaMouseButtonBlockMask(unsigned int)
+ T InputOSX_SetCocoaMousePositionLocked(bool)
  T InvalidateNSViewCursorRects()
  T IsOverlayEnabled
  T Log(char const*, ...)
@@ -487,12 +509,10 @@
  T SteamCGDisplayHideCursor(unsigned int)
  T SteamCGDisplayMoveCursorToPoint(unsigned int, CGPoint)
  T SteamCGDisplayShowCursor(unsigned int)
+ T SteamCGEventCreateNextEvent(void*)
  T SteamCGGetLastMouseDelta(int*, int*)
  T SteamCGLChoosePixelFormat(_CGLPixelFormatAttribute const*, _CGLPixelFormatObject**, int*)
- T SteamCGLDisable(_CGLContextObject*, _CGLContextEnable)
- T SteamCGLEnable(_CGLContextObject*, _CGLContextEnable)
  T SteamCGLFlushDrawable(_CGLContextObject*)
- T SteamCGLSetParameter(_CGLContextObject*, _CGLContextParameter, int const*)
  T SteamCGWarpMouseCursorPosition(CGPoint)
  T SteamHideCursor()
  T SteamInitCursor()
@@ -507,6 +527,7 @@
  T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedCompareExchange
+ T ToggleMovieRecordNextFrame()
  T ValveHookScreenshots
  T __clang_call_terminate
  T __cxa_allocate_exception
@@ -563,25 +584,40 @@
  T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*)
  T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, int>)
  T std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, long>)
- T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, bool>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, bool>, std::__1::__tree_node<std::__1::__value_type<int, bool>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, bool>, std::__1::__tree_node<std::__1::__value_type<int, bool>, void*>*, long>)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, void*>*)
  T std::__1::__tree_iterator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::find<int>(int const&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::find<int>(int const&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::find<int>(int const&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__tree_node<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, COverlayGLRenderer::GLTexture*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, COverlayGLRenderer::GLTexture*> > >::find<int>(int const&)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__find_equal<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, bool>, std::__1::__tree_node<std::__1::__value_type<int, bool>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, bool>, std::__1::__tree_node<std::__1::__value_type<int, bool>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::find<unsigned long>(unsigned long const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__tree_node<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::find<void*>(void* const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__tree_node<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::find<void*>(void* const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__find_equal<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> const&)
  T std::__1::__vector_base<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::~__vector_base()
  T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
  T std::__1::map<int, COverlayGLRenderer::GLTexture*, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, COverlayGLRenderer::GLTexture*> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, COverlayGLRenderer::GLTexture*, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, COverlayGLRenderer::GLTexture*> > >::operator[](int const&)
- T std::__1::map<unsigned long, CInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, unsigned long const&)
- T std::__1::map<unsigned long, CInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::operator[](unsigned long&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CInputHandler::CustomCursorData_t>&&)
+ T std::__1::map<int, bool, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, bool> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
+ T std::__1::map<int, bool, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, bool> > >::operator[](int const&)
+ T std::__1::map<int, bool, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, bool> > >::operator[](int&&)
+ T std::__1::map<unsigned long, CBaseInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CBaseInputHandler::CustomCursorData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, unsigned long const&)
+ T std::__1::map<unsigned long, CBaseInputHandler::CustomCursorData_t, std::__1::less<unsigned long>, std::__1::allocator<std::__1::pair<unsigned long const, CBaseInputHandler::CustomCursorData_t> > >::operator[](unsigned long&&)
+ T std::__1::map<void*, COverlayGLRenderer::ShareHandleData_t, std::__1::less<void*>, std::__1::allocator<std::__1::pair<void* const, COverlayGLRenderer::ShareHandleData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, void* const&)
+ T std::__1::map<void*, COverlayGLRenderer::ShareHandleData_t, std::__1::less<void*>, std::__1::allocator<std::__1::pair<void* const, COverlayGLRenderer::ShareHandleData_t> > >::operator[](void* const&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t>&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t>&&)
  T std::bad_exception::what() const
  T std::bad_exception::~bad_exception()
  T std::exception::what() const
@@ -590,6 +626,7 @@
  T std::type_info::__is_function_p() const
  T std::type_info::__is_pointer_p() const
  T std::unexpected()
+ T unsigned long std::__1::__tree<std::__1::__value_type<int, bool>, std::__1::__map_value_compare<int, std::__1::__value_type<int, bool>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, bool> > >::__erase_unique<int>(int const&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -598,6 +635,7 @@
  _CGSDefaultConnection
  _NSConcreteGlobalBlock
  _NSConcreteStackBlock
+ _NSGetExecutablePath
  _Unwind_DeleteException
  _Unwind_GetDataRelBase
  _Unwind_GetIP
@@ -627,18 +665,21 @@
  b (anonymous namespace)::emergency_mutex
  b BLogAlignmentIssue()::s_bLogged
  b BOverlayNeedsPresent::dwLastTrueTickCount
+ b CBaseOverlayRenderer::RenderFrame()::bClientUI
  b CBaseOverlayRenderer::RenderFrame()::bTenfoot
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastInsetUpdateTime
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastPositionUpdateTime
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastHorizontalInset
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastVerticalInset
  b CMetalRenderer::HookMetalProtocols()::s_bHooked
- b COverlayGLRenderer::ValveSetDesiredRenderState()::s_dwLastRetinaCheck
  b GetGLProcAddress(char*)::m_pLibGL
+ b InputHandlerFunction(__CGEvent*)::s_lastEvent
  b Log(char const*, ...)::bCheckedLogEnabled
  b SendOneTimeInputPid()::s_bOneTimeInitializationDone
  b SetupCocoaHooking()::s_bInitialized
  b SteamThreadTools::g_ThreadMainThreadID
+ b _ZL22s_ptForceMousePosition.0
+ b _ZL22s_ptForceMousePosition.1
  b __gnu_cxx::__verbose_terminate_handler()::terminating
  b eh_globals
  b emergency_buffer
@@ -656,13 +697,20 @@
  b g_nMaximumMovieResolutionY
  b g_pMovieRenderer
  b init
+ b s_MainThreadId
  b s_Pid
  b s_bCursorForcedToArrow
  b s_bDoLog
+ b s_bExternalLeftDragActive
  b s_bFirstLogEntry
  b s_bIsVideoRecording
+ b s_bMousePositionLocked
  b s_bStreamForOpenVR
+ b s_nBlockedMouseButtons
+ b s_nLastMouseX
+ b s_nLastMouseY
  b s_pGamestream
+ b s_ptForceMousePosition
  bootstrap_look_up
  bootstrap_port
  ceilf
@@ -677,21 +725,21 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp127
- d __block_descriptor_tmp130
- d __block_descriptor_tmp55
- d __block_descriptor_tmp57
- d __block_descriptor_tmp62
- d __block_descriptor_tmp64
+ d __block_descriptor_tmp132
+ d __block_descriptor_tmp136
+ d __block_descriptor_tmp60
+ d __block_descriptor_tmp63
  d __block_descriptor_tmp67
- d __block_descriptor_tmp69
+ d __block_descriptor_tmp70
+ d __block_descriptor_tmp72
+ d __block_descriptor_tmp75
  d __block_literal_global
- d __block_literal_global56
- d __block_literal_global58
- d __block_literal_global63
- d __block_literal_global65
+ d __block_literal_global61
+ d __block_literal_global64
  d __block_literal_global68
- d __block_literal_global70
+ d __block_literal_global71
+ d __block_literal_global73
+ d __block_literal_global76
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -699,12 +747,10 @@
  d _interpose_CGDisplayHideCursor
  d _interpose_CGDisplayMoveCursorToPoint
  d _interpose_CGDisplayShowCursor
+ d _interpose_CGEventCreateNextEvent
  d _interpose_CGGetLastMouseDelta
  d _interpose_CGLChoosePixelFormat
- d _interpose_CGLDisable
- d _interpose_CGLEnable
  d _interpose_CGLFlushDrawable
- d _interpose_CGLSetParameter
  d _interpose_CGWarpMouseCursorPosition
  d _interpose_HideCursor
  d _interpose_InitCursor
@@ -712,8 +758,11 @@
  d cplus_demangle_builtin_types
  d cplus_demangle_operators
  d s_eCaptureType
+ d s_nAllowPressedMouseButtonMask
  d s_pchFragmentShader
  d s_pchVertexShader
+ d s_pfnCursorHideShow
+ d s_pfnInputHookFn
  d standard_subs
  dlopen
  dlsym
@@ -779,7 +828,10 @@
  munmap$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ objc_autoreleasePoolPop
+ objc_autoreleasePoolPush
  objc_enumerationMutation
+ objc_lookUpClass
  objc_msgSend
  objc_msgSend_stret
  objc_setProperty
@@ -823,8 +875,15 @@
  strlen
  strncmp
  strncpy
+ strrchr
  strstr
  strtoull
+ t $_0::__invoke(__CGEvent*)
+ t $_1::__invoke(bool)
+ t +[NSCursor(SteamOverrideNSCursor) steamhooked_hide]
+ t +[NSCursor(SteamOverrideNSCursor) steamhooked_unhide]
+ t +[NSEvent(SteamOverrideMouse) steamhooked_mouseLocation]
+ t +[NSEvent(SteamOverrideMouse) steamhooked_pressedMouseButtons]
  t -[CMetalDeviceCache bufferScreenQuad]
  t -[CMetalDeviceCache device]
  t -[CMetalDeviceCache metalLibrary]
@@ -837,13 +896,17 @@
  t -[CMetalDeviceCache setOverlayTexture:]
  t -[CMetalDeviceCache setUpdatePipeline:]
  t -[CMetalDeviceCache updatePipeline]
- t -[NSCursor(OverrideNSCursor) hooked_set]
- t -[NSOpenGLView(OverrideNSOpenGLView) hooked_setWantsBestResolutionOpenGLSurface:]
- t -[NSView(OverrideNSView) hooked_resetCursorRects]
+ t -[NSApplication(SteamMetalHook) steammetalhook_init]
+ t -[NSApplication(SteamOverrideNextEvent) steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:]
+ t -[NSCursor(SteamOverrideNSCursor) steamhooked_set]
+ t -[NSView(SteamOverrideNSView) steamhooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
+ t CursorHideShowImpl(bool)
+ t HandleAndSerializeKeyPress(int, bool, bool, bool*)
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t Init()
  t InitTicks()
+ t InputHandlerFunction(__CGEvent*)
  t _GLOBAL__sub_I_glinterface.cpp
  t _GLOBAL__sub_I_input_osx.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
@@ -851,6 +914,7 @@
  t _GLOBAL__sub_I_metalinterface.mm
  t _GLOBAL__sub_I_platformtime.cpp
  t _GLOBAL__sub_I_threadtools.cpp
+ t ___Z31InputOSX_SetCocoaInputEventHookPF19EInputOSXHookResultP9__CGEventE_block_invoke
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_2
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_3

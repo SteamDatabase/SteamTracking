@@ -156,8 +156,6 @@
 "Overlay_MicroTxnAuth_RefundPeriod" "Steam offers refunds for these items within 48 hours of purchase if they have not been consumed, modified, or transferred. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
 "Overlay_MicroTxnAuth_NotRefundable" "These items are not eligible for a refund. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
 
-"Overlay_AccessibilityNotification_Message" "This feature requires Universal Access turned on from System Preferences."
-
 "Overlay_Screenshots_Title" "Screenshot Uploader"
 "Overlay_Screenshots_Panel_Title" "Screenshots"
 "Overlay_Screenshots_Show" "Show: "

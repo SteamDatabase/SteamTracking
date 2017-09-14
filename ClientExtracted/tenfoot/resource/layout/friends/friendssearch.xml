@@ -19,7 +19,7 @@
 			</Panel>
 
 			<Button id="SubmitPartialFilterButton" class="SelectPartialFilterButton Button" selectionpos="auto" onactivate="SubmitPartialFilter()">
-				<Label class="" text="Filter Friends view by '{s:partial_filter}'"/>
+				<Label class="" text="#friends_search_submit_partial"/>
 			</Button>
 
 			<Panel id="SearchResults" />

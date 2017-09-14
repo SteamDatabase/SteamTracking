@@ -23,7 +23,10 @@
 					<Label id="ControllerTitle" text="#SettingsController_BindingTitle_ForController" />
 				</Panel>
 				<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
-				<Panel id="GameActionSets" selectionpos="auto" onmovedown="SetSwitchInputFocus( CenterSplit SwapCenterPadModeToUnified PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Default Gyro );" onmoveright="None();"/>
+				<Panel id="SetLayerContainer">
+					<Panel id="GameActionSets" selectionpos="auto" onmovedown="SetSwitchInputFocus( Default GameActionSetLayers );" onmoveright="None();"/>
+					<Panel id="GameActionSetLayers" selectionpos="auto" onmovedown="SetSwitchInputFocus( CenterSplit SwapCenterPadModeToUnified PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Default Gyro );" onmoveright="None();"/>
+				</Panel>
 				<Panel id="TopHalfContainer" selectionpos="auto">
 					<Panel class="Background" id="BackgroundController" >
 					<Panel class="Background BackgroundLines" id="BackgroundBaseLinesLeft" />
@@ -51,10 +54,10 @@
 						</Panel>
 					</Panel>				
 					<Panel class="BindingSlotStrip Left" id="Left" tabindex="auto" selectionpos="auto">
-						<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default RightTrigger );" onmovedown="SetSwitchInputFocus( LeftBumperButton );" onmoveleft="None();" onmoveup="SetInputFocus( GameActionSets );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
+						<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default RightTrigger );" onmovedown="SetSwitchInputFocus( LeftBumperButton );" onmoveleft="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
 					</Panel>
 					<Panel class="BindingSlotStrip Right" id="Right" tabindex="auto" selectionpos="auto">
-						<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetSwitchInputFocus( CenterSplit CenterTrackpadRight PS4 CenterTrackpad Default LeftTrigger );" onmovedown="SetSwitchInputFocus( RightBumperButton );" onmoveright="None();" onmoveup="SetInputFocus( GameActionSets );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
+						<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetSwitchInputFocus( CenterSplit CenterTrackpadRight PS4 CenterTrackpad Default LeftTrigger );" onmovedown="SetSwitchInputFocus( RightBumperButton );" onmoveright="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
 					</Panel>				
 					<Panel id="Switches" tabindex="auto" selectionpos="auto" class="ModeContainer">				
 					</Panel>

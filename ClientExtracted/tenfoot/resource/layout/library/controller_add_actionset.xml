@@ -7,9 +7,14 @@
 
 	<EditShortcutName class="TenfootMsgBox" defaultfocus="ActionSetName">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+			<Panel id="ActionSetDecription" >
     		<Label class="StdTitle" text="#Library_AddActionSet_Title" />
-
     		<Label class="SubTitle" text="#Library_AddActionSet_CodeLabel" />
+			</Panel>
+			<Panel id="ActionSetLayerDecription" >
+				<Label class="StdTitle" text="#Library_AddActionSetLayer_Title" />
+				<Label class="SubTitle" text="#Library_AddActionSetLayer_CodeLabel" />
+			</Panel>			
 	    	<TextEntry id="ActionSetName"
 		       	textinputid="ActionSetNameTextEntry"
     			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />

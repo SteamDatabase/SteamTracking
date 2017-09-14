@@ -88,6 +88,12 @@ SteamIDBadgePage
 	method		"internal"
 	filter		"profile"
 }
+SteamIDAppTradingCardsPage
+{
+	url			"%community%/%mystuff%/gamecards/%p1%/"
+	method		"internal"
+	filter		"profile"
+}
 SteamDiscussions
 {
 	url			"%community%/discussions/"
@@ -818,6 +824,12 @@ CommunityMarket
 	method		"internal"
 	filter		"community"
 }
+CommunityMarketApp
+{
+	url		"%community%/market/search?appid=%p1%"
+	method		"internal"
+	filter		"community"
+}
 CommunityMarketListings
 {
 	url		"%community%/market/listings/%p1%/%p2%?filter=%p3%"
@@ -1050,4 +1062,11 @@ SteamVRHMDHelp
 {
 	url		"http://steamvr.steampowered.com"
 	method	"external"
+}
+
+RegisterKey
+{
+	url		"%storehttps%/account/registerkey"
+	method	"internal"
+	filter	"store"
 }

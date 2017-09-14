@@ -329,7 +329,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CustomCurveExponent" />
 					<Slider id="CustomCurveExponent_mouse_joystick" direction="horizontal" />
 				</Panel>								
-						
+				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
+				  <Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
+					<DropDown id="InvertXMouseMouseJoystick" />
+				</Panel>		
 				<!-- Touch Menu Mode -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButtonCount" />
@@ -604,11 +607,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertY_joystick_mouse" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on">
+				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityHorizScale" />
 					<Slider id="HorizontalSensitivity_joystick_mouse" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on">
+				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="on" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity_joystick_mouse" direction="horizontal" />
 				</Panel>
@@ -1259,10 +1262,6 @@
 					<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
 						<Slider id="MouseMoveThresholdMouseJoystick" direction="horizontal" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
-						<DropDown id="InvertXMouseMouseJoystick" />
 					</Panel>
 
 					<!-- Touch Menu Mode -->

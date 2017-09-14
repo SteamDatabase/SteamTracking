@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 	</styles>
 
-	<ChooseBinding selectionpos="0,0" defaultfocus="BindingDescriptionTextEntry" onmoveleft="DoNothing();" onmoveright="SetInputFocus( change_preset );" onmoveup="DoNothing();" onmovedown="DoNothing();">
+	<ChooseBinding selectionpos="0,0" defaultfocus="BindingDescriptionTextEntry" onmoveleft="DoNothing();" onmoveright="SetInputFocus( actionset_options );" onmoveup="DoNothing();" onmovedown="DoNothing();">
 
 		<Panel id="GameActions" selectionpos="auto">
 			<Label id="GameActionsHeader" text="#Library_Details_GameActionsHeader">
@@ -34,9 +34,9 @@
 			<Panel id="BindingDescriptionWrapper" selectionpos="0,0">
 				<Label id="SelectBindingHeader" text="#Library_Details_SelectYourBindingFor" class="SelectBindingHeader" />
 				<DropDown tabindex="-1" selectionpos="0,-1" id="BindingDescriptionDropDown" />
-				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmoveup="DoNothing();" onmoveleft="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( change_preset );" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
-				<Button id="change_preset" class="ControllerActionSetButton" selectionpos="0,-3" onactivate="ShowPresetSelector( controller_action, change_preset );" onmoveleft="SetInputFocus( BindingDescriptionTextEntry )" onmoveright="SetInputFocus( show_keyboard );" onmovedown="SetInputFocus( kb_key_volup );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_actionset.png" /></Button>
-				<Button id="show_keyboard" class="ControllerActionButton" selectionpos="0,-4" onactivate="SetBinding( controller_action, show_keyboard );" onmoveright="SetInputFocus( screenshot );" onmoveleft="SetInputFocus( change_preset );" onmovedown="SetInputFocus( kb_key_volup );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_kb2.png" /></Button>			
+				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmoveup="DoNothing();" onmoveleft="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( actionset_options );" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
+				<Button id="actionset_options" class="ControllerActionSetButton" selectionpos="0,-3" onactivate="ShowControllerActionExtendedSelector( controller_action, actionset_options );" onmoveleft="SetInputFocus( BindingDescriptionTextEntry )" onmoveright="SetInputFocus( show_keyboard );" onmovedown="SetInputFocus( kb_key_volup );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_actionset.png" /></Button>
+				<Button id="show_keyboard" class="ControllerActionButton" selectionpos="0,-4" onactivate="SetBinding( controller_action, show_keyboard );" onmoveright="SetInputFocus( screenshot );" onmoveleft="SetInputFocus( actionset_options );" onmovedown="SetInputFocus( kb_key_volup );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_kb2.png" /></Button>			
 				<Button id="screenshot" selectionpos="0,-5" onactivate="SetBinding( controller_action, screenshot );" onmoveright="SetInputFocus( mouse_position );" onmoveleft="SetInputFocus( show_keyboard );" onmovedown="SetInputFocus( kb_key_voldown );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_shot.png" /></Button>
 				<Button id="mouse_position" selectionpos="0,-6" onactivate="ShowMousePositionSelector( controller_action, mouse_position );" onmoveright="SetInputFocus( toggle_magnifier );" onmoveleft="SetInputFocus( screenshot );" onmovedown="SetInputFocus( kb_key_mute );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_mouse.png" /></Button>
 				<Button id="toggle_magnifier" selectionpos="0,-7" onactivate="SetBinding( controller_action, toggle_magnifier );" onmoveright="SetInputFocus( power_options );" onmoveleft="SetInputFocus( mouse_position );" onmovedown="SetInputFocus( kb_key_play );" ><Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_magnify2.png" /></Button>
@@ -64,7 +64,7 @@
 						<Button id="kb_key_f9" selectionpos="-3,0" onactivate="SetBinding( key_press, f9 );"><Label text="F9" /></Button>
 						<Button id="kb_key_f10" selectionpos="-2,0" onactivate="SetBinding( key_press, f10 );"><Label text="F10" /></Button>
 						<Button id="kb_key_f11" selectionpos="-1,0" onactivate="SetBinding( key_press, f11 );"><Label text="F11" /></Button>
-						<Button id="kb_key_f12" selectionpos="0,0" onmoveup="SetInputFocus( change_preset );" onactivate="SetBinding( key_press, f12 );"><Label text="F12" /></Button>
+						<Button id="kb_key_f12" selectionpos="0,0" onmoveup="SetInputFocus( actionset_options );" onactivate="SetBinding( key_press, f12 );"><Label text="F12" /></Button>
 						<Button id="kb_key_EMPTY2" disabled="true" class="Empty" />
 					</Panel>
 					<Panel id="VKBCol2" selectionpos="30,0">

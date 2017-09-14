@@ -193,7 +193,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioninstallapps.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionrungame.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details.cpp
@@ -224,6 +223,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/x264wrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/overlay/overlaymanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/remotesteamapp.cpp
@@ -402,9 +402,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfirsttimebroadcast.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfriendsnotifications.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaymanager.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaymanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/steamcontrollerhud.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaymanager.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaymanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_recentnews.h
@@ -516,6 +516,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/server/streamserver.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp

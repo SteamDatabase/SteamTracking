@@ -3,28 +3,22 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 	</styles>
 
 	<EditShortcutName class="TenfootMsgBox" defaultfocus="ActionSetName">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
     		<Label class="StdTitle" text="#Library_ManageActionSet_Title" />
 
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />
 			<Panel id="CursorOnPresetDropDownPanel" class="SelectPresetDropDownContainer">
 				<Label class="SubTitle" text="#Library_CursorOnActionSet_CodeLabel" />
 				<DropDown class="AppControllerSettingsDropdown" id="CursorOnPresetDropDown" />
 			</Panel>
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />
 			<Panel id="CursorOffPresetDropDownPanel" class="SelectPresetDropDownContainer">
 				<Label class="SubTitle" text="#Library_CursorOffActionSet_CodeLabel" />
 				<DropDown class="AppControllerSettingsDropdown" id="CursorOffPresetDropDown" />
 			</Panel>
 			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />			
     		<Label class="SubTitle" text="#Library_RenameActionSet_CodeLabel" />
 	    	<TextEntry id="ActionSetName"
 		       	textinputid="ActionSetNameTextEntry"
@@ -37,7 +31,7 @@
                 <Button class="Button" onactivate="ButtonCancel();">
                     <Label text="#UI_Cancel" />
                 </Button>
-								<Button class="Button" onactivate="ManageActionSetDelete();">
+								<Button id="DeleteActionSet" class="Button" onactivate="ManageActionSetDelete();">
 									<Label text="#UI_Delete" />
 								</Button>	
             </Panel>        

@@ -9,8 +9,6 @@
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWindow
  .objc_class_name_NSWorkspace
- AXAPIEnabled
- AXIsProcessTrustedWithOptions
  AssertMsgImplementation
  B CCookie::default_instance_
  B CHTMLHeader::default_instance_
@@ -76,6 +74,8 @@
  B CMsgFocusedNodeText::default_instance_
  B CMsgFocusedNodeTextResponse::default_instance_
  B CMsgFullRepaint::default_instance_
+ B CMsgGameOverlayTargetTextureID::default_instance_
+ B CMsgGameOverlayTexturePaint::default_instance_
  B CMsgGetCookiesForURL::default_instance_
  B CMsgGetCookiesForURLResponse::default_instance_
  B CMsgGetZoom::default_instance_
@@ -112,6 +112,7 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
+ B CMsgNeedsSharedTexturePaint::default_instance_
  B CMsgNodeHasFocus::default_instance_
  B CMsgOpenDevTools::default_instance_
  B CMsgOpenNewTab::default_instance_
@@ -136,6 +137,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
  B CMsgSetJumpList::default_instance_
@@ -164,6 +166,7 @@
  B CMsgZoomToElementAtPosition::default_instance_
  B CMsgZoomToElementAtPositionResponse::default_instance_
  B CMsgZoomToFocusedElement::default_instance_
+ B COpenSSLWrapper::s_uOpenSSLMemoryUsage
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -224,7 +227,6 @@
  B g_MenuPullInModule
  B g_MessageBoxLinkerHack
  B g_MessageBoxPullInModule
- B g_Overlay
  B g_OverlayVRState
  B g_PanelLinkerHack
  B g_PanelPullInModule
@@ -256,19 +258,14 @@
  B g_URLManager
  B g_VGUIApplicationOverlay
  B g_VecLoadedModules
- B g_bExternalDragActive
- B g_bInputTapFailed
  B g_bManuallyClearFrames
  B g_cvarDeveloper
- B g_gamePSN
  B g_listOverlayBrowserWindowPositions
  B g_machClient
  B g_mutexTempTextBuffer
  B g_nActiveOverlayWebBrowserWindows
  B g_nPID
  B g_nYou_Must_Add_Public_Vgui_Controls_Vgui_ControlsCpp_To_Your_Project
- B g_originX
- B g_originY
  B g_pCurrentFrameStream
  B g_pFileSystem
  B g_pFriendsUI
@@ -281,8 +278,6 @@
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
  B g_pVGuiModuleLoader
- B g_targetHeight
- B g_targetWidth
  B g_vecTempTextBuffer
  B pcre_callout
  B pcre_stack_guard
@@ -306,12 +301,8 @@
  CFDictionaryGetValueIfPresent
  CFGetTypeID
  CFLocaleCopyCurrent
- CFMachPortCreateRunLoopSource
  CFPropertyListCreateFromXMLData
  CFRelease
- CFRunLoopAddSource
- CFRunLoopGetCurrent
- CFRunLoopRun
  CFStringCreateWithCString
  CFStringGetCString
  CFStringGetFileSystemRepresentation
@@ -319,15 +310,6 @@
  CFURLCreateDataAndPropertiesFromResource
  CFURLCreateFromFSRef
  CFURLCreateWithFileSystemPath
- CGEventGetFlags
- CGEventGetIntegerValueField
- CGEventGetLocation
- CGEventKeyboardGetUnicodeString
- CGEventSetFlags
- CGEventSourceFlagsState
- CGEventSourceKeyState
- CGEventTapCreateForPSN
- CGEventTapEnable
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
@@ -1484,7 +1466,6 @@
  D construction vtable for vgui::URLLabel-in-CPanelHideWrapper<vgui::URLLabel>
  D g_BitStringEndMasks
  D g_nPlatformCacheAppID
- D g_pOverlayStateInfo
  D g_pchValidatedEmoticonDelimiter
  D guard variable for AppModalQueryBox::GetKBMap()::s_pMap
  D guard variable for AppModalQueryBox::GetMessageMap()::s_pMap
@@ -2056,6 +2037,8 @@
  D typeinfo for CMsgFocusedNodeText
  D typeinfo for CMsgFocusedNodeTextResponse
  D typeinfo for CMsgFullRepaint
+ D typeinfo for CMsgGameOverlayTargetTextureID
+ D typeinfo for CMsgGameOverlayTexturePaint
  D typeinfo for CMsgGetCookiesForURL
  D typeinfo for CMsgGetCookiesForURLResponse
  D typeinfo for CMsgGetZoom
@@ -2092,6 +2075,7 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
+ D typeinfo for CMsgNeedsSharedTexturePaint
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -2116,6 +2100,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
  D typeinfo for CMsgSetJumpList
@@ -2203,7 +2188,6 @@
  D typeinfo for COverlayNeedWorkshopLegalAgreementAcceptanceDialog
  D typeinfo for COverlaySettingsDialog
  D typeinfo for COverlaySplash
- D typeinfo for COverlayStateInfo
  D typeinfo for COverlayWebBrowser
  D typeinfo for COverlayWebBrowser::CCallback_OnParentalLockChanged
  D typeinfo for COverlayWebBrowserHTML
@@ -2308,7 +2292,6 @@
  D typeinfo for IHTMLResponses
  D typeinfo for IMemStream
  D typeinfo for IOverlayOSPumps
- D typeinfo for IOverlayStateInfo
  D typeinfo for IPC::BinarySemaphore
  D typeinfo for IPC::IEvent
  D typeinfo for IPC::IMutex
@@ -3277,6 +3260,8 @@
  D vtable for CMsgFocusedNodeText
  D vtable for CMsgFocusedNodeTextResponse
  D vtable for CMsgFullRepaint
+ D vtable for CMsgGameOverlayTargetTextureID
+ D vtable for CMsgGameOverlayTexturePaint
  D vtable for CMsgGetCookiesForURL
  D vtable for CMsgGetCookiesForURLResponse
  D vtable for CMsgGetZoom
@@ -3313,6 +3298,7 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
+ D vtable for CMsgNeedsSharedTexturePaint
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -3337,6 +3323,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
  D vtable for CMsgSetJumpList
@@ -3424,7 +3411,6 @@
  D vtable for COverlayNeedWorkshopLegalAgreementAcceptanceDialog
  D vtable for COverlaySettingsDialog
  D vtable for COverlaySplash
- D vtable for COverlayStateInfo
  D vtable for COverlayWebBrowser
  D vtable for COverlayWebBrowser::CCallback_OnParentalLockChanged
  D vtable for COverlayWebBrowserHTML
@@ -3636,11 +3622,8 @@
  Error
  FSGetVolumeInfo
  GetCrashHandlerFactory
- GetCurrentKeyModifiers
- GetFrontProcess
  GetLocalHostname
  GetOSType
- GetProcessForPID
  GetSpewOutputFunc
  KeyValuesSystemSteam
  Log
@@ -3921,6 +3904,8 @@
  R typeinfo name for CMsgFocusedNodeText
  R typeinfo name for CMsgFocusedNodeTextResponse
  R typeinfo name for CMsgFullRepaint
+ R typeinfo name for CMsgGameOverlayTargetTextureID
+ R typeinfo name for CMsgGameOverlayTexturePaint
  R typeinfo name for CMsgGetCookiesForURL
  R typeinfo name for CMsgGetCookiesForURLResponse
  R typeinfo name for CMsgGetZoom
@@ -3957,6 +3942,7 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
+ R typeinfo name for CMsgNeedsSharedTexturePaint
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -3981,6 +3967,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
  R typeinfo name for CMsgSetJumpList
@@ -4068,7 +4055,6 @@
  R typeinfo name for COverlayNeedWorkshopLegalAgreementAcceptanceDialog
  R typeinfo name for COverlaySettingsDialog
  R typeinfo name for COverlaySplash
- R typeinfo name for COverlayStateInfo
  R typeinfo name for COverlayWebBrowser
  R typeinfo name for COverlayWebBrowser::CCallback_OnParentalLockChanged
  R typeinfo name for COverlayWebBrowserHTML
@@ -4253,7 +4239,6 @@
  R typeinfo name for IHTMLResponses
  R typeinfo name for IMemStream
  R typeinfo name for IOverlayOSPumps
- R typeinfo name for IOverlayStateInfo
  R typeinfo name for IPC::BinarySemaphore
  R typeinfo name for IPC::IEvent
  R typeinfo name for IPC::IMutex
@@ -4401,7 +4386,6 @@
  SDL_SetHint
  SDL_ShowCursor
  SDL_WasInit
- SameProcess
  SetMiniDumpBuildID
  SetMiniDumpSteamID
  SpewOutputFunc
@@ -4531,7 +4515,6 @@
  T CBasePanel::ActivateBroadcastSettings()
  T CBasePanel::ActivateInGameSettings()
  T CBasePanel::ActivateVoiceSettings()
- T CBasePanel::AddNotificationPanel(vgui::NotificationFrame*, float, bool)
  T CBasePanel::AppDrivenFriendChange(CBasePanel::EFriendChangeType, CSteamID const&)
  T CBasePanel::CBasePanel()
  T CBasePanel::CCallback_OnAsyncNotificationsRequested::Run(void*)
@@ -5817,6 +5800,28 @@
  T CMsgFullRepaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgFullRepaint::SetCachedSize(int) const
  T CMsgFullRepaint::~CMsgFullRepaint()
+ T CMsgGameOverlayTargetTextureID::ByteSize() const
+ T CMsgGameOverlayTargetTextureID::CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTargetTextureID::Clear()
+ T CMsgGameOverlayTargetTextureID::GetCachedSize() const
+ T CMsgGameOverlayTargetTextureID::GetMetadata() const
+ T CMsgGameOverlayTargetTextureID::IsInitialized() const
+ T CMsgGameOverlayTargetTextureID::MergeFrom(CMsgGameOverlayTargetTextureID const&)
+ T CMsgGameOverlayTargetTextureID::New() const
+ T CMsgGameOverlayTargetTextureID::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTargetTextureID::SetCachedSize(int) const
+ T CMsgGameOverlayTargetTextureID::~CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTexturePaint::ByteSize() const
+ T CMsgGameOverlayTexturePaint::CMsgGameOverlayTexturePaint()
+ T CMsgGameOverlayTexturePaint::Clear()
+ T CMsgGameOverlayTexturePaint::GetCachedSize() const
+ T CMsgGameOverlayTexturePaint::GetMetadata() const
+ T CMsgGameOverlayTexturePaint::IsInitialized() const
+ T CMsgGameOverlayTexturePaint::MergeFrom(CMsgGameOverlayTexturePaint const&)
+ T CMsgGameOverlayTexturePaint::New() const
+ T CMsgGameOverlayTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTexturePaint::SetCachedSize(int) const
+ T CMsgGameOverlayTexturePaint::~CMsgGameOverlayTexturePaint()
  T CMsgGetCookiesForURL::ByteSize() const
  T CMsgGetCookiesForURL::CMsgGetCookiesForURL()
  T CMsgGetCookiesForURL::Clear()
@@ -6241,6 +6246,17 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
+ T CMsgNeedsSharedTexturePaint::ByteSize() const
+ T CMsgNeedsSharedTexturePaint::CMsgNeedsSharedTexturePaint()
+ T CMsgNeedsSharedTexturePaint::Clear()
+ T CMsgNeedsSharedTexturePaint::GetCachedSize() const
+ T CMsgNeedsSharedTexturePaint::GetMetadata() const
+ T CMsgNeedsSharedTexturePaint::IsInitialized() const
+ T CMsgNeedsSharedTexturePaint::MergeFrom(CMsgNeedsSharedTexturePaint const&)
+ T CMsgNeedsSharedTexturePaint::New() const
+ T CMsgNeedsSharedTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgNeedsSharedTexturePaint::SetCachedSize(int) const
+ T CMsgNeedsSharedTexturePaint::~CMsgNeedsSharedTexturePaint()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -6525,6 +6541,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetGameOverlayTargetPIDs::ByteSize() const
+ T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
+ T CMsgSetGameOverlayTargetPIDs::Clear()
+ T CMsgSetGameOverlayTargetPIDs::GetCachedSize() const
+ T CMsgSetGameOverlayTargetPIDs::GetMetadata() const
+ T CMsgSetGameOverlayTargetPIDs::IsInitialized() const
+ T CMsgSetGameOverlayTargetPIDs::MergeFrom(CMsgSetGameOverlayTargetPIDs const&)
+ T CMsgSetGameOverlayTargetPIDs::New() const
+ T CMsgSetGameOverlayTargetPIDs::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetGameOverlayTargetPIDs::SetCachedSize(int) const
+ T CMsgSetGameOverlayTargetPIDs::~CMsgSetGameOverlayTargetPIDs()
  T CMsgSetHTMLTitle::ByteSize() const
  T CMsgSetHTMLTitle::CMsgSetHTMLTitle()
  T CMsgSetHTMLTitle::Clear()
@@ -7421,37 +7448,6 @@
  T COverlaySplash::GetPanelTopClassName() const
  T COverlaySplash::KB_ChainToMap()
  T COverlaySplash::~COverlaySplash()
- T COverlayStateInfo::BHasAppID() const
- T COverlayStateInfo::COverlayStateInfo()
- T COverlayStateInfo::CheckGameFocus()
- T COverlayStateInfo::GetKeyCode() const
- T COverlayStateInfo::GetModifiers() const
- T COverlayStateInfo::GetMovieKeyCode() const
- T COverlayStateInfo::GetMovieModifiers() const
- T COverlayStateInfo::GetOverlayVisibility() const
- T COverlayStateInfo::GetResolution(int&, int&)
- T COverlayStateInfo::GetScreenshotKeyCode() const
- T COverlayStateInfo::GetScreenshotModifiers() const
- T COverlayStateInfo::IsHotKeySet() const
- T COverlayStateInfo::IsMovieHotKeySet() const
- T COverlayStateInfo::IsScreenshotHotKeySet() const
- T COverlayStateInfo::OnKeyDownWithoutOverlay(unsigned short)
- T COverlayStateInfo::OnKeyUpWithOverlay(unsigned short)
- T COverlayStateInfo::OnKeyUpWithoutOverlay(unsigned short)
- T COverlayStateInfo::OnModKeysChangedWithOverlay(unsigned long long&)
- T COverlayStateInfo::OnModKeysChangedWithoutOverlay(unsigned long long)
- T COverlayStateInfo::ProcessCommands(IMemStream*, CSavedMemStream*)
- T COverlayStateInfo::ReadInputCommands(IMemStream*)
- T COverlayStateInfo::ReadRenderCommands(IMemStream*)
- T COverlayStateInfo::SetAppID(unsigned int)
- T COverlayStateInfo::SetHotKeyInfo(vgui::HotKeyInfo*)
- T COverlayStateInfo::SetMovieHotKeyInfo(vgui::HotKeyInfo*)
- T COverlayStateInfo::SetResolution(int, int)
- T COverlayStateInfo::SetScreenshotHotKeyInfo(vgui::HotKeyInfo*)
- T COverlayStateInfo::SetVisibility(bool)
- T COverlayStateInfo::WriteCommand(void*, unsigned int)
- T COverlayStateInfo::WriteRenderCommand(void*, unsigned int)
- T COverlayStateInfo::~COverlayStateInfo()
  T COverlayVRState::OnGameShutdown()
  T COverlayVRState::OnSessionCreated(GameStatsSessionIssued_t*, bool)
  T COverlayVRState::VRModeBegin(VRModeBeginEvent_t const&, unsigned int)
@@ -7829,7 +7825,7 @@
  T CRunGameEngine::RunEngine(int, char const*, char const*)
  T CRunGameEngine::~CRunGameEngine()
  T CSTime::CSTime()
- T CSavedMemStream::BWaitForDataToGet()
+ T CSavedMemStream::BWaitForDataToGet(bool)
  T CSavedMemStream::CSavedMemStream(unsigned int)
  T CSavedMemStream::Clear(unsigned int)
  T CSavedMemStream::Get(void*, unsigned int)
@@ -8150,7 +8146,7 @@
  T CSettingsSubVoice::StartTestMicrophone()
  T CSettingsSubVoice::Validate(CValidator&, char const*)
  T CSettingsSubVoice::~CSettingsSubVoice()
- T CSharedMemStream::BWaitForDataToGet()
+ T CSharedMemStream::BWaitForDataToGet(bool)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)
@@ -8721,9 +8717,6 @@
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(int const&, bool, int&, bool&, bool&)
- T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::Insert(int const&, bool)
- T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(unsigned long long const&, bool, int&, bool&, bool&)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Insert(unsigned long long const&, bool)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -8907,10 +8900,6 @@
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
- T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::GrowVector(int)
- T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::InsertBefore(int, EventTapInfo_t* const&)
- T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::ShiftElementsRight(int, int)
- T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::~CUtlVector()
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsRight(int, int)
@@ -9406,7 +9395,6 @@
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
- T HotKeyPressed(bool)
  T IHTMLResponses::~IHTMLResponses()
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -9441,7 +9429,6 @@
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
  T InternalClient()
- T IsKeyDown(vgui::KeyCode)
  T ItemImageCreationCallback(char const*, void*)
  T JSON_parser_char
  T JSON_parser_done
@@ -9528,7 +9515,6 @@
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
- T KeyboardEventCallback(__CGEventTapProxy*, unsigned int, __CGEvent*, void*)
  T LayoutDebugDialog::ChainToAnimationMap()
  T LayoutDebugDialog::ChainToMap()
  T LayoutDebugDialog::CursorMoved(vgui::Panel*, int, int)
@@ -9594,8 +9580,6 @@
  T LoadTGA(int, char*, unsigned char**, int*, int*, int*)
  T Localize(char const*)
  T MessageBox_Factory()
- T MouseEventCallback(__CGEventTapProxy*, unsigned int, __CGEvent*, void*)
- T MovieHotKeyPressed()
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T MusicNameColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T MusicPositionColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
@@ -9621,15 +9605,12 @@
  T PchSpewGroupName(ESpewGroup)
  T PreparePanelMessageMap(vgui::PanelMessageMap*)
  T ProcessInputEvents()
- T ProcessInputThread(void*)
  T QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T RC4
  T RC4_options
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
  T RealMain(void*)
- T RegisterEventTaps(int, CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >&)
  T RoundToInteger(double, ERoundingMethod)
- T ScreenshotHotKeyPressed()
  T ScreenshotToLoad_t::ScreenshotToLoad_t()
  T ScreenshotToLoad_t::Validate(CValidator&, char const*)
  T ScrollBar_Horizontal_Factory()
@@ -9878,6 +9859,8 @@
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T non-virtual thunk to vgui::HTML::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T non-virtual thunk to vgui::HTML::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
  T non-virtual thunk to vgui::HTML::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserGetIndex()
  T non-virtual thunk to vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
@@ -9892,6 +9875,7 @@
  T non-virtual thunk to vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T non-virtual thunk to vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
+ T non-virtual thunk to vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T non-virtual thunk to vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
@@ -10167,9 +10151,6 @@
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*)
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int>)
- T std::__1::__tree<std::__1::__value_type<unsigned short, bool>, std::__1::__map_value_compare<unsigned short, std::__1::__value_type<unsigned short, bool>, std::__1::less<unsigned short>, true>, std::__1::allocator<std::__1::__value_type<unsigned short, bool> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned short, bool>, std::__1::__map_value_compare<unsigned short, std::__1::__value_type<unsigned short, bool>, std::__1::less<unsigned short>, true>, std::__1::allocator<std::__1::__value_type<unsigned short, bool> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned short, bool>, void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned short, bool>, std::__1::__map_value_compare<unsigned short, std::__1::__value_type<unsigned short, bool>, std::__1::less<unsigned short>, true>, std::__1::allocator<std::__1::__value_type<unsigned short, bool> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned short, bool>, std::__1::__tree_node<std::__1::__value_type<unsigned short, bool>, void*>*, int>)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
@@ -10187,7 +10168,6 @@
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_multi<std::__1::pair<unsigned long long const, CCallbackBase*>&>(std::__1::pair<unsigned long long const, CCallbackBase*>&)
  T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned short, bool>, std::__1::__tree_node<std::__1::__value_type<unsigned short, bool>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned short, bool>, std::__1::__map_value_compare<unsigned short, std::__1::__value_type<unsigned short, bool>, std::__1::less<unsigned short>, true>, std::__1::allocator<std::__1::__value_type<unsigned short, bool> > >::find<unsigned short>(unsigned short const&)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_node_base<void*>*&, int const&)
@@ -10213,8 +10193,6 @@
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_stringbuf()
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::operator[](int&&)
- T std::__1::map<unsigned short, bool, std::__1::less<unsigned short>, std::__1::allocator<std::__1::pair<unsigned short const, bool> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, unsigned short const&)
- T std::__1::map<unsigned short, bool, std::__1::less<unsigned short>, std::__1::allocator<std::__1::pair<unsigned short const, bool> > >::operator[](unsigned short const&)
  T std::__1::pair<int*, int> std::__1::get_temporary_buffer<int>(int)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
@@ -10241,7 +10219,6 @@
  T unsigned int std::__1::__sort5<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
- T unsigned long std::__1::__tree<std::__1::__value_type<unsigned short, bool>, std::__1::__map_value_compare<unsigned short, std::__1::__value_type<unsigned short, bool>, std::__1::less<unsigned short>, true>, std::__1::allocator<std::__1::__value_type<unsigned short, bool> > >::__erase_unique<unsigned short>(unsigned short const&)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
  T vgui::AnimatingImagePanel::ApplySettings(KeyValues*)
@@ -11055,6 +11032,8 @@
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
  T vgui::HTML::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T vgui::HTML::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T vgui::HTML::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
  T vgui::HTML::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
  T vgui::HTML::BrowserGetIndex()
  T vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
@@ -11070,6 +11049,7 @@
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsPaint_SDLFullscreenUnderLock(CMsgNeedsPaint const*)
+ T vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
@@ -13649,6 +13629,10 @@
  b (anonymous namespace)::CMsgFocusedNodeText_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_reflection_
  b (anonymous namespace)::CMsgGetCookiesForURLResponse_descriptor_
  b (anonymous namespace)::CMsgGetCookiesForURLResponse_reflection_
  b (anonymous namespace)::CMsgGetCookiesForURL_descriptor_
@@ -13721,6 +13705,8 @@
  b (anonymous namespace)::CMsgMouseWheel_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
  b (anonymous namespace)::CMsgNodeHasFocus_reflection_
  b (anonymous namespace)::CMsgOpenDevTools_descriptor_
@@ -13769,6 +13755,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
@@ -13857,7 +13845,6 @@
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
  b CUtlSymbol::Initialize()::symbolsInitialized
- b CheckModifierDiffs(unsigned long)::s_lastModifierCode
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
@@ -13932,6 +13919,7 @@
  b g_pClientController
  b g_pClientControllerSerialized
  b g_pClientDepotBuilder
+ b g_pClientDeviceAuth
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
@@ -14123,9 +14111,6 @@
  d s_EUniverse
  d s_HostOfflineMode
  d s_LanguageNames
- d s_bHotKeyCleared
- d s_bMovieHotKeyCleared
- d s_bScreenshotHotKeyCleared
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d s_rgchWGAuthedURLs
@@ -14197,7 +14182,6 @@
  inflateReset
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
- kCFRunLoopCommonModes
  kill$UNIX2003
  launch_data_alloc
  launch_data_dict_insert
@@ -14207,7 +14191,6 @@
  localeconv
  log10
  longjmp
- lround
  lstat$INODE64
  mach_msg
  mach_port_allocate
@@ -14232,7 +14215,6 @@
  operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
  pow
- pthread_create
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -14312,6 +14294,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURLResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURL_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetZoomResponse_offsets_
@@ -14348,6 +14332,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsSharedTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenNewTab_offsets_
@@ -14372,6 +14357,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_
@@ -14565,8 +14551,6 @@
  t BBeginsWithProtocol(char const*)
  t BIsMatchMore(char const*, char const*, int)
  t BlockingWait(int*, unsigned int, int*)
- t CheckModifierDiff(unsigned long, unsigned long, unsigned long, unsigned int)
- t CheckModifierDiffs(unsigned long)
  t CleanupURL(CUtlString&)
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyString(char const*)
@@ -14729,7 +14713,6 @@
  t _GLOBAL__sub_I_parentalinterpreter.cpp
  t _GLOBAL__sub_I_pcrecpp.cc
  t _GLOBAL__sub_I_pngloader.cpp
- t _GLOBAL__sub_I_processinput_osx.cpp
  t _GLOBAL__sub_I_refreshlogindialog.cpp
  t _GLOBAL__sub_I_reliabletimer.cpp
  t _GLOBAL__sub_I_rtime.cpp

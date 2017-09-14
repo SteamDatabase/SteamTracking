@@ -670,11 +670,11 @@
  __stack_chk_guard
  __tolower
  __toupper
- b CStringNormalization::Initialize()::threadonce_1175_24
+ b CStringNormalization::Initialize()::threadonce_1176_25
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted
- b CURLUtils::IsTLD(char const*)::threadonce_118_21
+ b CURLUtils::IsTLD(char const*)::threadonce_118_22
  b DebugStatsSystem::g_DebugStatsSystem
  b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem

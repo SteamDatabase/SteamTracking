@@ -1964,6 +1964,10 @@
 	"IconPicker_Activate"						"SELECT"
 	"Library_IconColorPickerDone"				"DONE"
 
+	"Library_Controller_CopyActivatorsToLayer_Title"	"Layer Activators"
+	"Library_Controller_CopyActivatorsToLayer_Body"		"The base Action Set has existing activators.  Adding an activator in this layer will override the base Action Set's activators.  Optionally, you can copy the base layer's activators to this action set when you add a new activator."
+	"Library_Controller_Button_CopyActivatorsToLayer" "COPY ACTIVATORS"
+
 	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
 	"Library_GameAction_None"						"None"
@@ -2090,6 +2094,9 @@
 	"Library_Details_ControllerAction_Keyboard"		"SHOW KEYBOARD"
 	"Library_Details_ControllerAction_Screenshot"	"TAKE SCREENSHOT"
 	"Library_Details_ControllerAction_MousePosition" "MOVE CURSOR"
+	"Library_Details_ControllerAction_AddLayer"		"APPLY ACTION LAYER"
+	"Library_Details_ControllerAction_RemoveLayer"	"REMOVE ACTION LAYER"
+	"Library_Details_ControllerAction_HoldLayer"	"HOLD ACTION LAYER"
 	"Library_Details_ControllerAction_ChangePreset"	"CHANGE ACTION SET"
 	"Library_Details_ControllerAction_NextPreset"	"NEXT ACTION SET"
 	"Library_Details_ControllerAction_PreviousPreset" "LAST USED ACTION SET"
@@ -3882,6 +3889,9 @@
 
 	"Library_AddActionSet_Title"	"Add Action Set"
 	"Library_AddActionSet_CodeLabel" "This will add a new set of actions that can be switched to. \nAll action sets must have a non-empty name."
+
+	"Library_AddActionSetLayer_Title"	"Add Action Set Layer"
+	"Library_AddActionSetLayer_CodeLabel" "This will add a new set of actions that will be layered on top of the existing action set.  New modes and bindings will replace existing ones, but untouched areas will remain."
 
 	"Library_ManageActionSet_Title"	"Manage Action Sets"
 	"Library_RenameActionSet_CodeLabel" "Rename this Action Set to a new title. All action sets must have a non-empty name."
@@ -6370,7 +6380,7 @@
 	"controller_unknown"								"Unknown Controller"
 	"controller_steamcontroller_unknown"				"Steam Controller"
 	"controller_steamcontroller_gordon" 				"Steam Controller"
-	"controller_generic"								"Generic XInput Controller"
+	"controller_generic"								"Generic Gamepad"
 	"controller_xbox360"								"Xbox 360 Controller"
 	"controller_xboxone"								"Xbox One Controller"
 	"controller_ps3"									"PlayStation 3 Controller"

@@ -32,6 +32,8 @@
  B CMsgFocusedNodeText::default_instance_
  B CMsgFocusedNodeTextResponse::default_instance_
  B CMsgFullRepaint::default_instance_
+ B CMsgGameOverlayTargetTextureID::default_instance_
+ B CMsgGameOverlayTexturePaint::default_instance_
  B CMsgGetCookiesForURL::default_instance_
  B CMsgGetCookiesForURLResponse::default_instance_
  B CMsgGetZoom::default_instance_
@@ -68,6 +70,7 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
+ B CMsgNeedsSharedTexturePaint::default_instance_
  B CMsgNodeHasFocus::default_instance_
  B CMsgOpenDevTools::default_instance_
  B CMsgOpenNewTab::default_instance_
@@ -92,6 +95,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
  B CMsgSetJumpList::default_instance_
@@ -889,6 +893,8 @@
  D typeinfo for CMsgFocusedNodeText
  D typeinfo for CMsgFocusedNodeTextResponse
  D typeinfo for CMsgFullRepaint
+ D typeinfo for CMsgGameOverlayTargetTextureID
+ D typeinfo for CMsgGameOverlayTexturePaint
  D typeinfo for CMsgGetCookiesForURL
  D typeinfo for CMsgGetCookiesForURLResponse
  D typeinfo for CMsgGetZoom
@@ -925,6 +931,7 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
+ D typeinfo for CMsgNeedsSharedTexturePaint
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -949,6 +956,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
  D typeinfo for CMsgSetJumpList
@@ -1703,6 +1711,8 @@
  D vtable for CMsgFocusedNodeText
  D vtable for CMsgFocusedNodeTextResponse
  D vtable for CMsgFullRepaint
+ D vtable for CMsgGameOverlayTargetTextureID
+ D vtable for CMsgGameOverlayTexturePaint
  D vtable for CMsgGetCookiesForURL
  D vtable for CMsgGetCookiesForURLResponse
  D vtable for CMsgGetZoom
@@ -1739,6 +1749,7 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
+ D vtable for CMsgNeedsSharedTexturePaint
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -1763,6 +1774,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
  D vtable for CMsgSetJumpList
@@ -2009,6 +2021,8 @@
  R typeinfo name for CMsgFocusedNodeText
  R typeinfo name for CMsgFocusedNodeTextResponse
  R typeinfo name for CMsgFullRepaint
+ R typeinfo name for CMsgGameOverlayTargetTextureID
+ R typeinfo name for CMsgGameOverlayTexturePaint
  R typeinfo name for CMsgGetCookiesForURL
  R typeinfo name for CMsgGetCookiesForURLResponse
  R typeinfo name for CMsgGetZoom
@@ -2045,6 +2059,7 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
+ R typeinfo name for CMsgNeedsSharedTexturePaint
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -2069,6 +2084,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
  R typeinfo name for CMsgSetJumpList
@@ -3188,6 +3204,28 @@
  T CMsgFullRepaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgFullRepaint::SetCachedSize(int) const
  T CMsgFullRepaint::~CMsgFullRepaint()
+ T CMsgGameOverlayTargetTextureID::ByteSize() const
+ T CMsgGameOverlayTargetTextureID::CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTargetTextureID::Clear()
+ T CMsgGameOverlayTargetTextureID::GetCachedSize() const
+ T CMsgGameOverlayTargetTextureID::GetMetadata() const
+ T CMsgGameOverlayTargetTextureID::IsInitialized() const
+ T CMsgGameOverlayTargetTextureID::MergeFrom(CMsgGameOverlayTargetTextureID const&)
+ T CMsgGameOverlayTargetTextureID::New() const
+ T CMsgGameOverlayTargetTextureID::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTargetTextureID::SetCachedSize(int) const
+ T CMsgGameOverlayTargetTextureID::~CMsgGameOverlayTargetTextureID()
+ T CMsgGameOverlayTexturePaint::ByteSize() const
+ T CMsgGameOverlayTexturePaint::CMsgGameOverlayTexturePaint()
+ T CMsgGameOverlayTexturePaint::Clear()
+ T CMsgGameOverlayTexturePaint::GetCachedSize() const
+ T CMsgGameOverlayTexturePaint::GetMetadata() const
+ T CMsgGameOverlayTexturePaint::IsInitialized() const
+ T CMsgGameOverlayTexturePaint::MergeFrom(CMsgGameOverlayTexturePaint const&)
+ T CMsgGameOverlayTexturePaint::New() const
+ T CMsgGameOverlayTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgGameOverlayTexturePaint::SetCachedSize(int) const
+ T CMsgGameOverlayTexturePaint::~CMsgGameOverlayTexturePaint()
  T CMsgGetCookiesForURL::ByteSize() const
  T CMsgGetCookiesForURL::CMsgGetCookiesForURL()
  T CMsgGetCookiesForURL::Clear()
@@ -3612,6 +3650,17 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
+ T CMsgNeedsSharedTexturePaint::ByteSize() const
+ T CMsgNeedsSharedTexturePaint::CMsgNeedsSharedTexturePaint()
+ T CMsgNeedsSharedTexturePaint::Clear()
+ T CMsgNeedsSharedTexturePaint::GetCachedSize() const
+ T CMsgNeedsSharedTexturePaint::GetMetadata() const
+ T CMsgNeedsSharedTexturePaint::IsInitialized() const
+ T CMsgNeedsSharedTexturePaint::MergeFrom(CMsgNeedsSharedTexturePaint const&)
+ T CMsgNeedsSharedTexturePaint::New() const
+ T CMsgNeedsSharedTexturePaint::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgNeedsSharedTexturePaint::SetCachedSize(int) const
+ T CMsgNeedsSharedTexturePaint::~CMsgNeedsSharedTexturePaint()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -3896,6 +3945,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetGameOverlayTargetPIDs::ByteSize() const
+ T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
+ T CMsgSetGameOverlayTargetPIDs::Clear()
+ T CMsgSetGameOverlayTargetPIDs::GetCachedSize() const
+ T CMsgSetGameOverlayTargetPIDs::GetMetadata() const
+ T CMsgSetGameOverlayTargetPIDs::IsInitialized() const
+ T CMsgSetGameOverlayTargetPIDs::MergeFrom(CMsgSetGameOverlayTargetPIDs const&)
+ T CMsgSetGameOverlayTargetPIDs::New() const
+ T CMsgSetGameOverlayTargetPIDs::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetGameOverlayTargetPIDs::SetCachedSize(int) const
+ T CMsgSetGameOverlayTargetPIDs::~CMsgSetGameOverlayTargetPIDs()
  T CMsgSetHTMLTitle::ByteSize() const
  T CMsgSetHTMLTitle::CMsgSetHTMLTitle()
  T CMsgSetHTMLTitle::Clear()
@@ -5195,6 +5255,8 @@
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T non-virtual thunk to vgui::HTML::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T non-virtual thunk to vgui::HTML::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
  T non-virtual thunk to vgui::HTML::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserGetIndex()
  T non-virtual thunk to vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
@@ -5209,6 +5271,7 @@
  T non-virtual thunk to vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T non-virtual thunk to vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
+ T non-virtual thunk to vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T non-virtual thunk to vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
@@ -6030,6 +6093,8 @@
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
  T vgui::HTML::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T vgui::HTML::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T vgui::HTML::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
  T vgui::HTML::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
  T vgui::HTML::BrowserGetIndex()
  T vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
@@ -6045,6 +6110,7 @@
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsPaint_SDLFullscreenUnderLock(CMsgNeedsPaint const*)
+ T vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
@@ -8280,6 +8346,10 @@
  b (anonymous namespace)::CMsgFocusedNodeText_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTargetTextureID_reflection_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgGameOverlayTexturePaint_reflection_
  b (anonymous namespace)::CMsgGetCookiesForURLResponse_descriptor_
  b (anonymous namespace)::CMsgGetCookiesForURLResponse_reflection_
  b (anonymous namespace)::CMsgGetCookiesForURL_descriptor_
@@ -8352,6 +8422,8 @@
  b (anonymous namespace)::CMsgMouseWheel_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_descriptor_
+ b (anonymous namespace)::CMsgNeedsSharedTexturePaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
  b (anonymous namespace)::CMsgNodeHasFocus_reflection_
  b (anonymous namespace)::CMsgOpenDevTools_descriptor_
@@ -8400,6 +8472,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
+ b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
@@ -8528,6 +8602,7 @@
  b g_pClientController
  b g_pClientControllerSerialized
  b g_pClientDepotBuilder
+ b g_pClientDeviceAuth
  b g_pClientEngine
  b g_pClientFriends
  b g_pClientGameCoordinator
@@ -8789,6 +8864,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURLResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetCookiesForURL_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetZoomResponse_offsets_
@@ -8825,6 +8902,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsSharedTexturePaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenNewTab_offsets_
@@ -8849,6 +8927,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_

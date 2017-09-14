@@ -76,6 +76,7 @@ enum EStreamControlMessage {
 	k_EStreamControlRemoteHID = 106;
 	k_EStreamControlStartMicrophoneData = 107;
 	k_EStreamControlStopMicrophoneData = 108;
+	k_EStreamControlInputText = 109;
 }
 
 enum EStreamVersion {
@@ -438,6 +439,11 @@ message CInputKeyDownMsg {
 message CInputKeyUpMsg {
 	optional uint32 input_mark = 1;
 	required uint32 scancode = 2;
+}
+
+message CInputTextMsg {
+	optional uint32 input_mark = 1;
+	required string text_utf8 = 2;
 }
 
 message CInputGamepadAttachedMsg {
