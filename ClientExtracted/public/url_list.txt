@@ -1070,3 +1070,10 @@ RegisterKey
 	method	"internal"
 	filter	"store"
 }
+
+LauncherFrontPage
+{
+	url			"%applauncher%"
+	method		"internal"
+	filter		"community"
+}
