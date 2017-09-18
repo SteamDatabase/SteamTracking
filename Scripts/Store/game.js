@@ -523,10 +523,15 @@ function SelectReviews( appid, context, reviewDayRange, startDate, endDate, forc
 
 function FilterReviewsToGraph( bCountAllReviews, startDate, endDate )
 {
-	$J('#purchase_type_all').attr( 'checked', bCountAllReviews );
-	$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
-	$J('#review_language_all').attr( 'checked', true );
-	$J('#review_context').val( "all" );
+	if ( bCountAllReviews )
+	{
+		$J('#purchase_type_all').attr( 'checked', true );
+	}
+	else
+	{
+		$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
+	}
+	// $J('#review_context').val( "all" );
 	$J('#review_start_date').val( startDate );
 	$J('#review_end_date').val( endDate );
 	if ( !$J('#review_date_range_histogram').attr( 'checked' ) && !$J('#review_date_range_exclude_histogram').attr( 'checked') )
@@ -538,6 +543,59 @@ function FilterReviewsToGraph( bCountAllReviews, startDate, endDate )
 	ShowFilteredReviews();
 }
 
+function FilterReviewsGraph( bCountAllReviews, startDate, endDate, bExclude )
+{
+	if ( bCountAllReviews )
+	{
+		$J('#purchase_type_all').attr( 'checked', true );
+	}
+	else
+	{
+		$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
+	}
+	// $J('#review_context').val( "all" );
+	$J('#review_start_date').val( startDate );
+	$J('#review_end_date').val( endDate );
+
+	$J('#review_date_range_histogram').attr( 'disabled', false );
+	$J('#review_date_range_exclude_histogram').attr( 'disabled', false );
+
+	if ( bExclude )
+	{
+		$J('#review_date_range_exclude_histogram').attr( 'checked', true );
+	}
+	else
+	{
+		$J('#review_date_range_histogram').attr( 'checked', true );
+	}
+
+	ShowFilteredReviews();
+}
+
+function ClearReviewTypeFilter()
+{
+	$J('#review_type_all').attr( 'checked', true );
+	ShowFilteredReviews();
+}
+
+function ClearReviewPurchaseTypeFilter()
+{
+	$J('#purchase_type_all').attr( 'checked', true );
+	ShowFilteredReviews();
+}
+
+function ClearReviewLanguageFilter()
+{
+	$J('#review_language_all').attr( 'checked', true );
+	ShowFilteredReviews();
+}
+
+function ClearReviewDateRangeFilter()
+{
+	$J('#review_date_range_all').attr( 'checked', true );
+	ClearReviewDateFilter();
+}
+
 function BuildReviewHistogram()
 {
 	if( $J( "#review_histograms_container" ).length == 0 )
@@ -547,7 +605,12 @@ function BuildReviewHistogram()
 
 	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, {}
 	).done( function( data ) {
-		$J( "#review_histograms_container" ).show();
+
+		$J( "#review_histograms_container" ).addClass( "has_data" );
+
+		// remove so we can draw to the canvas
+		$J( "#review_histograms_container" ).removeClass( "collapsed" );
+		$J( "#reviews_filter_options" ).removeClass( "graph_collapsed" );
 
 		var bCountAllReviews = data.count_all_reviews;
 		// language
@@ -563,6 +626,7 @@ function BuildReviewHistogram()
 
 		if ( numTotalDays < 7 )
 		{
+			$J( "#app_reviews_hash" ).addClass( "graph_hidden" );
 			$J( "#review_historgram_rollup_title" ).hide();
 			$J( "#review_histogram_rollup_container" ).hide();
 			$J( "#review_histogram_rollup_section" ).addClass( "recent" );
@@ -695,10 +759,6 @@ function BuildReviewHistogram()
 			var graphRecent =  $J( "#review_histogram_recent" );
 			var flotRecent = $J.plot( graphRecent, seriesRecent, recentOptions );
 
-			// highlight area that would be the "recent" graph
-			var ctx = flotRollup.getCanvas().getContext('2d');
-			var offsets = flotRollup.getPlotOffset();
-			
 			var recentGraphStartDate = data.results.recent[0].date * 1000;
 
 			var rollupPoints = flotRollup.getData();
@@ -715,26 +775,29 @@ function BuildReviewHistogram()
 				var endY = seriesPositive.yaxis.p2c( axes.yaxis.min );
 				var highlightHeight = endY - startY;
 
-				// draw the rect on the graph
-				ctx.fillStyle = 'rgba(148,217,255,0.2)';
-				ctx.fillRect( offsets.left + startX, offsets.top + startY, highlightWidth, highlightHeight );
-
-				// now draw the "pop-out" on our other canvas
 				var c = document.getElementById( "review_graph_canvas" );
-				ctx = c.getContext( "2d" );
+				var ctx = c.getContext( "2d" );
 				// resize the canvas to the same size as the element, so our drawing doesn't look blurry
 				c.width = $J( c ).width();
 				c.height = $J( c ).height();
-				ctx.fillStyle = 'rgba(33,44,61,1)';
 				// these should be 1-to-1 now, but for correctness, we need to
 				var scaleX = c.width / c.offsetWidth;
 				var scaleY = c.height / c.offsetHeight;
 
-				var offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
+				// draw rect on the graph
+				ctx.fillStyle = 'rgba(148,217,255,0.2)';
+				var offsets = flotRollup.getPlotOffset();
+				var offsetLeft = ( offsets.left + startX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
 				var offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
+				ctx.fillRect( offsetLeft * scaleX, offsetTop * scaleY, highlightWidth, highlightHeight );
+
+				// now draw the "pop-out" on our other canvas
+				offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
+				offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
 				var offsetBottom = ( offsets.top + endY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
 				var recentSection = $J( "#review_histogram_recent_section" );
 
+				ctx.fillStyle = 'rgba(33,44,61,1)';
 				ctx.beginPath();
 				ctx.moveTo( offsetLeft * scaleX, offsetTop * scaleY );
 				ctx.lineTo( recentSection.position().left * scaleX, recentSection.position().top * scaleY );
@@ -849,7 +912,47 @@ function BuildReviewHistogram()
 			graphRecent.bind("plotselected", funcSelected( flotRecent ) );
 			graphRecent.bind("plotunselected", funcUnSelected );
 		}
+
+		// recent events
+		if ( data.results.recent_events && data.results.recent_events.length > 0 )
+		{
+			var event = data.results.recent_events[0];
+			var container = $J( "#review_recent_events_container" );
+			$J( "#recent_review_event_dates" ).text( data.results.recent_event_dates );
+			$J( "#recent_review_event_text" ).text( data.results.recent_events_text );
+			$J( "#filter_reviews_to_event_btn" ).click( function() {
+				$J( '#review_type_all' ).attr( 'checked', true );
+				FilterReviewsGraph( bCountAllReviews, event.start_date, event.end_date, false );
+				if ( flotRecent )
+				{
+					flotRecent.clearSelection();
+				}
+				flotRollup.clearSelection();
+			});
+			$J( "#filter_reviews_exclude_event_btn" ).click( function() {
+				$J( '#review_type_all' ).attr( 'checked', true );
+				FilterReviewsGraph( bCountAllReviews, event.start_date, event.end_date, true );
+				if ( flotRecent )
+				{
+					flotRecent.clearSelection();
+				}
+				flotRollup.clearSelection();
+			});
+			container.show();
+		}
+		else
+		{
+			$J( "#review_histograms_container" ).addClass( "collapsed" );
+			$J( "#reviews_filter_options" ).addClass( "graph_collapsed" );
+		}
+
 	} );
+}
+
+function SetReviewsGraphVisibility( bVisible )
+{
+	$J( "#review_histograms_container" ).toggleClass( "collapsed", !bVisible );
+	$J( "#reviews_filter_options" ).toggleClass( "graph_collapsed", !bVisible );
 }
 
 function ClearReviewDateFilter()
@@ -868,8 +971,82 @@ function OnLoadReviews()
 	ShowFilteredReviews();
 }
 
+function UpdateActiveFilters()
+{
+	var bAnyActiveFilters = false;
+	// type
+	if ( $J( "#review_type_positive" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_type" ).show();
+		$J( "#reviews_filter_type" ).text( 'Positive' );
+	}
+	else if ( $J( "#review_type_negative" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_type" ).show();
+		$J( "#reviews_filter_type" ).text( 'Negative' );
+	}
+	else
+	{
+		$J( "#reviews_filter_type" ).hide();
+	}
+
+	// purchase type
+	if ( $J( "#purchase_type_steam" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_purchase_type" ).show();
+		$J( "#reviews_filter_purchase_type" ).text( 'Steam Purchasers' );
+	}
+	else if ( $J( "#purchase_type_non_steam" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_purchase_type" ).show();
+		$J( "#reviews_filter_purchase_type" ).text( 'Not Purchased on Steam' );
+	}
+	else
+	{
+		$J( "#reviews_filter_purchase_type" ).hide();
+	}
+
+	// language
+	if ( $J( "#review_language_mine" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_language" ).show();
+		$J( "#reviews_filter_language" ).text( 'Your Languages' );
+	}
+	else
+	{
+		$J( "#reviews_filter_language" ).hide();
+	}
+
+	// graph
+	if ( $J( "#review_date_range_histogram" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_graph" ).show();
+		$J( "#review_selected_histogram_date_range_prefix" ).text( 'View Only ' );
+	}
+	else if ( $J( "#review_date_range_exclude_histogram" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_graph" ).show();
+		$J( "#review_selected_histogram_date_range_prefix" ).text( 'Exclude ' );
+	}
+	else
+	{
+		$J( "#reviews_filter_graph" ).hide();
+	}
+
+	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
+}
+
 function ShowFilteredReviews()
 {
+	UpdateActiveFilters();
+
 	var appid = $J( "#review_appid" ).val();
 	var context = $J( "#review_context" ).val();
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
@@ -1027,6 +1204,29 @@ function ShowRecommendedMoreInfoModal()
 	var strTemplate = "<div class=\"recommended_more_info_modal\">\r\n\t\t\t\t\t\t\t\t<p class=\"intro\">You've found something that doesn't look like other things you've used in the past. Steam will learn about your preferences from the games you play, movies you watch, and software you use on Steam. We will use this activity to tailor your recommendations to your tastes.<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Like this item?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>If you like this item and go on to purchase and play it, we'll take that into account when making future recommendations<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Not interested in things like this?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>You can also configure your store preferences to tell Steam about tags or types of products that you aren't interested in. <a href=\"https:\/\/store.steampowered.com\/account\/preferences\/\">Visit store preferences<\/a>.<\/p>\r\n\t\t\t\t\t\t\t<\/div>";
 	ShowAlertDialog( "More about recommendations", strTemplate);
 
+}
 
+function CollapseLongStrings( strSelector )
+{
+
+	$J(strSelector).each(function(i, j){
+		var $target = $J(j);
+		if( j.scrollWidth >  $target.innerWidth() )
+		{
+			//$target.css({ 'overflow': 'hidden', 'white-space': 'nowrap', 'text-overflow': 'ellipsis' });
+			var elMoreBtn = document.createElement('div');
+
+			elMoreBtn.classList.add('more_btn');
+			elMoreBtn.textContent = '+';
+			elMoreBtn.addEventListener('click', function($target, elButton, event){
+
+				$target.css({'overflow': 'visible', 'white-space': 'normal'});
+				elButton.remove();
+
+			}.bind(null, $target, elMoreBtn ));
+
+			j.parentNode.appendChild(elMoreBtn);
+		}
+	})
 }
 

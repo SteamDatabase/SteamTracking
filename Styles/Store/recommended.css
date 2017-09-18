@@ -2202,7 +2202,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 {
 	font-size: 12px;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	background-color: #1f2f42;
 }
 
@@ -2238,6 +2238,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .user_reviews_filter_section.right select {
 	width: 100px;
 }
+
 
 .user_reviews_filter_section input[type="checkbox"] {
 	vertical-align: bottom;
@@ -2280,10 +2281,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 		font-weight: normal; /* normal */
 
 			display: none;
-	border-top: 1px solid #3a6e8b;
-	margin-top: 10px;
+	margin-bottom: 20px;
 	padding-top: 10px;
+	padding-bottom: 20px;
 	font-size: 15px;
+	border-bottom: 1px solid #000;
 }
 .user_reviews_filter_score.visible {
 	display: block;
@@ -2401,11 +2403,71 @@ body.recommendgame #review_create h1  {
 	padding-top: 0;
 }
 
+/* filters */
+.user_reviews_active_filters {
+
+}
+.user_reviews_active_filters .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-transform: none;
+	font-size: 15px;
+	color: #c6d4df;
+	padding-bottom: 5px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.user_reviews_active_filters .active_filter {
+	background-color: rgba( 255, 255, 255, 0.2 );
+	padding: 5px;
+	padding-right: 25px;
+	margin-right: 5px;
+	border-radius: 2px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-image: url(/public/images/v6/deleteSearchTerm.png);
+	background-position: right 5px center;
+	display: inline-block;
+}
+
+/* review events */
+
+#review_recent_events_container {
+	box-shadow: 0 0 5px #000;
+	display: none;
+	position: relative;
+
+	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);	/*
+	background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+.review_recent_events_icon {
+	float: left;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+.recent_review_title {
+	font-size: 20px;
+	color: #000000;
+	font-weight: bold;
+}
+.recent_review_title .recent_review_event_dates {
+	font-weight: normal;
+}
+
+.recent_review_event_text {
+	color: #ded7c9;
+}
+
 /* review histogram */
+
 #review_histograms_container {
 	background-color: #2a475e;
 	box-shadow: 0 0 5px #000;
-	display: none;
 	position: relative;
 }
 
@@ -2430,6 +2492,9 @@ body.recommendgame #review_create h1  {
 }
 .review_histogram_section.recent {
 	box-shadow: 0 0 5px #000;
+}
+.review_histogram_section.recent.hidden {
+	box-shadow: none;
 }
 .review_histogram_section .user_reviews_summary_bar {
 	border-bottom: 1px solid #000000;
@@ -2483,6 +2548,132 @@ body.recommendgame #review_create h1  {
 }
 #review_histogram_tooltip.negative {
 	color: #A34C25;
+}
+
+#review_histograms_container.collapsed #review_graph_canvas,
+#review_histograms_container.collapsed .histogram_title,
+#review_histograms_container.collapsed .review_histogram {
+	display: none;
+}
+#review_histograms_container.collapsed #review_histogram_recent_section {
+	min-height: 0px;
+}
+#review_histograms_container.collapsed .review_histogram_section .user_reviews_summary_bar {
+	margin-bottom: 0px;
+}
+
+#review_show_graph_button {
+	display: none;
+}
+#review_hide_graph_button {
+}
+
+.review_graph_toggle>span {
+	display: inline;
+}
+div.graph_toggle_icon {
+	width: 14px;
+	height: 16px;
+	margin-right: 7px;
+	margin-top: 4px;
+	background: url('/public/images/v6/app/review_graph_expander.png');
+	background-repeat: no-repeat;
+	background-size: 14px 26px;
+	display: inline-block;
+}
+div.graph_toggle_icon.up {
+	background-position: 0px 2px;
+}
+div.graph_toggle_icon.down {
+	background-position: 0px -12px;
+}
+#reviews_filter_options.graph_collapsed #review_show_graph_button {
+	display: inherit;
+}
+
+#reviews_filter_options.graph_collapsed #review_hide_graph_button {
+	display: none;
+}
+
+#app_reviews_hash.graph_hidden #review_hide_graph_button {
+	display: none;
+}
+
+/* review filter flyout menu */
+.user_reviews_filter_options.flyout {
+	padding: 0px;
+}
+.user_reviews_filter_menu {
+	border-left: 1px solid #2a475e;
+	position: relative;
+	float: left;
+	padding-right: 10px;
+}
+.user_reviews_filter_menu:hover {
+	background-color: #c6d4df;
+}
+.user_reviews_filter_menu .title {
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #4582a5;
+	padding: 10px;
+	padding-right: 20px;
+	cursor: pointer;
+	background-image: url(/public/images/v6/btn_arrow_down_padded.png);
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: right;
+}
+.user_reviews_filter_menu:hover .title,
+.user_reviews_filter_menu_flyout:hover .user_reviews_filter_menu .title {
+	background-image: url(/public/images/v6/btn_arrow_down_padded_black.png);
+}
+.user_reviews_filter_menu_flyout {
+	position: absolute;
+	display: none;
+	padding: 10px;
+	color: #556772;
+	line-height: 20px;
+	z-index: 10;
+}
+.user_reviews_filter_menu:hover .user_reviews_filter_menu_flyout,
+.user_reviews_filter_menu_flyout:hover {
+	display: block;
+	background-color: #c6d4df;
+}
+.user_reviews_filter_menu_flyout_content {
+	position: relative;
+	white-space: nowrap;
+}
+
+.user_reviews_filter_display_as {
+	float: left;
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #4582a5;
+	padding: 5px 10px;
+	border-left: 1px solid #2a475e;
+}
+.user_reviews_filter_display_as select {
+	width: 100px;
+	background: #4582a5;
+	font-size: 12px;
+	border: none;
+	border-radius: 2px;
+	margin-left: 5px;
+	margin-top: 2px;
+
+}
+
+.user_reviews_date_range_explanation {
+	white-space: normal;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #4582a5;
+}
+
+#app_reviews_hash.graph_hidden #reviews_date_range_menu {
+	display: none;
 }
 
 /* language breakdown */
