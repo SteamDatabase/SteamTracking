@@ -1452,12 +1452,70 @@ label.send_choice_txt {
 }
 
 .checkout_tab .form_row#payment_row_save_my_address {
-	margin-top: 50px;
+	margin-top: 20px;
+}
+
+.checkout_tab .form_row#bank_iban_row
+{
+	margin-bottom: 60px;
 }
 
 .checkout_tab .form_row_sizable, .checkout_tab #youll_get_to_review {
 	padding: 8px;
 	background: rgba( 0, 0, 0, 0.2 );
+}
+
+.checkout_tab #payment_row_step2 #payment_row_step2_header
+{
+	color: #ffffff;
+	font-size: 15px;
+}
+
+#payment_method_notes
+{
+	position: relative;
+	margin-top: 20px;
+}
+
+.payment_method_notes_bubble
+{
+  position:relative;
+  padding:15px;
+  color:#ffffff;
+  background:#f3961c; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#425e70), to(#425e70));
+  background:-moz-linear-gradient(#425e70, #425e70);
+  background:-o-linear-gradient(#425e70, #425e70);
+  background:linear-gradient(#425e70, #425e70);
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+
+.payment_method_notes_bubble:after 
+{
+  content:"";
+  position:absolute;
+  border-width:0 15px 15px; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#425e70 transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+  top:-15px; /* value = - border-top-width - border-bottom-width */
+  left:30px; /* controls horizontal position */
+  bottom:auto;
+  right:auto;
+}
+
+.payment_method_notes_bubble li
+{
+	display: list-item;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 13px;
 }
 
 .checkout_tab .form_row

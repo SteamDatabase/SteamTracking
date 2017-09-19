@@ -2281,14 +2281,18 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 		font-weight: normal; /* normal */
 
 			display: none;
-	margin-bottom: 20px;
+
 	padding-top: 10px;
-	padding-bottom: 20px;
 	font-size: 15px;
-	border-bottom: 1px solid #000;
+
 }
 .user_reviews_filter_score.visible {
 	display: block;
+}
+.reviews_info_ctn {
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 .user_reviews_filter_score .title {
 	float: left;

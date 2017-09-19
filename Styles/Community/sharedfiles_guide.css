@@ -102,16 +102,18 @@
 	height: 74px;
 	margin-right: 10px;
 	margin-bottom: 3px;
-	border-top: 1px solid #262626;
-	border-left: 1px solid #262626;
-	border-right: 1px solid #111111;
-	border-bottom: 1px solid #111111;
 }
 
 .guidePreviewImage img
 {
-	width: 74px;
-	height: 74px;
+	max-width: 74px;
+	max-height: 74px;
+	width: auto;
+	height: auto;
+	border-top: 1px solid #262626;
+	border-left: 1px solid #262626;
+	border-right: 1px solid #111111;
+	border-bottom: 1px solid #111111;
 }
 
 .guidePreviewImageSmall
@@ -125,8 +127,10 @@
 
 .guidePreviewImageSmall img
 {
-	width: 36px;
-	height: 36px;
+	max-width: 36px;
+	max-height: 36px;
+	width: auto;
+	height: auto;
 }
 
 #GuideTableOfContents

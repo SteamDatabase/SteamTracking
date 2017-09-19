@@ -760,7 +760,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -2235,6 +2235,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}	
+				else if ( method.value == 'santanderrio' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Santander Rio transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Santander Rio customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}	
 			}
 			else
 			{
@@ -2790,17 +2800,7 @@ function ShowNextPaymentMethod()
 				
 			for ( var i = 0; i < paymentMethodDropList.childNodes.length; i++ )
 			{
-				var bPaymentMethodFound = false;
-				for ( var j = 0; j < g_rgPaymentMethodsToToggle.length; j++ )
-				{
-					if ( g_rgPaymentMethodsToToggle[j] == paymentMethodDropList.childNodes[i].childNodes[0].id )
-					{
-						bPaymentMethodFound = true;
-						break;
-					}
-				}
-				
-				if ( !bPaymentMethodFound )
+				if ( rgPaymentMethodProperties[paymentMethodDropList.childNodes[i].childNodes[0].id].can_be_split )
 				{
 					DHighlightItem( 'payment_method', i, true );
 					break;
@@ -2832,82 +2832,42 @@ function SelectPaymentMethod( method )
 	UpdatePaymentInfoForm();
 }
 
-var g_rgPaymentMethodsToToggle = new Array();
-g_rgPaymentMethodsToToggle[0] = 'steamaccount';
-g_rgPaymentMethodsToToggle[1] = 'boleto';
-g_rgPaymentMethodsToToggle[2] = 'boacompragold';
-g_rgPaymentMethodsToToggle[3] = 'bancodobrasilonline';
-g_rgPaymentMethodsToToggle[4] = 'itauonline';
-g_rgPaymentMethodsToToggle[5] = 'bradescoonline';
-g_rgPaymentMethodsToToggle[6] = 'pagseguro';
-g_rgPaymentMethodsToToggle[7] = 'visabrazil';
-g_rgPaymentMethodsToToggle[8] = 'amexbrazil';
-g_rgPaymentMethodsToToggle[9] = 'aura';
-g_rgPaymentMethodsToToggle[10] = 'hipercard';
-g_rgPaymentMethodsToToggle[11] = 'mastercardbrazil';
-g_rgPaymentMethodsToToggle[12] = 'dinerscardbrazil';
-g_rgPaymentMethodsToToggle[13] = 'multibanco';
-g_rgPaymentMethodsToToggle[14] = 'payshop';
-g_rgPaymentMethodsToToggle[15] = 'maestroboacompra';
-g_rgPaymentMethodsToToggle[16] = 'konbini';
-g_rgPaymentMethodsToToggle[17] = 'bank_transfer_japan';
-g_rgPaymentMethodsToToggle[18] = 'payeasy';
-g_rgPaymentMethodsToToggle[19] = 'oxxo';
-g_rgPaymentMethodsToToggle[20] = 'toditocash';
-g_rgPaymentMethodsToToggle[21] = 'carnet';
-g_rgPaymentMethodsToToggle[22] = 'spei';
-g_rgPaymentMethodsToToggle[23] = '3pay';
-g_rgPaymentMethodsToToggle[24] = 'isbank';
-g_rgPaymentMethodsToToggle[25] = 'garanti';
-g_rgPaymentMethodsToToggle[26] = 'akbank';
-g_rgPaymentMethodsToToggle[27] = 'yapikredi';
-g_rgPaymentMethodsToToggle[28] = 'halkbank';
-g_rgPaymentMethodsToToggle[29] = 'bankasya';
-g_rgPaymentMethodsToToggle[30] = 'finansbank';
-g_rgPaymentMethodsToToggle[31] = 'denizbank';
-g_rgPaymentMethodsToToggle[32] = 'ptt';
-g_rgPaymentMethodsToToggle[33] = 'cashu';
-g_rgPaymentMethodsToToggle[34] = 'onecard';
-g_rgPaymentMethodsToToggle[35] = 'pse';
-g_rgPaymentMethodsToToggle[36] = 'exito';
-g_rgPaymentMethodsToToggle[37] = 'efecty';
-g_rgPaymentMethodsToToggle[38] = 'baloto';
-g_rgPaymentMethodsToToggle[39] = 'pinvalidda';
-g_rgPaymentMethodsToToggle[40] = 'mangirkart';
-g_rgPaymentMethodsToToggle[41] = 'bancocreditodeperu';
-g_rgPaymentMethodsToToggle[42] = 'bbvacontinental';
-g_rgPaymentMethodsToToggle[43] = 'safetypay';
-g_rgPaymentMethodsToToggle[44] = 'pagoefectivo';
-g_rgPaymentMethodsToToggle[45] = 'trustly';
-g_rgPaymentMethodsToToggle[46] = 'nodwin_cod';
-
-function UpdatePaymentMethodList( bIsSplitTransaction )
-{
-	for (var i = 0; i < g_rgPaymentMethodsToToggle.length; i++)
-	{
-		var pm = $(g_rgPaymentMethodsToToggle[i]);
-		
-		if ( pm )
-		{
-			bIsSplitTransaction ? $J(pm).hide() : $J(pm).show();
-		}
-	}
-}
-
 function UpdatePaymentInfoForm()
 {
 	try 
 	{
 		$('error_display').innerHTML = '';
 		$J('#error_display').hide();
+
+		var method = $('payment_method');
+		if ( !method )
+			return;
 	
-		UpdatePaymentMethodList( g_nPaymentMethodStep == 2 );
+		var pm = $('steamaccount');
+		
+		if ( pm )
+		{
+			g_nPaymentMethodStep == 2 ? $J(pm).hide() : $J(pm).show();
+		}	
+
+		var bCanBeSplit = true;
+		
 				if ( g_nPaymentMethodStep == 2 )
 		{
 						$('payment_header').innerHTML = 'Payment method, Step 2';
 			$J('#payment_row_step2').show();
 			$J('#payment_method_previous_button').show();
-			$('payment_info_method_label').innerHTML = 'Please select a payment method for the remaining' + ' ' + g_strProviderRemaining;
+
+			if ( rgPaymentMethodProperties[method.value].can_be_split )
+			{
+				$('payment_info_method_label').innerHTML = 'Please select a payment method for the remaining' + ' ' + g_strProviderRemaining;
+				g_bUseRemainingSteamAccount = true;
+			}
+			else
+			{
+				bCanBeSplit = false;
+				g_bUseRemainingSteamAccount = false;
+			}
 		}
 		else
 		{
@@ -2917,9 +2877,6 @@ function UpdatePaymentInfoForm()
 			$('payment_info_method_label').innerHTML = 'Please select a payment method';
 		}
 		
-		var method = $('payment_method');
-		if ( !method )
-			return;
 		var card_is_stored = BIsStoredCreditCard();
 		
 		if ( card_is_stored )
@@ -3039,7 +2996,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'kuveytturkbank' || method.value == 'ekonomibank' || method.value == 'pichincha' || method.value == 'pichinchacash' 
 			|| method.value == 'przelewy24' || method.value == 'trustpay' || method.value == 'poli' || method.value == 'mercadopago' || method.value == 'payu' 
 			|| method.value == 'vtcpaywallet' || method.value == 'vtcpaycards' || method.value == 'vtcpayonlinebanking' || method.value == 'mrcash' 
-			|| method.value == 'eps' || method.value == 'interac' 
+			|| method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio'
 		)
 		{
 			bShowAddressForm = false;
@@ -3187,8 +3144,8 @@ function UpdatePaymentInfoForm()
 		var strCountryVerificationDisplay = bShowCountryVerification ? 'block' : 'none';
 		$('payment_row_country_verification').style.display = strCountryVerificationDisplay;
 		
-		var strPaymentMethodSpecificNote = bShowPaymentSpecificNote ? 'block' : 'none';
-		$('payment_row_payment_method_specific_note').style.display = strPaymentMethodSpecificNote;	
+		var strPaymentMethodSpecificNote = bShowPaymentSpecificNote ? 'list-item' : 'none';
+		$('payment_method_specific_note').style.display = strPaymentMethodSpecificNote;	
 
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
@@ -3198,8 +3155,14 @@ function UpdatePaymentInfoForm()
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
 		
-		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'block' : 'none';
+		var strPaymentMethodCanBeSplit = !bCanBeSplit ? 'list-item' : 'none';
+		$('payment_method_unable_to_split' ).style.display = strPaymentMethodCanBeSplit;
+		
+		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'list-item' : 'none';
 		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
+
+		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote ? 'block': 'none';
+		$('payment_method_notes' ).style.display = strPaymentMethodNotes;
 	} 
 	catch( e ) 
 	{
@@ -4365,6 +4328,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'interac' && providerPaymentMethod == 118 )
 			{
 				$('payment_method_review_text').innerHTML = 'Interac';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'santanderrio' && providerPaymentMethod == 63 )
+			{
+				$('payment_method_review_text').innerHTML = 'Santander Rio';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 		}

@@ -7,6 +7,11 @@ body.v6 {
 
 .browse_content {
 	width: 100%;
+	transition: opacity 500ms;
+}
+
+.browse_content.loading {
+	opacity: 0.4;
 }
 
 .header_area {
@@ -289,6 +294,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	margin: 10px 0;
 	font-size: 14px;
 	color: #abdaf4;
+	line-height: 18px;
 	
 }
 
@@ -560,6 +566,10 @@ font-size: 16px;
 	width: 231px;
 }
 
+.browse_content .recommendation .store_capsule {
+	flex-shrink: 0;
+}
+
 .page_section  {
 	position: relative;
 	padding: 15px 0;
@@ -580,7 +590,7 @@ font-size: 16px;
 	padding: 4px;
 	border-radius: 3px;
 	margin: 5px 0;
-	color: #fff;
+	color: #529ac4;
 }
 
 .page_section .edit_handle {
@@ -697,9 +707,52 @@ font-size: 16px;
 
 }
 
+.recommendation_disclosures {
+	margin-top: 3px;
+	color: #9fbbcb;
+}
+
+.recommendation_desc {
+	color: #9099a1;
+}
+
+.recommendation_type_ctn {
+	font-size: 16px;
+}
+
+.recommendation_readmore {
+	margin-top: 3px;
+}
+
+.recommendation_readmore a {
+	color: #c7d5e0;
+
+}
+
 .tag_edit_control {
 	display: none;
 }
 .newmodal_buttons .btn_disabled {
 	pointer-events: none;
 }
+
+.about_section {
+	display: flex;
+}
+
+.about_section p {
+	margin: 5px 0;
+
+}
+
+.about_section .curator_url {
+	display: block;
+	color: #9fbbcb;
+}
+
+.about_section_container {
+	padding-top: 25px;
+}
+
+
+

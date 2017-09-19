@@ -214,6 +214,7 @@ function UpdateCurationList( )
 {
 	var elForm = document.getElementById('filter_box');
 	var elTarget = document.getElementById('RecommendationsTable');
+	elTarget.classList.add('loading');
 
 	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
 
@@ -241,6 +242,7 @@ function UpdateCurationList( )
 	} ).done( function ( data )
 	{
 		elTarget.innerHTML = data;
+		elTarget.classList.remove('loading');
 	});
 
 }
