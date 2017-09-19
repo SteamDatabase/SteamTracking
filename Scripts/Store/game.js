@@ -627,7 +627,6 @@ function BuildReviewHistogram()
 		if ( numTotalDays < 7 )
 		{
 			$J( "#app_reviews_hash" ).addClass( "graph_hidden" );
-			$J( "#review_historgram_rollup_title" ).hide();
 			$J( "#review_histogram_rollup_container" ).hide();
 			$J( "#review_histogram_rollup_section" ).addClass( "recent" );
 			$J( "#review_histogram_rollup_section" ).addClass( "hidden" );
@@ -648,11 +647,8 @@ function BuildReviewHistogram()
 			data.results.rollups = data.results.recent;
 			data.results.recent = null;
 			data.results.rollup_type = 'day';
-			data.title = 'Recent Review Volume';
 		}
 
-		$J( "#review_historgram_rollup_title" ).text( data.title );
-		
 		var chartDataPositive = [];
 		var chartDataNegative = [];
 
@@ -704,13 +700,14 @@ function BuildReviewHistogram()
 				mode: "time",
 				timeformat: "%b %d",
 				timezone: "utc",
-				tickLength: 0,
+				tickLength: 0
 			},
 			yaxis: {
 				tickFormatter : function( val, axis ) {
 					return ( val < 0 ) ? -val : val;
 				},
 				tickLength: 0,
+				tickDecimals: 0
 			},
 			grid: {
 				hoverable: true,
