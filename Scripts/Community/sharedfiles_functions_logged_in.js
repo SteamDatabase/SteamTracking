@@ -58,7 +58,7 @@ function CheckVoteResultsJSON( json )
 		case 16:
 			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
-		case 24:
+		case 112:
 			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.' );
 			return false;
 		case 21:
@@ -69,6 +69,9 @@ function CheckVoteResultsJSON( json )
 			return false;
 		case 17:
 			ShowAlertDialog( 'Error', 'Your account is VAC Banned in this game and you\'re unable to perform this action as a result.' );
+			return false;
+		case 24:
+			ShowAlertDialog( 'Error', 'You must <a href="http://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );
 			return false;
 		case 1:
 			return true;
