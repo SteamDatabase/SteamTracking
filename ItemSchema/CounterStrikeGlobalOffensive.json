@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ac1700edbfff0c024bef9712b8b1bc3ab8a3c96a.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.72330a99365958bec623e2dac697e10f6cdb3047.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -22566,7 +22566,7 @@
 				"image_inventory": "econ/weapon_cases/crate_community_18",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_18.261447c0deb63ab05b14a4881219e7290f00cfcc.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_18.4255d9e03d5dad034bbe868622733deeb81434c1.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true,
