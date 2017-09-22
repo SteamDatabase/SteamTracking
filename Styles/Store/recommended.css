@@ -2442,11 +2442,13 @@ body.recommendgame #review_create h1  {
 	display: none;
 	position: relative;
 
-	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);	/*
-	background: -webkit-linear-gradient( top, #23384b 5%, #374655 95%);background: linear-gradient( to bottom, #23384b 5%, #374655 95%);	*/
 	padding: 10px 15px;
 	margin-bottom: 10px;
 }
+#review_recent_events_container.high_volume_all {
+	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
+#review_recent_events_container.high_volume_negative {
+	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
 
 .review_recent_events_icon {
 	float: left;
@@ -2715,6 +2717,16 @@ div.graph_toggle_icon.down {
 
 	html.responsive .review_box .rightcol .vote_header {
 		overflow: hidden;
+	}
+
+	html.responsive #review_graph_canvas {
+		display: none;
+	}
+
+	html.responsive #review_histogram_rollup_section,
+	html.responsive #review_histogram_recent_section
+	{
+		width: 100%;
 	}
 }
 

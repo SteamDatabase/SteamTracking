@@ -426,6 +426,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 		'date_range_type' : dateRangeType,
 		'filter' : context,
 		'language' : language,
+		'l' : 'english',
 		'review_type' : reviewType,
 		'purchase_type' : purchaseType,
 		'review_beta_enabled' : reviewBetaEnabled
@@ -603,7 +604,7 @@ function BuildReviewHistogram()
 
 	var appid = $J( "#review_appid" ).val();
 
-	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, {}
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english' }
 	).done( function( data ) {
 
 		$J( "#review_histograms_container" ).addClass( "has_data" );
@@ -772,36 +773,43 @@ function BuildReviewHistogram()
 				var endY = seriesPositive.yaxis.p2c( axes.yaxis.min );
 				var highlightHeight = endY - startY;
 
-				var c = document.getElementById( "review_graph_canvas" );
-				var ctx = c.getContext( "2d" );
-				// resize the canvas to the same size as the element, so our drawing doesn't look blurry
-				c.width = $J( c ).width();
-				c.height = $J( c ).height();
-				// these should be 1-to-1 now, but for correctness, we need to
-				var scaleX = c.width / c.offsetWidth;
-				var scaleY = c.height / c.offsetHeight;
+				var funcDrawGraphOverlay = function() {
 
-				// draw rect on the graph
-				ctx.fillStyle = 'rgba(148,217,255,0.2)';
-				var offsets = flotRollup.getPlotOffset();
-				var offsetLeft = ( offsets.left + startX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
-				var offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
-				ctx.fillRect( offsetLeft * scaleX, offsetTop * scaleY, highlightWidth, highlightHeight );
+					var c = document.getElementById("review_graph_canvas");
+					var ctx = c.getContext("2d");
+					// resize the canvas to the same size as the element, so our drawing doesn't look blurry
+					c.width = $J(c).width();
+					c.height = $J(c).height();
+					ctx.clearRect(0, 0, c.width, c.height);
+					// these should be 1-to-1 now, but for correctness, we need to
+					var scaleX = c.width / c.offsetWidth;
+					var scaleY = c.height / c.offsetHeight;
 
-				// now draw the "pop-out" on our other canvas
-				offsetLeft = ( offsets.left + endX ) + $J( flotRollup.getCanvas() ).offsetParent().position().left;
-				offsetTop = ( offsets.top + startY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
-				var offsetBottom = ( offsets.top + endY ) + $J( flotRollup.getCanvas() ).offsetParent().position().top;
-				var recentSection = $J( "#review_histogram_recent_section" );
+					// draw rect on the graph
+					ctx.fillStyle = 'rgba(148,217,255,0.2)';
+					var offsets = flotRollup.getPlotOffset();
+					var offsetLeft = ( offsets.left + startX ) + $J(flotRollup.getCanvas()).offsetParent().position().left;
+					var offsetTop = ( offsets.top + startY ) + $J(flotRollup.getCanvas()).offsetParent().position().top;
+					ctx.fillRect(offsetLeft * scaleX, offsetTop * scaleY, highlightWidth, highlightHeight);
 
-				ctx.fillStyle = 'rgba(33,44,61,1)';
-				ctx.beginPath();
-				ctx.moveTo( offsetLeft * scaleX, offsetTop * scaleY );
-				ctx.lineTo( recentSection.position().left * scaleX, recentSection.position().top * scaleY );
-				ctx.lineTo( recentSection.position().left * scaleX, ( recentSection.position().top + recentSection.height() ) * scaleY );
-				ctx.lineTo( offsetLeft * scaleX, offsetBottom * scaleY );
-				ctx.lineTo( offsetLeft * scaleX, offsetTop * scaleY );
-				ctx.fill();
+					// now draw the "pop-out" on our other canvas
+					offsetLeft = ( offsets.left + endX ) + $J(flotRollup.getCanvas()).offsetParent().position().left;
+					offsetTop = ( offsets.top + startY ) + $J(flotRollup.getCanvas()).offsetParent().position().top;
+					var offsetBottom = ( offsets.top + endY ) + $J(flotRollup.getCanvas()).offsetParent().position().top;
+					var recentSection = $J("#review_histogram_recent_section");
+
+					ctx.fillStyle = 'rgba(33,44,61,1)';
+					ctx.beginPath();
+					ctx.moveTo(offsetLeft * scaleX, offsetTop * scaleY);
+					ctx.lineTo(recentSection.position().left * scaleX, recentSection.position().top * scaleY);
+					ctx.lineTo(recentSection.position().left * scaleX, ( recentSection.position().top + recentSection.height() ) * scaleY);
+					ctx.lineTo(offsetLeft * scaleX, offsetBottom * scaleY);
+					ctx.lineTo(offsetLeft * scaleX, offsetTop * scaleY);
+					ctx.fill();
+				};
+
+				$J("#review_graph_canvas").resize( funcDrawGraphOverlay );
+				funcDrawGraphOverlay();
 			}
 		}
 
@@ -915,6 +923,8 @@ function BuildReviewHistogram()
 		{
 			var event = data.results.recent_events[0];
 			var container = $J( "#review_recent_events_container" );
+			container.addClass( event.type );
+			$J( "#recent_review_event_title" ).text( data.results.recent_events_title );
 			$J( "#recent_review_event_dates" ).text( data.results.recent_event_dates );
 			$J( "#recent_review_event_text" ).text( data.results.recent_events_text );
 			$J( "#filter_reviews_to_event_btn" ).click( function() {
