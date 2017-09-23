@@ -387,6 +387,20 @@ GHomepage = {
 
 			);
 		}
+		else if ( g_AccountID % 2 == 0 )
+		{
+			rgDisplayListCombined = GHomepage.ZipLists(
+				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
+				GHomepage.oDisplayLists.top_sellers, true,
+				GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true, // Top new releases
+				GHomepage.oDisplayLists.main_cluster, true // Legacy
+			);
+
+			rgDisplayListCombined = GHomepage.MergeLists(
+				rgDisplayListCombined, false,
+				GHomepage.rgRecommendedGames, true
+			);
+		}
 		else
 		{
 			/*rgDisplayListCombined = GHomepage.InterleaveLists(
@@ -655,62 +669,78 @@ GHomepage = {
 		}
 		else
 		{
+			if ( rgItemData.popular_new_on_steam )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
+			}
+			else if ( rgItemData.top_seller )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+			}
 
 			var strStatus = '';
 			if ( rgItem.status_string )
+			{
 				strStatus = rgItem.status_string;
+			}
 			else if ( rgItemData.early_access )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 				strStatus = 'Early Access Now Available';
 			}
 			else if ( rgItemData.popular_new_on_steam )
 			{
 				strStatus = 'New On Steam';
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
 			}
 			else if ( rgItemData.top_seller )
 			{
 				strStatus = 'Top Seller';
 				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
 			}
 			else if ( rgItemData && rgItemData.coming_soon )
+			{
 				strStatus = 'Pre-Purchase Now';
+			}
 			else if ( rgItemData && rgItemData.video )
+			{
 				strStatus = 'Now Available to Watch';
+			}
 			else
+			{
 				strStatus = 'Now Available';
+			}
+
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('default').text( strStatus );
 			$RecommendedReason.append( $ReasonMain );
 		}
 
 		// Now show any additional reasons we might have to show it
-		var $ReasonAdditional = $J('<div/>').addClass('additional');
-
-		for( var key in rgRecommendationReasons )
-		{
-			var reason = rgRecommendationReasons[key];
-			if( !reason )
-				continue;
-
-			var strReason = '';
-
-			if( key == 'top_seller' )
-				strReason = "Top Seller";
-
-			if( key == 'new_release' )
-				strReason = "New Release";
-
-			if( key == 'recommended')
-				strReason = "Similar to games you play";
-
-			$ReasonAdditional.append($J('<div/>').html( strReason ) );
-
-		}
 
 		if( bShowAdditionalReasons )
+		{
+			var $ReasonAdditional = $J('<div/>').addClass('additional');
+
+			for( var key in rgRecommendationReasons )
+			{
+				if( !rgRecommendationReasons[key] )
+					continue;
+
+				var strReason = '';
+
+				if( key == 'top_seller' )
+					strReason = "Top Seller";
+				else if( key == 'new_release' )
+					strReason = "New Release";
+				else if( key == 'recommended')
+					strReason = "Similar to games you play";
+				else
+					continue;
+
+				$ReasonAdditional.append($J('<div/>').html( strReason ) );
+
+			}
+
 			$RecommendedReason.append($ReasonAdditional);
+		}
 
 		$CapCtn.append($RecommendedReason);
 
