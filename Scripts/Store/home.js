@@ -765,6 +765,10 @@ GHomepage = {
 		$J('.tab_item').each(function(i, j){
 			var $el = $J(j);
 			var unAppId = $el.data('ds-appid');
+
+			if( unAppId && unAppId.toString().indexOf(',') !== -1 )
+				unAppId = unAppId.split(',')[0];
+
 			if( unAppId && GStoreItemData.rgAppData[ unAppId ] )
 			{
 				var rgData = GStoreItemData.rgAppData[ unAppId ];
