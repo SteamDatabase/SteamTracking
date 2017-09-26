@@ -548,12 +548,6 @@ function AdjustVisibleAppTags( $TagCtn )
 			$Element.show();
 		}
 	});
-
-	// we will hide the "+" on popular tags if we've displayed all the tags (there will always be a "+" under your own tags)
-	if ( bPopularTags )
-	{
-		$AddButton.toggle( bAnyHidden );
-	}
 }
 
 function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
