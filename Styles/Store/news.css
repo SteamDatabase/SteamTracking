@@ -381,7 +381,8 @@ div#news_search {
 }
 .steam_community_announcements .body img {
 	float: none;
-	width: 100%;
+	width: auto;
+	max-width: 100%;
 	margin-right: 0px;
 }
 

@@ -2446,7 +2446,7 @@ body.recommendgame #review_create h1  {
 	margin-bottom: 10px;
 }
 #review_recent_events_container.high_volume_all {
-	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
+	background: -webkit-linear-gradient( top, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);background: linear-gradient( to bottom, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);}
 #review_recent_events_container.high_volume_negative {
 	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
 
@@ -2467,6 +2467,9 @@ body.recommendgame #review_create h1  {
 
 .recent_review_event_text {
 	color: #ded7c9;
+}
+.high_volume_all .recent_review_event_text {
+	color: #d3dade;
 }
 
 /* review histogram */

@@ -38,6 +38,9 @@ GDynamicStore = {
 	s_rgIgnoredApps: {},
 	s_rgIgnoredPackages: {},
 
+	s_rgCurators: {},
+	s_rgCurations: {},
+
 	s_rgPersonalizedBundleData: {},
 	s_rgPlaytestData: {},
 
@@ -161,6 +164,8 @@ GDynamicStore = {
 				GDynamicStore.s_rgRecommendedTags = data.rgRecommendedTags || [];
 				GDynamicStore.s_rgIgnoredApps = fnConvertToMap( data.rgIgnoredApps );
 				GDynamicStore.s_rgIgnoredPackages = fnConvertToMap( data.rgIgnoredPackages );
+				GDynamicStore.s_rgCurators = data.rgCurators || {};
+				GDynamicStore.s_rgCurations = data.rgCurations || {};
 				if( data.rgPlaytestData )
 				{
 					GDynamicStore.s_rgPlaytestData = data.rgPlaytestData;
@@ -917,8 +922,8 @@ GDynamicStore = {
 		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 5; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
-			var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
-			$Link.text( tag.name );
+							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
+						$Link.text( tag.name );
 			$Element.append( $Link );
 		}
 	},
@@ -957,6 +962,29 @@ GDynamicStore = {
 	BIsPackageIgnored: function( packageid )
 	{
 		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
+	},
+	
+	GetCuratorForApp( unAppID, bOnlyPositive )
+	{
+		var curator = null;
+		if( GDynamicStore.s_rgCurations[unAppID] )
+		{
+			var rgFilteredCuratorIDs = [];
+			$J.each(GDynamicStore.s_rgCurations[unAppID], function( unCuratorID, unRecommendationState ){
+				if( !bOnlyPositive || unRecommendationState == 0  )
+					rgFilteredCuratorIDs.push( unCuratorID );
+			});
+
+			if( rgFilteredCuratorIDs.length )
+			{
+				var unCuratorID = rgFilteredCuratorIDs[ Math.floor( Math.random() * rgFilteredCuratorIDs.length ) ];
+				return {
+					'recommendation_state': GDynamicStore.s_rgCurations[unAppID][unCuratorID],
+					'curator': GDynamicStore.s_rgCurators[unCuratorID]
+				}
+			}
+		}
+		return null;
 	},
 
 	BAreAllAppsOwned: function( rgAppIds )
@@ -1471,5 +1499,13 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 function GetAvatarURL( strHash, strSize )
 {
 	return "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/" + strHash.substring( 0, 2 ) + '/' + strHash + strSize + '.jpg';
+}
+
+function GetScreenshotURL( appid, filename, sizeStr )
+{
+	if( sizeStr )
+		return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+
+	return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename;
 }
 

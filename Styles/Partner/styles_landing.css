@@ -157,7 +157,10 @@ body{
 		}
 
 #landingWelcome {
-	border-bottom: 2px solid #67c1f5;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			border-bottom: 2px solid #67c1f5;
 	font-size: 25px;
 	line-height: 26px;
 	color: #fff;
@@ -388,6 +391,9 @@ body{
 
 .iconLink:hover {
 	color: #67c1f5;
+}
+.mainTitle.iconLink:hover {
+	color: none;
 }
 
 	.iconLink.disabled {
@@ -930,6 +936,7 @@ h2.incomplete {
 
 .modal {
 	background-color: #333333;
+	box-shadow: 0 0 10px #000;
 	padding: 8px;
 	color: #b2b2b2;
 
@@ -951,6 +958,10 @@ h2.incomplete {
 		height: 1px;
 		clear: both;
 		margin: 8px 0;
+	}
+
+	.modal .noteYellow {
+		color: #e2c58b;
 	}
 
 #modalBG {
@@ -2235,14 +2246,39 @@ ul.actualUL {
 
 /* App landing release steps */
 .releaseProgressContainer {
-	background-color: #000;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			background-color: #555e62;
 	color: #808285;
 	font-size: 14px;
 	padding: 15px;
+	box-shadow: 0 0 5px #000;
+	border-top: 2px solid #67c1f5;
+	margin-top: -2px;
+	margin-bottom: 20px;
+}
+
+.releaseProgressContainer p {
+	color: #e5e5e5;
+}
+
+.releaseProgressContainer .mainTitle {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #e5e5e5;
+	font-size: 19px;
+	margin: 0px 0px 10px 0px;
+	background-position-y: 1px;
 }
 
 .releaseProgressContainer .title {
-	color: #e1c48a;
+	color: rgba( 255, 255, 255, 0.5);
+	font-weight: normal;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	display: inline-block;
 	font-size: 17px;
 	margin: 0px 0px 4px 0px;
 	background-position-y: 1px;
@@ -2271,9 +2307,8 @@ ul.actualUL {
 	padding: 5px 10px 10px 10px;
 }
 .releaseStep > .stepState {
-	background-color:#ac966a;
-	height: 5px;
-	margin-bottom: 10px;
+	background-color: rgba( 255, 255, 255, 0.4);
+	height: 15px;
 	font-size: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -2298,9 +2333,12 @@ ul.actualUL {
 
 
 .releaseStep a.seeChecklist {
+	text-decoration: underline;
+	color: #b6c5ca;
+}
+
+.releaseStep .noteYellow {
 	color: #e2c58b;
-	font-size: 12px;
-	text-decoration: none;
 }
 
 .releaseStep p.failmessage {
@@ -2320,9 +2358,9 @@ ul.actualUL {
 	box-sizing: border-box;
 	background-color: grey;
 	vertical-align: top;
-	border-right: 4px solid black;
-	border-left: 4px solid black;
-	background-color: #333333
+	border-right: 4px solid #555e62;
+	border-left: 4px solid #555e62;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .releaseProgressContainer .releaseStep:last-child {
@@ -2337,8 +2375,9 @@ ul.actualUL {
 }
 
 .landingRightCol .panel h3 {
-	color: #e1c48a;
+	color: #e5e5e5;
 	font-size: 13px;
+	font-weight: normal;
 	text-transform: none;
 	margin-top: 10px;
 }
@@ -2725,7 +2764,7 @@ div .cdkey_request_details_row
 }
 
 .StepList {
-	color: #acacac;
+	color: #e5e5e5;
 	font-size: 12px;
 	margin: 0 0 10px 0;
 	list-style-type: none;
@@ -2733,10 +2772,8 @@ div .cdkey_request_details_row
 
 .StepList > li {
 	text-indent: -5px;
-}
-.StepList > li:before {
-	content: "-";
-	text-indent: -5px;
+	line-height: 17px;
+	LIST-STYLE-TYPE: square;
 }
 
 .newmodal_content .newapptitle {
