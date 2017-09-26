@@ -387,7 +387,7 @@ GHomepage = {
 
 			);
 		}
-		else if ( g_AccountID % 2 == 0 )
+		else if ( g_AccountID % 2 != 0 )
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
 				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
@@ -992,6 +992,9 @@ GHomepage = {
 			if( !unAppId )
 				continue;
 
+			if( unAppId.toString().indexOf(',') !== -1 )
+				unAppId = unAppId.toString().split(',')[0];
+
 			if( rgAppIds.indexOf( unAppId ) !== -1 )
 			{
 				$capsule.remove();
@@ -1030,6 +1033,9 @@ GHomepage = {
 			var nAppId = $capsule.data('ds-appid');
 			if( !nAppId )
 				continue;
+
+			if( nAppId.toString().indexOf(',') !== -1 )
+				nAppId = nAppId.toString().split(',')[0];
 
 			// Test our filtered list
 			var bVisible = false;
