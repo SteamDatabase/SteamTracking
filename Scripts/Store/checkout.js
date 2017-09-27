@@ -2800,7 +2800,9 @@ function ShowNextPaymentMethod()
 				
 			for ( var i = 0; i < paymentMethodDropList.childNodes.length; i++ )
 			{
-				if ( rgPaymentMethodProperties[paymentMethodDropList.childNodes[i].childNodes[0].id].can_be_split )
+				var paymentNode = paymentMethodDropList.childNodes[i].childNodes[0];
+				if ( paymentNode && rgPaymentMethodProperties[paymentNode.id] &&
+					rgPaymentMethodProperties[paymentNode.id].can_be_split )
 				{
 					DHighlightItem( 'payment_method', i, true );
 					break;
