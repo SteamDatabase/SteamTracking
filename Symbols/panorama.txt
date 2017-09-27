@@ -1444,6 +1444,7 @@
  D typeinfo for IVideoPlayerAudioCallback
  D typeinfo for IVideoPlayerEventCallback
  D typeinfo for IVideoPlayerVideoCallback
+ D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CValidatableThread
  D typeinfo for WeightedMovingAverageFilter
@@ -2070,6 +2071,7 @@
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
  D vtable for IPC::PosixSharedMemory
+ D vtable for OSXHelpers::CCompatThread
  D vtable for WeightedMovingAverageFilter
  D vtable for panorama::BeginFrameRenderCommand_t
  D vtable for panorama::BeginPaintBackgroundRenderCommand_t
@@ -2958,6 +2960,7 @@
  R typeinfo name for IVideoPlayerEventCallback
  R typeinfo name for IVideoPlayerVideoCallback
  R typeinfo name for KeyValues*
+ R typeinfo name for OSXHelpers::CCompatThread
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamThreadTools::CValidatableThread
  R typeinfo name for WeightedMovingAverageFilter
@@ -9130,6 +9133,11 @@
  T NormalizeRadialGradientBrushes(CMsgFillBrush*, CMsgFillBrush*)
  T OSXHelpers::BGetGPUInformation(char*, unsigned int, unsigned long long*, unsigned long long*, unsigned long long*)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
+ T OSXHelpers::CCompatThread::CCompatThread(OSXHelpers::IOPollingHelperState_t*)
+ T OSXHelpers::CCompatThread::RealRun()
+ T OSXHelpers::CCompatThread::Run()
+ T OSXHelpers::CCompatThread::Run()::{lambda(void*)#1}::__invoke(void*)
+ T OSXHelpers::CCompatThread::~CCompatThread()
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Shutdown()
@@ -15711,6 +15719,7 @@
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
+ b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
@@ -16488,6 +16497,8 @@
  pango_layout_set_width
  pango_layout_set_wrap
  pango_layout_xy_to_index
+ pipe
+ poll$UNIX2003
  pow
  powf
  printf
@@ -17586,3 +17597,4 @@
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
+ write$UNIX2003

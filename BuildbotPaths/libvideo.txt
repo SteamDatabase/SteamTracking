@@ -86,5 +86,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp

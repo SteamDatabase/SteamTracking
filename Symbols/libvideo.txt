@@ -503,6 +503,7 @@
  D typeinfo for IVideoPlayer
  D typeinfo for IVideoYUVFrame
  D typeinfo for IWorkThreadFactory
+ D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CThread
  D v3_akey_id
@@ -643,10 +644,12 @@
  D vtable for CWorkThreadPool
  D vtable for ConVar
  D vtable for IVideoYUVFrame
+ D vtable for OSXHelpers::CCompatThread
  D vtable for SteamThreadTools::CThread
  D x509_dir_lookup
  D x509_file_lookup
  D x509_name_ff
+ Gestalt
  OSAtomicCompareAndSwap32Barrier
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
@@ -863,6 +866,7 @@
  R typeinfo name for IVideoPlayer
  R typeinfo name for IVideoYUVFrame
  R typeinfo name for IWorkThreadFactory
+ R typeinfo name for OSXHelpers::CCompatThread
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for VideoAdaptationSet_t
@@ -4102,6 +4106,7 @@
  T GetMemAlloc
  T GetMessageList()
  T GetNetErrorName(unsigned int)
+ T GetOSType
  T GetPchTempTextBuffer_Harmful()
  T GetProcessorBrand()
  T GetProcessorDetailBlob(int*)
@@ -4218,6 +4223,11 @@
  T OPENSSL_rdtsc
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
+ T OSXHelpers::CCompatThread::CCompatThread(OSXHelpers::IOPollingHelperState_t*)
+ T OSXHelpers::CCompatThread::RealRun()
+ T OSXHelpers::CCompatThread::Run()
+ T OSXHelpers::CCompatThread::Run()::{lambda(void*)#1}::__invoke(void*)
+ T OSXHelpers::CCompatThread::~CCompatThread()
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
@@ -5852,6 +5862,7 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
+ b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_375_27
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
@@ -5860,6 +5871,9 @@
  b SetWritingMiniDump(bool)::fAsserted
  b StaticFileWriterThread()::s_pFileWriterThread
  b SteamThreadTools::g_ThreadMainThreadID
+ b TestForAppleGraphicsUpdateInstalled()::bInstalled
+ b TestForAppleGraphicsUpdateInstalled()::bLoaded
+ b TestForAppleGraphicsUpdateInstalled()::handle
  b V_pretifymem(float, int, bool)::current
  b V_pretifymem(float, int, bool)::output
  b VideoLibInit()::s_bInitialized
@@ -5938,6 +5952,7 @@
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b guard variable for StaticFileWriterThread()::s_pFileWriterThread
+ b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b hksKVNameRequestHeaders
  b hksSetCookie
@@ -6117,6 +6132,7 @@
  d GENERAL_NAME_ch_tt
  d GENERAL_SUBTREE_seq_tt
  d GetErrorString.ParserErrMsg
+ d GetOSType::eOSVersion
  d ISSUING_DIST_POINT_seq_tt
  d NAME_CONSTRAINTS_seq_tt
  d NOTICEREF_seq_tt
@@ -6188,6 +6204,7 @@
  d TRxmlTok
  d TS_str_functs
  d TS_str_reasons
+ d TestForAppleGraphicsUpdateInstalled()::attribs
  d UI_str_functs
  d UI_str_reasons
  d USERNOTICE_seq_tt
@@ -6512,6 +6529,7 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ pipe
  poll
  poll$UNIX2003
  printf

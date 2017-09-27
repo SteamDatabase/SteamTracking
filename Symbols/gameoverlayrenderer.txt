@@ -207,7 +207,6 @@
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSString
- OBJC_CLASS_$_NSView
  OBJC_METACLASS_$_NSObject
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
@@ -235,8 +234,11 @@
  R typeinfo name for std::bad_exception
  R typeinfo name for std::exception
  R typeinfo name for std::type_info
+ SetAnimatedThemeCursor
+ SetThemeCursor
  ShowCursor
  T AlignPitch16(unsigned int)
+ T AutoNSCursor::~AutoNSCursor()
  T BOverlayNeedsPresent
  T CBaseInputHandler::AllHotKeysPressedBase()
  T CBaseInputHandler::AllMovieHotKeysPressedBase()
@@ -438,8 +440,6 @@
  T CVideoMemStreamWriter::GetFrameSize() const
  T CVideoMemStreamWriter::Release() const
  T CVideoMemStreamWriter::~CVideoMemStreamWriter()
- T CocoaForceArrowCursor()
- T CocoaRestoreSystemCursor()
  T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
  T CreateShader(char const*, char const*)
  T ExchangeMethods(objc_class*, signed char, objc_selector*, objc_selector)
@@ -478,11 +478,12 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::PurgeCurrentProcess()
  T InitializeGameStream()
+ T InputOSX_CocoaRestoreCursor()
+ T InputOSX_CocoaSetCursor(unsigned long)
  T InputOSX_SetCocoaCursorHideShowImpl(void (*)(bool))
  T InputOSX_SetCocoaInputEventHook(EInputOSXHookResult (*)(__CGEvent*))
  T InputOSX_SetCocoaMouseButtonBlockMask(unsigned int)
  T InputOSX_SetCocoaMousePositionLocked(bool)
- T InvalidateNSViewCursorRects()
  T IsOverlayEnabled
  T Log(char const*, ...)
  T Plat_FloatTime
@@ -516,6 +517,8 @@
  T SteamCGWarpMouseCursorPosition(CGPoint)
  T SteamHideCursor()
  T SteamInitCursor()
+ T SteamSetAnimatedThemeCursor(unsigned long, unsigned long)
+ T SteamSetThemeCursor(unsigned long)
  T SteamShowCursor()
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
@@ -577,6 +580,7 @@
  T operator delete[](void*)
  T operator new(unsigned long)
  T operator new[](unsigned long)
+ T std::__1::__split_buffer<AutoNSCursor, std::__1::allocator<AutoNSCursor>&>::~__split_buffer()
  T std::__1::__split_buffer<IPC::IEvent*, std::__1::allocator<IPC::IEvent*>&>::~__split_buffer()
  T std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CBaseOverlayRenderer::SharedTexData_t>, void*>*)
@@ -604,6 +608,7 @@
  T std::__1::__tree_iterator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__tree_node<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, void*>*, int> std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::find<void*>(void* const&)
  T std::__1::__tree_iterator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__tree_node<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, void*>*, long> std::__1::__tree<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::__map_value_compare<void*, std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t>, std::__1::less<void*>, true>, std::__1::allocator<std::__1::__value_type<void*, COverlayGLRenderer::ShareHandleData_t> > >::find<void*>(void* const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__find_equal<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> const&)
+ T std::__1::__vector_base<AutoNSCursor, std::__1::allocator<AutoNSCursor> >::~__vector_base()
  T std::__1::__vector_base<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::~__vector_base()
  T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, CBaseOverlayRenderer::SharedTexData_t, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
@@ -618,6 +623,8 @@
  T std::__1::map<void*, COverlayGLRenderer::ShareHandleData_t, std::__1::less<void*>, std::__1::allocator<std::__1::pair<void* const, COverlayGLRenderer::ShareHandleData_t> > >::operator[](void* const&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__tree_node<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::__map_value_compare<unsigned long, std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t>, std::__1::less<unsigned long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long, CBaseInputHandler::CustomCursorData_t> > >::__insert_unique<std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t> >(std::__1::pair<unsigned long, CBaseInputHandler::CustomCursorData_t>&&)
+ T std::__1::vector<AutoNSCursor, std::__1::allocator<AutoNSCursor> >::__swap_out_circular_buffer(std::__1::__split_buffer<AutoNSCursor, std::__1::allocator<AutoNSCursor>&>&)
+ T std::__1::vector<AutoNSCursor, std::__1::allocator<AutoNSCursor> >::~vector()
  T std::bad_exception::what() const
  T std::bad_exception::~bad_exception()
  T std::exception::what() const
@@ -631,6 +638,7 @@
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T void std::__1::vector<AutoNSCursor, std::__1::allocator<AutoNSCursor> >::__push_back_slow_path<AutoNSCursor>(AutoNSCursor&&)
  T void std::__1::vector<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::__push_back_slow_path<IPC::IEvent* const&>(IPC::IEvent* const&)
  _CGSDefaultConnection
  _NSConcreteGlobalBlock
@@ -699,18 +707,26 @@
  b init
  b s_MainThreadId
  b s_Pid
- b s_bCursorForcedToArrow
+ b s_bAppUsingCocoaCursor
  b s_bDoLog
  b s_bExternalLeftDragActive
  b s_bFirstLogEntry
  b s_bIsVideoRecording
  b s_bMousePositionLocked
  b s_bStreamForOpenVR
+ b s_eCursorForced
+ b s_hCursor
+ b s_lastAppThemeCursor
+ b s_nBlockedMouseButtonMask
  b s_nBlockedMouseButtons
  b s_nLastMouseX
  b s_nLastMouseY
  b s_pGamestream
+ b s_pfnCursorHideShow
+ b s_pfnInputHookFn
  b s_ptForceMousePosition
+ b s_restoreCursor
+ b s_vecDeferredCursorPush
  bootstrap_look_up
  bootstrap_port
  ceilf
@@ -754,15 +770,14 @@
  d _interpose_CGWarpMouseCursorPosition
  d _interpose_HideCursor
  d _interpose_InitCursor
+ d _interpose_SetAnimatedThemeCursor
+ d _interpose_SetThemeCursor
  d _interpose_ShowCursor
  d cplus_demangle_builtin_types
  d cplus_demangle_operators
  d s_eCaptureType
- d s_nAllowPressedMouseButtonMask
  d s_pchFragmentShader
  d s_pchVertexShader
- d s_pfnCursorHideShow
- d s_pfnInputHookFn
  d standard_subs
  dlopen
  dlsym
@@ -878,9 +893,8 @@
  strrchr
  strstr
  strtoull
- t $_0::__invoke(__CGEvent*)
- t $_1::__invoke(bool)
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_hide]
+ t +[NSCursor(SteamOverrideNSCursor) steamhooked_pop]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_unhide]
  t +[NSEvent(SteamOverrideMouse) steamhooked_mouseLocation]
  t +[NSEvent(SteamOverrideMouse) steamhooked_pressedMouseButtons]
@@ -898,15 +912,19 @@
  t -[CMetalDeviceCache updatePipeline]
  t -[NSApplication(SteamMetalHook) steammetalhook_init]
  t -[NSApplication(SteamOverrideNextEvent) steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:]
+ t -[NSCursor(SteamOverrideNSCursor) steamhooked_push]
  t -[NSCursor(SteamOverrideNSCursor) steamhooked_set]
- t -[NSView(SteamOverrideNSView) steamhooked_resetCursorRects]
  t BlockingWait(int*, unsigned int, int*)
  t CursorHideShowImpl(bool)
+ t GetNativeCursor(int)
+ t GetUndocNSCursor(objc_selector*, objc_selector)
  t HandleAndSerializeKeyPress(int, bool, bool, bool*)
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t Init()
  t InitTicks()
  t InputHandlerFunction(__CGEvent*)
+ t LazyInitCocoaForceCursor()
+ t _GLOBAL__sub_I_cocoa_helpers.mm
  t _GLOBAL__sub_I_glinterface.cpp
  t _GLOBAL__sub_I_input_osx.cpp
  t _GLOBAL__sub_I_ipcposix.cpp

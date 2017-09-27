@@ -2783,23 +2783,23 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp544
- d __block_descriptor_tmp559
- d __block_descriptor_tmp564
- d __block_descriptor_tmp566
- d __block_descriptor_tmp579
- d __block_descriptor_tmp580
- d __block_descriptor_tmp583
- d __block_descriptor_tmp586
- d __block_descriptor_tmp588
+ d __block_descriptor_tmp592
+ d __block_descriptor_tmp607
+ d __block_descriptor_tmp612
+ d __block_descriptor_tmp614
+ d __block_descriptor_tmp627
+ d __block_descriptor_tmp628
+ d __block_descriptor_tmp631
+ d __block_descriptor_tmp634
+ d __block_descriptor_tmp636
  d __block_literal_global
- d __block_literal_global560
- d __block_literal_global565
- d __block_literal_global567
- d __block_literal_global581
- d __block_literal_global584
- d __block_literal_global587
- d __block_literal_global589
+ d __block_literal_global608
+ d __block_literal_global613
+ d __block_literal_global615
+ d __block_literal_global629
+ d __block_literal_global632
+ d __block_literal_global635
+ d __block_literal_global637
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2984,7 +2984,9 @@
  t FixCarbonCocoaMiniatureWindowMadness()
  t FreeTree(ExprNode*&)
  t GetKeyFocusedPopup()
+ t GetNativeCursor(unsigned long)
  t GetNetAdrResolveCacheMutex()
+ t GetUndocNSCursor(objc_selector*, objc_selector)
  t HandleFlagsChanged(NSEvent*)
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
@@ -3035,19 +3037,19 @@
  t _GLOBAL__sub_I_vguisetup.cpp
  t _GLOBAL__sub_I_vguisystemmoduleloader.cpp
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke582
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke630
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2585
+ t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2633
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke557
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke605
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2
- t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2563
+ t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_2611
  t ___ZN4vgui15CBaseOSXSurfaceINS_14COpenGLSurfaceEEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_577
+ t __copy_helper_block_625
  t __destroy_helper_block_
- t __destroy_helper_block_578
+ t __destroy_helper_block_626
  t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4

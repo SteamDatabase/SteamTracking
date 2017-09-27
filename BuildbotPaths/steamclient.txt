@@ -236,6 +236,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplmesa.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplnvidia.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplsteamdepot.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercachemanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/singleprocesspipe_any.o
@@ -447,6 +448,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplmesa.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplnvidia.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplsteamdepot.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercachemanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/singleprocesspipe_any.o

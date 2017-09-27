@@ -276,6 +276,7 @@
  D typeinfo for IRegistryInterface
  D typeinfo for IUniformRandomStream
  D typeinfo for IWorkThreadPoolSignal
+ D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamStdLib::CCommandLine
  D typeinfo for SteamStdLib::ICommandLine
@@ -329,6 +330,7 @@
  D vtable for ClientProcessMonitor::CMonitoredProcess
  D vtable for ConVar
  D vtable for IWorkThreadPoolSignal
+ D vtable for OSXHelpers::CCompatThread
  D vtable for SteamStdLib::CCommandLine
  D vtable for SteamThreadTools::CThread
  Gestalt
@@ -410,6 +412,7 @@
  R typeinfo name for IRegistryInterface
  R typeinfo name for IUniformRandomStream
  R typeinfo name for IWorkThreadPoolSignal
+ R typeinfo name for OSXHelpers::CCompatThread
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamStdLib::CCommandLine
  R typeinfo name for SteamStdLib::ICommandLine
@@ -2272,6 +2275,11 @@
  T OPENSSL_rdtsc
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
+ T OSXHelpers::CCompatThread::CCompatThread(OSXHelpers::IOPollingHelperState_t*)
+ T OSXHelpers::CCompatThread::RealRun()
+ T OSXHelpers::CCompatThread::Run()
+ T OSXHelpers::CCompatThread::Run()::{lambda(void*)#1}::__invoke(void*)
+ T OSXHelpers::CCompatThread::~CCompatThread()
  T OSXHelpers::CIOPollingHelper::CIOPollingHelper()
  T OSXHelpers::CIOPollingHelper::OnKQueueActive(void*)
  T OSXHelpers::CIOPollingHelper::Register(unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, int)
@@ -3060,6 +3068,7 @@
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
+ b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_375_27
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
