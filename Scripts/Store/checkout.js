@@ -736,7 +736,9 @@ function OnInitializeTransactionSuccess( result )
 			$J('#payment_row_save_my_address').hide();
 			$J('#payment_row_bank_name').hide();
 			$J('#payment_row_country_verification').hide();
+			$J('#payment_row_step2').hide();
 			$J('#payment_method_specific_note').hide();
+			$J('#payment_method_notes').hide();
 			$J('#payment_row_eight').show();
 			
 						$J('#credit_card_row').hide();
