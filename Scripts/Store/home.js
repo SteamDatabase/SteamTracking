@@ -413,9 +413,7 @@ GHomepage = {
 			rgDisplayListCombined = GHomepage.ZipLists(
 				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
 				GHomepage.oDisplayLists.main_cluster, false, // Legacy
-				GHomepage.rgRecommendedGames, true,
-				GHomepage.rgCuratedAppsData.apps, true,
-				GHomepage.rgFriendRecommendations, true
+				GHomepage.rgRecommendedGames, true
 			);
 		}
 
