@@ -2949,6 +2949,7 @@
  t -[VGUIApplicationDelegate applicationShouldTerminate:]
  t -[VGUIApplicationDelegate applicationWillFinishLaunching:]
  t -[VGUIApplicationDelegate applicationWillHide:]
+ t -[VGUIApplicationDelegate applicationWillTerminate:]
  t -[VGUIApplicationDelegate handleGetURLEvent:withReplyEvent:]
  t -[VGUIApplicationDelegate init]
  t -[VGUIApplicationDelegate openAboutDialog:]

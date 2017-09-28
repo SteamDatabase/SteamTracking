@@ -6833,12 +6833,12 @@
  t BPlayerScheduledBefore(CVideoPlayer* const&, CVideoPlayer* const&)
  t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_0::__invoke(void*)
  t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_1::__invoke(void*)
- t CCompletionPortManager::AsyncDispatchHandlerWrapper(void*)::$_3::__invoke(void*)
+ t CCompletionPortManager::AsyncDispatchHandlerWrapper(void*)::$_5::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
- t CScopeGuardLambdaImpl<CCompletionPortManager::AsyncDispatchHandler(void*)::$_4>::~CScopeGuardLambdaImpl()
+ t CScopeGuardLambdaImpl<CCompletionPortManager::AsyncDispatchHandler(void*)::$_6>::~CScopeGuardLambdaImpl()
  t CopyUriTableProc
  t DestroyDeclAttTableProc
  t DestroyUriTableProc
