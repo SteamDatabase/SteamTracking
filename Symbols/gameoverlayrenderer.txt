@@ -9,6 +9,7 @@
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
  .objc_class_name_NSString
+ .objc_class_name_NSThread
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -207,6 +208,7 @@
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSThread
  OBJC_METACLASS_$_NSObject
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
@@ -339,6 +341,7 @@
  T CInputHandler::ValveSetCursor(unsigned long)
  T CInputHandler::ValveShowCursor(int)
  T CInputHandler::~CInputHandler()
+ T CMetalRenderer::AsyncMainThreadPoll()
  T CMetalRenderer::CMetalRenderer()
  T CMetalRenderer::FindOrCreateDeviceCacheEntry(objc_object objcproto9MTLDevice*)
  T CMetalRenderer::HookMetalProtocols()
@@ -665,6 +668,7 @@
  __stderrp
  __udivdi3
  __umoddi3
+ _dispatch_main_q
  _dyld_get_image_name
  _objc_empty_cache
  _objc_empty_vtable
@@ -741,8 +745,12 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp132
- d __block_descriptor_tmp136
+ d __block_descriptor_tmp110
+ d __block_descriptor_tmp115
+ d __block_descriptor_tmp138
+ d __block_descriptor_tmp143
+ d __block_descriptor_tmp258
+ d __block_descriptor_tmp262
  d __block_descriptor_tmp60
  d __block_descriptor_tmp63
  d __block_descriptor_tmp67
@@ -750,6 +758,10 @@
  d __block_descriptor_tmp72
  d __block_descriptor_tmp75
  d __block_literal_global
+ d __block_literal_global111
+ d __block_literal_global116
+ d __block_literal_global259
+ d __block_literal_global263
  d __block_literal_global61
  d __block_literal_global64
  d __block_literal_global68
@@ -779,6 +791,9 @@
  d s_pchFragmentShader
  d s_pchVertexShader
  d standard_subs
+ dispatch_after
+ dispatch_async
+ dispatch_time
  dlopen
  dlsym
  dyld_stub_binder
@@ -938,6 +953,8 @@
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_3
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_4
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_7
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_8
+ t ___ZN14CMetalRenderer19AsyncMainThreadPollEv_block_invoke
  t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0
