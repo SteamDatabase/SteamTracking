@@ -5,9 +5,11 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSCursor
  .objc_class_name_NSEvent
+ .objc_class_name_NSLock
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
+ .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSThread
  B SteamThreadTools::g_SuspendResumeLock
@@ -71,7 +73,6 @@
  B fn_glVertexAttribPointer
  B g_ActiveRenderInstance
  B g_InputHandler
- B g_MetalRenderer
  B g_OpenGLRenderer
  B g_bIgnoreChildProcesses
  B g_bIsVRMonitor
@@ -134,12 +135,13 @@
  CGWarpMouseCursorPosition
  D .objc_class_name_CMetalDeviceCache
  D OBJC_CLASS_$_CMetalDeviceCache
- D OBJC_IVAR_$_CMetalDeviceCache._bufferScreenQuad
- D OBJC_IVAR_$_CMetalDeviceCache._device
+ D OBJC_IVAR_$_CMetalDeviceCache._deviceOverride
  D OBJC_IVAR_$_CMetalDeviceCache._metalLibrary
- D OBJC_IVAR_$_CMetalDeviceCache._overlayPipeline
- D OBJC_IVAR_$_CMetalDeviceCache._overlayTexture
+ D OBJC_IVAR_$_CMetalDeviceCache._screenshotPipeline
+ D OBJC_IVAR_$_CMetalDeviceCache._textureCacheMap
  D OBJC_IVAR_$_CMetalDeviceCache._updatePipeline
+ D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineBGRA8
+ D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineRGBA16Float
  D OBJC_METACLASS_$_CMetalDeviceCache
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
@@ -195,7 +197,6 @@
  MTLCopyAllDevices
  MTLCreateSystemDefaultDevice
  NSApp
- NSClassFromString
  NSSelectorFromString
  NSStringFromSelector
  OBJC_CLASS_$_MTLRenderPassDescriptor
@@ -204,9 +205,11 @@
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSCursor
  OBJC_CLASS_$_NSEvent
+ OBJC_CLASS_$_NSLock
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
  OBJC_METACLASS_$_NSObject
@@ -345,6 +348,8 @@
  T CMetalRenderer::CMetalRenderer()
  T CMetalRenderer::FindOrCreateDeviceCacheEntry(objc_object objcproto9MTLDevice*)
  T CMetalRenderer::HookMetalProtocols()
+ T CMetalRenderer::OnCommandBufferCommit(objc_object objcproto16MTLCommandBuffer*)
+ T CMetalRenderer::OnCommandBufferPresentDrawable(objc_object objcproto16MTLCommandBuffer*, objc_object objcproto11MTLDrawable*)
  T CMetalRenderer::ValveCheckAsyncCapture()
  T CMetalRenderer::ValveDeleteAllTextures()
  T CMetalRenderer::ValveDeleteTexture(int)
@@ -643,6 +648,8 @@
  T void std::__1::__tree_right_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::vector<AutoNSCursor, std::__1::allocator<AutoNSCursor> >::__push_back_slow_path<AutoNSCursor>(AutoNSCursor&&)
  T void std::__1::vector<IPC::IEvent*, std::__1::allocator<IPC::IEvent*> >::__push_back_slow_path<IPC::IEvent* const&>(IPC::IEvent* const&)
+ _Block_object_assign
+ _Block_object_dispose
  _CGSDefaultConnection
  _NSConcreteGlobalBlock
  _NSConcreteStackBlock
@@ -675,6 +682,10 @@
  abort
  atoi
  b (anonymous namespace)::emergency_mutex
+ b (anonymous namespace)::g_AssocKeyDeviceCacheEntry
+ b (anonymous namespace)::g_MetalRenderer
+ b (anonymous namespace)::g_RendererLock
+ b (anonymous namespace)::g_ScreenshotLock
  b BLogAlignmentIssue()::s_bLogged
  b BOverlayNeedsPresent::dwLastTrueTickCount
  b CBaseOverlayRenderer::RenderFrame()::bClientUI
@@ -745,29 +756,28 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp110
- d __block_descriptor_tmp115
- d __block_descriptor_tmp138
- d __block_descriptor_tmp143
- d __block_descriptor_tmp258
- d __block_descriptor_tmp262
+ d __block_descriptor_tmp165
+ d __block_descriptor_tmp190
+ d __block_descriptor_tmp254
+ d __block_descriptor_tmp267
+ d __block_descriptor_tmp32
+ d __block_descriptor_tmp34
+ d __block_descriptor_tmp352
+ d __block_descriptor_tmp39
+ d __block_descriptor_tmp58
  d __block_descriptor_tmp60
- d __block_descriptor_tmp63
- d __block_descriptor_tmp67
- d __block_descriptor_tmp70
- d __block_descriptor_tmp72
- d __block_descriptor_tmp75
+ d __block_descriptor_tmp65
  d __block_literal_global
- d __block_literal_global111
- d __block_literal_global116
- d __block_literal_global259
- d __block_literal_global263
+ d __block_literal_global166
+ d __block_literal_global191
+ d __block_literal_global255
+ d __block_literal_global268
+ d __block_literal_global33
+ d __block_literal_global35
+ d __block_literal_global40
+ d __block_literal_global59
  d __block_literal_global61
- d __block_literal_global64
- d __block_literal_global68
- d __block_literal_global71
- d __block_literal_global73
- d __block_literal_global76
+ d __block_literal_global66
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -861,9 +871,11 @@
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
+ objc_getAssociatedObject
  objc_lookUpClass
  objc_msgSend
  objc_msgSend_stret
+ objc_setAssociatedObject
  objc_setProperty
  open
  open$UNIX2003
@@ -881,7 +893,6 @@
  pthread_self
  pthread_setspecific
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
- r screenQuad
  realloc
  rename
  sem_close
@@ -913,17 +924,19 @@
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_unhide]
  t +[NSEvent(SteamOverrideMouse) steamhooked_mouseLocation]
  t +[NSEvent(SteamOverrideMouse) steamhooked_pressedMouseButtons]
- t -[CMetalDeviceCache bufferScreenQuad]
- t -[CMetalDeviceCache device]
+ t -[CMetalDeviceCache deviceOverride]
  t -[CMetalDeviceCache metalLibrary]
- t -[CMetalDeviceCache overlayPipeline]
- t -[CMetalDeviceCache overlayTexture]
- t -[CMetalDeviceCache setBufferScreenQuad:]
- t -[CMetalDeviceCache setDevice:]
+ t -[CMetalDeviceCache screenshotPipeline]
+ t -[CMetalDeviceCache setDeviceOverride:]
  t -[CMetalDeviceCache setMetalLibrary:]
- t -[CMetalDeviceCache setOverlayPipeline:]
- t -[CMetalDeviceCache setOverlayTexture:]
+ t -[CMetalDeviceCache setScreenshotPipeline:]
+ t -[CMetalDeviceCache setTextureCacheMap:]
  t -[CMetalDeviceCache setUpdatePipeline:]
+ t -[CMetalDeviceCache setUpdatePipelineBGRA8:]
+ t -[CMetalDeviceCache setUpdatePipelineRGBA16Float:]
+ t -[CMetalDeviceCache textureCacheMap]
+ t -[CMetalDeviceCache updatePipelineBGRA8]
+ t -[CMetalDeviceCache updatePipelineRGBA16Float]
  t -[CMetalDeviceCache updatePipeline]
  t -[NSApplication(SteamMetalHook) steammetalhook_init]
  t -[NSApplication(SteamOverrideNextEvent) steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:]
@@ -952,9 +965,11 @@
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_2
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_3
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_4
- t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_7
- t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_8
  t ___ZN14CMetalRenderer19AsyncMainThreadPollEv_block_invoke
+ t ___ZN14CMetalRenderer19ValveTakeScreenshotEbj_block_invoke
+ t ___ZN14CMetalRenderer21OnCommandBufferCommitEPU27objcproto16MTLCommandBuffer11objc_object_block_invoke
+ t __copy_helper_block_
+ t __destroy_helper_block_
  t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0
