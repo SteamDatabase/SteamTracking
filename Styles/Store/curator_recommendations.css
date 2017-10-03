@@ -147,80 +147,6 @@ body.v6 h2.curator_name a {
 }
 
 
-/* CAROUSEL STUFF, MOVE TO A SEPARATE FILE SOME DAY */
-
-/* Generic fadey carousel code */
-
-.carousel_items {
-	position: relative;
-	clear: both;
-}
-
-.carousel_items:not(.no_paging) > * {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.carousel_container {
-	position: relative;
-}
-
-.carousel_container .carousel_items:not(.no_paging) > * {
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 400ms;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.carousel_items.no_paging .store_capsule {
-	margin: 0 6px 6px 0;
-	max-width: calc( 50% - 6px );
-}
-
-@media screen and (max-width: 910px)
-{
-	html.responsive .carousel_items.no_paging {
-		text-align: center;
-	}
-}
-
-.carousel_container .carousel_items > *.focus {
-	opacity: 1;
-	pointer-events: auto;
-}
-
-
-.carousel_container .carousel_thumbs  {
-	text-align: center;
-}
-
-.carousel_container .carousel_thumbs > div {
-	display: inline-block;
-	margin: 12px 2px;
-	width: 15px;
-	height: 9px;
-	border-radius: 2px;
-	transition: background-color 0.2s;
-	background-color: hsla(202,60%,100%,0.2);
-	cursor: pointer;
-}
-
-.carousel_container .carousel_thumbs > div.focus {
-	background-color: hsla(202,60%,100%,0.4);
-}
-
-.carousel_container.paging_capsules {
-}
-
-.carousel_container.paging_capsules .carousel_items > * {
-	transition: opacity 400ms;
-}
-
-.carousel_container.paging_capsules .carousel_items > * > *:not(:last-child) {
-	margin-right: 15px;
-}
 
 .featured_list_container .carousel_items {
 	padding-bottom: 24%;
@@ -233,42 +159,6 @@ body.v6 h2.curator_name a {
 }
 
 
-/* Arrows */
-.carousel_container  .arrow {
-	position: absolute;
-	background-color: rgba(0,0,0,0.3);
-	top: calc(50% - 54px);
-
-	width: 23px;
-	height: 36px;
-	padding: 36px 11px;
-	cursor: pointer;
-	z-index: 3;
-}
-
-.carousel_container .arrow > div {
-	background-image: url(/public/images/v6/arrows.png);
-	width: 23px;
-	height: 36px;
-}
-
-.carousel_container .arrow.left {
-	left: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);}
-.carousel_container .arrow.left:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);}
-
-.carousel_container .arrow.right {
-	right: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);}
-.carousel_container .arrow.right:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);}
-
-.carousel_container .arrow.left > div {
-	background-position-x: 23px;
-}
-
-/* END CAROUSEL STUFF */
 
 .curator_featured {
 	padding-bottom: 37%;
@@ -326,6 +216,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
+	box-shadow: 0 0 1px #000 inset;
 }
 
 .curator_featured .screenshots img {

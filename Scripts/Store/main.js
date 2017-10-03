@@ -2239,4 +2239,99 @@ CAppearMonitor.prototype.TrackAppearance = function( elTarget )
 	this.fnOnAppear( elTarget );
 };
 
+/**
+ * Sets up a form to automagically save itself when edited.
+ * Note: Ajax requests inside fnOnChange should bind their first param to async
+ * @param elForm
+ * @param fnOnChange
+ * @constructor
+ */
+function RegisterAutoSaveForm( elForm, fnOnChange )
+{
+	// Time to wait before saving a changed element that hasn't explicitly lost focus
+	var nSaveDelay = 5000; // 5 seconds
+
+	// Attempt to save if we're closing the tab in a dirty state
+	$J( window ).on( 'unload', function(){
+		$J( elForm ).trigger('saveform');
+	} );
+
+	$J( elForm ).on( 'saveform', function(){
+
+		if (!$J.contains(document, elForm))
+		{
+			return;
+		}
+
+		$J( 'input[type=text],input[type=radio],input[type=checkbox],select,textarea', elForm ).trigger('save');
+	});
+
+	// Text elements
+	$J( 'input[type=text],textarea', elForm ).each(function(index, element ){
+		var curVal = element.value;
+		var timer = null;
+
+		var fnUpdateIfChanged = function( bAsync ){
+			if( element.value != curVal )
+			{
+				curVal = element.value;
+				fnOnChange ( bAsync );
+			}
+		};
+
+		$J(element).on('save', fnUpdateIfChanged.bind(null, false ) );
+
+		$J(element).on('keyup', function(){
+			if( timer != null )
+				clearTimeout( timer );
+			timer = setTimeout( fnUpdateIfChanged.bind(null, true ), nSaveDelay );
+		});
+	});
+
+	// input types that use .checked
+	$J( 'input[type=checkbox],input[type=radio]', elForm ).each(function(index, element ){
+		var curVal = element.checked;
+		var timer = null;
+
+		var fnUpdateIfChanged = function( bAsync ){
+			if( element.checked != curVal )
+			{
+				curVal = element.checked;
+				fnOnChange ( bAsync );
+			}
+		};
+
+		$J(element).on('save', fnUpdateIfChanged.bind(null, false ));
+
+		$J(element).on('change', function(){
+			if( timer != null )
+				clearTimeout( timer );
+			timer = setTimeout( fnUpdateIfChanged.bind(null, true ), nSaveDelay );
+		});
+	});
+
+	// select boxes
+	$J( 'select', elForm ).each(function(index, element ){
+		var curVal = element.selectedIndex;
+		var timer = null;
+		console.log(element);
+
+		var fnUpdateIfChanged = function( bAsync ){
+			if( element.selectedIndex != curVal )
+			{
+				curVal = element.selectedIndex;
+				fnOnChange ( bAsync );
+			}
+		};
+
+		$J(element).on('save', fnUpdateIfChanged.bind(null, false ));
+
+		$J(element).on('change', function(){
+			if( timer != null )
+				clearTimeout( timer );
+			timer = setTimeout( fnUpdateIfChanged.bind(null, true ), nSaveDelay );
+		});
+	});
+}
+
 

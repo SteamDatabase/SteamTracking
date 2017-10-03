@@ -387,20 +387,6 @@ GHomepage = {
 
 			);
 		}
-		else if ( g_AccountID % 2 != 0 )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
-				GHomepage.oDisplayLists.top_sellers, true,
-				GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true, // Top new releases
-				GHomepage.oDisplayLists.main_cluster, true // Legacy
-			);
-
-			rgDisplayListCombined = GHomepage.MergeLists(
-				rgDisplayListCombined, false,
-				GHomepage.rgRecommendedGames, true
-			);
-		}
 		else
 		{
 			/*rgDisplayListCombined = GHomepage.InterleaveLists(

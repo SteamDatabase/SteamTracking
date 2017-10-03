@@ -312,12 +312,19 @@ body.sale_page_background {
 }
 
 .sale_page_package_contents .tab_item_details {
-	color: #888888;
+	color: #7092a5;
 }
 
 .sale_package_contents_expander {
 	padding: 12px 0;
 	text-align: center;
+}
+
+.tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
+	color: #7092a5;
+}
+.tab_item_content {
+	padding-top: 16px;
 }
 
 #sale_page_purchase_all_area {
