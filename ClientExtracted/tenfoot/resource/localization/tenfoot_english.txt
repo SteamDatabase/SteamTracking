@@ -1613,6 +1613,7 @@
 	"Library_Details_Settings_Title"		"{s:appname} Settings"
 	"Library_Details_StorePage"		"View Store Page"
 	"Library_Details_FirmwareRecover" 	"Recover Steam Controller Firmware"
+	"Library_Details_WithOverlay"		"Enable Overlay on Non-Steam Game"
 
 	"Library_Details_CommunityContent_All"				 "All"
 	"Library_Details_CommunityContent_Screenshots"		 "Screenshots"

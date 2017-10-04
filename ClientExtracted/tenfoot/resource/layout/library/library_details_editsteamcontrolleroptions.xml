@@ -12,6 +12,7 @@
 				<Label text="#Library_Details_ChangeXInputOrderButton" />
 			</Button>
 			<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="AllowDesktopConfigButton" text="#Library_Details_AllowDesktopConfig" selectionpos="auto" onactivate="ToggleAllowDesktopConfig()"/>
+      		<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="RunWithOverlayButton" text="#Library_Details_WithOverlay" selectionpos="auto" onactivate="ToggleRunNoOverlay()"/>
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />
 			<ToggleButton class="CheckBox" id="EnableConfigurator" text="#Library_Details_EnableConfigurator" selectionpos="auto" onactivate="ToggleEnableConfigurator()"/>

@@ -9,7 +9,6 @@
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
- .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSThread
  B SteamThreadTools::g_SuspendResumeLock
@@ -209,7 +208,6 @@
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
- OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
  OBJC_METACLASS_$_NSObject
@@ -756,22 +754,23 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
+ d __block_descriptor_tmp139
  d __block_descriptor_tmp165
- d __block_descriptor_tmp190
- d __block_descriptor_tmp254
- d __block_descriptor_tmp267
+ d __block_descriptor_tmp244
+ d __block_descriptor_tmp258
  d __block_descriptor_tmp32
  d __block_descriptor_tmp34
- d __block_descriptor_tmp352
+ d __block_descriptor_tmp342
+ d __block_descriptor_tmp343
  d __block_descriptor_tmp39
  d __block_descriptor_tmp58
  d __block_descriptor_tmp60
  d __block_descriptor_tmp65
  d __block_literal_global
+ d __block_literal_global140
  d __block_literal_global166
- d __block_literal_global191
- d __block_literal_global255
- d __block_literal_global268
+ d __block_literal_global245
+ d __block_literal_global259
  d __block_literal_global33
  d __block_literal_global35
  d __block_literal_global40
