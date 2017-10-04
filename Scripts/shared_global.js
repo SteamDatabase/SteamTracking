@@ -3868,17 +3868,21 @@ function LoginUsingSteamClient( baseURL )
  * 						Only needed if you're using more than one CAjaxSubPageController on the same page.
  * @constructor
  */
-var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId )
+var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId, strDefaultLocation )
 {
 	this.elTarget = elTarget;
 	this.strBaseURL = strBaseURL;
 	this.strStateID = strInstanceId || 'navid';
+	this.strDefaultLocation = strDefaultLocation || '';
 
 	this.rgOriginalEvent = {'html':this.elTarget.innerHTML,'title':document.title, 'id': this.strStateID};
 
 	window.addEventListener('popstate', this.OnWindowPopState.bind(this));
 
 	this.InstrumentLinks( document );
+
+	var strLocation =  window.location.href.substring(strBaseURL.length);
+	this.PaintLinks(strLocation || this.strDefaultLocation);
 
 
 };
@@ -3900,6 +3904,23 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 }
 
 /**
+ * Adds 'active' class to link that was clicked or is currently active.
+ * @constructor
+ */
+CAjaxSubPageController.prototype.PaintLinks = function( strLocation )
+{
+	// Figure out which link we clicked and paint it with the correct class
+	var rgLinks = document.querySelectorAll('[data-'+this.strStateID+']');
+	for( var i=0; i<rgLinks.length; i++)
+	{
+		if( rgLinks[i].dataset[ this.strStateID ] == strLocation )
+			rgLinks[i].classList.add('active');
+		else
+			rgLinks[i].classList.remove('active');
+	}
+}
+
+/**
  * Call to navigate the sub-frame.
  *
  * @param strLocation Assumed to be strBaseURL + strLocation. Trailing slash should be on strBaseURL already.
@@ -3908,11 +3929,15 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
  */
 CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle, event )
 {
-	// @todo chrisk show throbber
 	var _this = this;
 	var strURL = this.strBaseURL + strLocation;
 
 	this.elTarget.classList.add('loading');
+
+	this.PaintLinks( strLocation );
+
+	// Trigger the "saveform" event which we may have bound to do things.
+	$J( 'form', this.elTarget ).trigger('saveform');
 
 	$J.ajax({
 		url: strURL,

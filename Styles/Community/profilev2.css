@@ -2746,3 +2746,18 @@ body.flat_page .sectionTabsHR {
 .clanInviteErrorTable {
 	margin-top: 15px;
 }
+
+.invite_banner {
+	padding: 12px;
+}
+
+.invite_banner .header {
+	padding: 12px;
+	font-size: 14px;
+}
+
+.invite_banner .content {
+	padding: 12px;
+	font-size: 14px;
+	color: #cc3333;
+}

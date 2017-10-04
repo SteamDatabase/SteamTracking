@@ -144,3 +144,52 @@ a.history_item:hover .history_item_name {
 	cursor: pointer;
 	color: white;
 }
+
+#inventory_history_filters_dialog {
+	width: 900px;
+	max-width: 100%;
+}
+
+.inventory_history_filters {
+	height: 310px;
+	overflow-y: auto;
+	max-height: 75vh;	/* don't make it more than 75% of the viewport height */
+}
+
+.inventory_history_filters_bottombuttons {
+	text-align: right;
+	margin-right: 24px;
+	margin-top: 20px;
+}
+
+.inventory_history_filters_bottombuttons > div {
+	vertical-align: middle;
+	margin-left: 30px;
+}
+
+.econ_tag_filter_category {
+	color: #D2D2D2;
+	display: inline-block;
+	margin-bottom: 1em;
+	margin-right: 15px;
+	vertical-align: top;
+}
+
+.econ_tag_filter_category > select {
+	background-color: #5a5a5a;
+	box-shadow: 1px 1px 2px #3a3a3a inset;
+	color: #BFBFBF;
+}
+
+.econ_tag_filter_category_label {
+	margin-bottom: 2px;
+	color: #828282;
+}
+
+.econ_tag_filter_label > span {
+	text-shadow: 1px 2px 2px #191919;
+}
+
+.econ_tag_filter_container {
+	margin-bottom: 2px;
+}
