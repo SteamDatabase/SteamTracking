@@ -964,7 +964,7 @@ GDynamicStore = {
 		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
 	},
 	
-	GetCuratorForApp( unAppID, bOnlyPositive )
+	GetCuratorForApp: function( unAppID, bOnlyPositive )
 	{
 		var curator = null;
 		if( GDynamicStore.s_rgCurations[unAppID] )
