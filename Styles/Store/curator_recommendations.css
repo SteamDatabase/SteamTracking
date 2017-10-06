@@ -48,6 +48,16 @@ body.v6 {
 	margin-right: 6px;
 }
 
+.follow_btn .following span {
+	border: 1px solid #a3cf06;
+	color: #a3cf06;
+}
+.follow_btn .following img {
+	position: relative;
+	top: 2px;
+	left: -5px;
+}
+
 .light_container {
 	background: -webkit-linear-gradient( top, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);background: linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
 	padding: 5px 0;
@@ -657,5 +667,8 @@ font-size: 16px;
 	padding-top: 25px;
 }
 
+.cancelbtn {
+	margin-left: 10px;
+}
 
 

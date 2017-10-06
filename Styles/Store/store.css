@@ -3240,6 +3240,16 @@ body.v6 .screenshot_carousel h2 {
 	background-color: #000;
 }
 
+.quadscreenshot_carousel .taglist > span {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 10px;
+	padding: 2px 5px;
+	background-color: rgba(255,255,255,0.15);
+	color: #fff;
+	border-radius: 2px;
+}
+
 .quadscreenshot_carousel .main {
 	position: absolute;
 	padding: 15px 10px;
@@ -3315,6 +3325,7 @@ body.v6 .quadscreenshot_carousel h2 {
 .quadscreenshot_carousel .default {
 	font-size: 18px;
 	color: #fff;
+	max-width: 400px;
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -3376,7 +3387,15 @@ body.v6 .quadscreenshot_carousel h2 {
 
 .carousel_items {
 	position: relative;
-	clear: both;
+}
+
+ {
+	display: flex;
+	justify-content: space-between;
+}
+
+.carousel_items.store_capsule_container > * > * {
+	flex-shrink: 0;
 }
 
 .carousel_items:not(.no_paging) > * {
@@ -3517,9 +3536,7 @@ body.v6 .quadscreenshot_carousel h2 {
 	transition: opacity 400ms;
 }
 
-.carousel_container.paging_capsules .carousel_items > * > *:not(:last-child) {
-	margin-right: 15px;
-}
+
 
 
 /* Arrows */

@@ -721,12 +721,12 @@ GDynamicStore = {
 	{
 		if ( !GDynamicStore.s_rgPersonalizedBundleData[unBundleID] )
 		{
-			if ( !GStoreItemData.rgBundleData[ unBundleID ] && rgPageBundleData && rgPageBundleData.m_rgItems )
+			if ( !GStoreItemData.rgPersonalizedBundleData[ unBundleID ] && rgPageBundleData && rgPageBundleData.m_rgItems )
 			{
-				GStoreItemData.rgBundleData[ unBundleID ] = rgPageBundleData;
+				GStoreItemData.rgPersonalizedBundleData[ unBundleID ] = rgPageBundleData;
 			}
 
-			var Bundle = GStoreItemData.rgBundleData[ unBundleID ];
+			var Bundle = GStoreItemData.rgPersonalizedBundleData[ unBundleID ];
 			if ( !Bundle )
 				return null;
 
@@ -891,7 +891,7 @@ GDynamicStore = {
 			for ( var i = 0; i < rgItemsWithCaps.length; i++ )
 			{
 				var rgLinkParams = { 'class': 'bundle_contents_preview_item ds_collapse_flag' };
-				var Item = GStoreItemData.GetCapParams( 'bundle_component_preview', null, rgItemsWithCaps[i], rgLinkParams );
+				var Item = GStoreItemData.GetCapParams( 'bundle_component_preview', null, rgItemsWithCaps[i], null, rgLinkParams );
 				var $Link = $J('<a/>', rgLinkParams );
 
 				var $Img = $J('<img/>', {'src': Item.tiny_capsule, 'class': 'bundle_contents_preview_img' } );
@@ -1025,7 +1025,7 @@ GDynamicStore = {
 			return;
 		}
 
-		var Bundle = GStoreItemData.rgBundleData[ unBundleID ];
+		var Bundle = GStoreItemData.rgPersonalizedBundleData[ unBundleID ];
 		if ( !Bundle )
 		{
 			ShowAlertDialog( '', 'Unknown bundle ID ' + unBundleID );
@@ -1098,12 +1098,13 @@ GStoreItemData = {
 	rgAppData: {},
 	rgPackageData: {},
 	rgBundleData: {},
+	rgPersonalizedBundleData: {},
 	rgAccountData: [],
 	rgNavParams: {},
 	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
 	nCurrencyMinPriceIncrement : 1,
 
-	AddStoreItemData: function ( rgApps, rgPackages )
+	AddStoreItemData: function ( rgApps, rgPackages, rgBundles )
 	{
 		if ( rgApps && typeof rgApps.length == 'undefined' )
 		{
@@ -1126,15 +1127,15 @@ GStoreItemData = {
 					GStoreItemData.MergeStoreItemData( GStoreItemData.rgPackageData[packageid], rgPackageData[packageid] );
 			}
 		}
-	},
 
-	AddBundleData: function( rgBundles )
-	{
 		if ( rgBundles && typeof rgBundles.length == 'undefined' )
 		{
-			for ( var bundleid in rgBundles )
+			for( var bundleid in rgBundles )
 			{
-				GStoreItemData.rgBundleData[bundleid] = rgBundles[bundleid];
+				if ( !GStoreItemData.rgBundleData[bundleid] )
+					GStoreItemData.rgBundleData[bundleid] = rgBundles[bundleid];
+				else
+					GStoreItemData.MergeStoreItemData( GStoreItemData.rgBundleData[bundleid], rgBundles[bundleid] );
 			}
 		}
 	},
@@ -1235,6 +1236,11 @@ GStoreItemData = {
 		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/sub/' + unPackageID + '/', strFeatureContext, nDepth )
 	},
 
+	GetBundleURL: function( unBundleID, strFeatureContext, nDepth )
+	{
+		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
+	},
+
 	GetHoverParams: function ( unAppID, unPackageID )
 	{
 		var hoverparams = unAppID ? { type: 'app', id: unAppID } : { type: 'sub', id: unPackageID };
@@ -1251,9 +1257,15 @@ GStoreItemData = {
 		});
 	},
 
-	GetCapParams: function( strFeatureContext, unAppID, unPackageID, params, nDepth )
+	GetCapParams: function( strFeatureContext, unAppID, unPackageID, unBundleID, params, nDepth )
 	{
-		var rgItemData = ( unAppID ? GStoreItemData.rgAppData[ unAppID] : GStoreItemData.rgPackageData[ unPackageID ] );
+		var rgItemData = null;
+		if( unAppID )
+			rgItemData = GStoreItemData.rgAppData[ unAppID];
+		else if( unPackageID )
+			rgItemData = GStoreItemData.rgPackageData[ unPackageID ];
+		else if( unBundleID )
+			rgItemData = GStoreItemData.rgBundleData[ unBundleID ];
 
 		if ( !rgItemData )
 			return null;
@@ -1269,10 +1281,18 @@ GStoreItemData = {
 			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
 
 		}
-		else
+		else if( unPackageID )
 		{
 			params['data-ds-packageid'] = unPackageID;
 			params['href'] = GStoreItemData.GetPackageURL( unPackageID, strFeatureContext, nDepth );
+			if ( rgItemData['appids'] )
+			{
+				params['data-ds-appid'] = rgItemData['appids'].join( ',' );
+			}
+		} else if( unBundleID )
+		{
+			params['data-ds-bundleid'] = unBundleID;
+			params['href'] = GStoreItemData.GetBundleURL( unBundleID, strFeatureContext, nDepth );
 			if ( rgItemData['appids'] )
 			{
 				params['data-ds-appid'] = rgItemData['appids'].join( ',' );
@@ -1354,13 +1374,15 @@ GStoreItemData = {
 		for ( var i = 0; i < rgItems.length; i++ )
 		{
 			var oItem = rgItems[i];
-			var unAppID, unPackageID;
+			var unAppID, unPackageID, unBundleID;
 			if ( oItem instanceof Object )
 			{
 				if ( oItem.appid )
 					unAppID = oItem.appid;
 				else if ( oItem.packageid )
 					unPackageID = oItem.packageid;
+				else if ( oItem.bundleid )
+					unBundleID = oItem.bundleid;
 			}
 
 			if ( unAppID )
@@ -1377,6 +1399,15 @@ GStoreItemData = {
 				if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings, true ) )
 					rgStrictItems.push( oItem );
 				else if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings ) )
+					rgGoodItems.push( oItem );
+				else
+					rgOtherItems.push( oItem );
+			}
+			else if ( unBundleID )
+			{
+				if ( GStoreItemData.BBundlePassesFilters( unBundleID, Settings, ApplicableSettings, true ) )
+					rgStrictItems.push( oItem );
+				else if ( GStoreItemData.BBundlePassesFilters( unBundleID, Settings, ApplicableSettings ) )
 					rgGoodItems.push( oItem );
 				else
 					rgOtherItems.push( oItem );
@@ -1478,8 +1509,124 @@ GStoreItemData = {
 			return false;
 
 		return true;
+	},
+
+	BBundlePassesFilters: function( bundleid, Settings, ApplicableSettings, bStrict )
+	{
+		var rgBundleData = GStoreItemData.rgBundleData[ bundleid ];
+
+		if ( !rgBundleData )
+			return false;
+
+		if( !GStoreItemData.BItemPassesFilters( rgBundleData, Settings, ApplicableSettings, bStrict ) )
+			return false;
+
+
+		return true;
 	}
 
+};
+
+var GDynamicStoreHelpers = {
+
+	BuildCapsuleHTML: function( strFeatureContext, unAppID, unPackageID, unBundleID, rgOptions )
+	{
+		var rgOptions = $J.extend({
+			'class': 'store_capsule',
+			'include_title': false,
+			'discount_class': 'discount_block_inline',
+			'capsule_size': 'headerv5',
+			'html_before_price': '',
+			'lazy': false
+		}, rgOptions ? rgOptions : {} );
+
+		var params = { 'class': rgOptions.class };
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, unBundleID, params );
+		if ( !rgItemData )
+		{
+			return null;
+		}
+
+		var $CapCtn = $J('<a/>', params );
+
+		if ( !rgOptions.no_hover )
+			GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+
+		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
+
+		var rgImageProperties = { src: rgItemData[rgOptions.capsule_size] };
+		if( rgOptions.lazy )
+			rgImageProperties = { 'data-image-url': rgItemData[rgOptions.capsule_size] }
+
+		$ImgCtn.append( $J('<img/>', rgImageProperties ) );
+		$CapCtn.append( $ImgCtn );
+		if( rgOptions.include_title )
+			$CapCtn.append( $J('<div/>', {'class': 'title ellipsis' } ).html( rgItemData.name ) );
+
+		if( rgOptions.html_before_price )
+			$CapCtn.append( rgOptions.html_before_price );
+
+		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
+
+		return $CapCtn;
+	},
+
+	FillPagedCapsuleCarousel: function( rgCapsules, $elTarget, fnCapsule, strNavContext, nCapsules, rgBaseOptions )
+	{
+		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
+		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
+
+		var bPaginated = !$elCapsuleTarget.hasClass('no_paging');
+
+		if ( !bPaginated )
+			nCapsules = rgCapsules.length;
+
+				if( rgCapsules.length < nCapsules )
+			return;
+
+		for( var j=0; j<rgCapsules.length; j+=nCapsules )
+		{
+			// Try to avoid half-filling a page
+			if( j > 0 && j+nCapsules > rgCapsules.length && bPaginated )
+				break;
+
+			var $elPageContainer = $J('<div>');
+			for( var k=0; k < nCapsules && k + j < rgCapsules.length; k++ )
+			{
+				var oItem = rgCapsules[ k + j ];
+				var rgOptions = $J.extend({}, rgBaseOptions);
+				if( j > 0 )
+					rgOptions.lazy = true;
+				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions );
+				if( !$CapCtn )
+					continue;
+
+				// Don't try to do automatic visibilty tracking on non-visible clusters.
+				if( j > 0 )
+					$CapCtn.attr('data-manual-tracking', 1);
+
+				$elPageContainer.append( $CapCtn );
+
+			}
+
+			$elCapsuleTarget.append($elPageContainer);
+
+			if ( bPaginated )
+			{
+				$elThumbTarget.append($J('<div/>'));
+			}
+		}
+
+		if ( $elCapsuleTarget.children().length > 0 )
+		{
+			$elCapsuleTarget.InstrumentLinks();
+			GDynamicStore.DecorateDynamicItems( $elCapsuleTarget );
+			$elTarget.show();
+		}
+
+		if ( bPaginated )
+			CreateFadingCarousel( $elTarget, 0 );
+	},
 };
 
 function ShowHowDoDiscoveryQueuesWorkDialog()

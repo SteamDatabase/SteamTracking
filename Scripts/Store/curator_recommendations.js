@@ -272,7 +272,7 @@ function ShowEditHandles()
 
 		var elOptions = $J('<form class="edit_options"></form>');
 
-		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t<\/select>");
+		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t<\/select>");
 
 		elTypeSelect.val( rgNodeData.type );
 
@@ -291,6 +291,7 @@ function ShowEditHandles()
 		var elTagId = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
 
 		var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
+		var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
 
 		elTypeSelect.on('change',function(){
 			switch( elTypeSelect.val() )
@@ -343,6 +344,10 @@ function ShowEditHandles()
 
 			return false;
 
+		});
+
+		elCancel.on('click', function(){
+			elOptions.hide();
 		});
 
 		elListEditButton.on('click', function(){
@@ -438,7 +443,7 @@ function ShowEditHandles()
 		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
 		elOptions.append( elListContainer );
 		elOptions.append( elTagContainer );
-		elOptions.append( WrapFormFieldWithLabel( '', elSave ) );
+		elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );
 		elOptions.append( elListId );
 		elOptions.append( elTagId );
 		elOptions.hide();

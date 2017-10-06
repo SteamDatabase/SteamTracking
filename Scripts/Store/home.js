@@ -351,7 +351,7 @@ GHomepage = {
 				var unAppID = rgApps[i];
 
 				var params = {'class': 'gutter_item'};
-				var rgItemData = GStoreItemData.GetCapParams( 'gutter_recent', unAppID, 0, params );
+				var rgItemData = GStoreItemData.GetCapParams( 'gutter_recent', unAppID, 0, null, params );
 
 				if( !rgItemData || !rgItemData.name )
 					continue;
@@ -509,7 +509,7 @@ GHomepage = {
 		var unPackageID = rgItem.packageid;
 
 		var params = { 'class': rgOptions.class, 'data-manual-tracking': 1 };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1227,7 +1227,7 @@ GHomepage = {
 	BuildHomePageHeaderCap: function( strFeatureContext, unAppID, unPackageID )
 	{
 		var params = { 'class': 'home_headercap' };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1253,7 +1253,7 @@ GHomepage = {
 		}, rgOptions ? rgOptions : {} );
 
 		var params = { 'class': rgOptions.class };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1462,7 +1462,7 @@ GHomepage = {
 		var $SpotlightCtn = $J('<div/>', {'class': 'recommended_spotlight_ctn' } );
 
 		var params = { 'class': 'recommended_spotlight' };
-		var rgItemData = GStoreItemData.GetCapParams( 'recommended_spotlight', unAppID, null, params );
+		var rgItemData = GStoreItemData.GetCapParams( 'recommended_spotlight', unAppID, null, null, params );
 
 		if ( !rgItemData )
 			return null;
@@ -1542,7 +1542,7 @@ GHomepage = {
 			{
 				var message = rgFilteredMessages[i];
 
-				var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, params );
+				var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
 
 				var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
 
@@ -1568,7 +1568,7 @@ GHomepage = {
 				{
 					var message = rgFilteredMessages[i];
 
-					var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, params );
+					var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
 
 					var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message small' } ).attr ( 'href', message.url );
 
@@ -1786,7 +1786,7 @@ GSteamCurators = {
 		{
 			params['curator_clanid'] = oItem.rgCurators[0];
 		}
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1839,7 +1839,7 @@ GSteamCurators = {
 		{
 			params['curator_clanid'] = oItem.rgCurators[0];
 		}
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1895,7 +1895,7 @@ GSteamCurators = {
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
 		var params = { 'class': 'curator_giant_capsule', 'curator_clanid' : unClanId };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 
 		var rgRecommendation = oItem.rgRecommendationByCurator[ unClanId ] || '';
 
@@ -2266,6 +2266,9 @@ var g_bDisableAutoloader = false;
 					var rgBuckets = ['played', 'friends', 'wishlist', 'curators'];
 					while( rgSimilarItems.length < 3 && rgBuckets.length > 0 )
 					{
+						if( !this.rgRecommendedData[strBucket] )
+							continue;
+
 						var nIndex = ele.srand.nextIntBetween(0,rgBuckets.length);
 						WebStorage.SetLocal('home_seed',ele.srand.nLast, true );
 						$('#content_seed').val(ele.srand.nLast);

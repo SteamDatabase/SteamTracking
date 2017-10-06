@@ -387,7 +387,7 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeature, nDepth, rgItemInfo )
 {
 	var params = { 'class': 'cluster_capsule' };
-	var rgItemData = GStoreItemData.GetCapParams( strFeature, unAppID, unPackageID, params, nDepth );
+	var rgItemData = GStoreItemData.GetCapParams( strFeature, unAppID, unPackageID, null, params, nDepth );
 	if ( !rgItemData )
 		return null;
 
