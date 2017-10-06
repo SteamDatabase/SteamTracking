@@ -2266,14 +2266,11 @@ var g_bDisableAutoloader = false;
 					var rgBuckets = ['played', 'friends', 'wishlist', 'curators'];
 					while( rgSimilarItems.length < 3 && rgBuckets.length > 0 )
 					{
-						if( !this.rgRecommendedData[strBucket] )
-							continue;
-
 						var nIndex = ele.srand.nextIntBetween(0,rgBuckets.length);
 						WebStorage.SetLocal('home_seed',ele.srand.nLast, true );
 						$('#content_seed').val(ele.srand.nLast);
 						var strBucket = rgBuckets[nIndex];
-						if( this.rgRecommendedData[strBucket].length == 0 )
+						if( !this.rgRecommendedData[strBucket] || this.rgRecommendedData[strBucket].length == 0 )
 						{
 							rgBuckets.splice( nIndex, 1 );
 							continue;
