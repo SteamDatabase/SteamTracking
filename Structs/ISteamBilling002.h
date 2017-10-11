@@ -1,0 +1,47 @@
+class ISteamBilling002
+{
+public:
+    virtual unknown_ret InitCreditCardPurchase(int, unsigned int, bool) = 0;
+    virtual unknown_ret InitPayPalPurchase(int) = 0;
+    virtual unknown_ret GetActivationCodeInfo(char const*) = 0;
+    virtual unknown_ret PurchaseWithActivationCode(char const*) = 0;
+    virtual unknown_ret GetFinalPrice() = 0;
+    virtual unknown_ret CancelPurchase() = 0;
+    virtual unknown_ret CompletePurchase() = 0;
+    virtual unknown_ret UpdateCardInfo(unsigned int) = 0;
+    virtual unknown_ret DeleteCard(unsigned int) = 0;
+    virtual unknown_ret GetCardList() = 0;
+    virtual unknown_ret Obsolete_GetLicenses() = 0;
+    virtual unknown_ret CancelLicense(int, int) = 0;
+    virtual unknown_ret GetPurchaseReceipts(bool) = 0;
+    virtual unknown_ret SetBillingAddress(unsigned int, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*) = 0;
+    virtual unknown_ret GetBillingAddress(unsigned int, char*, char*, char*, char*, char*, char*, char*, char*, char*) = 0;
+    virtual unknown_ret SetShippingAddress(char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*) = 0;
+    virtual unknown_ret GetShippingAddress(char*, char*, char*, char*, char*, char*, char*, char*, char*) = 0;
+    virtual unknown_ret SetCardInfo(unsigned int, int, char const*, char const*, char const*, char const*, char const*, char const*) = 0;
+    virtual unknown_ret GetCardInfo(unsigned int, int*, char*, char*, char*, char*, char*, char*) = 0;
+    virtual unknown_ret GetLicensePackageID(unsigned int) = 0;
+    virtual unknown_ret GetLicenseTimeCreated(unsigned int) = 0;
+    virtual unknown_ret GetLicenseTimeNextProcess(unsigned int) = 0;
+    virtual unknown_ret GetLicenseMinuteLimit(unsigned int) = 0;
+    virtual unknown_ret GetLicenseMinutesUsed(unsigned int) = 0;
+    virtual unknown_ret GetLicensePaymentMethod(unsigned int) = 0;
+    virtual unknown_ret GetLicenseFlags(unsigned int) = 0;
+    virtual unknown_ret GetLicensePurchaseCountryCode(unsigned int) = 0;
+    virtual unknown_ret GetReceiptPackageID(unsigned int) = 0;
+    virtual unknown_ret GetReceiptStatus(unsigned int) = 0;
+    virtual unknown_ret GetReceiptResultDetail(unsigned int) = 0;
+    virtual unknown_ret GetReceiptTransTime(unsigned int) = 0;
+    virtual unknown_ret GetReceiptTransID(unsigned int) = 0;
+    virtual unknown_ret GetReceiptPaymentMethod(unsigned int) = 0;
+    virtual unknown_ret GetReceiptBaseCost(unsigned int) = 0;
+    virtual unknown_ret GetReceiptTotalDiscount(unsigned int) = 0;
+    virtual unknown_ret GetReceiptTax(unsigned int) = 0;
+    virtual unknown_ret GetReceiptShipping(unsigned int) = 0;
+    virtual unknown_ret GetReceiptCountryCode(unsigned int) = 0;
+    virtual unknown_ret GetNumLicenses() = 0;
+    virtual unknown_ret GetNumReceipts() = 0;
+    virtual unknown_ret PurchaseWithMachineID(int, char const*) = 0;
+    virtual unknown_ret InitClickAndBuyPurchase(int, long long, char const*, char const*) = 0;
+    virtual unknown_ret GetPreviousClickAndBuyAccount(long long*, char*, char*) = 0;
+};

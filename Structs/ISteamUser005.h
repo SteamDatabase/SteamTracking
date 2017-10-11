@@ -1,0 +1,43 @@
+class ISteamUser005
+{
+public:
+    virtual unknown_ret GetHSteamUser() = 0;
+    virtual unknown_ret LogOn(CSteamID) = 0;
+    virtual unknown_ret LogOff() = 0;
+    virtual unknown_ret BLoggedOn() = 0;
+    virtual unknown_ret GetLogonState() = 0;
+    virtual unknown_ret BConnected() = 0;
+    virtual unknown_ret GetSteamID() = 0;
+    virtual unknown_ret IsVACBanned(int) = 0;
+    virtual unknown_ret RequireShowVACBannedMessage(int) = 0;
+    virtual unknown_ret AcknowledgeVACBanning(int) = 0;
+    virtual unknown_ret SetSteam2Ticket(unsigned char*, int) = 0;
+    virtual unknown_ret AddServerNetAddress(unsigned int, unsigned short) = 0;
+    virtual unknown_ret SetEmail(char const*) = 0;
+    virtual unknown_ret SetRegistryString(EConfigSubTree, char const*, char const*) = 0;
+    virtual unknown_ret GetRegistryString(EConfigSubTree, char const*, char*, int) = 0;
+    virtual unknown_ret SetRegistryInt(EConfigSubTree, char const*, int) = 0;
+    virtual unknown_ret GetRegistryInt(EConfigSubTree, char const*, int*) = 0;
+    virtual unknown_ret InitiateGameConnection(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool) = 0;
+    virtual unknown_ret TerminateGameConnection(unsigned int, unsigned short) = 0;
+    virtual unknown_ret SetSelfAsPrimaryChatDestination() = 0;
+    virtual unknown_ret IsPrimaryChatDestination() = 0;
+    virtual unknown_ret RequestLegacyCDKey(unsigned int) = 0;
+    virtual unknown_ret SendGuestPassByEmail(char const*, unsigned long long, bool) = 0;
+    virtual unknown_ret SendGuestPassByAccountID(unsigned int, unsigned long long, bool) = 0;
+    virtual unknown_ret AckGuestPass(char const*) = 0;
+    virtual unknown_ret RedeemGuestPass(char const*) = 0;
+    virtual unknown_ret GetGuestPassToGiveCount() = 0;
+    virtual unknown_ret GetGuestPassToRedeemCount() = 0;
+    virtual unknown_ret GetGuestPassLastUpdateTime() = 0;
+    virtual unknown_ret GetGuestPassToGiveInfo(unsigned int, unsigned long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, char*, int) = 0;
+    virtual unknown_ret GetGuestPassToRedeemInfo(unsigned int, unsigned long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*) = 0;
+    virtual unknown_ret GetGuestPassToRedeemSenderAddress(unsigned int, char*, int) = 0;
+    virtual unknown_ret GetGuestPassToRedeemSenderName(unsigned int, char*, int) = 0;
+    virtual unknown_ret AcknowledgeMessageByGID(char const*) = 0;
+    virtual unknown_ret SetLanguage(char const*) = 0;
+    virtual unknown_ret TrackAppUsageEvent(CGameID, int, char const*) = 0;
+    virtual unknown_ret SetAccountName(char const*) = 0;
+    virtual unknown_ret SetPassword(char const*) = 0;
+    virtual unknown_ret SetAccountCreationTime(unsigned int) = 0;
+};

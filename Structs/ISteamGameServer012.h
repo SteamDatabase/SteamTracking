@@ -1,0 +1,48 @@
+class ISteamGameServer012
+{
+public:
+    virtual unknown_ret InitGameServer(unsigned int, unsigned short, unsigned short, unsigned int, unsigned int, char const*) = 0;
+    virtual unknown_ret SetProduct(char const*) = 0;
+    virtual unknown_ret SetGameDescription(char const*) = 0;
+    virtual unknown_ret SetModDir(char const*) = 0;
+    virtual unknown_ret SetDedicatedServer(bool) = 0;
+    virtual unknown_ret LogOn(char const*) = 0;
+    virtual unknown_ret LogOnAnonymous() = 0;
+    virtual unknown_ret LogOff() = 0;
+    virtual unknown_ret BLoggedOn() = 0;
+    virtual unknown_ret BSecure() = 0;
+    virtual unknown_ret GetSteamID() = 0;
+    virtual unknown_ret WasRestartRequested() = 0;
+    virtual unknown_ret SetMaxPlayerCount(int) = 0;
+    virtual unknown_ret SetBotPlayerCount(int) = 0;
+    virtual unknown_ret SetServerName(char const*) = 0;
+    virtual unknown_ret SetMapName(char const*) = 0;
+    virtual unknown_ret SetPasswordProtected(bool) = 0;
+    virtual unknown_ret SetSpectatorPort(unsigned short) = 0;
+    virtual unknown_ret SetSpectatorServerName(char const*) = 0;
+    virtual unknown_ret ClearAllKeyValues() = 0;
+    virtual unknown_ret SetKeyValue(char const*, char const*) = 0;
+    virtual unknown_ret SetGameTags(char const*) = 0;
+    virtual unknown_ret SetGameData(char const*) = 0;
+    virtual unknown_ret SetRegion(char const*) = 0;
+    virtual unknown_ret SendUserConnectAndAuthenticate(unsigned int, void const*, unsigned int, CSteamID*) = 0;
+    virtual unknown_ret CreateUnauthenticatedUserConnection() = 0;
+    virtual unknown_ret SendUserDisconnect(CSteamID) = 0;
+    virtual unknown_ret BUpdateUserData(CSteamID, char const*, unsigned int) = 0;
+    virtual unknown_ret GetAuthSessionTicket(void*, int, unsigned int*) = 0;
+    virtual unknown_ret BeginAuthSession(void const*, int, CSteamID) = 0;
+    virtual unknown_ret EndAuthSession(CSteamID) = 0;
+    virtual unknown_ret CancelAuthTicket(unsigned int) = 0;
+    virtual unknown_ret UserHasLicenseForApp(CSteamID, unsigned int) = 0;
+    virtual unknown_ret RequestUserGroupStatus(CSteamID, CSteamID) = 0;
+    virtual unknown_ret GetGameplayStats() = 0;
+    virtual unknown_ret GetServerReputation() = 0;
+    virtual unknown_ret GetPublicIP() = 0;
+    virtual unknown_ret HandleIncomingPacket(void const*, int, unsigned int, unsigned short) = 0;
+    virtual unknown_ret GetNextOutgoingPacket(void*, int, unsigned int*, unsigned short*) = 0;
+    virtual unknown_ret EnableHeartbeats(bool) = 0;
+    virtual unknown_ret SetHeartbeatInterval(int) = 0;
+    virtual unknown_ret ForceHeartbeat() = 0;
+    virtual unknown_ret AssociateWithClan(CSteamID) = 0;
+    virtual unknown_ret ComputeNewPlayerCompatibility(CSteamID) = 0;
+};

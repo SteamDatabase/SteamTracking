@@ -43,6 +43,9 @@ echo Dumping protobufs
 mono ProtobufDumper/ProtobufDumper.exe bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
+echo Dumping structs
+./steamclient_tracker/machrec bins/steamclient.dylib "$DIR/Structs/"
+
 #
 # BUILDBOT PATHS
 #
