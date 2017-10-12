@@ -1391,11 +1391,8 @@ Event.observe( document, 'dom:loaded', function() {
 } );
 
 AdvancedSearchDialog = {
-	m_bOKClicked: false,
 	m_bInitialized: false,
 
-	m_oListingOriginalRow: null,
-	m_ulListingId: false,
 	m_fnDocumentKeyHandler: null,
 	m_modal: null,
 
@@ -1405,8 +1402,6 @@ AdvancedSearchDialog = {
 	Show: function () {
 		if ( !this.m_bInitialized )
 			this.Initialize();
-
-		this.m_bOKClicked = false;
 
 		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
 		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
@@ -2134,3 +2129,4 @@ $J(function() {
 		}
 	} );
 } );
+

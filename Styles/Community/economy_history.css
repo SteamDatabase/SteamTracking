@@ -5,7 +5,7 @@
 }
 
 .inventory_history_pagingrow {
-	height: 30px;
+	min-height: 30px;
 	line-height: 30px;
 	background-color: rgba( 0, 0, 0, 0.3);
 	color: #959595;
@@ -49,6 +49,7 @@
 	font-size: 11px;
 	color: #8a8a8a;
 	max-width: 20%;
+	margin-top: 1px;
 	margin-right: 2%;
 }
 
@@ -66,20 +67,23 @@
 
 .tradehistory_items {
 	position: relative;
-	padding-left: 2%;
+	padding-left: 4%;
 	margin-bottom: 8px;
 }
 
+.tradehistory_items_group {
+	display: inline-block;
+	width: 94%;
+}
+
 .tradehistory_items_plusminus {
-	float: left;
-	width: 38px;
-	margin-right: 2%;
-	text-align: center;
-	
+	display: inline-block;
+	vertical-align: top;
+
 	font-size: 16px;
 	font-weight: bold;
 	color: #8a8a8a;
-	max-width: 5%;
+	width: 5%;
 }
 
 .tradehistory_items_received {
@@ -145,6 +149,20 @@ a.history_item:hover .history_item_name {
 	color: white;
 }
 
+.ui-datepicker .ui-widget-header {
+	background: #274768;
+	border-color: #aaa;
+	color: white;
+}
+
+.ui-datepicker select {
+	color: white;
+}
+
+.ui-datepicker option {
+	background-color: #1F3953;
+}
+
 #inventory_history_filters_dialog {
 	width: 900px;
 	max-width: 100%;
@@ -192,4 +210,36 @@ a.history_item:hover .history_item_name {
 
 .econ_tag_filter_container {
 	margin-bottom: 2px;
+}
+
+.inventory_history_active_filter
+{
+	display: inline-block;
+	min-height: 15px;
+	line-height: 15px;
+	padding: 2px 4px;
+	background-color: #68932f;
+	border: 2px solid #68932f;
+	border-radius: 2px;
+	color: #d2ff96;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.inventory_history_active_filter:hover
+{
+	background-color: #8ac33e;
+	border-color: #8ac33e;
+}
+
+.inventory_history_active_filter .removeIcon
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-left: 5px;
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-repeat: no-repeat;
+	background-position: center;
 }

@@ -681,4 +681,13 @@ font-size: 16px;
 	margin-left: 10px;
 }
 
+.socialmedia_accounts {
+	color: #7291a5;
+	font-size: 11px;
+	border-bottom: 1px solid #7291a5;
+}
+
+.socialmedia_accounts > span {
+	margin-right: 5px;
+}
 

@@ -485,6 +485,7 @@ function LoadListData()
 		url: g_strCuratorBaseURL + 'ajaxgetlists/',
 		data: {
 			sessionid: g_sessionID,
+			count: 250
 		},
 		type: 'POST'
 	} ).done( function ( data )

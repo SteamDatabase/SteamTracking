@@ -1994,6 +1994,8 @@ function CAjaxPagingControls( rgSearchData, url )
 	this.m_iCurrentPage = 0;
 	this.m_cPageSize = rgSearchData['pagesize'];
 	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
+	this.m_strDefaultAction = typeof rgSearchData['action'] != 'undefined' ? rgSearchData['action'] : 'render';
+
 
 	if ( rgSearchData['prefix'] )
 		this.m_strElementPrefix = rgSearchData['prefix'];
@@ -2009,7 +2011,7 @@ function CAjaxPagingControls( rgSearchData, url )
 
 CAjaxPagingControls.prototype.GetActionURL = function( action )
 {
-	var url = this.m_strActionURL + action + '/';
+	var url = action ? this.m_strActionURL + action + '/' : this.m_strActionURL;
 	return url;
 };
 
@@ -2090,7 +2092,7 @@ CAjaxPagingControls.prototype.GoToPage = function( iPage, bForce )
 		this.m_fnPreRequestHandler( params );
 
 	this.m_bLoading = true;
-	new Ajax.Request( this.GetActionURL( 'render' ), {
+	new Ajax.Request( this.GetActionURL( this.m_strDefaultAction ), {
 		method: 'get',
 		parameters: params,
 		onSuccess: this.OnResponseRenderResults.bind( this ),
@@ -2118,19 +2120,23 @@ CAjaxPagingControls.prototype.OnResponseRenderResults = function( transport )
 		{
 			// this page is no longer valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
 			this.GoToPage.bind( this, this.m_iCurrentPage - 1 ).defer();
+
 			return;
 		}
 
+
+
 		var elResults = $(this.m_strElementPrefix + 'Rows');
 
-		elResults.update( response.results_html );
+		if( elResults)
+			elResults.update( response.results_html );
 
 		if ( this.m_fnResponseHandler != null )
 			this.m_fnResponseHandler( response );
 
-		ScrollToIfNotInView( $(this.m_strElementPrefix + 'Table'), 40 );
-
 		this.UpdatePagingDisplay();
+
+		ScrollToIfNotInView( $(this.m_strElementPrefix + 'Table'), 40 );
 	}
 };
 
@@ -3881,6 +3887,9 @@ var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId, strD
 
 	this.InstrumentLinks( document );
 
+	var _this = this;
+	setTimeout( function(){ $J(_this.elTarget).children().trigger('load'); }, 1);
+
 	var strLocation =  window.location.href.substring(strBaseURL.length);
 	this.PaintLinks(strLocation || this.strDefaultLocation);
 
@@ -3895,7 +3904,8 @@ var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId, strD
  */
 CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 {
-	var rgLinks = elTarget.querySelectorAll('[data-'+this.strStateID+']');
+	//var rgLinks = elTarget.querySelectorAll('[data-'+this.strStateID+']');
+	var rgLinks = $J('[data-'+this.strStateID+']', elTarget);
 	for( var i=0; i<rgLinks.length; i++)
 	{
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
@@ -3945,8 +3955,17 @@ CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle,
 		cache: true, /* Let the browser decide caching rules */
 		data: { 'ajax': 1 }
 	}).done(function( result ) {
-		$J(_this.elTarget).html( result );
+
+		var elNewContents = $J( result );
+
+		$J(_this.elTarget).empty();
+		$J(_this.elTarget).append( elNewContents );
+
+
 		_this.elTarget.classList.remove('loading');
+
+		$J( elNewContents ).trigger('load');
+
 		_this.InstrumentLinks( _this.elTarget );
 		if( strPageTitle )
 			document.title = strPageTitle;
@@ -3977,10 +3996,17 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 
 	if( state && state.id == this.strStateID)
 	{
+		var strLocation =  window.location.href.substring(this.strBaseURL.length);
+		this.PaintLinks( strLocation );
 
-		this.elTarget.innerHTML = state.html;
+		var elNewContents = $J(state.html);
+		$J(this.elTarget).empty();
+		$J(this.elTarget).append(elNewContents);
 		if( state.title )
 			document.title = state.title;
+
+		$J( elNewContents ).trigger('load');
+		this.InstrumentLinks( elNewContents );
 	}
 };
 

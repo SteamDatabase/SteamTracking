@@ -950,7 +950,7 @@ a#store_search_link img {
 }
 
 .discount_final_price {
-	color: #b0aeac;
+	color: #acdbf5;
 	font-size: 13px;
 }
 
@@ -3231,7 +3231,7 @@ body.v6 .screenshot_carousel h2 {
 /* Quad carousel */
 
 .quadscreenshot_carousel .carousel_items {
-	padding-bottom: 37%;
+	padding-bottom: 331px;
 }
 
 .quadscreenshot_carousel .carousel_items > * {
@@ -3252,16 +3252,17 @@ body.v6 .screenshot_carousel h2 {
 
 .quadscreenshot_carousel .main {
 	position: absolute;
-	padding: 15px 10px;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	height: 330px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	background: -webkit-linear-gradient( left, rgba(15,20,24,1.0) 37%,rgba(15,20,24,0.0) 50%);background: linear-gradient( to right, rgba(15,20,24,1.0) 37%,rgba(15,20,24,0.0) 50%);
+	background-color: #0f1418;
+
 }
 
 .quadscreenshot_carousel .bg {
@@ -3272,7 +3273,8 @@ body.v6 .screenshot_carousel h2 {
 	left: 0;
 	display: flex;
 	flex-wrap: wrap;
-	padding-left: 30%;
+	padding-left: 45%;
+	height: 266px;
 	justify-content: flex-end;
 }
 
@@ -3286,31 +3288,49 @@ body.v6 .screenshot_carousel h2 {
 	box-shadow: 0 0 1px #101519 inset;
 }
 
+.quadscreenshot_carousel .appTitle {
+	width: 455px;
+	height: 30px;
+	position: absolute;
+	right: 8px;
+	top: 274px;
+}
+
 body.v6 .quadscreenshot_carousel h2 {
+	visibility: collapse;
 	font-size: 26px;
-	text-shadow: 1px 1px #000;
+	text-shadow: 1px 1px 0px #000;
 	text-transform: none;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	margin: 0 !important; 			font-family: "Motiva Sans", Sans-serif;
+	margin: 4px 0 0 10px !important;
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
 		
 	display: inline-block;
-	background-color: rgba(0,0,0,0.3);
+
 	border-radius: 3px;
 	padding-right: 4px;
-	box-shadow: 0 0 13px 7px rgba(0,0,0,0.3);
+	letter-spacing: 0px;
+
 }
 
 
-.quadscreenshot_carousel .discount_block_inline {
-	margin: 5px 0;
+.quadscreenshot_carousel .discount_block_large {
+	margin: 0px 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 .quadscreenshot_carousel .recommendation_reason {
-	margin-top: 5px;
+	position: absolute;
+	height: 56px;
+	width: 475px;
+	top: 274px;
+	left: 8px;
 }
 
 .quadscreenshot_carousel .recommended_curator {
@@ -3325,7 +3345,6 @@ body.v6 .quadscreenshot_carousel h2 {
 .quadscreenshot_carousel .default {
 	font-size: 18px;
 	color: #fff;
-	max-width: 400px;
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -3348,15 +3367,15 @@ body.v6 .quadscreenshot_carousel h2 {
 }
 
 .quadscreenshot_carousel .main .maincap {
-	width: 367px;
-	box-shadow: 0 0 5px #000;
+	width: 465px;
+
 
 }
 
 @media screen and (max-width: 910px)
 {
 	.quadscreenshot_carousel .maincap {
-		display: none;
+
 	}
 
 	.quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) {
@@ -3373,8 +3392,7 @@ body.v6 .quadscreenshot_carousel h2 {
 	}
 
 	.quadscreenshot_carousel .bg > div {
-		width: 100%;
-		height: 100%;
+
 	}
 
 	body.v6 .quadscreenshot_carousel h2 {
@@ -3414,6 +3432,23 @@ body.v6 .quadscreenshot_carousel h2 {
 	transition: opacity 400ms;
 	width: 100%;
 	box-sizing: border-box;
+}
+
+.carousel_container.quadscreenshot_carousel .discount_block > .discount_prices {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: rgba(20,31,44,0.4);
+	border-radius: 1px;
+}
+.carousel_container.quadscreenshot_carousel .discount_block_inline {
+	font-size: 15px;
+}
+.carousel_container.quadscreenshot_carousel .discount_block_inline .no_discount .discount_final_price {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #acdbf5;
+	font-size: 17px;
 }
 
 .carousel_items.no_paging .store_capsule {
