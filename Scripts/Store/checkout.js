@@ -3097,7 +3097,7 @@ function UpdatePaymentInfoForm()
 
 			bShowCountryVerification = false;
 		}
-		else if ( g_bIsInClientOrOverlay && method.value == 'itauonline' )
+		else if ( g_bIsInClientOrOverlay && ( method.value == 'itauonline' || method.value == 'unionpay' ) )
 		{
 			$J('#submit_payment_info_btn').hide();
 			$('cant_use_payment_method_in_overlay').innerHTML = 'Your purchase cannot be completed because the selected payment method is not compatible with the Steam client.<br><br>\n								To complete your purchase, please select a different payment method or visit <a href="steam://openurl_external/http://store.steampowered.com">http://store.steampowered.com</a> in an external web browser.';
