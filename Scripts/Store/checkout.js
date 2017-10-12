@@ -273,8 +273,15 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				default:
 					break;
 			}
-		
-			g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			
+			if ( !g_bIsInClientOrOverlay )
+			{
+				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			}
+			else
+			{
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			}
 
 						if ( displayPendingReceipt )
 			{
