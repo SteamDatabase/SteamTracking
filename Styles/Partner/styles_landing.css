@@ -172,9 +172,9 @@ body{
 	#landingWelcome .breadcrumbs a,
 	.landingBreadcrumbs,
 	.landingBreadcrumbs a {
-		color: #808285;
+		color: #8f98a0;
 		font-size: 13px;
-		line-height: 14px;
+		line-height: 20px;
 		text-decoration: none;
 	}
 
