@@ -194,9 +194,11 @@ body.v6 h2.curator_name a {
 	flex-shrink: 3.1;
 	flex-basis: 100%;
 	max-height: 100%;
+	margin-left: 16px
 
 	background: rgba(0, 0, 0, 0.1);
 }
+
 
 .curator_featured .capsule .capimg {
 	width: 100%;
@@ -208,6 +210,23 @@ body.v6 h2.curator_name a {
 	color: #abdaf4;
 	line-height: 18px;
 	
+}
+
+.curator_featured .capsule p.curator_review .review_direction,
+.recommendation_type_ctn {
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+.color_recommended{
+	color: #66c0f4;
+}
+.color_not_recommended {
+	color: #f49866;
+}
+.color_informational {
+	color: #f5df67;
 }
 
 .curator_featured .screenshots {
@@ -636,19 +655,18 @@ font-size: 16px;
 }
 
 .recommendation_desc {
-	color: #9099a1;
-}
-
-.recommendation_type_ctn {
-	font-size: 16px;
+	color: #c6d4df;
+	margin-top: 4px;
+	font-size: 13px;
 }
 
 .recommendation_readmore {
 	margin-top: 3px;
+	font-size: 11px;
 }
 
 .recommendation_readmore a {
-	color: #c7d5e0;
+	color: #66c0f4;
 
 }
 
