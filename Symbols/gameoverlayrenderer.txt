@@ -263,7 +263,7 @@
  T CBaseInputHandler::MarkEndOfInputFrame()
  T CBaseInputHandler::SetHotKey(int, int)
  T CBaseInputHandler::SetMovieHotKey(int, int)
- T CBaseInputHandler::SetRenderOutputBounds(int, int, int, int)
+ T CBaseInputHandler::SetRenderOutputBounds(int, int, int, int, int)
  T CBaseInputHandler::SetRenderTargetSize(int, int)
  T CBaseInputHandler::SetScreenshotHotKey(int, int)
  T CBaseInputHandler::SetTreatEscAsHotkey(bool)
