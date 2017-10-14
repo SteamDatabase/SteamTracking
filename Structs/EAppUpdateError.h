@@ -1,6 +1,6 @@
 typedef enum EAppUpdateError
 {
-    k_EAppUpdateErrorNoError = 0, // No Error
+    k_EAppUpdateErrorNoError, // No Error
     k_EAppUpdateErrorUnspecifiedError, // Unspecified Error
     k_EAppUpdateErrorPaused, // Paused
     k_EAppUpdateErrorCanceled, // Canceled

@@ -1,6 +1,6 @@
 typedef enum EAppUpdateState
 {
-    k_EAppUpdateStateNone = 0, // None
+    k_EAppUpdateStateNone, // None
     k_EAppUpdateStateRunning, // Running
     k_EAppUpdateStateReconfiguring, // Reconfiguring
     k_EAppUpdateStateValidating = 4, // Validating

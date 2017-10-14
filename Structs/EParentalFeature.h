@@ -1,6 +1,6 @@
 typedef enum EParentalFeature
 {
-    k_EParentalFeatureInvalid = 0, // Invalid
+    k_EParentalFeatureInvalid, // Invalid
     k_EParentalFeatureStore, // Store
     k_EParentalFeatureCommunity, // Community
     k_EParentalFeatureProfile, // Profile

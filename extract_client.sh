@@ -40,11 +40,13 @@ done
 
 echo Dumping protobufs
 
+# https://github.com/SteamRE/SteamKit/tree/master/Resources/ProtobufDumper
 mono ProtobufDumper/ProtobufDumper.exe bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
+# https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
-./steamclient_tracker/machrec bins/steamclient.dylib "$DIR/Structs/"
+./MachoDumper/swdumper bins/steamclient.dylib "$DIR/Structs/"
 
 #
 # BUILDBOT PATHS

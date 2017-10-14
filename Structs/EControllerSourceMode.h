@@ -1,6 +1,6 @@
 typedef enum EControllerSourceMode
 {
-    k_EControllerSourceModeNone = 0, // none
+    k_EControllerSourceModeNone, // none
     k_EControllerSourceModeDpad, // dpad
     k_EControllerSourceModeButtons, // buttons
     k_EControllerSourceModeFour_buttons, // four_buttons

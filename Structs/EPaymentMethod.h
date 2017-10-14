@@ -1,6 +1,6 @@
 typedef enum EPaymentMethod
 {
-    k_EPaymentMethodNone = 0, // None
+    k_EPaymentMethodNone, // None
     k_EPaymentMethodCDKey, // CD Key
     k_EPaymentMethodCreditCard, // Credit Card
     k_EPaymentMethodGiropay, // Giropay

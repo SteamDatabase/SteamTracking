@@ -1,6 +1,6 @@
 typedef enum EAppInfoSection
 {
-    k_EAppInfoSectionUnknown = 0, // unknown
+    k_EAppInfoSectionUnknown, // unknown
     k_EAppInfoSectionAll, // all
     k_EAppInfoSectionCommon, // common
     k_EAppInfoSectionExtended, // extended

@@ -1,6 +1,6 @@
 typedef enum EAppOwnershipFlags
 {
-    k_EAppOwnershipFlagsNone = 0, // None
+    k_EAppOwnershipFlagsNone, // None
     k_EAppOwnershipFlagsSubscribed, // Subscribed
     k_EAppOwnershipFlagsFree, // Free
     k_EAppOwnershipFlagsRegionRestricted = 4, // Region restricted

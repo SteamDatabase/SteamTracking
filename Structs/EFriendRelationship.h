@@ -1,6 +1,6 @@
 typedef enum EFriendRelationship
 {
-    k_EFriendRelationshipNone = 0, // None
+    k_EFriendRelationshipNone, // None
     k_EFriendRelationshipBlocked, // Blocked
     k_EFriendRelationshipPendingInvitee, // Pending (Invitee)
     k_EFriendRelationshipFriend, // Friend

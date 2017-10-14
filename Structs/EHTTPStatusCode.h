@@ -1,6 +1,6 @@
 typedef enum EHTTPStatusCode
 {
-    k_EHTTPStatusCodeInvalid = 0, // Invalid
+    k_EHTTPStatusCodeInvalid, // Invalid
     k_EHTTPStatusCodeContinue = 100, // Continue
     k_EHTTPStatusCodeSwitchingProtocols, // Switching Protocols
     k_EHTTPStatusCodeOK = 200, // OK

@@ -1,6 +1,6 @@
 typedef enum EAppState
 {
-    k_EAppStateInvalid = 0, // Invalid
+    k_EAppStateInvalid, // Invalid
     k_EAppStateUninstalled, // Uninstalled
     k_EAppStateUpdateRequired, // Update Required
     k_EAppStateFullyInstalled = 4, // Fully Installed

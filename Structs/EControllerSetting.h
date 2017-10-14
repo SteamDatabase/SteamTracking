@@ -1,6 +1,6 @@
 typedef enum EControllerSetting
 {
-    k_EControllerSettingLeft_trackpad_mode = 0, // left_trackpad_mode
+    k_EControllerSettingLeft_trackpad_mode, // left_trackpad_mode
     k_EControllerSettingRight_trackpad_mode, // right_trackpad_mode
     k_EControllerSettingTrackpad_trigger_data, // trackpad_trigger_data
     k_EControllerSettingHaptic_intensity, // haptic_intensity

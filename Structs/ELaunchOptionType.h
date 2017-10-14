@@ -1,6 +1,6 @@
 typedef enum ELaunchOptionType
 {
-    k_ELaunchOptionTypeNone = 0, // None
+    k_ELaunchOptionTypeNone, // None
     k_ELaunchOptionTypeDefault, // Default
     k_ELaunchOptionTypeSafeMode, // SafeMode
     k_ELaunchOptionTypeMultiplayer, // Multiplayer

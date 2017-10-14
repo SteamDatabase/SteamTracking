@@ -1,6 +1,6 @@
 typedef enum EBroadcastUploadResult
 {
-    k_EBroadcastUploadResultNone = 0, // None
+    k_EBroadcastUploadResultNone, // None
     k_EBroadcastUploadResultOK, // OK
     k_EBroadcastUploadResultInitFailed, // Init Failed
     k_EBroadcastUploadResultFrameFailed, // Frame Failed

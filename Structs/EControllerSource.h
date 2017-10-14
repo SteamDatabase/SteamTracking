@@ -1,6 +1,6 @@
 typedef enum EControllerSource
 {
-    k_EControllerSourceNone = 0, // none
+    k_EControllerSourceNone, // none
     k_EControllerSourceLeft_trackpad, // left_trackpad
     k_EControllerSourceRight_trackpad, // right_trackpad
     k_EControllerSourceJoystick, // joystick

@@ -1,6 +1,6 @@
 typedef enum EControllerActivationType
 {
-    k_EControllerActivationTypeNone = 0, // none
+    k_EControllerActivationTypeNone, // none
     k_EControllerActivationTypeFull_press, // full_press
     k_EControllerActivationTypeSoft_press, // soft_press
     k_EControllerActivationTypeStart_press, // start_press

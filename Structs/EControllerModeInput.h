@@ -1,6 +1,6 @@
 typedef enum EControllerModeInput
 {
-    k_EControllerModeInputNone = 0, // none
+    k_EControllerModeInputNone, // none
     k_EControllerModeInputDpad_north, // dpad_north
     k_EControllerModeInputDpad_northeast, // dpad_northeast
     k_EControllerModeInputDpad_east, // dpad_east

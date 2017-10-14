@@ -1,6 +1,6 @@
 typedef enum EAccountType
 {
-    k_EAccountTypeInvalid = 0, // Invalid
+    k_EAccountTypeInvalid, // Invalid
     k_EAccountTypeIndividual, // Individual
     k_EAccountTypeMultiseat, // Multiseat
     k_EAccountTypeGameServer, // Game Server

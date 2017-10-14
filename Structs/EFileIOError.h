@@ -1,6 +1,6 @@
 typedef enum EFileIOError
 {
-    k_EFileIOErrorNone = 0, // None
+    k_EFileIOErrorNone, // None
     k_EFileIOErrorUnknown, // Unknown
     k_EFileIOErrorFileNotFound, // File Not Found
     k_EFileIOErrorDiskFull, // Disk Full
