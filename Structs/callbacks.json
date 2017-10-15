@@ -1,1838 +1,2297 @@
-{
-    "101": {
+[
+    {
+        "id": 101,
         "size": 1,
         "posted_in": "CCMInterface::RecvMsgClientLogOnResponse(IMsgNetPacket*)"
     },
-    "102": {
+    {
+        "id": 102,
         "size": 8,
         "posted_in": "CCMInterface::YieldingConnect()"
     },
-    "103": {
+    {
+        "id": 103,
         "size": 4,
         "posted_in": "CCMInterface::ConnectionDisconnected(EResult)"
     },
-    "113": {
+    {
+        "id": 113,
         "size": 16,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "115": {
+    {
+        "id": 115,
         "size": 1,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "125": {
+    {
+        "id": 125,
         "size": 1,
         "posted_in": "CUserAppManager::SetDlcEnabled(unsigned int, unsigned int, bool)"
     },
-    "130": {
+    {
+        "id": 130,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLifetimeNotice_t>(AppLifetimeNotice_t*)"
     },
-    "143": {
+    {
+        "id": 143,
         "size": 20,
         "posted_in": "CClientJobTicketAuthComplete::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "152": {
+    {
+        "id": 152,
         "size": 16,
         "posted_in": "CUser::NotifyAppMicroTxnAuthResponse(unsigned long long, EMicroTxnAuthResponse)"
     },
-    "154": {
+    {
+        "id": 154,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<EncryptedAppTicketResponse_t>(EncryptedAppTicketResponse_t*)"
     },
-    "163": {
+    {
+        "id": 163,
         "size": 8,
         "posted_in": "CBaseUser::NotifyOfReceipt(unsigned int)"
     },
-    "164": {
+    {
+        "id": 164,
         "size": 256,
         "posted_in": "CUser::SendGameWebCallback(unsigned int, char const*)"
     },
-    "165": {
+    {
+        "id": 165,
         "size": 512,
         "posted_in": "void CBaseAPIJob::PostAPIResult<StoreAuthURLResponse_t>(StoreAuthURLResponse_t*)"
     },
-    "201": {
+    {
+        "id": 201,
         "size": 16,
         "posted_in": "CGSClientJobGSApprove::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "202": {
+    {
+        "id": 202,
         "size": 140,
         "posted_in": "CGameServer::RunUserTimeoutCheck()"
     },
-    "203": {
+    {
+        "id": 203,
         "size": 12,
         "posted_in": "CGameServer::_GSSendUserDisconnect(CSteamID, unsigned int)"
     },
-    "204": {
+    {
+        "id": 204,
         "size": 8,
         "posted_in": "CGameServer::_GSSendSteam2UserConnect(unsigned int, void const*, unsigned int, unsigned int, unsigned short, void const*, unsigned int)"
     },
-    "206": {
+    {
+        "id": 206,
         "size": 140,
         "posted_in": "CGSClientJobGetUserAchievementStatus::BYieldingRunClientJob()"
     },
-    "207": {
+    {
+        "id": 207,
         "size": 16,
         "posted_in": "CAPIJobGSGetGameplayStats::BYieldingRunAPIJob()"
     },
-    "208": {
+    {
+        "id": 208,
         "size": 18,
         "posted_in": "CGSClientJobReceiveUserGroupStatus::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "209": {
+    {
+        "id": 209,
         "size": 32,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GSReputation_t>(GSReputation_t*)"
     },
-    "210": {
+    {
+        "id": 210,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<AssociateWithClanResult_t>(AssociateWithClanResult_t*)"
     },
-    "211": {
+    {
+        "id": 211,
         "size": 24,
         "posted_in": "CAPIJobGSComputeNewPlayerCompatibility::BYieldingRunAPIJob()"
     },
-    "304": {
+    {
+        "id": 304,
         "size": 12,
         "posted_in": "CUserFriends::SetPersonaNameLocal(char const*, bool, bool, bool)"
     },
-    "331": {
+    {
+        "id": 331,
         "size": 1,
         "posted_in": "CUserFriends::NotifyGameOverlayStateChanged(bool)"
     },
-    "332": {
+    {
+        "id": 332,
         "size": 128,
         "posted_in": "CUserFriends::NotifyGameServerChangeRequested(char const*, char const*)"
     },
-    "333": {
+    {
+        "id": 333,
         "size": 16,
         "posted_in": "CUserFriends::NotifyLobbyJoinRequested(unsigned int, CSteamID, CSteamID)"
     },
-    "334": {
+    {
+        "id": 334,
         "size": 20,
         "posted_in": "CUserFriends::OnFriendAvatarLoaded(CSteamID, int, bool, EAvatarSize)"
     },
-    "335": {
+    {
+        "id": 335,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<ClanOfficerListResponse_t>(ClanOfficerListResponse_t*)"
     },
-    "336": {
+    {
+        "id": 336,
         "size": 12,
         "posted_in": "CUserFriends::RequestFriendRichPresence(unsigned int, CSteamID)"
     },
-    "337": {
+    {
+        "id": 337,
         "size": 264,
         "posted_in": "CUserFriends::NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*)"
     },
-    "338": {
+    {
+        "id": 338,
         "size": 20,
         "posted_in": "bool CBaseUser::PostCallbackToPipes<GameConnectedClanChatMsg_t>(CUtlVector<int, CUtlMemory<int> > const&, GameConnectedClanChatMsg_t*)"
     },
-    "339": {
+    {
+        "id": 339,
         "size": 16,
         "posted_in": "bool CBaseUser::PostCallbackToPipes<GameConnectedChatJoin_t>(CUtlVector<int, CUtlMemory<int> > const&, GameConnectedChatJoin_t*)"
     },
-    "340": {
+    {
+        "id": 340,
         "size": 18,
         "posted_in": "bool CBaseUser::PostCallbackToPipes<GameConnectedChatLeave_t>(CUtlVector<int, CUtlMemory<int> > const&, GameConnectedChatLeave_t*)"
     },
-    "341": {
+    {
+        "id": 341,
         "size": 1,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DownloadClanActivityCountsResult_t>(DownloadClanActivityCountsResult_t*)"
     },
-    "342": {
+    {
+        "id": 342,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<JoinClanChatRoomCompletionResult_t>(JoinClanChatRoomCompletionResult_t*)"
     },
-    "343": {
+    {
+        "id": 343,
         "size": 12,
         "posted_in": "bool CBaseUser::PostCallbackToPipes<GameConnectedFriendChatMsg_t>(CUtlVector<int, CUtlMemory<int> > const&, GameConnectedFriendChatMsg_t*)"
     },
-    "344": {
+    {
+        "id": 344,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FriendsGetFollowerCount_t>(FriendsGetFollowerCount_t*)"
     },
-    "345": {
+    {
+        "id": 345,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FriendsIsFollowing_t>(FriendsIsFollowing_t*)"
     },
-    "346": {
+    {
+        "id": 346,
         "size": 412,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FriendsEnumerateFollowingList_t>(FriendsEnumerateFollowingList_t*)"
     },
-    "347": {
+    {
+        "id": 347,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SetPersonaNameResponse_t>(SetPersonaNameResponse_t*)"
     },
-    "404": {
+    {
+        "id": 404,
         "size": 4136,
         "posted_in": "PostPurchaseCallback(CUser*, EResult, EPurchaseResultDetail, CPurchaseReceiptInfo&)"
     },
-    "405": {
+    {
+        "id": 405,
         "size": 1032,
         "posted_in": "PostPurchaseCallback(CUser*, EResult, EPurchaseResultDetail, CPurchaseReceiptInfo&)"
     },
-    "412": {
+    {
+        "id": 412,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RequestFreeLicenseResponse_t>(RequestFreeLicenseResponse_t*)"
     },
-    "501": {
+    {
+        "id": 501,
         "size": 1,
         "posted_in": "CUser::LoadFavoritesFromLocalVDF()"
     },
-    "502": {
+    {
+        "id": 502,
         "size": 28,
         "posted_in": "CUser::LoadFavoritesFromLocalVDF()"
     },
-    "503": {
+    {
+        "id": 503,
         "size": 24,
         "posted_in": "CClientJobChatInvite::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "504": {
+    {
+        "id": 504,
         "size": 20,
         "posted_in": "CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob()"
     },
-    "505": {
+    {
+        "id": 505,
         "size": 20,
         "posted_in": "CUserMatchmaking::SetLobbyMemberData(CSteamID, char const*, char const*)"
     },
-    "506": {
+    {
+        "id": 506,
         "size": 28,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "507": {
+    {
+        "id": 507,
         "size": 24,
         "posted_in": "CUserFriends::SendChatMsg(CSteamID, EChatEntryType, void const*, int)"
     },
-    "509": {
+    {
+        "id": 509,
         "size": 24,
         "posted_in": "CClientJobMatchmakingLobbyGameServerSet::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "510": {
+    {
+        "id": 510,
         "size": 4,
         "posted_in": "CAPIJobMatchmakingRequestLobbyList::BYieldingRunAPIJob()"
     },
-    "512": {
+    {
+        "id": 512,
         "size": 20,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "513": {
+    {
+        "id": 513,
         "size": 12,
         "posted_in": "CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob()"
     },
-    "514": {
+    {
+        "id": 514,
         "size": 24,
         "posted_in": "CAPIJobMatchmakingRequestFriendsLobbies::BYieldingRunAPIJob()"
     },
-    "516": {
+    {
+        "id": 516,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FavoritesListAccountsUpdated_t>(FavoritesListAccountsUpdated_t*)"
     },
-    "701": {
+    {
+        "id": 701,
         "size": 1,
         "posted_in": "CClientJobAccountInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "702": {
+    {
+        "id": 702,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<LowBatteryPower_t>(LowBatteryPower_t*)"
     },
-    "704": {
+    {
+        "id": 704,
         "size": 1,
         "posted_in": "CUser::SignalAppsToShutDown(unsigned int)"
     },
-    "705": {
+    {
+        "id": 705,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<CheckFileSignature_t>(CheckFileSignature_t*)"
     },
-    "711": {
+    {
+        "id": 711,
         "size": 260,
         "posted_in": "CConfigStore::BEnsureInitialized(EConfigStore)"
     },
-    "713": {
+    {
+        "id": 713,
         "size": 4244,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<ShowGamepadTextInput_t>(ShowGamepadTextInput_t*)"
     },
-    "715": {
+    {
+        "id": 715,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<FocusedSteamWindowChanged_t>(FocusedSteamWindowChanged_t*)"
     },
-    "716": {
+    {
+        "id": 716,
         "size": 1,
         "posted_in": "void CBaseAPIJob::PostAPIResult<CheckSteamReachableResult_t>(CheckSteamReachableResult_t*)"
     },
-    "717": {
+    {
+        "id": 717,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ShutdownLauncher_t>(ShutdownLauncher_t*)"
     },
-    "718": {
+    {
+        "id": 718,
         "size": 1,
         "posted_in": "CSteamEngine::StartVRDashboard()"
     },
-    "719": {
+    {
+        "id": 719,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SupportSystemReportReady_t>(SupportSystemReportReady_t*)"
     },
-    "720": {
+    {
+        "id": 720,
         "size": 8,
         "posted_in": "CSteamEngine::SetVRHeadsetStreamingEnabled(unsigned int, bool)"
     },
-    "721": {
+    {
+        "id": 721,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<HIDDeviceChanged_t>(HIDDeviceChanged_t*)"
     },
-    "801": {
+    {
+        "id": 801,
         "size": 2068,
         "posted_in": "CUserFriends::ActivateGameOverlayToUser(char const*, CSteamID)"
     },
-    "802": {
+    {
+        "id": 802,
         "size": 284,
         "posted_in": "CClientJobClanState::BAddEventOrAnnoucement(CSteamID const&, CMsgClientClanState_Event const&, bool)"
     },
-    "803": {
+    {
+        "id": 803,
         "size": 12,
         "posted_in": "CClientJobAddFriendResponse::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "804": {
+    {
+        "id": 804,
         "size": 8,
         "posted_in": "CUserFriends::PostOutstandingRequestFriendshipCallbacks()"
     },
-    "805": {
+    {
+        "id": 805,
         "size": 28,
         "posted_in": "CClientJobFriendMsgIncoming::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "807": {
+    {
+        "id": 807,
         "size": 156,
         "posted_in": "CClientJobChatInvite::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "808": {
+    {
+        "id": 808,
         "size": 176,
         "posted_in": "CClientJobChatEnter::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "809": {
+    {
+        "id": 809,
         "size": 28,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "810": {
+    {
+        "id": 810,
         "size": 24,
         "posted_in": "CClientJobChatMsg::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "811": {
+    {
+        "id": 811,
         "size": 8,
         "posted_in": "CUserFriends::LeaveChatRoom(CSteamID)"
     },
-    "812": {
+    {
+        "id": 812,
         "size": 8,
         "posted_in": "CClientJobChatRoomInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "813": {
+    {
+        "id": 813,
         "size": 16,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "814": {
+    {
+        "id": 814,
         "size": 16,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "815": {
+    {
+        "id": 815,
         "size": 20,
         "posted_in": "CClientJobChatCreate::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "816": {
+    {
+        "id": 816,
         "size": 8,
         "posted_in": "CUserFriends::OpenChatDialog(CSteamID)"
     },
-    "817": {
+    {
+        "id": 817,
         "size": 28,
         "posted_in": "CClientJobChatActionResult::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "818": {
+    {
+        "id": 818,
         "size": 8,
         "posted_in": "CUserFriends::SerializeChatRoomDlg(CSteamID, void const*, int)"
     },
-    "819": {
+    {
+        "id": 819,
         "size": 12,
         "posted_in": "CClientJobClanState::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "820": {
+    {
+        "id": 820,
         "size": 20,
         "posted_in": "CUserFriends::UpdateChatMemberInfo(CSteamID, CSteamID, unsigned int, unsigned int, bool)"
     },
-    "821": {
+    {
+        "id": 821,
         "size": 20,
         "posted_in": "CClientJobChatRoomInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "823": {
+    {
+        "id": 823,
         "size": 20,
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
-    "824": {
+    {
+        "id": 824,
         "size": 24,
         "posted_in": "CUserFriends::NotifyIncomingCall(int, CSteamID, CSteamID, bool)"
     },
-    "825": {
+    {
+        "id": 825,
         "size": 8,
         "posted_in": "CUserFriends::NotifyHangup(int, EVoiceResult)"
     },
-    "826": {
+    {
+        "id": 826,
         "size": 4,
         "posted_in": "CUserFriends::FlashWindow(int)"
     },
-    "827": {
+    {
+        "id": 827,
         "size": 16,
         "posted_in": "CUserFriends::NotifyMUCStateChanged(CSteamID, CSteamID)"
     },
-    "828": {
+    {
+        "id": 828,
         "size": 12,
         "posted_in": "CUserFriends::NotifyChatRoomDlgsOfUIChange(CSteamID, bool, bool, bool, bool)"
     },
-    "829": {
+    {
+        "id": 829,
         "size": 20,
         "posted_in": "CUserFriends::VoiceCallNew(CSteamID, CSteamID)"
     },
-    "830": {
+    {
+        "id": 830,
         "size": 24,
         "posted_in": "CClientJobSetIgnoreFriend::BYieldingRunAPIJob()"
     },
-    "831": {
+    {
+        "id": 831,
         "size": 1,
         "posted_in": "CUserFriends::ReinitAudio()"
     },
-    "832": {
+    {
+        "id": 832,
         "size": 1,
         "posted_in": "CUserFriends::RunFrame()"
     },
-    "833": {
+    {
+        "id": 833,
         "size": 8,
         "posted_in": "CUserFriends::RequestFriendsWhoPlayGame(CGameID)"
     },
-    "834": {
+    {
+        "id": 834,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FriendProfileInfoResponse_t>(FriendProfileInfoResponse_t*)"
     },
-    "835": {
+    {
+        "id": 835,
         "size": 268,
         "posted_in": "CClientJobInviteToGame::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "836": {
+    {
+        "id": 836,
         "size": 4,
         "posted_in": "CUserFriends::NotifyUIOfMenuChange(bool, bool, bool, bool)"
     },
-    "837": {
+    {
+        "id": 837,
         "size": 12,
         "posted_in": "CClientJobIncomingTradeRequest::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "838": {
+    {
+        "id": 838,
         "size": 40,
         "posted_in": "void CBaseAPIJob::PostAPIResult<TradeInviteResponse_t>(TradeInviteResponse_t*)"
     },
-    "839": {
+    {
+        "id": 839,
         "size": 8,
         "posted_in": "CClientJobIncomingTradeSessionStart::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "840": {
+    {
+        "id": 840,
         "size": 16,
         "posted_in": "CClientJobInitiateTradeResult::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "841": {
+    {
+        "id": 841,
         "size": 1,
         "posted_in": "CUserFriends::UpdateInGameVoiceSpeakingState()"
     },
-    "842": {
+    {
+        "id": 842,
         "size": 8,
         "posted_in": "CClientJobCreateFriendsGroup::BYieldingRunAPIJob()"
     },
-    "843": {
+    {
+        "id": 843,
         "size": 8,
         "posted_in": "CClientJobDeleteFriendsGroup::BYieldingRunAPIJob()"
     },
-    "844": {
+    {
+        "id": 844,
         "size": 4,
         "posted_in": "CClientJobRenameFriendsGroup::BYieldingRunAPIJob()"
     },
-    "845": {
+    {
+        "id": 845,
         "size": 4,
         "posted_in": "CClientJobAddFriendToGroup::BYieldingRunAPIJob()"
     },
-    "846": {
+    {
+        "id": 846,
         "size": 4,
         "posted_in": "CClientJobRemoveFriendFromGroup::BYieldingRunAPIJob()"
     },
-    "847": {
+    {
+        "id": 847,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<NameHistoryResponse_t>(NameHistoryResponse_t*)"
     },
-    "848": {
+    {
+        "id": 848,
         "size": 4,
         "posted_in": "CClientJobSetPlayerNickname::BYieldingRunAPIJob()"
     },
-    "849": {
+    {
+        "id": 849,
         "size": 1,
         "posted_in": "CClientJobEmoticonList::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "901": {
+    {
+        "id": 901,
         "size": 4108,
         "posted_in": "CClientJobSystemIM::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "904": {
+    {
+        "id": 904,
         "size": 1,
         "posted_in": "CCMInterface::ScheduledAttemptReconnect()"
     },
-    "909": {
+    {
+        "id": 909,
         "size": 4,
         "posted_in": "CClientJobUninstallClientApp::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "911": {
+    {
+        "id": 911,
         "size": 12,
         "posted_in": "CClientJobNewsItemUpdateMsg::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "912": {
+    {
+        "id": 912,
         "size": 32,
         "posted_in": "CClientJobNewsItemUpdateMsg::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "913": {
+    {
+        "id": 913,
         "size": 12,
         "posted_in": "CClientJobNewsItemUpdateMsg::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "914": {
+    {
+        "id": 914,
         "size": 520,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "915": {
+    {
+        "id": 915,
         "size": 1,
         "posted_in": "CClientJobEmailAddrInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "917": {
+    {
+        "id": 917,
         "size": 20,
         "posted_in": "CClientJobAckGuestPassResponse::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "918": {
+    {
+        "id": 918,
         "size": 12,
         "posted_in": "CClientJobRedeemGuestPassResponse::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "919": {
+    {
+        "id": 919,
         "size": 12,
         "posted_in": "CClientJobUpdateGuestPassesList::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "920": {
+    {
+        "id": 920,
         "size": 1,
         "posted_in": "CUser::NewLoginKeyFromServer(char const*)"
     },
-    "922": {
+    {
+        "id": 922,
         "size": 4,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "923": {
+    {
+        "id": 923,
         "size": 4,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "924": {
+    {
+        "id": 924,
         "size": 12,
         "posted_in": "CClientDRMDownloadJob::BYieldingRunAPIJob()"
     },
-    "928": {
+    {
+        "id": 928,
         "size": 4,
         "posted_in": "CClientJobGetAppOwnershipTicketResponse::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "929": {
+    {
+        "id": 929,
         "size": 4,
         "posted_in": "CClientJobChangePassword::BYieldingRunAPIJob()"
     },
-    "930": {
+    {
+        "id": 930,
         "size": 8,
         "posted_in": "CClientJobChangeEmail::BYieldingRunAPIJob()"
     },
-    "932": {
+    {
+        "id": 932,
         "size": 4,
         "posted_in": "CClientJobCreateAccount::BYieldingRunAPIJob()"
     },
-    "933": {
+    {
+        "id": 933,
         "size": 4,
         "posted_in": "CClientJobRequestForgottenPasswordEmail::BYieldingRunAPIJob()"
     },
-    "934": {
+    {
+        "id": 934,
         "size": 4,
         "posted_in": "CClientJobResetForgottenPassword::BYieldingRunAPIJob()"
     },
-    "935": {
+    {
+        "id": 935,
         "size": 4,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
-    "936": {
+    {
+        "id": 936,
         "size": 132,
         "posted_in": "CClientJobDownloadFromDFS::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "937": {
+    {
+        "id": 937,
         "size": 1,
         "posted_in": "CClientJobMarketingMessageUpdate2Msg::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "938": {
+    {
+        "id": 938,
         "size": 4,
         "posted_in": "CClientJobRequestValidateMail::BYieldingRunAPIJob()"
     },
-    "939": {
+    {
+        "id": 939,
         "size": 4,
         "posted_in": "CClientJobRequestChangeMail::BYieldingRunAPIJob()"
     },
-    "940": {
+    {
+        "id": 940,
         "size": 4,
         "posted_in": "CClientJobVerifyPassword::BYieldingRunAPIJob()"
     },
-    "942": {
+    {
+        "id": 942,
         "size": 1025,
         "posted_in": "CClientJobGetWGAuthToken::BYieldingRunAPIJob()"
     },
-    "943": {
+    {
+        "id": 943,
         "size": 12,
         "posted_in": "CClientJobMicroTxnAuthRequest::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "944": {
+    {
+        "id": 944,
         "size": 8,
         "posted_in": "CAPIJobAuthorizeMicroTxn::BYieldingRunAPIJob()"
     },
-    "945": {
+    {
+        "id": 945,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<MicroTxnAuthResponse_t>(MicroTxnAuthResponse_t*)"
     },
-    "946": {
+    {
+        "id": 946,
         "size": 4,
         "posted_in": "CClientJobAppMinutesPlayed::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "947": {
+    {
+        "id": 947,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<MicroTxnInfoUpdated_t>(MicroTxnInfoUpdated_t*)"
     },
-    "948": {
+    {
+        "id": 948,
         "size": 1,
         "posted_in": "CUser::SetWalletInfo(CClientWalletInfo&)"
     },
-    "949": {
+    {
+        "id": 949,
         "size": 4,
         "posted_in": "CClientJobRequestMachineAuth::BYieldingRunAPIJob()"
     },
-    "952": {
+    {
+        "id": 952,
         "size": 12,
         "posted_in": "CClientJobRequestAccountData::BYieldingRunAPIJob()"
     },
-    "953": {
+    {
+        "id": 953,
         "size": 196,
         "posted_in": "CClientJobRequestAccountData::BYieldingRunAPIJob()"
     },
-    "955": {
+    {
+        "id": 955,
         "size": 74,
         "posted_in": "CUser::SetAccountNameForCachedCredentialLogin(char const*, bool)"
     },
-    "956": {
+    {
+        "id": 956,
         "size": 800,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RequestSpecialSurveyResult_t>(RequestSpecialSurveyResult_t*)"
     },
-    "957": {
+    {
+        "id": 957,
         "size": 24,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SendSpecialSurveyResponseResult_t>(SendSpecialSurveyResponseResult_t*)"
     },
-    "958": {
+    {
+        "id": 958,
         "size": 4,
         "posted_in": "CClientJobUpdateItemAnnouncements::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "960": {
+    {
+        "id": 960,
         "size": 12,
         "posted_in": "CClientJobUpdateCommentNotifications::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "961": {
+    {
+        "id": 961,
         "size": 524,
         "posted_in": "CClientJobFriendUserStatusPublished::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "962": {
+    {
+        "id": 962,
         "size": 4,
         "posted_in": "CClientJobUpdateOfflineMessageCount::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "963": {
+    {
+        "id": 963,
         "size": 20,
         "posted_in": "CClientJobReceiveFriendMessageHistory::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "964": {
+    {
+        "id": 964,
         "size": 36,
         "posted_in": "CClientJobTestAvailablePassword::BYieldingRunAPIJob()"
     },
-    "965": {
+    {
+        "id": 965,
         "size": 256,
         "posted_in": "CClientJobVanityURLChangedNotification::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "966": {
+    {
+        "id": 966,
         "size": 12,
         "posted_in": "CClientJobGetSteamGuardDetails::BYieldingRunAPIJob()"
     },
-    "967": {
+    {
+        "id": 967,
         "size": 4,
         "posted_in": "CClientJobSetSteamGuardNewMachineDialogResponse::BYieldingRunAPIJob()"
     },
-    "968": {
+    {
+        "id": 968,
         "size": 1,
         "posted_in": "CUser::StartStreaming(bool, bool, unsigned int, int, char const*)"
     },
-    "969": {
+    {
+        "id": 969,
         "size": 1,
         "posted_in": "CUser::StopStreaming(bool, int)"
     },
-    "970": {
+    {
+        "id": 970,
         "size": 8,
         "posted_in": "CUser::SetAppLastPlayedTime(unsigned int, unsigned int)"
     },
-    "971": {
+    {
+        "id": 971,
         "size": 8,
         "posted_in": "CClientJobUpdateUserNotifications::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "972": {
+    {
+        "id": 972,
         "size": 1,
         "posted_in": "CUser::LogOnOfflineMode()"
     },
-    "973": {
+    {
+        "id": 973,
         "size": 1,
         "posted_in": "CUser::BCacheOfflineLogonTicket(unsigned char const*, unsigned int, unsigned char const*, unsigned int, CUtlString const&)"
     },
-    "976": {
+    {
+        "id": 976,
         "size": 4,
         "posted_in": "CUserOnGameNotificationsRequested_Job::YieldingRunMethod(CUser*, CGameNotifications_OnNotificationsRequested_Notification const&)"
     },
-    "977": {
+    {
+        "id": 977,
         "size": 4,
         "posted_in": "CUser::SetPlayingSessionState(bool, unsigned int)"
     },
-    "978": {
+    {
+        "id": 978,
         "size": 12,
         "posted_in": "CSteamEngine::CheckForOverlayInstancesNeeded()"
     },
-    "979": {
+    {
+        "id": 979,
         "size": 12,
         "posted_in": "CSteamEngine::CheckForOverlayInstancesNeeded()"
     },
-    "980": {
+    {
+        "id": 980,
         "size": 256,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<AccountRecoveryUploadFinished_t>(AccountRecoveryUploadFinished_t*)"
     },
-    "981": {
+    {
+        "id": 981,
         "size": 8,
         "posted_in": "CClientJobGetTwoFactorDetails::BYieldingRunAPIJob()"
     },
-    "982": {
+    {
+        "id": 982,
         "size": 8,
         "posted_in": "CClientJobRecoverAuthenticator::BYieldingRunAPIJob()"
     },
-    "983": {
+    {
+        "id": 983,
         "size": 4,
         "posted_in": "CClientJobValidatePasswordResetCodeAndSendSms::BYieldingRunAPIJob()"
     },
-    "984": {
+    {
+        "id": 984,
         "size": 8,
         "posted_in": "CClientJobRequestGetAccountResetDetails::BYieldingRunAPIJob()"
     },
-    "985": {
+    {
+        "id": 985,
         "size": 132,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRHMDHardwareDetected_t>(VRHMDHardwareDetected_t*)"
     },
-    "986": {
+    {
+        "id": 986,
         "size": 8,
         "posted_in": "CUser::CheckoutSiteLicenseSeat(unsigned int)"
     },
-    "987": {
+    {
+        "id": 987,
         "size": 6,
         "posted_in": "CClientJobPostLogon::PostLogonStateChangeCallback()"
     },
-    "988": {
+    {
+        "id": 988,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RequestAccountLinkInfo_t>(RequestAccountLinkInfo_t*)"
     },
-    "989": {
+    {
+        "id": 989,
         "size": 8,
         "posted_in": "CBaseUser::SetAccountFlags(unsigned int)"
     },
-    "990": {
+    {
+        "id": 990,
         "size": 8,
         "posted_in": "CUser::GetAvailableSeats(unsigned int)"
     },
-    "1001": {
+    {
+        "id": 1001,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppInfoChanged_t>(AppInfoChanged_t*)"
     },
-    "1003": {
+    {
+        "id": 1003,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppInfoUpdateComplete_t>(AppInfoUpdateComplete_t*)"
     },
-    "1005": {
+    {
+        "id": 1005,
         "size": 4,
         "posted_in": "CAppUpdateContext::NotifyAboutAddedDLC()"
     },
-    "1006": {
+    {
+        "id": 1006,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppEventStateChange_t>(AppEventStateChange_t*)"
     },
-    "1007": {
+    {
+        "id": 1007,
         "size": 36,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppValidationComplete_t>(AppValidationComplete_t*)"
     },
-    "1008": {
+    {
+        "id": 1008,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RegisterActivationCodeResponse_t>(RegisterActivationCodeResponse_t*)"
     },
-    "1009": {
+    {
+        "id": 1009,
         "size": 136,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<DownloadScheduleChanged_t>(DownloadScheduleChanged_t*)"
     },
-    "1010": {
+    {
+        "id": 1010,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppUpdateStateChange_t>(AppUpdateStateChange_t*)"
     },
-    "1011": {
+    {
+        "id": 1011,
         "size": 24,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLaunchTenFootOverlay_t>(AppLaunchTenFootOverlay_t*)"
     },
-    "1012": {
+    {
+        "id": 1012,
         "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppBackupStatus_t>(AppBackupStatus_t*)"
     },
-    "1014": {
+    {
+        "id": 1014,
         "size": 1,
         "posted_in": "CUserAppManager::CommitLaunchQueryParams(unsigned int)"
     },
-    "1016": {
+    {
+        "id": 1016,
         "size": 8,
         "posted_in": "CUserAppManager::SetAppAutoUpdateBehavior(unsigned int, EAppAutoUpdateBehavior)"
     },
-    "1017": {
+    {
+        "id": 1017,
         "size": 20,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppInfoUpdateProgress_t>(AppInfoUpdateProgress_t*)"
     },
-    "1018": {
+    {
+        "id": 1018,
         "size": 572,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppUpdateStopped_t>(AppUpdateStopped_t*)"
     },
-    "1019": {
+    {
+        "id": 1019,
         "size": 4,
         "posted_in": "CUserAppInfo::SetUserAppConfig(unsigned int, KeyValues*)"
     },
-    "1020": {
+    {
+        "id": 1020,
         "size": 72,
         "posted_in": "EYieldingCheckAppBetaPassword(CUser*, unsigned int, char const*)"
     },
-    "1021": {
+    {
+        "id": 1021,
         "size": 252,
         "posted_in": "CUser::PostLegacyCDKeyResponseToApp(int, unsigned int, EResult, unsigned int, char const*, unsigned int)"
     },
-    "1022": {
+    {
+        "id": 1022,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<AppConfigInitialized_t>(AppConfigInitialized_t*)"
     },
-    "1023": {
+    {
+        "id": 1023,
         "size": 36,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FileDetailsResult_t>(FileDetailsResult_t*)"
     },
-    "1024": {
+    {
+        "id": 1024,
         "size": 24,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppMoveFolderResult_t>(AppMoveFolderResult_t*)"
     },
-    "1025": {
+    {
+        "id": 1025,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppUpdateProgress_t>(AppUpdateProgress_t*)"
     },
-    "1026": {
+    {
+        "id": 1026,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<VerifySignedFilesResult_t>(VerifySignedFilesResult_t*)"
     },
-    "1027": {
+    {
+        "id": 1027,
         "size": 524,
         "posted_in": "CUserAppManager::LaunchApp(CGameID, unsigned int, char const*)"
     },
-    "1028": {
+    {
+        "id": 1028,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppStoreTagLocalizationChanged_t>(AppStoreTagLocalizationChanged_t*)"
     },
-    "1029": {
+    {
+        "id": 1029,
         "size": 24,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLaunchClientUIOverlay_t>(AppLaunchClientUIOverlay_t*)"
     },
-    "1101": {
+    {
+        "id": 1101,
         "size": 20,
         "posted_in": "CClientJobStatsUpdated::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1102": {
+    {
+        "id": 1102,
         "size": 12,
         "posted_in": "CAPIJobStoreUserStats::PostCallback()"
     },
-    "1103": {
+    {
+        "id": 1103,
         "size": 148,
         "posted_in": "CUserStats::GetOrFetchAchievementIcon(CGameID, KeyValues*, bool, UserAchievementStored_t*, UserAchievementIconFetched_t*)"
     },
-    "1104": {
+    {
+        "id": 1104,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<LeaderboardFindResult_t>(LeaderboardFindResult_t*)"
     },
-    "1105": {
+    {
+        "id": 1105,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<LeaderboardScoresDownloaded_t>(LeaderboardScoresDownloaded_t*)"
     },
-    "1106": {
+    {
+        "id": 1106,
         "size": 28,
         "posted_in": "void CBaseAPIJob::PostAPIResult<LeaderboardScoreUploaded_t>(LeaderboardScoreUploaded_t*)"
     },
-    "1107": {
+    {
+        "id": 1107,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<NumberOfCurrentPlayers_t>(NumberOfCurrentPlayers_t*)"
     },
-    "1108": {
+    {
+        "id": 1108,
         "size": 8,
         "posted_in": "CUserStats::AgeOutStats(ClUserGameStatsSchema*, ClUserGameStats*)"
     },
-    "1109": {
+    {
+        "id": 1109,
         "size": 144,
         "posted_in": "CUserStats::GetOrFetchAchievementIcon(CGameID, KeyValues*, bool, UserAchievementStored_t*, UserAchievementIconFetched_t*)"
     },
-    "1110": {
+    {
+        "id": 1110,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GlobalAchievementPercentagesReady_t>(GlobalAchievementPercentagesReady_t*)"
     },
-    "1111": {
+    {
+        "id": 1111,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<LeaderboardUGCSet_t>(LeaderboardUGCSet_t*)"
     },
-    "1112": {
+    {
+        "id": 1112,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GlobalStatsReceived_t>(GlobalStatsReceived_t*)"
     },
-    "1201": {
+    {
+        "id": 1201,
         "size": 20,
         "posted_in": "CClientNetworkingAPI::OnSocketConnectionStateUpdated(CSNetSocket*)"
     },
-    "1202": {
+    {
+        "id": 1202,
         "size": 8,
         "posted_in": "CP2PNetworkingSession::P2PConnectionInfoArrived(CSteamID, unsigned char*, unsigned int)"
     },
-    "1203": {
+    {
+        "id": 1203,
         "size": 9,
         "posted_in": "CP2PNetworkingSession::P2PConnectFailed(CSteamID, EP2PSessionError)"
     },
-    "1301": {
+    {
+        "id": 1301,
         "size": 12,
         "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncedClient_t>(RemoteStorageAppSyncedClient_t*)"
     },
-    "1302": {
+    {
+        "id": 1302,
         "size": 12,
         "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncedServer_t>(RemoteStorageAppSyncedServer_t*)"
     },
-    "1303": {
+    {
+        "id": 1303,
         "size": 280,
         "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncProgress_t>(RemoteStorageAppSyncProgress_t*)"
     },
-    "1304": {
+    {
+        "id": 1304,
         "size": 8,
         "posted_in": "CClientJobRemoteStorageSync::YieldingInitCaches()"
     },
-    "1305": {
+    {
+        "id": 1305,
         "size": 8,
         "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageAppSyncStatusCheck_t>(RemoteStorageAppSyncStatusCheck_t*)"
     },
-    "1306": {
+    {
+        "id": 1306,
         "size": 8,
         "posted_in": "void CClientJobRemoteStorageSync::PostCallbackToUIAndApp<RemoteStorageConflictResolution_t>(RemoteStorageConflictResolution_t*)"
     },
-    "1307": {
+    {
+        "id": 1307,
         "size": 272,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageFileShareResult_t>(RemoteStorageFileShareResult_t*)"
     },
-    "1308": {
+    {
+        "id": 1308,
         "size": 32,
         "posted_in": "void CBaseAPIJob::PostAPIResult<_Deprecated_RemoteStorageDownloadUGCResult_t>(_Deprecated_RemoteStorageDownloadUGCResult_t*)"
     },
-    "1309": {
+    {
+        "id": 1309,
         "size": 16,
         "posted_in": "CAPIJobPublishFile::BYieldingRunAPIJob()"
     },
-    "1310": {
+    {
+        "id": 1310,
         "size": 1740,
         "posted_in": "void CBaseAPIJob::PostAPIResult<_Deprecated_RemoteStorageGetPublishedFileDetailsResult_t>(_Deprecated_RemoteStorageGetPublishedFileDetailsResult_t*)"
     },
-    "1311": {
+    {
+        "id": 1311,
         "size": 16,
         "posted_in": "CJobDownloadSubscribedFile::BYieldingRunJob(void*)"
     },
-    "1312": {
+    {
+        "id": 1312,
         "size": 12,
         "posted_in": "CSubscribedFileManager::PauseDownload(unsigned long long)"
     },
-    "1313": {
+    {
+        "id": 1313,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageSubscribePublishedFileResult_t>(RemoteStorageSubscribePublishedFileResult_t*)"
     },
-    "1314": {
+    {
+        "id": 1314,
         "size": 16,
         "posted_in": "CSubscribedFileManager::AddSubscription(unsigned long long, SubscribedFileDownloadInfo_t const&)"
     },
-    "1315": {
+    {
+        "id": 1315,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageUnsubscribePublishedFileResult_t>(RemoteStorageUnsubscribePublishedFileResult_t*)"
     },
-    "1316": {
+    {
+        "id": 1316,
         "size": 16,
         "posted_in": "CAPIJobUpdatePublishedFile::BYieldingRunAPIJob()"
     },
-    "1317": {
+    {
+        "id": 1317,
         "size": 288,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageDownloadUGCResult_t>(RemoteStorageDownloadUGCResult_t*)"
     },
-    "1318": {
+    {
+        "id": 1318,
         "size": 9748,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageGetPublishedFileDetailsResult_t>(RemoteStorageGetPublishedFileDetailsResult_t*)"
     },
-    "1319": {
+    {
+        "id": 1319,
         "size": 620,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageEnumerateWorkshopFilesResult_t>(RemoteStorageEnumerateWorkshopFilesResult_t*)"
     },
-    "1320": {
+    {
+        "id": 1320,
         "size": 28,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageGetPublishedItemVoteDetailsResult_t>(RemoteStorageGetPublishedItemVoteDetailsResult_t*)"
     },
-    "1321": {
+    {
+        "id": 1321,
         "size": 12,
         "posted_in": "CClientJobPublishedFileSubscribed::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1322": {
+    {
+        "id": 1322,
         "size": 12,
         "posted_in": "CClientJobPublishedFileUnsubscribed::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1323": {
+    {
+        "id": 1323,
         "size": 12,
         "posted_in": "CClientJobPublishedFileDeleted::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1324": {
+    {
+        "id": 1324,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageUpdateUserPublishedItemVoteResult_t>(RemoteStorageUpdateUserPublishedItemVoteResult_t*)"
     },
-    "1325": {
+    {
+        "id": 1325,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageUserVoteDetails_t>(RemoteStorageUserVoteDetails_t*)"
     },
-    "1326": {
+    {
+        "id": 1326,
         "size": 412,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageEnumerateUserSharedWorkshopFilesResult_t>(RemoteStorageEnumerateUserSharedWorkshopFilesResult_t*)"
     },
-    "1327": {
+    {
+        "id": 1327,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageSetUserPublishedFileActionResult_t>(RemoteStorageSetUserPublishedFileActionResult_t*)"
     },
-    "1328": {
+    {
+        "id": 1328,
         "size": 616,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageEnumeratePublishedFilesByUserActionResult_t>(RemoteStorageEnumeratePublishedFilesByUserActionResult_t*)"
     },
-    "1329": {
+    {
+        "id": 1329,
         "size": 12,
         "posted_in": "CAPIJobPublishFile::PostProgress(char const*, unsigned int, unsigned int, unsigned int)"
     },
-    "1330": {
+    {
+        "id": 1330,
         "size": 20,
         "posted_in": "CAppWorkshopContent::BSetWorkshopItemInfo(unsigned long long, unsigned int, unsigned long long)"
     },
-    "1331": {
+    {
+        "id": 1331,
         "size": 4,
         "posted_in": "CUserRemoteStorage::FileWriteAsync(unsigned int, ERemoteStorageFileRoot, char const*, CUtlBuffer*)"
     },
-    "1332": {
+    {
+        "id": 1332,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageFileReadAsyncComplete_t>(RemoteStorageFileReadAsyncComplete_t*)"
     },
-    "1402": {
+    {
+        "id": 1402,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FinishAppBuildResult_t>(FinishAppBuildResult_t*)"
     },
-    "1403": {
+    {
+        "id": 1403,
         "size": 516,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DownloadDepotResult_t>(DownloadDepotResult_t*)"
     },
-    "1405": {
+    {
+        "id": 1405,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<VerifyChunkStoredResult_t>(VerifyChunkStoredResult_t*)"
     },
-    "1407": {
+    {
+        "id": 1407,
         "size": 32,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DepotBuildResults_t>(DepotBuildResults_t*)"
     },
-    "1603": {
+    {
+        "id": 1603,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<CellIDChanged_t>(CellIDChanged_t*)"
     },
-    "1701": {
+    {
+        "id": 1701,
         "size": 4,
         "posted_in": "CClientGameCoordinator::MessageReceived(unsigned int, unsigned int, unsigned char const*, unsigned int)"
     },
-    "1702": {
+    {
+        "id": 1702,
         "size": 1,
         "posted_in": "CClientJobGCMessageFailed::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1800": {
+    {
+        "id": 1800,
         "size": 12,
         "posted_in": "CClientJobStatsUpdated::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "1801": {
+    {
+        "id": 1801,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GSStatsStored_t>(GSStatsStored_t*)"
     },
-    "2001": {
+    {
+        "id": 2001,
         "size": 16,
         "posted_in": "CAPIJobGetNewSession::BYieldingRunAPIJob()"
     },
-    "2002": {
+    {
+        "id": 2002,
         "size": 12,
         "posted_in": "CAPIJobEndSession::BYieldingRunAPIJob()"
     },
-    "2101": {
+    {
+        "id": 2101,
         "size": 24,
         "posted_in": "void CBaseAPIJob::PostAPIResult<HTTPRequestCompleted_t>(HTTPRequestCompleted_t*)"
     },
-    "2102": {
+    {
+        "id": 2102,
         "size": 12,
         "posted_in": "CClientHTTPStreamingResponseHandler::OnHeaderComplete(CHTTPRequestHandle*, KeyValues*)"
     },
-    "2103": {
+    {
+        "id": 2103,
         "size": 20,
         "posted_in": "CClientHTTPStreamingResponseHandler::OnBodyDataReceived(CHTTPRequestHandle*, CUtlBuffer&, unsigned int)"
     },
-    "2201": {
+    {
+        "id": 2201,
         "size": 20,
         "posted_in": "CAPIJobUploadScreenshots::PostProgress(char const*, unsigned int, unsigned int, unsigned int)"
     },
-    "2202": {
+    {
+        "id": 2202,
         "size": 24,
         "posted_in": "CUserScreenshots::RecoverScreenshot(CGameID, CUtlString)"
     },
-    "2203": {
+    {
+        "id": 2203,
         "size": 600,
         "posted_in": "CAPIJobUploadScreenshots::BYieldingRunAPIJob()"
     },
-    "2204": {
+    {
+        "id": 2204,
         "size": 8,
         "posted_in": "void CBaseAPIJob::PostAPIResult<ScreenshotBatchComplete_t>(ScreenshotBatchComplete_t*)"
     },
-    "2205": {
+    {
+        "id": 2205,
         "size": 16,
         "posted_in": "CAPIJobDeleteScreenshots::BYieldingRunAPIJob()"
     },
-    "2206": {
+    {
+        "id": 2206,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<ScreenshotTriggered_t>(ScreenshotTriggered_t*)"
     },
-    "2301": {
+    {
+        "id": 2301,
         "size": 8,
         "posted_in": "CClientJobImportScreenshot::BYieldingRunClientJob()"
     },
-    "2302": {
+    {
+        "id": 2302,
         "size": 1,
         "posted_in": "CUserScreenshots::RequestScreenshotFromGame(unsigned int)"
     },
-    "2501": {
+    {
+        "id": 2501,
         "size": 24,
         "posted_in": "CBufferedServiceMethodClientJob::BYieldingRunJob(void*)"
     },
-    "2601": {
+    {
+        "id": 2601,
         "size": 8,
         "posted_in": "CUser::OnBigPictureStreamingResult(bool, void*)"
     },
-    "2602": {
+    {
+        "id": 2602,
         "size": 1,
         "posted_in": "CUser::RequestStopNVStreaming()"
     },
-    "2603": {
+    {
+        "id": 2603,
         "size": 1,
         "posted_in": "CUser::OnBigPictureStreamingDone()"
     },
-    "2604": {
+    {
+        "id": 2604,
         "size": 1,
         "posted_in": "CUser::OnBigPictureStreamRestarting()"
     },
-    "2701": {
+    {
+        "id": 2701,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerConnected_t>(ControllerConnected_t*)"
     },
-    "2702": {
+    {
+        "id": 2702,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDisconnected_t>(ControllerDisconnected_t*)"
     },
-    "2703": {
+    {
+        "id": 2703,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<LoadControllerConfigResult_t>(LoadControllerConfigResult_t*)"
     },
-    "2707": {
+    {
+        "id": 2707,
         "size": 76,
         "posted_in": "CGetControllerInfoWorkItem::DispatchCompletion()"
     },
-    "2710": {
+    {
+        "id": 2710,
         "size": 524,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<SetControllerOverrideModeForApp_t>(SetControllerOverrideModeForApp_t*)"
     },
-    "2711": {
+    {
+        "id": 2711,
         "size": 8,
         "posted_in": "CSteamController::FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*)"
     },
-    "2712": {
+    {
+        "id": 2712,
         "size": 2,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerWirelessPresence_t>(ControllerWirelessPresence_t*)"
     },
-    "2714": {
+    {
+        "id": 2714,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPaired_t>(ControllerPaired_t*)"
     },
-    "2715": {
+    {
+        "id": 2715,
         "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerTouchMenuCreate_t>(ControllerTouchMenuCreate_t*)"
     },
-    "2716": {
+    {
+        "id": 2716,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerTouchMenuDestroy_t>(ControllerTouchMenuDestroy_t*)"
     },
-    "2717": {
+    {
+        "id": 2717,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPacketLossUI_t>(ControllerPacketLossUI_t*)"
     },
-    "2718": {
+    {
+        "id": 2718,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerShowBindingPanel_t>(ControllerShowBindingPanel_t*)"
     },
-    "2720": {
+    {
+        "id": 2720,
         "size": 4096,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerConfigLoadError_t>(ControllerConfigLoadError_t*)"
     },
-    "2722": {
+    {
+        "id": 2722,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDisplayKeyboard_t>(ControllerDisplayKeyboard_t*)"
     },
-    "2723": {
+    {
+        "id": 2723,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ReceivedControllerConfigSets_t>(ReceivedControllerConfigSets_t*)"
     },
-    "2724": {
+    {
+        "id": 2724,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPersonalizationUpdated_t>(ControllerPersonalizationUpdated_t*)"
     },
-    "2725": {
+    {
+        "id": 2725,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerAccountsUpdated_t>(ControllerAccountsUpdated_t*)"
     },
-    "2726": {
+    {
+        "id": 2726,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDongleUpdateStatus_t>(ControllerDongleUpdateStatus_t*)"
     },
-    "2727": {
+    {
+        "id": 2727,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ReceivedControllerPersonalizationCfg_t>(ReceivedControllerPersonalizationCfg_t*)"
     },
-    "2728": {
+    {
+        "id": 2728,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetChanged_t>(ControllerActionSetChanged_t*)"
     },
-    "2729": {
+    {
+        "id": 2729,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionTriggered_t>(ControllerActionTriggered_t*)"
     },
-    "2901": {
+    {
+        "id": 2901,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"
     },
-    "2902": {
+    {
+        "id": 2902,
         "size": 2,
         "posted_in": "CUser::NotifyParentalLockChanged()"
     },
-    "2903": {
+    {
+        "id": 2903,
         "size": 4,
         "posted_in": "CUser::NotifyParentalLockChanged()"
     },
-    "2904": {
+    {
+        "id": 2904,
         "size": 1,
         "posted_in": "CUser::LockParentalLock()"
     },
-    "2905": {
+    {
+        "id": 2905,
         "size": 8,
         "posted_in": "CUser::OnSetParentalSettingsResponse(EParentalSetOperation, EResult)"
     },
-    "3001": {
+    {
+        "id": 3001,
         "size": 84,
         "posted_in": "CClientJobAuthorizeLocalDeviceNotification::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "3002": {
+    {
+        "id": 3002,
         "size": 76,
         "posted_in": "CClientJobDeauthorizeLocalDevice::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "3003": {
+    {
+        "id": 3003,
         "size": 80,
         "posted_in": "CClientJobSharedLibraryStopPlaying::BYieldingRunClientJob(IMsgNetPacket*)"
     },
-    "3004": {
+    {
+        "id": 3004,
         "size": 72,
         "posted_in": "CUser::UpdateSharedLibraries(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >&, unsigned int)"
     },
-    "3005": {
+    {
+        "id": 3005,
         "size": 524,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GetAuthorizationInfoResult_t>(GetAuthorizationInfoResult_t*)"
     },
-    "3006": {
+    {
+        "id": 3006,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<UpdateAuthorizedBorrowerResult_t>(UpdateAuthorizedBorrowerResult_t*)"
     },
-    "3100": {
+    {
+        "id": 3100,
         "size": 272,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<NetworkDeviceStateChange_t>(NetworkDeviceStateChange_t*)"
     },
-    "3200": {
+    {
+        "id": 3200,
         "size": 4,
         "posted_in": "CClientMusic::CallLocalLibraryRemoveAlbumFromCrawling(int)"
     },
-    "3201": {
+    {
+        "id": 3201,
         "size": 4,
         "posted_in": "CClientMusic::CallLocalLibraryUpdateAlbumFromCrawling(int)"
     },
-    "3202": {
+    {
+        "id": 3202,
         "size": 1,
         "posted_in": "CClientMusic::CallLocalLibraryCrawlingFinished()"
     },
-    "3203": {
+    {
+        "id": 3203,
         "size": 1,
         "posted_in": "CClientMusic::CallLocalLibraryCrawlingInterrupted()"
     },
-    "3206": {
+    {
+        "id": 3206,
         "size": 1,
         "posted_in": "CClientMusic::UpdateShuffled(bool)"
     },
-    "3207": {
+    {
+        "id": 3207,
         "size": 1,
         "posted_in": "CPlaybackController::RemoveQueueEntry(int, bool)"
     },
-    "3208": {
+    {
+        "id": 3208,
         "size": 1,
         "posted_in": "CClientMusic::UpdateCurrentEntryText(char const*)"
     },
-    "3209": {
+    {
+        "id": 3209,
         "size": 1,
         "posted_in": "CPlaybackController::RunFrameCheckForPlayNext()"
     },
-    "3210": {
+    {
+        "id": 3210,
         "size": 4,
         "posted_in": "CClientMusic::UpdateCurrentEntryElapsedSeconds(int)"
     },
-    "3213": {
+    {
+        "id": 3213,
         "size": 1,
         "posted_in": "CClientMusic::CallLocalLibraryHasBeenReset()"
     },
-    "3214": {
+    {
+        "id": 3214,
         "size": 1,
         "posted_in": "CClientMusic::CallLocalLibraryCrawlingWillStart()"
     },
-    "3215": {
+    {
+        "id": 3215,
         "size": 4,
         "posted_in": "CClientMusic::CallLocalLibraryUpdateFromCrawling(int)"
     },
-    "3217": {
+    {
+        "id": 3217,
         "size": 1028,
         "posted_in": "CPlaybackController::RemoveQueueEntry(int, bool)"
     },
-    "3218": {
+    {
+        "id": 3218,
         "size": 1024,
         "posted_in": "CClientMusic::CallLocalLibraryRemoveArtistFromCrawling(char const*)"
     },
-    "3220": {
+    {
+        "id": 3220,
         "size": 4,
         "posted_in": "CClientMusic::CallLocalLibraryCrawlingMessage(int)"
     },
-    "3221": {
+    {
+        "id": 3221,
         "size": 1,
         "posted_in": "CClientMusic::MarkTrackKeyAsPlayed(char const*)"
     },
-    "3222": {
+    {
+        "id": 3222,
         "size": 4,
         "posted_in": "CClientMusic::DeregisterRemotePlayer(CClientMusic::SteamMusicRemotePlayer_t*)"
     },
-    "3223": {
+    {
+        "id": 3223,
         "size": 4,
         "posted_in": "CClientMusic::ActivateRemotePlayerWithID(int)"
     },
-    "3224": {
+    {
+        "id": 3224,
         "size": 4,
         "posted_in": "CClientMusic::SetDisplayName(char const*)"
     },
-    "3225": {
+    {
+        "id": 3225,
         "size": 4,
         "posted_in": "CClientMusic::BActivationSuccess(bool)"
     },
-    "3226": {
+    {
+        "id": 3226,
         "size": 20,
         "posted_in": "CAlbumCoverController::LoadCoverCompleted(CAlbumCoverController::AlbumCoverData_t*)"
     },
-    "3227": {
+    {
+        "id": 3227,
         "size": 2056,
         "posted_in": "CLocalMusicDatabase::BRequestAllArtistListData(int)"
     },
-    "3228": {
+    {
+        "id": 3228,
         "size": 4120,
         "posted_in": "CLocalMusicDatabase::BRequestAllAlbumListData(int)"
     },
-    "3229": {
+    {
+        "id": 3229,
         "size": 3092,
         "posted_in": "CLocalMusicDatabase::BRequestAllTracksListDataForAlbumID(int, int)"
     },
-    "3230": {
+    {
+        "id": 3230,
         "size": 1,
         "posted_in": "CClientMusic::Enable(bool)"
     },
-    "3231": {
+    {
+        "id": 3231,
         "size": 2080,
         "posted_in": "CLocalMusicDatabase::BRequestAllPlayListData(int)"
     },
-    "3232": {
+    {
+        "id": 3232,
         "size": 3096,
         "posted_in": "CLocalMusicDatabase::BRequestAllTracksListDataForPlaylistID(int, int)"
     },
-    "3233": {
+    {
+        "id": 3233,
         "size": 1028,
         "posted_in": "CLocalMusicDatabase::RenamePlaylistWithID(int, char const*)"
     },
-    "3234": {
+    {
+        "id": 3234,
         "size": 8,
         "posted_in": "CLocalMusicDatabase::InsertPlaylistWithNameAtPosition(char const*, int)"
     },
-    "3235": {
+    {
+        "id": 3235,
         "size": 4,
         "posted_in": "CLocalMusicDatabase::DeletePlaylistWithID(int)"
     },
-    "3236": {
+    {
+        "id": 3236,
         "size": 8,
         "posted_in": "CLocalMusicDatabase::MovePlaylistFromPositionToPosition(int, int)"
     },
-    "3237": {
+    {
+        "id": 3237,
         "size": 12,
         "posted_in": "CLocalMusicDatabase::MoveTrackFromPositionToPositonInPlaylistID(int, int, int)"
     },
-    "3238": {
+    {
+        "id": 3238,
         "size": 8,
         "posted_in": "CLocalMusicDatabase::RemovePlaylistPositionFromPlaylistID(int, int)"
     },
-    "3239": {
+    {
+        "id": 3239,
         "size": 4,
         "posted_in": "CLocalMusicDatabase::RemoveAllTracksFromPlaylistID(int, bool)"
     },
-    "3240": {
+    {
+        "id": 3240,
         "size": 4,
         "posted_in": "CClientMusic::AppendQueueToPlaylistID(int, bool)"
     },
-    "3241": {
+    {
+        "id": 3241,
         "size": 4,
         "posted_in": "CClientMusic::UpdateLooped(bool)"
     },
-    "3242": {
+    {
+        "id": 3242,
         "size": 4,
         "posted_in": "CLocalMusicDatabase::UpdatePlaylistTrackCountAndDuration(int)"
     },
-    "3301": {
+    {
+        "id": 3301,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientAvailable_t>(RemoteClientAvailable_t*)"
     },
-    "3302": {
+    {
+        "id": 3302,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientOffline_t>(RemoteClientOffline_t*)"
     },
-    "3303": {
+    {
+        "id": 3303,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientConnected_t>(RemoteClientConnected_t*)"
     },
-    "3304": {
+    {
+        "id": 3304,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientDisconnected_t>(RemoteClientDisconnected_t*)"
     },
-    "3305": {
+    {
+        "id": 3305,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStream_t>(RemoteClientStartStream_t*)"
     },
-    "3306": {
+    {
+        "id": 3306,
         "size": 80,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamResult_t>(RemoteClientStartStreamResult_t*)"
     },
-    "3307": {
+    {
+        "id": 3307,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientAppStateChanged_t>(RemoteClientAppStateChanged_t*)"
     },
-    "3308": {
+    {
+        "id": 3308,
         "size": 1,
         "posted_in": "void CRemoteClientStream::PostCallbackToUI<RemoteClientStreamLifetime_t>(RemoteClientStreamLifetime_t*)"
     },
-    "3309": {
+    {
+        "id": 3309,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamProgress_t>(RemoteClientStartStreamProgress_t*)"
     },
-    "3310": {
+    {
+        "id": 3310,
         "size": 60,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientAppUpdateInfoChanged_t>(RemoteClientAppUpdateInfoChanged_t*)"
     },
-    "3311": {
+    {
+        "id": 3311,
         "size": 320,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
-    "3312": {
+    {
+        "id": 3312,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStopStreamSession_t>(RemoteClientStopStreamSession_t*)"
     },
-    "3313": {
+    {
+        "id": 3313,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRequestControllerConfig_t>(RemoteClientRequestControllerConfig_t*)"
     },
-    "3314": {
+    {
+        "id": 3314,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteClientGotControllerConfig_t>(RemoteClientGotControllerConfig_t*)"
     },
-    "3315": {
+    {
+        "id": 3315,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamingEnabledChanged_t>(RemoteClientStreamingEnabledChanged_t*)"
     },
-    "3316": {
+    {
+        "id": 3316,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientReserveGamepads_t>(RemoteClientReserveGamepads_t*)"
     },
-    "3317": {
+    {
+        "id": 3317,
         "size": 128,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientConnected_t>(StreamingClientConnected_t*)"
     },
-    "3318": {
+    {
+        "id": 3318,
         "size": 128,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientDisconnected_t>(StreamingClientDisconnected_t*)"
     },
-    "3319": {
+    {
+        "id": 3319,
         "size": 128,
         "posted_in": "CRemoteDeviceJobAuthorizeDevice::BYieldingRunClientJob()"
     },
-    "3320": {
+    {
+        "id": 3320,
         "size": 1,
         "posted_in": "CRemoteDeviceJobAuthorizeDevice::BYieldingRunClientJob()"
     },
-    "3321": {
+    {
+        "id": 3321,
         "size": 2,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<CheckStreamingDriverSupport_t>(CheckStreamingDriverSupport_t*)"
     },
-    "3322": {
+    {
+        "id": 3322,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientSessionAppIDChange_t>(RemoteClientSessionAppIDChange_t*)"
     },
-    "3323": {
+    {
+        "id": 3323,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientPrepareStreamingAudio_t>(RemoteClientPrepareStreamingAudio_t*)"
     },
-    "3324": {
+    {
+        "id": 3324,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientCancelStreamingAudio_t>(RemoteClientCancelStreamingAudio_t*)"
     },
-    "3325": {
+    {
+        "id": 3325,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientSiteAssociation_t>(RemoteClientSiteAssociation_t*)"
     },
-    "3401": {
+    {
+        "id": 3401,
         "size": 24,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamUGCQueryCompleted_t>(SteamUGCQueryCompleted_t*)"
     },
-    "3402": {
+    {
+        "id": 3402,
         "size": 9768,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamUGCRequestUGCDetailsResult_t>(SteamUGCRequestUGCDetailsResult_t*)"
     },
-    "3403": {
+    {
+        "id": 3403,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<CreateItemResult_t>(CreateItemResult_t*)"
     },
-    "3404": {
+    {
+        "id": 3404,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SubmitItemUpdateResult_t>(SubmitItemUpdateResult_t*)"
     },
-    "3405": {
+    {
+        "id": 3405,
         "size": 12,
         "posted_in": "CAppWorkshopContent::DoStateTransaction(CBaseUser*, CWorkshopItemVector const&)"
     },
-    "3406": {
+    {
+        "id": 3406,
         "size": 16,
         "posted_in": "CAppWorkshopContent::DownloadRequestResult(unsigned long long, EResult)"
     },
-    "3407": {
+    {
+        "id": 3407,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<UserFavoriteItemsListChanged_t>(UserFavoriteItemsListChanged_t*)"
     },
-    "3408": {
+    {
+        "id": 3408,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SetUserItemVoteResult_t>(SetUserItemVoteResult_t*)"
     },
-    "3409": {
+    {
+        "id": 3409,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GetUserItemVoteResult_t>(GetUserItemVoteResult_t*)"
     },
-    "3410": {
+    {
+        "id": 3410,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<StartPlaytimeTrackingResult_t>(StartPlaytimeTrackingResult_t*)"
     },
-    "3411": {
+    {
+        "id": 3411,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<StopPlaytimeTrackingResult_t>(StopPlaytimeTrackingResult_t*)"
     },
-    "3412": {
+    {
+        "id": 3412,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<AddUGCDependencyResult_t>(AddUGCDependencyResult_t*)"
     },
-    "3413": {
+    {
+        "id": 3413,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoveUGCDependencyResult_t>(RemoveUGCDependencyResult_t*)"
     },
-    "3414": {
+    {
+        "id": 3414,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<AddAppDependencyResult_t>(AddAppDependencyResult_t*)"
     },
-    "3415": {
+    {
+        "id": 3415,
         "size": 16,
         "posted_in": "void CBaseAPIJob::PostAPIResult<RemoveAppDependencyResult_t>(RemoveAppDependencyResult_t*)"
     },
-    "3416": {
+    {
+        "id": 3416,
         "size": 148,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GetAppDependenciesResult_t>(GetAppDependenciesResult_t*)"
     },
-    "3417": {
+    {
+        "id": 3417,
         "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DeleteItemResult_t>(DeleteItemResult_t*)"
     },
-    "3501": {
+    {
+        "id": 3501,
         "size": 1,
         "posted_in": "void CRemoteClientStream::PostCallback<StreamClientRaiseWindow_t>(StreamClientRaiseWindow_t*)"
     },
-    "3502": {
+    {
+        "id": 3502,
         "size": 4,
         "posted_in": "void CRemoteClientStream::PostCallbackToUI<StreamClientResult_t>(StreamClientResult_t*)"
     },
-    "3601": {
+    {
+        "id": 3601,
         "size": 1028,
         "posted_in": "void CBaseAPIJob::PostAPIResult<InstallScriptSignResponse_t>(InstallScriptSignResponse_t*)"
     },
-    "3602": {
+    {
+        "id": 3602,
         "size": 1028,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DRMWrapResponse_t>(DRMWrapResponse_t*)"
     },
-    "3603": {
+    {
+        "id": 3603,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<CEGWrapResponse_t>(CEGWrapResponse_t*)"
     },
-    "3701": {
+    {
+        "id": 3701,
         "size": 8,
         "posted_in": "CUserShortcuts::PostShortcutChanged(unsigned int)"
     },
-    "3702": {
+    {
+        "id": 3702,
         "size": 8,
         "posted_in": "CUserShortcuts::RemoveShortcut(unsigned int)"
     },
-    "3901": {
+    {
+        "id": 3901,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamAppInstalled_t>(SteamAppInstalled_t*)"
     },
-    "3902": {
+    {
+        "id": 3902,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamAppUninstalled_t>(SteamAppUninstalled_t*)"
     },
-    "4001": {
+    {
+        "id": 4001,
         "size": 1,
         "posted_in": "CClientMusic::UpdatePlaybackStatus(AudioPlayback_Status)"
     },
-    "4002": {
+    {
+        "id": 4002,
         "size": 4,
         "posted_in": "CClientMusic::UpdateVolume(float)"
     },
-    "4011": {
+    {
+        "id": 4011,
         "size": 4,
         "posted_in": "CClientMusic::SetVolume(float)"
     },
-    "4101": {
+    {
+        "id": 4101,
         "size": 1,
         "posted_in": "CClientMusic::ActivateRemotePlayerWithID(int)"
     },
-    "4102": {
+    {
+        "id": 4102,
         "size": 1,
         "posted_in": "CClientMusic::ActivateRemotePlayerWithID(int)"
     },
-    "4105": {
+    {
+        "id": 4105,
         "size": 1,
         "posted_in": "CClientMusic::Play()"
     },
-    "4106": {
+    {
+        "id": 4106,
         "size": 1,
         "posted_in": "CClientMusic::Pause()"
     },
-    "4107": {
+    {
+        "id": 4107,
         "size": 1,
         "posted_in": "CClientMusic::PlayPrevious()"
     },
-    "4108": {
+    {
+        "id": 4108,
         "size": 1,
         "posted_in": "CClientMusic::PlayNext()"
     },
-    "4109": {
+    {
+        "id": 4109,
         "size": 1,
         "posted_in": "CClientMusic::SetPlayingShuffled(bool)"
     },
-    "4114": {
+    {
+        "id": 4114,
         "size": 4,
         "posted_in": "CClientMusic::SetPlayingRepeatStatus(PlayingRepeat_Status)"
     },
-    "4200": {
+    {
+        "id": 4200,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRRuntimeUpdated_t>(VRRuntimeUpdated_t*)"
     },
-    "4201": {
+    {
+        "id": 4201,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRModeChanged_t>(VRModeChanged_t*)"
     },
-    "4202": {
+    {
+        "id": 4202,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRModeExitRequest_t>(VRModeExitRequest_t*)"
     },
-    "4203": {
+    {
+        "id": 4203,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRPathChanged_t>(VRPathChanged_t*)"
     },
-    "4204": {
+    {
+        "id": 4204,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionStarted_t>(VRApplicationTransitionStarted_t*)"
     },
-    "4205": {
+    {
+        "id": 4205,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionAborted_t>(VRApplicationTransitionAborted_t*)"
     },
-    "4206": {
+    {
+        "id": 4206,
         "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionNewAppStarted_t>(VRApplicationTransitionNewAppStarted_t*)"
     },
-    "4207": {
+    {
+        "id": 4207,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRProcessQuit_t>(VRProcessQuit_t*)"
     },
-    "4208": {
+    {
+        "id": 4208,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VR2DOverlayGameLaunched_t>(VR2DOverlayGameLaunched_t*)"
     },
-    "4301": {
+    {
+        "id": 4301,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<GameNotificationsEnumerated_t>(GameNotificationsEnumerated_t*)"
     },
-    "4302": {
+    {
+        "id": 4302,
         "size": 12,
         "posted_in": "CClientUserGameNotifications::RemoveSession(unsigned int, unsigned long long)"
     },
-    "4303": {
+    {
+        "id": 4303,
         "size": 4124,
         "posted_in": "CClientUserGameNotifications::OnGetSessionDetails(CGameNotifications_GetSessionDetails_Response&)"
     },
-    "4601": {
+    {
+        "id": 4601,
         "size": 12,
         "posted_in": "CClientJobBeginBroadcastSession::BYieldingRunClientJob()"
     },
-    "4602": {
+    {
+        "id": 4602,
         "size": 12,
         "posted_in": "CClientJobEndBroadcastSession::BYieldingRunClientJob()"
     },
-    "4604": {
+    {
+        "id": 4604,
         "size": 1,
         "posted_in": "CClientJobUploadBroadcast::BYieldingRunClientJob()"
     },
-    "4605": {
+    {
+        "id": 4605,
         "size": 4,
         "posted_in": "CClientJobUploadBroadcast::StopBroadcast(EBroadcastUploadResult)"
     },
-    "4606": {
+    {
+        "id": 4606,
         "size": 4,
         "posted_in": "CClientJobWatchBroadcast::BYieldingRunClientJob()"
     },
-    "4607": {
+    {
+        "id": 4607,
         "size": 4,
         "posted_in": "CClientJobInviteToBroadcast::BYieldingRunClientJob()"
     },
-    "4609": {
+    {
+        "id": 4609,
         "size": 8,
         "posted_in": "CClientVideo::BroadcastFirstTimeComplete()"
     },
-    "4610": {
+    {
+        "id": 4610,
         "size": 9,
         "posted_in": "CClientVideo::InviteToBroadcast(CSteamID, bool)"
     },
-    "4611": {
+    {
+        "id": 4611,
         "size": 264,
         "posted_in": "CClientJobGetVideoURL::BYieldingRunClientJob()"
     },
-    "4612": {
+    {
+        "id": 4612,
         "size": 8,
         "posted_in": "CBroadcastClient_ViewerBroadcastInvite_Job::YieldingRunMethod(CUser*, CBroadcast_ViewerBroadcastInvite_Notification const&)"
     },
-    "4613": {
+    {
+        "id": 4613,
         "size": 1,
         "posted_in": "CClientVideo::LoadBroadcastSettings()"
     },
-    "4614": {
+    {
+        "id": 4614,
         "size": 8,
         "posted_in": "CClientVideo::HandleViewerStateNotification(CSteamID, int)"
     },
-    "4615": {
+    {
+        "id": 4615,
         "size": 20,
         "posted_in": "CClientVideo::PostBroadcastStatusCallback()"
     },
-    "4616": {
+    {
+        "id": 4616,
         "size": 292,
         "posted_in": "CClientJobListenToBroadcastChat::BYieldingRequestNextChatSegment()"
     },
-    "4617": {
+    {
+        "id": 4617,
         "size": 20,
         "posted_in": "CClientJobUploadBroadcast::StatusCallbackIfNecessary()"
     },
-    "4618": {
+    {
+        "id": 4618,
         "size": 4,
         "posted_in": "CClientJobUploadBroadcast::RecvPkt(CNetPacket*)"
     },
-    "4619": {
+    {
+        "id": 4619,
         "size": 260,
         "posted_in": "CVideoClient_UnlockedH264_Job::YieldingRunMethod(CUser*, CVideo_UnlockedH264_Notification const&)"
     },
-    "4620": {
+    {
+        "id": 4620,
         "size": 4,
         "posted_in": "CClientVideo::BroadcastRecorderError(EBroadcastRecorderResult)"
     },
-    "4621": {
+    {
+        "id": 4621,
         "size": 4,
         "posted_in": "CBroadcastClient_StopBroadcastUpload_Job::YieldingRunMethod(CUser*, CBroadcast_StopBroadcastUpload_Notification const&)"
     },
-    "4622": {
+    {
+        "id": 4622,
         "size": 2,
         "posted_in": "CClientVideo::SetMicrophoneState(bool, bool)"
     },
-    "4624": {
+    {
+        "id": 4624,
         "size": 8,
         "posted_in": "CClientJobGetOPFSettings::BYieldingRunClientJob()"
     },
-    "4625": {
+    {
+        "id": 4625,
         "size": 4,
         "posted_in": "CClientJobUploadBroadcastThumbnail::BYieldingRunClientJob()"
     },
-    "4626": {
+    {
+        "id": 4626,
         "size": 4,
         "posted_in": "CClientJobUploadBroadcastThumbnail::StopBroadcastImageUpload(EBroadcastUploadResult)"
     },
-    "4700": {
+    {
+        "id": 4700,
         "size": 8,
         "posted_in": "CClientInventory::GetAllItems(int*)::GetAllItemsJob::PostCallbacks(int, ClientInventoryResultSet_t const*)"
     },
-    "4701": {
+    {
+        "id": 4701,
         "size": 4,
         "posted_in": "CClientInventory::GetAllItems(int*)::GetAllItemsJob::PostCallbacks(int, ClientInventoryResultSet_t const*)"
     },
-    "4702": {
+    {
+        "id": 4702,
         "size": 1,
         "posted_in": "CClientInventoryAsyncJob::YieldingRefreshItemDefs()"
     },
-    "4703": {
+    {
+        "id": 4703,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamInventoryEligiblePromoItemDefIDs_t>(SteamInventoryEligiblePromoItemDefIDs_t*)"
     },
-    "4901": {
+    {
+        "id": 4901,
         "size": 4,
         "posted_in": "CClientSharedConnection::DispatchMessageToConnection(unsigned int, IMsgNetPacket*, unsigned int)"
     },
-    "5001": {
+    {
+        "id": 5001,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"
     }
-}
+]
