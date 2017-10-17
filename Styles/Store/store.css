@@ -3374,8 +3374,13 @@ body.v6 .quadscreenshot_carousel h2 {
 
 @media screen and (max-width: 910px)
 {
-	.quadscreenshot_carousel .maincap {
-
+	.quadscreenshot_carousel .main .maincap {
+		width: 100%;
+		height: auto;
+	}
+	.quadscreenshot_carousel .main {
+		width: 100%;
+		height: 100%;
 	}
 
 	.quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) {
@@ -3383,15 +3388,17 @@ body.v6 .quadscreenshot_carousel h2 {
 	}
 
 	.quadscreenshot_carousel.carousel_container .carousel_items:not(.no_paging) > * {
+		padding-bottom: calc( 59% + 56px );
 
-		height: 300px;
 	}
 
-	.quadscreenshot_carousel .bg > div:not(:first-child) {
+	.quadscreenshot_carousel .bg {
 		display: none;
 	}
 
-	.quadscreenshot_carousel .bg > div {
+	.quadscreenshot_carousel .recommendation_reason, .quadscreenshot_carousel .appTitle {
+		top: auto;
+		bottom: 0px;
 
 	}
 

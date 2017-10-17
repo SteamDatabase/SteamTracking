@@ -86,7 +86,7 @@
 	width: 5%;
 }
 
-.tradehistory_items_received {
+.tradehistory_items_withimages {
 	overflow: hidden;
 	line-height: 52px;
 	margin-bottom: 20px;
@@ -104,11 +104,11 @@
 	}
 }
 
-.tradehistory_items_given {
+.tradehistory_items_noimages {
 	line-height: 19px;
 }
 
-.tradehistory_items_received img {
+.tradehistory_items img {
 	vertical-align: middle;
 	border: 1px solid #3A3A3A;
 	margin-left: 8px;
@@ -240,6 +240,56 @@ a.history_item:hover .history_item_name {
 	margin-left: 5px;
 
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.inventory_history_message
+{
+	display: none;
+	position: relative;
+	background-color: #a6801b;
+	padding: 12px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+}
+
+.inventory_history_message.inventory_history_message_blue
+{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inventory_history_message a
+{
+	text-decoration: underline;
+}
+
+.inventory_history_message_more
+{
+	display: none;
+}
+
+.inventory_history_message .showmore
+{
+	margin-top: 5px;
+	text-decoration: underline;
+}
+
+.inventory_history_message .showmore span
+{
+	cursor: pointer;
+}
+
+.inventory_history_message .dismiss
+{
+	cursor: pointer;
+	float: right;
+	width: 12px;
+	height: 12px;
+	margin-left: 10px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/x9x9.gif' );
 	background-repeat: no-repeat;
 	background-position: center;
 }

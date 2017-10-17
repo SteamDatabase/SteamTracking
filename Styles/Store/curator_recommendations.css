@@ -33,6 +33,7 @@ body.v6 {
 .curator_details
 {
 	overflow: hidden;
+	text-shadow: 1px 1px #000;
 }
 
 .num_followers {
@@ -138,7 +139,8 @@ body.v6 h2.curator_name
 {
 
 	font-size: 36px;
-	margin: 5px 0 4px 0;
+	padding-top: 0px;
+	margin: 0;
 }
 
 body.v6 .about_section .tagline {
@@ -148,14 +150,22 @@ body.v6 .about_section .tagline {
 
 body.v6 h2.curator_name a {
 	color: #fff;
-	text-shadow: none;
+
 }
 
 .follow_controls {
 	display: flex;
-	margin-top: 10px;
+	margin-top: 16px;
 }
 
+body.v6 .page_desc {
+	margin-bottom: 10px;
+	display: block;
+}
+
+body.v6 .page_desc p {
+	font-size: 14px;
+}
 
 
 .featured_list_container .carousel_items {
@@ -194,7 +204,7 @@ body.v6 h2.curator_name a {
 	flex-shrink: 3.1;
 	flex-basis: 100%;
 	max-height: 100%;
-	margin-left: 16px
+	margin-left: 16px;
 
 	background: rgba(0, 0, 0, 0.1);
 }
@@ -459,7 +469,7 @@ font-size: 16px;
 	display: block;
 	position: relative;
 	padding: 10px 10px;
-	color: #9fbbcb;
+	color: #fff;
 }
 
 .browse_filters .delete {
@@ -666,8 +676,10 @@ font-size: 16px;
 }
 
 .recommendation_readmore a {
+	color: #fff;
+}
+.recommendation_readmore a:hover {
 	color: #66c0f4;
-
 }
 
 .tag_edit_control {
@@ -700,12 +712,13 @@ font-size: 16px;
 }
 
 .socialmedia_accounts {
-	color: #7291a5;
+	color: #8fa7b7;
 	font-size: 11px;
 	border-bottom: 1px solid #7291a5;
+	padding-bottom: 3px;
 }
 
-.socialmedia_accounts > span {
-	margin-right: 5px;
+.socialmedia_accounts > span:not(:first-child) {
+	margin-left: 15px;
 }
 

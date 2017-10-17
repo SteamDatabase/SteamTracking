@@ -189,7 +189,8 @@ function CuratorFieldReset()
 		$J(j).removeClass('selected');
 	});
 
-	UpdateCurationList();
+	UpdateRecommendationFilterData( true );
+
 }
 
 function CuratorFieldToggle( elNode, strValue )
@@ -206,15 +207,15 @@ function CuratorFieldToggle( elNode, strValue )
 		elInput.value = strValue;
 	}
 
-	UpdateCurationList();
+	UpdateRecommendationFilterData( true );
 }
 
 
-function UpdateCurationList( )
+function UpdateRecommendationFilterData( refresh )
 {
 	var elForm = document.getElementById('filter_box');
 	var elTarget = document.getElementById('RecommendationsTable');
-	elTarget.classList.add('loading');
+	//elTarget.classList.add('loading');
 
 	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
 
@@ -230,20 +231,25 @@ function UpdateCurationList( )
 	var strSort = elForm.querySelector('*[name="sortby"]').value;
 	var strFilter = elForm.querySelector('*[name="filter"]').value;
 
+	g_oPagingControls.SetStaticParameters({
+		"tagids": rgValues.join(','),
+		"sort": strSort,
+		"filter": strFilter
+	});
+
+	if( refresh )
+		g_oPagingControls.GoToPage(0,true);
+/*
 	$J.ajax ( {
 		url: g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/',
-		data: {
-			tagids: rgValues,
-			sort: strSort,
-			filter: strFilter
-		},
+		data: ,
 		type: 'GET',
 		cache: true
 	} ).done( function ( data )
 	{
 		elTarget.innerHTML = data;
 		elTarget.classList.remove('loading');
-	});
+	});*/
 
 }
 
@@ -606,6 +612,25 @@ $J(function() {
 		ShowEditHandles ();
 		$J('.tag_edit_control').show();
 	}
+
+
+
+	g_oPagingControls = new CAjaxPagingControls( g_pagingData, g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/' );
+	g_oPagingControls.SetPreRequestHandler( function(  ) {
+		UpdateRecommendationFilterData(); 
+	});
+
+	g_oPagingControls.SetResponseHandler( function( response ) {
+		console.log(response);
+	});
+	g_oPagingControls.SetPageChangingHandler( function( nPage ) {
+		$J('#RecommendationsTable').addClass('loading');
+	} );
+	g_oPagingControls.SetPageChangedHandler( function ( nPage ) {
+		$J('#RecommendationsTable').removeClass('loading');
+	} );
+
+	UpdateRecommendationFilterData();
 });
 
 
