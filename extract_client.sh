@@ -44,7 +44,7 @@ echo Dumping protobufs
 mono ProtobufDumper/ProtobufDumper.exe bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
-./../../ValveProtobufs/update.sh
+~/ValveProtobufs/update.sh
 
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
