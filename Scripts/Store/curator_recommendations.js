@@ -260,11 +260,13 @@ function ShowEditHandles()
 		var $container = $J(j);
 		$container.addClass('editing');
 
-		var elOverlay = $J('<div class="edit_overlay"></div>')
+		var elOverlay = $J('<div class="edit_overlay"></div>');
 
 		var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
 
 		var rgNodeData = $container.data('sectionConfig');
+		if( !rgNodeData )
+			return;
 
 
 
@@ -467,6 +469,8 @@ function ShowEditHandles()
 
 
 	CTagAutoComplete.prototype.LoadPopularTags(false);
+
+	ShowHeaderImageHandle();
 }
 
 
@@ -543,21 +547,21 @@ function ShowAddFeaturedTagModal()
 {
 	var unTagId = false;
 
-	var modal = ShowAutocompleteDialog( "Add to list", "Type the name of the item you'd like to add to this list.",
-		GetTagSuggestFunc( g_rgGlobalPopularTags ),
-		function( suggestion )
+	var modal = ShowAutocompleteDialog ( "Add to list", "Type the name of the item you'd like to add to this list.",
+		GetTagSuggestFunc ( g_rgGlobalPopularTags ),
+		function ( suggestion )
 		{
-			for( var i=0; i<g_rgGlobalPopularTags.length; i++)
+			for ( var i = 0; i < g_rgGlobalPopularTags.length; i++ )
 			{
-				if( g_rgGlobalPopularTags[i].name == suggestion )
+				if ( g_rgGlobalPopularTags[ i ].name == suggestion )
 				{
-					unTagId = g_rgGlobalPopularTags[i].tagid;
-					modal.EnableInput();
+					unTagId = g_rgGlobalPopularTags[ i ].tagid;
+					modal.EnableInput ();
 					return;
 				}
 			}
 		},
-		function()
+		function ()
 		{
 			$J.ajax ( {
 				url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
@@ -567,20 +571,20 @@ function ShowAddFeaturedTagModal()
 				},
 				type: 'POST',
 				cache: true
-			} ).done( function ( data )
+			} ).done ( function ( data )
 			{
-				document.getElementById('filtertags_container').parentNode.innerHTML = data;
-				$J('.tag_edit_control').show();
-				modal.Dismiss();
-			});
+				document.getElementById ( 'filtertags_container' ).parentNode.innerHTML = data;
+				$J ( '.tag_edit_control' ).show ();
+				modal.Dismiss ();
+			} );
 		},
-		function()
+		function ()
 		{
 			unTagId = false;
 		}
 	);
 
-	CTagAutoComplete.prototype.LoadPopularTags(false);
+	CTagAutoComplete.prototype.LoadPopularTags ( false );
 }
 
 
@@ -606,6 +610,133 @@ function DeleteFeaturedTag( unTagId, strTagName )
 
 }
 
+function ShowHeaderImageHandle()
+{
+
+	var $container = $J('#header_container');
+	$container.addClass('editing');
+
+	var elOverlay = $J('<div class="edit_overlay"></div>');
+
+	var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+
+	var rgNodeData = $container.data('sectionConfig');
+
+
+
+	elButton.click( function(){
+		elOptions.show();
+	});
+
+	elOverlay.append( elButton );
+	$container.append( elOverlay );
+
+
+	var elOptions = $J('<form class="edit_options"></form>');
+
+	var elSelectImage = $J("\r\n\t\t<select name=\"selectimage\">\r\n\t\t\t<option value=\"none\">None<\/option>\r\n\t\t<\/select>\r\n\t");
+	var elUpload = $J("<input type=\"file\" name=\"clanimage\" value=\"@Upload\">");
+
+	var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
+	var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
+
+	var fnAddImage = function( idx, rgImageData )
+	{
+		var elOption = document.createElement('option');
+		elOption.value =  rgImageData.image_hash + '.' + EClanImageFileTypeToString( rgImageData.file_type );
+		elOption.textContent = rgImageData.file_name;
+		elSelectImage.append(elOption);
+	}
+
+	elUpload.change( function(){
+		var elForm = elOptions[0];
+		var formData = new FormData(elForm);
+		formData.append('sessionid', g_sessionID);
+		formData.append('imagegroup', k_EClanImageGroup_Curator);
+		formData.append('imagename', 'header');
+
+		$J.ajax ( {
+			url: g_strCuratorCommunityBaseURL + '/uploadimage/',
+			data: formData,
+			type: 'POST',
+			cache: false,
+			contentType: false,
+			processData: false
+		} ).done( function ( data )
+		{
+			if( data.success == 1 )
+			{
+				fnAddImage(0, data);
+				elSelectImage.val( data.image_hash + '.' + EClanImageFileTypeToString( data.file_type ) );
+				elSelectImage.trigger('change');
+			}
+		});
+
+		return false;
+
+	});
+
+	elSelectImage.on('change', function(){
+		var val = elSelectImage.val();
+		$J('#page_background_container').css({backgroundImage: 'url(' + g_strCommunityCDNUrl + val + ')' });
+	});
+
+	elCancel.on('click', function(){
+		elOptions.hide();
+	});
+
+
+	elSave.click( function(){
+
+		$J.ajax ( {
+			url: g_strCuratorBaseURL + 'ajaxupdatepagesection/',
+			data: {
+				sessionid: g_sessionID,
+				takeover: elSelectImage.val()
+			},
+			type: 'POST',
+			cache: true
+		} ).done( function ( data )
+		{
+			elOptions.hide();
+		});
+
+		return false;
+
+	});
+
+	$J.ajax ( {
+		url: g_strCuratorBaseURL + '/ajaxgetclanimages/',
+		type: 'GET'
+	} ).done( function ( data )
+	{
+		if( data.success == 1)
+		{
+			$J.each(data.images, fnAddImage );
+		}
+
+	});
+
+
+
+	elOptions.append( WrapFormFieldWithLabel( "Background image", elSelectImage ));
+	elOptions.append( WrapFormFieldWithLabel( "Upload", elUpload ));
+	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );
+	elOptions.hide();
+
+	$container.append(elOptions);
+
+
+	// Force style recalc
+	var foo = elOverlay[0].offsetWidth;
+	elOverlay.addClass('visible');
+
+
+
+
+}
+
+
 $J(function() {
 	if( location.hash == "#edit")
 	{
@@ -614,24 +745,44 @@ $J(function() {
 	}
 
 
+	if( typeof g_pagingData != "undefined" )
+	{
 
-	g_oPagingControls = new CAjaxPagingControls( g_pagingData, g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/' );
-	g_oPagingControls.SetPreRequestHandler( function(  ) {
-		UpdateRecommendationFilterData(); 
-	});
+		g_oPagingControls = new CAjaxPagingControls ( g_pagingData, g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/' );
+		g_oPagingControls.SetPreRequestHandler ( function ()
+		{
+			UpdateRecommendationFilterData ();
+		} );
 
-	g_oPagingControls.SetResponseHandler( function( response ) {
-		console.log(response);
-	});
-	g_oPagingControls.SetPageChangingHandler( function( nPage ) {
-		$J('#RecommendationsTable').addClass('loading');
-	} );
-	g_oPagingControls.SetPageChangedHandler( function ( nPage ) {
-		$J('#RecommendationsTable').removeClass('loading');
-	} );
+		g_oPagingControls.SetPageChangingHandler ( function ( nPage )
+		{
+			$J ( '#RecommendationsTable' ).addClass ( 'loading' );
+		} );
+		g_oPagingControls.SetPageChangedHandler ( function ( nPage )
+		{
+			$J ( '#RecommendationsTable' ).removeClass ( 'loading' );
+		} );
 
-	UpdateRecommendationFilterData();
+		UpdateRecommendationFilterData ();
+	}
+
+
+
 });
+
+
+function EClanImageFileTypeToString( $eType )
+{
+	switch( $eType )
+	{
+		case 2: return 'gif';
+		case 3: return 'png';
+		case 1:
+		default:
+			return 'jpg';
+	}
+
+}
 
 
 

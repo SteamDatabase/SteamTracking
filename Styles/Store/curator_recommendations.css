@@ -14,11 +14,6 @@ body.v6 {
 	opacity: 0.4;
 }
 
-.header_area {
-	display: flex;
-	margin-bottom: 40px;
-}
-
 .curator_avatar_image
 {
 	padding: 5px 14px 0 0;
@@ -60,7 +55,7 @@ body.v6 {
 }
 
 .light_container {
-	background: -webkit-linear-gradient( top, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);background: linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
+	background: -webkit-linear-gradient( top, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 1) 50%);background: linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 1) 50%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
 	padding: 5px 0;
 }
 
@@ -718,7 +713,19 @@ font-size: 16px;
 	padding-bottom: 3px;
 }
 
-.socialmedia_accounts > span:not(:first-child) {
+.socialmedia_accounts > *:not(:first-child) {
 	margin-left: 15px;
 }
 
+.header_area, .header_area.editing {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: 180px;
+}
+
+.Recommendations_paging_pagelink:not(.active)
+{
+	cursor: pointer;
+	color:#529ac4;
+}
