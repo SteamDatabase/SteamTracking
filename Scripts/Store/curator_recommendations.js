@@ -652,7 +652,7 @@ function ShowHeaderImageHandle()
 		var elForm = elOptions[0];
 		var formData = new FormData(elForm);
 		formData.append('sessionid', g_sessionID);
-		formData.append('imagegroup', k_EClanImageGroup_Curator);
+		formData.append('imagegroup', 2);
 		formData.append('imagename', 'header');
 
 		$J.ajax ( {
