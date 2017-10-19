@@ -740,7 +740,8 @@ GDynamicStore = {
 				m_nFinalPriceInCents: 0,
 				m_nFinalPriceInCentsWithBundleDiscount: 0,
 				m_rgBundleItems: [],
-				m_bIsCommercial: Bundle.m_bIsCommercial
+				m_bIsCommercial: Bundle.m_bIsCommercial,
+				m_bRestrictGifting: Bundle.m_bRestrictGifting
 			};
 
 			for ( var i = 0; i < Bundle.m_rgItems.length; i++ )
@@ -784,7 +785,7 @@ GDynamicStore = {
 
 			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
 
-			if ( Bundle.m_bMustPurchaseAsSet )
+			if ( Bundle.m_bMustPurchaseAsSet && !Bundle.m_bRestrictGifting )
 			{
 				strTooltip = 'This offer is only available when buying all %s items at the same time.  You may still purchase the bundle as a gift for a friend.'.replace(/%s/, Bundle.m_cTotalItemsInBundle);
 				$CartBtn.find('span').text( 'Purchase as a gift' );
