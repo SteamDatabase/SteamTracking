@@ -4068,6 +4068,15 @@ ul.attached_file_list {
 	margin-bottom: 10px;
 }
 
+.help_issue_details .issue_hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
 .help_provide_pop_header {
 	font-size: 16px;
 	margin-top: 30px;

@@ -700,14 +700,19 @@ HelpWizard = {
 		} );
 	},
 
-	MarkGiftRefundableChange: function( gid_guestpass ) {
+	MarkGiftRefundableChange: function( gid_guestpass, gid_giftcard ) {
 		var mark_refundable = $J('#gift_refundable').prop('checked');
+
+		if ( gid_giftcard === undefined ) {
+			gid_giftcard = null;
+		}
 
 		$J.ajax( {
 			url: 'https://help.steampowered.com/wizard/AjaxMarkGiftRefundable/',
 			type: 'POST',
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				gid_guestpass: gid_guestpass,
+				gid_giftcard: gid_giftcard,
 				mark_refundable: mark_refundable ? 1 : 0
 			} )
 		} ).fail( function( jqxhr ) {
