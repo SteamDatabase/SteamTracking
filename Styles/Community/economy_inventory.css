@@ -544,17 +544,6 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	margin-right: 10px;
 }
 
-.giftcard_gradient {
-	background: rgba(4,7,12,0.5);
-	background: -moz-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(4,7,12,0.5)), color-stop(100%, rgba(34,72,130,1)));
-	background: -webkit-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
-	background: -o-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
-	background: -ms-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
-	background: linear-gradient(to bottom, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%), url( http://justine.valve.org/store/digitalgiftcards/giftcardimage?cc=US&amount=500 );
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04070c', endColorstr='#224882', GradientType=0 );
-}
-
 .giftcard_topseller {
 	width: 460px;
 	height: 215px;
