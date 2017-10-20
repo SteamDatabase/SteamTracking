@@ -661,7 +661,9 @@ function ShowHeaderImageHandle()
 			type: 'POST',
 			cache: false,
 			contentType: false,
-			processData: false
+			processData: false,
+			crossDomain: true,
+			xhrFields: { withCredentials: true }
 		} ).done( function ( data )
 		{
 			if( data.success == 1 )
