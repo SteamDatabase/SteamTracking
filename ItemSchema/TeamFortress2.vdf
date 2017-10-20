@@ -19824,7 +19824,7 @@
 			"item_type_name"	"#TF_PaintKitTool"
 			"model_player"		"models/items/paintkit_tool.mdl"
 			"image_inventory"	"backpack/items/paintkit_tool"
-			"item_quality"		"unique"
+			"item_quality"		"paintkitweapon"
 			"min_ilevel"		"99"
 			"max_ilevel"		"99"
 			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
