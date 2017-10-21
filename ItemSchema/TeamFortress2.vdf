@@ -109764,6 +109764,7 @@
 						"skin_blu" "1"
 						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
 						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -109771,6 +109772,7 @@
 						"skin_blu" "5"
 						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
 						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_bronze"
+						"selectable"	"0"
 					}
 					"2"
 					{
@@ -109778,6 +109780,7 @@
 						"skin_blu" "9"
 						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
 						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_silver"
+						"selectable"	"0"
 					}
 					"3"
 					{
@@ -109785,6 +109788,7 @@
 						"skin_blu" "13"
 						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
 						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_gold"
+						"selectable"	"0"
 					}
 				}
 			}
