@@ -470,7 +470,8 @@ function ShowEditHandles()
 
 	CTagAutoComplete.prototype.LoadPopularTags(false);
 
-	ShowHeaderImageHandle();
+	if( g_bCanUploadHeader )
+		ShowHeaderImageHandle();
 }
 
 
@@ -590,7 +591,7 @@ function ShowAddFeaturedTagModal()
 
 function DeleteFeaturedTag( unTagId, strTagName )
 {
-	var modal = ShowConfirmDialog("Remove this tag?", "Are you sure you want to remove '%1$s' from your tag list?".replace(/%1\$s/, strTagName ) );
+	var modal = ShowConfirmDialog("Remove this tag?", "Are you sure you want to remove '%1$s' from your tag list?".replace(/%1\$s/, V_EscapeHTML( strTagName ) ) );
 	modal.done(function(){
 		$J.ajax ( {
 			url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
@@ -740,7 +741,7 @@ function ShowHeaderImageHandle()
 
 
 $J(function() {
-	if( location.hash == "#edit")
+	if( location.hash == "#edit" && g_bCanCurateApps)
 	{
 		ShowEditHandles ();
 		$J('.tag_edit_control').show();
