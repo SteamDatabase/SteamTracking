@@ -42,6 +42,7 @@
 "vgui_CreateDirectoryFail_Title"	"Create Folder - Error"
 "vgui_CreateDirectoryFail_Info"		"Failed to create a folder, this drive is read-only."
 "vgui_CreateDirectoryFail_AlreadyExists" "That folder already exists."
+"vgui_ShuttingDown"		"Shutting down..."
 
 "TextEntry_Language"		"Language"
 "TextEntry_ConversionMode"	"Conversion Mode"

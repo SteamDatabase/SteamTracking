@@ -312,6 +312,7 @@
  CFURLCreateWithFileSystemPath
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
+ CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CanBreakBetween
@@ -4167,6 +4168,7 @@
  R typeinfo name for CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlPtr<vgui::RGBAImage>
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -8558,6 +8560,8 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlPtr<vgui::RGBAImage>::Release()
+ T CUtlPtr<vgui::RGBAImage>::Validate(CValidator&, char const*)
  T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
