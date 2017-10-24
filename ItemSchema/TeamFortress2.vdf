@@ -7760,61 +7760,74 @@
 	}
 	"149"
 	{
-		"name"		"Direct-Hit airborn enemy as soldier"
+		"name"		"[Template] Get var1 direct air-hits with weapon defindex var2 in a row"
 		"condition_logic"
 		{
-			"type"		"event_listener"
-			"event_name"		"projectile_direct_hit"
+			"type"		"counter"
+			"end"		"$var1"
 			"0"
 			{
-				"type"		"AND"
+				"type"		"event_listener"
+				"action"		"increment"
+				"event_name"		"projectile_direct_hit"
 				"0"
 				{
-					"type"		"player_jumping"
-					"player_key"		"victim"
-					"get_player"		"by_entindex"
-					"jumping_state"		"1"
-				}
-				"1"
-				{
-					"type"		"player_is_owner"
-					"player_key"		"victim"
-					"get_player"		"by_entindex"
-					"is_owner"		"0"
-				}
-				"2"
-				{
-					"type"		"player_is_owner"
-					"player_key"		"attacker"
-					"get_player"		"by_entindex"
-					"is_owner"		"1"
-				}
-				"3"
-				{
-					"type"		"OR"
+					"type"		"AND"
 					"0"
 					{
-						"type"		"weapon_class"
-						"key_to_lookup"		"weapon_def_index"
-						"value"		"tf_weapon_rocketlauncher"
+						"type"		"player_is_owner"
+						"player_key"		"attacker"
+						"get_player"		"by_entindex"
+						"is_owner"		"1"
 					}
 					"1"
 					{
-						"type"		"weapon_class"
+						"type"		"player_is_owner"
+						"player_key"		"victim"
+						"get_player"		"by_entindex"
+						"is_owner"		"0"
+					}
+					"2"
+					{
+						"type"		"weapon_def_index"
 						"key_to_lookup"		"weapon_def_index"
-						"value"		"tf_weapon_rocketlauncher_directhit"
+						"value"		"$var2"
+					}
+					"3"
+					{
+						"type"		"player_jumping"
+						"player_key"		"victim"
+						"get_player"		"by_entindex"
+						"jumping_state"		"1"
+					}
+				}
+			}
+			"1"
+			{
+				"type"		"event_listener"
+				"action"		"reset"
+				"event_name"		"projectile_removed"
+				"0"
+				{
+					"type"		"AND"
+					"0"
+					{
+						"type"		"player_is_owner"
+						"player_key"		"attacker"
+						"get_player"		"by_entindex"
+						"is_owner"		"1"
 					}
 					"1"
 					{
-						"type"		"weapon_class"
+						"type"		"weapon_def_index"
 						"key_to_lookup"		"weapon_def_index"
-						"value"		"tf_weapon_particle_cannon"
+						"value"		"$var2"
 					}
 					"1"
 					{
-						"type"		"weapon_class"
-						"key_to_lookup"		"weapon_def_index"
-						"value"		"tf_weapon_rocketlauncher_airstrike"
+						"type"		"num_direct_hit"
+						"key_to_lookup"		"num_direct_hit"
+						"value"		"0"
 					}
 				}
 			}
@@ -10761,7 +10774,7 @@
 	}
 	"230"
 	{
-		"name"		"[Template] var1 string equal to var2 for var3 count"
+		"name"		"[Template] var1 string equal to var2 for var3 count.  Substring var4"
 		"condition_logic"
 		{
 			"type"		"counter"
@@ -10804,6 +10817,7 @@
 						"key_to_lookup"		"$var1"
 						"type"		"var"
 						"value"		"$var2"
+						"strings_equal"	"$var4"
 					}
 				}
 			}
@@ -11718,22 +11732,22 @@
 			"description"		"#Campaign3Paintkits_case1_collection_desc"
 			"items"
 			{
-				"mythical"
+				"ancient"
 				{
 					"Paintkit 301"       		"10"
 				}
-				"rare"
+				"legendary"
 				{
 					"Paintkit 300"       		"10"
 					"Paintkit 304"       		"10"
 				}
-				"uncommon"
+				"mythical"
 				{
 					"Paintkit 303"       		"10"
 					"Paintkit 308"       		"10"
 					"Paintkit 309"       		"10"
 				}
-				"common"
+				"rare"
 				{
 					"Paintkit 302"       		"10"
 					"Paintkit 305"       		"10"
@@ -11750,24 +11764,24 @@
 			"description"		"#Campaign3Paintkits_case2_collection_desc"
 			"items"
 			{
-				"mythical"
+				"ancient"
 				{
 					"Paintkit 205"       		"10"
 				}
-				"rare"
+				"legendary"
 				{
 					"Paintkit 207"       		"10"
 					"Paintkit 210"       		"10"
 					"Paintkit 212"       		"10"
 				}
-				"uncommon"
+				"mythical"
 				{
 					"Paintkit 202"       		"10"
 					"Paintkit 204"       		"10"
 					"Paintkit 206"       		"10"
 					"Paintkit 209"       		"10"
 				}
-				"common"
+				"rare"
 				{
 					"Paintkit 200"       		"10"
 					"Paintkit 201"       		"10"
