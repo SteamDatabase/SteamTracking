@@ -51,6 +51,7 @@
 "Styles/Store/store.css"                         : "https://store.steampowered.com/public/css/v6/store.css?__TIME__",
 "Styles/Store/tags.css"                          : "https://store.steampowered.com/public/css/v6/tags.css?__TIME__",
 "Styles/Store/updated_apps.css"                  : "https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__",
+"Styles/Store/digitalgiftcards.css"              : "https://store.steampowered.com/public/css/v6/digitalgiftcards.css?__TIME__",
 
 //
 // Store CSS (v5, current)

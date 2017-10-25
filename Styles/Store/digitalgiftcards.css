@@ -1,0 +1,252 @@
+
+.giftcard_description {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 28px;
+}
+
+.giftcard_description p {
+    margin-bottom: 10px;
+}
+
+.giftcard_amounts {
+    background: rgba( 0, 0, 0, 0.2 );
+    padding: 25px 15px 25px 15px;
+    margin-bottom: 50px;
+}
+
+.giftcard_image_cnt {
+    position: relative;
+    max-width: 460px;
+}
+
+.giftcard_cont .giftcard_text {
+    position: absolute;
+    top: 12%;
+    right: 1%;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.giftcard_selectamount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #67c1f5;
+}
+
+.giftcard_amount {
+    width: 100%;
+}
+
+.giftcard_selection {
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.block .block_header {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    padding: 0px 0px 4px 0px;
+}
+
+.block .block_sub_header {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
+    font-size: 14px;
+    color: #67c1f5;
+    background: transparent;
+    padding: 0px 0px 4px 0px;
+}
+
+.block .block_title {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-weight: normal;
+    font-size: 12px;
+    color: #8f98a0;
+    background: transparent;
+    padding: 0px 0px 4px 0px;
+}
+
+.block.subscriptions {
+    margin-bottom: 20px;
+}
+
+.block_content {
+    border: 1px solid #28394d;
+    border-radius: 2px;
+
+}
+
+.block_content_inner
+{
+    padding: 4px 4px 4px 4px;
+    overflow: hidden;
+}
+
+.block.accountInfoBlock {
+    margin-bottom: 20px;
+}
+
+.accountInfoBlock .addfunds_accountBalance {
+    margin-bottom: 0px;
+}
+
+.accountInfoBlock .block_content {
+    border: none;
+    border-radius: 0px;
+    background: rgba( 0, 0, 0, 0.2 );
+    padding: 16px;
+}
+
+.addfunds_linkbar {
+    margin-top: 8px;
+}
+
+.giftcard_border {
+    border: 1px solid #254157;
+    display: inline-block;
+    border-radius: 2px;
+    border-bottom: none;
+}
+
+.giftcard_border:hover {
+    border: 1px solid #67c1f5;
+    border-bottom: none;
+}
+
+.giftcard_style {
+    background: #254157;
+    color: #67c1f5 !important;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.giftcard_border:hover .giftcard_style {
+    background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+    color: #fff !important;
+}
+
+.giftcard_cont {
+    max-width: 460px;
+    max-height: 215px;
+    margin: 0px;
+    line-height: 0px;
+    position: relative;
+}
+
+.steamlogo_overlay {
+    position:absolute;
+    z-index: 1;
+}
+
+.giftcard_corner {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+}
+
+.giftcard_gradient {
+    background: rgba(4,7,12,0.5);
+    background: -moz-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(4,7,12,0.5)), color-stop(100%, rgba(34,72,130,1)));
+    background: -webkit-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
+    background: -o-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
+    background: -ms-linear-gradient(top, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
+    background: linear-gradient(to bottom, rgba(4,7,12,0.5) 0%, rgba(34,72,130,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04070c', endColorstr='#224882', GradientType=0 );
+}
+
+.giftcard_topseller {
+    width: 460px;
+    height: 215px;
+    z-index: -1;
+    position:relative;
+}
+
+.faq_item {
+    padding: 10px 0 10px 0;
+}
+
+.faq_question {
+    color: #67c1f5;
+    font-size: 16px;
+}
+
+.faq_item p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.card_header {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 200;
+    font-weight: normal;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 0px 3px 0px;
+}
+
+.card_desc_text {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 21px;
+}
+
+.friendslist_image {
+    margin-top: 20px;
+}
+
+.friendslist_fade {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    height: 280px;
+    margin-top: -280px;
+    position: relative;
+    width: 103px;
+}
+
+.digitalcards_new {
+    font-size:16px;
+    font-weight:900;
+    position: absolute;
+    z-index:2;
+    transform:rotate(-27deg);
+    left:20px;top:30px;
+}
+
+.giftcard_inner_leftcol {
+    float:left;
+    width: 50%;
+}
+
+.giftcard_inner_rightcol {
+    float:right;
+    margin-left: 10px;
+    width: 40%;
+}
+
+.giftcard_leftcol {
+    float:left;
+    width: 458px;
+}
+
+.giftcard_rightcol {
+    float:right;
+    margin-left: 14px;
+    width: 466px;
+}
