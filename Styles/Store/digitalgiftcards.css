@@ -242,11 +242,24 @@
 
 .giftcard_leftcol {
     float:left;
-    width: 458px;
+    max-width: 458px;
 }
 
 .giftcard_rightcol {
-    float:right;
+    overflow: hidden;
     margin-left: 14px;
-    width: 466px;
+    max-width: 466px;
+}
+
+@media screen and (max-width: 800px)
+{
+    html.responsive .giftcard_leftcol {
+        float: none;
+        margin: 0 auto;
+    }
+
+    html.responsive .giftcard_rightcol {
+        max-width: none;
+        margin-left: 0;
+    }
 }
