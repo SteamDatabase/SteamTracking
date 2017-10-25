@@ -339,3 +339,87 @@ function ShowGiftHistory()
 	}
 }
 
+
+function AcceptRejectGiftCard( gidGiftCardID, bAccept )
+{
+	if ( bAccept != 1 )
+	{
+		ShowConfirmDialog( 'Decline Gift Card', 'Are you sure you want to decline this gift card?  These funds will be refunded to the friend who purchased it for you.', 'Decline gift card' )
+		.done( function() {
+			AcceptRejectGiftCardInternal( gidGiftCardID, bAccept, null, null, null );
+		});
+	}
+	else
+	{
+		AcceptRejectGiftCardInternal( gidGiftCardID, bAccept, null, null, null );
+	}
+}
+
+function AcceptGiftCard_RequireBillingInfo( gidGiftCardID )
+{
+	var $DialogContents = $J( '#billing_info_form' ).clone();
+	var $Dialog = ShowConfirmDialog( 'Redeem Gift Card', $DialogContents.show(), 'Accept gift' )
+	.done( function()
+	{
+		var $Form = $DialogContents.find( 'form' );
+		var strState = $Form.find( '#billing_state_select' ).val();
+		var strCity = $Form.find( 'input[name="billing_city"]' ).val();
+		var strZip = $Form.find( 'input[name="billing_postal_code"]' ).val();
+		AcceptRejectGiftCardInternal( gidGiftCardID, 1, strState, strCity, strZip );
+	});
+}
+
+
+function AcceptRejectGiftCardInternal( gidGiftCardID, bAccept, strState, strCity, strZip )
+{
+	var mapParams = {
+		sessionid: g_sessionID,
+		giftcardid: gidGiftCardID,
+		accept: bAccept,
+	};
+
+	if ( strState )
+		mapParams[ 'state' ] = strState;
+	if ( strCity )
+		mapParams[ 'city' ] = strCity;
+	if ( strZip )
+		mapParams[ 'zip' ] = strZip;
+
+	new Ajax.Request( 'https://steamcommunity.com/gifts/0/resolvegiftcard', {
+		method: 'post',
+		parameters: mapParams,
+		onSuccess: function( transport )
+		{
+			if ( transport.responseJSON.success == 1 )
+			{
+				if ( bAccept == 1 )
+				{
+					ShowAlertDialog( 'Success!', 'You have successfully redeemed this gift card to your Steam Wallet!' ).done( function() { location.reload() } );
+					$J( '<iframe src="https://steamcommunity.com/market/eligibilitycheck?noredir=1" style="height:0;visibility:hidden"></iframe>' ).appendTo( 'body' );
+				}
+				else
+					ShowAlertDialog( 'Gift Card Declined', 'You have successfully declined this gift card.  These funds will be refunded to the purchaser.' ).done( function() { location.reload() } );
+			}
+			else if ( bAccept == 1 && transport.responseJSON.success == 8 )
+			{
+								AcceptGiftCard_RequireBillingInfo( gidGiftCardID );
+			}
+			else
+			{
+				if ( bAccept == 1 )
+					ShowAlertDialog( 'Error', 'An error occurred accepting your gift, please try again in a few minutes.' );
+				else
+					ShowAlertDialog( 'Error', 'An error occurred declining your gift, please try again in a few minutes.' );
+			}
+
+		},
+		onFailure: function( transport )
+		{
+			if ( bAccept == 1 )
+				ShowAlertDialog( 'Error', 'An error occurred accepting your gift, please try again in a few minutes.' );
+			else
+				ShowAlertDialog( 'Error', 'An error occurred declining your gift, please try again in a few minutes.' );
+		}
+	} );
+}
+

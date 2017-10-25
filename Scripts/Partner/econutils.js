@@ -784,7 +784,7 @@ function OpenContextList( unAppID, sContextID, rSelectedContexts )
 				}
 				else
 				{
-					oNewContextNode.append( oNewContext.name );
+					oNewContextNode.text( oNewContext.name );
 				}
 
 				// private contexts should be marked as such
