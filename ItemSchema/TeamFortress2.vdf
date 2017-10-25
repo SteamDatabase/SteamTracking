@@ -21073,6 +21073,7 @@
 			"name"	"The Ubersaw"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve weapon_ubersaw paintkit_base"
+			"particle_suffix"	"ubersaw"
 			"xifier_class_remap"	"ubersaw"
 		}
 		"38"
@@ -35028,7 +35029,9 @@
 			}
 			"static_attrs"
 			{
+				"min_viewmodel_offset"		"10 0 -11"
 				"item_meter_charge_type"		"1"
+				"item_meter_charge_rate"			"30"
 				"meter_label"			"#TF_Sandwich"
 			}
 			"attributes"
@@ -48282,6 +48285,7 @@
 			{
 				"min_viewmodel_offset"		"10 0 -11"
 				"item_meter_charge_type"			"1"
+				"item_meter_charge_rate"			"30"
 				"meter_label"				"#TF_Sandwich"
 			}
 			"attributes"
@@ -59124,6 +59128,8 @@
 				"item_meter_damage_for_full_charge"			"750"
 				"item_meter_resupply_denied"		"1"
 				"grenades1_resupply_denied"				"1"
+				"item_meter_starts_empty_DISPLAY_ONLY"	"1"
+				"item_meter_charge_type_3_DISPLAY_ONLY"	"1"
 				"meter_label"							"#TF_Gas"
 			}
 			"visuals"
@@ -126941,8 +126947,10 @@
 		{
 			"name"	"item_meter_resupply_denied"
 			"attribute_class"	"item_meter_resupply_denied"
+			"description_string"	"#Attrib_MeterResupplyDenied"
 			"description_format"	"value_is_additive"
-			"hidden"	"1"
+			"hidden"	"0"
+			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
 		"851"
@@ -127168,6 +127176,26 @@
 			"hidden" "0"
 			"effect_type" "positive"
 			"stored_as_integer" "0"
+		}
+		"878"
+		{
+			"name"	"item_meter_starts_empty_DISPLAY_ONLY"
+			"attribute_class"	"item_meter_starts_empty_DISPLAY_ONLY"
+			"description_string"	"#Attrib_MeterStartsEmpty"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"879"
+		{
+			"name"	"item_meter_charge_type_3_DISPLAY_ONLY"
+			"attribute_class"	"item_meter_charge_type_3_DISPLAY_ONLY"
+			"description_string"	"#Attrib_MeterChargeType3"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 
 
