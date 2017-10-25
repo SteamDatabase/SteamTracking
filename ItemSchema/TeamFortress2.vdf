@@ -46089,7 +46089,7 @@
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.15"
+					"value" "0.85"
 				}
 				"clip size penalty"
 				{
@@ -58989,6 +58989,7 @@
 				"dragons fury neutral properties"		"1"
 				"dragons fury positive properties"		"1"
 				"dragons fury negative properties"		"1"
+				"extinguish restores health"			"20"
 			}
 			"visuals"
 			{
@@ -79259,7 +79260,7 @@
 		"30757"
 		{
 			"name"		"Prinny Pouch"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
 			"first_sale_date"		"2016/07/07"
 			"item_name"		"#TF_prinny_pouch"
 			"item_description"		"#TF_prinny_pouch_Desc"
@@ -79294,7 +79295,7 @@
 			"name"		"Prinny Machete"
 			"first_sale_date"		"2016/07/07"
 			"item_class"		"saxxy"
-			"prefab"		"promo weapon_melee_allclass"
+			"prefab"		"weapon_melee_allclass"
 			"craft_material_type"		"weapon"
 			"craft_class"		""
 			"capabilities"
@@ -79355,7 +79356,7 @@
 		"30759"
 		{
 			"name"		"Prinny Hat"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"first_sale_date"		"2016/07/07"
 			"item_name"		"#TF_prinny_hat"
 			"item_description"		"#TF_prinny_hat_Desc"
