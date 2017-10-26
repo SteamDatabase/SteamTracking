@@ -1,6 +1,111 @@
 
 var iAjaxCalls = 0;
 var g_sBaseURL = "";
+var g_emailVerificationDialog = null;
+var g_verificationPolling = null;
+
+function StartCreationSession()
+{
+
+	$J.ajax( {
+		method: 'POST',
+		url: g_sBaseURL + 'join/ajaxverifyemail',
+		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val() }
+	})
+	.done( function( data ) {
+
+		if ( data.success != 1 )
+		{
+			ShowError( 'There was a problem creating your Steam account, please try again.' );
+		}
+		else
+		{
+			g_creationSessionID = data.sessionid;
+
+			WaitForEmailVerification();
+		}
+	} );
+
+}
+
+function WaitForEmailVerification()
+{
+	if ( !g_creationSessionID )
+		return;
+
+	if ( typeof( g_verificationPolling ) != 'undefined' )
+	{
+		clearInterval( g_verificationPolling );
+	}
+
+	var $strDialogContent = $J( '#email_verification_dialog' );
+
+	g_emailVerificationDialog =  ShowDialog( 'Verify Your Email', $strDialogContent, { bExplicitDismissalOnly: true }  );
+
+	$J( '.insert_verification_email' ).text( $J( '#email' ).val() );
+	$strDialogContent.show();
+	g_emailVerificationDialog.SetRemoveContentOnDismissal( false );
+	g_emailVerificationDialog.AdjustSizing();
+
+
+	g_verificationPolling = setInterval( function() {
+		$J.ajax( {
+			method: 'POST',
+			url: g_sBaseURL + 'join/ajaxcheckemailverified',
+			data: { 'creationid' : g_creationSessionID }
+		})
+			.done( function( eResult ) {
+
+				switch( eResult )
+				{
+					case 1:
+						EmailConfirmedVerified();
+						break;
+					case 10:
+												break;
+
+					case 42:
+												ChangeEmail();
+						ShowError( 'There was an error with your registration, please try again.' );
+						break;
+
+					case 27:
+						ChangeEmail();
+						ShowError( 'You\'ve waited too long to verify your email. Please try creating your account and verifying your email again.' )
+						break;
+
+					case 36:
+												break;
+				}
+
+			} );
+	}, 5000 );
+
+}
+
+function ChangeEmail()
+{
+	clearInterval( g_verificationPolling );
+	g_emailVerificationDialog.Dismiss();
+	g_creationSessionID = null;
+	$J('#cart_area').slideDown();
+	$J('#email_used_area').hide();
+	Effect.ScrollTo( 'cart_area' );
+	$J( '#email' ).val( '' );
+	$J( '#reenter_email' ).val( '' );
+}
+
+function EmailConfirmedVerified()
+{
+	if ( g_emailVerificationDialog )
+	{
+		g_emailVerificationDialog.Dismiss();
+	}
+
+	clearInterval( g_verificationPolling );
+	ReallyCreateAccount();
+}
+
 
 function InitJoinSteamJS( sBaseURL )
 {
@@ -67,7 +172,7 @@ function FetchGETVariables()
 
 function CreateAccountAnyway()
 {
-	ReallyCreateAccount();
+	StartCreationSession();
 }
 
 function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
@@ -197,18 +302,18 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		{
 			errorString = '';
 			errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
-		}		
-	
-		$('error_display').innerHTML = errorString;
-		$('error_display').style.display = 'block';
-		Effect.ScrollTo( 'error_display' );
-		new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
+		}
+
+		ShowError( errorString );
+
 	}
 	else
 	{
+		$J('#error_display').slideUp();
+
 		if ( bEmailIsAvailable )
 		{
-			ReallyCreateAccount();
+			StartCreationSession();
 		}
 		else
 		{
@@ -234,10 +339,11 @@ function ReallyCreateAccount()
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  ticket : $('ticket').value,
 	    			  count : iAjaxCalls,
-	    			  lt : $('lt').value },
-		onSuccess: function(transport) {
+	    			  lt : $('lt').value,
+					  creation_sessionid : g_creationSessionID },
+		onSuccess: function( transport ) {
 			var bSuccess = false;
-			if (transport.responseText) {
+			if ( transport.responseText ) {
 				try {
 					var result = transport.responseText.evalJSON(true);
 				} catch (e) {
@@ -247,12 +353,8 @@ function ReallyCreateAccount()
 					bSuccess = true;
 			}
 			if (!bSuccess) {
-				$('cart_area').style.display = 'block';
-				$('email_used_area').style.display = 'none';
-				$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
-				$('error_display').style.display = 'block';
-				Effect.ScrollTo('error_display');
-				new Effect.Highlight('error_display', { endcolor: '#CEC7BD', startcolor: '#CCC983' });
+
+				ShowError( result.details ? result.details : 'Your account creation request failed, please try again later.' );
 
 								if (result && result.ticket)
 					$('ticket').value = result.ticket;
@@ -277,14 +379,20 @@ function ReallyCreateAccount()
 		},
 	    onFailure: function()
 	    {
-	    	$('cart_area').style.display = 'block';
-      	  	$('email_used_area').style.display = 'none';
-	     	$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
-	      	$('error_display').style.display = 'block';
-	      	Effect.ScrollTo( 'error_display' );
-			new Effect.Highlight( 'error_display', { endcolor : '#CEC7BD', startcolor : '#CCC983' } );
+		    ShowError( 'Your account creation request failed, please try again later.' );
 		}
   });
+}
+
+function ShowError( strError )
+{
+	$('cart_area').style.display = 'block';
+	$('email_used_area').style.display = 'none';
+	$('error_display').innerHTML = strError;
+	$('error_display').style.display = 'block';
+	Effect.ScrollTo( 'error_display' );
+	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
+
 }
 
 
