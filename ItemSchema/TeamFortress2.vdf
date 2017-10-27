@@ -277,6 +277,7 @@
 			"demo_eyepatch"		"1"				
 			"soldier_gloves"	"1"
 			"spy_gloves"		"1"
+			"sniper_headband"	"1"
 		}
 		"shared"
 		{
@@ -314,7 +315,6 @@
 			"heavy_hair"		"1"			
 			"medic_pipe"		"1"
 			"soldier_legs"		"1"
-			"sniper_headband"	"1"
 		}
 		"shared"
 		{
@@ -6844,7 +6844,7 @@
 					"get_player"		"by_id"
 					"player_key"		"userid"
 					"type"		"player_condition"
-					"value"		"TF_COND_HALLOWEEN_IN_HELL"
+					"value"		"TF_COND_HALLOWEEN_GHOST_MODE"
 				}
 				"3"
 				{
@@ -7297,7 +7297,7 @@
 				"2"
 				{
 					"get_player"		"by_id"
-					"player_key"		"attacker"
+					"player_key"		"userid"
 					"type"		"player_condition"
 					"value"		"TF_COND_STUNNED"
 				}
@@ -10836,6 +10836,23 @@
 			}
 		}
 	}
+	"231"
+	{
+		"condition_logic"
+		{
+			"0"
+			{
+				"get_player"		"by_id"
+				"is_owner"		"1"
+				"player_key"		"collecting_player"
+				"type"		"player_is_owner"
+			}
+			"event_name"		"halloween_soul_collected"
+			"score_key_name"		"soul_count"
+			"type"		"event_listener"
+		}
+		"name"		"Collect a Soul"
+	}
 }
 	"item_series_types"
 	{
@@ -11904,6 +11921,18 @@
 			"max_drop_count"					"26"
 			"uses_credits"						"1"
 		}
+
+		"7"
+		{
+			"name"								"operation_halloween2017"
+			"required_item_name"				"Activated Halloween Pass"
+			"operation_start_date"				"2017-10-15 00:00:00" 
+			"stop_adding_to_queue_date"			"2017-11-09 00:00:00" 
+			"stop_giving_to_player_date"		"2017-11-09 00:00:00" 
+			"is_campaign"						"1"
+			"max_drop_count"					"26"
+			"uses_credits"						"1"
+		}
 	}
 	"prefabs"
 	{
@@ -12279,6 +12308,10 @@
 			"max_ilevel"	"1"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 		}
 
 		"tournament_medal"
@@ -19827,7 +19860,7 @@
 				"never craftable"			"1"
 				"cannot restore"			"1"
 				"is marketable"				"1"
-				"is commodity"				"1"
+				"is commodity"				"0"
 				"texture_wear_default"		"0"
 				"weapon_stattrak_module_scale"			"2"
 			}
@@ -44385,13 +44418,10 @@
 			"max_ilevel"	"1"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
-			"attributes"
+			"static_attrs"
 			{
-				"is marketable"
-				{
-					"attribute_class"	"is_marketable"
-					"value"	"1"
-				}
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 		}
 		"726"
@@ -45531,13 +45561,10 @@
 			"image_inventory"	"backpack/crafting/mvm_squad_surplus"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attributes"
+			"static_attrs"
 			{
-				"is marketable"
-				{
-					"attribute_class"	"is_marketable"
-					"value"	"1"
-				}
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
@@ -59060,7 +59087,6 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -9"	
-				"boots falling stomp"		"1"
 				"damage force increase hidden"	"1.3"
 				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
 				"taunt attack time"		"4.7"
@@ -59973,7 +59999,62 @@
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
-
+		"1195"
+		{
+			"name"	"Halloween Contract Package"
+			"item_class"	"tf_wearable"
+			"craft_class"	""
+			"craft_material_type"	""
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_contract_rewards"
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Package_Type"
+			"item_name"	"#TF_HalloweenContractPackage"
+			"item_description"	"#TF_HalloweenContractPackage_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/crafting/halloween_package"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
 
 
 
@@ -101655,6 +101736,10 @@
 		{		
 			"name"				"Ready Steady Pan Winner Season 3"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"			"1"
+			}
 			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Winner"
 			"item_description"	"#TF_TournamentMedal_Season3"
 			"image_inventory"	"backpack/workshop/player/items/all_class/rsp_s03_winner/rsp_s03_winner"
@@ -101667,6 +101752,10 @@
 		{		
 			"name"				"Ready Steady Pan Participant Season 3"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"			"1"
+			}
 			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Participant"
 			"item_description"	"#TF_TournamentMedal_Season3"
 			"image_inventory"	"backpack/workshop/player/items/all_class/rsp_s03_participant/rsp_s03_participant"
@@ -108799,7 +108888,7 @@
 				"allow_halloween_offering"			"1"
 				"never craftable"					"1"
 				
-				"deactive date"					"1479391200"	
+				"deactive date"					"1510236000"	
 				
 				"kill eater score type"			"106"			
 				"kill eater score type 2"		"107"			
