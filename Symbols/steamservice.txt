@@ -1719,6 +1719,7 @@
  T CWorkThreadPool::StopWorkThreads()
  T CWorkThreadPool::~CWorkThreadPool()
  T CWorkThreadPoolSignal::Signal()
+ T CWorkThreadPoolSignal::~CWorkThreadPoolSignal()
  T CallFlushLogFunc
  T Camellia_DecryptBlock
  T Camellia_DecryptBlock_Rounds
@@ -3044,6 +3045,7 @@
  b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b CIPCServer::Thread_MainLoop()::fAsserted
+ b CIPCServer::Thread_MainLoop()::signalWorkThreadPool
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
@@ -3147,6 +3149,7 @@
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b guard variable for CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
+ b guard variable for CIPCServer::Thread_MainLoop()::signalWorkThreadPool
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b guard variable for GetMemAlloc::s_StdMemAlloc

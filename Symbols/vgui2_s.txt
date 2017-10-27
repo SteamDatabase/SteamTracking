@@ -2678,6 +2678,7 @@
  __stack_chk_guard
  __stderrp
  _dispatch_main_q
+ _exit
  abort
  access
  aglChoosePixelFormat
