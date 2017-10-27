@@ -305,7 +305,7 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 	{
 		$Target = $J('<div/>', {id: 'movie_' + id, 'class': 'highlight_flash_player_notice', style: 'display: none;'})
 
-		var strMessage = 'You will need to <a href="http://www.adobe.com/go/getflashplayer" target="_blank">Install</a> the latest Flash plugin to view this page properly.';
+		var strMessage = 'There was an error trying to play this video. Please make sure your browser is up to date.';
 		if ( Steam.BIsUserInSteamClient() )
 		{
 			strMessage = strMessage.replace( /http:\/\//g, 'steam://openurl/' );

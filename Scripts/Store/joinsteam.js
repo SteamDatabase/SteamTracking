@@ -16,7 +16,14 @@ function StartCreationSession()
 
 		if ( data.success != 1 )
 		{
-			ShowError( 'There was a problem creating your Steam account, please try again.' );
+			var strError = 'There was a problem creating your Steam account, please try again.';
+
+			if ( data.success == 14 )
+			{
+				strError = 'The account name you have chosen is not available. Please choose another name.';
+			}
+
+			ShowError( strError );
 		}
 		else
 		{
@@ -65,6 +72,7 @@ function WaitForEmailVerification()
 												break;
 
 					case 42:
+					case 29:
 												ChangeEmail();
 						ShowError( 'There was an error with your registration, please try again.' );
 						break;
@@ -218,6 +226,12 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		}
 	}
 
+	if ( !g_bAccountNameAvailable )
+	{
+		errorString += 'The account name you have chosen is not available. Please choose another name.<br/>';
+		rgBadFields.accountname = true;
+	}
+
 	var password =  $('password').value;
 	if ( password.length > 64 )
 	{
@@ -356,6 +370,8 @@ function ReallyCreateAccount()
 
 				ShowError( result.details ? result.details : 'Your account creation request failed, please try again later.' );
 
+				RefreshCaptcha();
+
 								if (result && result.ticket)
 					$('ticket').value = result.ticket;
 
@@ -392,7 +408,6 @@ function ShowError( strError )
 	$('error_display').style.display = 'block';
 	Effect.ScrollTo( 'error_display' );
 	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
-
 }
 
 
@@ -403,6 +418,7 @@ function UpdateAccountName( value )
 }
 
 g_strLastAccountNameCheck = '';
+var g_bAccountNameAvailable = false;
 function CheckAccountNameAvailability()
 {
 	var strName = document.getElementById('accountname').value;
@@ -431,11 +447,13 @@ function CheckAccountNameAvailability()
 	      	  span.innerHTML = 'Available!';
 	      	  span.style.color = "#6C8942";
 	      	  $('form_row_choose_suggested_name').style.display = 'none';
+	      	  g_bAccountNameAvailable = true;
 	      	}
 	      	else
 	      	{
 	      	  span.innerHTML = 'Not available!';
 	      	  span.style.color = "#FF7B00";
+	      	  g_bAccountNameAvailable = false;
 	      	  if ( result.rgSuggestions.length > 0 )
 	      	  {
 	      	  	$('form_row_choose_suggested_name').style.display = 'block';
@@ -649,6 +667,7 @@ function RefreshCaptcha()
 				$('captchaImg').src = g_sBaseURL + 'public/captcha.php?gid='+gid;
 			}
 			document.getElementById('captchagid').value = gid;
+			$J('#captcha_text').val( '' );
 		  }
 	    }
 	  });
