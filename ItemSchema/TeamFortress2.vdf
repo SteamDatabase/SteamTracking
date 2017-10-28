@@ -1919,7 +1919,7 @@
 			{
 				"type"		"event_listener"
 				"action"		"increment"
-				"event_name"		"teamplay_capture_blocked"
+				"event_name"		"capper_killed"
 				"0"
 				{
 					"type"		"AND"
@@ -7266,7 +7266,7 @@
 					"type"		"AND"
 				}
 				"action"		"increment"
-				"event_name"		"teamplay_capture_blocked"
+				"event_name"		"capper_killed"
 				"type"		"event_listener"
 			}
 			"end"		"1"
@@ -9529,7 +9529,7 @@
 		"condition_logic"
 		{
 			"type"		"event_listener"
-			"event_name"		"teamplay_capture_blocked"
+			"event_name"		"capper_killed"
 			"0"
 			{
 				"type"		"player_is_owner"
@@ -9838,7 +9838,7 @@
 			{
 				"type"		"event_listener"
 				"action"		"increment"
-				"event_name"		"teamplay_capture_blocked"
+				"event_name"		"capper_killed"
 				"0"
 				{
 					"type"		"AND"
@@ -9988,11 +9988,11 @@
 			{
 				"type"		"event_listener"
 				"action"		"increment"
-				"event_name"		"teamplay_capture_blocked"
+				"event_name"		"capper_killed"
 				"0"
 				{
 					"type"		"player_is_owner"
-					"player_key"		"player"
+					"player_key"		"blocker"
 					"get_player"		"by_entindex"
 					"is_owner"		"1"
 				}
@@ -35663,7 +35663,12 @@
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value" "0.25"
+					"value"	"0.25"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class"	"airblast_vulnerability_multiplier"
+					"value"	"0.25"
 				}
 				"boots falling stomp"
 				{
@@ -129372,7 +129377,7 @@
 		{
 			"attribute_templates"
 			{
-				"unusual_hat_chance_cosmetics_case"		"1"		
+				"unusual_hat_chance_classic_halloween"		"1"		
 				"check_unusual_quality"					"1"		
 			}
 		}
