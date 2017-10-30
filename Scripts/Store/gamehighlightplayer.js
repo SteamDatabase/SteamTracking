@@ -88,7 +88,6 @@ function HighlightPlayer( args )
 	// sniff support
 	this.m_bSupportsWebM = BCanPlayWebm() || BDoesUserPreferHTML5();
 	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
-	this.m_bSupportsFlash = swfobject.hasFlashPlayerVersion(strRequiredVersion);
 
 	//make all the strip items clickable
 	var thisClosure = this;
@@ -312,41 +311,6 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 		}
 		$Target.html( '<p>' + strMessage + '</p>' );
 		$Container.append( $Target );
-
-		if ( this.m_bSupportsFlash )
-		{
-			var rgFlashVars = $J.extend( {}, this.m_rgDefaultMovieFlashvars, this.m_rgMovieFlashvars[ 'movie_' + id ] );
-
-			if ( !this.m_bVideoOnlyMode )
-			{
-				if ( BIsUserGameHighlightAutoplayEnabled() )
-					rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
-				if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
-					rgFlashVars.START_MUTE = 'true';
-				var flVolume = GetGameHighlightPlayerVolume();
-				if ( flVolume != -1 )
-					rgFlashVars.SAVED_VOLUME = flVolume;
-			}
-
-			if ( $Target.length && $Target.is('div') )
-			{
-				var strRequiredVersion = "9";
-				if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
-				swfobject.embedSWF( "https://steamstore-a.akamaihd.net/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
-
-				// is the element still around?
-				$Target = $JFromIDOrElement(strTarget);
-				if ( $Target.length && $Target.is( 'div' ) )
-				{
-					//looks like the user doesn't have flash, show this message
-					$Target.show();
-				}
-			}
-		}
-		else
-		{
-			$Target.show();
-		}
 	}
  }
 
