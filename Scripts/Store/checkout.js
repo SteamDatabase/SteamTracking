@@ -273,8 +273,32 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				default:
 					break;
 			}
-		
-			g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			
+			var bOpenURLInSteamExternalWindow = false;
+			
+			if ( g_bIsInClientOrOverlay )
+			{
+				switch ( method.value )
+				{
+					case 'itauonline':
+					case 'alipay':
+					case 'unionpay':
+						bOpenURLInSteamExternalWindow = true;
+						break;
+					
+					default:
+						break;
+				}
+			}
+			
+			if ( bOpenURLInSteamExternalWindow )
+			{
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );				
+			}
+			else
+			{
+				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			}
 
 						if ( displayPendingReceipt )
 			{
