@@ -16,7 +16,7 @@ function StartCreationSession()
 
 		if ( data.success != 1 )
 		{
-			var strError = 'There was a problem creating your Steam account, please try again.';
+			var strError = 'There was a problem creating your Steam account, please try again later.';
 
 			if ( data.success == 14 )
 			{
@@ -87,7 +87,7 @@ function WaitForEmailVerification()
 				}
 
 			} );
-	}, 5000 );
+	}, 3000 );
 
 }
 
@@ -371,6 +371,8 @@ function ReallyCreateAccount()
 				ShowError( result.details ? result.details : 'Your account creation request failed, please try again later.' );
 
 				RefreshCaptcha();
+
+				g_creationSessionID = null;
 
 								if (result && result.ticket)
 					$('ticket').value = result.ticket;
