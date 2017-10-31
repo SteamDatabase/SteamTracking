@@ -120,25 +120,6 @@
             ]
         },
         {
-            "name": "GetScheduledLeagueGames",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "date_min",
-                    "type": "uint32",
-                    "optional": true,
-                    "description": "The starting time stamp to collect scheduled games from. If ignored, it will use the current time"
-                },
-                {
-                    "name": "date_max",
-                    "type": "uint32",
-                    "optional": true,
-                    "description": "The ending time stamp. If this is more than 7 days past the starting time stamp, it will be clamped to 7 days."
-                }
-            ]
-        },
-        {
             "name": "GetTeamInfoByTeamID",
             "version": 1,
             "httpmethod": "GET",
