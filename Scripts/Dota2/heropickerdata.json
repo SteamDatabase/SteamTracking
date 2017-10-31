@@ -2024,5 +2024,45 @@
             "Disabler",
             "Initiator"
         ]
+    },
+    "pangolier": {
+        "name": "npc_dota_hero_pangolier",
+        "bio": "npc_dota_hero_pangolier_bio",
+        "atk": "melee",
+        "atk_l": "Melee",
+        "roles": [
+            "Carry",
+            "Nuker",
+            "Disabler",
+            "Durable",
+            "Escape",
+            "Initiator"
+        ],
+        "roles_l": [
+            "Carry",
+            "Nuker",
+            "Disabler",
+            "Durable",
+            "Escape",
+            "Initiator"
+        ]
+    },
+    "dark_willow": {
+        "name": "npc_dota_hero_dark_willow",
+        "bio": "npc_dota_hero_dark_willow_bio",
+        "atk": "ranged",
+        "atk_l": "Ranged",
+        "roles": [
+            "Support",
+            "Nuker",
+            "Disabler",
+            "Escape"
+        ],
+        "roles_l": [
+            "Support",
+            "Nuker",
+            "Disabler",
+            "Escape"
+        ]
     }
 }
