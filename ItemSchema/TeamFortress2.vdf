@@ -35064,7 +35064,7 @@
 			{
 				"min_viewmodel_offset"		"10 0 -11"
 				"item_meter_charge_type"		"1"
-				"item_meter_charge_rate"			"30"
+				"item_meter_charge_rate"			"10"
 				"meter_label"			"#TF_Sandwich"
 			}
 			"attributes"
