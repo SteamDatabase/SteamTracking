@@ -5,6 +5,7 @@ body.v6 .game_area_description h2,
 body.v6 .item_store_items_block h2,
 body.v6 .game_area_dlc_section h2,
 body.v6 .steam_curators_block h2,
+body.v6 .referring_curator_ctn h2,
 body.v6 #game_area_purchase h2.package_group,
 body.v6 .extra_content_spacer h2,
 .game_description_column .block .block_header h4,
@@ -4650,50 +4651,83 @@ p.reason.info:before {
 }
 
 .referring_curator_ctn {
-	background: rgba( 255, 255, 255, 0.1);
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .referring_curator {
-	background: -webkit-linear-gradient( 60deg, #93b0bc 5%,#a9b9c1 95%););background: linear-gradient( 60deg, #93b0bc 5%,#a9b9c1 95%););	padding: 17px 15px;
-	width: 100%;
-	margin: 0px 0px 8px -15px;
-	border: 1px solid #c1ced4;
-	box-shadow: 0 0 27px #c1ced4;
+	background: -webkit-linear-gradient( 60deg, #576674 5%,#313b46 95%););background: linear-gradient( 60deg, #576674 5%,#313b46 95%););	padding: 16px;
+	margin: 0px 0px 8px 0px;
 
 	display: flex;
-	align-items: center;
+
 }
 
 body.v6 .page_content.notes {
 	margin-bottom: 20px;
 }
 .referring_curator_note {
-	color: #577180;
+	color: #93b0bb;
 	margin-top: 3px;
 	font-size: 11px;
 }
 
+.referring_curator .video {
+	margin-right: 14px;
+	width: 320px;
+	height: 180px;
+	flex-shrink: 0;
+}
+
+.referring_curator .video iframe {
+	width: 100%;
+	height: 100%;
+}
+
 .referring_curator .avatar, .referring_curator .avatar img {
-	width: 109px;
-	height: 109px;
+	width: 50px;
+	height: 50px;
 }
 .referring_curator .blurb {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-left: 20px;
-	position: relative;
+			margin-left: 14px;
+
 	font-style: italic;
-	color: #000;
+	color: #fff;
 	font-size: 16px;
-	text-shadow: 1px 1px #bbcacf;
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.5);
+
+	display: flex;
+	line-height: 25px;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.referring_curator .rating {
-	position: absolute;
-	left: -10px;
+.referring_curator .blurb span {
+	text-transform: uppercase;
+	font-size: 17px;
+	margin-top: -4px;
+	display: block;
+	letter-spacing: 1.5px;
+	font-weight: 500;
+	font-style: normal;
+}
+.referring_curator .blurb p {
+	text-indent: -7px;
 }
 
 .review_ctn {
 	border-top: 1px solid #000;
+}
+
+.color_recommended{
+	color: #66c0f4;
+}
+.color_not_recommended {
+	color: #f49866;
+}
+.color_informational {
+	color: #f5df67;
 }

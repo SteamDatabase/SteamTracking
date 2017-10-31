@@ -267,38 +267,18 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'pagoefectivo':
 				case 'trustly':
 				case 'nodwin_cod':
+				case 'pagofacil':
+				case 'rapipago':
+				case 'santanderrio':
+				case 'redpagos':
 					displayPendingReceipt = true;
 					break;
 						
 				default:
 					break;
 			}
-			
-			var bOpenURLInSteamExternalWindow = false;
-			
-			if ( g_bIsInClientOrOverlay )
-			{
-				switch ( method.value )
-				{
-					case 'itauonline':
-					case 'alipay':
-					case 'unionpay':
-						bOpenURLInSteamExternalWindow = true;
-						break;
-					
-					default:
-						break;
-				}
-			}
-			
-			if ( bOpenURLInSteamExternalWindow )
-			{
-				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );				
-			}
-			else
-			{
-				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
-			}
+		
+			g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
 
 						if ( displayPendingReceipt )
 			{
@@ -4951,6 +4931,10 @@ function DisplayPendingReceiptPage()
 			break;
 
 		case 'molpoints':
+		case 'pagofacil':
+		case 'rapipago':
+		case 'redpagos':
+		case 'santanderrio':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase.';
 			break;

@@ -264,6 +264,19 @@ select {
 	font-size: 13px;
 }
 
+.dev_write_response {
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	border: 1px solid #a55b13;
+	font-size: 13px;
+	margin-top: 25px;
+	margin-bottom: -30px;
+}
+
+.dev_edit_response {
+	font-size: 12px;
+}
+
 .btn_grey_grey.btn_ico_thumbs_down {
 	padding-left: 20px;
 }

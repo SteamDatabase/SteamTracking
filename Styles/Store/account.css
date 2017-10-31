@@ -618,7 +618,8 @@ div.youraccount_history_home
 	overflow: hidden;
 }
 
-.account .breadcrumbs {
+.account .breadcrumbs,
+.account_preferences .breadcrumbs {
 	padding-top: 24px;
 }
 
@@ -1099,7 +1100,8 @@ td.wht_total {
 	height:100px;
 }
 
-.account .page_header_ctn {
+.account .page_header_ctn,
+.account_preferences .page_header_ctn {
 	background: rgba(0, 0, 0, 0) url("/public/images/v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
 }
 
@@ -1255,19 +1257,6 @@ td.wht_total {
 
 .minispacer {
 	height: 15px;
-}
-
-.account_preferences .breadcrumbs {
-	padding-top: 28px;
-}
-.account_preferences .page_header_ctn {
-	background: none;
-	border-bottom: 1px solid rgba( 103, 192, 244, 0.2 );
-	padding-bottom: 11px;
-	margin-bottom: 20px;
-	width: 940px;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 .ignoredapps > div {
