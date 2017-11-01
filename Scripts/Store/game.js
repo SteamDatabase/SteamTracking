@@ -418,7 +418,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
 
-	$J.get( 'http://store.steampowered.com//appreviews/' + appid,{
+	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
 		'start_offset' : startOffset,
 		'day_range' : dayRange,
 		'start_date' : startDate,
@@ -431,6 +431,9 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 		'purchase_type' : purchaseType,
 		'review_beta_enabled' : reviewBetaEnabled
 	}).done( function( data ) {
+
+		RecordAJAXPageView( this.url );
+
 		if ( data.success == 1 )
 		{
 			$J( "#Reviews_loading" ).hide();
