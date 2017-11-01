@@ -14594,13 +14594,6 @@
 			"static_attrs"
 			{
 				"extinguish restores health"			"20"
-				"flame_gravity"							"0"
-				"flame_drag"							"8.5"
-				"flame_up_speed"						"50"
-				"flame_speed"							"2450"
-				"flame_spread_degree"					"2.8"
-				"flame_lifetime"						"0.6"
-				"flame_random_life_time_offset"			"0.1"
 			}
 			"visuals"
 			{
@@ -14618,7 +14611,7 @@
 			"static_attrs"
 			{
 				"flame_gravity"							"0"
-				"flame_drag"							"12"
+				"flame_drag"							"8.5"
 				"flame_up_speed"						"50"
 				"flame_speed"							"2450"
 				"flame_spread_degree"					"2.8"
@@ -19860,7 +19853,6 @@
 				"never craftable"			"1"
 				"cannot restore"			"1"
 				"is marketable"				"1"
-				"is commodity"				"0"
 				"texture_wear_default"		"0"
 				"weapon_stattrak_module_scale"			"2"
 			}
@@ -123402,7 +123394,7 @@
 			"description_string"	"#Attrib_AirBlastVulnerabilityMultipier"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
-			"effect_type"	"negative"
+			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
 		"330"
