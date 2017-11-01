@@ -1046,6 +1046,17 @@ function UpdateActiveFilters()
 	{
 		$J( "#reviews_filter_graph" ).hide();
 	}
+	
+	// beta
+	if ( $J( "#ReviewBetaCheckbox" ).attr( "checked" ) )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_beta" ).show();
+	}
+	else
+	{
+		$J( "#reviews_beta" ).hide();
+	}
 
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
 }
@@ -1069,9 +1080,10 @@ function ChangeReviewPurchaseTypeFilter()
 	ShowFilteredReviews();
 }
 
-function ChangeReviewBetaFilter()
+function ClearReviewBetaFilter()
 {
-	var bReviewBetaEnabled = $J('#ReviewBetaCheckbox').is(':checked') ? 1 : 0;
+	$J('#ReviewBetaCheckbox').attr( 'checked', false );
+	var bReviewBetaEnabled = false;
 	V_SetCookie( "review_beta_enabled", bReviewBetaEnabled, 7, "app/" );
 	ShowFilteredReviews();
 }
