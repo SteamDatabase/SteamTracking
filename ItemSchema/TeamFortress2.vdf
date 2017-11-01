@@ -14597,7 +14597,7 @@
 				"flame_gravity"							"0"
 				"flame_drag"							"8.5"
 				"flame_up_speed"						"50"
-				"flame_speed"							"2300"
+				"flame_speed"							"2450"
 				"flame_spread_degree"					"2.8"
 				"flame_lifetime"						"0.6"
 				"flame_random_life_time_offset"			"0.1"
@@ -14620,7 +14620,7 @@
 				"flame_gravity"							"0"
 				"flame_drag"							"12"
 				"flame_up_speed"						"50"
-				"flame_speed"							"2300"
+				"flame_speed"							"2450"
 				"flame_spread_degree"					"2.8"
 				"flame_lifetime"						"0.6"
 				"flame_random_life_time_offset"			"0.1"
@@ -112883,7 +112883,7 @@
 			"prefab"	"unusualifier_base"
 			"static_attrs"
 			{
-				"unusualifier_attribute_template_name"	"taunt_unusualifier_effects"
+				"unusualifier_attribute_template_name"	"taunt_unusualifier_halloween_effects"
 			}
 		}
 
@@ -128805,6 +128805,15 @@
 			}
 		}
 
+		"taunt_unusualifier_halloween_effects"
+		{
+			"even_chance_templates"
+			{
+				"taunt_unusualifier_halloween2014_effects"	"1"
+				"taunt_unusualifier_halloween2016_effects"	"1"
+			}
+		}
+
 		"paintkit_100"
 		{
 			"is_even_chance_attr"
@@ -131865,6 +131874,70 @@
 		{
 			"hide_lootlist"		"1"
 			"loot_list_collection"		"Campaign3Paintkits_case2_collection"
+		}
+		"campaign3_collection_1_paintkit_144"
+		{
+			"Paintkit 144"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_139"
+		{
+			"Paintkit 139"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_160"
+		{
+			"Paintkit 160"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_122"
+		{
+			"Paintkit 122"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_114"
+		{
+			"Paintkit 114"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_113"
+		{
+			"Paintkit 113"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_109"
+		{
+			"Paintkit 109"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_saxton_select_390"
+		{
+			"Paintkit 390"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_normal_distribution"							"1"
+			}
 		}
 		"campaign3_collection_1_tier_1"
 		{
