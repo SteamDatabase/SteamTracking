@@ -277,8 +277,32 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				default:
 					break;
 			}
-		
-			g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			
+			var bOpenURLInSteamExternalWindow = false;
+			
+			if ( g_bIsInClientOrOverlay )
+			{
+				switch ( method.value )
+				{
+					case 'itauonline':
+					case 'alipay':
+					case 'unionpay':
+						bOpenURLInSteamExternalWindow = true;
+						break;
+					
+					default:
+						break;
+				}
+			}
+			
+			if ( bOpenURLInSteamExternalWindow )
+			{
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );				
+			}
+			else
+			{
+				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );
+			}
 
 						if ( displayPendingReceipt )
 			{
@@ -3093,27 +3117,9 @@ function UpdatePaymentInfoForm()
 			$('payment_method_specific_note').innerHTML = 'This payment method cannot be used for purchasing wallet credit.';
 		}
 	
-				if ( g_bIsInOverlay && method.value == 'alipay' )
-		{
-			$J('#submit_payment_info_btn').hide();
-			$('cant_use_payment_method_in_overlay').innerHTML = 'The selected payment method cannot be used from within the game to fund your Steam Wallet.<br><br>\n								To complete any item purchases with the selected payment method, you will need to add funds to your Steam Wallet through an internet browser first.<br><br>\n								You can fund your Wallet using this link in your web browser: <a href="http://store.steampowered.com/steamaccount/addfunds">http://store.steampowered.com/steamaccount/addfunds</a><br><br>\n								After adding funds to your Steam Wallet, you will then be able to complete your item transaction through the in game store using your Steam Wallet balance.';
-			$J('#cant_use_payment_method_in_overlay').show();
 
-			bShowCountryVerification = false;
-		}
-		else if ( g_bIsInClientOrOverlay && ( method.value == 'itauonline' || method.value == 'unionpay' ) )
-		{
-			$J('#submit_payment_info_btn').hide();
-			$('cant_use_payment_method_in_overlay').innerHTML = 'Your purchase cannot be completed because the selected payment method is not compatible with the Steam client.<br><br>\n								To complete your purchase, please select a different payment method or visit <a href="steam://openurl_external/http://store.steampowered.com">http://store.steampowered.com</a> in an external web browser.';
-			$J('#cant_use_payment_method_in_overlay').show();
-
-			bShowCountryVerification = false;
-		}
-		else
-		{
-			$J('#submit_payment_info_btn').show();
-			$J('#cant_use_payment_method_in_overlay').hide();
-		}	
+		$J('#submit_payment_info_btn').show();
+		$J('#cant_use_payment_method_in_overlay').hide();
 		
 		var $CCFields = $J('#credit_card_row, #card_number_label, #card_number, #expiration_date_cvv_label, #expiration_date_label, #expiration_month_dselect_container, #expiration_year_dselect_container')
 		if ( bShowCreditCardNumberExp )
