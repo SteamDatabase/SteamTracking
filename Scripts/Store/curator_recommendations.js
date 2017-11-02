@@ -362,7 +362,7 @@ function ShowEditHandles()
 			var unListId = false;
 			var strListName = false;
 
-			var modal = ShowAutocompleteDialog( "Select list", "Type below to select the list you wish to feature in this section",
+			var modal = ShowAutocompleteDialog( "Select list", "Type below to select the list you wish to feature in this section.<br><br>You can only select public lists.",
 				function(term, fnResponse)
 				{
 					var localeTerm = term.toLocaleLowerCase();
