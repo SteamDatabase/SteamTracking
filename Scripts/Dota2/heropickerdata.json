@@ -2026,8 +2026,8 @@
         ]
     },
     "pangolier": {
-        "name": "npc_dota_hero_pangolier",
-        "bio": "npc_dota_hero_pangolier_bio",
+        "name": "Pangolier",
+        "bio": "The men and women that make up the Nivan Gallants live a life of swordplay, chandelier swinging, and tawdry romance. And while all adhere to their creed that \u201cA life of adventure is the only life worth living,\u201d the exploits of Dont\u00e9 Panlin still manage to raise the eyebrows of even the most hedonistic of swordsmen.<br><br>There is no monster he won\u2019t slay. No creature he won\u2019t woo. No tyrant he won\u2019t stand against. And no noble immune to his silver tongue.",
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
@@ -2048,8 +2048,8 @@
         ]
     },
     "dark_willow": {
-        "name": "npc_dota_hero_dark_willow",
-        "bio": "npc_dota_hero_dark_willow_bio",
+        "name": "Dark Willow",
+        "bio": "Children love telling stories about the whimsical adventures of fairies... That\u2019s because children don\u2019t know that most fairies are spiteful jerks. And in the world of spiteful fairies there are few names spoken of with more contempt than Mireska Sunbreeze.<br><br>Born to a fae merchant king, Mireska grew up in Revtel; a cutthroat nation where manipulation and murder were the norm. But while she was quite adept at navigating the etiquette, unspoken laws, and social rituals that permeated every element of her life, she found the whole thing rather boring.<br><br>So, Mireska did what most rebellious children do: burn down her family estate and set off with her pet wisp Jex to live the life of a wandering grifter.",
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
