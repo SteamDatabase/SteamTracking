@@ -1,7 +1,6 @@
 
 var g_bInHashChange = false;
-var g_oRecommendations = null;
-var g_rgListData = [];
+
 
 function OnRecommendationsRendered()
 {
@@ -280,7 +279,7 @@ function ShowEditHandles()
 
 		var elOptions = $J('<form class="edit_options"></form>');
 
-		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t<\/select>");
+		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"discounted_curations\">Discounted Curations<\/option>\r\n\t\t\t<\/select>");
 
 		elTypeSelect.val( rgNodeData.type );
 
@@ -486,62 +485,6 @@ function WrapFormFieldWithLabel( strLabel, elFormField )
 	return elContainer
 }
 
-function LoadListData()
-{
-	if( this.bLoading )
-		return;
-	this.bLoading = true;
-
-	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxgetlists/',
-		data: {
-			sessionid: g_sessionID,
-			count: 250
-		},
-		type: 'POST'
-	} ).done( function ( data )
-	{
-		g_rgListData = data.list_details;
-	});
-
-}
-
-function ShowAutocompleteDialog( strTitle, strDesc, fnSuggest, fnSelect, fnDone, fnFieldModified )
-{
-	var modal = ShowPromptDialog( strTitle, strDesc, "OK", "Cancel", { 'bNoPromiseDismiss': true } );
-	modal.done( fnDone );
-
-	modal.fail( function(){
-		modal.Dismiss();
-	});
-
-	var $btnOk = $J($J('.newmodal_buttons button', modal.GetContent())[0]);
-
-	modal.DisableInput = function(){
-		fnFieldModified( );
-		$btnOk.addClass('btn_disabled');
-	};
-
-	modal.EnableInput = function(){
-		$btnOk.removeClass('btn_disabled');
-	};
-
-
-	var $elDialogContent = $J('input', modal.m_$Content);
-	$elDialogContent.on('input', function(){
-		modal.DisableInput();
-	});
-
-	new CTextInputSuggest( $elDialogContent ,
-		fnSuggest,
-		fnSelect
-	);
-
-	modal.DisableInput();
-	modal.Show();
-
-	return modal;
-}
 
 
 function ShowAddFeaturedTagModal()
