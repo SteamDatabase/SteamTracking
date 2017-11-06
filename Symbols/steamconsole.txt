@@ -942,11 +942,13 @@
  T ConParams::Set(char const*)
  T ConParams::UArg(int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
@@ -963,6 +965,7 @@
  T ConVar::OverrideValue(char const*)
  T ConVar::SetLock(bool)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -1112,6 +1115,7 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
@@ -1362,6 +1366,7 @@
  fclose
  fcntl$UNIX2003
  feof
+ ferror
  fflush
  fgets
  fileno
@@ -1427,7 +1432,6 @@
  strchr
  strcmp
  strcpy
- strftime$UNIX2003
  strlen
  strncpy
  strrchr
@@ -1440,7 +1444,7 @@
  t FileSelect(dirent const*)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
