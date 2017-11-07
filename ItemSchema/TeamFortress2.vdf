@@ -121499,6 +121499,7 @@
 			"hidden"	"0"
 			"effect_type"	"unusual"
 			"stored_as_integer"	"0"
+			"can_affect_market_name"	"1"
 		}
 		"135"
 		{
@@ -126312,6 +126313,7 @@
 			"hidden"	"1"
 			"effect_type"	"unusual"
 			"stored_as_integer"	"0"
+			"can_affect_market_name"	"1"
 		}
 		"748"
 		{
@@ -126338,6 +126340,7 @@
 			"description_format"	"value_is_particle_index"
 			"hidden"	"1"
 			"effect_type"	"unusual"
+			"can_affect_market_name"	"1"
 			"stored_as_integer"	"1"
 		}
 		"751"					
@@ -127711,6 +127714,7 @@
 			"description_format"	"value_is_particle_index"
 			"effect_type"			"unusual"
 			"stored_as_integer"		"1"
+			"can_affect_market_name"	"1"
 		}
 		"2042"
 		{
@@ -129290,6 +129294,19 @@
 			"attribute_templates"
 			{
 				"wear_level_normal_distribution"	"1"
+			}
+		}
+
+		"wear_level_factory_new"
+		{
+			"random_attributes"
+			{
+				"set_item_texture_wear"
+				{
+					"attribute_class"	"set_item_texture_wear"
+					"value"	 "0.2"
+					"weight" "1"
+				}
 			}
 		}
 
@@ -131929,6 +131946,70 @@
 			"lootlist_job_templates"
 			{
 				"wear_level_normal_distribution"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_144_factory_new"
+		{
+			"Paintkit 144"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_139_factory_new"
+		{
+			"Paintkit 139"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_160_factory_new"
+		{
+			"Paintkit 160"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_122_factory_new"
+		{
+			"Paintkit 122"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_114_factory_new"
+		{
+			"Paintkit 114"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_113_factory_new"
+		{
+			"Paintkit 113"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_1_paintkit_109_factory_new"
+		{
+			"Paintkit 109"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
+			}
+		}
+		"campaign3_collection_saxton_select_390_factory_new"
+		{
+			"Paintkit 390"		"1"
+			"lootlist_job_templates"
+			{
+				"wear_level_factory_new"							"1"
 			}
 		}
 		"campaign3_collection_1_tier_1"
