@@ -1,0 +1,66 @@
+ T avresample_alloc_context
+ T avresample_available
+ T avresample_build_matrix
+ T avresample_close
+ T avresample_config
+ T avresample_configuration
+ T avresample_convert
+ T avresample_convert_frame
+ T avresample_free
+ T avresample_get_class
+ T avresample_get_delay
+ T avresample_get_matrix
+ T avresample_get_out_samples
+ T avresample_is_open
+ T avresample_license
+ T avresample_open
+ T avresample_read
+ T avresample_set_channel_mapping
+ T avresample_set_compensation
+ T avresample_set_matrix
+ T avresample_version
+ __divdi3
+ __moddi3
+ __snprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ av_audio_fifo_alloc
+ av_audio_fifo_drain
+ av_audio_fifo_free
+ av_audio_fifo_read
+ av_audio_fifo_size
+ av_audio_fifo_write
+ av_default_item_name
+ av_frame_get_buffer
+ av_free
+ av_freep
+ av_get_bytes_per_sample
+ av_get_channel_layout_nb_channels
+ av_get_channel_layout_string
+ av_get_cpu_flags
+ av_get_packed_sample_fmt
+ av_get_planar_sample_fmt
+ av_get_sample_fmt_name
+ av_lfg_init
+ av_log
+ av_malloc_tracked
+ av_mallocz_tracked
+ av_opt_free
+ av_opt_set_defaults
+ av_reduce
+ av_rescale_rnd
+ av_sample_fmt_is_planar
+ av_samples_alloc
+ av_samples_fill_arrays
+ av_samples_get_buffer_size
+ av_samples_set_silence
+ ceil
+ cos
+ llrint
+ llrintf
+ lrint
+ lrintf
+ memcpy
+ memmove
+ memset
+ sin

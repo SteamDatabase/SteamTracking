@@ -407,6 +407,9 @@
 	"CreateAccount_Cancel_Title"	"Create Account"
 	"CreateAccount_Cancel_Description"	"Are you sure you want to cancel creating this account?"
 
+	"CreateAccount_WebOnly_Title"	"Create Account"
+	"CreateAccount_WebOnly_Text"	"Please open a web browser and navigate to store.steampowered.com/join to create your Steam account. Then use your new credentials to login here."
+
 	"CreateAccount_Credentials_Title" "Hello,"
 	"CreateAccount_Credentials_Description" "Creating a Steam account takes just a few simple steps. Let's get started."
 	"CreateAccount_Credentials_Error"								"{s:errordesc}"
@@ -634,6 +637,7 @@
 
 	"Shutdown_WaitingForGame"		"Waiting for {s:game} to shut down"
 	"Shutdown_WaitingForDownload"	"Stopping download of {s:game}"
+	"Shutdown_FinishingDownload"	"Finishing download of {s:game}"
 	"Shutdown_WaitingForCloud" 		"Finishing Steam cloud sync"
 	"Shutdown_WaitingForLogoff"		"Logging off"
 	"Shutdown_ForceQuit"			"FORCE QUIT"
@@ -2122,6 +2126,8 @@
 	"Library_Details_ControllerAction_Host_Restart"	"RESTART HOST PC"
 	"Library_Details_ControllerAction_Toggle_HUD"	"TOGGLE SC HUD"
 	"Library_Details_ControllerAction_Set_LED"		"SET LIGHT"
+	"Library_Details_ControllerAction_Toggle_Lizard"		"TOGGLE LIZARD MODE"
+	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -2441,6 +2447,7 @@
 
 
 	"Library_Details_Controller_Personal"				"Personal"
+	"Library_Details_Controller_Friend"					"Your Friends"
 	"Library_Details_Controller_Community"				"Community"
 	"Library_Details_Controller_Templates"				"Templates"
 	"Library_Details_Controller_Recommended"			"Recommended"
@@ -2822,7 +2829,7 @@
 	"Steam_RunGame_Title_ConvertingToSteam3Content"		"Steam Content System"
 	"Steam_RunGame_ConvertingToSteam3Content"			"This game is being converted to Steam's new content system"
 	"Steam_ModNeedsFullGame_Title"	"Error"
-	"Steam_ModNeedsFullGame_Info"	"{s:game} is a mod, and requires you to own a version of the base game."
+	"Steam_ModNeedsFullGame_Info"	"{s:gamename} is a mod, and requires you to own a version of the base game."
 	"Steam_ModNeedsFullGame_Button"	"Get more info"
 	"Steam_ErrorPurchasePending_Title"	"Purchase pending"
 	"Steam_ErrorPurchasePending_Info"	"Your purchase is still being processed - Steam will notify you when the transaction has been completed.\nUntil then, this game is not available to play."
@@ -2836,7 +2843,9 @@
 	"SteamUI_DownloadsDisabled_Title" "Downloads Disabled"
 	"Steam_CannotInstallDownloadsDisabled"	"Games cannot be installed when downloads are disabled."
 	"Steam_RegionRestricted_Title"			"Game unavailable"
-	"Steam_RegionRestrictedPurchase_Info"				"This game was activated with a product code that is valid only in a specific geographic region. Since you are not currently in that region, {s:game} is not available to play."
+	"Steam_RegionRestrictedPurchase_Info"				"This game was activated with a product code that is valid only in a specific geographic region. Since you are not currently in that region, {s:gamename} is not available to play."
+	"Steam_CannotInstallApp_Title"	"Error"
+	"Steam_CannotInstallApp_Info"	"Steam failed to install {s:gamename} ({s:error})."
 	"Steam_ErrorNotEnoughDiskSpace_Title"		"Error"
 	"Steam_ErrorNotEnoughDiskSpace"			"You do not have enough available disk space to install this game. Please free up some space and then try again."
 	"Steam_ErrorNotEnoughDiskSpace_Manage"			"MANAGE DISK SPACE"
@@ -2922,6 +2931,9 @@
 	"Steam_AppUpdateError_35"		"other session playing"
 	"Steam_AppUpdateError_36"		"corrupt download"
 	"Steam_AppUpdateError_44"		"no licenses available"
+	"Steam_AppUpdateError_45"		"parental control blocked"
+	"Steam_AppUpdateError_46"		"create process failed"
+	"Steam_AppUpdateError_47"		"Steam client outdated"
 
 
 	"Friends_Tab_Friends"		"FRIENDS"
@@ -6172,10 +6184,12 @@
 	"ControllerBinding_Explanation_community" "Community created configurations for this game."
 	"ControllerBinding_Explanation_recommended" "Recommended configurations for this game."
 	"ControllerBinding_Explanation_entirelibrary" "All of your personal configurations you've exported from all games."
+	"ControllerBinding_Explanation_friends" "Configurations created by your friends."
 	"ControllerBinding_Missing_template" "There are no appropriate templates for this game."
 	"ControllerBinding_Missing_personal" "You haven't saved any configurations for this game."
 	"ControllerBinding_Missing_community" "There are no community created configurations for this game.\nMaybe you could be the first to publish one?"
 	"ControllerBinding_Missing_recommended" "The developer for this game has not recommended a configuration yet."
+	"ControllerBinding_Missing_friends" "None of your friends have exported a config to the community"
 	"ControllerBinding_NonMigrated_config"	"[Local Config]"
 	"ControllerBinding_Autosave_config"		"[Local Legacy Autosave]"
 	"ControllerBinding_Offline_Save"		"[Offline AutoSave]"

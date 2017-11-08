@@ -1,3 +1,6 @@
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindow.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/sharedconnectioncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
@@ -19,6 +22,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/steam/steamclientpublic.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
@@ -33,6 +38,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp

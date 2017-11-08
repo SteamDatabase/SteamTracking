@@ -94,6 +94,35 @@ message CInventory_GetItemDefMeta_Response {
 	optional string digest = 2;
 }
 
+message CInventory_GetUserPurchaseInfo_Request {
+}
+
+message CInventory_GetUserPurchaseInfo_Response {
+	optional int32 ecurrency = 1;
+}
+
+message CInventory_PurchaseInit_Request {
+	message LineItem {
+		optional uint64 itemdefid = 1;
+		optional uint32 quantity = 2;
+	}
+
+	optional uint32 appid = 1;
+	optional int32 language = 2;
+	repeated .CInventory_PurchaseInit_Request.LineItem line_items = 3;
+}
+
+message CInventory_PurchaseInit_Response {
+	optional uint64 orderid = 1;
+	optional uint64 transid = 2;
+}
+
+message CInventory_PurchaseFinalize_Request {
+	optional uint32 appid = 1;
+	optional int32 language = 2;
+	optional uint64 orderid = 3;
+}
+
 service Inventory {
 	option (service_description) = "A service that provides access to inventory";
 	rpc GetInventory (.CInventory_GetInventory_Request) returns (.CInventory_Response) {
@@ -131,5 +160,14 @@ service Inventory {
 	}
 	rpc GetItemDefMeta (.CInventory_GetItemDefMeta_Request) returns (.CInventory_GetItemDefMeta_Response) {
 		option (method_description) = "Get metadata about the current item definition for this game.";
+	}
+	rpc GetUserPurchaseInfo (.CInventory_GetUserPurchaseInfo_Request) returns (.CInventory_GetUserPurchaseInfo_Response) {
+		option (method_description) = "Returns information about the user such as their currency";
+	}
+	rpc PurchaseInit (.CInventory_PurchaseInit_Request) returns (.CInventory_PurchaseInit_Response) {
+		option (method_description) = "Initializes a purchase for the user";
+	}
+	rpc PurchaseFinalize (.CInventory_PurchaseFinalize_Request) returns (.CInventory_Response) {
+		option (method_description) = "Finalizes a purchase for the user";
 	}
 }

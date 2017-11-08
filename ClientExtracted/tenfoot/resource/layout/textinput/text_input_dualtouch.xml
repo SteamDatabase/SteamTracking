@@ -103,7 +103,7 @@
 						</Panel>
 						<Panel id="Row2" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_Alt" class="TouchKey LeftQuadrant">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/symbols.tga" />
+								<Image id="SymbolsImage" class="TouchKeyLabel" src="file://{images}/textinput/symbols.tga" />
 							</Panel>
 							<Panel id="TouchKey_0_2" class="TouchKey" />
 							<Panel id="TouchKey_1_2" class="TouchKey" />
@@ -113,7 +113,7 @@
 						</Panel>
 						<Panel id="Row3" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_Shift" class="TouchKey LeftQuadrant">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+								<Image id ="ShiftImage" class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
 							</Panel>
 							<Panel id="TouchKey_0_3" class="TouchKey" />
 							<Panel id="TouchKey_1_3" class="TouchKey" />
@@ -226,7 +226,7 @@
 							<Panel id="TouchKey_8_3" class="TouchKey" />
 							<Panel id="TouchKey_9_3" class="TouchKey" />
 							<Panel id="TouchKey_Shift" class="TouchKey RightQuadrant">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+								<Image id="ShiftImage2" class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
 							</Panel>
 						</Panel>						
 						<Panel id="EmoticonRow5" class="EmoticonRow">

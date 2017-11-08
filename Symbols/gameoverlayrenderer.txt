@@ -144,7 +144,6 @@
  D OBJC_METACLASS_$_CMetalDeviceCache
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
- D g_IdentityMatrix
  D g_iNotificationPosition
  D g_loggingMutex
  D typeinfo for CBaseOverlayRenderer
@@ -282,8 +281,9 @@
  T CBaseOverlayRenderer::UpdateNotificationToastPosition()
  T CBaseOverlayRenderer::ValveCheckAsyncCapture()
  T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
+ T CBaseOverlayRenderer::ValveGetAdapterId()
  T CBaseOverlayRenderer::ValveGetRendererWindow()
- T CBaseOverlayRenderer::ValveGetSharedD3DTextureSupport()
+ T CBaseOverlayRenderer::ValveGetSharedTextureSupport()
  T CBaseOverlayRenderer::ValveLockRenderResources()
  T CBaseOverlayRenderer::ValveStopAsyncCapture()
  T CBaseOverlayRenderer::ValveTakeScreenshot(bool, unsigned int)
@@ -359,7 +359,6 @@
  T CMetalRenderer::ValveGetRendererType()
  T CMetalRenderer::ValveGetRendererWindow()
  T CMetalRenderer::ValveGetScreenSize(int&, int&)
- T CMetalRenderer::ValveGetSharedD3DTextureSupport()
  T CMetalRenderer::ValveIsFullScreen()
  T CMetalRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T CMetalRenderer::ValveLockRenderResources()
@@ -396,13 +395,14 @@
  T COverlayGLRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
  T COverlayGLRenderer::ValveForgetAllTextures()
  T COverlayGLRenderer::ValveFreeSharedTextures()
+ T COverlayGLRenderer::ValveGetAdapterId()
  T COverlayGLRenderer::ValveGetFullscreenMonitor()
  T COverlayGLRenderer::ValveGetOutputBounds(int&, int&, int&, int&)
  T COverlayGLRenderer::ValveGetPreferredTextureFormat()
  T COverlayGLRenderer::ValveGetRendererType()
  T COverlayGLRenderer::ValveGetRendererWindow()
  T COverlayGLRenderer::ValveGetScreenSize(int&, int&)
- T COverlayGLRenderer::ValveGetSharedD3DTextureSupport()
+ T COverlayGLRenderer::ValveGetSharedTextureSupport()
  T COverlayGLRenderer::ValveIsFullScreen()
  T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T COverlayGLRenderer::ValveRestoreRenderState()
@@ -796,6 +796,7 @@
  d _interpose_ShowCursor
  d cplus_demangle_builtin_types
  d cplus_demangle_operators
+ d g_IdentityMatrix
  d s_eCaptureType
  d s_pchFragmentShader
  d s_pchVertexShader

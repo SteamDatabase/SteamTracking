@@ -17,6 +17,7 @@
  B CBoxShadowData::default_instance_
  B CCDDBAppDetailCommon::default_instance_
  B CCookie::default_instance_
+ B CCuratorPreferences::default_instance_
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
@@ -92,6 +93,8 @@
  B CMsgBrowserErrorStrings::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
+ B CMsgBrowserResized::default_instance_
+ B CMsgBrowserSetMinSize::default_instance_
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
@@ -301,7 +304,8 @@
  B CNet::sm_ListHConnectionToWakeUp
  B CNet::sm_ListRecvThrottleGroup
  B CNet::sm_MemPoolNetPacket
- B CNet::sm_THashSocketOwnerCallback
+ B CNet::sm_THashTCPSocketOwnerCallback
+ B CNet::sm_THashUDPSocketOwnerCallback
  B CNet::sm_bInit
  B CNet::sm_bShuttingDown
  B CNet::sm_pFrameFunctionMgr
@@ -1156,6 +1160,7 @@
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCookie
+ D typeinfo for CCuratorPreferences
  D typeinfo for CDragStartCallbacks
  D typeinfo for CDynamicFunc<bool (*)()>
  D typeinfo for CDynamicFunc<char const* (*)(vr::EVRInitError)>
@@ -1197,6 +1202,8 @@
  D typeinfo for CMsgBrowserErrorStrings
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
+ D typeinfo for CMsgBrowserResized
+ D typeinfo for CMsgBrowserSetMinSize
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
@@ -1407,7 +1414,8 @@
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
- D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
+ D typeinfo for CTHash<ITCPHostCallback*, unsigned int>
+ D typeinfo for CTHash<IUDPSocketCallback*, unsigned int>
  D typeinfo for CTextShadowData
  D typeinfo for CUIFontFilePB
  D typeinfo for CUIFontFilePackagePB
@@ -1518,6 +1526,7 @@
  D typeinfo for panorama::CRenderMsg<CMsgRenderTextRegion>
  D typeinfo for panorama::CRenderMsg<CMsgRenderTexturedRect>
  D typeinfo for panorama::CRenderMsg<CMsgRequestRenderCallback>
+ D typeinfo for panorama::CSteamGameControllerNew::CCallbackInternal_OnControllerDisconnected
  D typeinfo for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  D typeinfo for panorama::CStyleFactoryWrapper
  D typeinfo for panorama::CStyleFile
@@ -1803,6 +1812,7 @@
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<4>
  D vtable for CCookie
+ D vtable for CCuratorPreferences
  D vtable for CDragStartCallbacks
  D vtable for CDynamicFunc<bool (*)()>
  D vtable for CDynamicFunc<char const* (*)(vr::EVRInitError)>
@@ -1844,6 +1854,8 @@
  D vtable for CMsgBrowserErrorStrings
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
+ D vtable for CMsgBrowserResized
+ D vtable for CMsgBrowserSetMinSize
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
@@ -2051,7 +2063,8 @@
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
- D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
+ D vtable for CTHash<ITCPHostCallback*, unsigned int>
+ D vtable for CTHash<IUDPSocketCallback*, unsigned int>
  D vtable for CTextShadowData
  D vtable for CUIFontFilePB
  D vtable for CUIFontFilePackagePB
@@ -2143,6 +2156,7 @@
  D vtable for panorama::CRenderMsg<CMsgRenderTextRegion>
  D vtable for panorama::CRenderMsg<CMsgRenderTexturedRect>
  D vtable for panorama::CRenderMsg<CMsgRequestRenderCallback>
+ D vtable for panorama::CSteamGameControllerNew::CCallbackInternal_OnControllerDisconnected
  D vtable for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  D vtable for panorama::CStyleFactoryWrapper
  D vtable for panorama::CStyleFile
@@ -2435,6 +2449,7 @@
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCookie
+ R typeinfo name for CCuratorPreferences
  R typeinfo name for CDirWatcher
  R typeinfo name for CDragStartCallbacks
  R typeinfo name for CDynamicFunc<bool (*)()>
@@ -2477,6 +2492,8 @@
  R typeinfo name for CMsgBrowserErrorStrings
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
+ R typeinfo name for CMsgBrowserResized
+ R typeinfo name for CMsgBrowserSetMinSize
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
@@ -2689,7 +2706,8 @@
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
- R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
+ R typeinfo name for CTHash<ITCPHostCallback*, unsigned int>
+ R typeinfo name for CTHash<IUDPSocketCallback*, unsigned int>
  R typeinfo name for CTextShadowData
  R typeinfo name for CThreadSafeMemoryPool
  R typeinfo name for CUIFontFilePB
@@ -3046,6 +3064,7 @@
  R typeinfo name for panorama::CRenderMsg<CMsgRenderTexturedRect>
  R typeinfo name for panorama::CRenderMsg<CMsgRequestRenderCallback>
  R typeinfo name for panorama::CSteamGameControllerNew
+ R typeinfo name for panorama::CSteamGameControllerNew::CCallbackInternal_OnControllerDisconnected
  R typeinfo name for panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization
  R typeinfo name for panorama::CStyleAnimation
  R typeinfo name for panorama::CStyleDefine
@@ -3369,9 +3388,7 @@
  SDL_GameControllerGetAxis
  SDL_GameControllerGetButton
  SDL_GameControllerGetJoystick
- SDL_GameControllerMapping
  SDL_GameControllerName
- SDL_GameControllerOpen
  SDL_GetClipboardText
  SDL_GetDisplayBounds
  SDL_GetModState
@@ -3397,17 +3414,16 @@
  SDL_JoystickCurrentPowerLevel
  SDL_JoystickGetAxis
  SDL_JoystickGetButton
- SDL_JoystickGetDeviceGUID
  SDL_JoystickGetDeviceProduct
  SDL_JoystickGetDeviceType
  SDL_JoystickGetDeviceVendor
- SDL_JoystickGetGUIDString
  SDL_JoystickInstanceID
  SDL_JoystickName
  SDL_JoystickNameForIndex
  SDL_JoystickNumAxes
  SDL_JoystickNumButtons
  SDL_JoystickOpen
+ SDL_LockJoysticks
  SDL_MinimizeWindow
  SDL_NumJoysticks
  SDL_PollEvent
@@ -3422,6 +3438,7 @@
  SDL_SetWindowPosition
  SDL_ShowCursor
  SDL_ShowWindow
+ SDL_UnlockJoysticks
  SDL_free
  SDL_setenv
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -3708,6 +3725,17 @@
  T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
  T CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
+ T CCuratorPreferences::ByteSize() const
+ T CCuratorPreferences::CCuratorPreferences()
+ T CCuratorPreferences::Clear()
+ T CCuratorPreferences::GetCachedSize() const
+ T CCuratorPreferences::GetMetadata() const
+ T CCuratorPreferences::IsInitialized() const
+ T CCuratorPreferences::MergeFrom(CCuratorPreferences const&)
+ T CCuratorPreferences::New() const
+ T CCuratorPreferences::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CCuratorPreferences::SetCachedSize(int) const
+ T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsValue::CDebugStatsValue(char const*)
  T CDebugStatsValue::~CDebugStatsValue()
@@ -4239,6 +4267,28 @@
  T CMsgBrowserRemove::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserRemove::SetCachedSize(int) const
  T CMsgBrowserRemove::~CMsgBrowserRemove()
+ T CMsgBrowserResized::ByteSize() const
+ T CMsgBrowserResized::CMsgBrowserResized()
+ T CMsgBrowserResized::Clear()
+ T CMsgBrowserResized::GetCachedSize() const
+ T CMsgBrowserResized::GetMetadata() const
+ T CMsgBrowserResized::IsInitialized() const
+ T CMsgBrowserResized::MergeFrom(CMsgBrowserResized const&)
+ T CMsgBrowserResized::New() const
+ T CMsgBrowserResized::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserResized::SetCachedSize(int) const
+ T CMsgBrowserResized::~CMsgBrowserResized()
+ T CMsgBrowserSetMinSize::ByteSize() const
+ T CMsgBrowserSetMinSize::CMsgBrowserSetMinSize()
+ T CMsgBrowserSetMinSize::Clear()
+ T CMsgBrowserSetMinSize::GetCachedSize() const
+ T CMsgBrowserSetMinSize::GetMetadata() const
+ T CMsgBrowserSetMinSize::IsInitialized() const
+ T CMsgBrowserSetMinSize::MergeFrom(CMsgBrowserSetMinSize const&)
+ T CMsgBrowserSetMinSize::New() const
+ T CMsgBrowserSetMinSize::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserSetMinSize::SetCachedSize(int) const
+ T CMsgBrowserSetMinSize::~CMsgBrowserSetMinSize()
  T CMsgBrowserSize::ByteSize() const
  T CMsgBrowserSize::CMsgBrowserSize()
  T CMsgBrowserSize::Clear()
@@ -6518,7 +6568,8 @@
  T CNet::BFrameFuncHandleCompletedWorkItems(CReliableTimer&)
  T CNet::DestroyNetConnection(CNetConnection*)
  T CNet::FreeGlobals()
- T CNet::GetSocketOwnerCallback(unsigned int)
+ T CNet::GetTCPSocketOwnerCallback(unsigned int)
+ T CNet::GetUDPSocketOwnerCallback(unsigned int)
  T CNet::ValidateGlobals(CValidator&)
  T CNumStr::CNumStr(double)
  T CPathString::CPathString(char const*, char const*)
@@ -6697,11 +6748,11 @@
  T CSteamID::Render() const
  T CSteamPanoramaFileSystem::CAsyncIOResult::Validate(CValidator&, char const*)
  T CSteamPanoramaFileSystem::CAsyncIOResult::~CAsyncIOResult()
- T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperation::CLoadFileIntoBufferOperation(char const*, CUtlBuffer*, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
+ T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperation::CLoadFileIntoBufferOperation(char const*, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperation::RunOnThread()
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperation::Validate(CValidator&, char const*)
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperation::~CLoadFileIntoBufferOperation()
- T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult::CLoadFileIntoBufferOperationResult(char const*, CUtlBuffer*, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
+ T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult::CLoadFileIntoBufferOperationResult(char const*, CUtlBuffer&, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult::DispatchResult()
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult::Validate(CValidator&, char const*)
  T CSteamPanoramaFileSystem::CLoadFileIntoBufferOperationResult::~CLoadFileIntoBufferOperationResult()
@@ -6709,7 +6760,7 @@
  T CSteamPanoramaFileSystem::CancelLoadFileIntoBufferAsync(void*)
  T CSteamPanoramaFileSystem::FileExists(char const*)
  T CSteamPanoramaFileSystem::LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, void (*)(char const*), unsigned int)
- T CSteamPanoramaFileSystem::LoadFileIntoBufferAsync(char const*, CUtlBuffer&, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
+ T CSteamPanoramaFileSystem::LoadFileIntoBufferAsync(char const*, bool, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>)
  T CSteamPanoramaFileSystem::RunFrame()
  T CSteamPanoramaFileSystem::SaveBufferToFile(CUtlBuffer&, char const*)
  T CSteamPanoramaFileSystem::Validate(CValidator&, char const*)
@@ -6735,13 +6786,20 @@
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
  T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
- T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
- T CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordFind(unsigned int) const
- T CTHash<ISocketOwnerCallback*, unsigned int>::Remove(unsigned int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveAll()
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
- T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
+ T CTHash<ITCPHostCallback*, unsigned int>::Purge()
+ T CTHash<ITCPHostCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<ITCPHostCallback*, unsigned int>::Remove(unsigned int)
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
+ T CTHash<ITCPHostCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<ITCPHostCallback*, unsigned int>::~CTHash()
+ T CTHash<IUDPSocketCallback*, unsigned int>::Purge()
+ T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<IUDPSocketCallback*, unsigned int>::Remove(unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
+ T CTHash<IUDPSocketCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<IUDPSocketCallback*, unsigned int>::~CTHash()
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::PopItem(panorama::CRenderCommandMemoryStack**)
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::Purge()
  T CTSItemList<panorama::CRenderCommandMemoryStack*>::PushItem(panorama::CRenderCommandMemoryStack* const&)
@@ -8938,11 +8996,13 @@
  T ConCommandBase::IsRegistered() const
  T ConCommandBaseMgr::OneTimeInit(IConCommandBaseAccessor*)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
@@ -8958,6 +9018,7 @@
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -9466,6 +9527,7 @@
  T int CUtlSortVector<panorama::CUIEngine::QueuedEvent_t>::FindGreater<panorama::CUIEngine::QueuedEvent_t>(panorama::CUIEngine::QueuedEvent_t const&) const
  T int V_sprintf_safe<1000ul>(char (&) [1000ul], char const*, ...)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T jcopy_block_row
  T jcopy_sample_rows
  T jdiv_round_up
@@ -10716,6 +10778,8 @@
  T panorama::CSteamGameControllerNew::BIsFingerDownAnalog(panorama::GamePadCode) const
  T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerLeftPad() const
  T panorama::CSteamGameControllerNew::BIsFingerDownOnSteamControllerRightPad() const
+ T panorama::CSteamGameControllerNew::CCallbackInternal_OnControllerDisconnected::CCallbackInternal_OnControllerDisconnected()
+ T panorama::CSteamGameControllerNew::CCallbackInternal_OnControllerDisconnected::Run(void*)
  T panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization::CCallbackInternal_OnReceivedControllerPersonalization()
  T panorama::CSteamGameControllerNew::CCallbackInternal_OnReceivedControllerPersonalization::Run(void*)
  T panorama::CSteamGameControllerNew::CSteamGameControllerNew(panorama::IUIInput*)
@@ -10723,6 +10787,7 @@
  T panorama::CSteamGameControllerNew::GetNumGamepadsConnected() const
  T panorama::CSteamGameControllerNew::GotWindowFocus()
  T panorama::CSteamGameControllerNew::InsertEmptyActionSet(char const*)
+ T panorama::CSteamGameControllerNew::OnControllerDisconnected(ControllerDisconnected_t*)
  T panorama::CSteamGameControllerNew::PulseHapticOnActiveController(ESteamControllerPad, unsigned short)
  T panorama::CSteamGameControllerNew::RunFrame()
  T panorama::CSteamGameControllerNew::SetActiveActionSet(char const*)
@@ -11849,7 +11914,7 @@
  T panorama::CUIEngine::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CUIEngine::CreateInputEventFromSymbol(panorama::CPanoramaSymbol, panorama::IUIPanel*, panorama::EPanelEventSource_t, int)
  T panorama::CUIEngine::CreateNewOpenVROverlayWindow(unsigned int, unsigned int, unsigned long long, bool, bool)
- T panorama::CUIEngine::CreateNewOverlayWindow(char const*, unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, bool, bool)
+ T panorama::CUIEngine::CreateNewOverlayWindow(char const*, unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, bool, bool, unsigned long long const*)
  T panorama::CUIEngine::CreatePanel()
  T panorama::CUIEngine::CreatePanel(panorama::CPanoramaSymbol, char const*, panorama::IUIPanel*)
  T panorama::CUIEngine::CreateSoundSystem()
@@ -15236,6 +15301,8 @@
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
+ b (anonymous namespace)::CCuratorPreferences_descriptor_
+ b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CHTMLHeader_descriptor_
  b (anonymous namespace)::CHTMLHeader_reflection_
  b (anonymous namespace)::CHTMLPageSecurityInfo_descriptor_
@@ -15304,6 +15371,10 @@
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
  b (anonymous namespace)::CMsgBrowserRemove_reflection_
+ b (anonymous namespace)::CMsgBrowserResized_descriptor_
+ b (anonymous namespace)::CMsgBrowserResized_reflection_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_descriptor_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_reflection_
  b (anonymous namespace)::CMsgBrowserSize_descriptor_
  b (anonymous namespace)::CMsgBrowserSize_reflection_
  b (anonymous namespace)::CMsgBuildID_descriptor_
@@ -16286,6 +16357,7 @@
  exit
  fclose
  fcntl$UNIX2003
+ ferror
  fflush
  fileno
  floor
@@ -16561,6 +16633,7 @@
  r panorama::CSSHelpers::BParseTransformFunction(panorama::CTransform3D**, char const*, char const**, float)::k_rgchTranslateX
  r panorama::CSSHelpers::BParseTransformFunction(panorama::CTransform3D**, char const*, char const**, float)::k_rgchTranslateY
  r panorama::CSSHelpers::BParseTransformFunction(panorama::CTransform3D**, char const*, char const**, float)::k_rgchTranslateZ
+ r panorama::CSteamGameControllerNew::RunFrame()::buttonToMask
  r panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)::k_rgchAuto
  r panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)::k_rgchContain
  r panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)::k_rgchCover
@@ -16599,6 +16672,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSetMinSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
@@ -16812,6 +16887,7 @@
  r protobuf_AssignDesc_renderer_2frendermessages_2eproto()::CRadiusData_offsets_
  r protobuf_AssignDesc_renderer_2frendermessages_2eproto()::CTextShadowData_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
@@ -16923,7 +16999,6 @@
  strcpy
  strcspn
  strerror$UNIX2003
- strftime$UNIX2003
  strlen
  strncmp
  strncpy
@@ -16962,7 +17037,7 @@
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
@@ -17420,8 +17495,8 @@
  t panorama::ValidateMemPool_CStylePropertyWhiteSpace(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyWidth(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyZIndex(CValidator&)
- t parse_buffer_reserve_for(JSON_parser_struct*, unsigned int)
- t parse_parse_buffer(JSON_parser_struct*)
+ t parse_buffer_reserve_for
+ t parse_parse_buffer
  t pass2_fs_dither
  t pass2_no_dither
  t png_build_16bit_table
@@ -17441,7 +17516,7 @@
  t process_data_crank_post
  t process_data_simple_main
  t process_restart
- t push(JSON_parser_struct*, int)
+ t push
  t quantize3_ord_dither
  t quantize_fs_dither
  t quantize_ord_dither
@@ -17455,7 +17530,7 @@
  t reset_marker_reader
  t self_destruct
  t sep_upsample
- t set_error(JSON_parser_struct*)
+ t set_error
  t skip_variable
  t start_input_pass
  t start_output_pass

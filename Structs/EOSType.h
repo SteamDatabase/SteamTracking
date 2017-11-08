@@ -52,4 +52,5 @@ typedef enum EOSType
     k_EOSTypeWin81, // win8.1
     k_EOSTypeWin2012R2, // win2012R2
     k_EOSTypeWin10, // win10
+    k_EOSTypeWin2016, // win2016
 } EOSType;

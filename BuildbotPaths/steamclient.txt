@@ -20,6 +20,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(crypto.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(cryptoworkitem.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(debugstats.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(ed25519_VALVE.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(ed25519_VALVE_sse2.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(encrypted_app_ticket.pb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(enum_names.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(filetransfer.o)
@@ -959,6 +961,16 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/curve25519-donna-helpers.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/curve25519-donna-sse2.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519-donna-32bit-sse2.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519-donna-64bit-sse2.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519-donna-impl-sse2.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519-donna-portable.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519-hash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/ed25519.c
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ed25519-donna/modm-donna-32bit.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/giflib-5.1.4/lib/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/hidapi/mac/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/base/bytebuffer.h

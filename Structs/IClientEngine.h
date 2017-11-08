@@ -66,6 +66,7 @@ public:
     virtual unknown_ret GetIClientBluetoothManager(int, char const*) = 0;
     virtual unknown_ret GetIClientSharedConnection(int, int, char const*) = 0;
     virtual unknown_ret GetIClientShader(int, int, char const*) = 0;
+    virtual unknown_ret GetIClientNetworkingSocketsSerialized(int, int, char const*) = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret GetIPCServerMap() = 0;

@@ -12,6 +12,8 @@
  B CMsgBrowserErrorStrings::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
+ B CMsgBrowserResized::default_instance_
+ B CMsgBrowserSetMinSize::default_instance_
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
@@ -873,6 +875,8 @@
  D typeinfo for CMsgBrowserErrorStrings
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
+ D typeinfo for CMsgBrowserResized
+ D typeinfo for CMsgBrowserSetMinSize
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
@@ -1691,6 +1695,8 @@
  D vtable for CMsgBrowserErrorStrings
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
+ D vtable for CMsgBrowserResized
+ D vtable for CMsgBrowserSetMinSize
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
@@ -2001,6 +2007,8 @@
  R typeinfo name for CMsgBrowserErrorStrings
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
+ R typeinfo name for CMsgBrowserResized
+ R typeinfo name for CMsgBrowserSetMinSize
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
@@ -2973,6 +2981,28 @@
  T CMsgBrowserRemove::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserRemove::SetCachedSize(int) const
  T CMsgBrowserRemove::~CMsgBrowserRemove()
+ T CMsgBrowserResized::ByteSize() const
+ T CMsgBrowserResized::CMsgBrowserResized()
+ T CMsgBrowserResized::Clear()
+ T CMsgBrowserResized::GetCachedSize() const
+ T CMsgBrowserResized::GetMetadata() const
+ T CMsgBrowserResized::IsInitialized() const
+ T CMsgBrowserResized::MergeFrom(CMsgBrowserResized const&)
+ T CMsgBrowserResized::New() const
+ T CMsgBrowserResized::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserResized::SetCachedSize(int) const
+ T CMsgBrowserResized::~CMsgBrowserResized()
+ T CMsgBrowserSetMinSize::ByteSize() const
+ T CMsgBrowserSetMinSize::CMsgBrowserSetMinSize()
+ T CMsgBrowserSetMinSize::Clear()
+ T CMsgBrowserSetMinSize::GetCachedSize() const
+ T CMsgBrowserSetMinSize::GetMetadata() const
+ T CMsgBrowserSetMinSize::IsInitialized() const
+ T CMsgBrowserSetMinSize::MergeFrom(CMsgBrowserSetMinSize const&)
+ T CMsgBrowserSetMinSize::New() const
+ T CMsgBrowserSetMinSize::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserSetMinSize::SetCachedSize(int) const
+ T CMsgBrowserSetMinSize::~CMsgBrowserSetMinSize()
  T CMsgBrowserSize::ByteSize() const
  T CMsgBrowserSize::CMsgBrowserSize()
  T CMsgBrowserSize::Clear()
@@ -5251,6 +5281,7 @@
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T non-virtual thunk to vgui::HTML::BrowserCrashed()
  T non-virtual thunk to vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -5279,6 +5310,7 @@
  T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T non-virtual thunk to vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T non-virtual thunk to vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -6089,6 +6121,7 @@
  T vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T vgui::HTML::BrowserCrashed()
  T vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -6119,6 +6152,7 @@
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T vgui::HTML::BrowserResize()
+ T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -8306,6 +8340,10 @@
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
  b (anonymous namespace)::CMsgBrowserRemove_reflection_
+ b (anonymous namespace)::CMsgBrowserResized_descriptor_
+ b (anonymous namespace)::CMsgBrowserResized_reflection_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_descriptor_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_reflection_
  b (anonymous namespace)::CMsgBrowserSize_descriptor_
  b (anonymous namespace)::CMsgBrowserSize_reflection_
  b (anonymous namespace)::CMsgBuildID_descriptor_
@@ -8844,6 +8882,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSetMinSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_

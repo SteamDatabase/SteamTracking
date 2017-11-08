@@ -16,6 +16,12 @@ CommunityHome
 	method		"internal"
 	filter		"community"
 }
+TodayPage
+{
+	url			"%community%/today"
+	method		"internal"
+	filter		"community"
+}
 GameHub
 {
 	url			"%community%/app/%p1%/"
@@ -581,7 +587,7 @@ SSA
 
 PrivacyPolicy
 {
-	url			"http://www.valvesoftware.com/privacy.htm"
+	url			"http://store.steampowered.com/privacy_agreement/"
 	method		"internal"
 }
 
@@ -1066,7 +1072,7 @@ SteamVRHMDHelp
 
 RegisterKey
 {
-	url		"%storehttps%/account/registerkey"
+	url		"%storehttps%/account/registerkey/?key=%p1%&retail=%p2%"
 	method	"internal"
 	filter	"store"
 }

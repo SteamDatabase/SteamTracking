@@ -26,4 +26,9 @@ public:
     virtual unknown_ret GetItemDefinitionProperty(int, char const*, char*, unsigned int*) = 0;
     virtual unknown_ret RequestEligiblePromoItemDefinitionsIDs(CSteamID) = 0;
     virtual unknown_ret GetEligiblePromoItemDefinitionIDs(CSteamID, int*, unsigned int*) = 0;
+    virtual unknown_ret StartPurchase(int const*, unsigned int const*, unsigned int) = 0;
+    virtual unknown_ret RequestPrices() = 0;
+    virtual unknown_ret GetNumItemsWithPrices() = 0;
+    virtual unknown_ret GetItemsWithPrices(int*, unsigned long long*, unsigned int) = 0;
+    virtual unknown_ret GetItemPrice(int, unsigned long long*) = 0;
 };

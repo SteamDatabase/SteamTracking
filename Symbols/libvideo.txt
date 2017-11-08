@@ -1,5 +1,6 @@
 
  B CCDDBAppDetailCommon::default_instance_
+ B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
@@ -47,7 +48,8 @@
  B CNet::sm_ListHConnectionToWakeUp
  B CNet::sm_ListRecvThrottleGroup
  B CNet::sm_MemPoolNetPacket
- B CNet::sm_THashSocketOwnerCallback
+ B CNet::sm_THashTCPSocketOwnerCallback
+ B CNet::sm_THashUDPSocketOwnerCallback
  B CNet::sm_bInit
  B CNet::sm_bReprocessCurrentPoll
  B CNet::sm_bShuttingDown
@@ -233,7 +235,7 @@
  D CTHash<CTCPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CTCPConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CTHash<CUDPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CUDPConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CWebSocketConnection*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
- D CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordInsertInternal(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
+ D CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsertInternal(CTHash<IUDPSocketCallback*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CUDPConnection::sm_hSocketSharedClient
  D CUDPConnection::sm_hSocketSharedClientIOCP
  D DHparams_it
@@ -376,6 +378,7 @@
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
  D typeinfo for CClientStructNetPacket
+ D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CDummyCnxCallback
  D typeinfo for CFileWriter
@@ -443,7 +446,8 @@
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
- D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
+ D typeinfo for CTHash<ITCPHostCallback*, unsigned int>
+ D typeinfo for CTHash<IUDPSocketCallback*, unsigned int>
  D typeinfo for CUDPConnection
  D typeinfo for CUDPConnectionRouter
  D typeinfo for CUniformRandomStream
@@ -492,10 +496,8 @@
  D typeinfo for ISSLCertificate
  D typeinfo for ISSLConnection
  D typeinfo for ISSLConnectionCallback
- D typeinfo for ISocketOwnerCallback
  D typeinfo for IStreamParser
  D typeinfo for IStreamParserMessageCallback
- D typeinfo for ITCPHostCallback
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
  D typeinfo for IVideoDecoder
@@ -546,6 +548,7 @@
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
  D vtable for CClientStructNetPacket
+ D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
  D vtable for CDummyCnxCallback
  D vtable for CFileWriter
@@ -608,7 +611,8 @@
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
- D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
+ D vtable for CTHash<ITCPHostCallback*, unsigned int>
+ D vtable for CTHash<IUDPSocketCallback*, unsigned int>
  D vtable for CUDPConnection
  D vtable for CUDPConnectionRouter
  D vtable for CUniformRandomStream
@@ -666,6 +670,7 @@
  R typeinfo name for CClientStructNetPacket
  R typeinfo name for CCompletionPortManager
  R typeinfo name for CCookieContainer::CCookieInfo
+ R typeinfo name for CCuratorPreferences
  R typeinfo name for CCustomAVIOReadContext
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CDummyCnxCallback
@@ -736,7 +741,8 @@
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
- R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
+ R typeinfo name for CTHash<ITCPHostCallback*, unsigned int>
+ R typeinfo name for CTHash<IUDPSocketCallback*, unsigned int>
  R typeinfo name for CThreadSafeMemoryPool
  R typeinfo name for CUDPConnection
  R typeinfo name for CUDPConnectionRouter
@@ -855,10 +861,8 @@
  R typeinfo name for ISSLCertificate
  R typeinfo name for ISSLConnection
  R typeinfo name for ISSLConnectionCallback
- R typeinfo name for ISocketOwnerCallback
  R typeinfo name for IStreamParser
  R typeinfo name for IStreamParserMessageCallback
- R typeinfo name for ITCPHostCallback
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
  R typeinfo name for IVideoDecoder
@@ -1337,6 +1341,17 @@
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::ValidateStatics(CValidator&, char const*)
+ T CCuratorPreferences::ByteSize() const
+ T CCuratorPreferences::CCuratorPreferences()
+ T CCuratorPreferences::Clear()
+ T CCuratorPreferences::GetCachedSize() const
+ T CCuratorPreferences::GetMetadata() const
+ T CCuratorPreferences::IsInitialized() const
+ T CCuratorPreferences::MergeFrom(CCuratorPreferences const&)
+ T CCuratorPreferences::New() const
+ T CCuratorPreferences::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CCuratorPreferences::SetCachedSize(int) const
+ T CCuratorPreferences::~CCuratorPreferences()
  T CCustomAVIOReadContext::Read(void*, unsigned char*, int)
  T CCustomAVIOReadContext::Seek(void*, long long, int)
  T CCustomAVIOReadContext::Write(void*, unsigned char*, int)
@@ -1737,7 +1752,7 @@
  T CNet::BIsSendBlocked(unsigned int, int)
  T CNet::BIsValidHandle(unsigned int)
  T CNet::BOnAsyncDisconnectWorkItem(unsigned int)
- T CNet::BRegisterSocketOwnerCallback(unsigned int, ISocketOwnerCallback*)
+ T CNet::BRegisterUDPSocketOwnerCallback(unsigned int, IUDPSocketCallback*)
  T CNet::BRemoveConnectionCallback(unsigned int, IConnectionCallback*)
  T CNet::CancelWakeup(unsigned int)
  T CNet::CreateNetConnection(EConnectionType, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
@@ -1750,10 +1765,12 @@
  T CNet::GetLocalAddr(unsigned int)
  T CNet::GetNetFlags(unsigned int)
  T CNet::GetRemoteAddr(unsigned int)
- T CNet::GetSocketOwnerCallback(unsigned int)
+ T CNet::GetTCPSocketOwnerCallback(unsigned int)
+ T CNet::GetUDPSocketOwnerCallback(unsigned int)
  T CNet::GlobalInit(EScale, CFrameFunctionMgr*)
  T CNet::InternalAsyncConnect(EConnectionType, IConnectionCallback*, netadr_t const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, netadr_t const&, IStreamParser*, ENetQOSLevel)
  T CNet::InternalGetNetConnection(unsigned int)
+ T CNet::IsValidHSocketOwner(unsigned int)
  T CNet::RemoveFromPollingList(unsigned int, int)
  T CNet::RequestWakeup(unsigned int, CSTime)
  T CNet::RequeueAtBackOfPollingList(unsigned int, int)
@@ -1881,6 +1898,7 @@
  T COpenSSLCertificate::BGetIssuerProperty(char const*, CUtlString&) const
  T COpenSSLCertificate::BGetOneline(X509_name_st*, CUtlString&) const
  T COpenSSLCertificate::BGetProperty(X509_name_st*, char const*, CUtlString&) const
+ T COpenSSLCertificate::BGetSHA256Fingerprint(CUtlString&) const
  T COpenSSLCertificate::BGetSerialNumber(CUtlString&) const
  T COpenSSLCertificate::BGetSubject(CUtlString&) const
  T COpenSSLCertificate::BGetSubjectDNSNames(CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
@@ -1906,6 +1924,7 @@
  T COpenSSLConnection::RemoveSSLConnectionCallback(ISSLConnectionCallback*)
  T COpenSSLConnection::SetSSLConnectionCallback(ISSLConnectionCallback*)
  T COpenSSLConnection::ShutdownConnection()
+ T COpenSSLConnection::ThreadedGetSRTPExtensionData()
  T COpenSSLConnection::ThreadedHandleError(int)
  T COpenSSLConnection::ThreadedPerformInitialHandshake()
  T COpenSSLConnection::ThreadedPerformRead()
@@ -1915,6 +1934,7 @@
  T COpenSSLConnection::Validate(CValidator&, char const*)
  T COpenSSLConnection::WakeJobsWaitingOnSends()
  T COpenSSLConnection::~COpenSSLConnection()
+ T COpenSSLContext::BGetSRTPKeyAndSaltLengths(char const*, int*, int*)
  T COpenSSLContext::COpenSSLContext(ESSLConnectionType, ESSLCipherSuite, int, char const*, char const*, char const*, char const*)
  T COpenSSLContext::FindClientSession(netadr_t, char const*)
  T COpenSSLContext::PostInit(int)
@@ -2309,17 +2329,25 @@
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
  T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
- T CTHash<ISocketOwnerCallback*, unsigned int>::Init(int, int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::InsertIntoHash(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
- T CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordFind(unsigned int) const
- T CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordInsert(unsigned int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::PvRecordInsertInternal(CTHash<ISocketOwnerCallback*, unsigned int>::RecHdr_t*, unsigned int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::Remove(unsigned int)
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveAll()
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
- T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
+ T CTHash<ITCPHostCallback*, unsigned int>::Init(int, int)
+ T CTHash<ITCPHostCallback*, unsigned int>::Purge()
+ T CTHash<ITCPHostCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<ITCPHostCallback*, unsigned int>::Remove(unsigned int)
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
+ T CTHash<ITCPHostCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<ITCPHostCallback*, unsigned int>::~CTHash()
+ T CTHash<IUDPSocketCallback*, unsigned int>::Init(int, int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::InsertIntoHash(CTHash<IUDPSocketCallback*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::Purge()
+ T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsert(unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsertInternal(CTHash<IUDPSocketCallback*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::Remove(unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
+ T CTHash<IUDPSocketCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<IUDPSocketCallback*, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
  T CTSQueue<CFileWriterThread::FileWriterItem_t*>::AllocNode()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Pop()
@@ -3603,11 +3631,13 @@
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConCommandBase::ValidateConCommands(CValidator&)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
@@ -3623,6 +3653,7 @@
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -4135,7 +4166,6 @@
  T IHTTPStreamingResponseHandler::OnRequestTransmitted(CHTTPRequestHandle*)
  T IMsgNetPacketFromCNetPacket(CNetPacket*, bool)
  T ISSUING_DIST_POINT_free
- T ISocketOwnerCallback::Unused()
  T IVideoYUVFrame::~IVideoYUVFrame()
  T InitCpuFlags
  T InitStackWalk()
@@ -4402,6 +4432,7 @@
  T SSL_connect
  T SSL_ctrl
  T SSL_do_handshake
+ T SSL_export_keying_material
  T SSL_free
  T SSL_get_ciphers
  T SSL_get_client_CA_list
@@ -4413,6 +4444,7 @@
  T SSL_get_ex_new_index
  T SSL_get_peer_certificate
  T SSL_get_rbio
+ T SSL_get_selected_srtp_profile
  T SSL_get_session
  T SSL_get_shutdown
  T SSL_get_srtp_profiles
@@ -5203,6 +5235,7 @@
  T i2v_ASN1_BIT_STRING
  T i2v_GENERAL_NAME
  T i2v_GENERAL_NAMES
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int_rsa_verify
  T level_add_node
  T level_find_node
@@ -5760,7 +5793,6 @@
  av_frame_free
  av_frame_get_buffer
  av_free
- av_free_packet
  av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
  av_get_default_channel_layout
@@ -5771,6 +5803,7 @@
  av_log_set_callback
  av_malloc_tracked
  av_opt_set_int
+ av_packet_unref
  av_read_frame
  av_register_all
  av_register_malloc
@@ -5787,6 +5820,7 @@
  avcodec_flush_buffers
  avcodec_free_context
  avcodec_open2
+ avcodec_parameters_to_context
  avcodec_register_all
  avformat_alloc_context
  avformat_close_input
@@ -5802,6 +5836,8 @@
  avresample_open
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CCuratorPreferences_descriptor_
+ b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
@@ -6569,6 +6605,7 @@
  r BN_kronecker.tab
  r BN_num_bits_word.bits
  r BN_value_one.data_one
+ r COpenSSLConnection::ThreadedGetSRTPExtensionData()::kDtlsSrtpExporterLabel
  r Hex
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
@@ -6698,6 +6735,7 @@
  r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
@@ -6795,8 +6833,6 @@
  strcspn
  strerror
  strerror$UNIX2003
- strftime
- strftime$UNIX2003
  strlen
  strncasecmp
  strncat
@@ -6858,7 +6894,7 @@
  t K512
  t K_XX_XX
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MemInputsrc
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)

@@ -2151,6 +2151,7 @@
  T gcm_gmult_clmul
  T gcm_init_clmul
  T hardwareListenerProc(unsigned long, void*)
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T md5_block_asm_data_order
  T non-virtual thunk to CInputBase::PostKeyMessage(char const*, char const*, wchar_t const*)
  T non-virtual thunk to CInputBase::PostLogMessage(char const*)
@@ -2650,6 +2651,7 @@
  V_tolower
  V_towlower32
  V_towupper32
+ V_vsnprintf
  V_vsnprintfRet
  V_wcsncpy
  V_wcstoui64
@@ -2816,6 +2818,7 @@
  dlsym
  dyld_stub_binder
  fclose
+ ferror
  fflush
  floor
  fopen$UNIX2003
@@ -2931,7 +2934,6 @@
  strchr
  strcmp
  strcpy
- strftime$UNIX2003
  strlen
  strncpy
  strrchr
@@ -2990,7 +2992,7 @@
  t GetNetAdrResolveCacheMutex()
  t GetUndocNSCursor(objc_selector*, objc_selector)
  t HandleFlagsChanged(NSEvent*)
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)

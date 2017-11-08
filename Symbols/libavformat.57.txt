@@ -1,0 +1,417 @@
+ BZ2_bzDecompress
+ BZ2_bzDecompressEnd
+ BZ2_bzDecompressInit
+ R av_format_ffversion
+ T av_add_index_entry
+ T av_append_packet
+ T av_apply_bitstream_filters
+ T av_codec_get_id
+ T av_codec_get_tag
+ T av_codec_get_tag2
+ T av_demuxer_open
+ T av_dump_format
+ T av_filename_number_test
+ T av_find_best_stream
+ T av_find_default_stream_index
+ T av_find_input_format
+ T av_find_program_from_stream
+ T av_fmt_ctx_get_duration_estimation_method
+ T av_format_get_audio_codec
+ T av_format_get_control_message_cb
+ T av_format_get_data_codec
+ T av_format_get_metadata_header_padding
+ T av_format_get_opaque
+ T av_format_get_open_cb
+ T av_format_get_probe_score
+ T av_format_get_subtitle_codec
+ T av_format_get_video_codec
+ T av_format_inject_global_side_data
+ T av_format_set_audio_codec
+ T av_format_set_control_message_cb
+ T av_format_set_data_codec
+ T av_format_set_metadata_header_padding
+ T av_format_set_opaque
+ T av_format_set_open_cb
+ T av_format_set_subtitle_codec
+ T av_format_set_video_codec
+ T av_get_frame_filename
+ T av_get_frame_filename2
+ T av_get_output_timestamp
+ T av_get_packet
+ T av_guess_codec
+ T av_guess_format
+ T av_guess_frame_rate
+ T av_guess_sample_aspect_ratio
+ T av_hex_dump
+ T av_hex_dump_log
+ T av_iformat_next
+ T av_index_search_timestamp
+ T av_interleaved_write_frame
+ T av_interleaved_write_uncoded_frame
+ T av_match_ext
+ T av_new_program
+ T av_oformat_next
+ T av_pkt_dump2
+ T av_pkt_dump_log2
+ T av_probe_input_buffer
+ T av_probe_input_buffer2
+ T av_probe_input_format
+ T av_probe_input_format2
+ T av_probe_input_format3
+ T av_program_add_stream_index
+ T av_read_frame
+ T av_read_pause
+ T av_read_play
+ T av_register_all
+ T av_register_input_format
+ T av_register_output_format
+ T av_sdp_create
+ T av_seek_frame
+ T av_stream_add_side_data
+ T av_stream_get_codec_timebase
+ T av_stream_get_end_pts
+ T av_stream_get_parser
+ T av_stream_get_r_frame_rate
+ T av_stream_get_recommended_encoder_configuration
+ T av_stream_get_side_data
+ T av_stream_new_side_data
+ T av_stream_set_r_frame_rate
+ T av_stream_set_recommended_encoder_configuration
+ T av_url_split
+ T av_write_frame
+ T av_write_trailer
+ T av_write_uncoded_frame
+ T av_write_uncoded_frame_query
+ T avformat_alloc_context
+ T avformat_alloc_output_context2
+ T avformat_close_input
+ T avformat_configuration
+ T avformat_find_stream_info
+ T avformat_flush
+ T avformat_free_context
+ T avformat_get_class
+ T avformat_get_mov_audio_tags
+ T avformat_get_mov_video_tags
+ T avformat_get_riff_audio_tags
+ T avformat_get_riff_video_tags
+ T avformat_init_output
+ T avformat_license
+ T avformat_match_stream_specifier
+ T avformat_network_deinit
+ T avformat_network_init
+ T avformat_new_stream
+ T avformat_open_input
+ T avformat_query_codec
+ T avformat_queue_attached_pictures
+ T avformat_seek_file
+ T avformat_transfer_internal_stream_timing_info
+ T avformat_version
+ T avformat_write_header
+ T avio_accept
+ T avio_alloc_context
+ T avio_check
+ T avio_close
+ T avio_close_dir
+ T avio_close_dyn_buf
+ T avio_closep
+ T avio_context_free
+ T avio_enum_protocols
+ T avio_feof
+ T avio_find_protocol_name
+ T avio_flush
+ T avio_free_directory_entry
+ T avio_get_dyn_buf
+ T avio_get_str
+ T avio_get_str16be
+ T avio_get_str16le
+ T avio_handshake
+ T avio_open
+ T avio_open2
+ T avio_open_dir
+ T avio_open_dyn_buf
+ T avio_pause
+ T avio_printf
+ T avio_put_str
+ T avio_put_str16be
+ T avio_put_str16le
+ T avio_r8
+ T avio_rb16
+ T avio_rb24
+ T avio_rb32
+ T avio_rb64
+ T avio_read
+ T avio_read_dir
+ T avio_read_partial
+ T avio_read_to_bprint
+ T avio_rl16
+ T avio_rl24
+ T avio_rl32
+ T avio_rl64
+ T avio_seek
+ T avio_seek_time
+ T avio_size
+ T avio_skip
+ T avio_w8
+ T avio_wb16
+ T avio_wb24
+ T avio_wb32
+ T avio_wb64
+ T avio_wl16
+ T avio_wl24
+ T avio_wl32
+ T avio_wl64
+ T avio_write
+ T avio_write_marker
+ T avpriv_io_delete
+ T avpriv_io_move
+ T avpriv_new_chapter
+ T avpriv_set_pts_info
+ T ff_inet_aton
+ T ff_socket_nonblock
+ T ffio_open_dyn_packet_buf
+ T ffio_set_buf_size
+ T ffurl_close
+ T ffurl_closep
+ T ffurl_open
+ T ffurl_open_whitelist
+ T ffurl_write
+ T url_feof
+ __divdi3
+ __error
+ __fixunsdfdi
+ __isnand
+ __memcpy_chk
+ __moddi3
+ __snprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ __strncat_chk
+ __udivdi3
+ __umoddi3
+ __vsnprintf_chk
+ abort
+ accept$UNIX2003
+ atoi
+ av_add_stable
+ av_aes_alloc
+ av_aes_crypt
+ av_aes_ctr_alloc
+ av_aes_ctr_crypt
+ av_aes_ctr_free
+ av_aes_ctr_init
+ av_aes_ctr_set_iv
+ av_aes_init
+ av_asprintf
+ av_base64_decode
+ av_base64_encode
+ av_bitstream_filter_filter
+ av_bprint_append_data
+ av_bprint_finalize
+ av_bsf_alloc
+ av_bsf_free
+ av_bsf_get_by_name
+ av_bsf_init
+ av_bsf_receive_packet
+ av_bsf_send_packet
+ av_buffer_alloc
+ av_buffer_create
+ av_buffer_default_free
+ av_buffer_unref
+ av_codec_get_lowres
+ av_codec_is_decoder
+ av_codec_next
+ av_codec_set_lowres
+ av_codec_set_pkt_timebase
+ av_color_primaries_name
+ av_color_space_name
+ av_color_transfer_name
+ av_compare_mod
+ av_compare_ts
+ av_content_light_metadata_alloc
+ av_crc
+ av_crc_get_table
+ av_d2q
+ av_default_item_name
+ av_dict_copy
+ av_dict_count
+ av_dict_free
+ av_dict_get
+ av_dict_set
+ av_dict_set_int
+ av_dirac_parse_sequence_header
+ av_display_rotation_get
+ av_div_q
+ av_dynarray_add
+ av_dynarray_add_nofree
+ av_fast_malloc
+ av_fast_padded_malloc
+ av_fast_realloc
+ av_fourcc_make_string
+ av_frame_alloc
+ av_frame_free
+ av_free
+ av_freep
+ av_gcd
+ av_get_audio_frame_duration
+ av_get_audio_frame_duration2
+ av_get_bits_per_sample
+ av_get_channel_layout_nb_channels
+ av_get_channel_name
+ av_get_exact_bits_per_sample
+ av_get_picture_type_char
+ av_gettime
+ av_gettime_relative
+ av_grow_packet
+ av_image_check_sar
+ av_init_packet
+ av_log
+ av_lzo1x_decode
+ av_malloc_tracked
+ av_mallocz_tracked
+ av_mastering_display_metadata_alloc
+ av_match_list
+ av_match_name
+ av_memdup
+ av_mul_q
+ av_new_packet
+ av_opt_copy
+ av_opt_free
+ av_opt_get
+ av_opt_get_dict_val
+ av_opt_next
+ av_opt_ptr
+ av_opt_set
+ av_opt_set_defaults
+ av_opt_set_dict
+ av_opt_set_dict2
+ av_opt_set_dict_val
+ av_opt_set_from_string
+ av_packet_alloc
+ av_packet_free
+ av_packet_get_side_data
+ av_packet_merge_side_data
+ av_packet_new_side_data
+ av_packet_pack_dictionary
+ av_packet_ref
+ av_packet_split_side_data
+ av_packet_unref
+ av_parse_time
+ av_parser_close
+ av_parser_init
+ av_parser_parse2
+ av_pix_fmt_desc_get
+ av_realloc_array
+ av_realloc_f
+ av_realloc_tracked
+ av_reallocp
+ av_reallocp_array
+ av_reduce
+ av_rescale
+ av_rescale_q
+ av_rescale_q_rnd
+ av_rescale_rnd
+ av_sha_alloc
+ av_sha_final
+ av_sha_init
+ av_sha_update
+ av_shrink_packet
+ av_spherical_alloc
+ av_spherical_projection_name
+ av_spherical_tile_bounds
+ av_stereo3d_alloc
+ av_stereo3d_type_name
+ av_strcasecmp
+ av_strdup
+ av_strerror
+ av_stristr
+ av_strlcat
+ av_strlcatf
+ av_strlcpy
+ av_strncasecmp
+ av_strndup
+ av_strstart
+ av_timecode_init
+ av_timecode_make_string
+ av_usleep
+ av_vorbis_parse_frame_flags
+ av_vorbis_parse_free
+ av_vorbis_parse_init
+ av_vorbis_parse_reset
+ av_xiphlacing
+ avcodec_alloc_context3
+ avcodec_chroma_pos_to_enum
+ avcodec_close
+ avcodec_decode_subtitle2
+ avcodec_descriptor_get
+ avcodec_find_decoder
+ avcodec_find_decoder_by_name
+ avcodec_free_context
+ avcodec_get_name
+ avcodec_is_open
+ avcodec_open2
+ avcodec_parameters_alloc
+ avcodec_parameters_copy
+ avcodec_parameters_free
+ avcodec_parameters_from_context
+ avcodec_parameters_to_context
+ avcodec_pix_fmt_to_codec_tag
+ avcodec_receive_frame
+ avcodec_register_all
+ avcodec_send_packet
+ avcodec_string
+ avpriv_ac3_channel_layout_tab
+ avpriv_codec_get_cap_skip_frame_fill_param
+ avpriv_dict_set_timestamp
+ avpriv_find_pix_fmt
+ avpriv_get_raw_pix_fmt_tags
+ avpriv_h264_has_num_reorder_frames
+ avpriv_mpa_freq_tab
+ avpriv_mpeg4audio_get_config
+ avpriv_mpeg4audio_sample_rates
+ avpriv_mpegaudio_decode_header
+ avpriv_report_missing_feature
+ avpriv_request_sample
+ avpriv_toupper4
+ bind$UNIX2003
+ close$UNIX2003
+ connect$UNIX2003
+ fcntl$UNIX2003
+ fprintf
+ fputc
+ freeaddrinfo
+ fwrite
+ getaddrinfo
+ getsockopt
+ gmtime_r
+ hypot
+ inet_aton
+ inflate
+ inflateEnd
+ inflateInit_
+ listen$UNIX2003
+ llrint
+ lrint
+ lrintf
+ memchr
+ memcmp
+ memcpy
+ memmove
+ memset
+ memset_pattern16
+ poll$UNIX2003
+ pthread_once
+ round
+ setsockopt
+ socket
+ sscanf
+ strchr
+ strcmp
+ strcpy
+ strcspn
+ strlen
+ strncmp
+ strrchr
+ strspn
+ strstr
+ strtol
+ uncompress

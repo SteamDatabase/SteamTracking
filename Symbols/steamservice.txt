@@ -1,4 +1,5 @@
  B CCDDBAppDetailCommon::default_instance_
+ B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
@@ -41,7 +42,8 @@
  B CNet::sm_ListHConnectionToWakeUp
  B CNet::sm_ListRecvThrottleGroup
  B CNet::sm_MemPoolNetPacket
- B CNet::sm_THashSocketOwnerCallback
+ B CNet::sm_THashTCPSocketOwnerCallback
+ B CNet::sm_THashUDPSocketOwnerCallback
  B CNetConnection::sm_cSSLConnections
  B COpenSSLConnection::s_cSSLHandshakesPending
  B COpenSSLWrapper::m_nInstances
@@ -220,6 +222,7 @@
  D typeinfo for CClientModuleManagerAsync
  D typeinfo for CClientModuleManagerBase
  D typeinfo for CCrossProcessPipe
+ D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CFrameFunction<CJobMgr>
  D typeinfo for CFrameFunction<CScheduledFunctionMgr>
@@ -249,7 +252,8 @@
  D typeinfo for CTHash<CTCPConnection*, unsigned int>
  D typeinfo for CTHash<CUDPConnection*, unsigned int>
  D typeinfo for CTHash<CWebSocketConnection*, unsigned int>
- D typeinfo for CTHash<ISocketOwnerCallback*, unsigned int>
+ D typeinfo for CTHash<ITCPHostCallback*, unsigned int>
+ D typeinfo for CTHash<IUDPSocketCallback*, unsigned int>
  D typeinfo for CUniformRandomStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -291,6 +295,7 @@
  D vtable for CClientModuleManagerAsync
  D vtable for CClientModuleManagerBase
  D vtable for CCrossProcessPipe
+ D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
  D vtable for CFrameFunction<CJobMgr>
  D vtable for CFrameFunction<CScheduledFunctionMgr>
@@ -315,7 +320,8 @@
  D vtable for CTHash<CTCPConnection*, unsigned int>
  D vtable for CTHash<CUDPConnection*, unsigned int>
  D vtable for CTHash<CWebSocketConnection*, unsigned int>
- D vtable for CTHash<ISocketOwnerCallback*, unsigned int>
+ D vtable for CTHash<ITCPHostCallback*, unsigned int>
+ D vtable for CTHash<IUDPSocketCallback*, unsigned int>
  D vtable for CUniformRandomStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -334,6 +340,14 @@
  D vtable for SteamStdLib::CCommandLine
  D vtable for SteamThreadTools::CThread
  Gestalt
+ NSAddressOfSymbol
+ NSCreateObjectFileImageFromMemory
+ NSDestroyObjectFileImage
+ NSLinkModule
+ NSLookupSymbolInModule
+ NSUnLinkModule
+ NXFindBestFatArch
+ NXGetLocalArchInfo
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
  R k_nCodeSignatureMaxUniverse
@@ -345,6 +359,7 @@
  R typeinfo name for CClientModuleManagerAsync
  R typeinfo name for CClientModuleManagerBase
  R typeinfo name for CCrossProcessPipe
+ R typeinfo name for CCuratorPreferences
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CFrameFunction<CJobMgr>
  R typeinfo name for CFrameFunction<CScheduledFunctionMgr>
@@ -374,7 +389,8 @@
  R typeinfo name for CTHash<CTCPConnection*, unsigned int>
  R typeinfo name for CTHash<CUDPConnection*, unsigned int>
  R typeinfo name for CTHash<CWebSocketConnection*, unsigned int>
- R typeinfo name for CTHash<ISocketOwnerCallback*, unsigned int>
+ R typeinfo name for CTHash<ITCPHostCallback*, unsigned int>
+ R typeinfo name for CTHash<IUDPSocketCallback*, unsigned int>
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -665,6 +681,7 @@
  T CClientModuleManagerBase::CallFunctionAsyncInternal(unsigned int, unsigned int, unsigned int, unsigned int, void const*, unsigned int, void**, unsigned int*, unsigned int*)
  T CClientModuleManagerBase::LoadDynamicModule(DynamicModule_s*, unsigned int)
  T CClientModuleManagerBase::LoadModule(unsigned int, void const*, unsigned int)
+ T CClientModuleManagerBase::LoadModuleHidden(DynamicModule_s*)
  T CClientModuleManagerBase::LoadModuleStandard(DynamicModule_s*)
  T CClientModuleManagerBase::PollResponseAsync(void*, unsigned int, unsigned int*, unsigned int, unsigned int)
  T CClientModuleManagerBase::UnloadModule(unsigned int)
@@ -712,6 +729,17 @@
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
  T CCryptoKeyBase::EnsureCapacity(unsigned int)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
+ T CCuratorPreferences::ByteSize() const
+ T CCuratorPreferences::CCuratorPreferences()
+ T CCuratorPreferences::Clear()
+ T CCuratorPreferences::GetCachedSize() const
+ T CCuratorPreferences::GetMetadata() const
+ T CCuratorPreferences::IsInitialized() const
+ T CCuratorPreferences::MergeFrom(CCuratorPreferences const&)
+ T CCuratorPreferences::New() const
+ T CCuratorPreferences::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CCuratorPreferences::SetCachedSize(int) const
+ T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
@@ -1190,11 +1218,16 @@
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
  T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
- T CTHash<ISocketOwnerCallback*, unsigned int>::Purge()
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveAll()
- T CTHash<ISocketOwnerCallback*, unsigned int>::RemoveFromHash(ISocketOwnerCallback**)
- T CTHash<ISocketOwnerCallback*, unsigned int>::Validate(CValidator&, char const*)
- T CTHash<ISocketOwnerCallback*, unsigned int>::~CTHash()
+ T CTHash<ITCPHostCallback*, unsigned int>::Purge()
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
+ T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
+ T CTHash<ITCPHostCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<ITCPHostCallback*, unsigned int>::~CTHash()
+ T CTHash<IUDPSocketCallback*, unsigned int>::Purge()
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
+ T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
+ T CTHash<IUDPSocketCallback*, unsigned int>::Validate(CValidator&, char const*)
+ T CTHash<IUDPSocketCallback*, unsigned int>::~CTHash()
  T CTSListBase::operator delete(void*)
  T CTSQueue<CWSASendThread::send_t*>::AllocNode()
  T CTSQueue<CWSASendThread::send_t*>::Pop()
@@ -1770,11 +1803,13 @@
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
@@ -1790,6 +1825,7 @@
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -2791,6 +2827,7 @@
  T i2d_X509_ALGOR
  T i2d_X509_SIG
  T i2o_ECPublicKey
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int_rsa_verify
  T lh_delete
  T lh_doall
@@ -3025,6 +3062,8 @@
  atoi
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CCuratorPreferences_descriptor_
+ b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
@@ -3508,6 +3547,7 @@
  dyld_stub_binder
  fclose
  fcntl$UNIX2003
+ ferror
  fflush
  fileno
  fopen$UNIX2003
@@ -3680,6 +3720,7 @@
  r odd_parity
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
@@ -3748,7 +3789,6 @@
  strcmp
  strcpy
  strerror$UNIX2003
- strftime$UNIX2003
  strlen
  strncasecmp
  strncat
@@ -3760,6 +3800,7 @@
  strtoll
  strtoul
  strtoull
+ swap_fat_arch
  sysctl
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -3778,7 +3819,7 @@
  t GetStackPtr()
  t InitTicks()
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)

@@ -63,7 +63,8 @@ typedef enum EPaymentMethod
     k_EPaymentMethodDenizBank, // DenizBank
     k_EPaymentMethodPTT, // PTT
     k_EPaymentMethodCashU, // CashU
-    k_EPaymentMethodAutoGrant = 64, // Auto Grant
+    k_EPaymentMethodSantanderRio, // Santander Rio
+    k_EPaymentMethodAutoGrant, // Auto Grant
     k_EPaymentMethodWebMoneyJapan, // WebMoney (Japan)
     k_EPaymentMethodOneCard, // OneCard
     k_EPaymentMethodPSE, // PSE

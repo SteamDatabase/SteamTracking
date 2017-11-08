@@ -252,7 +252,7 @@
     {
         "id": 507,
         "size": 24,
-        "posted_in": "CUserFriends::SendChatMsg(CSteamID, EChatEntryType, void const*, int)"
+        "posted_in": "CUserFriends::SendChatMsg(CSteamID, EChatEntryType, char const*)"
     },
     {
         "id": 509,
@@ -326,7 +326,7 @@
     },
     {
         "id": 717,
-        "size": 1,
+        "size": 2,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ShutdownLauncher_t>(ShutdownLauncher_t*)"
     },
     {
@@ -912,7 +912,7 @@
     {
         "id": 986,
         "size": 8,
-        "posted_in": "CUser::CheckoutSiteLicenseSeat(unsigned int)"
+        "posted_in": "CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification::YieldingRunMethod(CUser*, CSiteLicense_ClientSeatCheckout_Notification const&)"
     },
     {
         "id": 987,
@@ -976,7 +976,7 @@
     },
     {
         "id": 1011,
-        "size": 24,
+        "size": 32,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLaunchTenFootOverlay_t>(AppLaunchTenFootOverlay_t*)"
     },
     {
@@ -1133,6 +1133,21 @@
         "id": 1203,
         "size": 9,
         "posted_in": "CP2PNetworkingSession::P2PConnectFailed(CSteamID, EP2PSessionError)"
+    },
+    {
+        "id": 1296,
+        "size": 792,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<SteamNetworkingSocketsCert_t>(SteamNetworkingSocketsCert_t*)"
+    },
+    {
+        "id": 1297,
+        "size": 148,
+        "posted_in": "CClientJobP2PConnectionFailInfo::BYieldingRunClientJob(IMsgNetPacket*)"
+    },
+    {
+        "id": 1298,
+        "size": 528,
+        "posted_in": "CClientJobP2PConnectionInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
         "id": 1301,
@@ -2267,7 +2282,7 @@
     {
         "id": 4700,
         "size": 8,
-        "posted_in": "CClientInventory::GetAllItems(int*)::GetAllItemsJob::PostCallbacks(int, ClientInventoryResultSet_t const*)"
+        "posted_in": "CClientInventory::OnMicroTransactionAuthResponse(unsigned int, unsigned long long, unsigned long long, bool)::PurchaseFinalizeJob::PostCallbacks(int, ClientInventoryResultSet_t const*)"
     },
     {
         "id": 4701,
@@ -2283,6 +2298,16 @@
         "id": 4703,
         "size": 20,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamInventoryEligiblePromoItemDefIDs_t>(SteamInventoryEligiblePromoItemDefIDs_t*)"
+    },
+    {
+        "id": 4704,
+        "size": 20,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<SteamInventoryStartPurchaseResult_t>(SteamInventoryStartPurchaseResult_t*)"
+    },
+    {
+        "id": 4705,
+        "size": 8,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<SteamInventoryRequestPricesResult_t>(SteamInventoryRequestPricesResult_t*)"
     },
     {
         "id": 4901,

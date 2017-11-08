@@ -60,7 +60,7 @@ public:
     virtual unknown_ret GetFriendSteamLevel(CSteamID) = 0;
     virtual unknown_ret GetChatMessagesCount(CSteamID) = 0;
     virtual unknown_ret GetChatMessage(CSteamID, int, void*, int, EChatEntryType*, unsigned long long*, unsigned int*) = 0;
-    virtual unknown_ret SendMsgToFriend(CSteamID, EChatEntryType, void const*, int) = 0;
+    virtual unknown_ret SendMsgToFriend(CSteamID, EChatEntryType, char const*) = 0;
     virtual unknown_ret ClearChatHistory(CSteamID) = 0;
     virtual unknown_ret GetKnownClanCount() = 0;
     virtual unknown_ret GetKnownClanByIndex(int) = 0;
@@ -105,7 +105,7 @@ public:
     virtual unknown_ret JoinChatRoom(CSteamID) = 0;
     virtual unknown_ret LeaveChatRoom(CSteamID) = 0;
     virtual unknown_ret InviteUserToChatRoom(CSteamID, CSteamID) = 0;
-    virtual unknown_ret SendChatMsg(CSteamID, EChatEntryType, void const*, int) = 0;
+    virtual unknown_ret SendChatMsg(CSteamID, EChatEntryType, char const*) = 0;
     virtual unknown_ret GetChatRoomMessagesCount(CSteamID) = 0;
     virtual unknown_ret GetChatRoomEntry(CSteamID, int, CSteamID*, void*, int, EChatEntryType*) = 0;
     virtual unknown_ret ClearChatRoomHistory(CSteamID) = 0;

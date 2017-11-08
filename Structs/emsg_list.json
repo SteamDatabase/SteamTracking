@@ -2028,6 +2028,18 @@
         "server_type": -1
     },
     {
+        "emsg": 5621,
+        "name": "k_EMsgClientNetworkingCertRequest",
+        "flags": 2,
+        "server_type": -1
+    },
+    {
+        "emsg": 5622,
+        "name": "k_EMsgClientNetworkingCertRequestResponse",
+        "flags": 2,
+        "server_type": -1
+    },
+    {
         "emsg": 6403,
         "name": "k_EMsgClientGMSServerQuery",
         "flags": 63,

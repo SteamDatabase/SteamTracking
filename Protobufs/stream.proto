@@ -99,7 +99,7 @@ enum EStreamVideoCodec {
 	k_EStreamVideoCodecVP8 = 2;
 	k_EStreamVideoCodecVP9 = 3;
 	k_EStreamVideoCodecH264 = 4;
-	k_EStreamVideoCodecH265 = 5;
+	k_EStreamVideoCodecHEVC = 5;
 	k_EStreamVideoCodecORBX1 = 6;
 	k_EStreamVideoCodecORBX2 = 7;
 }
@@ -329,6 +329,7 @@ message CStreamingClientCaps {
 	optional bool system_can_suspend = 2;
 	optional int32 maximum_decode_bitrate_kbps = 3;
 	optional int32 maximum_burst_bitrate_kbps = 4;
+	optional bool supports_video_hevc = 5;
 }
 
 message CStreamingClientConfig {
@@ -344,6 +345,7 @@ message CStreamingClientConfig {
 	optional bool enable_audio_streaming = 10 [default = true];
 	optional bool enable_input_streaming = 11 [default = true];
 	optional int32 audio_channels = 12 [default = 2];
+	optional bool enable_video_hevc = 13 [default = false];
 }
 
 message CStreamingServerConfig {

@@ -108,4 +108,7 @@ typedef enum EResult
     k_EResultInsufficientFunds, // Insufficient funds
     k_EResultTooManyPending, // Too many pending
     k_EResultNoSiteLicensesFound, // No site licenses found
+    k_EResultNetworkSendExceeded, // Network send exceeded
+    k_EResultAccountsNotFriends, // Accounts not friends
+    k_EResultLimitedUserAccount, // Limited user account
 } EResult;

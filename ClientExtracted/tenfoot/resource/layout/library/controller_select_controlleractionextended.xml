@@ -18,8 +18,9 @@
 					<Label id="bigpicture_quit" text="#Library_Details_ControllerAction_Bigpicture_Quit" />
 					<Label id="host_suspend" text="#Library_Details_ControllerAction_Host_Suspend" />
 					<Label id="host_poweroff" text="#Library_Details_ControllerAction_Host_Off" />
-					<Label id="host_restart" text="#Library_Details_ControllerAction_Host_Restart" />	
-				</DropDown>
+					<Label id="host_restart" text="#Library_Details_ControllerAction_Host_Restart" />
+          <Label id="toggle_lizard" text="#Library_Details_ControllerAction_Toggle_Lizard" />
+        </DropDown>
 			</Panel>
 			<Panel id="SelectMusicOptionPanel" class="SelectMusicOptionContainer">
 				<DropDown id="MusicOptionDropdown" class="ControllerActionOptionDropdown">

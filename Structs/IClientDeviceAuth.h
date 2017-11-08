@@ -2,8 +2,7 @@ class IClientDeviceAuth
 {
 public:
     virtual unknown_ret AuthorizeLocalDevice(char const*, unsigned int) = 0;
-    virtual unknown_ret DeauthorizeLocalDevice(unsigned int) = 0;
-    virtual unknown_ret DeauthorizeRemoteDevice(unsigned long long) = 0;
+    virtual unknown_ret DeauthorizeDevice(unsigned long long) = 0;
     virtual unknown_ret RequestAuthorizationInfos() = 0;
     virtual unknown_ret GetDeviceAuthorizations(unsigned long long*, unsigned int, bool) = 0;
     virtual unknown_ret GetDeviceAuthorizationInfo(unsigned long long, unsigned int*, unsigned int*, unsigned int*, bool*, char*, int, char*, int, char*, int, unsigned int*) = 0;

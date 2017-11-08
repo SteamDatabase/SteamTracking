@@ -51,6 +51,7 @@ public:
     virtual unknown_ret ChangeAppDownloadQueuePlacement(unsigned int, EAppDownloadQueuePlacement) = 0;
     virtual unknown_ret GetAppDownloadQueueIndex(unsigned int) = 0;
     virtual unknown_ret GetAppAutoUpdateDelayedUntilTime(unsigned int) = 0;
+    virtual unknown_ret GetNumAppsInDownloadQueue() = 0;
     virtual unknown_ret BHasLocalContentServer() = 0;
     virtual unknown_ret BuildBackup(unsigned int, unsigned long long, char const*) = 0;
     virtual unknown_ret BuildInstaller(char const*, char const*, char const*, char const*) = 0;

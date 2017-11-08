@@ -6,6 +6,7 @@
 	</styles>
 
 	<ControllerRegistration tabindex="auto" class="TenfootMsgBox" selectionpos="auto" >
+    <Panel id="LoadingBlockout">
 			<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="BindingSaveCancelled()">				
 					<Panel id="MsgBoxHeader" class="MsgBoxHeader RegistrationHeader">
 						<Panel class="Step_RegisteringCurrentAccount StepHeader">
@@ -116,5 +117,7 @@
 							</Panel>				
 					</Panel>
 				</Panel>		
+
+    </Panel>
 	</ControllerRegistration>
 </root>

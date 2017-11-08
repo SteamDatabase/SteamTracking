@@ -3727,6 +3727,11 @@ ChooseBinding #mouse_forward_button
 	height: 100%;
 }
 
+.ShowIcon #VirtualGamepad
+{
+   margin-left: -260px;//95px;
+}
+
 #VirtualGamepad #GamepadTopRow
 {
 	margin-left: 95px;
@@ -4011,6 +4016,17 @@ ControllerConfigBrowser #CategoryExplanation
 	visibility: collapse;
 }
 
+#ConfigsColumn,
+#FriendsConfigsColumn
+{
+	flow-children: down;
+	width: 100%;
+	height: fit-children;
+	overflow: clip scroll;
+	margin-bottom: 100px;
+	visibility: collapse;
+}
+
 ControllerConfigBrowser.SelectPersonalBindings #ConfigsColumn,
 ControllerConfigBrowser.SelectTemplateBindings #ConfigsColumn,
 ControllerConfigBrowser.SelectRecommendedBindings #ConfigsColumn,
@@ -4023,7 +4039,10 @@ ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
 {
 	visibility: visible;
 }
-
+ControllerConfigBrowser.SelectFriendsBindings #FriendsConfigsColumn
+{
+	visibility: visible;
+}
 .NoConfigMessage
 {
 	text-align: center;
@@ -4038,6 +4057,10 @@ ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
 	visibility: visible;
 }
 .SelectCommunityBindings.NoCommunityBindings #NoCommunityConfigs
+{
+	visibility: visible;
+}
+.SelectFriendsBindings.NoFriendsBindings #NoFriendsConfigs
 {
 	visibility: visible;
 }
@@ -4059,6 +4082,10 @@ ControllerConfigBrowser.SelectCommunityBindings #CommunityConfigsColumn
 	visibility: collapse;
 }
 .SelectCommunityBindings.NoCommunityBindings #CategoryExplanation
+{
+	visibility: collapse;
+}
+.SelectFriendsBindings.NoFriendsBindings #CategoryExplanation
 {
 	visibility: collapse;
 }
@@ -4247,10 +4274,21 @@ ControllerConfigBrowser.SelectCommunityBindings #Votes
 	visibility: visible;
 }
 
-
+ControllerConfigBrowser.SelectFriendsBindings #Votes
+{
+	visibility: visible;
+}
 
 ControllerConfigBrowser.SelectCommunityBindings.OfflineMode #CommunityBinding,
 ControllerConfigBrowser.OfflineMode #CommunityCategory,
+ControllerConfigBrowser.OfflineMode.ShowSaveButtons #TemplateCategory,
+ControllerConfigBrowser.OfflineMode.ShowSaveButtons #EntireLibraryCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.SelectFriendsBindings.OfflineMode #FriendsBinding,
+ControllerConfigBrowser.OfflineMode #FriendsCategory,
 ControllerConfigBrowser.OfflineMode.ShowSaveButtons #TemplateCategory,
 ControllerConfigBrowser.OfflineMode.ShowSaveButtons #EntireLibraryCategory
 {
@@ -4273,6 +4311,11 @@ ControllerConfigButton.ShowAllControllerTypes.SelectPersonalBindings .PersonalBi
 }
 
 ControllerConfigBrowser.SelectCommunityBindings .CommunityBinding
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectFriendsBindings .FriendsBinding
 {
 	visibility: visible;
 }
@@ -4340,6 +4383,11 @@ ControllerConfigBrowser.RequiresMoreTimeForPublic .SaveButton.CommunityBinding
 	visibility: collapse;
 }
 
+ControllerConfigBrowser.RequiresMoreTimeForPublic .SaveButton.FriendsBinding
+{
+	visibility: collapse;
+}
+
 ControllerConfigButton #ConfigButtonSaveIcon
 {
 	horizontal-align: right;
@@ -4385,6 +4433,11 @@ ControllerConfigButton.VoteUpIcon #VoteUpIcon
 }
 
 ControllerConfigBrowser.SelectCommunityBindings.RequiresMoreTimeForPublic #RequiresMoreTimeToPublishLabel
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectFriendsBindings.RequiresMoreTimeForPublic #RequiresMoreTimeToPublishLabel
 {
 	visibility: visible;
 }

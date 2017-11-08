@@ -718,6 +718,7 @@
  dlsym
  dyld_stub_binder
  fclose
+ ferror
  fopen
  fopen$UNIX2003
  fread
@@ -799,7 +800,7 @@
  t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
  t _GLOBAL__sub_I_checksum_crc.cpp
  t _GLOBAL__sub_I_coroutine.cpp

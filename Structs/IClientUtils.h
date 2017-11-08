@@ -34,7 +34,7 @@ public:
     virtual unknown_ret GetBuildID() = 0;
     virtual unknown_ret SetCurrentUIMode(EUIMode) = 0;
     virtual unknown_ret GetCurrentUIMode() = 0;
-    virtual unknown_ret ShutdownLauncher(bool) = 0;
+    virtual unknown_ret ShutdownLauncher(bool, bool) = 0;
     virtual unknown_ret SetLauncherType(ELauncherType) = 0;
     virtual unknown_ret GetLauncherType() = 0;
     virtual unknown_ret ShowGamepadTextInput(EGamepadTextInputMode, EGamepadTextInputLineMode, char const*, unsigned int, char const*) = 0;

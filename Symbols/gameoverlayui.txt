@@ -54,6 +54,8 @@
  B CMsgBrowserErrorStrings::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
+ B CMsgBrowserResized::default_instance_
+ B CMsgBrowserSetMinSize::default_instance_
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
@@ -2018,6 +2020,8 @@
  D typeinfo for CMsgBrowserErrorStrings
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
+ D typeinfo for CMsgBrowserResized
+ D typeinfo for CMsgBrowserSetMinSize
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
@@ -3241,6 +3245,8 @@
  D vtable for CMsgBrowserErrorStrings
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
+ D vtable for CMsgBrowserResized
+ D vtable for CMsgBrowserSetMinSize
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
@@ -3885,6 +3891,8 @@
  R typeinfo name for CMsgBrowserErrorStrings
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
+ R typeinfo name for CMsgBrowserResized
+ R typeinfo name for CMsgBrowserSetMinSize
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
@@ -5571,6 +5579,28 @@
  T CMsgBrowserRemove::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserRemove::SetCachedSize(int) const
  T CMsgBrowserRemove::~CMsgBrowserRemove()
+ T CMsgBrowserResized::ByteSize() const
+ T CMsgBrowserResized::CMsgBrowserResized()
+ T CMsgBrowserResized::Clear()
+ T CMsgBrowserResized::GetCachedSize() const
+ T CMsgBrowserResized::GetMetadata() const
+ T CMsgBrowserResized::IsInitialized() const
+ T CMsgBrowserResized::MergeFrom(CMsgBrowserResized const&)
+ T CMsgBrowserResized::New() const
+ T CMsgBrowserResized::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserResized::SetCachedSize(int) const
+ T CMsgBrowserResized::~CMsgBrowserResized()
+ T CMsgBrowserSetMinSize::ByteSize() const
+ T CMsgBrowserSetMinSize::CMsgBrowserSetMinSize()
+ T CMsgBrowserSetMinSize::Clear()
+ T CMsgBrowserSetMinSize::GetCachedSize() const
+ T CMsgBrowserSetMinSize::GetMetadata() const
+ T CMsgBrowserSetMinSize::IsInitialized() const
+ T CMsgBrowserSetMinSize::MergeFrom(CMsgBrowserSetMinSize const&)
+ T CMsgBrowserSetMinSize::New() const
+ T CMsgBrowserSetMinSize::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserSetMinSize::SetCachedSize(int) const
+ T CMsgBrowserSetMinSize::~CMsgBrowserSetMinSize()
  T CMsgBrowserSize::ByteSize() const
  T CMsgBrowserSize::CMsgBrowserSize()
  T CMsgBrowserSize::Clear()
@@ -9272,11 +9302,13 @@
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
@@ -9291,6 +9323,7 @@
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -9762,6 +9795,7 @@
  T init_JSON_config
  T int RoundToIntegerType<int>(double, ERoundingMethod)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
+ T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T jcopy_block_row
  T jcopy_sample_rows
@@ -9859,6 +9893,7 @@
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T non-virtual thunk to vgui::HTML::BrowserCrashed()
  T non-virtual thunk to vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -9887,6 +9922,7 @@
  T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T non-virtual thunk to vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T non-virtual thunk to vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -11032,6 +11068,7 @@
  T vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T vgui::HTML::BrowserCrashed()
  T vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -11062,6 +11099,7 @@
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T vgui::HTML::BrowserResize()
+ T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -13593,6 +13631,10 @@
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
  b (anonymous namespace)::CMsgBrowserRemove_reflection_
+ b (anonymous namespace)::CMsgBrowserResized_descriptor_
+ b (anonymous namespace)::CMsgBrowserResized_reflection_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_descriptor_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_reflection_
  b (anonymous namespace)::CMsgBrowserSize_descriptor_
  b (anonymous namespace)::CMsgBrowserSize_reflection_
  b (anonymous namespace)::CMsgBuildID_descriptor_
@@ -14137,6 +14179,7 @@
  exit
  fclose
  fcntl$UNIX2003
+ ferror
  fflush
  fileno
  floor
@@ -14278,6 +14321,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSetMinSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
@@ -14599,7 +14644,7 @@
  t ListFileNameSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileSizeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileTypeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
@@ -14843,8 +14888,8 @@
  t noop_upsample
  t null_convert
  t output_message
- t parse_buffer_reserve_for(JSON_parser_struct*, unsigned int)
- t parse_parse_buffer(JSON_parser_struct*)
+ t parse_buffer_reserve_for
+ t parse_parse_buffer
  t pass2_fs_dither
  t pass2_no_dither
  t png_build_16bit_table
@@ -14864,7 +14909,7 @@
  t process_data_crank_post
  t process_data_simple_main
  t process_restart
- t push(JSON_parser_struct*, int)
+ t push
  t quantize3_ord_dither
  t quantize_fs_dither
  t quantize_ord_dither
@@ -14878,7 +14923,7 @@
  t reset_marker_reader
  t self_destruct
  t sep_upsample
- t set_error(JSON_parser_struct*)
+ t set_error
  t skip_variable
  t start_input_pass
  t start_output_pass

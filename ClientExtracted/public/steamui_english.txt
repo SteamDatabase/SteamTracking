@@ -2245,6 +2245,7 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_Shutdown_Dialog_Title"	"Steam - Shutdown"
 "Steam_Shutdown_Dialog_Text" "Shutting down Steam..."
 "Steam_Shutdown_Waiting_For_Game" "Waiting for %game% to shut down..."
+"Steam_Shutdown_Finishing_Download" "Waiting for queued downloads to finish..."
 "Steam_Shutdown_Waiting_For_Download" "Stopping download for %game%..."
 "Steam_Shutdown_Waiting_For_Cloud" "Finishing Steam cloud sync..."
 "Steam_Shutdown_Waiting_For_Logoff" "Logging off..."
@@ -3431,8 +3432,11 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 
 "Steam_CannotInstallInOfflineMode"		"Games cannot be installed when Steam is in Offline Mode.\nExit and restart Steam, and choose 'Go Online'.\n"
 
-"SteamUI_OfflineMode_Title" "Steam - Downloads Disabled"
+"Steam_DownloadsDisabled_Title" "Steam - Downloads Disabled"
 "Steam_CannotInstallDownloadsDisabled"	"Games cannot be installed when downloads are disabled.\n"
+
+"Steam_CannotInstallApp_Title"	"Error"
+"Steam_CannotInstallApp_Info"	"Steam failed to install %game% (%error%)."
 
 "SteamUI_VideoPlayer_Title"	"Steam - Video Player"
 "SteamUI_VideoPlayer_LaunchError"	"There was an error launching the Steam Video Player"
@@ -4002,6 +4006,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_44"		"site license locked"
 "Steam_AppUpdateError_45"		"parental control blocked"
 "Steam_AppUpdateError_46"		"create process failed"
+"Steam_AppUpdateError_47"		"Steam client outdated"
 
 
 "steam_subnav_featured"		"Featured"

@@ -11,6 +11,8 @@
  B CMsgBrowserErrorStrings::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
+ B CMsgBrowserResized::default_instance_
+ B CMsgBrowserSetMinSize::default_instance_
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
@@ -146,6 +148,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserReady>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ D typeinfo for CHTMLProtoBufMsg<CMsgBrowserResized>
  D typeinfo for CHTMLProtoBufMsg<CMsgBuildID>
  D typeinfo for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
  D typeinfo for CHTMLProtoBufMsg<CMsgClearAllCookies>
@@ -206,6 +209,8 @@
  D typeinfo for CMsgBrowserErrorStrings
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
+ D typeinfo for CMsgBrowserResized
+ D typeinfo for CMsgBrowserSetMinSize
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
@@ -344,6 +349,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserReady>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ D vtable for CHTMLProtoBufMsg<CMsgBrowserResized>
  D vtable for CHTMLProtoBufMsg<CMsgBuildID>
  D vtable for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
  D vtable for CHTMLProtoBufMsg<CMsgClearAllCookies>
@@ -404,6 +410,8 @@
  D vtable for CMsgBrowserErrorStrings
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
+ D vtable for CMsgBrowserResized
+ D vtable for CMsgBrowserSetMinSize
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
@@ -551,6 +559,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserReady>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserResized>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBuildID>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
  R typeinfo name for CHTMLProtoBufMsg<CMsgClearAllCookies>
@@ -611,6 +620,8 @@
  R typeinfo name for CMsgBrowserErrorStrings
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
+ R typeinfo name for CMsgBrowserResized
+ R typeinfo name for CMsgBrowserSetMinSize
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
@@ -837,6 +848,7 @@
  T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(CHTMLController::BrowserDetails_t const&)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, unsigned int, unsigned int, char const*, char const*)
+ T CHTMLController::BrowserDetails_t::CopyToProtobuf(CMsgBrowserCreate&) const
  T CHTMLController::BrowserDetails_t::operator=(CHTMLController::BrowserDetails_t const&)
  T CHTMLController::CHTMLController()
  T CHTMLController::CIPCTaskPost::CIPCTaskPost(CHTMLController*)
@@ -845,7 +857,8 @@
  T CHTMLController::ChromePrepareForValidate()
  T CHTMLController::ChromeResumeFromValidate()
  T CHTMLController::ClearAllCookies()
- T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, char const*, bool)
+ T CHTMLController::CreateBrowserInternal(CHTMLController::BrowserDetails_t const&, int, int)
+ T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int, char const*, bool)
  T CHTMLController::CreateOffScreenBrowser(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType)
  T CHTMLController::CreateOpenVROverlayBrowser(IHTMLResponses*, char const*, char const*, int, int, char const*, bool)
  T CHTMLController::CreateTransparentBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int)
@@ -906,6 +919,8 @@
  T CHTMLProtoBufMsg<CMsgBrowserReady>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBrowserRemove>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserRemove>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgBrowserResized>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgBrowserResized>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBuildID>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBuildID>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgCanGoBackAndForward>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -1124,6 +1139,28 @@
  T CMsgBrowserRemove::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserRemove::SetCachedSize(int) const
  T CMsgBrowserRemove::~CMsgBrowserRemove()
+ T CMsgBrowserResized::ByteSize() const
+ T CMsgBrowserResized::CMsgBrowserResized()
+ T CMsgBrowserResized::Clear()
+ T CMsgBrowserResized::GetCachedSize() const
+ T CMsgBrowserResized::GetMetadata() const
+ T CMsgBrowserResized::IsInitialized() const
+ T CMsgBrowserResized::MergeFrom(CMsgBrowserResized const&)
+ T CMsgBrowserResized::New() const
+ T CMsgBrowserResized::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserResized::SetCachedSize(int) const
+ T CMsgBrowserResized::~CMsgBrowserResized()
+ T CMsgBrowserSetMinSize::ByteSize() const
+ T CMsgBrowserSetMinSize::CMsgBrowserSetMinSize()
+ T CMsgBrowserSetMinSize::Clear()
+ T CMsgBrowserSetMinSize::GetCachedSize() const
+ T CMsgBrowserSetMinSize::GetMetadata() const
+ T CMsgBrowserSetMinSize::IsInitialized() const
+ T CMsgBrowserSetMinSize::MergeFrom(CMsgBrowserSetMinSize const&)
+ T CMsgBrowserSetMinSize::New() const
+ T CMsgBrowserSetMinSize::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserSetMinSize::SetCachedSize(int) const
+ T CMsgBrowserSetMinSize::~CMsgBrowserSetMinSize()
  T CMsgBrowserSize::ByteSize() const
  T CMsgBrowserSize::CMsgBrowserSize()
  T CMsgBrowserSize::Clear()
@@ -2754,6 +2791,10 @@
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
  b (anonymous namespace)::CMsgBrowserRemove_reflection_
+ b (anonymous namespace)::CMsgBrowserResized_descriptor_
+ b (anonymous namespace)::CMsgBrowserResized_reflection_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_descriptor_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_reflection_
  b (anonymous namespace)::CMsgBrowserSize_descriptor_
  b (anonymous namespace)::CMsgBrowserSize_reflection_
  b (anonymous namespace)::CMsgBuildID_descriptor_
@@ -3058,6 +3099,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSetMinSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_

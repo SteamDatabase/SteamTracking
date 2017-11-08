@@ -28,6 +28,9 @@
 	        <Button class="NxLeftNavButton" id="PersonalCategory" onfocus="SelectConfigCategory( personal );" onactivate="MoveRight(0);">
 						<Label text="#Library_Details_Controller_Personal" />
 					</Button>
+          	<Button class="NxLeftNavButton" id="FriendCategory" onfocus="SelectConfigCategory( friends );" onactivate="MoveRight(0);">
+            	<Label text="#Library_Details_Controller_Friend" />
+          	</Button>
 	        <Button class="NxLeftNavButton" id="CommunityCategory" onfocus="SelectConfigCategory( community );" onactivate="MoveRight(0);">
 	          <Label text="#Library_Details_Controller_Community" />
 	        </Button>
@@ -45,8 +48,10 @@
 				<Label id="RequiresMoreTimeToPublishLabel" text="#Library_ControllerSaveReqUseTime" />
 				<Panel id="ConfigsColumn" childfocusonhover="true" overscroll-y="100" />
 				<Panel id="CommunityConfigsColumn" childfocusonhover="true" overscroll-y="100" />
+        		<Panel id="FriendsConfigsColumn" childfocusonhover="true" overscroll-y="100"  />
 				<Label id="NoTemplateConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_template" />
 				<Label id="NoPersonalConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />
+       			<Label id="NoFriendsConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_friends" />
 				<Label id="NoCommunityConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_community" />
 				<Label id="NoRecommendedConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_recommended" />
 				<Label id="NoEntireLibraryConfigs" class="NoConfigMessage" text="#ControllerBinding_Missing_personal" />

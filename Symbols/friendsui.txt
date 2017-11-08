@@ -13,6 +13,8 @@
  B CMsgBrowserErrorStrings::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
+ B CMsgBrowserResized::default_instance_
+ B CMsgBrowserSetMinSize::default_instance_
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
@@ -204,6 +206,8 @@
  B g_URLLabelPullInModule
  B g_VecLoadedModules
  B g_convarEnableTradeInviteBarInLaunchers
+ B g_cvarDeveloper
+ B g_cvarOverlayFPS
  B g_nYou_Must_Add_Public_Vgui_Controls_Vgui_ControlsCpp_To_Your_Project
  B g_pIServerBrowser
  B g_pRunGameEngine
@@ -219,6 +223,7 @@
  B vgui::Panel::s_DragDropCapture
  B vgui::ToolWindow::s_ToolWindows
  B vgui::g_ButtonSoundNames
+ CFArrayCreate
  CFBooleanGetValue
  CFDateCreate
  CFDateFormatterCreate
@@ -229,6 +234,7 @@
  CFLocaleCopyCurrent
  CFPropertyListCreateFromXMLData
  CFRelease
+ CFRunLoopGetCurrent
  CFStringCreateWithCString
  CFStringGetCString
  CFURLCreateDataAndPropertiesFromResource
@@ -1573,6 +1579,7 @@
  D hmac_asn1_meth
  D hmac_pkey_meth
  D jpeg_std_message_table
+ D k_pchAlbumCoversRelative
  D k_pszSteamClientModuleName
  D k_rgchCodeSignaturePublicKeys
  D pModuleExtension
@@ -1672,6 +1679,9 @@
  D typeinfo for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D typeinfo for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  D typeinfo for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
+ D typeinfo for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
+ D typeinfo for CCallback<CSharedConnectionController, SteamServersConnected_t, false>
+ D typeinfo for CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
@@ -1695,6 +1705,7 @@
  D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<524>
+ D typeinfo for CCallbackImpl<6>
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<76>
  D typeinfo for CCallbackImpl<80>
@@ -1758,6 +1769,7 @@
  D typeinfo for CFriendPanel::ImagePanelMouseDelegate
  D typeinfo for CFriendPanelAffordance
  D typeinfo for CFriendPanelLabel
+ D typeinfo for CFriendSettingsController
  D typeinfo for CFriendsClansPage
  D typeinfo for CFriendsDialog
  D typeinfo for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -1821,8 +1833,12 @@
  D typeinfo for CHTMLHeader
  D typeinfo for CHTMLPageSecurityInfo
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ D typeinfo for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ D typeinfo for CHTMLProtoBufMsg<CMsgBrowserSetMinSize>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserSize>
  D typeinfo for CHTMLProtoBufMsg<CMsgCopy>
+ D typeinfo for CHTMLProtoBufMsg<CMsgEnableSteamClientAPI>
+ D typeinfo for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
@@ -1831,8 +1847,10 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
  D typeinfo for CHTMLProtoBufMsg<CMsgHidePopup>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyChar>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -1851,16 +1869,33 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetFocus>
+ D typeinfo for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
+ D typeinfo for CHTMLProtoBufMsg<CMsgSetLocalFileRequestMapping>
  D typeinfo for CHTMLProtoBufMsg<CMsgStartRequestResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgStopFind>
  D typeinfo for CHTMLProtoBufMsg<CMsgStopLoad>
  D typeinfo for CHTMLProtoBufMsg<CMsgViewSource>
+ D typeinfo for CHTMLWindow
+ D typeinfo for CHTMLWindowController
+ D typeinfo for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  D typeinfo for CHTTPImage
  D typeinfo for CHintLabel
  D typeinfo for CIntProperty
  D typeinfo for CItemImageManager
  D typeinfo for CItemReceivedNotification
+ D typeinfo for CJSCallbackFunc
+ D typeinfo for CJSCallbackPromise
  D typeinfo for CJSMethodArgument
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, int>
+ D typeinfo for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
+ D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  D typeinfo for CLimitedUserDialog
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMsgAddHeader
@@ -1870,6 +1905,8 @@
  D typeinfo for CMsgBrowserErrorStrings
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
+ D typeinfo for CMsgBrowserResized
+ D typeinfo for CMsgBrowserSetMinSize
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
@@ -1996,7 +2033,12 @@
  D typeinfo for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
+ D typeinfo for CRefCountServiceBase<true, CRefMT>
+ D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CSetNicknameDialog
+ D typeinfo for CSharedConnectionController::CCallback_OnMessageReady
+ D typeinfo for CSharedConnectionController::CCallback_OnServersConnected
+ D typeinfo for CSharedConnectionController::CCallback_OnServersDisconnected
  D typeinfo for CSharedLibraryNotifications
  D typeinfo for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
  D typeinfo for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
@@ -2026,6 +2068,9 @@
  D typeinfo for IFriendPanelContainer
  D typeinfo for IFriendsUI
  D typeinfo for IHTMLResponses
+ D typeinfo for IHTMLWindow
+ D typeinfo for IHTMLWindowController
+ D typeinfo for IJSMethodCallHandler
  D typeinfo for IVGuiModule
  D typeinfo for IValidate
  D typeinfo for ListPanelColumnSelectButton
@@ -2824,6 +2869,9 @@
  D vtable for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D vtable for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  D vtable for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
+ D vtable for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
+ D vtable for CCallback<CSharedConnectionController, SteamServersConnected_t, false>
+ D vtable for CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
@@ -2846,6 +2894,7 @@
  D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<524>
+ D vtable for CCallbackImpl<6>
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<76>
  D vtable for CCallbackImpl<80>
@@ -2909,6 +2958,7 @@
  D vtable for CFriendPanel::ImagePanelMouseDelegate
  D vtable for CFriendPanelAffordance
  D vtable for CFriendPanelLabel
+ D vtable for CFriendSettingsController
  D vtable for CFriendsClansPage
  D vtable for CFriendsDialog
  D vtable for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -2971,8 +3021,12 @@
  D vtable for CHTMLHeader
  D vtable for CHTMLPageSecurityInfo
  D vtable for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ D vtable for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ D vtable for CHTMLProtoBufMsg<CMsgBrowserSetMinSize>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserSize>
  D vtable for CHTMLProtoBufMsg<CMsgCopy>
+ D vtable for CHTMLProtoBufMsg<CMsgEnableSteamClientAPI>
+ D vtable for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
@@ -2981,8 +3035,10 @@
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
  D vtable for CHTMLProtoBufMsg<CMsgHidePopup>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D vtable for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D vtable for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D vtable for CHTMLProtoBufMsg<CMsgKeyChar>
  D vtable for CHTMLProtoBufMsg<CMsgKeyDown>
  D vtable for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -3001,16 +3057,33 @@
  D vtable for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
  D vtable for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D vtable for CHTMLProtoBufMsg<CMsgSetFocus>
+ D vtable for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
+ D vtable for CHTMLProtoBufMsg<CMsgSetLocalFileRequestMapping>
  D vtable for CHTMLProtoBufMsg<CMsgStartRequestResponse>
  D vtable for CHTMLProtoBufMsg<CMsgStopFind>
  D vtable for CHTMLProtoBufMsg<CMsgStopLoad>
  D vtable for CHTMLProtoBufMsg<CMsgViewSource>
+ D vtable for CHTMLWindow
+ D vtable for CHTMLWindowController
+ D vtable for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  D vtable for CHTTPImage
  D vtable for CHintLabel
  D vtable for CIntProperty
  D vtable for CItemImageManager
  D vtable for CItemReceivedNotification
+ D vtable for CJSCallbackFunc
+ D vtable for CJSCallbackPromise
  D vtable for CJSMethodArgument
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, int>
+ D vtable for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
+ D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  D vtable for CLimitedUserDialog
  D vtable for CMSgJumpListMRUApp
  D vtable for CMsgAddHeader
@@ -3020,6 +3093,8 @@
  D vtable for CMsgBrowserErrorStrings
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
+ D vtable for CMsgBrowserResized
+ D vtable for CMsgBrowserSetMinSize
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
@@ -3147,6 +3222,9 @@
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
  D vtable for CSetNicknameDialog
+ D vtable for CSharedConnectionController::CCallback_OnMessageReady
+ D vtable for CSharedConnectionController::CCallback_OnServersConnected
+ D vtable for CSharedConnectionController::CCallback_OnServersDisconnected
  D vtable for CSharedLibraryNotifications
  D vtable for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
  D vtable for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
@@ -3280,6 +3358,12 @@
  D vtable for vgui::TreeViewSubPanel
  D vtable for vgui::URLLabel
  Error
+ FSEventStreamCreate
+ FSEventStreamInvalidate
+ FSEventStreamRelease
+ FSEventStreamScheduleWithRunLoop
+ FSEventStreamStart
+ FSEventStreamStop
  GetLocalHostname
  GetOSType
  KeyValuesSystemSteam
@@ -3290,6 +3374,7 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_IsInDebugSession
+ Plat_MSTime64
  Plat_localtime
  R jpeg_aritab
  R jpeg_natural_order
@@ -3392,6 +3477,9 @@
  R typeinfo name for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  R typeinfo name for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  R typeinfo name for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
+ R typeinfo name for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
+ R typeinfo name for CCallback<CSharedConnectionController, SteamServersConnected_t, false>
+ R typeinfo name for CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
@@ -3415,6 +3503,7 @@
  R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<524>
+ R typeinfo name for CCallbackImpl<6>
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<76>
  R typeinfo name for CCallbackImpl<80>
@@ -3478,6 +3567,7 @@
  R typeinfo name for CFriendPanel::ImagePanelMouseDelegate
  R typeinfo name for CFriendPanelAffordance
  R typeinfo name for CFriendPanelLabel
+ R typeinfo name for CFriendSettingsController
  R typeinfo name for CFriendsClansPage
  R typeinfo name for CFriendsDialog
  R typeinfo name for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -3541,8 +3631,12 @@
  R typeinfo name for CHTMLHeader
  R typeinfo name for CHTMLPageSecurityInfo
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserRemove>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserSetMinSize>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserSize>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCopy>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgEnableSteamClientAPI>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
@@ -3551,8 +3645,10 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHidePopup>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyChar>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -3571,16 +3667,33 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetFocus>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgSetLocalFileRequestMapping>
  R typeinfo name for CHTMLProtoBufMsg<CMsgStartRequestResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgStopFind>
  R typeinfo name for CHTMLProtoBufMsg<CMsgStopLoad>
  R typeinfo name for CHTMLProtoBufMsg<CMsgViewSource>
+ R typeinfo name for CHTMLWindow
+ R typeinfo name for CHTMLWindowController
+ R typeinfo name for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  R typeinfo name for CHTTPImage
  R typeinfo name for CHintLabel
  R typeinfo name for CIntProperty
  R typeinfo name for CItemImageManager
  R typeinfo name for CItemReceivedNotification
+ R typeinfo name for CJSCallbackFunc
+ R typeinfo name for CJSCallbackPromise
  R typeinfo name for CJSMethodArgument
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, int>
+ R typeinfo name for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
+ R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  R typeinfo name for CLimitedUserDialog
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMsgAddHeader
@@ -3590,6 +3703,8 @@
  R typeinfo name for CMsgBrowserErrorStrings
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
+ R typeinfo name for CMsgBrowserResized
+ R typeinfo name for CMsgBrowserSetMinSize
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
@@ -3716,7 +3831,12 @@
  R typeinfo name for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
+ R typeinfo name for CRefCountServiceBase<true, CRefMT>
+ R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CSetNicknameDialog
+ R typeinfo name for CSharedConnectionController::CCallback_OnMessageReady
+ R typeinfo name for CSharedConnectionController::CCallback_OnServersConnected
+ R typeinfo name for CSharedConnectionController::CCallback_OnServersDisconnected
  R typeinfo name for CSharedLibraryNotifications
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
@@ -3732,8 +3852,10 @@
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHandleTable<vgui::BuildGroup, 20>
  R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
+ R typeinfo name for CUtlLinkedList<CHTMLWindow*, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
+ R typeinfo name for CUtlLinkedList<CUtlString, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::DialogManager<CChatIntroductionDialog, CSteamID>::DialogItem_t, int>
  R typeinfo name for CUtlLinkedList<vgui::DialogManager<CChatRoomDlg, CSteamID>::DialogItem_t, int>
@@ -3791,6 +3913,7 @@
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >
+ R typeinfo name for CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
@@ -3851,6 +3974,9 @@
  R typeinfo name for IFriendPanelContainer
  R typeinfo name for IFriendsUI
  R typeinfo name for IHTMLResponses
+ R typeinfo name for IHTMLWindow
+ R typeinfo name for IHTMLWindowController
+ R typeinfo name for IJSMethodCallHandler
  R typeinfo name for IVGuiModule
  R typeinfo name for IValidate
  R typeinfo name for KeyValuesAD
@@ -4172,6 +4298,7 @@
  T BN_ucmp
  T BN_usub
  T BN_value_one
+ T BParseOpenDevTools(CUtlString*, unsigned int*, CUtlString*, char const*)
  T BUF_MEM_grow_clean
  T BUF_memdup
  T BUF_reverse
@@ -4223,6 +4350,10 @@
  T CAppDownloadedNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()
  T CAppDownloadedNotification::PerformLayout()
  T CAppDownloadedNotification::~CAppDownloadedNotification()
+ T CAutoRelease<CJSCallbackFunc>::Reset(CJSCallbackFunc*)
+ T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
+ T CAutoRelease<CJSCallbackPromise>::Reset(CJSCallbackPromise*)
+ T CAutoRelease<CJSCallbackPromise>::~CAutoRelease()
  T CAvatarOverlayImage::CAvatarOverlayImage(vgui::Panel*, char const*, CSteamID)
  T CAvatarOverlayImage::ChainToAnimationMap()
  T CAvatarOverlayImage::ChainToMap()
@@ -4582,6 +4713,15 @@
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::CCallback(CPlayersSubRecentPlayers*, void (CPlayersSubRecentPlayers::*)(PersonaStateChange_t*))
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::Register(CPlayersSubRecentPlayers*, void (CPlayersSubRecentPlayers::*)(PersonaStateChange_t*))
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::Run(void*)
+ T CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>::CCallback(CSharedConnectionController*, void (CSharedConnectionController::*)(SharedConnectionMessageReady_t*))
+ T CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>::Register(CSharedConnectionController*, void (CSharedConnectionController::*)(SharedConnectionMessageReady_t*))
+ T CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>::Run(void*)
+ T CCallback<CSharedConnectionController, SteamServersConnected_t, false>::CCallback(CSharedConnectionController*, void (CSharedConnectionController::*)(SteamServersConnected_t*))
+ T CCallback<CSharedConnectionController, SteamServersConnected_t, false>::Register(CSharedConnectionController*, void (CSharedConnectionController::*)(SteamServersConnected_t*))
+ T CCallback<CSharedConnectionController, SteamServersConnected_t, false>::Run(void*)
+ T CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>::CCallback(CSharedConnectionController*, void (CSharedConnectionController::*)(SteamServersDisconnected_t*))
+ T CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>::Register(CSharedConnectionController*, void (CSharedConnectionController::*)(SteamServersDisconnected_t*))
+ T CCallback<CSharedConnectionController, SteamServersDisconnected_t, false>::Run(void*)
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(AuthorizeDeviceResult_t*))
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(AuthorizeDeviceResult_t*))
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::Run(void*)
@@ -4648,6 +4788,9 @@
  T CCallbackImpl<524>::GetCallbackSizeBytes()
  T CCallbackImpl<524>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<524>::~CCallbackImpl()
+ T CCallbackImpl<6>::GetCallbackSizeBytes()
+ T CCallbackImpl<6>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<6>::~CCallbackImpl()
  T CCallbackImpl<72>::GetCallbackSizeBytes()
  T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<72>::~CCallbackImpl()
@@ -4879,7 +5022,7 @@
  T CChatRoomDlg::ResetHistory()
  T CChatRoomDlg::ResetStatusText()
  T CChatRoomDlg::ResumeVoiceChat()
- T CChatRoomDlg::SendChatMsg(EChatEntryType, void const*, int)
+ T CChatRoomDlg::SendChatMsg(EChatEntryType, char const*)
  T CChatRoomDlg::SendTradeInvite(CSteamID)
  T CChatRoomDlg::SerializeChatDlg(CUtlBuffer&)
  T CChatRoomDlg::SetChatMode(EChatUIMode)
@@ -5041,6 +5184,10 @@
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
+ T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
+ T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
@@ -5065,6 +5212,11 @@
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(char const*)
  T CDirIterator::~CDirIterator()
+ T CDirWatcher::AddFileToChangeList(char const*)
+ T CDirWatcher::CDirWatcher()
+ T CDirWatcher::GetChangedFile(CUtlString*)
+ T CDirWatcher::SetDirToWatch(char const*)
+ T CDirWatcher::~CDirWatcher()
  T CEditFriendsGroupsDialog::CEditFriendsGroupsDialog(vgui::Panel*, char const*, CSteamID)
  T CEditFriendsGroupsDialog::ChainToAnimationMap()
  T CEditFriendsGroupsDialog::ChainToMap()
@@ -5319,6 +5471,17 @@
  T CFriendPanelLabel::GetStyleFlags()
  T CFriendPanelLabel::KB_ChainToMap()
  T CFriendPanelLabel::~CFriendPanelLabel()
+ T CFriendSettingsController::CFriendSettingsController()
+ T CFriendSettingsController::DispatchSettingsChanged()
+ T CFriendSettingsController::Initialize()
+ T CFriendSettingsController::RegisterForSettingsChanges(CSmartPtr<CJSCallbackFunc>)
+ T CFriendSettingsController::RegisterJSMethods(IHTMLWindow*)
+ T CFriendSettingsController::RunFrame()
+ T CFriendSettingsController::SetChatFlashMode(int)
+ T CFriendSettingsController::SetFriendSettings(CJSObject*)
+ T CFriendSettingsController::SetSettingsJavascriptValueBool(char const*, bool)
+ T CFriendSettingsController::Validate(CValidator&, char const*)
+ T CFriendSettingsController::~CFriendSettingsController()
  T CFriendsClansPage::CFriendsClansPage(CFriendsDialog*)
  T CFriendsClansPage::ChainToAnimationMap()
  T CFriendsClansPage::ChainToMap()
@@ -5822,6 +5985,11 @@
  T CFriendsUIModule::Shutdown()
  T CFriendsUIModule::StartInviteToTrade(CSteamID)
  T CFriendsUIModule::~CFriendsUIModule()
+ T CFriendsWebChat::Activate()
+ T CFriendsWebChat::CFriendsWebChat()
+ T CFriendsWebChat::Initialize(IHTMLChromeController*)
+ T CFriendsWebChat::Shutdown()
+ T CFriendsWebChat::~CFriendsWebChat()
  T CGameID::IsValid() const
  T CGameInviteBar::ActiveInvite(CSteamID, char const*, unsigned int)
  T CGameInviteBar::CGameInviteBar(CChatRoomDlg*, char const*)
@@ -5893,10 +6061,18 @@
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
  T CHTMLProtoBufMsg<CMsgBrowserErrorStrings>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserErrorStrings>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgBrowserRemove>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgBrowserRemove>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgBrowserSetMinSize>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgBrowserSetMinSize>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBrowserSize>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserSize>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgCopy>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgCopy>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgEnableSteamClientAPI>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgEnableSteamClientAPI>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5913,10 +6089,14 @@
  T CHTMLProtoBufMsg<CMsgHidePopup>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyChar>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgKeyChar>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyDown>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5953,6 +6133,10 @@
  T CHTMLProtoBufMsg<CMsgScreenInformationChanged>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetFocus>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetFocus>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgSetLocalFileRequestMapping>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgSetLocalFileRequestMapping>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgStartRequestResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgStartRequestResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgStopFind>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5961,6 +6145,115 @@
  T CHTMLProtoBufMsg<CMsgStopLoad>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgViewSource>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgViewSource>::~CHTMLProtoBufMsg()
+ T CHTMLWindow::AddGameOverlayPID(unsigned int)
+ T CHTMLWindow::AddJSCallback(CJSCallbackFunc*)
+ T CHTMLWindow::BIsGameOverlayBrowser() const
+ T CHTMLWindow::BSupportsOffMainThreadPaints()
+ T CHTMLWindow::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
+ T CHTMLWindow::BrowserClose(CMsgClose const*)
+ T CHTMLWindow::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T CHTMLWindow::BrowserCrashed()
+ T CHTMLWindow::BrowserExitFullScreen(CMsgExitFullScreen const*)
+ T CHTMLWindow::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
+ T CHTMLWindow::BrowserFinishedRequest(CMsgFinishedRequest const*)
+ T CHTMLWindow::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T CHTMLWindow::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T CHTMLWindow::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
+ T CHTMLWindow::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
+ T CHTMLWindow::BrowserGetIndex()
+ T CHTMLWindow::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
+ T CHTMLWindow::BrowserHidePopup(CMsgHidePopup const*)
+ T CHTMLWindow::BrowserHideToolTip(CMsgHideToolTip const*)
+ T CHTMLWindow::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
+ T CHTMLWindow::BrowserJSAlert(CMsgJSAlert const*)
+ T CHTMLWindow::BrowserJSConfirm(CMsgJSConfirm const*)
+ T CHTMLWindow::BrowserJSMethodCall(CMsgJSMethodCall const*)
+ T CHTMLWindow::BrowserJSReleaseCallback(CMsgJSReleaseCallback const*)
+ T CHTMLWindow::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
+ T CHTMLWindow::BrowserLoadedRequest(CMsgLoadedRequest const*)
+ T CHTMLWindow::BrowserLoadingResource(CMsgLoadingResource const*)
+ T CHTMLWindow::BrowserNeedsPaint(CMsgNeedsPaint const*)
+ T CHTMLWindow::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
+ T CHTMLWindow::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
+ T CHTMLWindow::BrowserOpenNewTab(CMsgOpenNewTab const*)
+ T CHTMLWindow::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
+ T CHTMLWindow::BrowserPageSecurity(CMsgPageSecurity const*)
+ T CHTMLWindow::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T CHTMLWindow::BrowserReady(CMsgBrowserReady const*)
+ T CHTMLWindow::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T CHTMLWindow::BrowserResized(CMsgBrowserResized const*)
+ T CHTMLWindow::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
+ T CHTMLWindow::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
+ T CHTMLWindow::BrowserSearchResults(CMsgSearchResults const*)
+ T CHTMLWindow::BrowserSetCursor(CMsgSetCursor const*)
+ T CHTMLWindow::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
+ T CHTMLWindow::BrowserSetIndex(int)
+ T CHTMLWindow::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
+ T CHTMLWindow::BrowserShowPopup(CMsgShowPopup const*)
+ T CHTMLWindow::BrowserShowToolTip(CMsgShowToolTip const*)
+ T CHTMLWindow::BrowserSizePopup(CMsgSizePopup const*)
+ T CHTMLWindow::BrowserStartRequest(CMsgStartRequest const*)
+ T CHTMLWindow::BrowserStatusText(CMsgStatusText const*)
+ T CHTMLWindow::BrowserURLChanged(CMsgURLChanged const*)
+ T CHTMLWindow::BrowserUpdateToolTip(CMsgUpdateToolTip const*)
+ T CHTMLWindow::BrowserVerticalScrollBarSizeResponse(CMsgVerticalScrollBarSizeResponse const*)
+ T CHTMLWindow::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
+ T CHTMLWindow::CHTMLWindow(IHTMLChromeController*)
+ T CHTMLWindow::ClientFilesChanged()
+ T CHTMLWindow::ClientStyleFileChanged(char const*)
+ T CHTMLWindow::Close()
+ T CHTMLWindow::GetBrowserIndexForJS()
+ T CHTMLWindow::GetGameOverlayTextureHandleForPid(unsigned int, unsigned int&, unsigned int&, unsigned int&)
+ T CHTMLWindow::GetSharedTextureSize(unsigned int&, unsigned int&)
+ T CHTMLWindow::InitFileChangeMethods()
+ T CHTMLWindow::JSIIsPopupWindow(CSmartPtr<CJSCallbackFunc>)
+ T CHTMLWindow::JSIsDirectHWNDBrowser(CSmartPtr<CJSCallbackFunc>)
+ T CHTMLWindow::JSIsVROverlayBrowser(CSmartPtr<CJSCallbackFunc>)
+ T CHTMLWindow::LoadAndPreventRenavigateURL(char const*)
+ T CHTMLWindow::LoadURL(char const*)
+ T CHTMLWindow::MouseMoved(int, int)
+ T CHTMLWindow::OnKeyChar(int, int)
+ T CHTMLWindow::OnKeyDown(int, int)
+ T CHTMLWindow::OnKeyUp(int, int)
+ T CHTMLWindow::OnMousePressed(IHTMLWindow::MouseCode, int)
+ T CHTMLWindow::OnMouseReleased(IHTMLWindow::MouseCode, int)
+ T CHTMLWindow::OnMouseWheel(int, int)
+ T CHTMLWindow::RaiseJSException(char const*)
+ T CHTMLWindow::RegisterForOpenNewTab(CSmartPtr<CJSCallbackFunc>)
+ T CHTMLWindow::RegisterForStyleChanges(CSmartPtr<CJSCallbackFunc>)
+ T CHTMLWindow::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T CHTMLWindow::ReleaseJSCallback(CJSCallbackFunc*)
+ T CHTMLWindow::Reload()
+ T CHTMLWindow::RunJavascript(char const*)
+ T CHTMLWindow::SendPendingHTMLMessages()
+ T CHTMLWindow::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >*)
+ T CHTMLWindow::SetMinSize(unsigned int, unsigned int)
+ T CHTMLWindow::SetReloadWhenClientFilesChange()
+ T CHTMLWindow::SetSize(unsigned int, unsigned int)
+ T CHTMLWindow::SetWindowConfigName(char const*)
+ T CHTMLWindow::ThreadNotifyPendingPaints()
+ T CHTMLWindow::~CHTMLWindow()
+ T CHTMLWindowController::AccessChromeController()
+ T CHTMLWindowController::CCallbackInternal_OnPostLogonState::CCallbackInternal_OnPostLogonState()
+ T CHTMLWindowController::CCallbackInternal_OnPostLogonState::Run(void*)
+ T CHTMLWindowController::CHTMLWindowController()
+ T CHTMLWindowController::CheckForClientChanges()
+ T CHTMLWindowController::CloseBrowser(IHTMLWindow*)
+ T CHTMLWindowController::CreateBrowser(char const*, int, int, int, int, char const*)
+ T CHTMLWindowController::CreateBrowserHelper(char const*, EBrowserType, int, int, int, int, bool, char const*, char const*)
+ T CHTMLWindowController::CreateGameOverlayBrowser(char const*, int, int, bool)
+ T CHTMLWindowController::CreatePopupBrowser(int, int)
+ T CHTMLWindowController::CreateTransparentBrowser(char const*, int, int, int, int)
+ T CHTMLWindowController::CreateVROverlayBrowser(char const*, bool, char const*, int, int)
+ T CHTMLWindowController::Initialize(IHTMLChromeController*)
+ T CHTMLWindowController::IsValidBrowser(IHTMLWindow*)
+ T CHTMLWindowController::OnOverlayFPSCvarChanged()
+ T CHTMLWindowController::OnPostLogonState(PostLogonState_t*)
+ T CHTMLWindowController::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T CHTMLWindowController::RunFrame()
+ T CHTMLWindowController::SetFileMappingRoutes(CHTMLWindow*)
+ T CHTMLWindowController::Shutdown()
+ T CHTMLWindowController::~CHTMLWindowController()
  T CHTTPImage::CHTTPImage(char const*)
  T CHTTPImage::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CHTTPImage::~CHTTPImage()
@@ -6000,6 +6293,18 @@
  T CItemReceivedNotification::GetPanelTopClassName() const
  T CItemReceivedNotification::KB_ChainToMap()
  T CItemReceivedNotification::~CItemReceivedNotification()
+ T CJSArray::AddString(char const*)
+ T CJSCallbackFunc::Call(CJSMethodArgs&)
+ T CJSCallbackFunc::OnFinalRelease()
+ T CJSCallbackFunc::~CJSCallbackFunc()
+ T CJSCallbackPromise::CJSCallbackPromise(CSmartPtr<CJSCallbackFunc>, CSmartPtr<CJSCallbackFunc>)
+ T CJSCallbackPromise::~CJSCallbackPromise()
+ T CJSMethodArgs::AddArray()
+ T CJSMethodArgs::AddBoolean(bool)
+ T CJSMethodArgs::AddNumber(unsigned int)
+ T CJSMethodArgs::AddObject()
+ T CJSMethodArgs::AddString(char const*)
+ T CJSMethodArgs::CJSMethodArgs()
  T CJSMethodArgument::ByteSize() const
  T CJSMethodArgument::CJSMethodArgument()
  T CJSMethodArgument::Clear()
@@ -6013,6 +6318,10 @@
  T CJSMethodArgument::SharedCtor()
  T CJSMethodArgument::SharedDtor()
  T CJSMethodArgument::~CJSMethodArgument()
+ T CJSObject::AddObjectProperty(char const*)
+ T CJSObject::SetBoolean(char const*, bool)
+ T CJSObject::SetNumber(char const*, int)
+ T CJSObject::SetString(char const*, char const*)
  T CJpegSourceMgr::error_exit(jpeg_common_struct*)
  T CJpegSourceMgr::imp_fill_input_buffer(jpeg_decompress_struct*)
  T CJpegSourceMgr::imp_init_source(jpeg_decompress_struct*)
@@ -6159,6 +6468,28 @@
  T CMsgBrowserRemove::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrowserRemove::SetCachedSize(int) const
  T CMsgBrowserRemove::~CMsgBrowserRemove()
+ T CMsgBrowserResized::ByteSize() const
+ T CMsgBrowserResized::CMsgBrowserResized()
+ T CMsgBrowserResized::Clear()
+ T CMsgBrowserResized::GetCachedSize() const
+ T CMsgBrowserResized::GetMetadata() const
+ T CMsgBrowserResized::IsInitialized() const
+ T CMsgBrowserResized::MergeFrom(CMsgBrowserResized const&)
+ T CMsgBrowserResized::New() const
+ T CMsgBrowserResized::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserResized::SetCachedSize(int) const
+ T CMsgBrowserResized::~CMsgBrowserResized()
+ T CMsgBrowserSetMinSize::ByteSize() const
+ T CMsgBrowserSetMinSize::CMsgBrowserSetMinSize()
+ T CMsgBrowserSetMinSize::Clear()
+ T CMsgBrowserSetMinSize::GetCachedSize() const
+ T CMsgBrowserSetMinSize::GetMetadata() const
+ T CMsgBrowserSetMinSize::IsInitialized() const
+ T CMsgBrowserSetMinSize::MergeFrom(CMsgBrowserSetMinSize const&)
+ T CMsgBrowserSetMinSize::New() const
+ T CMsgBrowserSetMinSize::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserSetMinSize::SetCachedSize(int) const
+ T CMsgBrowserSetMinSize::~CMsgBrowserSetMinSize()
  T CMsgBrowserSize::ByteSize() const
  T CMsgBrowserSize::CMsgBrowserSize()
  T CMsgBrowserSize::Clear()
@@ -7182,6 +7513,7 @@
  T CMsgSetLocalFileRequestMapping::ByteSize() const
  T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
  T CMsgSetLocalFileRequestMapping::Clear()
+ T CMsgSetLocalFileRequestMapping::CopyFrom(CMsgSetLocalFileRequestMapping const&)
  T CMsgSetLocalFileRequestMapping::GetCachedSize() const
  T CMsgSetLocalFileRequestMapping::GetMetadata() const
  T CMsgSetLocalFileRequestMapping::IsInitialized() const
@@ -7545,7 +7877,9 @@
  T CParentalSettingsInterpreter::~CParentalSettingsInterpreter()
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
+ T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
+ T CPathString::~CPathString()
  T CPlayersDialog::ActivateCurrentPlayers()
  T CPlayersDialog::ActivateRecentPlayers()
  T CPlayersDialog::CPlayersDialog()
@@ -7654,6 +7988,9 @@
  T CRYPTO_set_locking_callback
  T CRYPTO_set_mem_ex_functions
  T CRYPTO_xts128_encrypt
+ T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
+ T CRefCountServiceBase<true, CRefMT>::DoRelease() const
+ T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
  T CSetNicknameDialog::CSetNicknameDialog(vgui::Panel*, CSteamID)
  T CSetNicknameDialog::ChainToAnimationMap()
  T CSetNicknameDialog::ChainToMap()
@@ -7669,6 +8006,26 @@
  T CSetNicknameDialog::PanelMessageFunc_OnApply::InitVar()
  T CSetNicknameDialog::PanelMessageFunc_OnCancel::InitVar()
  T CSetNicknameDialog::~CSetNicknameDialog()
+ T CSharedConnectionController::CCallback_OnMessageReady::Run(void*)
+ T CSharedConnectionController::CCallback_OnServersConnected::Run(void*)
+ T CSharedConnectionController::CCallback_OnServersDisconnected::Run(void*)
+ T CSharedConnectionController::CSharedConnectionController()
+ T CSharedConnectionController::ForwardReceivedMessages(unsigned int, CSharedConnectionController::SharedConnectionInfo_t*)
+ T CSharedConnectionController::GetConnectionInfo(unsigned int)
+ T CSharedConnectionController::Initialize(IHTMLWindowController*)
+ T CSharedConnectionController::JSAllocateSharedConnection(CSmartPtr<CJSCallbackPromise>)
+ T CSharedConnectionController::JSClose(unsigned int)
+ T CSharedConnectionController::JSRegisterOnLogonInfoChanged(unsigned int, CSmartPtr<CJSCallbackFunc>)
+ T CSharedConnectionController::JSRegisterOnMessageReceived(unsigned int, CSmartPtr<CJSCallbackFunc>)
+ T CSharedConnectionController::JSSendMsg(unsigned int, char const*)
+ T CSharedConnectionController::JSSendMsgAndAwaitResponse(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSharedConnectionController::JSSubscribeToClientServiceMethod(unsigned int, char const*)
+ T CSharedConnectionController::JSSubscribeToEMsg(unsigned int, int)
+ T CSharedConnectionController::OnMessageReady(SharedConnectionMessageReady_t*)
+ T CSharedConnectionController::OnServersConnected(SteamServersConnected_t*)
+ T CSharedConnectionController::OnServersDisconnected(SteamServersDisconnected_t*)
+ T CSharedConnectionController::SendCurrentUserInfo(CSharedConnectionController::SharedConnectionInfo_t*)
+ T CSharedConnectionController::ShutDown()
  T CSharedLibraryNotifications::CCallback_OnAuthorizeDevice::Run(void*)
  T CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice::Run(void*)
  T CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged::Run(void*)
@@ -7685,6 +8042,10 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
+ T CSmartPtr<CJSCallbackFunc>::CSmartPtr(CSmartPtr<CJSCallbackFunc> const&)
+ T CSmartPtr<CJSCallbackFunc>::operator=(CSmartPtr<CJSCallbackFunc> const&)
+ T CSmartPtr<CJSCallbackPromise>::CSmartPtr(CSmartPtr<CJSCallbackPromise> const&)
+ T CSmartPtr<CJSCallbackPromise>::operator=(CSmartPtr<CJSCallbackPromise> const&)
  T CSteamID::SetFromStringStrict(char const*, EUniverse)
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
@@ -7836,6 +8197,26 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::~CUtlHandleTable()
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, CHTMLWindow::JSMethodRegistration_t const&)
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, CHTMLWindowController::JSRegisteredMethod_t const&)
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
@@ -7884,6 +8265,11 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::RehashNodesInBucket(int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Validate(CValidator&, char const*)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::~CUtlHashMap()
+ T CUtlLinkedList<CHTMLWindow*, int>::AllocInternal(bool)
+ T CUtlLinkedList<CHTMLWindow*, int>::Free(int)
+ T CUtlLinkedList<CHTMLWindow*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CHTMLWindow*, int>::RemoveAll()
+ T CUtlLinkedList<CHTMLWindow*, int>::Unlink(int)
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Free(int)
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::RemoveAll()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Unlink(int)
@@ -7895,6 +8281,12 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<CUtlString, int>::AllocInternal(bool)
+ T CUtlLinkedList<CUtlString, int>::Free(int)
+ T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
+ T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RemoveAll()
+ T CUtlLinkedList<CUtlString, int>::Unlink(int)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
@@ -8007,6 +8399,9 @@
  T CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Validate(CValidator&, char const*)
  T CUtlMap<short, int, int, CDefLess<short> >::Validate(CValidator&, char const*)
+ T CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Insert(unsigned int const&, CSmartPtr<CJSCallbackPromise> const&)
+ T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Insert(unsigned int const&, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t> const&)
+ T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Remove(unsigned int const&)
  T CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::ConvertToGrowableMemory(int)
@@ -8019,6 +8414,7 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::Release()
  T CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<int>::Validate(CValidator&, char const*)
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(BestMatch_t const&, bool, int&, bool&, bool&)
@@ -8159,11 +8555,29 @@
  T CUtlRBTree<CUtlMap<short, int, int, CDefLess<short> >::Node_t, int, CUtlMap<short, int, int, CDefLess<short> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<short, int, int, CDefLess<short> >::Node_t, int, CUtlMap<short, int, int, CDefLess<short> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<short, int, int, CDefLess<short> >::Node_t, int, CUtlMap<short, int, int, CDefLess<short> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::FindInsertionPosition(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t const&, bool, short&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::Insert(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
@@ -8212,6 +8626,7 @@
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
+ T CUtlStringBuilder::Format(char const*, ...)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
@@ -8233,6 +8648,11 @@
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::InsertBefore(int, CChatIntroductionDialog::QueuedChatMsg_t const&)
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::~CUtlVector()
+ T CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >::GrowVector(int)
+ T CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >::InsertBefore(int)
+ T CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >::RemoveAll()
+ T CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >::~CUtlVector()
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::GrowVector(int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::InsertBefore(int, CItemImageManager::ImagesToDownload_t const&)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Remove(int)
@@ -8241,6 +8661,18 @@
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::~CUtlVector()
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::GrowVector(int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::InsertBefore(int, CJSCallbackFunc* const&)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::~CUtlVector()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::GrowVector(int)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::InsertBefore(int, CSmartPtr<CJSCallbackFunc> const&)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::RemoveAll()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::ShiftElementsLeft(int, int)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::ShiftElementsRight(int, int)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::Validate(CValidator&, char const*)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::~CUtlVector()
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::GrowVector(int)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::InsertBefore(int, CSteamID const&)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::ShiftElementsRight(int, int)
@@ -8250,6 +8682,14 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -8660,6 +9100,7 @@
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T ChatIDFromClanID(CSteamID const&)
  T ChatIDFromSteamID(CSteamID const&)
+ T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
  T CheckKeyValueSignature(KeyValues*, CRSAPublicKey const*)
  T ClanIDFromChatID(CSteamID const&)
  T ClanIDFromSteamID(CSteamID const&)
@@ -8667,12 +9108,16 @@
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAPI_Validate(CValidator&)
+ T ClientAppManager()
  T ClientApps()
  T ClientConfigStore()
  T ClientFriends()
  T ClientHTTP()
  T ClientParentalSettings()
  T ClientParentalSettingsUncached()
+ T ClientScreenshots()
+ T ClientSharedConnection()
+ T ClientUIHTMLController()
  T ClientUser()
  T ClientUserStats()
  T ClientUtils()
@@ -8686,12 +9131,15 @@
  T ConCommandBase::ValidateConCommands(CValidator&)
  T ConCommandBaseMgr::OneTimeInit(IConCommandBaseAccessor*)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*)
+ T ConVar::ApplyReplicatedValue(char const*, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
+ T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
+ T ConVar::ConVar(char const*, char const*, unsigned long long, char const*, void (*)(ConVar*, char const*))
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
@@ -8705,6 +9153,7 @@
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
+ T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
@@ -9057,7 +9506,12 @@
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
  T FindOrAddPanelAnimationMap(char const*)
+ T FindReactTypeInFile(char const*, char const*)
  T FindTextTruncationPosition(unsigned long, wchar_t*, int, int, bool)
+ T FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
+ T FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T FreeArgsInTuple<2, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&, bool*)
+ T FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FriendAlias_t::IsLess(void*, FriendAlias_t const*, FriendAlias_t const*)
  T FriendsDialog()
  T FriendsUIGetLauncherType()
@@ -9069,6 +9523,7 @@
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetCommunityImagesURLForUniverse(EUniverse, bool)
  T GetFileTimestampString(long long)
+ T GetLocalSteamClientURL()
  T GetNoEscCharConversion()
  T GetPanelAnimationDictionary()
  T GetPanelKeyBindingMapDictionary()
@@ -9226,6 +9681,7 @@
  T ListPanelDragger::SetMovable(bool)
  T ListPanelDragger::~ListPanelDragger()
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
  T Localize(char const*)
  T MD5_Final
  T MD5_Init
@@ -9355,6 +9811,7 @@
  T SharedLibraryNotification::KB_ChainToMap()
  T SharedLibraryNotification::SharedLibraryNotification(char const*, char const*, CSteamID const&)
  T SharedLibraryNotification::~SharedLibraryNotification()
+ T ShellExecuteURLOrLocalFile(char const*)
  T SteamAPI_RegisterCallResult
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallResult
@@ -9438,6 +9895,12 @@
  T bn_sqr_words
  T bn_sub_part_words
  T bn_sub_words
+ T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
+ T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
+ T bool BConvertMsgJSValue<bool>(IHTMLWindow*, CMsgJSValue const*, bool*)
+ T bool BConvertMsgJSValue<char const*>(IHTMLWindow*, CMsgJSValue const*, char const**)
+ T bool BConvertMsgJSValue<int>(IHTMLWindow*, CMsgJSValue const*, int*)
+ T bool BConvertMsgJSValue<unsigned int>(IHTMLWindow*, CMsgJSValue const*, unsigned int*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
@@ -9730,10 +10193,63 @@
  T non-virtual thunk to CFriendsUIModule::ShowItemReceivedNotification(vgui::Panel*, int)
  T non-virtual thunk to CFriendsUIModule::ShowNewTurnsNotification(vgui::Panel*, int)
  T non-virtual thunk to CFriendsUIModule::StartInviteToTrade(CSteamID)
+ T non-virtual thunk to CHTMLWindow::BSupportsOffMainThreadPaints()
+ T non-virtual thunk to CHTMLWindow::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
+ T non-virtual thunk to CHTMLWindow::BrowserClose(CMsgClose const*)
+ T non-virtual thunk to CHTMLWindow::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T non-virtual thunk to CHTMLWindow::BrowserCrashed()
+ T non-virtual thunk to CHTMLWindow::BrowserExitFullScreen(CMsgExitFullScreen const*)
+ T non-virtual thunk to CHTMLWindow::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
+ T non-virtual thunk to CHTMLWindow::BrowserFinishedRequest(CMsgFinishedRequest const*)
+ T non-virtual thunk to CHTMLWindow::BrowserFocusedNodeValueResponse(CMsgFocusedNodeTextResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserGameOverlayTargetTextureID(CMsgGameOverlayTargetTextureID const*)
+ T non-virtual thunk to CHTMLWindow::BrowserGameOverlayTexturePaint(CMsgGameOverlayTexturePaint const*)
+ T non-virtual thunk to CHTMLWindow::BrowserGetCookiesForURLResponse(CMsgGetCookiesForURLResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserGetIndex()
+ T non-virtual thunk to CHTMLWindow::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserHidePopup(CMsgHidePopup const*)
+ T non-virtual thunk to CHTMLWindow::BrowserHideToolTip(CMsgHideToolTip const*)
+ T non-virtual thunk to CHTMLWindow::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserJSAlert(CMsgJSAlert const*)
+ T non-virtual thunk to CHTMLWindow::BrowserJSConfirm(CMsgJSConfirm const*)
+ T non-virtual thunk to CHTMLWindow::BrowserJSMethodCall(CMsgJSMethodCall const*)
+ T non-virtual thunk to CHTMLWindow::BrowserJSReleaseCallback(CMsgJSReleaseCallback const*)
+ T non-virtual thunk to CHTMLWindow::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserLoadedRequest(CMsgLoadedRequest const*)
+ T non-virtual thunk to CHTMLWindow::BrowserLoadingResource(CMsgLoadingResource const*)
+ T non-virtual thunk to CHTMLWindow::BrowserNeedsPaint(CMsgNeedsPaint const*)
+ T non-virtual thunk to CHTMLWindow::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
+ T non-virtual thunk to CHTMLWindow::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
+ T non-virtual thunk to CHTMLWindow::BrowserOpenNewTab(CMsgOpenNewTab const*)
+ T non-virtual thunk to CHTMLWindow::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
+ T non-virtual thunk to CHTMLWindow::BrowserPageSecurity(CMsgPageSecurity const*)
+ T non-virtual thunk to CHTMLWindow::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T non-virtual thunk to CHTMLWindow::BrowserReady(CMsgBrowserReady const*)
+ T non-virtual thunk to CHTMLWindow::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T non-virtual thunk to CHTMLWindow::BrowserResized(CMsgBrowserResized const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSearchResults(CMsgSearchResults const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSetCursor(CMsgSetCursor const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSetIndex(int)
+ T non-virtual thunk to CHTMLWindow::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
+ T non-virtual thunk to CHTMLWindow::BrowserShowPopup(CMsgShowPopup const*)
+ T non-virtual thunk to CHTMLWindow::BrowserShowToolTip(CMsgShowToolTip const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSizePopup(CMsgSizePopup const*)
+ T non-virtual thunk to CHTMLWindow::BrowserStartRequest(CMsgStartRequest const*)
+ T non-virtual thunk to CHTMLWindow::BrowserStatusText(CMsgStatusText const*)
+ T non-virtual thunk to CHTMLWindow::BrowserURLChanged(CMsgURLChanged const*)
+ T non-virtual thunk to CHTMLWindow::BrowserUpdateToolTip(CMsgUpdateToolTip const*)
+ T non-virtual thunk to CHTMLWindow::BrowserVerticalScrollBarSizeResponse(CMsgVerticalScrollBarSizeResponse const*)
+ T non-virtual thunk to CHTMLWindow::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
+ T non-virtual thunk to CHTMLWindow::ThreadNotifyPendingPaints()
+ T non-virtual thunk to CHTMLWindow::~CHTMLWindow()
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T non-virtual thunk to vgui::HTML::BrowserCrashed()
  T non-virtual thunk to vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -9762,6 +10278,7 @@
  T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T non-virtual thunk to vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T non-virtual thunk to vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -10839,6 +11356,7 @@
  T vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
+ T vgui::HTML::BrowserCrashed()
  T vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -10869,6 +11387,7 @@
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T vgui::HTML::BrowserResize()
+ T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
@@ -13286,8 +13805,14 @@
  T vgui::scheme()
  T vgui::surface()
  T vgui::system()
+ T void Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<FriendAlias_t>(FriendAlias_t*)
+ T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CHTMLWindow, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CHTMLWindow*, void (CHTMLWindow::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void std::__1::__insertion_sort_3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__sort<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -13314,9 +13839,12 @@
  ThreadInterlockedExchangeAdd64
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
+ ThreadShellExecute
+ ThreadSleep
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
  V_CbMakeAbsolutePath
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath
@@ -13360,6 +13888,7 @@
  V_strncpy
  V_strnicmp
  V_strnistr
+ V_strristr
  V_strtoui64
  V_tolower
  V_towlower32
@@ -13435,6 +13964,10 @@
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
  b (anonymous namespace)::CMsgBrowserRemove_reflection_
+ b (anonymous namespace)::CMsgBrowserResized_descriptor_
+ b (anonymous namespace)::CMsgBrowserResized_reflection_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_descriptor_
+ b (anonymous namespace)::CMsgBrowserSetMinSize_reflection_
  b (anonymous namespace)::CMsgBrowserSize_descriptor_
  b (anonymous namespace)::CMsgBrowserSize_reflection_
  b (anonymous namespace)::CMsgBuildID_descriptor_
@@ -13686,6 +14219,7 @@
  b CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
+ b ClientUIHTMLController()::s_ClientUIHTMLController
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b ERR_get_state.fallback
  b FriendsUIGetLauncherType()::s_eLauncherType
@@ -13815,6 +14349,7 @@
  b guard variable for CFriendsDialog::PerformLayout()::s_bOfflineMode
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b guard variable for CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
+ b guard variable for ClientUIHTMLController()::s_ClientUIHTMLController
  b guard variable for FriendsUIGetLauncherType()::s_eLauncherType
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
@@ -13869,11 +14404,14 @@
  b realloc_debug_func
  b s_BlankImage
  b s_BuildGroupFileCache
+ b s_OpenDevToolsParam
+ b s_OpenOverlayDevToolsParam
  b s_StartDirContexts
  b s_bCallbackManagerInitialized
  b s_bDebugVGUI2Messages
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
+ b s_cmdFriendsUI
  b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b ssl_cipher_methods
@@ -13937,6 +14475,7 @@
  ceil
  ceilf
  close$UNIX2003
+ closedir$UNIX2003
  connect$UNIX2003
  cos
  crc32
@@ -14182,6 +14721,7 @@
  d impl_default
  d int_err_library_number
  d intconverter
+ d k_rgSettingsJSToClientUserMap
  d long_pf
  d malloc_ex_func
  d malloc_func
@@ -14229,16 +14769,20 @@
  dup
  dyld_stub_binder
  exit
+ fclose
  fcntl$UNIX2003
+ ferror
  fflush
  floor
  floorf
  fmod
+ fopen$UNIX2003
  fprintf
  fputc
  fputs$UNIX2003
  fread
  free
+ fseeko
  fstat$INODE64
  fwrite$UNIX2003
  g_VProfManager
@@ -14248,6 +14792,7 @@
  getcwd
  getenv
  getpid
+ gettimeofday
  getuid
  glBegin
  glBindTexture
@@ -14274,6 +14819,7 @@
  inflateReset
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
+ kCFRunLoopDefaultMode
  kill$UNIX2003
  launch_data_alloc
  launch_data_dict_insert
@@ -14296,6 +14842,7 @@
  mmap$UNIX2003
  munmap$UNIX2003
  open$UNIX2003
+ opendir$INODE64$UNIX2003
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -14313,6 +14860,7 @@
  r BN_kronecker.tab
  r BN_num_bits_word.bits
  r BN_value_one.data_one
+ r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r Hex
  r SQR_tb
  r _EC_IPSEC_155_ID3
@@ -14444,6 +14992,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSetMinSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
@@ -14572,7 +15122,9 @@
  r utf8_lead_bits
  r zeroes
  read$UNIX2003
+ readdir$INODE64
  realloc
+ realpath$DARWIN_EXTSN
  rindex
  scandir$INODE64
  sched_yield
@@ -14684,6 +15236,7 @@
  t AddFromIter(vgui::CFileOpenListPanel*, char const*, CDirIterator&, KeyValues*)
  t AddModifierToString(char const*, char*, unsigned long)
  t BBeginsWithProtocol(char const*)
+ t BDecodeSerializedMsgFromJS(CUtlBuffer&, char const*)
  t BFriendsNameCollisionCompare(CUtlString const&, CUtlString const&)
  t BIsMatchMore(char const*, char const*, int)
  t BN_from_montgomery_word
@@ -14732,10 +15285,12 @@
  t ListFileNameSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileSizeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileTypeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
+ t OverlayFPSCvarChanged(ConVar*, char const*)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
  t RSA_eay_finish
@@ -14815,10 +15370,15 @@
  t _GLOBAL__sub_I_friendpanel.cpp
  t _GLOBAL__sub_I_friendsUI.cpp
  t _GLOBAL__sub_I_friendsdialog.cpp
+ t _GLOBAL__sub_I_friendsettingscontroller.cpp
  t _GLOBAL__sub_I_friendsgroups.cpp
  t _GLOBAL__sub_I_friendsutils.cpp
+ t _GLOBAL__sub_I_friendswebchat.cpp
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
+ t _GLOBAL__sub_I_htmlwindow.cpp
+ t _GLOBAL__sub_I_htmlwindowcontroller.cpp
+ t _GLOBAL__sub_I_htmlwindowjs.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
@@ -14831,6 +15391,7 @@
  t _GLOBAL__sub_I_parentalinterpreter.cpp
  t _GLOBAL__sub_I_pch_friendsui.cpp
  t _GLOBAL__sub_I_pngloader.cpp
+ t _GLOBAL__sub_I_sharedconnectioncontroller.cpp
  t _GLOBAL__sub_I_sharedlibrarynotifiction.cpp
  t _GLOBAL__sub_I_steamfriends_test.cpp
  t _GLOBAL__sub_I_steamid.cpp
@@ -15091,6 +15652,7 @@
  t format_message
  t free_evp_pbe_ctl
  t free_pool
+ t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned long const*, unsigned long long const*)
  t fullsize_upsample
  t generate_key
  t get_interesting_appn
@@ -15169,8 +15731,8 @@
  t old_rsa_priv_decode
  t old_rsa_priv_encode
  t output_message
- t parse_buffer_reserve_for(JSON_parser_struct*, unsigned int)
- t parse_parse_buffer(JSON_parser_struct*)
+ t parse_buffer_reserve_for
+ t parse_parse_buffer
  t pass2_fs_dither
  t pass2_no_dither
  t pkey_cmac_cleanup
@@ -15243,7 +15805,7 @@
  t process_data_simple_main
  t process_restart
  t pubkey_cb
- t push(JSON_parser_struct*, int)
+ t push
  t quantize3_ord_dither
  t quantize_fs_dither
  t quantize_ord_dither
@@ -15280,7 +15842,7 @@
  t rsa_sig_print
  t self_destruct
  t sep_upsample
- t set_error(JSON_parser_struct*)
+ t set_error
  t sha_block_data_order
  t sid_free
  t sig_cb
