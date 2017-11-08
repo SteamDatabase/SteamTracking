@@ -285,7 +285,6 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				switch ( method.value )
 				{
 					case 'itauonline':
-					case 'alipay':
 					case 'unionpay':
 						bOpenURLInSteamExternalWindow = true;
 						break;

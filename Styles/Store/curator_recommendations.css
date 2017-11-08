@@ -66,7 +66,7 @@ body.v6 {
 }
 
 body.v6 h2 {
-	color: #7193a6;
+	color: rgba(255, 255, 255, 0.4);
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -87,7 +87,7 @@ body.v6 .filter_ctn h2 {
 }
 
 body.v6 .dark_container h2 {
-	color: #fff;
+	color: rgba(255, 255, 255, 0.4);
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -241,7 +241,9 @@ body.v6 .about_section .tagline {
 
 body.v6 h2.curator_name a {
 	color: #fff;
-
+}
+body.v6 h2.curator_name a:hover {
+	color: #66c0f4;
 }
 
 .follow_controls {
@@ -525,6 +527,10 @@ font-size: 16px;
 }
 
 /* Browse */
+body.v6 .page_content.browse_reviews {
+	margin-top: 32px;
+}
+
 
 .browse_sorts, .browse_container {
 	background-color: rgba(19, 24, 27, 0.5);
@@ -558,6 +564,12 @@ font-size: 16px;
 .browse_filters h4 {
 	padding: 10px 10px;
 	color: #5a7685;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 11px;
+}
+#filtertype_container {
+	margin-bottom: 20px;
 }
 
 .browse_filters a {
@@ -565,6 +577,8 @@ font-size: 16px;
 	position: relative;
 	padding: 10px 10px;
 	color: #fff;
+	cursor: pointer;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.8);
 }
 
 .browse_filters .delete {
@@ -577,6 +591,24 @@ font-size: 16px;
 }
 
 .browse_filters a.selected:hover {
+	color: #fff;
+}
+
+.browse_tabs a {
+	display: inline-block;
+	margin-right: 15px;
+	padding: 10px 15px;
+	cursor:pointer;
+	color: #fff;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.6);
+	text-transform: uppercase;
+}
+
+.browse_tabs a:hover, .browse_tabs a.selected {
+	background-color: rgba(19, 24, 27, 0.5);
+}
+
+.browse_tabs a.selected:hover {
 	color: #fff;
 }
 
@@ -759,6 +791,25 @@ font-size: 16px;
 
 }
 
+.gray_bevel {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+	margin-bottom: 6px;
+	outline: none;
+	padding: 4px 6px;
+}
+.gray_bevel input {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background-color: transparent;
+	font-size: 13px;
+	color: #C6D4DF;
+}
+
 .recommendation_disclosures {
 	margin-top: 3px;
 	color: #9fbbcb;
@@ -824,15 +875,22 @@ font-size: 16px;
 }
 
 .socialmedia_accounts {
-	color: #8fa7b7;
+	color: #fff;
 	font-size: 12px;
 	background: rgba( 0, 0, 0, 0.2);
-	padding: 3px 6px;
+	padding: 3px 6px 3px 3px;
 	display: inline-flex;
 }
 
 .socialmedia_accounts > *:not(:first-child) {
-	margin-left: 15px;
+	margin-left: 20px;
+}
+
+.socialmedia_accounts a img {
+	width: 16px;
+	height: 16px;
+	vertical-align: bottom;
+	margin-right: 2px;
 }
 
 .header_area, .header_area.editing {

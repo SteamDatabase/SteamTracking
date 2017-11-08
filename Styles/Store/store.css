@@ -121,6 +121,10 @@ body.v6 #footer {
         float: left;
         padding-top: 2px;
     }
+	body.v6 #footer #footer_logo_steam {
+		float: right;
+		padding-top: 2px;
+	}
     body.v6 #footer #footer_text {
         float: left;
         margin-left: 12px;
@@ -3110,21 +3114,26 @@ body.v6 .user_reviews_header span.right {
 
 /* ===== from shared_global.css ====== */
 body.v6 .store_nav .popup_block_new .popup_body,
-body.v6 #footer_nav .popup_block_new .popup_body {
+body.v6 #footer_nav .popup_block_new .popup_body,
+body.v6.curator .popup_block_new .popup_body {
 background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 8px 5px 8px 5px;
 
 }
 
 
 .store_nav .popup_menu .popup_menu_item,
+.curator .popup_menu .popup_menu_item,
 .footer_content .popup_menu .popup_menu_item,
 .search_area .popup_body .match,
 .search_area .popup_body .match .match_name {
 	color: #000;
+	cursor: pointer;
 }
 
 .store_nav .popup_menu .popup_menu_item:hover,
 .store_nav .popup_menu .popup_menu_item.focus,
+.curator .popup_menu .popup_menu_item:hover,
+.curator .popup_menu .popup_menu_item.focus,
 .footer_content .popup_menu .popup_menu_item:hover,
 .footer_content .popup_menu .popup_menu_item.focus,
 .search_area .popup_body .match:hover,

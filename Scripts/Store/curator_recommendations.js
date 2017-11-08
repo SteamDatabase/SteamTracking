@@ -178,24 +178,28 @@ function InitPagingControls( oPagingData )
 	InitSearchFilters();
 }
 
-function CuratorFieldReset()
+function CuratorFieldToggle( elNode, strValue, bForceReset )
 {
-	$J('#filtertags_container input').each(function(i, j){
-		$J(j).val('');
-	});
+	var bReset = elNode.classList.contains('all') || bForceReset;
+	if( bReset )
+	{
+		$J('input', elNode.parentNode).each(function(i, j){
+			$J(j).val('');
+		});
 
-	$J('#filtertags_container a').each(function(i, j){
-		$J(j).removeClass('selected');
-	});
+		$J('a', elNode.parentNode).each(function(i, j){
+			$J(j).removeClass('selected');
+		});
+	}
+	else
+	{
+		$J('a.all', elNode.parentNode).each(function(i, j){
+			$J(j).removeClass('selected');
+		});
+	}
 
-	UpdateRecommendationFilterData( true );
-
-}
-
-function CuratorFieldToggle( elNode, strValue )
-{
 	var elInput = elNode.querySelector('input');
-	if( elInput.value == strValue )
+	if( elInput.value === strValue )
 	{
 		elNode.classList.remove('selected');
 		elInput.value = '';
@@ -206,17 +210,28 @@ function CuratorFieldToggle( elNode, strValue )
 		elInput.value = strValue;
 	}
 
+	var rgSelected = $J('input[value!=\'\']', elNode.parentNode);
+	if( rgSelected.length == 0 )
+	{
+		$J('a.all', elNode.parentNode).each(function(i, j){
+			j.classList.add('selected');
+		});
+	}
+
 	UpdateRecommendationFilterData( true );
 }
+
 
 
 function UpdateRecommendationFilterData( refresh )
 {
 	var elForm = document.getElementById('filter_box');
 	var elTarget = document.getElementById('RecommendationsTable');
-	//elTarget.classList.add('loading');
 
 	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
+	var rgTypes = elForm.querySelectorAll('*[name="types"]');
+	var rgSorts = elForm.querySelectorAll('*[name="sort"]');
+
 
 	var rgValues = [];
 	for( var j=0; j<rgTags.length; j++ )
@@ -227,13 +242,27 @@ function UpdateRecommendationFilterData( refresh )
 		}
 	}
 
-	var strSort = elForm.querySelector('*[name="sortby"]').value;
-	var strFilter = elForm.querySelector('*[name="filter"]').value;
+	var rgTypeValues = [];
+	for( var j=0; j<rgTypes.length; j++ )
+	{
+		if ( rgTypes[ j ].value.length > 0 )
+		{
+			rgTypeValues.push ( rgTypes[ j ].value );
+		}
+	}
+
+	var strSort = 'recent';
+
+	for( var j=0; j<rgSorts.length; j++ )
+	{
+		if( rgSorts[j].value )
+			strSort = rgSorts[j].value;
+	}
 
 	g_oPagingControls.SetStaticParameters({
 		"tagids": rgValues.join(','),
 		"sort": strSort,
-		"filter": strFilter
+		"types": rgTypeValues.join(',')
 	});
 
 	if( refresh )
