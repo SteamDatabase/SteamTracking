@@ -243,18 +243,13 @@ function RecordAJAXPageView( url )
 {
 	if ( typeof ga != "undefined" && ga )
 	{
-		var rgURLs = [ 'http://steamcommunity.com', 'https://steamcommunity.com' ];
-		for ( var i = 0; i < rgURLs.length; ++i )
+		var baseURL = 'https://steamcommunity.com';
+		var idx = url.indexOf( baseURL );
+		if ( idx != -1 )
 		{
-			var baseURL = rgURLs[i];
-			var idx = url.indexOf(baseURL);
-			if ( idx != -1 )
-			{
-				url = url.substring( idx + baseURL.length );
-			}
-			ga( 'send', 'pageview', url );
-			return;
+			url = url.substring( idx + baseURL.length );
 		}
+		ga( 'send', 'pageview', url );
 	}
 }
 
