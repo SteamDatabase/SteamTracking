@@ -1302,4 +1302,41 @@ function ShowAddBundleDialog()
 	} );
 }
 
+function RegisterMultiLanguageAgreementIFrame( elContainer, strURL, rgLanguages, strCurrentLanguage )
+{
+	var elIFrame = $J('.agreement_frame', elContainer);
+	var elSelect = $J('.agreement_select_container select', elContainer);
+	var elLink = $J('.agreement_link', elContainer);
+
+	elSelect.on('change', function( event ){
+		elIFrame.attr('src', elSelect.val());
+		elLink.attr('href', elSelect.val());
+	});
+
+	var strOptionValue = strURL + '&l=english';
+
+	var nLanguages = 0;
+
+	$J.each(rgLanguages, function(key, value)
+	{
+		nLanguages++;
+
+		var elOption = document.createElement('option');
+		elOption.innerText = value;
+		elOption.value = strURL + '&l=' + key;
+		elSelect.append( elOption );
+
+		if( key == strCurrentLanguage )
+			strOptionValue = elOption.value;
+
+	});
+
+
+	elSelect.val( strOptionValue );
+	elSelect.trigger('change');
+
+	if(nLanguages < 2 )
+		elSelect.hide();
+}
+
 
