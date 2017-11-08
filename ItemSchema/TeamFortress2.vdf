@@ -12610,20 +12610,10 @@
 			}
 			"static_attrs"
 			{
-				"tool_target_item_icon_offset" "0.35 0.5 0.4"
-			}
-			"attributes"
-			{
-				"never craftable"
-				{
-					"attribute_class"	"never_craftable"
-					"value"				"1"
-				}
-				"cannot restore"
-				{
-					"attribute_class"	"cannot_restore"
-					"value"				"1"
-				}
+				"tool_target_item_icon_offset"	"0.35 0.5 0.4"
+				"cosmetic_allow_inspect"		"1"
+				"never craftable"				"1"
+				"cannot restore"				"1"
 			}
 			"show_in_armory"	"0"
 			"item_name"			"#TF_Unusualifier"
@@ -35064,7 +35054,7 @@
 				"lunchbox adds maxhealth bonus"
 				{
 					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
+					"value"	"7"
 				}
 				"always tradable"
 				{
@@ -128753,6 +128743,8 @@
 				"tool target item"		"30762"	
 				"tool target item"		"30763"	
 				"tool target item"		"30816"	
+				"tool target item"		"30839"	
+				"tool target item"		"30840"	
 				"tool target item"		"30842"	
 				"tool target item"		"30843"	
 				"tool target item"		"30844"	
