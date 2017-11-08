@@ -2248,9 +2248,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	.stats_table tr > td:first-child {
 		width: 50px;
 		color: #6088BB;
-		padding-right: 10px;
-		vertical-align: top;
-		text-align: right;
 	}
 
 	.stats_table .sub {
