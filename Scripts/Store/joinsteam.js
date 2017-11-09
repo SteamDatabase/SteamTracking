@@ -2,7 +2,6 @@
 var iAjaxCalls = 0;
 var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
-var g_verificationPolling = null;
 
 function StartCreationSession()
 {
@@ -40,11 +39,6 @@ function WaitForEmailVerification()
 	if ( !g_creationSessionID )
 		return;
 
-	if ( typeof( g_verificationPolling ) != 'undefined' )
-	{
-		clearInterval( g_verificationPolling );
-	}
-
 	var $strDialogContent = $J( '#email_verification_dialog' );
 
 	g_emailVerificationDialog =  ShowDialog( 'Verify Your Email', $strDialogContent, { bExplicitDismissalOnly: true }  );
@@ -54,46 +48,51 @@ function WaitForEmailVerification()
 	g_emailVerificationDialog.SetRemoveContentOnDismissal( false );
 	g_emailVerificationDialog.AdjustSizing();
 
+	AjaxCheckEmailVerified();
+}
 
-	g_verificationPolling = setInterval( function() {
-		$J.ajax( {
-			method: 'POST',
-			url: g_sBaseURL + 'join/ajaxcheckemailverified',
-			data: { 'creationid' : g_creationSessionID }
-		})
-			.done( function( eResult ) {
+function AjaxCheckEmailVerified()
+{
+	if ( !g_creationSessionID )
+		return;
 
-				switch( eResult )
-				{
-					case 1:
-						EmailConfirmedVerified();
-						break;
-					case 10:
-												break;
+	$J.ajax( {
+		method: 'POST',
+		url: g_sBaseURL + 'join/ajaxcheckemailverified',
+		data: { 'creationid' : g_creationSessionID }
+	})
+		.done( function( eResult ) {
 
-					case 42:
-					case 29:
-												ChangeEmail();
-						ShowError( 'There was an error with your registration, please try again.' );
-						break;
+			switch( eResult )
+			{
+				case 1:
+					EmailConfirmedVerified();
+					break;
+				case 42:
+				case 29:
+									ChangeEmail();
+					ShowError( 'There was an error with your registration, please try again.' );
+					break;
 
-					case 27:
-						ChangeEmail();
-						ShowError( 'You\'ve waited too long to verify your email. Please try creating your account and verifying your email again.' )
-						break;
+				case 27:
+					ChangeEmail();
+					ShowError( 'You\'ve waited too long to verify your email. Please try creating your account and verifying your email again.' );
+					break;
 
-					case 36:
-												break;
-				}
+				case 36:
+				case 10:
+													setTimeout( AjaxCheckEmailVerified, 3000 );
+					break;
+			}
 
-			} );
-	}, 3000 );
-
+		} )
+		.fail( function() {
+			setTimeout( AjaxCheckEmailVerified, 5000 );
+		} );
 }
 
 function ChangeEmail()
 {
-	clearInterval( g_verificationPolling );
 	g_emailVerificationDialog.Dismiss();
 	g_creationSessionID = null;
 	$J('#cart_area').slideDown();
@@ -110,7 +109,6 @@ function EmailConfirmedVerified()
 		g_emailVerificationDialog.Dismiss();
 	}
 
-	clearInterval( g_verificationPolling );
 	ReallyCreateAccount();
 }
 
@@ -382,6 +380,12 @@ function ReallyCreateAccount()
 			}
 			else if (bPSNAccountSetup) {
 				window.location = g_sBaseURL + 'psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
+			}
+			else if ( result && result.bInSteamClient && !result.redirect ) {
+				ShowAlertDialog( 'New Account Created Successfully', 'Please close this window or click continue to sign in with your new account.', 'Continue' )
+					.always( function() {
+						window.close();
+					});
 			}
 			else {
 				
@@ -666,7 +670,7 @@ function RefreshCaptcha()
 	      	var gid = result.gid;
 			if ( gid != -1 ) 
 			{
-				$('captchaImg').src = g_sBaseURL + 'public/captcha.php?gid='+gid;
+				$('captchaImg').src = g_sBaseURL + 'login/rendercaptcha?gid='+gid;
 			}
 			document.getElementById('captchagid').value = gid;
 			$J('#captcha_text').val( '' );
