@@ -43,7 +43,7 @@ public:
     virtual unknown_ret RequestStoreAuthURL(char const*) = 0;
     virtual unknown_ret SetLanguage(char const*) = 0;
     virtual unknown_ret TrackAppUsageEvent(CGameID, int, char const*) = 0;
-    virtual unknown_ret RaiseConnectionPriority(EConnectionPriority) = 0;
+    virtual unknown_ret RaiseConnectionPriority(EConnectionPriority, EConnectionPriorityReason) = 0;
     virtual unknown_ret ResetConnectionPriority(int) = 0;
     virtual unknown_ret BHasCachedCredentials(char const*) = 0;
     virtual unknown_ret SetAccountNameForCachedCredentialLogin(char const*, bool) = 0;
