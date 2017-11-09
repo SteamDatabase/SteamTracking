@@ -11833,6 +11833,7 @@
 			"operation_start_date"				"2015-07-01 00:00:00" 
 			"stop_adding_to_queue_date"			"2015-10-01 00:00:00" 
 			"stop_giving_to_player_date"		"2015-10-12 00:00:00" 
+			"contracts_end_date"				"2030-01-01 00:00:00" 
 			"operation_lootlist"				"periodic_quest_drop"
 			"is_campaign"						"1"
 		}
@@ -11845,6 +11846,7 @@
 			"operation_start_date"				"2015-10-07 00:00:00" 
 			"stop_adding_to_queue_date"			"2016-01-01 00:00:00" 
 			"stop_giving_to_player_date"		"2016-01-01 00:00:00" 
+			"contracts_end_date"				"2030-01-01 00:00:00" 
 			"operation_lootlist"				"timed_reward_invasion_drop"
 		}
 		
@@ -11854,6 +11856,7 @@
 			"operation_start_date"				"2015-10-16 00:00:00" 
 			"stop_adding_to_queue_date"			"2030-01-01 00:00:00" 
 			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
+			"contracts_end_date"				"2030-01-01 00:00:00" 
 			"operation_lootlist"				"timed_supply_case_drop"
 		}
 
@@ -11865,6 +11868,7 @@
 			"operation_start_date"				"2015-10-16 00:00:00" 
 			"stop_adding_to_queue_date"		"2030-01-01 00:00:00" 
 			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
+			"contracts_end_date"				"2030-01-01 00:00:00" 
 			"operation_lootlist"				"timed_reward_operation_drop"
 		}
 
@@ -11875,6 +11879,7 @@
 			"operation_start_date"				"2015-10-28 00:00:00" 
 			"stop_adding_to_queue_date"			"2015-11-10 00:00:00" 
 			"stop_giving_to_player_date"		"2015-11-12 00:00:00" 
+			"contracts_end_date"				"2015-11-12 00:00:00" 
 			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
 			"operation_lootlist"				"halloween_quest_drop"
@@ -11889,6 +11894,7 @@
 			"operation_start_date"				"2015-12-14 00:00:00" 
 			"stop_adding_to_queue_date"			"2016-04-04 00:00:00" 
 			"stop_giving_to_player_date"		"2016-04-05 00:00:00" 
+			"contracts_end_date"				"2016-04-05 00:00:00" 
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_ToughBreak.res"
 			"operation_lootlist"				"operation_2_quest_drop"
 			"is_campaign"						"1"
@@ -11902,6 +11908,7 @@
 			"operation_start_date"				"2016-10-19 00:00:00" 
 			"stop_adding_to_queue_date"			"2016-11-15 00:00:00" 
 			"stop_giving_to_player_date"		"2016-11-17 00:00:00" 
+			"contracts_end_date"				"2016-11-17 00:00:00" 
 			"quest_log_res_file"				"Resource/UI/econ/QuestLogPanel_Halloween.res"
 			"quest_list_res_file"				"Resource/UI/econ/ScrollableQuestList_Halloween.res"
 			"operation_lootlist"				"halloween_quest_drop"
@@ -11917,6 +11924,7 @@
 			"operation_start_date"				"2017-10-15 00:00:00" 
 			"stop_adding_to_queue_date"			"2018-02-11 00:00:00" 
 			"stop_giving_to_player_date"		"2018-02-11 00:00:00" 
+			"contracts_end_date"				"2030-01-01 00:00:00" 
 			"is_campaign"						"1"
 			"max_drop_count"					"26"
 			"uses_credits"						"1"
@@ -11929,6 +11937,7 @@
 			"operation_start_date"				"2017-10-15 00:00:00" 
 			"stop_adding_to_queue_date"			"2017-11-09 00:00:00" 
 			"stop_giving_to_player_date"		"2017-11-09 00:00:00" 
+			"contracts_end_date"				"2017-11-09 00:00:00" 
 			"is_campaign"						"1"
 			"max_drop_count"					"26"
 			"uses_credits"						"1"
@@ -102695,8 +102704,12 @@
 		}
 		"9719"
 		{		
-			"name"				"RGL.gg Pick/Ban Prolander Participant Season 1"
+			"name"				"RGLgg Pick Ban Prolander Participant Season 1"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_RGLgg_Prolander_Participant"
 			"item_description"	"#TF_TournamentMedal_Season1"
 			"image_inventory"	"backpack/workshop/player/items/all_class/rglgg_prolander_participant/rglgg_prolander_participant"
