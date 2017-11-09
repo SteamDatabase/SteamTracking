@@ -112878,7 +112878,7 @@
 			"prefab"	"unusualifier_base"
 			"static_attrs"
 			{
-				"unusualifier_attribute_template_name"	"taunt_unusualifier_halloween_effects"
+				"unusualifier_attribute_template_name"	"taunt_unusualifier_effects"
 			}
 		}
 
@@ -129400,7 +129400,7 @@
 		{
 			"attribute_templates"
 			{
-				"unusual_hat_chance_classic_halloween"		"1"		
+				"unusual_hat_chance_cosmetics_case"		"1"		
 				"check_unusual_quality"					"1"		
 			}
 		}
