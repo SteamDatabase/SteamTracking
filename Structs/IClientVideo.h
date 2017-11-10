@@ -15,7 +15,7 @@ public:
     virtual unknown_ret InitBroadcastVideo(int, int, int, int, unsigned char const*, int, unsigned char const*, int) = 0;
     virtual unknown_ret InitBroadcastAudio(int, int, int, int, int, unsigned char const*, int) = 0;
     virtual unknown_ret UploadBroadcastFrame(bool, bool, unsigned int, long long, long long, unsigned char const*, int) = 0;
-    virtual unknown_ret UploadBroadcastScreenshot(int, int, unsigned char const*, int) = 0;
+    virtual unknown_ret UploadBroadcastThumbnail(int, int, unsigned char const*, int) = 0;
     virtual unknown_ret DroppedVideoFrames(int) = 0;
     virtual unknown_ret SetCurrentVideoEncodingRate(int) = 0;
     virtual unknown_ret SetMicrophoneState(bool, bool) = 0;

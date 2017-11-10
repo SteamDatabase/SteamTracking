@@ -6431,6 +6431,7 @@
 	"Controller_Light_Setting"							"Light Setting:"
 	"Controller_Light_Setting_Custom"					"Custom Setting"
 	"Controller_Light_Setting_Default"					"Default User Setting"
+	"Controller_Light_Setting_XinputSlot"				"Default Xinput Slot Number Setting"
 	"Controller_SelectLEDColor_OK"						"OK"
 	"Controller_SelectLEDColor_Cancel"					"CANCEL"
 

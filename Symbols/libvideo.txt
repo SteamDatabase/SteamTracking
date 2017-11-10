@@ -1393,7 +1393,6 @@
  T CFileReader::BIsOpen() const
  T CFileReader::BOpenFile(char const*, int)
  T CFileReader::CFileReader(bool, unsigned int)
- T CFileReader::GetSize() const
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
  T CFileReader::Validate(CValidator&, char const*)
@@ -5827,7 +5826,6 @@
  avformat_find_stream_info
  avformat_open_input
  avio_alloc_context
- avio_seek
  avresample_alloc_context
  avresample_close
  avresample_convert

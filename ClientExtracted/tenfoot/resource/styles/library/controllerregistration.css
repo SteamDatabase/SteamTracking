@@ -153,6 +153,12 @@ DropDownMenu.DropDownMenuVisible
     visibility: collapse;
 }
 
+.XinputSlotLight.SupportsLEDColor #GuideBrightnessContainer, .XinputSlotLight.SupportsLEDColor #LEDSaturationContainer,
+.XinputSlotLight.SupportsLEDColor #LEDColorContainer, .XinputSlotLight.SupportsLEDColor #LightColorIconContainer
+{
+    visibility: collapse;
+}
+
 #GuideBrightnessContainer, #LEDSaturationContainer
 {
 	flow-children: right;
