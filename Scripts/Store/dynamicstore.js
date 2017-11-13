@@ -1538,10 +1538,13 @@ var GDynamicStoreHelpers = {
 			'discount_class': 'discount_block_inline',
 			'capsule_size': 'headerv5',
 			'html_before_price': '',
-			'lazy': false
+			'lazy': false,
+			'curator': false
 		}, rgOptions ? rgOptions : {} );
 
 		var params = { 'class': rgOptions.class };
+		if( rgOptions.curator )
+			params['curator_clanid'] =  rgOptions.curator
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, unBundleID, params );
 		if ( !rgItemData )
 		{

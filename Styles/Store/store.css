@@ -2579,6 +2579,18 @@ a.cluster_capsule:hover {
 	z-index: 3;
 }
 
+.corner_cap_discount {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+}
+
+/* Darken background */
+.store_capsule .discount_block.corner_cap_discount > .discount_prices {
+	background-color: rgba(20,31,44,0.7);
+}
+
 .main_cap_price {
 	background: #000000;
 	font-size: 13px;
@@ -3626,3 +3638,102 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 }
 
 /* END CAROUSEL STUFF */
+
+/* Store curator capsule */
+
+#feature_curators_block {
+	height: 360px;
+}
+
+.curator_page {
+	background-color: rgba(255,255,255,0.1);
+	padding: 16px 13px;
+	display: flex;
+	flex-direction: column;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.curator_page .profile {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.curator_page .info {
+	display: flex;
+	flex-direction: column;
+}
+
+.curator_page .actions {
+	display: flex;
+	padding: 2px;
+	background-color: rgba(0,0,0,0.1);
+	width: fit-content;
+}
+
+.curator_page .avatar {
+	margin-right: 12px;
+	width: 70px;
+	height: 70px;
+}
+
+.curator_page .name {
+	font-size: 18px;
+	color: #c7d5e0;
+}
+
+.curator_page .actions > div:not(:first-child) {
+	margin-left: 5px;
+}
+
+.curator_page .followers span {
+	display: block;
+	font-size: 15px;
+}
+
+.curator_page .socialmedia {
+	display: flex;
+	align-items: flex-end;
+}
+
+.curator_page .socialmedia > div:not(:first-child) {
+	margin-left: 5px;
+}
+
+.curator_page .curations {
+	display: flex;
+}
+.curator_page .curations > div {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 220px;
+}
+
+.curator_page .curations > div > a {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.curator_page .curations > div:not(:first-child) {
+	margin-left: 5px;
+
+}
+
+.curator_page .review_direction {
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+.color_recommended{
+	color: #66c0f4;
+}
+.color_not_recommended {
+	color: #f49866;
+}
+.color_informational {
+	color: #f5df67;
+}
+
+/* END Store curator capsule */

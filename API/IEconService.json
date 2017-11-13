@@ -191,7 +191,7 @@
                     "name": "get_descriptions",
                     "type": "bool",
                     "optional": false,
-                    "description": "If set, the item display data for the items included in the returned trade offers will also be returned."
+                    "description": "If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail."
                 },
                 {
                     "name": "language",
@@ -240,6 +240,12 @@
                     "name": "language",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "get_descriptions",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail."
                 }
             ]
         },

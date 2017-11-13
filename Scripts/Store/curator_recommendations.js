@@ -645,6 +645,25 @@ function ShowHeaderImageHandle()
 				elSelectImage.val( data.image_hash + '.' + EClanImageFileTypeToString( data.file_type ) );
 				elSelectImage.trigger('change');
 			}
+			else
+			{
+				ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+			}
+			
+		}).fail( function( data ) {
+			if( data && data.responseText )
+			{
+				var result = JSON.parse( data.responseText );
+				if( result.message )
+				{
+					ShowAlertDialog( 'Error', V_EscapeHTML( result.message ) );
+				}
+				else
+				{
+					ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+				}
+			}
+
 		});
 
 		return false;
