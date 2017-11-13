@@ -346,7 +346,7 @@ function CloseCartConfirmDlg()
 	$( '#CartConfirmModal' ).overlay().close();
 }
 
-function Store_AddToCartAjax( Button, nDefIndex, strSourceHistory )
+function Store_AddToCartAjax( Button, nDefIndex, strSourceHistory, strSessionID )
 {
 	var strContainerId = 'AddToCartButtonContainer_' + nDefIndex;
 	var AddToCartButtonContainer = $( '#' + strContainerId );
@@ -403,6 +403,7 @@ function Store_AddToCartAjax( Button, nDefIndex, strSourceHistory )
 	Common_AddToCartAjax(
 		nDefIndex,
 		strSourceHistory,
+		strSessionID,
 		function( json, strError )
 		{
 			var bSuccess = ( strError == undefined );
@@ -737,7 +738,7 @@ function Common_GetCartQuantityFromCookie()
 }
 
 // fnCallback should take a single argument, which will be the resultant json
-function Common_AddToCartAjax( nDefIndex, strSourceHistory, fnCallback )
+function Common_AddToCartAjax( nDefIndex, strSourceHistory, strSessionID, fnCallback )
 {
 	var rgParams = {
 		action: 'add_to_cart',
@@ -746,7 +747,8 @@ function Common_AddToCartAjax( nDefIndex, strSourceHistory, fnCallback )
 		sourcehistory: strSourceHistory,
 		l: g_strLanguage,
 		c: g_strCurrency,
-		ajax: 1
+		ajax: 1,
+		sessionid: strSessionID
 	};
 
 	// Add to cart via AJAX

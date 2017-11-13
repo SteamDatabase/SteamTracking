@@ -1291,8 +1291,9 @@ $(
 				var $Button = $( this );
 				var nDefIndex = $Button.parent().parent().data( 'defindex' );
 				var strSourceHistory = $Button.parent().parent().data( 'sourcehistory' );
+				var strSessionID = $Button.parent().parent().data( 'sessionid' );
 
-				Store_AddToCartAjax( $Button, nDefIndex, strSourceHistory );
+				Store_AddToCartAjax( $Button, nDefIndex, strSourceHistory, strSessionID );
 			}
 		);
 	}
