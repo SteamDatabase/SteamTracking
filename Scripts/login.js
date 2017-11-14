@@ -11,6 +11,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 	this.m_strMobileClientType = rgOptions.strMobileClientType || '';
 	this.m_strMobileClientVersion = rgOptions.strMobileClientVersion || '';
 	this.m_bIsMobileSteamClient = ( this.m_strMobileClientType ? true : false );
+	this.m_bMobileClientSupportsPostMessage = rgOptions.bMobileClientSupportsPostMessage || false;
 
 	this.m_$LogonForm = $JFromIDOrElement( rgOptions.elLogonForm || document.forms['logon'] );
 
@@ -651,9 +652,18 @@ CLoginPromptManager.prototype.LoginComplete = function()
 	}
 	else if ( this.m_bIsMobile )
 	{
-				if ( document.forms['logon'].elements['oauth'] && ( document.forms['logon'].elements['oauth'].value.length > 0 ) )
+				var oauthJSON = document.forms['logon'].elements['oauth'] && document.forms['logon'].elements['oauth'].value;
+		if ( oauthJSON && ( oauthJSON.length > 0 ) )
 		{
-			window.location = this.m_sOAuthRedirectURI + '?' + document.forms['logon'].elements['oauth'].value;
+			if ( this.m_bMobileClientSupportsPostMessage )
+			{
+								var strHost = window.location.protocol + '//' + window.location.host;
+				window.postMessage( oauthJSON, strHost );
+			}
+			else
+			{
+				window.location = this.m_sOAuthRedirectURI + '?' + oauthJSON;
+			}
 		}
 	}
 };
@@ -822,7 +832,9 @@ CLoginPromptManager.prototype.OnRemoveTwoFactorResponse = function( results )
 	{
 		if ( this.m_bTwoFactorReset )
 		{
-			this.RunLocalURL( "steammobile://steamguard?op=setsecret&arg1=" + results.replacement_token );
+			if ( this.m_bIsMobileSteamClient && !this.m_bMobileClientSupportsPostMessage )
+				this.RunLocalURL( "steammobile://steamguard?op=setsecret&arg1=" + results.replacement_token );
+
 			this.SetTwoFactorAuthModalState( 'selfhelp_twofactor_replaced' );
 		}
 		else
@@ -1137,8 +1149,15 @@ CLoginPromptManager.prototype.GetModalContent = function( strModalType )
 
 	if ( this.m_bIsMobileSteamClient )
 	{
+		var manager = this;
 		$ModalContent.find('a[data-externallink]' ).each( function() {
-			$J(this).attr( 'href', 'steammobile://openexternalurl?url=' + $J(this).attr('href') );
+			if ( !manager.m_bMobileClientSupportsPostMessage )
+				$J(this).attr( 'href', 'steammobile://openexternalurl?url=' + $J(this).attr('href') );
+			else
+				$J(this).on('click', function( e ) {
+					e.preventDefault();
+					window.postMessage( JSON.stringify( {action: "openexternalurl", url: $J(this).attr('href') } ), window.location );
+				});
 		});
 	}
 

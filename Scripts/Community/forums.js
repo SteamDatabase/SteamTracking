@@ -1945,20 +1945,26 @@ function Forum_InitBanLengthOptions( $Select )
 }
 
 
-function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget )
+function Forum_BanOrWarnUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget, bWarning )
 {
 	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">' );
-	var Modal = ShowConfirmDialog( 'Ban User', $WaitElem, 'Ban User' );
+
+	if ( bWarning ) {
+		var Modal = ShowConfirmDialog( 'Warn User', $WaitElem, 'Warn User' );
+	} else {
+		var Modal = ShowConfirmDialog( 'Ban User', $WaitElem, 'Ban User' );
+	}
 
 	Modal.GetContent().find('.newmodal_buttons').css( 'visibility', 'hidden' );
 	Modal.GetContent().css('width', '600px');
 
-	$J.get( 'https://steamcommunity.com/gid/' + clanid + '/banuserdialog', {
+	$J.get( 'https://steamcommunity.com/gid/' + clanid + '/banwarnuserdialog', {
 		ajax: 1,
 		gidforum: gidForum,
 		gidtopic: gidTopic,
 		gidcomment: gidComment,
-		target: accountIDTarget
+		target: accountIDTarget,
+		warning: bWarning
 	}).done( function( data ) {
 		Modal.GetContent().find('.newmodal_buttons').css( 'visibility', '' );
 		var $Content = $J(data);
@@ -1966,32 +1972,53 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 		Modal.AdjustSizing();
 
 		var $Form = $Content.find( 'form#forum_banuser_form' );
-		Forum_InitBanLengthOptions( $Form.find('select[name=ban_length]') );
+		if ( !bWarning )
+		{
+			Forum_InitBanLengthOptions( $Form.find('select[name=ban_length]') );
 
-		Modal.done( function() {
-			var bDelete = $Form[0].elements.deletecomments && $Form[0].elements.deletecomments.checked;
-			var bKick = $Form[0].elements.kickmember && $Form[0].elements.kickmember.checked;
+			Modal.done( function() {
+				var bDelete = $Form[0].elements.deletecomments && $Form[0].elements.deletecomments.checked;
+				var bKick = $Form[0].elements.kickmember && $Form[0].elements.kickmember.checked;
 
-			if ( $Form[0].elements.ban_length.value < 0 && !bDelete && !bKick )
-			{
-				ShowAlertDialog( 'Ban User', 'At least one option must be selected.  The user has not been banned.' );
-			}
-			else
-			{
+				if ( $Form[0].elements.ban_length.value < 0 && !bDelete && !bKick )
+				{
+					ShowAlertDialog( 'Ban User', 'At least one option must be selected.  The user has not been banned.' );
+				}
+				else
+				{
+					$J.post(
+						'https://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
+					).done( function( data ) {
+						ShowAlertDialog( 'Ban User', data.message ? data.message : 'The user\'s posting and editing privileges have been revoked.' );
+					}).fail( function() {
+						ShowAlertDialog( 'Ban User', data.message ? data.message : 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+					});
+				}
+			});
+		}
+		else
+		{
+			Modal.done( function() {
+
 				$J.post(
 					'https://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
 				).done( function( data ) {
-					ShowAlertDialog( 'Ban User', data.message ? data.message : 'The user\'s posting and editing privileges have been revoked.' );
+					ShowAlertDialog( 'Warn User', data.message ? data.message : 'This user has been warned successfully for their post.' );
 				}).fail( function() {
-					ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+					ShowAlertDialog( 'Warn User', data.message ? data.message : 'We ran into an error warning this user, please try again later.' );
 				});
-			}
-		});
+			});
+		}
 
 	}).fail( function() {
 		Modal.Dismiss();
-		ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
-	})
+		if ( !bWarning ) {
+			ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+		}
+		else {
+			ShowAlertDialog( 'Warn User', 'We ran into an error warning this user, please try again later.' );
+		}
+	});
 }
 
 function Forum_OnSearchSortSelect( elSelect, rgSearchParams )

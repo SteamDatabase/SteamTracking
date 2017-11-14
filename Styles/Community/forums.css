@@ -1240,6 +1240,19 @@ table.forum_auditlog tr.audit_row_secondary {
 	top: 0px;
 }
 
+.warn_user_text {
+	min-height: 80px;
+	line-height: 20px;
+}
+
+.warn_user_text:disabled {
+	color: #8e8e8e;
+}
+
+.forum_banuser_subheader {
+	margin-bottom: 15px;
+}
+
 .forum_subscribe_button {
 	margin-bottom: 8px;
 	white-space: nowrap;
