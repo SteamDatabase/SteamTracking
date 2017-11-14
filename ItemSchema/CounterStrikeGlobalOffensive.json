@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.b188c5073ef53a86d9c554d4940e7f936ad41e09.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.92f09d932087b8560689b27058e8ac4f6ef33798.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7778,7 +7778,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "Operation Hydra Access Pass",
-				"item_description": "Grants access to Operation Hydra, which consists of an upgradeable Challenge Coin, a Guardian Campaign, additional XP for participating in Skirmishes, Operation Hydra Case and weapon drops, as well as a Campaign Journal that contains Campaign Overviews, an Active Duty Scorecard, an Operation Scorecard, and a Friends Leaderboard.",
+				"item_description": "The Operation Hydra event ran from May 23rd, 2017 to November 14th, 2017. This pass no longer grants access to an Operation, but may be redeemed for a commemorative Operation Hydra Coin.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_8_pass",
@@ -8068,6 +8068,132 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "prestige coin 2018",
+				"defindex": 1367,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl1.8c64443124bd2dec11878ac669875ed4b4f1af85.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl1_large.bbb2fcec2728e991779de755cf0de2afd000d8cb.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2018 level 2",
+				"defindex": 1368,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl2.f345a7925299b3aebdbce3e6a0106b2550943803.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl2_large.adc2457c32062e14fc77530d84665f1e6dd7b848.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2018 level 3",
+				"defindex": 1369,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl3.c5c205359636c13ea1d1fea46c285a6a6a6cf9a9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl3_large.9fef68459355ee1ef47c9726e7daaabee08b2610.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2018 level 4",
+				"defindex": 1370,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl4.ac9d10b214be029ed9a979facf950382b5cf728f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl4_large.fc78723c79ebc66fa884fa2026519288ede3bab5.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2018 level 5",
+				"defindex": 1371,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl5.8bc25fbe9a8c1c3f830eb8b6c154109f602c52ad.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl5_large.f46bee958c9154c0392a21c731608bf154dfb029.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "prestige coin 2018 level 6",
+				"defindex": 1372,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2018 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2018.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2018_lvl6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl6.9fba01b5f6b39ecb33e70d0b7bfc1eac519f5b0d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2018_lvl6_large.a0bf9629fa622f74198aa1ac19ece56a22e8b801.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "crate_valve_1",
@@ -20460,7 +20586,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Operation Hydra Challenge Coin",
-				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"item_description": "Participated in Operation Hydra.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_8_bronze",
@@ -20605,7 +20731,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Silver Operation Hydra Coin",
-				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"item_description": "Participated in Operation Hydra.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_8_silver",
@@ -20750,7 +20876,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Gold Operation Hydra Coin",
-				"item_description": "Participated in Operation Hydra.\nCollect Operation XP on official matchmaking servers to upgrade this coin.",
+				"item_description": "Participated in Operation Hydra.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_8_gold",

@@ -774,7 +774,7 @@ function Common_AddToCartAjax( nDefIndex, strSourceHistory, strSessionID, fnCall
 	).error(
 		function( jqXHR, e )
 		{
-			if ( fnCallback != undefined )
+						if ( fnCallback != undefined )
 			{
 				fnCallback( null, 'An error occurred while attempting to add an item to your cart. Please try again in a few minutes.' );
 			}

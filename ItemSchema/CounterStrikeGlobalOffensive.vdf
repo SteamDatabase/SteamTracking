@@ -23142,6 +23142,84 @@
 				"pedestal display model"		"models/inventory_items/collectible_pin_tactics.mdl"
 			}
 		}
+		"1367"
+		{
+			"name"		"prestige coin 2018"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl1"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl1.mdl"
+			}
+		}
+		"1368"
+		{
+			"name"		"prestige coin 2018 level 2"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl2"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl2.mdl"
+			}
+		}
+		"1369"
+		{
+			"name"		"prestige coin 2018 level 3"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl3"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl3.mdl"
+			}
+		}
+		"1370"
+		{
+			"name"		"prestige coin 2018 level 4"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl4"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl4.mdl"
+			}
+		}
+		"1371"
+		{
+			"name"		"prestige coin 2018 level 5"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl5"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl5.mdl"
+			}
+		}
+		"1372"
+		{
+			"name"		"prestige coin 2018 level 6"
+			"prefab"		"prestige_coin"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2018"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2018"
+			"image_inventory"		"econ/status_icons/service_medal_2018_lvl6"
+			"attributes"
+			{
+				"prestige year"		"2018"
+				"pedestal display model"		"models/inventory_items/service_medal_2018_lvl6.mdl"
+			}
+		}
 		"4001"
 		{
 			"item_name"		"#CSGO_crate_valve_1"
@@ -62767,27 +62845,6 @@
 			"gamemode"		"scrimcomp5v5"
 			"mapgroup"		"mg_de_canals"
 		}
-		"10031"
-		{
-			"name"		"event_op08_skirmish_old_1"
-			"is_an_event"		"1"
-			"gamemode"		"skirmish"
-			"mapgroup"		"mg_skirmish_1"
-		}
-		"10032"
-		{
-			"name"		"event_op08_skirmish_old_2"
-			"is_an_event"		"1"
-			"gamemode"		"skirmish"
-			"mapgroup"		"mg_skirmish_2"
-		}
-		"10033"
-		{
-			"name"		"event_op08_skirmish_old_3"
-			"is_an_event"		"1"
-			"gamemode"		"skirmish"
-			"mapgroup"		"mg_skirmish_3"
-		}
 		"10034"
 		{
 			"name"		"event_op08_skirmish_all"
@@ -65388,6 +65445,26 @@
 			"icon"		"icon-skirmish-has"
 			"gamemode"		"casual"
 			"server_exec"		"execwithwhitelist op08_heavy_assault_suit.cfg"
+		}
+		"10"
+		{
+			"name"		"armsrace"
+			"loc_name"		"Skirmish_AR_name"
+			"loc_rules"		"Skirmish_AR_rules"
+			"loc_description"		"Skirmish_AR_desc"
+			"loc_details"		"Skirmish_AR_details"
+			"icon"		"icon-gungameprogressive"
+			"gamemode"		"gungameprogressive"
+		}
+		"11"
+		{
+			"name"		"demolition"
+			"loc_name"		"Skirmish_DEM_name"
+			"loc_rules"		"Skirmish_DEM_rules"
+			"loc_description"		"Skirmish_DEM_desc"
+			"loc_details"		"Skirmish_DEM_details"
+			"icon"		"icon-gungametrbomb"
+			"gamemode"		"gungametrbomb"
 		}
 	}
 	"skirmish_rank_info"
