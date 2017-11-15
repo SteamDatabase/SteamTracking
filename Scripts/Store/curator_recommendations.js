@@ -308,11 +308,11 @@ function ShowEditHandles()
 
 		var elOptions = $J('<form class="edit_options"></form>');
 
-		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"discounted_curations\">Discounted Curations<\/option>\r\n\t\t\t<\/select>");
+		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t<\/select>");
 
 		elTypeSelect.val( rgNodeData.type );
 
-		var elSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent curations<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+		var elSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
 
 		elSortSelect.val( rgNodeData.sort );
 
