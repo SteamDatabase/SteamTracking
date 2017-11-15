@@ -78,6 +78,11 @@
 	background-image: url( "file://{images}/store/icon_platform_razerosvr.png" );
 }
 
+.WindowsMRLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_windowsmr.png" );
+}
+
 .HMDSeparator
 {
 	border-left: 1px solid #CCCCCC;
