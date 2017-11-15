@@ -1472,7 +1472,7 @@ span.platform_img.steamplay {
 }
 
 span.platform_img.win {
-	background-image: url( '/public/images/v6/icon_platform_win.png' );
+	background-image: url( '/public/images/v6/icon_platform_win.png?v=2' );
 }
 
 span.platform_img.mac {
@@ -1501,6 +1501,10 @@ span.platform_img.oculusrift {
 
 span.platform_img.razerosvr {
 	background-image: url( '/public/images/v6/icon_platform_razerosvr.png' );
+}
+
+span.platform_img.windowsmr {
+	background-image: url( '/public/images/v6/icon_platform_windowsmr.png' );
 }
 
 span.platform_img.hmd_separator {
