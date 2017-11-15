@@ -40,6 +40,8 @@ public:
     virtual unknown_ret GetGuestPassToRedeemSenderName(unsigned int, char*, int) = 0;
     virtual unknown_ret GetNumAppsInGuestPassesToRedeem() = 0;
     virtual unknown_ret GetAppsInGuestPassesToRedeem(unsigned int*, unsigned int) = 0;
+    virtual unknown_ret GetCountUserNotifications() = 0;
+    virtual unknown_ret GetCountUserNotification(EUserNotification) = 0;
     virtual unknown_ret RequestStoreAuthURL(char const*) = 0;
     virtual unknown_ret SetLanguage(char const*) = 0;
     virtual unknown_ret TrackAppUsageEvent(CGameID, int, char const*) = 0;
