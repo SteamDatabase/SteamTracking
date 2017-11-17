@@ -67,4 +67,5 @@ typedef enum EControllerModeInput
     k_EControllerModeInputButton_rtrigger_threshold, // button_rtrigger_threshold
     k_EControllerModeInputButton_joystick, // button_joystick
     k_EControllerModeInputButton_steam, // button_steam
+    k_EControllerModeInputAlways_on_action, // always_on_action
 } EControllerModeInput;

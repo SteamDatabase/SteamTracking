@@ -27,6 +27,17 @@
 		"ZeroCost"		0
 		"AggregatorCost"	0
 	}
+	"networks"
+	{
+		"charter"	"20115"
+		"fiord"		"8334, 1547, 35539, 28917, 39812"
+		"shaw"		"6327"
+		"telus"		"852"
+		"verizon"	"701"
+		"videotron"	"5769"
+		"skyfiber"	"32212"
+		"TK-Telecom"	"60764"
+	}
 	"cells"
 	{
 		// #0 DEFAULT - if client gets an error or they report an
@@ -67,7 +78,17 @@
 				50 { "dest"	50	"cost"	LocalBackbone }
 				64 { "dest"	64	"cost"	LocalBackbone }
 				// high-cost
-				20  				{  					"dest"	20   					"cost"	USToCanada 				}
+				20 {  "dest"	20 "cost" USToCanada }
+			}
+			"affinities"
+			{
+				"shaw" { "cost_reduction"	"1" }
+
+				"videotron" { "cost_reduction"	"1" }
+
+				"verizon" { "cost_reduction"	"0.5" }
+
+				"charter" { "cost_reduction"	"0.5" }
 			}
 		}
 
@@ -125,7 +146,7 @@
 				15 { "dest"	15	"cost"	LocalBackbone }	// Doesn't actually exist as a backbone
 				
 				// back to aggregators
-				24 				{  					"dest"	24  					"cost"	OneWayCellEdge 				}				
+				24 { "cost" OneWayCellEdge }				
 			}
 		}
 
@@ -148,6 +169,7 @@
 				42 { "dest"	42 }
 				88 { "dest"	88 }
 				37 { "dest"	37 }
+				41 { }
 				165 { "cost"	Default } // Belarus
 				// Backbones
 				66 { "dest"	66	"cost"	1 }
@@ -171,6 +193,10 @@
 					"dest"	27 
 					"cost"	OneWayCellEdge
 				}																
+			}
+			"affinities"
+			{
+				"fiord" { "cost_reduction" 1 }
 			}
 		}
 
@@ -226,7 +252,7 @@
 		9
 		{
 			"name" "Taiwan"
-			"region"	"asia"
+			"region"	"taiwan"
 			"countrycode"	"TW"
 			"latitude"	"23.84565"
 			"longitude"	"120.992002"
@@ -307,7 +333,8 @@
 			"edges"
 			{
 				4 { "dest"	 4  	"cost"	InwardCost }
-				129 { "dest"	129  	"cost"	InwardCost}
+				15 { "cost"	InwardCost }
+				129 { "dest"	129  	"cost"	ZeroCost }
 			}
 		}
 
@@ -331,6 +358,10 @@
 				129 { "dest"	129  	"cost"	RegionalBackbone }
 				// High-Cost
 				29 { "dest"	29  "cost"	OneWayCellEdge4 }
+			}
+			"affinities"
+			{
+				"fiord" { "cost_reduction" 2 }
 			}
 		}
 
@@ -514,7 +545,7 @@
 				123 { "dest"	123 }
 				24 { "dest"	24 }
 				// Backbones
-				4	{ "dest"	4	"cost"	GlobalBackbone }				
+				4 { "cost"	GlobalBackbone }				
 			}
 		}
 
@@ -556,7 +587,7 @@
 		// #29 Iceland
 		29
 		{
-			"name" "Iceland & Greenland"
+			"name" "Iceland, Greenland, and Faroe Islands"
 			"region"	"europe"
 			"countrycode"	"IS"
 			"latitude"	"64.150345"
@@ -596,19 +627,25 @@
 				49 { "dest"	49 }		
 				94 { "dest" 94 	"cost" USToCanada }
 				// Backbones
-				64 { "dest"	64  	"cost"	RegionalBackbone }
+				64 { "dest"	64  	"cost"	0.1 }
 				1 { "dest"	1  	"cost"	RegionalBackbone }
 				65 { "dest"	65  	"cost"	RegionalBackbone }
 				66 { "dest"	66  	"cost"	GlobalBackbone }
 				32 { "dest"	32  	"cost"	GlobalBackbone }
 				// High-Cost
-				6 				{  					"dest"	6 					"cost"	OneWayCellEdge 				}	
-				147 				{  					"dest"	147  					"cost"	OneWayCellEdge 				}						
+				6 { "cost"	OneWayCellEdge 	}	
+				147 {"cost"	OneWayCellEdge 	}						
 				// LAN Event cells - we need edges to these somewhere so they show
 				// up in the list. 	
-				102 				{  					"dest"	102 					"cost"	OneWayCellEdge 				}				
-				103 				{  					"dest"	103 					"cost"	OneWayCellEdge 				}				
-				104 				{  					"dest"	104 					"cost"	OneWayCellEdge 				}					
+				102 { "cost"	OneWayCellEdge 	}				
+				103 { "cost"	OneWayCellEdge 	}				
+				104 { "cost"	OneWayCellEdge 	}
+			}
+			"affinities"
+			{
+				"shaw" { "cost_reduction"	"1" }
+				"telus" { "cost_reduction"	"1" }
+				"skyfiber" { "cost_reduction"	"0.5" }
 			}
 		}
 
@@ -732,7 +769,8 @@
 			"longitude"	"12.492346"
 			"edges"
 			{
-				5 { "dest"	5 	"cost"	InwardCost }
+				5 { "cost"	2 }
+				92 { "cost"	InwardCost }
 			}
 		}
 
@@ -799,6 +837,7 @@
 			"longitude"	"12.562008"
 			"edges"
 			{
+				5 { "cost"	InwardCost }
 				66 { "dest"	66 	"cost"	InwardCost }
 			}
 		}
@@ -851,7 +890,7 @@
 		45
 		{
 			"name" "Philippines"
-			"region"	"southeast asia"
+			"region"	"philippines"
 			"countrycode"	"PH"
 			"latitude"	"14.595480"
 			"longitude"	"120.979080"
@@ -957,9 +996,14 @@
 				78 { "dest"	78  }
 				12 { "dest"	12  }
 				// Other
-				23  				{  					"dest"	23  					"cost"	OneWayCellEdge 				}	
-				139 				{  					"dest"	139 					"cost"	OneWayCellEdge 				}	
-				140 				{  					"dest"	140 					"cost"	OneWayCellEdge 				}					
+				23 { "dest"	23 "cost"	OneWayCellEdge 	}	
+				139 { "dest"	139 "cost"	OneWayCellEdge }	
+				140 { "dest"	140"cost"	OneWayCellEdge }					
+			}
+			"affinities"
+			{
+				"charter" { "cost_reduction"	"0.5" }
+				"verizon" { "cost_reduction"	"1" }
 			}
 		}
 		// #51 AUS Queensland
@@ -972,7 +1016,7 @@
 			"longitude"	"153.030153"
 			"edges"
 			{
-				52 				{  					"dest"	52   					"cost"	InwardCost 				}
+				52 {"dest"	52 "cost"	InwardCost }
 			}
 		}
 		// #52 AUS NSW
@@ -1096,7 +1140,7 @@
 			"region"	"australasia"
 			"edges"
 			{
-				52 				{  					"dest"	52 					"cost"	ZeroCost 				}
+				52 {"cost"	ZeroCost }
 			}
 		}
 		// #62 Russia - Siberia
@@ -1144,6 +1188,12 @@
 					"cost"	OneWayCellEdge
 				}								
 			}
+			"affinities"
+			{
+				"shaw" { "cost_reduction"	"0.8" }
+
+				"videotron" { "cost_reduction"	"0.8" }
+			}
 		}
 		// #64 US - Los Angeles
 		64
@@ -1157,7 +1207,7 @@
 			{
 				// Backbone
 				1 { "dest"	1  }
-				31 { "dest"	31  }
+				31 { "cost"	LocalBackbone  }
 				65 { "dest"	65  }
 				50 { "dest"	50	"cost"	RegionalBackbone  }
 				33 { "dest"	33	"cost"	GlobalBackbone  }
@@ -1195,6 +1245,10 @@
 				49 { "dest"	49 }
 				11 { "dest"	11 }
 			}
+			"affinities"
+			{
+				"skyfiber" { "cost_reduction"	"0.5" }
+			}
 		}
 		// #66 Sweden
 		66
@@ -1216,6 +1270,11 @@
 				67 { "dest"	67 }							
 				41 { "dest"	41 }
 				27 { "dest"	27	"cost"	OneWayCellEdge }
+			}
+			"affinities"
+			{
+				"fiord" { "cost_reduction" 1 }
+				"TK-Telecom" { "cost_reduction" 1 }
 			}
 		}
 		// #67 Norway
@@ -1566,6 +1625,7 @@
 				// Spokes	
 				42 { "dest"	42 }
 				16 { "dest"	16 }
+				37 {  }
 				43 { "dest"	43 }
 				93 { "dest"	93 }
 				124 { "dest"	124 "cost"	OneWayCellEdge }
@@ -2328,8 +2388,8 @@
 			"edges"
 			{
 				7 { "dest"	7 }
-				9 { "dest"	9 }
 				27 { "dest"	27	"cost"	AggregatorCost }
+				39 { "dest"	39 }
 			}		
 		}
 		152
@@ -2344,7 +2404,7 @@
 				157 { "dest"	157 }
 				27 { "dest"	27	"cost"	AggregatorCost }
 				7 { "dest"	7 }
-				32 { "dest"	32	"cost"	3 }
+				32 { "dest"	32	"cost"	1 }
 			}		
 		}
 		153
@@ -2405,7 +2465,7 @@
 			"edges"
 			{
 				62 { "dest"	62 }
-				152 { "dest"	152 }
+				152 { "dest"	152	"cost"	ZeroCost }
 				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}		
@@ -2574,7 +2634,7 @@
 		"BB"	140
 		
 		//"Belarus"		
-		"BY"	38
+		"BY"	165
 		
 		//"Belgium"		
 		"BE"	86
@@ -3060,7 +3120,7 @@
 		"RW"	131
 		
 		//"Saint Helena"						
-		"SH"	140
+		"SH"	0
 		
 		//"Saint Kitts and Nevis"			
 		"KN"	140
@@ -3069,7 +3129,7 @@
 		"LC"	140
 		
 		//"Saint Pierre and Miquelon"					
-		"PM"	140
+		"PM"	81
 		
 		//"Saint Vincent and the Grenadines"	
 		"VC"	140

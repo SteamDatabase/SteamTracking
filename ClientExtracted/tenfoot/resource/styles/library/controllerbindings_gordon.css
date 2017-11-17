@@ -453,6 +453,52 @@ SelectMousePosition
 	visibility: collapse;
 }
 
+.EditAlwaysOnButton #HelperAlwaysOn
+{
+    visibility: visible;
+}
+
+.EditAlwaysOnButton #BackgroundController,
+.EditAlwaysOnButton.controller_ps4  #BackgroundController,
+.EditAlwaysOnButton.controller_ps3  #BackgroundController,
+.EditAlwaysOnButton.controller_xboxone  #BackgroundController,
+.EditAlwaysOnButton.controller_xbox360  #BackgroundController,
+.EditAlwaysOnButton.controller_generic  #BackgroundController,
+{
+	background-image: url( "" );
+    wash-color: #ffffffff;
+}
+
+#HelperAlwaysOnHeader
+{
+    margin-bottom: 160px;
+    font-size: 64px;
+}
+
+#HelperAlwaysOnText
+{
+    margin-top: 100px;
+}
+
+#HelperAlwaysOn
+{
+    visibility: collapse;
+	z-index: 1;
+	margin-bottom: 80px;
+	horizontal-align: left;
+    vertical-align: bottom;
+	
+	transition-property: width;
+	transition-timing-function: ease-in;
+	transition-duration: 0.1s;
+
+	font-size: 24px;
+	font-family: platformfont;
+    text-wrap:normal;
+	color: #01caef;
+}
+
+
 .ShowBackgroundHelper #HelperDescription
 {
 	visibility: visible;
@@ -1265,6 +1311,37 @@ Label.ModeTitle
     visibility: visible;
 }
 
+.BindingButton.AlwaysOn
+{
+	width: bindingbuttonwidth;
+	height: 56px;
+	margin-top: 24px;
+    background-image: url("file://{images}/library/controller/input_controller_glyph_always_on.png");
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 10px 50%;
+    background-color: none;
+   
+}
+
+.controller_steamcontroller_headcrab .BindingButton.AlwaysOn
+{
+	height: 48px;
+	margin-top: 6px;
+}
+
+.controller_xboxone .BindingButton.AlwaysOn,
+.controller_xbox360 .BindingButton.AlwaysOn,
+.controller_ps4 .BindingButton.AlwaysOn,
+.controller_generic .BindingButton.AlwaysOn
+{
+	margin-top: 128px;
+}
+
+#AlwaysOn.BindingButton Label
+{
+	margin-left: 72px;
+}
 
 .BindingButton.Playstation,
 .BindingButton.Xbox
@@ -1284,15 +1361,15 @@ Label.ModeTitle
 ControllerBindingButton.BindingButton
 {
 	width: bindingbuttonwidth;
-	height: 104px;
+	height: 100px;
 	margin-bottom: 9px;
 	background-color: none;
 }
 
 .controller_steamcontroller_headcrab ControllerBindingButton.BindingButton
 {
-	height: 92px;
-	margin-bottom: 9px;
+	height: 82px;
+	margin-bottom: 7px;
 }
 
 
@@ -1432,7 +1509,7 @@ ControllerBindingButton.BindingButton.Right
 .BottomPanelVisible #TopHalfContainer #BackgroundController
 {
 	transform: translatey( -115px );
-	pre-transform-scale2d: 0.80;
+	pre-transform-scale2d: 0.75;
 }
 
 ControllerPropertiesMode, ControllerPropertiesActivator

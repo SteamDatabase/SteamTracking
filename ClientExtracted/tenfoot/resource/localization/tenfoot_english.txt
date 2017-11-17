@@ -4820,6 +4820,8 @@
 	//HELPER STUFF FOR CONTROLLER CONFIG PANEL
 	"SettingsController_HelperDescriptionHeader"	"Cool Header"
 	"SettingsController_HelperDescriptionText"	"Cool Description"
+	"SettingsController_HelperAlwaysOnHeader"	"Always On Actions"
+	"SettingsController_HelperAlwaysOnText"	"Any bindings assigned here will be automatically activated when this Action Set or Layer is enabled.  Activators can be used to modify how they behave, and for these purposes, these actions act as if they are a button which is held down while the action set or layer is active.  For example, Start Press activators will fire once at the start, while Regular Press activators will stay held while this set or layer is active."
 	"SettingsController_BindingTitle" "{s:bindingtitle}"
 	"SettingsController_BindingTitle_ForController" "({s:controllername})"
 	"SettingsController_BindingTitle_Guest" "Guest"
