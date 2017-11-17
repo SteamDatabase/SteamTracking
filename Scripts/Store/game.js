@@ -414,6 +414,8 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 	var language = $J('input[name="review_language"]:checked').val();
 	var reviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
 	var dateRangeType = $J('input[name="review_date_range"]:checked').val();
+	var summaryNumPositiveReviews = $J( "#review_summary_num_positive_reviews" ).val();
+	var summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -429,7 +431,9 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 		'l' : 'english',
 		'review_type' : reviewType,
 		'purchase_type' : purchaseType,
-		'review_beta_enabled' : reviewBetaEnabled
+		'review_beta_enabled' : reviewBetaEnabled,
+		'summary_num_positive_reviews' : summaryNumPositiveReviews,
+		'summary_num_reviews' : summaryNumReviews
 	}).done( function( data ) {
 
 		RecordAJAXPageView( this.url );
