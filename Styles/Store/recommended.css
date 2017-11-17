@@ -2681,6 +2681,13 @@ div.graph_toggle_icon.down {
 	border-bottom: 1px solid #4582a5;
 }
 
+.user_reviews_beta_explanation {
+	white-space: normal;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #4582a5;
+}
+
 #app_reviews_hash.graph_hidden #reviews_date_range_menu {
 	display: none;
 }

@@ -539,7 +539,7 @@ function FilterReviewsToGraph( bCountAllReviews, startDate, endDate )
 	{
 		$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
 	}
-	// $J('#review_context').val( "all" );
+
 	$J('#review_start_date').val( startDate );
 	$J('#review_end_date').val( endDate );
 	if ( !$J('#review_date_range_histogram').attr( 'checked' ) && !$J('#review_date_range_exclude_histogram').attr( 'checked') )
@@ -561,7 +561,7 @@ function FilterReviewsGraph( bCountAllReviews, startDate, endDate, bExclude )
 	{
 		$J('#purchase_type_steam').attr( 'checked', !bCountAllReviews );
 	}
-	// $J('#review_context').val( "all" );
+
 	$J('#review_start_date').val( startDate );
 	$J('#review_end_date').val( endDate );
 
@@ -1055,7 +1055,8 @@ function UpdateActiveFilters()
 	}
 	
 	// beta
-	if ( $J( "#ReviewBetaCheckbox" ).attr( "checked" ) )
+	var context = $J( "#review_context" ).val();
+	if ( $J( "#ReviewBetaCheckbox" ).attr( "checked" ) && ( context == 'summary' || context == 'all' ) )
 	{
 		bAnyActiveFilters = true;
 		$J( "#reviews_beta" ).show();
@@ -1084,6 +1085,13 @@ function ChangeReviewPurchaseTypeFilter()
 {
 	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	V_SetCookie( "review_purchase_type_filter", purchaseType, purchaseType == 'all' ? 1 : 14, "app/" );
+	ShowFilteredReviews();
+}
+
+function ChangedReviewHelpfulnessFilter()
+{
+	var bReviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
+	V_SetCookie( "review_beta_enabled", bReviewBetaEnabled, 7, "app/" );
 	ShowFilteredReviews();
 }
 
