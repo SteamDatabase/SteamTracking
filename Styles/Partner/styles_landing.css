@@ -832,6 +832,11 @@ p {
 	.buttonRow.parentApp {
 		background-size: 16px;
 	}
+	.buttonRow .new {
+		color: #A4D007;
+		font-weight: 600;
+		margin-left: 8px;
+	}
 
 
 .greyBox {

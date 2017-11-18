@@ -1302,6 +1302,38 @@ function ShowAddBundleDialog()
 	} );
 }
 
+function ShowAddGiveawayDialog()
+{
+	var dialog = ShowConfirmDialog( 'Create New Giveaway', $J('#editGiveawayModal').show() , 'Create New Giveaway' );
+
+	var $Form = dialog.GetContent().find('form');
+	dialog.SetRemoveContentOnDismissal( false );
+	dialog.GetContent().css('width','640px');
+	dialog.AdjustSizing();
+	dialog.done( function() {
+		var waitdialog = ShowBlockingWaitDialog( 'Create New Giveaway', 'Saving changes...' );
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/create/",
+			data: $Form.serialize(),
+			dataType: 'json'
+		}).done(function( msg ) {
+			if( msg.success == 1 )
+			{
+				window.location = 'https://partner.steamgames.com/giveaways/edit/' + msg.giveaway_admin_id;
+			}
+			else
+			{
+				waitdialog.Dismiss();
+				ShowAlertDialog("Giveaway creation failed: " + (msg.error? msg.error : msg.success ) );
+			}
+		} ).fail( function() {
+			waitdialog.Dismiss();
+		});
+
+	} );
+}
+
 function RegisterMultiLanguageAgreementIFrame( elContainer, strURL, rgLanguages, strCurrentLanguage )
 {
 	var elIFrame = $J('.agreement_frame', elContainer);
