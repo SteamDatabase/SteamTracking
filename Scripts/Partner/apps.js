@@ -2161,23 +2161,6 @@ function AchievementLocCallbackClosure( appid )
 	return theClosure;
 }
 
-function RichPresenceLocCallbackClosure( appid )
-{
-	theClosure = function( jsonResponse )
-	{
-		// the json is wrapped in a <pre> tag, so we must unwrap it.
-		var div = new Element("div");
-		div.innerHTML = jsonResponse;
-		var results = div.childElements()[0].innerHTML.evalJSON(true);
-
-		// poke in results
-		StandardCallback( results, 'loc_upload_response' );
-		return false;
-	};
-
-	return theClosure;
-}
-
 function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
 {
 	theClosure = function( jsonResponse )

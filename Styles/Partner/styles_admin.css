@@ -85,16 +85,6 @@ ul.bullets li {
 	background-color: #4a0b12;
 }
 
-.warningmsg {
-	padding: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border: 1px solid #e1de37;
-	background-color: #656311;
-}
-
 .successmsg {
 	padding: 10px;
 	padding-top: 5px;
@@ -1658,17 +1648,6 @@ html, body { height:100%; }
     height: 130px;
 }
 
-#giveaway_content_name__area input
-{
-	width: 400px;
-}
-
-#giveaway_content_description__area textarea
-{
-	width: 1000px;
-	height: 300px;
-}
-
 #app_content_about__area textarea
 {
 	width: 1000px;
@@ -2164,8 +2143,6 @@ html, body { height:100%; }
 	margin-bottom: 20px;
 	background-color: #333333;
 	border: 2px dashed #67c1f5;
-	box-shadow: inset 0px 0px 16px 0px #67c1f5;
-	color: #67c1f5;
 	padding: 8px;
 	text-align: center;
 	padding-top: 40px;
@@ -2175,23 +2152,6 @@ html, body { height:100%; }
 .drag_and_drop.drag_over
 {
 	background-color: #666666;
-}
-
-.instructions {
-	padding: 16px;
-	background: -webkit-linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%););background: linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%););}
-.instructions_table {
-	display: table;
-	width: 100%;
-}
-.instructions_table_row {
-	display: table-row;
-}
-.instructions_table_cell {
-	display: table-cell;
-}
-.instructions_table_cell.left {
-	padding-right: 10px;
 }
 
 .screenshot_upload_preview
@@ -2832,67 +2792,6 @@ html, body { height:100%; }
 	padding-left: 4px;
 }
 
-.giveawayModal .enter_bundle_name {
-	width: 300px;
-}
-.giveawayModal .enter_bundle_discount {
-	width: 30px;
-}
-
-.giveawayModal h3, .giveawayModal h4 {
-	text-transform: none;
-	font-weight: normal;
-	color: #ffffff;
-	font-size: 16px;
-}
-.giveawayModal h4 {
-	font-size: 14px;
-}
-
-.giveawayModal .giveawayModalRow {
-	margin: 16px 0;
-}
-
-.giveawayModal .giveawayModalDesc {
-	margin-bottom: 6px;
-}
-
-.giveawayModal .giveawayModalRadioOption {
-	padding-left: 40px;
-	margin: 12px 0;
-}
-
-.giveawayModal .giveawayModalRadioOption input {
-	float: left;
-}
-
-.giveawayModal .giveawayModalRadioOption label {
-	display: block;
-	overflow: hidden;
-	padding-left: 4px;
-}
-
-.giveaway_col_min {
-    width: 1%;
-    white-space: nowrap;
-}
-
-.giveaway_col_icon {
-	width:25px;
-	text-align: center;
-}
-
-.giveaway_col_item_def_image {
-	width:72px;
-}
-
-.labelDescription {
-	display: block;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-	margin-left: 0;
-	margin-right: 0;
-}
 .tradingcardtips {
 	margin-top:10px;
 	margin-bottom:20px;
@@ -2918,13 +2817,6 @@ input.new_tool_ds {
 	height: 22px;
 }
 h2.bundleFilter_titleArea {
-	margin-top: 20px;
-}
-
-.giveawayFilter_inputArea input {
-	height: 22px;
-}
-h2.giveawayFilter_titleArea {
 	margin-top: 20px;
 }
 
