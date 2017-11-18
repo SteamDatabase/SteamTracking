@@ -1988,10 +1988,11 @@ function Forum_BanOrWarnUser( clanid, gidForum, gidTopic, gidComment, accountIDT
 				{
 					$J.post(
 						'https://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
-					).done( function( data ) {
-						ShowAlertDialog( 'Ban User', data.message ? data.message : 'The user\'s posting and editing privileges have been revoked.' );
-					}).fail( function() {
-						ShowAlertDialog( 'Ban User', data.message ? data.message : 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+					).done( function( ban_response ) {
+						ShowAlertDialog( 'Ban User', ban_response.message ? ban_response.message : 'The user\'s posting and editing privileges have been revoked.' );
+					}).fail( function( jqxhr ) {
+						var ban_response = V_ParseJSON( jqxhr.responseText );
+						ShowAlertDialog( 'Ban User', ban_response.message ? ban_response.message : 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
 					});
 				}
 			});
@@ -2002,10 +2003,11 @@ function Forum_BanOrWarnUser( clanid, gidForum, gidTopic, gidComment, accountIDT
 
 				$J.post(
 					'https://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
-				).done( function( data ) {
-					ShowAlertDialog( 'Warn User', data.message ? data.message : 'This user has been warned successfully for their post.' );
-				}).fail( function() {
-					ShowAlertDialog( 'Warn User', data.message ? data.message : 'We ran into an error warning this user, please try again later.' );
+				).done( function( ban_response ) {
+					ShowAlertDialog( 'Warn User', ban_response.message ? ban_response.message : 'This user has been warned successfully for their post.' );
+				}).fail( function( jqxhr ) {
+					var ban_response = V_ParseJSON( jqxhr.responseText );
+					ShowAlertDialog( 'Warn User', ban_response.message ? ban_response.message : 'We ran into an error warning this user, please try again later.' );
 				});
 			});
 		}
