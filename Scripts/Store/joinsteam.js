@@ -9,17 +9,21 @@ function StartCreationSession()
 	$J.ajax( {
 		method: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
-		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val() }
+		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val(), captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
 	})
 	.done( function( data ) {
 
 		if ( data.success != 1 )
 		{
-			var strError = 'There was a problem creating your Steam account, please try again later.';
+			var strError = data.details;
 
 			if ( data.success == 14 )
 			{
 				strError = 'The account name you have chosen is not available. Please choose another name.';
+			}
+			else if ( data.success == 101 )
+			{
+				new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
 			}
 
 			ShowError( strError );
