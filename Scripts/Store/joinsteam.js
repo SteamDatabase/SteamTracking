@@ -104,6 +104,7 @@ function ChangeEmail()
 	Effect.ScrollTo( 'cart_area' );
 	$J( '#email' ).val( '' );
 	$J( '#reenter_email' ).val( '' );
+	RefreshCaptcha();
 }
 
 function EmailConfirmedVerified()
@@ -289,8 +290,6 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	
 		errorString += 'Please verify your humanity by re-entering the characters below.<br/>';
 		rgBadFields.captcha_text = true;
-		
-				RefreshCaptcha();
 	}
 
 		if ( !( $('lt').value == 1 || $('lt').value == 4 ) )
@@ -350,7 +349,6 @@ function ReallyCreateAccount()
 	    method:'post', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
 	    			  email : $('email').value,
-	    			  captchagid : $('captchagid').value,
 	    			  captcha_text : $('captcha_text').value,
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  ticket : $('ticket').value,
