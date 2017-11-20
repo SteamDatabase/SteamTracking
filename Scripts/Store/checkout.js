@@ -3026,8 +3026,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'spe' || method.value == 'multicaja' || method.value == 'redcompra' || method.value == 'ziraatbank' || method.value == 'vakiflarbank' 
 			|| method.value == 'kuveytturkbank' || method.value == 'ekonomibank' || method.value == 'pichincha' || method.value == 'pichinchacash' 
 			|| method.value == 'przelewy24' || method.value == 'trustpay' || method.value == 'poli' || method.value == 'mercadopago' || method.value == 'payu' 
-			|| method.value == 'vtcpaywallet' || method.value == 'vtcpaycards' || method.value == 'vtcpayonlinebanking' || method.value == 'mrcash' 
-			|| method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio'
+			|| method.value == 'mrcash' || method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio'
 		)
 		{
 			bShowAddressForm = false;
@@ -3088,6 +3087,13 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Tenpay payments can only be made from Tenpay accounts that have been linked to a verified phone number.';
+		}
+		else if ( method.value == 'vtcpaywallet' || method.value == 'vtcpaycards' || method.value == 'vtcpayonlinebanking' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;			
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = 'VTCPay may charge additional taxes and fees for using this payment method';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
