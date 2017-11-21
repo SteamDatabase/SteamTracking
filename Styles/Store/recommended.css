@@ -2092,6 +2092,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .rightcol .review_box.partial .content .gradient {
 	background: -webkit-linear-gradient( top, rgba( 27,40,56,0) 5%, rgba( 27,40,56,.95) 95%);background: linear-gradient( to bottom, rgba( 27,40,56,0) 5%, rgba( 27,40,56,.95) 95%);}
 
+.friend_reviews .review_box.partial .content .gradient {
+	background: -webkit-linear-gradient( top, rgba( 39, 65, 86,0) 5%, rgba( 39, 65, 86,.95) 95%);background: linear-gradient( to bottom, rgba( 39, 65, 86,0) 5%, rgba( 39, 65, 86,.95) 95%);}
 
 .review_box .posted {
 	font-size: 10px;
@@ -2128,6 +2130,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_box .hr {
 	background-color: #363f4c;
 	height: 1px;
+}
+.friend_reviews .review_box .hr {
+	background-color: #000;
 }
 .rightcol .review_box .hr {
 	background-color: rgba( 0, 0, 0, 0.5 );
@@ -2169,7 +2174,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .friend_reviews .review_box {
 	border-left: 1px solid rgb(43, 71, 95);
 	border-top: 1px solid rgb(43, 71, 95);
-background: -webkit-linear-gradient( 130deg, rgba(42, 71, 94, 0.8) 0%,rgba(42, 71, 94, 0.2) 100%););background: linear-gradient( 130deg, rgba(42, 71, 94, 0.8) 0%,rgba(42, 71, 94, 0.2) 100%););}
+	background: #274156;
+}
 .friend_reviews .playerAvatar img {
 	width: 64px;
 	height: 64px;
@@ -2329,6 +2335,25 @@ background: -webkit-linear-gradient( 130deg, rgba(42, 71, 94, 0.8) 0%,rgba(42, 7
 	text-transform: uppercase;
 	color: #67c1f5;
 	font-size: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 3px 5px;
+	border-radius: 2px;
+}
+.user_reviews_customize_language a:hover {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 10px;
+	background: #67c1f5;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+.user_reviews_beta_explanation a {
+	color: #556772;
+	text-decoration: underline;
+}
+.user_reviews_beta_explanation a:hover {
+	color: #000000;
+	text-decoration: underline;
 }
 
 .user_reviews_filter_score {
