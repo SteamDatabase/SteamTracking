@@ -102735,6 +102735,52 @@
 				"basename"	"models/workshop/player/items/all_class/titanium_tank_participant/titanium_tank_participant_%s.mdl"
 			}
 		}
+		"9721"
+		{
+			"name"		"Mandrew's Munificent Mug"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2017_Mandrew"
+			"item_description"	"#TF_Medal_JingleJam2017_Mandrew_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_mandrew"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"7"
+			}
+		}
+		"9722"
+		{
+			"name"		"Israphel's Eleemosynary Expression"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_JingleJam2017_Israphel"
+			"item_description"	"#TF_Medal_JingleJam2017_Israphel_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_israphel"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jingle_jam_medal/jingle_jam_medal_%s.mdl"
+			}
+			"visuals"
+			{
+				"skin"	"8"
+			}
+		}
 
 
 
@@ -118821,6 +118867,47 @@
 			"max_ilevel"	"50"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"2161"
+		{
+			"name" "Yogscast Jingle Jam 2017 Promo"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Mandrew's Munificent Mug"				"1"
+				"Israphel's Eleemosynary Expression"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_JingleJam_Community_Event_2017_Promo"
+			"item_description"	"#TF_JingleJam_Community_Event_2017_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 
 
