@@ -5,7 +5,6 @@ var g_emailVerificationDialog = null;
 
 function StartCreationSession()
 {
-
 	$J.ajax( {
 		method: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
@@ -35,7 +34,6 @@ function StartCreationSession()
 			WaitForEmailVerification();
 		}
 	} );
-
 }
 
 function WaitForEmailVerification()
@@ -151,42 +149,21 @@ function CreateAccount()
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
 	      	  //alert(e);
-	      	  	      	  return FinishFormVerification( false, false  );
+	      	  	      	  return FinishFormVerification( false );
 	      	}
 	      	
-	      	return FinishFormVerification( result.bCaptchaMatches, result.bEmailAvail );
+	      	return FinishFormVerification( result.bCaptchaMatches );
 		  }
 		  
-		  		  return FinishFormVerification( false, false );
+		  		  return FinishFormVerification( false );
 	    },
 	    onFailure: function(){
-	      	      return FinishFormVerification( false, false ); 
+	      	      return FinishFormVerification( false );
 	    }
 	  });
 }
 
-
-function FetchGETVariables()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
- 
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
- 
-    return vars;
-}
-
-function CreateAccountAnyway()
-{
-	StartCreationSession();
-}
-
-function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
+function FinishFormVerification( bCaptchaIsValid )
 {
 		var errorString = '';
 
@@ -326,15 +303,13 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	{
 		$J('#error_display').slideUp();
 
-		if ( bEmailIsAvailable )
+		if ( g_bPSNAccountSetup )
 		{
-			StartCreationSession();
+			ReallyCreateAccount();
 		}
 		else
 		{
-			$('cart_area').style.display = 'none';
-			$('email_used_area').style.display = 'block';
-			Effect.ScrollTo( 'email_used_area' );
+			StartCreationSession();
 		}
 	}
 }
@@ -349,6 +324,7 @@ function ReallyCreateAccount()
 	    method:'post', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
 	    			  email : $('email').value,
+				      captchagid : $('captchagid').value,
 	    			  captcha_text : $('captcha_text').value,
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  ticket : $('ticket').value,
