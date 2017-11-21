@@ -3093,7 +3093,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;			
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = 'VTCPay may charge additional taxes and fees for using this payment method';
+			$('payment_method_specific_note').innerHTML = 'Please be advised that VTCPay will add VAT and corporate income tax for foreign enterprises to your purchase amount.';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
