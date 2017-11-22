@@ -386,7 +386,7 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 			var categoryid = $Form.find( 'input[name=nomination_category]:checked' ).val();
 			var writein = $Form.find('#category' + categoryid + '_writein').val();
 
-			if ( categoryid == 9 && v_trim( writein || '' ).length < 5 )
+			if ( categoryid == 13 && v_trim( writein || '' ).length < 5 )
 			{
 				ShowAlertDialog( 'Error', 'Please enter a category suggestion' );
 				return;
