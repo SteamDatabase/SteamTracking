@@ -129,6 +129,8 @@ body.v6 #footer {
         float: left;
         margin-left: 12px;
         color: #8F98A0;
+		font-size: 12px;
+		line-height: 16px;
     }
     body.v6 #footer #footer_text a {
         color: #C6D4DF;
