@@ -2353,3 +2353,29 @@ function RecordAJAXPageView( url )
 	}
 }
 
+
+function FollowCuratorWithCallback( clanID, bFollow, onComplete )
+{
+	var bHaveUser = ( g_AccountID != 0 );
+	if ( !bHaveUser )
+	{
+		ShowAlertDialog("Please log in", "You must be logged in to follow a curator");
+		return;
+	}
+
+	$J.post(
+		'http://store.steampowered.com/curators/ajaxfollow',
+		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'follow' : bFollow ? 1 : 0 },
+		function( data )
+		{
+			onComplete( bFollow );
+		},
+		'json'
+	).fail( function()
+		{
+			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.' );
+		}
+	);
+	return false;
+}
+

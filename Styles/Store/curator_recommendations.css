@@ -248,7 +248,7 @@ body.v6 h2.curator_name a:hover {
 
 .follow_controls {
 	display: inline-flex;
-	margin-top: 2px;
+	margin-top: 6px;
 	background: rgba( 0, 0, 0, 0.2);
 }
 
@@ -262,29 +262,14 @@ body.v6 .page_desc p {
 }
 
 
-.featured_list_container .carousel_items {
-	padding-bottom: 24%;
-}
 
-
-.tags_list_container .carousel_items {
-	padding-bottom: 11%;
-
-}
-
-
-
-.curator_featured {
-	padding-bottom: 37%;
-}
 
 .curator_featured > div {
 	background: -webkit-linear-gradient( top, #141a24 5%, #1b2838 95%);background: linear-gradient( to bottom, #141a24 5%, #1b2838 95%);	border: 1px solid rgb(40, 52, 72);
 	box-shadow: 0 0 15px 1px rgba(0,0,0,0.7);
 	padding: 15px;
 	display: flex;
-	max-height: 100%;
-	height: 100%;
+	height: 340px;
 }
 
 .curator_featured .capsule {
@@ -528,13 +513,12 @@ font-size: 16px;
 
 /* Browse */
 body.v6 .page_content.browse_reviews {
-	margin-top: 32px;
-}
+	padding-top: 42px;
+	width: 100%;
+background: -webkit-linear-gradient( 180deg, rgba(43, 64, 90, 0) 10px,rgba(43, 64, 90, 1) 76px,rgba(43, 64, 90, 0) 178px);background: linear-gradient( 180deg, rgba(43, 64, 90, 0) 10px,rgba(43, 64, 90, 1) 76px,rgba(43, 64, 90, 0) 178px);}
 
 
-.browse_sorts, .browse_container {
-	background-color: rgba(19, 24, 27, 0.5);
-}
+
 
 .browse_sorts {
 	display: flex;
@@ -555,10 +539,19 @@ body.v6 .page_content.browse_reviews {
 
 .browse_container {
 	display: flex;
+	width: 940px;
+	margin: 0 auto;
+	padding-bottom: 25px;
+	padding-top: 16px;
+}
+
+.browse_ctn_background {
+	background: rgba(19, 24, 27, 0.5);
 }
 
 .browse_filters {
-	width: 300px;
+	width: 270px;
+	padding-right: 16px;
 }
 
 .browse_filters h4 {
@@ -587,11 +580,16 @@ body.v6 .page_content.browse_reviews {
 }
 
 .browse_filters a:hover, .browse_filters a.selected {
-	background-color: #2e3742;
+	background-color: rgba( 255, 255, 255, 0.1);
 }
 
 .browse_filters a.selected:hover {
 	color: #fff;
+}
+
+.browse_tabs {
+	width: 940px;
+	margin: 0 auto;
 }
 
 .browse_tabs a {
@@ -630,7 +628,7 @@ body.v6 .page_content.browse_reviews {
 .browse_content .recommendation {
 	position: relative;
 	display: flex;
-	padding: 5px;
+	padding: 11px 5px;
 	border-bottom: 1px solid #1e3243;
 
 }
@@ -689,7 +687,7 @@ body.v6 .page_content.browse_reviews {
 
 .page_section .edit_overlay {
 	position: absolute;
-	z-index: 10;
+	z-index: 9;
 	top: 5px;
 	left: -5px;;
 	right: -5px;;
@@ -985,6 +983,10 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);backgro
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+	}
+
+	.curator_featured > div	{
+		height: 100%;
 	}
 
 

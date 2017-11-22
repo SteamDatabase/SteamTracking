@@ -406,6 +406,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	font-weight: normal;
 	line-height: normal;
 	text-align: left;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 910px)

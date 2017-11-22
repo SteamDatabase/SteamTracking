@@ -549,11 +549,13 @@ GHomepage = {
 		//$ImgCtn.append( $ImgCap );
 		$CapCtn.append( $ImgCtn );
 
+		var $RightColCtn = $J('<div/>').addClass('info');
+
 		var $AppName = $J('<div/>', { html: rgItemData['name'] } )
 		var $AppNameCtn = $J('<div/>' ).addClass( 'app_name' );
 
 		$AppNameCtn.append( $AppName );
-		$CapCtn.append( $AppNameCtn );
+		$RightColCtn.append( $AppNameCtn );
 
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
@@ -591,7 +593,7 @@ GHomepage = {
 				$ScreenshotCtn.append ( $elScreenshotThumbWrapper );
 			}
 		}
-		$CapCtn.append($ScreenshotCtn);
+		$RightColCtn.append($ScreenshotCtn);
 
 		if( $ScreenshotCtn.children().length == 0 )
 			$CapCtn.addClass('no_screenshots');
@@ -728,17 +730,18 @@ GHomepage = {
 			$RecommendedReason.append($ReasonAdditional);
 		}
 
-		$CapCtn.append($RecommendedReason);
+		$RightColCtn.append($RecommendedReason);
 
 
 		// Discount block
-		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
+		$RightColCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
 
 		// Platform icons
 		var $PlatformContainer  = $J( '<div/>' ).addClass('platforms').append( GStoreItemData.BuildSupportedPlatformIcon(rgItemData) );
 
 
-		$CapCtn.append($PlatformContainer);
+		$RightColCtn.append($PlatformContainer);
+		$CapCtn.append($RightColCtn);
 
 		return $CapCtn;
 	},

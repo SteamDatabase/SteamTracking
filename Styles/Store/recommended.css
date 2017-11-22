@@ -1915,6 +1915,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	background-image: url(/public/shared/images/comment_quoteicon_bright.png);
 }
 
+.review_box .vote_info.valve_only {
+	color: red;
+}
+
 .review_box .leftcol {
 	width: 184px;
 	float: left;

@@ -277,3 +277,144 @@ function BindSaleCapAutoSizeEvents( $Container )
 	} ).trigger('resize.AdjustSaleCaps');
 }
 
+/*
+ {
+ categoryid
+ label
+ appid	o
+ writein	o
+ }
+ */
+function InitSteamAwardNominationDialog( appid, appname, rgCategories )
+{
+	$J('.show_nomination_dialog').click( function() {
+		var $PageElement = $J(this);
+		if ( !g_AccountID )
+		{
+			// prompt for login
+			ShowConfirmDialog( 'Community\'s Choice',
+				'You need to log in first before you can vote.',
+				'Login'
+			).done( function() {
+				window.location = 'https://store.steampowered.com/login/?redir=app%2F__APPID__'.replace( /__APPID__/, appid );
+			});
+			return;
+		}
+
+		var $Form = $J('<form/>', {'class': 'steamward_nominate_form'});
+
+		var bFoundCurrentApp = false;
+
+		for ( var i = 0; i < rgCategories.length; i++ )
+		{
+			var oCategory = rgCategories[i];
+			var id = 'category' + oCategory.categoryid;
+			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row'} );
+
+			var $Div = $J('<div/>', {'class': 'steamaward_nomination_content'} );
+			var $Radio = $J('<input/>', {type: 'radio', id: id, name: 'nomination_category', value: oCategory.categoryid } );
+
+			$Row.append( $Radio.wrap( $J('<div/>', {'class': 'radio_ctn'} ) ).parent(), $Div );
+
+			$Div.append( $J('<label/>', {'for': id} ).html( oCategory.label ) );
+
+			$Radio.change( function() {
+				if ( $J(this).prop('checked') )
+					$J(this).parents( '.steamaward_nomination_row' ).addClass('selected').siblings().removeClass('selected');
+				else
+					$J(this).parents( '.steamaward_nomination_row' ).removeClass('selected');
+			});
+
+			if ( oCategory.appid == appid )
+			{
+				$Radio.prop( 'checked', true ).change();
+				bFoundCurrentApp = true;
+			}
+
+			if ( oCategory.is_writein )
+			{
+				var $WriteInDiv = $J('<div/>', {'class': 'writein_ctn'} );
+				var $WriteInInput = $J('<input/>', {'id': id + '_writein', 'name': id + '_writein', 'type': 'text', 'value': oCategory.write_in_name || '' } );
+				$WriteInDiv.append(
+					$J('<label/>', {'for': id + '_writein'} ).text( 'Your category suggestion:' ),
+					$J('<div/>', {'class': 'gray_bevel for_text_input' } ).append( $WriteInInput )
+				);
+
+				$Div.append( $WriteInDiv );
+
+				$WriteInInput.keypress( function() {
+					if ( $J(this).val() )
+						$J(this).parents('.steamaward_nomination_row').find('input[type=radio]').prop('checked', true ).change();
+				});
+			}
+			$Form.append( $Row );
+		}
+
+		if ( bFoundCurrentApp )
+		{
+			// remove option
+			var id = 'category_remove';
+
+
+			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row remove_row'} );
+
+			var $Div = $J('<div/>', {'class': 'steamaward_nomination_content'} );
+			var $Radio = $J('<input/>', {type: 'radio', id: id, name: 'nomination_category', value: 0 } );
+
+			$Row.append( $Radio.wrap( $J('<div/>', {'class': 'radio_ctn'} ) ).parent(), $Div );
+
+			$Div.append( $J('<label/>', {'for': id} ).html( 'None - Withdraw nomination for %s'.replace( /%s/, appname ) ) );
+
+			$Radio.change( function() {
+				if ( $J(this).prop('checked') )
+					$J(this).parents( '.steamaward_nomination_row' ).addClass('selected').siblings().removeClass('selected');
+				else
+					$J(this).parents( '.steamaward_nomination_row' ).removeClass('selected');
+			});
+
+			$Form.append( $Row );
+		}
+
+		// build the display
+		var $Dialog = $J('<div/>');
+		$Dialog.append( $J('<p/>', {'class': 'steamawards_nomination_intro'}).html( 'Which award would you like to nominate %s for?'.replace( /%s/, appname ) ) );
+		$Dialog.append( $Form );
+		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'http://store.steampowered.com/SteamAwardNominations/'}).text( 'Learn more about the Steam Awards' ) ) );
+
+		var fnSubmit = function()
+		{
+			var categoryid = $Form.find( 'input[name=nomination_category]:checked' ).val();
+			var writein = $Form.find('#category' + categoryid + '_writein').val();
+
+			if ( categoryid == 9 && v_trim( writein || '' ).length < 5 )
+			{
+				ShowAlertDialog( 'Error', 'Please enter a category suggestion' );
+				return;
+			}
+
+			$J.post( 'https://store.steampowered.com/promotion/nominategame', {
+				sessionid: g_sessionID,
+				appid: appid,
+				categoryid: categoryid,
+				writein: writein
+			} ).done( function( data ) {
+				// update the metadata
+				rgCategories = data.rgCategories;
+				$PageElement.html( data.page_html );
+			}).fail( function() {
+				ShowAlertDialog( 'Error', 'There was a problem saving your changes.  Please try again later.' );
+			});
+		};
+
+		var Modal = ShowConfirmDialog( 'Nominate Game', $Dialog, 'Save' )
+			.done( function() {
+				fnSubmit();
+			});
+
+		$Form.submit( function( e ) {
+			e.preventDefault();
+			Modal.Dismiss();
+		});
+
+	});
+}

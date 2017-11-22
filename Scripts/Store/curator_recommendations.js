@@ -709,6 +709,12 @@ function ShowHeaderImageHandle()
 			$J.each(data.images, fnAddImage );
 		}
 
+		var rgNodeData = $container.data('sectionConfig');
+		if( !rgNodeData )
+			return;
+
+		elSelectImage.val( rgNodeData.background);
+
 	});
 
 
