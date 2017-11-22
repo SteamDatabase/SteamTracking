@@ -2832,6 +2832,10 @@ html, body { height:100%; }
 	padding-left: 4px;
 }
 
+.enter_giveaway_admin_name {
+	width: 500px;
+}
+
 .giveawayModal .enter_bundle_name {
 	width: 300px;
 }

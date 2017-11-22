@@ -1302,6 +1302,113 @@ function ShowAddBundleDialog()
 	} );
 }
 
+function ShowAddGiveawayDialog()
+{
+	var dialog = ShowConfirmDialog( 'Create New Giveaway', $J('#editGiveawayModal').show() , 'Create New Giveaway' );
+
+	var $Form = dialog.GetContent().find('form');
+	dialog.SetRemoveContentOnDismissal( false );
+	dialog.GetContent().css('width','640px');
+	dialog.AdjustSizing();
+	dialog.done( function() {
+		var waitdialog = ShowBlockingWaitDialog( 'Create New Giveaway', 'Saving changes...' );
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/create/",
+			data: $Form.serialize(),
+			dataType: 'json',
+			error: function( msg )
+			{
+				waitdialog.Dismiss();
+				ShowAlertDialog('Giveaway creation failed:', "Failed to save changes." );
+			},
+			success: function( msg )
+			{
+				window.location = 'https://partner.steamgames.com/giveaways/edit/' + msg.giveaway_admin_id;
+			},
+		});
+	} );
+}
+
+function ShowRenameInternalNameGiveawayDialog( giveawayAdminID )
+{
+	var dialog = ShowConfirmDialog( 'Modify Existing Giveaway', $J('#editGiveawayModal').show() , 'Modify Existing Giveaway' );
+
+	var $Form = dialog.GetContent().find('form');
+	dialog.SetRemoveContentOnDismissal( false );
+	dialog.GetContent().css('width','640px');
+	dialog.AdjustSizing();
+	dialog.done( function() {
+		var waitdialog = ShowBlockingWaitDialog( 'Modify Existing Giveaway', 'Saving changes...' );
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/alter/" + giveawayAdminID,
+			data: $Form.serialize(),
+			dataType: 'json',
+			error: function( msg )
+			{
+				waitdialog.Dismiss();
+				ShowAlertDialog('Giveaway creation failed:', "Failed to save changes." );
+			},
+			success: function( msg )
+			{
+				window.location = 'https://partner.steamgames.com/giveaways/edit/' + msg.giveaway_admin_id;
+			},
+		});
+	} );
+}
+
+
+function ReloadGiveawayOverviewPage()
+{
+	// can't window.location.reload() beacuse we might be on one of the store admin actions (publish, save, etc)
+	window.location = 'https://partner.steamgames.com/giveaways/';
+}
+
+// Remove the entire giveaway. This will no longer appear on the users list.
+function RemoveGiveawayAdmin( giveawayname, giveawayid )
+{
+	var dialog = ShowConfirmDialog( "Are you sure?", "Are you sure you want to remove this package prize? (package id: %1$s)".replace('%1$s', giveawayname ) );
+	dialog.done( function() {
+		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Removing giveaway..." );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/remove/" + giveawayid,
+			data: { 'sessionid' : g_sessionID },
+			dataType: 'json',
+			error: function( response )
+			{
+				dialogWait.Dismiss();
+				ShowAlertDialog( "Error", "Failed to remove Giveaway. Contact support" );
+			},
+			success: function( response ) { ReloadGiveawayOverviewPage(); },
+		});
+	} );
+}
+
+// Duplicate the giveaway admin. If you own the giveaway then you get to keep the prizes. If it is cloning someone else, then you get an empty version.
+function CloneGiveawayAdmin( giveawayname, giveawayid )
+{
+	var dialog = ShowConfirmDialog( "Are you sure?", "Clone '%1$s' and make a new editable version of this Giveaway.".replace('%1$s', giveawayname ) );
+	dialog.done( function() {
+		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Cloning giveaway..." );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/clone/" + giveawayid,
+			data: { 'sessionid' : g_sessionID },
+			dataType: 'json',
+			error: function( response )
+			{
+				dialogWait.Dismiss();
+				ShowAlertDialog( "Error", "Failed to clone Giveaway" );
+			},
+			success: function( response ) { ReloadGiveawayOverviewPage(); },
+		});
+	} );
+}
+
 function RegisterMultiLanguageAgreementIFrame( elContainer, strURL, rgLanguages, strCurrentLanguage )
 {
 	var elIFrame = $J('.agreement_frame', elContainer);

@@ -190,6 +190,69 @@
             ]
         },
         {
+            "name": "UpdateBanStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Updates the ban status on the item",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "banned",
+                    "type": "bool",
+                    "optional": false
+                },
+                {
+                    "name": "reason",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "UpdateIncompatibleStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Update the incompatible status on the item",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "incompatible",
+                    "type": "bool",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "SetDeveloperMetadata",
             "version": 1,
             "httpmethod": "POST",
