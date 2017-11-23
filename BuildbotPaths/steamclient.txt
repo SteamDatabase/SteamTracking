@@ -670,6 +670,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../clientjob.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../user.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplmesa.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplmesa.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplnvidia.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplnvidia.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplsteamdepot.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplsteamdepot.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.cpp
