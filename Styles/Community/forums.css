@@ -23,6 +23,30 @@ input {
 	margin-top: 8px;
 }
 
+.forum_newtopic_steamworks_notice {
+	font-size: 15px;
+	height: 89px;
+	color: #e6ecf4;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			background: -webkit-linear-gradient( 135deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%););background: linear-gradient( 135deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%););}
+.forum_newtopic_steamworks_notice .notice {
+	padding: 16px;
+}
+.forum_newtopic_steamworks_notice a {
+	text-decoration: underline;
+}
+.forum_newtopic_steamworks_notice a:hover {
+	color: #66c0f4;
+}
+.forum_newtopic_steamworks_notice img {
+	float: left;
+	width: 99px;
+	height: 89px;
+	margin-right: 8px;
+}
+
 .forum_newtopic_area {
 	padding-bottom: 14px;
 }

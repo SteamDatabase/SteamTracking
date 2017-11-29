@@ -334,7 +334,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 17 )
 	{
-		ShowAlertDialog( 'Error', 'Your account is VAC Banned in this game and you\'re unable to perform this action as a result.' );
+		ShowAlertDialog( 'Error', 'Your account has an active Game or VAC Banned and you\'re unable to perform this action as a result.' );
 	}
 	else if ( transport.responseJSON.success != 1 )
 	{

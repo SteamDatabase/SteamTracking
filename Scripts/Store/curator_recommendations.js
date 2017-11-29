@@ -285,6 +285,9 @@ function ShowEditHandles()
 {
 	$J('.page_section:not(.editing)').each(function( i, j ){
 
+		$J('.navigation_bar > a').removeClass('selected');
+		$J('.navigation_bar > a:last-child').addClass('selected');
+
 		var $container = $J(j);
 		$container.addClass('editing');
 

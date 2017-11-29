@@ -1318,9 +1318,14 @@ function CScrollOffsetWatcher( el, fnCallback )
 
 	this.fnOnHit = fnCallback;
 
-
 	CScrollOffsetWatcher.RegisterWatcher( this );
 }
+
+CScrollOffsetWatcher.prototype.SetBufferHeight = function( nHeight )
+{
+	this.nBufferHeight = nHeight;
+	this.Recalc();
+};
 
 CScrollOffsetWatcher.prototype.Recalc = function()
 {
@@ -1384,8 +1389,13 @@ CScrollOffsetWatcher.OnScroll = function()
 		var Watcher = CScrollOffsetWatcher.sm_rgWatchers[i];
 		if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
 		{
-			Watcher.fnOnHit();
-			cCompletedWatchers++;
+			// make sure the page hasn't changed and we really need to show content
+			Watcher.Recalc();
+			if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
+			{
+				Watcher.fnOnHit();
+				cCompletedWatchers++;
+			}
 		}
 		else
 		{

@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.92f09d932087b8560689b27058e8ac4f6ef33798.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5a5bec5b429260ebc331d13eaec3f3a4529d0a40.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -23411,14 +23411,15 @@
 				
 			},
 			{
-				"name": "item 6023",
+				"name": "Collectible Pin - Guardian 3",
 				"defindex": 6023,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Guardian 3 Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_guardian_3",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23431,14 +23432,15 @@
 				
 			},
 			{
-				"name": "item 6024",
+				"name": "Collectible Pin - Canals",
 				"defindex": 6024,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Canals Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_canals",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23451,14 +23453,15 @@
 				
 			},
 			{
-				"name": "item 6025",
+				"name": "Collectible Pin - Welcome to the Clutch",
 				"defindex": 6025,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Welcome to the Clutch Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_welcome_to_the_clutch",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23471,14 +23474,15 @@
 				
 			},
 			{
-				"name": "item 6026",
+				"name": "Collectible Pin - Death Sentence",
 				"defindex": 6026,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Death Sentence Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_death_sentence",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23491,14 +23495,15 @@
 				
 			},
 			{
-				"name": "item 6027",
+				"name": "Collectible Pin - Inferno 2",
 				"defindex": 6027,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Inferno 2 Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_inferno_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23511,14 +23516,15 @@
 				
 			},
 			{
-				"name": "item 6028",
+				"name": "Collectible Pin - Wildfire",
 				"defindex": 6028,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Wildfire Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_wildfire",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23531,14 +23537,15 @@
 				
 			},
 			{
-				"name": "item 6029",
+				"name": "Collectible Pin - Easy Peasy",
 				"defindex": 6029,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Easy Peasy Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23551,14 +23558,15 @@
 				
 			},
 			{
-				"name": "item 6030",
+				"name": "Collectible Pin - Aces High",
 				"defindex": 6030,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Aces High Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_aces_high",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23571,14 +23579,15 @@
 				
 			},
 			{
-				"name": "item 6031",
+				"name": "Collectible Pin - Hydra",
 				"defindex": 6031,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Hydra Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_hydra",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23591,14 +23600,15 @@
 				
 			},
 			{
-				"name": "item 6032",
+				"name": "Collectible Pin - Howl",
 				"defindex": 6032,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Howl Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_howl",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -23611,14 +23621,15 @@
 				
 			},
 			{
-				"name": "item 6033",
+				"name": "Collectible Pin - Brigadier General",
 				"defindex": 6033,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "",
+				"item_name": "Brigadier General Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": null,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_brigadier_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -25185,6 +25196,237 @@
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_chroma.9e16923b899abe445404979aa27e3bb0c16b605a.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_chroma_large.dc3201036a8d97e593612d3821f0ebaaff25c5b4.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Guardian 3",
+				"defindex": 6123,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Guardian 3 Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_guardian_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Canals",
+				"defindex": 6124,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Canals Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_canals",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Welcome to the Clutch",
+				"defindex": 6125,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Welcome to the Clutch Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_welcome_to_the_clutch",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Death Sentence",
+				"defindex": 6126,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Death Sentence Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_death_sentence",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Inferno 2",
+				"defindex": 6127,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Inferno 2 Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_inferno_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Wildfire",
+				"defindex": 6128,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Wildfire Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_wildfire",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Easy Peasy",
+				"defindex": 6129,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Easy Peasy Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Aces High",
+				"defindex": 6130,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Aces High Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_aces_high",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Hydra",
+				"defindex": 6131,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Hydra Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_hydra",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Howl",
+				"defindex": 6132,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Howl Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_howl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Commodity Pin - Brigadier General",
+				"defindex": 6133,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Brigadier General Pin",
+				"item_description": "This is a Series 3 collectible pin. It can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/collectible_pin_brigadier_general",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [

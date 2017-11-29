@@ -20,6 +20,10 @@ function StartCreationSession()
 			{
 				strError = 'The account name you have chosen is not available. Please choose another name.';
 			}
+			else if ( data.success == 8 )
+			{
+				strError = 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.';
+			}
 			else if ( data.success == 101 )
 			{
 				new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
@@ -98,7 +102,6 @@ function ChangeEmail()
 	g_emailVerificationDialog.Dismiss();
 	g_creationSessionID = null;
 	$J('#cart_area').slideDown();
-	$J('#email_used_area').hide();
 	Effect.ScrollTo( 'cart_area' );
 	$J( '#email' ).val( '' );
 	$J( '#reenter_email' ).val( '' );
@@ -303,21 +306,12 @@ function FinishFormVerification( bCaptchaIsValid )
 	{
 		$J('#error_display').slideUp();
 
-		if ( g_bPSNAccountSetup )
-		{
-			ReallyCreateAccount();
-		}
-		else
-		{
-			StartCreationSession();
-		}
+		StartCreationSession();
 	}
 }
 
 function ReallyCreateAccount()
 {
-	var bPSNAccountSetup = (typeof g_bPSNAccountSetup != 'undefined' && g_bPSNAccountSetup);
-			
 	++iAjaxCalls;
 		new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
@@ -327,7 +321,6 @@ function ReallyCreateAccount()
 				      captchagid : $('captchagid').value,
 	    			  captcha_text : $('captcha_text').value,
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
-	    			  ticket : $('ticket').value,
 	    			  count : iAjaxCalls,
 	    			  lt : $('lt').value,
 					  creation_sessionid : g_creationSessionID },
@@ -356,10 +349,8 @@ function ReallyCreateAccount()
 								if (result && result.redirect)
 					window.location = result.redirect;
 			}
-			else if (bPSNAccountSetup) {
-				window.location = g_sBaseURL + 'psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
-			}
-			else if ( result && result.bInSteamClient && !result.redirect ) {
+			else if ( result && result.bInSteamClient && !result.redirect )
+			{
 				ShowAlertDialog( 'New Account Created Successfully', 'Please close this window or click continue to sign in with your new account.', 'Continue' )
 					.always( function() {
 						window.close();
@@ -386,10 +377,9 @@ function ReallyCreateAccount()
 
 function ShowError( strError )
 {
-	$('cart_area').style.display = 'block';
-	$('email_used_area').style.display = 'none';
-	$('error_display').innerHTML = strError;
-	$('error_display').style.display = 'block';
+	$J('#cart_area').show();
+	$J('#error_display').html( strError );
+	$J('#error_display').show();
 	Effect.ScrollTo( 'error_display' );
 	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
 }
