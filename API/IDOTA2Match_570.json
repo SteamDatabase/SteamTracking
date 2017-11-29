@@ -91,12 +91,6 @@
                     "type": "string",
                     "optional": true,
                     "description": "The number of requested matches to return"
-                },
-                {
-                    "name": "tournament_games_only",
-                    "type": "string",
-                    "optional": true,
-                    "description": "Whether or not tournament games should only be returned"
                 }
             ]
         },
