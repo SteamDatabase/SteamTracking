@@ -15,7 +15,10 @@
       		<ToggleButton class="CheckBox VisibleWithAllowDesktopConfig" id="RunWithOverlayButton" text="#Library_Details_WithOverlay" selectionpos="auto" onactivate="ToggleRunNoOverlay()"/>
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />
-			<ToggleButton class="CheckBox" id="EnableConfigurator" text="#Library_Details_EnableConfigurator" selectionpos="auto" onactivate="ToggleEnableConfigurator()"/>
+			<Panel id="EnableConfiguratorPanel">
+				<Label class="SubTitle" text="#Library_Details_EnableConfigurator" />
+				<DropDown id="EnableConfigurator" class="AppControllerSettingsDropdown"/>
+			</Panel>			
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="" class="HorizontalSpace" />
 			<Panel id="RumbleOn">
