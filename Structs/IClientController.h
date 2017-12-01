@@ -39,6 +39,7 @@ public:
     virtual unknown_ret FindControllerByAPIHandle(unsigned long long) = 0;
     virtual unknown_ret GetGlyphForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
+    virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;

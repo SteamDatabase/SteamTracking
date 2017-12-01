@@ -31,4 +31,5 @@ public:
     virtual unknown_ret ShowAnalogActionOrigins(unsigned long long, unsigned long long, float, float, float) = 0;
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetGlyphForActionOrigin(EControllerActionOrigin) = 0;
+    virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
 };

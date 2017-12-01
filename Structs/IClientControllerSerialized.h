@@ -16,6 +16,7 @@ public:
     virtual unknown_ret GetDigitalActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetAnalogActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret StopAnalogActionMomentum(unsigned long long, unsigned long long) = 0;
+    virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetAllControllersStatus(ControllersStatus_t*) = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;
