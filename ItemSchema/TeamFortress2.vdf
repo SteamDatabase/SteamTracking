@@ -102781,6 +102781,78 @@
 				"skin"	"8"
 			}
 		}
+		"9723"
+		{
+			"name"	"Chapelaria 6v6 Legatus 1st Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_1st"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place.mdl"
+		}
+		"9724"
+		{
+			"name"	"Chapelaria 6v6 Legatus 2nd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_2nd"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place.mdl"
+		}
+		"9725"
+		{
+			"name"	"Chapelaria 6v6 Legatus 3rd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_3rd"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place.mdl"
+		}
+		"9726"
+		{
+			"name"	"Chapelaria 6v6 Legatus Participant Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Legatus_Participant"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
+		}
+		"9727"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 1st Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_1st"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_1st_place/chapelaria_6v6_1st_place.mdl"
+		}
+		"9728"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 2nd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_2nd"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_2nd_place/chapelaria_6v6_2nd_place.mdl"
+		}
+		"9729"
+		{
+			"name"	"Chapelaria 6v6 Gladiator 3rd Place Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_3rd"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_3rd_place/chapelaria_6v6_3rd_place.mdl"
+		}
+		"9730"
+		{
+			"name"	"Chapelaria 6v6 Gladiator Participant Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_Chapelaria_6v6_Gladiator_Participant"
+			"item_description"	"#TF_TournamentMedal_Season3"
+			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
+			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
+		}
 
 
 
