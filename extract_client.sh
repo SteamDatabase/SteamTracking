@@ -41,8 +41,8 @@ done
 echo Dumping protobufs
 
 # https://github.com/SteamRE/SteamKit/tree/master/Resources/ProtobufDumper
-mono ProtobufDumper/ProtobufDumper.exe bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
-mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
+dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
+dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
 ~/ValveProtobufs/update.sh
 
