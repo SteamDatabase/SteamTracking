@@ -1135,6 +1135,11 @@
         "posted_in": "CP2PNetworkingSession::P2PConnectFailed(CSteamID, EP2PSessionError)"
     },
     {
+        "id": 1295,
+        "size": 4,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamNetworkingSocketsConfigUpdated_t>(SteamNetworkingSocketsConfigUpdated_t*)"
+    },
+    {
         "id": 1296,
         "size": 792,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamNetworkingSocketsCert_t>(SteamNetworkingSocketsCert_t*)"

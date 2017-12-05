@@ -76,7 +76,7 @@ public:
     virtual unknown_ret GetSourceGroupBindingInfo(unsigned int, EControllerSource, int, int, SourceGroupBindingInfo_t*) = 0;
     virtual unknown_ret SetSourceGroupBindingActive(unsigned int, EControllerSource, int, bool, int, int, int) = 0;
     virtual unknown_ret CreateSourceGroupBinding(unsigned int, EControllerSource, EControllerSourceMode, bool, int) = 0;
-    virtual unknown_ret GetGroupModeType(unsigned int, int) = 0;
+    virtual unknown_ret BAreLayerAndParentModesEquivalent(unsigned int, int, int) = 0;
     virtual unknown_ret GetGroupSetting(unsigned int, int, EControllerSetting, int*) = 0;
     virtual unknown_ret SetGroupSetting(unsigned int, int, EControllerSetting, int) = 0;
     virtual unknown_ret GetGroupSettingDefault(unsigned int, int, EControllerSetting, int*) = 0;

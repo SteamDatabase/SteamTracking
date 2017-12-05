@@ -1967,6 +1967,7 @@
 	"analog"		"Analog"
 
 	"IconPicker_Activate"						"SELECT"
+	"IconPicker_Remove"							"REMOVE ICON"
 	"Library_IconColorPickerDone"				"DONE"
 
 	"Library_Controller_CopyActivatorsToLayer_Title"	"Layer Activators"

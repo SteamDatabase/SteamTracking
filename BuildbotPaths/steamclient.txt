@@ -248,6 +248,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/stdafx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamclientogs.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_auth_messages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamengine.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamengine_minidump.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_accounthardware.steamclient.pb.o
@@ -460,6 +461,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/stdafx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamclientogs.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_auth_messages.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamengine.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamengine_minidump.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_accounthardware.steamclient.pb.o
@@ -1624,6 +1626,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/parseurl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_auth_messages.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_auth_messages.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
