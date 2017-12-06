@@ -131,6 +131,35 @@
             ]
         },
         {
+            "name": "ModifyItems",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Modify an item in a user's inventory",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "updates",
+                    "type": "{message}",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetInventory",
             "version": 1,
             "httpmethod": "GET",
