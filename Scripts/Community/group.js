@@ -633,7 +633,7 @@ function ConfirmDeleteAnnouncement( deleteURL )
 	});
 }
 
-function SetGroupState( groupid, action )
+function SetGroupState( groupid, clan_type )
 {
     ShowPromptDialog( "Change Group State", "Please enter a reason:"
     ).done(	function( note ) {
@@ -644,13 +644,13 @@ function SetGroupState( groupid, action )
                 'sessionID' : g_sessionID,
                 'steamid' : groupid,
                 'note' : note,
-                'action' : action
+                'clan_type' : clan_type
             }).done( function( data ) {
                 window.location.reload();
             }).fail( function( jqxhr ) {
                 // jquery doesn't parse json on fail
                 var data = V_ParseJSON( jqxhr.responseText );
-                ShowAlertDialog( 'Change Group State', 'Failed to change group state.  Message: ' + data.success );
+                ShowAlertDialog( 'Change Group Type', 'Failed to change group type.  Message: ' + data.success );
             });
         });
 }
@@ -865,11 +865,74 @@ function SaveFields()
 
 }
 
+function CORSTest( fnOnSuccess )
+{
+	var strBody = $J( '#body' ).val();
+	var regex = /\[img\](.+)\[\/img\]/ig;
+	var regexCDN = new RegExp(g_strCDNRegex, 'i');
+
+	var nImages = 0;
+	var bShownError = false;
+
+
+	// Callback for when our image loads (or fails). Show an error if we fail, decrement image count if we pass.
+	var fnHandleResult = function( bSuccess, strURL )
+	{
+		if( bSuccess )
+			nImages--;
+		else if( !bShownError )
+		{
+			ShowAlertDialog ( "Cannot load image", "<p>The included image %1$s could not be loaded. It is either missing, or inaccessible from this domain.<\/p>Images hosted on remote domains must set Access Control headers. Refer to <a target=\"_blank\" href=\"https:\/\/developer.mozilla.org\/docs\/Web\/HTTP\/CORS\">this article<\/a> for more information<\/p>".replace('%1$s', V_EscapeHTML( strURL ) ) );
+			bShownError = true;
+		}
+
+		if( nImages === 0 )
+			fnOnSuccess();
+	};
+
+	var rgMatch = regex.exec( strBody );
+
+	while( rgMatch !== null )
+	{
+		var strURL = rgMatch[1];
+		if( strURL )
+		{
+			var strHostName = getHostname( strURL );
+			if( !regexCDN.exec( strHostName ) )
+			{
+				nImages++;
+
+				var img = new Image();
+
+				img.onload = fnHandleResult.bind(null, true, strURL);
+				img.onerror = fnHandleResult.bind(null, false, strURL);
+
+				img.crossOrigin = "Anonymous";
+
+				img.src = strURL;
+			}
+		}
+
+		rgMatch = regex.exec( strBody )
+	}
+
+
+	// If we had no images to test, just pass success.
+	if( nImages === 0 )
+	{
+		fnOnSuccess ();
+	}
+
+}
+
 
 function SaveAnnouncement()
 {
-	SaveFields();
-	$('post_announcement_form').submit();
+	CORSTest( function(){
+		SaveFields();
+		$('post_announcement_form').submit();
+	});
+
 }
 
 function UpdateRecommendations( newState, bToggleFree, bTogglePaid )

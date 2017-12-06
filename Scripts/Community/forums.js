@@ -2023,6 +2023,41 @@ function Forum_BanOrWarnUser( clanid, gidForum, gidTopic, gidComment, accountIDT
 	});
 }
 
+function Forum_SendPM( clanid, gidForum, gidTopic, gidComment, accountIDTarget )
+{
+	var $strDialogHTML = '<div class="private_message_dialog_instructions" >' + 'Please enter the message you would like to privately send to this user:' + '</div><div class="fullwidth gray_bevel"><textarea class="forumtopic_reply_textarea" rows="3" name="pm_text" id="pm_text" ></textarea></div><div class="private_message_dialog_footnote">*This post will be referenced in your private message automatically.</div>';
+
+	var $modal = ShowConfirmDialog( 'Private Message', $strDialogHTML, 'Send Private Message' );
+	$modal.GetContent().css('width', '600px');
+
+	var elMessage = $modal.GetContent().find('#pm_text');
+
+	$modal.done( function( ) {
+
+		var rgParams = {
+			gidforum: gidForum,
+			gidtopic: gidTopic,
+			gidcomment: gidComment,
+			target: accountIDTarget,
+			message: elMessage.val(),
+			sessionid: g_sessionID
+		};
+
+		$J.post('https://steamcommunity.com/gid/' + clanid + '/sendprivatemessage/', rgParams )
+			.done( function ( response ) {
+				if ( response.success == 1 )
+				{
+					ShowAlertDialog( 'Private Message', response.message );
+				}
+				else
+				{
+					ShowAlertDialog( 'Error', 'There was an error sending this private message. Please try again.' + '(' + response.success + ')' );
+				}
+			});
+	} );
+
+}
+
 function Forum_OnSearchSortSelect( elSelect, rgSearchParams )
 {
 	if ( !rgSearchParams || typeof( rgSearchParams.length ) != 'undefined' )

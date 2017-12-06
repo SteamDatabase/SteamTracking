@@ -1835,3 +1835,15 @@ h2.forum_modal_detailtitle {
 		width: 99%;
 	}
 }
+
+.private_message_dialog_instructions
+{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.private_message_dialog_footnote
+{
+	margin-top: 20px;
+	color: #61686d;
+}

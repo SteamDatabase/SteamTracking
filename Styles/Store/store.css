@@ -3263,7 +3263,6 @@ body.v6 .screenshot_carousel h2 {
 
 .quadscreenshot_carousel .carousel_items > * {
 	height: 100%;
-	box-shadow: 0 0 5px #000;
 	background-color: #000;
 	display: block;
 }
@@ -3290,6 +3289,7 @@ body.v6 .screenshot_carousel h2 {
 	justify-content: space-between;
 
 	background-color: #0f1418;
+	box-shadow: 0 0 5px #000;
 
 }
 
@@ -3471,6 +3471,9 @@ body.v6 .quadscreenshot_carousel h2 {
 	transition: opacity 400ms;
 	width: 100%;
 	box-sizing: border-box;
+}
+.carousel_container.curator_cluster_expanded .carousel_items > .curator_page {
+	pointer-events: auto;
 }
 
 .carousel_container.quadscreenshot_carousel .discount_block > .discount_prices {
@@ -3656,6 +3659,14 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	min-height: 360px;
 }
 
+#feature_curators_block h2 {
+	margin-bottom: 10px;
+}
+
+#feature_curators_block .carousel_items .curator_page {
+	box-shadow: 0 0 5px #000000;
+}
+
 .curator_page {
 background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%););background: linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%););	box-shadow: inset 0 0 160px rgba(255, 255, 255, 0.2);
 	padding: 16px 13px;
@@ -3664,7 +3675,8 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-		}
+			min-height: 374px;
+}
 
 .curator_page .profile {
 	display: flex;
@@ -3694,6 +3706,10 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	font-size: 19px;
 	font-weight: 300;
 	color: #c7d5e0;
+}
+
+.curator_page .name span {
+	color: #eff3f6;
 }
 
 .curator_page .actions > div:not(:first-child) {

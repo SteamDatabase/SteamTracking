@@ -56,7 +56,7 @@ function checkAbuseSub( elForm )
 	params.push( {name: 'json', value: 1} );
 
 	$J.post( 'https://steamcommunity.com/actions/ReportAbuse/', params).done( function() {
-		ShowAlertDialog( 'Thank You!', 'Thank you for reporting offensive content and helping to keep the Steam Community clean and friendly.' );
+		ShowAlertDialog( 'Thank You!', 'Thank you for reporting offensive content and helping to keep Steam clean and friendly.' );
 	}).fail( function() {
 		ShowAlertDialog( 'Report Violation', 'There was a problem saving your report.  Please try again later.' );
 	});
@@ -128,7 +128,7 @@ var g_whiteListedDomains = [
 
 function getHostname( str )
 {
-	var re = new RegExp('^(steam://openurl(_external)?/)?(f|ht)tps?://([^@]*@)?([^/#?]+)', 'im');
+	var re = new RegExp( '^(steam://openurl(_external)?/)?(f|ht)tps?://([^@/?#]*@)?([^/#?]+)', 'im' );
 	return str.match(re)[5].toString();
 }
 

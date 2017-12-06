@@ -1813,6 +1813,11 @@ div.slider div.handle:hover {
 	min-width: 250px;
 }
 
+.video_container > iframe {
+	width: 640px;
+	height: 360px;
+}
+
 
 @media screen and (max-width: 910px)
 {

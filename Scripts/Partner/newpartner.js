@@ -438,7 +438,7 @@ function SignCyberCafeAgreement()
     var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
     if ( !agreedToSDA1.prop( "checked" ) )
     {
-        ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Site License before continuing.'  );
+        ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Site License Program before continuing.'  );
         return;
     }
 
@@ -548,7 +548,7 @@ function SignLatestCafeAgreement( returnURL )
 
 	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
 	if ( !agreedToSDA1.prop("checked") ) {
-		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Site License before continuing.');
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Site License Program before continuing.');
 		return;
 	}
 

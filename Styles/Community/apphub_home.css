@@ -791,6 +791,14 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .reported_item.app_has_adult_content {
 	outline: 1px solid #ffcc6a;
 }
+.reported_item.banned {
+	opacity: 0.25;
+	outline: 1px solid #ff0000;
+}
+.reported_item.incompatible {
+	opacity: 0.25;
+	outline: 1px solid #ff0000;
+}
 
 .reported_item_details_hover_row {
 	position: relative;

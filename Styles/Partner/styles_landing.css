@@ -808,13 +808,17 @@ p {
 		background-color: #3D3E3E;
 		border: 1px solid #444444;
 	}
-	.buttonRow.disabled, .buttonRow.disabled .subText {
+	.buttonRow.disabled, .buttonRow.disabled .subText, .buttonRow.ttip.disabled {
 		color: #555555;
 	}
 
 	.buttonRow .subText {
 		color: #808285;
 		font-size: 12px;
+	}
+
+	.buttonRow.ttip {
+		color: #e7e8e9;
 	}
 
 	.buttonRow .personalText {

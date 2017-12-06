@@ -29,6 +29,7 @@ body.v6 {
 {
 	overflow: hidden;
 	text-shadow: 1px 1px #000;
+	width: 100%;
 }
 
 .follow_btn_stats {
@@ -87,8 +88,7 @@ body.v6 .filter_ctn h2 {
 }
 
 .dark_container {
-	background-color: rgba(19, 24, 27, 0.5);
-}
+background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24, 27, 0) 95%);background: linear-gradient( to bottom, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24, 27, 0) 95%);}
 
 body.v6 .dark_container h2 {
 	color: #fff;
@@ -212,7 +212,7 @@ body.v6 .dark_container h4 {
 	margin-top: -5px;
 }
 
-.navigation_bar > a {
+.navigation_bar > * {
 	padding: 8px 20px;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -228,6 +228,34 @@ body.v6 .dark_container h4 {
 
 .navigation_bar > a:first-child {
 	margin-left: 0;
+}
+.navigation_bar > div.report {
+	flex-grow: 1;
+	width: 100%;
+	text-align: right;
+	padding: 6px 0px 0px 0px;
+}
+
+.navigation_bar > div.report a img {
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+}
+.navigation_bar > div.report a:hover img {
+	opacity: 1;
+}
+
+.gray_bevel input, .gray_bevel textarea {
+	background-color: transparent;
+}
+#abuseForm .halfBox {
+	padding: 4px 0px;
+}
+#abuseForm .halfBox input {
+	vertical-align: bottom;
+}
+.abuseDescriptionCtn {
+	margin-top: 8px;
 }
 
 body.v6 h2.curator_name
@@ -1083,4 +1111,8 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);backgro
 
 .infobox .btn_medium {
 	margin-top: 15px;
+}
+.header_right_button {
+	float: right;
+	margin-top: 6px;
 }

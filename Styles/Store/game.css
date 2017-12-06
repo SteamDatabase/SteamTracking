@@ -4660,6 +4660,7 @@ p.reason.info:before {
 	margin: 0px 0px 8px 0px;
 
 	display: flex;
+	box-shadow: 0 0 5px #000;
 
 }
 
@@ -4670,6 +4671,7 @@ body.v6 .page_content.notes {
 	color: #93b0bb;
 	margin-top: 3px;
 	font-size: 11px;
+	text-shadow: none;
 }
 
 .referring_curator .video {
@@ -4687,6 +4689,7 @@ body.v6 .page_content.notes {
 .referring_curator .avatar, .referring_curator .avatar img {
 	width: 50px;
 	height: 50px;
+	border-radius: 4px;
 }
 .referring_curator .blurb {
 			font-family: "Motiva Sans", Sans-serif;
@@ -4694,10 +4697,9 @@ body.v6 .page_content.notes {
 
 			margin-left: 14px;
 
-	font-style: italic;
 	color: #fff;
 	font-size: 16px;
-	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.5);
+	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.25);
 
 	display: flex;
 	line-height: 25px;
@@ -4705,7 +4707,7 @@ body.v6 .page_content.notes {
 	justify-content: space-between;
 }
 
-.referring_curator .blurb span {
+.referring_curator .blurb .review_title {
 	text-transform: uppercase;
 	font-size: 17px;
 	margin-top: -4px;
@@ -4715,7 +4717,24 @@ body.v6 .page_content.notes {
 	font-style: normal;
 }
 .referring_curator .blurb p {
-	text-indent: -7px;
+	text-indent: -4px;
+	padding-bottom: 8px;
+	padding-top: 2px;
+}
+
+.referringSteamCurator {
+	font-size: 11px;
+	line-height: 9px;
+	padding-bottom: 8px;
+}
+.referringSteamCurator a {
+	text-decoration: underline;
+}
+
+.discussion_button_ctn>span {
+	background: #1b2838;
+	display: inline-flex;
+	border-radius: 2px;
 }
 
 .review_ctn {
