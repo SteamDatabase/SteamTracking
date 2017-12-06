@@ -296,7 +296,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			
 			if ( bOpenURLInSteamExternalWindow )
 			{
-				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', '' );				
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );				
 			}
 			else
 			{
