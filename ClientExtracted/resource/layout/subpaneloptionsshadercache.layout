@@ -1,0 +1,44 @@
+"resource/layout/subpaneloptionsshadercache.layout"
+{
+	controls
+	{
+		ShaderCacheEnabledCheckbox 
+		{ 
+			controlname=button
+			labeltext="#Steam_Settings_ShaderCache_Enable"			
+			wrap=1
+		}
+		
+		ShaderCacheInfo
+		{
+			controlname=label
+			labeltext="#Steam_Settings_ShaderCache_Info"
+			wrap=1
+		}			
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+	}
+	
+	layout
+	{
+		region { name=box margin-top=20 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+		
+		place { control=ShaderCacheInfo region=box width=max }
+		place { 
+			controls="ShaderCacheEnabledCheckbox" 
+			start = ShaderCacheInfo
+			margin-top = 10
+			region=box 
+			dir=down 
+			width=450
+			spacing = 1
+			}		
+	}
+}

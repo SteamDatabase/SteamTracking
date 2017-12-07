@@ -29,4 +29,11 @@ public:
     virtual unknown_ret GetNumItemsWithPrices() = 0;
     virtual unknown_ret GetItemsWithPrices(int*, unsigned long long*, unsigned int) = 0;
     virtual unknown_ret GetItemPrice(int, unsigned long long*) = 0;
+    virtual unknown_ret StartUpdateProperties() = 0;
+    virtual unknown_ret RemoveProperty(unsigned long long, unsigned long long, char const*) = 0;
+    virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, char const*) = 0;
+    virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, bool) = 0;
+    virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, long long) = 0;
+    virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, float) = 0;
+    virtual unknown_ret SubmitUpdateProperties(unsigned long long, int*) = 0;
 };

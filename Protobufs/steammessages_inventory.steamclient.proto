@@ -42,11 +42,21 @@ message CInventory_AddItem_Request {
 	optional uint64 requestid = 6;
 }
 
-message CInventory_SafeModifyItem_Request {
+message CInventory_ModifyItems_Request {
+	message ItemPropertyUpdate {
+		optional uint64 itemid = 1;
+		optional bool remove_property = 2;
+		optional string property_name = 3;
+		optional bool property_value_bool = 4;
+		optional int64 property_value_int = 5;
+		optional string property_value_string = 6;
+		optional float property_value_float = 7;
+	}
+
 	optional uint32 appid = 1;
-	optional uint64 acctid = 2;
-	optional uint64 itemid = 3;
-	optional string itempropsjson = 4;
+	optional uint64 steamid = 2;
+	repeated .CInventory_ModifyItems_Request.ItemPropertyUpdate updates = 3;
+	optional uint32 timestamp = 4;
 }
 
 message CInventory_ConsumePlaytime_Request {
@@ -137,7 +147,7 @@ service Inventory {
 	rpc AddPromoItem (.CInventory_AddItem_Request) returns (.CInventory_Response) {
 		option (method_description) = "Adds a promo item to a user's inventory";
 	}
-	rpc SafeModifyItem (.CInventory_SafeModifyItem_Request) returns (.CInventory_Response) {
+	rpc SafeModifyItems (.CInventory_ModifyItems_Request) returns (.CInventory_Response) {
 		option (method_description) = "Modify an item in a user's inventory (safe properties only)";
 	}
 	rpc ConsumePlaytime (.CInventory_ConsumePlaytime_Request) returns (.CInventory_Response) {

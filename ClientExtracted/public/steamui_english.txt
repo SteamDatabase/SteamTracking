@@ -4344,6 +4344,11 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_SettingsControllerDesktopConfig"		"Desktop Configuration"
 "Steam_SettingsControllerGuideConfig"		"Guide Button Chord Configuration"
 
+"Steam_Settings_ShaderCache"			"Shader Pre-Caching"
+"Steam_Settings_ShaderCache_Info"		"Shader Pre-Caching allows Steam to download pre-compiled GPU shaders matching your system configuration. This allows Vulkan and OpenGL games to load faster and improves framerate stability during gameplay.\n\nIf enabled, Steam will collect shaders from your system when needed. Enabling this feature may slightly increase disk and bandwidth usage."
+"Steam_Settings_ShaderCache_Enable"		"Enable Shader Pre-Caching (%shaderdiskusagemb% MB pre-cached)"
+
+
 "Steam_Settings_StreamingTitle" "In-Home Streaming"
 
 "Steam_Settings_Streaming_Description" "Stream gameplay from your Windows PC to other computers detected on your local network. To connect, simply log into this same Steam account on another local device."
