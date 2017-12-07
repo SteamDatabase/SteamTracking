@@ -161,4 +161,16 @@
                 "bootloadertimestamp"   "55d2926d"
         }
     }
+
+    "4178"
+    {
+        "0"
+        {
+            "firmwarebinary"        "/firmware/firmware_4178_5908e8ce.bin"
+            "firmwaretimestamp"     "5908e8ce"
+            "minclientpackage"      "1429832485"
+            "crc128"                "05fc6d2c97871ee80fcfa5029f9ffa64"
+            "bootloadertimestamp"   "58fe69a5"
+        }
+    }
 }
