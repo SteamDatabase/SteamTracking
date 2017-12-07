@@ -300,7 +300,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			}
 			else
 			{
-				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=800,height=600' );
+				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
 			}
 
 						if ( displayPendingReceipt )
