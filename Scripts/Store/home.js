@@ -631,7 +631,7 @@ GHomepage = {
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators' ));
+			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
 		}
 		else if( rgRecommendationReasons.recommended && GDynamicStore.s_rgRecommendedTags )
 		{

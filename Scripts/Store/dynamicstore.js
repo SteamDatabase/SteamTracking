@@ -1210,8 +1210,9 @@ GStoreItemData = {
 			$J.extend( GStoreItemData.rgNavParams, rgNavParams );
 	},
 
-	AddNavEventParamsToURL: function( strURL, strFeatureContext, nDepth )
+	AddNavEventParamsToURL: function( strURL, strFeatureContext, nDepth, nCuratorClanID )
 	{
+		var strClanParam = nCuratorClanID ? 'curator_clanid=' + nCuratorClanID : '';
 		if ( strFeatureContext && GStoreItemData.rgNavParams[strFeatureContext] )
 		{
 			var strNavParam = GStoreItemData.rgNavParams[strFeatureContext];
@@ -1219,17 +1220,23 @@ GStoreItemData = {
 				strNavParam += '_' + parseInt( nDepth );
 
 			strURL += ( strURL.indexOf( '?' ) != -1 ? '&' : '?' ) + 'snr=' + strNavParam;
+			if( strClanParam )
+				strURL += '&' + strClanParam;
+		}
+		else if( strClanParam )
+		{
+			strURL += ( strURL.indexOf( '?' ) != -1 ? '&' : '?' ) + strClanParam;
 		}
 		return strURL;
 	},
 
-	GetAppURL: function( unAppID, strFeatureContext, nDepth )
+	GetAppURL: function( unAppID, strFeatureContext, nDepth, nCuratorClanID)
 	{
 		if ( typeof GStoreItemData.rgAppData[ unAppID ] == 'object' && 'url_name' in GStoreItemData.rgAppData[ unAppID ] ) {
-			return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth )
+			return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth, nCuratorClanID )
 		}
 
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth, nCuratorClanID )
 	},
 
 	GetPackageURL: function( unPackageID, strFeatureContext, nDepth )
