@@ -4722,6 +4722,10 @@ body.v6 .page_content.notes {
 	padding-top: 2px;
 }
 
+.referring_curator .curator_detail_right_ctn {
+	display: flex;
+}
+
 .referringSteamCurator {
 	font-size: 11px;
 	line-height: 9px;

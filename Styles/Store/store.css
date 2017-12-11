@@ -3140,7 +3140,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 
 
 .store_nav .popup_menu .popup_menu_item,
-.curator .popup_menu .popup_menu_item,
+.curator .responsive_page_template_content .popup_menu .popup_menu_item,
 .footer_content .popup_menu .popup_menu_item,
 .search_area .popup_body .match,
 .search_area .popup_body .match .match_name {
@@ -3726,10 +3726,12 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	align-items: flex-end;
 	font-size: 15px;
 	color: #fff;
+	padding-bottom: 6px;
+	margin-right: 16px;
 }
 
 .curator_page .socialmedia > div {
-	margin-left: 10px;
+	margin-left: 16px;
 }
 
 .curator_page .curations {
@@ -3792,7 +3794,8 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 .curator_page .socialmedia img {
 	width: 16px;
 	height: 16px;
-
+	vertical-align: text-top;
 }
+
 
 /* END Store curator capsule */

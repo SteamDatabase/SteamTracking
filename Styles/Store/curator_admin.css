@@ -738,7 +738,6 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 	color: #fff;
 }
 .info_callout .desc {
-	max-width: 75%;
 	font-size: 13px;
 	color: #000;
 	display: block;
@@ -749,6 +748,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 }
 .info_content {
 	float: left;
+	max-width: 351px;
 }
 
 .overview_section_header {
