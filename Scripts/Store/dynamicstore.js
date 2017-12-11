@@ -923,7 +923,7 @@ GDynamicStore = {
 		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 5; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
-							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
+							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name ) });
 						$Link.text( tag.name );
 			$Element.append( $Link );
 		}
