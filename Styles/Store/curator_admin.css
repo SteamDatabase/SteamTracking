@@ -525,11 +525,29 @@ body.v6 .reviews_container h3 {
 }
 .stat_change {
 }
+.stat_desc {
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+	vertical-align: text-top;
+	padding-left: 10px;
+	padding-top: 6px;
+	display: inline-block;
+}
+.stat_subtitle {
+	font-size: 11px;
+}
 .stat_percentage_change.decrease {
 	color: orangered;
 }
 .stat_percentage_change.increase {
 	color: lightgreen;
+}
+.offer_heading {
+	font-size: 11px;
+	margin-top: 10px;
+	margin-bottom: 4px;
 }
 
 #stats_app_views_graph {
@@ -755,16 +773,6 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 	padding: 10px;
 	margin-bottom: 1px;
 	background-color: rgba( 255, 255, 255, 0.075 );
-}
-.overview_section_header .stat_desc {
-	font-size: 11px;
-	text-transform: uppercase;
-	font-weight: 400;
-	letter-spacing: 1px;
-	vertical-align: text-top;
-	padding-left: 10px;
-	padding-top: 6px;
-	display: inline-block;
 }
 .overview_section {
 	padding: 10px;
