@@ -221,6 +221,10 @@ body.v6 .dark_container h4 {
 	letter-spacing: 2px;
 }
 
+.navigation_bar > a:hover {
+	background-color: rgba(255,255,255,0.1);
+}
+
 .navigation_bar > a.selected {
 	background-color: #fff;
 	color: #273d52;
@@ -263,7 +267,8 @@ body.v6 h2.curator_name
 
 	font-size: 36px;
 	padding-top: 0px;
-	margin: 0;
+	margin: 5px 0 0 0;
+	line-height: 32px;
 }
 
 body.v6 .about_section .tagline {

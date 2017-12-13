@@ -3977,8 +3977,11 @@ CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle,
 		$J( elNewContents ).trigger('load');
 
 		_this.InstrumentLinks( _this.elTarget );
+		BindStoreTooltip( $J('[data-store-tooltip]',_this.elTarget) );
 		if( strPageTitle )
 			document.title = strPageTitle;
+
+		$J('.tooltip', _this.elTarget).v_tooltip();
 
 		window.history.pushState({'html':result,'title':strPageTitle, 'id': _this.strStateID}, '', strURL );
 	});

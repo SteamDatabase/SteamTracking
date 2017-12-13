@@ -1320,7 +1320,8 @@ div + #landingFooter.nonconfidential {
 .icon_star{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKBJREFUKM+VktENwjAMRJ87QUbICEXKAGQCmgkYjRG6AgNYghH47lc2MD+pgMityv1Y5+TkyzngwJTRFDNl9M4HfFy7ekg0dXVfZMoExEZj4z8QU4w/MQAFqAfvV6BIsxSAGTjvCO5AkUSV7j0PcGN+SuK0FUTcmBLd9NoiQ2dnRTD9WB+chb6ALIkM5MYBLt7XWUyZWyjf/WDKzZRl7b0Bkt8xgrCBuZgAAAAASUVORK5CYII=); width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
 span.icon_star { display: inline-block;}
 span.icon_actual_authority { display: inline-block;}
-a.icon_finances, span.icon_finances { width: 13px; height: 12px; display: inline-block; background-position: center center; background-repeat: no-repeat;}
+.icon_finances.user_pub_rights { width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
+span.icon_finances.user_pub_rights { display: inline-block; }
 
 .icon_edit.icon_inline,
 .icon_download.icon_inline

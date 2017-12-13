@@ -276,6 +276,35 @@ a.group_tab:hover {
 	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
 }
 
+.curator_summary_ctn {
+	display: flex;
+	flex-direction: row;
+}
+.curator_summary_box {
+	flex: auto;
+	background: rgba( 255, 255, 255, 0.2);
+	padding: 16px;
+	margin-right: 5px;
+	text-align: center;
+}
+.curator_summary_box .label {
+	text-transform: uppercase;
+	color: #fff;
+	padding-bottom: 10px;
+}
+.curator_summary_box .data {
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+}
+.curator_store_link_ctn {
+	margin-top: 5px;
+	margin-right: 5px;
+	background: rgba( 255, 255, 255, 0.2);
+	padding: 16px;
+	text-align: center;
+}
+
 .leftcol {
 	float: left;
 	width: 640px;

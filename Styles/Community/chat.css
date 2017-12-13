@@ -589,3 +589,24 @@ body.chat_body
 		display: none;
 	}
 }
+
+.chat_invitelink_body
+{
+	width: 400px;
+	margin: 40px auto 0px auto;
+	padding: 16px;
+
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid transparent;
+
+}
+
+.chat_invitelink_header .chat_invitelink_highlight
+{
+	color: white;
+}
+
+.chat_invitelink_body .btn_medium
+{
+	margin-top: 16px;
+}
