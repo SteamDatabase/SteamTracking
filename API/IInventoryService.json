@@ -156,6 +156,11 @@
                     "name": "updates",
                     "type": "{message}",
                     "optional": false
+                },
+                {
+                    "name": "timestamp",
+                    "type": "uint32",
+                    "optional": false
                 }
             ]
         },

@@ -879,16 +879,17 @@ function ListEdit_Onload( listid, listDetails )
 
 function ListManage_Load(  )
 {
-	var pageSize = 25;
+	var pageSize = 100;
 
 	var rgData = {
 		'start': 0,
 		'count': pageSize,
 		'all': 1
 	}
+	var elContainer = $J( "#lists_table" );
 
 	$J('#throbber').show();
-	$J('#lists_table').hide();
+	elContainer.hide();
 	$J.ajax ( {
 		url: g_strCuratorBaseURL + 'ajaxgetlists/',
 		data: rgData,
@@ -897,7 +898,13 @@ function ListManage_Load(  )
 	} ).done( function ( data )
 	{
 		$J('#throbber').hide();
-		$J('#lists_table').show();
+		elContainer.show();
+		console.log(data.list_details);
+
+		data.list_details.sort( function( a, b ) {
+			return Math.sign(a.sort_order - b.sort_order)
+		});
+
 		ListManage_AddRows( data.list_details );
 
 		var pagingData = {
@@ -915,23 +922,57 @@ function ListManage_Load(  )
 			ListManage_AddRows(response.list_details )
 		});
 		g_oPagingControls.SetPageChangingHandler( function( nPage ) {
-			$J('#lists_table').hide();
+			elContainer.hide();
 			$J('#throbber').show();
 		} );
 		g_oPagingControls.SetPageChangedHandler( function ( nPage ) {
-			$J('#lists_table').show();
+			elContainer.show();
 			$J('#throbber').hide();
 		} );
 	});
 
-	//AjaxGetLists
+	// Sortable
 
-
+	elContainer.sortable();
+	elContainer.on( "sortupdate", function( event, ui ) {
+		ListManage_UpdateSort( elContainer[0] );
+	});
+	elContainer.disableSelection();
 }
+
+function ListManage_UpdateSort( elContainer )
+{
+	var rgRows = elContainer.querySelectorAll('.list_row');
+	var rgListIds = [];
+
+	for( var i=0; i<rgRows.length; i++)
+	{
+		rgListIds.push( rgRows[i].dataset.listId ) ;
+	}
+	console.log(rgListIds);
+
+
+	$J.ajax ( {
+		url: g_strCuratorBaseURL + 'ajaxupdatelistorder/',
+		data: {
+			listids: rgListIds,
+			sessionid: g_sessionID
+		},
+		dataType: 'json',
+		type: 'POST'
+	} ).done( function ( data )
+	{
+
+	}).fail( function( data ){
+		var response = JSON.parse(data.responseText);
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
+	});
+}
+
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div>\r\n\t\t\t\t\t<a data-navid=\"lists_edit\/%1$s\">%2$s<\/a>\r\n\t\t\t\t\t<a data-navid=\"lists_edit\/%1$s\">%3$s<\/a>\r\n\t\t\t\t\t<a data-navid=\"lists_edit\/%1$s\" class=\"visibility_state\">%4$s<\/a>\r\n\t\t\t\t\t<div><a href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/close_btn.png\"><\/a><\/div>\r\n\t\t\t\t<\/div>";
+	var template = "<div class=\"list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<a data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t\t\t<a href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/close_btn.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();
@@ -949,6 +990,7 @@ function ListManage_AddRows( rgLists )
 
 
 	g_PageController.InstrumentLinks( $table );
+	$J( "#lists_table" ).sortable("refresh");
 }
 
 // Edit curator page JS

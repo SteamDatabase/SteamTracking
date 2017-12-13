@@ -1320,6 +1320,7 @@ div + #landingFooter.nonconfidential {
 .icon_star{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKBJREFUKM+VktENwjAMRJ87QUbICEXKAGQCmgkYjRG6AgNYghH47lc2MD+pgMityv1Y5+TkyzngwJTRFDNl9M4HfFy7ekg0dXVfZMoExEZj4z8QU4w/MQAFqAfvV6BIsxSAGTjvCO5AkUSV7j0PcGN+SuK0FUTcmBLd9NoiQ2dnRTD9WB+chb6ALIkM5MYBLt7XWUyZWyjf/WDKzZRl7b0Bkt8xgrCBuZgAAAAASUVORK5CYII=); width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
 span.icon_star { display: inline-block;}
 span.icon_actual_authority { display: inline-block;}
+a.icon_finances, span.icon_finances { width: 13px; height: 12px; display: inline-block; background-position: center center; background-repeat: no-repeat;}
 
 .icon_edit.icon_inline,
 .icon_download.icon_inline
@@ -2491,13 +2492,21 @@ input#enablevac:disabled {
 .landing_pending_apptransfer {
 	color: #ffffff;
 	padding: 10px;
-	background-color: #81a5d6;
-	border: 1px solid #a9cdff;
+	background-color: #40a4dd;
+	border: 1px solid #67c1f5;
 	font-size: 14px;
+	margin-top: 8px;
 }
 
 .landing_pending_apptransfer div {
 	margin-left: 10px;
+}
+
+.landing_pending_apptransfer a {
+	color: #ffffff;
+}
+.landing_pending_apptransfer a:hover {
+	color: #000000;
 }
 
 .cdkey_requests_header {
