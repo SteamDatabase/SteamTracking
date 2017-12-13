@@ -1,4 +1,11 @@
 
+.curator .popup_menu .suggestion_item.popup_menu_item {
+	color: #000;
+}
+.curator .popup_menu .suggestion_item.popup_menu_item.focus {
+	color: #fff;
+}
+
 .admin_container {
 	display: flex;
 }
@@ -61,6 +68,13 @@
 	font-size: 14px;
 	margin-bottom: 23px;
 	margin-top: 6px;
+}
+.admin_content p.faq_title {
+	line-height: 19px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #67c1f5;
+	margin-top: 24px;
 }
 
 .admin_content .controls {
@@ -201,16 +215,19 @@ p {
 	display: flex;
 	padding: 5px;
 	margin: 5px 0;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(255,255,255,0.1);
 	cursor: move; /* fallback if grab cursor is unsupported */
 	cursor: grab;
 	cursor: -moz-grab;
 	cursor: -webkit-grab;
 }
+#apps_container > div:hover {
+	background-color: rgba(255,255,255,0.2);
+}
 
 #apps_container .capsule {
 	width: 100px;
-
+	height: 37px;
 }
 
 #apps_container .capsule img {
@@ -221,6 +238,11 @@ p {
 	margin: 0 15px;
 	width: 100%
 
+}
+#apps_container h2 {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 0px;
 }
 
 .list_item {
@@ -317,6 +339,8 @@ body.v6 .reviews_container h3 {
 	color: #212C3D;
 	font-weight: bold;
 	font-size: 16px;
+	max-width: 298px;
+	display: block;
 }
 
 .app_ctn .app_accepted {
@@ -494,6 +518,9 @@ body.v6 .reviews_container h3 {
 }
 .icon_pending {
 	background-image: url( '/public/images/curators/icon_pending.png' );
+}
+.icon_faq {
+	background-image: url( '/public/images/curators/icon_faq.png' );
 }
 
 /** stats */
