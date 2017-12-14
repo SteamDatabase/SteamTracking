@@ -35853,7 +35853,7 @@
 				"dmg penalty vs players"
 				{
 					"attribute_class"	"mult_dmg_vs_players"
-					"value"	"0.75"
+					"value"	"0.85"
 				}
 				"special taunt"
 				{
@@ -102853,7 +102853,105 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant"
 			"model_player"		"models/workshop/player/items/soldier/chapelaria_6v6_participant/chapelaria_6v6_participant.mdl"
 		}
-
+		"9731"
+		{		
+			"name"				"Philanthropist's Indulgence"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_reddit_random_acts2"
+			"item_description"		"#TF_reddit_random_acts2_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/reddit_random_acts2/reddit_random_acts2"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/reddit_random_acts2/reddit_random_acts2_%s.mdl"
+			}
+		}
+		"9732"
+		{		
+			"name"				"Spectral Snowflake"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_spectral_snowflake"
+			"item_description"		"#TF_spectral_snowflake_Desc"
+			"image_inventory"			"backpack/workshop/player/items/all_class/spectral_snowflake/spectral_snowflake"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/spectral_snowflake/spectral_snowflake_%s.mdl"
+			}
+		}
+		"9733"
+		{		
+			"name"				"Heals for Reals Event 1st Place 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_heals4reals_gold"
+			"item_description"		"#TF_TournamentMedal_2017"
+			"image_inventory"			"backpack/workshop/player/items/all_class/heals4reals_gold/heals4reals_gold"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/heals4reals_gold/heals4reals_gold_%s.mdl"
+			}
+		}
+		"9734"
+		{		
+			"name"				"Heals for Reals Event 2nd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_heals4reals_silver"
+			"item_description"		"#TF_TournamentMedal_2017"
+			"image_inventory"			"backpack/workshop/player/items/all_class/heals4reals_silver/heals4reals_silver"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/heals4reals_silver/heals4reals_silver_%s.mdl"
+			}
+		}
+		"9735"
+		{		
+			"name"				"Heals for Reals Event 3rd Place 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_heals4reals_bronze"
+			"item_description"		"#TF_TournamentMedal_2017"
+			"image_inventory"			"backpack/workshop/player/items/all_class/heals4reals_bronze/heals4reals_bronze"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/heals4reals_bronze/heals4reals_bronze_%s.mdl"
+			}
+		}
+		"9736"
+		{		
+			"name"				"Heals for Reals Event Participant 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_heals4reals_participant"
+			"item_description"		"#TF_TournamentMedal_2017"
+			"image_inventory"			"backpack/workshop/player/items/all_class/heals4reals_participant/heals4reals_participant"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/heals4reals_participant/heals4reals_participant_%s.mdl"
+			}
+		}
+		"9737"
+		{		
+			"name"				"Heals for Reals Donor 2017"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_heals4reals_donor"
+			"item_description"		"#TF_TournamentMedal_2017"
+			"image_inventory"			"backpack/workshop/player/items/all_class/heals4reals_donation/heals4reals_donation"
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/heals4reals_donation/heals4reals_donation_%s.mdl"
+			}
+		}
 
 
 
