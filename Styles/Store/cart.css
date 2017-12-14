@@ -945,7 +945,6 @@ body.v6 .cart_rightcol h2 {
 }
 
 .cart_totals_area {
-	width: 234px;
 	margin-left: auto;
 }
 
@@ -1155,12 +1154,19 @@ body.v6 .cart_rightcol h2 {
 	color: #8BC53F;
 }
 
-.cart_total_row#cart_price_total_text, .cart_total_row#cart_price_total_text .price
+.cart_total_row#cart_price_total_text, .cart_total_row#cart_price_total_text, .cart_total_row#cart_price_shipping_text, .price
 {
 	font-size: 14px;
 	color: #c7d5e0;
 }
 
+.cart_total_row#cart_estimated_total_text
+{
+	margin-top: 10px;
+	font-size: 14px;
+	color: #c7d5e0;
+	font-weight: bold;
+}
 
 /* checkout - gift */
 
