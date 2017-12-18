@@ -768,3 +768,39 @@ function SetFreeToPlay( appid, packageid )
 
 }
 
+
+function IsDigitOrEditKeypress( e )
+{
+	try
+	{
+		var keynum = 0;
+
+		if( e.keyCode )
+		{
+			keynum = e.keyCode;
+		}
+		else if( e.which )
+		{
+			keynum = e.which;
+		}
+
+		// tab
+		if ( keynum == 9 ) return true;
+		// backspace
+		if ( keynum == 8 ) return true;
+		// delete
+		if ( keynum == 46 ) return true;
+		// arrows
+		if ( keynum == 37 || keynum == 38 || keynum == 39 || keynum == 40 ) return true;
+
+		// digits
+		if ( keynum >= 48 && keynum <= 57 ) return true;
+	}
+	catch( e )
+	{
+
+	}
+
+	return false;
+}
+
