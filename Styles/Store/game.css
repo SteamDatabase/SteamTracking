@@ -492,6 +492,13 @@ img.game_header_image_full {
 
 		}
 
+.notice_box_warning_text
+{
+	color: #ffcc6a;
+	padding-top: 10px;
+	font-size: 12px;
+}
+
 
 .subscription_page_region_restriction {
 	margin-top: 15px;
