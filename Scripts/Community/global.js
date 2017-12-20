@@ -1298,7 +1298,13 @@ var CCommentThread = Class.create( {
 				onFailure: function( transport ) {
 					if ( transport.responseJSON && transport.responseJSON.success )
 					{
-						ShowAlertDialog( 'Error', 'There was an issue updating this topic answer. Error: ' + transport.responseJSON.success );
+						var strError = 'There was an issue updating this topic answer. Error: ' + transport.responseJSON.success;
+						if ( transport.responseJSON.success == 15 )
+						{
+							strError = 'You do not have permission to update this topic\'s answer.'
+						}
+
+						ShowAlertDialog( 'Error', strError );
 					}
 				},
 				onComplete: _$this.OnAJAXComplete.bind( _$this )

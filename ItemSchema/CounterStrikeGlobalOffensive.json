@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.5a5bec5b429260ebc331d13eaec3f3a4529d0a40.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.61ee6e48ee8f5004030d0ddc08d84816b012ad7d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3762,6 +3762,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Boston 2018 CS:GO Champion",
+				"defindex": 955,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at ELEAGUE Boston 2018",
+				"item_description": "This championship trophy was awarded to the Champion at the ELEAGUE Boston 2018 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors.22c41059d3f3732ccc503cff103040e020f05e92.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Boston 2018 CS:GO Finalist",
+				"defindex": 956,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at ELEAGUE Boston 2018",
+				"item_description": "This championship trophy was awarded to the Finalist at the ELEAGUE Boston 2018 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.3fc763dc0877ef542e9e6927bde6e3771deaee00.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Boston 2018 CS:GO Semifinalist",
+				"defindex": 957,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at ELEAGUE Boston 2018",
+				"item_description": "This championship trophy was awarded to the Semifinalist at the ELEAGUE Boston 2018 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.3fc763dc0877ef542e9e6927bde6e3771deaee00.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "ELEAGUE Boston 2018 CS:GO Quarterfinalist",
+				"defindex": 958,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at ELEAGUE Boston 2018",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at the ELEAGUE Boston 2018 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/trophy_majors_finalists",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/trophy_majors_finalists.3fc763dc0877ef542e9e6927bde6e3771deaee00.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "Boston 2018 Pick 'Em Challenge Bronze",
+				"defindex": 959,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze Boston 2018 Pick'Em Trophy",
+				"item_description": "This bronze trophy was awarded during the ELEAGUE Boston 2018 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/boston_pickem_2018_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_bronze.b7f37d2a40e41b67cac9331dd2d305577dfe3ae6.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_bronze_large.8239713da9ec3f52b0b81be023f531a3d9c084a6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "Boston 2018 Pick 'Em Challenge Silver",
+				"defindex": 960,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Boston 2018 Pick'Em Trophy",
+				"item_description": "This silver trophy was awarded during the ELEAGUE Boston 2018 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/boston_pickem_2018_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_silver.818f03ad485870807ceccc532edb951b9ecabc78.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_silver_large.6d8431e288e64ef20a07427f840208653163e815.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "Boston 2018 Pick 'Em Challenge Gold",
+				"defindex": 961,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Boston 2018 Pick'Em Trophy",
+				"item_description": "This gold trophy was awarded during the ELEAGUE Boston 2018 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/boston_pickem_2018_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_gold.d8d5c81a71f22edaf4fc36e8a22781244c47b8ea.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/boston_pickem_2018_gold_large.1cdb01b67efb6889a8746ba0dc8fd367d8537c1b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
 					}
 				]
 				
@@ -22779,6 +22954,2112 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack_boston2018_gamb",
+				"defindex": 4406,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Gambit Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/gamb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/gamb.e6cc2e037641b00b0922516acb00adf695768302.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/gamb_large.a659b81d52247bf8631687d4e33e11a147496310.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_thv",
+				"defindex": 4407,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | 100 Thieves | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/thv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/thv.03d73682905ef165f9a1c8c8877223369377e6a9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/thv_large.d8c14c475396dea5fd4b165dfff7555c56e2db7a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_astr",
+				"defindex": 4408,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Astralis | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/astr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/astr.0c37306a9fff015b8de4337d3ae76a7e52a99ab5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/astr_large.c3c969f2780133becf8fee972ea68520a87487e8.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_vp",
+				"defindex": 4409,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Virtus.Pro | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/vp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vp.0cee468317c3943bd2130f9d47815f6ceb360d15.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vp_large.057abae73d4ce728343bb867668eb408e1e9c221.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_fntc",
+				"defindex": 4410,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Fnatic | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/fntc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/fntc.37cb3966a405519d0942a9797b4ea7fb3b098b34.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/fntc_large.1c4138ecac792e58ae232fb47554fecf925a3bdb.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_sk",
+				"defindex": 4411,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | SK Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/sk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/sk.c59250e1cc05496613d9252b6435ec2c26e7c99a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/sk_large.1ea101483180128af33a77eb9a8ff9b7ee046a92.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_big",
+				"defindex": 4412,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | BIG | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/big",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/big.b8dfde586ed410b689039646463b410bbb4fdf8c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/big_large.c3c2167c50d1cc5b553dc959aa9c68e4f5f4bfce.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_nor",
+				"defindex": 4413,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | North | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/nor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nor.87a1eb4e0c79ec10be398d6332d7cea7c0767cf8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nor_large.d4ca861b1f12d525f4dafa0c06149ab202497ba5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_g2",
+				"defindex": 4414,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | G2 Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/g2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/g2.47290cbcd0c7fb6374ae8178a678a02209631fc8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/g2_large.0a2d28a7c2724d7b28c2539b28ebc3e24a856725.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_c9",
+				"defindex": 4415,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Cloud9 | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/c9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/c9.ecf30fff112d0ccfa504650150d6a5c8efb7028c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/c9_large.2c7d8bab407598cac26a102ef27bbfdd7a4fc703.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_flip",
+				"defindex": 4416,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Flipsid3 Tactics | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/flip",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flip.7f6aecd0615eebe4af52884d9e1a91d02d64f520.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flip_large.bfc45ed35a60123084af18c4d2b6a55637d54dcb.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_navi",
+				"defindex": 4417,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Natus Vincere | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/navi.e636fe3ae951e5ec13cfb1db45c7077ad16a10ec.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/navi_large.21c4674a5b2fa9bf6f5eb8620042bb1d2dff175c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_mss",
+				"defindex": 4418,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | mousesports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/mss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mss.771d3c6fe3fa678ce2c0ad6c076651ad16874ad0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mss_large.a4317d8dfec89b1cf3f1185c989fc6867f39f5a8.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_spr",
+				"defindex": 4419,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Sprout Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/spr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spr.ef99284117007b3f22f78757a768e85d760b9300.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spr_large.acbc205f7c746c67338ff512631ddd042ebfea21.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_faze",
+				"defindex": 4420,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | FaZe Clan | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/faze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/faze.0fec6bdccd7e138561607d4cf06d95d4ebbbca61.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/faze_large.447ff91da6b9c8632b71ff94d50750a8bea78c84.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_vega",
+				"defindex": 4421,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Vega Squadron | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/vega",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vega.630af9992adfcd3a2c59863f3d2e350d1ffdf0e6.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vega_large.74d1bbfcaad7b1ed8aaed77ddbdb1565d112f02e.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_spc",
+				"defindex": 4422,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Space Soldiers | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/spc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spc.dffba243d1ec294eb64b17f2f5be16b06f17b192.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spc_large.b0ba6a4a3aa730a4414841da7e4241bcd5e8d5a9.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_liq",
+				"defindex": 4423,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Team Liquid | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/liq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/liq.66d43ab8eb05def5d2306e9916e614bfe4358f2c.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/liq_large.8fb4c9b938a2e4045e42b5bdbeb148a9112af3e3.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_avg",
+				"defindex": 4424,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Avangar | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/avg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/avg.8012aaa2b0cf77a8d34935c7f910fd18b67e6a77.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/avg_large.adec81e0f52004f5aa0bc55a8d0fcf375f3f5a1c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_ren",
+				"defindex": 4425,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Renegades | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/ren",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/ren.0eeff6d6ed16e82911ab1309f9a33e8ddc36c0d1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/ren_large.97609053b588a1371632ac2f00002b81db0518f7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_nv",
+				"defindex": 4426,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Team EnVyUs | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/nv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nv.2f277435864f19beca97d2592f5b1182864a1f42.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nv_large.0c75c71dfd1775a96342f506cb5f6fe7dcc2284c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_mfg",
+				"defindex": 4427,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Misfits Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/mfg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mfg.a67a238c3b021c411530cac892da7d37303883e7.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mfg_large.a474ea0fd6b3d9e18e8a42e37f0fb83270a1353d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_qb",
+				"defindex": 4428,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Quantum Bellator Fire | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/qb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/qb.fe050e1c8b0a5aaf013af03b30bf8fd1538428a1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/qb_large.b2fec59a4f0673f6b1dcb5aea26cd6941148ef1f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_tyl",
+				"defindex": 4429,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Tyloo | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/tyl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/tyl.ce4f8e7e7b94cbca8be95a0879e1783c4bd0e33f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/tyl_large.db01a5b661d760143eb791f31e42d122cc183c3f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_eleague",
+				"defindex": 4430,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | ELEAGUE | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/eleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/eleague.8206b52a5e552217a9b25badb02c21f51fc9edaa.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/eleague_large.d4d7ad5b5e11477db5281ab1d639c36f92061111.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_gamb",
+				"defindex": 4431,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Gambit Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/gamb_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/gamb_graffiti.d939ea756b1ceb16c8e7b1f66024ceb57d63bc45.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/gamb_graffiti_large.228d6e7ccfab3b1786de22a550b31006a16833c6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_thv",
+				"defindex": 4432,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | 100 Thieves | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/thv_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/thv_graffiti.6e3b92bc3c816eca61114ebc08c968f0ee3b5ffe.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/thv_graffiti_large.4d18f1a75b5d9697aae5ee6811a777f96ce38f3a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_astr",
+				"defindex": 4433,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Astralis | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/astr_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/astr_graffiti.8914c24274556425b282d54c633b363f05fcf0ef.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/astr_graffiti_large.2723dcfd939e5de25f8e1eab863b9821b01aff86.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_vp",
+				"defindex": 4434,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Virtus.Pro | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/vp_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vp_graffiti.071efa877bac4caed26304062ebd92276f337504.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vp_graffiti_large.a8bfd0f78f523b85e567e071af1360327f3d6b8d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_fntc",
+				"defindex": 4435,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Fnatic | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/fntc_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/fntc_graffiti.54861b147cdddf70458da127d8b0b873411197e1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/fntc_graffiti_large.e259e9bde65bb09d18e48f7d1f9e823d589c707f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_sk",
+				"defindex": 4436,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | SK Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/sk_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/sk_graffiti.7dc73c7903a1b73f955ca0aa3ea6471caeeda11a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/sk_graffiti_large.2c15f0fd2ccf51f6c6e8355e9ef9e3c85ed58bcc.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_big",
+				"defindex": 4437,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | BIG | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/big_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/big_graffiti.b4cfaeddcff22c24af7343876005665817a9bc4b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/big_graffiti_large.6103795b658017117b43d2a46a79661f98d30584.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_nor",
+				"defindex": 4438,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | North | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/nor_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nor_graffiti.e7c474b6ed3affa65c2d17f52183d59f92826756.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nor_graffiti_large.d662f7dbecd1c0c20e0c5cb11bf595ef5c8d39c5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_g2",
+				"defindex": 4439,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | G2 Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/g2_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/g2_graffiti.52fd3421edcc5bf627aecbbb633b411108f53957.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/g2_graffiti_large.9681f856cc18240381b422cd7604887869fdfce7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_c9",
+				"defindex": 4440,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Cloud9 | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/c9_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/c9_graffiti.a811e6bb01850d712975769783ff1c41ad783696.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/c9_graffiti_large.b4b96b3344365da01d395a3fc138c57e7b9634de.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_flip",
+				"defindex": 4441,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Flipsid3 Tactics | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/flip_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flip_graffiti.f06a806f8f1d7937ed721f71994ea455b3714ab7.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flip_graffiti_large.5e9458c9d67b4abe02dc5c0f6fafa1e92b105ea2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_navi",
+				"defindex": 4442,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Natus Vincere | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/navi_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/navi_graffiti.4b1a8c8beba25b0eb5072ea1b02fa6e8d8cbb6db.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/navi_graffiti_large.89abad2546621cd2e5db6331e49892e09d66d8cf.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_mss",
+				"defindex": 4443,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | mousesports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/mss_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mss_graffiti.0bf9d154b11eaa4b2efd16f9090e9a1bf643cda3.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mss_graffiti_large.d5452457addd98610d4fcd751ca8236ffc901cdf.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_spr",
+				"defindex": 4444,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Sprout Esports | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/spr_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spr_graffiti.ac00883c142abd94bf34566f7ff1e1ef9dbe6fe4.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spr_graffiti_large.d7b02350341cdb2db405527a7e90813cd390cc6b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_faze",
+				"defindex": 4445,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | FaZe Clan | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/faze_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/faze_graffiti.72777ed5b68d563bb31adad02d8508180ddebd03.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/faze_graffiti_large.8d5ca7617e82b2f3791e6cabc107ea3fa52574ee.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_vega",
+				"defindex": 4446,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Vega Squadron | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/vega_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vega_graffiti.b49ee03f470b1d809f3c1f519c3bdf0d1ecfce62.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/vega_graffiti_large.625de93a8509e227d839a67fd77b793badcebcb5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_spc",
+				"defindex": 4447,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Space Soldiers | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/spc_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spc_graffiti.d2696fb108db1796a42c8034906392c220183e5d.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/spc_graffiti_large.fb778c4deecd9a9db3fe93c5d2697fa6ce057628.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_liq",
+				"defindex": 4448,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Team Liquid | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/liq_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/liq_graffiti.6286391f36e9ca7f6bbc7e84899471818d3f83f5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/liq_graffiti_large.a5f69fecb51d546b70ac0dca88e96c5d30da788a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_avg",
+				"defindex": 4449,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Avangar | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/avg_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/avg_graffiti.776f3f94e97840d87e57e860d569dbb77e4551e6.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/avg_graffiti_large.9df8b0b9fbbd6fc7424d18da8f5279ec58aea9d1.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_ren",
+				"defindex": 4450,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Renegades | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/ren_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/ren_graffiti.be6f35a95563a43407f61e823cb705100515887a.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/ren_graffiti_large.cc8468d5a045dc5518bff644fb616cf4578a5446.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_nv",
+				"defindex": 4451,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Team EnVyUs | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/nv_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nv_graffiti.c931afa925b7426823c2fd33da5efd4794d3b8d0.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/nv_graffiti_large.7936c21d96f77a756bd38c935a2246205dbbd805.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_mfg",
+				"defindex": 4452,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Misfits Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/mfg_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mfg_graffiti.5f4c298066997f68e0878938ad01e4a278b543a8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/mfg_graffiti_large.74be47c2f07cec2feeb1c37e042c41514a457194.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_qb",
+				"defindex": 4453,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Quantum Bellator Fire | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/qb_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/qb_graffiti.edfbef2d5161e2f9d6e0ccfd56b0cf373391a243.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/qb_graffiti_large.77ad36ec845291aac2edd99bf4bc4cc7c14c2993.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_tyl",
+				"defindex": 4454,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Tyloo | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/tyl_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/tyl_graffiti.999bcbc3c41ccf608ba80d99174dc376dbac0cbc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/tyl_graffiti_large.bfae0c8fdf315ac1792ae198fe46923dd0afa853.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_eleague",
+				"defindex": 4455,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | ELEAGUE | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/eleague_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/eleague_graffiti.3d88174d483494daa8dd19654ea4492ebf2f84f2.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/eleague_graffiti_large.2e1c6e933cf1eb2d7894a1ba286d0ee0b97f776a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_legends",
+				"defindex": 4456,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single Boston 2018 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_legends",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_legends.2ffa8c551ee85627d3d4dfbff65a00d0d65e0813.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 224
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_challengers",
+				"defindex": 4457,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Returning Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single Boston 2018 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_challengers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_challengers.f3dbdf71c9a09c7c219f0f503437151dde1d75d5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 225
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_contenders",
+				"defindex": 4458,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Minor Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single Boston 2018 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_contenders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_contenders.f131562450932d78b4510f2caa024938941a2fc4.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 226
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_boston2018_group_legends",
+				"defindex": 4459,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Legends Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Legends teams at Boston 2018.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_group_legends",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_group_legends.513fe6c5136df2435d18c7a4756c7979c4328727.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 227
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_boston2018_group_challengers",
+				"defindex": 4460,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Returning Challengers Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Returning Challengers teams at Boston 2018.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_group_challengers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_group_challengers.0e7dd79057e8b55259715dae0704c5c9c7f5d875.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 228
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_boston2018_group_contenders",
+				"defindex": 4461,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Minor Challengers Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Minor Challengers teams at Boston 2018.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_group_contenders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_group_contenders.1eff64c5a1edfc30d6dad13d440c1073d6280f2f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 229
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_bundle_of_all",
+				"defindex": 4462,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Mega Bundle",
+				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.c691b63e039142cf52fab67ab13654651c737373.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_inferno",
+				"defindex": 4463,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_inferno.ebe33e799b076d3842b02bdddc98b783ea0f5ce4.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 230
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_mirage",
+				"defindex": 4464,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_mirage.35c3e485b0f955511dac55d6f4a817a57ea3dbe5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 231
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_cbble",
+				"defindex": 4465,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_cbble.f4720b59277ab16da508f76845f85f5dfe0d9df6.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 232
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_overpass",
+				"defindex": 4466,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_overpass.0052a59731a791212ab021d5f6fbf839dbe70b3b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 233
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_cache",
+				"defindex": 4467,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_cache.5b3feaa264381bb5eed8f06bf8a8df5ef6d59313.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 234
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_train",
+				"defindex": 4468,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_train.43b502d91d47c530d5f2dc028c31ba42ec509b6f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 235
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_promo_de_nuke",
+				"defindex": 4469,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_boston2018_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_boston2018_promo_de_nuke.9d83d9e841a7a06e01c0c7ce41b6af70026e6342.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 236
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
 				"name": "studded_bloodhound_gloves",
 				"defindex": 5027,
 				"item_class": "wearable_item",
@@ -23422,8 +25703,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_guardian_3",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_3.a04bd61c9fb2d72a597c89969b3f15eed3a7df41.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_3_large.d449ae6cc98e0c75f5f95e97b144e7d70111cded.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23443,8 +25724,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_canals",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_canals.2d354c617b184632459c4640316d8b1cb57e5038.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_canals_large.f9c191c770747c2c435f8526ba7aa5737524bafe.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23464,8 +25745,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_welcome_to_the_clutch",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_welcome_to_the_clutch.70e841f1a5cad59bca51fe7f8964a51acaa98673.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_welcome_to_the_clutch_large.662a5bf5a15d477be33b643b88e0e1254b16101d.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23485,8 +25766,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_death_sentence",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_death_sentence.fce48fff6fbf2ed49f2ccd0ceae9286b5597a3c9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_death_sentence_large.2d37ade206ca6afb2aaaf99ef607816b4a1a8fa2.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23506,8 +25787,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_inferno_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno_2.08f9189f3671422d9efa6701aa1851c298000073.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno_2_large.9d576c8c26538d5d2b10d5cebfeafb89b09f54cb.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23527,8 +25808,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_wildfire",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_wildfire.c45d735c8abc55e0e440fae1e3ed120c4b505e13.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_wildfire_large.b461dbbf67ab98a7c6e12f57223edd3c1892cc77.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23548,8 +25829,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.2e72ef3eda986fa153d3483609ac270c909f0560.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy_large.0633a81c60332d4debd5913073d8830e93f07e5f.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23569,8 +25850,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_aces_high",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_aces_high.b6bca8cc6f6caab1fc251cd8a0e38c26cbda813b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_aces_high_large.5787bd8d31493f6d1abbfbf71b0368920261286e.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23590,8 +25871,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_hydra",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_hydra.7e20ccdcec68235ce86786aaf23d5720df7a5cb9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_hydra_large.3939e69d36c23599f2712e70db5bc0ab68e6c167.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23611,8 +25892,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_howl",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_howl.1b6e83b4c02df406523292c507bff79ecd41a216.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_howl_large.3506b6beea04a5bca3e2d48d3f7091990f2c5240.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -23632,8 +25913,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_brigadier_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_brigadier_general.a66cc4b674e07438286606b4fca3e200687c1cb5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_brigadier_general_large.ac36f4a0335246e25cbca477bf8e131bb2b6a771.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25215,8 +27496,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_guardian_3",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_3.a04bd61c9fb2d72a597c89969b3f15eed3a7df41.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_guardian_3_large.d449ae6cc98e0c75f5f95e97b144e7d70111cded.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25236,8 +27517,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_canals",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_canals.2d354c617b184632459c4640316d8b1cb57e5038.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_canals_large.f9c191c770747c2c435f8526ba7aa5737524bafe.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25257,8 +27538,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_welcome_to_the_clutch",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_welcome_to_the_clutch.70e841f1a5cad59bca51fe7f8964a51acaa98673.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_welcome_to_the_clutch_large.662a5bf5a15d477be33b643b88e0e1254b16101d.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25278,8 +27559,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_death_sentence",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_death_sentence.fce48fff6fbf2ed49f2ccd0ceae9286b5597a3c9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_death_sentence_large.2d37ade206ca6afb2aaaf99ef607816b4a1a8fa2.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25299,8 +27580,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_inferno_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno_2.08f9189f3671422d9efa6701aa1851c298000073.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_inferno_2_large.9d576c8c26538d5d2b10d5cebfeafb89b09f54cb.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25320,8 +27601,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_wildfire",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_wildfire.c45d735c8abc55e0e440fae1e3ed120c4b505e13.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_wildfire_large.b461dbbf67ab98a7c6e12f57223edd3c1892cc77.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25341,8 +27622,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.2e72ef3eda986fa153d3483609ac270c909f0560.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy_large.0633a81c60332d4debd5913073d8830e93f07e5f.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25362,8 +27643,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_aces_high",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_aces_high.b6bca8cc6f6caab1fc251cd8a0e38c26cbda813b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_aces_high_large.5787bd8d31493f6d1abbfbf71b0368920261286e.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25383,8 +27664,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_hydra",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_hydra.7e20ccdcec68235ce86786aaf23d5720df7a5cb9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_hydra_large.3939e69d36c23599f2712e70db5bc0ab68e6c167.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25404,8 +27685,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_howl",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_howl.1b6e83b4c02df406523292c507bff79ecd41a216.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_howl_large.3506b6beea04a5bca3e2d48d3f7091990f2c5240.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -25425,8 +27706,8 @@
 				"image_inventory": "econ/status_icons/collectible_pin_brigadier_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_brigadier_general.a66cc4b674e07438286606b4fca3e200687c1cb5.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_brigadier_general_large.ac36f4a0335246e25cbca477bf8e131bb2b6a771.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -31298,6 +33579,14 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "spread seed",
+				"defindex": 266,
+				"attribute_class": "spread_seed",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
