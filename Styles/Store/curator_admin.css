@@ -166,6 +166,13 @@
 .in_progress span {
 	color: #ffcc6a;
 }
+.curation_warning_box {
+	background-color: #918c6c;
+	border: solid 1px #ddd598;
+	color: #f0e8aa;
+	padding: 8px;
+	margin: 0 8px 16px 8px;
+}
 
 .admin_content .darkframe h4:not(:first-child) {
 	margin-top: 40px;

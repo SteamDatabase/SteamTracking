@@ -1259,6 +1259,54 @@ var CCommentThread = Class.create( {
 		} );
 	},
 
+	UpdateAnswer: function( gidComment, bExisting )
+	{
+		// see if it's on the current page
+		if ( this.m_bLoading )
+			return;
+
+		if ( !gidComment )
+		{
+			$modal = ShowConfirmDialog( 'Remove As Answer', 'Are you sure you want to unmark this post as the answer to this thread? You can update this at any time.', 'Remove As Answer' );
+		}
+		else
+		{
+			var strModalBody = 'You are about to mark this post as the answer to this thread. This will indicate that the original post has been answered and link to this specific post. You can remove this or indicate a different post as the answer at any time if you change your mind.';
+			if ( bExisting )
+				strModalBody = 'A different post is already selected as the answer to this thread. Would you like to choose this post as the new answer?';
+
+			$modal = ShowConfirmDialog( 'Mark As Answer', strModalBody, 'Choose Answer' );
+			$modal.SetMaxWidth(500);
+		}
+
+		var _$this = this;
+
+		$modal.done( function(){
+
+			var params = _$this.ParametersWithDefaults( {
+				gidcommentanswer: gidComment
+			} );
+
+			_$this.m_bLoading = true;
+			new Ajax.Request( _$this.GetActionURL( 'updateanswer' ), {
+				method: 'post',
+				parameters: params,
+				onSuccess: function() {
+										window.location.hash = 'c' + gidComment;
+					window.location.reload();
+				},
+				onFailure: function( transport ) {
+					if ( transport.responseJSON && transport.responseJSON.success )
+					{
+						ShowAlertDialog( 'Error', 'There was an issue updating this topic answer. Error: ' + transport.responseJSON.success );
+					}
+				},
+				onComplete: _$this.OnAJAXComplete.bind( _$this )
+			});
+		} );
+
+	},
+
 	GetRawComment: function( gidComment )
 	{
 		return this.m_rgRawCommentCache[ gidComment ];
@@ -1852,6 +1900,12 @@ CCommentThread.VoteUp = function( id )
 {
 	if ( g_rgCommentThreads[id] )
 		g_rgCommentThreads[id].VoteUp();
+};
+// static accessor
+CCommentThread.UpdateAnswer = function( id, gidcomment, bExisting )
+{
+	if ( g_rgCommentThreads[id] )
+		g_rgCommentThreads[id].UpdateAnswer( gidcomment, bExisting );
 };
 CCommentThread.FormattingHelpPopup = function( strCommentThreadType )
 {

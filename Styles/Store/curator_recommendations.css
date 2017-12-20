@@ -61,10 +61,6 @@ body.v6 {
 	opacity: 0.8;
 }
 
-.light_container {
-	background: -webkit-linear-gradient( top, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);background: linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%);	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
-	padding: 5px 0;
-}
 
 body.v6 h2 {
 	color: #fff;
@@ -87,15 +83,57 @@ body.v6 .filter_ctn h2 {
 	letter-spacing: 2px;
 }
 
-.dark_container {
-background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24, 27, 0) 95%);background: linear-gradient( to bottom, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24, 27, 0) 95%);}
+.dark_container{
+
+	background:  linear-gradient( to right, rgba(19, 24, 27, 0) 10%, rgba(19, 24, 27, 0.95) 25%, rgba(19, 24, 27, 0.95) 75%, rgba(19, 24, 27, 0) 90%  );
+	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
+	background-repeat: no-repeat;
+	background-size: 2000px 100%;
+
+	background-position: top center;
+
+
+}
+
+.light_container, #footer_spacer  {
+	background:  linear-gradient( to right, rgba(27, 40, 53, 0) 10%, rgba(27, 40, 53, 0.95) 25%, rgba(27, 40, 53, 0.95) 75%, rgba(27, 40, 53, 0) 90%  ) 1800px 90%;
+
+	background-repeat: no-repeat;
+	background-size: 2000px 100%;
+	background-position: top center;
+
+}
+
+.light_container.bezel {
+	background: 	linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%  ),
+	linear-gradient( to right, rgba(27, 40, 53, 0) 10%, rgba(27, 40, 53, 0.95) 25%, rgba(27, 40, 53, 0.95) 75%, rgba(27, 40, 53, 0) 90%  ) 1800px 90%;
+	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
+	background-repeat: no-repeat;
+	background-size: 100% 500px, 2000px 100%;
+
+	background-position: top center;
+	
+}
+
+body.v6 #footer {
+	//background: transparent;
+}
+
+body.v6 #footer_spacer {
+	height: 184px;
+}
+
+body.v6 #page_background_container > div:last-child {
+	padding-bottom: 100px;
+}
+
 
 body.v6 .dark_container h2 {
 	color: #fff;
 		font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
-		
+			font-weight: 200;
 	font-size: 22px;
 	text-transform: none;
 	padding: 5px 0;
@@ -1120,4 +1158,11 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);backgro
 .header_right_button {
 	float: right;
 	margin-top: 6px;
+}
+
+.featured_list h2 {
+	font-weight: 200;
+}
+.featured_list h2 span {
+	font-weight: 600;
 }

@@ -4,11 +4,11 @@ var g_rgAppsCurated = [];
 
 function CreateListFromForm( elForm, fnOnComplete )
 {
-	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type' ], EditList, fnOnComplete);
+	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background' ], EditList, fnOnComplete);
 }
 
 
-function EditList( listid, title, blurb, state, appids, type, fnOnComplete )
+function EditList( listid, title, blurb, state, appids, type, background, fnOnComplete )
 {
 
 	$J.ajax ( {
@@ -20,6 +20,7 @@ function EditList( listid, title, blurb, state, appids, type, fnOnComplete )
 			state: state,
 			appids: appids,
 			type: type,
+			background: background,
 			sessionid: g_sessionID
 		},
 		dataType: 'json',
@@ -84,11 +85,11 @@ function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 		rgPreferredTags.push( ele.textContent );
 	})
 
-	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url' ],
+	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url', 'show_broadcast' ],
 		UpdateCurator.bind(null, bAsync), fnOnComplete, rgPreferredTags );
 }
 
-function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, ...rgPreferredTags )
+function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, ...rgPreferredTags )
 {
 	$J.ajax ( {
 		url: g_strCuratorBaseURL + 'ajaxupdatecuratordetails/',
@@ -102,9 +103,10 @@ function UpdateCurator( bAsync, description, google_id, platform_windows, platfo
 			website_title: website_title,
 			website_url: website_url,
 			discussions_url: discussions_url,
+			show_broadcast: show_broadcast,
 			tags_preferred: rgPreferredTags,
 			sessionid: g_sessionID,
-			async: bAsync
+			async: bAsync,
 		},
 		dataType: 'json',
 		type: 'POST',
@@ -220,6 +222,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 	elTarget.appendChild( $J(strHTML)[0] );
 
 	$J('#list_public').removeAttr('disabled');
+	$J('#list_featured').removeAttr('disabled');
 
 	$J( elTarget ).sortable("refresh");
 }
@@ -566,7 +569,7 @@ function LoadCurationList( fnOnComplete )
 		url: g_strCuratorBaseURL + 'ajaxgetrecommendations/',
 		data: {
 			sessionid: g_sessionID,
-			count: 500, 		},
+			count: 1000, 		},
 		type: 'POST'
 	} ).done( function ( data )
 	{

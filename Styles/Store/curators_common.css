@@ -276,16 +276,31 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 
 .curator_update_callout
 {
-	padding: 10px;
+	padding: 6px;
 	font-size: 14px;
-	color: #ffffff;
-	background-color: #7c705a;
+	color: #444444;
+	background-color: rgba( 255, 255, 255, 0.8);
 
 }
+
+
 .curator_update_contents {
 	width: 940px;
 	margin: 0 auto;
+
 }
 .curator_update_contents a {
 	text-decoration: underline;
+	color: #444444;
+}
+.curator_update_contents .banner_ctn {
+	display: inline-flex;
+	flex-direction: row;
+}
+.curator_update_contents .banner_ctn .banner_text {
+	padding-top: 6px;
+}
+
+.curator_update_contents .banner_ctn img {
+	margin-right: 12px;
 }

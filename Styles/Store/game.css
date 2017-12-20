@@ -4742,7 +4742,12 @@ body.v6 .page_content.notes {
 	text-decoration: underline;
 }
 
-.discussion_button_ctn>span {
+.discussion_button_ctn,
+.readmore_button_ctn {
+	display: inline-block;
+}
+.discussion_button_ctn>span,
+.readmore_button_ctn>span {
 	background: #1b2838;
 	display: inline-flex;
 	border-radius: 2px;

@@ -204,7 +204,9 @@ background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: l
 	font-size: 16px;
 }
 
-.miniprofile_player .playername .nickname {
+.miniprofile_player .playername .nickname,
+.friendBlock.persona .nickname_block
+{
 	color: #9b9b9b;
 }
 

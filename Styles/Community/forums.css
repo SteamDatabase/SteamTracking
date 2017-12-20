@@ -277,13 +277,24 @@ textarea.forumtopic_reply_textarea {
 .forum_topic_op {
 	color: #8ED1F9;
 	font-size: 11px;
-
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 .forum_topic:hover .forum_topic_op {
 	color: #70beed;
+}
+
+.forum_topic_state {
+	display: inline-block;
+	margin-left: 5px;
+	z-index: 4;
+}
+
+.forum_topic_state img {
+	vertical-align: text-top;
+	width: 14px;
+	height: 14px;
 }
 
 .forum_paging
@@ -494,6 +505,27 @@ textarea.forumtopic_reply_textarea {
 	padding-left: 22px;
 }
 
+.forumtopic_comments .commentthread_answer_bar {
+	background: #41749b;
+	color: #FFFFFF;
+	padding: 8px;
+}
+
+.forumtopic_comments .commentthread_answer_bar img {
+	vertical-align: top;
+	margin-right: 10px;
+}
+.forumtopic_comments .commentthread_answer_bar span {
+	padding-top: 2px;
+	display: inline-block;
+	color: #a0d0ec;
+}
+
+.forumtopic_comments .commentthread_comment.commentthread_answer_comment {
+	border: 1px solid #41749b;
+	box-shadow: none;
+}
+
 .forumtopic_comments .commentthread_comment {
 	background-color: rgba( 32, 47, 67, 0.8);
 	color: #acb2b8;
@@ -576,6 +608,71 @@ textarea.forumtopic_reply_textarea {
 	font-weight: bold;
 	line-height: 24px;
 	display: inline-block;
+}
+
+.forumtopic_answer {
+
+	background: #396288;
+	color: #ffffff;
+}
+.forumtopic_answer.answer_ctn {
+	border: 1px solid #41749b;
+	margin-top: -6px;
+}
+
+.forumtopic_answer.answer_header {
+	background: #41749b;
+	padding: 10px 40px 10px 10px;
+	cursor: pointer;
+
+}
+
+.forumtopic_answer.answer_header:hover {
+	background: #4f95c4;
+}
+
+.forumtopic_answer.answer_header img {
+	float: left;
+	margin-right: 10px;
+}
+
+.forumtopic_answer.answer_header a {
+	color: #a0d0ec;
+}
+
+.forumtopic_answer.answer_body {
+	padding: 15px 15px 15px  50px;
+}
+
+.forumtopic_answer .answer_quote {
+	border: 1px solid #457592;
+	color: #7faac3;
+	padding: 10px;
+	border-radius: 3px;
+	overflow-wrap: break-word;
+}
+.forumtopic_answer .answer_quote a {
+	color: #7faac3;
+}
+
+.answer_author {
+	margin-bottom: 5px;
+}
+
+.answer_author a {
+	font-weight: bold;
+}
+
+.answer_actions {
+	float: right;
+	visibility: hidden;
+	margin-right: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.forumtopic_answer:hover .answer_actions {
+	visibility: visible;
 }
 
 .forum_author_menu {
@@ -984,7 +1081,7 @@ a.forum_comment_action:hover {
 }
 
 .forum_audit a {
-	color: #61686D;
+	color: #687882;
 }
 
 .moderatorToolLink

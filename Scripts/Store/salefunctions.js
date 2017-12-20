@@ -132,6 +132,10 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
 	HomeSaleCapsuleCategory( rgDisplayLists.video, $J('.category_caps_video') );
 	HomeSaleCapsuleCategory( rgDisplayLists.freetoplay, $J('.category_caps_freetoplay') );
+	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
+	HomeSaleCapsuleCategory( rgDisplayLists.oldschool, $J('.category_caps_oldschool') );
+	HomeSaleCapsuleCategory( rgDisplayLists.niche, $J('.category_caps_niche') );
+	HomeSaleCapsuleCategory( rgDisplayLists.moddable, $J('.category_caps_moddable') );
 
 }
 
@@ -171,6 +175,11 @@ function HomeSaleBlock( rgItems, $Parent )
 
 function HomeSaleCapsuleCategory( rgItems, $Parent )
 {
+	if ( !rgItems )
+	{
+		$Parent.hide();
+		return;
+	}
 
 	var rgCapsules = GHomepage.FilterItemsForDisplay(
 		rgItems, 'home', 4, 16, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
