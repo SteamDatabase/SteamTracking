@@ -253,6 +253,50 @@
             ]
         },
         {
+            "name": "UpdateKeyValueTags",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Updates key/value tags for a published file",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "tags_to_add",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "tags_to_remove",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "string_tags_to_remove_by_key",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "int_tags_to_remove_by_key",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "SetDeveloperMetadata",
             "version": 1,
             "httpmethod": "POST",

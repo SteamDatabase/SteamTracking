@@ -1715,6 +1715,13 @@ span.icon_finances.user_pub_rights { display: inline-block; }
 	color: #e76e34 !important;
 }
 
+.text_orange a {
+	color: #ff6f34 !important;
+}
+.text_orange a:hover {
+	color: #ffffff !important;
+}
+
 .ttip {
 	cursor: pointer;
 	color: #b6c5ca;

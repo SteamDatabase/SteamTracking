@@ -30,6 +30,12 @@
                     "type": "uint32",
                     "optional": true,
                     "description": "# of builds to retrieve (default 10)"
+                },
+                {
+                    "name": "depot_details",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "True if we want the info on the depots in each build.  False if we don't need that info.  Defaults to true."
                 }
             ]
         },
