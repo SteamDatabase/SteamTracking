@@ -102,6 +102,14 @@ a.gutter_item:hover {
 	margin: 7px 0;
 }
 
+a.gutter_giftcard.gutter_item {
+	margin: 0 0 14px 0;
+}
+
+.home_page_gutter_giftcard {
+	max-width: 210px;
+}
+
 body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
 	transition: padding 0.25s;
 }
@@ -116,13 +124,13 @@ body:not(.no_home_gutter) .home_page_gutter {
 	transition: width 0.25s;
 }
 
-@media all and (min-width: 1208px) {
+@media all and (min-width: 1224px) {
 	body:not(.no_home_gutter) .home_page_content, .footer_content, .hardware_ctn {
 		padding-left: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_gutter {
 		display: block;
-		width: 187px;
+		width: 210px;
 	}
 	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
 		right: -218px;
@@ -211,7 +219,7 @@ a.home_block_footer_btn:hover {
 	width: 664px;
 	height: 127px;
 
-	top: -99px;
+	top: -96px;
 	left: -66px;
 
 	z-index: -1;
@@ -809,24 +817,24 @@ a.home_headercap:hover {
 @media screen and (max-width: 910px)
 {
 			html.responsive .dq_static_pos_2 {
-			max-width: 82.1276595745%;
+			max-width: 82.127659574468%;
 			height: auto;
 			left: 0%;
 		}
 			html.responsive .dq_static_pos_3 {
-			max-width: 73.4042553191%;
+			max-width: 73.404255319149%;
 			height: auto;
-			left: 23.5106382979%;
+			left: 23.510638297872%;
 		}
 			html.responsive .dq_static_pos_4 {
-			max-width: 65.1063829787%;
+			max-width: 65.106382978723%;
 			height: auto;
-			left: 45.8510638298%;
+			left: 45.851063829787%;
 		}
 			html.responsive .dq_static_pos_5 {
-			max-width: 56.8085106383%;
+			max-width: 56.808510638298%;
 			height: auto;
-			left: 68.1914893617%;
+			left: 68.191489361702%;
 		}
 	}
 
@@ -1350,6 +1358,8 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	transition: transform .2s ease-out, z-index 0.2s, box-shadow 0.2s ease-out;
 	-webkit-transition: transform .2s ease-out, z-index 0.2s ease-out, box-shadow 0.2s ease-out;
 	transition-delay: 0.2s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .home_content.single a.screenshot:hover img {
@@ -2116,9 +2126,6 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);background: l
 	overflow: hidden; /* Crops subpixels we get from percentage scaled screenshots */
 }
 
-.curator_giant_capsule .screenshots {
-	height: 50%;
-}
 
 .curator_giant_capsule .screenshots, .curator_giant_capsule .capsule {
 	width: 50%;
@@ -2185,10 +2192,11 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);background: l
 
 .curator_giant_capsule .screenshots .screenshot {
 	width: 50%;
-	height: 50%;
+	padding-bottom: 28.6%;
 	background-size: cover;
 	display: inline-block;
 	vertical-align: top;
+	box-shadow: 1px 1px 0 0px rgba(0,0,0,0.2) inset
 }
 
 .giant_curator_controls > span {
@@ -2514,16 +2522,16 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 /* Marketing message Responsive */
 @media screen and (max-width: 910px)
 {
-	.marketingmessage_area .small_container
+	html.responsive .marketingmessage_area .small_container
 	{
 		display: block;
 	}
-	.home_marketing_message {
+	html.responsive .home_marketing_message {
 		display: block;
 		margin: 0 0 10px 10px;
 	}
 
-	.home_marketing_message > span {
+	html.responsive .home_marketing_message > span {
 		width: 173px;
 		height: 182px;
 	}
@@ -2559,6 +2567,7 @@ body.v6 .home_rightcol.recommended .home_specials_ctn h2 {
 a.gutter_item {
 	color: #66c0f4;
 }
+
 #global_hover {
 	pointer-events: none;
 }
@@ -2742,11 +2751,12 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	background-repeat: no-repeat;
 	background-position: right;
 	color: #fff;
+	display: flex;
 
 }
 
 .store_main_capsule .capsule {
-	float: left;
+	flex-shrink: 0;
 	background-color: #000;
 	position: relative;
 	z-index: 2;
@@ -2756,6 +2766,10 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	background-position: center center;
 	background-size: cover;
 	box-shadow: 0 0 10px 5px #000;
+}
+
+.store_main_capsule .info {
+	flex-shrink: 1;
 }
 
 .store_main_capsule .app_name > div {
@@ -2876,7 +2890,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	color: #a3cf06;
 }
 
-.store_main_capsule .reason .main .tags > span, .tab_preview .tags > span {
+.store_main_capsule .reason .main .tags > span, .tab_preview .tags > a {
 	display: inline-block;
 	line-height: 19px;
 	padding: 0 7px;
@@ -2975,7 +2989,7 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);background: l
 }
 
 .tab_item.focus .tab_item_details span.platform_img.win {
-	background-image: url( '/public/images/v6/icon_platform_win_dark.png' );
+	background-image: url( '/public/images/v6/icon_platform_win_dark.png?v=3' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.mac {
@@ -2988,8 +3002,10 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);background: l
 
 .tab_item.focus .tab_item_details span.platform_img.streamingvideo {
 	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
-	background-position-y: 3px;
-	background-position-x: 2px;
+}
+
+span.platform_img.streaming360video {
+	background-image: url( '/public/images/v6/icon_streaming360video_v6_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.htcvive {
@@ -3002,6 +3018,10 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);background: l
 
 .tab_item.focus .tab_item_details span.platform_img.razerosvr {
 	background-image: url( '/public/images/v6/icon_platform_razerosvr_dark.png' );
+}
+
+.tab_item.focus .tab_item_details span.platform_img.windowsmr {
+	background-image: url( '/public/images/v6/icon_platform_windowsmr_dark.png' );
 }
 
 .tab_item.focus .discount_block .discount_final_price {
@@ -3033,7 +3053,7 @@ body.v6 .home_rightcol .tab_preview h2 {
 	height: 22px;
 	overflow: hidden;
 }
-.tab_preview .tags > span {
+.tab_preview .tags > a {
 	background-color: rgba( 38, 54, 69, 0.6);
 }
 
@@ -3097,7 +3117,7 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);background: l
 }
 
 .carousel_container.paging_capsules .carousel_items > * > *:not(:last-child) {
-	margin-right: 11px;
+	margin-right: 8px;
 }
 
 
@@ -3505,6 +3525,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		display: none;
 	}
 
+	html.responsive body.v6 .friends_recently_purchased h2,
+	html.responsive body.v6 .discovery_queue_ctn h2,
+	html.responsive body.v6 h2.giant_curator_title {
+		font-size: 14px;
+	}
+
 	html.responsive .carousel_container.maincap {
 		margin: 5px auto 0 auto;
 		max-width: 500px;
@@ -3521,7 +3547,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		overflow-x: scroll;
 		overflow-y: hidden;
 		box-sizing:content-box;
-		padding-bottom: 30px;
+		padding-bottom: 20px;
 
 		display: -webkit-box; /* Very Old webkit */
 		display: -ms-flexbox; /* IE 10 */
@@ -3531,9 +3557,8 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	}
 
 	html.responsive .carousel_container .carousel_thumbs {
-		margin-top: -30px;
-		height: 30px;
-		background-color: #1b2838;
+		margin-top: -1px;
+		height: 25px;
 		position: relative;
 		z-index: 1;
 		width: 100%;
@@ -3617,6 +3642,11 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		height: auto;
 	}
 
+	html.responsive .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.responsive .carousel_container.paging_capsules .carousel_items:not(.no_paging){
+		padding-bottom: 0px;
+	}
+
 	/* hardware callouts */
 	html.responsive .hardware_content {
 		text-align: center;
@@ -3638,7 +3668,15 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 	html.responsive .big_buttons .btn_wrapper {
 		margin: 5px;
-		max-width: calc( 100% - 10px );
+		width: 100%;
+		display: block;
+	}
+
+	html.responsive .big_buttons .btn_wrapper .big_button {
+		width: calc( 50% - 10px );
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
 	}
 
 	/* Takeover (Temp/new store, can clean up later */
@@ -3654,12 +3692,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	}
 
 	/* Main cap */
-	.carousel_container .carousel_items:not(.no_paging) > * {
+	html.responsive .carousel_container .carousel_items:not(.no_paging) > * {
 		opacity: 1;
 		pointer-events: auto;
 	}
 
-	.store_main_capsule .capsule {
+	html.responsive .store_main_capsule .capsule {
 		box-shadow: none;
 	}
 }
