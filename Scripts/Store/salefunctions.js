@@ -240,7 +240,7 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
 function SaleCap( item, strFeatureContext, strDiscountClass )
 {
 	var params = { 'class': 'sale_capsule' };
-	var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, item.appid, item.packageid, null, params );
+	var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, item.appid, item.packageid, item.bundleid, params );
 
 	var $CapCtn = $J('<a/>', params );
 	GStoreItemData.BindHoverEvents( $CapCtn, item.appid, item.packageid );

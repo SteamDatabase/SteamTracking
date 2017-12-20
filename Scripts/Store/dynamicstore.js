@@ -1105,6 +1105,14 @@ GStoreItemData = {
 	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
 	nCurrencyMinPriceIncrement : 1,
 
+	AddStoreItemDataSet: function( rgStoreItemData )
+	{
+		GStoreItemData.AddStoreItemData( rgStoreItemData.rgApps, rgStoreItemData.rgPackages, rgStoreItemData.rgBundles );
+	},
+
+	/**
+	 * @deprecated - use AddStoreItemDataSet instead
+	 */
 	AddStoreItemData: function ( rgApps, rgPackages, rgBundles )
 	{
 		if ( rgApps && typeof rgApps.length == 'undefined' )
