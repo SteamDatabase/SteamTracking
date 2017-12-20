@@ -119,9 +119,7 @@ body.v6 #footer {
 	//background: transparent;
 }
 
-body.v6 #footer_spacer {
-	height: 184px;
-}
+
 
 body.v6 #page_background_container > div:last-child {
 	padding-bottom: 100px;
