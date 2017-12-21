@@ -431,7 +431,6 @@
  kCVPixelBufferIOSurfacePropertiesKey
  kCVPixelBufferPixelFormatTypeKey
  kCVPixelBufferWidthKey
- kVTVideoDecoderSpecification_EnableHardwareAcceleratedVideoDecoder
  ldexp
  llrint
  llrintf
