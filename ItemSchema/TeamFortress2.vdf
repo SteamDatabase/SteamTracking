@@ -60596,6 +60596,20 @@
 			"name"		"concealedkiller_sniperrifle_nightowl"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"14"
@@ -60606,6 +60620,20 @@
 			"name"		"concealedkiller_smg_woodsywidowmaker"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sgm/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"13"
@@ -60616,6 +60644,20 @@
 			"name"		"concealedkiller_scattergun_nightterror"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"11"
@@ -60626,6 +60668,20 @@
 			"name"		"concealedkiller_shotgun_backwoodsboomstick"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"12"
@@ -60635,6 +60691,20 @@
 		{
 			"name"		"concealedkiller_minigun_kingofthejungle"
 			"prefab"		"paintkit_weapon_minigun"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"10"
@@ -60645,6 +60715,20 @@
 			"name"		"concealedkiller_flamethrower_forestfire"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"9"
@@ -60655,6 +60739,20 @@
 			"name"		"concealedkiller_rocketlauncher_woodlandwarrior"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"6"
@@ -60664,6 +60762,20 @@
 		{
 			"name"		"concealedkiller_sniperrifle_purplerange"
 			"prefab"		"paintkit_weapon_sniperrifle"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"7"
@@ -60674,6 +60786,20 @@
 			"name"		"concealedkiller_medigun_maskedmender"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"5"
@@ -60684,6 +60810,20 @@
 			"name"		"concealedkiller_stickybomblauncher_suddenflurry"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"8"
@@ -60694,6 +60834,20 @@
 			"name"		"concealedkiller_medigun_wrappedreviver"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60705,6 +60859,20 @@
 			"name"		"concealedkiller_revolver_psychedelicslugger"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"3"
@@ -60715,6 +60883,20 @@
 			"name"		"concealedkiller_stickybomblauncher_carpetbomber"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60726,6 +60908,20 @@
 			"name"		"concealedkiller_pistol_redrockroscoe"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60737,6 +60933,20 @@
 			"name"		"concealedkiller_rocketlauncher_sandcannon"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"1"
@@ -60747,6 +60957,20 @@
 			"name"		"craftsmann_scattergun_tartantorpedo"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60758,6 +60982,20 @@
 			"name"		"craftsmann_shotgun_rusticruiner"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60769,6 +61007,20 @@
 			"name"		"craftsmann_flamethrower_barnburner"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60780,6 +61032,20 @@
 			"name"		"craftsmann_pistol_homemadeheater"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60791,6 +61057,20 @@
 			"name"		"craftsmann_sniperrifle_lumberfromdownunder"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"19"
@@ -60800,6 +61080,20 @@
 		{
 			"name"		"craftsmann_minigun_ironwood"
 			"prefab"		"paintkit_weapon_minigun"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"20"
@@ -60810,6 +61104,20 @@
 			"name"		"craftsmann_scattergun_countrycrusher"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"21"
@@ -60820,6 +61128,20 @@
 			"name"		"craftsmann_smg_plaidpotshotter"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60830,6 +61152,20 @@
 		{
 			"name"		"craftsmann_sniperrifle_shotinthedark"
 			"prefab"		"paintkit_weapon_sniperrifle"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"23"
@@ -60840,6 +61176,20 @@
 			"name"		"craftsmann_stickybomblauncher_blastedbombardier"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60851,6 +61201,20 @@
 			"name"		"craftsmann_medigun_reclaimedreanimator"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60862,6 +61226,20 @@
 			"name"		"craftsmann_minigun_antiqueannihilator"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"26"
@@ -60871,6 +61249,20 @@
 		{
 			"name"		"craftsmann_revolver_oldcountry"
 			"prefab"		"paintkit_weapon_revolver"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60881,6 +61273,20 @@
 		{
 			"name"		"craftsmann_rocketlauncher_americanpastoral"
 			"prefab"		"paintkit_weapon_rocketlauncher"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"28"
@@ -60891,6 +61297,20 @@
 			"name"		"craftsmann_scattergun_backcountryblaster"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"29"
@@ -60901,6 +61321,20 @@
 			"name"		"teufort_flamethrower_bovineblazemaker"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"30"
@@ -60911,6 +61345,20 @@
 			"name"		"teufort_minigun_warroom"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60922,6 +61370,20 @@
 			"name"		"teufort_smg_treadplatetormenter"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60933,6 +61395,20 @@
 			"name"		"teufort_sniperrifle_bogtrotter"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"33"
@@ -60942,6 +61418,20 @@
 		{
 			"name"		"teufort_flamethrower_earthskyandfire"
 			"prefab"		"paintkit_weapon_flamethrower"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60953,6 +61443,20 @@
 			"name"		"teufort_pistol_hickoryholepuncher"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"35"
@@ -60963,6 +61467,20 @@
 			"name"		"teufort_scattergun_sprucedeuce"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60974,6 +61492,20 @@
 			"name"		"teufort_smg_teamsprayer"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60985,6 +61517,20 @@
 			"name"		"teufort_stickybomblauncher_rooftopwrangler"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -60996,6 +61542,20 @@
 			"name"		"teufort_medigun_civilservant"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61006,6 +61566,20 @@
 		{
 			"name"		"teufort_minigun_citizenpain"
 			"prefab"		"paintkit_weapon_minigun"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61017,6 +61591,20 @@
 			"name"		"teufort_pistol_localhero"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"41"
@@ -61027,6 +61615,20 @@
 			"name"		"teufort_revolver_mayor"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61038,6 +61640,20 @@
 			"name"		"teufort_rocketlauncher_smalltownbringdown"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61049,6 +61665,20 @@
 			"name"		"teufort_shotgun_civicduty"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61060,6 +61690,20 @@
 			"name"		"powerhouse_stickybomblauncher_liquidasset"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"45"
@@ -61070,6 +61714,20 @@
 			"name"		"powerhouse_pistol_blackdahlia"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"46"
@@ -61080,6 +61738,20 @@
 			"name"		"powerhouse_shotgun_lightningrod"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"47"
@@ -61090,6 +61762,20 @@
 			"name"		"powerhouse_stickybomblauncher_pinkelephant"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"48"
@@ -61099,6 +61785,20 @@
 		{
 			"name"		"powerhouse_flamethrower_flashfryer"
 			"prefab"		"paintkit_weapon_flamethrower"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"49"
@@ -61109,6 +61809,20 @@
 			"name"		"powerhouse_medigun_sparkoflife"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61120,6 +61834,20 @@
 			"name"		"powerhouse_revolver_deadreckoner"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"51"
@@ -61130,6 +61858,20 @@
 			"name"		"powerhouse_rocketlauncher_shellshocker"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61141,6 +61883,20 @@
 			"name"		"powerhouse_scattergun_currentevent"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"53"
@@ -61151,6 +61907,20 @@
 			"name"		"powerhouse_flamethrower_turbinetorcher"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"54"
@@ -61161,6 +61931,20 @@
 			"name"		"powerhouse_minigun_brickhouse"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"55"
@@ -61171,6 +61955,20 @@
 			"name"		"powerhouse_pistol_sandstonespecial"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"56"
@@ -61181,6 +61979,20 @@
 			"name"		"powerhouse_rocketlauncher_aquamarine"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"57"
@@ -61191,6 +62003,20 @@
 			"name"		"powerhouse_smg_lowprofile"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"has team color paintkit"		"1"
@@ -61202,6 +62028,20 @@
 			"name"		"powerhouse_sniperrifle_thunderbolt"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"59"
@@ -61212,6 +62052,20 @@
 			"name"		"harvest_pistol_macabreweb"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61222,6 +62076,20 @@
 			"name"		"harvest_pistol_nutcracker"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"61"
@@ -61232,6 +62100,20 @@
 			"name"		"harvest_revolver_boneyard"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"64"
@@ -61242,6 +62124,20 @@
 			"name"		"harvest_revolver_wildwood"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"65"
@@ -61252,6 +62148,20 @@
 			"name"		"harvest_revolver_macabreweb"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61262,6 +62172,20 @@
 			"name"		"harvest_scattergun_macabreweb"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61272,6 +62196,20 @@
 			"name"		"harvest_flamethrower_autumn"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61282,6 +62220,20 @@
 			"name"		"harvest_flamethrower_pumpkinpatch"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"62"
@@ -61292,6 +62244,20 @@
 			"name"		"harvest_flamethrower_nutcracker"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"61"
@@ -61302,6 +62268,20 @@
 			"name"		"harvest_scattergun_nutcracker"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"61"
@@ -61312,6 +62292,20 @@
 			"name"		"harvest_sniperrifle_pumpkinpatch"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"62"
@@ -61322,6 +62316,20 @@
 			"name"		"harvest_sniperrifle_boneyard"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"64"
@@ -61332,6 +62340,20 @@
 			"name"		"harvest_sniperrifle_wildwood"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"65"
@@ -61342,6 +62364,20 @@
 			"name"		"harvest_wrench_nutcracker"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"61"
@@ -61352,6 +62388,20 @@
 			"name"		"harvest_wrench_autumn"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61362,6 +62412,20 @@
 			"name"		"harvest_wrench_boneyard"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"64"
@@ -61372,6 +62436,20 @@
 			"name"		"harvest_smg_wildwood"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"65"
@@ -61382,6 +62460,20 @@
 			"name"		"harvest_grenadelauncher_autumn"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61392,6 +62484,20 @@
 			"name"		"harvest_medigun_wildwood"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"65"
@@ -61402,6 +62508,20 @@
 			"name"		"harvest_grenadelauncher_macabreweb"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61412,6 +62532,20 @@
 			"name"		"harvest_knife_boneyard"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"64"
@@ -61422,6 +62556,20 @@
 			"name"		"harvest_rocketlauncher_autumn"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61432,6 +62580,20 @@
 			"name"		"harvest_stickybomblauncher_autumn"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61442,6 +62604,20 @@
 			"name"		"harvest_stickybomblauncher_pumpkinpatch"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"62"
@@ -61452,6 +62628,20 @@
 			"name"		"harvest_stickybomblauncher_macabreweb"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61462,6 +62652,20 @@
 			"name"		"harvest_shotgun_autumn"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"60"
@@ -61472,6 +62676,20 @@
 			"name"		"harvest_minigun_macabreweb"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"63"
@@ -61482,6 +62700,20 @@
 			"name"		"harvest_minigun_pumpkinpatch"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"62"
@@ -61492,6 +62724,20 @@
 			"name"		"harvest_minigun_nutcracker"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"61"
@@ -61502,9 +62748,20 @@
 			"name"		"pyroland_flamethrower_balloonicorn"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_flamethrower_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61516,9 +62773,20 @@
 			"name"		"pyroland_flamethrower_rainbow"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_flamethrower_rainbow"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61530,9 +62798,20 @@
 			"name"		"pyroland_grenadelauncher_rainbow"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_grenadelauncher_rainbow"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61544,9 +62823,20 @@
 			"name"		"pyroland_grenadelauncher_sweetdreams"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_grenadelauncher/c_grenadelauncher_gold"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61558,6 +62848,20 @@
 			"name"		"pyroland_knife_bluemew"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"69"
@@ -61568,6 +62872,20 @@
 			"name"		"pyroland_knife_braincandy"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"70"
@@ -61578,6 +62896,20 @@
 			"name"		"pyroland_knife_stabbedtohell"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"71"
@@ -61588,6 +62920,20 @@
 			"name"		"pyroland_medigun_flowerpower"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"72"
@@ -61598,6 +62944,20 @@
 			"name"		"pyroland_minigun_braincandy"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"70"
@@ -61608,6 +62968,20 @@
 			"name"		"pyroland_minigun_mistercuddles"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"73"
@@ -61618,6 +62992,20 @@
 			"name"		"pyroland_pistol_bluemew"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"69"
@@ -61628,6 +63016,20 @@
 			"name"		"pyroland_pistol_braincandy"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"70"
@@ -61638,9 +63040,20 @@
 			"name"		"pyroland_pistol_shottohell"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_pistol_norim"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61652,9 +63065,20 @@
 			"name"		"pyroland_revolver_flowerpower"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_revolver_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61666,9 +63090,20 @@
 			"name"		"pyroland_rocketlauncher_bluemew"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_rocketlauncher_rainbow"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61680,9 +63115,20 @@
 			"name"		"pyroland_rocketlauncher_braincandy"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_rocketlauncher_rainbow"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61694,9 +63140,20 @@
 			"name"		"pyroland_scattergun_bluemew"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_scattergun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61708,9 +63165,20 @@
 			"name"		"pyroland_scattergun_flowerpower"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_scattergun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61722,9 +63190,20 @@
 			"name"		"pyroland_scattergun_shottohell"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_scattergun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61736,9 +63215,20 @@
 			"name"		"pyroland_shotgun_flowerpower"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_shotgun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61750,6 +63240,20 @@
 			"name"		"pyroland_smg_bluemew"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"69"
@@ -61760,6 +63264,20 @@
 			"name"		"pyroland_sniperrifle_balloonicorn"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"66"
@@ -61770,9 +63288,20 @@
 			"name"		"pyroland_sniperrifle_rainbow"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/mtp/c_sniperrifle_rainbow"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61784,9 +63313,20 @@
 			"name"		"pyroland_stickybomblauncher_sweetdreams"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_stickybomb_launcher/c_stickybomb_launcher_gold"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61798,6 +63338,20 @@
 			"name"		"pyroland_wrench_torquedtohell"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"75"
@@ -61808,9 +63362,20 @@
 			"name"		"gentlemanne_flamethrower_coffinnail"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_flamethrower_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61822,9 +63387,20 @@
 			"name"		"gentlemanne_grenadelauncher_coffinnail"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_grenadelauncher_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61836,9 +63412,20 @@
 			"name"		"gentlemanne_grenadelauncher_topshelf"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_grenadelauncher_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61850,9 +63437,20 @@
 			"name"		"gentlemanne_knife_dressedtokill"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_knife_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61864,9 +63462,20 @@
 			"name"		"gentlemanne_knife_topshelf"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_knife_c"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61878,9 +63487,20 @@
 			"name"		"gentlemanne_medigun_coffinnail"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_medigun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61892,9 +63512,20 @@
 			"name"		"gentlemanne_medigun_dressedtokill"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_medigun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61906,6 +63537,20 @@
 			"name"		"gentlemanne_medigun_highrollers"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"79"
@@ -61916,9 +63561,20 @@
 			"name"		"gentlemanne_minigun_coffinnail"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_minigun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61930,9 +63586,20 @@
 			"name"		"gentlemanne_minigun_dressedtokill"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_minigun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61944,9 +63611,20 @@
 			"name"		"gentlemanne_minigun_topshelf"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_minigun_c"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61958,9 +63636,20 @@
 			"name"		"gentlemanne_pistol_dressedtokill"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_pistol_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61972,9 +63661,20 @@
 			"name"		"gentlemanne_revolver_coffinnail"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_revolver_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -61986,9 +63686,20 @@
 			"name"		"gentlemanne_revolver_topshelf"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_revolver_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62000,9 +63711,20 @@
 			"name"		"gentlemanne_rocketlauncher_coffinnail"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_rocketlauncher_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62014,6 +63736,20 @@
 			"name"		"gentlemanne_rocketlauncher_highrollers"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"79"
@@ -62024,9 +63760,20 @@
 			"name"		"gentlemanne_scattergun_coffinnail"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_scattergun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62038,9 +63785,20 @@
 			"name"		"gentlemanne_shotgun_coffinnail"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_shotgun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62052,9 +63810,20 @@
 			"name"		"gentlemanne_shotgun_dressedtokill"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_shotgun_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62066,9 +63835,20 @@
 			"name"		"gentlemanne_smg_highrollers"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_smg_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62080,9 +63860,20 @@
 			"name"		"gentlemanne_sniperrifle_coffinnail"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_sniperrifle_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62094,9 +63885,20 @@
 			"name"		"gentlemanne_sniperrifle_dressedtokill"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_sniperrifle_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62108,9 +63910,20 @@
 			"name"		"gentlemanne_stickybomblauncher_coffinnail"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_stickybomb_launcher_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62122,9 +63935,20 @@
 			"name"		"gentlemanne_stickybomblauncher_dressedtokill"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_stickybomb_launcher_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62136,9 +63960,20 @@
 			"name"		"gentlemanne_wrench_dressedtokill"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_wrench_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62150,9 +63985,20 @@
 			"name"		"gentlemanne_wrench_topshelf"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/cig/c04_wrench_metal"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62164,6 +64010,20 @@
 			"name"		"warbird_flamethrower_warhawk"
 			"prefab"		"paintkit_weapon_flamethrower"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_flamethrower/c_flamethrower_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"80"
@@ -62174,9 +64034,20 @@
 			"name"		"warbird_grenadelauncher_warhawk"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_grenadelauncher/c_grenadelauncher_p40"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62188,6 +64059,20 @@
 			"name"		"warbird_knife_blitzkrieg"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"81"
@@ -62198,6 +64083,20 @@
 			"name"		"warbird_knife_airwolf"
 			"prefab"		"paintkit_weapon_knife"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_knife/c_knife_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"82"
@@ -62208,6 +64107,20 @@
 			"name"		"warbird_medigun_blitzkrieg"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"81"
@@ -62218,9 +64131,20 @@
 			"name"		"warbird_medigun_corsair"
 			"prefab"		"paintkit_weapon_medigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_medigun/c_medigun_corsair"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_medigun/c_medigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62232,9 +64156,20 @@
 			"name"		"warbird_minigun_butcherbird"
 			"prefab"		"paintkit_weapon_minigun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_minigun/c_minigun_focke_wulf"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_minigun/c_minigun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62246,6 +64181,20 @@
 			"name"		"warbird_pistol_blitzkrieg"
 			"prefab"		"paintkit_weapon_pistol"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_pistol/c_pistol_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"81"
@@ -62256,6 +64205,20 @@
 			"name"		"warbird_revolver_blitzkrieg"
 			"prefab"		"paintkit_weapon_revolver"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_revolver/c_revolver_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"81"
@@ -62266,6 +64229,20 @@
 			"name"		"warbird_rocketlauncher_warhawk"
 			"prefab"		"paintkit_weapon_rocketlauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"80"
@@ -62276,9 +64253,20 @@
 			"name"		"warbird_scattergun_killerbee"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_scattergun/c_scattergun_killerbee"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62290,9 +64278,20 @@
 			"name"		"warbird_shotgun_redbear"
 			"prefab"		"paintkit_weapon_shotgun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_shotgun/c_shotgun_yak"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_shotgun/c_shotgun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62304,6 +64303,20 @@
 			"name"		"warbird_smg_blitzkrieg"
 			"prefab"		"paintkit_weapon_smg"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_smg/c_smg_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"81"
@@ -62314,6 +64327,20 @@
 			"name"		"warbird_sniperrifle_airwolf"
 			"prefab"		"paintkit_weapon_sniperrifle"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"82"
@@ -62324,9 +64351,20 @@
 			"name"		"warbird_stickybomblauncher_blitzkrieg"
 			"prefab"		"paintkit_weapon_stickybomb_launcher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_stickybomb_launcher/c_stickybomb_launcher_messerschmitt"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_stickybomb_launcher/c_stickybomb_launcher_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62338,6 +64376,20 @@
 			"name"		"warbird_wrench_airwolf"
 			"prefab"		"paintkit_weapon_wrench"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_wrench/c_wrench_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"82"
@@ -62348,9 +64400,20 @@
 			"name"		"warbird_scattergun_corsair"
 			"prefab"		"paintkit_weapon_scattergun"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
 			"visuals"
 			{
 				"material_override"		"models/paintkits/c_scattergun/c_scattergun_corsair"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_scattergun/c_scattergun_festivizer.mdl"
+					}
+				}
 			}
 			"static_attrs"
 			{
@@ -62362,6 +64425,20 @@
 			"name"		"warbird_grenadelauncher_butcherbird"
 			"prefab"		"paintkit_weapon_grenadelauncher"
 			"propername"		"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_festivizer.mdl"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"paintkit_proto_def_index"		"84"
@@ -104438,6 +106515,10 @@
 		{		
 			"name"				"Heals for Reals Event 1st Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"		"#TF_heals4reals_gold"
 			"item_description"		"#TF_TournamentMedal_2017"
@@ -104451,6 +106532,10 @@
 		{		
 			"name"				"Heals for Reals Event 2nd Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"		"#TF_heals4reals_silver"
 			"item_description"		"#TF_TournamentMedal_2017"
@@ -104464,6 +106549,10 @@
 		{		
 			"name"				"Heals for Reals Event 3rd Place 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"		"#TF_heals4reals_bronze"
 			"item_description"		"#TF_TournamentMedal_2017"
@@ -104477,6 +106566,10 @@
 		{		
 			"name"				"Heals for Reals Event Participant 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"		"#TF_heals4reals_participant"
 			"item_description"		"#TF_TournamentMedal_2017"
@@ -104490,6 +106583,10 @@
 		{		
 			"name"				"Heals for Reals Donor 2017"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"		"#TF_heals4reals_donor"
 			"item_description"		"#TF_TournamentMedal_2017"
