@@ -392,7 +392,7 @@ function StandardCommunityBan( steamid, elemLink )
 	.done( function( data )
 	{
 		var $Content = $J(data);
-		var Modal = ShowConfirmDialog( "Community Ban & Content Removal", $Content, 'Submit'
+		var Modal = ShowConfirmDialog( "Community Ban", $Content, 'Submit'
 		).done(	function( ) {
 
 			var $Form = $Content.find( 'form#community_ban_form' );
